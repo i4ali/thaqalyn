@@ -9,13 +9,21 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "openai": "^4.24.0",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.24.0"
   },
   "engines": {
     "node": "18.x"
   },
-  "keywords": ["islamic", "quran", "tafsir", "shia", "commentary", "ai"],
+  "keywords": [
+    "islamic",
+    "quran",
+    "tafsir",
+    "shia",
+    "commentary",
+    "ai"
+  ],
   "author": "Thaqalyn Team",
   "license": "MIT"
 }

@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/v1/surahs",
+      "dest": "/api/surahs.js"
+    },
+    {
+      "src": "/api/v1/verses/(.*)",
+      "dest": "/api/verses/$1.js"
+    },
+    {
+      "src": "/api/v1/tafsir/generate",
+      "dest": "/api/tafsir/generate.js"
+    }
+  ],
+  "env": {
+    "OPENAI_API_KEY": "@openai_api_key"
+  }
+}

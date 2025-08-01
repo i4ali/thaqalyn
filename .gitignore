@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+api/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Build outputs
+build/
+dist/
+*.tgz
+*.tar.gz
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Xcode
+*.xcuserstate
+*.xcuserdatad/
+DerivedData/
+*.xccheckout
+*.xcscmblueprint
+*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+
+# Swift Package Manager
+.build/
+Packages/
+Package.pins
+Package.resolved
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Vercel
+.vercel
