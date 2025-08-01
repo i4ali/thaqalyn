@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "buildCommand": "",
+  "installCommand": "cd api && npm install",
   "functions": {
     "api/**/*.js": {
       "runtime": "nodejs18.x"
