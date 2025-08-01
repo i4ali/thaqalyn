@@ -187,20 +187,47 @@ Create a standalone iOS app with AI-generated Shia Quranic commentary featuring 
 - [x] Git repository setup with remote origin
 - [x] Proper project documentation (CLAUDE.md, TASK.md)
 
-### 🔄 **In Progress**
-- [ ] **Vercel Deployment**: API accessible but needs configuration fix
-- [ ] **End-to-End Testing**: Verify all 114 surahs load properly once deployment is fixed
+## 🔄 **MAJOR ARCHITECTURE CHANGE - August 2025**
 
-### 📋 **Next Phase Items**
+### **New Direction: Self-Contained Static Data Architecture**
+
+**Decision**: Remove all APIs and hardcode complete Quran text + AI-generated commentary directly in iOS app.
+
+**Rationale**: Since Quran text and commentary content will never change, embedding everything locally provides:
+- ✅ Zero network dependencies and API deployment issues
+- ✅ Instant loading with perfect offline experience  
+- ✅ No ongoing API costs or infrastructure maintenance
+- ✅ Reliable, consistent user experience
+- ✅ Simplified development and testing workflow
+
+### 🔄 **Current Phase: Data Collection & Generation**
+
+**Phase 1: Collect Complete Dataset**
+- [ ] **Generate All Commentary**: Use OpenAI API script to create 4 layers for all ~6,200 verses
+  - [ ] Layer 1 - Foundation (🏛️): Simple explanations, historical context
+  - [ ] Layer 2 - Classical Shia Commentary (📚): Tabatabai, Tabrisi perspectives  
+  - [ ] Layer 3 - Contemporary Insights (🌍): Modern scholars, scientific correlations
+  - [ ] Layer 4 - Ahlul Bayt Wisdom (⭐): Hadith from 14 Infallibles, theological concepts
+- [ ] **Collect Quran Text**: Export complete Arabic text + English translations for all 114 surahs
+- [ ] **Create JSON Data Files**: Structure all content for iOS app integration
+- [ ] **Validate Dataset**: Ensure completeness and quality of all generated content
+
+**Phase 2: iOS App Integration** 
+- [ ] Remove APIService and all network code
+- [ ] Create LocalDataService for bundled JSON files
+- [ ] Update all views to use local data loading
+- [ ] Optimize for large dataset performance
+- [ ] Test complete offline functionality
+
+### 📋 **Remaining Features**
 - [ ] Local bookmarks and reading history (UserDefaults/Core Data)
-- [ ] Offline access for cached content
-- [ ] Settings page (theme, font size preferences)
-- [ ] Search functionality (local search)
-- [ ] Performance optimization and memory management
+- [ ] Settings page (theme, font size preferences)  
+- [ ] Search functionality (local search across all content)
+- [ ] Performance optimization for large embedded dataset
 - [ ] Beta testing with target community
 - [ ] App Store preparation and submission
 
 ### 🎯 **Current Priority**
-**Primary Goal**: Complete Vercel deployment configuration to enable full app functionality with all 114 surahs accessible via verse API integration.
+**Primary Goal**: Generate complete commentary dataset using LLM API calls for all Quran verses.
 
-**Status**: All implementation work is complete. App is ready for full testing once Vercel deployment is accessible.
+**Status**: Transitioning from API-based to self-contained static data architecture. Focus on data collection before code updates.
