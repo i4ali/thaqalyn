@@ -1,0 +1,25 @@
+{
+  "name": "thaqalyn-data-generator",
+  "version": "1.0.0",
+  "description": "Data generation scripts for Thaqalyn app",
+  "main": "generate-dataset.js",
+  "scripts": {
+    "generate": "node generate-dataset.js",
+    "test-small": "node test-small-dataset.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "quran",
+    "islamic",
+    "commentary",
+    "dataset",
+    "ai"
+  ],
+  "author": "Thaqalyn Team",
+  "license": "MIT"
+}
