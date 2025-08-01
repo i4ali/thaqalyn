@@ -76,27 +76,36 @@ The app uses a modern iOS design system with:
 
 ## Key Technologies
 
-- **Swift 5.0+** with SwiftUI
-- **Core Data** for local caching
-- **URLSession** for API communication
-- **UserDefaults** for settings and preferences
+- **Swift 5.0+** with SwiftUI for modern iOS interface
+- **Core Data** for local bookmarks and user preferences  
+- **JSON Bundle Resources** for embedded Quran text and commentary
+- **UserDefaults** for app settings and preferences
+- **Node.js Scripts** for data generation (development only)
 - Target: iOS 18.2+ (iPhone and iPad)
 
-## API Backend
+## Data Generation Infrastructure
 
-The app now includes a complete API backend deployed on Vercel:
+The app uses a **static data architecture** where all content is pre-generated and embedded in the iOS app bundle:
 
-### API Endpoints
-- **Base URL**: `https://thaqalyn-api.vercel.app/api/v1/`
-- **Surahs**: `GET /surahs` - Returns all 114 Quran chapters
-- **Verses**: `GET /verses/[surah]` - Returns verses for specific surah (integrates AlQuran.cloud API)  
-- **Tafsir**: `POST /tafsir/generate` - Generates AI commentary using OpenAI/Anthropic APIs
+### Data Generation Scripts
+- **Location**: `scripts/` directory with Node.js infrastructure
+- **Purpose**: Generate complete Quran text + 4-layer AI commentary dataset
+- **Source APIs**: AlQuran.cloud (verse text) + OpenAI GPT-4 (commentary generation)
+- **Output**: Structured JSON files for iOS app integration
 
-### API Configuration
-- **Runtime**: Node.js 18.x on Vercel
-- **External APIs**: AlQuran.cloud for verse data, OpenAI for commentary generation
-- **Error Handling**: Returns "Not Available" messages when APIs fail (no sample data fallback)
-- **CORS**: Configured for iOS app communication
+### Generated Dataset Structure
+- **`surahs.json`**: All 114 surah metadata and information
+- **`verses.json`**: Complete Quran text (Arabic + English translation)
+- **`commentary-layer1.json`**: Foundation commentary (🏛️ simple explanations)
+- **`commentary-layer2.json`**: Classical Shia commentary (📚 Tabatabai, Tabrisi)
+- **`commentary-layer3.json`**: Contemporary insights (🌍 modern scholars)
+- **`commentary-layer4.json`**: Ahlul Bayt wisdom (⭐ hadith from 14 Infallibles)
+
+### Generation Process
+- **Total Entries**: ~25,000 commentary entries for ~6,200 verses
+- **Generation Time**: ~7 hours with 1-second API rate limiting
+- **Cost**: $50-100 for OpenAI API calls
+- **Bundle Size**: ~50-100MB of JSON data embedded in iOS app
 
 ## Current Status
 
