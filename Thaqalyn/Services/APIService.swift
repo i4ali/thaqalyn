@@ -11,7 +11,7 @@ import Foundation
 class APIService: ObservableObject {
     static let shared = APIService()
     
-    private let baseURL = "https://thaqalyn-api.vercel.app/api/v1"
+    private let baseURL = "https://thaqalyn.vercel.app/api"
     private let session = URLSession.shared
     private let maxRetries = 3
     private let retryDelay: TimeInterval = 1.0
@@ -43,7 +43,7 @@ class APIService: ObservableObject {
     func getVerses(surahId: Int) async throws -> [Verse] {
         print("🌐 APIService: Fetching verses for surah \(surahId)")
         let response: VersesResponse = try await performRequest(
-            endpoint: "/verses/\(surahId)",
+            endpoint: "/verses/[surah]?surah=\(surahId)",
             method: .GET,
             body: Optional<String>.none
         )
