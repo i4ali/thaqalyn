@@ -18,8 +18,5 @@
       "src": "/api/v1/tafsir/generate",
       "dest": "/api/tafsir/generate.js"
     }
-  ],
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key"
-  }
+  ]
 }
