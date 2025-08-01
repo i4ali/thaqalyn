@@ -192,6 +192,11 @@ struct VerseDetailView: View {
 
 #Preview {
     NavigationView {
-        VerseDetailView(verse: Verse.samples[0])
+        VerseDetailView(verse: Verse(
+            surahId: 1,
+            ayahNumber: 1,
+            arabicText: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ",
+            translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful."
+        ))
     }
 }
