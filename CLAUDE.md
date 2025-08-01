@@ -82,6 +82,56 @@ The app uses a modern iOS design system with:
 - **UserDefaults** for settings and preferences
 - Target: iOS 18.2+ (iPhone and iPad)
 
+## API Backend
+
+The app now includes a complete API backend deployed on Vercel:
+
+### API Endpoints
+- **Base URL**: `https://thaqalyn-api.vercel.app/api/v1/`
+- **Surahs**: `GET /surahs` - Returns all 114 Quran chapters
+- **Verses**: `GET /verses/[surah]` - Returns verses for specific surah (integrates AlQuran.cloud API)  
+- **Tafsir**: `POST /tafsir/generate` - Generates AI commentary using OpenAI/Anthropic APIs
+
+### API Configuration
+- **Runtime**: Node.js 18.x on Vercel
+- **External APIs**: AlQuran.cloud for verse data, OpenAI for commentary generation
+- **Error Handling**: Returns "Not Available" messages when APIs fail (no sample data fallback)
+- **CORS**: Configured for iOS app communication
+
 ## Current Status
 
-The project is in initial setup phase with basic SwiftUI app structure. The current ContentView shows a placeholder "Hello, world!" interface that needs to be replaced with the actual Quran commentary interface according to the PRD specifications.
+✅ **Phase 1 MVP - Month 2 Complete**
+
+**Completed Features:**
+1. **Complete iOS App Structure**: Modern SwiftUI design with full navigation
+2. **API Integration**: Fully functional backend API deployed on Vercel
+3. **Verse Loading**: All 114 surahs supported via AlQuran.cloud API integration
+4. **Design System**: ThaqalynDesignSystem with modern iOS components
+5. **Core Data**: Local caching for tafsir content with CacheManager
+6. **Error Handling**: Proper "Not Available" states when APIs fail
+7. **Build System**: App builds and runs successfully on iOS Simulator
+
+**Current App Features:**
+- ✅ SurahListView: Browse all 114 Quran chapters
+- ✅ VerseListView: Load verses in real-time from external API
+- ✅ VerseDetailView: Display Arabic text with English translation
+- ✅ CommentaryView: Four-layer AI-generated tafsir system
+- ✅ Modern UI: Cards, gradients, loading states, error handling
+- ✅ APIService: Network layer with retry logic and caching
+
+**Next Phase Items:**
+- [ ] Local bookmarks and reading history
+- [ ] Offline access for cached content  
+- [ ] Settings and theme preferences
+- [ ] Search functionality
+- [ ] Performance optimization
+- [ ] Beta testing and App Store preparation
+
+**Testing Status:**
+- ✅ API endpoints tested and working locally
+- ✅ iOS app builds and launches successfully
+- ✅ Verse integration complete (all 114 surahs)
+- ✅ Error handling verified ("Verses Not Available" on API failure)
+- ✅ No sample data fallback per requirements
+
+The app is now in a fully functional state for verse reading with real-time API data and ready for the next phase of local features and polish.
