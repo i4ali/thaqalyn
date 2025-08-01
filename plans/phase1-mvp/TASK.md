@@ -8,17 +8,17 @@ Create a standalone iOS app with AI-generated Shia Quranic commentary featuring 
 ## Core Features
 
 ### 1. LLM-Powered Tafsir Generation (Stateless)
-- [ ] **API Integration**
-  - [ ] Design API request/response models
-  - [ ] Implement stateless API calls to generate tafsir
-  - [ ] Handle API errors and timeouts gracefully
-  - [ ] Add retry logic for failed requests
+- [x] **API Integration**
+  - [x] Design API request/response models
+  - [x] Implement stateless API calls to generate tafsir
+  - [x] Handle API errors and timeouts gracefully (no fallback to sample data)
+  - [x] Add retry logic for failed requests
 
-- [ ] **Four-Layer Commentary System**
-  - [ ] Layer 1 - Foundation (🏛️): Simple explanations, historical context
-  - [ ] Layer 2 - Classical Shia Commentary (📚): Tabatabai, Tabrisi perspectives
-  - [ ] Layer 3 - Contemporary Insights (🌍): Modern scholars, scientific correlations
-  - [ ] Layer 4 - Ahlul Bayt Wisdom (⭐): Hadith from 14 Infallibles, theological concepts
+- [x] **Four-Layer Commentary System**
+  - [x] Layer 1 - Foundation (🏛️): Simple explanations, historical context
+  - [x] Layer 2 - Classical Shia Commentary (📚): Tabatabai, Tabrisi perspectives
+  - [x] Layer 3 - Contemporary Insights (🌍): Modern scholars, scientific correlations
+  - [x] Layer 4 - Ahlul Bayt Wisdom (⭐): Hadith from 14 Infallibles, theological concepts
 
 ### 2. iOS App Core Infrastructure
 
@@ -48,24 +48,28 @@ Create a standalone iOS app with AI-generated Shia Quranic commentary featuring 
   - [ ] Design app launch screen and onboarding flow
 
 #### Month 2: LLM Integration
-- [ ] **Backend API (Minimal Stateless)**
-  - [ ] Setup Node.js API on Vercel free tier
-  - [ ] Implement `/api/v1/surahs` endpoint (static surah list)
-  - [ ] Implement `/api/v1/tafsir/generate` endpoint
-  - [ ] Integrate OpenAI/Anthropic APIs for commentary generation
-  - [ ] Add rate limiting and cost optimization
+- [x] **Backend API (Minimal Stateless)**
+  - [x] Setup Node.js API on Vercel free tier
+  - [x] Implement `/api/v1/surahs` endpoint (complete list of 114 surahs)
+  - [x] Implement `/api/v1/verses/[surah]` endpoint (integrates AlQuran.cloud API)
+  - [x] Implement `/api/v1/tafsir/generate` endpoint
+  - [x] Integrate OpenAI/Anthropic APIs for commentary generation
+  - [x] Integrate AlQuran.cloud API for complete verse data (all 114 surahs)
+  - [x] Add rate limiting and cost optimization
 
-- [ ] **Caching Layer**
-  - [ ] Implement aggressive local caching using Core Data
-  - [ ] Create cache invalidation strategy
-  - [ ] Add offline-first data access patterns
-  - [ ] Optimize cache performance and storage
+- [x] **Caching Layer**
+  - [x] Implement aggressive local caching using Core Data
+  - [x] Create cache invalidation strategy
+  - [x] Add offline-first data access patterns
+  - [x] Optimize cache performance and storage
 
-- [ ] **Verse Display UI**
-  - [ ] Create `SurahListView` with modern card design
-  - [ ] Implement `VerseDetailView` with Arabic text and translation
-  - [ ] Build `CommentaryView` with layered tafsir display
-  - [ ] Add loading states and skeleton views
+- [x] **Verse Display UI**
+  - [x] Create `SurahListView` with modern card design
+  - [x] Implement `VerseListView` with external API integration (AlQuran.cloud)
+  - [x] Implement `VerseDetailView` with Arabic text and translation
+  - [x] Build `CommentaryView` with layered tafsir display
+  - [x] Add loading states and "Verses Not Available" error handling
+  - [x] Remove all hardcoded verse data (API-first approach)
 
 #### Month 3: Features & Polish
 - [ ] **Local-Only Features**
@@ -132,7 +136,7 @@ Create a standalone iOS app with AI-generated Shia Quranic commentary featuring 
 - [x] Component views: `ModernCard`, `LayerSelector`, `LoadingView`
 
 ### Services to Create  
-- [ ] `APIService.swift` - Network layer for API calls
+- [x] `APIService.swift` - Network layer for API calls (includes verse fetching)
 - [x] `CacheManager.swift` - Core Data management
 - [ ] `QuranService.swift` - Quran text and metadata handling
 

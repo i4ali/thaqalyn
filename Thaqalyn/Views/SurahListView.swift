@@ -10,6 +10,7 @@ import SwiftUI
 struct SurahListView: View {
     @State private var searchText = ""
     @State private var surahs = Surah.all
+    @State private var isLoadingSurahs = false
     
     var filteredSurahs: [Surah] {
         if searchText.isEmpty {
@@ -45,6 +46,34 @@ struct SurahListView: View {
             .navigationTitle("Thaqalyn")
             .navigationBarTitleDisplayMode(.large)
             .searchable(text: $searchText, prompt: "Search surahs...")
+            .refreshable {
+                await loadSurahsFromAPI()
+            }
+            .onAppear {
+                if surahs.count <= 5 { // Only sample data loaded
+                    Task {
+                        await loadSurahsFromAPI()
+                    }
+                }
+            }
+        }
+    }
+    
+    private func loadSurahsFromAPI() async {
+        isLoadingSurahs = true
+        
+        do {
+            let apiSurahs = try await APIService.shared.getSurahs()
+            await MainActor.run {
+                surahs = apiSurahs
+                isLoadingSurahs = false
+            }
+        } catch {
+            await MainActor.run {
+                isLoadingSurahs = false
+                // Keep existing sample data on API error
+                print("Failed to load surahs from API: \(error.localizedDescription)")
+            }
         }
     }
 }
@@ -121,26 +150,95 @@ struct SurahCard: View {
     }
 }
 
-// Placeholder for verse list view
+// Verse list view with API integration
 struct VerseListView: View {
     let surah: Surah
+    @State private var verses: [Verse] = []
+    @State private var isLoading = false
+    @State private var errorMessage: String?
     
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: ThaqalynDesignSystem.Spacing.lg) {
-                ForEach(Verse.samples.filter { $0.surahId == surah.id }, id: \.id) { verse in
-                    NavigationLink(destination: VerseDetailView(verse: verse)) {
-                        VerseCard(verse: verse)
+        ZStack {
+            ThaqalynDesignSystem.Colors.backgroundGray
+                .ignoresSafeArea()
+            
+            if isLoading {
+                LoadingView()
+            } else if let errorMessage = errorMessage {
+                ModernCard {
+                    VStack(spacing: ThaqalynDesignSystem.Spacing.lg) {
+                        Image(systemName: "doc.text")
+                            .font(.system(size: 48))
+                            .foregroundColor(ThaqalynDesignSystem.Colors.secondaryGray)
+                        
+                        VStack(spacing: ThaqalynDesignSystem.Spacing.sm) {
+                            Text("Verses Not Available")
+                                .font(ThaqalynDesignSystem.Typography.headlineFont)
+                                .foregroundColor(ThaqalynDesignSystem.Colors.textPrimary)
+                            
+                            Text("Unable to retrieve verses for \(surah.transliteration). Please try again later.")
+                                .font(ThaqalynDesignSystem.Typography.bodyFont)
+                                .foregroundColor(ThaqalynDesignSystem.Colors.textSecondary)
+                                .multilineTextAlignment(.center)
+                        }
+                        
+                        Button("Try Again") {
+                            loadVerses()
+                        }
+                        .primaryButtonStyle()
                     }
-                    .buttonStyle(.plain)
+                    .padding(ThaqalynDesignSystem.Spacing.xl)
+                }
+                .padding(.horizontal, ThaqalynDesignSystem.Spacing.lg)
+            } else {
+                ScrollView {
+                    LazyVStack(spacing: ThaqalynDesignSystem.Spacing.lg) {
+                        ForEach(verses, id: \.id) { verse in
+                            NavigationLink(destination: VerseDetailView(verse: verse)) {
+                                VerseCard(verse: verse)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                    .padding(.horizontal, ThaqalynDesignSystem.Spacing.lg)
+                    .padding(.top, ThaqalynDesignSystem.Spacing.sm)
                 }
             }
-            .padding(.horizontal, ThaqalynDesignSystem.Spacing.lg)
-            .padding(.top, ThaqalynDesignSystem.Spacing.sm)
         }
-        .background(ThaqalynDesignSystem.Colors.backgroundGray)
         .navigationTitle(surah.transliteration)
         .navigationBarTitleDisplayMode(.large)
+        .refreshable {
+            loadVerses()
+        }
+        .onAppear {
+            if verses.isEmpty {
+                loadVerses()
+            }
+        }
+    }
+    
+    private func loadVerses() {
+        isLoading = true
+        errorMessage = nil
+        
+        print("🔄 Loading verses for Surah \(surah.id): \(surah.transliteration)")
+        
+        Task {
+            do {
+                let apiVerses = try await APIService.shared.getVerses(surahId: surah.id)
+                print("✅ Successfully loaded \(apiVerses.count) verses for Surah \(surah.id)")
+                await MainActor.run {
+                    verses = apiVerses
+                    isLoading = false
+                }
+            } catch {
+                print("❌ Failed to load verses for \(surah.transliteration): \(error.localizedDescription)")
+                await MainActor.run {
+                    isLoading = false
+                    errorMessage = "API Error"
+                }
+            }
+        }
     }
 }
 

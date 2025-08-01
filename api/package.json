@@ -1,0 +1,21 @@
+{
+  "name": "thaqalyn-api",
+  "version": "1.0.0",
+  "description": "Backend API for Thaqalyn - AI-powered Shia Quranic Commentary",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "node -v",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "openai": "^4.24.0",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": ["islamic", "quran", "tafsir", "shia", "commentary", "ai"],
+  "author": "Thaqalyn Team",
+  "license": "MIT"
+}

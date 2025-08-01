@@ -93,31 +93,4 @@ struct CommentaryLayerInfo {
     ]
 }
 
-// API Request/Response models for tafsir generation
-struct TafsirRequest: Codable {
-    let surah: Int
-    let ayah: Int
-    let layer: Int
-}
-
-struct TafsirResponse: Codable {
-    let content: String
-    let sources: [String]
-    let generatedAt: String
-    let confidenceScore: Double
-    
-    func toTafsirContent(surah: Int, ayah: Int, layer: Int) -> TafsirContent {
-        let dateFormatter = ISO8601DateFormatter()
-        let date = dateFormatter.date(from: generatedAt) ?? Date()
-        
-        return TafsirContent(
-            surah: surah,
-            ayah: ayah,
-            layer: layer,
-            content: content,
-            sources: sources,
-            generatedAt: date,
-            confidenceScore: confidenceScore
-        )
-    }
-}
+// Note: API Request/Response models are now defined in APIService.swift
