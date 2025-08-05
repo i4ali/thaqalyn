@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var dataManager = DataManager.shared
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         NavigationView {
             ZStack {
-                // Dark gradient background with floating elements
-                DarkModernBackground()
+                // Adaptive background with floating elements
+                AdaptiveModernBackground()
                 
                 Group {
                     if dataManager.isLoading {
@@ -29,19 +30,21 @@ struct ContentView: View {
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Force stack style for iPhone
-        .preferredColorScheme(.dark)
+        .preferredColorScheme(themeManager.colorScheme)
     }
 }
 
-struct DarkModernBackground: View {
+struct AdaptiveModernBackground: View {
+    @StateObject private var themeManager = ThemeManager.shared
+    
     var body: some View {
         ZStack {
             // Base gradient background
             LinearGradient(
                 colors: [
-                    Color(red: 0.06, green: 0.09, blue: 0.16), // #0f172a
-                    Color(red: 0.12, green: 0.16, blue: 0.23), // #1e293b
-                    Color(red: 0.2, green: 0.25, blue: 0.33)   // #334155
+                    themeManager.primaryBackground,
+                    themeManager.secondaryBackground,
+                    themeManager.tertiaryBackground
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -50,7 +53,7 @@ struct DarkModernBackground: View {
             // Floating gradient orbs
             RadialGradient(
                 colors: [
-                    Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), // #6366f1
+                    themeManager.floatingOrbColors[0],
                     Color.clear
                 ],
                 center: .topLeading,
@@ -60,7 +63,7 @@ struct DarkModernBackground: View {
             
             RadialGradient(
                 colors: [
-                    Color(red: 0.93, green: 0.28, blue: 0.6).opacity(0.3), // #ec4899
+                    themeManager.floatingOrbColors[1],
                     Color.clear
                 ],
                 center: .bottomTrailing,
@@ -70,7 +73,7 @@ struct DarkModernBackground: View {
             
             RadialGradient(
                 colors: [
-                    Color(red: 0.55, green: 0.36, blue: 0.96).opacity(0.3), // #8b5cf6
+                    themeManager.floatingOrbColors[2],
                     Color.clear
                 ],
                 center: .center,
@@ -84,6 +87,7 @@ struct DarkModernBackground: View {
 
 struct LoadingView: View {
     @State private var isAnimating = false
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         VStack(spacing: 24) {
@@ -91,16 +95,7 @@ struct LoadingView: View {
             ZStack {
                 ForEach(0..<3) { index in
                     Circle()
-                        .fill(
-                            LinearGradient(
-                                colors: [
-                                    Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3),
-                                    Color(red: 0.93, green: 0.28, blue: 0.6).opacity(0.3)
-                                ],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
+                        .fill(themeManager.accentGradient.opacity(0.3))
                         .frame(width: 60 - CGFloat(index * 10), height: 60 - CGFloat(index * 10))
                         .blur(radius: 5)
                         .offset(y: isAnimating ? -20 : 20)
@@ -116,12 +111,12 @@ struct LoadingView: View {
             
             Text("ثقلين")
                 .font(.system(size: 56, weight: .light, design: .default))
-                .foregroundColor(.white)
+                .foregroundColor(themeManager.primaryText)
                 .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.5), radius: 30)
             
             Text("Experience the Quran like never before\nwith AI-powered Shia commentary")
                 .font(.system(size: 18, weight: .light))
-                .foregroundColor(.white.opacity(0.7))
+                .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
             
@@ -132,7 +127,7 @@ struct LoadingView: View {
                 
                 Text("Initializing AI Commentary...")
                     .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(.white.opacity(0.6))
+                    .foregroundColor(themeManager.tertiaryText)
             }
         }
         .padding(60)
@@ -144,6 +139,7 @@ struct LoadingView: View {
 
 struct ErrorView: View {
     let message: String
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         VStack(spacing: 20) {
@@ -154,21 +150,21 @@ struct ErrorView: View {
             
             Text("Error")
                 .font(.system(size: 24, weight: .bold))
-                .foregroundColor(.white)
+                .foregroundColor(themeManager.primaryText)
             
             Text(message)
                 .font(.system(size: 16, weight: .medium))
-                .foregroundColor(.white.opacity(0.8))
+                .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
         }
         .padding(40)
         .background(
             RoundedRectangle(cornerRadius: 20)
-                .fill(.ultraThinMaterial)
+                .fill(themeManager.glassEffect)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(.white.opacity(0.1), lineWidth: 1)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
                 )
         )
         .padding(.horizontal, 20)
@@ -177,6 +173,7 @@ struct ErrorView: View {
 
 struct SurahListView: View {
     @StateObject private var dataManager = DataManager.shared
+    @StateObject private var themeManager = ThemeManager.shared
     @State private var searchText = ""
     
     var body: some View {
@@ -187,52 +184,64 @@ struct SurahListView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Surahs")
                             .font(.system(size: 32, weight: .bold))
-                            .foregroundColor(.white)
+                            .foregroundColor(themeManager.primaryText)
                         
                         Text("AI-powered Shia Commentary")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(.white.opacity(0.7))
+                            .foregroundColor(themeManager.secondaryText)
                     }
                     
                     Spacer()
                     
-                    // Profile avatar with gradient
-                    Circle()
-                        .fill(
-                            LinearGradient(
-                                colors: [
-                                    Color(red: 0.39, green: 0.4, blue: 0.95),
-                                    Color(red: 0.93, green: 0.28, blue: 0.6)
-                                ],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
+                    HStack(spacing: 12) {
+                        // Theme toggle button
+                        Button(action: {
+                            themeManager.toggleTheme()
+                        }) {
+                            Image(systemName: themeManager.isDarkMode ? "sun.max.fill" : "moon.fill")
+                                .font(.system(size: 18, weight: .semibold))
+                                .foregroundColor(themeManager.primaryText)
+                                .frame(width: 40, height: 40)
+                                .background(
+                                    Circle()
+                                        .fill(themeManager.glassEffect)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                                        )
+                                )
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        // Profile avatar with gradient
+                        Circle()
+                            .fill(themeManager.accentGradient)
+                            .frame(width: 40, height: 40)
+                            .overlay(
+                                Text("AA")
+                                    .font(.system(size: 16, weight: .semibold))
+                                    .foregroundColor(.white)
                             )
-                        )
-                        .frame(width: 40, height: 40)
-                        .overlay(
-                            Text("AA")
-                                .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(.white)
-                        )
-                        .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                    }
                 }
                 
                 // Search bar with glassmorphism
                 HStack {
                     Image(systemName: "magnifyingglass")
-                        .foregroundColor(.white.opacity(0.5))
+                        .foregroundColor(themeManager.tertiaryText)
                     
                     TextField("Search surahs...", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
-                        .foregroundColor(.white)
+                        .foregroundColor(themeManager.primaryText)
                 }
                 .padding(12)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(.ultraThinMaterial)
+                        .fill(themeManager.glassEffect)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
-                                .stroke(.white.opacity(0.1), lineWidth: 1)
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
                         )
                 )
                 
@@ -248,14 +257,14 @@ struct SurahListView: View {
             .padding(.bottom, 20)
             .background(
                 Rectangle()
-                    .fill(.ultraThinMaterial)
+                    .fill(themeManager.glassEffect)
                     .overlay(
                         Rectangle()
                             .fill(
                                 LinearGradient(
                                     colors: [
                                         Color.clear,
-                                        Color.white.opacity(0.05)
+                                        themeManager.isDarkMode ? Color.white.opacity(0.05) : Color.black.opacity(0.05)
                                     ],
                                     startPoint: .top,
                                     endPoint: .bottom
@@ -288,34 +297,26 @@ struct SurahListView: View {
 struct StatCard: View {
     let number: String
     let label: String
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         VStack(spacing: 4) {
             Text(number)
                 .font(.system(size: 20, weight: .bold))
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [
-                            Color(red: 0.39, green: 0.4, blue: 0.95),
-                            Color(red: 0.93, green: 0.28, blue: 0.6)
-                        ],
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    )
-                )
+                .foregroundStyle(themeManager.accentGradient)
             
             Text(label)
                 .font(.system(size: 12, weight: .medium))
-                .foregroundColor(.white.opacity(0.6))
+                .foregroundColor(themeManager.tertiaryText)
         }
         .frame(maxWidth: .infinity)
         .padding(12)
         .background(
             RoundedRectangle(cornerRadius: 12)
-                .fill(.ultraThinMaterial)
+                .fill(themeManager.glassEffect)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(.white.opacity(0.1), lineWidth: 1)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
                 )
         )
     }
@@ -323,22 +324,14 @@ struct StatCard: View {
 
 struct ModernSurahCard: View {
     let surah: Surah
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         HStack(spacing: 16) {
             // Surah number with gradient
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 0.39, green: 0.4, blue: 0.95),
-                                Color(red: 0.55, green: 0.36, blue: 0.96)
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
+                    .fill(themeManager.purpleGradient)
                     .frame(width: 48, height: 48)
                     .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
                 
@@ -352,18 +345,18 @@ struct ModernSurahCard: View {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(surah.englishName)
                             .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(.white)
+                            .foregroundColor(themeManager.primaryText)
                         
                         Text(surah.englishNameTranslation)
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.white.opacity(0.7))
+                            .foregroundColor(themeManager.secondaryText)
                     }
                     
                     Spacer()
                     
                     Text(surah.arabicName)
                         .font(.system(size: 20, weight: .medium))
-                        .foregroundColor(.white)
+                        .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.trailing)
                 }
                 
@@ -371,19 +364,19 @@ struct ModernSurahCard: View {
                     HStack(spacing: 4) {
                         Image(systemName: "book")
                             .font(.system(size: 12))
-                            .foregroundColor(.white.opacity(0.6))
+                            .foregroundColor(themeManager.tertiaryText)
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 12, weight: .medium))
-                            .foregroundColor(.white.opacity(0.6))
+                            .foregroundColor(themeManager.tertiaryText)
                     }
                     
                     HStack(spacing: 4) {
                         Image(systemName: "location")
                             .font(.system(size: 12))
-                            .foregroundColor(.white.opacity(0.6))
+                            .foregroundColor(themeManager.tertiaryText)
                         Text(surah.revelationType)
                             .font(.system(size: 12, weight: .medium))
-                            .foregroundColor(.white.opacity(0.6))
+                            .foregroundColor(themeManager.tertiaryText)
                     }
                     
                     Spacer()
@@ -393,18 +386,18 @@ struct ModernSurahCard: View {
         .padding(20)
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .fill(.ultraThinMaterial)
+                .fill(themeManager.glassEffect)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
-                        .stroke(.white.opacity(0.1), lineWidth: 1)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
                         .fill(
                             LinearGradient(
                                 colors: [
-                                    Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.05),
-                                    Color(red: 0.93, green: 0.28, blue: 0.6).opacity(0.05)
+                                    themeManager.floatingOrbColors[0].opacity(0.5),
+                                    themeManager.floatingOrbColors[1].opacity(0.5)
                                 ],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing

@@ -11,16 +11,17 @@ struct SurahDetailView: View {
     let surahWithTafsir: SurahWithTafsir
     @State private var selectedVerse: VerseWithTafsir?
     @State private var showingTafsir = false
+    @StateObject private var themeManager = ThemeManager.shared
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
-            // Dark gradient background
+            // Adaptive gradient background
             LinearGradient(
                 colors: [
-                    Color(red: 0.06, green: 0.09, blue: 0.16),
-                    Color(red: 0.12, green: 0.16, blue: 0.23),
-                    Color(red: 0.2, green: 0.25, blue: 0.33)
+                    themeManager.primaryBackground,
+                    themeManager.secondaryBackground,
+                    themeManager.tertiaryBackground
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -48,6 +49,7 @@ struct SurahDetailView: View {
             }
         }
         .navigationBarHidden(true)
+        .preferredColorScheme(themeManager.colorScheme)
         .sheet(isPresented: $showingTafsir) {
             if let verse = selectedVerse {
                 ModernTafsirDetailView(verse: verse, surah: surahWithTafsir.surah)
@@ -59,6 +61,7 @@ struct SurahDetailView: View {
 struct ModernSurahHeader: View {
     let surah: Surah
     let onBack: () -> Void
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         VStack(spacing: 16) {
@@ -67,14 +70,14 @@ struct ModernSurahHeader: View {
                 Button(action: onBack) {
                     Image(systemName: "chevron.left")
                         .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(themeManager.primaryText)
                         .frame(width: 36, height: 36)
                         .background(
                             RoundedRectangle(cornerRadius: 8)
-                                .fill(.ultraThinMaterial)
+                                .fill(themeManager.glassEffect)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(.white.opacity(0.1), lineWidth: 1)
+                                        .stroke(themeManager.strokeColor, lineWidth: 1)
                                 )
                         )
                 }
@@ -83,21 +86,21 @@ struct ModernSurahHeader: View {
                 
                 Text(surah.englishName)
                     .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
+                    .foregroundColor(themeManager.primaryText)
                 
                 Spacer()
                 
                 Button(action: {}) {
                     Image(systemName: "ellipsis")
                         .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(themeManager.primaryText)
                         .frame(width: 36, height: 36)
                         .background(
                             RoundedRectangle(cornerRadius: 8)
-                                .fill(.ultraThinMaterial)
+                                .fill(themeManager.glassEffect)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(.white.opacity(0.1), lineWidth: 1)
+                                        .stroke(themeManager.strokeColor, lineWidth: 1)
                                 )
                         )
                 }
@@ -107,12 +110,12 @@ struct ModernSurahHeader: View {
             VStack(spacing: 12) {
                 Text(surah.arabicName)
                     .font(.system(size: 28, weight: .medium))
-                    .foregroundColor(.white)
+                    .foregroundColor(themeManager.primaryText)
                     .multilineTextAlignment(.center)
                 
                 Text(surah.englishNameTranslation)
                     .font(.system(size: 16, weight: .medium))
-                    .foregroundColor(.white.opacity(0.8))
+                    .foregroundColor(themeManager.secondaryText)
                     .italic()
                 
                 HStack(spacing: 20) {
@@ -122,7 +125,7 @@ struct ModernSurahHeader: View {
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 14, weight: .medium))
                     }
-                    .foregroundColor(.white.opacity(0.7))
+                    .foregroundColor(themeManager.tertiaryText)
                     
                     HStack(spacing: 6) {
                         Image(systemName: "location")
@@ -130,24 +133,24 @@ struct ModernSurahHeader: View {
                         Text(surah.revelationType)
                             .font(.system(size: 14, weight: .medium))
                     }
-                    .foregroundColor(.white.opacity(0.7))
+                    .foregroundColor(themeManager.tertiaryText)
                 }
             }
             .padding(20)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(.ultraThinMaterial)
+                    .fill(themeManager.glassEffect)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
-                            .stroke(.white.opacity(0.1), lineWidth: 1)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
                             .fill(
                                 LinearGradient(
                                     colors: [
-                                        Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.1),
-                                        Color(red: 0.93, green: 0.28, blue: 0.6).opacity(0.1)
+                                        themeManager.floatingOrbColors[0].opacity(0.7),
+                                        themeManager.floatingOrbColors[1].opacity(0.7)
                                     ],
                                     startPoint: .topLeading,
                                     endPoint: .bottomTrailing
@@ -161,7 +164,7 @@ struct ModernSurahHeader: View {
         .padding(.bottom, 20)
         .background(
             Rectangle()
-                .fill(.ultraThinMaterial)
+                .fill(themeManager.glassEffect)
         )
     }
 }
@@ -170,22 +173,14 @@ struct ModernVerseCard: View {
     let verse: VerseWithTafsir
     let onTafsirTap: () -> Void
     @State private var isPressed = false
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             // Verse number and tafsir button
             HStack {
                 Circle()
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 0.39, green: 0.4, blue: 0.95),
-                                Color(red: 0.93, green: 0.28, blue: 0.6)
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
+                    .fill(themeManager.accentGradient)
                     .frame(width: 40, height: 40)
                     .overlay(
                         Text("\(verse.number)")
@@ -209,16 +204,7 @@ struct ModernVerseCard: View {
                         .padding(.vertical, 8)
                         .background(
                             RoundedRectangle(cornerRadius: 8)
-                                .fill(
-                                    LinearGradient(
-                                        colors: [
-                                            Color(red: 0.39, green: 0.4, blue: 0.95),
-                                            Color(red: 0.55, green: 0.36, blue: 0.96)
-                                        ],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
+                                .fill(themeManager.purpleGradient)
                         )
                         .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 4)
                     }
@@ -228,7 +214,7 @@ struct ModernVerseCard: View {
             // Arabic text
             Text(verse.arabicText)
                 .font(.system(size: 24, weight: .medium))
-                .foregroundColor(.white)
+                .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .lineSpacing(8)
@@ -236,24 +222,24 @@ struct ModernVerseCard: View {
             // English translation
             Text(verse.translation)
                 .font(.system(size: 16, weight: .medium))
-                .foregroundColor(.white.opacity(0.8))
+                .foregroundColor(themeManager.secondaryText)
                 .lineSpacing(4)
         }
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 20)
-                .fill(.ultraThinMaterial)
+                .fill(themeManager.glassEffect)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(.white.opacity(0.1), lineWidth: 1)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .fill(
                             LinearGradient(
                                 colors: [
-                                    Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.05),
-                                    Color(red: 0.93, green: 0.28, blue: 0.6).opacity(0.05)
+                                    themeManager.floatingOrbColors[0].opacity(0.5),
+                                    themeManager.floatingOrbColors[1].opacity(0.5)
                                 ],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
@@ -276,16 +262,17 @@ struct ModernTafsirDetailView: View {
     let verse: VerseWithTafsir
     let surah: Surah
     @State private var selectedLayer: TafsirLayer = .foundation
+    @StateObject private var themeManager = ThemeManager.shared
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
-            // Dark gradient background
+            // Adaptive gradient background
             LinearGradient(
                 colors: [
-                    Color(red: 0.06, green: 0.09, blue: 0.16),
-                    Color(red: 0.12, green: 0.16, blue: 0.23),
-                    Color(red: 0.2, green: 0.25, blue: 0.33)
+                    themeManager.primaryBackground,
+                    themeManager.secondaryBackground,
+                    themeManager.tertiaryBackground
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -301,19 +288,19 @@ struct ModernTafsirDetailView: View {
                             dismiss()
                         }
                         .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(.white)
+                        .foregroundColor(themeManager.primaryText)
                         
                         Spacer()
                         
                         Text("Commentary")
                             .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(.white)
+                            .foregroundColor(themeManager.primaryText)
                         
                         Spacer()
                         
                         Text("\(surah.englishName) \(verse.number)")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.white.opacity(0.7))
+                            .foregroundColor(themeManager.tertiaryText)
                     }
                     
                     // Verse display
@@ -331,16 +318,7 @@ struct ModernTafsirDetailView: View {
                             .lineSpacing(4)
                     }
                     .padding(20)
-                    .background(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 0.39, green: 0.4, blue: 0.95),
-                                Color(red: 0.55, green: 0.36, blue: 0.96)
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
+                    .background(themeManager.purpleGradient)
                     .cornerRadius(16)
                 }
                 .padding(.horizontal, 20)
@@ -348,7 +326,7 @@ struct ModernTafsirDetailView: View {
                 .padding(.bottom, 20)
                 .background(
                     Rectangle()
-                        .fill(.ultraThinMaterial)
+                        .fill(themeManager.glassEffect)
                 )
                 
                 // Layer selector tabs
@@ -368,11 +346,13 @@ struct ModernTafsirDetailView: View {
                 }
             }
         }
+        .preferredColorScheme(themeManager.colorScheme)
     }
 }
 
 struct ModernTafsirTabs: View {
     @Binding var selectedLayer: TafsirLayer
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -386,26 +366,19 @@ struct ModernTafsirTabs: View {
                                 .font(.system(size: 12, weight: .semibold))
                                 .multilineTextAlignment(.center)
                         }
-                        .foregroundColor(selectedLayer == layer ? .white : .white.opacity(0.6))
+                        .foregroundColor(selectedLayer == layer ? .white : themeManager.tertiaryText)
                         .padding(.horizontal, 16)
                         .padding(.vertical, 12)
                         .background(
                             RoundedRectangle(cornerRadius: 12)
                                 .fill(
                                     selectedLayer == layer ? 
-                                    LinearGradient(
-                                        colors: [
-                                            Color(red: 0.39, green: 0.4, blue: 0.95),
-                                            Color(red: 0.55, green: 0.36, blue: 0.96)
-                                        ],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    ) :
+                                    themeManager.purpleGradient :
                                     LinearGradient(colors: [.clear], startPoint: .leading, endPoint: .trailing)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12)
-                                        .stroke(.white.opacity(selectedLayer == layer ? 0 : 0.2), lineWidth: 1)
+                                        .stroke(selectedLayer == layer ? .clear : themeManager.strokeColor, lineWidth: 1)
                                 )
                         )
                         .shadow(
@@ -420,7 +393,7 @@ struct ModernTafsirTabs: View {
         .padding(.vertical, 12)
         .background(
             Rectangle()
-                .fill(.ultraThinMaterial)
+                .fill(themeManager.glassEffect)
         )
     }
     
@@ -447,6 +420,7 @@ struct ModernTafsirContent: View {
     let text: String
     let layer: TafsirLayer
     @State private var selectedSection: String = ""
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         let sections = parseSections(from: text)
@@ -487,11 +461,11 @@ struct ModernTafsirContent: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(layer.title)
                     .font(.system(size: 18, weight: .semibold))
-                    .foregroundColor(.white)
+                    .foregroundColor(themeManager.primaryText)
                 
                 Text(layer.description)
                     .font(.system(size: 13, weight: .medium))
-                    .foregroundColor(.white.opacity(0.7))
+                    .foregroundColor(themeManager.secondaryText)
             }
             
             Spacer()
@@ -520,7 +494,7 @@ struct ModernTafsirContent: View {
         return Button(action: { selectedSection = sectionTitle }) {
             Text(formatSectionTitle(sectionTitle))
                 .font(.system(size: 12, weight: .semibold))
-                .foregroundColor(isSelected ? .white : .white.opacity(0.7))
+                .foregroundColor(isSelected ? .white : themeManager.tertiaryText)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)
                 .background(
@@ -531,7 +505,7 @@ struct ModernTafsirContent: View {
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
-                                .stroke(.blue.opacity(0.4), lineWidth: 1)
+                                .stroke(isSelected ? .clear : themeManager.strokeColor, lineWidth: 1)
                         )
                 )
         }
@@ -543,7 +517,7 @@ struct ModernTafsirContent: View {
                 ScrollView {
                     Text(sectionContent)
                         .font(.system(size: 15, weight: .regular))
-                        .foregroundColor(.white.opacity(0.9))
+                        .foregroundColor(themeManager.primaryText)
                         .lineSpacing(6)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.top, 8)
@@ -557,7 +531,7 @@ struct ModernTafsirContent: View {
         ScrollView {
             Text(text)
                 .font(.system(size: 15, weight: .regular))
-                .foregroundColor(.white.opacity(0.9))
+                .foregroundColor(themeManager.primaryText)
                 .lineSpacing(6)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -566,10 +540,10 @@ struct ModernTafsirContent: View {
     
     private var backgroundView: some View {
         RoundedRectangle(cornerRadius: 16)
-            .fill(.ultraThinMaterial)
+            .fill(themeManager.glassEffect)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(.white.opacity(0.1), lineWidth: 1)
+                    .stroke(themeManager.strokeColor, lineWidth: 1)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
@@ -827,28 +801,29 @@ struct ModernTafsirContent: View {
 
 struct NoCommentaryView: View {
     let layer: TafsirLayer
+    @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         VStack(spacing: 16) {
             Image(systemName: "book.closed")
                 .font(.system(size: 48))
-                .foregroundColor(.white.opacity(0.3))
+                .foregroundColor(themeManager.tertiaryText)
             
             Text("No commentary available")
                 .font(.system(size: 18, weight: .medium))
-                .foregroundColor(.white.opacity(0.7))
+                .foregroundColor(themeManager.secondaryText)
             
             Text("for \(layer.title)")
                 .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.white.opacity(0.5))
+                .foregroundColor(themeManager.tertiaryText)
         }
         .padding(40)
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .fill(.ultraThinMaterial)
+                .fill(themeManager.glassEffect)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
-                        .stroke(.white.opacity(0.1), lineWidth: 1)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
                 )
         )
     }
