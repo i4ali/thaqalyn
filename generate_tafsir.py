@@ -12,12 +12,20 @@ from datetime import datetime
 import openai
 
 class TafsirGenerator:
-    def __init__(self, api_key: str):
-        """Initialize with DeepSeek API key"""
-        self.client = openai.OpenAI(
-            api_key=api_key,
-            base_url="https://api.deepseek.com"
-        )
+    def __init__(self, api_key: str, use_openrouter: bool = False):
+        """Initialize with API key - can use DeepSeek directly or through OpenRouter"""
+        if use_openrouter:
+            self.client = openai.OpenAI(
+                api_key=api_key,
+                base_url="https://openrouter.ai/api/v1"
+            )
+            self.model = "deepseek/deepseek-r1"  # DeepSeek R1 reasoning model on OpenRouter
+        else:
+            self.client = openai.OpenAI(
+                api_key=api_key,
+                base_url="https://api.deepseek.com"
+            )
+            self.model = "deepseek-reasoner"
         self.quran_data = None
         self.generated_count = 0
         self.total_verses = 0
@@ -51,23 +59,25 @@ Verse: {ayah_number}
 Arabic: {arabic_text}
 Translation: {translation}
 
-TASK: Provide Layer 1 Foundation Commentary (🏛️) following these guidelines:
+TASK: Provide foundational commentary that explains this verse in clear, accessible language for all Muslims. Focus on basic understanding, historical background, key Arabic terms, and practical modern applications.
 
-1. SIMPLE EXPLANATION: Explain the verse in clear, modern language accessible to all Muslims
-2. HISTORICAL CONTEXT: Provide Asbab al-Nuzul (reasons for revelation) if relevant
-3. KEY ARABIC TERMS: Define important Arabic words and their meanings
-4. CONTEMPORARY RELEVANCE: How this verse applies to modern Muslim life
+Write a flowing commentary of 150-250 words that covers:
+- Clear explanation of the verse's meaning
+- Historical context or circumstances of revelation
+- Important Arabic words and their significance  
+- How this verse applies to contemporary Muslim life
 
-REQUIREMENTS:
-- Write 150-250 words
-- Use accessible language
-- Focus on practical understanding
-- Include Arabic terminology with translations
-- Be respectful and scholarly
+FORMATTING REQUIREMENTS:
+- Write in flowing paragraphs, not sections
+- Use clean, natural prose
+- No bullet points, numbers, or markdown formatting
+- Include Arabic terms naturally within sentences
+- Use simple English spellings for all Arabic names and terms (Ali not ʿAlī, Tabatabai not Ṭabāṭabāʾī, Bismillah not Bismillāh)
+- Make it accessible and practical
 
 COMMENTARY:""",
 
-            2: """You are a Shia Islamic scholar specializing in classical Shia tafsir traditions.
+            2: """You are a classical Shia Islamic scholar drawing from traditional sources like Al-Mizan and Majma al-Bayan.
 
 VERSE CONTEXT:
 Surah: {surah_name} (Surah {surah_number})
@@ -75,23 +85,24 @@ Verse: {ayah_number}
 Arabic: {arabic_text}
 Translation: {translation}
 
-TASK: Provide Layer 2 Classical Shia Commentary (📚) drawing from these sources:
+TASK: Provide classical Shia scholarly interpretation drawing from established sources like Tabatabai's Al-Mizan, Tabrisi's Majma al-Bayan, and other traditional Shia commentaries. Focus on theological depth and established scholarly consensus.
 
-1. TABATABAI'S AL-MIZAN: Include insights from this comprehensive tafsir
-2. TABRISI'S MAJMA AL-BAYAN: Reference classical Shia scholarly interpretations
-3. TRADITIONAL CONSENSUS: Present established Shia scholarly views
-4. HISTORICAL SHIA PERSPECTIVE: Unique Shia interpretations and approaches
+Write a scholarly commentary of 200-300 words that includes:
+- Classical Shia interpretations and scholarly insights
+- References to established commentators when relevant
+- Theological concepts unique to Shia understanding
+- Connection to broader Islamic jurisprudence and doctrine
 
-REQUIREMENTS:
-- Write 200-300 words
-- Reference classical scholars when relevant
-- Highlight distinctly Shia interpretations
-- Maintain scholarly tone
-- Include theological depth
+FORMATTING REQUIREMENTS:
+- Write in scholarly prose appropriate for serious students
+- Reference classical sources naturally within text
+- No bullet points, numbers, or markdown formatting
+- Use simple English spellings for all Arabic names and terms (Tabatabai not Ṭabāṭabāʾī, Tabrisi not Ṭabrisī, Jafar not Jaʿfar)
+- Maintain academic tone while being readable
 
 COMMENTARY:""",
 
-            3: """You are a contemporary Shia Islamic scholar providing modern insights on Quranic verses.
+            3: """You are a contemporary Shia Islamic scholar engaging with modern insights and current scholarship.
 
 VERSE CONTEXT:
 Surah: {surah_name} (Surah {surah_number})
@@ -99,23 +110,24 @@ Verse: {ayah_number}
 Arabic: {arabic_text}
 Translation: {translation}
 
-TASK: Provide Layer 3 Contemporary Insights (🌍) covering:
+TASK: Provide contemporary interpretation that bridges classical wisdom with modern understanding. Draw from current Shia scholars, scientific insights where relevant, and address contemporary social issues and challenges.
 
-1. MODERN SCHOLARS: Insights from contemporary Shia scholars (Makarem Shirazi, Jawadi Amuli, etc.)
-2. SCIENTIFIC CORRELATIONS: Modern scientific understanding that relates to the verse
-3. SOCIAL JUSTICE THEMES: How the verse addresses contemporary social issues
-4. INTERFAITH DIALOGUE: Perspectives that promote understanding with other faiths
+Write a modern commentary of 200-300 words that explores:
+- How contemporary scholars interpret this verse
+- Scientific, social, or philosophical insights that illuminate the text
+- Relevance to current global issues and challenges
+- Interfaith and multicultural perspectives where appropriate
 
-REQUIREMENTS:
-- Write 200-300 words
-- Connect ancient wisdom to modern contexts
-- Include scientific or social insights where appropriate
-- Maintain balance between tradition and modernity
-- Be inclusive while maintaining Shia identity
+FORMATTING REQUIREMENTS:
+- Write in contemporary, engaging prose
+- Include modern scholarly references naturally
+- Address current issues and applications
+- Use simple English spellings for all Arabic names and terms (Bismillah not Bismillāh, Rahman not Raḥmān)
+- No bullet points, numbers, or markdown formatting
 
 COMMENTARY:""",
 
-            4: """You are a Shia Islamic scholar specializing in the teachings of the Ahlul Bayt (عليهم السلام).
+            4: """You are a specialist in the teachings of the Ahlul Bayt (عليهم السلام) - the 14 Infallibles.
 
 VERSE CONTEXT:
 Surah: {surah_name} (Surah {surah_number})
@@ -123,19 +135,20 @@ Verse: {ayah_number}
 Arabic: {arabic_text}
 Translation: {translation}
 
-TASK: Provide Layer 4 Ahlul Bayt Wisdom (⭐) focusing on:
+TASK: Provide commentary focused specifically on the wisdom and teachings of the Ahlul Bayt. Include relevant hadith, spiritual insights, and unique Shia theological concepts like Wilayah and Imamah when applicable.
 
-1. RELEVANT HADITH: Narrations from the 14 Infallibles that illuminate this verse
-2. THEOLOGICAL CONCEPTS: Unique Shia concepts (Wilayah, Imamah, Tawhid, etc.) related to the verse
-3. SPIRITUAL DIMENSIONS: Mystical and spiritual interpretations from Ahlul Bayt
-4. PRACTICAL APPLICATIONS: How this verse guides Shia religious practice and daily life
+Write a spiritually-focused commentary of 250-350 words that emphasizes:
+- Specific teachings from the Prophet, Imams, or Lady Fatima (peace be upon them)
+- Relevant hadith that illuminate this verse's deeper meaning
+- Unique Shia spiritual and theological concepts
+- Practical guidance for spiritual development and religious practice
 
-REQUIREMENTS:
-- Write 250-350 words
-- Include specific hadith or teachings when available
-- Explain unique Shia theological concepts
-- Connect to spiritual development and practice
-- Maintain reverence for the Ahlul Bayt
+FORMATTING REQUIREMENTS:
+- Write with reverence and spiritual depth
+- Include hadith and quotes naturally within text
+- Focus on practical spiritual guidance
+- Use simple English spellings for all Arabic names and terms (Ali not ʿAlī, Fatimah not Fāṭimah, Muhammad not Muḥammad)
+- No bullet points, numbers, or markdown formatting
 
 COMMENTARY:"""
         }
@@ -161,16 +174,20 @@ COMMENTARY:"""
         
         try:
             response = self.client.chat.completions.create(
-                model="deepseek-chat",
+                model=self.model,
                 messages=[
                     {"role": "system", "content": "You are an expert Shia Islamic scholar with deep knowledge of Quranic commentary, classical tafsir, and the teachings of the Ahlul Bayt."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=800,
+                max_tokens=1500,
                 temperature=0.7
             )
             
             commentary = response.choices[0].message.content.strip()
+            
+            # Clean up incomplete sentences
+            commentary = self.clean_incomplete_sentences(commentary)
+            
             self.generated_count += 1
             
             # Progress indicator
@@ -185,6 +202,44 @@ COMMENTARY:"""
         
         # Small delay to avoid rate limiting
         time.sleep(0.1)
+    
+    def clean_incomplete_sentences(self, text: str) -> str:
+        """Remove incomplete sentences that end abruptly due to token limits"""
+        if not text:
+            return text
+        
+        # Split into sentences
+        sentences = text.split('.')
+        
+        # If the last "sentence" is very short and doesn't end with punctuation,
+        # it's likely incomplete - remove it
+        if len(sentences) > 1:
+            last_part = sentences[-1].strip()
+            
+            # Check if last part is incomplete:
+            # - Very short (less than 10 characters)
+            # - Doesn't end with proper punctuation
+            # - Contains incomplete phrases
+            incomplete_indicators = [
+                len(last_part) < 10,
+                not last_part.endswith(('.', '!', '?', '"', ')', ']')),
+                last_part.endswith(('at', 'the', 'of', 'in', 'and', 'or', 'but', 'with', 'by', 'for', 'to', 'from', 'on')),
+                ' at' in last_part and len(last_part) < 30,  # Common incomplete ending
+            ]
+            
+            if any(incomplete_indicators):
+                # Remove the incomplete sentence
+                sentences = sentences[:-1]
+                print(f"🧹 Removed incomplete sentence: '{last_part}'")
+        
+        # Rejoin sentences
+        cleaned_text = '.'.join(sentences)
+        
+        # Ensure it ends with a period if it doesn't already end with punctuation
+        if cleaned_text and not cleaned_text.endswith(('.', '!', '?', '"', ')', ']')):
+            cleaned_text += '.'
+        
+        return cleaned_text.strip()
     
     def generate_surah_tafsir(self, surah_num: int) -> Dict[str, Dict[str, str]]:
         """Generate all 4 layers of tafsir for a complete surah"""
@@ -270,16 +325,36 @@ def main():
     from dotenv import load_dotenv
     load_dotenv()
     
-    # Get API key
-    api_key = os.getenv("DEEPSEEK_API_KEY")
-    if not api_key:
-        api_key = input("Enter your DeepSeek API key: ").strip()
+    # Choose API provider
+    print("Select API provider:")
+    print("1. DeepSeek Direct")
+    print("2. OpenRouter (DeepSeek)")
+    
+    provider_choice = input("Enter choice (1 or 2): ").strip()
+    
+    if provider_choice == "2":
+        # OpenRouter
+        use_openrouter = True
+        api_key = os.getenv("OPENROUTER_API_KEY")
         if not api_key:
-            print("Error: API key required")
-            return
+            api_key = input("Enter your OpenRouter API key: ").strip()
+        provider_name = "OpenRouter"
+    else:
+        # DeepSeek Direct
+        use_openrouter = False
+        api_key = os.getenv("DEEPSEEK_API_KEY")
+        if not api_key:
+            api_key = input("Enter your DeepSeek API key: ").strip()
+        provider_name = "DeepSeek Direct"
+    
+    if not api_key:
+        print("Error: API key required")
+        return
+    
+    print(f"Using {provider_name}")
     
     # Initialize generator
-    generator = TafsirGenerator(api_key)
+    generator = TafsirGenerator(api_key, use_openrouter)
     
     # Load Quran data
     if not generator.load_quran_data():
