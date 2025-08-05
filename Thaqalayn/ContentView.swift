@@ -174,7 +174,11 @@ struct ErrorView: View {
 struct SurahListView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var bookmarkManager = BookmarkManager.shared
     @State private var searchText = ""
+    @State private var showingBookmarks = false
+    @State private var navigateToSurah: SurahWithTafsir?
+    @State private var targetVerse: Int?
     
     var body: some View {
         VStack(spacing: 0) {
@@ -194,6 +198,37 @@ struct SurahListView: View {
                     Spacer()
                     
                     HStack(spacing: 12) {
+                        // Bookmarks button
+                        Button(action: { showingBookmarks = true }) {
+                            ZStack {
+                                Image(systemName: "heart")
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(themeManager.primaryText)
+                                
+                                if bookmarkManager.bookmarks.count > 0 {
+                                    Circle()
+                                        .fill(Color.pink)
+                                        .frame(width: 12, height: 12)
+                                        .overlay(
+                                            Text("\(bookmarkManager.bookmarks.count)")
+                                                .font(.system(size: 8, weight: .bold))
+                                                .foregroundColor(.white)
+                                        )
+                                        .offset(x: 12, y: -12)
+                                }
+                            }
+                            .frame(width: 40, height: 40)
+                            .background(
+                                Circle()
+                                    .fill(themeManager.glassEffect)
+                                    .overlay(
+                                        Circle()
+                                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                                    )
+                            )
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
                         // Theme toggle button
                         Button(action: {
                             themeManager.toggleTheme()
@@ -281,7 +316,7 @@ struct SurahListView: View {
                         surah.surah.englishName.localizedCaseInsensitiveContains(searchText) ||
                         surah.surah.arabicName.contains(searchText)
                     }) { surahWithTafsir in
-                        NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir)) {
+                        NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)) {
                             ModernSurahCard(surah: surahWithTafsir.surah)
                         }
                         .buttonStyle(PlainButtonStyle())
@@ -290,6 +325,21 @@ struct SurahListView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 20)
             }
+            
+            // Hidden NavigationLink for programmatic navigation from bookmarks
+            NavigationLink(
+                destination: navigateToSurah.map { SurahDetailView(surahWithTafsir: $0, targetVerse: targetVerse) },
+                isActive: Binding(
+                    get: { navigateToSurah != nil },
+                    set: { if !$0 { navigateToSurah = nil; targetVerse = nil } }
+                )
+            ) {
+                EmptyView()
+            }
+            .hidden()
+        }
+        .sheet(isPresented: $showingBookmarks) {
+            BookmarksView(selectedSurahForNavigation: $navigateToSurah, targetVerse: $targetVerse)
         }
     }
 }

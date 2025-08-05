@@ -159,6 +159,10 @@ struct VerseWithTafsir: Identifiable {
     let sajda: SajdaInfo
     let tafsir: TafsirVerse?
     
+    var bookmarkKey: String {
+        return id
+    }
+    
     init(number: Int, verse: Verse, tafsir: TafsirVerse? = nil) {
         self.id = "\(number)"
         self.number = number
@@ -166,6 +170,147 @@ struct VerseWithTafsir: Identifiable {
         self.translation = verse.translation
         self.sajda = verse.sajda
         self.tafsir = tafsir
+    }
+}
+
+// MARK: - Bookmark Models
+
+struct Bookmark: Codable, Identifiable {
+    let id: UUID
+    let userId: String
+    let surahNumber: Int
+    let verseNumber: Int
+    let surahName: String
+    let verseText: String
+    let verseTranslation: String
+    let notes: String?
+    let tags: [String]
+    let createdAt: Date
+    let updatedAt: Date
+    let syncStatus: BookmarkSyncStatus
+    
+    var verseReference: String {
+        return "\(surahNumber):\(verseNumber)"
+    }
+    
+    init(
+        id: UUID = UUID(),
+        userId: String,
+        surahNumber: Int,
+        verseNumber: Int,
+        surahName: String,
+        verseText: String,
+        verseTranslation: String,
+        notes: String? = nil,
+        tags: [String] = [],
+        createdAt: Date = Date(),
+        updatedAt: Date = Date(),
+        syncStatus: BookmarkSyncStatus = .synced
+    ) {
+        self.id = id
+        self.userId = userId
+        self.surahNumber = surahNumber
+        self.verseNumber = verseNumber
+        self.surahName = surahName
+        self.verseText = verseText
+        self.verseTranslation = verseTranslation
+        self.notes = notes
+        self.tags = tags
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+        self.syncStatus = syncStatus
+    }
+}
+
+enum BookmarkSyncStatus: String, Codable {
+    case synced = "synced"
+    case pendingSync = "pending_sync"
+    case pendingDelete = "pending_delete"
+    case conflict = "conflict"
+}
+
+struct BookmarkCollection: Codable, Identifiable {
+    let id: UUID
+    let userId: String
+    let name: String
+    let description: String?
+    let bookmarkIds: [UUID]
+    let createdAt: Date
+    let updatedAt: Date
+    
+    init(
+        id: UUID = UUID(),
+        userId: String,
+        name: String,
+        description: String? = nil,
+        bookmarkIds: [UUID] = [],
+        createdAt: Date = Date(),
+        updatedAt: Date = Date()
+    ) {
+        self.id = id
+        self.userId = userId
+        self.name = name
+        self.description = description
+        self.bookmarkIds = bookmarkIds
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+    }
+}
+
+struct UserBookmarkPreferences: Codable {
+    let userId: String
+    let isPremium: Bool
+    let bookmarkLimit: Int
+    let defaultTags: [String]
+    let sortOrder: BookmarkSortOrder
+    let groupBy: BookmarkGroupBy
+    
+    init(
+        userId: String,
+        isPremium: Bool = false,
+        bookmarkLimit: Int = 2,
+        defaultTags: [String] = [],
+        sortOrder: BookmarkSortOrder = .dateDescending,
+        groupBy: BookmarkGroupBy = .none
+    ) {
+        self.userId = userId
+        self.isPremium = isPremium
+        self.bookmarkLimit = isPremium ? 1000 : bookmarkLimit
+        self.defaultTags = defaultTags
+        self.sortOrder = sortOrder
+        self.groupBy = groupBy
+    }
+}
+
+enum BookmarkSortOrder: String, Codable, CaseIterable {
+    case dateAscending = "date_asc"
+    case dateDescending = "date_desc"
+    case surahOrder = "surah_order"
+    case alphabetical = "alphabetical"
+    
+    var title: String {
+        switch self {
+        case .dateAscending: return "Oldest First"
+        case .dateDescending: return "Newest First"
+        case .surahOrder: return "Quran Order"
+        case .alphabetical: return "Alphabetical"
+        }
+    }
+}
+
+enum BookmarkGroupBy: String, Codable, CaseIterable {
+    case none = "none"
+    case surah = "surah"
+    case tags = "tags"
+    case date = "date"
+    
+    var title: String {
+        switch self {
+        case .none: return "No Grouping"
+        case .surah: return "By Surah"
+        case .tags: return "By Tags"
+        case .date: return "By Date"
+        }
     }
 }
 

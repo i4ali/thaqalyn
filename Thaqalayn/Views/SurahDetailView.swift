@@ -9,10 +9,17 @@ import SwiftUI
 
 struct SurahDetailView: View {
     let surahWithTafsir: SurahWithTafsir
+    let targetVerse: Int?
     @State private var selectedVerse: VerseWithTafsir?
     @State private var showingTafsir = false
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var bookmarkManager = BookmarkManager.shared
     @Environment(\.dismiss) private var dismiss
+    
+    init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil) {
+        self.surahWithTafsir = surahWithTafsir
+        self.targetVerse = targetVerse
+    }
     
     var body: some View {
         ZStack {
@@ -33,18 +40,34 @@ struct SurahDetailView: View {
                 ModernSurahHeader(surah: surahWithTafsir.surah, onBack: { dismiss() })
                 
                 // Verses scroll view
-                ScrollView {
-                    LazyVStack(spacing: 16) {
-                        ForEach(surahWithTafsir.verses) { verse in
-                            ModernVerseCard(verse: verse) {
-                                selectedVerse = verse
-                                showingTafsir = true
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        LazyVStack(spacing: 16) {
+                            ForEach(surahWithTafsir.verses) { verse in
+                                ModernVerseCard(
+                                    verse: verse,
+                                    surah: surahWithTafsir.surah,
+                                    bookmarkManager: bookmarkManager
+                                ) {
+                                    selectedVerse = verse
+                                    showingTafsir = true
+                                }
+                                .id("verse_\(verse.number)")
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 20)
+                        .padding(.bottom, 40)
+                    }
+                    .onAppear {
+                        if let targetVerse = targetVerse {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                withAnimation(.easeInOut(duration: 0.8)) {
+                                    proxy.scrollTo("verse_\(targetVerse)", anchor: .center)
+                                }
                             }
                         }
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-                    .padding(.bottom, 40)
                 }
             }
         }
@@ -89,21 +112,6 @@ struct ModernSurahHeader: View {
                     .foregroundColor(themeManager.primaryText)
                 
                 Spacer()
-                
-                Button(action: {}) {
-                    Image(systemName: "ellipsis")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .frame(width: 36, height: 36)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        )
-                }
             }
             
             // Surah info card
@@ -171,13 +179,43 @@ struct ModernSurahHeader: View {
 
 struct ModernVerseCard: View {
     let verse: VerseWithTafsir
+    let surah: Surah
+    let bookmarkManager: BookmarkManager
     let onTafsirTap: () -> Void
     @State private var isPressed = false
+    @State private var showingBookmarkFeedback = false
     @StateObject private var themeManager = ThemeManager.shared
+    
+    private var isBookmarked: Bool {
+        bookmarkManager.isBookmarked(surahNumber: surah.number, verseNumber: verse.number)
+    }
+    
+    private func toggleBookmark() {
+        if isBookmarked {
+            if let bookmark = bookmarkManager.getBookmark(surahNumber: surah.number, verseNumber: verse.number) {
+                bookmarkManager.removeBookmark(id: bookmark.id)
+            }
+        } else {
+            let success = bookmarkManager.addBookmark(
+                surahNumber: surah.number,
+                verseNumber: verse.number,
+                surahName: surah.englishName,
+                verseText: verse.arabicText,
+                verseTranslation: verse.translation
+            )
+            
+            if success {
+                showingBookmarkFeedback = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    showingBookmarkFeedback = false
+                }
+            }
+        }
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            // Verse number and tafsir button
+            // Verse number and actions
             HStack {
                 Circle()
                     .fill(themeManager.accentGradient)
@@ -191,22 +229,43 @@ struct ModernVerseCard: View {
                 
                 Spacer()
                 
-                if verse.tafsir != nil {
-                    Button(action: onTafsirTap) {
-                        HStack(spacing: 6) {
-                            Image(systemName: "book.fill")
-                                .font(.system(size: 12))
-                            Text("Commentary")
-                                .font(.system(size: 13, weight: .medium))
+                HStack(spacing: 8) {
+                    // Bookmark button
+                    Button(action: toggleBookmark) {
+                        Image(systemName: isBookmarked ? "heart.fill" : "heart")
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(isBookmarked ? .pink : themeManager.secondaryText)
+                            .frame(width: 36, height: 36)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(themeManager.glassEffect)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                                    )
+                            )
+                    }
+                    .scaleEffect(showingBookmarkFeedback ? 1.2 : 1.0)
+                    .animation(.spring(response: 0.3, dampingFraction: 0.6), value: showingBookmarkFeedback)
+                    
+                    // Commentary button
+                    if verse.tafsir != nil {
+                        Button(action: onTafsirTap) {
+                            HStack(spacing: 6) {
+                                Image(systemName: "book.fill")
+                                    .font(.system(size: 12))
+                                Text("Commentary")
+                                    .font(.system(size: 13, weight: .medium))
+                            }
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 8)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(themeManager.purpleGradient)
+                            )
+                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 4)
                         }
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 8)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(themeManager.purpleGradient)
-                        )
-                        .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 4)
                     }
                 }
             }
@@ -1058,5 +1117,5 @@ struct TafsirLayerSelector: View {
         verses: [sampleVerseWithTafsir]
     )
     
-    SurahDetailView(surahWithTafsir: sampleSurahWithTafsir)
+    SurahDetailView(surahWithTafsir: sampleSurahWithTafsir, targetVerse: nil)
 }
