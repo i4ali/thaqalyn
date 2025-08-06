@@ -9,7 +9,7 @@ Thaqalyn is a Shia Islamic Quranic commentary iOS app with an offline-first arch
 1. **Data Generation System** (Python) - Pre-generates AI-based Shia tafsir commentary using DeepSeek
 2. **iOS App** (Swift/SwiftUI) - Modern iOS app displaying pre-generated content offline
 
-**Current Status**: Production-ready app with **all 114 surahs** available for reading and audio playback. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir using updated no-transliteration prompts, stunning dark modern UI with glassmorphism design, nested tab navigation system, **complete authentication & bookmarks system with full cloud sync**, **comprehensive audio playback system** with verse highlighting and auto-scroll, and email confirmation deep linking implemented. **Tafsir data for remaining 113 surahs will be generated manually as needed.**
+**Current Status**: Production-ready app with **all 114 surahs** available for reading and surah-level audio playback. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir using updated no-transliteration prompts, stunning dark modern UI with glassmorphism design, nested tab navigation system, **complete authentication & bookmarks system with full cloud sync**, **streamlined audio playback system** for complete surahs only, and email confirmation deep linking implemented. **Tafsir data for remaining 113 surahs will be generated manually as needed.**
 
 ## Architecture
 
@@ -34,12 +34,12 @@ Each verse receives commentary at 4 scholarly depths:
 - **Services**: 
   - `DataManager.swift` - Singleton managing JSON loading, caching, and data access with debug logging
   - `BookmarkManager.swift` - Offline-first bookmark management with UserDefaults storage, ready for Supabase sync
-  - `AudioManager.swift` - Comprehensive audio playback service with verse highlighting, seeking, and precise timing
+  - `AudioManager.swift` - Streamlined audio playback service for surah-level audio only
 - **Views**: Modern dark SwiftUI hierarchy with glassmorphism design:
   - `ContentView` - Dark gradient surah list with floating orbs, search, and bookmarks access button
-  - `SurahDetailView` - Modern verse cards with bookmark buttons, gradient elements, nested tab navigation, and audio controls
+  - `SurahDetailView` - Modern verse cards with bookmark buttons, gradient elements, and nested tab navigation
   - `BookmarksView` - Complete bookmark management with search, sorting, deletion, and premium upsell
-  - `SurahAudioPlayerView` - Beautiful glassmorphism audio player with verse highlighting and controls
+  - `SurahAudioPlayerView` - Beautiful glassmorphism audio player with surah-level controls
 - **Data**: Bundled JSON files (quran_data.json for all 114 surahs + tafsir_1.json for Al-Fatiha only) + local UserDefaults bookmark storage
 
 ### Key Data Structures
@@ -174,29 +174,34 @@ Thaqalayn/
 - UserDefaults storage with sync-ready architecture for Supabase integration
 - Comprehensive bookmark data models supporting notes, tags, collections, and user preferences
 
-**Audio System**: Complete audio playback implementation with:
+**Audio System**: Streamlined audio playback implementation with:
 - AudioManager service with AVAudioPlayer and caching (100MB cache limit)
 - 6 popular Quran reciters including Mishary Alafasy and Abdul Rahman Al-Sudais
-- Individual verse and full surah audio playback with precise seeking
-- Real-time verse highlighting and auto-scroll during playback
-- Precise timing database for popular surahs (Al-Fatiha, Ya-Sin, Al-Mulk)
+- **Surah-level audio playback only** - complete surahs from start to finish
 - Beautiful glassmorphism audio player UI with playback controls
-- Reciter selection, playback speed, repeat modes, and audio quality settings
+- Reciter selection, repeat modes, and audio quality settings
 - Now Playing integration with Control Center support
+- Simplified architecture without verse highlighting or individual verse audio
 
 **Error Handling**: Comprehensive error states in DataManager with user-friendly glassmorphism error cards and graceful degradation when tafsir data is missing.
 
 ## Current Status and Next Steps
 
+**🎯 Recent Improvements (January 2025)**:
+- ✅ **Verse Highlighting Removed**: Completely removed verse highlighting feature and all related timing systems for simplified, cleaner architecture
+- ✅ **Individual Verse Audio Removed**: Eliminated individual verse audio buttons and playback - now supports surah-level audio only
+- ✅ **Timing Data Cleaned**: Removed all word-level timing JSON files and related data models from the codebase
+- ✅ **Streamlined Audio Architecture**: Simplified AudioManager with focus on complete surah playback experience
+- ✅ **UI Cleanup**: Removed audio buttons from individual verse cards, keeping only bookmark and commentary buttons
+
 **✅ Complete Features**:
 - **All 114 Surahs with complete Quran text** (6,236 verses) available for reading and audio playback
 - **Surah 1 (Al-Fatiha) with full 4-layer tafsir** using improved prompts - remaining tafsir to be generated manually
-- **Comprehensive audio playback system**:
-  - Individual verse and full surah audio with 6 popular reciters
-  - Real-time verse highlighting and auto-scroll during playback
-  - Precise timing for popular surahs with intelligent fallback estimation
+- **Streamlined audio playback system**:
+  - Complete surah audio with 6 popular reciters (Mishary Alafasy, Abdul Rahman Al-Sudais, etc.)
   - Beautiful glassmorphism audio player with playback controls and settings
   - Audio caching, quality selection, repeat modes, and Now Playing integration
+  - Simplified architecture focused on complete surah listening experience
 - Stunning dark modern UI with glassmorphism design throughout
 - Complete navigation system (list → detail → tafsir modal when available)
 - Nested tab navigation system within tafsir layers
@@ -248,7 +253,7 @@ Thaqalayn/
 - **UI Performance**: 60fps smooth animations with glassmorphism effects, bookmark interactions, and audio controls
 - **Memory Usage**: Intelligent per-surah caching with gradient rendering optimization + efficient local/cloud bookmark storage + 100MB audio cache
 - **Data Quality**: Clean text without transliterations, complete sentences, proper formatting across all 114 surahs
-- **Audio Performance**: Instant audio playback with caching, real-time verse highlighting, and precise seeking
+- **Audio Performance**: Instant surah-level audio playback with caching and seamless streaming
 - **Bookmark Performance**: Instant bookmark toggles, real-time count updates, offline-first architecture with cloud sync
 - **Database Performance**: PostgreSQL 17.4 with optimized indexes, RLS security, and efficient querying
 

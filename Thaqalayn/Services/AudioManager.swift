@@ -23,7 +23,6 @@ class AudioManager: NSObject, ObservableObject {
     @Published var isBuffering = false
     @Published var errorMessage: String?
     @Published var sleepTimerTimeRemaining: TimeInterval?
-    @Published var highlightedVerseNumber: Int? // For verse highlighting during playback
     
     // MARK: - Private Properties
     private var audioPlayer: AVAudioPlayer?
@@ -38,6 +37,7 @@ class AudioManager: NSObject, ObservableObject {
     private var audioCache: [String: Data] = [:]
     private let maxCacheSize: Int = 100 * 1024 * 1024 // 100MB
     private var currentCacheSize: Int = 0
+    
     
     // MARK: - Initialization
     override init() {
@@ -99,14 +99,9 @@ class AudioManager: NSObject, ObservableObject {
         }
     }
     
+    
+    
     // MARK: - Playback Control
-    func playVerse(_ verse: VerseWithTafsir, in surah: Surah) async {
-        currentSurah = surah
-        currentVerses = [verse]
-        currentVerseIndex = 0
-        
-        await loadAndPlayAudio(for: verse, in: surah, seekToVerse: true)
-    }
     
     func playSurah(_ surah: Surah, verses: [VerseWithTafsir], startingFrom verseIndex: Int = 0) async {
         currentSurah = surah
@@ -115,10 +110,10 @@ class AudioManager: NSObject, ObservableObject {
         
         guard verseIndex < verses.count else { return }
         let verse = verses[verseIndex]
-        await loadAndPlayAudio(for: verse, in: surah, seekToVerse: false)
+        await loadAndPlayAudio(for: verse, in: surah)
     }
     
-    private func loadAndPlayAudio(for verse: VerseWithTafsir, in surah: Surah, seekToVerse: Bool = false) async {
+    private func loadAndPlayAudio(for verse: VerseWithTafsir, in surah: Surah) async {
         guard let url = verse.audioURL(for: surah.number, reciter: configuration.selectedReciter, quality: configuration.downloadQuality) else {
             print("❌ AudioManager: Unable to generate audio URL for surah \(surah.number), verse \(verse.number)")
             errorMessage = "Unable to generate audio URL"
@@ -155,13 +150,6 @@ class AudioManager: NSObject, ObservableObject {
             setupNowPlayingInfo(for: verse, in: surah)
             startTimeObserver()
             
-            // If seeking to a specific verse, calculate the approximate time offset
-            if seekToVerse {
-                let verseSeekTime = calculateVerseSeekTime(for: verse.number, in: surah, duration: duration)
-                audioPlayer?.currentTime = verseSeekTime
-                currentTime = verseSeekTime
-                print("🎯 AudioManager: Seeking to verse \(verse.number) at time \(verseSeekTime)s")
-            }
             
             if audioPlayer?.play() == true {
                 playerState = .playing
@@ -242,7 +230,6 @@ class AudioManager: NSObject, ObservableObject {
         currentPlayback = nil
         currentTime = 0
         duration = 0
-        highlightedVerseNumber = nil
         stopTimeObserver()
         clearNowPlayingInfo()
         stopSleepTimer()
@@ -290,33 +277,10 @@ class AudioManager: NSObject, ObservableObject {
               currentVerseIndex < currentVerses.count else { return }
         
         let verse = currentVerses[currentVerseIndex]
-        // When playing through verses sequentially, seek to each verse
-        let shouldSeek = currentVerses.count == 1 // Only seek if playing individual verses
-        await loadAndPlayAudio(for: verse, in: surah, seekToVerse: shouldSeek)
+        await loadAndPlayAudio(for: verse, in: surah)
     }
     
     // MARK: - Configuration Updates
-    func updateReciter(_ reciter: Reciter) {
-        configuration = AudioConfiguration(
-            selectedReciter: reciter,
-            playbackSpeed: configuration.playbackSpeed,
-            repeatMode: configuration.repeatMode,
-            autoAdvanceDelay: configuration.autoAdvanceDelay,
-            backgroundPlayback: configuration.backgroundPlayback,
-            downloadQuality: configuration.downloadQuality,
-            sleepTimer: configuration.sleepTimer
-        )
-        saveConfiguration()
-        
-        // If currently playing, reload with new reciter
-        if playerState == .playing || playerState == .paused,
-           let _ = currentSurah,
-           currentVerseIndex < currentVerses.count {
-            Task {
-                await playCurrentVerse()
-            }
-        }
-    }
     
     func updatePlaybackSpeed(_ speed: Double) {
         configuration = AudioConfiguration(
@@ -344,6 +308,22 @@ class AudioManager: NSObject, ObservableObject {
             sleepTimer: configuration.sleepTimer
         )
         saveConfiguration()
+    }
+    
+    func updateReciter(_ reciter: Reciter) {
+        configuration = AudioConfiguration(
+            selectedReciter: reciter,
+            playbackSpeed: configuration.playbackSpeed,
+            repeatMode: configuration.repeatMode,
+            autoAdvanceDelay: configuration.autoAdvanceDelay,
+            backgroundPlayback: configuration.backgroundPlayback,
+            downloadQuality: configuration.downloadQuality,
+            sleepTimer: configuration.sleepTimer
+        )
+        saveConfiguration()
+        
+        // Stop current playback to avoid confusion
+        stop()
     }
     
     // MARK: - Sleep Timer
@@ -408,8 +388,8 @@ class AudioManager: NSObject, ObservableObject {
         guard let player = audioPlayer else { return }
         currentTime = player.currentTime
         updateCurrentPlayback()
-        updateHighlightedVerse()
     }
+    
     
     private func updateCurrentPlayback() {
         guard let surah = currentSurah,
@@ -464,135 +444,8 @@ class AudioManager: NSObject, ObservableObject {
         return formatter.string(fromByteCount: Int64(currentCacheSize))
     }
     
-    // MARK: - Precise Verse Timings Database
-    private static let preciseVerseTiming: [String: [Int: [Int: TimeInterval]]] = [
-        "mishary_rashid_alafasy": [
-            // Al-Fatiha (Surah 1) - Precisely timed
-            1: [
-                1: 0.0,     // بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ (0-5.5s)
-                2: 5.5,     // الْحَمْدُ لِلَّـهِ رَبِّ الْعَالَمِينَ (5.5-9s)
-                3: 9.0,     // الرَّحْمَـٰنِ الرَّحِيمِ (9-12s)
-                4: 12.0,    // مَالِكِ يَوْمِ الدِّينِ (12-15s)
-                5: 15.0,    // إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (15-20s)
-                6: 20.0,    // اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (20-26s)
-                7: 26.0     // صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ (26-38s)
-            ],
-            // Ya-Sin (Surah 36) - Commonly recited, first 10 verses precisely timed
-            36: [
-                1: 0.0,      // يس
-                2: 3.0,      // وَالْقُرْآنِ الْحَكِيمِ
-                3: 6.5,      // إِنَّكَ لَمِنَ الْمُرْسَلِينَ
-                4: 10.0,     // عَلَىٰ صِرَاطٍ مُّسْتَقِيمٍ
-                5: 13.5,     // تَنزِيلَ الْعَزِيزِ الرَّحِيمِ
-                6: 17.0,     // لِتُنذِرَ قَوْمًا مَّا أُنذِرَ آبَاؤُهُمْ فَهُمْ غَافِلُونَ
-                7: 22.0,     // لَقَدْ حَقَّ الْقَوْلُ عَلَىٰ أَكْثَرِهِمْ فَهُمْ لَا يُؤْمِنُونَ
-                8: 27.0,     // إِنَّا جَعَلْنَا فِي أَعْنَاقِهِمْ أَغْلَالًا فَهِيَ إِلَى الْأَذْقَانِ فَهُم مُّقْمَحُونَ
-                9: 33.0,     // وَجَعَلْنَا مِن بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَاهُمْ فَهُمْ لَا يُبْصِرُونَ
-                10: 39.0     // وَسَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ
-            ],
-            // Al-Mulk (Surah 67) - Commonly recited, first 8 verses precisely timed  
-            67: [
-                1: 0.0,      // تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ
-                2: 8.5,      // الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا ۚ وَهُوَ الْعَزِيزُ الْغَفُورُ
-                3: 16.0,     // الَّذِي خَلَقَ سَبْعَ سَمَاوَاتٍ طِبَاقًا ۖ مَّا تَرَىٰ فِي خَلْقِ الرَّحْمَـٰنِ مِن تَفَاوُتٍ ۖ فَارْجِعِ الْبَصَرَ هَلْ تَرَىٰ مِن فُطُورٍ
-                4: 26.0,     // ثُمَّ ارْجِعِ الْبَصَرَ كَرَّتَيْنِ يَنقَلِبْ إِلَيْكَ الْبَصَرُ خَاسِئًا وَهُوَ حَسِيرٌ
-                5: 33.0,     // وَلَقَدْ زَيَّنَّا السَّمَاءَ الدُّنْيَا بِمَصَابِيحَ وَجَعَلْنَاهَا رُجُومًا لِّلشَّيَاطِينِ ۖ وَأَعْتَدْنَا لَهُمْ عَذَابَ السَّعِيرِ
-                6: 41.0,     // وَلِلَّذِينَ كَفَرُوا بِرَبِّهِمْ عَذَابُ جَهَنَّمَ ۖ وَبِئْسَ الْمَصِيرُ
-                7: 46.5,     // إِذَا أُلْقُوا فِيهَا سَمِعُوا لَهَا شَهِيقًا وَهِيَ تَفُورُ
-                8: 51.0      // تَكَادُ تَمَيَّزُ مِنَ الْغَيْظِ ۖ كُلَّمَا أُلْقِيَ فِيهَا فَوْجٌ سَأَلَهُمْ خَزَنَتُهَا أَلَمْ يَأْتِكُمْ نَذِيرٌ
-            ]
-        ]
-    ]
     
-    // MARK: - Verse Seeking
-    private func calculateVerseSeekTime(for verseNumber: Int, in surah: Surah, duration: TimeInterval) -> TimeInterval {
-        guard verseNumber > 1 else { return 0.0 } // First verse starts at beginning
-        
-        // Try to get precise timing first
-        if let reciterTimings = Self.preciseVerseTiming[configuration.selectedReciter.id],
-           let surahTimings = reciterTimings[surah.number],
-           let verseTime = surahTimings[verseNumber] {
-            return verseTime
-        }
-        
-        // Fall back to improved estimation algorithm
-        return calculateEstimatedVerseTime(for: verseNumber, in: surah, duration: duration)
-    }
     
-    private func calculateEstimatedVerseTime(for verseNumber: Int, in surah: Surah, duration: TimeInterval) -> TimeInterval {
-        // Improved estimation based on verse length and typical recitation patterns
-        // This is more accurate than simple proportional division
-        
-        // For now, use proportional estimation as fallback
-        // TODO: Implement length-based calculation using Arabic text character count
-        let averageTimePerVerse = duration / Double(surah.versesCount)
-        return averageTimePerVerse * Double(verseNumber - 1)
-    }
-    
-    // MARK: - Verse Highlighting
-    private func updateHighlightedVerse() {
-        guard let surah = currentSurah,
-              currentVerses.count > 1, // Only highlight during full surah playback
-              duration > 0 else {
-            highlightedVerseNumber = nil
-            return
-        }
-        
-        // Calculate which verse should be highlighted based on current time
-        let calculatedVerseNumber = calculateCurrentVerseFromTime(currentTime: currentTime, surah: surah, duration: duration)
-        
-        // Only update if the verse has changed to avoid unnecessary UI updates
-        if highlightedVerseNumber != calculatedVerseNumber {
-            let timingSource = Self.preciseVerseTiming[configuration.selectedReciter.id]?[surah.number] != nil ? "PRECISE" : "ESTIMATED"
-            print("🎯 AudioManager: Highlighting verse \(calculatedVerseNumber) at time \(String(format: "%.1f", currentTime))s (\(timingSource))")
-            highlightedVerseNumber = calculatedVerseNumber
-        }
-    }
-    
-    private func calculateCurrentVerseFromTime(currentTime: TimeInterval, surah: Surah, duration: TimeInterval) -> Int {
-        // Try to use precise timing data first
-        if let reciterTimings = Self.preciseVerseTiming[configuration.selectedReciter.id],
-           let surahTimings = reciterTimings[surah.number] {
-            
-            // Convert to sorted array for easier processing
-            let sortedTimings = surahTimings.sorted { $0.key < $1.key }
-            
-            // Find the current verse based on precise timing with tolerance buffer
-            var currentVerse = 1
-            let toleranceBuffer: TimeInterval = 1.0 // 1 second buffer for smoother transitions
-            
-            for (verseNumber, startTime) in sortedTimings.reversed() {
-                if currentTime >= (startTime - toleranceBuffer) {
-                    currentVerse = verseNumber
-                    break
-                }
-            }
-            return currentVerse
-        }
-        
-        // Fall back to improved estimation for surahs without precise timing
-        return calculateCurrentVerseFromTimeEstimated(currentTime: currentTime, surah: surah, duration: duration)
-    }
-    
-    private func calculateCurrentVerseFromTimeEstimated(currentTime: TimeInterval, surah: Surah, duration: TimeInterval) -> Int {
-        // Improved estimation algorithm with timing adjustments
-        let averageTimePerVerse = duration / Double(surah.versesCount)
-        let estimatedVerse = Int(currentTime / averageTimePerVerse) + 1
-        
-        // Add some intelligence for common patterns:
-        // - First verse often shorter (Bismillah)
-        // - Last verse often longer
-        var adjustedVerse = estimatedVerse
-        
-        if surah.versesCount > 5 {
-            // For longer surahs, adjust timing slightly
-            if estimatedVerse == 1 && currentTime > (averageTimePerVerse * 0.7) {
-                adjustedVerse = 2
-            }
-        }
-        
-        return min(max(adjustedVerse, 1), surah.versesCount)
-    }
 }
 
 // MARK: - AVAudioPlayerDelegate

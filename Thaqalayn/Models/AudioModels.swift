@@ -105,7 +105,7 @@ struct AudioConfiguration: Codable {
         nameArabic: "مشاري بن راشد العفاسي",
         nameEnglish: "Mishary Rashid Alafasy",
         style: .hafs,
-        serverURL: "http://server8.mp3quran.net/afs",
+        serverURL: "https://server8.mp3quran.net/afs",
         description: "One of the most popular reciters worldwide",
         isPopular: true
     )
@@ -244,7 +244,7 @@ extension Reciter {
             nameArabic: "مشاري بن راشد العفاسي",
             nameEnglish: "Mishary Rashid Alafasy",
             style: .hafs,
-            serverURL: "http://server8.mp3quran.net/afs",
+            serverURL: "https://server8.mp3quran.net/afs",
             description: "One of the most popular reciters worldwide with a beautiful voice",
             isPopular: true
         ),
@@ -295,3 +295,4 @@ extension Reciter {
         )
     ]
 }
+
