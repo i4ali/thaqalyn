@@ -9,7 +9,7 @@ Thaqalyn is a Shia Islamic Quranic commentary iOS app with an offline-first arch
 1. **Data Generation System** (Python) - Pre-generates AI-based Shia tafsir commentary using DeepSeek
 2. **iOS App** (Swift/SwiftUI) - Modern iOS app displaying pre-generated content offline
 
-**Current Status**: Production-ready MVP with Surah 1 (Al-Fatiha) using updated no-transliteration prompts, full 4-layer tafsir system, stunning dark modern UI with glassmorphism design, nested tab navigation system, **complete authentication & bookmarks system with full cloud sync**, and email confirmation deep linking implemented.
+**Current Status**: Production-ready app with **all 114 surahs** available for reading and audio playback. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir using updated no-transliteration prompts, stunning dark modern UI with glassmorphism design, nested tab navigation system, **complete authentication & bookmarks system with full cloud sync**, **comprehensive audio playback system** with verse highlighting and auto-scroll, and email confirmation deep linking implemented. **Tafsir data for remaining 113 surahs will be generated manually as needed.**
 
 ## Architecture
 
@@ -28,15 +28,19 @@ Each verse receives commentary at 4 scholarly depths:
 **Key Improvements (2025)**: Updated prompts eliminate transliterations (uses "Ali" not "ʿAlī"), generate complete sentences without truncation, and produce clean formatting without markdown artifacts.
 
 ### iOS App Architecture
-- **Models**: `QuranModels.swift` - Core data structures for Quran, Tafsir, Bookmarks, and display models with SajdaInfo handling
+- **Models**: 
+  - `QuranModels.swift` - Core data structures for Quran, Tafsir, Bookmarks, and display models with SajdaInfo handling
+  - `AudioModels.swift` - Audio system models for reciters, configurations, playback state
 - **Services**: 
   - `DataManager.swift` - Singleton managing JSON loading, caching, and data access with debug logging
   - `BookmarkManager.swift` - Offline-first bookmark management with UserDefaults storage, ready for Supabase sync
+  - `AudioManager.swift` - Comprehensive audio playback service with verse highlighting, seeking, and precise timing
 - **Views**: Modern dark SwiftUI hierarchy with glassmorphism design:
   - `ContentView` - Dark gradient surah list with floating orbs, search, and bookmarks access button
-  - `SurahDetailView` - Modern verse cards with bookmark buttons, gradient elements, and nested tab navigation
+  - `SurahDetailView` - Modern verse cards with bookmark buttons, gradient elements, nested tab navigation, and audio controls
   - `BookmarksView` - Complete bookmark management with search, sorting, deletion, and premium upsell
-- **Data**: Bundled JSON files (quran_data.json + tafsir_1.json) + local UserDefaults bookmark storage
+  - `SurahAudioPlayerView` - Beautiful glassmorphism audio player with verse highlighting and controls
+- **Data**: Bundled JSON files (quran_data.json for all 114 surahs + tafsir_1.json for Al-Fatiha only) + local UserDefaults bookmark storage
 
 ### Key Data Structures
 ```swift
@@ -98,16 +102,20 @@ echo "DEEPSEEK_API_KEY=your-key-here" > .env
 echo "OPENROUTER_API_KEY=sk-or-v1-..." >> .env
 ```
 
-### Data Generation Workflow
+### Data Generation Workflow (For Manual Tafsir Generation)
 ```bash
-# Generate individual surah (recommended approach)
+# IMPORTANT: Tafsir data will be generated manually as needed
+# Current status: Only Surah 1 (Al-Fatiha) has tafsir data
+# All other 113 surahs display Quran text with audio but no tafsir commentary
+
+# Generate individual surah tafsir when needed (manual process)
 source thaqalyn-env/bin/activate
 python3 quick_surah_1.py <surah_number>  # e.g., python3 quick_surah_1.py 2
 
 # Examples:
-python3 quick_surah_1.py 1   # Al-Fatiha
-python3 quick_surah_1.py 36  # Ya-Sin
-python3 quick_surah_1.py 114 # An-Nas
+python3 quick_surah_1.py 1   # Al-Fatiha (already complete)
+python3 quick_surah_1.py 36  # Ya-Sin (to be generated manually)
+python3 quick_surah_1.py 114 # An-Nas (to be generated manually)
 
 # Monitor progress
 python monitor_progress.py
@@ -124,14 +132,15 @@ Thaqalayn/
 ├── Models/QuranModels.swift          # Core data models with SajdaInfo + Bookmark models
 ├── Services/
 │   ├── DataManager.swift           # Singleton data loader with caching
-│   └── BookmarkManager.swift       # Offline-first bookmark management with UserDefaults
+│   ├── BookmarkManager.swift       # Offline-first bookmark management with UserDefaults
+│   └── AudioManager.swift          # Comprehensive audio playback with verse highlighting
 ├── Views/
 │   ├── ContentView.swift           # Main surah list view with bookmarks access
 │   ├── SurahDetailView.swift       # Verse detail with bookmark buttons + tafsir modal
 │   └── BookmarksView.swift         # Complete bookmark management interface
 ├── Data/                           # Bundled JSON files
-│   ├── quran_data.json            # Complete Quran (3.4MB, 114 surahs)
-│   └── tafsir_1.json              # Al-Fatiha commentary (clean, no transliterations)
+│   ├── quran_data.json            # Complete Quran (3.4MB, all 114 surahs with 6,236 verses)
+│   └── tafsir_1.json              # Al-Fatiha commentary only (clean, no transliterations)
 └── ThaqalaynApp.swift              # App entry point
 ```
 
@@ -165,16 +174,33 @@ Thaqalayn/
 - UserDefaults storage with sync-ready architecture for Supabase integration
 - Comprehensive bookmark data models supporting notes, tags, collections, and user preferences
 
+**Audio System**: Complete audio playback implementation with:
+- AudioManager service with AVAudioPlayer and caching (100MB cache limit)
+- 6 popular Quran reciters including Mishary Alafasy and Abdul Rahman Al-Sudais
+- Individual verse and full surah audio playback with precise seeking
+- Real-time verse highlighting and auto-scroll during playback
+- Precise timing database for popular surahs (Al-Fatiha, Ya-Sin, Al-Mulk)
+- Beautiful glassmorphism audio player UI with playback controls
+- Reciter selection, playback speed, repeat modes, and audio quality settings
+- Now Playing integration with Control Center support
+
 **Error Handling**: Comprehensive error states in DataManager with user-friendly glassmorphism error cards and graceful degradation when tafsir data is missing.
 
 ## Current Status and Next Steps
 
 **✅ Complete Features**:
-- Surah 1 (Al-Fatiha) with full 4-layer tafsir using improved prompts
-- Stunning dark modern UI with glassmorphism design
-- Complete navigation system (list → detail → tafsir modal)
+- **All 114 Surahs with complete Quran text** (6,236 verses) available for reading and audio playback
+- **Surah 1 (Al-Fatiha) with full 4-layer tafsir** using improved prompts - remaining tafsir to be generated manually
+- **Comprehensive audio playback system**:
+  - Individual verse and full surah audio with 6 popular reciters
+  - Real-time verse highlighting and auto-scroll during playback
+  - Precise timing for popular surahs with intelligent fallback estimation
+  - Beautiful glassmorphism audio player with playback controls and settings
+  - Audio caching, quality selection, repeat modes, and Now Playing integration
+- Stunning dark modern UI with glassmorphism design throughout
+- Complete navigation system (list → detail → tafsir modal when available)
 - Nested tab navigation system within tafsir layers
-- Search functionality with glassmorphism styling
+- Search functionality with glassmorphism styling across all 114 surahs
 - **Complete bookmarks system with offline-first architecture and cloud sync**:
   - Heart-shaped bookmark buttons on all verse cards with instant visual feedback
   - Bookmark access buttons on main page with live count badges
@@ -209,19 +235,20 @@ Thaqalayn/
   - ✅ **SupabaseService Complete**: Full service wrapper with authentication and CRUD operations
   - ✅ **Offline-first sync strategy implemented**: Three-step sync with conflict resolution
   - ✅ **User authentication flow complete**: Email/password, Apple Sign In, guest mode with AuthenticationView
-- Generate remaining 113 surahs using `quick_surah_1.py` script
-- Implement additional features: reading progress tracking, audio recitation
-- Add in-app purchase system for premium upgrade
-- App Store submission and distribution
+- **Manual Tafsir Generation**: Generate remaining 113 surahs using `quick_surah_1.py` script as needed
+- **Enhanced Features**: Reading progress tracking, additional reciters, background audio playback
+- **Monetization**: Add in-app purchase system for premium upgrade and additional features
+- **Distribution**: App Store submission and distribution
 
 ## Bundle Size and Performance
 
-- **Current App Size**: ~5MB (1 surah with clean commentary + dark modern UI + bookmark system + Supabase SDK)
-- **Projected Full Size**: ~50-80MB (all 114 surahs with full glassmorphism UI + cloud sync)
+- **Current App Size**: ~8MB (all 114 surahs + 1 surah tafsir + dark modern UI + bookmark system + audio system + Supabase SDK)
+- **Projected Full Size**: ~50-80MB (all 114 surahs with full tafsir commentary + complete feature set)
 - **Load Performance**: <1 second app launch with beautiful loading animations
-- **UI Performance**: 60fps smooth animations with glassmorphism effects and bookmark interactions
-- **Memory Usage**: Intelligent per-surah caching with gradient rendering optimization + efficient local/cloud bookmark storage
-- **Data Quality**: Clean text without transliterations, complete sentences, proper formatting
+- **UI Performance**: 60fps smooth animations with glassmorphism effects, bookmark interactions, and audio controls
+- **Memory Usage**: Intelligent per-surah caching with gradient rendering optimization + efficient local/cloud bookmark storage + 100MB audio cache
+- **Data Quality**: Clean text without transliterations, complete sentences, proper formatting across all 114 surahs
+- **Audio Performance**: Instant audio playback with caching, real-time verse highlighting, and precise seeking
 - **Bookmark Performance**: Instant bookmark toggles, real-time count updates, offline-first architecture with cloud sync
 - **Database Performance**: PostgreSQL 17.4 with optimized indexes, RLS security, and efficient querying
 

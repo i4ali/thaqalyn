@@ -14,6 +14,7 @@ extension Notification.Name {
 struct ContentView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var audioManager = AudioManager.shared
     @State private var showingWelcome = false
     
     var body: some View {
@@ -36,6 +37,13 @@ struct ContentView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Force stack style for iPhone
         .preferredColorScheme(themeManager.colorScheme)
+        .overlay(alignment: .bottom) {
+            if audioManager.currentPlayback != nil {
+                SurahAudioPlayerView()
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .animation(.spring(response: 0.5, dampingFraction: 0.8), value: audioManager.currentPlayback != nil)
+            }
+        }
         .onAppear {
             checkFirstLaunch()
         }
@@ -350,9 +358,9 @@ struct SurahListView: View {
                 
                 // Stats cards
                 HStack(spacing: 12) {
-                    StatCard(number: "7", label: "Available")
+                    StatCard(number: "\(dataManager.availableSurahs.count)", label: "Available")
                     StatCard(number: "\(dataManager.availableSurahs.reduce(0) { $0 + $1.surah.versesCount })", label: "Verses")
-                    StatCard(number: "4", label: "Layers")
+                    StatCard(number: "\(TafsirLayer.allCases.count)", label: "Layers")
                 }
             }
             .padding(.horizontal, 20)
@@ -611,8 +619,10 @@ struct ProfileMenuView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var supabaseService = SupabaseService.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
+    @StateObject private var audioManager = AudioManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var showingSignOutAlert = false
+    @State private var showingAudioSettings = false
     
     var body: some View {
         NavigationView {
@@ -659,6 +669,13 @@ struct ProfileMenuView: View {
                             title: "Bookmarks",
                             subtitle: "\(bookmarkManager.bookmarks.count) saved verses",
                             action: { dismiss() }
+                        )
+                        
+                        ProfileMenuItem(
+                            icon: "speaker.wave.2.fill",
+                            title: "Audio Settings",
+                            subtitle: "Reciter: \(audioManager.configuration.selectedReciter.nameEnglish)",
+                            action: { showingAudioSettings = true }
                         )
                         
                         if bookmarkManager.preferences?.isPremium != true {
@@ -723,6 +740,9 @@ struct ProfileMenuView: View {
             }
         } message: {
             Text("Your bookmarks will remain on this device, but you'll need to sign in again to sync across devices.")
+        }
+        .sheet(isPresented: $showingAudioSettings) {
+            AudioSettingsView()
         }
     }
     
@@ -835,6 +855,285 @@ struct SyncStatusToast: View {
         )
         .padding(.horizontal, 20)
         .padding(.bottom, 100) // Above tab bar
+    }
+}
+
+struct AudioSettingsView: View {
+    @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var audioManager = AudioManager.shared
+    @Environment(\.dismiss) private var dismiss
+    @State private var showingReciterSelection = false
+    
+    var body: some View {
+        NavigationView {
+            ZStack {
+                // Background
+                LinearGradient(
+                    colors: [
+                        themeManager.primaryBackground,
+                        themeManager.secondaryBackground
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
+                ScrollView {
+                    VStack(spacing: 20) {
+                        // Reciter selection
+                        AudioSettingCard(
+                            icon: "person.wave.2.fill",
+                            title: "Reciter",
+                            subtitle: audioManager.configuration.selectedReciter.nameEnglish,
+                            action: { showingReciterSelection = true }
+                        )
+                        
+                        // Playback speed
+                        AudioSettingCard(
+                            icon: "speedometer",
+                            title: "Playback Speed",
+                            subtitle: String(format: "%.2fx", audioManager.configuration.playbackSpeed)
+                        ) {
+                            // Speed picker inline
+                        } content: {
+                            HStack {
+                                Text("Speed")
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(themeManager.secondaryText)
+                                
+                                Spacer()
+                                
+                                Menu {
+                                    ForEach([0.5, 0.75, 1.0, 1.25, 1.5, 2.0], id: \.self) { speed in
+                                        Button(String(format: "%.2fx", speed)) {
+                                            audioManager.updatePlaybackSpeed(speed)
+                                        }
+                                    }
+                                } label: {
+                                    HStack(spacing: 4) {
+                                        Text(String(format: "%.2fx", audioManager.configuration.playbackSpeed))
+                                            .font(.system(size: 16, weight: .semibold))
+                                            .foregroundColor(themeManager.primaryText)
+                                        
+                                        Image(systemName: "chevron.down")
+                                            .font(.system(size: 12, weight: .medium))
+                                            .foregroundColor(themeManager.tertiaryText)
+                                    }
+                                }
+                            }
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 16)
+                        }
+                        
+                        // Repeat mode
+                        AudioSettingCard(
+                            icon: audioManager.configuration.repeatMode.icon,
+                            title: "Repeat Mode",
+                            subtitle: audioManager.configuration.repeatMode.title
+                        ) {
+                            // Repeat mode picker inline
+                        } content: {
+                            HStack {
+                                Text("Repeat")
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(themeManager.secondaryText)
+                                
+                                Spacer()
+                                
+                                Menu {
+                                    ForEach(RepeatMode.allCases, id: \.self) { mode in
+                                        Button(action: {
+                                            audioManager.updateRepeatMode(mode)
+                                        }) {
+                                            HStack {
+                                                Image(systemName: mode.icon)
+                                                Text(mode.title)
+                                            }
+                                        }
+                                    }
+                                } label: {
+                                    HStack(spacing: 4) {
+                                        Image(systemName: audioManager.configuration.repeatMode.icon)
+                                            .font(.system(size: 14, weight: .medium))
+                                        
+                                        Text(audioManager.configuration.repeatMode.title)
+                                            .font(.system(size: 16, weight: .semibold))
+                                            .foregroundColor(themeManager.primaryText)
+                                        
+                                        Image(systemName: "chevron.down")
+                                            .font(.system(size: 12, weight: .medium))
+                                            .foregroundColor(themeManager.tertiaryText)
+                                    }
+                                }
+                            }
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 16)
+                        }
+                        
+                        // Audio quality
+                        AudioSettingCard(
+                            icon: "waveform",
+                            title: "Audio Quality",
+                            subtitle: audioManager.configuration.downloadQuality.title
+                        ) {
+                            // Quality picker inline
+                        } content: {
+                            HStack {
+                                Text("Quality")
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(themeManager.secondaryText)
+                                
+                                Spacer()
+                                
+                                Menu {
+                                    ForEach(AudioQuality.allCases, id: \.self) { quality in
+                                        Button(quality.title) {
+                                            // Update quality in configuration
+                                            audioManager.configuration = AudioConfiguration(
+                                                selectedReciter: audioManager.configuration.selectedReciter,
+                                                playbackSpeed: audioManager.configuration.playbackSpeed,
+                                                repeatMode: audioManager.configuration.repeatMode,
+                                                autoAdvanceDelay: audioManager.configuration.autoAdvanceDelay,
+                                                backgroundPlayback: audioManager.configuration.backgroundPlayback,
+                                                downloadQuality: quality,
+                                                sleepTimer: audioManager.configuration.sleepTimer
+                                            )
+                                            audioManager.saveConfiguration()
+                                        }
+                                    }
+                                } label: {
+                                    HStack(spacing: 4) {
+                                        Text(audioManager.configuration.downloadQuality.title)
+                                            .font(.system(size: 16, weight: .semibold))
+                                            .foregroundColor(themeManager.primaryText)
+                                        
+                                        Image(systemName: "chevron.down")
+                                            .font(.system(size: 12, weight: .medium))
+                                            .foregroundColor(themeManager.tertiaryText)
+                                    }
+                                }
+                            }
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 16)
+                        }
+                        
+                        // Cache management
+                        AudioSettingCard(
+                            icon: "internaldrive.fill",
+                            title: "Cache Management",
+                            subtitle: "Used: \(audioManager.getCacheSize())"
+                        ) {
+                            Button("Clear Cache") {
+                                audioManager.clearAudioCache()
+                            }
+                            .foregroundColor(.red)
+                            .font(.system(size: 16, weight: .semibold))
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 16)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 20)
+                }
+            }
+            .navigationTitle("Audio Settings")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        dismiss()
+                    }
+                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                }
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+        .sheet(isPresented: $showingReciterSelection) {
+            ReciterSelectionView()
+        }
+    }
+}
+
+struct AudioSettingCard<Content: View>: View {
+    let icon: String
+    let title: String
+    let subtitle: String
+    let action: (() -> Void)?
+    let content: (() -> Content)?
+    @StateObject private var themeManager = ThemeManager.shared
+    
+    init(
+        icon: String,
+        title: String,
+        subtitle: String,
+        action: (() -> Void)? = nil,
+        @ViewBuilder content: @escaping () -> Content
+    ) {
+        self.icon = icon
+        self.title = title
+        self.subtitle = subtitle
+        self.action = action
+        self.content = content
+    }
+    
+    init(
+        icon: String,
+        title: String,
+        subtitle: String,
+        action: @escaping () -> Void
+    ) where Content == EmptyView {
+        self.icon = icon
+        self.title = title
+        self.subtitle = subtitle
+        self.action = action
+        self.content = nil
+    }
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            Button(action: action ?? {}) {
+                HStack(spacing: 16) {
+                    Image(systemName: icon)
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                        .frame(width: 24)
+                    
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(title)
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(themeManager.primaryText)
+                        
+                        Text(subtitle)
+                            .font(.system(size: 14, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                    }
+                    
+                    Spacer()
+                    
+                    if action != nil && content == nil {
+                        Image(systemName: "chevron.right")
+                            .font(.system(size: 14, weight: .medium))
+                            .foregroundColor(themeManager.tertiaryText)
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.vertical, 16)
+            }
+            .buttonStyle(PlainButtonStyle())
+            .disabled(action == nil && content != nil)
+            
+            if let content = content {
+                content()
+            }
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(themeManager.glassEffect)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+        )
     }
 }
 

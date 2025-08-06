@@ -72,14 +72,15 @@ class DataManager: ObservableObject {
         
         var surahs: [SurahWithTafsir] = []
         
-        // Check which tafsir files exist (1-7 currently)
-        for surah in quranData.surahs.prefix(7) {
+        // Load all 114 surahs (tafsir optional)
+        for surah in quranData.surahs {
             if let surahWithTafsir = await loadSurahWithTafsir(surah: surah) {
                 surahs.append(surahWithTafsir)
             }
         }
         
         self.availableSurahs = surahs.sorted { $0.surah.number < $1.surah.number }
+        print("✅ Loaded \(surahs.count) surahs (with/without tafsir)")
     }
     
     private func loadSurahWithTafsir(surah: Surah) async -> SurahWithTafsir? {

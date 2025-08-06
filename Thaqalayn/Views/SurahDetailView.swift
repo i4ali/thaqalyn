@@ -12,8 +12,10 @@ struct SurahDetailView: View {
     let targetVerse: Int?
     @State private var selectedVerse: VerseWithTafsir?
     @State private var showingTafsir = false
+    @State private var lastHighlightedVerse: Int? = nil
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
+    @StateObject private var audioManager = AudioManager.shared
     @Environment(\.dismiss) private var dismiss
     
     init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil) {
@@ -37,7 +39,11 @@ struct SurahDetailView: View {
             
             VStack(spacing: 0) {
                 // Modern header
-                ModernSurahHeader(surah: surahWithTafsir.surah, onBack: { dismiss() })
+                ModernSurahHeader(
+                    surah: surahWithTafsir.surah,
+                    verses: surahWithTafsir.verses,
+                    onBack: { dismiss() }
+                )
                 
                 // Verses scroll view
                 ScrollViewReader { proxy in
@@ -68,11 +74,30 @@ struct SurahDetailView: View {
                             }
                         }
                     }
+                    .onChange(of: audioManager.highlightedVerseNumber) { oldValue, newValue in
+                        // Auto-scroll to highlighted verse during audio playback
+                        if let highlightedVerse = newValue,
+                           highlightedVerse != lastHighlightedVerse,
+                           audioManager.currentPlayback?.surahNumber == surahWithTafsir.surah.number {
+                            lastHighlightedVerse = highlightedVerse
+                            
+                            withAnimation(.easeInOut(duration: 0.6)) {
+                                proxy.scrollTo("verse_\(highlightedVerse)", anchor: .center)
+                            }
+                        }
+                    }
                 }
             }
         }
         .navigationBarHidden(true)
         .preferredColorScheme(themeManager.colorScheme)
+        .overlay(alignment: .bottom) {
+            if audioManager.currentPlayback != nil {
+                SurahAudioPlayerView()
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .animation(.spring(response: 0.5, dampingFraction: 0.8), value: audioManager.currentPlayback != nil)
+            }
+        }
         .sheet(isPresented: $showingTafsir) {
             if let verse = selectedVerse {
                 ModernTafsirDetailView(verse: verse, surah: surahWithTafsir.surah)
@@ -83,8 +108,10 @@ struct SurahDetailView: View {
 
 struct ModernSurahHeader: View {
     let surah: Surah
+    let verses: [VerseWithTafsir]
     let onBack: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var audioManager = AudioManager.shared
     
     var body: some View {
         VStack(spacing: 16) {
@@ -143,6 +170,29 @@ struct ModernSurahHeader: View {
                     }
                     .foregroundColor(themeManager.tertiaryText)
                 }
+                
+                // Play All button
+                Button(action: {
+                    Task {
+                        await audioManager.playSurah(surah, verses: verses, startingFrom: 0)
+                    }
+                }) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "play.fill")
+                            .font(.system(size: 16, weight: .semibold))
+                        Text("Play All")
+                            .font(.system(size: 16, weight: .semibold))
+                    }
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(themeManager.purpleGradient)
+                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
+                    )
+                }
+                .padding(.top, 8)
             }
             .padding(20)
             .background(
@@ -185,9 +235,73 @@ struct ModernVerseCard: View {
     @State private var isPressed = false
     @State private var showingBookmarkFeedback = false
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var audioManager = AudioManager.shared
     
     private var isBookmarked: Bool {
         bookmarkManager.isBookmarked(surahNumber: surah.number, verseNumber: verse.number)
+    }
+    
+    private var isCurrentlyPlaying: Bool {
+        audioManager.currentPlayback?.surahNumber == surah.number &&
+        audioManager.currentPlayback?.verseNumber == verse.number &&
+        audioManager.playerState == .playing
+    }
+    
+    private var isCurrentVerse: Bool {
+        audioManager.currentPlayback?.surahNumber == surah.number &&
+        audioManager.currentPlayback?.verseNumber == verse.number
+    }
+    
+    private var isHighlighted: Bool {
+        audioManager.highlightedVerseNumber == verse.number &&
+        audioManager.currentPlayback?.surahNumber == surah.number &&
+        audioManager.playerState == .playing
+    }
+    
+    private var audioButtonIcon: String {
+        if isCurrentVerse {
+            switch audioManager.playerState {
+            case .loading, .buffering:
+                return "hourglass"
+            case .playing:
+                return "pause.fill"
+            case .paused:
+                return "play.fill"
+            case .error:
+                return "exclamationmark.triangle.fill"
+            default:
+                return "play.fill"
+            }
+        }
+        return "play.fill"
+    }
+    
+    private var audioButtonColor: Color {
+        if isCurrentVerse {
+            switch audioManager.playerState {
+            case .playing:
+                return .green
+            case .paused:
+                return .orange
+            case .loading, .buffering:
+                return .blue
+            case .error:
+                return .red
+            default:
+                return themeManager.secondaryText
+            }
+        }
+        return themeManager.secondaryText
+    }
+    
+    private func toggleAudio() {
+        if isCurrentVerse && (audioManager.playerState == .playing || audioManager.playerState == .paused) {
+            audioManager.togglePlayPause()
+        } else {
+            Task {
+                await audioManager.playVerse(verse, in: surah)
+            }
+        }
     }
     
     private func toggleBookmark() {
@@ -230,6 +344,24 @@ struct ModernVerseCard: View {
                 Spacer()
                 
                 HStack(spacing: 8) {
+                    // Audio play button
+                    Button(action: toggleAudio) {
+                        Image(systemName: audioButtonIcon)
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(audioButtonColor)
+                            .frame(width: 36, height: 36)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(themeManager.glassEffect)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                                    )
+                            )
+                    }
+                    .rotationEffect(.degrees(audioManager.playerState == .loading && isCurrentVerse ? 360 : 0))
+                    .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: audioManager.playerState == .loading && isCurrentVerse)
+                    
                     // Bookmark button
                     Button(action: toggleBookmark) {
                         Image(systemName: isBookmarked ? "heart.fill" : "heart")
@@ -290,21 +422,39 @@ struct ModernVerseCard: View {
                 .fill(themeManager.glassEffect)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                        .stroke(
+                            isHighlighted ? 
+                                LinearGradient(
+                                    colors: [
+                                        Color(red: 0.39, green: 0.4, blue: 0.95),
+                                        Color(red: 0.93, green: 0.25, blue: 0.49)
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                ) : 
+                                LinearGradient(colors: [themeManager.strokeColor], startPoint: .leading, endPoint: .trailing),
+                            lineWidth: isHighlighted ? 2 : 1
+                        )
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .fill(
                             LinearGradient(
                                 colors: [
-                                    themeManager.floatingOrbColors[0].opacity(0.5),
-                                    themeManager.floatingOrbColors[1].opacity(0.5)
+                                    themeManager.floatingOrbColors[0].opacity(isHighlighted ? 0.8 : 0.5),
+                                    themeManager.floatingOrbColors[1].opacity(isHighlighted ? 0.8 : 0.5)
                                 ],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             )
                         )
+                        .animation(.easeInOut(duration: 0.3), value: isHighlighted)
                 )
+                .shadow(
+                    color: isHighlighted ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.6) : Color.clear,
+                    radius: isHighlighted ? 12 : 0
+                )
+                .animation(.easeInOut(duration: 0.3), value: isHighlighted)
         )
         .scaleEffect(isPressed ? 0.98 : 1.0)
         .animation(.easeInOut(duration: 0.1), value: isPressed)

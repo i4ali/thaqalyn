@@ -24,6 +24,19 @@ struct Surah: Codable, Identifiable {
     let revelationType: String
     
     var id: Int { number }
+    
+    // Audio-related computed properties
+    func audioURL(for reciter: Reciter, quality: AudioQuality = .medium) -> URL? {
+        let components = AudioURLComponents(
+            baseURL: reciter.serverURL,
+            surahNumber: number,
+            verseNumber: nil,  // Full surah
+            reciterID: reciter.id,
+            quality: quality,
+            format: .mp3
+        )
+        return components.generateURL()
+    }
 }
 
 struct Verse: Codable {
@@ -161,6 +174,19 @@ struct VerseWithTafsir: Identifiable {
     
     var bookmarkKey: String {
         return id
+    }
+    
+    // Audio-related computed properties
+    func audioURL(for surahNumber: Int, reciter: Reciter, quality: AudioQuality = .medium) -> URL? {
+        let components = AudioURLComponents(
+            baseURL: reciter.serverURL,
+            surahNumber: surahNumber,
+            verseNumber: nil,  // Use full surah audio (individual verse seeking will be handled later)
+            reciterID: reciter.id,
+            quality: quality,
+            format: .mp3
+        )
+        return components.generateURL()
     }
     
     init(number: Int, verse: Verse, tafsir: TafsirVerse? = nil) {
