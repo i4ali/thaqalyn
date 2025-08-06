@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Combine
 
 @MainActor
 class BookmarkManager: ObservableObject {
@@ -19,14 +20,22 @@ class BookmarkManager: ObservableObject {
     @Published var isSyncing = false
     @Published var errorMessage: String?
     @Published var syncStatus: String?
+    @Published var isAuthenticated = false
     
     private let localStorageKey = "ThaqalaynBookmarks"
     private let preferencesKey = "ThaqalaynBookmarkPreferences"
     private let collectionsKey = "ThaqalaynBookmarkCollections"
+    private let pendingDeletesKey = "ThaqalaynPendingDeletes"
+    
+    private var supabaseService = SupabaseService.shared
+    private var cancellables = Set<AnyCancellable>()
+    private var pendingDeletes: Set<UUID> = []
     
     private var currentUserId: String {
-        // For now, use device ID as user ID for guest mode
-        // TODO: Replace with actual user ID from authentication
+        // Use authenticated user ID if available, otherwise device ID for guest mode
+        if let user = supabaseService.currentUser {
+            return user.id.uuidString
+        }
         return UIDevice.current.identifierForVendor?.uuidString ?? "guest"
     }
     
@@ -34,6 +43,26 @@ class BookmarkManager: ObservableObject {
         loadLocalBookmarks()
         loadLocalPreferences()
         loadLocalCollections()
+        loadPendingDeletes()
+        setupSupabaseObservers()
+    }
+    
+    private func setupSupabaseObservers() {
+        // Observe authentication state changes
+        supabaseService.$isAuthenticated
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$isAuthenticated)
+        
+        supabaseService.$currentUser
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] user in
+                if user != nil {
+                    Task {
+                        await self?.performInitialSync()
+                    }
+                }
+            }
+            .store(in: &cancellables)
     }
     
     // MARK: - Local Storage
@@ -104,6 +133,27 @@ class BookmarkManager: ObservableObject {
         print("💾 Saved \(collections.count) bookmark collections to local storage")
     }
     
+    private func loadPendingDeletes() {
+        guard let data = UserDefaults.standard.data(forKey: pendingDeletesKey),
+              let decoded = try? JSONDecoder().decode(Set<UUID>.self, from: data) else {
+            print("💾 No pending deletes found")
+            return
+        }
+        
+        pendingDeletes = decoded
+        print("💾 Loaded \(pendingDeletes.count) pending deletes from local storage")
+    }
+    
+    private func savePendingDeletes() {
+        guard let encoded = try? JSONEncoder().encode(pendingDeletes) else {
+            print("❌ Failed to encode pending deletes")
+            return
+        }
+        
+        UserDefaults.standard.set(encoded, forKey: pendingDeletesKey)
+        print("💾 Saved \(pendingDeletes.count) pending deletes to local storage")
+    }
+    
     // MARK: - Bookmark Management
     
     func addBookmark(
@@ -142,8 +192,10 @@ class BookmarkManager: ObservableObject {
         bookmarks.append(bookmark)
         saveLocalBookmarks()
         
-        // TODO: Sync with Supabase
-        scheduleSync()
+        // Schedule sync if authenticated
+        if isAuthenticated {
+            scheduleSync()
+        }
         
         print("✅ Added bookmark for \(surahName) \(verseNumber)")
         return true
@@ -154,14 +206,18 @@ class BookmarkManager: ObservableObject {
             return
         }
         
-        // For offline-first: remove immediately from local array
-        // Later, we can add this to a separate "pending delete" queue for sync
-        bookmarks.remove(at: index)
+        let bookmark = bookmarks[index]
         
+        // Remove immediately from local array for instant UI feedback
+        bookmarks.remove(at: index)
         saveLocalBookmarks()
         
-        // TODO: Add to sync queue for Supabase deletion
-        scheduleSync()
+        // Add to pending deletes for cloud sync if it was previously synced
+        if bookmark.syncStatus == .synced && isAuthenticated {
+            pendingDeletes.insert(id)
+            savePendingDeletes()
+            scheduleSync()
+        }
         
         print("🗑️ Removed bookmark from local storage")
     }
@@ -192,7 +248,10 @@ class BookmarkManager: ObservableObject {
         )
         
         saveLocalBookmarks()
-        scheduleSync()
+        
+        if isAuthenticated {
+            scheduleSync()
+        }
         
         print("✏️ Updated bookmark")
     }
@@ -265,30 +324,209 @@ class BookmarkManager: ObservableObject {
     // MARK: - Sync Management
     
     private func scheduleSync() {
-        // TODO: Implement actual Supabase sync
+        // Debounce sync requests to avoid excessive API calls
         Task {
+            try? await Task.sleep(nanoseconds: 500_000_000) // 0.5 second delay
             await performSync()
         }
     }
     
     private func performSync() async {
-        // TODO: Implement Supabase sync logic
+        guard isAuthenticated else {
+            print("⚠️ Not authenticated, skipping sync")
+            return
+        }
+        
         isSyncing = true
         syncStatus = "Syncing bookmarks..."
+        errorMessage = nil
         
-        // Simulate sync delay
-        try? await Task.sleep(nanoseconds: 1_000_000_000)
+        do {
+            // Step 1: Process pending deletes
+            await processPendingDeletes()
+            
+            // Step 2: Upload local changes (pending sync)
+            try await uploadPendingBookmarks()
+            
+            // Step 3: Download remote changes
+            try await downloadRemoteBookmarks()
+            
+            syncStatus = "Sync completed"
+            print("✅ Sync completed successfully")
+        } catch {
+            syncStatus = "Sync failed"
+            errorMessage = "Sync failed: \(error.localizedDescription)"
+            print("❌ Sync failed: \(error)")
+        }
         
-        syncStatus = "Sync completed"
         isSyncing = false
         
         // Clear sync status after delay
-        try? await Task.sleep(nanoseconds: 2_000_000_000)
-        syncStatus = nil
+        Task {
+            try? await Task.sleep(nanoseconds: 3_000_000_000)
+            if syncStatus == "Sync completed" || syncStatus == "Sync failed" {
+                syncStatus = nil
+            }
+        }
+    }
+    
+    private func processPendingDeletes() async {
+        for deleteId in pendingDeletes {
+            do {
+                try await supabaseService.deleteBookmark(id: deleteId)
+                pendingDeletes.remove(deleteId)
+            } catch {
+                print("❌ Failed to delete bookmark \(deleteId): \(error)")
+                // Keep in pending deletes for retry
+            }
+        }
+        savePendingDeletes()
+    }
+    
+    private func uploadPendingBookmarks() async throws {
+        let pendingBookmarks = bookmarks.filter { $0.syncStatus == .pendingSync }
+        
+        if !pendingBookmarks.isEmpty {
+            do {
+                try await supabaseService.syncBookmarks(pendingBookmarks)
+                
+                // Mark as synced
+                for i in 0..<bookmarks.count {
+                    if bookmarks[i].syncStatus == .pendingSync {
+                        bookmarks[i] = Bookmark(
+                            id: bookmarks[i].id,
+                            userId: bookmarks[i].userId,
+                            surahNumber: bookmarks[i].surahNumber,
+                            verseNumber: bookmarks[i].verseNumber,
+                            surahName: bookmarks[i].surahName,
+                            verseText: bookmarks[i].verseText,
+                            verseTranslation: bookmarks[i].verseTranslation,
+                            notes: bookmarks[i].notes,
+                            tags: bookmarks[i].tags,
+                            createdAt: bookmarks[i].createdAt,
+                            updatedAt: bookmarks[i].updatedAt,
+                            syncStatus: .synced
+                        )
+                    }
+                }
+                saveLocalBookmarks()
+            } catch {
+                print("❌ Failed to upload bookmarks: \(error)")
+                throw error
+            }
+        }
+    }
+    
+    private func downloadRemoteBookmarks() async throws {
+        do {
+            let remoteBookmarks = try await supabaseService.fetchBookmarks()
+            await mergeRemoteBookmarks(remoteBookmarks)
+        } catch {
+            print("❌ Failed to download bookmarks: \(error)")
+            throw error
+        }
+    }
+    
+    private func mergeRemoteBookmarks(_ remoteBookmarks: [Bookmark]) async {
+        let localBookmarkIds = Set(bookmarks.map { $0.id })
+        
+        // Add new remote bookmarks
+        let newRemoteBookmarks = remoteBookmarks.filter { !localBookmarkIds.contains($0.id) }
+        bookmarks.append(contentsOf: newRemoteBookmarks)
+        
+        // Handle conflicts (remote updates vs local updates)
+        for remoteBookmark in remoteBookmarks {
+            if let localIndex = bookmarks.firstIndex(where: { $0.id == remoteBookmark.id }) {
+                let localBookmark = bookmarks[localIndex]
+                
+                // If local is pending sync and remote is newer, create conflict
+                if localBookmark.syncStatus == .pendingSync && 
+                   remoteBookmark.updatedAt > localBookmark.updatedAt {
+                    // For now, keep local changes (user preference)
+                    // TODO: Implement proper conflict resolution UI
+                    print("⚠️ Sync conflict detected for bookmark \(remoteBookmark.id)")
+                    bookmarks[localIndex] = Bookmark(
+                        id: localBookmark.id,
+                        userId: localBookmark.userId,
+                        surahNumber: localBookmark.surahNumber,
+                        verseNumber: localBookmark.verseNumber,
+                        surahName: localBookmark.surahName,
+                        verseText: localBookmark.verseText,
+                        verseTranslation: localBookmark.verseTranslation,
+                        notes: localBookmark.notes,
+                        tags: localBookmark.tags,
+                        createdAt: localBookmark.createdAt,
+                        updatedAt: localBookmark.updatedAt,
+                        syncStatus: .conflict
+                    )
+                } else if localBookmark.syncStatus == .synced && 
+                         remoteBookmark.updatedAt > localBookmark.updatedAt {
+                    // Remote is newer and local is synced, update local
+                    bookmarks[localIndex] = remoteBookmark
+                }
+            }
+        }
+        
+        saveLocalBookmarks()
+    }
+    
+    private func performInitialSync() async {
+        // Only perform initial sync once after authentication
+        guard isAuthenticated && !bookmarks.contains(where: { $0.syncStatus == .synced }) else {
+            return
+        }
+        
+        syncStatus = "Initial sync..."
+        await performSync()
     }
     
     func forceSyncWithSupabase() async {
         await performSync()
+    }
+    
+    // MARK: - Authentication Integration
+    
+    func signInAndSync() async {
+        do {
+            try await supabaseService.signInAnonymously()
+            // Sync will be triggered automatically via observer
+        } catch {
+            errorMessage = "Authentication failed: \(error.localizedDescription)"
+        }
+    }
+    
+    func signOutAndClearRemoteData() async {
+        do {
+            try await supabaseService.signOut()
+            
+            // Keep local bookmarks but mark them as pending sync
+            for i in 0..<bookmarks.count {
+                if bookmarks[i].syncStatus == .synced {
+                    bookmarks[i] = Bookmark(
+                        id: bookmarks[i].id,
+                        userId: currentUserId, // Reset to device ID
+                        surahNumber: bookmarks[i].surahNumber,
+                        verseNumber: bookmarks[i].verseNumber,
+                        surahName: bookmarks[i].surahName,
+                        verseText: bookmarks[i].verseText,
+                        verseTranslation: bookmarks[i].verseTranslation,
+                        notes: bookmarks[i].notes,
+                        tags: bookmarks[i].tags,
+                        createdAt: bookmarks[i].createdAt,
+                        updatedAt: bookmarks[i].updatedAt,
+                        syncStatus: .pendingSync
+                    )
+                }
+            }
+            saveLocalBookmarks()
+            
+            // Clear pending deletes
+            pendingDeletes.removeAll()
+            savePendingDeletes()
+            
+        } catch {
+            errorMessage = "Sign out failed: \(error.localizedDescription)"
+        }
     }
 }
 

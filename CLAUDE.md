@@ -9,7 +9,7 @@ Thaqalyn is a Shia Islamic Quranic commentary iOS app with an offline-first arch
 1. **Data Generation System** (Python) - Pre-generates AI-based Shia tafsir commentary using DeepSeek
 2. **iOS App** (Swift/SwiftUI) - Modern iOS app displaying pre-generated content offline
 
-**Current Status**: MVP complete with Surah 1 (Al-Fatiha) using updated no-transliteration prompts, full 4-layer tafsir system, stunning dark modern UI with glassmorphism design, nested tab navigation system, and **complete bookmarks feature with offline-first architecture** implemented.
+**Current Status**: Production-ready MVP with Surah 1 (Al-Fatiha) using updated no-transliteration prompts, full 4-layer tafsir system, stunning dark modern UI with glassmorphism design, nested tab navigation system, **complete authentication & bookmarks system with full cloud sync**, and email confirmation deep linking implemented.
 
 ## Architecture
 
@@ -175,36 +175,55 @@ Thaqalayn/
 - Complete navigation system (list → detail → tafsir modal)
 - Nested tab navigation system within tafsir layers
 - Search functionality with glassmorphism styling
-- **Complete bookmarks system with offline-first architecture**:
-  - Heart-shaped bookmark buttons on all verse cards
-  - Bookmark access buttons on main page and surah pages
-  - Full BookmarksView with search, sorting, and deletion capabilities
+- **Complete bookmarks system with offline-first architecture and cloud sync**:
+  - Heart-shaped bookmark buttons on all verse cards with instant visual feedback
+  - Bookmark access buttons on main page with live count badges
+  - Full BookmarksView with search, sorting, enhanced deletion, and navigation to original verse context
+  - Auto-scrolling to specific verses when navigating from bookmarks
   - Free tier (2 bookmarks) with premium upsell integration
-  - UserDefaults storage ready for Supabase cloud sync
+  - UserDefaults storage with comprehensive Supabase cloud sync
+  - Three-step sync process: delete → upload → download with conflict resolution
+  - Real-time sync status indicators and toast notifications
+- **Complete user authentication system**:
+  - Modern glassmorphism AuthenticationView with email/password, Apple Sign In, and guest mode
+  - SupabaseService with full authentication methods (signUp, signIn, signInWithApple, resetPassword)
+  - Anonymous authentication with upgrade paths to permanent accounts
+  - Authentication state management with automatic sync triggering
 - Comprehensive error handling and loading states
 - Custom SajdaInfo handling for mixed JSON formats
 - Debug logging system for troubleshooting
 - Clean data generation without transliterations or formatting artifacts
 
 **🚀 Next Steps**:
-- **Supabase Integration** (organization and project created, ready for implementation):
-  - Add Supabase Swift SDK to Xcode project
-  - Design and implement database schema for bookmarks and user data
-  - Implement cloud sync functions in BookmarkManager
-  - Add user authentication flow with Supabase Auth
+- **Supabase Integration** ✅ **FULLY COMPLETE**:
+  - ✅ **Organization Created**: "i4ali's Org" (zijygqgebsdmibiwdxis)
+  - ✅ **Project Created**: "Thaqalayn" (awiuswwmvlmmvkkfghvc) in us-east-1 region
+  - ✅ **Credentials Configured**: URL and anon key stored in Config.swift
+  - ✅ **Supabase Swift SDK Added**: Successfully integrated v2.5.1+ with proper project configuration
+  - ✅ **Database Schema Complete**: Full bookmark system with secure RLS policies
+    - `bookmarks` table with verse references, notes, tags, and collections
+    - `user_preferences` table with premium status, limits, reading progress
+    - `bookmark_collections` table for organizing bookmarks
+    - Automatic user setup, triggers, and security functions
+    - All security advisors passed - production ready
+  - ✅ **SupabaseService Complete**: Full service wrapper with authentication and CRUD operations
+  - ✅ **Offline-first sync strategy implemented**: Three-step sync with conflict resolution
+  - ✅ **User authentication flow complete**: Email/password, Apple Sign In, guest mode with AuthenticationView
 - Generate remaining 113 surahs using `quick_surah_1.py` script
 - Implement additional features: reading progress tracking, audio recitation
+- Add in-app purchase system for premium upgrade
 - App Store submission and distribution
 
 ## Bundle Size and Performance
 
-- **Current App Size**: ~5MB (1 surah with clean commentary + dark modern UI + bookmark system)
+- **Current App Size**: ~5MB (1 surah with clean commentary + dark modern UI + bookmark system + Supabase SDK)
 - **Projected Full Size**: ~50-80MB (all 114 surahs with full glassmorphism UI + cloud sync)
 - **Load Performance**: <1 second app launch with beautiful loading animations
 - **UI Performance**: 60fps smooth animations with glassmorphism effects and bookmark interactions
-- **Memory Usage**: Intelligent per-surah caching with gradient rendering optimization + efficient UserDefaults bookmark storage
+- **Memory Usage**: Intelligent per-surah caching with gradient rendering optimization + efficient local/cloud bookmark storage
 - **Data Quality**: Clean text without transliterations, complete sentences, proper formatting
-- **Bookmark Performance**: Instant bookmark toggles, real-time count updates, efficient local storage with sync-ready architecture
+- **Bookmark Performance**: Instant bookmark toggles, real-time count updates, offline-first architecture with cloud sync
+- **Database Performance**: PostgreSQL 17.4 with optimized indexes, RLS security, and efficient querying
 
 ## Memories
 - to memorize

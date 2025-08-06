@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+extension Notification.Name {
+    static let showAuthentication = Notification.Name("showAuthentication")
+}
+
 struct ContentView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @State private var showingWelcome = false
     
     var body: some View {
         NavigationView {
@@ -31,6 +36,19 @@ struct ContentView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Force stack style for iPhone
         .preferredColorScheme(themeManager.colorScheme)
+        .onAppear {
+            checkFirstLaunch()
+        }
+        .fullScreenCover(isPresented: $showingWelcome) {
+            WelcomeView()
+        }
+    }
+    
+    private func checkFirstLaunch() {
+        let hasShownWelcome = UserDefaults.standard.bool(forKey: "hasShownWelcome")
+        if !hasShownWelcome {
+            showingWelcome = true
+        }
     }
 }
 
@@ -179,6 +197,7 @@ struct SurahListView: View {
     @State private var showingBookmarks = false
     @State private var navigateToSurah: SurahWithTafsir?
     @State private var targetVerse: Int?
+    @State private var showingAuthentication = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -229,6 +248,63 @@ struct SurahListView: View {
                         }
                         .buttonStyle(PlainButtonStyle())
                         
+                        // Sync status indicator
+                        if bookmarkManager.isSyncing {
+                            Button(action: {}) {
+                                Image(systemName: "arrow.triangle.2.circlepath")
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(.blue)
+                                    .frame(width: 40, height: 40)
+                                    .background(
+                                        Circle()
+                                            .fill(themeManager.glassEffect)
+                                            .overlay(
+                                                Circle()
+                                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                                            )
+                                    )
+                                    .rotationEffect(.degrees(bookmarkManager.isSyncing ? 360 : 0))
+                                    .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: bookmarkManager.isSyncing)
+                            }
+                            .disabled(true)
+                        } else if !bookmarkManager.isAuthenticated {
+                            Button(action: {
+                                showingAuthentication = true
+                            }) {
+                                Image(systemName: "cloud.slash")
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(.orange)
+                                    .frame(width: 40, height: 40)
+                                    .background(
+                                        Circle()
+                                            .fill(themeManager.glassEffect)
+                                            .overlay(
+                                                Circle()
+                                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                                            )
+                                    )
+                            }
+                        } else {
+                            Button(action: {
+                                Task {
+                                    await bookmarkManager.forceSyncWithSupabase()
+                                }
+                            }) {
+                                Image(systemName: "cloud.fill")
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(.green)
+                                    .frame(width: 40, height: 40)
+                                    .background(
+                                        Circle()
+                                            .fill(themeManager.glassEffect)
+                                            .overlay(
+                                                Circle()
+                                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                                            )
+                                    )
+                            }
+                        }
+                        
                         // Theme toggle button
                         Button(action: {
                             themeManager.toggleTheme()
@@ -248,16 +324,8 @@ struct SurahListView: View {
                         }
                         .buttonStyle(PlainButtonStyle())
                         
-                        // Profile avatar with gradient
-                        Circle()
-                            .fill(themeManager.accentGradient)
-                            .frame(width: 40, height: 40)
-                            .overlay(
-                                Text("AA")
-                                    .font(.system(size: 16, weight: .semibold))
-                                    .foregroundColor(.white)
-                            )
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                        // Profile/Authentication button
+                        AuthenticationStatusButton()
                     }
                 }
                 
@@ -340,6 +408,19 @@ struct SurahListView: View {
         }
         .sheet(isPresented: $showingBookmarks) {
             BookmarksView(selectedSurahForNavigation: $navigateToSurah, targetVerse: $targetVerse)
+        }
+        .overlay(alignment: .bottom) {
+            if let syncStatus = bookmarkManager.syncStatus {
+                SyncStatusToast(message: syncStatus)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .animation(.spring(response: 0.5, dampingFraction: 0.8), value: bookmarkManager.syncStatus)
+            }
+        }
+        .fullScreenCover(isPresented: $showingAuthentication) {
+            AuthenticationView()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
+            showingAuthentication = true
         }
     }
 }
@@ -455,6 +536,305 @@ struct ModernSurahCard: View {
                         )
                 )
         )
+    }
+}
+
+struct AuthenticationStatusButton: View {
+    @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var supabaseService = SupabaseService.shared
+    @State private var showingAuthentication = false
+    @State private var showingProfile = false
+    
+    var body: some View {
+        Button(action: {
+            if supabaseService.isAuthenticated {
+                showingProfile = true
+            } else {
+                showingAuthentication = true
+            }
+        }) {
+            if supabaseService.isAuthenticated {
+                // Show user avatar when authenticated
+                Circle()
+                    .fill(themeManager.accentGradient)
+                    .frame(width: 40, height: 40)
+                    .overlay(
+                        Text(getUserInitials())
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(.white)
+                    )
+                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+            } else {
+                // Show sign in button when not authenticated
+                HStack(spacing: 6) {
+                    Image(systemName: "person.circle")
+                        .font(.system(size: 16, weight: .semibold))
+                    Text("Sign In")
+                        .font(.system(size: 14, weight: .semibold))
+                }
+                .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                .padding(.horizontal, 12)
+                .padding(.vertical, 8)
+                .background(
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(themeManager.glassEffect)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), lineWidth: 1)
+                        )
+                )
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
+        .fullScreenCover(isPresented: $showingAuthentication) {
+            AuthenticationView()
+        }
+        .sheet(isPresented: $showingProfile) {
+            ProfileMenuView()
+        }
+    }
+    
+    private func getUserInitials() -> String {
+        if let user = supabaseService.currentUser,
+           let email = user.email {
+            let components = email.components(separatedBy: "@")
+            if let username = components.first {
+                let initials = String(username.prefix(2)).uppercased()
+                return initials
+            }
+        }
+        return "U"
+    }
+}
+
+struct ProfileMenuView: View {
+    @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var supabaseService = SupabaseService.shared
+    @StateObject private var bookmarkManager = BookmarkManager.shared
+    @Environment(\.dismiss) private var dismiss
+    @State private var showingSignOutAlert = false
+    
+    var body: some View {
+        NavigationView {
+            ZStack {
+                // Background
+                LinearGradient(
+                    colors: [
+                        themeManager.primaryBackground,
+                        themeManager.secondaryBackground
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
+                VStack(spacing: 32) {
+                    // User info section
+                    VStack(spacing: 16) {
+                        Circle()
+                            .fill(themeManager.accentGradient)
+                            .frame(width: 80, height: 80)
+                            .overlay(
+                                Text(getUserInitials())
+                                    .font(.system(size: 32, weight: .semibold))
+                                    .foregroundColor(.white)
+                            )
+                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 12)
+                        
+                        VStack(spacing: 4) {
+                            Text(getUserEmail())
+                                .font(.system(size: 18, weight: .semibold))
+                                .foregroundColor(themeManager.primaryText)
+                            
+                            Text(bookmarkManager.preferences?.isPremium == true ? "Premium User" : "Free Account")
+                                .font(.system(size: 14, weight: .medium))
+                                .foregroundColor(bookmarkManager.preferences?.isPremium == true ? .green : themeManager.secondaryText)
+                        }
+                    }
+                    
+                    // Menu options
+                    VStack(spacing: 16) {
+                        ProfileMenuItem(
+                            icon: "heart.fill",
+                            title: "Bookmarks",
+                            subtitle: "\(bookmarkManager.bookmarks.count) saved verses",
+                            action: { dismiss() }
+                        )
+                        
+                        if bookmarkManager.preferences?.isPremium != true {
+                            ProfileMenuItem(
+                                icon: "crown.fill",
+                                title: "Upgrade to Premium",
+                                subtitle: "Unlimited bookmarks & features",
+                                action: { /* TODO: In-app purchase */ }
+                            )
+                        }
+                        
+                        ProfileMenuItem(
+                            icon: "arrow.triangle.2.circlepath",
+                            title: "Sync Status",
+                            subtitle: bookmarkManager.isAuthenticated ? "Connected" : "Offline",
+                            action: {
+                                Task {
+                                    await bookmarkManager.forceSyncWithSupabase()
+                                }
+                            }
+                        )
+                        
+                        ProfileMenuItem(
+                            icon: "rectangle.portrait.and.arrow.right",
+                            title: "Sign Out",
+                            subtitle: "Switch to guest mode",
+                            isDestructive: true,
+                            action: { showingSignOutAlert = true }
+                        )
+                    }
+                    
+                    Spacer()
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
+            }
+            .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        dismiss()
+                    }
+                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                }
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+        .alert("Sign Out", isPresented: $showingSignOutAlert) {
+            Button("Cancel", role: .cancel) {}
+            Button("Sign Out", role: .destructive) {
+                Task {
+                    await bookmarkManager.signOutAndClearRemoteData()
+                    await MainActor.run {
+                        dismiss()
+                        // Trigger authentication screen after sign out
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            NotificationCenter.default.post(name: .showAuthentication, object: nil)
+                        }
+                    }
+                }
+            }
+        } message: {
+            Text("Your bookmarks will remain on this device, but you'll need to sign in again to sync across devices.")
+        }
+    }
+    
+    private func getUserInitials() -> String {
+        if let user = supabaseService.currentUser,
+           let email = user.email {
+            let components = email.components(separatedBy: "@")
+            if let username = components.first {
+                let initials = String(username.prefix(2)).uppercased()
+                return initials
+            }
+        }
+        return "U"
+    }
+    
+    private func getUserEmail() -> String {
+        return supabaseService.currentUser?.email ?? "Guest User"
+    }
+}
+
+struct ProfileMenuItem: View {
+    let icon: String
+    let title: String
+    let subtitle: String
+    let isDestructive: Bool
+    let action: () -> Void
+    @StateObject private var themeManager = ThemeManager.shared
+    
+    init(icon: String, title: String, subtitle: String, isDestructive: Bool = false, action: @escaping () -> Void) {
+        self.icon = icon
+        self.title = title
+        self.subtitle = subtitle
+        self.isDestructive = isDestructive
+        self.action = action
+    }
+    
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 16) {
+                Image(systemName: icon)
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundColor(isDestructive ? .red : Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .frame(width: 24)
+                
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(isDestructive ? .red : themeManager.primaryText)
+                    
+                    Text(subtitle)
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                }
+                
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(themeManager.tertiaryText)
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 16)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(themeManager.glassEffect)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+            )
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+}
+
+struct SyncStatusToast: View {
+    let message: String
+    @StateObject private var themeManager = ThemeManager.shared
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            if message.contains("Syncing") {
+                ProgressView()
+                    .scaleEffect(0.8)
+                    .tint(.white)
+            } else if message.contains("completed") {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.green)
+            } else if message.contains("failed") {
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .foregroundColor(.red)
+            } else {
+                Image(systemName: "cloud.fill")
+                    .foregroundColor(.blue)
+            }
+            
+            Text(message)
+                .font(.system(size: 14, weight: .medium))
+                .foregroundColor(.white)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 25)
+                .fill(.ultraThinMaterial)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.black.opacity(0.3))
+                )
+        )
+        .padding(.horizontal, 20)
+        .padding(.bottom, 100) // Above tab bar
     }
 }
 

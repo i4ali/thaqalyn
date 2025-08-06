@@ -6,13 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		73412EC52E42B89100AE42D0 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 73E0BC202E3D3ABB00E517DE /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		73E0BC0F2E3D3AB900E517DE /* Thaqalayn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thaqalayn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		73412EEE2E42B8BC00AE42D0 /* Exceptions for "Thaqalayn" folder in "Thaqalayn" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 73E0BC0E2E3D3AB900E517DE /* Thaqalayn */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		73E0BC112E3D3AB900E517DE /* Thaqalayn */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				73412EEE2E42B8BC00AE42D0 /* Exceptions for "Thaqalayn" folder in "Thaqalayn" target */,
+			);
 			path = Thaqalayn;
 			sourceTree = "<group>";
 		};
@@ -23,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73412EC52E42B89100AE42D0 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +83,7 @@
 			);
 			name = Thaqalayn;
 			packageProductDependencies = (
+				73E0BC202E3D3ABB00E517DE /* Supabase */,
 			);
 			productName = Thaqalayn;
 			productReference = 73E0BC0F2E3D3AB900E517DE /* Thaqalayn.app */;
@@ -94,6 +113,9 @@
 			);
 			mainGroup = 73E0BC062E3D3AB900E517DE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				73E0BC212E3D3ABB00E517DE /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 73E0BC102E3D3AB900E517DE /* Products */;
 			projectDirPath = "";
@@ -255,6 +277,7 @@
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thaqalayn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +307,7 @@
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thaqalayn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +348,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		73E0BC212E3D3ABB00E517DE /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73E0BC202E3D3ABB00E517DE /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73E0BC212E3D3ABB00E517DE /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73E0BC072E3D3AB900E517DE /* Project object */;
 }
