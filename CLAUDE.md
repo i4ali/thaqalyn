@@ -35,7 +35,8 @@ CurrentPlayback: { surahNumber, verseNumber, reciter, currentTime, isPlaying }
 - ✅ Individual verse playback using EveryAyah.com URLs (`https://www.everyayah.com/data/Alafasy_128kbps/001001.mp3`)
 - ✅ Individual play buttons on each verse card with visual feedback  
 - ✅ **Play Sequence functionality** for continuous surah playback (FIXED)
-- ✅ 6 popular reciters: Mishary Alafasy, Abdul Rahman Al-Sudais, Saad Al-Ghamidi, Ahmad Ibn Ali Al-Ajamy, Maher Al-Muaiqly, Yasser Al-Dosari
+- ✅ **Premium reciter system**: Mishary Alafasy (free), 5 premium reciters with upgrade prompts
+- ✅ Reciter selection with crown badges, lock icons, and premium upgrade flow
 - ✅ Quality selection (128kbps/64kbps), caching (100MB), HTTPS compliance
 
 ## Development Commands

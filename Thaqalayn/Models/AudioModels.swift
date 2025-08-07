@@ -21,6 +21,7 @@ struct Reciter: Codable, Identifiable, Hashable {
     let profileImageURL: String?
     let description: String
     let isPopular: Bool
+    let isPremium: Bool
     
     init(
         id: String,
@@ -33,7 +34,8 @@ struct Reciter: Codable, Identifiable, Hashable {
         serverURL: String,
         profileImageURL: String? = nil,
         description: String = "",
-        isPopular: Bool = false
+        isPopular: Bool = false,
+        isPremium: Bool = false
     ) {
         self.id = id
         self.nameArabic = nameArabic
@@ -46,6 +48,7 @@ struct Reciter: Codable, Identifiable, Hashable {
         self.profileImageURL = profileImageURL
         self.description = description
         self.isPopular = isPopular
+        self.isPremium = isPremium
     }
 }
 
@@ -107,7 +110,8 @@ struct AudioConfiguration: Codable {
         style: .hafs,
         serverURL: "https://server8.mp3quran.net/afs",
         description: "One of the most popular reciters worldwide",
-        isPopular: true
+        isPopular: true,
+        isPremium: false
     )
 }
 
@@ -244,6 +248,7 @@ struct AudioURLComponents {
 
 extension Reciter {
     static let popularReciters: [Reciter] = [
+        // Free reciter (default)
         Reciter(
             id: "mishary_rashid_alafasy",
             nameArabic: "مشاري بن راشد العفاسي",
@@ -251,8 +256,10 @@ extension Reciter {
             style: .hafs,
             serverURL: "https://server8.mp3quran.net/afs",
             description: "One of the most popular reciters worldwide with a beautiful voice",
-            isPopular: true
+            isPopular: true,
+            isPremium: false
         ),
+        // Premium reciters
         Reciter(
             id: "abdul_rahman_al_sudais",
             nameArabic: "عبد الرحمن السديس",
@@ -260,7 +267,8 @@ extension Reciter {
             style: .hafs,
             serverURL: "https://server11.mp3quran.net/sds",
             description: "Imam of the Grand Mosque in Mecca",
-            isPopular: true
+            isPopular: true,
+            isPremium: true
         ),
         Reciter(
             id: "saad_al_ghamidi",
@@ -269,7 +277,8 @@ extension Reciter {
             style: .hafs,
             serverURL: "https://server7.mp3quran.net/s_gmd2",
             description: "Known for his emotional and beautiful recitation",
-            isPopular: true
+            isPopular: true,
+            isPremium: true
         ),
         Reciter(
             id: "ahmad_ibn_ali_al_ajamy",
@@ -278,7 +287,8 @@ extension Reciter {
             style: .hafs,
             serverURL: "https://server10.mp3quran.net/ajm",
             description: "Young reciter with a distinctive melodious voice",
-            isPopular: true
+            isPopular: true,
+            isPremium: true
         ),
         Reciter(
             id: "maher_al_muaiqly",
@@ -287,7 +297,8 @@ extension Reciter {
             style: .hafs,
             serverURL: "https://server12.mp3quran.net/maher",
             description: "Imam of the Prophet's Mosque in Medina",
-            isPopular: true
+            isPopular: true,
+            isPremium: true
         ),
         Reciter(
             id: "yasser_al_dosari",
@@ -296,7 +307,8 @@ extension Reciter {
             style: .hafs,
             serverURL: "https://server14.mp3quran.net/yasir",
             description: "Known for his powerful and emotional recitation",
-            isPopular: true
+            isPopular: true,
+            isPremium: true
         )
     ]
 }

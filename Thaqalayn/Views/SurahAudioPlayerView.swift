@@ -417,7 +417,13 @@ struct FullScreenAudioPlayerView: View {
 struct ReciterSelectionView: View {
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var bookmarkManager = BookmarkManager.shared
     @Environment(\.dismiss) private var dismiss
+    @State private var showingPremiumUpgrade = false
+    
+    private var isPremiumUser: Bool {
+        bookmarkManager.preferences?.isPremium ?? false
+    }
     
     var body: some View {
         NavigationView {
@@ -438,10 +444,15 @@ struct ReciterSelectionView: View {
                         ForEach(Reciter.popularReciters) { reciter in
                             ReciterCard(
                                 reciter: reciter,
-                                isSelected: reciter.id == audioManager.configuration.selectedReciter.id
+                                isSelected: reciter.id == audioManager.configuration.selectedReciter.id,
+                                isPremiumUser: isPremiumUser
                             ) {
-                                audioManager.updateReciter(reciter)
-                                dismiss()
+                                if reciter.isPremium && !isPremiumUser {
+                                    showingPremiumUpgrade = true
+                                } else {
+                                    audioManager.updateReciter(reciter)
+                                    dismiss()
+                                }
                             }
                         }
                     }
@@ -461,34 +472,76 @@ struct ReciterSelectionView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+        .sheet(isPresented: $showingPremiumUpgrade) {
+            PremiumUpgradeView()
+        }
     }
 }
 
 struct ReciterCard: View {
     let reciter: Reciter
     let isSelected: Bool
+    let isPremiumUser: Bool
     let onSelect: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    
+    private var cardOpacity: Double {
+        return reciter.isPremium && !isPremiumUser ? 0.6 : 1.0
+    }
+    
+    private var isAccessible: Bool {
+        return !reciter.isPremium || isPremiumUser
+    }
     
     var body: some View {
         Button(action: onSelect) {
             VStack(spacing: 12) {
                 // Reciter avatar placeholder
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 80, height: 80)
-                    .overlay(
-                        Text(String(reciter.nameEnglish.prefix(2)).uppercased())
-                            .font(.system(size: 24, weight: .semibold))
-                            .foregroundColor(.white)
-                    )
-                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                ZStack {
+                    Circle()
+                        .fill(themeManager.accentGradient)
+                        .frame(width: 80, height: 80)
+                        .overlay(
+                            Text(String(reciter.nameEnglish.prefix(2)).uppercased())
+                                .font(.system(size: 24, weight: .semibold))
+                                .foregroundColor(.white)
+                        )
+                        .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                    
+                    // Premium crown badge
+                    if reciter.isPremium {
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Image(systemName: "crown.fill")
+                                    .font(.system(size: 16, weight: .semibold))
+                                    .foregroundColor(.yellow)
+                                    .background(
+                                        Circle()
+                                            .fill(.black.opacity(0.7))
+                                            .frame(width: 24, height: 24)
+                                    )
+                                    .offset(x: -8, y: 8)
+                            }
+                            Spacer()
+                        }
+                        .frame(width: 80, height: 80)
+                    }
+                }
                 
                 VStack(spacing: 4) {
-                    Text(reciter.nameEnglish)
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .multilineTextAlignment(.center)
+                    HStack {
+                        Text(reciter.nameEnglish)
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(themeManager.primaryText)
+                            .multilineTextAlignment(.center)
+                        
+                        if reciter.isPremium && !isPremiumUser {
+                            Image(systemName: "lock.fill")
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(.orange)
+                        }
+                    }
                     
                     if !reciter.description.isEmpty {
                         Text(reciter.description)
@@ -496,6 +549,22 @@ struct ReciterCard: View {
                             .foregroundColor(themeManager.tertiaryText)
                             .multilineTextAlignment(.center)
                             .lineLimit(2)
+                    }
+                    
+                    if reciter.isPremium && !isPremiumUser {
+                        Text("Premium")
+                            .font(.system(size: 10, weight: .bold))
+                            .foregroundColor(.orange)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 2)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(.orange.opacity(0.1))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(.orange.opacity(0.3), lineWidth: 1)
+                                    )
+                            )
                     }
                 }
             }
@@ -506,12 +575,177 @@ struct ReciterCard: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(
-                                isSelected ? Color(red: 0.39, green: 0.4, blue: 0.95) : themeManager.strokeColor,
+                                isSelected ? Color(red: 0.39, green: 0.4, blue: 0.95) : 
+                                (reciter.isPremium && !isPremiumUser ? .orange.opacity(0.5) : themeManager.strokeColor),
                                 lineWidth: isSelected ? 2 : 1
                             )
                     )
             )
+            .opacity(cardOpacity)
         }
         .buttonStyle(PlainButtonStyle())
+    }
+}
+
+struct PremiumUpgradeView: View {
+    @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var bookmarkManager = BookmarkManager.shared
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        NavigationView {
+            ZStack {
+                // Background
+                LinearGradient(
+                    colors: [
+                        themeManager.primaryBackground,
+                        themeManager.secondaryBackground,
+                        themeManager.tertiaryBackground
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
+                ScrollView {
+                    VStack(spacing: 32) {
+                        // Premium icon and title
+                        VStack(spacing: 16) {
+                            ZStack {
+                                Circle()
+                                    .fill(
+                                        LinearGradient(
+                                            colors: [.yellow, .orange],
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        )
+                                    )
+                                    .frame(width: 120, height: 120)
+                                    .shadow(color: .orange.opacity(0.4), radius: 20)
+                                
+                                Image(systemName: "crown.fill")
+                                    .font(.system(size: 48, weight: .bold))
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Text("Upgrade to Premium")
+                                .font(.system(size: 32, weight: .bold))
+                                .foregroundColor(themeManager.primaryText)
+                                .multilineTextAlignment(.center)
+                            
+                            Text("Unlock all premium reciters and enhance your Quran experience")
+                                .font(.system(size: 18, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 20)
+                        }
+                        
+                        // Premium features
+                        VStack(spacing: 20) {
+                            PremiumFeatureRow(
+                                icon: "person.wave.2.fill",
+                                title: "All Premium Reciters",
+                                description: "Access to Abdul Rahman Al-Sudais, Saad Al-Ghamidi, and 4 more world-renowned reciters"
+                            )
+                            
+                            PremiumFeatureRow(
+                                icon: "bookmark.fill",
+                                title: "Unlimited Bookmarks",
+                                description: "Save unlimited verses with notes, tags, and collections"
+                            )
+                            
+                            PremiumFeatureRow(
+                                icon: "sparkles",
+                                title: "Future Premium Features",
+                                description: "Get early access to new features and premium content"
+                            )
+                        }
+                        .padding(.horizontal, 20)
+                        
+                        // Upgrade button
+                        VStack(spacing: 16) {
+                            Button(action: {
+                                bookmarkManager.upgradeToPremium()
+                                dismiss()
+                            }) {
+                                Text("Upgrade Now - Free")
+                                    .font(.system(size: 18, weight: .bold))
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 16)
+                                    .background(
+                                        LinearGradient(
+                                            colors: [.orange, .yellow],
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
+                                    )
+                                    .cornerRadius(12)
+                                    .shadow(color: .orange.opacity(0.4), radius: 10)
+                            }
+                            
+                            Text("Currently free during beta")
+                                .font(.system(size: 14, weight: .medium))
+                                .foregroundColor(themeManager.tertiaryText)
+                        }
+                        .padding(.horizontal, 20)
+                    }
+                    .padding(.vertical, 20)
+                }
+            }
+            .navigationTitle("Premium")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                }
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+    }
+}
+
+struct PremiumFeatureRow: View {
+    let icon: String
+    let title: String
+    let description: String
+    @StateObject private var themeManager = ThemeManager.shared
+    
+    var body: some View {
+        HStack(spacing: 16) {
+            Image(systemName: icon)
+                .font(.system(size: 24, weight: .semibold))
+                .foregroundColor(.orange)
+                .frame(width: 48, height: 48)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(.orange.opacity(0.1))
+                )
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                
+                Text(description)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(themeManager.secondaryText)
+                    .multilineTextAlignment(.leading)
+            }
+            
+            Spacer()
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(themeManager.glassEffect)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+        )
     }
 }
