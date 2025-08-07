@@ -128,16 +128,15 @@ class AudioManager: NSObject, ObservableObject {
     
     func playVerseSequence(_ verses: [VerseWithTafsir], in surah: Surah, startingFrom verseIndex: Int = 0) async {
         currentSurah = surah
-        currentVerses = verses
+        currentVerses = verses // Keep all verses for sequence playback
         currentVerseIndex = verseIndex
         
         // Load quran-align data once for all verses
         await loadQuranAlignData()
         
-        // Start playing the first verse
+        // Start playing the first verse in the sequence
         guard verseIndex < verses.count else { return }
-        let firstVerse = verses[verseIndex]
-        await playVerse(firstVerse, in: surah)
+        await playCurrentVerse()
     }
     
     private func playVerseWithTiming(verse: VerseWithTafsir, surah: Surah, timingData: VerseTimingData) async {
@@ -385,7 +384,17 @@ class AudioManager: NSObject, ObservableObject {
               currentVerseIndex < currentVerses.count else { return }
         
         let verse = currentVerses[currentVerseIndex]
-        await playVerse(verse, in: surah)
+        
+        // Load timing data for this specific verse
+        currentVerseTimingData = quranAlignData?.getVerseTimingData(surahNumber: surah.number, ayahNumber: verse.number)
+        
+        if let timingData = currentVerseTimingData {
+            print("✅ Using quran-align timing data for word highlighting")
+            await playVerseWithTiming(verse: verse, surah: surah, timingData: timingData)
+        } else {
+            print("⚠️ No quran-align timing data - playing without word highlighting")
+            await playVerseWithoutTiming(verse: verse, surah: surah)
+        }
     }
     
     private func loadQuranAlignData() async {
