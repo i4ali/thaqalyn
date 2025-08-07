@@ -82,7 +82,6 @@ struct AudioConfiguration: Codable {
     let repeatMode: RepeatMode
     let autoAdvanceDelay: Double
     let backgroundPlayback: Bool
-    let downloadQuality: AudioQuality
     let sleepTimer: SleepTimerDuration?
     
     init(
@@ -91,7 +90,6 @@ struct AudioConfiguration: Codable {
         repeatMode: RepeatMode = .off,
         autoAdvanceDelay: Double = 1.0,
         backgroundPlayback: Bool = true,
-        downloadQuality: AudioQuality = .medium,
         sleepTimer: SleepTimerDuration? = nil
     ) {
         self.selectedReciter = selectedReciter
@@ -99,7 +97,6 @@ struct AudioConfiguration: Codable {
         self.repeatMode = repeatMode
         self.autoAdvanceDelay = autoAdvanceDelay
         self.backgroundPlayback = backgroundPlayback
-        self.downloadQuality = downloadQuality
         self.sleepTimer = sleepTimer
     }
     
@@ -140,23 +137,6 @@ enum RepeatMode: String, Codable, CaseIterable {
     }
 }
 
-enum AudioQuality: String, Codable, CaseIterable {
-    case low = "64"
-    case medium = "128"
-    case high = "320"
-    
-    var title: String {
-        switch self {
-        case .low: return "64 kbps"
-        case .medium: return "128 kbps"
-        case .high: return "320 kbps"
-        }
-    }
-    
-    var bitrate: Int {
-        return Int(rawValue) ?? 128
-    }
-}
 
 enum SleepTimerDuration: String, Codable, CaseIterable {
     case minutes5 = "5"
@@ -215,34 +195,6 @@ struct CurrentPlayback: Codable {
     }
 }
 
-// MARK: - Audio URL Generation
-
-struct AudioURLComponents {
-    let baseURL: String
-    let surahNumber: Int
-    let verseNumber: Int?  // nil for full surah
-    let reciterID: String
-    let quality: AudioQuality
-    let format: AudioFormat
-    
-    func generateURL() -> URL? {
-        var urlString = baseURL
-        
-        // Add surah number with zero padding (001-114)
-        let surahString = String(format: "%03d", surahNumber)
-        
-        if let verseNumber = verseNumber {
-            // Individual verse audio (EveryAyah style: /verse/001001.mp3)
-            let verseString = String(format: "%03d", verseNumber)
-            urlString += "/verse/\(surahString)\(verseString).\(format.rawValue)"
-        } else {
-            // Full surah audio (deprecated - will be removed)
-            urlString += "/\(surahString).\(format.rawValue)"
-        }
-        
-        return URL(string: urlString)
-    }
-}
 
 // MARK: - Popular Reciters Database
 

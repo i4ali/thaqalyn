@@ -141,7 +141,7 @@ class AudioManager: NSObject, ObservableObject {
     
     private func playVerseWithTiming(verse: VerseWithTafsir, surah: Surah, timingData: VerseTimingData) async {
         // Generate individual verse audio URL (EveryAyah style)
-        guard let url = verse.audioURL(for: surah.number, reciter: configuration.selectedReciter, quality: configuration.downloadQuality) else {
+        guard let url = verse.audioURL(for: surah.number, reciter: configuration.selectedReciter) else {
             print("❌ AudioManager: Unable to generate verse audio URL for surah \(surah.number), verse \(verse.number)")
             errorMessage = "Unable to generate audio URL"
             playerState = .error
@@ -199,7 +199,7 @@ class AudioManager: NSObject, ObservableObject {
     }
     
     private func loadAndPlayAudio(for verse: VerseWithTafsir, in surah: Surah) async {
-        guard let url = verse.audioURL(for: surah.number, reciter: configuration.selectedReciter, quality: configuration.downloadQuality) else {
+        guard let url = verse.audioURL(for: surah.number, reciter: configuration.selectedReciter) else {
             print("❌ AudioManager: Unable to generate audio URL for surah \(surah.number), verse \(verse.number)")
             errorMessage = "Unable to generate audio URL"
             playerState = .error
@@ -413,7 +413,6 @@ class AudioManager: NSObject, ObservableObject {
             repeatMode: configuration.repeatMode,
             autoAdvanceDelay: configuration.autoAdvanceDelay,
             backgroundPlayback: configuration.backgroundPlayback,
-            downloadQuality: configuration.downloadQuality,
             sleepTimer: configuration.sleepTimer
         )
         saveConfiguration()
@@ -428,7 +427,6 @@ class AudioManager: NSObject, ObservableObject {
             repeatMode: mode,
             autoAdvanceDelay: configuration.autoAdvanceDelay,
             backgroundPlayback: configuration.backgroundPlayback,
-            downloadQuality: configuration.downloadQuality,
             sleepTimer: configuration.sleepTimer
         )
         saveConfiguration()
@@ -441,7 +439,6 @@ class AudioManager: NSObject, ObservableObject {
             repeatMode: configuration.repeatMode,
             autoAdvanceDelay: configuration.autoAdvanceDelay,
             backgroundPlayback: configuration.backgroundPlayback,
-            downloadQuality: configuration.downloadQuality,
             sleepTimer: configuration.sleepTimer
         )
         saveConfiguration()
@@ -458,7 +455,6 @@ class AudioManager: NSObject, ObservableObject {
             repeatMode: configuration.repeatMode,
             autoAdvanceDelay: configuration.autoAdvanceDelay,
             backgroundPlayback: configuration.backgroundPlayback,
-            downloadQuality: configuration.downloadQuality,
             sleepTimer: duration
         )
         saveConfiguration()

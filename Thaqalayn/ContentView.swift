@@ -970,52 +970,6 @@ struct AudioSettingsView: View {
                             .padding(.vertical, 16)
                         }
                         
-                        // Audio quality
-                        AudioSettingCard(
-                            icon: "waveform",
-                            title: "Audio Quality",
-                            subtitle: audioManager.configuration.downloadQuality.title
-                        ) {
-                            // Quality picker inline
-                        } content: {
-                            HStack {
-                                Text("Quality")
-                                    .font(.system(size: 16, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
-                                
-                                Spacer()
-                                
-                                Menu {
-                                    ForEach(AudioQuality.allCases, id: \.self) { quality in
-                                        Button(quality.title) {
-                                            // Update quality in configuration
-                                            audioManager.configuration = AudioConfiguration(
-                                                selectedReciter: audioManager.configuration.selectedReciter,
-                                                playbackSpeed: audioManager.configuration.playbackSpeed,
-                                                repeatMode: audioManager.configuration.repeatMode,
-                                                autoAdvanceDelay: audioManager.configuration.autoAdvanceDelay,
-                                                backgroundPlayback: audioManager.configuration.backgroundPlayback,
-                                                downloadQuality: quality,
-                                                sleepTimer: audioManager.configuration.sleepTimer
-                                            )
-                                            audioManager.saveConfiguration()
-                                        }
-                                    }
-                                } label: {
-                                    HStack(spacing: 4) {
-                                        Text(audioManager.configuration.downloadQuality.title)
-                                            .font(.system(size: 16, weight: .semibold))
-                                            .foregroundColor(themeManager.primaryText)
-                                        
-                                        Image(systemName: "chevron.down")
-                                            .font(.system(size: 12, weight: .medium))
-                                            .foregroundColor(themeManager.tertiaryText)
-                                    }
-                                }
-                            }
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 16)
-                        }
                         
                         // Cache management
                         AudioSettingCard(

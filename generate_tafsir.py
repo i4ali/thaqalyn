@@ -12,7 +12,7 @@ from datetime import datetime
 import openai
 
 class TafsirGenerator:
-    def __init__(self, api_key: str, use_openrouter: bool = False):
+    def __init__(self, api_key: str, use_openrouter: bool = False, max_price: float = None):
         """Initialize with API key - can use DeepSeek directly or through OpenRouter"""
         if use_openrouter:
             self.client = openai.OpenAI(
@@ -20,12 +20,14 @@ class TafsirGenerator:
                 base_url="https://openrouter.ai/api/v1"
             )
             self.model = "deepseek/deepseek-r1"  # DeepSeek R1 reasoning model on OpenRouter
+            self.max_price = max_price if max_price is not None else 0.005
         else:
             self.client = openai.OpenAI(
                 api_key=api_key,
                 base_url="https://api.deepseek.com"
             )
             self.model = "deepseek-reasoner"
+            self.max_price = None
         self.quran_data = None
         self.generated_count = 0
         self.total_verses = 0

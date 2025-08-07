@@ -26,16 +26,11 @@ struct Surah: Codable, Identifiable {
     var id: Int { number }
     
     // Audio-related computed properties
-    func audioURL(for reciter: Reciter, quality: AudioQuality = .medium) -> URL? {
-        let components = AudioURLComponents(
-            baseURL: reciter.serverURL,
-            surahNumber: number,
-            verseNumber: nil,  // Full surah
-            reciterID: reciter.id,
-            quality: quality,
-            format: .mp3
-        )
-        return components.generateURL()
+    func audioURL(for reciter: Reciter) -> URL? {
+        // Use best available quality for each reciter (full surah audio)
+        let surahString = String(format: "%03d", number)
+        let urlString = "\(reciter.serverURL)/\(surahString).mp3"
+        return URL(string: urlString)
     }
 }
 
@@ -177,20 +172,20 @@ struct VerseWithTafsir: Identifiable {
     }
     
     // Audio-related computed properties
-    func audioURL(for surahNumber: Int, reciter: Reciter, quality: AudioQuality = .medium) -> URL? {
+    func audioURL(for surahNumber: Int, reciter: Reciter) -> URL? {
         let surahString = String(format: "%03d", surahNumber)
         let verseString = String(format: "%03d", number)
         
-        // Use EveryAyah.com for individual verse audio (supported reciters)
+        // Use EveryAyah.com for individual verse audio with best available quality for each reciter
         switch reciter.id {
         case "mishary_rashid_alafasy":
-            let qualitySuffix = quality == .high ? "128kbps" : "64kbps"
-            let urlString = "https://www.everyayah.com/data/Alafasy_\(qualitySuffix)/\(surahString)\(verseString).mp3"
+            // Use highest available quality (128kbps)
+            let urlString = "https://www.everyayah.com/data/Alafasy_128kbps/\(surahString)\(verseString).mp3"
             return URL(string: urlString)
             
         case "abdul_rahman_al_sudais":
-            let qualitySuffix = quality == .high ? "192kbps" : "64kbps"
-            let urlString = "https://www.everyayah.com/data/Abdurrahmaan_As-Sudais_\(qualitySuffix)/\(surahString)\(verseString).mp3"
+            // Use highest available quality (192kbps)
+            let urlString = "https://www.everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps/\(surahString)\(verseString).mp3"
             return URL(string: urlString)
             
         case "saad_al_ghamidi":
@@ -199,15 +194,13 @@ struct VerseWithTafsir: Identifiable {
             return URL(string: urlString)
             
         case "ahmad_ibn_ali_al_ajamy":
-            let qualitySuffix = quality == .high ? "128kbps" : "64kbps"
-            let directoryName = quality == .high ? "ahmed_ibn_ali_al_ajamy_128kbps" : "Ahmed_ibn_Ali_al-Ajamy_64kbps_QuranExplorer.Com"
-            let urlString = "https://www.everyayah.com/data/\(directoryName)/\(surahString)\(verseString).mp3"
+            // Use highest available quality (128kbps)
+            let urlString = "https://www.everyayah.com/data/ahmed_ibn_ali_al_ajamy_128kbps/\(surahString)\(verseString).mp3"
             return URL(string: urlString)
             
         case "maher_al_muaiqly":
-            let qualitySuffix = quality == .high ? "128kbps" : "64kbps"
-            let directoryName = quality == .high ? "MaherAlMuaiqly128kbps" : "Maher_AlMuaiqly_64kbps"
-            let urlString = "https://www.everyayah.com/data/\(directoryName)/\(surahString)\(verseString).mp3"
+            // Use highest available quality (128kbps)
+            let urlString = "https://www.everyayah.com/data/MaherAlMuaiqly128kbps/\(surahString)\(verseString).mp3"
             return URL(string: urlString)
             
         case "yasser_al_dosari":
@@ -217,15 +210,9 @@ struct VerseWithTafsir: Identifiable {
             
         default:
             // Fall back to full surah audio for other reciters
-            let components = AudioURLComponents(
-                baseURL: reciter.serverURL,
-                surahNumber: surahNumber,
-                verseNumber: nil,
-                reciterID: reciter.id,
-                quality: quality,
-                format: .mp3
-            )
-            return components.generateURL()
+            let surahOnlyString = String(format: "%03d", surahNumber)
+            let urlString = "\(reciter.serverURL)/\(surahOnlyString).mp3"
+            return URL(string: urlString)
         }
     }
     

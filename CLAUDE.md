@@ -37,7 +37,7 @@ CurrentPlayback: { surahNumber, verseNumber, reciter, currentTime, isPlaying }
 - ✅ **Play Sequence functionality** for continuous surah playback (FIXED)
 - ✅ **Premium reciter system**: Mishary Alafasy (free), 5 premium reciters with upgrade prompts
 - ✅ Reciter selection with crown badges, lock icons, and premium upgrade flow
-- ✅ Quality selection (128kbps/64kbps), caching (100MB), HTTPS compliance
+- ✅ Best available quality per reciter (40-192kbps), caching (100MB), HTTPS compliance
 
 ## Development Commands
 

@@ -12,7 +12,7 @@ def generate_surah_quick(surah_num):
     api_key = "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"
     
     # Initialize generator with OpenRouter
-    generator = TafsirGenerator(api_key, use_openrouter=True)
+    generator = TafsirGenerator(api_key, use_openrouter=True, max_price=0.002)
     
     # Load Quran data
     if not generator.load_quran_data():
