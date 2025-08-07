@@ -17,6 +17,7 @@ class DataManager: ObservableObject {
     @Published var errorMessage: String?
     
     private var tafsirCache: [Int: TafsirData] = [:]
+    private var quranAlignCache: QuranAlignTimingData? // Global quran-align data
     
     private init() {
         loadData()
@@ -145,6 +146,29 @@ class DataManager: ObservableObject {
     
     func getVerse(surah: Int, verse: Int) -> VerseWithTafsir? {
         return getSurah(number: surah)?.verses.first { $0.number == verse }
+    }
+    
+    // MARK: - Quran-Align Timing Data
+    
+    func getQuranAlignData() async -> QuranAlignTimingData? {
+        // Check cache first
+        if let cached = quranAlignCache {
+            return cached
+        }
+        
+        // TODO: Load from bundled quran-align data file
+        // For now, return empty data to avoid build errors
+        print("📋 TODO: Load quran-align timing data from bundle")
+        print("🎯 Implementation needed: Bundle Alafasy_128kbps.json with app")
+        
+        let emptyData = QuranAlignTimingData(verses: [], reciterID: "mishary_rashid_alafasy")
+        quranAlignCache = emptyData
+        return emptyData
+    }
+    
+    func getVerseTimingData(surahNumber: Int, ayahNumber: Int) async -> VerseTimingData? {
+        guard let quranAlignData = await getQuranAlignData() else { return nil }
+        return quranAlignData.getVerseTimingData(surahNumber: surahNumber, ayahNumber: ayahNumber)
     }
     
     func getTafsirText(for verse: VerseWithTafsir, layer: TafsirLayer) -> String? {

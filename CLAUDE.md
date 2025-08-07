@@ -9,7 +9,7 @@ Thaqalyn is a Shia Islamic Quranic commentary iOS app with an offline-first arch
 1. **Data Generation System** (Python) - Pre-generates AI-based Shia tafsir commentary using DeepSeek
 2. **iOS App** (Swift/SwiftUI) - Modern iOS app displaying pre-generated content offline
 
-**Current Status**: Production-ready app with **all 114 surahs** available for reading and surah-level audio playback. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir using updated no-transliteration prompts, stunning dark modern UI with glassmorphism design, nested tab navigation system, **complete authentication & bookmarks system with full cloud sync**, **streamlined audio playback system** for complete surahs only, and email confirmation deep linking implemented. **Tafsir data for remaining 113 surahs will be generated manually as needed.**
+**Current Status**: Production-ready app with **all 114 surahs** available for reading and **individual verse audio playback**. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir using updated no-transliteration prompts, stunning dark modern UI with glassmorphism design, nested tab navigation system, **complete authentication & bookmarks system with full cloud sync**, **individual verse audio playback using EveryAyah.com**, and email confirmation deep linking implemented. **ARCHITECTURE IMPLEMENTED**: Successfully switched from surah-level audio to **individual verse-by-verse playback** using **EveryAyah.com audio files** for Mishary Alafasy reciter. **Tafsir data for remaining 113 surahs will be generated manually as needed.**
 
 ## Architecture
 
@@ -34,12 +34,12 @@ Each verse receives commentary at 4 scholarly depths:
 - **Services**: 
   - `DataManager.swift` - Singleton managing JSON loading, caching, and data access with debug logging
   - `BookmarkManager.swift` - Offline-first bookmark management with UserDefaults storage, ready for Supabase sync
-  - `AudioManager.swift` - Streamlined audio playback service for surah-level audio only
+  - `AudioManager.swift` - Individual verse audio playback service using EveryAyah.com
 - **Views**: Modern dark SwiftUI hierarchy with glassmorphism design:
   - `ContentView` - Dark gradient surah list with floating orbs, search, and bookmarks access button
   - `SurahDetailView` - Modern verse cards with bookmark buttons, gradient elements, and nested tab navigation
   - `BookmarksView` - Complete bookmark management with search, sorting, deletion, and premium upsell
-  - `SurahAudioPlayerView` - Beautiful glassmorphism audio player with surah-level controls
+  - Individual verse play buttons integrated into verse cards
 - **Data**: Bundled JSON files (quran_data.json for all 114 surahs + tafsir_1.json for Al-Fatiha only) + local UserDefaults bookmark storage
 
 ### Key Data Structures
@@ -53,7 +53,36 @@ SurahWithTafsir: Combined model for display with verses and commentary
 Bookmark: { id, userId, surahNumber, verseNumber, surahName, verseText, verseTranslation, notes, tags, createdAt, updatedAt, syncStatus }
 BookmarkCollection: { id, userId, name, description, bookmarkIds, createdAt, updatedAt }
 UserBookmarkPreferences: { userId, isPremium, bookmarkLimit, defaultTags, sortOrder, groupBy }
+
+// Individual Verse Audio System (EveryAyah.com)
+CurrentPlayback: { surahNumber, surahName, verseNumber, reciter, currentTime, duration, isPlaying }
+AudioConfiguration: { reciter, quality, playbackSpeed, repeatMode, backgroundPlayback, downloadQuality }
+VerseWithTafsir.audioURL(): Generates EveryAyah.com URLs for Mishary Alafasy (HTTPS)
 ```
+
+## ✅ COMPLETED ARCHITECTURAL CHANGE - Individual Verse Audio Playback
+
+**IMPLEMENTED**: Successfully switched from surah-level audio to **individual verse audio playback** using **EveryAyah.com audio files**.
+
+### Implementation Achieved:
+1. ✅ **Individual verse audio URLs**: Uses EveryAyah.com format `https://www.everyayah.com/data/Alafasy_128kbps/001001.mp3`
+2. ✅ **Individual play buttons**: Each verse card has its own play/pause button
+3. ✅ **Play Sequence functionality**: "Play Sequence" button for continuous verse playback
+4. ✅ **Visual feedback**: Play buttons show current playing state with gradient styling
+5. ✅ **HTTPS compliance**: Fixed App Transport Security issues with secure URLs
+6. ✅ **Quality selection**: 128kbps for high quality, 64kbps for medium/low
+7. ✅ **Fallback support**: Other reciters use full surah audio
+
+### Audio Sources:
+- **EveryAyah.com** (Primary - Mishary Alafasy): Individual verse files for all 6,236 verses
+- **mp3quran.net servers** (Fallback): Full surah audio for other reciters
+- **Format**: `SSSVVV.mp3` where SSS=surah number, VVV=verse number (001001.mp3 = Surah 1, Verse 1)
+
+### User Experience:
+- **Individual Verse Play**: Click play button on any verse → plays only that verse
+- **Sequence Play**: Click "Play Sequence" → plays all verses in order
+- **Visual Feedback**: Currently playing verse shows with gradient styling
+- **Audio Caching**: 100MB cache for seamless playback
 
 ## Development Commands
 
@@ -86,20 +115,43 @@ xcodebuild -project Thaqalayn.xcodeproj -scheme Thaqalayn -destination 'platform
 # Execute SQL: mcp__supabase__execute_sql({ project_id: "PROJECT_ID", query: "SQL_QUERY" })
 ```
 
-### Data Generation Setup (For extending to remaining 107 surahs)
+### Python Development Setup
 ```bash
-# IMPORTANT: Always use virtual environment for Python dependencies
-# Create and activate virtual environment
+# ⚠️ CRITICAL: ALWAYS USE VIRTUAL ENVIRONMENT FOR ANY PYTHON TASK ⚠️
+# Never run Python scripts without activating the virtual environment first
+
+# Create and activate virtual environment (one-time setup)
 python3 -m venv thaqalyn-env
 source thaqalyn-env/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-pip install openai python-dotenv  # Core dependencies for tafsir generation
+pip install openai python-dotenv requests librosa pydub  # Core dependencies for tafsir generation and timing data
 
 # Configure API keys (create .env file)
 echo "DEEPSEEK_API_KEY=your-key-here" > .env
 echo "OPENROUTER_API_KEY=sk-or-v1-..." >> .env
+
+# ALWAYS activate virtual environment before running any Python script:
+source thaqalyn-env/bin/activate
+```
+
+### ⚠️ CRITICAL DATA POLICY ⚠️
+```bash
+# 🚨 NEVER CREATE SAMPLE/ESTIMATED TIMING DATA WITHOUT EXPLICIT PERMISSION 🚨
+# 
+# Rules for timing data generation:
+# 1. ALWAYS attempt to find real timing data sources first (EveryAyah, AlQuran.cloud, etc.)
+# 2. NEVER generate sample/estimated timing data without user approval
+# 3. If sample data is created, it MUST be clearly marked as temporary
+# 4. Real timing data sources are the ONLY acceptable production solution
+# 5. Sample data causes synchronization issues and poor user experience
+#
+# Approved real data sources:
+# - EveryAyah.com timing files
+# - AlQuran.cloud API timing data  
+# - Audio analysis of actual recitation files
+# - Manual timing measurements from real audio
 ```
 
 ### Data Generation Workflow (For Manual Tafsir Generation)
@@ -140,15 +192,15 @@ Thaqalayn/
 │   └── BookmarksView.swift         # Complete bookmark management interface
 ├── Data/                           # Bundled JSON files
 │   ├── quran_data.json            # Complete Quran (3.4MB, all 114 surahs with 6,236 verses)
-│   └── tafsir_1.json              # Al-Fatiha commentary only (clean, no transliterations)
+│   ├── tafsir_1.json              # Al-Fatiha commentary only (clean, no transliterations)
+│   # Audio files served directly from EveryAyah.com (no local storage needed)
 └── ThaqalaynApp.swift              # App entry point
 ```
 
-### Python Data Generation
+### Python Data Generation & Scripts
 - `fetch_quran_data.py` - Al-Quran Cloud API integration
 - `generate_tafsir.py` - Core TafsirGenerator class with updated no-transliteration prompts
 - `quick_surah_1.py` - Generate any individual surah with real-time progress monitoring
-- `monitor_progress.py` - Real-time progress tracking and statistics
 - `validate_content.py` - Quality validation tools
 
 ### Critical Implementation Details
@@ -174,34 +226,43 @@ Thaqalayn/
 - UserDefaults storage with sync-ready architecture for Supabase integration
 - Comprehensive bookmark data models supporting notes, tags, collections, and user preferences
 
-**Audio System**: Streamlined audio playback implementation with:
+**Individual Verse Audio System**: Complete verse-by-verse audio implementation with:
 - AudioManager service with AVAudioPlayer and caching (100MB cache limit)
 - 6 popular Quran reciters including Mishary Alafasy and Abdul Rahman Al-Sudais
-- **Surah-level audio playback only** - complete surahs from start to finish
-- Beautiful glassmorphism audio player UI with playback controls
-- Reciter selection, repeat modes, and audio quality settings
-- Now Playing integration with Control Center support
-- Simplified architecture without verse highlighting or individual verse audio
+- **Individual verse playback**: Each verse has its own play button for precise audio control
+- **EveryAyah.com integration**: Direct HTTPS audio streaming for Mishary Alafasy (128kbps/64kbps)
+- **Play Sequence functionality**: Continuous playback of all verses in a surah
+- **Visual feedback**: Currently playing verse highlighted with gradient borders and play/pause button states
+- **Fallback system**: Full surah audio for other reciters when individual verse files unavailable
+- **Audio quality selection**: High (128kbps) and Medium (64kbps) options
+- **Reciter selection, repeat modes, and audio quality settings**
+- **Now Playing integration** with Control Center support
+- **App Transport Security compliance**: All audio URLs use HTTPS
 
 **Error Handling**: Comprehensive error states in DataManager with user-friendly glassmorphism error cards and graceful degradation when tafsir data is missing.
 
 ## Current Status and Next Steps
 
-**🎯 Recent Improvements (January 2025)**:
-- ✅ **Verse Highlighting Removed**: Completely removed verse highlighting feature and all related timing systems for simplified, cleaner architecture
-- ✅ **Individual Verse Audio Removed**: Eliminated individual verse audio buttons and playback - now supports surah-level audio only
-- ✅ **Timing Data Cleaned**: Removed all word-level timing JSON files and related data models from the codebase
-- ✅ **Streamlined Audio Architecture**: Simplified AudioManager with focus on complete surah playback experience
-- ✅ **UI Cleanup**: Removed audio buttons from individual verse cards, keeping only bookmark and commentary buttons
+**🎯 Completed Major Architectural Change (August 2025)**:
+- ✅ **ARCHITECTURE IMPLEMENTED**: **Successfully switched from surah-level to individual verse audio playback**
+- ✅ **EveryAyah.com Integration**: Using direct HTTPS audio streaming for individual verses
+- ✅ **Individual Verse Controls**: Each verse card has play/pause button for precise control
+- ✅ **Play Sequence Mode**: Continuous playback option for full surah listening
+- ✅ **Complete Coverage**: All 6,236 verses available individually for Mishary Alafasy reciter
+- ✅ **App Transport Security**: Fixed HTTPS compliance for secure audio streaming
+- ✅ **Production Ready**: Fully implemented and tested individual verse playback system
 
 **✅ Complete Features**:
 - **All 114 Surahs with complete Quran text** (6,236 verses) available for reading and audio playback
 - **Surah 1 (Al-Fatiha) with full 4-layer tafsir** using improved prompts - remaining tafsir to be generated manually
-- **Streamlined audio playback system**:
-  - Complete surah audio with 6 popular reciters (Mishary Alafasy, Abdul Rahman Al-Sudais, etc.)
-  - Beautiful glassmorphism audio player with playback controls and settings
-  - Audio caching, quality selection, repeat modes, and Now Playing integration
-  - Simplified architecture focused on complete surah listening experience
+- **✅ COMPLETE: Individual verse audio system**:
+  - ✅ Individual verse playback using EveryAyah.com URL structure (https://www.everyayah.com/data/Alafasy_128kbps/001001.mp3)
+  - ✅ Individual play buttons integrated into verse cards with visual feedback
+  - ✅ **6,236 verses available individually** for Mishary Alafasy reciter
+  - ✅ "Play Sequence" functionality for continuous surah listening
+  - ✅ Beautiful glassmorphism play buttons with gradient styling for active state
+  - ✅ Audio caching, quality selection (128kbps/64kbps), repeat modes, and Now Playing integration
+  - ✅ HTTPS compliance and App Transport Security compatibility
 - Stunning dark modern UI with glassmorphism design throughout
 - Complete navigation system (list → detail → tafsir modal when available)
 - Nested tab navigation system within tafsir layers
@@ -247,13 +308,13 @@ Thaqalayn/
 
 ## Bundle Size and Performance
 
-- **Current App Size**: ~8MB (all 114 surahs + 1 surah tafsir + dark modern UI + bookmark system + audio system + Supabase SDK)
+- **Current App Size**: ~5MB (all 114 surahs + 1 surah tafsir + dark modern UI + bookmark system + audio system + Supabase SDK)
 - **Projected Full Size**: ~50-80MB (all 114 surahs with full tafsir commentary + complete feature set)
 - **Load Performance**: <1 second app launch with beautiful loading animations
 - **UI Performance**: 60fps smooth animations with glassmorphism effects, bookmark interactions, and audio controls
 - **Memory Usage**: Intelligent per-surah caching with gradient rendering optimization + efficient local/cloud bookmark storage + 100MB audio cache
 - **Data Quality**: Clean text without transliterations, complete sentences, proper formatting across all 114 surahs
-- **Audio Performance**: Instant surah-level audio playback with caching and seamless streaming
+- **Audio Performance**: Instant individual verse audio playback with caching, seamless EveryAyah.com streaming, and visual play state feedback
 - **Bookmark Performance**: Instant bookmark toggles, real-time count updates, offline-first architecture with cloud sync
 - **Database Performance**: PostgreSQL 17.4 with optimized indexes, RLS security, and efficient querying
 

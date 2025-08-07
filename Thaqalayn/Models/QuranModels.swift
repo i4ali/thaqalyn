@@ -178,10 +178,20 @@ struct VerseWithTafsir: Identifiable {
     
     // Audio-related computed properties
     func audioURL(for surahNumber: Int, reciter: Reciter, quality: AudioQuality = .medium) -> URL? {
+        // Use EveryAyah.com for individual verse audio (Mishary Alafasy)
+        if reciter.id == "mishary_rashid_alafasy" {
+            let surahString = String(format: "%03d", surahNumber)
+            let verseString = String(format: "%03d", number)
+            let qualitySuffix = quality == .high ? "128kbps" : "64kbps"
+            let urlString = "https://www.everyayah.com/data/Alafasy_\(qualitySuffix)/\(surahString)\(verseString).mp3"
+            return URL(string: urlString)
+        }
+        
+        // Fall back to full surah audio for other reciters
         let components = AudioURLComponents(
             baseURL: reciter.serverURL,
             surahNumber: surahNumber,
-            verseNumber: nil,  // Use full surah audio (individual verse seeking will be handled later)
+            verseNumber: nil,
             reciterID: reciter.id,
             quality: quality,
             format: .mp3

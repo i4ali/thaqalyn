@@ -73,6 +73,14 @@ struct SurahDetailView: View {
                             }
                         }
                     }
+                    .onChange(of: audioManager.currentPlayback?.verseNumber) { _, newVerse in
+                        // Auto-scroll to currently playing verse
+                        if let verseNumber = newVerse {
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                proxy.scrollTo("verse_\(verseNumber)", anchor: .center)
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -158,16 +166,16 @@ struct ModernSurahHeader: View {
                     .foregroundColor(themeManager.tertiaryText)
                 }
                 
-                // Play All button
+                // Play Sequence button (verse-by-verse)
                 Button(action: {
                     Task {
-                        await audioManager.playSurah(surah, verses: verses, startingFrom: 0)
+                        await audioManager.playVerseSequence(verses, in: surah, startingFrom: 0)
                     }
                 }) {
                     HStack(spacing: 8) {
                         Image(systemName: "play.fill")
                             .font(.system(size: 16, weight: .semibold))
-                        Text("Play All")
+                        Text("Play Sequence")
                             .font(.system(size: 16, weight: .semibold))
                     }
                     .foregroundColor(.white)
@@ -228,6 +236,42 @@ struct ModernVerseCard: View {
         bookmarkManager.isBookmarked(surahNumber: surah.number, verseNumber: verse.number)
     }
     
+    private var isCurrentlyPlaying: Bool {
+        audioManager.currentPlayback?.verseNumber == verse.number && audioManager.playerState == .playing
+    }
+    
+    private var highlightStroke: LinearGradient {
+        if isCurrentlyPlaying {
+            return LinearGradient(
+                colors: [Color(red: 0.39, green: 0.4, blue: 0.95), Color(red: 0.93, green: 0.27, blue: 0.6)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        } else {
+            return LinearGradient(
+                colors: [themeManager.strokeColor],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        }
+    }
+    
+    private var shadowColor: Color {
+        if isCurrentlyPlaying {
+            return Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3)
+        } else {
+            return Color.black.opacity(0.1)
+        }
+    }
+    
+    private var backgroundFill: some ShapeStyle {
+        if isCurrentlyPlaying {
+            return AnyShapeStyle(themeManager.accentGradient.opacity(0.15))
+        } else {
+            return AnyShapeStyle(themeManager.glassEffect)
+        }
+    }
+    
     
     private func toggleBookmark() {
         if isBookmarked {
@@ -269,6 +313,28 @@ struct ModernVerseCard: View {
                 Spacer()
                 
                 HStack(spacing: 8) {
+                    // Play button
+                    Button(action: {
+                        Task {
+                            await audioManager.playVerse(verse, in: surah)
+                        }
+                    }) {
+                        Image(systemName: isCurrentlyPlaying ? "pause.fill" : "play.fill")
+                            .font(.system(size: 14, weight: .medium))
+                            .foregroundColor(isCurrentlyPlaying ? .white : themeManager.primaryText)
+                            .frame(width: 36, height: 36)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(isCurrentlyPlaying ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.glassEffect))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(isCurrentlyPlaying ? Color.clear : themeManager.strokeColor, lineWidth: 1)
+                                    )
+                            )
+                            .shadow(color: isCurrentlyPlaying ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4) : Color.clear, radius: 8)
+                    }
+                    .animation(.easeInOut(duration: 0.2), value: isCurrentlyPlaying)
+                    
                     // Bookmark button
                     Button(action: toggleBookmark) {
                         Image(systemName: isBookmarked ? "heart.fill" : "heart")
@@ -326,21 +392,23 @@ struct ModernVerseCard: View {
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.glassEffect)
+                .fill(backgroundFill)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                        .stroke(
+                            highlightStroke,
+                            lineWidth: isCurrentlyPlaying ? 2 : 1
+                        )
                 )
-                .shadow(color: .black.opacity(0.1), radius: 8, y: 4)
+                .shadow(
+                    color: shadowColor,
+                    radius: isCurrentlyPlaying ? 12 : 8, 
+                    y: 4
+                )
         )
         .scaleEffect(isPressed ? 0.98 : 1.0)
         .animation(.easeInOut(duration: 0.1), value: isPressed)
-        .onTapGesture {
-            isPressed = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                isPressed = false
-            }
-        }
+        .animation(.easeInOut(duration: 0.3), value: isCurrentlyPlaying)
     }
 }
 

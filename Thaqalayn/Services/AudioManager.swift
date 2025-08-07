@@ -24,6 +24,10 @@ class AudioManager: NSObject, ObservableObject {
     @Published var errorMessage: String?
     @Published var sleepTimerTimeRemaining: TimeInterval?
     
+    // MARK: - Verse Highlighting Properties
+    @Published var currentlyHighlightedWord: Int?
+    @Published var currentVerseTimingData: VerseTimingData?
+    
     // MARK: - Private Properties
     private var audioPlayer: AVAudioPlayer?
     private var audioSession: AVAudioSession
@@ -32,6 +36,7 @@ class AudioManager: NSObject, ObservableObject {
     private var currentSurah: Surah?
     private var currentVerses: [VerseWithTafsir] = []
     private var currentVerseIndex: Int = 0
+    private var quranAlignData: QuranAlignTimingData?
     
     // MARK: - Audio Caching
     private var audioCache: [String: Data] = [:]
@@ -103,13 +108,94 @@ class AudioManager: NSObject, ObservableObject {
     
     // MARK: - Playback Control
     
-    func playSurah(_ surah: Surah, verses: [VerseWithTafsir], startingFrom verseIndex: Int = 0) async {
+    func playVerse(_ verse: VerseWithTafsir, in surah: Surah) async {
+        currentSurah = surah
+        currentVerses = [verse] // Single verse mode
+        currentVerseIndex = 0
+        
+        // Load quran-align timing data for this verse
+        await loadQuranAlignData()
+        currentVerseTimingData = quranAlignData?.getVerseTimingData(surahNumber: surah.number, ayahNumber: verse.number)
+        
+        if let timingData = currentVerseTimingData {
+            print("✅ Using quran-align timing data for word highlighting")
+            await playVerseWithTiming(verse: verse, surah: surah, timingData: timingData)
+        } else {
+            print("⚠️ No quran-align timing data - playing without word highlighting")
+            await playVerseWithoutTiming(verse: verse, surah: surah)
+        }
+    }
+    
+    func playVerseSequence(_ verses: [VerseWithTafsir], in surah: Surah, startingFrom verseIndex: Int = 0) async {
         currentSurah = surah
         currentVerses = verses
         currentVerseIndex = verseIndex
         
+        // Load quran-align data once for all verses
+        await loadQuranAlignData()
+        
+        // Start playing the first verse
         guard verseIndex < verses.count else { return }
-        let verse = verses[verseIndex]
+        let firstVerse = verses[verseIndex]
+        await playVerse(firstVerse, in: surah)
+    }
+    
+    private func playVerseWithTiming(verse: VerseWithTafsir, surah: Surah, timingData: VerseTimingData) async {
+        // Generate individual verse audio URL (EveryAyah style)
+        guard let url = verse.audioURL(for: surah.number, reciter: configuration.selectedReciter, quality: configuration.downloadQuality) else {
+            print("❌ AudioManager: Unable to generate verse audio URL for surah \(surah.number), verse \(verse.number)")
+            errorMessage = "Unable to generate audio URL"
+            playerState = .error
+            return
+        }
+        
+        print("🎵 AudioManager: Loading verse audio with timing from URL: \(url.absoluteString)")
+        playerState = .loading
+        isBuffering = true
+        
+        do {
+            let audioData = try await loadAudioData(from: url)
+            audioPlayer = try AVAudioPlayer(data: audioData)
+            
+            audioPlayer?.delegate = self
+            audioPlayer?.enableRate = true
+            audioPlayer?.rate = 1.0 // Fixed playback speed for accurate word timing
+            audioPlayer?.prepareToPlay()
+            
+            duration = audioPlayer?.duration ?? 0
+            currentTime = 0
+            
+            currentPlayback = CurrentPlayback(
+                surahNumber: surah.number,
+                surahName: surah.englishName,
+                verseNumber: verse.number,
+                reciter: configuration.selectedReciter,
+                currentTime: 0,
+                duration: duration,
+                isPlaying: false
+            )
+            
+            setupNowPlayingInfo(for: verse, in: surah)
+            startTimeObserver()
+            
+            if audioPlayer?.play() == true {
+                playerState = .playing
+                isBuffering = false
+                updateCurrentPlayback()
+            } else {
+                playerState = .error
+                errorMessage = "Failed to start audio playback"
+            }
+            
+        } catch {
+            print("❌ AudioManager: Failed to load verse audio: \(error)")
+            playerState = .error
+            errorMessage = "Failed to load audio"
+            isBuffering = false
+        }
+    }
+    
+    private func playVerseWithoutTiming(verse: VerseWithTafsir, surah: Surah) async {
         await loadAndPlayAudio(for: verse, in: surah)
     }
     
@@ -233,12 +319,34 @@ class AudioManager: NSObject, ObservableObject {
         stopTimeObserver()
         clearNowPlayingInfo()
         stopSleepTimer()
+        
+        // Reset highlighting state
+        currentlyHighlightedWord = nil
+        currentVerseTimingData = nil
+        quranAlignData = nil
     }
     
     func seek(to time: TimeInterval) {
         audioPlayer?.currentTime = time
         currentTime = time
         updateCurrentPlayback()
+    }
+    
+    func seekToWord(_ wordIndex: Int) {
+        guard let timingData = currentVerseTimingData,
+              wordIndex < timingData.segments.count else {
+            print("⚠️ Cannot seek to word \(wordIndex): no timing data or invalid index")
+            return
+        }
+        
+        let wordTiming = timingData.segments[wordIndex]
+        let seekTime = wordTiming.startTime
+        audioPlayer?.currentTime = seekTime
+        currentTime = seekTime
+        currentlyHighlightedWord = wordIndex
+        updateCurrentPlayback()
+        
+        print("⏭️ Seeked to word \(wordIndex) at time \(String(format: "%.1f", seekTime))s")
     }
     
     func skipToPrevious() {
@@ -277,7 +385,14 @@ class AudioManager: NSObject, ObservableObject {
               currentVerseIndex < currentVerses.count else { return }
         
         let verse = currentVerses[currentVerseIndex]
-        await loadAndPlayAudio(for: verse, in: surah)
+        await playVerse(verse, in: surah)
+    }
+    
+    private func loadQuranAlignData() async {
+        guard quranAlignData == nil else { return } // Already loaded
+        
+        print("📖 Loading quran-align timing data...")
+        quranAlignData = await DataManager.shared.getQuranAlignData()
     }
     
     // MARK: - Configuration Updates
@@ -388,6 +503,34 @@ class AudioManager: NSObject, ObservableObject {
         guard let player = audioPlayer else { return }
         currentTime = player.currentTime
         updateCurrentPlayback()
+        
+        // Update word highlighting if playing verse with timing data
+        if let timingData = currentVerseTimingData {
+            updateWordHighlighting(timingData: timingData)
+        }
+    }
+    
+    private func updateWordHighlighting(timingData: VerseTimingData) {
+        let currentTimeMs = Int(currentTime * 1000)
+        
+        // Find which word is currently being recited
+        var highlightedWord: Int?
+        
+        for (index, wordTiming) in timingData.segments.enumerated() {
+            if currentTimeMs >= wordTiming.startTimeMs && currentTimeMs <= wordTiming.endTimeMs {
+                highlightedWord = index
+                break
+            }
+        }
+        
+        if highlightedWord != currentlyHighlightedWord {
+            currentlyHighlightedWord = highlightedWord
+            
+            if let wordIndex = highlightedWord {
+                let wordTiming = timingData.segments[wordIndex]
+                print("🎯 Now highlighting word \(wordIndex) (indices \(wordTiming.wordStartIndex)-\(wordTiming.wordEndIndex)) at time \(String(format: "%.1f", currentTime))s")
+            }
+        }
     }
     
     

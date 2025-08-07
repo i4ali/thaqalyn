@@ -227,9 +227,14 @@ struct AudioURLComponents {
         // Add surah number with zero padding (001-114)
         let surahString = String(format: "%03d", surahNumber)
         
-        // For now, always use full surah audio since most APIs don't provide individual verses
-        // Individual verse playback will use full surah with seek functionality
-        urlString += "/\(surahString).\(format.rawValue)"
+        if let verseNumber = verseNumber {
+            // Individual verse audio (EveryAyah style: /verse/001001.mp3)
+            let verseString = String(format: "%03d", verseNumber)
+            urlString += "/verse/\(surahString)\(verseString).\(format.rawValue)"
+        } else {
+            // Full surah audio (deprecated - will be removed)
+            urlString += "/\(surahString).\(format.rawValue)"
+        }
         
         return URL(string: urlString)
     }
@@ -294,5 +299,104 @@ extension Reciter {
             isPopular: true
         )
     ]
+}
+
+// MARK: - Verse-by-Verse Audio Models (quran-align data)
+
+/// Word-level timing data from quran-align project
+struct WordTiming: Codable {
+    let wordStartIndex: Int
+    let wordEndIndex: Int
+    let startTimeMs: Int
+    let endTimeMs: Int
+    
+    var startTime: TimeInterval {
+        return TimeInterval(startTimeMs) / 1000.0
+    }
+    
+    var endTime: TimeInterval {
+        return TimeInterval(endTimeMs) / 1000.0
+    }
+    
+    var duration: TimeInterval {
+        return endTime - startTime
+    }
+    
+    init(wordStartIndex: Int, wordEndIndex: Int, startTimeMs: Int, endTimeMs: Int) {
+        self.wordStartIndex = wordStartIndex
+        self.wordEndIndex = wordEndIndex
+        self.startTimeMs = startTimeMs
+        self.endTimeMs = endTimeMs
+    }
+}
+
+/// Individual verse timing data from quran-align project
+struct VerseTimingData: Codable {
+    let ayahNumber: Int
+    let surahNumber: Int
+    let segments: [WordTiming]
+    let stats: VerseTimingStats?
+    
+    /// Total verse duration from first to last word
+    var duration: TimeInterval {
+        guard let firstWord = segments.first,
+              let lastWord = segments.last else { return 0 }
+        return lastWord.endTime - firstWord.startTime
+    }
+    
+    /// Start time of first word (always 0 for individual verses)
+    var startTime: TimeInterval {
+        return segments.first?.startTime ?? 0
+    }
+    
+    /// End time of last word
+    var endTime: TimeInterval {
+        return segments.last?.endTime ?? 0
+    }
+    
+    init(ayahNumber: Int, surahNumber: Int, segments: [WordTiming], stats: VerseTimingStats? = nil) {
+        self.ayahNumber = ayahNumber
+        self.surahNumber = surahNumber
+        self.segments = segments
+        self.stats = stats
+    }
+}
+
+/// Statistics for timing accuracy (from quran-align project)
+struct VerseTimingStats: Codable {
+    let avgError: Double?
+    let stdDevError: Double?
+    let wordCount: Int?
+    
+    init(avgError: Double? = nil, stdDevError: Double? = nil, wordCount: Int? = nil) {
+        self.avgError = avgError
+        self.stdDevError = stdDevError
+        self.wordCount = wordCount
+    }
+}
+
+/// Collection of all verse timing data (replaces SurahTimingData)
+struct QuranAlignTimingData: Codable {
+    let verses: [VerseTimingData]
+    let reciterID: String
+    let sourceProject: String
+    let license: String
+    
+    init(verses: [VerseTimingData], reciterID: String) {
+        self.verses = verses
+        self.reciterID = reciterID
+        self.sourceProject = "quran-align"
+        self.license = "CC BY 4.0"
+    }
+    
+    /// Get timing data for specific verse
+    func getVerseTimingData(surahNumber: Int, ayahNumber: Int) -> VerseTimingData? {
+        return verses.first { $0.surahNumber == surahNumber && $0.ayahNumber == ayahNumber }
+    }
+    
+    /// Get all verses for a specific surah
+    func getVersesForSurah(_ surahNumber: Int) -> [VerseTimingData] {
+        return verses.filter { $0.surahNumber == surahNumber }
+    }
 }
 
