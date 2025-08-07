@@ -74,7 +74,13 @@ VerseWithTafsir.audioURL(): Generates EveryAyah.com URLs for Mishary Alafasy (HT
 7. ✅ **Fallback support**: Other reciters use full surah audio
 
 ### Audio Sources:
-- **EveryAyah.com** (Primary - Mishary Alafasy): Individual verse files for all 6,236 verses
+- **EveryAyah.com** (Primary): Individual verse files for all 6,236 verses
+  - **Mishary Alafasy**: `Alafasy_128kbps` / `Alafasy_64kbps` directories
+  - **Abdul Rahman Al-Sudais**: `Abdurrahmaan_As-Sudais_192kbps` / `Abdurrahmaan_As-Sudais_64kbps` directories
+  - **Saad Al-Ghamidi**: `Ghamadi_40kbps` directory (40kbps only)
+  - **Ahmad Ibn Ali Al-Ajamy**: `ahmed_ibn_ali_al_ajamy_128kbps` / `Ahmed_ibn_Ali_al-Ajamy_64kbps_QuranExplorer.Com` directories
+  - **Maher Al-Muaiqly**: `MaherAlMuaiqly128kbps` / `Maher_AlMuaiqly_64kbps` directories
+  - **Yasser Al-Dosari**: `Yasser_Ad-Dussary_128kbps` directory (128kbps only)
 - **mp3quran.net servers** (Fallback): Full surah audio for other reciters
 - **Format**: `SSSVVV.mp3` where SSS=surah number, VVV=verse number (001001.mp3 = Surah 1, Verse 1)
 
@@ -248,7 +254,7 @@ Thaqalayn/
 - ✅ **EveryAyah.com Integration**: Using direct HTTPS audio streaming for individual verses
 - ✅ **Individual Verse Controls**: Each verse card has play/pause button for precise control
 - ✅ **Play Sequence Mode**: Continuous playback option for full surah listening
-- ✅ **Complete Coverage**: All 6,236 verses available individually for Mishary Alafasy reciter
+- ✅ **Complete Coverage**: All 6,236 verses available individually for all 6 popular reciters (Mishary Alafasy, Abdul Rahman Al-Sudais, Saad Al-Ghamidi, Ahmad Ibn Ali Al-Ajamy, Maher Al-Muaiqly, Yasser Al-Dosari)
 - ✅ **App Transport Security**: Fixed HTTPS compliance for secure audio streaming
 - ✅ **Production Ready**: Fully implemented and tested individual verse playback system
 
@@ -258,7 +264,7 @@ Thaqalayn/
 - **✅ COMPLETE: Individual verse audio system**:
   - ✅ Individual verse playback using EveryAyah.com URL structure (https://www.everyayah.com/data/Alafasy_128kbps/001001.mp3)
   - ✅ Individual play buttons integrated into verse cards with visual feedback
-  - ✅ **6,236 verses available individually** for Mishary Alafasy reciter
+  - ✅ **6,236 verses available individually** for all 6 popular reciters (Mishary Alafasy, Abdul Rahman Al-Sudais, Saad Al-Ghamidi, Ahmad Ibn Ali Al-Ajamy, Maher Al-Muaiqly, Yasser Al-Dosari)
   - ✅ "Play Sequence" functionality for continuous surah listening
   - ✅ Beautiful glassmorphism play buttons with gradient styling for active state
   - ✅ Audio caching, quality selection (128kbps/64kbps), repeat modes, and Now Playing integration
