@@ -206,6 +206,7 @@ struct SurahListView: View {
     @State private var navigateToSurah: SurahWithTafsir?
     @State private var targetVerse: Int?
     @State private var showingAuthentication = false
+    @State private var showingSettings = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -313,11 +314,11 @@ struct SurahListView: View {
                             }
                         }
                         
-                        // Theme toggle button
+                        // Settings button
                         Button(action: {
-                            themeManager.toggleTheme()
+                            showingSettings = true
                         }) {
-                            Image(systemName: themeManager.isDarkMode ? "sun.max.fill" : "moon.fill")
+                            Image(systemName: "gearshape.fill")
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(themeManager.primaryText)
                                 .frame(width: 40, height: 40)
@@ -426,6 +427,9 @@ struct SurahListView: View {
         }
         .fullScreenCover(isPresented: $showingAuthentication) {
             AuthenticationView()
+        }
+        .sheet(isPresented: $showingSettings) {
+            SettingsView()
         }
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true

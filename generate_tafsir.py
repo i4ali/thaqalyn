@@ -12,22 +12,18 @@ from datetime import datetime
 import openai
 
 class TafsirGenerator:
-    def __init__(self, api_key: str, use_openrouter: bool = False, max_price: float = None):
+    def __init__(self, api_key: str, use_openrouter: bool = True, max_price: float = None):
         """Initialize with API key - can use DeepSeek directly or through OpenRouter"""
         if use_openrouter:
             self.client = openai.OpenAI(
                 api_key=api_key,
                 base_url="https://openrouter.ai/api/v1"
             )
-            self.model = "deepseek/deepseek-r1"  # DeepSeek R1 reasoning model on OpenRouter
+            self.model = "deepseek/deepseek-r1:floor"  # DeepSeek R1 reasoning model on OpenRouter
             self.max_price = max_price if max_price is not None else 0.005
         else:
-            self.client = openai.OpenAI(
-                api_key=api_key,
-                base_url="https://api.deepseek.com"
-            )
-            self.model = "deepseek-reasoner"
-            self.max_price = None
+            raise NotImplementedError
+        
         self.quran_data = None
         self.generated_count = 0
         self.total_verses = 0
@@ -167,110 +163,6 @@ FORMATTING REQUIREMENTS:
 COMMENTARY:"""
         }
     
-        """Define the 4 specialized prompt templates for each tafsir layer"""
-        return {
-            1: """You are a Shia Islamic scholar providing foundational commentary on Quranic verses.
-
-VERSE CONTEXT:
-Surah: {surah_name} (Surah {surah_number})
-Verse: {ayah_number}
-Arabic: {arabic_text}
-Translation: {translation}
-
-TASK: Provide foundational commentary that explains this verse in clear, accessible language for all Muslims. Focus on basic understanding, historical background, key Arabic terms, and practical modern applications.
-
-Write a flowing commentary of 150-250 words that covers:
-- Clear explanation of the verse's meaning
-- Historical context or circumstances of revelation
-- Important Arabic words and their significance  
-- How this verse applies to contemporary Muslim life
-
-FORMATTING REQUIREMENTS:
-- Write in flowing paragraphs, not sections
-- Use clean, natural prose
-- No bullet points, numbers, or markdown formatting
-- Include Arabic terms naturally within sentences
-- Use simple English spellings for all Arabic names and terms (Ali not ʿAlī, Tabatabai not Ṭabāṭabāʾī, Bismillah not Bismillāh)
-- Make it accessible and practical
-
-COMMENTARY:""",
-
-            2: """You are a classical Shia Islamic scholar drawing from traditional sources like Al-Mizan and Majma al-Bayan.
-
-VERSE CONTEXT:
-Surah: {surah_name} (Surah {surah_number})
-Verse: {ayah_number}
-Arabic: {arabic_text}
-Translation: {translation}
-
-TASK: Provide classical Shia scholarly interpretation drawing from established sources like Tabatabai's Al-Mizan, Tabrisi's Majma al-Bayan, and other traditional Shia commentaries. Focus on theological depth and established scholarly consensus.
-
-Write a scholarly commentary of 200-300 words that includes:
-- Classical Shia interpretations and scholarly insights
-- References to established commentators when relevant
-- Theological concepts unique to Shia understanding
-- Connection to broader Islamic jurisprudence and doctrine
-
-FORMATTING REQUIREMENTS:
-- Write in scholarly prose appropriate for serious students
-- Reference classical sources naturally within text
-- No bullet points, numbers, or markdown formatting
-- Use simple English spellings for all Arabic names and terms (Tabatabai not Ṭabāṭabāʾī, Tabrisi not Ṭabrisī, Jafar not Jaʿfar)
-- Maintain academic tone while being readable
-
-COMMENTARY:""",
-
-            3: """You are a contemporary Shia Islamic scholar engaging with modern insights and current scholarship.
-
-VERSE CONTEXT:
-Surah: {surah_name} (Surah {surah_number})
-Verse: {ayah_number}
-Arabic: {arabic_text}
-Translation: {translation}
-
-TASK: Provide contemporary interpretation that bridges classical wisdom with modern understanding. Draw from current Shia scholars, scientific insights where relevant, and address contemporary social issues and challenges.
-
-Write a modern commentary of 200-300 words that explores:
-- How contemporary scholars interpret this verse
-- Scientific, social, or philosophical insights that illuminate the text
-- Relevance to current global issues and challenges
-- Interfaith and multicultural perspectives where appropriate
-
-FORMATTING REQUIREMENTS:
-- Write in contemporary, engaging prose
-- Include modern scholarly references naturally
-- Address current issues and applications
-- Use simple English spellings for all Arabic names and terms (Bismillah not Bismillāh, Rahman not Raḥmān)
-- No bullet points, numbers, or markdown formatting
-
-COMMENTARY:""",
-
-            4: """You are a specialist in the teachings of the Ahlul Bayt (عليهم السلام) - the 14 Infallibles.
-
-VERSE CONTEXT:
-Surah: {surah_name} (Surah {surah_number})
-Verse: {ayah_number}
-Arabic: {arabic_text}
-Translation: {translation}
-
-TASK: Provide commentary focused specifically on the wisdom and teachings of the Ahlul Bayt. Include relevant hadith, spiritual insights, and unique Shia theological concepts like Wilayah and Imamah when applicable.
-
-Write a spiritually-focused commentary of 250-350 words that emphasizes:
-- Specific teachings from the Prophet, Imams, or Lady Fatima (peace be upon them)
-- Relevant hadith that illuminate this verse's deeper meaning
-- Unique Shia spiritual and theological concepts
-- Practical guidance for spiritual development and religious practice
-
-FORMATTING REQUIREMENTS:
-- Write with reverence and spiritual depth
-- Include hadith and quotes naturally within text
-- Focus on practical spiritual guidance
-- Use simple English spellings for all Arabic names and terms (Ali not ʿAlī, Fatimah not Fāṭimah, Muhammad not Muḥammad)
-- No bullet points, numbers, or markdown formatting
-
-COMMENTARY:"""
-        }
-    
     def generate_layer_commentary(self, surah_num: int, ayah_num: int, layer: int) -> Optional[str]:
         """Generate commentary for a specific verse and layer"""
         if not self.quran_data:
@@ -291,6 +183,13 @@ COMMENTARY:"""
         )
         
         try:
+            extra_body = {
+                "provider": {
+                    "max_price": {
+                         "request": self.max_price
+                    }
+                }
+            }
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
@@ -298,7 +197,8 @@ COMMENTARY:"""
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=1500,
-                temperature=0.7
+                temperature=0.,
+                extra_body=extra_body 
             )
             
             commentary = response.choices[0].message.content.strip()

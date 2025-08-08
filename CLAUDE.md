@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Thaqalayn is a Shia Islamic Quranic commentary iOS app with an offline-first architecture.
 
-**Current Status**: Production-ready app with **all 114 surahs** and **individual verse audio playback**. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir, dark modern UI with glassmorphism design, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com.
+**Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, and **multi-theme system**. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com.
 
 ## Architecture
 
@@ -39,6 +39,27 @@ CurrentPlayback: { surahNumber, verseNumber, reciter, currentTime, isPlaying }
 - ✅ Reciter selection with crown badges, lock icons, and premium upgrade flow
 - ✅ Best available quality per reciter (40-192kbps), caching (100MB), HTTPS compliance
 
+## Multi-Theme System ✅ COMPLETE
+
+**Implementation**:
+- ✅ **4 distinct themes** with full UI adaptation and smooth transitions
+- ✅ **Modern Dark**: Current glassmorphism dark theme with floating orbs
+- ✅ **Modern Light**: Light version of glassmorphism design 
+- ✅ **Traditional Manuscript**: Greenish-cream background matching classic Islamic manuscripts
+- ✅ **Sepia**: Warm, easy-on-eyes reading mode
+- ✅ **Settings Integration**: Centralized settings view with theme selection and preview cards
+- ✅ **Live Preview**: Interactive theme selection with real-time Arabic/English text previews
+- ✅ **Backward Compatibility**: Maintains existing theme toggle for Modern Dark/Light themes
+- ✅ **Persistent Storage**: Theme preference saved in UserDefaults with migration support
+
+### Theme Architecture:
+```swift
+ThemeVariant: { modernDark, modernLight, classicLight, sepia }
+ThemeManager: { selectedTheme, setTheme(), colorScheme, primaryBackground, etc. }
+Views/SettingsView.swift: Centralized settings with theme selection
+Views/ThemeSelectionView.swift: Interactive theme preview cards
+```
+
 ## Development Commands
 
 ### iOS Development
@@ -66,11 +87,14 @@ Thaqalayn/
 ├── Services/
 │   ├── DataManager.swift          # JSON loading, caching
 │   ├── BookmarkManager.swift      # Offline-first bookmarks with Supabase sync
-│   └── AudioManager.swift         # Individual verse audio playback
+│   ├── AudioManager.swift         # Individual verse audio playback
+│   └── ThemeManager.swift         # Multi-theme system management
 ├── Views/
-│   ├── ContentView.swift          # Main surah list
+│   ├── ContentView.swift          # Main surah list with settings access
 │   ├── SurahDetailView.swift      # Verse detail with audio controls
-│   └── BookmarksView.swift        # Bookmark management
+│   ├── BookmarksView.swift        # Bookmark management
+│   ├── SettingsView.swift         # Centralized app settings
+│   └── ThemeSelectionView.swift   # Interactive theme selection
 └── Data/
     ├── quran_data.json            # All 114 surahs (3.4MB)
     └── tafsir_1.json              # Al-Fatiha commentary only
@@ -83,7 +107,8 @@ Thaqalayn/
 - Surah 1 with full 4-layer tafsir (remaining 113 surahs: text + audio only)
 - Complete bookmark system with offline-first architecture and Supabase cloud sync
 - User authentication (email/password, Apple Sign In, guest mode)
-- Dark glassmorphism UI with smooth animations
+- Multi-theme system (4 themes: Modern Dark/Light, Traditional Manuscript, Sepia)
+- Centralized settings with theme selection and live previews
 - Search functionality across all surahs
 
 **🚀 Next Steps**:
