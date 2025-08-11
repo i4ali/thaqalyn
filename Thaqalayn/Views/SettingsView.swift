@@ -10,9 +10,11 @@ import SwiftUI
 struct SettingsView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
+    @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.presentationMode) var presentationMode
     @State private var showingThemeSelection = false
     @State private var showingAuthentication = false
+    @State private var showingPremiumPurchase = false
     
     var body: some View {
         NavigationView {
@@ -112,6 +114,18 @@ struct SettingsView: View {
                                             showingAuthentication = true
                                         }
                                     }
+                                    
+                                    // Premium Status
+                                    SettingsRow(
+                                        icon: premiumManager.isPremiumUnlocked ? "crown.fill" : "lock.fill",
+                                        title: "Premium Status",
+                                        subtitle: premiumManager.isPremiumUnlocked ? "Premium Unlocked" : "Free Version",
+                                        iconColor: premiumManager.isPremiumUnlocked ? .yellow : .orange
+                                    ) {
+                                        if !premiumManager.isPremiumUnlocked {
+                                            showingPremiumPurchase = true
+                                        }
+                                    }
                                 }
                             }
                             
@@ -130,10 +144,14 @@ struct SettingsView: View {
                                     SettingsRow(
                                         icon: "crown.fill",
                                         title: "Premium Reciters",
-                                        subtitle: "Unlock additional reciters",
+                                        subtitle: premiumManager.isPremiumUnlocked ? 
+                                                 "\(premiumManager.getPremiumReciters().count) Premium Reciters Unlocked" : 
+                                                 "Unlock \(premiumManager.getPremiumReciters().count) additional reciters",
                                         iconColor: .yellow
                                     ) {
-                                        // Could implement premium upgrade
+                                        if !premiumManager.isPremiumUnlocked {
+                                            showingPremiumPurchase = true
+                                        }
                                     }
                                 }
                             }
@@ -174,6 +192,9 @@ struct SettingsView: View {
         .sheet(isPresented: $showingAuthentication) {
             // You can replace this with your actual AuthenticationView
             Text("Authentication View")
+        }
+        .sheet(isPresented: $showingPremiumPurchase) {
+            PremiumPurchaseSheet()
         }
     }
 }

@@ -60,6 +60,32 @@ Views/SettingsView.swift: Centralized settings with theme selection
 Views/ThemeSelectionView.swift: Interactive theme preview cards
 ```
 
+## Premium Payment System ✅ COMPLETE
+
+**Implementation**:
+- ✅ **StoreKit 2 Integration**: Modern async/await StoreKit framework for secure payments
+- ✅ **Product Configuration**: Single in-app purchase product `com.thaqalayn.premium_reciters` 
+- ✅ **Premium State Management**: Persistent premium status with UserDefaults and cloud sync
+- ✅ **Purchase Flow**: Complete purchase sheet with pricing, features, and error handling
+- ✅ **Access Control**: Premium reciter validation integrated throughout audio system
+- ✅ **UI Integration**: Crown badges, lock icons, and upgrade prompts fully functional
+
+### Payment Architecture:
+```swift
+PurchaseManager: { loadProducts(), purchase(), restorePurchases(), StoreKit 2 integration }
+PremiumManager: { isPremiumUnlocked, canAccessPremiumReciter(), state persistence }
+Views/PremiumPurchaseSheet.swift: Glassmorphism purchase interface with features preview
+Services/AudioManager.swift: Premium reciter access validation and auto-fallback
+Views/SettingsView.swift: Premium status display and upgrade prompts
+```
+
+### Product Configuration:
+- **Product ID**: `com.thaqalayn.premium_reciters`
+- **Type**: Single in-app purchase (one-time unlock)
+- **Features**: Unlocks 5 premium reciters (Al-Sudais, Al-Ghamidi, Al-Ajamy, Al-Muaiqly, Al-Dosari)
+- **Price Point**: ~$2.99 (configured in App Store Connect)
+- **Receipt Validation**: Handled automatically by StoreKit 2
+
 ## Development Commands
 
 ### iOS Development
@@ -88,13 +114,16 @@ Thaqalayn/
 │   ├── DataManager.swift          # JSON loading, caching
 │   ├── BookmarkManager.swift      # Offline-first bookmarks with Supabase sync
 │   ├── AudioManager.swift         # Individual verse audio playback
-│   └── ThemeManager.swift         # Multi-theme system management
+│   ├── ThemeManager.swift         # Multi-theme system management
+│   ├── PurchaseManager.swift      # StoreKit 2 payment processing
+│   └── PremiumManager.swift       # Premium feature state management
 ├── Views/
 │   ├── ContentView.swift          # Main surah list with settings access
 │   ├── SurahDetailView.swift      # Verse detail with audio controls
 │   ├── BookmarksView.swift        # Bookmark management
 │   ├── SettingsView.swift         # Centralized app settings
-│   └── ThemeSelectionView.swift   # Interactive theme selection
+│   ├── ThemeSelectionView.swift   # Interactive theme selection
+│   └── PremiumPurchaseSheet.swift # Premium upgrade purchase interface
 └── Data/
     ├── quran_data.json            # All 114 surahs (3.4MB)
     └── tafsir_1.json              # Al-Fatiha commentary only
@@ -110,20 +139,21 @@ Thaqalayn/
 - Multi-theme system (4 themes: Modern Dark/Light, Traditional Manuscript, Sepia)
 - Centralized settings with theme selection and live previews
 - Search functionality across all surahs
+- **Premium payment system with StoreKit 2 integration and 5 premium reciters**
 
 **🚀 Ready for App Store**:
 - ✅ Production-ready MVP with core features complete
 - ✅ All 114 surahs with individual verse audio playback  
 - ✅ Complete authentication and bookmark sync system
 - ✅ Multi-theme system with 4 distinct UI themes
+- ✅ **Premium payment system ready for monetization**
 - ✅ Stable performance and user experience
 
 **📱 App Store Publishing Status**: READY FOR SUBMISSION
 
 **🔄 Future Enhancements** (Post-Launch):
-- Manual tafsir generation for remaining 113 surahs using `quick_surah_1.py`
 - Enhanced features: reading progress tracking, background audio playback
-- Monetization: in-app purchase system for premium features
+- Additional premium features: advanced bookmarks, analytics, exclusive content
 
 ## Supabase Integration ✅ FULLY COMPLETE
 
