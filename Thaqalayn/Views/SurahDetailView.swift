@@ -12,6 +12,8 @@ struct SurahDetailView: View {
     let targetVerse: Int?
     @State private var selectedVerse: VerseWithTafsir?
     @State private var showingTafsir = false
+    @State private var showingFullScreenCommentary = false
+    @State private var fullScreenLayer: TafsirLayer = .foundation
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var audioManager = AudioManager.shared
@@ -96,6 +98,15 @@ struct SurahDetailView: View {
         .sheet(isPresented: $showingTafsir) {
             if let verse = selectedVerse {
                 ModernTafsirDetailView(verse: verse, surah: surahWithTafsir.surah)
+            }
+        }
+        .fullScreenCover(isPresented: $showingFullScreenCommentary) {
+            if let verse = selectedVerse {
+                FullScreenCommentaryView(
+                    verse: verse, 
+                    surah: surahWithTafsir.surah, 
+                    initialLayer: fullScreenLayer
+                )
             }
         }
     }
@@ -416,6 +427,8 @@ struct ModernTafsirDetailView: View {
     let verse: VerseWithTafsir
     let surah: Surah
     @State private var selectedLayer: TafsirLayer = .foundation
+    @State private var showingFullScreenCommentary = false
+    @State private var fullScreenLayer: TafsirLayer = .foundation
     @StateObject private var themeManager = ThemeManager.shared
     @Environment(\.dismiss) private var dismiss
     
@@ -484,7 +497,11 @@ struct ModernTafsirDetailView: View {
                 )
                 
                 // Layer selector tabs
-                ModernTafsirTabs(selectedLayer: $selectedLayer)
+                ModernTafsirTabs(selectedLayer: $selectedLayer) { layer in
+                    // Double-tap handler - open full-screen reader
+                    fullScreenLayer = layer
+                    showingFullScreenCommentary = true
+                }
                 
                 // Commentary content
                 ScrollView {
@@ -501,30 +518,37 @@ struct ModernTafsirDetailView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+        .fullScreenCover(isPresented: $showingFullScreenCommentary) {
+            FullScreenCommentaryView(
+                verse: verse, 
+                surah: surah, 
+                initialLayer: fullScreenLayer
+            )
+        }
     }
 }
 
 struct ModernTafsirTabs: View {
     @Binding var selectedLayer: TafsirLayer
+    let onDoubleTap: (TafsirLayer) -> Void
     @StateObject private var themeManager = ThemeManager.shared
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 ForEach(TafsirLayer.allCases, id: \.self) { layer in
-                    Button(action: { selectedLayer = layer }) {
-                        VStack(spacing: 4) {
-                            Text(layerIcon(for: layer))
-                                .font(.system(size: 16))
-                            Text(layerShortTitle(for: layer))
-                                .font(.system(size: 12, weight: .semibold))
-                                .multilineTextAlignment(.center)
-                        }
-                        .foregroundColor(selectedLayer == layer ? .white : themeManager.tertiaryText)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 12)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
+                    VStack(spacing: 4) {
+                        Text(layerIcon(for: layer))
+                            .font(.system(size: 16))
+                        Text(layerShortTitle(for: layer))
+                            .font(.system(size: 12, weight: .semibold))
+                            .multilineTextAlignment(.center)
+                    }
+                    .foregroundColor(selectedLayer == layer ? .white : themeManager.tertiaryText)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
                                 .fill(
                                     selectedLayer == layer ? 
                                     themeManager.purpleGradient :
@@ -536,9 +560,15 @@ struct ModernTafsirTabs: View {
                                 )
                         )
                         .shadow(
-                            color: selectedLayer == layer ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3) : .clear,
-                            radius: 8
-                        )
+                        color: selectedLayer == layer ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3) : .clear,
+                        radius: 8
+                    )
+                    .onTapGesture {
+                        selectedLayer = layer
+                    }
+                    .onTapGesture(count: 2) {
+                        // Double-tap to open full-screen reader
+                        onDoubleTap(layer)
                     }
                 }
             }
