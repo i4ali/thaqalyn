@@ -45,22 +45,50 @@ struct FullScreenCommentaryView: View {
     }
     
     private var readingBackground: some View {
-        // Pure, distraction-free background optimized for reading
-        themeManager.primaryBackground
-            .ignoresSafeArea()
-            .overlay(
-                // Subtle texture for paper-like feel without floating orbs
-                LinearGradient(
-                    colors: [
-                        themeManager.secondaryBackground.opacity(0.1),
-                        Color.clear,
-                        themeManager.secondaryBackground.opacity(0.05)
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
+        ZStack {
+            // Base gradient background matching main app
+            LinearGradient(
+                colors: [
+                    themeManager.primaryBackground,
+                    themeManager.secondaryBackground,
+                    themeManager.tertiaryBackground
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
             )
+            
+            // Floating gradient orbs (with reduced opacity for reading comfort)
+            RadialGradient(
+                colors: [
+                    themeManager.floatingOrbColors[0].opacity(0.4),
+                    Color.clear
+                ],
+                center: .topLeading,
+                startRadius: 0,
+                endRadius: 300
+            )
+            
+            RadialGradient(
+                colors: [
+                    themeManager.floatingOrbColors[1].opacity(0.4),
+                    Color.clear
+                ],
+                center: .bottomTrailing,
+                startRadius: 0,
+                endRadius: 300
+            )
+            
+            RadialGradient(
+                colors: [
+                    themeManager.floatingOrbColors[2].opacity(0.3),
+                    Color.clear
+                ],
+                center: .center,
+                startRadius: 0,
+                endRadius: 200
+            )
+        }
+        .ignoresSafeArea()
     }
     
     private var readingHeader: some View {
@@ -108,15 +136,27 @@ struct FullScreenCommentaryView: View {
     }
     
     private var compactLayerSelector: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 12) {
-                ForEach(TafsirLayer.allCases, id: \.self) { layer in
-                    layerButton(for: layer)
+        ScrollViewReader { proxy in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    ForEach(TafsirLayer.allCases, id: \.self) { layer in
+                        layerButton(for: layer)
+                            .id(layer)
+                    }
+                }
+                .padding(.horizontal, 24)
+            }
+            .padding(.bottom, 24)
+            .onChange(of: selectedLayer) { newLayer in
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    proxy.scrollTo(newLayer, anchor: .center)
                 }
             }
-            .padding(.horizontal, 24)
+            .onAppear {
+                // Ensure initial layer is visible on first appearance
+                proxy.scrollTo(selectedLayer, anchor: .center)
+            }
         }
-        .padding(.bottom, 24)
     }
     
     private func layerButton(for layer: TafsirLayer) -> some View {
@@ -185,9 +225,9 @@ struct FullScreenCommentaryView: View {
                     .shadow(color: layerShadowColor(for: selectedLayer), radius: 8)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(selectedLayer.title)
-                        .font(.system(size: 22, weight: .bold))
-                        .foregroundColor(themeManager.primaryText)
+                    // Text(selectedLayer.title)
+                    //     .font(.system(size: 22, weight: .bold))
+                    //     .foregroundColor(themeManager.primaryText)
                     
                     Text(selectedLayer.description)
                         .font(.system(size: 16, weight: .medium))
