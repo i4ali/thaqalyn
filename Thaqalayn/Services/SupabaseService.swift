@@ -293,9 +293,87 @@ class SupabaseService: ObservableObject {
         
         isLoading = false
     }
+    
+    // MARK: - User Preferences & Premium Status
+    
+    func getUserPremiumStatus() async throws -> Bool {
+        print("🔍 SupabaseService: Getting premium status")
+        
+        guard let currentUser = currentUser else {
+            print("❌ SupabaseService: No current user for premium status check")
+            throw SupabaseError.notAuthenticated
+        }
+        
+        print("🔍 SupabaseService: Checking premium status for user: \(currentUser.id)")
+        
+        do {
+            let response: [DatabaseUserPreferences] = try await client
+                .from("user_preferences")
+                .select("is_premium")
+                .eq("user_id", value: currentUser.id)
+                .execute()
+                .value
+            
+            print("🔍 SupabaseService: Premium status response: \(response)")
+            let isPremium = response.first?.isPremium ?? false
+            print("🔍 SupabaseService: Returning premium status: \(isPremium)")
+            
+            return isPremium
+        } catch {
+            print("❌ SupabaseService: Error fetching premium status: \(error)")
+            throw SupabaseError.fetchFailed("Failed to fetch premium status: \(error.localizedDescription)")
+        }
+    }
+    
+    func updateUserPremiumStatus(isPremium: Bool) async throws {
+        guard let currentUser = currentUser else {
+            throw SupabaseError.notAuthenticated
+        }
+        
+        let updateData = DatabaseUserPreferencesUpdate(
+            userId: currentUser.id,
+            isPremium: isPremium,
+            bookmarkLimit: isPremium ? 999 : 2
+        )
+        
+        do {
+            try await client
+                .from("user_preferences")
+                .upsert(updateData)
+                .execute()
+            
+            print("✅ SupabaseService: Updated premium status to \(isPremium)")
+        } catch {
+            throw SupabaseError.syncFailed("Failed to update premium status: \(error.localizedDescription)")
+        }
+    }
 }
 
 // MARK: - Database Models
+
+struct DatabaseUserPreferences: Codable {
+    let userId: UUID
+    let isPremium: Bool
+    let bookmarkLimit: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case isPremium = "is_premium"
+        case bookmarkLimit = "bookmark_limit"
+    }
+}
+
+struct DatabaseUserPreferencesUpdate: Codable {
+    let userId: UUID
+    let isPremium: Bool
+    let bookmarkLimit: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case isPremium = "is_premium"
+        case bookmarkLimit = "bookmark_limit"
+    }
+}
 
 struct DatabaseBookmark: Codable {
     let id: UUID

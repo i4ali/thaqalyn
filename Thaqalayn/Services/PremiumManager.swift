@@ -35,6 +35,11 @@ class PremiumManager: ObservableObject {
     init() {
         loadPremiumStatus()
         setupObservers()
+        
+        // Load premium status from Supabase on initialization
+        Task {
+            await loadPremiumStatusFromSupabase()
+        }
     }
     
     // MARK: - Premium Status Management
@@ -100,18 +105,50 @@ class PremiumManager: ObservableObject {
         }
         
         do {
-            // Update user profile with premium status
-            // This would be implemented when we add user profiles to Supabase
-            print("🔄 PremiumManager: Would sync premium status with Supabase for user: \(currentUser)")
+            // Update user_preferences table with premium status
+            let supabaseService = SupabaseService.shared
+            try await supabaseService.updateUserPremiumStatus(isPremium: isPremiumUnlocked)
+            print("🔄 PremiumManager: Synced premium status (\(isPremiumUnlocked)) with Supabase for user: \(currentUser)")
         } catch {
             print("❌ PremiumManager: Failed to sync premium status with Supabase: \(error)")
         }
     }
     
     private func getCurrentUser() async -> String? {
-        // This would integrate with your existing authentication system
-        // For now, return nil to skip Supabase sync
-        return nil
+        // Get current user from SupabaseService
+        return SupabaseService.shared.currentUser?.id.uuidString
+    }
+    
+    // MARK: - Load Premium Status from Supabase
+    
+    func loadPremiumStatusFromSupabase() async {
+        print("🔍 PremiumManager: Starting loadPremiumStatusFromSupabase")
+        
+        guard let currentUser = await getCurrentUser() else {
+            print("ℹ️ PremiumManager: No authenticated user, using local premium status: \(isPremiumUnlocked)")
+            return
+        }
+        
+        print("🔍 PremiumManager: Current user found: \(currentUser)")
+        print("🔍 PremiumManager: Current local premium status: \(isPremiumUnlocked)")
+        
+        do {
+            let supabaseService = SupabaseService.shared
+            let isPremiumFromSupabase = try await supabaseService.getUserPremiumStatus()
+            
+            print("🔍 PremiumManager: Premium status from Supabase: \(isPremiumFromSupabase)")
+            
+            // Update local status if different from Supabase
+            if isPremiumFromSupabase != isPremiumUnlocked {
+                isPremiumUnlocked = isPremiumFromSupabase
+                print("🔄 PremiumManager: Updated local premium status from Supabase: \(isPremiumUnlocked)")
+            } else {
+                print("ℹ️ PremiumManager: Local and Supabase premium status already match: \(isPremiumUnlocked)")
+            }
+            
+        } catch {
+            print("❌ PremiumManager: Failed to load premium status from Supabase: \(error)")
+        }
     }
     
     // MARK: - Observers Setup
@@ -122,6 +159,31 @@ class PremiumManager: ObservableObject {
             .sink { [weak self] _ in
                 Task { @MainActor in
                     await self?.checkPurchaseStatus()
+                    await self?.loadPremiumStatusFromSupabase()
+                }
+            }
+            .store(in: &cancellables)
+        
+        // Listen for authentication state changes
+        SupabaseService.shared.$isAuthenticated
+            .dropFirst() // Skip the initial value
+            .sink { [weak self] isAuthenticated in
+                Task { @MainActor in
+                    if isAuthenticated {
+                        await self?.loadPremiumStatusFromSupabase()
+                    }
+                }
+            }
+            .store(in: &cancellables)
+        
+        // Also listen for user changes specifically
+        SupabaseService.shared.$currentUser
+            .dropFirst()
+            .sink { [weak self] user in
+                Task { @MainActor in
+                    if user != nil {
+                        await self?.loadPremiumStatusFromSupabase()
+                    }
                 }
             }
             .store(in: &cancellables)
@@ -184,6 +246,21 @@ class PremiumManager: ObservableObject {
         Task {
             await unlockPremiumFeatures()
         }
+    }
+    
+    func forceUnlockForDeveloper() {
+        Task {
+            isPremiumUnlocked = true
+            await syncPremiumStatusWithSupabase()
+            print("🔓 PremiumManager: Force unlocked premium for developer")
+        }
+    }
+    
+    func clearAllLocalData() {
+        userDefaults.removeObject(forKey: Self.premiumUnlockedKey)
+        userDefaults.removeObject(forKey: Self.premiumUnlockDateKey)
+        isPremiumUnlocked = false
+        print("🧹 PremiumManager: Cleared all local premium data")
     }
     #endif
 }

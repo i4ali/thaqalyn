@@ -1,0 +1,43 @@
+1. Wait for Enrollment Activation (1-24 hours)
+
+  - Apple needs to activate your developer account
+  - You'll get email confirmation when ready
+  - Then you can access App Store Connect
+
+  2. App Store Connect Setup
+
+  Once activated, you'll need to:
+
+  Create App Listing:
+  - Go to appstoreconnect.apple.com
+  - Create new app with bundle ID: MAHR.Partner.Thaqalayn
+  - Fill basic app information
+
+  Configure In-App Purchase:
+  - Add in-app purchase product: com.thaqalayn.premium_reciters
+  - Set as "Non-Consumable" (one-time purchase)
+  - Set price tier (~$2.99)
+  - Add name: "Premium Reciters"
+  - Add description: "Unlock 5 additional premium Quran reciters"
+
+  3. Testing Options After Setup
+
+  Sandbox Testing (Recommended):
+  - Create sandbox test accounts in App Store Connect
+  - Test purchases without real money
+  - Full purchase flow testing
+
+  Production Testing:
+  - Submit app for review (takes 1-7 days)
+  - Test with real purchases once approved
+
+  While Waiting for Activation:
+
+  You can still test the complete user signup flow and verify that:
+  - New user registration works
+  - Bookmarks sync properly
+  - Premium status correctly shows "Free Version"
+  - Premium reciters show lock icons
+  - App functions properly for free users
+
+  The purchase functionality will work once App Store Connect is properly configured with your new developer account.

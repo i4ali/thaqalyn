@@ -251,28 +251,34 @@ struct FullScreenCommentaryView: View {
         VStack(alignment: .leading, spacing: 24) {
             ForEach(Array(formattedParagraphs(from: text).enumerated()), id: \.offset) { index, paragraph in
                 VStack(alignment: .leading, spacing: 12) {
-                    // Paragraph number for long content
-                    if formattedParagraphs(from: text).count > 3 && index > 0 {
-                        HStack {
-                            Circle()
-                                .fill(layerGradient(for: selectedLayer).opacity(0.4))
-                                .frame(width: 6, height: 6)
-                            
-                            Rectangle()
-                                .fill(layerGradient(for: selectedLayer).opacity(0.2))
-                                .frame(height: 1)
-                                .frame(maxWidth: 60)
-                        }
-                        .padding(.bottom, 8)
-                    }
                     
-                    // Reading-optimized paragraph text
+                    // Reading-optimized paragraph text with background
                     Text(paragraph.trimmingCharacters(in: .whitespacesAndNewlines))
                         .font(.system(size: 18, weight: .regular, design: .default))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(12) // Generous line spacing for readability
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 16)
+                        .background {
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(themeManager.secondaryBackground.opacity(0.8))
+                                .background(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .fill(themeManager.glassEffect)
+                                )
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(themeManager.strokeColor.opacity(0.5), lineWidth: 1)
+                                )
+                                .shadow(
+                                    color: themeManager.primaryText.opacity(0.05), 
+                                    radius: 8, 
+                                    x: 0, 
+                                    y: 2
+                                )
+                        }
                 }
             }
         }

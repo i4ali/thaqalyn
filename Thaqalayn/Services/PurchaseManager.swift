@@ -125,11 +125,11 @@ class PurchaseManager: ObservableObject {
     // MARK: - Transaction Listening
     
     private func listenForTransactions() -> Task<Void, Error> {
-        return Task.detached {
+        return Task {
             for await result in Transaction.updates {
                 do {
-                    let transaction = try self.checkVerified(result)
-                    await self.updatePurchasedProducts(transaction: transaction)
+                    let transaction = try checkVerified(result)
+                    await updatePurchasedProducts(transaction: transaction)
                     await transaction.finish()
                 } catch {
                     print("❌ PurchaseManager: Transaction verification failed: \(error)")

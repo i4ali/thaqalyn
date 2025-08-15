@@ -15,6 +15,7 @@ struct ContentView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
+    @ObservedObject private var premiumManager = PremiumManager.shared
     @State private var showingWelcome = false
     
     var body: some View {
@@ -624,6 +625,7 @@ struct ProfileMenuView: View {
     @StateObject private var supabaseService = SupabaseService.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var audioManager = AudioManager.shared
+    @ObservedObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var showingSignOutAlert = false
     @State private var showingAudioSettings = false
@@ -660,9 +662,9 @@ struct ProfileMenuView: View {
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(themeManager.primaryText)
                             
-                            Text(bookmarkManager.preferences?.isPremium == true ? "Premium User" : "Free Account")
+                            Text(premiumManager.isPremiumUnlocked ? "Premium User" : "Free Account")
                                 .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(bookmarkManager.preferences?.isPremium == true ? .green : themeManager.secondaryText)
+                                .foregroundColor(premiumManager.isPremiumUnlocked ? .green : themeManager.secondaryText)
                         }
                     }
                     

@@ -106,25 +106,25 @@ struct PremiumPurchaseSheet: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             VStack(spacing: 12) {
-                FeatureRow(
+                PremiumFeatureRow(
                     icon: "person.3.fill",
                     title: "5 Premium Reciters",
                     description: "Al-Sudais, Al-Ghamidi, Al-Ajamy, Al-Muaiqly, Al-Dosari"
                 )
                 
-                FeatureRow(
+                PremiumFeatureRow(
                     icon: "waveform.and.person.filled",
                     title: "High-Quality Audio",
                     description: "Crystal clear recitation with optimal bitrate"
                 )
                 
-                FeatureRow(
+                PremiumFeatureRow(
                     icon: "arrow.down.circle.fill",
                     title: "Offline Access",
                     description: "Download and listen without internet connection"
                 )
                 
-                FeatureRow(
+                PremiumFeatureRow(
                     icon: "infinity",
                     title: "Lifetime Access",
                     description: "One-time purchase, enjoy forever"
@@ -315,7 +315,7 @@ struct PremiumPurchaseSheet: View {
 
 // MARK: - Feature Row Component
 
-struct FeatureRow: View {
+struct PremiumFeatureRow: View {
     @StateObject private var themeManager = ThemeManager.shared
     let icon: String
     let title: String

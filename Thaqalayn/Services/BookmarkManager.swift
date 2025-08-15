@@ -172,8 +172,11 @@ class BookmarkManager: ObservableObject {
         }
         
         // Check bookmark limit for non-premium users
-        if let prefs = preferences, !prefs.isPremium && bookmarks.count >= prefs.bookmarkLimit {
-            errorMessage = "You've reached your bookmark limit (\(prefs.bookmarkLimit)). Upgrade to premium for unlimited bookmarks."
+        let isPremium = PremiumManager.shared.isPremiumUnlocked
+        let bookmarkLimit = isPremium ? 999 : 2
+        
+        if !isPremium && bookmarks.count >= bookmarkLimit {
+            errorMessage = "You've reached your bookmark limit (\(bookmarkLimit)). Upgrade to premium for unlimited bookmarks."
             return false
         }
         
@@ -320,6 +323,36 @@ class BookmarkManager: ObservableObject {
         saveLocalPreferences()
         print("🌟 Upgraded to premium")
     }
+    
+    // MARK: - Debug & Reset Methods
+    
+    #if DEBUG
+    func clearAllLocalData() {
+        // Clear all local bookmarks
+        bookmarks.removeAll()
+        
+        // Clear all local collections
+        collections.removeAll()
+        
+        // Reset preferences
+        preferences = UserBookmarkPreferences(userId: currentUserId)
+        
+        // Clear pending deletes
+        pendingDeletes.removeAll()
+        
+        // Remove from UserDefaults
+        UserDefaults.standard.removeObject(forKey: localStorageKey)
+        UserDefaults.standard.removeObject(forKey: preferencesKey)
+        UserDefaults.standard.removeObject(forKey: collectionsKey)
+        UserDefaults.standard.removeObject(forKey: pendingDeletesKey)
+        
+        // Clear error state
+        errorMessage = nil
+        syncStatus = nil
+        
+        print("🧹 BookmarkManager: Cleared all local data")
+    }
+    #endif
     
     // MARK: - Sync Management
     

@@ -10,11 +10,13 @@ import SwiftUI
 struct SettingsView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
-    @StateObject private var premiumManager = PremiumManager.shared
+    @ObservedObject private var premiumManager = PremiumManager.shared
     @Environment(\.presentationMode) var presentationMode
     @State private var showingThemeSelection = false
     @State private var showingAuthentication = false
     @State private var showingPremiumPurchase = false
+    @State private var showingClearDataAlert = false
+    @State private var clearDataMessage = ""
     
     var body: some View {
         NavigationView {
@@ -176,6 +178,15 @@ struct SettingsView: View {
                                     ) {
                                         // Could open App Store review
                                     }
+                                    
+                                    SettingsRow(
+                                        icon: "trash.fill",
+                                        title: "Clear All Local Data",
+                                        subtitle: "Remove bookmarks, preferences, cache",
+                                        iconColor: .red
+                                    ) {
+                                        performClearAllLocalData()
+                                    }
                                 }
                             }
                         }
@@ -196,6 +207,37 @@ struct SettingsView: View {
         .sheet(isPresented: $showingPremiumPurchase) {
             PremiumPurchaseSheet()
         }
+        .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
+            Button("OK") { 
+                // Force UI refresh
+                DispatchQueue.main.async {
+                    bookmarkManager.objectWillChange.send()
+                    premiumManager.objectWillChange.send()
+                }
+            }
+        } message: {
+            Text(clearDataMessage)
+        }
+    }
+    
+    private func performClearAllLocalData() {
+        print("🧹 SettingsView: Starting clear all local data")
+        
+        // Clear BookmarkManager data
+        BookmarkManager.shared.clearAllLocalData()
+        
+        // Clear PremiumManager data  
+        PremiumManager.shared.clearAllLocalData()
+        
+        // Clear other UserDefaults that might exist
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
+        
+        clearDataMessage = "All local data cleared successfully!\n\nBookmarks: 0\nPreferences: Reset\nPremium Status: Reset\nCache: Cleared"
+        showingClearDataAlert = true
+        
+        print("🧹 SettingsView: Completed clearing all local data")
     }
 }
 
@@ -271,8 +313,8 @@ struct SettingsRow: View {
                 Rectangle()
                     .fill(Color.clear)
             )
+            .contentShape(Rectangle())
         }
-        .buttonStyle(PlainButtonStyle())
     }
 }
 
