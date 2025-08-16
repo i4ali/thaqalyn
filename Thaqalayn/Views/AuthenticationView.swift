@@ -20,7 +20,6 @@ struct AuthenticationView: View {
     @State private var showingForgotPassword = false
     @State private var isLoading = false
     @State private var errorMessage: String?
-    @State private var showingGuestMode = false
     
     var body: some View {
         ZStack {
@@ -187,28 +186,33 @@ struct AuthenticationView: View {
                         .signInWithAppleButtonStyle(.whiteOutline)
                         .frame(height: 50)
                         
-                        // Guest mode
-                        Button(action: {
-                            showingGuestMode = true
-                        }) {
-                            HStack(spacing: 12) {
-                                Image(systemName: "person.crop.circle")
-                                    .font(.system(size: 18))
-                                Text("Continue as Guest")
-                                    .font(.system(size: 16, weight: .semibold))
+                        // Authentication required message
+                        VStack(spacing: 8) {
+                            HStack {
+                                Image(systemName: "lock.shield")
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(themeManager.secondaryText)
+                                
+                                Text("Secure Access Required")
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .foregroundColor(themeManager.primaryText)
                             }
-                            .foregroundColor(themeManager.primaryText)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 14)
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 12)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                                    )
-                            )
+                            
+                            Text("Sign in to access Quranic commentary and sync bookmarks across your devices.")
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                                .multilineTextAlignment(.center)
                         }
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 16)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(themeManager.glassEffect.opacity(0.5))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(themeManager.strokeColor.opacity(0.5), lineWidth: 1)
+                                )
+                        )
                     }
                     .padding(.horizontal, 20)
                     
@@ -234,16 +238,6 @@ struct AuthenticationView: View {
         }
         .navigationBarHidden(true)
         .preferredColorScheme(themeManager.colorScheme)
-        .alert("Guest Mode", isPresented: $showingGuestMode) {
-            Button("Continue as Guest") {
-                Task {
-                    await continueAsGuest()
-                }
-            }
-            Button("Cancel", role: .cancel) {}
-        } message: {
-            Text("You can create an account later to sync your bookmarks across devices.")
-        }
         .alert("Reset Password", isPresented: $showingForgotPassword) {
             TextField("Email", text: $email)
             Button("Send Reset Link") {
@@ -333,18 +327,6 @@ struct AuthenticationView: View {
         }
     }
     
-    private func continueAsGuest() async {
-        do {
-            try await supabaseService.signInAnonymously()
-            await MainActor.run {
-                dismiss()
-            }
-        } catch {
-            await MainActor.run {
-                errorMessage = "Failed to continue as guest: \(error.localizedDescription)"
-            }
-        }
-    }
     
     private func sendPasswordReset() async {
         guard !email.isEmpty else { return }

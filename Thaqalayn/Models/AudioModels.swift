@@ -211,7 +211,7 @@ extension Reciter {
             isPopular: true,
             isPremium: false
         ),
-        // Premium reciters
+        // All reciters now free
         Reciter(
             id: "abdul_rahman_al_sudais",
             nameArabic: "عبد الرحمن السديس",
@@ -220,7 +220,7 @@ extension Reciter {
             serverURL: "https://server11.mp3quran.net/sds",
             description: "Imam of the Grand Mosque in Mecca",
             isPopular: true,
-            isPremium: true
+            isPremium: false
         ),
         Reciter(
             id: "saad_al_ghamidi",
@@ -230,7 +230,7 @@ extension Reciter {
             serverURL: "https://server7.mp3quran.net/s_gmd2",
             description: "Known for his emotional and beautiful recitation",
             isPopular: true,
-            isPremium: true
+            isPremium: false
         ),
         Reciter(
             id: "ahmad_ibn_ali_al_ajamy",
@@ -240,7 +240,7 @@ extension Reciter {
             serverURL: "https://server10.mp3quran.net/ajm",
             description: "Young reciter with a distinctive melodious voice",
             isPopular: true,
-            isPremium: true
+            isPremium: false
         ),
         Reciter(
             id: "maher_al_muaiqly",
@@ -250,7 +250,7 @@ extension Reciter {
             serverURL: "https://server12.mp3quran.net/maher",
             description: "Imam of the Prophet's Mosque in Medina",
             isPopular: true,
-            isPremium: true
+            isPremium: false
         ),
         Reciter(
             id: "yasser_al_dosari",
@@ -260,7 +260,7 @@ extension Reciter {
             serverURL: "https://server14.mp3quran.net/yasir",
             description: "Known for his powerful and emotional recitation",
             isPopular: true,
-            isPremium: true
+            isPremium: false
         )
     ]
 }

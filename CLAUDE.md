@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Thaqalayn is a Shia Islamic Quranic commentary iOS app with an offline-first architecture.
 
-**Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, and **multi-theme system**. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com.
+**Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, and **multi-theme system**. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com. **All features unlocked** with $0.99 paid app model.
 
 ## Architecture
 
@@ -35,8 +35,9 @@ CurrentPlayback: { surahNumber, verseNumber, reciter, currentTime, isPlaying }
 - ✅ Individual verse playback using EveryAyah.com URLs (`https://www.everyayah.com/data/Alafasy_128kbps/001001.mp3`)
 - ✅ Individual play buttons on each verse card with visual feedback  
 - ✅ **Play Sequence functionality** for continuous surah playback (FIXED)
-- ✅ **Premium reciter system**: Mishary Alafasy (free), 5 premium reciters with upgrade prompts
-- ✅ Reciter selection with crown badges, lock icons, and premium upgrade flow
+- ✅ **All reciters free**: 6 high-quality reciters available to all users
+- ✅ Reciter selection with clean UI (no premium barriers)
+- ✅ **Responsive audio controls**: Fixed button touch targets with 60pt minimum height, contentShape for full area tappability
 - ✅ Best available quality per reciter (40-192kbps), caching (100MB), HTTPS compliance
 
 ## Multi-Theme System ✅ COMPLETE
@@ -60,31 +61,26 @@ Views/SettingsView.swift: Centralized settings with theme selection
 Views/ThemeSelectionView.swift: Interactive theme preview cards
 ```
 
-## Premium Payment System ✅ COMPLETE
+## Paid App Model ✅ COMPLETE
 
-**Implementation**:
-- ✅ **StoreKit 2 Integration**: Modern async/await StoreKit framework for secure payments
-- ✅ **Product Configuration**: Single in-app purchase product `com.thaqalayn.premium_reciters` 
-- ✅ **Premium State Management**: Persistent premium status with UserDefaults and cloud sync
-- ✅ **Purchase Flow**: Complete purchase sheet with pricing, features, and error handling
-- ✅ **Access Control**: Premium reciter validation integrated throughout audio system
-- ✅ **UI Integration**: Crown badges, lock icons, and upgrade prompts fully functional
+**Implementation**: Simple paid app model with all features unlocked for $0.99 App Store purchase
+- ✅ **All Reciters Free**: 6 high-quality reciters available to all users immediately
+- ✅ **Standard Bookmark Limit**: 10 bookmarks for all users (reasonable limit for database efficiency)
+- ✅ **No In-App Purchases**: Simplified architecture without premium complexity
+- ✅ **Clean User Experience**: No paywalls, upgrade prompts, or premium UI elements
 
-### Payment Architecture:
+### Simplified Architecture:
 ```swift
-PurchaseManager: { loadProducts(), purchase(), restorePurchases(), StoreKit 2 integration }
-PremiumManager: { isPremiumUnlocked, canAccessPremiumReciter(), state persistence }
-Views/PremiumPurchaseSheet.swift: Glassmorphism purchase interface with features preview
-Services/AudioManager.swift: Premium reciter access validation and auto-fallback
-Views/SettingsView.swift: Premium status display and upgrade prompts
+PremiumManager: { isPremiumUnlocked: true (always), simplified feature access }
+Services/AudioManager.swift: No premium validation - all reciters accessible
+Services/BookmarkManager.swift: Standard 10 bookmark limit for all users
+Models/AudioModels.swift: All reciters marked as free (isPremium: false)
 ```
 
-### Product Configuration:
-- **Product ID**: `com.thaqalayn.premium_reciters`
-- **Type**: Single in-app purchase (one-time unlock)
-- **Features**: Unlocks 5 premium reciters (Al-Sudais, Al-Ghamidi, Al-Ajamy, Al-Muaiqly, Al-Dosari)
-- **Price Point**: ~$2.99 (configured in App Store Connect)
-- **Receipt Validation**: Handled automatically by StoreKit 2
+### Audio System:
+- **All 6 Reciters**: Mishary Alafasy, Al-Sudais, Al-Ghamidi, Al-Ajamy, Al-Muaiqly, Al-Dosari
+- **High Quality**: 128-192kbps audio with intelligent caching
+- **Individual Verse Playback**: Complete EveryAyah.com integration
 
 ## Development Commands
 
@@ -115,15 +111,13 @@ Thaqalayn/
 │   ├── BookmarkManager.swift      # Offline-first bookmarks with Supabase sync
 │   ├── AudioManager.swift         # Individual verse audio playback
 │   ├── ThemeManager.swift         # Multi-theme system management
-│   ├── PurchaseManager.swift      # StoreKit 2 payment processing
-│   └── PremiumManager.swift       # Premium feature state management
+│   └── PremiumManager.swift       # Simplified premium manager (always unlocked)
 ├── Views/
 │   ├── ContentView.swift          # Main surah list with settings access
 │   ├── SurahDetailView.swift      # Verse detail with audio controls
 │   ├── BookmarksView.swift        # Bookmark management
 │   ├── SettingsView.swift         # Centralized app settings
-│   ├── ThemeSelectionView.swift   # Interactive theme selection
-│   └── PremiumPurchaseSheet.swift # Premium upgrade purchase interface
+│   └── ThemeSelectionView.swift   # Interactive theme selection
 └── Data/
     ├── quran_data.json            # All 114 surahs (3.4MB)
     └── tafsir_1.json              # Al-Fatiha commentary only
@@ -139,7 +133,7 @@ Thaqalayn/
 - Multi-theme system (4 themes: Modern Dark/Light, Traditional Manuscript, Sepia)
 - Centralized settings with responsive button controls and user-friendly data management
 - Search functionality across all surahs
-- **Premium payment system with StoreKit 2 integration and 5 premium reciters**
+- **All 6 reciters unlocked** with clean, simple UI design
 - **Professional app icon with Islamic Quran book design**
 
 **🚀 Ready for App Store**:
@@ -147,16 +141,17 @@ Thaqalayn/
 - ✅ All 114 surahs with individual verse audio playback  
 - ✅ Complete authentication and bookmark sync system
 - ✅ Multi-theme system with 4 distinct UI themes
-- ✅ **Premium payment system ready for monetization** (requires App Store Connect setup)
+- ✅ **Simple paid app model** with $0.99 App Store pricing
 - ✅ **Complete app icon set** (all iOS sizes: 76x76, 120x120, 152x152, 167x167, 180x180, 1024x1024)
 - ✅ **Clean production code** with no hardcoded user data or debug overrides
+- ✅ **Improved UI responsiveness** with enhanced touch targets and button feedback
 - ✅ Stable performance and user experience
 
 **📱 App Store Publishing Status**: READY FOR SUBMISSION
 
 **🔄 Future Enhancements** (Post-Launch):
 - Enhanced features: reading progress tracking, background audio playback
-- Additional premium features: advanced bookmarks, analytics, exclusive content
+- Additional convenience features: advanced bookmarks, analytics, personalization
 
 ## Supabase Integration ✅ FULLY COMPLETE
 
@@ -198,5 +193,5 @@ Thaqalayn/
 **App Store Connect Setup Required**:
 - ⏳ **Developer Program Enrollment**: Active (yearly subscription)
 - ⏳ **App Store Connect Configuration**: Create app listing with unique name
-- ⏳ **In-App Purchase Setup**: Configure `com.thaqalayn.premium_reciters` product
-- ⏳ **Sandbox Testing**: Set up test accounts for premium purchase validation
+- ⏳ **Pricing Setup**: Configure $0.99 paid app pricing tier
+- ⏳ **No In-App Purchases**: Simplified submission process without StoreKit complexity

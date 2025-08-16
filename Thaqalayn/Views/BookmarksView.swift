@@ -92,11 +92,6 @@ struct BookmarksView: View {
                     )
                 }
                 
-                // Premium upsell if needed
-                if !(bookmarkManager.preferences?.isPremium ?? false) && bookmarkManager.bookmarks.count >= 2 {
-                    PremiumUpsellCard()
-                        .padding()
-                }
             }
         }
         .navigationBarHidden(true)
@@ -407,57 +402,6 @@ struct EmptyBookmarksView: View {
     }
 }
 
-struct PremiumUpsellCard: View {
-    @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var bookmarkManager = BookmarkManager.shared
-    
-    var body: some View {
-        VStack(spacing: 12) {
-            HStack {
-                Image(systemName: "star.fill")
-                    .font(.system(size: 16))
-                    .foregroundColor(.yellow)
-                
-                Text("Upgrade to Premium")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                
-                Spacer()
-            }
-            
-            Text("You've reached your bookmark limit. Upgrade to save unlimited verses, create collections, and sync across devices.")
-                .font(.system(size: 14))
-                .foregroundColor(themeManager.secondaryText)
-                .multilineTextAlignment(.leading)
-            
-            HStack {
-                Spacer()
-                
-                Button("Upgrade Now") {
-                    // TODO: Implement premium upgrade flow
-                    bookmarkManager.upgradeToPremium()
-                }
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundColor(.white)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(themeManager.purpleGradient)
-                )
-            }
-        }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(themeManager.glassEffect)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.yellow.opacity(0.3), lineWidth: 1)
-                )
-        )
-    }
-}
 
 struct BookmarksLoadingView: View {
     @StateObject private var themeManager = ThemeManager.shared

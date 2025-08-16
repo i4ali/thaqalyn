@@ -10,11 +10,9 @@ import SwiftUI
 struct SettingsView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
-    @ObservedObject private var premiumManager = PremiumManager.shared
     @Environment(\.presentationMode) var presentationMode
     @State private var showingThemeSelection = false
     @State private var showingAuthentication = false
-    @State private var showingPremiumPurchase = false
     @State private var showingClearDataAlert = false
     @State private var clearDataMessage = ""
     
@@ -116,18 +114,6 @@ struct SettingsView: View {
                                             showingAuthentication = true
                                         }
                                     }
-                                    
-                                    // Premium Status
-                                    SettingsRow(
-                                        icon: premiumManager.isPremiumUnlocked ? "crown.fill" : "lock.fill",
-                                        title: "Premium Status",
-                                        subtitle: premiumManager.isPremiumUnlocked ? "Premium Unlocked" : "Free Version",
-                                        iconColor: premiumManager.isPremiumUnlocked ? .yellow : .orange
-                                    ) {
-                                        if !premiumManager.isPremiumUnlocked {
-                                            showingPremiumPurchase = true
-                                        }
-                                    }
                                 }
                             }
                             
@@ -141,19 +127,6 @@ struct SettingsView: View {
                                         iconColor: .indigo
                                     ) {
                                         // Could implement audio quality settings
-                                    }
-                                    
-                                    SettingsRow(
-                                        icon: "crown.fill",
-                                        title: "Premium Reciters",
-                                        subtitle: premiumManager.isPremiumUnlocked ? 
-                                                 "\(premiumManager.getPremiumReciters().count) Premium Reciters Unlocked" : 
-                                                 "Unlock \(premiumManager.getPremiumReciters().count) additional reciters",
-                                        iconColor: .yellow
-                                    ) {
-                                        if !premiumManager.isPremiumUnlocked {
-                                            showingPremiumPurchase = true
-                                        }
                                     }
                                 }
                             }
@@ -204,15 +177,11 @@ struct SettingsView: View {
             // You can replace this with your actual AuthenticationView
             Text("Authentication View")
         }
-        .sheet(isPresented: $showingPremiumPurchase) {
-            PremiumPurchaseSheet()
-        }
         .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
             Button("OK") { 
                 // Force UI refresh
                 DispatchQueue.main.async {
                     bookmarkManager.objectWillChange.send()
-                    premiumManager.objectWillChange.send()
                 }
             }
         } message: {
@@ -226,15 +195,12 @@ struct SettingsView: View {
         // Clear BookmarkManager data
         BookmarkManager.shared.clearAllLocalData()
         
-        // Clear PremiumManager data  
-        PremiumManager.shared.clearAllLocalData()
-        
         // Clear other UserDefaults that might exist
         let domain = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: domain)
         UserDefaults.standard.synchronize()
         
-        clearDataMessage = "All local data cleared successfully!\n\nBookmarks: 0\nPreferences: Reset\nPremium Status: Reset\nCache: Cleared"
+        clearDataMessage = "All local data cleared successfully!\n\nBookmarks: 0\nPreferences: Reset\nCache: Cleared"
         showingClearDataAlert = true
         
         print("🧹 SettingsView: Completed clearing all local data")

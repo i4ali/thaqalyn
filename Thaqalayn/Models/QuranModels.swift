@@ -321,14 +321,14 @@ struct UserBookmarkPreferences: Codable {
     init(
         userId: String,
         isPremium: Bool = false,
-        bookmarkLimit: Int = 2,
+        bookmarkLimit: Int = 10,
         defaultTags: [String] = [],
         sortOrder: BookmarkSortOrder = .dateDescending,
         groupBy: BookmarkGroupBy = .none
     ) {
         self.userId = userId
         self.isPremium = isPremium
-        self.bookmarkLimit = isPremium ? 1000 : bookmarkLimit
+        self.bookmarkLimit = 10 // Standard limit for all users
         self.defaultTags = defaultTags
         self.sortOrder = sortOrder
         self.groupBy = groupBy

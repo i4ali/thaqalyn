@@ -248,15 +248,15 @@ struct FullScreenCommentaryView: View {
     }
     
     private func readingTextContent(_ text: String) -> some View {
-        VStack(alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading, spacing: 18) {
             ForEach(Array(formattedParagraphs(from: text).enumerated()), id: \.offset) { index, paragraph in
-                VStack(alignment: .leading, spacing: 12) {
+                VStack(alignment: .leading, spacing: 8) {
                     
                     // Reading-optimized paragraph text with background
                     Text(paragraph.trimmingCharacters(in: .whitespacesAndNewlines))
-                        .font(.system(size: 18, weight: .regular, design: .default))
+                        .font(.system(size: 16, weight: .regular, design: .default))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(12) // Generous line spacing for readability
+                        .lineSpacing(8) // Optimized line spacing for readability
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, 20)

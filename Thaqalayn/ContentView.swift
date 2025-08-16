@@ -15,7 +15,6 @@ struct ContentView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
-    @ObservedObject private var premiumManager = PremiumManager.shared
     @State private var showingWelcome = false
     
     var body: some View {
@@ -48,14 +47,20 @@ struct ContentView: View {
         .onAppear {
             checkFirstLaunch()
         }
+        .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
+            showingWelcome = true
+        }
         .fullScreenCover(isPresented: $showingWelcome) {
             WelcomeView()
         }
     }
     
     private func checkFirstLaunch() {
+        // Always show welcome screen if user is not authenticated
         let hasShownWelcome = UserDefaults.standard.bool(forKey: "hasShownWelcome")
-        if !hasShownWelcome {
+        let supabaseService = SupabaseService.shared
+        
+        if !hasShownWelcome || !supabaseService.isAuthenticated {
             showingWelcome = true
         }
     }
@@ -625,7 +630,6 @@ struct ProfileMenuView: View {
     @StateObject private var supabaseService = SupabaseService.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var audioManager = AudioManager.shared
-    @ObservedObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var showingSignOutAlert = false
     @State private var showingAudioSettings = false
@@ -662,9 +666,9 @@ struct ProfileMenuView: View {
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(themeManager.primaryText)
                             
-                            Text(premiumManager.isPremiumUnlocked ? "Premium User" : "Free Account")
+                            Text("All Features Unlocked")
                                 .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(premiumManager.isPremiumUnlocked ? .green : themeManager.secondaryText)
+                                .foregroundColor(.green)
                         }
                     }
                     
@@ -684,14 +688,6 @@ struct ProfileMenuView: View {
                             action: { showingAudioSettings = true }
                         )
                         
-                        if bookmarkManager.preferences?.isPremium != true {
-                            ProfileMenuItem(
-                                icon: "crown.fill",
-                                title: "Upgrade to Premium",
-                                subtitle: "Unlimited bookmarks & features",
-                                action: { /* TODO: In-app purchase */ }
-                            )
-                        }
                         
                         ProfileMenuItem(
                             icon: "arrow.triangle.2.circlepath",
@@ -975,22 +971,6 @@ struct AudioSettingsView: View {
                             .padding(.horizontal, 20)
                             .padding(.vertical, 16)
                         }
-                        
-                        
-                        // Cache management
-                        AudioSettingCard(
-                            icon: "internaldrive.fill",
-                            title: "Cache Management",
-                            subtitle: "Used: \(audioManager.getCacheSize())"
-                        ) {
-                            Button("Clear Cache") {
-                                audioManager.clearAudioCache()
-                            }
-                            .foregroundColor(.red)
-                            .font(.system(size: 16, weight: .semibold))
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 16)
-                        }
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
@@ -1077,10 +1057,11 @@ struct AudioSettingCard<Content: View>: View {
                     }
                 }
                 .padding(.horizontal, 20)
-                .padding(.vertical, 16)
+                .padding(.vertical, 20)
+                .frame(minHeight: 60)
+                .contentShape(Rectangle())
             }
-            .buttonStyle(PlainButtonStyle())
-            .disabled(action == nil && content != nil)
+            .disabled(action == nil)
             
             if let content = content {
                 content()

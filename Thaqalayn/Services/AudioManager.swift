@@ -37,7 +37,6 @@ class AudioManager: NSObject, ObservableObject {
     private var currentVerses: [VerseWithTafsir] = []
     private var currentVerseIndex: Int = 0
     private var quranAlignData: QuranAlignTimingData?
-    private var premiumManager = PremiumManager.shared
     
     // MARK: - Audio Caching
     private var audioCache: [String: Data] = [:]
@@ -91,12 +90,6 @@ class AudioManager: NSObject, ObservableObject {
             object: nil
         )
         
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(premiumStatusChanged),
-            name: .premiumStatusChanged,
-            object: nil
-        )
     }
     
     // MARK: - Configuration Management
@@ -114,22 +107,7 @@ class AudioManager: NSObject, ObservableObject {
     }
     
     private func validateCurrentReciter() {
-        // Check if current reciter is accessible with current premium status
-        if !premiumManager.canAccessPremiumReciter(configuration.selectedReciter) {
-            print("⚠️ AudioManager: Current reciter \(configuration.selectedReciter.nameEnglish) is premium, switching to default")
-            
-            // Switch to default free reciter
-            let defaultReciter = AudioConfiguration.defaultReciter
-            configuration = AudioConfiguration(
-                selectedReciter: defaultReciter,
-                playbackSpeed: configuration.playbackSpeed,
-                repeatMode: configuration.repeatMode,
-                autoAdvanceDelay: configuration.autoAdvanceDelay,
-                backgroundPlayback: configuration.backgroundPlayback,
-                sleepTimer: configuration.sleepTimer
-            )
-            saveConfiguration()
-        }
+        // All reciters are now free - no validation needed
     }
     
     
@@ -461,13 +439,7 @@ class AudioManager: NSObject, ObservableObject {
     }
     
     func updateReciter(_ reciter: Reciter) {
-        // Check premium access before updating
-        guard premiumManager.canAccessPremiumReciter(reciter) else {
-            print("❌ AudioManager: Cannot access premium reciter \(reciter.nameEnglish) - premium not unlocked")
-            errorMessage = "Premium reciter access requires upgrade"
-            return
-        }
-        
+        // All reciters are now free - no premium validation needed
         configuration = AudioConfiguration(
             selectedReciter: reciter,
             playbackSpeed: configuration.playbackSpeed,
@@ -740,9 +712,4 @@ extension AudioManager {
         }
     }
     
-    @objc private func premiumStatusChanged(notification: Notification) {
-        Task { @MainActor in
-            validateCurrentReciter()
-        }
-    }
 }

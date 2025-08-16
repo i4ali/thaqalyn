@@ -170,19 +170,16 @@ struct WelcomeView: View {
                             )
                         }
                         
-                        // Continue as guest
-                        Button(action: {
-                            // Continue as guest - just dismiss welcome screen
-                            markWelcomeAsShown()
-                            dismiss()
-                        }) {
-                            HStack {
-                                Image(systemName: "arrow.right.circle")
-                                    .font(.system(size: 16, weight: .medium))
-                                Text("Continue as Guest")
-                                    .font(.system(size: 16, weight: .medium))
-                            }
-                            .foregroundColor(themeManager.tertiaryText)
+                        // Note about authentication requirement
+                        VStack(spacing: 8) {
+                            Text("Authentication Required")
+                                .font(.system(size: 14, weight: .semibold))
+                                .foregroundColor(themeManager.primaryText)
+                            
+                            Text("Please sign in or create an account to access Quranic commentary and sync your bookmarks across devices.")
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                                .multilineTextAlignment(.center)
                         }
                         .padding(.top, 8)
                     }

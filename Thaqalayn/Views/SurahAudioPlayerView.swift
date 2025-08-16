@@ -417,9 +417,7 @@ struct FullScreenAudioPlayerView: View {
 struct ReciterSelectionView: View {
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
-    @State private var showingPremiumUpgrade = false
     
     var body: some View {
         NavigationView {
@@ -440,15 +438,10 @@ struct ReciterSelectionView: View {
                         ForEach(Reciter.popularReciters) { reciter in
                             ReciterCard(
                                 reciter: reciter,
-                                isSelected: reciter.id == audioManager.configuration.selectedReciter.id,
-                                isPremiumUser: premiumManager.isPremiumUnlocked
+                                isSelected: reciter.id == audioManager.configuration.selectedReciter.id
                             ) {
-                                if !premiumManager.canAccessPremiumReciter(reciter) {
-                                    showingPremiumUpgrade = true
-                                } else {
-                                    audioManager.updateReciter(reciter)
-                                    dismiss()
-                                }
+                                audioManager.updateReciter(reciter)
+                                dismiss()
                             }
                         }
                     }
@@ -468,26 +461,14 @@ struct ReciterSelectionView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
-        .sheet(isPresented: $showingPremiumUpgrade) {
-            PremiumPurchaseSheet()
-        }
     }
 }
 
 struct ReciterCard: View {
     let reciter: Reciter
     let isSelected: Bool
-    let isPremiumUser: Bool
     let onSelect: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
-    
-    private var cardOpacity: Double {
-        return reciter.isPremium && !isPremiumUser ? 0.6 : 1.0
-    }
-    
-    private var isAccessible: Bool {
-        return !reciter.isPremium || isPremiumUser
-    }
     
     var body: some View {
         Button(action: onSelect) {
@@ -504,40 +485,13 @@ struct ReciterCard: View {
                         )
                         .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
                     
-                    // Premium crown badge
-                    if reciter.isPremium {
-                        VStack {
-                            HStack {
-                                Spacer()
-                                Image(systemName: "crown.fill")
-                                    .font(.system(size: 16, weight: .semibold))
-                                    .foregroundColor(.yellow)
-                                    .background(
-                                        Circle()
-                                            .fill(.black.opacity(0.7))
-                                            .frame(width: 24, height: 24)
-                                    )
-                                    .offset(x: -8, y: 8)
-                            }
-                            Spacer()
-                        }
-                        .frame(width: 80, height: 80)
-                    }
                 }
                 
                 VStack(spacing: 4) {
-                    HStack {
-                        Text(reciter.nameEnglish)
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(themeManager.primaryText)
-                            .multilineTextAlignment(.center)
-                        
-                        if reciter.isPremium && !isPremiumUser {
-                            Image(systemName: "lock.fill")
-                                .font(.system(size: 12, weight: .medium))
-                                .foregroundColor(.orange)
-                        }
-                    }
+                    Text(reciter.nameEnglish)
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+                        .multilineTextAlignment(.center)
                     
                     if !reciter.description.isEmpty {
                         Text(reciter.description)
@@ -547,21 +501,6 @@ struct ReciterCard: View {
                             .lineLimit(2)
                     }
                     
-                    if reciter.isPremium && !isPremiumUser {
-                        Text("Premium")
-                            .font(.system(size: 10, weight: .bold))
-                            .foregroundColor(.orange)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 2)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(.orange.opacity(0.1))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(.orange.opacity(0.3), lineWidth: 1)
-                                    )
-                            )
-                    }
                 }
             }
             .padding(16)
@@ -571,13 +510,11 @@ struct ReciterCard: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(
-                                isSelected ? Color(red: 0.39, green: 0.4, blue: 0.95) : 
-                                (reciter.isPremium && !isPremiumUser ? .orange.opacity(0.5) : themeManager.strokeColor),
+                                isSelected ? Color(red: 0.39, green: 0.4, blue: 0.95) : themeManager.strokeColor,
                                 lineWidth: isSelected ? 2 : 1
                             )
                     )
             )
-            .opacity(cardOpacity)
         }
         .buttonStyle(PlainButtonStyle())
     }

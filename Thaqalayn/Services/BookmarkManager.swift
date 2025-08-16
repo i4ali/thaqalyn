@@ -171,12 +171,11 @@ class BookmarkManager: ObservableObject {
             return false
         }
         
-        // Check bookmark limit for non-premium users
-        let isPremium = PremiumManager.shared.isPremiumUnlocked
-        let bookmarkLimit = isPremium ? 999 : 2
+        // Check bookmark limit - 10 bookmarks for all users
+        let bookmarkLimit = 10
         
-        if !isPremium && bookmarks.count >= bookmarkLimit {
-            errorMessage = "You've reached your bookmark limit (\(bookmarkLimit)). Upgrade to premium for unlimited bookmarks."
+        if bookmarks.count >= bookmarkLimit {
+            errorMessage = "You've reached your bookmark limit (\(bookmarkLimit) bookmarks)."
             return false
         }
         
@@ -306,23 +305,6 @@ class BookmarkManager: ObservableObject {
         return Array(allTags).sorted()
     }
     
-    // MARK: - Premium Features
-    
-    func upgradeToPremium() {
-        guard let currentPrefs = preferences else { return }
-        
-        preferences = UserBookmarkPreferences(
-            userId: currentPrefs.userId,
-            isPremium: true,
-            bookmarkLimit: 1000,
-            defaultTags: currentPrefs.defaultTags,
-            sortOrder: currentPrefs.sortOrder,
-            groupBy: currentPrefs.groupBy
-        )
-        
-        saveLocalPreferences()
-        print("🌟 Upgraded to premium")
-    }
     
     // MARK: - Debug & Reset Methods
     
