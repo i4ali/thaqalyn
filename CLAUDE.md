@@ -155,8 +155,8 @@ Thaqalayn/
 
 ## Supabase Integration ✅ FULLY COMPLETE
 
-- **Organization**: "i4ali's Org" (zijygqgebsdmibiwdxis)  
-- **Project**: "Thaqalayn" (awiuswwmvlmmvkkfghvc)
+- **Organization**: Configure in Config.swift
+- **Project**: Configure in Config.swift
 - **Database Schema**: Complete with RLS policies, triggers, security functions
 - **Sync Strategy**: Three-step sync (delete → upload → download) with conflict resolution
 - **Authentication**: Email/password, Apple Sign In, anonymous auth with upgrade paths
