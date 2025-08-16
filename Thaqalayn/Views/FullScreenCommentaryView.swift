@@ -147,7 +147,7 @@ struct FullScreenCommentaryView: View {
                 .padding(.horizontal, 24)
             }
             .padding(.bottom, 24)
-            .onChange(of: selectedLayer) { newLayer in
+            .onChange(of: selectedLayer) { _, newLayer in
                 withAnimation(.easeInOut(duration: 0.3)) {
                     proxy.scrollTo(newLayer, anchor: .center)
                 }

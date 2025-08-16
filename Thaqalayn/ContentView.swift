@@ -409,17 +409,15 @@ struct SurahListView: View {
                 .padding(.top, 20)
             }
             
-            // Hidden NavigationLink for programmatic navigation from bookmarks
-            NavigationLink(
-                destination: navigateToSurah.map { SurahDetailView(surahWithTafsir: $0, targetVerse: targetVerse) },
-                isActive: Binding(
-                    get: { navigateToSurah != nil },
-                    set: { if !$0 { navigateToSurah = nil; targetVerse = nil } }
-                )
-            ) {
-                EmptyView()
+            // Navigation destination for programmatic navigation from bookmarks
+            .navigationDestination(isPresented: Binding(
+                get: { navigateToSurah != nil },
+                set: { if !$0 { navigateToSurah = nil; targetVerse = nil } }
+            )) {
+                if let surah = navigateToSurah {
+                    SurahDetailView(surahWithTafsir: surah, targetVerse: targetVerse)
+                }
             }
-            .hidden()
         }
         .sheet(isPresented: $showingBookmarks) {
             BookmarksView(selectedSurahForNavigation: $navigateToSurah, targetVerse: $targetVerse)

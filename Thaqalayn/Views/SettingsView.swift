@@ -193,7 +193,9 @@ struct SettingsView: View {
         print("🧹 SettingsView: Starting clear all local data")
         
         // Clear BookmarkManager data
+        #if DEBUG
         BookmarkManager.shared.clearAllLocalData()
+        #endif
         
         // Clear other UserDefaults that might exist
         let domain = Bundle.main.bundleIdentifier!

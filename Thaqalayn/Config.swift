@@ -10,19 +10,17 @@ import Foundation
 struct Config {
     
     // MARK: - Supabase Configuration
-    // TODO: Add your Supabase credentials before building
     
-    static let supabaseURL = "YOUR_SUPABASE_URL_HERE"
-    static let supabaseAnonKey = "YOUR_SUPABASE_ANON_KEY_HERE"
+    static let supabaseURL = "https://awiuswwmvlmmvkkfghvc.supabase.co"
+    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3aXVzd3dtdmxtbXZra2ZnaHZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0MTcyNDIsImV4cCI6MjA2OTk5MzI0Mn0.RUnjQVQJp1q4pOwAdM4RHn2ndBQiZHZ80JlhwlOCeP4"
     
     // MARK: - Project Information
-    // TODO: Add your project information before building
     
     static let projectInfo = ProjectInfo(
-        id: "YOUR_PROJECT_ID_HERE",
+        id: "awiuswwmvlmmvkkfghvc",
         name: "Thaqalayn",
         region: "us-east-1",
-        organizationId: "YOUR_ORGANIZATION_ID_HERE"
+        organizationId: "zijygqgebsdmibiwdxis"
     )
 }
 
