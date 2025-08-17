@@ -944,7 +944,11 @@ struct TafsirLayerSelector: View {
         layer1: "Foundation commentary...",
         layer2: "Classical commentary...",
         layer3: "Contemporary commentary...",
-        layer4: "Ahlul Bayt commentary..."
+        layer4: "Ahlul Bayt commentary...",
+        layer1_urdu: "بنیادی تفسیر...",
+        layer2_urdu: "کلاسیکی تفسیر...",
+        layer3_urdu: "عصری تفسیر...",
+        layer4_urdu: "اہل بیت کی تفسیر..."
     )
     
     let sampleVerseWithTafsir = VerseWithTafsir(

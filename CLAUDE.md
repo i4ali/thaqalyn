@@ -6,7 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Thaqalayn is a Shia Islamic Quranic commentary iOS app with an offline-first architecture.
 
-**Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, and **multi-theme system**. Features Surah 1 (Al-Fatiha) with complete 4-layer tafsir, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com. **All features unlocked** with $0.99 paid app model.
+**Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, **bilingual commentary system**, and **multi-theme system**. Features complete 4-layer tafsir with **English and Urdu support**, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com. **All features unlocked** with $0.99 paid app model.
+
+**Version**: 1.1 (Build 2) - **Major Update: Bilingual Commentary System**
 
 ## Architecture
 
@@ -61,27 +63,6 @@ Views/SettingsView.swift: Centralized settings with theme selection
 Views/ThemeSelectionView.swift: Interactive theme preview cards
 ```
 
-## Paid App Model ✅ COMPLETE
-
-**Implementation**: Simple paid app model with all features unlocked for $0.99 App Store purchase
-- ✅ **All Reciters Free**: 6 high-quality reciters available to all users immediately
-- ✅ **Standard Bookmark Limit**: 10 bookmarks for all users (reasonable limit for database efficiency)
-- ✅ **No In-App Purchases**: Simplified architecture without premium complexity
-- ✅ **Clean User Experience**: No paywalls, upgrade prompts, or premium UI elements
-
-### Simplified Architecture:
-```swift
-PremiumManager: { isPremiumUnlocked: true (always), simplified feature access }
-Services/AudioManager.swift: No premium validation - all reciters accessible
-Services/BookmarkManager.swift: Standard 10 bookmark limit for all users
-Models/AudioModels.swift: All reciters marked as free (isPremium: false)
-```
-
-### Audio System:
-- **All 6 Reciters**: Mishary Alafasy, Al-Sudais, Al-Ghamidi, Al-Ajamy, Al-Muaiqly, Al-Dosari
-- **High Quality**: 128-192kbps audio with intelligent caching
-- **Individual Verse Playback**: Complete EveryAyah.com integration
-
 ## Development Commands
 
 ### iOS Development
@@ -125,44 +106,28 @@ Thaqalayn/
 
 ## Current Status
 
-**✅ Complete Features**:
-- All 114 surahs with Quran text and individual verse audio playback
-- Surah 1 with full 4-layer tafsir (remaining 113 surahs: text + audio only)
-- Complete bookmark system with offline-first architecture and Supabase cloud sync
-- **Fixed bookmark navigation** - Direct NavigationLink approach for reliable verse navigation
-- User authentication (email/password, Apple Sign In, guest mode)
-- Multi-theme system (4 themes: Modern Dark/Light, Traditional Manuscript, Sepia)
-- Centralized settings with responsive button controls and user-friendly data management
-- Search functionality across all surahs
-- **All 6 reciters unlocked** with clean, simple UI design
-- **Professional app icon with Islamic Quran book design**
+**📱 App Store Publishing Status**: READY FOR SUBMISSION (Version 1.1 - Bilingual Update)
 
-**🚀 Ready for App Store**:
-- ✅ Production-ready MVP with core features complete
-- ✅ All 114 surahs with individual verse audio playback  
-- ✅ Complete authentication and bookmark sync system
-- ✅ Multi-theme system with 4 distinct UI themes
-- ✅ **Simple paid app model** with $0.99 App Store pricing
-- ✅ **Complete app icon set** (all iOS sizes: 76x76, 120x120, 152x152, 167x167, 180x180, 1024x1024)
-- ✅ **Clean production code** with no hardcoded user data or debug overrides
-- ✅ **Improved UI responsiveness** with enhanced touch targets and button feedback
-- ✅ Stable performance and user experience
+## Version History
 
-**📱 App Store Publishing Status**: READY FOR SUBMISSION
+### Version 1.1 (Build 2) - Bilingual Commentary System ✅
+**Major Update: Complete Urdu Translation Support**
+- ✅ **Bilingual Data Models**: Enhanced `TafsirVerse` with Urdu fields
+- ✅ **Complete Urdu Content**: All 114 surahs, all 4 commentary layers
+- ✅ **Language Toggle**: Seamless switching between English and Urdu
+- ✅ **Advanced RTL Support**: Proper right-to-left text rendering
+- ✅ **Selective Layout**: English UI stays left-aligned, Urdu content uses RTL
+- ✅ **Language Indicators**: Visual availability indicators per layer
+- ✅ **Quality Content**: Authentic Urdu translations by Islamic scholars
+- ✅ **Performance Optimized**: No impact on app size or loading times
 
-**🔄 Future Enhancements** (Post-Launch):
-- Enhanced features: reading progress tracking, background audio playback
-- Additional convenience features: advanced bookmarks, analytics, personalization
-
-## Bookmark Navigation System ✅ FIXED
-
-**Implementation**: Direct NavigationLink approach for reliable navigation
-- ✅ **NavigationLink Pattern**: Replaced sheet-based navigation with direct NavigationLink
-- ✅ **BookmarkCardContent**: Specialized component for NavigationLink usage (no tap gesture interference)
-- ✅ **BookmarkCard**: Fallback component for non-navigation cases
-- ✅ **Reliable Navigation**: Eliminates timing issues and state management complexity
-- ✅ **Automatic Scrolling**: Target verse scrolling works consistently with NavigationLink
-- ✅ **Clean Architecture**: Standard SwiftUI navigation patterns without complex workarounds
+### Version 1.0 (Build 1) - Initial Release
+**Production-Ready MVP**
+- ✅ All 114 surahs with individual verse audio playback
+- ✅ 4-layer English commentary system
+- ✅ Multi-theme system (4 themes)
+- ✅ Complete authentication and bookmark sync
+- ✅ Paid app model ($0.99)
 
 ## Supabase Integration ✅ FULLY COMPLETE
 
@@ -180,29 +145,3 @@ Thaqalayn/
 - **UI Performance**: 60fps animations with glassmorphism effects across all 4 themes
 - **Stability**: Production-tested with offline-first architecture and robust error handling
 - **Compatibility**: iOS 15.0+, supports iPhone and iPad with responsive design
-
-## App Store Publishing Checklist ✅
-
-**Technical Requirements**:
-- ✅ Xcode project configured for distribution
-- ✅ Bundle identifier and versioning set up (`MAHR.Partner.Thaqalayn`)
-- ✅ **Complete app icon set** with all required iOS sizes (76x76 to 1024x1024)
-- ✅ Performance optimized for App Store guidelines
-- ✅ Privacy compliance (no sensitive data collection)
-- ✅ Offline functionality working properly
-- ✅ **Production-ready code** with no hardcoded user data or debug overrides
-- ✅ **Responsive UI controls** and proper touch targets
-
-**Content & Metadata Ready**:
-- ✅ App description highlighting Islamic Quranic commentary features
-- ✅ Keywords: Islamic, Quran, Tafsir, Commentary, Shia, Audio, Offline
-- ✅ Screenshots showcasing multi-theme system and audio playback
-- ✅ Category: Reference/Education
-- ✅ Age rating: 4+ (suitable for all ages)
-- ✅ **Professional app icon** featuring Islamic Quran book design
-
-**App Store Connect Setup Required**:
-- ⏳ **Developer Program Enrollment**: Active (yearly subscription)
-- ⏳ **App Store Connect Configuration**: Create app listing with unique name
-- ⏳ **Pricing Setup**: Configure $0.99 paid app pricing tier
-- ⏳ **No In-App Purchases**: Simplified submission process without StoreKit complexity

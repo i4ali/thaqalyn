@@ -139,10 +139,40 @@ struct TafsirData: Codable {
 }
 
 struct TafsirVerse: Codable {
+    // Existing English content
     let layer1: String
     let layer2: String
     let layer3: String
     let layer4: String
+    
+    // New Urdu content (optional for backward compatibility)
+    let layer1_urdu: String?
+    let layer2_urdu: String?
+    let layer3_urdu: String?
+    let layer4_urdu: String?
+    
+    // Helper method to get content by language and layer
+    func content(for layer: TafsirLayer, language: CommentaryLanguage) -> String {
+        switch (layer, language) {
+        case (.foundation, .english): return layer1
+        case (.foundation, .urdu): return layer1_urdu ?? layer1
+        case (.classical, .english): return layer2
+        case (.classical, .urdu): return layer2_urdu ?? layer2
+        case (.contemporary, .english): return layer3
+        case (.contemporary, .urdu): return layer3_urdu ?? layer3
+        case (.ahlulBayt, .english): return layer4
+        case (.ahlulBayt, .urdu): return layer4_urdu ?? layer4
+        }
+    }
+    
+    func hasUrduContent(for layer: TafsirLayer) -> Bool {
+        switch layer {
+        case .foundation: return layer1_urdu != nil
+        case .classical: return layer2_urdu != nil
+        case .contemporary: return layer3_urdu != nil
+        case .ahlulBayt: return layer4_urdu != nil
+        }
+    }
 }
 
 // MARK: - Display Models
@@ -399,5 +429,23 @@ enum TafsirLayer: String, CaseIterable {
         case .ahlulBayt:
             return "Hadith from Imams, theological concepts, spiritual guidance"
         }
+    }
+}
+
+// MARK: - Commentary Language Support
+
+enum CommentaryLanguage: String, CaseIterable, Codable {
+    case english = "en"
+    case urdu = "ur"
+    
+    var displayName: String {
+        switch self {
+        case .english: return "English"
+        case .urdu: return "اردو"
+        }
+    }
+    
+    var isRTL: Bool {
+        return self == .urdu
     }
 }

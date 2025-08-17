@@ -14,6 +14,7 @@ struct FullScreenCommentaryView: View {
     let initialLayer: TafsirLayer
     @State private var selectedLayer: TafsirLayer
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager()
     @Environment(\.dismiss) private var dismiss
     
     init(verse: VerseWithTafsir, surah: Surah, initialLayer: TafsirLayer) {
@@ -124,15 +125,39 @@ struct FullScreenCommentaryView: View {
             
             Spacer()
             
-            // Reading mode indicator
-            Image(systemName: "book.pages")
-                .font(.system(size: 20, weight: .semibold))
-                .foregroundColor(themeManager.tertiaryText)
-                .frame(width: 44, height: 44)
+            // Language toggle button
+            languageToggle
         }
         .padding(.horizontal, 24)
         .padding(.top, 16)
         .padding(.bottom, 20)
+    }
+    
+    // Language toggle button in header
+    private var languageToggle: some View {
+        Button(action: {
+            withAnimation(.spring(response: 0.3)) {
+                languageManager.toggleLanguage()
+            }
+        }) {
+            HStack(spacing: 4) {
+                Text(languageManager.selectedLanguage.displayName)
+                    .font(.system(size: 14, weight: .medium))
+                Image(systemName: "globe")
+                    .font(.system(size: 12))
+            }
+            .foregroundColor(themeManager.primaryText)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(themeManager.secondaryBackground.opacity(0.8))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+            )
+        }
     }
     
     private var compactLayerSelector: some View {
@@ -166,8 +191,15 @@ struct FullScreenCommentaryView: View {
             }
         }) {
             VStack(spacing: 6) {
-                Text(layerIcon(for: layer))
-                    .font(.system(size: 18))
+                HStack(spacing: 4) {
+                    Text(layerIcon(for: layer))
+                        .font(.system(size: 18))
+                    
+                    // Language availability indicators
+                    if let tafsir = verse.tafsir {
+                        layerAvailabilityIndicator(for: layer, tafsir: tafsir)
+                    }
+                }
                 
                 Text(layerShortTitle(for: layer))
                     .font(.system(size: 13, weight: .semibold))
@@ -193,14 +225,31 @@ struct FullScreenCommentaryView: View {
         .buttonStyle(PlainButtonStyle())
     }
     
+    // Show language availability in layer selector
+    private func layerAvailabilityIndicator(for layer: TafsirLayer, tafsir: TafsirVerse) -> some View {
+        HStack(spacing: 2) {
+            // English availability (always available)
+            Circle()
+                .fill(Color.green)
+                .frame(width: 4, height: 4)
+            
+            // Urdu availability
+            Circle()
+                .fill(tafsir.hasUrduContent(for: layer) ? Color.green : Color.gray.opacity(0.4))
+                .frame(width: 4, height: 4)
+        }
+    }
+    
     private var readingContent: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                if let tafsirText = DataManager.shared.getTafsirText(for: verse, layer: selectedLayer) {
-                    // Layer header with enhanced typography
+                if let tafsir = verse.tafsir {
+                    let tafsirText = tafsir.content(for: selectedLayer, language: languageManager.selectedLanguage)
+                    
+                    // Layer header with enhanced typography (always left-aligned)
                     readingLayerHeader
                     
-                    // Reading-optimized content
+                    // Reading-optimized content with selective RTL
                     readingTextContent(tafsirText)
                 } else {
                     noCommentaryView
@@ -210,6 +259,7 @@ struct FullScreenCommentaryView: View {
             .padding(.bottom, 60) // Extra bottom padding
         }
         .animation(.easeInOut(duration: 0.3), value: selectedLayer)
+        .animation(.easeInOut(duration: 0.3), value: languageManager.selectedLanguage)
     }
     
     private var readingLayerHeader: some View {
@@ -248,17 +298,19 @@ struct FullScreenCommentaryView: View {
     }
     
     private func readingTextContent(_ text: String) -> some View {
-        VStack(alignment: .leading, spacing: 18) {
+        VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 18) {
             ForEach(Array(formattedParagraphs(from: text).enumerated()), id: \.offset) { index, paragraph in
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 8) {
                     
-                    // Reading-optimized paragraph text with background
+                    // Reading-optimized paragraph text with background and selective RTL support
                     Text(paragraph.trimmingCharacters(in: .whitespacesAndNewlines))
-                        .font(.system(size: 16, weight: .regular, design: .default))
+                        .font(.system(size: 18, weight: .regular, design: .default))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(8) // Optimized line spacing for readability
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                         .fixedSize(horizontal: false, vertical: true)
+                        .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight) // Apply RTL only to text
                         .padding(.horizontal, 20)
                         .padding(.vertical, 16)
                         .background {
@@ -408,7 +460,11 @@ struct FullScreenCommentaryView: View {
         layer1: "In Surah An-Nisaa verse 2, Allah commands believers to act with utmost integrity when entrusted with the property of orphans. The verse begins with \"Wa atu al-yatama amwalahum\" – \"Give the orphans their properties\" – establishing a direct obligation to return wealth to those deprived of parental protection. The term al-yatama (orphans) carries immense weight in Islam, reflecting their vulnerable status and the divine emphasis on their rights. Historically, this verse addressed the pre-Islamic Arabian practice where guardians would exploit orphaned children's inheritance.",
         layer2: "Classical commentary...",
         layer3: "Contemporary commentary...",
-        layer4: "Ahlul Bayt commentary..."
+        layer4: "Ahlul Bayt commentary...",
+        layer1_urdu: "سورہ النساء آیت 2 میں، اللہ مومنوں کو یتیموں کی املاک کے ساتھ انتہائی دیانتداری سے کام کرنے کا حکم دیتا ہے۔",
+        layer2_urdu: "کلاسیکی تفسیر...",
+        layer3_urdu: "عصری تفسیر...",
+        layer4_urdu: "اہل بیت کی تفسیر..."
     )
     
     let sampleSurah = Surah(
