@@ -12,8 +12,7 @@ struct SurahDetailView: View {
     let targetVerse: Int?
     @State private var selectedVerse: VerseWithTafsir?
     @State private var showingTafsir = false
-    @State private var showingFullScreenCommentary = false
-    @State private var fullScreenLayer: TafsirLayer = .foundation
+    @State private var fullScreenCommentaryData: (verse: VerseWithTafsir, layer: TafsirLayer)?
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var audioManager = AudioManager.shared
@@ -22,6 +21,13 @@ struct SurahDetailView: View {
     init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil) {
         self.surahWithTafsir = surahWithTafsir
         self.targetVerse = targetVerse
+    }
+    
+    private var showingFullScreenCommentary: Binding<Bool> {
+        Binding<Bool>(
+            get: { fullScreenCommentaryData != nil },
+            set: { if !$0 { fullScreenCommentaryData = nil } }
+        )
     }
     
     var body: some View {
@@ -57,7 +63,7 @@ struct SurahDetailView: View {
                                     bookmarkManager: bookmarkManager
                                 ) {
                                     selectedVerse = verse
-                                    showingTafsir = true
+                                    fullScreenCommentaryData = (verse: verse, layer: .foundation)
                                 }
                                 .id("verse_\(verse.number)")
                             }
@@ -95,17 +101,12 @@ struct SurahDetailView: View {
                     .animation(.spring(response: 0.5, dampingFraction: 0.8), value: audioManager.currentPlayback != nil)
             }
         }
-        .sheet(isPresented: $showingTafsir) {
-            if let verse = selectedVerse {
-                ModernTafsirDetailView(verse: verse, surah: surahWithTafsir.surah)
-            }
-        }
-        .fullScreenCover(isPresented: $showingFullScreenCommentary) {
-            if let verse = selectedVerse {
+        .fullScreenCover(isPresented: showingFullScreenCommentary) {
+            if let data = fullScreenCommentaryData {
                 FullScreenCommentaryView(
-                    verse: verse, 
+                    verse: data.verse, 
                     surah: surahWithTafsir.surah, 
-                    initialLayer: fullScreenLayer
+                    initialLayer: data.layer
                 )
             }
         }

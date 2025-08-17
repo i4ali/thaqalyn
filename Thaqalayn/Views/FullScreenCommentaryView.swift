@@ -225,9 +225,9 @@ struct FullScreenCommentaryView: View {
                     .shadow(color: layerShadowColor(for: selectedLayer), radius: 8)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    // Text(selectedLayer.title)
-                    //     .font(.system(size: 22, weight: .bold))
-                    //     .foregroundColor(themeManager.primaryText)
+                    Text(selectedLayer.title)
+                        .font(.system(size: 22, weight: .bold))
+                        .foregroundColor(themeManager.primaryText)
                     
                     Text(selectedLayer.description)
                         .font(.system(size: 16, weight: .medium))
