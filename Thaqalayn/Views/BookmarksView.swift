@@ -7,9 +7,8 @@
 
 import SwiftUI
 
+
 struct BookmarksView: View {
-    @Binding var selectedSurahForNavigation: SurahWithTafsir?
-    @Binding var targetVerse: Int?
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var dataManager = DataManager.shared
@@ -17,12 +16,6 @@ struct BookmarksView: View {
     @State private var showingBookmarkDetail = false
     @State private var searchText = ""
     @State private var selectedSortOrder: BookmarkSortOrder = .dateDescending
-    @Environment(\.dismiss) private var dismiss
-    
-    init(selectedSurahForNavigation: Binding<SurahWithTafsir?> = .constant(nil), targetVerse: Binding<Int?> = .constant(nil)) {
-        self._selectedSurahForNavigation = selectedSurahForNavigation
-        self._targetVerse = targetVerse
-    }
     
     var body: some View {
         ZStack {
@@ -42,7 +35,6 @@ struct BookmarksView: View {
                 // Header
                 ModernBookmarksHeader(
                     bookmarkCount: filteredBookmarks.count,
-                    onBack: { dismiss() },
                     onSortChange: { selectedSortOrder = $0 }
                 )
                 
@@ -54,47 +46,14 @@ struct BookmarksView: View {
                 } else {
                     BookmarksListView(
                         bookmarks: filteredBookmarks,
-                        onBookmarkTap: { bookmark in
-                            // Create SurahWithTafsir for navigation
-                            if let surahWithTafsir = dataManager.availableSurahs.first(where: { $0.surah.number == bookmark.surahNumber }) {
-                                selectedSurahForNavigation = surahWithTafsir
-                                targetVerse = bookmark.verseNumber
-                                dismiss()
-                            } else if let quranData = dataManager.quranData {
-                                // Create SurahWithTafsir without tafsir data
-                                if let surah = quranData.surahs.first(where: { $0.number == bookmark.surahNumber }),
-                                   let surahVerses = quranData.verses[String(bookmark.surahNumber)] {
-                                    
-                                    var verses: [VerseWithTafsir] = []
-                                    for i in 1...surah.versesCount {
-                                        let verseKey = String(i)
-                                        if let verse = surahVerses[verseKey] {
-                                            let verseWithTafsir = VerseWithTafsir(
-                                                number: i,
-                                                verse: verse,
-                                                tafsir: nil
-                                            )
-                                            verses.append(verseWithTafsir)
-                                        }
-                                    }
-                                    
-                                    let surahWithTafsir = SurahWithTafsir(surah: surah, verses: verses)
-                                    selectedSurahForNavigation = surahWithTafsir
-                                    targetVerse = bookmark.verseNumber
-                                    dismiss()
-                                }
-                            } else {
-                                // Fallback to show bookmark detail
-                                selectedBookmark = bookmark
-                                showingBookmarkDetail = true
-                            }
-                        }
+                        dataManager: dataManager
                     )
                 }
                 
             }
         }
-        .navigationBarHidden(true)
+        .navigationTitle("Bookmarks")
+        .navigationBarTitleDisplayMode(.large)
         .preferredColorScheme(themeManager.colorScheme)
         .searchable(text: $searchText, prompt: "Search bookmarks...")
         .sheet(isPresented: $showingBookmarkDetail) {
@@ -122,7 +81,6 @@ struct BookmarksView: View {
 
 struct ModernBookmarksHeader: View {
     let bookmarkCount: Int
-    let onBack: () -> Void
     let onSortChange: (BookmarkSortOrder) -> Void
     @State private var showingSortOptions = false
     @State private var showingClearAllConfirmation = false
@@ -131,33 +89,12 @@ struct ModernBookmarksHeader: View {
     
     var body: some View {
         VStack(spacing: 16) {
-            // Navigation and title
+            // Title and sort button
             HStack {
-                Button(action: onBack) {
-                    Image(systemName: "xmark")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .frame(width: 36, height: 36)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        )
-                }
-                
-                Spacer()
-                
                 VStack(spacing: 4) {
-                    Text("Bookmarks")
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                    
                     if bookmarkCount > 0 {
                         Text("\(bookmarkCount) saved")
-                            .font(.system(size: 12, weight: .medium))
+                            .font(.system(size: 14, weight: .medium))
                             .foregroundColor(themeManager.secondaryText)
                     }
                 }
@@ -214,7 +151,7 @@ struct ModernBookmarksHeader: View {
 
 struct BookmarksListView: View {
     let bookmarks: [Bookmark]
-    let onBookmarkTap: (Bookmark) -> Void
+    let dataManager: DataManager
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @State private var bookmarkToDelete: Bookmark?
@@ -224,14 +161,26 @@ struct BookmarksListView: View {
         ScrollView {
             LazyVStack(spacing: 16) {
                 ForEach(bookmarks) { bookmark in
-                    BookmarkCard(
-                        bookmark: bookmark,
-                        onTap: { onBookmarkTap(bookmark) },
-                        onDelete: { 
-                            bookmarkToDelete = bookmark
-                            showingDeleteConfirmation = true
+                    if let surahWithTafsir = createSurahWithTafsir(for: bookmark) {
+                        NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: bookmark.verseNumber)) {
+                            BookmarkCardContent(
+                                bookmark: bookmark,
+                                onDelete: { 
+                                    bookmarkToDelete = bookmark
+                                    showingDeleteConfirmation = true
+                                }
+                            )
                         }
-                    )
+                        .buttonStyle(PlainButtonStyle())
+                    } else {
+                        BookmarkCard(
+                            bookmark: bookmark,
+                            onDelete: { 
+                                bookmarkToDelete = bookmark
+                                showingDeleteConfirmation = true
+                            }
+                        )
+                    }
                 }
             }
             .padding(.horizontal, 20)
@@ -251,11 +200,150 @@ struct BookmarksListView: View {
             }
         }
     }
+    
+    private func createSurahWithTafsir(for bookmark: Bookmark) -> SurahWithTafsir? {
+        // First try to find in available surahs (with tafsir)
+        if let surahWithTafsir = dataManager.availableSurahs.first(where: { $0.surah.number == bookmark.surahNumber }) {
+            return surahWithTafsir
+        }
+        
+        // Fallback to create from quran data (without tafsir)
+        guard let quranData = dataManager.quranData,
+              let surah = quranData.surahs.first(where: { $0.number == bookmark.surahNumber }),
+              let surahVerses = quranData.verses[String(bookmark.surahNumber)] else {
+            return nil
+        }
+        
+        var verses: [VerseWithTafsir] = []
+        for i in 1...surah.versesCount {
+            let verseKey = String(i)
+            if let verse = surahVerses[verseKey] {
+                let verseWithTafsir = VerseWithTafsir(
+                    number: i,
+                    verse: verse,
+                    tafsir: nil
+                )
+                verses.append(verseWithTafsir)
+            }
+        }
+        
+        return SurahWithTafsir(surah: surah, verses: verses)
+    }
+}
+
+struct BookmarkCardContent: View {
+    let bookmark: Bookmark
+    let onDelete: () -> Void
+    @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var bookmarkManager = BookmarkManager.shared
+    @State private var isPressed = false
+    @State private var showingDeleteButton = false
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            // Header with surah info and delete button
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(bookmark.surahName)
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+                    
+                    Text("Verse \(bookmark.verseNumber)")
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                }
+                
+                Spacer()
+                
+                HStack(spacing: 8) {
+                    if showingDeleteButton {
+                        Button(action: onDelete) {
+                            Image(systemName: "trash")
+                                .font(.system(size: 14))
+                                .foregroundColor(.red)
+                                .frame(width: 32, height: 32)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(Color.red.opacity(0.1))
+                                )
+                        }
+                        .transition(.scale.combined(with: .opacity))
+                    }
+                    
+                    Button(action: onDelete) {
+                        Image(systemName: "heart.fill")
+                            .font(.system(size: 14))
+                            .foregroundColor(.pink)
+                    }
+                }
+            }
+            
+            // Verse translation preview
+            Text(bookmark.verseTranslation)
+                .font(.system(size: 14, weight: .medium))
+                .foregroundColor(themeManager.secondaryText)
+                .lineLimit(2)
+                .multilineTextAlignment(.leading)
+            
+            // Tags if any
+            if !bookmark.tags.isEmpty {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(bookmark.tags, id: \.self) { tag in
+                            Text(tag)
+                                .font(.system(size: 10, weight: .medium))
+                                .foregroundColor(themeManager.primaryText)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 4)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(themeManager.accentGradient)
+                                )
+                        }
+                    }
+                    .padding(.horizontal, 1)
+                }
+            }
+            
+            // Date
+            HStack {
+                Spacer()
+                Text(bookmark.createdAt, style: .date)
+                    .font(.system(size: 10, weight: .medium))
+                    .foregroundColor(themeManager.tertiaryText)
+            }
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(themeManager.glassEffect)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+        )
+        .scaleEffect(isPressed ? 0.98 : 1.0)
+        .animation(.easeInOut(duration: 0.1), value: isPressed)
+        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: showingDeleteButton)
+        .onLongPressGesture(minimumDuration: 0.5) {
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                showingDeleteButton.toggle()
+            }
+        }
+        .gesture(
+            DragGesture()
+                .onChanged { _ in
+                    isPressed = true
+                }
+                .onEnded { _ in
+                    isPressed = false
+                }
+        )
+    }
 }
 
 struct BookmarkCard: View {
     let bookmark: Bookmark
-    let onTap: () -> Void
     let onDelete: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
@@ -358,9 +446,8 @@ struct BookmarkCard: View {
                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                     showingDeleteButton = false
                 }
-            } else {
-                onTap()
             }
+            // This is the fallback case - no navigation here
         }
         .gesture(
             DragGesture()

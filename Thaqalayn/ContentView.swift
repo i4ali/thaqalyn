@@ -208,9 +208,6 @@ struct SurahListView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @State private var searchText = ""
-    @State private var showingBookmarks = false
-    @State private var navigateToSurah: SurahWithTafsir?
-    @State private var targetVerse: Int?
     @State private var showingAuthentication = false
     @State private var showingSettings = false
     
@@ -233,7 +230,7 @@ struct SurahListView: View {
                     
                     HStack(spacing: 12) {
                         // Bookmarks button
-                        Button(action: { showingBookmarks = true }) {
+                        NavigationLink(destination: BookmarksView()) {
                             ZStack {
                                 Image(systemName: "heart")
                                     .font(.system(size: 18, weight: .semibold))
@@ -409,18 +406,6 @@ struct SurahListView: View {
                 .padding(.top, 20)
             }
             
-            // Navigation destination for programmatic navigation from bookmarks
-            .navigationDestination(isPresented: Binding(
-                get: { navigateToSurah != nil },
-                set: { if !$0 { navigateToSurah = nil; targetVerse = nil } }
-            )) {
-                if let surah = navigateToSurah {
-                    SurahDetailView(surahWithTafsir: surah, targetVerse: targetVerse)
-                }
-            }
-        }
-        .sheet(isPresented: $showingBookmarks) {
-            BookmarksView(selectedSurahForNavigation: $navigateToSurah, targetVerse: $targetVerse)
         }
         .overlay(alignment: .bottom) {
             if let syncStatus = bookmarkManager.syncStatus {
