@@ -106,9 +106,19 @@ Thaqalayn/
 
 ## Current Status
 
-**📱 App Store Publishing Status**: READY FOR SUBMISSION (Version 1.1 - Bilingual Update)
+**📱 App Store Publishing Status**: READY FOR SUBMISSION (Version 1.1 - Account Deletion Compliance Update)
 
 ## Version History
+
+### Version 1.1 (Build 3) - Account Deletion Compliance ✅
+**App Store Review Compliance: Complete Account Deletion**
+- ✅ **Complete Account Deletion**: Comprehensive user data removal from all tables
+- ✅ **AccountDeletionView**: Multi-step confirmation flow with warnings
+- ✅ **Database Functions**: `delete_user_account_complete()` removes all user data
+- ✅ **App Store Compliance**: Meets Guideline 5.1.1(v) account deletion requirements
+- ✅ **Guest Mode Support**: Core Quran access without authentication requirement
+- ✅ **Data Integrity**: Clean error handling without fallback logic
+- ✅ **Comprehensive Coverage**: Deletes from bookmarks, bookmark_collections, user_preferences, auth.users
 
 ### Version 1.1 (Build 2) - Bilingual Commentary System ✅
 **Major Update: Complete Urdu Translation Support**
@@ -145,3 +155,23 @@ Thaqalayn/
 - **UI Performance**: 60fps animations with glassmorphism effects across all 4 themes
 - **Stability**: Production-tested with offline-first architecture and robust error handling
 - **Compatibility**: iOS 15.0+, supports iPhone and iPad with responsive design
+
+## Critical Development Guidelines
+
+### ⚠️ NO FALLBACK LOGIC UNLESS EXPLICITLY REQUESTED ⚠️
+
+**IMPORTANT**: Do not add any fallback logic, alternative implementations, or graceful degradation patterns unless explicitly asked. When operations fail, throw appropriate errors and let the caller handle them.
+
+**Examples of what NOT to do**:
+- ❌ Adding `try-catch` blocks with alternative implementations
+- ❌ Providing "backup" methods when primary fails
+- ❌ Silently degrading functionality when errors occur
+- ❌ Creating "safe" versions that skip critical steps
+
+**Correct approach**:
+- ✅ Throw clear, descriptive errors when operations fail
+- ✅ Let calling code decide how to handle failures
+- ✅ Maintain data integrity over graceful degradation
+- ✅ Fail fast and fail clearly
+
+**Rationale**: Fallback logic can mask critical failures, lead to data inconsistency, and make debugging difficult. Clean error handling ensures problems are caught early and addressed properly.

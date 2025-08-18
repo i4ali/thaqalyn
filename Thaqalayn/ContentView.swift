@@ -56,11 +56,10 @@ struct ContentView: View {
     }
     
     private func checkFirstLaunch() {
-        // Always show welcome screen if user is not authenticated
+        // Only show welcome screen on first launch, not for authentication
         let hasShownWelcome = UserDefaults.standard.bool(forKey: "hasShownWelcome")
-        let supabaseService = SupabaseService.shared
         
-        if !hasShownWelcome || !supabaseService.isAuthenticated {
+        if !hasShownWelcome {
             showingWelcome = true
         }
     }
@@ -616,6 +615,7 @@ struct ProfileMenuView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showingSignOutAlert = false
     @State private var showingAudioSettings = false
+    @State private var showingAccountDeletion = false
     
     var body: some View {
         NavigationView {
@@ -690,6 +690,14 @@ struct ProfileMenuView: View {
                             isDestructive: true,
                             action: { showingSignOutAlert = true }
                         )
+                        
+                        ProfileMenuItem(
+                            icon: "trash.fill",
+                            title: "Delete Account",
+                            subtitle: "Permanently remove account and data",
+                            isDestructive: true,
+                            action: { showingAccountDeletion = true }
+                        )
                     }
                     
                     Spacer()
@@ -728,6 +736,9 @@ struct ProfileMenuView: View {
         }
         .sheet(isPresented: $showingAudioSettings) {
             AudioSettingsView()
+        }
+        .sheet(isPresented: $showingAccountDeletion) {
+            AccountDeletionView()
         }
     }
     

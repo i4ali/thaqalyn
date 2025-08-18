@@ -308,7 +308,6 @@ class BookmarkManager: ObservableObject {
     
     // MARK: - Debug & Reset Methods
     
-    #if DEBUG
     func clearAllLocalData() {
         // Clear all local bookmarks
         bookmarks.removeAll()
@@ -334,7 +333,6 @@ class BookmarkManager: ObservableObject {
         
         print("🧹 BookmarkManager: Cleared all local data")
     }
-    #endif
     
     // MARK: - Sync Management
     

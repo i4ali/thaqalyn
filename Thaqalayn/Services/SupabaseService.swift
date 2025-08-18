@@ -174,6 +174,34 @@ class SupabaseService: ObservableObject {
         isLoading = false
     }
     
+    func deleteAccount() async throws {
+        guard isAuthenticated, let userId = currentUser?.id else {
+            throw SupabaseError.notAuthenticated
+        }
+        
+        isLoading = true
+        errorMessage = nil
+        
+        do {
+            // Call the complete deletion function - no fallbacks
+            let result: String = try await client.rpc("delete_user_account_complete", params: ["user_id_param": userId.uuidString]).execute().value
+            
+            print("✅ Complete account deletion result: \(result)")
+            
+            // Clear local state
+            self.currentUser = nil
+            self.isAuthenticated = false
+            
+            print("✅ Account deleted successfully")
+        } catch {
+            self.errorMessage = "Failed to delete account: \(error.localizedDescription)"
+            print("❌ Account deletion error: \(error)")
+            throw error
+        }
+        
+        isLoading = false
+    }
+    
     // MARK: - Database Operations
     
     func getClient() -> SupabaseClient {

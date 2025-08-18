@@ -125,16 +125,17 @@ struct WelcomeView: View {
                         .padding(.horizontal, 20)
                     }
                     
-                    // Authentication options
+                    // Access options
                     VStack(spacing: 20) {
-                        // Sign up button
+                        // Continue as Guest button (primary)
                         Button(action: {
-                            showingAuthentication = true
+                            markWelcomeAsShown()
+                            dismiss()
                         }) {
                             HStack {
-                                Image(systemName: "person.badge.plus")
+                                Image(systemName: "book.closed")
                                     .font(.system(size: 18, weight: .semibold))
-                                Text("Create Account")
+                                Text("Continue as Guest")
                                     .font(.system(size: 18, weight: .semibold))
                             }
                             .foregroundColor(.white)
@@ -145,6 +146,29 @@ struct WelcomeView: View {
                                     .fill(themeManager.purpleGradient)
                             )
                             .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 12)
+                        }
+                        
+                        // Sign up button
+                        Button(action: {
+                            showingAuthentication = true
+                        }) {
+                            HStack {
+                                Image(systemName: "person.badge.plus")
+                                    .font(.system(size: 18, weight: .semibold))
+                                Text("Create Account")
+                                    .font(.system(size: 18, weight: .semibold))
+                            }
+                            .foregroundColor(themeManager.primaryText)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .fill(themeManager.glassEffect)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .stroke(themeManager.strokeColor, lineWidth: 1.5)
+                                    )
+                            )
                         }
                         
                         // Sign in button
@@ -170,13 +194,13 @@ struct WelcomeView: View {
                             )
                         }
                         
-                        // Note about authentication requirement
+                        // Note about account benefits (optional)
                         VStack(spacing: 8) {
-                            Text("Authentication Required")
+                            Text("Account Benefits")
                                 .font(.system(size: 14, weight: .semibold))
                                 .foregroundColor(themeManager.primaryText)
                             
-                            Text("Please sign in or create an account to access Quranic commentary and sync your bookmarks across devices.")
+                            Text("Create an account to sync your bookmarks across devices and access additional features.")
                                 .font(.system(size: 12, weight: .medium))
                                 .foregroundColor(themeManager.secondaryText)
                                 .multilineTextAlignment(.center)
