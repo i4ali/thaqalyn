@@ -33,7 +33,6 @@ ENV/
 .env.production
 
 # Generated Data Files
-tafsir_*.json
 generation.log
 validation_report_*.json
 
@@ -105,3 +104,6 @@ Carthage/Build/
 
 # Logs
 *.log
+
+# Config 
+Thaqalayn/Config.swift 
