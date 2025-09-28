@@ -21,7 +21,7 @@ def run_translation(file_path):
         # Run the translation script
         result = subprocess.run([
             sys.executable, 
-            'translate_tafsir.py', 
+            'scripts/translate_tafsir.py', 
             file_path
         ], capture_output=True, text=True, encoding='utf-8')
         
@@ -41,7 +41,8 @@ def main():
     """Main function to process all tafsir files"""
     
     # Define the data directory path
-    data_dir = "/Users/Imran.Ali/Documents/development/Thaqalayn/Thaqalayn/Thaqalayn/Data"
+    # data_dir = "/Users/Imran.Ali/Documents/development/Thaqalayn/Thaqalayn/Thaqalayn/Data"
+    data_dir = "/Users/muhammadimranali/Documents/development/thaqalyn/Thaqalayn/Thaqalayn/Data"
     
     # Check if data directory exists
     if not Path(data_dir).exists():

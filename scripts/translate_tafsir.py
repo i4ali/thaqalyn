@@ -6,28 +6,28 @@ Adds Urdu translations for all 4 tafsir layers using Google Translate
 
 import json
 import sys
-import time
+import asyncio
 from googletrans import Translator
 from pathlib import Path
 
-def translate_to_urdu(text, translator, max_retries=3):
-    """Translate English text to Urdu with retry logic"""
+async def translate_to_urdu(text, translator, max_retries=3):
+    """Translate English text to Urdu with retry logic (async)"""
     for attempt in range(max_retries):
         try:
             # Add delay to avoid rate limiting
-            time.sleep(0.5)
-            result = translator.translate(text, src='en', dest='ur')
+            await asyncio.sleep(0.5)
+            result = await translator.translate(text, src='en', dest='ur')
             return result.text
         except Exception as e:
             print(f"Translation attempt {attempt + 1} failed: {e}")
             if attempt < max_retries - 1:
-                time.sleep(2)  # Wait longer between retries
+                await asyncio.sleep(2)  # Wait longer between retries
             else:
                 print(f"Failed to translate after {max_retries} attempts: {text[:100]}...")
                 return f"[Translation failed: {text[:50]}...]"
 
-def process_tafsir_file(file_path):
-    """Process a tafsir JSON file and add Urdu translations"""
+async def process_tafsir_file(file_path):
+    """Process a tafsir JSON file and add Urdu translations (async)"""
     print(f"Processing {file_path}...")
     
     # Load the JSON file
@@ -60,7 +60,9 @@ def process_tafsir_file(file_path):
         print(f"Translating verse {verse_num}...")
         
         # Translate each layer
-        layers = ['layer1', 'layer2', 'layer3', 'layer4']
+        # layers = ['layer1', 'layer2', 'layer3', 'layer4']
+        layers = ['layer5']
+
         
         for layer in layers:
             if layer in verse_data:
@@ -73,7 +75,7 @@ def process_tafsir_file(file_path):
                     continue
                 
                 print(f"  Translating {layer}...")
-                urdu_translation = translate_to_urdu(english_text, translator)
+                urdu_translation = await translate_to_urdu(english_text, translator)
                 verse_data[urdu_key] = urdu_translation
             else:
                 print(f"  Warning: {layer} not found in verse {verse_num}")
@@ -109,7 +111,7 @@ def main():
     print("Starting Urdu translation process...")
     print("This may take several minutes depending on the number of verses...")
     
-    success = process_tafsir_file(file_path)
+    success = asyncio.run(process_tafsir_file(file_path))
     
     if success:
         print("\n✅ Translation completed successfully!")

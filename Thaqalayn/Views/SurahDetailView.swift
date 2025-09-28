@@ -588,6 +588,7 @@ struct ModernTafsirTabs: View {
         case .classical: return "📚"
         case .contemporary: return "🌍"
         case .ahlulBayt: return "⭐"
+        case .comparative: return "⚖️"
         }
     }
     
@@ -597,6 +598,7 @@ struct ModernTafsirTabs: View {
         case .classical: return "Classical"
         case .contemporary: return "Modern"
         case .ahlulBayt: return "Ahlul Bayt"
+        case .comparative: return "Comparative"
         }
     }
 }
@@ -673,6 +675,7 @@ struct ModernTafsirContent: View {
         case .classical: return "📚"
         case .contemporary: return "🌍"
         case .ahlulBayt: return "⭐"
+        case .comparative: return "⚖️"
         }
     }
     
@@ -686,6 +689,8 @@ struct ModernTafsirContent: View {
             return LinearGradient(colors: [Color.orange, Color.yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
         case .ahlulBayt:
             return LinearGradient(colors: [Color.purple, Color.pink], startPoint: .topLeading, endPoint: .bottomTrailing)
+        case .comparative:
+            return LinearGradient(colors: [Color.indigo, Color.teal], startPoint: .topLeading, endPoint: .bottomTrailing)
         }
     }
     
@@ -695,6 +700,7 @@ struct ModernTafsirContent: View {
         case .classical: return .green.opacity(0.3)
         case .contemporary: return .orange.opacity(0.3)
         case .ahlulBayt: return .purple.opacity(0.3)
+        case .comparative: return .indigo.opacity(0.3)
         }
     }
 }
@@ -945,10 +951,12 @@ struct TafsirLayerSelector: View {
         layer2: "Classical commentary...",
         layer3: "Contemporary commentary...",
         layer4: "Ahlul Bayt commentary...",
+        layer5: "**Shia Analysis**: Focus on divine justice and Imamate principles. **Sunni Analysis**: Emphasis on Caliphate and community consensus. **Common Ground**: Both traditions share core theological foundations while differing in leadership concepts and jurisprudential approaches.",
         layer1_urdu: "بنیادی تفسیر...",
         layer2_urdu: "کلاسیکی تفسیر...",
         layer3_urdu: "عصری تفسیر...",
-        layer4_urdu: "اہل بیت کی تفسیر..."
+        layer4_urdu: "اہل بیت کی تفسیر...",
+        layer5_urdu: "**شیعہ تجزیہ**: الہی عدل اور امامت کے اصولوں پر توجہ۔ **سنی تجزیہ**: خلافت اور اجماع امت پر زور۔"
     )
     
     let sampleVerseWithTafsir = VerseWithTafsir(

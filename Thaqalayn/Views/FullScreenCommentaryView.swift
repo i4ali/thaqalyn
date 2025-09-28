@@ -409,6 +409,7 @@ struct FullScreenCommentaryView: View {
         case .classical: return "📚"
         case .contemporary: return "🌍"
         case .ahlulBayt: return "⭐"
+        case .comparative: return "⚖️"
         }
     }
     
@@ -418,6 +419,7 @@ struct FullScreenCommentaryView: View {
         case .classical: return "Classical"
         case .contemporary: return "Modern"
         case .ahlulBayt: return "Ahlul Bayt"
+        case .comparative: return "Comparative"
         }
     }
     
@@ -431,6 +433,8 @@ struct FullScreenCommentaryView: View {
             return LinearGradient(colors: [.orange, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
         case .ahlulBayt:
             return LinearGradient(colors: [.purple, .pink], startPoint: .topLeading, endPoint: .bottomTrailing)
+        case .comparative:
+            return LinearGradient(colors: [.indigo, .teal], startPoint: .topLeading, endPoint: .bottomTrailing)
         }
     }
     
@@ -440,6 +444,7 @@ struct FullScreenCommentaryView: View {
         case .classical: return .green.opacity(0.3)
         case .contemporary: return .orange.opacity(0.3)
         case .ahlulBayt: return .purple.opacity(0.3)
+        case .comparative: return .indigo.opacity(0.3)
         }
     }
 }
@@ -461,10 +466,12 @@ struct FullScreenCommentaryView: View {
         layer2: "Classical commentary...",
         layer3: "Contemporary commentary...",
         layer4: "Ahlul Bayt commentary...",
+        layer5: "**Shia Perspective**: Classical Shia scholars like Al-Tabatabai emphasize the verse's connection to divine justice (adl), viewing orphan protection as a fundamental test of societal righteousness. The Imams stressed that violating orphan rights is among the gravest sins. **Sunni Perspective**: Sunni commentators like Ibn Kathir focus on the legal framework, emphasizing the guardian's fiduciary duty and the severe punishment for those who consume orphan wealth unjustly. Both traditions agree on the verse's core message while differing in jurisprudential applications regarding guardianship laws and inheritance distribution.",
         layer1_urdu: "سورہ النساء آیت 2 میں، اللہ مومنوں کو یتیموں کی املاک کے ساتھ انتہائی دیانتداری سے کام کرنے کا حکم دیتا ہے۔",
         layer2_urdu: "کلاسیکی تفسیر...",
         layer3_urdu: "عصری تفسیر...",
-        layer4_urdu: "اہل بیت کی تفسیر..."
+        layer4_urdu: "اہل بیت کی تفسیر...",
+        layer5_urdu: "**شیعہ نقطہ نظر**: کلاسیکی شیعہ علماء جیسے الطباطبائی اس آیت کو الہی عدل سے جوڑتے ہیں۔ **سنی نقطہ نظر**: سنی مفسرین جیسے ابن کثیر قانونی فریم ورک پر توجہ دیتے ہیں۔"
     )
     
     let sampleSurah = Surah(

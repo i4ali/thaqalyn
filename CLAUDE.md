@@ -6,9 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Thaqalayn is a Shia Islamic Quranic commentary iOS app with an offline-first architecture.
 
-**Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, **bilingual commentary system**, and **multi-theme system**. Features complete 4-layer tafsir with **English and Urdu support**, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com. **All features unlocked** with $0.99 paid app model.
+**Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, **bilingual commentary system**, and **multi-theme system**. Features complete **5-layer tafsir** with **English and Urdu support**, including new **comparative Shia/Sunni analysis**, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com. **All features unlocked** with $0.99 paid app model.
 
-**Version**: 1.1 (Build 2) - **Major Update: Bilingual Commentary System**
+**Version**: 1.2 (Build 1) - **Major Update: 5-Layer Commentary System with Comparative Analysis**
 
 ## Architecture
 
@@ -17,11 +17,12 @@ Thaqalayn is a Shia Islamic Quranic commentary iOS app with an offline-first arc
 Al-Quran Cloud API → Python Scripts → JSON Files → iOS App Bundle → SwiftUI Views
 ```
 
-### Four-Layer Tafsir System
+### Five-Layer Tafsir System
 1. **Foundation Layer** - Simple explanations, historical context (🏛️)
 2. **Classical Shia Layer** - Tabatabai, Tabrisi perspectives (📚)
 3. **Contemporary Layer** - Modern scholars, scientific insights (🌍)
 4. **Ahlul Bayt Layer** - Hadith from 14 Infallibles, spiritual guidance (⭐)
+5. **Comparative Layer** - Balanced Shia/Sunni scholarly analysis (⚖️)
 
 ### Key Data Structures
 ```swift
@@ -106,9 +107,20 @@ Thaqalayn/
 
 ## Current Status
 
-**📱 App Store Publishing Status**: READY FOR SUBMISSION (Version 1.1 - Account Deletion Compliance Update)
+**📱 App Store Publishing Status**: READY FOR SUBMISSION (Version 1.2 - 5-Layer Commentary System)
 
 ## Version History
+
+### Version 1.2 (Build 1) - 5-Layer Commentary System ✅
+**Major Update: Comparative Shia/Sunni Analysis**
+- ✅ **5th Commentary Layer**: Added balanced comparative analysis between Shia and Sunni scholarly perspectives
+- ✅ **Bilingual Comparative Content**: English and Urdu support for comparative layer
+- ✅ **Scholarly Sources**: References authoritative scholars from both traditions (Tabatabai, Ibn Kathir, etc.)
+- ✅ **Respectful Discourse**: Academic tone emphasizing common ground and scholarly differences
+- ✅ **Complete Coverage**: Comparative commentary generated for all 114 surahs
+- ✅ **Seamless Integration**: New layer automatically appears in existing UI with indigo/teal theme
+- ✅ **Visual Identity**: ⚖️ scales icon representing balanced analysis
+- ✅ **Backward Compatibility**: Existing 4-layer data preserved and functional
 
 ### Version 1.1 (Build 3) - Account Deletion Compliance ✅
 **App Store Review Compliance: Complete Account Deletion**

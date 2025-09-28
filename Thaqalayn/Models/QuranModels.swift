@@ -144,12 +144,14 @@ struct TafsirVerse: Codable {
     let layer2: String
     let layer3: String
     let layer4: String
+    let layer5: String?
     
     // New Urdu content (optional for backward compatibility)
     let layer1_urdu: String?
     let layer2_urdu: String?
     let layer3_urdu: String?
     let layer4_urdu: String?
+    let layer5_urdu: String?
     
     // Helper method to get content by language and layer
     func content(for layer: TafsirLayer, language: CommentaryLanguage) -> String {
@@ -162,6 +164,8 @@ struct TafsirVerse: Codable {
         case (.contemporary, .urdu): return layer3_urdu ?? layer3
         case (.ahlulBayt, .english): return layer4
         case (.ahlulBayt, .urdu): return layer4_urdu ?? layer4
+        case (.comparative, .english): return layer5 ?? ""
+        case (.comparative, .urdu): return layer5_urdu ?? layer5 ?? ""
         }
     }
     
@@ -171,6 +175,7 @@ struct TafsirVerse: Codable {
         case .classical: return layer2_urdu != nil
         case .contemporary: return layer3_urdu != nil
         case .ahlulBayt: return layer4_urdu != nil
+        case .comparative: return layer5_urdu != nil
         }
     }
 }
@@ -404,6 +409,7 @@ enum TafsirLayer: String, CaseIterable {
     case classical = "layer2"
     case contemporary = "layer3"
     case ahlulBayt = "layer4"
+    case comparative = "layer5"
     
     var title: String {
         switch self {
@@ -415,6 +421,8 @@ enum TafsirLayer: String, CaseIterable {
             return "🌍 Contemporary"
         case .ahlulBayt:
             return "⭐ Ahlul Bayt"
+        case .comparative:
+            return "⚖️ Comparative"
         }
     }
     
@@ -428,6 +436,8 @@ enum TafsirLayer: String, CaseIterable {
             return "Modern scholars, scientific insights, social justice themes"
         case .ahlulBayt:
             return "Hadith from Imams, theological concepts, spiritual guidance"
+        case .comparative:
+            return "Shia vs Sunni scholarly perspectives"
         }
     }
 }

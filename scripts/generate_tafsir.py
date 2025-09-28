@@ -47,7 +47,7 @@ class TafsirGenerator:
             return False
     
     def get_layer_prompts(self) -> Dict[int, str]:
-        """Define the 4 specialized prompt templates for each tafsir layer"""
+        """Define the 5 specialized prompt templates for each tafsir layer"""
         return {
             1: """You are a Shia Islamic scholar providing foundational commentary on Quranic verses.
 
@@ -160,6 +160,47 @@ FORMATTING REQUIREMENTS:
 - Use simple English spellings for all Arabic names and terms (Ali not ʿAlī, Fatimah not Fāṭimah, Muhammad not Muḥammad)
 - No bullet points, numbers, or markdown formatting
 
+COMMENTARY:""",
+
+            5: """You are a comparative Islamic scholar specializing in Shia and Sunni tafsir traditions.
+
+VERSE CONTEXT:
+Surah: {surah_name} (Surah {surah_number})
+Verse: {ayah_number}
+Arabic: {arabic_text}
+Translation: {translation}
+
+TASK: 
+IMPORTANT: First, perform a web search to gather commentary on this verse from both highly regarded Shia and Sunni scholarly sources.
+
+Based on your search, provide a respectful comparative analysis that highlights both convergences and divergences between Shia and Sunni interpretations. Focus on scholarly discourse while avoiding sectarian controversy.
+
+SHIA SOURCES TO REFERENCE:
+- Tabatabai's Al-Mizan fi Tafsir al-Quran
+- Tabrisi's Majma al-Bayan fi Tafsir al-Quran  
+- Qummi's Tafsir al-Qummi
+- Tusi's At-Tibyan fi Tafsir al-Quran
+
+SUNNI SOURCES TO REFERENCE:
+- Tabari's Jami al-Bayan an Ta'wil Ay al-Quran
+- Ibn Kathir's Tafsir al-Quran al-Azim
+- Qurtubi's Al-Jami li-Ahkam al-Quran
+- Razi's Mafatih al-Ghayb
+
+Write a balanced scholarly commentary of 150-250 words that covers:
+- Areas of scholarly consensus between traditions
+- Key interpretive differences and their theological foundations
+- How different understandings affect religious practice or belief
+- Historical context for why divergent interpretations emerged
+
+FORMATTING REQUIREMENTS:
+- Maintain respectful, academic tone throughout
+- Present both perspectives fairly and objectively
+- Reference sources naturally within text
+- Use simple English spellings for all Arabic names and terms
+- No bullet points, numbers, or markdown formatting
+- Focus on scholarly discourse, not sectarian debate
+
 COMMENTARY:"""
         }
     
@@ -209,7 +250,7 @@ COMMENTARY:"""
             self.generated_count += 1
             
             # Progress indicator
-            progress = (self.generated_count / (self.total_verses * 4)) * 100
+            progress = (self.generated_count / (self.total_verses * 5)) * 100
             print(f"Generated {surah_num}:{ayah_num} Layer {layer} ({progress:.1f}% complete)")
             
             return commentary
@@ -270,8 +311,8 @@ COMMENTARY:"""
             ayah_num = int(ayah_num_str)
             surah_tafsir[ayah_num_str] = {}
             
-            # Generate all 4 layers for this verse
-            for layer in range(1, 5):
+            # Generate all 5 layers for this verse
+            for layer in range(1, 6):
                 commentary = self.generate_layer_commentary(surah_num, ayah_num, layer)
                 if commentary:
                     surah_tafsir[ayah_num_str][f"layer{layer}"] = commentary
