@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+enum SwipeDirection {
+    case up, down
+}
 
 struct BookmarksView: View {
     @StateObject private var bookmarkManager = BookmarkManager.shared
@@ -16,6 +19,7 @@ struct BookmarksView: View {
     @State private var showingBookmarkDetail = false
     @State private var searchText = ""
     @State private var selectedSortOrder: BookmarkSortOrder = .dateDescending
+    @State private var focusedBookmarkIndex: Int = 0
     
     var body: some View {
         ZStack {
@@ -46,7 +50,9 @@ struct BookmarksView: View {
                 } else {
                     BookmarksListView(
                         bookmarks: filteredBookmarks,
-                        dataManager: dataManager
+                        dataManager: dataManager,
+                        focusedIndex: $focusedBookmarkIndex,
+                        onSwipeNavigation: handleSwipeNavigation
                     )
                 }
                 
@@ -60,6 +66,16 @@ struct BookmarksView: View {
             if let bookmark = selectedBookmark {
                 BookmarkDetailView(bookmark: bookmark)
             }
+        }
+    }
+    
+    private func handleSwipeNavigation(fromIndex: Int, direction: SwipeDirection) {
+        let bookmarks = filteredBookmarks
+        guard !bookmarks.isEmpty && fromIndex >= 0 && fromIndex < bookmarks.count else { return }
+        
+        withAnimation(.easeInOut(duration: 0.3)) {
+            // Simply set focus to the bookmark that was swiped on
+            focusedBookmarkIndex = fromIndex
         }
     }
     
@@ -152,39 +168,59 @@ struct ModernBookmarksHeader: View {
 struct BookmarksListView: View {
     let bookmarks: [Bookmark]
     let dataManager: DataManager
+    @Binding var focusedIndex: Int
+    let onSwipeNavigation: (Int, SwipeDirection) -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @State private var bookmarkToDelete: Bookmark?
     @State private var showingDeleteConfirmation = false
     
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 16) {
-                ForEach(bookmarks) { bookmark in
-                    if let surahWithTafsir = createSurahWithTafsir(for: bookmark) {
-                        NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: bookmark.verseNumber)) {
-                            BookmarkCardContent(
+        ScrollViewReader { proxy in
+            ScrollView {
+                LazyVStack(spacing: 16) {
+                    ForEach(Array(bookmarks.enumerated()), id: \.element.id) { index, bookmark in
+                        if let surahWithTafsir = createSurahWithTafsir(for: bookmark) {
+                            NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: bookmark.verseNumber)) {
+                                BookmarkCardContent(
+                                    bookmark: bookmark,
+                                    index: index,
+                                    isFocused: index == focusedIndex,
+                                    onSwipe: onSwipeNavigation,
+                                    onDelete: { 
+                                        bookmarkToDelete = bookmark
+                                        showingDeleteConfirmation = true
+                                    }
+                                )
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .id(bookmark.id)
+                        } else {
+                            BookmarkCard(
                                 bookmark: bookmark,
+                                index: index,
+                                isFocused: index == focusedIndex,
+                                onSwipe: onSwipeNavigation,
                                 onDelete: { 
                                     bookmarkToDelete = bookmark
                                     showingDeleteConfirmation = true
                                 }
                             )
+                            .id(bookmark.id)
                         }
-                        .buttonStyle(PlainButtonStyle())
-                    } else {
-                        BookmarkCard(
-                            bookmark: bookmark,
-                            onDelete: { 
-                                bookmarkToDelete = bookmark
-                                showingDeleteConfirmation = true
-                            }
-                        )
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.vertical, 20)
+            }
+            .onChange(of: focusedIndex) { _, newIndex in
+                if newIndex >= 0 && newIndex < bookmarks.count {
+                    let targetId = bookmarks[newIndex].id
+                    withAnimation(.easeInOut(duration: 0.6)) {
+                        proxy.scrollTo(targetId, anchor: .center)
                     }
                 }
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 20)
         }
         .alert("Delete Bookmark?", isPresented: $showingDeleteConfirmation) {
             Button("Cancel", role: .cancel) { }
@@ -233,11 +269,15 @@ struct BookmarksListView: View {
 
 struct BookmarkCardContent: View {
     let bookmark: Bookmark
+    let index: Int
+    let isFocused: Bool
+    let onSwipe: (Int, SwipeDirection) -> Void
     let onDelete: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @State private var isPressed = false
     @State private var showingDeleteButton = false
+    @State private var dragOffset: CGSize = .zero
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -319,24 +359,54 @@ struct BookmarkCardContent: View {
                 .fill(themeManager.glassEffect)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                        .stroke(isFocused ? Color.blue.opacity(0.6) : themeManager.strokeColor, lineWidth: isFocused ? 2 : 1)
+                )
+                .overlay(
+                    // Focus indicator
+                    isFocused ? RoundedRectangle(cornerRadius: 16)
+                        .fill(Color.blue.opacity(0.1))
+                        .animation(.easeInOut(duration: 0.3), value: isFocused)
+                    : nil
                 )
         )
-        .scaleEffect(isPressed ? 0.98 : 1.0)
+        .scaleEffect(isPressed ? 0.98 : (isFocused ? 1.02 : 1.0))
+        .offset(dragOffset)
         .animation(.easeInOut(duration: 0.1), value: isPressed)
+        .animation(.easeInOut(duration: 0.3), value: isFocused)
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: showingDeleteButton)
+        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: dragOffset)
         .onLongPressGesture(minimumDuration: 0.5) {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                 showingDeleteButton.toggle()
             }
         }
         .gesture(
-            DragGesture()
-                .onChanged { _ in
+            DragGesture(minimumDistance: 10)
+                .onChanged { value in
                     isPressed = true
+                    let translation = value.translation
+                    dragOffset = CGSize(width: 0, height: translation.height * 0.3)
                 }
-                .onEnded { _ in
+                .onEnded { value in
                     isPressed = false
+                    
+                    // Determine swipe direction based on vertical movement
+                    let translation = value.translation
+                    let swipeThreshold: CGFloat = 50
+                    if abs(translation.height) > swipeThreshold {
+                        if translation.height < 0 {
+                            // Swiped up - show next bookmark (scroll screen down)
+                            onSwipe(index, .up)
+                        } else {
+                            // Swiped down - show previous bookmark (scroll screen up)
+                            onSwipe(index, .down)
+                        }
+                    }
+                    
+                    // Reset drag offset
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                        dragOffset = .zero
+                    }
                 }
         )
     }
@@ -344,11 +414,15 @@ struct BookmarkCardContent: View {
 
 struct BookmarkCard: View {
     let bookmark: Bookmark
+    let index: Int
+    let isFocused: Bool
+    let onSwipe: (Int, SwipeDirection) -> Void
     let onDelete: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @State private var isPressed = false
     @State private var showingDeleteButton = false
+    @State private var dragOffset: CGSize = .zero
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -430,12 +504,22 @@ struct BookmarkCard: View {
                 .fill(themeManager.glassEffect)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                        .stroke(isFocused ? Color.blue.opacity(0.6) : themeManager.strokeColor, lineWidth: isFocused ? 2 : 1)
+                )
+                .overlay(
+                    // Focus indicator
+                    isFocused ? RoundedRectangle(cornerRadius: 16)
+                        .fill(Color.blue.opacity(0.1))
+                        .animation(.easeInOut(duration: 0.3), value: isFocused)
+                    : nil
                 )
         )
-        .scaleEffect(isPressed ? 0.98 : 1.0)
+        .scaleEffect(isPressed ? 0.98 : (isFocused ? 1.02 : 1.0))
+        .offset(dragOffset)
         .animation(.easeInOut(duration: 0.1), value: isPressed)
+        .animation(.easeInOut(duration: 0.3), value: isFocused)
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: showingDeleteButton)
+        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: dragOffset)
         .onLongPressGesture(minimumDuration: 0.5) {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                 showingDeleteButton.toggle()
@@ -450,12 +534,32 @@ struct BookmarkCard: View {
             // This is the fallback case - no navigation here
         }
         .gesture(
-            DragGesture()
-                .onChanged { _ in
+            DragGesture(minimumDistance: 10)
+                .onChanged { value in
                     isPressed = true
+                    let translation = value.translation
+                    dragOffset = CGSize(width: 0, height: translation.height * 0.3)
                 }
-                .onEnded { _ in
+                .onEnded { value in
                     isPressed = false
+                    
+                    // Determine swipe direction based on vertical movement
+                    let translation = value.translation
+                    let swipeThreshold: CGFloat = 50
+                    if abs(translation.height) > swipeThreshold {
+                        if translation.height < 0 {
+                            // Swiped up - show next bookmark (scroll screen down)
+                            onSwipe(index, .up)
+                        } else {
+                            // Swiped down - show previous bookmark (scroll screen up)
+                            onSwipe(index, .down)
+                        }
+                    }
+                    
+                    // Reset drag offset
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                        dragOffset = .zero
+                    }
                 }
         )
     }
