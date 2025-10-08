@@ -8,7 +8,7 @@ Thaqalayn is a Shia Islamic Quranic commentary iOS app with an offline-first arc
 
 **Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, **bilingual commentary system**, and **multi-theme system**. Features complete **5-layer tafsir** with **English and Urdu support**, including new **comparative Shia/Sunni analysis**, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com. **All features unlocked** with $0.99 paid app model.
 
-**Version**: 1.2 (Build 1) - **Major Update: 5-Layer Commentary System with Comparative Analysis**
+**Version**: 1.3 (Build 1)
 
 ## Architecture
 
@@ -107,7 +107,7 @@ Thaqalayn/
 
 ## Current Status
 
-**📱 App Store Publishing Status**: READY FOR SUBMISSION (Version 1.2 - 5-Layer Commentary System)
+**📱 App Store Publishing Status**: READY FOR SUBMISSION (Version 1.3)
 
 ## Version History
 

@@ -182,6 +182,8 @@ struct ThemePreviewCard: View {
             return Color(red: 1.0, green: 1.0, blue: 1.0)
         case .blueLightFilter:
             return Color(red: 0.99, green: 0.96, blue: 0.89)
+        case .royalAmethyst:
+            return Color(red: 0.25, green: 0.14, blue: 0.26)
         }
     }
     
@@ -207,6 +209,8 @@ struct ThemePreviewCard: View {
             return Color(red: 0.0, green: 0.0, blue: 0.0)
         case .blueLightFilter:
             return Color(red: 0.40, green: 0.26, blue: 0.13)
+        case .royalAmethyst:
+            return Color(red: 0.98, green: 0.91, blue: 0.70)
         }
     }
     
@@ -232,6 +236,8 @@ struct ThemePreviewCard: View {
             return Color(red: 0.0, green: 0.0, blue: 0.0).opacity(0.7)
         case .blueLightFilter:
             return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.8)
+        case .royalAmethyst:
+            return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.85)
         }
     }
     
@@ -255,6 +261,8 @@ struct ThemePreviewCard: View {
             return Color(red: 0.0, green: 0.4, blue: 0.8)
         case .blueLightFilter:
             return Color(red: 1.0, green: 0.55, blue: 0.0)
+        case .royalAmethyst:
+            return Color(red: 0.88, green: 0.70, blue: 0.50)
         }
     }
     
@@ -280,6 +288,8 @@ struct ThemePreviewCard: View {
             return Color(red: 0.0, green: 0.0, blue: 0.0).opacity(0.3)
         case .blueLightFilter:
             return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.2)
+        case .royalAmethyst:
+            return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.15)
         }
     }
 }

@@ -18,6 +18,7 @@ enum ThemeVariant: String, CaseIterable {
     case emeraldClassic = "emeraldClassic"
     case highContrast = "highContrast"
     case blueLightFilter = "blueLightFilter"
+    case royalAmethyst = "royalAmethyst"
     
     var displayName: String {
         switch self {
@@ -41,6 +42,8 @@ enum ThemeVariant: String, CaseIterable {
             return "High Contrast"
         case .blueLightFilter:
             return "Blue Light Filter"
+        case .royalAmethyst:
+            return "Royal Amethyst"
         }
     }
     
@@ -66,6 +69,8 @@ enum ThemeVariant: String, CaseIterable {
             return "Maximum readability"
         case .blueLightFilter:
             return "Evening reading mode"
+        case .royalAmethyst:
+            return "Luxurious purple with gold accents"
         }
     }
 }
@@ -116,7 +121,7 @@ class ThemeManager: ObservableObject {
     
     var colorScheme: ColorScheme {
         switch selectedTheme {
-        case .modernDark, .nightMode:
+        case .modernDark, .nightMode, .royalAmethyst:
             return .dark
         default:
             return .light
@@ -146,6 +151,8 @@ class ThemeManager: ObservableObject {
             return Color(red: 1.0, green: 1.0, blue: 1.0) // #ffffff - pure white
         case .blueLightFilter:
             return Color(red: 0.99, green: 0.96, blue: 0.89) // #fdf6e3 - warm white with yellow tint
+        case .royalAmethyst:
+            return Color(red: 0.25, green: 0.14, blue: 0.26) // #3f2342 - rich purple-burgundy
         }
     }
     
@@ -171,6 +178,8 @@ class ThemeManager: ObservableObject {
             return Color(red: 0.96, green: 0.96, blue: 0.96) // #f5f5f5 - light gray
         case .blueLightFilter:
             return Color(red: 0.96, green: 0.92, blue: 0.84) // #f5ebd6 - warmer cream
+        case .royalAmethyst:
+            return Color(red: 0.40, green: 0.27, blue: 0.36) // #66455c - mauve-rose purple
         }
     }
     
@@ -196,6 +205,8 @@ class ThemeManager: ObservableObject {
             return Color(red: 0.90, green: 0.90, blue: 0.90) // #e5e5e5 - medium gray
         case .blueLightFilter:
             return Color(red: 0.93, green: 0.88, blue: 0.79) // #ede0c9 - medium warm
+        case .royalAmethyst:
+            return Color(red: 0.51, green: 0.35, blue: 0.44) // #825970 - warm mauve
         }
     }
     
@@ -222,6 +233,8 @@ class ThemeManager: ObservableObject {
             return Color(red: 0.0, green: 0.0, blue: 0.0) // #000000 - pure black
         case .blueLightFilter:
             return Color(red: 0.40, green: 0.26, blue: 0.13) // #654321 - dark brown
+        case .royalAmethyst:
+            return Color(red: 0.98, green: 0.91, blue: 0.70) // #fae8b3 - bright champagne gold
         }
     }
     
@@ -247,6 +260,8 @@ class ThemeManager: ObservableObject {
             return Color(red: 0.0, green: 0.0, blue: 0.0).opacity(0.7) // softer black
         case .blueLightFilter:
             return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.8) // softer brown
+        case .royalAmethyst:
+            return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.85) // softer bright gold
         }
     }
     
@@ -272,6 +287,8 @@ class ThemeManager: ObservableObject {
             return Color(red: 0.0, green: 0.0, blue: 0.0).opacity(0.5) // lighter black
         case .blueLightFilter:
             return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.65) // lighter brown
+        case .royalAmethyst:
+            return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.72) // lighter bright gold
         }
     }
     
@@ -359,6 +376,15 @@ class ThemeManager: ObservableObject {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
+        case .royalAmethyst:
+            return LinearGradient(
+                colors: [
+                    Color(red: 0.65, green: 0.38, blue: 0.58), // Vibrant mauve-purple
+                    Color(red: 0.87, green: 0.52, blue: 0.48)  // Warm rose-gold
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
         }
     }
     
@@ -382,6 +408,8 @@ class ThemeManager: ObservableObject {
             return Color(red: 0.0, green: 0.4, blue: 0.8)
         case .blueLightFilter:
             return Color(red: 1.0, green: 0.55, blue: 0.0)
+        case .royalAmethyst:
+            return Color(red: 0.88, green: 0.70, blue: 0.50) // #e0b37f - warm golden rose
         }
     }
     
@@ -396,7 +424,7 @@ class ThemeManager: ObservableObject {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
-        case .classicLight, .sepia, .nightMode, .mushaf, .desertSand, .emeraldClassic, .highContrast, .blueLightFilter:
+        case .classicLight, .sepia, .nightMode, .mushaf, .desertSand, .emeraldClassic, .highContrast, .blueLightFilter, .royalAmethyst:
             return accentGradient // Use accent gradient for all non-modern themes
         }
     }
@@ -410,8 +438,8 @@ class ThemeManager: ObservableObject {
             return .thin
         case .classicLight, .sepia, .mushaf, .desertSand, .emeraldClassic, .blueLightFilter:
             return .ultraThin // Subtle glass effect for traditional themes
-        case .nightMode:
-            return .ultraThinMaterial // Dark material for night mode
+        case .nightMode, .royalAmethyst:
+            return .ultraThinMaterial // Dark material for night mode and royal amethyst
         case .highContrast:
             return .regular // More visible material for high contrast
         }
@@ -439,6 +467,8 @@ class ThemeManager: ObservableObject {
             return Color(red: 0.0, green: 0.0, blue: 0.0).opacity(0.3) // Strong black stroke
         case .blueLightFilter:
             return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.2) // Brown stroke
+        case .royalAmethyst:
+            return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.15) // Bright gold stroke
         }
     }
     
@@ -504,6 +534,12 @@ class ThemeManager: ObservableObject {
                 Color(red: 1.0, green: 0.55, blue: 0.0).opacity(0.08),  // Orange
                 Color(red: 0.85, green: 0.45, blue: 0.0).opacity(0.06), // Darker orange
                 Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.05) // Brown
+            ]
+        case .royalAmethyst:
+            return [
+                Color(red: 0.65, green: 0.38, blue: 0.58).opacity(0.28), // Vibrant mauve-purple
+                Color(red: 0.87, green: 0.52, blue: 0.48).opacity(0.22), // Warm rose-gold
+                Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.18)  // Bright champagne gold
             ]
         }
     }

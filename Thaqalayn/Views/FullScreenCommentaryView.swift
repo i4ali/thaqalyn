@@ -322,7 +322,7 @@ struct FullScreenCommentaryView: View {
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 16)
-                                        .stroke(themeManager.strokeColor.opacity(0.5), lineWidth: 1)
+                                        .stroke(themeManager.strokeColor.opacity(1.0), lineWidth: 2)
                                 )
                                 .shadow(
                                     color: themeManager.primaryText.opacity(0.05), 
