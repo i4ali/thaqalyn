@@ -95,7 +95,7 @@ struct SettingsView: View {
                                         ) {
                                             // Could navigate to account details
                                         }
-                                        
+
                                         SettingsRow(
                                             icon: "icloud.fill",
                                             title: "Sync Status",
@@ -103,6 +103,17 @@ struct SettingsView: View {
                                             iconColor: .blue
                                         ) {
                                             // Could show sync details
+                                        }
+
+                                        SettingsRow(
+                                            icon: "arrow.right.square.fill",
+                                            title: "Sign Out",
+                                            subtitle: "Clear local data and sign out",
+                                            iconColor: .orange
+                                        ) {
+                                            Task {
+                                                await bookmarkManager.signOutAndClearRemoteData()
+                                            }
                                         }
                                     } else {
                                         SettingsRow(

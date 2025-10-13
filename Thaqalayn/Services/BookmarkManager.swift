@@ -30,6 +30,7 @@ class BookmarkManager: ObservableObject {
     private var supabaseService = SupabaseService.shared
     private var cancellables = Set<AnyCancellable>()
     private var pendingDeletes: Set<UUID> = []
+    private var lastAuthenticatedUserId: String?
     
     private var currentUserId: String {
         // Use authenticated user ID if available, otherwise device ID for guest mode
@@ -52,14 +53,31 @@ class BookmarkManager: ObservableObject {
         supabaseService.$isAuthenticated
             .receive(on: DispatchQueue.main)
             .assign(to: &$isAuthenticated)
-        
+
         supabaseService.$currentUser
             .receive(on: DispatchQueue.main)
             .sink { [weak self] user in
-                if user != nil {
-                    Task {
-                        await self?.performInitialSync()
+                guard let self = self else { return }
+
+                if let user = user {
+                    let newUserId = user.id.uuidString
+
+                    // Check if this is a different user
+                    if let lastUserId = self.lastAuthenticatedUserId, lastUserId != newUserId {
+                        print("🔄 User changed from \(lastUserId) to \(newUserId) - clearing local data")
+                        self.clearAllLocalData()
                     }
+
+                    // Update last authenticated user
+                    self.lastAuthenticatedUserId = newUserId
+
+                    // Perform initial sync
+                    Task {
+                        await self.performInitialSync()
+                    }
+                } else {
+                    // User signed out - clear last user ID
+                    self.lastAuthenticatedUserId = nil
                 }
             }
             .store(in: &cancellables)
@@ -511,34 +529,14 @@ class BookmarkManager: ObservableObject {
     func signOutAndClearRemoteData() async {
         do {
             try await supabaseService.signOut()
-            
-            // Keep local bookmarks but mark them as pending sync
-            for i in 0..<bookmarks.count {
-                if bookmarks[i].syncStatus == .synced {
-                    bookmarks[i] = Bookmark(
-                        id: bookmarks[i].id,
-                        userId: currentUserId, // Reset to device ID
-                        surahNumber: bookmarks[i].surahNumber,
-                        verseNumber: bookmarks[i].verseNumber,
-                        surahName: bookmarks[i].surahName,
-                        verseText: bookmarks[i].verseText,
-                        verseTranslation: bookmarks[i].verseTranslation,
-                        notes: bookmarks[i].notes,
-                        tags: bookmarks[i].tags,
-                        createdAt: bookmarks[i].createdAt,
-                        updatedAt: bookmarks[i].updatedAt,
-                        syncStatus: .pendingSync
-                    )
-                }
-            }
-            saveLocalBookmarks()
-            
-            // Clear pending deletes
-            pendingDeletes.removeAll()
-            savePendingDeletes()
-            
+
+            // Clear all local data for clean state
+            clearAllLocalData()
+
+            print("✅ Signed out and cleared all local data")
         } catch {
             errorMessage = "Sign out failed: \(error.localizedDescription)"
+            print("❌ Sign out error: \(error)")
         }
     }
 }

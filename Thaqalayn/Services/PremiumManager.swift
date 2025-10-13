@@ -50,22 +50,20 @@ class PremiumManager: ObservableObject {
 
     /// Check if user can access tafsir commentary for a specific surah
     /// - Surah 1 (Al-Fatiha): Always free
-    /// - Surahs 2-114: Requires premium
+    /// - Surahs 2-114: Requires premium (authenticated users only)
     func canAccessTafsir(surahNumber: Int) async -> Bool {
         // Surah 1 always free
         if surahNumber == 1 {
             return true
         }
 
-        // Check online status
-        if await SupabaseService.shared.isAuthenticated {
-            // Online: Use Supabase-verified premium status
-            return isPremium
+        // Must be authenticated to access premium content
+        guard await SupabaseService.shared.isAuthenticated else {
+            return false  // Guest users cannot access premium content
         }
 
-        // Offline: Verify via StoreKit (Apple ID-based verification)
-        let hasPurchase = await PurchaseManager.shared.verifyPurchase()
-        return hasPurchase
+        // Authenticated users: Check premium status from Supabase
+        return isPremium
     }
 
     // MARK: - Feature Access Control (Legacy - for reciters)

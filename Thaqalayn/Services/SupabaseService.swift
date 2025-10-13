@@ -393,7 +393,7 @@ class SupabaseService: ObservableObject {
         do {
             let response = try await client
                 .from("user_preferences")
-                .upsert(updateData)
+                .upsert(updateData, onConflict: "user_id")
                 .execute()
 
             print("✅ SupabaseService: Updated premium status to \(isPremium) for user \(currentUser.id.uuidString)")
