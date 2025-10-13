@@ -612,10 +612,13 @@ struct ProfileMenuView: View {
     @StateObject private var supabaseService = SupabaseService.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var audioManager = AudioManager.shared
+    @StateObject private var premiumManager = PremiumManager.shared
+    @StateObject private var purchaseManager = PurchaseManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var showingSignOutAlert = false
     @State private var showingAudioSettings = false
     @State private var showingAccountDeletion = false
+    @State private var showingPaywall = false
     
     var body: some View {
         NavigationView {
@@ -648,15 +651,39 @@ struct ProfileMenuView: View {
                             Text(getUserEmail())
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(themeManager.primaryText)
-                            
-                            Text("All Features Unlocked")
-                                .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(.green)
+
+                            Text(premiumManager.isPremium ? "Premium Member" : "Free Tier")
+                                .font(.system(size: 14, weight: .semibold))
+                                .foregroundColor(premiumManager.isPremium ? .green : .orange)
                         }
                     }
                     
                     // Menu options
                     VStack(spacing: 16) {
+                        // Upgrade to Premium (for non-premium users)
+                        if !premiumManager.isPremium {
+                            ProfileMenuItem(
+                                icon: "star.fill",
+                                title: "Upgrade to Premium",
+                                subtitle: "Unlock all tafsir commentary",
+                                action: { showingPaywall = true }
+                            )
+                        }
+
+                        // Restore Purchases (for non-premium users)
+                        if !premiumManager.isPremium {
+                            ProfileMenuItem(
+                                icon: "arrow.clockwise",
+                                title: "Restore Purchases",
+                                subtitle: "Already purchased? Restore here",
+                                action: {
+                                    Task {
+                                        try? await purchaseManager.restorePurchases()
+                                    }
+                                }
+                            )
+                        }
+
                         ProfileMenuItem(
                             icon: "heart.fill",
                             title: "Bookmarks",
@@ -739,6 +766,9 @@ struct ProfileMenuView: View {
         }
         .sheet(isPresented: $showingAccountDeletion) {
             AccountDeletionView()
+        }
+        .fullScreenCover(isPresented: $showingPaywall) {
+            PaywallView()
         }
     }
     

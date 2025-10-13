@@ -39,6 +39,9 @@ class SupabaseService: ObservableObject {
             let session = try await client.auth.session
             self.currentUser = session.user
             self.isAuthenticated = true
+
+            // ✅ Fetch premium status when restoring existing session
+            await PremiumManager.shared.checkPremiumStatus()
         } catch {
             self.currentUser = nil
             self.isAuthenticated = false
@@ -81,6 +84,9 @@ class SupabaseService: ObservableObject {
             
             if response.user.emailConfirmedAt != nil {
                 print("✅ Signed up and confirmed: \(response.user.id.uuidString)")
+
+                // ✅ Fetch premium status after successful signup
+                await PremiumManager.shared.checkPremiumStatus()
             } else {
                 print("📧 Signed up, waiting for email confirmation: \(response.user.id.uuidString)")
             }
@@ -89,54 +95,60 @@ class SupabaseService: ObservableObject {
             print("❌ Sign up error: \(error)")
             throw error
         }
-        
+
         isLoading = false
     }
     
     func signIn(email: String, password: String) async throws {
         isLoading = true
         errorMessage = nil
-        
+
         do {
             let response = try await client.auth.signIn(email: email, password: password)
             self.currentUser = response.user
             self.isAuthenticated = true
             print("✅ Signed in successfully: \(response.user.id.uuidString)")
+
+            // ✅ Fetch premium status after successful login
+            await PremiumManager.shared.checkPremiumStatus()
         } catch {
             self.errorMessage = "Failed to sign in: \(error.localizedDescription)"
             print("❌ Sign in error: \(error)")
             throw error
         }
-        
+
         isLoading = false
     }
     
     func signInWithApple(credential: ASAuthorizationAppleIDCredential) async throws {
         isLoading = true
         errorMessage = nil
-        
+
         do {
             guard let identityToken = credential.identityToken,
                   let identityTokenString = String(data: identityToken, encoding: .utf8) else {
                 throw SupabaseError.appleSignInFailed("Invalid identity token")
             }
-            
+
             let response = try await client.auth.signInWithIdToken(
                 credentials: .init(
                     provider: .apple,
                     idToken: identityTokenString
                 )
             )
-            
+
             self.currentUser = response.user
             self.isAuthenticated = true
             print("✅ Signed in with Apple: \(response.user.id.uuidString)")
+
+            // ✅ Fetch premium status after successful Apple sign-in
+            await PremiumManager.shared.checkPremiumStatus()
         } catch {
             self.errorMessage = "Apple Sign In failed: \(error.localizedDescription)"
             print("❌ Apple Sign In error: \(error)")
             throw error
         }
-        
+
         isLoading = false
     }
     
@@ -157,9 +169,12 @@ class SupabaseService: ObservableObject {
     }
     
     func signOut() async throws {
+        // ✅ Clear premium status BEFORE signing out
+        PremiumManager.shared.clearPremiumStatus()
+
         isLoading = true
         errorMessage = nil
-        
+
         do {
             try await client.auth.signOut()
             self.currentUser = nil
@@ -170,7 +185,7 @@ class SupabaseService: ObservableObject {
             print("❌ Sign out error: \(error)")
             throw error
         }
-        
+
         isLoading = false
     }
     
@@ -178,27 +193,33 @@ class SupabaseService: ObservableObject {
         guard isAuthenticated, let userId = currentUser?.id else {
             throw SupabaseError.notAuthenticated
         }
-        
+
         isLoading = true
         errorMessage = nil
-        
+
         do {
             // Call the complete deletion function - no fallbacks
             let result: String = try await client.rpc("delete_user_account_complete", params: ["user_id_param": userId.uuidString]).execute().value
-            
+
             print("✅ Complete account deletion result: \(result)")
-            
+
+            // Clear premium status
+            PremiumManager.shared.clearPremiumStatus()
+
+            // Sign out to clear persisted session
+            try await client.auth.signOut()
+
             // Clear local state
             self.currentUser = nil
             self.isAuthenticated = false
-            
-            print("✅ Account deleted successfully")
+
+            print("✅ Account deleted and session cleared successfully")
         } catch {
             self.errorMessage = "Failed to delete account: \(error.localizedDescription)"
             print("❌ Account deletion error: \(error)")
             throw error
         }
-        
+
         isLoading = false
     }
     
@@ -337,18 +358,19 @@ class SupabaseService: ObservableObject {
         do {
             let response: [DatabaseUserPreferences] = try await client
                 .from("user_preferences")
-                .select("is_premium")
-                .eq("user_id", value: currentUser.id)
+                .select()
+                .eq("user_id", value: currentUser.id.uuidString)
                 .execute()
                 .value
-            
+
             print("🔍 SupabaseService: Premium status response: \(response)")
             let isPremium = response.first?.isPremium ?? false
             print("🔍 SupabaseService: Returning premium status: \(isPremium)")
-            
+
             return isPremium
         } catch {
             print("❌ SupabaseService: Error fetching premium status: \(error)")
+            print("❌ SupabaseService: Error details: \(error)")
             throw SupabaseError.fetchFailed("Failed to fetch premium status: \(error.localizedDescription)")
         }
     }
@@ -357,21 +379,29 @@ class SupabaseService: ObservableObject {
         guard let currentUser = currentUser else {
             throw SupabaseError.notAuthenticated
         }
-        
+
+        print("🔄 SupabaseService: Starting premium status update for user \(currentUser.id.uuidString)")
+
         let updateData = DatabaseUserPreferencesUpdate(
-            userId: currentUser.id,
+            userId: currentUser.id.uuidString,
             isPremium: isPremium,
             bookmarkLimit: isPremium ? 999 : 2
         )
-        
+
+        print("🔄 SupabaseService: Update data prepared: \(updateData)")
+
         do {
-            try await client
+            let response = try await client
                 .from("user_preferences")
                 .upsert(updateData)
                 .execute()
-            
-            print("✅ SupabaseService: Updated premium status to \(isPremium)")
+
+            print("✅ SupabaseService: Updated premium status to \(isPremium) for user \(currentUser.id.uuidString)")
+            print("✅ SupabaseService: Response: \(response)")
         } catch {
+            print("❌ SupabaseService: Failed to update premium status: \(error)")
+            print("❌ SupabaseService: Error type: \(type(of: error))")
+            print("❌ SupabaseService: Full error: \(String(describing: error))")
             throw SupabaseError.syncFailed("Failed to update premium status: \(error.localizedDescription)")
         }
     }
@@ -392,10 +422,10 @@ struct DatabaseUserPreferences: Codable {
 }
 
 struct DatabaseUserPreferencesUpdate: Codable {
-    let userId: UUID
+    let userId: String
     let isPremium: Bool
     let bookmarkLimit: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case userId = "user_id"
         case isPremium = "is_premium"

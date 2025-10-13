@@ -85,17 +85,18 @@ class DataManager: ObservableObject {
     }
     
     private func loadSurahWithTafsir(surah: Surah) async -> SurahWithTafsir? {
-        // Load tafsir data for this surah
+        // Always load tafsir data if available (access control at UI level)
+        // This avoids timing issues with premium status loading
         let tafsirData = await loadTafsirData(for: surah.number)
-        
+
         guard let quranData = quranData,
               let surahVerses = quranData.verses[String(surah.number)] else {
             return nil
         }
-        
-        // Create verses with tafsir
+
+        // Create verses with tafsir (if available in bundle)
         var verses: [VerseWithTafsir] = []
-        
+
         for i in 1...surah.versesCount {
             let verseKey = String(i)
             if let verse = surahVerses[verseKey] {
@@ -108,7 +109,7 @@ class DataManager: ObservableObject {
                 verses.append(verseWithTafsir)
             }
         }
-        
+
         return SurahWithTafsir(surah: surah, verses: verses)
     }
     

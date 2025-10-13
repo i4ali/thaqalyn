@@ -241,9 +241,12 @@ struct ModernVerseCard: View {
     let onTafsirTap: () -> Void
     @State private var isPressed = false
     @State private var showingBookmarkFeedback = false
+    @State private var showingPaywall = false
+    @State private var canAccessTafsir = false
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
-    
+    @StateObject private var premiumManager = PremiumManager.shared
+
     private var isBookmarked: Bool {
         bookmarkManager.isBookmarked(surahNumber: surah.number, verseNumber: verse.number)
     }
@@ -364,26 +367,44 @@ struct ModernVerseCard: View {
                     }
                     .scaleEffect(showingBookmarkFeedback ? 1.2 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.6), value: showingBookmarkFeedback)
-                    
-                    // Commentary button
-                    if verse.tafsir != nil {
-                        Button(action: onTafsirTap) {
-                            HStack(spacing: 6) {
-                                Image(systemName: "book.fill")
-                                    .font(.system(size: 12))
-                                Text("Commentary")
-                                    .font(.system(size: 13, weight: .medium))
-                            }
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 8)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(themeManager.purpleGradient)
-                            )
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 4)
+
+                    // Commentary button (check premium access)
+                    Button(action: {
+                        if !canAccessTafsir && surah.number > 1 {
+                            // Locked content - show paywall
+                            showingPaywall = true
+                        } else if verse.tafsir != nil {
+                            // Unlocked content - open commentary
+                            onTafsirTap()
                         }
+                    }) {
+                        HStack(spacing: 6) {
+                            Image(systemName: !canAccessTafsir && surah.number > 1 ? "lock.fill" : "book.fill")
+                                .font(.system(size: 12))
+                            Text(!canAccessTafsir && surah.number > 1 ? "Unlock" : "Commentary")
+                                .font(.system(size: 13, weight: .medium))
+                        }
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 8)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(!canAccessTafsir && surah.number > 1 ?
+                                      LinearGradient(colors: [.yellow, .orange], startPoint: .leading, endPoint: .trailing) :
+                                      themeManager.purpleGradient)
+                        )
+                        .shadow(color: (!canAccessTafsir && surah.number > 1 ? Color.yellow : Color(red: 0.39, green: 0.4, blue: 0.95)).opacity(0.3), radius: 4)
                     }
+                }
+            }
+            .task {
+                // Check premium access when view appears
+                canAccessTafsir = await PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
+            }
+            .onChange(of: premiumManager.isPremium) { _, _ in
+                // Update access when premium status changes
+                Task {
+                    canAccessTafsir = await PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
                 }
             }
             
@@ -421,6 +442,9 @@ struct ModernVerseCard: View {
         .scaleEffect(isPressed ? 0.98 : 1.0)
         .animation(.easeInOut(duration: 0.1), value: isPressed)
         .animation(.easeInOut(duration: 0.3), value: isCurrentlyPlaying)
+        .fullScreenCover(isPresented: $showingPaywall) {
+            PaywallView()
+        }
     }
 }
 
