@@ -447,15 +447,64 @@ enum TafsirLayer: String, CaseIterable {
 enum CommentaryLanguage: String, CaseIterable, Codable {
     case english = "en"
     case urdu = "ur"
-    
+
     var displayName: String {
         switch self {
         case .english: return "English"
         case .urdu: return "اردو"
         }
     }
-    
+
     var isRTL: Bool {
         return self == .urdu
+    }
+}
+
+// MARK: - Daily Verse Notification Models
+
+struct IslamicMonthVerseData: Codable {
+    let months: [IslamicMonth]
+}
+
+struct IslamicMonth: Codable {
+    let month: Int
+    let name: String
+    let arabicName: String
+    let theme: String
+    let significance: String
+    let verses: [DailyVerseEntry]
+}
+
+struct DailyVerseEntry: Codable, Identifiable {
+    let surah: Int
+    let verse: Int
+    let relevance: String
+    let theme: String
+
+    var id: String {
+        return "\(surah):\(verse)"
+    }
+}
+
+struct NotificationPreferences: Codable {
+    var enabled: Bool
+    var time: Date
+    var language: CommentaryLanguage
+    var includeTafsir: Bool
+
+    init(
+        enabled: Bool = false,
+        time: Date = Calendar.current.date(from: DateComponents(hour: 9, minute: 0)) ?? Date(),
+        language: CommentaryLanguage = .english,
+        includeTafsir: Bool = true
+    ) {
+        self.enabled = enabled
+        self.time = time
+        self.language = language
+        self.includeTafsir = includeTafsir
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case enabled, time, language, includeTafsir
     }
 }

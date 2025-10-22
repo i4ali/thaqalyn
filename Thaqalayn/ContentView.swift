@@ -9,6 +9,7 @@ import SwiftUI
 
 extension Notification.Name {
     static let showAuthentication = Notification.Name("showAuthentication")
+    static let navigateToVerse = Notification.Name("NavigateToVerse")
 }
 
 struct ContentView: View {
@@ -209,6 +210,8 @@ struct SurahListView: View {
     @State private var searchText = ""
     @State private var showingAuthentication = false
     @State private var showingSettings = false
+    @State private var selectedSurahForDeepLink: SurahWithTafsir?
+    @State private var targetVerseNumber: Int?
     
     var body: some View {
         VStack(spacing: 0) {
@@ -391,7 +394,7 @@ struct SurahListView: View {
             ScrollView {
                 LazyVStack(spacing: 12) {
                     ForEach(dataManager.availableSurahs.filter { surah in
-                        searchText.isEmpty || 
+                        searchText.isEmpty ||
                         surah.surah.englishName.localizedCaseInsensitiveContains(searchText) ||
                         surah.surah.arabicName.contains(searchText)
                     }) { surahWithTafsir in
@@ -403,6 +406,24 @@ struct SurahListView: View {
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 20)
+            }
+
+            // Hidden NavigationLink for deep linking
+            if let surahForDeepLink = selectedSurahForDeepLink {
+                NavigationLink(
+                    destination: SurahDetailView(surahWithTafsir: surahForDeepLink, targetVerse: targetVerseNumber),
+                    isActive: Binding(
+                        get: { selectedSurahForDeepLink != nil },
+                        set: { if !$0 {
+                            selectedSurahForDeepLink = nil
+                            targetVerseNumber = nil
+                        } }
+                    )
+                ) {
+                    EmptyView()
+                }
+                .frame(width: 0, height: 0)
+                .hidden()
             }
             
         }
@@ -421,6 +442,26 @@ struct SurahListView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .navigateToVerse)) { notification in
+            guard let userInfo = notification.userInfo,
+                  let surah = userInfo["surah"] as? Int,
+                  let verse = userInfo["verse"] as? Int else {
+                return
+            }
+
+            // Dismiss any open sheets first
+            showingSettings = false
+            showingAuthentication = false
+
+            // Find the surah data and navigate after a brief delay to allow sheets to dismiss
+            if let surahData = dataManager.availableSurahs.first(where: { $0.surah.number == surah }) {
+                // Wait for sheets to dismiss before navigating
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    targetVerseNumber = verse
+                    selectedSurahForDeepLink = surahData
+                }
+            }
         }
     }
 }

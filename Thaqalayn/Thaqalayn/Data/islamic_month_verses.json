@@ -1,0 +1,412 @@
+{
+  "months": [
+    {
+      "month": 1,
+      "name": "Muharram",
+      "arabicName": "محرم",
+      "theme": "Martyrdom, Sacrifice, Remembrance of Karbala",
+      "significance": "Month of Ashura - Martyrdom of Imam Hussain (AS)",
+      "verses": [
+        {
+          "surah": 3,
+          "verse": 169,
+          "relevance": "Martyrs are alive with their Lord",
+          "theme": "Martyrdom and sacrifice in Allah's way"
+        },
+        {
+          "surah": 2,
+          "verse": 154,
+          "relevance": "Those slain in Allah's way are not dead",
+          "theme": "The living nature of martyrs"
+        },
+        {
+          "surah": 3,
+          "verse": 195,
+          "relevance": "Those who fought, were slain, and migrated",
+          "theme": "Divine reward for sacrifice"
+        },
+        {
+          "surah": 22,
+          "verse": 58,
+          "relevance": "Those who emigrate and are slain in Allah's way",
+          "theme": "Allah's promise to martyrs"
+        }
+      ]
+    },
+    {
+      "month": 2,
+      "name": "Safar",
+      "arabicName": "صفر",
+      "theme": "Patience, Perseverance, Trials",
+      "significance": "Month of patience through hardship and trials",
+      "verses": [
+        {
+          "surah": 2,
+          "verse": 153,
+          "relevance": "Seek help through patience and prayer",
+          "theme": "Allah is with those who are patient"
+        },
+        {
+          "surah": 94,
+          "verse": 5,
+          "relevance": "Indeed, with hardship comes ease",
+          "theme": "Hope after difficulty"
+        },
+        {
+          "surah": 2,
+          "verse": 155,
+          "relevance": "We will test you with fear, hunger, loss",
+          "theme": "Trials as a test of faith"
+        },
+        {
+          "surah": 3,
+          "verse": 200,
+          "relevance": "Be patient, outdo others in patience",
+          "theme": "Steadfastness in difficult times"
+        }
+      ]
+    },
+    {
+      "month": 3,
+      "name": "Rabi' al-Awwal",
+      "arabicName": "ربيع الأول",
+      "theme": "Prophet's Birth, Mercy to Mankind",
+      "significance": "Birth of Prophet Muhammad (PBUH) - Mercy to all creation",
+      "verses": [
+        {
+          "surah": 21,
+          "verse": 107,
+          "relevance": "We sent you as a mercy to all worlds",
+          "theme": "The Prophet as universal mercy"
+        },
+        {
+          "surah": 33,
+          "verse": 21,
+          "relevance": "Excellent model in the Messenger of Allah",
+          "theme": "Following the Prophet's example"
+        },
+        {
+          "surah": 3,
+          "verse": 164,
+          "relevance": "Allah has blessed believers with His Messenger",
+          "theme": "Divine favor through the Prophet"
+        },
+        {
+          "surah": 68,
+          "verse": 4,
+          "relevance": "You are of great moral character",
+          "theme": "The Prophet's noble character"
+        }
+      ]
+    },
+    {
+      "month": 4,
+      "name": "Rabi' al-Thani",
+      "arabicName": "ربيع الآخر",
+      "theme": "Gratitude, Blessings, Reflection",
+      "significance": "Continued reflection on divine blessings",
+      "verses": [
+        {
+          "surah": 14,
+          "verse": 7,
+          "relevance": "If you are grateful, I will give you more",
+          "theme": "Gratitude brings abundance"
+        },
+        {
+          "surah": 55,
+          "verse": 13,
+          "relevance": "Which favors of your Lord will you deny?",
+          "theme": "Recognizing countless blessings"
+        },
+        {
+          "surah": 16,
+          "verse": 18,
+          "relevance": "If you count Allah's blessings, you cannot number them",
+          "theme": "Infinite divine favors"
+        },
+        {
+          "surah": 93,
+          "verse": 11,
+          "relevance": "As for your Lord's blessing, proclaim it",
+          "theme": "Expressing gratitude openly"
+        }
+      ]
+    },
+    {
+      "month": 5,
+      "name": "Jumada al-Awwal",
+      "arabicName": "جمادى الأولى",
+      "theme": "Community, Unity, Brotherhood",
+      "significance": "Month emphasizing communal bonds and unity",
+      "verses": [
+        {
+          "surah": 49,
+          "verse": 10,
+          "relevance": "Believers are but brothers, so make peace",
+          "theme": "Brotherhood among believers"
+        },
+        {
+          "surah": 3,
+          "verse": 103,
+          "relevance": "Hold fast to Allah's rope and be not divided",
+          "theme": "Unity in faith"
+        },
+        {
+          "surah": 8,
+          "verse": 46,
+          "relevance": "Obey Allah and do not dispute lest you lose courage",
+          "theme": "Avoiding division"
+        },
+        {
+          "surah": 21,
+          "verse": 92,
+          "relevance": "This is one nation and I am your Lord",
+          "theme": "Unity of the ummah"
+        }
+      ]
+    },
+    {
+      "month": 6,
+      "name": "Jumada al-Thani",
+      "arabicName": "جمادى الآخرة",
+      "theme": "Reflection, Contemplation, Inner Growth",
+      "significance": "Month for deep spiritual reflection",
+      "verses": [
+        {
+          "surah": 3,
+          "verse": 190,
+          "relevance": "Signs for people of understanding who remember Allah",
+          "theme": "Contemplating divine creation"
+        },
+        {
+          "surah": 59,
+          "verse": 18,
+          "relevance": "Consider what you have sent ahead for tomorrow",
+          "theme": "Self-reflection and accountability"
+        },
+        {
+          "surah": 13,
+          "verse": 28,
+          "relevance": "Hearts find rest in remembrance of Allah",
+          "theme": "Inner peace through dhikr"
+        },
+        {
+          "surah": 87,
+          "verse": 14,
+          "relevance": "He who purifies himself will prosper",
+          "theme": "Spiritual purification"
+        }
+      ]
+    },
+    {
+      "month": 7,
+      "name": "Rajab",
+      "arabicName": "رجب",
+      "theme": "Sacred Month, Spiritual Growth, Preparation",
+      "significance": "One of the four sacred months - spiritual elevation",
+      "verses": [
+        {
+          "surah": 9,
+          "verse": 36,
+          "relevance": "Four of them are sacred months",
+          "theme": "Sanctity of sacred months"
+        },
+        {
+          "surah": 17,
+          "verse": 1,
+          "relevance": "Night journey to show him Our signs",
+          "theme": "Mi'raj - spiritual ascension"
+        },
+        {
+          "surah": 23,
+          "verse": 1,
+          "relevance": "Successful are the believers",
+          "theme": "Characteristics of true believers"
+        },
+        {
+          "surah": 76,
+          "verse": 3,
+          "relevance": "We showed him the way, grateful or ungrateful",
+          "theme": "Divine guidance and choice"
+        }
+      ]
+    },
+    {
+      "month": 8,
+      "name": "Sha'ban",
+      "arabicName": "شعبان",
+      "theme": "Preparation for Ramadan, Good Deeds",
+      "significance": "Month of preparation for Ramadan's blessings",
+      "verses": [
+        {
+          "surah": 2,
+          "verse": 183,
+          "relevance": "Fasting is prescribed for you",
+          "theme": "Preparing for Ramadan's fast"
+        },
+        {
+          "surah": 99,
+          "verse": 7,
+          "relevance": "Whoever does an atom's weight of good will see it",
+          "theme": "Value of good deeds"
+        },
+        {
+          "surah": 39,
+          "verse": 53,
+          "relevance": "Do not despair of Allah's mercy",
+          "theme": "Hope and repentance"
+        },
+        {
+          "surah": 25,
+          "verse": 70,
+          "relevance": "Allah replaces evil deeds with good deeds",
+          "theme": "Transformation through repentance"
+        }
+      ]
+    },
+    {
+      "month": 9,
+      "name": "Ramadan",
+      "arabicName": "رمضان",
+      "theme": "Fasting, Quran Revelation, Night of Power",
+      "significance": "Month of Quran revelation and blessed fasting",
+      "verses": [
+        {
+          "surah": 2,
+          "verse": 185,
+          "relevance": "Month of Ramadan - Quran was revealed",
+          "theme": "The sacred month of fasting"
+        },
+        {
+          "surah": 97,
+          "verse": 1,
+          "relevance": "Indeed, We sent it down during Laylatul Qadr",
+          "theme": "Night of Power"
+        },
+        {
+          "surah": 2,
+          "verse": 186,
+          "relevance": "I am near, I respond to supplicant's call",
+          "theme": "Closeness to Allah in Ramadan"
+        },
+        {
+          "surah": 44,
+          "verse": 3,
+          "relevance": "We sent it down on a blessed night",
+          "theme": "The blessed night of revelation"
+        },
+        {
+          "surah": 2,
+          "verse": 187,
+          "relevance": "Fasting's night - permitted to go to your wives",
+          "theme": "Ramadan's lawful allowances"
+        }
+      ]
+    },
+    {
+      "month": 10,
+      "name": "Shawwal",
+      "arabicName": "شوال",
+      "theme": "Celebration, Gratitude, Eid al-Fitr",
+      "significance": "Month of Eid - celebrating the completion of fasting",
+      "verses": [
+        {
+          "surah": 2,
+          "verse": 185,
+          "relevance": "Complete the number and glorify Allah",
+          "theme": "Completing Ramadan with gratitude"
+        },
+        {
+          "surah": 108,
+          "verse": 2,
+          "relevance": "Pray to your Lord and sacrifice",
+          "theme": "Worship and celebration"
+        },
+        {
+          "surah": 7,
+          "verse": 32,
+          "relevance": "Who has forbidden Allah's adornment and good things?",
+          "theme": "Lawful celebration"
+        },
+        {
+          "surah": 2,
+          "verse": 286,
+          "relevance": "Allah does not burden a soul beyond capacity",
+          "theme": "Divine mercy and ease"
+        }
+      ]
+    },
+    {
+      "month": 11,
+      "name": "Dhul-Qa'dah",
+      "arabicName": "ذو القعدة",
+      "theme": "Sacred Month, Hajj Preparation, Peace",
+      "significance": "Sacred month - preparation for pilgrimage",
+      "verses": [
+        {
+          "surah": 3,
+          "verse": 97,
+          "relevance": "Pilgrimage to the House is a duty to Allah",
+          "theme": "Obligation of Hajj"
+        },
+        {
+          "surah": 2,
+          "verse": 197,
+          "relevance": "Hajj is in known months",
+          "theme": "Timing of pilgrimage"
+        },
+        {
+          "surah": 22,
+          "verse": 27,
+          "relevance": "Proclaim the pilgrimage among people",
+          "theme": "Call to pilgrimage"
+        },
+        {
+          "surah": 2,
+          "verse": 200,
+          "relevance": "Remember Allah as you remember your forefathers",
+          "theme": "Dhikr during pilgrimage preparation"
+        }
+      ]
+    },
+    {
+      "month": 12,
+      "name": "Dhul-Hijjah",
+      "arabicName": "ذو الحجة",
+      "theme": "Hajj, Sacrifice, Eid al-Adha",
+      "significance": "Month of Hajj and Eid al-Adha - ultimate sacrifice",
+      "verses": [
+        {
+          "surah": 22,
+          "verse": 28,
+          "relevance": "Witness benefits and mention Allah's name over provisions",
+          "theme": "Blessings of Hajj"
+        },
+        {
+          "surah": 37,
+          "verse": 107,
+          "relevance": "We ransomed him with a great sacrifice",
+          "theme": "Ibrahim's sacrifice and Eid al-Adha"
+        },
+        {
+          "surah": 108,
+          "verse": 2,
+          "relevance": "Pray to your Lord and sacrifice",
+          "theme": "Prayer and sacrifice"
+        },
+        {
+          "surah": 22,
+          "verse": 37,
+          "relevance": "Their meat and blood do not reach Allah, but piety does",
+          "theme": "True meaning of sacrifice"
+        },
+        {
+          "surah": 2,
+          "verse": 196,
+          "relevance": "Complete the Hajj and Umrah for Allah",
+          "theme": "Completing the pilgrimage"
+        }
+      ]
+    }
+  ]
+}
