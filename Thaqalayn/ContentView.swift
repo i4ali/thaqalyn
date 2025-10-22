@@ -52,7 +52,7 @@ struct ContentView: View {
             showingWelcome = true
         }
         .fullScreenCover(isPresented: $showingWelcome) {
-            WelcomeView()
+            OnboardingFlowView()
         }
     }
     
