@@ -537,9 +537,9 @@ class ThemeManager: ObservableObject {
             ]
         case .royalAmethyst:
             return [
-                Color(red: 0.65, green: 0.38, blue: 0.58).opacity(0.28), // Vibrant mauve-purple
-                Color(red: 0.87, green: 0.52, blue: 0.48).opacity(0.22), // Warm rose-gold
-                Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.18)  // Bright champagne gold
+                Color(red: 0.65, green: 0.38, blue: 0.58).opacity(0.18), // Vibrant mauve-purple (reduced)
+                Color(red: 0.87, green: 0.52, blue: 0.48).opacity(0.14), // Warm rose-gold (reduced)
+                Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.11)  // Bright champagne gold (reduced)
             ]
         }
     }
