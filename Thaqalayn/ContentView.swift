@@ -231,13 +231,30 @@ struct SurahListView: View {
                     Spacer()
                     
                     HStack(spacing: 12) {
+                        // Prayer Times button
+                        NavigationLink(destination: PrayerTimesView()) {
+                            Image(systemName: "moon.stars.fill")
+                                .font(.system(size: 18, weight: .semibold))
+                                .foregroundColor(themeManager.primaryText)
+                                .frame(width: 40, height: 40)
+                                .background(
+                                    Circle()
+                                        .fill(themeManager.glassEffect)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                                        )
+                                )
+                        }
+                        .buttonStyle(PlainButtonStyle())
+
                         // Bookmarks button
                         NavigationLink(destination: BookmarksView()) {
                             ZStack {
                                 Image(systemName: "heart")
                                     .font(.system(size: 18, weight: .semibold))
                                     .foregroundColor(themeManager.primaryText)
-                                
+
                                 if bookmarkManager.bookmarks.count > 0 {
                                     Circle()
                                         .fill(Color.pink)
@@ -261,64 +278,7 @@ struct SurahListView: View {
                             )
                         }
                         .buttonStyle(PlainButtonStyle())
-                        
-                        // Sync status indicator
-                        if bookmarkManager.isSyncing {
-                            Button(action: {}) {
-                                Image(systemName: "arrow.triangle.2.circlepath")
-                                    .font(.system(size: 18, weight: .semibold))
-                                    .foregroundColor(.blue)
-                                    .frame(width: 40, height: 40)
-                                    .background(
-                                        Circle()
-                                            .fill(themeManager.glassEffect)
-                                            .overlay(
-                                                Circle()
-                                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                                            )
-                                    )
-                                    .rotationEffect(.degrees(bookmarkManager.isSyncing ? 360 : 0))
-                                    .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: bookmarkManager.isSyncing)
-                            }
-                            .disabled(true)
-                        } else if !bookmarkManager.isAuthenticated {
-                            Button(action: {
-                                showingAuthentication = true
-                            }) {
-                                Image(systemName: "cloud.slash")
-                                    .font(.system(size: 18, weight: .semibold))
-                                    .foregroundColor(.orange)
-                                    .frame(width: 40, height: 40)
-                                    .background(
-                                        Circle()
-                                            .fill(themeManager.glassEffect)
-                                            .overlay(
-                                                Circle()
-                                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                                            )
-                                    )
-                            }
-                        } else {
-                            Button(action: {
-                                Task {
-                                    await bookmarkManager.forceSyncWithSupabase()
-                                }
-                            }) {
-                                Image(systemName: "cloud.fill")
-                                    .font(.system(size: 18, weight: .semibold))
-                                    .foregroundColor(.green)
-                                    .frame(width: 40, height: 40)
-                                    .background(
-                                        Circle()
-                                            .fill(themeManager.glassEffect)
-                                            .overlay(
-                                                Circle()
-                                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                                            )
-                                    )
-                            }
-                        }
-                        
+
                         // Settings button
                         Button(action: {
                             showingSettings = true

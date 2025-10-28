@@ -440,6 +440,16 @@ enum TafsirLayer: String, CaseIterable {
             return "Shia vs Sunni scholarly perspectives"
         }
     }
+
+    /// Check if this layer is free for a given surah
+    /// - Surah 1: Layers 1 & 2 are free
+    /// - All other surahs: No free layers
+    func isFree(forSurah surahNumber: Int) -> Bool {
+        if surahNumber == 1 {
+            return self == .foundation || self == .classical
+        }
+        return false
+    }
 }
 
 // MARK: - Commentary Language Support

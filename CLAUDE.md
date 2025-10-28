@@ -8,8 +8,6 @@ Thaqalayn is a Shia Islamic Quranic commentary iOS app with an offline-first arc
 
 **Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, **bilingual commentary system**, and **multi-theme system**. Features complete **5-layer tafsir** with **English and Urdu support**, including new **comparative Shia/Sunni analysis**, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com. **All features unlocked** with $0.99 paid app model.
 
-**Version**: 1.3 (Build 1)
-
 ## Architecture
 
 ### Data Flow
@@ -104,52 +102,6 @@ Thaqalayn/
     ├── quran_data.json            # All 114 surahs (3.4MB)
     └── tafsir_1.json              # Al-Fatiha commentary only
 ```
-
-## Current Status
-
-**📱 App Store Publishing Status**: READY FOR SUBMISSION (Version 1.3)
-
-## Version History
-
-### Version 1.2 (Build 1) - 5-Layer Commentary System ✅
-**Major Update: Comparative Shia/Sunni Analysis**
-- ✅ **5th Commentary Layer**: Added balanced comparative analysis between Shia and Sunni scholarly perspectives
-- ✅ **Bilingual Comparative Content**: English and Urdu support for comparative layer
-- ✅ **Scholarly Sources**: References authoritative scholars from both traditions (Tabatabai, Ibn Kathir, etc.)
-- ✅ **Respectful Discourse**: Academic tone emphasizing common ground and scholarly differences
-- ✅ **Complete Coverage**: Comparative commentary generated for all 114 surahs
-- ✅ **Seamless Integration**: New layer automatically appears in existing UI with indigo/teal theme
-- ✅ **Visual Identity**: ⚖️ scales icon representing balanced analysis
-- ✅ **Backward Compatibility**: Existing 4-layer data preserved and functional
-
-### Version 1.1 (Build 3) - Account Deletion Compliance ✅
-**App Store Review Compliance: Complete Account Deletion**
-- ✅ **Complete Account Deletion**: Comprehensive user data removal from all tables
-- ✅ **AccountDeletionView**: Multi-step confirmation flow with warnings
-- ✅ **Database Functions**: `delete_user_account_complete()` removes all user data
-- ✅ **App Store Compliance**: Meets Guideline 5.1.1(v) account deletion requirements
-- ✅ **Guest Mode Support**: Core Quran access without authentication requirement
-- ✅ **Data Integrity**: Clean error handling without fallback logic
-- ✅ **Comprehensive Coverage**: Deletes from bookmarks, bookmark_collections, user_preferences, auth.users
-
-### Version 1.1 (Build 2) - Bilingual Commentary System ✅
-**Major Update: Complete Urdu Translation Support**
-- ✅ **Bilingual Data Models**: Enhanced `TafsirVerse` with Urdu fields
-- ✅ **Complete Urdu Content**: All 114 surahs, all 4 commentary layers
-- ✅ **Language Toggle**: Seamless switching between English and Urdu
-- ✅ **Advanced RTL Support**: Proper right-to-left text rendering
-- ✅ **Selective Layout**: English UI stays left-aligned, Urdu content uses RTL
-- ✅ **Language Indicators**: Visual availability indicators per layer
-- ✅ **Quality Content**: Authentic Urdu translations by Islamic scholars
-- ✅ **Performance Optimized**: No impact on app size or loading times
-
-### Version 1.0 (Build 1) - Initial Release
-**Production-Ready MVP**
-- ✅ All 114 surahs with individual verse audio playback
-- ✅ 4-layer English commentary system
-- ✅ Multi-theme system (4 themes)
-- ✅ Complete authentication and bookmark sync
-- ✅ Paid app model ($0.99)
 
 ## Supabase Integration ✅ FULLY COMPLETE
 

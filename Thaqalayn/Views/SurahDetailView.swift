@@ -522,7 +522,7 @@ struct ModernTafsirDetailView: View {
                 )
                 
                 // Layer selector tabs
-                ModernTafsirTabs(selectedLayer: $selectedLayer) { layer in
+                ModernTafsirTabs(selectedLayer: $selectedLayer, surah: surah) { layer in
                     // Double-tap handler - open full-screen reader
                     fullScreenLayer = layer
                     showingFullScreenCommentary = true
@@ -555,46 +555,17 @@ struct ModernTafsirDetailView: View {
 
 struct ModernTafsirTabs: View {
     @Binding var selectedLayer: TafsirLayer
+    let surah: Surah
     let onDoubleTap: (TafsirLayer) -> Void
+    @State private var showingPaywall = false
     @StateObject private var themeManager = ThemeManager.shared
-    
+    @StateObject private var premiumManager = PremiumManager.shared
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 ForEach(TafsirLayer.allCases, id: \.self) { layer in
-                    VStack(spacing: 4) {
-                        Text(layerIcon(for: layer))
-                            .font(.system(size: 16))
-                        Text(layerShortTitle(for: layer))
-                            .font(.system(size: 12, weight: .semibold))
-                            .multilineTextAlignment(.center)
-                    }
-                    .foregroundColor(selectedLayer == layer ? .white : themeManager.tertiaryText)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 12)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                                .fill(
-                                    selectedLayer == layer ? 
-                                    themeManager.purpleGradient :
-                                    LinearGradient(colors: [.clear], startPoint: .leading, endPoint: .trailing)
-                                )
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke(selectedLayer == layer ? .clear : themeManager.strokeColor, lineWidth: 1)
-                                )
-                        )
-                        .shadow(
-                        color: selectedLayer == layer ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3) : .clear,
-                        radius: 8
-                    )
-                    .onTapGesture {
-                        selectedLayer = layer
-                    }
-                    .onTapGesture(count: 2) {
-                        // Double-tap to open full-screen reader
-                        onDoubleTap(layer)
-                    }
+                    layerTabButton(for: layer)
                 }
             }
             .padding(.horizontal, 20)
@@ -604,6 +575,86 @@ struct ModernTafsirTabs: View {
             Rectangle()
                 .fill(themeManager.glassEffect)
         )
+        .fullScreenCover(isPresented: $showingPaywall) {
+            PaywallView()
+        }
+    }
+
+    private func layerTabButton(for layer: TafsirLayer) -> some View {
+        let isLocked = !premiumManager.canAccessLayer(layer, surahNumber: surah.number)
+
+        return VStack(spacing: 4) {
+            HStack(spacing: 4) {
+                Text(layerIcon(for: layer))
+                    .font(.system(size: 16))
+
+                // Lock icon for locked layers
+                if isLocked {
+                    Image(systemName: "lock.fill")
+                        .font(.system(size: 10, weight: .semibold))
+                        .foregroundColor(.yellow)
+                }
+            }
+
+            Text(layerShortTitle(for: layer))
+                .font(.system(size: 12, weight: .semibold))
+                .multilineTextAlignment(.center)
+        }
+        .foregroundColor(
+            isLocked ? themeManager.tertiaryText :
+            (selectedLayer == layer ? .white : themeManager.tertiaryText)
+        )
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(layerBackgroundFill(for: layer, isLocked: isLocked))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(
+                            layerStrokeColor(for: layer, isLocked: isLocked),
+                            lineWidth: isLocked ? 1.5 : 1
+                        )
+                )
+        )
+        .shadow(
+            color: selectedLayer == layer && !isLocked ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3) : .clear,
+            radius: 8
+        )
+        .opacity(isLocked ? 0.6 : 1.0)
+        .onTapGesture {
+            if isLocked {
+                showingPaywall = true
+            } else {
+                selectedLayer = layer
+            }
+        }
+        .onTapGesture(count: 2) {
+            if !isLocked {
+                // Double-tap to open full-screen reader (only for unlocked layers)
+                onDoubleTap(layer)
+            }
+        }
+    }
+
+    private func layerBackgroundFill(for layer: TafsirLayer, isLocked: Bool) -> AnyShapeStyle {
+        if selectedLayer == layer && !isLocked {
+            return AnyShapeStyle(themeManager.purpleGradient)
+        } else if isLocked {
+            return AnyShapeStyle(themeManager.tertiaryBackground.opacity(0.2))
+        } else {
+            return AnyShapeStyle(Color.clear)
+        }
+    }
+
+    private func layerStrokeColor(for layer: TafsirLayer, isLocked: Bool) -> Color {
+        if isLocked {
+            return Color.yellow.opacity(0.4)
+        } else if selectedLayer == layer {
+            return .clear
+        } else {
+            return themeManager.strokeColor
+        }
     }
     
     private func layerIcon(for layer: TafsirLayer) -> String {

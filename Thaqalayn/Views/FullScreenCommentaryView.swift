@@ -13,8 +13,10 @@ struct FullScreenCommentaryView: View {
     let surah: Surah
     let initialLayer: TafsirLayer
     @State private var selectedLayer: TafsirLayer
+    @State private var showingPaywall = false
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager()
+    @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
     
     init(verse: VerseWithTafsir, surah: Surah, initialLayer: TafsirLayer) {
@@ -43,6 +45,9 @@ struct FullScreenCommentaryView: View {
         .navigationBarHidden(true)
         .statusBarHidden(true) // Hide status bar for immersive reading
         .preferredColorScheme(themeManager.colorScheme)
+        .fullScreenCover(isPresented: $showingPaywall) {
+            PaywallView()
+        }
     }
     
     private var readingBackground: some View {
@@ -185,33 +190,51 @@ struct FullScreenCommentaryView: View {
     }
     
     private func layerButton(for layer: TafsirLayer) -> some View {
-        Button(action: { 
-            withAnimation(.easeInOut(duration: 0.3)) {
-                selectedLayer = layer 
+        let isLocked = !premiumManager.canAccessLayer(layer, surahNumber: surah.number)
+
+        return Button(action: {
+            if isLocked {
+                // Show paywall for locked layers
+                showingPaywall = true
+            } else {
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    selectedLayer = layer
+                }
             }
         }) {
             VStack(spacing: 6) {
                 HStack(spacing: 4) {
                     Text(layerIcon(for: layer))
                         .font(.system(size: 18))
-                    
-                    // Language availability indicators
-                    if let tafsir = verse.tafsir {
+
+                    // Lock icon for locked layers
+                    if isLocked {
+                        Image(systemName: "lock.fill")
+                            .font(.system(size: 12, weight: .semibold))
+                            .foregroundColor(.yellow)
+                    } else if let tafsir = verse.tafsir {
+                        // Language availability indicators (only for unlocked layers)
                         layerAvailabilityIndicator(for: layer, tafsir: tafsir)
                     }
                 }
-                
+
                 Text(layerShortTitle(for: layer))
                     .font(.system(size: 13, weight: .semibold))
                     .multilineTextAlignment(.center)
             }
-            .foregroundColor(selectedLayer == layer ? .white : themeManager.secondaryText)
+            .foregroundColor(
+                isLocked ? themeManager.tertiaryText :
+                (selectedLayer == layer ? .white : themeManager.secondaryText)
+            )
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
             .background {
-                if selectedLayer == layer {
+                if selectedLayer == layer && !isLocked {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(layerGradient(for: layer))
+                } else if isLocked {
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(themeManager.tertiaryBackground.opacity(0.3))
                 } else {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(themeManager.tertiaryBackground.opacity(0.6))
@@ -219,8 +242,13 @@ struct FullScreenCommentaryView: View {
             }
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(selectedLayer == layer ? Color.clear : themeManager.strokeColor, lineWidth: 1)
+                    .stroke(
+                        isLocked ? Color.yellow.opacity(0.4) :
+                        (selectedLayer == layer ? Color.clear : themeManager.strokeColor),
+                        lineWidth: isLocked ? 1.5 : 1
+                    )
             )
+            .opacity(isLocked ? 0.6 : 1.0)
         }
         .buttonStyle(PlainButtonStyle())
     }
