@@ -11,6 +11,7 @@ struct SettingsView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var notificationManager = NotificationManager.shared
+    @StateObject private var progressManager = ProgressManager.shared
     @Environment(\.presentationMode) var presentationMode
     @State private var showingThemeSelection = false
     @State private var showingAuthentication = false
@@ -18,6 +19,8 @@ struct SettingsView: View {
     @State private var clearDataMessage = ""
     @State private var showingTimePickerSheet = false
     @State private var showingSyncStatus = false
+    @State private var showingProgressDashboard = false
+    @State private var showingResetProgressAlert = false
     
     var body: some View {
         NavigationView {
@@ -187,6 +190,73 @@ struct SettingsView: View {
                                 }
                             }
 
+                            // Reading Progress Section
+                            SettingsSection(title: "Reading Progress") {
+                                VStack(spacing: 12) {
+                                    // View Progress Dashboard
+                                    SettingsRow(
+                                        icon: "chart.bar.fill",
+                                        title: "Progress Dashboard",
+                                        subtitle: "\(progressManager.stats.totalVersesRead) verses read",
+                                        iconColor: .blue
+                                    ) {
+                                        showingProgressDashboard = true
+                                    }
+
+                                    // Current Streak
+                                    SettingsRow(
+                                        icon: "flame.fill",
+                                        title: "Current Streak",
+                                        subtitle: "\(progressManager.streak.currentStreak) days",
+                                        iconColor: .orange
+                                    ) {
+                                        // Just displays info, no action
+                                    }
+
+                                    // Progress Notifications Toggle
+                                    SettingsToggleRow(
+                                        icon: "bell.badge.fill",
+                                        title: "Progress Notifications",
+                                        subtitle: progressManager.preferences.notificationsEnabled ? "Motivational reminders" : "Tap to enable",
+                                        iconColor: .purple,
+                                        isOn: Binding(
+                                            get: { progressManager.preferences.notificationsEnabled },
+                                            set: { newValue in
+                                                var newPrefs = progressManager.preferences
+                                                newPrefs.notificationsEnabled = newValue
+                                                progressManager.updatePreferences(newPrefs)
+                                            }
+                                        )
+                                    )
+
+                                    // Badge Celebrations Toggle
+                                    SettingsToggleRow(
+                                        icon: "star.fill",
+                                        title: "Badge Celebrations",
+                                        subtitle: progressManager.preferences.celebrationsEnabled ? "Show celebrations" : "Quiet mode",
+                                        iconColor: .yellow,
+                                        isOn: Binding(
+                                            get: { progressManager.preferences.celebrationsEnabled },
+                                            set: { newValue in
+                                                var newPrefs = progressManager.preferences
+                                                newPrefs.celebrationsEnabled = newValue
+                                                progressManager.updatePreferences(newPrefs)
+                                            }
+                                        )
+                                    )
+
+                                    // Reset Progress
+                                    SettingsRow(
+                                        icon: "arrow.counterclockwise",
+                                        title: "Reset Progress",
+                                        subtitle: "Clear all reading progress",
+                                        iconColor: .red
+                                    ) {
+                                        showingResetProgressAlert = true
+                                    }
+                                }
+                            }
+
                             // Account Section
                             SettingsSection(title: "Account") {
                                 VStack(spacing: 12) {
@@ -304,6 +374,9 @@ struct SettingsView: View {
         .sheet(isPresented: $showingSyncStatus) {
             SyncStatusDetailView()
         }
+        .sheet(isPresented: $showingProgressDashboard) {
+            ProgressDashboardView()
+        }
         .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
             Button("OK") {
                 // Force UI refresh
@@ -313,6 +386,14 @@ struct SettingsView: View {
             }
         } message: {
             Text(clearDataMessage)
+        }
+        .alert("Reset Progress?", isPresented: $showingResetProgressAlert) {
+            Button("Cancel", role: .cancel) {}
+            Button("Reset", role: .destructive) {
+                progressManager.resetProgress()
+            }
+        } message: {
+            Text("This will clear all your reading progress, streaks, and badges. This action cannot be undone.")
         }
     }
 

@@ -17,6 +17,7 @@ struct FullScreenCommentaryView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager()
     @StateObject private var premiumManager = PremiumManager.shared
+    @StateObject private var progressManager = ProgressManager.shared
     @Environment(\.dismiss) private var dismiss
     
     init(verse: VerseWithTafsir, surah: Surah, initialLayer: TafsirLayer) {
@@ -129,15 +130,65 @@ struct FullScreenCommentaryView: View {
             }
             
             Spacer()
-            
-            // Language toggle button
-            languageToggle
+
+            HStack(spacing: 12) {
+                // Verse read checkbox
+                verseReadCheckbox
+
+                // Language toggle button
+                languageToggle
+            }
         }
         .padding(.horizontal, 24)
         .padding(.top, 16)
         .padding(.bottom, 20)
     }
-    
+
+    // Verse read checkbox
+    private var verseReadCheckbox: some View {
+        Button(action: {
+            let isRead = progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number)
+
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                if isRead {
+                    progressManager.unmarkVerseAsRead(surahNumber: surah.number, verseNumber: verse.number)
+                } else {
+                    progressManager.markVerseAsRead(surahNumber: surah.number, verseNumber: verse.number)
+                }
+            }
+
+            // Haptic feedback
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
+        }) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 6)
+                    .strokeBorder(
+                        progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
+                        Color.green : themeManager.strokeColor,
+                        lineWidth: 2
+                    )
+                    .frame(width: 24, height: 24)
+                    .background(
+                        RoundedRectangle(cornerRadius: 6)
+                            .fill(
+                                progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
+                                Color.green.opacity(0.3) : themeManager.secondaryBackground.opacity(0.8)
+                            )
+                    )
+
+                if progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) {
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 12, weight: .bold))
+                        .foregroundColor(.green)
+                        .transition(.scale.combined(with: .opacity))
+                }
+            }
+            .animation(.spring(response: 0.3, dampingFraction: 0.6), value: progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number))
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+
     // Language toggle button in header
     private var languageToggle: some View {
         Button(action: {
@@ -273,10 +324,10 @@ struct FullScreenCommentaryView: View {
             VStack(alignment: .leading, spacing: 0) {
                 if let tafsir = verse.tafsir {
                     let tafsirText = tafsir.content(for: selectedLayer, language: languageManager.selectedLanguage)
-                    
+
                     // Layer header with enhanced typography (always left-aligned)
                     readingLayerHeader
-                    
+
                     // Reading-optimized content with selective RTL
                     readingTextContent(tafsirText)
                 } else {
@@ -324,7 +375,7 @@ struct FullScreenCommentaryView: View {
         }
         .padding(.bottom, 32)
     }
-    
+
     private func readingTextContent(_ text: String) -> some View {
         VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 18) {
             ForEach(Array(formattedParagraphs(from: text).enumerated()), id: \.offset) { index, paragraph in

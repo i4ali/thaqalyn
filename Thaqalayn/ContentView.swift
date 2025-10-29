@@ -16,6 +16,7 @@ struct ContentView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
+    @StateObject private var progressManager = ProgressManager.shared
     @State private var showingWelcome = false
     
     var body: some View {
@@ -53,6 +54,15 @@ struct ContentView: View {
         }
         .fullScreenCover(isPresented: $showingWelcome) {
             OnboardingFlowView()
+        }
+        .overlay {
+            if let badge = progressManager.pendingBadge {
+                BadgeAwardView(badge: badge) {
+                    progressManager.dismissPendingBadge()
+                }
+                .transition(.opacity)
+                .animation(.easeInOut, value: progressManager.pendingBadge != nil)
+            }
         }
     }
     
@@ -207,9 +217,11 @@ struct SurahListView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
+    @StateObject private var progressManager = ProgressManager.shared
     @State private var searchText = ""
     @State private var showingAuthentication = false
     @State private var showingSettings = false
+    @State private var showingProgressDashboard = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
     
@@ -262,6 +274,46 @@ struct SurahListView: View {
                         }
                         .buttonStyle(PlainButtonStyle())
 
+                        // Progress Dashboard button
+                        Button(action: {
+                            showingProgressDashboard = true
+                        }) {
+                            ZStack {
+                                Image(systemName: "chart.bar.fill")
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(themeManager.primaryText)
+
+                                if progressManager.streak.currentStreak > 0 {
+                                    Circle()
+                                        .fill(
+                                            LinearGradient(
+                                                colors: [Color.orange, Color.red],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
+                                            )
+                                        )
+                                        .frame(width: 16, height: 16)
+                                        .overlay(
+                                            Text("\(progressManager.streak.currentStreak)")
+                                                .font(.system(size: 9, weight: .bold))
+                                                .foregroundColor(.white)
+                                        )
+                                        .offset(x: 12, y: -12)
+                                        .shadow(color: Color.orange.opacity(0.5), radius: 4)
+                                }
+                            }
+                            .frame(width: 40, height: 40)
+                            .background(
+                                Circle()
+                                    .fill(themeManager.glassEffect)
+                                    .overlay(
+                                        Circle()
+                                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                                    )
+                            )
+                        }
+                        .buttonStyle(PlainButtonStyle())
+
                         // Settings button
                         Button(action: {
                             showingSettings = true
@@ -280,7 +332,7 @@ struct SurahListView: View {
                                 )
                         }
                         .buttonStyle(PlainButtonStyle())
-                        
+
                         // Profile/Authentication button
                         AuthenticationStatusButton()
                     }
@@ -383,6 +435,9 @@ struct SurahListView: View {
         .sheet(isPresented: $showingSettings) {
             SettingsView()
         }
+        .sheet(isPresented: $showingProgressDashboard) {
+            ProgressDashboardView()
+        }
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true
         }
@@ -440,7 +495,24 @@ struct StatCard: View {
 struct ModernSurahCard: View {
     let surah: Surah
     @StateObject private var themeManager = ThemeManager.shared
-    
+    @StateObject private var progressManager = ProgressManager.shared
+
+    private var completion: (read: Int, total: Int) {
+        progressManager.getSurahCompletion(surahNumber: surah.number)
+    }
+
+    private var readCount: Int {
+        completion.read
+    }
+
+    private var totalCount: Int {
+        completion.total
+    }
+
+    private var percentage: Int {
+        totalCount > 0 ? Int((Double(readCount) / Double(totalCount)) * 100) : 0
+    }
+
     var body: some View {
         HStack(spacing: 16) {
             // Surah number with gradient
@@ -484,7 +556,7 @@ struct ModernSurahCard: View {
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
                     }
-                    
+
                     HStack(spacing: 4) {
                         Image(systemName: "location")
                             .font(.system(size: 12))
@@ -493,7 +565,18 @@ struct ModernSurahCard: View {
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
                     }
-                    
+
+                    if readCount > 0 {
+                        HStack(spacing: 4) {
+                            Image(systemName: "book.fill")
+                                .font(.system(size: 12))
+                                .foregroundColor(percentage >= 100 ? .orange : .green)
+                            Text("\(percentage)%")
+                                .font(.system(size: 12, weight: .semibold))
+                                .foregroundColor(percentage >= 100 ? .orange : .green)
+                        }
+                    }
+
                     Spacer()
                 }
             }

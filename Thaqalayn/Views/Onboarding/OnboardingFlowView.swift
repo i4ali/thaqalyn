@@ -13,8 +13,9 @@ struct OnboardingFlowView: View {
     @State private var currentPage = 0
     @State private var selectedTheme: ThemeVariant?
     @State private var notificationsEnabled = false
+    @State private var progressNotificationsEnabled = false
 
-    private let totalPages = 5
+    private let totalPages = 6
 
     var body: some View {
         ZStack {
@@ -40,14 +41,18 @@ struct OnboardingFlowView: View {
                 DailyVerseScreen(notificationsEnabled: $notificationsEnabled)
                     .tag(3)
 
-                // Screen 5: Final Setup
+                // Screen 5: Progress Notifications
+                ProgressNotificationsScreen(progressNotificationsEnabled: $progressNotificationsEnabled)
+                    .tag(4)
+
+                // Screen 6: Final Setup
                 FinalScreen(
                     selectedTheme: $selectedTheme,
                     onComplete: {
                         completeOnboarding()
                     }
                 )
-                .tag(4)
+                .tag(5)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
@@ -90,12 +95,17 @@ struct OnboardingFlowView: View {
         }
 
         // Apply notification preferences
-        if notificationsEnabled {
+        if notificationsEnabled || progressNotificationsEnabled {
             Task {
                 await NotificationManager.shared.requestPermission()
-                NotificationManager.shared.preferences.enabled = true
+                NotificationManager.shared.preferences.enabled = notificationsEnabled
             }
         }
+
+        // Apply progress notification preferences
+        let progressManager = ProgressManager.shared
+        progressManager.preferences.notificationsEnabled = progressNotificationsEnabled
+        progressManager.preferences.celebrationsEnabled = progressNotificationsEnabled
 
         // Mark onboarding as complete
         UserDefaults.standard.set(true, forKey: "hasShownWelcome")

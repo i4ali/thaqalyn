@@ -518,3 +518,165 @@ struct NotificationPreferences: Codable {
         case enabled, time, language, includeTafsir
     }
 }
+
+// MARK: - Progress Tracking Models
+
+struct VerseProgress: Codable, Identifiable {
+    let id: UUID
+    let surahNumber: Int
+    let verseNumber: Int
+    let readDate: Date
+    let isRead: Bool
+
+    var verseKey: String {
+        return "\(surahNumber):\(verseNumber)"
+    }
+
+    init(
+        id: UUID = UUID(),
+        surahNumber: Int,
+        verseNumber: Int,
+        readDate: Date = Date(),
+        isRead: Bool = true
+    ) {
+        self.id = id
+        self.surahNumber = surahNumber
+        self.verseNumber = verseNumber
+        self.readDate = readDate
+        self.isRead = isRead
+    }
+}
+
+struct ReadingStreak: Codable {
+    var currentStreak: Int
+    var longestStreak: Int
+    var lastReadDate: Date?
+    var streakStartDate: Date?
+
+    init(
+        currentStreak: Int = 0,
+        longestStreak: Int = 0,
+        lastReadDate: Date? = nil,
+        streakStartDate: Date? = nil
+    ) {
+        self.currentStreak = currentStreak
+        self.longestStreak = longestStreak
+        self.lastReadDate = lastReadDate
+        self.streakStartDate = streakStartDate
+    }
+}
+
+struct BadgeAward: Codable, Identifiable {
+    let id: UUID
+    let surahNumber: Int
+    let surahName: String
+    let arabicName: String
+    let awardedDate: Date
+    let badgeType: BadgeType
+
+    init(
+        id: UUID = UUID(),
+        surahNumber: Int,
+        surahName: String,
+        arabicName: String,
+        awardedDate: Date = Date(),
+        badgeType: BadgeType = .surahCompletion
+    ) {
+        self.id = id
+        self.surahNumber = surahNumber
+        self.surahName = surahName
+        self.arabicName = arabicName
+        self.awardedDate = awardedDate
+        self.badgeType = badgeType
+    }
+}
+
+enum BadgeType: String, Codable {
+    case surahCompletion = "surah_completion"
+    case milestone10 = "milestone_10"
+    case milestone25 = "milestone_25"
+    case milestone50 = "milestone_50"
+    case allSurahs = "all_surahs"
+    case streak7 = "streak_7"
+    case streak30 = "streak_30"
+    case streak100 = "streak_100"
+
+    var title: String {
+        switch self {
+        case .surahCompletion: return "Surah Complete"
+        case .milestone10: return "10 Surahs Mastered"
+        case .milestone25: return "Quarter Complete"
+        case .milestone50: return "Halfway There"
+        case .allSurahs: return "Quran Complete"
+        case .streak7: return "7 Day Streak"
+        case .streak30: return "30 Day Streak"
+        case .streak100: return "100 Day Streak"
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .surahCompletion: return "checkmark.seal.fill"
+        case .milestone10, .milestone25, .milestone50: return "star.fill"
+        case .allSurahs: return "crown.fill"
+        case .streak7, .streak30, .streak100: return "flame.fill"
+        }
+    }
+
+    var color: String {
+        switch self {
+        case .surahCompletion: return "green"
+        case .milestone10: return "blue"
+        case .milestone25: return "purple"
+        case .milestone50: return "orange"
+        case .allSurahs: return "gold"
+        case .streak7: return "orange"
+        case .streak30: return "red"
+        case .streak100: return "purple"
+        }
+    }
+}
+
+struct ProgressStats: Codable {
+    var totalVersesRead: Int
+    var totalSurahsCompleted: Int
+    var currentStreak: Int
+    var longestStreak: Int
+    var versesReadToday: Int
+    var lastReadDate: Date?
+    var startDate: Date
+
+    init(
+        totalVersesRead: Int = 0,
+        totalSurahsCompleted: Int = 0,
+        currentStreak: Int = 0,
+        longestStreak: Int = 0,
+        versesReadToday: Int = 0,
+        lastReadDate: Date? = nil,
+        startDate: Date = Date()
+    ) {
+        self.totalVersesRead = totalVersesRead
+        self.totalSurahsCompleted = totalSurahsCompleted
+        self.currentStreak = currentStreak
+        self.longestStreak = longestStreak
+        self.versesReadToday = versesReadToday
+        self.lastReadDate = lastReadDate
+        self.startDate = startDate
+    }
+}
+
+struct ProgressPreferences: Codable {
+    var notificationsEnabled: Bool
+    var celebrationsEnabled: Bool
+    var showStreakInHeader: Bool
+
+    init(
+        notificationsEnabled: Bool = true,
+        celebrationsEnabled: Bool = true,
+        showStreakInHeader: Bool = true
+    ) {
+        self.notificationsEnabled = notificationsEnabled
+        self.celebrationsEnabled = celebrationsEnabled
+        self.showStreakInHeader = showStreakInHeader
+    }
+}
