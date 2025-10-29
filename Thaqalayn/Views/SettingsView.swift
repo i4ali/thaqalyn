@@ -86,21 +86,6 @@ struct SettingsView: View {
                                 }
                             }
 
-                            // Prayer Times Section
-                            SettingsSection(title: "Prayer Times") {
-                                VStack(spacing: 12) {
-                                    NavigationLink(destination: PrayerTimesView()) {
-                                        SettingsRowContent(
-                                            icon: "moon.stars.fill",
-                                            title: "Prayer Times",
-                                            subtitle: "Shia prayer times with athan",
-                                            iconColor: .indigo
-                                        )
-                                    }
-                                    .buttonStyle(PlainButtonStyle())
-                                }
-                            }
-
                             // Daily Verse Notifications Section
                             SettingsSection(title: "Daily Verse") {
                                 VStack(spacing: 12) {

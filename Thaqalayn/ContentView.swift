@@ -231,23 +231,6 @@ struct SurahListView: View {
                     Spacer()
                     
                     HStack(spacing: 12) {
-                        // Prayer Times button
-                        NavigationLink(destination: PrayerTimesView()) {
-                            Image(systemName: "moon.stars.fill")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(themeManager.primaryText)
-                                .frame(width: 40, height: 40)
-                                .background(
-                                    Circle()
-                                        .fill(themeManager.glassEffect)
-                                        .overlay(
-                                            Circle()
-                                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                                        )
-                                )
-                        }
-                        .buttonStyle(PlainButtonStyle())
-
                         // Bookmarks button
                         NavigationLink(destination: BookmarksView()) {
                             ZStack {
