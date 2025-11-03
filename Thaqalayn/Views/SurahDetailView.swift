@@ -119,65 +119,95 @@ struct ModernSurahHeader: View {
     let onBack: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
-    
+
     var body: some View {
         VStack(spacing: 16) {
-            // Navigation and title
-            HStack {
-                Button(action: onBack) {
-                    Image(systemName: "chevron.left")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .frame(width: 36, height: 36)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        )
+            // Navigation (different for warm theme)
+            if themeManager.selectedTheme == .warmInviting {
+                // Warm theme: Simple back button
+                HStack {
+                    Button(action: onBack) {
+                        Text("←")
+                            .font(.system(size: 20))
+                            .foregroundColor(Color(red: 0.176, green: 0.145, blue: 0.125))
+                            .frame(width: 40, height: 40)
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(Color.black.opacity(0.1))
+                            )
+                    }
+                    Spacer()
                 }
-                
-                Spacer()
-                
-                Text(surah.englishName)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                
-                Spacer()
+                .padding(.horizontal, 24)
+                .padding(.top, 20)
+            } else {
+                // Other themes: Original centered title style
+                HStack {
+                    Button(action: onBack) {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundColor(themeManager.primaryText)
+                            .frame(width: 36, height: 36)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(themeManager.glassEffect)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                                    )
+                            )
+                    }
+
+                    Spacer()
+
+                    Text(surah.englishName)
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+
+                    Spacer()
+                }
             }
-            
+
             // Surah info card
-            VStack(spacing: 12) {
+            VStack(spacing: themeManager.selectedTheme == .warmInviting ? 16 : 12) {
                 Text(surah.arabicName)
-                    .font(.system(size: 28, weight: .medium))
+                    .font(.system(size: themeManager.selectedTheme == .warmInviting ? 32 : 28, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .multilineTextAlignment(.center)
-                
+
                 Text(surah.englishNameTranslation)
-                    .font(.system(size: 16, weight: .medium))
+                    .font(.system(size: themeManager.selectedTheme == .warmInviting ? 18 : 16, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .italic()
-                
+
                 HStack(spacing: 20) {
                     HStack(spacing: 6) {
-                        Image(systemName: "book")
-                            .font(.system(size: 12))
+                        if themeManager.selectedTheme == .warmInviting {
+                            Text("📖")
+                                .font(.system(size: 14))
+                        } else {
+                            Image(systemName: "book")
+                                .font(.system(size: 12))
+                        }
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 14, weight: .medium))
                     }
-                    .foregroundColor(themeManager.tertiaryText)
-                    
+                    .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.tertiaryText)
+
                     HStack(spacing: 6) {
-                        Image(systemName: "location")
-                            .font(.system(size: 12))
+                        if themeManager.selectedTheme == .warmInviting {
+                            Text("📍")
+                                .font(.system(size: 14))
+                        } else {
+                            Image(systemName: "location")
+                                .font(.system(size: 12))
+                        }
                         Text(surah.revelationType)
                             .font(.system(size: 14, weight: .medium))
                     }
-                    .foregroundColor(themeManager.tertiaryText)
+                    .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.tertiaryText)
                 }
-                
+
                 // Play Sequence button (verse-by-verse)
                 Button(action: {
                     Task {
@@ -185,52 +215,77 @@ struct ModernSurahHeader: View {
                     }
                 }) {
                     HStack(spacing: 8) {
-                        Image(systemName: "play.fill")
-                            .font(.system(size: 16, weight: .semibold))
+                        if themeManager.selectedTheme == .warmInviting {
+                            Text("▶")
+                                .font(.system(size: 16))
+                        } else {
+                            Image(systemName: "play.fill")
+                                .font(.system(size: 16, weight: .semibold))
+                        }
                         Text("Play Sequence")
-                            .font(.system(size: 16, weight: .semibold))
+                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 16, weight: .semibold))
                     }
                     .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 10)
-                    .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(themeManager.purpleGradient)
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
-                    )
+                    .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 32 : 20)
+                    .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 14 : 10)
+                    .background {
+                        if themeManager.selectedTheme == .warmInviting {
+                            RoundedRectangle(cornerRadius: 24)
+                                .fill(
+                                    LinearGradient(
+                                        colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .shadow(color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3), radius: 12)
+                        } else {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(themeManager.purpleGradient)
+                                .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
+                        }
+                    }
                 }
                 .padding(.top, 8)
             }
-            .padding(20)
-            .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        themeManager.floatingOrbColors[0].opacity(0.7),
-                                        themeManager.floatingOrbColors[1].opacity(0.7)
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
+            .padding(themeManager.selectedTheme == .warmInviting ? 28 : 20)
+            .background {
+                if themeManager.selectedTheme == .warmInviting {
+                    RoundedRectangle(cornerRadius: 24)
+                        .fill(Color.white)
+                        .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 6)
+                } else {
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(themeManager.glassEffect)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                        )
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(
+                                    LinearGradient(
+                                        colors: [
+                                            themeManager.floatingOrbColors[0].opacity(0.7),
+                                            themeManager.floatingOrbColors[1].opacity(0.7)
+                                        ],
+                                        startPoint: .topLeading,
+                                        endPoint: .bottomTrailing
+                                    )
                                 )
-                            )
-                    )
-            )
+                        )
+                }
+            }
         }
-        .padding(.horizontal, 20)
-        .padding(.top, 60)
-        .padding(.bottom, 20)
-        .background(
-            Rectangle()
-                .fill(themeManager.glassEffect)
-        )
+        .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 24 : 20)
+        .padding(.top, themeManager.selectedTheme == .warmInviting ? 20 : 60)
+        .padding(.bottom, themeManager.selectedTheme == .warmInviting ? 24 : 20)
+        .background {
+            if themeManager.selectedTheme != .warmInviting {
+                Rectangle()
+                    .fill(themeManager.glassEffect)
+            }
+        }
     }
 }
 
@@ -312,89 +367,101 @@ struct ModernVerseCard: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: themeManager.selectedTheme == .warmInviting ? 20 : 16) {
             // Verse number and actions
             HStack {
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 40, height: 40)
-                    .overlay(
-                        Text("\(verse.number)")
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(.white)
-                    )
-                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
-                
+                // Verse number circle
+                if themeManager.selectedTheme == .warmInviting {
+                    // Warm theme: Circle with purple border only
+                    Circle()
+                        .strokeBorder(Color(red: 0.608, green: 0.561, blue: 0.749), lineWidth: 2)
+                        .frame(width: 36, height: 36)
+                        .overlay(
+                            Text("\(verse.number)")
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                        )
+                } else {
+                    // Other themes: Filled circle
+                    Circle()
+                        .fill(themeManager.accentGradient)
+                        .frame(width: 40, height: 40)
+                        .overlay(
+                            Text("\(verse.number)")
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundColor(.white)
+                        )
+                        .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                }
+
                 Spacer()
-                
-                HStack(spacing: 8) {
+
+                HStack(spacing: 12) {
                     // Play button
                     Button(action: {
                         Task {
                             await audioManager.playVerse(verse, in: surah)
                         }
                     }) {
-                        Image(systemName: isCurrentlyPlaying ? "pause.fill" : "play.fill")
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(isCurrentlyPlaying ? .white : themeManager.primaryText)
-                            .frame(width: 36, height: 36)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(isCurrentlyPlaying ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.glassEffect))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(isCurrentlyPlaying ? Color.clear : themeManager.strokeColor, lineWidth: 1)
-                                    )
-                            )
-                            .shadow(color: isCurrentlyPlaying ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4) : Color.clear, radius: 8)
+                        if themeManager.selectedTheme == .warmInviting {
+                            // Warm theme: Circular button with light purple background
+                            Text(isCurrentlyPlaying ? "⏸" : "▶")
+                                .font(.system(size: 18))
+                                .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                                .frame(width: 36, height: 36)
+                                .background(
+                                    Circle()
+                                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                                )
+                        } else {
+                            // Other themes: Original style
+                            Image(systemName: isCurrentlyPlaying ? "pause.fill" : "play.fill")
+                                .font(.system(size: 14, weight: .medium))
+                                .foregroundColor(isCurrentlyPlaying ? .white : themeManager.primaryText)
+                                .frame(width: 36, height: 36)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(isCurrentlyPlaying ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.glassEffect))
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 8)
+                                                .stroke(isCurrentlyPlaying ? Color.clear : themeManager.strokeColor, lineWidth: 1)
+                                        )
+                                )
+                                .shadow(color: isCurrentlyPlaying ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4) : Color.clear, radius: 8)
+                        }
                     }
                     .animation(.easeInOut(duration: 0.2), value: isCurrentlyPlaying)
-                    
+
                     // Bookmark button
                     Button(action: toggleBookmark) {
-                        Image(systemName: isBookmarked ? "heart.fill" : "heart")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(isBookmarked ? .pink : themeManager.secondaryText)
-                            .frame(width: 36, height: 36)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                                    )
-                            )
+                        if themeManager.selectedTheme == .warmInviting {
+                            // Warm theme: Circular button with light orange background
+                            Text(isBookmarked ? "♥" : "♡")
+                                .font(.system(size: 18))
+                                .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
+                                .frame(width: 36, height: 36)
+                                .background(
+                                    Circle()
+                                        .fill(Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.1))
+                                )
+                        } else {
+                            // Other themes: Original style
+                            Image(systemName: isBookmarked ? "heart.fill" : "heart")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundColor(isBookmarked ? .pink : themeManager.secondaryText)
+                                .frame(width: 36, height: 36)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(themeManager.glassEffect)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 8)
+                                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                                        )
+                                )
+                        }
                     }
                     .scaleEffect(showingBookmarkFeedback ? 1.2 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.6), value: showingBookmarkFeedback)
-
-                    // Commentary button (check premium access)
-                    Button(action: {
-                        if !canAccessTafsir && surah.number > 1 {
-                            // Locked content - show paywall
-                            showingPaywall = true
-                        } else if verse.tafsir != nil {
-                            // Unlocked content - open commentary
-                            onTafsirTap()
-                        }
-                    }) {
-                        HStack(spacing: 6) {
-                            Image(systemName: !canAccessTafsir && surah.number > 1 ? "lock.fill" : "book.fill")
-                                .font(.system(size: 12))
-                            Text(!canAccessTafsir && surah.number > 1 ? "Unlock" : "Commentary")
-                                .font(.system(size: 13, weight: .medium))
-                        }
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 8)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(!canAccessTafsir && surah.number > 1 ?
-                                      LinearGradient(colors: [.yellow, .orange], startPoint: .leading, endPoint: .trailing) :
-                                      themeManager.purpleGradient)
-                        )
-                        .shadow(color: (!canAccessTafsir && surah.number > 1 ? Color.yellow : Color(red: 0.39, green: 0.4, blue: 0.95)).opacity(0.3), radius: 4)
-                    }
                 }
             }
             .task {
@@ -407,38 +474,69 @@ struct ModernVerseCard: View {
                     canAccessTafsir = await PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
                 }
             }
-            
+
             // Arabic text
             Text(verse.arabicText)
-                .font(.system(size: 24, weight: .medium))
+                .font(.system(size: themeManager.selectedTheme == .warmInviting ? 26 : 24, weight: .medium))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                .lineSpacing(8)
-            
+                .lineSpacing(themeManager.selectedTheme == .warmInviting ? 26 : 8)  // line-height: 2 = lineSpacing equals font size
+
             // English translation
             Text(verse.translation)
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(themeManager.secondaryText)
                 .lineSpacing(4)
+
+            // Commentary button (moved outside HStack for full width in warm theme)
+            if themeManager.selectedTheme == .warmInviting {
+                Button(action: {
+                    if !canAccessTafsir && surah.number > 1 {
+                        showingPaywall = true
+                    } else if verse.tafsir != nil {
+                        onTafsirTap()
+                    }
+                }) {
+                    HStack(spacing: 8) {
+                        Text("📖")
+                            .font(.system(size: 15))
+                        Text(!canAccessTafsir && surah.number > 1 ? "Unlock Commentary" : "View Commentary")
+                            .font(.system(size: 15, weight: .semibold))
+                    }
+                    .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                    )
+                }
+            }
         }
-        .padding(24)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .fill(backgroundFill)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(
-                            highlightStroke,
-                            lineWidth: isCurrentlyPlaying ? 2 : 1
-                        )
-                )
-                .shadow(
-                    color: shadowColor,
-                    radius: isCurrentlyPlaying ? 12 : 8, 
-                    y: 4
-                )
-        )
+        .padding(themeManager.selectedTheme == .warmInviting ? 24 : 24)
+        .background {
+            if themeManager.selectedTheme == .warmInviting {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color.white)
+                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+            } else {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(backgroundFill)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(
+                                highlightStroke,
+                                lineWidth: isCurrentlyPlaying ? 2 : 1
+                            )
+                    )
+                    .shadow(
+                        color: shadowColor,
+                        radius: isCurrentlyPlaying ? 12 : 8,
+                        y: 4
+                    )
+            }
+        }
         .scaleEffect(isPressed ? 0.98 : 1.0)
         .animation(.easeInOut(duration: 0.1), value: isPressed)
         .animation(.easeInOut(duration: 0.3), value: isCurrentlyPlaying)

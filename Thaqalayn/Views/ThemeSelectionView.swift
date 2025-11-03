@@ -184,9 +184,11 @@ struct ThemePreviewCard: View {
             return Color(red: 0.99, green: 0.96, blue: 0.89)
         case .royalAmethyst:
             return Color(red: 0.25, green: 0.14, blue: 0.26)
+        case .warmInviting:
+            return Color(red: 0.97, green: 0.96, blue: 1.0) // #F8F5FF - soft lavender
         }
     }
-    
+
     private func getTextColor(for theme: ThemeVariant) -> Color {
         switch theme {
         case .modernDark:
@@ -211,9 +213,11 @@ struct ThemePreviewCard: View {
             return Color(red: 0.40, green: 0.26, blue: 0.13)
         case .royalAmethyst:
             return Color(red: 0.98, green: 0.91, blue: 0.70)
+        case .warmInviting:
+            return Color(red: 0.176, green: 0.145, blue: 0.125) // #2D2520 - warm charcoal
         }
     }
-    
+
     private func getSecondaryTextColor(for theme: ThemeVariant) -> Color {
         switch theme {
         case .modernDark:
@@ -238,9 +242,11 @@ struct ThemePreviewCard: View {
             return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.8)
         case .royalAmethyst:
             return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.85)
+        case .warmInviting:
+            return Color(red: 0.42, green: 0.365, blue: 0.329) // #6B5D54 - soft gray
         }
     }
-    
+
     private func getAccentColor(for theme: ThemeVariant) -> Color {
         switch theme {
         case .modernDark, .modernLight:
@@ -263,9 +269,11 @@ struct ThemePreviewCard: View {
             return Color(red: 1.0, green: 0.55, blue: 0.0)
         case .royalAmethyst:
             return Color(red: 0.88, green: 0.70, blue: 0.50)
+        case .warmInviting:
+            return Color(red: 0.608, green: 0.561, blue: 0.749) // #9B8FBF - peaceful purple
         }
     }
-    
+
     private func getStrokeColor(for theme: ThemeVariant) -> Color {
         switch theme {
         case .modernDark:
@@ -290,6 +298,8 @@ struct ThemePreviewCard: View {
             return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.2)
         case .royalAmethyst:
             return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.15)
+        case .warmInviting:
+            return Color(red: 0.176, green: 0.145, blue: 0.125).opacity(0.1) // Very subtle warm charcoal stroke
         }
     }
 }

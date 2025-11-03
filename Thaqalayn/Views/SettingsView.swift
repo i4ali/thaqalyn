@@ -12,6 +12,7 @@ struct SettingsView: View {
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var notificationManager = NotificationManager.shared
     @StateObject private var progressManager = ProgressManager.shared
+    @StateObject private var audioManager = AudioManager.shared
     @Environment(\.presentationMode) var presentationMode
     @State private var showingThemeSelection = false
     @State private var showingAuthentication = false
@@ -21,6 +22,7 @@ struct SettingsView: View {
     @State private var showingSyncStatus = false
     @State private var showingProgressDashboard = false
     @State private var showingResetProgressAlert = false
+    @State private var showingReciterSelection = false
     
     var body: some View {
         NavigationView {
@@ -305,13 +307,24 @@ struct SettingsView: View {
                             // Audio Section
                             SettingsSection(title: "Audio") {
                                 VStack(spacing: 12) {
+                                    // Reciter selection
                                     SettingsRow(
-                                        icon: "speaker.wave.2.fill",
-                                        title: "Audio Quality",
-                                        subtitle: "High Quality (128kbps)",
-                                        iconColor: .indigo
+                                        icon: "person.wave.2.fill",
+                                        title: "Reciter",
+                                        subtitle: audioManager.configuration.selectedReciter.nameEnglish,
+                                        iconColor: .purple
                                     ) {
-                                        // Could implement audio quality settings
+                                        showingReciterSelection = true
+                                    }
+
+                                    // Repeat mode
+                                    SettingsRow(
+                                        icon: audioManager.configuration.repeatMode.icon,
+                                        title: "Repeat Mode",
+                                        subtitle: audioManager.configuration.repeatMode.title,
+                                        iconColor: .green
+                                    ) {
+                                        cycleRepeatMode()
                                     }
                                 }
                             }
@@ -377,6 +390,9 @@ struct SettingsView: View {
         .sheet(isPresented: $showingProgressDashboard) {
             ProgressDashboardView()
         }
+        .sheet(isPresented: $showingReciterSelection) {
+            ReciterSelectionView()
+        }
         .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
             Button("OK") {
                 // Force UI refresh
@@ -408,7 +424,15 @@ struct SettingsView: View {
     private func toggleNotificationLanguage() {
         notificationManager.preferences.language = notificationManager.preferences.language == .english ? .urdu : .english
     }
-    
+
+    private func cycleRepeatMode() {
+        let modes: [RepeatMode] = [.off, .verse, .surah, .continuous]
+        if let currentIndex = modes.firstIndex(of: audioManager.configuration.repeatMode) {
+            let nextIndex = (currentIndex + 1) % modes.count
+            audioManager.updateRepeatMode(modes[nextIndex])
+        }
+    }
+
     private func performClearAllLocalData() {
         print("🧹 SettingsView: Starting clear all local data")
         

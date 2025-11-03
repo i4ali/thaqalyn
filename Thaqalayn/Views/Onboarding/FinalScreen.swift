@@ -327,6 +327,12 @@ struct ThemeCard: View {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
+        case .warmInviting:
+            return LinearGradient(
+                colors: [Color(red: 0.97, green: 0.96, blue: 1.0), Color(red: 1.0, green: 0.98, blue: 0.96)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
         }
     }
 }
