@@ -78,50 +78,63 @@ struct ContentView: View {
 
 struct AdaptiveModernBackground: View {
     @StateObject private var themeManager = ThemeManager.shared
-    
+
     var body: some View {
         ZStack {
-            // Base gradient background
-            LinearGradient(
-                colors: [
-                    themeManager.primaryBackground,
-                    themeManager.secondaryBackground,
-                    themeManager.tertiaryBackground
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            
-            // Floating gradient orbs
-            RadialGradient(
-                colors: [
-                    themeManager.floatingOrbColors[0],
-                    Color.clear
-                ],
-                center: .topLeading,
-                startRadius: 0,
-                endRadius: 300
-            )
-            
-            RadialGradient(
-                colors: [
-                    themeManager.floatingOrbColors[1],
-                    Color.clear
-                ],
-                center: .bottomTrailing,
-                startRadius: 0,
-                endRadius: 300
-            )
-            
-            RadialGradient(
-                colors: [
-                    themeManager.floatingOrbColors[2],
-                    Color.clear
-                ],
-                center: .center,
-                startRadius: 0,
-                endRadius: 200
-            )
+            if themeManager.selectedTheme == .warmInviting {
+                // Gradient background matching mockup HTML: #F8F5FF → #FFF9F5
+                LinearGradient(
+                    colors: [
+                        Color(red: 0.973, green: 0.961, blue: 1.0),    // #F8F5FF - Soft Lavender
+                        Color(red: 1.0, green: 0.976, blue: 0.961)     // #FFF9F5 - Warm White
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .ignoresSafeArea()
+            } else {
+                // Base gradient background
+                LinearGradient(
+                    colors: [
+                        themeManager.primaryBackground,
+                        themeManager.secondaryBackground,
+                        themeManager.tertiaryBackground
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+
+                // Floating gradient orbs
+                RadialGradient(
+                    colors: [
+                        themeManager.floatingOrbColors[0],
+                        Color.clear
+                    ],
+                    center: .topLeading,
+                    startRadius: 0,
+                    endRadius: 300
+                )
+
+                RadialGradient(
+                    colors: [
+                        themeManager.floatingOrbColors[1],
+                        Color.clear
+                    ],
+                    center: .bottomTrailing,
+                    startRadius: 0,
+                    endRadius: 300
+                )
+
+                RadialGradient(
+                    colors: [
+                        themeManager.floatingOrbColors[2],
+                        Color.clear
+                    ],
+                    center: .center,
+                    startRadius: 0,
+                    endRadius: 200
+                )
+            }
         }
         .ignoresSafeArea()
     }
@@ -222,6 +235,7 @@ struct SurahListView: View {
     @State private var showingAuthentication = false
     @State private var showingSettings = false
     @State private var showingProgressDashboard = false
+    @State private var showingNotifications = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
     
@@ -229,161 +243,134 @@ struct SurahListView: View {
         VStack(spacing: 0) {
             // Modern header with glassmorphism
             VStack(spacing: 16) {
+                // Top navigation row (only for warm theme)
+                if themeManager.selectedTheme == .warmInviting {
+                    HStack(spacing: 12) {
+                        // Profile Avatar
+                        WarmProfileAvatar()
+
+                        Spacer()
+
+                        // Streak Badge
+                        StreakBadge()
+
+                        // Bookmark Badge
+                        BookmarkBadge()
+
+                        Spacer()
+
+                        // Bell Icon
+                        Button(action: {
+                            showingNotifications = true
+                        }) {
+                            Text("🔔")
+                                .font(.system(size: 20))
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                }
+
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Surahs")
-                            .font(.system(size: 32, weight: .bold))
+                        if themeManager.selectedTheme == .warmInviting {
+                            Text("Assalamu Alaikum 🌙")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                        }
+
+                        Text(themeManager.selectedTheme == .warmInviting ? "Explore the Quran" : "Surahs")
+                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
                             .foregroundColor(themeManager.primaryText)
-                        
-                        Text("AI-powered Shia Commentary")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.secondaryText)
+
+                        if themeManager.selectedTheme != .warmInviting {
+                            Text("AI-powered Shia Commentary")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                        }
                     }
-                    
+
                     Spacer()
-                    
-                    HStack(spacing: 12) {
-                        // Bookmarks button
-                        NavigationLink(destination: BookmarksView()) {
-                            ZStack {
-                                Image(systemName: "heart")
-                                    .font(.system(size: 18, weight: .semibold))
-                                    .foregroundColor(themeManager.primaryText)
 
-                                if bookmarkManager.bookmarks.count > 0 {
-                                    Circle()
-                                        .fill(Color.pink)
-                                        .frame(width: 12, height: 12)
-                                        .overlay(
-                                            Text("\(bookmarkManager.bookmarks.count)")
-                                                .font(.system(size: 8, weight: .bold))
-                                                .foregroundColor(.white)
-                                        )
-                                        .offset(x: 12, y: -12)
-                                }
-                            }
-                            .frame(width: 40, height: 40)
-                            .background(
-                                Circle()
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        Circle()
-                                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                                    )
-                            )
+                    // Only show profile button for non-warm themes
+                    if themeManager.selectedTheme != .warmInviting {
+                        HStack(spacing: 12) {
+                            // Profile/Authentication button
+                            AuthenticationStatusButton()
                         }
-                        .buttonStyle(PlainButtonStyle())
-
-                        // Progress Dashboard button
-                        Button(action: {
-                            showingProgressDashboard = true
-                        }) {
-                            ZStack {
-                                Image(systemName: "chart.bar.fill")
-                                    .font(.system(size: 18, weight: .semibold))
-                                    .foregroundColor(themeManager.primaryText)
-
-                                if progressManager.streak.currentStreak > 0 {
-                                    Circle()
-                                        .fill(
-                                            LinearGradient(
-                                                colors: [Color.orange, Color.red],
-                                                startPoint: .topLeading,
-                                                endPoint: .bottomTrailing
-                                            )
-                                        )
-                                        .frame(width: 16, height: 16)
-                                        .overlay(
-                                            Text("\(progressManager.streak.currentStreak)")
-                                                .font(.system(size: 9, weight: .bold))
-                                                .foregroundColor(.white)
-                                        )
-                                        .offset(x: 12, y: -12)
-                                        .shadow(color: Color.orange.opacity(0.5), radius: 4)
-                                }
-                            }
-                            .frame(width: 40, height: 40)
-                            .background(
-                                Circle()
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        Circle()
-                                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                                    )
-                            )
-                        }
-                        .buttonStyle(PlainButtonStyle())
-
-                        // Settings button
-                        Button(action: {
-                            showingSettings = true
-                        }) {
-                            Image(systemName: "gearshape.fill")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(themeManager.primaryText)
-                                .frame(width: 40, height: 40)
-                                .background(
-                                    Circle()
-                                        .fill(themeManager.glassEffect)
-                                        .overlay(
-                                            Circle()
-                                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                                        )
-                                )
-                        }
-                        .buttonStyle(PlainButtonStyle())
-
-                        // Profile/Authentication button
-                        AuthenticationStatusButton()
                     }
                 }
                 
                 // Search bar with glassmorphism
                 HStack {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(themeManager.tertiaryText)
-                    
+                    if themeManager.selectedTheme == .warmInviting {
+                        Text("🔍")
+                            .font(.system(size: 20))
+                    } else {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(themeManager.tertiaryText)
+                    }
+
                     TextField("Search surahs...", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
                         .foregroundColor(themeManager.primaryText)
                 }
-                .padding(12)
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                )
+                .padding(themeManager.selectedTheme == .warmInviting ? 16 : 12)
+                .background {
+                    if themeManager.selectedTheme == .warmInviting {
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                            .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                    } else {
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(themeManager.glassEffect)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                            )
+                    }
+                }
                 
                 // Stats cards
                 HStack(spacing: 12) {
-                    StatCard(number: "\(dataManager.availableSurahs.count)", label: "Available")
-                    StatCard(number: "\(dataManager.availableSurahs.reduce(0) { $0 + $1.surah.versesCount })", label: "Verses")
-                    StatCard(number: "\(TafsirLayer.allCases.count)", label: "Layers")
+                    StatCard(
+                        number: "\(dataManager.availableSurahs.count)",
+                        label: themeManager.selectedTheme == .warmInviting ? "Surahs" : "Available",
+                        color: themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : nil
+                    )
+                    StatCard(
+                        number: "\(dataManager.availableSurahs.reduce(0) { $0 + $1.surah.versesCount })",
+                        label: "Verses",
+                        color: themeManager.selectedTheme == .warmInviting ? Color(red: 0.498, green: 0.722, blue: 0.604) : nil
+                    )
+                    StatCard(
+                        number: "\(TafsirLayer.allCases.count)",
+                        label: "Layers",
+                        color: themeManager.selectedTheme == .warmInviting ? Color(red: 0.91, green: 0.604, blue: 0.435) : nil
+                    )
                 }
             }
             .padding(.horizontal, 20)
             .padding(.top, 60)
             .padding(.bottom, 20)
-            .background(
-                Rectangle()
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        Color.clear,
-                                        themeManager.isDarkMode ? Color.white.opacity(0.05) : Color.black.opacity(0.05)
-                                    ],
-                                    startPoint: .top,
-                                    endPoint: .bottom
+            .background {
+                if themeManager.selectedTheme != .warmInviting {
+                    Rectangle()
+                        .fill(themeManager.glassEffect)
+                        .overlay(
+                            Rectangle()
+                                .fill(
+                                    LinearGradient(
+                                        colors: [
+                                            Color.clear,
+                                            themeManager.isDarkMode ? Color.white.opacity(0.05) : Color.black.opacity(0.05)
+                                        ],
+                                        startPoint: .top,
+                                        endPoint: .bottom
+                                    )
                                 )
-                            )
-                    )
-            )
+                        )
+                }
+            }
             
             // Surah list
             ScrollView {
@@ -438,8 +425,14 @@ struct SurahListView: View {
         .sheet(isPresented: $showingProgressDashboard) {
             ProgressDashboardView()
         }
+        .sheet(isPresented: $showingNotifications) {
+            NotificationsView()
+        }
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .init("showSettings"))) { _ in
+            showingSettings = true
         }
         .onReceive(NotificationCenter.default.publisher(for: .navigateToVerse)) { notification in
             guard let userInfo = notification.userInfo,
@@ -467,28 +460,46 @@ struct SurahListView: View {
 struct StatCard: View {
     let number: String
     let label: String
+    let color: Color?
     @StateObject private var themeManager = ThemeManager.shared
-    
+
+    init(number: String, label: String, color: Color? = nil) {
+        self.number = number
+        self.label = label
+        self.color = color
+    }
+
     var body: some View {
         VStack(spacing: 4) {
             Text(number)
-                .font(.system(size: 20, weight: .bold))
-                .foregroundStyle(themeManager.accentGradient)
-            
+                .font(.system(size: themeManager.selectedTheme == .warmInviting ? 28 : 20, weight: .bold))
+                .foregroundColor(color ?? themeManager.accentColor)
+
             Text(label)
-                .font(.system(size: 12, weight: .medium))
+                .font(.system(size: 13, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         }
         .frame(maxWidth: .infinity)
-        .padding(12)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(themeManager.glassEffect)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-        )
+        .padding(themeManager.selectedTheme == .warmInviting ? 20 : 12)
+        .background {
+            if themeManager.selectedTheme == .warmInviting {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                    .shadow(
+                        color: color?.opacity(0.15) ?? Color.clear,
+                        radius: 12,
+                        x: 0,
+                        y: 4
+                    )
+            } else {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(themeManager.glassEffect)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+            }
+        }
     }
 }
 
@@ -515,15 +526,28 @@ struct ModernSurahCard: View {
 
     var body: some View {
         HStack(spacing: 16) {
-            // Surah number with gradient
+            // Surah number with circular orange gradient badge
             ZStack {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(themeManager.purpleGradient)
-                    .frame(width: 48, height: 48)
-                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
-                
+                Circle()
+                    .fill(
+                        themeManager.selectedTheme == .warmInviting
+                            ? LinearGradient(
+                                colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                              )
+                            : themeManager.purpleGradient
+                    )
+                    .frame(width: 56, height: 56)
+                    .shadow(
+                        color: themeManager.selectedTheme == .warmInviting
+                            ? Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3)
+                            : Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4),
+                        radius: 8
+                    )
+
                 Text("\(surah.number)")
-                    .font(.system(size: 18, weight: .semibold))
+                    .font(.system(size: 22, weight: .bold))
                     .foregroundColor(.white)
             }
             
@@ -549,18 +573,26 @@ struct ModernSurahCard: View {
                 
                 HStack(spacing: 16) {
                     HStack(spacing: 4) {
-                        Image(systemName: "book")
+                        Text(themeManager.selectedTheme == .warmInviting ? "📖" : "")
                             .font(.system(size: 12))
-                            .foregroundColor(themeManager.tertiaryText)
+                        if themeManager.selectedTheme != .warmInviting {
+                            Image(systemName: "book")
+                                .font(.system(size: 12))
+                                .foregroundColor(themeManager.tertiaryText)
+                        }
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
                     }
 
                     HStack(spacing: 4) {
-                        Image(systemName: "location")
+                        Text(themeManager.selectedTheme == .warmInviting ? "📍" : "")
                             .font(.system(size: 12))
-                            .foregroundColor(themeManager.tertiaryText)
+                        if themeManager.selectedTheme != .warmInviting {
+                            Image(systemName: "location")
+                                .font(.system(size: 12))
+                                .foregroundColor(themeManager.tertiaryText)
+                        }
                         Text(surah.revelationType)
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
@@ -582,80 +614,57 @@ struct ModernSurahCard: View {
             }
         }
         .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(themeManager.glassEffect)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(
-                            LinearGradient(
-                                colors: [
-                                    themeManager.floatingOrbColors[0].opacity(0.5),
-                                    themeManager.floatingOrbColors[1].opacity(0.5)
-                                ],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
+        .background {
+            if themeManager.selectedTheme == .warmInviting {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+            } else {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(themeManager.glassEffect)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(
+                                LinearGradient(
+                                    colors: [
+                                        themeManager.floatingOrbColors[0].opacity(0.5),
+                                        themeManager.floatingOrbColors[1].opacity(0.5)
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
                             )
-                        )
-                )
-        )
+                    )
+            }
+        }
     }
 }
 
 struct AuthenticationStatusButton: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var supabaseService = SupabaseService.shared
-    @State private var showingAuthentication = false
     @State private var showingProfile = false
-    
+
     var body: some View {
         Button(action: {
-            if supabaseService.isAuthenticated {
-                showingProfile = true
-            } else {
-                showingAuthentication = true
-            }
+            showingProfile = true
         }) {
-            if supabaseService.isAuthenticated {
-                // Show user avatar when authenticated
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 40, height: 40)
-                    .overlay(
-                        Text(getUserInitials())
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(.white)
-                    )
-                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
-            } else {
-                // Show sign in button when not authenticated
-                HStack(spacing: 6) {
-                    Image(systemName: "person.circle")
+            // Always show avatar (user initials or guest "U")
+            Circle()
+                .fill(themeManager.accentGradient)
+                .frame(width: 40, height: 40)
+                .overlay(
+                    Text(getUserInitials())
                         .font(.system(size: 16, weight: .semibold))
-                    Text("Sign In")
-                        .font(.system(size: 14, weight: .semibold))
-                }
-                .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), lineWidth: 1)
-                        )
+                        .foregroundColor(.white)
                 )
-            }
+                .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
         }
         .buttonStyle(PlainButtonStyle())
-        .fullScreenCover(isPresented: $showingAuthentication) {
-            AuthenticationView()
-        }
         .sheet(isPresented: $showingProfile) {
             ProfileMenuView()
         }
@@ -683,9 +692,9 @@ struct ProfileMenuView: View {
     @StateObject private var purchaseManager = PurchaseManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var showingSignOutAlert = false
-    @State private var showingAudioSettings = false
     @State private var showingAccountDeletion = false
     @State private var showingPaywall = false
+    @State private var showingAuthentication = false
     
     var body: some View {
         NavigationView {
@@ -727,6 +736,21 @@ struct ProfileMenuView: View {
                     
                     // Menu options
                     VStack(spacing: 16) {
+                        // Sign In (for guest users)
+                        if !supabaseService.isAuthenticated {
+                            ProfileMenuItem(
+                                icon: "person.circle",
+                                title: "Sign In",
+                                subtitle: "Sync bookmarks across devices",
+                                action: {
+                                    dismiss()
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                        showingAuthentication = true
+                                    }
+                                }
+                            )
+                        }
+
                         // Upgrade to Premium (for non-premium users)
                         if !premiumManager.isPremium {
                             ProfileMenuItem(
@@ -757,41 +781,52 @@ struct ProfileMenuView: View {
                             subtitle: "\(bookmarkManager.bookmarks.count) saved verses",
                             action: { dismiss() }
                         )
-                        
+
                         ProfileMenuItem(
-                            icon: "speaker.wave.2.fill",
-                            title: "Audio Settings",
-                            subtitle: "Reciter: \(audioManager.configuration.selectedReciter.nameEnglish)",
-                            action: { showingAudioSettings = true }
-                        )
-                        
-                        
-                        ProfileMenuItem(
-                            icon: "arrow.triangle.2.circlepath",
-                            title: "Sync Status",
-                            subtitle: bookmarkManager.isAuthenticated ? "Connected" : "Offline",
+                            icon: "gearshape.fill",
+                            title: "Settings",
+                            subtitle: "App preferences and theme",
                             action: {
-                                Task {
-                                    await bookmarkManager.forceSyncWithSupabase()
+                                dismiss()
+                                // Post notification to open settings
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    NotificationCenter.default.post(name: .init("showSettings"), object: nil)
                                 }
                             }
                         )
-                        
-                        ProfileMenuItem(
-                            icon: "rectangle.portrait.and.arrow.right",
-                            title: "Sign Out",
-                            subtitle: "Switch to guest mode",
-                            isDestructive: true,
-                            action: { showingSignOutAlert = true }
-                        )
-                        
-                        ProfileMenuItem(
-                            icon: "trash.fill",
-                            title: "Delete Account",
-                            subtitle: "Permanently remove account and data",
-                            isDestructive: true,
-                            action: { showingAccountDeletion = true }
-                        )
+
+                        // Sync Status (only for authenticated users)
+                        if supabaseService.isAuthenticated {
+                            ProfileMenuItem(
+                                icon: "arrow.triangle.2.circlepath",
+                                title: "Sync Status",
+                                subtitle: bookmarkManager.isAuthenticated ? "Connected" : "Offline",
+                                action: {
+                                    Task {
+                                        await bookmarkManager.forceSyncWithSupabase()
+                                    }
+                                }
+                            )
+                        }
+
+                        // Sign Out (only for authenticated users)
+                        if supabaseService.isAuthenticated {
+                            ProfileMenuItem(
+                                icon: "rectangle.portrait.and.arrow.right",
+                                title: "Sign Out",
+                                subtitle: "Switch to guest mode",
+                                isDestructive: true,
+                                action: { showingSignOutAlert = true }
+                            )
+
+                            ProfileMenuItem(
+                                icon: "trash.fill",
+                                title: "Delete Account",
+                                subtitle: "Permanently remove account and data",
+                                isDestructive: true,
+                                action: { showingAccountDeletion = true }
+                            )
+                        }
                     }
                     
                     Spacer()
@@ -828,14 +863,14 @@ struct ProfileMenuView: View {
         } message: {
             Text("Your bookmarks will remain on this device, but you'll need to sign in again to sync across devices.")
         }
-        .sheet(isPresented: $showingAudioSettings) {
-            AudioSettingsView()
-        }
         .sheet(isPresented: $showingAccountDeletion) {
             AccountDeletionView()
         }
         .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView()
+        }
+        .fullScreenCover(isPresented: $showingAuthentication) {
+            AuthenticationView()
         }
     }
     
@@ -1166,6 +1201,107 @@ struct AudioSettingCard<Content: View>: View {
                         .stroke(themeManager.strokeColor, lineWidth: 1)
                 )
         )
+    }
+}
+
+// MARK: - Warm Theme Components
+
+struct WarmProfileAvatar: View {
+    @StateObject private var supabaseService = SupabaseService.shared
+    @State private var showingProfile = false
+
+    var body: some View {
+        Button(action: {
+            showingProfile = true
+        }) {
+            Circle()
+                .fill(
+                    LinearGradient(
+                        colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+                .frame(width: 44, height: 44)
+                .overlay(
+                    Text(getUserInitials())
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundColor(.white)
+                )
+                .shadow(color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3), radius: 12)
+        }
+        .buttonStyle(PlainButtonStyle())
+        .sheet(isPresented: $showingProfile) {
+            ProfileMenuView()
+        }
+    }
+
+    private func getUserInitials() -> String {
+        if let user = supabaseService.currentUser,
+           let email = user.email {
+            let components = email.components(separatedBy: "@")
+            if let username = components.first {
+                let initials = String(username.prefix(2)).uppercased()
+                return initials
+            }
+        }
+        return "U"
+    }
+}
+
+struct StreakBadge: View {
+    @StateObject private var progressManager = ProgressManager.shared
+    @State private var showingProgressDashboard = false
+
+    var body: some View {
+        Button(action: {
+            showingProgressDashboard = true
+        }) {
+            HStack(spacing: 6) {
+                Text("🔥")
+                    .font(.system(size: 20))
+
+                Text("\(progressManager.streak.currentStreak)")
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .background(
+                RoundedRectangle(cornerRadius: 24)
+                    .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                    .shadow(color: Color.black.opacity(0.06), radius: 8, x: 0, y: 2)
+            )
+        }
+        .buttonStyle(PlainButtonStyle())
+        .sheet(isPresented: $showingProgressDashboard) {
+            ProgressDashboardView()
+        }
+    }
+}
+
+struct BookmarkBadge: View {
+    @StateObject private var bookmarkManager = BookmarkManager.shared
+
+    var body: some View {
+        NavigationLink(destination: BookmarksView()) {
+            HStack(spacing: 6) {
+                Text("❤️")
+                    .font(.system(size: 20))
+
+                Text("\(bookmarkManager.bookmarks.count)")
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .background(
+                RoundedRectangle(cornerRadius: 24)
+                    .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                    .shadow(color: Color.black.opacity(0.06), radius: 8, x: 0, y: 2)
+            )
+        }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
