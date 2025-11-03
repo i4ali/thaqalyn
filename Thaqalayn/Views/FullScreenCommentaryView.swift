@@ -102,46 +102,73 @@ struct FullScreenCommentaryView: View {
         HStack {
             // Close button
             Button(action: { dismiss() }) {
-                Image(systemName: "xmark")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .frame(width: 44, height: 44)
-                    .background(
-                        Circle()
-                            .fill(themeManager.secondaryBackground.opacity(0.8))
-                            .overlay(
-                                Circle()
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    )
+                if themeManager.selectedTheme == .warmInviting {
+                    // Warm theme: × symbol in white circle
+                    Text("×")
+                        .font(.system(size: 24, weight: .semibold))
+                        .foregroundColor(Color(red: 0.42, green: 0.365, blue: 0.329))
+                        .frame(width: 40, height: 40)
+                        .background(
+                            Circle()
+                                .fill(Color.white.opacity(0.9))
+                        )
+                } else {
+                    // Other themes: Original xmark icon
+                    Image(systemName: "xmark")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+                        .frame(width: 44, height: 44)
+                        .background(
+                            Circle()
+                                .fill(themeManager.secondaryBackground.opacity(0.8))
+                                .overlay(
+                                    Circle()
+                                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                                )
+                        )
+                }
             }
-            
+
             Spacer()
-            
+
             // Context info
             VStack(spacing: 2) {
                 Text("Commentary")
-                    .font(.system(size: 18, weight: .semibold))
+                    .font(.system(size: 18, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
-                
+
                 Text("\(surah.englishName) • Verse \(verse.number)")
-                    .font(.system(size: 14, weight: .medium))
+                    .font(.system(size: 13, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
             }
-            
+
             Spacer()
 
             HStack(spacing: 12) {
-                // Verse read checkbox
-                verseReadCheckbox
+                // Verse read checkbox (hide for warm theme to match mockup)
+                if themeManager.selectedTheme != .warmInviting {
+                    verseReadCheckbox
+                }
 
                 // Language toggle button
                 languageToggle
             }
         }
         .padding(.horizontal, 24)
-        .padding(.top, 16)
+        .padding(.top, themeManager.selectedTheme == .warmInviting ? 20 : 16)
         .padding(.bottom, 20)
+        .background {
+            if themeManager.selectedTheme == .warmInviting {
+                LinearGradient(
+                    colors: [
+                        Color(red: 0.97, green: 0.96, blue: 1.0),
+                        Color(red: 0.97, green: 0.96, blue: 1.0).opacity(0.5)
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            }
+        }
     }
 
     // Verse read checkbox
@@ -199,20 +226,30 @@ struct FullScreenCommentaryView: View {
             HStack(spacing: 4) {
                 Text(languageManager.selectedLanguage.displayName)
                     .font(.system(size: 14, weight: .medium))
-                Image(systemName: "globe")
-                    .font(.system(size: 12))
+                if themeManager.selectedTheme == .warmInviting {
+                    Text("🌐")
+                        .font(.system(size: 14))
+                } else {
+                    Image(systemName: "globe")
+                        .font(.system(size: 12))
+                }
             }
-            .foregroundColor(themeManager.primaryText)
+            .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.primaryText)
             .padding(.horizontal, 12)
-            .padding(.vertical, 6)
-            .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.secondaryBackground.opacity(0.8))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            )
+            .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 8 : 6)
+            .background {
+                if themeManager.selectedTheme == .warmInviting {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                } else {
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(themeManager.secondaryBackground.opacity(0.8))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                        )
+                }
+            }
         }
     }
     
@@ -242,6 +279,7 @@ struct FullScreenCommentaryView: View {
     
     private func layerButton(for layer: TafsirLayer) -> some View {
         let isLocked = !premiumManager.canAccessLayer(layer, surahNumber: surah.number)
+        let isActive = selectedLayer == layer && !isLocked
 
         return Button(action: {
             if isLocked {
@@ -253,53 +291,91 @@ struct FullScreenCommentaryView: View {
                 }
             }
         }) {
-            VStack(spacing: 6) {
-                HStack(spacing: 4) {
+            if themeManager.selectedTheme == .warmInviting {
+                // Warm theme: Larger tabs with specific styling
+                VStack(spacing: 6) {
                     Text(layerIcon(for: layer))
-                        .font(.system(size: 18))
+                        .font(.system(size: 28))
 
-                    // Lock icon for locked layers
-                    if isLocked {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 12, weight: .semibold))
-                            .foregroundColor(.yellow)
-                    } else if let tafsir = verse.tafsir {
-                        // Language availability indicators (only for unlocked layers)
-                        layerAvailabilityIndicator(for: layer, tafsir: tafsir)
+                    Text(layerShortTitle(for: layer))
+                        .font(.system(size: 15, weight: .semibold))
+                        .multilineTextAlignment(.center)
+
+                    Text(layerShortDescription(for: layer))
+                        .font(.system(size: 10))
+                        .multilineTextAlignment(.center)
+                        .lineLimit(1)
+                }
+                .foregroundColor(isActive ? .white : Color(red: 0.176, green: 0.145, blue: 0.125))
+                .frame(width: 130, height: 95)
+                .padding(12)
+                .background {
+                    if isActive {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(
+                                LinearGradient(
+                                    colors: [Color(red: 0.608, green: 0.561, blue: 0.749), Color(red: 0.545, green: 0.498, blue: 0.659)],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .shadow(color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.3), radius: 12)
+                    } else {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.white)
+                            .shadow(color: Color.black.opacity(0.04), radius: 12)
                     }
                 }
+            } else {
+                // Other themes: Original compact style
+                VStack(spacing: 6) {
+                    HStack(spacing: 4) {
+                        Text(layerIcon(for: layer))
+                            .font(.system(size: 18))
 
-                Text(layerShortTitle(for: layer))
-                    .font(.system(size: 13, weight: .semibold))
-                    .multilineTextAlignment(.center)
-            }
-            .foregroundColor(
-                isLocked ? themeManager.tertiaryText :
-                (selectedLayer == layer ? .white : themeManager.secondaryText)
-            )
-            .padding(.horizontal, 16)
-            .padding(.vertical, 12)
-            .background {
-                if selectedLayer == layer && !isLocked {
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(layerGradient(for: layer))
-                } else if isLocked {
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(themeManager.tertiaryBackground.opacity(0.3))
-                } else {
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(themeManager.tertiaryBackground.opacity(0.6))
+                        // Lock icon for locked layers
+                        if isLocked {
+                            Image(systemName: "lock.fill")
+                                .font(.system(size: 12, weight: .semibold))
+                                .foregroundColor(.yellow)
+                        } else if let tafsir = verse.tafsir {
+                            // Language availability indicators (only for unlocked layers)
+                            layerAvailabilityIndicator(for: layer, tafsir: tafsir)
+                        }
+                    }
+
+                    Text(layerShortTitle(for: layer))
+                        .font(.system(size: 13, weight: .semibold))
+                        .multilineTextAlignment(.center)
                 }
+                .foregroundColor(
+                    isLocked ? themeManager.tertiaryText :
+                    (isActive ? .white : themeManager.secondaryText)
+                )
+                .padding(.horizontal, 16)
+                .padding(.vertical, 12)
+                .background {
+                    if isActive {
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(layerGradient(for: layer))
+                    } else if isLocked {
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(themeManager.tertiaryBackground.opacity(0.3))
+                    } else {
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(themeManager.tertiaryBackground.opacity(0.6))
+                    }
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(
+                            isLocked ? Color.yellow.opacity(0.4) :
+                            (isActive ? Color.clear : themeManager.strokeColor),
+                            lineWidth: isLocked ? 1.5 : 1
+                        )
+                )
+                .opacity(isLocked ? 0.6 : 1.0)
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(
-                        isLocked ? Color.yellow.opacity(0.4) :
-                        (selectedLayer == layer ? Color.clear : themeManager.strokeColor),
-                        lineWidth: isLocked ? 1.5 : 1
-                    )
-            )
-            .opacity(isLocked ? 0.6 : 1.0)
         }
         .buttonStyle(PlainButtonStyle())
     }
@@ -367,11 +443,18 @@ struct FullScreenCommentaryView: View {
                 Spacer()
             }
             
-            // Elegant separator
-            Rectangle()
-                .fill(layerGradient(for: selectedLayer).opacity(0.3))
-                .frame(height: 2)
-                .frame(maxWidth: .infinity)
+            // Divider matching mockup
+            if themeManager.selectedTheme == .warmInviting {
+                Rectangle()
+                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.2)) // #9B8FBF with 0.2 opacity
+                    .frame(height: 1)
+                    .frame(maxWidth: .infinity)
+            } else {
+                Rectangle()
+                    .fill(layerGradient(for: selectedLayer).opacity(0.3))
+                    .frame(height: 2)
+                    .frame(maxWidth: .infinity)
+            }
         }
         .padding(.bottom, 32)
     }
@@ -380,12 +463,12 @@ struct FullScreenCommentaryView: View {
         VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 18) {
             ForEach(Array(formattedParagraphs(from: text).enumerated()), id: \.offset) { index, paragraph in
                 VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 8) {
-                    
+
                     // Reading-optimized paragraph text with background and selective RTL support
                     Text(paragraph.trimmingCharacters(in: .whitespacesAndNewlines))
-                        .font(.system(size: 18, weight: .regular, design: .default))
+                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 18, weight: .regular, design: .default))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8) // Optimized line spacing for readability
+                        .lineSpacing(themeManager.selectedTheme == .warmInviting ? 6 : 8) // Optimized line spacing for readability
                         .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                         .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                         .fixedSize(horizontal: false, vertical: true)
@@ -393,22 +476,30 @@ struct FullScreenCommentaryView: View {
                         .padding(.horizontal, 20)
                         .padding(.vertical, 16)
                         .background {
-                            RoundedRectangle(cornerRadius: 16)
-                                .fill(themeManager.secondaryBackground.opacity(0.8))
-                                .background(
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .fill(themeManager.glassEffect)
-                                )
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .stroke(themeManager.strokeColor.opacity(1.0), lineWidth: 2)
-                                )
-                                .shadow(
-                                    color: themeManager.primaryText.opacity(0.05), 
-                                    radius: 8, 
-                                    x: 0, 
-                                    y: 2
-                                )
+                            if themeManager.selectedTheme == .warmInviting {
+                                // Warm theme: White card with soft shadow
+                                RoundedRectangle(cornerRadius: 24)
+                                    .fill(Color.white)
+                                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                            } else {
+                                // Other themes: Glass effect
+                                RoundedRectangle(cornerRadius: 16)
+                                    .fill(themeManager.secondaryBackground.opacity(0.8))
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .fill(themeManager.glassEffect)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .stroke(themeManager.strokeColor.opacity(1.0), lineWidth: 2)
+                                    )
+                                    .shadow(
+                                        color: themeManager.primaryText.opacity(0.05),
+                                        radius: 8,
+                                        x: 0,
+                                        y: 2
+                                    )
+                            }
                         }
                 }
             }
@@ -501,7 +592,17 @@ struct FullScreenCommentaryView: View {
         case .comparative: return "Comparative"
         }
     }
-    
+
+    private func layerShortDescription(for layer: TafsirLayer) -> String {
+        switch layer {
+        case .foundation: return "Simple & Clear"
+        case .classical: return "Traditional Scholars"
+        case .contemporary: return "Contemporary Insights"
+        case .ahlulBayt: return "From the 14 Infallibles"
+        case .comparative: return "Balanced Analysis"
+        }
+    }
+
     private func layerGradient(for layer: TafsirLayer) -> LinearGradient {
         switch layer {
         case .foundation:
