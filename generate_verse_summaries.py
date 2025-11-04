@@ -8,65 +8,86 @@ import json
 import os
 from pathlib import Path
 
-def extract_key_points(text, max_sentences=2):
-    """Extract the most important sentences from a text."""
+def extract_paragraphs(text):
+    """Split text into paragraphs."""
     if not text:
-        return ""
+        return []
+    return [p.strip() for p in text.split('\n\n') if p.strip()]
 
-    # Split into sentences
-    sentences = [s.strip() for s in text.split('.') if s.strip()]
-
-    # Return first few sentences (usually contain main themes)
-    return '. '.join(sentences[:max_sentences]) + '.'
+def extract_sentences(text, max_sentences=None):
+    """Extract sentences from text."""
+    if not text:
+        return []
+    sentences = [s.strip() + '.' for s in text.split('.') if s.strip() and len(s.strip()) > 10]
+    if max_sentences:
+        return sentences[:max_sentences]
+    return sentences
 
 def create_verse_summary(verse_data, surah_num, verse_num):
     """
-    Create a concise, scholarly summary synthesizing all commentary layers.
-    Captures: core meaning, theological significance, and practical application.
+    Create a sophisticated summary synthesizing layer 1 and layer 2 commentary.
+
+    The summary should:
+    - Capture core meaning and historical context (layer 1)
+    - Include theological depth and classical Shia perspectives (layer 2)
+    - Be 4-5 sentences of substantial scholarly content
+    - Maintain reverent, respectful tone
     """
-    summary_elements = []
 
-    # Layer 1 (Foundation): Simple explanation and historical context
-    if 'layer1' in verse_data:
-        layer1 = verse_data['layer1']
-        # Extract opening which usually has the core message
-        first_para = layer1.split('\n\n')[0] if '\n\n' in layer1 else layer1
-        core_message = extract_key_points(first_para, 1)
-        if core_message:
-            summary_elements.append(core_message)
+    # Extract layer 1 (Foundation layer - contemporary, accessible)
+    layer1_content = verse_data.get('layer1', '')
+    layer1_paragraphs = extract_paragraphs(layer1_content)
 
-    # Layer 2 (Classical Shia): Theological depth
-    if 'layer2' in verse_data and len(summary_elements) < 2:
-        layer2 = verse_data['layer2']
-        first_para = layer2.split('\n\n')[0] if '\n\n' in layer2 else layer2
-        theological = extract_key_points(first_para, 1)
-        if theological and theological != summary_elements[0] if summary_elements else True:
-            # Extract theological significance
-            if 'Shia' in theological or 'Imam' in theological or 'Tawhid' in theological:
-                summary_elements.append(theological)
+    # Extract layer 2 (Classical Shia layer - theological depth)
+    layer2_content = verse_data.get('layer2', '')
+    layer2_paragraphs = extract_paragraphs(layer2_content)
 
-    # Layer 4 (Ahlul Bayt): Spiritual dimension
-    if 'layer4' in verse_data and len(summary_elements) < 3:
-        layer4 = verse_data['layer4']
-        first_para = layer4.split('\n\n')[0] if '\n\n' in layer4 else layer4
-        spiritual = extract_key_points(first_para, 1)
-        if spiritual:
-            # Extract spiritual significance if not redundant
-            if len(summary_elements) < 2 or 'Ahlul Bayt' in spiritual or 'Prophet' in spiritual:
-                summary_elements.append(spiritual)
+    summary_parts = []
 
-    # Combine elements into a cohesive summary
-    if not summary_elements:
-        return "Commentary available across multiple dimensions of understanding."
+    # Part 1: Core meaning and context from Layer 1 (first paragraph usually contains essence)
+    if layer1_paragraphs:
+        # Get first paragraph which typically introduces the verse's core message
+        first_para = layer1_paragraphs[0]
+        core_sentences = extract_sentences(first_para, 2)
+        if core_sentences:
+            # Take first 1-2 sentences that capture the core meaning
+            summary_parts.extend(core_sentences[:2])
 
-    summary = ' '.join(summary_elements)
+    # Part 2: Theological and classical Shia perspective from Layer 2
+    if layer2_paragraphs:
+        # First paragraph of layer 2 usually has theological foundations
+        first_para = layer2_paragraphs[0]
+        theological_sentences = extract_sentences(first_para, 2)
 
-    # Ensure summary is concise (3-4 sentences max, ~300-400 chars)
-    sentences = [s.strip() for s in summary.split('.') if s.strip()]
-    if len(sentences) > 3:
-        summary = '. '.join(sentences[:3]) + '.'
+        # Add theological depth (1-2 sentences)
+        if theological_sentences:
+            summary_parts.extend(theological_sentences[:2])
 
-    return summary
+    # Part 3: Practical/spiritual application from later in Layer 1
+    if len(layer1_paragraphs) > 1:
+        # Last paragraph often contains practical applications
+        last_para = layer1_paragraphs[-1]
+        application_sentences = extract_sentences(last_para, 1)
+        if application_sentences and len(summary_parts) < 5:
+            summary_parts.append(application_sentences[0])
+
+    # Part 4: Additional depth from Layer 2 if available
+    if len(layer2_paragraphs) > 1 and len(summary_parts) < 5:
+        # Get additional theological insight from second paragraph
+        second_para = layer2_paragraphs[1]
+        additional_sentences = extract_sentences(second_para, 1)
+        if additional_sentences:
+            summary_parts.append(additional_sentences[0])
+
+    # Ensure we have content
+    if not summary_parts:
+        return "This verse contains profound commentary exploring its theological, spiritual, and practical dimensions."
+
+    # Combine into final summary (4-5 sentences ideal)
+    # Prioritize balance between layer 1 and layer 2
+    final_summary = ' '.join(summary_parts[:5])
+
+    return final_summary
 
 def process_tafsir_file(file_path, surah_num):
     """Process a single tafsir file and extract summaries for all verses."""
