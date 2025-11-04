@@ -122,10 +122,20 @@ def create_verse_summary(verse_data, surah_num, verse_num):
 
     # Ensure we have content
     if not summary_parts:
-        return "Classical Shia exegetes provide profound insights into this verse's theological significance."
+        return "Shia exegetes provide profound insights into this verse's theological significance."
 
     # Combine into final summary (3-5 sentences from layer 2)
     final_summary = ' '.join(summary_parts[:5])
+
+    # Clean up terminology - remove "classical" before scholars/commentators/exegetes
+    final_summary = final_summary.replace('Classical scholars', 'Scholars')
+    final_summary = final_summary.replace('classical scholars', 'scholars')
+    final_summary = final_summary.replace('Classical commentators', 'Commentators')
+    final_summary = final_summary.replace('classical commentators', 'commentators')
+    final_summary = final_summary.replace('Classical exegetes', 'Exegetes')
+    final_summary = final_summary.replace('classical exegetes', 'exegetes')
+    final_summary = final_summary.replace('Classical Shia', 'Shia')
+    final_summary = final_summary.replace('classical Shia', 'Shia')
 
     return final_summary
 
