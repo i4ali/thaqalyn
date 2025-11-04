@@ -62,15 +62,43 @@ def is_verse_translation(sentence):
 
     return False
 
+def has_scholar_reference(sentence):
+    """Check if a sentence contains scholar names or book references."""
+    scholar_indicators = [
+        # Scholar names
+        'tabatabai', 'tabrisi', 'al-tabrisi', 'allama', 'shaykh',
+        'qummi', 'tusi', 'ayatollah', 'imam ali', 'imam jafar',
+
+        # Book titles
+        'al-mizan', 'mizan', 'majma al-bayan', "majma'", 'bayan',
+        'tafsir al-qummi', 'nahj al-balagha', 'bihar al-anwar',
+        'al-kafi', 'at-tibyan', 'sharh',
+
+        # Reference phrases
+        'in *', 'in his', 'notes that', 'observes that',
+        'elucidates', 'underscores', 'emphasizes that this verse',
+        'scholars emphasize', 'commentators emphasize', 'exegetes emphasize',
+        'commentary', 'interpreting', 'in interpreting',
+    ]
+
+    sentence_lower = sentence.lower()
+
+    for indicator in scholar_indicators:
+        if indicator in sentence_lower:
+            return True
+
+    return False
+
 def extract_sentences(text, max_sentences=None):
-    """Extract sentences from text, filtering out verse translations."""
+    """Extract sentences from text, filtering out verse translations and scholar references."""
     if not text:
         return []
 
     all_sentences = [s.strip() + '.' for s in text.split('.') if s.strip() and len(s.strip()) > 10]
 
-    # Filter out verse translations, keep only commentary
-    commentary_sentences = [s for s in all_sentences if not is_verse_translation(s)]
+    # Filter out verse translations and scholar references - keep only pure commentary
+    commentary_sentences = [s for s in all_sentences
+                           if not is_verse_translation(s) and not has_scholar_reference(s)]
 
     if max_sentences:
         return commentary_sentences[:max_sentences]
