@@ -14,14 +14,67 @@ def extract_paragraphs(text):
         return []
     return [p.strip() for p in text.split('\n\n') if p.strip()]
 
+def is_verse_translation(sentence):
+    """Check if a sentence is likely a verse translation rather than commentary."""
+    # Skip sentences that quote the verse directly
+    quote_indicators = [
+        # Explicit verse references
+        'the verse', 'this verse states', 'the phrase', 'the opening verse',
+        'allah introduces', 'allah describes', 'allah says',
+        'literally meaning', 'translates as', 'reads as',
+        'declares:', 'states:', 'reads:', 'proclaims:',
+
+        # Common verse beginnings that indicate quotation
+        'say:', 'say,', 'say "', "say '",
+
+        # Verse-specific phrases
+        'in the name', 'guide us to', 'praise be to',
+        'there is no deity', 'allah – there is no',
+        'he is allah', 'qul huwa',
+    ]
+
+    sentence_lower = sentence.lower()
+
+    # Check for quote indicators
+    for indicator in quote_indicators:
+        if indicator in sentence_lower:
+            return True
+
+    # Skip sentences with heavy quotation marks (direct verse quotes)
+    quote_count = sentence.count('"') + sentence.count("'")
+    if quote_count >= 4:  # Multiple quotes = likely verse quotation
+        return True
+
+    # Skip sentences with many asterisks (Arabic text in *word* format)
+    if sentence.count('*') >= 6:  # Heavy Arabic quotation
+        return True
+
+    # Skip sentences that are primarily about describing what the verse says vs. interpreting it
+    descriptive_patterns = [
+        'introduces himself', 'introduces us', 'addresses',
+        'opens with', 'begins with', 'concludes with',
+        'consists of', 'comprises',
+    ]
+
+    for pattern in descriptive_patterns:
+        if pattern in sentence_lower and len(sentence) < 180:
+            return True
+
+    return False
+
 def extract_sentences(text, max_sentences=None):
-    """Extract sentences from text."""
+    """Extract sentences from text, filtering out verse translations."""
     if not text:
         return []
-    sentences = [s.strip() + '.' for s in text.split('.') if s.strip() and len(s.strip()) > 10]
+
+    all_sentences = [s.strip() + '.' for s in text.split('.') if s.strip() and len(s.strip()) > 10]
+
+    # Filter out verse translations, keep only commentary
+    commentary_sentences = [s for s in all_sentences if not is_verse_translation(s)]
+
     if max_sentences:
-        return sentences[:max_sentences]
-    return sentences
+        return commentary_sentences[:max_sentences]
+    return commentary_sentences
 
 def create_verse_summary(verse_data, surah_num, verse_num):
     """
