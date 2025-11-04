@@ -78,12 +78,12 @@ def extract_sentences(text, max_sentences=None):
 
 def create_verse_summary(verse_data, surah_num, verse_num):
     """
-    Create a sophisticated summary using only layer 2 (Classical Shia) commentary.
+    Create a concise summary using only layer 2 (Shia) commentary.
 
     The summary should:
-    - Draw exclusively from Classical Shia scholarly perspectives
-    - Include theological depth from scholars like Tabatabai, Tabrisi, etc.
-    - Be 3-5 sentences of substantial scholarly content
+    - Draw exclusively from Shia scholarly perspectives
+    - Be 2-3 sentences (300-500 characters max)
+    - Capture core theological insight
     - Maintain reverent, respectful tone
     """
 
@@ -97,35 +97,36 @@ def create_verse_summary(verse_data, surah_num, verse_num):
 
     summary_parts = []
 
-    # Part 1: Opening theological context (first paragraph)
+    # Part 1: Get core theological insight from first paragraph (2 sentences max)
     if layer2_paragraphs:
         first_para = layer2_paragraphs[0]
-        opening_sentences = extract_sentences(first_para, 3)
+        opening_sentences = extract_sentences(first_para, 2)
         if opening_sentences:
-            # Take first 2-3 sentences that establish theological foundation
-            summary_parts.extend(opening_sentences[:3])
+            # Take first 1-2 sentences for core insight
+            summary_parts.extend(opening_sentences[:2])
 
-    # Part 2: Additional theological depth (second paragraph if available)
-    if len(layer2_paragraphs) > 1 and len(summary_parts) < 5:
+    # Part 2: Add one more sentence if we only have 1 sentence so far
+    if len(summary_parts) < 2 and len(layer2_paragraphs) > 1:
         second_para = layer2_paragraphs[1]
-        additional_sentences = extract_sentences(second_para, 2)
+        additional_sentences = extract_sentences(second_para, 1)
         if additional_sentences:
-            # Add 1-2 more sentences for theological elaboration
-            summary_parts.extend(additional_sentences[:2])
-
-    # Part 3: Jurisprudential/practical application (third paragraph if available and needed)
-    if len(layer2_paragraphs) > 2 and len(summary_parts) < 5:
-        third_para = layer2_paragraphs[2]
-        application_sentences = extract_sentences(third_para, 1)
-        if application_sentences:
-            summary_parts.append(application_sentences[0])
+            summary_parts.append(additional_sentences[0])
 
     # Ensure we have content
     if not summary_parts:
         return "Shia exegetes provide profound insights into this verse's theological significance."
 
-    # Combine into final summary (3-5 sentences from layer 2)
-    final_summary = ' '.join(summary_parts[:5])
+    # Combine into final summary (2-3 sentences max)
+    final_summary = ' '.join(summary_parts[:3])
+
+    # Enforce length limit: 500 characters max for conciseness
+    if len(final_summary) > 500:
+        # Take only first 2 sentences if too long
+        final_summary = ' '.join(summary_parts[:2])
+
+        # If still too long, take only first sentence
+        if len(final_summary) > 500:
+            final_summary = summary_parts[0]
 
     # Clean up terminology - remove "classical" before scholars/commentators/exegetes
     final_summary = final_summary.replace('Classical scholars', 'Scholars')
