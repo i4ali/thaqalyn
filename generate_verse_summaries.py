@@ -25,66 +25,53 @@ def extract_sentences(text, max_sentences=None):
 
 def create_verse_summary(verse_data, surah_num, verse_num):
     """
-    Create a sophisticated summary synthesizing layer 1 and layer 2 commentary.
+    Create a sophisticated summary using only layer 2 (Classical Shia) commentary.
 
     The summary should:
-    - Capture core meaning and historical context (layer 1)
-    - Include theological depth and classical Shia perspectives (layer 2)
-    - Be 4-5 sentences of substantial scholarly content
+    - Draw exclusively from Classical Shia scholarly perspectives
+    - Include theological depth from scholars like Tabatabai, Tabrisi, etc.
+    - Be 3-5 sentences of substantial scholarly content
     - Maintain reverent, respectful tone
     """
 
-    # Extract layer 1 (Foundation layer - contemporary, accessible)
-    layer1_content = verse_data.get('layer1', '')
-    layer1_paragraphs = extract_paragraphs(layer1_content)
-
     # Extract layer 2 (Classical Shia layer - theological depth)
     layer2_content = verse_data.get('layer2', '')
+
+    if not layer2_content:
+        return "Classical Shia commentary explores this verse's theological and spiritual dimensions."
+
     layer2_paragraphs = extract_paragraphs(layer2_content)
 
     summary_parts = []
 
-    # Part 1: Core meaning and context from Layer 1 (first paragraph usually contains essence)
-    if layer1_paragraphs:
-        # Get first paragraph which typically introduces the verse's core message
-        first_para = layer1_paragraphs[0]
-        core_sentences = extract_sentences(first_para, 2)
-        if core_sentences:
-            # Take first 1-2 sentences that capture the core meaning
-            summary_parts.extend(core_sentences[:2])
-
-    # Part 2: Theological and classical Shia perspective from Layer 2
+    # Part 1: Opening theological context (first paragraph)
     if layer2_paragraphs:
-        # First paragraph of layer 2 usually has theological foundations
         first_para = layer2_paragraphs[0]
-        theological_sentences = extract_sentences(first_para, 2)
+        opening_sentences = extract_sentences(first_para, 3)
+        if opening_sentences:
+            # Take first 2-3 sentences that establish theological foundation
+            summary_parts.extend(opening_sentences[:3])
 
-        # Add theological depth (1-2 sentences)
-        if theological_sentences:
-            summary_parts.extend(theological_sentences[:2])
-
-    # Part 3: Practical/spiritual application from later in Layer 1
-    if len(layer1_paragraphs) > 1:
-        # Last paragraph often contains practical applications
-        last_para = layer1_paragraphs[-1]
-        application_sentences = extract_sentences(last_para, 1)
-        if application_sentences and len(summary_parts) < 5:
-            summary_parts.append(application_sentences[0])
-
-    # Part 4: Additional depth from Layer 2 if available
+    # Part 2: Additional theological depth (second paragraph if available)
     if len(layer2_paragraphs) > 1 and len(summary_parts) < 5:
-        # Get additional theological insight from second paragraph
         second_para = layer2_paragraphs[1]
-        additional_sentences = extract_sentences(second_para, 1)
+        additional_sentences = extract_sentences(second_para, 2)
         if additional_sentences:
-            summary_parts.append(additional_sentences[0])
+            # Add 1-2 more sentences for theological elaboration
+            summary_parts.extend(additional_sentences[:2])
+
+    # Part 3: Jurisprudential/practical application (third paragraph if available and needed)
+    if len(layer2_paragraphs) > 2 and len(summary_parts) < 5:
+        third_para = layer2_paragraphs[2]
+        application_sentences = extract_sentences(third_para, 1)
+        if application_sentences:
+            summary_parts.append(application_sentences[0])
 
     # Ensure we have content
     if not summary_parts:
-        return "This verse contains profound commentary exploring its theological, spiritual, and practical dimensions."
+        return "Classical Shia exegetes provide profound insights into this verse's theological significance."
 
-    # Combine into final summary (4-5 sentences ideal)
-    # Prioritize balance between layer 1 and layer 2
+    # Combine into final summary (3-5 sentences from layer 2)
     final_summary = ' '.join(summary_parts[:5])
 
     return final_summary
