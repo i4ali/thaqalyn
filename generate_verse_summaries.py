@@ -1,0 +1,222 @@
+#!/usr/bin/env python3
+"""
+Generate concise summaries for all verses in tafsir files.
+Each summary captures the essence of all commentary layers in a respectful, scholarly tone.
+"""
+
+import json
+import os
+from pathlib import Path
+
+def extract_paragraphs(text):
+    """Split text into paragraphs."""
+    if not text:
+        return []
+    return [p.strip() for p in text.split('\n\n') if p.strip()]
+
+def is_verse_translation(sentence):
+    """Check if a sentence is likely a verse translation rather than commentary."""
+    # Skip sentences that quote the verse directly
+    quote_indicators = [
+        # Explicit verse references
+        'the verse', 'this verse states', 'the phrase', 'the opening verse',
+        'allah introduces', 'allah describes', 'allah says',
+        'literally meaning', 'translates as', 'reads as',
+        'declares:', 'states:', 'reads:', 'proclaims:',
+
+        # Common verse beginnings that indicate quotation
+        'say:', 'say,', 'say "', "say '",
+
+        # Verse-specific phrases
+        'in the name', 'guide us to', 'praise be to',
+        'there is no deity', 'allah – there is no',
+        'he is allah', 'qul huwa',
+    ]
+
+    sentence_lower = sentence.lower()
+
+    # Check for quote indicators
+    for indicator in quote_indicators:
+        if indicator in sentence_lower:
+            return True
+
+    # Skip sentences with heavy quotation marks (direct verse quotes)
+    quote_count = sentence.count('"') + sentence.count("'")
+    if quote_count >= 4:  # Multiple quotes = likely verse quotation
+        return True
+
+    # Skip sentences with many asterisks (Arabic text in *word* format)
+    if sentence.count('*') >= 6:  # Heavy Arabic quotation
+        return True
+
+    # Skip sentences that are primarily about describing what the verse says vs. interpreting it
+    descriptive_patterns = [
+        'introduces himself', 'introduces us', 'addresses',
+        'opens with', 'begins with', 'concludes with',
+        'consists of', 'comprises',
+    ]
+
+    for pattern in descriptive_patterns:
+        if pattern in sentence_lower and len(sentence) < 180:
+            return True
+
+    return False
+
+def has_scholar_reference(sentence):
+    """Check if a sentence contains scholar names or book references."""
+    scholar_indicators = [
+        # Scholar names
+        'tabatabai', 'tabrisi', 'al-tabrisi', 'allama', 'shaykh',
+        'qummi', 'tusi', 'ayatollah', 'imam ali', 'imam jafar',
+
+        # Book titles
+        'al-mizan', 'mizan', 'majma al-bayan', "majma'", 'bayan',
+        'tafsir al-qummi', 'nahj al-balagha', 'bihar al-anwar',
+        'al-kafi', 'at-tibyan', 'sharh',
+
+        # Reference phrases
+        'in *', 'in his', 'notes that', 'observes that',
+        'elucidates', 'underscores', 'emphasizes that this verse',
+        'scholars emphasize', 'commentators emphasize', 'exegetes emphasize',
+        'commentary', 'interpreting', 'in interpreting',
+    ]
+
+    sentence_lower = sentence.lower()
+
+    for indicator in scholar_indicators:
+        if indicator in sentence_lower:
+            return True
+
+    return False
+
+def extract_sentences(text, max_sentences=None):
+    """Extract sentences from text, filtering out verse translations and scholar references."""
+    if not text:
+        return []
+
+    all_sentences = [s.strip() + '.' for s in text.split('.') if s.strip() and len(s.strip()) > 10]
+
+    # Filter out verse translations and scholar references - keep only pure commentary
+    commentary_sentences = [s for s in all_sentences
+                           if not is_verse_translation(s) and not has_scholar_reference(s)]
+
+    if max_sentences:
+        return commentary_sentences[:max_sentences]
+    return commentary_sentences
+
+def create_verse_summary(verse_data, surah_num, verse_num):
+    """
+    Create a concise summary using only layer 2 (Shia) commentary.
+
+    The summary should:
+    - Draw exclusively from Shia scholarly perspectives
+    - Be 2-3 sentences (300-500 characters max)
+    - Capture core theological insight
+    - Maintain reverent, respectful tone
+    """
+
+    # Extract layer 2 (Classical Shia layer - theological depth)
+    layer2_content = verse_data.get('layer2', '')
+
+    if not layer2_content:
+        return "Classical Shia commentary explores this verse's theological and spiritual dimensions."
+
+    layer2_paragraphs = extract_paragraphs(layer2_content)
+
+    summary_parts = []
+
+    # Part 1: Get core theological insight from first paragraph (2 sentences max)
+    if layer2_paragraphs:
+        first_para = layer2_paragraphs[0]
+        opening_sentences = extract_sentences(first_para, 2)
+        if opening_sentences:
+            # Take first 1-2 sentences for core insight
+            summary_parts.extend(opening_sentences[:2])
+
+    # Part 2: Add one more sentence if we only have 1 sentence so far
+    if len(summary_parts) < 2 and len(layer2_paragraphs) > 1:
+        second_para = layer2_paragraphs[1]
+        additional_sentences = extract_sentences(second_para, 1)
+        if additional_sentences:
+            summary_parts.append(additional_sentences[0])
+
+    # Ensure we have content
+    if not summary_parts:
+        return "Shia exegetes provide profound insights into this verse's theological significance."
+
+    # Combine into final summary (2-3 sentences max)
+    final_summary = ' '.join(summary_parts[:3])
+
+    # Enforce length limit: 500 characters max for conciseness
+    if len(final_summary) > 500:
+        # Take only first 2 sentences if too long
+        final_summary = ' '.join(summary_parts[:2])
+
+        # If still too long, take only first sentence
+        if len(final_summary) > 500:
+            final_summary = summary_parts[0]
+
+    # Clean up terminology - remove "classical" before scholars/commentators/exegetes
+    final_summary = final_summary.replace('Classical scholars', 'Scholars')
+    final_summary = final_summary.replace('classical scholars', 'scholars')
+    final_summary = final_summary.replace('Classical commentators', 'Commentators')
+    final_summary = final_summary.replace('classical commentators', 'commentators')
+    final_summary = final_summary.replace('Classical exegetes', 'Exegetes')
+    final_summary = final_summary.replace('classical exegetes', 'exegetes')
+    final_summary = final_summary.replace('Classical Shia', 'Shia')
+    final_summary = final_summary.replace('classical Shia', 'Shia')
+
+    return final_summary
+
+def process_tafsir_file(file_path, surah_num):
+    """Process a single tafsir file and extract summaries for all verses."""
+    print(f"Processing Surah {surah_num}...")
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        tafsir_data = json.load(f)
+
+    surah_summaries = {}
+
+    for verse_num, verse_data in tafsir_data.items():
+        summary = create_verse_summary(verse_data, surah_num, verse_num)
+        surah_summaries[verse_num] = {
+            "summary": summary,
+            "surah": surah_num,
+            "verse": verse_num
+        }
+
+    return surah_summaries
+
+def main():
+    """Main function to process all tafsir files."""
+    data_dir = Path("/home/user/thaqalyn/Thaqalayn/Thaqalayn/Data")
+    all_summaries = {}
+
+    # Process all tafsir files (1-114)
+    for surah_num in range(1, 115):
+        tafsir_file = data_dir / f"tafsir_{surah_num}.json"
+
+        if tafsir_file.exists():
+            try:
+                surah_summaries = process_tafsir_file(tafsir_file, surah_num)
+                all_summaries[str(surah_num)] = surah_summaries
+                print(f"✓ Completed Surah {surah_num} ({len(surah_summaries)} verses)")
+            except Exception as e:
+                print(f"✗ Error processing Surah {surah_num}: {e}")
+        else:
+            print(f"✗ File not found: {tafsir_file}")
+
+    # Save all summaries to a file
+    output_file = data_dir / "verse_summaries.json"
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(all_summaries, f, ensure_ascii=False, indent=2)
+
+    print(f"\n✓ All summaries saved to: {output_file}")
+    print(f"Total surahs processed: {len(all_summaries)}")
+
+    # Calculate total verses
+    total_verses = sum(len(verses) for verses in all_summaries.values())
+    print(f"Total verses summarized: {total_verses}")
+
+if __name__ == "__main__":
+    main()
