@@ -781,13 +781,6 @@ struct ProfileMenuView: View {
                         }
 
                         ProfileMenuItem(
-                            icon: "heart.fill",
-                            title: "Bookmarks",
-                            subtitle: "\(bookmarkManager.bookmarks.count) saved verses",
-                            action: { dismiss() }
-                        )
-
-                        ProfileMenuItem(
                             icon: "gearshape.fill",
                             title: "Settings",
                             subtitle: "App preferences and theme",

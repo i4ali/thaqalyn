@@ -37,11 +37,11 @@ struct BadgeAwardView: View {
                         .font(.system(size: 64))
                         .rotationEffect(.degrees(rotation))
 
-                    Text("Congratulations!")
+                    Text("MashAllah!")
                         .font(.system(size: 32, weight: .bold))
                         .foregroundStyle(
                             LinearGradient(
-                                colors: [Color(red: 0.39, green: 0.4, blue: 0.95), Color.purple],
+                                colors: [Color.green, Color(red: 0.75, green: 0.60, blue: 0.35)],
                                 startPoint: .leading,
                                 endPoint: .trailing
                             )
@@ -79,11 +79,15 @@ struct BadgeAwardView: View {
                     }
                     .shadow(color: badgeColor.opacity(0.5), radius: 20)
 
-                    // Badge title
+                    // Badge title and subtitle
                     VStack(spacing: 8) {
                         Text(badge.badgeType.title)
                             .font(.system(size: 24, weight: .bold))
                             .foregroundColor(themeManager.primaryText)
+
+                        Text(badge.badgeType.subtitle)
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
 
                         if badge.badgeType == .surahCompletion {
                             Text(badge.surahName)
@@ -91,14 +95,49 @@ struct BadgeAwardView: View {
                                 .foregroundColor(themeManager.secondaryText)
 
                             Text(badge.arabicName)
-                                .font(.system(size: 20, weight: .medium))
+                                .font(.system(size: 18, weight: .medium))
                                 .foregroundColor(themeManager.secondaryText)
-                        } else {
-                            Text(badgeMessage)
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(themeManager.secondaryText)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal, 32)
+                        }
+
+                        // Sawab display
+                        HStack(spacing: 4) {
+                            Image(systemName: "star.fill")
+                                .font(.system(size: 14))
+                                .foregroundColor(.yellow)
+                            Text("+\(badge.badgeType.sawabValue) Sawab")
+                                .font(.system(size: 16, weight: .bold))
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [Color.green, Color(red: 0.75, green: 0.60, blue: 0.35)],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                        }
+                        .padding(.top, 4)
+
+                        // Description
+                        Text(badge.badgeType.description)
+                            .font(.system(size: 15, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 24)
+                            .padding(.top, 8)
+
+                        // Hadith if available
+                        if let hadith = badge.badgeType.hadith {
+                            VStack(spacing: 4) {
+                                Divider()
+                                    .padding(.vertical, 8)
+
+                                Text(hadith)
+                                    .font(.system(size: 13, weight: .medium, design: .serif))
+                                    .foregroundColor(themeManager.secondaryText.opacity(0.8))
+                                    .multilineTextAlignment(.center)
+                                    .italic()
+                                    .padding(.horizontal, 16)
+                            }
+                            .padding(.top, 8)
                         }
                     }
                 }
@@ -116,7 +155,7 @@ struct BadgeAwardView: View {
                             RoundedRectangle(cornerRadius: 16)
                                 .fill(
                                     LinearGradient(
-                                        colors: [Color(red: 0.39, green: 0.4, blue: 0.95), Color.purple],
+                                        colors: [Color.green, Color(red: 0.75, green: 0.60, blue: 0.35)],
                                         startPoint: .leading,
                                         endPoint: .trailing
                                     )
@@ -178,27 +217,6 @@ struct BadgeAwardView: View {
         case "gold": return .yellow
         case "red": return .red
         default: return .gray
-        }
-    }
-
-    private var badgeMessage: String {
-        switch badge.badgeType {
-        case .surahCompletion:
-            return "You completed this surah!"
-        case .milestone10:
-            return "You've mastered 10 surahs!"
-        case .milestone25:
-            return "A quarter of the Quran complete!"
-        case .milestone50:
-            return "You're halfway through the Quran!"
-        case .allSurahs:
-            return "You completed the entire Quran!"
-        case .streak7:
-            return "7 days of consistent reading!"
-        case .streak30:
-            return "30 days of dedication!"
-        case .streak100:
-            return "100 days of unwavering commitment!"
         }
     }
 

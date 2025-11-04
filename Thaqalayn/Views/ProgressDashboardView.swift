@@ -30,6 +30,9 @@ struct ProgressDashboardView: View {
 
                 ScrollView {
                     VStack(spacing: 24) {
+                        // Hero Section - Total Sawab
+                        sawabHeroSection
+
                         // Hero Section - Current Streak
                         streakHeroSection
 
@@ -62,6 +65,72 @@ struct ProgressDashboardView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+    }
+
+    // MARK: - Sawab Hero Section
+
+    private var sawabHeroSection: some View {
+        VStack(spacing: 16) {
+            // Star icon with Islamic color scheme
+            ZStack {
+                Circle()
+                    .fill(
+                        LinearGradient(
+                            colors: [Color.green.opacity(0.3), Color(red: 0.75, green: 0.60, blue: 0.35).opacity(0.3)],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .frame(width: 120, height: 120)
+                    .blur(radius: 20)
+
+                Image(systemName: "star.fill")
+                    .font(.system(size: 64, weight: .semibold))
+                    .foregroundStyle(
+                        LinearGradient(
+                            colors: [Color.green, Color(red: 0.75, green: 0.60, blue: 0.35)],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .shadow(color: Color.green.opacity(0.5), radius: 10)
+            }
+
+            Text("\(progressManager.stats.totalSawab)")
+                .font(.system(size: 56, weight: .bold))
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [Color.green, Color(red: 0.75, green: 0.60, blue: 0.35)],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+
+            Text("Total Sawab Earned")
+                .font(.system(size: 20, weight: .semibold))
+                .foregroundColor(themeManager.secondaryText)
+
+            Text("ثواب")
+                .font(.system(size: 24, weight: .medium))
+                .foregroundColor(themeManager.tertiaryText)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 32)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(themeManager.glassEffect)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(
+                            LinearGradient(
+                                colors: [Color.green.opacity(0.5), Color(red: 0.75, green: 0.60, blue: 0.35).opacity(0.5)],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            ),
+                            lineWidth: 2
+                        )
+                )
+        )
     }
 
     // MARK: - Streak Hero Section

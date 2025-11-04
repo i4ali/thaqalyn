@@ -603,23 +603,40 @@ enum BadgeType: String, Codable {
 
     var title: String {
         switch self {
-        case .surahCompletion: return "Surah Complete"
-        case .milestone10: return "10 Surahs Mastered"
-        case .milestone25: return "Quarter Complete"
-        case .milestone50: return "Halfway There"
-        case .allSurahs: return "Quran Complete"
-        case .streak7: return "7 Day Streak"
-        case .streak30: return "30 Day Streak"
-        case .streak100: return "100 Day Streak"
+        case .surahCompletion: return "Khatm Surah"
+        case .milestone10: return "Mubtadi"
+        case .milestone25: return "Salik"
+        case .milestone50: return "Murid"
+        case .allSurahs: return "Waliy Allah"
+        case .streak7: return "Mu'min Mutaqin"
+        case .streak30: return "Sahib al-Wird"
+        case .streak100: return "Mukhlis"
+        }
+    }
+
+    var subtitle: String {
+        switch self {
+        case .surahCompletion: return "ختم السورة"
+        case .milestone10: return "المبتدئ"
+        case .milestone25: return "السالك"
+        case .milestone50: return "المريد"
+        case .allSurahs: return "ولي الله"
+        case .streak7: return "مؤمن متقين"
+        case .streak30: return "صاحب الورد"
+        case .streak100: return "المخلص"
         }
     }
 
     var icon: String {
         switch self {
         case .surahCompletion: return "checkmark.seal.fill"
-        case .milestone10, .milestone25, .milestone50: return "star.fill"
-        case .allSurahs: return "crown.fill"
-        case .streak7, .streak30, .streak100: return "flame.fill"
+        case .milestone10: return "book.closed.fill"
+        case .milestone25: return "star.fill"
+        case .milestone50: return "sparkles"
+        case .allSurahs: return "star.circle.fill"
+        case .streak7: return "flame.fill"
+        case .streak30: return "sparkles"
+        case .streak100: return "crown.fill"
         }
     }
 
@@ -631,8 +648,55 @@ enum BadgeType: String, Codable {
         case .milestone50: return "orange"
         case .allSurahs: return "gold"
         case .streak7: return "orange"
-        case .streak30: return "red"
+        case .streak30: return "green"
         case .streak100: return "purple"
+        }
+    }
+
+    var description: String {
+        switch self {
+        case .surahCompletion:
+            return "Completed a surah of the Noble Quran"
+        case .milestone10:
+            return "The Beginner - Completed 10 surahs on your journey"
+        case .milestone25:
+            return "The Traveler - Completed 25 surahs on the spiritual path"
+        case .milestone50:
+            return "The Dedicated Student - Reached the halfway mark with 50 surahs"
+        case .allSurahs:
+            return "Friend of Allah - Completed all 114 surahs of the Quran"
+        case .streak7:
+            return "Consistent Believer - Maintained 7 days of steadfast reading"
+        case .streak30:
+            return "Keeper of Daily Portion - 30 days of unwavering commitment"
+        case .streak100:
+            return "The Devoted One - 100 days of dedicated spiritual practice"
+        }
+    }
+
+    var sawabValue: Int {
+        switch self {
+        case .surahCompletion: return 100
+        case .milestone10: return 1000
+        case .milestone25: return 2500
+        case .milestone50: return 5000
+        case .allSurahs: return 11400
+        case .streak7: return 700
+        case .streak30: return 3000
+        case .streak100: return 10000
+        }
+    }
+
+    var hadith: String? {
+        switch self {
+        case .surahCompletion:
+            return "Whoever recites a letter from the Book of Allah will be credited with a good deed, and a good deed is multiplied into ten. - Prophet Muhammad (PBUH)"
+        case .allSurahs:
+            return "The best among you are those who learn the Quran and teach it. - Prophet Muhammad (PBUH)"
+        case .streak7, .streak30, .streak100:
+            return "Make a habit of doing good deeds, for the most beloved deed to Allah is the most regular one, even if it is small. - Imam Ali (AS)"
+        default:
+            return nil
         }
     }
 }
@@ -645,6 +709,7 @@ struct ProgressStats: Codable {
     var versesReadToday: Int
     var lastReadDate: Date?
     var startDate: Date
+    var totalSawab: Int  // Total sawab (spiritual rewards) earned
 
     init(
         totalVersesRead: Int = 0,
@@ -653,7 +718,8 @@ struct ProgressStats: Codable {
         longestStreak: Int = 0,
         versesReadToday: Int = 0,
         lastReadDate: Date? = nil,
-        startDate: Date = Date()
+        startDate: Date = Date(),
+        totalSawab: Int = 0
     ) {
         self.totalVersesRead = totalVersesRead
         self.totalSurahsCompleted = totalSurahsCompleted
@@ -662,6 +728,7 @@ struct ProgressStats: Codable {
         self.versesReadToday = versesReadToday
         self.lastReadDate = lastReadDate
         self.startDate = startDate
+        self.totalSawab = totalSawab
     }
 }
 

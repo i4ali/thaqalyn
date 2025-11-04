@@ -483,7 +483,7 @@ struct FullScreenCommentaryView: View {
 
                     // Reading-optimized paragraph text with background and selective RTL support
                     Text(paragraph.trimmingCharacters(in: .whitespacesAndNewlines))
-                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 18, weight: .regular, design: .default))
+                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 18, weight: .regular, design: .serif))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(themeManager.selectedTheme == .warmInviting ? 6 : 8) // Optimized line spacing for readability
                         .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)

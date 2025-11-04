@@ -106,6 +106,7 @@ class ProgressManager: ObservableObject {
         let verseKey = "\(surahNumber):\(verseNumber)"
 
         // Check if already marked
+        var isNewRead = false
         if let existingIndex = verseProgress.firstIndex(where: { $0.verseKey == verseKey }) {
             // Update existing
             var updated = verseProgress[existingIndex]
@@ -124,12 +125,19 @@ class ProgressManager: ObservableObject {
                 verseNumber: verseNumber
             )
             verseProgress.append(progress)
+            isNewRead = true
         }
 
         // Update stats
         stats.totalVersesRead = verseProgress.filter { $0.isRead }.count
         updateTodayVersesCount()
         stats.lastReadDate = Date()
+
+        // Award sawab for verse reading (10 sawab per verse, based on hadith)
+        if isNewRead {
+            stats.totalSawab += 10
+            print("✨ ProgressManager: +10 sawab earned! Total: \(stats.totalSawab)")
+        }
 
         // Update streak
         updateStreak()
@@ -152,6 +160,9 @@ class ProgressManager: ObservableObject {
             // Update stats
             stats.totalVersesRead = verseProgress.filter { $0.isRead }.count
             updateTodayVersesCount()
+
+            // Deduct sawab for unmarking verse
+            stats.totalSawab = max(0, stats.totalSawab - 10)
 
             saveProgress()
 
@@ -201,6 +212,11 @@ class ProgressManager: ObservableObject {
             badges.append(badge)
             stats.totalSurahsCompleted += 1
 
+            // Award sawab for badge
+            let badgeSawab = badge.badgeType.sawabValue
+            stats.totalSawab += badgeSawab
+            print("✨ ProgressManager: +\(badgeSawab) sawab earned from \(badge.badgeType.title)! Total: \(stats.totalSawab)")
+
             // Set pending badge for celebration
             if preferences.celebrationsEnabled {
                 pendingBadge = badge
@@ -233,10 +249,15 @@ class ProgressManager: ObservableObject {
                     let badge = BadgeAward(
                         surahNumber: 0,
                         surahName: milestone.type.title,
-                        arabicName: "",
+                        arabicName: milestone.type.subtitle,
                         badgeType: milestone.type
                     )
                     badges.append(badge)
+
+                    // Award sawab for milestone badge
+                    let badgeSawab = badge.badgeType.sawabValue
+                    stats.totalSawab += badgeSawab
+                    print("✨ ProgressManager: +\(badgeSawab) sawab earned from \(milestone.type.title)! Total: \(stats.totalSawab)")
 
                     if preferences.celebrationsEnabled {
                         pendingBadge = badge
@@ -334,10 +355,15 @@ class ProgressManager: ObservableObject {
                     let badge = BadgeAward(
                         surahNumber: 0,
                         surahName: milestone.type.title,
-                        arabicName: "",
+                        arabicName: milestone.type.subtitle,
                         badgeType: milestone.type
                     )
                     badges.append(badge)
+
+                    // Award sawab for streak badge
+                    let badgeSawab = badge.badgeType.sawabValue
+                    stats.totalSawab += badgeSawab
+                    print("✨ ProgressManager: +\(badgeSawab) sawab earned from \(milestone.type.title)! Total: \(stats.totalSawab)")
 
                     if preferences.celebrationsEnabled {
                         pendingBadge = badge
