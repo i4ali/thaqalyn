@@ -162,144 +162,56 @@ struct ThemePreviewCard: View {
     // Helper functions to get colors for preview
     private func getBackgroundColor(for theme: ThemeVariant) -> Color {
         switch theme {
-        case .modernDark:
-            return Color(red: 0.06, green: 0.09, blue: 0.16)
-        case .modernLight:
-            return Color(red: 0.98, green: 0.98, blue: 0.99)
-        case .classicLight:
-            return Color(red: 0.85, green: 0.92, blue: 0.78)
-        case .sepia:
-            return Color(red: 0.97, green: 0.94, blue: 0.83)
-        case .nightMode:
-            return Color(red: 0.0, green: 0.0, blue: 0.0)
-        case .mushaf:
-            return Color(red: 0.97, green: 0.96, blue: 0.91)
-        case .desertSand:
-            return Color(red: 0.96, green: 0.89, blue: 0.74)
-        case .emeraldClassic:
-            return Color(red: 0.94, green: 0.97, blue: 0.94)
-        case .highContrast:
-            return Color(red: 1.0, green: 1.0, blue: 1.0)
-        case .blueLightFilter:
-            return Color(red: 0.99, green: 0.96, blue: 0.89)
+        case .warmInviting:
+            return Color(red: 0.97, green: 0.96, blue: 1.0) // #F8F5FF
         case .royalAmethyst:
             return Color(red: 0.25, green: 0.14, blue: 0.26)
-        case .warmInviting:
-            return Color(red: 0.97, green: 0.96, blue: 1.0) // #F8F5FF - soft lavender
+        case .modernDark:
+            return Color(red: 0.06, green: 0.09, blue: 0.16)
         }
     }
 
     private func getTextColor(for theme: ThemeVariant) -> Color {
         switch theme {
-        case .modernDark:
-            return .white
-        case .modernLight:
-            return Color(red: 0.06, green: 0.09, blue: 0.16)
-        case .classicLight:
-            return Color(red: 0.15, green: 0.10, blue: 0.05)
-        case .sepia:
-            return Color(red: 0.20, green: 0.15, blue: 0.08)
-        case .nightMode:
-            return Color(red: 0.96, green: 0.96, blue: 0.86)
-        case .mushaf:
-            return Color(red: 0.11, green: 0.11, blue: 0.23)
-        case .desertSand:
-            return Color(red: 0.29, green: 0.17, blue: 0.09)
-        case .emeraldClassic:
-            return Color(red: 0.11, green: 0.26, blue: 0.20)
-        case .highContrast:
-            return Color(red: 0.0, green: 0.0, blue: 0.0)
-        case .blueLightFilter:
-            return Color(red: 0.40, green: 0.26, blue: 0.13)
+        case .warmInviting:
+            return Color(red: 0.176, green: 0.145, blue: 0.125) // #2D2520
         case .royalAmethyst:
             return Color(red: 0.98, green: 0.91, blue: 0.70)
-        case .warmInviting:
-            return Color(red: 0.176, green: 0.145, blue: 0.125) // #2D2520 - warm charcoal
+        case .modernDark:
+            return .white
         }
     }
 
     private func getSecondaryTextColor(for theme: ThemeVariant) -> Color {
         switch theme {
-        case .modernDark:
-            return .white.opacity(0.7)
-        case .modernLight:
-            return Color(red: 0.2, green: 0.25, blue: 0.33).opacity(0.8)
-        case .classicLight:
-            return Color(red: 0.15, green: 0.10, blue: 0.05).opacity(0.75)
-        case .sepia:
-            return Color(red: 0.20, green: 0.15, blue: 0.08).opacity(0.8)
-        case .nightMode:
-            return Color(red: 0.96, green: 0.96, blue: 0.86).opacity(0.7)
-        case .mushaf:
-            return Color(red: 0.11, green: 0.11, blue: 0.23).opacity(0.8)
-        case .desertSand:
-            return Color(red: 0.29, green: 0.17, blue: 0.09).opacity(0.8)
-        case .emeraldClassic:
-            return Color(red: 0.11, green: 0.26, blue: 0.20).opacity(0.8)
-        case .highContrast:
-            return Color(red: 0.0, green: 0.0, blue: 0.0).opacity(0.7)
-        case .blueLightFilter:
-            return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.8)
+        case .warmInviting:
+            return Color(red: 0.42, green: 0.365, blue: 0.329) // #6B5D54
         case .royalAmethyst:
             return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.85)
-        case .warmInviting:
-            return Color(red: 0.42, green: 0.365, blue: 0.329) // #6B5D54 - soft gray
+        case .modernDark:
+            return .white.opacity(0.7)
         }
     }
 
     private func getAccentColor(for theme: ThemeVariant) -> Color {
         switch theme {
-        case .modernDark, .modernLight:
-            return Color(red: 0.39, green: 0.4, blue: 0.95)
-        case .classicLight:
-            return Color(red: 0.2, green: 0.5, blue: 0.3)
-        case .sepia:
-            return Color(red: 0.55, green: 0.35, blue: 0.15)
-        case .nightMode:
-            return Color(red: 1.0, green: 0.84, blue: 0.0)
-        case .mushaf:
-            return Color(red: 0.18, green: 0.35, blue: 0.52)
-        case .desertSand:
-            return Color(red: 0.80, green: 0.52, blue: 0.25)
-        case .emeraldClassic:
-            return Color(red: 0.31, green: 0.78, blue: 0.47)
-        case .highContrast:
-            return Color(red: 0.0, green: 0.4, blue: 0.8)
-        case .blueLightFilter:
-            return Color(red: 1.0, green: 0.55, blue: 0.0)
+        case .warmInviting:
+            return Color(red: 0.608, green: 0.561, blue: 0.749) // #9B8FBF
         case .royalAmethyst:
             return Color(red: 0.88, green: 0.70, blue: 0.50)
-        case .warmInviting:
-            return Color(red: 0.608, green: 0.561, blue: 0.749) // #9B8FBF - peaceful purple
+        case .modernDark:
+            return Color(red: 0.39, green: 0.4, blue: 0.95)
         }
     }
 
     private func getStrokeColor(for theme: ThemeVariant) -> Color {
         switch theme {
-        case .modernDark:
-            return .white.opacity(0.1)
-        case .modernLight:
-            return .black.opacity(0.1)
-        case .classicLight:
-            return Color(red: 0.15, green: 0.10, blue: 0.05).opacity(0.15)
-        case .sepia:
-            return Color(red: 0.20, green: 0.15, blue: 0.08).opacity(0.2)
-        case .nightMode:
-            return Color(red: 0.96, green: 0.96, blue: 0.86).opacity(0.1)
-        case .mushaf:
-            return Color(red: 0.11, green: 0.11, blue: 0.23).opacity(0.15)
-        case .desertSand:
-            return Color(red: 0.29, green: 0.17, blue: 0.09).opacity(0.2)
-        case .emeraldClassic:
-            return Color(red: 0.11, green: 0.26, blue: 0.20).opacity(0.2)
-        case .highContrast:
-            return Color(red: 0.0, green: 0.0, blue: 0.0).opacity(0.3)
-        case .blueLightFilter:
-            return Color(red: 0.40, green: 0.26, blue: 0.13).opacity(0.2)
+        case .warmInviting:
+            return Color(red: 0.176, green: 0.145, blue: 0.125).opacity(0.1)
         case .royalAmethyst:
             return Color(red: 0.98, green: 0.91, blue: 0.70).opacity(0.15)
-        case .warmInviting:
-            return Color(red: 0.176, green: 0.145, blue: 0.125).opacity(0.1) // Very subtle warm charcoal stroke
+        case .modernDark:
+            return .white.opacity(0.1)
         }
     }
 }

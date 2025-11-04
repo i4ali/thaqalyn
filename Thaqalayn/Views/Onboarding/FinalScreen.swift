@@ -16,10 +16,9 @@ struct FinalScreen: View {
     @State private var isVisible = false
 
     private let themes: [(theme: ThemeVariant, name: String, description: String)] = [
-        (.modernDark, "Modern Dark", "Sleek dark design with floating orbs"),
-        (.modernLight, "Modern Light", "Clean light interface"),
-        (.classicLight, "Manuscript", "Traditional Islamic manuscript style"),
-        (.sepia, "Sepia", "Warm, easy-on-eyes reading mode")
+        (.warmInviting, "Warm & Inviting", "Sanctuary-like warm design"),
+        (.royalAmethyst, "Royal Amethyst", "Luxurious purple with gold accents"),
+        (.modernDark, "Modern Dark", "Dark glassmorphism design")
     ]
 
     var body: some View {
@@ -261,63 +260,9 @@ struct ThemeCard: View {
 
     private var themePreviewGradient: LinearGradient {
         switch theme {
-        case .modernDark:
+        case .warmInviting:
             return LinearGradient(
-                colors: [Color(red: 0.1, green: 0.1, blue: 0.15), Color(red: 0.15, green: 0.15, blue: 0.2)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .modernLight:
-            return LinearGradient(
-                colors: [Color(red: 0.95, green: 0.95, blue: 0.97), Color(red: 0.9, green: 0.9, blue: 0.92)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .classicLight:
-            return LinearGradient(
-                colors: [Color(red: 0.95, green: 0.94, blue: 0.89), Color(red: 0.91, green: 0.89, blue: 0.82)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .sepia:
-            return LinearGradient(
-                colors: [Color(red: 0.96, green: 0.94, blue: 0.88), Color(red: 0.92, green: 0.88, blue: 0.78)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .nightMode:
-            return LinearGradient(
-                colors: [Color.black, Color(white: 0.1)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .mushaf:
-            return LinearGradient(
-                colors: [Color(red: 0.98, green: 0.97, blue: 0.92), Color(red: 0.95, green: 0.93, blue: 0.87)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .desertSand:
-            return LinearGradient(
-                colors: [Color(red: 0.93, green: 0.87, blue: 0.73), Color(red: 0.88, green: 0.81, blue: 0.65)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .emeraldClassic:
-            return LinearGradient(
-                colors: [Color(red: 0.2, green: 0.4, blue: 0.3), Color(red: 0.15, green: 0.35, blue: 0.25)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .highContrast:
-            return LinearGradient(
-                colors: [Color.white, Color(white: 0.9)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .blueLightFilter:
-            return LinearGradient(
-                colors: [Color(red: 1.0, green: 0.95, blue: 0.85), Color(red: 0.98, green: 0.92, blue: 0.80)],
+                colors: [Color(red: 0.97, green: 0.96, blue: 1.0), Color(red: 1.0, green: 0.98, blue: 0.96)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -327,9 +272,9 @@ struct ThemeCard: View {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
-        case .warmInviting:
+        case .modernDark:
             return LinearGradient(
-                colors: [Color(red: 0.97, green: 0.96, blue: 1.0), Color(red: 1.0, green: 0.98, blue: 0.96)],
+                colors: [Color(red: 0.1, green: 0.1, blue: 0.15), Color(red: 0.15, green: 0.15, blue: 0.2)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )

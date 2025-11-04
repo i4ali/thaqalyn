@@ -145,10 +145,8 @@ struct FullScreenCommentaryView: View {
             Spacer()
 
             HStack(spacing: 12) {
-                // Verse read checkbox (hide for warm theme to match mockup)
-                if themeManager.selectedTheme != .warmInviting {
-                    verseReadCheckbox
-                }
+                // Verse read checkbox (universal for all themes)
+                verseReadCheckbox
 
                 // Language toggle button
                 languageToggle
@@ -171,7 +169,7 @@ struct FullScreenCommentaryView: View {
         }
     }
 
-    // Verse read checkbox
+    // Verse read checkbox (theme-adaptive)
     private var verseReadCheckbox: some View {
         Button(action: {
             let isRead = progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number)
@@ -189,20 +187,39 @@ struct FullScreenCommentaryView: View {
             generator.impactOccurred()
         }) {
             ZStack {
-                RoundedRectangle(cornerRadius: 6)
-                    .strokeBorder(
-                        progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
-                        Color.green : themeManager.strokeColor,
-                        lineWidth: 2
-                    )
-                    .frame(width: 24, height: 24)
-                    .background(
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(
-                                progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
-                                Color.green.opacity(0.3) : themeManager.secondaryBackground.opacity(0.8)
-                            )
-                    )
+                if themeManager.selectedTheme == .warmInviting {
+                    // Warm theme: Rounded square with white background
+                    RoundedRectangle(cornerRadius: 6)
+                        .strokeBorder(
+                            progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
+                            Color.green : Color(red: 0.608, green: 0.561, blue: 0.749),
+                            lineWidth: 2
+                        )
+                        .frame(width: 24, height: 24)
+                        .background(
+                            RoundedRectangle(cornerRadius: 6)
+                                .fill(
+                                    progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
+                                    Color.green.opacity(0.2) : Color.white
+                                )
+                        )
+                } else {
+                    // Other themes: Original style
+                    RoundedRectangle(cornerRadius: 6)
+                        .strokeBorder(
+                            progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
+                            Color.green : themeManager.strokeColor,
+                            lineWidth: 2
+                        )
+                        .frame(width: 24, height: 24)
+                        .background(
+                            RoundedRectangle(cornerRadius: 6)
+                                .fill(
+                                    progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
+                                    Color.green.opacity(0.3) : themeManager.secondaryBackground.opacity(0.8)
+                                )
+                        )
+                }
 
                 if progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) {
                     Image(systemName: "checkmark")

@@ -489,7 +489,7 @@ struct ModernVerseCard: View {
                 .foregroundColor(themeManager.secondaryText)
                 .lineSpacing(4)
 
-            // Commentary button (moved outside HStack for full width in warm theme)
+            // Commentary button (theme-adaptive for all themes)
             if themeManager.selectedTheme == .warmInviting {
                 Button(action: {
                     if !canAccessTafsir && surah.number > 1 {
@@ -510,6 +510,32 @@ struct ModernVerseCard: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                    )
+                }
+            } else {
+                Button(action: {
+                    if !canAccessTafsir && surah.number > 1 {
+                        showingPaywall = true
+                    } else if verse.tafsir != nil {
+                        onTafsirTap()
+                    }
+                }) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "book.fill")
+                            .font(.system(size: 14, weight: .semibold))
+                        Text(!canAccessTafsir && surah.number > 1 ? "Unlock Commentary" : "View Commentary")
+                            .font(.system(size: 15, weight: .semibold))
+                    }
+                    .foregroundColor(themeManager.primaryText)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(themeManager.glassEffect)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                            )
                     )
                 }
             }

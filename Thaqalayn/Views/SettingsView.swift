@@ -76,18 +76,6 @@ struct SettingsView: View {
                                     ) {
                                         showingThemeSelection = true
                                     }
-                                    
-                                    // Quick dark/light toggle for modern themes
-                                    if themeManager.selectedTheme == .modernDark || themeManager.selectedTheme == .modernLight {
-                                        SettingsRow(
-                                            icon: themeManager.selectedTheme == .modernDark ? "sun.max.fill" : "moon.fill",
-                                            title: "Quick Toggle",
-                                            subtitle: themeManager.selectedTheme == .modernDark ? "Switch to Light" : "Switch to Dark",
-                                            iconColor: .orange
-                                        ) {
-                                            themeManager.toggleTheme()
-                                        }
-                                    }
                                 }
                             }
 
