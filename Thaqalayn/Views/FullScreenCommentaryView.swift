@@ -144,13 +144,8 @@ struct FullScreenCommentaryView: View {
 
             Spacer()
 
-            HStack(spacing: 12) {
-                // Verse read checkbox (universal for all themes)
-                verseReadCheckbox
-
-                // Language toggle button
-                languageToggle
-            }
+            // Language toggle button
+            languageToggle
         }
         .padding(.horizontal, 24)
         .padding(.top, themeManager.selectedTheme == .warmInviting ? 20 : 16)
@@ -167,70 +162,6 @@ struct FullScreenCommentaryView: View {
                 )
             }
         }
-    }
-
-    // Verse read checkbox (theme-adaptive)
-    private var verseReadCheckbox: some View {
-        Button(action: {
-            let isRead = progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number)
-
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
-                if isRead {
-                    progressManager.unmarkVerseAsRead(surahNumber: surah.number, verseNumber: verse.number)
-                } else {
-                    progressManager.markVerseAsRead(surahNumber: surah.number, verseNumber: verse.number)
-                }
-            }
-
-            // Haptic feedback
-            let generator = UIImpactFeedbackGenerator(style: .medium)
-            generator.impactOccurred()
-        }) {
-            ZStack {
-                if themeManager.selectedTheme == .warmInviting {
-                    // Warm theme: Rounded square with white background
-                    RoundedRectangle(cornerRadius: 6)
-                        .strokeBorder(
-                            progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
-                            Color.green : Color(red: 0.608, green: 0.561, blue: 0.749),
-                            lineWidth: 2
-                        )
-                        .frame(width: 24, height: 24)
-                        .background(
-                            RoundedRectangle(cornerRadius: 6)
-                                .fill(
-                                    progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
-                                    Color.green.opacity(0.2) : Color.white
-                                )
-                        )
-                } else {
-                    // Other themes: Original style
-                    RoundedRectangle(cornerRadius: 6)
-                        .strokeBorder(
-                            progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
-                            Color.green : themeManager.strokeColor,
-                            lineWidth: 2
-                        )
-                        .frame(width: 24, height: 24)
-                        .background(
-                            RoundedRectangle(cornerRadius: 6)
-                                .fill(
-                                    progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) ?
-                                    Color.green.opacity(0.3) : themeManager.secondaryBackground.opacity(0.8)
-                                )
-                        )
-                }
-
-                if progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number) {
-                    Image(systemName: "checkmark")
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundColor(.green)
-                        .transition(.scale.combined(with: .opacity))
-                }
-            }
-            .animation(.spring(response: 0.3, dampingFraction: 0.6), value: progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number))
-        }
-        .buttonStyle(PlainButtonStyle())
     }
 
     // Language toggle button in header
@@ -494,9 +425,23 @@ struct FullScreenCommentaryView: View {
                         .padding(.vertical, 16)
                         .background {
                             if themeManager.selectedTheme == .warmInviting {
-                                // Warm theme: White card with soft shadow
+                                // Warm theme: Purple gradient background matching summary view
                                 RoundedRectangle(cornerRadius: 24)
-                                    .fill(Color.white)
+                                    .fill(themeManager.glassEffect)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .fill(
+                                                LinearGradient(
+                                                    colors: [Color.purple.opacity(0.1), Color.pink.opacity(0.1)],
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                )
+                                            )
+                                    )
                                     .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
                             } else {
                                 // Other themes: Glass effect
@@ -668,7 +613,9 @@ struct FullScreenCommentaryView: View {
         layer2_urdu: "کلاسیکی تفسیر...",
         layer3_urdu: "عصری تفسیر...",
         layer4_urdu: "اہل بیت کی تفسیر...",
-        layer5_urdu: "**شیعہ نقطہ نظر**: کلاسیکی شیعہ علماء جیسے الطباطبائی اس آیت کو الہی عدل سے جوڑتے ہیں۔ **سنی نقطہ نظر**: سنی مفسرین جیسے ابن کثیر قانونی فریم ورک پر توجہ دیتے ہیں۔"
+        layer5_urdu: "**شیعہ نقطہ نظر**: کلاسیکی شیعہ علماء جیسے الطباطبائی اس آیت کو الہی عدل سے جوڑتے ہیں۔ **سنی نقطہ نظر**: سنی مفسرین جیسے ابن کثیر قانونی فریم ورک پر توجہ دیتے ہیں۔",
+        summary: "Allah commands believers to protect orphans' property with absolute integrity, forbidding exploitation of vulnerable children. This establishes fundamental Islamic principles of social justice and fiduciary responsibility.",
+        summary_urdu: nil
     )
     
     let sampleSurah = Surah(

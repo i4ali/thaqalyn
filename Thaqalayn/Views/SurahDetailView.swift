@@ -297,10 +297,12 @@ struct ModernVerseCard: View {
     @State private var isPressed = false
     @State private var showingBookmarkFeedback = false
     @State private var showingPaywall = false
+    @State private var showingSummary = false
     @State private var canAccessTafsir = false
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
+    @StateObject private var progressManager = ProgressManager.shared
 
     private var isBookmarked: Bool {
         bookmarkManager.isBookmarked(surahNumber: surah.number, verseNumber: verse.number)
@@ -356,7 +358,7 @@ struct ModernVerseCard: View {
                 verseText: verse.arabicText,
                 verseTranslation: verse.translation
             )
-            
+
             if success {
                 showingBookmarkFeedback = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
@@ -365,7 +367,84 @@ struct ModernVerseCard: View {
             }
         }
     }
-    
+
+    private func toggleVerseRead() {
+        let isRead = progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number)
+
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+            if isRead {
+                progressManager.unmarkVerseAsRead(surahNumber: surah.number, verseNumber: verse.number)
+            } else {
+                progressManager.markVerseAsRead(surahNumber: surah.number, verseNumber: verse.number)
+            }
+        }
+
+        // Haptic feedback
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
+
+    private var verseReadCheckbox: some View {
+        Button(action: toggleVerseRead) {
+            if themeManager.selectedTheme == .warmInviting {
+                warmThemeCheckbox
+            } else {
+                modernThemeCheckbox
+            }
+        }
+        .animation(.spring(response: 0.3, dampingFraction: 0.6), value: progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number))
+    }
+
+    private var warmThemeCheckbox: some View {
+        let isRead = progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number)
+
+        return ZStack {
+            RoundedRectangle(cornerRadius: 6)
+                .strokeBorder(
+                    isRead ? Color.green : Color(red: 0.608, green: 0.561, blue: 0.749),
+                    lineWidth: 2
+                )
+                .frame(width: 24, height: 24)
+                .background(
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(isRead ? Color.green.opacity(0.2) : Color.white)
+                )
+
+            if isRead {
+                Image(systemName: "checkmark")
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(.green)
+                    .transition(.scale.combined(with: .opacity))
+            }
+        }
+        .frame(width: 36, height: 36)
+    }
+
+    private var modernThemeCheckbox: some View {
+        let isRead = progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number)
+
+        return ZStack {
+            RoundedRectangle(cornerRadius: 6)
+                .strokeBorder(
+                    isRead ? Color.green : themeManager.strokeColor,
+                    lineWidth: 2
+                )
+                .frame(width: 24, height: 24)
+                .background(
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(isRead ? AnyShapeStyle(Color.green.opacity(0.3)) : AnyShapeStyle(themeManager.glassEffect))
+                )
+
+            if isRead {
+                Image(systemName: "checkmark")
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(.green)
+                    .transition(.scale.combined(with: .opacity))
+            }
+        }
+        .frame(width: 36, height: 36)
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: themeManager.selectedTheme == .warmInviting ? 20 : 16) {
             // Verse number and actions
@@ -462,6 +541,9 @@ struct ModernVerseCard: View {
                     }
                     .scaleEffect(showingBookmarkFeedback ? 1.2 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.6), value: showingBookmarkFeedback)
+
+                    // Verse read checkbox
+                    verseReadCheckbox
                 }
             }
             .task {
@@ -489,55 +571,12 @@ struct ModernVerseCard: View {
                 .foregroundColor(themeManager.secondaryText)
                 .lineSpacing(4)
 
-            // Commentary button (theme-adaptive for all themes)
+            // Commentary buttons (theme-adaptive for all themes)
+            // Split button design: Summary (left) + Full Commentary (right)
             if themeManager.selectedTheme == .warmInviting {
-                Button(action: {
-                    if !canAccessTafsir && surah.number > 1 {
-                        showingPaywall = true
-                    } else if verse.tafsir != nil {
-                        onTafsirTap()
-                    }
-                }) {
-                    HStack(spacing: 8) {
-                        Text("📖")
-                            .font(.system(size: 15))
-                        Text(!canAccessTafsir && surah.number > 1 ? "Unlock Commentary" : "View Commentary")
-                            .font(.system(size: 15, weight: .semibold))
-                    }
-                    .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 12)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
-                    )
-                }
+                warmInvitingSplitButtons
             } else {
-                Button(action: {
-                    if !canAccessTafsir && surah.number > 1 {
-                        showingPaywall = true
-                    } else if verse.tafsir != nil {
-                        onTafsirTap()
-                    }
-                }) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "book.fill")
-                            .font(.system(size: 14, weight: .semibold))
-                        Text(!canAccessTafsir && surah.number > 1 ? "Unlock Commentary" : "View Commentary")
-                            .font(.system(size: 15, weight: .semibold))
-                    }
-                    .foregroundColor(themeManager.primaryText)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 12)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(themeManager.glassEffect)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    )
-                }
+                modernSplitButtons
             }
         }
         .padding(themeManager.selectedTheme == .warmInviting ? 24 : 24)
@@ -568,6 +607,129 @@ struct ModernVerseCard: View {
         .animation(.easeInOut(duration: 0.3), value: isCurrentlyPlaying)
         .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView()
+        }
+        .sheet(isPresented: $showingSummary) {
+            VerseSummaryView(
+                verse: verse,
+                surah: surah,
+                onViewFullCommentary: {
+                    if !canAccessTafsir && surah.number > 1 {
+                        showingPaywall = true
+                    } else if verse.tafsir != nil {
+                        onTafsirTap()
+                    }
+                }
+            )
+        }
+    }
+
+    // MARK: - Split Button Variations
+
+    private var warmInvitingSplitButtons: some View {
+        HStack(spacing: 12) {
+            // Summary button
+            Button(action: {
+                if verse.tafsir?.hasSummary == true {
+                    showingSummary = true
+                }
+            }) {
+                HStack(spacing: 6) {
+                    Text("🔑")
+                        .font(.system(size: 15))
+                    Text("Overview")
+                        .font(.system(size: 15, weight: .semibold))
+                }
+                .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.1))
+                )
+            }
+            .opacity(verse.tafsir?.hasSummary == true ? 1.0 : 0.5)
+            .disabled(verse.tafsir?.hasSummary != true)
+
+            // Full commentary button
+            Button(action: {
+                if !canAccessTafsir && surah.number > 1 {
+                    showingPaywall = true
+                } else if verse.tafsir != nil {
+                    onTafsirTap()
+                }
+            }) {
+                HStack(spacing: 6) {
+                    Text("📖")
+                        .font(.system(size: 15))
+                    Text("In-Depth")
+                        .font(.system(size: 15, weight: .semibold))
+                }
+                .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                )
+            }
+        }
+    }
+
+    private var modernSplitButtons: some View {
+        HStack(spacing: 12) {
+            // Summary button
+            Button(action: {
+                if verse.tafsir?.hasSummary == true {
+                    showingSummary = true
+                }
+            }) {
+                HStack(spacing: 6) {
+                    Image(systemName: "key.fill")
+                        .font(.system(size: 14, weight: .semibold))
+                    Text("Overview")
+                        .font(.system(size: 15, weight: .semibold))
+                }
+                .foregroundColor(verse.tafsir?.hasSummary == true ? themeManager.primaryText : themeManager.tertiaryText)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(themeManager.glassEffect)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                        )
+                )
+            }
+            .opacity(verse.tafsir?.hasSummary == true ? 1.0 : 0.5)
+            .disabled(verse.tafsir?.hasSummary != true)
+
+            // Full commentary button
+            Button(action: {
+                if !canAccessTafsir && surah.number > 1 {
+                    showingPaywall = true
+                } else if verse.tafsir != nil {
+                    onTafsirTap()
+                }
+            }) {
+                HStack(spacing: 6) {
+                    Image(systemName: "book.fill")
+                        .font(.system(size: 14, weight: .semibold))
+                    Text("In-Depth")
+                        .font(.system(size: 15, weight: .semibold))
+                }
+                .foregroundColor(themeManager.primaryText)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(themeManager.glassEffect)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                        )
+                )
+            }
         }
     }
 }
@@ -1155,7 +1317,9 @@ struct TafsirLayerSelector: View {
         layer2_urdu: "کلاسیکی تفسیر...",
         layer3_urdu: "عصری تفسیر...",
         layer4_urdu: "اہل بیت کی تفسیر...",
-        layer5_urdu: "**شیعہ تجزیہ**: الہی عدل اور امامت کے اصولوں پر توجہ۔ **سنی تجزیہ**: خلافت اور اجماع امت پر زور۔"
+        layer5_urdu: "**شیعہ تجزیہ**: الہی عدل اور امامت کے اصولوں پر توجہ۔ **سنی تجزیہ**: خلافت اور اجماع امت پر زور۔",
+        summary: "This opening verse invokes Allah's infinite mercy and compassion, establishing the foundation of Islamic practice. It reminds believers that all actions should begin with remembrance of Allah's attributes of mercy.",
+        summary_urdu: nil
     )
     
     let sampleVerseWithTafsir = VerseWithTafsir(

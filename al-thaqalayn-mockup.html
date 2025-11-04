@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Thaqalayn Redesign Mockups</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Rounded', 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #f0e6f6 0%, #fff9f0 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2D2520;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6B5D54;
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
+
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .phone-frame {
+            background: #2D2520;
+            border-radius: 48px;
+            padding: 16px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
+            position: relative;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 28px;
+            background: #2D2520;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+
+        .screen {
+            background: linear-gradient(180deg, #F8F5FF 0%, #FFF9F5 100%);
+            border-radius: 36px;
+            overflow: hidden;
+            position: relative;
+            height: 812px;
+        }
+
+        .screen-title {
+            text-align: center;
+            color: #9B8FBF;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            color: #2D2520;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .status-icons {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        /* Screen 1: Surahs List */
+        .header {
+            padding: 16px 24px 0;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #E89A6F 0%, #D88A5F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(232, 154, 111, 0.3);
+        }
+
+        .streak-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .streak-badge .emoji {
+            font-size: 20px;
+        }
+
+        .streak-badge .number {
+            font-size: 18px;
+            font-weight: 700;
+            color: #E89A6F;
+        }
+
+        .bell-icon {
+            color: #9B8FBF;
+            font-size: 20px;
+        }
+
+        .greeting {
+            color: #6B5D54;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .main-title {
+            color: #2D2520;
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            margin: 0 24px 24px;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            background: none;
+            flex: 1;
+            font-size: 17px;
+            color: #2D2520;
+        }
+
+        .search-bar input::placeholder {
+            color: #B0A399;
+        }
+
+        .search-icon {
+            color: #6B5D54;
+            font-size: 20px;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 16px;
+            padding: 0 24px 24px;
+        }
+
+        .stat-card {
+            flex: 1;
+            text-align: center;
+            padding: 20px 12px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(155, 143, 191, 0.15);
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-card:nth-child(1) .stat-number { color: #9B8FBF; }
+        .stat-card:nth-child(2) .stat-number { color: #7FB89A; }
+        .stat-card:nth-child(3) .stat-number { color: #E89A6F; }
+
+        .stat-label {
+            color: #6B5D54;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .surah-list {
+            padding: 0 24px;
+            overflow-y: auto;
+            height: 380px;
+        }
+
+        .surah-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            margin-bottom: 16px;
+            transition: transform 0.2s;
+        }
+
+        .surah-card:hover {
+            transform: scale(1.02);
+        }
+
+        .surah-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #E89A6F 0%, #D88A5F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .surah-info {
+            flex: 1;
+        }
+
+        .surah-name {
+            color: #2D2520;
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .surah-translation {
+            color: #6B5D54;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .surah-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: #9B8FBF;
+            font-weight: 500;
+        }
+
+        .surah-arabic {
+            color: #2D2520;
+            font-size: 22px;
+            font-family: 'Geeza Pro', 'Arabic Typesetting', serif;
+        }
+
+        /* Screen 2: Verse View */
+        .verse-header {
+            text-align: center;
+            padding: 28px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            margin: 20px 24px 24px;
+        }
+
+        .verse-header-arabic {
+            font-size: 32px;
+            color: #2D2520;
+            margin-bottom: 16px;
+            font-family: 'Geeza Pro', 'Arabic Typesetting', serif;
+        }
+
+        .verse-header-english {
+            font-size: 18px;
+            color: #6B5D54;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .verse-header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-size: 14px;
+            color: #9B8FBF;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .play-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: linear-gradient(90deg, #E89A6F 0%, #D88A5F 100%);
+            color: white;
+            border-radius: 24px;
+            font-size: 17px;
+            font-weight: 600;
+            box-shadow: 0 6px 12px rgba(232, 154, 111, 0.3);
+            cursor: pointer;
+            border: none;
+        }
+
+        .verse-list {
+            padding: 0 24px;
+            overflow-y: auto;
+            height: 500px;
+        }
+
+        .verse-card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .verse-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .verse-number-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid #9B8FBF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9B8FBF;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .verse-controls {
+            display: flex;
+            gap: 12px;
+        }
+
+        .icon-button {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .icon-button.play {
+            background: rgba(155, 143, 191, 0.1);
+            color: #9B8FBF;
+        }
+
+        .icon-button.heart {
+            background: rgba(232, 154, 111, 0.1);
+            color: #E89A6F;
+        }
+
+        .verse-arabic-text {
+            font-size: 26px;
+            color: #2D2520;
+            text-align: right;
+            margin-bottom: 20px;
+            line-height: 2;
+            font-family: 'Geeza Pro', 'Arabic Typesetting', serif;
+        }
+
+        .verse-translation {
+            font-size: 16px;
+            color: #6B5D54;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .commentary-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            background: rgba(155, 143, 191, 0.1);
+            color: #9B8FBF;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Screen 3: Commentary View */
+        .commentary-header {
+            padding: 20px 24px;
+            background: linear-gradient(180deg, #F8F5FF 0%, rgba(248, 245, 255, 0.5) 100%);
+        }
+
+        .commentary-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .close-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6B5D54;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .commentary-title-section {
+            text-align: center;
+        }
+
+        .commentary-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2D2520;
+            margin-bottom: 2px;
+        }
+
+        .commentary-subtitle {
+            font-size: 13px;
+            color: #6B5D54;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 12px;
+            background: rgba(155, 143, 191, 0.1);
+            border-radius: 20px;
+            color: #9B8FBF;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .layer-tabs {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 16px 0;
+            margin: 0 24px;
+        }
+
+        .layer-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .layer-tab {
+            min-width: 140px;
+            height: 120px;
+            padding: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .layer-tab:hover {
+            transform: scale(1.02);
+        }
+
+        .layer-tab.active {
+            background: linear-gradient(135deg, #9B8FBF 0%, #8B7FA8 100%);
+            box-shadow: 0 4px 12px rgba(155, 143, 191, 0.3);
+        }
+
+        .layer-tab.inactive {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .layer-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .layer-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .layer-tab.active .layer-name {
+            color: white;
+        }
+
+        .layer-tab.inactive .layer-name {
+            color: #2D2520;
+        }
+
+        .layer-description {
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .layer-tab.active .layer-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .layer-tab.inactive .layer-description {
+            color: #6B5D54;
+        }
+
+        .commentary-content {
+            padding: 24px;
+            overflow-y: auto;
+            height: 450px;
+        }
+
+        .commentary-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .commentary-section-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .commentary-section-icon {
+            font-size: 24px;
+        }
+
+        .commentary-section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2D2520;
+        }
+
+        .commentary-section-desc {
+            font-size: 14px;
+            color: #6B5D54;
+            margin-bottom: 16px;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(155, 143, 191, 0.2);
+            margin: 16px 0;
+        }
+
+        .commentary-text {
+            font-size: 17px;
+            color: #2D2520;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .commentary-quote {
+            padding: 20px;
+            background: rgba(155, 143, 191, 0.08);
+            border-radius: 16px;
+            margin: 16px 0;
+        }
+
+        .commentary-quote-text {
+            font-size: 18px;
+            font-weight: 500;
+            font-style: italic;
+            color: #9B8FBF;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2D2520;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 20px 0 0 24px;
+        }
+
+        /* Comparison section */
+        .comparison-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2D2520;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .comparison-item h3 {
+            color: #9B8FBF;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .comparison-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-item li {
+            color: #6B5D54;
+            font-size: 16px;
+            line-height: 1.8;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .comparison-item li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #9B8FBF;
+            font-weight: 700;
+        }
+
+        .color-palette {
+            margin-top: 60px;
+            padding: 40px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .color-palette-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2D2520;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .color-swatch {
+            text-align: center;
+        }
+
+        .color-box {
+            height: 120px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2D2520;
+            margin-bottom: 4px;
+        }
+
+        .color-hex {
+            font-size: 14px;
+            color: #6B5D54;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌙 Al-Thaqalayn Redesign</h1>
+        <p class="subtitle">Warm, Cozy, & Inviting UI Transformation</p>
+
+        <div class="mockup-grid">
+            <!-- Screen 1: Surahs List -->
+            <div>
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="screen">
+                        <!-- Status Bar -->
+                        <div class="status-bar">
+                            <span>12:00</span>
+                            <div class="status-icons">
+                                <span>📶</span>
+                                <span>📡</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+
+                        <!-- Header -->
+                        <div class="header">
+                            <div class="top-nav">
+                                <div class="profile-avatar">MA</div>
+                                <div class="streak-badge">
+                                    <span class="emoji">🔥</span>
+                                    <span class="number">7</span>
+                                </div>
+                                <div class="bell-icon">🔔</div>
+                            </div>
+                            <div class="greeting">Assalamu Alaikum 🌙</div>
+                            <div class="main-title">Explore the Quran</div>
+                        </div>
+
+                        <!-- Search Bar -->
+                        <div class="search-bar">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" placeholder="Search surahs...">
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="stats-row">
+                            <div class="stat-card">
+                                <div class="stat-number">114</div>
+                                <div class="stat-label">Surahs</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">6236</div>
+                                <div class="stat-label">Verses</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Layers</div>
+                            </div>
+                        </div>
+
+                        <!-- Surah List -->
+                        <div class="surah-list">
+                            <div class="surah-card">
+                                <div class="surah-number">1</div>
+                                <div class="surah-info">
+                                    <div class="surah-name">Al-Faatiha</div>
+                                    <div class="surah-translation">The Opening</div>
+                                    <div class="surah-meta">
+                                        <span>📖 7 verses</span>
+                                        <span>📍 Meccan</span>
+                                    </div>
+                                </div>
+                                <div class="surah-arabic">سُورَةُ ٱلْفَاتِحَة</div>
+                            </div>
+
+                            <div class="surah-card">
+                                <div class="surah-number">2</div>
+                                <div class="surah-info">
+                                    <div class="surah-name">Al-Baqara</div>
+                                    <div class="surah-translation">The Cow</div>
+                                    <div class="surah-meta">
+                                        <span>📖 286 verses</span>
+                                        <span>📍 Medinan</span>
+                                    </div>
+                                </div>
+                                <div class="surah-arabic">سُورَةُ ٱلْبَقَرَة</div>
+                            </div>
+
+                            <div class="surah-card">
+                                <div class="surah-number">3</div>
+                                <div class="surah-info">
+                                    <div class="surah-name">Aali-i-Imraan</div>
+                                    <div class="surah-translation">The Family of Imraan</div>
+                                    <div class="surah-meta">
+                                        <span>📖 200 verses</span>
+                                        <span>📍 Medinan</span>
+                                    </div>
+                                </div>
+                                <div class="surah-arabic">سُورَةُ آل عِمۡرَان</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screen-title">SCREEN 1: Surahs List (Home)</div>
+            </div>
+
+            <!-- Screen 2: Verse View -->
+            <div>
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="screen">
+                        <!-- Status Bar -->
+                        <div class="status-bar">
+                            <span>12:00</span>
+                            <div class="status-icons">
+                                <span>📶</span>
+                                <span>📡</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+
+                        <!-- Back Button -->
+                        <div class="back-button">←</div>
+
+                        <!-- Verse Header -->
+                        <div class="verse-header">
+                            <div class="verse-header-arabic">سُورَةُ ٱلْفَاتِحَة</div>
+                            <div class="verse-header-english">The Opening</div>
+                            <div class="verse-header-meta">
+                                <span>📖 7 verses</span>
+                                <span>📍 Meccan</span>
+                            </div>
+                            <button class="play-button">
+                                ▶ Play Sequence
+                            </button>
+                        </div>
+
+                        <!-- Verse List -->
+                        <div class="verse-list">
+                            <div class="verse-card">
+                                <div class="verse-top">
+                                    <div class="verse-number-circle">1</div>
+                                    <div class="verse-controls">
+                                        <div class="icon-button play">▶</div>
+                                        <div class="icon-button heart">♡</div>
+                                    </div>
+                                </div>
+                                <div class="verse-arabic-text">
+                                    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                                </div>
+                                <div class="verse-translation">
+                                    In the name of Allah, the Entirely Merciful, the Especially Merciful.
+                                </div>
+                                <button class="commentary-button">
+                                    📖 View Commentary
+                                </button>
+                            </div>
+
+                            <div class="verse-card">
+                                <div class="verse-top">
+                                    <div class="verse-number-circle">2</div>
+                                    <div class="verse-controls">
+                                        <div class="icon-button play">▶</div>
+                                        <div class="icon-button heart">♡</div>
+                                    </div>
+                                </div>
+                                <div class="verse-arabic-text">
+                                    ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ
+                                </div>
+                                <div class="verse-translation">
+                                    [All] praise is [due] to Allah, Lord of the worlds -
+                                </div>
+                                <button class="commentary-button">
+                                    📖 View Commentary
+                                </button>
+                            </div>
+
+                            <div class="verse-card">
+                                <div class="verse-top">
+                                    <div class="verse-number-circle">3</div>
+                                    <div class="verse-controls">
+                                        <div class="icon-button play">▶</div>
+                                        <div class="icon-button heart">♡</div>
+                                    </div>
+                                </div>
+                                <div class="verse-arabic-text">
+                                    ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                                </div>
+                                <div class="verse-translation">
+                                    The Entirely Merciful, the Especially Merciful,
+                                </div>
+                                <button class="commentary-button">
+                                    📖 View Commentary
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screen-title">SCREEN 2: Verse View</div>
+            </div>
+
+            <!-- Screen 3: Commentary View -->
+            <div>
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="screen">
+                        <!-- Status Bar -->
+                        <div class="status-bar">
+                            <span>12:00</span>
+                            <div class="status-icons">
+                                <span>📶</span>
+                                <span>📡</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+
+                        <!-- Commentary Header -->
+                        <div class="commentary-header">
+                            <div class="commentary-top-bar">
+                                <div class="close-button">×</div>
+                                <div class="commentary-title-section">
+                                    <div class="commentary-title">Commentary</div>
+                                    <div class="commentary-subtitle">Al-Faatiha • Verse 1</div>
+                                </div>
+                                <div class="language-selector">
+                                    English 🌐
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Layer Tabs -->
+                        <div class="layer-tabs">
+                            <div class="layer-tab active">
+                                <div class="layer-icon">🏛️</div>
+                                <div class="layer-name">Foundation</div>
+                                <div class="layer-description">Simple & Clear</div>
+                            </div>
+                            <div class="layer-tab inactive">
+                                <div class="layer-icon">📚</div>
+                                <div class="layer-name">Classical</div>
+                                <div class="layer-description">Traditional Scholars</div>
+                            </div>
+                            <div class="layer-tab inactive">
+                                <div class="layer-icon">🌍</div>
+                                <div class="layer-name">Modern</div>
+                                <div class="layer-description">Contemporary Insights</div>
+                            </div>
+                            <div class="layer-tab inactive">
+                                <div class="layer-icon">⭐</div>
+                                <div class="layer-name">Ahlul Bayt</div>
+                                <div class="layer-description">From the 14 Infallibles</div>
+                            </div>
+                        </div>
+
+                        <!-- Commentary Content -->
+                        <div class="commentary-content">
+                            <div class="commentary-card">
+                                <div class="commentary-section-header">
+                                    <span class="commentary-section-icon">🏛️</span>
+                                    <h3 class="commentary-section-title">Foundation Layer</h3>
+                                </div>
+                                <p class="commentary-section-desc">
+                                    Simple explanations, historical context, contemporary relevance
+                                </p>
+
+                                <div class="divider"></div>
+
+                                <p class="commentary-text">
+                                    The opening phrase of the Quran, <em>Bismillah ar-Rahman ar-Rahim</em>, serves as both a divine key and a spiritual compass for Muslims.
+                                </p>
+
+                                <div class="commentary-quote">
+                                    <p class="commentary-quote-text">
+                                        "In the name of Allah, the Entirely Merciful, the Especially Merciful"
+                                    </p>
+                                </div>
+
+                                <p class="commentary-text">
+                                    This verse anchors every act, speech, or intention in Allah's sovereignty and grace. While Surah Al-Fatiha was revealed in Mecca during the early years of prophethood, <em>Bismillah</em> itself transcends time and place—it is repeated 114 times in the Quran and daily in prayers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screen-title">SCREEN 3: Commentary View</div>
+            </div>
+        </div>
+
+        <!-- Comparison Section -->
+        <div class="comparison-section">
+            <h2 class="comparison-title">🎨 Before & After Comparison</h2>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h3>❌ Before (Current)</h3>
+                    <ul>
+                        <li>Dark purple background (#4A3551)</li>
+                        <li>High contrast (cream on dark)</li>
+                        <li>Sharp corners (12px radius)</li>
+                        <li>Tight spacing (16px padding)</li>
+                        <li>Flat cards, no depth</li>
+                        <li>Standard system font</li>
+                        <li>Utilitarian icons</li>
+                        <li>Functional, not emotional</li>
+                    </ul>
+                </div>
+                <div class="comparison-item">
+                    <h3>✅ After (Redesigned)</h3>
+                    <ul>
+                        <li>Light gradient (#F8F5FF → #FFF9F5)</li>
+                        <li>Soft, warm tones throughout</li>
+                        <li>Round corners (20-24px radius)</li>
+                        <li>Generous spacing (24-28px padding)</li>
+                        <li>Elevated cards with soft shadows</li>
+                        <li>SF Pro Rounded (warmer feel)</li>
+                        <li>Friendly emojis + icons</li>
+                        <li>Inviting, sanctuary-like</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Palette -->
+        <div class="color-palette">
+            <h2 class="color-palette-title">🎨 Color Palette</h2>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #FFF9F0;"></div>
+                    <div class="color-name">Warm Cream</div>
+                    <div class="color-hex">#FFF9F0</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #FFFBF5;"></div>
+                    <div class="color-name">Warm White</div>
+                    <div class="color-hex">#FFFBF5</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #F8F5FF;"></div>
+                    <div class="color-name">Soft Lavender</div>
+                    <div class="color-hex">#F8F5FF</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #2D2520;"></div>
+                    <div class="color-name">Warm Charcoal</div>
+                    <div class="color-hex">#2D2520</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #6B5D54;"></div>
+                    <div class="color-name">Soft Gray</div>
+                    <div class="color-hex">#6B5D54</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: linear-gradient(135deg, #9B8FBF 0%, #8B7FA8 100%);"></div>
+                    <div class="color-name">Peaceful Purple</div>
+                    <div class="color-hex">#9B8FBF</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: linear-gradient(135deg, #E89A6F 0%, #D88A5F 100%);"></div>
+                    <div class="color-name">Sunset Orange</div>
+                    <div class="color-hex">#E89A6F</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #7FB89A;"></div>
+                    <div class="color-name">Serene Green</div>
+                    <div class="color-hex">#7FB89A</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
