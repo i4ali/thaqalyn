@@ -684,7 +684,7 @@ struct ModernVerseCard: View {
                 }
             }) {
                 HStack(spacing: 6) {
-                    Image(systemName: "key.fill")
+                    Image(systemName: "sparkles")
                         .font(.system(size: 14, weight: .semibold))
                     Text("Overview")
                         .font(.system(size: 15, weight: .semibold))
