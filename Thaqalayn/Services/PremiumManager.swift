@@ -66,6 +66,24 @@ class PremiumManager: ObservableObject {
         return isPremium
     }
 
+    /// Check if user can access overview/summary for a specific surah
+    /// - Surah 1 (Al-Fatiha): Always free
+    /// - Surahs 2-114: Requires premium (authenticated users only)
+    func canAccessOverview(surahNumber: Int) async -> Bool {
+        // Surah 1 always free
+        if surahNumber == 1 {
+            return true
+        }
+
+        // Must be authenticated to access premium content
+        guard await SupabaseService.shared.isAuthenticated else {
+            return false  // Guest users cannot access premium content
+        }
+
+        // Authenticated users: Check premium status from Supabase
+        return isPremium
+    }
+
     /// Check if user can access a specific tafsir layer for a given surah
     /// - Surah 1 (Al-Fatiha): Layers 1 & 2 free, Layers 3-5 require premium
     /// - Surahs 2-114: All layers require premium

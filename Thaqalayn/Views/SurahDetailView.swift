@@ -299,6 +299,7 @@ struct ModernVerseCard: View {
     @State private var showingPaywall = false
     @State private var showingSummary = false
     @State private var canAccessTafsir = false
+    @State private var canAccessOverview = false
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
@@ -549,11 +550,13 @@ struct ModernVerseCard: View {
             .task {
                 // Check premium access when view appears
                 canAccessTafsir = await PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
+                canAccessOverview = await PremiumManager.shared.canAccessOverview(surahNumber: surah.number)
             }
             .onChange(of: premiumManager.isPremium) { _, _ in
                 // Update access when premium status changes
                 Task {
                     canAccessTafsir = await PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
+                    canAccessOverview = await PremiumManager.shared.canAccessOverview(surahNumber: surah.number)
                 }
             }
 
@@ -629,12 +632,14 @@ struct ModernVerseCard: View {
         HStack(spacing: 12) {
             // Summary button
             Button(action: {
-                if verse.tafsir?.hasSummary == true {
+                if !canAccessOverview && surah.number > 1 {
+                    showingPaywall = true
+                } else if verse.tafsir?.hasSummary == true {
                     showingSummary = true
                 }
             }) {
                 HStack(spacing: 6) {
-                    Text("🔑")
+                    Text("✨")
                         .font(.system(size: 15))
                     Text("Overview")
                         .font(.system(size: 15, weight: .semibold))
@@ -679,7 +684,9 @@ struct ModernVerseCard: View {
         HStack(spacing: 12) {
             // Summary button
             Button(action: {
-                if verse.tafsir?.hasSummary == true {
+                if !canAccessOverview && surah.number > 1 {
+                    showingPaywall = true
+                } else if verse.tafsir?.hasSummary == true {
                     showingSummary = true
                 }
             }) {

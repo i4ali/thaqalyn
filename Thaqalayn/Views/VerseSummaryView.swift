@@ -61,7 +61,7 @@ struct VerseSummaryView: View {
 
     private var headerView: some View {
         HStack {
-            Text("🔑")
+            Text("✨")
                 .font(.system(size: 32))
 
             VStack(alignment: .leading, spacing: 4) {
