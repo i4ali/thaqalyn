@@ -236,6 +236,7 @@ struct SurahListView: View {
     @State private var showingSettings = false
     @State private var showingProgressDashboard = false
     @State private var showingNotifications = false
+    @State private var showingLifeMoments = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
     
@@ -306,24 +307,43 @@ struct SurahListView: View {
                     }
                 }
                 
-                // Stats cards
-                HStack(spacing: 12) {
-                    StatCard(
-                        number: "\(dataManager.availableSurahs.count)",
-                        label: themeManager.selectedTheme == .warmInviting ? "Surahs" : "Available",
-                        color: themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : nil
-                    )
-                    StatCard(
-                        number: "\(dataManager.availableSurahs.reduce(0) { $0 + $1.surah.versesCount })",
-                        label: "Verses",
-                        color: themeManager.selectedTheme == .warmInviting ? Color(red: 0.498, green: 0.722, blue: 0.604) : nil
-                    )
-                    StatCard(
-                        number: "\(TafsirLayer.allCases.count)",
-                        label: "Layers",
-                        color: themeManager.selectedTheme == .warmInviting ? Color(red: 0.91, green: 0.604, blue: 0.435) : nil
-                    )
+                // Life Moments button
+                Button(action: {
+                    showingLifeMoments = true
+                }) {
+                    VStack(spacing: 6) {
+                        Text("☎️")
+                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 36 : 32))
+
+                        Text("Need Guidance?")
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.498, green: 0.722, blue: 0.604) : themeManager.accentColor)
+                            .multilineTextAlignment(.center)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 14 : 12)
+                    .padding(.horizontal, 20)
+                    .background {
+                        if themeManager.selectedTheme == .warmInviting {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                                .shadow(
+                                    color: Color(red: 0.498, green: 0.722, blue: 0.604).opacity(0.15),
+                                    radius: 12,
+                                    x: 0,
+                                    y: 4
+                                )
+                        } else {
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(themeManager.glassEffect)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                                )
+                        }
+                    }
                 }
+                .buttonStyle(PlainButtonStyle())
             }
             .padding(.horizontal, 20)
             .padding(.top, 60)
@@ -403,6 +423,9 @@ struct SurahListView: View {
         }
         .sheet(isPresented: $showingNotifications) {
             NotificationsView()
+        }
+        .fullScreenCover(isPresented: $showingLifeMoments) {
+            LifeMomentsView()
         }
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true

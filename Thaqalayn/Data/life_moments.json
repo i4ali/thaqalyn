@@ -1,0 +1,228 @@
+{
+  "moments": [
+    {
+      "id": "1",
+      "situation": "You are sad",
+      "surahNumber": 2,
+      "verseNumber": 25,
+      "category": "emotional"
+    },
+    {
+      "id": "2",
+      "situation": "You have sinned",
+      "surahNumber": 38,
+      "verseNumber": 83,
+      "category": "spiritual"
+    },
+    {
+      "id": "3",
+      "situation": "You are seeking peace",
+      "surahNumber": 5,
+      "verseNumber": 16,
+      "category": "peace"
+    },
+    {
+      "id": "4",
+      "situation": "You are seeking to thank",
+      "surahNumber": 2,
+      "verseNumber": 52,
+      "category": "gratitude"
+    },
+    {
+      "id": "5",
+      "situation": "You are sexually discriminated",
+      "surahNumber": 33,
+      "verseNumber": 35,
+      "category": "struggle"
+    },
+    {
+      "id": "6",
+      "situation": "You are racially discriminated",
+      "surahNumber": 49,
+      "verseNumber": 13,
+      "category": "struggle"
+    },
+    {
+      "id": "7",
+      "situation": "You are seeking love and tranquility",
+      "surahNumber": 30,
+      "verseNumber": 21,
+      "category": "peace"
+    },
+    {
+      "id": "8",
+      "situation": "You are depressed",
+      "surahNumber": 93,
+      "verseNumber": 5,
+      "category": "emotional"
+    },
+    {
+      "id": "9",
+      "situation": "You are yearning for a close friend",
+      "surahNumber": 50,
+      "verseNumber": 16,
+      "category": "emotional"
+    },
+    {
+      "id": "10",
+      "situation": "You are not appreciated",
+      "surahNumber": 2,
+      "verseNumber": 152,
+      "category": "struggle"
+    },
+    {
+      "id": "11",
+      "situation": "You feel like a loser",
+      "surahNumber": 3,
+      "verseNumber": 139,
+      "category": "struggle"
+    },
+    {
+      "id": "12",
+      "situation": "You feel undervalued",
+      "surahNumber": 49,
+      "verseNumber": 13,
+      "category": "struggle"
+    },
+    {
+      "id": "13",
+      "situation": "You are facing hardships",
+      "surahNumber": 94,
+      "verseNumber": 5,
+      "category": "struggle"
+    },
+    {
+      "id": "14",
+      "situation": "People come to fight with you",
+      "surahNumber": 7,
+      "verseNumber": 62,
+      "category": "struggle"
+    },
+    {
+      "id": "15",
+      "situation": "You seek forgiveness",
+      "surahNumber": 39,
+      "verseNumber": 53,
+      "category": "spiritual"
+    },
+    {
+      "id": "16",
+      "situation": "You seek deliverance",
+      "surahNumber": 2,
+      "verseNumber": 186,
+      "category": "spiritual"
+    },
+    {
+      "id": "17",
+      "situation": "You seek double assurance",
+      "surahNumber": 15,
+      "verseNumber": 49,
+      "category": "peace"
+    },
+    {
+      "id": "18",
+      "situation": "You are anxious",
+      "surahNumber": 13,
+      "verseNumber": 28,
+      "category": "emotional"
+    },
+    {
+      "id": "19",
+      "situation": "You are heartbroken",
+      "surahNumber": 2,
+      "verseNumber": 152,
+      "category": "emotional"
+    },
+    {
+      "id": "20",
+      "situation": "You need guidance",
+      "surahNumber": 22,
+      "verseNumber": 77,
+      "category": "spiritual"
+    },
+    {
+      "id": "21",
+      "situation": "You are angry",
+      "surahNumber": 7,
+      "verseNumber": 199,
+      "category": "emotional"
+    },
+    {
+      "id": "22",
+      "situation": "You need strength",
+      "surahNumber": 2,
+      "verseNumber": 286,
+      "category": "hope"
+    },
+    {
+      "id": "23",
+      "situation": "You are seeking blessings",
+      "surahNumber": 14,
+      "verseNumber": 7,
+      "category": "gratitude"
+    },
+    {
+      "id": "24",
+      "situation": "You are grateful",
+      "surahNumber": 16,
+      "verseNumber": 18,
+      "category": "gratitude"
+    },
+    {
+      "id": "25",
+      "situation": "You are confused",
+      "surahNumber": 2,
+      "verseNumber": 269,
+      "category": "emotional"
+    },
+    {
+      "id": "26",
+      "situation": "You are afraid",
+      "surahNumber": 10,
+      "verseNumber": 62,
+      "category": "emotional"
+    },
+    {
+      "id": "27",
+      "situation": "You are hopeful",
+      "surahNumber": 12,
+      "verseNumber": 87,
+      "category": "hope"
+    },
+    {
+      "id": "28",
+      "situation": "You are lonely",
+      "surahNumber": 94,
+      "verseNumber": 1,
+      "category": "emotional"
+    },
+    {
+      "id": "29",
+      "situation": "You need patience",
+      "surahNumber": 2,
+      "verseNumber": 153,
+      "category": "hope"
+    },
+    {
+      "id": "30",
+      "situation": "You are seeking wisdom",
+      "surahNumber": 2,
+      "verseNumber": 269,
+      "category": "spiritual"
+    },
+    {
+      "id": "31",
+      "situation": "You are seeking success",
+      "surahNumber": 23,
+      "verseNumber": 1,
+      "category": "hope"
+    },
+    {
+      "id": "32",
+      "situation": "You are seeking protection",
+      "surahNumber": 113,
+      "verseNumber": 1,
+      "category": "hope"
+    }
+  ]
+}

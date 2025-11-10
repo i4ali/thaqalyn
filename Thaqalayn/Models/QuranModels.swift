@@ -762,3 +762,33 @@ struct ProgressPreferences: Codable {
         self.showStreakInHeader = showStreakInHeader
     }
 }
+
+// MARK: - Life Moments Models
+
+struct LifeMomentsData: Codable {
+    let moments: [LifeMoment]
+}
+
+struct LifeMoment: Codable, Identifiable {
+    let id: String
+    let situation: String
+    let surahNumber: Int
+    let verseNumber: Int
+    let category: String
+
+    var verseReference: String {
+        return "Quran \(surahNumber):\(verseNumber)"
+    }
+
+    var categoryIcon: String {
+        switch category.lowercased() {
+        case "emotional": return "heart.fill"
+        case "spiritual": return "moon.stars.fill"
+        case "peace": return "leaf.fill"
+        case "struggle": return "hand.raised.fill"
+        case "gratitude": return "sparkles"
+        case "hope": return "sunrise.fill"
+        default: return "book.fill"
+        }
+    }
+}
