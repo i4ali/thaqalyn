@@ -311,16 +311,23 @@ struct SurahListView: View {
                 Button(action: {
                     showingLifeMoments = true
                 }) {
-                    VStack(spacing: 6) {
-                        Text("☎️")
-                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 36 : 32))
-
-                        Text("Need Guidance?")
-                            .font(.system(size: 15, weight: .bold))
+                    HStack(spacing: 12) {
+                        Image(systemName: "cross.case.fill")
+                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 28 : 24))
                             .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.498, green: 0.722, blue: 0.604) : themeManager.accentColor)
-                            .multilineTextAlignment(.center)
+
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Need Guidance?")
+                                .font(.system(size: 16, weight: .bold))
+                                .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.498, green: 0.722, blue: 0.604) : themeManager.accentColor)
+
+                            Text("Discover divine guidance for your situation")
+                                .font(.system(size: 13, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                        }
+
+                        Spacer()
                     }
-                    .frame(maxWidth: .infinity)
                     .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 14 : 12)
                     .padding(.horizontal, 20)
                     .background {
