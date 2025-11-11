@@ -342,7 +342,116 @@ class SupabaseService: ObservableObject {
         
         isLoading = false
     }
-    
+
+    // MARK: - Reading Progress Sync
+
+    func syncReadingProgress(_ progressData: ReadingProgressData, userId: String) async throws {
+        guard isAuthenticated else {
+            throw SupabaseError.notAuthenticated
+        }
+
+        isLoading = true
+        errorMessage = nil
+
+        do {
+            // Convert to database format
+            let dbProgress = DatabaseReadingProgress(
+                userId: userId,
+                verseProgress: progressData.verseProgress,
+                readingStreak: progressData.readingStreak,
+                badges: progressData.badges,
+                stats: progressData.stats,
+                preferences: progressData.preferences,
+                updatedAt: progressData.updatedAt,
+                createdAt: Date()
+            )
+
+            // Upsert reading progress to database (single row per user)
+            try await client
+                .from("reading_progress")
+                .upsert(dbProgress)
+                .execute()
+
+            print("✅ Synced reading progress to Supabase")
+        } catch {
+            self.errorMessage = "Failed to sync reading progress: \(error.localizedDescription)"
+            print("❌ Reading progress sync error: \(error)")
+            throw error
+        }
+
+        isLoading = false
+    }
+
+    func fetchReadingProgress(userId: String) async throws -> ReadingProgressData? {
+        guard isAuthenticated else {
+            throw SupabaseError.notAuthenticated
+        }
+
+        isLoading = true
+        errorMessage = nil
+
+        do {
+            let response: [DatabaseReadingProgress] = try await client
+                .from("reading_progress")
+                .select()
+                .eq("user_id", value: userId)
+                .execute()
+                .value
+
+            // Return nil if no progress found (user hasn't synced yet)
+            guard let dbProgress = response.first else {
+                print("ℹ️ No reading progress found for user in Supabase")
+                isLoading = false
+                return nil
+            }
+
+            // Convert database format to app format
+            let progressData = ReadingProgressData(
+                verseProgress: dbProgress.verseProgress,
+                readingStreak: dbProgress.readingStreak,
+                badges: dbProgress.badges,
+                stats: dbProgress.stats,
+                preferences: dbProgress.preferences,
+                updatedAt: dbProgress.updatedAt,
+                syncStatus: .synced
+            )
+
+            print("✅ Fetched reading progress from Supabase")
+            return progressData
+        } catch {
+            self.errorMessage = "Failed to fetch reading progress: \(error.localizedDescription)"
+            print("❌ Reading progress fetch error: \(error)")
+            throw error
+        }
+
+        isLoading = false
+    }
+
+    func deleteReadingProgress(userId: String) async throws {
+        guard isAuthenticated else {
+            throw SupabaseError.notAuthenticated
+        }
+
+        isLoading = true
+        errorMessage = nil
+
+        do {
+            try await client
+                .from("reading_progress")
+                .delete()
+                .eq("user_id", value: userId)
+                .execute()
+
+            print("✅ Deleted reading progress from Supabase")
+        } catch {
+            self.errorMessage = "Failed to delete reading progress: \(error.localizedDescription)"
+            print("❌ Reading progress delete error: \(error)")
+            throw error
+        }
+
+        isLoading = false
+    }
+
     // MARK: - User Preferences & Premium Status
     
     func getUserPremiumStatus() async throws -> Bool {

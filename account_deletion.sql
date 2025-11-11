@@ -11,28 +11,34 @@ DECLARE
     result_text TEXT;
     deleted_bookmarks_count INTEGER;
     deleted_preferences_count INTEGER;
+    deleted_progress_count INTEGER;
 BEGIN
     -- Check if user exists
     IF NOT EXISTS (SELECT 1 FROM auth.users WHERE id::text = user_id_param) THEN
         RAISE EXCEPTION 'User with ID % not found', user_id_param;
     END IF;
-    
+
     -- Delete user bookmarks and count them
     DELETE FROM bookmarks WHERE user_id::text = user_id_param;
     GET DIAGNOSTICS deleted_bookmarks_count = ROW_COUNT;
-    
+
     -- Delete user preferences and count them
     DELETE FROM user_preferences WHERE user_id::text = user_id_param;
     GET DIAGNOSTICS deleted_preferences_count = ROW_COUNT;
-    
+
+    -- Delete user reading progress and count them
+    DELETE FROM reading_progress WHERE user_id::text = user_id_param;
+    GET DIAGNOSTICS deleted_progress_count = ROW_COUNT;
+
     -- Log the deletion for audit purposes
     result_text := format(
-        'User %s deleted successfully. Removed %s bookmarks and %s preference records.',
+        'User %s deleted successfully. Removed %s bookmarks, %s preference records, and %s progress records.',
         user_id_param,
         deleted_bookmarks_count,
-        deleted_preferences_count
+        deleted_preferences_count,
+        deleted_progress_count
     );
-    
+
     -- Return success message
     RETURN result_text;
     

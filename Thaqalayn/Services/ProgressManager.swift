@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 @MainActor
 class ProgressManager: ObservableObject {
@@ -20,6 +21,9 @@ class ProgressManager: ObservableObject {
     @Published var stats: ProgressStats = ProgressStats()
     @Published var preferences: ProgressPreferences = ProgressPreferences()
     @Published var pendingBadge: BadgeAward? = nil // For showing badge celebration
+    @Published var isSyncing = false
+    @Published var syncStatus: String?
+    @Published var isAuthenticated = false
 
     // MARK: - UserDefaults Keys
 
@@ -29,10 +33,19 @@ class ProgressManager: ObservableObject {
     private let statsKey = "progressStats"
     private let preferencesKey = "progressPreferences"
 
+    // MARK: - Sync Properties
+
+    private var supabaseService = SupabaseService.shared
+    private var cancellables = Set<AnyCancellable>()
+    private var progressData: ReadingProgressData?
+    private var lastAuthenticatedUserId: String?
+    private var needsSync: Bool = false // Tracks if local changes need uploading
+
     // MARK: - Initialization
 
     private init() {
         loadProgress()
+        setupSupabaseObservers()
     }
 
     // MARK: - Data Persistence
@@ -100,6 +113,191 @@ class ProgressManager: ObservableObject {
         }
     }
 
+    // MARK: - Supabase Sync
+
+    private func setupSupabaseObservers() {
+        // Observe authentication state changes
+        supabaseService.$isAuthenticated
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$isAuthenticated)
+
+        supabaseService.$currentUser
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] user in
+                guard let self = self else { return }
+
+                if let user = user {
+                    let newUserId = user.id.uuidString
+
+                    // Check if this is a different user
+                    if let lastUserId = self.lastAuthenticatedUserId, lastUserId != newUserId {
+                        print("🔄 ProgressManager: User changed - clearing local data")
+                        self.clearAllLocalData()
+                    }
+
+                    // Update last authenticated user
+                    self.lastAuthenticatedUserId = newUserId
+
+                    // Perform initial sync
+                    Task {
+                        await self.performInitialSync()
+                    }
+                } else {
+                    // User signed out - keep local data for offline access
+                    self.lastAuthenticatedUserId = nil
+                }
+            }
+            .store(in: &cancellables)
+    }
+
+    private func clearAllLocalData() {
+        verseProgress = []
+        streak = ReadingStreak()
+        badges = []
+        stats = ProgressStats()
+        preferences = ProgressPreferences()
+        progressData = nil
+        saveProgress()
+        print("🗑️ ProgressManager: Cleared all local progress data")
+    }
+
+    private func performInitialSync() async {
+        guard let userId = supabaseService.currentUser?.id.uuidString else {
+            print("❌ ProgressManager: Cannot sync - no authenticated user")
+            return
+        }
+
+        // Skip initial sync if we already have local data (optimization like BookmarkManager)
+        // This happens when user signs back in with existing local progress
+        if !verseProgress.isEmpty || !badges.isEmpty || streak.currentStreak > 0 {
+            print("ℹ️ ProgressManager: Skipping initial sync - local data exists")
+            return
+        }
+
+        print("🔄 ProgressManager: Performing initial sync for user \(userId)")
+        await performSync()
+    }
+
+    // MARK: - Three-Step Sync Pattern (matching BookmarkManager)
+
+    private func performSync() async {
+        guard supabaseService.isAuthenticated else {
+            print("⚠️ ProgressManager: Skipping sync - user not authenticated")
+            return
+        }
+
+        guard !isSyncing else {
+            print("⚠️ ProgressManager: Sync already in progress")
+            return
+        }
+
+        isSyncing = true
+        syncStatus = "Syncing..."
+
+        do {
+            // Step 1: No deletes for progress (single row per user, skip this step)
+
+            // Step 2: Upload pending changes (conditional - only if needsSync = true)
+            try await uploadPendingProgress()
+
+            // Step 3: Download remote changes (always executes)
+            try await downloadRemoteProgress()
+
+            syncStatus = "Synced"
+            print("✅ ProgressManager: Sync complete")
+        } catch {
+            syncStatus = "Sync failed: \(error.localizedDescription)"
+            print("❌ ProgressManager: Sync error: \(error)")
+        }
+
+        isSyncing = false
+    }
+
+    private func uploadPendingProgress() async throws {
+        // Guard: Skip upload if no pending changes (THE KEY for fresh install)
+        guard needsSync else {
+            print("ℹ️ ProgressManager: No pending changes to upload - skipping")
+            return
+        }
+
+        guard let userId = supabaseService.currentUser?.id.uuidString else {
+            print("❌ ProgressManager: Cannot upload - no authenticated user")
+            return
+        }
+
+        print("📤 ProgressManager: Uploading local progress to cloud")
+
+        let localData = ReadingProgressData(
+            verseProgress: verseProgress,
+            readingStreak: streak,
+            badges: badges,
+            stats: stats,
+            preferences: preferences,
+            updatedAt: Date(),
+            syncStatus: .synced
+        )
+
+        try await supabaseService.syncReadingProgress(localData, userId: userId)
+
+        // Mark as synced after successful upload
+        needsSync = false
+        progressData = localData
+
+        print("✅ ProgressManager: Upload successful")
+    }
+
+    private func downloadRemoteProgress() async throws {
+        guard let userId = supabaseService.currentUser?.id.uuidString else {
+            print("❌ ProgressManager: Cannot download - no authenticated user")
+            return
+        }
+
+        print("📥 ProgressManager: Downloading remote progress")
+
+        if let remoteData = try await supabaseService.fetchReadingProgress(userId: userId) {
+            // Compare timestamps and take newer version
+            if let local = progressData {
+                if remoteData.updatedAt > local.updatedAt {
+                    print("🔄 ProgressManager: Remote data is newer - updating local")
+                    applyRemoteData(remoteData)
+                } else {
+                    print("✅ ProgressManager: Local data is current")
+                }
+            } else {
+                // No local progressData cached, use remote
+                print("📥 ProgressManager: No cached data - using remote")
+                applyRemoteData(remoteData)
+            }
+
+            progressData = remoteData
+            print("✅ ProgressManager: Download successful")
+        } else {
+            print("ℹ️ ProgressManager: No remote data found")
+        }
+    }
+
+    private func applyRemoteData(_ remoteData: ReadingProgressData) {
+        verseProgress = remoteData.verseProgress
+        streak = remoteData.readingStreak
+        badges = remoteData.badges
+        stats = remoteData.stats
+        preferences = remoteData.preferences
+        saveProgress()
+    }
+
+    private func syncProgressToCloud() {
+        guard supabaseService.isAuthenticated else {
+            return
+        }
+
+        // Mark as needing sync (local changes exist)
+        needsSync = true
+
+        Task {
+            await performSync()
+        }
+    }
+
     // MARK: - Verse Progress Tracking
 
     func markVerseAsRead(surahNumber: Int, verseNumber: Int) {
@@ -148,6 +346,9 @@ class ProgressManager: ObservableObject {
         // Save changes
         saveProgress()
 
+        // Sync to cloud if authenticated
+        syncProgressToCloud()
+
         print("✅ ProgressManager: Marked verse \(verseKey) as read")
     }
 
@@ -165,6 +366,9 @@ class ProgressManager: ObservableObject {
             stats.totalSawab = max(0, stats.totalSawab - 10)
 
             saveProgress()
+
+            // Sync to cloud if authenticated
+            syncProgressToCloud()
 
             print("✅ ProgressManager: Unmarked verse \(verseKey)")
         }
@@ -226,6 +430,9 @@ class ProgressManager: ObservableObject {
             checkMilestoneBadges()
 
             saveProgress()
+
+            // Sync to cloud if authenticated
+            syncProgressToCloud()
 
             print("🎉 ProgressManager: Surah \(surahNumber) completed! Badge awarded.")
         }

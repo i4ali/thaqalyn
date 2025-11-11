@@ -763,6 +763,86 @@ struct ProgressPreferences: Codable {
     }
 }
 
+// MARK: - Reading Progress Sync Models
+
+/// Container for all reading progress data with sync support
+struct ReadingProgressData: Codable {
+    var verseProgress: [VerseProgress]
+    var readingStreak: ReadingStreak
+    var badges: [BadgeAward]
+    var stats: ProgressStats
+    var preferences: ProgressPreferences
+    var updatedAt: Date
+    var syncStatus: ProgressSyncStatus
+
+    init(
+        verseProgress: [VerseProgress] = [],
+        readingStreak: ReadingStreak = ReadingStreak(),
+        badges: [BadgeAward] = [],
+        stats: ProgressStats = ProgressStats(),
+        preferences: ProgressPreferences = ProgressPreferences(),
+        updatedAt: Date = Date(),
+        syncStatus: ProgressSyncStatus = .synced
+    ) {
+        self.verseProgress = verseProgress
+        self.readingStreak = readingStreak
+        self.badges = badges
+        self.stats = stats
+        self.preferences = preferences
+        self.updatedAt = updatedAt
+        self.syncStatus = syncStatus
+    }
+}
+
+enum ProgressSyncStatus: String, Codable {
+    case synced = "synced"
+    case pendingSync = "pending_sync"
+    case conflict = "conflict"
+}
+
+/// Database model for Supabase reading_progress table
+struct DatabaseReadingProgress: Codable {
+    let userId: String
+    let verseProgress: [VerseProgress]
+    let readingStreak: ReadingStreak
+    let badges: [BadgeAward]
+    let stats: ProgressStats
+    let preferences: ProgressPreferences
+    let updatedAt: Date
+    let createdAt: Date
+
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case verseProgress = "verse_progress"
+        case readingStreak = "reading_streak"
+        case badges
+        case stats
+        case preferences
+        case updatedAt = "updated_at"
+        case createdAt = "created_at"
+    }
+
+    init(
+        userId: String,
+        verseProgress: [VerseProgress] = [],
+        readingStreak: ReadingStreak = ReadingStreak(),
+        badges: [BadgeAward] = [],
+        stats: ProgressStats = ProgressStats(),
+        preferences: ProgressPreferences = ProgressPreferences(),
+        updatedAt: Date = Date(),
+        createdAt: Date = Date()
+    ) {
+        self.userId = userId
+        self.verseProgress = verseProgress
+        self.readingStreak = readingStreak
+        self.badges = badges
+        self.stats = stats
+        self.preferences = preferences
+        self.updatedAt = updatedAt
+        self.createdAt = createdAt
+    }
+}
+
 // MARK: - Life Moments Models
 
 struct LifeMomentsData: Codable {
