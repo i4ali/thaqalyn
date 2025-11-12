@@ -329,6 +329,11 @@ struct SurahListView: View {
                                 .foregroundColor(themeManager.secondaryText)
                                 .lineLimit(2)
                                 .fixedSize(horizontal: false, vertical: true)
+
+                            Text("Tap to explore")
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText.opacity(0.6))
+                                .padding(.top, 2)
                         }
 
                         Spacer()
