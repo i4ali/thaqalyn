@@ -630,11 +630,11 @@ struct ModernVerseCard: View {
 
     private var warmInvitingSplitButtons: some View {
         HStack(spacing: 12) {
-            // Summary button
+            // Overview button (shows layer2 classical commentary)
             Button(action: {
                 if !canAccessOverview && surah.number > 1 {
                     showingPaywall = true
-                } else if verse.tafsir?.hasSummary == true {
+                } else if verse.tafsir != nil {
                     showingSummary = true
                 }
             }) {
@@ -652,8 +652,8 @@ struct ModernVerseCard: View {
                         .fill(Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.1))
                 )
             }
-            .opacity(verse.tafsir?.hasSummary == true ? 1.0 : 0.5)
-            .disabled(verse.tafsir?.hasSummary != true)
+            .opacity(verse.tafsir != nil ? 1.0 : 0.5)
+            .disabled(verse.tafsir == nil)
 
             // Full commentary button
             Button(action: {
@@ -682,11 +682,11 @@ struct ModernVerseCard: View {
 
     private var modernSplitButtons: some View {
         HStack(spacing: 12) {
-            // Summary button
+            // Overview button (shows layer2 classical commentary)
             Button(action: {
                 if !canAccessOverview && surah.number > 1 {
                     showingPaywall = true
-                } else if verse.tafsir?.hasSummary == true {
+                } else if verse.tafsir != nil {
                     showingSummary = true
                 }
             }) {
@@ -696,7 +696,7 @@ struct ModernVerseCard: View {
                     Text("Overview")
                         .font(.system(size: 15, weight: .semibold))
                 }
-                .foregroundColor(verse.tafsir?.hasSummary == true ? themeManager.primaryText : themeManager.tertiaryText)
+                .foregroundColor(verse.tafsir != nil ? themeManager.primaryText : themeManager.tertiaryText)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 12)
                 .background(
@@ -708,8 +708,8 @@ struct ModernVerseCard: View {
                         )
                 )
             }
-            .opacity(verse.tafsir?.hasSummary == true ? 1.0 : 0.5)
-            .disabled(verse.tafsir?.hasSummary != true)
+            .opacity(verse.tafsir != nil ? 1.0 : 0.5)
+            .disabled(verse.tafsir == nil)
 
             // Full commentary button
             Button(action: {
@@ -1324,9 +1324,7 @@ struct TafsirLayerSelector: View {
         layer2_urdu: "کلاسیکی تفسیر...",
         layer3_urdu: "عصری تفسیر...",
         layer4_urdu: "اہل بیت کی تفسیر...",
-        layer5_urdu: "**شیعہ تجزیہ**: الہی عدل اور امامت کے اصولوں پر توجہ۔ **سنی تجزیہ**: خلافت اور اجماع امت پر زور۔",
-        summary: "This opening verse invokes Allah's infinite mercy and compassion, establishing the foundation of Islamic practice. It reminds believers that all actions should begin with remembrance of Allah's attributes of mercy.",
-        summary_urdu: nil
+        layer5_urdu: "**شیعہ تجزیہ**: الہی عدل اور امامت کے اصولوں پر توجہ۔ **سنی تجزیہ**: خلافت اور اجماع امت پر زور۔"
     )
     
     let sampleVerseWithTafsir = VerseWithTafsir(

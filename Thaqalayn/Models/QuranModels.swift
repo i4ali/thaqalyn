@@ -153,10 +153,6 @@ struct TafsirVerse: Codable {
     let layer4_urdu: String?
     let layer5_urdu: String?
 
-    // Verse summaries for quick reading (optional)
-    let summary: String?
-    let summary_urdu: String?
-    
     // Helper method to get content by language and layer
     func content(for layer: TafsirLayer, language: CommentaryLanguage) -> String {
         switch (layer, language) {
@@ -183,15 +179,17 @@ struct TafsirVerse: Codable {
         }
     }
 
-    func getSummary(language: CommentaryLanguage) -> String? {
+    // Helper method to get layer2 content by language for overview
+    func getLayer2(language: CommentaryLanguage) -> String {
         switch language {
-        case .english: return summary
-        case .urdu: return summary_urdu ?? summary
+        case .english: return layer2
+        case .urdu: return layer2_urdu ?? layer2
         }
     }
 
-    var hasSummary: Bool {
-        return summary != nil
+    // Layer2 always exists (required field)
+    var hasLayer2: Bool {
+        return true
     }
 }
 

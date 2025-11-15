@@ -39,7 +39,7 @@ struct VerseSummaryView: View {
                     verseReferenceView
 
                     // Language selector (if Urdu content available)
-                    if verse.tafsir?.summary_urdu != nil {
+                    if verse.tafsir?.layer2_urdu != nil {
                         languageSelectorView
                     }
 
@@ -54,7 +54,7 @@ struct VerseSummaryView: View {
             }
         }
         .background(backgroundView)
-        .presentationDetents(isIPad ? [.large] : [.medium, .large])
+        .presentationDetents(isIPad ? [.large] : [.fraction(0.7), .large])
         .presentationDragIndicator(.hidden)
         .frame(maxWidth: isIPad ? 600 : nil) // Constrain width on iPad for better readability
     }
@@ -148,16 +148,16 @@ struct VerseSummaryView: View {
 
     private var summaryContentView: some View {
         VStack(alignment: .leading, spacing: 16) {
-            // Summary text starts immediately
-            if let summaryText = verse.tafsir?.getSummary(language: selectedLanguage) {
-                Text(summaryText)
+            // Layer2 classical commentary
+            if let layer2Text = verse.tafsir?.getLayer2(language: selectedLanguage) {
+                Text(layer2Text)
                     .font(.system(size: 17, weight: .regular, design: .serif))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(8)
                     .multilineTextAlignment(selectedLanguage.isRTL ? .trailing : .leading)
                     .environment(\.layoutDirection, selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             } else {
-                Text("Summary not available for this verse.")
+                Text("Overview not available for this verse.")
                     .font(.system(size: 16, weight: .regular, design: .serif))
                     .foregroundColor(themeManager.secondaryText)
                     .italic()
@@ -251,7 +251,7 @@ struct VerseSummaryView: View {
 
     let sampleTafsir = TafsirVerse(
         layer1: "Foundation commentary...",
-        layer2: "Classical commentary...",
+        layer2: "This opening verse invokes Allah's infinite mercy and compassion, as explained by classical scholars like Tabatabai. The Bismillah establishes that all actions should begin with remembrance of Allah's attributes of mercy and compassion, reflecting the core theological principle that divine mercy encompasses all creation.",
         layer3: "Contemporary commentary...",
         layer4: "Ahlul Bayt commentary...",
         layer5: "Comparative commentary...",
@@ -259,9 +259,7 @@ struct VerseSummaryView: View {
         layer2_urdu: nil,
         layer3_urdu: nil,
         layer4_urdu: nil,
-        layer5_urdu: nil,
-        summary: "This opening verse invokes Allah's infinite mercy and compassion, establishing the foundation of Islamic practice. It reminds believers that all actions should begin with remembrance of Allah's attributes of mercy.",
-        summary_urdu: nil
+        layer5_urdu: nil
     )
 
     let sampleVerseWithTafsir = VerseWithTafsir(

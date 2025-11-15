@@ -613,9 +613,7 @@ struct FullScreenCommentaryView: View {
         layer2_urdu: "کلاسیکی تفسیر...",
         layer3_urdu: "عصری تفسیر...",
         layer4_urdu: "اہل بیت کی تفسیر...",
-        layer5_urdu: "**شیعہ نقطہ نظر**: کلاسیکی شیعہ علماء جیسے الطباطبائی اس آیت کو الہی عدل سے جوڑتے ہیں۔ **سنی نقطہ نظر**: سنی مفسرین جیسے ابن کثیر قانونی فریم ورک پر توجہ دیتے ہیں۔",
-        summary: "Allah commands believers to protect orphans' property with absolute integrity, forbidding exploitation of vulnerable children. This establishes fundamental Islamic principles of social justice and fiduciary responsibility.",
-        summary_urdu: nil
+        layer5_urdu: "**شیعہ نقطہ نظر**: کلاسیکی شیعہ علماء جیسے الطباطبائی اس آیت کو الہی عدل سے جوڑتے ہیں۔ **سنی نقطہ نظر**: سنی مفسرین جیسے ابن کثیر قانونی فریم ورک پر توجہ دیتے ہیں۔"
     )
     
     let sampleSurah = Surah(
