@@ -39,7 +39,7 @@ struct VerseSummaryView: View {
                     verseReferenceView
 
                     // Language selector (if Urdu content available)
-                    if verse.tafsir?.layer2_urdu != nil {
+                    if verse.tafsir?.layer2short_urdu != nil {
                         languageSelectorView
                     }
 
@@ -148,8 +148,8 @@ struct VerseSummaryView: View {
 
     private var summaryContentView: some View {
         VStack(alignment: .leading, spacing: 16) {
-            // Layer2 classical commentary
-            if let layer2Text = verse.tafsir?.getLayer2(language: selectedLanguage) {
+            // Layer2 classical commentary (short version for overview)
+            if let layer2Text = verse.tafsir?.getLayer2Short(language: selectedLanguage) {
                 Text(layer2Text)
                     .font(.system(size: 17, weight: .regular, design: .serif))
                     .foregroundColor(themeManager.primaryText)
@@ -259,7 +259,9 @@ struct VerseSummaryView: View {
         layer2_urdu: nil,
         layer3_urdu: nil,
         layer4_urdu: nil,
-        layer5_urdu: nil
+        layer5_urdu: nil,
+        layer2short: "The Bismillah invokes Allah's infinite mercy and compassion.",
+        layer2short_urdu: nil
     )
 
     let sampleVerseWithTafsir = VerseWithTafsir(
@@ -268,7 +270,7 @@ struct VerseSummaryView: View {
         tafsir: sampleTafsir
     )
 
-    return VStack {
+    VStack {
         Spacer()
         VerseSummaryView(
             verse: sampleVerseWithTafsir,
