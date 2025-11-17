@@ -951,3 +951,74 @@ enum QuestionCategory: String, Codable, CaseIterable {
         }
     }
 }
+
+// MARK: - Prophetic Stories Models
+
+struct PropheticStoriesData: Codable {
+    let stories: [PropheticStory]
+}
+
+struct PropheticStory: Codable, Identifiable {
+    let id: String
+    let title: String
+    let shortTitle: String?
+    let prophet: String
+    let category: StoryCategory
+    let verses: [StoryVerse]
+    let relatedStories: [String]
+    let lessonsSummary: String?
+
+    var categoryIcon: String {
+        category.icon
+    }
+
+    var verseCount: Int {
+        verses.count
+    }
+
+    var keyVerses: [StoryVerse] {
+        verses.filter { $0.isKeyVerse }
+    }
+}
+
+struct StoryVerse: Codable {
+    let surahNumber: Int
+    let verseNumber: Int
+    let storyNote: String
+    let isKeyVerse: Bool
+
+    var verseReference: String {
+        "Quran \(surahNumber):\(verseNumber)"
+    }
+}
+
+enum StoryCategory: String, Codable, CaseIterable {
+    case patience = "patience"
+    case courage = "courage"
+    case faith = "faith"
+    case sacrifice = "sacrifice"
+    case leadership = "leadership"
+    case wisdom = "wisdom"
+
+    var displayName: String {
+        switch self {
+        case .patience: return "Patience & Perseverance"
+        case .courage: return "Courage & Bravery"
+        case .faith: return "Faith & Trust"
+        case .sacrifice: return "Sacrifice & Devotion"
+        case .leadership: return "Leadership"
+        case .wisdom: return "Wisdom & Knowledge"
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .patience: return "clock.fill"
+        case .courage: return "shield.fill"
+        case .faith: return "star.fill"
+        case .sacrifice: return "heart.fill"
+        case .leadership: return "crown.fill"
+        case .wisdom: return "brain.head.profile"
+        }
+    }
+}

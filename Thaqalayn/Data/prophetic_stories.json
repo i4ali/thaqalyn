@@ -1,0 +1,603 @@
+{
+  "stories": [
+    {
+      "id": "s1",
+      "title": "Prophet Ibrahim and the Idols",
+      "shortTitle": "Breaking the Idols",
+      "prophet": "Ibrahim (Abraham)",
+      "category": "courage",
+      "verses": [
+        {
+          "surahNumber": 21,
+          "verseNumber": 58,
+          "storyNote": "Ibrahim destroys the idols to expose the falsehood of idol worship",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 21,
+          "verseNumber": 63,
+          "storyNote": "Ibrahim cleverly challenges the idol worshippers with irrefutable logic",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s2", "s7"],
+      "lessonsSummary": "True courage means standing up for truth even when facing overwhelming opposition. Ibrahim's wisdom teaches us to use reason and logic when confronting falsehood."
+    },
+    {
+      "id": "s2",
+      "title": "The Sacrifice of Prophet Ibrahim",
+      "shortTitle": "Ibrahim's Ultimate Test",
+      "prophet": "Ibrahim (Abraham)",
+      "category": "sacrifice",
+      "verses": [
+        {
+          "surahNumber": 37,
+          "verseNumber": 102,
+          "storyNote": "Ibrahim tells his son about the dream commanding sacrifice, demonstrating perfect submission",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 37,
+          "verseNumber": 103,
+          "storyNote": "Both father and son submit completely to Allah's will",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 37,
+          "verseNumber": 107,
+          "storyNote": "Allah ransoms Ismail with a great sacrifice, rewarding their faith",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s1", "s12"],
+      "lessonsSummary": "Ultimate faith requires willingness to sacrifice what we love most. Both Ibrahim and Ismail showed perfect submission to Allah's command, teaching us that true devotion transcends personal attachment."
+    },
+    {
+      "id": "s3",
+      "title": "Prophet Nuh and the Great Flood",
+      "shortTitle": "Nuh's Ark",
+      "prophet": "Nuh (Noah)",
+      "category": "patience",
+      "verses": [
+        {
+          "surahNumber": 11,
+          "verseNumber": 36,
+          "storyNote": "After 950 years of calling his people, Allah reveals that no more will believe",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 11,
+          "verseNumber": 40,
+          "storyNote": "The flood begins and Nuh is commanded to take believers and pairs of animals",
+          "isKeyVerse": false
+        },
+        {
+          "surahNumber": 11,
+          "verseNumber": 42,
+          "storyNote": "Nuh calls his son to join them on the ark",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s12", "s20"],
+      "lessonsSummary": "Patience and perseverance in calling to truth for nearly a millennium. Even when facing rejection for centuries, Nuh never gave up on his mission until Allah commanded otherwise."
+    },
+    {
+      "id": "s4",
+      "title": "Prophet Yusuf Forgives His Brothers",
+      "shortTitle": "Yusuf's Forgiveness",
+      "prophet": "Yusuf (Joseph)",
+      "category": "patience",
+      "verses": [
+        {
+          "surahNumber": 12,
+          "verseNumber": 92,
+          "storyNote": "Yusuf forgives his brothers who betrayed him, showing no blame or revenge",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 100,
+          "storyNote": "Yusuf recognizes Allah's plan in all his trials and honors his parents",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s5", "s12"],
+      "lessonsSummary": "True nobility lies in forgiving those who wronged you. Yusuf's story teaches us to see Allah's wisdom in our trials and to respond to betrayal with grace and mercy."
+    },
+    {
+      "id": "s5",
+      "title": "Prophet Yusuf Resists Temptation",
+      "shortTitle": "Yusuf's Integrity",
+      "prophet": "Yusuf (Joseph)",
+      "category": "wisdom",
+      "verses": [
+        {
+          "surahNumber": 12,
+          "verseNumber": 23,
+          "storyNote": "Yusuf refuses temptation and seeks refuge in Allah",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 33,
+          "storyNote": "Yusuf prefers prison over sin, showing ultimate integrity",
+          "isKeyVerse": true
+        }
+      ],
+      "relatedStories": ["s4", "s16"],
+      "lessonsSummary": "Protecting one's integrity is worth any worldly price. Yusuf chose prison over sin, teaching us that true success lies in maintaining righteousness even when it costs us dearly."
+    },
+    {
+      "id": "s6",
+      "title": "Prophet Musa Confronts Pharaoh",
+      "shortTitle": "Musa vs Pharaoh",
+      "prophet": "Musa (Moses)",
+      "category": "courage",
+      "verses": [
+        {
+          "surahNumber": 20,
+          "verseNumber": 49,
+          "storyNote": "Musa fearlessly delivers Allah's message to the tyrant Pharaoh",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 20,
+          "verseNumber": 67,
+          "storyNote": "Musa feels fear but Allah reassures him",
+          "isKeyVerse": false
+        },
+        {
+          "surahNumber": 20,
+          "verseNumber": 69,
+          "storyNote": "Allah commands Musa to throw his staff, which defeats the magicians",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s7", "s14"],
+      "lessonsSummary": "Courage doesn't mean absence of fear but acting despite it. Musa faced the most powerful tyrant of his time, teaching us that with Allah's support, we can stand up to any oppression."
+    },
+    {
+      "id": "s7",
+      "title": "The Parting of the Red Sea",
+      "shortTitle": "Miracle at the Sea",
+      "prophet": "Musa (Moses)",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 26,
+          "verseNumber": 63,
+          "storyNote": "Allah commands Musa to strike the sea with his staff, creating a miraculous path",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 26,
+          "verseNumber": 61,
+          "storyNote": "The believers feared being overtaken, but Musa assured them of Allah's help",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s6", "s1"],
+      "lessonsSummary": "When trapped between the sea and the enemy, trust in Allah opens impossible paths. This miracle teaches us that Allah's help comes when we have exhausted all worldly means and place complete trust in Him."
+    },
+    {
+      "id": "s8",
+      "title": "The Miraculous Birth of Prophet Isa",
+      "shortTitle": "Isa's Birth",
+      "prophet": "Isa (Jesus)",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 19,
+          "verseNumber": 20,
+          "storyNote": "Maryam questions how she can have a child without being touched by a man",
+          "isKeyVerse": false
+        },
+        {
+          "surahNumber": 19,
+          "verseNumber": 21,
+          "storyNote": "Allah declares this an easy matter and a sign for humanity",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 3,
+          "verseNumber": 59,
+          "storyNote": "Allah compares Isa's creation to Adam's, both created by divine command",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s15", "s19"],
+      "lessonsSummary": "Allah's power transcends natural laws. The miraculous birth of Isa demonstrates that nothing is impossible for Allah, and what seems impossible to us is easy for the Creator."
+    },
+    {
+      "id": "s9",
+      "title": "Prophet Sulayman's Wise Judgment",
+      "shortTitle": "Sulayman's Wisdom",
+      "prophet": "Sulayman (Solomon)",
+      "category": "wisdom",
+      "verses": [
+        {
+          "surahNumber": 21,
+          "verseNumber": 78,
+          "storyNote": "Sulayman judges the case of the field and livestock with unique wisdom",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 27,
+          "verseNumber": 16,
+          "storyNote": "Sulayman inherits knowledge from Dawud and thanks Allah",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s10", "s18"],
+      "lessonsSummary": "True wisdom comes from Allah and must be used for justice. Sulayman's judgments were legendary, teaching us that leadership requires both knowledge and creative problem-solving guided by divine wisdom."
+    },
+    {
+      "id": "s10",
+      "title": "Prophet Dawud Defeats Goliath",
+      "shortTitle": "David and Goliath",
+      "prophet": "Dawud (David)",
+      "category": "courage",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 251,
+          "storyNote": "With Allah's permission, Dawud defeats Goliath and receives kingdom and wisdom",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 249,
+          "storyNote": "Those who believed they would meet Allah remained steadfast",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s6", "s9"],
+      "lessonsSummary": "Size and numbers don't determine victory; faith and Allah's will do. A young shepherd with strong faith defeated a mighty warrior, teaching us that true strength comes from Allah, not worldly power."
+    },
+    {
+      "id": "s11",
+      "title": "Prophet Yunus and the Whale",
+      "shortTitle": "Jonah in the Whale",
+      "prophet": "Yunus (Jonah)",
+      "category": "patience",
+      "verses": [
+        {
+          "surahNumber": 21,
+          "verseNumber": 87,
+          "storyNote": "Yunus calls out from the darkness: 'There is no god but You, glory be to You, I was indeed wrong'",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 21,
+          "verseNumber": 88,
+          "storyNote": "Allah responds to his sincere repentance and saves him",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s12", "s3"],
+      "lessonsSummary": "Even prophets can err in judgment, but sincere repentance brings Allah's mercy. Yunus's prayer from the whale's belly is a powerful lesson in humility and turning back to Allah in our darkest moments."
+    },
+    {
+      "id": "s12",
+      "title": "Prophet Ayyub Endures Severe Trials",
+      "shortTitle": "Ayyub's Patience",
+      "prophet": "Ayyub (Job)",
+      "category": "patience",
+      "verses": [
+        {
+          "surahNumber": 21,
+          "verseNumber": 83,
+          "storyNote": "Ayyub calls upon Allah while suffering immense hardship",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 38,
+          "verseNumber": 44,
+          "storyNote": "Allah finds him patient and excellent in service",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s3", "s11", "s2"],
+      "lessonsSummary": "Patience in adversity is the mark of true faith. Despite losing wealth, health, and family, Ayyub never complained or lost faith, embodying perfect patience and earning the title of 'as-Sabur' (the Patient)."
+    },
+    {
+      "id": "s13",
+      "title": "The Night Journey of Prophet Muhammad",
+      "shortTitle": "Isra and Mi'raj",
+      "prophet": "Muhammad",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 17,
+          "verseNumber": 1,
+          "storyNote": "Allah takes Muhammad on a miraculous night journey from Mecca to Jerusalem and beyond",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 53,
+          "verseNumber": 13,
+          "storyNote": "The Prophet saw Gabriel in his true form during the ascension",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s14", "s8"],
+      "lessonsSummary": "The spiritual realm is more real than the physical. This miraculous journey affirmed the Prophet's status and gave believers a glimpse of the unseen world, strengthening faith in what lies beyond our perception."
+    },
+    {
+      "id": "s14",
+      "title": "The Conquest of Mecca",
+      "shortTitle": "Peaceful Victory",
+      "prophet": "Muhammad",
+      "category": "leadership",
+      "verses": [
+        {
+          "surahNumber": 48,
+          "verseNumber": 1,
+          "storyNote": "Allah announces the clear victory and conquest",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 48,
+          "verseNumber": 27,
+          "storyNote": "Allah fulfilled the vision of entering Mecca in safety",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s13", "s6"],
+      "lessonsSummary": "True victory includes mercy and forgiveness. When the Prophet conquered Mecca, he forgave his former enemies, teaching us that leadership means choosing peace over revenge and unity over division."
+    },
+    {
+      "id": "s15",
+      "title": "Prophet Zakariya's Prayer for a Son",
+      "shortTitle": "Zakariya's Supplication",
+      "prophet": "Zakariya (Zechariah)",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 19,
+          "verseNumber": 4,
+          "storyNote": "Zakariya, old and with a barren wife, prays secretly for a successor",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 19,
+          "verseNumber": 7,
+          "storyNote": "Allah gives him the glad tidings of Yahya, unprecedented in name",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s8", "s16"],
+      "lessonsSummary": "Never lose hope in Allah's mercy, no matter how impossible the situation seems. Zakariya's prayer in old age teaches us that Allah responds to sincere supplication even when all worldly means have failed."
+    },
+    {
+      "id": "s16",
+      "title": "Prophet Yahya's Righteousness",
+      "shortTitle": "Yahya's Purity",
+      "prophet": "Yahya (John)",
+      "category": "wisdom",
+      "verses": [
+        {
+          "surahNumber": 19,
+          "verseNumber": 12,
+          "storyNote": "Allah commands Yahya to hold firmly to the Scripture with determination",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 19,
+          "verseNumber": 13,
+          "storyNote": "Yahya was given wisdom, compassion, and purity from childhood",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s15", "s5"],
+      "lessonsSummary": "Righteousness and devotion can begin from youth. Yahya was pure, wise, and dedicated to Allah from childhood, teaching us that spiritual excellence knows no age limit."
+    },
+    {
+      "id": "s17",
+      "title": "Prophet Lut Warns His People",
+      "shortTitle": "Lut's Warning",
+      "prophet": "Lut (Lot)",
+      "category": "courage",
+      "verses": [
+        {
+          "surahNumber": 7,
+          "verseNumber": 80,
+          "storyNote": "Lut fearlessly condemns the unprecedented immorality of his people",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 11,
+          "verseNumber": 77,
+          "storyNote": "Lut is distressed by his people's wickedness, feeling powerless to protect divine guests",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s6", "s20"],
+      "lessonsSummary": "Standing up against societal immorality requires immense courage. Lut condemned widespread vice despite being isolated and threatened, teaching us to uphold moral principles even when society opposes us."
+    },
+    {
+      "id": "s18",
+      "title": "Prophet Shuaib and Just Commerce",
+      "shortTitle": "Shuaib's Justice",
+      "prophet": "Shuaib",
+      "category": "wisdom",
+      "verses": [
+        {
+          "surahNumber": 11,
+          "verseNumber": 85,
+          "storyNote": "Shuaib commands his people to give full measure and weight in trade",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 11,
+          "verseNumber": 86,
+          "storyNote": "Warns that what remains with Allah is better than ill-gotten gains",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s9", "s19"],
+      "lessonsSummary": "Economic justice is a core religious duty. Shuaib's message to merchants teaches us that cheating in business is a spiritual crime, and that Allah's blessings come through honest dealing, not deception."
+    },
+    {
+      "id": "s19",
+      "title": "Prophet Salih and the She-Camel",
+      "shortTitle": "The Miraculous Camel",
+      "prophet": "Salih",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 7,
+          "verseNumber": 73,
+          "storyNote": "Allah sends a miraculous she-camel as a clear sign",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 11,
+          "verseNumber": 64,
+          "storyNote": "Salih warns his people not to harm the camel, which is a sign for them",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s8", "s20"],
+      "lessonsSummary": "Rejecting clear signs leads to destruction. The people demanded a miracle, received it, yet still rejected it, teaching us that denial often stems from stubbornness, not lack of evidence."
+    },
+    {
+      "id": "s20",
+      "title": "Prophet Hud Calls to Monotheism",
+      "shortTitle": "Hud's Message",
+      "prophet": "Hud",
+      "category": "courage",
+      "verses": [
+        {
+          "surahNumber": 11,
+          "verseNumber": 51,
+          "storyNote": "Hud calls his people to worship Allah alone without asking for payment",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 11,
+          "verseNumber": 52,
+          "storyNote": "Hud calls his people to seek forgiveness and turn to Allah for His mercy",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s3", "s17", "s19"],
+      "lessonsSummary": "Calling to truth requires selflessness and perseverance. Hud never asked for worldly reward, teaching us that spreading the message of monotheism should be done purely for Allah's sake."
+    },
+    {
+      "id": "s21",
+      "title": "Prophet Adam's Repentance",
+      "shortTitle": "First Repentance",
+      "prophet": "Adam",
+      "category": "wisdom",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 37,
+          "storyNote": "Adam learns words of repentance from Allah and is forgiven",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 7,
+          "verseNumber": 23,
+          "storyNote": "Adam and Hawwa acknowledge their wrong and seek Allah's mercy",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s11", "s4"],
+      "lessonsSummary": "Mistakes are human, but sincere repentance leads to divine forgiveness. Adam's immediate acknowledgment and sincere repentance set the example for all humanity on how to return to Allah after erring."
+    },
+    {
+      "id": "s22",
+      "title": "Prophet Idris's Elevation",
+      "shortTitle": "Idris Raised High",
+      "prophet": "Idris (Enoch)",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 19,
+          "verseNumber": 56,
+          "storyNote": "Idris is described as a man of truth and a prophet",
+          "isKeyVerse": false
+        },
+        {
+          "surahNumber": 19,
+          "verseNumber": 57,
+          "storyNote": "Allah raised Idris to a high station due to his exceptional piety",
+          "isKeyVerse": true
+        }
+      ],
+      "relatedStories": ["s13", "s8"],
+      "lessonsSummary": "Exceptional devotion earns exceptional rank. Idris was raised to a lofty station, teaching us that sincere worship and truthfulness elevate our spiritual status in ways beyond worldly comprehension."
+    },
+    {
+      "id": "s23",
+      "title": "Prophet Ishaq's Blessed Birth",
+      "shortTitle": "Isaac's Promise",
+      "prophet": "Ishaq (Isaac)",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 11,
+          "verseNumber": 71,
+          "storyNote": "Angels give glad tidings of Ishaq to the elderly Sarah",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 37,
+          "verseNumber": 112,
+          "storyNote": "After the sacrifice trial, Allah gives Ibrahim the good news of Ishaq",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s2", "s15"],
+      "lessonsSummary": "Allah fulfills His promises in His perfect timing. The birth of Ishaq to elderly parents demonstrates that Allah's promises never fail, even when all hope seems lost by worldly standards."
+    },
+    {
+      "id": "s24",
+      "title": "Prophet Yaqub's Patience with His Sons",
+      "shortTitle": "Yaqub's Endurance",
+      "prophet": "Yaqub (Jacob)",
+      "category": "patience",
+      "verses": [
+        {
+          "surahNumber": 12,
+          "verseNumber": 18,
+          "storyNote": "Yaqub responds to the false story about Yusuf with beautiful patience",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 86,
+          "storyNote": "Yaqub says he complains only to Allah of his grief and sorrow",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s4", "s12", "s3"],
+      "lessonsSummary": "Beautiful patience means enduring trials while maintaining trust in Allah. Yaqub lost his beloved son but never lost hope in Allah's plan, teaching us to direct our pain and complaints only to the Divine."
+    },
+    {
+      "id": "s25",
+      "title": "Prophet Harun Maintains the Faith",
+      "shortTitle": "Aaron's Steadfastness",
+      "prophet": "Harun (Aaron)",
+      "category": "leadership",
+      "verses": [
+        {
+          "surahNumber": 20,
+          "verseNumber": 92,
+          "storyNote": "Harun explains why he didn't forcefully stop the people from idol worship",
+          "isKeyVerse": true
+        },
+        {
+          "surahNumber": 20,
+          "verseNumber": 90,
+          "storyNote": "Harun had warned the people before but they refused to listen",
+          "isKeyVerse": false
+        }
+      ],
+      "relatedStories": ["s6", "s14"],
+      "lessonsSummary": "Leadership sometimes means choosing unity over confrontation. Harun's wisdom in maintaining the community while Musa was away teaches us the delicate balance between firmness and compassion in leadership."
+    }
+  ]
+}
