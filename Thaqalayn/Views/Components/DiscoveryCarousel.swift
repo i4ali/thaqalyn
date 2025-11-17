@@ -14,6 +14,7 @@ struct DiscoveryCarousel: View {
     @State private var showLifeMoments = false
     @State private var showQuestions = false
     @State private var showPropheticStories = false
+    @State private var showAhlulbaytQuran = false
 
     var body: some View {
         VStack(spacing: 8) {
@@ -27,6 +28,9 @@ struct DiscoveryCarousel: View {
 
                 PropheticStoriesCarouselCard(showFullView: $showPropheticStories)
                     .tag(2)
+
+                AhlulbaytQuranCarouselCard(showFullView: $showAhlulbaytQuran)
+                    .tag(3)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .frame(height: 145)
@@ -39,7 +43,7 @@ struct DiscoveryCarousel: View {
 
             // Page indicators
             HStack(spacing: 6) {
-                ForEach(0..<3, id: \.self) { index in
+                ForEach(0..<4, id: \.self) { index in
                     Circle()
                         .fill(currentPage == index ?
                               Color.accentColor : Color.gray.opacity(0.3))
@@ -73,12 +77,15 @@ struct DiscoveryCarousel: View {
         .fullScreenCover(isPresented: $showPropheticStories) {
             PropheticStoriesView()
         }
+        .fullScreenCover(isPresented: $showAhlulbaytQuran) {
+            AhlulbaytQuranView()
+        }
     }
 
     private func startAutoScroll() {
         autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: true) { _ in
             withAnimation(.easeInOut(duration: 0.5)) {
-                currentPage = (currentPage + 1) % 3
+                currentPage = (currentPage + 1) % 4
             }
         }
     }

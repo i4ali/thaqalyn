@@ -1022,3 +1022,76 @@ enum StoryCategory: String, Codable, CaseIterable {
         }
     }
 }
+
+// MARK: - Ahl al-Bayt in the Quran Models
+
+struct AhlulbaytQuranData: Codable {
+    let entries: [AhlulbaytEntry]
+}
+
+struct AhlulbaytEntry: Codable, Identifiable {
+    let id: String
+    let title: String
+    let shortTitle: String?
+    let category: AhlulbaytCategory
+    let verses: [AhlulbaytVerse]
+    let ahlulbaytMembers: [String]
+    let revelationContext: String
+    let shiaPerspective: String
+    let contemporaryRelevance: String
+    let relatedEntries: [String]
+
+    var categoryIcon: String {
+        category.icon
+    }
+
+    var verseCount: Int {
+        verses.count
+    }
+
+    var primaryVerses: [AhlulbaytVerse] {
+        verses.filter { $0.isPrimary }
+    }
+}
+
+struct AhlulbaytVerse: Codable {
+    let surahNumber: Int
+    let verseNumber: Int
+    let context: String
+    let isPrimary: Bool
+
+    var verseReference: String {
+        "Quran \(surahNumber):\(verseNumber)"
+    }
+}
+
+enum AhlulbaytCategory: String, Codable, CaseIterable {
+    case purity = "purity"
+    case love = "love"
+    case authority = "authority"
+    case sacrifice = "sacrifice"
+    case knowledge = "knowledge"
+    case rights = "rights"
+
+    var displayName: String {
+        switch self {
+        case .purity: return "Purity & Sanctity"
+        case .love: return "Love & Reverence"
+        case .authority: return "Authority & Leadership"
+        case .sacrifice: return "Sacrifice & Devotion"
+        case .knowledge: return "Knowledge & Wisdom"
+        case .rights: return "Rights & Status"
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .purity: return "sparkles"
+        case .love: return "heart.fill"
+        case .authority: return "crown.fill"
+        case .sacrifice: return "gift.fill"
+        case .knowledge: return "book.fill"
+        case .rights: return "scale.3d"
+        }
+    }
+}
