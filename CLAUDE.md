@@ -139,3 +139,30 @@ Thaqalayn/
 - ✅ Fail fast and fail clearly
 
 **Rationale**: Fallback logic can mask critical failures, lead to data inconsistency, and make debugging difficult. Clean error handling ensures problems are caught early and addressed properly.
+
+### ⚠️ CLOUD SYNC ARCHITECTURE PATTERN ⚠️
+
+**CRITICAL**: For any data type that needs to be synced to cloud (Supabase), follow the **BOOKMARK_SYNC_ARCHITECTURE.md** as closely as possible. This architecture is production-tested and provides:
+
+- **Offline-First Design**: Local operations succeed immediately, cloud sync happens asynchronously
+- **Zero Data Loss**: Every operation persists locally before attempting cloud sync
+- **Intelligent Conflict Resolution**: Timestamp-based detection with local-first preservation
+- **User Account Isolation**: Complete data separation between users
+- **Automatic Retry**: Failed operations queue for next sync attempt
+- **Three-Step Sync Process**: Delete → Upload → Download (correct order guaranteed)
+
+**Implementation Checklist** (from BOOKMARK_SYNC_ARCHITECTURE.md):
+1. ✅ Define data model with sync status enum (`synced`, `pendingSync`, `conflict`)
+2. ✅ Create manager class with `@MainActor` isolation
+3. ✅ Implement local storage (UserDefaults with JSON encoding)
+4. ✅ Implement pending deletes tracking (separate Set)
+5. ✅ Setup Supabase observers for auth state changes
+6. ✅ Implement CRUD operations (offline-first pattern)
+7. ✅ Implement three-step sync process
+8. ✅ Implement conflict resolution in merge algorithm
+9. ✅ Add debouncing for sync scheduling
+10. ✅ Implement cleanup methods (sign-out, user switching)
+11. ✅ Add Supabase service methods
+12. ✅ Create database schema with RLS policies
+
+**Do NOT** deviate from this pattern without explicit approval. This architecture guarantees data integrity and provides excellent UX.

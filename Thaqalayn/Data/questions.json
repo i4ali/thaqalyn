@@ -1,0 +1,856 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is the purpose of life?",
+      "shortQuestion": "Life's purpose?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 51,
+          "verseNumber": 56,
+          "relevanceNote": "This verse directly states the purpose: to worship and know Allah. Worship here means complete submission and recognition of the Creator.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 67,
+          "verseNumber": 2,
+          "relevanceNote": "Life is a test - we are placed here to demonstrate righteous action. The purpose includes moral growth and spiritual development.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 30,
+          "relevanceNote": "Humanity's role as khalifah (vicegerent) on earth - to establish justice and goodness.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q2", "q3"]
+    },
+    {
+      "id": "q2",
+      "question": "Can God forgive any sin?",
+      "shortQuestion": "Divine forgiveness?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 39,
+          "verseNumber": 53,
+          "relevanceNote": "Allah's mercy is infinite - despair not! This verse emphasizes that no sin is too great for Allah's forgiveness if one sincerely repents.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 4,
+          "verseNumber": 48,
+          "relevanceNote": "Exception: shirk (associating partners with Allah) if one dies in that state. But even shirk can be forgiven if one repents before death.",
+          "isPrimary": true
+        }
+      ],
+      "relatedQuestions": ["q1", "q15"]
+    },
+    {
+      "id": "q3",
+      "question": "Does God need our worship?",
+      "shortQuestion": "Why worship?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 29,
+          "verseNumber": 6,
+          "relevanceNote": "Allah is self-sufficient and needs nothing from creation. Worship benefits us, not Allah - it purifies our souls and brings us closer to Him.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 35,
+          "verseNumber": 15,
+          "relevanceNote": "Humanity needs Allah, but Allah needs nothing. This verse emphasizes divine transcendence and human dependence.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q1"]
+    },
+    {
+      "id": "q4",
+      "question": "How can I strengthen my faith?",
+      "shortQuestion": "Strengthen faith?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 8,
+          "verseNumber": 2,
+          "relevanceNote": "Faith increases through remembrance of Allah, reciting the Quran, and reflecting on His signs. The Quran itself strengthens belief.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 3,
+          "verseNumber": 191,
+          "relevanceNote": "Contemplating creation - the heavens and earth - increases faith and understanding of divine power.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q1", "q5"]
+    },
+    {
+      "id": "q5",
+      "question": "Does God hear my prayers?",
+      "shortQuestion": "Does God hear me?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 186,
+          "relevanceNote": "Allah is near and responds to those who call upon Him. He hears every prayer and knows every need, even before we ask.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 40,
+          "verseNumber": 60,
+          "relevanceNote": "Allah commands us to call upon Him and promises to respond. He considers prayer an act of worship and never ignores it.",
+          "isPrimary": true
+        }
+      ],
+      "relatedQuestions": ["q4"]
+    },
+    {
+      "id": "q6",
+      "question": "How do I get closer to God?",
+      "shortQuestion": "Draw near to God?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 152,
+          "relevanceNote": "Remember Allah constantly, and He will remember you. Divine proximity comes through dhikr (remembrance) and gratitude.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 50,
+          "verseNumber": 16,
+          "relevanceNote": "Allah is closer to you than your jugular vein. Closeness is achieved by recognizing His constant presence in your life.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q4", "q5"]
+    },
+    {
+      "id": "q7",
+      "question": "What is true worship?",
+      "shortQuestion": "True worship?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 98,
+          "verseNumber": 5,
+          "relevanceNote": "True worship means being sincere to Allah alone, establishing prayer, and giving charity. It combines devotion with righteous action.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 107,
+          "verseNumber": 4,
+          "relevanceNote": "Prayer without compassion for others is incomplete. True worship integrates ritual with ethics and social responsibility.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q3"]
+    },
+    {
+      "id": "q8",
+      "question": "Why did God create us?",
+      "shortQuestion": "Why creation?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 51,
+          "verseNumber": 56,
+          "relevanceNote": "Allah created humanity and jinn to know and worship Him. Our existence has divine purpose beyond material pursuits.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 30,
+          "relevanceNote": "We are created as Allah's vicegerents on earth - to establish justice, goodness, and divine order in creation.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q1"]
+    },
+    {
+      "id": "q9",
+      "question": "Why do bad things happen to good people?",
+      "shortQuestion": "Why suffering?",
+      "category": "justice",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 155,
+          "relevanceNote": "Trials test faith and purify souls. Hardship is not punishment but a means of spiritual growth and elevation.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 29,
+          "verseNumber": 2,
+          "relevanceNote": "Testing is how Allah distinguishes truth from falsehood in hearts. Faith must be proven through trials, not mere words.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 3,
+          "verseNumber": 142,
+          "relevanceNote": "Through hardship, Allah identifies true believers who remain steadfast. Ease without trial does not reveal character.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q10", "q11"]
+    },
+    {
+      "id": "q10",
+      "question": "Why is there suffering in the world?",
+      "shortQuestion": "Why suffering exists?",
+      "category": "justice",
+      "verses": [
+        {
+          "surahNumber": 67,
+          "verseNumber": 2,
+          "relevanceNote": "Life is a test to see who acts best. Suffering exists as part of this test, revealing our choices between good and evil.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 18,
+          "verseNumber": 7,
+          "relevanceNote": "The world is made beautiful yet temporary to test us. Suffering reminds us not to become attached to this fleeting life.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q9"]
+    },
+    {
+      "id": "q11",
+      "question": "Where is God when I'm hurting?",
+      "shortQuestion": "God in pain?",
+      "category": "justice",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 186,
+          "relevanceNote": "Allah is near, especially to those who call upon Him in distress. He hears and knows our pain intimately.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 94,
+          "verseNumber": 5,
+          "relevanceNote": "With every hardship comes ease. Allah promises relief and never abandons those who suffer - ease follows difficulty.",
+          "isPrimary": true
+        }
+      ],
+      "relatedQuestions": ["q9", "q10"]
+    },
+    {
+      "id": "q12",
+      "question": "Will wrongdoers be held accountable?",
+      "shortQuestion": "Divine justice?",
+      "category": "justice",
+      "verses": [
+        {
+          "surahNumber": 99,
+          "verseNumber": 7,
+          "relevanceNote": "Every atom's weight of good or evil will be seen and judged. Perfect justice awaits on the Day of Judgment - nothing escapes Allah's knowledge.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 4,
+          "verseNumber": 40,
+          "relevanceNote": "Allah does not wrong anyone, not even by an atom's weight. Injustice in this world will be rectified in the Hereafter.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q17"]
+    },
+    {
+      "id": "q13",
+      "question": "Is life fair?",
+      "shortQuestion": "Life's fairness?",
+      "category": "justice",
+      "verses": [
+        {
+          "surahNumber": 16,
+          "verseNumber": 90,
+          "relevanceNote": "Allah commands justice and good conduct. While this world has trials, ultimate fairness will be established in the Hereafter.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 21,
+          "verseNumber": 47,
+          "relevanceNote": "On Judgment Day, scales of justice will be set up with perfect precision. No soul will be wronged in the slightest.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q12"]
+    },
+    {
+      "id": "q14",
+      "question": "Why do children suffer?",
+      "shortQuestion": "Children suffering?",
+      "category": "justice",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 286,
+          "relevanceNote": "No soul is burdened beyond its capacity. Children who suffer will be compensated justly by Allah's infinite mercy and wisdom.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 17,
+          "verseNumber": 44,
+          "relevanceNote": "All creation glorifies Allah, even if we don't understand the wisdom. Children's suffering has meaning in Allah's perfect plan.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q9", "q10"]
+    },
+    {
+      "id": "q15",
+      "question": "How should I treat others?",
+      "shortQuestion": "Treat others?",
+      "category": "ethics",
+      "verses": [
+        {
+          "surahNumber": 4,
+          "verseNumber": 36,
+          "relevanceNote": "Worship Allah and be good to parents, relatives, orphans, the needy, neighbors, travelers, and all people. Kindness is universal.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 49,
+          "verseNumber": 13,
+          "relevanceNote": "All humanity comes from one source. The most honored in Allah's sight are those with most taqwa (consciousness of Allah), not race or status.",
+          "isPrimary": true
+        }
+      ],
+      "relatedQuestions": ["q16", "q22"]
+    },
+    {
+      "id": "q16",
+      "question": "What makes something right or wrong?",
+      "shortQuestion": "Right vs wrong?",
+      "category": "ethics",
+      "verses": [
+        {
+          "surahNumber": 91,
+          "verseNumber": 8,
+          "relevanceNote": "Allah has inspired every soul with understanding of right (taqwa) and wrong (fujur). Conscience is divinely implanted.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 16,
+          "verseNumber": 90,
+          "relevanceNote": "Allah commands justice, good conduct, and generosity. He forbids immorality, wrongdoing, and oppression. These are moral absolutes.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q15"]
+    },
+    {
+      "id": "q17",
+      "question": "How do I control my anger?",
+      "shortQuestion": "Control anger?",
+      "category": "ethics",
+      "verses": [
+        {
+          "surahNumber": 3,
+          "verseNumber": 134,
+          "relevanceNote": "The righteous are those who restrain anger and pardon others. Allah loves those who show such self-control and forgiveness.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 7,
+          "verseNumber": 199,
+          "relevanceNote": "Practice forgiveness, command what is right, and turn away from the ignorant. Respond to anger with grace and wisdom.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q19"]
+    },
+    {
+      "id": "q18",
+      "question": "What is true charity?",
+      "shortQuestion": "True charity?",
+      "category": "ethics",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 177,
+          "relevanceNote": "True righteousness includes giving wealth to family, orphans, the needy, travelers, and for freeing slaves - out of love for Allah, not for show.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 264,
+          "relevanceNote": "Charity done for show or followed by reminders of generosity is worthless. Give sincerely, in secret, without seeking recognition.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q15"]
+    },
+    {
+      "id": "q19",
+      "question": "Should I forgive those who hurt me?",
+      "shortQuestion": "Forgive others?",
+      "category": "ethics",
+      "verses": [
+        {
+          "surahNumber": 24,
+          "verseNumber": 22,
+          "relevanceNote": "Pardon and overlook offenses. Don't you love that Allah should forgive you? As you show mercy to others, Allah shows mercy to you.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 42,
+          "verseNumber": 40,
+          "relevanceNote": "While justice is allowed, forgiving is better. Allah loves those who pardon others - forgiveness is a higher virtue than retribution.",
+          "isPrimary": true
+        }
+      ],
+      "relatedQuestions": ["q17"]
+    },
+    {
+      "id": "q20",
+      "question": "What is true humility?",
+      "shortQuestion": "True humility?",
+      "category": "ethics",
+      "verses": [
+        {
+          "surahNumber": 25,
+          "verseNumber": 63,
+          "relevanceNote": "The servants of the Most Merciful walk on earth humbly, and when the ignorant address them, they say 'Peace.' Gentleness defines character.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 31,
+          "verseNumber": 18,
+          "relevanceNote": "Do not turn your face away from people arrogantly, nor walk proudly on earth. Allah does not love the self-conceited boaster.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q15"]
+    },
+    {
+      "id": "q21",
+      "question": "How do I avoid backbiting?",
+      "shortQuestion": "Stop backbiting?",
+      "category": "ethics",
+      "verses": [
+        {
+          "surahNumber": 49,
+          "verseNumber": 12,
+          "relevanceNote": "Do not backbite - would you like to eat the flesh of your dead brother? Backbiting is compared to this repulsive act. Guard your tongue.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 24,
+          "verseNumber": 19,
+          "relevanceNote": "Those who spread slander about believers will face painful punishment. Speaking ill of others is a grave sin.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q15"]
+    },
+    {
+      "id": "q22",
+      "question": "What happens after we die?",
+      "shortQuestion": "After death?",
+      "category": "afterlife",
+      "verses": [
+        {
+          "surahNumber": 23,
+          "verseNumber": 99,
+          "relevanceNote": "After death comes barzakh - an intermediate realm until resurrection. Then all will be raised for the Day of Judgment.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 75,
+          "verseNumber": 36,
+          "relevanceNote": "Humans were not created to be left purposeless. Death is not the end - resurrection and accountability await everyone.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q23", "q24"]
+    },
+    {
+      "id": "q23",
+      "question": "Is there really a Day of Judgment?",
+      "shortQuestion": "Day of Judgment?",
+      "category": "afterlife",
+      "verses": [
+        {
+          "surahNumber": 82,
+          "verseNumber": 19,
+          "relevanceNote": "The Day of Judgment is real - a day when no soul can help another, and all authority belongs to Allah alone. Perfect justice will prevail.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 21,
+          "verseNumber": 47,
+          "relevanceNote": "Scales of justice will be set up on Judgment Day. Not even an atom's weight of good or evil will be overlooked.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q22", "q12"]
+    },
+    {
+      "id": "q24",
+      "question": "What is Paradise like?",
+      "shortQuestion": "Paradise description?",
+      "category": "afterlife",
+      "verses": [
+        {
+          "surahNumber": 47,
+          "verseNumber": 15,
+          "relevanceNote": "Paradise has rivers of water, milk, wine (that doesn't intoxicate), and honey. Gardens of eternal bliss await the righteous.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 32,
+          "verseNumber": 17,
+          "relevanceNote": "No soul knows the delights of Paradise that await them - rewards beyond imagination as recompense for righteous deeds.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q22", "q25"]
+    },
+    {
+      "id": "q25",
+      "question": "Who goes to Hell?",
+      "shortQuestion": "Who to Hell?",
+      "category": "afterlife",
+      "verses": [
+        {
+          "surahNumber": 4,
+          "verseNumber": 48,
+          "relevanceNote": "Those who die associating partners with Allah (shirk) without repenting will be denied Paradise. However, Allah forgives all other sins if He wills.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 99,
+          "verseNumber": 8,
+          "relevanceNote": "Those who committed evil will see it judged. Hell is for persistent wrongdoers who rejected truth and oppressed others.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q22", "q2"]
+    },
+    {
+      "id": "q26",
+      "question": "Will families reunite in Paradise?",
+      "shortQuestion": "Family in Paradise?",
+      "category": "afterlife",
+      "verses": [
+        {
+          "surahNumber": 52,
+          "verseNumber": 21,
+          "relevanceNote": "Believers will be reunited with their faithful family members in Paradise. Allah will join them together out of His mercy.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 13,
+          "verseNumber": 23,
+          "relevanceNote": "Gardens of eternity where righteous ones enter along with their righteous ancestors, spouses, and descendants. A complete family reunion.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q24"]
+    },
+    {
+      "id": "q27",
+      "question": "What happens in the grave?",
+      "shortQuestion": "In the grave?",
+      "category": "afterlife",
+      "verses": [
+        {
+          "surahNumber": 14,
+          "verseNumber": 27,
+          "relevanceNote": "Allah keeps believers firm in the grave and in the Hereafter through their faith. They will answer questions from angels with certainty.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 20,
+          "verseNumber": 124,
+          "relevanceNote": "Those who turn away from Allah's remembrance will face a constrained life in the grave and be raised blind on Judgment Day.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q22"]
+    },
+    {
+      "id": "q28",
+      "question": "How should I treat my parents?",
+      "shortQuestion": "Treat parents?",
+      "category": "relationships",
+      "verses": [
+        {
+          "surahNumber": 17,
+          "verseNumber": 23,
+          "relevanceNote": "Worship Allah alone and be kind to parents. If they reach old age, do not say 'uff' to them but speak honorably and gently.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 31,
+          "verseNumber": 14,
+          "relevanceNote": "Be grateful to Allah and your parents. Even if they urge you toward shirk, refuse gently but still treat them kindly in this world.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q15", "q29"]
+    },
+    {
+      "id": "q29",
+      "question": "What are the rights of spouses?",
+      "shortQuestion": "Spouse rights?",
+      "category": "relationships",
+      "verses": [
+        {
+          "surahNumber": 30,
+          "verseNumber": 21,
+          "relevanceNote": "Allah created spouses as a source of tranquility, love, and mercy. Marriage is a sign of divine wisdom and compassion.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 228,
+          "relevanceNote": "Spouses have rights over each other in fairness. Men and women are garments for each other - protection, comfort, and adornment.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q30"]
+    },
+    {
+      "id": "q30",
+      "question": "How do I raise righteous children?",
+      "shortQuestion": "Raise children?",
+      "category": "relationships",
+      "verses": [
+        {
+          "surahNumber": 66,
+          "verseNumber": 6,
+          "relevanceNote": "Protect yourselves and your families from Hell by teaching them faith, prayer, and righteousness. Parents are responsible for their children's guidance.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 31,
+          "verseNumber": 17,
+          "relevanceNote": "Teach children to establish prayer, command good, forbid evil, and be patient with difficulties. Model these virtues yourself.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q28"]
+    },
+    {
+      "id": "q31",
+      "question": "What makes a good friend?",
+      "shortQuestion": "Good friends?",
+      "category": "relationships",
+      "verses": [
+        {
+          "surahNumber": 18,
+          "verseNumber": 28,
+          "relevanceNote": "Keep company with those who remember Allah morning and evening. Don't follow those whose hearts are heedless and who pursue worldly desires.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 25,
+          "verseNumber": 27,
+          "relevanceNote": "On Judgment Day, wrongdoers will regret taking certain people as friends who led them astray. Choose companions who strengthen your faith.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q15"]
+    },
+    {
+      "id": "q32",
+      "question": "How do I deal with difficult relatives?",
+      "shortQuestion": "Difficult relatives?",
+      "category": "relationships",
+      "verses": [
+        {
+          "surahNumber": 4,
+          "verseNumber": 1,
+          "relevanceNote": "Maintain ties of kinship - Allah watches over family relationships. Honor relatives even when they make it difficult.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 13,
+          "verseNumber": 25,
+          "relevanceNote": "Those who break family ties that Allah commanded to be maintained earn His curse. Patience with difficult relatives brings divine reward.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q28", "q15"]
+    },
+    {
+      "id": "q33",
+      "question": "What is a blessed marriage?",
+      "shortQuestion": "Blessed marriage?",
+      "category": "relationships",
+      "verses": [
+        {
+          "surahNumber": 30,
+          "verseNumber": 21,
+          "relevanceNote": "Allah placed love and mercy between spouses. A blessed marriage is built on mutual tranquility, affection, and compassion.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 25,
+          "verseNumber": 74,
+          "relevanceNote": "Righteous spouses pray to be the comfort of each other's eyes and leaders in piety. Shared faith strengthens marital bonds.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q29"]
+    },
+    {
+      "id": "q34",
+      "question": "What does Islam say about other faiths?",
+      "shortQuestion": "Other faiths?",
+      "category": "interfaith",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 62,
+          "relevanceNote": "Believers, Jews, Christians, and Sabians - whoever believes in Allah and the Last Day and does good will be rewarded. Faith and righteous deeds matter most.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 29,
+          "verseNumber": 46,
+          "relevanceNote": "Argue with People of the Book only in the best manner, acknowledging shared belief in one God. Approach interfaith dialogue with respect.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q35", "q36"]
+    },
+    {
+      "id": "q35",
+      "question": "Are Christians and Jews believers?",
+      "shortQuestion": "Christians and Jews?",
+      "category": "interfaith",
+      "verses": [
+        {
+          "surahNumber": 3,
+          "verseNumber": 113,
+          "relevanceNote": "Among the People of the Book are upright communities who recite Allah's verses throughout the night and prostrate. Not all are the same.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 5,
+          "verseNumber": 82,
+          "relevanceNote": "You will find Christians nearest in affection to Muslims because among them are priests and monks who are humble and devout.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q34"]
+    },
+    {
+      "id": "q36",
+      "question": "Can people of other faiths be good?",
+      "shortQuestion": "Others be good?",
+      "category": "interfaith",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 62,
+          "relevanceNote": "Those who believe in Allah, the Last Day, and do righteous deeds will have their reward with Allah. Goodness transcends religious labels.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 5,
+          "verseNumber": 69,
+          "relevanceNote": "Believers, Jews, Sabians, and Christians who believe in Allah and the Last Day and do good have nothing to fear. Sincerity matters.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q34", "q35"]
+    },
+    {
+      "id": "q37",
+      "question": "Why are there different religions?",
+      "shortQuestion": "Different religions?",
+      "category": "interfaith",
+      "verses": [
+        {
+          "surahNumber": 5,
+          "verseNumber": 48,
+          "relevanceNote": "Allah could have made humanity one nation but made you different to test you. Compete in goodness - in the end, Allah will clarify your differences.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 49,
+          "verseNumber": 13,
+          "relevanceNote": "Allah made humanity into nations and tribes so you may know one another. Diversity is by divine design, meant to foster understanding.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q34"]
+    },
+    {
+      "id": "q38",
+      "question": "How should Muslims treat non-Muslims?",
+      "shortQuestion": "Treat non-Muslims?",
+      "category": "interfaith",
+      "verses": [
+        {
+          "surahNumber": 60,
+          "verseNumber": 8,
+          "relevanceNote": "Allah does not forbid you from being kind and just to those who haven't fought you over religion. Allah loves those who are just.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 49,
+          "verseNumber": 13,
+          "relevanceNote": "All humanity comes from one source. Honor is based on righteousness, not ethnicity or religion. Treat all people with dignity.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q15", "q34"]
+    },
+    {
+      "id": "q39",
+      "question": "Can I lie to save someone?",
+      "shortQuestion": "Lie to save?",
+      "category": "ethics",
+      "verses": [
+        {
+          "surahNumber": 16,
+          "verseNumber": 106,
+          "relevanceNote": "Those forced to disbelieve while their hearts remain firm in faith are excused. Under extreme duress, protecting life takes precedence.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 225,
+          "relevanceNote": "Allah will not take you to task for unintentional oaths. Intentions matter - protecting innocent life is a higher principle than strict truthfulness.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q16"]
+    },
+    {
+      "id": "q40",
+      "question": "How do I seek forgiveness?",
+      "shortQuestion": "Seek forgiveness?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 3,
+          "verseNumber": 135,
+          "relevanceNote": "When believers commit sin, they remember Allah and seek forgiveness immediately. They don't persist in wrongdoing knowingly.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 39,
+          "verseNumber": 53,
+          "relevanceNote": "Never despair of Allah's mercy. He forgives all sins for those who sincerely repent. Turn to Him with genuine remorse and resolve.",
+          "isPrimary": true
+        }
+      ],
+      "relatedQuestions": ["q2"]
+    }
+  ]
+}

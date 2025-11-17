@@ -268,17 +268,6 @@ struct SettingsView: View {
                                         ) {
                                             showingSyncStatus = true
                                         }
-
-                                        SettingsRow(
-                                            icon: "arrow.right.square.fill",
-                                            title: "Sign Out",
-                                            subtitle: "Clear local data and sign out",
-                                            iconColor: .orange
-                                        ) {
-                                            Task {
-                                                await bookmarkManager.signOutAndClearRemoteData()
-                                            }
-                                        }
                                     } else {
                                         SettingsRow(
                                             icon: "person.badge.plus",
@@ -394,7 +383,9 @@ struct SettingsView: View {
         .alert("Reset Progress?", isPresented: $showingResetProgressAlert) {
             Button("Cancel", role: .cancel) {}
             Button("Reset", role: .destructive) {
-                progressManager.resetProgress()
+                Task {
+                    await progressManager.resetProgress()
+                }
             }
         } message: {
             Text("This will clear all your reading progress, streaks, and badges. This action cannot be undone.")

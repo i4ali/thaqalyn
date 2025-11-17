@@ -49,9 +49,6 @@ struct ContentView: View {
         .onAppear {
             checkFirstLaunch()
         }
-        .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
-            showingWelcome = true
-        }
         .fullScreenCover(isPresented: $showingWelcome) {
             OnboardingFlowView()
         }
@@ -236,10 +233,8 @@ struct SurahListView: View {
     @State private var showingSettings = false
     @State private var showingProgressDashboard = false
     @State private var showingNotifications = false
-    @State private var showingLifeMoments = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
-    @State private var lifeMomentsPulse: CGFloat = 1.0
     
     var body: some View {
         VStack(spacing: 0) {
@@ -307,79 +302,9 @@ struct SurahListView: View {
                             )
                     }
                 }
-                
-                // Life Moments button
-                Button(action: {
-                    showingLifeMoments = true
-                }) {
-                    HStack(spacing: 14) {
-                        // Islamic geometric pattern icon
-                        IslamicGeometricPattern(
-                            size: themeManager.selectedTheme == .warmInviting ? 48 : 44,
-                            color: themeManager.selectedTheme == .warmInviting ? Color(red: 0.498, green: 0.722, blue: 0.604) : themeManager.accentColor
-                        )
 
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Life Moments")
-                                .font(.system(size: 18, weight: .bold))
-                                .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.498, green: 0.722, blue: 0.604) : themeManager.accentColor)
-
-                            Text("Find solace in divine words for any situation")
-                                .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(themeManager.secondaryText)
-                                .lineLimit(2)
-                                .fixedSize(horizontal: false, vertical: true)
-
-                            Text("Tap to explore")
-                                .font(.system(size: 12, weight: .medium))
-                                .foregroundColor(themeManager.secondaryText.opacity(0.6))
-                                .padding(.top, 2)
-                        }
-
-                        Spacer()
-                    }
-                    .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 18 : 16)
-                    .padding(.horizontal, 20)
-                    .background {
-                        ZStack {
-                            if themeManager.selectedTheme == .warmInviting {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                                    .shadow(
-                                        color: Color(red: 0.498, green: 0.722, blue: 0.604).opacity(0.15),
-                                        radius: 12,
-                                        x: 0,
-                                        y: 4
-                                    )
-                            } else {
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                                    )
-                            }
-
-                            // Subtle geometric pattern overlay
-                            GeometricPatternOverlay(
-                                opacity: themeManager.selectedTheme == .warmInviting ? 0.06 : 0.08,
-                                color: themeManager.selectedTheme == .warmInviting ? Color(red: 0.498, green: 0.722, blue: 0.604) : .white
-                            )
-                            .clipShape(RoundedRectangle(cornerRadius: themeManager.selectedTheme == .warmInviting ? 20 : 16))
-                        }
-                    }
-                }
-                .buttonStyle(PlainButtonStyle())
-                .scaleEffect(lifeMomentsPulse)
-                .onAppear {
-                    withAnimation(
-                        .easeInOut(duration: 3.0)
-                        .repeatForever(autoreverses: true)
-                        .delay(0.5)
-                    ) {
-                        lifeMomentsPulse = 1.02
-                    }
-                }
+                // Discovery Carousel (Life Moments + Q&A)
+                DiscoveryCarousel()
             }
             .padding(.horizontal, 20)
             .padding(.top, 60)
@@ -459,9 +384,6 @@ struct SurahListView: View {
         }
         .sheet(isPresented: $showingNotifications) {
             NotificationsView()
-        }
-        .fullScreenCover(isPresented: $showingLifeMoments) {
-            LifeMomentsView()
         }
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true
@@ -751,6 +673,7 @@ struct ProfileMenuView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var supabaseService = SupabaseService.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
+    @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var purchaseManager = PurchaseManager.shared
@@ -758,7 +681,6 @@ struct ProfileMenuView: View {
     @State private var showingSignOutAlert = false
     @State private var showingAccountDeletion = false
     @State private var showingPaywall = false
-    @State private var showingAuthentication = false
     
     var body: some View {
         NavigationView {
@@ -808,8 +730,8 @@ struct ProfileMenuView: View {
                                 subtitle: "Sync bookmarks across devices",
                                 action: {
                                     dismiss()
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        showingAuthentication = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                        NotificationCenter.default.post(name: .showAuthentication, object: nil)
                                     }
                                 }
                             )
@@ -908,10 +830,11 @@ struct ProfileMenuView: View {
             Button("Sign Out", role: .destructive) {
                 Task {
                     await bookmarkManager.signOutAndClearRemoteData()
+                    await progressManager.signOutAndClearRemoteData()
                     await MainActor.run {
                         dismiss()
                         // Trigger authentication screen after sign out
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                             NotificationCenter.default.post(name: .showAuthentication, object: nil)
                         }
                     }
@@ -925,9 +848,6 @@ struct ProfileMenuView: View {
         }
         .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView()
-        }
-        .fullScreenCover(isPresented: $showingAuthentication) {
-            AuthenticationView()
         }
     }
     

@@ -882,3 +882,72 @@ struct LifeMoment: Codable, Identifiable {
         }
     }
 }
+
+// MARK: - Questions & Answers Models
+
+struct QuestionsData: Codable {
+    let questions: [Question]
+}
+
+struct Question: Identifiable, Codable {
+    let id: String
+    let question: String
+    let shortQuestion: String?
+    let category: QuestionCategory
+    let verses: [QuestionVerse]
+    let relatedQuestions: [String]
+
+    var categoryIcon: String {
+        category.icon
+    }
+
+    var verseCount: Int {
+        verses.count
+    }
+
+    var primaryVerses: [QuestionVerse] {
+        verses.filter { $0.isPrimary }
+    }
+}
+
+struct QuestionVerse: Codable {
+    let surahNumber: Int
+    let verseNumber: Int
+    let relevanceNote: String
+    let isPrimary: Bool
+
+    var verseReference: String {
+        "Quran \(surahNumber):\(verseNumber)"
+    }
+}
+
+enum QuestionCategory: String, Codable, CaseIterable {
+    case faith = "faith"
+    case justice = "justice"
+    case ethics = "ethics"
+    case afterlife = "afterlife"
+    case relationships = "relationships"
+    case interfaith = "interfaith"
+
+    var displayName: String {
+        switch self {
+        case .faith: return "Faith & Belief"
+        case .justice: return "Justice & Suffering"
+        case .ethics: return "Ethics & Morality"
+        case .afterlife: return "Death & Afterlife"
+        case .relationships: return "Relationships"
+        case .interfaith: return "Interfaith"
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .faith: return "star.fill"
+        case .justice: return "scale.3d"
+        case .ethics: return "heart.circle.fill"
+        case .afterlife: return "moon.stars.fill"
+        case .relationships: return "person.2.fill"
+        case .interfaith: return "globe.americas.fill"
+        }
+    }
+}

@@ -23,7 +23,10 @@ class ProgressManager: ObservableObject {
     @Published var pendingBadge: BadgeAward? = nil // For showing badge celebration
     @Published var isSyncing = false
     @Published var syncStatus: String?
+    @Published var errorMessage: String?
     @Published var isAuthenticated = false
+    @Published var hasConflict: Bool = false
+    @Published var conflictMessage: String?
 
     // MARK: - UserDefaults Keys
 
@@ -40,6 +43,7 @@ class ProgressManager: ObservableObject {
     private var progressData: ReadingProgressData?
     private var lastAuthenticatedUserId: String?
     private var needsSync: Bool = false // Tracks if local changes need uploading
+    private var pendingDeletes: Set<String> = [] // For future use if deletion is needed
 
     // MARK: - Initialization
 
@@ -143,7 +147,7 @@ class ProgressManager: ObservableObject {
                         await self.performInitialSync()
                     }
                 } else {
-                    // User signed out - keep local data for offline access
+                    // User signed out - clear last user ID
                     self.lastAuthenticatedUserId = nil
                 }
             }
@@ -157,37 +161,54 @@ class ProgressManager: ObservableObject {
         stats = ProgressStats()
         preferences = ProgressPreferences()
         progressData = nil
-        saveProgress()
+        pendingDeletes.removeAll()
+
+        // Clear sync status
+        syncStatus = nil
+        errorMessage = nil
+        hasConflict = false
+        conflictMessage = nil
+
+        // Remove from UserDefaults (matching BookmarkManager pattern)
+        UserDefaults.standard.removeObject(forKey: verseProgressKey)
+        UserDefaults.standard.removeObject(forKey: streakKey)
+        UserDefaults.standard.removeObject(forKey: badgesKey)
+        UserDefaults.standard.removeObject(forKey: statsKey)
+        UserDefaults.standard.removeObject(forKey: preferencesKey)
+
         print("🗑️ ProgressManager: Cleared all local progress data")
     }
 
+    func signOutAndClearRemoteData() async {
+        do {
+            try await supabaseService.signOut()
+
+            // Clear all local data for clean state
+            clearAllLocalData()
+
+            print("✅ ProgressManager: Signed out and cleared all local data")
+        } catch {
+            errorMessage = "Sign out failed: \(error.localizedDescription)"
+            print("❌ ProgressManager: Sign out error: \(error)")
+        }
+    }
+
     private func performInitialSync() async {
-        guard let userId = supabaseService.currentUser?.id.uuidString else {
-            print("❌ ProgressManager: Cannot sync - no authenticated user")
+        // Only perform initial sync once after authentication (matching BookmarkManager pattern)
+        // Skip if we already have synced data (progressData exists and no pending changes)
+        guard isAuthenticated &&
+              !(progressData != nil && !needsSync) else {
             return
         }
 
-        // Skip initial sync if we already have local data (optimization like BookmarkManager)
-        // This happens when user signs back in with existing local progress
-        if !verseProgress.isEmpty || !badges.isEmpty || streak.currentStreak > 0 {
-            print("ℹ️ ProgressManager: Skipping initial sync - local data exists")
-            return
-        }
-
-        print("🔄 ProgressManager: Performing initial sync for user \(userId)")
+        syncStatus = "Initial sync..."
         await performSync()
     }
 
     // MARK: - Three-Step Sync Pattern (matching BookmarkManager)
 
     private func performSync() async {
-        guard supabaseService.isAuthenticated else {
-            print("⚠️ ProgressManager: Skipping sync - user not authenticated")
-            return
-        }
-
-        guard !isSyncing else {
-            print("⚠️ ProgressManager: Sync already in progress")
+        guard isAuthenticated else {
             return
         }
 
@@ -195,7 +216,8 @@ class ProgressManager: ObservableObject {
         syncStatus = "Syncing..."
 
         do {
-            // Step 1: No deletes for progress (single row per user, skip this step)
+            // Step 1: Process pending deletes (placeholder for future use)
+            // Note: Single row per user, deletion not currently needed
 
             // Step 2: Upload pending changes (conditional - only if needsSync = true)
             try await uploadPendingProgress()
@@ -203,14 +225,22 @@ class ProgressManager: ObservableObject {
             // Step 3: Download remote changes (always executes)
             try await downloadRemoteProgress()
 
-            syncStatus = "Synced"
-            print("✅ ProgressManager: Sync complete")
+            syncStatus = "Sync completed"
         } catch {
-            syncStatus = "Sync failed: \(error.localizedDescription)"
+            syncStatus = "Sync failed"
+            errorMessage = "Sync failed: \(error.localizedDescription)"
             print("❌ ProgressManager: Sync error: \(error)")
         }
 
         isSyncing = false
+
+        // Auto-clear sync status after 3 seconds (matching BookmarkManager)
+        Task {
+            try? await Task.sleep(nanoseconds: 3_000_000_000)
+            if syncStatus == "Sync completed" || syncStatus == "Sync failed" {
+                syncStatus = nil
+            }
+        }
     }
 
     private func uploadPendingProgress() async throws {
@@ -255,21 +285,40 @@ class ProgressManager: ObservableObject {
         print("📥 ProgressManager: Downloading remote progress")
 
         if let remoteData = try await supabaseService.fetchReadingProgress(userId: userId) {
-            // Compare timestamps and take newer version
+            // Handle merge conflicts and take newer version
             if let local = progressData {
-                if remoteData.updatedAt > local.updatedAt {
+                // Check for conflict: local has pending changes AND remote is newer
+                if needsSync && remoteData.updatedAt > local.updatedAt {
+                    print("⚠️ ProgressManager: Sync conflict detected!")
+                    print("   Local has pending changes but remote is newer")
+                    print("   Preserving local changes to prevent data loss")
+
+                    // Mark conflict explicitly (matching BookmarkManager pattern)
+                    hasConflict = true
+                    conflictMessage = "Local changes conflict with remote. Preserving local changes."
+
+                    // Keep local changes, don't apply remote (conflict resolution)
+                    // needsSync stays true so local changes will be uploaded next sync
+                } else if remoteData.updatedAt > local.updatedAt {
+                    // Local is synced and remote is newer - accept remote changes
                     print("🔄 ProgressManager: Remote data is newer - updating local")
                     applyRemoteData(remoteData)
+                    progressData = remoteData
+
+                    // Clear conflict status when successfully accepting remote
+                    hasConflict = false
+                    conflictMessage = nil
                 } else {
+                    // Local is current or newer
                     print("✅ ProgressManager: Local data is current")
                 }
             } else {
                 // No local progressData cached, use remote
                 print("📥 ProgressManager: No cached data - using remote")
                 applyRemoteData(remoteData)
+                progressData = remoteData
             }
 
-            progressData = remoteData
             print("✅ ProgressManager: Download successful")
         } else {
             print("ℹ️ ProgressManager: No remote data found")
@@ -285,7 +334,21 @@ class ProgressManager: ObservableObject {
         saveProgress()
     }
 
-    private func syncProgressToCloud() {
+    /// Manually resolve conflicts by accepting remote changes
+    func resolveConflictWithRemote() async {
+        guard hasConflict else { return }
+
+        hasConflict = false
+        conflictMessage = nil
+        needsSync = false
+
+        // Re-download to get latest remote data
+        await performSync()
+
+        print("✅ ProgressManager: Conflict resolved - accepted remote changes")
+    }
+
+    private func scheduleSync() {
         guard supabaseService.isAuthenticated else {
             return
         }
@@ -293,14 +356,23 @@ class ProgressManager: ObservableObject {
         // Mark as needing sync (local changes exist)
         needsSync = true
 
+        // Debounce sync requests to avoid excessive API calls
         Task {
+            try? await Task.sleep(nanoseconds: 500_000_000) // 0.5 second delay
             await performSync()
         }
     }
 
     // MARK: - Verse Progress Tracking
 
-    func markVerseAsRead(surahNumber: Int, verseNumber: Int) {
+    @discardableResult
+    func markVerseAsRead(surahNumber: Int, verseNumber: Int) -> Bool {
+        // Validation
+        guard surahNumber > 0 && surahNumber <= 114 else {
+            errorMessage = "Invalid surah number"
+            return false
+        }
+
         let verseKey = "\(surahNumber):\(verseNumber)"
 
         // Check if already marked
@@ -347,12 +419,20 @@ class ProgressManager: ObservableObject {
         saveProgress()
 
         // Sync to cloud if authenticated
-        syncProgressToCloud()
+        scheduleSync()
 
         print("✅ ProgressManager: Marked verse \(verseKey) as read")
+        return true
     }
 
-    func unmarkVerseAsRead(surahNumber: Int, verseNumber: Int) {
+    @discardableResult
+    func unmarkVerseAsRead(surahNumber: Int, verseNumber: Int) -> Bool {
+        // Validation
+        guard surahNumber > 0 && surahNumber <= 114 else {
+            errorMessage = "Invalid surah number"
+            return false
+        }
+
         let verseKey = "\(surahNumber):\(verseNumber)"
 
         if let index = verseProgress.firstIndex(where: { $0.verseKey == verseKey }) {
@@ -368,9 +448,13 @@ class ProgressManager: ObservableObject {
             saveProgress()
 
             // Sync to cloud if authenticated
-            syncProgressToCloud()
+            scheduleSync()
 
             print("✅ ProgressManager: Unmarked verse \(verseKey)")
+            return true
+        } else {
+            errorMessage = "Verse not found in progress"
+            return false
         }
     }
 
@@ -432,7 +516,7 @@ class ProgressManager: ObservableObject {
             saveProgress()
 
             // Sync to cloud if authenticated
-            syncProgressToCloud()
+            scheduleSync()
 
             print("🎉 ProgressManager: Surah \(surahNumber) completed! Badge awarded.")
         }
@@ -671,15 +755,29 @@ class ProgressManager: ObservableObject {
 
     // MARK: - Reset Progress
 
-    func resetProgress() {
+    func resetProgress() async {
+        // Clear local data
         verseProgress.removeAll()
         streak = ReadingStreak()
         badges.removeAll()
         stats = ProgressStats()
         pendingBadge = nil
+        progressData = nil
+        needsSync = false
 
         saveProgress()
 
-        print("🔄 ProgressManager: Progress reset")
+        // Delete from cloud if authenticated (matching BookmarkManager deletion pattern)
+        if isAuthenticated, let userId = supabaseService.currentUser?.id.uuidString {
+            do {
+                try await supabaseService.deleteReadingProgress(userId: userId)
+                print("✅ ProgressManager: Deleted progress from cloud")
+            } catch {
+                errorMessage = "Failed to delete cloud progress: \(error.localizedDescription)"
+                print("❌ ProgressManager: Cloud deletion failed: \(error)")
+            }
+        }
+
+        print("🔄 ProgressManager: Progress reset (local + cloud)")
     }
 }

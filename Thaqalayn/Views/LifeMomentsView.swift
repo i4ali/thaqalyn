@@ -188,7 +188,7 @@ struct MomentCard: View {
     }
 }
 
-struct LoadingSection: View {
+private struct LoadingSection: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
