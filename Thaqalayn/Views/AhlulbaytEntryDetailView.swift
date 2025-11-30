@@ -198,74 +198,6 @@ struct AhlulbaytEntryDetailView: View {
                     }
                     .padding(.horizontal, 20)
 
-                    // Shia Perspective
-                    VStack(alignment: .leading, spacing: 16) {
-                        HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: "book.fill")
-                                .font(.system(size: 16))
-                                .foregroundColor(themeManager.accentColor)
-
-                            Text("SHIA PERSPECTIVE")
-                                .font(.system(size: 14, weight: .bold))
-                                .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
-                        }
-
-                        Text(entry.shiaPerspective)
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(6)
-                    }
-                    .padding(20)
-                    .background {
-                        if themeManager.selectedTheme == .warmInviting {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
-                        } else {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(themeManager.accentColor.opacity(0.08))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        }
-                    }
-                    .padding(.horizontal, 20)
-
-                    // Contemporary Relevance
-                    VStack(alignment: .leading, spacing: 16) {
-                        HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: "lightbulb.fill")
-                                .font(.system(size: 16))
-                                .foregroundColor(themeManager.accentColor)
-
-                            Text("CONTEMPORARY RELEVANCE")
-                                .font(.system(size: 14, weight: .bold))
-                                .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
-                        }
-
-                        Text(entry.contemporaryRelevance)
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(6)
-                    }
-                    .padding(20)
-                    .background {
-                        if themeManager.selectedTheme == .warmInviting {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
-                        } else {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(themeManager.accentColor.opacity(0.08))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        }
-                    }
-                    .padding(.horizontal, 20)
-
                     // Related entries
                     if !relatedEntries.isEmpty {
                         VStack(alignment: .leading, spacing: 16) {
@@ -603,8 +535,6 @@ struct FlowLayout: Layout {
                 ],
                 ahlulbaytMembers: ["Prophet Muhammad (ﷺ)", "Imam Ali (ع)", "Lady Fatimah (ع)", "Imam Hasan (ع)", "Imam Husayn (ع)"],
                 revelationContext: "This verse was revealed specifically about the five members of the Prophet's family.",
-                shiaPerspective: "This verse establishes the special status of Ahl al-Bayt.",
-                contemporaryRelevance: "Reminds us of the importance of spiritual purity.",
                 relatedEntries: []
             )
         )

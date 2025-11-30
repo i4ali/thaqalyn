@@ -2,8 +2,8 @@
 //  PremiumManager.swift
 //  Thaqalayn
 //
-//  Manages premium status with freemium model
-//  - In-memory only (no persistent cache)
+//  Manages premium status with offline-first architecture
+//  - Persisted to UserDefaults for offline access
 //  - Fetched from Supabase on login
 //  - Cleared on logout
 //
@@ -17,33 +17,56 @@ class PremiumManager: ObservableObject {
 
     // MARK: - Published Properties
 
-    /// Premium status (in-memory only, cleared on logout)
+    /// Premium status (persisted to UserDefaults, synced with Supabase)
     @Published var isPremium: Bool = false
+
+    // MARK: - UserDefaults Keys
+
+    private let premiumStatusKey = "com.thaqalayn.premiumStatus"
 
     // MARK: - Initialization
 
     init() {
-        // Start with free tier by default
-        // Premium status will be fetched after login
+        // Load cached premium status from UserDefaults
+        loadCachedPremiumStatus()
+    }
+
+    // MARK: - Local Storage
+
+    /// Load premium status from UserDefaults cache
+    private func loadCachedPremiumStatus() {
+        isPremium = UserDefaults.standard.bool(forKey: premiumStatusKey)
+        print("💾 Loaded cached premium status: \(isPremium)")
+    }
+
+    /// Save premium status to UserDefaults cache
+    private func savePremiumStatus(_ status: Bool) {
+        UserDefaults.standard.set(status, forKey: premiumStatusKey)
+        print("💾 Saved premium status to cache: \(status)")
     }
 
     // MARK: - Premium Status Management
 
     /// Fetch premium status from Supabase (called after login)
+    /// Preserves cached status on network errors (offline-first)
     func checkPremiumStatus() async {
         do {
-            isPremium = try await SupabaseService.shared.getUserPremiumStatus()
-            print("✅ Premium status loaded: \(isPremium)")
+            let fetchedStatus = try await SupabaseService.shared.getUserPremiumStatus()
+            isPremium = fetchedStatus
+            savePremiumStatus(fetchedStatus)
+            print("✅ Premium status fetched and cached: \(fetchedStatus)")
         } catch {
-            print("❌ Failed to fetch premium status: \(error)")
-            isPremium = false  // Default to free on error
+            print("⚠️ Failed to fetch premium status: \(error)")
+            print("💾 Preserving cached premium status: \(isPremium)")
+            // Don't default to false on error - keep cached value for offline access
         }
     }
 
     /// Clear premium status (called on logout)
     func clearPremiumStatus() {
         isPremium = false
-        print("✅ Premium status cleared")
+        UserDefaults.standard.removeObject(forKey: premiumStatusKey)
+        print("✅ Premium status cleared from memory and cache")
     }
 
     // MARK: - Access Control

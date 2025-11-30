@@ -1037,8 +1037,6 @@ struct AhlulbaytEntry: Codable, Identifiable {
     let verses: [AhlulbaytVerse]
     let ahlulbaytMembers: [String]
     let revelationContext: String
-    let shiaPerspective: String
-    let contemporaryRelevance: String
     let relatedEntries: [String]
 
     var categoryIcon: String {
