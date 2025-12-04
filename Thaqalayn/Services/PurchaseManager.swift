@@ -216,8 +216,14 @@ class PurchaseManager: ObservableObject {
 
     // MARK: - Product Information
 
-    func getProductPrice() -> String {
-        return product?.displayPrice ?? "$0.99"
+    /// Returns the actual price from App Store Connect, or nil if not yet loaded
+    func getProductPrice() -> String? {
+        return product?.displayPrice
+    }
+
+    /// Returns true if the product has been loaded from App Store Connect
+    var isProductLoaded: Bool {
+        return product != nil
     }
 
     func getProductDescription() -> String {

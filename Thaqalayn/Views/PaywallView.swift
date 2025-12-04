@@ -123,9 +123,14 @@ struct PaywallView: View {
                                     .font(.system(size: 14, weight: .medium))
                                     .foregroundColor(themeManager.secondaryText)
 
-                                Text(purchaseManager.getProductPrice())
-                                    .font(.system(size: 48, weight: .bold))
-                                    .foregroundColor(themeManager.primaryText)
+                                if let price = purchaseManager.getProductPrice() {
+                                    Text(price)
+                                        .font(.system(size: 48, weight: .bold))
+                                        .foregroundColor(themeManager.primaryText)
+                                } else {
+                                    ProgressView()
+                                        .frame(height: 58)
+                                }
 
                                 Text("One-time payment")
                                     .font(.system(size: 14, weight: .medium))
@@ -188,7 +193,7 @@ struct PaywallView: View {
                                 .cornerRadius(16)
                                 .shadow(color: Color.purple.opacity(0.5), radius: 15, x: 0, y: 8)
                             }
-                            .disabled(purchaseManager.isLoading)
+                            .disabled(purchaseManager.isLoading || !purchaseManager.isProductLoaded)
 
                             // Restore purchases button
                             Button(action: {
