@@ -657,8 +657,9 @@ struct AuthenticationStatusButton: View {
     }
     
     private func getUserInitials() -> String {
-        if let user = supabaseService.currentUser,
-           let email = user.email {
+        // Use current user email if online, otherwise fall back to cached email
+        let email = supabaseService.currentUser?.email ?? supabaseService.cachedUserEmail
+        if let email = email {
             let components = email.components(separatedBy: "@")
             if let username = components.first {
                 let initials = String(username.prefix(2)).uppercased()
@@ -852,8 +853,9 @@ struct ProfileMenuView: View {
     }
     
     private func getUserInitials() -> String {
-        if let user = supabaseService.currentUser,
-           let email = user.email {
+        // Use current user email if online, otherwise fall back to cached email
+        let email = supabaseService.currentUser?.email ?? supabaseService.cachedUserEmail
+        if let email = email {
             let components = email.components(separatedBy: "@")
             if let username = components.first {
                 let initials = String(username.prefix(2)).uppercased()
@@ -864,7 +866,8 @@ struct ProfileMenuView: View {
     }
     
     private func getUserEmail() -> String {
-        return supabaseService.currentUser?.email ?? "Guest User"
+        // Use current user email if online, otherwise fall back to cached email
+        return supabaseService.currentUser?.email ?? supabaseService.cachedUserEmail ?? "Guest User"
     }
 }
 
@@ -1212,8 +1215,9 @@ struct ProfileAvatar: View {
     }
 
     private func getUserInitials() -> String {
-        if let user = supabaseService.currentUser,
-           let email = user.email {
+        // Use current user email if online, otherwise fall back to cached email
+        let email = supabaseService.currentUser?.email ?? supabaseService.cachedUserEmail
+        if let email = email {
             let components = email.components(separatedBy: "@")
             if let username = components.first {
                 let initials = String(username.prefix(2)).uppercased()
