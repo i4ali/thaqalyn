@@ -547,17 +547,15 @@ struct ModernVerseCard: View {
                     verseReadCheckbox
                 }
             }
-            .task {
-                // Check premium access when view appears
-                canAccessTafsir = await PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
-                canAccessOverview = await PremiumManager.shared.canAccessOverview(surahNumber: surah.number)
+            .onAppear {
+                // Check premium access when view appears (synchronous, works offline)
+                canAccessTafsir = PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
+                canAccessOverview = PremiumManager.shared.canAccessOverview(surahNumber: surah.number)
             }
             .onChange(of: premiumManager.isPremium) { _, _ in
                 // Update access when premium status changes
-                Task {
-                    canAccessTafsir = await PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
-                    canAccessOverview = await PremiumManager.shared.canAccessOverview(surahNumber: surah.number)
-                }
+                canAccessTafsir = PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
+                canAccessOverview = PremiumManager.shared.canAccessOverview(surahNumber: surah.number)
             }
 
             // Arabic text

@@ -12,20 +12,40 @@ import AuthenticationServices
 @MainActor
 class SupabaseService: ObservableObject {
     static let shared = SupabaseService()
-    
+
     private let client: SupabaseClient
-    
+
     @Published var isAuthenticated = false
     @Published var currentUser: User?
     @Published var isLoading = false
     @Published var errorMessage: String?
-    
+
+    // MARK: - User Cache (for offline access)
+    private let cachedEmailKey = "com.thaqalayn.cachedUserEmail"
+
+    /// Cached user email for offline display (persisted to UserDefaults)
+    var cachedUserEmail: String? {
+        UserDefaults.standard.string(forKey: cachedEmailKey)
+    }
+
+    private func cacheUserEmail(_ email: String?) {
+        if let email = email {
+            UserDefaults.standard.set(email, forKey: cachedEmailKey)
+            print("💾 Cached user email: \(email)")
+        }
+    }
+
+    private func clearCachedUserEmail() {
+        UserDefaults.standard.removeObject(forKey: cachedEmailKey)
+        print("💾 Cleared cached user email")
+    }
+
     private init() {
         self.client = SupabaseClient(
             supabaseURL: URL(string: Config.supabaseURL)!,
             supabaseKey: Config.supabaseAnonKey
         )
-        
+
         // Check initial auth state
         Task {
             await checkAuthState()
@@ -40,11 +60,15 @@ class SupabaseService: ObservableObject {
             self.currentUser = session.user
             self.isAuthenticated = true
 
+            // Cache user email for offline access
+            cacheUserEmail(session.user.email)
+
             // ✅ Fetch premium status when restoring existing session
             await PremiumManager.shared.checkPremiumStatus()
         } catch {
             self.currentUser = nil
             self.isAuthenticated = false
+            // Note: Don't clear cached email on auth check failure - user may just be offline
         }
     }
     
@@ -85,6 +109,9 @@ class SupabaseService: ObservableObject {
             if response.user.emailConfirmedAt != nil {
                 print("✅ Signed up and confirmed: \(response.user.id.uuidString)")
 
+                // Cache user email for offline access
+                cacheUserEmail(response.user.email)
+
                 // ✅ Fetch premium status after successful signup
                 await PremiumManager.shared.checkPremiumStatus()
             } else {
@@ -108,6 +135,9 @@ class SupabaseService: ObservableObject {
             self.currentUser = response.user
             self.isAuthenticated = true
             print("✅ Signed in successfully: \(response.user.id.uuidString)")
+
+            // Cache user email for offline access
+            cacheUserEmail(response.user.email)
 
             // ✅ Fetch premium status after successful login
             await PremiumManager.shared.checkPremiumStatus()
@@ -141,6 +171,9 @@ class SupabaseService: ObservableObject {
             self.isAuthenticated = true
             print("✅ Signed in with Apple: \(response.user.id.uuidString)")
 
+            // Cache user email for offline access
+            cacheUserEmail(response.user.email)
+
             // ✅ Fetch premium status after successful Apple sign-in
             await PremiumManager.shared.checkPremiumStatus()
         } catch {
@@ -169,8 +202,9 @@ class SupabaseService: ObservableObject {
     }
     
     func signOut() async throws {
-        // ✅ Clear premium status BEFORE signing out
+        // ✅ Clear premium status and cached email BEFORE signing out
         PremiumManager.shared.clearPremiumStatus()
+        clearCachedUserEmail()
 
         isLoading = true
         errorMessage = nil
@@ -203,8 +237,9 @@ class SupabaseService: ObservableObject {
 
             print("✅ Complete account deletion result: \(result)")
 
-            // Clear premium status
+            // Clear premium status and cached email
             PremiumManager.shared.clearPremiumStatus()
+            clearCachedUserEmail()
 
             // Sign out to clear persisted session
             try await client.auth.signOut()

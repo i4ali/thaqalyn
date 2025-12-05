@@ -73,37 +73,27 @@ class PremiumManager: ObservableObject {
 
     /// Check if user can access tafsir commentary for a specific surah
     /// - Surah 1 (Al-Fatiha): Always free
-    /// - Surahs 2-114: Requires premium (authenticated users only)
-    func canAccessTafsir(surahNumber: Int) async -> Bool {
+    /// - Surahs 2-114: Requires premium (works offline with cached status)
+    func canAccessTafsir(surahNumber: Int) -> Bool {
         // Surah 1 always free
         if surahNumber == 1 {
             return true
         }
 
-        // Must be authenticated to access premium content
-        guard await SupabaseService.shared.isAuthenticated else {
-            return false  // Guest users cannot access premium content
-        }
-
-        // Authenticated users: Check premium status from Supabase
+        // Check premium status (cached locally, works offline)
         return isPremium
     }
 
     /// Check if user can access overview/summary for a specific surah
     /// - Surah 1 (Al-Fatiha): Always free
-    /// - Surahs 2-114: Requires premium (authenticated users only)
-    func canAccessOverview(surahNumber: Int) async -> Bool {
+    /// - Surahs 2-114: Requires premium (works offline with cached status)
+    func canAccessOverview(surahNumber: Int) -> Bool {
         // Surah 1 always free
         if surahNumber == 1 {
             return true
         }
 
-        // Must be authenticated to access premium content
-        guard await SupabaseService.shared.isAuthenticated else {
-            return false  // Guest users cannot access premium content
-        }
-
-        // Authenticated users: Check premium status from Supabase
+        // Check premium status (cached locally, works offline)
         return isPremium
     }
 
