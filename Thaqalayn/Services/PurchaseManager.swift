@@ -19,7 +19,7 @@ class PurchaseManager: ObservableObject {
 
     // MARK: - Product Configuration
     private let productID = "com.thaqalayn.premium.tafsir"
-    private var product: Product?
+    @Published private var product: Product?
 
     // MARK: - Transaction Listener
     private var transactionListener: Task<Void, Error>?
