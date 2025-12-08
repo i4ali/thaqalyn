@@ -56,28 +56,15 @@ struct PaywallView: View {
                 }
 
                 ScrollView {
-                    VStack(spacing: 32) {
-                        // Header
+                    VStack(spacing: 24) {
+                        // Hero: 5 Layers of Wisdom
+                        PaywallLayersHero()
+
+                        // Progress/Streak Teaser
+                        PaywallProgressTeaser()
+
+                        // Condensed Benefits list
                         VStack(spacing: 12) {
-                            Image(systemName: "star.circle.fill")
-                                .font(.system(size: 80))
-                                .foregroundColor(.yellow)
-                                .shadow(color: .yellow.opacity(0.5), radius: 20)
-
-                            Text("Unlock Full Tafsir")
-                                .font(.system(size: 32, weight: .bold))
-                                .foregroundColor(themeManager.primaryText)
-
-                            Text("Access comprehensive commentary for all 114 surahs")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(themeManager.secondaryText)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal)
-                        }
-                        .padding(.top, 20)
-
-                        // Benefits list
-                        VStack(spacing: 16) {
                             PremiumBenefitRow(
                                 icon: "book.fill",
                                 title: "All 114 Surahs",
@@ -86,24 +73,10 @@ struct PaywallView: View {
                             )
 
                             PremiumBenefitRow(
-                                icon: "square.stack.3d.up.fill",
-                                title: "5 Commentary Layers",
-                                description: "Foundation, Classical, Contemporary, Ahlul Bayt & Comparative",
-                                color: .blue
-                            )
-
-                            PremiumBenefitRow(
                                 icon: "globe",
                                 title: "Bilingual Support",
                                 description: "Full commentary in English & Urdu",
                                 color: .purple
-                            )
-
-                            PremiumBenefitRow(
-                                icon: "arrow.down.circle.fill",
-                                title: "Offline Access",
-                                description: "Read commentary anytime, anywhere",
-                                color: .orange
                             )
 
                             PremiumBenefitRow(
@@ -287,6 +260,176 @@ struct PremiumBenefitRow: View {
                 .fill(themeManager.secondaryBackground.opacity(0.5))
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
+                        .stroke(color.opacity(0.2), lineWidth: 1)
+                )
+        )
+    }
+}
+
+// MARK: - Hero 5-Layers Section
+
+struct PaywallLayersHero: View {
+    @StateObject private var themeManager = ThemeManager.shared
+
+    private let layers: [(emoji: String, title: String, tagline: String, color: Color)] = [
+        ("🏛️", "Foundation", "Historical context & basics", .blue),
+        ("📚", "Classical Shia", "Tabatabai & Tabrisi", .purple),
+        ("🌍", "Contemporary", "Modern perspectives", .green),
+        ("⭐", "Ahlul Bayt", "Wisdom of the Infallibles", .orange),
+        ("⚖️", "Comparative", "Shia & Sunni analysis", .indigo)
+    ]
+
+    var body: some View {
+        VStack(spacing: 16) {
+            // Header
+            VStack(spacing: 8) {
+                Text("5 Layers of Wisdom")
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundColor(themeManager.primaryText)
+
+                Text("Unlock the depth of Quranic understanding")
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundColor(themeManager.secondaryText)
+                    .multilineTextAlignment(.center)
+            }
+
+            // Layer cards grid
+            VStack(spacing: 10) {
+                // First row: 2 cards
+                HStack(spacing: 10) {
+                    PaywallLayerCard(
+                        emoji: layers[0].emoji,
+                        title: layers[0].title,
+                        tagline: layers[0].tagline,
+                        color: layers[0].color
+                    )
+                    PaywallLayerCard(
+                        emoji: layers[1].emoji,
+                        title: layers[1].title,
+                        tagline: layers[1].tagline,
+                        color: layers[1].color
+                    )
+                }
+
+                // Second row: 3 cards
+                HStack(spacing: 10) {
+                    PaywallLayerCard(
+                        emoji: layers[2].emoji,
+                        title: layers[2].title,
+                        tagline: layers[2].tagline,
+                        color: layers[2].color
+                    )
+                    PaywallLayerCard(
+                        emoji: layers[3].emoji,
+                        title: layers[3].title,
+                        tagline: layers[3].tagline,
+                        color: layers[3].color
+                    )
+                    PaywallLayerCard(
+                        emoji: layers[4].emoji,
+                        title: layers[4].title,
+                        tagline: layers[4].tagline,
+                        color: layers[4].color
+                    )
+                }
+            }
+        }
+        .padding(.horizontal)
+        .padding(.top, 12)
+    }
+}
+
+// MARK: - Layer Card Component
+
+struct PaywallLayerCard: View {
+    @StateObject private var themeManager = ThemeManager.shared
+
+    let emoji: String
+    let title: String
+    let tagline: String
+    let color: Color
+
+    var body: some View {
+        VStack(spacing: 6) {
+            Text(emoji)
+                .font(.system(size: 24))
+
+            Text(title)
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundColor(themeManager.primaryText)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+
+            Text(tagline)
+                .font(.system(size: 10, weight: .medium))
+                .foregroundColor(themeManager.secondaryText)
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.8)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 12)
+        .padding(.horizontal, 8)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(themeManager.secondaryBackground.opacity(0.6))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(color.opacity(0.3), lineWidth: 1)
+                )
+        )
+    }
+}
+
+// MARK: - Progress/Streak Teaser Section
+
+struct PaywallProgressTeaser: View {
+    @StateObject private var themeManager = ThemeManager.shared
+
+    var body: some View {
+        VStack(spacing: 12) {
+            Text("Track Your Spiritual Journey")
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundColor(themeManager.primaryText)
+
+            HStack(spacing: 12) {
+                ProgressTeaserItem(icon: "flame.fill", label: "Build Streaks", color: .orange)
+                ProgressTeaserItem(icon: "star.fill", label: "Earn Sawab", color: .yellow)
+                ProgressTeaserItem(icon: "trophy.fill", label: "Unlock Badges", color: .purple)
+            }
+        }
+        .padding(.horizontal)
+    }
+}
+
+// MARK: - Progress Teaser Item
+
+struct ProgressTeaserItem: View {
+    @StateObject private var themeManager = ThemeManager.shared
+
+    let icon: String
+    let label: String
+    let color: Color
+
+    var body: some View {
+        VStack(spacing: 8) {
+            Image(systemName: icon)
+                .font(.system(size: 22))
+                .foregroundColor(color)
+
+            Text(label)
+                .font(.system(size: 11, weight: .medium))
+                .foregroundColor(themeManager.secondaryText)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 14)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(themeManager.secondaryBackground.opacity(0.5))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
                         .stroke(color.opacity(0.2), lineWidth: 1)
                 )
         )
