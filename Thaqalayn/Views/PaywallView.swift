@@ -85,6 +85,13 @@ struct PaywallView: View {
                                 description: "One-time purchase, no subscriptions",
                                 color: .pink
                             )
+
+                            PremiumBenefitRow(
+                                icon: "speaker.wave.2.fill",
+                                title: "Listen to Commentary",
+                                description: "Text-to-speech with word highlighting",
+                                color: .blue
+                            )
                         }
                         .padding(.horizontal)
 

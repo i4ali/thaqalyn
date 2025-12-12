@@ -18,6 +18,7 @@ struct FullScreenCommentaryView: View {
     @StateObject private var languageManager = CommentaryLanguageManager()
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var progressManager = ProgressManager.shared
+    @StateObject private var tafsirReader = TafsirReader.shared
     @Environment(\.dismiss) private var dismiss
     
     init(verse: VerseWithTafsir, surah: Surah, initialLayer: TafsirLayer) {
@@ -48,6 +49,15 @@ struct FullScreenCommentaryView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView()
+        }
+        .onDisappear {
+            tafsirReader.stop()
+        }
+        .onChange(of: selectedLayer) { _, _ in
+            tafsirReader.stop()
+        }
+        .onChange(of: languageManager.selectedLanguage) { _, _ in
+            tafsirReader.stop()
         }
     }
     
@@ -200,7 +210,43 @@ struct FullScreenCommentaryView: View {
             }
         }
     }
-    
+
+    // TTS button in layer header
+    private var ttsButton: some View {
+        Button(action: {
+            if tafsirReader.isPlaying || tafsirReader.isPaused {
+                tafsirReader.togglePlayPause()
+            } else if let tafsir = verse.tafsir {
+                let tafsirText = tafsir.content(for: selectedLayer, language: languageManager.selectedLanguage)
+                tafsirReader.speak(text: tafsirText)
+            }
+        }) {
+            if themeManager.selectedTheme == .warmInviting {
+                Text(tafsirReader.isPlaying ? "⏸" : "🔊")
+                    .font(.system(size: 20))
+                    .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                    .frame(width: 44, height: 44)
+                    .background(
+                        Circle()
+                            .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                    )
+            } else {
+                Image(systemName: tafsirReader.isPlaying ? "pause.fill" : "speaker.wave.2.fill")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                    .frame(width: 44, height: 44)
+                    .background(
+                        Circle()
+                            .fill(themeManager.secondaryBackground.opacity(0.8))
+                            .overlay(
+                                Circle()
+                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                            )
+                    )
+            }
+        }
+    }
+
     private var compactLayerSelector: some View {
         ScrollViewReader { proxy in
             ScrollView(.horizontal, showsIndicators: false) {
@@ -381,14 +427,19 @@ struct FullScreenCommentaryView: View {
                     Text(selectedLayer.title)
                         .font(.system(size: 22, weight: .bold))
                         .foregroundColor(themeManager.primaryText)
-                    
+
                     Text(selectedLayer.description)
                         .font(.system(size: 16, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2)
                 }
-                
+
                 Spacer()
+
+                // TTS play/pause button (only for English)
+                if languageManager.selectedLanguage == .english {
+                    ttsButton
+                }
             }
             
             // Divider matching mockup
@@ -408,15 +459,29 @@ struct FullScreenCommentaryView: View {
     }
 
     private func readingTextContent(_ text: String) -> some View {
-        VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 18) {
-            ForEach(Array(formattedParagraphs(from: text).enumerated()), id: \.offset) { index, paragraph in
+        let paragraphs = formattedParagraphs(from: text)
+
+        return VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 18) {
+            ForEach(Array(paragraphs.enumerated()), id: \.offset) { index, paragraph in
+                let trimmedParagraph = paragraph.trimmingCharacters(in: .whitespacesAndNewlines)
+                let paragraphHighlightRange = highlightRangeForParagraph(
+                    paragraphText: trimmedParagraph,
+                    paragraphIndex: index,
+                    allParagraphs: paragraphs.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) },
+                    fullHighlightRange: (tafsirReader.isPlaying || tafsirReader.isPaused) ? tafsirReader.highlightRange : nil
+                )
+
                 VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 8) {
 
                     // Reading-optimized paragraph text with background and selective RTL support
-                    Text(paragraph.trimmingCharacters(in: .whitespacesAndNewlines))
-                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 18, weight: .regular, design: .serif))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(themeManager.selectedTheme == .warmInviting ? 6 : 8) // Optimized line spacing for readability
+                    HighlightedText(
+                        text: trimmedParagraph,
+                        highlightRange: paragraphHighlightRange,
+                        font: .system(size: themeManager.selectedTheme == .warmInviting ? 17 : 18, weight: .regular, design: .serif),
+                        textColor: themeManager.primaryText,
+                        highlightColor: .yellow.opacity(0.4),
+                        lineSpacing: themeManager.selectedTheme == .warmInviting ? 6 : 8
+                    )
                         .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                         .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                         .fixedSize(horizontal: false, vertical: true)
@@ -496,7 +561,45 @@ struct FullScreenCommentaryView: View {
     }
     
     // MARK: - Helper Functions
-    
+
+    /// Calculate the highlight range for a specific paragraph within the full text
+    private func highlightRangeForParagraph(
+        paragraphText: String,
+        paragraphIndex: Int,
+        allParagraphs: [String],
+        fullHighlightRange: NSRange?
+    ) -> NSRange? {
+        guard let highlightRange = fullHighlightRange else { return nil }
+
+        // Calculate the starting character position of this paragraph in the full text
+        var paragraphStartInFullText = 0
+        for i in 0..<paragraphIndex {
+            paragraphStartInFullText += allParagraphs[i].count
+            // Account for the period and space added between paragraphs
+            if i < paragraphIndex {
+                paragraphStartInFullText += 2 // ". " separator
+            }
+        }
+
+        let paragraphEndInFullText = paragraphStartInFullText + paragraphText.count
+        let highlightEnd = highlightRange.location + highlightRange.length
+
+        // Check if highlight range overlaps with this paragraph
+        if highlightRange.location >= paragraphEndInFullText || highlightEnd <= paragraphStartInFullText {
+            return nil // Highlight is not in this paragraph
+        }
+
+        // Calculate adjusted range within this paragraph
+        let adjustedStart = max(0, highlightRange.location - paragraphStartInFullText)
+        let adjustedEnd = min(paragraphText.count, highlightEnd - paragraphStartInFullText)
+        let adjustedLength = adjustedEnd - adjustedStart
+
+        if adjustedLength > 0 {
+            return NSRange(location: adjustedStart, length: adjustedLength)
+        }
+        return nil
+    }
+
     private func formattedParagraphs(from text: String) -> [String] {
         let sentences = text.components(separatedBy: ". ")
         var paragraphs: [String] = []
