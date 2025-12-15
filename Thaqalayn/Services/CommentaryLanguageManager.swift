@@ -2,7 +2,7 @@
 //  CommentaryLanguageManager.swift
 //  Thaqalayn
 //
-//  Commentary language preference management for bilingual support
+//  Commentary language preference management for multilingual support
 //
 
 import Foundation
@@ -14,17 +14,23 @@ class CommentaryLanguageManager: ObservableObject {
             UserDefaults.standard.set(selectedLanguage.rawValue, forKey: "commentaryLanguage")
         }
     }
-    
+
     init() {
         let saved = UserDefaults.standard.string(forKey: "commentaryLanguage") ?? "en"
         self.selectedLanguage = CommentaryLanguage(rawValue: saved) ?? .english
     }
-    
-    // Toggle between English and Urdu
+
+    // Cycle to next language in the list
     func toggleLanguage() {
-        selectedLanguage = selectedLanguage == .english ? .urdu : .english
+        let allCases = CommentaryLanguage.allCases
+        guard let currentIndex = allCases.firstIndex(of: selectedLanguage) else {
+            selectedLanguage = .english
+            return
+        }
+        let nextIndex = (currentIndex + 1) % allCases.count
+        selectedLanguage = allCases[nextIndex]
     }
-    
+
     // Set specific language
     func setLanguage(_ language: CommentaryLanguage) {
         selectedLanguage = language

@@ -146,41 +146,88 @@ struct TafsirVerse: Codable {
     let layer4: String
     let layer5: String?
 
-    // New Urdu content (optional for backward compatibility)
+    // Urdu content (optional for backward compatibility)
     let layer1_urdu: String?
     let layer2_urdu: String?
     let layer3_urdu: String?
     let layer4_urdu: String?
     let layer5_urdu: String?
 
+    // Arabic content (optional)
+    let layer1_ar: String?
+    let layer2_ar: String?
+    let layer3_ar: String?
+    let layer4_ar: String?
+    let layer5_ar: String?
+
+    // French content (optional)
+    let layer1_fr: String?
+    let layer2_fr: String?
+    let layer3_fr: String?
+    let layer4_fr: String?
+    let layer5_fr: String?
+
     // Short versions for Overview feature (optional)
     let layer2short: String?
     let layer2short_urdu: String?
+    let layer2short_ar: String?
+    let layer2short_fr: String?
 
     // Helper method to get content by language and layer
     func content(for layer: TafsirLayer, language: CommentaryLanguage) -> String {
         switch (layer, language) {
         case (.foundation, .english): return layer1
         case (.foundation, .urdu): return layer1_urdu ?? layer1
+        case (.foundation, .arabic): return layer1_ar ?? layer1
+        case (.foundation, .french): return layer1_fr ?? layer1
         case (.classical, .english): return layer2
         case (.classical, .urdu): return layer2_urdu ?? layer2
+        case (.classical, .arabic): return layer2_ar ?? layer2
+        case (.classical, .french): return layer2_fr ?? layer2
         case (.contemporary, .english): return layer3
         case (.contemporary, .urdu): return layer3_urdu ?? layer3
+        case (.contemporary, .arabic): return layer3_ar ?? layer3
+        case (.contemporary, .french): return layer3_fr ?? layer3
         case (.ahlulBayt, .english): return layer4
         case (.ahlulBayt, .urdu): return layer4_urdu ?? layer4
+        case (.ahlulBayt, .arabic): return layer4_ar ?? layer4
+        case (.ahlulBayt, .french): return layer4_fr ?? layer4
         case (.comparative, .english): return layer5 ?? ""
         case (.comparative, .urdu): return layer5_urdu ?? layer5 ?? ""
+        case (.comparative, .arabic): return layer5_ar ?? layer5 ?? ""
+        case (.comparative, .french): return layer5_fr ?? layer5 ?? ""
         }
     }
-    
-    func hasUrduContent(for layer: TafsirLayer) -> Bool {
-        switch layer {
-        case .foundation: return layer1_urdu != nil
-        case .classical: return layer2_urdu != nil
-        case .contemporary: return layer3_urdu != nil
-        case .ahlulBayt: return layer4_urdu != nil
-        case .comparative: return layer5_urdu != nil
+
+    // Generic method to check if content exists for a specific language and layer
+    func hasContent(for layer: TafsirLayer, language: CommentaryLanguage) -> Bool {
+        switch (layer, language) {
+        case (.foundation, .english): return true
+        case (.foundation, .urdu): return layer1_urdu != nil
+        case (.foundation, .arabic): return layer1_ar != nil
+        case (.foundation, .french): return layer1_fr != nil
+        case (.classical, .english): return true
+        case (.classical, .urdu): return layer2_urdu != nil
+        case (.classical, .arabic): return layer2_ar != nil
+        case (.classical, .french): return layer2_fr != nil
+        case (.contemporary, .english): return true
+        case (.contemporary, .urdu): return layer3_urdu != nil
+        case (.contemporary, .arabic): return layer3_ar != nil
+        case (.contemporary, .french): return layer3_fr != nil
+        case (.ahlulBayt, .english): return true
+        case (.ahlulBayt, .urdu): return layer4_urdu != nil
+        case (.ahlulBayt, .arabic): return layer4_ar != nil
+        case (.ahlulBayt, .french): return layer4_fr != nil
+        case (.comparative, .english): return layer5 != nil
+        case (.comparative, .urdu): return layer5_urdu != nil
+        case (.comparative, .arabic): return layer5_ar != nil
+        case (.comparative, .french): return layer5_fr != nil
         }
+    }
+
+    // Legacy method for backward compatibility
+    func hasUrduContent(for layer: TafsirLayer) -> Bool {
+        return hasContent(for: layer, language: .urdu)
     }
 
     // Helper method to get layer2 content by language for overview
@@ -188,14 +235,18 @@ struct TafsirVerse: Codable {
         switch language {
         case .english: return layer2
         case .urdu: return layer2_urdu ?? layer2
+        case .arabic: return layer2_ar ?? layer2
+        case .french: return layer2_fr ?? layer2
         }
     }
 
-    // Helper method to get layer2short content by language for overview (new)
+    // Helper method to get layer2short content by language for overview
     func getLayer2Short(language: CommentaryLanguage) -> String {
         switch language {
         case .english: return layer2short ?? layer2
         case .urdu: return layer2short_urdu ?? layer2_urdu ?? layer2
+        case .arabic: return layer2short_ar ?? layer2_ar ?? layer2
+        case .french: return layer2short_fr ?? layer2_fr ?? layer2
         }
     }
 
@@ -482,16 +533,30 @@ enum TafsirLayer: String, CaseIterable {
 enum CommentaryLanguage: String, CaseIterable, Codable {
     case english = "en"
     case urdu = "ur"
+    case arabic = "ar"
+    case french = "fr"
 
     var displayName: String {
         switch self {
         case .english: return "English"
         case .urdu: return "اردو"
+        case .arabic: return "العربية"
+        case .french: return "Français"
         }
     }
 
     var isRTL: Bool {
-        return self == .urdu
+        return self == .urdu || self == .arabic
+    }
+
+    /// Language code for NLLB translation model
+    var nllbCode: String {
+        switch self {
+        case .english: return "eng_Latn"
+        case .urdu: return "urd_Arab"
+        case .arabic: return "arb_Arab"
+        case .french: return "fra_Latn"
+        }
     }
 }
 

@@ -174,13 +174,24 @@ struct FullScreenCommentaryView: View {
         }
     }
 
-    // Language toggle button in header
+    // Language selector menu in header
     private var languageToggle: some View {
-        Button(action: {
-            withAnimation(.spring(response: 0.3)) {
-                languageManager.toggleLanguage()
+        Menu {
+            ForEach(CommentaryLanguage.allCases, id: \.self) { language in
+                Button(action: {
+                    withAnimation(.spring(response: 0.3)) {
+                        languageManager.setLanguage(language)
+                    }
+                }) {
+                    HStack {
+                        Text(language.displayName)
+                        if languageManager.selectedLanguage == language {
+                            Image(systemName: "checkmark")
+                        }
+                    }
+                }
             }
-        }) {
+        } label: {
             HStack(spacing: 4) {
                 Text(languageManager.selectedLanguage.displayName)
                     .font(.system(size: 14, weight: .medium))
@@ -374,18 +385,14 @@ struct FullScreenCommentaryView: View {
         .buttonStyle(PlainButtonStyle())
     }
     
-    // Show language availability in layer selector
+    // Show language availability in layer selector (all supported languages)
     private func layerAvailabilityIndicator(for layer: TafsirLayer, tafsir: TafsirVerse) -> some View {
         HStack(spacing: 2) {
-            // English availability (always available)
-            Circle()
-                .fill(Color.green)
-                .frame(width: 4, height: 4)
-            
-            // Urdu availability
-            Circle()
-                .fill(tafsir.hasUrduContent(for: layer) ? Color.green : Color.gray.opacity(0.4))
-                .frame(width: 4, height: 4)
+            ForEach(CommentaryLanguage.allCases, id: \.self) { language in
+                Circle()
+                    .fill(tafsir.hasContent(for: layer, language: language) ? Color.green : Color.gray.opacity(0.4))
+                    .frame(width: 4, height: 4)
+            }
         }
     }
     
@@ -717,8 +724,20 @@ struct FullScreenCommentaryView: View {
         layer3_urdu: "عصری تفسیر...",
         layer4_urdu: "اہل بیت کی تفسیر...",
         layer5_urdu: "**شیعہ نقطہ نظر**: کلاسیکی شیعہ علماء جیسے الطباطبائی اس آیت کو الہی عدل سے جوڑتے ہیں۔ **سنی نقطہ نظر**: سنی مفسرین جیسے ابن کثیر قانونی فریم ورک پر توجہ دیتے ہیں۔",
+        layer1_ar: nil,
+        layer2_ar: nil,
+        layer3_ar: nil,
+        layer4_ar: nil,
+        layer5_ar: nil,
+        layer1_fr: nil,
+        layer2_fr: nil,
+        layer3_fr: nil,
+        layer4_fr: nil,
+        layer5_fr: nil,
         layer2short: nil,
-        layer2short_urdu: nil
+        layer2short_urdu: nil,
+        layer2short_ar: nil,
+        layer2short_fr: nil
     )
     
     let sampleSurah = Surah(
