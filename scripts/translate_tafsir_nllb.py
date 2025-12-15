@@ -67,15 +67,15 @@ LANGUAGE_SUFFIXES = {
 class NLLBTranslator:
     """Translator using Meta NLLB-200 model"""
 
-    def __init__(self, model_name: str = "facebook/nllb-200-distilled-600M"):
+    def __init__(self, model_name: str = "facebook/nllb-200-3.3B"):
         """
         Initialize the NLLB translator.
 
         Args:
             model_name: HuggingFace model name. Options:
-                - facebook/nllb-200-distilled-600M (default, ~2.4GB, good balance)
-                - facebook/nllb-200-distilled-1.3B (~5GB, better quality)
-                - facebook/nllb-200-3.3B (~13GB, best quality, needs GPU)
+                - facebook/nllb-200-3.3B (default, ~13GB, best quality)
+                - facebook/nllb-200-distilled-1.3B (~5GB, good quality)
+                - facebook/nllb-200-distilled-600M (~2.4GB, fastest, lower quality)
         """
         print(f"Loading NLLB model: {model_name}")
         print("This may take a few minutes on first run (downloading model)...")

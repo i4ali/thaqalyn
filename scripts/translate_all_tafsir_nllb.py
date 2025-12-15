@@ -69,8 +69,8 @@ Supported languages:
     parser.add_argument("--start", type=int, default=1, help="Start surah number (default: 1)")
     parser.add_argument("--end", type=int, default=114, help="End surah number (default: 114)")
     parser.add_argument("--data-dir", help="Path to Data directory containing tafsir files")
-    parser.add_argument("--model", default="facebook/nllb-200-distilled-600M",
-                        help="NLLB model to use (default: facebook/nllb-200-distilled-600M)")
+    parser.add_argument("--model", default="facebook/nllb-200-3.3B",
+                        help="NLLB model to use (default: facebook/nllb-200-3.3B for best quality)")
 
     args = parser.parse_args()
 
