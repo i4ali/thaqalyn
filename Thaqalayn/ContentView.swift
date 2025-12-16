@@ -17,6 +17,7 @@ struct ContentView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var progressManager = ProgressManager.shared
+    @StateObject private var ratingManager = RatingManager.shared
     @State private var showingWelcome = false
     
     var body: some View {
@@ -48,6 +49,7 @@ struct ContentView: View {
         }
         .onAppear {
             checkFirstLaunch()
+            ratingManager.recordAppLaunch()
         }
         .fullScreenCover(isPresented: $showingWelcome) {
             OnboardingFlowView()
