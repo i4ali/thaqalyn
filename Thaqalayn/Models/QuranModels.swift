@@ -536,6 +536,9 @@ enum CommentaryLanguage: String, CaseIterable, Codable {
     case arabic = "ar"
     case french = "fr"
 
+    /// Languages that have tafsir content available (excludes French)
+    static let supportedTafsirLanguages: [CommentaryLanguage] = [.english, .urdu, .arabic]
+
     var displayName: String {
         switch self {
         case .english: return "English"

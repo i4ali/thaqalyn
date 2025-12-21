@@ -20,15 +20,15 @@ class CommentaryLanguageManager: ObservableObject {
         self.selectedLanguage = CommentaryLanguage(rawValue: saved) ?? .english
     }
 
-    // Cycle to next language in the list
+    // Cycle to next language in the list (only supported tafsir languages)
     func toggleLanguage() {
-        let allCases = CommentaryLanguage.allCases
-        guard let currentIndex = allCases.firstIndex(of: selectedLanguage) else {
+        let supportedLanguages = CommentaryLanguage.supportedTafsirLanguages
+        guard let currentIndex = supportedLanguages.firstIndex(of: selectedLanguage) else {
             selectedLanguage = .english
             return
         }
-        let nextIndex = (currentIndex + 1) % allCases.count
-        selectedLanguage = allCases[nextIndex]
+        let nextIndex = (currentIndex + 1) % supportedLanguages.count
+        selectedLanguage = supportedLanguages[nextIndex]
     }
 
     // Set specific language

@@ -19,6 +19,7 @@ struct FullScreenCommentaryView: View {
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var tafsirReader = TafsirReader.shared
+    @StateObject private var voiceManager = TTSVoiceManager.shared
     @Environment(\.dismiss) private var dismiss
     
     init(verse: VerseWithTafsir, surah: Surah, initialLayer: TafsirLayer) {
@@ -177,7 +178,7 @@ struct FullScreenCommentaryView: View {
     // Language selector menu in header
     private var languageToggle: some View {
         Menu {
-            ForEach(CommentaryLanguage.allCases, id: \.self) { language in
+            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
                 Button(action: {
                     withAnimation(.spring(response: 0.3)) {
                         languageManager.setLanguage(language)
@@ -229,7 +230,7 @@ struct FullScreenCommentaryView: View {
                 tafsirReader.togglePlayPause()
             } else if let tafsir = verse.tafsir {
                 let tafsirText = tafsir.content(for: selectedLayer, language: languageManager.selectedLanguage)
-                tafsirReader.speak(text: tafsirText)
+                tafsirReader.speak(text: tafsirText, language: languageManager.selectedLanguage)
             }
         }) {
             if themeManager.selectedTheme == .warmInviting {
@@ -388,7 +389,7 @@ struct FullScreenCommentaryView: View {
     // Show language availability in layer selector (all supported languages)
     private func layerAvailabilityIndicator(for layer: TafsirLayer, tafsir: TafsirVerse) -> some View {
         HStack(spacing: 2) {
-            ForEach(CommentaryLanguage.allCases, id: \.self) { language in
+            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
                 Circle()
                     .fill(tafsir.hasContent(for: layer, language: language) ? Color.green : Color.gray.opacity(0.4))
                     .frame(width: 4, height: 4)
@@ -443,8 +444,8 @@ struct FullScreenCommentaryView: View {
 
                 Spacer()
 
-                // TTS play/pause button (only for English)
-                if languageManager.selectedLanguage == .english {
+                // TTS play/pause button (show if voices available for language)
+                if voiceManager.hasVoicesAvailable(for: languageManager.selectedLanguage) {
                     ttsButton
                 }
             }

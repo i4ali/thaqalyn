@@ -13,6 +13,7 @@ struct SettingsView: View {
     @StateObject private var notificationManager = NotificationManager.shared
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var audioManager = AudioManager.shared
+    @StateObject private var voiceManager = TTSVoiceManager.shared
     @Environment(\.presentationMode) var presentationMode
     @State private var showingThemeSelection = false
     @State private var showingAuthentication = false
@@ -23,6 +24,8 @@ struct SettingsView: View {
     @State private var showingProgressDashboard = false
     @State private var showingResetProgressAlert = false
     @State private var showingReciterSelection = false
+    @State private var showingTTSVoiceSelection = false
+    @State private var selectedTTSLanguage: CommentaryLanguage = .english
     
     var body: some View {
         NavigationView {
@@ -305,6 +308,23 @@ struct SettingsView: View {
                                     }
                                 }
                             }
+
+                            // Text-to-Speech Section
+                            SettingsSection(title: "Text-to-Speech") {
+                                VStack(spacing: 12) {
+                                    ForEach(TTSVoiceManager.supportedTTSLanguages, id: \.self) { language in
+                                        SettingsRow(
+                                            icon: "speaker.wave.2.fill",
+                                            title: "\(language.displayName) Voice",
+                                            subtitle: voiceManager.selectedVoice(for: language)?.name ?? "No voices",
+                                            iconColor: .teal
+                                        ) {
+                                            selectedTTSLanguage = language
+                                            showingTTSVoiceSelection = true
+                                        }
+                                    }
+                                }
+                            }
                             
                             // App Info Section
                             SettingsSection(title: "About") {
@@ -369,6 +389,9 @@ struct SettingsView: View {
         }
         .sheet(isPresented: $showingReciterSelection) {
             ReciterSelectionView()
+        }
+        .sheet(isPresented: $showingTTSVoiceSelection) {
+            TTSVoicePickerView(language: selectedTTSLanguage)
         }
         .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
             Button("OK") {

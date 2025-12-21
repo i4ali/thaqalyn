@@ -22,6 +22,7 @@ class TafsirReader: NSObject, ObservableObject {
     // MARK: - Private Properties
     private let synthesizer = AVSpeechSynthesizer()
     private var currentUtterance: AVSpeechUtterance?
+    private let voiceManager = TTSVoiceManager.shared
 
     // MARK: - Initialization
     override init() {
@@ -31,8 +32,8 @@ class TafsirReader: NSObject, ObservableObject {
 
     // MARK: - Public Methods
 
-    /// Start speaking the provided text
-    func speak(text: String) {
+    /// Start speaking the provided text in the specified language
+    func speak(text: String, language: CommentaryLanguage = .english) {
         // Stop any current speech
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
@@ -42,11 +43,9 @@ class TafsirReader: NSObject, ObservableObject {
         currentText = text
         highlightRange = nil
 
-        // Create utterance with British male voice (Daniel)
+        // Create utterance with user's selected voice for the language
         let utterance = AVSpeechUtterance(string: text)
-        let britishMaleVoice = AVSpeechSynthesisVoice.speechVoices()
-            .first { $0.language == "en-GB" && $0.gender == .male }
-        utterance.voice = britishMaleVoice ?? AVSpeechSynthesisVoice(language: "en-GB")
+        utterance.voice = voiceManager.selectedVoice(for: language)
         utterance.rate = AVSpeechUtteranceDefaultSpeechRate
         utterance.pitchMultiplier = 1.0
         utterance.volume = 1.0

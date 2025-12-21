@@ -129,7 +129,7 @@ struct VerseSummaryView: View {
 
     private var languageSelectorView: some View {
         HStack(spacing: 12) {
-            ForEach(CommentaryLanguage.allCases, id: \.self) { language in
+            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
                 Button(action: { selectedLanguage = language }) {
                     Text(language.displayName)
                         .font(.system(size: 14, weight: .semibold))
