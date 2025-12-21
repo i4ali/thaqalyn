@@ -21,6 +21,14 @@ struct VerseSummaryView: View {
         UIDevice.current.userInterfaceIdiom == .pad
     }
 
+    // Check if any non-English translated content is available
+    private var hasAnyTranslatedContent: Bool {
+        guard let tafsir = verse.tafsir else { return false }
+        return tafsir.layer2short_urdu != nil ||
+               tafsir.layer2short_ar != nil ||
+               tafsir.layer2short_fr != nil
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             // Handle bar
@@ -38,8 +46,8 @@ struct VerseSummaryView: View {
                     // Verse reference
                     verseReferenceView
 
-                    // Language selector (if Urdu content available)
-                    if verse.tafsir?.layer2short_urdu != nil {
+                    // Language selector (if any non-English content available)
+                    if hasAnyTranslatedContent {
                         languageSelectorView
                     }
 
@@ -121,7 +129,7 @@ struct VerseSummaryView: View {
 
     private var languageSelectorView: some View {
         HStack(spacing: 12) {
-            ForEach(CommentaryLanguage.allCases, id: \.self) { language in
+            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
                 Button(action: { selectedLanguage = language }) {
                     Text(language.displayName)
                         .font(.system(size: 14, weight: .semibold))
@@ -260,8 +268,20 @@ struct VerseSummaryView: View {
         layer3_urdu: nil,
         layer4_urdu: nil,
         layer5_urdu: nil,
+        layer1_ar: nil,
+        layer2_ar: nil,
+        layer3_ar: nil,
+        layer4_ar: nil,
+        layer5_ar: nil,
+        layer1_fr: nil,
+        layer2_fr: nil,
+        layer3_fr: nil,
+        layer4_fr: nil,
+        layer5_fr: nil,
         layer2short: "The Bismillah invokes Allah's infinite mercy and compassion.",
-        layer2short_urdu: nil
+        layer2short_urdu: nil,
+        layer2short_ar: nil,
+        layer2short_fr: nil
     )
 
     let sampleVerseWithTafsir = VerseWithTafsir(

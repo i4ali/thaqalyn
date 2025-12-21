@@ -1323,8 +1323,20 @@ struct TafsirLayerSelector: View {
         layer3_urdu: "عصری تفسیر...",
         layer4_urdu: "اہل بیت کی تفسیر...",
         layer5_urdu: "**شیعہ تجزیہ**: الہی عدل اور امامت کے اصولوں پر توجہ۔ **سنی تجزیہ**: خلافت اور اجماع امت پر زور۔",
+        layer1_ar: nil,
+        layer2_ar: nil,
+        layer3_ar: nil,
+        layer4_ar: nil,
+        layer5_ar: nil,
+        layer1_fr: nil,
+        layer2_fr: nil,
+        layer3_fr: nil,
+        layer4_fr: nil,
+        layer5_fr: nil,
         layer2short: nil,
-        layer2short_urdu: nil
+        layer2short_urdu: nil,
+        layer2short_ar: nil,
+        layer2short_fr: nil
     )
     
     let sampleVerseWithTafsir = VerseWithTafsir(
