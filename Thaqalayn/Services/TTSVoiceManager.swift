@@ -47,15 +47,30 @@ class TTSVoiceManager: ObservableObject {
         return voicesByLanguage[language] ?? []
     }
 
-    /// Get the user's selected voice for a language, or the first available voice
+    /// Get the user's selected voice for a language, or a smart default
     func selectedVoice(for language: CommentaryLanguage) -> AVSpeechSynthesisVoice? {
         // Check if user has a saved preference
         if let voiceId = selectedVoiceIds[language.rawValue],
            let voice = voicesByLanguage[language]?.first(where: { $0.identifier == voiceId }) {
             return voice
         }
-        // Return first available voice for this language as default
-        return voicesByLanguage[language]?.first
+
+        // Smart defaults per language
+        if let voices = voicesByLanguage[language], !voices.isEmpty {
+            if language == .english {
+                // Prefer Daniel (British English)
+                if let daniel = voices.first(where: { $0.name == "Daniel" }) {
+                    return daniel
+                }
+                // Fallback to any enhanced quality voice
+                if let enhanced = voices.first(where: { $0.quality == .enhanced }) {
+                    return enhanced
+                }
+            }
+            return voices.first
+        }
+
+        return nil
     }
 
     /// Set the user's preferred voice for a language
