@@ -26,6 +26,7 @@ struct SettingsView: View {
     @State private var showingReciterSelection = false
     @State private var showingTTSVoiceSelection = false
     @State private var selectedTTSLanguage: CommentaryLanguage = .english
+    @State private var showingTafsirSources = false
     
     var body: some View {
         NavigationView {
@@ -330,6 +331,15 @@ struct SettingsView: View {
                             SettingsSection(title: "About") {
                                 VStack(spacing: 12) {
                                     SettingsRow(
+                                        icon: "books.vertical.fill",
+                                        title: "Tafsir Sources",
+                                        subtitle: "Books and scholars referenced",
+                                        iconColor: .indigo
+                                    ) {
+                                        showingTafsirSources = true
+                                    }
+
+                                    SettingsRow(
                                         icon: "info.circle.fill",
                                         title: "Version",
                                         subtitle: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0",
@@ -337,7 +347,7 @@ struct SettingsView: View {
                                     ) {
                                         // Could show app info
                                     }
-                                    
+
                                     SettingsRow(
                                         icon: "heart.fill",
                                         title: "Support",
@@ -346,7 +356,7 @@ struct SettingsView: View {
                                     ) {
                                         // Could open App Store review
                                     }
-                                    
+
                                     SettingsRow(
                                         icon: "trash.fill",
                                         title: "Clear All Local Data",
@@ -392,6 +402,9 @@ struct SettingsView: View {
         }
         .sheet(isPresented: $showingTTSVoiceSelection) {
             TTSVoicePickerView(language: selectedTTSLanguage)
+        }
+        .fullScreenCover(isPresented: $showingTafsirSources) {
+            TafsirSourcesView()
         }
         .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
             Button("OK") {

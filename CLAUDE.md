@@ -96,6 +96,14 @@ Thaqalayn/
 - **Stability**: Production-tested with offline-first architecture and robust error handling
 - **Compatibility**: iOS 15.0+, supports iPhone and iPad with responsive design
 
+### App Store Connect Screenshot Sizes (iPhone)
+- 1242 × 2688px (6.5" portrait)
+- 2688 × 1242px (6.5" landscape)
+- 1284 × 2778px (6.7" portrait)
+- 2778 × 1284px (6.7" landscape)
+
+Resize with: `sips -z 2778 1284 screenshot.png`
+
 ## Critical Development Guidelines
 
 ### ⚠️ NO FALLBACK LOGIC UNLESS EXPLICITLY REQUESTED ⚠️
