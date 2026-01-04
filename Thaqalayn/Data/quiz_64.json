@@ -1,0 +1,140 @@
+{
+  "surahNumber": 64,
+  "questions": [
+    {
+      "id": "64_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to verse 1 of Surah At-Taghabun, what does the phrase 'yusabbihu lillahi' convey about creation's glorification of Allah?",
+      "options": [
+        "It refers only to ritual prayers by humans",
+        "It means continuous, inherent praise embedded in existence itself",
+        "It applies only to living beings",
+        "It describes occasional acknowledgment of divine power"
+      ],
+      "correctAnswer": "It means continuous, inherent praise embedded in existence itself",
+      "explanation": "The phrase 'yusabbihu lillahi' conveys continuous, inherent praise embedded in existence itself, not merely ritual recitation. This universal symphony of devotion transcends human awareness, representing an ontological reality where every element of creation actively participates in glorifying Allah."
+    },
+    {
+      "id": "64_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "Verse 2 emphasizes that Allah created humanity's diversity of belief to demonstrate human free will within divine wisdom.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The verse affirms that Allah intentionally designed humanity's diversity of belief, with some choosing kufr (disbelief) while others embrace iman (faith), emphasizing human free will within divine wisdom. This demonstrates that belief and disbelief exist as choices within Allah's sovereign creative plan."
+    },
+    {
+      "id": "64_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 8,
+      "question": "In classical Shia exegesis, what complementary dimension does the 'Light' (an-noor) in verse 8 represent beyond the Quran itself?",
+      "options": [
+        "The physical sun and moon",
+        "Divine guidance embodied in the Ahl al-Bayt",
+        "Only the written text of the Quran",
+        "The light of human reason alone"
+      ],
+      "correctAnswer": "Divine guidance embodied in the Ahl al-Bayt",
+      "explanation": "While the apparent meaning identifies the 'Light' as the Quran itself, classical Shia exegesis—rooted in the teachings of the Ahl al-Bayt—emphasizes a complementary metaphysical dimension where the Light also represents divine guidance embodied in the Prophet's purified progeny and the Imams."
+    },
+    {
+      "id": "64_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 11,
+      "question": "According to Allamah Tabatabai's interpretation of verse 11, what does 'permission' (idhn) regarding calamities signify?",
+      "options": [
+        "Passive allowance without divine involvement",
+        "Random chance events outside Allah's control",
+        "Divine will governed by wisdom, not passive allowance",
+        "Punishment for all those who suffer"
+      ],
+      "correctAnswer": "Divine will governed by wisdom, not passive allowance",
+      "explanation": "Allamah Tabatabai clarifies that 'permission' (idhn) denotes divine will governed by wisdom, not passive allowance. This aligns with Shia theology's principle of al-qada' wa al-qadar (divine decree), where disasters occur within a cosmic framework of cause and effect overseen by divine wisdom."
+    },
+    {
+      "id": "64_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 16,
+      "question": "How do contemporary Shia scholars like Ayatollah Makarem Shirazi frame the command to 'fear Allah as much as you are able' in verse 16?",
+      "options": [
+        "As an impossible burden requiring perfection",
+        "As a license for minimal spiritual effort",
+        "As an invitation to conscious effort, not a burden of perfection",
+        "As applying only to religious scholars"
+      ],
+      "correctAnswer": "As an invitation to conscious effort, not a burden of perfection",
+      "explanation": "Contemporary scholars like Ayatollah Nasir Makarem Shirazi frame the call to 'fear Allah as much as you are able' not as a burden of perfection but as an invitation to conscious effort. This theme echoes modern psychology's focus on growth mindsets, emphasizing dynamic balance between spiritual discipline and social responsibility."
+    },
+    {
+      "id": "64_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "According to contemporary Shia scholarship on verse 5, the 'bad consequence' faced by past nations can include modern issues like ecological collapse and social disintegration.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ayatollah Makarem Shirazi emphasizes in his Tafsir Nemuneh that the 'bad consequence' experienced by past nations includes not only ancient punishments but also modern manifestations such as ecological collapse and social disintegration. This contextualizes the verse as a warning against contemporary societal arrogance and moral failure."
+    },
+    {
+      "id": "64_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 9,
+      "question": "According to Imam Ja'far al-Sadiq's teaching on verse 9, what does the 'Day of Deprivation' (Yawm al-Taghabun) reveal about those who neglected the Wilayah of the Ahlul Bayt?",
+      "options": [
+        "They will receive equal rewards as all believers",
+        "They will realize their eternal loss in rejecting divine guardianship",
+        "They will have another chance to accept guidance",
+        "Their worldly achievements will compensate for their neglect"
+      ],
+      "correctAnswer": "They will realize their eternal loss in rejecting divine guardianship",
+      "explanation": "Imam Ja'far al-Sadiq explains that the 'Day of Deprivation' unveils the moment when souls realize their eternal loss in neglecting the Wilayah (guardianship) of the Ahlul Bayt. This represents the ultimate reckoning where the true value of recognizing divine guidance through the Imams becomes manifestly clear."
+    },
+    {
+      "id": "64_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 17,
+      "question": "In the teachings of the Ahlul Bayt on verse 17, what does the 'goodly loan' (qard hasan) primarily represent?",
+      "options": [
+        "Only financial loans to other Muslims",
+        "Surrendering one's entire existence to Allah through love, service, and recognition of divine guardianship",
+        "Business investments for profit",
+        "Temporary charitable acts without deeper spiritual significance"
+      ],
+      "correctAnswer": "Surrendering one's entire existence to Allah through love, service, and recognition of divine guardianship",
+      "explanation": "According to the Ahlul Bayt, the 'goodly loan' refers not merely to material charity but to offering one's soul, wealth, and actions as sacred trusts to the Creator. This represents surrendering one's entire existence to Allah through love, service, and recognition of divine guardianship—a profound metaphor for total spiritual devotion."
+    },
+    {
+      "id": "64_9",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 14,
+      "question": "Both Shia and Sunni scholars agree that verse 14 warns against allowing loved ones to become conduits for ethical compromise, but does not condemn family bonds inherently.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both Shia commentators (like Ibn Kathir and Tabari from Sunni tradition, and Tabatabai and Tabrisi from Shia tradition) converge on the verse's core ethical message: familial relationships, while sacred, may test believers' spiritual priorities. The verse doesn't condemn family bonds but cautions against allowing them to distract from divine obligations or become sources of ethical compromise."
+    },
+    {
+      "id": "64_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 11,
+      "question": "What is a key theological difference between Shia and Sunni interpretations of verse 11 regarding divine predestination and human agency?",
+      "options": [
+        "Sunnis reject the concept of divine predestination entirely",
+        "Shias emphasize human agency within divine will, while Sunnis often stress predestination more strongly",
+        "Both traditions hold identical views with no distinctions",
+        "Shias deny any role for divine will in human affairs"
+      ],
+      "correctAnswer": "Shias emphasize human agency within divine will, while Sunnis often stress predestination more strongly",
+      "explanation": "While both traditions affirm Allah's omnipotence over all events, Sunni commentators like Ibn Kathir emphasize divine predestination (qadar) more strongly, reflecting the Ash'ari theological framework. Shia exegetes, following the principle of al-amr bayn al-amrayn (the matter between two matters), balance divine sovereignty with human moral agency, emphasizing that guidance of the heart requires active spiritual receptivity rather than passive acceptance alone."
+    }
+  ]
+}

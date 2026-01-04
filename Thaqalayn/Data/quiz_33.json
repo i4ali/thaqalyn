@@ -1,0 +1,275 @@
+{
+  "surahNumber": 33,
+  "questions": [
+    {
+      "id": "33_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "During which historical event was the opening verse of Surah Al-Ahzab revealed?",
+      "options": [
+        "The Battle of Badr",
+        "The Battle of Uhud",
+        "The Battle of the Trench (Khandaq)",
+        "The Treaty of Hudaybiyyah"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The verse was revealed during the Battle of the Trench (5 AH), when hypocrites and disbelievers pressured the Prophet to compromise Islamic principles for temporary peace or alliances."
+    },
+    {
+      "id": "33_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, the munafiqun (hypocrites) posed a greater danger than external enemies because they sowed discord within the Muslim community.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Shia tafsir scholars like Allamah Tabatabai emphasize that munafiqun posed a greater danger by sowing discord within the community, as seen in their betrayal during critical moments like Uhud."
+    },
+    {
+      "id": "33_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 9,
+      "question": "What two forms of divine aid did Allah send to help the Muslims during the Battle of the Trench?",
+      "options": [
+        "Rain and lightning",
+        "A violent wind and unseen armies of angels",
+        "Earthquakes and floods",
+        "Fire and darkness"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah intervened by sending a violent wind (rih) that destabilized the enemy camp and unseen armies of angels (junud lam tarawha) to demoralize the Quraysh and their allies."
+    },
+    {
+      "id": "33_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 21,
+      "question": "What Arabic term is used in Surah 33:21 to describe Prophet Muhammad as the 'excellent pattern' for believers?",
+      "options": [
+        "Khatam an-Nabiyyin",
+        "Uswatun Hasanah",
+        "Rahmatun lil Alameen",
+        "Sirat al-Mustaqeem"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'uswatun hasanah' signifies a living model of virtue, not merely theoretical ideals. It refers to the Prophet's holistic example in compassion, justice, resilience, and devotion."
+    },
+    {
+      "id": "33_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does the command 'O Prophet, fear Allah' (ittaqillah) signify?",
+      "options": [
+        "A warning about punishment",
+        "Unwavering alignment with divine wisdom",
+        "A command to wage war",
+        "A request to build a mosque"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai notes that taqwa here transcends mere caution; it signifies unwavering alignment with divine wisdom, a principle later mirrored in the Imamate's custodianship of spiritual and temporal authority."
+    },
+    {
+      "id": "33_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 9,
+      "question": "According to Shia scholarship, the 'unseen armies' mentioned in verse 33:9 symbolize both angels and the metaphysical support granted to those who uphold wilayah (devotion to the Imam's authority).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Shia scholarship links this divine aid to the principle of Imamate, interpreting the unseen armies as extensions of Allah's mercy channeled through the guidance of the Ahl al-Bayt."
+    },
+    {
+      "id": "33_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 33,
+      "question": "According to Tabatabai's Al-Mizan, what does the grammatical shift from feminine to masculine plural pronouns in verse 33:33 signify?",
+      "options": [
+        "A scribal error in transmission",
+        "A distinct audience: the purified household of the Prophet",
+        "A command to all women",
+        "A reference to all companions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai observes the grammatical shift from feminine plural pronouns (directed at the wives) to masculine plural in the latter half, signifying a distinct audience: the purified household of the Prophet."
+    },
+    {
+      "id": "33_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 33,
+      "question": "According to classical Shia exegesis, which hadith is linked to the purification verse (33:33)?",
+      "options": [
+        "Hadith al-Thaqalayn",
+        "Hadith al-Kisa (Event of the Cloak)",
+        "Hadith Manzilah",
+        "Hadith Ghadir Khumm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The shift is rooted in Hadith al-Kisa (Event of the Cloak), where the Prophet gathered Ali, Fatima, Hasan, and Husayn under his cloak, after which the purification verse was revealed."
+    },
+    {
+      "id": "33_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 9,
+      "question": "According to contemporary scholar Ayatollah Sayyid Muhammad Husayn Fadlullah, what does verse 33:9 teach about the relationship between faith and action?",
+      "options": [
+        "Faith alone is sufficient without action",
+        "Action alone is sufficient without faith",
+        "Trust in Allah's plan does not negate the necessity of strategic effort",
+        "Divine help only comes to those who do not strive"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars emphasize the interplay between divine intervention and human agency - trust in Allah's plan does not negate the necessity of strategic effort, a principle echoed in modern resilience theory."
+    },
+    {
+      "id": "33_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 33,
+      "question": "According to contemporary scholar Dr. Liyakat Takim, the call for women to 'abide in your houses' in verse 33:33 should be understood as a rejection of pre-Islamic practices that objectified women, not as confinement.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes that the call is not a confinement but a rejection of pre-Islamic Jahiliya practices reducing women to commodified objects. This translates to resisting hypersexualized media cultures and reclaiming agency through intentional modesty."
+    },
+    {
+      "id": "33_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 21,
+      "question": "According to Dr. Liyakat Takim, which historical event offers lessons for contemporary conflict resolution and interfaith dialogue?",
+      "options": [
+        "The Battle of Badr",
+        "The Treaty of Hudaybiyyah",
+        "The Conquest of Mecca",
+        "The Battle of Khaybar"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars like Dr. Liyakat Takim highlight how the Prophet's diplomacy during the Treaty of Hudaybiyyah offers lessons for contemporary conflict resolution and interfaith dialogue amid global polarization."
+    },
+    {
+      "id": "33_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 33,
+      "question": "According to contemporary scholar Dr. Maria Dakake, how is the purification of Ahlul Bayt described?",
+      "options": [
+        "A historical event only",
+        "A cosmic ethical paradigm calling for societal purification",
+        "A ritual practice for special occasions",
+        "A political statement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The purification of Ahlul Bayt is described by Dr. Maria Dakake as a 'cosmic ethical paradigm' - a call for societal tazkiyah (purification) through justice-oriented action."
+    },
+    {
+      "id": "33_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 9,
+      "question": "According to Imam Ali (AS), what does the wind sent by Allah during the Battle of the Trench symbolize regarding the role of the Imam?",
+      "options": [
+        "The Imam is a temporary leader",
+        "The Imam has no special role",
+        "The Imam is a mercy for his followers and a barrier against misguidance",
+        "The Imam only guides in spiritual matters"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ali (AS) stated, 'The wind sent by Allah was a mercy for the believers and a wrath for the disbelievers, just as the Imam is a mercy for his followers and a barrier against misguidance' (Bihar al-Anwar)."
+    },
+    {
+      "id": "33_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 33,
+      "question": "According to Imam Muhammad al-Baqir (AS), the purification verse (33:33) was revealed for five: the Prophet, Ali, Fatimah, Hasan, and Husayn.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Muhammad al-Baqir (AS) states in Tafsir al-Qummi: 'This verse was revealed for five: the Prophet, Ali, Fatimah, Hasan, and Husayn. Allah removed all impurity from them and purified them completely.'"
+    },
+    {
+      "id": "33_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 21,
+      "question": "According to the teachings of the Ahlul Bayt, what does true emulation of the Prophet require?",
+      "options": [
+        "Only outward imitation of actions",
+        "Aligning one's soul with the Prophet's consciousness of Allah",
+        "Following cultural customs",
+        "Reading about his life occasionally"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) states, 'Whoever adopts his way ascends to his station' (Bihar al-Anwar), emphasizing that true emulation requires aligning one's soul with the Prophet's unwavering consciousness of Allah."
+    },
+    {
+      "id": "33_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 33,
+      "question": "According to Lady Fatimah (AS), what is the greatest divine favor?",
+      "options": [
+        "Wealth and prosperity",
+        "Good health",
+        "Recognition of the Imam",
+        "Long life"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Lady Fatimah (AS) emphasized: 'The greatest favor is recognition of the Imam, for through him, trials are repelled and blessings descend' (Kitab al-Irshad)."
+    },
+    {
+      "id": "33_17",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 9,
+      "question": "Both Shia and Sunni scholars agree that the 'unseen armies' in verse 33:9 refer exclusively to angels.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Sunni scholars generally restrict the 'unseen armies' to angels, while Shia interpretations expand the term to include the enduring spiritual presence of the Imams, rooted in their theology of Imamah as a continuum of prophetic guidance."
+    },
+    {
+      "id": "33_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 33,
+      "question": "What is a key difference between Shia and Sunni interpretation of 'Ahl al-Bayt' in verse 33:33?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia scholars reject the verse entirely",
+        "Sunni scholars like Qurtubi include the Prophet's wives, while Shia scholars limit it to Ali, Fatima, Hasan, and Husayn",
+        "There is no difference between the interpretations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sunni exegetes like Qurtubi and Razi extend 'Ahl al-Bayt' to include the Prophet's wives, while Shia scholars argue the grammatical shift specifically addresses the Prophet's immediate family: Ali, Fatima, Hasan, and Husayn."
+    },
+    {
+      "id": "33_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 21,
+      "question": "According to comparative analysis, how do Sunni and Shia traditions differ in understanding the scope of 'uswatun hasanah' (excellent pattern)?",
+      "options": [
+        "Sunni tradition includes the Imams while Shia excludes them",
+        "Shia scholars extend it to include the infallible Imams as inheritors of the Prophet's legacy",
+        "Both traditions limit it to the Prophet's companions",
+        "Neither tradition accepts this verse as authentic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes focus exclusively on the Prophet's personal example, while Shia scholars extend the concept to include the infallible Imams from the Ahl al-Bayt, whom they regard as inheritors of Muhammad's spiritual and practical legacy."
+    },
+    {
+      "id": "33_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 33,
+      "question": "Both Sunni and Shia traditions agree that the purification verse (33:33) emphasizes spiritual refinement, despite differing on who specifically constitutes the 'Ahl al-Bayt'.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions ultimately uphold the verse's core message of spiritual refinement, demonstrating how shared scripture accommodates diverse hermeneutical trajectories within Islamic thought, though they differ on the scope of 'Ahl al-Bayt'."
+    }
+  ]
+}

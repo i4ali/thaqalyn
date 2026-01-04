@@ -1,0 +1,275 @@
+{
+  "surahNumber": 20,
+  "questions": [
+    {
+      "id": "20_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what are the opening letters 'Ta-Ha' often interpreted to mean?",
+      "options": [
+        "A command to worship",
+        "The name of Prophet Muhammad or an address meaning 'O man'",
+        "The name of an angel",
+        "A chapter number"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The muqatta'at 'Ta-Ha' are often interpreted as either a name of Prophet Muhammad (pbuh) or an affectionate address meaning 'O man' or 'O you', serving as divine intimacy and reassurance."
+    },
+    {
+      "id": "20_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 21,
+      "question": "When Musa's staff transformed into a serpent, Allah told him to fear it and run away.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Allah commanded Musa: 'Seize it and fear not. We will return it to its former condition.' This teaches that divine support requires courageous action paired with complete trust in Allah's wisdom."
+    },
+    {
+      "id": "20_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 22,
+      "question": "What was the second miraculous sign given to Musa at the burning bush?",
+      "options": [
+        "His staff split the sea",
+        "His hand emerged radiantly white without disease",
+        "Fire descended from heaven",
+        "Water sprang from a rock"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah commanded Musa to place his hand under his arm, and when he withdrew it, it shone radiantly white without any illness, confirming his prophethood."
+    },
+    {
+      "id": "20_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 83,
+      "question": "What did Allah ask Musa when he hastened to Mount Tur ahead of his people?",
+      "options": [
+        "Why did you leave Egypt?",
+        "What made you hasten from your people?",
+        "Why did you bring your brother?",
+        "When will you return?"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah asked: 'What made you hasten from your people, O Moses?' This gentle probe highlights the balance between personal spiritual obligations and communal responsibility."
+    },
+    {
+      "id": "20_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 20,
+      "question": "According to Tabatabai in Al-Mizan, what does Musa's staff transforming into a serpent represent?",
+      "options": [
+        "A simple magic trick",
+        "A manifestation of tajalli (divine revelation) transcending natural causality",
+        "An accident of nature",
+        "Pharaoh's punishment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai portrays the staff's transformation as a manifestation of tajalli (divine revelation), revealing Allah's absolute authority over form and substance, transcending natural causality."
+    },
+    {
+      "id": "20_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 21,
+      "question": "According to Al-Tabrisi, the restoration of Musa's staff to its original form affirms the Shia principle of bada' (divine will in mutable realities).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Al-Tabrisi in Majma al-Bayan notes that 'We will return it to its former condition' underscores Allah's absolute authority over creation, affirming bada' which rejects rigid predestination."
+    },
+    {
+      "id": "20_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 22,
+      "question": "In classical Shia exegesis, what does the 'whiteness' of Musa's hand symbolize?",
+      "options": [
+        "A skin disease",
+        "The luminous nature of divine authority (wilayah) and soul purification",
+        "Fear and weakness",
+        "Punishment for disobedience"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai emphasizes that the 'whiteness' transcends mere physical transformation, symbolizing the luminous nature of divine authority (wilayah) and purification of the soul through proximity to Allah."
+    },
+    {
+      "id": "20_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 83,
+      "question": "According to Shia theology, how does Musa's temporary absence from his people connect to the doctrine of Imamah?",
+      "options": [
+        "It proves prophets can abandon their duties",
+        "It shows the fragility of human commitment without sustained divine guidance",
+        "It suggests leaders should never pray",
+        "It indicates communities don't need guidance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia theology connects this episode to Imamah: just as Musa's absence led to his people's error with the golden calf, it emphasizes the eternal need for divine guardianship through the Imams."
+    },
+    {
+      "id": "20_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 21,
+      "question": "How do contemporary scholars like Ayatollah Shirazi interpret the command 'Seize it and fear not'?",
+      "options": [
+        "As merely historical narrative",
+        "As a metaphor for confronting crises with faith-driven courage",
+        "As advice to avoid dangerous situations",
+        "As permission to practice magic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Ayatollah Naser Makarem Shirazi emphasize this verse as a metaphor for confronting crises with faith-driven courage, applicable to modern challenges like climate disruption or systemic injustice."
+    },
+    {
+      "id": "20_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 22,
+      "question": "Modern scholars interpret Musa's 'hand without disease' as a call for activism untainted by corruption.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Dr. Reza Shah-Kazemi and others extend the symbolism to social justice movements, interpreting the 'hand without disease' as a call for activism untainted by corruption in an era of systemic inequality."
+    },
+    {
+      "id": "20_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 83,
+      "question": "What modern concept does Musa's choice to delegate to Harun and trust his community align with?",
+      "options": [
+        "Micromanagement",
+        "Distributed leadership",
+        "Authoritarian control",
+        "Complete isolation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Musa's choice to seek divine pleasure over micromanaging his community aligns with 'distributed leadership' in organizational theory, where empowering others fosters collective resilience."
+    },
+    {
+      "id": "20_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 115,
+      "question": "How do contemporary scholars interpret Adam's 'forgetfulness' in verse 115?",
+      "options": [
+        "As deliberate sin",
+        "As an intrinsic aspect of human imperfection requiring divine grace to overcome",
+        "As evidence prophets are unreliable",
+        "As a permanent flaw in humanity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars like Ayatollah Jafar Subhani emphasize that Adam's lapse is not a moral failure but an intrinsic aspect of human imperfection, aligned with the view that humans grow through trial and error with divine grace."
+    },
+    {
+      "id": "20_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 21,
+      "question": "According to Imam Ja'far al-Sadiq, what truth about leadership does Musa's hastening to Mount Tur reveal?",
+      "options": [
+        "Leaders should always work alone",
+        "When the representative of truth is absent, falsehood finds its path",
+        "Communities don't need spiritual guidance",
+        "Hastening is always wrong"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq explains: 'When the representative of truth is absent, falsehood finds its path' (Bihar al-Anwar), warning against abandoning divinely appointed guides."
+    },
+    {
+      "id": "20_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 84,
+      "question": "According to Ahlul Bayt teachings, Musa's hastening was rooted in a pure longing for Allah's pleasure, not mere physical speed.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali teaches that 'Actions are measured by intentions,' and Musa's hastening was rooted in pure longing for Allah's pleasure, not recklessness - the soul's leap toward its Creator."
+    },
+    {
+      "id": "20_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 115,
+      "question": "According to Imam Ja'far al-Sadiq in Tafsir al-Qummi, what caused Adam's forgetfulness?",
+      "options": [
+        "A lack of intelligence",
+        "His reliance on himself instead of clinging to the light of Muhammad and his progeny",
+        "Iblis forced him to forget",
+        "The tree made him forget"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq explains: 'Adam's forgetfulness was his reliance on his own self instead of clinging to the rope of the chosen ones. Had he sought refuge in the light of Muhammad and his progeny, he would not have faltered.'"
+    },
+    {
+      "id": "20_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 116,
+      "question": "According to Lady Fatimah's sermon at Fadak, what happens to those who turn away from the wilayah of Ahlul Bayt?",
+      "options": [
+        "They become wealthy",
+        "They are like a branch severed from its roots, destined to wither",
+        "They gain special powers",
+        "Nothing happens to them"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lady Fatimah declared: 'Allah made obedience to us the foundation of His religion. The one who turns away from our Wilayah is like a branch severed from its roots, destined to wither.'"
+    },
+    {
+      "id": "20_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 21,
+      "question": "On what aspect do both Shia and Sunni exegetes broadly agree regarding verse 21 (the restoration of Musa's staff)?",
+      "options": [
+        "The verse has no meaning",
+        "It demonstrates Allah's absolute authority over natural laws and tests prophetic resolve",
+        "It is purely metaphorical with no literal meaning",
+        "Only Sunni scholars commented on it"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Tabari (Sunni) and Tabatabai (Shia) in Al-Mizan highlight this event as a demonstration of Allah's absolute authority over natural laws and a test of prophetic resolve."
+    },
+    {
+      "id": "20_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 83,
+      "question": "Shia and Sunni scholars agree that Musa's hastening reflects an excusable act driven by spiritual eagerness for divine communion.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions agree the verse references Musa's departure to receive divine revelation, with scholars like Ibn Kathir (Sunni) and Tabrisi (Shia) framing it as driven by noble spiritual intent."
+    },
+    {
+      "id": "20_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 115,
+      "question": "How does Shia exegesis differ from Sunni interpretation regarding Adam's lack of 'azm' (determination)?",
+      "options": [
+        "Shia view it as a moral failure while Sunnis don't",
+        "Shia interpret it as a temporary lapse in vigilance rather than a moral failing, preserving prophetic infallibility",
+        "Both interpret it identically",
+        "Neither tradition discusses this verse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia exegetes like Tabatabai interpret the 'lack of determination' as a temporary lapse in vigilance rather than a moral failing, preserving the doctrine of comprehensive prophetic infallibility (ismah)."
+    },
+    {
+      "id": "20_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 116,
+      "question": "Both Shia and Sunni exegetes agree that the angels' prostration to Adam was an act of worship towards Adam, not obedience to Allah.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Both traditions concur that the prostration (sajdu) signifies an act of reverence and obedience to Allah's will, not worship of Adam. Worship belongs solely to Allah."
+    }
+  ]
+}

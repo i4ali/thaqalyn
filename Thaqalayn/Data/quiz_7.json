@@ -1,0 +1,205 @@
+{
+  "surahNumber": 7,
+  "questions": [
+    {
+      "id": "7_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What are the disconnected letters (huruf muqatta'at) at the beginning of Surah Al-A'raf?",
+      "options": ["Alif-Lam-Ra", "Alif-Lam-Meem-Sad", "Ha-Meem", "Ya-Seen"],
+      "correctAnswer": "B",
+      "explanation": "Surah Al-A'raf begins with 'Alif-Lam-Meem-Sad' (Almss). According to the tafsir, scholars like Allama Tabatabai explain these letters as possessing mystical significance, with some traditions connecting them to the divine names and attributes known fully only to Allah and His chosen guides."
+    },
+    {
+      "id": "7_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 12,
+      "question": "According to Surah Al-A'raf, Iblis refused to prostrate to Adam because he believed fire was superior to clay.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "In verse 12, when Allah asked Iblis why he did not prostrate, he replied 'I am better than him. You created me from fire and created him from clay.' This arrogance (istikbar) based on his perceived material superiority led to his downfall."
+    },
+    {
+      "id": "7_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 46,
+      "question": "What is Al-A'raf (The Heights) described as in Surah Al-A'raf?",
+      "options": ["A mountain in Paradise", "A partition between Paradise and Hell", "The highest level of Heaven", "A bridge over Hell"],
+      "correctAnswer": "B",
+      "explanation": "The tafsir explains that Al-A'raf refers to an elevated partition or barrier between Paradise and Hell. On it stand people whose good and bad deeds are equal, awaiting Allah's mercy before being admitted to Paradise."
+    },
+    {
+      "id": "7_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 23,
+      "question": "What prayer did Adam and Hawwa recite after they realized their sin?",
+      "options": ["Our Lord, forgive us our sins", "Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers", "Our Lord, grant us good in this world and in the Hereafter", "Our Lord, make us submissive to You"],
+      "correctAnswer": "B",
+      "explanation": "In verse 23, Adam and Hawwa acknowledged their wrongdoing with the supplication: 'Our Lord, we have wronged ourselves (zalamna anfusana), and if You do not forgive us and have mercy upon us, we will surely be among the losers.' This teaches that sin is fundamentally self-harm."
+    },
+    {
+      "id": "7_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 172,
+      "question": "What is the 'Mithaq' (Covenant) described in verse 172 according to classical Shia scholarship?",
+      "options": ["A contract made with Prophet Muhammad", "A primordial covenant where all souls testified to Allah's lordship before creation", "A pact made between the prophets", "An agreement made at Mount Sinai"],
+      "correctAnswer": "B",
+      "explanation": "According to Allama Tabatabai in Al-Mizan, verse 172 describes a metaphysical event in the pre-existential realm ('alam al-dharr) where all human souls were brought into being and testified to Allah's lordship when asked 'Am I not your Lord?' (Alastu bi-Rabbikum). This establishes the innate disposition (fitrah) toward divine truth."
+    },
+    {
+      "id": "7_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 157,
+      "question": "According to Shia exegesis, the 'light sent down with him' in verse 157 refers exclusively to the Quran.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Shia sources, particularly Al-Tabatabai's Al-Mizan, interpret the 'light sent down with him' as encompassing both the Quran AND the luminous authority (wilayah) of the Prophet's household (Ahlul Bayt), reflecting the Hadith al-Thaqalayn's duality of the 'Book' and the 'Progeny.'"
+    },
+    {
+      "id": "7_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 172,
+      "question": "According to Tabrisi in Majma al-Bayan, what purpose does the primordial covenant serve?",
+      "options": ["To establish prophetic succession", "To negate any plea of ignorance on the Day of Resurrection", "To determine who will enter Paradise", "To separate believers from disbelievers"],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi in Majma al-Bayan explains that the covenant serves to negate any plea of ignorance on the Day of Resurrection, affirming humanity's intrinsic capacity to discern truth. No soul can claim they were unaware of Allah's existence since this truth is imprinted within us."
+    },
+    {
+      "id": "7_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 11,
+      "question": "What does the Shia concept of 'lutf' (divine grace) mean in relation to verse 172's covenant?",
+      "options": ["Allah forces humans to believe", "Allah facilitates conditions for human accountability by embedding knowledge of His Lordship within creation", "Allah chooses who will be saved arbitrarily", "Allah removes all burdens from believers"],
+      "correctAnswer": "B",
+      "explanation": "The tafsir explains that theologically, verse 172 reinforces the principle of lutf (divine grace), wherein Allah facilitates the conditions for human accountability by embedding the knowledge of His Lordship within creation. This makes humans responsible for recognizing divine truth."
+    },
+    {
+      "id": "7_9",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 172,
+      "question": "Contemporary scholars see parallels between the Quranic concept of fitrah (innate disposition) and modern psychology's exploration of an inborn moral compass.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "According to the tafsir, Ayatollah Naser Makarem Shirazi and other contemporary scholars interpret the primordial covenant as the foundation of fitrah. This resonates with modern psychology's exploration of an inborn moral compass, as studies suggest humans possess universal ethical intuitions."
+    },
+    {
+      "id": "7_10",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 157,
+      "question": "How do contemporary scholars interpret the 'burdens and shackles' that the Prophet relieves humanity from?",
+      "options": ["Only religious rituals from previous traditions", "Systemic oppressions including economic inequality, racial injustice, and environmental exploitation", "Physical chains and imprisonment", "Only spiritual sins"],
+      "correctAnswer": "B",
+      "explanation": "Modern interpretations often highlight the 'burdens and shackles' as systemic oppressions - economic inequality, racial injustice, or environmental exploitation. The Prophet's mandate to 'enjoin good' resonates with today's social movements for climate action and campaigns against poverty."
+    },
+    {
+      "id": "7_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 172,
+      "question": "According to Dr. Reza Shah-Kazemi, what does the primordial covenant call humanity to?",
+      "options": ["Individual salvation only", "Collective responsibility toward each other and the planet", "Rejection of all worldly affairs", "Isolation from society"],
+      "correctAnswer": "B",
+      "explanation": "Scholar Dr. Reza Shah-Kazemi frames the covenant as a call to collective responsibility. Just as the covenant binds us to God, it binds us to one another and the planet - a theme emphasizing stewardship of Earth as a shared spiritual duty."
+    },
+    {
+      "id": "7_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 173,
+      "question": "According to contemporary interpretation, the verse 173's rejection of 'blaming ancestors' aligns with existentialist themes of radical personal responsibility.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The tafsir notes that philosophically, verse 173 intersects with existentialist themes of radical responsibility - Sartre's insistence that 'man is condemned to be free' mirrors the Quranic demand to own one's moral choices rather than hiding behind inherited traditions."
+    },
+    {
+      "id": "7_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 172,
+      "question": "According to Imam Jaafar al-Sadiq, what did the souls testify to in the primordial covenant?",
+      "options": ["Only Allah's lordship", "Allah's lordship, the prophethood of Muhammad, and the wilayah of Ali and the Imams", "The five pillars of Islam", "The Day of Judgment"],
+      "correctAnswer": "B",
+      "explanation": "Imam Jaafar al-Sadiq teaches that when Allah drew forth all human souls, 'Allah made them testify first to His lordship, then to the prophethood of Muhammad, and then to the wilayah of Ali and the Imams from his progeny' (Tafsir al-Qummi)."
+    },
+    {
+      "id": "7_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 157,
+      "question": "According to Imam Ja'far al-Sadiq, the 'light sent down with him' in verse 157 refers to the Wilayah of Ali and the Imams.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ja'far al-Sadiq explained: 'The light sent down with him is the Wilayah of Ali and the Imams - for they are the enduring light of Allah on Earth' (Tafsir al-Qummi). This establishes Imamah as the living manifestation of the Prophet's mission."
+    },
+    {
+      "id": "7_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 172,
+      "question": "What warning did Imam al-Baqir give about the primordial covenant?",
+      "options": ["Those who forget the covenant will be punished immediately", "He who dies without recognizing the Imam of his time dies the death of pre-Islamic ignorance", "The covenant can be renewed only once", "Only scholars need to remember the covenant"],
+      "correctAnswer": "B",
+      "explanation": "Imam al-Baqir stated: 'He who dies without recognizing the Imam of his time dies the death of pre-Islamic ignorance' - a dire warning to keep the primordial covenant alive through conscious allegiance to the living guidance of the Ahlul Bayt in every age."
+    },
+    {
+      "id": "7_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 173,
+      "question": "How did Lady Fatimah describe the role of obedience to the Ahlul Bayt?",
+      "options": ["Optional for advanced believers only", "The order for unity and protection against division", "Only for political leadership", "A temporary arrangement until the Day of Judgment"],
+      "correctAnswer": "B",
+      "explanation": "Lady Fatimah (peace be upon her) emphasized in her sermon: 'Allah made obedience to us the order for unity and our leadership a protection against division.' This shows the Ahlul Bayt's role in maintaining Muslim unity."
+    },
+    {
+      "id": "7_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 172,
+      "question": "What is the key difference between Sunni and Shia interpretation of the primordial covenant's nature?",
+      "options": ["Sunni scholars accept it while Shia scholars reject it", "Sunni exegetes often frame it metaphorically as fitrah, while Shia describe a literal pre-creation gathering of souls", "Both interpret it exactly the same way", "Only Shia scholars discuss this covenant"],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes like Qurtubi and Razi often frame the event metaphorically, aligning it with the concept of fitrah. In contrast, Shia tafsir traditions, particularly in Al-Qummi's commentary and Tusi's Al-Tibyan, describe a literal, pre-creation gathering of souls ('alam al-dharr) where all humans explicitly testified."
+    },
+    {
+      "id": "7_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 157,
+      "question": "Both Sunni and Shia scholars agree that the verse 157 affirms Muhammad's prophethood was foretold in previous Abrahamic texts.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Al-Tabari (Sunni) and Al-Tabrisi (Shia) agree the verse affirms Muhammad's prophethood in Abrahamic texts. Both traditions stress the Prophet's role as foretold in the Torah and Gospel, though they differ on some interpretive details."
+    },
+    {
+      "id": "7_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 172,
+      "question": "According to comparative analysis, what do Shia interpretations uniquely connect the primordial covenant to?",
+      "options": ["The five daily prayers", "The recognition of divine guidance through the Imams and the concept of Imamah", "Fasting during Ramadan", "The pilgrimage to Mecca"],
+      "correctAnswer": "B",
+      "explanation": "Shia interpretations connect the covenant to the recognition of divine guidance through the Imams, viewing their authority as an extension of the primordial pledge. This differs from Sunni scholars who focus on individual accountability without extending to post-prophetic leadership."
+    },
+    {
+      "id": "7_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 157,
+      "question": "Historical differences between Shia and Sunni interpretations of these verses emerged from early debates over spiritual authority after the Prophet's death.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The tafsir notes that historically, these differences emerged from early debates over spiritual authority after the Prophet's death, with Shia exegesis integrating the Imam's infallibility into cosmic narratives, while Sunni exegesis developed within caliphal frameworks prioritizing textualist approaches."
+    }
+  ]
+}

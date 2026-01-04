@@ -1,0 +1,275 @@
+{
+  "surahNumber": 26,
+  "questions": [
+    {
+      "id": "26_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What are the 'Ta-Sin-Mim' letters at the beginning of Surah Ash-Shu'ara called?",
+      "options": [
+        "Prayer words",
+        "Huruf al-Muqatta'at (disconnected letters)",
+        "Names of angels",
+        "Ancient Arabic greetings"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The letters Ta-Sin-Mim are known as Huruf al-Muqatta'at (disconnected letters), mysterious letter combinations that appear at the beginning of certain surahs, signifying the miraculous nature of the Quran."
+    },
+    {
+      "id": "26_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 69,
+      "question": "Surah Ash-Shu'ara contains the story of Prophet Ibrahim questioning his father and people about their worship of idols.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Verses 69-104 narrate Prophet Ibrahim's story, beginning with Allah's command to 'recite to them the news of Abraham' and his famous question to his father and people: 'What do you worship?'"
+    },
+    {
+      "id": "26_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 105,
+      "question": "According to Surah Ash-Shu'ara, what did the people of Nuh accuse him of?",
+      "options": [
+        "Being wealthy",
+        "Denying the messengers",
+        "Speaking foreign languages",
+        "Practicing magic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Verse 105 states 'The people of Noah denied the messengers,' highlighting the recurring pattern of prophetic rejection throughout history."
+    },
+    {
+      "id": "26_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 176,
+      "question": "Who were the 'Ashab al-Aykah' (Companions of the Thicket) mentioned in Surah Ash-Shu'ara?",
+      "options": [
+        "Followers of Prophet Musa",
+        "The people to whom Prophet Shu'ayb was sent",
+        "Companions of Prophet Muhammad",
+        "Angels in Paradise"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Ashab al-Aykah (Companions of the Thicket) were the people of Madyan to whom Prophet Shu'ayb was sent, known for their fraudulent trade practices and economic corruption."
+    },
+    {
+      "id": "26_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 68,
+      "question": "According to classical Shia tafsir, what do the Divine names 'Al-Aziz' and 'Al-Rahim' represent when paired together?",
+      "options": [
+        "Only punishment and wrath",
+        "Balance between divine power/justice and mercy/compassion",
+        "Creation and destruction",
+        "Knowledge and wisdom only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical scholars like Tabatabai explain that Al-Aziz (The Mighty) and Al-Rahim (The Merciful) together represent the perfect balance of divine attributes—power tempered with compassion, justice balanced with mercy."
+    },
+    {
+      "id": "26_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 70,
+      "question": "According to Tabrisi in Majma al-Bayan, Ibrahim's questioning of idol worship was a rhetorical strategy to expose the irrationality of shirk (polytheism).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabrisi explains that Ibrahim's question 'What do you worship?' was a deliberate rhetorical approach to make the idol-worshippers confront the logical absurdity of worshipping man-made objects that cannot hear, see, or benefit anyone."
+    },
+    {
+      "id": "26_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 106,
+      "question": "According to classical Shia exegesis, what quality did Prophet Nuh emphasize when calling his people?",
+      "options": [
+        "Worldly success",
+        "Taqwa (God-consciousness)",
+        "Military strength",
+        "Tribal loyalty"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical commentators emphasize that Nuh called his people to taqwa (God-consciousness and piety), urging them to be mindful of Allah and obey His messenger."
+    },
+    {
+      "id": "26_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 177,
+      "question": "What specific sin were the Ashab al-Aykah condemned for according to classical tafsir?",
+      "options": [
+        "Disbelief only",
+        "Fraudulent business practices and cheating in measures",
+        "Worshipping the sun",
+        "Abandoning prayer"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical scholars highlight that Shu'ayb's people were specifically condemned for economic corruption—giving short measure, cheating in weights, and defrauding people in commercial transactions."
+    },
+    {
+      "id": "26_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 69,
+      "question": "How do contemporary scholars interpret Ibrahim's intellectual approach to confronting idolatry?",
+      "options": [
+        "As outdated methodology",
+        "As a model for rational discourse and critical thinking in faith",
+        "As applicable only to ancient times",
+        "As purely emotional appeal"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Ayatollah Makarem Shirazi view Ibrahim's questioning approach as a timeless model for using reason and critical thinking to establish faith, showing that Islam encourages intellectual inquiry."
+    },
+    {
+      "id": "26_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 104,
+      "question": "The refrain 'Indeed, your Lord is the All-Mighty, the All-Merciful' appears multiple times in Surah Ash-Shu'ara, serving as a structural device emphasizing divine attributes.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "This powerful refrain appears repeatedly throughout the surah after each prophetic narrative, serving as both a literary device and a theological reminder of Allah's perfect balance of power and mercy."
+    },
+    {
+      "id": "26_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 177,
+      "question": "What contemporary lesson do modern scholars derive from the story of Ashab al-Aykah?",
+      "options": [
+        "Environmental protection only",
+        "The importance of economic justice and ethical commerce",
+        "The value of agriculture",
+        "The need for isolation from society"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars emphasize that the story teaches timeless principles of economic ethics—fair dealing, honest weights and measures, and the social responsibility inherent in commercial transactions."
+    },
+    {
+      "id": "26_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 105,
+      "question": "According to contemporary tafsir, what does Prophet Nuh's 950-year mission demonstrate?",
+      "options": [
+        "The futility of preaching",
+        "Patience, perseverance, and unwavering commitment to divine mission",
+        "That prophets lived longer in ancient times",
+        "The importance of giving up on stubborn people"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars highlight Nuh's extraordinary patience and perseverance over 950 years as an exemplary model of steadfastness in calling to truth despite persistent rejection."
+    },
+    {
+      "id": "26_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 70,
+      "question": "According to Ahlul Bayt teachings, what does Ibrahim's willingness to oppose his own father's beliefs demonstrate?",
+      "options": [
+        "Disrespect for elders",
+        "That truth (haqq) must be prioritized over familial and tribal loyalties",
+        "The importance of family disputes",
+        "That children should always disagree with parents"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ahlul Bayt teachings emphasize that Ibrahim's stance shows that commitment to divine truth (haqq) and tawhid must take precedence over all other loyalties, even familial bonds, while maintaining respectful discourse."
+    },
+    {
+      "id": "26_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 68,
+      "question": "According to traditions from the Ahlul Bayt, the prophetic stories in Surah Ash-Shu'ara are meant to strengthen the believers and provide solace to Prophet Muhammad facing rejection.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ahlul Bayt teachings explain that these narratives of earlier prophets served to console Prophet Muhammad and strengthen believers by showing that all prophets faced rejection, yet divine truth ultimately prevailed."
+    },
+    {
+      "id": "26_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 106,
+      "question": "What spiritual concept from Ahlul Bayt teachings is exemplified by Prophet Nuh's declaration 'I am a trustworthy messenger to you'?",
+      "options": [
+        "Wealth accumulation",
+        "Amanah (trustworthiness) as essential to spiritual leadership",
+        "Political authority",
+        "Tribal supremacy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ahlul Bayt teachings emphasize that amanah (trustworthiness) is a fundamental quality of divine leadership, connecting to the broader concept of wilayah and the trustworthiness required of all who guide the community."
+    },
+    {
+      "id": "26_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 177,
+      "question": "According to Ahlul Bayt teachings, the economic ethics taught by Prophet Shu'ayb connect to the broader Islamic principle that social justice is inseparable from spiritual devotion.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ahlul Bayt teachings consistently emphasize that worship without social justice is incomplete, and Shu'ayb's mission demonstrates that economic ethics and fair dealing are integral to true faith and taqwa."
+    },
+    {
+      "id": "26_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 69,
+      "question": "What do both Sunni and Shia scholars agree upon regarding Ibrahim's method of challenging idolatry?",
+      "options": [
+        "It was ineffective",
+        "It demonstrates the Quranic emphasis on reason and rational argumentation in establishing faith",
+        "It only applies to ancient polytheism",
+        "It was purely symbolic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Sunni and Shia scholars across traditions agree that Ibrahim's rational questioning approach exemplifies the Quran's emphasis on using intellect and logical argumentation to establish the truth of tawhid."
+    },
+    {
+      "id": "26_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 104,
+      "question": "Both Sunni and Shia scholars agree that the repeated refrain 'your Lord is the All-Mighty, the All-Merciful' in Surah Ash-Shu'ara emphasizes the unity of divine power and compassion.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Scholars from both traditions agree that this refrain, appearing after each prophetic narrative, serves to reinforce the central Quranic message of tawhid and the perfect balance of Allah's attributes of majesty and mercy."
+    },
+    {
+      "id": "26_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 105,
+      "question": "How do Sunni and Shia scholars differ in their emphasis on the prophetic narratives in Surah Ash-Shu'ara?",
+      "options": [
+        "They completely disagree on their meaning",
+        "Shia scholars emphasize the connection to wilayah and Imamate, while Sunni scholars focus more on prophetic virtues",
+        "Sunni scholars reject these stories entirely",
+        "There are no differences whatsoever"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While both traditions accept the core narratives, Shia scholars often draw connections between prophetic suffering and the struggles of the Ahlul Bayt and Imams, while Sunni scholars typically emphasize the universal virtues and lessons of prophetic patience."
+    },
+    {
+      "id": "26_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 177,
+      "question": "What shared conclusion do both Sunni and Shia scholars draw from Prophet Shu'ayb's story regarding faith and action?",
+      "options": [
+        "Faith alone is sufficient",
+        "Actions are more important than faith",
+        "True iman (faith) must manifest in ethical conduct, including economic justice",
+        "Economic matters are separate from religion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both Sunni and Shia scholars agree that Shu'ayb's story demonstrates the inseparability of faith and righteous action, showing that true iman must translate into ethical behavior, particularly in social and economic dealings."
+    }
+  ]
+}

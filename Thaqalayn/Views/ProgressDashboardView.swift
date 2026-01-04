@@ -11,7 +11,14 @@ struct ProgressDashboardView: View {
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var dataManager = DataManager.shared
+    @StateObject private var quizManager = QuizManager.shared
+    @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
+
+    @State private var selectedQuizSurah: Int?
+    @State private var showingQuizDetail = false
+    @State private var showingQuiz = false
+    @State private var showingPaywall = false
 
     var body: some View {
         NavigationView {
@@ -42,6 +49,9 @@ struct ProgressDashboardView: View {
                         // Weekly Calendar
                         weeklyCalendarSection
 
+                        // Quiz Progress
+                        quizProgressSection
+
                         // Badge Collection
                         badgeCollectionSection
 
@@ -62,6 +72,37 @@ struct ProgressDashboardView: View {
                     }
                     .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
                 }
+            }
+            .sheet(isPresented: $showingQuizDetail) {
+                if let surahNumber = selectedQuizSurah,
+                   let surah = dataManager.getSurah(number: surahNumber)?.surah {
+                    QuizCellDetailSheet(
+                        surah: surah,
+                        bestResult: quizManager.bestResult(for: surahNumber),
+                        onTakeQuiz: {
+                            showingQuizDetail = false
+                            if premiumManager.canAccessQuiz(surahNumber: surahNumber) {
+                                showingQuiz = true
+                            } else {
+                                showingPaywall = true
+                            }
+                        },
+                        onDismiss: { showingQuizDetail = false }
+                    )
+                    .presentationDetents([.height(280)])
+                }
+            }
+            .fullScreenCover(isPresented: $showingQuiz) {
+                if let surahNumber = selectedQuizSurah,
+                   let surah = dataManager.getSurah(number: surahNumber)?.surah {
+                    QuizView(
+                        surah: surah,
+                        onDismiss: { showingQuiz = false }
+                    )
+                }
+            }
+            .sheet(isPresented: $showingPaywall) {
+                PaywallView()
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
@@ -297,6 +338,56 @@ struct ProgressDashboardView: View {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEE"
         return formatter.string(from: date).prefix(1).uppercased()
+    }
+
+    // MARK: - Quiz Progress Section
+
+    private var quizProgressSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            // Section Header
+            HStack {
+                Image(systemName: "brain.head.profile")
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundColor(.purple)
+
+                Text("Quiz Progress")
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundColor(themeManager.primaryText)
+
+                Spacer()
+
+                Text("\(quizManager.completedSurahCount)/114")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(themeManager.secondaryText)
+            }
+
+            // Summary Stats Row
+            HStack(spacing: 12) {
+                QuizStatPill(
+                    label: "Avg Score",
+                    value: String(format: "%.0f%%", quizManager.averageScorePercentage * 100),
+                    color: .green
+                )
+            }
+
+            // Heatmap Grid
+            QuizHeatmapGrid(
+                quizManager: quizManager,
+                onCellTap: { surahNumber in
+                    selectedQuizSurah = surahNumber
+                    showingQuizDetail = true
+                }
+            )
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(themeManager.glassEffect)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.purple.opacity(0.3), lineWidth: 1)
+                )
+        )
     }
 
     // MARK: - Badge Collection Section
@@ -548,6 +639,234 @@ struct RecentActivityRow: View {
             let days = Int(interval / 86400)
             return "\(days)d ago"
         }
+    }
+}
+
+// MARK: - Quiz Stat Pill
+
+struct QuizStatPill: View {
+    let label: String
+    let value: String
+    let color: Color
+    @StateObject private var themeManager = ThemeManager.shared
+
+    var body: some View {
+        HStack(spacing: 6) {
+            Text(label)
+                .font(.system(size: 12, weight: .medium))
+                .foregroundColor(themeManager.secondaryText)
+
+            Text(value)
+                .font(.system(size: 14, weight: .bold))
+                .foregroundColor(color)
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 8)
+        .background(
+            Capsule()
+                .fill(color.opacity(0.15))
+        )
+    }
+}
+
+// MARK: - Quiz Heatmap Grid
+
+struct QuizHeatmapGrid: View {
+    @ObservedObject var quizManager: QuizManager
+    let onCellTap: (Int) -> Void
+    @StateObject private var themeManager = ThemeManager.shared
+
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 12)
+
+    var body: some View {
+        LazyVGrid(columns: columns, spacing: 4) {
+            ForEach(1...114, id: \.self) { surahNumber in
+                QuizHeatmapCell(
+                    surahNumber: surahNumber,
+                    bestResult: quizManager.bestResult(for: surahNumber),
+                    onTap: { onCellTap(surahNumber) }
+                )
+            }
+        }
+    }
+}
+
+// MARK: - Quiz Heatmap Cell
+
+struct QuizHeatmapCell: View {
+    let surahNumber: Int
+    let bestResult: QuizResult?
+    let onTap: () -> Void
+    @StateObject private var themeManager = ThemeManager.shared
+
+    private var scorePercentage: Double? {
+        guard let result = bestResult else { return nil }
+        return Double(result.score) / Double(result.totalQuestions)
+    }
+
+    private var cellColor: Color {
+        guard let pct = scorePercentage else {
+            return themeManager.tertiaryBackground
+        }
+        switch pct {
+        case 1.0:
+            return .yellow  // Perfect - Hafiz
+        case 0.8..<1.0:
+            return .green  // Scholar
+        case 0.6..<0.8:
+            return Color.green.opacity(0.7)  // Student
+        case 0.4..<0.6:
+            return Color.green.opacity(0.5)  // Seeker
+        default:
+            return Color.green.opacity(0.3)  // Beginner
+        }
+    }
+
+    var body: some View {
+        Button(action: onTap) {
+            Text("\(surahNumber)")
+                .font(.system(size: 10, weight: .medium))
+                .foregroundColor(bestResult != nil ? .white : themeManager.tertiaryText)
+                .frame(width: 26, height: 26)
+                .background(
+                    RoundedRectangle(cornerRadius: 4)
+                        .fill(cellColor)
+                )
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+}
+
+// MARK: - Quiz Cell Detail Sheet
+
+struct QuizCellDetailSheet: View {
+    let surah: Surah
+    let bestResult: QuizResult?
+    let onTakeQuiz: () -> Void
+    let onDismiss: () -> Void
+    @StateObject private var themeManager = ThemeManager.shared
+
+    private var scorePercentage: Double {
+        guard let result = bestResult else { return 0 }
+        return Double(result.score) / Double(result.totalQuestions)
+    }
+
+    private var understandingLevel: (title: String, icon: String, color: Color) {
+        switch scorePercentage {
+        case 1.0:
+            return ("Hafiz", "crown.fill", .yellow)
+        case 0.8..<1.0:
+            return ("Scholar", "book.fill", .purple)
+        case 0.6..<0.8:
+            return ("Student", "graduationcap.fill", .blue)
+        case 0.4..<0.6:
+            return ("Seeker", "magnifyingglass", .green)
+        default:
+            return ("Beginner", "leaf.fill", .gray)
+        }
+    }
+
+    var body: some View {
+        VStack(spacing: 20) {
+            // Header
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Surah \(surah.number)")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+
+                    Text(surah.englishName)
+                        .font(.system(size: 22, weight: .bold))
+                        .foregroundColor(themeManager.primaryText)
+                }
+
+                Spacer()
+
+                Button(action: onDismiss) {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.system(size: 24))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+            }
+
+            // Score Section
+            if let result = bestResult {
+                HStack(spacing: 24) {
+                    // Score
+                    VStack(spacing: 4) {
+                        Text("\(result.score)/\(result.totalQuestions)")
+                            .font(.system(size: 32, weight: .bold))
+                            .foregroundColor(.green)
+
+                        Text("Best Score")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                    }
+
+                    // Level Badge
+                    VStack(spacing: 4) {
+                        ZStack {
+                            Circle()
+                                .fill(understandingLevel.color.opacity(0.2))
+                                .frame(width: 48, height: 48)
+
+                            Image(systemName: understandingLevel.icon)
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundColor(understandingLevel.color)
+                        }
+
+                        Text(understandingLevel.title)
+                            .font(.system(size: 12, weight: .semibold))
+                            .foregroundColor(understandingLevel.color)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(themeManager.secondaryBackground.opacity(0.5))
+                )
+            } else {
+                // Not attempted
+                VStack(spacing: 8) {
+                    Image(systemName: "questionmark.circle")
+                        .font(.system(size: 40))
+                        .foregroundColor(themeManager.tertiaryText)
+
+                    Text("Not attempted yet")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(themeManager.secondaryBackground.opacity(0.5))
+                )
+            }
+
+            // Take Quiz Button
+            Button(action: onTakeQuiz) {
+                HStack {
+                    Image(systemName: "brain.head.profile")
+                    Text(bestResult != nil ? "Retake Quiz" : "Take Quiz")
+                        .font(.system(size: 16, weight: .semibold))
+                }
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .background(
+                    LinearGradient(
+                        colors: [.purple, .blue],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+                .cornerRadius(12)
+            }
+        }
+        .padding(20)
+        .background(themeManager.primaryBackground)
     }
 }
 

@@ -1,0 +1,140 @@
+{
+  "surahNumber": 51,
+  "questions": [
+    {
+      "id": "51_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 41,
+      "question": "According to the tafsir, what does the 'barren wind' (al-rih al-'aqeem) sent against the people of 'Aad symbolize?",
+      "options": [
+        "A gentle breeze of warning",
+        "A devastating, rainless storm as divine punishment",
+        "A wind that brought fertility",
+        "A metaphor for economic hardship"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The 'barren wind' refers to a devastating, rainless storm sent as punishment after the tribe of 'Aad persistently rejected Prophet Hud's calls to monotheism and moral reform."
+    },
+    {
+      "id": "51_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 56,
+      "question": "According to verse 51:56, the purpose of creating jinn and mankind was solely for ritual prayers and fasting.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The verse establishes worship ('ibadah) as the axis of existence, but Shia tafsir explains that 'ibadah transcends ritual acts, encompassing total submission to Allah's will through thought, action, and devotion."
+    },
+    {
+      "id": "51_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 40,
+      "question": "According to classical Shia exegesis, what does Pharaoh's drowning in Surah 51:40 demonstrate?",
+      "options": [
+        "That water is dangerous",
+        "That military power guarantees victory",
+        "The inescapability of divine justice when rejecting truth",
+        "That Moses failed in his mission"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Classical Shia commentators emphasize that Pharaoh's drowning symbolizes the inevitable consequence of rejecting divine guidance, as his claim to divinity represented the peak of human arrogance (istikbar)."
+    },
+    {
+      "id": "51_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 56,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does 'liya'budun' (to worship Me) establish in verse 51:56?",
+      "options": [
+        "That Allah needs something from creation",
+        "Worship as the ultimate wisdom (hikma) of creation, not its causal purpose",
+        "That only jinn must worship",
+        "That worship is optional"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai explains that the phrase establishes worship as the ultimate wisdom (hikma) of creation rather than its causal purpose (ghaya), since Allah's perfection requires no benefit from creation."
+    },
+    {
+      "id": "51_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 41,
+      "question": "How do contemporary Shia scholars like Ayatollah Makarem Shirazi connect the story of 'Aad's destruction to modern issues?",
+      "options": [
+        "They view it only as ancient history",
+        "They link it to climate crisis and environmental exploitation",
+        "They dismiss its relevance today",
+        "They interpret it as referring to space exploration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars frame the 'barren wind' as symbolizing divine retribution for societal corruption and environmental exploitation, connecting it to modern climate disasters as manifestations of systematic greed."
+    },
+    {
+      "id": "51_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 52,
+      "question": "According to contemporary interpretation, the pattern of calling prophets 'magicians' or 'madmen' persists today in the dismissal of ethical or spiritual guidance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars note this pattern persists today, manifesting in the dismissal of ethical or spiritual guidance that challenges entrenched power structures or societal norms."
+    },
+    {
+      "id": "51_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 41,
+      "question": "According to Imam Jafar al-Sadiq (AS), what caused 'Aad's hearts to become 'as barren as the wind that destroyed them'?",
+      "options": [
+        "Their excessive wealth",
+        "Their arrogance that led them to reject prophetic guidance",
+        "Their geographical location",
+        "Their agricultural practices"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq explained that 'Aad's arrogance led them to reject prophetic guidance, and thus their hearts became spiritually barren, representing souls severed from the nourishing springs of Wilayah."
+    },
+    {
+      "id": "51_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 56,
+      "question": "According to Imam Sadiq (AS), true worship is only prolonged bowing and prostration without contemplation.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Imam Sadiq (AS) explained: 'Worship is not merely prolonged bowing and prostration. True worship is contemplating Allah's creation and recognizing His proofs [the Imams].'"
+    },
+    {
+      "id": "51_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 56,
+      "question": "What is a key interpretive difference between Shia and Sunni scholars regarding worship in verse 51:56?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia exegetes integrate the concept of Wilayah (divine guardianship) into worship's framework",
+        "Both traditions interpret it identically",
+        "Shia scholars deny the importance of worship"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia exegetes often integrate the concept of Wilayah (divinely ordained guardianship) into worship's framework, viewing recognition of the Imams' role as inseparable from true monotheism."
+    },
+    {
+      "id": "51_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 52,
+      "question": "According to the comparative analysis, what do both Sunni and Shia scholars agree upon regarding verse 51:52?",
+      "options": [
+        "That prophets were sometimes actually magicians",
+        "That the verse is only about ancient history",
+        "That the verse shows a recurring pattern of rejecting divine messengers through false accusations",
+        "That the accusations against prophets were justified"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both traditions converge on the verse's core message: communities throughout history have rejected divine messengers through accusations of sorcery or madness, highlighting a recurring pattern of human obstinacy."
+    }
+  ]
+}

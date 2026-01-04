@@ -1,0 +1,270 @@
+{
+  "surahNumber": 36,
+  "questions": [
+    {
+      "id": "36_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the opening 'Ya Sin' of this surah consist of?",
+      "options": [
+        "Two Arabic words meaning 'O Human'",
+        "Two Arabic letters from the Huruf Muqatta'at (disjointed letters)",
+        "A greeting to the Prophet",
+        "An abbreviation for a scholar's name"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The opening 'Ya Sin' consists of two Arabic letters from the Huruf Muqatta'at - mysterious disjointed letters appearing at the start of several Quranic chapters."
+    },
+    {
+      "id": "36_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "Surah Yaseen is often called the 'Heart of the Quran' in Shia tradition.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Surah Yaseen is often called the 'Heart of the Quran' in Shia tradition, underscoring its spiritual centrality and connection to the Prophet's mission and the Ahlul Bayt."
+    },
+    {
+      "id": "36_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "In verse 36:2, what does Allah swear by?",
+      "options": [
+        "The sun and the moon",
+        "The angels",
+        "Al-Quran al-Hakim (the Wise Quran)",
+        "The mountains"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In verse 36:2, Allah swears by 'al-Quran al-Hakim' - the Wise Quran - a profound oath that elevates the Quran's status as a timeless source of divine wisdom and guidance."
+    },
+    {
+      "id": "36_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 3,
+      "question": "What does verse 36:3 affirm about Prophet Muhammad (PBUH)?",
+      "options": [
+        "He is the final judge",
+        "He is truly among the messengers",
+        "He will live forever",
+        "He created the universe"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Verse 36:3 declares 'Indeed, you are truly among the messengers' - affirming the Prophet's divine mission and his place in the chain of prophets sent by Allah."
+    },
+    {
+      "id": "36_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq, what do the letters 'Ya Sin' symbolize?",
+      "options": [
+        "The beginning and end of time",
+        "The Prophet as 'Ya' (an address) and 'Sin' as a reference to the Ahlul Bayt",
+        "Two angels' names",
+        "The sun and moon"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia tradition from Imam Jafar al-Sadiq identifies 'Ya' as an address to the Prophet and 'Sin' as a reference to the Ahlul Bayt, reflecting the unity of prophethood and imamate."
+    },
+    {
+      "id": "36_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Allama Tabatabai in Al-Mizan, the Quran's wisdom (Hakim) is accessible without the guidance of the Imams.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "According to Allama Tabatabai, the Quran's wisdom remains inaccessible without the hermeneutic authority (wilayah) of the Imams, who embody its living application."
+    },
+    {
+      "id": "36_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "In classical Shia exegesis, what does 'sirat mustaqeem' (straight path) in verse 36:4 represent?",
+      "options": [
+        "Only the physical road to Mecca",
+        "Both the Quran's divine guidance and the walayah (guardianship) of the Imams",
+        "A metaphor for death",
+        "The path of commerce"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allama Tabatabai in Al-Mizan emphasizes that 'sirat mustaqeem' refers simultaneously to the Quran's divine guidance and the ontological reality of walayah (divinely ordained guardianship)."
+    },
+    {
+      "id": "36_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 7,
+      "question": "According to Shia exegesis, what is the 'word' (qawl) that has come into effect in verse 36:7?",
+      "options": [
+        "A magical spell",
+        "Allah's irrevocable judgment against those who persistently reject truth",
+        "A prophecy about the end times",
+        "The name of an angel"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The 'word' (qawl) refers to Allah's irrevocable judgment (qada) against those who persistently reject truth, rooted in their own choices rather than arbitrary predestination."
+    },
+    {
+      "id": "36_9",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "Contemporary scholars connect Surah Yaseen's themes of natural order (verses 33-35) to modern ecological stewardship and environmental responsibility.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary tafsir connects Surah Yaseen's themes of natural order to ecological stewardship, framing 'Ya Sin' as a wake-up call to realign human ambition with Earth's balance."
+    },
+    {
+      "id": "36_10",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "How do contemporary Shia scholars like Dr. Mohammad Ali Shomali view the Prophet's role based on verse 36:3?",
+      "options": [
+        "As a historical figure only",
+        "As a universal ethical model bridging revelation and reason",
+        "As a political leader only",
+        "As a mythical character"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Dr. Mohammad Ali Shomali highlight the Prophet's role as a universal ethical model, bridging revelation and reason in addressing modern issues like AI ethics and climate justice."
+    },
+    {
+      "id": "36_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 7,
+      "question": "What modern phenomena does the tafsir of verse 36:7 compare to rejecting truth despite clear evidence?",
+      "options": [
+        "Social media addiction",
+        "Cognitive bias and confirmation bias studied in neuroscience",
+        "Physical exercise",
+        "Modern architecture"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Neuroscientific studies on cognitive bias and confirmation bias mirror the verse's description of those who 'do not believe' despite accessible truth, showing how humans reject evidence conflicting with preexisting beliefs."
+    },
+    {
+      "id": "36_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to Ayatollah Jawadi Amoli, the Huruf Muqatta'at represent the intersection of divine knowledge and human intellect.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ayatollah Jawadi Amoli frames the disjointed letters as cosmic keys representing the intersection of divine knowledge ('ilm al-ghayb) and human intellect, urging harmony between revelation and reason."
+    },
+    {
+      "id": "36_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Muhammad al-Baqir (AS), what does 'Ya Sin' represent?",
+      "options": [
+        "Two random letters",
+        "The name of the Prophet Muhammad (PBUH), with 'Ya' addressing Allah's Beloved and 'Sin' meaning 'Sayyid' (Master)",
+        "Names of two mountains",
+        "Two different surahs combined"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Muhammad al-Baqir (AS) states: 'Ya Sin is the name of the Prophet Muhammad (PBUH), for Allah says Ya addressing His Beloved and Sin meaning Sayyid or Master.'"
+    },
+    {
+      "id": "36_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to the teachings of the Ahlul Bayt, true understanding of the Quran's wisdom flows through the purified progeny of the Prophet.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The Prophet Muhammad (PBUH) declared in Hadith al-Thaqalayn: 'I leave among you the Two Weighty Things: the Book of Allah and my Ahlul Bayt. They will never separate until they return to me at the Pond.'"
+    },
+    {
+      "id": "36_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 3,
+      "question": "According to Imam Ali (AS), what is the relationship between the Messenger and himself?",
+      "options": [
+        "They are competitors",
+        "The Messenger is the city of knowledge, and Imam Ali is its gate",
+        "They have no connection",
+        "Imam Ali is the Messenger's teacher"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) explains in Nahj al-Balagha: 'The Messenger is the city of knowledge, and I am its gate.' This establishes the inseparable connection between prophethood and Imamah."
+    },
+    {
+      "id": "36_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 7,
+      "question": "According to Imam Jafar al-Sadiq (AS), what leads to the 'sealing' of hearts mentioned in verse 36:7?",
+      "options": [
+        "Lack of education",
+        "Physical illness",
+        "Stubbornness in rejecting the Imams and divine guidance",
+        "Living in cities"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Sixth Imam states that the 'word' manifests as a reality due to stubbornness in rejecting the Imams. Rejecting divinely appointed guidance leads to spiritual blindness."
+    },
+    {
+      "id": "36_17",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Shia and Sunni scholars agree that the Huruf Muqatta'at (disjointed letters) affirm the Quran's inimitability (i'jaz).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions concur that such letters affirm the Quran's inimitability (i'jaz), challenging listeners to engage with its linguistic profundity, with this view reinforced by their placement in 29 Quranic chapters."
+    },
+    {
+      "id": "36_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "What is a key difference between Shia and Sunni interpretations of verse 36:3?",
+      "options": [
+        "Sunni scholars deny the Prophet's messengership",
+        "Shia exegesis links the verse to the ongoing divine guidance through the Ahlul Bayt, while Sunni focuses on the Prophet's singular mission as Khatam al-Nabiyyin",
+        "There is no difference between the two traditions",
+        "Shia scholars consider this verse unimportant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia exegesis integrates the verse into a framework of ongoing divine guidance through the Ahlul Bayt, whereas Sunni interpretations prioritize the historical-prophetic context and the Prophet's role as the Seal of Prophets."
+    },
+    {
+      "id": "36_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 7,
+      "question": "How do Sunni scholars like Al-Razi interpret the 'sealing' of hearts in verse 36:7?",
+      "options": [
+        "As a random occurrence",
+        "Through the Ash'ari principle of divine will overriding human agency, emphasizing Allah's foreknowledge",
+        "As purely metaphorical with no spiritual meaning",
+        "As something that only happened in ancient times"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes like Al-Razi emphasize Allah's foreknowledge and the Ash'ari principle of divine will, interpreting the verse as a warning against moral complacency."
+    },
+    {
+      "id": "36_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 2,
+      "question": "Both Shia and Sunni traditions unite in recognizing the Quran's layered depths and reverence for its wisdom as described in verse 36:2.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions share reverence for the Quran's layered depths, demonstrating how pluralistic tafsir traditions enrich engagement with the sacred text while respecting the wisdom declared in the divine oath."
+    }
+  ]
+}

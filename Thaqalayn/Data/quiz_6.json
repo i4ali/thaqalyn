@@ -1,0 +1,275 @@
+{
+  "surahNumber": 6,
+  "questions": [
+    {
+      "id": "6_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does Allah's creation of both 'light and darkness' in verse 1 establish?",
+      "options": [
+        "That darkness is evil and light is good",
+        "That Allah is the sole Creator of all cosmic phenomena, refuting dualistic beliefs",
+        "That light came before darkness in creation",
+        "That humans should avoid darkness"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse establishes Allah as the sole Creator of all cosmic phenomena, directly refuting dualistic beliefs like Zoroastrianism that attributed light and darkness to separate deities."
+    },
+    {
+      "id": "6_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 76,
+      "question": "When Prophet Ibrahim observed a star setting, he rejected it as a deity because transient objects cannot hold divine power.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "When the star faded at dawn, Ibrahim rejected it, declaring 'I do not love those that disappear' (la uhibbul afilin), using logic to reject transient objects as deities since impermanence is incompatible with the Eternal Creator."
+    },
+    {
+      "id": "6_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 101,
+      "question": "What argument does verse 101 use to refute the notion that Allah could have a son?",
+      "options": [
+        "Allah forbids children",
+        "Procreation requires a partner, and Allah has no companion (sahiba)",
+        "Sons are only for humans",
+        "Allah created everything including Himself"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse poses a rhetorical question: How could Allah have a son when He has no sahiba (spouse)? Procreation requires a counterpart, something incompatible with Allah's limitless, singular nature."
+    },
+    {
+      "id": "6_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 151,
+      "question": "Which of the following is NOT one of the ethical prohibitions mentioned in verse 151?",
+      "options": [
+        "Associating partners with Allah (shirk)",
+        "Killing children due to poverty",
+        "Eating pork",
+        "Approaching shameful deeds (fawahish)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Verse 151 prohibits shirk, commands kindness to parents, forbids killing children from poverty, forbids shameful deeds (apparent or hidden), and forbids unlawful killing. Dietary laws like pork are addressed elsewhere."
+    },
+    {
+      "id": "6_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 75,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does 'malakut' (kingdom) in verse 75 refer to?",
+      "options": [
+        "The physical universe (mulk)",
+        "The metaphysical reality governing creation, beyond the material realm",
+        "The political kingdom of Ibrahim",
+        "The stars and celestial bodies"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai explains that malakut transcends the physical universe (mulk), referring to the metaphysical reality governing creation - a realm of divine sovereignty accessible only through spiritual insight."
+    },
+    {
+      "id": "6_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 76,
+      "question": "According to classical Shia exegesis, Ibrahim's statement 'This is my lord' about the star was a genuine moment of personal doubt.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Shia commentators emphasize that Ibrahim's declarations represented a pedagogical method (burhan al-tadhadd - proof by contradiction) to dismantle polytheistic logic, not personal doubt. Prophets possess inherent certainty (isma)."
+    },
+    {
+      "id": "6_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 101,
+      "question": "What does the term 'Badi' (Originator) in verse 101 signify according to Shia theology?",
+      "options": [
+        "Allah created from pre-existing matter",
+        "Allah creates uniquely without any precedent, from nothingness (ex nihilo)",
+        "Allah follows patterns established by earlier creators",
+        "Allah delegates creation to angels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai elucidates that Badi' denotes creation ex nihilo - Allah brings existence from nothingness without pre-existing matter or causal dependency, establishing His absolute self-sufficiency."
+    },
+    {
+      "id": "6_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 126,
+      "question": "According to Shia exegesis, how is the 'straight path' (sirat mustaqim) in verse 126 connected to the Ahlul Bayt?",
+      "options": [
+        "It is unrelated to the Ahlul Bayt",
+        "The straight path is linked to their Wilayah (guardianship) as per Hadith al-Thaqalayn",
+        "The Ahlul Bayt created the straight path",
+        "The straight path leads away from the Ahlul Bayt"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical Shia exegetes cite Hadith al-Thaqalayn to link the straight path to the Wilayah of the Imams, viewing the Quran and Prophet's progeny as inseparable guides for navigating the path to Allah."
+    },
+    {
+      "id": "6_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 76,
+      "question": "How do contemporary scholars relate Ibrahim's rejection of the setting star to modern issues?",
+      "options": [
+        "It has no modern relevance",
+        "It critiques materialistic and consumerist 'idols' that distract from lasting values",
+        "It encourages star worship",
+        "It only applies to ancient polytheism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Ayatollah Makarem Shirazi frame Ibrahim's rejection of 'those that disappear' as critiquing modern 'idols' including consumerism, exploitation, and superficial trends that eclipse enduring ethical principles."
+    },
+    {
+      "id": "6_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 101,
+      "question": "The concept of a 'beginningless Originator' in verse 101 aligns with scientific cosmological theories like the Big Bang.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars note that the concept of Allah as Badi' (Originator without precedent) resonates with cosmological theories like the Big Bang, which posits a singular, uncaused event pointing to a transcendent First Cause."
+    },
+    {
+      "id": "6_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 151,
+      "question": "How does the prohibition against 'hidden immoralities' (fawahish ma batan) apply to digital ethics today?",
+      "options": [
+        "It only applies to physical acts",
+        "It addresses cyber exploitation, data privacy breaches, and online harms",
+        "It encourages hiding sins online",
+        "It has no digital application"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars like Mohsen Kadivar highlight how the prohibition against hidden transgressions applies to modern digital spaces, addressing cyber exploitation, privacy breaches, and algorithmic bias."
+    },
+    {
+      "id": "6_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 126,
+      "question": "According to contemporary interpretation, what does the 'straight path' mirror in the natural world?",
+      "options": [
+        "Random chaos",
+        "Natural laws and ecological equilibrium governing the universe",
+        "Human-made highways",
+        "Astronomical orbits only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars see the 'straight path' as mirroring natural laws governing the universe, including principles of equilibrium in ecosystems, reflecting the harmony between divine guidance and cosmic order."
+    },
+    {
+      "id": "6_13",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 76,
+      "question": "Imam Jafar al-Sadiq taught that the Ahlul Bayt are 'the stars of hearts that never fade,' contrasting with the transient celestial stars Ibrahim observed.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Lady Fatimah (AS) affirmed that 'the Imams are the stars of hearts that never fade,' and Imam Sadiq explained that true guidance lies in the eternal Wilayah of the Ahlul Bayt, unlike the setting celestial stars."
+    },
+    {
+      "id": "6_14",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 101,
+      "question": "According to Imam Ali (AS) in Nahj al-Balagha, why can Allah not be described by 'how'?",
+      "options": [
+        "Because humans lack intelligence",
+        "Because He is the Creator of 'how' itself",
+        "Because descriptions are forbidden",
+        "Because language cannot express anything"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) states in Nahj al-Balagha: 'He cannot be described by how, for He is the Creator of how' - meaning Allah's essence transcends human conceptualization including worldly relationships like parenthood."
+    },
+    {
+      "id": "6_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 126,
+      "question": "According to the teachings of the Ahlul Bayt, what does true 'remembrance' (yadhakkarun) involve beyond recitation?",
+      "options": [
+        "Memorizing the Quran only",
+        "Recognizing the divine light within the Ahlul Bayt and anchoring to their teachings",
+        "Remembering historical events",
+        "Reciting without understanding"
+      ],
+      "correctAnswer": "B",
+      "explanation": "True remembrance transcends mere recitation - it demands recognizing the divine light within the Ahlul Bayt and anchoring one's soul to their teachings, as the Imams are the living interpretation of revelation."
+    },
+    {
+      "id": "6_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 151,
+      "question": "According to Imam Muhammad al-Baqir, the 'hidden sin' mentioned in verse 151 includes what the heart conceals of envy and arrogance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Muhammad al-Baqir (AS) explained: 'The apparent sin is what your limbs commit; the hidden is what your heart conceals of envy and arrogance.' Spiritual development requires purifying both realms."
+    },
+    {
+      "id": "6_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 76,
+      "question": "What is a key difference between Shia and Sunni interpretation of Ibrahim's words 'This is my lord' in verse 76?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia emphasize prophetic infallibility (isma) making it a pedagogical strategy, while Sunni focus on rhetorical engagement",
+        "Both traditions interpret it identically",
+        "Shia believe Ibrahim genuinely worshipped stars"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia sources stress isma (infallibility), interpreting Ibrahim's words as dialectical method, while Sunni commentators like Razi frame it as a rhetorical device to engage polytheists - both rejecting literal worship."
+    },
+    {
+      "id": "6_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 101,
+      "question": "On what do both Shia and Sunni exegetes converge regarding verse 101?",
+      "options": [
+        "They disagree on everything",
+        "Both affirm Allah's absolute oneness and refute anthropomorphic attributions of progeny",
+        "Only Sunni scholars accept the verse",
+        "Both believe Allah has offspring metaphorically"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Shia (Tabatabai, Tabrisi) and Sunni (Tabari, Razi) exegetes converge on affirming Allah's absolute oneness (tawhid) and refuting anthropomorphic or familial attributions, despite different hermeneutical emphases."
+    },
+    {
+      "id": "6_19",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 126,
+      "question": "Both Shia and Sunni traditions view verse 126's call to 'remembrance' as supporting contemplative faith, though they differ on the role of the Ahlul Bayt in that guidance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions uphold the verse's call to contemplative faith and Quranic guidance. The divergence is that Shia tie the 'straight path' to Wilayah of the Ahlul Bayt, while Sunni emphasize Quran and Sunnah through scholarly consensus."
+    },
+    {
+      "id": "6_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 151,
+      "question": "How do Shia and Sunni scholars differ on the concept of 'lawful killing' (bil-haqq) mentioned in verse 151?",
+      "options": [
+        "Both agree completely on all details",
+        "Shia tie it to the Imam's authority while Sunni anchor it in state-administered justice under caliphal governance",
+        "Sunni reject the verse",
+        "Shia believe all killing is forbidden"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia sources like Tusi's At-Tibyan tie 'legal right' (al-haqq) to the Imam's authority in capital cases, whereas Sunni scholars like Qurtubi anchor this in state-administered qisas under caliphal governance."
+    }
+  ]
+}

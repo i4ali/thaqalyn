@@ -1,0 +1,205 @@
+{
+  "surahNumber": 3,
+  "questions": [
+    {
+      "id": "3_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 33,
+      "question": "In verse 33, which families does Allah declare He chose 'over the worlds'?",
+      "options": ["Adam, Noah, family of Abraham, and family of Imran", "Adam, Moses, family of David, and family of Jesus", "Noah, Abraham, Moses, and Muhammad", "Family of Noah, family of Moses, family of David, and family of Aaron"],
+      "correctAnswer": "A",
+      "explanation": "In Surah Aal-i-Imran verse 33, Allah declares His divine selection: 'Indeed, Allah chose Adam and Noah and the family of Abraham and the family of Imran over the worlds.' This choosing (istafa) signifies a special spiritual distinction for guiding humanity toward truth."
+    },
+    {
+      "id": "3_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 51,
+      "question": "In verse 51, Prophet Isa (Jesus) declared that Allah is both his Lord and the Lord of his followers, and called them to the straight path.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "In Surah Aal-i-Imran verse 51, Prophet Isa (Jesus) addresses his followers with a clear statement of divine unity (Tawhid), affirming that Allah is his Lord and their Lord, and calling them to follow the straight path."
+    },
+    {
+      "id": "3_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 121,
+      "question": "Verse 121 refers to which significant battle where the Prophet positioned believers at their stations?",
+      "options": ["Battle of Badr", "Battle of Uhud", "Battle of Khandaq", "Battle of Hunayn"],
+      "correctAnswer": "B",
+      "explanation": "Verse 121 takes us to a pivotal moment before the Battle of Uhud, where Prophet Muhammad demonstrated both leadership and trust in Allah. The phrase 'you left your family in the morning' highlights his early dawn departure to strategically position the believers at their battle stations."
+    },
+    {
+      "id": "3_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 122,
+      "question": "In verse 122, what happened when 'two parties among you were about to lose courage'?",
+      "options": ["They fled from the battlefield", "Allah became their ally and protector", "The Prophet rebuked them publicly", "They were replaced by other fighters"],
+      "correctAnswer": "B",
+      "explanation": "In verse 122, Allah reminds believers of when two groups (Banu Salma and Banu Haritha) momentarily faltered due to fear during Uhud, but Allah became their Waliy (protector, ally), granting them strength to regroup. This reinforces the principle of tawakkul (trust in God)."
+    },
+    {
+      "id": "3_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 33,
+      "question": "According to Allamah Tabatabai in Al-Mizan, what does the divine 'choosing' (istifa) in verse 33 signify?",
+      "options": ["Political authority over nations", "Ontological and spiritual distinction encompassing both prophethood and guardianship (wilayah)", "Worldly wealth and social status", "Military power and territorial expansion"],
+      "correctAnswer": "B",
+      "explanation": "In Al-Mizan, Allamah Tabatabai elucidates that the divine 'choosing' (istifa) signifies ontological and spiritual distinction bestowed by Allah, encompassing both prophetic missions (nubuwwah) and divinely ordained guardianship (wilayah). This transcends temporal or worldly superiority."
+    },
+    {
+      "id": "3_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 34,
+      "question": "According to classical Shia scholars, verse 34 ('Descendants, some of them from others') refers only to biological succession, not spiritual inheritance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Classical Shia scholars interpret verse 34 as a profound allusion to divinely ordained continuity of prophetic and Imamic guidance. Tabatabai emphasizes this is not merely biological succession but a chain of spiritual inheritance (irth nabawi), where knowledge, wisdom, and wilayah are transmitted through a sanctified genealogical framework."
+    },
+    {
+      "id": "3_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 121,
+      "question": "What does Sheikh Tabrisi in Majma al-Bayan say about the phrase 'to post believers at their stations' in verse 121?",
+      "options": ["It refers to assigning prayer positions in the mosque", "It reflects the Prophet's divinely guided wisdom in preparing the community for trials", "It describes the arrangement of scholars in teaching circles", "It indicates the organization of trade caravans"],
+      "correctAnswer": "B",
+      "explanation": "Sheikh Tabrisi in Majma al-Bayan highlights that 'to post the believers at their stations' (tubawwi' al-mu'minina maqaida lil-qital) reflects the Prophet's divinely guided wisdom in preparing the community for trials, resonant with the Shia emphasis on divinely appointed leadership (imamate)."
+    },
+    {
+      "id": "3_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 122,
+      "question": "According to Tabatabai's interpretation of verse 122, how does divine intervention manifest?",
+      "options": ["Through miraculous alteration of external circumstances", "Through the fortification of hearts, operating through human agency guided by spiritual readiness", "Through sending angels to physically fight", "Through immediate removal of all difficulties"],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai emphasizes that divine intervention manifests not through miraculous alterations of circumstance but through the fortification of hearts, aligning with the Shia theological principle that divine support (tawfiq) operates through human agency guided by spiritual readiness."
+    },
+    {
+      "id": "3_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 33,
+      "question": "How do contemporary Shia scholars like Ayatollah Makarem Shirazi interpret the 'choosing' of families in verse 33?",
+      "options": ["As emphasizing hereditary privilege based on bloodline alone", "As emphasizing moral and spiritual excellence rather than hereditary privilege", "As limited only to ancient times with no modern relevance", "As a political endorsement of specific dynasties"],
+      "correctAnswer": "B",
+      "explanation": "Contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi interpret verse 33 as emphasizing not hereditary privilege but moral and spiritual excellence. This aligns with the Shia emphasis on 'ismah (divinely guided infallibility) of the Prophets and Imams, whose leadership transcends time and culture."
+    },
+    {
+      "id": "3_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 34,
+      "question": "Modern scientific research showing that all humans share 99.9% of their genetic code parallels the Quranic emphasis on shared lineage in verse 34.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern genetics reveals that all humans share 99.9% of their genetic code, underscoring the verse's literal truth about human interconnectedness. This scientific insight aligns with theological teachings on universal kinship and challenges divisive constructs like racism or nationalism."
+    },
+    {
+      "id": "3_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 121,
+      "question": "What modern social-psychological concept do contemporary scholars connect to verse 121's emphasis on unity and preparedness?",
+      "options": ["Individual therapy", "Collective efficacy", "Social isolation", "Personal achievement"],
+      "correctAnswer": "B",
+      "explanation": "The scientific concept of 'collective efficacy' - where communities leverage shared trust and coordination to achieve goals - resonates with verse 121, offering a social-psychological lens to understand its emphasis on unity and preparedness in facing challenges."
+    },
+    {
+      "id": "3_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 122,
+      "question": "According to contemporary scholars, the reassurance in verse 122 that 'Allah was their ally' highlights divine support through human solidarity, not in isolation.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Scholar Dr. Liyakat Takim notes that verse 122's reassurance - 'Allah was their ally' - highlights divine support through human solidarity, not in isolation. It invites believers to view unity as an active, spiritual resistance against hopelessness."
+    },
+    {
+      "id": "3_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 33,
+      "question": "According to the teachings of the Ahlul Bayt, what does verse 33 map out?",
+      "options": ["The political history of Arab tribes", "The golden lineage of wilayah (divine guardianship) culminating in the Muhammadan Light", "Trade routes between ancient civilizations", "Agricultural practices of ancient peoples"],
+      "correctAnswer": "B",
+      "explanation": "In the radiant vision of the Ahlul Bayt, verse 33 maps the golden lineage of wilayah (divine guardianship) culminating in the Muhammadan Light. Imam Ali al-Ridha taught that Allah's choice crowns those whose inner essence was forged in pure submission."
+    },
+    {
+      "id": "3_14",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 34,
+      "question": "According to Imam Ja'far al-Sadiq's teaching, what do the 'stations' of believers in battle symbolize?",
+      "options": ["Military ranks based on experience", "The duty of the Imams to guide humanity toward their spiritual station through truth and justice", "Economic positions in society", "Geographic locations of settlements"],
+      "correctAnswer": "B",
+      "explanation": "In Tafsir al-Qummi, Imam Jafar al-Sadiq explains that the Prophet's act of 'posting believers at their stations' symbolizes the duty of the Imams to guide humanity toward their maqam (spiritual station) through truth and justice."
+    },
+    {
+      "id": "3_15",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 121,
+      "question": "Lady Fatimah declared that 'Allah made obedience to us the system for the Ummah and our leadership a protection against disunity.'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Lady Fatimah (peace be upon her) stated in her famous sermon: 'Allah made obedience to us the system for the Ummah and our leadership a protection against disunity.' This teaching emphasizes that following the Imam's command - whether in war or worship - unifies the community under divine light."
+    },
+    {
+      "id": "3_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 122,
+      "question": "According to Imam Ali, what is 'the strongest' among Allah's ropes?",
+      "options": ["Wealth and material possessions", "Political alliances with powerful nations", "Trust in Him and reliance upon Him", "Large numbers of followers"],
+      "correctAnswer": "C",
+      "explanation": "Imam Ali (peace be upon him) taught: 'The ropes of Allah are numerous, and the strongest of them is trust in Him and reliance upon Him.' This emphasizes that true courage lies not in human calculation but in surrendering to Allah's wisdom."
+    },
+    {
+      "id": "3_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 33,
+      "question": "On what point do both Shia and Sunni scholars converge regarding verse 33?",
+      "options": ["Divine selection denotes Allah's preferential choice based on spiritual merit, not mere biological descent", "The verse refers only to political leadership", "The chosen families had no obligations attached to their status", "The verse is purely metaphorical with no historical significance"],
+      "correctAnswer": "A",
+      "explanation": "Both Shia and Sunni scholars converge on core principles: divine selection (istifa) denotes Allah's preferential choice of certain individuals and families for prophetic missions based on spiritual merit. This shared understanding underscores the Quranic theme of divine favor tied to righteousness rather than mere biological descent."
+    },
+    {
+      "id": "3_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 33,
+      "question": "Shia scholars interpret the 'family of Abraham' as explicitly encompassing the Prophet Muhammad and his Ahl al-Bayt, while Sunni scholars interpret 'family' primarily as biological progeny or righteous followers.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Key divergences emerge in defining the scope of 'family' (aal). Sunni commentators like Qurtubi interpret aal primarily as biological progeny or righteous followers. Shia scholars like Tabatabai emphasize the term's connotations of spiritual inheritance, linking it explicitly to the Imamate and the Ahl al-Bayt."
+    },
+    {
+      "id": "3_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 121,
+      "question": "What theological framework do Shia interpretations emphasize regarding the Prophet 'posting' believers in verse 121?",
+      "options": ["Democratic election of leaders", "Divine designation and the doctrine of Imamate", "Tribal customs of ancient Arabia", "Economic distribution of resources"],
+      "correctAnswer": "B",
+      "explanation": "Shia interpretations frequently highlight the Prophet's role in 'posting' (tubawwi'u) believers - a term Tusi's At-Tibyan and Qummi's Tafsir associate with divinely guided appointments, subtly reinforcing the Shia doctrine of Imamate as inherently tied to divine designation rather than human selection."
+    },
+    {
+      "id": "3_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 122,
+      "question": "What do both Shia and Sunni traditions maintain about verse 122's relevance?",
+      "options": ["It is only relevant to the specific historical event", "It is relevant to ethical warfare and spiritual consequences of disobedience", "It has no contemporary application", "It applies only to military leaders"],
+      "correctAnswer": "B",
+      "explanation": "Both Shia and Sunni traditions maintain the verse's relevance to ethical warfare and the spiritual consequences of disobedience, demonstrating shared ethical foundations amid differing doctrinal priorities regarding leadership and divine designation."
+    }
+  ]
+}

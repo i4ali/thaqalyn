@@ -1,0 +1,140 @@
+{
+  "surahNumber": 31,
+  "questions": [
+    {
+      "id": "31_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 12,
+      "question": "According to the tafsir, what is established as the foundation of wisdom (hikmah) in Luqman's story?",
+      "options": [
+        "Intellectual knowledge",
+        "Gratitude (shukr) to Allah",
+        "Physical strength",
+        "Wealth and status"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The command 'Be grateful to Allah' (anishkur lillah) establishes gratitude (shukr) as the foundation of wisdom. Luqman's wisdom wasn't mere intellect but divinely inspired knowledge applied ethically."
+    },
+    {
+      "id": "31_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 13,
+      "question": "In verse 31:13, Luqman describes shirk (associating partners with Allah) as 'zulmun azim' meaning 'a tremendous injustice'.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Luqman counsels his son by declaring 'la tushrik billah' (do not associate partners with Allah), identifying shirk as 'zulmun azim' (a tremendous injustice), emphasizing the foundational Islamic principle of tawhid."
+    },
+    {
+      "id": "31_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 14,
+      "question": "According to classical Shia exegetes, what does the phrase 'wahnan ala wahnin' (weakness upon weakness) in verse 31:14 describe?",
+      "options": [
+        "The child's spiritual struggles",
+        "The father's financial burden",
+        "The mother's physical and emotional sacrifices during pregnancy and nursing",
+        "The difficulty of following religious laws"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In Surah Luqman 31:14, Allah establishes parental rights as divinely ordained, with 'wahnan ala wahnin' poetically capturing the mother's unparalleled physical and emotional sacrifices during pregnancy and early childhood."
+    },
+    {
+      "id": "31_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 16,
+      "question": "What does the 'mustard seed' metaphor in verse 31:16 illustrate according to Tabatabai in Al-Mizan?",
+      "options": [
+        "The importance of small acts of charity",
+        "That no deed, regardless of how minute or hidden, escapes Allah's all-encompassing knowledge",
+        "The growth of faith from small beginnings",
+        "The insignificance of worldly matters"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The mustard seed metaphor illustrates that no deed, regardless of its minute scale or concealment, escapes Allah's omniscience. Even an atom's weight hidden in a rock, heavens, or earth will be brought forth by Allah."
+    },
+    {
+      "id": "31_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 17,
+      "question": "According to contemporary Shia scholars, what are the four essential pillars Luqman advises his son in verse 31:17?",
+      "options": [
+        "Fasting, charity, pilgrimage, and jihad",
+        "Prayer, enjoining good, forbidding evil, and patience",
+        "Reading, writing, teaching, and learning",
+        "Wealth, health, family, and community"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In verse 31:17, Luqman imparts four essential injunctions: establishing prayer (iqamat al-salat), enjoining good (amr bil-ma'ruf), forbidding evil (nahi anil-munkar), and steadfastness/patience (sabr) in adversity."
+    },
+    {
+      "id": "31_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "Contemporary scholars view the Quran's 'wisdom' (hikmah) as static knowledge that cannot be applied to modern challenges like climate change or AI ethics.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Contemporary scholars emphasize that the Quran's wisdom is not static but a dynamic force. Shia educators use verses like 31:2 to bridge theology with modern challenges, from AI ethics to social equity, reinforcing the Quran's role as a living, adaptive guide."
+    },
+    {
+      "id": "31_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 12,
+      "question": "According to Ahlul Bayt teachings, who are described as the 'speaking Quran' (Quran natiq) and the interpreters of Quranic wisdom?",
+      "options": [
+        "All Muslim scholars",
+        "The Ahlul Bayt (the Prophet's purified progeny)",
+        "The Companions of the Prophet",
+        "The angels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq (p) said, 'The Quran is the guide, but it does not speak. It needs an interpreter, and the interpreters are the Ahlul Bayt.' The Ahlul Bayt are the 'speaking Quran' (Quran natiq) tasked with preserving and explicating divine guidance."
+    },
+    {
+      "id": "31_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to hadith from Imam Ja'far al-Sadiq (AS), what do the letters Alif, Lam, Meem at the opening of Surah Luqman symbolize?",
+      "options": [
+        "Heaven, Earth, and the Sea",
+        "Past, Present, and Future",
+        "Allah, Gabriel (Jibrail), and Muhammad (SAWS)",
+        "Knowledge, Wisdom, and Power"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ja'far al-Sadiq (AS) states: 'Alif is Allah, Lam is Gabriel, and Meem is Muhammad (SAWS)' (Tafsir al-Qummi). These letters symbolize the unbreakable covenant between Allah, His Messenger, and the divine chain of guidance."
+    },
+    {
+      "id": "31_9",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 15,
+      "question": "Both Shia and Sunni scholars agree that obedience to parents must be maintained even when parents command their children to commit shirk (associating partners with Allah).",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Verse 31:15 establishes that while parents deserve respect, their authority has limits. Both traditions agree that one must not obey parents in matters of shirk, though compassionate relations should be maintained. The phrase 'do not obey them' underscores the absolute priority of divine commandments."
+    },
+    {
+      "id": "31_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 18,
+      "question": "What behavior does verse 31:18 prohibit, which both Sunni and Shia exegetes interpret as rooted in arrogance?",
+      "options": [
+        "Speaking loudly in the mosque",
+        "Turning one's cheek in contempt toward people and walking with pride",
+        "Eating in excess",
+        "Neglecting prayer times"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Verse 31:18 prohibits 'turning your cheek in contempt toward people' and 'walking through the earth exultantly.' Both traditions interpret this as rejecting disdainful behavior rooted in pride, which fractures social unity and violates human dignity."
+    }
+  ]
+}

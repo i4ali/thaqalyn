@@ -1,0 +1,115 @@
+{
+  "surahNumber": 92,
+  "questions": [
+    {
+      "id": "92_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What is the primary symbolism of the 'covering night' (al-layl) in verse 1 according to Foundation Layer commentary?",
+      "options": [
+        "Only a description of physical darkness with no deeper meaning",
+        "A manifestation of Allah's creative power and a time for spiritual renewal and reflection",
+        "A warning about the dangers of darkness",
+        "A reference to astronomical phenomena"
+      ],
+      "correctAnswer": "A manifestation of Allah's creative power and a time for spiritual renewal and reflection",
+      "explanation": "Classical Shia tafsir, such as Allamah Tabatabai's Al-Mizan, explains that Quranic oaths like this serve to awaken human reflection on the interconnected systems of creation. The night symbolizes both Allah's control over cosmic cycles and invites believers to harness the night's stillness for introspection, worship (tahajjud), and spiritual renewal."
+    },
+    {
+      "id": "92_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to the Foundation Layer, the 'day when it shines forth' (verse 2) symbolizes opportunities for ethical action and transparent conduct, contrasting with the night's concealment.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. The term tajalla (to manifest) signifies the day's radiant unveiling, stripping away night's obscurity. For contemporary Muslims, this verse invites active engagement with time—the bright, visible nahar symbolizing opportunities for ethical action, pursuit of knowledge, and service. Just as daylight exposes reality, believers are called to illuminate their intentions and deeds."
+    },
+    {
+      "id": "92_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, how does the night's obscurity relate to the concept of ghayb (the unseen) and divine guidance?",
+      "options": [
+        "The night has no connection to spiritual matters",
+        "Just as physical darkness necessitates light, spiritual obscurity demands the illumination of the Ahl al-Bayt",
+        "The night only affects prayer times",
+        "Darkness represents divine punishment"
+      ],
+      "correctAnswer": "Just as physical darkness necessitates light, spiritual obscurity demands the illumination of the Ahl al-Bayt",
+      "explanation": "Tabatabai expands this into a metaphysical framework, aligning the night's obscurity with the concept of ghayb (the unseen) and the necessity of divine guidance. Just as physical darkness necessitates the moon's light, spiritual obscurity demands the illumination of the Ahl al-Bayt, whom Shia theology regards as the inheritors of prophetic knowledge. This connection is rooted in the principle of walayah."
+    },
+    {
+      "id": "92_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Tabrisi's Majma al-Bayan, what does the pairing of male and female in verse 3 symbolize beyond biological distinction?",
+      "options": [
+        "Only reproductive functions",
+        "The universal system of opposites (heat-cold, light-dark) through which Allah's sustaining power operates",
+        "Gender hierarchy in society",
+        "Historical gender roles"
+      ],
+      "correctAnswer": "The universal system of opposites (heat-cold, light-dark) through which Allah's sustaining power operates",
+      "explanation": "As articulated in Tabrisi's Majma al-Bayan, the pairing of male and female transcends mere biological distinction, symbolizing the universal system of opposites (heat-cold, light-dark) through which Allah's sustaining power operates. This duality is not oppositional but harmoniously integrated, mirroring the Quranic principle that 'We created all things in pairs' (51:49)."
+    },
+    {
+      "id": "92_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "Contemporary scholars like Ayatollah Naser Makarem Shirazi connect the night's 'covering' to modern challenges such as light pollution and 24/7 hyper-productivity that disrupt natural cycles and mental well-being.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Socially, the verse invites reflection on modern challenges like light pollution and 24/7 hyper-productivity, which disrupt natural cycles and mental well-being. Scholars such as Dr. Ali Reza Panahian connect the 'covering' night to the need for societal rest, justice, and introspection—urging communities to resist systems that exploit human and environmental resources ceaselessly."
+    },
+    {
+      "id": "92_6",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq's teaching about the 'covering night' in verse 1, what does the night symbolize spiritually?",
+      "options": [
+        "Physical rest and sleep only",
+        "Ignorance and misguidance, whose darkness recedes only by the light of the Imam's knowledge",
+        "The end of the world",
+        "A time for material pursuits"
+      ],
+      "correctAnswer": "Ignorance and misguidance, whose darkness recedes only by the light of the Imam's knowledge",
+      "explanation": "Imam Jafar al-Sadiq (peace be upon him) links this 'covering night' to the trials of faith and the necessity of wilayah (divine guardianship). He explains, 'The night symbolizes ignorance and misguidance; its darkness recedes only by the light of the Imam's knowledge' (Tafsir al-Burhan). Here, the Imamah emerges as the luminous path piercing through spiritual obscurity, guiding seekers to certainty."
+    },
+    {
+      "id": "92_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "How did Imam Jafar al-Sadiq interpret the 'appearing day' in verse 2 in relation to the future?",
+      "options": [
+        "As only a natural phenomenon with no spiritual meaning",
+        "As an allusion to the era when the Mahdi will fill the earth with justice",
+        "As a reference to agricultural seasons",
+        "As a warning about solar eclipses"
+      ],
+      "correctAnswer": "As an allusion to the era when the Mahdi will fill the earth with justice",
+      "explanation": "Imam Jafar al-Sadiq (peace be upon him) interpreted this verse as an allusion to the era when the Mahdi (may God hasten his reappearance) will fill the earth with justice, stating, 'The day that appears is the day of the Qa'im [the Rising One] from us, when he will establish truth openly.' This connects the verse's imagery to the ultimate triumph of divine justice under the Imam's leadership."
+    },
+    {
+      "id": "92_8",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is the key hermeneutical difference between Shia and Sunni interpretations of the 'covering night' in verse 1?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia commentaries extend the imagery to metaphysical dimensions, interpreting it as spiritual obscurity dispelled by the Ahl al-Bayt's guidance, while Sunni exegetes anchor interpretations in tangible phenomena",
+        "There are no differences between the traditions",
+        "Shia scholars focus only on astronomy"
+      ],
+      "correctAnswer": "Shia commentaries extend the imagery to metaphysical dimensions, interpreting it as spiritual obscurity dispelled by the Ahl al-Bayt's guidance, while Sunni exegetes anchor interpretations in tangible phenomena",
+      "explanation": "Divergences emerge in hermeneutical emphases. Shia commentaries, particularly Al-Qummi's Tafsir and Tabrisi's Majma al-Bayan, often extend the imagery to metaphysical dimensions, interpreting the 'covering night' as an allegory for spiritual obscurity dispelled by the guidance of the Ahl al-Bayt. Sunni exegetes like Al-Tabari and Al-Razi, while acknowledging symbolic layers, generally anchor interpretations in tangible phenomena—the night's physical properties, its role in regulating worship, and its function within Quranic oath structures."
+    }
+  ]
+}

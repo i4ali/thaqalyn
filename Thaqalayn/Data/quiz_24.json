@@ -1,0 +1,270 @@
+{
+  "surahNumber": 24,
+  "questions": [
+    {
+      "id": "24_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does the phrase 'faradnaha' (We made obligatory) in the opening verse of Surah An-Nur emphasize?",
+      "options": [
+        "The Quran is optional reading for Muslims",
+        "The binding nature of the surah's rulings as divine obligations",
+        "Only scholars should study this surah",
+        "The historical context of the revelation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The phrase 'faradnaha' highlights the binding nature of the surah's rulings as obligations ordained by Allah, particularly the ethical and legal guidelines central to this surah."
+    },
+    {
+      "id": "24_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "According to the tafsir, the requirement of four witnesses for accusations of adultery applies equally to protecting both men and women from false allegations.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Classical scholars like Tabatabai explain that this verse isn't limited to women alone; it equally defends chaste men from false allegations, as principles of justice are gender-inclusive."
+    },
+    {
+      "id": "24_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 30,
+      "question": "What does the command 'yaghuddu min absarihim' (lower their gaze) in verse 30 extend beyond according to the tafsir?",
+      "options": [
+        "Only looking at forbidden images",
+        "Reading inappropriate books",
+        "Physical sight to include mindful awareness of one's surroundings and intentions",
+        "Watching television"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The term 'absar' (vision) extends beyond physical sight to include mindful awareness of one's surroundings and intentions, encompassing inner discipline."
+    },
+    {
+      "id": "24_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 35,
+      "question": "In the Light Verse (Ayat al-Noor), what does the 'blessed olive tree' that is 'neither eastern nor western' symbolize?",
+      "options": [
+        "A specific tree in Arabia",
+        "A balanced, universal source of spiritual fuel untouched by extremes",
+        "The geography of the Middle East",
+        "Olive oil production in ancient times"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The olive oil from a tree 'neither eastern nor western' represents a balanced, universal source of spiritual fuel untouched by extremes, symbolizing the organic, enduring nature of faith."
+    },
+    {
+      "id": "24_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 35,
+      "question": "According to Allamah Tabatabai in Al-Mizan, what does the 'niche' (mishkah) in the Light Verse represent in Shia exegesis?",
+      "options": [
+        "A physical lamp holder",
+        "The purified heart of the believer or the sanctified locus of prophethood and Imamate",
+        "A mosque in Medina",
+        "The Kaaba in Mecca"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai interprets the 'niche' as the purified heart of the believer or the sanctified locus of prophethood and Imamate, through which divine guidance manifests."
+    },
+    {
+      "id": "24_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "According to classical Shia scholarship, the eighty lashes prescribed for false accusation is the same punishment prescribed for actual fornication in verse 24:2.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "As explicated by Allama Tabatabai in Al-Mizan, the specification of eighty lashes is the same punishment prescribed for actual fornication in 24:2, underscoring that false accusation (qadhf) constitutes a parallel attack on social order."
+    },
+    {
+      "id": "24_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 30,
+      "question": "According to Shia theological principles, what does Tabatabai emphasize about the preposition 'min' in 'yaghuddu min absarihim' (reduce some of their vision)?",
+      "options": [
+        "It means to close one's eyes completely",
+        "It denotes qualitative diminution, meaning curtail ALL forms of vision that could lead to corruption",
+        "It only applies to men",
+        "It refers to wearing glasses"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai emphasizes that 'min' here denotes a qualitative diminution rather than quantitative reduction, implying the believer must curtail all forms of vision that could lead to spiritual or ethical corruption."
+    },
+    {
+      "id": "24_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 31,
+      "question": "According to Sheikh Tabrisi in Majma al-Bayan, what does the command for women to 'wrap their headcovers over their chests' underscore?",
+      "options": [
+        "Fashion requirements of the time",
+        "The obligation to conceal the neck, hair, and bosom, rejecting pre-Islamic practices",
+        "Decorative customs only",
+        "Seasonal clothing guidelines"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The command to 'wrap their headcovers over their chests' underscores the obligation to conceal the neck, hair, and bosom, rejecting pre-Islamic practices of exposing these areas."
+    },
+    {
+      "id": "24_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 35,
+      "question": "According to contemporary Shia scholars like Ayatollah Nasir Makarim Shirazi, what does the 'glass' protecting the flame in the Light Verse symbolize?",
+      "options": [
+        "Material protection only",
+        "The infallibility of the Ahlul Bayt as guides, ensuring their light remains untainted",
+        "Scientific glass technology",
+        "Transparent communication"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars emphasize that the 'glass' protecting the flame mirrors the infallibility of the Ahlul Bayt guides, ensuring their light remains untainted by corruption."
+    },
+    {
+      "id": "24_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 4,
+      "question": "According to contemporary scholars, the verse's requirement for four witnesses for false accusations parallels modern legal systems' emphasis on 'innocent until proven guilty' and due process.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Scholars emphasize that the verse's call for four witnesses isn't merely a legal technicality but a timeless principle that aligns with modern legal systems' emphasis on 'innocent until proven guilty' and due process."
+    },
+    {
+      "id": "24_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 30,
+      "question": "According to contemporary Shia scholars, what modern challenge does the directive to 'lower the gaze' address?",
+      "options": [
+        "Physical blindness",
+        "Hyper-exposure to digital content, social media, and commodified imagery",
+        "Reading difficulties",
+        "Eye strain from screens"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars frame this verse as addressing the modern challenge of hyper-exposure to digital content, social media, and commodified imagery that often objectifies human dignity."
+    },
+    {
+      "id": "24_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 35,
+      "question": "The Light Verse's emphasis on 'light upon light' resonates with modern physics' understanding of light as both particle and wave.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern physics reveals that light exists as both particle and wave, echoing the verse's 'light upon light' layering, reflecting the interplay between divine grace and human agency."
+    },
+    {
+      "id": "24_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 35,
+      "question": "According to Imam Jafar al-Sadiq's interpretation, what does the 'lamp' in the Light Verse represent?",
+      "options": [
+        "A physical oil lamp",
+        "The knowledge within the heart of Muhammad (pbuh)",
+        "Electricity",
+        "Sunlight"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq explained that 'the niche is the heart of Muhammad, the lamp is the knowledge within it,' connecting the metaphor to prophetic wisdom."
+    },
+    {
+      "id": "24_14",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 30,
+      "question": "What did Imam Jafar al-Sadiq teach about 'the first glance' versus 'the second glance' regarding lowering the gaze?",
+      "options": [
+        "Both are equally sinful",
+        "The first glance is accidental, but the second is a poisoned arrow from Satan's quiver",
+        "Only the third glance is sinful",
+        "Glances do not matter"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq taught that 'the first glance is accidental, but the second is a poisoned arrow from Satan's quiver,' emphasizing active spiritual warfare against the nafs."
+    },
+    {
+      "id": "24_15",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Ali (as), 'The tongue is a beast - if let loose, it devours,' teaching that false accusations corrupt both the accuser and the community.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali emphasized that the tongue is a beast that devours if let loose, and accusing chaste individuals without evidence is a spiritual malignancy that corrupts both the accuser and the community."
+    },
+    {
+      "id": "24_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 35,
+      "question": "According to Imam Jafar al-Sadiq, what does the 'glass' (zujajah) in the Light Verse represent?",
+      "options": [
+        "A window",
+        "Ali ibn Abi Talib, shining like a radiant star",
+        "The moon",
+        "Crystal decorations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq elucidated that 'the glass is Ali ibn Abi Talib, shining like a radiant star,' connecting the metaphor to the Wilayah of the Ahlul Bayt."
+    },
+    {
+      "id": "24_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 35,
+      "question": "According to comparative analysis, how do Shia and Sunni scholars differ in interpreting the 'light upon light' in the Light Verse?",
+      "options": [
+        "Both interpret it identically",
+        "Shia scholars link it to the Prophet and Imams as inheritors of divine illumination, while Sunni scholars focus on the Quran or Prophet's teachings",
+        "Sunni scholars focus on the Imams",
+        "Neither tradition discusses this metaphor"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia scholars often interpret 'light upon light' as a layered allusion to the Prophet and Imams as inheritors of divine illumination, while Sunni exegetes generally frame the 'lamp' as the Quran or Prophet's teachings."
+    },
+    {
+      "id": "24_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 4,
+      "question": "Both Shia and Sunni traditions agree that the verse prescribing punishment for false accusations (24:4) safeguards social order and protects individual honor.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Classical sources from both traditions, including Ibn Kathir and Tabatabai, concur that this injunction safeguards social order and protects individual honor, particularly women's reputations."
+    },
+    {
+      "id": "24_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 30,
+      "question": "What is a key methodological difference between Shia and Sunni interpretations of the modesty verse (24:30)?",
+      "options": [
+        "There are no differences",
+        "Shia tafsir integrates the Imams' hermeneutical authority, while Sunni exegesis prioritizes the Prophet's Sunnah as transmitted by companions",
+        "Sunni scholars reject the verse entirely",
+        "Shia scholars ignore the verse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "These distinctions stem from methodological differences: Shia tafsir integrates the Imams' hermeneutical authority, whereas Sunni exegesis prioritizes the Prophet's Sunnah as transmitted by companions."
+    },
+    {
+      "id": "24_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 35,
+      "question": "Despite methodological differences, both Shia and Sunni traditions share a reverence for the Light Verse as expressing divine transcendence and guiding believers toward spiritual humility.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions agree the verse inspires spiritual humility, urging believers to seek divine light, while affirming shared reverence for divine transcendence despite distinct hermeneutical approaches."
+    }
+  ]
+}

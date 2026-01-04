@@ -92,6 +92,13 @@ struct PaywallView: View {
                                 description: "Text-to-speech with word highlighting",
                                 color: .blue
                             )
+
+                            PremiumBenefitRow(
+                                icon: "brain.head.profile",
+                                title: "Surah Quizzes",
+                                description: "Interactive quizzes for every surah",
+                                color: .orange
+                            )
                         }
                         .padding(.horizontal)
 

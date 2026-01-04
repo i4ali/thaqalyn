@@ -1,0 +1,140 @@
+{
+  "surahNumber": 83,
+  "questions": [
+    {
+      "id": "83_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'mutaffifin' in verse 1 literally mean according to the Foundation Layer?",
+      "options": [
+        "Those who steal money",
+        "Those who deliberately shortchange others in transactions by diminishing weights or measures",
+        "Those who refuse to worship",
+        "Those who lie in testimony"
+      ],
+      "correctAnswer": "Those who deliberately shortchange others in transactions by diminishing weights or measures",
+      "explanation": "The term 'mutaffifin' is derived from the root 'taffafa' meaning 'to diminish,' and refers to those who cheat in weights, measures, or obligations. This verse was revealed in Mecca to condemn the Quraysh's widespread fraud in trade, where merchants would manipulate scales to exploit buyers."
+    },
+    {
+      "id": "83_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to the Foundation Layer interpretation of verse 2, the verse only addresses commercial fraud and has no application to other areas of life.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. While the verse condemns demanding full measure when receiving from others but cheating when giving to them, it applies beyond marketplaces to all interactions where fairness is required: business deals, workplace responsibilities, or even sharing resources. It calls Muslims to embody 'qist' (justice) in all aspects of life."
+    },
+    {
+      "id": "83_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 7,
+      "question": "According to Allamah Tabatabai in Tafsir al-Mizan, what does 'sijjeen' represent in verse 7?",
+      "options": [
+        "Only a physical location beneath the earth",
+        "Both the spiritual state of the corrupt and the physical record of their misdeeds",
+        "A temporary punishment that ends after repentance",
+        "The marketplace where fraud occurs"
+      ],
+      "correctAnswer": "Both the spiritual state of the corrupt and the physical record of their misdeeds",
+      "explanation": "Tabatabai explains that 'sijjeen' represents both the spiritual state of the corrupt and the physical record of their misdeeds, which will manifest on Judgment Day. It reflects the soul's entrenchment in materialism and moral corruption, rooted in the Shia understanding of 'tawhid' (divine unity)."
+    },
+    {
+      "id": "83_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, what broader principle does the condemnation of 'tatfif' (shortchanging) encompass?",
+      "options": [
+        "Only literal commercial fraud",
+        "Both material fraud and withholding intangible rights such as fair treatment in social or religious obligations",
+        "Physical theft exclusively",
+        "Dishonesty in speech only"
+      ],
+      "correctAnswer": "Both material fraud and withholding intangible rights such as fair treatment in social or religious obligations",
+      "explanation": "Tabrisi highlights narrations from Imam Jafar al-Sadiq linking 'tatfif' to spiritual decay, as it erodes trust and communal harmony. Classical Shia exegetes stress that 'tatfif' encompasses not only material fraud but also withholding intangible rights, such as fair treatment in social or religious obligations."
+    },
+    {
+      "id": "83_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholars like Dr. Mohammad Ali Shomali, modern examples of 'tatfif' (shortchanging) include wage theft, tax evasion by corporations, and hoarding resources while others starve.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Dr. Mohammad Ali Shomali highlights how underpaying workers, tax evasion by multinational corporations, or hoarding resources while others starve all constitute 'spiritual and economic tatfif.' Contemporary scholarship extends the verse's warning beyond literal marketplace fraud to systemic injustices."
+    },
+    {
+      "id": "83_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 7,
+      "question": "How does Ayatollah Naser Makarem Shirazi interpret 'sijjeen' in contemporary context?",
+      "options": [
+        "As a literal underground prison only",
+        "As a metaphor for systemic injustice where the record reflects not just individual sins but societal structures that normalize greed and oppression",
+        "As a temporary state that can be changed easily",
+        "As a historical concept with no modern relevance"
+      ],
+      "correctAnswer": "As a metaphor for systemic injustice where the record reflects not just individual sins but societal structures that normalize greed and oppression",
+      "explanation": "Ayatollah Naser Makarem Shirazi interprets 'sijjeen' as a metaphysical register of corrupt actions, symbolizing spiritual degradation. Modern scholars extend this, framing 'sijjeen' as a metaphor for systemic injustice where the 'record' reflects not just individual sins but societal structures that normalize greed, environmental destruction, or oppression."
+    },
+    {
+      "id": "83_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 7,
+      "question": "According to Imam Ja'far al-Sadiq's teaching in Tafsir al-Qummi, what is 'sijjeen'?",
+      "options": [
+        "A beautiful garden in Paradise",
+        "A prison beneath the seventh earth where the records of every oppressor, denier, and enemy of the Ahlul Bayt are preserved",
+        "The highest level of heaven",
+        "A physical book kept in a mosque"
+      ],
+      "correctAnswer": "A prison beneath the seventh earth where the records of every oppressor, denier, and enemy of the Ahlul Bayt are preserved",
+      "explanation": "Imam Ja'far al-Sadiq states in Tafsir al-Qummi: 'Sijjeen is the lowest earth, wherein the records of every oppressor, denier, and enemy of the Ahlul Bayt are preserved.' This ties the verse directly to the Shia understanding of Imamah, where rejecting the divinely appointed Imams severs one's connection to 'Illiyyun.'"
+    },
+    {
+      "id": "83_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 18,
+      "question": "According to Imam Ja'far al-Sadiq, 'Illiyyun' is the heart of the believer who recognizes the Imam of his time, and his actions ascend to Allah through the hands of the Hujjah (divine proof).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Imam Ja'far al-Sadiq explains that 'Illiyyun' is a celestial realm beyond the seventh heaven, where the deeds of the righteous are elevated through the light of Wilayah (divine guardianship). He states that it is the heart of the believer who recognizes the Imam of his time, and his actions ascend to Allah through the hands of the Hujjah."
+    },
+    {
+      "id": "83_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is the key interpretive difference between Sunni and Shia scholars regarding the scope of 'tatfif' (shortchanging) in verse 1?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Sunni exegetes primarily frame it as individual transactional fraud, while Shia commentaries extend it to systemic oppression and inequities perpetuated by unjust leadership",
+        "Both traditions interpret it identically with no differences",
+        "Shia scholars limit it to commercial transactions only"
+      ],
+      "correctAnswer": "Sunni exegetes primarily frame it as individual transactional fraud, while Shia commentaries extend it to systemic oppression and inequities perpetuated by unjust leadership",
+      "explanation": "Sunni exegetes like Qurtubi and Razi primarily frame the verse as a warning against individual transactional fraud. In contrast, Shia commentaries such as Al-Mizan and At-Tibyan extend the principle to systemic oppression, interpreting 'giving less' as encompassing societal inequities perpetuated by unjust leadership, reflecting Shia theological emphasis on Imamah and social justice."
+    },
+    {
+      "id": "83_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 7,
+      "question": "According to both Sunni (Tabari, Ibn Kathir) and Shia (Tabatabai, Tabrisi) scholars, what is the core agreement regarding 'sijjeen' in verse 7?",
+      "options": [
+        "It is only a metaphor with no real existence",
+        "It denotes a celestial register or abode containing the deeds of evildoers, underscoring divine justice and the distinction between good and evil acts",
+        "It refers to a physical marketplace",
+        "It is a temporary state that all souls pass through"
+      ],
+      "correctAnswer": "It denotes a celestial register or abode containing the deeds of evildoers, underscoring divine justice and the distinction between good and evil acts",
+      "explanation": "Both Sunni and Shia exegetes broadly concur that 'sijjeen' denotes a celestial register or abode containing the deeds of evildoers, contrasting with 'illiyyun.' Both traditions agree that the verse underscores divine justice and the ontological distinction between good and evil acts, though they differ in cosmological interpretations."
+    }
+  ]
+}

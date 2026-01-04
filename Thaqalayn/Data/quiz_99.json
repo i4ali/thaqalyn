@@ -1,0 +1,70 @@
+{
+  "surahNumber": 99,
+  "questions": [
+    {
+      "id": "99_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'zilzal' in the opening verse of Surah Az-Zalzala signify according to Shia tafsir scholars?",
+      "options": [
+        "An ordinary geological earthquake",
+        "A metaphor for personal difficulties",
+        "An intense, convulsive shaking beyond ordinary earthquakes marking cosmic upheaval",
+        "A historical event in Medina"
+      ],
+      "correctAnswer": "An intense, convulsive shaking beyond ordinary earthquakes marking cosmic upheaval",
+      "explanation": "The term 'zilzal' derives from the root z-l-z-l, conveying intense, convulsive shaking beyond ordinary earthquakes. Shia tafsir scholars like Allamah Tabatabai in Al-Mizan explain this as a unique, divinely ordained event—not merely geological but a metaphysical rupture dismantling the existing world order to herald resurrection."
+    },
+    {
+      "id": "99_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Shia commentaries like Tabrisi's Majma al-Bayan, the 'burdens' (athqal) that the earth discharges include the bodies of martyrs, particularly Imam Hussain (AS), as part of the earth's spiritual testimony.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Shia commentaries like Tabrisi's Majma al-Bayan and Qummi's tafsir often link the verse to the reappearance of sacred figures, interpreting 'burdens' as the bodies of martyrs, particularly Imam Hussain (AS), whose legacy is seen as a spiritual weight the earth cannot retain. This reflects the Shia theological emphasis on the Ahl al-Bayt's cosmic role in divine justice."
+    },
+    {
+      "id": "99_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 7,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarim Shirazi interpret the 'atom's weight' (dharr) in verse 7?",
+      "options": [
+        "As only a literal scientific measurement",
+        "As a cosmic affirmation of divine precision symbolizing both scientific minutiae and moral granularity",
+        "As an outdated metaphor with no modern relevance",
+        "As referring only to physical objects"
+      ],
+      "correctAnswer": "As a cosmic affirmation of divine precision symbolizing both scientific minutiae and moral granularity",
+      "explanation": "Ayatollah Nasir Makarim Shirazi, in his Tafsir Nemuneh, frames this verse as a cosmic affirmation of divine precision: every micro-action ripples through creation, aligning with modern physics' understanding of quantum interdependence. The 'atom' (dharr) symbolizes both scientific minutiae and moral granularity, urging believers to recognize that ethical choices—no matter how small—shape collective realities."
+    },
+    {
+      "id": "99_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Ja'far al-Sadiq (peace be upon him), what role does the Earth play on the Day of Judgment?",
+      "options": [
+        "It remains silent as a passive object",
+        "It testifies only about natural disasters",
+        "It serves as a witness, testifying for the believer and against the oppressor",
+        "It only reveals physical treasures"
+      ],
+      "correctAnswer": "It serves as a witness, testifying for the believer and against the oppressor",
+      "explanation": "Imam Ja'far al-Sadiq (peace be upon him) states: 'The earth is entrusted with your deeds as a scribe is entrusted with his pen. When the Day comes, it will testify for the believer and against the oppressor' (Bihar al-Anwar). This reveals Earth's sacred role as a divine recorder, mirroring the inner state of those who tread upon it."
+    },
+    {
+      "id": "99_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 5,
+      "question": "Both Shia and Sunni scholars agree that verse 5's reference to divine command emphasizes the earth's conscious submission to Allah's will, though Shia tafsir uniquely connects this to the principle of universal submission to divine authority (wilayah).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Commentators across traditions agree that the earth's upheaval is an act of conscious submission (taslim) to Allah's will. However, Shia exegesis, as noted by Tabatabai in Al-Mizan, specifically emphasizes the Shia principle of universal submission to divine authority (wilayah), linking it to the broader concept of divine guardianship and the Imam's role as witness over human actions, reflecting distinct hermeneutical frameworks between the traditions."
+    }
+  ]
+}

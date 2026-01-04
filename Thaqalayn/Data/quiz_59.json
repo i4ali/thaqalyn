@@ -1,0 +1,140 @@
+{
+  "surahNumber": 59,
+  "questions": [
+    {
+      "id": "59_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir of verse 1, what does the Arabic term 'sabbaha' (to glorify) signify?",
+      "options": [
+        "Only verbal declarations of praise",
+        "Continuous, inherent praise and an existential state of submission",
+        "Occasional remembrance during prayer",
+        "Silent meditation without action"
+      ],
+      "correctAnswer": "Continuous, inherent praise and an existential state of submission",
+      "explanation": "The tafsir explains that 'sabbaha' signifies continuous, inherent praise - not merely verbal declarations but an existential state of submission shared by all creation, from stars to stones. This universal tasbih reflects the Shia understanding of creation as intrinsically connected to divine purpose."
+    },
+    {
+      "id": "59_2",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "What historical event is referenced in verse 2 of Surah Al-Hashr?",
+      "options": [
+        "The Battle of Badr",
+        "The expulsion of the Banu Nadir tribe from Medina",
+        "The Treaty of Hudaybiyyah",
+        "The conquest of Mecca"
+      ],
+      "correctAnswer": "The expulsion of the Banu Nadir tribe from Medina",
+      "explanation": "Verse 2 recounts Allah's decisive intervention in the conflict between the early Muslim community and the Jewish tribe of Banu Nadir in Medina, who breached their covenant with the Prophet Muhammad. The verse describes how Allah expelled them from their homes at the first gathering."
+    },
+    {
+      "id": "59_3",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, every entity's very existence is an act of worship because it operates within the limits Allah has ordained.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai elucidates in Al-Mizan that creation's glorification manifests through its inherent submission to divine order: 'Every entity's very existence is an act of worship, for it operates within the limits Allah has ordained.' This ontological submission reflects the Shia theological principle of tawhid al-af'ali (unity of divine acts)."
+    },
+    {
+      "id": "59_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 7,
+      "question": "In classical Shia exegesis, what does the term 'fay'' refer to?",
+      "options": [
+        "Wealth acquired through warfare",
+        "Spoils acquired without battle",
+        "Charitable donations",
+        "Inheritance from family members"
+      ],
+      "correctAnswer": "Spoils acquired without battle",
+      "explanation": "Classical Shia exegetes emphasize the divine allocation of 'fay'' which refers to spoils acquired without battle, such as reclaimed lands or surrendered wealth. Verse 7 establishes divine guidelines for the distribution of these resources and their theological implications for leadership and social justice."
+    },
+    {
+      "id": "59_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholar Dr. Mohammad Ali Shomali, what do scientific discoveries reveal about creation's tasbih?",
+      "options": [
+        "That glorification is purely metaphorical",
+        "A 'silent language' of submission to divine laws",
+        "That creation operates independently of Allah",
+        "That only humans can truly glorify Allah"
+      ],
+      "correctAnswer": "A 'silent language' of submission to divine laws",
+      "explanation": "Dr. Mohammad Ali Shomali connects the tasbih (glorification) to the inherent order of creation, arguing that scientific discoveries—from quantum fields to ecological interdependence—reveal a 'silent language' of submission to divine laws. The rhythmic expansion of galaxies or the precision of DNA replication become tangible expressions of this cosmic tasbih."
+    },
+    {
+      "id": "59_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 7,
+      "question": "Ayatollah Naser Makarem Shirazi interprets verse 7 as advocating for progressive taxation and universal basic income in modern economic systems.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary Shia scholars like Ayatollah Naser Makarem Shirazi interpret Surah Al-Hashr (59:7) as a divine blueprint for socioeconomic justice. The verse's emphasis on equitable resource distribution to counter systemic inequality is applied to modern contexts, advocating for mechanisms like progressive taxation and universal basic income."
+    },
+    {
+      "id": "59_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq (peace be upon him), why were the heavens and earth sustained?",
+      "options": [
+        "Through the natural laws of physics",
+        "Through the love of Muhammad and his purified progeny",
+        "Through the prayers of the angels",
+        "Through the faith of the believers"
+      ],
+      "correctAnswer": "Through the love of Muhammad and his purified progeny",
+      "explanation": "Imam Jafar al-Sadiq (peace be upon him) explains: 'The heavens and earth were sustained through our love; had it not been for the light of Muhammad and his purified progeny, no atom would glorify its Lord.' This teaching connects the cosmic worship to the divine covenant of Wilayah and the central role of the Ahlul Bayt."
+    },
+    {
+      "id": "59_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 10,
+      "question": "What does the supplication for 'our brothers who preceded us in faith' demonstrate according to the Ahlul Bayt teachings?",
+      "options": [
+        "A simple request for forgiveness",
+        "The spiritual unity binding believers across time and the eternal nature of the ummah",
+        "A ritual obligation without deeper meaning",
+        "An exclusive prayer for family members"
+      ],
+      "correctAnswer": "The spiritual unity binding believers across time and the eternal nature of the ummah",
+      "explanation": "In verse 10, Allah unveils the spiritual bond between generations of believers through their supplication seeking forgiveness for earlier ones. The Ahlul Bayt taught that this prayer reveals the eternal nature of the ummah as a living spiritual organism where past, present, and future believers are interconnected through the axis of Wilayah."
+    },
+    {
+      "id": "59_9",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Shia and Sunni classical exegetes agree that the opening verse of Surah Al-Hashr affirms tawhid by demonstrating all creation's inherent submission to divine sovereignty.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Classical exegetes across traditions, including Tabari (Sunni) and Tabatabai (Shia), emphasize that verse 1 affirms tawhid by demonstrating all creation's inherent submission to divine sovereignty. This reflects a shared emphasis on God's transcendence (al-'Aziz) and purposeful wisdom (al-Hakim) manifest in creation."
+    },
+    {
+      "id": "59_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 7,
+      "question": "What is the primary area of convergence between Shia and Sunni interpretations of verse 7?",
+      "options": [
+        "The exact distribution percentages for fay'",
+        "The verse's emphasis on socioeconomic justice and prohibition of wealth monopolization",
+        "The specific individuals who should receive resources",
+        "The military strategies for acquiring fay'"
+      ],
+      "correctAnswer": "The verse's emphasis on socioeconomic justice and prohibition of wealth monopolization",
+      "explanation": "In interpreting Surah Al-Hashr 59:7, both Shia and Sunni exegetes converge on the verse's primary emphasis on socioeconomic justice and the prohibition of wealth monopolization. Classical commentators from both traditions emphasize the divine mandate for equitable distribution of resources, though they may differ in specific applications and interpretations of authority."
+    }
+  ]
+}

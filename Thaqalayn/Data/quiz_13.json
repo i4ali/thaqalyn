@@ -1,0 +1,135 @@
+{
+  "surahNumber": 13,
+  "questions": [
+    {
+      "id": "13_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what do the mysterious letters (Alif, Lam, Meem, Ra) at the beginning of Surah Ar-Ra'd symbolize?",
+      "options": [
+        "A code for understanding Arabic grammar",
+        "The Quran's miraculous nature and divine origin",
+        "The names of early Muslim companions",
+        "A chronological marker for when the surah was revealed"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia tradition holds that the huruf muqatta'at (mysterious letters) symbolize the Quran's miraculous nature, inviting reflection on its divine origin and transcendence beyond human composition."
+    },
+    {
+      "id": "13_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 11,
+      "question": "According to verse 13:11, Allah changes the condition of a people without requiring them to change themselves first.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The verse establishes that Allah does not change the condition of a people until they change what is in themselves. Societal transformation begins with individual spiritual and ethical choices."
+    },
+    {
+      "id": "13_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Tabatabai in Al-Mizan, what does the phrase 'established Himself above the Throne' (istawa 'ala al-arsh) signify?",
+      "options": [
+        "Allah's physical location in space",
+        "Allah's absolute authority and dominion over creation without physical corporeality",
+        "A throne made of precious metals",
+        "Allah's need for rest after creation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The 'Throne' (arsh) symbolizes Allah's absolute authority and dominion (malakut) over creation, not a spatial or physical entity. Shia theology rejects any attribution of corporeality (tashbih) to Allah."
+    },
+    {
+      "id": "13_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 13,
+      "question": "According to classical Shia exegesis, what is the thunder (ra'd) doing in verse 13:13?",
+      "options": [
+        "Warning of impending storms",
+        "Engaging in tasbih (glorification) of Allah",
+        "Communicating with the clouds",
+        "Announcing the arrival of prophets"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi in Majma al-Bayan interprets thunder's tasbih as a metaphysical reality: every element of the cosmos actively participates in acknowledging Allah's perfection, reflecting that 'there is nothing but that it hymns His praise' (17:44)."
+    },
+    {
+      "id": "13_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 13,
+      "question": "Contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi see the laws of physics governing natural phenomena as manifestations of divine governance (tadbir).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars bridge classical understanding with modern science, viewing phenomena like electromagnetism and thermodynamics as manifestations of Allah's meticulous design and governance of the cosmos."
+    },
+    {
+      "id": "13_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 21,
+      "question": "According to contemporary scholars, what modern concept does the verse's call to 'join what Allah commands to be joined' relate to?",
+      "options": [
+        "Only physical family relationships",
+        "A holistic ethical mandate including kinship, social justice, and ecological balance",
+        "Exclusively religious rituals",
+        "Political party membership"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars like Ayatollah Nasir Makarem Shirazi frame this 'connection' (wasl) as a holistic ethical mandate encompassing kinship bonds, social justice, and ecological balance, calling for a world built on empathy and systemic harmony."
+    },
+    {
+      "id": "13_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 13,
+      "question": "According to Imam Jafar al-Sadiq (AS), what is the thunder?",
+      "options": [
+        "A random natural occurrence",
+        "An angel entrusted with the clouds, roaring with praise as he drives them",
+        "The sound of Allah's footsteps",
+        "A warning only for disbelievers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) explained that 'The thunder is an angel entrusted with the clouds, roaring with praise as he drives them' (al-Kafi), revealing that natural phenomena exist to manifest Divine Majesty."
+    },
+    {
+      "id": "13_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 14,
+      "question": "According to the Ahlul Bayt's teachings, seeking Allah through dua while being severed from the guidance of the Imams is like trying to grasp water in a mirage.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Jafar al-Sadiq (AS) states: 'We are the channels of Allah's mercy, the guardians of His knowledge, and the interpreters of His revelation. Whoever seeks Him without us is like one trying to grasp water in a mirage.'"
+    },
+    {
+      "id": "13_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 14,
+      "question": "What is a key difference between Shia and Sunni interpretations regarding intercession (shafa'a) in verse 13:14?",
+      "options": [
+        "Sunni scholars accept all forms of intercession while Shia reject it",
+        "Shia scholars accept tawassul through the Ahlul Bayt as divinely authorized intermediaries, while Sunni scholars generally reject any form of mediation",
+        "Both traditions reject intercession entirely",
+        "Only Sunni scholars discuss intercession"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentators contextualize the verse within tawassul (seeking proximity through chosen guides), viewing the Ahlul Bayt as divinely authorized intercessors, while Sunni exegetes like Al-Razi insist supplication must be directed solely to Allah."
+    },
+    {
+      "id": "13_10",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 13,
+      "question": "Both Shia and Sunni traditions agree that the thunderbolts (sawa'iq) in verse 13:13 represent Allah's punitive justice against those who reject truth.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions agree that the 'thunderbolts' represent Allah's punitive justice against those who reject truth, reflecting a shared theological principle of divine retribution for persistent disbelief."
+    }
+  ]
+}

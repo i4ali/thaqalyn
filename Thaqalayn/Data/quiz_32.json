@@ -1,0 +1,140 @@
+{
+  "surahNumber": 32,
+  "questions": [
+    {
+      "id": "32_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "According to Surah As-Sajdah, how is the 'six days' of creation understood in Shia tafsir?",
+      "options": [
+        "Literal 24-hour periods",
+        "Symbolic stages reflecting divine wisdom in crafting existence",
+        "Six thousand years",
+        "Six prophetic eras"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'sittati ayyam' (six days) is understood in Shia tafsir not as literal 24-hour periods but as symbolic stages reflecting divine wisdom in crafting existence."
+    },
+    {
+      "id": "32_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 7,
+      "question": "According to the tafsir of verse 32:7, humanity's humble origin from clay (tin) reminds us that our nobility lies in spiritual potential, not material superiority.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The phrase 'began the creation of humankind from clay' references both Adam's physical origin and the symbolic humility inherent in human existence, reminding us that our nobility lies not in material superiority but in spiritual potential."
+    },
+    {
+      "id": "32_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "How do Shia scholars like Tabrisi interpret 'istawa ala al-arsh' (He established Himself above the Throne)?",
+      "options": [
+        "Allah physically sits on a throne in the sky",
+        "It denotes Allah's absolute dominion and transcendence, not physical elevation",
+        "It refers only to the Day of Judgment",
+        "It describes Allah's movement through creation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars like Tabrisi in Majma al-Bayan clarify that 'istawa' denotes Allah's absolute dominion and transcendence, not physical elevation. The Throne (arsh) symbolizes His governance over creation, inseparable from His essence yet beyond material confines."
+    },
+    {
+      "id": "32_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 15,
+      "question": "According to classical Shia exegesis, the prostration (sujud) mentioned in verse 32:15 is linked to the principle of wilayah (divinely ordained guardianship).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Classical Shia exegesis uniquely ties this verse to the principle of wilayah (divinely ordained guardianship). The 'arrogance' condemned is interpreted as rejecting the wilayah of the Ahl al-Bayt, as per narrations from Imam Jafar al-Sadiq."
+    },
+    {
+      "id": "32_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 16,
+      "question": "What does rising from beds for night prayer symbolize according to contemporary Shia scholars like Ayatollah Makarem Shirazi?",
+      "options": [
+        "Physical exercise for health",
+        "Resisting complacency and prioritizing transcendent values over materialism",
+        "A punishment for sins",
+        "An obligation only during Ramadan"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes that 'rising from beds' symbolizes resisting complacency - a call to actively prioritize transcendent values over materialism in an age of distraction."
+    },
+    {
+      "id": "32_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 17,
+      "question": "How do modern scholars connect verse 32:17's concept of 'hidden rewards' to contemporary challenges?",
+      "options": [
+        "It only applies to ancient believers",
+        "It challenges short-term thinking and supports those working for futures they may not see",
+        "It discourages environmental activism",
+        "It promises immediate material gains"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In an era of climate crisis and inequality, the verse's promise of hidden rewards challenges short-term thinking. Environmental activists work for futures they may never see, mirroring the verse's call to trust in transcendent justice."
+    },
+    {
+      "id": "32_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 16,
+      "question": "According to Imam Jafar al-Sadiq (AS), what does 'their sides shun beds' symbolize for true believers?",
+      "options": [
+        "Physical illness",
+        "Rejecting worldly attachment; sleep represents stagnation while rising embodies awakening",
+        "Avoiding rest completely",
+        "A sign of poverty"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) taught that 'their sides abandon beds not merely for prayer, but to tear the veils of heedlessness.' The Ahlul Bayt teach that this symbolizes rejecting worldly attachment; sleep represents stagnation, while rising for night prayers embodies awakening to the Divine."
+    },
+    {
+      "id": "32_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 17,
+      "question": "According to Imam Ali al-Ridha (AS), the 'comfort for eyes' in Paradise is granted through the Wilayah of the Ahlul Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali al-Ridha (AS) states, 'The comfort for eyes refers to gazing upon the Face of Allah, which is granted through our Wilayah' (Tafsir al-Qummi). This Divine vision is a spiritual encounter achieved through perfect submission to the Imams of Light."
+    },
+    {
+      "id": "32_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 4,
+      "question": "What is a key difference between Shia and Sunni exegesis regarding 'istawa ala al-arsh'?",
+      "options": [
+        "Both interpret it identically",
+        "Sunni scholars generally adopt a literal reading with bi-la kayf, while Shia interpret it metaphorically as divine authority",
+        "Shia scholars believe Allah physically sits on a throne",
+        "Sunni scholars reject the concept entirely"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni scholars like Tabari and Razi generally adopt a literal reading while emphasizing Allah's transcendence 'bi-la kayf' (without asking how). Shia exegetes like Tabrisi and Tusi interpret 'istawa' metaphorically, viewing the Throne as a symbol of divine authority rather than a spatial entity."
+    },
+    {
+      "id": "32_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 17,
+      "question": "How do Shia scholars frame the 'hidden rewards' of verse 32:17 differently from Sunni scholars?",
+      "options": [
+        "There is no difference",
+        "Shia link the highest rewards to allegiance to Ahl al-Bayt, while Sunni focus on God's absolute sovereignty in dispensing rewards",
+        "Sunni scholars deny the existence of hidden rewards",
+        "Shia scholars reject the concept of Paradise"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentators often frame the verse within the paradigm of walaya, suggesting the highest rewards are reserved for those who combine righteous deeds with allegiance to the Ahl al-Bayt. Sunni scholars focus on God's absolute sovereignty in dispensing rewards, avoiding explicit links to leadership models."
+    }
+  ]
+}

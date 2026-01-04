@@ -1,0 +1,140 @@
+{
+  "surahNumber": 44,
+  "questions": [
+    {
+      "id": "44_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 10,
+      "question": "According to the tafsir, what does the term 'dukhan' (smoke) in verse 10 refer to?",
+      "options": [
+        "Only a future eschatological sign",
+        "A dense, unmistakable smoke enveloping the sky, linked both to historical famine and eschatological signs",
+        "Just a metaphor for confusion",
+        "Only air pollution in modern times"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term dukhan refers to a dense, unmistakable smoke enveloping the sky. Shia scholars like Allamah Tabatabai explain it as both a historical warning (linked to the severe famine in Mecca during the Prophet's time) and an eschatological sign."
+    },
+    {
+      "id": "44_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 17,
+      "question": "In Surah Ad-Dukhaan verse 17, the 'noble messenger' (rasoolun kareem) sent to Pharaoh's people refers to Prophet Musa (Moses).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The 'noble messenger' in verse 17 refers to Prophet Musa (Moses), whose moral excellence and dignified mission contrasted sharply with Pharaoh's tyranny."
+    },
+    {
+      "id": "44_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 10,
+      "question": "According to Sheikh Tabrisi in Majma al-Bayan, the 'smoke' (dukhan) in verse 10 has two primary perspectives. What are they?",
+      "options": [
+        "Literal and metaphorical",
+        "Historical and eschatological",
+        "Physical and emotional",
+        "Individual and collective"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sheikh Tabrisi outlines two primary perspectives: historical (linked to a severe famine in Mecca during the Prophet's time as divine punishment for the Quraysh's rejection) and eschatological (a sign preceding the Day of Judgment)."
+    },
+    {
+      "id": "44_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 16,
+      "question": "What does 'al-batshah al-kubra' (the greatest assault) in verse 16 signify according to classical Shia exegesis?",
+      "options": [
+        "A minor punishment for small sins",
+        "A worldly military victory",
+        "An unparalleled act of divine punishment on the Day of Judgment",
+        "A natural disaster"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In classical Shia exegesis, 'al-batshah al-kubra' is understood as a profound articulation of divine justice and eschatological reckoning - an unparalleled divine punishment that surpasses all worldly consequences."
+    },
+    {
+      "id": "44_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 10,
+      "question": "Contemporary Shia scholars like Ayatollah Naser Makarem Shirazi connect the 'visible smoke' to modern environmental crises and climate change.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern scholars like Sayyid Kamal al-Haydari emphasize the smoke's metaphorical resonance with today's environmental crises, framing it as a warning against ecological collapse caused by human greed and negligence."
+    },
+    {
+      "id": "44_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 17,
+      "question": "How do contemporary Shia scholars interpret the 'test' (fitna) of Pharaoh's people in relation to modern times?",
+      "options": [
+        "As irrelevant to modern society",
+        "As a metaphor only for personal spiritual struggles",
+        "As a timeless call to challenge systemic oppression and injustice",
+        "As a warning only about ancient tyranny"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars like Ayatollah Nasir Makarem Shirazi interpret the 'test' as a timeless metaphor for systemic oppression and the human responsibility to confront it, extending to modern struggles for justice."
+    },
+    {
+      "id": "44_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 10,
+      "question": "According to the teachings of the Ahlul Bayt, what does the 'visible smoke' symbolize on a spiritual level?",
+      "options": [
+        "Material wealth and prosperity",
+        "The fog of misguidance that engulfs hearts when truth is rejected",
+        "A celebration of worldly success",
+        "The rise of new scientific discoveries"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq taught that this 'visible smoke' manifests as a spiritual metaphor for the fog of misguidance that engulfs hearts detached from the light of Wilayah (divine guardianship)."
+    },
+    {
+      "id": "44_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 17,
+      "question": "According to Imam Ali al-Ridha (as), the 'servants of Allah' in verse 18 symbolically represent the purified followers of the Imams who have liberated their hearts through submission to divine guidance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali al-Ridha taught that 'the servants of Allah' symbolically represent the purified followers of the Imams - those who have liberated their hearts from Pharaoh-like arrogance through submission to divine guidance."
+    },
+    {
+      "id": "44_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 10,
+      "question": "What is a key difference between Shia and Sunni interpretations of the 'visible smoke' in verse 10?",
+      "options": [
+        "Sunni scholars reject any meaning for the verse",
+        "Shia exegetes connect the smoke more explicitly to tribulations preceding the Mahdi's reappearance",
+        "Sunni scholars emphasize the Mahdi connection more",
+        "There is no difference between the traditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While both traditions agree on its eschatological significance, Shia exegetes like Qummi and Tusi connect the smoke more explicitly to the tribulations preceding the Mahdi's reappearance, reflecting Shia emphasis on the Imam's role in eschatological deliverance."
+    },
+    {
+      "id": "44_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 16,
+      "question": "How do Sunni and Shia scholars differ in their interpretation of 'the greatest assault' (al-batshah al-kubra) in verse 16?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia sources occasionally link it to specific historical injustices like the persecution of Imam Husayn at Karbala",
+        "Sunni scholars emphasize Karbala more than Shia",
+        "Both traditions interpret it exactly the same way"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While Sunni works generally limit the verse to past communities or the Final Day, Shia sources like Qummi's tafsir and Tusi's At-Tibyan occasionally link the 'assault' to specific historical injustices, such as the persecution of Imam Husayn at Karbala."
+    }
+  ]
+}

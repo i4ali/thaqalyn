@@ -1,0 +1,140 @@
+{
+  "surahNumber": 53,
+  "questions": [
+    {
+      "id": "53_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does the 'star' (najm) in verse 1 symbolize in Shia tradition?",
+      "options": [
+        "Only the physical stars in the sky",
+        "The Prophet Muhammad and the Ahlul Bayt as spiritual guides",
+        "A specific constellation used for navigation",
+        "The angels in heaven"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Shia tradition, the 'star' symbolizes both the Prophet Muhammad whose spiritual light descends to illuminate the path of truth, and the Ahlul Bayt as spiritual 'stars' guiding believers through darkness."
+    },
+    {
+      "id": "53_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "Verse 2 ('Your companion has not strayed, nor has he erred') affirms the Prophet Muhammad's infallibility (ismah) in receiving and conveying divine guidance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The dual negation 'ma dalla... wa ma ghawa' comprehensively rejects both intentional deviation and unintentional mistakes, affirming the Prophet's purity in both intention and execution of his mission - a core belief in Shia theology."
+    },
+    {
+      "id": "53_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 9,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does 'two bow lengths or nearer' (qaba qawsayn) symbolize?",
+      "options": [
+        "A physical measurement of distance",
+        "The Prophet's complete spiritual annihilation (fana) in divine presence",
+        "The distance between Mecca and Medina",
+        "The length of the Prophet's prayer mat"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai explains that 'two bow lengths' metaphorically represents the Prophet's complete annihilation (fana) in divine presence, where his existential reality became wholly subsumed by divine light (nur)."
+    },
+    {
+      "id": "53_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to classical Shia exegesis, what does the 'descending star' literally reference?",
+      "options": [
+        "Only the morning star",
+        "Either the Pleiades constellation or the gradual revelation of Quranic verses",
+        "A meteor shower",
+        "The sun setting in the west"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi's Majma al-Bayan notes that the 'descending star' references either the Pleiades constellation (known to pre-Islamic Arabs) or the gradual revelation of Quranic verses, akin to stars illuminating spiritual darkness."
+    },
+    {
+      "id": "53_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 9,
+      "question": "Contemporary Shia scholars draw parallels between the verse's imagery of transcendent closeness and quantum physics' concept of non-locality.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern thinkers draw parallels with quantum physics' concept of non-locality, where particles remain connected beyond physical distance, mirroring the verse's imagery of transcendent closeness to the Divine."
+    },
+    {
+      "id": "53_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 19,
+      "question": "According to contemporary scholars like Ayatollah Mohammad Ali Shomali, what might modern 'idols' referenced by verse 19 include?",
+      "options": [
+        "Only physical statues",
+        "Consumerism, nationalism, or unchecked technological dominance",
+        "Only religious icons",
+        "Ancient artifacts in museums"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars emphasize that verse 19's critique isn't merely historical but invites critical reflection on modern 'idols' such as consumerism, nationalism, or unchecked technological dominance that distort humanity's connection to divine purpose."
+    },
+    {
+      "id": "53_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 18,
+      "question": "According to Imam Jafar al-Sadiq, what did the 'greatest signs' that the Prophet witnessed include?",
+      "options": [
+        "Only physical wonders of nature",
+        "The luminous realities of the Ahlul Bayt as manifestations of Allah's guidance",
+        "The construction of the Kaaba",
+        "The battles of early Islam"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam al-Sadiq explains in Tafsir al-Qummi that the 'greatest signs' included the Prophet's vision of the Ahlul Bayt's luminous realities, who are manifestations of Allah's perfect guidance."
+    },
+    {
+      "id": "53_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 9,
+      "question": "According to Imam Jafar al-Sadiq, the 'two bow-lengths' symbolizes the perfect harmony between divine will and human submission embodied in the Prophet and Imam Ali.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Jafar al-Sadiq explains in Tafsir al-Qummi that 'two bow-lengths' symbolizes the perfect harmony between divine will and human submission embodied in the Prophet and Imam Ali, whose souls were 'twin arcs in the bow of Allah's command.'"
+    },
+    {
+      "id": "53_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 8,
+      "question": "What is a key difference between Shia and Sunni interpretations of verse 8 ('Then he approached and descended')?",
+      "options": [
+        "Sunni scholars reject the Mi'raj entirely",
+        "Shia interpretations link the verse to the Imams' inherited wisdom, while Sunni readings focus on the Prophet's singular experience",
+        "There is no difference between the traditions",
+        "Shia scholars interpret it literally while Sunni scholars interpret it metaphorically"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While both traditions view the verse as affirming prophethood, Shia interpretations often extend its implications to the Imams' inherited wisdom through the doctrine of walayah, whereas Sunni readings focus on the Prophet's singular revelatory experience."
+    },
+    {
+      "id": "53_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 19,
+      "question": "How do Shia sources like Tusi respond to the 'Satanic Verses' narrative regarding verse 19?",
+      "options": [
+        "They accept it as historically accurate",
+        "They categorically dismiss it, citing the doctrine of prophetic infallibility (ismah)",
+        "They consider it partially true",
+        "They do not address it at all"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia sources like Tusi (At-Tibyan) and Qummi categorically dismiss the 'Satanic Verses' narrative, citing the doctrine of ismah (prophetic infallibility) as incompatible with such accounts."
+    }
+  ]
+}

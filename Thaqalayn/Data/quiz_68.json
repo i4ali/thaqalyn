@@ -1,0 +1,140 @@
+{
+  "surahNumber": 68,
+  "questions": [
+    {
+      "id": "68_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Al-Qalam's opening verse, what does the 'pen' (qalam) symbolize according to the Foundation Layer?",
+      "options": [
+        "Only the physical act of writing",
+        "Both the divine instrument decreeing fate and the human act of recording truth",
+        "The Prophet's personal belongings",
+        "Ancient Arabic calligraphy tools"
+      ],
+      "correctAnswer": "Both the divine instrument decreeing fate and the human act of recording truth",
+      "explanation": "The pen symbolizes both the divine instrument decreeing fate (as in the Lawh al-Mahfuz, the Preserved Tablet) and the human act of recording truth. Early Muslims faced opponents who mocked the Prophet's message, and this verse elevated the written word as a weapon against ignorance."
+    },
+    {
+      "id": "68_2",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "What does the term 'khuluq' (moral character) in verse 4 denote?",
+      "options": [
+        "External appearance only",
+        "Innate disposition and cultivated virtues",
+        "Physical strength",
+        "Intellectual ability"
+      ],
+      "correctAnswer": "Innate disposition and cultivated virtues",
+      "explanation": "The term 'khuluq' denotes both innate disposition and cultivated virtues. Allah declares to Prophet Muhammad 'Wa innaka la'ala khuluqin 'azim' (And indeed, you are of a great moral character), highlighting his perfected ethical qualities."
+    },
+    {
+      "id": "68_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, what does the letter 'Nun' represent?",
+      "options": [
+        "A random disconnected letter with no meaning",
+        "The Light of Imam Ali and the divine 'Noor' of the Imam",
+        "A historical artifact",
+        "The shape of the pen"
+      ],
+      "correctAnswer": "The Light of Imam Ali and the divine 'Noor' of the Imam",
+      "explanation": "Shaykh Tabrisi records traditions linking 'Nun' to the Light of Imam Ali, citing narrations where the letter represents the 'Noor' (divine light) of the Imam manifest in creation. This aligns with the Shia doctrine of the pre-existential luminous reality of the Fourteen Infallibles."
+    },
+    {
+      "id": "68_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "According to Allama Tabatabai in Tafsir al-Mizan, the Prophet Muhammad's character (khuluqin azim) represents only personal virtue, not a comprehensive ethical system.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Tabatabai emphasizes that 'khuluqin azim' encapsulates the totality of the Prophet's divinely perfected ethical and spiritual qualities, representing a comprehensive ethical system, not merely personal virtue."
+    },
+    {
+      "id": "68_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How do contemporary Shia scholars like Dr. Liyakat Takim extend the symbolism of the 'pen' to the modern information age?",
+      "options": [
+        "They reject the pen as obsolete",
+        "They limit it to traditional writing only",
+        "They extend it to digital media, AI-driven communication, and algorithmic data",
+        "They focus solely on printed books"
+      ],
+      "correctAnswer": "They extend it to digital media, AI-driven communication, and algorithmic data",
+      "explanation": "Dr. Liyakat Takim connects the verse to today's information age, where the 'pen' extends to digital media and AI-driven communication. The act of 'inscribing' now includes social media posts, academic research, and algorithmic data—tools that demand moral accountability."
+    },
+    {
+      "id": "68_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 17,
+      "question": "According to Ayatollah Naser Makarem Shirazi's interpretation of verse 17, the 'garden' only represents physical agricultural land with no spiritual significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Naser Makarem Shirazi emphasizes that the garden symbolizes both material and spiritual resources entrusted to humanity as 'amanah' (a divine trust), representing a timeless critique of greed and social inequity, not merely physical land."
+    },
+    {
+      "id": "68_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about the opening verse, what does 'Nun' symbolize?",
+      "options": [
+        "A fish in the ocean",
+        "The primordial Light of Muhammad (peace be upon him and his progeny)",
+        "The Arabic alphabet",
+        "The color of ink"
+      ],
+      "correctAnswer": "The primordial Light of Muhammad (peace be upon him and his progeny)",
+      "explanation": "Imam Ja'far al-Sadiq taught that 'Nun' symbolizes the primordial Light of Muhammad (peace be upon him and his progeny), the cosmic reality from which all divine wisdom emanates. Imam Ali said: 'I am the dot beneath the letter Nun,' affirming his inseparable connection to the Prophet's luminous essence."
+    },
+    {
+      "id": "68_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 34,
+      "question": "According to Imam Ali in Nahj al-Balagha, taqwa (God-consciousness) is described as 'the ship of salvation' with piety as its helm, certitude as its sail, and divine guidance as its captain.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Imam Ali teaches in Nahj al-Balagha: 'Taqwa is the ship of salvation; its helm is piety, its sail is certitude, and its captain is the light of divine guidance.' This guidance refers explicitly to the Wilayah of the Holy Prophet's purified progeny."
+    },
+    {
+      "id": "68_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is the key epistemological difference between Sunni and Shia interpretations of the 'pen' in verse 1?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Sunni exegesis prioritizes the pen as prophetic revelation (naql), while Shia interpretations associate it with ongoing Imam guidance (aql)",
+        "Both traditions interpret it identically with no differences",
+        "Shia scholars reject written tradition completely"
+      ],
+      "correctAnswer": "Sunni exegesis prioritizes the pen as prophetic revelation (naql), while Shia interpretations associate it with ongoing Imam guidance (aql)",
+      "explanation": "These differences stem from distinct epistemological frameworks: Sunni exegesis often prioritizes the pen as a tool of prophetic revelation, aligning with emphasis on textual transmission (naql), while Shia interpretations frequently associate it with the ongoing guidance of the Imams (aql), reflecting their theology of walayah."
+    },
+    {
+      "id": "68_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 51,
+      "question": "According to both Sunni (Tabari, Ibn Kathir) and Shia (Tabatabai, Tabrisi) scholars, what does the phrase 'make you slip with their eyes' in verse 51 refer to?",
+      "options": [
+        "Physical blindness of the disbelievers",
+        "The Prophet's poor eyesight",
+        "The 'evil eye' (ayn) and ocular malevolence from Meccan polytheists",
+        "A medical condition"
+      ],
+      "correctAnswer": "The 'evil eye' (ayn) and ocular malevolence from Meccan polytheists",
+      "explanation": "Both Sunni commentators like Tabari and Ibn Kathir and Shia scholars such as Tabatabai and Tabrisi emphasize the literal attempt by disbelievers to harm the Prophet through the 'evil eye' (ayn), citing pre-Islamic Arabian beliefs about ocular malevolence and the spiritual hostility faced by the Prophet."
+    }
+  ]
+}

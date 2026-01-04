@@ -1,0 +1,115 @@
+{
+  "surahNumber": 85,
+  "questions": [
+    {
+      "id": "85_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Al-Burooj's opening verse, what does the term 'al-burooj' refer to according to the Foundation Layer?",
+      "options": [
+        "Mountains and valleys",
+        "Constellations or celestial formations known as 'towers of light'",
+        "Ancient cities and fortresses",
+        "Desert oases and palm trees"
+      ],
+      "correctAnswer": "Constellations or celestial formations known as 'towers of light'",
+      "explanation": "The term 'al-burooj' refers to constellations or celestial formations, often translated as 'great stars' or 'towers of light.' Classical Shia commentators like Allamah Tabatabai explain that these cosmic patterns symbolise divine order and precision, reflecting Allah's infinite wisdom."
+    },
+    {
+      "id": "85_2",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Al-Tabatabai in Al-Mizan, how does the cosmic imagery of 'buruj' connect to Shia theology?",
+      "options": [
+        "It only represents astronomical phenomena with no spiritual meaning",
+        "The structured heavens mirror the spiritual hierarchy and the Imams serve as luminous guides like stars prevent celestial chaos",
+        "It symbolizes the zodiac signs used for fortune-telling",
+        "It represents the physical distance between Earth and Heaven"
+      ],
+      "correctAnswer": "The structured heavens mirror the spiritual hierarchy and the Imams serve as luminous guides like stars prevent celestial chaos",
+      "explanation": "Al-Tabatabai emphasises that just as stars prevent celestial chaos, the Imams preserve spiritual and moral equilibrium, ensuring the continuity of divine guidance after the Prophet. The 'buruj' symbolise the hierarchical structure of existence, where celestial order mirrors the spiritual hierarchy established by Allah."
+    },
+    {
+      "id": "85_3",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary Shia scholars like Dr. Hassan Alawi, the 'buruj' in verse 1 can be understood through modern astrophysics as dynamic systems that echo the Quranic emphasis on cosmic balance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Contemporary scholars bridge classical interpretations with astrophysics, noting how stars' gravitational precision and galactic architecture—evident in phenomena like the Milky Way's spiral arms—mirror the Quranic emphasis on balance (mizan). Dr. Hassan Alawi observes that the buruj aren't just ancient symbols but dynamic systems echoing the ayat (signs) of creation."
+    },
+    {
+      "id": "85_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teaching in Tafsir al-Qummi, what do the 'buruj' (great stars) represent?",
+      "options": [
+        "Physical navigation tools for desert travelers",
+        "The Imams from the progeny of Muhammad who are towers of light guiding humanity through darkness",
+        "Ancient astronomical calendars",
+        "Celestial bodies that determine human fate"
+      ],
+      "correctAnswer": "The Imams from the progeny of Muhammad who are towers of light guiding humanity through darkness",
+      "explanation": "Imam Ja'far al-Sadiq states in Tafsir al-Qummi: 'The buruj (great stars) are the Imams from the progeny of Muhammad. They are towers of light guiding humanity through the darkness of ignorance, just as stars guide travellers at night.' This aligns with the Shia understanding of Imamah as celestial beacons preserving Allah's covenant."
+    },
+    {
+      "id": "85_5",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 8,
+      "question": "In verse 8, what was the only 'crime' of the persecuted believers according to the Foundation Layer?",
+      "options": [
+        "Political rebellion against the king",
+        "Economic competition with merchants",
+        "Their unwavering faith in Allah and upholding tawhid (divine unity)",
+        "Refusing to pay taxes"
+      ],
+      "correctAnswer": "Their unwavering faith in Allah and upholding tawhid (divine unity)",
+      "explanation": "The phrase 'they resented them not except because they believed in Allah' reveals that tyrants punished people not for wrongdoing, but for upholding tawhid (divine unity). Their oppressors' hatred stemmed not from any fault in the believers, but from their rejection of falsehood and commitment to Allah al-Aziz al-Hameed."
+    },
+    {
+      "id": "85_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "According to Tabrisi in Majma al-Bayan, the 'sitting near' the trench in verse 6 represents mere passive observation rather than active complicity in the persecution.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Tabrisi interprets 'sitting near it' as depicting the physical proximity of the persecutors to the pit of fire, underscoring their active complicity in the torture of the faithful. Their seated posture signifies not mere observation but deliberate engagement in tyranny, as they orchestrated the burning of believers who refused to renounce monotheism."
+    },
+    {
+      "id": "85_7",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 17,
+      "question": "What is a key difference between Sunni and Shia interpretations of the 'soldiers' mentioned in verse 17?",
+      "options": [
+        "Sunni scholars reject the verse entirely while Shia accept it",
+        "Sunni exegesis focuses on universal ethical implications while Shia interpretations often link it to the suffering of the Ahl al-Bayt and the concept of Imamah",
+        "Both traditions interpret the verse identically with no differences",
+        "Shia scholars view it only as a historical account while Sunni see spiritual meaning"
+      ],
+      "correctAnswer": "Sunni exegesis focuses on universal ethical implications while Shia interpretations often link it to the suffering of the Ahl al-Bayt and the concept of Imamah",
+      "explanation": "While Sunni commentators focus on the event's universal ethical implications of resisting tyranny, Shia tafsirs like Al-Qummi and Tusi's At-Tibyan often link the verse to the suffering of the Ahl al-Bayt, viewing the persecutors as symbolic of those who opposed divine guidance. The verse also reinforces the Shia doctrine of Imamah, ensuring the ultimate triumph of truth."
+    },
+    {
+      "id": "85_8",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 14,
+      "question": "How do contemporary Shia scholars like Sayyed Mohammad Hussein Fadlallah interpret the divine attribute 'Al-Wadood' (The Affectionate) in verse 14?",
+      "options": [
+        "As a purely abstract theological concept with no practical application",
+        "As divine affection manifesting in creation's interconnectedness, relevant to ecological ethics and care for the planet",
+        "As applicable only to human relationships, not environmental concerns",
+        "As a historical attribute no longer relevant in modern times"
+      ],
+      "correctAnswer": "As divine affection manifesting in creation's interconnectedness, relevant to ecological ethics and care for the planet",
+      "explanation": "Sayyed Mohammad Hussein Fadlallah framed 'wadood' as divine 'affection' manifesting in creation's interconnectedness—a theme echoed in ecological ethics, where care for the planet reflects reverence for Allah's loving sustenance. This bridges classical theology with contemporary environmental concerns."
+    }
+  ]
+}

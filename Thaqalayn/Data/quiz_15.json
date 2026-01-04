@@ -1,0 +1,205 @@
+{
+  "surahNumber": 15,
+  "questions": [
+    {
+      "id": "15_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What do the disconnected letters 'Alif, Lam, Ra' (Huroof al-Muqatta'at) at the opening of Surah Al-Hijr symbolize?",
+      "options": ["The names of previous prophets", "The miraculous nature of the Quran's language and its divine origin", "The numerical value of the surah", "The names of the archangels"],
+      "correctAnswer": "B",
+      "explanation": "The Huroof al-Muqatta'at appear in several Quranic chapters, symbolizing the miraculous nature of the Quran's language and its divine origin. Their exact meanings remain known only to Allah and His chosen servants."
+    },
+    {
+      "id": "15_2",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 26,
+      "question": "According to Surah Al-Hijr, from what material was humanity created?",
+      "options": ["Pure water", "Divine light", "Salsal (dried clay) from hama' masnun (altered black mud)", "A mixture of fire and earth"],
+      "correctAnswer": "C",
+      "explanation": "Allah states that humans were created from salsal (dried clay producing a hollow sound) derived from hama' masnun (aged, fermented black mud). This imagery emphasizes the lowly, temporary nature of our physical composition while highlighting divine craftsmanship."
+    },
+    {
+      "id": "15_3",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 5,
+      "question": "According to Surah Al-Hijr (15:5), every nation can alter or delay its divinely ordained term (ajal) through worldly means.",
+      "options": ["True", "False"],
+      "correctAnswer": "False",
+      "explanation": "The verse states: 'No nation will precede its term, nor will they remain thereafter.' This emphasizes that every community operates within a divinely ordained timeframe that cannot be hastened or delayed by humanity."
+    },
+    {
+      "id": "15_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 56,
+      "question": "In Surah Al-Hijr (15:56), Prophet Ibrahim asks: 'Who despairs of the mercy of his Lord except...?'",
+      "options": ["The oppressors", "The ungrateful", "Those astray (al-dalloon)", "The arrogant"],
+      "correctAnswer": "C",
+      "explanation": "Prophet Ibrahim's statement challenges the mindset of hopelessness, framing it as a spiritual deviation. He declares that only 'those astray' (al-dalloon) - those who have lost their way - despair of Allah's mercy."
+    },
+    {
+      "id": "15_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to classical Shia exegesis, what does the phrase 'Quran Mubeen' (clear Quran) in verse 1 imply about interpretation?",
+      "options": ["The Quran needs no interpretation at all", "The Quran's clarity does not negate the necessity of divinely appointed interpreters (the Imams)", "Only Arabic speakers can understand the Quran", "The Quran should only be interpreted literally"],
+      "correctAnswer": "B",
+      "explanation": "Shia tradition emphasizes that while the Quran is 'clear' (mubeen), this does not negate the necessity of divinely appointed interpreters—the Imams from the Progeny of the Prophet—to unveil its esoteric (batini) dimensions and ensure correct application."
+    },
+    {
+      "id": "15_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "According to Shia tafsir of verse 15:4, the 'known decree' (kitabun ma'lum) for nations represents arbitrary predestination unrelated to human choices.",
+      "options": ["True", "False"],
+      "correctAnswer": "False",
+      "explanation": "Classical Shia exegetes like Tabatabai and Tabrisi interpret the 'known decree' not as arbitrary predestination but as a divinely established timeframe (ajal) or fixed measure (qadar) contingent upon the moral trajectory of a people, aligning with the doctrine of 'amr bayn al-amrayn' (the reality between the two matters)."
+    },
+    {
+      "id": "15_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 26,
+      "question": "What theological duality does Tabatabai highlight in his commentary on the creation of humans from clay (verse 26)?",
+      "options": ["The duality of body and mind", "The duality of base materiality fused with sacred spirit (ruh)", "The duality of good and evil", "The duality of this world and the hereafter"],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai observes that the verse highlights base materiality (clay) fused with sacred spirit (ruh breathed into perfected clay). This duality establishes humanity's existential tension between earthly inclinations and transcendent potential."
+    },
+    {
+      "id": "15_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 56,
+      "question": "According to Shia theology, what does despair (ya's) in divine mercy constitute?",
+      "options": ["A minor sin easily forgiven", "A fundamental deviation (dalal) from tawhid", "A temporary emotional state with no spiritual consequence", "An acceptable response to hardship"],
+      "correctAnswer": "B",
+      "explanation": "Imam Tabatabai in Al-Mizan underscores that despair in divine mercy constitutes a fundamental deviation (dalal) from tawhid, as it implicitly denies Allah's omnibenevolence and omnipotence. True faith necessitates unwavering hope in Allah's grace."
+    },
+    {
+      "id": "15_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "How do contemporary scholars like Ayatollah Makarem Shirazi interpret the 'known decree' (ajal) of nations in relation to modern issues?",
+      "options": ["As purely spiritual matters unrelated to worldly affairs", "As a cosmic principle of balance including ecological, moral, and temporal limits", "As applying only to ancient nations", "As a metaphor with no practical application"],
+      "correctAnswer": "B",
+      "explanation": "Contemporary Shia scholars interpret this verse as a cosmic principle of balance: every society operates within divinely ordained ecological, moral, and temporal limits. This aligns with modern concerns about climate thresholds and social justice."
+    },
+    {
+      "id": "15_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "According to contemporary Shia scholars, the 'false hope' (al-amal) critiqued in verse 15:3 can manifest today as the illusion of permanence in consumerism and environmental exploitation.",
+      "options": ["True", "False"],
+      "correctAnswer": "True",
+      "explanation": "Scholars like Ayatollah Makarem Shirazi interpret this verse as warning against societies that conflate material indulgence with fulfillment. The 'false hope' resonates today as the illusion of permanence—the belief that consumption or environmental exploitation bears no consequences."
+    },
+    {
+      "id": "15_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 26,
+      "question": "What scientific insight do contemporary scholars connect to the Quranic description of human creation from clay?",
+      "options": ["Humans literally contain clay minerals", "Clay minerals may have catalyzed early organic molecules, echoing earth as a fertile starting point", "Clay is the primary component of human DNA", "Clay consumption is beneficial for health"],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars note that biologists observe clay minerals may have catalyzed early organic molecules, echoing the verse's focus on earth as a fertile starting point. The Quranic emphasis on 'alteration' (masnun) also resonates with evolutionary processes."
+    },
+    {
+      "id": "15_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 57,
+      "question": "According to Ayatollah Makarem Shirazi, what Quranic principle does Prophet Ibrahim's questioning of the angels in verse 57 reflect?",
+      "options": ["Blind obedience to authority", "Tahqiq (critical verification) - urging believers to actively seek truth", "Distrust of divine messengers", "Rejection of supernatural phenomena"],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars emphasize that Ibrahim's inquiry reflects the Quranic principle of tahqiq (critical verification), urging believers to actively seek truth rather than passively accept appearances. This aligns with the Shia emphasis on 'aql (intellect) as a divine gift."
+    },
+    {
+      "id": "15_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq (as), what do the disconnected letters like 'Alif, Lam, Ra' represent?",
+      "options": ["Random sounds with no meaning", "Ancient Arabic numerals", "The names of Allah condensed into light, manifested through the Muhammadan reality", "Codes for understanding future events"],
+      "correctAnswer": "C",
+      "explanation": "Imam Jafar al-Sadiq (as) taught that such letters represent 'the names of Allah condensed into light, manifested through the Muhammadan reality and entrusted to the purified Imams.' These letters find their living interpretation through the guardians of divine knowledge."
+    },
+    {
+      "id": "15_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 26,
+      "question": "According to Imam Ja'far al-Sadiq (as), Allah kneaded Adam's clay with the Water of His Mercy for forty mornings, revealing that true humanity emerges only when earthly nature is tempered by spiritual cultivation.",
+      "options": ["True", "False"],
+      "correctAnswer": "True",
+      "explanation": "The Sixth Imam explained that 'hama'in masnun' (altered black mud) signifies the transformative power of divine wisdom shaping raw elements into a vessel for consciousness. He taught that true humanity emerges when earthly nature is tempered by spiritual cultivation."
+    },
+    {
+      "id": "15_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 3,
+      "question": "According to Imam Ali (as) in Nahj al-Balagha, how are the people of the world divided in relation to their souls?",
+      "options": ["Rich and poor", "Believers and disbelievers", "One sells his soul and ruins it, the other buys his soul and liberates it", "Scholars and laypeople"],
+      "correctAnswer": "C",
+      "explanation": "Imam Ali (as) states in Nahj al-Balagha: 'The world is a place of transit, not a house of permanence. Its people fall into two groups: one sells his soul and ruins it, and the other buys his soul and liberates it.' This reflects the verse's warning about worldly indulgence."
+    },
+    {
+      "id": "15_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 56,
+      "question": "According to Imam Jafar al-Sadiq (as), those who despair of Allah's mercy have also rejected the Imams, for 'we are the doors to His mercy.'",
+      "options": ["True", "False"],
+      "correctAnswer": "True",
+      "explanation": "Imam Jafar al-Sadiq (as) elucidates: 'Whoever despairs of Allah's mercy has denied the vastness of His forgiveness, and whoever denies this has rejected the Imams, for we are the doors to His mercy.' This ties hope directly to Wilayah."
+    },
+    {
+      "id": "15_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "On what aspect of verse 15:1 do both Shia and Sunni scholars agree?",
+      "options": ["The exact meaning of the disconnected letters", "That the letters should be removed from recitation", "That the disconnected letters symbolize the Quran's inimitable nature (i'jaz)", "That only Shia scholars can interpret these letters"],
+      "correctAnswer": "C",
+      "explanation": "Al-Tabari (Sunni) and Al-Tabrisi (Shia) concur that the disconnected letters like 'Alif-Lam-Ra' symbolize the Quran's inimitable nature, challenging those who doubt its revelation. This reflects theological consensus on the Quran's miraculous quality."
+    },
+    {
+      "id": "15_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 26,
+      "question": "What hermeneutical difference emerges between Shia and Sunni interpretations of human creation from clay (verse 26)?",
+      "options": ["Sunni scholars reject the literal meaning entirely", "Shia works incorporate Ahlul Bayt narrations with symbolic dimensions about spiritual refinement under divine guidance", "Only Sunni scholars accept scientific interpretations", "There are no differences between the two traditions"],
+      "correctAnswer": "B",
+      "explanation": "While Sunni commentators like Al-Razi prioritize philological and cosmological analysis, Shia works like Tafsir al-Qummi and Al-Mizan incorporate narrations from the Ahlul Bayt, imbuing the verse with symbolic dimensions: the 'black mud' signifies humanity's journey from base materialism toward spiritual refinement under divine guidance."
+    },
+    {
+      "id": "15_19",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 56,
+      "question": "Both Shia and Sunni traditions agree that despair from divine mercy is a form of spiritual misguidance, though they differ on whether this includes rejection of Imamic authority.",
+      "options": ["True", "False"],
+      "correctAnswer": "True",
+      "explanation": "Both traditions emphasize the Quranic condemnation of despairing from divine mercy as a hallmark of spiritual misguidance. Divergences emerge in that Shia exegetes expand this to include rejection of divinely appointed guidance (the Imams), while Sunni scholars focus on direct divine reliance."
+    },
+    {
+      "id": "15_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 5,
+      "question": "What is a key theological difference between Shia and Sunni interpretations of the 'term' (ajal) of nations in verse 15:5?",
+      "options": ["Sunni scholars deny any concept of divine decree", "Shia commentaries integrate the role of Imamate, arguing moral choices about accepting guided leadership affect spiritual trajectory", "Sunni scholars reject the verse's authenticity", "There are no meaningful differences"],
+      "correctAnswer": "B",
+      "explanation": "While Sunni exegetes stress individual moral responsibility and direct divine reliance, Shia commentaries like Al-Mizan integrate the role of divinely appointed leadership (Imamate) within the discourse on ajal, arguing that acceptance or rejection of guided leadership determines spiritual trajectory within Allah's foreknowledge."
+    }
+  ]
+}

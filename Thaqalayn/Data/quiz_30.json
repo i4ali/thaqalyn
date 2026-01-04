@@ -1,0 +1,140 @@
+{
+  "surahNumber": 30,
+  "questions": [
+    {
+      "id": "30_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "What historical event does the verse 'The Byzantines have been defeated' (ghulibat ar-Rum) refer to?",
+      "options": [
+        "The defeat of Rome by Greece",
+        "The Byzantine Empire's defeat by the Persian Sassanids around 614-615 CE",
+        "The fall of Constantinople",
+        "A battle between Arab tribes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse refers to a pivotal moment in 7th-century history when the Christian Byzantine Empire suffered a crushing defeat by the Zoroastrian Persian Sassanids around 614-615 CE."
+    },
+    {
+      "id": "30_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 22,
+      "question": "According to the tafsir, the diversity of human languages and skin colors mentioned in verse 22 is considered a divine gift and intentional variety, not an accident.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The term 'ikhtilaf' (differences/diversity) highlights intentional variety as a divine gift, not an accident. These differences in culture, speech, and appearance are woven into the fabric of existence by Allah's wisdom."
+    },
+    {
+      "id": "30_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does the Byzantine defeat and subsequent victory represent in terms of divine law?",
+      "options": [
+        "A random historical occurrence",
+        "Manifestations of divine 'sunna' (cosmic law) showing Allah's sovereignty over temporal power",
+        "Proof that military strength always prevails",
+        "Evidence that Christians are superior"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai emphasizes that such historical events are manifestations of divine 'sunna' (cosmic law), wherein worldly shifts reflect Allah's sovereignty over temporal power structures."
+    },
+    {
+      "id": "30_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 22,
+      "question": "According to Tabrisi in Majma al-Bayan, who are the 'knowledgeable' (al-'alimin) referenced in the verse about signs in creation?",
+      "options": [
+        "University professors",
+        "Those illumined by the teachings of the Ahlul Bayt",
+        "Only the companions of the Prophet",
+        "Ancient Greek philosophers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi cites traditions from Imam Jafar al-Sadiq highlighting that the 'knowledgeable' (al-'alimin) referenced in the verse are those illumined by the teachings of the Ahlul Bayt."
+    },
+    {
+      "id": "30_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "Contemporary Shia scholars like Ayatollah Naser Makarem Shirazi teach that empires rise and fall based solely on military and economic power, not moral alignment with divine principles.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Ayatollah Nasir Makarem Shirazi in Tafsir Nemuneh highlights that empires rise and fall based on moral alignment with divine principles, not merely military or economic power."
+    },
+    {
+      "id": "30_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 22,
+      "question": "What does the verse about diversity of languages and colors call Muslims to do in the modern world, according to contemporary scholars?",
+      "options": [
+        "Isolate from other cultures",
+        "Defend marginalized languages, confront systemic racism, and build bridges across divides",
+        "Focus only on Arabic language preservation",
+        "Ignore cultural differences"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse is a call to action: to defend marginalized languages, confront systemic racism, and build bridges across divides. As Ayatollah Sayyid Fadhel Milani observes, 'Unity in diversity is not a modern ideal—it is a divine blueprint for human flourishing.'"
+    },
+    {
+      "id": "30_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to Imam Jaafar al-Sadiq, what do worldly victories and defeats reflect?",
+      "options": [
+        "Random chance and luck",
+        "Human military strategy alone",
+        "Humanity's alignment with the eternal axis of Wilayah (divine guardianship)",
+        "The power of wealth"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Jaafar al-Sadiq taught that worldly victories and defeats are but fleeting reflections of humanity's alignment with the eternal axis of Wilayah (divine guardianship)."
+    },
+    {
+      "id": "30_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 22,
+      "question": "According to Imam Ali in Nahj al-Balagha, 'The creation of the heavens and earth is a greater proof than the heavens and earth themselves.'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (peace be upon him) states in Nahj al-Balagha: 'The creation of the heavens and earth is a greater proof than the heavens and earth themselves.' Here, the tangible world is a gateway to spiritual truths."
+    },
+    {
+      "id": "30_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Shia and Sunni scholars regarding the interpretation of the disconnected letters (Alif Lam Meem) in Surah Ar-Rum?",
+      "options": [
+        "Sunni scholars reject them entirely",
+        "Shia exegetes explore symbolic dimensions through the lens of Imamah, while Sunni scholars primarily treat them as rhetorical devices",
+        "Both interpret them identically",
+        "Shia scholars ignore them"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentaries often contextualize the verse within the framework of divine guidance through the Imams, while Sunni scholars like Al-Razi and Ibn Kathir typically limit analysis to the letters' function as a rhetorical device, emphasizing their unknowability except to God."
+    },
+    {
+      "id": "30_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 22,
+      "question": "How do both Shia and Sunni traditions ultimately view the verse about diversity of languages and colors?",
+      "options": [
+        "As unimportant",
+        "As a call to recognize divine unity through the tapestry of creation",
+        "As proof of human superiority over nature",
+        "As only relevant to ancient times"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both traditions ultimately uphold the verse as a call to recognize divine unity through the tapestry of creation, with both Al-Tabari (Sunni) and Al-Tusi (Shia) emphasizing that such variations reflect Allah's deliberate design."
+    }
+  ]
+}

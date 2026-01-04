@@ -1,0 +1,70 @@
+{
+  "surahNumber": 94,
+  "questions": [
+    {
+      "id": "94_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Ash-Sharh's opening verse, what does the term 'nashrah' (expansion) signify according to the Foundation Layer?",
+      "options": [
+        "Physical expansion of the chest only",
+        "The removal of constriction and preparation of the Prophet's heart to receive divine revelation",
+        "A medical procedure",
+        "The expansion of the Prophet's influence in Mecca"
+      ],
+      "correctAnswer": "The removal of constriction and preparation of the Prophet's heart to receive divine revelation",
+      "explanation": "The term 'nashrah' signifies the removal of constriction, while 'sadr' (chest or heart) symbolizes the center of faith, wisdom, and resilience. Scholars like Allamah Tabatabai emphasize that this 'expansion' refers to the Prophet's purified heart being prepared to receive divine revelation and endure the immense responsibility of prophethood."
+    },
+    {
+      "id": "94_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 5,
+      "question": "According to classical Shia scholars like Al-Tabrisi and Al-Tabatabai, the grammatical structure of verse 5 indicates that every specific hardship is met with multiple, expansive forms of divine relief.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Al-Tabrisi in Majma al-Bayan observes that the grammatical structure—specifically the use of the definite article 'al-' in 'al-'usr' (the hardship) and the indefinite 'yusra' (ease)—indicates that every specific hardship is met with multiple, expansive forms of divine relief, reflecting Allah's attribute of Lutf (divine grace)."
+    },
+    {
+      "id": "94_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How do contemporary scholars like Dr. Liyakat Takim extend the concept of 'expansion of the chest' to modern contexts?",
+      "options": [
+        "They reject it as outdated",
+        "They limit it to historical understanding only",
+        "They link it to communal ethics and fostering empathy amid global crises like refugee displacement and climate injustice",
+        "They focus solely on individual spiritual practices"
+      ],
+      "correctAnswer": "They link it to communal ethics and fostering empathy amid global crises like refugee displacement and climate injustice",
+      "explanation": "Modern scholars like Dr. Liyakat Takim extend this concept to communal ethics, linking the 'open heart' to fostering empathy amid global crises, from refugee displacement to climate injustice. This demonstrates how the verse's spiritual message applies to contemporary social justice issues."
+    },
+    {
+      "id": "94_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 7,
+      "question": "According to Imam Ali al-Ridha's teaching about verse 7, what does 'standing up' after completing tasks mean?",
+      "options": [
+        "Taking a physical break from work",
+        "Devoting yourself to supplication and nearness to Allah through supererogatory worship",
+        "Going to sleep immediately",
+        "Starting another worldly task"
+      ],
+      "correctAnswer": "Devoting yourself to supplication and nearness to Allah through supererogatory worship",
+      "explanation": "Imam Ali al-Ridha explained that this divine command transcends mere physical acts: 'When you complete your obligatory deeds, devote yourself to supplication and nearness to Allah through supererogatory worship, for you are never idle in your spiritual journey.' This reflects the Shia understanding of life as an unbroken chain of worship."
+    },
+    {
+      "id": "94_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 4,
+      "question": "According to the Comparative Layer, Sunni commentators like al-Qurtubi primarily link 'your repute' to the Prophet's personal distinction, while Shia tafsirs extend this elevation to include the Prophet's progeny (Ahl al-Bayt).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Sunni commentators like al-Qurtubi and al-Razi primarily link 'your repute' to the Prophet's personal distinction, interpreting it as God's promise to exalt his name globally. In contrast, Shia tafsirs such as al-Mizan extend this elevation to include the Prophet's progeny (Ahl al-Bayt), arguing that the verse implicitly connects Muhammad's honor to the divinely ordained authority of the Imams."
+    }
+  ]
+}

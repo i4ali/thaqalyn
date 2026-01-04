@@ -1,0 +1,115 @@
+{
+  "surahNumber": 73,
+  "questions": [
+    {
+      "id": "73_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the word 'muzzammil' in the opening verse of Surah Al-Muzzammil derive from, and what does it convey?",
+      "options": [
+        "The root k-s-a, meaning to protect",
+        "The root z-m-l, conveying the act of covering or enveloping oneself",
+        "The root s-l-m, meaning peace",
+        "The root n-w-r, meaning light"
+      ],
+      "correctAnswer": "The root z-m-l, conveying the act of covering or enveloping oneself",
+      "explanation": "The word muzzammil derives from the root z-m-l, conveying the act of covering or enveloping oneself, often interpreted as the Prophet wrapping himself in a cloak during moments of deep devotion or night prayer. This imagery reflects both physical preparation for worship and spiritual readiness to receive divine guidance."
+    },
+    {
+      "id": "73_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "The command to 'arise to pray the night' in verse 2 was only meant for the Prophet Muhammad and not applicable to other believers.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. While initially directed to the Prophet Muhammad, this verse establishes a model for all believers to engage in nocturnal worship (tahajjud). The practice of night prayer became a cornerstone of Islamic spirituality, inviting believers to seek proximity to Allah through voluntary worship during the stillness of night."
+    },
+    {
+      "id": "73_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to classical Shia exegetes like Tabrisi and Tabatabai, what deeper theological significance does the 'wrapping' in verse 1 represent?",
+      "options": [
+        "Only protection from cold weather",
+        "The Prophet's total immersion in divine commandments and the envelopment of his soul by divine light and responsibility",
+        "A simple bedtime routine",
+        "Physical exercise preparation"
+      ],
+      "correctAnswer": "The Prophet's total immersion in divine commandments and the envelopment of his soul by divine light and responsibility",
+      "explanation": "Tabatabai interprets the 'wrapping' as a metaphor for the Prophet's total immersion in divine commandments and the burdens of prophethood, symbolizing the envelopment of his soul by divine light (nur) and responsibility. This aligns with the Shia emphasis on the Prophet's unique spiritual station as the recipient and conduit of revelation, inseparable from the ontological reality of the Ahlul Bayt."
+    },
+    {
+      "id": "73_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 5,
+      "question": "In classical Shia exegesis, what does 'al-qawl al-thaqil' (the heavy word) in verse 5 refer to?",
+      "options": [
+        "Only the physical weight of written texts",
+        "The ontological and spiritual weight of divine revelation entrusted to the Prophet",
+        "Heavy burdens of daily life",
+        "The weight of military equipment"
+      ],
+      "correctAnswer": "The ontological and spiritual weight of divine revelation entrusted to the Prophet",
+      "explanation": "Classical Shia commentators emphasize the ontological and spiritual weight of divine revelation (al-qawl al-thaqil) entrusted to the Prophet Muhammad. This 'heavy word' encompasses not just the Quran's textual revelation but the comprehensive responsibility of prophethood, including moral guidance, legal ordinances, and spiritual leadership."
+    },
+    {
+      "id": "73_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How does Ayatollah Nasir Makarem Shirazi interpret the act of 'wrapping oneself' for contemporary believers?",
+      "options": [
+        "As an outdated practice no longer relevant",
+        "As only physical clothing requirements",
+        "As wrapping oneself in divine remembrance amidst worldly chaos and digital overload",
+        "As a requirement for cold climates only"
+      ],
+      "correctAnswer": "As wrapping oneself in divine remembrance amidst worldly chaos and digital overload",
+      "explanation": "Ayatollah Nasir Makarem Shirazi, in his Tafsir Nemuneh, emphasizes that the Prophet's physical act of wrapping in a cloak symbolizes the need to 'wrap oneself in divine remembrance' amidst worldly chaos. Modern scholars extend this metaphor, framing it as an invitation to create sacred mental spaces in an age of digital overload, where constant connectivity threatens inner peace."
+    },
+    {
+      "id": "73_6",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ali in Nahj al-Balagha, what does the Prophet's 'wrapping' represent spiritually?",
+      "options": [
+        "Simple protection from weather",
+        "Wrapping in the cloak of divine awe, separating his heart from worldly illusions to dwell in Allah's presence",
+        "Following fashion trends",
+        "Preparing for physical combat"
+      ],
+      "correctAnswer": "Wrapping in the cloak of divine awe, separating his heart from worldly illusions to dwell in Allah's presence",
+      "explanation": "Imam Ali states in Nahj al-Balagha: 'The Messenger of Allah wrapped himself in the cloak of divine awe, separating his heart from the illusions of this life to dwell in the presence of his Lord.' This verse thus becomes a universal call to spiritually 'wrap' oneself in devotion, shielding the heart from heedlessness."
+    },
+    {
+      "id": "73_7",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is the key difference in how Sunni and Shia scholars interpret the 'wrapping' in verse 1?",
+      "options": [
+        "Sunni scholars reject the verse entirely while Shia scholars accept it",
+        "Sunni exegetes prioritize the literal-historical context, while Shia commentators often extend interpretation to metaphysical dimensions",
+        "Both traditions interpret it identically with no differences",
+        "Shia scholars focus only on physical clothing while Sunni scholars emphasize spiritual aspects"
+      ],
+      "correctAnswer": "Sunni exegetes prioritize the literal-historical context, while Shia commentators often extend interpretation to metaphysical dimensions",
+      "explanation": "Sunni exegetes like Ibn Kathir and Qurtubi prioritize the verse's literal-historical context, linking it to the early Meccan period when the Prophet faced persecution. Shia commentators, while acknowledging this historicity, often extend the interpretation to metaphysical dimensions, with scholars like Tabrisi highlighting the cloak as a metaphor for spiritual purity and readiness to bear divine knowledge, resonating with Shia emphasis on the Prophet's wilayah."
+    },
+    {
+      "id": "73_8",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 5,
+      "question": "Both Sunni and Shia scholars agree that the 'heavy word' in verse 5 refers primarily to the Quran's profound spiritual weight and the Prophet's responsibility to convey its message.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both traditions broadly agree the 'heavy word' refers primarily to the Quran's profound spiritual weight and the Prophet's responsibility. Al-Tabari (Sunni) and Al-Tabrisi (Shia) both emphasize the verse's link to the Quran's transformative power. However, key differences emerge in theological emphasis: Sunni commentators focus on the Quran's legislative gravity, while Shia scholars often extend this to include the comprehensive spiritual and ontological burden of prophethood and Imamah."
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "surahNumber": 27,
+  "questions": [
+    {
+      "id": "27_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 18,
+      "question": "In verse 27:18, what warning did the ant give to its community when Prophet Sulayman's army approached?",
+      "options": [
+        "To prepare for war against the army",
+        "To enter their dwellings to avoid being crushed",
+        "To offer gifts to Prophet Sulayman",
+        "To flee to another valley"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The ant warned its community to enter their dwellings so they would not be crushed unknowingly by Sulayman's forces, showing the ant's wisdom and care for its community."
+    },
+    {
+      "id": "27_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 13,
+      "question": "According to the tafsir, Pharaoh rejected Musa's miracles because he genuinely could not understand them.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Pharaoh's rejection was not from ignorance but from arrogance and his attachment to power. His denial stemmed from moral failure rather than genuine doubt."
+    },
+    {
+      "id": "27_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 23,
+      "question": "How did the hoopoe describe Queen Bilqis's rule to Prophet Sulayman?",
+      "options": [
+        "She was a weak ruler with no authority",
+        "She was a woman who ruled her people and had a great throne",
+        "She was a tyrant who oppressed her people",
+        "She had already converted to monotheism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The hoopoe described Bilqis as a capable ruler with political authority, material wealth, and a great throne, highlighting her exceptional sovereignty."
+    },
+    {
+      "id": "27_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 19,
+      "question": "What was Prophet Sulayman's reaction when he heard the ant's warning to its community?",
+      "options": [
+        "He became angry at the ant",
+        "He smiled and then prayed to Allah in gratitude",
+        "He ignored the ant completely",
+        "He ordered his army to stop immediately"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sulayman smiled in amusement and wonder at Allah's design, then turned to gratitude and supplication, showing his humility despite his immense power."
+    },
+    {
+      "id": "27_5",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 13,
+      "question": "According to Tabrisi in Majma al-Bayan, Musa's miracles (like the staff-serpent and radiant hand) were ambiguous and left room for doubt.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Tabrisi emphasizes that Musa's signs were mubsirat (clear/visible) and left no room for doubt. Their dismissal as 'obvious magic' was an act of deliberate falsehood rooted in arrogance."
+    },
+    {
+      "id": "27_6",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 18,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does the ant's speech demonstrate about creation?",
+      "options": [
+        "That ants are more intelligent than humans",
+        "That creation, even in its smallest forms, operates under divine guidance",
+        "That animals should rule over humans",
+        "That Prophet Sulayman's kingdom was too large"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai highlights that the ant's speech demonstrates God's universal wisdom - creation, even in its smallest manifestations, operates under divine guidance."
+    },
+    {
+      "id": "27_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 29,
+      "question": "What term did Queen Bilqis use to describe Prophet Sulayman's letter, according to classical Shia exegesis?",
+      "options": [
+        "A threatening message",
+        "Kitab karim (noble letter)",
+        "A royal decree",
+        "A war declaration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bilqis described the letter as 'kitab karim' (noble letter), which Tabatabai interprets as a symbol of divine wisdom and the inherent nobility of prophetic communication."
+    },
+    {
+      "id": "27_8",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 14,
+      "question": "According to Al-Mizan, the rejection of divine signs despite inner certainty is described as zulm (injustice) and uluww (haughtiness).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai explains that those who rejected divine signs despite possessing inner conviction did so due to zulm (injustice) and uluww (haughtiness), not from genuine doubt."
+    },
+    {
+      "id": "27_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 24,
+      "question": "According to contemporary scholars like Ayatollah Makarim Shirazi, what modern phenomenon does the sun worship in verse 27:24 parallel?",
+      "options": [
+        "Scientific advancement",
+        "Religious diversity",
+        "Materialism, hyper-consumerism, and scientism",
+        "Environmental protection"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars interpret sun worship as a timeless caution against idolizing transient forces, whether literal or modern substitutes like materialism, hyper-consumerism, or scientism."
+    },
+    {
+      "id": "27_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 18,
+      "question": "Modern scientific studies on ant communication have validated the Quranic depiction of their societal complexity and community awareness.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Studies on ant communication, such as pheromone signals and collective problem-solving, align with the Quranic view of creation as inherently purposeful and support ecological ethics."
+    },
+    {
+      "id": "27_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 34,
+      "question": "How do contemporary Shia scholars interpret Queen Bilqis's warning about kings entering cities and ruining them?",
+      "options": [
+        "As outdated historical commentary",
+        "As a critique of authoritarian power structures and systemic oppression",
+        "As support for monarchical systems",
+        "As irrelevant to modern politics"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Makarim Shirazi interpret this as a timeless critique of authoritarian power structures and their corrosive impact on societies, relevant to modern issues of systemic oppression."
+    },
+    {
+      "id": "27_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 19,
+      "question": "According to contemporary scholarship, Prophet Sulayman's dua in verse 27:19 offers what lesson for modern leaders?",
+      "options": [
+        "To accumulate more power and wealth",
+        "To ignore the small and insignificant",
+        "To balance power with piety and transform privilege into service",
+        "To avoid consultation with advisors"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars emphasize that Sulayman's prayer models the balance of power and piety, challenging leaders to transform privilege into service rather than domination."
+    },
+    {
+      "id": "27_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 18,
+      "question": "According to Imam Jafar al-Sadiq (as) in Tafsir al-Qummi, what does the ant represent spiritually?",
+      "options": [
+        "A mindless creature following instinct",
+        "The humble believer who warns others to seek refuge in the Imams' guidance",
+        "A symbol of worldly attachment",
+        "An example of disobedience to divine authority"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam al-Sadiq explains that the ant represents the humble believer who warns others to enter the sanctuary of the Imams' guidance, protecting them from spiritual destruction."
+    },
+    {
+      "id": "27_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 19,
+      "question": "According to the Ahlul Bayt's teachings, gratitude (shukr) is merely verbal thanks that does not require aligning actions with divine will.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The Ahlul Bayt teach that true gratitude arises from recognizing Allah's blessings through divine guidance and requires aligning one's entire existence with Allah's will through righteous action."
+    },
+    {
+      "id": "27_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 24,
+      "question": "According to Imam Sadiq (as), what does the 'sun' that people worshipped represent beyond literal idolatry?",
+      "options": [
+        "Only physical sun worship",
+        "Any 'false light' that distracts from the Pure Light (nur) of the Imams",
+        "Scientific enlightenment",
+        "Seasonal celebrations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Sadiq explains that the 'sun' represents any metaphorical false light that distracts from the Pure Light (nur) of the Imams, who are the true guides to Tawhid."
+    },
+    {
+      "id": "27_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 34,
+      "question": "According to Lady Fatimah (as), the Imamah is described as 'the pole of the Quran's orbit' in the teachings of the Ahlul Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Lady Fatimah proclaimed that 'The Imamah is the pole of the Quran's orbit' (Bihar al-Anwar), emphasizing that true honor lies in submission to the Imam's spiritual authority."
+    },
+    {
+      "id": "27_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 18,
+      "question": "What is a key difference between Shia and Sunni interpretations of the 'valley of ants' narrative?",
+      "options": [
+        "Sunni scholars deny the miracle occurred",
+        "Shia exegesis sees symbolic allusions to the Ahl al-Bayt's role as 'living signs'",
+        "Sunni scholars emphasize Imamate in this verse",
+        "There is no difference between the interpretations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While Sunni interpretations focus on prophetic contexts, Shia exegesis often sees in such verses allusions to the Ahl al-Bayt's status as living 'signs' and guides."
+    },
+    {
+      "id": "27_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 23,
+      "question": "Both Shia and Sunni scholars agree that the Quran's depiction of Queen Bilqis neither condemns nor endorses female rulership per se.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "While Sunni scholars often contextualize with certain hadiths, Shia scholars like Tabatabai focus on the Quran's neutral descriptive tone, and both agree the verse highlights justice and receptivity to truth over gender."
+    },
+    {
+      "id": "27_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 14,
+      "question": "How do Shia and Sunni exegetes differ in their theological application of verse 27:14 about rejecting clear signs?",
+      "options": [
+        "Sunni scholars deny the verse's authenticity",
+        "Shia scholars focus on individual moral responsibility while Sunni scholars emphasize Imamate",
+        "Shia scholars connect the verse to rejection of Imams while Sunni scholars focus on individual moral accountability",
+        "Both interpret the verse identically"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia exegetes contextualize rejection of clear signs within the doctrine of wilayah and rejection of Imams, while Sunni scholars like al-Razi focus on individual moral responsibility and psychological aspects."
+    },
+    {
+      "id": "27_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 28,
+      "question": "What shared ethical message do both Shia and Sunni traditions derive from Sulayman's letter to Queen Bilqis?",
+      "options": [
+        "That force is the best method of conversion",
+        "That inviting truth through reasoned engagement reflects Islam's universal call to guidance",
+        "That diplomacy is weakness",
+        "That prophets should avoid communicating with non-believers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both traditions uphold the verse's core message of inviting truth through reasoned engagement, reflecting Islam's universal call to guidance, though they differ in theological emphases."
+    }
+  ]
+}

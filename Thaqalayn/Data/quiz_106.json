@@ -1,0 +1,70 @@
+{
+  "surahNumber": 106,
+  "questions": [
+    {
+      "id": "106_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'ilaf' (accustomed security) in Surah Quraish refer to according to the Foundation Layer?",
+      "options": [
+        "Only the military strength of the Quraish tribe",
+        "The stability and protection granted to the Quraysh tribe for their trade caravans",
+        "The physical structure of the Kaaba",
+        "The economic wealth accumulated by merchants"
+      ],
+      "correctAnswer": "The stability and protection granted to the Quraysh tribe for their trade caravans",
+      "explanation": "The term 'ilaf' refers to the stability and protection granted to the Quraysh tribe, enabling their prosperous trade caravans to travel safely between Yemen and Syria. This security was tied to the sacred status of the Kaaba in Mecca, which tribes across Arabia revered, ensuring peace during trade seasons."
+    },
+    {
+      "id": "106_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to classical Shia exegesis, the Quraysh's security was a direct consequence of Allah's miraculous protection of the Kaaba from Abraha's forces as mentioned in Surah Al-Fil.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Tabrisi's Majma al-Bayan contextualizes this verse within the preceding surah (Al-Fil), arguing that the Quraysh's security was a direct consequence of Allah's miraculous protection of the Kaaba from Abraha's forces. This duality—destroying external threats while securing the Quraysh's welfare—highlights the theological principle of lutf (divine grace)."
+    },
+    {
+      "id": "106_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "How do contemporary Shia scholars like Ayatollah Naser Makarem Shirazi interpret the verse's reference to the Quraish's winter and summer trade routes?",
+      "options": [
+        "As purely historical information with no modern relevance",
+        "As a reminder of the interconnectedness between material sustenance, social stability, and spiritual gratitude",
+        "As a condemnation of all forms of trade",
+        "As exclusively about climate patterns"
+      ],
+      "correctAnswer": "As a reminder of the interconnectedness between material sustenance, social stability, and spiritual gratitude",
+      "explanation": "Contemporary scholars like Ayatollah Naser Makarem Shirazi emphasize that the verse's reference to the Quraish's secure winter and summer trade routes underscores Allah's providence in enabling systems of exchange that sustain communities. This resonates with discussions about global trade networks, climate-resilient infrastructure, and economic justice."
+    },
+    {
+      "id": "106_4",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq in Tafsir al-Qummi, the Quraysh's security was a preparatory grace for the advent of the Final Prophet, whose light was embedded in their lineage.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. In Tafsir al-Qummi, Imam Ja'far al-Sadiq explains that the Quraysh's security was a preparatory grace for the advent of the Final Prophet, whose light was embedded in their lineage. The Imam states, 'Allah granted them security so they might recognize the One who bestowed it and submit to His Proof [the Prophet and his Ahlul Bayt].'"
+    },
+    {
+      "id": "106_5",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "What is a key difference between Sunni and Shia interpretations of verse 3's command to 'worship the Lord of this House'?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Sunni interpretations focus on abandoning idolatry and upholding Tawhid under prophetic guidance, while Shia sources extend it to include recognizing divinely appointed leadership (Imamate)",
+        "Shia scholars ignore the importance of the Kaaba",
+        "Both traditions have identical interpretations with no differences"
+      ],
+      "correctAnswer": "Sunni interpretations focus on abandoning idolatry and upholding Tawhid under prophetic guidance, while Shia sources extend it to include recognizing divinely appointed leadership (Imamate)",
+      "explanation": "Sunni interpretations, as seen in Qurtubi's Al-Jami li-Ahkam al-Quran, focus on the ethical imperative of abandoning idolatry and upholding Tawhid, stressing communal unity under prophetic guidance. In contrast, Shia sources like Tusi's At-Tibyan extend the verse's significance to underscore the necessity of recognizing divinely appointed leadership (Imamate), interpreting the Quraysh's security as a precursor to the spiritual guardianship of the Prophet's household."
+    }
+  ]
+}

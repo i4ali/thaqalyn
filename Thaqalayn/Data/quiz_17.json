@@ -1,0 +1,265 @@
+{
+  "surahNumber": 17,
+  "questions": [
+    {
+      "id": "17_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What event does the opening verse of Surah Al-Israa refer to?",
+      "options": [
+        "The Battle of Badr",
+        "The miraculous Night Journey (Isra) and Ascension (Mi'raj)",
+        "The revelation of the first Quranic verses",
+        "The conquest of Mecca"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The opening verse refers to the miraculous Night Journey (Isra) of Prophet Muhammad from Makkah's Masjid al-Haram to Jerusalem's Masjid al-Aqsa, followed by his Ascension (Mi'raj) through the heavens."
+    },
+    {
+      "id": "17_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "The phrase 'barakna hawlahu' (whose surroundings We have blessed) in verse 1 refers to the sanctity of the land around Masjid al-Aqsa.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The phrase 'barakna hawlahu' highlights the sanctity of the land around Masjid al-Aqsa, connecting the Islamic faith to earlier Abrahamic traditions shared by prophets before Muhammad."
+    },
+    {
+      "id": "17_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 26,
+      "question": "According to verse 26, which groups have rights that must be fulfilled?",
+      "options": [
+        "Only relatives",
+        "Only the poor",
+        "Relatives, the materially poor, and stranded travelers",
+        "Only wealthy merchants"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Verse 26 instructs believers to give the relative his right, support al-miskeen (the materially poor) and ibn al-sabeel (the stranded traveler), while avoiding wasteful extravagance."
+    },
+    {
+      "id": "17_4",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 27,
+      "question": "According to the tafsir, the wasteful (mubadhirin) are described as brothers of the devils because wastefulness reflects ingratitude like Satan's rebellion.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The Quran compares the wasteful to 'brothers of the devils' because wastefulness aligns humans with Satan's core trait: ingratitude (kufr). Waste is seen as a rejection of Allah's gifts, paralleling Satan's rejection of divine grace."
+    },
+    {
+      "id": "17_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "How do classical Shia exegetes like Tabatabai interpret the term 'abd' (servant) used to describe the Prophet in verse 1?",
+      "options": [
+        "As a sign of weakness",
+        "As emphasizing the Prophet's perfected human servitude to Allah",
+        "As a term only for ordinary people",
+        "As referring to all Muslims"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The use of 'abd' (servant) underscores the Prophet's perfected human servitude to Allah, while the passive verb 'asra' (took) signifies divine agency beyond temporal or spatial constraints."
+    },
+    {
+      "id": "17_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Shia exegesis, the 'right of the relative' (haqq dhi al-qurba) in verse 26 includes the divinely ordained rights of the Ahl al-Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabrisi cites narrations from Imam Jafar al-Sadiq specifying that this refers not only to kinship ties but also to the divinely ordained rights of the Ahl al-Bayt, who embody spiritual and material guardianship over the community."
+    },
+    {
+      "id": "17_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 51,
+      "question": "What does the phrase 'He who brought you forth the first time' in verse 51 emphasize about resurrection?",
+      "options": [
+        "Resurrection is impossible",
+        "Only humans can restore life",
+        "Restoring life is logically simpler than originating it ex nihilo",
+        "Resurrection will never happen"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tabatabai observes that this argument, rooted in the principle that restoring life is logically simpler than originating it ex nihilo, establishes resurrection as a necessary corollary of divine wisdom and justice."
+    },
+    {
+      "id": "17_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 77,
+      "question": "What does the divine 'sunnah' (established way) in verse 77 refer to according to Shia scholars?",
+      "options": [
+        "The Prophet's personal habits",
+        "The unchanging laws governing prophethood that extend through Imamate",
+        "Cultural traditions of Arabia",
+        "Dietary laws only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia scholars interpret the sunnah as encompassing unchanging laws governing prophethood - trials faced by messengers, moral steadfastness, and ultimate triumph of truth. This constancy extends to the post-prophetic era through the doctrine of Imamate."
+    },
+    {
+      "id": "17_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholar Ayatollah Nasir Makarem Shirazi, what does the Isra (night journey) symbolize?",
+      "options": [
+        "Physical exercise",
+        "Material wealth acquisition",
+        "Humanity's capacity to rise above earthly limitations through divine guidance",
+        "Political power"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ayatollah Makarem Shirazi emphasizes that the Isra symbolizes humanity's capacity to rise above earthly limitations through divine guidance, a theme resonant in an age grappling with materialism and existential disconnection."
+    },
+    {
+      "id": "17_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 26,
+      "question": "Contemporary Shia scholars like Ayatollah Sayyid Kamal al-Haydari frame verse 26 as a call for systemic justice that extends beyond voluntary charity to address structural inequalities.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars frame verse 26 as a call for systemic justice, emphasizing that 'rights' (haqq) extend beyond voluntary charity to include addressing structural inequalities, aligning with modern discourses on wealth redistribution."
+    },
+    {
+      "id": "17_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 52,
+      "question": "How does Dr. Mohammad Ali Shomali connect verse 52 about life's brevity to modern life?",
+      "options": [
+        "It is irrelevant today",
+        "Digital distraction and consumerism distract us from life's ultimate meaning",
+        "Technology has solved all spiritual problems",
+        "Time perception has not changed"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dr. Shomali links the verse to existential philosophy, noting that in an age of digital distraction and consumerism, the verse challenges us to question whether our daily grind aligns with lasting purpose or merely distracts us from life's ultimate meaning."
+    },
+    {
+      "id": "17_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 76,
+      "question": "According to contemporary Shia scholars, verse 76 about the Prophet's persecution resonates with modern struggles against displacement, authoritarianism, and cultural erasure.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Scholars like Dr. Liyakat Takim note the verse's relevance to marginalized communities, from Palestinians facing occupation to Uyghurs enduring state persecution, underscoring how faith-rooted resilience defies attempts to uproot identity."
+    },
+    {
+      "id": "17_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq, what did Allah show the Prophet during the Night Journey?",
+      "options": [
+        "Only the stars",
+        "Trade routes",
+        "The realities of the heavens and earth, and the luminous essence of the Imams",
+        "Only Masjid al-Aqsa"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Jafar al-Sadiq explains that Allah showed the Prophet 'the realities of the heavens and the earth, the stations of the prophets, and the luminous essence of the Imams from his progeny,' affirming the eternal truth of Imamah."
+    },
+    {
+      "id": "17_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 26,
+      "question": "According to Imam Ja'far al-Sadiq, the right of the relative extends beyond material support to include 'the warmth of your presence, the shield of your tongue, and the fragrance of your compassion.'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ja'far al-Sadiq taught that 'The right of the relative is not merely coins in the palm, but the warmth of your presence, the shield of your tongue, and the fragrance of your compassion.'"
+    },
+    {
+      "id": "17_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 27,
+      "question": "What did Imam Ali teach about extravagance according to the tafsir of verse 27?",
+      "options": [
+        "Extravagance is acceptable",
+        "Extravagance breeds scarcity - not merely of wealth, but of wisdom",
+        "Extravagance only affects the poor",
+        "Extravagance is encouraged"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali warned in Nahj al-Balagha, 'Extravagance breeds scarcity - not merely of wealth, but of wisdom.' This teaching links waste to a loss of both material and spiritual resources."
+    },
+    {
+      "id": "17_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 52,
+      "question": "According to Imam Ja'far al-Sadiq, how will believers perceive their worldly lifespan on the Day of Judgment?",
+      "options": [
+        "As lasting forever",
+        "As a single Friday prayer's duration",
+        "As thousands of years",
+        "As exactly how long they lived"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq reportedly stated that on Judgment Day, even those who lived centuries will feel their lifespan amounted to 'a single Friday prayer's duration,' illustrating the illusory nature of temporal attachment."
+    },
+    {
+      "id": "17_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Shia and Sunni interpretations of the Isra verse?",
+      "options": [
+        "Sunni scholars deny the journey happened",
+        "Shia scholars reject the journey's spiritual significance",
+        "Shia scholars often associate the blessed surroundings with the Ahl al-Bayt's spiritual legacy",
+        "Both traditions have identical interpretations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia commentaries often associate the 'blessed surroundings' with the spiritual legacy of the Ahl al-Bayt, interpreting the journey as a prelude to the Prophet's designation of Imam Ali's guardianship at Ghadir Khumm."
+    },
+    {
+      "id": "17_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 26,
+      "question": "Both Shia and Sunni scholars agree that verse 26 establishes a moral framework for balanced stewardship of wealth rooted in Quranic principles of social justice.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Classical commentators across traditions concur that the verse establishes a moral framework for balanced stewardship of wealth, rooted in Quranic principles of social justice, though they differ on the scope of 'the relative.'"
+    },
+    {
+      "id": "17_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 51,
+      "question": "How do Shia scholars uniquely interpret 'perhaps it will be soon' in verse 51 regarding resurrection?",
+      "options": [
+        "As referring only to the end of times",
+        "As meaningless",
+        "As alluding to both individual resurrection and the raj'a (return) of the Ahl al-Bayt",
+        "As a metaphor for sleep"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In Shia tradition, 'perhaps it will be soon' is understood as alluding to both individual resurrection and the eschatological 'Return' (raj'a) of the Ahl al-Bayt and their adversaries, a concept unique to Shia theology."
+    },
+    {
+      "id": "17_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 76,
+      "question": "According to the comparative tafsir, both Shia and Sunni scholars agree that verse 76 reassures the Prophet of divine protection and affirms that his adversaries' plots would ultimately fail.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both Shia and Sunni exegetes broadly agree on the historical context, interpreting verse 76 as a reference to the Quraysh's efforts to expel the Prophet, with divine reassurance that his adversaries' plots would ultimately fail."
+    }
+  ]
+}

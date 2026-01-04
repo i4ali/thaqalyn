@@ -1,0 +1,165 @@
+{
+  "surahNumber": 79,
+  "questions": [
+    {
+      "id": "79_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'naaza'a' (النَّازِعَاتِ) literally mean in the opening verse of Surah An-Nazi'at?",
+      "options": [
+        "To gently whisper",
+        "To pull out or remove forcefully",
+        "To descend slowly",
+        "To gather together"
+      ],
+      "correctAnswer": "To pull out or remove forcefully",
+      "explanation": "The term naaza'a derives from the root n-z-'a, meaning to pull out or remove forcefully, reflecting the angels' decisive role in separating the soul from the body. The addition of gharqan intensifies this imagery, suggesting a profound, all-encompassing action."
+    },
+    {
+      "id": "79_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to the Foundation Layer, the 'ease' mentioned in verse 2 refers only to the physical act of death, with no spiritual significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The 'ease' of removal reflects the soul's readiness to transition from worldly confines to the embrace of its Lord—a state cultivated through lifelong devotion. The verse invites reflection on trust in Allah's wisdom during life's transitions, inspiring resilience in personal trials and ethical consistency."
+    },
+    {
+      "id": "79_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabrisi in Majma al-Bayan, what does the 'violent extraction' (gharq) in verse 1 specifically symbolize?",
+      "options": [
+        "The general power of angels",
+        "The struggle and anguish experienced by disbelievers during death",
+        "Natural disasters and calamities",
+        "The resurrection process itself"
+      ],
+      "correctAnswer": "The struggle and anguish experienced by disbelievers during death",
+      "explanation": "Tabrisi notes that the 'violent extraction' (gharq) signifies the profound struggle and anguish experienced by disbelievers during death, symbolizing their alienation from divine mercy. This contrasts with the gentle extraction of righteous souls, reflecting Shia emphasis on divine justice ('adl)."
+    },
+    {
+      "id": "79_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 25,
+      "question": "In Allama Tabatabai's interpretation in Al-Mizan, what do the 'last and first' transgressions of Pharaoh mentioned in verse 25 represent?",
+      "options": [
+        "Two separate historical events",
+        "His initial oppression of the Israelites and his ultimate claim to divinity",
+        "Minor and major sins",
+        "His early and late life"
+      ],
+      "correctAnswer": "His initial oppression of the Israelites and his ultimate claim to divinity",
+      "explanation": "Tabatabai interprets the duality as encapsulating Pharaoh's compounded tyranny: his initial oppression of the Israelites (the 'first' transgression) and his ultimate blasphemous claim to divinity ('I am your supreme lord' - 79:24), representing the 'last' transgression."
+    },
+    {
+      "id": "79_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "Contemporary Shia scholar Dr. Mohammad Ali Shomali extends the metaphor of 'violent extraction' in verse 1 to include dismantling oppressive systems and extracting truth from ignorance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Dr. Shomali frames the 'violent extraction' as a metaphor for dismantling oppressive systems or extracting truth from ignorance, aligning with Imam Ali's teachings on justice as a transformative force: 'Remove the rust of arrogance from your hearts through the intensity of truth.'"
+    },
+    {
+      "id": "79_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 30,
+      "question": "How do contemporary Shia scholars like Ayatollah Naser Makarem Shirazi interpret the 'spreading of the earth' (daha) in verse 30?",
+      "options": [
+        "As a purely geological description",
+        "As both physical expansion and purposeful preparation, aligning with modern cosmology",
+        "As a metaphor for agricultural development",
+        "As a reference to tectonic plate movement"
+      ],
+      "correctAnswer": "As both physical expansion and purposeful preparation, aligning with modern cosmology",
+      "explanation": "Ayatollah Shirazi emphasizes that daha (spread) implies both physical expansion and purposeful preparation, aligning with modern cosmology's understanding of Earth's formation as a gradual process calibrated for life, bridging divine design and scientific inquiry."
+    },
+    {
+      "id": "79_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq in Tafsir al-Qummi, what does the 'violent extraction' in verse 1 refer to regarding spiritual states?",
+      "options": [
+        "The extraction of physical wealth from the earth",
+        "The angels extracting souls entrenched in spiritual heedlessness and rebellion against Divine Wilayah",
+        "The removal of impurities from the heart",
+        "The separation of good from evil deeds"
+      ],
+      "correctAnswer": "The angels extracting souls entrenched in spiritual heedlessness and rebellion against Divine Wilayah",
+      "explanation": "Imam Ja'far al-Sadiq explains that 'those who extract violently' refers to angels entrusted with extracting the souls of those entrenched in spiritual heedlessness and rebellion against Divine Wilayah. Their violent extraction symbolizes the painful separation of the soul from its attachment to worldly illusions and false lordship."
+    },
+    {
+      "id": "79_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to Lady Fatimah al-Zahra's teaching in Bihar al-Anwar, true believers are described as 'those whose souls are loosened from the knots of worldly attachment.'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Lady Fatimah al-Zahra taught that true believers are 'those whose souls are loosened from the knots of worldly attachment,' as recorded in Bihar al-Anwar. This 'removal' signifies spiritual liberation achieved by detaching from illusions through constant dhikr and obedience to the Imams."
+    },
+    {
+      "id": "79_9",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 40,
+      "question": "According to Imam Ali in Nahj al-Balagha, what does 'fearing the position of one's Lord' represent?",
+      "options": [
+        "Simple dread of punishment",
+        "Profound awareness of divine accountability rooted in ma'rifah (divine recognition)",
+        "Fear of physical death",
+        "Anxiety about worldly consequences"
+      ],
+      "correctAnswer": "Profound awareness of divine accountability rooted in ma'rifah (divine recognition)",
+      "explanation": "Imam Ali taught that 'fearing the position of one's Lord' is not mere dread but a profound awareness of divine accountability rooted in ma'rifah (divine recognition). He states in Nahj al-Balagha: 'The one who truly fears his Lord stands perpetually at the threshold of His presence, knowing every breath is witnessed.'"
+    },
+    {
+      "id": "79_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 10,
+      "question": "What is the key hermeneutical difference between Sunni and Shia interpretations of the skeptics' question in verse 10?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Sunni exegesis focuses on literal resurrection while Shia readings integrate spiritual rebirth and the primordial covenant",
+        "Both traditions interpret it identically",
+        "Shia scholars deny bodily resurrection"
+      ],
+      "correctAnswer": "Sunni exegesis focuses on literal resurrection while Shia readings integrate spiritual rebirth and the primordial covenant",
+      "explanation": "Al-Tabari (Sunni) and Al-Tusi (Shia) contextualize the verse within the Quraysh's rejection of resurrection. However, Shia interpretations, drawing from Imam Ali's teachings, often extend this to include humanity's primordial covenant with Allah (Quran 7:172), reflecting their emphasis on spiritual dimensions alongside physical resurrection."
+    },
+    {
+      "id": "79_11",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 20,
+      "question": "Both Sunni scholars (Tabari, Ibn Kathir) and Shia scholars (Tabatabai) agree that the 'greatest sign' in verse 20 refers to Prophet Musa's miracles, particularly the transformation of his staff into a serpent.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both Shia and Sunni scholars broadly concur that the 'greatest sign' shown by Prophet Musa to Pharaoh refers to his miracles, particularly the transformation of his staff into a serpent (al-ʿaṣā) and the radiant hand (yad al-bayḍāʾ), as noted by Tabari, Ibn Kathir, and Tabatabai. These events are universally understood as divine validations of Musa's prophethood."
+    },
+    {
+      "id": "79_12",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 45,
+      "question": "According to both Sunni (Tabari) and Shia (Tabatabai) commentators, what is the primary role of Prophet Muhammad as described in verse 45?",
+      "options": [
+        "A judge who enforces divine law",
+        "A warner (mundhir) specifically addressing those spiritually receptive to the message",
+        "A king who rules over believers",
+        "A teacher of worldly knowledge"
+      ],
+      "correctAnswer": "A warner (mundhir) specifically addressing those spiritually receptive to the message",
+      "explanation": "Classical commentators across traditions, including Tabari (Sunni) and Tabatabai (Shia), agree that the verse affirms Prophet Muhammad's role as a divine warner (mundhir) specifically addressing those spiritually receptive ('those who fear it'), emphasizing human free will and the Prophet's role as a guide rather than a coercive authority."
+    }
+  ]
+}

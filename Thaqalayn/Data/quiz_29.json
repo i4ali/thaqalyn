@@ -1,0 +1,140 @@
+{
+  "surahNumber": 29,
+  "questions": [
+    {
+      "id": "29_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to the tafsir, what does Allah challenge in Surah Al-Ankabut verse 2?",
+      "options": [
+        "Whether people pray five times a day",
+        "Whether people think declaring faith is enough without facing trials",
+        "Whether people give charity regularly",
+        "Whether people fast during Ramadan"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse challenges the misconception that merely declaring 'We believe' with one's tongue will suffice without being tested through life's trials. True belief requires proving sincerity through action and perseverance."
+    },
+    {
+      "id": "29_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 41,
+      "question": "According to the tafsir, the spider's web parable in verse 41 symbolizes the strength and reliability of worldly protections.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The spider's web parable symbolizes the fragility and weakness of seeking protection from false powers. While a spider's web appears delicately crafted, it is fundamentally fragile and unable to withstand even a breeze, representing the futility of relying on anything besides Allah."
+    },
+    {
+      "id": "29_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Allamah Tabatabai in Al-Mizan, what does the term 'yuftanun' (derived from 'fatana') signify?",
+      "options": [
+        "To reward with blessings",
+        "To refine gold by fire - spiritual purification",
+        "To punish the wicked",
+        "To abandon faith"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The key term 'yuftanun' derives from the root 'fatana', meaning to refine gold by fire. Trials are thus framed not as punishment but as spiritual purification, as Imam Ali taught: 'Faith is tested like gold is tested by fire.'"
+    },
+    {
+      "id": "29_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 41,
+      "question": "According to Shia exegesis, the spider's web metaphor only refers to physical idol worship in pre-Islamic Arabia.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Tabatabai explains that the verse critiques not merely polytheism but any form of shirk in tawhid al-uloohiyyah (oneness of worship). This includes seeking guidance or protection outside the framework of Allah and His appointed representatives, the Ahl al-Bayt."
+    },
+    {
+      "id": "29_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 41,
+      "question": "According to contemporary scholar Ayatollah Naser Makarem Shirazi, what do modern 'idols' include?",
+      "options": [
+        "Only physical statues",
+        "Materialism, hyper-capitalism, and authoritarian regimes",
+        "Only religious icons",
+        "Traditional cultural symbols"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ayatollah Shirazi emphasizes that the verse critiques any reliance on systems or ideologies divorced from divine principles. Modern scholars expand this to address today's 'idols' of materialism, hyper-capitalism, or authoritarian regimes that promise security but collapse under crisis."
+    },
+    {
+      "id": "29_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 26,
+      "question": "How do contemporary Shia scholars interpret Prophet Ibrahim's hijrah (migration) in verse 26?",
+      "options": [
+        "Only as a historical event of no modern relevance",
+        "As a metaphor for leaving oppressive systems to seek divine purpose",
+        "As a journey for economic prosperity",
+        "As abandoning all worldly responsibilities"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Sayyid Kamal al-Haydari interpret Ibrahim's hijrah as a timeless metaphor for leaving oppressive systems - whether ideological, political, or environmental - to seek alignment with divine purpose, including a call to ethical and intellectual migration from complacency to conscious action."
+    },
+    {
+      "id": "29_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 41,
+      "question": "According to Imam Ja'far al-Sadiq (AS), what does the spider's web symbolize in relation to Wilayah?",
+      "options": [
+        "The strength of material attachments",
+        "The fragility of worldly attachments and false beliefs divorced from divine guardianship",
+        "The beauty of earthly possessions",
+        "The permanence of worldly success"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq (AS) explains that the spider's web symbolizes the fragility of worldly attachments and false beliefs spun by those who reject divine Wilayah (guardianship). Hearts disconnected from the Imams' guidance lack spiritual resilience."
+    },
+    {
+      "id": "29_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to the Ahlul Bayt, trials are divine mercies meant to elevate the soul and distinguish true believers from those with superficial faith.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The Ahlul Bayt taught that trials are divine mercies meant to elevate the soul, distinguishing true believers from those whose faith is superficial. Imam Ali (AS) states: 'The believer is tried in proportion to his faith, for faith is like a tree that grows only through rainfall of hardships.'"
+    },
+    {
+      "id": "29_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 41,
+      "question": "What is a key difference between Shia and Sunni interpretations of the spider's web parable?",
+      "options": [
+        "Sunni scholars completely reject the parable",
+        "Shia scholars view it only as referring to ancient idolatry",
+        "Shia exegetes extend the metaphor to include opposing the divinely appointed Imams, while Sunni commentators focus on general shirk and idolatry",
+        "There is no difference between the two traditions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia commentators extend the 'false allies' metaphor to include political and spiritual misguidance opposing the divinely appointed Imams, reflecting the Shia emphasis on Wilayah. Sunni commentators like Ibn Kathir focus more broadly on warning against shirk and idolatry prevalent in pre-Islamic Arabia."
+    },
+    {
+      "id": "29_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 26,
+      "question": "Both Shia and Sunni scholars agree on which core theme regarding Prophet Ibrahim's migration in verse 26?",
+      "options": [
+        "That migration was a sign of weakness",
+        "That hijrah represents complete reliance on divine wisdom and supporting truth amid societal corruption",
+        "That Ibrahim was fleeing from responsibility",
+        "That Lut disagreed with Ibrahim's decision"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Shia and Sunni exegetes converge on the core themes of prophetic solidarity and migration as an act of devotion. They emphasize Lut's unwavering faith in Ibrahim's mission and Abraham's declaration of migration as a paradigm of complete reliance on divine wisdom."
+    }
+  ]
+}

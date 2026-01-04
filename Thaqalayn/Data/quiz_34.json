@@ -1,0 +1,140 @@
+{
+  "surahNumber": 34,
+  "questions": [
+    {
+      "id": "34_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 10,
+      "question": "According to the tafsir, what unique blessing was granted to Prophet Dawud (David) in relation to iron?",
+      "options": [
+        "He could create iron from nothing",
+        "Iron became soft and pliable in his hands, allowing him to craft armor",
+        "He could turn iron into gold",
+        "Iron was immune to rust in his presence"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah softened iron for Dawud (alanna lahu al-hadid), allowing him to craft seamless protective armor. This miracle served both practical purposes for societal defense and symbolized the ethical use of material resources."
+    },
+    {
+      "id": "34_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 10,
+      "question": "The mountains and birds joined Prophet Dawud in praising Allah (tasbih), reflecting the Quranic teaching that all creation glorifies its Creator.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The command 'Ya jibalu awwibi ma'ahu' (O mountains, echo praises with him) demonstrates that mountains and birds joined Dawud's hymns, reflecting Islam's teaching that all existence inherently glorifies its Creator."
+    },
+    {
+      "id": "34_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 12,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does Prophet Sulayman's control over wind that traversed 'a two-month journey in a single day' symbolize?",
+      "options": [
+        "Only physical speed of travel",
+        "Both physical dominion over creation and spiritual mastery over temporal constraints",
+        "The superiority of wind over water",
+        "The beginning of air travel technology"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai interprets the wind's subjugation symbolically as representing both physical dominion over creation and spiritual mastery over temporal constraints, reflecting Allah's power to 'contract time for whom He wills.'"
+    },
+    {
+      "id": "34_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 14,
+      "question": "What theological principle does the death of Prophet Sulayman (concealed until a termite ate his staff) emphasize according to Shia exegesis?",
+      "options": [
+        "Jinn possess complete knowledge of the unseen (ghayb)",
+        "Knowledge of the unseen (ghayb) resides solely with Allah",
+        "Prophets never truly die",
+        "Termites are sacred creatures in Islam"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical Shia commentators emphasize that this episode underscores the theological principle that knowledge of the unseen (ghayb) resides solely with Allah, as even the jinn did not know Sulayman had died."
+    },
+    {
+      "id": "34_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 13,
+      "question": "How do contemporary Shia scholars like Ayatollah Makarem Shirazi interpret the 'elevated chambers' and 'statues' crafted for Prophet Dawud?",
+      "options": [
+        "As purely decorative artwork",
+        "As symbols of the integration of art, architecture, and engineering as manifestations of tawhid",
+        "As objects of worship",
+        "As items forbidden in Islam"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars interpret the elevated chambers and statues as symbols of the integration of art, architecture, and engineering as manifestations of tawhid - expressions of divine unity through human skill and creativity."
+    },
+    {
+      "id": "34_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 15,
+      "question": "The collapse of Saba's advanced agricultural civilization is linked by contemporary scholars to modern environmental exploitation and the importance of sustainable resource management.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ayatollah Makarem Shirazi in Tafsir Nemuneh links the collapse of Saba's civilization (historically tied to Yemen's Marib Dam) to warnings about modern environmental exploitation, emphasizing the importance of sustainable stewardship."
+    },
+    {
+      "id": "34_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 10,
+      "question": "According to Imam Ali (AS) in Nahj al-Balagha, what does knowledge represent for the believer in relation to the 'softened iron' given to Dawud?",
+      "options": [
+        "A burden to carry",
+        "A shield against destruction",
+        "A source of wealth",
+        "A tool for conquest"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) states in Nahj al-Balagha: 'Knowledge is a shield against destruction.' Just as Dawud's softened iron became protective armor, knowledge and adherence to the Ahlul Bayt's teachings protect the believer's soul."
+    },
+    {
+      "id": "34_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 15,
+      "question": "According to Ahlul Bayt teachings, the 'two gardens' of Saba represent only material wealth and have no spiritual significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The Ahlul Bayt teach that the 'two gardens' symbolize the duality of worldly and spiritual sustenance. The 'right' and 'left' gardens represent the balance between divine love (mahabba) and obedience (ta'a), or the complementary roles of prophethood and guardianship (wilayah)."
+    },
+    {
+      "id": "34_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 14,
+      "question": "What is a key difference between Shia and Sunni interpretations of the jinn's prolonged labor under Sulayman's 'lifeless' body?",
+      "options": [
+        "Both traditions interpret it identically",
+        "Sunni scholars see it as a metaphor for obeying divine laws regardless of temporal authority, while Shia scholars also connect it to the doctrine of Imamah",
+        "Only Shia scholars accept this story as authentic",
+        "Sunni scholars reject any supernatural elements"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes interpret the jinn's labor as a metaphor for humanity's duty to obey divine laws irrespective of temporal authority. Shia commentaries additionally connect Solomon's concealed death to preserving prophetic dignity and themes resonant with Imamah doctrine."
+    },
+    {
+      "id": "34_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 10,
+      "question": "How do Shia and Sunni traditions differ in interpreting the 'softened iron' given to Prophet Dawud?",
+      "options": [
+        "Sunni scholars deny the miracle occurred",
+        "Shia scholars connect it symbolically to divinely granted authority (like Ali's sword Dhu'l-Fiqar), while Sunni scholars focus on the practical technological marvel",
+        "Both traditions focus only on the symbolic meaning",
+        "There is no difference in interpretation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Al-Qummi's Shia tafsir connects the 'softened iron' to Ali's legendary sword Dhu'l-Fiqar, symbolizing divinely granted authority. Sunni scholars like Ibn Kathir focus on the practical aspects - how Dawud molded iron for chainmail without fire as a technological marvel demonstrating Allah's support for righteous rulers."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "surahNumber": 46,
+  "questions": [
+    {
+      "id": "46_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 15,
+      "question": "According to the tafsir, what is the total period mentioned for a mother's pregnancy and weaning of her child?",
+      "options": [
+        "24 months",
+        "30 months",
+        "36 months",
+        "40 months"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Quran mentions that a mother carries her child and weans him over a period of thirty months, highlighting the immense sacrifice of motherhood."
+    },
+    {
+      "id": "46_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 21,
+      "question": "The term 'Al-Ahqaf' in the surah's name refers to the curved sand dunes where the people of 'Aad lived.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Al-Ahqaf literally means 'the curved sand dunes' and refers to the desert region in southern Arabia where the ancient people of 'Aad resided before their destruction."
+    },
+    {
+      "id": "46_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 15,
+      "question": "According to Tabatabai's Al-Mizan, what age represents spiritual maturity when a person should pray for guidance?",
+      "options": [
+        "Age 30",
+        "Age 35",
+        "Age 40",
+        "Age 50"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tabatabai emphasizes that age forty represents the peak of spiritual maturity, when a person should offer the prayer mentioned in the verse asking Allah for guidance and righteous offspring."
+    },
+    {
+      "id": "46_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 21,
+      "question": "According to classical Shia exegesis, who was the prophet sent to warn the people of 'Aad?",
+      "options": [
+        "Prophet Salih",
+        "Prophet Shuayb",
+        "Prophet Hud",
+        "Prophet Lut"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Prophet Hud was sent to the people of 'Aad in Al-Ahqaf, warning them to abandon idol worship and turn to Allah before facing divine punishment."
+    },
+    {
+      "id": "46_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 15,
+      "question": "Contemporary scholars highlight that the verse about parental kindness emphasizes which aspect of a mother's sacrifice?",
+      "options": [
+        "Financial contribution only",
+        "Physical hardship during pregnancy and nursing",
+        "Educational responsibilities",
+        "Social status in the family"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars emphasize that the verse specifically highlights the physical hardship mothers endure during pregnancy and the nursing period, underscoring why kindness to parents, especially mothers, is so strongly commanded."
+    },
+    {
+      "id": "46_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 20,
+      "question": "According to contemporary interpretation, the verse about the Day of Judgment warns that those who exhausted their pleasures in worldly life will face humiliation.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars explain that this verse warns those who prioritized worldly pleasures over spiritual preparation will face humiliation on the Day of Judgment, serving as a reminder of divine accountability."
+    },
+    {
+      "id": "46_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 15,
+      "question": "According to Ahlul Bayt traditions, what should a person do upon reaching maturity at age forty?",
+      "options": [
+        "Focus solely on worldly success",
+        "Pray for guidance, gratitude, and righteous offspring",
+        "Retire from religious obligations",
+        "Cease all worldly activities"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ahlul Bayt teachings emphasize that upon reaching forty, one should offer the prayer mentioned in the verse, expressing gratitude for blessings, seeking guidance to do righteous deeds, and praying for righteous offspring."
+    },
+    {
+      "id": "46_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 22,
+      "question": "According to Ahlul Bayt teachings, how did the people of 'Aad respond to Prophet Hud's message?",
+      "options": [
+        "They immediately accepted his guidance",
+        "They asked for time to consider",
+        "They challenged him with skepticism and demanded he bring the punishment",
+        "They remained silent"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Ahlul Bayt traditions describe how the people of 'Aad arrogantly challenged Prophet Hud, demanding he bring upon them the punishment he warned about, showing their disbelief and rejection of divine guidance."
+    },
+    {
+      "id": "46_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 19,
+      "question": "Both Shia and Sunni scholars agree that verse 19 about 'degrees according to deeds' emphasizes which principle?",
+      "options": [
+        "That all believers receive equal rewards",
+        "That divine justice assigns rewards and punishments based on one's actions",
+        "That ancestry determines one's spiritual rank",
+        "That wealth determines one's status in the afterlife"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Shia and Sunni traditions agree that this verse establishes the principle of divine justice, where each person will receive recompense proportional to their deeds, with neither excess nor deficiency."
+    },
+    {
+      "id": "46_10",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 23,
+      "question": "Shia and Sunni scholars both emphasize that Prophet Hud's response to the disbelievers demonstrated that knowledge of divine punishment's timing belongs only to Allah.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions agree that when the people of 'Aad demanded to know when the punishment would come, Prophet Hud's response affirmed that such knowledge belongs solely to Allah, highlighting the limits of human knowledge compared to divine omniscience."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "surahNumber": 89,
+  "questions": [
+    {
+      "id": "89_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In the opening verse of Surah Al-Fajr, what does the term 'fajr' (dawn) primarily symbolize according to the Foundation Layer?",
+      "options": [
+        "Only the physical break of day",
+        "The breaking of dawn as a spiritual metaphor for enlightenment and resurrection",
+        "A specific historical event",
+        "The time for morning prayers exclusively"
+      ],
+      "correctAnswer": "The breaking of dawn as a spiritual metaphor for enlightenment and resurrection",
+      "explanation": "In Shia tafsir, scholars like Allamah Tabatabai and Shaykh Makarim Shirazi explain that Allah's oaths in the Quran serve to highlight realities central to human guidance. The term 'fajr' refers literally to the breaking of dawn, but also serves as a profound spiritual metaphor for enlightenment and the daily reminder of resurrection."
+    },
+    {
+      "id": "89_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 6,
+      "question": "The tribe of 'Aad mentioned in verse 6 was destroyed despite their towering physical strength and architectural marvels because they grew arrogant and rejected divine guidance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. The ancient tribe of 'Aad, who inhabited the desert regions of modern-day Yemen and Oman, were known for their towering physical strength and architectural marvels. They grew arrogant, rejecting the warnings of Prophet Hud, and were consequently destroyed by a devastating storm as divine punishment."
+    },
+    {
+      "id": "89_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "verseNumber": 1,
+      "question": "According to classical Shia exegesis by Allama Tabatabai and Sheikh Tabrisi, how is the oath 'By the dawn' understood?",
+      "options": [
+        "As a simple poetic device with no deeper meaning",
+        "Through multilayered theological and cosmological lenses emphasizing profound symbolism",
+        "Only as a reference to the time for prayer",
+        "As a historical reference to the Prophet's migration"
+      ],
+      "correctAnswer": "Through multilayered theological and cosmological lenses emphasizing profound symbolism",
+      "explanation": "Both Allama Tabatabai in Al-Mizan and Sheikh Tabrisi in Majma al-Bayan emphasize that Allah's oath by 'al-Fajr' serves to draw attention to the profound symbolism embedded in this natural phenomenon, understanding it through multilayered theological and cosmological lenses rather than as a mere poetic device."
+    },
+    {
+      "id": "89_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 11,
+      "question": "In classical Shia exegesis, who do Tabrisi and Tabatabai identify as the archetypal adversaries referenced in verse 11's mention of 'those who oppressed in the lands'?",
+      "options": [
+        "Only contemporary political figures",
+        "Pharaoh, Nimrod, and the tyrants of 'Ad and Thamud",
+        "Natural disasters and calamities",
+        "Ordinary sinners without positions of power"
+      ],
+      "correctAnswer": "Pharaoh, Nimrod, and the tyrants of 'Ad and Thamud",
+      "explanation": "Both Tabrisi in Majma al-Bayan and Tabatabai in Al-Mizan identify these oppressors as archetypal adversaries of divine guidance, including Pharaoh, Nimrod, and the tyrants of the ancient tribes of 'Ad and Thamud, who disrupted divine order through systemic corruption."
+    },
+    {
+      "id": "89_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How do contemporary scholars like Ayatollah Nasir Makarem Shirazi interpret the opening verse about dawn in relation to modern scientific understanding?",
+      "options": [
+        "They reject scientific explanations entirely",
+        "They frame dawn as a daily reminder of resurrection aligning with scientific insights on cyclical renewal",
+        "They focus only on astronomical calculations",
+        "They dismiss the verse as outdated metaphor"
+      ],
+      "correctAnswer": "They frame dawn as a daily reminder of resurrection aligning with scientific insights on cyclical renewal",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes the verse's connection to divine order in natural phenomena, framing dawn as a daily reminder of resurrection (Qiyamah) and the cyclical renewal of hope, which aligns with scientific understanding of natural cycles and renewal."
+    },
+    {
+      "id": "89_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 11,
+      "question": "According to contemporary Shia scholarship, verse 11's reference to oppressors applies only to ancient tyrants and has no relevance to modern systemic injustice or ecological ethics.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Naser Makarem Shirazi in Tafsir Nemuneh contextualizes the 'oppressors' as not merely ancient tyrants like Pharaoh or Thamud, but as any power structure violating divine limits, including modern systemic injustice and ecological exploitation. Contemporary scholars increasingly interpret this verse through lenses of systemic injustice and ecological ethics."
+    },
+    {
+      "id": "89_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to the teachings of Imam Ali (peace be upon him), what does 'the dawn' signify beyond the physical break of day?",
+      "options": [
+        "Only the time for morning prayer",
+        "The physical break of day and the spiritual emergence of divine light from darkness",
+        "A specific historical battle",
+        "The end of the night watch"
+      ],
+      "correctAnswer": "The physical break of day and the spiritual emergence of divine light from darkness",
+      "explanation": "Imam Ali (peace be upon him) taught that every Quranic oath contains layers of wisdom, and 'the dawn' signifies both the physical break of day and the spiritual emergence of divine light from darkness, representing the manifestation of divine guidance through the Ahlul Bayt."
+    },
+    {
+      "id": "89_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 17,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about verse 17, what deeper meaning does 'honoring the orphan' carry?",
+      "options": [
+        "Only providing material support to orphaned children",
+        "A profound reference to abandoning the divine guardianship (Wilayah) of the Imams after the Prophet's passing",
+        "Building orphanages exclusively",
+        "Adopting orphans into one's family"
+      ],
+      "correctAnswer": "A profound reference to abandoning the divine guardianship (Wilayah) of the Imams after the Prophet's passing",
+      "explanation": "Imam Ja'far al-Sadiq (peace be upon him) taught that this verse condemns those who 'failed to honor the orphan of Muhammad's family'—a profound reference to abandoning the divine guardianship (Wilayah) of the Imams after the Prophet's (peace be upon him) passing, revealing layers of meaning beyond surface-level neglect."
+    },
+    {
+      "id": "89_9",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 14,
+      "question": "Both Shia and Sunni exegetical traditions agree that verse 14's declaration 'your Lord is in observation' underscores divine justice and accountability.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both traditions universally affirm Allah's omnipresence and omniscience as central to this verse, agreeing that it underscores divine justice and accountability. Al-Tabari (Sunni) and Al-Tabrisi (Shia) both emphasize this verse as reflecting God's role as the ultimate adjudicator and His unwavering vigilance over creation."
+    },
+    {
+      "id": "89_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 27,
+      "question": "What is the core convergence between Shia and Sunni interpretations of the 'reassured soul' (an-nafs al-mutma'innah) in verse 27?",
+      "options": [
+        "Both reject the concept of spiritual reassurance",
+        "Both recognize it as referencing the spiritually perfected believer welcomed into divine proximity",
+        "They have completely opposite interpretations with no common ground",
+        "Both limit it to a physical state rather than spiritual"
+      ],
+      "correctAnswer": "Both recognize it as referencing the spiritually perfected believer welcomed into divine proximity",
+      "explanation": "Classical commentators universally recognize the 'reassured soul' (al-nafs al-mutma'innah) as referencing the spiritually perfected believer welcomed into divine proximity. Tabari (Sunni) and Tusi (Shia) both emphasize this as an eschatological address to those who have attained unshakable certainty and spiritual fulfillment."
+    }
+  ]
+}

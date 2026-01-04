@@ -1,0 +1,140 @@
+{
+  "surahNumber": 52,
+  "questions": [
+    {
+      "id": "52_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 17,
+      "question": "In Surah At-Tur (52:17), what does the term 'muttaqin' refer to?",
+      "options": [
+        "Those who perform many prayers",
+        "Those who guard themselves against sin through mindfulness of Allah",
+        "Those who fast every day",
+        "Those who give all their wealth to charity"
+      ],
+      "correctAnswer": "Those who guard themselves against sin through mindfulness of Allah",
+      "explanation": "The term 'muttaqin' refers to those who guard themselves against sin through mindfulness of Allah, aligning their actions with divine guidance. Taqwa represents a holistic spiritual state cultivated through obedience, ethical conduct, and love for the Ahlul Bayt."
+    },
+    {
+      "id": "52_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 35,
+      "question": "Verse 35 of Surah At-Tur uses rhetorical questions to establish that creation cannot emerge from chaos or self-will, but only through a Perfect Creator.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The verse poses two profound rhetorical questions - 'Or were they created by nothing, or were they the creators [of themselves]?' - using rational inquiry (burhan) to dismantle the logical absurdity of denying divine creation and to awaken hearts to Allah's oneness (tawhid)."
+    },
+    {
+      "id": "52_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 17,
+      "question": "According to Allama Tabatabai in Al-Mizan, what do 'gardens' (jannat) and 'pleasure' (na'eem) in verse 52:17 represent?",
+      "options": [
+        "Only physical rewards in Paradise",
+        "Distinct but complementary dimensions of reward - spiritual stations and experiential joy of divine proximity",
+        "Metaphors for worldly success",
+        "Symbols of political power in the hereafter"
+      ],
+      "correctAnswer": "Distinct but complementary dimensions of reward - spiritual stations and experiential joy of divine proximity",
+      "explanation": "Tabatabai emphasizes that 'gardens' and 'pleasure' represent distinct but complementary dimensions of reward: the former symbolizing perfected spiritual stations and the latter denoting the experiential joy of divine proximity. This dual interpretation reflects the Shia theological principle that resurrection manifests both bodily and spiritual perfection simultaneously."
+    },
+    {
+      "id": "52_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 21,
+      "question": "How does Tabrisi in Majma al-Bayan interpret the divine promise in verse 52:21 to unite believing parents with their faithful progeny?",
+      "options": [
+        "As a mere physical reunion",
+        "As an expression of Allah's transcendent mercy operating through the interconnectedness of spiritual lineage",
+        "As a reward only for prophets",
+        "As a temporary arrangement in Paradise"
+      ],
+      "correctAnswer": "As an expression of Allah's transcendent mercy operating through the interconnectedness of spiritual lineage",
+      "explanation": "Tabrisi emphasizes that this union transcends mere physical proximity, signifying an elevation of the children's stations through the parents' spiritual merits, without diminishing the principle that 'every soul is pledged to what it has earned.' This resolves the tension between individual accountability and familial spiritual benefits through divine grace (lutf) operating within the framework of justice ('adl)."
+    },
+    {
+      "id": "52_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 17,
+      "question": "Contemporary scholars like Dr. Mohammad Shomali connect verse 52:17's imagery of abundance to environmental stewardship and sustainable living.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern thinkers extend the verse's meaning, noting that its imagery of abundance contrasts with today's ecological crises, urging believers to embody taqwa (God-consciousness) through environmental stewardship. The 'gardens' become symbolic of sustainable living, aligning Quranic ideals with scientific imperatives like biodiversity preservation and climate action."
+    },
+    {
+      "id": "52_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 35,
+      "question": "According to contemporary Shia scholarship, what modern philosophical challenge does verse 52:35's question 'Were they their own creators?' address?",
+      "options": [
+        "The theory of gravity",
+        "Self-creation narratives in secular individualism and transhumanism",
+        "Ancient Greek mythology",
+        "Medieval economic systems"
+      ],
+      "correctAnswer": "Self-creation narratives in secular individualism and transhumanism",
+      "explanation": "Dr. Mohammad Ali Shomali bridges the verse with existential philosophy, noting that it challenges today's 'self-creation' narratives in secular individualism, where identity is often reduced to self-defined labels. The Quran's rhetorical question resonates in debates about transhumanism and AI ethics, urging humility amid humanity's growing technological hubris."
+    },
+    {
+      "id": "52_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 17,
+      "question": "According to Imam Jafar al-Sadiq (as), what do 'the gardens' in verse 52:17 symbolize?",
+      "options": [
+        "Physical orchards in Paradise only",
+        "Layers of divine knowledge unveiled to the heart that clings to the rope of the Ahlul Bayt",
+        "Worldly material possessions",
+        "Political territories"
+      ],
+      "correctAnswer": "Layers of divine knowledge unveiled to the heart that clings to the rope of the Ahlul Bayt",
+      "explanation": "Imam Jafar al-Sadiq (as) explained that 'the gardens' symbolize the soul's blossoming through remembrance of Allah and obedience to His chosen guides: 'The gardens are layers of divine knowledge unveiled to the heart that clings to the rope of the Ahlul Bayt' (Tafsir al-Qummi)."
+    },
+    {
+      "id": "52_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 35,
+      "question": "Imam Ali (as) stated in Nahj al-Balagha that creation can emerge from chaos or self-will without a Perfect Creator.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Imam Ali (as) stated the opposite in Nahj al-Balagha: 'He who assigns to Him different conditions does not believe in His Oneness, nor does he who likens Him grasp His reality. He is far above being created in imaginations or limited in minds.' This underscores that creation cannot emerge from chaos or self-will, but only through the Perfect Creator whose signs permeate existence."
+    },
+    {
+      "id": "52_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 17,
+      "question": "What is a key point of convergence between Shia and Sunni scholars in interpreting verse 52:17?",
+      "options": [
+        "They disagree on everything about this verse",
+        "Both recognize the verse as affirming eternal reward for the righteous in Paradise as a manifestation of divine justice",
+        "Only Sunni scholars accept this verse as authentic",
+        "The verse has no eschatological significance"
+      ],
+      "correctAnswer": "Both recognize the verse as affirming eternal reward for the righteous in Paradise as a manifestation of divine justice",
+      "explanation": "Both Shia and Sunni exegetes converge on core eschatological principles. Al-Tabari (Sunni) and Al-Tusi (Shia) both emphasize that 'gardens and pleasure' symbolize transcendent spiritual and physical blessings. They agree that one's degree of God-consciousness (taqwa) determines their station in Paradise."
+    },
+    {
+      "id": "52_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 35,
+      "question": "How do Shia and Sunni scholars differ in their theological extensions of verse 52:35?",
+      "options": [
+        "They have no differences whatsoever",
+        "Sunni scholars like Fakhr al-Din Razi analyze it through Ash'ari occasionalism, while Shia scholars like Tabatabai integrate it with concepts of graded existence requiring ongoing metaphysical guidance through Imamah",
+        "Only Shia scholars believe in divine creation",
+        "Sunni scholars reject the verse entirely"
+      ],
+      "correctAnswer": "Sunni scholars like Fakhr al-Din Razi analyze it through Ash'ari occasionalism, while Shia scholars like Tabatabai integrate it with concepts of graded existence requiring ongoing metaphysical guidance through Imamah",
+      "explanation": "Fakhr al-Din Razi (Sunni) analyzes the verse through Ash'ari occasionalism, arguing it negates natural causality independent of Allah's will. In contrast, Tabatabai (Shia) integrates the verse with the Illuminationist concept of graded existence (tashkik al-wujud), viewing creation as a continuous divine manifestation requiring ongoing metaphysical guidance - a perspective resonating with Shia emphasis on Imamah as an extension of divine providence."
+    }
+  ]
+}

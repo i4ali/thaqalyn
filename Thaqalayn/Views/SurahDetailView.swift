@@ -13,7 +13,11 @@ struct SurahDetailView: View {
     @State private var selectedVerse: VerseWithTafsir?
     @State private var showingTafsir = false
     @State private var fullScreenCommentaryData: (verse: VerseWithTafsir, layer: TafsirLayer)?
+    @State private var showingQuiz = false
+    @State private var showingPaywall = false
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var quizManager = QuizManager.shared
+    @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var audioManager = AudioManager.shared
     @Environment(\.dismiss) private var dismiss
@@ -49,7 +53,15 @@ struct SurahDetailView: View {
                 ModernSurahHeader(
                     surah: surahWithTafsir.surah,
                     verses: surahWithTafsir.verses,
-                    onBack: { dismiss() }
+                    hasQuiz: quizManager.hasQuiz(for: surahWithTafsir.surah.number),
+                    onBack: { dismiss() },
+                    onQuizTap: {
+                        if premiumManager.canAccessQuiz(surahNumber: surahWithTafsir.surah.number) {
+                            showingQuiz = true
+                        } else {
+                            showingPaywall = true
+                        }
+                    }
                 )
                 
                 // Verses scroll view
@@ -104,11 +116,20 @@ struct SurahDetailView: View {
         .fullScreenCover(isPresented: showingFullScreenCommentary) {
             if let data = fullScreenCommentaryData {
                 FullScreenCommentaryView(
-                    verse: data.verse, 
-                    surah: surahWithTafsir.surah, 
+                    verse: data.verse,
+                    surah: surahWithTafsir.surah,
                     initialLayer: data.layer
                 )
             }
+        }
+        .fullScreenCover(isPresented: $showingQuiz) {
+            QuizView(
+                surah: surahWithTafsir.surah,
+                onDismiss: { showingQuiz = false }
+            )
+        }
+        .sheet(isPresented: $showingPaywall) {
+            PaywallView()
         }
     }
 }
@@ -116,7 +137,9 @@ struct SurahDetailView: View {
 struct ModernSurahHeader: View {
     let surah: Surah
     let verses: [VerseWithTafsir]
+    let hasQuiz: Bool
     let onBack: () -> Void
+    let onQuizTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
 
@@ -208,41 +231,70 @@ struct ModernSurahHeader: View {
                     .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.tertiaryText)
                 }
 
-                // Play Sequence button (verse-by-verse)
-                Button(action: {
-                    Task {
-                        await audioManager.playVerseSequence(verses, in: surah, startingFrom: 0)
-                    }
-                }) {
-                    HStack(spacing: 8) {
-                        if themeManager.selectedTheme == .warmInviting {
-                            Text("▶")
-                                .font(.system(size: 16))
-                        } else {
-                            Image(systemName: "play.fill")
-                                .font(.system(size: 16, weight: .semibold))
+                // Action buttons
+                HStack(spacing: 12) {
+                    // Play Sequence button (verse-by-verse)
+                    Button(action: {
+                        Task {
+                            await audioManager.playVerseSequence(verses, in: surah, startingFrom: 0)
                         }
-                        Text("Play Sequence")
-                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 16, weight: .semibold))
-                    }
-                    .foregroundColor(.white)
-                    .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 32 : 20)
-                    .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 14 : 10)
-                    .background {
-                        if themeManager.selectedTheme == .warmInviting {
-                            RoundedRectangle(cornerRadius: 24)
-                                .fill(
-                                    LinearGradient(
-                                        colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
+                    }) {
+                        HStack(spacing: 8) {
+                            if themeManager.selectedTheme == .warmInviting {
+                                Text("▶")
+                                    .font(.system(size: 16))
+                            } else {
+                                Image(systemName: "play.fill")
+                                    .font(.system(size: 16, weight: .semibold))
+                            }
+                            Text("Play")
+                                .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 16, weight: .semibold))
+                        }
+                        .foregroundColor(.white)
+                        .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 24 : 16)
+                        .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 14 : 10)
+                        .background {
+                            if themeManager.selectedTheme == .warmInviting {
+                                RoundedRectangle(cornerRadius: 24)
+                                    .fill(
+                                        LinearGradient(
+                                            colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
                                     )
-                                )
-                                .shadow(color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3), radius: 12)
-                        } else {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(themeManager.purpleGradient)
-                                .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
+                                    .shadow(color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3), radius: 12)
+                            } else {
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(themeManager.purpleGradient)
+                                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
+                            }
+                        }
+                    }
+
+                    // Quiz button (only show if quiz available)
+                    if hasQuiz {
+                        Button(action: onQuizTap) {
+                            HStack(spacing: 8) {
+                                Image(systemName: "brain.head.profile")
+                                    .font(.system(size: 16, weight: .semibold))
+                                Text("Quiz")
+                                    .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 16, weight: .semibold))
+                            }
+                            .foregroundColor(.white)
+                            .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 24 : 16)
+                            .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 14 : 10)
+                            .background {
+                                if themeManager.selectedTheme == .warmInviting {
+                                    RoundedRectangle(cornerRadius: 24)
+                                        .fill(themeManager.accentGradient)
+                                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
+                                } else {
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .fill(themeManager.accentGradient)
+                                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
+                                }
+                            }
                         }
                     }
                 }
@@ -287,6 +339,7 @@ struct ModernSurahHeader: View {
             }
         }
     }
+
 }
 
 struct ModernVerseCard: View {

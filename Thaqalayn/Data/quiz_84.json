@@ -1,0 +1,115 @@
+{
+  "surahNumber": 84,
+  "questions": [
+    {
+      "id": "84_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, what does the 'inshiqaq' (splitting) of the sky in verse 1 signify?",
+      "options": [
+        "A temporary natural phenomenon",
+        "The collapse of the natural order and the inevitability of divine accountability",
+        "A metaphor for spiritual awakening",
+        "The expansion of the universe"
+      ],
+      "correctAnswer": "The collapse of the natural order and the inevitability of divine accountability",
+      "explanation": "The term 'inshaqqat' derives from the root 'sha-qa-qa', conveying a forceful, irreversible rupture—a sudden, transformative event that upends the universe. This imagery serves as a stark reminder of the transient nature of worldly life and the inevitability of divine accountability."
+    },
+    {
+      "id": "84_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, the 'splitting sky' in verse 1 is purely a literal physical event with no metaphysical significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Tabatabai expands this cosmological framework theologically, arguing that the splitting sky symbolizes the unveiling of metaphysical truths obscured by worldly delusions. He ties this to the Shia doctrine of ghaybah (occultation) and zuhur (reappearance), wherein the Mahdi's return will similarly rupture humanity's spiritual complacency."
+    },
+    {
+      "id": "84_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How do contemporary Shia scholars like Ayatollah M. H. Al-Hakim interpret the 'splitting sky' for modern contexts?",
+      "options": [
+        "As only a literal astronomical event",
+        "As a metaphor for ruptures in human systems, ideologies, and ecosystems demanding moral reckoning",
+        "As a historical event that already occurred",
+        "As a purely spiritual experience"
+      ],
+      "correctAnswer": "As a metaphor for ruptures in human systems, ideologies, and ecosystems demanding moral reckoning",
+      "explanation": "The 'splitting' (inshiqaq) of the heavens is seen not only as a literal sign of Qiyamah but also as a metaphor for ruptures in human systems, ideologies, or ecosystems that demand moral reckoning. This metaphorizes today's crises: climate collapse fracturing ecosystems, political polarization dividing communities, or economic inequality rupturing social fabric."
+    },
+    {
+      "id": "84_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq's teaching, what does the splitting of the heavens symbolize?",
+      "options": [
+        "The end of the physical world only",
+        "Both the Day of Resurrection and the unveiling of divine truths through the light of Wilayah",
+        "A natural cosmic cycle",
+        "The beginning of a new era"
+      ],
+      "correctAnswer": "Both the Day of Resurrection and the unveiling of divine truths through the light of Wilayah",
+      "explanation": "Imam Jafar al-Sadiq (as) taught that this cosmic event symbolizes both the Day of Resurrection and the unveiling of divine truths through the light of Wilayah. He states: 'When the sky of ignorance splits, the sun of Muhammad's progeny rises, scattering the darkness of misguidance.'"
+    },
+    {
+      "id": "84_5",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 6,
+      "question": "What does the term 'kadih' in verse 6 ('O mankind, indeed you are laboring toward your Lord') signify?",
+      "options": [
+        "Leisure and comfort",
+        "Intense striving or labor, reflecting the inherent struggle in earthly life",
+        "Passive existence",
+        "Intellectual pursuits only"
+      ],
+      "correctAnswer": "Intense striving or labor, reflecting the inherent struggle in earthly life",
+      "explanation": "The term 'kadih' derives from 'kadaha', meaning intense striving or labor, reflecting the inherent struggle in earthly life. The 'exertion' here encompasses both physical efforts and spiritual struggles—from daily responsibilities to resisting temptations and cultivating taqwa (God-consciousness)."
+    },
+    {
+      "id": "84_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, the 'exertion' mentioned in verse 6 encompasses both physical struggles of earthly life and the soul's moral-spiritual ascent.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Tabrisi contextualizes the verse within eschatological themes, noting that the 'exertion' encompasses both the physical struggles of earthly life and the soul's moral-spiritual ascent. He cites Imam Jafar al-Sadiq's interpretation that this labor is defined by adherence to divine guidance through the Ahl al-Bayt."
+    },
+    {
+      "id": "84_7",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 15,
+      "question": "What is a key theological difference between Shia and Sunni interpretations of verse 15 ('Indeed, his Lord was ever of him, Seeing')?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia commentaries link Allah's 'seeing' to spiritual oversight of the Ahl al-Bayt, while Sunni exegetes focus on Allah's transcendence without intermediary",
+        "Both traditions interpret it identically",
+        "Shia scholars deny divine omniscience"
+      ],
+      "correctAnswer": "Shia commentaries link Allah's 'seeing' to spiritual oversight of the Ahl al-Bayt, while Sunni exegetes focus on Allah's transcendence without intermediary",
+      "explanation": "Shia commentaries often link Allah's 'seeing' to the spiritual oversight of the Ahl al-Bayt, interpreting divine awareness as encompassing both outward actions and inner states illuminated through the Imams' guidance. In contrast, Sunni exegetes focus on Allah's transcendence, framing His 'sight' as an independent divine attribute requiring no intermediary."
+    },
+    {
+      "id": "84_8",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 19,
+      "question": "According to contemporary Shia scholar Dr. Liyakat Takim, how should believers view the 'state after state' transitions mentioned in verse 19 in modern contexts?",
+      "options": [
+        "As purely historical events",
+        "As irrelevant to contemporary life",
+        "As a catalyst for soul-purification (tazkiyah) amid personal reinvention and societal reform",
+        "As only physical transformations"
+      ],
+      "correctAnswer": "As a catalyst for soul-purification (tazkiyah) amid personal reinvention and societal reform",
+      "explanation": "As refugee crises and pandemics redefine 'normal,' Shia theologians like Dr. Liyakat Takim highlight its relevance to personal reinvention and societal reform—urging believers to see instability as a catalyst for tazkiyah (soul-purification)."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "surahNumber": 110,
+  "questions": [
+    {
+      "id": "110_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah An-Nasr's opening verse, what does the conquest of Mecca (fath) symbolize according to the Foundation Layer?",
+      "options": [
+        "Only a military victory over enemies",
+        "Both the physical liberation of Mecca and the spiritual opening of hearts to wilayah",
+        "The end of all conflict in Arabia",
+        "The Prophet's personal achievement"
+      ],
+      "correctAnswer": "Both the physical liberation of Mecca and the spiritual opening of hearts to wilayah",
+      "explanation": "Many Shia scholars interpret the 'conquest' as both the physical opening of Mecca and the spiritual opening of hearts to the message of wilayah (divinely guided leadership). This dual meaning reflects how the verse marks both a historical milestone and a spiritual lesson for believers."
+    },
+    {
+      "id": "110_2",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to classical Shia exegesis, what does the phrase 'people entering into the religion of Allah in multitudes' (afwajan) necessitate?",
+      "options": [
+        "Only verbal profession of faith",
+        "Allegiance to the Ahlul Bayt through tawalli and tabarri",
+        "Migration to Mecca",
+        "Military service"
+      ],
+      "correctAnswer": "Allegiance to the Ahlul Bayt through tawalli and tabarri",
+      "explanation": "Shia theology underscores that mere verbal profession without allegiance to the Prophet's household renders conversions incomplete. The verse thus implicitly underscores the necessity of tawalli (love for the Ahlul Bayt) and tabarri (disassociation from their enemies) as integral to true faith."
+    },
+    {
+      "id": "110_3",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholars like Ayatollah Nasir Makarim Shirazi, the 'victory' in Surah An-Nasr is limited only to historical military success and has no relevance to modern spiritual or societal transformations.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Nasir Makarim Shirazi emphasizes that 'victory' transcends military success, symbolizing the triumph of justice, unity, and moral consciousness in every era. Modern scholars connect it to contemporary contexts like social justice movements and humanitarian crises."
+    },
+    {
+      "id": "110_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 3,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about verse 3, what is the deeper purpose of seeking forgiveness (istighfar) after success?",
+      "options": [
+        "Only to atone for past sins",
+        "To maintain humility and recognize that all success flows from Allah's grace, not personal merit",
+        "To perform a required ritual",
+        "To prepare for the next battle"
+      ],
+      "correctAnswer": "To maintain humility and recognize that all success flows from Allah's grace, not personal merit",
+      "explanation": "Imam Jafar al-Sadiq taught that the command to seek forgiveness after victory is a reminder that even in moments of triumph, the believer must remain humble, recognizing that all success flows from Allah's grace, not personal merit. Istighfar is also a means to ascend toward Allah's proximity, polishing the heart's mirror to reflect divine light."
+    },
+    {
+      "id": "110_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Sunni and Shia scholars agree that Surah An-Nasr was revealed in the context of the conquest of Mecca in 8 AH and marked the completion of the Prophet's earthly mission.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Classical Sunni commentators such as Tabari and Ibn Kathir, along with Shia exegetes like Tabatabai and Tabrisi, affirm this temporal context. Both traditions link the verse to the completion of the Prophet's earthly mission, supported by traditions that the revelation prompted the Prophet to anticipate his passing."
+    }
+  ]
+}

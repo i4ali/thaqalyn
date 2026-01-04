@@ -1,0 +1,265 @@
+{
+  "surahNumber": 4,
+  "questions": [
+    {
+      "id": "4_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to Surah An-Nisa verse 1, what is the origin of all humanity?",
+      "options": [
+        "Multiple independent souls",
+        "A single soul (nafs wahida)",
+        "Different tribes and nations",
+        "Angels and humans combined"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse establishes that Allah created humanity from a single soul (nafs wahida), from which He created its mate, affirming the fundamental unity and equality of all human beings."
+    },
+    {
+      "id": "4_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "According to the tafsir, the mahr (bridal gift) is a non-negotiable right of women in Islam, not merely a cultural formality.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The verse establishes mahr as a sacred obligation and a woman's legal and moral right, countering trends of undervaluing mahr or treating it as a symbolic ritual."
+    },
+    {
+      "id": "4_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 34,
+      "question": "What does the term 'qawwamun' in verse 34 imply according to the tafsir?",
+      "options": [
+        "Absolute male superiority",
+        "A functional responsibility to provide and protect",
+        "Religious authority only",
+        "Political leadership"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term qawwamun implies that men carry the duty to provide financially and ensure the well-being of their families - a functional responsibility conditioned on ethical conduct, not blanket superiority."
+    },
+    {
+      "id": "4_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 59,
+      "question": "According to verse 59, what should believers do when disputes arise?",
+      "options": [
+        "Follow their personal opinions",
+        "Consult community elders only",
+        "Return the matter to Allah and the Messenger",
+        "Ignore the disagreement"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The verse instructs believers to resolve disagreements by returning disputed matters to Allah and the Messenger, which Shia scholars interpret as referring to the Quran and the teachings of the Prophet and Imams."
+    },
+    {
+      "id": "4_5",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Shia scholars, polygamy in Islam is conditionally permitted but strongly discouraged due to the difficulty of achieving true justice between co-wives.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Shia authorities including Tusi and Qummi emphasize comprehensive emotional and spiritual equity, citing Imam Ali's assertion that perfect justice between co-wives is humanly unattainable, leading many Shia jurists to strongly discourage polygamy except under exceptional circumstances."
+    },
+    {
+      "id": "4_6",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "According to Tabatabai in Al-Mizan, what does the mahr symbolize?",
+      "options": [
+        "A simple financial transaction",
+        "Both material provision and spiritual responsibility",
+        "A gift to the bride's family",
+        "A social status symbol"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai underscores that the mahr symbolizes both material provision and spiritual responsibility, reflecting the ontological dignity of women within the divine covenant of marriage."
+    },
+    {
+      "id": "4_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 34,
+      "question": "According to classical Shia exegesis, what does 'qiwama' (guardianship) arise from?",
+      "options": [
+        "Intrinsic male superiority",
+        "Cultural traditions",
+        "Socioeconomic obligations",
+        "Physical strength"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As Tabatabai elucidates in Al-Mizan, qiwama arises from socioeconomic obligations, not intrinsic superiority, reflecting a divinely ordained division of roles to ensure familial stability."
+    },
+    {
+      "id": "4_8",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 59,
+      "question": "According to Shia exegesis, 'uli al-amr' (those in authority) in verse 59 refers exclusively to the Twelve Imams from the Ahl al-Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Classical Shia exegetes like Allama Tabatabai and Sheikh Tabrisi emphasize that uli al-amr refers exclusively to the divinely appointed Imams from the Ahl al-Bayt, beginning with Imam Ali and continuing through the Twelve Imams."
+    },
+    {
+      "id": "4_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "According to contemporary scholars, what do psychological studies confirm about polygamous families?",
+      "options": [
+        "They are always harmonious",
+        "Equitable emotional and material care is exceptionally challenging",
+        "Children thrive better in them",
+        "They have no modern relevance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern psychology and sociology studies confirm that equitable emotional and material care in polygamous families is exceptionally challenging, aligning with the Quranic warning about the difficulty of maintaining justice."
+    },
+    {
+      "id": "4_10",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 34,
+      "question": "How do contemporary Shia scholars like Ayatollah Sistani interpret the 'striking' mentioned in verse 34?",
+      "options": [
+        "As a command to physically discipline",
+        "As unrestricted permission",
+        "As symbolically restricted to a light, non-injurious gesture",
+        "As no longer applicable"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ayatollah Sistani's rulings clarify that 'striking' is symbolically restricted to a light, non-injurious gesture, permissible only if it prevents greater harm, though many jurists today discourage it entirely, favoring mediation."
+    },
+    {
+      "id": "4_11",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 4,
+      "question": "According to contemporary scholars, the verse about mahr speaks to modern crises like ensuring refugee women retain their matrimonial rights.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Globally, verse 4:4 speaks to crises like economic inequality and displacement, ensuring refugee women retain matrimonial rights despite unstable circumstances, and critiques the commodification of marriage in consumerist societies."
+    },
+    {
+      "id": "4_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 59,
+      "question": "According to Ayatollah Kamal al-Haydari, what does 'those in authority' extend to in modern contexts?",
+      "options": [
+        "Only historical Imams",
+        "Political rulers exclusively",
+        "Ethical, spiritual, and intellectual leadership",
+        "Family heads only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary Shia scholars like Ayatollah Kamal al-Haydari emphasize that 'those in authority' extends beyond historical Imamate to encompass ethical, spiritual, and intellectual leadership in modern contexts."
+    },
+    {
+      "id": "4_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Ali (as), what characterizes the most blessed marriage?",
+      "options": [
+        "The most expensive mahr",
+        "The one that bears the lightest burden",
+        "The largest wedding celebration",
+        "The highest social status"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (as) counseled that 'The most blessed marriage is that which bears the lightest burden,' emphasizing that mahr must never become a chain of worldly obligation, but rather a symbol of sincere commitment."
+    },
+    {
+      "id": "4_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 34,
+      "question": "According to Imam Sadiq (as), the 'strike' mentioned in verse 34 should be lighter than a miswak twig - merely a symbolic reminder.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Sadiq (as) taught that 'The strike mentioned is lighter than a miswak twig - it is but a symbolic reminder of Allah's displeasure with discord,' and the Imams repeatedly prohibited harmful discipline."
+    },
+    {
+      "id": "4_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 59,
+      "question": "According to Imam Ja'far al-Sadiq (as), what are the Imams referred to as in the Quran?",
+      "options": [
+        "The guides of the community",
+        "The firm rope of Allah",
+        "The scholars of Islam",
+        "The protectors of faith"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq (as) states in Tafsir al-Qummi: 'We are those in authority whom Allah has commanded His creation to obey, and we are the firm rope of Allah mentioned in the Quran.'"
+    },
+    {
+      "id": "4_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "Lady Fatimah (as) requested her mahr to be 'the intercession of my Ummah on Judgment Day,' transforming a material right into spiritual investment.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "When Lady Fatimah requested her father Prophet Muhammad (pbuh) to make her mahr 'the intercession of my Ummah on Judgment Day,' she transformed a material right into an eternal spiritual investment."
+    },
+    {
+      "id": "4_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "What is a key methodological difference between Shia and Sunni interpretation of the justice requirement for polygamy?",
+      "options": [
+        "Sunni scholars reject polygamy entirely",
+        "Shia scholars accept only material fairness",
+        "Shia emphasize comprehensive emotional and spiritual equity while Sunni fiqh generally permits it with material fairness",
+        "Both traditions have identical views"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia authorities emphasize comprehensive emotional and spiritual equity, citing Imam Ali's assertion about unattainability of perfect justice, while Sunni fiqh traditions generally permit polygamy with material fairness maintained."
+    },
+    {
+      "id": "4_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 34,
+      "question": "Both Shia and Sunni scholars agree that verse 34 prohibits unjust persecution of wives who reconcile and reform.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions emphasize the verse's final warning against unjust persecution of wives who reform, upholding the verse's core message of preserving marital harmony and divine accountability."
+    },
+    {
+      "id": "4_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 59,
+      "question": "How do Sunni scholars like Al-Qurtubi and Al-Razi identify 'uli al-amr' differently from Shia scholars?",
+      "options": [
+        "They reject the concept entirely",
+        "They identify it broadly as political rulers, military commanders, or religious scholars",
+        "They limit it to prophets only",
+        "They have the same interpretation as Shia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni scholars like Al-Qurtubi and Al-Razi offer broader interpretations, identifying uli al-amr as political rulers, military commanders, or religious scholars whose obedience is conditional upon their adherence to Islamic law."
+    },
+    {
+      "id": "4_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 35,
+      "question": "Both Shia and Sunni traditions agree that verse 4:35 prescribes family arbitration as a framework for resolving marital discord.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "In Surah An-Nisaa 4:35, Allah prescribes a framework for resolving marital discord through arbitration, a directive rooted in principles of justice and communal responsibility, agreed upon by both Shia and Sunni exegetes."
+    }
+  ]
+}

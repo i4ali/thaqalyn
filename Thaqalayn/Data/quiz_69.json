@@ -1,0 +1,165 @@
+{
+  "surahNumber": 69,
+  "questions": [
+    {
+      "id": "69_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'Al-Haaqqa' (The Inevitable Reality) fundamentally refer to according to the Foundation Layer?",
+      "options": [
+        "A historical event in Arabian history",
+        "The absolute reality of resurrection and accountability where every hidden truth will manifest",
+        "The Prophet's personal trials in Mecca",
+        "A metaphor for daily moral struggles"
+      ],
+      "correctAnswer": "The absolute reality of resurrection and accountability where every hidden truth will manifest",
+      "explanation": "In Shia tafsir, scholars like Allamah Tabatabai explain that Al-Haaqqa refers to the absolute reality of resurrection and accountability, a day when every hidden truth will manifest, leaving no room for denial. The verse's abrupt, emphatic style underscores the urgency and inevitability of this event."
+    },
+    {
+      "id": "69_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 6,
+      "question": "According to the Foundation Layer, the 'screaming, violent wind' that destroyed 'Aad was merely a natural weather phenomenon with no spiritual significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The wind described as sarsar (piercingly cold or roaring) and atiyah (fiercely overpowering) symbolizes divine retribution tailored to their crimes: a force matching their own violent pride. It represents both physical punishment and spiritual consequences for rejecting monotheism and exploiting the weak."
+    },
+    {
+      "id": "69_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "How does Allama Tabatabai in Al-Mizan interpret the linguistic intensification of the feminine noun 'al-Haaqqah'?",
+      "options": [
+        "As a simple grammatical variation with no deeper meaning",
+        "As denoting an incontrovertible event that tears away veils of doubt about divine accountability",
+        "As referring only to women's role in judgment",
+        "As a poetic device without theological significance"
+      ],
+      "correctAnswer": "As denoting an incontrovertible event that tears away veils of doubt about divine accountability",
+      "explanation": "Tabatabai observes that the feminine noun 'al-Haaqqah' linguistically intensifies the concept of 'haqq' (truth/reality), denoting an incontrovertible event that 'tears away veils of doubt' about divine accountability, emphasizing absolute ontological certainty."
+    },
+    {
+      "id": "69_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "According to classical Shia exegetes like Tabrisi and Tabatabai, what dual nature does the 'screaming, violent wind' in verse 6 represent?",
+      "options": [
+        "Only physical destruction of buildings and structures",
+        "Both a physical and metaphysical punishment, reflecting that worldly calamities manifest spiritual corruption",
+        "A test of faith with no punitive element",
+        "An allegory with no historical reality"
+      ],
+      "correctAnswer": "Both a physical and metaphysical punishment, reflecting that worldly calamities manifest spiritual corruption",
+      "explanation": "Both Tabrisi in Majma al-Bayan and Tabatabai in Al-Mizan emphasize that the 'screaming, violent wind' symbolizes both a physical and metaphysical punishment, reflecting the principle that worldly calamities manifest spiritual corruption."
+    },
+    {
+      "id": "69_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi, Al-Haaqqa's 'inevitability' applies only to the Day of Judgment and has no relevance to modern challenges.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Makarem Shirazi emphasizes its dual resonance: a classical reminder of the Day of Judgment and a modern metaphor for humanity's unavoidable reckoning with self-made crises like climate collapse, AI ethics, and systemic inequality."
+    },
+    {
+      "id": "69_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 6,
+      "question": "How does Dr. Liyakat Takim connect the destruction of 'Aad in verse 6 to contemporary environmental concerns?",
+      "options": [
+        "By dismissing environmental issues as unrelated to religious teachings",
+        "By linking it to environmental stewardship, citing Imam Ali's teaching that the Earth is a trust not to be corrupted",
+        "By focusing only on personal morality without societal implications",
+        "By arguing that environmental issues are purely scientific"
+      ],
+      "correctAnswer": "By linking it to environmental stewardship, citing Imam Ali's teaching that the Earth is a trust not to be corrupted",
+      "explanation": "Dr. Liyakat Takim links Al-Haaqqa to the urgency of environmental stewardship, citing Imam Ali's maxim: 'The Earth is a trust given to you; do not corrupt it.' He parallels the verse's apocalyptic tone with IPCC climate reports confirming irreversible ecological tipping points."
+    },
+    {
+      "id": "69_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Muhammad al-Baqir's interpretation in Tafsir al-Qummi, what additional meaning does 'Al-Haaqqa' carry beyond the Day of Resurrection?",
+      "options": [
+        "It refers only to historical battles",
+        "It refers to the rising of the Qa'im from the Ahlul Bayt, through whom Divine Truth will manifest fully on Earth",
+        "It symbolizes personal spiritual awakening only",
+        "It represents agricultural cycles"
+      ],
+      "correctAnswer": "It refers to the rising of the Qa'im from the Ahlul Bayt, through whom Divine Truth will manifest fully on Earth",
+      "explanation": "In Tafsir al-Qummi, Imam Muhammad al-Baqir explains this verse as a direct reference to the rising of the Qa'im from the Ahlul Bayt, through whom the Haqq (Divine Truth) will manifest fully on Earth, eradicating oppression."
+    },
+    {
+      "id": "69_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 6,
+      "question": "According to Imam Jafar al-Sadiq in Tafsir al-Qummi, the 'violent wind' that destroyed 'Aad represents only physical destruction, with no connection to rejection of divine leadership.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Imam Jafar al-Sadiq explains that the 'violent wind' represented the storm of misguidance that uproots faith when people sever their connection with the Imamah (divinely appointed leadership). He stated: 'When truth is abandoned, the winds of destruction scatter men like husks of grain.'"
+    },
+    {
+      "id": "69_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Sunni and Shia interpretations of 'Al-Haaqqa' according to the Comparative Layer?",
+      "options": [
+        "Sunni scholars completely reject the verse's authenticity",
+        "Shia interpretations extend the concept to include recognition of divine authority (wilayah) as integral to comprehending the Hereafter's truth",
+        "Both traditions interpret it identically with no theological differences",
+        "Sunni scholars focus only on mystical interpretations"
+      ],
+      "correctAnswer": "Shia interpretations extend the concept to include recognition of divine authority (wilayah) as integral to comprehending the Hereafter's truth",
+      "explanation": "While both traditions agree on Al-Haaqqa as referring to the Day of Judgment, Shia commentaries like Tafsir al-Qummi and Majma al-Bayan extend this to include the recognition of divine authority (wilayah) as integral to comprehending the Hereafter's truth, reflecting the theological emphasis on Imamah as a pillar of faith."
+    },
+    {
+      "id": "69_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 6,
+      "question": "According to both Sunni and Shia classical commentators, what do they agree upon regarding the destruction of 'Aad in verse 6?",
+      "options": [
+        "That it was purely mythological with no historical basis",
+        "That it serves as punishment for rejecting prophetic guidance, framing it as a timeless lesson on accountability",
+        "That it only applies to ancient civilizations",
+        "That environmental factors alone caused their destruction"
+      ],
+      "correctAnswer": "That it serves as punishment for rejecting prophetic guidance, framing it as a timeless lesson on accountability",
+      "explanation": "Classical commentators across traditions, including Tabari (Sunni) and Tabatabai (Shia), universally affirm the tribe's annihilation through a divinely sent violent wind serves as punishment for rejecting prophetic guidance. Both stress the moral imperative of heeding divine warnings, framing the account as a timeless lesson on accountability."
+    },
+    {
+      "id": "69_11",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 12,
+      "question": "According to verse 12, the phrase 'udhunun wa'iyah' (conscious ear) refers only to passive hearing without the need for active spiritual engagement.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The phrase udhunun wa'iyah (conscious ear) highlights the necessity of active, intentional listening—a heart-mind engagement that transcends passive hearing. As Imam Ali taught, true understanding requires 'aql (intellect) coupled with humility, allowing divine truths to take root."
+    },
+    {
+      "id": "69_12",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 13,
+      "question": "How do classical Shia scholars like Sheikh Tusi interpret the 'single blast' (nafkhah wahidah) of the Trumpet in verse 13?",
+      "options": [
+        "As multiple separate events occurring over time",
+        "As representing the singular, transformative nature emphasizing divine unity (tawhid)—a single command suffices for Allah to manifest His will",
+        "As a purely symbolic event with no actual occurrence",
+        "As referring only to spiritual awakening"
+      ],
+      "correctAnswer": "As representing the singular, transformative nature emphasizing divine unity (tawhid)—a single command suffices for Allah to manifest His will",
+      "explanation": "While Sunni traditions often mention two blasts, Shia scholars like Sheikh Tusi highlight the singular, transformative nature of this event in Quranic descriptions, aligning with the verse's emphasis on divine unity (tawhid)—a single command suffices for Allah to manifest His will."
+    }
+  ]
+}

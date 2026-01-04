@@ -1,0 +1,275 @@
+{
+  "surahNumber": 18,
+  "questions": [
+    {
+      "id": "18_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does the phrase 'lam yaj'al lahu iwajan' (no deviance therein) highlight about the Quran?",
+      "options": [
+        "It was revealed in stages",
+        "It is the longest revelation",
+        "It is a perfect, uncorrupted path free from contradictions",
+        "It contains hidden mysteries only scholars understand"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The phrase highlights the Quran's perfection as a straight, uncorrupted path free from contradictions, biases, or distortions, affirming its timeless reliability."
+    },
+    {
+      "id": "18_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 10,
+      "question": "The People of the Cave (Ashab al-Kahf) fled to the cave to escape religious persecution and preserve their faith.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The Companions of the Cave were young believers who sought refuge in a cave to escape persecution and preserve their monotheistic faith, placing their trust in Allah's mercy and guidance."
+    },
+    {
+      "id": "18_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 60,
+      "question": "What does 'majma al-bahrayn' (junction of the two seas) symbolize in the story of Prophet Musa?",
+      "options": [
+        "A literal ocean voyage",
+        "The boundary between two kingdoms",
+        "A meeting point of divine and worldly knowledge or spiritual and material realms",
+        "The end of Prophet Musa's prophethood"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The junction of the two seas has been interpreted as a physical or metaphorical meeting point of divine and worldly knowledge, or the spiritual and material realms, symbolizing the human pursuit of deeper understanding."
+    },
+    {
+      "id": "18_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 83,
+      "question": "What does the term 'Dhul-Qarnayn' literally mean?",
+      "options": [
+        "The Great Conqueror",
+        "Possessor of Two Horns",
+        "King of the East",
+        "Builder of Walls"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dhul-Qarnayn literally means 'Possessor of Two Horns,' symbolizing power spanning East and West or authority over two epochs."
+    },
+    {
+      "id": "18_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, what does the term 'abd' (servant) underscore about Prophet Muhammad?",
+      "options": [
+        "His role as a political leader",
+        "His perfected state of servitude rendering him uniquely qualified to receive revelation",
+        "His authority over other prophets",
+        "His miraculous birth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai explains that 'abd' (servant) underscores the Prophet's perfected state of servitude to Allah, a station of spiritual purity that renders him uniquely qualified to receive revelation."
+    },
+    {
+      "id": "18_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 60,
+      "question": "According to Shia tradition, Khidr is identified as a prophet or immortal sage operating through divine command who represents esoteric guidance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Shia tradition identifies Khidr as a prophet or immortal sage operating through divine command (amr ilahi), embodying the perpetual authority of esoteric guidance and prefiguring the Imams' role."
+    },
+    {
+      "id": "18_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 60,
+      "question": "According to Tabatabai, what do the 'two seas' in verse 60 signify?",
+      "options": [
+        "The Mediterranean and Red Seas",
+        "The confluence of outward revelation (zahir) and inner spiritual reality (batin)",
+        "Two different kingdoms Musa visited",
+        "The boundaries of the known world"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai in Al-Mizan notes the 'two seas' signify the confluence of outward revelation (zahir) and inner spiritual reality (batin), or prophetic knowledge and transcendent wisdom."
+    },
+    {
+      "id": "18_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 83,
+      "question": "How do Shia commentators describe Dhul-Qarnayn according to Sheikh Tabrisi?",
+      "options": [
+        "As a prophet with a revealed scripture",
+        "As a muhaddath - one inspired by God without prophethood",
+        "As an angel in human form",
+        "As a mythological figure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sheikh Tabrisi in Majma al-Bayan highlights Dhul-Qarnayn's portrayal as a muhaddath (one inspired by God without prophethood), resonant with the concept of divine guidance."
+    },
+    {
+      "id": "18_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholars like Ayatollah Makarem Shirazi, what does the 'absence of deviance' (iwaj) in the Quran speak to?",
+      "options": [
+        "Only the Quran's textual preservation",
+        "Both textual preservation and its timeless ethical framework",
+        "The simplicity of Quranic language",
+        "The chronological order of revelation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars emphasize that the absence of deviance speaks not only to the Quran's textual preservation but also to its timeless ethical framework for navigating modern challenges."
+    },
+    {
+      "id": "18_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 60,
+      "question": "Prophet Musa's journey to the 'junction of the two seas' is interpreted by contemporary scholars as symbolic of humanity's perpetual search for divine wisdom.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars like Ayatollah Jawadi Amoli interpret this journey as symbolic of humanity's perpetual search for divine wisdom, emphasizing that true knowledge requires both effort and openness to guidance."
+    },
+    {
+      "id": "18_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 83,
+      "question": "What modern parallel do some commentators draw to Dhul-Qarnayn's barrier against Gog and Magog?",
+      "options": [
+        "Building physical border walls between nations",
+        "Creating religious denominations",
+        "Addressing existential threats like climate change through innovation anchored in moral frameworks",
+        "Developing military defense systems"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Some commentators draw parallels between Dhul-Qarnayn's legendary barrier and contemporary efforts to address existential threats like climate change, which demand innovation anchored in moral frameworks."
+    },
+    {
+      "id": "18_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 60,
+      "question": "The Quran's encouragement of critical inquiry through 'they ask you' demonstrates the concept of ijtihad (independent reasoning) valued in Shia theology.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The 'questioning' in Quranic verses underscores the encouragement of critical inquiry, a concept Shia theology upholds through ijtihad (independent reasoning)."
+    },
+    {
+      "id": "18_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to the Hadith al-Thaqalayn cited in the tafsir, what two things did the Prophet leave behind that will never separate?",
+      "options": [
+        "The Quran and the Sunnah",
+        "The Quran and the Ahlul Bayt",
+        "The Mosque and the Ka'bah",
+        "The Companions and the Scholars"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Prophet (s) declared in the Hadith al-Thaqalayn: 'I leave among you two weighty things: the Book of Allah and my Ahlul Bayt. They will never separate until they meet me at the Fountain (Hawd).'"
+    },
+    {
+      "id": "18_14",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 60,
+      "question": "According to Imam Ja'far al-Sadiq, what do the 'two seas' in the story of Musa represent?",
+      "options": [
+        "Material wealth and spiritual poverty",
+        "The complementary streams of prophetic revelation (nubuwwah) and imamic guidance (imamah)",
+        "Heaven and Hell",
+        "The visible and invisible angels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq reveals in Tafsir al-Qummi that the 'two seas' represent the complementary streams of prophetic revelation (nubuwwah) and imamic guidance (imamah)."
+    },
+    {
+      "id": "18_15",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 60,
+      "question": "According to Imam Ali in Nahj al-Balagha, 'The Quran is a guidance that speaks - its speech is never silenced. It is a firm pillar; whoever leans upon it is saved.'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (as) states in Nahj al-Balagha that the Quran is a guidance that speaks and a firm pillar, teaching that its 'straightness' lies in its inseparable connection to the Muhammadan light through the Imams."
+    },
+    {
+      "id": "18_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 83,
+      "question": "According to Imam Ja'far al-Sadiq, what do Dhul-Qarnayn's 'two horns' symbolize?",
+      "options": [
+        "Military conquest in two directions",
+        "Two prophetic missions",
+        "The dual lights of knowledge and justice perfected in the Wilayah of the Imams",
+        "Physical strength and political power"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ja'far al-Sadiq taught that Dhul-Qarnayn's 'two horns' symbolize the dual lights of knowledge and justice - qualities perfected in the Wilayah (divine authority) of the Imams."
+    },
+    {
+      "id": "18_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Shia and Sunni interpretation of 'no deviance' (iwaj) in the Quran?",
+      "options": [
+        "Sunni scholars reject the concept entirely",
+        "Shia scholars extend it to include protection from textual distortion (tahrif) under divine guardianship through the Ahlul Bayt",
+        "Sunni scholars believe the Quran has minor errors",
+        "There is no difference between the traditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While both traditions affirm the Quran's freedom from contradiction, Shia sources extend 'no deviance' to include protection from textual distortion (tahrif), with divine guardianship preserved through the Ahlul Bayt."
+    },
+    {
+      "id": "18_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 60,
+      "question": "Both Shia and Sunni scholars agree that Musa's journey to meet Khidr illustrates the pursuit of divine knowledge and humility before God's wisdom.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The narrative is interpreted by both Shia and Sunni scholars as illustrating the pursuit of divine knowledge and humility before God's wisdom, reinforcing the ethical message of seeking truth."
+    },
+    {
+      "id": "18_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 60,
+      "question": "How do Sunni and Shia scholars differ in identifying Prophet Musa's companion (fata)?",
+      "options": [
+        "Sunni scholars say it was Khidr while Shia say it was an angel",
+        "Sunni scholars universally name him Joshua (Yusha ibn Nun) while some Shia commentaries suggest he may symbolize the transfer of wisdom to future leaders",
+        "There is no difference - both identify him as Aaron",
+        "Shia scholars deny he existed"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni scholars like Razi and Tabari universally name him as Joshua (Yusha ibn Nun), while some Shia commentaries suggest he may symbolize the transfer of wisdom to future leaders, resonating with concepts of succession (wisayah)."
+    },
+    {
+      "id": "18_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 83,
+      "question": "What shared view do Shia and Sunni scholars hold regarding Dhul-Qarnayn?",
+      "options": [
+        "He was definitely a prophet",
+        "He was Alexander the Great",
+        "He was a righteous ruler empowered by divine authority to establish justice",
+        "He was a mythological figure without historical basis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both Shia and Sunni scholarly traditions converge on viewing Dhul-Qarnayn as a righteous ruler empowered by divine authority to establish justice, with his narrative demonstrating Allah's omnipotence."
+    }
+  ]
+}

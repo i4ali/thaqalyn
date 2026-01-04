@@ -1,0 +1,140 @@
+{
+  "surahNumber": 57,
+  "questions": [
+    {
+      "id": "57_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does 'tasbih' (glorification) in verse 1 encompass?",
+      "options": [
+        "Only vocal praise from humans",
+        "The harmonious operation of natural laws, cycles of life, and purpose in all things",
+        "Prayers recited five times daily",
+        "Only the glorification of angels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The universal tasbih is not limited to conscious praise but encompasses the harmonious operation of natural laws, the cycles of life, and the inherent purpose embedded in all things."
+    },
+    {
+      "id": "57_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to Surah Al-Hadid verse 2, Allah's dominion (mulk) signifies complete ownership and sovereign control, rejecting any notion of shared power.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The term 'mulk' signifies complete ownership and sovereign control, rejecting any notion of shared power or intermediaries in governance."
+    },
+    {
+      "id": "57_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does the phrase 'sabbaha lillahi' reflect?",
+      "options": [
+        "A simple greeting to Allah",
+        "The intrinsic state of all beings as 'natural monotheists' (muwahhidun bi-l-fitrah)",
+        "A command for daily prayers",
+        "A ritual only for prophets"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As articulated by Allama Tabatabai in Al-Mizan, the phrase reflects the intrinsic state of all beings as 'natural monotheists' (muwahhidun bi-l-fitrah), actively participating in a cosmic symphony of submission."
+    },
+    {
+      "id": "57_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 11,
+      "question": "In Shia exegesis, what does the 'goodly loan' (qardan hasanan) in verse 11 represent?",
+      "options": [
+        "Only financial donations to mosques",
+        "Acts of charity performed purely for Allah's pleasure, reflecting ikhlas (sincerity)",
+        "Loans given to family members",
+        "Investments in worldly businesses"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Tafsir al-Mizan, Allama Tabatabai explains that the 'goodly loan' is interpreted as acts of charity (infaq) performed purely for Allah's pleasure, reflecting the Shia emphasis on ikhlas (sincerity) as the foundation of worship."
+    },
+    {
+      "id": "57_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "Contemporary scholar Ayatollah Nasir Makarem Shirazi emphasizes that the 'exaltation' (tasbih) in verse 1 is merely a ritualistic practice, not a cosmic reality.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Modern scholars like Ayatollah Nasir Makarem Shirazi emphasize that this 'exaltation' (tasbih) is not merely ritualistic but a cosmic reality: every atom, galaxy, and living being operates within a divinely ordained system of balance and purpose."
+    },
+    {
+      "id": "57_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 11,
+      "question": "According to contemporary Shia discourse, what modern application does the verse about 'loaning to Allah' inspire?",
+      "options": [
+        "Only building more mosques",
+        "Microfinance programs like interest-free qard al-hasan loans that empower marginalized communities",
+        "Investing in stock markets",
+        "Accumulating personal wealth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Projects like microfinance programs in Shia-majority regions, such as Lebanon's interest-free qard al-hasan loans, exemplify this ethos, empowering marginalized communities while fostering trust in divine reciprocity."
+    },
+    {
+      "id": "57_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq (as), what constitutes the true 'tasbih' of humans?",
+      "options": [
+        "Simply reciting prayers loudly",
+        "Submitting tongues, hearts, and limbs to Allah's remembrance through adherence to the Wilayah of the Purified Ones",
+        "Fasting during Ramadan only",
+        "Making pilgrimage to Mecca annually"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Sixth Imam, Ja'far al-Sadiq (as), unveils: 'The true tasbih of humans lies in submitting their tongues, hearts, and limbs to the remembrance of Allah through adherence to the Wilayah of the Purified Ones.'"
+    },
+    {
+      "id": "57_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 11,
+      "question": "According to Imam al-Baqir (as), 'The loan to Allah is the loan to His friends.'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "As Imam al-Baqir (peace be upon him) said: 'The loan to Allah is the loan to His friends.' Thus, true giving is an affirmation of faith in the unseen, a bridge between the temporal and the eternal."
+    },
+    {
+      "id": "57_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key interpretive difference between Shia and Sunni scholars regarding the 'tasbih' of creation?",
+      "options": [
+        "Sunni scholars reject the concept entirely",
+        "Shia scholars see it as passive while Sunni scholars see it as active",
+        "Sunni scholars often frame tasbih as metaphorical compliance with natural laws, while Shia extend it to creation actively manifesting divine attributes",
+        "There is no difference between the two traditions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sunni commentators like Razi often frame tasbih as metaphorical compliance with natural laws, while Shia scholars, particularly Tabatabai, extend this to a metaphysical principle where all existence actively manifests divine attributes through its very being."
+    },
+    {
+      "id": "57_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 11,
+      "question": "What historical factor shaped the different interpretations of the 'goodly loan' verse between Shia and Sunni traditions?",
+      "options": [
+        "Different languages used in interpretation",
+        "Geographic separation of scholars",
+        "Shia hermeneutics developed around loyalty to the Imams post-succession debates, while Sunni tafsir consolidated around caliphal systems",
+        "The verse was revealed at different times"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Historically, these trajectories reflect early community formation, with Shia hermeneutics developing around loyalty to the Imams post the succession debates, while Sunni tafsir consolidated around established caliphal systems and broader scholarly consensus."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "surahNumber": 98,
+  "questions": [
+    {
+      "id": "98_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Al-Bayyina's opening verse, what does the term 'al-Bayyina' (the clear evidence) primarily refer to according to the Foundation Layer?",
+      "options": [
+        "Only the written Quran as a book",
+        "Prophet Muhammad (PBUH) and his purified progeny, the Ahlul Bayt, as the living guidance",
+        "The historical manuscripts of previous scriptures",
+        "The scholarly consensus of religious leaders"
+      ],
+      "correctAnswer": "Prophet Muhammad (PBUH) and his purified progeny, the Ahlul Bayt, as the living guidance",
+      "explanation": "The term 'al-Bayyina' holds profound significance in Shia tafsir, often interpreted as the ultimate manifestation of divine truth: Prophet Muhammad (PBUH) and his purified progeny, the Ahlul Bayt. Classical commentators like Allamah Tabatabai emphasize that this 'evidence' transcends mere intellectual proof; it embodies the living guidance of the Prophet and his successors, particularly Imam Ali (AS), whose authority is seen as inseparable from the Quran's message."
+    },
+    {
+      "id": "98_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Al-Tabatabai's interpretation in Tafsir al-Mizan, the 'purified scriptures' mentioned in verse 2 only refers to the textual integrity of the Quran, without any connection to the Ahl al-Bayt's role as interpreters.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Al-Tabatabai extends the concept of 'purified scriptures' to include both the Quran's textual integrity and its esoteric dimensions, emphasizing that true understanding requires divinely guided authorities. He argues that the purification extends beyond textual integrity to the spiritual purity required to receive and transmit divine knowledge—a quality embodied by the Prophet and his Ahlul Bayt, who are authorized interpreters of revelation."
+    },
+    {
+      "id": "98_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 7,
+      "question": "According to contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi, what does 'righteous deeds' in verse 7 include in the modern context?",
+      "options": [
+        "Only traditional religious rituals and prayers",
+        "Actions fostering universal justice, environmental stewardship, and social equity",
+        "Exclusively financial charity to religious institutions",
+        "Personal spiritual practices without social engagement"
+      ],
+      "correctAnswer": "Actions fostering universal justice, environmental stewardship, and social equity",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes that this verse transcends sectarian boundaries, framing 'righteous deeds' as actions fostering universal justice, environmental stewardship, and social equity—values aligning with the Quranic concept of khilafa (humanity's role as stewards of Earth). Modern exegetes connect the verse to contemporary challenges, arguing that combating climate injustice or poverty exemplifies righteousness today."
+    },
+    {
+      "id": "98_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 6,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about the 'worst of creatures' mentioned in verse 6, who does this specifically refer to?",
+      "options": [
+        "Those who simply lack religious knowledge",
+        "Those who fought Imam Ali and denied his right, knowing the truth but rejecting it out of envy",
+        "People who occasionally miss their prayers",
+        "Those who were born into non-Muslim families"
+      ],
+      "correctAnswer": "Those who fought Imam Ali and denied his right, knowing the truth but rejecting it out of envy",
+      "explanation": "Imam Ja'far al-Sadiq (peace be upon him) states in Tafsir al-Qummi: 'The worst creatures are those who fought Amir al-Mu'minin [Imam Ali] and denied his right, for they knew the truth but rejected it out of envy.' This reveals the verse's deeper layer: rejection of the Imamah—the divine authority of the Imams—is equated with rejecting the essence of prophethood itself."
+    },
+    {
+      "id": "98_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 4,
+      "question": "Both Sunni and Shia scholars agree that the divisions mentioned in verse 4 arose from ambiguity in divine revelation rather than from human obstinacy.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Both Shia and Sunni exegetes concur that divisions arise from human obstinacy rather than doctrinal ambiguity in revelation. Ibn Kathir and Qummi both emphasize that the 'clear evidence' (al-bayyina) was unambiguous, and the verse critiques earlier communities for fragmenting into sects despite receiving manifest guidance. The divisions emerged from conscious rejection of truth after its manifestation, not from any lack of clarity in divine revelation."
+    }
+  ]
+}

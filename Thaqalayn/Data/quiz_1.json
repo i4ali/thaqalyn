@@ -1,0 +1,135 @@
+{
+  "surahNumber": 1,
+  "questions": [
+    {
+      "id": "1_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does 'Bismillah ar-Rahman ar-Rahim' serve as for Muslims?",
+      "options": [
+        "A simple greeting",
+        "A divine key and spiritual compass",
+        "A command to pray",
+        "A request for wealth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The opening phrase of the Quran serves as both a divine key and a spiritual compass for Muslims, anchoring every act in Allah's sovereignty and grace."
+    },
+    {
+      "id": "1_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "The term 'ar-Rahman' refers to Allah's all-encompassing mercy that sustains the entire universe.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ar-Rahman refers to His boundless, all-encompassing mercy that sustains the entire universe—like the air we breathe or the sun's warmth."
+    },
+    {
+      "id": "1_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "How many times is 'Bismillah' repeated in the Quran?",
+      "options": [
+        "100 times",
+        "113 times",
+        "114 times",
+        "115 times"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bismillah is repeated 114 times in the Quran (preceding every surah except Al-Tawbah) and daily in prayers."
+    },
+    {
+      "id": "1_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabrisi in Majma al-Bayan, what does the Bismillah represent?",
+      "options": [
+        "A simple blessing",
+        "A divine 'mark' distinguishing the Quran as Allah's speech",
+        "A greeting to prophets",
+        "A verse about judgment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi underscores that the Bismillah is a divine 'mark' (sultan) distinguishing the Quran as Allah's speech and a key to divine blessings."
+    },
+    {
+      "id": "1_5",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shia tradition through Imam Jafar al-Sadiq, every legitimate human action must begin with Bismillah.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Shia tradition, as relayed through Imam Jafar al-Sadiq, teaches that every legitimate human action must begin with Bismillah to align intention and deed with divine will."
+    },
+    {
+      "id": "1_6",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does 'al-Rahim' specifically refer to?",
+      "options": [
+        "Universal mercy for all creation",
+        "Mercy for animals only",
+        "Specific, covenantal mercy reserved for believers",
+        "Mercy only in the afterlife"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tabatabai distinguishes al-Rahim as Allah's specific, covenantal mercy reserved for believers who pursue the 'straight path' through devotion."
+    },
+    {
+      "id": "1_7",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholar Ayatollah Naser Makarem Shirazi, what is invoking Allah's names in Bismillah?",
+      "options": [
+        "Just a ritual formality",
+        "An ethical commitment, not merely a ritual",
+        "A requirement only for prayers",
+        "Optional for Muslims"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Ayatollah Naser Makarem Shirazi emphasize that invoking Allah's names is an ethical commitment, not merely a ritual—reminding believers to align every endeavor with divine compassion."
+    },
+    {
+      "id": "1_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ali (AS), the entire Quran is contained in Al-Fatiha, and Al-Fatiha is contained in Bismillah.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (AS) declared, 'The entire Quran is contained in al-Fatiha, and al-Fatiha is contained in Bismillah' (Tafsir al-Qummi), revealing its cosmic significance."
+    },
+    {
+      "id": "1_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Shia and some Sunni scholars regarding the Bismillah in Al-Fatiha?",
+      "options": [
+        "Shia scholars reject its importance",
+        "Sunni scholars recite it more often",
+        "Shia scholars regard it as an independent verse (ayah), while some Sunni schools consider it a liturgical preface",
+        "There is no difference between the two traditions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia scholars unanimously regard the Bismillah as an independent verse integral to the surah's structure, while the Hanafi school considers it a liturgical preface rather than a Quranic verse within al-Fatiha."
+    },
+    {
+      "id": "1_10",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Sunni and Shia traditions ultimately unite in upholding the Bismillah as a profound articulation of divine unity and mercy.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Despite methodological differences, both traditions ultimately unite in upholding the Bismillah as a profound articulation of divine unity and mercy, shaping spiritual practice across the Muslim world."
+    }
+  ]
+}

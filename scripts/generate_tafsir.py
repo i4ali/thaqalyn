@@ -203,7 +203,124 @@ FORMATTING REQUIREMENTS:
 
 COMMENTARY:"""
         }
-    
+
+    def get_layer_prompts_sunni(self) -> Dict[int, str]:
+        """Define the 4 specialized prompt templates for each Sunni tafsir layer"""
+        return {
+            1: """You are a Sunni Islamic scholar providing foundational commentary on Quranic verses.
+
+VERSE CONTEXT:
+Surah: {surah_name} (Surah {surah_number})
+Verse: {ayah_number}
+Arabic: {arabic_text}
+Translation: {translation}
+
+TASK:
+IMPORTANT: First, perform a web search to gather authentic foundational Sunni tafsir, historical context, and explanations of key terms for this verse.
+
+Based on your search, provide foundational commentary that explains this verse in clear, accessible language for all Muslims. Focus on basic understanding, historical background, key Arabic terms, and practical modern applications.
+
+Write a flowing commentary of 150-250 words that covers:
+- Clear explanation of the verse's meaning
+- Historical context or circumstances of revelation (asbab al-nuzul)
+- Important Arabic words and their significance
+- How this verse applies to contemporary Muslim life
+
+FORMATTING REQUIREMENTS:
+- Write in flowing paragraphs, not sections
+- Use clean, natural prose
+- No bullet points, numbers, or markdown formatting
+- Include Arabic terms naturally within sentences
+- Use simple English spellings for all Arabic names and terms (Muhammad not Muḥammad, Bismillah not Bismillāh)
+- Make it accessible and practical
+
+COMMENTARY:""",
+
+            2: """You are a classical Sunni Islamic scholar drawing from traditional sources like Tafsir Ibn Kathir, Tafsir al-Tabari, and Tafsir al-Qurtubi.
+
+VERSE CONTEXT:
+Surah: {surah_name} (Surah {surah_number})
+Verse: {ayah_number}
+Arabic: {arabic_text}
+Translation: {translation}
+
+TASK:
+IMPORTANT: First, perform a web search to retrieve commentary on this verse from classical Sunni sources like Ibn Kathir's Tafsir, Tabari's Jami al-Bayan, Qurtubi's Al-Jami li-Ahkam al-Quran, Razi's Mafatih al-Ghayb, and Baghawi's Ma'alim al-Tanzil.
+
+Based on your search, provide classical Sunni scholarly interpretation. Focus on theological depth and established scholarly consensus from the four madhabs (Hanafi, Maliki, Shafi'i, Hanbali).
+
+Write a scholarly commentary of 150-250 words that includes:
+- Classical Sunni interpretations and scholarly insights
+- References to established commentators when relevant
+- Theological concepts from Sunni scholarship
+- Connection to broader Islamic jurisprudence and Ahl al-Sunnah wa al-Jama'ah doctrine
+
+FORMATTING REQUIREMENTS:
+- Write in scholarly prose appropriate for serious students
+- Reference classical sources naturally within text
+- No bullet points, numbers, or markdown formatting
+- Use simple English spellings for all Arabic names and terms (Ibn Kathir not Ibn Kathīr, Tabari not Ṭabarī)
+- Maintain academic tone while being readable
+
+COMMENTARY:""",
+
+            3: """You are a contemporary Sunni Islamic scholar engaging with modern insights and current scholarship.
+
+VERSE CONTEXT:
+Surah: {surah_name} (Surah {surah_number})
+Verse: {ayah_number}
+Arabic: {arabic_text}
+Translation: {translation}
+
+TASK:
+IMPORTANT: First, perform a web search for contemporary Sunni scholarly interpretations of this verse, including relevant scientific, social, or philosophical discussions from modern sources such as Al-Azhar, Islamic universities, and respected contemporary scholars.
+
+Based on your search, provide contemporary interpretation that bridges classical wisdom with modern understanding. Draw from current Sunni scholars, scientific insights where relevant, and address contemporary social issues and challenges.
+
+Write a modern commentary of 150-250 words that explores:
+- How contemporary Sunni scholars interpret this verse
+- Scientific, social, or philosophical insights that illuminate the text
+- Relevance to current global issues and challenges
+- Interfaith and multicultural perspectives where appropriate
+
+FORMATTING REQUIREMENTS:
+- Write in contemporary, engaging prose
+- Include modern scholarly references naturally
+- Address current issues and applications
+- Use simple English spellings for all Arabic names and terms (Bismillah not Bismillāh, Rahman not Raḥmān)
+- No bullet points, numbers, or markdown formatting
+
+COMMENTARY:""",
+
+            4: """You are a specialist in the Prophetic traditions (hadith) and the teachings of the Sahaba (Companions of the Prophet).
+
+VERSE CONTEXT:
+Surah: {surah_name} (Surah {surah_number})
+Verse: {ayah_number}
+Arabic: {arabic_text}
+Translation: {translation}
+
+TASK:
+IMPORTANT: First, perform a web search to find authentic hadith from Sahih Bukhari, Sahih Muslim, and the Sunan collections (Tirmidhi, Abu Dawud, Nasa'i, Ibn Majah) related to this verse. Also search for narrations from the Sahaba explaining this verse.
+
+Based on your search, provide commentary focused specifically on the Prophetic Sunnah and the wisdom of the Companions. Include relevant hadith, insights from the Sahaba (such as Abu Bakr, Umar, Uthman, Ali, Ibn Abbas, Ibn Masud, Aisha, and others), and the application of this verse according to the earliest generations.
+
+Write a spiritually-focused commentary of 150-250 words that emphasizes:
+- Specific teachings from the Prophet Muhammad (peace be upon him) related to this verse
+- Relevant hadith that illuminate this verse's deeper meaning
+- Insights and explanations from the Sahaba
+- Practical guidance for spiritual development and religious practice according to the Sunnah
+
+FORMATTING REQUIREMENTS:
+- Write with reverence and spiritual depth
+- Include hadith and quotes naturally within text
+- Focus on practical spiritual guidance
+- Use simple English spellings for all Arabic names and terms (Muhammad not Muḥammad, Aisha not ʿĀʾishah, Umar not ʿUmar)
+- No bullet points, numbers, or markdown formatting
+
+COMMENTARY:"""
+        }
+
     def generate_layer_commentary(self, surah_num: int, ayah_num: int, layer: int) -> Optional[str]:
         """Generate commentary for a specific verse and layer"""
         if not self.quran_data:

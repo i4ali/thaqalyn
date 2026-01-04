@@ -1,0 +1,135 @@
+{
+  "surahNumber": 48,
+  "questions": [
+    {
+      "id": "48_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does the term 'fath mubeen' (clear conquest) in verse 1 primarily refer to?",
+      "options": [
+        "The Battle of Badr",
+        "The Treaty of Hudaybiyyah",
+        "The conquest of Khaybar",
+        "The Battle of Uhud"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical Shia scholars like Allamah Tabatabai in Tafsir al-Mizan emphasize that the 'fath mubeen' refers to the Treaty of Hudaybiyyah (6 AH), which initially appeared unfavorable but ultimately secured peace, strengthened the Muslim community, and paved the way for Islam's spread."
+    },
+    {
+      "id": "48_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, true 'conquests' can come through patience and wisdom rather than just immediate military triumph.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The verse teaches Muslims that 'conquests' often come through patience, wisdom, and trust in Allah's wisdom, not just immediate triumph. The Treaty of Hudaybiyyah transformed an apparent setback into a foundation for victory through strategic patience."
+    },
+    {
+      "id": "48_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Shia theology, how is the term 'dhanb' (sin) interpreted in verse 2 regarding the Prophet (PBUH)?",
+      "options": [
+        "It refers to moral sins the Prophet committed",
+        "It refers to minor situational shortcomings (tark al-awla), not moral transgressions",
+        "It means the Prophet needed to repent",
+        "It indicates the Prophet was like ordinary humans in making sins"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia scholars like Tabatabai explain that 'dhanb' does not denote moral transgression, as this would contradict the doctrine of prophetic infallibility (ismah). Instead, it refers to minor situational shortcomings or delays in optimal acts, never contravening divine law."
+    },
+    {
+      "id": "48_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 10,
+      "question": "According to Tafsir al-Mizan, the pledge of allegiance (bay'ah) to the Prophet transcends mere political loyalty and embodies a covenant with Allah Himself.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai elucidates that the bay'ah to the Prophet (PBUH) transcends mere political loyalty, embodying a covenant with Allah Himself. The phrase 'the hand of Allah is over their hands' signifies divine sovereignty and establishes the principle of wilayah (divine guardianship)."
+    },
+    {
+      "id": "48_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 18,
+      "question": "How do contemporary Shia scholars interpret the 'sakina' (tranquility) mentioned in verse 18?",
+      "options": [
+        "A physical gift given to the believers",
+        "A metaphor for grounding activism in inner peace amid crises",
+        "A type of weapon used in battle",
+        "A monetary reward for the believers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern thinkers connect the 'sakina' (tranquility) to faith-induced calmness, paralleling neuroscientific insights. Dr. Reza Shah-Kazemi notes this 'sakina' becomes a metaphor for grounding activism in inner peace amid crises like climate anxiety or geopolitical strife."
+    },
+    {
+      "id": "48_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 10,
+      "question": "According to contemporary interpretation, what does the 'hand of Allah' in verse 10 symbolize in modern governance?",
+      "options": [
+        "A physical divine hand appearing in battles",
+        "Divine authority channeled through ethical leadership aligned with transcendent justice",
+        "A literal hand that punishes wrongdoers",
+        "A symbol of military power"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ayatollah Nasir Makarem Shirazi explains that the 'hand of Allah' is understood as a metaphysical reality representing divine authority channeled through ethical leadership, resonating with the Shia concept of wilayah vested in the Ahlul Bayt and their successors."
+    },
+    {
+      "id": "48_7",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 18,
+      "question": "According to Ahlul Bayt teachings, the true 'fath qareeb' (near victory) in Bay'at al-Ridwan is recognizing the Imam of one's time.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The Imams emphasize the spiritual dimension: the true 'fath qareeb' (near victory) is recognizing the Imam of one's time. Lady Fatimah (AS) taught that 'Allah's greatest conquest is the soul's surrender to its Creator through devotion to His Proofs' (Bihar al-Anwar)."
+    },
+    {
+      "id": "48_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 10,
+      "question": "According to Imam Jafar al-Sadiq (AS), what does the 'pledge to the Messenger of Allah' represent?",
+      "options": [
+        "A one-time historical event with no lasting significance",
+        "A pledge to the Imams after him, as they are the hands of Allah extended over creation",
+        "A pledge only to follow the Quran",
+        "A pledge to fight in all battles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) explains in Tafsir al-Qummi: 'The pledge to the Messenger of Allah is a pledge to the Imams after him, for they are the hands of Allah extended over creation.' This transforms the physical bay'ah into a spiritual bond with the Imamah."
+    },
+    {
+      "id": "48_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 18,
+      "question": "What is a key interpretive difference between Sunni and Shia scholars regarding the 'believers' in verse 18?",
+      "options": [
+        "Both traditions interpret the verse identically",
+        "Sunni scholars praise all pledge participants universally, while Shia scholars contextualize divine approval through subsequent loyalty to the Ahlul Bayt",
+        "Shia scholars reject the verse entirely",
+        "Sunni scholars deny the historical event occurred"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni commentaries universally praise all pledge participants as exemplary companions, reflecting the doctrine of collective probity. Shia exegesis contextualizes divine approval through subsequent loyalty to the Ahlul Bayt, noting that Allah's knowledge of 'what was in their hearts' implies some participants had latent flaws."
+    },
+    {
+      "id": "48_10",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 10,
+      "question": "Both Sunni and Shia traditions agree that the verse about pledging allegiance affirms the sacredness of oaths sworn in Allah's name and the spiritual consequences of betrayal.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions agree on core principles: the sacredness of oaths sworn in Allah's name, the spiritual consequences of betrayal, and the verse's reinforcement of prophetic authority. They unite in viewing fidelity to divine covenants as defining spiritual success."
+    }
+  ]
+}

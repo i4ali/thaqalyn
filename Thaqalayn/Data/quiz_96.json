@@ -1,0 +1,110 @@
+{
+  "surahNumber": 96,
+  "questions": [
+    {
+      "id": "96_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the command 'Iqra' (Recite) in Surah Al-Alaq's opening verse signify according to the Foundation Layer?",
+      "options": [
+        "Only the ability to read written text",
+        "The transformative act of receiving and transmitting divine knowledge",
+        "A simple memorization exercise",
+        "The historical preservation of Arabic literature"
+      ],
+      "correctAnswer": "The transformative act of receiving and transmitting divine knowledge",
+      "explanation": "According to Shia tafsir, the command 'Iqra' transcends mere reading—it signifies the transformative act of receiving and transmitting divine knowledge, a mission rooted in recognizing Allah as the ultimate Creator and Sustainer. This revelation disrupted the ignorance of pre-Islamic Arabia, challenging oppressive systems through enlightenment."
+    },
+    {
+      "id": "96_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 3,
+      "question": "According to the Foundation Layer, the pairing of 'iqra' (recite) with 'al-Akram' (the Most Generous) teaches that seeking sacred knowledge is itself an act of receiving divine generosity.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. The verse highlights Allah's name 'al-Akram' (the Most Generous), underscoring His boundless grace in bestowing revelation and elevating humanity through knowledge. The pairing of 'iqra' with 'al-Akram' teaches that seeking sacred knowledge is itself an act of receiving divine generosity."
+    },
+    {
+      "id": "96_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, how does the command 'Recite in the name of your Lord' relate to tawhid?",
+      "options": [
+        "It is unrelated to the concept of divine unity",
+        "It situates all knowledge within the framework of tawhid, asserting that true comprehension arises through recognition of Allah as the sole Creator",
+        "It applies only to religious knowledge, not worldly knowledge",
+        "It suggests knowledge can be acquired independently of divine guidance"
+      ],
+      "correctAnswer": "It situates all knowledge within the framework of tawhid, asserting that true comprehension arises through recognition of Allah as the sole Creator",
+      "explanation": "Allama Tabatabai in Al-Mizan observes that the command to recite 'in the name of your Lord' situates all knowledge within the framework of tawhid, asserting that true comprehension arises only through recognition of Allah as the sole Creator and Sustainer. This aligns with the Shia theological principle that prophetic revelation and the teachings of the Ahlul Bayt constitute the primal fountain of guidance."
+    },
+    {
+      "id": "96_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "According to classical Shia exegetes like Sheikh Tabrisi, what does the term 'tughyan' (transgression) in verse 6 represent?",
+      "options": [
+        "Minor mistakes in religious practice",
+        "Rebellion against divine authority through moral corruption, oppression, or rejection of prophetic guidance",
+        "Natural human imperfection",
+        "Physical weakness"
+      ],
+      "correctAnswer": "Rebellion against divine authority through moral corruption, oppression, or rejection of prophetic guidance",
+      "explanation": "Sheikh Tabrisi notes that 'tughyan' manifests as rebellion against divine authority, whether through moral corruption, oppression, or rejection of prophetic guidance—a theme resonating with Shia theology's stress on the necessity of Imamate to curb such excesses. This aligns with the Shia emphasis on resisting illegitimate power while maintaining fidelity to the Imams."
+    },
+    {
+      "id": "96_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "According to contemporary scholar Dr. Mohammad Shomali, empirical discovery and Quranic wisdom are contradictory paths that cannot be reconciled in the pursuit of knowledge.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Modern scholars like Dr. Mohammad Shomali link the verse to the Islamization of knowledge, arguing that empirical discovery and Quranic wisdom are complementary paths to understanding Allah's generosity manifest in natural laws, biodiversity, and human potential. The verse's call to 'read' the universe as a divine text resonates with scientific inquiry."
+    },
+    {
+      "id": "96_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 9,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi interpret the verse 'Have you seen the one who forbids' in modern contexts?",
+      "options": [
+        "Only as a historical reference to Abu Jahl with no modern relevance",
+        "As a timeless critique of systemic oppression—whether ideological, political, or social—that seeks to suppress truth or spiritual growth",
+        "As applying exclusively to religious persecution, not other forms of oppression",
+        "As relevant only to Meccan society"
+      ],
+      "correctAnswer": "As a timeless critique of systemic oppression—whether ideological, political, or social—that seeks to suppress truth or spiritual growth",
+      "explanation": "Contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi contextualize this verse beyond its historical reference to Abu Jahl's attempt to silence Prophet Muhammad at prayer. They frame it as a timeless critique of systemic oppression—whether ideological, political, or social—that seeks to suppress truth, dissent, or spiritual growth, resonating with movements against censorship and authoritarianism."
+    },
+    {
+      "id": "96_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about verse 1, what does 'the Name of your Lord' refer to?",
+      "options": [
+        "Only the physical act of pronunciation",
+        "The Light of Wilayah, as all creation was brought into being through the Muhammadan Light",
+        "A metaphorical expression with no specific meaning",
+        "The Arabic language"
+      ],
+      "correctAnswer": "The Light of Wilayah, as all creation was brought into being through the Muhammadan Light",
+      "explanation": "Imam Ja'far al-Sadiq explains in Tafsir al-Qummi: 'The Name of your Lord refers to the Light of Wilayah, for all creation was brought into being through the Muhammadan Light.' This establishes that the act of creation itself flows through the channel of Ahlul Bayt's divine guardianship, emphasizing the connection between divine knowledge and divinely appointed authority."
+    },
+    {
+      "id": "96_8",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 19,
+      "question": "According to both Sunni and Shia commentators, the command 'do not obey him' in verse 19 refers to rejecting Abu Jahl's demands and emphasizing steadfastness in worship despite opposition.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Tabari (Sunni) and Tabrisi (Shia) concur that 'do not obey him' refers to rejecting Abu Jahl's demands, emphasizing steadfastness in worship despite opposition. Both traditions universally see the command to 'prostrate and draw near' as affirming prayer's centrality in spiritual elevation, with Qurtubi (Sunni) and Tusi (Shia) both linking prostration to humility before Allah."
+    }
+  ]
+}

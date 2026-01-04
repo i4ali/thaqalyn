@@ -1,0 +1,140 @@
+{
+  "surahNumber": 47,
+  "questions": [
+    {
+      "id": "47_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what happens to the deeds of those who disbelieve and hinder others from Allah's path?",
+      "options": [
+        "They are multiplied in reward",
+        "They are rendered worthless by Allah",
+        "They are judged fairly in the afterlife",
+        "They are forgiven if they repent"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse declares that those who disbelieve and hinder others from Allah's path will have their deeds wasted (adalla a'malahum), meaning rejection of truth corrupts one's entire moral framework, rendering actions spiritually fruitless."
+    },
+    {
+      "id": "47_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "According to the tafsir of verse 47:4, Islam permits indiscriminate violence in warfare without any ethical constraints.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The tafsir emphasizes that Islam has strict ethical guidelines for warfare: fighting only when necessary, treating captives humanely, and prioritizing peace once 'war lays down its burdens.' The verse establishes rules for defensive warfare with mercy and proportionality."
+    },
+    {
+      "id": "47_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to classical Shia exegesis, what does 'averting from Allah's path' encompass beyond rejecting prophethood?",
+      "options": [
+        "Rejecting scientific knowledge",
+        "Opposing the wilayah of Imam Ali and the Ahlul Bayt",
+        "Refusing to give charity",
+        "Not performing optional prayers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Al-Tabrisi in Majma al-Bayan elucidates that 'averting from Allah's path' encompasses both rejecting prophethood and opposing the wilayah of Imam Ali and the purified Household, as these constitute the inseparable 'straight path.'"
+    },
+    {
+      "id": "47_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "According to Tabatabai in Al-Mizan, what does 'until you have inflicted slaughter upon them' (athkhantumuhum) actually mean?",
+      "options": [
+        "Complete annihilation of enemies",
+        "Weakening the enemy's military capacity",
+        "Converting enemies to Islam",
+        "Taking all enemies as slaves"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai explains that the phrase denotes weakening the enemy's military capacity, not annihilation, reflecting the Shia principle of proportionality in jihad and ethical constraints on warfare."
+    },
+    {
+      "id": "47_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 7,
+      "question": "Contemporary scholars interpret 'supporting Allah' in verse 47:7 as requiring only ritual worship without social activism.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes that 'supporting Allah' transcends ritual worship; it demands active engagement in justice, community welfare, and resistance to oppression, which are central to the legacy of Imam Ali and the Ahlul Bayt."
+    },
+    {
+      "id": "47_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 9,
+      "question": "According to contemporary Shia scholarship, what does 'disliking what Allah revealed' in verse 47:9 represent in modern contexts?",
+      "options": [
+        "Simply disagreeing with religious scholars",
+        "Active opposition to justice, mercy, and transcendent truth manifesting as systemic injustices",
+        "Personal preference in ritual practices",
+        "Academic criticism of religious texts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern scholars like Ayatollah Naser Makarem Shirazi interpret this as active opposition to justice, mercy, and transcendent truth, connecting it to systemic injustices like environmental exploitation, authoritarianism, and the suppression of human dignity."
+    },
+    {
+      "id": "47_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Jafar al-Sadiq (AS), what does the 'striking of necks' in verse 47:4 spiritually symbolize?",
+      "options": [
+        "Literal warfare only",
+        "Severing the tyranny of the lower self (nafs) that resists divine guidance",
+        "Punishment for criminals",
+        "A historical practice no longer applicable"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) explained that the 'striking of necks' symbolizes severing the tyranny of the lower self (nafs) that resists divine guidance, teaching that 'the greatest jihad is the war against your own soul.'"
+    },
+    {
+      "id": "47_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 9,
+      "question": "According to the teachings of the Ahlul Bayt, deeds performed without acceptance of the Wilayah (divine guardianship) are accepted by Allah.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Imam Jafar al-Sadiq (AS) taught: 'Actions are like offerings presented to the Imam of your time; if he accepts them, they ascend to Allah, and if he rejects them, they are rejected.' Deeds devoid of acceptance of Wilayah lack substance in divine reckoning."
+    },
+    {
+      "id": "47_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 4,
+      "question": "What is a key area of convergence between Shia and Sunni interpretations of verse 47:4 on warfare?",
+      "options": [
+        "Both traditions allow unlimited violence",
+        "Both prohibit wanton violence and emphasize humane treatment of prisoners",
+        "Both reject all forms of conflict",
+        "Both consider the verse abrogated"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Shia and Sunni traditions prohibit wanton violence, with Tabatabai (Al-Mizan) and Qurtubi jointly affirming that 'securing bonds' necessitates dignified prisoner treatment regardless of conflict's duration, reflecting shared ethical priorities."
+    },
+    {
+      "id": "47_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 9,
+      "question": "What is a key difference between Shia and Sunni interpretations of 'what Allah revealed' in verse 47:9?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia scholars extend it to include the walayah of Ahl al-Bayt as inseparable from divine revelation",
+        "Sunni scholars include Imamah in their interpretation",
+        "There is no difference between the traditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While Sunni exegetes interpret 'what Allah revealed' as rejection of the Quran or legal rulings, Shia scholars like Tabatabai extend this to include the walayah (spiritual authority) of the Ahl al-Bayt, viewing recognition of the Imams as inseparable from divine revelation."
+    }
+  ]
+}

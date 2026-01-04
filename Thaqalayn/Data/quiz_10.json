@@ -1,0 +1,265 @@
+{
+  "surahNumber": 10,
+  "questions": [
+    {
+      "id": "10_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 5,
+      "question": "According to the tafsir, what does the sun being described as 'diya' (radiance) and the moon as 'nur' (light) symbolize?",
+      "options": [
+        "They are identical sources of light",
+        "A hierarchy where the sun represents direct divine guidance and the moon reflects that light",
+        "The moon is brighter than the sun",
+        "They represent the seasons of the year"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse establishes a metaphysical hierarchy: the sun's intrinsic radiance (diya) symbolizes direct divine guidance, while the moon's reflected light (nur) represents derived guidance, paralleling the relationship between prophetic revelation and its transmission through the Imams."
+    },
+    {
+      "id": "10_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 6,
+      "question": "According to the tafsir, the alternation of night and day is described as a random natural occurrence without divine purpose.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The tafsir emphasizes that the alternation of night and day is not random but purposeful, designed by Allah to sustain life and invite contemplation as profound signs (ayat) of divine wisdom."
+    },
+    {
+      "id": "10_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 13,
+      "question": "What does Surah Yunus verse 13 teach about the destruction of past nations?",
+      "options": [
+        "Nations were destroyed without warning",
+        "Nations faced destruction despite receiving divine guidance through messengers with clear proofs",
+        "Only one nation was ever destroyed",
+        "Destruction came before any prophets were sent"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse emphasizes that communities faced divine punishment only after receiving clear guidance through prophets bearing bayyinat (clear proofs), but they persisted in injustice (zulm)."
+    },
+    {
+      "id": "10_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 101,
+      "question": "In verse 101, what does Allah command believers to observe as proof of His power?",
+      "options": [
+        "Only the Quran",
+        "What is in the heavens and earth",
+        "The wealth of nations",
+        "Only human history"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah commands Prophet Muhammad to invite people to reflect on the natural world: 'Observe what is in the heavens and earth' as profound signs (ayat) of His power, wisdom, and oneness."
+    },
+    {
+      "id": "10_5",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 76,
+      "question": "According to Allama Tabatabai in Al-Mizan, Pharaoh's rejection of Musa's miracles stemmed from arrogance (istikbar) and attachment to worldly power.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai posits that the rejection of Musa's miracles reflects a deliberate denial of transcendent truth, rooted in arrogance (istikbar) and attachment to worldly power."
+    },
+    {
+      "id": "10_6",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 77,
+      "question": "According to classical Shia exegesis, what does the term 'sihr' (magic) represent when used by disbelievers to dismiss prophetic miracles?",
+      "options": [
+        "Genuine supernatural abilities",
+        "Illusion and deception used to discredit divine guidance",
+        "A form of entertainment",
+        "A compliment to the prophets"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai in Al-Mizan contrasts sihr (magic), which relies on illusion and deception, with the true miracles of prophets that are manifestations of tawhid (divine unity)."
+    },
+    {
+      "id": "10_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 94,
+      "question": "In verse 94, when Allah tells the Prophet to 'ask those who read the Book before you,' what do Shia commentators interpret this to mean?",
+      "options": [
+        "To abandon the Quran for previous scriptures",
+        "A rhetorical device affirming the Prophet's certainty and the Quran's consonance with prior revelations",
+        "To convert to Judaism or Christianity",
+        "To reject all previous prophets"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical Shia exegetes emphasize this verse employs rhetorical exhortation, framing the Prophet's unwavering certainty as a challenge to opponents, affirming the Quran's consonance with prior revelations."
+    },
+    {
+      "id": "10_8",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 14,
+      "question": "According to Tabatabai, the term 'khala'if' (successors) in verse 14 refers only to temporal political authority.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Tabatabai elucidates that 'khala'if' denotes humanity's custodial role over creation, inheriting both the physical world and the moral legacy of prior nations - a test (imtihan) of human volition and adherence to divine guidance."
+    },
+    {
+      "id": "10_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 76,
+      "question": "According to contemporary Shia scholars, how does Pharaoh's dismissal of truth as 'magic' relate to modern society?",
+      "options": [
+        "It has no modern relevance",
+        "It mirrors modern systems that discredit inconvenient truths to preserve dominance, such as climate denialism",
+        "It only applies to ancient rulers",
+        "It encourages modern magic shows"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary thinkers like Ayatollah Jawadi Amoli extend the analysis to show how the verse mirrors modern systems that discredit inconvenient truths to maintain power, visible in climate denialism and dismissal of social justice movements."
+    },
+    {
+      "id": "10_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 101,
+      "question": "According to the tafsir, scientist-philosopher Seyyed Hossein Nasr warns that 'scientism' - reducing truth to material data alone - risks becoming a new form of disbelief.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Nasr argues that scientism, which divorces empirical marvels from their transcendent source, risks becoming a new form of 'disbelief' that mirrors the rejection described in the Quran."
+    },
+    {
+      "id": "10_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 94,
+      "question": "How does the tafsir connect verse 94 ('ask those who read the Book') to modern interfaith dialogue?",
+      "options": [
+        "It discourages any interfaith engagement",
+        "It supports intellectual humility and collaborative inquiry with other faith traditions",
+        "It promotes religious isolation",
+        "It only applies to academic scholars"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Sayyid Kamal al-Haydari extend this verse to advocate for intellectual humility and interfaith dialogue, where truth is fortified through cross-referencing diverse sources."
+    },
+    {
+      "id": "10_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 14,
+      "question": "According to contemporary interpretation, what environmental message does verse 14 convey about humanity as 'successors' on Earth?",
+      "options": [
+        "Humans can exploit Earth without limits",
+        "Environmental stewardship is a sacred responsibility aligned with divine trust",
+        "Only religious scholars need to care for the environment",
+        "The Earth will repair itself automatically"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Ayatollah Nasir Makarim Shirazi emphasize that 'successorship' is not mere dominion but a sacred responsibility to uphold justice, balance, and ethical stewardship of the Earth."
+    },
+    {
+      "id": "10_13",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 76,
+      "question": "According to Imam Ali (AS) in Nahj al-Balagha, recognizing divine truth requires inner purification of the heart, not just sensory perception.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (AS) states: 'The eye cannot see Him through appearance, but hearts perceive Him through the realities of faith' - revealing that recognizing divine truth requires inner purification, not mere sensory perception."
+    },
+    {
+      "id": "10_14",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 101,
+      "question": "According to Imam Jafar al-Sadiq (AS), when does a sign (ayah) become truly luminous?",
+      "options": [
+        "When observed through a telescope",
+        "When connected to its Interpreter, the Imam",
+        "When studied in a laboratory",
+        "When written in a book"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The 6th Imam explains: 'A sign (ayah) becomes truly luminous only when connected to its Interpreter (the Imam). Without this, people see shells without kernels, bodies without souls.'"
+    },
+    {
+      "id": "10_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 6,
+      "question": "What did Imam Jafar al-Sadiq (AS) teach about the alternation of night and day for believers?",
+      "options": [
+        "It has no spiritual significance",
+        "The believer's day is for striving in obedience and night for standing in devotion, cultivating nearness to Allah",
+        "Only daytime is important for worship",
+        "Night should be spent in entertainment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) taught that 'the believer's day is for striving in obedience, and his night is for standing in devotion; in their rotation lies the cultivation of nearness to the Merciful.'"
+    },
+    {
+      "id": "10_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 94,
+      "question": "According to Ahlul Bayt teachings, the verse 'ask those who read the Scripture' refers to the Infallible Imams as the true bearers of Allah's Book.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Sadiq (AS) states in Al-Kafi: 'We are the bearers of Allah's Book, the interpreters of His revelation. The one who turns to us is never lost.'"
+    },
+    {
+      "id": "10_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 76,
+      "question": "What is a key divergence between Shia and Sunni interpretations of verse 76 regarding the rejection of prophetic truth?",
+      "options": [
+        "Both traditions have identical interpretations",
+        "Shia exegetes extend the rejection of truth to include opposition to the Imams, while Sunni focus more narrowly on prophetic missions",
+        "Sunni scholars emphasize the Imams more than Shia scholars",
+        "Neither tradition discusses this verse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentators like Tabatabai extend the verse to the theological concept of walayah, arguing that rejection of legitimate leadership parallels Pharaoh's defiance, while Sunni exegetes focus more narrowly on prophetic missions."
+    },
+    {
+      "id": "10_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 101,
+      "question": "Both Sunni and Shia traditions agree that the verse's core message is that belief requires openness to transcendent truth beyond mere sensory evidence.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions unite in affirming the verse's core message: belief transcends sensory evidence, requiring openness to transcendent truth, though they differ in hermeneutical approaches."
+    },
+    {
+      "id": "10_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 94,
+      "question": "What is the main difference between Shia and Sunni interpretation of 'those who read the Scripture' in verse 94?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Sunni interpret it broadly as Jewish and Christian scholars, while Shia argue it refers primarily to the Ahl al-Bayt",
+        "Shia reject interfaith dialogue based on this verse",
+        "Both traditions interpret it identically"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes interpret 'those who read the Scripture' broadly as Jewish and Christian scholars, while Shia commentaries like Al-Qummi and Al-Tabatabai argue the phrase refers primarily to the Ahl al-Bayt as inheritors of prophetic knowledge."
+    },
+    {
+      "id": "10_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 14,
+      "question": "According to comparative tafsir, Shia thought uniquely connects the concept of earthly succession (khilafa) with Imamah as a pillar of faith.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Shia thought intertwines cosmic order and succession with Imamah as a pillar of faith, whereas Sunni exegesis often emphasizes textual and rational proofs independent of succession debates."
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "surahNumber": 37,
+  "questions": [
+    {
+      "id": "37_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the name 'As-Saffat' (Those Ranged in Ranks) primarily refer to in this surah?",
+      "options": [
+        "Rows of worshippers in mosques",
+        "Angels arranged in orderly ranks in the heavens",
+        "Soldiers in battle formation",
+        "Stars in the sky"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As-Saffat refers to the angels who stand in orderly ranks in the heavens, worshipping Allah and carrying out His commands."
+    },
+    {
+      "id": "37_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 36,
+      "question": "According to the tafsir, the Meccan polytheists labeled Prophet Muhammad (PBUH) as a 'mad poet' because they genuinely believed his message was irrational.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The polytheists' derisive labels of 'sha'ir' (poet) and 'majnun' (mad) were deliberate attempts to undermine his prophethood. They refused to engage with the Quran's rationality because accepting Islam threatened their economic interests and tribal prestige."
+    },
+    {
+      "id": "37_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 101,
+      "question": "In verse 101, what quality is used to describe the son promised to Prophet Ibrahim (AS)?",
+      "options": [
+        "Brave (shuja)",
+        "Forbearing (haleem)",
+        "Wise (hakeem)",
+        "Strong (qawi)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah gave Ibrahim glad tidings of a 'ghulamin haleem' - a forbearing boy. The term 'haleem' signifies profound patience and wisdom, which Ismail later exemplified during the ultimate test of sacrifice."
+    },
+    {
+      "id": "37_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 47,
+      "question": "According to verse 47, what distinguishes the heavenly drink from worldly intoxicants?",
+      "options": [
+        "It has a different color",
+        "It is served in golden cups",
+        "It causes no harmful aftereffects or intoxication",
+        "It is only available to prophets"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The verse describes the heavenly drink as free from 'ghawl' (harmful aftereffects) and incapable of causing intoxication, contrasting it with worldly alcohol that causes physical harm and moral corruption."
+    },
+    {
+      "id": "37_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 36,
+      "question": "According to Allama Tabatabai in Al-Mizan, what deeper spiritual ailment does the polytheists' rejection of Prophet Muhammad reveal?",
+      "options": [
+        "Simple ignorance",
+        "Fear of persecution",
+        "Prioritization of ancestral tradition (taqlid) over rational submission to tawhid",
+        "Lack of access to the Prophet's teachings"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tabatabai argues that their rhetorical question exposes a deeper spiritual ailment: the prioritization of ancestral tradition (taqlid) over rational submission to God's oneness (tawhid)."
+    },
+    {
+      "id": "37_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 101,
+      "question": "According to Shia exegetes, Ismail's designation as 'haleem' (forbearing) merely refers to his calm temperament.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Tabrisi highlights that Ismail's designation as 'haleem' transcends mere patience; it signifies profound spiritual maturity and readiness to endure existential tests, foreshadowing his consent to being sacrificed."
+    },
+    {
+      "id": "37_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 102,
+      "question": "According to classical Shia tafsir, what type of dream did Prophet Ibrahim receive commanding him to sacrifice his son?",
+      "options": [
+        "An ordinary dream",
+        "A nightmare to be ignored",
+        "Divine communication (wahy) that prophets must act upon",
+        "A symbolic vision requiring interpretation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia exegetes emphasize that Ibrahim's vision was not an ordinary dream but a form of divine communication (wahy), as prophets' dreams are inseparable from revelation and require obedience."
+    },
+    {
+      "id": "37_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 111,
+      "question": "In classical Shia exegesis, what rank does the phrase 'Our believing servants' denote beyond mere acknowledgment of monotheism?",
+      "options": [
+        "A rank of basic faith",
+        "A rank of wilayah (divine guardianship) through unwavering submission",
+        "A rank of ordinary worship",
+        "A rank of scholarly knowledge"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Tabatabai and Tabrisi emphasize that 'Our believing servants' transcends mere acknowledgment of monotheism, instead denoting a rank of wilayah (divine guardianship) attained through unwavering submission to God."
+    },
+    {
+      "id": "37_9",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 36,
+      "question": "Contemporary scholars connect the verse about polytheists calling the Prophet a 'mad poet' to modern phenomena like climate denialism and Islamophobia.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Dr. Liyakat Takim notes how the verse underscores epistemic arrogance that resonates with modern challenges like climate denialism, where vested interests dismiss scientific consensus. Contemporary scholars also link it to how truth-tellers are marginalized through ad hominem attacks."
+    },
+    {
+      "id": "37_10",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 46,
+      "question": "According to contemporary Shia scholarship, what does the 'white drink' of Paradise symbolize in today's context?",
+      "options": [
+        "A luxury beverage for the wealthy",
+        "Sustainable fulfillment contrasted with fleeting worldly pleasures",
+        "Scientific advancement",
+        "Political power"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars like Sayyid Ahmad Al-Mousawi extend this metaphor to critique societies drowning in fleeting pleasures: addiction crises, consumerism, and commodification of happiness. The verse's 'delicious' drink becomes an allegory for sustainable fulfillment."
+    },
+    {
+      "id": "37_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 101,
+      "question": "In contemporary scholarship, how is Ismail's 'forbearance' (hilm) connected to modern social justice movements?",
+      "options": [
+        "As passive acceptance of injustice",
+        "As proactive moral steadfastness and courageous perseverance in advocating for equity",
+        "As isolation from worldly affairs",
+        "As political neutrality"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dr. Liyakat Takim links this virtue to modern struggles against systemic injustice, noting how hilm transcends passivity to embody courageous perseverance in advocating for equity, whether in resisting oppression or addressing climate crises."
+    },
+    {
+      "id": "37_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 111,
+      "question": "According to contemporary Shia theologian Dr. Liyakat Takim, being among Allah's 'mu'mineen' today means confronting modern Pharaohs such as corruption, greed, and apathy.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Dr. Liyakat Takim observes: 'To be among Allah's mu'mineen today is to confront modern Pharaohs - corruption, greed, and apathy - with the same resolve Ibrahim showed against Nimrod.'"
+    },
+    {
+      "id": "37_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 46,
+      "question": "According to Imam Jafar al-Sadiq (AS), what does the 'white drink' of Paradise symbolize?",
+      "options": [
+        "Worldly pleasures",
+        "The pure light of Imamah and love of Ali and his purified progeny",
+        "Material wealth in the afterlife",
+        "Water from earthly rivers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) taught that the 'white drink' symbolizes the pure light of Imamah, stating: 'Its root is the love of Ali (AS) and his purified progeny, for they are the spring of this light.'"
+    },
+    {
+      "id": "37_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 101,
+      "question": "According to Imam Sadiq (AS), every instance of 'good tidings' in the Quran points to the continuity of Wilayah (divine guardianship).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Sadiq (AS) teaches that every instance of 'good tidings' in the Quran points to the continuity of Wilayah (divine guardianship), with Ismail's progeny culminating in the Seal of the Prophets and his purified Ahlul Bayt."
+    },
+    {
+      "id": "37_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 111,
+      "question": "According to Imam Sadiq (AS) in Tafsir al-Qummi, what are the three components of true belief (iman)?",
+      "options": [
+        "Prayer, fasting, and charity",
+        "Recognition with the heart, affirmation with the tongue, and action with the limbs",
+        "Knowledge, wisdom, and power",
+        "Faith, hope, and love"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Sadiq (AS) explains in Tafsir al-Qummi that true belief (iman) is 'recognition with the heart, affirmation with the tongue, and action with the limbs.'"
+    },
+    {
+      "id": "37_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 102,
+      "question": "According to Lady Fatimah (AS), what is the world described as?",
+      "options": [
+        "A permanent home for believers",
+        "A trial for the soul",
+        "A place of pure enjoyment",
+        "The final destination"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lady Fatimah (AS) taught: 'The world is a trial for the soul; whoever clings to its false gods abandons the rope of Allah.'"
+    },
+    {
+      "id": "37_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 101,
+      "question": "What is a key difference between Shia and Sunni identification of the 'forbearing boy' (ghulam haleem) in verse 101?",
+      "options": [
+        "Shia scholars identify him as Ismail, while Sunni scholars predominantly identify him as Ishaq",
+        "Both traditions agree it was Isaac",
+        "Both traditions agree it was Ismail",
+        "Sunni scholars identify him as Ismail, while Shia identify him as Ishaq"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Shia scholars lean toward Ismail due to his distinct role in the sacrifice narrative and the Abrahamic covenant, while Sunni exegetes predominantly identify the child as Ishaq, aligning with Quranic references to his birth announcement in Surah Hud."
+    },
+    {
+      "id": "37_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 111,
+      "question": "Both Shia and Sunni traditions agree that Prophet Ibrahim's legacy as a paragon of God-consciousness remains central to Islamic spirituality.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions agree on the verse's core message: Ibrahim's legacy as a paragon of God-consciousness remains central to Islamic spirituality, transcending sectarian boundaries."
+    },
+    {
+      "id": "37_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 36,
+      "question": "How do Shia scholars differ from Sunni scholars in interpreting the verse about polytheists rejecting the Prophet?",
+      "options": [
+        "Shia scholars focus only on historical context",
+        "Sunni scholars link it to Imamah",
+        "Shia scholars link it to later rejections of Imam Ali's authority as a pattern of resisting truth",
+        "There is no difference in interpretation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia scholars like Tabatabai and Qummi highlight that the Quraysh's refusal to abandon idols parallels later rejections of Imam Ali's authority, illustrating a persistent human tendency to resist truth when it challenges entrenched power structures."
+    },
+    {
+      "id": "37_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 102,
+      "question": "Both Shia and Sunni traditions agree that Ibrahim's episode of sacrifice prefigures the concept of redemptive sacrifice and patient steadfastness in divine love.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions uphold the core ethical and spiritual lessons of submission to divine will. The Shia tradition particularly connects this to Imam Hussain's sacrifice at Karbala as the pinnacle of patient steadfastness (sabr) in divine love."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "surahNumber": 88,
+  "questions": [
+    {
+      "id": "88_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Al-Ghaashiya's opening verse, what does the term 'Al-Ghaashiya' (the Overwhelming) refer to according to Shia tafsir?",
+      "options": [
+        "A historical battle in early Islam",
+        "The Day of Resurrection that will overwhelm all creation",
+        "The Prophet's spiritual journey",
+        "The persecution of early Muslims in Mecca"
+      ],
+      "correctAnswer": "The Day of Resurrection that will overwhelm all creation",
+      "explanation": "In Shia tafsir, scholars like Allamah Tabatabai and Shaykh Tabarsi explain that Al-Ghaashiya refers to the Day of Resurrection—a momentous event that will 'overwhelm' (yaghsha) all creation, leaving none untouched. The term comes from the root ghayn-sheen-ya, signifying complete coverage or envelopment."
+    },
+    {
+      "id": "88_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to Imam Ali, true humility is described as 'lowering your wing to the people,' meaning kindness without condescension.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Imam Ali (AS) taught that true humility is 'lowering your wing to the people'—kindness without condescension. This verse about humbled faces reminds believers to cultivate sincere humility before the Day of Judgment arrives, rejecting pride in wealth, status, or knowledge."
+    },
+    {
+      "id": "88_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, what does the rhetorical question 'Has there reached you...' in verse 1 signify?",
+      "options": [
+        "A genuine inquiry seeking the Prophet's opinion",
+        "A casual conversation starter",
+        "A solemn affirmation of prophetic knowledge about the Day of Resurrection",
+        "A test of the Prophet's understanding"
+      ],
+      "correctAnswer": "A solemn affirmation of prophetic knowledge about the Day of Resurrection",
+      "explanation": "Shaykh Tabrisi explains that the rhetorical question 'Has there reached you...' serves not as an inquiry but as a solemn affirmation of prophetic knowledge, emphasizing the certainty of this eschatological truth conveyed to the Prophet (s) through revelation."
+    },
+    {
+      "id": "88_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "What do classical Shia exegetes say about the 'work' (aamilah) mentioned in verse 3?",
+      "options": [
+        "It refers to all forms of physical labor",
+        "It signifies righteous deeds performed with faith",
+        "It refers to worldly toil divorced from faith and spiritual purpose",
+        "It describes the work of angels on Judgment Day"
+      ],
+      "correctAnswer": "It refers to worldly toil divorced from faith and spiritual purpose",
+      "explanation": "Both Allamah Tabatabai in Al-Mizan and Sheikh Tabrisi in Majma al-Bayan emphasize that the 'work' (aamilah) here refers not to righteous deeds but to worldly toil divorced from faith. The 'exhaustion' (naseebah) signifies the fruitlessness of their efforts when confronted with divine reckoning."
+    },
+    {
+      "id": "88_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to Ayatollah Nasir Makarem Shirazi, 'Al-Ghaashiya' only refers to the Day of Judgment and has no relevance to modern crises.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Nasir Makarem Shirazi emphasizes that 'Al-Ghaashiya' transcends its classical eschatological meaning, urging believers to recognize modern manifestations of societal and environmental collapse—including climate disasters, nuclear threats, and systemic inequities that engulf societies."
+    },
+    {
+      "id": "88_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 17,
+      "question": "How do contemporary Shia scholars like Ayatollah Shirazi interpret the verse about contemplating the camel's creation?",
+      "options": [
+        "Only as a literal reference to camel anatomy",
+        "As an outdated verse with no modern relevance",
+        "As a metaphor for systemic observation and scientific inquiry",
+        "As a prohibition against studying animals"
+      ],
+      "correctAnswer": "As a metaphor for systemic observation and scientific inquiry",
+      "explanation": "Contemporary scholars like Ayatollah Naser Makarim Shirazi emphasize a dynamic interplay between divine wisdom and human inquiry. While classical exegesis highlighted the camel's physical marvels, modern interpretations expand this into a metaphor for systemic observation and scientific research."
+    },
+    {
+      "id": "88_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about verse 1, what does 'The Overwhelming Event' also refer to?",
+      "options": [
+        "The conquest of Mecca",
+        "The rising of Al-Qa'im (Imam Mahdi) who will cover the earth with justice",
+        "The migration to Medina",
+        "The Battle of Karbala"
+      ],
+      "correctAnswer": "The rising of Al-Qa'im (Imam Mahdi) who will cover the earth with justice",
+      "explanation": "In a narration from Imam Ja'far al-Sadiq, he explains: 'The Overwhelming Event is the rising of Al-Qa'im [Imam Mahdi], for he will cover the earth with justice as it was covered with oppression, and this will overwhelm the deniers' (Bihar al-Anwar)."
+    },
+    {
+      "id": "88_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 21,
+      "question": "According to Imam Ali in Nahj al-Balagha, tadhkir (reminder) is described as a lifeline tethering souls to the Rope of Allah.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Imam Ali states in Nahj al-Balagha: 'The essence of tadhkir is not repetition, but revival—a lifeline tethering souls to the Rope of Allah.' This emphasizes that true reminder goes beyond mere words to awaken spiritual consciousness."
+    },
+    {
+      "id": "88_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 2,
+      "question": "What is a key theological difference between Sunni and Shia interpretations of the 'humbled faces' in verse 2?",
+      "options": [
+        "Sunni scholars reject this verse entirely",
+        "Shia exegesis incorporates the concept of walaya (allegiance to the Ahl al-Bayt) as integral to faith",
+        "Both traditions have identical interpretations with no differences",
+        "Sunni scholars believe only physical appearance is affected"
+      ],
+      "correctAnswer": "Shia exegesis incorporates the concept of walaya (allegiance to the Ahl al-Bayt) as integral to faith",
+      "explanation": "While both traditions agree the verse describes humiliation for rejecting truth, Shia exegetes like Al-Qummi and Tabatabai incorporate the concept of walaya (allegiance to the Ahl al-Bayt) as integral to true faith. Al-Qummi's Tafsir interprets the verse as addressing those who denied both prophetic messages and the Imams' authority."
+    },
+    {
+      "id": "88_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 26,
+      "question": "According to both Sunni (Al-Tabari) and Shia (Al-Tabrisi) scholars, what is the core message of verse 26 about divine accountability?",
+      "options": [
+        "Humans will judge each other on the Day of Judgment",
+        "Angels have authority over the final reckoning",
+        "God's absolute sovereignty over the final judgment and His omniscience in evaluating human deeds",
+        "There is no accountability after death"
+      ],
+      "correctAnswer": "God's absolute sovereignty over the final judgment and His omniscience in evaluating human deeds",
+      "explanation": "Both Al-Tabari (Sunni) and Al-Tabrisi (Shia) universally affirm the verse's core message: God's absolute sovereignty over the final judgment and His omniscience in evaluating human deeds. This declaration reassures believers of divine justice while emphasizing that ultimate accountability rests with Allah alone."
+    }
+  ]
+}

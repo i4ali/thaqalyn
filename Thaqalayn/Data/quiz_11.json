@@ -1,0 +1,275 @@
+{
+  "surahNumber": 11,
+  "questions": [
+    {
+      "id": "11_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 61,
+      "question": "According to the tafsir of verse 61, what does the Arabic term 'ista'marakum' refer to regarding humanity's role on earth?",
+      "options": [
+        "To worship continuously",
+        "To act as stewards (khalifah) tasked with nurturing the world responsibly",
+        "To conquer other nations",
+        "To accumulate wealth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The phrase 'He has produced you from the earth and ista'marakum (settled/cultivated you) in it' highlights Allah's creative power and humanity's role as stewards (khalifah) tasked with nurturing the world responsibly."
+    },
+    {
+      "id": "11_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 61,
+      "question": "According to the tafsir, the verse's call to 'ask forgiveness of Him and then repent to Him' describes repentance (tawbah) as a two-step process.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The call to 'ask forgiveness of Him and then repent to Him' underscores repentance (tawbah) as a two-step process: seeking mercy and actively turning back to Allah."
+    },
+    {
+      "id": "11_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 86,
+      "question": "In verse 86, Prophet Shu'ayb addresses the people of Madyan about which major issue?",
+      "options": [
+        "Idol worship",
+        "Dishonest trade practices like cheating in weights and measures",
+        "Neglecting daily prayers",
+        "Building excessive monuments"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Prophet Shu'ayb addresses his community, the people of Madyan, who were notorious for dishonest trade practices like cheating in weights and measures."
+    },
+    {
+      "id": "11_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 115,
+      "question": "According to the tafsir, what does the Arabic term 'sabr' (patience) signify in verse 115?",
+      "options": [
+        "Passive resignation to fate",
+        "Steadfastness in faith and action, not passive endurance",
+        "Physical strength",
+        "Avoiding all forms of conflict"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Arabic term sabr (patience) signifies steadfastness in faith and action, not passive endurance. It is a spiritual discipline requiring active trust in Allah's justice."
+    },
+    {
+      "id": "11_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 61,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does Prophet Salih's call to tawhid represent?",
+      "options": [
+        "Mere ritualism",
+        "A call that transcends mere ritualism by affirming Allah's absolute authority over existence and human purpose",
+        "A political movement",
+        "Economic reform"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai explains that Prophet Salih's declaration 'Worship Allah; you have no deity other than Him' is a call to tawhid that transcends mere ritualism by affirming Allah's absolute authority over existence and human purpose."
+    },
+    {
+      "id": "11_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 61,
+      "question": "According to Imam Jafar al-Sadiq, istighfar erodes sin while tawbah signifies a return to innate purity (fitra).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "As Imam Jafar al-Sadiq taught, istighfar erodes sin, while tawbah signifies a return to innate purity (fitra), reflecting the Shia emphasis on spiritual renewal through the Ahlul Bayt's intercession."
+    },
+    {
+      "id": "11_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 76,
+      "question": "According to Tabrisi in Majma al-Bayan, what does Prophet Ibrahim's persistence in intercession for the people of Lot reflect?",
+      "options": [
+        "Disobedience to divine will",
+        "His innate shafaqa (compassion), a hallmark of prophetic character",
+        "Ignorance of divine decree",
+        "Political ambition"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi notes that Ibrahim's persistence in intercession reflects his innate shafaqa (compassion), a hallmark of prophetic character, yet the verse establishes the ontological boundary between human agency and divine sovereignty."
+    },
+    {
+      "id": "11_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 86,
+      "question": "According to Shia commentators, what does the term 'baqiyyat Allah' (what remains from Allah) in verse 86 refer to?",
+      "options": [
+        "Material wealth only",
+        "Pure, lawful sustenance and ethical practices ordained by Allah, inseparable from true belief",
+        "Political power",
+        "Military strength"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical commentators like Tabatabai in Al-Mizan highlight that 'baqiyyat Allah' refers to the pure, lawful sustenance and ethical practices ordained by Allah, which are inseparable from true belief (iman)."
+    },
+    {
+      "id": "11_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 61,
+      "question": "Contemporary Shia scholars like Ayatollah Naser Makarem Shirazi interpret 'He settled you in it' as emphasizing what modern concept?",
+      "options": [
+        "Industrial development",
+        "Environmental custodianship as a divine mandate",
+        "Urbanization",
+        "Technological advancement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary Shia scholars, such as Ayatollah Naser Makarem Shirazi, highlight the verse's emphasis on environmental custodianship as a divine mandate, interpreting it as a reminder of humanity's interconnectedness with the natural world."
+    },
+    {
+      "id": "11_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 76,
+      "question": "According to contemporary scholars, Ibrahim's cessation of intercession teaches that we must recognize natural consequences when societal moral decay reaches a threshold.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars contextualize this as a call to recognize the natural consequences of systemic corruption - when societal moral decay reaches a threshold, collective suffering becomes inevitable, much like ecological tipping points."
+    },
+    {
+      "id": "11_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 115,
+      "question": "According to Ayatollah Naser Makarem Shirazi, how should modern Muslims understand the concept of 'sabr' (patience)?",
+      "options": [
+        "As passive resignation",
+        "As 'spiritual activism' - a dynamic commitment to moral integrity and social justice",
+        "As avoidance of all worldly matters",
+        "As isolation from society"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shirazi frames patience as 'spiritual activism,' aligning with Imam Ali's teaching that 'patience is the bridge between despair and hope,' reframing perseverance as a tool for navigating systemic oppression and personal struggles."
+    },
+    {
+      "id": "11_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 111,
+      "question": "According to contemporary Shia thought, how does verse 111's promise of divine recompense relate to modern social ethics?",
+      "options": [
+        "It only applies to individual actions",
+        "Systemic inequalities like wealth gaps and climate injustice mirror the 'deeds' humanity must account for collectively",
+        "It has no relevance to modern society",
+        "It only concerns the afterlife"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholar Dr. Liyakat Takim connects this verse to modern social ethics, noting that systemic inequalities - from wealth gaps to climate injustice - mirror the 'deeds' humanity must account for collectively."
+    },
+    {
+      "id": "11_13",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 61,
+      "question": "According to Imam Ali in Nahj al-Balagha, the first step in religion is knowing Allah, and the perfection of knowing Him is affirming His Oneness.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (AS) states in Nahj al-Balagha: 'The first step in religion is knowing Him, and the perfection of knowing Him is affirming His Oneness.'"
+    },
+    {
+      "id": "11_14",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 86,
+      "question": "According to Imam Ja'far al-Sadiq, what does the term 'Baqiyyatullah' refer to in the context of the Ahlul Bayt?",
+      "options": [
+        "Material provisions",
+        "The Imams themselves - 'We are the Baqiyyatullah upon His earth'",
+        "Physical buildings",
+        "Written texts only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq (peace be upon him) elucidates: 'We are the Baqiyyatullah upon His earth' (Bihar al-Anwar), revealing that true success lies in clinging to the rope of Allah manifested in their purified lineage."
+    },
+    {
+      "id": "11_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 115,
+      "question": "According to Imam Ali in Nahj al-Balagha, what metaphor does he use to describe patience?",
+      "options": [
+        "A mountain that never moves",
+        "A riding beast that never stumbles - carrying the believer to the highest ranks of Paradise",
+        "A river that flows endlessly",
+        "A tree with deep roots"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (as) states in Nahj al-Balagha: 'Patience is a riding beast that never stumbles - it carries the believer to the highest ranks of Paradise.'"
+    },
+    {
+      "id": "11_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 76,
+      "question": "According to the teachings of the Ahlul Bayt, true submission to divine decree requires trusting the interconnectedness of Allah's plan administered through His chosen guides.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (AS) states: 'The rope of Allah is one: His command. Hold fast to its entirety,' emphasizing that true submission requires trusting the interconnectedness of Allah's plan, administered through His chosen guides."
+    },
+    {
+      "id": "11_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 61,
+      "question": "What is a key difference between Shia and Sunni interpretations of 'He settled you in it' (istamarakum) in verse 61?",
+      "options": [
+        "There is no difference",
+        "Shia link it to humanity's stewardship under the Imamate's moral authority, while Sunni interpret it more broadly as a command to cultivate the earth",
+        "Sunni reject the verse entirely",
+        "Shia interpret it as purely spiritual"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentaries often link 'He settled you in it' (istamarakum) to humanity's role as stewards (khalifa) under the Imamate's moral authority, while Sunni scholars like Razi interpret istamara more broadly as a command to cultivate the earth."
+    },
+    {
+      "id": "11_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 76,
+      "question": "According to the comparative analysis, how do Shia and Sunni commentators differ in their interpretation of Ibrahim's intercession ceasing?",
+      "options": [
+        "They interpret it identically",
+        "Shia contextualize it within the doctrine of bada' (divine revision), while Sunni emphasize divine omnipotence overriding human agency",
+        "Only Sunni scholars discuss this verse",
+        "Only Shia scholars accept this narrative"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentaries like Tusi's At-Tibyan contextualize this within the broader doctrine of bada' (divine revision), while Sunni exegetes frame the cessation as a lesson in submitting to Allah's irreversible judgment (qada')."
+    },
+    {
+      "id": "11_19",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 111,
+      "question": "Both Shia and Sunni traditions agree that divine justice (adl) necessitates proportionate recompense for human actions.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both schools unanimously affirm the core theological principles: God's omniscience, His absolute justice in rewarding or punishing deeds, and the inevitability of individual accountability."
+    },
+    {
+      "id": "11_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 115,
+      "question": "According to the comparative analysis, what distinguishes Shia from Sunni practice regarding patience (sabr)?",
+      "options": [
+        "Only Sunni emphasize patience",
+        "Shia spirituality may integrate commemorative rituals like mourning for Imam Husayn as acts of sabr",
+        "Sunni do not believe in patience",
+        "There is no practical difference"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni traditions often emphasize personal resilience and communal solidarity during hardship, while Shia spirituality may integrate commemorative rituals (e.g., mourning for Imam Husayn) as acts of sabr."
+    }
+  ]
+}

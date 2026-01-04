@@ -1,0 +1,135 @@
+{
+  "surahNumber": 54,
+  "questions": [
+    {
+      "id": "54_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what event does 'inshaqqa al-qamar' (splitting of the moon) refer to in verse 1?",
+      "options": [
+        "A metaphor for the end of time",
+        "A miraculous sign granted to Prophet Muhammad when Meccans demanded proof of his prophethood",
+        "A lunar eclipse witnessed by the Arabs",
+        "A natural geological phenomenon on the moon"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The splitting of the moon refers to a miraculous sign granted to Prophet Muhammad (PBUH) when Meccan disbelievers demanded proof of his prophethood. Historical narrations describe how the Prophet raised his hand, causing the moon to split into two distinct halves before reuniting."
+    },
+    {
+      "id": "54_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "The term 'sa'a' (the Hour) in verse 1 serves as a timeless reminder of life's fleeting nature rather than a fixed timeline.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The term 'sa'a' (the Hour) underscores the inevitability of the Day of Judgment, with its 'nearness' serving as a timeless reminder of life's fleeting nature rather than a fixed timeline."
+    },
+    {
+      "id": "54_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, what theological frameworks does he use to situate the moon-splitting verse?",
+      "options": [
+        "Tawhid and Risalah only",
+        "Nubuwwah (prophethood) and Imamah (divine leadership)",
+        "Adl and Ma'ad exclusively",
+        "Fiqh and Akhlaq"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai in Al-Mizan situates the verse within the framework of nubuwwah (prophethood) and imamah (divine leadership), highlighting that such miracles manifest through the wilayah (guardianship) bestowed upon Allah's chosen servants."
+    },
+    {
+      "id": "54_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Shia commentary, the Quran's accessibility is inseparable from the hermeneutic authority of the Ahl al-Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Shia tradition links the Quran's 'ease' to the doctrine of Imamah, as the Ahlul Bayt are regarded as living miracles and enduring signs of divine guidance. Their rejection, like the rejection of prophetic miracles, exposes a spiritual blindness."
+    },
+    {
+      "id": "54_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 17,
+      "question": "According to contemporary scholar Ayatollah Jawadi Amoli, how should we understand the 'nearness' of the Hour mentioned in Surah Al-Qamar?",
+      "options": [
+        "As a precise prediction of the end of the world",
+        "As a timeless call to moral awakening, not merely a linear prophecy",
+        "As a reference only to past events",
+        "As applicable only to the time of the Prophet"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ayatollah Jawadi Amoli emphasizes the verse's eschatological urgency, framing the 'nearness' of the Hour not merely as a linear prophecy but as a timeless call to moral awakening."
+    },
+    {
+      "id": "54_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 32,
+      "question": "What does contemporary Shia scholarship emphasize about digital access to the Quran in relation to verse 32 ('We have made the Quran easy for remembrance')?",
+      "options": [
+        "Digital tools are prohibited for Quranic study",
+        "Digital tools democratize access, but the real test lies in cultivating intentional engagement",
+        "Digital tools replace the need for traditional scholarship",
+        "Digital tools are irrelevant to understanding the Quran"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars note how digital tools from Quran apps to online lectures democratize access, yet the real test lies in cultivating intentional engagement amid today's distractions of consumerism and information overload."
+    },
+    {
+      "id": "54_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ali (AS) in Nahj al-Balagha, what does the 'moon' represent spiritually in the context of verse 1?",
+      "options": [
+        "The physical celestial body only",
+        "The luminous guidance of the Prophet and his purified progeny",
+        "A symbol of the passage of time",
+        "The phases of human life"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) states that the 'moon' represents the luminous guidance of the Prophet and his purified progeny, whose light is fragmented only by those who reject their authority."
+    },
+    {
+      "id": "54_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 17,
+      "question": "According to Imam Jafar al-Sadiq (AS), the Quran's treasures are unveiled only to those who hold the rope of the Ahlul Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Jafar al-Sadiq (AS) states: 'The Quran is a spring that never dries. Whoever seeks guidance through it will be guided, but its treasures are unveiled only by the one who holds the rope of the Ahlul Bayt.'"
+    },
+    {
+      "id": "54_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Shia and Sunni interpretations of the moon-splitting verse according to comparative analysis?",
+      "options": [
+        "Sunni scholars deny the miracle occurred",
+        "Shia scholars reject the literal interpretation",
+        "Shia scholars extend interpretation to eschatological and ontological dimensions linked to Imamology, while Sunni scholars focus primarily on proof of prophethood",
+        "There are no differences between the two traditions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sunni commentators primarily frame the miracle as proof of prophethood (nubuwwa), while Shia scholars often extend the interpretation to eschatological and ontological dimensions. Tabatabai links the 'nearing Hour' to the cosmic role of the Ahl al-Bayt."
+    },
+    {
+      "id": "54_10",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 17,
+      "question": "Both Shia and Sunni traditions share a unified view that the Quran is an inexhaustible source of guidance, despite having different approaches to interpretive authority.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions share a unifying vision of the Quran as an inexhaustible source of guidance, inviting continual engagement across generations. Differences emerge in theological emphases regarding the role of the Imams versus individual scholarly engagement."
+    }
+  ]
+}

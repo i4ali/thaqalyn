@@ -1,0 +1,70 @@
+{
+  "surahNumber": 113,
+  "questions": [
+    {
+      "id": "113_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Al-Falaq's opening verse, what does the term 'falaq' (daybreak) symbolize according to the Foundation Layer?",
+      "options": [
+        "Only the physical phenomenon of sunrise",
+        "The splitting of darkness by light and Allah's power to dispel harm",
+        "A reference to the moon phases",
+        "The Prophet's daily prayer times"
+      ],
+      "correctAnswer": "The splitting of darkness by light and Allah's power to dispel harm",
+      "explanation": "The term 'falaq' refers to the splitting of darkness by light at daybreak, symbolizing hope, clarity, and Allah's power to dispel harm. Just as dawn inevitably follows night, divine aid follows sincere supplication."
+    },
+    {
+      "id": "113_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, 'falaq' is interpreted only as the physical dawn with no metaphysical significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Tabrisi emphasizes deeper connotations, linking 'falaq' to the 'splitting' or 'manifestation' of hidden realities. Allah's lordship over al-falaq signifies His absolute authority over all emergent phenomena, from physical dawn to the unfolding of existential truths."
+    },
+    {
+      "id": "113_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi interpret the 'darkness when it settles' in verse 3?",
+      "options": [
+        "Only as the literal dangers of nighttime",
+        "As systemic oppression, mental health crises, and erosion of ethical frameworks",
+        "As a reference to solar eclipses",
+        "As punishment for past sins"
+      ],
+      "correctAnswer": "As systemic oppression, mental health crises, and erosion of ethical frameworks",
+      "explanation": "Ayatollah Nasir Makarem Shirazi notes that 'ghasiq' (darkness) symbolizes not only nocturnal dangers but modern existential threats: systemic oppression, mental health crises, or the erosion of ethical frameworks in a hyperconnected world."
+    },
+    {
+      "id": "113_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Jafar al-Sadiq's teaching about 'the blowers in knots' in verse 4, what do these represent?",
+      "options": [
+        "Only physical practitioners of ancient sorcery",
+        "Those who manipulate unseen forces to sow discord, doubt, and spiritual decay through whispers and dark intentions",
+        "Sailors who tie nautical knots",
+        "Weavers of traditional textiles"
+      ],
+      "correctAnswer": "Those who manipulate unseen forces to sow discord, doubt, and spiritual decay through whispers and dark intentions",
+      "explanation": "Imam Jafar al-Sadiq explains that 'the blowers in knots' symbolize those who manipulate unseen forces to sow discord, doubt, and spiritual decay through whispers (waswas) and dark intentions. The 'knots' represent the binding traps of envy, black magic, and ideological deviations."
+    },
+    {
+      "id": "113_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 5,
+      "question": "According to both Sunni (al-Tabari) and Shia (Tabrisi, Tabatabai) classical scholars, envy (hasad) in verse 5 is understood as a vice that disrupts both cosmic and social harmony.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both traditions emphasize that hasad arises when one resents divine blessings bestowed upon others, reflecting a rebellion against God's distributive wisdom. Tabrisi notes this aligns with the theological principle that all blessings are manifestations of God's will, and envy constitutes a rejection of this cosmic order."
+    }
+  ]
+}

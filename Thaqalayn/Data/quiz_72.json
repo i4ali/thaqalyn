@@ -1,0 +1,140 @@
+{
+  "surahNumber": 72,
+  "questions": [
+    {
+      "id": "72_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What event does Surah Al-Jinn's opening verse command Prophet Muhammad to announce?",
+      "options": [
+        "A group of angels witnessed Allah's throne",
+        "A group of jinn overheard his Quranic recitation and were awestruck by its divine truth",
+        "A group of humans converted to Islam",
+        "A group of jinn asked for protection from evil"
+      ],
+      "correctAnswer": "A group of jinn overheard his Quranic recitation and were awestruck by its divine truth",
+      "explanation": "The phrase 'qul oohiya ilayya' ('Say, it has been revealed to me') emphasizes the Prophet's role as Allah's messenger entrusted with conveying revelations about a profound event: a group of jinn (spiritual beings created from smokeless fire) overheard his Quranic recitation and were awestruck by its divine truth."
+    },
+    {
+      "id": "72_2",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 6,
+      "question": "According to verse 6, what misguided practice among pre-Islamic Arabs is criticized?",
+      "options": [
+        "Worshiping multiple gods in temples",
+        "Seeking protection from jinn instead of turning to Allah",
+        "Refusing to pray five times daily",
+        "Denying the existence of the afterlife"
+      ],
+      "correctAnswer": "Seeking protection from jinn instead of turning to Allah",
+      "explanation": "The verse describes a misguided practice among pre-Islamic Arabs: certain humans sought protection from perceived dangers by appealing to powerful jinn instead of turning to Allah, which only increased the jinn in arrogance and transgression."
+    },
+    {
+      "id": "72_3",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Tafsir al-Mizan, Surah al-Jinn demonstrates that the Quran's universal address is confined only to human beings.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Allama Tabatabai emphasizes the Quran's universal address beyond human confines, highlighting its capacity to transcend material boundaries and engage metaphysical beings. The verse's declaration that a 'group of jinn listened' underscores the Quran's message reaching diverse forms of consciousness."
+    },
+    {
+      "id": "72_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, what theological principle does verse 3's declaration by the jinn affirm?",
+      "options": [
+        "The concept of multiple gods working together",
+        "Divine transcendence (tanzih), rejecting any wife or son for Allah",
+        "The superiority of jinn over humans",
+        "The physical nature of Allah"
+      ],
+      "correctAnswer": "Divine transcendence (tanzih), rejecting any wife or son for Allah",
+      "explanation": "Classical commentators like Shaykh Tabrisi emphasize that the jinn's declaration—'Exalted is the nobleness (jadd) of our Lord; He has not taken a wife or a son'—serves as a profound theological affirmation of divine transcendence (tanzih) central to Shia thought."
+    },
+    {
+      "id": "72_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "How does Ayatollah Nasir Makarem Shirazi interpret verse 3's rejection of God having a wife or son in the contemporary context?",
+      "options": [
+        "As only relevant to pre-Islamic polytheism with no modern application",
+        "As a profound affirmation of tawhid, dismantling both pre-Islamic polytheism and modern forms of anthropomorphism",
+        "As a historical curiosity with no theological significance",
+        "As exclusively targeting Christian beliefs"
+      ],
+      "correctAnswer": "As a profound affirmation of tawhid, dismantling both pre-Islamic polytheism and modern forms of anthropomorphism",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes that the verse rejects not only pre-Islamic polytheism but also subtle anthropomorphic projections found in contemporary religious discourse, affirming tawhid (divine oneness) as a timeless principle."
+    },
+    {
+      "id": "72_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 6,
+      "question": "According to contemporary Shia scholar Ayatollah Nasir Makarem Shirazi, verse 6's warning against seeking refuge in jinn applies only to supernatural dependencies and has no relevance to modern ideological or systemic dependencies.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Nasir Makarem Shirazi emphasizes that seeking refuge in entities other than Allah—whether supernatural, ideological, or systemic—perpetuates oppression. The verse's warning extends to modern contexts including ideological dependencies."
+    },
+    {
+      "id": "72_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq, why did the jinn marvel at the Quran?",
+      "options": [
+        "Because it was written in beautiful Arabic calligraphy",
+        "Because it unveiled the reality of Wilayah—the divine guardianship of Muhammad and his purified progeny",
+        "Because it contained scientific miracles",
+        "Because it predicted future events"
+      ],
+      "correctAnswer": "Because it unveiled the reality of Wilayah—the divine guardianship of Muhammad and his purified progeny",
+      "explanation": "Imam Jafar al-Sadiq states, 'The jinn marveled at the Quran because it unveiled the reality of Wilayah—the divine guardianship of Muhammad and his purified progeny (the Ahlul Bayt). They recognized that true salvation lies not merely in ritual but in allegiance to the divinely appointed guides.'"
+    },
+    {
+      "id": "72_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 13,
+      "question": "According to Imam Ali's teaching, the Quran has an outer meaning and an inner treasure, and those who embrace guidance transcend both worldly losses and spiritual corruption.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Imam Ali taught, 'The Quran has an outer meaning and an inner meaning; its outer meaning is recitation, but its inner meaning is profound understanding (fiqh). When the believer tastes the sweetness of true guidance—rooted in Allah's oneness and the Wilayah of His appointed guides—he transcends the fear of worldly losses (bakhs) and spiritual corruption (rahaq).'"
+    },
+    {
+      "id": "72_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 18,
+      "question": "What is the primary area of convergence between Shia and Sunni scholars in interpreting verse 18's declaration about masjids?",
+      "options": [
+        "They disagree completely on all aspects of the verse",
+        "Both emphasize the verse's core emphasis on tawhid and the prohibition of associating partners with Allah in worship",
+        "Both focus exclusively on architectural regulations for mosques",
+        "Both limit the verse's application to pre-Islamic Arabia only"
+      ],
+      "correctAnswer": "Both emphasize the verse's core emphasis on tawhid and the prohibition of associating partners with Allah in worship",
+      "explanation": "Both Al-Tabari (Sunni) and Al-Tusi (Shia) contextualize the verse within the Quran's broader rejection of shirk (polytheism). They concur that masjids—whether literal places of prostration or metaphorical spiritual sanctuaries—must remain solely devoted to Allah's remembrance."
+    },
+    {
+      "id": "72_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 26,
+      "question": "According to both Shia and Sunni classical exegetes, what is the core theological principle affirmed in verse 26 about Allah's knowledge of the unseen (ghayb)?",
+      "options": [
+        "That all humans have equal access to knowledge of the unseen",
+        "That Allah alone inherently possesses absolute knowledge of the unseen, and He selectively discloses fragments to chosen prophets and messengers",
+        "That the unseen is unknowable even to Allah",
+        "That jinn have superior knowledge of the unseen compared to prophets"
+      ],
+      "correctAnswer": "That Allah alone inherently possesses absolute knowledge of the unseen, and He selectively discloses fragments to chosen prophets and messengers",
+      "explanation": "Classical exegetes across traditions concur that Allah alone inherently possesses absolute knowledge of the unseen, and that He selectively discloses fragments of this knowledge to chosen prophets and messengers (such as the Prophet Muhammad) as an act of divine grace, not obligation."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "surahNumber": 107,
+  "questions": [
+    {
+      "id": "107_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Al-Maa'un verse 1, what does the term 'ad-deen' specifically refer to?",
+      "options": [
+        "Religious rituals only",
+        "The Day of Judgment and divine accountability",
+        "Social customs of pre-Islamic Arabia",
+        "The Quran itself"
+      ],
+      "correctAnswer": "The Day of Judgment and divine accountability",
+      "explanation": "The term 'ad-deen' here refers specifically to the Day of Judgment and divine accountability, a cornerstone of Islamic belief. Shia tafsir, such as Allamah Tabatabai's Al-Mizan, emphasizes that rejecting ad-deen is not merely theological disbelief but a moral failure with societal consequences."
+    },
+    {
+      "id": "107_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, denying the Recompense (ad-deen) is only a theological problem and has no impact on one's ethical behavior or treatment of others.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The verse critiques those who, by denying accountability in the Hereafter, become indifferent to ethical obligations, as seen in the following verses describing neglect of orphans and the poor. Denial of divine justice corrupts both faith and action."
+    },
+    {
+      "id": "107_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to classical Shia exegetes like Tabrisi and Tabatabai, what does the term 'yadu'u' (drives away) in verse 2 encompass?",
+      "options": [
+        "Only physical mistreatment of orphans",
+        "Only financial neglect of orphans",
+        "Both physical mistreatment of orphans and denial of their rights to care, compassion, and material support",
+        "Only emotional abuse of orphans"
+      ],
+      "correctAnswer": "Both physical mistreatment of orphans and denial of their rights to care, compassion, and material support",
+      "explanation": "The term 'yadu'u' (drives away) is understood to encompass both physical mistreatment of orphans and the denial of their rights to care, compassion, and material support—a grave violation of Quranic injunctions and the Prophetic tradition."
+    },
+    {
+      "id": "107_4",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "According to Ayatollah Naser Makarem Shirazi's contemporary interpretation, what is the primary purpose of salah (prayer) in verse 5?",
+      "options": [
+        "To fulfill a ritualistic obligation only",
+        "To cultivate mindfulness (muraqaba) and social responsibility",
+        "To gain social status in the community",
+        "To demonstrate physical discipline"
+      ],
+      "correctAnswer": "To cultivate mindfulness (muraqaba) and social responsibility",
+      "explanation": "Ayatollah Naser Makarem Shirazi, in his Tafsir-e Namune, emphasizes that salah (prayer) is a spiritual anchor meant to cultivate mindfulness (muraqaba) and social responsibility. Neglecting its essence—by rushing through motions or divorcing it from moral action—renders prayer hollow."
+    },
+    {
+      "id": "107_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "Modern Shia scholars like Sayyid Kamal al-Haydari interpret 'heedlessness' in prayer as only a problem in ancient times, with no relevance to today's world.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Modern scholars like Sayyid Kamal al-Haydari extend this, framing 'heedlessness' as a symptom of today's hyper-distracted world, where digital overload and performative religiosity dilute sincere devotion."
+    },
+    {
+      "id": "107_6",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Jafar al-Sadiq's teaching about verse 4, what is the relationship between prayer and social responsibility?",
+      "options": [
+        "Prayer and social responsibility are completely separate matters",
+        "Prayer is more important than social responsibility",
+        "Prayer without social responsibility is hypocritical - true prayer should prevent oppression of others",
+        "Social responsibility can replace the need for prayer"
+      ],
+      "correctAnswer": "Prayer without social responsibility is hypocritical - true prayer should prevent oppression of others",
+      "explanation": "Imam Jafar al-Sadiq (as) explains this verse by linking prayer to social responsibility: 'They are the ones who pray but withhold even the smallest acts of kindness [al-maa'un] from people. Their prayer does not prevent them from oppressing others.' The Ahlul Bayt emphasize that true prayer transforms the soul and actions."
+    },
+    {
+      "id": "107_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "What is the Arabic term for the spiritual peril of performing acts of worship for worldly validation rather than divine pleasure, as condemned in verse 6?",
+      "options": [
+        "Shirk",
+        "Riya",
+        "Nifaq",
+        "Kibr"
+      ],
+      "correctAnswer": "Riya",
+      "explanation": "Classical Shia exegetes emphasize that this verse exposes the spiritual peril of riya (ostentation) – performing acts of worship or charity not for divine pleasure but for worldly validation."
+    },
+    {
+      "id": "107_8",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 7,
+      "question": "According to both Shia (Al-Tabrisi) and Sunni (Al-Tabari) scholars, what type of acts does 'al-ma'un' (simple assistance) in verse 7 refer to?",
+      "options": [
+        "Only major charitable donations",
+        "Only religious obligations like zakat",
+        "Mundane acts of kindness such as lending household items or basic charity",
+        "Only spiritual guidance and teachings"
+      ],
+      "correctAnswer": "Mundane acts of kindness such as lending household items or basic charity",
+      "explanation": "Both traditions broadly concur that the verse condemns miserliness in mundane acts of kindness, such as lending household items (e.g., pots, tools) or refusing basic charity—a moral failing linked to hypocrisy. Al-Tabari (Sunni) and Al-Tabrisi (Shia) both cite pre-Islamic Arab customs of withholding communal aid to underscore the verse's critique of social callousness."
+    }
+  ]
+}

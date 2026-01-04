@@ -1,0 +1,70 @@
+{
+  "surahNumber": 114,
+  "questions": [
+    {
+      "id": "114_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In the opening verse of Surah An-Naas, what does the term 'Rabb' signify according to the Foundation Layer?",
+      "options": [
+        "Only the act of creation",
+        "Ongoing care, sovereignty, and nurturing of humanity",
+        "Temporary worldly power",
+        "Political authority"
+      ],
+      "correctAnswer": "Ongoing care, sovereignty, and nurturing of humanity",
+      "explanation": "The term 'Rabb' signifies not just creation but ongoing care, sovereignty, and nurturing—a theme central to Shia thought, which highlights Allah's intimate involvement in human affairs. This emphasizes Allah's all-encompassing protection and continuous guardianship over His creation."
+    },
+    {
+      "id": "114_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to classical Shia exegesis, the terms 'Malik' (King) and 'Maliki' (Sovereign) in verse 2 both affirm Allah's sovereignty, which encompasses ownership (milk) and kingship (mulk).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Tabrisi in Majma al-Bayan notes the variant recitations of 'Malik' (King) and 'Maliki' (Master), reconciling both by asserting that Allah's sovereignty encompasses both ownership (milk) and kingship (mulk), underscoring His transcendence beyond temporal power structures."
+    },
+    {
+      "id": "114_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi interpret the concept of seeking refuge in 'Rabb al-Nas' (Lord of Mankind)?",
+      "options": [
+        "As limited to Shia Muslims only",
+        "As transcending sectarian or cultural boundaries, anchoring believers in divine sovereignty that unites all people",
+        "As exclusively a political statement",
+        "As relevant only to ancient societies"
+      ],
+      "correctAnswer": "As transcending sectarian or cultural boundaries, anchoring believers in divine sovereignty that unites all people",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes that seeking refuge in 'Rabb al-Nas' transcends sectarian or cultural boundaries, anchoring believers in a divine sovereignty that unites all people. This verse challenges modern individualism by reframing security as a spiritual connection to a higher, inclusive authority."
+    },
+    {
+      "id": "114_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Ja'far al-Sadiq's teachings about the 'retreating whisperer' (al-waswas al-khannas), what happens to Satan's whispers?",
+      "options": [
+        "They grow stronger with remembrance of Allah",
+        "They remain constant regardless of one's actions",
+        "They flee when Allah is remembered but return when heedlessness prevails",
+        "They only affect non-believers"
+      ],
+      "correctAnswer": "They flee when Allah is remembered but return when heedlessness prevails",
+      "explanation": "Imam Ja'far al-Sadiq taught that Satan 'advances with desire and retreats with obedience,' and Imam Ali emphasized that the whisperer 'flees when Allah is remembered but returns when heedlessness prevails.' This highlights the dynamic struggle between divine remembrance (dhikr) and satanic deception."
+    },
+    {
+      "id": "114_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Shia and Sunni exegetical traditions agree that Surah An-Naas verse 1 establishes Allah's absolute sovereignty (rububiyyah) over humanity, though they differ in their metaphysical interpretations of divine guardianship.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both Shia authorities like Tabatabai (Al-Mizan) and Sunni commentators such as Ibn Kathir agree that the verse establishes Allah's absolute sovereignty over humanity. However, Shia scholars emphasize the necessity of recognizing Allah's lordship through wilayah (divine guardianship) connected to the Ahl al-Bayt, while Sunni exegetes focus on Allah's direct, unmediated relationship with creation."
+    }
+  ]
+}

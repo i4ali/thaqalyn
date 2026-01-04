@@ -1,0 +1,270 @@
+{
+  "surahNumber": 8,
+  "questions": [
+    {
+      "id": "8_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does 'al-anfal' (spoils of war) refer to in the opening verse of this surah?",
+      "options": [
+        "Personal property of soldiers",
+        "Gains acquired through conflict belonging to Allah and His Messenger",
+        "Trade goods from merchants",
+        "Charity donations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'al-anfal' refers to gains or spoils acquired through conflict, with the verse establishing that these belong to Allah and His Messenger, emphasizing divine authority over material gains."
+    },
+    {
+      "id": "8_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 31,
+      "question": "The Quraysh claimed they could easily produce speech similar to the Quran if they wished.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "In verse 31, the Quran captures the dismissive claim of the disbelievers who boasted they could easily produce similar speech if they wished, dismissing the Quran as mere 'legends of the ancients' (asateer al-awwalin)."
+    },
+    {
+      "id": "8_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 41,
+      "question": "What principle of Islamic economics is established in verse 41 of Surah Al-Anfal?",
+      "options": [
+        "Zakat (2.5% charity)",
+        "Khums (one-fifth allocation)",
+        "Sadaqah (voluntary charity)",
+        "Jizyah (protection tax)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Verse 41 establishes the principle of khums (one-fifth), directing believers to allocate one-fifth of their gains to divine causes: for Allah, the Messenger, near relatives, orphans, the needy, and the traveler."
+    },
+    {
+      "id": "8_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 42,
+      "question": "According to the tafsir, what does the Battle of Badr's spatial arrangement demonstrate?",
+      "options": [
+        "Superior Muslim military strategy",
+        "Random chance in battle",
+        "Divine orchestration of events to fulfill Allah's greater purpose",
+        "The importance of geographical advantage"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The verse recounts how the Muslims were positioned on the near side of the valley while their opponents held the farther side. This arrangement was divinely ordained to actualize a greater cosmic purpose, demonstrating Allah's transcendence over human planning."
+    },
+    {
+      "id": "8_5",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 30,
+      "question": "According to Shia exegetes, the Quraysh's plot against Prophet Muhammad was neutralized by divine providence (tadbir).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Classical Shia exegetes like Tabatabai in Al-Mizan and Tabrisi in Majma al-Bayan emphasize that verse 30 illustrates divine providence (tadbir), with Allah being 'the best of planners' against the Quraysh's conspiracy to imprison, assassinate, or expel the Prophet."
+    },
+    {
+      "id": "8_6",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 31,
+      "question": "According to Tabrisi, what does the Quraysh's claim to replicate the Quran reveal about them?",
+      "options": [
+        "Their literary excellence",
+        "Their spiritual blindness rooted in istikbar (arrogance)",
+        "Their genuine curiosity about revelation",
+        "Their superior knowledge of Arabic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi underscores that their hollow challenge was rooted in istikbar (arrogance) and reveals their spiritual blindness, as the Quran's linguistic and ontological uniqueness transcends human capacity."
+    },
+    {
+      "id": "8_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 41,
+      "question": "In Shia exegesis, who are the 'near relatives' (dhi al-qurba) mentioned in the khums verse?",
+      "options": [
+        "Any relatives of Muslims",
+        "The twelve Imams from the Prophet's household",
+        "The companions of the Prophet",
+        "Poor relatives of any Muslim"
+      ],
+      "correctAnswer": "B",
+      "explanation": "According to Tabatabai's Al-Mizan and Shia sources, the 'near relatives' are unanimously identified as the Twelve Imams, substantiated by numerous hadiths from the Prophet and Imams recorded in works like Al-Kafi."
+    },
+    {
+      "id": "8_8",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 51,
+      "question": "According to Allamah Tabatabai, the verse 'That is for what your hands have put forth' establishes a causal link between human deeds and divine judgment.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Allamah Tabatabai elucidates in Al-Mizan that the verse establishes a causal link between human deeds and divine judgment, rejecting any notion of arbitrary punishment and affirming that worldly consequences stem from intentional actions."
+    },
+    {
+      "id": "8_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 31,
+      "question": "According to contemporary scholars, dismissing sacred texts as 'mythology' without engaging their depth mirrors what modern phenomenon?",
+      "options": [
+        "Scientific advancement",
+        "The 'post-truth' era and intellectual arrogance",
+        "Interfaith dialogue",
+        "Traditional scholarship"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary Shia scholars like Ayatollah Taskhiri emphasize that this verse highlights a timeless human tendency: rejecting transformative ideas without reflection due to pride or ideological rigidity, which manifests today in the 'post-truth' era."
+    },
+    {
+      "id": "8_10",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 41,
+      "question": "How do modern Shia scholars like Ayatollah Sistani interpret the khums principle for today's economy?",
+      "options": [
+        "It applies only to war spoils",
+        "It extends to income, investments, and digital assets",
+        "It is no longer applicable",
+        "It applies only to agricultural products"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Ayatollah Sistani interpret khums as adaptable to today's economies, where income, investments, and digital assets replace battlefield spoils, positioning it as a tool to combat systemic inequality and fund education."
+    },
+    {
+      "id": "8_11",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 61,
+      "question": "According to contemporary scholars, the verse on inclining toward peace rejects absolutist notions of conflict.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi emphasize that verse 61 advocates proactive peacebuilding rooted in justice, rejecting absolutist notions of conflict and framing peace as a dynamic process requiring courage, wisdom, and ethical discernment."
+    },
+    {
+      "id": "8_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 51,
+      "question": "According to philosopher Mohsen Kadivar, what does the verse about consequences of human actions empower believers to do?",
+      "options": [
+        "Accept suffering passively",
+        "Actively rectify societal harms from poverty to war",
+        "Ignore worldly problems",
+        "Focus only on personal salvation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Philosopher Mohsen Kadivar notes that the verse rejects fatalism and empowers believers to actively rectify societal harms, from poverty to war, since Allah's justice demands accountability, not passive acceptance."
+    },
+    {
+      "id": "8_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 31,
+      "question": "According to Imam Jafar al-Sadiq (AS), how many verses should a believer read daily to engage properly with the Quran?",
+      "options": [
+        "Ten verses",
+        "Twenty verses",
+        "Forty verses",
+        "One hundred verses"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Jafar al-Sadiq (AS) states: 'The Quran is the covenant of Allah to His creation. It is incumbent upon every servant to look into His covenant and to read [and comprehend] forty verses every day.'"
+    },
+    {
+      "id": "8_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 41,
+      "question": "According to Lady Fatimah (AS), she invoked verse 41 in her Fadakiyya sermon to assert her right to Fadak as part of the khums.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Lady Fatimah (AS) invoked this verse in her historic Fadakiyya sermon, asserting her divinely ordained right to Fadak as part of the khums due to the Prophet's family, demonstrating that rejecting the rights of the Ahlul Bayt is rejecting the Quran's command."
+    },
+    {
+      "id": "8_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 61,
+      "question": "What did Imam Ali (AS) teach about peace according to the Ahlul Bayt traditions?",
+      "options": [
+        "Peace is weakness",
+        "Peace is the fortress of the wise",
+        "Peace should never be pursued",
+        "Peace is only for worldly gain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) taught that 'Peace is the fortress of the wise,' emphasizing that true strength lies not in relentless conflict but in balanced wisdom that preserves life and honors divine principles."
+    },
+    {
+      "id": "8_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 51,
+      "question": "According to Imam Ali (AS), believers should hold themselves accountable before they are held accountable.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (AS) advised: 'Hold yourself accountable before you are held accountable,' urging daily reflection on whether our actions strengthen or weaken our connection to the divine covenant of Imamah."
+    },
+    {
+      "id": "8_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 31,
+      "question": "What is a key difference between Sunni and Shia interpretation of the disbelievers' rejection of the Quran?",
+      "options": [
+        "There is no difference between the two traditions",
+        "Sunni focus on linguistic inimitability while Shia connect it to rejection of Ahl al-Bayt's authority",
+        "Shia reject the verse entirely",
+        "Sunni scholars ignore this verse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While Sunni commentators focus on the Quran's linguistic inimitability as proof of prophethood, Shia scholars like Tabatabai link the rejection to failure to recognize the Quran's esoteric dimensions accessible only through the divinely appointed Imams."
+    },
+    {
+      "id": "8_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 41,
+      "question": "How do Sunni and Shia jurisprudence differ on the scope of khums?",
+      "options": [
+        "Both limit it strictly to war spoils",
+        "Sunni restricts it to war spoils while Shia extends it to all forms of gain",
+        "Shia limits it to war spoils while Sunni extends it",
+        "There is no difference"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni commentators like Ibn Kathir restrict 'ghanimtum' (what you obtain) to spoils of war, while Shia scholars interpret it expansively as all forms of gain, including commercial profits and mineral wealth, based on Imam Baqir's teachings."
+    },
+    {
+      "id": "8_19",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 51,
+      "question": "Both Shia and Sunni exegetes agree that divine punishment results from human actions, not arbitrary divine caprice.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions universally acknowledge that divine punishment results from human actions ('what your hands have put forth') and Allah's inherent justice ('not unjust to His servants'), establishing the principle of moral accountability."
+    },
+    {
+      "id": "8_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 61,
+      "question": "What is the common ground between Shia and Sunni scholars on the verse about inclining toward peace?",
+      "options": [
+        "Peace should never be pursued with enemies",
+        "Both emphasize pursuing peace when adversaries show sincerity, with trust in divine wisdom",
+        "Only Shia scholars support this verse",
+        "The verse has been abrogated"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Shia and Sunni traditions broadly concur that verse 8:61 establishes the Islamic imperative to pursue peace when adversaries demonstrate sincerity, emphasizing trust in divine wisdom (tawakkul)."
+    }
+  ]
+}

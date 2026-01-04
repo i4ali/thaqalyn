@@ -1,0 +1,140 @@
+{
+  "surahNumber": 58,
+  "questions": [
+    {
+      "id": "58_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, who was the woman whose plea to the Prophet Muhammad led to the revelation of Surah Al-Mujadila's opening verse?",
+      "options": [
+        "Fatimah bint Muhammad",
+        "Khaula bint Tha'laba",
+        "Aisha bint Abu Bakr",
+        "Khadijah bint Khuwaylid"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The opening verse was revealed regarding Khaula bint Tha'laba, whose husband Aws ibn al-Samit had unjustly divorced her through zihar, and her courageous plea to the Prophet led Allah to directly address her case."
+    },
+    {
+      "id": "58_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "The practice of 'zihar' was a pre-Islamic custom where a man would declare his wife 'like my mother's back' to divorce her without any legal or financial obligations.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Zihar was a pre-Islamic Arabian custom where a man would declare his wife 'as unlawful to me as my mother's back' to divorce her without legal or financial obligations. The Quran categorically rejected this practice."
+    },
+    {
+      "id": "58_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, what does Allah 'hearing' Khaula's complaint represent in Shia theology?",
+      "options": [
+        "A historical event with no modern significance",
+        "An eternal principle of divine justice (adl) that permeates Islamic cosmology",
+        "A simple act of listening",
+        "A metaphor for human interaction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai interprets Allah 'hearing' Khaula's complaint as an eternal principle of divine justice (adl) that permeates Islamic cosmology, reflecting the Shia emphasis on divine mercy coexisting with accountability."
+    },
+    {
+      "id": "58_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 11,
+      "question": "In classical Shia exegesis, how is the command to 'make space' (tafassahu) in gatherings interpreted in Tabatabai's Al-Mizan?",
+      "options": [
+        "Merely a call to physical courtesy",
+        "A metaphor for expanding one's spiritual capacity through humility",
+        "A command only for mosque settings",
+        "An outdated practice no longer relevant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai's Al-Mizan emphasizes that the command to 'make space' in gatherings is not merely a call to physical courtesy but a metaphor for expanding one's spiritual capacity through humility, enabling Allah to 'make space' for believers in divine mercy."
+    },
+    {
+      "id": "58_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholars, how does the opening verse of Surah Al-Mujadila relate to modern social movements?",
+      "options": [
+        "It has no relevance to modern issues",
+        "It only applies to marital disputes",
+        "It serves as a precedent for addressing systemic inequities and gender-based justice",
+        "It discourages women from speaking out"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars like Dr. Liyakat Takim contextualize this verse as a Quranic precedent for addressing systemic inequities, noting how it challenges cultural practices that silence marginalized groups - resonating with global movements against gender-based violence."
+    },
+    {
+      "id": "58_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 11,
+      "question": "According to contemporary Shia scholarship, the verse's promise of divine elevation for the knowledgeable aligns with modern neuroscientific studies showing that humility increases neural plasticity.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars note that neuroscientific studies on humility's cognitive benefits (such as increased neural plasticity) parallel the verse's ethos that yielding mental 'space' for others' perspectives enhances collective problem-solving."
+    },
+    {
+      "id": "58_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 11,
+      "question": "According to Imam Ja'far al-Sadiq (as), what does physical expansion in gatherings symbolize spiritually?",
+      "options": [
+        "Wealth and prosperity",
+        "Political power",
+        "Creating space in the heart for divine light and the teachings of the Imams",
+        "Physical exercise"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ja'far al-Sadiq (as) taught that physical expansion in gatherings symbolizes creating space in the heart for divine light and the teachings of the Imams, reflecting the Shia principle that outer actions must align with inner purification."
+    },
+    {
+      "id": "58_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 21,
+      "question": "According to the Ahlul Bayt, when Allah says 'I and My messengers will surely overcome,' this includes the Imams as inheritors of the prophets' mission.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ja'far al-Sadiq (as) stated: 'When He says I and My messengers, know that this includes the Imams from us, for we are the inheritors of the prophets' mission' (Bihar al-Anwar)."
+    },
+    {
+      "id": "58_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 11,
+      "question": "What is a key difference between Shia and Sunni interpretations of 'those given knowledge' in verse 58:11?",
+      "options": [
+        "Sunni scholars reject the concept entirely",
+        "Shia scholars interpret it as referring to the Imams while Sunni scholars generally refer to religious scholars (ulama)",
+        "Both traditions interpret it identically",
+        "Neither tradition finds significance in this phrase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes like Ibn Kathir generally contextualize 'those given knowledge' as religious scholars, while Shia sources like Al-Mizan associate it explicitly with the Ahl al-Bayt's divinely ordained authority as inheritors of prophetic wisdom."
+    },
+    {
+      "id": "58_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 21,
+      "question": "According to the comparative analysis, what do both Shia and Sunni scholars agree upon regarding verse 58:21?",
+      "options": [
+        "They disagree on all aspects",
+        "Both affirm Allah's absolute power to ensure divine victory through His chosen representatives",
+        "Only Shia scholars accept the verse's validity",
+        "The verse has no eschatological dimension"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical exegetes across both traditions agree that the verse affirms Allah's absolute power to ensure divine victory (ghalaba) through His chosen representatives, with both emphasizing the verse's eschatological dimension linking it to the ultimate triumph of truth over falsehood."
+    }
+  ]
+}

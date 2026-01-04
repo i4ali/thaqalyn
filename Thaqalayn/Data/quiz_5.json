@@ -1,0 +1,205 @@
+{
+  "surahNumber": 5,
+  "questions": [
+    {
+      "id": "5_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'uqud' (contracts) in verse 1 encompass according to the tafsir?",
+      "options": ["Only business transactions", "Societal agreements, marital bonds, business dealings, and the covenant of recognizing Allah's lordship", "Only religious rituals", "Military alliances between tribes"],
+      "correctAnswer": "B",
+      "explanation": "The term 'uqud' (contracts) is expansive, including societal agreements, marital bonds, business dealings, and the primal covenant of recognizing Allah's lordship. This reflects the comprehensive nature of commitments in Islamic ethics."
+    },
+    {
+      "id": "5_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 3,
+      "question": "According to the tafsir, verse 3's declaration 'Today I have perfected your religion' is linked by Shia scholars to the event of Ghadir Khumm.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Many Shia scholars cite traditions from the Ahlul Bayt linking this verse's revelation to the event of Ghadir Khumm, where the Prophet publicly affirmed Imam Ali's leadership, marking the completion of divine guidance through the establishment of Wilayah."
+    },
+    {
+      "id": "5_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 31,
+      "question": "In the story of Qabil (Cain) and Habil (Abel), what creature did Allah send to teach Qabil how to bury his brother?",
+      "options": ["A dove", "A crow", "An eagle", "A fox"],
+      "correctAnswer": "B",
+      "explanation": "Allah sent a crow (ghurab) to demonstrate burying the dead. Watching the crow scratch the earth to cover another crow's corpse, Qabil learned how to bury his brother, illustrating that even the lowest creatures can teach humans lessons when they heed divine signs."
+    },
+    {
+      "id": "5_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 67,
+      "question": "What does the Arabic term 'balligh' in verse 67 command the Prophet to do?",
+      "options": ["To pray more frequently", "To announce or deliver a divine message", "To migrate to Medina", "To declare war on disbelievers"],
+      "correctAnswer": "B",
+      "explanation": "The Arabic term 'balligh' is an urgent imperative meaning 'announce' or 'deliver,' emphasizing the Prophet's responsibility to convey Allah's message without hesitation. This verse is linked to the declaration at Ghadir Khumm."
+    },
+    {
+      "id": "5_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, what does 'fulfilling contracts' align with in Shia theology?",
+      "options": ["The concept of jihad", "The principle of Wilayah (divine guardianship)", "The practice of fasting", "The pillar of Hajj"],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai emphasizes that fulfilling covenants aligns with upholding the divine order entrusted to the Ahl al-Bayt. This reflects the Shia emphasis on Wilayah, as preserving sacred ordinances is inseparable from allegiance to the divinely appointed Imams."
+    },
+    {
+      "id": "5_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 32,
+      "question": "Classical Shia exegetes interpret 'saving a life' in verse 32 as limited only to physical preservation.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "As cited from Imam Jafar al-Sadiq, 'saving a life' extends beyond physical preservation to include guiding souls toward recognition of the Imams' spiritual authority, thereby granting existential vitality to the community's faith."
+    },
+    {
+      "id": "5_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 67,
+      "question": "In classical Shia exegesis, which specific event is verse 67 understood to refer to?",
+      "options": ["The Battle of Badr", "The Treaty of Hudaybiyyah", "The proclamation of Imam Ali's guardianship at Ghadir Khumm", "The conquest of Mecca"],
+      "correctAnswer": "C",
+      "explanation": "Classical Shia exegetes understand verse 67 as referring to the proclamation of Imam Ali's guardianship (walaya) at Ghadir Khumm. Tabatabai asserts that the command to 'announce' refers specifically to Ali ibn Abi Talib's succession."
+    },
+    {
+      "id": "5_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 113,
+      "question": "What does Tabatabai in Al-Mizan say the disciples' deeper objective was when requesting the heavenly table?",
+      "options": ["To test Prophet Isa's power", "To obtain food for their journey", "Spiritual certainty (yaqin) through divine signs", "To share the food with the poor"],
+      "correctAnswer": "C",
+      "explanation": "Tabatabai explains that while the disciples ostensibly sought nourishment, their deeper objective was spiritual certainty (yaqin) through divine signs, as expressed through 'let our hearts be reassured' (tathma'inna qulubuna)."
+    },
+    {
+      "id": "5_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "According to contemporary Shia scholars, how does the prohibition against hunting during ihram relate to modern issues?",
+      "options": ["It has no modern relevance", "It extends metaphorically to addressing the ecological crisis and environmental stewardship", "It only applies to pilgrims in Mecca", "It relates to dietary restrictions only"],
+      "correctAnswer": "B",
+      "explanation": "The prohibition against hunting during ihram extends metaphorically to humanity's current ecological crisis. Just as pilgrims must refrain from harming life in a sacred state, climate change demands global restraint from exploiting Earth's resources."
+    },
+    {
+      "id": "5_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 46,
+      "question": "Contemporary Shia scholars see the concept of prophetic succession (wisayat al-anbiya) in verse 46 as mirroring the belief in Imamah.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholars like Sayyid Kamal al-Haydari emphasize that the succession of prophets mirrors the Shia belief in Imamah, where each Imam spiritually continues the prophetic mission, adapting transcendent principles to changing contexts."
+    },
+    {
+      "id": "5_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 67,
+      "question": "How do contemporary scholars reinterpret the command to 'announce what has been revealed' in verse 67?",
+      "options": ["As only applicable to the Prophet's time", "As a mandate for Muslims to vocalize truth in an era of misinformation and ethical apathy", "As referring only to reciting the Quran", "As a command to spread Arabic language"],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Dr. Liyakat Takim reinterpret this command as a mandate for Muslims to vocalize truth in an era of misinformation, political repression, and ethical apathy, connecting it to modern activism and moral courage."
+    },
+    {
+      "id": "5_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 113,
+      "question": "What does the heavenly table (ma'ida) symbolize according to contemporary interpretations regarding global issues?",
+      "options": ["Luxury and wealth", "Equitable resource distribution and combating food insecurity", "Political power", "Religious exclusivity"],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars interpret the 'table from heaven' as a metaphor for equitable resource distribution. As 800 million face food insecurity, the ma'ida becomes a call for addressing global hunger and ecological stewardship."
+    },
+    {
+      "id": "5_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq, what is the greatest covenant mentioned in verse 1?",
+      "options": ["The covenant of marriage", "The covenant of business agreements", "The covenant of Wilayah", "The covenant of prayer"],
+      "correctAnswer": "C",
+      "explanation": "Imam Ja'far al-Sadiq stated: 'The greatest covenant is the covenant of wilayah. Whoever violates it has violated the covenant of Allah and His Messenger.' This establishes Wilayah as the most fundamental covenant in Islam."
+    },
+    {
+      "id": "5_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 31,
+      "question": "According to Imam Ali, Allah does not send reminders to guide His creation.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Imam Ali (AS) states: 'Allah does not abandon His creation to chaos; He sends reminders in the seen and unseen.' The crow sent to Qabil is an example of divine guidance reaching creation even in dark moments."
+    },
+    {
+      "id": "5_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 67,
+      "question": "According to Imam Jafar al-Sadiq cited in Tafsir al-Qummi, what would have happened if the Prophet had not announced what was revealed about Ali's position?",
+      "options": ["Nothing significant", "His prophethood would have been incomplete", "He would have been punished", "The Quran would not have been revealed"],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq stated: 'Had the Messenger delayed in announcing what Allah revealed to him about Ali's position, his prophethood would have been incomplete.' This crystallizes the inseparable link between prophethood and Imamah."
+    },
+    {
+      "id": "5_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 113,
+      "question": "According to Imam Jafar al-Sadiq, what role do the Imams play regarding witnessing?",
+      "options": ["They are ordinary witnesses", "They are the witnesses over creation, gateways to Allah, and guides to His pleasure", "They only witness legal contracts", "They have no special witnessing role"],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq explains: 'We are the witnesses over creation, the gateways to Allah, and the guides to His pleasure.' This reflects the Shia concept of Shahadah through active submission to divine guardians."
+    },
+    {
+      "id": "5_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "What is the key divergence between Shia and Sunni scholars in interpreting 'Today I have perfected your religion' in verse 3?",
+      "options": ["Shia scholars link it to dietary laws while Sunni scholars link it to Hajj", "Shia scholars connect it to the establishment of Imam Ali's guardianship at Ghadir Khumm, while Sunni scholars interpret it as the culmination of Quranic legislation", "Both traditions interpret it identically", "Sunni scholars link it to Imamah while Shia reject this interpretation"],
+      "correctAnswer": "B",
+      "explanation": "Shia commentators like Tabatabai tie this phrase to the establishment of Wilayah at Ghadir Khumm. Sunni exegetes like Tabari interpret 'perfection' as the culmination of Quranic legislation, with Ibn Kathir stressing finality of Prophethood rather than succession."
+    },
+    {
+      "id": "5_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 31,
+      "question": "Both Shia and Sunni scholars agree that the verse about Qabil and the crow teaches about divine mercy in guiding humanity toward moral responsibility.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions universally interpret the verse as illustrating divine mercy in guiding humanity toward moral responsibility, the gravity of sin, and the necessity of dignified burial. Al-Tabari (Sunni) and Al-Tabrisi (Shia) concur on this interpretation."
+    },
+    {
+      "id": "5_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 67,
+      "question": "How do Sunni scholars like Ibn Kathir generally interpret verse 67's 'revelation' compared to Shia scholars?",
+      "options": ["Both interpret it as referring to Imam Ali", "Sunni scholars interpret it as encompassing all Islamic teachings, while Shia scholars specify it as the mandate to appoint Ali as successor", "Sunni scholars interpret it as dietary laws", "Both interpret it as referring to the Quran only"],
+      "correctAnswer": "B",
+      "explanation": "Sunni sources generally interpret the 'revelation' as encompassing the entirety of Islamic teachings, while Shia exegetes like al-Qummi and Tusi argue for a specific referent: the divine mandate to appoint Ali as successor."
+    },
+    {
+      "id": "5_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 113,
+      "question": "What do both Shia and Sunni scholars agree upon regarding the disciples' request for the heavenly table?",
+      "options": ["It was a sign of disbelief", "Both agree the disciples sought divine confirmation of Jesus' truthfulness through a miracle granted as a sign of mercy", "Only Shia scholars accept the historical account", "The table was never actually sent down"],
+      "correctAnswer": "B",
+      "explanation": "Both traditions broadly agree on the narrative framework: the disciples sought divine confirmation of Jesus' truthfulness through a miracle, which God granted as a sign of mercy. Both also agree on the link between physical nourishment and spiritual certainty."
+    }
+  ]
+}

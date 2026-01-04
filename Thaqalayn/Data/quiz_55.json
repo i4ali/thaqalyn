@@ -1,0 +1,270 @@
+{
+  "surahNumber": 55,
+  "questions": [
+    {
+      "id": "55_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the name 'Ar-Rahman' in the opening verse of Surah Ar-Rahman signify according to Shia tafsir?",
+      "options": [
+        "A specific mercy for believers only",
+        "Allah's universal, all-encompassing mercy that sustains every creation",
+        "A mercy reserved for the afterlife",
+        "A temporary blessing for this world"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allamah Tabatabai emphasizes that Ar-Rahman is one of Allah's primary names, encapsulating His universal, all-encompassing mercy that sustains every creation—believer and non-believer alike."
+    },
+    {
+      "id": "55_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to verse 55:2, the Quran was merely revealed to the Prophet, not actively taught by Allah Himself.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The verb 'allama' (taught) signifies a deliberate, intimate act of divine instruction, emphasizing that the Qur'an was actively taught by Allah Himself, not merely revealed."
+    },
+    {
+      "id": "55_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 3,
+      "question": "What does the term 'insan' (human) in verse 55:3 refer to according to classical commentators?",
+      "options": [
+        "Only the Prophet Muhammad",
+        "Humanity's unique status among creations with intellect and free will",
+        "Angels and jinn",
+        "Only Muslim believers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical Shia commentators emphasize that 'insan' refers to humanity's unique status among creations—endowed with intellect, free will, and the capacity for spiritual growth."
+    },
+    {
+      "id": "55_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "What does 'al-bayan' (eloquence) in verse 55:4 represent according to classical Shia tafsir?",
+      "options": [
+        "Only the ability to speak Arabic",
+        "The divinely granted capacity to convey ideas, emotions, and truths through language",
+        "Poetic skills in pre-Islamic Arabia",
+        "Written communication only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Al-bayan is not merely speech but the divinely granted capacity to convey ideas, emotions, and truths through language—a unique gift distinguishing humans from other creations."
+    },
+    {
+      "id": "55_5",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, Ar-Rahman signifies a mercy that is contingent upon human actions and deservingness.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Tabatabai observes that Ar-Rahman denotes all-encompassing mercy inherent to Allah's essence, permeating creation BEFORE any human action or deservingness. It is ontological, not earned."
+    },
+    {
+      "id": "55_6",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Imam Jafar al-Sadiq, what is the nature of the Qur'an?",
+      "options": [
+        "A historical text frozen in time",
+        "A living text whose verses renew as nights and days pass",
+        "A text only for scholars to interpret",
+        "A book that lost relevance after the Prophet's death"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq is reported to have stated: 'The Qur'an is alive, never dying; its verses renew as the nights and days pass,' underscoring the necessity of guided exegesis."
+    },
+    {
+      "id": "55_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 5,
+      "question": "What does the 'precise calculation' (husban) governing the sun and moon reflect according to Al-Mizan?",
+      "options": [
+        "Random cosmic chance",
+        "Allah's absolute sovereignty and the systematic order inherent in creation",
+        "Human scientific achievement",
+        "The power of natural selection"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai emphasizes that the precision (hisab) governing celestial bodies is a manifestation of divine wisdom (hikma) and reflects Allah's absolute sovereignty (rububiyya)."
+    },
+    {
+      "id": "55_8",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "According to classical Shia exegesis, the prostration (sujud) of stars and trees is merely a metaphorical expression with no metaphysical reality.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Allama Tabatabai interprets this prostration as a metaphysical reality beyond physical motion, where every entity inherently acknowledges Allah's lordship through its ontological dependence."
+    },
+    {
+      "id": "55_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How do contemporary Shia scholars like Ayatollah Makarem Shirazi connect 'Rahman' to modern challenges?",
+      "options": [
+        "They focus only on traditional interpretations",
+        "They urge humanity to align with cosmic harmony through environmental stewardship and technological ethics",
+        "They reject any connection between scripture and science",
+        "They limit the concept to personal piety only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern scholars connect Rahman to scientific marvels and urge humanity to align with cosmic harmony through environmental stewardship and technological ethics."
+    },
+    {
+      "id": "55_10",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 4,
+      "question": "What contemporary challenge does the concept of 'al-bayan' (eloquence) address according to modern Shia scholars?",
+      "options": [
+        "Only linguistic education",
+        "Digital misinformation and the weaponization of rhetoric in polarizing discourse",
+        "Traditional poetry appreciation",
+        "Ancient manuscript preservation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars stress that al-bayan faces challenges including digital misinformation, algorithmic echo chambers, and the weaponization of rhetoric in polarizing discourse."
+    },
+    {
+      "id": "55_11",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "Contemporary Shia thought connects 'Created man' (55:3) to CRISPR and AI ethics as areas requiring moral consideration.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary Shia discourse addresses questions like: 'How do we honor the Rahman's creative act in an age of CRISPR and AI?' emphasizing the balance between technological progress and spiritual accountability."
+    },
+    {
+      "id": "55_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "How does contemporary Shia scholarship connect verse 55:5 about the sun and moon to environmental responsibility?",
+      "options": [
+        "It sees no connection between cosmic order and human behavior",
+        "It emphasizes that just as celestial bodies follow divine laws, societies thrive when rooted in justice (adl)",
+        "It focuses only on astronomical research",
+        "It dismisses environmental concerns as secular"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars emphasize that just as the sun and moon follow divine laws without deviation, societies thrive when rooted in justice (adl), calling for aligning human innovation with ethical responsibility."
+    },
+    {
+      "id": "55_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq, what is the relationship between Allah's name 'Ar-Rahman' and the concept of Wilayah?",
+      "options": [
+        "They are unrelated concepts",
+        "Mercy manifests through the light of Wilayah, with Imams as channels of divine mercy",
+        "Wilayah limits Allah's mercy",
+        "Rahman only applies before the time of the Imams"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Sadiq states that mercy manifests through the light of Wilayah, connecting Rahmaniyyah (divine mercy) to the spiritual reality of Imamah, as the Imams are the channels through which Allah's mercy reaches creation."
+    },
+    {
+      "id": "55_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to Ahlul Bayt teachings, the Imams are described as the 'Speaking Book of Allah' while the Qur'an is the 'Silent Book of Allah.'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Baqir (AS) said: 'We are the speaking Book of Allah, and the Qur'an is the silent Book of Allah,' establishing the inseparable link between the Qur'an and its living interpreters."
+    },
+    {
+      "id": "55_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 5,
+      "question": "According to Imam Ali, what do the sun and moon symbolize in their spiritual significance?",
+      "options": [
+        "Only astronomical objects with no deeper meaning",
+        "Two greater lights representing the Prophet and his successor whose light guides creation",
+        "Ancient deities that Arabs used to worship",
+        "Symbols of worldly power and authority"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali states: 'The sun and moon are but signs of two greater lights: the Prophet and his successor. Their light guides creation, and their orbit is the orbit of truth.'"
+    },
+    {
+      "id": "55_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 6,
+      "question": "What practical advice does Imam Ali al-Ridha give regarding prostration in prayer?",
+      "options": [
+        "To rush through prostration quickly",
+        "To prostrate as humble as a tree bending under fruit and as radiant as a star guiding the lost",
+        "To focus only on physical posture without spiritual meaning",
+        "To avoid comparing prayer to natural phenomena"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali al-Ridha advised: 'Let your prostration in prayer be as humble as the tree bending under fruit, and as radiant as the star guiding the lost.'"
+    },
+    {
+      "id": "55_17",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 2,
+      "question": "Both Shia and Sunni scholars agree that verse 55:2 affirms Allah's role as the ultimate source of Qur'anic revelation.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions agree that the verse affirms Allah's role as the ultimate source of divine revelation, though they differ on the role of post-prophetic authority in preserving its meaning."
+    },
+    {
+      "id": "55_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "What is a key difference between Shia and Sunni interpretations of 'man' (al-insan) in verse 55:3?",
+      "options": [
+        "There are no differences in interpretation",
+        "Shia exegetes sometimes read it as an allusion to the perfected human exemplified by the Prophet and Ahlul Bayt, while Sunni scholars often interpret it generically",
+        "Sunni scholars emphasize the Ahlul Bayt more than Shia scholars",
+        "Both traditions reject any special significance to the verse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia exegetes occasionally read 'man' as an allusion to the perfected human exemplified in the Prophet and Ahlul Bayt, while Sunni commentators often interpret 'man' generically, focusing on Allah's universal creative act."
+    },
+    {
+      "id": "55_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 4,
+      "question": "How do Shia and Sunni scholars differ in their interpretation of 'al-bayan' (eloquence)?",
+      "options": [
+        "They have identical interpretations",
+        "Sunni scholars focus on the Prophet's clarity in conveying the Qur'an, while Shia scholars tie it to the divinely guided interpretive authority of the Ahlul Bayt",
+        "Shia scholars reject the importance of eloquence",
+        "Sunni scholars emphasize Imamah more than Shia scholars"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes focus on eloquence as manifested in Prophet Muhammad's clarity, while Shia sources tie al-bayan to the divinely guided interpretive authority (walayah) of the Ahlul Bayt."
+    },
+    {
+      "id": "55_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 6,
+      "question": "Both Shia and Sunni traditions uphold verse 55:6 about the prostration of stars and trees as affirming the message of tawhid (divine unity).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions uphold the verse's core message of tawhid, demonstrating shared reverence for Quranic cosmology while reflecting distinct hermeneutical priorities in their interpretations."
+    }
+  ]
+}

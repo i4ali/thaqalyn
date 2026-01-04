@@ -1,0 +1,115 @@
+{
+  "surahNumber": 100,
+  "questions": [
+    {
+      "id": "100_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'al-adiyat' (the racers) in verse 1 refer to according to classical Shia commentators like Allamah Tabatabai?",
+      "options": [
+        "Angels descending from heaven",
+        "Warhorses galloping in battle with hooves striking sparks",
+        "Prophets racing to deliver divine messages",
+        "Stars moving across the night sky"
+      ],
+      "correctAnswer": "Warhorses galloping in battle with hooves striking sparks",
+      "explanation": "Allamah Tabatabai in Tafsir al-Mizan explains that al-adiyat (the racers) refers to warhorses galloping in battle, their hooves striking sparks and their breath heaving (dabhan – the panting sound from nostrils). Beyond the literal, this symbolizes the restless energy of human souls driven by worldly impulses."
+    },
+    {
+      "id": "100_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "The phrase 'al-muriyat qadhan' (the producers of sparks when striking) in verse 2 refers to warhorses whose hooves strike stones to create sparks during battle.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Allah swears by al-muriyat qadhan—'the producers of sparks when striking'—a vivid image of warhorses galloping into battle, their hooves striking stones to create sparks. This verse symbolizes the intensity and urgency of striving in Allah's path."
+    },
+    {
+      "id": "100_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, what do 'al-mughirat subh' (the chargers at dawn) in verse 3 represent?",
+      "options": [
+        "Merchants traveling at dawn for trade",
+        "Warhorses deployed in early morning raids, evoking imagery of valor and divine purpose",
+        "Birds flying at sunrise",
+        "Pilgrims journeying to Mecca"
+      ],
+      "correctAnswer": "Warhorses deployed in early morning raids, evoking imagery of valor and divine purpose",
+      "explanation": "Shaykh Tabrisi in Majma al-Bayan interprets these 'chargers' as warhorses deployed in early morning raids, evoking imagery of valor and divine purpose. Tabrisi emphasizes their role as instruments of divine justice in the context of legitimate defensive struggle."
+    },
+    {
+      "id": "100_4",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 4,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi reinterpret the 'stirring up dust' metaphor in verse 4?",
+      "options": [
+        "As literal desert sandstorms with no symbolic meaning",
+        "As forces of social disruption, revolution, and collective transformation",
+        "As agricultural activities during harvest season",
+        "As construction projects in modern cities"
+      ],
+      "correctAnswer": "As forces of social disruption, revolution, and collective transformation",
+      "explanation": "Modern thinkers like Ayatollah Nasir Makarem Shirazi emphasize the verse's layered symbolism: the charging horses of classical tafsir are reimagined as forces of social disruption, revolution, and movements that 'stir up' established norms to usher in justice and divine order."
+    },
+    {
+      "id": "100_5",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 6,
+      "question": "According to the Ahlul Bayt's teaching, what does the term 'kanood' (ungrateful) in verse 6 truly signify?",
+      "options": [
+        "Simply forgetting to say 'thank you' to others",
+        "Spiritual blindness that denies Allah's blessings by rejecting His guidance and chosen representatives",
+        "Being late for prayers occasionally",
+        "Not giving charity to the poor"
+      ],
+      "correctAnswer": "Spiritual blindness that denies Allah's blessings by rejecting His guidance and chosen representatives",
+      "explanation": "The Ahlul Bayt taught that 'kanood' (ungrateful) refers not merely to failing to say 'thank you,' but to a spiritual blindness that denies Allah's countless blessings by rejecting His guidance and His chosen representatives—a profound form of ingratitude that severs the soul from divine truth."
+    },
+    {
+      "id": "100_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "According to contemporary scholars like Ayatollah Jawadi Amuli, verse 5 ('Arriving thereby in the center collectively') emphasizes the Quranic principle of wasatiyyah (balance) and calls for communities to unite in purpose while maintaining ethical equilibrium.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Scholars like Ayatollah Jawadi Amuli and Dr. Reza Shah-Kazemi emphasize the verse's resonance with the Quranic principle of wasatiyyah (balance), urging communities to unite in purpose while maintaining ethical equilibrium. The 'center' symbolizes both a physical and metaphysical pivot for collective harmony."
+    },
+    {
+      "id": "100_7",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 8,
+      "question": "On what core ethical critique do both Sunni (Al-Tabari) and Shia (Al-Tabrisi) exegetes converge in interpreting verse 8?",
+      "options": [
+        "The importance of physical exercise and health",
+        "The condemnation of humanity's excessive love for material wealth (al-khayr) that distracts from spiritual priorities",
+        "The obligation to perform five daily prayers",
+        "The virtue of memorizing the entire Quran"
+      ],
+      "correctAnswer": "The condemnation of humanity's excessive love for material wealth (al-khayr) that distracts from spiritual priorities",
+      "explanation": "Both Al-Tabari (Sunni) and Al-Tabrisi (Shia) emphasize that verse 8 condemns humanity's intense love for material wealth (al-khayr), which distracts from spiritual priorities. Ibn Kathir and Al-Tusi similarly contextualize this within Quranic warnings against greed, showing convergence across both traditions."
+    },
+    {
+      "id": "100_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 10,
+      "question": "According to Allama Tabatabai's Al-Mizan, what does the phrase 'wa hussila ma fi al-sudur' (that within the breasts is obtained) in verse 10 refer to?",
+      "options": [
+        "Medical knowledge about human anatomy",
+        "The Day of Resurrection when innermost secrets and intentions of human hearts will be laid bare",
+        "Physical treasures hidden in chest containers",
+        "Scientific discoveries about the heart"
+      ],
+      "correctAnswer": "The Day of Resurrection when innermost secrets and intentions of human hearts will be laid bare",
+      "explanation": "Allama Tabatabai elucidates that this verse underscores the ontological reality of divine accountability, wherein every concealed intention, belief, and moral state within the human soul will be manifested on the Day of Resurrection. The phrase refers to the complete unveiling of hearts' contents before Allah."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "surahNumber": 35,
+  "questions": [
+    {
+      "id": "35_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the title 'Fatir' (Originator) signify about Allah's creative power?",
+      "options": [
+        "His ability to reshape existing matter",
+        "His unique power to bring the universe into existence from nothingness",
+        "His role as a designer of pre-existing materials",
+        "His partnership with angels in creation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The title Fatir (Originator) signifies Allah's unique power to bring the universe into existence from nothingness, distinct from human acts of shaping pre-existing matter."
+    },
+    {
+      "id": "35_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to classical Shia commentators, the varying numbers of wings on angels (two, three, or four) are meant to be understood as literal bird-like appendages.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Classical Shia commentators like Allamah Tabatabai explain that wings symbolize angels' capacity to swiftly execute Allah's commands across spiritual and physical realms, not literal bird-like appendages. The varying numbers reflect their diverse ranks and functions."
+    },
+    {
+      "id": "35_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 28,
+      "question": "According to verse 35:28, who are the ones who truly fear Allah among His servants?",
+      "options": [
+        "Those who perform the most rituals",
+        "Those who have knowledge (al-ulama)",
+        "Those who possess the most wealth",
+        "Those who live the longest lives"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse states 'Only those fear Allah, from among His servants, who have knowledge (al-ulama).' Tabatabai explains this refers not to superficial learning but to recognition of Allah's unity (tawhid) and the existential dependence of all creation upon Him."
+    },
+    {
+      "id": "35_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Sheikh Tabrisi in Majma al-Bayan, what does the term 'Fatir' denote about Allah's creation?",
+      "options": [
+        "Creation through natural evolution",
+        "Origination ex nihilo (from nothing)",
+        "Creation through intermediary beings",
+        "Continuous reformation of existing matter"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sheikh Tabrisi in Majma al-Bayan emphasizes that the term 'Fatir' denotes origination ex nihilo, reflecting Allah's absolute sovereignty over the heavens and earth."
+    },
+    {
+      "id": "35_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 28,
+      "question": "Contemporary Shia scholars connect the diversity of colors in creation (verse 35:28) to modern discussions about biodiversity and environmental stewardship.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ayatollah Nasir Makarim Shirazi notes that the verse's reference to varied colors in creation underscores Allah's intentional design, inviting reflection on biodiversity as a sign of His creative power. Modern scientific insights into genetic variation resonate with this verse's emphasis on purposeful diversity."
+    },
+    {
+      "id": "35_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "According to contemporary scholars, what does the 'Deceiver' (al-gharur) in verse 35:5 represent in modern times?",
+      "options": [
+        "Only supernatural evil forces",
+        "Ancient idols and statues",
+        "Consumerism, digital distractions, and systemic exploitation",
+        "Natural disasters and calamities"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars like Ayatollah Nasir Makarem Shirazi emphasize that the Deceiver manifests today through consumerism, moral relativism, digital distractions, and systemic exploitation that divert humanity from divine truth."
+    },
+    {
+      "id": "35_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 28,
+      "question": "According to Imam Jafar al-Sadiq (AS), who are the 'knowledgeable' (ulama) referenced in verse 35:28?",
+      "options": [
+        "Those with university degrees",
+        "Those who acknowledge the Imam of their time",
+        "Those who memorize the most hadith",
+        "Those who fast the most days"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) explains: 'The knowledgeable are those who acknowledge the Imam of their time. For how can one fear Allah while ignorant of His Proof (Hujjah)?' (Bihar al-Anwar)"
+    },
+    {
+      "id": "35_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to Imam Muhammad al-Baqir (AS), the 'mercy' that Allah releases in verse 35:2 refers to the Imam of the age.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Muhammad al-Baqir (AS) explains in Al-Kafi: 'The mercy Allah releases refers to the Imam of the age; whoever recognizes him receives boundless grace, and whoever rejects him is deprived.'"
+    },
+    {
+      "id": "35_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 28,
+      "question": "What is a key difference between Shia and Sunni interpretations of 'those with knowledge' in verse 35:28?",
+      "options": [
+        "Sunni scholars reject the concept entirely",
+        "Shia scholars deny the importance of knowledge",
+        "Sunni scholars emphasize acquired knowledge through Quranic study, while Shia sources prioritize divinely bestowed knowledge through the Imams",
+        "Both traditions interpret it identically"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sunni commentators like Razi and Tabari emphasize knowledge acquired through Quranic study and rational inquiry, while Shia sources like Tabatabai and Qummi prioritize divinely bestowed knowledge, associating the verse with the infallible Imams who embody both exoteric and esoteric understanding."
+    },
+    {
+      "id": "35_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "How do Sunni and Shia exegetes differ in interpreting the angels' wings mentioned in verse 35:1?",
+      "options": [
+        "Sunni scholars reject the existence of angels",
+        "Shia scholars deny angels have any symbolic meaning",
+        "Sunni commentators focus on literal descriptions citing hadith, while Shia exegetes prioritize symbolic readings of spiritual faculties",
+        "Both traditions interpret the wings identically"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sunni commentators like Al-Qurtubi and Al-Razi focus on literal descriptions, citing hadith to assert physical attributes. In contrast, Shia exegetes like Al-Tabatabai prioritize symbolic readings, interpreting wings as metaphors for angels' spiritual faculties or their roles in conveying divine grace."
+    }
+  ]
+}

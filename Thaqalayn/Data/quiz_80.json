@@ -1,0 +1,165 @@
+{
+  "surahNumber": 80,
+  "questions": [
+    {
+      "id": "80_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Abasa's opening verse, what does the Arabic word 'abasa' (to frown) signify according to the Foundation Layer?",
+      "options": [
+        "Joy and happiness",
+        "Disapproval or displeasure",
+        "Deep meditation",
+        "Physical pain"
+      ],
+      "correctAnswer": "Disapproval or displeasure",
+      "explanation": "The Arabic word 'abasa' (to frown) conveys disapproval or displeasure, while 'tawalla' (to turn away) signifies physical or emotional withdrawal. These terms highlight the human dimension of prophetic life, showing that even the noblest individuals can momentarily falter in judgment."
+    },
+    {
+      "id": "80_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 24,
+      "question": "According to the Foundation Layer, verse 24's command to 'look at your food' is only about appreciating agricultural processes with no spiritual significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The verse invites humanity to deeply contemplate their sustenance both as physical reality and spiritual lesson. It calls for equal attention to all who seek guidance, whether in mosques, workplaces, or community spaces, fostering inclusive communities where dignity and sincerity are paramount."
+    },
+    {
+      "id": "80_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, what alternative interpretation is offered regarding who 'frowned' in verse 1?",
+      "options": [
+        "The Prophet definitely frowned and committed an error",
+        "A companion or Meccan notable may have been the subject, preserving prophetic infallibility",
+        "An angel was displeased with the situation",
+        "Abdullah ibn Umm Maktum himself frowned"
+      ],
+      "correctAnswer": "A companion or Meccan notable may have been the subject, preserving prophetic infallibility",
+      "explanation": "Tabrisi cites narrations suggesting the subject was a companion or Meccan notable, thereby preserving the Prophet's perfection in conveying divine guidance. This aligns with the Shia doctrine of prophetic infallibility (ismah), interpreting the verse as a divine lesson rather than a moral failing."
+    },
+    {
+      "id": "80_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 16,
+      "question": "According to Allama Tabatabai in Al-Mizan, what do the terms 'kiramin bararah' (noble and dutiful) signify when describing the scribes of revelation?",
+      "options": [
+        "Only their physical writing abilities",
+        "Intrinsic nobility from proximity to Allah and unwavering obedience in fulfilling divine duties",
+        "Their historical importance in ancient times",
+        "Their material wealth and social status"
+      ],
+      "correctAnswer": "Intrinsic nobility from proximity to Allah and unwavering obedience in fulfilling divine duties",
+      "explanation": "Tabatabai emphasizes that 'kiramin' denotes intrinsic nobility rooted in proximity to Allah, while 'bararah' signifies unwavering obedience and purity in fulfilling divine duties. This reflects the Shia understanding of spiritual excellence combining divine grace (lutf) and human perfection through submission."
+    },
+    {
+      "id": "80_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to Ayatollah Nasir Makarim Shirazi's interpretation, Surah Abasa's opening verse addresses only historical circumstances with no relevance to contemporary struggles against marginalization.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Nasir Makarim Shirazi frames this incident as a paradigm for rejecting 'selective compassion,' urging believers to transcend biases tied to status, ability, or utility. Modern scholars extend this analysis, linking the verse to contemporary struggles against systemic marginalization of disabled communities and the commodification of human worth in capitalist societies."
+    },
+    {
+      "id": "80_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 17,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi interpret the concept of 'kufr' (disbelief) in verse 17?",
+      "options": [
+        "Only as theological rejection of God's existence",
+        "As both theological disbelief and the moral abandonment of divine values in daily life",
+        "As a minor mistake with no serious consequences",
+        "As an ancient concept with no modern relevance"
+      ],
+      "correctAnswer": "As both theological disbelief and the moral abandonment of divine values in daily life",
+      "explanation": "Contemporary scholars like Ayatollah Nasir Makarem Shirazi contextualize this verse as a timeless warning against kufr—not merely theological disbelief, but the moral abandonment of divine values in daily life, encompassing environmental destruction, economic injustice, and social inequity."
+    },
+    {
+      "id": "80_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Muhammad al-Baqir's teaching in Tafsir al-Qummi, what was the divine purpose behind the incident described in the opening verse?",
+      "options": [
+        "To punish the Prophet for a moral failing",
+        "To divinely orchestrate eternal principles of humility and the sacredness of seeking truth",
+        "To establish new social hierarchies",
+        "To criticize Abdullah ibn Umm Maktum"
+      ],
+      "correctAnswer": "To divinely orchestrate eternal principles of humility and the sacredness of seeking truth",
+      "explanation": "Imam Muhammad al-Baqir clarifies in Tafsir al-Qummi that this incident was divinely orchestrated to teach eternal principles of humility and the sacredness of seeking truth. The Quranic rebuke symbolizes the necessity of prioritizing spiritual sincerity over worldly hierarchies—a cornerstone of Wilayah (divine guardianship)."
+    },
+    {
+      "id": "80_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 16,
+      "question": "According to Imam Ja'far al-Sadiq in Tafsir al-Qummi, the 'noble and dutiful scribes' in verse 16 refer exclusively to recording angels with no connection to the Imams.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Imam Ja'far al-Sadiq states in Tafsir al-Qummi: 'These are the Imams from the progeny of Muhammad (pbuh) – they are the noble in rank before Allah, the dutiful in fulfilling His commands.' This interpretation transforms the verse from a surface description of recording angels into a declaration about the purified Guides entrusted with preserving Divine Truth."
+    },
+    {
+      "id": "80_9",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 38,
+      "question": "According to the teachings of the Ahlul Bayt about verse 38, what causes the 'luminous faces' on the Day of Judgment?",
+      "options": [
+        "Physical beauty in worldly life",
+        "Accumulated wealth and social status",
+        "Unwavering attachment to Wilayah and recognition of the Imam of their time",
+        "Intellectual achievements and academic success"
+      ],
+      "correctAnswer": "Unwavering attachment to Wilayah and recognition of the Imam of their time",
+      "explanation": "Imam Ja'far al-Sadiq states in Tafsir al-Qummi: 'These shining faces are those who recognized the Imam of their time and held firmly to the rope of Allah's appointed guardians.' The luminous faces are mirrors reflecting the radiance of divine guidance received through unwavering attachment to Wilayah (divine guardianship)."
+    },
+    {
+      "id": "80_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is the key theological difference between Shia and Sunni interpretations of who 'frowned' in verse 1?",
+      "options": [
+        "Both traditions interpret it identically with no differences",
+        "Sunni scholars accept the Prophet frowned as a momentary human oversight, while Shia scholars often reinterpret to preserve prophetic infallibility (ismah)",
+        "Shia scholars reject the entire verse as inauthentic",
+        "Sunni scholars believe an angel frowned, not the Prophet"
+      ],
+      "correctAnswer": "Sunni scholars accept the Prophet frowned as a momentary human oversight, while Shia scholars often reinterpret to preserve prophetic infallibility (ismah)",
+      "explanation": "This divergence stems from distinct theological frameworks: Sunni scholars view the incident as demonstrating the Prophet's human capacity for momentary oversight corrected by revelation, while Shia scholars maintain that prophetic perfection necessitates reinterpretation of apparent criticisms, often suggesting another companion was the subject."
+    },
+    {
+      "id": "80_11",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 33,
+      "question": "According to both Shia and Sunni scholars, the 'Deafening Blast' (al-sakhkhah) in verse 33 refers to the trumpet blast signaling the Day of Resurrection.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Classical exegetes across traditions broadly concur that al-sakhkhah (the Deafening Blast) refers to the trumpet blast (nafkhat al-sur) signaling cosmic upheaval. Al-Tabari (Sunni) and al-Tabrisi (Shia) both cite hadiths describing this as the second trumpet blast, awakening the dead for resurrection and final judgment."
+    },
+    {
+      "id": "80_12",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 42,
+      "question": "In interpreting verse 42's description of 'al-kafarah al-fajarah' (the disbelievers, the wicked ones), what do both Shia and Sunni scholars agree upon?",
+      "options": [
+        "The verse only applies to ancient peoples with no modern relevance",
+        "Both identify them as Quraysh elites who obstinately rejected Prophet Muhammad's message",
+        "Shia scholars reject this verse entirely",
+        "Sunni scholars believe it refers only to future generations"
+      ],
+      "correctAnswer": "Both identify them as Quraysh elites who obstinately rejected Prophet Muhammad's message",
+      "explanation": "Classical commentators universally identify the 'disbelievers, the wicked ones' (al-kafarah al-fajarah) as the Quraysh elites who arrogantly dismissed Prophet Muhammad's message, as noted by Tabari and Tabatabai. Ibn Kathir and Tabrisi both emphasize the moral-spiritual fusion implied: kufr (theological rejection) intertwined with fujur (ethical transgression)."
+    }
+  ]
+}

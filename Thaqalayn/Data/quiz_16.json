@@ -1,0 +1,275 @@
+{
+  "surahNumber": 16,
+  "questions": [
+    {
+      "id": "16_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the phrase 'Ata amru Allahi' (The command of Allah is coming) in verse 1 refer to?",
+      "options": [
+        "A specific historical battle",
+        "Allah's inevitable decree and the unfolding of divine justice",
+        "The creation of the universe",
+        "A command to fast during Ramadan"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The phrase refers to Allah's inevitable decree - whether the fulfillment of His promises, the establishment of divine justice, or the unfolding of the Hereafter."
+    },
+    {
+      "id": "16_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 18,
+      "question": "According to verse 18, human beings can fully count and enumerate all of Allah's favors.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The verse states that if you should count the favors of Allah, you could not enumerate them - emphasizing the impossibility of fully accounting for divine blessings."
+    },
+    {
+      "id": "16_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 68,
+      "question": "According to the tafsir, what does the term 'awha' (divine inspiration) to the bee signify?",
+      "options": [
+        "Prophetic revelation",
+        "A form of innate guidance implanted by the Creator",
+        "A command given through angels",
+        "A written message from Allah"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'awha' signifies a form of innate guidance implanted by the Creator, distinct from prophetic revelation but equally profound, allowing bees to instinctively follow Allah's design."
+    },
+    {
+      "id": "16_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 90,
+      "question": "Which three divine commands does verse 90 establish as core Islamic values?",
+      "options": [
+        "Fasting, prayer, and pilgrimage",
+        "Justice (al-adl), excellence in conduct (al-ihsan), and supporting close relatives",
+        "Charity, patience, and gratitude",
+        "Truthfulness, humility, and forgiveness"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Verse 90 instructs believers to uphold al-adl (justice), al-ihsan (excellence in conduct), and supporting dhi al-qurba (close relatives) as a comprehensive moral compass."
+    },
+    {
+      "id": "16_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, the admonition 'do not hasten it' in verse 1 relates to which Shia theological concept?",
+      "options": [
+        "The obligation of daily prayers",
+        "Human impatience toward divine timing, particularly regarding the awaited Mahdi",
+        "The rules of fasting",
+        "Requirements for Hajj pilgrimage"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia exegesis reads this as a rejection of human impatience towards divine timing, particularly regarding the establishment of justice through the awaited Mahdi - a recurrent theme in Shia eschatology."
+    },
+    {
+      "id": "16_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 102,
+      "question": "According to Allama Tabatabai, the 'Ruh al-Qudus' (Pure Spirit) in verse 102 refers specifically to Angel Gabriel (Jibril).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai elucidates that 'Ruh al-Qudus' refers specifically to Angel Gabriel, the trusted celestial agent of divine revelation whose mission extends beyond mere transmission to the infusion of divine light into the Prophet's heart."
+    },
+    {
+      "id": "16_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 106,
+      "question": "According to Shia scholars, what does verse 106's exception for those who are 'forced while their heart is secure in faith' relate to?",
+      "options": [
+        "The concept of jihad",
+        "The practice of taqiyya (prudential dissimulation)",
+        "The obligation of charity",
+        "Rules of inheritance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia scholars understand this through the lens of taqiyya, a concept rooted in the teachings of the Ahlul Bayt, affirming that true faith resides in the heart, not mere verbal pronouncements."
+    },
+    {
+      "id": "16_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 125,
+      "question": "According to classical Shia exegesis, what are the three methods of da'wah (invitation) commanded in verse 125?",
+      "options": [
+        "Force, persuasion, and debate",
+        "Wisdom (hikmah), good exhortation (maw'izah hasanah), and gracious argumentation (jadal ahsan)",
+        "Preaching, writing, and teaching",
+        "Silence, patience, and prayer"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Verse 125 establishes three interconnected methods: wisdom (hikmah), good exhortation (maw'izah hasanah), and gracious argumentation (jadal ahsan) as the moral framework for propagating truth."
+    },
+    {
+      "id": "16_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary Shia scholars, what modern forms of 'shirk' does verse 1's condemnation extend to?",
+      "options": [
+        "Only ancient idol worship",
+        "Nationalism, consumerism, or algorithms that replace moral agency",
+        "Speaking foreign languages",
+        "Using modern technology"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars extend the rejection of shirk to modern idolatries: nationalism, consumerism, or algorithms that replace moral agency - anything that distracts from divine purpose."
+    },
+    {
+      "id": "16_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 69,
+      "question": "The healing properties of honey mentioned in verse 69 have been recognized by both classical Islamic scholarship and modern science.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both classical commentators and contemporary scholars emphasize honey's divinely ordained healing properties, with modern science confirming its antibacterial, anti-inflammatory, and wound-healing benefits."
+    },
+    {
+      "id": "16_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 90,
+      "question": "According to contemporary scholar Dr. Liyakat Takim, what modern concept does taqwa (God-consciousness) in verse 90 demand?",
+      "options": [
+        "Isolation from society",
+        "Sacred stewardship including equitable resource distribution and climate action",
+        "Rejection of all technology",
+        "Focus only on personal worship"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholar Dr. Liyakat Takim connects taqwa to 'sacred stewardship,' where God-consciousness demands equitable resource distribution and climate action as ethical imperatives."
+    },
+    {
+      "id": "16_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 97,
+      "question": "What revolutionary message did verse 97's promise of 'good life' for righteous believers convey in seventh-century Arabia?",
+      "options": [
+        "That only wealthy people could be righteous",
+        "That spiritual success is accessible regardless of gender - male or female",
+        "That faith requires poverty",
+        "That only men could achieve spiritual success"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In seventh-century Arabia where gender discrimination was rampant, this verse was revolutionary by declaring equality in spiritual potential - whoever does righteousness, whether male or female, while believing."
+    },
+    {
+      "id": "16_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq, what does the 'command of Allah' (amr Allah) in verse 1 specifically refer to?",
+      "options": [
+        "The daily prayers",
+        "The Qa'im (the awaited Imam Mahdi) from the Ahlul Bayt",
+        "The creation of humans",
+        "The revelation of the Quran"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq illuminates this 'command' as the establishment of divine authority through the Imams, stating: 'The amr of Allah refers to the Qa'im from us [the awaited Imam Mahdi].'"
+    },
+    {
+      "id": "16_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 68,
+      "question": "According to Imam Jafar al-Sadiq, Allah taught the bee through revelation (wahy) as He taught the prophets.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Jafar al-Sadiq taught: 'Allah taught the bee through revelation (wahy) as He taught the prophets, for every atom in creation carries His proof.'"
+    },
+    {
+      "id": "16_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 90,
+      "question": "According to Imam Ali in the teachings on verse 90, what is justice ('adl) described as?",
+      "options": [
+        "A human invention",
+        "The foundation upon which the heavens and earth stand",
+        "Only relevant in legal matters",
+        "A quality reserved for prophets only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali stated, 'Justice is the foundation upon which the heavens and earth stand,' emphasizing that true justice begins by recognizing divine sovereignty."
+    },
+    {
+      "id": "16_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 120,
+      "question": "According to Ahlul Bayt teachings, Prophet Ibrahim's status as an 'ummah' (a complete nation in himself) mirrors the cosmic role of the Imams as living guidance for humanity.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The Ahlul Bayt taught that Ibrahim's status as an 'ummah' mirrors the cosmic role of the Imams, who embody living guidance for humanity as pillars of Tawhid and guardians of Allah's command."
+    },
+    {
+      "id": "16_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "On what key theological point do Shia and Sunni scholars diverge in interpreting verse 1's 'command of Allah'?",
+      "options": [
+        "Whether the verse is authentic",
+        "Shia include the establishment of justice through the Mahdi's advent, while Sunni focus on the Hour of Judgment",
+        "The meaning of the word 'Allah'",
+        "Whether patience is required"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes like Ibn Kathir interpret the 'command' as the Hour of Judgment, while Shia works extend it to include the establishment of divine justice through the Mahdi's advent, reflecting emphasis on Imamah."
+    },
+    {
+      "id": "16_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 68,
+      "question": "Both Shia and Sunni exegetes agree that the bee's instinctual behavior described in verse 68 serves as evidence of Allah's universal providence.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Al-Tabari (Sunni) and Al-Tabrisi (Shia) similarly emphasize the miraculous nature of instinctual revelation (ilham) granted to non-human creatures, interpreting it as evidence of Allah's universal providence."
+    },
+    {
+      "id": "16_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 90,
+      "question": "What do both Shia and Sunni scholars agree verse 90 represents?",
+      "options": [
+        "A verse only about prayer",
+        "A comprehensive call to justice, moral excellence, kinship obligations, and rejection of oppression",
+        "A verse about dietary laws",
+        "A historical account only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both traditions recognize verse 90 as a foundational call to justice ('adl), moral excellence (ihsan), kinship obligations (iti'a dhi al-qurba), and rejection of oppression (baghy) - a holistic moral framework."
+    },
+    {
+      "id": "16_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 98,
+      "question": "According to both Shia and Sunni traditions, what practice does verse 98 establish before Quranic recitation?",
+      "options": [
+        "Making ablution (wudu)",
+        "Seeking divine protection (isti'adha) from Satan",
+        "Facing Mecca",
+        "Giving charity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both traditions converge on the fundamental obligation to seek divine protection (isti'adha) from Satan before Quranic recitation, rooted in the Prophet's sunna of reciting 'a'udhu billahi min al-shaytan al-rajim.'"
+    }
+  ]
+}

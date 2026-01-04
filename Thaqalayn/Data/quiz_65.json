@@ -1,0 +1,115 @@
+{
+  "surahNumber": 65,
+  "questions": [
+    {
+      "id": "65_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What is the primary purpose of the 'iddah (waiting period) mentioned in verse 1 of Surah At-Talaaq?",
+      "options": [
+        "To punish the divorced woman",
+        "To confirm pregnancy, prevent hasty separations, and create space for potential reconciliation",
+        "To allow the husband to remarry immediately",
+        "To determine the woman's financial status"
+      ],
+      "correctAnswer": "To confirm pregnancy, prevent hasty separations, and create space for potential reconciliation",
+      "explanation": "The 'iddah (from 'adada, \"to count\") refers to the three menstrual cycles women observe post-divorce (or until childbirth for pregnant women), serving both practical and ethical purposes. It allows time to confirm pregnancy, prevents hasty separations, and creates space for potential reconciliation—a theme underscored by the verse's closing hope that \"Allah may bring about a new matter\" through patience."
+    },
+    {
+      "id": "65_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 7,
+      "question": "According to verse 7, Allah burdens every soul beyond what it has been given to test their limits.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The phrase \"la yukallifu Allahu nafsan illa ma ataha\" (Allah does not burden any soul beyond what He has given it) emphasizes proportionality in religious obligations – a recurring Quranic theme affirming that divine justice accounts for human limitations."
+    },
+    {
+      "id": "65_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shia scholars like Imam Jafar al-Sadiq, when should divorce pronouncements occur during the wife's cycle?",
+      "options": [
+        "During menstruation for clarity",
+        "At any time regardless of her cycle",
+        "Specifically during the purity period (tuhr) when marital relations are permissible",
+        "Only after the third menstrual cycle"
+      ],
+      "correctAnswer": "Specifically during the purity period (tuhr) when marital relations are permissible",
+      "explanation": "The directive to divorce women \"for their waiting period\" (li-'iddatihinna) is interpreted by Shia scholars as requiring divorce pronouncements to occur specifically during a wife's purity period (tuhr) when marital relations are permissible, a position rooted in Imam Jafar al-Sadiq's exegesis. This temporal restriction prevents impulsive divorces during menstruation—a state considered unfit for such grave decisions."
+    },
+    {
+      "id": "65_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "What does Allamah Tabatabai emphasize about the phrase \"establishing testimony for Allah\" in verse 2?",
+      "options": [
+        "It is merely a legal formality with no deeper meaning",
+        "It transcends legal formalism and signifies internalizing divine presence in human transactions",
+        "It only applies to court proceedings",
+        "It is a symbolic gesture without practical implications"
+      ],
+      "correctAnswer": "It transcends legal formalism and signifies internalizing divine presence in human transactions",
+      "explanation": "Tabatabai elucidates that \"establishing testimony for Allah\" transcends mere legal formalism; it signifies internalizing divine presence in human transactions, transforming mundane acts into worship through intentionality (niyya)."
+    },
+    {
+      "id": "65_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 6,
+      "question": "Contemporary scholars like Dr. Ziba Mir-Hosseini connect verse 6's housing provision requirement to modern debates on economic abuse and patriarchal norms that leave divorced women homeless.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Modern scholars like Dr. Ziba Mir-Hosseini connect this to today's debates on economic abuse, noting how the Quran's injunction to \"lodge them from where you dwell\" challenges patriarchal norms that often leave divorced women homeless or financially stranded."
+    },
+    {
+      "id": "65_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "How do contemporary Shia scholars like Ayatollah Naser Makarem Shirazi interpret tawakkul (reliance on God) in verse 3?",
+      "options": [
+        "As complete passivity and waiting for divine intervention",
+        "As an active partnership with divine will, aligning human effort with trust in Allah",
+        "As abandoning all worldly responsibilities",
+        "As solely relying on other people for help"
+      ],
+      "correctAnswer": "As an active partnership with divine will, aligning human effort with trust in Allah",
+      "explanation": "Ayatollah Naser Makarem Shirazi emphasizes that tawakkul (reliance on God) isn't passive resignation but an active partnership with divine will—aligning human effort with trust in Allah's unseen networks of provision."
+    },
+    {
+      "id": "65_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 12,
+      "question": "According to Imam Jafar as-Sadiq's teaching in Bihar al-Anwar, what do the \"seven earths\" in verse 12 symbolize?",
+      "options": [
+        "Seven continents of the physical world",
+        "Seven layers of geological strata",
+        "The seven Imams from the progeny of Ali and Fatimah, as foundations through which Allah's command descends",
+        "Seven historical civilizations"
+      ],
+      "correctAnswer": "The seven Imams from the progeny of Ali and Fatimah, as foundations through which Allah's command descends",
+      "explanation": "Imam Jafar as-Sadiq states in Bihar al-Anwar: \"The seven earths are the seven Imams from the progeny of Ali and Fatimah, for they are the foundations through which Allah's command descends to creation.\" This reveals that just as the heavens are sustained by divine order, the earths—symbolizing the Imams—are channels of wilayah (divine authority) and custodians of sacred knowledge."
+    },
+    {
+      "id": "65_8",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Sunni and Shia interpretations of \"clear immorality\" (fahisha mubayyina) in verse 1?",
+      "options": [
+        "Both traditions interpret it identically with no differences",
+        "Sunni commentators often interpret it broadly as disobedience, while Shia sources restrict it to major sexual offenses",
+        "Shia scholars interpret it more broadly than Sunni scholars",
+        "Neither tradition discusses this concept"
+      ],
+      "correctAnswer": "Sunni commentators often interpret it broadly as disobedience, while Shia sources restrict it to major sexual offenses",
+      "explanation": "Sunni commentators like Tabari and Razi often interpret immorality broadly as disobedience or moral transgressions, reflecting Hanafi and Shafi'i juristic tendencies to prioritize household stability. Shia sources like Tusi's At-Tibyan and Qummi's tafsir, grounded in Imami jurisprudence, typically restrict this to major sexual offenses, emphasizing women's rights against arbitrary expulsion."
+    }
+  ]
+}

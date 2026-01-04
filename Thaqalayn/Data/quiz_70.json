@@ -1,0 +1,165 @@
+{
+  "surahNumber": 70,
+  "questions": [
+    {
+      "id": "70_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, what does the term 'sa'il' (supplicant) carry in the opening verse of Surah Al-Ma'arij?",
+      "options": [
+        "A genuine seeker of truth and knowledge",
+        "Irony, as the questioner seeks punishment out of scorn rather than sincere inquiry",
+        "A neutral observer requesting information",
+        "A believer asking for divine mercy"
+      ],
+      "correctAnswer": "Irony, as the questioner seeks punishment out of scorn rather than sincere inquiry",
+      "explanation": "The term 'sa'il' (supplicant) here carries irony, as the questioner seeks punishment not out of sincere inquiry but scorn. This reflects the Quraysh leaders' mockery of Prophet Muhammad's warning about resurrection and accountability."
+    },
+    {
+      "id": "70_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 8,
+      "question": "In verse 8, the sky transforming into 'al-muhl' (murky substance) symbolizes the continuation and stability of the natural order on the Day of Judgment.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The metaphor of the sky becoming 'al-muhl' (like molten metal or oil dregs) conveys chaos and transformation, signaling the collapse of the natural order as we know it, emphasizing Allah's absolute power to dismantle and recreate creation."
+    },
+    {
+      "id": "70_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, who or what does the 'supplicant' (sa'il) in verse 1 refer to?",
+      "options": [
+        "Only the Prophet Muhammad seeking guidance",
+        "Either a disbeliever who mockingly demanded punishment (e.g., Walid ibn Mughira) or a believer seeking divine retribution against oppressors",
+        "The Angel Gabriel delivering divine messages",
+        "A group of righteous believers praying for justice"
+      ],
+      "correctAnswer": "Either a disbeliever who mockingly demanded punishment (e.g., Walid ibn Mughira) or a believer seeking divine retribution against oppressors",
+      "explanation": "Shaykh Tabrisi in Majma al-Bayan interprets the 'sa'il' as a reference to either a disbeliever who mockingly demanded punishment from the Prophet (e.g., Walid ibn Mughira or al-Nadr ibn al-Harith) or a believer seeking divine retribution against oppressors."
+    },
+    {
+      "id": "70_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "In classical Shia exegesis of verse 4, what does the 'Day' spanning fifty thousand years represent according to Allama Tabatabai?",
+      "options": [
+        "A simple calculation of earthly time",
+        "The Day of Judgment, whose temporal measure transcends earthly chronology and symbolizes the existential weight of divine accountability",
+        "The duration of Prophet Muhammad's mission",
+        "The time until the next prophet appears"
+      ],
+      "correctAnswer": "The Day of Judgment, whose temporal measure transcends earthly chronology and symbolizes the existential weight of divine accountability",
+      "explanation": "Allama Tabatabai in Al-Mizan emphasizes that the 'Day' here denotes the Day of Judgment, but its temporal measure transcends earthly chronology, symbolizing the existential weight and incomprehensibility of divine reckoning."
+    },
+    {
+      "id": "70_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to Ayatollah Nasir Makarem Shirazi's contemporary interpretation, the opening verse critiques societies seeking instant solutions while neglecting deeper ethical roots of crises.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Ayatollah Nasir Makarem Shirazi notes that the verse critiques those who demand immediate 'proof' of divine justice, which today manifests in societies seeking instant solutions to systemic crises while neglecting the deeper ethical roots of these issues."
+    },
+    {
+      "id": "70_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 4,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi bridge the 'fifty thousand years' concept with modern science?",
+      "options": [
+        "They reject the verse as incompatible with science",
+        "They interpret it as a metaphor for divine time's transcendence over human linearity, resonating with Einstein's relativity and time dilation",
+        "They limit it to ancient cosmology only",
+        "They dismiss scientific perspectives entirely"
+      ],
+      "correctAnswer": "They interpret it as a metaphor for divine time's transcendence over human linearity, resonating with Einstein's relativity and time dilation",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes the verse's metaphysical dimensions, interpreting the 'fifty thousand years' as a metaphor for the transcendence of divine time over human linearity—a concept resonating with Einstein's relativity, where time dilates under extreme conditions."
+    },
+    {
+      "id": "70_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Muhammad al-Baqir in Tafsir al-Qummi, who does the 'supplicant' in the opening verse refer to?",
+      "options": [
+        "The Prophet Muhammad asking for guidance",
+        "Satan (Iblis), who arrogantly demanded punishment upon disbelievers",
+        "The Angel of Death performing his duty",
+        "A righteous believer seeking justice"
+      ],
+      "correctAnswer": "Satan (Iblis), who arrogantly demanded punishment upon disbelievers",
+      "explanation": "Imam Muhammad al-Baqir explains in Tafsir al-Qummi that the 'supplicant' mentioned here refers to Satan (Iblis), who arrogantly demanded punishment upon disbelievers, unaware that his own fate was sealed by his rebellion against Allah's command to prostrate before Adam."
+    },
+    {
+      "id": "70_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 15,
+      "question": "According to Imam Ja'far al-Sadiq, the 'Flame' (Laza) mentioned in verse 15 is merely a physical fire with no spiritual dimension.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Imam Ja'far al-Sadiq states in Tafsir al-Qummi that the Flame (Laza) is not merely a physical fire but symbolizes the spiritual consequences of rejecting divine truth and abandoning the path of Wilayah (divine guardianship)."
+    },
+    {
+      "id": "70_9",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 22,
+      "question": "According to Imam Ali Zayn al-Abidin in al-Sahifa al-Sajjadiyya, what is the true essence of prayer mentioned in verse 22?",
+      "options": [
+        "Merely performing the physical movements correctly",
+        "A means to attain nearness to Allah, a path to forgiveness, and a vehicle for escaping darkness",
+        "A cultural tradition to be preserved",
+        "An optional practice for the very devout"
+      ],
+      "correctAnswer": "A means to attain nearness to Allah, a path to forgiveness, and a vehicle for escaping darkness",
+      "explanation": "Imam Ali Zayn al-Abidin teaches in al-Sahifa al-Sajjadiyya: 'Prayer is the means to attain nearness to Thee, a path to Thy forgiveness, and a vehicle for escaping the darkness of ignorance,' emphasizing prayer as transcending ritual mechanics."
+    },
+    {
+      "id": "70_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is the key difference in how Shia and Sunni scholars interpret the broader implications of verse 1?",
+      "options": [
+        "Sunni scholars reject the verse entirely while Shia accept it",
+        "Shia commentaries link it to intizār (awaiting divine justice) and the Mahdi, while Sunni scholars focus on the literal warning to the Prophet's contemporaries",
+        "Both traditions have identical interpretations with no differences",
+        "Shia scholars focus only on ritual while Sunni focus on theology"
+      ],
+      "correctAnswer": "Shia commentaries link it to intizār (awaiting divine justice) and the Mahdi, while Sunni scholars focus on the literal warning to the Prophet's contemporaries",
+      "explanation": "Shia commentaries, particularly Al-Qummi and Tabrisi, often link the verse to the theological concept of intizār (awaiting divine justice), associating the punishment with historical tribulations like Karbala and the eschatological reappearance of the Mahdi. Sunni scholars like Qurtubi and Razi focus more narrowly on the verse's literal warning to the Prophet's contemporaries."
+    },
+    {
+      "id": "70_11",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 10,
+      "question": "According to both Al-Tabari (Sunni) and Shia exegetes, verse 10 describes how social bonds will dissolve during the upheaval of Judgment Day.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. In interpreting Surah Al-Ma'aarij 70:10, both Shia and Sunni exegetes converge on its core eschatological theme: the dissolution of social bonds during the upheaval of Judgment Day, as each person will be overwhelmed by their own accountability."
+    },
+    {
+      "id": "70_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 19,
+      "question": "How do contemporary scholars like Ayatollah Nasir Makarem Shirazi connect verse 19's description of human anxiety to modern challenges?",
+      "options": [
+        "They reject the verse as outdated",
+        "They connect it to rising global anxiety disorders, digital-age overwhelm, and societal instability",
+        "They limit it to ancient Arabian culture only",
+        "They interpret it as purely metaphorical with no practical relevance"
+      ],
+      "correctAnswer": "They connect it to rising global anxiety disorders, digital-age overwhelm, and societal instability",
+      "explanation": "Contemporary Shia scholars interpret the verse 'Indeed, humankind was created anxious' as resonating amid rising global anxiety disorders, digital-age overwhelm, and societal instability, noting that haluu'an (anxiousness) reflects humanity's innate vulnerability to fear, greed, and impatience in modern contexts."
+    }
+  ]
+}

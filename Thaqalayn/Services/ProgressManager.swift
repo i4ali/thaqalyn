@@ -468,6 +468,17 @@ class ProgressManager: ObservableObject {
         return verseProgress.first(where: { $0.verseKey == verseKey })
     }
 
+    // MARK: - Sawab Management
+
+    /// Add sawab points from external sources (quizzes, etc.)
+    func addSawab(_ amount: Int, reason: String) {
+        guard amount > 0 else { return }
+        stats.totalSawab += amount
+        saveProgress()
+        scheduleSync()
+        print("✨ ProgressManager: +\(amount) sawab earned (\(reason))! Total: \(stats.totalSawab)")
+    }
+
     // MARK: - Surah Completion
 
     func getSurahCompletion(surahNumber: Int) -> (read: Int, total: Int) {

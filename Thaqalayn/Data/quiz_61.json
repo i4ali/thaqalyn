@@ -1,0 +1,110 @@
+{
+  "surahNumber": 61,
+  "questions": [
+    {
+      "id": "61_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 10,
+      "question": "In verse 10, what metaphor does Allah use to invite believers toward salvation from punishment?",
+      "options": [
+        "A journey through the desert",
+        "A transaction (tijarah) or trade",
+        "A fortress of protection",
+        "A harvest of good deeds"
+      ],
+      "correctAnswer": "A transaction (tijarah) or trade",
+      "explanation": "Allah addresses believers with a profound invitation: 'Shall I guide you to a transaction [tijarah] that will save you from a painful punishment?' This verse uses the metaphor of commerce to illustrate the exchange of worldly efforts for eternal salvation, urging believers to invest their faith, actions, and sacrifices to secure divine reward."
+    },
+    {
+      "id": "61_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "According to Allamah Tabatabai in Tafsir al-Mizan, the simile of believers as a 'solid structure' only refers to military formation in battle.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Tabatabai emphasizes that the simile of a 'solid structure' (bunyan marsus) transcends mere military formation, symbolizing the spiritual and intellectual cohesion of believers united under divine guardianship (wilayah). The structural integrity reflects the necessity of unwavering commitment to truth and the harmonization of individual wills with the collective purpose ordained by Allah."
+    },
+    {
+      "id": "61_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarim Shirazi apply verse 2's rebuke of 'saying what you do not do' to modern society?",
+      "options": [
+        "They limit it only to religious contexts",
+        "They extend it to performative activism and systemic hypocrisy, such as governments pledging climate action while subsidizing fossil fuels",
+        "They interpret it as purely spiritual without social implications",
+        "They focus exclusively on personal piety"
+      ],
+      "correctAnswer": "They extend it to performative activism and systemic hypocrisy, such as governments pledging climate action while subsidizing fossil fuels",
+      "explanation": "Ayatollah Nasir Makarim Shirazi frames the verse as a timeless call to 'ethical consistency,' urging believers to embody values they preach. Modern scholars like Dr. Mohammad Ali Shomali extend this critique to systemic hypocrisy—governments pledging climate action while subsidizing fossil fuels, or individuals advocating justice online while ignoring local inequities."
+    },
+    {
+      "id": "61_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ali al-Ridha's teaching about the opening verse, how does creation perform tasbih (glorification)?",
+      "options": [
+        "Only through conscious verbal praise",
+        "Through its very existence, with every atom reciting the tasbih of Allah",
+        "Only on special occasions",
+        "Through human interpretation alone"
+      ],
+      "correctAnswer": "Through its very existence, with every atom reciting the tasbih of Allah",
+      "explanation": "Imam Ali al-Ridha (as) taught that 'every atom in creation recites the tasbih [glorification] of Allah through its very existence,' revealing that all beings—from stars to souls—are immersed in a sacred dance of submission. The Imams emphasize that this universal tasbih is not mere metaphor but a living reality perceived by those purified in heart."
+    },
+    {
+      "id": "61_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 6,
+      "question": "Both Sunni commentators like Ibn Kathir and Shia authorities such as Tabatabai agree that Prophet Jesus's prophecy of 'Ahmad' affirms Islam's continuity with Abrahamic revelation.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both traditions universally agree that the verse affirms Prophet Muhammad's foretelling in earlier scriptures, with 'Ahmad' understood as one of his names. Sunni commentators like Ibn Kathir and Shia authorities such as Tabatabai concur that Jesus's prophecy underscores Islam's continuity with Abrahamic revelation, emphasizing Muhammad's role as the final messenger."
+    },
+    {
+      "id": "61_6",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 13,
+      "question": "According to Imam Jafar al-Sadiq's interpretation of the 'near conquest' (fath qarib) in verse 13, what is the greatest victory?",
+      "options": [
+        "Military triumph over enemies",
+        "Economic prosperity",
+        "Recognizing the Imam of your time, as he is the manifest door to Allah's mercy",
+        "Political power"
+      ],
+      "correctAnswer": "Recognizing the Imam of your time, as he is the manifest door to Allah's mercy",
+      "explanation": "Imam Jafar al-Sadiq (peace be upon him) taught that the 'near conquest' refers not only to tangible triumphs but to the opening of hearts through the light of Wilayah (divine guardianship). He stated: 'The greatest victory is recognizing the Imam of your time, for he is the manifest door to Allah's mercy.' This ties the verse to the spiritual sovereignty of the Imams."
+    },
+    {
+      "id": "61_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 14,
+      "question": "In Tabatabai's interpretation of verse 14's call to become 'supporters of Allah' (ansar Allah), what does true support necessitate according to Shia theology?",
+      "options": [
+        "Only verbal affirmation of faith",
+        "Active allegiance to divine truth and its custodians, including obedience to the Ahlul Bayt",
+        "Financial donations alone",
+        "Isolation from society"
+      ],
+      "correctAnswer": "Active allegiance to divine truth and its custodians, including obedience to the Ahlul Bayt",
+      "explanation": "Tabatabai in Al-Mizan emphasizes that supporting Allah transcends mere verbal affirmation; it necessitates active allegiance to divine truth and its custodians. The verse's reference to the disciples' declaration is interpreted as a model of unwavering commitment to divine authority (wilayah). True 'support' for Allah inherently includes obedience to His chosen representatives, reflecting the Shia doctrine of Imamah."
+    },
+    {
+      "id": "61_8",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "Verse 2's question 'Why do you say what you do not do?' addresses the hypocrisy of professing faith while failing to act upon it, which is central to Islamic teachings on sincerity (ikhlas).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. The verse delivers a profound ethical charge to believers, questioning the contradiction between speech and action. At its core, this divine reprimand addresses the hypocrisy of professing faith while failing to act upon it—a theme central to Islamic teachings on sincerity (ikhlas). The rhetorical 'why' conveys Allah's disapproval of empty declarations, urging alignment between belief, words, and deeds."
+    }
+  ]
+}

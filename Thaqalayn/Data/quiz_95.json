@@ -1,0 +1,70 @@
+{
+  "surahNumber": 95,
+  "questions": [
+    {
+      "id": "95_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, what do the fig and olive in Surah At-Tin symbolize?",
+      "options": [
+        "Only physical fruits with nutritional value",
+        "Symbols of lands blessed by revelation and sacred geography",
+        "Agricultural practices of ancient Arabia",
+        "Trade commodities of Mecca"
+      ],
+      "correctAnswer": "Symbols of lands blessed by revelation and sacred geography",
+      "explanation": "Scholars like Allamah Tabatabai note that At-Tin (the fig) and Az-Zaytun (the olive) are not merely fruits but symbols of lands blessed by revelation. Many classical commentators link these to regions associated with prophets: the fig is connected to Damascus (where Prophet Yahya preached) and the olive to Jerusalem (linked to Prophet Isa), though some traditions also associate them with Kufa and Medina, centers of Islamic guidance tied to the Ahlul Bayt."
+    },
+    {
+      "id": "95_2",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "In Tafsir al-Mizan, what does Allama Tabatabai say the phrase 'ahsan taqwim' (best of stature) encompasses?",
+      "options": [
+        "Only physical anatomical perfection",
+        "Both physical and metaphysical perfection, including spiritual capacity",
+        "Intellectual abilities alone",
+        "Social status in society"
+      ],
+      "correctAnswer": "Both physical and metaphysical perfection, including spiritual capacity",
+      "explanation": "Allama Tabatabai elucidates that the phrase 'ahsan taqwim' (best of stature) encompasses both the physical and metaphysical perfection of humanity. This 'stature' is not merely anatomical but signifies humanity's unique preparedness to bear the 'trust' (amana) of moral and theological responsibility, a concept central to Shia anthropology."
+    },
+    {
+      "id": "95_3",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "According to contemporary scholar Ayatollah Nasir Makarem Shirazi, the 'lowest of the low' (95:5) refers only to physical decline and has no connection to spiritual or societal degradation.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Nasir Makarem Shirazi, in his Tafsir Nemuneh, emphasizes that the verse contrasts humanity's divine potential with its capacity for self-degradation when detached from ethical and spiritual purpose. Modern scholars extend this analysis, framing the 'lowest' state as a collapse into materialism, ecological exploitation, or systemic oppression—conditions reflecting a global crisis of meaning."
+    },
+    {
+      "id": "95_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teaching in Tafsir al-Qummi, what do the fig and olive symbolize in the Ahlul Bayt tradition?",
+      "options": [
+        "The Prophet's homeland and migration route",
+        "Imam Hasan and Imam Husayn as twin lights of guidance",
+        "Ancient prophets Noah and Abraham",
+        "The Kaaba and the Prophet's Mosque"
+      ],
+      "correctAnswer": "Imam Hasan and Imam Husayn as twin lights of guidance",
+      "explanation": "Imam Ja'far al-Sadiq (peace be upon him) taught that the fig symbolizes Imam Hasan (peace be upon him) and the olive represents Imam Husayn (peace be upon him), as narrated in Tafsir al-Qummi. These two blessed trees allude to the twin lights of guidance emerging from the Prophetic lineage, embodying the perfection of human creation mentioned later in the Surah."
+    },
+    {
+      "id": "95_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Sunni scholars (Tabari, Ibn Kathir) and Shia scholars (Tabatabai, Tabrisi) agree that the fig and olive symbolize sacred lands associated with prophetic history.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Classical scholars across traditions, including Tabari (Sunni) and Tabrisi (Shia), acknowledge the fig and olive as symbols of sacred lands or divine blessings. Many agree these refer to locations associated with prophetic history: Tabari and Al-Mizan (Tabatabai) both cite Jerusalem (Mount Zion) and its olive groves, while Ibn Kathir and Majma al-Bayan (Tabrisi) link them to Damascus and Mount Sinai, reflecting a shared reverence for Abrahamic holy sites."
+    }
+  ]
+}

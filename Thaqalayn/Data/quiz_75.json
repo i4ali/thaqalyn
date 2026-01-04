@@ -1,0 +1,140 @@
+{
+  "surahNumber": 75,
+  "questions": [
+    {
+      "id": "75_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Al-Qiyamah's opening verse, what rhetorical device does the term 'la uqsimu' (I swear) use?",
+      "options": [
+        "A simple affirmation",
+        "A rhetorical negation to intensify certainty",
+        "A direct denial of resurrection",
+        "A conditional statement"
+      ],
+      "correctAnswer": "A rhetorical negation to intensify certainty",
+      "explanation": "The oath marked by the Arabic term 'uqsimu' (I swear) uses a rhetorical negation (la) not to deny the oath but to intensify its certainty, a linguistic feature common in Quranic style."
+    },
+    {
+      "id": "75_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to Shia tafsir, the 'reproaching soul' (an-nafs al-lawwama) in verse 2 represents only the perfected soul that no longer feels guilt.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The 'lawwama' soul represents an intermediate stage between the base, impulsive soul (nafs al-ammarah) and the perfected, tranquil soul (nafs al-mutma'innah), characterized by its capacity to hold itself accountable and feel guilt when transgressing."
+    },
+    {
+      "id": "75_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Tabatabai in Al-Mizan, what does verse 3's use of 'bones' (ʿiẓām) represent in relation to bodily resurrection?",
+      "options": [
+        "Only the skeleton itself",
+        "The totality of bodily resurrection through synecdoche",
+        "Spiritual resurrection alone",
+        "The weakest part of human creation"
+      ],
+      "correctAnswer": "The totality of bodily resurrection through synecdoche",
+      "explanation": "Tabatabai explains that the verse employs 'bones' (ʿiẓām) synecdochally to represent the totality of bodily resurrection, countering materialist arguments that dismissed the possibility of scattered particles being reassembled."
+    },
+    {
+      "id": "75_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 14,
+      "question": "According to classical Shia exegetes like Tabatabai, what is the source of the self-testimony mentioned in verse 14?",
+      "options": [
+        "External coercion and divine punishment",
+        "The soul's illumination by divine light and innate self-awareness",
+        "Physical evidence collected during life",
+        "Testimony from angels only"
+      ],
+      "correctAnswer": "The soul's illumination by divine light and innate self-awareness",
+      "explanation": "Tabatabai emphasizes that self-testimony arises not from external coercion but from the soul's illumination by divine light, a concept rooted in the Shia understanding of nur al-wilayah (the light of guardianship) inherited through the Ahl al-Bayt."
+    },
+    {
+      "id": "75_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "Modern scholars like Dr. Mohammad Ali Shomali connect verse 3's assertion about reassembling bones to contemporary DNA science, which reveals the unique 'blueprint' within bones.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Dr. Shomali notes how advancements in DNA science, which reveal the unique 'blueprint' within bones, echo the Quranic assertion that every physical detail is preserved for resurrection, bridging classical theology with empirical reality."
+    },
+    {
+      "id": "75_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 10,
+      "question": "How do contemporary Shia scholars interpret the cry 'Where is the escape?' in verse 10 in relation to modern crises?",
+      "options": [
+        "As only a spiritual metaphor with no practical application",
+        "As addressing climate denialism, systemic injustice, and the inescapability of moral causality",
+        "As relevant only to personal sins, not collective issues",
+        "As outdated and not applicable to modern times"
+      ],
+      "correctAnswer": "As addressing climate denialism, systemic injustice, and the inescapability of moral causality",
+      "explanation": "Contemporary scholars connect this verse to modern crises, arguing that systemic oppression and climate collapse mirror the verse's warning that no structure of power can evade ultimate accountability, emphasizing inescapable moral causality."
+    },
+    {
+      "id": "75_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about verse 1, what does the Day of Resurrection truly represent?",
+      "options": [
+        "Only a future physical event",
+        "Recognition of the Imam; whoever knows him has entered the Resurrection",
+        "A metaphorical concept with no reality",
+        "The end of the physical universe only"
+      ],
+      "correctAnswer": "Recognition of the Imam; whoever knows him has entered the Resurrection",
+      "explanation": "Imam Ja'far al-Sadiq (عليه السلام) states: 'The Day of Resurrection is your Imam; whoever knows him has entered the Resurrection, and whoever denies him remains in the grave of ignorance' (Tafsir al-Qummi)."
+    },
+    {
+      "id": "75_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 22,
+      "question": "According to Imam Ja'far al-Sadiq, the 'radiant faces' in verse 22 shine from the light of their devotion to Allah and the Wilayah of His chosen ones.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Imam Ja'far al-Sadiq states that the faces shining on that Day are those whose hearts were polished by the love of Allah and the Wilayah of His chosen ones, with their light being the light of guidance inherited from the Prophet and his purified progeny."
+    },
+    {
+      "id": "75_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "What is the key interpretive difference between Sunni and Shia scholars regarding the testimony of 'bones' in verse 3?",
+      "options": [
+        "Sunni scholars reject bodily resurrection entirely",
+        "Sunni focus on literal bodily resurrection and individual accountability, while Shia integrate Imamology into the epistemology of self-knowledge",
+        "Shia scholars deny physical resurrection",
+        "Both traditions interpret it identically with no differences"
+      ],
+      "correctAnswer": "Sunni focus on literal bodily resurrection and individual accountability, while Shia integrate Imamology into the epistemology of self-knowledge",
+      "explanation": "Sunni interpretations prioritize individual accountability and literal bodily resurrection, while Shia readings integrate Imamology into the epistemology of self-knowledge, with Shia emphasis on the Imam's role as the manifest guide (hujjah) shaping their existential reading."
+    },
+    {
+      "id": "75_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 36,
+      "question": "According to both Sunni (Al-Tabari) and Shia (Al-Tabrisi) scholars, what is the core message of verse 36's question about being 'left neglected'?",
+      "options": [
+        "That humans exist without divine purpose",
+        "A rejection of human arrogance and affirmation of divine accountability",
+        "That only prophets will be held accountable",
+        "That resurrection is metaphorical only"
+      ],
+      "correctAnswer": "A rejection of human arrogance and affirmation of divine accountability",
+      "explanation": "Both Al-Tabari (Sunni) and Al-Tabrisi (Shia) emphasize that the rhetorical question challenges the misconception that humans exist without purpose or consequence, stressing resurrection and judgment as inevitable realities shared across sectarian lines."
+    }
+  ]
+}

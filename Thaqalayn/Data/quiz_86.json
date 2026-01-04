@@ -1,0 +1,115 @@
+{
+  "surahNumber": 86,
+  "questions": [
+    {
+      "id": "86_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah At-Taariq's opening verse, what does the term 'al-taariq' (the night comer) literally mean?",
+      "options": [
+        "The one that sleeps",
+        "The one that knocks or strikes",
+        "The one that hides",
+        "The one that travels"
+      ],
+      "correctAnswer": "The one that knocks or strikes",
+      "explanation": "The term 'taariq' derives from the root 'ṭarq', meaning 'to strike' or 'knock,' symbolizing sudden, penetrating force. It refers literally to stars that pierce the darkness, as well as deeper spiritual truths."
+    },
+    {
+      "id": "86_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 3,
+      "question": "According to classical Shia tafsir, the 'piercing star' (an-najmu ath-thaqib) in verse 3 refers exclusively to physical celestial bodies with no symbolic meaning.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. While the term 'najm' refers literally to stars whose intense light 'pierces' the darkness of night, Shia tradition extends this symbolism to the Ahlul Bayt, whose knowledge and moral clarity 'pierce' ignorance and misguidance, with their spiritual light guiding humanity like stars guiding travelers."
+    },
+    {
+      "id": "86_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 5,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does the verse 'So let man observe from what he was created' (86:5) primarily invoke?",
+      "options": [
+        "Only biological curiosity about human origins",
+        "A dialectic between physical baseness and spiritual potential",
+        "A medical study of embryology",
+        "Agricultural practices"
+      ],
+      "correctAnswer": "A dialectic between physical baseness and spiritual potential",
+      "explanation": "Allama Tabatabai emphasizes this dialectic between physical baseness and spiritual potential: the act of observing one's creation becomes a gateway to understanding divine wisdom (ḥikma) and the necessity of submission to the Creator. This reflection is not mere biological curiosity but a theological imperative."
+    },
+    {
+      "id": "86_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 8,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, what does the verse 'Indeed, Allah, to return him [to life], is Able' (86:8) specifically affirm?",
+      "options": [
+        "Allah's power to create new species",
+        "Allah's power to resurrect the human being after death, reconstituting both body and soul",
+        "Allah's power over weather patterns",
+        "Allah's power to grant wealth"
+      ],
+      "correctAnswer": "Allah's power to resurrect the human being after death, reconstituting both body and soul",
+      "explanation": "Shaykh Tabrisi emphasizes that the term 'raji'hi' (his return) refers explicitly to Allah's power to resurrect the human being after death, reconstituting both body and soul. This verse responds to skeptics who question the plausibility of bodily resurrection."
+    },
+    {
+      "id": "86_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 10,
+      "question": "How does contemporary Shia scholar Ayatollah Nasir Makarem Shirazi interpret the 'powerlessness' described in verse 10?",
+      "options": [
+        "As merely physical weakness",
+        "As a critique of humanity's illusion of self-sufficiency in an age of technological triumphalism",
+        "As a medical condition",
+        "As political oppression only"
+      ],
+      "correctAnswer": "As a critique of humanity's illusion of self-sufficiency in an age of technological triumphalism",
+      "explanation": "Ayatollah Nasir Makarem Shirazi emphasizes that the 'powerlessness' described here transcends physical weakness—it critiques humanity's illusion of self-sufficiency in an age dominated by technological triumphalism and hyper-individualism, urging instead a return to spiritual accountability."
+    },
+    {
+      "id": "86_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 13,
+      "question": "According to contemporary scholars, the Qur'an as a 'decisive statement' (qawlun fasl) in verse 13 represents rigid inflexibility rather than clarity.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Scholars like Ayatollah Nasir Makarem Shirazi emphasize that this 'decisiveness' is not rigidity but clarity, offering a framework to navigate ethical ambiguities in fields like bioethics, AI governance, and climate justice. The decisive nature of the Qur'an counters postmodern fragmentation by affirming objective moral truths."
+    },
+    {
+      "id": "86_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 11,
+      "question": "According to Imam Jafar al-Sadiq's teaching about verse 11, what does the 'returning sky' symbolize?",
+      "options": [
+        "Only meteorological rain cycles",
+        "The cyclical descent of divine mercy and guidance through the Wilayah of the Imams",
+        "Agricultural seasons",
+        "Cloud formations"
+      ],
+      "correctAnswer": "The cyclical descent of divine mercy and guidance through the Wilayah of the Imams",
+      "explanation": "Imam Jafar al-Sadiq explained that just as the sky returns life-giving rain to the earth, the heavens return the light of the Imams to revive barren hearts. He stated: 'The sky rains water for the earth's life, and we rain knowledge for the soul's life' (Bihar al-Anwar)."
+    },
+    {
+      "id": "86_8",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 7,
+      "question": "What is the key methodological difference between Sunni and Shia interpretations of verse 7 ('from between the backbone and the ribs')?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Sunni tafsir emphasizes the literal physiological marvel, while Shia exegesis incorporates ontological insights through Ahlul Bayt's teachings",
+        "Both traditions interpret it identically",
+        "Shia scholars reject all physical meanings"
+      ],
+      "correctAnswer": "Sunni tafsir emphasizes the literal physiological marvel, while Shia exegesis incorporates ontological insights through Ahlul Bayt's teachings",
+      "explanation": "While both traditions acknowledge the physical dimension, Sunni authorities like Qurtubi and Razi emphasize the verse's literal physiological marvel as proof of divine creative power. Shia commentators, while acknowledging this, frequently incorporate ontological insights, reflecting the Shia emphasis on batini (esoteric) meanings through Ahlul Bayt's teachings."
+    }
+  ]
+}

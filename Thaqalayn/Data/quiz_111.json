@@ -1,0 +1,70 @@
+{
+  "surahNumber": 111,
+  "questions": [
+    {
+      "id": "111_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'tabbat' in the opening verse of Surah Al-Masad mean?",
+      "options": [
+        "To prosper and succeed",
+        "To perish or to be cut off",
+        "To become wealthy",
+        "To speak loudly"
+      ],
+      "correctAnswer": "To perish or to be cut off",
+      "explanation": "The term 'tabbat' derives from 'taba', meaning 'to perish' or 'to be cut off,' emphasizing total spiritual and worldly failure. The repetition of 'wa tabb' (and ruined is he) underscores the certainty of Abu Lahab's downfall, both in this life and the Hereafter."
+    },
+    {
+      "id": "111_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to classical Shia exegesis, the term 'kasab' (what he gained) in verse 2 refers exclusively to Abu Lahab's material wealth and possessions.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. In classical Shia exegesis, 'kasab' encompasses not only material wealth but also his children, followers, and worldly achievements. Scholars like Allama Tabatabai interpret it as all that Abu Lahab amassed—power, progeny, and social status—all of which became worthless in the face of divine judgment."
+    },
+    {
+      "id": "111_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "How do contemporary Shia scholars like Sayyid Kamal al-Haydari interpret the 'blazing flame' mentioned in verse 3?",
+      "options": [
+        "Only as physical punishment in the afterlife",
+        "As both spiritual torment and ethical consequences of opposing justice",
+        "As a metaphor for political defeat",
+        "As symbolic of financial loss"
+      ],
+      "correctAnswer": "As both spiritual torment and ethical consequences of opposing justice",
+      "explanation": "Scholars like Sayyid Kamal al-Haydari emphasize that the verse's condemnation of Abu Lahab—a figure who opposed Islam's message of justice and mercy—serves as an enduring ethical resonance. The 'blazing flame' represents both spiritual torment and the ethical consequences of actively opposing divine truth."
+    },
+    {
+      "id": "111_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about verse 4, what does the 'firewood' carried by Umm Jamil symbolize?",
+      "options": [
+        "Actual wood for cooking",
+        "The fuel of malice and slander",
+        "Building materials for her house",
+        "Offerings for idols"
+      ],
+      "correctAnswer": "The fuel of malice and slander",
+      "explanation": "Imam Ja'far al-Sadiq (as) explains in Tafsir al-Qummi that her 'firewood' symbolizes the fuel of malice, slander, and harm she actively carried to damage the Prophet's mission. This spiritual interpretation reveals how her actions became the very material that would kindle her own punishment."
+    },
+    {
+      "id": "111_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 5,
+      "question": "Both Shia and Sunni exegetical traditions agree that the 'rope of twisted fiber' in verse 5 refers to Umm Jamil's punishment in the Hereafter.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both Shia and Sunni traditions converge on the interpretation that the 'rope of twisted fiber' around Umm Jamil's neck symbolizes her punishment in the Hereafter. Classical sources like Tabari (Sunni) and Tabrisi (Shia) in Majma al-Bayan describe this as a vivid depiction of the spiritual and eschatological consequences for her vehement opposition to Prophet Muhammad."
+    }
+  ]
+}

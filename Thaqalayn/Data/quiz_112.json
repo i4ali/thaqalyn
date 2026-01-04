@@ -1,0 +1,70 @@
+{
+  "surahNumber": 112,
+  "questions": [
+    {
+      "id": "112_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What is the key difference between the terms 'Wahid' and 'Ahad' in describing Allah's oneness?",
+      "options": [
+        "They are completely identical in meaning",
+        "'Wahid' denotes numerical oneness, while 'Ahad' signifies absolute, indivisible unity beyond limitation",
+        "'Ahad' is a weaker term than 'Wahid'",
+        "'Wahid' is used only in Arabic poetry"
+      ],
+      "correctAnswer": "'Wahid' denotes numerical oneness, while 'Ahad' signifies absolute, indivisible unity beyond limitation",
+      "explanation": "The term Ahad (One) holds unique weight. Unlike Wahid, which can denote numerical oneness, Ahad signifies absolute, indivisible unity—a concept emphasized in Shia exegesis. Scholars like Allamah Tabatabai in Al-Mizan explain that Ahad negates any possibility of partners, components, or limitations, affirming Allah's incomparable essence."
+    },
+    {
+      "id": "112_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Imam Ja'far al-Sadiq's interpretation, 'al-Samad' denotes 'He who has no void or deficiency within Him', negating any composition in the Divine Essence.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. This aligns with Imam Jafar al-Sadiq's reported interpretation that al-Ṣamad denotes 'He who has no void [or deficiency] within Him' (laysa fihi khala), negating any composition (tarkīb) or contingency in the Divine Essence."
+    },
+    {
+      "id": "112_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How does Ayatollah Nasir Makarem Shirazi interpret 'tawhid' (divine oneness) in the contemporary context?",
+      "options": [
+        "As a purely historical concept with no modern relevance",
+        "As transcending mere monotheism to challenge modern materialism by affirming a transcendent reality beyond empirical reductionism",
+        "As limited only to religious rituals",
+        "As equivalent to scientific naturalism"
+      ],
+      "correctAnswer": "As transcending mere monotheism to challenge modern materialism by affirming a transcendent reality beyond empirical reductionism",
+      "explanation": "Scholars like Ayatollah Nasir Makarem Shirazi emphasize that tawhid (divine oneness) transcends mere monotheism—it challenges modern materialism by affirming a transcendent reality beyond empirical reductionism. This aligns with quantum physics' exploration of interconnectedness, where phenomena like quantum entanglement hint at a unified cosmic fabric."
+    },
+    {
+      "id": "112_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ali in Nahj al-Balagha, what does Allah's Oneness transcend?",
+      "options": [
+        "Only physical boundaries",
+        "Human imagination, limits, and numbers",
+        "Time but not space",
+        "Language only"
+      ],
+      "correctAnswer": "Human imagination, limits, and numbers",
+      "explanation": "Imam Ali's teachings in Nahj al-Balagha stress that Allah transcends human imagination: 'He is not confined by limits nor counted by numbers.' This verse dismantles all human projections of duality, affirming that Allah's essence is beyond the grasp of reason, accessible only through His self-disclosure."
+    },
+    {
+      "id": "112_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Sunni and Shia exegetes agree that Surah Al-Ikhlaas negates all forms of polytheism and multiplicity in the Divine Essence, though they differ in some theological nuances.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both Shia and Sunni exegetes concur that this verse negates all forms of polytheism (shirk) and multiplicity in the Divine Essence. Al-Tabari (Sunni) and al-Tabrisi (Shia) both emphasize its categorical rejection of anthropomorphism, underscoring shared reverence for its doctrinal significance, though interpretive divergences emerge in theological nuances."
+    }
+  ]
+}

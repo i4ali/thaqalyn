@@ -1,0 +1,140 @@
+{
+  "surahNumber": 78,
+  "questions": [
+    {
+      "id": "78_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "In verse 2 of Surah An-Naba, what does the term 'naba' (the great news) signify according to the Foundation Layer?",
+      "options": [
+        "Mere gossip or casual information",
+        "A profound, transformative announcement of cosmic truth",
+        "Political announcements from tribal leaders",
+        "Historical records of past events"
+      ],
+      "correctAnswer": "A profound, transformative announcement of cosmic truth",
+      "explanation": "The term 'naba' signifies a profound, transformative announcement—not mere gossip, but a cosmic truth reshaping human understanding. It refers to the central message of the Quran and the core of Islamic belief, particularly resurrection and divine accountability."
+    },
+    {
+      "id": "78_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 6,
+      "question": "According to the Foundation Layer, the term 'mihadan' (resting place) in verse 6 derives from the root 'mahd', meaning a cradle or prepared bed, symbolizing comfort, stability, and nurturing care.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. The term 'mihadan' derives from the root 'mahd', meaning a cradle or prepared bed—a symbol of comfort, stability, and nurturing care. It illustrates Allah's deliberate design of the earth as a secure, habitable environment for humanity."
+    },
+    {
+      "id": "78_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to classical Shia exegesis, what additional dimension does 'the great news' (an-naba' al-azim) include beyond resurrection?",
+      "options": [
+        "Only the Quran's revelation",
+        "The multilayered dimensions integrating eschatology with Wilayah and Imamah",
+        "Historical accounts of prophets",
+        "Rules for daily prayers"
+      ],
+      "correctAnswer": "The multilayered dimensions integrating eschatology with Wilayah and Imamah",
+      "explanation": "While Sunni commentaries often limit this 'great news' to the Day of Resurrection or the Qur'an's revelation, Shia scholars emphasize its multilayered dimensions, integrating eschatology with the reality of Wilayah (divine guardianship) and Imamah."
+    },
+    {
+      "id": "78_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 17,
+      "question": "In classical Shia exegesis, 'yawm al-fasl' (Day of Separation) is interpreted solely as a chronological event without deeper theological significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Classical Shia exegetes interpret 'yawm al-fasl' (Day of Separation) as the culmination of God's justice with profound theological weight, emphasizing divine predestination (qadar) balanced with human accountability, not merely as a chronological event."
+    },
+    {
+      "id": "78_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 6,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarim Shirazi interpret the earth as a 'resting place' in modern context?",
+      "options": [
+        "Only as physical geological stability",
+        "As an invitation to reflect on humanity's custodianship of creation requiring ethical stewardship",
+        "As proof against scientific cosmology",
+        "As encouragement for agricultural development only"
+      ],
+      "correctAnswer": "As an invitation to reflect on humanity's custodianship of creation requiring ethical stewardship",
+      "explanation": "Contemporary scholars frame the verse as an invitation to reflect on humanity's custodianship of creation. The term 'mihadan' (resting place) implies both physical stability and spiritual purpose—a divine gift requiring ethical stewardship, connecting to modern environmental responsibility."
+    },
+    {
+      "id": "78_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 10,
+      "question": "According to contemporary Shia scholarship, what additional dimension does the metaphor of night as 'clothing' represent beyond physical rest?",
+      "options": [
+        "Only darkness for sleeping",
+        "Divine mercy enveloping creation and offering space for reflection and spiritual intimacy",
+        "A warning against nighttime activities",
+        "The importance of wearing proper clothing"
+      ],
+      "correctAnswer": "Divine mercy enveloping creation and offering space for reflection and spiritual intimacy",
+      "explanation": "Scholars like Ayatollah Jawadi Amuli emphasize the verse's metaphysical dimension: night's 'clothing' symbolizes divine mercy enveloping creation, offering rest and reflection—a cosmic rhythm aligning with Quranic references to night prayer and spiritual intimacy with the Divine."
+    },
+    {
+      "id": "78_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to Imam Ja'far al-Sadiq (as) in Tafsir al-Qummi, what does 'the great news' fundamentally refer to?",
+      "options": [
+        "The revelation of the Quran only",
+        "The Wilayah of Amir al-Mu'minin Ali (as), the greatest matter between heaven and earth",
+        "The conquest of Mecca",
+        "The establishment of Islamic law"
+      ],
+      "correctAnswer": "The Wilayah of Amir al-Mu'minin Ali (as), the greatest matter between heaven and earth",
+      "explanation": "Imam Ja'far al-Sadiq (as) states in Tafsir al-Qummi: 'The great news is the Wilayah of Amir al-Mu'minin Ali (as), for it is the greatest matter between heaven and earth.' This establishes the profound connection between divine revelation and Imamah."
+    },
+    {
+      "id": "78_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 31,
+      "question": "According to Imam Ali (as), 'mafaz' (attainment) in verse 31 refers only to worldly success and material prosperity.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The Ahlul Bayt taught that 'attainment' (mafaz) transcends worldly success, pointing to the soul's liberation from the shackles of ignorance and its ascent toward divine proximity, not merely material prosperity."
+    },
+    {
+      "id": "78_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 10,
+      "question": "What is the key difference in how Shia and Sunni traditions interpret the deeper meaning of night as 'clothing' in verse 10?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia tafsir links it to the Imams' role in unveiling and protecting divine mysteries, while Sunni focuses on Prophetic tradition",
+        "Both traditions interpret it identically with no differences",
+        "Shia scholars see it as only literal darkness"
+      ],
+      "correctAnswer": "Shia tafsir links it to the Imams' role in unveiling and protecting divine mysteries, while Sunni focuses on Prophetic tradition",
+      "explanation": "Divergences emerge in theological elaborations: Shia tafsir often connects night's 'veiling' function to the Imams' role in unveiling and protecting divine mysteries (reflected in sayings like Imam Ali's 'I am the night's secret'), while Sunni commentaries prioritize Prophetic tradition (hadith) on night prayer without this Imamic dimension."
+    },
+    {
+      "id": "78_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 21,
+      "question": "According to both Shia (Tabatabai) and Sunni (Tabari) scholars, what does 'lying in wait' (mirsadan) indicate about Hell in verse 21?",
+      "options": [
+        "Hell is a temporary state that will eventually end",
+        "Hell's perpetual readiness to receive those who reject divine guidance",
+        "Hell is merely a metaphorical concept with no reality",
+        "Only disbelievers from Mecca will enter Hell"
+      ],
+      "correctAnswer": "Hell's perpetual readiness to receive those who reject divine guidance",
+      "explanation": "Both Shia and Sunni exegetical traditions converge in affirming the reality of Hell as an eternal abode prepared for disbelievers and transgressors. Classical commentators, including Tabari (Sunni) and Tabatabai (Shia), emphasize that 'lying in wait' (mirsadan) underscores Hell's perpetual readiness to receive those who reject divine guidance."
+    }
+  ]
+}

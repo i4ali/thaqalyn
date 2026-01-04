@@ -381,7 +381,7 @@ struct SurahListView: View {
         .sheet(isPresented: $showingSettings) {
             SettingsView()
         }
-        .sheet(isPresented: $showingProgressDashboard) {
+        .fullScreenCover(isPresented: $showingProgressDashboard) {
             ProgressDashboardView()
         }
         .sheet(isPresented: $showingNotifications) {
@@ -1275,7 +1275,7 @@ struct StreakBadge: View {
             }
         }
         .buttonStyle(PlainButtonStyle())
-        .sheet(isPresented: $showingProgressDashboard) {
+        .fullScreenCover(isPresented: $showingProgressDashboard) {
             ProgressDashboardView()
         }
     }

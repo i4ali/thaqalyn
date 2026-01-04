@@ -1,0 +1,70 @@
+{
+  "surahNumber": 108,
+  "questions": [
+    {
+      "id": "108_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, what are the two primary interpretations of 'al-Kawthar' in Shia tafsir?",
+      "options": [
+        "A physical well and a monetary gift",
+        "A celestial river in Paradise and a metaphor for the Prophet's divinely appointed lineage through Fatimah and the Twelve Imams",
+        "A temporary blessing and a worldly status",
+        "A mountain and a desert oasis"
+      ],
+      "correctAnswer": "A celestial river in Paradise and a metaphor for the Prophet's divinely appointed lineage through Fatimah and the Twelve Imams",
+      "explanation": "The Foundation Layer explains that Shia tafsir, drawing from the teachings of the Ahlul Bayt, interprets al-Kawthar as both a celestial river in Paradise and a metaphor for the Prophet's divinely appointed lineage through his daughter Fatimah and the Twelve Imams. This connects to the hadith where the Prophet declares, 'Al-Kawthar is a river in Paradise… and I have left among you the Thaqalayn: the Quran and my Ahlul Bayt.'"
+    },
+    {
+      "id": "108_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabrisi in Majma al-Bayan, Sunni commentators often limit al-Kawthar to a celestial river in Paradise, while Shia tradition emphasizes broader implications including the prophetic lineage through Fatimah and the Ahl al-Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Tabrisi notes that while Sunni commentators often limit al-Kawthar to a celestial river in Paradise, Shia tradition emphasizes its broader implications. He cites narrations from Imam Jafar al-Sadiq identifying al-Kawthar as the prophetic lineage perpetuated through Fatimah and the Ahl al-Bayt, symbolizing the uninterrupted legacy of divine guidance through the Imams."
+    },
+    {
+      "id": "108_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "According to contemporary Shia scholars like Dr. Liyakat Takim, how is the concept of 'nahr' (sacrifice) in verse 2 expanded beyond traditional ritual?",
+      "options": [
+        "It is limited to animal sacrifice during Eid only",
+        "It encompasses ethical and existential dimensions of personal sacrifice",
+        "It refers only to financial donations",
+        "It has no relevance to modern believers"
+      ],
+      "correctAnswer": "It encompasses ethical and existential dimensions of personal sacrifice",
+      "explanation": "Contemporary Shia scholars like Dr. Liyakat Takim note that while classical interpretations focus on ritual prayer and the symbolic sacrifice of Eid al-Adha, modern readings expand 'nahr' (sacrifice) to encompass ethical and existential dimensions, transforming ritual acts into broader spiritual commitment."
+    },
+    {
+      "id": "108_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ali al-Ridha as recorded in Tafsir al-Qummi, what does 'al-Kawthar' represent?",
+      "options": [
+        "Only a physical river with no spiritual significance",
+        "The great abundance Allah granted His Prophet: the Imams from his offspring, who are his enduring progeny and carriers of his knowledge",
+        "Temporary worldly wealth",
+        "A historical event with no ongoing relevance"
+      ],
+      "correctAnswer": "The great abundance Allah granted His Prophet: the Imams from his offspring, who are his enduring progeny and carriers of his knowledge",
+      "explanation": "Imam Ali al-Ridha states: 'Al-Kawthar is the great abundance Allah granted His Prophet: the Imams from his offspring, for they are his enduring progeny and the carriers of his knowledge' (Tafsir al-Qummi). This verse unveils the inseparable link between the Prophet's spiritual station and the Wilayah of the Ahlul Bayt."
+    },
+    {
+      "id": "108_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "Both Sunni (Tabari) and Shia (Tabrisi) commentators agree that verse 3 responds to those who mocked Prophet Muhammad after the death of his sons, using the term 'abtar' (cut off) to assert divine assurance of his eternal legacy.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Classical commentators from both traditions universally agree that the verse responds to those who mocked Prophet Muhammad after the death of his sons, using the term 'abtar' (cut off) to assert divine assurance of his eternal legacy. Both Tabari (Sunni) and Tabrisi (Shia) cite pre-Islamic Arabian cultural anxieties about male lineage as the historical context."
+    }
+  ]
+}

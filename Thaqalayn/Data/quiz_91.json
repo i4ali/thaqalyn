@@ -1,0 +1,110 @@
+{
+  "surahNumber": 91,
+  "questions": [
+    {
+      "id": "91_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Ash-Shams' opening verse, what does the sun's 'duha' (brightness) symbolize according to the Foundation Layer?",
+      "options": [
+        "Only physical light from the celestial body",
+        "Both physical light and spiritual illumination, reflecting the balance between material and metaphysical truths",
+        "The brightness of gold and worldly treasures",
+        "The heat that causes droughts"
+      ],
+      "correctAnswer": "Both physical light and spiritual illumination, reflecting the balance between material and metaphysical truths",
+      "explanation": "The term duha (brightness) refers not only to the sun's radiant peak but also to clarity and guidance, themes echoed in Shia teachings about the Ahlul Bayt as beacons of divine light in times of spiritual darkness. The sun symbolizes both physical light and spiritual illumination, reflecting the balance between material and metaphysical truths central to Islamic thought."
+    },
+    {
+      "id": "91_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 6,
+      "question": "According to the Foundation Layer, the term 'tahaaha' (spread it) in verse 6 refers only to the earth's physical formation, with no connection to Allah's ongoing sustenance of it.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The term tahaaha refers not only to the physical formation of the earth but also to Allah's ongoing sustenance of it, enabling ecosystems, agriculture, and human civilization to thrive. Environmental stewardship becomes an act of worship—preserving resources, combating pollution, and living sustainably align with the Quranic vision of harmonious coexistence."
+    },
+    {
+      "id": "91_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to classical Shia commentators like Shaykh Tabrisi and Allama Tabatabai, what deeper purpose do Allah's oaths by celestial phenomena serve?",
+      "options": [
+        "They are merely poetic expressions with no specific purpose",
+        "They direct human intellect toward contemplating Allah's signs in creation, illuminating the path to spiritual and intellectual awakening",
+        "They are warnings about astronomical disasters",
+        "They promote the study of astronomy as the highest science"
+      ],
+      "correctAnswer": "They direct human intellect toward contemplating Allah's signs in creation, illuminating the path to spiritual and intellectual awakening",
+      "explanation": "Both Shaykh Tabrisi in Majma al-Bayan and Allama Tabatabai in Al-Mizan emphasise that such oaths in the Quran serve to direct human intellect toward contemplating Allah's signs (ayat) in creation, thereby illuminating the path to spiritual and intellectual awakening. The sun's duha (brightness) is interpreted as a symbol of the divine light guiding creation, resonating with the Shia theological principle of nur al-hidaya (the light of guidance) manifest through the Ahl al-Bayt."
+    },
+    {
+      "id": "91_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "In Al-Tabrisi's interpretation of verse 6, how is the earth's 'spreading' connected to the concept of Wilayah?",
+      "options": [
+        "The earth's spreading has no spiritual significance",
+        "Allah established the Ahl al-Bayt as spiritual 'levelers' of guidance, mirroring how He physically leveled the earth for material life",
+        "The spreading refers only to geological plate tectonics",
+        "Wilayah is unrelated to creation and natural phenomena"
+      ],
+      "correctAnswer": "Allah established the Ahl al-Bayt as spiritual 'levelers' of guidance, mirroring how He physically leveled the earth for material life",
+      "explanation": "Al-Tabrisi argues that just as Allah physically leveled the earth for material life, He established the Ahl al-Bayt as the spiritual 'levelers' of guidance, ensuring the continuity of divine truth. This duality—physical and metaphysical—underscores the Shia principle of walayah, where the Imams' authority mirrors the cosmic order sustained by Allah."
+    },
+    {
+      "id": "91_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholars like Sheikh Jaffer H. Jaffer, the verse about the sun should be interpreted as promoting renewable energy ethics and solar technology adoption.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Sheikh Jaffer H. Jaffer, in his 2021 work Quran and Cosmos, links the verse to renewable energy ethics, urging Muslim communities to adopt solar technology as both an environmental duty and a fulfillment of Quranic stewardship. The sun's nuclear fusion process, which sustains life on Earth, is framed as a manifestation of divine rahma (mercy)."
+    },
+    {
+      "id": "91_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 6,
+      "question": "How do contemporary Shia scholars like Ayatollah Naser Makarem Shirazi connect verse 6 to modern environmental concerns?",
+      "options": [
+        "They reject scientific cosmology entirely",
+        "They interpret the 'spreading' as humanity's role as stewards (khalifa), obliging sustainable engagement with Earth's ecosystems",
+        "They view the earth only as a commodity for exploitation",
+        "They believe environmental issues are unrelated to Quranic teachings"
+      ],
+      "correctAnswer": "They interpret the 'spreading' as humanity's role as stewards (khalifa), obliging sustainable engagement with Earth's ecosystems",
+      "explanation": "Modern thinkers, including Dr. Mohammad Ali Shomali, connect this verse to environmental ethics, arguing that humanity's role as stewards (khalifa) obliges sustainable engagement with Earth's ecosystems. The 'spreading' of the earth becomes a metaphor for equitable resource distribution, challenging contemporary issues like climate injustice and exploitative capitalism."
+    },
+    {
+      "id": "91_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teaching about verse 1, what does the sun symbolize in terms of divine guidance?",
+      "options": [
+        "Only the physical star that provides heat",
+        "The Messenger of Allah, with its brightness representing the light of Wilayah emanating from the Imams",
+        "Ancient sun worship practices",
+        "The calendar system for Islamic months"
+      ],
+      "correctAnswer": "The Messenger of Allah, with its brightness representing the light of Wilayah emanating from the Imams",
+      "explanation": "Imam Ja'far al-Sadiq taught that the sun is the Messenger of Allah, and its brightness is the light of Wilayah (divine guardianship) emanating from the Imams. This metaphor aligns with the Shia understanding that just as the sun illuminates the physical world, the spiritual 'sun' of the Prophet and Imams illuminates the hearts of believers, dispelling ignorance and sin."
+    },
+    {
+      "id": "91_8",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 6,
+      "question": "Both Sunni and Shia commentators agree that verse 6's core meaning affirms Allah's creative power, though they differ in whether to emphasize literal geological interpretation or metaphysical symbolism.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Neither tradition disputes the verse's core meaning—Allah's creative power manifested in shaping the earth—but their focal points reflect broader methodological variations. Sunni exegesis often prioritizes Allah's transcendence and accessible textual proofs, while Shia interpretations frequently integrate Imamology and esoteric layering. Both traditions ultimately uphold the verse as affirming Allah's sovereignty."
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "surahNumber": 74,
+  "questions": [
+    {
+      "id": "74_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'muddaththir' literally mean in the opening verse of Surah Al-Muddaththir?",
+      "options": [
+        "One who prays constantly",
+        "One who wraps or cloaks oneself",
+        "One who teaches others",
+        "One who fasts regularly"
+      ],
+      "correctAnswer": "One who wraps or cloaks oneself",
+      "explanation": "The term 'muddaththir' derives from the root 'dathara', meaning to wrap or cloak oneself, reflecting a physical and spiritual state of seeking refuge or withdrawal. Historical accounts note that this verse was revealed shortly after the first divine revelations when the Prophet had wrapped himself in a cloak for solace."
+    },
+    {
+      "id": "74_2",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to Shia tradition, what significant event is highlighted by the command 'Arise and warn' (Qum fa-andhir)?",
+      "options": [
+        "The Prophet's first prayer in Mecca",
+        "The Event of Dhul-Ashira where the Prophet invited his family to Islam and affirmed Imam Ali as his successor",
+        "The construction of the first mosque",
+        "The Prophet's migration to Medina"
+      ],
+      "correctAnswer": "The Event of Dhul-Ashira where the Prophet invited his family to Islam and affirmed Imam Ali as his successor",
+      "explanation": "This verse catalysed the Prophet's open proclamation of Islam, beginning with his closest kin. Shia tradition highlights the famous Event of Dhul-Ashira, where he first invited his family to Islam and affirmed Imam Ali (peace be upon him) as his successor, underscoring the Shia emphasis on tabligh (conveying the message) starting within one's immediate circle."
+    },
+    {
+      "id": "74_3",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 31,
+      "question": "The guardians of Hellfire mentioned in verse 31 are humans and jinn appointed by Allah.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The verse clarifies that the guardians of Hellfire (Ashab al-Nar) are angels appointed by Allah, refuting any notion that humans or jinn hold this role. Angels, as beings devoid of free will, act solely by divine command, symbolizing the absolute perfection of God's judgment."
+    },
+    {
+      "id": "74_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, what theological concept explains Allah's gradual preparation of the Prophet for his mission?",
+      "options": [
+        "Taqwa (God-consciousness)",
+        "Lutf (divine grace)",
+        "Tawhid (oneness)",
+        "Qiyamah (resurrection)"
+      ],
+      "correctAnswer": "Lutf (divine grace)",
+      "explanation": "Tabatabai highlights the theological concept of 'lutf' (divine grace), wherein Allah prepares the Prophet through gradual spiritual readiness, aligning his inner state with the weight of prophethood. This reflects the Shia understanding of divine preparation before undertaking cosmic responsibility."
+    },
+    {
+      "id": "74_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "In Shaykh Tabrisi's Majma al-Bayan, what does the command 'andhir' (warn) encompass according to Imam Jafar al-Sadiq?",
+      "options": [
+        "Only warning against physical dangers",
+        "Both the universality of divine justice and the necessity of recognizing the Imams' authority (wilayah)",
+        "Warning about worldly matters only",
+        "Predicting future events"
+      ],
+      "correctAnswer": "Both the universality of divine justice and the necessity of recognizing the Imams' authority (wilayah)",
+      "explanation": "Tabrisi cites narrations from Imam Jafar al-Sadiq (as) stressing that the 'warning' encompasses both the universality of divine justice and the necessity of recognizing the Imams' authority (wilayah) as successors to the Prophet's mission. This dual emphasis reflects the Shia understanding of nubuwwa (prophethood) and imama (divinely appointed leadership) as inseparable pillars of guidance."
+    },
+    {
+      "id": "74_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to classical Shia scholars, the command to 'glorify your Lord' (wa rabbaka fakabbir) transcends mere verbal utterance and requires purifying one's understanding of divine attributes from anthropomorphism.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Sheikh Tabrisi emphasizes that takbir (glorification) transcends mere verbal utterance, requiring the believer to internalize Allah's absolute transcendence (tanzih) beyond all limitations. This aligns with Imam Jafar al-Sadiq's teaching: 'Whoever likens Allah to His creation has committed disbelief.'"
+    },
+    {
+      "id": "74_7",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How does Ayatollah Nasir Makarem Shirazi interpret the 'cloak of indifference' in contemporary context?",
+      "options": [
+        "Only as physical clothing",
+        "As humanity's tendency to shield itself from uncomfortable truths like climate denialism and systemic inequality",
+        "As a historical garment worn by prophets",
+        "As a symbol of wealth"
+      ],
+      "correctAnswer": "As humanity's tendency to shield itself from uncomfortable truths like climate denialism and systemic inequality",
+      "explanation": "Ayatollah Nasir Makarem Shirazi frames this as a divine summons to 'cast off the cloak of indifference,' emphasizing that the Prophet's physical wrapping symbolizes humanity's tendency to shield itself from uncomfortable truths. Modern scholars extend this metaphor to address today's crises: climate denialism, systemic inequality, and digital escapism."
+    },
+    {
+      "id": "74_8",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "According to Dr. Mohammad Ali Shomali, the command 'Arise and warn' is connected to which modern Islamic principle?",
+      "options": [
+        "Only personal worship",
+        "Amr bil Ma'ruf (enjoining good) linked to activism against oppression, environmental degradation, and systemic inequality",
+        "Economic theory",
+        "Military strategy"
+      ],
+      "correctAnswer": "Amr bil Ma'ruf (enjoining good) linked to activism against oppression, environmental degradation, and systemic inequality",
+      "explanation": "Modern scholars like Dr. Mohammad Ali Shomali frame this imperative through the lens of 'enjoining good and forbidding evil' (Amr bil Ma'ruf), linking it to activism against oppression, environmental degradation, and systemic inequality, extending the duty to 'warn' beyond theological boundaries to address universal human crises."
+    },
+    {
+      "id": "74_9",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 31,
+      "question": "Ayatollah Nasir Makarem Shirazi interprets the numerical reference to Hell's guardians as purely literal with no symbolic significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Nasir Makarem Shirazi emphasizes that the verse's reference to the 'number' of Hell's angelic guardians symbolizes divine knowledge beyond human grasp, challenging literalism and inviting deeper reflection. It represents epistemic humility acknowledging that scientific or philosophical certainty cannot exhaust metaphysical truths."
+    },
+    {
+      "id": "74_10",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq in Tafsir al-Qummi, what does the divine address in the opening verse symbolize?",
+      "options": [
+        "Only physical awakening from sleep",
+        "The awakening of the heart from the 'garment of heedlessness'",
+        "Military preparation",
+        "Economic planning"
+      ],
+      "correctAnswer": "The awakening of the heart from the 'garment of heedlessness'",
+      "explanation": "Imam Jafar al-Sadiq (as) explains in Tafsir al-Qummi that this divine address transcends the physical act of covering oneself, instead symbolizing the awakening of the heart from the 'garment of heedlessness.' The Prophet was being called to cast off the veils separating creation from Creator, a mission inherited by his purified progeny."
+    },
+    {
+      "id": "74_11",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "What did Imam Ali teach in Nahj al-Balagha about rising for truth?",
+      "options": [
+        "Only stand for truth when it's convenient",
+        "The one who rises for truth elevates creation to the heights of divine proximity",
+        "Avoid confrontation at all costs",
+        "Truth is relative to circumstances"
+      ],
+      "correctAnswer": "The one who rises for truth elevates creation to the heights of divine proximity",
+      "explanation": "Imam Ali (p) states in Nahj al-Balagha: 'The one who rises for truth elevates creation to the heights of divine proximity.' This emphasizes that rising for truth is not merely a physical or social act but a spiritual elevation that brings humanity closer to divine realities."
+    },
+    {
+      "id": "74_12",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 3,
+      "question": "According to Imam Ja'far al-Sadiq, true Takbir (glorification) means magnifying Allah in your heart before your tongue.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Imam Ali (peace be upon him) taught that 'True Takbir (glorification) is to magnify Allah in your heart before your tongue,' emphasizing that genuine glorification arises from acknowledging His Lordship in every dimension of life, not merely verbal repetition."
+    },
+    {
+      "id": "74_13",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key epistemological difference between Sunni and Shia interpretations of the 'covering' metaphor?",
+      "options": [
+        "Both traditions interpret it identically with no differences",
+        "Sunni tafsir often prioritizes the Prophet's personal example within communal ethics, while Shia interpretations integrate it into the broader narrative of walayah (divine guardianship)",
+        "Sunni scholars reject the verse entirely",
+        "Shia scholars focus only on literal meanings"
+      ],
+      "correctAnswer": "Sunni tafsir often prioritizes the Prophet's personal example within communal ethics, while Shia interpretations integrate it into the broader narrative of walayah (divine guardianship)",
+      "explanation": "These differences stem from distinct epistemological frameworks: Sunni tafsir often prioritizes the Prophet's personal example within communal ethics, while Shia interpretations frequently integrate the verse into a broader narrative of walayah (divine guardianship). Such nuances influence religious discourse but do not fundamentally conflict on the verse's primary meaning."
+    },
+    {
+      "id": "74_14",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 31,
+      "question": "Both Sunni and Shia scholars agree that the specific number of angels guarding Hellfire serves as a fitnah (trial) to distinguish believers from disbelievers.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Classical exegetes across both traditions agree the verse marks the specific number (nineteen) as a fitnah (trial) designed to expose the arrogance of disbelievers who mock such details, while deepening the certainty of the faithful. This serves to sift truth from falsehood through spiritual testing."
+    },
+    {
+      "id": "74_15",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 2,
+      "question": "According to both Sunni and Shia traditions, what is the primary convergence point regarding the command 'Arise and warn'?",
+      "options": [
+        "It only applies to the Prophet's time with no modern relevance",
+        "It represents a transformative call to divine service, emphasizing courage and commitment to truth",
+        "It is a military command for physical warfare",
+        "It contradicts earlier revelations"
+      ],
+      "correctAnswer": "It represents a transformative call to divine service, emphasizing courage and commitment to truth",
+      "explanation": "Both traditions ultimately unite in viewing this moment as a transformative call to divine service, resonating across sectarian lines in emphasizing courage and commitment to truth. The directive to 'arise and warn' links the metaphor of 'covering' to the need for spiritual and societal awakening in both Sunni and Shia interpretations."
+    }
+  ]
+}

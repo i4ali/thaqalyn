@@ -1,0 +1,75 @@
+{
+  "surahNumber": 103,
+  "questions": [
+    {
+      "id": "103_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, what does the term 'al-asr' (time) in the opening verse symbolize beyond chronological time?",
+      "options": [
+        "Only the measurement of hours and days",
+        "A transformative force that shapes human destiny and tests our choices",
+        "The end of the world",
+        "A specific historical period"
+      ],
+      "correctAnswer": "A transformative force that shapes human destiny and tests our choices",
+      "explanation": "Classical Shia scholars like Allamah Tabatabai explain that al-asr refers not only to chronological time but to its transformative essence—a force that shapes human destiny and tests our choices. The term's root ('aṣara) also implies 'pressing' or 'extracting,' symbolizing how time presses humanity to reveal their true spiritual state."
+    },
+    {
+      "id": "103_2",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq's interpretation in the Classical Shia Layer, what does 'al-Asr' specifically refer to?",
+      "options": [
+        "The afternoon prayer time only",
+        "The Qa'im (Imam Mahdi), representing the era of divine guardianship",
+        "The Prophet Muhammad's lifetime",
+        "A general concept of time passing"
+      ],
+      "correctAnswer": "The Qa'im (Imam Mahdi), representing the era of divine guardianship",
+      "explanation": "Imam Jafar al-Sadiq is reported to have interpreted 'aṣr as an allusion to the reappearance of the Mahdi, the divinely guided savior whose advent will fulfill time's purpose. He states: 'The Asr is the Qa'im [Imam Mahdi], for he is the Time (al-Asr) through which people attain success or perish' (Tafsir al-Qummi)."
+    },
+    {
+      "id": "103_3",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "According to contemporary scholars in Layer 3, the 'loss' (khusr) mentioned in verse 2 only refers to financial or material losses, not spiritual bankruptcy.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The term khusr signifies a deep, irreversible loss—not merely financial or temporary, but a spiritual bankruptcy threatening our eternal destiny. Contemporary scholars emphasize that this loss stems from humanity's tendency to prioritize transient worldly pursuits over lasting spiritual growth."
+    },
+    {
+      "id": "103_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 3,
+      "question": "According to the Ahlul Bayt Layer, what does Imam Sadiq (as) identify as 'the truth' (al-haqq) mentioned in verse 3?",
+      "options": [
+        "Following scholarly consensus",
+        "Wilayah - love and loyalty to the Imams of guidance",
+        "Adherence to local customs",
+        "Personal interpretation of scriptures"
+      ],
+      "correctAnswer": "Wilayah - love and loyalty to the Imams of guidance",
+      "explanation": "Imam Sadiq (as) states: 'The truth in this verse is Wilayah – love and loyalty to the Imams of guidance. The patience is steadfastness in their obedience' (Tafsir al-Qummi). This transforms the concept of truth from abstract principles to concrete recognition of and adherence to the Imams' guidance."
+    },
+    {
+      "id": "103_5",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "In the Comparative Analysis Layer, what is the key difference between Shia and Sunni interpretations of 'al-haqq' (truth) in verse 3?",
+      "options": [
+        "Sunni scholars reject the concept of truth entirely",
+        "Shia exegetes contextualize it as adherence to divine guidance through the Imams, while Sunni commentators frame it more broadly as adherence to Quran and Sunnah",
+        "Both traditions interpret it identically with no differences",
+        "Shia scholars emphasize only individual piety while Sunni scholars emphasize community"
+      ],
+      "correctAnswer": "Shia exegetes contextualize it as adherence to divine guidance through the Imams, while Sunni commentators frame it more broadly as adherence to Quran and Sunnah",
+      "explanation": "Shia exegetes like Al-Tabātabāʾī contextualize ḥaqq as adherence to divine guidance through the Imams, interpreting the verse as an implicit call to follow the Ahl al-Bayt's teachings. Sunni commentators, while affirming the necessity of truth, frame it more broadly—Al-Qurṭubī emphasizes adherence to Quran and Sunnah, while Al-Rāzī associates ḥaqq with doctrinal and legal truths validated through communal consensus (ijmāʿ)."
+    }
+  ]
+}

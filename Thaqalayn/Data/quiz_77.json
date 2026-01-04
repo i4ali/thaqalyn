@@ -1,0 +1,165 @@
+{
+  "surahNumber": 77,
+  "questions": [
+    {
+      "id": "77_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In Surah Al-Mursalaat's opening verse, the term 'al-mursalaat' (those sent forth) is primarily interpreted in two ways. What are they?",
+      "options": [
+        "Angels dispatched by Allah or winds unleashed in succession",
+        "Prophets sent to humanity or stars in the sky",
+        "Rain clouds or desert storms only",
+        "Books revealed or messages delivered"
+      ],
+      "correctAnswer": "Angels dispatched by Allah or winds unleashed in succession",
+      "explanation": "Shia scholars like Allamah Tabatabai and Sheikh Tabarsi explain that 'al-mursalaat' is interpreted in two primary ways: as angels dispatched by Allah to carry out His commands or as winds unleashed in succession (urfan), symbolizing divine power over nature."
+    },
+    {
+      "id": "77_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 20,
+      "question": "The verse 'Did We not create you from a liquid disdained?' refers to semen, emphasizing humanity's humble origins as proof of Allah's creative power.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. The term 'maa'in maheen' refers to semen, a fluid often perceived as insignificant. This verse, revealed in Makkah when disbelievers mocked resurrection, underscores Allah's power to create humanity from the most humble origins."
+    },
+    {
+      "id": "77_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Tafsir al-Mizan, the 'gusts' (urfan) in verse 1 evoke what aspect of Shia eschatology?",
+      "options": [
+        "The gradual development of Islamic law",
+        "The sudden, transformative power of divine intervention during the Mahdi's reappearance",
+        "The historical battles of early Islam",
+        "The peaceful spread of knowledge"
+      ],
+      "correctAnswer": "The sudden, transformative power of divine intervention during the Mahdi's reappearance",
+      "explanation": "Tabatabai explains that the 'gusts' (urfan) evoke the sudden, transformative power of divine intervention, mirroring Shia eschatology's focus on the abrupt advent of justice during the Mahdi's reappearance."
+    },
+    {
+      "id": "77_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 29,
+      "question": "In Tafsir al-Mizan, how does Allama Tabatabai interpret the command 'Proceed to that which you used to deny' in verse 29?",
+      "options": [
+        "As a gentle invitation to reconsider beliefs",
+        "As a direct confrontation with the ontological consequences of persistent rejection",
+        "As a symbolic journey through history",
+        "As an opportunity for final repentance"
+      ],
+      "correctAnswer": "As a direct confrontation with the ontological consequences of persistent rejection",
+      "explanation": "Tabatabai emphasizes that denial encompasses not merely intellectual skepticism but active, willful rejection manifesting in moral corruption and social injustice. The command represents a direct confrontation with the ontological consequences of persistent rejection (takdhib)."
+    },
+    {
+      "id": "77_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary Shia scholars like Ayatollah Naser Makarem Shirazi, the 'winds' in verse 1 are interpreted only as meteorological phenomena with no connection to modern environmental issues.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Modern thinkers like Ayatollah Naser Makarem Shirazi interpret the 'winds' not merely as meteorological phenomena but as dynamic forces sustaining ecological balance, resonating with scientific understandings of atmospheric circulation and climate regulation—a theme amplified amid today's climate crisis."
+    },
+    {
+      "id": "77_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 15,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi extend the meaning of 'deniers' (al-mukadhibin) in verse 15 beyond traditional theological interpretation?",
+      "options": [
+        "They limit it strictly to religious disbelief",
+        "They extend it to encompass willful ignorance of ethical, environmental, and social realities",
+        "They apply it only to historical Meccan polytheists",
+        "They reject the verse's relevance to modern times"
+      ],
+      "correctAnswer": "They extend it to encompass willful ignorance of ethical, environmental, and social realities",
+      "explanation": "Contemporary scholars like Ayatollah Nasir Makarem Shirazi contextualize the verse within modern crises, extending the condemnation of deniers beyond theological rejection to encompass willful ignorance of ethical, environmental, and social realities."
+    },
+    {
+      "id": "77_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teaching revealed in Tafsir al-Qummi, what does 'al-Mursalaat' (those sent forth) symbolically represent?",
+      "options": [
+        "The four winds from different directions",
+        "The Holy Prophet Muhammad and his purified progeny - the Imams of Guidance",
+        "The revealed books throughout history",
+        "The angels recording human deeds"
+      ],
+      "correctAnswer": "The Holy Prophet Muhammad and his purified progeny - the Imams of Guidance",
+      "explanation": "Imam Ja'far al-Sadiq reveals in Tafsir al-Qummi that 'al-Mursalaat' (those sent forth) symbolically represent the Holy Prophet Muhammad (pbuh) and his purified progeny - the Imams of Guidance sent successively by Allah to humanity."
+    },
+    {
+      "id": "77_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 20,
+      "question": "According to Imam Ali's teachings, the verse 'Did We not create you from a liquid disdained?' is merely a biological reminder with no spiritual significance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The Ahlul Bayt taught that this verse is not merely a biological reminder but a spiritual awakening to human fragility and divine grace. Imam Ali said, 'The one who knows his own self knows his Lord,' emphasizing that recognizing our humble origins leads to profound spiritual awareness."
+    },
+    {
+      "id": "77_9",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 29,
+      "question": "According to Imam Ali al-Ridha's explanation of verse 29, who specifically does the verse address on Judgment Day?",
+      "options": [
+        "Those who rejected basic religious practices",
+        "Those who rejected divine truths manifested through the Imamah",
+        "Those who committed minor sins",
+        "Those who were unaware of Islamic teachings"
+      ],
+      "correctAnswer": "Those who rejected divine truths manifested through the Imamah",
+      "explanation": "Imam Ali al-Ridha explains that this verse addresses those who rejected divine truths manifested through the Imamah, stating: 'On Judgment Day, the deniers will be driven toward the very reality they mocked — the Wilayah of Muhammad and his purified household.'"
+    },
+    {
+      "id": "77_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is the key epistemological difference between Sunni and Shia interpretations of the opening verse according to comparative analysis?",
+      "options": [
+        "Sunni scholars reject the verse's authenticity",
+        "Sunni and Shia interpretations are completely identical",
+        "Sunni tafsir focuses on observable creation as proof of divine power, while Shia scholarship integrates Imamah into cosmological narratives",
+        "Shia scholars only accept allegorical interpretations"
+      ],
+      "correctAnswer": "Sunni tafsir focuses on observable creation as proof of divine power, while Shia scholarship integrates Imamah into cosmological narratives",
+      "explanation": "These differences stem from distinct hermeneutical frameworks. Sunni tafsir, shaped by early theological debates on Allah's attributes, often focuses on observable creation as proof of divine power. Shia scholarship, influenced by the teachings of the Ahl al-Bayt, integrates Imamah into cosmological narratives."
+    },
+    {
+      "id": "77_11",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 38,
+      "question": "Both Al-Tabari (Sunni) and Al-Tabrisi (Shia) agree that verse 38 affirms the universality of Judgment Day where all generations face accountability.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both Shia and Sunni exegetes converge on core themes of resurrection and divine justice. Al-Tabari (Sunni) and Al-Tabrisi (Shia) in Majma al-Bayan agree the verse affirms the universality of Judgment Day, where all generations face accountability."
+    },
+    {
+      "id": "77_12",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 7,
+      "question": "In interpreting verse 7 ('Indeed, what you are promised is to occur'), on what point do both Shia and Sunni scholars converge?",
+      "options": [
+        "They disagree completely on the verse's meaning",
+        "Both affirm the inevitability of divine promises, particularly resurrection and final judgment",
+        "They focus only on worldly promises",
+        "They reject the verse's eschatological significance"
+      ],
+      "correctAnswer": "Both affirm the inevitability of divine promises, particularly resurrection and final judgment",
+      "explanation": "Both Shia and Sunni scholarly traditions converge on the verse's core eschatological meaning, affirming the inevitability of divine promises—particularly resurrection and final judgment. Al-Tabari (Sunni) and Al-Tusi (Shia) alike contextualize the verse within the Quran's broader warnings of cosmic upheaval."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "surahNumber": 102,
+  "questions": [
+    {
+      "id": "102_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'takaathur' in Surah At-Takaathur derive from, and what does it refer to?",
+      "options": [
+        "Derives from 'kathura' (to multiply), referring to spiritual contemplation",
+        "Derives from 'kathura' (to multiply), referring to obsessive competition in accumulating wealth, status, or worldly achievements",
+        "Derives from 'taqwa' (God-consciousness), referring to pious deeds",
+        "Derives from 'tadbir' (planning), referring to careful financial management"
+      ],
+      "correctAnswer": "Derives from 'kathura' (to multiply), referring to obsessive competition in accumulating wealth, status, or worldly achievements",
+      "explanation": "The term 'takaathur' derives from the root 'kathura' (to multiply), referring here to the human tendency to obsessively compete in accumulating wealth, status, or worldly achievements. The verse critiques a mindset prioritizing transient worldly gains over eternal truths, as emphasized in Imam Ali's teachings warning against spiritual negligence (ghaflah)."
+    },
+    {
+      "id": "102_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Allama Tabatabai in Al-Mizan, the phrase 'sawfa ta'lamun' (you will certainly know) in verse 3 signifies only intellectual recognition of divine accountability.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Allama Tabatabai emphasizes that 'sawfa ta'lamun' (you will certainly know) signifies not merely intellectual recognition but an experiential knowledge (ilm al-yaqin) of divine accountability, which unfolds in stages: at death, in the grave (barzakh), and ultimately on the Day of Resurrection."
+    },
+    {
+      "id": "102_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "How do contemporary Shia scholars like Ayatollah Jawadi Amuli and Sayyed Kamal al-Haydari connect Surah At-Takaathur to modern society?",
+      "options": [
+        "They reject its relevance to modern times",
+        "They link it to modern society's 'obsession with metrics' from social media validation to GDP growth that distract from spiritual purpose",
+        "They interpret it as only relevant to ancient Arab tribes",
+        "They focus solely on economic theory without spiritual connections"
+      ],
+      "correctAnswer": "They link it to modern society's 'obsession with metrics' from social media validation to GDP growth that distract from spiritual purpose",
+      "explanation": "Ayatollah Jawadi Amuli emphasizes that 'ilm al-yaqin' (knowledge of certainty) transcends intellectual assent and demands experiential awareness of life's transient nature. Sayyed Kamal al-Haydari links the verse to modern society's 'obsession with metrics'—from social media validation to GDP growth—that distract from spiritual purpose, paralleling neuroscientific research on dopamine-driven consumerism."
+    },
+    {
+      "id": "102_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 6,
+      "question": "According to Imam Jafar al-Sadiq (peace be upon him), what does the Hellfire mentioned in verse 6 represent beyond its physical reality?",
+      "options": [
+        "Only a geographical location in the afterlife",
+        "The inner state of one who forgets his Lord and drowns in greed, linking to the spiritual death of neglecting Wilayah",
+        "A metaphor with no actual existence",
+        "A temporary punishment that eventually ends"
+      ],
+      "correctAnswer": "The inner state of one who forgets his Lord and drowns in greed, linking to the spiritual death of neglecting Wilayah",
+      "explanation": "Imam Jafar al-Sadiq (peace be upon him) taught that 'the Hellfire is the [inner] state of one who forgets his Lord and drowns in greed,' linking the verse to the spiritual death of neglecting Wilayah (divine guardianship). Imam Ali explains in Nahj al-Balagha that Hell is not only a destination but a state of being: 'The fire of Hell is surrounded by desires; Paradise is encompassed by hardships.'"
+    },
+    {
+      "id": "102_5",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 8,
+      "question": "Both Sunni and Shia scholars agree that verse 8 ('Then you will surely be asked that Day about pleasure') emphasizes divine accountability for blessings bestowed in worldly life.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Classical scholars across both Sunni and Shia traditions broadly agree that this verse underscores divine accountability for blessings (ni'am) bestowed in worldly life. Sunni commentators like Ibn Kathir and Qurtubi emphasize recognizing Allah's favors through gratitude and righteous action, while Shia scholars like Tabatabai (Al-Mizan) and Tabrisi (Majma al-Bayan) stress that blessings entail responsibility, with ingratitude constituting a rejection of divine grace."
+    }
+  ]
+}

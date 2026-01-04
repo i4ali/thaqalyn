@@ -1,0 +1,140 @@
+{
+  "surahNumber": 49,
+  "questions": [
+    {
+      "id": "49_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the phrase 'la tuqaddimoo bayna yaday Allah wa rasoolihi' (do not put yourselves before Allah and His Messenger) warn against?",
+      "options": [
+        "Speaking quietly in the Prophet's presence",
+        "Acting independently of divine guidance or the Prophet's authority",
+        "Traveling without permission",
+        "Eating before prayers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse warns against acting independently of divine guidance or the Prophet's authority - whether through hasty decisions, personal opinions overriding revelation, or speaking over him."
+    },
+    {
+      "id": "49_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to verse 49:2, raising one's voice above the Prophet's could cause one's deeds to become void (tahbata).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The verse explicitly warns that deeds could 'tahbata' (become void), underscoring the spiritual gravity of disrespecting the Prophet through improper conduct."
+    },
+    {
+      "id": "49_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Tafsir al-Mizan, what Shia theological principle does verse 49:1 align with?",
+      "options": [
+        "Adl (Justice)",
+        "Ismah (Infallibility) - the Prophet and Ahlul Bayt possess safeguarded knowledge",
+        "Qiyamah (Resurrection)",
+        "Tawhid (Monotheism)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai explains that this verse aligns with the Shia theological principle of ismah (infallibility), affirming that the Prophet and the Ahlul Bayt alone possess safeguarded knowledge to interpret and implement divine law without error."
+    },
+    {
+      "id": "49_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 14,
+      "question": "What is the key distinction made in verse 49:14 between 'Islam' and 'Iman' according to classical Shia exegesis?",
+      "options": [
+        "Islam requires more prayer than Iman",
+        "Islam is outward submission while Iman is genuine inner faith rooted in the heart",
+        "Iman is only for scholars while Islam is for everyone",
+        "There is no distinction between them"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical Shia exegesis distinguishes between Islam (outward submission) and Iman (genuine faith rooted in the heart). The verse addresses Bedouins who declared faith verbally without internalizing true belief."
+    },
+    {
+      "id": "49_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 13,
+      "question": "How do contemporary scholars like Ayatollah Shirazi interpret the Quranic call to 'know one another' (li ta'arafu) in verse 49:13?",
+      "options": [
+        "As a command to memorize genealogies",
+        "As an ethical imperative for intercultural dialogue and mutual respect in a globalized world",
+        "As a requirement to learn different languages",
+        "As permission to travel freely"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars interpret 'knowing one another' as an ethical imperative for intercultural dialogue and mutual respect, especially relevant in our globalized world with its challenges of xenophobia and identity politics."
+    },
+    {
+      "id": "49_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "Modern scholars connect the Quranic teaching about not raising voices (49:2) to neuroscientific research showing that raised voices trigger defensive neural responses that hinder constructive dialogue.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary scholarship validates this Quranic wisdom through neuroscientific insights showing that raised voices trigger defensive neural responses, hindering constructive dialogue - emphasizing the timeless relevance of the verse."
+    },
+    {
+      "id": "49_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 13,
+      "question": "According to Imam Ali (AS), what does verse 49:13 about peoples and tribes ultimately teach?",
+      "options": [
+        "Some tribes are superior to others",
+        "People are divided into two types: your brother in faith or your equal in humanity",
+        "Tribal allegiance should come before religion",
+        "Only certain nationalities can achieve nobility"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) taught in Nahj al-Balagha that 'People are two types: either your brother in faith or your equal in humanity' - reflecting the unity of Tawhid that transcends tribal divisions."
+    },
+    {
+      "id": "49_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 5,
+      "question": "What did Imam Ja'far al-Sadiq (AS) explain about the 'exit' (khuruj) mentioned in verse 49:5?",
+      "options": [
+        "It refers only to physically leaving a room",
+        "The true exit they awaited was not merely physical presence but the manifestation of the Prophet's luminous guidance",
+        "It refers to the Prophet leaving Medina",
+        "It means the end of revelation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ja'far al-Sadiq (AS) explained that 'the true exit they awaited was not merely the Prophet's physical presence, but the manifestation of his luminous guidance. Had they cultivated patience, they would have received illumination from his very essence.'"
+    },
+    {
+      "id": "49_9",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 13,
+      "question": "Both Shia and Sunni scholars agree that verse 49:13 rejects tribal and racial superiority, establishing that true nobility derives solely from taqwa (God-consciousness).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both Shia and Sunni scholarly traditions converge on the verse's rejection of tribal or racial superiority, stressing that nobility derives solely from taqwa (God-consciousness) - a principle reinforced by Prophet Muhammad's Farewell Sermon in both traditions."
+    },
+    {
+      "id": "49_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 18,
+      "question": "What is a key difference between Sunni and Shia interpretations regarding knowledge of the unseen (ghayb) in verse 49:18?",
+      "options": [
+        "Sunni scholars believe humans can know the unseen",
+        "Shia scholars reject Allah's knowledge of the unseen",
+        "Shia scholars contextualize this within Imamah, noting the Ahlul Bayt have limited access to unseen knowledge by Allah's permission, while Sunni scholars reserve this strictly for Allah alone",
+        "Both traditions have identical interpretations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sunni scholars strictly reserve knowledge of the unseen for Allah alone, while Shia scholars, while affirming Allah's exclusivity, contextualize this within Imamah - the Ahlul Bayt, as divinely appointed guides, possess limited access to the unseen through Allah's will."
+    }
+  ]
+}

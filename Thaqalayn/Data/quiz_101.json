@@ -1,0 +1,110 @@
+{
+  "surahNumber": 101,
+  "questions": [
+    {
+      "id": "101_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the Arabic root 'qara'a' from which Al-Qaari'a is derived mean?",
+      "options": [
+        "To warn or alert",
+        "To strike or knock",
+        "To resurrect or revive",
+        "To judge or evaluate"
+      ],
+      "correctAnswer": "To strike or knock",
+      "explanation": "The Arabic root 'qara'a' means 'to strike' or 'to knock,' evoking imagery of a sudden, overwhelming force that leaves nothing unchanged. This conveys the sudden and overwhelming nature of the Day of Judgment."
+    },
+    {
+      "id": "101_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "In verse 4, humanity on the Day of Judgment is compared to scattered moths to symbolize their panic and disorientation.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. The verse compares humanity to 'farash' (moths) scattered in chaos, depicting humanity's existential disarray and panic when confronted with the overwhelming reality of the Day of Judgment."
+    },
+    {
+      "id": "101_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabrisi in Majma al-Bayan, what dual resonance does the term 'Al-Qaari'a' have?",
+      "options": [
+        "Physical punishment and spiritual reward",
+        "Cataclysmic physical collapse of cosmic order and psychological striking of human consciousness",
+        "Divine mercy and human accountability",
+        "Worldly trials and heavenly blessings"
+      ],
+      "correctAnswer": "Cataclysmic physical collapse of cosmic order and psychological striking of human consciousness",
+      "explanation": "Tabrisi emphasizes Al-Qaari'a's dual resonance: as an allusion to the cataclysmic physical collapse of the cosmic order and as a metaphor for the psychological 'striking' of human consciousness when confronted with divine accountability."
+    },
+    {
+      "id": "101_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does the 'heaviness' of scales in verse 6 represent?",
+      "options": [
+        "Only the quantity of good deeds performed",
+        "The ontological weight of deeds aligned with divine unity and justice, not mere quantitative reckoning",
+        "Physical charity given during one's lifetime",
+        "The number of prayers performed"
+      ],
+      "correctAnswer": "The ontological weight of deeds aligned with divine unity and justice, not mere quantitative reckoning",
+      "explanation": "Tabatabai elucidates that the 'heaviness' of scales transcends mere quantitative reckoning of deeds, instead symbolizing the ontological weight of actions aligned with divine unity (tawhid) and justice (adl)."
+    },
+    {
+      "id": "101_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to Dr. Hassan Hashemi, the 'striking' force in Al-Qaari'a can be paralleled with contemporary climate change crises and ecological shifts.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Scholars like Dr. Hassan Hashemi draw parallels between the verse's 'striking' force and contemporary crises like climate change—abrupt ecological shifts mirroring the Quranic imagery of mountains scattering like 'carded wool.'"
+    },
+    {
+      "id": "101_6",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ali (as), what does the 'striking' in Al-Qaari'a represent beyond its physical meaning?",
+      "options": [
+        "Only the physical destruction of the earth",
+        "A day when secrets are laid bare and every soul confronts what it earned",
+        "The end of time with no spiritual significance",
+        "A warning for disbelievers only"
+      ],
+      "correctAnswer": "A day when secrets are laid bare and every soul confronts what it earned",
+      "explanation": "Imam Ali (as) stated: 'The Qari'a is a day when secrets are laid bare, and every soul is confronted by what it earned.' This unveiling is not merely physical but a profound reckoning of the soul's alignment with truth."
+    },
+    {
+      "id": "101_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 6,
+      "question": "According to Imam Sadiq (as), what is the weightiest thing placed on the Scale on the Day of Judgment?",
+      "options": [
+        "Number of charitable acts performed",
+        "Love for the Ahlul Bayt",
+        "Frequency of fasting",
+        "Amount of Quranic verses memorized"
+      ],
+      "correctAnswer": "Love for the Ahlul Bayt",
+      "explanation": "Imam Sadiq (as) teaches: 'The weightiest thing placed on the Scale is love for us, the Ahlul Bayt.' This emphasizes that attachment to the divinely appointed guides carries immense spiritual weight in divine judgment."
+    },
+    {
+      "id": "101_8",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Sunni scholars like Al-Tabari and Shia scholars like Al-Tusi agree that 'al-Qaari'a' is a name for the Day of Resurrection.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. The phrase has drawn convergent interpretations across Shia and Sunni traditions, with scholars from both schools—Al-Tabari (Sunni) and Al-Tusi (Shia)—identifying al-Qaari'a as a name for the Day of Resurrection, emphasizing its cataclysmic nature."
+    }
+  ]
+}

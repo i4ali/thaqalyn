@@ -1,0 +1,270 @@
+{
+  "surahNumber": 56,
+  "questions": [
+    {
+      "id": "56_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'Al-Waqi'ah' (The Inevitable Event) in verse 1 refer to?",
+      "options": [
+        "The birth of Prophet Muhammad",
+        "The Day of Judgment",
+        "The revelation of the Quran",
+        "The migration to Medina"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Al-Waqi'ah refers to the Day of Judgment, emphasizing its absolute certainty. The repetition in 'waqa'atil-waqi'ah' linguistically underscores the unstoppable nature of this divine promise."
+    },
+    {
+      "id": "56_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to verse 2, when the Day of Judgment occurs, its reality will be undeniable and universally acknowledged.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Verse 2 declares 'There is, at its occurrence, no denial' - asserting that when this cosmic event unfolds, its reality will be undeniable and universally acknowledged."
+    },
+    {
+      "id": "56_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 5,
+      "question": "What does the Arabic term 'bussat' (crumbling) describe about the mountains on the Day of Judgment?",
+      "options": [
+        "They will become higher",
+        "They will be reduced to dust and completely disintegrate",
+        "They will turn to gold",
+        "They will split in half"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'bussat' from the root 'ba-sa-sa' means to scatter, crush, or reduce to particles. Mountains, symbols of permanence, will be rendered like dust, demonstrating Allah's absolute power over creation."
+    },
+    {
+      "id": "56_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 11,
+      "question": "Who are the 'al-muqarrabun' (those brought near) mentioned in verse 11?",
+      "options": [
+        "The angels",
+        "Those granted the highest rank of nearness to Allah through devotion and righteousness",
+        "The prophets only",
+        "Those who performed Hajj"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Al-muqarrabun are those granted the highest rank of nearness to Allah, distinguished by unwavering devotion and spiritual excellence. This nearness is achieved through purity of intention, righteous deeds, and divine love."
+    },
+    {
+      "id": "56_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "According to Shaykh Tabrisi in Majma al-Bayan, what does the violent shaking of the earth (rujjat) symbolize?",
+      "options": [
+        "A minor earthquake",
+        "The collapse of worldly illusions, compelling humanity to confront eternal truths",
+        "The creation of new mountains",
+        "The formation of oceans"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi interprets the violent tremors as symbolizing the collapse of worldly illusions, compelling humanity to confront eternal truths. It represents both the literal dismantling of terrestrial order and metaphysical transformation."
+    },
+    {
+      "id": "56_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 10,
+      "question": "According to classical Shia exegesis, the 'Sabiqun' (the foremost ones) are identified exclusively as the infallible Imams and their most devoted followers.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "In Shia tradition, the Sabiqun are identified as the infallible Imams and their most devoted followers. Their priority lies in ontological proximity to Allah, achieved through unwavering submission and spiritual excellence."
+    },
+    {
+      "id": "56_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 26,
+      "question": "What does the dual repetition of 'salam' (peace, peace) in verse 26 signify according to Tabrisi?",
+      "options": [
+        "A simple greeting",
+        "Two dimensions: peace from Allah and mutual peace among Paradise's inhabitants",
+        "A pause in recitation",
+        "A grammatical emphasis only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi notes that this dual invocation reflects two dimensions: peace from Allah and mutual peace among the inhabitants of Paradise, a concept rooted in the Quranic principle of 'Dar al-Salam' (the Abode of Peace)."
+    },
+    {
+      "id": "56_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 41,
+      "question": "According to Allama Tabatabai, what does the 'left' symbolize for the 'companions of the left'?",
+      "options": [
+        "Physical direction only",
+        "Spiritual misalignment and alienation from divine guardianship (wilayah)",
+        "Political opposition",
+        "A geographical location"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai frames the 'left' as representing spiritual misalignment and adherence to falsehood, alienation from the wilayah (divine guardianship) of the Imams. This reflects the Shia view that orientation toward divine guidance determines one's eternal station."
+    },
+    {
+      "id": "56_9",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 5,
+      "question": "Contemporary Shia scholars like Dr. Mohammad Shomali connect the imagery of mountains crumbling to modern scientific understandings of geological processes and tectonic shifts.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern scholars like Dr. Mohammad Shomali connect this imagery to current scientific understandings of tectonic shifts and erosion, noting how the Quran's depiction aligns with geological processes that reshape Earth over millennia."
+    },
+    {
+      "id": "56_10",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 11,
+      "question": "How do contemporary scholars like Ayatollah Makarem Shirazi interpret 'nearness to Allah' in the context of modern society?",
+      "options": [
+        "As purely a mystical state achieved through isolation",
+        "As both spiritual proximity and ethical responsibility to address societal inequities",
+        "As attending more religious ceremonies",
+        "As acquiring more religious knowledge only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ayatollah Makarem Shirazi emphasizes that nearness to Allah isn't merely a mystical state but a call to embody divine attributes - justice, mercy, and wisdom - in daily life, addressing societal inequities and environmental crises as acts of worship."
+    },
+    {
+      "id": "56_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 42,
+      "question": "How do contemporary scholars like Dr. Mohammad Ali Shomali interpret 'samoom' (scorching fire) in relation to modern issues?",
+      "options": [
+        "As ancient mythology",
+        "As literal fire only",
+        "As the suffocating heatwaves from global warming - a divine warning against environmental exploitation",
+        "As industrial pollution only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Dr. Shomali connects the term 'samoom' to today's climate emergency, interpreting it as the suffocating heatwaves from global warming and 'hameem' as polluted waters harming vulnerable communities - a divine warning against environmental exploitation."
+    },
+    {
+      "id": "56_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 26,
+      "question": "The concept of 'salam' (peace) in Surah Al-Waqi'ah has parallels in other religious traditions such as the Hebrew 'shalom' and Sanskrit 'shanti'.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The universalism of 'salam' mirrors Hebrew 'shalom' and Sanskrit 'shanti', offering a bridge for interfaith dialogue. Scholars highlight these parallels as opportunities for multicultural solidarity in addressing shared global challenges."
+    },
+    {
+      "id": "56_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq (as) in Tafsir al-Qummi, what does the 'Occurrence' (Al-Waqi'ah) also refer to?",
+      "options": [
+        "Only physical earthquakes",
+        "The rising of Imam Mahdi (aj), when all veils between temporal reality and eternal truth will be lifted",
+        "The migration of Muslims",
+        "The Battle of Badr"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Tafsir al-Qummi, Imam Jafar al-Sadiq (as) reveals this 'Occurrence' as also referring to the rising of Imam Mahdi (aj), when all veils between temporal reality and eternal truth (Haqq) will be lifted."
+    },
+    {
+      "id": "56_14",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Jafar al-Sadiq (as), what causes the true spiritual 'convulsion' described when the earth is shaken?",
+      "options": [
+        "Physical tectonic plates",
+        "Hearts that reject the light of the Imams - the weight of unrecognized wilayah",
+        "Natural disasters",
+        "Human engineering"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (as) explained that 'When the earth is shaken, it is shaken by the weight of unrecognized wilayah. The true convulsion occurs in hearts that reject the light of the Imams.'"
+    },
+    {
+      "id": "56_15",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 26,
+      "question": "According to Imam Jafar al-Sadiq (as), the first 'salam' in Paradise is from Allah, and the second 'salam' is from the Ahlul Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Jafar al-Sadiq (as) states in Tafsir al-Burhan: 'The first salam is from Allah, and the second salam is from us, the People of the House. Paradise speaks only through our love, for we are its tongue and its meaning.'"
+    },
+    {
+      "id": "56_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 11,
+      "question": "According to Imam Ali (as), how does one achieve the station of al-Muqarrabun (those brought near)?",
+      "options": [
+        "Through wealth and status",
+        "Through isolation from society",
+        "Through recognition and adherence to the Imams, who are the 'gate of Allah's mercy'",
+        "Through political power"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ali (as) explains: 'None draw close to Allah except through us, the gate of His mercy' (Bihar al-Anwar). The Muqarrabun embody tawhid in action, seeing the Imam's guidance as the mirror of Allah's will."
+    },
+    {
+      "id": "56_17",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "Both Sunni and Shia scholars agree that 'Al-Waqi'ah' (The Occurrence) refers to the Day of Judgment, though they differ on theological elaborations.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions agree that Al-Waqi'ah refers to the inevitable advent of the Day of Judgment. However, Shia sources often expand interpretations to include the manifestation of Imam al-Mahdi, while Sunni commentators focus more on Allah's absolute power."
+    },
+    {
+      "id": "56_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 11,
+      "question": "What is a key difference between Shia and Sunni interpretations of 'al-muqarrabun' (those brought near)?",
+      "options": [
+        "There are no differences",
+        "Shia sources link it to the Ahl al-Bayt as perfected embodiments of nearness, while Sunni sources emphasize individual piety alone",
+        "Sunni sources reject the concept entirely",
+        "Shia sources interpret it as only referring to prophets"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni authorities emphasize individual piety as the sole criterion, while Shia sources link al-muqarrabun to the Prophet's household (Ahl al-Bayt) as perfected embodiments of nearness. Tabatabai's Al-Mizan argues the Imams represent both the means and ultimate exemplars of this station."
+    },
+    {
+      "id": "56_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 41,
+      "question": "How do Shia interpretations of 'companions of the left' differ from Sunni interpretations?",
+      "options": [
+        "They are identical",
+        "Shia sources include rejection of wilayah (allegiance to Ahl al-Bayt) as a cause, while Sunni sources focus on neglecting obligatory acts",
+        "Sunni sources are more severe",
+        "Shia sources reject the verse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni commentators like Razi and Ibn Kathir focus on individual accountability for neglecting obligatory acts. Shia sources like Tabatabai extend this to include rejection of wilayah (allegiance to the Ahl al-Bayt), framing it as spiritual 'left' aligned with opposition to divinely appointed leadership."
+    },
+    {
+      "id": "56_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 26,
+      "question": "Both Shia and Sunni traditions agree that the repetition of 'salam' (peace, peace) in Paradise signifies the totality of divine security, though they differ on the theological emphasis.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both Al-Tabari (Sunni) and Al-Tabrisi (Shia) emphasize that the dual repetition of 'salam' signifies the totality of divine security. However, Shia sources often extend this to include cosmic recognition of wilayah, while Sunni sources focus on Allah's mercy toward obedient believers."
+    }
+  ]
+}

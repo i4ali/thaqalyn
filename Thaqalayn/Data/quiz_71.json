@@ -1,0 +1,140 @@
+{
+  "surahNumber": 71,
+  "questions": [
+    {
+      "id": "71_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, what does the term 'arsalna' ('We sent') in verse 1 underscore about prophethood?",
+      "options": [
+        "Prophethood as a human ambition",
+        "Prophethood as a divine appointment",
+        "Prophethood as a cultural tradition",
+        "Prophethood as a personal choice"
+      ],
+      "correctAnswer": "Prophethood as a divine appointment",
+      "explanation": "The term 'arsalna' ('We sent') underscores prophethood as a divine appointment, not human ambition. Allah emphasizes His pattern of sending guidance through chosen representatives, with Prophet Noah tasked to awaken his community to tawhid (divine unity) and moral reform."
+    },
+    {
+      "id": "71_2",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 5,
+      "question": "In verse 5, what does the phrase 'laylan wa naharan' ('night and day') symbolize about Prophet Noah's effort?",
+      "options": [
+        "His struggle with insomnia",
+        "His ceaseless effort and adaptation to people's routines",
+        "His daily prayer schedule",
+        "The time when the flood occurred"
+      ],
+      "correctAnswer": "His ceaseless effort and adaptation to people's routines",
+      "explanation": "The phrase 'laylan wa naharan' ('night and day') symbolizes ceaseless effort, showing that Noah exhausted all times and methods to reach people, adapting to their routines and circumstances during his 950-year struggle."
+    },
+    {
+      "id": "71_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 10,
+      "question": "According to Sheikh Tabrisi in Majma al-Bayan, what does istighfar (seeking forgiveness) in verse 10 signify?",
+      "options": [
+        "Only verbal repentance",
+        "A holistic return to Allah with sincere remorse and abandonment of sin",
+        "Simple apology to others",
+        "Payment of religious fines"
+      ],
+      "correctAnswer": "A holistic return to Allah with sincere remorse and abandonment of sin",
+      "explanation": "Sheikh Tabrisi emphasizes that istighfar transcends mere verbal repentance; it signifies a holistic return (tawbah) to Allah, necessitating sincere remorse, abandonment of sin, and alignment with divine will."
+    },
+    {
+      "id": "71_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 7,
+      "question": "According to Allama Tabatabai in Al-Mizan, the act of inserting fingers into ears in verse 7 represents a deliberate, visceral rejection of divine truth, reflecting a state of heedlessness that hardens the heart.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Tabatabai's Al-Mizan elucidates that inserting fingers into ears symbolizes a deliberate, visceral rejection of divine truth, reflecting a state of ghaflah (heedlessness) that hardens the heart. The verse emphasizes that disbelief stems from conscious defiance, not ignorance."
+    },
+    {
+      "id": "71_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 15,
+      "question": "How do contemporary Shia scholars like Ayatollah Naser Makarem Shirazi interpret the 'seven heavens in layers' in verse 15?",
+      "options": [
+        "As strictly literal physical layers",
+        "As outdated scientific concepts",
+        "As symbolizing the universe's intricate order and multidimensionality",
+        "As referring only to Earth's atmosphere"
+      ],
+      "correctAnswer": "As symbolizing the universe's intricate order and multidimensionality",
+      "explanation": "Ayatollah Naser Makarem Shirazi emphasizes that the 'seven heavens' transcend literalist readings, instead symbolizing the universe's intricate order and multidimensionality, aligning with astrophysical models while maintaining that the verse underscores Islam's intellectual tradition of harmonizing divine revelation with empirical observation."
+    },
+    {
+      "id": "71_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 19,
+      "question": "According to contemporary Shia scholars, verse 19's description of Earth as an 'expanse' refers only to physical geography with no ethical implications for environmental stewardship.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Modern scholars like Sayyid Kamal al-Haydari extend this idea, linking it to environmental stewardship, arguing that the 'expanse' is not merely physical but a divine trust (amanah) requiring sustainable care—a pressing concern amid climate crises and ecological degradation."
+    },
+    {
+      "id": "71_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 20,
+      "question": "According to Imam Ja'far al-Sadiq's interpretation of verse 20, what do the 'wide roads' symbolize?",
+      "options": [
+        "Ancient trade routes",
+        "Physical highways for commerce",
+        "The divinely ordained path of Wilayah (guardianship of the Imams)",
+        "Mountain passes in Arabia"
+      ],
+      "correctAnswer": "The divinely ordained path of Wilayah (guardianship of the Imams)",
+      "explanation": "Imam Ja'far al-Sadiq elucidates that these 'wide roads' symbolize the divinely ordained path of Wilayah, stating: 'The paths are the ways of the Imams – broad and illuminated for those who recognize their light.' This transforms the verse from a mere physical description into a call for spiritual wayfaring."
+    },
+    {
+      "id": "71_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 23,
+      "question": "According to Imam Ali in Nahj al-Balagha, what does verse 23's mention of false idols warn against?",
+      "options": [
+        "Only physical stone idols",
+        "Ancient pagan practices exclusively",
+        "The inner polytheism of prioritizing worldly attachments over divine truth",
+        "Foreign cultural influences"
+      ],
+      "correctAnswer": "The inner polytheism of prioritizing worldly attachments over divine truth",
+      "explanation": "Imam Ali teaches: 'The heart's attachment to other than Allah is the greatest idolatry.' This verse warns not merely against stone idols but the inner polytheism of prioritizing worldly attachments—wealth, status, ego, or misguidance—over divine truth."
+    },
+    {
+      "id": "71_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "What is the key divergence between Sunni and Shia interpretations of 'obey me' in verse 3?",
+      "options": [
+        "Sunni scholars reject the concept of obedience entirely",
+        "Sunni scholars frame obedience to Noah as specific to his context, while Shia scholars extend it to ongoing Imam guidance",
+        "Both traditions interpret it identically",
+        "Shia scholars reject prophetic obedience"
+      ],
+      "correctAnswer": "Sunni scholars frame obedience to Noah as specific to his context, while Shia scholars extend it to ongoing Imam guidance",
+      "explanation": "Divergences emerge in interpreting the scope of 'obey me.' Sunni scholars like Ibn Kathir frame obedience to Noah as specific to his historical context, extending to Prophet Muhammad's Sunnah as the eternal model. Shia interpretations connect prophetic obedience to the continuity of divinely ordained leadership through the Imams."
+    },
+    {
+      "id": "71_10",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 28,
+      "question": "Both Sunni and Shia exegetes emphasize the universality of Prophet Noah's supplication for divine forgiveness in verse 28 and its alignment with prophetic intercession.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both Sunni commentators like Tabari and Ibn Kathir and Shia scholars such as Tabatabai and Tabrisi emphasize the verse's universality and alignment with prophetic intercession, stressing its inclusivity in reflecting the role of divine guidance, though with some differences in specific interpretations of 'my house' and 'my parents.'"
+    }
+  ]
+}

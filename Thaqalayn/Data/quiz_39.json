@@ -1,0 +1,275 @@
+{
+  "surahNumber": 39,
+  "questions": [
+    {
+      "id": "39_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 46,
+      "question": "In verse 46 of Surah Az-Zumar, what Arabic term is used to describe Allah as the 'Creator of the heavens and earth'?",
+      "options": [
+        "Al-Malik",
+        "Fatir",
+        "Al-Qahhar",
+        "Al-Jabbar"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'Fatir' derives from 'fitrah', meaning to originate something uniquely, stressing Allah's absolute power to bring creation into being without precedent."
+    },
+    {
+      "id": "39_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 47,
+      "question": "According to the tafsir of verse 47, worldly wealth and material possessions can be used to ransom oneself from divine punishment on the Day of Judgment.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The verse underscores the futility of material wealth in the afterlife - no amount of worldly riches can ransom one from divine justice. Salvation lies in righteous deeds, not transactional bargaining."
+    },
+    {
+      "id": "39_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 71,
+      "question": "What does the term 'zumar' in Surah Az-Zumar mean, referring to how disbelievers are driven to Hell?",
+      "options": [
+        "In chains",
+        "In groups",
+        "In darkness",
+        "In silence"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'zumar' means 'in groups', emphasizing collective accountability while maintaining individual responsibility. This is also the name of the surah - 'The Groups'."
+    },
+    {
+      "id": "39_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 61,
+      "question": "What does the Arabic term 'taqwa' refer to in verse 61?",
+      "options": [
+        "Fasting during Ramadan",
+        "God-consciousness and pious fear of Allah",
+        "Giving charity",
+        "Performing pilgrimage"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Taqwa refers to God-consciousness - not paralyzing fear but mindful reverence that inspires ethical action and spiritual vigilance, leading to divine protection."
+    },
+    {
+      "id": "39_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 46,
+      "question": "According to Tabrisi in Majma al-Bayan, what does the invocation 'Allahumma' (O Allah) in verse 46 employ?",
+      "options": [
+        "Simple words of greeting",
+        "The Most Beautiful Names (al-Asma al-Husna)",
+        "A prayer for forgiveness",
+        "A call for worldly success"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi notes that the invocation 'Allahumma' employs the Most Beautiful Names (al-Asma al-Husna) to stress Allah's absolute sovereignty as Fatir (Originator) and Alim al-Ghayb (Knower of the Unseen)."
+    },
+    {
+      "id": "39_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 61,
+      "question": "According to Allama Tabatabai in Al-Mizan, salvation is arbitrary and not connected to one's alignment with divine guidance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Tabatabai emphasizes that salvation is not arbitrary but a direct consequence of conscious alignment with the 'rope of Allah', interpreted in Shia tradition as adherence to the Ahl al-Bayt."
+    },
+    {
+      "id": "39_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 72,
+      "question": "What does Allama Tabatabai say the 'gates of Hell' symbolize in his tafsir of verse 72?",
+      "options": [
+        "Physical barriers to Paradise",
+        "The culmination of persistent rebellion against divine guidance",
+        "Temporary places of punishment",
+        "Gates that open for repentant souls"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai emphasizes that the 'gates of Hell' symbolize the culmination of persistent rebellion against divine guidance, with arrogance manifesting as rejection of truth embodied in prophetic and Imamic authority."
+    },
+    {
+      "id": "39_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 47,
+      "question": "What does the phrase 'ma lam yakunu yahtasibun' (what they had not taken into account) refer to in Shia tafsir?",
+      "options": [
+        "Unexpected worldly gains",
+        "The sudden manifestation of divine truths on Judgment Day",
+        "New religious obligations",
+        "Changes in divine law"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai elucidates that this refers to the sudden manifestation of divine truths on Judgment Day - a reckoning that transcends human calculations and unveils the gravity of one's sins."
+    },
+    {
+      "id": "39_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 46,
+      "question": "According to contemporary scholar Ayatollah Nasir Makarem Shirazi, how does the verse's concept of 'Fatir' (Creator) relate to modern science?",
+      "options": [
+        "It contradicts scientific theories",
+        "It has no connection to science",
+        "It resonates with astrophysical theories about the universe's origins like the Big Bang",
+        "It only applies to spiritual creation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shirazi emphasizes that the term Fatir (bringing something from nothingness) resonates with astrophysical theories about the universe's origins, showing how scientific inquiry complements rather than contradicts divine creative power."
+    },
+    {
+      "id": "39_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 47,
+      "question": "Contemporary Shia scholars connect the 'unexpected consequences' in verse 47 to modern issues like climate change.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern scholars like Dr. Liyakat Takim connect this verse to current global crises, noting how the 'unexpected consequences' resonate with climate change - where humanity's ecological debts manifest as unanticipated disasters."
+    },
+    {
+      "id": "39_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 71,
+      "question": "According to contemporary scholars, what does the 'gates' metaphor in verse 71 parallel in modern systems theory?",
+      "options": [
+        "Economic growth patterns",
+        "Ecological tipping points where small moral neglects compound into collapse",
+        "Political election cycles",
+        "Technological advancement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The 'gates' metaphor aligns with systems theory - small moral neglects (like corruption or apathy) compound into civilizational collapse, much like ecological tipping points."
+    },
+    {
+      "id": "39_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 72,
+      "question": "How does contemporary scholar Reza Shah-Kazemi describe the nature of arrogance in relation to verse 72?",
+      "options": [
+        "A temporary emotional state",
+        "Self-perpetuating spiritual feedback loops that alienate humans from their purpose",
+        "A minor character flaw",
+        "Something easily overcome"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shah-Kazemi connects the 'eternal abode' metaphor to the self-perpetuating nature of arrogance: like algorithms reinforcing bias, pride creates spiritual feedback loops alienating humans from their purpose."
+    },
+    {
+      "id": "39_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 46,
+      "question": "According to Imam Ali (AS) in Nahj al-Balagha, what is 'the straight path' mentioned in relation to Allah's names?",
+      "options": [
+        "Following only the Quran",
+        "Acknowledging His Unity through His chosen ones (the Imams)",
+        "Individual interpretation of scripture",
+        "Following any religious leader"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali states: 'The straight path is to acknowledge His Unity through His chosen ones' - referring to the purified Imams who manifest divine justice."
+    },
+    {
+      "id": "39_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 47,
+      "question": "According to Imam Jafar al-Sadiq (AS), the 'worst punishment' in verse 47 includes the realization of having rejected the Wilayah of the Ahlul Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam al-Sadiq explains that the 'worst punishment' refers not merely to physical torment but to the agonizing realization of having rejected the Wilayah (divine guardianship) of the Ahlul Bayt."
+    },
+    {
+      "id": "39_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 71,
+      "question": "According to Imam al-Baqir (AS), what are the 'doors of Hell'?",
+      "options": [
+        "Physical structures of fire",
+        "The doors of ignorance that open for those who closed their hearts to knowledge",
+        "Temporary barriers",
+        "Punishment for minor sins only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam al-Baqir taught: 'The doors of Hell are the doors of ignorance - they open for those who closed their hearts to the doors of knowledge' (Bihar al-Anwar)."
+    },
+    {
+      "id": "39_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 61,
+      "question": "According to Imam Ali (AS), what is the essence of taqwa (God-consciousness)?",
+      "options": [
+        "Simply avoiding major sins",
+        "Fearing Allah through obedience and recognizing the Hujjah (divine proof) of your time",
+        "Performing extra prayers",
+        "Isolation from society"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali taught: 'The essence of taqwa is to fear Allah through obedience, and obedience is attained by recognizing the Hujjah [divine proof] of your time' (Bihar al-Anwar)."
+    },
+    {
+      "id": "39_17",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 61,
+      "question": "Both Shia and Sunni scholars agree that verse 61 promises divine deliverance for those who possess taqwa (God-consciousness).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both Shia and Sunni exegetes converge on core themes: divine deliverance for the God-conscious (muttaqun), the transformative power of piety, and eternal security from harm in the hereafter."
+    },
+    {
+      "id": "39_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 46,
+      "question": "What is a key interpretive difference between Shia and Sunni scholars regarding 'Your servants' in verse 46?",
+      "options": [
+        "Sunni scholars ignore the phrase entirely",
+        "Shia scholars interpret it more narrowly than Sunni scholars",
+        "Shia scholars link it to divine guidance through the Imams, while Sunni scholars interpret it broadly as all humanity",
+        "Both interpret it exactly the same way"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sunni scholars interpret 'Your servants' broadly as all humanity, while Shia commentaries link the verse to the theological necessity of divine guidance through the Imams who possess divinely granted knowledge."
+    },
+    {
+      "id": "39_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 71,
+      "question": "How do Shia scholars expand the concept of 'messengers' (rusul) in verse 71 compared to Sunni interpretation?",
+      "options": [
+        "Shia scholars limit it to fewer prophets",
+        "Sunni scholars include the Imams while Shia do not",
+        "Shia scholars include the Imams as inheritors of prophetic guidance",
+        "There is no difference in interpretation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia scholars like Qummi and Tusi expand 'messengers' to include the Imams' role as inheritors of prophetic guidance, reflecting the Shia emphasis on divinely appointed leadership after Prophet Muhammad."
+    },
+    {
+      "id": "39_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 72,
+      "question": "Both Shia and Sunni traditions agree that the warning against arrogance (takabbur) in verse 72 applies to both creed and ethics.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "As Imam Jafar al-Sadiq stated, 'Arrogance is to reject the truth and belittle people' - both traditions utilize this verse to reinforce eschatological beliefs and ethical imperatives against spiritual obstinacy."
+    }
+  ]
+}

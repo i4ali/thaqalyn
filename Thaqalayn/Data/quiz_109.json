@@ -1,0 +1,110 @@
+{
+  "surahNumber": 109,
+  "questions": [
+    {
+      "id": "109_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What was the historical context that prompted the revelation of Surah Al-Kaafiroon?",
+      "options": [
+        "The Prophet's migration to Medina",
+        "Quraysh leaders proposing a religious compromise where they would alternate worship between their idols and Allah",
+        "The Battle of Badr victory",
+        "The Conquest of Mecca"
+      ],
+      "correctAnswer": "Quraysh leaders proposing a religious compromise where they would alternate worship between their idols and Allah",
+      "explanation": "Surah Al-Kaafiroon was revealed in Mecca when Quraysh leaders proposed a 'religious compromise,' asking the Prophet to alternate between worshipping their idols and Allah for a year. The verse rejects this outright, affirming that truth and falsehood cannot coexist."
+    },
+    {
+      "id": "109_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to the Foundation Layer, the term 'kafir' (disbeliever) in this surah refers to all non-Muslims generally, regardless of whether they have been presented with divine truth.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Shia tafsir, such as in Allamah Tabatabai's Al-Mizan, emphasizes that 'kafirun' here refers to those who actively rejected divine truth after it had been plainly presented—not merely non-Muslims in general. The term 'kafir' derives from 'kufr,' meaning 'to cover' or 'deny,' indicating a conscious veiling of the heart against guidance."
+    },
+    {
+      "id": "109_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Tafsir al-Mizan, what does the opening command 'Qul' (Say) underscore about the Prophet's role?",
+      "options": [
+        "The Prophet's personal opinion on religious matters",
+        "A voluntary suggestion for peaceful dialogue",
+        "The Prophet's role as a divinely mandated communicator tasked with conveying Islam's uncompromising monotheism",
+        "The Prophet's diplomatic negotiation skills"
+      ],
+      "correctAnswer": "The Prophet's role as a divinely mandated communicator tasked with conveying Islam's uncompromising monotheism",
+      "explanation": "Tabatabai emphasizes that the imperative 'Qul' (Say) underscores the Prophet's role as a divinely mandated communicator, tasked with conveying Islam's uncompromising monotheism without concession. The verse establishes an eternal boundary between truth (haqq) and falsehood (batil)."
+    },
+    {
+      "id": "109_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Al-Tabrisi in Majma al-Bayan, what is the significance of using the term 'ma' (what) rather than 'man' (who) in verse 3?",
+      "options": [
+        "It is merely a stylistic choice with no theological significance",
+        "It signifies rejection not merely of the polytheists' deities but of the entire framework of their worship—its false objects, corrupt rituals, and invalid theological premises",
+        "It refers only to physical idols made of stone",
+        "It indicates a temporary disagreement"
+      ],
+      "correctAnswer": "It signifies rejection not merely of the polytheists' deities but of the entire framework of their worship—its false objects, corrupt rituals, and invalid theological premises",
+      "explanation": "Al-Tabrisi underscores the linguistic precision: the term 'ma' (what) rather than 'man' (who) signifies a rejection not merely of the polytheists' deities but of the entire framework of their worship—its false objects, corrupt rituals, and invalid theological premises. This aligns with the Shia emphasis on the purity of divine service."
+    },
+    {
+      "id": "109_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to Ayatollah Naser Makarem Shirazi, Surah Al-Kafiroon's opening verse forbids respectful coexistence with people of other faiths.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Ayatollah Naser Makarem Shirazi emphasizes that the verse establishes a boundary of belief while rejecting hostility, reflecting the Quranic principle of 'no compulsion in religion' (2:256). This duality—firmness in conviction and respect for others' autonomy—resonates in modern pluralistic societies."
+    },
+    {
+      "id": "109_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 4,
+      "question": "How do contemporary scholars like Dr. Liyakat Takim interpret the relevance of verse 4 to modern society?",
+      "options": [
+        "It only applies to ancient Arabian polytheism with no modern relevance",
+        "It challenges the preservation of ethical monotheism amid rising atheism and consumerist culture, urging resistance to modern 'idolatries'",
+        "It promotes religious isolationism and rejection of dialogue",
+        "It focuses solely on interfaith theological debates"
+      ],
+      "correctAnswer": "It challenges the preservation of ethical monotheism amid rising atheism and consumerist culture, urging resistance to modern 'idolatries'",
+      "explanation": "Dr. Liyakat Takim links this verse to the challenge of preserving ethical monotheism amid rising atheism and consumerist culture. If 'worship' extends to modern idolatries like unchecked capitalism or ecological exploitation, the verse becomes a call to prioritize stewardship over destructive materialism."
+    },
+    {
+      "id": "109_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq's teachings about Surah Al-Kaafiroon, who are the 'disbelievers' primarily addressed in this surah?",
+      "options": [
+        "Only the Meccan polytheists who worshipped physical idols",
+        "All who reject the Wilayah of Ali ibn Abi Talib after the Prophet",
+        "Non-Arabic speaking peoples",
+        "Those who reject scientific knowledge"
+      ],
+      "correctAnswer": "All who reject the Wilayah of Ali ibn Abi Talib after the Prophet",
+      "explanation": "In Tafsir al-Qummi, Imam al-Sadiq explains that the 'disbelievers' addressed here are not merely idol-worshippers, but all who reject the divine covenant of Imamah. He states: 'It refers to those who denied the Wilayah of Ali ibn Abi Talib after the Prophet.'"
+    },
+    {
+      "id": "109_8",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 2,
+      "question": "According to the Comparative Layer, both Sunni and Shia scholars agree that verse 2 establishes theological boundaries between Islamic monotheism and pre-Islamic Arabian idolatry.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both Sunni commentators such as Tabari and Ibn Kathir and Shia exegetes like Tabatabai and Tabrisi stress the verse's timeless principle of doctrinal integrity, linking it to unwavering adherence to tawhid. Both schools concur that the verse establishes theological boundaries between Islamic monotheism and pre-Islamic Arabian idolatry."
+    }
+  ]
+}

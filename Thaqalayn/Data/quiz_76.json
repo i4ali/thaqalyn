@@ -1,0 +1,140 @@
+{
+  "surahNumber": 76,
+  "questions": [
+    {
+      "id": "76_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, what does the phrase 'hin min ad-dahr' (period of time) in verse 1 emphasize about humanity?",
+      "options": [
+        "Humanity's eternal existence",
+        "The state of non-existence before human creation and Allah's power to bring life from nothingness",
+        "Only biological evolution",
+        "Humanity's superiority over angels"
+      ],
+      "correctAnswer": "The state of non-existence before human creation and Allah's power to bring life from nothingness",
+      "explanation": "The verse emphasizes that humans were once utterly insignificant—'shay'an madhkooran' (a thing mentioned)—meaning they held no presence, name, or purpose in the cosmic order. This underscores Allah's power to bring life from nothingness, a theme central to Shia theology which stresses divine sovereignty and human dependence on the Creator."
+    },
+    {
+      "id": "76_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 8,
+      "question": "According to the Foundation Layer, the phrase 'ala hubbihi' (despite love for it) in verse 8 teaches that true charity only involves giving surplus wealth.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. The phrase 'ala hubbihi' (despite love for it) teaches that true charity transcends mere surplus; it demands generosity even when we yearn for what we give. This is exemplified by the Ahlul Bayt who gave their only meals during a three-day fast to the needy, orphan, and captive despite their own hunger."
+    },
+    {
+      "id": "76_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allamah Tabatabai in Tafsir al-Mizan, what does the 'period' (hin min al-dahr) in verse 1 refer to?",
+      "options": [
+        "Only biological nonexistence",
+        "A metaphysical state prior to creation, wherein the human essence lacked any ontological reality or worth",
+        "The time of Adam's creation",
+        "A specific historical date"
+      ],
+      "correctAnswer": "A metaphysical state prior to creation, wherein the human essence lacked any ontological reality or worth",
+      "explanation": "Tabatabai underscores that this 'period' refers not merely to biological nonexistence but to a metaphysical state prior to creation, wherein the human essence lacked any ontological reality or worth. This serves to humble humanity, reminding them of their utter dependence on divine grace."
+    },
+    {
+      "id": "76_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 8,
+      "question": "In Shaykh Tabrisi's Majma al-Bayan, what does the phrase 'ala hubbihi' (despite love for it) emphasize?",
+      "options": [
+        "The ease of giving away unwanted items",
+        "The psychological struggle inherent in this act and the ethical triumph of sacrificing what one cherishes for divine pleasure",
+        "Only physical hardship",
+        "Material wealth accumulation"
+      ],
+      "correctAnswer": "The psychological struggle inherent in this act and the ethical triumph of sacrificing what one cherishes for divine pleasure",
+      "explanation": "Tabrisi's Majma al-Bayan emphasizes the psychological struggle inherent in this act: the phrase 'ala hubbihi' underscores the human inclination toward material possessions and the ethical triumph of sacrificing what one cherishes for divine pleasure, aligning with the Shia theological principle that true virtue lies in overcoming the nafs (ego) through conscious devotion."
+    },
+    {
+      "id": "76_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How do contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi connect verse 1 to modern science?",
+      "options": [
+        "They reject all scientific interpretations",
+        "They see resonance with cosmology's Big Bang theory and evolutionary biology showing humanity's emergence from cosmic insignificance",
+        "They focus only on literal interpretation",
+        "They ignore modern contexts entirely"
+      ],
+      "correctAnswer": "They see resonance with cosmology's Big Bang theory and evolutionary biology showing humanity's emergence from cosmic insignificance",
+      "explanation": "Contemporary scholars like Ayatollah Nasir Makarem Shirazi draw from classical tafsir traditions and emphasize that modern scientific frameworks—such as cosmology's 'Big Bang' theory and evolutionary biology—resonate with this narrative, illustrating how humanity emerged from cosmic insignificance into conscious beings capable of moral and spiritual growth."
+    },
+    {
+      "id": "76_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 8,
+      "question": "According to contemporary scholars like Ayatollah Nasir Makarem Shirazi, verse 8's call to feed the vulnerable transcends individual piety and addresses systemic justice issues.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Contemporary Shia scholars emphasize that this verse transcends mere material giving—it challenges the human tendency to prioritize self-interest, urging a radical reorientation toward communal care. Modern commentaries link this to systemic justice: feeding the hungry isn't just individual piety but a call to address structural inequalities, from food deserts to global supply chains."
+    },
+    {
+      "id": "76_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq in Tafsir al-Qummi, what was the status of the divine light of Muhammad and Ali before creation?",
+      "options": [
+        "They did not exist at all",
+        "They were created along with other humans",
+        "Allah created the light of Muhammad and Ali before all creation, and they were mentioned in His Kingdom when creation itself was not yet mentioned",
+        "They were ordinary prophets"
+      ],
+      "correctAnswer": "Allah created the light of Muhammad and Ali before all creation, and they were mentioned in His Kingdom when creation itself was not yet mentioned",
+      "explanation": "Imam Ja'far al-Sadiq states in Tafsir al-Qummi: 'Allah created the light of Muhammad and Ali before all creation. We were mentioned in His Kingdom when creation itself was not yet mentioned.' This establishes the eternal reality of Wilayah (divine guardianship) as the axis of existence."
+    },
+    {
+      "id": "76_8",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 8,
+      "question": "According to Imam Sadiq's teaching about verse 8, what is the significance of giving while one's soul covets what is given?",
+      "options": [
+        "It is discouraged in Islam",
+        "It is true charity that elevates you to the ranks of the muttaqeen (God-conscious)",
+        "It has no spiritual value",
+        "It only counts as partial charity"
+      ],
+      "correctAnswer": "It is true charity that elevates you to the ranks of the muttaqeen (God-conscious)",
+      "explanation": "Imam Sadiq (as) explains: 'When you give while your soul covets what you give, this is true charity that elevates you to the ranks of the muttaqeen [God-conscious].' The Ahlul Bayt taught that feeding others while suppressing one's own desire for the food is a manifestation of takhalli (emptying the heart of worldly attachments), a key step in spiritual wayfaring toward Allah."
+    },
+    {
+      "id": "76_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is the key metaphysical difference between Shia and Sunni interpretations of verse 1?",
+      "options": [
+        "Both traditions interpret it identically",
+        "Shia commentaries link it to humanity's pre-material spiritual existence, while Sunni scholars focus on physical nonexistence",
+        "Sunni scholars reject the verse entirely",
+        "Only Shia scholars accept the verse"
+      ],
+      "correctAnswer": "Shia commentaries link it to humanity's pre-material spiritual existence, while Sunni scholars focus on physical nonexistence",
+      "explanation": "Shia commentaries often link the verse to humanity's pre-material existence, with Al-Qummi's Tafsir citing Imam Ja'far al-Sadiq's teaching about souls before their earthly manifestation. Conversely, Sunni scholars like Al-Qurtubi and Al-Razi focus on physical nonexistence, with Al-Razi interpreting 'not a thing mentioned' as absence from worldly discourse rather than ontological nonbeing."
+    },
+    {
+      "id": "76_10",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 8,
+      "question": "According to the Comparative Layer, both Sunni and Shia exegetes agree that verse 8 emphasizes the nobility of selfless charity and prioritizing others' needs despite personal desire.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Both Shia and Sunni exegetes converge on the verse's ethical core: the nobility of selfless charity, prioritizing others' needs despite personal desire. Al-Tabari (Sunni) and Al-Tabrisi (Shia) both contextualize the verse within early Islamic values of hospitality, and both emphasize the psychological merit of overcoming attachment to wealth as a marker of true piety transcending sectarian divides."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "surahNumber": 66,
+  "questions": [
+    {
+      "id": "66_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what incident does verse 1 of Surah At-Tahrim refer to?",
+      "options": [
+        "The Prophet's decision to fast for a month",
+        "The Prophet's temporary abstention from honey to please his wives",
+        "The Prophet's migration to Medina",
+        "The Prophet's rejection of idols"
+      ],
+      "correctAnswer": "B",
+      "explanation": "According to Allamah Tabatabai in Al-Mizan, the verse refers to an incident where the Prophet temporarily abstained from consuming honey - a permissible (halal) act - to avoid friction in his household."
+    },
+    {
+      "id": "66_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to the tafsir, Islam permits the dissolution of oaths through sincere repentance and expiation (kaffarah).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The verse underscores that if an oath unintentionally harms oneself or others, Islam permits its dissolution through sincere repentance and expiation (kaffarah), as detailed in Surah Al-Ma'idah (5:89)."
+    },
+    {
+      "id": "66_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Shia classical exegetes, what was the Prophet's self-prohibition (tahrim) in verse 1?",
+      "options": [
+        "A sin that required repentance",
+        "A strategic choice influenced by domestic considerations, not a sin",
+        "A commandment from Allah",
+        "A requirement of prophethood"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allama Tabatabai in Al-Mizan clarifies that the Prophet's self-prohibition was not an act of sin but a strategic choice influenced by domestic considerations, while affirming his infallibility (ismah)."
+    },
+    {
+      "id": "66_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "In Shia exegesis, who does 'salih al-mu'minin' (the righteous of the believers) in verse 4 specifically refer to?",
+      "options": [
+        "The general Muslim community",
+        "All the Prophet's companions",
+        "Imam Ali ibn Abi Talib (AS)",
+        "The angels"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The phrase 'righteous of the believers' (salih al-mu'minin) is unanimously interpreted by Shia scholars as referring explicitly to Imam Ali ibn Abi Talib (AS), underscoring his preeminent status as the Prophet's divinely appointed successor."
+    },
+    {
+      "id": "66_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "Contemporary scholars connect verse 3 about the disclosure of secrets to modern issues like data breaches and social media indiscretion.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Scholar Sayyid Ahmad Rezavi connects verse 3 to contemporary issues like data breaches and social media indiscretion, noting how violating confidences can fracture personal and societal bonds."
+    },
+    {
+      "id": "66_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 10,
+      "question": "According to contemporary Shia scholars, what does the story of Noah and Lot's wives in verse 10 teach about spiritual accountability?",
+      "options": [
+        "Family connections guarantee salvation",
+        "Proximity to righteousness alone cannot save anyone - salvation depends on individual choices",
+        "Marriage to a prophet ensures entry to Paradise",
+        "Women have no spiritual accountability"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse illustrates that proximity to righteousness, even through marriage to prophets, does not guarantee salvation. Ayatollah Makarem Shirazi emphasizes that personal spiritual accountability cannot be avoided through family ties."
+    },
+    {
+      "id": "66_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to the Ahlul Bayt teachings, what does verse 4 establish about divine authority?",
+      "options": [
+        "Only angels support the Prophet",
+        "A cosmic hierarchy of Wilayah with Allah, Gabriel, the Imam, and angels",
+        "The Prophet needed no support",
+        "Human support is more important than divine support"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse illustrates the cosmic hierarchy of Wilayah - Allah, Gabriel, Imam Ali, and the angels form an unbroken chain of divine authority supporting the Prophet."
+    },
+    {
+      "id": "66_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 11,
+      "question": "According to Imam Ali (AS), 'The most exalted houses are the hearts of the believers, wherein Allah resides through love and recognition (ma'rifah).'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (AS) states, 'The most exalted houses are the hearts of the believers, wherein Allah resides through love and recognition (ma'rifah)' (Bihar al-Anwar), connecting Asiya's prayer for a house in Paradise to spiritual meaning."
+    },
+    {
+      "id": "66_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 10,
+      "question": "What is a key difference between Shia and Sunni interpretations of the 'betrayal' (khiyana) of the prophets' wives in verse 10?",
+      "options": [
+        "Sunni scholars see it as physical betrayal, Shia as emotional",
+        "Shia scholars often expand it to include spiritual betrayal - failing to recognize the prophets' Wilayah",
+        "Sunni scholars interpret it symbolically, Shia literally",
+        "There is no difference in interpretation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentaries, particularly Tafsir al-Qummi and Al-Mizan, frequently expand 'betrayal' to include spiritual betrayal - failure to recognize the prophets' divine station (wilayah) and uphold their teachings."
+    },
+    {
+      "id": "66_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 4,
+      "question": "According to comparative tafsir, how do Sunni and Shia scholars differ in interpreting 'salih al-mu'minin' in verse 4?",
+      "options": [
+        "Sunnis interpret it as specific individuals, Shia as general believers",
+        "Sunnis often see it as a general reference to pious companions, while Shia specify it as Imam Ali",
+        "Both traditions agree it refers to Prophet Muhammad",
+        "Neither tradition has an interpretation for this phrase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni exegetes like Qurtubi and Razi interpret 'the righteous of the believers' as a general reference to pious companions, while Shia sources, particularly Al-Qummi and Tusi, specify this phrase as denoting Imam Ali."
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "surahNumber": 12,
+  "questions": [
+    {
+      "id": "12_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "In Prophet Yusuf's dream (verse 4), what did he see prostrating to him?",
+      "options": [
+        "Twelve stars and the moon",
+        "Eleven stars, the sun, and the moon",
+        "The sun and seven stars",
+        "Ten planets and the earth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Prophet Yusuf saw eleven stars, the sun, and the moon prostrating to him, which later symbolized his eleven brothers and parents bowing before him in Egypt."
+    },
+    {
+      "id": "12_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 5,
+      "question": "Prophet Yaqub advised Yusuf to share his dream with his brothers immediately.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Yaqub warned Yusuf not to tell his brothers about the dream, fearing their jealousy would lead them to plot against him, as Shaytan is a clear enemy to mankind."
+    },
+    {
+      "id": "12_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 3,
+      "question": "The Quran describes Surah Yusuf as containing what type of story?",
+      "options": [
+        "The shortest story",
+        "The best of stories (Ahsan al-Qasas)",
+        "The oldest story",
+        "The simplest story"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah describes Surah Yusuf as 'Ahsan al-Qasas' (the best of stories), emphasizing its narrative excellence and profound moral lessons about patience and divine wisdom."
+    },
+    {
+      "id": "12_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 20,
+      "question": "For how much was Yusuf sold by the caravan that found him in the well?",
+      "options": [
+        "A hundred gold coins",
+        "A few dirhams (counted coins)",
+        "A thousand silver pieces",
+        "He was given away for free"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Yusuf was sold for a paltry price of a few dirhams, demonstrating how his brothers undervalued him, yet Allah had greater plans for his elevation."
+    },
+    {
+      "id": "12_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "According to classical Shia exegetes, what do the eleven stars in Yusuf's dream represent?",
+      "options": [
+        "The eleven months of prosperity",
+        "The eleven prophets before Yusuf",
+        "Yusuf's eleven brothers",
+        "The eleven gates of paradise"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia scholars explain that the eleven stars symbolize Yusuf's eleven brothers, while the sun and moon represent his father Yaqub and mother (or aunt), foreshadowing their eventual prostration before him."
+    },
+    {
+      "id": "12_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 23,
+      "question": "According to Shia commentators, Yusuf resisted Zulaykha's seduction through his own willpower alone without divine assistance.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Shia exegetes emphasize that Yusuf was protected by divine grace (burhan) from his Lord. His prophetic infallibility (ismah) and Allah's intervention saved him from sin."
+    },
+    {
+      "id": "12_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 35,
+      "question": "According to Shia interpretation, why was Yusuf imprisoned despite his proven innocence?",
+      "options": [
+        "Because he committed a minor crime",
+        "To protect the reputation of the elite and as a divine trial (ibtila)",
+        "Because the king ordered it personally",
+        "Because he refused to work for the Aziz"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentators view Yusuf's imprisonment as both a cover-up by the Egyptian elite to protect Zulaykha's honor and as a divine trial (ibtila) that would ultimately lead to his elevation."
+    },
+    {
+      "id": "12_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "What gift did Allah bestow upon Yusuf according to classical Shia tafsir of verse 6?",
+      "options": [
+        "Great physical strength",
+        "The ability to interpret dreams (ta'wil al-ahadith)",
+        "Immense wealth",
+        "Political authority only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia scholars highlight that Allah taught Yusuf the interpretation of dreams (ta'wil al-ahadith), a prophetic gift that would later save Egypt from famine and elevate him to power."
+    },
+    {
+      "id": "12_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 43,
+      "question": "In the king's dream that Yusuf interpreted, what did the seven fat cows being devoured by seven lean cows represent?",
+      "options": [
+        "Seven wars followed by seven victories",
+        "Seven years of plenty followed by seven years of famine",
+        "Seven righteous kings followed by seven tyrants",
+        "Seven good harvests followed by seven floods"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Yusuf interpreted the dream as seven years of agricultural abundance followed by seven years of severe drought and famine, demonstrating his divinely-granted wisdom in crisis management."
+    },
+    {
+      "id": "12_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 55,
+      "question": "Contemporary scholars note that Yusuf's request to be placed in charge of Egypt's storehouses demonstrates proactive leadership rather than passive waiting for divine decree.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern scholars highlight that Yusuf actively sought responsibility, saying 'Place me over the storehouses of the land,' showing that trusting in Allah includes taking initiative and using one's abilities."
+    },
+    {
+      "id": "12_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "Why was the Quran revealed in Arabic according to contemporary Shia scholars?",
+      "options": [
+        "Because Arabic is the only sacred language",
+        "To limit understanding to Arabs only",
+        "To facilitate understanding through a clear, eloquent language while inviting engagement through translation",
+        "Because other languages were not developed enough"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars emphasize that Arabic's grammatical depth allows layered meanings, but the Quran's ethical teachings transcend language, inviting engagement through translation in diverse cultures."
+    },
+    {
+      "id": "12_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 30,
+      "question": "What does the story of the women cutting their hands upon seeing Yusuf teach about human nature according to modern interpretation?",
+      "options": [
+        "That beauty is dangerous",
+        "That women are weak",
+        "That moral judgment requires self-awareness, as those who gossip may share similar weaknesses",
+        "That society should avoid beauty"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars note that the women who gossiped about Zulaykha experienced the same overwhelming reaction when they saw Yusuf, teaching that we should be self-aware before judging others."
+    },
+    {
+      "id": "12_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Ahlul Bayt teachings, what deeper spiritual meaning do the celestial bodies in Yusuf's dream carry?",
+      "options": [
+        "They represent material wealth",
+        "They symbolize the stations of divine guidance and the light of wilayah",
+        "They are merely astronomical symbols",
+        "They predict political events only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Ahlul Bayt taught that celestial imagery in prophetic dreams symbolizes spiritual realities and divine guidance, connecting to the broader theme of walayah and the light of prophethood."
+    },
+    {
+      "id": "12_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 92,
+      "question": "Yusuf's words 'La tathrib alaykum' (No blame upon you today) exemplify the Ahlul Bayt's teaching on forgiveness and mercy.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Yusuf's declaration of complete forgiveness mirrors the teachings of the Ahlul Bayt about transcending grievances and embodying divine mercy, as later exemplified by Imam Ali's treatment of his enemies."
+    },
+    {
+      "id": "12_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 87,
+      "question": "What spiritual lesson did the Imams derive from Yaqub's advice to his sons: 'Do not despair of Allah's mercy'?",
+      "options": [
+        "That mercy is only for prophets",
+        "That despair of divine mercy is a sign of weak faith",
+        "That one should only ask for worldly things",
+        "That patience is unnecessary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Imams taught that despair of Allah's mercy is contrary to true faith. Even in the darkest trials, believers must maintain hope in divine wisdom and eventual relief."
+    },
+    {
+      "id": "12_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 100,
+      "question": "According to Shia tradition, Yusuf's dream was fulfilled when his family prostrated before him, demonstrating that divine promises always come to pass.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The Ahlul Bayt emphasized that Yusuf's childhood dream was fulfilled decades later when his parents and brothers prostrated before him, teaching that Allah's promises are fulfilled in His perfect timing."
+    },
+    {
+      "id": "12_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 23,
+      "question": "How do Sunni and Shia scholars differ in interpreting Yusuf's resistance to temptation?",
+      "options": [
+        "Sunni scholars say he sinned while Shia say he didn't",
+        "Both agree Yusuf was tempted but saved by divine intervention; Shia emphasize prophetic infallibility (ismah) more strongly",
+        "Shia scholars say he was never tempted at all",
+        "Sunni scholars emphasize ismah more than Shia scholars"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While both traditions affirm Yusuf's ultimate purity, Shia exegetes place stronger emphasis on prophetic infallibility (ismah), asserting that prophets are divinely protected from even the inclination to sin."
+    },
+    {
+      "id": "12_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 6,
+      "question": "What is a shared understanding between Sunni and Shia scholars regarding Yusuf's ability to interpret dreams?",
+      "options": [
+        "It was a learned skill from Egyptian priests",
+        "It was a divine gift (wahbi) bestowed by Allah upon prophets",
+        "It was inherited from his mother",
+        "It was acquired through study of ancient texts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Sunni scholars (like Ibn Kathir) and Shia scholars (like Tabatabai) agree that dream interpretation was a divine gift bestowed upon Yusuf, continuing in the prophetic tradition of Ibrahim and Ishaq."
+    },
+    {
+      "id": "12_19",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 3,
+      "question": "Both Sunni and Shia traditions agree that Surah Yusuf was revealed to comfort Prophet Muhammad during a difficult period.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions narrate that Surah Yusuf was revealed during a period of intense persecution in Mecca (Am al-Huzn/Year of Sorrow), offering the Prophet and early Muslims comfort through Yusuf's story of patience and ultimate triumph."
+    },
+    {
+      "id": "12_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What do Sunni and Shia scholars both acknowledge about the disconnected letters (Alif Lam Ra) at the beginning of Surah Yusuf?",
+      "options": [
+        "They are errors in transcription",
+        "They have no significance",
+        "Their full meaning is known only to Allah, highlighting the Quran's divine mystery",
+        "They are abbreviations for surah names"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both Al-Tabari (Sunni) and Al-Tabrisi (Shia) acknowledge these disconnected letters as divine mysteries whose complete significance is reserved for Allah's knowledge, emphasizing the Quran's transcendent nature."
+    }
+  ]
+}

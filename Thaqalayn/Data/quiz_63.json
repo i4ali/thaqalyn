@@ -1,0 +1,140 @@
+{
+  "surahNumber": 63,
+  "questions": [
+    {
+      "id": "63_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does the Arabic term 'munafiqun' (hypocrites) derive from?",
+      "options": [
+        "A word meaning 'believers'",
+        "The root 'n-f-q', implying hidden corruption like a rodent tunneling underground",
+        "A term for tribal leaders",
+        "A word meaning 'travelers'"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'munafiqun' derives from the root 'n-f-q', implying hidden corruption, like a rodent tunneling underground, symbolizing their concealed nature."
+    },
+    {
+      "id": "63_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "Abdullah ibn Ubayy was a tribal leader in Medina who feigned Islam to preserve his political influence.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Historical accounts link the opening verse of Surah Al-Munafiqun to Abdullah ibn Ubayy, a tribal leader who feigned Islam to preserve his political influence while secretly conspiring against the Prophet."
+    },
+    {
+      "id": "63_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, what principle is central to understanding why the hypocrites' testimony was void?",
+      "options": [
+        "They did not pray enough",
+        "They lacked 'tasdiq bi'l-qalb' (heartfelt affirmation)",
+        "They were not from Medina",
+        "They did not pay zakat"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai emphasizes that mere verbal testimony holds no weight without 'tasdiq bi'l-qalb' (heartfelt affirmation), a principle central to Shia theological anthropology."
+    },
+    {
+      "id": "63_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to classical Shia exegesis, what does the term 'junnah' (shield/cover) in verse 2 refer to?",
+      "options": [
+        "Physical armor in battle",
+        "False oaths used to mask subversion of Islam's foundations",
+        "A type of prayer",
+        "A form of charity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical Shia exegetes explain that the hypocrites' oaths served as a 'junnah' (cover or shield), not merely to conceal their inner disbelief but to actively divert others from Allah's path."
+    },
+    {
+      "id": "63_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to Dr. Mohammad Ali Shomali, what modern phenomenon parallels the hypocrites' behavior?",
+      "options": [
+        "Physical warfare",
+        "The 'digital double life' where social media personas mask ethical contradictions",
+        "Agricultural practices",
+        "Maritime trade"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern scholars like Dr. Mohammad Ali Shomali connect hypocrisy to the 'digital double life,' where social media personas often mask ethical contradictions, mirroring the hypocrites' insincere testimony."
+    },
+    {
+      "id": "63_6",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 2,
+      "question": "Sayyid Muhammad Husayn Fadlallah connected Surah Al-Munafiqun to resisting 'structural nifaq' - systems that institutionalize inequality while professing justice.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The late Lebanese scholar Sayyid Muhammad Husayn Fadlallah connected the surah to resisting 'structural nifaq (hypocrisy)' - systems that institutionalize inequality while professing justice."
+    },
+    {
+      "id": "63_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq (AS) in Bihar al-Anwar, what defines a hypocrite?",
+      "options": [
+        "One who does not attend Friday prayers",
+        "One who professes with his tongue what contradicts his heart",
+        "One who travels frequently",
+        "One who speaks multiple languages"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) states: 'The hypocrite is one who professes with his tongue what contradicts his heart' (Bihar al-Anwar), defining the core of hypocrisy."
+    },
+    {
+      "id": "63_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 9,
+      "question": "According to the teachings of the Ahlul Bayt, 'dhikr Allah' (remembrance of Allah) encompasses only verbal recitation, not the broader recognition of divine wilayah and Imamah.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The Ahlul Bayt teach that 'dhikr Allah' transcends mere verbal recitation; it encompasses complete submission to divine wilayah and recognition of Imamah as the axis of true worship."
+    },
+    {
+      "id": "63_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Shia and Sunni interpretations of hypocrisy in this surah?",
+      "options": [
+        "Sunni scholars reject the concept of hypocrisy entirely",
+        "Shia sources extend the critique to include rejection of 'wilayah' (guardianship of Ahlul Bayt)",
+        "Sunni scholars focus only on financial matters",
+        "There are no differences between the traditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia sources like Tusi's At-Tibyan and Qummi's Tafsir extend the critique to include rejection of 'wilayah' (guardianship of the Ahlul Bayt), interpreting hypocrisy as opposition to divinely appointed leadership."
+    },
+    {
+      "id": "63_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 10,
+      "question": "According to both Shia and Sunni traditions, what is the fundamental message of verse 10 regarding charity?",
+      "options": [
+        "Charity should only be given after death",
+        "Charity is optional and can be delayed indefinitely",
+        "Believers must spend from their sustenance before death renders such opportunities void",
+        "Only scholars should give charity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both traditions underscore the urgency of righteous action, warning against deferring spiritual obligations. The verse commands believers to spend before death makes such opportunities void."
+    }
+  ]
+}

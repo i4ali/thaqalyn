@@ -1,0 +1,270 @@
+{
+  "surahNumber": 9,
+  "questions": [
+    {
+      "id": "9_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the opening verse of Surah At-Tawba declare?",
+      "options": [
+        "A greeting to all believers",
+        "A complete disassociation from Allah and His Messenger directed at polytheists who broke treaties",
+        "A command to perform Hajj",
+        "A blessing upon the Prophet's family"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The opening verse begins with 'Bara'atun min Allahi wa rasulihi' - a complete disassociation from Allah and His Messenger directed at those polytheists who broke their treaties with the Muslims."
+    },
+    {
+      "id": "9_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 11,
+      "question": "According to verse 11, if polytheists sincerely repent, establish prayer, and give zakah, they become brothers in religion.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The verse states that if those who previously opposed the Muslim community sincerely repent (tabu), consistently establish prayer (aqamoo al-salat), and fulfill their obligation to give zakah (atawoo al-zakat), they become equal 'brothers in religion.'"
+    },
+    {
+      "id": "9_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 36,
+      "question": "According to verse 36, how many months are considered sacred (hurum) in the Islamic lunar calendar?",
+      "options": [
+        "Two months",
+        "Three months",
+        "Four months",
+        "Six months"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Four months - Dhul-Qi'dah, Dhul-Hijjah, Muharram, and Rajab - are designated as hurum (sacred), meaning they are inviolable periods when violence, oppression, and warfare were traditionally forbidden."
+    },
+    {
+      "id": "9_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 60,
+      "question": "How many categories of zakah recipients are divinely mandated in verse 60?",
+      "options": [
+        "Five categories",
+        "Six categories",
+        "Seven categories",
+        "Eight categories"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Verse 60 lays out the eight divinely mandated categories of zakah recipients, including the fuqara (deeply poor), masakin (needy), and amilin (those employed to administer zakah), among others."
+    },
+    {
+      "id": "9_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to classical Shia commentators, what does the 'declaration of disassociation' (bara'ah) in verse 1 demonstrate?",
+      "options": [
+        "Separation between Allah and His Messenger",
+        "The inseparable ontological and legislative unity between divine will and prophetic authority",
+        "A temporary political strategy",
+        "A command only for Arab Muslims"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Classical Shia commentators emphasize that this 'declaration of disassociation' (bara'ah) originates simultaneously from Allah and His Messenger, reflecting the inseparable ontological and legislative unity between divine will and prophetic authority."
+    },
+    {
+      "id": "9_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 28,
+      "question": "According to Tabatabai in Al-Mizan, the term 'najas' (impurity) applied to polytheists in verse 28 is primarily physical rather than spiritual.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Classical commentators emphasize that this impurity is not merely physical (najasat al-'ayn) but primarily spiritual (najasat al-ma'nawi), rooted in the moral and existential corruption of shirk - the ascription of partners to Allah."
+    },
+    {
+      "id": "9_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 11,
+      "question": "According to Tabatabai in Al-Mizan, what type of repentance does verse 11 require?",
+      "options": [
+        "Verbal remorse only",
+        "Tawba nasuh (sincere repentance) requiring abandonment of polytheism and submission to Allah's legislative authority",
+        "Simple acknowledgment of wrongdoing",
+        "Repentance through financial compensation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai underscores that the conditional 'if they repent' (in tabu) denotes not mere verbal remorse but tawba nasuh (sincere repentance) requiring both abandonment of polytheism (shirk) and submission to Allah's legislative authority through the Prophetic framework."
+    },
+    {
+      "id": "9_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 100,
+      "question": "According to Shia exegetes, what distinguishes the 'first forerunners' (Sabiqun al-Awwalun) mentioned in verse 100?",
+      "options": [
+        "Being chronologically early only",
+        "Having political power",
+        "Preeminence in virtue, sacrifice, and adherence to divine wilayah",
+        "Their tribal lineage"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As Tabatabai elucidates in Al-Mizan, the 'first forerunners' are not merely chronologically early believers but those whose faith was marked by preeminence in virtue, sacrifice, and unwavering adherence to divine wilayah (guardianship)."
+    },
+    {
+      "id": "9_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "According to contemporary scholar Sayyid Ammar Nakshawani, verse 1 emphasizes what principle relevant to modern contexts?",
+      "options": [
+        "Religious isolation from other communities",
+        "Integrity in relationships and disassociation from systemic oppression or betrayal",
+        "Complete withdrawal from political affairs",
+        "Ignoring broken agreements"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern scholars like Sayyid Ammar Nakshawani contextualize this as a call for integrity in relationships: societies must honor mutual commitments while disassociating from systemic oppression or betrayal, whether in politics, economics, or social justice."
+    },
+    {
+      "id": "9_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 71,
+      "question": "According to contemporary scholar Ayatollah Naser Makarem Shirazi, verse 71 affirms that spiritual and ethical agency transcends gender.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary Shia scholars, such as Ayatollah Naser Makarem Shirazi, emphasize that this verse dismantles hierarchies, affirming that spiritual and ethical agency transcends gender. The phrase 'awliya'u ba'duhum' (allies of one another) underscores mutual guardianship."
+    },
+    {
+      "id": "9_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 36,
+      "question": "What modern ecological principle do contemporary scholars see reflected in the lunar calendar mentioned in verse 36?",
+      "options": [
+        "Industrial progress",
+        "Urban development",
+        "Harmony with natural cycles and sustainability",
+        "Economic growth"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ayatollah Mohammad Ali Taskhiri emphasizes that the verse's affirmation of twelve lunar months underscores Islam's harmony with natural cycles - a theme echoed in modern ecological discourse, as lunar calendars align with agricultural and marine rhythms, fostering sustainability."
+    },
+    {
+      "id": "9_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 117,
+      "question": "According to contemporary scholar Sayyed Kamal al-Haydari, faith is static and unchanging according to verse 117.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Modern scholars like Sayyed Kamal al-Haydari emphasize that even the Prophet's closest companions faced moments of spiritual uncertainty during crises, illustrating that faith is not static but a dynamic struggle."
+    },
+    {
+      "id": "9_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to the Ahlul Bayt teachings, what sacred principle does verse 1 reflect?",
+      "options": [
+        "Only tawalli (loving what Allah loves)",
+        "Only tabarri (distancing from what Allah rejects)",
+        "Both tawalli and tabarri - loving what Allah loves and distancing from what He rejects",
+        "Neither tawalli nor tabarri"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Ahlul Bayt (as) taught that this verse reflects the sacred principle of tawalli and tabarri - loving what Allah loves and distancing from what He rejects. Imam Ali (as) stated, 'The strongest bond of faith is to love for Allah's sake and hate for Allah's sake.'"
+    },
+    {
+      "id": "9_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 60,
+      "question": "According to Imam Ali (AS), Allah made Zakat a purification for wealth and a cultivation of the soul.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (as) said, 'Allah has made Zakat a purification for wealth and a cultivation of the soul' (Bihar al-Anwar), emphasizing that sharing wealth is an act of returning Allah's bounty to His creation, dissolving ego and greed."
+    },
+    {
+      "id": "9_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 107,
+      "question": "What historical structure does verse 107 expose according to the Ahlul Bayt teachings?",
+      "options": [
+        "The Prophet's mosque in Medina",
+        "The Masjid Dirar (Mosque of Harm) built by hypocrites to undermine Islam",
+        "The Kaaba in Mecca",
+        "A marketplace in Yathrib"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Verse 107 exposes the infamous 'Masjid Dirar' (Mosque of Harm), built by hypocrites in Medina under the guise of worship while secretly serving as a hub for anti-Islamic activities and a military outpost for enemies of Islam."
+    },
+    {
+      "id": "9_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 40,
+      "question": "According to Ahlul Bayt teachings about the Cave incident (verse 40), what did the Prophet's words 'Do not grieve, Allah is with us' teach about?",
+      "options": [
+        "Political strategy",
+        "Military tactics",
+        "Unwavering faith in Allah's plan and the reality of wilayah (divine guardianship)",
+        "Geographical navigation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Infallibles taught that this incident carries timeless wisdom about the necessity of unwavering faith in Allah's plan and the reality of wilayah (divine guardianship)."
+    },
+    {
+      "id": "9_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What do both Shia and Sunni scholars agree upon regarding verse 1?",
+      "options": [
+        "The verse should be interpreted metaphorically only",
+        "Treaties remain binding only if upheld by both parties, with violation justifying termination",
+        "The verse applies only to ancient Arabia",
+        "The verse has no practical application today"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Sunni scholars Tabari and Ibn Kathir, and Shia commentators Tabrisi and Tusi agree that the verse establishes the principle that treaties remain binding only if upheld by both parties, with violation justifying termination."
+    },
+    {
+      "id": "9_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 80,
+      "question": "Both Sunni and Shia exegetes agree that verse 80 about divine rejection of hypocrites demonstrates that persistent rejection of truth nullifies intercession regardless of frequency.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Classical sources like Tabari (Sunni) and Tabrisi (Shia) concur that the verse underscores divine justice: persistent rejection of truth nullifies intercession, regardless of frequency. Ibn Kathir and Qummi both highlight this theological principle."
+    },
+    {
+      "id": "9_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 122,
+      "question": "What do both Shia and Sunni scholars agree is established by verse 122 regarding communal duties?",
+      "options": [
+        "All believers must fight in every battle",
+        "A collective duty (fard kifayah) balancing jihad and religious scholarship",
+        "Only scholars should remain in community",
+        "Jihad is optional for all believers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Al-Tabari (Sunni) and al-Tusi (Shia) concur that the verse establishes a collective duty (fard kifayah), preventing the neglect of either defense or religious guidance, with a balance between jihad and religious scholarship (tafaqquh fi al-din)."
+    },
+    {
+      "id": "9_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 128,
+      "question": "Both Sunni and Shia traditions universally affirm that the description 'ra'uf rahim' (kind and merciful) in verse 128 applies to Prophet Muhammad (pbuh).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Across both schools, scholars universally affirm the verse's depiction of the Prophet Muhammad's profound compassion, moral integrity, and deep concern for his community. Al-Tabari (Sunni) and Al-Tabrisi (Shia) concur that phrases like 'ra'uf rahim' underscore the Prophet's unique role as a guide."
+    }
+  ]
+}

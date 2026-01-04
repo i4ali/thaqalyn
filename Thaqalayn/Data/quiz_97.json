@@ -1,0 +1,75 @@
+{
+  "surahNumber": 97,
+  "questions": [
+    {
+      "id": "97_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the Foundation Layer, what are the three layered meanings of the term 'Qadr' in Surah Al-Qadr?",
+      "options": [
+        "Decree, measure, and honor",
+        "Power, strength, and wisdom",
+        "Night, day, and twilight",
+        "Faith, knowledge, and action"
+      ],
+      "correctAnswer": "Decree, measure, and honor",
+      "explanation": "The term Qadr carries layered meanings: 'decree' (divine destiny for the coming year), 'measure' (the night's unparalleled spiritual weight), and 'honor' (its link to the Prophet and Imams as channels of Allah's will)."
+    },
+    {
+      "id": "97_2",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Tabrisi in Majma al-Bayan, the Night of Decree's superiority lies solely in its connection to divine ordainment (taqdir), with no connection to the Ahlul Bayt's role.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Tabrisi emphasizes that the night's superiority lies in its connection to divine ordainment (taqdir), wherein Allah decrees all cosmic and earthly affairs for the year. However, Shia commentators uniquely root this process in the continuing presence of the Imams, who are described as mediators of divine decree."
+    },
+    {
+      "id": "97_3",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 4,
+      "question": "How do contemporary scholars like Ayatollah Jawadi Amoli interpret the 'descent' mentioned in verse 4?",
+      "options": [
+        "As a one-time historical event only",
+        "As an ongoing process where divine wisdom infuses temporal reality",
+        "As a purely symbolic metaphor with no actual occurrence",
+        "As limited to angelic movement without deeper meaning"
+      ],
+      "correctAnswer": "As an ongoing process where divine wisdom infuses temporal reality",
+      "explanation": "Ayatollah Jawadi Amoli emphasizes that the descent of angels and the Ruh (Spirit) during Laylat al-Qadr symbolizes the infusion of divine wisdom into temporal reality. This 'descent' isn't merely historical but an ongoing process, reflecting Islam's view of time as layered."
+    },
+    {
+      "id": "97_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to Imam Muhammad al-Baqir's teaching about verse 2, what does Laylat al-Qadr truly represent?",
+      "options": [
+        "Just a single night each year in Ramadan",
+        "A living reality embodied in the luminous presence of the Imam of every age",
+        "An ancient tradition no longer relevant",
+        "A metaphor for spiritual awakening only"
+      ],
+      "correctAnswer": "A living reality embodied in the luminous presence of the Imam of every age",
+      "explanation": "Imam Muhammad al-Baqir (peace be upon him) teaches that Laylat al-Qadr is not merely a night in time, but a living reality embodied in the luminous presence of the Imam of every age. He states, 'It is the Imam himself, for he is the Qadr (Divine Measure) through whom all divine ordainments flow.'"
+    },
+    {
+      "id": "97_5",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 5,
+      "question": "What is a key difference between Shia and Sunni interpretations of the 'peace' (salam) in verse 5?",
+      "options": [
+        "Sunni scholars reject the concept of peace in this verse",
+        "Shia exegetes uniquely link the peace to the Imam's mediating role in divine mercy",
+        "Both traditions interpret it identically with no differences",
+        "Shia scholars believe it only refers to absence of war"
+      ],
+      "correctAnswer": "Shia exegetes uniquely link the peace to the Imam's mediating role in divine mercy",
+      "explanation": "While both Al-Tabari (Sunni) and al-Tabrisi (Shia) emphasize that the 'peace' (salam) signifies freedom from divine punishment and the absence of evil forces, Shia exegetes uniquely link this peace to the Imam's mediating role in channeling divine mercy, reflecting their theology of continuous wilayah (divine guardianship) through the Imams."
+    }
+  ]
+}

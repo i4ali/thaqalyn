@@ -1,0 +1,270 @@
+{
+  "surahNumber": 19,
+  "questions": [
+    {
+      "id": "19_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 8,
+      "question": "In Surah Maryam, what does Prophet Zakariya's question 'How shall I have a son?' reflect?",
+      "options": [
+        "Doubt in Allah's power",
+        "Awe and humility before Allah's miracle",
+        "Rejection of the divine promise",
+        "A request to change the decree"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Zakariya's question reflects awe and deep humility before Allah, not doubt. His inquiry arose from sincere wonder at how the miracle would unfold given his old age and his wife's barrenness."
+    },
+    {
+      "id": "19_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 9,
+      "question": "According to the tafsir, the phrase 'I created you before, while you were nothing' reminds humanity of their complete dependence on Allah as Creator.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The verse reminds believers that our existence itself is a divine gift. Allah's reminder that He created Zakariya from nothing humbles human pride and emphasizes total dependence on the Creator."
+    },
+    {
+      "id": "19_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 21,
+      "question": "What are the two purposes mentioned for Prophet Isa's miraculous birth in Surah Maryam?",
+      "options": [
+        "To establish a new religion and kingdom",
+        "To be a sign (ayah) and a mercy (rahmah) for humanity",
+        "To punish the disbelievers and reward the faithful",
+        "To replace previous prophets and their messages"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse explains that Isa was made a sign (ayah) proving Allah's creative power, and a mercy (rahmah) for humanity through his prophetic mission of divine compassion and guidance."
+    },
+    {
+      "id": "19_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 14,
+      "question": "What two key qualities does Allah praise in Prophet Yahya in Surah Maryam?",
+      "options": [
+        "Wealth and political power",
+        "Devotion to parents and rejection of arrogance",
+        "Military strength and diplomatic skills",
+        "Scholarly knowledge and teaching ability"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah praises Yahya for his devotion to his parents (birr al-walidayn) and his rejection of tyranny and arrogance. The verse highlights that true strength lies in humility and fulfilling relational duties."
+    },
+    {
+      "id": "19_5",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 8,
+      "question": "According to Allama Tabatabai in Al-Mizan, Zakariya's question about having a son reflected a sincere quest for understanding the 'how' of Allah's decree, not doubt in divine power.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai emphasizes that Zakariya's inquiry does not stem from doubt in divine power but reflects a sincere quest to understand how Allah's decree would manifest given the natural impossibilities."
+    },
+    {
+      "id": "19_6",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 9,
+      "question": "What Shia theological concept does Allah's statement 'I created you before, while you were nothing' affirm according to classical exegesis?",
+      "options": [
+        "Divine hierarchy",
+        "Creation ex nihilo (ibda' - creation without precedent)",
+        "Cyclical creation",
+        "Material evolution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai notes that this phrase negates any preexisting material for creation, affirming ibda' (creation without precedent) as a divine prerogative, showing that Allah's acts transcend causal chains."
+    },
+    {
+      "id": "19_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 13,
+      "question": "According to Shia exegesis, what does the term 'hanan' (affection) granted to Yahya signify?",
+      "options": [
+        "Simple emotional sentiment",
+        "A divinely-sourced love enabling transmission of divine truths",
+        "Human compassion learned through experience",
+        "A temporary blessing for his mission"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai interprets 'hanan min ladunna' (affection from Us) as divine rahma and spiritual proximity granted exclusively to those appointed for guiding humanity - a profound, divinely-sourced love."
+    },
+    {
+      "id": "19_8",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 41,
+      "question": "According to classical Shia exegesis, Ibrahim's title 'siddeeq' (truthful) signifies a metaphysical station of certitude attained through unwavering submission to Allah.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai interprets 'siddeeq' as denoting a perfected state of truthfulness that permeates Ibrahim's being, speech, and actions, reflecting his absolute alignment with divine reality (haqq)."
+    },
+    {
+      "id": "19_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 8,
+      "question": "How do contemporary Shia scholars like Ayatollah Makarem Shirazi interpret Zakariya's dialogue with Allah for modern believers?",
+      "options": [
+        "As a model of rejection and doubt",
+        "As irrelevant to modern life",
+        "As a timeless example of faith balancing rational inquiry with trust in divine wisdom",
+        "As a historical curiosity only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars frame Zakariya's question as a dialogue between human limitation and divine possibility, teaching believers to reconcile faith with rationality in an age of scientific inquiry."
+    },
+    {
+      "id": "19_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 21,
+      "question": "Contemporary scholars note that Maryam's story challenges patriarchal norms by centering a woman's spiritual agency.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Scholars like Dr. Zainab Alwani highlight how Maryam's story centers a woman's spiritual agency, linking this to contemporary struggles for gender justice in Muslim communities."
+    },
+    {
+      "id": "19_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 41,
+      "question": "According to contemporary interpretation, Ibrahim's rejection of idolatry serves as a call to dismantle what modern equivalents?",
+      "options": [
+        "Only physical statues",
+        "Ancient temples and shrines",
+        "Modern 'idols' like materialism, systemic oppression, and dogmatic extremism",
+        "All forms of art and sculpture"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Contemporary scholars reinterpret Ibrahim's rejection of idolatry as a call to dismantle modern 'idols' of materialism, systemic oppression, and dogmatic extremism."
+    },
+    {
+      "id": "19_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 14,
+      "question": "How does the verse about Yahya's kindness to parents apply to contemporary society according to modern scholars?",
+      "options": [
+        "It has no modern application",
+        "It addresses systemic elder care and intergenerational solidarity",
+        "It only applies to religious leaders",
+        "It suggests abandoning elderly parents to institutions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars note that neglect of the elderly in individualistic societies contradicts Islamic ethics, urging communities to integrate traditional family values with modern support structures like accessible healthcare."
+    },
+    {
+      "id": "19_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 9,
+      "question": "According to Ahlul Bayt teachings, what does Allah's response 'It is easy for Me' reveal about the primordial creation?",
+      "options": [
+        "Creation was accidental",
+        "Only physical creation matters",
+        "The creation of the Muhammadan Light from which all good derives",
+        "Allah has limitations but chose to act"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ja'far al-Sadiq taught that 'Allah first created the light of your Prophet, then from it derived all good things,' revealing that primordial creation encompasses the spiritual reality of the Fourteen Luminaries."
+    },
+    {
+      "id": "19_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 14,
+      "question": "According to Imam Sadiq (AS), 'The pleasure of the Lord lies in the pleasure of parents, His wrath in their wrath.'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "This hadith from Al-Kafi emphasizes that parental obedience becomes an extension of following the Imam's luminous path, and reflects the cosmic significance of filial duty in Shia spirituality."
+    },
+    {
+      "id": "19_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 21,
+      "question": "According to Imam Ali (AS) in Nahj al-Balagha, how should we understand Allah's 'difficulty' and 'ease'?",
+      "options": [
+        "Allah experiences difficulty like humans",
+        "Some things are harder for Allah than others",
+        "Allah's 'difficulty' and 'ease' are equal in His power, not conditioned by means",
+        "Allah only does easy things"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ali explains: 'Allah's difficulty and ease are equal in His power, for He is not conditioned by means nor confined by limitations.' This manifests the principle that divine wisdom operates beyond human expectations."
+    },
+    {
+      "id": "19_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 41,
+      "question": "According to the 6th Imam (AS), 'The Siddiq is the threshold of wilayah' - meaning truthfulness is the foundation for attaining nearness to Allah.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ja'far al-Sadiq taught that truthfulness in intention, action, and submission is the foundation for attaining nearness to Allah, making it the threshold to wilayah (divine guardianship)."
+    },
+    {
+      "id": "19_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 8,
+      "question": "On what do both Shia and Sunni exegetes agree regarding Zakariya's question in verse 8?",
+      "options": [
+        "That Zakariya doubted Allah's power",
+        "That the question was rhetorical expressing awe, not doubt",
+        "That prophets are allowed to reject divine decrees",
+        "That the verse is metaphorical only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Al-Tabari (Sunni) and Al-Tabrisi (Shia) both emphasize that Zakariya's rhetorical question was an expression of awe rather than doubt, underscoring human limitation contrasted with God's ability to transcend natural laws."
+    },
+    {
+      "id": "19_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 21,
+      "question": "How do Shia and Sunni interpretations differ in contextualizing Isa as a 'sign' in Surah Maryam?",
+      "options": [
+        "Sunni scholars reject the miraculous birth",
+        "Shia scholars deny Isa's prophethood",
+        "Shia exegesis connects it to the Ahl al-Bayt's theological status, while Sunni focuses on historical-literary analysis",
+        "Both traditions interpret it identically"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia exegetes like Al-Qummi extend the symbolism to divine guidance through chosen figures, connecting to the Ahl al-Bayt, while Sunni commentators like Ibn Kathir emphasize the miracle's evidential role for Maryam's chastity."
+    },
+    {
+      "id": "19_19",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 13,
+      "question": "Both Shia and Sunni traditions interpret Prophet Yahya's 'zakat' (purity) as encompassing both spiritual refinement and ritual cleanliness.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ibn Kathir and Al-Tabrisi similarly emphasize Yahya's moral integrity, linking his purity (zakat) to both spiritual refinement and ritual cleanliness, a point echoed in both traditions."
+    },
+    {
+      "id": "19_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 41,
+      "question": "What is a key distinction between Shia and Sunni interpretations of Ibrahim's title 'siddeeq'?",
+      "options": [
+        "Sunni scholars reject the term entirely",
+        "Shia exegesis links it to prophetic infallibility (ismah) and the Imamate, while Sunni focuses on historical-moral exemplarity",
+        "Both traditions avoid discussing Ibrahim",
+        "Shia scholars consider Ibrahim less important than Sunni do"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentaries often contextualize Ibrahim's truthfulness within the framework of ismah (infallibility) and the Imamate's inheritance, while Sunni scholars focus on his historical mission and moral exemplarity without extending to ontological infallibility."
+    }
+  ]
+}

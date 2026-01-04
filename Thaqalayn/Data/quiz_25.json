@@ -1,0 +1,140 @@
+{
+  "surahNumber": 25,
+  "questions": [
+    {
+      "id": "25_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'Furqan' (Criterion) in the opening verse of Surah Al-Furqan refer to?",
+      "options": [
+        "The Prophet Muhammad's sword",
+        "A divine standard to distinguish truth from falsehood",
+        "The Day of Judgment",
+        "The city of Mecca"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term 'Furqan' (Criterion) refers to the Quran itself, a divine standard to distinguish truth (haqq) from falsehood (batil), which is a central theme in Shia exegesis."
+    },
+    {
+      "id": "25_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 63,
+      "question": "The 'ibad ar-Rahman' (servants of the Most Merciful) are described as walking upon the earth with arrogance and pride.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The verse describes them walking upon the earth 'hawnan' - with humility, calmness, and dignity, neither rushing arrogantly nor dragging their feet in self-pity. This balanced approach reflects inner tranquility rooted in faith."
+    },
+    {
+      "id": "25_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allama Tabatabai in Al-Mizan, what does the 'Criterion' transcend beyond?",
+      "options": [
+        "Physical boundaries",
+        "Mere textual revelation",
+        "Historical events",
+        "Arabic language"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai explains that the 'Criterion' transcends mere textual revelation and represents Allah's enduring mechanism for guiding creation, with divine guidance flowing through the Prophet and his purified progeny (Ahl al-Bayt)."
+    },
+    {
+      "id": "25_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 63,
+      "question": "According to classical Shia exegesis, responding to ignorant people with 'salam' (peace) is considered an act of jihad al-akbar (the greater struggle).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The response of 'salam' becomes an act of jihad al-akbar (greater struggle), transforming conflict through moral ascendancy rather than retaliation, as emphasized in commentaries like Majma al-Bayan."
+    },
+    {
+      "id": "25_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 60,
+      "question": "According to contemporary scholar Dr. Mohammad Ali Shomali, what role does the Furqan play in modern times?",
+      "options": [
+        "It is only relevant for historical study",
+        "It counters moral relativism and provides clarity amid information overload",
+        "It is primarily for Arabic speakers only",
+        "It focuses exclusively on ritual practices"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dr. Mohammad Ali Shomali highlights the Furqan's role in countering moral relativism, noting how its criterion offers clarity amid today's information overload and ideological polarization."
+    },
+    {
+      "id": "25_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 67,
+      "question": "How do contemporary Shia scholars interpret the Quranic teaching on moderation in spending (verse 67)?",
+      "options": [
+        "It only applies to religious donations",
+        "It connects to modern issues like environmental sustainability and ethical consumption",
+        "It is limited to personal finances",
+        "It encourages unlimited spending on family"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars extend the teaching on moderation to modern contexts including environmental consciousness, avoiding waste in resources like food, water, or energy as a form of modern 'israf' (extravagance)."
+    },
+    {
+      "id": "25_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Jafar al-Sadiq (AS), what does the 'Furqan' represent beyond the written Quran?",
+      "options": [
+        "Only the written book",
+        "A historical document",
+        "The Ahlul Bayt themselves - through whom creation distinguishes truth from falsehood",
+        "The prophets before Muhammad"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Jafar al-Sadiq (AS) explains: 'We are the Furqan - through us creation distinguishes truth from falsehood.' This reflects the Shia understanding that divine mercy is manifested through the Ahlul Bayt."
+    },
+    {
+      "id": "25_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 63,
+      "question": "According to Imam Ali (AS), 'Humility is the crown of nobility' and walking with tranquil humility is the mark of those anchored in God's majesty.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ali (AS) teaches in Ghurar al-Hikam: 'Humility is the crown of nobility,' illuminating that walking upon the earth 'hawnan' - with tranquil humility - is not weakness, but the mark of those anchored in God's majesty."
+    },
+    {
+      "id": "25_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "What is a key difference between Shia and Sunni interpretations regarding the implications of verse 1's divine authority?",
+      "options": [
+        "Sunni scholars reject the verse entirely",
+        "Shia scholars extend the verse's scope to include the Ahl al-Bayt's role as inheritors of prophetic knowledge",
+        "Both traditions interpret it identically",
+        "Sunni scholars emphasize the Imams more than Shia scholars"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentaries like Tabrisi's Majma al-Bayan extend the verse's scope to encompass the Ahl al-Bayt's role as inheritors of prophetic knowledge, while Sunni scholars like Ibn Kathir focus on the Quran's self-sufficiency as guidance."
+    },
+    {
+      "id": "25_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 63,
+      "question": "On what do Shia and Sunni traditions agree regarding the qualities described in verse 63 about the servants of the Merciful?",
+      "options": [
+        "These qualities are no longer relevant today",
+        "Only Shia Muslims should practice these qualities",
+        "These qualities define ideal Muslim conduct emphasizing humility and peaceful response to ignorance",
+        "These qualities are optional for believers"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both Shia and Sunni traditions agree that humility and peaceful conduct define ideal Muslim behavior, though they differ in emphasis - Shia thought ties them more explicitly to loyalty to the Imams, while Sunni exegesis anchors them in prophetic precedent."
+    }
+  ]
+}

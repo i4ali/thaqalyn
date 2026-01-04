@@ -1,0 +1,270 @@
+{
+  "surahNumber": 22,
+  "questions": [
+    {
+      "id": "22_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what does the term 'zalzala' (convulsion) in verse 1 symbolize?",
+      "options": [
+        "A minor earthquake",
+        "Physical and spiritual destabilization when the natural order collapses",
+        "A simple tremor before prayer",
+        "The movement of pilgrims during Hajj"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The choice of 'zalzala' (earthquake) evokes imagery of cosmic disruption, symbolizing both physical and spiritual destabilization when the natural order collapses under divine command."
+    },
+    {
+      "id": "22_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 26,
+      "question": "Prophet Ibrahim was commanded to both reject shirk and purify the Kaaba for worshippers.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Allah instructs Ibrahim with two core principles: first, to reject all forms of shirk (associating partners with God), and second, to purify the House physically and spiritually for worshippers."
+    },
+    {
+      "id": "22_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 27,
+      "question": "What does the phrase 'on every lean camel' in verse 27 symbolize?",
+      "options": [
+        "The wealth of pilgrims",
+        "The physical and economic sacrifices pilgrims historically made",
+        "The speed of travel to Mecca",
+        "The type of animal required for sacrifice"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The phrase 'rijalan' (on foot) and 'ala kulli damir' (on every lean camel) highlights the physical and economic sacrifices pilgrims historically made, journeying from remote areas."
+    },
+    {
+      "id": "22_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 32,
+      "question": "What does the term 'sha'a'ir Allah' (symbols of Allah) encompass according to the tafsir?",
+      "options": [
+        "Only the Kaaba",
+        "The Quran alone",
+        "The rituals of Hajj, the Kaaba, sacrificial animals, and acts of worship tied to sacred spaces",
+        "Only the five daily prayers"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The term 'sha'a'ir' encompasses the visible rites and symbols established by Allah, such as the rituals of Hajj, the Kaaba, the sacrificial animals (hady), and other acts of worship tied to sacred spaces and times."
+    },
+    {
+      "id": "22_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, what does the 'convulsion of the Hour' symbolize in Shia eschatology?",
+      "options": [
+        "A natural disaster only",
+        "Societal and spiritual upheavals preceding the reappearance of Imam Mahdi",
+        "The end of all religions",
+        "A metaphor for sleep"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia commentators like Tabatabai interpret the 'zalzala' as symbolizing societal and spiritual upheavals preceding the reappearance of Imam Mahdi, whom Shia tradition holds as the eschatological restorer of divine justice."
+    },
+    {
+      "id": "22_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 11,
+      "question": "According to classical Shia exegesis, worshipping Allah 'on an edge' refers to faith that is contingent on worldly circumstances rather than rooted conviction.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Allama Tabatabai unpacks the 'edge' as symbolic of spiritual instability, likening such believers to one standing precariously at a cliff's brink, their faith contingent on circumstance rather than rooted conviction."
+    },
+    {
+      "id": "22_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 26,
+      "question": "According to Tabrisi in Majma al-Bayan, what does 'purify My House' signify in Shia thought?",
+      "options": [
+        "Physical cleaning only",
+        "Both literal and symbolic mandate requiring expulsion of moral and ideological impurities",
+        "Removing animals from the Kaaba",
+        "Painting the Kaaba white"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The directive to 'purify My House' is understood in Shia thought as both a literal and symbolic mandate, requiring the expulsion of moral and ideological impurities."
+    },
+    {
+      "id": "22_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 41,
+      "question": "According to Tabatabai, what four sacred obligations must be fulfilled for legitimate authority according to verse 41?",
+      "options": [
+        "Fasting, charity, pilgrimage, faith",
+        "Establishing prayer, distributing zakat, enjoining good, and forbidding evil",
+        "Building mosques, teaching Quran, fasting, and fighting",
+        "Marriage, charity, fasting, and jihad"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai elucidates that temporal authority (tamkin) is contingent upon fulfilling four sacred obligations: establishing prayer, distributing zakat, enjoining good (amr bil-ma'ruf), and forbidding evil (nahy anil-munkar)."
+    },
+    {
+      "id": "22_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 1,
+      "question": "How does contemporary scholar Ayatollah Makarem Shirazi interpret the concept of 'taqwa' in verse 1?",
+      "options": [
+        "Just fear of punishment",
+        "An awakened ethical awareness aligning human actions with cosmic responsibility",
+        "Avoiding all social interactions",
+        "Only performing ritual prayers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary Shia scholars like Ayatollah Naser Makarem Shirazi emphasize that 'taqwa' here isn't mere fear but an awakened ethical awareness—a call to align human actions with cosmic responsibility."
+    },
+    {
+      "id": "22_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 31,
+      "question": "According to contemporary Shia scholars, the warning against shirk in verse 31 can apply to modern idolatries like consumerism and nationalism.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary Shia scholars interpret this verse as a timeless warning against the fragmentation of human purpose. Today, this resonates as a critique of modern idolatries—consumerism, nationalism, or the cult of individualism."
+    },
+    {
+      "id": "22_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 41,
+      "question": "How do contemporary scholars connect the verse's call to 'give zakat' with modern economics?",
+      "options": [
+        "Zakat is outdated and should be replaced",
+        "Zakat can address systemic inequality when integrated into progressive fiscal policies",
+        "Zakat should only be given to family members",
+        "Zakat is only relevant for agricultural societies"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars like Dr. Mahmoud Vaezi highlight zakat's potential to address systemic inequality when integrated into progressive fiscal policies, framing zakat as both a spiritual duty and a tool for sustainable development."
+    },
+    {
+      "id": "22_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 26,
+      "question": "The Kaaba's cubic form has been connected by scholars to the symmetry found in crystalline structures, symbolizing balance and harmony.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern physics offers a metaphor: the Kaaba's cubic form mirrors the symmetry found in crystalline structures or celestial orbits, symbolizing balance and harmony."
+    },
+    {
+      "id": "22_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to the teachings of the Ahlul Bayt, what is 'taqwa' as described by Imam Ali in Nahj al-Balagha?",
+      "options": [
+        "A heavy burden that weighs down the believer",
+        "The mount that carries its rider to safety on the Day of Great Terror",
+        "A form of punishment",
+        "Optional for believers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (as) elucidates in Nahj al-Balagha: 'Taqwa is the mount that carries its rider to safety on the Day of Great Terror.'"
+    },
+    {
+      "id": "22_14",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 11,
+      "question": "According to Imam Jafar al-Sadiq, what happens to believers who face trials with faith?",
+      "options": [
+        "They become weaker",
+        "They are like gold: the fire does not diminish them but only purifies them",
+        "They lose their faith",
+        "They should avoid all hardships"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (as) taught, 'Believers are like gold: the fire does not diminish them but only purifies them' (al-Kafi)."
+    },
+    {
+      "id": "22_15",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 26,
+      "question": "According to Lady Fatimah (as), the sanctity of the Kaaba mirrors the sanctity of Muhammad's household.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Lady Fatimah (as) illuminates this in her famous sermon: 'The Kaaba's sanctity mirrors the sanctity of Muhammad's household. As you circle the House of Stone, circle the House of Revelation with your loyalty.'"
+    },
+    {
+      "id": "22_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 41,
+      "question": "According to the Ahlul Bayt teachings, what is the relationship between worship and justice?",
+      "options": [
+        "They are completely separate concepts",
+        "Justice of one hour is better than worship of sixty years",
+        "Worship is always superior to justice",
+        "Justice is only for rulers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (as) taught that 'The justice of one hour is better than worship of sixty years' – preparing our souls for the Supreme Judge's scale."
+    },
+    {
+      "id": "22_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 11,
+      "question": "What is a key difference between Shia and Sunni interpretations of verse 11 regarding faith instability?",
+      "options": [
+        "Only Sunni scholars discuss this verse",
+        "Shia exegetes link steadfastness to allegiance to the Ahl al-Bayt, while Sunni interpretations focus on individual perseverance",
+        "Only Shia scholars believe in testing of faith",
+        "Both traditions reject the metaphor of the edge"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia readings often connect steadfastness to communal allegiance to the Ahl al-Bayt, reinforcing the socio-political dimensions of faith, while Sunni discourses stress individual perseverance through tribulations."
+    },
+    {
+      "id": "22_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 26,
+      "question": "Both Shia and Sunni traditions agree that the Kaaba serves as a locus of tawhid and worship, though they differ on some theological emphases.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions uphold the verse's central message: the Kaaba's enduring symbolism as a locus of tawhid and worship, though Shia exegesis often integrates Imamology while Sunni prioritizes historical continuity."
+    },
+    {
+      "id": "22_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 41,
+      "question": "How do Shia and Sunni scholars differ in their interpretation of verse 41's requirements for righteous governance?",
+      "options": [
+        "Only Sunni scholars discuss governance",
+        "Shia scholars link it to divinely appointed Imamate while Sunni scholars apply it to any righteous ruler",
+        "Only Shia scholars believe in prayer",
+        "There are no differences between the traditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Shia exegetes frame the verse as prescriptive for divinely appointed leadership linked to the Imamate, while Sunni commentators emphasize the verse's applicability to any righteous ruler, focusing on practical governance."
+    },
+    {
+      "id": "22_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 1,
+      "question": "According to the comparative analysis, both Shia and Sunni traditions agree that the Day of Judgment's terror emphasizes divine justice and the need for spiritual preparedness.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both traditions converge on the verse's core message: a universal call to taqwa (God-consciousness) and the awe-inspiring nature of the Day of Judgment, emphasizing divine justice and spiritual preparedness."
+    }
+  ]
+}

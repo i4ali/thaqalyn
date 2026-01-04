@@ -1,0 +1,270 @@
+{
+  "surahNumber": 2,
+  "questions": [
+    {
+      "id": "2_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to the tafsir, what does the phrase 'This is the Book, there is no doubt in it' signify about the Quran?",
+      "options": [
+        "It is merely a historical document",
+        "It is a source of divine certainty and complete guidance for the God-conscious",
+        "It requires interpretation by scholars only",
+        "It is meant for a specific group of people"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The opening of Al-Baqarah establishes the Quran as the ultimate source of divine certainty and guidance, describing it as guidance for the muttaqin (God-conscious), emphasizing its role as a comprehensive guide for those who seek spiritual awareness."
+    },
+    {
+      "id": "2_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 101,
+      "question": "According to the tafsir, the verse about throwing the scripture 'behind their backs' refers to wilful neglect of divine truth despite knowing it.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The striking image of throwing the scripture 'waraa'a zuhoorihim' (behind their backs) symbolises wilful neglect - knowing the truth but acting as if ignorant. It represents a conscious choice to ignore divine guidance."
+    },
+    {
+      "id": "2_3",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 102,
+      "question": "In verse 2:102, why does the Quran emphasize that Prophet Sulaiman did not disbelieve?",
+      "options": [
+        "To show his political power",
+        "To refute false accusations that he practiced witchcraft and affirm prophetic infallibility",
+        "To explain his building of the Temple",
+        "To describe his relationship with the jinn"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse begins by refuting the claim that Sulaiman used magic, emphasizing that 'Sulaiman did not disbelieve' - a crucial point underscoring prophetic infallibility (ismah) in Shia thought. The devils exploited his legendary wisdom to spread corrupt teachings."
+    },
+    {
+      "id": "2_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 152,
+      "question": "What does the phrase 'Remember Me; I will remember you' establish according to the tafsir?",
+      "options": [
+        "A one-way relationship from Allah to humans",
+        "A reciprocal bond between Allah and humanity through remembrance and gratitude",
+        "An obligation to memorize the Quran",
+        "A command to remember only during prayer"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allah establishes a reciprocal bond with humanity, inviting us into a dynamic relationship of remembrance and gratitude. This dhikr encompasses conscious awareness, heartfelt reflection, and vocal remembrance of Allah."
+    },
+    {
+      "id": "2_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 100,
+      "question": "According to Tabatabai in Al-Mizan, what does the 'covenant' mentioned in verse 2:100 extend to?",
+      "options": [
+        "Only business agreements",
+        "The primordial covenant with Allah (Quran 7:172) and subsequent religious obligations",
+        "Tribal agreements only",
+        "Marriage contracts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai in Al-Mizan emphasizes that the 'covenant' extends beyond specific agreements with Jewish tribes to include the primordial covenant of humanity with Allah (Quran 7:172) and all subsequent religious obligations."
+    },
+    {
+      "id": "2_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 101,
+      "question": "According to Shia exegesis, the rejection of Prophet Muhammad by some Jewish scholars mirrors later rejections of the Imams, as both are manifestations of the same divine covenant.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai argues that recognising true prophethood necessitates spiritual attunement to the light of guidance embodied in the Prophet and his Ahlul Bayt. The verse implicitly condemns those who separate prophethood from walayah (divine guardianship), as their rejection prefigures later rejections of the Imams."
+    },
+    {
+      "id": "2_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 151,
+      "question": "According to classical Shia exegetes, what does 'hikma' (wisdom) in verse 2:151 signify?",
+      "options": [
+        "Academic knowledge only",
+        "Esoteric knowledge entrusted to the Prophet and preserved through the Imams",
+        "Philosophical reasoning",
+        "Worldly wisdom for business"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabrisi's Majma al-Bayan highlights the term hikma as esoteric knowledge entrusted exclusively to the Prophet and his successors. While the 'Book' represents the exoteric Quranic text, 'wisdom' signifies its inner dimensions preserved through the walaya of the Imams."
+    },
+    {
+      "id": "2_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 276,
+      "question": "What does Tabatabai teach about the 'destruction' of riba (usury) mentioned in verse 2:276?",
+      "options": [
+        "It refers only to monetary loss",
+        "It encompasses both material loss and spiritual ruin as manifestations of divine justice",
+        "It is metaphorical with no real consequence",
+        "It applies only to banking interest"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai's Al-Mizan underscores that the 'destruction' (mahq) of riba and the 'increase' of charity are not merely material outcomes but manifestations of divine justice and cosmic balance, encompassing both material and spiritual dimensions."
+    },
+    {
+      "id": "2_9",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 101,
+      "question": "Contemporary scholars like Ayatollah Makarem Shirazi interpret the rejection of truth in verse 2:101 as relevant to modern issues like climate denialism and institutional resistance to uncomfortable truths.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Contemporary Shia scholars interpret this verse as a timeless warning against intellectual rigidity - whether in clinging to dogma, resisting ethical evolution, or weaponizing faith to serve power structures. Climate denialism despite Islam's emphasis on environmental stewardship mirrors the verse's critique of willful ignorance."
+    },
+    {
+      "id": "2_10",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 151,
+      "question": "How do contemporary scholars like Dr. Mohammad Ali Shomali frame the concept of 'tazkiyah' (purification) in verse 2:151?",
+      "options": [
+        "As a personal ritual only",
+        "As both spiritual refinement and ethical-social reform to combat systemic injustices",
+        "As a requirement for prophets only",
+        "As an outdated concept"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Dr. Mohammad Ali Shomali frame tazkiyah as a call to combat systemic injustices - poverty, racism, or environmental exploitation - by aligning societal structures with divine wisdom, extending beyond personal spiritual refinement."
+    },
+    {
+      "id": "2_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 226,
+      "question": "According to contemporary Shia scholars, what is the wisdom behind the four-month waiting period (ila) mentioned in verse 2:226?",
+      "options": [
+        "It is merely a legal formality",
+        "It aligns with modern conflict resolution principles, allowing time for reflection and reconciliation",
+        "It punishes the husband",
+        "It has no practical application today"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Ayatollah Makarem Shirazi and Sayyid Muhammad Hussein Fadlallah interpret this as a divine safeguard for marital stability that aligns with modern understandings of conflict resolution, allowing spouses to move beyond reactive anger toward thoughtful reflection."
+    },
+    {
+      "id": "2_12",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 276,
+      "question": "According to contemporary scholarship, the verse about riba critiques modern issues like student debt burdens, payday loan exploitation, and austerity policies.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Globally, this verse critiques crises like student debt burdens, payday loan exploitation, and austerity policies that disproportionately harm marginalized communities. Contemporary Islamic finance models like qard al-hasan offer practical alternatives aligned with this ethos."
+    },
+    {
+      "id": "2_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 101,
+      "question": "According to Imam Jafar al-Sadiq (AS), what did the Jewish scholars' rejection of Prophet Muhammad's message parallel?",
+      "options": [
+        "The rejection of Moses by Pharaoh",
+        "Modern enemies of the Ahlul Bayt who carry the Quran but cast away the Wilayah",
+        "The rejection of Ibrahim by his father",
+        "The disbelief of the Meccans"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq (AS) explains that those who rejected Prophet Muhammad despite finding his description in the Torah are similar to 'our enemies today who carry the Quran in their chests but cast away our Wilayah behind their backs' (Tafsir al-Qummi)."
+    },
+    {
+      "id": "2_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 151,
+      "question": "According to Hadith al-Thaqalayn, the Quran and the Ahlul Bayt will never separate until they return to the Prophet at the Pool of Kawthar.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The Holy Prophet (pbuh) declared: 'I leave among you two weighty things: the Book of Allah and my Ahlul Bayt. They will never separate until they return to me at the Pool (of Kawthar)' - emphasizing the inseparability of Quranic guidance and the Ahlul Bayt's teachings."
+    },
+    {
+      "id": "2_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 276,
+      "question": "According to Imam Ali (AS), how does riba compare to charity?",
+      "options": [
+        "Both are equally acceptable",
+        "Riba is a door of destruction, while charity is a gate of Paradise",
+        "Charity is optional while riba is permitted",
+        "They are unrelated concepts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) taught that 'Riba is a door from the doors of destruction, while charity is a gate from the gates of Paradise' (Bihar al-Anwar), revealing the cosmic law that material gain divorced from divine mercy becomes self-annihilating."
+    },
+    {
+      "id": "2_16",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 285,
+      "question": "According to Imam Ali (AS) in Nahj al-Balagha, who can truly grasp the inner meanings of the Quran?",
+      "options": [
+        "Any scholar who studies Arabic",
+        "Only the purified ones (Ahlul Bayt) appointed by Allah as guides",
+        "Professional historians",
+        "Anyone who reads it"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Ali (AS) states in Nahj al-Balagha: 'The Book of Allah has its outer and inner meanings; its inner meanings interpret its outer. None can grasp its truth except through the purified ones [Ahlul Bayt] who were appointed by Allah as guides.'"
+    },
+    {
+      "id": "2_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 101,
+      "question": "How do Sunni and Shia scholars differ in their interpretation of the phrase 'throwing the Book behind their backs'?",
+      "options": [
+        "There is no difference in interpretation",
+        "Sunni scholars focus on Jewish scriptural distortion, while Shia scholars extend this to include rejection of divinely appointed Imams",
+        "Only Sunni scholars consider it important",
+        "Shia scholars reject this verse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni commentators focus on the verse's alignment with Quranic charges of Jewish scriptural distortion, while Shia scholars like Tabatabai extend this principle to include the rejection of divinely appointed leadership (Imamah), interpreting the 'Book of Allah' as encompassing both written scripture and the living guidance of the Ahlul Bayt."
+    },
+    {
+      "id": "2_18",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 226,
+      "question": "Both Sunni and Shia scholars agree that the four-month waiting period in verse 2:226 prevents indefinite marital limbo and protects women's rights.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both Shia and Sunni exegetes converge on the verse's primary legal objective: regulating the pre-Islamic practice of ila by instituting a four-month waiting period for reconciliation, preventing indefinite marital limbo and safeguarding women's rights against arbitrary abandonment."
+    },
+    {
+      "id": "2_19",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 276,
+      "question": "What is a key difference between Sunni and Shia interpretations of the charity mentioned in verse 2:276?",
+      "options": [
+        "Sunni scholars reject the importance of charity",
+        "Shia scholars do not emphasize charity",
+        "Shia thought links charity to supporting the ummah through institutions like khums tied to the Imamate's legacy",
+        "Both traditions interpret it identically"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Practically, Sunni jurists emphasize adherence to fiqh rulings on financial transactions, while Shia thought links charity to supporting the ummah through institutions like khums, which is tied to the Imamate's legacy, reflecting distinct approaches to religious authority."
+    },
+    {
+      "id": "2_20",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 285,
+      "question": "According to comparative exegesis, Shia scholars interpret 'the believers' in verse 2:285 as specifically referring to the Imams, while Sunni scholars interpret it as the Prophet's companions.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Sunni commentators like Tabari and Ibn Kathir broadly interpret 'the believers' as the Prophet's companions, emphasizing their collective righteousness. In contrast, Shia exegetes like Al-Qummi and Tusi argue that 'the believers' specifically denotes the Imams, whose perfected faith exemplifies the verse's ideals."
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "surahNumber": 21,
+  "questions": [
+    {
+      "id": "21_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to verse 1, what state does 'ghaflah' (heedlessness) describe?",
+      "options": [
+        "A state of physical exhaustion",
+        "A state of spiritual numbness where one becomes detached from divine consciousness",
+        "A state of active rebellion against God",
+        "A state of deep meditation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ghaflah (heedlessness) describes a state of spiritual numbness, where one becomes detached from divine consciousness, while 'mu'ridun' (those turning away) highlights the deliberate choice to ignore truth and moral responsibility."
+    },
+    {
+      "id": "21_2",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 51,
+      "question": "What does the Arabic term 'rushd' refer to regarding Prophet Ibrahim in verse 51?",
+      "options": [
+        "Physical strength and endurance",
+        "Wealth and prosperity",
+        "Sound judgment, moral discernment, and inclination toward truth",
+        "Prophetic miracles"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Rushd refers to clarity of thought, moral discernment, and innate inclination toward truth that guided Ibrahim even before his formal prophethood. It signifies a divinely inspired inner compass."
+    },
+    {
+      "id": "21_3",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 69,
+      "question": "In verse 69, Allah commanded the fire to become 'coolness and safety' (bardan wa salaman) for Prophet Ibrahim.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Allah intervened with the divine command 'Ya naar, kuni bardan wa salaman ala Ibrahim' - transforming the fire into a source of coolness and safety. The word 'bard' (coolness) contrasts with fire's natural heat, while 'salam' (safety) signifies complete protection from harm."
+    },
+    {
+      "id": "21_4",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 87,
+      "question": "What is the heartfelt prayer of Prophet Yunus (Jonah) mentioned in verse 87?",
+      "options": [
+        "Subhanallahi wa bihamdihi",
+        "La ilaha illa Anta Subhanaka, inni kuntu min adh-dhalimin",
+        "Hasbunallahu wa ni'mal wakil",
+        "Rabbi inni lima anzalta ilayya min khayrin faqir"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Yunus's prayer 'La ilaha illa Anta Subhanaka, inni kuntu min adh-dhalimin' (There is no god but You, glorified are You; I have wronged myself) became a timeless model of repentance and exemplifies tawbah (repentance) and tawakkul (trust in Allah)."
+    },
+    {
+      "id": "21_5",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabatabai in Al-Mizan, what does 'their account' (hisabuhum) in verse 1 encompass?",
+      "options": [
+        "Only financial matters",
+        "Only the Day of Judgment",
+        "Both the immediate historical context and the ultimate accountability of the Hereafter",
+        "Only punishment in this world"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tabatabai interprets 'their account' (hisabuhum) as encompassing both the immediate historical context of divine reckoning - such as the imminent rise of Islam and fall of polytheism - and the ultimate accountability of the Hereafter."
+    },
+    {
+      "id": "21_6",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 51,
+      "question": "According to Shia exegesis, Ibrahim's 'rushd' was inseparable from his prophetic infallibility (ismah).",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai's Al-Mizan expands the concept of rushd through the Shia paradigm of ismah (infallibility), positing that Ibrahim's 'rushd' was inseparable from his prophetic impeccability."
+    },
+    {
+      "id": "21_7",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 58,
+      "question": "According to Tabatabai, why did Ibrahim leave the largest idol intact when destroying the idols?",
+      "options": [
+        "He was afraid of the people's reaction",
+        "It was too heavy to break",
+        "To create a scenario compelling people to confront the illogic of their idolatry",
+        "He intended to worship it later"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tabatabai in Al-Mizan emphasizes that Ibrahim's act was a calculated invitation to intellectual awakening. By leaving the largest idol intact, Ibrahim created a scenario compelling his people to confront the illogic of their idolatry through critical reflection."
+    },
+    {
+      "id": "21_8",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 83,
+      "question": "According to Shia exegesis, what was the purpose of Prophet Ayyub's (Job's) affliction?",
+      "options": [
+        "A punishment for his sins",
+        "A divine test to elevate his spiritual rank",
+        "A random occurrence with no meaning",
+        "A warning for his people"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai's Al-Mizan underscores that Ayyub's affliction was not punitive but a divine test to elevate his spiritual rank, reflecting the Shia principle that trials purify the believer and manifest divine wisdom."
+    },
+    {
+      "id": "21_9",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 30,
+      "question": "How does verse 30's description of the heavens and earth as a 'joined entity' (ratq) relate to modern science?",
+      "options": [
+        "It contradicts modern scientific theories",
+        "It echoes the Big Bang theory where an initial singularity expanded into the universe",
+        "It describes a flat Earth model",
+        "It has no relation to scientific discoveries"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary scholars like Ayatollah Nasir Makarim Shirazi emphasize the verse's alignment with modern cosmology. The description of heavens and earth as a 'joined entity' (ratq) before being 'separated' (fataq) echoes the Big Bang theory."
+    },
+    {
+      "id": "21_10",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 69,
+      "question": "Contemporary scholars interpret Ibrahim's trial with fire as a call to 'spiritual resistance' where faith fuels nonviolent perseverance.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Ayatollah Muhammad Hussein Fadlallah interpreted the miracle as a call to 'spiritual resistance,' where faith fuels nonviolent perseverance. This aligns with global movements for climate justice or anti-war efforts."
+    },
+    {
+      "id": "21_11",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 58,
+      "question": "How do contemporary scholars frame Ibrahim's destruction of idols in relation to modern challenges?",
+      "options": [
+        "As an ancient story with no modern relevance",
+        "As a call to dismantle modern 'idolatries' like systemic injustices and materialism",
+        "As a justification for physical violence",
+        "As a metaphor for childhood rebellion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contemporary Shia scholars like Ayatollah Nasir Makarem Shirazi frame this act as a call to dismantle modern 'idolatries': systemic injustices, materialism, and ideological dogmas that fragment societies."
+    },
+    {
+      "id": "21_12",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 83,
+      "question": "According to contemporary analysis, what modern crisis does Ayyub's story address?",
+      "options": [
+        "Financial planning",
+        "Mental health struggles, emphasizing vocalizing pain while anchoring hope in divine compassion",
+        "Political campaigns",
+        "Technological advancement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ayatollah Naser Makarim Shirazi emphasizes that Ayyub's story teaches believers to vocalize pain while anchoring hope in Allah's limitless compassion - a balance critical in addressing modern mental health struggles, where silence often exacerbates despair."
+    },
+    {
+      "id": "21_13",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 51,
+      "question": "According to Imam Sadiq, what was Ibrahim's 'rushd' truly about?",
+      "options": [
+        "Physical strength in battles",
+        "Recognition of the Friend of Allah (Wali) in every age",
+        "Accumulation of worldly wealth",
+        "Political leadership skills"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Sadiq explains, 'The rushd of Ibrahim was his recognition of the Friend of Allah (Wali) in every age,' emphasizing that true judgment arises from adherence to divine guardianship (wilayah)."
+    },
+    {
+      "id": "21_14",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 69,
+      "question": "According to the Sixth Imam (Imam Sadiq), the fire obeyed Allah for Ibrahim's prophethood, showing how creation obeys for the Wilayah of Muhammad's Progeny.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "The 6th Imam states: 'The fire obeyed its Lord for the sake of Ibrahim's prophethood; how much more quickly does creation obey Allah for the sake of the Wilayah of Muhammad's Progeny!' (Al-Kafi)."
+    },
+    {
+      "id": "21_15",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 87,
+      "question": "According to Imam Jafar al-Sadiq, what does Yunus's realization of being 'min az-zalimin' truly represent?",
+      "options": [
+        "An admission of committing major sins",
+        "Recognition of having limited Allah's vast mercy through his assumptions",
+        "A confession of abandoning prayer",
+        "An acknowledgment of political mistakes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imam Jafar al-Sadiq explained that Yunus' realization of being 'min az-zalimin' (among the wrongdoers) wasn't merely admission of error, but recognition of having limited Allah's vast mercy through his assumption that Allah would not decree upon him."
+    },
+    {
+      "id": "21_16",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 58,
+      "question": "According to Imam Jafar al-Sadiq, 'The greatest idol people worship is their own ego (nafs).'",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Jafar al-Sadiq comments on the verse about Ibrahim breaking idols: 'The greatest idol people worship is their own ego (nafs).' Just as Ibrahim left the largest idol to provoke introspection, the Imams call humanity to confront the ultimate 'idol' within."
+    },
+    {
+      "id": "21_17",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 69,
+      "question": "What is a key difference between Shia and Sunni interpretation of Ibrahim's deliverance from fire?",
+      "options": [
+        "Sunni scholars deny the miracle occurred",
+        "Shia scholars reject divine intervention",
+        "Shia tafsir extends the narrative's resonance to themes of wilayah and the Ahl al-Bayt's protection, while Sunni exegesis focuses on evidential value for divine truth",
+        "There are no differences in interpretation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia tafsir works like Al-Mizan and Al-Tibyan extend the narrative's symbolic resonance to themes of wilayah (divine guardianship), linking Ibrahim's deliverance to the sanctity of the Ahl al-Bayt. Sunni commentators like Al-Razi focus on its evidential value for divine truth."
+    },
+    {
+      "id": "21_18",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 51,
+      "question": "What is a key divergence between Shia and Sunni interpretation regarding Ibrahim's 'rushd'?",
+      "options": [
+        "Sunni scholars deny Ibrahim had rushd",
+        "Sunni scholars stress Ibrahim's use of reason to arrive at monotheism, while Shia exegetes interpret rushd as reflecting the necessity of divinely guided leadership (imamah)",
+        "Shia scholars consider rushd as physical wisdom only",
+        "Both traditions interpret rushd identically"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni scholars like Qurtubi and Razi frame rushd within human agency, stressing Ibrahim's active use of reason. Shia exegetes interpret rushd as an exclusive gift reflecting Allah's eternal knowledge and the necessity of divinely guided leadership (imamah)."
+    },
+    {
+      "id": "21_19",
+      "type": "trueFalse",
+      "layer": 5,
+      "verseNumber": 83,
+      "question": "Both Shia and Sunni traditions agree on Prophet Ayyub's exemplary patience and the verse's call for believers to trust in divine mercy during trials.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Both Shia and Sunni exegetes converge on core themes of Prophet Ayyub's patience, sincere supplication, and divine mercy. Both traditions reinforce the verse's practical application: encouraging believers to emulate Ayyub's patience and trust in divine mercy during trials."
+    },
+    {
+      "id": "21_20",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 78,
+      "question": "How do Shia commentaries interpret the differing judgments of Prophets Dawud and Sulayman regarding the sheep and field dispute?",
+      "options": [
+        "They view Dawud's ruling as deficient",
+        "They reject both prophets' judgments",
+        "They interpret the verse as describing complementary judgments for different aspects of the case, reflecting prophetic infallibility",
+        "They focus only on Sulayman's judgment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shia sources like Majma al-Bayan (Tabrisi) and Al-Mizan reject any implication of Dawud's ruling being deficient, interpreting the verse as describing complementary judgments for different aspects of the case, reflecting the Shia principle of prophetic infallibility (ismah)."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "surahNumber": 62,
+  "questions": [
+    {
+      "id": "62_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "In Surah Al-Jumu'a verse 2, what does the term 'al-hikmah' (wisdom) encompass according to Shia scholars like Allamah Tabatabai?",
+      "options": [
+        "Only the literal text of the Quran",
+        "The deeper, esoteric understanding of revelation preserved through the Ahlul Bayt",
+        "Philosophical reasoning independent of revelation",
+        "The legal rulings of Islamic jurisprudence only"
+      ],
+      "correctAnswer": "The deeper, esoteric understanding of revelation preserved through the Ahlul Bayt",
+      "explanation": "Shia scholars like Allamah Tabatabai in Tafsir al-Mizan explain that al-hikmah encompasses the deeper, esoteric understanding of revelation preserved through the Ahlul Bayt, who inherited the Prophet's spiritual and intellectual legacy. This dual teaching—outward scripture and inward wisdom—reflects the Shia belief in the necessity of both the Quran and the divinely guided Imams for complete guidance."
+    },
+    {
+      "id": "62_2",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "What does the term 'fadl Allah' (divine bounty) in verse 4 refer to according to the Foundation Layer?",
+      "options": [
+        "Only material wealth and financial blessings",
+        "Allah's overflowing grace, encompassing both material blessings and spiritual guidance",
+        "The rewards given after death only",
+        "The natural resources of the earth"
+      ],
+      "correctAnswer": "Allah's overflowing grace, encompassing both material blessings and spiritual guidance",
+      "explanation": "The term fadl refers to Allah's overflowing grace, encompassing both material blessings and spiritual guidance, while Dhu al-Fadl al-Azim highlights His limitless capacity to bestow such grace. This verse affirms that divine favor—whether prophethood, knowledge, or spiritual authority—is granted solely by Allah's will, not human effort or status."
+    },
+    {
+      "id": "62_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 3,
+      "question": "According to Tabrisi in Majma al-Bayan, what does the phrase 'to others of them who have not yet joined them' in verse 3 signify?",
+      "options": [
+        "Only the Prophet's immediate companions",
+        "The continuity of the Prophet's mission through the unbroken chain of Imams to subsequent generations",
+        "Future non-Muslim civilizations",
+        "Angels and celestial beings"
+      ],
+      "correctAnswer": "The continuity of the Prophet's mission through the unbroken chain of Imams to subsequent generations",
+      "explanation": "Tabrisi in Majma al-Bayan elucidates that the verse addresses the continuity of the Prophet's mission beyond his immediate companions to subsequent generations, emphasizing that divine wisdom necessitates an unbroken chain of guidance. This aligns with the Shia doctrine that the Prophet's spiritual and legislative authority was inherited by the Twelve Imams from the Ahl al-Bayt."
+    },
+    {
+      "id": "62_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 6,
+      "question": "According to Allama Tabatabai in Tafsir al-Mizan, the verse's command to 'wish for death' in verse 6 is meant as a symbolic expression rather than a literal test of sincerity.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Tabatabai emphasizes that this demand serves as a literal litmus test for sincerity, rooted in the principle that true allies (awliya) of Allah yearn for proximity to Him through death, which severs worldly attachments. This aligns with the Quranic motif of testing truth-claims through existential consequences, noting that only those certain of divine reward would embrace such a wish."
+    },
+    {
+      "id": "62_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 9,
+      "question": "How do contemporary Shia scholars like Ayatollah Naser Makarem Shirazi interpret the command to 'proceed to the remembrance of Allah' in verse 9 for modern times?",
+      "options": [
+        "As merely physical attendance at the mosque",
+        "As cultivating mindful presence to counterbalance modern society's transactional mindset and digital distraction",
+        "As abandoning all worldly work permanently",
+        "As a ritual with no social dimension"
+      ],
+      "correctAnswer": "As cultivating mindful presence to counterbalance modern society's transactional mindset and digital distraction",
+      "explanation": "Ayatollah Naser Makarem Shirazi emphasizes that the verse's command to 'proceed to the remembrance of Allah' isn't merely about physical attendance but cultivating mindful presence—a counterbalance to modern society's transactional mindset. Scholars like Dr. Liyakat Takim highlight its social dimension: Jumu'a becomes a weekly 'reset' fostering community solidarity, critical in fragmented urban environments."
+    },
+    {
+      "id": "62_6",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 5,
+      "question": "According to Imam Sadiq in the Ahlul Bayt Layer, what does the comparison of those with knowledge who don't act to 'a donkey carrying books' reveal?",
+      "options": [
+        "That books are too heavy for animals to carry",
+        "That knowledge without action reduces one to being unable to perceive the light within the words",
+        "That donkeys are inherently unintelligent",
+        "That physical books should not be transported"
+      ],
+      "correctAnswer": "That knowledge without action reduces one to being unable to perceive the light within the words",
+      "explanation": "Imam Sadiq (as) states: 'One who acts without knowledge is like one traveling without a path, never increasing except in distance from the goal. But worse than him is the one with knowledge who does not act, for his example is like the donkey carrying books.' This warning emphasizes that mere possession of scripture without living by its principles reduces one to a beast of burden, unable to perceive the light within the words."
+    },
+    {
+      "id": "62_7",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 2,
+      "question": "According to Imam Ali in Nahj al-Balagha, the Quran has seven depths of inner meaning, manifest through the living wisdom of the Imams.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Imam Ali (peace be upon him) elucidates in Nahj al-Balagha: 'The Quran has an outer form and an inner depth, a limit and a precept. Its inner depth has yet another depth, until seven depths.' These depths manifest through the living wisdom of the Imams, the inheritors of prophetic knowledge, representing the esoteric dimension of revelation (Hikmah) mentioned in verse 2."
+    },
+    {
+      "id": "62_8",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 9,
+      "question": "What is the primary theological divergence between Sunni and Shia interpretations of the Friday prayer obligation in verse 9?",
+      "options": [
+        "Sunni scholars reject Friday prayer entirely",
+        "Sunni jurists root Friday prayer validity in collective duty, while Shia scholars historically require the Imam's presence or representative",
+        "Shia scholars consider Friday prayer forbidden",
+        "Both traditions have identical requirements with no differences"
+      ],
+      "correctAnswer": "Sunni jurists root Friday prayer validity in collective duty, while Shia scholars historically require the Imam's presence or representative",
+      "explanation": "Both Shia and Sunni exegetes affirm the obligation to prioritize Friday congregational prayer. However, divergences emerge in theological foundations for the prayer's validity. Sunni jurists emphasize collective duty (fard kifaya) for Muslim men, while Shia theological tradition has historically connected the validity of Friday prayer to the presence of the Imam or his appointed representative, reflecting the doctrine of Imamah."
+    }
+  ]
+}

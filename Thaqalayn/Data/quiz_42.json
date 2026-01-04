@@ -1,0 +1,140 @@
+{
+  "surahNumber": 42,
+  "questions": [
+    {
+      "id": "42_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, what do the disconnected letters 'Ha Meem' at the opening of Surah Ash-Shura represent?",
+      "options": [
+        "Simple alphabet letters with no meaning",
+        "A profound reminder of the Quran's divine origin and inimitability",
+        "The names of early Muslims",
+        "A form of poetry common in pre-Islamic Arabia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Shia tafsir, these huruf al-muqatta'at (disjointed letters) are understood as a profound reminder of the Quran's divine origin and inimitability (i'jaz), challenging those who doubted its revelation."
+    },
+    {
+      "id": "42_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 38,
+      "question": "According to the tafsir, the concept of 'shura' (consultation) in verse 38 operates within the framework of divine guidance, complementing the leadership of the Ahlul Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Shia tafsir emphasizes that shura operates within the framework of divine guidance, complementing—not replacing—the leadership of the Ahlul Bayt. Imam Ali (AS) upheld consultation while stressing that ultimate truth flows from Quranic principles and the Prophet's household."
+    },
+    {
+      "id": "42_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 23,
+      "question": "In verse 23, what does the term 'al-qurba' (kinship) specifically refer to according to Shia exegetes like Allama Tabatabai?",
+      "options": [
+        "All Muslims in general",
+        "The Prophet's companions only",
+        "The Ahlul Bayt—specifically Fatima, Ali, Hasan, and Husayn",
+        "All of humanity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Classical commentators such as Allama Tabatabai in Al-Mizan and Sheikh Tabrisi in Majma al-Bayan emphasize that 'al-qurba' refers explicitly to the Ahlul Bayt—the Prophet's family—specifically Fatima, Ali, Hasan, and Husayn (peace be upon them)."
+    },
+    {
+      "id": "42_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 38,
+      "question": "According to Tabrisi in Majma al-Bayan, what is the relationship between consultation (shura) and divine authority?",
+      "options": [
+        "Shura replaces the need for divine leadership",
+        "Shura is only for secular matters with no religious basis",
+        "Shura must align with the Quran and Sunnah as interpreted by the Ahlul Bayt",
+        "Shura is prohibited in Islamic governance"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tabrisi clarifies that shura (consultation) operates within the bounds of divine law, not as a secular democratic principle. Consultation must align with the Quran and Sunnah as interpreted by the Ahlul Bayt, affirming that ultimate authority resides in the Imams."
+    },
+    {
+      "id": "42_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 51,
+      "question": "Contemporary scholars draw parallels between the 'veil' (hijab) mentioned in verse 51 regarding divine communication and human cognitive limitations studied in modern neuroscience.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Modern thinkers like Dr. Shabbir Akhtar draw parallels between the verse's 'veil' (hijab) and contemporary neuroscience, suggesting that human cognitive limitations necessitate symbolic or mediated divine communication."
+    },
+    {
+      "id": "42_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 23,
+      "question": "According to contemporary scholar Dr. Liyakat Takim, how should 'kinship' (qurba) in verse 23 be understood in modern contexts?",
+      "options": [
+        "Strictly as blood relations only",
+        "As extending to solidarity with marginalized communities",
+        "As only relevant to historical figures",
+        "As purely a metaphorical concept with no practical application"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern thinkers like Dr. Liyakat Takim extend the interpretation of 'kinship,' arguing that it transcends blood ties and urges solidarity with marginalized communities—a response to global inequity and identity-driven conflicts."
+    },
+    {
+      "id": "42_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 23,
+      "question": "According to Imam Jafar al-Sadiq (AS) in Tafsir al-Qummi, what does 'recognizing our wilayah' in relation to verse 23 accomplish?",
+      "options": [
+        "It has no effect on one's deeds",
+        "It only benefits the Imams themselves",
+        "Through it Allah multiplies every virtue",
+        "It replaces the need for prayer"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Sixth Imam, Jafar al-Sadiq (as), explained: 'The good deed mentioned here refers to recognizing our wilayah, for through it Allah multiplies every virtue' (Tafsir al-Qummi)."
+    },
+    {
+      "id": "42_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 52,
+      "question": "According to Imam Muhammad al-Baqir (AS), the 'spirit from His command' in verse 52 refers to the light of wilayah embodied in the Prophet and inherited by the Imams.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Muhammad al-Baqir (as) explains that the 'spirit from His command' refers not only to the Quran but to the living light of wilayah (divine guardianship) embodied in the Prophet and his purified progeny, which Allah placed in the Prophet and made inheritance in the Imams after him."
+    },
+    {
+      "id": "42_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 38,
+      "question": "What is a key difference between Shia and Sunni interpretations of shura (consultation) in verse 38?",
+      "options": [
+        "Sunni scholars reject consultation entirely",
+        "Shia scholars reject any form of consultation",
+        "Sunni scholars frame it as a broad governing principle, while Shia limit its application to matters not addressed by the Quran or Ahlul Bayt teachings",
+        "Both traditions interpret shura identically"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sunni exegetes like Al-Razi frame consultation as a broad governing principle integral to political leadership. In contrast, Shia commentaries contextualize shura within the framework of divinely guided leadership, limiting its application to matters not explicitly addressed by the Quran or the teachings of the Ahl al-Bayt."
+    },
+    {
+      "id": "42_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 23,
+      "question": "How do Sunni and Shia scholars differ in their interpretation of 'mawaddata fil-qurba' (love for kin) in verse 23?",
+      "options": [
+        "Sunni scholars emphasize it more than Shia scholars",
+        "Sunni scholars often interpret it as respecting extended relatives generally, while Shia sources frame it as inseparable from adherence to the Imams' authority",
+        "Both traditions reject this verse as inauthentic",
+        "There is no difference in interpretation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sunni scholars like Razi often interpret the verse as a general exhortation to respect the Prophet's extended relatives without linking it to specific leadership claims. In contrast, Shia sources like Qummi's tafsir frame this love as inseparable from adherence to the Imams' authority, viewing it as a doctrinal obligation tied to salvation."
+    }
+  ]
+}

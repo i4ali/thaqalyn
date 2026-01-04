@@ -1,0 +1,115 @@
+{
+  "surahNumber": 90,
+  "questions": [
+    {
+      "id": "90_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "In the opening verse of Surah Al-Balad, what does the term 'balad' (city/land) symbolize beyond its geographical meaning?",
+      "options": [
+        "Only the physical location of the Kaaba",
+        "The covenant between Allah and humanity, representing monotheism and the Prophet's mission",
+        "A marketplace for trade",
+        "Ancient Arabian architecture"
+      ],
+      "correctAnswer": "The covenant between Allah and humanity, representing monotheism and the Prophet's mission",
+      "explanation": "The term 'balad' (city/land) symbolizes the covenant between Allah and humanity, as Makkah represents the birthplace of monotheism, the site of Ibrahim and Ismail's sacrifices, and the locus of Prophet Muhammad's (SAW) mission. It isn't merely geographical but carries deep spiritual and historical significance."
+    },
+    {
+      "id": "90_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 4,
+      "question": "According to Surah Al-Balad verse 4, Allah declares that humanity was created into ease and comfort, not hardship.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Allah declares 'Laqad khalaqna al-insana fi kabad' — 'We have certainly created man into hardship.' This profound statement acknowledges that struggle, trial, and moral effort are intrinsic to the human condition, reflecting our divine test in this world."
+    },
+    {
+      "id": "90_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 12,
+      "question": "In Surah al-Balad verse 12, what does the 'difficult pass' (al-aqabah) symbolize according to classical Shia exegesis?",
+      "options": [
+        "A physical mountain path in Makkah",
+        "The spiritual ascent toward divine proximity through ethical action and purification",
+        "A trade route used by the Quraysh",
+        "The geographical terrain around the Kaaba"
+      ],
+      "correctAnswer": "The spiritual ascent toward divine proximity through ethical action and purification",
+      "explanation": "The rhetorical question 'And what can make you know what is the difficult pass?' invites profound reflection on the spiritual ascent central to Shia theology. Al-aqabah symbolizes the transformative journey of the soul toward divine proximity through ethical action, moral purification, and submission to divine guidance."
+    },
+    {
+      "id": "90_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 8,
+      "question": "According to classical Shia exegetes like Shaykh Tabrisi, what deeper meaning do 'two eyes' represent in verse 8 beyond physical vision?",
+      "options": [
+        "Only the biological capacity to see",
+        "The ability to read and write",
+        "The inner vision (basirah) to perceive spiritual truths and divine signs",
+        "Superior eyesight compared to animals"
+      ],
+      "correctAnswer": "The inner vision (basirah) to perceive spiritual truths and divine signs",
+      "explanation": "Shaykh Tabrisi in Majma' al-Bayan emphasizes that 'two eyes' signify not merely physical sight but the capacity for inner vision (basirah)—the ability to perceive spiritual truths, divine signs in creation, and the path of righteousness. This reflects the Quranic concept of hearts that see beyond the material realm."
+    },
+    {
+      "id": "90_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 4,
+      "question": "According to contemporary Shia scholars, the verse declaring humanity 'created into hardship' only refers to physical labor and has no relevance to modern psychological struggles.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "False. Contemporary Shia scholarship reinterprets this verse through modern lenses, acknowledging psychological, social, and existential struggles. Scholars recognize that 'hardship' encompasses mental health challenges, systemic inequities, climate crises, and the complexities of contemporary life, making the verse profoundly relevant to modern human experience."
+    },
+    {
+      "id": "90_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 15,
+      "question": "How do contemporary Shia scholars like Ayatollah Naser Makarem Shirazi interpret the call to care for 'an orphan of near relationship' in verse 15?",
+      "options": [
+        "Only as a duty toward biological relatives who are orphaned",
+        "As a dynamic challenge to address systemic orphanhood caused by war, displacement, and economic injustice",
+        "As a historical practice no longer relevant today",
+        "Only as charitable giving without personal involvement"
+      ],
+      "correctAnswer": "As a dynamic challenge to address systemic orphanhood caused by war, displacement, and economic injustice",
+      "explanation": "Contemporary Shia scholars emphasize that 'orphan of near relationship' extends beyond biological kinship to address systemic orphanhood caused by war, displacement, economic collapse, and social fragmentation. They call for both immediate compassionate action and systemic reforms to protect vulnerable children in today's global crises."
+    },
+    {
+      "id": "90_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to the teachings of Ahlul Bayt, what does the 'city' in the opening verse truly represent beyond Makkah?",
+      "options": [
+        "Only the physical geography of Arabia",
+        "The heart of the believer, fortified by Allah's remembrance and illuminated by wilayah",
+        "Ancient trade centers",
+        "The Prophet's house in Makkah"
+      ],
+      "correctAnswer": "The heart of the believer, fortified by Allah's remembrance and illuminated by wilayah",
+      "explanation": "Imam Ja'far al-Sadiq (as) states: 'The city is the heart of the believer, fortified by the remembrance of Allah and illuminated by the light of wilayah.' This profound insight reveals that while Makkah is physically sacred, the verse points to the spiritual reality of the human heart as the inner sanctuary where true submission blossoms through divine guardianship."
+    },
+    {
+      "id": "90_8",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 18,
+      "question": "What is the primary theological difference between Sunni and Shia interpretations of 'companions of the right' in verse 18?",
+      "options": [
+        "Sunni scholars reject the concept entirely",
+        "Sunni exegesis emphasizes individual piety and prophetic example, while Shia interpretation integrates the concept of wilayah and Imamah as pathways to righteousness",
+        "Both traditions interpret the verse identically with no differences",
+        "Shia scholars believe only Imams can be companions of the right"
+      ],
+      "correctAnswer": "Sunni exegesis emphasizes individual piety and prophetic example, while Shia interpretation integrates the concept of wilayah and Imamah as pathways to righteousness",
+      "explanation": "While both traditions identify 'companions of the right' as righteous believers destined for Paradise, Sunni exegesis emphasizes individual piety modeled on the Prophet's example, while Shia interpretation integrates the theological framework of wilayah (guardianship of the Imams) and Imamah as essential pathways to achieving this righteous status, reflecting their broader theological differences."
+    }
+  ]
+}

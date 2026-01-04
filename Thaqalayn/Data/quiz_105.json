@@ -1,0 +1,75 @@
+{
+  "surahNumber": 105,
+  "questions": [
+    {
+      "id": "105_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "What does the term 'Rabbuka' in verse 1 ('Have you not considered how your Lord dealt with the companions of the elephant?') emphasize about Allah's relationship with Prophet Muhammad and believers?",
+      "options": [
+        "Allah's distant and impersonal nature",
+        "Allah's intimate guardianship over the Prophet and believers",
+        "Allah's equality with human rulers",
+        "Allah's limited jurisdiction over historical events"
+      ],
+      "correctAnswer": "Allah's intimate guardianship over the Prophet and believers",
+      "explanation": "The term 'Rabbuka' (your Lord) highlights Allah's intimate guardianship over the Prophet and the believers, affirming that He alone determines the fate of nations. This emphasizes the personal and protective relationship between Allah and those who uphold justice and faith."
+    },
+    {
+      "id": "105_2",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "According to Allama Tabatabai in Al-Mizan, what theological principle does Abraha's failed plot to destroy the Kaaba exemplify?",
+      "options": [
+        "The equality of all human schemes",
+        "Tawhid al-af'al (the oneness of divine agency)",
+        "The superiority of military power",
+        "The independence of natural causes from divine will"
+      ],
+      "correctAnswer": "Tawhid al-af'al (the oneness of divine agency)",
+      "explanation": "Tabatabai argues that the event exemplifies tawhid al-af'al (the oneness of divine agency), wherein Allah's will supersedes all material power. The destruction of the elephant army demonstrates that no human kayd can prevail against divine tadbir (providence)."
+    },
+    {
+      "id": "105_3",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 3,
+      "question": "According to contemporary scholars like Dr. Zaghloul El-Naggar, the 'ababil' birds could symbolize natural phenomena such as disease vectors or meteoritic pellets, bridging the miraculous and natural.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "True. Some researchers like Dr. Zaghloul El-Naggar propose the 'birds' could symbolize disease vectors or meteoritic pellets, aligning with historical accounts of epidemics or celestial events. This bridges the miraculous and natural, inviting reflection on how divine agency operates within cosmic laws."
+    },
+    {
+      "id": "105_4",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 4,
+      "question": "According to Imam Ja'far al-Sadiq's interpretation in Tafsir al-Qummi, what do the 'stones of sijjeel' (hardened clay) symbolize?",
+      "options": [
+        "Only physical punishment with no spiritual meaning",
+        "The purified essence of divine guidance and the spiritual 'stones' that shatter ignorance",
+        "Ordinary weapons of war",
+        "The weakness of the Ahlul Bayt"
+      ],
+      "correctAnswer": "The purified essence of divine guidance and the spiritual 'stones' that shatter ignorance",
+      "explanation": "Imam Jafar al-Sadiq explains that 'sijjeel' (hardened clay) symbolizes the purified essence of divine guidance. Just as these stones were molded from earth and fire to crush oppression, the Ahlul Bayt are the spiritual 'stones' that shatter ignorance and tyranny, with their teachings carrying the weight of eternal truth."
+    },
+    {
+      "id": "105_5",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 5,
+      "question": "What is the key difference in how Shia and Sunni exegetes interpret the theological significance of verse 5 ('He made them like eaten straw')?",
+      "options": [
+        "They completely contradict each other with no common ground",
+        "Sunni interpretations highlight Allah's transcendence over power structures, while Shia readings often connect it to devotion to the Imams as inheritors of divine protection",
+        "Only Shia scholars believe in divine justice",
+        "Sunni scholars reject the verse entirely"
+      ],
+      "correctAnswer": "Sunni interpretations highlight Allah's transcendence over power structures, while Shia readings often connect it to devotion to the Imams as inheritors of divine protection",
+      "explanation": "While both traditions uphold the verse as a timeless reminder of divine justice, Shia readings often reinforce devotion to the Imams as inheritors of divine protection, whereas Sunni interpretations highlight Allah's transcendence over human power structures. These distinctions arose from differing emphases on transmitted authority (Shia) versus communal consensus (Sunni)."
+    }
+  ]
+}

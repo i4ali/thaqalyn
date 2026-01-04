@@ -1,0 +1,140 @@
+{
+  "surahNumber": 60,
+  "questions": [
+    {
+      "id": "60_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir, which companion's incident prompted the revelation of the opening verse of Surah Al-Mumtahana?",
+      "options": [
+        "Abu Bakr",
+        "Hatib ibn Abi Balta'ah",
+        "Umar ibn al-Khattab",
+        "Salman al-Farsi"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse responds to an incident involving Hatib ibn Abi Balta'ah, a companion who secretly communicated with Mecca's polytheists before the Muslim conquest of the city."
+    },
+    {
+      "id": "60_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 8,
+      "question": "According to the tafsir, Surah Al-Mumtahana verse 8 prohibits showing kindness or justice toward all non-Muslims.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The verse clarifies that Allah does not prohibit kindness (tabarruhum) or justice (tuqsitu) toward those who do not wage religious war against Muslims or forcibly displace them."
+    },
+    {
+      "id": "60_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Allamah Tabatabai in Al-Mizan, what foundational Shia theological principles does verse 60:1 establish?",
+      "options": [
+        "Tawbah and Istighfar",
+        "Walayah and Bara'ah",
+        "Salat and Zakah",
+        "Hajj and Sawm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tabatabai elucidates that this verse establishes the foundational principle of walayah (divinely ordained loyalty) and bara'ah (disassociation from falsehood), central to Shia theology."
+    },
+    {
+      "id": "60_4",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 4,
+      "question": "In classical Shia exegesis, what Arabic term describes Prophet Ibrahim as the 'exemplary model' for believers in verse 60:4?",
+      "options": [
+        "Khalil Allah",
+        "Uswatun Hasanah",
+        "Imam al-Muttaqin",
+        "Sayyid al-Anbiya"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The verse establishes Prophet Ibrahim and his followers as the ultimate model (uswatun hasanah) for believers, emphasizing principled disassociation from polytheism and falsehood."
+    },
+    {
+      "id": "60_5",
+      "type": "trueFalse",
+      "layer": 3,
+      "verseNumber": 7,
+      "question": "Contemporary scholars interpret verse 60:7's promise of 'mawaddah' (affection) as merely a cessation of hostility between opposing groups.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "The 'affection' (mawaddah) promised by Allah transcends mere cessation of hostility; it signifies a divinely orchestrated bond of mutual respect and compassion, contingent upon human receptivity to guidance."
+    },
+    {
+      "id": "60_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 10,
+      "question": "According to contemporary scholars, what modern application does verse 60:10's directive to 'examine' believing emigrant women have?",
+      "options": [
+        "Restricting women's movement",
+        "Ensuring sincere asylum seekers receive sanctuary in refugee crises",
+        "Requiring women to prove their identity",
+        "Denying entry to all migrants"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Scholars like Dr. Liyakat Takim highlight the verse's relevance to today's global refugee crises, where displaced Muslim women often face dual vulnerabilities, requiring communities to balance compassion with due diligence."
+    },
+    {
+      "id": "60_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq (as), what is the effect of loving Allah's enemies on the heart?",
+      "options": [
+        "It strengthens faith",
+        "It has no effect",
+        "It is a rust that extinguishes the light of faith",
+        "It leads to wisdom"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ja'far al-Sadiq (as) elucidates, 'The love of Allah's enemies is a rust upon the heart, extinguishing the light of faith.'"
+    },
+    {
+      "id": "60_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 3,
+      "question": "According to Imam Ali (as), blood ties and social status can substitute for righteous action on the Day of Resurrection.",
+      "options": null,
+      "correctAnswer": "false",
+      "explanation": "Imam Ali (as) taught that on the Day of Resurrection, 'Every soul shall be chained to its deeds' (Nahj al-Balagha), emphasizing that blood ties or social status cannot substitute for righteous action."
+    },
+    {
+      "id": "60_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 4,
+      "question": "In the comparative analysis of verse 60:4, what key divergence exists between Shia and Sunni interpretations regarding Ibrahim's exception for his father?",
+      "options": [
+        "Sunni scholars reject the exception entirely",
+        "Shia exegetes extend it to include the Imams' intercession, while Sunnis limit it to Ibrahim's historical context",
+        "Both traditions interpret it identically",
+        "Neither tradition discusses this exception"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A key divergence arises in interpreting Ibrahim's exception. Shia exegesis extends the principle to include the Imams' spiritual intercession, while Sunni commentators generally limit it to Ibrahim's historical context."
+    },
+    {
+      "id": "60_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 13,
+      "question": "According to the comparative tafsir, how do Shia commentators specifically identify 'the people with whom Allah has become angry' in verse 60:13?",
+      "options": [
+        "All non-Muslims universally",
+        "Only the Quraysh tribe",
+        "Those who rejected Imam Ali's divinely ordained leadership (Wilayah)",
+        "The Roman Empire"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Classical Shia exegetes, including Tabrisi, interpret these 'people' as specific groups who opposed the Prophet (PBUH) and his Household, particularly those who rejected Imam Ali's (AS) divinely ordained leadership."
+    }
+  ]
+}

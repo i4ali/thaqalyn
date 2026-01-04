@@ -1,0 +1,140 @@
+{
+  "surahNumber": 67,
+  "questions": [
+    {
+      "id": "67_1",
+      "type": "multipleChoice",
+      "layer": 1,
+      "verseNumber": 1,
+      "question": "According to the tafsir of Surah Al-Mulk, what does the term 'Tabarak' (Blessed) signify about Allah?",
+      "options": [
+        "His physical presence in the world",
+        "Transcendence beyond human comprehension",
+        "His need for worship",
+        "His creation of angels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The term Tabarak (Blessed) signifies transcendence beyond human comprehension, affirming that all true nobility and perfection belong solely to Allah."
+    },
+    {
+      "id": "67_2",
+      "type": "trueFalse",
+      "layer": 1,
+      "verseNumber": 2,
+      "question": "According to verse 2 of Al-Mulk, Allah created death and life to test which of us is best in deed.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Allah states that He created death and life to test you as to which of you is best in deed. The phrase 'ahsan amalan' (best in deed) emphasizes quality over quantity."
+    },
+    {
+      "id": "67_3",
+      "type": "multipleChoice",
+      "layer": 2,
+      "verseNumber": 1,
+      "question": "According to Tabrisi in Majma al-Bayan, the phrase 'in whose hand is dominion' relates to which theological principle?",
+      "options": [
+        "Tawhid al-af'ali (Oneness of Divine Acts)",
+        "Tawhid al-asma (Oneness of Names)",
+        "Tawhid al-sifat (Oneness of Attributes)",
+        "Tawhid al-dhati (Oneness of Essence)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tabrisi links the verse to the theological principle of tawhid al-af'ali (Oneness of Divine Acts), stressing that all cosmic and existential governance (tadbir) flows from Allah's singular authority."
+    },
+    {
+      "id": "67_4",
+      "type": "trueFalse",
+      "layer": 2,
+      "verseNumber": 2,
+      "question": "In Al-Mizan, Tabatabai explains that the Arabic text places 'death' before 'life' to signify death's primacy as a state preceding temporal existence.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Tabatabai notes the inversion in the verse's phrasing - 'death and life' rather than 'life and death' - arguing that this linguistic choice signifies death's primacy as a pre-existing state preceding the temporal life granted to humanity."
+    },
+    {
+      "id": "67_5",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 21,
+      "question": "According to contemporary scholar Dr. Reza Shah-Kazemi, what does verse 21's challenge about divine provision expose?",
+      "options": [
+        "The importance of agriculture",
+        "Humanity's 'arrogance of ownership' through ecological exploitation",
+        "The need for more technology",
+        "The abundance of natural resources"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dr. Reza Shah-Kazemi notes that the verse exposes humanity's 'arrogance of ownership,' where ecological exploitation and hoarding wealth reflect the 'insolence and aversion' described in the Quran."
+    },
+    {
+      "id": "67_6",
+      "type": "multipleChoice",
+      "layer": 3,
+      "verseNumber": 12,
+      "question": "How does Ayatollah Naser Makarem Shirazi interpret 'fearing the Lord unseen' in contemporary context?",
+      "options": [
+        "As fear of punishment only",
+        "As mere ritual observance",
+        "As conscious ethical living that shapes moral choices even when societal structures fail",
+        "As avoiding public sins only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ayatollah Shirazi emphasizes that 'fearing the Lord unseen' reflects a profound awareness of divine justice that shapes moral choices even when societal structures fail, transcending mere ritual."
+    },
+    {
+      "id": "67_7",
+      "type": "multipleChoice",
+      "layer": 4,
+      "verseNumber": 1,
+      "question": "According to Imam Ja'far al-Sadiq (AS), what does the 'hand' mentioned in verse 1 refer to?",
+      "options": [
+        "Allah's physical hand",
+        "The power of angels",
+        "The authority (Wilayah) of Imam Ali and the Imams from his progeny",
+        "The prophets before Muhammad (PBUH)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imam Ja'far al-Sadiq illuminates: 'The hand mentioned here refers to the authority (Wilayah) of the Commander of the Faithful [Ali] and the Imams from his progeny, for they are Allah's proof upon creation.'"
+    },
+    {
+      "id": "67_8",
+      "type": "trueFalse",
+      "layer": 4,
+      "verseNumber": 21,
+      "question": "According to Imam Ja'far al-Sadiq (AS), true 'rizq' (sustenance) includes spiritual nourishment through the Wilayah of the Ahlul Bayt.",
+      "options": null,
+      "correctAnswer": "true",
+      "explanation": "Imam Ja'far al-Sadiq explains that true rizq encompasses not just material needs but spiritual nourishment through the Wilayah of the Ahlul Bayt: 'Our love is the sustenance of hearts; whoever is deprived of it perishes.'"
+    },
+    {
+      "id": "67_9",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 11,
+      "question": "What is a key difference between Shia and Sunni interpretations of the admission of sin in verse 11?",
+      "options": [
+        "Sunni scholars reject the concept of divine justice",
+        "Shia exegetes connect the verse to consequences of rejecting Wilayah of the Ahlul Bayt",
+        "There is no difference between the traditions",
+        "Shia scholars focus only on predestination"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While both traditions agree on divine justice and human accountability, Shia exegetes like Al-Qummi and Tusi connect the verse to the consequences of rejecting Wilayah (allegiance to the Ahlul Bayt), whereas Sunni scholars focus on individual accountability without this intermediary role."
+    },
+    {
+      "id": "67_10",
+      "type": "multipleChoice",
+      "layer": 5,
+      "verseNumber": 21,
+      "question": "According to comparative tafsir, how do both Sunni and Shia scholars interpret Allah's sovereignty over provision (rizq)?",
+      "options": [
+        "They disagree on all aspects",
+        "Both affirm Allah's absolute sovereignty and condemn human ingratitude (kufr al-ni'ma)",
+        "Only Shia scholars address this topic",
+        "Neither tradition addresses material provision"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both Sunni and Shia commentators agree that the verse affirms Allah's absolute sovereignty over sustenance (rizq), condemning human ingratitude (kufr al-ni'ma) and spiritual arrogance, while their emphases differ on aspects like divine intermediaries."
+    }
+  ]
+}
