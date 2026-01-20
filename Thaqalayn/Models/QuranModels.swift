@@ -132,6 +132,68 @@ struct AnyCodable: Codable {
     }
 }
 
+// MARK: - Quick Overview Models
+
+/// Position hint for concept bubble placement around Arabic verse
+enum ConceptPosition: String, Codable, CaseIterable {
+    case topLeft = "topLeft"
+    case topRight = "topRight"
+    case bottomLeft = "bottomLeft"
+    case bottomRight = "bottomRight"
+}
+
+/// Represents a key concept extracted from verse tafsir for interactive display
+struct VerseConcept: Codable, Identifiable {
+    let id: String                    // Unique identifier (e.g., "1:1:divine-mercy")
+    let title: String                 // Display title (e.g., "Divine Mercy")
+    let icon: String                  // SF Symbol name (e.g., "heart.fill")
+    let colorHex: String              // Hex color for bubble (e.g., "#E8B86D")
+    let coreInsight: String           // 1-2 sentence explanation
+    let whyItMatters: String          // Practical significance
+    let position: ConceptPosition     // Position around Arabic text
+    let arabicHighlight: String?      // Arabic word(s) to highlight in the verse
+
+    // Multilingual support
+    let title_urdu: String?
+    let coreInsight_urdu: String?
+    let whyItMatters_urdu: String?
+    let title_ar: String?
+    let coreInsight_ar: String?
+    let whyItMatters_ar: String?
+
+    /// Get localized title for specified language
+    func getTitle(language: CommentaryLanguage) -> String {
+        switch language {
+        case .english, .french: return title
+        case .urdu: return title_urdu ?? title
+        case .arabic: return title_ar ?? title
+        }
+    }
+
+    /// Get localized core insight for specified language
+    func getCoreInsight(language: CommentaryLanguage) -> String {
+        switch language {
+        case .english, .french: return coreInsight
+        case .urdu: return coreInsight_urdu ?? coreInsight
+        case .arabic: return coreInsight_ar ?? coreInsight
+        }
+    }
+
+    /// Get localized why it matters for specified language
+    func getWhyItMatters(language: CommentaryLanguage) -> String {
+        switch language {
+        case .english, .french: return whyItMatters
+        case .urdu: return whyItMatters_urdu ?? whyItMatters
+        case .arabic: return whyItMatters_ar ?? whyItMatters
+        }
+    }
+}
+
+/// Complete Quick Overview data for a verse
+struct QuickOverviewData: Codable {
+    let concepts: [VerseConcept]      // 3-4 key concepts
+}
+
 // MARK: - Tafsir Data Models
 
 struct TafsirData: Codable {
@@ -172,6 +234,9 @@ struct TafsirVerse: Codable {
     let layer2short_urdu: String?
     let layer2short_ar: String?
     let layer2short_fr: String?
+
+    // Quick Overview data for interactive concept display (optional)
+    let quickOverview: QuickOverviewData?
 
     // Helper method to get content by language and layer
     func content(for layer: TafsirLayer, language: CommentaryLanguage) -> String {

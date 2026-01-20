@@ -29,7 +29,28 @@ struct VerseSummaryView: View {
                tafsir.layer2short_fr != nil
     }
 
+    // Check if quick overview data is available
+    private var hasQuickOverview: Bool {
+        return verse.tafsir?.quickOverview != nil
+    }
+
     var body: some View {
+        // Use interactive QuickOverviewView if data available, otherwise fallback to text
+        if let quickOverview = verse.tafsir?.quickOverview {
+            QuickOverviewView(
+                verse: verse,
+                surah: surah,
+                quickOverview: quickOverview,
+                onViewFullCommentary: onViewFullCommentary
+            )
+        } else {
+            textBasedOverviewView
+        }
+    }
+
+    // MARK: - Text-Based Fallback View
+
+    private var textBasedOverviewView: some View {
         VStack(spacing: 0) {
             // Handle bar
             RoundedRectangle(cornerRadius: 3)
@@ -73,11 +94,11 @@ struct VerseSummaryView: View {
                 .font(.system(size: 32))
 
             VStack(alignment: .leading, spacing: 4) {
-                Text("Quick Overview")
+                Text("Quick Gems")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
 
-                Text("Essential insights at a glance")
+                Text("Precious insights unveiled")
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -281,7 +302,8 @@ struct VerseSummaryView: View {
         layer2short: "The Bismillah invokes Allah's infinite mercy and compassion.",
         layer2short_urdu: nil,
         layer2short_ar: nil,
-        layer2short_fr: nil
+        layer2short_fr: nil,
+        quickOverview: nil
     )
 
     let sampleVerseWithTafsir = VerseWithTafsir(

@@ -692,7 +692,7 @@ struct ModernVerseCard: View {
                 HStack(spacing: 6) {
                     Text("✨")
                         .font(.system(size: 15))
-                    Text("Overview")
+                    Text("Gems")
                         .font(.system(size: 15, weight: .semibold))
                 }
                 .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
@@ -744,7 +744,7 @@ struct ModernVerseCard: View {
                 HStack(spacing: 6) {
                     Image(systemName: "sparkles")
                         .font(.system(size: 14, weight: .semibold))
-                    Text("Overview")
+                    Text("Gems")
                         .font(.system(size: 15, weight: .semibold))
                 }
                 .foregroundColor(verse.tafsir != nil ? themeManager.primaryText : themeManager.tertiaryText)
@@ -1389,9 +1389,10 @@ struct TafsirLayerSelector: View {
         layer2short: nil,
         layer2short_urdu: nil,
         layer2short_ar: nil,
-        layer2short_fr: nil
+        layer2short_fr: nil,
+        quickOverview: nil
     )
-    
+
     let sampleVerseWithTafsir = VerseWithTafsir(
         number: 1,
         verse: sampleVerse,

@@ -738,9 +738,10 @@ struct FullScreenCommentaryView: View {
         layer2short: nil,
         layer2short_urdu: nil,
         layer2short_ar: nil,
-        layer2short_fr: nil
+        layer2short_fr: nil,
+        quickOverview: nil
     )
-    
+
     let sampleSurah = Surah(
         number: 4,
         name: "سُورَة النِّسَاء",

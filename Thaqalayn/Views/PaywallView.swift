@@ -57,6 +57,9 @@ struct PaywallView: View {
 
                 ScrollView {
                     VStack(spacing: 24) {
+                        // Featured: Quick Gems
+                        PaywallQuickGemsFeature()
+
                         // Hero: 5 Layers of Wisdom
                         PaywallLayersHero()
 
@@ -74,8 +77,8 @@ struct PaywallView: View {
 
                             PremiumBenefitRow(
                                 icon: "globe",
-                                title: "Bilingual Support",
-                                description: "Full commentary in English & Urdu",
+                                title: "Multilingual Support",
+                                description: "Full commentary in English, Urdu & Arabic",
                                 color: .purple
                             )
 
@@ -447,6 +450,67 @@ struct ProgressTeaserItem: View {
                         .stroke(color.opacity(0.2), lineWidth: 1)
                 )
         )
+    }
+}
+
+// MARK: - Quick Gems Feature Card
+
+struct PaywallQuickGemsFeature: View {
+    @StateObject private var themeManager = ThemeManager.shared
+
+    var body: some View {
+        VStack(spacing: 0) {
+            // Popular badge
+            HStack {
+                Spacer()
+                Text("POPULAR")
+                    .font(.system(size: 10, weight: .bold))
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(Capsule().fill(Color.orange))
+                    .offset(y: -12)
+            }
+            .padding(.trailing, 16)
+
+            // Icon and content
+            HStack(spacing: 16) {
+                // Sparkles icon with glow
+                ZStack {
+                    Circle()
+                        .fill(Color.orange.opacity(0.15))
+                        .frame(width: 64, height: 64)
+
+                    Image(systemName: "sparkles")
+                        .font(.system(size: 28))
+                        .foregroundColor(.orange)
+                }
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Quick Gems")
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundColor(themeManager.primaryText)
+
+                    Text("Bite-size insights for every verse")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                }
+
+                Spacer()
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 20)
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(themeManager.secondaryBackground.opacity(0.6))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.orange.opacity(0.4), lineWidth: 2)
+                )
+        )
+        .padding(.horizontal)
+        .padding(.top, 8)
     }
 }
 
