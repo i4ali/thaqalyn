@@ -172,7 +172,7 @@ struct QuickOverviewView: View {
                 .foregroundStyle(themeManager.accentGradient)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text("Quick Gems")
+                Text("Gems")
                     .font(.system(size: 22, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
 

@@ -487,7 +487,7 @@ struct PaywallQuickGemsFeature: View {
                 }
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Quick Gems")
+                    Text("Gems")
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(themeManager.primaryText)
 

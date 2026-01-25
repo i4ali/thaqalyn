@@ -13,20 +13,20 @@ struct QuickGemsScreen: View {
     @State private var iconPulse = false
     @State private var highlightedConcept = 0
 
-    // Demo concepts for the sample verse with mock insights
+    // Real concepts from Ayat al-Kursi (2:255) - the greatest verse in the Quran
     private let demoConcepts: [(icon: String, title: String, color: Color, coreInsight: String, whyItMatters: String)] = [
-        ("heart.fill", "Divine Mercy", .pink,
-         "Allah's mercy encompasses all creation, expressed through 'Rahman' and 'Raheem'.",
-         "Reminds us that every action begins under Allah's compassionate care."),
-        ("sun.max.fill", "Guidance", .orange,
-         "The Bismillah sets the foundation for seeking divine guidance in all affairs.",
-         "Starting with Allah's name aligns our intentions with divine purpose."),
-        ("leaf.fill", "Compassion", .green,
-         "'Raheem' indicates special mercy for believers who follow the guided path.",
-         "Encourages us to embody compassion in our daily interactions."),
-        ("star.fill", "Blessing", .yellow,
-         "Beginning with Allah's name invokes barakah (blessing) in all endeavors.",
-         "Transforms ordinary actions into acts of worship and remembrance.")
+        ("crown.fill", "The Throne Verse", Color(red: 0.608, green: 0.561, blue: 0.749),
+         "This is Ayat al-Kursi, the greatest verse in the Quran, describing Allah's absolute sovereignty, knowledge, and power over all creation.",
+         "Understanding Allah's complete authority brings peace, removes fear of creation, and centers our worship on the only true Power."),
+        ("infinity", "The Ever-Living", Color(red: 0.482, green: 0.769, blue: 0.498),
+         "Allah is Al-Hayy (The Ever-Living) and Al-Qayyum (The Self-Sustaining), needing no sleep or rest, eternally maintaining all existence.",
+         "Unlike creation which needs rest and sustenance, Allah is eternally vigilant and self-sufficient, constantly upholding the universe."),
+        ("globe.americas.fill", "Cosmic Ownership", Color(red: 0.392, green: 0.710, blue: 0.965),
+         "Everything in the heavens and earth belongs to Allah absolutely. No one owns anything independently; all possession is temporary trust.",
+         "Recognizing Allah's complete ownership liberates us from attachment and makes us grateful stewards rather than possessive owners."),
+        ("star.fill", "The Kursi", Color(red: 0.910, green: 0.722, blue: 0.427),
+         "Allah's Kursi extends over the heavens and earth, and preserving them does not tire Him - a display of incomprehensible majesty.",
+         "The vastness of Allah's Kursi dwarfs all creation, reminding us of our smallness and His infinite greatness.")
     ]
 
     var body: some View {
@@ -106,18 +106,18 @@ struct QuickGemsScreen: View {
                             )
                             .frame(width: 28, height: 28)
                             .overlay(
-                                Text("1")
-                                    .font(.system(size: 12, weight: .bold))
+                                Text("255")
+                                    .font(.system(size: 9, weight: .bold))
                                     .foregroundColor(.white)
                             )
 
-                        Text("Al-Fatiha 1")
+                        Text("Al-Baqarah 255")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(themeManager.secondaryText)
                     }
 
-                    // Arabic verse
-                    Text("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ")
+                    // Arabic verse - Ayat al-Kursi opening
+                    Text("ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ")
                         .font(.system(size: 24, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.center)

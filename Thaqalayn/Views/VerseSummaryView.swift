@@ -94,7 +94,7 @@ struct VerseSummaryView: View {
                 .font(.system(size: 32))
 
             VStack(alignment: .leading, spacing: 4) {
-                Text("Quick Gems")
+                Text("Gems")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
 
