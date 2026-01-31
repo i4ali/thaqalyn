@@ -10,6 +10,7 @@ import SwiftUI
 struct MissionScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @State private var isVisible = false
+    @State private var shimmerOffset: CGFloat = -1.0
 
     var body: some View {
         VStack(spacing: 0) {
@@ -32,10 +33,30 @@ struct MissionScreen: View {
                             )
                     }
 
-                    // App icon representation
+                    // App icon representation with shimmer
                     Text("ثقلين")
                         .font(.system(size: 48, weight: .light, design: .default))
                         .foregroundColor(themeManager.primaryText)
+                        .overlay(
+                            GeometryReader { geometry in
+                                LinearGradient(
+                                    colors: [
+                                        .clear,
+                                        .white.opacity(0.6),
+                                        .clear
+                                    ],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                                .frame(width: geometry.size.width * 0.5)
+                                .offset(x: shimmerOffset * geometry.size.width * 1.5)
+                                .blendMode(.overlay)
+                            }
+                            .mask(
+                                Text("ثقلين")
+                                    .font(.system(size: 48, weight: .light, design: .default))
+                            )
+                        )
                         .scaleEffect(isVisible ? 1 : 0.5)
                         .opacity(isVisible ? 1 : 0)
                         .animation(.spring(response: 0.8, dampingFraction: 0.6).delay(0.3), value: isVisible)
@@ -104,6 +125,19 @@ struct MissionScreen: View {
         .background(themeManager.primaryBackground)
         .onAppear {
             isVisible = true
+            startShimmerAnimation()
+        }
+    }
+
+    private func startShimmerAnimation() {
+        // Start shimmer after initial animation completes
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            withAnimation(
+                Animation.easeInOut(duration: 1.5)
+                    .repeatForever(autoreverses: false)
+            ) {
+                shimmerOffset = 1.0
+            }
         }
     }
 }

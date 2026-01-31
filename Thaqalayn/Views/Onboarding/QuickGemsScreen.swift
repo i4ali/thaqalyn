@@ -116,12 +116,8 @@ struct QuickGemsScreen: View {
                             .foregroundColor(themeManager.secondaryText)
                     }
 
-                    // Arabic verse - Ayat al-Kursi opening
-                    Text("ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ")
-                        .font(.system(size: 24, weight: .medium))
-                        .foregroundColor(themeManager.primaryText)
-                        .multilineTextAlignment(.center)
-                        .lineSpacing(8)
+                    // Arabic verse - Ayat al-Kursi opening with highlighting
+                    HighlightedArabicVerse(highlightedConcept: highlightedConcept)
                         .padding(.vertical, 8)
 
                     // Concept bubbles
@@ -279,6 +275,51 @@ struct DemoInsightCard: View {
         )
         .opacity(isVisible ? 1 : 0)
         .animation(Animation.easeOut(duration: 0.6).delay(0.8), value: isVisible)
+    }
+}
+
+// MARK: - Highlighted Arabic Verse
+
+struct HighlightedArabicVerse: View {
+    @StateObject private var themeManager = ThemeManager.shared
+    let highlightedConcept: Int
+
+    // Concept colors matching demoConcepts
+    private let conceptColors: [Color] = [
+        Color(red: 0.608, green: 0.561, blue: 0.749), // Throne Verse - purple
+        Color(red: 0.482, green: 0.769, blue: 0.498), // Ever-Living - green
+        Color(red: 0.392, green: 0.710, blue: 0.965), // Cosmic Ownership - blue
+        Color(red: 0.910, green: 0.722, blue: 0.427)  // The Kursi - gold
+    ]
+
+    private var highlightColor: Color {
+        conceptColors[highlightedConcept]
+    }
+
+    var body: some View {
+        // Verse: ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ
+        // Part 1: ٱللَّهُ (Allah)
+        // Part 2: لَآ إِلَٰهَ إِلَّا هُوَ (there is no deity except Him) - Cosmic Ownership
+        // Part 3: ٱلْحَىُّ (The Ever-Living)
+        // Part 4: ٱلْقَيُّومُ (The Self-Sustaining / Kursi concept)
+
+        HStack(spacing: 0) {
+            Text("ٱللَّهُ ")
+                .foregroundColor(highlightedConcept == 0 ? highlightColor : themeManager.primaryText)
+
+            Text("لَآ إِلَٰهَ إِلَّا هُوَ ")
+                .foregroundColor((highlightedConcept == 0 || highlightedConcept == 2) ? highlightColor : themeManager.primaryText)
+
+            Text("ٱلْحَىُّ ")
+                .foregroundColor((highlightedConcept == 0 || highlightedConcept == 1) ? highlightColor : themeManager.primaryText)
+
+            Text("ٱلْقَيُّومُ")
+                .foregroundColor((highlightedConcept == 0 || highlightedConcept == 3) ? highlightColor : themeManager.primaryText)
+        }
+        .font(.system(size: 24, weight: .medium))
+        .multilineTextAlignment(.center)
+        .lineSpacing(8)
+        .animation(.easeInOut(duration: 0.3), value: highlightedConcept)
     }
 }
 

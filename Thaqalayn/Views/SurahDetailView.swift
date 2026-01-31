@@ -20,6 +20,8 @@ struct SurahDetailView: View {
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var audioManager = AudioManager.shared
+    @State private var showingGoToVerse = false
+    @State private var scrollProxy: ScrollViewProxy? = nil
     @Environment(\.dismiss) private var dismiss
     
     init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil) {
@@ -61,7 +63,8 @@ struct SurahDetailView: View {
                         } else {
                             showingPaywall = true
                         }
-                    }
+                    },
+                    onGoToVerse: { showingGoToVerse = true }
                 )
                 
                 // Verses scroll view
@@ -85,6 +88,7 @@ struct SurahDetailView: View {
                         .padding(.bottom, 40)
                     }
                     .onAppear {
+                        scrollProxy = proxy
                         if let targetVerse = targetVerse {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 withAnimation(.easeInOut(duration: 0.8)) {
@@ -131,6 +135,165 @@ struct SurahDetailView: View {
         .sheet(isPresented: $showingPaywall) {
             PaywallView()
         }
+        .sheet(isPresented: $showingGoToVerse) {
+            GoToVerseSheet(
+                versesCount: surahWithTafsir.surah.versesCount,
+                onGoToVerse: { verseNumber in
+                    showingGoToVerse = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        withAnimation(.easeInOut(duration: 0.8)) {
+                            scrollProxy?.scrollTo("verse_\(verseNumber)", anchor: .center)
+                        }
+                    }
+                }
+            )
+        }
+    }
+}
+
+struct GoToVerseSheet: View {
+    let versesCount: Int
+    let onGoToVerse: (Int) -> Void
+    @State private var verseNumberText = ""
+    @State private var errorMessage: String?
+    @StateObject private var themeManager = ThemeManager.shared
+    @Environment(\.dismiss) private var dismiss
+
+    private var isValidVerse: Bool {
+        guard let number = Int(verseNumberText) else { return false }
+        return number >= 1 && number <= versesCount
+    }
+
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 24) {
+                // Header
+                VStack(spacing: 8) {
+                    if themeManager.selectedTheme == .warmInviting {
+                        Text("🔍")
+                            .font(.system(size: 40))
+                    } else {
+                        Image(systemName: "arrow.down.to.line")
+                            .font(.system(size: 36, weight: .medium))
+                            .foregroundColor(themeManager.accentColor)
+                    }
+
+                    Text("Go to Verse")
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+
+                    Text("Enter a verse number (1-\(versesCount))")
+                        .font(.system(size: 15, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                }
+                .padding(.top, 20)
+
+                // Input field
+                VStack(spacing: 8) {
+                    TextField("Verse number", text: $verseNumberText)
+                        .keyboardType(.numberPad)
+                        .font(.system(size: 20, weight: .medium))
+                        .multilineTextAlignment(.center)
+                        .padding(.vertical, 16)
+                        .padding(.horizontal, 20)
+                        .background {
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(themeManager.selectedTheme == .warmInviting ? AnyShapeStyle(Color.white) : AnyShapeStyle(themeManager.glassEffect))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                                )
+                        }
+                        .onChange(of: verseNumberText) { _, newValue in
+                            // Clear error when user starts typing
+                            errorMessage = nil
+                            // Filter non-numeric characters
+                            verseNumberText = newValue.filter { $0.isNumber }
+                        }
+
+                    // Error message
+                    if let error = errorMessage {
+                        Text(error)
+                            .font(.system(size: 14, weight: .medium))
+                            .foregroundColor(.red)
+                    }
+                }
+                .padding(.horizontal, 20)
+
+                // Go button
+                Button(action: submitVerse) {
+                    HStack(spacing: 8) {
+                        if themeManager.selectedTheme == .warmInviting {
+                            Text("→")
+                                .font(.system(size: 18))
+                        } else {
+                            Image(systemName: "arrow.right")
+                                .font(.system(size: 16, weight: .semibold))
+                        }
+                        Text("Go")
+                            .font(.system(size: 17, weight: .semibold))
+                    }
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background {
+                        if themeManager.selectedTheme == .warmInviting {
+                            RoundedRectangle(cornerRadius: 24)
+                                .fill(
+                                    LinearGradient(
+                                        colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                        } else {
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(themeManager.purpleGradient)
+                        }
+                    }
+                }
+                .padding(.horizontal, 20)
+                .disabled(verseNumberText.isEmpty)
+                .opacity(verseNumberText.isEmpty ? 0.6 : 1.0)
+
+                Spacer()
+            }
+            .background(
+                themeManager.selectedTheme == .warmInviting
+                    ? Color(red: 0.98, green: 0.965, blue: 0.945)
+                    : themeManager.primaryBackground
+            )
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                }
+            }
+        }
+        .presentationDetents([.height(280)])
+        .preferredColorScheme(themeManager.colorScheme)
+    }
+
+    private func submitVerse() {
+        guard let number = Int(verseNumberText) else {
+            errorMessage = "Please enter a valid number"
+            return
+        }
+
+        if number < 1 {
+            errorMessage = "Verse number must be at least 1"
+            return
+        }
+
+        if number > versesCount {
+            errorMessage = "This surah only has \(versesCount) verses"
+            return
+        }
+
+        onGoToVerse(number)
     }
 }
 
@@ -140,6 +303,7 @@ struct ModernSurahHeader: View {
     let hasQuiz: Bool
     let onBack: () -> Void
     let onQuizTap: () -> Void
+    let onGoToVerse: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
 
@@ -268,6 +432,38 @@ struct ModernSurahHeader: View {
                                 RoundedRectangle(cornerRadius: 20)
                                     .fill(themeManager.purpleGradient)
                                     .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
+                            }
+                        }
+                    }
+
+                    // Go to Verse button (icon-only for compact fit)
+                    Button(action: onGoToVerse) {
+                        Group {
+                            if themeManager.selectedTheme == .warmInviting {
+                                Text("🔍")
+                                    .font(.system(size: 18))
+                            } else {
+                                Image(systemName: "arrow.down.to.line")
+                                    .font(.system(size: 18, weight: .semibold))
+                            }
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: themeManager.selectedTheme == .warmInviting ? 48 : 44, height: themeManager.selectedTheme == .warmInviting ? 48 : 44)
+                        .background {
+                            if themeManager.selectedTheme == .warmInviting {
+                                Circle()
+                                    .fill(
+                                        LinearGradient(
+                                            colors: [Color(red: 0.608, green: 0.561, blue: 0.749), Color(red: 0.518, green: 0.471, blue: 0.659)],
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
+                                    )
+                                    .shadow(color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.3), radius: 12)
+                            } else {
+                                Circle()
+                                    .fill(themeManager.accentGradient)
+                                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
                             }
                         }
                     }

@@ -15,7 +15,7 @@ struct OnboardingFlowView: View {
     @State private var notificationsEnabled = false
     @State private var progressNotificationsEnabled = false
 
-    private let totalPages = 7
+    private let totalPages = 9
 
     var body: some View {
         ZStack {
@@ -41,22 +41,30 @@ struct OnboardingFlowView: View {
                 QuickGemsScreen()
                     .tag(3)
 
-                // Screen 5: Daily Verse
-                DailyVerseScreen(notificationsEnabled: $notificationsEnabled)
+                // Screen 5: Progress Tracking
+                ProgressTrackingScreen()
                     .tag(4)
 
-                // Screen 6: Progress Notifications
-                ProgressNotificationsScreen(progressNotificationsEnabled: $progressNotificationsEnabled)
+                // Screen 6: Quiz Feature
+                QuizFeatureScreen()
                     .tag(5)
 
-                // Screen 7: Final Setup
+                // Screen 7: Daily Verse
+                DailyVerseScreen(notificationsEnabled: $notificationsEnabled)
+                    .tag(6)
+
+                // Screen 8: Progress Notifications
+                ProgressNotificationsScreen(progressNotificationsEnabled: $progressNotificationsEnabled)
+                    .tag(7)
+
+                // Screen 9: Final Setup
                 FinalScreen(
                     selectedTheme: $selectedTheme,
                     onComplete: {
                         completeOnboarding()
                     }
                 )
-                .tag(6)
+                .tag(8)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
