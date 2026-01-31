@@ -413,6 +413,7 @@ struct ModernSurahHeader: View {
                             }
                             Text("Play")
                                 .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 16, weight: .semibold))
+                                .fixedSize()
                         }
                         .foregroundColor(.white)
                         .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 24 : 16)
@@ -476,6 +477,7 @@ struct ModernSurahHeader: View {
                                     .font(.system(size: 16, weight: .semibold))
                                 Text("Quiz")
                                     .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 16, weight: .semibold))
+                                    .fixedSize()
                             }
                             .foregroundColor(.white)
                             .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 24 : 16)
