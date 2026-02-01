@@ -334,6 +334,7 @@ struct SurahListView: View {
                     ForEach(dataManager.availableSurahs.filter { surah in
                         searchText.isEmpty ||
                         surah.surah.englishName.localizedCaseInsensitiveContains(searchText) ||
+                        surah.surah.englishNameTranslation.localizedCaseInsensitiveContains(searchText) ||
                         surah.surah.arabicName.contains(searchText)
                     }) { surahWithTafsir in
                         NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)) {
