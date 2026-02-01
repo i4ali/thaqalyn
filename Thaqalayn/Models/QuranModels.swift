@@ -1061,6 +1061,7 @@ enum QuestionCategory: String, Codable, CaseIterable {
     case afterlife = "afterlife"
     case relationships = "relationships"
     case interfaith = "interfaith"
+    case science = "science"
 
     var displayName: String {
         switch self {
@@ -1070,6 +1071,7 @@ enum QuestionCategory: String, Codable, CaseIterable {
         case .afterlife: return "Death & Afterlife"
         case .relationships: return "Relationships"
         case .interfaith: return "Interfaith"
+        case .science: return "Science & Creation"
         }
     }
 
@@ -1081,6 +1083,7 @@ enum QuestionCategory: String, Codable, CaseIterable {
         case .afterlife: return "moon.stars.fill"
         case .relationships: return "person.2.fill"
         case .interfaith: return "globe.americas.fill"
+        case .science: return "atom"
         }
     }
 }

@@ -851,6 +851,240 @@
         }
       ],
       "relatedQuestions": ["q2"]
+    },
+    {
+      "id": "q41",
+      "question": "What does the Quran say about evolution?",
+      "shortQuestion": "Quran on evolution?",
+      "category": "science",
+      "verses": [
+        {
+          "surahNumber": 71,
+          "verseNumber": 14,
+          "relevanceNote": "Allah created you in stages (atwar). This Quranic term suggests a gradual developmental process that some scholars see as compatible with evolutionary concepts.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 21,
+          "verseNumber": 30,
+          "relevanceNote": "Every living thing was made from water. This aligns with scientific understanding of life's origins and the importance of water for all organisms.",
+          "isPrimary": false
+        },
+        {
+          "surahNumber": 32,
+          "verseNumber": 7,
+          "relevanceNote": "Allah began human creation from clay, then made descendants from a humble fluid. The Quran acknowledges multiple stages in human development.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q42", "q44", "q45"]
+    },
+    {
+      "id": "q42",
+      "question": "Did humans originate from apes?",
+      "shortQuestion": "Humans from apes?",
+      "category": "science",
+      "verses": [
+        {
+          "surahNumber": 15,
+          "verseNumber": 28,
+          "relevanceNote": "Adam was created from clay, then Allah breathed His spirit into him. Islam teaches Adam was a special creation, distinct from animals.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 3,
+          "verseNumber": 59,
+          "relevanceNote": "Jesus and Adam were created similarly - from dust, then 'Be' and it was. This emphasizes Adam's unique creation without biological parents.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q41", "q8"]
+    },
+    {
+      "id": "q43",
+      "question": "Does the Quran mention dinosaurs?",
+      "shortQuestion": "Dinosaurs in Quran?",
+      "category": "science",
+      "verses": [
+        {
+          "surahNumber": 24,
+          "verseNumber": 45,
+          "relevanceNote": "Allah created every living creature from water - some crawl on bellies, some on two legs, some on four. This encompasses all creatures, past and present.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 40,
+          "verseNumber": 57,
+          "relevanceNote": "The creation of heavens and earth is greater than the creation of humans. Allah's creative power extends to realms we cannot fully comprehend.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q44", "q45"]
+    },
+    {
+      "id": "q44",
+      "question": "How was the universe created?",
+      "shortQuestion": "Universe creation?",
+      "category": "science",
+      "verses": [
+        {
+          "surahNumber": 21,
+          "verseNumber": 30,
+          "relevanceNote": "The heavens and earth were joined together, then We split them apart. This remarkably parallels the Big Bang theory of cosmic expansion from a singularity.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 41,
+          "verseNumber": 11,
+          "relevanceNote": "Allah turned to the heaven when it was smoke. Modern cosmology describes the early universe as a hot, dense cloud - strikingly similar to this Quranic description.",
+          "isPrimary": true
+        }
+      ],
+      "relatedQuestions": ["q8", "q41", "q45"]
+    },
+    {
+      "id": "q45",
+      "question": "Can Muslims believe in science?",
+      "shortQuestion": "Science and Islam?",
+      "category": "science",
+      "verses": [
+        {
+          "surahNumber": 3,
+          "verseNumber": 190,
+          "relevanceNote": "In the creation of heavens and earth, and the alternation of night and day, are signs for people of understanding. The Quran encourages scientific observation.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 96,
+          "verseNumber": 1,
+          "relevanceNote": "Read! The first revelation commands reading and learning. Islam's intellectual tradition produced pioneers in astronomy, medicine, mathematics, and chemistry.",
+          "isPrimary": true
+        }
+      ],
+      "relatedQuestions": ["q4", "q44"]
+    },
+    {
+      "id": "q46",
+      "question": "Is everything predestined or do we have free will?",
+      "shortQuestion": "Destiny vs free will?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 76,
+          "verseNumber": 3,
+          "relevanceNote": "We showed him the path - whether he is grateful or ungrateful. This verse affirms human choice: Allah guides, but we decide whether to follow.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 18,
+          "verseNumber": 29,
+          "relevanceNote": "Say: The truth is from your Lord - let whoever wills believe, and whoever wills disbelieve. This clearly states that belief is a personal choice.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 91,
+          "verseNumber": 8,
+          "relevanceNote": "Allah inspired the soul with its wickedness and righteousness. We have inner knowledge of right and wrong, and responsibility for our choices.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q9", "q12"]
+    },
+    {
+      "id": "q47",
+      "question": "Is the soul real?",
+      "shortQuestion": "Soul's existence?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 17,
+          "verseNumber": 85,
+          "relevanceNote": "They ask you about the soul. Say: The soul is from the command of my Lord, and you have been given only a little knowledge. The soul is real but mysterious.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 32,
+          "verseNumber": 9,
+          "relevanceNote": "Then He fashioned him and breathed into him of His spirit. The soul (ruh) is divine in origin, distinguishing humans from mere biological organisms.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q22", "q8"]
+    },
+    {
+      "id": "q48",
+      "question": "What does the Quran say about depression and anxiety?",
+      "shortQuestion": "Depression and anxiety?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 13,
+          "verseNumber": 28,
+          "relevanceNote": "Verily, in the remembrance of Allah do hearts find rest. The Quran acknowledges emotional distress and offers spiritual practices as one source of healing.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 94,
+          "verseNumber": 5,
+          "relevanceNote": "Indeed, with hardship comes ease. Repeated twice for emphasis - Allah promises relief follows difficulty. This gives hope during dark times.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 65,
+          "verseNumber": 2,
+          "relevanceNote": "Whoever fears Allah, He will make a way out for them. Trust in Allah provides hope and perspective during mental health struggles.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q11", "q5"]
+    },
+    {
+      "id": "q49",
+      "question": "Why do some prayers seem unanswered?",
+      "shortQuestion": "Unanswered prayers?",
+      "category": "faith",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 216,
+          "relevanceNote": "You may dislike something that is good for you, and love something that is bad for you. Allah knows and you do not know. He answers with wisdom.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 42,
+          "verseNumber": 27,
+          "relevanceNote": "If Allah extended provision to all His servants, they would transgress on earth. He sends down in measure as He wills. Sometimes 'no' protects us.",
+          "isPrimary": false
+        },
+        {
+          "surahNumber": 18,
+          "verseNumber": 82,
+          "relevanceNote": "The story of Khidr shows events that seemed harmful were actually merciful. Allah's wisdom in answering prayers is often hidden from us.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q5", "q9", "q11"]
+    },
+    {
+      "id": "q50",
+      "question": "What about life on other planets?",
+      "shortQuestion": "Extraterrestrial life?",
+      "category": "science",
+      "verses": [
+        {
+          "surahNumber": 42,
+          "verseNumber": 29,
+          "relevanceNote": "Among His signs is the creation of the heavens and earth, and the creatures He has scattered in both. This suggests life exists beyond Earth.",
+          "isPrimary": true
+        },
+        {
+          "surahNumber": 65,
+          "verseNumber": 12,
+          "relevanceNote": "Allah created seven heavens and of the earth the same number. The command descends between them. This hints at vast realms we don't fully understand.",
+          "isPrimary": false
+        }
+      ],
+      "relatedQuestions": ["q44", "q45"]
     }
   ]
 }

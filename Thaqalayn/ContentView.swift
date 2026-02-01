@@ -21,24 +21,21 @@ struct ContentView: View {
     @State private var showingWelcome = false
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                // Adaptive background with floating elements
-                AdaptiveModernBackground()
-                
-                Group {
-                    if dataManager.isLoading {
-                        LoadingView()
-                    } else if let errorMessage = dataManager.errorMessage {
-                        ErrorView(message: errorMessage)
-                    } else {
-                        SurahListView()
-                    }
+        Group {
+            if dataManager.isLoading {
+                ZStack {
+                    AdaptiveModernBackground()
+                    LoadingView()
                 }
+            } else if let errorMessage = dataManager.errorMessage {
+                ZStack {
+                    AdaptiveModernBackground()
+                    ErrorView(message: errorMessage)
+                }
+            } else {
+                MainTabView()
             }
-            .navigationBarHidden(true)
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // Force stack style for iPhone
         .preferredColorScheme(themeManager.colorScheme)
         .overlay(alignment: .bottom) {
             if audioManager.currentPlayback != nil {
@@ -267,7 +264,7 @@ struct SurahListView: View {
                             .font(.system(size: 16, weight: .medium))
                             .foregroundColor(themeManager.secondaryText)
 
-                        Text("Explore the Quran")
+                        Text("The Holy Quran")
                             .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
                             .foregroundColor(themeManager.primaryText)
                     }

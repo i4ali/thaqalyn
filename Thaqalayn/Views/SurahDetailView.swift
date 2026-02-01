@@ -13,6 +13,7 @@ struct SurahDetailView: View {
     @State private var selectedVerse: VerseWithTafsir?
     @State private var showingTafsir = false
     @State private var fullScreenCommentaryData: (verse: VerseWithTafsir, layer: TafsirLayer)?
+    @State private var selectedVerseForSummary: VerseWithTafsir?
     @State private var showingQuiz = false
     @State private var showingPaywall = false
     @StateObject private var themeManager = ThemeManager.shared
@@ -23,7 +24,7 @@ struct SurahDetailView: View {
     @State private var showingGoToVerse = false
     @State private var scrollProxy: ScrollViewProxy? = nil
     @Environment(\.dismiss) private var dismiss
-    
+
     init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil) {
         self.surahWithTafsir = surahWithTafsir
         self.targetVerse = targetVerse
@@ -35,7 +36,7 @@ struct SurahDetailView: View {
             set: { if !$0 { fullScreenCommentaryData = nil } }
         )
     }
-    
+
     var body: some View {
         ZStack {
             // Adaptive gradient background
@@ -75,11 +76,15 @@ struct SurahDetailView: View {
                                 ModernVerseCard(
                                     verse: verse,
                                     surah: surahWithTafsir.surah,
-                                    bookmarkManager: bookmarkManager
-                                ) {
-                                    selectedVerse = verse
-                                    fullScreenCommentaryData = (verse: verse, layer: .foundation)
-                                }
+                                    bookmarkManager: bookmarkManager,
+                                    onTafsirTap: {
+                                        selectedVerse = verse
+                                        fullScreenCommentaryData = (verse: verse, layer: .foundation)
+                                    },
+                                    onSummaryTap: {
+                                        selectedVerseForSummary = verse
+                                    }
+                                )
                                 .id("verse_\(verse.number)")
                             }
                         }
@@ -109,6 +114,7 @@ struct SurahDetailView: View {
             }
         }
         .navigationBarHidden(true)
+        .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
         .overlay(alignment: .bottom) {
             if audioManager.currentPlayback != nil {
@@ -144,6 +150,18 @@ struct SurahDetailView: View {
                         withAnimation(.easeInOut(duration: 0.8)) {
                             scrollProxy?.scrollTo("verse_\(verseNumber)", anchor: .center)
                         }
+                    }
+                }
+            )
+        }
+        .fullScreenCover(item: $selectedVerseForSummary) { verse in
+            VerseSummaryView(
+                verse: verse,
+                surah: surahWithTafsir.surah,
+                onViewFullCommentary: {
+                    selectedVerseForSummary = nil
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        fullScreenCommentaryData = (verse: verse, layer: .foundation)
                     }
                 }
             )
@@ -545,10 +563,10 @@ struct ModernVerseCard: View {
     let surah: Surah
     let bookmarkManager: BookmarkManager
     let onTafsirTap: () -> Void
+    let onSummaryTap: () -> Void
     @State private var isPressed = false
     @State private var showingBookmarkFeedback = false
     @State private var showingPaywall = false
-    @State private var showingSummary = false
     @State private var canAccessTafsir = false
     @State private var canAccessOverview = false
     @StateObject private var themeManager = ThemeManager.shared
@@ -860,19 +878,6 @@ struct ModernVerseCard: View {
         .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView()
         }
-        .sheet(isPresented: $showingSummary) {
-            VerseSummaryView(
-                verse: verse,
-                surah: surah,
-                onViewFullCommentary: {
-                    if !canAccessTafsir && surah.number > 1 {
-                        showingPaywall = true
-                    } else if verse.tafsir != nil {
-                        onTafsirTap()
-                    }
-                }
-            )
-        }
     }
 
     // MARK: - Split Button Variations
@@ -884,7 +889,7 @@ struct ModernVerseCard: View {
                 if !canAccessOverview && surah.number > 1 {
                     showingPaywall = true
                 } else if verse.tafsir != nil {
-                    showingSummary = true
+                    onSummaryTap()
                 }
             }) {
                 HStack(spacing: 6) {
@@ -936,7 +941,7 @@ struct ModernVerseCard: View {
                 if !canAccessOverview && surah.number > 1 {
                     showingPaywall = true
                 } else if verse.tafsir != nil {
-                    showingSummary = true
+                    onSummaryTap()
                 }
             }) {
                 HStack(spacing: 6) {
