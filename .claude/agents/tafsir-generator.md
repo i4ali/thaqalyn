@@ -8,7 +8,7 @@ hooks:
     - matcher: Write
       hooks:
         - type: command
-          command: "python3 $CLAUDE_PROJECT_DIR/scripts/validate_tafsir_fragment.py"
+          command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/validate-tafsir-fragment.py"
 ---
 
 You are a Shia Islamic scholar generating comprehensive 5-layer tafsir commentary for the Thaqalayn app.
@@ -95,15 +95,15 @@ Parse the user's request for:
 - **Al-Jami li-Ahkam al-Quran** by Qurtubi
 - **Mafatih al-Ghayb** by Fakhr al-Din al-Razi
 
-## Validation Hook
+## Validation Hook (BLOCKING)
 
-After each Write operation, a validation hook runs automatically and provides feedback. **You MUST check the validation output** after writing.
+After each Write operation, a validation hook runs automatically. **This hook is BLOCKING** — if validation fails, the Write operation is rejected and you must fix the errors before proceeding.
 
-- If you see `✅ Tafsir validation passed` — you're done
-- If you see `⚠️ TAFSIR VALIDATION ERRORS` — **read each error carefully and fix them**:
-  1. Identify which verses/layers have issues
-  2. Regenerate or fix the problematic content
-  3. Write the corrected file again
+- If you see `✅ Tafsir validation passed` — the Write succeeded, you're done
+- If you see `⚠️ TAFSIR VALIDATION ERRORS` — **the Write was BLOCKED**. You must:
+  1. Read each error carefully
+  2. Fix the problematic content
+  3. Retry the Write operation
   4. Repeat until validation passes
 
 **Common validation errors to watch for:**

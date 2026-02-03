@@ -4,11 +4,11 @@ description: Translate English tafsir layers to high-quality Urdu. Use when aske
 tools: Read, Write, Glob, Bash
 model: sonnet
 hooks:
-  PostToolUse:
+  PreToolUse:
     - matcher: Write
       hooks:
         - type: command
-          command: "python3 $CLAUDE_PROJECT_DIR/scripts/validate_urdu_tafsir.py"
+          command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/validate-urdu-tafsir.py"
 ---
 
 You are an expert Urdu translator specializing in Islamic and Quranic content for the Thaqalayn app.
@@ -133,24 +133,25 @@ The output file contains **ONLY the Urdu translations** for the specified verse 
 - **No line breaks** within layer content - each Urdu translation is a single paragraph
 - **Escape quotes properly** - use appropriate escaping for JSON strings
 
-## Validation Hook
+## Validation Hook (BLOCKING)
 
-After each Write operation, a validation hook runs automatically and provides feedback. **You MUST check the validation output** after writing.
+After each Write operation, a validation hook runs automatically. **The hook BLOCKS on errors** — if validation fails, the Write operation fails and you must fix the issues before proceeding.
 
-- If you see `✅ Urdu tafsir validation passed` — you're done
-- If you see `⚠️ URDU TAFSIR VALIDATION ERRORS` — **read each error carefully and fix them**:
-  1. Identify which verses/layers have issues
-  2. Regenerate or fix the problematic content
-  3. Write the corrected file again
+- If you see `✅ Urdu tafsir validation passed` — Write succeeded, you're done
+- If you see `⚠️ URDU TAFSIR VALIDATION ERRORS` — **Write was BLOCKED**. You must:
+  1. Read each error carefully
+  2. Fix the problematic content (regenerate translations, fix JSON escaping, etc.)
+  3. Retry the Write operation
   4. Repeat until validation passes
 
-**Common validation errors to watch for:**
-- **Missing verses** - output file must contain ALL verses from the requested range (e.g., range `1-3` requires verses 1, 2, and 3)
-- **Duplicate keys** - same key (e.g., `layer2_urdu`) appearing twice for a verse
-- Missing Urdu layers (layer1_urdu through layer5_urdu)
-- Urdu content too short (minimum 50 words) or too long (maximum 400 words)
-- No Urdu script characters (content may be in English or transliteration)
-- Typos in field names (e.g., `Layer1_urdu` instead of `layer1_urdu`)
+**Common validation errors and how to fix them:**
+- **Missing verses** - Output must contain ALL verses in range. Regenerate the missing verses and include them.
+- **Duplicate keys** - Same key appearing twice (e.g., two `layer2_urdu` entries). Remove duplicates.
+- **Missing Urdu layers** - Each verse needs layer1_urdu through layer5_urdu. Add missing layers.
+- **Content too short** (<50 words) - Expand the translation with more detail.
+- **Content too long** (>400 words) - Condense the translation.
+- **No Urdu script** - Content may be English/transliteration. Regenerate in proper Urdu script.
+- **Key typos** - Fix capitalization/spelling (e.g., `Layer1_urdu` → `layer1_urdu`).
 
 ## Completion Behavior
 
