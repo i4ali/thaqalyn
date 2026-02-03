@@ -39,6 +39,13 @@ enum ExploreSection: CaseIterable {
                     title: "Questions & Answers",
                     subtitle: "Quranic answers to questions",
                     destination: .questions
+                ),
+                ExploreItem(
+                    id: "fasting",
+                    icon: "moon.fill",
+                    title: "Fasting in the Quran",
+                    subtitle: "Verses about fasting & Ramadan",
+                    destination: .fasting
                 )
             ]
         case .storiesAndFigures:
@@ -73,6 +80,7 @@ struct ExploreItem: Identifiable {
 enum ExploreDestination {
     case lifeMoments
     case questions
+    case fasting
     case propheticStories
     case ahlulbaytQuran
 }
@@ -83,6 +91,7 @@ struct ExploreView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @State private var showLifeMoments = false
     @State private var showQuestions = false
+    @State private var showFasting = false
     @State private var showPropheticStories = false
     @State private var showAhlulbaytQuran = false
 
@@ -117,6 +126,9 @@ struct ExploreView: View {
         }
         .fullScreenCover(isPresented: $showQuestions) {
             QuestionsView()
+        }
+        .fullScreenCover(isPresented: $showFasting) {
+            FastingVersesView()
         }
         .fullScreenCover(isPresented: $showPropheticStories) {
             PropheticStoriesView()
@@ -176,6 +188,8 @@ struct ExploreView: View {
             return themeManager.selectedTheme == .warmInviting ? "heart.fill" : "heart.fill"
         case .questions:
             return themeManager.selectedTheme == .warmInviting ? "questionmark.circle" : "questionmark.circle"
+        case .fasting:
+            return themeManager.selectedTheme == .warmInviting ? "moon.fill" : "moon.fill"
         case .propheticStories:
             return themeManager.selectedTheme == .warmInviting ? "book" : "book"
         case .ahlulbaytQuran:
@@ -189,6 +203,8 @@ struct ExploreView: View {
             showLifeMoments = true
         case .questions:
             showQuestions = true
+        case .fasting:
+            showFasting = true
         case .propheticStories:
             showPropheticStories = true
         case .ahlulbaytQuran:

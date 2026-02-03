@@ -8,7 +8,7 @@
 
 import Foundation
 
-class IslamicCalendarManager {
+class IslamicCalendarManager: ObservableObject {
     static let shared = IslamicCalendarManager()
 
     private init() {}
@@ -137,6 +137,67 @@ class IslamicCalendarManager {
     func isSacredMonth() -> Bool {
         let sacredMonths = [1, 7, 11, 12] // Muharram, Rajab, Dhul-Qa'dah, Dhul-Hijjah
         return sacredMonths.contains(currentIslamicMonth())
+    }
+
+    // MARK: - Ramadan Season Detection
+
+    /// Check if we're in the "Ramadan season" window
+    /// - 5 days before Ramadan (last 5 days of Sha'ban, month 8)
+    /// - All of Ramadan (month 9)
+    /// - 5 days after Ramadan (first 5 days of Shawwal, month 10)
+    func isRamadanSeason() -> Bool {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+
+        switch month {
+        case 8: // Sha'ban - last 5 days (days 25-30)
+            return day >= 25
+        case 9: // Ramadan - all days
+            return true
+        case 10: // Shawwal - first 5 days
+            return day <= 5
+        default:
+            return false
+        }
+    }
+
+    /// Get days until Ramadan (for countdown)
+    /// Returns nil if not in Sha'ban
+    func daysUntilRamadan() -> Int? {
+        // Only relevant in Sha'ban
+        guard currentIslamicMonth() == 8 else { return nil }
+        let day = currentIslamicDay()
+        // Days remaining in Sha'ban (assuming 30 days) + 1 for first day of Ramadan
+        return max(0, 30 - day + 1)
+    }
+
+    /// Get current day of Ramadan (1-30), nil if not Ramadan
+    func currentRamadanDay() -> Int? {
+        guard currentIslamicMonth() == 9 else { return nil }
+        return currentIslamicDay()
+    }
+
+    /// Get the Ramadan season status message
+    func ramadanSeasonStatus() -> String {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+
+        switch month {
+        case 8:
+            if let daysUntil = daysUntilRamadan(), daysUntil > 0 {
+                return "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Ramadan"
+            }
+            return "Ramadan begins soon"
+        case 9:
+            return "Day \(day) of Ramadan"
+        case 10:
+            if day <= 5 {
+                return "Eid Mubarak!"
+            }
+            return ""
+        default:
+            return ""
+        }
     }
 
     // MARK: - Date Formatting

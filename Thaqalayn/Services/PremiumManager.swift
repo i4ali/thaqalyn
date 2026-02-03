@@ -141,4 +141,28 @@ class PremiumManager: ObservableObject {
     func getFreeReciters() -> [Reciter] {
         return Reciter.popularReciters // All reciters are free
     }
+
+    // MARK: - Fasting Feature Access Control
+
+    /// Check if user can access a fasting category
+    /// - "obligation" category is always free
+    /// - Other categories require premium
+    func canAccessFastingCategory(_ categoryId: String) -> Bool {
+        if categoryId == "obligation" {
+            return true  // Always free
+        }
+        return isPremium
+    }
+
+    // MARK: - Ramadan Journey Access Control
+
+    /// Check if user can access a Ramadan Journey day
+    /// - Day 1 is always free
+    /// - Days 2-30 require premium
+    func canAccessRamadanDay(_ dayNumber: Int) -> Bool {
+        if dayNumber == 1 {
+            return true  // Day 1 always free
+        }
+        return isPremium
+    }
 }

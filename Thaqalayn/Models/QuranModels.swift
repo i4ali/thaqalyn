@@ -758,6 +758,7 @@ enum BadgeType: String, Codable {
     case streak7 = "streak_7"
     case streak30 = "streak_30"
     case streak100 = "streak_100"
+    case ramadanCompletion = "ramadan_completion"
 
     var title: String {
         switch self {
@@ -769,6 +770,7 @@ enum BadgeType: String, Codable {
         case .streak7: return "Mu'min Mutaqin"
         case .streak30: return "Sahib al-Wird"
         case .streak100: return "Mukhlis"
+        case .ramadanCompletion: return "Ramadan Champion"
         }
     }
 
@@ -782,6 +784,7 @@ enum BadgeType: String, Codable {
         case .streak7: return "مؤمن متقين"
         case .streak30: return "صاحب الورد"
         case .streak100: return "المخلص"
+        case .ramadanCompletion: return "بطل رمضان"
         }
     }
 
@@ -795,6 +798,7 @@ enum BadgeType: String, Codable {
         case .streak7: return "flame.fill"
         case .streak30: return "sparkles"
         case .streak100: return "crown.fill"
+        case .ramadanCompletion: return "moon.stars.fill"
         }
     }
 
@@ -808,6 +812,7 @@ enum BadgeType: String, Codable {
         case .streak7: return "orange"
         case .streak30: return "green"
         case .streak100: return "purple"
+        case .ramadanCompletion: return "gold"
         }
     }
 
@@ -829,6 +834,8 @@ enum BadgeType: String, Codable {
             return "Keeper of Daily Portion - 30 days of unwavering commitment"
         case .streak100:
             return "The Devoted One - 100 days of dedicated spiritual practice"
+        case .ramadanCompletion:
+            return "Completed the entire 30-day Ramadan Journey"
         }
     }
 
@@ -842,6 +849,7 @@ enum BadgeType: String, Codable {
         case .streak7: return 700
         case .streak30: return 3000
         case .streak100: return 10000
+        case .ramadanCompletion: return 500
         }
     }
 
@@ -853,6 +861,8 @@ enum BadgeType: String, Codable {
             return "The best among you are those who learn the Quran and teach it. - Prophet Muhammad (PBUH)"
         case .streak7, .streak30, .streak100:
             return "Make a habit of doing good deeds, for the most beloved deed to Allah is the most regular one, even if it is small. - Imam Ali (AS)"
+        case .ramadanCompletion:
+            return "Whoever fasts Ramadan out of faith and seeking reward, his previous sins will be forgiven. - Prophet Muhammad (PBUH)"
         default:
             return nil
         }
@@ -1227,5 +1237,95 @@ enum AhlulbaytCategory: String, Codable, CaseIterable {
         case .knowledge: return "book.fill"
         case .rights: return "scale.3d"
         }
+    }
+}
+
+// MARK: - Fasting in the Quran Models
+
+struct FastingVersesData: Codable {
+    let categories: [FastingCategory]
+}
+
+struct FastingCategory: Codable, Identifiable {
+    let id: String
+    let title: String
+    let icon: String
+    let description: String
+    let verses: [FastingVerse]
+
+    var verseCount: Int {
+        verses.count
+    }
+}
+
+struct FastingVerse: Codable, Identifiable {
+    let id: String
+    let surahNumber: Int
+    let verseNumber: Int
+    let relevanceNote: String
+    let isKeyVerse: Bool
+
+    var verseReference: String {
+        "Quran \(surahNumber):\(verseNumber)"
+    }
+}
+
+// MARK: - Ramadan Journey Models
+
+struct RamadanJourneyData: Codable {
+    let days: [RamadanDay]
+}
+
+struct RamadanDay: Codable, Identifiable {
+    let id: String
+    let dayNumber: Int
+    let theme: String
+    let themeArabic: String
+    let icon: String
+    let dua: RamadanDua
+    let verses: [RamadanVerse]
+    let tafsirFocus: String
+    let reflection: String
+}
+
+struct RamadanDua: Codable {
+    let arabic: String
+    let transliteration: String
+    let english: String
+    let source: String?
+}
+
+struct RamadanVerse: Codable, Identifiable {
+    let id: String
+    let surahNumber: Int
+    let verseNumber: Int
+    let relevanceNote: String
+
+    var verseReference: String {
+        "Quran \(surahNumber):\(verseNumber)"
+    }
+}
+
+struct RamadanJourneyProgress: Codable {
+    var completedDays: Set<Int>
+    var lastCompletedDate: Date?
+    var year: Int
+
+    init(
+        completedDays: Set<Int> = [],
+        lastCompletedDate: Date? = nil,
+        year: Int = 0
+    ) {
+        self.completedDays = completedDays
+        self.lastCompletedDate = lastCompletedDate
+        self.year = year
+    }
+
+    var completionPercentage: Double {
+        Double(completedDays.count) / 30.0
+    }
+
+    var isCompleted: Bool {
+        completedDays.count >= 30
     }
 }

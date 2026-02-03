@@ -1,0 +1,169 @@
+{
+  "categories": [
+    {
+      "id": "obligation",
+      "title": "Obligation of Fasting",
+      "icon": "book.fill",
+      "description": "The foundational verses establishing fasting as an obligation for believers, including the command and its connection to taqwa.",
+      "verses": [
+        {
+          "id": "f1",
+          "surahNumber": 2,
+          "verseNumber": 183,
+          "relevanceNote": "The primary verse prescribing fasting for believers, connecting it to previous nations and emphasizing taqwa as its purpose.",
+          "isKeyVerse": true
+        },
+        {
+          "id": "f2",
+          "surahNumber": 2,
+          "verseNumber": 184,
+          "relevanceNote": "Specifies fasting is for a counted number of days, with provisions for illness and travel.",
+          "isKeyVerse": true
+        },
+        {
+          "id": "f3",
+          "surahNumber": 2,
+          "verseNumber": 185,
+          "relevanceNote": "Identifies Ramadan as the month of fasting, the month the Quran was revealed, emphasizing guidance and criterion.",
+          "isKeyVerse": true
+        }
+      ]
+    },
+    {
+      "id": "exemptions",
+      "title": "Exemptions & Provisions",
+      "icon": "heart.circle.fill",
+      "description": "Verses detailing who is exempt from fasting and the provisions for travelers, the sick, and those facing hardship.",
+      "verses": [
+        {
+          "id": "f4",
+          "surahNumber": 2,
+          "verseNumber": 184,
+          "relevanceNote": "Details exemptions: illness, travel, and the option for those with difficulty to feed the poor instead.",
+          "isKeyVerse": true
+        },
+        {
+          "id": "f5",
+          "surahNumber": 2,
+          "verseNumber": 185,
+          "relevanceNote": "Allah intends ease not hardship - the principle underlying all exemptions.",
+          "isKeyVerse": false
+        },
+        {
+          "id": "f6",
+          "surahNumber": 2,
+          "verseNumber": 286,
+          "relevanceNote": "Allah does not burden a soul beyond its capacity - foundational principle for fasting exemptions.",
+          "isKeyVerse": false
+        },
+        {
+          "id": "f7",
+          "surahNumber": 4,
+          "verseNumber": 43,
+          "relevanceNote": "Context on conditions that temporarily invalidate worship states, relevant to fasting purification.",
+          "isKeyVerse": false
+        }
+      ]
+    },
+    {
+      "id": "spiritual_benefits",
+      "title": "Spiritual Benefits",
+      "icon": "sparkles",
+      "description": "Verses highlighting the spiritual rewards, connection to taqwa, and the blessed nature of fasting and the month of Ramadan.",
+      "verses": [
+        {
+          "id": "f8",
+          "surahNumber": 2,
+          "verseNumber": 183,
+          "relevanceNote": "Fasting is prescribed so that you may attain taqwa (God-consciousness) - the primary spiritual benefit.",
+          "isKeyVerse": true
+        },
+        {
+          "id": "f9",
+          "surahNumber": 97,
+          "verseNumber": 1,
+          "relevanceNote": "Laylatul Qadr (Night of Power) - the blessed night in Ramadan better than a thousand months.",
+          "isKeyVerse": true
+        },
+        {
+          "id": "f10",
+          "surahNumber": 97,
+          "verseNumber": 2,
+          "relevanceNote": "What will make you know what the Night of Power is?",
+          "isKeyVerse": false
+        },
+        {
+          "id": "f11",
+          "surahNumber": 97,
+          "verseNumber": 3,
+          "relevanceNote": "The Night of Power is better than a thousand months of worship.",
+          "isKeyVerse": true
+        },
+        {
+          "id": "f12",
+          "surahNumber": 97,
+          "verseNumber": 4,
+          "relevanceNote": "Angels and the Spirit descend on this blessed night with every decree.",
+          "isKeyVerse": false
+        },
+        {
+          "id": "f13",
+          "surahNumber": 97,
+          "verseNumber": 5,
+          "relevanceNote": "Peace it is until the emergence of dawn - describing the nature of this blessed night.",
+          "isKeyVerse": false
+        },
+        {
+          "id": "f14",
+          "surahNumber": 2,
+          "verseNumber": 186,
+          "relevanceNote": "Allah is near and responds to supplication - emphasizing closeness to Allah during fasting.",
+          "isKeyVerse": true
+        }
+      ]
+    },
+    {
+      "id": "historical_context",
+      "title": "Historical Context",
+      "icon": "clock.fill",
+      "description": "Verses showing fasting was prescribed for previous nations and prophets, establishing its universal spiritual significance.",
+      "verses": [
+        {
+          "id": "f15",
+          "surahNumber": 2,
+          "verseNumber": 183,
+          "relevanceNote": "Fasting prescribed for you as it was prescribed for those before you - showing continuity with previous nations.",
+          "isKeyVerse": true
+        },
+        {
+          "id": "f16",
+          "surahNumber": 19,
+          "verseNumber": 26,
+          "relevanceNote": "Maryam (Mary) was commanded to fast from speech - showing fasting takes different forms.",
+          "isKeyVerse": false
+        },
+        {
+          "id": "f17",
+          "surahNumber": 2,
+          "verseNumber": 187,
+          "relevanceNote": "Regulations for Ramadan fasting including permitted activities during the night, abrogating earlier stricter rules.",
+          "isKeyVerse": true
+        },
+        {
+          "id": "f18",
+          "surahNumber": 5,
+          "verseNumber": 89,
+          "relevanceNote": "Fasting three days as expiation for broken oaths - showing fasting as spiritual compensation.",
+          "isKeyVerse": false
+        },
+        {
+          "id": "f19",
+          "surahNumber": 58,
+          "verseNumber": 4,
+          "relevanceNote": "Fasting two consecutive months as expiation - another instance of fasting as spiritual remedy.",
+          "isKeyVerse": false
+        }
+      ]
+    }
+  ]
+}

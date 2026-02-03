@@ -757,6 +757,42 @@ class ProgressManager: ObservableObject {
         pendingBadge = nil
     }
 
+    /// Award Ramadan completion badge (called by RamadanJourneyManager)
+    /// Only awards once per Islamic year
+    func awardRamadanBadge(year: Int) {
+        // Check if already awarded this year
+        let alreadyAwarded = badges.contains(where: {
+            $0.badgeType == .ramadanCompletion &&
+            Calendar.current.component(.year, from: $0.awardedDate) == year
+        })
+
+        guard !alreadyAwarded else {
+            print("ProgressManager: Ramadan badge already awarded for year \(year)")
+            return
+        }
+
+        let badge = BadgeAward(
+            surahNumber: 0,
+            surahName: "Ramadan Champion",
+            arabicName: "بطل رمضان",
+            badgeType: .ramadanCompletion
+        )
+        badges.append(badge)
+
+        // Award sawab bonus
+        stats.totalSawab += badge.badgeType.sawabValue
+        print("ProgressManager: +\(badge.badgeType.sawabValue) sawab earned from Ramadan completion! Total: \(stats.totalSawab)")
+
+        if preferences.celebrationsEnabled {
+            pendingBadge = badge
+        }
+
+        saveProgress()
+        scheduleSync()
+
+        print("ProgressManager: Ramadan Champion badge awarded for year \(year)")
+    }
+
     // MARK: - Preferences
 
     func updatePreferences(_ newPreferences: ProgressPreferences) {
