@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 class CommentaryLanguageManager: ObservableObject {
+    static let shared = CommentaryLanguageManager()
+
     @Published var selectedLanguage: CommentaryLanguage {
         didSet {
             UserDefaults.standard.set(selectedLanguage.rawValue, forKey: "commentaryLanguage")

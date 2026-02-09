@@ -15,7 +15,7 @@ struct FullScreenCommentaryView: View {
     @State private var selectedLayer: TafsirLayer
     @State private var showingPaywall = false
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager()
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var tafsirReader = TafsirReader.shared
@@ -175,24 +175,11 @@ struct FullScreenCommentaryView: View {
         }
     }
 
-    // Language selector menu in header
+    // Language selector button (cycles through languages)
     private var languageToggle: some View {
-        Menu {
-            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
-                Button(action: {
-                    withAnimation(.spring(response: 0.3)) {
-                        languageManager.setLanguage(language)
-                    }
-                }) {
-                    HStack {
-                        Text(language.displayName)
-                        if languageManager.selectedLanguage == language {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                }
-            }
-        } label: {
+        Button(action: {
+            languageManager.toggleLanguage()
+        }) {
             HStack(spacing: 4) {
                 Text(languageManager.selectedLanguage.displayName)
                     .font(.system(size: 14, weight: .medium))
