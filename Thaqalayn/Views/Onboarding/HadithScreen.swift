@@ -11,6 +11,8 @@ struct HadithScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @Binding var currentPage: Int
     @State private var isVisible = false
+    @State private var shimmerOffset: CGFloat = -1.0
+    @State private var glowPulse = false
 
     var body: some View {
         ZStack {
@@ -21,10 +23,41 @@ struct HadithScreen: View {
                 Spacer()
 
                 VStack(spacing: 40) {
-                    // Title
+                    // Title with glow
                     Text("Hadith of Thaqalayn")
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(themeManager.secondaryText)
+                        .overlay(
+                            GeometryReader { geometry in
+                                LinearGradient(
+                                    colors: [
+                                        .clear,
+                                        .white.opacity(0.5),
+                                        .clear
+                                    ],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                                .frame(width: geometry.size.width * 0.4)
+                                .offset(x: shimmerOffset * geometry.size.width * 1.5)
+                                .blendMode(.overlay)
+                            }
+                            .mask(
+                                Text("Hadith of Thaqalayn")
+                                    .font(.system(size: 20, weight: .semibold))
+                            )
+                        )
+                        .background(
+                            Ellipse()
+                                .fill(themeManager.accentGradient.opacity(0.3))
+                                .frame(width: 200, height: 70)
+                                .blur(radius: 20)
+                                .scaleEffect(glowPulse ? 1.1 : 1.0)
+                                .animation(
+                                    Animation.easeInOut(duration: 2.5).repeatForever(autoreverses: true),
+                                    value: glowPulse
+                                )
+                        )
                         .opacity(isVisible ? 1 : 0)
                         .offset(y: isVisible ? 0 : 20)
                         .animation(Animation.easeOut(duration: 0.6).delay(0.3), value: isVisible)
@@ -104,6 +137,7 @@ struct HadithScreen: View {
         }
         .onAppear {
             isVisible = true
+            startTitleAnimations()
 
             // Auto-advance after 5 seconds
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
@@ -115,6 +149,22 @@ struct HadithScreen: View {
         .onTapGesture {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                 currentPage = 1
+            }
+        }
+    }
+
+    private func startTitleAnimations() {
+        // Start glow pulse after initial fade-in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            glowPulse = true
+        }
+        // Start shimmer after initial animation
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            withAnimation(
+                Animation.easeInOut(duration: 1.5)
+                    .repeatForever(autoreverses: false)
+            ) {
+                shimmerOffset = 1.0
             }
         }
     }
