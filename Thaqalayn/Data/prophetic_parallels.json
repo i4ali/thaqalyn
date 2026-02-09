@@ -1,0 +1,519 @@
+{
+  "parallels": [
+    {
+      "id": "p1",
+      "situation": "I feel trapped with no way out",
+      "category": "emotional_struggles",
+      "prophet": "Yunus (Jonah)",
+      "connection": "Yunus was swallowed by a whale in complete darkness - the ultimate feeling of being trapped",
+      "comfortMessage": "Even in the darkest depths, Allah heard Yunus's prayer. No matter how trapped you feel, your sincere call to Allah will never go unanswered. The whale of your difficulty will release you.",
+      "storySummary": "Prophet Yunus left his people in frustration and was swallowed by a whale. In three layers of darkness - the night, the sea, and the whale's belly - he called out to Allah with complete humility: 'There is no god but You, glory be to You, I was indeed wrong.' Allah responded and freed him.",
+      "verses": [
+        {
+          "surahNumber": 21,
+          "verseNumber": 87,
+          "relevanceNote": "Yunus's powerful prayer from the depths of darkness"
+        },
+        {
+          "surahNumber": 21,
+          "verseNumber": 88,
+          "relevanceNote": "Allah's immediate response to sincere repentance"
+        }
+      ],
+      "relatedStoryId": "s11",
+      "icon": "water.waves"
+    },
+    {
+      "id": "p2",
+      "situation": "My family doesn't understand my faith",
+      "category": "family_challenges",
+      "prophet": "Ibrahim (Abraham)",
+      "connection": "Ibrahim's own father threatened to stone him for rejecting idol worship",
+      "comfortMessage": "Ibrahim faced opposition from his own father, yet he maintained respect while standing firm in truth. You can honor your family while staying true to your faith - Ibrahim showed us how.",
+      "storySummary": "Ibrahim called his father Azar to abandon idol worship, but his father threatened to stone him. Despite this painful rejection, Ibrahim prayed for his father and continued his mission. Allah blessed him with a new righteous family when his biological family rejected him.",
+      "verses": [
+        {
+          "surahNumber": 19,
+          "verseNumber": 46,
+          "relevanceNote": "The father's harsh threat to stone Ibrahim"
+        },
+        {
+          "surahNumber": 19,
+          "verseNumber": 47,
+          "relevanceNote": "Ibrahim's graceful response and continued prayers"
+        },
+        {
+          "surahNumber": 60,
+          "verseNumber": 4,
+          "relevanceNote": "Ibrahim as a model for believers facing family opposition"
+        }
+      ],
+      "relatedStoryId": "s1",
+      "icon": "figure.stand.line.dotted.figure.stand"
+    },
+    {
+      "id": "p3",
+      "situation": "I'm being mocked for my beliefs",
+      "category": "persecution",
+      "prophet": "Nuh (Noah)",
+      "connection": "Nuh was mocked for 950 years while building the ark, yet he persevered",
+      "comfortMessage": "For nearly a millennium, Nuh endured ridicule as he built the ark far from any water. Those who mock your faith today will one day see the truth, just as Nuh's mockers did.",
+      "storySummary": "Prophet Nuh called his people to Allah for 950 years. They mocked him relentlessly, especially when he built an ark far from water. The leaders laughed and passed by, ridiculing him. Yet Nuh continued, and when the flood came, the mockers desperately wished they had listened.",
+      "verses": [
+        {
+          "surahNumber": 11,
+          "verseNumber": 38,
+          "relevanceNote": "The people mocking Nuh as he built the ark"
+        },
+        {
+          "surahNumber": 11,
+          "verseNumber": 36,
+          "relevanceNote": "Allah comforting Nuh after centuries of mockery"
+        }
+      ],
+      "relatedStoryId": "s3",
+      "icon": "bubble.left.and.exclamationmark.bubble.right.fill"
+    },
+    {
+      "id": "p4",
+      "situation": "I was betrayed by people I trusted",
+      "category": "family_challenges",
+      "prophet": "Yusuf (Joseph)",
+      "connection": "Yusuf's own brothers threw him in a well out of jealousy",
+      "comfortMessage": "Your brothers in humanity may betray you, but Allah never will. Yusuf's betrayal led him to become the minister of Egypt. Your pain today may be the path to your elevation tomorrow.",
+      "storySummary": "Yusuf's brothers, consumed by jealousy, threw him into a dark well and told their father he was eaten by a wolf. Sold into slavery, falsely imprisoned - yet through it all, Allah's plan was unfolding. The betrayed child became Egypt's most powerful minister.",
+      "verses": [
+        {
+          "surahNumber": 12,
+          "verseNumber": 15,
+          "relevanceNote": "The brothers casting Yusuf into the well"
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 92,
+          "relevanceNote": "Yusuf's incredible forgiveness of his brothers"
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 100,
+          "relevanceNote": "Yusuf recognizing Allah's plan in all his trials"
+        }
+      ],
+      "relatedStoryId": "s4",
+      "icon": "person.fill.xmark"
+    },
+    {
+      "id": "p5",
+      "situation": "I'm facing a powerful oppressor",
+      "category": "worldly_pressures",
+      "prophet": "Musa (Moses)",
+      "connection": "Musa faced Pharaoh, the most powerful tyrant of his time",
+      "comfortMessage": "Musa had a speech impediment and faced the mightiest empire on Earth. Yet with Allah's support, he prevailed. Your oppressor, no matter how powerful, is nothing compared to the One who parts seas.",
+      "storySummary": "Prophet Musa was commanded to confront Pharaoh, who claimed to be god and had enslaved an entire nation. Despite his fear and speech difficulty, Musa went with his brother Harun. When Pharaoh's magicians threw down their staffs, Musa's staff consumed them all, exposing the truth.",
+      "verses": [
+        {
+          "surahNumber": 20,
+          "verseNumber": 24,
+          "relevanceNote": "Allah commanding Musa to face the tyrant"
+        },
+        {
+          "surahNumber": 20,
+          "verseNumber": 67,
+          "relevanceNote": "Musa feeling fear, but Allah reassuring him"
+        },
+        {
+          "surahNumber": 26,
+          "verseNumber": 62,
+          "relevanceNote": "Musa's declaration of trust at the Red Sea"
+        }
+      ],
+      "relatedStoryId": "s6",
+      "icon": "crown.fill"
+    },
+    {
+      "id": "p6",
+      "situation": "I've lost everything",
+      "category": "emotional_struggles",
+      "prophet": "Ayyub (Job)",
+      "connection": "Ayyub lost his wealth, his children, and his health, yet never complained to anyone but Allah",
+      "comfortMessage": "Ayyub lost it all - family, wealth, health - until his friends abandoned him. Yet his patience made him beloved to Allah, and everything was restored many times over. Your loss is not the end of your story.",
+      "storySummary": "Prophet Ayyub was blessed with wealth, children, and health. Then he lost everything - his children died, his wealth vanished, disease ravaged his body until only his wife remained. Yet through years of suffering, he never complained to anyone but Allah, earning the title 'as-Sabur' (the Patient).",
+      "verses": [
+        {
+          "surahNumber": 21,
+          "verseNumber": 83,
+          "relevanceNote": "Ayyub's heartfelt cry to Allah in suffering"
+        },
+        {
+          "surahNumber": 38,
+          "verseNumber": 44,
+          "relevanceNote": "Allah's praise of Ayyub's patience"
+        }
+      ],
+      "relatedStoryId": "s12",
+      "icon": "heart.slash"
+    },
+    {
+      "id": "p7",
+      "situation": "I'm tempted to compromise my values",
+      "category": "faith_tests",
+      "prophet": "Yusuf (Joseph)",
+      "connection": "Yusuf chose prison over compromising his integrity when tempted by power and beauty",
+      "comfortMessage": "Yusuf was young, enslaved, far from family, and propositioned by a powerful, beautiful woman. He chose prison over sin. Your temptation can be overcome - if Yusuf could resist in such circumstances, so can you with Allah's help.",
+      "storySummary": "As a young slave in Egypt, Yusuf was pursued by the wife of his master, a woman of power and beauty. She locked the doors and called him to her. Yusuf fled to the door, saying 'I seek refuge in Allah.' When she accused him falsely, he preferred years in prison over sinning against Allah.",
+      "verses": [
+        {
+          "surahNumber": 12,
+          "verseNumber": 23,
+          "relevanceNote": "Yusuf refusing temptation and seeking Allah's refuge"
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 33,
+          "relevanceNote": "Yusuf preferring prison over sin"
+        }
+      ],
+      "relatedStoryId": "s5",
+      "icon": "figure.walk.motion"
+    },
+    {
+      "id": "p8",
+      "situation": "I'm old and feel it's too late",
+      "category": "worldly_pressures",
+      "prophet": "Zakariya (Zechariah)",
+      "connection": "Zakariya was elderly with a barren wife, yet Allah blessed him with a son",
+      "comfortMessage": "Zakariya's bones were brittle and his hair was grey. His wife had never conceived. Yet he still raised his hands to Allah - and Yahya was born. It's never too late for Allah's miracles in your life.",
+      "storySummary": "Prophet Zakariya was old, his bones weak, his hair white, and his wife was barren their whole lives. Yet seeing Maryam receive provision from the unseen gave him hope. He prayed secretly, and Allah granted him Yahya - a child no one thought possible.",
+      "verses": [
+        {
+          "surahNumber": 19,
+          "verseNumber": 4,
+          "relevanceNote": "Zakariya's humble prayer despite his old age"
+        },
+        {
+          "surahNumber": 19,
+          "verseNumber": 7,
+          "relevanceNote": "Allah's glad tidings of a son with an unprecedented name"
+        }
+      ],
+      "relatedStoryId": "s15",
+      "icon": "hourglass.bottomhalf.filled"
+    },
+    {
+      "id": "p9",
+      "situation": "I feel like I'm fighting alone",
+      "category": "isolation",
+      "prophet": "Dawud (David)",
+      "connection": "Young Dawud stood alone against the giant Goliath when his entire army was terrified",
+      "comfortMessage": "A young shepherd boy against a giant warrior - no one believed Dawud could win. But with a few stones and unshakeable faith, he prevailed. When you feel alone against giants, remember whose side you're really on.",
+      "storySummary": "Goliath terrorized the armies of the believers, and no soldier dared face him. Young Dawud, just a shepherd boy, stepped forward with nothing but stones and his sling. With Allah's permission, he struck down the giant, proving that faith conquers size and numbers.",
+      "verses": [
+        {
+          "surahNumber": 2,
+          "verseNumber": 249,
+          "relevanceNote": "The believers who trusted in meeting Allah despite being outnumbered"
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 251,
+          "relevanceNote": "Dawud defeating Goliath with Allah's permission"
+        }
+      ],
+      "relatedStoryId": "s10",
+      "icon": "figure.stand"
+    },
+    {
+      "id": "p10",
+      "situation": "I made a mistake and regret it",
+      "category": "faith_tests",
+      "prophet": "Adam",
+      "connection": "Adam made the first human mistake, yet his repentance became a model for all humanity",
+      "comfortMessage": "Adam, the father of humanity and a prophet, made a mistake. But he didn't despair - he turned to Allah immediately with sincere repentance, and Allah forgave him. Your mistake doesn't define you; your repentance does.",
+      "storySummary": "In Paradise, Adam and Hawwa were deceived by Iblis and ate from the forbidden tree. They realized their error immediately. Rather than making excuses, they acknowledged their wrong: 'Our Lord, we have wronged ourselves.' Allah taught them words of repentance, and they were forgiven.",
+      "verses": [
+        {
+          "surahNumber": 7,
+          "verseNumber": 23,
+          "relevanceNote": "Adam and Hawwa's immediate and sincere repentance"
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 37,
+          "relevanceNote": "Allah teaching Adam words of repentance and accepting them"
+        }
+      ],
+      "relatedStoryId": "s21",
+      "icon": "arrow.uturn.backward.circle.fill"
+    },
+    {
+      "id": "p11",
+      "situation": "I'm waiting for something that seems impossible",
+      "category": "faith_tests",
+      "prophet": "Yaqub (Jacob)",
+      "connection": "Yaqub waited decades to reunite with his son Yusuf, never losing hope",
+      "comfortMessage": "Yaqub waited so long for Yusuf that he went blind from crying. Yet he never said 'never' - he said 'Perhaps Allah will bring them all to me.' Your impossible wait is not permanent; keep hoping as Yaqub did.",
+      "storySummary": "Prophet Yaqub lost his beloved son Yusuf as a child. For decades, he grieved - his eyes turned white from sorrow. Yet when others told him to give up, he said: 'I only complain of my anguish to Allah.' He held onto hope until the miraculous reunion came.",
+      "verses": [
+        {
+          "surahNumber": 12,
+          "verseNumber": 86,
+          "relevanceNote": "Yaqub directing his pain only to Allah, not despairing"
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 87,
+          "relevanceNote": "Yaqub's unwavering hope in Allah's mercy"
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 96,
+          "relevanceNote": "The miracle of Yaqub's sight returning at reunion"
+        }
+      ],
+      "relatedStoryId": "s24",
+      "icon": "clock.badge.questionmark"
+    },
+    {
+      "id": "p12",
+      "situation": "People don't take me seriously",
+      "category": "persecution",
+      "prophet": "Lut (Lot)",
+      "connection": "Lut's people dismissed his warnings as the words of someone too pure to understand",
+      "comfortMessage": "Lut's people mocked him for being 'too clean' to understand their ways. When truth-tellers are dismissed, remember that being misunderstood is often the price of standing for what's right.",
+      "storySummary": "Prophet Lut warned his people against their immoral practices. They responded with mockery, saying 'Drive out Lut's family - they want to be pure!' They couldn't believe someone would actually stand against their normalized sins. Yet Lut persisted until Allah's decree came.",
+      "verses": [
+        {
+          "surahNumber": 7,
+          "verseNumber": 80,
+          "relevanceNote": "Lut confronting unprecedented immorality with truth"
+        },
+        {
+          "surahNumber": 27,
+          "verseNumber": 56,
+          "relevanceNote": "The people dismissing Lut for wanting purity"
+        }
+      ],
+      "relatedStoryId": "s17",
+      "icon": "ear.trianglebadge.exclamationmark"
+    },
+    {
+      "id": "p13",
+      "situation": "I'm struggling with financial hardship",
+      "category": "worldly_pressures",
+      "prophet": "Muhammad",
+      "connection": "The Prophet and his companions endured years of poverty and boycott in Mecca",
+      "comfortMessage": "The Prophet Muhammad tied stones to his stomach from hunger. The best of creation knew poverty intimately. Your financial struggle doesn't decrease your worth - some of Allah's most beloved servants knew hardship deeply.",
+      "storySummary": "The Prophet Muhammad and his followers were boycotted by Mecca for three years. They were forbidden from buying food or trading. Some days, the Prophet would tie stones to his stomach to suppress hunger pangs. Yet through this poverty, the foundation of Islam was strengthened.",
+      "verses": [
+        {
+          "surahNumber": 93,
+          "verseNumber": 8,
+          "relevanceNote": "Allah reminding the Prophet of being in need and being enriched"
+        },
+        {
+          "surahNumber": 94,
+          "verseNumber": 5,
+          "relevanceNote": "The divine promise that with hardship comes ease"
+        },
+        {
+          "surahNumber": 94,
+          "verseNumber": 6,
+          "relevanceNote": "The repeated assurance of ease following difficulty"
+        }
+      ],
+      "relatedStoryId": null,
+      "icon": "banknote"
+    },
+    {
+      "id": "p14",
+      "situation": "I feel insignificant and worthless",
+      "category": "emotional_struggles",
+      "prophet": "Musa (Moses)",
+      "connection": "Musa felt inadequate with his speech impediment, yet Allah chose him for the greatest mission",
+      "comfortMessage": "Musa worried about his stammer when facing Pharaoh. He felt inadequate for the mission. Yet Allah chose him precisely as he was. Your perceived weaknesses don't disqualify you from purpose - sometimes they're exactly what qualifies you.",
+      "storySummary": "When Allah commanded Musa to go to Pharaoh, Musa expressed his fears: his speech impediment, his past mistakes, his inadequacy. Allah didn't remove his stammer - instead, He gave him Harun as support. Musa's weakness became his humility, and his humility became his strength.",
+      "verses": [
+        {
+          "surahNumber": 26,
+          "verseNumber": 13,
+          "relevanceNote": "Musa expressing his fear and perceived inadequacy"
+        },
+        {
+          "surahNumber": 20,
+          "verseNumber": 25,
+          "relevanceNote": "Musa's prayer for ease in his speech"
+        },
+        {
+          "surahNumber": 28,
+          "verseNumber": 34,
+          "relevanceNote": "Allah granting Harun to support Musa"
+        }
+      ],
+      "relatedStoryId": "s6",
+      "icon": "person.crop.circle.badge.questionmark"
+    },
+    {
+      "id": "p15",
+      "situation": "I'm forced to leave my home",
+      "category": "isolation",
+      "prophet": "Ibrahim (Abraham)",
+      "connection": "Ibrahim left his homeland, his family, and eventually settled his family in a barren desert",
+      "comfortMessage": "Ibrahim left everything familiar multiple times - his country, his people, his comfort. He settled Hajar and Ismail in a lifeless desert, trusting Allah completely. Your displacement may be the journey to your destiny.",
+      "storySummary": "Prophet Ibrahim emigrated from his land when his people rejected him. Later, he left his wife Hajar and infant son Ismail in the barren valley of Mecca with just dates and water. When Hajar asked if Allah commanded this, Ibrahim said yes. She replied, 'Then He will not abandon us.' From that desert grew the holiest city.",
+      "verses": [
+        {
+          "surahNumber": 21,
+          "verseNumber": 71,
+          "relevanceNote": "Allah saving Ibrahim and guiding him to blessed land"
+        },
+        {
+          "surahNumber": 14,
+          "verseNumber": 37,
+          "relevanceNote": "Ibrahim settling his family in a barren valley by Allah's House"
+        }
+      ],
+      "relatedStoryId": "s2",
+      "icon": "figure.walk.departure"
+    },
+    {
+      "id": "p16",
+      "situation": "I'm grieving a loss",
+      "category": "emotional_struggles",
+      "prophet": "Muhammad",
+      "connection": "The Prophet lost his beloved son Ibrahim and wept openly at his grave",
+      "comfortMessage": "When his son Ibrahim died, the Prophet Muhammad wept. His companions asked about his tears, and he said: 'The eyes shed tears, the heart grieves, but we say only what pleases our Lord.' Grief and faith can coexist.",
+      "storySummary": "Prophet Muhammad lost his infant son Ibrahim. As he held his dying child, tears streamed down his face. When asked about crying, he explained that tears are mercy from Allah, and grieving doesn't contradict acceptance of Allah's decree. He showed that prophets feel pain deeply too.",
+      "verses": [
+        {
+          "surahNumber": 93,
+          "verseNumber": 6,
+          "relevanceNote": "Allah acknowledging the Prophet's orphan experience"
+        },
+        {
+          "surahNumber": 93,
+          "verseNumber": 7,
+          "relevanceNote": "Allah guiding the Prophet when he was lost"
+        },
+        {
+          "surahNumber": 94,
+          "verseNumber": 1,
+          "relevanceNote": "Allah expanding the Prophet's chest despite sorrows"
+        }
+      ],
+      "relatedStoryId": null,
+      "icon": "heart.fill"
+    },
+    {
+      "id": "p17",
+      "situation": "I'm struggling with bad habits",
+      "category": "faith_tests",
+      "prophet": "Adam",
+      "connection": "Adam was warned about one thing and still slipped - showing how human weakness is part of our nature",
+      "comfortMessage": "Adam had one prohibition in all of Paradise, and Shaytan still found a way to mislead him. Your struggle with habits is part of being human. The key isn't perfection - it's persistent return to Allah after each fall.",
+      "storySummary": "Adam was given Paradise with only one restriction. Iblis worked on him persistently, using promises of immortality and eternal kingdom. Adam eventually gave in. But the moment he realized his mistake, he turned back to Allah. This cycle of falling and returning is built into human nature.",
+      "verses": [
+        {
+          "surahNumber": 20,
+          "verseNumber": 115,
+          "relevanceNote": "Adam forgot his covenant - human forgetfulness is natural"
+        },
+        {
+          "surahNumber": 20,
+          "verseNumber": 121,
+          "relevanceNote": "Adam eating from the tree and facing consequences"
+        },
+        {
+          "surahNumber": 20,
+          "verseNumber": 122,
+          "relevanceNote": "Allah forgiving Adam and guiding him"
+        }
+      ],
+      "relatedStoryId": "s21",
+      "icon": "arrow.triangle.2.circlepath"
+    },
+    {
+      "id": "p18",
+      "situation": "I'm worried about my children's future",
+      "category": "family_challenges",
+      "prophet": "Ibrahim (Abraham)",
+      "connection": "Ibrahim prayed desperately for his descendants to remain on the right path",
+      "comfortMessage": "Ibrahim made his children his life's prayer project. He prayed for them, their children, and all future generations. Your worry is actually love - channel it into dua like Ibrahim did, and trust Allah with what you cannot control.",
+      "storySummary": "Prophet Ibrahim, after building the Kaaba with his son Ismail, made powerful prayers for his descendants. He asked Allah to keep them away from idol worship, to send them a messenger from among them, to accept their worship. His prayers shaped the destiny of nations for millennia.",
+      "verses": [
+        {
+          "surahNumber": 14,
+          "verseNumber": 35,
+          "relevanceNote": "Ibrahim praying for his children to avoid idol worship"
+        },
+        {
+          "surahNumber": 14,
+          "verseNumber": 40,
+          "relevanceNote": "Ibrahim praying for his offspring to establish prayer"
+        },
+        {
+          "surahNumber": 2,
+          "verseNumber": 128,
+          "relevanceNote": "Ibrahim praying for his descendants and future generations"
+        }
+      ],
+      "relatedStoryId": "s2",
+      "icon": "figure.2.and.child.holdinghands"
+    },
+    {
+      "id": "p19",
+      "situation": "I feel like giving up on people",
+      "category": "isolation",
+      "prophet": "Nuh (Noah)",
+      "connection": "Nuh called his people for 950 years with almost no results, yet continued",
+      "comfortMessage": "950 years and barely a shipload of believers - Nuh must have wanted to give up countless times. Yet he persisted because his job was to call, not to convert. Do your part and leave the results to Allah.",
+      "storySummary": "Prophet Nuh spent nearly a millennium inviting his people to Allah. Generation after generation rejected him. Fathers taught sons to reject him. He called in public and in private, day and night. In the end, only about 80 people believed - but he never stopped until Allah told him to.",
+      "verses": [
+        {
+          "surahNumber": 71,
+          "verseNumber": 5,
+          "relevanceNote": "Nuh describing his unrelenting call despite rejection"
+        },
+        {
+          "surahNumber": 71,
+          "verseNumber": 6,
+          "relevanceNote": "How his invitation only increased their fleeing"
+        },
+        {
+          "surahNumber": 11,
+          "verseNumber": 36,
+          "relevanceNote": "Allah telling Nuh no more will believe - time to stop"
+        }
+      ],
+      "relatedStoryId": "s3",
+      "icon": "person.3.fill"
+    },
+    {
+      "id": "p20",
+      "situation": "I'm facing injustice with no help",
+      "category": "persecution",
+      "prophet": "Yusuf (Joseph)",
+      "connection": "Yusuf was falsely imprisoned for years despite his complete innocence",
+      "comfortMessage": "Yusuf spent years in prison for a crime he actively resisted. No human court cleared his name - but Allah's plan was bigger than any injustice. Your innocence is known to Allah, even when the world doesn't see it.",
+      "storySummary": "Prophet Yusuf chose prison over sin, then was forgotten there for years. He was innocent, yet no one advocated for him. He helped fellow prisoners, one of whom promised to mention him to the king - but forgot. Yet in Allah's time, Yusuf went from prisoner to the most powerful minister in Egypt.",
+      "verses": [
+        {
+          "surahNumber": 12,
+          "verseNumber": 35,
+          "relevanceNote": "Yusuf imprisoned despite clear signs of his innocence"
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 42,
+          "relevanceNote": "The cupbearer forgetting Yusuf for years"
+        },
+        {
+          "surahNumber": 12,
+          "verseNumber": 56,
+          "relevanceNote": "Yusuf established in the land with full authority"
+        }
+      ],
+      "relatedStoryId": "s4",
+      "icon": "scale.3d"
+    }
+  ]
+}

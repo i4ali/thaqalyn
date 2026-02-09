@@ -278,6 +278,7 @@ struct VerseAnswerCard: View {
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)
             .background {
                 if themeManager.selectedTheme == .warmInviting {

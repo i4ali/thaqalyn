@@ -996,6 +996,66 @@ struct DatabaseReadingProgress: Codable {
     }
 }
 
+// MARK: - Prophetic Parallels Models
+
+struct PropheticParallelsData: Codable {
+    let parallels: [PropheticParallel]
+}
+
+struct PropheticParallel: Codable, Identifiable {
+    let id: String
+    let situation: String              // "I feel trapped with no way out"
+    let category: ParallelCategory
+    let prophet: String                // "Yunus (Jonah)"
+    let connection: String             // Brief connection text
+    let comfortMessage: String         // Encouraging message for user
+    let storySummary: String           // 2-3 sentence story summary
+    let verses: [ParallelVerse]        // 2-3 key verses
+    let relatedStoryId: String?        // Links to PropheticStory.id
+    let icon: String                   // SF Symbol name
+}
+
+struct ParallelVerse: Codable {
+    let surahNumber: Int
+    let verseNumber: Int
+    let relevanceNote: String          // Why this verse matters
+
+    var verseReference: String {
+        "Quran \(surahNumber):\(verseNumber)"
+    }
+}
+
+enum ParallelCategory: String, Codable, CaseIterable {
+    case emotionalStruggles = "emotional_struggles"
+    case familyChallenges = "family_challenges"
+    case faithTests = "faith_tests"
+    case worldlyPressures = "worldly_pressures"
+    case isolation = "isolation"
+    case persecution = "persecution"
+
+    var displayName: String {
+        switch self {
+        case .emotionalStruggles: return "Emotional Struggles"
+        case .familyChallenges: return "Family Challenges"
+        case .faithTests: return "Tests of Faith"
+        case .worldlyPressures: return "Worldly Pressures"
+        case .isolation: return "Isolation & Loneliness"
+        case .persecution: return "Persecution & Opposition"
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .emotionalStruggles: return "heart.slash.fill"
+        case .familyChallenges: return "house.fill"
+        case .faithTests: return "flame.fill"
+        case .worldlyPressures: return "globe.americas.fill"
+        case .isolation: return "person.fill.questionmark"
+        case .persecution: return "shield.slash.fill"
+        }
+    }
+}
+
 // MARK: - Life Moments Models
 
 struct LifeMomentsData: Codable {

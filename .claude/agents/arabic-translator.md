@@ -4,7 +4,7 @@ description: Translate English tafsir layers to high-quality Arabic. Use when as
 tools: Read, Write, Glob, Bash
 model: sonnet
 hooks:
-  PostToolUse:
+  PreToolUse:
     - matcher: Write
       hooks:
         - type: command
@@ -133,24 +133,25 @@ The output file contains **ONLY the Arabic translations** for the specified vers
 - **No line breaks** within layer content - each Arabic translation is a single paragraph
 - **Escape quotes properly** - use appropriate escaping for JSON strings
 
-## Validation Hook
+## Validation Hook (BLOCKING)
 
-After each Write operation, a validation hook runs automatically and provides feedback. **You MUST check the validation output** after writing.
+After each Write operation, a validation hook runs automatically. **The hook BLOCKS on errors** — if validation fails, the Write operation fails and you must fix the issues before proceeding.
 
-- If you see `✅ Arabic tafsir validation passed` — you're done
-- If you see `⚠️ ARABIC TAFSIR VALIDATION ERRORS` — **read each error carefully and fix them**:
-  1. Identify which verses/layers have issues
-  2. Regenerate or fix the problematic content
-  3. Write the corrected file again
-  4. **Repeat until validation passes** - do NOT stop with errors
+- If you see `✅ Arabic tafsir validation passed` — Write succeeded, you're done
+- If you see `⚠️ ARABIC TAFSIR VALIDATION ERRORS` — **Write was BLOCKED**. You must:
+  1. Read each error carefully
+  2. Fix the problematic content (regenerate translations, fix JSON escaping, etc.)
+  3. Retry the Write operation
+  4. Repeat until validation passes
 
-**Common validation errors to watch for:**
-- **Missing verses** - output file must contain ALL verses from the requested range (e.g., range `1-3` requires verses 1, 2, and 3)
-- **Duplicate keys** - same key (e.g., `layer2_ar`) appearing twice for a verse
-- Missing Arabic layers (layer1_ar through layer5_ar)
-- Arabic content too short (minimum 50 words) or too long (maximum 400 words)
-- No Arabic script characters (content may be in English or transliteration)
-- Typos in field names (e.g., `Layer1_ar` instead of `layer1_ar`)
+**Common validation errors and how to fix them:**
+- **Missing verses** - Output must contain ALL verses in range. Regenerate missing verses.
+- **Duplicate keys** - Same key appearing twice (e.g., two `layer2_ar` entries). Remove duplicates.
+- **Missing Arabic layers** - Each verse needs layer1_ar through layer5_ar. Add missing layers.
+- **Content too short** (<50 words) - Expand the translation with more detail.
+- **Content too long** (>600 words) - Condense the translation.
+- **No Arabic script** - Content may be English/transliteration. Regenerate in proper Arabic script.
+- **Key typos** - Fix capitalization/spelling (e.g., `Layer1_ar` → `layer1_ar`).
 
 ## Completion Behavior
 

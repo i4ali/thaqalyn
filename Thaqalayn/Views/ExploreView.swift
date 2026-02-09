@@ -34,6 +34,13 @@ enum ExploreSection: CaseIterable {
                     destination: .lifeMoments
                 ),
                 ExploreItem(
+                    id: "propheticParallels",
+                    icon: "person.2.wave.2.fill",
+                    title: "Prophetic Parallels",
+                    subtitle: "You aren't alone in your struggles",
+                    destination: .propheticParallels
+                ),
+                ExploreItem(
                     id: "questions",
                     icon: "questionmark.circle",
                     title: "Questions & Answers",
@@ -79,6 +86,7 @@ struct ExploreItem: Identifiable {
 
 enum ExploreDestination {
     case lifeMoments
+    case propheticParallels
     case questions
     case fasting
     case propheticStories
@@ -90,6 +98,7 @@ enum ExploreDestination {
 struct ExploreView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @State private var showLifeMoments = false
+    @State private var showPropheticParallels = false
     @State private var showQuestions = false
     @State private var showFasting = false
     @State private var showPropheticStories = false
@@ -123,6 +132,9 @@ struct ExploreView: View {
         }
         .fullScreenCover(isPresented: $showLifeMoments) {
             LifeMomentsView()
+        }
+        .fullScreenCover(isPresented: $showPropheticParallels) {
+            PropheticParallelsView()
         }
         .fullScreenCover(isPresented: $showQuestions) {
             QuestionsView()
@@ -186,6 +198,8 @@ struct ExploreView: View {
         switch item.destination {
         case .lifeMoments:
             return themeManager.selectedTheme == .warmInviting ? "heart.fill" : "heart.fill"
+        case .propheticParallels:
+            return themeManager.selectedTheme == .warmInviting ? "person.2.wave.2.fill" : "person.2.wave.2.fill"
         case .questions:
             return themeManager.selectedTheme == .warmInviting ? "questionmark.circle" : "questionmark.circle"
         case .fasting:
@@ -201,6 +215,8 @@ struct ExploreView: View {
         switch destination {
         case .lifeMoments:
             showLifeMoments = true
+        case .propheticParallels:
+            showPropheticParallels = true
         case .questions:
             showQuestions = true
         case .fasting:
