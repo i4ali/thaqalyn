@@ -119,15 +119,24 @@ def count_urdu_words(text: str) -> int:
 def is_urdu_tafsir_file(file_path: str) -> bool:
     """Check if the file is a Urdu tafsir output file in new_tafsir/ directory."""
     path = Path(file_path)
-    # Must be in new_tafsir/ directory
+    filename = path.name
+
+    # All validations limited to new_tafsir/ directory
     if "new_tafsir" not in str(path):
         return False
+
     # Match tafsir_*_v*-*_ur.json pattern (e.g., tafsir_103_v1-3_ur.json)
-    if re.match(r"tafsir_\d+_v\d+-\d+_ur\.json$", path.name):
+    if re.match(r"tafsir_\d+_v\d+-\d+_ur\.json$", filename):
         return True
+
+    # Match tafsir_*_ur.json pattern (e.g., tafsir_35_ur.json)
+    if re.match(r"tafsir_\d+_ur\.json$", filename):
+        return True
+
     # Also match legacy _urdu_added.json suffix
-    if path.name.endswith("_urdu_added.json"):
+    if filename.endswith("_urdu_added.json"):
         return True
+
     return False
 
 

@@ -5,7 +5,7 @@ This script merges only the keys present in the source file into the target file
 preserving all existing layers that aren't in the source.
 
 Example usage:
-    python3 merge_tafsir_layers.py 114 new_tafsir/tafsir_114_ur.json
+    python3 scripts/merge_tafsir_layers.py 114 new_tafsir/tafsir_114_ur.json
 
 This would merge only the Urdu layers from tafsir_114_ur.json into
 Thaqalayn/Thaqalayn/Data/tafsir_114.json, preserving English, Arabic, and quickOverview.

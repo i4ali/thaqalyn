@@ -37,20 +37,25 @@ Examples:
    - Generate ALL 5 Urdu translations (layer1_urdu through layer5_urdu) together
    - This batched approach is faster and maintains consistency across layers
 
-4. **Write output file** to the **same directory** as the input file:
-   - Format: `{input_dir}/{base_name}_v{start}-{end}_ur.json`
-   - Example: `new_tafsir/tafsir_2.json` with range `1-20` → `new_tafsir/tafsir_2_v1-20_ur.json`
+4. **Write output file** — **CRITICAL: MUST be in the SAME directory as input file**:
+   - **Extract the directory** from the input file path
+   - **Extract the base name** (filename without extension)
+   - **Format**: `{input_dir}/{base_name}_v{start}-{end}_ur.json`
+   - **Example**: Input `new_tafsir/tafsir_2.json` with range `1-20` → Output `new_tafsir/tafsir_2_v1-20_ur.json`
+   - **NEVER write to**: `Thaqalayn/Thaqalayn/Data/` (this directory is PROTECTED and will be BLOCKED)
+   - **NEVER create files** in any directory other than the input file's directory
+   - **NEVER modify** existing tafsir files — always create new `_ur.json` fragment files
 
 ## Batch Translation Format
 
 For efficiency, translate all 5 layers of a verse together. Structure your translation output as:
 
 **Verse [N]:**
-- layer1_urdu: [Foundation layer - simple explanation, 50-400 words]
-- layer2_urdu: [Classical Shia - Tabatabai/Tabrisi perspectives, 50-400 words]
-- layer3_urdu: [Contemporary - modern scholars' insights, 50-400 words]
-- layer4_urdu: [Ahlul Bayt - hadith and spiritual guidance, 50-400 words]
-- layer5_urdu: [Comparative - Shia/Sunni scholarly analysis, 50-400 words]
+- layer1_urdu: [Foundation layer - simple explanation, 50-600 words]
+- layer2_urdu: [Classical Shia - Tabatabai/Tabrisi perspectives, 50-600 words]
+- layer3_urdu: [Contemporary - modern scholars' insights, 50-600 words]
+- layer4_urdu: [Ahlul Bayt - hadith and spiritual guidance, 50-600 words]
+- layer5_urdu: [Comparative - Shia/Sunni scholarly analysis, 50-600 words]
 
 This batch approach reduces processing overhead significantly while maintaining translation quality.
 
@@ -123,6 +128,16 @@ The output file contains **ONLY the Urdu translations** for the specified verse 
 
 ## Critical Requirements
 
+### ⚠️ OUTPUT FILE LOCATION (MANDATORY)
+
+**You MUST write output files to the SAME directory as the input file. This is non-negotiable.**
+
+- Input: `new_tafsir/tafsir_40.json` → Output: `new_tafsir/tafsir_40_v1-5_ur.json` ✅
+- Input: `new_tafsir/tafsir_40.json` → Output: `Thaqalayn/Thaqalayn/Data/tafsir_40.json` ❌ WRONG
+- Input: `scripts/tafsir_5.json` → Output: `scripts/tafsir_5_v1-10_ur.json` ✅
+
+**NEVER write to `Thaqalayn/Thaqalayn/Data/`** — this directory is protected and writes will be BLOCKED.
+
 ### Translation Requirements
 
 - **Only translate verses in the specified range** - ignore verses outside start-end
@@ -149,7 +164,7 @@ After each Write operation, a validation hook runs automatically. **The hook BLO
 - **Duplicate keys** - Same key appearing twice (e.g., two `layer2_urdu` entries). Remove duplicates.
 - **Missing Urdu layers** - Each verse needs layer1_urdu through layer5_urdu. Add missing layers.
 - **Content too short** (<50 words) - Expand the translation with more detail.
-- **Content too long** (>400 words) - Condense the translation.
+- **Content too long** (>600 words) - Condense the translation.
 - **No Urdu script** - Content may be English/transliteration. Regenerate in proper Urdu script.
 - **Key typos** - Fix capitalization/spelling (e.g., `Layer1_urdu` → `layer1_urdu`).
 
@@ -161,9 +176,14 @@ Simply write the Urdu-only JSON to the output file and finish. Do not create sum
 
 User: `translate new_tafsir/tafsir_103.json 1-3 to Urdu`
 
-1. Parse input: file=`new_tafsir/tafsir_103.json`, range=`1-3`, output_dir=`new_tafsir/`
+1. **Parse input**:
+   - Input file: `new_tafsir/tafsir_103.json`
+   - Input directory: `new_tafsir/` ← **output MUST go here**
+   - Base name: `tafsir_103`
+   - Verse range: `1-3`
+   - **Output file**: `new_tafsir/tafsir_103_v1-3_ur.json` ← same directory!
 2. Read `new_tafsir/tafsir_103.json`
 3. Translate verse "1": all 5 layers → layer1_urdu through layer5_urdu
 4. Translate verse "2": all 5 layers → layer1_urdu through layer5_urdu
 5. Translate verse "3": all 5 layers → layer1_urdu through layer5_urdu
-6. Write output to `new_tafsir/tafsir_103_v1-3_ur.json` (same directory as input)
+6. Write output to `new_tafsir/tafsir_103_v1-3_ur.json` (**NOT** to `Thaqalayn/Thaqalayn/Data/`)
