@@ -15,7 +15,6 @@ struct HomeView: View {
     @State private var searchText = ""
     @State private var showingAuthentication = false
     @State private var showingSettings = false
-    @State private var showingProgressDashboard = false
     @State private var showingNotifications = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
@@ -30,9 +29,6 @@ struct HomeView: View {
                     ProfileAvatar()
 
                     Spacer()
-
-                    // Streak Badge (theme-adaptive)
-                    StreakBadge()
 
                     // Bookmark Badge (theme-adaptive)
                     BookmarkBadge()
@@ -160,9 +156,6 @@ struct HomeView: View {
         }
         .sheet(isPresented: $showingSettings) {
             SettingsView()
-        }
-        .fullScreenCover(isPresented: $showingProgressDashboard) {
-            ProgressDashboardView()
         }
         .sheet(isPresented: $showingNotifications) {
             NotificationsView()

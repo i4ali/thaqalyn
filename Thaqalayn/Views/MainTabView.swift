@@ -2,7 +2,7 @@
 //  MainTabView.swift
 //  Thaqalayn
 //
-//  Main TabView container with Home, Explore, and conditional Ramadan tabs
+//  Main TabView container with Home, Explore, Progress, and conditional Ramadan tabs
 //
 
 import SwiftUI
@@ -38,6 +38,16 @@ struct MainTabView: View {
                 }
                 .tag(1)
 
+            ProgressTab()
+                .tabItem {
+                    Label {
+                        Text("Progress")
+                    } icon: {
+                        Image(systemName: "circle.circle")
+                    }
+                }
+                .tag(2)
+
             // Conditional Ramadan tab - only visible during Ramadan season
             if isRamadanSeason {
                 RamadanJourneyView()
@@ -48,7 +58,7 @@ struct MainTabView: View {
                             Image(systemName: "moon.stars.fill")
                         }
                     }
-                    .tag(2)
+                    .tag(3)
             }
         }
         .tint(themeManager.accentColor)

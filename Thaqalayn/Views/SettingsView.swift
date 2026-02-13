@@ -21,7 +21,6 @@ struct SettingsView: View {
     @State private var clearDataMessage = ""
     @State private var showingTimePickerSheet = false
     @State private var showingSyncStatus = false
-    @State private var showingProgressDashboard = false
     @State private var showingResetProgressAlert = false
     @State private var showingReciterSelection = false
     @State private var showingTTSVoiceSelection = false
@@ -187,16 +186,6 @@ struct SettingsView: View {
                             // Reading Progress Section
                             SettingsSection(title: "Reading Progress") {
                                 VStack(spacing: 12) {
-                                    // View Progress Dashboard
-                                    SettingsRow(
-                                        icon: "chart.bar.fill",
-                                        title: "Progress Dashboard",
-                                        subtitle: "\(progressManager.stats.totalVersesRead) verses read",
-                                        iconColor: .blue
-                                    ) {
-                                        showingProgressDashboard = true
-                                    }
-
                                     // Current Streak
                                     SettingsRow(
                                         icon: "flame.fill",
@@ -393,9 +382,6 @@ struct SettingsView: View {
         }
         .sheet(isPresented: $showingSyncStatus) {
             SyncStatusDetailView()
-        }
-        .sheet(isPresented: $showingProgressDashboard) {
-            ProgressDashboardView()
         }
         .sheet(isPresented: $showingReciterSelection) {
             ReciterSelectionView()

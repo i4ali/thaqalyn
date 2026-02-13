@@ -35,9 +35,6 @@ struct ParallelDetailView: View {
                     // Comfort message box
                     comfortMessageSection
 
-                    // Story summary
-                    storySummarySection
-
                     // Key verses
                     versesSection
 
@@ -200,45 +197,8 @@ struct ParallelDetailView: View {
         .padding(24)
         .background {
             RoundedRectangle(cornerRadius: 24)
-                .fill(themeManager.accentGradient)
+                .fill(themeManager.purpleGradient)
                 .shadow(color: themeManager.accentColor.opacity(0.4), radius: 16, x: 0, y: 8)
-        }
-        .padding(.horizontal, 20)
-    }
-
-    // MARK: - Story Summary Section
-
-    private var storySummarySection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            HStack(alignment: .top, spacing: 8) {
-                Image(systemName: "book.closed.fill")
-                    .font(.system(size: 16))
-                    .foregroundColor(themeManager.accentColor)
-
-                Text("THE STORY")
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundColor(themeManager.secondaryText)
-                    .tracking(1.2)
-            }
-
-            Text(parallel.storySummary)
-                .font(.system(size: 16, weight: .medium))
-                .foregroundColor(themeManager.primaryText)
-                .lineSpacing(6)
-        }
-        .padding(20)
-        .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
-            } else {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            }
         }
         .padding(.horizontal, 20)
     }

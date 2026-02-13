@@ -230,7 +230,6 @@ struct SurahListView: View {
     @State private var searchText = ""
     @State private var showingAuthentication = false
     @State private var showingSettings = false
-    @State private var showingProgressDashboard = false
     @State private var showingNotifications = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
@@ -245,9 +244,6 @@ struct SurahListView: View {
                     ProfileAvatar()
 
                     Spacer()
-
-                    // Streak Badge (theme-adaptive)
-                    StreakBadge()
 
                     // Bookmark Badge (theme-adaptive)
                     BookmarkBadge()
@@ -378,9 +374,6 @@ struct SurahListView: View {
         }
         .sheet(isPresented: $showingSettings) {
             SettingsView()
-        }
-        .fullScreenCover(isPresented: $showingProgressDashboard) {
-            ProgressDashboardView()
         }
         .sheet(isPresented: $showingNotifications) {
             NotificationsView()
@@ -1225,57 +1218,6 @@ struct ProfileAvatar: View {
             }
         }
         return "U"
-    }
-}
-
-struct StreakBadge: View {
-    @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var progressManager = ProgressManager.shared
-    @State private var showingProgressDashboard = false
-
-    var body: some View {
-        Button(action: {
-            showingProgressDashboard = true
-        }) {
-            HStack(spacing: 6) {
-                if themeManager.selectedTheme == .warmInviting {
-                    Text("🔥")
-                        .font(.system(size: 20))
-                } else {
-                    Image(systemName: "flame.fill")
-                        .font(.system(size: 16))
-                        .foregroundColor(themeManager.accentColor)
-                }
-
-                Text("\(progressManager.streak.currentStreak)")
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(
-                        themeManager.selectedTheme == .warmInviting
-                            ? Color(red: 0.91, green: 0.604, blue: 0.435)
-                            : themeManager.primaryText
-                    )
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 24)
-                        .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.06), radius: 8, x: 0, y: 2)
-                } else {
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
-            }
-        }
-        .buttonStyle(PlainButtonStyle())
-        .fullScreenCover(isPresented: $showingProgressDashboard) {
-            ProgressDashboardView()
-        }
     }
 }
 
