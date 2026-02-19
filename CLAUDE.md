@@ -6,8 +6,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Thaqalayn is a Shia Islamic Quranic commentary iOS app with an offline-first architecture.
 
-**Current Status**: Production-ready app with **all 114 surahs**, **individual verse audio playback**, **bilingual commentary system**, and **multi-theme system**. Features complete **5-layer tafsir** with **English and Urdu support**, including new **comparative Shia/Sunni analysis**, 4 distinct UI themes including traditional manuscript style, complete authentication & bookmarks system with cloud sync, and individual verse audio playback using EveryAyah.com. **All features unlocked** with $0.99 paid app model.
-
 ## Architecture
 
 ### Data Flow
@@ -43,43 +41,77 @@ Views/ThemeSelectionView.swift: Interactive theme preview cards
 ### iOS Development
 ```bash
 # Build and run (MCP XcodeBuild tools recommended)
-build_run_sim_name_proj({ projectPath: "Thaqalayn.xcodeproj", scheme: "Thaqalayn", simulatorName: "iPhone 16" })
+build_run_sim_name_proj({ projectPath: "Thaqalayn.xcodeproj", scheme: "Thaqalayn", simulatorName: "iPhone 17" })
 ```
 
 ### Python Development
 ```bash
 # ⚠️ CRITICAL: ALWAYS USE VIRTUAL ENVIRONMENT ⚠️
-source thaqalyn-env/bin/activate
-
-# Generate individual surah tafsir when needed
-python3 quick_surah_1.py <surah_number>
+source .venv/bin/activate
 ```
 
 ## App Structure
 
 ```
 Thaqalayn/
+├── Config.swift                   # Supabase configuration
+├── ThaqalaynApp.swift             # App entry point
+├── ContentView.swift              # Main surah list with settings access
 ├── Models/
-│   ├── QuranModels.swift          # Core data models
-│   └── AudioModels.swift          # Audio system models
+│   ├── QuranModels.swift          # Core Quran/Tafsir data models
+│   ├── AudioModels.swift          # Audio system models
+│   └── QuizModels.swift           # Quiz feature models
 ├── Services/
 │   ├── DataManager.swift          # JSON loading, caching
 │   ├── BookmarkManager.swift      # Offline-first bookmarks with Supabase sync
 │   ├── AudioManager.swift         # Individual verse audio playback
 │   ├── ThemeManager.swift         # Multi-theme system management
-│   └── PremiumManager.swift       # Simplified premium manager (always unlocked)
+│   ├── SupabaseService.swift      # Supabase API integration
+│   ├── ProgressManager.swift      # Reading/learning progress tracking
+│   ├── TafsirReader.swift         # Tafsir data loading
+│   ├── CommentaryLanguageManager.swift  # EN/AR/UR tafsir language
+│   ├── QuizManager.swift          # Quiz generation & scoring
+│   ├── NotificationManager.swift  # Push notifications
+│   ├── PurchaseManager.swift      # StoreKit purchases
+│   ├── PremiumManager.swift       # Premium feature access
+│   └── ... (22 total managers)    # See Services/ folder
 ├── Views/
-│   ├── ContentView.swift          # Main surah list with settings access
+│   ├── Tabs/                      # Main tab views
+│   │   ├── HomeTab.swift          # Home tab container
+│   │   ├── ExploreTab.swift       # Explore tab container
+│   │   └── ProgressTab.swift      # Progress tab container
+│   ├── Components/                # Reusable UI components
+│   │   ├── DiscoveryCarousel.swift
+│   │   ├── ProgressRingView.swift
+│   │   └── ... (10 components)
+│   ├── Onboarding/                # Onboarding flow (11 screens)
+│   │   └── OnboardingFlowView.swift
 │   ├── SurahDetailView.swift      # Verse detail with audio controls
+│   ├── FullScreenCommentaryView.swift  # 5-layer tafsir display
 │   ├── BookmarksView.swift        # Bookmark management
 │   ├── SettingsView.swift         # Centralized app settings
-│   └── ThemeSelectionView.swift   # Interactive theme selection
-└── Data/
-    ├── quran_data.json            # All 114 surahs (3.4MB)
-    └── tafsir_1.json              # Al-Fatiha commentary only
+│   ├── QuizView.swift             # Interactive quizzes
+│   ├── PropheticStoriesView.swift # Stories of prophets
+│   ├── LifeMomentsView.swift      # Life guidance verses
+│   ├── RamadanJourneyView.swift   # Ramadan features
+│   └── ... (40+ views total)      # See Views/ folder
+├── Utilities/
+│   ├── WarmThemeModifiers.swift   # Theme styling utilities
+│   └── TabBarModifier.swift       # Tab bar customization
+└── Thaqalayn/Data/
+    ├── quran_data.json            # All 114 surahs
+    ├── tafsir_1.json ... tafsir_114.json  # Full tafsir for all surahs
+    └── islamic_month_verses.json  # Seasonal verse recommendations
 ```
 
-## Supabase Integration ✅ FULLY COMPLETE
+## Documentation
+
+Architecture and implementation guides are in `docs/`:
+- `BOOKMARK_SYNC_ARCHITECTURE.md` - Offline-first sync pattern (reference implementation)
+- `WARM_THEME_STYLE_GUIDE.md` - Theme system documentation
+- See `docs/` folder for full list (17 guides)
+
+## Supabase Integration
 
 - **Organization**: Configure in Config.swift
 - **Project**: Configure in Config.swift
@@ -95,14 +127,6 @@ Thaqalayn/
 - **UI Performance**: 60fps animations with glassmorphism effects across all 4 themes
 - **Stability**: Production-tested with offline-first architecture and robust error handling
 - **Compatibility**: iOS 15.0+, supports iPhone and iPad with responsive design
-
-### App Store Connect Screenshot Sizes (iPhone)
-- 1242 × 2688px (6.5" portrait)
-- 2688 × 1242px (6.5" landscape)
-- 1284 × 2778px (6.7" portrait)
-- 2778 × 1284px (6.7" landscape)
-
-Resize with: `sips -z 2778 1284 screenshot.png`
 
 ## Critical Development Guidelines
 
@@ -126,7 +150,7 @@ Resize with: `sips -z 2778 1284 screenshot.png`
 
 ### ⚠️ CLOUD SYNC ARCHITECTURE PATTERN ⚠️
 
-**CRITICAL**: For any data type that needs to be synced to cloud (Supabase), follow the **BOOKMARK_SYNC_ARCHITECTURE.md** as closely as possible. This architecture is production-tested and provides:
+**CRITICAL**: For any data type that needs to be synced to cloud (Supabase), follow the **[docs/BOOKMARK_SYNC_ARCHITECTURE.md](docs/BOOKMARK_SYNC_ARCHITECTURE.md)** as closely as possible. This architecture is production-tested and provides:
 
 - **Offline-First Design**: Local operations succeed immediately, cloud sync happens asynchronously
 - **Zero Data Loss**: Every operation persists locally before attempting cloud sync
@@ -135,7 +159,7 @@ Resize with: `sips -z 2778 1284 screenshot.png`
 - **Automatic Retry**: Failed operations queue for next sync attempt
 - **Three-Step Sync Process**: Delete → Upload → Download (correct order guaranteed)
 
-**Implementation Checklist** (from BOOKMARK_SYNC_ARCHITECTURE.md):
+**Implementation Checklist** (from [docs/BOOKMARK_SYNC_ARCHITECTURE.md](docs/BOOKMARK_SYNC_ARCHITECTURE.md)):
 1. ✅ Define data model with sync status enum (`synced`, `pendingSync`, `conflict`)
 2. ✅ Create manager class with `@MainActor` isolation
 3. ✅ Implement local storage (UserDefaults with JSON encoding)

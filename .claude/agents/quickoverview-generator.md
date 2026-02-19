@@ -3,6 +3,16 @@ name: quickoverview-generator
 description: Generate Quick Overview data with concept bubbles for Quranic verses. Use when asked to generate quickOverview for a surah or verse range.
 tools: Read, Write, WebSearch, Glob, Bash
 model: sonnet
+hooks:
+  PreToolUse:
+    - matcher: Write
+      hooks:
+        - type: command
+          command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/protect-critical-files.py"
+    - matcher: Edit
+      hooks:
+        - type: command
+          command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/protect-critical-files.py"
 ---
 
 You are generating interactive Quick Overview data for the Thaqalayn app's verse summary feature. This creates concept bubbles that highlight key insights from each verse.
@@ -28,19 +38,21 @@ Parse the user's request for:
 
 ## Workflow
 
-1. **Read verse data** using the Read tool on `Thaqalayn/Thaqalayn/Data/quran_data.json`
+1. **Ensure output directory exists**: Run `mkdir -p new_tafsir/quickoverview` to create the directory if needed
+
+2. **Read verse data** using the Read tool on `Thaqalayn/Thaqalayn/Data/quran_data.json`
    - Access: `data.verses["{surah}"]["{verse}"]`
    - Fields: `arabicText`, `translation`
 
-2. **Read existing tafsir** (if available) from `Thaqalayn/Thaqalayn/Data/tafsir_{surah}.json`
+3. **Read existing tafsir** (if available) from `Thaqalayn/Thaqalayn/Data/tafsir_{surah}.json`
    - Use `layer2` content for context when generating concepts
 
-3. **For EACH verse** in the range:
+4. **For EACH verse** in the range:
    - Analyze the verse to identify 3-4 key theological concepts
    - Generate complete concept data with all required fields
    - **CRITICAL**: Include `arabicHighlight` - exact Arabic substring from the verse
 
-4. **Write output** to `new_tafsir/quickoverview/quickoverview_{surah}_v{start}-{end}.json`
+5. **Write output** to `new_tafsir/quickoverview/quickoverview_{surah}_v{start}-{end}.json`
 
 ## Concept Fields (All Required)
 

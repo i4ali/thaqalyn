@@ -59,48 +59,6 @@ MIN_URDU_WORDS = 50
 MAX_URDU_WORDS = 600
 
 
-def check_duplicate_keys(file_path: str) -> List[str]:
-    """
-    Check for duplicate keys in a JSON file.
-    Python's json.load() silently ignores duplicates, so we need custom parsing.
-    Returns a list of error messages for any duplicates found.
-    """
-    errors = []
-
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            content = f.read()
-    except Exception:
-        return []  # File read errors handled elsewhere
-
-    # Track duplicates at each nesting level
-    def check_duplicates_hook(pairs: List[Tuple[str, any]]) -> dict:
-        """Custom object_pairs_hook to detect duplicate keys."""
-        seen = {}
-        result = {}
-        for key, value in pairs:
-            if key in seen:
-                # Record the duplicate - we'll extract context later
-                seen[key] += 1
-            else:
-                seen[key] = 1
-            result[key] = value
-
-        # Check for duplicates
-        for key, count in seen.items():
-            if count > 1:
-                errors.append(f"Duplicate key '{key}' found {count} times")
-
-        return result
-
-    try:
-        json.loads(content, object_pairs_hook=check_duplicates_hook)
-    except json.JSONDecodeError:
-        pass  # JSON errors handled elsewhere
-
-    return errors
-
-
 def has_urdu_characters(text: str) -> bool:
     """Check if text contains Urdu/Arabic script characters."""
     return bool(URDU_ARABIC_PATTERN.search(text))

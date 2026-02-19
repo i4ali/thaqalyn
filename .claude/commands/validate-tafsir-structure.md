@@ -1,4 +1,4 @@
-# Validate Tafsir JSON Structure In Thaqalayn/Thaqalayn/Data
+# Validate Tafsir JSON Structure In Thaqalayn/Thaqalayn/Data For Given Surah Number
 
 Validate a tafsir file to ensure it has the correct JSON object structure with all required keys.
 

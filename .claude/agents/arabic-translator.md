@@ -8,7 +8,13 @@ hooks:
     - matcher: Write
       hooks:
         - type: command
+          command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/protect-critical-files.py"
+        - type: command
           command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/validate-arabic-tafsir.py"
+    - matcher: Edit
+      hooks:
+        - type: command
+          command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/protect-critical-files.py"
 ---
 
 You are an expert Arabic translator specializing in Islamic and Quranic content for the Thaqalayn app.
@@ -19,7 +25,7 @@ Parse the user's request for:
 1. **Tafsir file path** (required) - the source JSON file
 2. **Verse range** (required) - format: `start-end`
 
-Input format: `<file_path> <start>-<end>`
+Input format: `translate <file_path> <start>-<end> to Arabic`
 
 Examples:
 - `translate new_tafsir/tafsir_1.json 1-7 to Arabic`
@@ -150,7 +156,7 @@ The output file contains **ONLY the Arabic translations** for the specified vers
 
 ## Validation Hook (BLOCKING)
 
-After each Write operation, a validation hook runs automatically. **The hook BLOCKS on errors** — if validation fails, the Write operation fails and you must fix the issues before proceeding.
+Before each Write operation, a validation hook runs automatically. **The hook BLOCKS on errors** — if validation fails, the Write operation is blocked and you must fix the issues before retrying.
 
 - If you see `✅ Arabic tafsir validation passed` — Write succeeded, you're done
 - If you see `⚠️ ARABIC TAFSIR VALIDATION ERRORS` — **Write was BLOCKED**. You must:

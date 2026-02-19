@@ -206,6 +206,87 @@ def is_dangerous_git_restore(args: list) -> tuple[bool, str]:
     return False, ""
 
 
+def is_dangerous_python_script(args: list) -> tuple[bool, str]:
+    """
+    Check if a Python script references protected paths in its source code.
+    This catches scripts that have hardcoded paths to protected files.
+    Returns (is_dangerous, reason).
+    """
+    # Skip flags to find the script file
+    script_path = None
+    for arg in args:
+        # Skip python flags
+        if arg.startswith("-"):
+            # -c means inline code follows, check it directly
+            if arg == "-c":
+                continue
+            continue
+        # Skip if it's the code after -c
+        if args and "-c" in args:
+            c_idx = args.index("-c")
+            if args.index(arg) == c_idx + 1:
+                # This is inline code, check it for protected paths
+                code = arg
+                if PROTECTED_DIR in code or PROTECTED_FILE in code:
+                    return True, f"inline Python code references protected path"
+                if "/Data/" in code and "tafsir" in code.lower():
+                    return True, f"inline Python code references Data/tafsir files"
+                continue
+        # This should be the script path
+        if arg.endswith(".py"):
+            script_path = arg
+            break
+        # Could also be a script without .py extension
+        if not arg.startswith("-") and "/" in arg:
+            script_path = arg
+            break
+
+    if not script_path:
+        return False, ""
+
+    # Resolve the script path
+    try:
+        path = Path(script_path)
+        if not path.is_absolute():
+            path = PROJECT_ROOT / path
+
+        if not path.exists():
+            return False, ""
+
+        # Read the script content
+        content = path.read_text(encoding="utf-8")
+
+        # Check for references to protected directory (various forms)
+        protected_patterns = [
+            PROTECTED_DIR,                           # Thaqalayn/Thaqalayn/Data
+            PROTECTED_DIR.replace("/", "\\"),        # Windows paths
+            f"/{PROTECTED_DIR}/",                    # Absolute path fragment
+            "/Thaqalayn/Data/",                      # Partial path
+            "Thaqalayn/Data/",                       # Relative
+        ]
+
+        for pattern in protected_patterns:
+            if pattern in content:
+                # Find the line for context
+                for i, line in enumerate(content.split("\n"), 1):
+                    if pattern in line and not line.strip().startswith("#"):
+                        return True, f"Python script '{script_path}' references protected path at line {i}"
+                return True, f"Python script '{script_path}' references protected path '{pattern}'"
+
+        # Also check for the protected file
+        if PROTECTED_FILE in content:
+            for i, line in enumerate(content.split("\n"), 1):
+                if PROTECTED_FILE in line and not line.strip().startswith("#"):
+                    return True, f"Python script '{script_path}' references protected file at line {i}"
+            return True, f"Python script '{script_path}' references protected file '{PROTECTED_FILE}'"
+
+    except Exception as e:
+        log(f"Error reading Python script {script_path}: {e}")
+        return False, ""
+
+    return False, ""
+
+
 def is_protected_path(file_path: str) -> tuple[bool, str]:
     """
     Check if a file path points to a protected file or directory.
@@ -302,6 +383,12 @@ def analyze_command(command: str) -> tuple[bool, str]:
                 is_dangerous, target = is_dangerous_git_restore(args[2:])
                 if is_dangerous:
                     return True, f"git restore would discard changes to {target}"
+
+            # Check Python scripts for references to protected paths
+            if cmd in ["python3", "python", "python3.9", "python3.10", "python3.11", "python3.12", "python3.13"]:
+                is_dangerous, reason = is_dangerous_python_script(args[1:])
+                if is_dangerous:
+                    return True, reason
 
         return False, ""
 

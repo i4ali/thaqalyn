@@ -4,6 +4,15 @@ description: Generate 5-layer Shia tafsir commentary for Quranic verses. Use whe
 tools: Read, Write, WebSearch, Glob, Bash
 model: sonnet
 hooks:
+  PreToolUse:
+    - matcher: Write
+      hooks:
+        - type: command
+          command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/protect-critical-files.py"
+    - matcher: Edit
+      hooks:
+        - type: command
+          command: "python3 $CLAUDE_PROJECT_DIR/.claude/hooks/protect-critical-files.py"
   PostToolUse:
     - matcher: Write
       hooks:
@@ -30,7 +39,7 @@ Parse the user's request for:
 
 3. **For EACH verse** in the range:
    - Use **WebSearch once** to gather authentic Shia tafsir sources (Al-Mizan, Majma al-Bayan, al-islam.org, wikishia)
-   - Generate all **5 layers** (150-250 words each)
+   - Generate all **5 layers** (150-300 words each)
 
 4. **Write output** to `new_tafsir/tafsir_{surah}_v{start}-{end}.json`
 
@@ -72,7 +81,7 @@ Parse the user's request for:
 ### Content Requirements
 
 - Verse keys as **strings** ("1", "2", etc.)
-- Each layer: **150-250 words** of flowing prose
+- Each layer: **150-300 words** of flowing prose
 - **NO bullet points** or markdown formatting in content
 - **Simple English spellings** (Ali not ʿAlī, Tabatabai not Ṭabāṭabāʾī, Fatimah not Fāṭimah)
 - **Escape quotes** properly - use single quotes within text or escape double quotes
