@@ -555,15 +555,15 @@ enum TafsirLayer: String, CaseIterable {
     var title: String {
         switch self {
         case .foundation:
-            return "🏛️ Foundation"
+            return "Foundation"
         case .classical:
-            return "📚 Classical Shia"
+            return "Classical Shia"
         case .contemporary:
-            return "🌍 Contemporary"
+            return "Contemporary"
         case .ahlulBayt:
-            return "⭐ Ahlul Bayt"
+            return "Ahlul Bayt"
         case .comparative:
-            return "⚖️ Comparative"
+            return "Comparative"
         }
     }
     

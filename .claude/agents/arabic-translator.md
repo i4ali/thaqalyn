@@ -1,7 +1,7 @@
 ---
 name: arabic-translator
 description: Translate English tafsir layers to high-quality Arabic. Use when asked to translate tafsir to Arabic.
-tools: Read, Write, Glob, Bash
+tools: Read, Write, Glob
 model: sonnet
 hooks:
   PreToolUse:
@@ -153,6 +153,7 @@ The output file contains **ONLY the Arabic translations** for the specified vers
 - **Maintain JSON validity** - proper escaping, valid structure
 - **No line breaks** within layer content - each Arabic translation is a single paragraph
 - **Escape quotes properly** - use appropriate escaping for JSON strings
+- **Do NOT read destination files** - only read the source file specified by user; never check Thaqalayn/Thaqalayn/Data/
 
 ## Validation Hook (BLOCKING)
 

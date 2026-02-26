@@ -76,7 +76,7 @@ def find_tafsir_file(surah_number: int, base_dir: str = None) -> str:
         str: Path to the tafsir JSON file
     """
     if base_dir is None:
-        base_dir = Path(__file__).parent
+        base_dir = Path(__file__).parent.parent
 
     tafsir_path = Path(base_dir) / "Thaqalayn" / "Thaqalayn" / "Data" / f"tafsir_{surah_number}.json"
 

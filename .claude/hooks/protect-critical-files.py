@@ -55,9 +55,11 @@ def output_block(reason: str):
     sys.exit(2)
 
 
-def output_allow():
+def output_allow(reason: str = ""):
     """Output JSON allow decision and exit with code 0."""
     print(json.dumps({"decision": "allow"}))
+    if reason:
+        log(f"ALLOWED: {reason}")
     sys.exit(0)
 
 
@@ -420,14 +422,14 @@ def main():
                 f"If you need to modify this file, please do so manually."
             )
         else:
-            output_allow()
+            output_allow(f"{tool_name} to non-protected path: {file_path}")
 
     # Handle Bash tool
     elif tool_name == "Bash":
         command = tool_input.get("command", "")
 
         if not command:
-            output_allow()
+            output_allow("Bash: empty command")
 
         # Analyze the command
         is_dangerous, reason = analyze_command(command)
@@ -440,11 +442,12 @@ def main():
                 f"If you need to delete or discard changes to protected files, please do so manually."
             )
         else:
-            output_allow()
+            short_cmd = command[:120] + ("..." if len(command) > 120 else "")
+            output_allow(f"Bash: {short_cmd}")
 
     # Unknown tool, allow by default
     else:
-        output_allow()
+        output_allow(f"Unknown tool '{tool_name}' — allowed by default")
 
 
 if __name__ == "__main__":

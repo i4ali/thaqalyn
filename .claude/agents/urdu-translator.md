@@ -1,7 +1,7 @@
 ---
 name: urdu-translator
 description: Translate English tafsir layers to high-quality Urdu. Use when asked to translate tafsir to Urdu.
-tools: Read, Write, Glob, Bash
+tools: Read, Write, Glob
 model: sonnet
 hooks:
   PreToolUse:
