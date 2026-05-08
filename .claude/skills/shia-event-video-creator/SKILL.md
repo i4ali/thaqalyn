@@ -208,13 +208,18 @@ After the final MP4 is stitched, produce the post-production package the user as
 
 1. **TikTok caption** — 1–3 lines, emotionally appropriate to the event, with salawat (ﷺ, عليه السلام) correctly placed. Include the Hijri date. For Ghadeer: joyful. For Ashura: grieving. For Mubahala: triumphant. Match the tone of the Al-Thaqalayn existing caption from the reference ("The Event of Ghadeer Kum On the 18th of Dhul Hijjah...").
 
-2. **Hashtags** — mix of Shia community tags and broader Islamic tags. Always include:
-   - Event-specific: `#Ghadeer #EidAlGhadeer` or `#Karbala #Ashura #Muharram` etc.
-   - Identity: `#Shia #ShiaIslam #AhlulBayt #Shia313`
-   - Discovery: `#Islam #Muslim #IslamicHistory`
-   - Brand: `#AlThaqalayn`
-   
-   Cap at ~12 hashtags. TikTok's algorithm rewards relevance over count.
+2. **Hashtags** — **niche-first strategy for the small Al-Thaqalayn account (~2K followers)**. Avoid billion-volume tags (`#fyp`, `#islam`, `#muslim`, `#quran` alone) — they bury small accounts in oceans where the algorithm reads low engagement as low quality. Aim for **100K–10M post range** where the account can rank in the "Popular" tab and reach a pre-qualified, engaged audience.
+
+   **Use exactly 5 hashtags**, allocated across these slots:
+   - **1 event-specific exact-match** — the strongest signal, e.g. `#Ghadeer`, `#Karbala`, `#Mubahala`, `#LaylatAlMabit`, `#Khaybar`. Most important tag.
+   - **1 secondary event/seasonal** — e.g. `#EidAlGhadeer` for Ghadeer, `#Ashura` or `#Muharram` for Karbala (during the season), `#Arbaeen` for Arbaeen content.
+   - **1 community signal** — `#AhlulBayt` (default — devoted Shia audience, ~1M posts) or `#ImamAli`, `#ImamHussain` for figure-specific events.
+   - **1 content-type niche** — `#IslamicHistory` (~few M posts, engaged history audience), `#IslamicReminder`, or `#Shia313`.
+   - **1 brand or sub-niche** — `#AlThaqalayn` (own brand, builds long-tail recognition) — or skip and use a 5th thematic tag for new viewers.
+
+   **Do NOT include**: `#fyp`, `#foryou`, `#viral`, `#islam`, `#muslim`, `#quran` (billion-volume traps for small accounts). `#fyp` specifically is a placebo — TikTok confirmed it doesn't influence For You Page distribution.
+
+   Cap at 5 hashtags. Once Al-Thaqalayn crosses ~10K followers, this strategy can be revisited to add 1 broader tag.
 
 3. **Background audio suggestions** — 2–3 specific recommendations. Different events call for different audio:
    - **Ghadeer / Eid events** → joyful nasheed (Arabic or Urdu), `Ali Ali Ali Maula` tracks, Nasir al-Qatari style

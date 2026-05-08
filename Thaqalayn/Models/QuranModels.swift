@@ -1389,3 +1389,48 @@ struct RamadanJourneyProgress: Codable {
         completedDays.count >= 30
     }
 }
+
+// MARK: - Daily Duas Models
+
+struct DailyDuasData: Codable {
+    let duas: [DailyDua]
+}
+
+struct DailyDua: Codable, Identifiable {
+    let id: String
+    let situationEn: String
+    let situationAr: String
+    let situationUr: String
+    let arabic: String
+    let transliteration: String
+    let translationEn: String
+    let translationUr: String
+    let source: String
+    let category: String
+
+    func situation(for language: CommentaryLanguage) -> String {
+        switch language {
+        case .arabic: return situationAr
+        case .urdu: return situationUr
+        default: return situationEn
+        }
+    }
+
+    func translation(for language: CommentaryLanguage) -> String {
+        switch language {
+        case .urdu: return translationUr
+        default: return translationEn
+        }
+    }
+
+    var categoryIcon: String {
+        switch category.lowercased() {
+        case "daily": return "sun.max.fill"
+        case "eating": return "fork.knife"
+        case "travel": return "car.fill"
+        case "worship": return "moon.stars.fill"
+        case "other": return "sparkles"
+        default: return "hands.sparkles.fill"
+        }
+    }
+}

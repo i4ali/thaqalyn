@@ -34,6 +34,13 @@ enum ExploreSection: CaseIterable {
                     destination: .lifeMoments
                 ),
                 ExploreItem(
+                    id: "dailyDuas",
+                    icon: "hands.sparkles.fill",
+                    title: "Daily Duas",
+                    subtitle: "20 supplications for everyday moments",
+                    destination: .dailyDuas
+                ),
+                ExploreItem(
                     id: "propheticParallels",
                     icon: "person.2.wave.2.fill",
                     title: "Prophetic Parallels",
@@ -86,6 +93,7 @@ struct ExploreItem: Identifiable {
 
 enum ExploreDestination {
     case lifeMoments
+    case dailyDuas
     case propheticParallels
     case questions
     case fasting
@@ -98,6 +106,7 @@ enum ExploreDestination {
 struct ExploreView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @State private var showLifeMoments = false
+    @State private var showDailyDuas = false
     @State private var showPropheticParallels = false
     @State private var showQuestions = false
     @State private var showFasting = false
@@ -132,6 +141,9 @@ struct ExploreView: View {
         }
         .fullScreenCover(isPresented: $showLifeMoments) {
             LifeMomentsView()
+        }
+        .fullScreenCover(isPresented: $showDailyDuas) {
+            DuasView()
         }
         .fullScreenCover(isPresented: $showPropheticParallels) {
             PropheticParallelsView()
@@ -198,6 +210,8 @@ struct ExploreView: View {
         switch item.destination {
         case .lifeMoments:
             return themeManager.selectedTheme == .warmInviting ? "heart.fill" : "heart.fill"
+        case .dailyDuas:
+            return "hands.sparkles.fill"
         case .propheticParallels:
             return themeManager.selectedTheme == .warmInviting ? "person.2.wave.2.fill" : "person.2.wave.2.fill"
         case .questions:
@@ -215,6 +229,8 @@ struct ExploreView: View {
         switch destination {
         case .lifeMoments:
             showLifeMoments = true
+        case .dailyDuas:
+            showDailyDuas = true
         case .propheticParallels:
             showPropheticParallels = true
         case .questions:

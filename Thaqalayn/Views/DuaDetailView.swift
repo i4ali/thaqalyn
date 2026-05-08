@@ -1,0 +1,287 @@
+//
+//  DuaDetailView.swift
+//  Thaqalayn
+//
+//  Per-dua detail screen: Arabic + transliteration + translation + source + share.
+//
+
+import SwiftUI
+
+struct DuaDetailView: View {
+    let dua: DailyDua
+    @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    @StateObject private var tafsirReader = TafsirReader.shared
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        ZStack {
+            AdaptiveModernBackground()
+
+            ScrollView {
+                VStack(spacing: 24) {
+                    headerSection
+                    arabicSection
+                    ttsButton
+                    transliterationSection
+                    translationSection
+                    sourceSection
+                    shareSection
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
+                .padding(.bottom, 40)
+            }
+        }
+        .onDisappear {
+            if tafsirReader.currentText == dua.arabic {
+                tafsirReader.stop()
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: { dismiss() }) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                        Text("Back")
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                }
+            }
+        }
+    }
+
+    // MARK: - Sections
+
+    private var headerSection: some View {
+        HStack(alignment: .top, spacing: 12) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text(dua.situation(for: languageManager.selectedLanguage))
+                    .font(.system(size: 24, weight: .bold))
+                    .foregroundColor(themeManager.primaryText)
+                    .multilineTextAlignment(.leading)
+
+                categoryPill
+            }
+
+            Spacer(minLength: 0)
+
+            languageToggle
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .environment(\.layoutDirection,
+                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+    }
+
+    private var languageToggle: some View {
+        Button(action: {
+            languageManager.toggleLanguage()
+        }) {
+            HStack(spacing: 4) {
+                Text(languageManager.selectedLanguage.displayName)
+                    .font(.system(size: 14, weight: .medium))
+                if themeManager.selectedTheme == .warmInviting {
+                    Text("🌐")
+                        .font(.system(size: 14))
+                } else {
+                    Image(systemName: "globe")
+                        .font(.system(size: 12))
+                }
+            }
+            .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.primaryText)
+            .padding(.horizontal, 12)
+            .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 8 : 6)
+            .background {
+                if themeManager.selectedTheme == .warmInviting {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                } else {
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(themeManager.secondaryBackground.opacity(0.8))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                        )
+                }
+            }
+        }
+    }
+
+    private var categoryPill: some View {
+        Text(dua.category.capitalized)
+            .font(.system(size: 12, weight: .semibold))
+            .foregroundColor(themeManager.accentColor)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 4)
+            .background(
+                Capsule().fill(themeManager.accentColor.opacity(0.15))
+            )
+    }
+
+    private var arabicSection: some View {
+        Text(dua.arabic)
+            .font(.system(size: 28, weight: .regular))
+            .foregroundColor(themeManager.primaryText)
+            .multilineTextAlignment(.center)
+            .lineSpacing(12)
+            .frame(maxWidth: .infinity)
+            .padding(20)
+            .background(themedCardBackground)
+            .environment(\.layoutDirection, .rightToLeft)
+            .textSelection(.enabled)
+    }
+
+    private var ttsButton: some View {
+        Button(action: handleTTSTap) {
+            HStack(spacing: 8) {
+                Image(systemName: ttsIconName)
+                    .font(.system(size: 16, weight: .semibold))
+                Text(ttsLabel)
+                    .font(.system(size: 15, weight: .semibold))
+            }
+            .foregroundColor(themeManager.primaryText)
+            .padding(.horizontal, 18)
+            .padding(.vertical, 12)
+            .background(
+                Capsule()
+                    .fill(themeManager.secondaryBackground.opacity(0.8))
+                    .overlay(
+                        Capsule().stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+            )
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    private var ttsIconName: String {
+        if tafsirReader.currentText == dua.arabic && tafsirReader.isPlaying {
+            return "pause.fill"
+        }
+        return "speaker.wave.2.fill"
+    }
+
+    private var ttsLabel: String {
+        if tafsirReader.currentText == dua.arabic {
+            if tafsirReader.isPlaying { return "Pause" }
+            if tafsirReader.isPaused { return "Resume" }
+        }
+        return "Listen"
+    }
+
+    private func handleTTSTap() {
+        if tafsirReader.currentText == dua.arabic && (tafsirReader.isPlaying || tafsirReader.isPaused) {
+            tafsirReader.togglePlayPause()
+        } else {
+            tafsirReader.speak(text: dua.arabic, language: .arabic)
+        }
+    }
+
+    private var transliterationSection: some View {
+        Text(dua.transliteration)
+            .font(.system(size: 16, weight: .regular, design: .serif))
+            .italic()
+            .foregroundColor(themeManager.secondaryText)
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(.horizontal, 8)
+            .textSelection(.enabled)
+    }
+
+    private var translationSection: some View {
+        let language = languageManager.selectedLanguage
+        let translation = dua.translation(for: language)
+        let isRTL = language == .urdu
+
+        return Text(translation)
+            .font(.system(size: 17, weight: .medium))
+            .foregroundColor(themeManager.primaryText)
+            .multilineTextAlignment(isRTL ? .trailing : .leading)
+            .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+            .padding(20)
+            .background(themedCardBackground)
+            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+            .textSelection(.enabled)
+    }
+
+    private var sourceSection: some View {
+        HStack {
+            Spacer()
+            Text("Source: \(dua.source)")
+                .font(.system(size: 13, weight: .medium))
+                .foregroundColor(themeManager.tertiaryText)
+            Spacer()
+        }
+        .padding(.top, 4)
+    }
+
+    private var shareSection: some View {
+        ShareLink(item: shareText) {
+            HStack {
+                Image(systemName: "square.and.arrow.up")
+                Text("Share")
+            }
+            .font(.system(size: 16, weight: .semibold))
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 14)
+            .background(
+                Capsule()
+                    .fill(themeManager.accentGradient)
+                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
+            )
+        }
+        .padding(.top, 8)
+    }
+
+    // MARK: - Helpers
+
+    private var shareText: String {
+        let lang = languageManager.selectedLanguage
+        return """
+        \(dua.situation(for: lang))
+
+        \(dua.arabic)
+
+        \(dua.transliteration)
+
+        \(dua.translation(for: lang))
+
+        — Source: \(dua.source)
+        Sent via Thaqalayn
+        """
+    }
+
+    @ViewBuilder
+    private var themedCardBackground: some View {
+        if themeManager.selectedTheme == .warmInviting {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+        } else {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(themeManager.glassEffect)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+        }
+    }
+}
+
+#Preview {
+    NavigationView {
+        DuaDetailView(dua: DailyDua(
+            id: "1",
+            situationEn: "Before eating",
+            situationAr: "دعاء قبل الأكل",
+            situationUr: "کھانا کھانے کی دعا",
+            arabic: "بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ",
+            transliteration: "Bismillāhi wa ʿalā barakati'llāh",
+            translationEn: "In the name of Allah, and upon the blessing of Allah.",
+            translationUr: "اللہ کے نام سے اور اللہ کی برکت سے۔",
+            source: "al-Kafi 6:294",
+            category: "eating"
+        ))
+    }
+}
