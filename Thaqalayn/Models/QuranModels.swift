@@ -705,6 +705,27 @@ struct VerseProgress: Codable, Identifiable {
     }
 }
 
+// MARK: - Today Tab Models
+
+struct DailyMessage: Codable, Identifiable {
+    let id: Int               // stable index in JSON
+    let arabic: String?       // optional; some entries are translation-only
+    let english: String       // headline (curly-quoted at render time)
+    let surah: Int
+    let verse: Int
+}
+
+struct DailyMessagesData: Codable {
+    let messages: [DailyMessage]
+}
+
+struct LastReadInfo {
+    let surahNumber: Int
+    let verseNumber: Int
+    let progress: Double      // 0…1 within that surah
+    let updatedAt: Date
+}
+
 struct ReadingStreak: Codable {
     var currentStreak: Int
     var longestStreak: Int

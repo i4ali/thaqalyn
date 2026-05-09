@@ -40,4 +40,13 @@ class DuasManager: ObservableObject {
             self.isLoading = false
         }
     }
+
+    /// Returns the rotation-of-the-day du'a deterministic by `dayOfYear % count`.
+    /// Returns nil only if duas haven't loaded yet.
+    func duaOfTheDay() -> DailyDua? {
+        guard !duas.isEmpty else { return nil }
+        let dayOfYear = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 1
+        let index = dayOfYear % duas.count
+        return duas[index]
+    }
 }

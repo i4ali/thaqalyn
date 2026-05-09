@@ -740,6 +740,26 @@ class ProgressManager: ObservableObject {
         return monthlyData
     }
 
+    // MARK: - Last Read
+
+    /// Most recent read verse, with completion progress for its surah.
+    /// Returns nil for new users with no read verses.
+    var lastReadInfo: LastReadInfo? {
+        guard let latest = verseProgress
+            .filter(\.isRead)
+            .max(by: { $0.readDate < $1.readDate }) else { return nil }
+        let completion = getSurahCompletion(surahNumber: latest.surahNumber)
+        let progress = completion.total > 0
+            ? Double(completion.read) / Double(completion.total)
+            : 0
+        return LastReadInfo(
+            surahNumber: latest.surahNumber,
+            verseNumber: latest.verseNumber,
+            progress: progress,
+            updatedAt: latest.readDate
+        )
+    }
+
     func getRecentActivity(limit: Int = 10) -> [VerseProgress] {
         return verseProgress
             .sorted { $0.readDate > $1.readDate }

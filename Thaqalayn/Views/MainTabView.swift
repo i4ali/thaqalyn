@@ -18,15 +18,25 @@ struct MainTabView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            HomeTab()
+            TodayTab(selectedTab: $selectedTab)
                 .tabItem {
                     Label {
-                        Text("Home")
+                        Text("Today")
                     } icon: {
-                        Image(systemName: "house.fill")
+                        Image(systemName: "sun.max.fill")
                     }
                 }
                 .tag(0)
+
+            HomeTab()
+                .tabItem {
+                    Label {
+                        Text("Quran")
+                    } icon: {
+                        Image(systemName: "book.closed.fill")
+                    }
+                }
+                .tag(1)
 
             ExploreTab()
                 .tabItem {
@@ -36,7 +46,7 @@ struct MainTabView: View {
                         Image(systemName: "sparkles")
                     }
                 }
-                .tag(1)
+                .tag(2)
 
             ProgressTab()
                 .tabItem {
@@ -46,7 +56,7 @@ struct MainTabView: View {
                         Image(systemName: "circle.circle")
                     }
                 }
-                .tag(2)
+                .tag(3)
 
             // Conditional Ramadan tab - only visible during Ramadan season
             if isRamadanSeason {
@@ -58,7 +68,7 @@ struct MainTabView: View {
                             Image(systemName: "moon.stars.fill")
                         }
                     }
-                    .tag(3)
+                    .tag(4)
             }
         }
         .tint(themeManager.accentColor)
