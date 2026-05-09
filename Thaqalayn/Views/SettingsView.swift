@@ -15,7 +15,6 @@ struct SettingsView: View {
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var voiceManager = TTSVoiceManager.shared
     @Environment(\.presentationMode) var presentationMode
-    @State private var showingThemeSelection = false
     @State private var showingAuthentication = false
     @State private var showingClearDataAlert = false
     @State private var clearDataMessage = ""
@@ -67,21 +66,6 @@ struct SettingsView: View {
                     // Settings content
                     ScrollView {
                         VStack(spacing: 24) {
-                            // Appearance Section
-                            SettingsSection(title: "Appearance") {
-                                VStack(spacing: 12) {
-                                    // Theme selection
-                                    SettingsRow(
-                                        icon: "paintbrush.fill",
-                                        title: "Theme",
-                                        subtitle: themeManager.selectedTheme.displayName,
-                                        iconColor: .purple
-                                    ) {
-                                        showingThemeSelection = true
-                                    }
-                                }
-                            }
-
                             // Daily Verse Notifications Section
                             SettingsSection(title: "Daily Verse") {
                                 VStack(spacing: 12) {
@@ -364,9 +348,6 @@ struct SettingsView: View {
             }
         }
         .navigationBarHidden(true)
-        .sheet(isPresented: $showingThemeSelection) {
-            ThemeSelectionView()
-        }
         .sheet(isPresented: $showingAuthentication) {
             // You can replace this with your actual AuthenticationView
             Text("Authentication View")

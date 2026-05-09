@@ -21,21 +21,12 @@ struct ExploreRow: View {
                 // Icon
                 Image(systemName: icon)
                     .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(themeManager.selectedTheme == .warmInviting ? .white : themeManager.accentColor)
+                    .foregroundColor(.white)
                     .frame(width: 44, height: 44)
                     .background {
-                        if themeManager.selectedTheme == .warmInviting {
-                            Circle()
-                                .fill(themeManager.accentGradient)
-                                .shadow(color: themeManager.accentColor.opacity(0.3), radius: 6)
-                        } else {
-                            Circle()
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    Circle()
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        }
+                        Circle()
+                            .fill(themeManager.accentGradient)
+                            .shadow(color: themeManager.accentColor.opacity(0.3), radius: 6)
                     }
 
                 // Text content
@@ -53,23 +44,13 @@ struct ExploreRow: View {
                 Spacer()
 
                 // Chevron
-                if themeManager.selectedTheme == .warmInviting {
-                    Text(">")
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(themeManager.tertiaryText)
-                } else {
-                    Image(systemName: "chevron.right")
-                        .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(themeManager.tertiaryText)
-                }
+                Text(">")
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(themeManager.tertiaryText)
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 16)
-            .background(
-                themeManager.selectedTheme == .warmInviting
-                    ? AnyShapeStyle(Color.white)
-                    : AnyShapeStyle(themeManager.glassEffect)
-            )
+            .background(Color.white)
         }
         .buttonStyle(PlainButtonStyle())
     }

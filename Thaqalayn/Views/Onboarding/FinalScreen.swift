@@ -2,7 +2,7 @@
 //  FinalScreen.swift
 //  Thaqalayn
 //
-//  Onboarding Screen 5: Theme Selection & Account Setup
+//  Onboarding Screen 10: Account Setup
 //
 
 import SwiftUI
@@ -10,16 +10,9 @@ import SwiftUI
 struct FinalScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var supabaseService = SupabaseService.shared
-    @Binding var selectedTheme: ThemeVariant?
     let onComplete: () -> Void
     @State private var showingAuthentication = false
     @State private var isVisible = false
-
-    private let themes: [(theme: ThemeVariant, name: String, description: String)] = [
-        (.warmInviting, "Warm & Inviting", "Sanctuary-like warm design"),
-        (.royalAmethyst, "Royal Amethyst", "Luxurious purple with gold accents"),
-        (.modernDark, "Modern Dark", "Dark glassmorphism design")
-    ]
 
     var body: some View {
         ScrollView {
@@ -36,51 +29,14 @@ struct FinalScreen: View {
                             .offset(y: isVisible ? 0 : -20)
                             .animation(Animation.easeOut(duration: 0.6).delay(0.2), value: isVisible)
 
-                        Text("Choose your preferred theme")
+                        Text("Sync your reading progress and bookmarks across devices")
                             .font(.system(size: 16, weight: .medium))
                             .foregroundColor(themeManager.secondaryText)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 32)
                             .opacity(isVisible ? 1 : 0)
                             .animation(Animation.easeOut(duration: 0.6).delay(0.3), value: isVisible)
                     }
-
-                    // Theme selection grid
-                    VStack(spacing: 12) {
-                        ForEach(Array(themes.enumerated()), id: \.offset) { index, item in
-                            ThemeCard(
-                                theme: item.theme,
-                                name: item.name,
-                                description: item.description,
-                                isSelected: selectedTheme == item.theme,
-                                isVisible: isVisible,
-                                delay: 0.5 + Double(index) * 0.1,
-                                onSelect: {
-                                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                        selectedTheme = item.theme
-                                    }
-                                }
-                            )
-                        }
-                    }
-                    .padding(.horizontal, 24)
-
-                    // Divider
-                    HStack {
-                        Rectangle()
-                            .fill(themeManager.strokeColor)
-                            .frame(height: 1)
-
-                        Text("Account Options")
-                            .font(.system(size: 14, weight: .semibold))
-                            .foregroundColor(themeManager.tertiaryText)
-                            .padding(.horizontal, 12)
-
-                        Rectangle()
-                            .fill(themeManager.strokeColor)
-                            .frame(height: 1)
-                    }
-                    .padding(.horizontal, 24)
-                    .opacity(isVisible ? 1 : 0)
-                    .animation(Animation.easeOut(duration: 0.6).delay(0.9), value: isVisible)
 
                     // Account buttons
                     VStack(spacing: 16) {
@@ -163,7 +119,7 @@ struct FinalScreen: View {
                     }
                     .padding(.horizontal, 24)
                     .opacity(isVisible ? 1 : 0)
-                    .animation(Animation.easeOut(duration: 0.6).delay(1.0), value: isVisible)
+                    .animation(Animation.easeOut(duration: 0.6).delay(0.5), value: isVisible)
                 }
 
                 Spacer(minLength: 60)
@@ -185,103 +141,6 @@ struct FinalScreen: View {
     }
 }
 
-// MARK: - Theme Card
-
-struct ThemeCard: View {
-    @StateObject private var themeManager = ThemeManager.shared
-    let theme: ThemeVariant
-    let name: String
-    let description: String
-    let isSelected: Bool
-    let isVisible: Bool
-    let delay: Double
-    let onSelect: () -> Void
-
-    var body: some View {
-        Button(action: onSelect) {
-            HStack(spacing: 16) {
-                // Theme preview circle
-                ZStack {
-                    Circle()
-                        .fill(themePreviewGradient)
-                        .frame(width: 50, height: 50)
-                        .overlay(
-                            Circle()
-                                .stroke(Color.white.opacity(0.2), lineWidth: 1)
-                        )
-
-                    if isSelected {
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 20, weight: .bold))
-                            .foregroundColor(.white)
-                    }
-                }
-
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(name)
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-
-                    Text(description)
-                        .font(.system(size: 13, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                }
-
-                Spacer()
-
-                if isSelected {
-                    Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 24))
-                        .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
-                }
-            }
-            .padding(16)
-            .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .strokeBorder(
-                                isSelected ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.8) : themeManager.strokeColor,
-                                lineWidth: isSelected ? 2 : 1
-                            )
-                    )
-            )
-            .shadow(
-                color: isSelected ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3) : Color.clear,
-                radius: isSelected ? 12 : 0
-            )
-        }
-        .buttonStyle(PlainButtonStyle())
-        .opacity(isVisible ? 1 : 0)
-        .offset(x: isVisible ? 0 : -30)
-        .animation(Animation.easeOut(duration: 0.6).delay(delay), value: isVisible)
-    }
-
-    private var themePreviewGradient: LinearGradient {
-        switch theme {
-        case .warmInviting:
-            return LinearGradient(
-                colors: [Color(red: 0.97, green: 0.96, blue: 1.0), Color(red: 1.0, green: 0.98, blue: 0.96)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .royalAmethyst:
-            return LinearGradient(
-                colors: [Color(red: 0.4, green: 0.2, blue: 0.6), Color(red: 0.3, green: 0.15, blue: 0.5)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .modernDark:
-            return LinearGradient(
-                colors: [Color(red: 0.1, green: 0.1, blue: 0.15), Color(red: 0.15, green: 0.15, blue: 0.2)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        }
-    }
-}
-
 #Preview {
-    FinalScreen(selectedTheme: .constant(.modernDark), onComplete: {})
+    FinalScreen(onComplete: {})
 }

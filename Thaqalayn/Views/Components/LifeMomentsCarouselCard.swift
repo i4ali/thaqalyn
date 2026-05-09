@@ -69,31 +69,9 @@ struct LifeMomentsCarouselCard: View {
         .padding(.vertical, 16)
         .frame(height: 145)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 24)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
-            } else {
-                RoundedRectangle(cornerRadius: 24)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        themeManager.floatingOrbColors[0].opacity(0.5),
-                                        themeManager.floatingOrbColors[1].opacity(0.5)
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                    )
-            }
+            RoundedRectangle(cornerRadius: 24)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
         }
     }
 }

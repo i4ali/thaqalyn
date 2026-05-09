@@ -66,9 +66,9 @@ struct DuasView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(localizedTitle)
-                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32,
+                        .font(.system(size: 34,
                                       weight: .bold,
-                                      design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
+                                      design: .rounded))
                         .foregroundColor(themeManager.primaryText)
 
                     Text(localizedSubtitle)
@@ -94,29 +94,15 @@ struct DuasView: View {
             HStack(spacing: 4) {
                 Text(languageManager.selectedLanguage.displayName)
                     .font(.system(size: 14, weight: .medium))
-                if themeManager.selectedTheme == .warmInviting {
-                    Text("🌐")
-                        .font(.system(size: 14))
-                } else {
-                    Image(systemName: "globe")
-                        .font(.system(size: 12))
-                }
+                Text("🌐")
+                    .font(.system(size: 14))
             }
-            .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.primaryText)
+            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
             .padding(.horizontal, 12)
-            .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 8 : 6)
+            .padding(.vertical, 8)
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
-                } else {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.secondaryBackground.opacity(0.8))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
             }
         }
     }
@@ -172,31 +158,9 @@ struct DuaCard: View {
         }
         .padding(20)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-            } else {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        themeManager.floatingOrbColors[0].opacity(0.5),
-                                        themeManager.floatingOrbColors[1].opacity(0.5)
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                    )
-            }
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
         }
         .contentShape(Rectangle())
     }

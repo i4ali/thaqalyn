@@ -11,7 +11,6 @@ struct OnboardingFlowView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var currentPage = 0
-    @State private var selectedTheme: ThemeVariant?
     @State private var notificationsEnabled = false
     @State private var progressNotificationsEnabled = false
 
@@ -61,9 +60,8 @@ struct OnboardingFlowView: View {
                 ProgressNotificationsScreen(progressNotificationsEnabled: $progressNotificationsEnabled)
                     .tag(8)
 
-                // Screen 10: Final Setup
+                // Screen 10: Final Setup (account only — theme picker removed)
                 FinalScreen(
-                    selectedTheme: $selectedTheme,
                     onComplete: {
                         completeOnboarding()
                     }
@@ -105,11 +103,6 @@ struct OnboardingFlowView: View {
     }
 
     private func completeOnboarding() {
-        // Apply selected theme if any
-        if let theme = selectedTheme {
-            themeManager.setTheme(theme)
-        }
-
         // Apply notification preferences
         if notificationsEnabled || progressNotificationsEnabled {
             Task {

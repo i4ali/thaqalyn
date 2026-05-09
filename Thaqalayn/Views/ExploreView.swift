@@ -119,7 +119,7 @@ struct ExploreView: View {
                 // Header
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Explore")
-                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
+                        .font(.system(size: 34, weight: .bold, design: .rounded))
                         .foregroundColor(themeManager.primaryText)
 
                     Text("Discover Quranic wisdom")
@@ -187,18 +187,9 @@ struct ExploreView: View {
                 }
             }
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-                } else {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.white)
+                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
             }
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .padding(.horizontal, 20)
@@ -209,19 +200,19 @@ struct ExploreView: View {
         // Use emoji for warmInviting theme, SF Symbols text for others
         switch item.destination {
         case .lifeMoments:
-            return themeManager.selectedTheme == .warmInviting ? "heart.fill" : "heart.fill"
+            return "heart.fill"
         case .dailyDuas:
             return "hands.sparkles.fill"
         case .propheticParallels:
-            return themeManager.selectedTheme == .warmInviting ? "person.2.wave.2.fill" : "person.2.wave.2.fill"
+            return "person.2.wave.2.fill"
         case .questions:
-            return themeManager.selectedTheme == .warmInviting ? "questionmark.circle" : "questionmark.circle"
+            return "questionmark.circle"
         case .fasting:
-            return themeManager.selectedTheme == .warmInviting ? "moon.fill" : "moon.fill"
+            return "moon.fill"
         case .propheticStories:
-            return themeManager.selectedTheme == .warmInviting ? "book" : "book"
+            return "book"
         case .ahlulbaytQuran:
-            return themeManager.selectedTheme == .warmInviting ? "star.fill" : "star.fill"
+            return "star.fill"
         }
     }
 

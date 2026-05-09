@@ -113,31 +113,15 @@ struct FullScreenCommentaryView: View {
         HStack {
             // Close button
             Button(action: { dismiss() }) {
-                if themeManager.selectedTheme == .warmInviting {
-                    // Warm theme: × symbol in white circle
-                    Text("×")
-                        .font(.system(size: 24, weight: .semibold))
-                        .foregroundColor(Color(red: 0.42, green: 0.365, blue: 0.329))
-                        .frame(width: 40, height: 40)
-                        .background(
-                            Circle()
-                                .fill(Color.white.opacity(0.9))
-                        )
-                } else {
-                    // Other themes: Original xmark icon
-                    Image(systemName: "xmark")
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .frame(width: 44, height: 44)
-                        .background(
-                            Circle()
-                                .fill(themeManager.secondaryBackground.opacity(0.8))
-                                .overlay(
-                                    Circle()
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        )
-                }
+                // Warm theme: × symbol in white circle
+                Text("×")
+                    .font(.system(size: 24, weight: .semibold))
+                    .foregroundColor(Color(red: 0.42, green: 0.365, blue: 0.329))
+                    .frame(width: 40, height: 40)
+                    .background(
+                        Circle()
+                            .fill(Color.white.opacity(0.9))
+                    )
             }
 
             Spacer()
@@ -159,19 +143,17 @@ struct FullScreenCommentaryView: View {
             languageToggle
         }
         .padding(.horizontal, 24)
-        .padding(.top, themeManager.selectedTheme == .warmInviting ? 20 : 16)
+        .padding(.top, 20)
         .padding(.bottom, 20)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                LinearGradient(
-                    colors: [
-                        Color(red: 0.97, green: 0.96, blue: 1.0),
-                        Color(red: 0.97, green: 0.96, blue: 1.0).opacity(0.5)
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-            }
+            LinearGradient(
+                colors: [
+                    Color(red: 0.97, green: 0.96, blue: 1.0),
+                    Color(red: 0.97, green: 0.96, blue: 1.0).opacity(0.5)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
         }
     }
 
@@ -183,29 +165,15 @@ struct FullScreenCommentaryView: View {
             HStack(spacing: 4) {
                 Text(languageManager.selectedLanguage.displayName)
                     .font(.system(size: 14, weight: .medium))
-                if themeManager.selectedTheme == .warmInviting {
-                    Text("🌐")
-                        .font(.system(size: 14))
-                } else {
-                    Image(systemName: "globe")
-                        .font(.system(size: 12))
-                }
+                Text("🌐")
+                    .font(.system(size: 14))
             }
-            .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.primaryText)
+            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
             .padding(.horizontal, 12)
-            .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 8 : 6)
+            .padding(.vertical, 8)
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
-                } else {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.secondaryBackground.opacity(0.8))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
             }
         }
     }
@@ -220,29 +188,14 @@ struct FullScreenCommentaryView: View {
                 tafsirReader.speak(text: tafsirText, language: languageManager.selectedLanguage)
             }
         }) {
-            if themeManager.selectedTheme == .warmInviting {
-                Text(tafsirReader.isPlaying ? "⏸" : "🔊")
-                    .font(.system(size: 20))
-                    .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
-                    .frame(width: 44, height: 44)
-                    .background(
-                        Circle()
-                            .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
-                    )
-            } else {
-                Image(systemName: tafsirReader.isPlaying ? "pause.fill" : "speaker.wave.2.fill")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .frame(width: 44, height: 44)
-                    .background(
-                        Circle()
-                            .fill(themeManager.secondaryBackground.opacity(0.8))
-                            .overlay(
-                                Circle()
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    )
-            }
+            Text(tafsirReader.isPlaying ? "⏸" : "🔊")
+                .font(.system(size: 20))
+                .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                .frame(width: 44, height: 44)
+                .background(
+                    Circle()
+                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                )
         }
     }
 
@@ -284,90 +237,39 @@ struct FullScreenCommentaryView: View {
                 }
             }
         }) {
-            if themeManager.selectedTheme == .warmInviting {
-                // Warm theme: Larger tabs with specific styling
-                VStack(spacing: 6) {
-                    Text(layerIcon(for: layer))
-                        .font(.system(size: 28))
+            // Warm theme: Larger tabs with specific styling
+            VStack(spacing: 6) {
+                Text(layerIcon(for: layer))
+                    .font(.system(size: 28))
 
-                    Text(layerShortTitle(for: layer))
-                        .font(.system(size: 15, weight: .semibold))
-                        .multilineTextAlignment(.center)
+                Text(layerShortTitle(for: layer))
+                    .font(.system(size: 15, weight: .semibold))
+                    .multilineTextAlignment(.center)
 
-                    Text(layerShortDescription(for: layer))
-                        .font(.system(size: 10))
-                        .multilineTextAlignment(.center)
-                        .lineLimit(1)
-                }
-                .foregroundColor(isActive ? .white : Color(red: 0.176, green: 0.145, blue: 0.125))
-                .frame(width: 130, height: 95)
-                .padding(12)
-                .background {
-                    if isActive {
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(
-                                LinearGradient(
-                                    colors: [Color(red: 0.608, green: 0.561, blue: 0.749), Color(red: 0.545, green: 0.498, blue: 0.659)],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
+                Text(layerShortDescription(for: layer))
+                    .font(.system(size: 10))
+                    .multilineTextAlignment(.center)
+                    .lineLimit(1)
+            }
+            .foregroundColor(isActive ? .white : Color(red: 0.176, green: 0.145, blue: 0.125))
+            .frame(width: 130, height: 95)
+            .padding(12)
+            .background {
+                if isActive {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(
+                            LinearGradient(
+                                colors: [Color(red: 0.608, green: 0.561, blue: 0.749), Color(red: 0.545, green: 0.498, blue: 0.659)],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
                             )
-                            .shadow(color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.3), radius: 12)
-                    } else {
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.white)
-                            .shadow(color: Color.black.opacity(0.04), radius: 12)
-                    }
-                }
-            } else {
-                // Other themes: Original compact style
-                VStack(spacing: 6) {
-                    HStack(spacing: 4) {
-                        Text(layerIcon(for: layer))
-                            .font(.system(size: 18))
-
-                        // Lock icon for locked layers
-                        if isLocked {
-                            Image(systemName: "lock.fill")
-                                .font(.system(size: 12, weight: .semibold))
-                                .foregroundColor(.yellow)
-                        } else if let tafsir = verse.tafsir {
-                            // Language availability indicators (only for unlocked layers)
-                            layerAvailabilityIndicator(for: layer, tafsir: tafsir)
-                        }
-                    }
-
-                    Text(layerShortTitle(for: layer))
-                        .font(.system(size: 13, weight: .semibold))
-                        .multilineTextAlignment(.center)
-                }
-                .foregroundColor(
-                    isLocked ? themeManager.tertiaryText :
-                    (isActive ? .white : themeManager.secondaryText)
-                )
-                .padding(.horizontal, 16)
-                .padding(.vertical, 12)
-                .background {
-                    if isActive {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(layerGradient(for: layer))
-                    } else if isLocked {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(themeManager.tertiaryBackground.opacity(0.3))
-                    } else {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(themeManager.tertiaryBackground.opacity(0.6))
-                    }
-                }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(
-                            isLocked ? Color.yellow.opacity(0.4) :
-                            (isActive ? Color.clear : themeManager.strokeColor),
-                            lineWidth: isLocked ? 1.5 : 1
                         )
-                )
-                .opacity(isLocked ? 0.6 : 1.0)
+                        .shadow(color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.3), radius: 12)
+                } else {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.white)
+                        .shadow(color: Color.black.opacity(0.04), radius: 12)
+                }
             }
         }
         .buttonStyle(PlainButtonStyle())
@@ -438,17 +340,10 @@ struct FullScreenCommentaryView: View {
             }
             
             // Divider matching mockup
-            if themeManager.selectedTheme == .warmInviting {
-                Rectangle()
-                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.2)) // #9B8FBF with 0.2 opacity
-                    .frame(height: 1)
-                    .frame(maxWidth: .infinity)
-            } else {
-                Rectangle()
-                    .fill(layerGradient(for: selectedLayer).opacity(0.3))
-                    .frame(height: 2)
-                    .frame(maxWidth: .infinity)
-            }
+            Rectangle()
+                .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.2)) // #9B8FBF with 0.2 opacity
+                .frame(height: 1)
+                .frame(maxWidth: .infinity)
         }
         .padding(.bottom, 32)
     }
@@ -472,10 +367,10 @@ struct FullScreenCommentaryView: View {
                     HighlightedText(
                         text: trimmedParagraph,
                         highlightRange: paragraphHighlightRange,
-                        font: .system(size: themeManager.selectedTheme == .warmInviting ? 17 : 18, weight: .regular, design: .serif),
+                        font: .system(size: 17, weight: .regular, design: .serif),
                         textColor: themeManager.primaryText,
                         highlightColor: .yellow.opacity(0.4),
-                        lineSpacing: themeManager.selectedTheme == .warmInviting ? 6 : 8
+                        lineSpacing: 6
                     )
                         .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                         .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
@@ -484,44 +379,24 @@ struct FullScreenCommentaryView: View {
                         .padding(.horizontal, 20)
                         .padding(.vertical, 16)
                         .background {
-                            if themeManager.selectedTheme == .warmInviting {
-                                // Warm theme: Purple gradient background matching summary view
-                                RoundedRectangle(cornerRadius: 24)
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 24)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                                    )
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 24)
-                                            .fill(
-                                                LinearGradient(
-                                                    colors: [Color.purple.opacity(0.1), Color.pink.opacity(0.1)],
-                                                    startPoint: .topLeading,
-                                                    endPoint: .bottomTrailing
-                                                )
+                            // Warm theme: Purple gradient background matching summary view
+                            RoundedRectangle(cornerRadius: 24)
+                                .fill(themeManager.glassEffect)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 24)
+                                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                                )
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 24)
+                                        .fill(
+                                            LinearGradient(
+                                                colors: [Color.purple.opacity(0.1), Color.pink.opacity(0.1)],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
                                             )
-                                    )
-                                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-                            } else {
-                                // Other themes: Glass effect
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(themeManager.secondaryBackground.opacity(0.8))
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .fill(themeManager.glassEffect)
-                                    )
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(themeManager.strokeColor.opacity(1.0), lineWidth: 2)
-                                    )
-                                    .shadow(
-                                        color: themeManager.primaryText.opacity(0.05),
-                                        radius: 8,
-                                        x: 0,
-                                        y: 2
-                                    )
-                            }
+                                        )
+                                )
+                                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
                         }
                 }
             }

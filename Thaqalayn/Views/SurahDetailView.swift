@@ -187,14 +187,8 @@ struct GoToVerseSheet: View {
             VStack(spacing: 24) {
                 // Header
                 VStack(spacing: 8) {
-                    if themeManager.selectedTheme == .warmInviting {
-                        Text("🔍")
-                            .font(.system(size: 40))
-                    } else {
-                        Image(systemName: "arrow.down.to.line")
-                            .font(.system(size: 36, weight: .medium))
-                            .foregroundColor(themeManager.accentColor)
-                    }
+                    Text("🔍")
+                        .font(.system(size: 40))
 
                     Text("Go to Verse")
                         .font(.system(size: 22, weight: .semibold))
@@ -216,7 +210,7 @@ struct GoToVerseSheet: View {
                         .padding(.horizontal, 20)
                         .background {
                             RoundedRectangle(cornerRadius: 12)
-                                .fill(themeManager.selectedTheme == .warmInviting ? AnyShapeStyle(Color.white) : AnyShapeStyle(themeManager.glassEffect))
+                                .fill(AnyShapeStyle(Color.white))
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12)
                                         .stroke(themeManager.strokeColor, lineWidth: 1)
@@ -241,13 +235,8 @@ struct GoToVerseSheet: View {
                 // Go button
                 Button(action: submitVerse) {
                     HStack(spacing: 8) {
-                        if themeManager.selectedTheme == .warmInviting {
-                            Text("→")
-                                .font(.system(size: 18))
-                        } else {
-                            Image(systemName: "arrow.right")
-                                .font(.system(size: 16, weight: .semibold))
-                        }
+                        Text("→")
+                            .font(.system(size: 18))
                         Text("Go")
                             .font(.system(size: 17, weight: .semibold))
                     }
@@ -255,19 +244,14 @@ struct GoToVerseSheet: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
                     .background {
-                        if themeManager.selectedTheme == .warmInviting {
-                            RoundedRectangle(cornerRadius: 24)
-                                .fill(
-                                    LinearGradient(
-                                        colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(
+                                LinearGradient(
+                                    colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
                                 )
-                        } else {
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(themeManager.purpleGradient)
-                        }
+                            )
                     }
                 }
                 .padding(.horizontal, 20)
@@ -277,9 +261,7 @@ struct GoToVerseSheet: View {
                 Spacer()
             }
             .background(
-                themeManager.selectedTheme == .warmInviting
-                    ? Color(red: 0.98, green: 0.965, blue: 0.945)
-                    : themeManager.primaryBackground
+                Color(red: 0.98, green: 0.965, blue: 0.945)
             )
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -328,89 +310,51 @@ struct ModernSurahHeader: View {
     var body: some View {
         VStack(spacing: 16) {
             // Navigation (different for warm theme)
-            if themeManager.selectedTheme == .warmInviting {
-                // Warm theme: Simple back button
-                HStack {
-                    Button(action: onBack) {
-                        Text("←")
-                            .font(.system(size: 20))
-                            .foregroundColor(Color(red: 0.176, green: 0.145, blue: 0.125))
-                            .frame(width: 40, height: 40)
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(Color.black.opacity(0.1))
-                            )
-                    }
-                    Spacer()
+            // Warm theme: Simple back button
+            HStack {
+                Button(action: onBack) {
+                    Text("←")
+                        .font(.system(size: 20))
+                        .foregroundColor(Color(red: 0.176, green: 0.145, blue: 0.125))
+                        .frame(width: 40, height: 40)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(Color.black.opacity(0.1))
+                        )
                 }
-                .padding(.horizontal, 24)
-                .padding(.top, 20)
-            } else {
-                // Other themes: Original centered title style
-                HStack {
-                    Button(action: onBack) {
-                        Image(systemName: "chevron.left")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(themeManager.primaryText)
-                            .frame(width: 36, height: 36)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                                    )
-                            )
-                    }
-
-                    Spacer()
-
-                    Text(surah.englishName)
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-
-                    Spacer()
-                }
+                Spacer()
             }
+            .padding(.horizontal, 24)
+            .padding(.top, 20)
 
             // Surah info card
-            VStack(spacing: themeManager.selectedTheme == .warmInviting ? 16 : 12) {
+            VStack(spacing: 16) {
                 Text(surah.arabicName)
-                    .font(.system(size: themeManager.selectedTheme == .warmInviting ? 32 : 28, weight: .medium))
+                    .font(.system(size: 32, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .multilineTextAlignment(.center)
 
                 Text(surah.englishNameTranslation)
-                    .font(.system(size: themeManager.selectedTheme == .warmInviting ? 18 : 16, weight: .medium))
+                    .font(.system(size: 18, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .italic()
 
                 HStack(spacing: 20) {
                     HStack(spacing: 6) {
-                        if themeManager.selectedTheme == .warmInviting {
-                            Text("📖")
-                                .font(.system(size: 14))
-                        } else {
-                            Image(systemName: "book")
-                                .font(.system(size: 12))
-                        }
+                        Text("📖")
+                            .font(.system(size: 14))
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 14, weight: .medium))
                     }
-                    .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.tertiaryText)
+                    .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
 
                     HStack(spacing: 6) {
-                        if themeManager.selectedTheme == .warmInviting {
-                            Text("📍")
-                                .font(.system(size: 14))
-                        } else {
-                            Image(systemName: "location")
-                                .font(.system(size: 12))
-                        }
+                        Text("📍")
+                            .font(.system(size: 14))
                         Text(surah.revelationType)
                             .font(.system(size: 14, weight: .medium))
                     }
-                    .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.tertiaryText)
+                    .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
                 }
 
                 // Action buttons
@@ -422,68 +366,46 @@ struct ModernSurahHeader: View {
                         }
                     }) {
                         HStack(spacing: 8) {
-                            if themeManager.selectedTheme == .warmInviting {
-                                Text("▶")
-                                    .font(.system(size: 16))
-                            } else {
-                                Image(systemName: "play.fill")
-                                    .font(.system(size: 16, weight: .semibold))
-                            }
+                            Text("▶")
+                                .font(.system(size: 16))
                             Text("Play")
-                                .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 16, weight: .semibold))
+                                .font(.system(size: 17, weight: .semibold))
                                 .fixedSize()
                         }
                         .foregroundColor(.white)
-                        .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 24 : 16)
-                        .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 14 : 10)
+                        .padding(.horizontal, 24)
+                        .padding(.vertical, 14)
                         .background {
-                            if themeManager.selectedTheme == .warmInviting {
-                                RoundedRectangle(cornerRadius: 24)
-                                    .fill(
-                                        LinearGradient(
-                                            colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
-                                            startPoint: .leading,
-                                            endPoint: .trailing
-                                        )
+                            RoundedRectangle(cornerRadius: 24)
+                                .fill(
+                                    LinearGradient(
+                                        colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
                                     )
-                                    .shadow(color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3), radius: 12)
-                            } else {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(themeManager.purpleGradient)
-                                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
-                            }
+                                )
+                                .shadow(color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3), radius: 12)
                         }
                     }
 
                     // Go to Verse button (icon-only for compact fit)
                     Button(action: onGoToVerse) {
                         Group {
-                            if themeManager.selectedTheme == .warmInviting {
-                                Text("🔍")
-                                    .font(.system(size: 18))
-                            } else {
-                                Image(systemName: "arrow.down.to.line")
-                                    .font(.system(size: 18, weight: .semibold))
-                            }
+                            Text("🔍")
+                                .font(.system(size: 18))
                         }
                         .foregroundColor(.white)
-                        .frame(width: themeManager.selectedTheme == .warmInviting ? 48 : 44, height: themeManager.selectedTheme == .warmInviting ? 48 : 44)
+                        .frame(width: 48, height: 48)
                         .background {
-                            if themeManager.selectedTheme == .warmInviting {
-                                Circle()
-                                    .fill(
-                                        LinearGradient(
-                                            colors: [Color(red: 0.608, green: 0.561, blue: 0.749), Color(red: 0.518, green: 0.471, blue: 0.659)],
-                                            startPoint: .leading,
-                                            endPoint: .trailing
-                                        )
+                            Circle()
+                                .fill(
+                                    LinearGradient(
+                                        colors: [Color(red: 0.608, green: 0.561, blue: 0.749), Color(red: 0.518, green: 0.471, blue: 0.659)],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
                                     )
-                                    .shadow(color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.3), radius: 12)
-                            } else {
-                                Circle()
-                                    .fill(themeManager.accentGradient)
-                                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                            }
+                                )
+                                .shadow(color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.3), radius: 12)
                         }
                     }
 
@@ -494,66 +416,32 @@ struct ModernSurahHeader: View {
                                 Image(systemName: "brain.head.profile")
                                     .font(.system(size: 16, weight: .semibold))
                                 Text("Quiz")
-                                    .font(.system(size: themeManager.selectedTheme == .warmInviting ? 17 : 16, weight: .semibold))
+                                    .font(.system(size: 17, weight: .semibold))
                                     .fixedSize()
                             }
                             .foregroundColor(.white)
-                            .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 24 : 16)
-                            .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 14 : 10)
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 14)
                             .background {
-                                if themeManager.selectedTheme == .warmInviting {
-                                    RoundedRectangle(cornerRadius: 24)
-                                        .fill(themeManager.accentGradient)
-                                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
-                                } else {
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .fill(themeManager.accentGradient)
-                                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                                }
+                                RoundedRectangle(cornerRadius: 24)
+                                    .fill(themeManager.accentGradient)
+                                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
                             }
                         }
                     }
                 }
                 .padding(.top, 8)
             }
-            .padding(themeManager.selectedTheme == .warmInviting ? 28 : 20)
+            .padding(28)
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 24)
-                        .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 6)
-                } else {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .fill(
-                                    LinearGradient(
-                                        colors: [
-                                            themeManager.floatingOrbColors[0].opacity(0.7),
-                                            themeManager.floatingOrbColors[1].opacity(0.7)
-                                        ],
-                                        startPoint: .topLeading,
-                                        endPoint: .bottomTrailing
-                                    )
-                                )
-                        )
-                }
+                RoundedRectangle(cornerRadius: 24)
+                    .fill(Color.white)
+                    .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 6)
             }
         }
-        .padding(.horizontal, themeManager.selectedTheme == .warmInviting ? 24 : 20)
-        .padding(.top, themeManager.selectedTheme == .warmInviting ? 20 : 60)
-        .padding(.bottom, themeManager.selectedTheme == .warmInviting ? 24 : 20)
-        .background {
-            if themeManager.selectedTheme != .warmInviting {
-                Rectangle()
-                    .fill(themeManager.glassEffect)
-            }
-        }
+        .padding(.horizontal, 24)
+        .padding(.top, 20)
+        .padding(.bottom, 24)
     }
 
 }
@@ -656,11 +544,7 @@ struct ModernVerseCard: View {
 
     private var verseReadCheckbox: some View {
         Button(action: toggleVerseRead) {
-            if themeManager.selectedTheme == .warmInviting {
-                warmThemeCheckbox
-            } else {
-                modernThemeCheckbox
-            }
+            warmThemeCheckbox
         }
         .animation(.spring(response: 0.3, dampingFraction: 0.6), value: progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number))
     }
@@ -690,58 +574,19 @@ struct ModernVerseCard: View {
         .frame(width: 36, height: 36)
     }
 
-    private var modernThemeCheckbox: some View {
-        let isRead = progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number)
-
-        return ZStack {
-            RoundedRectangle(cornerRadius: 6)
-                .strokeBorder(
-                    isRead ? Color.green : themeManager.strokeColor,
-                    lineWidth: 2
-                )
-                .frame(width: 24, height: 24)
-                .background(
-                    RoundedRectangle(cornerRadius: 6)
-                        .fill(isRead ? AnyShapeStyle(Color.green.opacity(0.3)) : AnyShapeStyle(themeManager.glassEffect))
-                )
-
-            if isRead {
-                Image(systemName: "checkmark")
-                    .font(.system(size: 12, weight: .bold))
-                    .foregroundColor(.green)
-                    .transition(.scale.combined(with: .opacity))
-            }
-        }
-        .frame(width: 36, height: 36)
-    }
-
     var body: some View {
-        VStack(alignment: .leading, spacing: themeManager.selectedTheme == .warmInviting ? 20 : 16) {
+        VStack(alignment: .leading, spacing: 20) {
             // Verse number and actions
             HStack {
                 // Verse number circle
-                if themeManager.selectedTheme == .warmInviting {
-                    // Warm theme: Circle with purple border only
-                    Circle()
-                        .strokeBorder(Color(red: 0.608, green: 0.561, blue: 0.749), lineWidth: 2)
-                        .frame(width: 36, height: 36)
-                        .overlay(
-                            Text("\(verse.number)")
-                                .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
-                        )
-                } else {
-                    // Other themes: Filled circle
-                    Circle()
-                        .fill(themeManager.accentGradient)
-                        .frame(width: 40, height: 40)
-                        .overlay(
-                            Text("\(verse.number)")
-                                .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(.white)
-                        )
-                        .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
-                }
+                Circle()
+                    .strokeBorder(Color(red: 0.608, green: 0.561, blue: 0.749), lineWidth: 2)
+                    .frame(width: 36, height: 36)
+                    .overlay(
+                        Text("\(verse.number)")
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                    )
 
                 Spacer()
 
@@ -752,62 +597,27 @@ struct ModernVerseCard: View {
                             await audioManager.playVerse(verse, in: surah)
                         }
                     }) {
-                        if themeManager.selectedTheme == .warmInviting {
-                            // Warm theme: Circular button with light purple background
-                            Text(isCurrentlyPlaying ? "⏸" : "▶")
-                                .font(.system(size: 18))
-                                .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
-                                .frame(width: 36, height: 36)
-                                .background(
-                                    Circle()
-                                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
-                                )
-                        } else {
-                            // Other themes: Original style
-                            Image(systemName: isCurrentlyPlaying ? "pause.fill" : "play.fill")
-                                .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(isCurrentlyPlaying ? .white : themeManager.primaryText)
-                                .frame(width: 36, height: 36)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(isCurrentlyPlaying ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.glassEffect))
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 8)
-                                                .stroke(isCurrentlyPlaying ? Color.clear : themeManager.strokeColor, lineWidth: 1)
-                                        )
-                                )
-                                .shadow(color: isCurrentlyPlaying ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4) : Color.clear, radius: 8)
-                        }
+                        Text(isCurrentlyPlaying ? "⏸" : "▶")
+                            .font(.system(size: 18))
+                            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                            .frame(width: 36, height: 36)
+                            .background(
+                                Circle()
+                                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                            )
                     }
                     .animation(.easeInOut(duration: 0.2), value: isCurrentlyPlaying)
 
                     // Bookmark button
                     Button(action: toggleBookmark) {
-                        if themeManager.selectedTheme == .warmInviting {
-                            // Warm theme: Circular button with light orange background
-                            Text(isBookmarked ? "♥" : "♡")
-                                .font(.system(size: 18))
-                                .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
-                                .frame(width: 36, height: 36)
-                                .background(
-                                    Circle()
-                                        .fill(Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.1))
-                                )
-                        } else {
-                            // Other themes: Original style
-                            Image(systemName: isBookmarked ? "heart.fill" : "heart")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(isBookmarked ? .pink : themeManager.secondaryText)
-                                .frame(width: 36, height: 36)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(themeManager.glassEffect)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 8)
-                                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                                        )
-                                )
-                        }
+                        Text(isBookmarked ? "♥" : "♡")
+                            .font(.system(size: 18))
+                            .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
+                            .frame(width: 36, height: 36)
+                            .background(
+                                Circle()
+                                    .fill(Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.1))
+                            )
                     }
                     .scaleEffect(showingBookmarkFeedback ? 1.2 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.6), value: showingBookmarkFeedback)
@@ -829,11 +639,11 @@ struct ModernVerseCard: View {
 
             // Arabic text
             Text(verse.arabicText)
-                .font(.system(size: themeManager.selectedTheme == .warmInviting ? 26 : 24, weight: .medium))
+                .font(.system(size: 26, weight: .medium))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                .lineSpacing(themeManager.selectedTheme == .warmInviting ? 26 : 8)  // line-height: 2 = lineSpacing equals font size
+                .lineSpacing(26)  // line-height: 2 = lineSpacing equals font size
 
             // English translation
             Text(verse.translation)
@@ -843,34 +653,13 @@ struct ModernVerseCard: View {
 
             // Commentary buttons (theme-adaptive for all themes)
             // Split button design: Summary (left) + Full Commentary (right)
-            if themeManager.selectedTheme == .warmInviting {
-                warmInvitingSplitButtons
-            } else {
-                modernSplitButtons
-            }
+            warmInvitingSplitButtons
         }
-        .padding(themeManager.selectedTheme == .warmInviting ? 24 : 24)
+        .padding(24)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-            } else {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(backgroundFill)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(
-                                highlightStroke,
-                                lineWidth: isCurrentlyPlaying ? 2 : 1
-                            )
-                    )
-                    .shadow(
-                        color: shadowColor,
-                        radius: isCurrentlyPlaying ? 12 : 8,
-                        y: 4
-                    )
-            }
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
         }
         .scaleEffect(isPressed ? 0.98 : 1.0)
         .animation(.easeInOut(duration: 0.1), value: isPressed)
@@ -934,65 +723,6 @@ struct ModernVerseCard: View {
         }
     }
 
-    private var modernSplitButtons: some View {
-        HStack(spacing: 12) {
-            // Overview button (shows layer2 classical commentary)
-            Button(action: {
-                if !canAccessOverview && surah.number > 1 {
-                    showingPaywall = true
-                } else if verse.tafsir != nil {
-                    onSummaryTap()
-                }
-            }) {
-                HStack(spacing: 6) {
-                    Image(systemName: "sparkles")
-                        .font(.system(size: 14, weight: .semibold))
-                    Text("Gems")
-                        .font(.system(size: 15, weight: .semibold))
-                }
-                .foregroundColor(verse.tafsir != nil ? themeManager.primaryText : themeManager.tertiaryText)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 12)
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                )
-            }
-            .opacity(verse.tafsir != nil ? 1.0 : 0.5)
-            .disabled(verse.tafsir == nil)
-
-            // Full commentary button
-            Button(action: {
-                if !canAccessTafsir && surah.number > 1 {
-                    showingPaywall = true
-                } else if verse.tafsir != nil {
-                    onTafsirTap()
-                }
-            }) {
-                HStack(spacing: 6) {
-                    Image(systemName: "book.fill")
-                        .font(.system(size: 14, weight: .semibold))
-                    Text("In-Depth")
-                        .font(.system(size: 15, weight: .semibold))
-                }
-                .foregroundColor(themeManager.primaryText)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 12)
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                )
-            }
-        }
-    }
 }
 
 struct ModernTafsirDetailView: View {

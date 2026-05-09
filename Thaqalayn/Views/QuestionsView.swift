@@ -46,7 +46,7 @@ struct QuestionsView: View {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("Questions & Answers")
-                                    .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
+                                    .font(.system(size: 34, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
                                 Text("Find Quranic guidance for life's questions")
@@ -60,25 +60,6 @@ struct QuestionsView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 12)
-                    .background {
-                        if themeManager.selectedTheme != .warmInviting {
-                            Rectangle()
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(
-                                            LinearGradient(
-                                                colors: [
-                                                    Color.clear,
-                                                    themeManager.isDarkMode ? Color.white.opacity(0.05) : Color.black.opacity(0.05)
-                                                ],
-                                                startPoint: .top,
-                                                endPoint: .bottom
-                                            )
-                                        )
-                                )
-                        }
-                    }
 
                     // Search bar
                     HStack(spacing: 12) {
@@ -93,17 +74,8 @@ struct QuestionsView: View {
                     .padding(.horizontal, 16)
                     .padding(.vertical, 12)
                     .background {
-                        if themeManager.selectedTheme == .warmInviting {
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color(red: 0.95, green: 0.95, blue: 0.95))
-                        } else {
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        }
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color(red: 0.95, green: 0.95, blue: 0.95))
                     }
                     .padding(.horizontal, 20)
                     .padding(.bottom, 12)
@@ -255,31 +227,9 @@ struct QuestionCardView: View {
         }
         .padding(20)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-            } else {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        themeManager.floatingOrbColors[0].opacity(0.5),
-                                        themeManager.floatingOrbColors[1].opacity(0.5)
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                    )
-            }
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
         }
         .contentShape(Rectangle())
         .padding(.horizontal, 20)
@@ -311,17 +261,8 @@ struct CategoryChip: View {
                         .fill(themeManager.accentGradient)
                         .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
                 } else {
-                    if themeManager.selectedTheme == .warmInviting {
-                        Capsule()
-                            .fill(Color(red: 0.95, green: 0.95, blue: 0.95))
-                    } else {
-                        Capsule()
-                            .fill(themeManager.glassEffect)
-                            .overlay(
-                                Capsule()
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    }
+                    Capsule()
+                        .fill(Color(red: 0.95, green: 0.95, blue: 0.95))
                 }
             }
         }

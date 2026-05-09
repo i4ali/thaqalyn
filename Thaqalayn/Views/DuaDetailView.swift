@@ -81,29 +81,15 @@ struct DuaDetailView: View {
             HStack(spacing: 4) {
                 Text(languageManager.selectedLanguage.displayName)
                     .font(.system(size: 14, weight: .medium))
-                if themeManager.selectedTheme == .warmInviting {
-                    Text("🌐")
-                        .font(.system(size: 14))
-                } else {
-                    Image(systemName: "globe")
-                        .font(.system(size: 12))
-                }
+                Text("🌐")
+                    .font(.system(size: 14))
             }
-            .foregroundColor(themeManager.selectedTheme == .warmInviting ? Color(red: 0.608, green: 0.561, blue: 0.749) : themeManager.primaryText)
+            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
             .padding(.horizontal, 12)
-            .padding(.vertical, themeManager.selectedTheme == .warmInviting ? 8 : 6)
+            .padding(.vertical, 8)
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
-                } else {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.secondaryBackground.opacity(0.8))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
             }
         }
     }
@@ -254,18 +240,9 @@ struct DuaDetailView: View {
 
     @ViewBuilder
     private var themedCardBackground: some View {
-        if themeManager.selectedTheme == .warmInviting {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-        } else {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.glassEffect)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-        }
+        RoundedRectangle(cornerRadius: 20)
+            .fill(Color.white)
+            .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
     }
 }
 

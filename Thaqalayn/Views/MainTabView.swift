@@ -2,13 +2,14 @@
 //  MainTabView.swift
 //  Thaqalayn
 //
-//  Main TabView container with Home, Explore, Progress, and conditional Ramadan tabs
+//  Main TabView container with Today, Quran, Explore, Progress, and conditional Ramadan tabs
 //
 
 import SwiftUI
 
 struct MainTabView: View {
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var deepLinkRouter = DeepLinkRouter.shared
     @State private var selectedTab = 0
 
     // Check if Ramadan season is active
@@ -72,6 +73,19 @@ struct MainTabView: View {
             }
         }
         .tint(themeManager.accentColor)
+        .onReceive(NotificationCenter.default.publisher(for: .navigateToVerse)) { notification in
+            guard let userInfo = notification.userInfo,
+                  let surah = userInfo["surah"] as? Int,
+                  let verse = userInfo["verse"] as? Int else { return }
+
+            // Stash the deep-link first so HomeView consumes it on appear
+            deepLinkRouter.pendingDeepLink = PendingDeepLink(
+                surahNumber: surah,
+                verseNumber: verse
+            )
+            // Then switch to the Quran tab — HomeView's onAppear/onChange triggers the navigation.
+            selectedTab = 1
+        }
     }
 }
 

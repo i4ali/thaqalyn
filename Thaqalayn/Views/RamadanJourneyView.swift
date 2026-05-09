@@ -112,7 +112,7 @@ struct RamadanJourneyHeader: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Ramadan Journey")
-                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
+                            .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
                         Text(statusMessage)
@@ -173,12 +173,6 @@ struct RamadanJourneyHeader: View {
         .padding(.horizontal, 20)
         .padding(.top, 20)
         .padding(.bottom, 16)
-        .background {
-            if themeManager.selectedTheme != .warmInviting {
-                Rectangle()
-                    .fill(themeManager.glassEffect)
-            }
-        }
     }
 }
 
@@ -300,18 +294,9 @@ struct RamadanDayCard: View {
             }
             .padding(16)
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
-                } else {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(isCurrentDay && !isLocked ? themeManager.accentColor.opacity(0.5) : themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.white)
+                    .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
             }
         }
         .buttonStyle(PlainButtonStyle())

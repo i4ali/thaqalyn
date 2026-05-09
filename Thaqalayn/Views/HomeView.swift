@@ -2,7 +2,8 @@
 //  HomeView.swift
 //  Thaqalayn
 //
-//  Home tab view - Surah list without discovery carousel
+//  Quran tab view — surah list. Consumes pending verse deep-links from
+//  DeepLinkRouter (set by MainTabView) when this tab becomes active.
 //
 
 import SwiftUI
@@ -12,9 +13,9 @@ struct HomeView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var progressManager = ProgressManager.shared
+    @StateObject private var deepLinkRouter = DeepLinkRouter.shared
     @State private var searchText = ""
     @State private var showingAuthentication = false
-    @State private var showingSettings = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
 
@@ -32,7 +33,7 @@ struct HomeView: View {
 
                 HStack {
                     Text("The Holy Quran")
-                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
+                        .font(.system(size: 34, weight: .bold, design: .rounded))
                         .foregroundColor(themeManager.primaryText)
 
                     Spacer()
@@ -40,56 +41,23 @@ struct HomeView: View {
 
                 // Search bar with glassmorphism
                 HStack {
-                    if themeManager.selectedTheme == .warmInviting {
-                        Text("\u{1F50D}")
-                            .font(.system(size: 20))
-                    } else {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(themeManager.tertiaryText)
-                    }
+                    Text("\u{1F50D}")
+                        .font(.system(size: 20))
 
                     TextField("Search surahs...", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
                         .foregroundColor(themeManager.primaryText)
                 }
-                .padding(themeManager.selectedTheme == .warmInviting ? 16 : 12)
+                .padding(16)
                 .background {
-                    if themeManager.selectedTheme == .warmInviting {
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                            .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-                    } else {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(themeManager.glassEffect)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    }
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                        .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
                 }
             }
             .padding(.horizontal, 20)
             .padding(.top, 60)
             .padding(.bottom, 20)
-            .background {
-                if themeManager.selectedTheme != .warmInviting {
-                    Rectangle()
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            Rectangle()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [
-                                            Color.clear,
-                                            themeManager.isDarkMode ? Color.white.opacity(0.05) : Color.black.opacity(0.05)
-                                        ],
-                                        startPoint: .top,
-                                        endPoint: .bottom
-                                    )
-                                )
-                        )
-                }
-            }
 
             // Surah list
             ScrollView {
@@ -139,34 +107,31 @@ struct HomeView: View {
         .fullScreenCover(isPresented: $showingAuthentication) {
             AuthenticationView()
         }
-        .sheet(isPresented: $showingSettings) {
-            SettingsView()
-        }
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true
         }
-        .onReceive(NotificationCenter.default.publisher(for: .init("showSettings"))) { _ in
-            showingSettings = true
+        .onAppear { consumePendingDeepLink() }
+        .onChange(of: deepLinkRouter.pendingDeepLink) { _, _ in
+            consumePendingDeepLink()
         }
-        .onReceive(NotificationCenter.default.publisher(for: .navigateToVerse)) { notification in
-            guard let userInfo = notification.userInfo,
-                  let surah = userInfo["surah"] as? Int,
-                  let verse = userInfo["verse"] as? Int else {
-                return
-            }
+    }
 
-            // Dismiss any open sheets first
-            showingSettings = false
-            showingAuthentication = false
+    private func consumePendingDeepLink() {
+        guard let link = deepLinkRouter.pendingDeepLink else { return }
+        guard let surahData = dataManager.availableSurahs.first(where: { $0.surah.number == link.surahNumber }) else {
+            print("⚠️ HomeView: deep-link surah \(link.surahNumber) not in availableSurahs")
+            deepLinkRouter.pendingDeepLink = nil
+            return
+        }
 
-            // Find the surah data and navigate after a brief delay to allow sheets to dismiss
-            if let surahData = dataManager.availableSurahs.first(where: { $0.surah.number == surah }) {
-                // Wait for sheets to dismiss before navigating
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    targetVerseNumber = verse
-                    selectedSurahForDeepLink = surahData
-                }
-            }
+        // Dismiss any open sheets first
+        showingAuthentication = false
+
+        // Brief delay so any in-flight tab transition / sheet dismissal settles before pushing.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            targetVerseNumber = link.verseNumber
+            selectedSurahForDeepLink = surahData
+            deepLinkRouter.pendingDeepLink = nil
         }
     }
 }

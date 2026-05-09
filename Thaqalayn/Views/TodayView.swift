@@ -21,6 +21,7 @@ struct TodayView: View {
     @State private var targetVerseNumber: Int?
     @State private var hasAppeared = false
     @State private var showingNotifications = false
+    @State private var showingSettings = false
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -88,6 +89,12 @@ struct TodayView: View {
         }
         .sheet(isPresented: $showingNotifications) {
             NotificationsView()
+        }
+        .sheet(isPresented: $showingSettings) {
+            SettingsView()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .init("showSettings"))) { _ in
+            showingSettings = true
         }
         .onAppear { hasAppeared = true }
         .onChange(of: scenePhase) { _, phase in
@@ -220,9 +227,7 @@ private struct HijriDatePill: View {
     }
 
     private var pillBackground: Color {
-        themeManager.selectedTheme == .warmInviting
-            ? Color.white
-            : Color.white.opacity(0.08)
+        Color.white
     }
 }
 
@@ -256,15 +261,11 @@ private struct StreakBadge: View {
     }
 
     private var badgeBackground: Color {
-        themeManager.selectedTheme == .warmInviting
-            ? Color.white
-            : Color.white.opacity(0.08)
+        Color.white
     }
 
     private var streakColor: Color {
-        themeManager.selectedTheme == .warmInviting
-            ? Color(red: 0.82, green: 0.48, blue: 0.28) // #D17A48
-            : themeManager.accentColor
+        Color(red: 0.82, green: 0.48, blue: 0.28) // #D17A48
     }
 }
 
@@ -533,43 +534,26 @@ private struct ContinueReadingHero: View {
 
     private var cardBackground: some View {
         Group {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 22)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.06), radius: 9, x: 0, y: 6)
-            } else {
-                RoundedRectangle(cornerRadius: 22)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 22)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            }
+            RoundedRectangle(cornerRadius: 22)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.06), radius: 9, x: 0, y: 6)
         }
     }
 
     private var avatarBackground: Color {
-        themeManager.selectedTheme == .warmInviting
-            ? Color(red: 0.988, green: 0.902, blue: 0.835) // #FCE6D5
-            : themeManager.accentColor.opacity(0.2)
+        Color(red: 0.988, green: 0.902, blue: 0.835) // #FCE6D5
     }
 
     private var versePreviewBackground: Color {
-        themeManager.selectedTheme == .warmInviting
-            ? Color(red: 0.984, green: 0.965, blue: 0.941) // #FBF6F0
-            : Color.white.opacity(0.05)
+        Color(red: 0.984, green: 0.965, blue: 0.941) // #FBF6F0
     }
 
     private var progressTrackColor: Color {
-        themeManager.selectedTheme == .warmInviting
-            ? Color(red: 0.945, green: 0.925, blue: 0.902) // #F1ECE6
-            : themeManager.tertiaryText.opacity(0.2)
+        Color(red: 0.945, green: 0.925, blue: 0.902) // #F1ECE6
     }
 
     private var resumeBackground: Color {
-        themeManager.selectedTheme == .warmInviting
-            ? Color(red: 0.133, green: 0.110, blue: 0.094) // #221C18
-            : themeManager.primaryText
+        Color(red: 0.133, green: 0.110, blue: 0.094) // #221C18
     }
 }
 
@@ -615,25 +599,14 @@ private struct DuaOfTheDayCard: View {
     }
 
     private var iconBackground: Color {
-        themeManager.selectedTheme == .warmInviting
-            ? Color(red: 1.0, green: 0.945, blue: 0.886) // #FFF1E2
-            : themeManager.accentColor.opacity(0.15)
+        Color(red: 1.0, green: 0.945, blue: 0.886) // #FFF1E2
     }
 
     private var cardBackground: some View {
         Group {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.05), radius: 7, x: 0, y: 4)
-            } else {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 18)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            }
+            RoundedRectangle(cornerRadius: 18)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.05), radius: 7, x: 0, y: 4)
         }
     }
 }

@@ -29,7 +29,7 @@ struct FastingVersesView: View {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("Fasting in the Quran")
-                                    .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
+                                    .font(.system(size: 34, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
                                 Text("Verses about fasting and Ramadan")
@@ -43,12 +43,6 @@ struct FastingVersesView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 16)
-                    .background {
-                        if themeManager.selectedTheme != .warmInviting {
-                            Rectangle()
-                                .fill(themeManager.glassEffect)
-                        }
-                    }
 
                     // Category list
                     if fastingManager.isLoading {
@@ -183,18 +177,9 @@ struct FastingCategoryCard: View {
             }
             .padding(20)
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-                } else {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color.white)
+                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
             }
         }
         .buttonStyle(PlainButtonStyle())

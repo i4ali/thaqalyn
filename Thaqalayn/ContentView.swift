@@ -77,60 +77,47 @@ struct AdaptiveModernBackground: View {
 
     var body: some View {
         ZStack {
-            if themeManager.selectedTheme == .warmInviting {
-                // Gradient background matching mockup HTML: #F8F5FF → #FFF9F5
-                LinearGradient(
-                    colors: [
-                        Color(red: 0.973, green: 0.961, blue: 1.0),    // #F8F5FF - Soft Lavender
-                        Color(red: 1.0, green: 0.976, blue: 0.961)     // #FFF9F5 - Warm White
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                .ignoresSafeArea()
-            } else {
-                // Base gradient background
-                LinearGradient(
-                    colors: [
-                        themeManager.primaryBackground,
-                        themeManager.secondaryBackground,
-                        themeManager.tertiaryBackground
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
+            // Gradient background matching mockup HTML: #F8F5FF → #FFF9F5
+            LinearGradient(
+                colors: [
+                    Color(red: 0.973, green: 0.961, blue: 1.0),    // #F8F5FF - Soft Lavender
+                    Color(red: 1.0, green: 0.976, blue: 0.961)     // #FFF9F5 - Warm White
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
 
-                // Floating gradient orbs
-                RadialGradient(
-                    colors: [
-                        themeManager.floatingOrbColors[0],
-                        Color.clear
-                    ],
-                    center: .topLeading,
-                    startRadius: 0,
-                    endRadius: 300
-                )
+            // Floating gradient orbs
+            RadialGradient(
+                colors: [
+                    themeManager.floatingOrbColors[0],
+                    Color.clear
+                ],
+                center: .topLeading,
+                startRadius: 0,
+                endRadius: 300
+            )
 
-                RadialGradient(
-                    colors: [
-                        themeManager.floatingOrbColors[1],
-                        Color.clear
-                    ],
-                    center: .bottomTrailing,
-                    startRadius: 0,
-                    endRadius: 300
-                )
+            RadialGradient(
+                colors: [
+                    themeManager.floatingOrbColors[1],
+                    Color.clear
+                ],
+                center: .bottomTrailing,
+                startRadius: 0,
+                endRadius: 300
+            )
 
-                RadialGradient(
-                    colors: [
-                        themeManager.floatingOrbColors[2],
-                        Color.clear
-                    ],
-                    center: .center,
-                    startRadius: 0,
-                    endRadius: 200
-                )
-            }
+            RadialGradient(
+                colors: [
+                    themeManager.floatingOrbColors[2],
+                    Color.clear
+                ],
+                center: .center,
+                startRadius: 0,
+                endRadius: 200
+            )
         }
         .ignoresSafeArea()
     }
@@ -261,7 +248,7 @@ struct SurahListView: View {
                             .foregroundColor(themeManager.secondaryText)
 
                         Text("The Holy Quran")
-                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
+                            .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
                     }
 
@@ -270,32 +257,18 @@ struct SurahListView: View {
                 
                 // Search bar with glassmorphism
                 HStack {
-                    if themeManager.selectedTheme == .warmInviting {
-                        Text("🔍")
-                            .font(.system(size: 20))
-                    } else {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(themeManager.tertiaryText)
-                    }
+                    Text("🔍")
+                        .font(.system(size: 20))
 
                     TextField("Search surahs...", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
                         .foregroundColor(themeManager.primaryText)
                 }
-                .padding(themeManager.selectedTheme == .warmInviting ? 16 : 12)
+                .padding(16)
                 .background {
-                    if themeManager.selectedTheme == .warmInviting {
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                            .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-                    } else {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(themeManager.glassEffect)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    }
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                        .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
                 }
 
                 // Discovery Carousel (Life Moments + Q&A)
@@ -304,25 +277,6 @@ struct SurahListView: View {
             .padding(.horizontal, 20)
             .padding(.top, 60)
             .padding(.bottom, 20)
-            .background {
-                if themeManager.selectedTheme != .warmInviting {
-                    Rectangle()
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            Rectangle()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [
-                                            Color.clear,
-                                            themeManager.isDarkMode ? Color.white.opacity(0.05) : Color.black.opacity(0.05)
-                                        ],
-                                        startPoint: .top,
-                                        endPoint: .bottom
-                                    )
-                                )
-                        )
-                }
-            }
             
             // Surah list
             ScrollView {
@@ -422,7 +376,7 @@ struct StatCard: View {
     var body: some View {
         VStack(spacing: 4) {
             Text(number)
-                .font(.system(size: themeManager.selectedTheme == .warmInviting ? 28 : 20, weight: .bold))
+                .font(.system(size: 28, weight: .bold))
                 .foregroundColor(color ?? themeManager.accentColor)
 
             Text(label)
@@ -430,25 +384,16 @@ struct StatCard: View {
                 .foregroundColor(themeManager.tertiaryText)
         }
         .frame(maxWidth: .infinity)
-        .padding(themeManager.selectedTheme == .warmInviting ? 20 : 12)
+        .padding(20)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                    .shadow(
-                        color: color?.opacity(0.15) ?? Color.clear,
-                        radius: 12,
-                        x: 0,
-                        y: 4
-                    )
-            } else {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            }
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                .shadow(
+                    color: color?.opacity(0.15) ?? Color.clear,
+                    radius: 12,
+                    x: 0,
+                    y: 4
+                )
         }
     }
 }
@@ -475,37 +420,15 @@ struct ModernSurahCard: View {
     }
 
     private var surahNumberGradient: LinearGradient {
-        switch themeManager.selectedTheme {
-        case .warmInviting:
-            return LinearGradient(
-                colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .royalAmethyst:
-            return LinearGradient(
-                colors: [Color(red: 0.55, green: 0.35, blue: 0.65), Color(red: 0.75, green: 0.60, blue: 0.35)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        case .modernDark:
-            return LinearGradient(
-                colors: [Color(red: 0.35, green: 0.40, blue: 0.75), Color(red: 0.25, green: 0.30, blue: 0.65)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        }
+        LinearGradient(
+            colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
     }
 
     private var surahNumberShadowColor: Color {
-        switch themeManager.selectedTheme {
-        case .warmInviting:
-            return Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3)
-        case .royalAmethyst:
-            return Color(red: 0.55, green: 0.35, blue: 0.65).opacity(0.4)
-        case .modernDark:
-            return Color(red: 0.35, green: 0.40, blue: 0.75).opacity(0.4)
-        }
+        Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3)
     }
 
     var body: some View {
@@ -547,26 +470,16 @@ struct ModernSurahCard: View {
                 
                 HStack(spacing: 16) {
                     HStack(spacing: 4) {
-                        Text(themeManager.selectedTheme == .warmInviting ? "📖" : "")
+                        Text("📖")
                             .font(.system(size: 12))
-                        if themeManager.selectedTheme != .warmInviting {
-                            Image(systemName: "book")
-                                .font(.system(size: 12))
-                                .foregroundColor(themeManager.tertiaryText)
-                        }
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
                     }
 
                     HStack(spacing: 4) {
-                        Text(themeManager.selectedTheme == .warmInviting ? "📍" : "")
+                        Text("📍")
                             .font(.system(size: 12))
-                        if themeManager.selectedTheme != .warmInviting {
-                            Image(systemName: "location")
-                                .font(.system(size: 12))
-                                .foregroundColor(themeManager.tertiaryText)
-                        }
                         Text(surah.revelationType)
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
@@ -574,14 +487,8 @@ struct ModernSurahCard: View {
 
                     if readCount > 0 {
                         HStack(spacing: 4) {
-                            if themeManager.selectedTheme == .warmInviting {
-                                Text(percentage >= 100 ? "📙" : "📗")
-                                    .font(.system(size: 12))
-                            } else {
-                                Image(systemName: "book.fill")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(percentage >= 100 ? .orange : .green)
-                            }
+                            Text(percentage >= 100 ? "📙" : "📗")
+                                .font(.system(size: 12))
                             Text("\(percentage)%")
                                 .font(.system(size: 12, weight: .semibold))
                                 .foregroundColor(percentage >= 100 ? .orange : .green)
@@ -594,31 +501,9 @@ struct ModernSurahCard: View {
         }
         .padding(20)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-            } else {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        themeManager.floatingOrbColors[0].opacity(0.5),
-                                        themeManager.floatingOrbColors[1].opacity(0.5)
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                    )
-            }
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
         }
     }
 }
@@ -1228,38 +1113,21 @@ struct BookmarkBadge: View {
     var body: some View {
         NavigationLink(destination: BookmarksView()) {
             HStack(spacing: 6) {
-                if themeManager.selectedTheme == .warmInviting {
-                    Text("❤️")
-                        .font(.system(size: 20))
-                } else {
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 16))
-                        .foregroundColor(themeManager.accentColor)
-                }
+                Text("❤️")
+                    .font(.system(size: 20))
 
                 Text("\(bookmarkManager.bookmarks.count)")
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(
-                        themeManager.selectedTheme == .warmInviting
-                            ? Color(red: 0.91, green: 0.604, blue: 0.435)
-                            : themeManager.primaryText
+                        Color(red: 0.91, green: 0.604, blue: 0.435)
                     )
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    RoundedRectangle(cornerRadius: 24)
-                        .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.06), radius: 8, x: 0, y: 2)
-                } else {
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(themeManager.glassEffect)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
+                RoundedRectangle(cornerRadius: 24)
+                    .fill(Color.white)
+                    .shadow(color: Color.black.opacity(0.06), radius: 8, x: 0, y: 2)
             }
         }
         .buttonStyle(PlainButtonStyle())
@@ -1274,23 +1142,8 @@ struct NotificationBell: View {
         Button(action: {
             showingNotifications = true
         }) {
-            if themeManager.selectedTheme == .warmInviting {
-                Text("🔔")
-                    .font(.system(size: 20))
-            } else {
-                Image(systemName: "bell.fill")
-                    .font(.system(size: 16))
-                    .foregroundColor(themeManager.accentColor)
-                    .frame(width: 40, height: 40)
-                    .background(
-                        Circle()
-                            .fill(themeManager.glassEffect)
-                            .overlay(
-                                Circle()
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    )
-            }
+            Text("🔔")
+                .font(.system(size: 20))
         }
         .buttonStyle(PlainButtonStyle())
     }

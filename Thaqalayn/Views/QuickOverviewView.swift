@@ -465,7 +465,7 @@ struct ConceptDetailCardOverlay: View {
                         .foregroundColor(conceptColor)
 
                     Text(concept.getCoreInsight(language: language))
-                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 15 : 16, weight: .regular, design: .serif))
+                        .font(.system(size: 15, weight: .regular, design: .serif))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(7)
                         .multilineTextAlignment(isRTL ? .trailing : .leading)
@@ -479,7 +479,7 @@ struct ConceptDetailCardOverlay: View {
                         .foregroundColor(conceptColor)
 
                     Text(concept.getWhyItMatters(language: language))
-                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 15 : 16, weight: .regular, design: .serif))
+                        .font(.system(size: 15, weight: .regular, design: .serif))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(7)
                         .multilineTextAlignment(isRTL ? .trailing : .leading)

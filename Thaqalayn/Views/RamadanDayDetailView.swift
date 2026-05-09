@@ -81,17 +81,8 @@ struct RamadanDayDetailView: View {
                     }
                     .padding(20)
                     .background {
-                        if themeManager.selectedTheme == .warmInviting {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
-                        } else {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(themeManager.accentColor.opacity(0.08))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        }
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
                     }
                     .padding(.horizontal, 20)
 
@@ -116,18 +107,9 @@ struct RamadanDayDetailView: View {
                     }
                     .padding(20)
                     .background {
-                        if themeManager.selectedTheme == .warmInviting {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.white)
-                                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-                        } else {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        }
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.white)
+                            .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
                     }
                     .padding(.horizontal, 20)
 
@@ -226,18 +208,9 @@ struct RamadanDayHeader: View {
         }
         .padding(24)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 24)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
-            } else {
-                RoundedRectangle(cornerRadius: 24)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            }
+            RoundedRectangle(cornerRadius: 24)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
         }
         .padding(.horizontal, 20)
         .padding(.top, 20)
@@ -292,18 +265,9 @@ struct RamadanDuaSection: View {
         }
         .padding(20)
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-            } else {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            }
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
         }
         .padding(.horizontal, 20)
     }
@@ -388,28 +352,14 @@ struct RamadanVerseCard: View {
             }
             .padding(16)
             .background {
-                if themeManager.selectedTheme == .warmInviting {
-                    Rectangle()
-                        .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
-                } else {
-                    Rectangle()
-                        .fill(themeManager.accentColor.opacity(0.05))
-                }
+                Rectangle()
+                    .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
             }
         }
         .background {
-            if themeManager.selectedTheme == .warmInviting {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
-            } else {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassEffect)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            }
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
         }
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal, 20)
