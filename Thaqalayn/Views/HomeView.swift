@@ -15,7 +15,6 @@ struct HomeView: View {
     @State private var searchText = ""
     @State private var showingAuthentication = false
     @State private var showingSettings = false
-    @State private var showingNotifications = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
 
@@ -25,30 +24,16 @@ struct HomeView: View {
             VStack(spacing: 16) {
                 // Top navigation row (universal for all themes)
                 HStack(spacing: 12) {
-                    // Profile Avatar (theme-adaptive)
-                    ProfileAvatar()
-
-                    Spacer()
-
                     // Bookmark Badge (theme-adaptive)
                     BookmarkBadge()
 
                     Spacer()
-
-                    // Notification Bell (theme-adaptive)
-                    NotificationBell(showingNotifications: $showingNotifications)
                 }
 
                 HStack {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Assalamu Alaikum \u{1F319}")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.secondaryText)
-
-                        Text("The Holy Quran")
-                            .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
-                            .foregroundColor(themeManager.primaryText)
-                    }
+                    Text("The Holy Quran")
+                        .font(.system(size: themeManager.selectedTheme == .warmInviting ? 34 : 32, weight: .bold, design: themeManager.selectedTheme == .warmInviting ? .rounded : .default))
+                        .foregroundColor(themeManager.primaryText)
 
                     Spacer()
                 }
@@ -156,9 +141,6 @@ struct HomeView: View {
         }
         .sheet(isPresented: $showingSettings) {
             SettingsView()
-        }
-        .sheet(isPresented: $showingNotifications) {
-            NotificationsView()
         }
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true

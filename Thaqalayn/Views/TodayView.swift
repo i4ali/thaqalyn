@@ -20,6 +20,7 @@ struct TodayView: View {
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
     @State private var hasAppeared = false
+    @State private var showingNotifications = false
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -85,6 +86,9 @@ struct TodayView: View {
         .refreshable {
             dailyMessage.refreshIfDayChanged()
         }
+        .sheet(isPresented: $showingNotifications) {
+            NotificationsView()
+        }
         .onAppear { hasAppeared = true }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
@@ -139,14 +143,22 @@ struct TodayView: View {
 
     @ViewBuilder
     private var headerRow: some View {
-        HStack {
-            HijriDatePill(themeManager: themeManager, calendarManager: calendarManager)
-            Spacer()
-            StreakBadge(
-                streak: progressManager.streak.currentStreak,
-                themeManager: themeManager,
-                onTap: { selectedTab = 3 }
-            )
+        VStack(spacing: 14) {
+            HStack(spacing: 10) {
+                ProfileAvatar()
+                Spacer()
+                StreakBadge(
+                    streak: progressManager.streak.currentStreak,
+                    themeManager: themeManager,
+                    onTap: { selectedTab = 3 }
+                )
+                NotificationBell(showingNotifications: $showingNotifications)
+            }
+
+            HStack {
+                HijriDatePill(themeManager: themeManager, calendarManager: calendarManager)
+                Spacer()
+            }
         }
     }
 
