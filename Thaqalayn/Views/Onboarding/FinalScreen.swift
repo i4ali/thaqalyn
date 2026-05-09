@@ -55,7 +55,7 @@ struct FinalScreen: View {
                                 RoundedRectangle(cornerRadius: 16)
                                     .fill(themeManager.purpleGradient)
                             )
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 12)
+                            .shadow(color: themeManager.accentColor.opacity(0.4), radius: 12)
                         }
 
                         // Sign Up

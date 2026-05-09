@@ -116,6 +116,7 @@ struct SurahDetailView: View {
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura(glowOpacity: 0.22, starCount: 10)
         .overlay(alignment: .bottom) {
             if audioManager.currentPlayback != nil {
                 SurahAudioPlayerView()
@@ -210,7 +211,7 @@ struct GoToVerseSheet: View {
                         .padding(.horizontal, 20)
                         .background {
                             RoundedRectangle(cornerRadius: 12)
-                                .fill(AnyShapeStyle(Color.white))
+                                .fill(AnyShapeStyle(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white))
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12)
                                         .stroke(themeManager.strokeColor, lineWidth: 1)
@@ -245,13 +246,7 @@ struct GoToVerseSheet: View {
                     .padding(.vertical, 16)
                     .background {
                         RoundedRectangle(cornerRadius: 24)
-                            .fill(
-                                LinearGradient(
-                                    colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
+                            .fill(themeManager.accentGradient)
                     }
                 }
                 .padding(.horizontal, 20)
@@ -261,7 +256,7 @@ struct GoToVerseSheet: View {
                 Spacer()
             }
             .background(
-                Color(red: 0.98, green: 0.965, blue: 0.945)
+                themeManager.tertiaryBackground
             )
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -315,11 +310,11 @@ struct ModernSurahHeader: View {
                 Button(action: onBack) {
                     Text("←")
                         .font(.system(size: 20))
-                        .foregroundColor(Color(red: 0.176, green: 0.145, blue: 0.125))
+                        .foregroundColor(themeManager.primaryText)
                         .frame(width: 40, height: 40)
                         .background(
                             RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.black.opacity(0.1))
+                                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.black.opacity(0.1))
                         )
                 }
                 Spacer()
@@ -346,7 +341,7 @@ struct ModernSurahHeader: View {
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 14, weight: .medium))
                     }
-                    .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                    .foregroundColor(themeManager.accentColor)
 
                     HStack(spacing: 6) {
                         Text("📍")
@@ -354,7 +349,7 @@ struct ModernSurahHeader: View {
                         Text(surah.revelationType)
                             .font(.system(size: 14, weight: .medium))
                     }
-                    .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                    .foregroundColor(themeManager.accentColor)
                 }
 
                 // Action buttons
@@ -377,14 +372,8 @@ struct ModernSurahHeader: View {
                         .padding(.vertical, 14)
                         .background {
                             RoundedRectangle(cornerRadius: 24)
-                                .fill(
-                                    LinearGradient(
-                                        colors: [Color(red: 0.91, green: 0.604, blue: 0.435), Color(red: 0.847, green: 0.541, blue: 0.373)],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .shadow(color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3), radius: 12)
+                                .fill(themeManager.accentGradient)
+                                .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
                         }
                     }
 
@@ -398,14 +387,8 @@ struct ModernSurahHeader: View {
                         .frame(width: 48, height: 48)
                         .background {
                             Circle()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [Color(red: 0.608, green: 0.561, blue: 0.749), Color(red: 0.518, green: 0.471, blue: 0.659)],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .shadow(color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.3), radius: 12)
+                                .fill(themeManager.purpleGradient)
+                                .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
                         }
                     }
 
@@ -435,8 +418,12 @@ struct ModernSurahHeader: View {
             .padding(28)
             .background {
                 RoundedRectangle(cornerRadius: 24)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 6)
+                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+                    .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06), radius: 16, x: 0, y: 6)
             }
         }
         .padding(.horizontal, 24)
@@ -472,11 +459,16 @@ struct ModernVerseCard: View {
     
     private var highlightStroke: LinearGradient {
         if isCurrentlyPlaying {
-            return LinearGradient(
-                colors: [Color(red: 0.39, green: 0.4, blue: 0.95), Color(red: 0.93, green: 0.27, blue: 0.6)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            if themeManager.isDarkMode {
+                // Dark: peach gradient for "now reading" treatment
+                return themeManager.accentGradient
+            } else {
+                return LinearGradient(
+                    colors: [themeManager.semanticBlue, themeManager.semanticRed],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            }
         } else {
             return LinearGradient(
                 colors: [themeManager.strokeColor],
@@ -485,12 +477,15 @@ struct ModernVerseCard: View {
             )
         }
     }
-    
+
     private var shadowColor: Color {
         if isCurrentlyPlaying {
-            return Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3)
+            if themeManager.isDarkMode {
+                return themeManager.accentColor.opacity(0.32)
+            }
+            return themeManager.semanticBlue.opacity(0.3)
         } else {
-            return Color.black.opacity(0.1)
+            return themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.1)
         }
     }
     
@@ -555,13 +550,13 @@ struct ModernVerseCard: View {
         return ZStack {
             RoundedRectangle(cornerRadius: 6)
                 .strokeBorder(
-                    isRead ? Color.green : Color(red: 0.608, green: 0.561, blue: 0.749),
+                    isRead ? Color.green : themeManager.accentColor,
                     lineWidth: 2
                 )
                 .frame(width: 24, height: 24)
                 .background(
                     RoundedRectangle(cornerRadius: 6)
-                        .fill(isRead ? Color.green.opacity(0.2) : Color.white)
+                        .fill(isRead ? Color.green.opacity(0.2) : (themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white))
                 )
 
             if isRead {
@@ -580,12 +575,12 @@ struct ModernVerseCard: View {
             HStack {
                 // Verse number circle
                 Circle()
-                    .strokeBorder(Color(red: 0.608, green: 0.561, blue: 0.749), lineWidth: 2)
+                    .strokeBorder(themeManager.accentColor, lineWidth: 2)
                     .frame(width: 36, height: 36)
                     .overlay(
                         Text("\(verse.number)")
                             .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                            .foregroundColor(themeManager.accentColor)
                     )
 
                 Spacer()
@@ -599,11 +594,11 @@ struct ModernVerseCard: View {
                     }) {
                         Text(isCurrentlyPlaying ? "⏸" : "▶")
                             .font(.system(size: 18))
-                            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                            .foregroundColor(themeManager.accentColor)
                             .frame(width: 36, height: 36)
                             .background(
                                 Circle()
-                                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                                    .fill(themeManager.accentColor.opacity(0.1))
                             )
                     }
                     .animation(.easeInOut(duration: 0.2), value: isCurrentlyPlaying)
@@ -612,11 +607,11 @@ struct ModernVerseCard: View {
                     Button(action: toggleBookmark) {
                         Text(isBookmarked ? "♥" : "♡")
                             .font(.system(size: 18))
-                            .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
+                            .foregroundColor(themeManager.isDarkMode ? themeManager.accentColor : Color(red: 0.91, green: 0.604, blue: 0.435))
                             .frame(width: 36, height: 36)
                             .background(
                                 Circle()
-                                    .fill(Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.1))
+                                    .fill((themeManager.isDarkMode ? themeManager.accentColor : Color(red: 0.91, green: 0.604, blue: 0.435)).opacity(0.1))
                             )
                     }
                     .scaleEffect(showingBookmarkFeedback ? 1.2 : 1.0)
@@ -644,6 +639,7 @@ struct ModernVerseCard: View {
                 .multilineTextAlignment(.trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .lineSpacing(26)  // line-height: 2 = lineSpacing equals font size
+                .shadow(color: themeManager.isDarkMode && isCurrentlyPlaying ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
 
             // English translation
             Text(verse.translation)
@@ -657,9 +653,25 @@ struct ModernVerseCard: View {
         }
         .padding(24)
         .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+                    .shadow(color: shadowColor, radius: isCurrentlyPlaying ? 16 : 12, x: 0, y: 4)
+
+                // Dark-only: peach gradient overlay on active "Now Reading" card
+                if themeManager.isDarkMode && isCurrentlyPlaying {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(themeManager.accentGradient.opacity(0.10))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(themeManager.accentColor.opacity(0.55), lineWidth: 1.5)
+                        )
+                }
+            }
         }
         .scaleEffect(isPressed ? 0.98 : 1.0)
         .animation(.easeInOut(duration: 0.1), value: isPressed)
@@ -687,12 +699,12 @@ struct ModernVerseCard: View {
                     Text("Gems")
                         .font(.system(size: 15, weight: .semibold))
                 }
-                .foregroundColor(Color(red: 0.91, green: 0.604, blue: 0.435))
+                .foregroundColor(themeManager.isDarkMode ? themeManager.accentColor : Color(red: 0.91, green: 0.604, blue: 0.435))
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 12)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.1))
+                        .fill((themeManager.isDarkMode ? themeManager.accentColor : Color(red: 0.91, green: 0.604, blue: 0.435)).opacity(0.1))
                 )
             }
             .opacity(verse.tafsir != nil ? 1.0 : 0.5)
@@ -712,12 +724,12 @@ struct ModernVerseCard: View {
                     Text("In-Depth")
                         .font(.system(size: 15, weight: .semibold))
                 }
-                .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                .foregroundColor(themeManager.accentColor)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 12)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                        .fill(themeManager.accentColor.opacity(0.1))
                 )
             }
         }
@@ -895,7 +907,7 @@ struct ModernTafsirTabs: View {
                 )
         )
         .shadow(
-            color: selectedLayer == layer && !isLocked ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3) : .clear,
+            color: selectedLayer == layer && !isLocked ? themeManager.semanticBlue.opacity(0.3) : .clear,
             radius: 8
         )
         .opacity(isLocked ? 0.6 : 1.0)

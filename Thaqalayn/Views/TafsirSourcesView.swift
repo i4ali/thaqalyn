@@ -99,6 +99,7 @@ struct TafsirSourcesView: View {
                     .foregroundColor(.blue)
                 }
             }
+            .darkScreenAura()
         }
     }
 }

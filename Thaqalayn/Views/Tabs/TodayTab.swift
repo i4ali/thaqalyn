@@ -18,6 +18,7 @@ struct TodayTab: View {
                 TodayView(selectedTab: $selectedTab)
             }
             .navigationBarHidden(true)
+            .darkScreenAura(glowOpacity: 0.36, starCount: 14)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

@@ -66,8 +66,15 @@ struct AhlulbaytQuranCarouselCard: View {
         .frame(height: 145)
         .background {
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
+                .fill(themeManager.isDarkMode ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 24)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.isDarkMode ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
+                    radius: 16, x: 0, y: 4
+                )
         }
     }
 }

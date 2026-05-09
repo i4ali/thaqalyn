@@ -48,6 +48,7 @@ struct FullScreenCommentaryView: View {
         .navigationBarHidden(true)
         .statusBarHidden(true) // Hide status bar for immersive reading
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura(glowOpacity: 0.36, starCount: 14)
         .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView()
         }
@@ -116,11 +117,11 @@ struct FullScreenCommentaryView: View {
                 // Warm theme: × symbol in white circle
                 Text("×")
                     .font(.system(size: 24, weight: .semibold))
-                    .foregroundColor(Color(red: 0.42, green: 0.365, blue: 0.329))
+                    .foregroundColor(themeManager.secondaryText)
                     .frame(width: 40, height: 40)
                     .background(
                         Circle()
-                            .fill(Color.white.opacity(0.9))
+                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white.opacity(0.9))
                     )
             }
 
@@ -148,8 +149,8 @@ struct FullScreenCommentaryView: View {
         .background {
             LinearGradient(
                 colors: [
-                    Color(red: 0.97, green: 0.96, blue: 1.0),
-                    Color(red: 0.97, green: 0.96, blue: 1.0).opacity(0.5)
+                    themeManager.primaryBackground,
+                    themeManager.primaryBackground.opacity(0.5)
                 ],
                 startPoint: .top,
                 endPoint: .bottom
@@ -168,12 +169,12 @@ struct FullScreenCommentaryView: View {
                 Text("🌐")
                     .font(.system(size: 14))
             }
-            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+            .foregroundColor(themeManager.accentColor)
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
             .background {
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                    .fill(themeManager.accentColor.opacity(0.1))
             }
         }
     }
@@ -190,11 +191,11 @@ struct FullScreenCommentaryView: View {
         }) {
             Text(tafsirReader.isPlaying ? "⏸" : "🔊")
                 .font(.system(size: 20))
-                .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+                .foregroundColor(themeManager.accentColor)
                 .frame(width: 44, height: 44)
                 .background(
                     Circle()
-                        .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                        .fill(themeManager.accentColor.opacity(0.1))
                 )
         }
     }
@@ -251,24 +252,22 @@ struct FullScreenCommentaryView: View {
                     .multilineTextAlignment(.center)
                     .lineLimit(1)
             }
-            .foregroundColor(isActive ? .white : Color(red: 0.176, green: 0.145, blue: 0.125))
+            .foregroundColor(isActive ? .white : themeManager.primaryText)
             .frame(width: 130, height: 95)
             .padding(12)
             .background {
                 if isActive {
                     RoundedRectangle(cornerRadius: 20)
-                        .fill(
-                            LinearGradient(
-                                colors: [Color(red: 0.608, green: 0.561, blue: 0.749), Color(red: 0.545, green: 0.498, blue: 0.659)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .shadow(color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.3), radius: 12)
+                        .fill(themeManager.purpleGradient)
+                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
                 } else {
                     RoundedRectangle(cornerRadius: 20)
-                        .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.04), radius: 12)
+                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                        )
+                        .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04), radius: 12)
                 }
             }
         }
@@ -341,7 +340,7 @@ struct FullScreenCommentaryView: View {
             
             // Divider matching mockup
             Rectangle()
-                .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.2)) // #9B8FBF with 0.2 opacity
+                .fill(themeManager.accentColor.opacity(0.2))
                 .frame(height: 1)
                 .frame(maxWidth: .infinity)
         }
@@ -369,7 +368,7 @@ struct FullScreenCommentaryView: View {
                         highlightRange: paragraphHighlightRange,
                         font: .system(size: 17, weight: .regular, design: .serif),
                         textColor: themeManager.primaryText,
-                        highlightColor: .yellow.opacity(0.4),
+                        highlightColor: themeManager.semanticYellow.opacity(themeManager.isDarkMode ? 0.30 : 0.50),
                         lineSpacing: 6
                     )
                         .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
@@ -396,7 +395,7 @@ struct FullScreenCommentaryView: View {
                                             )
                                         )
                                 )
-                                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                                .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
                         }
                 }
             }

@@ -98,6 +98,7 @@ struct FastingVersesView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
         .sheet(isPresented: $showPaywall) {
             PaywallView()
         }
@@ -178,8 +179,15 @@ struct FastingCategoryCard: View {
             .padding(20)
             .background {
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+                    .shadow(
+                        color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                        radius: 12, x: 0, y: 4
+                    )
             }
         }
         .buttonStyle(PlainButtonStyle())

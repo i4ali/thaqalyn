@@ -127,6 +127,7 @@ struct QuizResultsView: View {
                 .background(themeManager.primaryBackground)
             }
         }
+        .darkScreenAura()
         .onAppear {
             animateIn()
         }
@@ -224,11 +225,11 @@ struct QuizResultsView: View {
                         // Question number
                         Text("\(index + 1)")
                             .font(.system(size: 14, weight: .bold))
-                            .foregroundColor(isCorrect ? .green : .red)
+                            .foregroundColor(isCorrect ? themeManager.semanticGreen : themeManager.semanticRed)
                             .frame(width: 28, height: 28)
                             .background(
                                 Circle()
-                                    .fill(isCorrect ? Color.green.opacity(0.15) : Color.red.opacity(0.15))
+                                    .fill(isCorrect ? themeManager.semanticGreen.opacity(0.15) : themeManager.semanticRed.opacity(0.15))
                             )
 
                         // Question preview
@@ -242,7 +243,7 @@ struct QuizResultsView: View {
                         // Result icon
                         Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
                             .font(.system(size: 18))
-                            .foregroundColor(isCorrect ? .green : .red)
+                            .foregroundColor(isCorrect ? themeManager.semanticGreen : themeManager.semanticRed)
                     }
                     .padding(12)
                     .background(
@@ -277,10 +278,10 @@ struct QuizResultsView: View {
 
     private var levelColor: Color {
         switch result.level {
-        case .hafiz: return .yellow
-        case .scholar: return .purple
-        case .student: return .blue
-        case .seeker: return .green
+        case .hafiz: return themeManager.semanticYellow
+        case .scholar: return themeManager.semanticLilac
+        case .student: return themeManager.semanticBlue
+        case .seeker: return themeManager.semanticGreen
         case .beginner: return .gray
         }
     }

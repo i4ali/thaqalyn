@@ -65,7 +65,7 @@ struct AuthenticationView: View {
                         Text("ثقلين")
                             .font(.system(size: 48, weight: .light, design: .default))
                             .foregroundColor(themeManager.primaryText)
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.5), radius: 20)
+                            .shadow(color: themeManager.semanticBlue.opacity(0.5), radius: 20)
                         
                         Text(isSignUp ? "Create Your Account" : "Welcome Back")
                             .font(.system(size: 24, weight: .semibold))
@@ -131,7 +131,7 @@ struct AuthenticationView: View {
                                 RoundedRectangle(cornerRadius: 12)
                                     .fill(themeManager.purpleGradient)
                             )
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
+                            .shadow(color: themeManager.semanticBlue.opacity(0.3), radius: 8)
                         }
                         .disabled(isLoading || !isFormValid)
                         .opacity(isFormValid ? 1.0 : 0.6)
@@ -229,7 +229,7 @@ struct AuthenticationView: View {
                             }
                         }
                         .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                        .foregroundColor(themeManager.semanticBlue)
                     }
                     
                     Spacer(minLength: 40)
@@ -238,6 +238,7 @@ struct AuthenticationView: View {
         }
         .navigationBarHidden(true)
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura(starCount: 0)
         .alert("Reset Password", isPresented: $showingForgotPassword) {
             TextField("Email", text: $email)
             Button("Send Reset Link") {

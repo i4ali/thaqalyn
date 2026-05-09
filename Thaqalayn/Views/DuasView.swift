@@ -59,6 +59,7 @@ struct DuasView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
     }
 
     private var headerView: some View {
@@ -97,12 +98,12 @@ struct DuasView: View {
                 Text("🌐")
                     .font(.system(size: 14))
             }
-            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+            .foregroundColor(themeManager.accentColor)
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
             .background {
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                    .fill(themeManager.accentColor.opacity(0.1))
             }
         }
     }
@@ -159,8 +160,15 @@ struct DuaCard: View {
         .padding(20)
         .background {
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 12, x: 0, y: 4
+                )
         }
         .contentShape(Rectangle())
     }

@@ -51,8 +51,12 @@ struct HomeView: View {
                 .padding(16)
                 .background {
                     RoundedRectangle(cornerRadius: 16)
-                        .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                        .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                        .overlay(RoundedRectangle(cornerRadius: 16).stroke(themeManager.strokeColor, lineWidth: 1))
+                        .shadow(
+                            color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                            radius: 12, x: 0, y: 4
+                        )
                 }
             }
             .padding(.horizontal, 20)

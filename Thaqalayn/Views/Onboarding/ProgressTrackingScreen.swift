@@ -319,7 +319,7 @@ struct DemoProgressCard: View {
         .background(
             RoundedRectangle(cornerRadius: 16)
                 .fill(themeManager.primaryBackground)
-                .shadow(color: Color.black.opacity(0.1), radius: 12, y: 4)
+                .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.1), radius: 12, y: 4)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 16)

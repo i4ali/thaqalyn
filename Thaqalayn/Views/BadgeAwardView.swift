@@ -41,7 +41,7 @@ struct BadgeAwardView: View {
                         .font(.system(size: 32, weight: .bold))
                         .foregroundStyle(
                             LinearGradient(
-                                colors: [Color.green, Color(red: 0.75, green: 0.60, blue: 0.35)],
+                                colors: [Color.green, themeManager.accentColor],
                                 startPoint: .leading,
                                 endPoint: .trailing
                             )
@@ -108,7 +108,7 @@ struct BadgeAwardView: View {
                                 .font(.system(size: 16, weight: .bold))
                                 .foregroundStyle(
                                     LinearGradient(
-                                        colors: [Color.green, Color(red: 0.75, green: 0.60, blue: 0.35)],
+                                        colors: [Color.green, themeManager.accentColor],
                                         startPoint: .leading,
                                         endPoint: .trailing
                                     )
@@ -155,7 +155,7 @@ struct BadgeAwardView: View {
                             RoundedRectangle(cornerRadius: 16)
                                 .fill(
                                     LinearGradient(
-                                        colors: [Color.green, Color(red: 0.75, green: 0.60, blue: 0.35)],
+                                        colors: [Color.green, themeManager.accentColor],
                                         startPoint: .leading,
                                         endPoint: .trailing
                                     )
@@ -185,6 +185,7 @@ struct BadgeAwardView: View {
             .scaleEffect(scale)
             .opacity(opacity)
         }
+        .darkScreenAura()
         .onAppear {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
                 scale = 1.0
@@ -236,21 +237,34 @@ struct BadgeAwardView: View {
 
 struct ConfettiPiece: View {
     let delay: Double
+    @ObservedObject private var themeManager = ThemeManager.shared
     @State private var yOffset: CGFloat = -100
     @State private var xOffset: CGFloat = 0
     @State private var rotation: Double = 0
     @State private var opacity: Double = 1
 
-    private let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink]
-    private let randomColor: Color
+    /// Bright SwiftUI primitives for the light theme — these auto-adapt and remain festive.
+    private let lightColors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink]
+    private let randomIndex: Int
     private let randomXStart: CGFloat
     private let randomRotation: Double
 
     init(delay: Double) {
         self.delay = delay
-        self.randomColor = colors.randomElement() ?? .blue
+        self.randomIndex = Int.random(in: 0..<7)
         self.randomXStart = CGFloat.random(in: -150...150)
         self.randomRotation = Double.random(in: 0...360)
+    }
+
+    /// In dark mode pull from the theme's floating orb palette (peach / lilac / green) at full opacity
+    /// for legible confetti against the warm-black backdrop. Otherwise use the SwiftUI primitives.
+    private var randomColor: Color {
+        if themeManager.isDarkMode {
+            let palette = themeManager.floatingOrbColors
+            return palette[randomIndex % palette.count].opacity(1.0)
+        } else {
+            return lightColors[randomIndex % lightColors.count]
+        }
     }
 
     var body: some View {

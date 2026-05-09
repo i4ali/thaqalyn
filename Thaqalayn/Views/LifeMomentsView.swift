@@ -92,6 +92,7 @@ struct LifeMomentsView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
     }
 }
 
@@ -140,8 +141,15 @@ struct MomentCard: View {
         .padding(20)
         .background {
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 12, x: 0, y: 4
+                )
         }
         .contentShape(Rectangle())
     }

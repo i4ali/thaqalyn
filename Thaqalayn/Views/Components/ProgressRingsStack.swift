@@ -14,32 +14,41 @@ struct ProgressRingsStack: View {
     let ramadanProgress: Double    // Ramadan days / 30
     let showRamadanRing: Bool
 
-    // Fixed vibrant colors (Apple Watch style)
-    private let quranGradient = LinearGradient(
-        colors: [Color(hex: "FF2D55"), Color(hex: "FF6B6B")],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
-
-    private let surahGradient = LinearGradient(
-        colors: [Color(hex: "30D158"), Color(hex: "34C759")],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
-
-    private let quizGradient = LinearGradient(
-        colors: [Color(hex: "0A84FF"), Color(hex: "5AC8FA")],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
-
-    private let ramadanGradient = LinearGradient(
-        colors: [Color(hex: "FFD60A"), Color(hex: "FFCC00")],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
-
     @StateObject private var themeManager = ThemeManager.shared
+
+    // Theme-aware vibrant ring gradients (Apple Watch style).
+    // Both stops are derived from the same semantic token so they auto-adapt across themes.
+    private var quranGradient: LinearGradient {
+        LinearGradient(
+            colors: [themeManager.semanticRed, themeManager.semanticRed.opacity(0.85)],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+
+    private var surahGradient: LinearGradient {
+        LinearGradient(
+            colors: [themeManager.semanticGreen, themeManager.semanticGreen.opacity(0.85)],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+
+    private var quizGradient: LinearGradient {
+        LinearGradient(
+            colors: [themeManager.semanticBlue, themeManager.semanticBlue.opacity(0.85)],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+
+    private var ramadanGradient: LinearGradient {
+        LinearGradient(
+            colors: [themeManager.semanticYellow, themeManager.semanticYellow.opacity(0.85)],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
 
     var body: some View {
         ZStack {
@@ -49,7 +58,7 @@ struct ProgressRingsStack: View {
                 gradient: quranGradient,
                 lineWidth: 20,
                 size: 240,
-                shadowColor: Color(hex: "FF2D55")
+                shadowColor: themeManager.semanticRed
             )
 
             // Middle ring - Surah Completion (180pt, 18pt width)
@@ -58,7 +67,7 @@ struct ProgressRingsStack: View {
                 gradient: surahGradient,
                 lineWidth: 18,
                 size: 180,
-                shadowColor: Color(hex: "30D158")
+                shadowColor: themeManager.semanticGreen
             )
 
             // Inner ring - Quiz Progress (120pt, 16pt width)
@@ -67,7 +76,7 @@ struct ProgressRingsStack: View {
                 gradient: quizGradient,
                 lineWidth: 16,
                 size: 120,
-                shadowColor: Color(hex: "0A84FF")
+                shadowColor: themeManager.semanticBlue
             )
 
             // Innermost ring - Ramadan (60pt, 14pt width) - Seasonal only
@@ -77,7 +86,7 @@ struct ProgressRingsStack: View {
                     gradient: ramadanGradient,
                     lineWidth: 14,
                     size: 60,
-                    shadowColor: Color(hex: "FFD60A")
+                    shadowColor: themeManager.semanticYellow
                 )
             }
 
@@ -104,12 +113,12 @@ struct RingLegend: View {
 
     var body: some View {
         HStack(spacing: 16) {
-            LegendItem(color: Color(hex: "FF2D55"), label: "Quran")
-            LegendItem(color: Color(hex: "30D158"), label: "Surahs")
-            LegendItem(color: Color(hex: "0A84FF"), label: "Quizzes")
+            LegendItem(color: themeManager.semanticRed, label: "Quran")
+            LegendItem(color: themeManager.semanticGreen, label: "Surahs")
+            LegendItem(color: themeManager.semanticBlue, label: "Quizzes")
 
             if showRamadanRing {
-                LegendItem(color: Color(hex: "FFD60A"), label: "Ramadan")
+                LegendItem(color: themeManager.semanticYellow, label: "Ramadan")
             }
         }
     }

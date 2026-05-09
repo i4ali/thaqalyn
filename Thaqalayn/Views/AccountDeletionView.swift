@@ -154,7 +154,7 @@ struct AccountDeletionView: View {
                                 .padding(16)
                                 .background(
                                     RoundedRectangle(cornerRadius: 12)
-                                        .fill(confirmationText == confirmationString ? .red : .gray)
+                                        .fill(confirmationText == confirmationString ? themeManager.semanticRed : Color.gray)
                                 )
                             }
                             .disabled(confirmationText != confirmationString || isDeleting)
@@ -196,6 +196,7 @@ struct AccountDeletionView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura(starCount: 0)
         .alert("Final Confirmation", isPresented: $showingFinalConfirmation) {
             Button("Cancel", role: .cancel) {}
             Button("DELETE ACCOUNT", role: .destructive) {

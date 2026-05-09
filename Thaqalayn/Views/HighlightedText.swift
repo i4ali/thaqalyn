@@ -12,15 +12,17 @@ struct HighlightedText: View {
     let highlightRange: NSRange?
     let font: Font
     let textColor: Color
-    let highlightColor: Color
+    let highlightColor: Color?
     let lineSpacing: CGFloat
+
+    @StateObject private var themeManager = ThemeManager.shared
 
     init(
         text: String,
         highlightRange: NSRange?,
         font: Font = .system(size: 17, weight: .regular, design: .serif),
         textColor: Color = .primary,
-        highlightColor: Color = .yellow.opacity(0.4),
+        highlightColor: Color? = nil,
         lineSpacing: CGFloat = 6
     ) {
         self.text = text
@@ -29,6 +31,14 @@ struct HighlightedText: View {
         self.textColor = textColor
         self.highlightColor = highlightColor
         self.lineSpacing = lineSpacing
+    }
+
+    /// Theme-aware default highlight color (search-result yellow).
+    private var resolvedHighlightColor: Color {
+        if let highlightColor = highlightColor {
+            return highlightColor
+        }
+        return themeManager.semanticYellow.opacity(themeManager.isDarkMode ? 0.30 : 0.50)
     }
 
     var body: some View {
@@ -45,7 +55,7 @@ struct HighlightedText: View {
         if let nsRange = highlightRange,
            let swiftRange = Range(nsRange, in: text),
            let attributedRange = Range(nsRange, in: attributedString) {
-            attributedString[attributedRange].backgroundColor = UIColor(highlightColor)
+            attributedString[attributedRange].backgroundColor = UIColor(resolvedHighlightColor)
         }
 
         return attributedString

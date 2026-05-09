@@ -13,6 +13,14 @@ struct IslamicGeometricPattern: View {
     var color: Color = .white
     var opacity: Double = 1.0
 
+    @ObservedObject private var themeManager = ThemeManager.shared
+
+    /// In dark mode the decorative ring should remain visible against the warm-black backdrop,
+    /// so we route the stroke through `strokeColorStrong`. In light we keep the caller-provided tint.
+    private var ringStroke: Color {
+        themeManager.isDarkMode ? themeManager.strokeColorStrong : color.opacity(opacity * 0.75)
+    }
+
     var body: some View {
         ZStack {
             // Outer arabesque petals
@@ -32,7 +40,7 @@ struct IslamicGeometricPattern: View {
 
             // Middle decorative ring
             Circle()
-                .stroke(color.opacity(opacity * 0.75), lineWidth: size * 0.03)
+                .stroke(ringStroke, lineWidth: size * 0.03)
                 .frame(width: size * 0.5, height: size * 0.5)
 
             // Inner ornate circle

@@ -66,6 +66,50 @@ struct SettingsView: View {
                     // Settings content
                     ScrollView {
                         VStack(spacing: 24) {
+                            // Appearance Section
+                            SettingsSection(title: "Appearance") {
+                                HStack(spacing: 12) {
+                                    Image(systemName: "moon.stars.fill")
+                                        .font(.system(size: 18, weight: .semibold))
+                                        .foregroundColor(themeManager.accentColor)
+                                        .frame(width: 28)
+
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text("Theme")
+                                            .font(.system(size: 16, weight: .semibold))
+                                            .foregroundColor(themeManager.primaryText)
+                                        Text("Light or Dark")
+                                            .font(.system(size: 13, weight: .medium))
+                                            .foregroundColor(themeManager.secondaryText)
+                                    }
+
+                                    Spacer()
+
+                                    Picker("Theme", selection: Binding(
+                                        get: { themeManager.selectedTheme },
+                                        set: { newValue in
+                                            withAnimation(.easeInOut(duration: 0.25)) {
+                                                themeManager.selectedTheme = newValue
+                                            }
+                                        }
+                                    )) {
+                                        Text("Light").tag(ThemeVariant.warmInviting)
+                                        Text("Dark").tag(ThemeVariant.nightSanctuary)
+                                    }
+                                    .pickerStyle(.segmented)
+                                    .frame(width: 150)
+                                }
+                                .padding(16)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(themeManager.glassEffect)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 12)
+                                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                                        )
+                                )
+                            }
+
                             // Daily Verse Notifications Section
                             SettingsSection(title: "Daily Verse") {
                                 VStack(spacing: 12) {
@@ -346,6 +390,7 @@ struct SettingsView: View {
                     }
                 }
             }
+            .darkScreenAura()
         }
         .navigationBarHidden(true)
         .sheet(isPresented: $showingAuthentication) {

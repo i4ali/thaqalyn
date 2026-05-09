@@ -37,6 +37,7 @@ struct ContentView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+        .tint(themeManager.accentColor)
         .overlay(alignment: .bottom) {
             if audioManager.currentPlayback != nil {
                 SurahAudioPlayerView()
@@ -47,6 +48,9 @@ struct ContentView: View {
         .onAppear {
             checkFirstLaunch()
             ratingManager.recordAppLaunch()
+        }
+        .onChange(of: themeManager.selectedTheme) { _, newValue in
+            ChromeAppearance.apply(for: newValue)
         }
         .fullScreenCover(isPresented: $showingWelcome) {
             OnboardingFlowView()
@@ -77,49 +81,40 @@ struct AdaptiveModernBackground: View {
 
     var body: some View {
         ZStack {
-            // Gradient background matching mockup HTML: #F8F5FF → #FFF9F5
             LinearGradient(
                 colors: [
-                    Color(red: 0.973, green: 0.961, blue: 1.0),    // #F8F5FF - Soft Lavender
-                    Color(red: 1.0, green: 0.976, blue: 0.961)     // #FFF9F5 - Warm White
+                    themeManager.primaryBackground,
+                    themeManager.secondaryBackground,
+                    themeManager.tertiaryBackground
                 ],
                 startPoint: .top,
                 endPoint: .bottom
             )
             .ignoresSafeArea()
 
-            // Floating gradient orbs
             RadialGradient(
-                colors: [
-                    themeManager.floatingOrbColors[0],
-                    Color.clear
-                ],
+                colors: [themeManager.floatingOrbColors[0], .clear],
                 center: .topLeading,
                 startRadius: 0,
                 endRadius: 300
             )
 
             RadialGradient(
-                colors: [
-                    themeManager.floatingOrbColors[1],
-                    Color.clear
-                ],
+                colors: [themeManager.floatingOrbColors[1], .clear],
                 center: .bottomTrailing,
                 startRadius: 0,
                 endRadius: 300
             )
 
             RadialGradient(
-                colors: [
-                    themeManager.floatingOrbColors[2],
-                    Color.clear
-                ],
+                colors: [themeManager.floatingOrbColors[2], .clear],
                 center: .center,
                 startRadius: 0,
                 endRadius: 200
             )
         }
         .ignoresSafeArea()
+        .darkScreenAura()
     }
 }
 
@@ -150,7 +145,7 @@ struct LoadingView: View {
             Text("ثقلين")
                 .font(.system(size: 56, weight: .light, design: .default))
                 .foregroundColor(themeManager.primaryText)
-                .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.5), radius: 30)
+                .shadow(color: themeManager.semanticBlue.opacity(0.5), radius: 30)
             
             Text("Experience the Quran like never before\nwith AI-powered Shia commentary")
                 .font(.system(size: 18, weight: .light))
@@ -161,7 +156,7 @@ struct LoadingView: View {
             VStack(spacing: 12) {
                 ProgressView()
                     .scaleEffect(1.2)
-                    .tint(Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .tint(themeManager.semanticBlue)
                 
                 Text("Initializing AI Commentary...")
                     .font(.system(size: 14, weight: .medium))
@@ -183,8 +178,8 @@ struct ErrorView: View {
         VStack(spacing: 20) {
             Image(systemName: "exclamationmark.triangle.fill")
                 .font(.system(size: 64))
-                .foregroundColor(Color(red: 0.93, green: 0.28, blue: 0.6))
-                .shadow(color: Color(red: 0.93, green: 0.28, blue: 0.6).opacity(0.3), radius: 20)
+                .foregroundColor(themeManager.semanticRed)
+                .shadow(color: themeManager.semanticRed.opacity(0.3), radius: 20)
             
             Text("Error")
                 .font(.system(size: 24, weight: .bold))
@@ -267,8 +262,19 @@ struct SurahListView: View {
                 .padding(16)
                 .background {
                     RoundedRectangle(cornerRadius: 16)
-                        .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                        .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                        .fill(themeManager.selectedTheme == .nightSanctuary
+                              ? themeManager.glassSurface
+                              : Color.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                        )
+                        .shadow(
+                            color: themeManager.selectedTheme == .nightSanctuary
+                                ? Color.black.opacity(0.45)
+                                : Color.black.opacity(0.04),
+                            radius: 12, x: 0, y: 4
+                        )
                 }
 
                 // Discovery Carousel (Life Moments + Q&A)
@@ -387,7 +393,13 @@ struct StatCard: View {
         .padding(20)
         .background {
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
+                .fill(themeManager.selectedTheme == .nightSanctuary
+                      ? themeManager.glassSurface
+                      : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
                 .shadow(
                     color: color?.opacity(0.15) ?? Color.clear,
                     radius: 12,
@@ -502,8 +514,19 @@ struct ModernSurahCard: View {
         .padding(20)
         .background {
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                .fill(themeManager.selectedTheme == .nightSanctuary
+                      ? themeManager.glassSurface
+                      : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary
+                        ? Color.black.opacity(0.45)
+                        : Color.black.opacity(0.04),
+                    radius: 12, x: 0, y: 4
+                )
         }
     }
 }
@@ -586,7 +609,7 @@ struct ProfileMenuView: View {
                                     .font(.system(size: 32, weight: .semibold))
                                     .foregroundColor(.white)
                             )
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 12)
+                            .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 12)
                         
                         VStack(spacing: 4) {
                             Text(getUserEmail())
@@ -699,7 +722,7 @@ struct ProfileMenuView: View {
                     Button("Done") {
                         dismiss()
                     }
-                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .foregroundColor(themeManager.semanticBlue)
                 }
             }
         }
@@ -770,7 +793,7 @@ struct ProfileMenuItem: View {
             HStack(spacing: 16) {
                 Image(systemName: icon)
                     .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(isDestructive ? .red : Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .foregroundColor(isDestructive ? .red : themeManager.semanticBlue)
                     .frame(width: 24)
                 
                 VStack(alignment: .leading, spacing: 2) {
@@ -967,7 +990,7 @@ struct AudioSettingsView: View {
                     Button("Done") {
                         dismiss()
                     }
-                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .foregroundColor(themeManager.semanticBlue)
                 }
             }
         }
@@ -1019,7 +1042,7 @@ struct AudioSettingCard<Content: View>: View {
                 HStack(spacing: 16) {
                     Image(systemName: icon)
                         .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                        .foregroundColor(themeManager.semanticBlue)
                         .frame(width: 24)
                     
                     VStack(alignment: .leading, spacing: 2) {
@@ -1113,21 +1136,24 @@ struct BookmarkBadge: View {
     var body: some View {
         NavigationLink(destination: BookmarksView()) {
             HStack(spacing: 6) {
-                Text("❤️")
-                    .font(.system(size: 20))
-
+                Text("❤️").font(.system(size: 20))
                 Text("\(bookmarkManager.bookmarks.count)")
                     .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(
-                        Color(red: 0.91, green: 0.604, blue: 0.435)
-                    )
+                    .foregroundColor(themeManager.accentColor)
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .background {
                 RoundedRectangle(cornerRadius: 24)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.06), radius: 8, x: 0, y: 2)
+                    .fill(themeManager.selectedTheme == .nightSanctuary
+                          ? themeManager.glassSurface
+                          : Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+                    .shadow(color: Color.black.opacity(themeManager.selectedTheme == .nightSanctuary ? 0.4 : 0.06),
+                            radius: 8, x: 0, y: 2)
             }
         }
         .buttonStyle(PlainButtonStyle())

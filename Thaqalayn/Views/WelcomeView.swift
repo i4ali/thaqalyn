@@ -78,7 +78,7 @@ struct WelcomeView: View {
                             Text("ثقلين")
                                 .font(.system(size: 64, weight: .light, design: .default))
                                 .foregroundColor(themeManager.primaryText)
-                                .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.6), radius: 25)
+                                .shadow(color: themeManager.semanticBlue.opacity(0.6), radius: 25)
                         }
                         
                         // Welcome message
@@ -145,7 +145,7 @@ struct WelcomeView: View {
                                 RoundedRectangle(cornerRadius: 16)
                                     .fill(themeManager.purpleGradient)
                             )
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 12)
+                            .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 12)
                         }
                         
                         // Sign up button
@@ -213,6 +213,7 @@ struct WelcomeView: View {
                 }
             }
         }
+        .darkScreenAura()
         .navigationBarHidden(true)
         .preferredColorScheme(themeManager.colorScheme)
         .onAppear {

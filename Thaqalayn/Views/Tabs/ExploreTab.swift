@@ -19,6 +19,7 @@ struct ExploreTab: View {
                 ExploreView()
             }
             .navigationBarHidden(true)
+            .darkScreenAura()
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

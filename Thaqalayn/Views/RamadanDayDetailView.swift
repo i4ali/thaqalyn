@@ -82,7 +82,7 @@ struct RamadanDayDetailView: View {
                     .padding(20)
                     .background {
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
+                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
                     }
                     .padding(.horizontal, 20)
 
@@ -108,8 +108,15 @@ struct RamadanDayDetailView: View {
                     .padding(20)
                     .background {
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.white)
-                            .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                            )
+                            .shadow(
+                                color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                                radius: 12, x: 0, y: 4
+                            )
                     }
                     .padding(.horizontal, 20)
 
@@ -155,6 +162,7 @@ struct RamadanDayDetailView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura(glowOpacity: 0.36)
     }
 }
 
@@ -203,14 +211,22 @@ struct RamadanDayHeader: View {
                 Text(day.themeArabic)
                     .font(.system(size: 20, weight: .medium))
                     .foregroundColor(themeManager.accentColor)
+                    .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(24)
         .background {
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 24)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
+                    radius: 16, x: 0, y: 4
+                )
         }
         .padding(.horizontal, 20)
         .padding(.top, 20)
@@ -266,8 +282,15 @@ struct RamadanDuaSection: View {
         .padding(20)
         .background {
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 12, x: 0, y: 4
+                )
         }
         .padding(.horizontal, 20)
     }
@@ -353,13 +376,20 @@ struct RamadanVerseCard: View {
             .padding(16)
             .background {
                 Rectangle()
-                    .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
+                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
             }
         }
         .background {
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 8, x: 0, y: 2
+                )
         }
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal, 20)

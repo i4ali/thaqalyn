@@ -17,6 +17,7 @@ struct ProgressTab: View {
                 ProgressRingsView()
             }
             .navigationBarHidden(true)
+            .darkScreenAura(glowOpacity: 0.22, starCount: 14)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

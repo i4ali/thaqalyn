@@ -83,7 +83,7 @@ struct PremiumBadgeView: View {
     }
 
     private var badgeColor: Color {
-        return .yellow
+        return themeManager.semanticYellow
     }
 }
 
@@ -104,20 +104,20 @@ struct PremiumBadgeWithText: View {
         HStack(spacing: 4) {
             Image(systemName: "lock.fill")
                 .font(.system(size: iconSize))
-                .foregroundColor(.yellow)
+                .foregroundColor(themeManager.semanticYellow)
 
             Text(text)
                 .font(.system(size: textSize, weight: .semibold))
-                .foregroundColor(.yellow)
+                .foregroundColor(themeManager.semanticYellow)
         }
         .padding(.horizontal, horizontalPadding)
         .padding(.vertical, verticalPadding)
         .background(
             RoundedRectangle(cornerRadius: cornerRadius)
-                .fill(Color.yellow.opacity(0.15))
+                .fill(themeManager.semanticYellow.opacity(0.15))
                 .overlay(
                     RoundedRectangle(cornerRadius: cornerRadius)
-                        .stroke(Color.yellow.opacity(0.3), lineWidth: 1)
+                        .stroke(themeManager.semanticYellow.opacity(0.3), lineWidth: 1)
                 )
         )
     }

@@ -76,7 +76,11 @@ struct PropheticParallelsView: View {
                     .padding(.vertical, 12)
                     .background {
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(Color(red: 0.95, green: 0.95, blue: 0.95))
+                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.95, green: 0.95, blue: 0.95))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                            )
                     }
                     .padding(.horizontal, 20)
                     .padding(.bottom, 12)
@@ -174,6 +178,7 @@ struct PropheticParallelsView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
     }
 }
 
@@ -242,8 +247,15 @@ struct PropheticParallelCard: View {
         .padding(20)
         .background {
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color(red: 1.0, green: 1.0, blue: 1.0).opacity(1.0))
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 12, x: 0, y: 4
+                )
         }
         .contentShape(Rectangle())
         .padding(.horizontal, 20)
@@ -279,7 +291,11 @@ struct ParallelCategoryChip: View {
                         .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
                 } else {
                     Capsule()
-                        .fill(Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .overlay(
+                            Capsule()
+                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                        )
                 }
             }
         }

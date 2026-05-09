@@ -83,6 +83,7 @@ struct VerseSummaryView: View {
             }
         }
         .background(backgroundView)
+        .darkScreenAura()
         .presentationDetents(isIPad ? [.large] : [.fraction(0.7), .large])
         .presentationDragIndicator(.hidden)
         .frame(maxWidth: isIPad ? 600 : nil) // Constrain width on iPad for better readability
@@ -124,7 +125,7 @@ struct VerseSummaryView: View {
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(.white)
                 )
-                .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 8)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(surah.englishName)
@@ -237,7 +238,7 @@ struct VerseSummaryView: View {
             .background(
                 RoundedRectangle(cornerRadius: 16)
                     .fill(themeManager.purpleGradient)
-                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 12)
+                    .shadow(color: themeManager.semanticBlue.opacity(0.3), radius: 12)
             )
         }
         .padding(.top, 8)

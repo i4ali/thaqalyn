@@ -161,7 +161,7 @@ struct HighlightRow: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(themeManager.accentGradient)
                 )
-                .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 8)
+                .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
 
             Text(text)
                 .font(.system(size: 15, weight: .medium))

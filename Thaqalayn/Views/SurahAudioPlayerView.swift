@@ -29,7 +29,7 @@ struct SurahAudioPlayerView: View {
                             .background(
                                 Circle()
                                     .fill(themeManager.accentGradient)
-                                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                                    .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 8)
                             )
                     }
                     .scaleEffect(audioManager.playerState == .loading ? 1.1 : 1.0)
@@ -80,6 +80,16 @@ struct SurahAudioPlayerView: View {
                             .foregroundColor(themeManager.secondaryText)
                             .frame(width: 28, height: 28)
                     }
+
+                    // Close button
+                    Button(action: {
+                        audioManager.stop()
+                    }) {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundColor(themeManager.secondaryText)
+                            .frame(width: 28, height: 28)
+                    }
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 12)
@@ -90,7 +100,7 @@ struct SurahAudioPlayerView: View {
                             RoundedRectangle(cornerRadius: 16)
                                 .stroke(themeManager.strokeColor, lineWidth: 1)
                         )
-                        .shadow(color: .black.opacity(0.1), radius: 10, y: -5)
+                        .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.1), radius: 10, y: -5)
                 )
                 .onTapGesture {
                     showingFullPlayer = true
@@ -104,6 +114,7 @@ struct SurahAudioPlayerView: View {
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 16)
+            .darkScreenAura()
             .sheet(isPresented: $showingFullPlayer) {
                 FullScreenAudioPlayerView()
             }
@@ -138,7 +149,7 @@ struct ExpandedAudioControls: View {
                     ),
                     in: 0...max(audioManager.duration, 1)
                 )
-                .tint(Color(red: 0.39, green: 0.4, blue: 0.95))
+                .tint(themeManager.semanticBlue)
             }
             
             // Control buttons
@@ -265,7 +276,7 @@ struct FullScreenAudioPlayerView: View {
                                         .foregroundColor(.white)
                                 }
                             )
-                            .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3), radius: 20)
+                            .shadow(color: themeManager.semanticBlue.opacity(0.3), radius: 20)
                         
                         // Track info
                         VStack(spacing: 8) {
@@ -291,7 +302,7 @@ struct FullScreenAudioPlayerView: View {
                                 ),
                                 in: 0...max(audioManager.duration, 1)
                             )
-                            .tint(Color(red: 0.39, green: 0.4, blue: 0.95))
+                            .tint(themeManager.semanticBlue)
                             
                             HStack {
                                 Text(formatTime(audioManager.currentTime))
@@ -324,7 +335,7 @@ struct FullScreenAudioPlayerView: View {
                                 Image(systemName: audioManager.playerState == .playing ? "pause.circle.fill" : "play.circle.fill")
                                     .font(.system(size: 72, weight: .medium))
                                     .foregroundStyle(themeManager.accentGradient)
-                                    .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 12)
+                                    .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 12)
                             }
                             .scaleEffect(audioManager.playerState == .loading ? 1.1 : 1.0)
                             .animation(.easeInOut(duration: 0.3), value: audioManager.playerState)
@@ -397,7 +408,7 @@ struct FullScreenAudioPlayerView: View {
                     Button("Done") {
                         dismiss()
                     }
-                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .foregroundColor(themeManager.semanticBlue)
                 }
             }
         }
@@ -456,7 +467,7 @@ struct ReciterSelectionView: View {
                     Button("Cancel") {
                         dismiss()
                     }
-                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .foregroundColor(themeManager.semanticBlue)
                 }
             }
         }
@@ -483,7 +494,7 @@ struct ReciterCard: View {
                                 .font(.system(size: 24, weight: .semibold))
                                 .foregroundColor(.white)
                         )
-                        .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 8)
+                        .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 8)
                     
                 }
                 
@@ -510,7 +521,7 @@ struct ReciterCard: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(
-                                isSelected ? Color(red: 0.39, green: 0.4, blue: 0.95) : themeManager.strokeColor,
+                                isSelected ? themeManager.semanticBlue : themeManager.strokeColor,
                                 lineWidth: isSelected ? 2 : 1
                             )
                     )

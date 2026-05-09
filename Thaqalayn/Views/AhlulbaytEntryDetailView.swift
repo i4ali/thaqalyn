@@ -71,8 +71,12 @@ struct AhlulbaytEntryDetailView: View {
                     .padding(24)
                     .background {
                         RoundedRectangle(cornerRadius: 24)
-                            .fill(Color.white)
-                            .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
+                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 24)
+                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                            )
+                            .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
@@ -108,7 +112,11 @@ struct AhlulbaytEntryDetailView: View {
                         .padding(20)
                         .background {
                             RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
+                                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                                )
                         }
                         .padding(.horizontal, 20)
                     }
@@ -167,7 +175,11 @@ struct AhlulbaytEntryDetailView: View {
                     .padding(20)
                     .background {
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
+                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                            )
                     }
                     .padding(.horizontal, 20)
 
@@ -221,6 +233,7 @@ struct AhlulbaytEntryDetailView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
     }
 }
 
@@ -332,7 +345,7 @@ struct AhlulbaytVerseCard: View {
             .padding(20)
             .background {
                 Rectangle()
-                    .fill(Color(red: 0.98, green: 0.98, blue: 0.95))
+                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
             }
 
             Divider()
@@ -364,8 +377,12 @@ struct AhlulbaytVerseCard: View {
         }
         .background {
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 24)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
         }
         .padding(.horizontal, 20)
     }
@@ -408,8 +425,12 @@ struct RelatedEntryCard: View {
             .padding(16)
             .background {
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
+                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+                    .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
             }
         }
         .buttonStyle(PlainButtonStyle())

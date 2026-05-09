@@ -19,6 +19,7 @@ struct HomeTab: View {
                 HomeView()
             }
             .navigationBarHidden(true)
+            .darkScreenAura()
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

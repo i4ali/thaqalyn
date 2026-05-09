@@ -98,6 +98,7 @@ struct OnboardingFlowView: View {
                 }
             }
         }
+        .darkScreenAura()
         .navigationBarHidden(true)
         .preferredColorScheme(themeManager.colorScheme)
     }

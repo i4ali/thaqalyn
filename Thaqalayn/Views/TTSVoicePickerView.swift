@@ -74,10 +74,11 @@ struct TTSVoicePickerView: View {
                         tafsirReader.stop()
                         dismiss()
                     }
-                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .foregroundColor(themeManager.semanticBlue)
                 }
             }
         }
+        .darkScreenAura()
         .preferredColorScheme(themeManager.colorScheme)
         .onDisappear {
             tafsirReader.stop()
@@ -164,16 +165,16 @@ struct VoiceRow: View {
                 if isSelected {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 24))
-                        .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                        .foregroundColor(themeManager.semanticBlue)
                 }
             }
             .padding(16)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.secondaryBackground)
+                    .fill(themeManager.isDarkMode ? themeManager.glassSurface : themeManager.secondaryBackground)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
-                            .stroke(isSelected ? Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.5) : Color.clear, lineWidth: 2)
+                            .stroke(isSelected ? themeManager.semanticBlue.opacity(0.5) : Color.clear, lineWidth: 2)
                     )
             )
         }

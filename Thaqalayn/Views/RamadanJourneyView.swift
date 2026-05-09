@@ -72,6 +72,7 @@ struct RamadanJourneyView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
         .sheet(isPresented: $showPaywall) {
             PaywallView()
         }
@@ -295,8 +296,15 @@ struct RamadanDayCard: View {
             .padding(16)
             .background {
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
+                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
+                    )
+                    .shadow(
+                        color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                        radius: 8, x: 0, y: 2
+                    )
             }
         }
         .buttonStyle(PlainButtonStyle())

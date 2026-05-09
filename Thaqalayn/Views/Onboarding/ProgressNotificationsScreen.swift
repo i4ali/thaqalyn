@@ -121,7 +121,7 @@ struct ProgressNotificationsScreen: View {
                                         ) : themeManager.purpleGradient)
                             )
                             .shadow(
-                                color: (progressNotificationsEnabled ? Color.green : Color(red: 0.39, green: 0.4, blue: 0.95)).opacity(0.4),
+                                color: (progressNotificationsEnabled ? Color.green : themeManager.accentColor).opacity(0.4),
                                 radius: 12
                             )
                         }

@@ -52,6 +52,7 @@ struct QuizView: View {
                 }
             }
         }
+        .darkScreenAura()
         .onAppear {
             loadQuiz()
         }
@@ -427,9 +428,9 @@ struct QuizView: View {
         let backgroundColor: Color = {
             if showResult {
                 if isCorrect {
-                    return .green.opacity(0.2)
+                    return themeManager.semanticGreen.opacity(0.2)
                 } else if isSelected {
-                    return .red.opacity(0.2)
+                    return themeManager.semanticRed.opacity(0.2)
                 }
             } else if isSelected {
                 return Color.purple.opacity(0.2)
@@ -440,9 +441,9 @@ struct QuizView: View {
         let borderColor: Color = {
             if showResult {
                 if isCorrect {
-                    return .green
+                    return themeManager.semanticGreen
                 } else if isSelected {
-                    return .red
+                    return themeManager.semanticRed
                 }
             } else if isSelected {
                 return .purple
@@ -477,10 +478,10 @@ struct QuizView: View {
                 if showResult {
                     if isCorrect {
                         Image(systemName: "checkmark.circle.fill")
-                            .foregroundColor(.green)
+                            .foregroundColor(themeManager.semanticGreen)
                     } else if isSelected {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(.red)
+                            .foregroundColor(themeManager.semanticRed)
                     }
                 }
             }
@@ -505,11 +506,11 @@ struct QuizView: View {
             HStack {
                 Image(systemName: isCorrect ? "checkmark.circle.fill" : "info.circle.fill")
                     .font(.system(size: 20))
-                    .foregroundColor(isCorrect ? .green : .blue)
+                    .foregroundColor(isCorrect ? themeManager.semanticGreen : .blue)
 
                 Text(isCorrect ? "Correct!" : "Explanation")
                     .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(isCorrect ? .green : .blue)
+                    .foregroundColor(isCorrect ? themeManager.semanticGreen : .blue)
             }
 
             Text(question.explanation)
@@ -521,10 +522,10 @@ struct QuizView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 14)
-                .fill(isCorrect ? Color.green.opacity(0.1) : Color.blue.opacity(0.1))
+                .fill(isCorrect ? themeManager.semanticGreen.opacity(0.1) : Color.blue.opacity(0.1))
                 .overlay(
                     RoundedRectangle(cornerRadius: 14)
-                        .stroke(isCorrect ? Color.green.opacity(0.3) : Color.blue.opacity(0.3), lineWidth: 1)
+                        .stroke(isCorrect ? themeManager.semanticGreen.opacity(0.3) : Color.blue.opacity(0.3), lineWidth: 1)
                 )
         )
     }

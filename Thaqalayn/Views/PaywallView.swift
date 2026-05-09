@@ -173,15 +173,9 @@ struct PaywallView: View {
                                 .foregroundColor(.white)
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 56)
-                                .background(
-                                    LinearGradient(
-                                        gradient: Gradient(colors: [Color.purple, Color.blue]),
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
+                                .background(themeManager.accentGradient)
                                 .cornerRadius(16)
-                                .shadow(color: Color.purple.opacity(0.5), radius: 15, x: 0, y: 8)
+                                .shadow(color: themeManager.accentColor.opacity(0.5), radius: 15, x: 0, y: 8)
                             }
                             .disabled(purchaseManager.isLoading || !purchaseManager.isProductLoaded)
 
@@ -226,6 +220,7 @@ struct PaywallView: View {
                 }
             }
         }
+        .darkScreenAura(glowOpacity: 0.40, starCount: 18)
         .alert(alertTitle, isPresented: $showingAlert) {
             Button("OK", role: .cancel) { }
         } message: {
@@ -468,7 +463,7 @@ struct PaywallQuickGemsFeature: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
-                    .background(Capsule().fill(Color.orange))
+                    .background(Capsule().fill(themeManager.semanticYellow))
                     .offset(y: -12)
             }
             .padding(.trailing, 16)

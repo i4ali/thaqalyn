@@ -158,6 +158,7 @@ struct QuickOverviewView: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
+        .darkScreenAura()
         .presentationDetents([.large])
         .presentationDragIndicator(.hidden)
         .frame(maxWidth: isIPad ? 600 : nil)
@@ -506,7 +507,7 @@ struct ConceptDetailCardOverlay: View {
         .background(
             RoundedRectangle(cornerRadius: 20)
                 .fill(themeManager.primaryBackground)
-                .shadow(color: Color.black.opacity(0.15), radius: 20, y: -5)
+                .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.15), radius: 20, y: -5)
         )
         .padding(.horizontal, 12)
         .padding(.bottom, 8)

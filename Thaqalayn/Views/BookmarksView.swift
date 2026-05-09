@@ -61,6 +61,7 @@ struct BookmarksView: View {
         .navigationTitle("Bookmarks")
         .navigationBarTitleDisplayMode(.large)
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
         .searchable(text: $searchText, prompt: "Search bookmarks...")
         .sheet(isPresented: $showingBookmarkDetail) {
             if let bookmark = selectedBookmark {
@@ -356,7 +357,7 @@ struct BookmarkCardContent: View {
         .padding(16)
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .fill(themeManager.glassEffect)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(isFocused ? Color.blue.opacity(0.6) : themeManager.strokeColor, lineWidth: isFocused ? 2 : 1)
@@ -367,6 +368,10 @@ struct BookmarkCardContent: View {
                         .fill(Color.blue.opacity(0.1))
                         .animation(.easeInOut(duration: 0.3), value: isFocused)
                     : nil
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 12, x: 0, y: 4
                 )
         )
         .scaleEffect(isPressed ? 0.98 : (isFocused ? 1.02 : 1.0))
@@ -501,7 +506,7 @@ struct BookmarkCard: View {
         .padding(16)
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .fill(themeManager.glassEffect)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(isFocused ? Color.blue.opacity(0.6) : themeManager.strokeColor, lineWidth: isFocused ? 2 : 1)
@@ -512,6 +517,10 @@ struct BookmarkCard: View {
                         .fill(Color.blue.opacity(0.1))
                         .animation(.easeInOut(duration: 0.3), value: isFocused)
                     : nil
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 12, x: 0, y: 4
                 )
         )
         .scaleEffect(isPressed ? 0.98 : (isFocused ? 1.02 : 1.0))

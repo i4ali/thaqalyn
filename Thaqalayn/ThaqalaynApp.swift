@@ -17,6 +17,9 @@ struct ThaqalaynApp: App {
     init() {
         // Set up notification delegate
         UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
+
+        // Apply native chrome (UITabBar / UINavigationBar) for current theme
+        ChromeAppearance.apply(for: ThemeManager.shared.selectedTheme)
     }
     
     var body: some Scene {

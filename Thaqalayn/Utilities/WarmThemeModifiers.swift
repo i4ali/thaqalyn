@@ -12,15 +12,7 @@ import SwiftUI
 extension View {
     /// Applies warm theme card styling with rounded corners and soft shadow
     func warmCardStyle(cornerRadius: CGFloat = 20) -> some View {
-        self
-            .background(Color.white)
-            .cornerRadius(cornerRadius)
-            .shadow(
-                color: Color.black.opacity(0.04),
-                radius: 12,
-                x: 0,
-                y: 4
-            )
+        modifier(WarmCardStyleModifier(cornerRadius: cornerRadius))
     }
 
     /// Applies generous warm theme padding (24-28px)
@@ -30,42 +22,92 @@ extension View {
 
     /// Applies warm theme button style with gradient
     func warmButtonStyle(gradient: LinearGradient) -> some View {
-        self
-            .background(gradient)
-            .cornerRadius(24)
-            .shadow(
-                color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3),
-                radius: 8,
-                x: 0,
-                y: 4
-            )
+        modifier(WarmButtonStyleModifier(gradient: gradient))
     }
 
     /// Applies circular badge style with gradient
     func warmCircularBadge(size: CGFloat = 56, gradient: LinearGradient) -> some View {
-        self
-            .frame(width: size, height: size)
-            .background(
-                Circle()
-                    .fill(gradient)
-                    .shadow(
-                        color: Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.4),
-                        radius: 8
-                    )
-            )
+        modifier(WarmCircularBadgeModifier(size: size, gradient: gradient))
     }
 
     /// Applies warm theme stat card styling
     func warmStatCardStyle() -> some View {
-        self
-            .background(Color.white)
-            .cornerRadius(20)
-            .shadow(
-                color: Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.15),
-                radius: 12,
-                x: 0,
-                y: 4
+        modifier(WarmStatCardStyleModifier())
+    }
+}
+
+// MARK: - Theme-Aware View Modifiers
+
+private struct WarmCardStyleModifier: ViewModifier {
+    @ObservedObject private var themeManager = ThemeManager.shared
+    let cornerRadius: CGFloat
+
+    func body(content: Content) -> some View {
+        let cardFill: Color = themeManager.selectedTheme == .nightSanctuary
+            ? themeManager.glassSurface
+            : Color.white
+        let shadowColor: Color = themeManager.selectedTheme == .nightSanctuary
+            ? Color.black.opacity(0.45)
+            : Color.black.opacity(0.04)
+
+        return content
+            .background(cardFill)
+            .cornerRadius(cornerRadius)
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(themeManager.strokeColor, lineWidth: 1)
             )
+            .shadow(color: shadowColor, radius: 12, x: 0, y: 4)
+    }
+}
+
+private struct WarmButtonStyleModifier: ViewModifier {
+    @ObservedObject private var themeManager = ThemeManager.shared
+    let gradient: LinearGradient
+
+    func body(content: Content) -> some View {
+        content
+            .background(gradient)
+            .cornerRadius(24)
+            .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8, x: 0, y: 4)
+    }
+}
+
+private struct WarmCircularBadgeModifier: ViewModifier {
+    @ObservedObject private var themeManager = ThemeManager.shared
+    let size: CGFloat
+    let gradient: LinearGradient
+
+    func body(content: Content) -> some View {
+        content
+            .frame(width: size, height: size)
+            .background(
+                Circle()
+                    .fill(gradient)
+                    .shadow(color: themeManager.accentColor.opacity(0.4), radius: 8)
+            )
+    }
+}
+
+private struct WarmStatCardStyleModifier: ViewModifier {
+    @ObservedObject private var themeManager = ThemeManager.shared
+
+    func body(content: Content) -> some View {
+        let cardFill: Color = themeManager.selectedTheme == .nightSanctuary
+            ? themeManager.glassSurface
+            : Color.white
+        let shadowColor = themeManager.selectedTheme == .nightSanctuary
+            ? Color.black.opacity(0.45)
+            : Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.15)
+
+        return content
+            .background(cardFill)
+            .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(themeManager.strokeColor, lineWidth: 1)
+            )
+            .shadow(color: shadowColor, radius: 12, x: 0, y: 4)
     }
 }
 

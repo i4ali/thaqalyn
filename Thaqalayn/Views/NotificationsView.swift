@@ -34,12 +34,13 @@ struct NotificationItem: Identifiable, Codable {
             }
         }
 
-        var color: Color {
+        @MainActor
+        func color(theme: ThemeManager) -> Color {
             switch self {
-            case .dailyVerse: return Color(red: 0.39, green: 0.4, blue: 0.95)
+            case .dailyVerse: return theme.semanticBlue
             case .streak: return .orange
             case .milestone: return .green
-            case .nudge: return Color(red: 0.93, green: 0.28, blue: 0.6)
+            case .nudge: return theme.semanticRed
             case .nearCompletion: return .purple
             }
         }
@@ -134,11 +135,12 @@ struct NotificationsView: View {
                     Button("Done") {
                         dismiss()
                     }
-                    .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                    .foregroundColor(themeManager.semanticBlue)
                 }
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
         .onAppear {
             loadNotifications()
             addSampleNotifications()
@@ -211,12 +213,12 @@ struct NotificationCard: View {
                 // Icon
                 ZStack {
                     Circle()
-                        .fill(notification.type.color.opacity(0.15))
+                        .fill(notification.type.color(theme: themeManager).opacity(0.15))
                         .frame(width: 48, height: 48)
 
                     Image(systemName: notification.type.icon)
                         .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(notification.type.color)
+                        .foregroundColor(notification.type.color(theme: themeManager))
                 }
 
                 VStack(alignment: .leading, spacing: 6) {
@@ -229,7 +231,7 @@ struct NotificationCard: View {
 
                         if !notification.isRead {
                             Circle()
-                                .fill(Color(red: 0.39, green: 0.4, blue: 0.95))
+                                .fill(themeManager.semanticBlue)
                                 .frame(width: 8, height: 8)
                         }
                     }
@@ -250,15 +252,19 @@ struct NotificationCard: View {
             .padding(16)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassEffect)
+                    .fill(themeManager.glassSurface)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(
                                 notification.isRead
                                     ? themeManager.strokeColor
-                                    : Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.3),
+                                    : themeManager.semanticBlue.opacity(0.3),
                                 lineWidth: notification.isRead ? 1 : 2
                             )
+                    )
+                    .shadow(
+                        color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                        radius: 12, x: 0, y: 4
                     )
             )
         }

@@ -117,7 +117,7 @@ struct ProgressRingsView: View {
         ], spacing: WarmSpacing.regular) {
             RingsStatCard(
                 icon: "book.fill",
-                iconColor: Color(hex: "FF2D55"),
+                iconColor: themeManager.semanticRed,
                 title: "Verses Read",
                 value: "\(progressManager.stats.totalVersesRead)",
                 subtitle: "of \(totalQuranVerses)"
@@ -125,7 +125,7 @@ struct ProgressRingsView: View {
 
             RingsStatCard(
                 icon: "checkmark.seal.fill",
-                iconColor: Color(hex: "30D158"),
+                iconColor: themeManager.semanticGreen,
                 title: "Surahs Complete",
                 value: "\(progressManager.stats.totalSurahsCompleted)",
                 subtitle: "of \(totalSurahs)"
@@ -133,7 +133,7 @@ struct ProgressRingsView: View {
 
             RingsStatCard(
                 icon: "questionmark.circle.fill",
-                iconColor: Color(hex: "0A84FF"),
+                iconColor: themeManager.semanticBlue,
                 title: "Quizzes Done",
                 value: "\(quizManager.completedSurahCount)",
                 subtitle: "surahs tested"
@@ -141,7 +141,7 @@ struct ProgressRingsView: View {
 
             RingsStatCard(
                 icon: "sparkles",
-                iconColor: Color(hex: "FFD60A"),
+                iconColor: themeManager.semanticYellow,
                 title: "Total Sawab",
                 value: formatSawab(progressManager.stats.totalSawab),
                 subtitle: "blessings earned"
@@ -282,6 +282,7 @@ struct RingsStatCard: View {
                 Image(systemName: icon)
                     .font(.system(size: 18))
                     .foregroundColor(iconColor)
+                    .shadow(color: themeManager.isDarkMode ? iconColor.opacity(0.5) : .clear, radius: 8)
 
                 Spacer()
             }

@@ -37,7 +37,7 @@ struct DailyVerseScreen: View {
                                     Circle()
                                         .fill(themeManager.accentGradient)
                                 )
-                                .shadow(color: Color(red: 0.39, green: 0.4, blue: 0.95).opacity(0.4), radius: 12)
+                                .shadow(color: themeManager.accentColor.opacity(0.4), radius: 12)
                         }
                         .scaleEffect(isVisible ? 1 : 0.5)
                         .opacity(isVisible ? 1 : 0)
@@ -127,7 +127,7 @@ struct DailyVerseScreen: View {
                                         .stroke(themeManager.strokeColor, lineWidth: 1)
                                 )
                         )
-                        .shadow(color: Color.black.opacity(0.1), radius: 12)
+                        .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.1), radius: 12)
                         .padding(.horizontal, 24)
                         .opacity(isVisible ? 1 : 0)
                         .offset(y: isVisible ? 0 : 30)
@@ -139,7 +139,7 @@ struct DailyVerseScreen: View {
                         HStack(spacing: 10) {
                             Image(systemName: "calendar")
                                 .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(Color(red: 0.39, green: 0.4, blue: 0.95))
+                                .foregroundColor(themeManager.accentColor)
 
                             Text("Based on Islamic Calendar")
                                 .font(.system(size: 16, weight: .semibold))
@@ -189,7 +189,7 @@ struct DailyVerseScreen: View {
                                         ) : themeManager.purpleGradient)
                             )
                             .shadow(
-                                color: (notificationsEnabled ? Color.green : Color(red: 0.39, green: 0.4, blue: 0.95)).opacity(0.4),
+                                color: (notificationsEnabled ? Color.green : themeManager.accentColor).opacity(0.4),
                                 radius: 12
                             )
                         }

@@ -50,6 +50,7 @@ struct DuaDetailView: View {
                 }
             }
         }
+        .darkScreenAura()
     }
 
     // MARK: - Sections
@@ -84,12 +85,12 @@ struct DuaDetailView: View {
                 Text("🌐")
                     .font(.system(size: 14))
             }
-            .foregroundColor(Color(red: 0.608, green: 0.561, blue: 0.749))
+            .foregroundColor(themeManager.accentColor)
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
             .background {
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.1))
+                    .fill(themeManager.accentColor.opacity(0.1))
             }
         }
     }
@@ -109,6 +110,7 @@ struct DuaDetailView: View {
         Text(dua.arabic)
             .font(.system(size: 28, weight: .regular))
             .foregroundColor(themeManager.primaryText)
+            .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
             .multilineTextAlignment(.center)
             .lineSpacing(12)
             .frame(maxWidth: .infinity)
@@ -241,8 +243,15 @@ struct DuaDetailView: View {
     @ViewBuilder
     private var themedCardBackground: some View {
         RoundedRectangle(cornerRadius: 20)
-            .fill(Color.white)
-            .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
+            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(themeManager.strokeColor, lineWidth: 1)
+            )
+            .shadow(
+                color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                radius: 12, x: 0, y: 4
+            )
     }
 }
 

@@ -39,6 +39,7 @@ struct TodayView: View {
                     DailyReminderBanner(
                         message: dailyMessage.today,
                         surahName: surahName(for: dailyMessage.today.surah),
+                        themeManager: themeManager,
                         onTap: { openMessageSource() }
                     )
                     .padding(.horizontal, 18)
@@ -220,14 +221,14 @@ private struct HijriDatePill: View {
                     .fill(pillBackground)
                     .overlay(
                         Capsule()
-                            .stroke(Color.black.opacity(0.05), lineWidth: 1)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
                     )
             )
             .accessibilityLabel(accessibilityText)
     }
 
     private var pillBackground: Color {
-        Color.white
+        themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white
     }
 }
 
@@ -252,7 +253,7 @@ private struct StreakBadge: View {
                     .fill(badgeBackground)
                     .overlay(
                         Capsule()
-                            .stroke(Color.black.opacity(0.05), lineWidth: 1)
+                            .stroke(themeManager.strokeColor, lineWidth: 1)
                     )
             )
         }
@@ -261,29 +262,22 @@ private struct StreakBadge: View {
     }
 
     private var badgeBackground: Color {
-        Color.white
+        themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white
     }
 
     private var streakColor: Color {
-        Color(red: 0.82, green: 0.48, blue: 0.28) // #D17A48
+        themeManager.accentColor
     }
 }
 
 private struct DailyReminderBanner: View {
     let message: DailyMessage
     let surahName: String
+    let themeManager: ThemeManager
     let onTap: () -> Void
 
     private var bannerGradient: LinearGradient {
-        LinearGradient(
-            colors: [
-                Color(red: 0.957, green: 0.694, blue: 0.533), // #F4B188
-                Color(red: 0.910, green: 0.580, blue: 0.392), // #E89464
-                Color(red: 0.820, green: 0.478, blue: 0.282)  // #D17A48
-            ],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
+        themeManager.accentGradient
     }
 
     private var headlineText: String {
@@ -347,7 +341,7 @@ private struct DailyReminderBanner: View {
             )
             .clipShape(RoundedRectangle(cornerRadius: 22))
             .shadow(
-                color: Color(red: 0.820, green: 0.478, blue: 0.282).opacity(0.28),
+                color: themeManager.accentColor.opacity(0.28),
                 radius: 14, x: 0, y: 12
             )
         }
@@ -424,7 +418,7 @@ private struct ContinueReadingHero: View {
                     .fill(avatarBackground)
                 Text("\(surah.surah.number)")
                     .font(.system(size: 18, weight: .heavy))
-                    .foregroundColor(Color(red: 0.820, green: 0.478, blue: 0.282)) // #D17A48
+                    .foregroundColor(themeManager.accentColor)
             }
             .frame(width: 48, height: 48)
 
@@ -481,7 +475,7 @@ private struct ContinueReadingHero: View {
                             .fill(progressTrackColor)
                             .frame(height: 6)
                         Capsule()
-                            .fill(Color(red: 0.910, green: 0.580, blue: 0.392)) // #E89464
+                            .fill(themeManager.accentColor)
                             .frame(width: max(0, geo.size.width * info.progress), height: 6)
                     }
                 }
@@ -535,25 +529,29 @@ private struct ContinueReadingHero: View {
     private var cardBackground: some View {
         Group {
             RoundedRectangle(cornerRadius: 22)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.06), radius: 9, x: 0, y: 6)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(RoundedRectangle(cornerRadius: 22).stroke(themeManager.strokeColor, lineWidth: 1))
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
+                    radius: 9, x: 0, y: 6
+                )
         }
     }
 
     private var avatarBackground: Color {
-        Color(red: 0.988, green: 0.902, blue: 0.835) // #FCE6D5
+        themeManager.accentColorSoft
     }
 
     private var versePreviewBackground: Color {
-        Color(red: 0.984, green: 0.965, blue: 0.941) // #FBF6F0
+        themeManager.secondaryBackground
     }
 
     private var progressTrackColor: Color {
-        Color(red: 0.945, green: 0.925, blue: 0.902) // #F1ECE6
+        themeManager.tertiaryBackground
     }
 
     private var resumeBackground: Color {
-        Color(red: 0.133, green: 0.110, blue: 0.094) // #221C18
+        themeManager.selectedTheme == .nightSanctuary ? themeManager.accentColor : themeManager.primaryText
     }
 }
 
@@ -569,7 +567,7 @@ private struct DuaOfTheDayCard: View {
                         .fill(iconBackground)
                     Image(systemName: "quote.bubble.fill")
                         .font(.system(size: 14))
-                        .foregroundColor(Color(red: 0.820, green: 0.478, blue: 0.282)) // #D17A48
+                        .foregroundColor(themeManager.accentColor)
                 }
                 .frame(width: 28, height: 28)
 
@@ -599,14 +597,18 @@ private struct DuaOfTheDayCard: View {
     }
 
     private var iconBackground: Color {
-        Color(red: 1.0, green: 0.945, blue: 0.886) // #FFF1E2
+        themeManager.accentColorSoft
     }
 
     private var cardBackground: some View {
         Group {
             RoundedRectangle(cornerRadius: 18)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.05), radius: 7, x: 0, y: 4)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(RoundedRectangle(cornerRadius: 18).stroke(themeManager.strokeColor, lineWidth: 1))
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.05),
+                    radius: 7, x: 0, y: 4
+                )
         }
     }
 }
