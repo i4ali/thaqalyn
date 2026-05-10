@@ -240,8 +240,7 @@ struct FullScreenCommentaryView: View {
         }) {
             // Warm theme: Larger tabs with specific styling
             VStack(spacing: 6) {
-                Text(layerIcon(for: layer))
-                    .font(.system(size: 28))
+                PhosphorIcon(name: layerIcon(for: layer), size: 28)
 
                 Text(layerShortTitle(for: layer))
                     .font(.system(size: 15, weight: .semibold))
@@ -314,8 +313,8 @@ struct FullScreenCommentaryView: View {
                     .fill(layerGradient(for: selectedLayer))
                     .frame(width: 48, height: 48)
                     .overlay(
-                        Text(layerIcon(for: selectedLayer))
-                            .font(.system(size: 24))
+                        PhosphorIcon(name: layerIcon(for: selectedLayer), size: 24)
+                            .foregroundColor(.white)
                     )
                     .shadow(color: layerShadowColor(for: selectedLayer), radius: 8)
                 
@@ -509,11 +508,11 @@ struct FullScreenCommentaryView: View {
     
     private func layerIcon(for layer: TafsirLayer) -> String {
         switch layer {
-        case .foundation: return "🏛️"
-        case .classical: return "📚"
-        case .contemporary: return "🌍"
-        case .ahlulBayt: return "⭐"
-        case .comparative: return "⚖️"
+        case .foundation: return "ph-bank-fill"
+        case .classical: return "ph-books-fill"
+        case .contemporary: return "ph-globe-hemisphere-west-fill"
+        case .ahlulBayt: return "ph-star-fill"
+        case .comparative: return "ph-scales-fill"
         }
     }
     

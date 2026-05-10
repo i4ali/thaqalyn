@@ -91,8 +91,8 @@ struct VerseSummaryView: View {
 
     private var headerView: some View {
         HStack {
-            Text("✨")
-                .font(.system(size: 32))
+            PhosphorIcon(name: "ph-sparkle-fill", size: 32)
+                .foregroundColor(themeManager.accentColor)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text("Gems")

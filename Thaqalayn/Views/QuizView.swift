@@ -361,8 +361,7 @@ struct QuizView: View {
         let (icon, name, color) = layerInfo(layer)
 
         return HStack(spacing: 6) {
-            Text(icon)
-                .font(.system(size: 14))
+            PhosphorIcon(name: icon, size: 14)
 
             Text(name)
                 .font(.system(size: 12, weight: .semibold))
@@ -378,12 +377,12 @@ struct QuizView: View {
 
     private func layerInfo(_ layer: Int) -> (String, String, Color) {
         switch layer {
-        case 1: return ("🏛️", "Foundation", .blue)
-        case 2: return ("📚", "Classical", .purple)
-        case 3: return ("🌍", "Contemporary", .green)
-        case 4: return ("⭐", "Ahlul Bayt", .orange)
-        case 5: return ("⚖️", "Comparative", .red)
-        default: return ("📖", "General", .gray)
+        case 1: return ("ph-bank-fill", "Foundation", .blue)
+        case 2: return ("ph-books-fill", "Classical", .purple)
+        case 3: return ("ph-globe-hemisphere-west-fill", "Contemporary", .green)
+        case 4: return ("ph-star-fill", "Ahlul Bayt", .orange)
+        case 5: return ("ph-scales-fill", "Comparative", .red)
+        default: return ("ph-book-open", "General", .gray)
         }
     }
 

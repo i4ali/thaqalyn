@@ -188,8 +188,8 @@ struct GoToVerseSheet: View {
             VStack(spacing: 24) {
                 // Header
                 VStack(spacing: 8) {
-                    Text("🔍")
-                        .font(.system(size: 40))
+                    PhosphorIcon(name: "ph-magnifying-glass", size: 40)
+                        .foregroundColor(themeManager.accentColor)
 
                     Text("Go to Verse")
                         .font(.system(size: 22, weight: .semibold))
@@ -336,16 +336,14 @@ struct ModernSurahHeader: View {
 
                 HStack(spacing: 20) {
                     HStack(spacing: 6) {
-                        Text("📖")
-                            .font(.system(size: 14))
+                        PhosphorIcon(name: "ph-book-open", size: 14)
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 14, weight: .medium))
                     }
                     .foregroundColor(themeManager.accentColor)
 
                     HStack(spacing: 6) {
-                        Text("📍")
-                            .font(.system(size: 14))
+                        PhosphorIcon(name: "ph-map-pin-fill", size: 14)
                         Text(surah.revelationType)
                             .font(.system(size: 14, weight: .medium))
                     }
@@ -380,8 +378,7 @@ struct ModernSurahHeader: View {
                     // Go to Verse button (icon-only for compact fit)
                     Button(action: onGoToVerse) {
                         Group {
-                            Text("🔍")
-                                .font(.system(size: 18))
+                            PhosphorIcon(name: "ph-magnifying-glass", size: 18)
                         }
                         .foregroundColor(.white)
                         .frame(width: 48, height: 48)
@@ -694,8 +691,7 @@ struct ModernVerseCard: View {
                 }
             }) {
                 HStack(spacing: 6) {
-                    Text("✨")
-                        .font(.system(size: 15))
+                    PhosphorIcon(name: "ph-sparkle-fill", size: 15)
                     Text("Gems")
                         .font(.system(size: 15, weight: .semibold))
                 }
@@ -719,8 +715,7 @@ struct ModernVerseCard: View {
                 }
             }) {
                 HStack(spacing: 6) {
-                    Text("📖")
-                        .font(.system(size: 15))
+                    PhosphorIcon(name: "ph-book-open", size: 15)
                     Text("In-Depth")
                         .font(.system(size: 15, weight: .semibold))
                 }
@@ -874,8 +869,7 @@ struct ModernTafsirTabs: View {
 
         return VStack(spacing: 4) {
             HStack(spacing: 4) {
-                Text(layerIcon(for: layer))
-                    .font(.system(size: 16))
+                PhosphorIcon(name: layerIcon(for: layer), size: 16)
 
                 // Lock icon for locked layers
                 if isLocked {
@@ -948,11 +942,11 @@ struct ModernTafsirTabs: View {
     
     private func layerIcon(for layer: TafsirLayer) -> String {
         switch layer {
-        case .foundation: return "🏛️"
-        case .classical: return "📚"
-        case .contemporary: return "🌍"
-        case .ahlulBayt: return "⭐"
-        case .comparative: return "⚖️"
+        case .foundation: return "ph-bank-fill"
+        case .classical: return "ph-books-fill"
+        case .contemporary: return "ph-globe-hemisphere-west-fill"
+        case .ahlulBayt: return "ph-star-fill"
+        case .comparative: return "ph-scales-fill"
         }
     }
     
@@ -990,8 +984,8 @@ struct ModernTafsirContent: View {
                 .fill(layerGradient(for: layer))
                 .frame(width: 40, height: 40)
                 .overlay(
-                    Text(layerIcon(for: layer))
-                        .font(.system(size: 18))
+                    PhosphorIcon(name: layerIcon(for: layer), size: 18)
+                        .foregroundColor(.white)
                 )
                 .shadow(color: layerShadowColor(for: layer), radius: 8)
             
@@ -1035,11 +1029,11 @@ struct ModernTafsirContent: View {
     
     private func layerIcon(for layer: TafsirLayer) -> String {
         switch layer {
-        case .foundation: return "🏛️"
-        case .classical: return "📚"
-        case .contemporary: return "🌍"
-        case .ahlulBayt: return "⭐"
-        case .comparative: return "⚖️"
+        case .foundation: return "ph-bank-fill"
+        case .classical: return "ph-books-fill"
+        case .contemporary: return "ph-globe-hemisphere-west-fill"
+        case .ahlulBayt: return "ph-star-fill"
+        case .comparative: return "ph-scales-fill"
         }
     }
     

@@ -284,11 +284,11 @@ struct PaywallLayersHero: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     private let layers: [(emoji: String, title: String, tagline: String, color: Color)] = [
-        ("🏛️", "Foundation", "Historical context & basics", .blue),
-        ("📚", "Classical Shia", "Tabatabai & Tabrisi", .purple),
-        ("🌍", "Contemporary", "Modern perspectives", .green),
-        ("⭐", "Ahlul Bayt", "Wisdom of the Infallibles", .orange),
-        ("⚖️", "Comparative", "Shia & Sunni analysis", .indigo)
+        ("ph-bank-fill", "Foundation", "Historical context & basics", .blue),
+        ("ph-books-fill", "Classical Shia", "Tabatabai & Tabrisi", .purple),
+        ("ph-globe-hemisphere-west-fill", "Contemporary", "Modern perspectives", .green),
+        ("ph-star-fill", "Ahlul Bayt", "Wisdom of the Infallibles", .orange),
+        ("ph-scales-fill", "Comparative", "Shia & Sunni analysis", .indigo)
     ]
 
     var body: some View {
@@ -363,8 +363,8 @@ struct PaywallLayerCard: View {
 
     var body: some View {
         VStack(spacing: 6) {
-            Text(emoji)
-                .font(.system(size: 24))
+            PhosphorIcon(name: emoji, size: 24)
+                .foregroundColor(color)
 
             Text(title)
                 .font(.system(size: 12, weight: .semibold))

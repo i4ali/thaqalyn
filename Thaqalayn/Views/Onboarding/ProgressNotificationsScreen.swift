@@ -33,8 +33,8 @@ struct ProgressNotificationsScreen: View {
                                 .frame(width: 90, height: 90)
                                 .blur(radius: 10)
 
-                            Text("🔥")
-                                .font(.system(size: 48))
+                            PhosphorIcon(name: "ph-flame-fill", size: 48)
+                                .foregroundColor(themeManager.accentColor)
                                 .frame(width: 70, height: 70)
                                 .background(
                                     Circle()

@@ -13,11 +13,11 @@ struct FiveLayersScreen: View {
     @State private var selectedLayer: TafsirLayer?
 
     private let layers: [(layer: TafsirLayer, emoji: String, title: String, description: String)] = [
-        (.foundation, "🏛️", "Foundation", "Simple explanations and historical context"),
-        (.classical, "📚", "Classical Shia", "Tabatabai, Tabrisi, traditional scholars"),
-        (.contemporary, "🌍", "Contemporary", "Modern perspectives and scientific analysis"),
-        (.ahlulBayt, "⭐", "Ahlul Bayt", "Hadith from the 14 Infallibles"),
-        (.comparative, "⚖️", "Comparative", "Balanced Shia and Sunni scholarly analysis")
+        (.foundation, "ph-bank-fill", "Foundation", "Simple explanations and historical context"),
+        (.classical, "ph-books-fill", "Classical Shia", "Tabatabai, Tabrisi, traditional scholars"),
+        (.contemporary, "ph-globe-hemisphere-west-fill", "Contemporary", "Modern perspectives and scientific analysis"),
+        (.ahlulBayt, "ph-star-fill", "Ahlul Bayt", "Hadith from the 14 Infallibles"),
+        (.comparative, "ph-scales-fill", "Comparative", "Balanced Shia and Sunni scholarly analysis")
     ]
 
     var body: some View {
@@ -90,9 +90,9 @@ struct LayerCard: View {
             VStack(alignment: .leading, spacing: 12) {
                 // Header
                 HStack(spacing: 14) {
-                    // Emoji icon
-                    Text(emoji)
-                        .font(.system(size: 28))
+                    // Layer icon
+                    PhosphorIcon(name: emoji, size: 28)
+                        .foregroundColor(layer.color)
                         .frame(width: 50, height: 50)
                         .background(
                             Circle()

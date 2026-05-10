@@ -99,25 +99,25 @@ struct WelcomeView: View {
                         // Features highlight
                         VStack(spacing: 16) {
                             FeatureRow(
-                                icon: "🏛️",
+                                icon: "ph-bank-fill",
                                 title: "Foundation Layer",
                                 description: "Simple explanations and historical context"
                             )
-                            
+
                             FeatureRow(
-                                icon: "📚",
+                                icon: "ph-books-fill",
                                 title: "Classical Shia Commentary",
                                 description: "Tabatabai, Tabrisi, and traditional scholars"
                             )
-                            
+
                             FeatureRow(
-                                icon: "🌍",
+                                icon: "ph-globe-hemisphere-west-fill",
                                 title: "Contemporary Insights",
                                 description: "Modern perspectives and scientific analysis"
                             )
-                            
+
                             FeatureRow(
-                                icon: "⭐",
+                                icon: "ph-star-fill",
                                 title: "Ahlul Bayt Wisdom",
                                 description: "Hadith from the 14 Infallibles"
                             )
@@ -244,10 +244,10 @@ struct FeatureRow: View {
     
     var body: some View {
         HStack(spacing: 16) {
-            Text(icon)
-                .font(.system(size: 24))
+            PhosphorIcon(name: icon, size: 24)
+                .foregroundColor(themeManager.accentColor)
                 .frame(width: 32, height: 32)
-            
+
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.system(size: 16, weight: .semibold))

@@ -175,9 +175,13 @@ struct TodayView: View {
     @ViewBuilder
     private var greeting: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("Assalāmu ʿalaykum 🌙")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.secondaryText)
+            HStack(spacing: 6) {
+                Text("Assalāmu ʿalaykum")
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(themeManager.secondaryText)
+                PhosphorIcon(name: "ph-moon-stars-fill", size: 14)
+                    .foregroundColor(themeManager.accentColor)
+            }
 
             Text("Today")
                 .font(.system(size: 32, weight: .heavy))
@@ -240,8 +244,8 @@ private struct StreakBadge: View {
     var body: some View {
         Button(action: onTap) {
             HStack(spacing: 6) {
-                Text("🔥")
-                    .font(.system(size: 14))
+                PhosphorIcon(name: "ph-flame-fill", size: 14)
+                    .foregroundColor(streakColor)
                 Text("\(streak)")
                     .font(.system(size: 14, weight: .bold))
                     .foregroundColor(streakColor)

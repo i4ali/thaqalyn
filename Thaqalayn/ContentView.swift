@@ -238,9 +238,13 @@ struct SurahListView: View {
 
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Assalamu Alaikum 🌙")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.secondaryText)
+                        HStack(spacing: 6) {
+                            Text("Assalamu Alaikum")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                            PhosphorIcon(name: "ph-moon-stars-fill", size: 16)
+                                .foregroundColor(themeManager.accentColor)
+                        }
 
                         Text("The Holy Quran")
                             .font(.system(size: 34, weight: .bold, design: .rounded))
@@ -252,8 +256,8 @@ struct SurahListView: View {
                 
                 // Search bar with glassmorphism
                 HStack {
-                    Text("🔍")
-                        .font(.system(size: 20))
+                    PhosphorIcon(name: "ph-magnifying-glass", size: 18)
+                        .foregroundColor(themeManager.tertiaryText)
 
                     TextField("Search surahs...", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
@@ -482,16 +486,16 @@ struct ModernSurahCard: View {
                 
                 HStack(spacing: 16) {
                     HStack(spacing: 4) {
-                        Text("📖")
-                            .font(.system(size: 12))
+                        PhosphorIcon(name: "ph-book-open", size: 12)
+                            .foregroundColor(themeManager.tertiaryText)
                         Text("\(surah.versesCount) verses")
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
                     }
 
                     HStack(spacing: 4) {
-                        Text("📍")
-                            .font(.system(size: 12))
+                        PhosphorIcon(name: "ph-map-pin-fill", size: 12)
+                            .foregroundColor(themeManager.tertiaryText)
                         Text(surah.revelationType)
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
@@ -499,8 +503,8 @@ struct ModernSurahCard: View {
 
                     if readCount > 0 {
                         HStack(spacing: 4) {
-                            Text(percentage >= 100 ? "📙" : "📗")
-                                .font(.system(size: 12))
+                            PhosphorIcon(name: percentage >= 100 ? "ph-trophy-fill" : "ph-seal-check-fill", size: 12)
+                                .foregroundColor(percentage >= 100 ? .orange : .green)
                             Text("\(percentage)%")
                                 .font(.system(size: 12, weight: .semibold))
                                 .foregroundColor(percentage >= 100 ? .orange : .green)
@@ -1136,7 +1140,8 @@ struct BookmarkBadge: View {
     var body: some View {
         NavigationLink(destination: BookmarksView()) {
             HStack(spacing: 6) {
-                Text("❤️").font(.system(size: 20))
+                PhosphorIcon(name: "ph-heart-fill", size: 18)
+                    .foregroundColor(themeManager.accentColor)
                 Text("\(bookmarkManager.bookmarks.count)")
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(themeManager.accentColor)
@@ -1168,8 +1173,8 @@ struct NotificationBell: View {
         Button(action: {
             showingNotifications = true
         }) {
-            Text("🔔")
-                .font(.system(size: 20))
+            PhosphorIcon(name: "ph-bell", size: 20)
+                .foregroundColor(themeManager.primaryText)
         }
         .buttonStyle(PlainButtonStyle())
     }
