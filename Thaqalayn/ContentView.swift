@@ -48,6 +48,9 @@ struct ContentView: View {
         .onAppear {
             checkFirstLaunch()
             ratingManager.recordAppLaunch()
+            if IslamicCalendarManager.shared.isHajjSeason() {
+                Task { await NotificationManager.shared.scheduleArafahReminder() }
+            }
         }
         .onChange(of: themeManager.selectedTheme) { _, newValue in
             ChromeAppearance.apply(for: newValue)

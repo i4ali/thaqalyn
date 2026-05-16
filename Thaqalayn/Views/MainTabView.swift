@@ -17,6 +17,11 @@ struct MainTabView: View {
         IslamicCalendarManager.shared.isRamadanSeason()
     }
 
+    // Check if Hajj season is active (mutually exclusive with Ramadan season)
+    private var isHajjSeason: Bool {
+        IslamicCalendarManager.shared.isHajjSeason()
+    }
+
     var body: some View {
         TabView(selection: $selectedTab) {
             TodayTab(selectedTab: $selectedTab)
@@ -70,6 +75,19 @@ struct MainTabView: View {
                         }
                     }
                     .tag(4)
+            }
+
+            // Conditional Hajj tab - only visible during Hajj season
+            if isHajjSeason {
+                HajjJourneyView()
+                    .tabItem {
+                        Label {
+                            Text("Hajj")
+                        } icon: {
+                            Image(systemName: "building.columns.fill")
+                        }
+                    }
+                    .tag(5)
             }
         }
         .tint(themeManager.accentColor)

@@ -109,6 +109,7 @@ struct ProgressRingsStack: View {
 
 struct RingLegend: View {
     let showRamadanRing: Bool
+    var seasonalLabel: String = "Ramadan"
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
@@ -118,7 +119,7 @@ struct RingLegend: View {
             LegendItem(color: themeManager.semanticBlue, label: "Quizzes")
 
             if showRamadanRing {
-                LegendItem(color: themeManager.semanticYellow, label: "Ramadan")
+                LegendItem(color: themeManager.semanticYellow, label: seasonalLabel)
             }
         }
     }

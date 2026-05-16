@@ -1,0 +1,294 @@
+{
+  "days": [
+    {
+      "id": "day1",
+      "dayNumber": 1,
+      "theme": "The Blessed Ten",
+      "themeArabic": "العَشْرُ المُبارَكَة",
+      "icon": "calendar.badge.exclamationmark",
+      "dua": {
+        "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ عَدَدَ اللَّيَالِي وَالدُّهُورِ، لَا إِلَٰهَ إِلَّا اللَّهُ عَدَدَ أَمْوَاجِ الْبُحُورِ",
+        "transliteration": "La ilaha illa-llahu 'adada-l-layali wa-d-duhur, la ilaha illa-llahu 'adada amwaji-l-buhur",
+        "english": "There is no god but Allah, as numerous as the nights and the ages; there is no god but Allah, as numerous as the waves of the seas.",
+        "source": "Mafatih al-Jinan — Amal of the Ten Days of Dhul-Hijjah"
+      },
+      "verses": [
+        {
+          "id": "h1v1",
+          "surahNumber": 89,
+          "verseNumber": 2,
+          "relevanceNote": "And by the ten nights — understood in tafsir as the first ten nights of Dhul-Hijjah, sworn by for their immense sanctity."
+        },
+        {
+          "id": "h1v2",
+          "surahNumber": 22,
+          "verseNumber": 28,
+          "relevanceNote": "That they may witness benefits for themselves and mention the name of Allah on the appointed days."
+        }
+      ],
+      "tafsirFocus": "Reflect on why Allah swears by 'the ten nights' — these are the most beloved days for righteous deeds. Begin the journey with a sincere intention to draw near to Him.",
+      "reflection": "These ten days will pass quickly. What is the one act of worship you commit to perform every day until Eid?"
+    },
+    {
+      "id": "day2",
+      "dayNumber": 2,
+      "theme": "Remembrance",
+      "themeArabic": "الذِّكْر",
+      "icon": "sparkles",
+      "dua": {
+        "arabic": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ",
+        "transliteration": "Subhana-llahi wa-l-hamdu lillahi wa la ilaha illa-llahu wa-llahu akbar",
+        "english": "Glory be to Allah, all praise is for Allah, there is no god but Allah, and Allah is the Greatest.",
+        "source": "Mafatih al-Jinan — Recommended dhikr of the Ten Days"
+      },
+      "verses": [
+        {
+          "id": "h2v1",
+          "surahNumber": 33,
+          "verseNumber": 41,
+          "relevanceNote": "O you who believe, remember Allah with much remembrance — the essence of these blessed days."
+        },
+        {
+          "id": "h2v2",
+          "surahNumber": 13,
+          "verseNumber": 28,
+          "relevanceNote": "Surely in the remembrance of Allah do hearts find rest."
+        }
+      ],
+      "tafsirFocus": "Dhikr is the simplest yet weightiest deed of these ten days. Explore how constant remembrance polishes the heart and prepares it for the Day of Arafah.",
+      "reflection": "Where in your day is there silence you could fill with the remembrance of Allah?"
+    },
+    {
+      "id": "day3",
+      "dayNumber": 3,
+      "theme": "Repentance",
+      "themeArabic": "التَّوْبَة",
+      "icon": "arrow.counterclockwise",
+      "dua": {
+        "arabic": "أَسْتَغْفِرُ اللَّهَ رَبِّي وَأَتُوبُ إِلَيْهِ، رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ",
+        "transliteration": "Astaghfiru-llaha rabbi wa atubu ilayh, rabbi-ghfir li wa tub 'alayya innaka anta-t-tawwabu-r-rahim",
+        "english": "I seek the forgiveness of Allah my Lord and turn to Him in repentance. My Lord, forgive me and accept my repentance; indeed You are the Ever-Relenting, the Merciful.",
+        "source": "Supplication of Imam al-Sajjad (AS) — al-Sahifa al-Sajjadiyya"
+      },
+      "verses": [
+        {
+          "id": "h3v1",
+          "surahNumber": 66,
+          "verseNumber": 8,
+          "relevanceNote": "O you who believe, turn to Allah in sincere repentance (tawbatan nasuha)."
+        },
+        {
+          "id": "h3v2",
+          "surahNumber": 39,
+          "verseNumber": 53,
+          "relevanceNote": "Do not despair of the mercy of Allah; indeed Allah forgives all sins."
+        }
+      ],
+      "tafsirFocus": "Tawba is the gateway of these ten days. Examine the conditions of sincere repentance and the boundless mercy that meets the one who returns.",
+      "reflection": "Is there a sin you have postponed leaving? Let these days be the moment you turn back."
+    },
+    {
+      "id": "day4",
+      "dayNumber": 4,
+      "theme": "Pure Monotheism",
+      "themeArabic": "التَّوْحِيد",
+      "icon": "circle.hexagongrid.fill",
+      "dua": {
+        "arabic": "اللَّهُمَّ اجْعَلْ عَمَلِي كُلَّهُ صَالِحًا وَاجْعَلْهُ لِوَجْهِكَ خَالِصًا وَلَا تَجْعَلْ لِأَحَدٍ فِيهِ شَيْئًا",
+        "transliteration": "Allahumma-j'al 'amali kullahu salihan wa-j'alhu li-wajhika khalisan wa la taj'al li-ahadin fihi shay'a",
+        "english": "O Allah, make all my deeds righteous and make them purely for Your sake, and let no one have any share in them.",
+        "source": "Supplication attributed to Imam Ali (AS)"
+      },
+      "verses": [
+        {
+          "id": "h4v1",
+          "surahNumber": 112,
+          "verseNumber": 1,
+          "relevanceNote": "Say: He is Allah, the One — the foundation of all sincere worship."
+        },
+        {
+          "id": "h4v2",
+          "surahNumber": 39,
+          "verseNumber": 2,
+          "relevanceNote": "Worship Allah, being sincere to Him in religion."
+        }
+      ],
+      "tafsirFocus": "Tawhid is not only a creed but a state of the heart. Explore ikhlas — purifying intention so that worship is for Allah alone.",
+      "reflection": "Audit your worship today: is any part of it performed for the eyes of people?"
+    },
+    {
+      "id": "day5",
+      "dayNumber": 5,
+      "theme": "Sacrifice & Charity",
+      "themeArabic": "الإيثار",
+      "icon": "hands.and.sparkles.fill",
+      "dua": {
+        "arabic": "اللَّهُمَّ ارْزُقْنِي قَلْبًا سَخِيًّا يُؤْثِرُ رِضَاكَ، وَاجْعَلْنِي مِنَ الْمُتَصَدِّقِينَ",
+        "transliteration": "Allahumma-rzuqni qalban sakhiyyan yu'thiru ridak, wa-j'alni mina-l-mutasaddiqin",
+        "english": "O Allah, grant me a generous heart that prefers Your pleasure, and make me among those who give in charity.",
+        "source": "Mafatih al-Jinan — adapted from the supplications of the Ten Days"
+      },
+      "verses": [
+        {
+          "id": "h5v1",
+          "surahNumber": 22,
+          "verseNumber": 37,
+          "relevanceNote": "It is neither their flesh nor their blood that reaches Allah, but it is your piety that reaches Him."
+        },
+        {
+          "id": "h5v2",
+          "surahNumber": 2,
+          "verseNumber": 177,
+          "relevanceNote": "Righteousness is to give wealth, despite love for it, to kin, orphans, the needy and the traveler."
+        }
+      ],
+      "tafsirFocus": "As Eid al-Adha approaches, reflect on the inner meaning of sacrifice: it is taqwa, not the offering itself, that ascends to Allah.",
+      "reflection": "What is something you love that you could give away for the sake of Allah this week?"
+    },
+    {
+      "id": "day6",
+      "dayNumber": 6,
+      "theme": "The Submission of Ibrahim",
+      "themeArabic": "تَسْلِيمُ إِبْرَاهِيم",
+      "icon": "flame.fill",
+      "dua": {
+        "arabic": "رَبِّ اجْعَلْنِي مُقِيمَ الصَّلَاةِ وَمِنْ ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاءِ",
+        "transliteration": "Rabbi-j'alni muqima-s-salati wa min dhurriyyati rabbana wa taqabbal du'a",
+        "english": "My Lord, make me an establisher of prayer, and many from my descendants. Our Lord, and accept my supplication.",
+        "source": "The supplication of Prophet Ibrahim (AS), Quran 14:40"
+      },
+      "verses": [
+        {
+          "id": "h6v1",
+          "surahNumber": 37,
+          "verseNumber": 102,
+          "relevanceNote": "Ibrahim's submission and Ismail's reply: 'O my father, do as you are commanded.'"
+        },
+        {
+          "id": "h6v2",
+          "surahNumber": 37,
+          "verseNumber": 107,
+          "relevanceNote": "And We ransomed him with a great sacrifice — the divine reward of total submission."
+        }
+      ],
+      "tafsirFocus": "The story of Ibrahim and Ismail is the heart of Eid al-Adha. Explore submission (taslim) as the highest fruit of faith.",
+      "reflection": "What is the 'sacrifice' Allah is asking of you — a habit, a comfort, a fear?"
+    },
+    {
+      "id": "day7",
+      "dayNumber": 7,
+      "theme": "The Call of Hajj",
+      "themeArabic": "نِدَاءُ الحَجّ",
+      "icon": "figure.walk.circle.fill",
+      "dua": {
+        "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ",
+        "transliteration": "Labbayka-llahumma labbayk, labbayka la sharika laka labbayk, inna-l-hamda wa-n-ni'mata laka wa-l-mulk, la sharika lak",
+        "english": "Here I am, O Allah, here I am. Here I am, You have no partner, here I am. Indeed all praise, grace and dominion belong to You; You have no partner.",
+        "source": "The Talbiyah — Mafatih al-Jinan"
+      },
+      "verses": [
+        {
+          "id": "h7v1",
+          "surahNumber": 22,
+          "verseNumber": 27,
+          "relevanceNote": "And proclaim the Hajj to mankind; they will come to you on foot and on every lean camel."
+        },
+        {
+          "id": "h7v2",
+          "surahNumber": 3,
+          "verseNumber": 97,
+          "relevanceNote": "Pilgrimage to the House is a duty owed to Allah by those who can afford the journey."
+        }
+      ],
+      "tafsirFocus": "Even without standing on the plain of Mina, the believer answers the call of Hajj with the heart. Reflect on the meaning of 'Labbayk' — total response to Allah.",
+      "reflection": "When Allah calls you to good, how quickly do you answer 'Here I am'?"
+    },
+    {
+      "id": "day8",
+      "dayNumber": 8,
+      "theme": "Day of Tarwiyah",
+      "themeArabic": "يَوْمُ التَّرْوِيَة",
+      "icon": "drop.fill",
+      "dua": {
+        "arabic": "اللَّهُمَّ ارْزُقْنِي حَجَّ بَيْتِكَ الْحَرَامِ فِي عَامِي هَٰذَا وَفِي كُلِّ عَامٍ مَا أَبْقَيْتَنِي",
+        "transliteration": "Allahumma-rzuqni hajja baytika-l-harami fi 'ami hadha wa fi kulli 'amin ma abqaytani",
+        "english": "O Allah, grant me the pilgrimage to Your Sacred House this year and every year for as long as You keep me alive.",
+        "source": "Mafatih al-Jinan — Amal of the 8th of Dhul-Hijjah (Day of Tarwiyah)"
+      },
+      "verses": [
+        {
+          "id": "h8v1",
+          "surahNumber": 2,
+          "verseNumber": 197,
+          "relevanceNote": "The Hajj is well-known months; whatever good you do, Allah knows it. Take provision — and the best provision is taqwa."
+        },
+        {
+          "id": "h8v2",
+          "surahNumber": 22,
+          "verseNumber": 32,
+          "relevanceNote": "Whoever honors the symbols of Allah — that is from the piety of hearts."
+        }
+      ],
+      "tafsirFocus": "On Tarwiyah the pilgrims set out toward Mina. Reflect on 'the best provision is taqwa' — the provision that prepares the soul for the great day to come.",
+      "reflection": "Tomorrow's eve leads to Arafah. What spiritual 'provision' will you carry into it?"
+    },
+    {
+      "id": "day9",
+      "dayNumber": 9,
+      "theme": "The Day of Arafah",
+      "themeArabic": "يَوْمُ عَرَفَة",
+      "icon": "mountain.2.fill",
+      "dua": {
+        "arabic": "اللَّهُمَّ اجْعَلْنِي أَخْشَاكَ كَأَنِّي أَرَاكَ، وَأَسْعِدْنِي بِتَقْوَاكَ، وَلَا تُشْقِنِي بِمَعْصِيَتِكَ، وَخِرْ لِي فِي قَضَائِكَ، وَبَارِكْ لِي فِي قَدَرِكَ",
+        "transliteration": "Allahumma-j'alni akhshaka ka-anni araka, wa as'idni bi-taqwaka, wa la tushqini bi-ma'siyatika, wa khir li fi qada'ika, wa barik li fi qadarik",
+        "english": "O Allah, make me fear You as though I see You, make me happy through piety toward You, do not make me wretched through disobedience to You, choose for me what is best in Your decree, and bless me in Your destiny.",
+        "source": "Du'a Arafah of Imam al-Husayn (AS) — Mafatih al-Jinan"
+      },
+      "verses": [
+        {
+          "id": "h9v1",
+          "surahNumber": 2,
+          "verseNumber": 198,
+          "relevanceNote": "When you depart from Arafat, remember Allah at the Sacred Monument — the very place named in this day's worship."
+        },
+        {
+          "id": "h9v2",
+          "surahNumber": 7,
+          "verseNumber": 55,
+          "relevanceNote": "Call upon your Lord humbly and in secret — the spirit of the Day of Arafah."
+        }
+      ],
+      "tafsirFocus": "Arafah is the greatest day of supplication of the year. Reflect on a line from Imam al-Husayn's Du'a Arafah and the meaning of recognizing Allah through His own light.",
+      "reflection": "Spend part of this day in du'a as though standing on the plain of Arafah. What does your heart most need to ask of Allah?"
+    },
+    {
+      "id": "day10",
+      "dayNumber": 10,
+      "theme": "Eid al-Adha",
+      "themeArabic": "عِيدُ الأَضْحَى",
+      "icon": "moon.stars.fill",
+      "dua": {
+        "arabic": "اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ، لَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ وَلِلَّهِ الْحَمْدُ، اللَّهُ أَكْبَرُ عَلَىٰ مَا هَدَانَا",
+        "transliteration": "Allahu akbar, Allahu akbar, la ilaha illa-llahu wa-llahu akbar, Allahu akbar wa lillahi-l-hamd, Allahu akbar 'ala ma hadana",
+        "english": "Allah is the Greatest, Allah is the Greatest. There is no god but Allah, and Allah is the Greatest. Allah is the Greatest and all praise belongs to Allah. Allah is the Greatest for having guided us.",
+        "source": "Takbirat of Eid al-Adha — Mafatih al-Jinan"
+      },
+      "verses": [
+        {
+          "id": "h10v1",
+          "surahNumber": 108,
+          "verseNumber": 2,
+          "relevanceNote": "So pray to your Lord and sacrifice — the command at the heart of the Day of Eid."
+        },
+        {
+          "id": "h10v2",
+          "surahNumber": 22,
+          "verseNumber": 37,
+          "relevanceNote": "It is your piety that reaches Allah — the lasting fruit of these ten days."
+        }
+      ],
+      "tafsirFocus": "Eid al-Adha crowns the journey. Reflect on the takbirat and on offering not only the sacrifice but a transformed heart that completed the ten blessed days.",
+      "reflection": "You have completed the ten days. What single change will you carry forward into the rest of the year?"
+    }
+  ]
+}
