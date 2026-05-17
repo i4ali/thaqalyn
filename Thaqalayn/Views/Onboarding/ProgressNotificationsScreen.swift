@@ -21,40 +21,22 @@ struct ProgressNotificationsScreen: View {
                     // Header
                     VStack(spacing: 16) {
                         // Icon - Flame for streak
-                        ZStack {
-                            Circle()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [Color.orange.opacity(0.3), Color.red.opacity(0.3)],
-                                        startPoint: .topLeading,
-                                        endPoint: .bottomTrailing
-                                    )
-                                )
-                                .frame(width: 90, height: 90)
-                                .blur(radius: 10)
-
-                            PhosphorIcon(name: "ph-flame-fill", size: 48)
-                                .foregroundColor(themeManager.accentColor)
-                                .frame(width: 70, height: 70)
-                                .background(
-                                    Circle()
-                                        .fill(themeManager.glassEffect)
-                                )
-                                .shadow(color: Color.orange.opacity(0.4), radius: 12)
+                        HeroChip(palette: ThemeManager.chipBrand) {
+                            PhosphorIcon(name: "ph-flame-fill", size: 44)
                         }
                         .scaleEffect(isVisible ? 1 : 0.5)
                         .opacity(isVisible ? 1 : 0)
                         .animation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.2), value: isVisible)
 
                         Text("Stay Motivated")
-                            .font(.system(size: 28, weight: .bold))
+                            .onbHeroTitle()
                             .foregroundColor(themeManager.primaryText)
                             .opacity(isVisible ? 1 : 0)
                             .offset(y: isVisible ? 0 : 20)
                             .animation(Animation.easeOut(duration: 0.6).delay(0.4), value: isVisible)
 
                         Text("Build your reading streak and earn badges")
-                            .font(.system(size: 16, weight: .medium))
+                            .onbBody()
                             .foregroundColor(themeManager.secondaryText)
                             .opacity(isVisible ? 1 : 0)
                             .animation(Animation.easeOut(duration: 0.6).delay(0.5), value: isVisible)
@@ -65,6 +47,7 @@ struct ProgressNotificationsScreen: View {
                         ProgressFeatureCard(
                             icon: "chart.bar.fill",
                             color: .blue,
+                            chip: ThemeManager.chipFoundation,
                             title: "Track Your Progress",
                             description: "See your daily verse count and reading streaks"
                         )
@@ -75,6 +58,7 @@ struct ProgressNotificationsScreen: View {
                         ProgressFeatureCard(
                             icon: "flame.fill",
                             color: .orange,
+                            chip: ThemeManager.chipBrand,
                             title: "Build Streaks",
                             description: "Read daily to maintain your streak and reach new milestones"
                         )
@@ -85,6 +69,7 @@ struct ProgressNotificationsScreen: View {
                         ProgressFeatureCard(
                             icon: "trophy.fill",
                             color: .yellow,
+                            chip: ThemeManager.chipFeatured,
                             title: "Earn Badges",
                             description: "Complete surahs and hit milestones to unlock achievements"
                         )
@@ -118,7 +103,7 @@ struct ProgressNotificationsScreen: View {
                                             colors: [Color.green, Color.green.opacity(0.8)],
                                             startPoint: .topLeading,
                                             endPoint: .bottomTrailing
-                                        ) : themeManager.purpleGradient)
+                                        ) : themeManager.accentGradient)
                             )
                             .shadow(
                                 color: (progressNotificationsEnabled ? Color.green : themeManager.accentColor).opacity(0.4),
@@ -141,7 +126,7 @@ struct ProgressNotificationsScreen: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(themeManager.primaryBackground)
+        .background(OnboardingBackground(tilt: .sage))
         .onAppear {
             isVisible = true
         }
@@ -151,6 +136,7 @@ struct ProgressNotificationsScreen: View {
 struct ProgressFeatureCard: View {
     let icon: String
     let color: Color
+    let chip: ThemeManager.ChipColor
     let title: String
     let description: String
     @StateObject private var themeManager = ThemeManager.shared
@@ -160,37 +146,29 @@ struct ProgressFeatureCard: View {
             // Icon
             ZStack {
                 Circle()
-                    .fill(color.opacity(0.2))
+                    .fill(chip.bg)
                     .frame(width: 50, height: 50)
 
                 Image(systemName: icon)
                     .font(.system(size: 22, weight: .semibold))
-                    .foregroundColor(color)
+                    .foregroundColor(chip.fg)
             }
 
             // Text
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
-                    .font(.system(size: 16, weight: .semibold))
+                    .onbRowTitle()
                     .foregroundColor(themeManager.primaryText)
 
                 Text(description)
-                    .font(.system(size: 14, weight: .medium))
+                    .onbBody()
                     .foregroundColor(themeManager.secondaryText)
                     .lineSpacing(2)
             }
 
             Spacer()
         }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(themeManager.glassEffect)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-        )
+        .onboardingRow()
     }
 }
 

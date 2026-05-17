@@ -10,7 +10,6 @@ import SwiftUI
 struct QuizFeatureScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @State private var isVisible = false
-    @State private var iconPulse = false
     @State private var showQuestion = false
     @State private var selectedAnswer: String? = nil
     @State private var showCorrectFeedback = false
@@ -22,39 +21,9 @@ struct QuizFeatureScreen: View {
             // Header with animated icon
             VStack(spacing: 20) {
                 // Animated brain icon
-                ZStack {
-                    // Glow effect
-                    Circle()
-                        .fill(Color.purple.opacity(0.2))
-                        .frame(width: 100, height: 100)
-                        .blur(radius: 20)
-                        .scaleEffect(iconPulse ? 1.2 : 1.0)
-                        .animation(
-                            Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true),
-                            value: iconPulse
-                        )
-
-                    // Icon background
-                    Circle()
-                        .fill(
-                            LinearGradient(
-                                colors: [Color.purple.opacity(0.3), Color.blue.opacity(0.2)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .frame(width: 80, height: 80)
-
-                    // Brain icon
+                HeroChip(palette: ThemeManager.chipKnowledge, pulseDuration: 2.0) {
                     Image(systemName: "brain.head.profile")
                         .font(.system(size: 38, weight: .semibold))
-                        .foregroundStyle(
-                            LinearGradient(
-                                colors: [.purple, .blue],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
                 }
                 .opacity(isVisible ? 1 : 0)
                 .scaleEffect(isVisible ? 1 : 0.5)
@@ -62,7 +31,7 @@ struct QuizFeatureScreen: View {
 
                 // Title
                 Text("Test Your Knowledge")
-                    .font(.system(size: 34, weight: .bold))
+                    .onbHeroTitle()
                     .foregroundColor(themeManager.primaryText)
                     .opacity(isVisible ? 1 : 0)
                     .offset(y: isVisible ? 0 : -20)
@@ -70,7 +39,7 @@ struct QuizFeatureScreen: View {
 
                 // Subtitle
                 Text("Quizzes for every surah")
-                    .font(.system(size: 17, weight: .medium))
+                    .onbBody()
                     .foregroundColor(themeManager.secondaryText)
                     .opacity(isVisible ? 1 : 0)
                     .animation(Animation.easeOut(duration: 0.6).delay(0.5), value: isVisible)
@@ -101,7 +70,7 @@ struct QuizFeatureScreen: View {
 
             // Bottom message
             Text("Deepen your understanding through reflection")
-                .font(.system(size: 14, weight: .medium))
+                .onbCaption()
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 40)
@@ -110,10 +79,9 @@ struct QuizFeatureScreen: View {
                 .animation(Animation.easeOut(duration: 0.6).delay(0.8), value: isVisible)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(themeManager.primaryBackground)
+        .background(OnboardingBackground(tilt: .mauve))
         .onAppear {
             isVisible = true
-            iconPulse = true
             startAnimationSequence()
         }
     }
@@ -183,17 +151,17 @@ struct DemoQuestionCard: View {
         VStack(spacing: 16) {
             // Layer badge
             HStack(spacing: 6) {
-                Text("🏛️")
-                    .font(.system(size: 14))
-                Text("Foundation")
+                Image(systemName: "square.stack.3d.up.fill")
                     .font(.system(size: 12, weight: .semibold))
+                Text("Foundation")
+                    .onbPill()
             }
-            .foregroundColor(.blue)
+            .foregroundColor(ThemeManager.chipFoundation.fg)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.blue.opacity(0.15))
+                    .fill(ThemeManager.chipFoundation.bg)
             )
 
             // Question
@@ -216,15 +184,7 @@ struct DemoQuestionCard: View {
                 }
             }
         }
-        .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.secondaryBackground.opacity(0.6))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-        )
+        .onboardingCard()
         .opacity(isVisible ? 1 : 0)
         .offset(y: isVisible ? 0 : 40)
         .animation(Animation.easeOut(duration: 0.6), value: isVisible)
@@ -249,7 +209,7 @@ struct DemoAnswerOption: View {
                 return .red.opacity(0.2)
             }
         } else if isSelected {
-            return Color.purple.opacity(0.2)
+            return ThemeManager.chipKnowledge.fg.opacity(0.2)
         }
         return themeManager.secondaryBackground
     }
@@ -262,7 +222,7 @@ struct DemoAnswerOption: View {
                 return .red
             }
         } else if isSelected {
-            return .purple
+            return ThemeManager.chipKnowledge.fg
         }
         return themeManager.strokeColor
     }
@@ -320,7 +280,7 @@ struct DemoResultCard: View {
                 Circle()
                     .fill(
                         LinearGradient(
-                            colors: [Color.purple.opacity(0.3), Color.purple.opacity(0.1)],
+                            colors: [ThemeManager.chipKnowledge.bg, ThemeManager.chipKnowledge.bg.opacity(0.5)],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -331,7 +291,7 @@ struct DemoResultCard: View {
                     .font(.system(size: 44))
                     .foregroundStyle(
                         LinearGradient(
-                            colors: [.purple, Color(red: 0.6, green: 0.4, blue: 0.8)],
+                            colors: [ThemeManager.chipKnowledge.fg, ThemeManager.chipKnowledge.fg],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -346,14 +306,14 @@ struct DemoResultCard: View {
 
                 Text("عالم")
                     .font(.system(size: 18, weight: .medium))
-                    .foregroundColor(.purple)
+                    .foregroundColor(ThemeManager.chipKnowledge.fg)
             }
 
             // Score
             HStack(spacing: 4) {
                 Text("\(score)")
                     .font(.system(size: 48, weight: .bold, design: .rounded))
-                    .foregroundColor(.purple)
+                    .foregroundColor(ThemeManager.chipKnowledge.fg)
                     .contentTransition(.numericText())
 
                 Text("/10")
@@ -367,17 +327,8 @@ struct DemoResultCard: View {
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
         }
-        .padding(24)
+        .onboardingCard(padding: 24)
         .frame(maxWidth: .infinity)
-        .background(
-            RoundedRectangle(cornerRadius: 24)
-                .fill(themeManager.primaryBackground)
-                .shadow(color: Color.purple.opacity(0.2), radius: 20, y: 8)
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 24)
-                .stroke(Color.purple.opacity(0.3), lineWidth: 2)
-        )
         .opacity(isVisible ? 1 : 0)
         .scaleEffect(isVisible ? 1 : 0.8)
         .animation(Animation.spring(response: 0.5, dampingFraction: 0.7), value: isVisible)

@@ -22,7 +22,7 @@ struct MissionScreen: View {
                     // Glow effect
                     ForEach(0..<3) { index in
                         Circle()
-                            .fill(themeManager.accentGradient.opacity(0.3))
+                            .fill(Color(hex: "C66829").opacity(0.18))
                             .frame(width: 140 - CGFloat(index * 20), height: 140 - CGFloat(index * 20))
                             .blur(radius: 10)
                             .scaleEffect(isVisible ? 1 : 0.5)
@@ -66,7 +66,7 @@ struct MissionScreen: View {
                 // Mission statement
                 VStack(spacing: 24) {
                     Text("This app brings those teachings to your fingertips")
-                        .font(.system(size: 26, weight: .semibold))
+                        .onbHeroTitle()
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.center)
                         .lineSpacing(6)
@@ -76,7 +76,7 @@ struct MissionScreen: View {
                         .animation(Animation.easeOut(duration: 0.8).delay(0.8), value: isVisible)
 
                     Text("Through authentic Shia scholarship, connecting you with the Quran and the wisdom of the Ahlul Bayt")
-                        .font(.system(size: 18, weight: .medium))
+                        .onbBody()
                         .foregroundColor(themeManager.secondaryText)
                         .multilineTextAlignment(.center)
                         .lineSpacing(5)
@@ -92,28 +92,32 @@ struct MissionScreen: View {
                         icon: "book.closed.fill",
                         text: "Complete Quranic text with English translation",
                         isVisible: isVisible,
-                        delay: 1.4
+                        delay: 1.4,
+                        chip: ThemeManager.chipBrand
                     )
 
                     HighlightRow(
                         icon: "sparkles",
                         text: "5 layers of authentic Shia commentary",
                         isVisible: isVisible,
-                        delay: 1.6
+                        delay: 1.6,
+                        chip: ThemeManager.chipKnowledge
                     )
 
                     HighlightRow(
                         icon: "bell.fill",
                         text: "Daily verses aligned with Islamic calendar",
                         isVisible: isVisible,
-                        delay: 1.8
+                        delay: 1.8,
+                        chip: ThemeManager.chipFeatured
                     )
 
                     HighlightRow(
                         icon: "heart.fill",
                         text: "Save and sync bookmarks across devices",
                         isVisible: isVisible,
-                        delay: 2.0
+                        delay: 2.0,
+                        chip: ThemeManager.chipWarmth
                     )
                 }
                 .padding(.horizontal, 30)
@@ -122,7 +126,7 @@ struct MissionScreen: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(themeManager.primaryBackground)
+        .background(OnboardingBackground(tilt: .lavender))
         .onAppear {
             isVisible = true
             startShimmerAnimation()
@@ -150,24 +154,22 @@ struct HighlightRow: View {
     let text: String
     let isVisible: Bool
     let delay: Double
+    let chip: ThemeManager.ChipColor
 
     var body: some View {
         HStack(spacing: 14) {
             Image(systemName: icon)
                 .font(.system(size: 18, weight: .semibold))
-                .foregroundColor(.white)
+                .foregroundColor(chip.fg)
                 .frame(width: 38, height: 38)
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(themeManager.accentGradient)
-                )
-                .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
+                .background(RoundedRectangle(cornerRadius: 10).fill(chip.bg))
 
             Text(text)
-                .font(.system(size: 15, weight: .medium))
+                .onbRowTitle()
                 .foregroundColor(themeManager.primaryText)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .onboardingRow()
         .opacity(isVisible ? 1 : 0)
         .offset(x: isVisible ? 0 : -30)
         .animation(Animation.easeOut(duration: 0.6).delay(delay), value: isVisible)

@@ -201,6 +201,29 @@ class ThemeManager: ObservableObject {
         }
     }
 
+    // MARK: - Onboarding Variant C (static; onboarding is always warm/light)
+
+    struct ChipColor { let bg: Color; let fg: Color }
+
+    static let chipBrand       = ChipColor(bg: Color(hex: "FCE0CC"), fg: Color(hex: "C66829")) // peach
+    static let chipKnowledge   = ChipColor(bg: Color(hex: "EAD8F0"), fg: Color(hex: "8C539F")) // plum
+    static let chipProgress    = ChipColor(bg: Color(hex: "D6EADF"), fg: Color(hex: "3B8459")) // mint
+    static let chipFoundation  = ChipColor(bg: Color(hex: "D8E8F4"), fg: Color(hex: "3D78B2")) // sky
+    static let chipFeatured    = ChipColor(bg: Color(hex: "F8EAC9"), fg: Color(hex: "B5862A")) // butter
+    static let chipComparative = ChipColor(bg: Color(hex: "E6DDE9"), fg: Color(hex: "7B6688")) // mauve
+    static let chipWarmth      = ChipColor(bg: Color(hex: "F4D8D8"), fg: Color(hex: "C25656")) // rose
+
+    enum OnboardingTilt { case peach, lavender, mauve, sage }
+
+    static func tiltColors(_ tilt: OnboardingTilt) -> [Color] {
+        switch tilt {
+        case .peach:    return [Color(hex: "F5E6E6"), Color(hex: "F8E5D2"), Color(hex: "FAF2E8")]
+        case .lavender: return [Color(hex: "F1E9F4"), Color(hex: "F5E8E5"), Color(hex: "FAF2E8")]
+        case .mauve:    return [Color(hex: "ECE3F2"), Color(hex: "F2E6E8"), Color(hex: "FAF2E8")]
+        case .sage:     return [Color(hex: "E6EEEB"), Color(hex: "F0EBE2"), Color(hex: "FAF2E8")]
+        }
+    }
+
     // MARK: - Materials
 
     var glassEffect: Material { .ultraThin }

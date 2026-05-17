@@ -16,8 +16,7 @@ struct HadithScreen: View {
 
     var body: some View {
         ZStack {
-            // Subtle Islamic geometric pattern background
-            GeometricPatternBackground()
+            OnboardingBackground(tilt: .peach)
 
             VStack(spacing: 0) {
                 Spacer()
@@ -25,8 +24,8 @@ struct HadithScreen: View {
                 VStack(spacing: 40) {
                     // Title with glow
                     Text("Hadith of Thaqalayn")
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(themeManager.secondaryText)
+                        .onbHeroTitle()
+                        .foregroundColor(themeManager.primaryText)
                         .overlay(
                             GeometryReader { geometry in
                                 LinearGradient(
@@ -44,12 +43,12 @@ struct HadithScreen: View {
                             }
                             .mask(
                                 Text("Hadith of Thaqalayn")
-                                    .font(.system(size: 20, weight: .semibold))
+                                    .onbHeroTitle()
                             )
                         )
                         .background(
                             Ellipse()
-                                .fill(themeManager.accentGradient.opacity(0.3))
+                                .fill(Color(hex: "C66829").opacity(0.22))
                                 .frame(width: 200, height: 70)
                                 .blur(radius: 20)
                                 .scaleEffect(glowPulse ? 1.1 : 1.0)
@@ -62,60 +61,64 @@ struct HadithScreen: View {
                         .offset(y: isVisible ? 0 : 20)
                         .animation(Animation.easeOut(duration: 0.6).delay(0.3), value: isVisible)
 
-                    // Arabic Hadith
-                    Text("إني تارك فيكم الثقلين:\nكتاب الله وعترتي أهل بيتي،\nما إن تمسكتم بهما\nلن تضلوا بعدي أبداً")
-                        .font(.system(size: 26, weight: .medium, design: .serif))
-                        .foregroundColor(themeManager.primaryText)
+                    VStack(spacing: 24) {
+                        // Arabic Hadith
+                        Text("إني تارك فيكم الثقلين:\nكتاب الله وعترتي أهل بيتي،\nما إن تمسكتم بهما\nلن تضلوا بعدي أبداً")
+                            .font(.system(size: 26, weight: .medium, design: .serif))
+                            .foregroundColor(themeManager.primaryText)
+                            .multilineTextAlignment(.center)
+                            .lineSpacing(8)
+                            .padding(.horizontal, 30)
+                            .opacity(isVisible ? 1 : 0)
+                            .offset(y: isVisible ? 0 : 30)
+                            .animation(Animation.easeOut(duration: 0.8).delay(0.6), value: isVisible)
+
+                        // Divider
+                        Capsule()
+                            .fill(Color(hex: "C66829"))
+                            .frame(width: 60, height: 3)
+                            .opacity(isVisible ? 1 : 0)
+                            .scaleEffect(x: isVisible ? 1 : 0, y: 1)
+                            .animation(Animation.easeOut(duration: 0.5).delay(0.9), value: isVisible)
+
+                        // English Translation
+                        VStack(spacing: 12) {
+                            Text("\"I am leaving among you two weighty things:")
+                                .font(.system(size: 18, weight: .medium))
+                                .foregroundColor(themeManager.primaryText)
+
+                            Text("the Book of Allah and my progeny,")
+                                .font(.system(size: 18, weight: .medium))
+                                .foregroundColor(themeManager.primaryText)
+
+                            Text("the people of my household.")
+                                .font(.system(size: 18, weight: .medium))
+                                .foregroundColor(themeManager.primaryText)
+
+                            Text("As long as you hold fast to them,")
+                                .font(.system(size: 18, weight: .medium))
+                                .foregroundColor(themeManager.primaryText)
+
+                            Text("you shall never go astray.\"")
+                                .font(.system(size: 18, weight: .medium))
+                                .foregroundColor(themeManager.primaryText)
+                        }
                         .multilineTextAlignment(.center)
-                        .lineSpacing(8)
+                        .lineSpacing(4)
                         .padding(.horizontal, 30)
                         .opacity(isVisible ? 1 : 0)
                         .offset(y: isVisible ? 0 : 30)
-                        .animation(Animation.easeOut(duration: 0.8).delay(0.6), value: isVisible)
+                        .animation(Animation.easeOut(duration: 0.8).delay(1.1), value: isVisible)
 
-                    // Divider
-                    Capsule()
-                        .fill(themeManager.accentGradient)
-                        .frame(width: 60, height: 3)
-                        .opacity(isVisible ? 1 : 0)
-                        .scaleEffect(x: isVisible ? 1 : 0, y: 1)
-                        .animation(Animation.easeOut(duration: 0.5).delay(0.9), value: isVisible)
-
-                    // English Translation
-                    VStack(spacing: 12) {
-                        Text("\"I am leaving among you two weighty things:")
-                            .font(.system(size: 18, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-
-                        Text("the Book of Allah and my progeny,")
-                            .font(.system(size: 18, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-
-                        Text("the people of my household.")
-                            .font(.system(size: 18, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-
-                        Text("As long as you hold fast to them,")
-                            .font(.system(size: 18, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-
-                        Text("you shall never go astray.\"")
-                            .font(.system(size: 18, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
+                        // Attribution
+                        Text("— Prophet Muhammad ﷺ")
+                            .font(.system(size: 14, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                            .opacity(isVisible ? 1 : 0)
+                            .animation(Animation.easeOut(duration: 0.6).delay(1.4), value: isVisible)
                     }
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(4)
-                    .padding(.horizontal, 30)
-                    .opacity(isVisible ? 1 : 0)
-                    .offset(y: isVisible ? 0 : 30)
-                    .animation(Animation.easeOut(duration: 0.8).delay(1.1), value: isVisible)
-
-                    // Attribution
-                    Text("— Prophet Muhammad ﷺ")
-                        .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                        .opacity(isVisible ? 1 : 0)
-                        .animation(Animation.easeOut(duration: 0.6).delay(1.4), value: isVisible)
+                    .onboardingCard()
+                    .padding(.horizontal, 22)
                 }
 
                 Spacer()

@@ -13,46 +13,15 @@ struct ProgressTrackingScreen: View {
     @State private var isCheckboxChecked = false
     @State private var showProgressCard = false
     @State private var animatedPercentage = 0
-    @State private var iconPulse = false
 
     var body: some View {
         VStack(spacing: 0) {
             // Header with animated icon
             VStack(spacing: 20) {
                 // Animated checkmark icon
-                ZStack {
-                    // Glow effect
-                    Circle()
-                        .fill(Color.green.opacity(0.2))
-                        .frame(width: 100, height: 100)
-                        .blur(radius: 20)
-                        .scaleEffect(iconPulse ? 1.2 : 1.0)
-                        .animation(
-                            Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true),
-                            value: iconPulse
-                        )
-
-                    // Icon background
-                    Circle()
-                        .fill(
-                            LinearGradient(
-                                colors: [Color.green.opacity(0.3), Color.green.opacity(0.2)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .frame(width: 80, height: 80)
-
-                    // Checkmark icon
+                HeroChip(palette: ThemeManager.chipProgress, pulseDuration: 2.0) {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 38, weight: .semibold))
-                        .foregroundStyle(
-                            LinearGradient(
-                                colors: [.green, Color(red: 0.2, green: 0.7, blue: 0.4)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
                 }
                 .opacity(isVisible ? 1 : 0)
                 .scaleEffect(isVisible ? 1 : 0.5)
@@ -60,7 +29,7 @@ struct ProgressTrackingScreen: View {
 
                 // Title
                 Text("Track Your Progress")
-                    .font(.system(size: 34, weight: .bold))
+                    .onbHeroTitle()
                     .foregroundColor(themeManager.primaryText)
                     .opacity(isVisible ? 1 : 0)
                     .offset(y: isVisible ? 0 : -20)
@@ -68,7 +37,7 @@ struct ProgressTrackingScreen: View {
 
                 // Subtitle
                 Text("Master the Quran, verse by verse")
-                    .font(.system(size: 17, weight: .medium))
+                    .onbBody()
                     .foregroundColor(themeManager.secondaryText)
                     .opacity(isVisible ? 1 : 0)
                     .animation(Animation.easeOut(duration: 0.6).delay(0.5), value: isVisible)
@@ -94,7 +63,7 @@ struct ProgressTrackingScreen: View {
 
             // Bottom message
             Text("Your progress syncs across all your devices")
-                .font(.system(size: 14, weight: .medium))
+                .onbCaption()
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 40)
@@ -103,10 +72,9 @@ struct ProgressTrackingScreen: View {
                 .animation(Animation.easeOut(duration: 0.6).delay(0.3), value: showProgressCard)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(themeManager.primaryBackground)
+        .background(OnboardingBackground(tilt: .sage))
         .onAppear {
             isVisible = true
-            iconPulse = true
             startAnimationSequence()
         }
     }
@@ -159,7 +127,7 @@ struct DemoVerseCard: View {
                 Circle()
                     .fill(
                         LinearGradient(
-                            colors: [.purple, .blue],
+                            colors: [ThemeManager.chipKnowledge.fg, ThemeManager.chipFoundation.fg],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -205,15 +173,7 @@ struct DemoVerseCard: View {
                 .multilineTextAlignment(.center)
                 .lineSpacing(4)
         }
-        .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.secondaryBackground.opacity(0.6))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-        )
+        .onboardingCard()
         .opacity(isVisible ? 1 : 0)
         .offset(y: isVisible ? 0 : 40)
         .animation(Animation.easeOut(duration: 0.7).delay(0.6), value: isVisible)
@@ -243,19 +203,19 @@ struct DemoCheckbox: View {
         ZStack {
             RoundedRectangle(cornerRadius: 6)
                 .strokeBorder(
-                    isChecked ? Color.green : themeManager.strokeColor,
+                    isChecked ? ThemeManager.chipProgress.fg : themeManager.strokeColor,
                     lineWidth: 2
                 )
                 .frame(width: 24, height: 24)
                 .background(
                     RoundedRectangle(cornerRadius: 6)
-                        .fill(isChecked ? AnyShapeStyle(Color.green.opacity(0.3)) : AnyShapeStyle(themeManager.glassEffect))
+                        .fill(isChecked ? AnyShapeStyle(ThemeManager.chipProgress.fg.opacity(0.3)) : AnyShapeStyle(themeManager.glassEffect))
                 )
 
             if isChecked {
                 Image(systemName: "checkmark")
                     .font(.system(size: 12, weight: .bold))
-                    .foregroundColor(.green)
+                    .foregroundColor(ThemeManager.chipProgress.fg)
                     .transition(.scale.combined(with: .opacity))
             }
         }
@@ -279,7 +239,7 @@ struct DemoProgressCard: View {
                 Circle()
                     .fill(
                         LinearGradient(
-                            colors: [Color(red: 0.35, green: 0.40, blue: 0.75), Color(red: 0.25, green: 0.30, blue: 0.65)],
+                            colors: [ThemeManager.chipFoundation.fg, ThemeManager.chipKnowledge.fg],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -307,24 +267,15 @@ struct DemoProgressCard: View {
             HStack(spacing: 6) {
                 Image(systemName: "book.fill")
                     .font(.system(size: 14))
-                    .foregroundColor(.green)
+                    .foregroundColor(ThemeManager.chipProgress.fg)
 
                 Text("\(percentage)%")
                     .font(.system(size: 16, weight: .bold, design: .rounded))
-                    .foregroundColor(.green)
+                    .foregroundColor(ThemeManager.chipProgress.fg)
                     .contentTransition(.numericText())
             }
         }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(themeManager.primaryBackground)
-                .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.1), radius: 12, y: 4)
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.green.opacity(0.3), lineWidth: 1)
-        )
+        .onboardingCard(padding: 16)
         .opacity(showCard ? 1 : 0)
         .offset(y: showCard ? 0 : 20)
         .animation(Animation.easeOut(duration: 0.5), value: showCard)

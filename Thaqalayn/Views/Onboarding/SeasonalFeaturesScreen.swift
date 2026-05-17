@@ -10,7 +10,6 @@ import SwiftUI
 struct SeasonalFeaturesScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @State private var isVisible = false
-    @State private var showMoonGlow = false
     @State private var showFeatureCards = false
     @State private var starsPulse = false
 
@@ -38,44 +37,11 @@ struct SeasonalFeaturesScreen: View {
                             )
                     }
 
-                    // Glow effect
-                    Circle()
-                        .fill(
-                            RadialGradient(
-                                colors: [Color.yellow.opacity(0.3), Color.clear],
-                                center: .center,
-                                startRadius: 0,
-                                endRadius: 60
-                            )
-                        )
-                        .frame(width: 120, height: 120)
-                        .scaleEffect(showMoonGlow ? 1.2 : 0.8)
-                        .animation(
-                            Animation.easeInOut(duration: 2.5).repeatForever(autoreverses: true),
-                            value: showMoonGlow
-                        )
-
-                    // Icon background
-                    Circle()
-                        .fill(
-                            LinearGradient(
-                                colors: [Color.indigo.opacity(0.4), Color.purple.opacity(0.3)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .frame(width: 80, height: 80)
-
-                    // Moon and stars icon
-                    Image(systemName: "moon.stars.fill")
-                        .font(.system(size: 38, weight: .semibold))
-                        .foregroundStyle(
-                            LinearGradient(
-                                colors: [.yellow, .orange],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
+                    HeroChip(palette: ThemeManager.chipKnowledge,
+                             iconColor: ThemeManager.chipBrand.fg) {
+                        Image(systemName: "moon.stars.fill")
+                            .font(.system(size: 38, weight: .semibold))
+                    }
                 }
                 .opacity(isVisible ? 1 : 0)
                 .scaleEffect(isVisible ? 1 : 0.5)
@@ -83,7 +49,7 @@ struct SeasonalFeaturesScreen: View {
 
                 // Title
                 Text("Special Seasons")
-                    .font(.system(size: 34, weight: .bold))
+                    .onbHeroTitle()
                     .foregroundColor(themeManager.primaryText)
                     .opacity(isVisible ? 1 : 0)
                     .offset(y: isVisible ? 0 : -20)
@@ -91,7 +57,7 @@ struct SeasonalFeaturesScreen: View {
 
                 // Subtitle
                 Text("Unique experiences for blessed months")
-                    .font(.system(size: 17, weight: .medium))
+                    .onbBody()
                     .foregroundColor(themeManager.secondaryText)
                     .opacity(isVisible ? 1 : 0)
                     .animation(Animation.easeOut(duration: 0.6).delay(0.5), value: isVisible)
@@ -104,10 +70,10 @@ struct SeasonalFeaturesScreen: View {
                 // Ramadan Journey card - expanded
                 SeasonalFeatureExpandedCard(
                     icon: "moon.stars.fill",
-                    iconColors: [.yellow, .orange],
+                    iconColors: [ThemeManager.chipBrand.fg, ThemeManager.chipFeatured.fg],
                     title: "Ramadan Journey",
                     badge: "Seasonal",
-                    badgeColor: .purple,
+                    badgeColor: ThemeManager.chipKnowledge.fg,
                     features: [
                         ("hands.sparkles.fill", "Daily duas from Mafatih al-Jinan"),
                         ("book.pages.fill", "Curated Quranic verses with tafsir"),
@@ -121,10 +87,10 @@ struct SeasonalFeaturesScreen: View {
                 // Future seasons - expanded
                 SeasonalFeatureExpandedCard(
                     icon: "calendar.badge.clock",
-                    iconColors: [.blue, .indigo],
+                    iconColors: [ThemeManager.chipFoundation.fg, ThemeManager.chipComparative.fg],
                     title: "More Coming Soon",
                     badge: "Future",
-                    badgeColor: .blue,
+                    badgeColor: ThemeManager.chipFoundation.fg,
                     features: [
                         ("drop.fill", "Muharram commemorations & Ashura"),
                         ("mountain.2.fill", "Dhul-Hijjah & Hajj season"),
@@ -141,7 +107,7 @@ struct SeasonalFeaturesScreen: View {
 
             // Bottom message
             Text("The Ramadan tab appears automatically\nduring the blessed month")
-                .font(.system(size: 14, weight: .medium))
+                .onbCaption()
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 40)
@@ -150,10 +116,9 @@ struct SeasonalFeaturesScreen: View {
                 .animation(Animation.easeOut(duration: 0.6).delay(0.6), value: showFeatureCards)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(themeManager.primaryBackground)
+        .background(OnboardingBackground(tilt: .lavender))
         .onAppear {
             isVisible = true
-            showMoonGlow = true
             starsPulse = true
 
             // Show feature cards after initial animation
@@ -209,11 +174,11 @@ struct SeasonalFeatureExpandedCard: View {
                 // Title and badge
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
-                        .font(.system(size: 18, weight: .bold))
+                        .onbCardTitle()
                         .foregroundColor(themeManager.primaryText)
 
                     Text(badge)
-                        .font(.system(size: 10, weight: .bold))
+                        .onbPill()
                         .foregroundColor(.white)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 3)
@@ -249,15 +214,7 @@ struct SeasonalFeatureExpandedCard: View {
             }
             .padding(.leading, 4)
         }
-        .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.secondaryBackground.opacity(0.6))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-        )
+        .onboardingCard()
         .opacity(isVisible ? 1 : 0)
         .offset(y: isVisible ? 0 : 30)
         .animation(Animation.easeOut(duration: 0.5).delay(delay), value: isVisible)

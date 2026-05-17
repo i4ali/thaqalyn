@@ -23,14 +23,14 @@ struct FinalScreen: View {
                     // Header
                     VStack(spacing: 16) {
                         Text("Begin Your Journey")
-                            .font(.system(size: 32, weight: .bold))
+                            .onbFinalTitle()
                             .foregroundColor(themeManager.primaryText)
                             .opacity(isVisible ? 1 : 0)
                             .offset(y: isVisible ? 0 : -20)
                             .animation(Animation.easeOut(duration: 0.6).delay(0.2), value: isVisible)
 
                         Text("Sync your reading progress and bookmarks across devices")
-                            .font(.system(size: 16, weight: .medium))
+                            .onbBody()
                             .foregroundColor(themeManager.secondaryText)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 32)
@@ -52,10 +52,10 @@ struct FinalScreen: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(themeManager.purpleGradient)
+                                RoundedRectangle(cornerRadius: 18)
+                                    .fill(themeManager.accentGradient)
                             )
-                            .shadow(color: themeManager.accentColor.opacity(0.4), radius: 12)
+                            .shadow(color: Color(red: 198/255, green: 104/255, blue: 41/255).opacity(0.35), radius: 14, y: 10)
                         }
 
                         // Sign Up
@@ -72,11 +72,11 @@ struct FinalScreen: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(themeManager.glassEffect)
+                                RoundedRectangle(cornerRadius: 18)
+                                    .fill(Color.white)
                                     .overlay(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1.5)
+                                        RoundedRectangle(cornerRadius: 18)
+                                            .stroke(Color(red: 31/255, green: 22/255, blue: 18/255).opacity(0.07), lineWidth: 1)
                                     )
                             )
                         }
@@ -95,26 +95,34 @@ struct FinalScreen: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(themeManager.glassEffect)
+                                RoundedRectangle(cornerRadius: 18)
+                                    .fill(Color.white)
                                     .overlay(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1.5)
+                                        RoundedRectangle(cornerRadius: 18)
+                                            .stroke(Color(red: 31/255, green: 22/255, blue: 18/255).opacity(0.07), lineWidth: 1)
                                     )
                             )
                         }
 
                         // Account benefits note
                         VStack(spacing: 8) {
-                            Text("Account Benefits")
-                                .font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(themeManager.primaryText)
+                            HStack(spacing: 8) {
+                                Image(systemName: "heart.fill")
+                                    .font(.system(size: 12, weight: .bold))
+                                    .foregroundColor(ThemeManager.chipProgress.fg)
+                                    .frame(width: 24, height: 24)
+                                    .background(RoundedRectangle(cornerRadius: 8).fill(ThemeManager.chipProgress.bg))
+                                Text("Account Benefits")
+                                    .onbCardTitle()
+                                    .foregroundColor(themeManager.primaryText)
+                            }
 
                             Text("Sync bookmarks across devices and save your reading progress")
-                                .font(.system(size: 12, weight: .medium))
+                                .onbCaption()
                                 .foregroundColor(themeManager.secondaryText)
                                 .multilineTextAlignment(.center)
                         }
+                        .onboardingCard(padding: 16)
                         .padding(.top, 8)
                     }
                     .padding(.horizontal, 24)
@@ -126,7 +134,7 @@ struct FinalScreen: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(themeManager.primaryBackground)
+        .background(OnboardingBackground(tilt: .peach))
         .onAppear {
             isVisible = true
         }

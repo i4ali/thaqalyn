@@ -24,15 +24,22 @@ struct FiveLayersScreen: View {
         VStack(spacing: 0) {
             // Header
             VStack(spacing: 16) {
+                HeroChip(palette: ThemeManager.chipKnowledge) {
+                    Image(systemName: "square.stack.3d.up.fill").font(.system(size: 38, weight: .semibold))
+                }
+                .opacity(isVisible ? 1 : 0)
+                .scaleEffect(isVisible ? 1 : 0.5)
+                .animation(Animation.spring(response: 0.6, dampingFraction: 0.7).delay(0.1), value: isVisible)
+
                 Text("5 Layers of Wisdom")
-                    .font(.system(size: 32, weight: .bold))
+                    .onbHeroTitle()
                     .foregroundColor(themeManager.primaryText)
                     .opacity(isVisible ? 1 : 0)
                     .offset(y: isVisible ? 0 : -20)
                     .animation(Animation.easeOut(duration: 0.6).delay(0.2), value: isVisible)
 
                 Text("Tap each layer to explore")
-                    .font(.system(size: 16, weight: .medium))
+                    .onbBody()
                     .foregroundColor(themeManager.secondaryText)
                     .opacity(isVisible ? 1 : 0)
                     .animation(Animation.easeOut(duration: 0.6).delay(0.4), value: isVisible)
@@ -52,6 +59,7 @@ struct FiveLayersScreen: View {
                             index: index,
                             isExpanded: selectedLayer == item.layer,
                             isVisible: isVisible,
+                            chip: [ThemeManager.chipFoundation, ThemeManager.chipKnowledge, ThemeManager.chipProgress, ThemeManager.chipBrand, ThemeManager.chipComparative][index],
                             onTap: {
                                 withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                                     selectedLayer = selectedLayer == item.layer ? nil : item.layer
@@ -65,7 +73,7 @@ struct FiveLayersScreen: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(themeManager.primaryBackground)
+        .background(OnboardingBackground(tilt: .mauve))
         .onAppear {
             isVisible = true
         }
@@ -83,6 +91,7 @@ struct LayerCard: View {
     let index: Int
     let isExpanded: Bool
     let isVisible: Bool
+    let chip: ThemeManager.ChipColor
     let onTap: () -> Void
 
     var body: some View {
@@ -92,16 +101,13 @@ struct LayerCard: View {
                 HStack(spacing: 14) {
                     // Layer icon
                     PhosphorIcon(name: emoji, size: 28)
-                        .foregroundColor(layer.color)
+                        .foregroundColor(chip.fg)
                         .frame(width: 50, height: 50)
-                        .background(
-                            Circle()
-                                .fill(layer.color.opacity(0.15))
-                        )
+                        .background(Circle().fill(chip.bg))
 
                     VStack(alignment: .leading, spacing: 4) {
                         Text(title)
-                            .font(.system(size: 18, weight: .semibold))
+                            .onbCardTitle()
                             .foregroundColor(themeManager.primaryText)
 
                         if !isExpanded {
@@ -142,7 +148,7 @@ struct LayerCard: View {
                                 .padding(.vertical, 6)
                                 .background(
                                     Capsule()
-                                        .fill(layer.color)
+                                        .fill(chip.fg)
                                 )
 
                             Spacer()
@@ -154,20 +160,18 @@ struct LayerCard: View {
             }
             .padding(18)
             .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassEffect)
+                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    .fill(Color.white)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 16)
+                        RoundedRectangle(cornerRadius: 18, style: .continuous)
                             .strokeBorder(
-                                isExpanded ? layer.color.opacity(0.5) : themeManager.strokeColor,
-                                lineWidth: isExpanded ? 2 : 1
+                                isExpanded ? chip.fg.opacity(0.5) : Color.clear,
+                                lineWidth: isExpanded ? 2 : 0
                             )
                     )
+                    .shadow(color: Color(red: 60/255, green: 40/255, blue: 20/255).opacity(0.04), radius: 6, x: 0, y: 2)
             )
-            .shadow(
-                color: isExpanded ? layer.color.opacity(0.2) : Color.clear,
-                radius: isExpanded ? 12 : 0
-            )
+            .shadow(color: isExpanded ? chip.fg.opacity(0.18) : Color.clear, radius: isExpanded ? 12 : 0)
         }
         .buttonStyle(PlainButtonStyle())
         .opacity(isVisible ? 1 : 0)

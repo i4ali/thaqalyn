@@ -23,35 +23,23 @@ struct DailyVerseScreen: View {
                     // Header
                     VStack(spacing: 16) {
                         // Icon
-                        ZStack {
-                            Circle()
-                                .fill(themeManager.accentGradient.opacity(0.2))
-                                .frame(width: 90, height: 90)
-                                .blur(radius: 10)
-
+                        HeroChip(palette: ThemeManager.chipBrand) {
                             Image(systemName: "bell.fill")
                                 .font(.system(size: 36, weight: .semibold))
-                                .foregroundColor(.white)
-                                .frame(width: 70, height: 70)
-                                .background(
-                                    Circle()
-                                        .fill(themeManager.accentGradient)
-                                )
-                                .shadow(color: themeManager.accentColor.opacity(0.4), radius: 12)
                         }
                         .scaleEffect(isVisible ? 1 : 0.5)
                         .opacity(isVisible ? 1 : 0)
                         .animation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.2), value: isVisible)
 
                         Text("Your Daily Companion")
-                            .font(.system(size: 28, weight: .bold))
+                            .onbHeroTitle()
                             .foregroundColor(themeManager.primaryText)
                             .opacity(isVisible ? 1 : 0)
                             .offset(y: isVisible ? 0 : 20)
                             .animation(Animation.easeOut(duration: 0.6).delay(0.4), value: isVisible)
 
                         Text("Start each day with a meaningful verse")
-                            .font(.system(size: 16, weight: .medium))
+                            .onbBody()
                             .foregroundColor(themeManager.secondaryText)
                             .opacity(isVisible ? 1 : 0)
                             .animation(Animation.easeOut(duration: 0.6).delay(0.5), value: isVisible)
@@ -78,7 +66,7 @@ struct DailyVerseScreen: View {
 
                                 Image(systemName: "star.fill")
                                     .font(.system(size: 18))
-                                    .foregroundColor(.yellow)
+                                    .foregroundColor(ThemeManager.chipFeatured.fg)
                             }
 
                             // Verse content
@@ -106,28 +94,19 @@ struct DailyVerseScreen: View {
                                 HStack {
                                     Text(todayVerse.theme)
                                         .font(.system(size: 12, weight: .medium))
-                                        .foregroundColor(.white)
+                                        .foregroundColor(ThemeManager.chipBrand.fg)
                                         .padding(.horizontal, 12)
                                         .padding(.vertical, 6)
                                         .background(
                                             Capsule()
-                                                .fill(themeManager.accentGradient)
+                                                .fill(ThemeManager.chipBrand.bg)
                                         )
 
                                     Spacer()
                                 }
                             }
                         }
-                        .padding(20)
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        )
-                        .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.1), radius: 12)
+                        .onboardingCard()
                         .padding(.horizontal, 24)
                         .opacity(isVisible ? 1 : 0)
                         .offset(y: isVisible ? 0 : 30)
@@ -139,7 +118,7 @@ struct DailyVerseScreen: View {
                         HStack(spacing: 10) {
                             Image(systemName: "calendar")
                                 .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(themeManager.accentColor)
+                                .foregroundColor(ThemeManager.chipBrand.fg)
 
                             Text("Based on Islamic Calendar")
                                 .font(.system(size: 16, weight: .semibold))
@@ -153,11 +132,7 @@ struct DailyVerseScreen: View {
                             .foregroundColor(themeManager.secondaryText)
                             .lineSpacing(3)
                     }
-                    .padding(18)
-                    .background(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(themeManager.secondaryBackground.opacity(0.5))
-                    )
+                    .onboardingRow()
                     .padding(.horizontal, 24)
                     .opacity(isVisible ? 1 : 0)
                     .animation(Animation.easeOut(duration: 0.6).delay(0.9), value: isVisible)
@@ -186,7 +161,7 @@ struct DailyVerseScreen: View {
                                             colors: [Color.green, Color.green.opacity(0.8)],
                                             startPoint: .topLeading,
                                             endPoint: .bottomTrailing
-                                        ) : themeManager.purpleGradient)
+                                        ) : themeManager.accentGradient)
                             )
                             .shadow(
                                 color: (notificationsEnabled ? Color.green : themeManager.accentColor).opacity(0.4),
@@ -209,7 +184,7 @@ struct DailyVerseScreen: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(themeManager.primaryBackground)
+        .background(OnboardingBackground(tilt: .peach))
         .onAppear {
             isVisible = true
         }
