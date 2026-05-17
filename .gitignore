@@ -113,3 +113,10 @@ tiktok_videos/
 verse_art/
 tiktok_videos/
 video_output/
+
+# Generated media output (root only — NOT scripts/ or tests/ source dirs)
+/tafsir_videos/
+/dhul_hijjah_carousel/
+
+# Stray/junk image accidentally dropped at repo root
+/8527d322-ee79-4a1c-bbeb-1be30da8f6cc.JPG

@@ -19,7 +19,7 @@ a key in conversation, recommend rotating it.
 
 ## The non-negotiable visual rule
 
-Shia tradition does not depict the faces of the Prophet Muhammad ﷺ, the twelve Imams (عليهم السلام), Lady Fatima (س), or the Prophets. In every single image and video prompt, faces of these figures must be **completely covered by a perfectly solid, fully opaque, intensely bright sphere of warm white-gold light, like a small sun where the face would be** — features fully hidden, only the silhouette, hair covering, beard outline, and body visible. This is how the user's existing Al-Thaqalayn content is styled (see the reference image the user shared). See `references/prompt_templates.md` for the full hardened halo language; it is the production default because it survives image-to-video animation.
+Shia tradition does not depict the faces of the Prophet Muhammad ﷺ, the twelve Imams (عليهم السلام), Lady Fatima (س), or the Prophets. In every single image and video prompt, the face of these figures must be **a completely smooth, blank, featureless face — a soft matte pale ivory-white surface with a gentle quiet inner luminosity and only a faint soft glowing aura at its edge, the natural shape/size/position of a real human face (an oval, NOT a circle or ball), framed by the head covering or hair** — absolutely no eyes, nose, mouth, or features of any kind. A dignified grey beard silhouette below/around the blank face is acceptable for elderly figures (it is hair, not a facial feature). This is the canonical Al-Thaqalayn look (see the user's reference image `IMG_0550.jpg`). **Do NOT** use a bright glowing sun-ball, a hard-edged opaque disc, or a floating orb in front of the face — that "hardened halo" style is retired; it reads as a pasted-on sticker and the user rejected it. See `references/prompt_templates.md` for the full blank-face language and the motion recipe that keeps it from being animated into a real face.
 
 Companions and ordinary crowd members (Sahaba, enemies, bystanders) may have visible faces — but be conservative: when in doubt, veil.
 
@@ -32,7 +32,7 @@ This rule is enforced in every prompt the skill emits. Never produce a prompt th
 The user says something like "make a video for Ghadeer" or "do a Mubahala one." Before anything else:
 
 1. **Ask which video model they want to use.** This shapes every downstream prompt. Default options to offer:
-   - **Kling 3.0 (`v3-0-pro` via kie.ai)** — recommended default. Has built-in **Subject Binding** which dramatically reduces halo drift on veiled sacred figures across camera moves. ELO #1 model as of April 2026. Costs more but is the production-tested path.
+   - **Kling 3.0 (`v3-0-pro` via kie.ai)** — recommended default. Has built-in **Subject Binding** which helps hold veiled sacred figures across camera moves (note: even so, the blank face can be completed under upward gaze + motion — see Stage 4b). ELO #1 model as of April 2026. Costs more but is the production-tested path.
    - Kling 2.6 / 2.6 Motion Control — middle ground.
    - Kling 2.1 Master — older flagship, cheaper, less reliable on halos under camera motion.
    Don't decide for them — ask, default to v3-0-pro if they say "you pick."
@@ -70,7 +70,7 @@ Once scenes are approved:
 
 1. For each scene, construct a **detailed image generation prompt** using the template in `references/prompt_templates.md`. Every prompt includes:
    - The locked style preamble (golden hour, oil-painting cinematic, 7th century Arabia, 9:16)
-   - The veiled-faces instruction for sacred figures (mandatory) — use the **hardened halo language** from `references/prompt_templates.md` ("perfectly solid, fully opaque, intensely bright sphere of warm white-gold light positioned IN FRONT OF the face") not the soft "halo of light" phrasing. The hardened version is what survives image-to-video animation.
+   - The blank-face veiling instruction for sacred figures (mandatory) — use the **blank-face language** from `references/prompt_templates.md` ("a completely smooth, blank, featureless soft matte pale ivory-white face... NOT a glowing sun, NOT a hard disc, NOT a floating orb"), listed once per figure. Never use the retired bright sun-ball / opaque-disc phrasing.
    - Scene-specific content
    - **Explicit "no text in image" clause** — Nano Banana sometimes bakes Arabic/English text into the sky area. Always negative-prompt this (the user wants to add overlay text in CapCut, not have it rendered).
    - Negative prompt (no faces on sacred figures, no modern elements, no text artifacts)
@@ -109,17 +109,15 @@ For each approved image:
 
 1. **Pull up the model-specific prompt-guide cheat sheet from Stage 0.** Different Kling versions have different word-count limits, magic phrases, and what-not-to-mention rules. Apply them — don't write generic motion prompts. See `references/video_model_research.md`.
 
-2. Write a **Kling image-to-video prompt** using the template in `references/prompt_templates.md`. Motion should be **subtle and reverent** — this is not an action movie. Good motion for religious content:
-   - Slow camera push-in on the sacred figure
-   - Gentle wind in robes and flags
-   - Soft particulate light (dust motes, shimmering heat)
-   - Crowd sway without individual distinct movement
-   - Sunset rays shifting slowly
-   - Bad motion: anyone turning their head toward camera (risks revealing face), lip-sync attempts, fast pans, anything that "characterizes" a sacred figure
+2. Write a **Kling image-to-video prompt** using the template in `references/prompt_templates.md`. Motion should be **gentle, cinematic, and reverent** — not an action movie, but **not a frozen still either**. A tasteful camera move is the default:
+   - **Default: a gentle camera move** — slow push-in, slow pull-back, or a gentle ~20–30° partial arc / slow parallax around static figures — paired with wind in robes and drifting dust. This is the norm; see the "safe camera-movement envelope" table in `references/prompt_templates.md`.
+   - Soft particulate light (dust motes, shimmering heat), sunset rays shifting slowly, crowd sway without individual movement
+   - Subjects stay locked while the camera moves — a *gentle* move + static figure is the proven sweet spot.
+   - Bad motion: a sacred figure turning/looking up/lifting the head (risks completing the face), a **full 360° orbit**, any camera move combined with an upward gaze, fast pans, lip-sync, handheld shake
 
    **Critical rules** (apply regardless of model):
-   - **Never** mention "halo", "glow", "veil", "radiant", "face", or sacred-figure names ("Prophet", "Imam", "Ali", "Fatima") in the motion prompt. Mentioning them invites Kling to *animate* or *modify* those regions. Describe sacred figures by physical appearance only ("the figure with the bright sphere of light", "the figure on the trench bridge").
-   - For static climactic scenes, lead with the model's documented **"locked-off tripod" magic phrase** (Kling 3.0: `"Locked-off tripod shot, completely static camera."`). Don't combine camera moves with locked subjects — pick one.
+   - **Never** mention "halo", "glow", "veil", "radiant", "face", "blank face", or sacred-figure names ("Prophet", "Imam", "Ali", "Fatima") in the motion prompt. Mentioning them invites Kling to *animate* or *complete* those regions. Describe sacred figures by physical appearance/position only ("the kneeling figure in the brown robe", "the standing figure on the left").
+   - **Reserve the locked-off magic phrase** (`"Locked-off tripod shot, completely static camera."`) **for fragile scenes only** — unavoidable upward gaze, framing very tight on the face, or QC de-escalation. It is not the default.
    - Keep prompts within the model's documented word limit (Kling 3.0: ~15-40 words). Longer prompts overload the motion model and it adds spurious motion.
 
 3. Call Kling. **Use the project's `scripts/kie_kling.py`** — NOT this skill's generic `scripts/generate_video.py`. Reasons:
@@ -146,26 +144,28 @@ For each approved image:
 
 6. Present all videos to the user for review.
 
-### Stage 4b — Halo-drift recovery
+### Stage 4b — Face-completion recovery
 
-The #1 quality problem with AI image-to-video on veiled figures is the halo fading,
-drifting, or being repositioned during the clip — revealing features underneath. Order
-of attempts when a scene's halo drifts:
+The #1 quality problem with AI image-to-video on the blank-face veiling is Kling
+**"completing" the blank face into a real face** (rendering eyes/nose/mouth) — or the
+soft face fading/drifting — during the clip. The blank matte face reads to Kling as a
+*real* face, so any upward gaze, head turn, or camera move invites it to fill in
+features. **Always QC start/mid/end frames of every clip AND the final stitch.** This
+is a hard doctrinal failure — never ship a clip where features appear. Order of attempts
+when a scene's face completes or drifts:
 
-1. **Regenerate Kling with a different seed.** Just re-submit — Kling uses a different random seed each attempt.
-2. **Simplify the motion prompt further.** Strip every mention of the halo, veil, glow, or the figure's name. Cut camera motion if the prompt also locks the subject (the contradiction is what causes drift). See `references/prompt_templates.md` for hard rules.
-3. **Upgrade to Kling 3.0** (`--mode v3-0-pro` via `kie_kling.py`) if you were on v2.x. Subject Binding is purpose-built for this problem.
-4. **Add `--lock-end-frame`** so Kling interpolates between two identical endpoints (mathematically prevents lighting drift).
-5. **Regenerate the SOURCE IMAGE** with a more solid halo (not translucent) — use the **hardened halo language** in `references/prompt_templates.md`. If the figure is in profile, ensure the halo is described as IN FRONT of the visible face, not behind the head.
-6. **FFmpeg face-overlay patch** — if a specific frame range still exposes the face, generate a soft white-gold radial gradient PNG (PIL) and composite it at the face position with `ffmpeg overlay`. Locked-off cameras give consistent face positions, so a single static overlay across the clip works. Non-destructive (always keep `backups/scene_N_orig.mp4`). See `references/prompt_templates.md` for the recipe.
-7. **Ken Burns fallback** — skip Kling entirely for that scene, apply an FFmpeg slow-zoom to the still PNG:
+1. **Regenerate the SOURCE IMAGE so the figures face forward, heads level or slightly bowed** — never craned/looking up. The upward-gaze + motion combination is the single biggest completion trigger (see `references/prompt_templates.md`).
+2. **De-escalate the camera move.** Drop a partial arc → slow push-in, or all the way to fully locked-off (`"Locked-off tripod shot, completely static camera."`) for that scene. Lock all subjects motionless, environment-only, no upward gaze. Prefer **5s**. Strip every mention of the face, glow, or the figure's name.
+3. **Regenerate Kling with a different seed.** Just re-submit — Kling uses a different random seed each attempt.
+4. **Add `--lock-end-frame`** (if available) so Kling interpolates between two identical endpoints.
+5. **Ken Burns fallback (the reliable fix — escalate here fast for any climactic or upward-gaze scene).** Skip Kling entirely for that scene, apply an FFmpeg slow-zoom to the approved still PNG (whose blank faces are perfect). Zero AI animation = zero face-completion risk. This is the standard, expected outcome for reflective/closing/upward-gaze shots — not a last resort.
    ```bash
    python scripts/ken_burns.py \
      --image video_output/<event>/images/scene_1.png \
      --output video_output/<event>/videos/scene_1.mp4 \
      --duration 5.0 --zoom-to 1.18
    ```
-   Zero risk of halo drift because there's no AI animation — just FFmpeg zoompan on the still image. Perfectly acceptable for opening/closing shots and often preferred for reflective content.
+   Zero risk of face-completion because there's no AI animation — just FFmpeg zoompan on the still image. Perfectly acceptable for opening/closing shots and often preferred for reflective content.
 
 ### Stage 5 — Narration (ElevenLabs)
 
@@ -315,7 +315,7 @@ Keep messages short on mobile. One action per turn when possible.
 - `scripts/generate_image.py` (in this skill) — Nano Banana Pro via OpenRouter (default), direct Gemini, or ChatGPT Image. Saves 9:16 PNG.
 - `scripts/generate_narration.py` — ElevenLabs TTS per-scene narration. Reads `<event-dir>/narration.json`, writes `audio/scene_N.mp3`.
 - `scripts/stitch_video.py` — Single-pass FFmpeg stitch. Auto-detects any scene count, handles video/audio duration mismatches, no AAC priming drift.
-- `scripts/ken_burns.py` — FFmpeg slow-zoom on a still PNG. Use as a halo-drift fallback when Kling repeatedly fails a scene.
+- `scripts/ken_burns.py` — FFmpeg slow-zoom on a still PNG. Use as the face-completion fallback when Kling repeatedly fails a scene (standard for climactic/upward-gaze scenes).
 
 ### Legacy / fallback
 

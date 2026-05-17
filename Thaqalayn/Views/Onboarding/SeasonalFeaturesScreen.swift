@@ -101,6 +101,23 @@ struct SeasonalFeaturesScreen: View {
                     delay: 0.2
                 )
 
+                // Muharram Journey card - expanded
+                SeasonalFeatureExpandedCard(
+                    icon: "flame.fill",
+                    iconColors: [ThemeManager.chipBrand.fg, ThemeManager.chipFeatured.fg],
+                    title: "Muharram Journey",
+                    badge: "Seasonal",
+                    badgeColor: ThemeManager.chipKnowledge.fg,
+                    features: [
+                        ("book.closed.fill", "Daily duas & ziyarat from Mafatih al-Jinan"),
+                        ("book.pages.fill", "Curated verses on Karbala's enduring lessons"),
+                        ("heart.fill", "The path of Imam Husayn (AS) to Ashura"),
+                        ("checkmark.circle.fill", "Observe the 10 days of azadari")
+                    ],
+                    isVisible: showFeatureCards,
+                    delay: 0.4
+                )
+
                 // Future seasons - expanded
                 SeasonalFeatureExpandedCard(
                     icon: "calendar.badge.clock",
@@ -115,7 +132,7 @@ struct SeasonalFeaturesScreen: View {
                         ("moon.stars.fill", "Laylat al-Qadr experiences")
                     ],
                     isVisible: showFeatureCards,
-                    delay: 0.4
+                    delay: 0.6
                 )
             }
             .padding(.horizontal, 20)
@@ -130,7 +147,7 @@ struct SeasonalFeaturesScreen: View {
                 .padding(.horizontal, 40)
                 .padding(.bottom, 100)
                 .opacity(showFeatureCards ? 1 : 0)
-                .animation(Animation.easeOut(duration: 0.6).delay(0.6), value: showFeatureCards)
+                .animation(Animation.easeOut(duration: 0.6).delay(0.8), value: showFeatureCards)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(OnboardingBackground(tilt: .lavender))

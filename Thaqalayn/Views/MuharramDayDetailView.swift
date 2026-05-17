@@ -1,0 +1,491 @@
+//
+//  MuharramDayDetailView.swift
+//  Thaqalayn
+//
+//  Detail view for a single day of the First Ten Days of Muharram Journey
+//  Shows theme, dua/ziyarat, verses, reflection, and observance button.
+//  Muharram is a somber azadari (mourning) observance — no celebratory treatment.
+//
+
+import SwiftUI
+
+struct MuharramDayDetailView: View {
+    let day: MuharramDay
+    @StateObject private var journeyManager = MuharramJourneyManager.shared
+    @StateObject private var dataManager = DataManager.shared
+    @StateObject private var themeManager = ThemeManager.shared
+    @Environment(\.dismiss) private var dismiss
+    @State private var selectedVerseForNav: (surah: Int, verse: Int)?
+    @State private var navigateToVerse = false
+
+    var isObserved: Bool {
+        journeyManager.isDayObserved(day.dayNumber)
+    }
+
+    var body: some View {
+        ZStack {
+            // Adaptive background
+            AdaptiveModernBackground()
+
+            ScrollView {
+                VStack(spacing: 24) {
+                    // Day header
+                    MuharramDayHeader(day: day, isObserved: isObserved)
+
+                    // Dua / Ziyarat section
+                    MuharramDuaSection(dua: day.dua)
+
+                    // Verses section
+                    VStack(alignment: .leading, spacing: 16) {
+                        HStack(spacing: 8) {
+                            Image(systemName: "book.pages.fill")
+                                .font(.system(size: 16))
+                                .foregroundColor(themeManager.accentColor)
+
+                            Text("TODAY'S VERSES")
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundColor(themeManager.secondaryText)
+                                .tracking(1.2)
+
+                            Spacer()
+                        }
+                        .padding(.horizontal, 20)
+
+                        ForEach(day.verses) { verse in
+                            MuharramVerseCard(
+                                verse: verse,
+                                onNavigate: {
+                                    selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                                    navigateToVerse = true
+                                }
+                            )
+                        }
+                    }
+
+                    // Tafsir focus
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack(spacing: 8) {
+                            Image(systemName: "lightbulb.fill")
+                                .font(.system(size: 16))
+                                .foregroundColor(themeManager.accentColor)
+
+                            Text("TAFSIR FOCUS")
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundColor(themeManager.secondaryText)
+                                .tracking(1.2)
+                        }
+
+                        Text(day.tafsirFocus)
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineSpacing(4)
+                    }
+                    .padding(20)
+                    .background {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
+                    }
+                    .padding(.horizontal, 20)
+
+                    // Reflection section
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack(spacing: 8) {
+                            Image(systemName: "heart.text.square.fill")
+                                .font(.system(size: 16))
+                                .foregroundColor(themeManager.accentColor)
+
+                            Text("REFLECTION")
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundColor(themeManager.secondaryText)
+                                .tracking(1.2)
+                        }
+
+                        Text(day.reflection)
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineSpacing(4)
+                            .italic()
+                    }
+                    .padding(20)
+                    .background {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(themeManager.strokeColor, lineWidth: 1)
+                            )
+                            .shadow(
+                                color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                                radius: 12, x: 0, y: 4
+                            )
+                    }
+                    .padding(.horizontal, 20)
+
+                    // Mark as observed button
+                    MuharramObserveButton(
+                        isObserved: isObserved,
+                        onToggle: {
+                            if isObserved {
+                                journeyManager.unmarkDayObserved(day.dayNumber)
+                            } else {
+                                journeyManager.markDayObserved(day.dayNumber)
+                            }
+                        }
+                    )
+
+                    Spacer(minLength: 40)
+                }
+            }
+
+            // Hidden NavigationLink for verse navigation
+            if let verseNav = selectedVerseForNav,
+               let surahData = dataManager.availableSurahs.first(where: { $0.surah.number == verseNav.surah }) {
+                NavigationLink(
+                    destination: SurahDetailView(surahWithTafsir: surahData, targetVerse: verseNav.verse),
+                    isActive: $navigateToVerse
+                ) {
+                    EmptyView()
+                }
+                .frame(width: 0, height: 0)
+                .hidden()
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: { dismiss() }) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                        Text("Journey")
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                }
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura(glowOpacity: 0.36)
+    }
+}
+
+struct MuharramDayHeader: View {
+    let day: MuharramDay
+    let isObserved: Bool
+    @StateObject private var themeManager = ThemeManager.shared
+
+    // Day 10 is Ashura — the grief summit of the mourning of Imam al-Husayn (AS).
+    // It receives a distinct, dignified, somber emphasis (not celebratory).
+    private var isAshura: Bool {
+        day.dayNumber == 10
+    }
+
+    var body: some View {
+        VStack(spacing: 16) {
+            // Day badge
+            HStack {
+                HStack(spacing: 8) {
+                    Image(systemName: day.icon)
+                        .font(.system(size: 14, weight: .semibold))
+
+                    Text("Day \(day.dayNumber)")
+                        .font(.system(size: 14, weight: .semibold))
+                }
+                .foregroundColor(themeManager.accentColor)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .background {
+                    Capsule()
+                        .fill(themeManager.accentColor.opacity(0.15))
+                }
+
+                // Ashura mourning marker — somber, restrained (no festive/green state)
+                if isAshura {
+                    HStack(spacing: 4) {
+                        Image(systemName: "moon.fill")
+                        Text("Ashura")
+                    }
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(themeManager.secondaryText)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background {
+                        Capsule()
+                            .fill(themeManager.secondaryText.opacity(0.12))
+                    }
+                }
+
+                if isObserved {
+                    HStack(spacing: 4) {
+                        Image(systemName: "checkmark.circle.fill")
+                        Text("Observed")
+                    }
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(themeManager.secondaryText)
+                }
+
+                Spacer()
+            }
+
+            // Theme
+            VStack(alignment: .leading, spacing: 8) {
+                Text(day.theme)
+                    .font(.system(size: isAshura ? 32 : 28, weight: .bold, design: .rounded))
+                    .foregroundColor(themeManager.primaryText)
+
+                Text(day.themeArabic)
+                    .font(.system(size: isAshura ? 22 : 20, weight: .medium))
+                    .foregroundColor(themeManager.accentColor)
+                    .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(24)
+        .background {
+            RoundedRectangle(cornerRadius: 24)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 24)
+                        // Ashura: a deeper, restrained accent edge — emphasis through
+                        // gravity, not ornament. All other days keep the standard stroke.
+                        .stroke(
+                            isAshura ? themeManager.accentColor.opacity(0.55) : themeManager.strokeColor,
+                            lineWidth: isAshura ? 1.5 : 1
+                        )
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
+                    radius: 16, x: 0, y: 4
+                )
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 20)
+    }
+}
+
+struct MuharramDuaSection: View {
+    let dua: MuharramDua
+    @StateObject private var themeManager = ThemeManager.shared
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 8) {
+                Image(systemName: "hands.sparkles.fill")
+                    .font(.system(size: 16))
+                    .foregroundColor(themeManager.accentColor)
+
+                Text("DUA / ZIYARAT")
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundColor(themeManager.secondaryText)
+                    .tracking(1.2)
+
+                Spacer()
+            }
+
+            // Arabic
+            Text(dua.arabic)
+                .font(.custom("AmiriQuran-Regular", size: 24))
+                .foregroundColor(themeManager.primaryText)
+                .lineSpacing(8)
+                .multilineTextAlignment(.trailing)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+
+            // Transliteration
+            Text(dua.transliteration)
+                .font(.system(size: 14, weight: .medium))
+                .foregroundColor(themeManager.secondaryText)
+                .italic()
+
+            // English translation
+            Text(dua.english)
+                .font(.system(size: 16, weight: .medium))
+                .foregroundColor(themeManager.primaryText)
+                .lineSpacing(4)
+
+            // Source
+            if let source = dua.source {
+                Text("— \(source)")
+                    .font(.system(size: 13, weight: .medium))
+                    .foregroundColor(themeManager.tertiaryText)
+            }
+        }
+        .padding(20)
+        .background {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 12, x: 0, y: 4
+                )
+        }
+        .padding(.horizontal, 20)
+    }
+}
+
+struct MuharramVerseCard: View {
+    let verse: MuharramVerse
+    let onNavigate: () -> Void
+    @StateObject private var dataManager = DataManager.shared
+    @StateObject private var themeManager = ThemeManager.shared
+
+    var verseData: (arabic: String, translation: String)? {
+        guard let verses = dataManager.quranData?.verses["\(verse.surahNumber)"],
+              let v = verses["\(verse.verseNumber)"] else {
+            return nil
+        }
+        return (v.arabicText, v.translation)
+    }
+
+    var surahName: String {
+        dataManager.quranData?.surahs.first { $0.number == verse.surahNumber }?.englishName ?? "Surah \(verse.surahNumber)"
+    }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            // Verse header
+            HStack {
+                Text("\(surahName) (\(verse.surahNumber):\(verse.verseNumber))")
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundColor(themeManager.accentColor)
+
+                Spacer()
+
+                Button(action: onNavigate) {
+                    HStack(spacing: 4) {
+                        Text("Full Tafsir")
+                            .font(.system(size: 12, weight: .semibold))
+                        Image(systemName: "arrow.right")
+                            .font(.system(size: 10, weight: .semibold))
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                }
+            }
+            .padding(16)
+
+            Divider()
+                .background(themeManager.strokeColor)
+
+            // Verse text
+            if let data = verseData {
+                VStack(alignment: .leading, spacing: 12) {
+                    // Arabic
+                    Text(data.arabic)
+                        .font(.custom("AmiriQuran-Regular", size: 22))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(6)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+
+                    // Translation
+                    Text(data.translation)
+                        .font(.system(size: 15, weight: .medium))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(4)
+                }
+                .padding(16)
+
+                Divider()
+                    .background(themeManager.strokeColor)
+            }
+
+            // Relevance note
+            HStack(alignment: .top, spacing: 8) {
+                Image(systemName: "text.bubble.fill")
+                    .font(.system(size: 12))
+                    .foregroundColor(themeManager.accentColor)
+
+                Text(verse.relevanceNote)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(themeManager.secondaryText)
+                    .lineSpacing(2)
+            }
+            .padding(16)
+            .background {
+                Rectangle()
+                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
+            }
+        }
+        .background {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(
+                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
+                    radius: 8, x: 0, y: 2
+                )
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .padding(.horizontal, 20)
+    }
+}
+
+struct MuharramObserveButton: View {
+    let isObserved: Bool
+    let onToggle: () -> Void
+    @StateObject private var themeManager = ThemeManager.shared
+
+    // Subdued observed state — a quiet, somber confirmation rather than a
+    // celebratory green "Completed!" treatment. Muharram is azadari, not achievement.
+    private var observedGradient: LinearGradient {
+        LinearGradient(
+            colors: [
+                themeManager.secondaryText.opacity(0.55),
+                themeManager.secondaryText.opacity(0.40)
+            ],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+
+    var body: some View {
+        Button(action: onToggle) {
+            HStack(spacing: 12) {
+                Image(systemName: isObserved ? "checkmark.circle.fill" : "circle")
+                    .font(.system(size: 24, weight: .semibold))
+
+                Text(isObserved ? "Observed" : "Mark as observed")
+                    .font(.system(size: 18, weight: .bold))
+            }
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 18)
+            .background {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(isObserved ? observedGradient : themeManager.accentGradient)
+                    .shadow(
+                        color: (isObserved ? themeManager.secondaryText : themeManager.accentColor).opacity(0.25),
+                        radius: 12
+                    )
+            }
+        }
+        .padding(.horizontal, 20)
+    }
+}
+
+#Preview {
+    NavigationView {
+        MuharramDayDetailView(
+            day: MuharramDay(
+                id: "day10",
+                dayNumber: 10,
+                theme: "Ashura — The Day of Sacrifice",
+                themeArabic: "يَوْمُ عَاشُورَاء",
+                icon: "moon.fill",
+                dua: MuharramDua(
+                    arabic: "السَّلَامُ عَلَيْكَ يَا أَبَا عَبْدِ اللَّهِ",
+                    transliteration: "As-salamu 'alayka ya Aba 'Abdillah",
+                    english: "Peace be upon you, O Aba 'Abdillah (al-Husayn).",
+                    source: "Ziyarat Ashura"
+                ),
+                verses: [],
+                tafsirFocus: "The meaning of sacrifice and steadfastness in the face of oppression.",
+                reflection: "What does the stand of Imam al-Husayn (AS) at Karbala demand of us today?"
+            )
+        )
+    }
+}

@@ -22,6 +22,11 @@ struct MainTabView: View {
         IslamicCalendarManager.shared.isHajjSeason()
     }
 
+    // Check if Muharram season is active (mutually exclusive with Ramadan and Hajj seasons)
+    private var isMuharramSeason: Bool {
+        IslamicCalendarManager.shared.isMuharramSeason()
+    }
+
     var body: some View {
         TabView(selection: $selectedTab) {
             TodayTab(selectedTab: $selectedTab)
@@ -88,6 +93,19 @@ struct MainTabView: View {
                         }
                     }
                     .tag(5)
+            }
+
+            // Conditional Muharram tab - only visible during Muharram season
+            if isMuharramSeason {
+                MuharramJourneyView()
+                    .tabItem {
+                        Label {
+                            Text("Muharram")
+                        } icon: {
+                            Image(systemName: "flame.fill")
+                        }
+                    }
+                    .tag(6)
             }
         }
         .tint(themeManager.accentColor)

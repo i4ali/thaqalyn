@@ -13,6 +13,7 @@ struct ProgressRingsView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var ramadanManager = RamadanJourneyManager.shared
     @StateObject private var hajjManager = HajjJourneyManager.shared
+    @StateObject private var muharramManager = MuharramJourneyManager.shared
 
     private let totalQuranVerses = 6236
     private let totalSurahs = 114
@@ -25,13 +26,19 @@ struct ProgressRingsView: View {
         IslamicCalendarManager.shared.isHajjSeason()
     }
 
-    // Ramadan and Hajj seasons are mutually exclusive; share the single seasonal ring slot.
+    private var isMuharramSeason: Bool {
+        IslamicCalendarManager.shared.isMuharramSeason()
+    }
+
+    // Ramadan, Hajj, and Muharram seasons are mutually exclusive; share the single seasonal ring slot.
     private var showSeasonalRing: Bool {
-        isRamadanSeason || isHajjSeason
+        isRamadanSeason || isHajjSeason || isMuharramSeason
     }
 
     private var seasonalLabel: String {
-        isHajjSeason ? "Hajj" : "Ramadan"
+        if isHajjSeason { return "Hajj" }
+        if isMuharramSeason { return "Muharram" }
+        return "Ramadan"
     }
 
     private var seasonalProgress: Double {
@@ -39,6 +46,8 @@ struct ProgressRingsView: View {
             return ramadanManager.completionPercentage
         } else if isHajjSeason {
             return hajjManager.completionPercentage
+        } else if isMuharramSeason {
+            return muharramManager.completionPercentage
         }
         return 0
     }

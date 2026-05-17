@@ -50,6 +50,7 @@ Capture these as a cheat sheet inline in the conversation so Stages 2 and 4 refe
   - Kling 2.1: `master` is flagship.
 - **What NOT to mention** — keywords that trigger unwanted behavior. Universal across Kling:
   - Never say "halo", "veil", "glow", "radiant", "face", "Prophet", "Imam", "Ali", "Fatima", "Muhammad" in motion prompts. Saying any of these directs Kling to *animate* or *modify* that region.
+  - **Blank-face completion (the #1 failure):** the blank matte veiling face reads to Kling as a *real* face. The trigger is **upward gaze / head-turn during motion** — NOT gentle camera motion itself (a slow push or ~20–30° partial arc with static, forward-facing/heads-level figures is the validated sweet spot). Mitigate by posing figures forward-facing/heads-level, keeping moves within the safe envelope, 5s, and Ken Burns for unavoidable upward-gaze/climax scenes. QC 5 frames of every clip + the final stitch.
 - **kie.ai API model identifier** — the exact string passed in the `model` field of the request. E.g.:
   - Kling 3.0: `kling-3.0/video`
   - Kling 2.1 Master: `kling/v2-1-master-image-to-video`
@@ -69,7 +70,7 @@ Format your research findings as a compact table at the end of Stage 0, like:
 - Negative prompt: no native field; bake into positive prompt
 - Duration: 3-15s (string), 5 default, 10-15 for climactic
 - NEVER mention: halo, veil, glow, face, Prophet, Imam, Ali (triggers face-rendering)
-- Best for: veiled-figure work; halos hold dramatically better than v2.1
+- Best for: veiled-figure work; blank faces hold better than v2.1. Pose forward-facing/heads-level and a gentle camera move is fine (default); avoid full orbit + upward gaze; Ken Burns for unavoidable upward-gaze/climax scenes
 - Sources: docs.kie.ai/market/kling/kling-3-0, fal.ai/learn/kling-3-0
 ```
 
@@ -123,7 +124,7 @@ Banners ripple in distant wind. All image content otherwise unchanged.
 
 ### Kling v2-standard / v2-pro (Kling 2.0 Master)
 
-⚠️ **Avoid for veiled-figure work** — earlier model, halos drift more, only supports 5s clips. Returns HTTP 400 on 10s requests.
+⚠️ **Avoid for veiled-figure work** — earlier model, blank faces complete/drift more, only supports 5s clips. Returns HTTP 400 on 10s requests.
 
 ## When research findings conflict
 
@@ -149,12 +150,14 @@ Scene count: [6 scenes, 35s total]
 Video model: [Kling 3.0 Pro via kie.ai]
 Key prompt rules I'll apply:
 - Motion prompts: 15-40 words max
-- Lead with "Locked-off tripod shot, completely static camera"
+- Default: gentle camera move (slow push / ~20–30° partial arc) + wind, figures static
+- Locked-off phrase reserved for fragile scenes (upward gaze / tight on face / QC de-escalation)
 - Never mention halo / glow / face / sacred-figure-name in motion
 - Subject Binding handles character consistency
 
 Image model: [Nano Banana Pro via OpenRouter]
-- Hardened halo language (solid disc IN FRONT OF face)
+- Blank-face veiling language (smooth matte pale featureless face, per figure)
+- Figures forward-facing / heads level for any animated scene
 - Explicit "no text in image" clause
 - 9:16 aspect ratio
 

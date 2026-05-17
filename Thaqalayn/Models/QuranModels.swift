@@ -1481,6 +1481,62 @@ struct HajjJourneyProgress: Codable {
     }
 }
 
+// MARK: - Muharram Journey Models
+
+struct MuharramJourneyData: Codable {
+    let days: [MuharramDay]
+}
+
+struct MuharramDay: Codable, Identifiable {
+    let id: String
+    let dayNumber: Int
+    let theme: String
+    let themeArabic: String
+    let icon: String
+    let dua: MuharramDua
+    let verses: [MuharramVerse]
+    let tafsirFocus: String
+    let reflection: String
+}
+
+struct MuharramDua: Codable {
+    let arabic: String
+    let transliteration: String
+    let english: String
+    let source: String?
+}
+
+struct MuharramVerse: Codable, Identifiable {
+    let id: String
+    let surahNumber: Int
+    let verseNumber: Int
+    let relevanceNote: String
+
+    var verseReference: String {
+        "Quran \(surahNumber):\(verseNumber)"
+    }
+}
+
+struct MuharramJourneyProgress: Codable {
+    var observedDays: Set<Int>
+    var lastObservedDate: Date?
+    var year: Int
+
+    init(
+        observedDays: Set<Int> = [],
+        lastObservedDate: Date? = nil,
+        year: Int = 0
+    ) {
+        self.observedDays = observedDays
+        self.lastObservedDate = lastObservedDate
+        self.year = year
+    }
+
+    var completionPercentage: Double {
+        Double(observedDays.count) / 10.0
+    }
+}
+
 // MARK: - Daily Duas Models
 
 struct DailyDuasData: Codable {

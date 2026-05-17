@@ -177,4 +177,16 @@ class PremiumManager: ObservableObject {
         }
         return isPremium
     }
+
+    // MARK: - Muharram Journey Access Control
+
+    /// Check if user can access a Muharram Journey day
+    /// - Day 1 is always free
+    /// - Days 2-10 require premium
+    func canAccessMuharramDay(_ dayNumber: Int) -> Bool {
+        if dayNumber == 1 {
+            return true  // Day 1 always free
+        }
+        return isPremium
+    }
 }

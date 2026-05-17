@@ -267,6 +267,67 @@ class IslamicCalendarManager: ObservableObject {
         }
     }
 
+    // MARK: - Muharram Season Detection
+
+    /// Muharram Journey window:
+    /// - Last days of Dhul-Hijjah (month 12, day >= 25) as a lead-in countdown
+    /// - Muharram (month 1) days 1-10 content + days 11-12 quiet grace (no new content)
+    /// Hajj season is month 12 day <= 13; Ramadan is months 8-10 — all mutually exclusive.
+    func isMuharramSeason() -> Bool {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+
+        switch month {
+        case 12: // Dhul-Hijjah lead-in (does not collide with Hajj's day <= 13)
+            return day >= 25
+        case 1:  // Muharram: 10 content days + 11-12 quiet grace
+            return day <= 12
+        default:
+            return false
+        }
+    }
+
+    /// Current Muharram Journey day (1-10), nil during lead-in and the 11-12 grace.
+    func currentMuharramDay() -> Int? {
+        guard currentIslamicMonth() == 1 else { return nil }
+        let day = currentIslamicDay()
+        return (1...10).contains(day) ? day : nil
+    }
+
+    /// Days until Muharram (only meaningful during late Dhul-Hijjah).
+    func daysUntilMuharram() -> Int? {
+        guard currentIslamicMonth() == 12 else { return nil }
+        let day = currentIslamicDay()
+        return max(0, 30 - day + 1)
+    }
+
+    /// Somber status line for the Muharram Journey header.
+    func muharramSeasonStatus() -> String {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+
+        switch month {
+        case 12:
+            if let daysUntil = daysUntilMuharram(), daysUntil > 0 {
+                return "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Muharram"
+            }
+            return "Muharram begins soon"
+        case 1:
+            if day == 10 {
+                return "Ashura — Ya Husayn (AS)"
+            }
+            if day <= 10 {
+                return "Day \(day) of Muharram"
+            }
+            if day <= 12 {
+                return "The mourning continues — Ya Husayn (AS)"
+            }
+            return ""
+        default:
+            return ""
+        }
+    }
+
     // MARK: - Date Formatting
 
     /// Get full formatted date with both Gregorian and Islamic calendars

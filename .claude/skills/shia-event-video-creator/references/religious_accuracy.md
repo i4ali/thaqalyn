@@ -4,7 +4,7 @@ Content for Al-Thaqalayn audiences is held to a high standard. Small errors of d
 
 ## Depicting sacred figures
 
-**The core rule:** Faces of the Prophet Muhammad ﷺ, the twelve Imams (عليهم السلام), the Prophets (عليهم السلام), and Lady Fatima al-Zahra (سلام الله عليها) are never depicted. Their faces are always obscured by radiant light.
+**The core rule:** Faces of the Prophet Muhammad ﷺ, the twelve Imams (عليهم السلام), the Prophets (عليهم السلام), and Lady Fatima al-Zahra (سلام الله عليها) are never depicted. Their faces are always rendered as a smooth, blank, featureless soft matte pale luminous face (the canonical Al-Thaqalayn look) — never a bright sun-ball or hard glowing disc, and never any eyes/nose/mouth.
 
 This is the Shia convention and matches the user's Al-Thaqalayn content. Do not debate this rule or offer to generate "just for a test" without the halo. If the user ever asks for faces visible (they likely won't — their existing content confirms this), treat it as a mistake or a test and hold the line.
 

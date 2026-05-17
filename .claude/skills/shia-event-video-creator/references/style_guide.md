@@ -4,7 +4,7 @@ The user's existing Al-Thaqalayn content has a specific look (see the Ghadeer re
 
 ## The look in one sentence
 
-Cinematic oil-painting realism at golden hour, set in 7th-century Arabia, with sacred figures haloed in radiant white-gold light that obscures their faces.
+Cinematic oil-painting realism at golden hour, set in 7th-century Arabia, with sacred figures' faces rendered as a smooth blank featureless pale luminous face (the canonical Al-Thaqalayn devotional look).
 
 ## Mandatory style elements
 
@@ -20,7 +20,7 @@ Cinematic oil-painting realism at golden hour, set in 7th-century Arabia, with s
 - **Avoid:** neon, saturated cool colors (cyan, pink, purple), modern color grading styles.
 
 ### Figures
-- **Sacred figures (Prophet ﷺ, 12 Imams ع, Fatima س, Prophets):** face fully covered by a solid, fully opaque sphere of warm white-gold light positioned in front of the face (like a small sun where the face would be), not behind the head as a ring. Body, hair covering, beard silhouette, and clothing visible — features never. See the "veiled-faces instruction" section below for the production-default prompt language.
+- **Sacred figures (Prophet ﷺ, 12 Imams ع, Fatima س, Prophets):** face rendered as a completely smooth, blank, featureless soft matte pale ivory-white face with a faint gentle aura — natural human-face shape/size/position, framed by head covering or hair, painted in the same oil brushwork as the canvas. Body, hair covering, beard silhouette, and clothing visible — features never. NOT a bright sun-ball / hard disc / floating orb (that "hardened halo" style is retired). See the "veiled-faces instruction" section below for the production-default prompt language.
 - **Companions (Sahaba) and bystanders:** may have visible faces, but keep them indistinct and crowd-like rather than individually characterized. No famous-actor look-alikes.
 - **Enemies (Yazid's army, Quraysh, etc.):** faces may be shown but often in shadow or under helmets. Do not humanize them with clear expressions — they're narrative foils.
 - **Clothing:** 7th-century Arabian — thobes, abayas, cloaks, turbans, head coverings. Natural fibers, earth-dyed. No modern fabrics, no cleanly geometric cuts.
@@ -53,33 +53,44 @@ with dust motes and heat haze, 9:16 vertical composition.
 
 ## The veiled-faces instruction — use in every prompt with sacred figures
 
-**Default to the HARDENED halo language.** It is what survives image-to-video animation
-in Kling — soft "obscured by a halo" prose tends to render as a translucent ring that
-Kling later fades during animation. See `references/prompt_templates.md` for the full
-hardened template and the "side profile" addendum.
+**Use the BLANK-FACE language** (the only veiling technique — the old bright sun-ball /
+opaque-disc "hardened halo" is retired). List it once per sacred figure. See
+`references/prompt_templates.md` for the full template, the side-profile note, and the
+Kling motion recipe that stops the blank face being animated into a real face.
 
 ```
-The face of [Prophet Muhammad ﷺ / Imam Ali ع / etc.] is COMPLETELY REPLACED by a 
-perfectly solid, fully opaque, intensely bright sphere of warm white-gold light, like 
-a small sun where the face would be. NO eyes, NO nose, NO mouth, NO beard rendered IN 
-FRONT of the halo (beard silhouette only AROUND the halo edge). The halo is positioned 
-IN FRONT OF the face, COMPLETELY COVERING IT — not behind the head as a ring. Fully 
-opaque white-gold paint, not translucent. Treat as a hard solid disc of light.
+The face of [Prophet Muhammad ﷺ / Imam Ali ع / etc.] is rendered as a completely
+smooth, blank, featureless face — a soft matte pale ivory-white surface with a gentle
+quiet inner luminosity and only a faint soft glowing aura at its edge. It is the
+natural shape, size, and position of a real human face (an oval face, NOT a circle,
+NOT a ball), framed by the head covering or hair. NO eyes, NO nose, NO mouth, NO
+features of any kind. SOFT and SUBTLE, NOT a bright light source, NOT a glowing sun,
+NOT a hard-edged disc, NOT a floating orb, NOT oversized — painted in the same matte
+oil brushwork as the canvas. A grey beard silhouette below/around the blank face is
+fine for elderly figures (it is hair, not a feature).
 
 [Repeat this block for each sacred figure on its own line — Nano Banana applies the
 veiling rule per-figure, not collectively.]
 
 Other figures in the scene (companions, crowd) may have visible faces but rendered 
-indistinctly as a painterly crowd.
+indistinctly as a painterly crowd. Animals have normal natural faces.
 ```
 
 For figures shown in **side profile or 3/4 view**, also include:
-> *"The halo is positioned IN FRONT OF the visible side of the face, not behind the head as a ring. The halo blocks the view of the face entirely from this camera angle."*
+> *"The blank pale face is on the visible side of the head, smooth and featureless from this angle — no profile features (no nose line, no eye, no lips) rendered at all."*
+
+**Animating in Kling:** the blank matte face reads to Kling as a real face and can be
+"completed" with features under motion. Pose animated sacred figures forward-facing,
+heads level/slightly bowed (never craned up), use locked-off motion prompts, prefer
+5s, and fall back to Ken Burns for climactic/upward-gaze scenes. See
+`references/prompt_templates.md` and SKILL.md Stage 4b.
 
 ## Negative prompt — use in every image generation
 
 ```
-no visible facial features on sacred figures, no modern clothing, no modern architecture, 
+no visible facial features on sacred figures, no eyes, no nose, no mouth, no bright 
+glowing sun face, no hard-edged disc, no pasted-on sphere, no floating orb, no 
+oversized glowing ball, no circular shape, no modern clothing, no modern architecture, 
 no anachronistic objects (watches, glasses, cars, electronics, modern weapons), 
 no neon colors, no photorealistic selfie style, no AI plastic skin, no text artifacts, 
 no distorted anatomy, no cartoon style, no anime, no 3D render look
@@ -91,7 +102,7 @@ Across the 4–8 scenes of one video, keep these constants:
 
 1. **Same lighting mood** — if scene 1 is golden hour, scene 4 better be too (unless there's a narrative reason — e.g., night scenes for Laylat al-Mabit).
 2. **Same color palette** — don't introduce a new dominant color mid-video.
-3. **Same figures look the same** — same veil-halo size and warmth, same body build, same clothing colors for the same person. *If the image model supports reference images, feed scene 1's character as a reference for scenes 2+.*
+3. **Same figures look the same** — same blank-face size/warmth/aura, same body build, same clothing colors and head covering for the same person across every scene. *If the image model supports reference images, feed scene 1's character as a reference for scenes 2+.*
 4. **Same rendering style** — don't let one scene drift into photorealism while another is painterly.
 
 When a scene comes back inconsistent, the fastest fix is usually to tell the model explicitly: "match the rendering style and lighting of the reference image" and feed in the previous approved scene.
