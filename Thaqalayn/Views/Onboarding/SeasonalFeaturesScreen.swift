@@ -84,6 +84,23 @@ struct SeasonalFeaturesScreen: View {
                     delay: 0
                 )
 
+                // Dhul-Hijjah Journey card - expanded
+                SeasonalFeatureExpandedCard(
+                    icon: "building.columns.fill",
+                    iconColors: [ThemeManager.chipBrand.fg, ThemeManager.chipFeatured.fg],
+                    title: "Dhul-Hijjah Journey",
+                    badge: "Seasonal",
+                    badgeColor: ThemeManager.chipKnowledge.fg,
+                    features: [
+                        ("hands.sparkles.fill", "Daily amaal & duas from Mafatih al-Jinan"),
+                        ("book.pages.fill", "Curated verses for the ten blessed days"),
+                        ("mountain.2.fill", "Day of Arafah & Du'a of Imam Husayn (AS)"),
+                        ("checkmark.circle.fill", "Track your 10-day journey")
+                    ],
+                    isVisible: showFeatureCards,
+                    delay: 0.2
+                )
+
                 // Future seasons - expanded
                 SeasonalFeatureExpandedCard(
                     icon: "calendar.badge.clock",
@@ -93,12 +110,12 @@ struct SeasonalFeaturesScreen: View {
                     badgeColor: ThemeManager.chipFoundation.fg,
                     features: [
                         ("drop.fill", "Muharram commemorations & Ashura"),
-                        ("mountain.2.fill", "Dhul-Hijjah & Hajj season"),
                         ("sparkles", "Rajab & Sha'ban preparations"),
-                        ("star.fill", "Special nights & occasions")
+                        ("star.fill", "Special nights & occasions"),
+                        ("moon.stars.fill", "Laylat al-Qadr experiences")
                     ],
                     isVisible: showFeatureCards,
-                    delay: 0.2
+                    delay: 0.4
                 )
             }
             .padding(.horizontal, 20)
@@ -106,7 +123,7 @@ struct SeasonalFeaturesScreen: View {
             Spacer()
 
             // Bottom message
-            Text("The Ramadan tab appears automatically\nduring the blessed month")
+            Text("Seasonal tabs appear automatically\nduring their blessed times")
                 .onbCaption()
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)

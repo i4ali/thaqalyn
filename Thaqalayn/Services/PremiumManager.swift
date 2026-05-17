@@ -165,4 +165,16 @@ class PremiumManager: ObservableObject {
         }
         return isPremium
     }
+
+    // MARK: - Hajj Journey Access Control
+
+    /// Check if user can access a Dhul-Hijjah Journey day
+    /// - Day 1 is always free
+    /// - Days 2-10 require premium
+    func canAccessHajjDay(_ dayNumber: Int) -> Bool {
+        if dayNumber == 1 {
+            return true  // Day 1 always free
+        }
+        return isPremium
+    }
 }

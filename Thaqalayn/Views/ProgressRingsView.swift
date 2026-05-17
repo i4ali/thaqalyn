@@ -12,12 +12,35 @@ struct ProgressRingsView: View {
     @StateObject private var quizManager = QuizManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var ramadanManager = RamadanJourneyManager.shared
+    @StateObject private var hajjManager = HajjJourneyManager.shared
 
     private let totalQuranVerses = 6236
     private let totalSurahs = 114
 
     private var isRamadanSeason: Bool {
         IslamicCalendarManager.shared.isRamadanSeason()
+    }
+
+    private var isHajjSeason: Bool {
+        IslamicCalendarManager.shared.isHajjSeason()
+    }
+
+    // Ramadan and Hajj seasons are mutually exclusive; share the single seasonal ring slot.
+    private var showSeasonalRing: Bool {
+        isRamadanSeason || isHajjSeason
+    }
+
+    private var seasonalLabel: String {
+        isHajjSeason ? "Hajj" : "Ramadan"
+    }
+
+    private var seasonalProgress: Double {
+        if isRamadanSeason {
+            return ramadanManager.completionPercentage
+        } else if isHajjSeason {
+            return hajjManager.completionPercentage
+        }
+        return 0
     }
 
     // Progress calculations
@@ -33,10 +56,6 @@ struct ProgressRingsView: View {
         Double(quizManager.completedSurahCount) / Double(totalSurahs)
     }
 
-    private var ramadanProgress: Double {
-        ramadanManager.completionPercentage
-    }
-
     var body: some View {
         ScrollView {
             VStack(spacing: WarmSpacing.generous) {
@@ -47,7 +66,7 @@ struct ProgressRingsView: View {
                 ringsSection
 
                 // Ring Legend
-                RingLegend(showRamadanRing: isRamadanSeason)
+                RingLegend(showRamadanRing: showSeasonalRing, seasonalLabel: seasonalLabel)
                     .padding(.top, WarmSpacing.small)
 
                 // Stats Grid
@@ -91,8 +110,8 @@ struct ProgressRingsView: View {
                 quranProgress: quranProgress,
                 surahProgress: surahProgress,
                 quizProgress: quizProgress,
-                ramadanProgress: ramadanProgress,
-                showRamadanRing: isRamadanSeason
+                ramadanProgress: seasonalProgress,
+                showRamadanRing: showSeasonalRing
             )
             .padding(.vertical, WarmSpacing.large)
         }

@@ -200,6 +200,73 @@ class IslamicCalendarManager: ObservableObject {
         }
     }
 
+    // MARK: - Hajj Season Detection
+
+    /// Check if we're in the "Hajj season" window (first ten days of Dhul-Hijjah)
+    /// - Last 5-6 days of Dhul-Qa'dah (month 11) as a lead-in countdown
+    /// - Dhul-Hijjah (month 12) days 1-13: the 10-day journey + Eid al-Adha + Days of Tashriq tail
+    /// Ramadan season touches months 8/9/10; Hajj season touches 11/12 - mutually exclusive.
+    func isHajjSeason() -> Bool {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+
+        switch month {
+        case 11: // Dhul-Qa'dah - last 5 days (days 25-30)
+            return day >= 25
+        case 12: // Dhul-Hijjah - first 10 days + Eid + Tashriq tail
+            return day <= 13
+        default:
+            return false
+        }
+    }
+
+    /// Get current day of the Dhul-Hijjah journey (1-10), nil if outside the journey
+    func currentHajjDay() -> Int? {
+        guard currentIslamicMonth() == 12 else { return nil }
+        let day = currentIslamicDay()
+        return (1...10).contains(day) ? day : nil
+    }
+
+    /// Get days until Dhul-Hijjah (for countdown)
+    /// Returns nil if not in Dhul-Qa'dah
+    func daysUntilHajj() -> Int? {
+        // Only relevant in Dhul-Qa'dah
+        guard currentIslamicMonth() == 11 else { return nil }
+        let day = currentIslamicDay()
+        // Days remaining in Dhul-Qa'dah (assuming 30 days) + 1 for first day of Dhul-Hijjah
+        return max(0, 30 - day + 1)
+    }
+
+    /// Get the Hajj season status message
+    func hajjSeasonStatus() -> String {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+
+        switch month {
+        case 11:
+            if let daysUntil = daysUntilHajj(), daysUntil > 0 {
+                return "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Dhul-Hijjah"
+            }
+            return "Dhul-Hijjah begins soon"
+        case 12:
+            if day == 9 {
+                return "Day of Arafah"
+            }
+            if day == 10 {
+                return "Eid al-Adha Mubarak!"
+            }
+            if day <= 10 {
+                return "Day \(day) of Dhul-Hijjah"
+            }
+            if day <= 13 {
+                return "Eid al-Adha Mubarak!"
+            }
+            return ""
+        default:
+            return ""
+        }
+    }
+
     // MARK: - Date Formatting
 
     /// Get full formatted date with both Gregorian and Islamic calendars
