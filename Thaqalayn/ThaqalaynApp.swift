@@ -42,6 +42,30 @@ struct ThaqalaynApp: App {
         else if url.scheme == "thaqalayn" && url.host == "verse" {
             handleVerseDeepLink(url)
         }
+        // Handle journey deep link from journey-start notifications
+        else if url.scheme == "thaqalayn" && url.host == "journey" {
+            handleJourneyDeepLink(url)
+        }
+    }
+
+    private func handleJourneyDeepLink(_ url: URL) {
+        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+              let queryItems = components.queryItems else {
+            return
+        }
+
+        var journeyId: String?
+        for item in queryItems where item.name == "id" {
+            journeyId = item.value
+        }
+
+        guard let id = journeyId else { return }
+
+        NotificationCenter.default.post(
+            name: NSNotification.Name("NavigateToJourney"),
+            object: nil,
+            userInfo: ["journey": id]
+        )
     }
 
     private func handleVerseDeepLink(_ url: URL) {
@@ -115,6 +139,18 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
         withCompletionHandler completionHandler: @escaping () -> Void
     ) {
         let userInfo = response.notification.request.content.userInfo
+
+        // Journey-start notification → open the journey's tab
+        if let type = userInfo["type"] as? String, type == "journey_start",
+           let journeyId = userInfo["journey"] as? String {
+            if let url = URL(string: "thaqalayn://journey?id=\(journeyId)") {
+                DispatchQueue.main.async {
+                    UIApplication.shared.open(url)
+                }
+            }
+            completionHandler()
+            return
+        }
 
         // Extract verse information
         if let surah = userInfo["surah"] as? Int,

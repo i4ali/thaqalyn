@@ -122,6 +122,19 @@ struct MainTabView: View {
             // Then switch to the Quran tab — HomeView's onAppear/onChange triggers the navigation.
             selectedTab = 1
         }
+        .onReceive(NotificationCenter.default.publisher(for: .navigateToJourney)) { notification in
+            guard let userInfo = notification.userInfo,
+                  let journeyId = userInfo["journey"] as? String else { return }
+
+            // Only switch if that journey's tab is currently present (season
+            // active). It will be: the notification fires at/after the lead-in.
+            switch journeyId {
+            case "ramadan":  if isRamadanSeason { selectedTab = 4 }
+            case "hajj":     if isHajjSeason { selectedTab = 5 }
+            case "muharram": if isMuharramSeason { selectedTab = 6 }
+            default: break
+            }
+        }
     }
 }
 

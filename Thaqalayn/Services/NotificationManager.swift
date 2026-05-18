@@ -227,6 +227,10 @@ class NotificationManager: ObservableObject {
         if islamicCalendar.isHajjSeason() {
             await scheduleArafahReminder()
         }
+
+        // cancelAllNotifications() also wipes pending journey-start requests;
+        // re-materialize them (idempotent; handledYears prevents a re-fired catch-up).
+        await scheduleJourneyStartNotifications()
     }
 
     /// Schedule a notification for a specific day offset
@@ -582,6 +586,114 @@ class NotificationManager: ObservableObject {
         } catch {
             print("❌ NotificationManager: Error scheduling Arafah reminder - \(error)")
         }
+    }
+
+    // MARK: - Journey-Start Notifications
+
+    private let journeyHandledYearsKey = "journeyStartHandledYears"
+
+    private func loadJourneyHandledYears() -> [String: Int] {
+        guard let data = UserDefaults.standard.data(forKey: journeyHandledYearsKey),
+              let decoded = try? JSONDecoder().decode([String: Int].self, from: data) else {
+            return [:]
+        }
+        return decoded
+    }
+
+    private func saveJourneyHandledYears(_ map: [String: Int]) {
+        if let encoded = try? JSONEncoder().encode(map) {
+            UserDefaults.standard.set(encoded, forKey: journeyHandledYearsKey)
+        }
+    }
+
+    private func makeJourneyContent(_ journey: JourneyAnnouncement) -> UNMutableNotificationContent {
+        let content = UNMutableNotificationContent()
+        content.title = journey.title
+        content.body = journey.body
+        content.sound = .default
+        content.badge = 1
+        content.categoryIdentifier = "JOURNEY_START"
+        content.userInfo = ["type": "journey_start", "journey": journey.id]
+        return content
+    }
+
+    /// Schedule "the Journey is open" notifications for all journeys.
+    /// Mirrors `scheduleArafahReminder()`'s guards: only if already authorized;
+    /// never requests permission. Safe to call on every app open and after
+    /// `cancelAllNotifications()` (idempotent calendar identifier).
+    @MainActor
+    func scheduleJourneyStartNotifications() async {
+        let settings = await notificationCenter.notificationSettings()
+        guard settings.authorizationStatus == .authorized else { return }
+
+        let nowDate = Date()
+        let comps = islamicCalendar.currentIslamicDate()
+        guard let iYear = comps.year,
+              let iMonth = comps.month,
+              let iDay = comps.day else { return }
+
+        let timeComps = Calendar.current.dateComponents([.hour, .minute], from: preferences.time)
+        let prefHour = timeComps.hour ?? 9
+        let prefMinute = timeComps.minute ?? 0
+
+        var handled = loadJourneyHandledYears()
+
+        for journey in JourneyAnnouncement.all {
+            let decision = journeyScheduleDecision(
+                journey: journey,
+                now: nowDate,
+                islamicYear: iYear,
+                islamicMonth: iMonth,
+                islamicDay: iDay,
+                preferredHour: prefHour,
+                preferredMinute: prefMinute,
+                islamicCalendar: islamicCalendar.islamicCalendar,
+                handledCycleYear: handled[journey.id]
+            )
+
+            let identifier = "journey_start_\(journey.id)"
+
+            if let fireDate = decision.calendarFireDate {
+                let dateComponents = Calendar.current.dateComponents(
+                    [.year, .month, .day, .hour, .minute], from: fireDate
+                )
+                let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+                notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
+                let request = UNNotificationRequest(
+                    identifier: identifier,
+                    content: makeJourneyContent(journey),
+                    trigger: trigger
+                )
+                do {
+                    try await notificationCenter.add(request)
+                    print("✅ NotificationManager: journey-start scheduled (\(journey.id))")
+                } catch {
+                    print("❌ NotificationManager: journey-start calendar add (\(journey.id)) - \(error)")
+                }
+            }
+
+            if decision.fireCatchUpNow {
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
+                let request = UNNotificationRequest(
+                    identifier: identifier,
+                    content: makeJourneyContent(journey),
+                    trigger: trigger
+                )
+                do {
+                    try await notificationCenter.add(request)
+                    print("✅ NotificationManager: journey-start catch-up (\(journey.id))")
+                } catch {
+                    print("❌ NotificationManager: journey-start catch-up add (\(journey.id)) - \(error)")
+                }
+            }
+
+            if let markYear = decision.markHandledCycleYear {
+                handled[journey.id] = markYear
+            }
+        }
+
+        saveJourneyHandledYears(handled)
     }
 
     /// Cancel progress-related notifications

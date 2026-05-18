@@ -10,6 +10,7 @@ import SwiftUI
 extension Notification.Name {
     static let showAuthentication = Notification.Name("showAuthentication")
     static let navigateToVerse = Notification.Name("NavigateToVerse")
+    static let navigateToJourney = Notification.Name("NavigateToJourney")
 }
 
 struct ContentView: View {
@@ -51,6 +52,9 @@ struct ContentView: View {
             if IslamicCalendarManager.shared.isHajjSeason() {
                 Task { await NotificationManager.shared.scheduleArafahReminder() }
             }
+            // Unconditional: Path A schedules before any season is active;
+            // the scheduler self-guards per journey + on authorization.
+            Task { await NotificationManager.shared.scheduleJourneyStartNotifications() }
         }
         .onChange(of: themeManager.selectedTheme) { _, newValue in
             ChromeAppearance.apply(for: newValue)
