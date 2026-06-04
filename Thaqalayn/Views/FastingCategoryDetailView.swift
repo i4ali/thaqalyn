@@ -21,6 +21,9 @@ struct FastingCategoryDetailView: View {
             AdaptiveModernBackground()
 
             ScrollView {
+                if themeManager.isMidnightEmerald {
+                    emeraldSections
+                } else {
                 VStack(spacing: 24) {
                     // Category header
                     VStack(spacing: 16) {
@@ -102,6 +105,7 @@ struct FastingCategoryDetailView: View {
 
                     Spacer(minLength: 40)
                 }
+                }
             }
 
             // Hidden NavigationLink for verse navigation
@@ -132,6 +136,63 @@ struct FastingCategoryDetailView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura(glowOpacity: 0.36)
     }
+
+    @ViewBuilder private var emeraldSections: some View {
+        VStack(spacing: 20) {
+            // Category header card
+            EmCard {
+                VStack(alignment: .leading, spacing: 14) {
+                    HStack(spacing: 14) {
+                        EmIconChip(sfSymbol: category.icon, size: 56)
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("Fasting in the Quran".uppercased())
+                                .font(.system(size: 11, weight: .bold)).tracking(3)
+                                .foregroundColor(themeManager.accentColor)
+                            Text(category.title)
+                                .font(EmType.serif(28, .semiBold))
+                                .foregroundColor(themeManager.primaryText)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Text("\(category.verseCount) verse\(category.verseCount == 1 ? "" : "s")")
+                                .font(.system(size: 13))
+                                .foregroundColor(themeManager.secondaryText)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    Rectangle()
+                        .fill(themeManager.dividerColor)
+                        .frame(height: 1)
+                    Text(category.description)
+                        .font(EmType.serif(16, .medium))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(4)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(20)
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 12)
+
+            // Verses section
+            VStack(alignment: .leading, spacing: 16) {
+                EmSectionLabel(icon: "book.pages", text: "Verses")
+                    .padding(.horizontal, 20)
+                ForEach(Array(category.verses.enumerated()), id: \.element.id) { index, fastingVerse in
+                    FastingVerseCard(
+                        fastingVerse: fastingVerse,
+                        index: index + 1,
+                        totalVerses: category.verseCount,
+                        onNavigate: {
+                            selectedVerseForNav = (fastingVerse.surahNumber, fastingVerse.verseNumber)
+                            navigateToVerse = true
+                        }
+                    )
+                }
+            }
+
+            Spacer(minLength: 40)
+        }
+        .padding(.top, 4)
+    }
 }
 
 struct FastingVerseCard: View {
@@ -155,6 +216,87 @@ struct FastingVerseCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            VStack(alignment: .leading, spacing: 14) {
+                // Verse header
+                HStack(spacing: 12) {
+                    EmNumeralCircle(n: index, size: 40)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Verse \(index) of \(totalVerses)")
+                            .font(.system(size: 12, weight: .semibold))
+                            .foregroundColor(themeManager.secondaryText)
+                        Text("\(surahName) · \(fastingVerse.surahNumber):\(fastingVerse.verseNumber)")
+                            .font(.system(size: 13, weight: .bold)).tracking(0.3)
+                            .foregroundColor(themeManager.accentColor)
+                    }
+                    Spacer()
+                    if fastingVerse.isKeyVerse {
+                        Text("KEY VERSE")
+                            .font(.system(size: 9, weight: .bold)).tracking(1)
+                            .foregroundColor(themeManager.accentColor)
+                            .padding(.horizontal, 8).padding(.vertical, 4)
+                            .background(Capsule().fill(themeManager.accentChip))
+                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                    }
+                }
+
+                // Verse text
+                if let verse = verseData {
+                    Text(verse.arabic)
+                        .font(EmType.arabic(25))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(8)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .environment(\.layoutDirection, .rightToLeft)
+                    Text(verse.translation)
+                        .font(EmType.serif(16, .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+
+                // Relevance note
+                HStack(alignment: .top, spacing: 8) {
+                    Image(systemName: "text.bubble")
+                        .font(.system(size: 12))
+                        .foregroundColor(themeManager.accentColor)
+                    Text(fastingVerse.relevanceNote)
+                        .font(.system(size: 13))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(2)
+                }
+                .padding(12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(themeManager.accentChip.opacity(0.6))
+                )
+
+                // Action button
+                Button(action: onNavigate) {
+                    HStack(spacing: 9) {
+                        Image(systemName: "book.fill").font(.system(size: 13, weight: .semibold))
+                        Text("Read Full Tafsir").font(.system(size: 14, weight: .bold)).tracking(0.3)
+                    }
+                    .foregroundColor(themeManager.onAccentText)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(themeManager.accentGradient))
+                    .shadow(color: themeManager.accentColor.opacity(0.28), radius: 24, x: 0, y: 10)
+                }
+                .buttonStyle(EmPressStyle())
+            }
+            .padding(16)
+        }
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 0) {
             // Verse header
             HStack(spacing: 12) {

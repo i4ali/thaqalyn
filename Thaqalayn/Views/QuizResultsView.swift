@@ -32,14 +32,21 @@ struct QuizResultsView: View {
     var body: some View {
         ZStack {
             // Background
-            themeManager.primaryBackground
-                .ignoresSafeArea()
+            if themeManager.isMidnightEmerald {
+                EmeraldBackground()
+            } else {
+                themeManager.primaryBackground
+                    .ignoresSafeArea()
+            }
 
             // Confetti for good scores
             if showConfetti && isGood {
                 confettiView
             }
 
+            if themeManager.isMidnightEmerald {
+                emeraldContent
+            } else {
             VStack(spacing: 0) {
                 // Header
                 HStack {
@@ -126,10 +133,143 @@ struct QuizResultsView: View {
                 .padding(.bottom, 30)
                 .background(themeManager.primaryBackground)
             }
+            }
         }
         .darkScreenAura()
         .onAppear {
             animateIn()
+        }
+    }
+
+    // MARK: - Emerald
+
+    private var emeraldContent: some View {
+        VStack(spacing: 0) {
+            HStack {
+                Button(action: onDismiss) {
+                    Image(systemName: "xmark").font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(themeManager.accentColor)
+                        .frame(width: 40, height: 40)
+                        .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+                Spacer()
+                Text("RESULTS").font(.system(size: 11, weight: .bold)).tracking(3)
+                    .foregroundColor(themeManager.accentColor)
+                Spacer()
+                Color.clear.frame(width: 40, height: 40)
+            }
+            .padding(.horizontal, 20).padding(.top, 12)
+
+            ScrollView {
+                VStack(spacing: 28) {
+                    emeraldResultCard
+                        .scaleEffect(scale)
+                        .opacity(opacity)
+                    if showDetails {
+                        emeraldBreakdownCard
+                            .transition(.opacity.combined(with: .move(edge: .bottom)))
+                    }
+                }
+                .padding(.horizontal, 20).padding(.top, 20).padding(.bottom, 120)
+            }
+
+            VStack(spacing: 12) {
+                Button(action: onRetry) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "arrow.clockwise")
+                        Text("Try Again")
+                    }
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(themeManager.onAccentText)
+                    .frame(maxWidth: .infinity).padding(.vertical, 16)
+                    .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(themeManager.accentGradient))
+                    .shadow(color: themeManager.accentColor.opacity(0.28), radius: 18, x: 0, y: 8)
+                }
+                .buttonStyle(EmPressStyle())
+
+                Button(action: onDismiss) {
+                    Text("Done")
+                        .font(.system(size: 15.5, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+                        .frame(maxWidth: .infinity).padding(.vertical, 15)
+                        .background(
+                            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                .fill(themeManager.glassSurface)
+                                .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+                        )
+                }
+                .buttonStyle(EmPressStyle())
+            }
+            .padding(.horizontal, 20).padding(.bottom, 30)
+        }
+    }
+
+    private var emeraldResultCard: some View {
+        EmCard(glow: true) {
+            VStack(spacing: 22) {
+                ZStack {
+                    Circle()
+                        .fill(RadialGradient(colors: [levelColor.opacity(0.3), .clear], center: .center, startRadius: 0, endRadius: 60))
+                        .frame(width: 120, height: 120)
+                    Circle()
+                        .fill(levelColor.opacity(0.18))
+                        .frame(width: 84, height: 84)
+                        .overlay(Circle().stroke(levelColor, lineWidth: 2.5))
+                    Image(systemName: result.level.icon).font(.system(size: 36)).foregroundColor(levelColor)
+                }
+                VStack(spacing: 8) {
+                    Text("\(result.score)/\(result.totalQuestions)")
+                        .font(EmType.serif(48, .semiBold)).foregroundColor(themeManager.accentBright)
+                    Text(result.level.title)
+                        .font(.system(size: 20, weight: .bold)).foregroundColor(levelColor)
+                    Text(result.level.arabicTitle)
+                        .font(EmType.arabic(22)).foregroundColor(themeManager.secondaryText)
+                }
+                Text(result.level.message)
+                    .font(EmType.serif(16, .medium)).foregroundColor(themeManager.secondaryText)
+                    .multilineTextAlignment(.center).padding(.horizontal, 12)
+                VStack(spacing: 3) {
+                    Text(surah.englishName)
+                        .font(.system(size: 15, weight: .semibold)).foregroundColor(themeManager.primaryText)
+                    Text(surah.arabicName)
+                        .font(EmType.arabic(20)).foregroundColor(themeManager.accentColor)
+                }
+            }
+            .padding(28)
+            .frame(maxWidth: .infinity)
+        }
+    }
+
+    private var emeraldBreakdownCard: some View {
+        EmCard {
+            VStack(alignment: .leading, spacing: 16) {
+                EmSectionLabel(icon: "list.bullet", text: "Question Breakdown")
+                VStack(spacing: 10) {
+                    ForEach(Array(quiz.questions.enumerated()), id: \.offset) { index, question in
+                        let userAnswer = answers[question.id] ?? ""
+                        let isCorrect = userAnswer.lowercased() == question.correctAnswer.lowercased()
+                        HStack(spacing: 12) {
+                            Text("\(index + 1)")
+                                .font(.system(size: 13, weight: .bold))
+                                .foregroundColor(isCorrect ? themeManager.semanticGreen : themeManager.semanticRed)
+                                .frame(width: 28, height: 28)
+                                .background(Circle().fill((isCorrect ? themeManager.semanticGreen : themeManager.semanticRed).opacity(0.15)))
+                            Text(question.question)
+                                .font(EmType.serif(15, .medium))
+                                .foregroundColor(themeManager.primaryText)
+                                .lineLimit(2)
+                            Spacer()
+                            Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                .font(.system(size: 18))
+                                .foregroundColor(isCorrect ? themeManager.semanticGreen : themeManager.semanticRed)
+                        }
+                        .padding(12)
+                        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(themeManager.accentChip.opacity(0.5)))
+                    }
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(20)
         }
     }
 

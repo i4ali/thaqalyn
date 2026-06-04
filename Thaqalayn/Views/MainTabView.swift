@@ -10,6 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var deepLinkRouter = DeepLinkRouter.shared
+    @ObservedObject private var tabBarVisibility = TabBarVisibility.shared
     @State private var selectedTab = 0
 
     // Check if Ramadan season is active
@@ -27,7 +28,23 @@ struct MainTabView: View {
         IslamicCalendarManager.shared.isMuharramSeason()
     }
 
+    // Adaptive items for the Midnight Emerald floating tab bar — mirrors whichever
+    // tabs are present in the TabView below (always 0-3, plus at most one seasonal tab).
+    private var emeraldItems: [EmeraldTabItem] {
+        var items: [EmeraldTabItem] = [
+            EmeraldTabItem(id: 0, label: "Today",    sfSymbol: "sun.max"),
+            EmeraldTabItem(id: 1, label: "Quran",    sfSymbol: "book.closed"),
+            EmeraldTabItem(id: 2, label: "Explore",  sfSymbol: "sparkles"),
+            EmeraldTabItem(id: 3, label: "Progress", sfSymbol: "chart.bar"),
+        ]
+        if isRamadanSeason  { items.append(EmeraldTabItem(id: 4, label: "Ramadan",  sfSymbol: "moon.stars")) }
+        if isHajjSeason     { items.append(EmeraldTabItem(id: 5, label: "Hajj",     sfSymbol: "building.columns")) }
+        if isMuharramSeason { items.append(EmeraldTabItem(id: 6, label: "Muharram", sfSymbol: "flame")) }
+        return items
+    }
+
     var body: some View {
+        ZStack(alignment: .bottom) {
         TabView(selection: $selectedTab) {
             TodayTab(selectedTab: $selectedTab)
                 .tabItem {
@@ -38,6 +55,7 @@ struct MainTabView: View {
                     }
                 }
                 .tag(0)
+                .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
 
             HomeTab()
                 .tabItem {
@@ -48,6 +66,7 @@ struct MainTabView: View {
                     }
                 }
                 .tag(1)
+                .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
 
             ExploreTab()
                 .tabItem {
@@ -58,6 +77,7 @@ struct MainTabView: View {
                     }
                 }
                 .tag(2)
+                .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
 
             ProgressTab()
                 .tabItem {
@@ -68,6 +88,7 @@ struct MainTabView: View {
                     }
                 }
                 .tag(3)
+                .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
 
             // Conditional Ramadan tab - only visible during Ramadan season
             if isRamadanSeason {
@@ -80,6 +101,7 @@ struct MainTabView: View {
                         }
                     }
                     .tag(4)
+                    .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
             }
 
             // Conditional Hajj tab - only visible during Hajj season
@@ -93,6 +115,7 @@ struct MainTabView: View {
                         }
                     }
                     .tag(5)
+                    .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
             }
 
             // Conditional Muharram tab - only visible during Muharram season
@@ -106,9 +129,15 @@ struct MainTabView: View {
                         }
                     }
                     .tag(6)
+                    .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
             }
         }
         .tint(themeManager.accentColor)
+
+        if themeManager.isMidnightEmerald && !tabBarVisibility.isHidden {
+            EmeraldTabBar(items: emeraldItems, selection: $selectedTab)
+        }
+        }
         .onReceive(NotificationCenter.default.publisher(for: .navigateToVerse)) { notification in
             guard let userInfo = notification.userInfo,
                   let surah = userInfo["surah"] as? Int,

@@ -30,20 +30,8 @@ struct FullScreenCommentaryView: View {
     }
     
     var body: some View {
-        ZStack {
-            // Reading-optimized background
-            readingBackground
-            
-            VStack(spacing: 0) {
-                // Minimal header
-                readingHeader
-                
-                // Layer selector (compact)
-                compactLayerSelector
-                
-                // Full-screen reading content
-                readingContent
-            }
+        Group {
+            if themeManager.isMidnightEmerald { emeraldContent } else { legacyContent }
         }
         .navigationBarHidden(true)
         .statusBarHidden(true) // Hide status bar for immersive reading
@@ -62,7 +50,184 @@ struct FullScreenCommentaryView: View {
             tafsirReader.stop()
         }
     }
+
+    private var legacyContent: some View {
+        ZStack {
+            // Reading-optimized background
+            readingBackground
+
+            VStack(spacing: 0) {
+                // Minimal header
+                readingHeader
+
+                // Layer selector (compact)
+                compactLayerSelector
+
+                // Full-screen reading content
+                readingContent
+            }
+        }
+    }
     
+    // MARK: - Midnight Emerald
+
+    private var emeraldContent: some View {
+        ZStack {
+            EmeraldBackground()
+            VStack(spacing: 0) {
+                emeraldHeader
+                emeraldLayerSelector
+                emeraldReadingContent
+            }
+        }
+    }
+
+    private var emeraldHeader: some View {
+        HStack {
+            Button(action: { dismiss() }) {
+                Image(systemName: "xmark").font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(themeManager.accentColor)
+                    .frame(width: 40, height: 40)
+                    .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+            }
+            Spacer()
+            VStack(spacing: 3) {
+                Text("Commentary").font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.primaryText)
+                Text("\(surah.englishName) · Verse \(verse.number)").font(.system(size: 12, weight: .medium)).foregroundColor(themeManager.tertiaryText)
+            }
+            Spacer()
+            Button(action: { languageManager.toggleLanguage() }) {
+                HStack(spacing: 4) {
+                    Text(languageManager.selectedLanguage.displayName).font(.system(size: 13, weight: .semibold))
+                    Image(systemName: "globe").font(.system(size: 12))
+                }
+                .foregroundColor(themeManager.accentColor)
+                .padding(.horizontal, 12).padding(.vertical, 8)
+                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+            }
+        }
+        .padding(.horizontal, 20).padding(.top, 20).padding(.bottom, 16)
+    }
+
+    private var emeraldLayerSelector: some View {
+        ScrollViewReader { proxy in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 10) {
+                    ForEach(TafsirLayer.allCases, id: \.self) { layer in
+                        emeraldLayerButton(for: layer).id(layer)
+                    }
+                }
+                .padding(.horizontal, 20)
+            }
+            .padding(.bottom, 20)
+            .onChange(of: selectedLayer) { _, newLayer in withAnimation(.easeInOut(duration: 0.3)) { proxy.scrollTo(newLayer, anchor: .center) } }
+            .onAppear { proxy.scrollTo(selectedLayer, anchor: .center) }
+        }
+    }
+
+    private func emeraldLayerButton(for layer: TafsirLayer) -> some View {
+        let isLocked = !premiumManager.canAccessLayer(layer, surahNumber: surah.number)
+        let isActive = selectedLayer == layer && !isLocked
+        return Button(action: {
+            if isLocked { showingPaywall = true }
+            else { withAnimation(.easeInOut(duration: 0.3)) { selectedLayer = layer } }
+        }) {
+            VStack(spacing: 6) {
+                PhosphorIcon(name: layerIcon(for: layer), size: 24)
+                Text(layerShortTitle(for: layer)).font(.system(size: 12, weight: .bold)).multilineTextAlignment(.center)
+                Text(layerShortDescription(for: layer)).font(.system(size: 9.5)).multilineTextAlignment(.center).lineLimit(1)
+            }
+            .foregroundColor(isActive ? themeManager.onAccentText : (isLocked ? themeManager.tertiaryText : themeManager.primaryText))
+            .frame(width: 104, height: 92)
+            .padding(10)
+            .background {
+                if isActive {
+                    RoundedRectangle(cornerRadius: 16, style: .continuous).fill(themeManager.accentGradient)
+                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
+                } else {
+                    RoundedRectangle(cornerRadius: 16, style: .continuous).fill(themeManager.glassSurface)
+                        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+            }
+            .overlay(alignment: .topTrailing) {
+                if isLocked {
+                    Image(systemName: "lock.fill").font(.system(size: 10)).foregroundColor(themeManager.tertiaryText).padding(7)
+                }
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+
+    private var emeraldReadingContent: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                if let tafsir = verse.tafsir {
+                    emeraldReadingLayerHeader
+                    emeraldReadingTextContent(tafsir.content(for: selectedLayer, language: languageManager.selectedLanguage))
+                } else {
+                    noCommentaryView
+                }
+            }
+            .padding(.horizontal, 24).padding(.bottom, 60)
+        }
+        .animation(.easeInOut(duration: 0.3), value: selectedLayer)
+        .animation(.easeInOut(duration: 0.3), value: languageManager.selectedLanguage)
+    }
+
+    private var emeraldReadingLayerHeader: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 14) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.accentChip)
+                        .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+                    PhosphorIcon(name: layerIcon(for: selectedLayer), size: 22).foregroundColor(themeManager.accentColor)
+                }
+                .frame(width: 48, height: 48)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(selectedLayer.title).font(EmType.serif(24, .semiBold)).foregroundColor(themeManager.primaryText)
+                    Text(selectedLayer.description).font(.system(size: 14, weight: .medium)).foregroundColor(themeManager.secondaryText).lineSpacing(2)
+                }
+                Spacer()
+                if voiceManager.hasVoicesAvailable(for: languageManager.selectedLanguage) { ttsButton }
+            }
+            EmDivider()
+        }
+        .padding(.bottom, 28)
+    }
+
+    private func emeraldReadingTextContent(_ text: String) -> some View {
+        let paragraphs = formattedParagraphs(from: text)
+        let isRTL = languageManager.selectedLanguage.isRTL
+        return VStack(alignment: isRTL ? .trailing : .leading, spacing: 16) {
+            ForEach(Array(paragraphs.enumerated()), id: \.offset) { index, paragraph in
+                let trimmed = paragraph.trimmingCharacters(in: .whitespacesAndNewlines)
+                let hlRange = highlightRangeForParagraph(
+                    paragraphText: trimmed,
+                    paragraphIndex: index,
+                    allParagraphs: paragraphs.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) },
+                    fullHighlightRange: (tafsirReader.isPlaying || tafsirReader.isPaused) ? tafsirReader.highlightRange : nil
+                )
+                HighlightedText(
+                    text: trimmed,
+                    highlightRange: hlRange,
+                    font: isRTL ? EmType.arabic(20) : EmType.serif(19, .medium),
+                    textColor: themeManager.primaryText,
+                    highlightColor: themeManager.accentColor.opacity(0.28),
+                    lineSpacing: 7
+                )
+                .multilineTextAlignment(isRTL ? .trailing : .leading)
+                .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+                .padding(18)
+                .background {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous).fill(themeManager.glassSurface)
+                        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+            }
+        }
+    }
+
     private var readingBackground: some View {
         ZStack {
             // Base gradient background matching main app

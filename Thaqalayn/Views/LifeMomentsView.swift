@@ -25,14 +25,22 @@ struct LifeMomentsView: View {
                     // Modern header
                     VStack(spacing: 12) {
                         HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Life Moments")
-                                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                                    .foregroundColor(themeManager.primaryText)
+                            if themeManager.isMidnightEmerald {
+                                VStack(alignment: .leading, spacing: 7) {
+                                    Text("GUIDANCE").font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
+                                    Text("Life Moments").font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
+                                    Text("Find guidance for any situation").font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
+                                }
+                            } else {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text("Life Moments")
+                                        .font(.system(size: 34, weight: .bold, design: .rounded))
+                                        .foregroundColor(themeManager.primaryText)
 
-                                Text("Find guidance for any situation")
-                                    .font(.system(size: 16, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
+                                    Text("Find guidance for any situation")
+                                        .font(.system(size: 16, weight: .medium))
+                                        .foregroundColor(themeManager.secondaryText)
+                                }
                             }
 
                             Spacer()
@@ -101,6 +109,33 @@ struct MomentCard: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            HStack(spacing: 14) {
+                EmIconChip(sfSymbol: moment.categoryIcon, size: 46)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(moment.situation)
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2).multilineTextAlignment(.leading)
+                    Text(moment.verseReference.uppercased())
+                        .font(.system(size: 11, weight: .bold)).tracking(1)
+                        .foregroundColor(themeManager.accentColor)
+                }
+                Spacer(minLength: 8)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundColor(themeManager.tertiaryText)
+            }
+            .padding(16)
+        }
+        .contentShape(Rectangle())
+    }
+
+    private var legacyBody: some View {
         HStack(alignment: .center, spacing: 16) {
             // Category icon
             ZStack {

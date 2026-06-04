@@ -28,6 +28,9 @@ struct MuharramDayDetailView: View {
             AdaptiveModernBackground()
 
             ScrollView {
+                if themeManager.isMidnightEmerald {
+                    emeraldSections
+                } else {
                 VStack(spacing: 24) {
                     // Day header
                     MuharramDayHeader(day: day, isObserved: isObserved)
@@ -135,6 +138,7 @@ struct MuharramDayDetailView: View {
 
                     Spacer(minLength: 40)
                 }
+                }
             }
 
             // Hidden NavigationLink for verse navigation
@@ -164,6 +168,96 @@ struct MuharramDayDetailView: View {
         }
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura(glowOpacity: 0.36)
+        .hideTabBarInEmerald()
+    }
+
+    // Day 10 is Ashura — the grief summit; it receives a dignified, somber emphasis.
+    private var isAshura: Bool { day.dayNumber == 10 }
+
+    @ViewBuilder private var emeraldSections: some View {
+        VStack(spacing: 20) {
+            EmJourneyDetailHeader(
+                dayNumber: day.dayNumber,
+                icon: day.icon,
+                theme: day.theme,
+                themeArabic: day.themeArabic,
+                statusLabel: isObserved ? "Observed" : nil,
+                statusTint: themeManager.secondaryText,
+                emphasized: isAshura,
+                badgeSymbol: isAshura ? "moon.fill" : nil,
+                badgeText: isAshura ? "Ashura" : nil
+            )
+
+            EmDetailCard(icon: "hands.sparkles", label: "Dua / Ziyarat") {
+                VStack(alignment: .leading, spacing: 12) {
+                    Text(day.dua.arabic)
+                        .font(EmType.arabic(24))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(8)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                    Text(day.dua.transliteration)
+                        .font(EmType.serifItalic(16))
+                        .foregroundColor(themeManager.secondaryText)
+                    Text(day.dua.english)
+                        .font(EmType.serif(17, .medium))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(4)
+                    if let source = day.dua.source {
+                        Text("— \(source)")
+                            .font(.system(size: 12.5, weight: .medium))
+                            .foregroundColor(themeManager.tertiaryText)
+                    }
+                }
+            }
+
+            VStack(alignment: .leading, spacing: 12) {
+                EmSectionLabel(icon: "book.pages", text: "Today's Verses")
+                    .padding(.horizontal, 20)
+                ForEach(day.verses) { verse in
+                    MuharramVerseCard(
+                        verse: verse,
+                        onNavigate: {
+                            selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                            navigateToVerse = true
+                        }
+                    )
+                }
+            }
+
+            EmDetailCard(icon: "lightbulb", label: "Tafsir Focus") {
+                Text(day.tafsirFocus)
+                    .font(EmType.serif(17, .medium))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(5)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+
+            EmDetailCard(icon: "heart.text.square", label: "Reflection") {
+                Text(day.reflection)
+                    .font(EmType.serifItalic(18))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(5)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+
+            EmJourneyToggleButton(
+                isDone: isObserved,
+                doneLabel: "Observed",
+                todoLabel: "Mark as observed",
+                doneTint: themeManager.secondaryText,
+                onToggle: {
+                    if isObserved {
+                        journeyManager.unmarkDayObserved(day.dayNumber)
+                    } else {
+                        journeyManager.markDayObserved(day.dayNumber)
+                    }
+                }
+            )
+
+            Spacer(minLength: 40)
+        }
+        .padding(.top, 4)
     }
 }
 
@@ -343,6 +437,60 @@ struct MuharramVerseCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Text("\(surahName) · \(verse.surahNumber):\(verse.verseNumber)")
+                        .font(.system(size: 12, weight: .bold)).tracking(0.3)
+                        .foregroundColor(themeManager.accentColor)
+                    Spacer()
+                    Button(action: onNavigate) {
+                        HStack(spacing: 4) {
+                            Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
+                            Image(systemName: "arrow.right").font(.system(size: 10, weight: .semibold))
+                        }
+                        .foregroundColor(themeManager.accentColor)
+                    }
+                    .buttonStyle(EmPressStyle())
+                }
+                if let data = verseData {
+                    Text(data.arabic)
+                        .font(EmType.arabic(25))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(8)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                    Text(data.translation)
+                        .font(EmType.serif(16, .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(3)
+                }
+                HStack(alignment: .top, spacing: 8) {
+                    Image(systemName: "text.bubble")
+                        .font(.system(size: 12))
+                        .foregroundColor(themeManager.accentColor)
+                    Text(verse.relevanceNote)
+                        .font(.system(size: 13))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(2)
+                }
+                .padding(12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(themeManager.accentChip.opacity(0.6))
+                )
+            }
+            .padding(16)
+        }
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 0) {
             // Verse header
             HStack {

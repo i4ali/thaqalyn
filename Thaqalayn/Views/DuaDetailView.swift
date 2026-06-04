@@ -18,6 +18,9 @@ struct DuaDetailView: View {
         ZStack {
             AdaptiveModernBackground()
 
+            if themeManager.isMidnightEmerald {
+                emeraldScroll
+            } else {
             ScrollView {
                 VStack(spacing: 24) {
                     headerSection
@@ -31,6 +34,7 @@ struct DuaDetailView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 20)
                 .padding(.bottom, 40)
+            }
             }
         }
         .onDisappear {
@@ -51,6 +55,115 @@ struct DuaDetailView: View {
             }
         }
         .darkScreenAura()
+        .hideTabBarInEmerald()
+    }
+
+    // MARK: - Emerald
+
+    private var emeraldScroll: some View {
+        ScrollView {
+            VStack(spacing: 20) {
+                HStack(alignment: .top, spacing: 12) {
+                    VStack(alignment: .leading, spacing: 7) {
+                        Text(dua.category.uppercased())
+                            .font(.system(size: 11, weight: .bold)).tracking(3)
+                            .foregroundColor(themeManager.accentColor)
+                        Text(dua.situation(for: languageManager.selectedLanguage))
+                            .font(EmType.serif(30, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer(minLength: 8)
+                    emeraldLanguageToggle
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .environment(\.layoutDirection,
+                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+
+                EmCard(glow: true) {
+                    Text(dua.arabic)
+                        .font(EmType.arabic(30))
+                        .foregroundColor(themeManager.primaryText)
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(12)
+                        .frame(maxWidth: .infinity)
+                        .padding(22)
+                        .environment(\.layoutDirection, .rightToLeft)
+                        .textSelection(.enabled)
+                }
+
+                emeraldTTSButton
+
+                Text(dua.transliteration)
+                    .font(EmType.serifItalic(17))
+                    .foregroundColor(themeManager.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
+                    .textSelection(.enabled)
+
+                EmCard {
+                    Text(dua.translation(for: languageManager.selectedLanguage))
+                        .font(EmType.serif(17, .medium))
+                        .foregroundColor(themeManager.primaryText)
+                        .multilineTextAlignment(languageManager.selectedLanguage == .urdu ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage == .urdu ? .trailing : .leading)
+                        .padding(20)
+                        .environment(\.layoutDirection, languageManager.selectedLanguage == .urdu ? .rightToLeft : .leftToRight)
+                        .textSelection(.enabled)
+                }
+
+                Text("Source · \(dua.source)")
+                    .font(.system(size: 12.5, weight: .medium))
+                    .foregroundColor(themeManager.tertiaryText)
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 2)
+
+                ShareLink(item: shareText) {
+                    HStack(spacing: 9) {
+                        Image(systemName: "square.and.arrow.up").font(.system(size: 15, weight: .semibold))
+                        Text("Share").font(.system(size: 15.5, weight: .bold)).tracking(0.3)
+                    }
+                    .foregroundColor(themeManager.onAccentText)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(themeManager.accentGradient))
+                    .shadow(color: themeManager.accentColor.opacity(0.28), radius: 24, x: 0, y: 10)
+                }
+                .padding(.top, 4)
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 16)
+            .padding(.bottom, 40)
+        }
+    }
+
+    private var emeraldTTSButton: some View {
+        Button(action: handleTTSTap) {
+            HStack(spacing: 8) {
+                Image(systemName: ttsIconName).font(.system(size: 15, weight: .semibold))
+                Text(ttsLabel).font(.system(size: 14.5, weight: .semibold))
+            }
+            .foregroundColor(themeManager.accentColor)
+            .padding(.horizontal, 20).padding(.vertical, 11)
+            .background(Capsule().fill(themeManager.accentChip))
+            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(EmPressStyle())
+        .frame(maxWidth: .infinity)
+    }
+
+    private var emeraldLanguageToggle: some View {
+        Button(action: { languageManager.toggleLanguage() }) {
+            HStack(spacing: 5) {
+                Image(systemName: "globe").font(.system(size: 12, weight: .semibold))
+                Text(languageManager.selectedLanguage.displayName).font(.system(size: 13, weight: .semibold))
+            }
+            .foregroundColor(themeManager.accentColor)
+            .padding(.horizontal, 12).padding(.vertical, 8)
+            .background(Capsule().fill(themeManager.accentChip))
+            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(EmPressStyle())
     }
 
     // MARK: - Sections

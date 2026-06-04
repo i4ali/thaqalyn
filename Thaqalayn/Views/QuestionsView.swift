@@ -44,14 +44,22 @@ struct QuestionsView: View {
                     // Modern header
                     VStack(spacing: 12) {
                         HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Questions & Answers")
-                                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                                    .foregroundColor(themeManager.primaryText)
+                            if themeManager.isMidnightEmerald {
+                                VStack(alignment: .leading, spacing: 7) {
+                                    Text("WISDOM LIBRARY").font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
+                                    Text("Questions & Answers").font(EmType.serif(34, .semiBold)).foregroundColor(themeManager.primaryText).fixedSize(horizontal: false, vertical: true)
+                                    Text("Find Quranic guidance for life's questions").font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
+                                }
+                            } else {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text("Questions & Answers")
+                                        .font(.system(size: 34, weight: .bold, design: .rounded))
+                                        .foregroundColor(themeManager.primaryText)
 
-                                Text("Find Quranic guidance for life's questions")
-                                    .font(.system(size: 16, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
+                                    Text("Find Quranic guidance for life's questions")
+                                        .font(.system(size: 16, weight: .medium))
+                                        .foregroundColor(themeManager.secondaryText)
+                                }
                             }
 
                             Spacer()
@@ -64,7 +72,7 @@ struct QuestionsView: View {
                     // Search bar
                     HStack(spacing: 12) {
                         Image(systemName: "magnifyingglass")
-                            .foregroundColor(themeManager.secondaryText)
+                            .foregroundColor(themeManager.isMidnightEmerald ? themeManager.accentColor : themeManager.secondaryText)
                             .font(.system(size: 16, weight: .medium))
 
                         TextField("Search questions...", text: $searchText)
@@ -133,7 +141,7 @@ struct QuestionsView: View {
                                                 .foregroundColor(themeManager.accentColor)
 
                                             Text(category.displayName)
-                                                .font(.system(size: 18, weight: .bold))
+                                                .font(themeManager.isMidnightEmerald ? EmType.serif(18, .semiBold) : .system(size: 18, weight: .bold))
                                                 .foregroundColor(themeManager.primaryText)
                                                 .textCase(nil)
 
@@ -186,6 +194,39 @@ struct QuestionCardView: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+    private var emeraldBody: some View {
+        EmCard {
+            HStack(alignment: .top, spacing: 14) {
+                EmIconChip(sfSymbol: question.categoryIcon, size: 46)
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(question.question)
+                        .font(EmType.serif(19, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(3).multilineTextAlignment(.leading)
+                    HStack(spacing: 8) {
+                        HStack(spacing: 4) {
+                            Image(systemName: "checkmark.seal.fill").font(.system(size: 11, weight: .semibold))
+                            Text("\(question.verseCount) verse\(question.verseCount == 1 ? "" : "s")").font(.system(size: 11, weight: .semibold))
+                        }
+                        .foregroundColor(themeManager.semanticGreen)
+                        .padding(.horizontal, 8).padding(.vertical, 4)
+                        .background(Capsule().fill(themeManager.semanticGreenChip))
+                        Text(question.verses.prefix(2).map { $0.verseReference }.joined(separator: " · "))
+                            .font(.system(size: 11, weight: .medium))
+                            .foregroundColor(themeManager.tertiaryText).lineLimit(1)
+                    }
+                }
+                Spacer(minLength: 8)
+                Image(systemName: "chevron.right").font(.system(size: 13, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
+            }
+            .padding(16)
+        }
+        .contentShape(Rectangle())
+        .padding(.horizontal, 20)
+    }
+    private var legacyBody: some View {
         HStack(alignment: .top, spacing: 16) {
             // Category icon
             ZStack {
@@ -256,6 +297,27 @@ struct CategoryChip: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+    private var emeraldBody: some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                Image(systemName: icon).font(.system(size: 13, weight: .semibold))
+                Text(title).font(.system(size: 14, weight: .semibold))
+            }
+            .foregroundColor(isSelected ? themeManager.onAccentText : themeManager.primaryText)
+            .padding(.horizontal, 16).padding(.vertical, 10)
+            .background {
+                if isSelected {
+                    Capsule().fill(themeManager.accentGradient)
+                } else {
+                    Capsule().fill(themeManager.glassSurface).overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+            }
+        }
+        .buttonStyle(EmPressStyle())
+    }
+    private var legacyBody: some View {
         Button(action: action) {
             HStack(spacing: 6) {
                 Image(systemName: icon)

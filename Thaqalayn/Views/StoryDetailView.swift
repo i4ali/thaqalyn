@@ -28,6 +28,9 @@ struct StoryDetailView: View {
             AdaptiveModernBackground()
 
             ScrollView {
+                if themeManager.isMidnightEmerald {
+                    emeraldSections
+                } else {
                 VStack(spacing: 24) {
                     // Story header
                     VStack(spacing: 16) {
@@ -191,6 +194,7 @@ struct StoryDetailView: View {
                         .padding(.bottom, 20)
                     }
                 }
+                }
             }
 
             // Hidden NavigationLink for verse navigation
@@ -221,6 +225,87 @@ struct StoryDetailView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura(glowOpacity: 0.36)
     }
+
+    @ViewBuilder private var emeraldSections: some View {
+        VStack(spacing: 20) {
+            // Story header card
+            EmCard {
+                VStack(alignment: .leading, spacing: 14) {
+                    HStack(spacing: 7) {
+                        Image(systemName: story.categoryIcon)
+                            .font(.system(size: 12, weight: .semibold))
+                        Text(story.category.displayName)
+                            .font(.system(size: 12, weight: .semibold))
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                    .padding(.horizontal, 13).padding(.vertical, 7)
+                    .background(Capsule().fill(themeManager.accentChip))
+                    .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(story.prophet.uppercased())
+                            .font(.system(size: 11, weight: .bold)).tracking(2)
+                            .foregroundColor(themeManager.accentColor)
+                        Text(story.title)
+                            .font(EmType.serif(30, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(22)
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 12)
+
+            // Quranic narrative intro
+            VStack(alignment: .leading, spacing: 8) {
+                EmSectionLabel(icon: "book.pages", text: "Quranic Narrative")
+                Text("This story is told through \(story.verseCount) verse\(story.verseCount == 1 ? "" : "s"):")
+                    .font(EmType.serif(17, .medium))
+                    .foregroundColor(themeManager.secondaryText)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 20)
+
+            // Verses with story notes
+            ForEach(Array(story.verses.enumerated()), id: \.element.verseNumber) { index, storyVerse in
+                StoryVerseCard(
+                    storyVerse: storyVerse,
+                    index: index + 1,
+                    totalVerses: story.verseCount,
+                    onNavigate: {
+                        selectedVerseForNav = (storyVerse.surahNumber, storyVerse.verseNumber)
+                        navigateToVerse = true
+                    }
+                )
+            }
+
+            // Lessons summary
+            if let lessons = story.lessonsSummary {
+                EmDetailCard(icon: "lightbulb", label: "Lessons to Learn") {
+                    Text(lessons)
+                        .font(EmType.serif(17, .medium))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+
+            // Related stories
+            if !relatedStories.isEmpty {
+                VStack(alignment: .leading, spacing: 14) {
+                    EmSectionLabel(icon: "link", text: "Related Stories")
+                    ForEach(relatedStories) { relatedStory in
+                        RelatedStoryCard(story: relatedStory)
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 20)
+            }
+        }
+        .padding(.top, 4)
+    }
 }
 
 struct StoryVerseCard: View {
@@ -244,6 +329,68 @@ struct StoryVerseCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Text("\(surahName) · \(storyVerse.surahNumber):\(storyVerse.verseNumber)")
+                        .font(.system(size: 12, weight: .bold)).tracking(0.3)
+                        .foregroundColor(themeManager.accentColor)
+                    if storyVerse.isKeyVerse {
+                        Text("KEY VERSE")
+                            .font(.system(size: 9, weight: .bold)).tracking(1)
+                            .foregroundColor(themeManager.accentColor)
+                            .padding(.horizontal, 7).padding(.vertical, 3)
+                            .background(Capsule().fill(themeManager.accentChip))
+                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                    }
+                    Spacer()
+                    Button(action: onNavigate) {
+                        HStack(spacing: 4) {
+                            Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
+                            Image(systemName: "arrow.right").font(.system(size: 10, weight: .semibold))
+                        }
+                        .foregroundColor(themeManager.accentColor)
+                    }
+                    .buttonStyle(EmPressStyle())
+                }
+                if let verse = verseData {
+                    Text(verse.arabic)
+                        .font(EmType.arabic(25))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(8)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                    Text(verse.translation)
+                        .font(EmType.serif(16, .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(3)
+                }
+                HStack(alignment: .top, spacing: 8) {
+                    Image(systemName: "text.bubble")
+                        .font(.system(size: 12))
+                        .foregroundColor(themeManager.accentColor)
+                    Text(storyVerse.storyNote)
+                        .font(.system(size: 13))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(2)
+                }
+                .padding(12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(themeManager.accentChip.opacity(0.6))
+                )
+            }
+            .padding(16)
+        }
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 0) {
             // Verse header
             HStack(spacing: 12) {
@@ -384,6 +531,37 @@ struct RelatedStoryCard: View {
     @State private var navigateToStory = false
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        NavigationLink(destination: StoryDetailView(story: story), isActive: $navigateToStory) {
+            EmCard(cornerRadius: 16) {
+                HStack(spacing: 12) {
+                    EmIconChip(sfSymbol: story.categoryIcon, size: 38)
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(story.prophet)
+                            .font(.system(size: 11, weight: .bold)).tracking(0.5)
+                            .foregroundColor(themeManager.accentColor)
+                        Text(story.title)
+                            .font(EmType.serif(17, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+                .padding(14)
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         NavigationLink(destination: StoryDetailView(story: story), isActive: $navigateToStory) {
             HStack(spacing: 12) {
                 Image(systemName: story.categoryIcon)

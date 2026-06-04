@@ -120,3 +120,6 @@ video_output/
 
 # Stray/junk image accidentally dropped at repo root
 /8527d322-ee79-4a1c-bbeb-1be30da8f6cc.JPG
+
+# Superpowers brainstorm companion (local mockups)
+.superpowers/

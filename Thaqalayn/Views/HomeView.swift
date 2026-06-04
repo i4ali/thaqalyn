@@ -20,6 +20,37 @@ struct HomeView: View {
     @State private var targetVerseNumber: Int?
 
     var body: some View {
+        Group {
+            if themeManager.isMidnightEmerald {
+                EmeraldHomeView(
+                    searchText: $searchText,
+                    selectedSurahForDeepLink: $selectedSurahForDeepLink,
+                    targetVerseNumber: $targetVerseNumber
+                )
+            } else {
+                legacyBody
+            }
+        }
+        .overlay(alignment: .bottom) {
+            if let syncStatus = bookmarkManager.syncStatus {
+                SyncStatusToast(message: syncStatus)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .animation(.spring(response: 0.5, dampingFraction: 0.8), value: bookmarkManager.syncStatus)
+            }
+        }
+        .fullScreenCover(isPresented: $showingAuthentication) {
+            AuthenticationView()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
+            showingAuthentication = true
+        }
+        .onAppear { consumePendingDeepLink() }
+        .onChange(of: deepLinkRouter.pendingDeepLink) { _, _ in
+            consumePendingDeepLink()
+        }
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 0) {
             // Modern header with glassmorphism
             VStack(spacing: 16) {
@@ -100,23 +131,6 @@ struct HomeView: View {
                 .hidden()
             }
 
-        }
-        .overlay(alignment: .bottom) {
-            if let syncStatus = bookmarkManager.syncStatus {
-                SyncStatusToast(message: syncStatus)
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
-                    .animation(.spring(response: 0.5, dampingFraction: 0.8), value: bookmarkManager.syncStatus)
-            }
-        }
-        .fullScreenCover(isPresented: $showingAuthentication) {
-            AuthenticationView()
-        }
-        .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
-            showingAuthentication = true
-        }
-        .onAppear { consumePendingDeepLink() }
-        .onChange(of: deepLinkRouter.pendingDeepLink) { _, _ in
-            consumePendingDeepLink()
         }
     }
 

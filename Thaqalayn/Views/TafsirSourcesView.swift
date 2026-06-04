@@ -12,6 +12,10 @@ struct TafsirSourcesView: View {
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var legacyBody: some View {
         NavigationView {
             ZStack {
                 themeManager.primaryBackground
@@ -102,6 +106,97 @@ struct TafsirSourcesView: View {
             .darkScreenAura()
         }
     }
+
+    private var emeraldBody: some View {
+        NavigationView {
+            ZStack {
+                EmeraldBackground()
+
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 22) {
+                        EmHeading(
+                            eyebrow: "Scholarship",
+                            title: "Tafsir Sources",
+                            sub: "The commentary in this app draws from classical and contemporary Shia scholarship. Below are the primary sources referenced for each layer."
+                        )
+                        .padding(.horizontal, 20)
+                        .padding(.top, 8)
+
+                        // Layer 1 - Foundation
+                        SourceSection(
+                            icon: "building.columns.fill",
+                            title: "Foundation",
+                            iconColor: .blue,
+                            sources: [
+                                SourceItem(title: "General Islamic Scholarship", subtitle: "Historical context and foundational understanding"),
+                                SourceItem(title: "Classical Tafsir Methodology", subtitle: "Traditional exegetical approaches")
+                            ]
+                        )
+
+                        // Layer 2 - Classical Shia
+                        SourceSection(
+                            icon: "books.vertical.fill",
+                            title: "Classical Shia",
+                            iconColor: .purple,
+                            sources: [
+                                SourceItem(title: "Tafsir al-Mizan", subtitle: "Allama Muhammad Husayn Tabatabai", arabic: "تفسير الميزان"),
+                                SourceItem(title: "Majma' al-Bayan", subtitle: "Sheikh Abu Ali al-Fadl al-Tabrisi", arabic: "مجمع البيان"),
+                                SourceItem(title: "Sharh al-Lum'a", subtitle: "Classical jurisprudential commentary", arabic: "شرح اللمعة")
+                            ]
+                        )
+
+                        // Layer 3 - Contemporary
+                        SourceSection(
+                            icon: "globe",
+                            title: "Contemporary",
+                            iconColor: .green,
+                            sources: [
+                                SourceItem(title: "Ayatollah Naser Makarem Shirazi", subtitle: "Contemporary Shia scholar"),
+                                SourceItem(title: "Sheikh Mansour Leghaei", subtitle: "Islamic educator and author"),
+                                SourceItem(title: "Dr. Reza Shah-Kazemi", subtitle: "Islamic philosopher and author")
+                            ]
+                        )
+
+                        // Layer 4 - Ahlul Bayt
+                        SourceSection(
+                            icon: "star.fill",
+                            title: "Ahlul Bayt",
+                            iconColor: .yellow,
+                            sources: [
+                                SourceItem(title: "Al-Kafi", subtitle: "Sheikh al-Kulayni", arabic: "الكافي"),
+                                SourceItem(title: "Bihar al-Anwar", subtitle: "Allama Muhammad Baqir al-Majlisi", arabic: "بحار الأنوار"),
+                                SourceItem(title: "Tafsir al-Qummi", subtitle: "Ali ibn Ibrahim al-Qummi", arabic: "تفسير القمي"),
+                                SourceItem(title: "Tafsir al-Ayyashi", subtitle: "Muhammad ibn Mas'ud al-Ayyashi", arabic: "تفسير العياشي"),
+                                SourceItem(title: "Al-Sahifa al-Sajjadiyya", subtitle: "Imam Ali Zayn al-Abidin", arabic: "الصحيفة السجادية")
+                            ]
+                        )
+
+                        // Layer 5 - Comparative
+                        SourceSection(
+                            icon: "scale.3d",
+                            title: "Comparative",
+                            iconColor: .orange,
+                            sources: [
+                                SourceItem(title: "Classical Sunni Tafsir Traditions", subtitle: "For comparative scholarly analysis"),
+                                SourceItem(title: "Shia-Sunni Scholarly Dialogue", subtitle: "Balanced academic perspectives")
+                            ]
+                        )
+                    }
+                    .padding(.bottom, 40)
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        dismiss()
+                    }
+                    .font(EmType.serif(18, .semiBold))
+                    .foregroundColor(themeManager.accentColor)
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Supporting Views
@@ -110,6 +205,7 @@ struct SourceItem: Identifiable {
     let id = UUID()
     let title: String
     let subtitle: String
+    var arabic: String? = nil
 }
 
 struct SourceSection: View {
@@ -121,6 +217,52 @@ struct SourceSection: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            EmSectionLabel(icon: icon, text: title)
+                .padding(.horizontal, 20)
+
+            EmCard(cornerRadius: 18) {
+                VStack(spacing: 0) {
+                    ForEach(sources) { source in
+                        HStack(alignment: .top, spacing: 12) {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(source.title)
+                                    .font(EmType.serif(19, .semiBold))
+                                    .foregroundColor(themeManager.primaryText)
+
+                                Text(source.subtitle)
+                                    .font(.system(size: 13, weight: .regular))
+                                    .foregroundColor(themeManager.secondaryText)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+
+                            Spacer(minLength: 8)
+
+                            if let arabic = source.arabic {
+                                Text(arabic)
+                                    .font(EmType.arabic(20))
+                                    .foregroundColor(themeManager.accentColor)
+                            }
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(16)
+
+                        if source.id != sources.last?.id {
+                            EmDivider()
+                                .padding(.horizontal, 16)
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal, 20)
+        }
+    }
+
+    private var legacyBody: some View {
         VStack(alignment: .leading, spacing: 12) {
             // Section Header
             HStack(spacing: 12) {

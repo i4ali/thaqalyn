@@ -42,6 +42,9 @@ struct PropheticStoriesView: View {
 
                 VStack(spacing: 0) {
                     // Modern header
+                    if themeManager.isMidnightEmerald {
+                        emeraldHeader
+                    } else {
                     VStack(spacing: 12) {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
@@ -60,6 +63,7 @@ struct PropheticStoriesView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 12)
+                    }
 
                     // Search bar
                     HStack(spacing: 12) {
@@ -133,7 +137,9 @@ struct PropheticStoriesView: View {
                                                 .foregroundColor(themeManager.accentColor)
 
                                             Text(category.displayName)
-                                                .font(.system(size: 18, weight: .bold))
+                                                .font(themeManager.isMidnightEmerald
+                                                      ? EmType.serif(20, .semiBold)
+                                                      : .system(size: 18, weight: .bold))
                                                 .foregroundColor(themeManager.primaryText)
                                                 .textCase(nil)
 
@@ -179,6 +185,27 @@ struct PropheticStoriesView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
     }
+
+    private var emeraldHeader: some View {
+        HStack(alignment: .top, spacing: 12) {
+            VStack(alignment: .leading, spacing: 7) {
+                Text("From the Qur'an".uppercased())
+                    .font(.system(size: 11, weight: .bold)).tracking(3)
+                    .foregroundColor(themeManager.accentColor)
+                Text("Prophetic Stories")
+                    .font(EmType.serif(36, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text("Quranic accounts of the messengers")
+                    .font(.system(size: 13.5))
+                    .foregroundColor(themeManager.secondaryText)
+            }
+            Spacer(minLength: 8)
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 16)
+        .padding(.bottom, 12)
+    }
 }
 
 struct PropheticStoryCardView: View {
@@ -186,6 +213,39 @@ struct PropheticStoryCardView: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            HStack(spacing: 14) {
+                EmIconChip(sfSymbol: story.categoryIcon)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(story.prophet)
+                        .font(.system(size: 11, weight: .bold)).tracking(0.5)
+                        .foregroundColor(themeManager.accentColor)
+                    Text(story.title)
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text("\(story.verseCount) verse\(story.verseCount == 1 ? "" : "s") · \(story.category.displayName)")
+                        .font(.system(size: 13))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineLimit(1)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundColor(themeManager.tertiaryText)
+            }
+            .padding(14)
+        }
+        .contentShape(Rectangle())
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         HStack(alignment: .top, spacing: 16) {
             // Category icon
             ZStack {
@@ -267,6 +327,35 @@ struct StoryCategoryChip: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                Image(systemName: icon)
+                    .font(.system(size: 13, weight: .semibold))
+
+                Text(title)
+                    .font(.system(size: 14, weight: .semibold))
+            }
+            .foregroundColor(isSelected ? themeManager.onAccentText : themeManager.accentColor)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .background {
+                if isSelected {
+                    Capsule().fill(themeManager.accentGradient)
+                } else {
+                    Capsule()
+                        .fill(themeManager.accentChip)
+                        .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+            }
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         Button(action: action) {
             HStack(spacing: 6) {
                 Image(systemName: icon)

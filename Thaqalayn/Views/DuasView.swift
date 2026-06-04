@@ -20,7 +20,7 @@ struct DuasView: View {
                 AdaptiveModernBackground()
 
                 VStack(spacing: 0) {
-                    headerView
+                    if themeManager.isMidnightEmerald { emeraldHeaderView } else { headerView }
 
                     if duasManager.isLoading {
                         DuasLoadingSection()
@@ -88,6 +88,52 @@ struct DuasView: View {
                      languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
 
+    private var emeraldHeaderView: some View {
+        HStack(alignment: .top, spacing: 12) {
+            VStack(alignment: .leading, spacing: 7) {
+                Text(localizedEyebrow.uppercased())
+                    .font(.system(size: 11, weight: .bold)).tracking(3)
+                    .foregroundColor(themeManager.accentColor)
+                Text(localizedTitle)
+                    .font(EmType.serif(36, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(localizedSubtitle)
+                    .font(.system(size: 13.5))
+                    .foregroundColor(themeManager.secondaryText)
+            }
+            Spacer(minLength: 8)
+            emeraldLanguageToggle
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 16)
+        .padding(.bottom, 18)
+        .environment(\.layoutDirection,
+                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+    }
+
+    private var emeraldLanguageToggle: some View {
+        Button(action: { languageManager.toggleLanguage() }) {
+            HStack(spacing: 5) {
+                Image(systemName: "globe").font(.system(size: 12, weight: .semibold))
+                Text(languageManager.selectedLanguage.displayName).font(.system(size: 13, weight: .semibold))
+            }
+            .foregroundColor(themeManager.accentColor)
+            .padding(.horizontal, 12).padding(.vertical, 8)
+            .background(Capsule().fill(themeManager.accentChip))
+            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var localizedEyebrow: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "أدعية مأثورة"
+        case .urdu: return "ماثور دعائیں"
+        default: return "From the Sunnah"
+        }
+    }
+
     private var languageToggle: some View {
         Button(action: {
             languageManager.toggleLanguage()
@@ -131,6 +177,28 @@ struct DuaCard: View {
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            HStack(spacing: 14) {
+                EmIconChip(sfSymbol: dua.categoryIcon)
+                Text(dua.situation(for: languageManager.selectedLanguage))
+                    .font(EmType.serif(20, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundColor(themeManager.tertiaryText)
+            }
+            .padding(14)
+        }
+        .contentShape(Rectangle())
+    }
+
+    private var legacyBody: some View {
         HStack(alignment: .center, spacing: 16) {
             ZStack {
                 Circle()

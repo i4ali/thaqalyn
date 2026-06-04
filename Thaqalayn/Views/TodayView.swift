@@ -26,45 +26,17 @@ struct TodayView: View {
 
     var body: some View {
         ZStack {
-            ScrollView {
-                LazyVStack(spacing: 14) {
-                    headerRow
-                        .padding(.horizontal, 22)
-                        .padding(.top, 60)
-
-                    greeting
-                        .padding(.horizontal, 18)
-                        .padding(.top, 18)
-
-                    DailyReminderBanner(
-                        message: dailyMessage.today,
-                        surahName: surahName(for: dailyMessage.today.surah),
-                        themeManager: themeManager,
-                        onTap: { openMessageSource() }
+            Group {
+                if themeManager.isMidnightEmerald {
+                    EmeraldTodayView(
+                        selectedTab: $selectedTab,
+                        selectedSurahForDeepLink: $selectedSurahForDeepLink,
+                        targetVerseNumber: $targetVerseNumber,
+                        showingNotifications: $showingNotifications
                     )
-                    .padding(.horizontal, 18)
-                    .padding(.top, 6)
-
-                    ContinueReadingHero(
-                        info: progressManager.lastReadInfo,
-                        surah: lastReadSurah,
-                        verse: lastReadVerse,
-                        themeManager: themeManager,
-                        onResume: { openLastRead() },
-                        onBegin: { openSurah1() }
-                    )
-                    .padding(.horizontal, 18)
-
-                    if let dua = duasManager.duaOfTheDay() {
-                        DuaOfTheDayCard(
-                            dua: dua,
-                            themeManager: themeManager
-                        )
-                        .padding(.horizontal, 18)
-                        .padding(.top, -2)
-                    }
+                } else {
+                    legacyContent
                 }
-                .padding(.bottom, 40)
             }
 
             // Hidden deep-link
@@ -102,6 +74,51 @@ struct TodayView: View {
             if phase == .active {
                 dailyMessage.refreshIfDayChanged()
             }
+        }
+    }
+
+    // MARK: - Legacy (Light / Night Sanctuary) content
+
+    private var legacyContent: some View {
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                headerRow
+                    .padding(.horizontal, 22)
+                    .padding(.top, 60)
+
+                greeting
+                    .padding(.horizontal, 18)
+                    .padding(.top, 18)
+
+                DailyReminderBanner(
+                    message: dailyMessage.today,
+                    surahName: surahName(for: dailyMessage.today.surah),
+                    themeManager: themeManager,
+                    onTap: { openMessageSource() }
+                )
+                .padding(.horizontal, 18)
+                .padding(.top, 6)
+
+                ContinueReadingHero(
+                    info: progressManager.lastReadInfo,
+                    surah: lastReadSurah,
+                    verse: lastReadVerse,
+                    themeManager: themeManager,
+                    onResume: { openLastRead() },
+                    onBegin: { openSurah1() }
+                )
+                .padding(.horizontal, 18)
+
+                if let dua = duasManager.duaOfTheDay() {
+                    DuaOfTheDayCard(
+                        dua: dua,
+                        themeManager: themeManager
+                    )
+                    .padding(.horizontal, 18)
+                    .padding(.top, -2)
+                }
+            }
+            .padding(.bottom, 40)
         }
     }
 
@@ -155,11 +172,6 @@ struct TodayView: View {
             HStack(spacing: 10) {
                 ProfileAvatar()
                 Spacer()
-                StreakBadge(
-                    streak: progressManager.streak.currentStreak,
-                    themeManager: themeManager,
-                    onTap: { selectedTab = 3 }
-                )
                 NotificationBell(showingNotifications: $showingNotifications)
             }
 
@@ -233,44 +245,6 @@ private struct HijriDatePill: View {
 
     private var pillBackground: Color {
         themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white
-    }
-}
-
-private struct StreakBadge: View {
-    let streak: Int
-    let themeManager: ThemeManager
-    let onTap: () -> Void
-
-    var body: some View {
-        Button(action: onTap) {
-            HStack(spacing: 6) {
-                PhosphorIcon(name: "ph-flame-fill", size: 14)
-                    .foregroundColor(streakColor)
-                Text("\(streak)")
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundColor(streakColor)
-            }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 6)
-            .background(
-                Capsule()
-                    .fill(badgeBackground)
-                    .overlay(
-                        Capsule()
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            )
-        }
-        .buttonStyle(PlainButtonStyle())
-        .accessibilityLabel("Reading streak: \(streak) days. Tap to view progress.")
-    }
-
-    private var badgeBackground: Color {
-        themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white
-    }
-
-    private var streakColor: Color {
-        themeManager.accentColor
     }
 }
 
@@ -614,6 +588,267 @@ private struct DuaOfTheDayCard: View {
                     radius: 7, x: 0, y: 4
                 )
         }
+    }
+}
+
+// MARK: - Midnight Emerald — Today
+
+private struct EmeraldTodayView: View {
+    @ObservedObject private var themeManager = ThemeManager.shared
+    @ObservedObject private var dataManager = DataManager.shared
+    @ObservedObject private var progressManager = ProgressManager.shared
+    @ObservedObject private var dailyMessage = DailyMessageProvider.shared
+    @ObservedObject private var duasManager = DuasManager.shared
+    @ObservedObject private var calendarManager = IslamicCalendarManager.shared
+
+    @Binding var selectedTab: Int
+    @Binding var selectedSurahForDeepLink: SurahWithTafsir?
+    @Binding var targetVerseNumber: Int?
+    @Binding var showingNotifications: Bool
+
+    @State private var animateProgress = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                headerRow
+                greeting
+                EmDailyReminderHero(
+                    message: dailyMessage.today,
+                    surahName: surahName(for: dailyMessage.today.surah),
+                    onTap: openMessageSource
+                )
+                EmContinueReadingCard(
+                    info: progressManager.lastReadInfo,
+                    surah: lastReadSurah,
+                    verse: lastReadVerse,
+                    animateProgress: animateProgress,
+                    onResume: openLastRead,
+                    onBegin: openSurah1
+                )
+                if let dua = duasManager.duaOfTheDay() {
+                    EmDuaOfTheDayCard(dua: dua)
+                }
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 60)
+            .padding(.bottom, 120)
+        }
+        .onAppear {
+            withAnimation(reduceMotion ? nil : .easeOut(duration: 0.6)) { animateProgress = true }
+        }
+    }
+
+    private var headerRow: some View {
+        VStack(spacing: 14) {
+            HStack(spacing: 10) {
+                ProfileAvatar()
+                Spacer()
+                NotificationBell(showingNotifications: $showingNotifications)
+            }
+            HStack { HijriDatePill(themeManager: themeManager, calendarManager: calendarManager); Spacer() }
+        }
+    }
+
+    private var greeting: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 6) {
+                Text("Assalāmu ʿalaykum")
+                    .font(.system(size: 12, weight: .semibold)).tracking(0.5)
+                    .foregroundColor(themeManager.tertiaryText)
+                PhosphorIcon(name: "ph-moon-stars-fill", size: 13).foregroundColor(themeManager.accentColor)
+            }
+            Text("Today").font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private func surahName(for n: Int) -> String {
+        dataManager.availableSurahs.first(where: { $0.surah.number == n })?.surah.englishName ?? "Surah \(n)"
+    }
+    private func openMessageSource() {
+        guard let s = dataManager.availableSurahs.first(where: { $0.surah.number == dailyMessage.today.surah }) else { return }
+        targetVerseNumber = dailyMessage.today.verse
+        selectedSurahForDeepLink = s
+    }
+    private var lastReadSurah: SurahWithTafsir? {
+        guard let info = progressManager.lastReadInfo else { return nil }
+        return dataManager.availableSurahs.first(where: { $0.surah.number == info.surahNumber })
+    }
+    private var lastReadVerse: VerseWithTafsir? {
+        guard let info = progressManager.lastReadInfo, let s = lastReadSurah,
+              info.verseNumber >= 1, info.verseNumber <= s.verses.count else { return nil }
+        return s.verses[info.verseNumber - 1]
+    }
+    private func openLastRead() {
+        guard let info = progressManager.lastReadInfo, let s = lastReadSurah else { return }
+        targetVerseNumber = info.verseNumber
+        selectedSurahForDeepLink = s
+    }
+    private func openSurah1() {
+        guard let s = dataManager.availableSurahs.first(where: { $0.surah.number == 1 }) else { return }
+        targetVerseNumber = 1
+        selectedSurahForDeepLink = s
+    }
+}
+
+// Refined gold hero — gold-gradient block with near-black serif text
+private struct EmDailyReminderHero: View {
+    @ObservedObject private var themeManager = ThemeManager.shared
+    let message: DailyMessage
+    let surahName: String
+    let onTap: () -> Void
+
+    var body: some View {
+        Button(action: onTap) {
+            ZStack(alignment: .topTrailing) {
+                ZStack {
+                    Circle().fill(themeManager.onAccentText.opacity(0.08)).frame(width: 110, height: 110).offset(x: 30, y: -30)
+                    Circle().fill(themeManager.onAccentText.opacity(0.08)).frame(width: 100, height: 100).offset(x: 50, y: -10)
+                }.allowsHitTesting(false)
+
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "sparkles").font(.system(size: 13, weight: .semibold))
+                        Text("A REMINDER FOR TODAY").font(.system(size: 11, weight: .bold)).tracking(1.3)
+                    }
+                    .foregroundColor(themeManager.onAccentText.opacity(0.75))
+
+                    Text("\u{201C}\(message.english)\u{201D}")
+                        .font(EmType.serif(24, .semiBold))
+                        .foregroundColor(themeManager.onAccentText)
+                        .lineSpacing(3)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+
+                    Text("\(surahName) \u{00B7} \(message.surah):\(message.verse)")
+                        .font(.system(size: 12.5, weight: .medium))
+                        .foregroundColor(themeManager.onAccentText.opacity(0.7))
+                }
+                .padding(20)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .background(RoundedRectangle(cornerRadius: 22, style: .continuous).fill(themeManager.accentGradient))
+            .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+            .shadow(color: themeManager.accentColor.opacity(0.30), radius: 24, x: 0, y: 12)
+        }
+        .buttonStyle(EmPressStyle())
+        .contextMenu {
+            ShareLink(item: "\u{201C}\(message.english)\u{201D} \u{2014} \(surahName) \u{00B7} \(message.surah):\(message.verse)") {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }
+        }
+    }
+}
+
+private struct EmContinueReadingCard: View {
+    @ObservedObject private var themeManager = ThemeManager.shared
+    let info: LastReadInfo?
+    let surah: SurahWithTafsir?
+    let verse: VerseWithTafsir?
+    let animateProgress: Bool
+    let onResume: () -> Void
+    let onBegin: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("CONTINUE READING").font(.system(size: 11, weight: .bold)).tracking(2).foregroundColor(themeManager.accentColor)
+            EmCard(glow: true) {
+                Group {
+                    if let info, let surah, let verse {
+                        populated(info: info, surah: surah, verse: verse)
+                    } else {
+                        empty
+                    }
+                }
+                .padding(18)
+            }
+        }
+    }
+
+    private func populated(info: LastReadInfo, surah: SurahWithTafsir, verse: VerseWithTafsir) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 12) {
+                EmNumeralCircle(n: surah.surah.number, size: 48)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(surah.surah.englishName).font(EmType.serif(20, .semiBold)).foregroundColor(themeManager.primaryText)
+                    Text("Verse \(info.verseNumber) of \(surah.surah.versesCount)").font(.system(size: 12)).foregroundColor(themeManager.tertiaryText).lineLimit(1)
+                }
+                Spacer(minLength: 8)
+                Text(surah.surah.arabicName).font(EmType.arabic(22)).foregroundColor(themeManager.accentBright).lineLimit(1)
+            }
+
+            VStack(alignment: .trailing, spacing: 8) {
+                Text(verse.arabicText)
+                    .font(EmType.arabic(20)).lineSpacing(6).multilineTextAlignment(.trailing)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .foregroundColor(themeManager.primaryText)
+                Text("\u{201C}\(verse.translation)\u{201D}")
+                    .font(.system(size: 12.5)).lineSpacing(2)
+                    .foregroundColor(themeManager.secondaryText)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .padding(14)
+            .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.glassSurfaceElevated))
+            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+
+            HStack(alignment: .center, spacing: 10) {
+                VStack(alignment: .leading, spacing: 4) {
+                    ZStack(alignment: .leading) {
+                        Capsule().fill(themeManager.accentChip).frame(height: 6)
+                        GeometryReader { geo in
+                            Capsule().fill(themeManager.accentGradient)
+                                .frame(width: max(0, geo.size.width * CGFloat(animateProgress ? info.progress : 0)), height: 6)
+                        }.frame(height: 6)
+                    }.frame(height: 6)
+                    Text("\(Int(info.progress * 100))% complete").font(.system(size: 11, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
+                }
+                Button(action: onResume) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "play.fill").font(.system(size: 12, weight: .semibold))
+                        Text("Resume").font(.system(size: 13, weight: .bold))
+                    }
+                    .foregroundColor(themeManager.onAccentText)
+                    .padding(.horizontal, 16).padding(.vertical, 10)
+                    .background(Capsule().fill(themeManager.accentGradient))
+                }
+                .buttonStyle(EmPressStyle())
+            }
+        }
+    }
+
+    private var empty: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Start your journey").font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.primaryText)
+            Text("Open Surah Al-Fātiḥa").font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
+            EmGoldCTA(title: "Begin", sfSymbol: "play.fill") { onBegin() }
+        }
+    }
+}
+
+private struct EmDuaOfTheDayCard: View {
+    @ObservedObject private var themeManager = ThemeManager.shared
+    let dua: DailyDua
+
+    var body: some View {
+        NavigationLink(destination: DuaDetailView(dua: dua)) {
+            EmCard {
+                HStack(spacing: 12) {
+                    EmIconChip(sfSymbol: "quote.bubble.fill", size: 40)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("DU'A OF THE DAY").font(.system(size: 11, weight: .bold)).tracking(1.5).foregroundColor(themeManager.accentColor)
+                        Text(dua.situationEn).font(EmType.serif(18, .semiBold)).foregroundColor(themeManager.primaryText).lineLimit(2)
+                        Text(dua.category.capitalized).font(.system(size: 11)).foregroundColor(themeManager.tertiaryText)
+                    }
+                    Spacer(minLength: 8)
+                    Image(systemName: "chevron.right").font(.system(size: 13, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
+                }
+                .padding(16)
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 

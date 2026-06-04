@@ -114,6 +114,37 @@ struct ExploreView: View {
     @State private var showAhlulbaytQuran = false
 
     var body: some View {
+        Group {
+            if themeManager.isMidnightEmerald {
+                EmeraldExploreView(onTap: handleTap)
+            } else {
+                legacyBody
+            }
+        }
+        .fullScreenCover(isPresented: $showLifeMoments) {
+            LifeMomentsView()
+        }
+        .fullScreenCover(isPresented: $showDailyDuas) {
+            DuasView()
+        }
+        .fullScreenCover(isPresented: $showPropheticParallels) {
+            PropheticParallelsView()
+        }
+        .fullScreenCover(isPresented: $showQuestions) {
+            QuestionsView()
+        }
+        .fullScreenCover(isPresented: $showFasting) {
+            FastingVersesView()
+        }
+        .fullScreenCover(isPresented: $showPropheticStories) {
+            PropheticStoriesView()
+        }
+        .fullScreenCover(isPresented: $showAhlulbaytQuran) {
+            AhlulbaytQuranView()
+        }
+    }
+
+    private var legacyBody: some View {
         ScrollView {
             VStack(spacing: 0) {
                 // Header
@@ -138,27 +169,6 @@ struct ExploreView: View {
 
                 Spacer(minLength: 100)
             }
-        }
-        .fullScreenCover(isPresented: $showLifeMoments) {
-            LifeMomentsView()
-        }
-        .fullScreenCover(isPresented: $showDailyDuas) {
-            DuasView()
-        }
-        .fullScreenCover(isPresented: $showPropheticParallels) {
-            PropheticParallelsView()
-        }
-        .fullScreenCover(isPresented: $showQuestions) {
-            QuestionsView()
-        }
-        .fullScreenCover(isPresented: $showFasting) {
-            FastingVersesView()
-        }
-        .fullScreenCover(isPresented: $showPropheticStories) {
-            PropheticStoriesView()
-        }
-        .fullScreenCover(isPresented: $showAhlulbaytQuran) {
-            AhlulbaytQuranView()
         }
     }
 
@@ -236,6 +246,67 @@ struct ExploreView: View {
             showPropheticStories = true
         case .ahlulbaytQuran:
             showAhlulbaytQuran = true
+        }
+    }
+}
+
+// MARK: - Midnight Emerald — Explore
+
+private struct EmeraldExploreView: View {
+    @ObservedObject private var themeManager = ThemeManager.shared
+    let onTap: (ExploreDestination) -> Void
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 22) {
+                VStack(alignment: .leading, spacing: 7) {
+                    Text("DISCOVER")
+                        .font(.system(size: 11, weight: .bold)).tracking(3)
+                        .foregroundColor(themeManager.accentColor)
+                    Text("Explore")
+                        .font(EmType.serif(40, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                    Text("Discover Quranic wisdom")
+                        .font(.system(size: 13.5))
+                        .foregroundColor(themeManager.secondaryText)
+                }
+                .padding(.top, 8)
+
+                ForEach(ExploreSection.allCases, id: \.self) { section in
+                    VStack(alignment: .leading, spacing: 10) {
+                        EmDivider(label: section.title)
+                        VStack(spacing: 10) {
+                            ForEach(section.items) { item in
+                                Button { onTap(item.destination) } label: {
+                                    EmCard {
+                                        HStack(spacing: 14) {
+                                            EmIconChip(sfSymbol: item.icon, size: 44)
+                                            VStack(alignment: .leading, spacing: 3) {
+                                                Text(item.title)
+                                                    .font(EmType.serif(19, .semiBold))
+                                                    .foregroundColor(themeManager.primaryText)
+                                                Text(item.subtitle)
+                                                    .font(.system(size: 12.5))
+                                                    .foregroundColor(themeManager.tertiaryText)
+                                                    .lineLimit(1)
+                                            }
+                                            Spacer(minLength: 8)
+                                            Image(systemName: "chevron.right")
+                                                .font(.system(size: 13, weight: .semibold))
+                                                .foregroundColor(themeManager.tertiaryText)
+                                        }
+                                        .padding(16)
+                                    }
+                                }
+                                .buttonStyle(EmPressStyle())
+                            }
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 60)
+            .padding(.bottom, 120)
         }
     }
 }

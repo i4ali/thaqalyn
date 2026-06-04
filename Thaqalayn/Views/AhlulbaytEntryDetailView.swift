@@ -26,6 +26,9 @@ struct AhlulbaytEntryDetailView: View {
             AdaptiveModernBackground()
 
             ScrollView {
+                if themeManager.isMidnightEmerald {
+                    emeraldSections
+                } else {
                 VStack(spacing: 24) {
                     // Entry header
                     VStack(spacing: 16) {
@@ -205,6 +208,7 @@ struct AhlulbaytEntryDetailView: View {
                         .padding(.bottom, 20)
                     }
                 }
+                }
             }
 
             // Hidden NavigationLink for verse navigation
@@ -235,6 +239,104 @@ struct AhlulbaytEntryDetailView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
     }
+
+    // MARK: - Emerald
+
+    @ViewBuilder private var emeraldSections: some View {
+        VStack(spacing: 20) {
+            // Header card
+            EmCard {
+                VStack(alignment: .leading, spacing: 14) {
+                    HStack(spacing: 7) {
+                        Image(systemName: entry.categoryIcon)
+                            .font(.system(size: 13, weight: .semibold))
+                        Text(entry.category.displayName)
+                            .font(.system(size: 13, weight: .semibold))
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                    .padding(.horizontal, 13).padding(.vertical, 7)
+                    .background(Capsule().fill(themeManager.accentChip))
+                    .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+
+                    VStack(alignment: .leading, spacing: 7) {
+                        Text("Ahl al-Bayt in the Quran".uppercased())
+                            .font(.system(size: 11, weight: .bold)).tracking(3)
+                            .foregroundColor(themeManager.accentColor)
+                        Text(entry.title)
+                            .font(EmType.serif(30, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(22)
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 12)
+
+            // Ahl al-Bayt members
+            if !entry.ahlulbaytMembers.isEmpty {
+                EmDetailCard(icon: "person.3", label: "Ahl al-Bayt Members") {
+                    FlowLayout(spacing: 8) {
+                        ForEach(entry.ahlulbaytMembers, id: \.self) { member in
+                            Text(member)
+                                .font(.system(size: 13.5, weight: .semibold))
+                                .foregroundColor(themeManager.accentColor)
+                                .padding(.horizontal, 13)
+                                .padding(.vertical, 7)
+                                .background(Capsule().fill(themeManager.accentChip))
+                                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+
+            // Verses header
+            VStack(alignment: .leading, spacing: 8) {
+                EmSectionLabel(icon: "book.pages", text: "Quranic Reference")
+                Text("This entry references \(entry.verseCount) verse\(entry.verseCount == 1 ? "" : "s"):")
+                    .font(EmType.serif(17, .medium))
+                    .foregroundColor(themeManager.primaryText)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 20)
+
+            // Verses with context
+            ForEach(Array(entry.verses.enumerated()), id: \.element.verseNumber) { index, ahlulbaytVerse in
+                AhlulbaytVerseCard(
+                    ahlulbaytVerse: ahlulbaytVerse,
+                    index: index + 1,
+                    totalVerses: entry.verseCount,
+                    onNavigate: {
+                        selectedVerseForNav = (ahlulbaytVerse.surahNumber, ahlulbaytVerse.verseNumber)
+                        navigateToVerse = true
+                    }
+                )
+            }
+
+            // Revelation context
+            EmDetailCard(icon: "clock", label: "Revelation Context") {
+                Text(entry.revelationContext)
+                    .font(EmType.serif(17, .medium))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(5)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+
+            // Related entries
+            if !relatedEntries.isEmpty {
+                VStack(alignment: .leading, spacing: 12) {
+                    EmSectionLabel(icon: "link", text: "Related Entries")
+                    ForEach(relatedEntries) { relatedEntry in
+                        RelatedEntryCard(entry: relatedEntry)
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 20)
+            }
+        }
+    }
 }
 
 struct AhlulbaytVerseCard: View {
@@ -258,6 +360,80 @@ struct AhlulbaytVerseCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 10) {
+                    EmNumeralCircle(n: index, size: 38)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Verse \(index) of \(totalVerses)")
+                            .font(.system(size: 11)).tracking(0.3)
+                            .foregroundColor(themeManager.tertiaryText)
+                        Text("\(surahName) · \(ahlulbaytVerse.surahNumber):\(ahlulbaytVerse.verseNumber)")
+                            .font(.system(size: 13, weight: .bold)).tracking(0.3)
+                            .foregroundColor(themeManager.accentColor)
+                    }
+                    Spacer()
+                    if ahlulbaytVerse.isPrimary {
+                        Text("PRIMARY")
+                            .font(.system(size: 8.5, weight: .bold)).tracking(1)
+                            .foregroundColor(themeManager.accentColor)
+                            .padding(.horizontal, 8).padding(.vertical, 4)
+                            .background(Capsule().fill(themeManager.accentChip))
+                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                    }
+                }
+                if let verse = verseData {
+                    Text(verse.arabic)
+                        .font(EmType.arabic(25))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(8)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .environment(\.layoutDirection, .rightToLeft)
+                    Text(verse.translation)
+                        .font(EmType.serif(16, .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(3)
+                }
+                HStack(alignment: .top, spacing: 8) {
+                    Image(systemName: "text.bubble")
+                        .font(.system(size: 12))
+                        .foregroundColor(themeManager.accentColor)
+                    Text(ahlulbaytVerse.context)
+                        .font(.system(size: 13))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(2)
+                }
+                .padding(12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(themeManager.accentChip.opacity(0.6))
+                )
+                Button(action: onNavigate) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "book.fill").font(.system(size: 13, weight: .semibold))
+                        Text("Read Full Tafsir").font(.system(size: 14, weight: .bold)).tracking(0.3)
+                    }
+                    .foregroundColor(themeManager.onAccentText)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .background(RoundedRectangle(cornerRadius: 13, style: .continuous).fill(themeManager.accentGradient))
+                    .shadow(color: themeManager.accentColor.opacity(0.28), radius: 20, x: 0, y: 8)
+                }
+                .buttonStyle(EmPressStyle())
+                .padding(.top, 2)
+            }
+            .padding(16)
+        }
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 0) {
             // Verse header
             HStack(spacing: 12) {
@@ -394,6 +570,40 @@ struct RelatedEntryCard: View {
     @State private var navigateToEntry = false
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        NavigationLink(destination: AhlulbaytEntryDetailView(entry: entry), isActive: $navigateToEntry) {
+            EmCard {
+                HStack(spacing: 12) {
+                    EmIconChip(sfSymbol: entry.categoryIcon, size: 38)
+
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(entry.category.displayName.uppercased())
+                            .font(.system(size: 10, weight: .bold)).tracking(1.5)
+                            .foregroundColor(themeManager.accentColor)
+
+                        Text(entry.title)
+                            .font(EmType.serif(17, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineLimit(2)
+                            .multilineTextAlignment(.leading)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+                .padding(14)
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         NavigationLink(destination: AhlulbaytEntryDetailView(entry: entry), isActive: $navigateToEntry) {
             HStack(spacing: 12) {
                 Image(systemName: entry.categoryIcon)

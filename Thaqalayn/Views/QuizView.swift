@@ -26,8 +26,11 @@ struct QuizView: View {
     var body: some View {
         ZStack {
             // Background
-            themeManager.primaryBackground
-                .ignoresSafeArea()
+            if themeManager.isMidnightEmerald {
+                EmeraldBackground()
+            } else {
+                themeManager.primaryBackground.ignoresSafeArea()
+            }
 
             if isLoading {
                 loadingView
@@ -106,7 +109,91 @@ struct QuizView: View {
 
     // MARK: - Intro View
 
+    @ViewBuilder
     private func introView(quiz: SurahQuiz) -> some View {
+        if themeManager.isMidnightEmerald { emeraldIntroView(quiz: quiz) } else { legacyIntroView(quiz: quiz) }
+    }
+
+    private func emeraldIntroView(quiz: SurahQuiz) -> some View {
+        VStack(spacing: 0) {
+            HStack {
+                Button(action: onDismiss) {
+                    Image(systemName: "xmark").font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(themeManager.accentColor)
+                        .frame(width: 40, height: 40)
+                        .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+                Spacer()
+                Text("TEST YOUR KNOWLEDGE").font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
+                Spacer()
+                Color.clear.frame(width: 40, height: 40)
+            }
+            .padding(.horizontal, 20).padding(.top, 12)
+
+            Spacer()
+
+            VStack(spacing: 24) {
+                ZStack {
+                    RadialGradient(gradient: Gradient(colors: [themeManager.accentColor.opacity(0.18), .clear]), center: .center, startRadius: 0, endRadius: 130)
+                        .frame(width: 260, height: 260)
+                    RoundedRectangle(cornerRadius: 36, style: .continuous)
+                        .fill(themeManager.accentChip)
+                        .frame(width: 120, height: 120)
+                        .overlay(RoundedRectangle(cornerRadius: 36, style: .continuous).stroke(themeManager.accentColor, lineWidth: 1))
+                    Image(systemName: "brain.head.profile").font(.system(size: 52)).foregroundColor(themeManager.accentBright)
+                }
+
+                VStack(spacing: 8) {
+                    Text(surah.englishName).font(EmType.serif(38, .semiBold)).foregroundColor(themeManager.primaryText)
+                    Text(surah.arabicName).font(EmType.arabic(26)).foregroundColor(themeManager.accentColor)
+                }
+
+                HStack(spacing: 0) {
+                    emeraldQuizStat(icon: "questionmark.circle", value: "\(quiz.questions.count)", label: "Questions")
+                    Rectangle().fill(themeManager.strokeColor).frame(width: 1, height: 44)
+                    emeraldQuizStat(icon: "clock", value: "~3", label: "Minutes")
+                }
+                .padding(.vertical, 18)
+                .frame(maxWidth: .infinity)
+                .background(
+                    RoundedRectangle(cornerRadius: 18, style: .continuous).fill(themeManager.glassSurface)
+                        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+                )
+
+                if let bestResult = quizManager.bestResult(for: surah.number) {
+                    VStack(spacing: 4) {
+                        Text("BEST SCORE").font(.system(size: 10, weight: .bold)).tracking(1.5).foregroundColor(themeManager.tertiaryText)
+                        Text("\(bestResult.score)/\(bestResult.totalQuestions)").font(EmType.serif(24, .semiBold)).foregroundColor(themeManager.accentBright)
+                        Text(bestResult.level.title).font(.system(size: 12, weight: .medium)).foregroundColor(themeManager.secondaryText)
+                    }
+                }
+            }
+            .padding(.horizontal, 32)
+
+            Spacer()
+
+            Button(action: { withAnimation(.easeInOut(duration: 0.3)) { quizState.currentQuestionIndex = 0 } }) {
+                Text("Begin Quiz").font(.system(size: 16, weight: .bold))
+                    .foregroundColor(themeManager.onAccentText)
+                    .frame(maxWidth: .infinity).padding(.vertical, 16)
+                    .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(themeManager.accentGradient))
+                    .shadow(color: themeManager.accentColor.opacity(0.28), radius: 18, x: 0, y: 8)
+            }
+            .buttonStyle(EmPressStyle())
+            .padding(.horizontal, 24).padding(.bottom, 40)
+        }
+    }
+
+    private func emeraldQuizStat(icon: String, value: String, label: String) -> some View {
+        VStack(spacing: 6) {
+            Image(systemName: icon).font(.system(size: 18)).foregroundColor(themeManager.accentColor)
+            Text(value).font(EmType.serif(26, .semiBold)).foregroundColor(themeManager.accentBright)
+            Text(label).font(.system(size: 11, weight: .medium)).foregroundColor(themeManager.tertiaryText)
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    private func legacyIntroView(quiz: SurahQuiz) -> some View {
         VStack(spacing: 0) {
             // Header
             HStack {
@@ -234,7 +321,99 @@ struct QuizView: View {
 
     // MARK: - Question View
 
+    @ViewBuilder
     private func questionView(quiz: SurahQuiz) -> some View {
+        if themeManager.isMidnightEmerald { emeraldQuestionView(quiz: quiz) } else { legacyQuestionView(quiz: quiz) }
+    }
+
+    private func emeraldQuestionView(quiz: SurahQuiz) -> some View {
+        let question = quiz.questions[quizState.currentQuestionIndex]
+        let isLastQuestion = quizState.currentQuestionIndex == quiz.questions.count - 1
+
+        return VStack(spacing: 0) {
+            // Header with progress
+            VStack(spacing: 16) {
+                HStack {
+                    Button(action: onDismiss) {
+                        Image(systemName: "xmark").font(.system(size: 15, weight: .semibold))
+                            .foregroundColor(themeManager.accentColor)
+                            .frame(width: 40, height: 40)
+                            .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+                    }
+                    Spacer()
+                    Text("\(quizState.currentQuestionIndex + 1) of \(quiz.questions.count)")
+                        .font(.system(size: 12, weight: .bold)).tracking(1.5)
+                        .foregroundColor(themeManager.accentColor)
+                    Spacer()
+                    Color.clear.frame(width: 40, height: 40)
+                }
+                GeometryReader { geometry in
+                    ZStack(alignment: .leading) {
+                        Capsule().fill(Color.white.opacity(0.08)).frame(height: 6)
+                        Capsule().fill(themeManager.accentGradient)
+                            .frame(width: geometry.size.width * progressFraction, height: 6)
+                            .animation(.easeInOut(duration: 0.3), value: quizState.currentQuestionIndex)
+                    }
+                }
+                .frame(height: 6)
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 12)
+
+            ScrollView {
+                VStack(spacing: 24) {
+                    layerBadge(for: question.layer)
+                        .padding(.top, 24)
+
+                    Text(question.question)
+                        .font(EmType.serif(24, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.horizontal, 20)
+
+                    VStack(spacing: 12) {
+                        if question.type == .trueFalse {
+                            trueFalseOptions(question: question)
+                        } else if let options = question.options {
+                            multipleChoiceOptions(question: question, options: options)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 8)
+
+                    if showFeedback {
+                        feedbackView(question: question)
+                            .padding(.horizontal, 20)
+                            .transition(.opacity.combined(with: .move(edge: .bottom)))
+                    }
+                }
+                .padding(.bottom, 120)
+            }
+
+            if showFeedback {
+                VStack(spacing: 0) {
+                    Rectangle().fill(themeManager.strokeColor).frame(height: 1)
+                    Button(action: {
+                        moveToNext(quiz: quiz, isLast: isLastQuestion)
+                    }) {
+                        Text(isLastQuestion ? "See Results" : "Next Question")
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundColor(themeManager.onAccentText)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(themeManager.accentGradient))
+                            .shadow(color: themeManager.accentColor.opacity(0.28), radius: 18, x: 0, y: 8)
+                    }
+                    .buttonStyle(EmPressStyle())
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 16)
+                }
+            }
+        }
+    }
+
+    private func legacyQuestionView(quiz: SurahQuiz) -> some View {
         let question = quiz.questions[quizState.currentQuestionIndex]
         let isLastQuestion = quizState.currentQuestionIndex == quiz.questions.count - 1
 
@@ -424,6 +603,8 @@ struct QuizView: View {
         let isCorrect = answer.lowercased() == question.correctAnswer.lowercased()
         let showResult = showFeedback
 
+        let emerald = themeManager.isMidnightEmerald
+
         let backgroundColor: Color = {
             if showResult {
                 if isCorrect {
@@ -432,9 +613,9 @@ struct QuizView: View {
                     return themeManager.semanticRed.opacity(0.2)
                 }
             } else if isSelected {
-                return Color.purple.opacity(0.2)
+                return emerald ? themeManager.accentChip : Color.purple.opacity(0.2)
             }
-            return themeManager.secondaryBackground
+            return emerald ? themeManager.glassSurface : themeManager.secondaryBackground
         }()
 
         let borderColor: Color = {
@@ -445,7 +626,7 @@ struct QuizView: View {
                     return themeManager.semanticRed
                 }
             } else if isSelected {
-                return .purple
+                return emerald ? themeManager.accentColor : .purple
             }
             return themeManager.strokeColor
         }()
@@ -500,20 +681,22 @@ struct QuizView: View {
 
     private func feedbackView(question: QuizQuestion) -> some View {
         let isCorrect = selectedAnswer?.lowercased() == question.correctAnswer.lowercased()
+        let infoColor: Color = themeManager.isMidnightEmerald ? themeManager.accentColor : .blue
+        let accent = isCorrect ? themeManager.semanticGreen : infoColor
 
         return VStack(alignment: .leading, spacing: 12) {
             HStack {
                 Image(systemName: isCorrect ? "checkmark.circle.fill" : "info.circle.fill")
                     .font(.system(size: 20))
-                    .foregroundColor(isCorrect ? themeManager.semanticGreen : .blue)
+                    .foregroundColor(accent)
 
                 Text(isCorrect ? "Correct!" : "Explanation")
                     .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(isCorrect ? themeManager.semanticGreen : .blue)
+                    .foregroundColor(accent)
             }
 
             Text(question.explanation)
-                .font(.system(size: 15, weight: .medium))
+                .font(themeManager.isMidnightEmerald ? EmType.serif(16, .medium) : .system(size: 15, weight: .medium))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.leading)
         }
@@ -521,10 +704,10 @@ struct QuizView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 14)
-                .fill(isCorrect ? themeManager.semanticGreen.opacity(0.1) : Color.blue.opacity(0.1))
+                .fill(accent.opacity(0.1))
                 .overlay(
                     RoundedRectangle(cornerRadius: 14)
-                        .stroke(isCorrect ? themeManager.semanticGreen.opacity(0.3) : Color.blue.opacity(0.3), lineWidth: 1)
+                        .stroke(accent.opacity(0.3), lineWidth: 1)
                 )
         )
     }

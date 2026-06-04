@@ -51,7 +51,8 @@ struct MuharramJourneyView: View {
                                     }
                                 }
                             }
-                            .padding(.vertical, 16)
+                            .padding(.top, 16)
+                            .padding(.bottom, themeManager.isMidnightEmerald ? 120 : 16)
                         }
                     }
                 }
@@ -94,6 +95,22 @@ struct MuharramJourneyHeader: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    // Somber observance: no completion/celebration note, "observed" wording.
+    private var emeraldBody: some View {
+        EmJourneyHeader(
+            eyebrow: "10-Day Journey",
+            title: "Muharram",
+            sfSymbol: "flame.fill",
+            statusLine: statusMessage,
+            countLine: "\(observedCount) of 10 days observed",
+            percent: journeyManager.completionPercentage
+        )
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 16) {
             // Title and status
             VStack(alignment: .leading, spacing: 8) {
@@ -186,6 +203,24 @@ struct MuharramDayCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmJourneyDayRow(
+            dayNumber: day.dayNumber,
+            theme: day.theme,
+            themeArabic: day.themeArabic,
+            isDone: isObserved,
+            isCurrent: isCurrentDay,
+            isLocked: isLocked,
+            doneStyle: .subdued,
+            onTap: onTap
+        )
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         Button(action: onTap) {
             HStack(spacing: 16) {
                 // Day number with observation status

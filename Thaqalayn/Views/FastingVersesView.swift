@@ -25,6 +25,9 @@ struct FastingVersesView: View {
 
                 VStack(spacing: 0) {
                     // Header
+                    if themeManager.isMidnightEmerald {
+                        emeraldHeaderView
+                    } else {
                     VStack(spacing: 12) {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
@@ -43,6 +46,7 @@ struct FastingVersesView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 16)
+                    }
 
                     // Category list
                     if fastingManager.isLoading {
@@ -103,6 +107,25 @@ struct FastingVersesView: View {
             PaywallView()
         }
     }
+
+    private var emeraldHeaderView: some View {
+        VStack(alignment: .leading, spacing: 7) {
+            Text("Ramadan in the Qur'an".uppercased())
+                .font(.system(size: 11, weight: .bold)).tracking(3)
+                .foregroundColor(themeManager.accentColor)
+            Text("Fasting in the Quran")
+                .font(EmType.serif(36, .semiBold))
+                .foregroundColor(themeManager.primaryText)
+                .fixedSize(horizontal: false, vertical: true)
+            Text("Verses about fasting and Ramadan")
+                .font(.system(size: 13.5))
+                .foregroundColor(themeManager.secondaryText)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 20)
+        .padding(.top, 16)
+        .padding(.bottom, 18)
+    }
 }
 
 struct FastingCategoryCard: View {
@@ -120,6 +143,52 @@ struct FastingCategoryCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        Button(action: onTap) {
+            EmCard {
+                HStack(spacing: 14) {
+                    EmIconChip(sfSymbol: category.icon)
+                    VStack(alignment: .leading, spacing: 4) {
+                        HStack(spacing: 8) {
+                            Text(category.title)
+                                .font(EmType.serif(20, .semiBold))
+                                .foregroundColor(themeManager.primaryText)
+                                .lineLimit(2)
+                                .fixedSize(horizontal: false, vertical: true)
+                            if isLocked {
+                                Text("PREMIUM")
+                                    .font(.system(size: 8.5, weight: .bold)).tracking(1)
+                                    .foregroundColor(themeManager.accentColor)
+                                    .padding(.horizontal, 6).padding(.vertical, 2)
+                                    .background(Capsule().fill(themeManager.accentChip))
+                                    .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                            }
+                        }
+                        Text(category.description)
+                            .font(.system(size: 13))
+                            .foregroundColor(themeManager.secondaryText)
+                            .lineLimit(2)
+                            .multilineTextAlignment(.leading)
+                        Text("\(category.verseCount) verse\(category.verseCount == 1 ? "" : "s")")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(themeManager.tertiaryText)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+                .padding(14)
+            }
+        }
+        .buttonStyle(EmPressStyle())
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         Button(action: onTap) {
             HStack(alignment: .top, spacing: 16) {
                 // Category icon

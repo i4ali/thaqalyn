@@ -2,9 +2,9 @@
 //  ThemeManager.swift
 //  Thaqalayn
 //
-//  Theme management. Only one theme remains: warmInviting (light).
-//  The enum and selectedTheme property are retained as a vestigial API
-//  to minimize churn in the rest of the codebase.
+//  Theme management. Two themes: warmInviting ("Light") and nightSanctuary
+//  ("Midnight Emerald" — emerald-black & gold). Midnight Emerald is the default
+//  for fresh installs; users can switch in Settings (selectedTheme is persisted).
 //
 
 import SwiftUI
@@ -23,7 +23,7 @@ enum ThemeVariant: String, CaseIterable {
     var description: String {
         switch self {
         case .warmInviting:   return "Sanctuary-like warm design"
-        case .nightSanctuary: return "Verse-Hero warm-black with peach accent"
+        case .nightSanctuary: return "Midnight Emerald — emerald-black & gold"
         }
     }
 }
@@ -48,11 +48,15 @@ class ThemeManager: ObservableObject {
            let saved = ThemeVariant(rawValue: raw) {
             self.selectedTheme = saved
         } else {
-            self.selectedTheme = .warmInviting
+            // Fresh install (no stored preference) → default to Midnight Emerald.
+            self.selectedTheme = .nightSanctuary
         }
     }
 
     var isDarkMode: Bool { selectedTheme == .nightSanctuary }
+
+    /// True when the active theme is Midnight Emerald (the Dark slot).
+    var isMidnightEmerald: Bool { selectedTheme == .nightSanctuary }
 
     var colorScheme: ColorScheme { selectedTheme == .nightSanctuary ? .dark : .light }
 
@@ -66,7 +70,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.973, green: 0.961, blue: 1.0) // #F8F5FF
         case .nightSanctuary:
-            return Color(red: 0.106, green: 0.078, blue: 0.063) // #1B1410
+            return Color(hex: "0A1512")
         }
     }
 
@@ -75,7 +79,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.987, green: 0.969, blue: 0.980) // #FBFBFA
         case .nightSanctuary:
-            return Color(red: 0.071, green: 0.051, blue: 0.039) // #120D0A
+            return Color(hex: "081310")
         }
     }
 
@@ -84,7 +88,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 1.0, green: 0.976, blue: 0.961) // #FFF9F5
         case .nightSanctuary:
-            return Color(red: 0.043, green: 0.027, blue: 0.020) // #0B0705
+            return Color(hex: "0C1D16")
         }
     }
 
@@ -95,7 +99,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.176, green: 0.145, blue: 0.125) // #2D2520
         case .nightSanctuary:
-            return Color.white
+            return Color(hex: "F1E8D6")
         }
     }
 
@@ -104,7 +108,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.42, green: 0.365, blue: 0.329) // #6B5D54
         case .nightSanctuary:
-            return Color.white.opacity(0.72)
+            return Color(hex: "F1E8D6").opacity(0.60)
         }
     }
 
@@ -113,7 +117,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.69, green: 0.64, blue: 0.6) // #B0A399
         case .nightSanctuary:
-            return Color.white.opacity(0.48)
+            return Color(hex: "F1E8D6").opacity(0.38)
         }
     }
 
@@ -122,7 +126,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.78, green: 0.74, blue: 0.71)
         case .nightSanctuary:
-            return Color.white.opacity(0.32)
+            return Color(hex: "F1E8D6").opacity(0.24)
         }
     }
 
@@ -133,7 +137,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.608, green: 0.561, blue: 0.749) // #9B8FBF
         case .nightSanctuary:
-            return Color(red: 0.910, green: 0.580, blue: 0.392) // #E89464 peach
+            return Color(hex: "D6B25E")
         }
     }
 
@@ -142,7 +146,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.545, green: 0.498, blue: 0.659) // #8B7FA8
         case .nightSanctuary:
-            return Color(red: 0.820, green: 0.478, blue: 0.282) // #D17A48 peach deep
+            return Color(hex: "B8923F")
         }
     }
 
@@ -151,7 +155,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.608, green: 0.561, blue: 0.749).opacity(0.14)
         case .nightSanctuary:
-            return Color(red: 0.910, green: 0.580, blue: 0.392).opacity(0.14)
+            return Color(hex: "D6B25E").opacity(0.14)
         }
     }
 
@@ -167,14 +171,7 @@ class ThemeManager: ObservableObject {
                 endPoint: .bottomTrailing
             )
         case .nightSanctuary:
-            return LinearGradient(
-                colors: [
-                    Color(red: 0.910, green: 0.580, blue: 0.392), // #E89464 peach
-                    Color(red: 0.820, green: 0.478, blue: 0.282)  // #D17A48 peach deep
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            return LinearGradient(colors: [Color(hex: "ECD49A"), Color(hex: "B8923F")], startPoint: .topLeading, endPoint: .bottomTrailing)
         }
     }
 
@@ -233,7 +230,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color.white.opacity(0.6)
         case .nightSanctuary:
-            return Color.white.opacity(0.06)
+            return Color.white.opacity(0.045)
         }
     }
 
@@ -242,7 +239,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color.white.opacity(0.4)
         case .nightSanctuary:
-            return Color.white.opacity(0.04)
+            return Color.white.opacity(0.03)
         }
     }
 
@@ -251,7 +248,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.08)
         case .nightSanctuary:
-            return Color(red: 0.227, green: 0.129, blue: 0.094) // #3A2118
+            return Color(hex: "D6B25E").opacity(0.14)
         }
     }
 
@@ -262,7 +259,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.176, green: 0.145, blue: 0.125).opacity(0.10)
         case .nightSanctuary:
-            return Color.white.opacity(0.10)
+            return Color(hex: "D6B25E").opacity(0.16)
         }
     }
 
@@ -271,7 +268,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.176, green: 0.145, blue: 0.125).opacity(0.18)
         case .nightSanctuary:
-            return Color.white.opacity(0.16)
+            return Color(hex: "D6B25E").opacity(0.24)
         }
     }
 
@@ -280,7 +277,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.176, green: 0.145, blue: 0.125).opacity(0.06)
         case .nightSanctuary:
-            return Color.white.opacity(0.07)
+            return Color(hex: "D6B25E").opacity(0.09)
         }
     }
 
@@ -310,7 +307,7 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.498, green: 0.722, blue: 0.604) // #7FB89A
         case .nightSanctuary:
-            return Color(red: 0.357, green: 0.773, blue: 0.541) // #5BC58A
+            return Color(hex: "3E9B79")
         }
     }
 
@@ -349,6 +346,16 @@ class ThemeManager: ObservableObject {
             return Color(red: 0.722, green: 0.651, blue: 0.851) // #B8A6D9
         }
     }
+
+    // MARK: - Midnight Emerald additions
+
+    var accentBright: Color         { Color(hex: "ECD49A") }                 // goldBright
+    var accentChip: Color           { Color(hex: "D6B25E").opacity(0.14) }   // goldChip
+    var glassSurfaceElevated: Color { isMidnightEmerald ? Color.white.opacity(0.07) : Color.white } // cardElev
+    var semanticGreenChip: Color    { Color(hex: "3E9B79").opacity(0.16) }   // emerChip
+    var onAccentText: Color         { Color(hex: "1A1408") }                 // ctaText
+    var emeraldBgTop: Color         { Color(hex: "0C1D16") }                 // bg1
+    var emeraldBgBottom: Color      { Color(hex: "081310") }                 // bg2
 
     // MARK: - Preview helpers (DEBUG only)
 

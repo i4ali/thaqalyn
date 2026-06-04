@@ -51,6 +51,108 @@ struct VerseSummaryView: View {
     // MARK: - Text-Based Fallback View
 
     private var textBasedOverviewView: some View {
+        Group {
+            if themeManager.isMidnightEmerald {
+                emeraldFallbackContent
+            } else {
+                legacyFallbackContent
+            }
+        }
+        .background(backgroundView)
+        .darkScreenAura()
+        .presentationDetents(isIPad ? [.large] : [.fraction(0.7), .large])
+        .presentationDragIndicator(.hidden)
+        .frame(maxWidth: isIPad ? 600 : nil) // Constrain width on iPad for better readability
+    }
+
+    private var emeraldFallbackContent: some View {
+        VStack(spacing: 0) {
+            RoundedRectangle(cornerRadius: 3)
+                .fill(themeManager.tertiaryText.opacity(0.3))
+                .frame(width: 40, height: 5)
+                .padding(.top, 12).padding(.bottom, 16)
+
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    // Header
+                    HStack(spacing: 12) {
+                        EmIconChip(sfSymbol: "sparkles", active: true)
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text("Gems").font(EmType.serif(26, .semiBold)).foregroundColor(themeManager.primaryText)
+                            Text("Precious insights unveiled").font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
+                        }
+                        Spacer()
+                        Button(action: { dismiss() }) {
+                            Image(systemName: "xmark").font(.system(size: 14, weight: .semibold))
+                                .foregroundColor(themeManager.accentColor)
+                                .frame(width: 36, height: 36)
+                                .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+                        }
+                    }
+
+                    // Verse reference
+                    HStack(spacing: 12) {
+                        EmNumeralCircle(n: verse.number, size: 44)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(surah.englishName).font(EmType.serif(18, .semiBold)).foregroundColor(themeManager.primaryText)
+                            Text("Verse \(verse.number)").font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
+                        }
+                        Spacer()
+                    }
+
+                    if hasAnyTranslatedContent {
+                        emeraldLanguageSelector
+                    }
+
+                    EmDivider(label: "The Core Insight")
+
+                    if let layer2Text = verse.tafsir?.getLayer2Short(language: selectedLanguage) {
+                        Text(layer2Text)
+                            .font(EmType.serif(18, .medium))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineSpacing(7)
+                            .multilineTextAlignment(selectedLanguage.isRTL ? .trailing : .leading)
+                            .frame(maxWidth: .infinity, alignment: selectedLanguage.isRTL ? .trailing : .leading)
+                            .environment(\.layoutDirection, selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+                    } else {
+                        Text("Overview not available for this verse.")
+                            .font(EmType.serifItalic(16))
+                            .foregroundColor(themeManager.secondaryText)
+                    }
+
+                    EmGoldCTA(title: "Read In-Depth Commentary", sfSymbol: "book.fill") {
+                        dismiss()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            onViewFullCommentary()
+                        }
+                    }
+                    .padding(.top, 4)
+                }
+                .padding(.horizontal, 24)
+                .padding(.bottom, 40)
+            }
+        }
+    }
+
+    private var emeraldLanguageSelector: some View {
+        HStack(spacing: 10) {
+            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
+                Button(action: { selectedLanguage = language }) {
+                    Text(language.displayName)
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(selectedLanguage == language ? themeManager.onAccentText : themeManager.accentColor)
+                        .padding(.horizontal, 14).padding(.vertical, 7)
+                        .background(
+                            Capsule().fill(selectedLanguage == language ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.accentChip))
+                        )
+                        .overlay(Capsule().stroke(selectedLanguage == language ? Color.clear : themeManager.strokeColor, lineWidth: 1))
+                }
+                .buttonStyle(EmPressStyle())
+            }
+        }
+    }
+
+    private var legacyFallbackContent: some View {
         VStack(spacing: 0) {
             // Handle bar
             RoundedRectangle(cornerRadius: 3)
@@ -82,11 +184,6 @@ struct VerseSummaryView: View {
                 .padding(.bottom, 40)
             }
         }
-        .background(backgroundView)
-        .darkScreenAura()
-        .presentationDetents(isIPad ? [.large] : [.fraction(0.7), .large])
-        .presentationDragIndicator(.hidden)
-        .frame(maxWidth: isIPad ? 600 : nil) // Constrain width on iPad for better readability
     }
 
     private var headerView: some View {
@@ -244,16 +341,21 @@ struct VerseSummaryView: View {
         .padding(.top, 8)
     }
 
+    @ViewBuilder
     private var backgroundView: some View {
-        LinearGradient(
-            colors: [
-                themeManager.primaryBackground,
-                themeManager.secondaryBackground
-            ],
-            startPoint: .top,
-            endPoint: .bottom
-        )
-        .ignoresSafeArea()
+        if themeManager.isMidnightEmerald {
+            EmeraldBackground()
+        } else {
+            LinearGradient(
+                colors: [
+                    themeManager.primaryBackground,
+                    themeManager.secondaryBackground
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+        }
     }
 }
 

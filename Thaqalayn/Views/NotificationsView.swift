@@ -55,6 +55,43 @@ struct NotificationsView: View {
     @State private var navigateToVerse: (surah: Int, verse: Int)?
 
     var body: some View {
+        Group {
+            if themeManager.isMidnightEmerald {
+                emeraldBody
+            } else {
+                legacyBody
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura()
+        .onAppear {
+            loadNotifications()
+            addSampleNotifications()
+        }
+    }
+
+    private func handleTap(_ notification: NotificationItem) {
+        // Mark as read
+        if let index = notifications.firstIndex(where: { $0.id == notification.id }) {
+            notifications[index].isRead = true
+            saveNotifications()
+        }
+
+        // Navigate if it has verse info
+        if let surah = notification.surahNumber,
+           let verse = notification.verseNumber {
+            dismiss()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                NotificationCenter.default.post(
+                    name: .navigateToVerse,
+                    object: nil,
+                    userInfo: ["surah": surah, "verse": verse]
+                )
+            }
+        }
+    }
+
+    private var legacyBody: some View {
         NavigationView {
             ZStack {
                 // Background
@@ -91,24 +128,7 @@ struct NotificationsView: View {
                         LazyVStack(spacing: 12) {
                             ForEach(notifications) { notification in
                                 NotificationCard(notification: notification) {
-                                    // Mark as read
-                                    if let index = notifications.firstIndex(where: { $0.id == notification.id }) {
-                                        notifications[index].isRead = true
-                                        saveNotifications()
-                                    }
-
-                                    // Navigate if it has verse info
-                                    if let surah = notification.surahNumber,
-                                       let verse = notification.verseNumber {
-                                        dismiss()
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                            NotificationCenter.default.post(
-                                                name: .navigateToVerse,
-                                                object: nil,
-                                                userInfo: ["surah": surah, "verse": verse]
-                                            )
-                                        }
-                                    }
+                                    handleTap(notification)
                                 }
                             }
                         }
@@ -124,7 +144,7 @@ struct NotificationsView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     if !notifications.isEmpty {
                         Button("Clear All") {
-                            notifications.removeAll()
+                            clearAllNotifications()
                             saveNotifications()
                         }
                         .foregroundColor(.red)
@@ -139,11 +159,71 @@ struct NotificationsView: View {
                 }
             }
         }
-        .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
-        .onAppear {
-            loadNotifications()
-            addSampleNotifications()
+    }
+
+    private var emeraldBody: some View {
+        NavigationView {
+            ZStack {
+                EmeraldBackground()
+
+                if notifications.isEmpty {
+                    // Empty state
+                    VStack(spacing: 18) {
+                        EmIconChip(sfSymbol: "bell.slash.fill", size: 72)
+
+                        Text("All Caught Up")
+                            .font(EmType.serif(30, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+
+                        Text("Notifications will appear here when you receive them.")
+                            .font(EmType.serif(18, .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .padding(.horizontal, 40)
+                } else {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 14) {
+                            EmHeading(eyebrow: "Your Inbox", title: "Notifications")
+                                .padding(.bottom, 4)
+
+                            LazyVStack(spacing: 12) {
+                                ForEach(notifications) { notification in
+                                    NotificationCard(notification: notification) {
+                                        handleTap(notification)
+                                    }
+                                }
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 16)
+                        .padding(.bottom, 40)
+                    }
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    if !notifications.isEmpty {
+                        Button("Clear All") {
+                            clearAllNotifications()
+                            saveNotifications()
+                        }
+                        .font(EmType.serif(17, .semiBold))
+                        .foregroundColor(Color(red: 0.86, green: 0.49, blue: 0.45))
+                    }
+                }
+
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        dismiss()
+                    }
+                    .font(EmType.serif(18, .semiBold))
+                    .foregroundColor(themeManager.accentColor)
+                }
+            }
         }
     }
 
@@ -160,7 +240,19 @@ struct NotificationsView: View {
         }
     }
 
+    private func clearAllNotifications() {
+        notifications.removeAll()
+        saveNotifications()   // persist the cleared state so it survives navigation
+    }
+
     private func addSampleNotifications() {
+        // Seed demo notifications only ONCE, ever. Otherwise an empty list (e.g. after
+        // the user taps "Clear All") would immediately get re-seeded on the next visit,
+        // making Clear All appear not to work.
+        let seededKey = "didSeedNotificationSamples"
+        guard !UserDefaults.standard.bool(forKey: seededKey) else { return }
+        UserDefaults.standard.set(true, forKey: seededKey)
+
         // Only add samples if empty (for demo purposes)
         guard notifications.isEmpty else { return }
 
@@ -208,6 +300,53 @@ struct NotificationCard: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        Button(action: onTap) {
+            EmCard(cornerRadius: 18) {
+                HStack(alignment: .top, spacing: 14) {
+                    EmIconChip(sfSymbol: notification.type.icon, size: 46)
+
+                    VStack(alignment: .leading, spacing: 5) {
+                        HStack(alignment: .top, spacing: 8) {
+                            Text(notification.title)
+                                .font(EmType.serif(19, .semiBold))
+                                .foregroundColor(themeManager.primaryText)
+                                .fixedSize(horizontal: false, vertical: true)
+
+                            Spacer(minLength: 0)
+
+                            if !notification.isRead {
+                                Circle()
+                                    .fill(themeManager.accentColor)
+                                    .frame(width: 8, height: 8)
+                                    .padding(.top, 7)
+                            }
+                        }
+
+                        Text(notification.message)
+                            .font(.system(size: 14, weight: .regular))
+                            .foregroundColor(themeManager.secondaryText)
+                            .lineLimit(3)
+                            .multilineTextAlignment(.leading)
+
+                        Text(formatTimestamp(notification.timestamp))
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(themeManager.tertiaryText)
+                            .padding(.top, 1)
+                    }
+
+                    Spacer(minLength: 0)
+                }
+                .padding(16)
+            }
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         Button(action: onTap) {
             HStack(alignment: .top, spacing: 16) {
                 // Icon

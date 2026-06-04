@@ -39,18 +39,22 @@ struct SurahDetailView: View {
 
     var body: some View {
         ZStack {
-            // Adaptive gradient background
-            LinearGradient(
-                colors: [
-                    themeManager.primaryBackground,
-                    themeManager.secondaryBackground,
-                    themeManager.tertiaryBackground
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-            
+            if themeManager.isMidnightEmerald {
+                EmeraldBackground()
+            } else {
+                // Adaptive gradient background
+                LinearGradient(
+                    colors: [
+                        themeManager.primaryBackground,
+                        themeManager.secondaryBackground,
+                        themeManager.tertiaryBackground
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+            }
+
             VStack(spacing: 0) {
                 // Modern header
                 ModernSurahHeader(
@@ -303,6 +307,72 @@ struct ModernSurahHeader: View {
     @StateObject private var audioManager = AudioManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Button(action: onBack) {
+                    Image(systemName: "chevron.left").font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(themeManager.accentColor)
+                        .frame(width: 40, height: 40)
+                        .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+                Spacer()
+            }
+            .padding(.horizontal, 20).padding(.top, 12)
+
+            EmCard(glow: true) {
+                VStack(spacing: 14) {
+                    Text(surah.arabicName).font(EmType.arabic(38)).foregroundColor(themeManager.accentBright).multilineTextAlignment(.center)
+                    Text(surah.englishNameTranslation).font(EmType.serifItalic(19)).foregroundColor(themeManager.secondaryText)
+                    EmDivider()
+                    HStack(spacing: 8) {
+                        Text("\(surah.versesCount) Verses")
+                        Text("·")
+                        Text(surah.revelationType)
+                    }
+                    .font(.system(size: 12.5, weight: .medium)).foregroundColor(themeManager.tertiaryText)
+
+                    HStack(spacing: 10) {
+                        Button(action: { Task { await audioManager.playVerseSequence(verses, in: surah, startingFrom: 0) } }) {
+                            HStack(spacing: 8) {
+                                Image(systemName: "play.fill").font(.system(size: 14, weight: .semibold))
+                                Text("Play Recitation").font(.system(size: 15, weight: .bold)).fixedSize()
+                            }
+                            .foregroundColor(themeManager.onAccentText)
+                            .frame(maxWidth: .infinity).padding(.vertical, 14)
+                            .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(themeManager.accentGradient))
+                            .shadow(color: themeManager.accentColor.opacity(0.28), radius: 18, x: 0, y: 8)
+                        }
+                        .buttonStyle(EmPressStyle())
+
+                        emHeaderChip(system: "magnifyingglass", action: onGoToVerse)
+                        if hasQuiz { emHeaderChip(system: "brain.head.profile", action: onQuizTap) }
+                    }
+                    .padding(.top, 4)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(24)
+            }
+            .padding(.horizontal, 20)
+        }
+        .padding(.bottom, 16)
+    }
+
+    private func emHeaderChip(system: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Image(systemName: system).font(.system(size: 17, weight: .regular))
+                .foregroundColor(themeManager.accentColor)
+                .frame(width: 50, height: 50)
+                .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.accentChip))
+                .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 16) {
             // Navigation (different for warm theme)
             // Warm theme: Simple back button
@@ -567,6 +637,118 @@ struct ModernVerseCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var isVerseRead: Bool {
+        progressManager.isVerseRead(surahNumber: surah.number, verseNumber: verse.number)
+    }
+
+    private func emVerseChip(system: String, active: Bool = false, dimmed: Bool = false, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Image(systemName: system).font(.system(size: 13, weight: .semibold))
+                .foregroundColor(active ? themeManager.onAccentText : themeManager.accentColor)
+                .frame(width: 34, height: 34)
+                .background(RoundedRectangle(cornerRadius: 11, style: .continuous)
+                    .fill(active ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.accentChip)))
+                .overlay(RoundedRectangle(cornerRadius: 11, style: .continuous)
+                    .stroke(active ? Color.clear : themeManager.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(EmPressStyle())
+        .opacity(dimmed ? 0.45 : 1)
+    }
+
+    private var emeraldBody: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 8) {
+                EmNumeralCircle(n: verse.number, size: 34)
+                Spacer()
+                emVerseChip(system: isCurrentlyPlaying ? "pause.fill" : "play.fill", active: isCurrentlyPlaying) {
+                    Task { await audioManager.playVerse(verse, in: surah) }
+                }
+                emVerseChip(system: isBookmarked ? "heart.fill" : "heart", active: isBookmarked) { toggleBookmark() }
+                emVerseChip(system: "checkmark", active: isVerseRead) { toggleVerseRead() }
+            }
+            .onAppear {
+                canAccessTafsir = PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
+                canAccessOverview = PremiumManager.shared.canAccessOverview(surahNumber: surah.number)
+            }
+            .onChange(of: premiumManager.isPremium) { _, _ in
+                canAccessTafsir = PremiumManager.shared.canAccessTafsir(surahNumber: surah.number)
+                canAccessOverview = PremiumManager.shared.canAccessOverview(surahNumber: surah.number)
+            }
+
+            Text(verse.arabicText)
+                .font(EmType.arabic(27))
+                .foregroundColor(themeManager.primaryText)
+                .multilineTextAlignment(.trailing)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .lineSpacing(12)
+                .environment(\.layoutDirection, .rightToLeft)
+
+            Text(verse.translation)
+                .font(EmType.serif(17, .medium))
+                .foregroundColor(themeManager.secondaryText)
+                .lineSpacing(3)
+
+            HStack(spacing: 10) {
+                // Gems (quick overview)
+                Button(action: {
+                    if !canAccessOverview && surah.number > 1 { showingPaywall = true }
+                    else if verse.tafsir != nil { onSummaryTap() }
+                }) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "sparkles").font(.system(size: 13, weight: .semibold))
+                        Text("Gems").font(.system(size: 14, weight: .semibold))
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                    .frame(maxWidth: .infinity).padding(.vertical, 11)
+                    .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(themeManager.accentChip))
+                    .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+                .buttonStyle(EmPressStyle())
+                .opacity(verse.tafsir != nil ? 1 : 0.45)
+                .disabled(verse.tafsir == nil)
+
+                // In-Depth (5-layer commentary)
+                Button(action: {
+                    if !canAccessTafsir && surah.number > 1 { showingPaywall = true }
+                    else if verse.tafsir != nil { onTafsirTap() }
+                }) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "book.fill").font(.system(size: 13, weight: .semibold))
+                        Text("In-Depth").font(.system(size: 14, weight: .bold))
+                    }
+                    .foregroundColor(themeManager.onAccentText)
+                    .frame(maxWidth: .infinity).padding(.vertical, 11)
+                    .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(themeManager.accentGradient))
+                    .shadow(color: themeManager.accentColor.opacity(0.25), radius: 12, x: 0, y: 5)
+                }
+                .buttonStyle(EmPressStyle())
+                .opacity(verse.tafsir != nil ? 1 : 0.45)
+                .disabled(verse.tafsir == nil)
+            }
+            .padding(.top, 2)
+        }
+        .padding(20)
+        .background {
+            ZStack {
+                RoundedRectangle(cornerRadius: 20, style: .continuous).fill(themeManager.glassSurface)
+                if isCurrentlyPlaying {
+                    RoundedRectangle(cornerRadius: 20, style: .continuous).fill(themeManager.accentColor.opacity(0.08))
+                }
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .stroke(isCurrentlyPlaying ? themeManager.accentColor.opacity(0.6) : themeManager.strokeColor,
+                            lineWidth: isCurrentlyPlaying ? 1.5 : 1)
+            }
+            .shadow(color: isCurrentlyPlaying ? themeManager.accentColor.opacity(0.3) : Color.black.opacity(0.28),
+                    radius: isCurrentlyPlaying ? 24 : 16, x: 0, y: 8)
+        }
+        .animation(.easeInOut(duration: 0.3), value: isCurrentlyPlaying)
+        .fullScreenCover(isPresented: $showingPaywall) { PaywallView() }
+    }
+
+    private var legacyBody: some View {
         VStack(alignment: .leading, spacing: 20) {
             // Verse number and actions
             HStack {

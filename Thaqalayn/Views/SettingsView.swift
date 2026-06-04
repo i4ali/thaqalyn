@@ -27,12 +27,69 @@ struct SettingsView: View {
     @State private var showingTafsirSources = false
     
     var body: some View {
+        Group {
+            if themeManager.isMidnightEmerald {
+                emeraldBody
+            } else {
+                legacyBody
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+        .navigationBarHidden(true)
+        .sheet(isPresented: $showingAuthentication) {
+            // You can replace this with your actual AuthenticationView
+            Text("Authentication View")
+        }
+        .sheet(isPresented: $showingTimePickerSheet) {
+            TimePickerSheet(
+                selectedTime: Binding(
+                    get: { notificationManager.preferences.time },
+                    set: { notificationManager.preferences.time = $0 }
+                ),
+                isPresented: $showingTimePickerSheet
+            )
+        }
+        .sheet(isPresented: $showingSyncStatus) {
+            SyncStatusDetailView()
+        }
+        .sheet(isPresented: $showingReciterSelection) {
+            ReciterSelectionView()
+        }
+        .sheet(isPresented: $showingTTSVoiceSelection) {
+            TTSVoicePickerView(language: selectedTTSLanguage)
+        }
+        .fullScreenCover(isPresented: $showingTafsirSources) {
+            TafsirSourcesView()
+        }
+        .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
+            Button("OK") {
+                // Force UI refresh
+                DispatchQueue.main.async {
+                    bookmarkManager.objectWillChange.send()
+                }
+            }
+        } message: {
+            Text(clearDataMessage)
+        }
+        .alert("Reset Progress?", isPresented: $showingResetProgressAlert) {
+            Button("Cancel", role: .cancel) {}
+            Button("Reset", role: .destructive) {
+                Task {
+                    await progressManager.resetProgress()
+                }
+            }
+        } message: {
+            Text("This will clear all your reading progress, streaks, and badges. This action cannot be undone.")
+        }
+    }
+
+    private var legacyBody: some View {
         NavigationView {
             ZStack {
                 // Adaptive background
                 themeManager.primaryBackground
                     .ignoresSafeArea()
-                
+
                 // Content
                 VStack(spacing: 0) {
                     // Header
@@ -392,51 +449,365 @@ struct SettingsView: View {
             }
             .darkScreenAura()
         }
-        .navigationBarHidden(true)
-        .sheet(isPresented: $showingAuthentication) {
-            // You can replace this with your actual AuthenticationView
-            Text("Authentication View")
-        }
-        .sheet(isPresented: $showingTimePickerSheet) {
-            TimePickerSheet(
-                selectedTime: Binding(
-                    get: { notificationManager.preferences.time },
-                    set: { notificationManager.preferences.time = $0 }
-                ),
-                isPresented: $showingTimePickerSheet
-            )
-        }
-        .sheet(isPresented: $showingSyncStatus) {
-            SyncStatusDetailView()
-        }
-        .sheet(isPresented: $showingReciterSelection) {
-            ReciterSelectionView()
-        }
-        .sheet(isPresented: $showingTTSVoiceSelection) {
-            TTSVoicePickerView(language: selectedTTSLanguage)
-        }
-        .fullScreenCover(isPresented: $showingTafsirSources) {
-            TafsirSourcesView()
-        }
-        .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
-            Button("OK") {
-                // Force UI refresh
-                DispatchQueue.main.async {
-                    bookmarkManager.objectWillChange.send()
+    }
+
+    // MARK: - Emerald body
+
+    private var emeraldBody: some View {
+        ZStack {
+            EmeraldBackground()
+
+            VStack(spacing: 0) {
+                // Header
+                HStack(alignment: .center) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(themeManager.accentColor)
+                            .frame(width: 40, height: 40)
+                            .background(Circle().fill(themeManager.accentChip))
+                            .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+                    }
+                    .buttonStyle(EmPressStyle())
+
+                    Spacer()
+
+                    VStack(spacing: 3) {
+                        Text("PREFERENCES")
+                            .font(.system(size: 11, weight: .bold)).tracking(3)
+                            .foregroundColor(themeManager.accentColor)
+                        Text("Settings")
+                            .font(EmType.serif(30, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                    }
+
+                    Spacer()
+
+                    // Invisible spacer to balance the close button
+                    Color.clear.frame(width: 40, height: 40)
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 10)
+                .padding(.bottom, 18)
+
+                ScrollView {
+                    VStack(spacing: 26) {
+                        emeraldAppearanceSection
+                        emeraldDailyVerseSection
+                        emeraldReadingProgressSection
+                        emeraldAccountSection
+                        emeraldAudioSection
+                        emeraldTTSSection
+                        emeraldAboutSection
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 60)
                 }
             }
-        } message: {
-            Text(clearDataMessage)
         }
-        .alert("Reset Progress?", isPresented: $showingResetProgressAlert) {
-            Button("Cancel", role: .cancel) {}
-            Button("Reset", role: .destructive) {
-                Task {
-                    await progressManager.resetProgress()
+    }
+
+    // MARK: - Emerald sections
+
+    private var emeraldAppearanceSection: some View {
+        SettingsSection(title: "Appearance") {
+            EmCard(cornerRadius: 18) {
+                HStack(spacing: 14) {
+                    EmIconChip(sfSymbol: "moon.stars.fill", size: 44)
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Theme")
+                            .font(EmType.serif(19, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                        Text("Light or Dark")
+                            .font(.system(size: 13, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                    }
+
+                    Spacer(minLength: 8)
+
+                    Picker("Theme", selection: Binding(
+                        get: { themeManager.selectedTheme },
+                        set: { newValue in
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                themeManager.selectedTheme = newValue
+                            }
+                        }
+                    )) {
+                        Text("Light").tag(ThemeVariant.warmInviting)
+                        Text("Dark").tag(ThemeVariant.nightSanctuary)
+                    }
+                    .pickerStyle(.segmented)
+                    .frame(width: 140)
+                }
+                .padding(.vertical, 12)
+                .padding(.horizontal, 14)
+            }
+        }
+    }
+
+    private var emeraldDailyVerseSection: some View {
+        SettingsSection(title: "Daily Verse") {
+            VStack(spacing: 12) {
+                // Enable/Disable toggle
+                SettingsToggleRow(
+                    icon: "bell.fill",
+                    title: "Daily Notifications",
+                    subtitle: notificationManager.preferences.enabled ? "Enabled" : "Tap to enable",
+                    iconColor: .blue,
+                    isOn: Binding(
+                        get: { notificationManager.preferences.enabled },
+                        set: { newValue in
+                            if newValue && notificationManager.permissionStatus != .authorized {
+                                Task {
+                                    let granted = await notificationManager.requestPermission()
+                                    if granted {
+                                        notificationManager.preferences.enabled = true
+                                    }
+                                }
+                            } else {
+                                notificationManager.preferences.enabled = newValue
+                            }
+                        }
+                    )
+                )
+
+                // Show additional settings only if enabled
+                if notificationManager.preferences.enabled {
+                    // Time picker
+                    SettingsRow(
+                        icon: "clock.fill",
+                        title: "Notification Time",
+                        subtitle: formatTime(notificationManager.preferences.time),
+                        iconColor: .orange
+                    ) {
+                        showingTimePickerSheet = true
+                    }
+
+                    // Language preference
+                    SettingsRow(
+                        icon: "globe",
+                        title: "Language",
+                        subtitle: notificationManager.preferences.language.displayName,
+                        iconColor: .green
+                    ) {
+                        toggleNotificationLanguage()
+                    }
+
+                    // Include tafsir toggle
+                    SettingsToggleRow(
+                        icon: "book.fill",
+                        title: "Include Commentary",
+                        subtitle: notificationManager.preferences.includeTafsir ? "Brief tafsir shown" : "Verse only",
+                        iconColor: .purple,
+                        isOn: Binding(
+                            get: { notificationManager.preferences.includeTafsir },
+                            set: { notificationManager.preferences.includeTafsir = $0 }
+                        )
+                    )
+
+                    // Today's verse preview
+                    if let verse = notificationManager.selectTodayVerse(),
+                       let monthData = notificationManager.currentMonthData() {
+                        EmCard(cornerRadius: 16) {
+                            VStack(alignment: .leading, spacing: 6) {
+                                EmSectionLabel(icon: "star.fill", text: "Today's Verse (\(monthData.name))")
+                                Text("Surah \(verse.surah), Verse \(verse.verse)")
+                                    .font(.system(size: 13, weight: .medium))
+                                    .foregroundColor(themeManager.secondaryText)
+                                Text(verse.theme)
+                                    .font(EmType.serif(18, .medium))
+                                    .foregroundColor(themeManager.primaryText)
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(16)
+                        }
+                    }
                 }
             }
-        } message: {
-            Text("This will clear all your reading progress, streaks, and badges. This action cannot be undone.")
+        }
+    }
+
+    private var emeraldReadingProgressSection: some View {
+        SettingsSection(title: "Reading Progress") {
+            VStack(spacing: 12) {
+                // Current Streak
+                SettingsRow(
+                    icon: "flame.fill",
+                    title: "Current Streak",
+                    subtitle: "\(progressManager.streak.currentStreak) days",
+                    iconColor: .orange
+                ) {
+                    // Just displays info, no action
+                }
+
+                // Progress Notifications Toggle
+                SettingsToggleRow(
+                    icon: "bell.badge.fill",
+                    title: "Progress Notifications",
+                    subtitle: progressManager.preferences.notificationsEnabled ? "Motivational reminders" : "Tap to enable",
+                    iconColor: .purple,
+                    isOn: Binding(
+                        get: { progressManager.preferences.notificationsEnabled },
+                        set: { newValue in
+                            var newPrefs = progressManager.preferences
+                            newPrefs.notificationsEnabled = newValue
+                            progressManager.updatePreferences(newPrefs)
+                        }
+                    )
+                )
+
+                // Badge Celebrations Toggle
+                SettingsToggleRow(
+                    icon: "star.fill",
+                    title: "Badge Celebrations",
+                    subtitle: progressManager.preferences.celebrationsEnabled ? "Show celebrations" : "Quiet mode",
+                    iconColor: .yellow,
+                    isOn: Binding(
+                        get: { progressManager.preferences.celebrationsEnabled },
+                        set: { newValue in
+                            var newPrefs = progressManager.preferences
+                            newPrefs.celebrationsEnabled = newValue
+                            progressManager.updatePreferences(newPrefs)
+                        }
+                    )
+                )
+
+                // Reset Progress
+                SettingsRow(
+                    icon: "arrow.counterclockwise",
+                    title: "Reset Progress",
+                    subtitle: "Clear all reading progress",
+                    iconColor: .red,
+                    isDestructive: true
+                ) {
+                    showingResetProgressAlert = true
+                }
+            }
+        }
+    }
+
+    private var emeraldAccountSection: some View {
+        SettingsSection(title: "Account") {
+            VStack(spacing: 12) {
+                if bookmarkManager.isAuthenticated {
+                    SettingsRow(
+                        icon: "person.circle.fill",
+                        title: "Account",
+                        subtitle: "Signed in",
+                        iconColor: .green
+                    ) {
+                        // Could navigate to account details
+                    }
+
+                    SettingsRow(
+                        icon: "icloud.fill",
+                        title: "Sync Status",
+                        subtitle: bookmarkManager.isSyncing ? "Syncing..." : (bookmarkManager.isAuthenticated ? "Cloud sync enabled" : "Not signed in"),
+                        iconColor: bookmarkManager.isAuthenticated ? .blue : .orange
+                    ) {
+                        showingSyncStatus = true
+                    }
+                } else {
+                    SettingsRow(
+                        icon: "person.badge.plus",
+                        title: "Sign In",
+                        subtitle: "Enable cloud sync for bookmarks",
+                        iconColor: .blue
+                    ) {
+                        showingAuthentication = true
+                    }
+                }
+            }
+        }
+    }
+
+    private var emeraldAudioSection: some View {
+        SettingsSection(title: "Audio") {
+            VStack(spacing: 12) {
+                // Reciter selection
+                SettingsRow(
+                    icon: "person.wave.2.fill",
+                    title: "Reciter",
+                    subtitle: audioManager.configuration.selectedReciter.nameEnglish,
+                    iconColor: .purple
+                ) {
+                    showingReciterSelection = true
+                }
+
+                // Repeat mode
+                SettingsRow(
+                    icon: audioManager.configuration.repeatMode.icon,
+                    title: "Repeat Mode",
+                    subtitle: audioManager.configuration.repeatMode.title,
+                    iconColor: .green
+                ) {
+                    cycleRepeatMode()
+                }
+            }
+        }
+    }
+
+    private var emeraldTTSSection: some View {
+        SettingsSection(title: "Text-to-Speech") {
+            VStack(spacing: 12) {
+                ForEach(TTSVoiceManager.supportedTTSLanguages, id: \.self) { language in
+                    SettingsRow(
+                        icon: "speaker.wave.2.fill",
+                        title: "\(language.displayName) Voice",
+                        subtitle: voiceManager.selectedVoice(for: language)?.name ?? "No voices",
+                        iconColor: .teal
+                    ) {
+                        selectedTTSLanguage = language
+                        showingTTSVoiceSelection = true
+                    }
+                }
+            }
+        }
+    }
+
+    private var emeraldAboutSection: some View {
+        SettingsSection(title: "About") {
+            VStack(spacing: 12) {
+                SettingsRow(
+                    icon: "books.vertical.fill",
+                    title: "Tafsir Sources",
+                    subtitle: "Books and scholars referenced",
+                    iconColor: .indigo
+                ) {
+                    showingTafsirSources = true
+                }
+
+                SettingsRow(
+                    icon: "info.circle.fill",
+                    title: "Version",
+                    subtitle: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0",
+                    iconColor: .gray
+                ) {
+                    // Could show app info
+                }
+
+                SettingsRow(
+                    icon: "heart.fill",
+                    title: "Support",
+                    subtitle: "Rate or review the app",
+                    iconColor: .red
+                ) {
+                    // Could open App Store review
+                }
+
+                SettingsRow(
+                    icon: "trash.fill",
+                    title: "Clear All Local Data",
+                    subtitle: "Remove bookmarks, preferences, cache",
+                    iconColor: .red,
+                    isDestructive: true
+                ) {
+                    performClearAllLocalData()
+                }
+            }
         }
     }
 
@@ -484,14 +855,31 @@ struct SettingsSection<Content: View>: View {
     let title: String
     let content: () -> Content
     @StateObject private var themeManager = ThemeManager.shared
-    
+
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(title.uppercased())
+                .font(.system(size: 11, weight: .bold)).tracking(2.5)
+                .foregroundColor(themeManager.accentColor)
+                .padding(.horizontal, 2)
+
+            VStack(spacing: 12) {
+                content()
+            }
+        }
+    }
+
+    private var legacyBody: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text(title)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
                 .padding(.horizontal, 4)
-            
+
             VStack(spacing: 0) {
                 content()
             }
@@ -512,10 +900,67 @@ struct SettingsRow: View {
     let title: String
     let subtitle: String
     let iconColor: Color
+    let isDestructive: Bool
     let action: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
 
+    init(icon: String, title: String, subtitle: String, iconColor: Color, isDestructive: Bool = false, action: @escaping () -> Void) {
+        self.icon = icon
+        self.title = title
+        self.subtitle = subtitle
+        self.iconColor = iconColor
+        self.isDestructive = isDestructive
+        self.action = action
+    }
+
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        Button(action: action) {
+            EmCard(cornerRadius: 16) {
+                HStack(spacing: 14) {
+                    if isDestructive {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                .fill(Color(red: 0.82, green: 0.36, blue: 0.33).opacity(0.14))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                        .stroke(Color(red: 0.82, green: 0.36, blue: 0.33).opacity(0.32), lineWidth: 1)
+                                )
+                            Image(systemName: icon)
+                                .font(.system(size: 17, weight: .semibold))
+                                .foregroundColor(Color(red: 0.86, green: 0.49, blue: 0.45))
+                        }
+                        .frame(width: 44, height: 44)
+                    } else {
+                        EmIconChip(sfSymbol: icon, size: 44)
+                    }
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(title)
+                            .font(EmType.serif(19, .semiBold))
+                            .foregroundColor(isDestructive ? Color(red: 0.86, green: 0.49, blue: 0.45) : themeManager.primaryText)
+                        Text(subtitle)
+                            .font(.system(size: 13, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                    }
+
+                    Spacer(minLength: 8)
+
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+                .padding(.vertical, 12)
+                .padding(.horizontal, 14)
+            }
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         Button(action: action) {
             SettingsRowContent(
                 icon: icon,
@@ -587,6 +1032,35 @@ struct SettingsToggleRow: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard(cornerRadius: 16) {
+            HStack(spacing: 14) {
+                EmIconChip(sfSymbol: icon, size: 44)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(EmType.serif(19, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                    Text(subtitle)
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                }
+
+                Spacer(minLength: 8)
+
+                Toggle("", isOn: $isOn)
+                    .labelsHidden()
+                    .tint(themeManager.accentColor)
+            }
+            .padding(.vertical, 12)
+            .padding(.horizontal, 14)
+        }
+    }
+
+    private var legacyBody: some View {
         HStack(spacing: 16) {
             // Icon
             ZStack {

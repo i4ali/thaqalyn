@@ -87,41 +87,45 @@ struct AdaptiveModernBackground: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        ZStack {
-            LinearGradient(
-                colors: [
-                    themeManager.primaryBackground,
-                    themeManager.secondaryBackground,
-                    themeManager.tertiaryBackground
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
+        if themeManager.isMidnightEmerald {
+            EmeraldBackground()
+        } else {
+            ZStack {
+                LinearGradient(
+                    colors: [
+                        themeManager.primaryBackground,
+                        themeManager.secondaryBackground,
+                        themeManager.tertiaryBackground
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .ignoresSafeArea()
+
+                RadialGradient(
+                    colors: [themeManager.floatingOrbColors[0], .clear],
+                    center: .topLeading,
+                    startRadius: 0,
+                    endRadius: 300
+                )
+
+                RadialGradient(
+                    colors: [themeManager.floatingOrbColors[1], .clear],
+                    center: .bottomTrailing,
+                    startRadius: 0,
+                    endRadius: 300
+                )
+
+                RadialGradient(
+                    colors: [themeManager.floatingOrbColors[2], .clear],
+                    center: .center,
+                    startRadius: 0,
+                    endRadius: 200
+                )
+            }
             .ignoresSafeArea()
-
-            RadialGradient(
-                colors: [themeManager.floatingOrbColors[0], .clear],
-                center: .topLeading,
-                startRadius: 0,
-                endRadius: 300
-            )
-
-            RadialGradient(
-                colors: [themeManager.floatingOrbColors[1], .clear],
-                center: .bottomTrailing,
-                startRadius: 0,
-                endRadius: 300
-            )
-
-            RadialGradient(
-                colors: [themeManager.floatingOrbColors[2], .clear],
-                center: .center,
-                startRadius: 0,
-                endRadius: 200
-            )
+            .darkScreenAura()
         }
-        .ignoresSafeArea()
-        .darkScreenAura()
     }
 }
 
@@ -455,6 +459,14 @@ struct ModernSurahCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald {
+            emeraldBody
+        } else {
+            legacyBody
+        }
+    }
+
+    private var legacyBody: some View {
         HStack(spacing: 16) {
             // Surah number badge with theme-adaptive styling
             ZStack {
@@ -470,27 +482,27 @@ struct ModernSurahCard: View {
                     .font(.system(size: 22, weight: .bold))
                     .foregroundColor(.white)
             }
-            
+
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(surah.englishName)
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(themeManager.primaryText)
-                        
+
                         Text(surah.englishNameTranslation)
                             .font(.system(size: 14, weight: .medium))
                             .foregroundColor(themeManager.secondaryText)
                     }
-                    
+
                     Spacer()
-                    
+
                     Text(surah.arabicName)
                         .font(.system(size: 20, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.trailing)
                 }
-                
+
                 HStack(spacing: 16) {
                     HStack(spacing: 4) {
                         PhosphorIcon(name: "ph-book-open", size: 12)
@@ -538,6 +550,47 @@ struct ModernSurahCard: View {
                         : Color.black.opacity(0.04),
                     radius: 12, x: 0, y: 4
                 )
+        }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            HStack(spacing: 16) {
+                EmNumeralCircle(n: surah.number, size: 46)
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(alignment: .firstTextBaseline) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(surah.englishName)
+                                .font(EmType.serif(20, .semiBold))
+                                .foregroundColor(themeManager.primaryText)
+                            Text(surah.englishNameTranslation)
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(themeManager.tertiaryText)
+                        }
+                        Spacer(minLength: 8)
+                        Text(surah.arabicName)
+                            .font(EmType.arabic(24))
+                            .foregroundColor(themeManager.accentBright)
+                            .lineLimit(1)
+                    }
+                    HStack(spacing: 8) {
+                        Text("\(surah.versesCount) verses")
+                            .foregroundColor(themeManager.tertiaryText)
+                        Text("·").foregroundColor(themeManager.tertiaryText)
+                        Text(surah.revelationType)
+                            .foregroundColor(themeManager.tertiaryText)
+                        if readCount > 0 {
+                            Text("·").foregroundColor(themeManager.tertiaryText)
+                            Text("\(percentage)%")
+                                .foregroundColor(themeManager.accentColor)
+                                .fontWeight(.semibold)
+                        }
+                        Spacer(minLength: 0)
+                    }
+                    .font(.system(size: 12, weight: .medium))
+                }
+            }
+            .padding(20)
         }
     }
 }
@@ -596,6 +649,41 @@ struct ProfileMenuView: View {
     @State private var showingPaywall = false
     
     var body: some View {
+        Group {
+            if themeManager.isMidnightEmerald {
+                emeraldBody
+            } else {
+                legacyBody
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+        .alert("Sign Out", isPresented: $showingSignOutAlert) {
+            Button("Cancel", role: .cancel) {}
+            Button("Sign Out", role: .destructive) {
+                Task {
+                    await bookmarkManager.signOutAndClearRemoteData()
+                    await progressManager.signOutAndClearRemoteData()
+                    await MainActor.run {
+                        dismiss()
+                        // Trigger authentication screen after sign out
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                            NotificationCenter.default.post(name: .showAuthentication, object: nil)
+                        }
+                    }
+                }
+            }
+        } message: {
+            Text("Your bookmarks will remain on this device, but you'll need to sign in again to sync across devices.")
+        }
+        .sheet(isPresented: $showingAccountDeletion) {
+            AccountDeletionView()
+        }
+        .fullScreenCover(isPresented: $showingPaywall) {
+            PaywallView()
+        }
+    }
+
+    private var legacyBody: some View {
         NavigationView {
             ZStack {
                 // Background
@@ -608,7 +696,7 @@ struct ProfileMenuView: View {
                     endPoint: .bottomTrailing
                 )
                 .ignoresSafeArea()
-                
+
                 VStack(spacing: 32) {
                     // User info section
                     VStack(spacing: 16) {
@@ -737,33 +825,154 @@ struct ProfileMenuView: View {
                 }
             }
         }
-        .preferredColorScheme(themeManager.colorScheme)
-        .alert("Sign Out", isPresented: $showingSignOutAlert) {
-            Button("Cancel", role: .cancel) {}
-            Button("Sign Out", role: .destructive) {
-                Task {
-                    await bookmarkManager.signOutAndClearRemoteData()
-                    await progressManager.signOutAndClearRemoteData()
-                    await MainActor.run {
-                        dismiss()
-                        // Trigger authentication screen after sign out
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                            NotificationCenter.default.post(name: .showAuthentication, object: nil)
+    }
+
+    private var emeraldBody: some View {
+        NavigationView {
+            ZStack {
+                EmeraldBackground()
+
+                ScrollView {
+                    VStack(spacing: 26) {
+                        VStack(spacing: 14) {
+                            Text("ACCOUNT")
+                                .font(.system(size: 11, weight: .bold)).tracking(3)
+                                .foregroundColor(themeManager.accentColor)
+
+                            ZStack {
+                                Circle()
+                                    .fill(themeManager.accentGradient)
+                                    .frame(width: 84, height: 84)
+                                    .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+                                    .shadow(color: themeManager.accentColor.opacity(0.35), radius: 16, x: 0, y: 6)
+                                Text(getUserInitials())
+                                    .font(EmType.serif(34, .semiBold))
+                                    .foregroundColor(themeManager.onAccentText)
+                            }
+
+                            VStack(spacing: 5) {
+                                Text(getUserEmail())
+                                    .font(EmType.serif(22, .semiBold))
+                                    .foregroundColor(themeManager.primaryText)
+                                    .multilineTextAlignment(.center)
+                                Text(premiumManager.isPremium ? "PREMIUM MEMBER" : "FREE TIER")
+                                    .font(.system(size: 11, weight: .bold)).tracking(2.5)
+                                    .foregroundColor(premiumManager.isPremium ? themeManager.semanticGreen : themeManager.accentColor)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.top, 8)
+
+                        EmDivider()
+
+                        VStack(spacing: 12) {
+                            menuOptions
                         }
                     }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 12)
+                    .padding(.bottom, 40)
                 }
             }
-        } message: {
-            Text("Your bookmarks will remain on this device, but you'll need to sign in again to sync across devices.")
-        }
-        .sheet(isPresented: $showingAccountDeletion) {
-            AccountDeletionView()
-        }
-        .fullScreenCover(isPresented: $showingPaywall) {
-            PaywallView()
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") { dismiss() }
+                        .font(EmType.serif(18, .semiBold))
+                        .foregroundColor(themeManager.accentColor)
+                }
+            }
         }
     }
-    
+
+    @ViewBuilder
+    private var menuOptions: some View {
+        // Sign In (for guest users)
+        if !supabaseService.isAuthenticated {
+            ProfileMenuItem(
+                icon: "person.circle",
+                title: "Sign In",
+                subtitle: "Sync bookmarks across devices",
+                action: {
+                    dismiss()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                        NotificationCenter.default.post(name: .showAuthentication, object: nil)
+                    }
+                }
+            )
+        }
+
+        // Upgrade to Premium (for non-premium users)
+        if !premiumManager.isPremium {
+            ProfileMenuItem(
+                icon: "star.fill",
+                title: "Upgrade to Premium",
+                subtitle: "Unlock all tafsir commentary",
+                action: { showingPaywall = true }
+            )
+        }
+
+        // Restore Purchases (for non-premium users)
+        if !premiumManager.isPremium {
+            ProfileMenuItem(
+                icon: "arrow.clockwise",
+                title: "Restore Purchases",
+                subtitle: "Already purchased? Restore here",
+                action: {
+                    Task {
+                        try? await purchaseManager.restorePurchases()
+                    }
+                }
+            )
+        }
+
+        ProfileMenuItem(
+            icon: "gearshape.fill",
+            title: "Settings",
+            subtitle: "App preferences and theme",
+            action: {
+                dismiss()
+                // Post notification to open settings
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    NotificationCenter.default.post(name: .init("showSettings"), object: nil)
+                }
+            }
+        )
+
+        // Sync Status (only for authenticated users)
+        if supabaseService.isAuthenticated {
+            ProfileMenuItem(
+                icon: "arrow.triangle.2.circlepath",
+                title: "Sync Status",
+                subtitle: bookmarkManager.isAuthenticated ? "Connected" : "Offline",
+                action: {
+                    Task {
+                        await bookmarkManager.forceSyncWithSupabase()
+                    }
+                }
+            )
+        }
+
+        // Sign Out (only for authenticated users)
+        if supabaseService.isAuthenticated {
+            ProfileMenuItem(
+                icon: "rectangle.portrait.and.arrow.right",
+                title: "Sign Out",
+                subtitle: "Switch to guest mode",
+                isDestructive: true,
+                action: { showingSignOutAlert = true }
+            )
+
+            ProfileMenuItem(
+                icon: "trash.fill",
+                title: "Delete Account",
+                subtitle: "Permanently remove account and data",
+                isDestructive: true,
+                action: { showingAccountDeletion = true }
+            )
+        }
+    }
+
     private func getUserInitials() -> String {
         // Use current user email if online, otherwise fall back to cached email
         let email = supabaseService.currentUser?.email ?? supabaseService.cachedUserEmail
@@ -800,6 +1009,49 @@ struct ProfileMenuItem: View {
     }
     
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        Button(action: action) {
+            EmCard(cornerRadius: 16) {
+                HStack(spacing: 14) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(isDestructive ? Color(red: 0.82, green: 0.36, blue: 0.33).opacity(0.14) : themeManager.accentChip)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                    .stroke(isDestructive ? Color(red: 0.82, green: 0.36, blue: 0.33).opacity(0.32) : themeManager.strokeColor, lineWidth: 1)
+                            )
+                        Image(systemName: icon)
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundColor(isDestructive ? Color(red: 0.86, green: 0.49, blue: 0.45) : themeManager.accentColor)
+                    }
+                    .frame(width: 44, height: 44)
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(title)
+                            .font(EmType.serif(19, .semiBold))
+                            .foregroundColor(isDestructive ? Color(red: 0.86, green: 0.49, blue: 0.45) : themeManager.primaryText)
+                        Text(subtitle)
+                            .font(.system(size: 13, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                    }
+
+                    Spacer(minLength: 8)
+
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+                .padding(.vertical, 12)
+                .padding(.horizontal, 14)
+            }
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         Button(action: action) {
             HStack(spacing: 16) {
                 Image(systemName: icon)

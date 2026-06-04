@@ -66,6 +66,10 @@ struct ProgressRingsView: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldContent } else { legacyContent }
+    }
+
+    private var legacyContent: some View {
         ScrollView {
             VStack(spacing: WarmSpacing.generous) {
                 // Header
@@ -93,6 +97,129 @@ struct ProgressRingsView: View {
             }
             .padding(.horizontal, WarmSpacing.generous)
             .padding(.top, WarmSpacing.large)
+        }
+    }
+
+    // MARK: - Emerald Content
+
+    private var emeraldContent: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                emeraldHeader
+                emeraldRingsCard
+                emeraldStatsGrid
+                if progressManager.stats.currentStreak > 0 { emeraldStreak }
+                emeraldBadges
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 60)
+            .padding(.bottom, 120)
+        }
+    }
+
+    private var emeraldHeader: some View {
+        VStack(alignment: .leading, spacing: 7) {
+            Text("YOUR JOURNEY").font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
+            Text("Progress").font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
+            Text("A record of your time with the Qur'an").font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private var emeraldRingsCard: some View {
+        EmCard(glow: true) {
+            VStack(spacing: 16) {
+                ProgressRingsStack(
+                    quranProgress: quranProgress,
+                    surahProgress: surahProgress,
+                    quizProgress: quizProgress,
+                    ramadanProgress: seasonalProgress,
+                    showRamadanRing: showSeasonalRing
+                )
+                .padding(.vertical, 8)
+                RingLegend(showRamadanRing: showSeasonalRing, seasonalLabel: seasonalLabel)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(20)
+        }
+    }
+
+    private var emeraldStatsGrid: some View {
+        LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
+            emeraldStat(sf: "book.closed.fill", value: "\(progressManager.stats.totalVersesRead)", label: "Verses Read", sub: "of \(totalQuranVerses)")
+            emeraldStat(sf: "checkmark.seal.fill", value: "\(progressManager.stats.totalSurahsCompleted)", label: "Surahs Complete", sub: "of \(totalSurahs)")
+            emeraldStat(sf: "questionmark.circle.fill", value: "\(quizManager.completedSurahCount)", label: "Quizzes Done", sub: "surahs tested")
+            emeraldStat(sf: "sparkles", value: formatSawab(progressManager.stats.totalSawab), label: "Total Sawab", sub: "blessings earned")
+        }
+    }
+
+    private func emeraldStat(sf: String, value: String, label: String, sub: String) -> some View {
+        EmCard {
+            VStack(alignment: .leading, spacing: 6) {
+                Image(systemName: sf).font(.system(size: 16)).foregroundColor(themeManager.accentColor)
+                Text(value).font(EmType.serif(30, .semiBold)).foregroundColor(themeManager.accentBright)
+                Text(label).font(.system(size: 13, weight: .semibold)).foregroundColor(themeManager.primaryText)
+                Text(sub).font(.system(size: 11, weight: .medium)).foregroundColor(themeManager.tertiaryText)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(16)
+        }
+    }
+
+    private var emeraldStreak: some View {
+        EmCard {
+            HStack(spacing: 12) {
+                PhosphorIcon(name: "ph-flame-fill", size: 28).foregroundColor(themeManager.accentColor)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("\(progressManager.stats.currentStreak) Day Streak").font(EmType.serif(20, .semiBold)).foregroundColor(themeManager.primaryText)
+                    Text("Keep it going!").font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
+                }
+                Spacer()
+                VStack(alignment: .trailing, spacing: 2) {
+                    Text("BEST").font(.system(size: 10, weight: .bold)).tracking(1).foregroundColor(themeManager.tertiaryText)
+                    Text("\(progressManager.stats.longestStreak)").font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.accentBright)
+                }
+            }
+            .padding(16)
+        }
+    }
+
+    private var emeraldBadges: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            EmDivider(label: "Badges · \(progressManager.badges.count) of 24")
+            if progressManager.badges.isEmpty {
+                EmCard {
+                    VStack(spacing: 12) {
+                        Image(systemName: "star.slash").font(.system(size: 40)).foregroundColor(themeManager.tertiaryText)
+                        Text("No badges yet").font(EmType.serif(18, .semiBold)).foregroundColor(themeManager.primaryText)
+                        Text("Complete surahs and build streaks to earn badges.").font(.system(size: 12.5)).foregroundColor(themeManager.tertiaryText).multilineTextAlignment(.center)
+                    }
+                    .frame(maxWidth: .infinity).padding(.vertical, 32).padding(.horizontal, 16)
+                }
+            } else {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+                    ForEach(progressManager.badges.sorted(by: { $0.awardedDate > $1.awardedDate })) { badge in
+                        emeraldBadgeTile(badge)
+                    }
+                }
+            }
+        }
+    }
+
+    private func emeraldBadgeTile(_ badge: BadgeAward) -> some View {
+        EmCard {
+            VStack(spacing: 8) {
+                ZStack {
+                    Circle().fill(themeManager.accentChip).frame(width: 52, height: 52)
+                        .overlay(Circle().stroke(themeManager.accentColor, lineWidth: 1))
+                    Image(systemName: badge.badgeType.icon).font(.system(size: 22, weight: .semibold)).foregroundColor(themeManager.accentBright)
+                }
+                Text(badge.badgeType == .surahCompletion ? badge.surahName : badge.badgeType.title)
+                    .font(.system(size: 11, weight: .semibold)).foregroundColor(themeManager.primaryText)
+                    .multilineTextAlignment(.center).lineLimit(2).fixedSize(horizontal: false, vertical: true)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 14).padding(.horizontal, 6)
         }
     }
 

@@ -23,6 +23,26 @@ struct QuestionDetailView: View {
     }
 
     var body: some View {
+        Group {
+            if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: { dismiss() }) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                        Text("Questions")
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                }
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura(glowOpacity: 0.36)
+    }
+
+    private var legacyBody: some View {
         ZStack {
             // Adaptive background
             AdaptiveModernBackground()
@@ -156,20 +176,97 @@ struct QuestionDetailView: View {
                 .hidden()
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: { dismiss() }) {
-                    HStack(spacing: 4) {
-                        Image(systemName: "chevron.left")
-                        Text("Questions")
+    }
+
+    @ViewBuilder private var emeraldBody: some View {
+        ZStack {
+            // Adaptive background (emerald-aware)
+            AdaptiveModernBackground()
+
+            ScrollView {
+                VStack(spacing: 20) {
+                    // Question header card
+                    EmCard {
+                        VStack(alignment: .leading, spacing: 16) {
+                            // Category badge
+                            HStack(spacing: 7) {
+                                Image(systemName: question.categoryIcon)
+                                    .font(.system(size: 12, weight: .semibold))
+                                Text(question.category.displayName)
+                                    .font(.system(size: 12, weight: .semibold))
+                            }
+                            .foregroundColor(themeManager.accentColor)
+                            .padding(.horizontal, 13).padding(.vertical, 7)
+                            .background(Capsule().fill(themeManager.accentChip))
+                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+
+                            // Question text (prominent serif)
+                            VStack(alignment: .leading, spacing: 10) {
+                                EmSectionLabel(icon: "questionmark.circle", text: "The Question")
+                                Text(question.question)
+                                    .font(EmType.serif(28, .semiBold))
+                                    .foregroundColor(themeManager.primaryText)
+                                    .lineSpacing(2)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .padding(22)
                     }
-                    .foregroundColor(themeManager.accentColor)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 12)
+
+                    // Quranic answer intro
+                    VStack(alignment: .leading, spacing: 8) {
+                        EmSectionLabel(icon: "book.closed", text: "Quranic Answer")
+                        Text("The Quran answers this question in \(question.verseCount) verse\(question.verseCount == 1 ? "" : "s"):")
+                            .font(EmType.serif(17, .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+
+                    // Verses with answers
+                    ForEach(Array(question.verses.enumerated()), id: \.element.verseNumber) { index, questionVerse in
+                        VerseAnswerCard(
+                            questionVerse: questionVerse,
+                            index: index + 1,
+                            totalVerses: question.verseCount,
+                            onNavigate: {
+                                selectedVerseForNav = (questionVerse.surahNumber, questionVerse.verseNumber)
+                                navigateToVerse = true
+                            }
+                        )
+                    }
+
+                    // Related questions
+                    if !relatedQuestions.isEmpty {
+                        VStack(alignment: .leading, spacing: 14) {
+                            EmSectionLabel(icon: "link", text: "Related Questions")
+                            ForEach(relatedQuestions) { relatedQ in
+                                RelatedQuestionCard(question: relatedQ)
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 20)
+                    }
                 }
+                .padding(.top, 4)
+            }
+
+            // Hidden NavigationLink for verse navigation
+            if let verseNav = selectedVerseForNav,
+               let surahData = dataManager.availableSurahs.first(where: { $0.surah.number == verseNav.surah }) {
+                NavigationLink(
+                    destination: SurahDetailView(surahWithTafsir: surahData, targetVerse: verseNav.verse),
+                    isActive: $navigateToVerse
+                ) {
+                    EmptyView()
+                }
+                .frame(width: 0, height: 0)
+                .hidden()
             }
         }
-        .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura(glowOpacity: 0.36)
     }
 }
 
@@ -194,6 +291,68 @@ struct VerseAnswerCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Text("\(surahName) · \(questionVerse.surahNumber):\(questionVerse.verseNumber)")
+                        .font(.system(size: 12, weight: .bold)).tracking(0.3)
+                        .foregroundColor(themeManager.accentColor)
+                    if questionVerse.isPrimary {
+                        Text("PRIMARY")
+                            .font(.system(size: 9, weight: .bold)).tracking(1)
+                            .foregroundColor(themeManager.accentColor)
+                            .padding(.horizontal, 7).padding(.vertical, 3)
+                            .background(Capsule().fill(themeManager.accentChip))
+                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                    }
+                    Spacer()
+                    Button(action: onNavigate) {
+                        HStack(spacing: 4) {
+                            Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
+                            Image(systemName: "arrow.right").font(.system(size: 10, weight: .semibold))
+                        }
+                        .foregroundColor(themeManager.accentColor)
+                    }
+                    .buttonStyle(EmPressStyle())
+                }
+                if let verse = verseData {
+                    Text(verse.arabic)
+                        .font(EmType.arabic(25))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(8)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                    Text(verse.translation)
+                        .font(EmType.serif(16, .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(3)
+                }
+                HStack(alignment: .top, spacing: 8) {
+                    Image(systemName: "lightbulb")
+                        .font(.system(size: 12))
+                        .foregroundColor(themeManager.accentColor)
+                    Text(questionVerse.relevanceNote)
+                        .font(.system(size: 13))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(2)
+                }
+                .padding(12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(themeManager.accentChip.opacity(0.6))
+                )
+            }
+            .padding(16)
+        }
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 0) {
             // Verse header
             HStack(spacing: 12) {
@@ -334,6 +493,32 @@ struct RelatedQuestionCard: View {
     @State private var navigateToQuestion = false
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        NavigationLink(destination: QuestionDetailView(question: question), isActive: $navigateToQuestion) {
+            EmCard(cornerRadius: 16) {
+                HStack(spacing: 12) {
+                    EmIconChip(sfSymbol: question.categoryIcon, size: 38)
+                    Text(question.question)
+                        .font(EmType.serif(17, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+                .padding(14)
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         NavigationLink(destination: QuestionDetailView(question: question), isActive: $navigateToQuestion) {
             HStack(spacing: 12) {
                 Image(systemName: question.categoryIcon)

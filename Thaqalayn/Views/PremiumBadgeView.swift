@@ -13,6 +13,10 @@ struct PremiumBadgeView: View {
     var size: BadgeSize = .medium
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var legacyBody: some View {
         HStack(spacing: 4) {
             Image(systemName: "lock.fill")
                 .font(.system(size: iconSize))
@@ -34,6 +38,27 @@ struct PremiumBadgeView: View {
                         .stroke(badgeColor.opacity(0.3), lineWidth: 1)
                 )
         )
+    }
+
+    private var emeraldBody: some View {
+        HStack(spacing: 4) {
+            Image(systemName: "lock.fill")
+                .font(.system(size: iconSize, weight: .semibold))
+                .foregroundColor(themeManager.onAccentText)
+
+            if size != .small {
+                Text("PREMIUM")
+                    .font(.system(size: textSize, weight: .bold)).tracking(1)
+                    .foregroundColor(themeManager.onAccentText)
+            }
+        }
+        .padding(.horizontal, horizontalPadding)
+        .padding(.vertical, verticalPadding)
+        .background(
+            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                .fill(themeManager.accentGradient)
+        )
+        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8, x: 0, y: 3)
     }
 
     // MARK: - Size Configuration
@@ -101,6 +126,10 @@ struct PremiumBadgeWithText: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var legacyBody: some View {
         HStack(spacing: 4) {
             Image(systemName: "lock.fill")
                 .font(.system(size: iconSize))
@@ -120,6 +149,25 @@ struct PremiumBadgeWithText: View {
                         .stroke(themeManager.semanticYellow.opacity(0.3), lineWidth: 1)
                 )
         )
+    }
+
+    private var emeraldBody: some View {
+        HStack(spacing: 4) {
+            Image(systemName: "lock.fill")
+                .font(.system(size: iconSize, weight: .semibold))
+                .foregroundColor(themeManager.onAccentText)
+
+            Text(text)
+                .font(.system(size: textSize, weight: .bold)).tracking(0.5)
+                .foregroundColor(themeManager.onAccentText)
+        }
+        .padding(.horizontal, horizontalPadding)
+        .padding(.vertical, verticalPadding)
+        .background(
+            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                .fill(themeManager.accentGradient)
+        )
+        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8, x: 0, y: 3)
     }
 
     private var iconSize: CGFloat {

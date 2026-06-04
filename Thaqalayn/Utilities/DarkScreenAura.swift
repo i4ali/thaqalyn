@@ -14,7 +14,12 @@ struct DarkScreenAuraModifier: ViewModifier {
     let starCount: Int
 
     func body(content: Content) -> some View {
-        if themeManager.selectedTheme == .nightSanctuary {
+        // Midnight Emerald provides its own background (EmeraldBackground) with a
+        // gold glow, so the legacy aura (lilac glow + star field) is disabled for it.
+        // The middle branch is retained for any future non-emerald dark theme.
+        if themeManager.isMidnightEmerald {
+            content
+        } else if themeManager.selectedTheme == .nightSanctuary {
             content.background(auraLayer.ignoresSafeArea())
         } else {
             content

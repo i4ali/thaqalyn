@@ -27,6 +27,9 @@ struct ParallelDetailView: View {
             // Adaptive background
             AdaptiveModernBackground()
 
+            if themeManager.isMidnightEmerald {
+                emeraldScroll
+            } else {
             ScrollView {
                 VStack(spacing: 24) {
                     // Header with situation and prophet
@@ -45,6 +48,7 @@ struct ParallelDetailView: View {
 
                     Spacer(minLength: 40)
                 }
+            }
             }
 
             // Hidden NavigationLink for verse navigation
@@ -86,6 +90,146 @@ struct ParallelDetailView: View {
         }
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura(glowOpacity: 0.36)
+    }
+
+    // MARK: - Emerald
+
+    private var emeraldScroll: some View {
+        ScrollView {
+            VStack(spacing: 20) {
+                emeraldHeaderSection
+                emeraldComfortSection
+                emeraldVersesSection
+                if relatedStory != nil {
+                    emeraldRelatedStorySection
+                }
+                Spacer(minLength: 40)
+            }
+            .padding(.top, 16)
+        }
+    }
+
+    private var emeraldHeaderSection: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            // Category eyebrow
+            HStack(spacing: 8) {
+                Image(systemName: parallel.category.icon)
+                    .font(.system(size: 13))
+                Text(parallel.category.displayName.uppercased())
+                    .font(.system(size: 11, weight: .bold)).tracking(2)
+            }
+            .foregroundColor(themeManager.accentColor)
+
+            // Your situation
+            VStack(alignment: .leading, spacing: 6) {
+                EmSectionLabel(icon: parallel.icon, text: "Your Situation")
+                Text(parallel.situation)
+                    .font(EmType.serif(28, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(2)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Rectangle()
+                .fill(themeManager.dividerColor)
+                .frame(height: 1)
+                .padding(.vertical, 2)
+
+            // Prophet connection
+            VStack(alignment: .leading, spacing: 6) {
+                EmSectionLabel(icon: "person.fill", text: "Prophet")
+                Text(parallel.prophet)
+                    .font(EmType.serif(24, .semiBold))
+                    .foregroundColor(themeManager.accentBright)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(parallel.connection)
+                    .font(EmType.serif(17, .medium))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(4)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(22)
+        .background(
+            EmCard { Color.clear }
+        )
+        .padding(.horizontal, 20)
+    }
+
+    private var emeraldComfortSection: some View {
+        EmCard(glow: true) {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 8) {
+                    Image(systemName: "heart.fill")
+                        .font(.system(size: 13))
+                    Text("A MESSAGE FOR YOU")
+                        .font(.system(size: 11, weight: .bold)).tracking(2)
+                }
+                .foregroundColor(themeManager.accentColor)
+
+                Text(parallel.comfortMessage)
+                    .font(EmType.serif(18, .medium))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(5)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(22)
+        }
+        .padding(.horizontal, 20)
+    }
+
+    private var emeraldVersesSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            EmSectionLabel(icon: "book.pages", text: "Key Verses")
+                .padding(.horizontal, 20)
+
+            ForEach(Array(parallel.verses.enumerated()), id: \.element.verseNumber) { index, verse in
+                ParallelVerseCard(
+                    verse: verse,
+                    index: index + 1,
+                    totalVerses: parallel.verses.count,
+                    onNavigate: {
+                        selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                        navigateToVerse = true
+                    }
+                )
+            }
+        }
+    }
+
+    private var emeraldRelatedStorySection: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            if let story = relatedStory {
+                EmDetailCard(icon: "link", label: "Full Story") {
+                    Button(action: { navigateToStory = true }) {
+                        HStack(spacing: 12) {
+                            EmIconChip(sfSymbol: story.categoryIcon, size: 40)
+
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(story.prophet)
+                                    .font(.system(size: 11, weight: .bold)).tracking(0.5)
+                                    .foregroundColor(themeManager.accentColor)
+                                Text(story.title)
+                                    .font(EmType.serif(18, .semiBold))
+                                    .foregroundColor(themeManager.primaryText)
+                                    .lineLimit(2)
+                                    .multilineTextAlignment(.leading)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                Text("\(story.verseCount) verses · Full Quranic account")
+                                    .font(.system(size: 12, weight: .medium))
+                                    .foregroundColor(themeManager.tertiaryText)
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 13, weight: .semibold))
+                                .foregroundColor(themeManager.tertiaryText)
+                        }
+                    }
+                    .buttonStyle(EmPressStyle())
+                }
+            }
+        }
     }
 
     // MARK: - Header Section
@@ -331,6 +475,60 @@ struct ParallelVerseCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Text("\(surahName) · \(verse.surahNumber):\(verse.verseNumber)")
+                        .font(.system(size: 12, weight: .bold)).tracking(0.3)
+                        .foregroundColor(themeManager.accentColor)
+                    Spacer()
+                    Button(action: onNavigate) {
+                        HStack(spacing: 4) {
+                            Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
+                            Image(systemName: "arrow.right").font(.system(size: 10, weight: .semibold))
+                        }
+                        .foregroundColor(themeManager.accentColor)
+                    }
+                    .buttonStyle(EmPressStyle())
+                }
+                if let data = verseData {
+                    Text(data.arabic)
+                        .font(EmType.arabic(25))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineSpacing(8)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                    Text(data.translation)
+                        .font(EmType.serif(16, .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(3)
+                }
+                HStack(alignment: .top, spacing: 8) {
+                    Image(systemName: "lightbulb")
+                        .font(.system(size: 12))
+                        .foregroundColor(themeManager.accentColor)
+                    Text(verse.relevanceNote)
+                        .font(.system(size: 13))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(2)
+                }
+                .padding(12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(themeManager.accentChip.opacity(0.6))
+                )
+            }
+            .padding(16)
+        }
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 0) {
             // Verse header
             HStack(spacing: 12) {

@@ -17,6 +17,10 @@ struct HighlightedArabicText: View {
 
     @StateObject private var themeManager = ThemeManager.shared
 
+    private func arabicFont(bold: Bool) -> Font {
+        themeManager.isMidnightEmerald ? EmType.arabic(28, bold: bold) : .system(size: 28, weight: bold ? .bold : .medium)
+    }
+
     var body: some View {
         if let highlightText = highlightText, !highlightText.isEmpty, isHighlighting {
             // Build attributed text with highlight
@@ -24,7 +28,7 @@ struct HighlightedArabicText: View {
         } else {
             // Regular Arabic text
             Text(text)
-                .font(.system(size: 28, weight: .medium))
+                .font(arabicFont(bold: false))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.center)
                 .lineSpacing(12)
@@ -41,11 +45,11 @@ struct HighlightedArabicText: View {
         components.reduce(Text("")) { result, component in
             if component.isHighlighted {
                 return result + Text(component.text)
-                    .font(.system(size: 28, weight: .bold))
+                    .font(arabicFont(bold: true))
                     .foregroundColor(highlightColor)
             } else {
                 return result + Text(component.text)
-                    .font(.system(size: 28, weight: .medium))
+                    .font(arabicFont(bold: false))
                     .foregroundColor(themeManager.primaryText)
             }
         }
@@ -104,6 +108,10 @@ struct QuickOverviewView: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var legacyBody: some View {
         ZStack(alignment: .bottom) {
             // Main content
             VStack(spacing: 0) {
@@ -162,6 +170,108 @@ struct QuickOverviewView: View {
         .presentationDetents([.large])
         .presentationDragIndicator(.hidden)
         .frame(maxWidth: isIPad ? 600 : nil)
+    }
+
+    // MARK: - Emerald Body
+
+    private var emeraldBody: some View {
+        ZStack(alignment: .bottom) {
+            VStack(spacing: 0) {
+                RoundedRectangle(cornerRadius: 3)
+                    .fill(themeManager.tertiaryText.opacity(0.4))
+                    .frame(width: 40, height: 5)
+                    .padding(.top, 12).padding(.bottom, 16)
+                ScrollView {
+                    VStack(spacing: 22) {
+                        emeraldHeader
+                        emeraldArabicSection
+                        languageSelectorView
+                        if !showConceptDetail { emeraldFullTafsirButton }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, showConceptDetail ? 280 : 40)
+                }
+            }
+            .background(EmeraldBackground())
+
+            if showConceptDetail, let concept = selectedConcept {
+                ConceptDetailCardOverlay(
+                    concept: concept,
+                    language: selectedLanguage,
+                    onClose: {
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                            showConceptDetail = false
+                            selectedConcept = nil
+                        }
+                    },
+                    onViewFullTafsir: {
+                        showConceptDetail = false
+                        dismiss()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { onViewFullCommentary() }
+                    }
+                )
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .presentationDetents([.large])
+        .presentationDragIndicator(.hidden)
+        .frame(maxWidth: isIPad ? 600 : nil)
+    }
+
+    private var emeraldHeader: some View {
+        HStack {
+            Image(systemName: "sparkles").font(.system(size: 26)).foregroundStyle(themeManager.accentGradient)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Gems").font(EmType.serif(26, .semiBold)).foregroundColor(themeManager.primaryText)
+                Text("Precious insights, unveiled").font(.system(size: 13, weight: .medium)).foregroundColor(themeManager.secondaryText)
+            }
+            Spacer()
+            Button(action: { dismiss() }) {
+                Image(systemName: "xmark").font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(themeManager.accentColor)
+                    .frame(width: 36, height: 36)
+                    .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+            }
+        }
+    }
+
+    private var emeraldArabicSection: some View {
+        VStack(spacing: 18) {
+            Text("\(surah.englishName.uppercased()) · \(verse.number)")
+                .font(.system(size: 11, weight: .bold)).tracking(2)
+                .foregroundColor(themeManager.accentColor)
+            HighlightedArabicText(
+                text: verse.arabicText,
+                highlightText: selectedConcept?.arabicHighlight,
+                highlightColor: selectedConcept.map { Color(hex: $0.colorHex) ?? themeManager.accentColor } ?? themeManager.accentColor,
+                isHighlighting: showConceptDetail
+            )
+            .padding(.vertical, 8)
+            conceptBubblesGrid
+        }
+        .padding(20)
+        .background {
+            RoundedRectangle(cornerRadius: 24, style: .continuous).fill(themeManager.glassSurface)
+                .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+        }
+    }
+
+    private var emeraldFullTafsirButton: some View {
+        Button(action: {
+            dismiss()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { onViewFullCommentary() }
+        }) {
+            HStack(spacing: 8) {
+                Image(systemName: "book.fill").font(.system(size: 15, weight: .semibold))
+                Text("Read Full Tafsir").font(.system(size: 15, weight: .bold))
+                Image(systemName: "arrow.right").font(.system(size: 13, weight: .semibold))
+            }
+            .foregroundColor(themeManager.onAccentText)
+            .frame(maxWidth: .infinity).padding(.vertical, 16)
+            .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(themeManager.accentGradient))
+            .shadow(color: themeManager.accentColor.opacity(0.28), radius: 18, x: 0, y: 8)
+        }
+        .buttonStyle(EmPressStyle())
     }
 
     // MARK: - Header

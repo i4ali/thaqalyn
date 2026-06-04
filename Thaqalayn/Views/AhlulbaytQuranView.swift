@@ -41,6 +41,11 @@ struct AhlulbaytQuranView: View {
                 AdaptiveModernBackground()
 
                 VStack(spacing: 0) {
+                    if themeManager.isMidnightEmerald {
+                        emeraldHeader
+                        emeraldSearchBar
+                        emeraldCategoryFilter
+                    } else {
                     // Modern header
                     VStack(spacing: 12) {
                         HStack {
@@ -106,6 +111,7 @@ struct AhlulbaytQuranView: View {
                         .padding(.horizontal, 20)
                     }
                     .padding(.bottom, 12)
+                    }
 
                     // Entries list
                     if ahlulbaytManager.isLoading {
@@ -127,6 +133,23 @@ struct AhlulbaytQuranView: View {
                                                 }
                                         }
                                     } header: {
+                                        if themeManager.isMidnightEmerald {
+                                            HStack(spacing: 8) {
+                                                Image(systemName: category.icon)
+                                                    .font(.system(size: 13))
+                                                    .foregroundColor(themeManager.accentColor)
+
+                                                Text(category.displayName.uppercased())
+                                                    .font(.system(size: 11, weight: .bold)).tracking(2)
+                                                    .foregroundColor(themeManager.accentColor)
+                                                    .textCase(nil)
+
+                                                Spacer()
+                                            }
+                                            .padding(.horizontal, 20)
+                                            .padding(.vertical, 12)
+                                            .background(themeManager.primaryBackground)
+                                        } else {
                                         HStack {
                                             Image(systemName: category.icon)
                                                 .font(.system(size: 16, weight: .semibold))
@@ -142,6 +165,7 @@ struct AhlulbaytQuranView: View {
                                         .padding(.horizontal, 20)
                                         .padding(.vertical, 12)
                                         .background(themeManager.primaryBackground)
+                                        }
                                     }
                                 }
                             }
@@ -179,6 +203,75 @@ struct AhlulbaytQuranView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
     }
+
+    // MARK: - Emerald
+
+    private var emeraldHeader: some View {
+        VStack(alignment: .leading, spacing: 7) {
+            Text("The Purified Family".uppercased())
+                .font(.system(size: 11, weight: .bold)).tracking(3)
+                .foregroundColor(themeManager.accentColor)
+            Text("Ahl al-Bayt in the Quran")
+                .font(EmType.serif(36, .semiBold))
+                .foregroundColor(themeManager.primaryText)
+                .fixedSize(horizontal: false, vertical: true)
+            Text("Verses honoring the Prophet's family")
+                .font(.system(size: 13.5))
+                .foregroundColor(themeManager.secondaryText)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 20)
+        .padding(.top, 16)
+        .padding(.bottom, 14)
+    }
+
+    private var emeraldSearchBar: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(themeManager.accentColor)
+                .font(.system(size: 15, weight: .medium))
+
+            TextField("Search verses or members...", text: $searchText)
+                .font(.system(size: 16))
+                .foregroundColor(themeManager.primaryText)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 13)
+        .background(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(themeManager.accentChip)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+        )
+        .padding(.horizontal, 20)
+        .padding(.bottom, 14)
+    }
+
+    private var emeraldCategoryFilter: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                AhlulbaytCategoryChip(
+                    title: "All",
+                    icon: "square.grid.2x2.fill",
+                    isSelected: selectedCategory == nil,
+                    action: { selectedCategory = nil }
+                )
+
+                ForEach(AhlulbaytCategory.allCases, id: \.self) { category in
+                    AhlulbaytCategoryChip(
+                        title: category.displayName,
+                        icon: category.icon,
+                        isSelected: selectedCategory == category,
+                        action: { selectedCategory = category }
+                    )
+                }
+            }
+            .padding(.horizontal, 20)
+        }
+        .padding(.bottom, 14)
+    }
 }
 
 struct AhlulbaytEntryCardView: View {
@@ -186,6 +279,54 @@ struct AhlulbaytEntryCardView: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmCard {
+            HStack(spacing: 14) {
+                EmIconChip(sfSymbol: entry.categoryIcon)
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(entry.title)
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+
+                    if !entry.ahlulbaytMembers.isEmpty {
+                        Text(entry.ahlulbaytMembers.prefix(2).joined(separator: ", "))
+                            .font(.system(size: 12.5, weight: .semibold))
+                            .foregroundColor(themeManager.accentColor)
+                            .lineLimit(1)
+                    }
+
+                    let verseRefs = entry.verses.prefix(2).map { $0.verseReference }.joined(separator: " · ")
+                    Text(verseRefs)
+                        .font(.system(size: 12))
+                        .foregroundColor(themeManager.tertiaryText)
+                        .lineLimit(1)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+                Text("\(entry.verseCount)")
+                    .font(EmType.serif(17, .semiBold))
+                    .foregroundColor(themeManager.accentBright)
+                    .frame(width: 30, height: 30)
+                    .background(Circle().fill(themeManager.accentChip))
+                    .overlay(Circle().stroke(themeManager.accentColor, lineWidth: 1))
+
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundColor(themeManager.tertiaryText)
+            }
+            .padding(14)
+        }
+        .contentShape(Rectangle())
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         HStack(alignment: .top, spacing: 16) {
             // Category icon
             ZStack {
@@ -261,6 +402,35 @@ struct AhlulbaytCategoryChip: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                Image(systemName: icon)
+                    .font(.system(size: 13, weight: .semibold))
+
+                Text(title)
+                    .font(.system(size: 13.5, weight: .semibold))
+            }
+            .foregroundColor(isSelected ? themeManager.onAccentText : themeManager.accentColor)
+            .padding(.horizontal, 15)
+            .padding(.vertical, 9)
+            .background {
+                if isSelected {
+                    Capsule().fill(themeManager.accentGradient)
+                } else {
+                    Capsule()
+                        .fill(themeManager.accentChip)
+                        .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+            }
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var legacyBody: some View {
         Button(action: action) {
             HStack(spacing: 6) {
                 Image(systemName: icon)

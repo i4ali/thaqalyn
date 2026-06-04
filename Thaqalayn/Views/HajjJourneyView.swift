@@ -51,7 +51,8 @@ struct HajjJourneyView: View {
                                     }
                                 }
                             }
-                            .padding(.vertical, 16)
+                            .padding(.top, 16)
+                            .padding(.bottom, themeManager.isMidnightEmerald ? 120 : 16)
                         }
                     }
                 }
@@ -90,6 +91,22 @@ struct HajjJourneyHeader: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmJourneyHeader(
+            eyebrow: "10-Day Journey",
+            title: "Dhul-Hijjah",
+            sfSymbol: "building.columns.fill",
+            statusLine: statusMessage,
+            countLine: "\(journeyManager.completedDaysCount) of 10 days completed",
+            percent: journeyManager.completionPercentage,
+            completionNote: journeyManager.isJourneyCompleted ? "Journey complete · Hajj Champion earned" : nil
+        )
+    }
+
+    private var legacyBody: some View {
         VStack(spacing: 16) {
             // Title and status
             VStack(alignment: .leading, spacing: 8) {
@@ -197,6 +214,24 @@ struct HajjDayCard: View {
     }
 
     var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmJourneyDayRow(
+            dayNumber: day.dayNumber,
+            theme: day.theme,
+            themeArabic: day.themeArabic,
+            isDone: isCompleted,
+            isCurrent: isCurrentDay,
+            isLocked: isLocked,
+            doneStyle: .gold,
+            onTap: onTap
+        )
+        .padding(.horizontal, 20)
+    }
+
+    private var legacyBody: some View {
         Button(action: onTap) {
             HStack(spacing: 16) {
                 // Day number with completion status

@@ -40,7 +40,7 @@ enum ChromeAppearance {
         // --- Navigation bar ---
         let nav = UINavigationBarAppearance()
         nav.configureWithDefaultBackground()
-        let titleColor = isDark ? UIColor.white : UIColor.label
+        let titleColor = isDark ? UIColor(ThemeManager.shared.primaryText) : UIColor.label
         var navTitleAttrs = nav.titleTextAttributes
         navTitleAttrs[.foregroundColor] = titleColor
         nav.titleTextAttributes = navTitleAttrs
