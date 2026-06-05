@@ -2,8 +2,11 @@
 //  EmeraldTabBar.swift
 //  Thaqalayn
 //
-//  Custom floating, blurred, gold-accented tab bar for the Midnight Emerald theme.
-//  Driven by the same selectedTab binding as MainTabView; adapts to the items passed in.
+//  Custom floating, blurred tab bar used in BOTH themes — a light "card" in Light,
+//  emerald-black & gold in Midnight Emerald. Replaces the native UITabBar (which
+//  MainTabView hides in both themes, because iOS 26's Liquid-Glass bar renders nearly
+//  invisibly over the light background). Driven by the same selectedTab binding;
+//  adapts to the items passed in.
 //
 
 import SwiftUI
@@ -18,6 +21,24 @@ struct EmeraldTabBar: View {
     @ObservedObject private var tm = ThemeManager.shared
     let items: [EmeraldTabItem]
     @Binding var selection: Int
+
+    // Selected icon/label tint: bright gold glow in dark, the purple accent in Light.
+    private var selectedColor: Color {
+        tm.isMidnightEmerald ? tm.accentBright : tm.accentColor
+    }
+
+    // Tint layered over .ultraThinMaterial to form the card: deep emerald-black in
+    // dark, frosted translucent white in Light (so it reads as a floating glass bar,
+    // distinct from the opaque white content cards behind it).
+    private var cardTint: Color {
+        tm.isMidnightEmerald ? Color(hex: "0A1512").opacity(0.72) : Color.white.opacity(0.6)
+    }
+
+    // Inactive icon/label tint: faint cream in dark; a deeper warm grey in Light so the
+    // tabs stay legible on the frosted bar (the pale tertiary grey washed out).
+    private var inactiveColor: Color {
+        tm.isMidnightEmerald ? tm.tertiaryText : tm.secondaryText
+    }
 
     var body: some View {
         HStack(spacing: 0) {
@@ -36,7 +57,7 @@ struct EmeraldTabBar: View {
                             .fill(item.id == selection ? tm.accentColor : Color.clear)
                             .frame(width: 4, height: 4)
                     }
-                    .foregroundColor(item.id == selection ? tm.accentBright : tm.tertiaryText)
+                    .foregroundColor(item.id == selection ? selectedColor : inactiveColor)
                     .frame(maxWidth: .infinity)
                     .contentShape(Rectangle())
                 }
@@ -48,13 +69,14 @@ struct EmeraldTabBar: View {
         .background(
             ZStack {
                 RoundedRectangle(cornerRadius: 22, style: .continuous).fill(.ultraThinMaterial)
-                RoundedRectangle(cornerRadius: 22, style: .continuous).fill(Color(hex: "0A1512").opacity(0.72))
+                RoundedRectangle(cornerRadius: 22, style: .continuous).fill(cardTint)
             }
             .overlay(
                 RoundedRectangle(cornerRadius: 22, style: .continuous).stroke(tm.strokeColor, lineWidth: 1)
             )
         )
-        .shadow(color: Color.black.opacity(0.5), radius: 36, x: 0, y: 14)
+        .shadow(color: tm.isMidnightEmerald ? Color.black.opacity(0.5) : Color.black.opacity(0.15),
+                radius: tm.isMidnightEmerald ? 36 : 24, x: 0, y: tm.isMidnightEmerald ? 14 : 10)
         .padding(.horizontal, 18)
         .padding(.bottom, 30)
     }

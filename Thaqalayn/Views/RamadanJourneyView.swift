@@ -52,7 +52,7 @@ struct RamadanJourneyView: View {
                                 }
                             }
                             .padding(.top, 16)
-                            .padding(.bottom, themeManager.isMidnightEmerald ? 120 : 16)
+                            .padding(.bottom, 120)
                         }
                     }
                 }

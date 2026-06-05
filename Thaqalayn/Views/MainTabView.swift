@@ -55,7 +55,7 @@ struct MainTabView: View {
                     }
                 }
                 .tag(0)
-                .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
+                .toolbar(.hidden, for: .tabBar)
 
             HomeTab()
                 .tabItem {
@@ -66,7 +66,7 @@ struct MainTabView: View {
                     }
                 }
                 .tag(1)
-                .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
+                .toolbar(.hidden, for: .tabBar)
 
             ExploreTab()
                 .tabItem {
@@ -77,7 +77,7 @@ struct MainTabView: View {
                     }
                 }
                 .tag(2)
-                .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
+                .toolbar(.hidden, for: .tabBar)
 
             ProgressTab()
                 .tabItem {
@@ -88,7 +88,7 @@ struct MainTabView: View {
                     }
                 }
                 .tag(3)
-                .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
+                .toolbar(.hidden, for: .tabBar)
 
             // Conditional Ramadan tab - only visible during Ramadan season
             if isRamadanSeason {
@@ -101,7 +101,7 @@ struct MainTabView: View {
                         }
                     }
                     .tag(4)
-                    .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
+                    .toolbar(.hidden, for: .tabBar)
             }
 
             // Conditional Hajj tab - only visible during Hajj season
@@ -115,7 +115,7 @@ struct MainTabView: View {
                         }
                     }
                     .tag(5)
-                    .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
+                    .toolbar(.hidden, for: .tabBar)
             }
 
             // Conditional Muharram tab - only visible during Muharram season
@@ -129,12 +129,19 @@ struct MainTabView: View {
                         }
                     }
                     .tag(6)
-                    .toolbar(themeManager.isMidnightEmerald ? .hidden : .visible, for: .tabBar)
+                    .toolbar(.hidden, for: .tabBar)
             }
         }
         .tint(themeManager.accentColor)
+        .background(HideNativeTabBar(hidden: true))
+        .disableTabBarMinimize()
+        // Rebuild the TabView when the theme changes. iOS 26's Liquid-Glass tab bar
+        // can get stuck in its minimized presentation when the switch happens while
+        // a sheet (Settings) covers the TabView — and neither .tabBarMinimizeBehavior(.never)
+        // nor restoring alpha/isHidden re-expands it. A fresh TabView starts expanded.
+        .id(themeManager.selectedTheme)
 
-        if themeManager.isMidnightEmerald && !tabBarVisibility.isHidden {
+        if !tabBarVisibility.isHidden {
             EmeraldTabBar(items: emeraldItems, selection: $selectedTab)
         }
         }
@@ -163,6 +170,75 @@ struct MainTabView: View {
             case "muharram": if isMuharramSeason { selectedTab = 6 }
             default: break
             }
+        }
+    }
+}
+
+private extension View {
+    /// Disables iOS 26's tab-bar minimize-on-scroll so the native bar always shows
+    /// every tab (in Light it otherwise collapses to a single-tab pill on scroll).
+    @ViewBuilder
+    func disableTabBarMinimize() -> some View {
+        if #available(iOS 26.0, *) {
+            self.tabBarMinimizeBehavior(.never)
+        } else {
+            self
+        }
+    }
+}
+
+/// Hides the native `UITabBar` in BOTH themes — the custom floating `EmeraldTabBar`
+/// replaces it everywhere — by driving the live bar's `alpha` to 0. We don't rely on
+/// `.toolbar(.hidden, for: .tabBar)` alone: it's unreliable with the tabs' legacy
+/// `NavigationView`/`StackNavigationViewStyle`, and on iOS 26 a transparent
+/// `UITabBarAppearance` doesn't hide the Liquid-Glass bar. `alpha` is layout-safe.
+/// `hidden` is wired through `updateUIViewController` so it stays applied across
+/// re-layouts without depending on `dismantleUIViewController` firing.
+private struct HideNativeTabBar: UIViewControllerRepresentable {
+    var hidden: Bool
+
+    func makeUIViewController(context: Context) -> Proxy { Proxy() }
+
+    func updateUIViewController(_ proxy: Proxy, context: Context) {
+        proxy.targetAlpha = hidden ? 0 : 1
+        proxy.apply()
+    }
+
+    final class Proxy: UIViewController {
+        var targetAlpha: CGFloat = 1
+
+        func apply() {
+            for tbc in Self.tabBarControllers(in: view.window?.rootViewController) {
+                tbc.tabBar.alpha = targetAlpha
+                // iOS 26's tab bar minimizes into a single-tab pill on scroll. Disable
+                // it so the Light-theme native bar always shows all tabs (and it never
+                // interferes with the emerald custom bar). The bar is hidden in emerald.
+                if #available(iOS 26.0, *) {
+                    tbc.tabBarMinimizeBehavior = .never
+                }
+            }
+        }
+
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            apply()
+        }
+
+        override func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+            apply()
+        }
+
+        /// All tab bar controllers reachable from a root (children + presented).
+        static func tabBarControllers(in vc: UIViewController?) -> [UITabBarController] {
+            guard let vc else { return [] }
+            var result: [UITabBarController] = []
+            if let tbc = vc as? UITabBarController { result.append(tbc) }
+            vc.children.forEach { result.append(contentsOf: tabBarControllers(in: $0)) }
+            if let presented = vc.presentedViewController {
+                result.append(contentsOf: tabBarControllers(in: presented))
+            }
+            return result
         }
     }
 }
