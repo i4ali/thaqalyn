@@ -129,7 +129,7 @@ struct QuestionsView: View {
                                     Section {
                                         ForEach(questions) { question in
                                             QuestionCardView(question: question)
-                                                .onTapGesture {
+                                                .pressable {
                                                     selectedQuestion = question
                                                     navigateToDetail = true
                                                 }

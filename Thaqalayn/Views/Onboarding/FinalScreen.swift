@@ -48,15 +48,17 @@ struct FinalScreen: View {
                                 Text("Continue as Guest")
                                     .font(.system(size: 18, weight: .semibold))
                             }
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(hex: "1A1408"))
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
                                 RoundedRectangle(cornerRadius: 18)
-                                    .fill(themeManager.accentGradient)
+                                    .fill(LinearGradient(colors: [Color(hex: "ECD49A"), Color(hex: "D6B25E")],
+                                                         startPoint: .topLeading, endPoint: .bottomTrailing))
                             )
-                            .shadow(color: Color(red: 198/255, green: 104/255, blue: 41/255).opacity(0.35), radius: 14, y: 10)
+                            .shadow(color: Color(hex: "ECD49A").opacity(0.35), radius: 14, y: 10)
                         }
+                        .buttonStyle(EmPressStyle())
 
                         // Sign Up
                         Button(action: {
@@ -68,7 +70,7 @@ struct FinalScreen: View {
                                 Text("Create Account")
                                     .font(.system(size: 18, weight: .semibold))
                             }
-                            .foregroundColor(themeManager.primaryText)
+                            .foregroundColor(themeManager.onAccentText)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
@@ -80,6 +82,7 @@ struct FinalScreen: View {
                                     )
                             )
                         }
+                        .buttonStyle(EmPressStyle())
 
                         // Sign In
                         Button(action: {
@@ -91,7 +94,7 @@ struct FinalScreen: View {
                                 Text("Sign In")
                                     .font(.system(size: 18, weight: .semibold))
                             }
-                            .foregroundColor(themeManager.primaryText)
+                            .foregroundColor(themeManager.onAccentText)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
@@ -103,15 +106,16 @@ struct FinalScreen: View {
                                     )
                             )
                         }
+                        .buttonStyle(EmPressStyle())
 
                         // Account benefits note
                         VStack(spacing: 8) {
                             HStack(spacing: 8) {
                                 Image(systemName: "heart.fill")
                                     .font(.system(size: 12, weight: .bold))
-                                    .foregroundColor(ThemeManager.chipProgress.fg)
+                                    .foregroundColor(ThemeManager.chipGold.fg)
                                     .frame(width: 24, height: 24)
-                                    .background(RoundedRectangle(cornerRadius: 8).fill(ThemeManager.chipProgress.bg))
+                                    .background(RoundedRectangle(cornerRadius: 8).fill(ThemeManager.chipGold.bg))
                                 Text("Account Benefits")
                                     .onbCardTitle()
                                     .foregroundColor(themeManager.primaryText)

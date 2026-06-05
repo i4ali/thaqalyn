@@ -157,7 +157,7 @@ struct EmeraldHomeView: View {
                 NavigationLink(destination: SurahDetailView(surahWithTafsir: swt, targetVerse: nil)) {
                     ModernSurahCard(surah: swt.surah)
                 }
-                .buttonStyle(PlainButtonStyle())
+                .buttonStyle(EmPressStyle())
             }
         }
     }

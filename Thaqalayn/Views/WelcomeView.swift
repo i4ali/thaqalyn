@@ -147,7 +147,8 @@ struct WelcomeView: View {
                             )
                             .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 12)
                         }
-                        
+                        .buttonStyle(EmPressStyle())
+
                         // Sign up button
                         Button(action: {
                             showingAuthentication = true
@@ -170,7 +171,8 @@ struct WelcomeView: View {
                                     )
                             )
                         }
-                        
+                        .buttonStyle(EmPressStyle())
+
                         // Sign in button
                         Button(action: {
                             showingAuthentication = true
@@ -193,7 +195,8 @@ struct WelcomeView: View {
                                     )
                             )
                         }
-                        
+                        .buttonStyle(EmPressStyle())
+
                         // Note about account benefits (optional)
                         VStack(spacing: 8) {
                             Text("Account Benefits")

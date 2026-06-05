@@ -33,7 +33,7 @@ struct QuickGemsScreen: View {
             // Header with animated icon
             VStack(spacing: 20) {
                 // Animated sparkles icon
-                HeroChip(palette: ThemeManager.chipFeatured, pulseDuration: 2.0) {
+                HeroChip(palette: ThemeManager.chipGold, pulseDuration: 2.0) {
                     Image(systemName: "sparkles")
                         .font(.system(size: 38, weight: .semibold))
                 }
@@ -68,7 +68,7 @@ struct QuickGemsScreen: View {
                         Circle()
                             .fill(
                                 LinearGradient(
-                                    colors: [ThemeManager.chipKnowledge.fg, ThemeManager.chipFoundation.fg],
+                                    colors: [ThemeManager.chipGold.fg, ThemeManager.chipGold.fg],
                                     startPoint: .topLeading,
                                     endPoint: .bottomTrailing
                                 )

@@ -127,7 +127,7 @@ struct AhlulbaytQuranView: View {
                                     Section {
                                         ForEach(entries) { entry in
                                             AhlulbaytEntryCardView(entry: entry)
-                                                .onTapGesture {
+                                                .pressable {
                                                     selectedEntry = entry
                                                     navigateToDetail = true
                                                 }

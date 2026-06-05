@@ -34,6 +34,10 @@ struct HeroChip<Icon: View>: View {
 
             RoundedRectangle(cornerRadius: 28, style: .continuous)
                 .fill(palette.bg)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 28, style: .continuous)
+                        .stroke((iconColor ?? palette.fg).opacity(0.22), lineWidth: 1)
+                )
                 .frame(width: 88, height: 88)
 
             icon()

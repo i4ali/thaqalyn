@@ -1253,6 +1253,7 @@ struct SyncStatusDetailView: View {
                                             .fill(Color.blue)
                                     )
                                 }
+                                .buttonStyle(EmPressStyle())
                                 .disabled(isSyncing || bookmarkManager.isSyncing)
 
                                 // Info Text
@@ -1292,6 +1293,7 @@ struct SyncStatusDetailView: View {
                                             .fill(Color.blue)
                                     )
                                 }
+                                .buttonStyle(EmPressStyle())
                                 .padding(.horizontal, 20)
                             }
                         }

@@ -10,8 +10,17 @@ import SwiftUI
 struct SurahAudioPlayerView: View {
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @ObservedObject private var tabBarVisibility = TabBarVisibility.shared
     @State private var showingFullPlayer = false
     @State private var isExpanded = false
+
+    // The mini player is a global bottom overlay (ContentView). On screens that show
+    // the floating EmeraldTabBar it must clear it; on tab-bar-hidden screens (the
+    // reader) it drops back down just above the home indicator. Keyed to the same
+    // TabBarVisibility signal that drives the tab bar itself.
+    private var bottomInset: CGFloat {
+        tabBarVisibility.isHidden ? 16 : 110
+    }
 
     var body: some View {
         Group {
@@ -130,7 +139,7 @@ struct SurahAudioPlayerView: View {
                 }
             }
             .padding(.horizontal, 16)
-            .padding(.bottom, 16)
+            .padding(.bottom, bottomInset)
         }
     }
 
@@ -235,7 +244,7 @@ struct SurahAudioPlayerView: View {
                 }
             }
             .padding(.horizontal, 16)
-            .padding(.bottom, 16)
+            .padding(.bottom, bottomInset)
             .darkScreenAura()
         }
     }

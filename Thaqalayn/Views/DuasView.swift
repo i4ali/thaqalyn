@@ -33,7 +33,7 @@ struct DuasView: View {
                                     NavigationLink(destination: DuaDetailView(dua: dua)) {
                                         DuaCard(dua: dua)
                                     }
-                                    .buttonStyle(.plain)
+                                    .buttonStyle(EmPressStyle())
                                 }
                             }
                             .padding(.horizontal, 20)

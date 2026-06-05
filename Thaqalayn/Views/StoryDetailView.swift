@@ -604,7 +604,7 @@ struct RelatedStoryCard: View {
                     )
             }
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(EmPressStyle())
     }
 }
 

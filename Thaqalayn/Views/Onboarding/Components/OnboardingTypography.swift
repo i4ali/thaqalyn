@@ -10,10 +10,10 @@ import SwiftUI
 
 extension View {
     func onbHeroTitle() -> some View {
-        font(.system(size: 30, weight: .heavy)).tracking(-0.6)
+        font(EmType.serif(27))
     }
     func onbFinalTitle() -> some View {
-        font(.system(size: 34, weight: .heavy)).tracking(-0.8)
+        font(EmType.serif(36))
     }
     func onbEyebrow() -> some View {
         font(.system(size: 11.5, weight: .bold)).tracking(3.4).textCase(.uppercase)

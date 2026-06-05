@@ -21,7 +21,7 @@ struct QuizFeatureScreen: View {
             // Header with animated icon
             VStack(spacing: 20) {
                 // Animated brain icon
-                HeroChip(palette: ThemeManager.chipKnowledge, pulseDuration: 2.0) {
+                HeroChip(palette: ThemeManager.chipGold, pulseDuration: 2.0) {
                     Image(systemName: "brain.head.profile")
                         .font(.system(size: 38, weight: .semibold))
                 }
@@ -156,12 +156,12 @@ struct DemoQuestionCard: View {
                 Text("Foundation")
                     .onbPill()
             }
-            .foregroundColor(ThemeManager.chipFoundation.fg)
+            .foregroundColor(ThemeManager.chipGold.fg)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(ThemeManager.chipFoundation.bg)
+                    .fill(ThemeManager.chipGold.bg)
             )
 
             // Question
@@ -209,7 +209,7 @@ struct DemoAnswerOption: View {
                 return .red.opacity(0.2)
             }
         } else if isSelected {
-            return ThemeManager.chipKnowledge.fg.opacity(0.2)
+            return ThemeManager.chipGold.fg.opacity(0.2)
         }
         return themeManager.secondaryBackground
     }
@@ -222,7 +222,7 @@ struct DemoAnswerOption: View {
                 return .red
             }
         } else if isSelected {
-            return ThemeManager.chipKnowledge.fg
+            return ThemeManager.chipGold.fg
         }
         return themeManager.strokeColor
     }
@@ -280,7 +280,7 @@ struct DemoResultCard: View {
                 Circle()
                     .fill(
                         LinearGradient(
-                            colors: [ThemeManager.chipKnowledge.bg, ThemeManager.chipKnowledge.bg.opacity(0.5)],
+                            colors: [ThemeManager.chipGold.bg, ThemeManager.chipGold.bg.opacity(0.5)],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -291,7 +291,7 @@ struct DemoResultCard: View {
                     .font(.system(size: 44))
                     .foregroundStyle(
                         LinearGradient(
-                            colors: [ThemeManager.chipKnowledge.fg, ThemeManager.chipKnowledge.fg],
+                            colors: [ThemeManager.chipGold.fg, ThemeManager.chipGold.fg],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -306,14 +306,14 @@ struct DemoResultCard: View {
 
                 Text("عالم")
                     .font(.system(size: 18, weight: .medium))
-                    .foregroundColor(ThemeManager.chipKnowledge.fg)
+                    .foregroundColor(ThemeManager.chipGold.fg)
             }
 
             // Score
             HStack(spacing: 4) {
                 Text("\(score)")
                     .font(.system(size: 48, weight: .bold, design: .rounded))
-                    .foregroundColor(ThemeManager.chipKnowledge.fg)
+                    .foregroundColor(ThemeManager.chipGold.fg)
                     .contentTransition(.numericText())
 
                 Text("/10")

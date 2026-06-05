@@ -555,7 +555,7 @@ struct RelatedQuestionCard: View {
                     )
             }
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(EmPressStyle())
     }
 }
 

@@ -125,7 +125,7 @@ struct PropheticStoriesView: View {
                                     Section {
                                         ForEach(stories) { story in
                                             PropheticStoryCardView(story: story)
-                                                .onTapGesture {
+                                                .pressable {
                                                     selectedStory = story
                                                     navigateToDetail = true
                                                 }

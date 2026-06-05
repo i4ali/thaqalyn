@@ -37,8 +37,8 @@ struct SeasonalFeaturesScreen: View {
                             )
                     }
 
-                    HeroChip(palette: ThemeManager.chipKnowledge,
-                             iconColor: ThemeManager.chipBrand.fg) {
+                    HeroChip(palette: ThemeManager.chipGold,
+                             iconColor: ThemeManager.chipGold.fg) {
                         Image(systemName: "moon.stars.fill")
                             .font(.system(size: 38, weight: .semibold))
                     }
@@ -70,10 +70,10 @@ struct SeasonalFeaturesScreen: View {
                 // Ramadan Journey card - expanded
                 SeasonalFeatureExpandedCard(
                     icon: "moon.stars.fill",
-                    iconColors: [ThemeManager.chipBrand.fg, ThemeManager.chipFeatured.fg],
+                    iconColors: [ThemeManager.chipGold.fg, ThemeManager.chipGold.fg],
                     title: "Ramadan Journey",
                     badge: "Seasonal",
-                    badgeColor: ThemeManager.chipKnowledge.fg,
+                    badgeColor: ThemeManager.chipGold.fg,
                     features: [
                         ("hands.sparkles.fill", "Daily duas from Mafatih al-Jinan"),
                         ("book.pages.fill", "Curated Quranic verses with tafsir"),
@@ -87,10 +87,10 @@ struct SeasonalFeaturesScreen: View {
                 // Dhul-Hijjah Journey card - expanded
                 SeasonalFeatureExpandedCard(
                     icon: "building.columns.fill",
-                    iconColors: [ThemeManager.chipBrand.fg, ThemeManager.chipFeatured.fg],
+                    iconColors: [ThemeManager.chipGold.fg, ThemeManager.chipGold.fg],
                     title: "Dhul-Hijjah Journey",
                     badge: "Seasonal",
-                    badgeColor: ThemeManager.chipKnowledge.fg,
+                    badgeColor: ThemeManager.chipGold.fg,
                     features: [
                         ("hands.sparkles.fill", "Daily amaal & duas from Mafatih al-Jinan"),
                         ("book.pages.fill", "Curated verses for the ten blessed days"),
@@ -104,10 +104,10 @@ struct SeasonalFeaturesScreen: View {
                 // Muharram Journey card - expanded
                 SeasonalFeatureExpandedCard(
                     icon: "flame.fill",
-                    iconColors: [ThemeManager.chipBrand.fg, ThemeManager.chipFeatured.fg],
+                    iconColors: [ThemeManager.chipGold.fg, ThemeManager.chipGold.fg],
                     title: "Muharram Journey",
                     badge: "Seasonal",
-                    badgeColor: ThemeManager.chipKnowledge.fg,
+                    badgeColor: ThemeManager.chipGold.fg,
                     features: [
                         ("book.closed.fill", "Daily duas & ziyarat from Mafatih al-Jinan"),
                         ("book.pages.fill", "Curated verses on Karbala's enduring lessons"),
@@ -121,10 +121,10 @@ struct SeasonalFeaturesScreen: View {
                 // Future seasons - expanded
                 SeasonalFeatureExpandedCard(
                     icon: "calendar.badge.clock",
-                    iconColors: [ThemeManager.chipFoundation.fg, ThemeManager.chipComparative.fg],
+                    iconColors: [ThemeManager.chipGold.fg, ThemeManager.chipGold.fg],
                     title: "More Coming Soon",
                     badge: "Future",
-                    badgeColor: ThemeManager.chipFoundation.fg,
+                    badgeColor: ThemeManager.chipGold.fg,
                     features: [
                         ("drop.fill", "Muharram commemorations & Ashura"),
                         ("sparkles", "Rajab & Sha'ban preparations"),

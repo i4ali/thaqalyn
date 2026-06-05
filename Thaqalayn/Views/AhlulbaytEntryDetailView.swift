@@ -643,7 +643,7 @@ struct RelatedEntryCard: View {
                     .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
             }
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(EmPressStyle())
     }
 }
 

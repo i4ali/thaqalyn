@@ -125,7 +125,7 @@ struct PropheticParallelsView: View {
                                     Section {
                                         ForEach(parallels) { parallel in
                                             PropheticParallelCard(parallel: parallel)
-                                                .onTapGesture {
+                                                .pressable {
                                                     selectedParallel = parallel
                                                     navigateToDetail = true
                                                 }
@@ -268,7 +268,7 @@ struct PropheticParallelsView: View {
                                 ForEach(parallels) { parallel in
                                     PropheticParallelCard(parallel: parallel)
                                         .padding(.horizontal, 20)
-                                        .onTapGesture {
+                                        .pressable {
                                             selectedParallel = parallel
                                             navigateToDetail = true
                                         }

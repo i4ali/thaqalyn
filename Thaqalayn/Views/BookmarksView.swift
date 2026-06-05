@@ -266,13 +266,13 @@ struct BookmarksListView: View {
                                     index: index,
                                     isFocused: index == focusedIndex,
                                     onSwipe: onSwipeNavigation,
-                                    onDelete: { 
+                                    onDelete: {
                                         bookmarkToDelete = bookmark
                                         showingDeleteConfirmation = true
                                     }
                                 )
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(EmPressStyle())
                             .id(bookmark.id)
                         } else {
                             BookmarkCard(

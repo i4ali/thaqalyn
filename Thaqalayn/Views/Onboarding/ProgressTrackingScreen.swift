@@ -19,7 +19,7 @@ struct ProgressTrackingScreen: View {
             // Header with animated icon
             VStack(spacing: 20) {
                 // Animated checkmark icon
-                HeroChip(palette: ThemeManager.chipProgress, pulseDuration: 2.0) {
+                HeroChip(palette: ThemeManager.chipGold, pulseDuration: 2.0) {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 38, weight: .semibold))
                 }
@@ -127,7 +127,7 @@ struct DemoVerseCard: View {
                 Circle()
                     .fill(
                         LinearGradient(
-                            colors: [ThemeManager.chipKnowledge.fg, ThemeManager.chipFoundation.fg],
+                            colors: [ThemeManager.chipGold.fg, ThemeManager.chipGold.fg],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -203,19 +203,19 @@ struct DemoCheckbox: View {
         ZStack {
             RoundedRectangle(cornerRadius: 6)
                 .strokeBorder(
-                    isChecked ? ThemeManager.chipProgress.fg : themeManager.strokeColor,
+                    isChecked ? ThemeManager.chipGold.fg : themeManager.strokeColor,
                     lineWidth: 2
                 )
                 .frame(width: 24, height: 24)
                 .background(
                     RoundedRectangle(cornerRadius: 6)
-                        .fill(isChecked ? AnyShapeStyle(ThemeManager.chipProgress.fg.opacity(0.3)) : AnyShapeStyle(themeManager.glassEffect))
+                        .fill(isChecked ? AnyShapeStyle(ThemeManager.chipGold.fg.opacity(0.3)) : AnyShapeStyle(themeManager.glassEffect))
                 )
 
             if isChecked {
                 Image(systemName: "checkmark")
                     .font(.system(size: 12, weight: .bold))
-                    .foregroundColor(ThemeManager.chipProgress.fg)
+                    .foregroundColor(ThemeManager.chipGold.fg)
                     .transition(.scale.combined(with: .opacity))
             }
         }
@@ -239,7 +239,7 @@ struct DemoProgressCard: View {
                 Circle()
                     .fill(
                         LinearGradient(
-                            colors: [ThemeManager.chipFoundation.fg, ThemeManager.chipKnowledge.fg],
+                            colors: [ThemeManager.chipGold.fg, ThemeManager.chipGold.fg],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -267,11 +267,11 @@ struct DemoProgressCard: View {
             HStack(spacing: 6) {
                 Image(systemName: "book.fill")
                     .font(.system(size: 14))
-                    .foregroundColor(ThemeManager.chipProgress.fg)
+                    .foregroundColor(ThemeManager.chipGold.fg)
 
                 Text("\(percentage)%")
                     .font(.system(size: 16, weight: .bold, design: .rounded))
-                    .foregroundColor(ThemeManager.chipProgress.fg)
+                    .foregroundColor(ThemeManager.chipGold.fg)
                     .contentTransition(.numericText())
             }
         }

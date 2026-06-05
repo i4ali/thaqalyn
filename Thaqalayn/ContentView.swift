@@ -20,7 +20,7 @@ struct ContentView: View {
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var ratingManager = RatingManager.shared
     @State private var showingWelcome = false
-    
+
     var body: some View {
         Group {
             if dataManager.isLoading {
@@ -311,7 +311,7 @@ struct SurahListView: View {
                         NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)) {
                             ModernSurahCard(surah: surahWithTafsir.surah)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(EmPressStyle())
                     }
                 }
                 .padding(.horizontal, 20)
@@ -1420,7 +1420,7 @@ struct BookmarkBadge: View {
                             radius: 8, x: 0, y: 2)
             }
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(EmPressStyle())
     }
 }
 

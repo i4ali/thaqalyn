@@ -24,7 +24,7 @@ struct FiveLayersScreen: View {
         VStack(spacing: 0) {
             // Header
             VStack(spacing: 16) {
-                HeroChip(palette: ThemeManager.chipKnowledge) {
+                HeroChip(palette: ThemeManager.chipGold) {
                     Image(systemName: "square.stack.3d.up.fill").font(.system(size: 38, weight: .semibold))
                 }
                 .opacity(isVisible ? 1 : 0)
@@ -161,15 +161,15 @@ struct LayerCard: View {
             .padding(18)
             .background(
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .fill(Color.white)
+                    .fill(Color.white.opacity(0.05))
                     .overlay(
                         RoundedRectangle(cornerRadius: 18, style: .continuous)
                             .strokeBorder(
-                                isExpanded ? chip.fg.opacity(0.5) : Color.clear,
-                                lineWidth: isExpanded ? 2 : 0
+                                isExpanded ? chip.fg.opacity(0.5) : Color(hex: "ECD49A").opacity(0.10),
+                                lineWidth: isExpanded ? 2 : 1
                             )
                     )
-                    .shadow(color: Color(red: 60/255, green: 40/255, blue: 20/255).opacity(0.04), radius: 6, x: 0, y: 2)
+                    .shadow(color: Color.black.opacity(0.35), radius: 14, x: 0, y: 8)
             )
             .shadow(color: isExpanded ? chip.fg.opacity(0.18) : Color.clear, radius: isExpanded ? 12 : 0)
         }

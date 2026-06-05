@@ -23,7 +23,7 @@ struct DailyVerseScreen: View {
                     // Header
                     VStack(spacing: 16) {
                         // Icon
-                        HeroChip(palette: ThemeManager.chipBrand) {
+                        HeroChip(palette: ThemeManager.chipGold) {
                             Image(systemName: "bell.fill")
                                 .font(.system(size: 36, weight: .semibold))
                         }
@@ -66,7 +66,7 @@ struct DailyVerseScreen: View {
 
                                 Image(systemName: "star.fill")
                                     .font(.system(size: 18))
-                                    .foregroundColor(ThemeManager.chipFeatured.fg)
+                                    .foregroundColor(ThemeManager.chipGold.fg)
                             }
 
                             // Verse content
@@ -94,12 +94,12 @@ struct DailyVerseScreen: View {
                                 HStack {
                                     Text(todayVerse.theme)
                                         .font(.system(size: 12, weight: .medium))
-                                        .foregroundColor(ThemeManager.chipBrand.fg)
+                                        .foregroundColor(ThemeManager.chipGold.fg)
                                         .padding(.horizontal, 12)
                                         .padding(.vertical, 6)
                                         .background(
                                             Capsule()
-                                                .fill(ThemeManager.chipBrand.bg)
+                                                .fill(ThemeManager.chipGold.bg)
                                         )
 
                                     Spacer()
@@ -118,7 +118,7 @@ struct DailyVerseScreen: View {
                         HStack(spacing: 10) {
                             Image(systemName: "calendar")
                                 .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(ThemeManager.chipBrand.fg)
+                                .foregroundColor(ThemeManager.chipGold.fg)
 
                             Text("Based on Islamic Calendar")
                                 .font(.system(size: 16, weight: .semibold))
@@ -151,23 +151,20 @@ struct DailyVerseScreen: View {
                                 Text(notificationsEnabled ? "Notifications Enabled" : "Enable Daily Verses")
                                     .font(.system(size: 18, weight: .semibold))
                             }
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(hex: "1A1408"))
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
                                 RoundedRectangle(cornerRadius: 16)
-                                    .fill(notificationsEnabled ?
-                                        LinearGradient(
-                                            colors: [Color.green, Color.green.opacity(0.8)],
-                                            startPoint: .topLeading,
-                                            endPoint: .bottomTrailing
-                                        ) : themeManager.accentGradient)
+                                    .fill(LinearGradient(colors: [Color(hex: "ECD49A"), Color(hex: "D6B25E")],
+                                                         startPoint: .topLeading, endPoint: .bottomTrailing))
                             )
                             .shadow(
-                                color: (notificationsEnabled ? Color.green : themeManager.accentColor).opacity(0.4),
+                                color: Color(hex: "ECD49A").opacity(0.4),
                                 radius: 12
                             )
                         }
+                        .buttonStyle(EmPressStyle())
 
                         if !notificationsEnabled {
                             Text("You can always enable this later in Settings")

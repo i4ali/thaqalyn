@@ -23,12 +23,37 @@ enum EmType {
 
 // MARK: - Press style
 
+/// Shared tap-feedback for the app: a deep, smooth, no-bounce press.
+/// Default = "Deep & Soft" (scale 0.92 + slight dim). All existing
+/// `.buttonStyle(EmPressStyle())` call sites inherit this automatically.
 struct EmPressStyle: ButtonStyle {
+    var depth: CGFloat = 0.92   // pressed scale
+    var dim: Double = 0.90      // pressed opacity
+
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .scaleEffect(configuration.isPressed ? 0.98 : 1)
-            .opacity(configuration.isPressed ? 0.9 : 1)
-            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
+            .scaleEffect(configuration.isPressed ? depth : 1)
+            .opacity(configuration.isPressed ? dim : 1)
+            .animation(.spring(response: 0.34, dampingFraction: 0.86),
+                       value: configuration.isPressed)
+    }
+
+    /// Gentler preset for full-width rows so they sink in place rather than
+    /// appearing to "jump" away from neighboring rows.
+    static var gentle: EmPressStyle { EmPressStyle(depth: 0.97, dim: 0.94) }
+}
+
+/// Press feedback for a tappable card/row that is NOT already a `Button`
+/// (i.e. replaces a bare `.onTapGesture { }`). Also gives the element proper
+/// button accessibility traits — an upgrade over the VoiceOver-invisible tap gesture.
+extension View {
+    func pressable(depth: CGFloat = 0.92,
+                   dim: Double = 0.90,
+                   action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            self.contentShape(Rectangle())
+        }
+        .buttonStyle(EmPressStyle(depth: depth, dim: dim))
     }
 }
 
@@ -554,5 +579,22 @@ extension View {
             .padding(20)
         }
     }
+}
+
+#Preview("EmPressStyle feel") {
+    ZStack {
+        EmeraldBackground()
+        VStack(spacing: 20) {
+            Button("Deep & Soft (0.92)") {}
+                .buttonStyle(EmPressStyle())
+            Button("Row gentle (0.97)") {}
+                .buttonStyle(EmPressStyle.gentle)
+        }
+        .font(.system(size: 16, weight: .bold))
+        .foregroundColor(ThemeManager.shared.onAccentText)
+        .padding(.horizontal, 28).padding(.vertical, 16)
+        .background(RoundedRectangle(cornerRadius: 15).fill(ThemeManager.shared.accentBright))
+    }
+    .environment(\.colorScheme, .dark)
 }
 #endif

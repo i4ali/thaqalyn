@@ -16,13 +16,13 @@ struct MissionScreen: View {
         VStack(spacing: 0) {
             Spacer()
 
-            VStack(spacing: 50) {
+            VStack(spacing: 32) {
                 // App icon with glow
                 ZStack {
                     // Glow effect
                     ForEach(0..<3) { index in
                         Circle()
-                            .fill(Color(hex: "C66829").opacity(0.18))
+                            .fill(Color(hex: "ECD49A").opacity(0.16))
                             .frame(width: 140 - CGFloat(index * 20), height: 140 - CGFloat(index * 20))
                             .blur(radius: 10)
                             .scaleEffect(isVisible ? 1 : 0.5)
@@ -87,13 +87,13 @@ struct MissionScreen: View {
                 }
 
                 // Feature highlights
-                VStack(spacing: 16) {
+                VStack(spacing: 12) {
                     HighlightRow(
                         icon: "book.closed.fill",
                         text: "Complete Quranic text with English translation",
                         isVisible: isVisible,
                         delay: 1.4,
-                        chip: ThemeManager.chipBrand
+                        chip: ThemeManager.chipGold
                     )
 
                     HighlightRow(
@@ -101,7 +101,7 @@ struct MissionScreen: View {
                         text: "5 layers of authentic Shia commentary",
                         isVisible: isVisible,
                         delay: 1.6,
-                        chip: ThemeManager.chipKnowledge
+                        chip: ThemeManager.chipGold
                     )
 
                     HighlightRow(
@@ -109,7 +109,7 @@ struct MissionScreen: View {
                         text: "Daily verses aligned with Islamic calendar",
                         isVisible: isVisible,
                         delay: 1.8,
-                        chip: ThemeManager.chipFeatured
+                        chip: ThemeManager.chipGold
                     )
 
                     HighlightRow(
@@ -117,7 +117,7 @@ struct MissionScreen: View {
                         text: "Save and sync bookmarks across devices",
                         isVisible: isVisible,
                         delay: 2.0,
-                        chip: ThemeManager.chipWarmth
+                        chip: ThemeManager.chipGold
                     )
                 }
                 .padding(.horizontal, 30)
@@ -167,6 +167,7 @@ struct HighlightRow: View {
             Text(text)
                 .onbRowTitle()
                 .foregroundColor(themeManager.primaryText)
+                .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .onboardingRow()

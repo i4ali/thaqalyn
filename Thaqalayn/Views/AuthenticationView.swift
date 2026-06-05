@@ -157,9 +157,10 @@ struct AuthenticationView: View {
                             )
                             .shadow(color: themeManager.semanticBlue.opacity(0.3), radius: 8)
                         }
+                        .buttonStyle(EmPressStyle())
                         .disabled(isLoading || !isFormValid)
                         .opacity(isFormValid ? 1.0 : 0.6)
-                        
+
                         // Forgot password
                         if !isSignUp {
                             Button("Forgot Password?") {

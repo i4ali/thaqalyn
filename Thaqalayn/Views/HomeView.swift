@@ -106,7 +106,7 @@ struct HomeView: View {
                         NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)) {
                             ModernSurahCard(surah: surahWithTafsir.surah)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(EmPressStyle())
                     }
                 }
                 .padding(.horizontal, 20)

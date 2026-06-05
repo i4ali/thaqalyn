@@ -60,7 +60,7 @@ struct LifeMomentsView: View {
                             LazyVStack(spacing: 12) {
                                 ForEach(lifeMomentsManager.moments) { moment in
                                     MomentCard(moment: moment)
-                                        .onTapGesture {
+                                        .pressable {
                                             selectedMoment = moment
                                             navigateToVerse = true
                                         }

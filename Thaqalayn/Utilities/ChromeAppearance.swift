@@ -16,6 +16,9 @@ enum ChromeAppearance {
         let accent = UIColor(ThemeManager.shared.accentColor)
 
         // --- Tab bar ---
+        // NB: in Midnight Emerald the native bar is HIDDEN entirely by
+        // `HideNativeTabBar` (MainTabView) — the floating EmeraldTabBar replaces
+        // it. This only styles the bar for the Light theme, where it's shown.
         let tab = UITabBarAppearance()
         tab.configureWithDefaultBackground()
 

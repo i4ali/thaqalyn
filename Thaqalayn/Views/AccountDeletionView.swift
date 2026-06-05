@@ -182,8 +182,9 @@ struct AccountDeletionView: View {
                                         .fill(confirmationText == confirmationString ? themeManager.semanticRed : Color.gray)
                                 )
                             }
+                            .buttonStyle(EmPressStyle())
                             .disabled(confirmationText != confirmationString || isDeleting)
-                            
+
                             Button(action: {
                                 dismiss()
                             }) {

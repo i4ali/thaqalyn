@@ -14,11 +14,12 @@ struct OnboardingCardModifier: ViewModifier {
             .padding(padding)
             .background(
                 RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .fill(Color.white)
-                    .shadow(
-                        color: Color(red: 60/255, green: 40/255, blue: 20/255).opacity(0.06),
-                        radius: 12, x: 0, y: 8
+                    .fill(Color.white.opacity(0.05))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 22, style: .continuous)
+                            .stroke(Color(hex: "ECD49A").opacity(0.10), lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.35), radius: 16, x: 0, y: 8)
             )
     }
 }
@@ -30,11 +31,12 @@ struct OnboardingRowModifier: ViewModifier {
             .padding(padding)
             .background(
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .fill(Color.white)
-                    .shadow(
-                        color: Color(red: 60/255, green: 40/255, blue: 20/255).opacity(0.04),
-                        radius: 6, x: 0, y: 2
+                    .fill(Color.white.opacity(0.045))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 18, style: .continuous)
+                            .stroke(Color(hex: "ECD49A").opacity(0.10), lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.30), radius: 8, x: 0, y: 3)
             )
     }
 }

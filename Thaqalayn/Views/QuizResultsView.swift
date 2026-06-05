@@ -112,6 +112,7 @@ struct QuizResultsView: View {
                                 )
                         )
                     }
+                    .buttonStyle(EmPressStyle())
 
                     Button(action: onDismiss) {
                         Text("Done")
@@ -128,6 +129,7 @@ struct QuizResultsView: View {
                                     )
                             )
                     }
+                    .buttonStyle(EmPressStyle())
                 }
                 .padding(.horizontal, 20)
                 .padding(.bottom, 30)

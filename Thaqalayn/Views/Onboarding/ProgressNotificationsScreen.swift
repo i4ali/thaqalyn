@@ -21,7 +21,7 @@ struct ProgressNotificationsScreen: View {
                     // Header
                     VStack(spacing: 16) {
                         // Icon - Flame for streak
-                        HeroChip(palette: ThemeManager.chipBrand) {
+                        HeroChip(palette: ThemeManager.chipGold) {
                             PhosphorIcon(name: "ph-flame-fill", size: 44)
                         }
                         .scaleEffect(isVisible ? 1 : 0.5)
@@ -47,7 +47,7 @@ struct ProgressNotificationsScreen: View {
                         ProgressFeatureCard(
                             icon: "chart.bar.fill",
                             color: .blue,
-                            chip: ThemeManager.chipFoundation,
+                            chip: ThemeManager.chipGold,
                             title: "Track Your Progress",
                             description: "See your daily verse count and reading streaks"
                         )
@@ -58,7 +58,7 @@ struct ProgressNotificationsScreen: View {
                         ProgressFeatureCard(
                             icon: "flame.fill",
                             color: .orange,
-                            chip: ThemeManager.chipBrand,
+                            chip: ThemeManager.chipGold,
                             title: "Build Streaks",
                             description: "Read daily to maintain your streak and reach new milestones"
                         )
@@ -69,7 +69,7 @@ struct ProgressNotificationsScreen: View {
                         ProgressFeatureCard(
                             icon: "trophy.fill",
                             color: .yellow,
-                            chip: ThemeManager.chipFeatured,
+                            chip: ThemeManager.chipGold,
                             title: "Earn Badges",
                             description: "Complete surahs and hit milestones to unlock achievements"
                         )
@@ -93,23 +93,20 @@ struct ProgressNotificationsScreen: View {
                                 Text(progressNotificationsEnabled ? "Reminders Enabled" : "Enable Progress Reminders")
                                     .font(.system(size: 18, weight: .semibold))
                             }
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(hex: "1A1408"))
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
                                 RoundedRectangle(cornerRadius: 16)
-                                    .fill(progressNotificationsEnabled ?
-                                        LinearGradient(
-                                            colors: [Color.green, Color.green.opacity(0.8)],
-                                            startPoint: .topLeading,
-                                            endPoint: .bottomTrailing
-                                        ) : themeManager.accentGradient)
+                                    .fill(LinearGradient(colors: [Color(hex: "ECD49A"), Color(hex: "D6B25E")],
+                                                         startPoint: .topLeading, endPoint: .bottomTrailing))
                             )
                             .shadow(
-                                color: (progressNotificationsEnabled ? Color.green : themeManager.accentColor).opacity(0.4),
+                                color: Color(hex: "ECD49A").opacity(0.4),
                                 radius: 12
                             )
                         }
+                        .buttonStyle(EmPressStyle())
 
                         if !progressNotificationsEnabled {
                             Text("You can always enable this later in Settings")

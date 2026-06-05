@@ -48,7 +48,7 @@ struct HadithScreen: View {
                         )
                         .background(
                             Ellipse()
-                                .fill(Color(hex: "C66829").opacity(0.22))
+                                .fill(Color(hex: "ECD49A").opacity(0.16))
                                 .frame(width: 200, height: 70)
                                 .blur(radius: 20)
                                 .scaleEffect(glowPulse ? 1.1 : 1.0)
@@ -75,7 +75,7 @@ struct HadithScreen: View {
 
                         // Divider
                         Capsule()
-                            .fill(Color(hex: "C66829"))
+                            .fill(Color(hex: "ECD49A"))
                             .frame(width: 60, height: 3)
                             .opacity(isVisible ? 1 : 0)
                             .scaleEffect(x: isVisible ? 1 : 0, y: 1)

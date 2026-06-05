@@ -13,25 +13,28 @@ struct OnboardingBackground: View {
 
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: ThemeManager.tiltColors(tilt),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
-
+            Color(hex: "0A1512").ignoresSafeArea()
+            GeometryReader { geo in
+                RadialGradient(
+                    gradient: Gradient(stops: [
+                        .init(color: Color(hex: "0C1D16"), location: 0.0),
+                        .init(color: Color(hex: "0A1512"), location: 0.55),
+                        .init(color: Color(hex: "081310"), location: 1.0),
+                    ]),
+                    center: UnitPoint(x: 0.5, y: -0.10),
+                    startRadius: 0,
+                    endRadius: max(geo.size.width, geo.size.height) * 1.1
+                )
+                .ignoresSafeArea()
+            }
             RadialGradient(
-                colors: [
-                    Color(red: 232/255, green: 148/255, blue: 100/255).opacity(0.18),
-                    Color.clear
-                ],
-                center: .top,
-                startRadius: 0,
-                endRadius: 320
+                gradient: Gradient(colors: [Color(hex: "ECD49A").opacity(0.13), .clear]),
+                center: .top, startRadius: 0, endRadius: 230
             )
-            .frame(width: 500, height: 400)
-            .blur(radius: 8)
-            .offset(y: -40)
+            .frame(height: 320)
+            .frame(maxWidth: .infinity, alignment: .top)
+            .offset(y: -90)
+            .allowsHitTesting(false)
             .ignoresSafeArea()
         }
     }

@@ -193,6 +193,7 @@ struct PaywallView: View {
                                 .cornerRadius(16)
                                 .shadow(color: themeManager.accentColor.opacity(0.5), radius: 15, x: 0, y: 8)
                             }
+                            .buttonStyle(EmPressStyle())
                             .disabled(purchaseManager.isLoading || !purchaseManager.isProductLoaded)
 
                             // Restore purchases button

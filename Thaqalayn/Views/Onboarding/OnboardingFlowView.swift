@@ -71,8 +71,9 @@ struct OnboardingFlowView: View {
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
 
-            // Skip button (hidden on last page)
-            if currentPage < totalPages - 1 {
+            // Skip button (hidden on first page — it auto-advances and shows
+            // "Swipe or tap to continue" — and on the last page)
+            if currentPage > 0 && currentPage < totalPages - 1 {
                 VStack {
                     HStack {
                         Spacer()

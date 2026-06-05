@@ -117,6 +117,12 @@ struct TodayView: View {
                     .padding(.horizontal, 18)
                     .padding(.top, -2)
                 }
+
+                #if DEBUG
+                if ProcessInfo.processInfo.arguments.contains("-tallToday") {
+                    Color.clear.frame(height: 800)
+                }
+                #endif
             }
             .padding(.bottom, 40)
         }
@@ -571,7 +577,7 @@ private struct DuaOfTheDayCard: View {
             .padding(14)
             .background(cardBackground)
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(EmPressStyle())
     }
 
     private var iconBackground: Color {
@@ -848,7 +854,7 @@ private struct EmDuaOfTheDayCard: View {
                 .padding(16)
             }
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(EmPressStyle())
     }
 }
 
