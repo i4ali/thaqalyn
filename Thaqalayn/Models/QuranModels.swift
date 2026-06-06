@@ -37,12 +37,31 @@ struct Surah: Codable, Identifiable {
 struct Verse: Codable {
     let arabicText: String
     let translation: String
+    /// Urdu translation (Allama Jawadi). Optional for backward compatibility with
+    /// any data that predates the translationUrdu field.
+    let translationUrdu: String?
     let juz: Int
     let manzil: Int
     let page: Int
     let ruku: Int
     let hizbQuarter: Int
     let sajda: SajdaInfo
+}
+
+extension VerseWithTafsir {
+    /// Verse translation for the given language. Only English and Urdu exist for
+    /// verse text; any other language falls back to the English translation.
+    func displayTranslation(for language: CommentaryLanguage) -> String {
+        if language == .urdu, let urdu = translationUrdu, !urdu.isEmpty {
+            return urdu
+        }
+        return translation
+    }
+
+    /// True when the displayed translation is the Urdu one (render RTL, Arabic-script font).
+    func usesUrduTranslation(for language: CommentaryLanguage) -> Bool {
+        language == .urdu && (translationUrdu?.isEmpty == false)
+    }
 }
 
 struct SajdaInfo: Codable {
@@ -340,6 +359,7 @@ struct VerseWithTafsir: Identifiable {
     let number: Int
     let arabicText: String
     let translation: String
+    let translationUrdu: String?
     let sajda: SajdaInfo
     let tafsir: TafsirVerse?
     
@@ -397,6 +417,7 @@ struct VerseWithTafsir: Identifiable {
         self.number = number
         self.arabicText = verse.arabicText
         self.translation = verse.translation
+        self.translationUrdu = verse.translationUrdu
         self.sajda = verse.sajda
         self.tafsir = tafsir
     }
@@ -610,6 +631,17 @@ enum CommentaryLanguage: String, CaseIterable, Codable {
         case .urdu: return "اردو"
         case .arabic: return "العربية"
         case .french: return "Français"
+        }
+    }
+
+    /// Compact 2-letter code for tight UI like the reader's language pill,
+    /// where the full display name collides with the centered header title.
+    var shortCode: String {
+        switch self {
+        case .english: return "EN"
+        case .urdu: return "UR"
+        case .arabic: return "AR"
+        case .french: return "FR"
         }
     }
 

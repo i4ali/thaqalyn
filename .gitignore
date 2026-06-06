@@ -117,9 +117,21 @@ video_output/
 # Generated media output (root only — NOT scripts/ or tests/ source dirs)
 /tafsir_videos/
 /dhul_hijjah_carousel/
+/ads/
+
+# Design scratch / handoff mockups (throwaway)
+/design_handoff_*/
+
+# Screenshots (loose at root + screenshot dirs)
+/dhulhijjahscreen.png
+/simulator_screenshot_*.png
+/*-screenshots/
 
 # Stray/junk image accidentally dropped at repo root
 /8527d322-ee79-4a1c-bbeb-1be30da8f6cc.JPG
 
 # Superpowers brainstorm companion (local mockups)
 .superpowers/
+
+# Claude Code transient runtime
+.claude/scheduled_tasks.lock

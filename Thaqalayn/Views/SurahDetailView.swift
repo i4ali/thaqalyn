@@ -71,7 +71,7 @@ struct SurahDetailView: View {
                     },
                     onGoToVerse: { showingGoToVerse = true }
                 )
-                
+
                 // Verses scroll view
                 ScrollViewReader { proxy in
                     ScrollView {
@@ -305,6 +305,19 @@ struct ModernSurahHeader: View {
     let onGoToVerse: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+
+    /// Flip the verse-translation language between English and Urdu (the only two
+    /// languages with verse text). Shared with the tafsir reader's language.
+    private func toggleTranslationLanguage() {
+        withAnimation(.easeInOut(duration: 0.2)) {
+            languageManager.setLanguage(languageManager.selectedLanguage == .urdu ? .english : .urdu)
+        }
+    }
+
+    private var translationLanguageCode: String {
+        languageManager.selectedLanguage == .urdu ? "UR" : "EN"
+    }
 
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
@@ -339,7 +352,7 @@ struct ModernSurahHeader: View {
                         Button(action: { Task { await audioManager.playVerseSequence(verses, in: surah, startingFrom: 0) } }) {
                             HStack(spacing: 8) {
                                 Image(systemName: "play.fill").font(.system(size: 14, weight: .semibold))
-                                Text("Play Recitation").font(.system(size: 15, weight: .bold)).fixedSize()
+                                Text("Listen").font(.system(size: 15, weight: .bold)).fixedSize()
                             }
                             .foregroundColor(themeManager.onAccentText)
                             .frame(maxWidth: .infinity).padding(.vertical, 14)
@@ -350,6 +363,7 @@ struct ModernSurahHeader: View {
 
                         emHeaderChip(system: "magnifyingglass", action: onGoToVerse)
                         if hasQuiz { emHeaderChip(system: "brain.head.profile", action: onQuizTap) }
+                        emLanguageChip()
                     }
                     .padding(.top, 4)
                 }
@@ -370,6 +384,24 @@ struct ModernSurahHeader: View {
                 .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
         }
         .buttonStyle(EmPressStyle())
+    }
+
+    /// EN/UR translation-language toggle, styled to sit beside the emerald header chips.
+    private func emLanguageChip() -> some View {
+        Button(action: toggleTranslationLanguage) {
+            HStack(spacing: 5) {
+                Image(systemName: "globe").font(.system(size: 14, weight: .semibold))
+                Text(translationLanguageCode).font(.system(size: 14, weight: .bold))
+            }
+            .foregroundColor(themeManager.accentColor)
+            .frame(height: 50)
+            .padding(.horizontal, 13)
+            .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.accentChip))
+            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(EmPressStyle())
+        .accessibilityLabel("Translation language")
+        .accessibilityValue(languageManager.selectedLanguage == .urdu ? "Urdu" : "English")
     }
 
     private var legacyBody: some View {
@@ -479,6 +511,27 @@ struct ModernSurahHeader: View {
                             }
                         }
                     }
+
+                    // Translation language toggle (EN/UR)
+                    Button(action: toggleTranslationLanguage) {
+                        HStack(spacing: 6) {
+                            Image(systemName: "globe")
+                                .font(.system(size: 15, weight: .semibold))
+                            Text(translationLanguageCode)
+                                .font(.system(size: 16, weight: .semibold))
+                                .fixedSize()
+                        }
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 16)
+                        .frame(height: 48)
+                        .background {
+                            RoundedRectangle(cornerRadius: 24)
+                                .fill(themeManager.purpleGradient)
+                                .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
+                        }
+                    }
+                    .accessibilityLabel("Translation language")
+                    .accessibilityValue(languageManager.selectedLanguage == .urdu ? "Urdu" : "English")
                 }
                 .padding(.top, 8)
             }
@@ -515,6 +568,7 @@ struct ModernVerseCard: View {
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var progressManager = ProgressManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     private var isBookmarked: Bool {
         bookmarkManager.isBookmarked(surahNumber: surah.number, verseNumber: verse.number)
@@ -658,6 +712,22 @@ struct ModernVerseCard: View {
         .opacity(dimmed ? 0.45 : 1)
     }
 
+    /// Verse translation line that switches between English (LTR) and Urdu (RTL,
+    /// Arabic-script font) based on the surah-screen language toggle.
+    @ViewBuilder
+    private func translationLine(urduFont: Font, englishFont: Font,
+                                 urduLineSpacing: CGFloat, englishLineSpacing: CGFloat) -> some View {
+        let showUrdu = verse.usesUrduTranslation(for: languageManager.selectedLanguage)
+        Text(verse.displayTranslation(for: languageManager.selectedLanguage))
+            .font(showUrdu ? urduFont : englishFont)
+            .foregroundColor(themeManager.secondaryText)
+            .lineSpacing(showUrdu ? urduLineSpacing : englishLineSpacing)
+            .multilineTextAlignment(showUrdu ? .trailing : .leading)
+            .frame(maxWidth: .infinity, alignment: showUrdu ? .trailing : .leading)
+            .environment(\.layoutDirection, showUrdu ? .rightToLeft : .leftToRight)
+            .animation(.easeInOut(duration: 0.25), value: languageManager.selectedLanguage)
+    }
+
     private var emeraldBody: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(spacing: 8) {
@@ -686,10 +756,8 @@ struct ModernVerseCard: View {
                 .lineSpacing(12)
                 .environment(\.layoutDirection, .rightToLeft)
 
-            Text(verse.translation)
-                .font(EmType.serif(17, .medium))
-                .foregroundColor(themeManager.secondaryText)
-                .lineSpacing(3)
+            translationLine(urduFont: EmType.arabic(19), englishFont: EmType.serif(17, .medium),
+                            urduLineSpacing: 9, englishLineSpacing: 3)
 
             HStack(spacing: 10) {
                 // Gems (quick overview)
@@ -820,11 +888,9 @@ struct ModernVerseCard: View {
                 .lineSpacing(26)  // line-height: 2 = lineSpacing equals font size
                 .shadow(color: themeManager.isDarkMode && isCurrentlyPlaying ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
 
-            // English translation
-            Text(verse.translation)
-                .font(.system(size: 16, weight: .medium))
-                .foregroundColor(themeManager.secondaryText)
-                .lineSpacing(4)
+            // Translation (English / Urdu)
+            translationLine(urduFont: EmType.arabic(18), englishFont: .system(size: 16, weight: .medium),
+                            urduLineSpacing: 9, englishLineSpacing: 4)
 
             // Commentary buttons (theme-adaptive for all themes)
             // Split button design: Summary (left) + Full Commentary (right)
@@ -1478,6 +1544,7 @@ struct TafsirLayerSelector: View {
     let sampleVerse = Verse(
         arabicText: "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
         translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+        translationUrdu: "عظیم اور دائمی رحمتوں والے خدا کے نام سے",
         juz: 1,
         manzil: 1,
         page: 1,

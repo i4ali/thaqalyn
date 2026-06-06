@@ -373,6 +373,7 @@ struct VerseSummaryView: View {
     let sampleVerse = Verse(
         arabicText: "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
         translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+        translationUrdu: "عظیم اور دائمی رحمتوں والے خدا کے نام سے",
         juz: 1,
         manzil: 1,
         page: 1,

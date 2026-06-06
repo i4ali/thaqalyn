@@ -20,6 +20,8 @@ struct FullScreenCommentaryView: View {
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var tafsirReader = TafsirReader.shared
     @StateObject private var voiceManager = TTSVoiceManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @State private var showTextSizePanel = false
     @Environment(\.dismiss) private var dismiss
     
     init(verse: VerseWithTafsir, surah: Surah, initialLayer: TafsirLayer) {
@@ -52,38 +54,110 @@ struct FullScreenCommentaryView: View {
     }
 
     private var legacyContent: some View {
-        ZStack {
-            // Reading-optimized background
+        ZStack(alignment: .topTrailing) {
             readingBackground
-
             VStack(spacing: 0) {
-                // Minimal header
                 readingHeader
-
-                // Layer selector (compact)
                 compactLayerSelector
-
-                // Full-screen reading content
                 readingContent
+            }
+            if showTextSizePanel {
+                Color.black.opacity(0.001)
+                    .ignoresSafeArea()
+                    .onTapGesture { closeTextSizePanel() }
+                textSizePanel
+                    .padding(.top, 72)        // tune so it sits just under the Aa button
+                    .padding(.trailing, 24)
+                    .transition(.scale(scale: 0.92, anchor: .topTrailing).combined(with: .opacity))
             }
         }
     }
     
     // MARK: - Midnight Emerald
 
+    // MARK: - Text-size control (shared by both themes)
+
+    private var textSizeButton: some View {
+        Button(action: {
+            withAnimation(.spring(response: 0.32, dampingFraction: 0.85)) {
+                showTextSizePanel.toggle()
+            }
+        }) {
+            Text("Aa")
+                .font(EmType.serif(18, .semiBold))
+                .foregroundColor(themeManager.accentColor)
+                .frame(width: 40, height: 40)
+                .background(Circle().fill(showTextSizePanel ? themeManager.accentChip : Color.clear))
+                .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(PlainButtonStyle())
+        .accessibilityLabel("Text size")
+    }
+
+    private var textSizePanel: some View {
+        HStack(spacing: 16) {
+            Button(action: { withAnimation(.easeInOut(duration: 0.18)) { readingSettings.decrease() } }) {
+                Text("A")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(readingSettings.canDecrease ? themeManager.accentColor : themeManager.tertiaryText)
+                    .frame(width: 28, height: 28)
+            }
+            .disabled(!readingSettings.canDecrease)
+            .accessibilityLabel("Decrease text size")
+
+            HStack(spacing: 7) {
+                ForEach(0..<readingSettings.stepCount, id: \.self) { i in
+                    Circle()
+                        .fill(i <= readingSettings.stepIndex ? themeManager.accentColor : themeManager.strokeColorStrong)
+                        .frame(width: 6, height: 6)
+                }
+            }
+
+            Button(action: { withAnimation(.easeInOut(duration: 0.18)) { readingSettings.increase() } }) {
+                Text("A")
+                    .font(.system(size: 23, weight: .semibold))
+                    .foregroundColor(readingSettings.canIncrease ? themeManager.accentColor : themeManager.tertiaryText)
+                    .frame(width: 28, height: 28)
+            }
+            .disabled(!readingSettings.canIncrease)
+            .accessibilityLabel("Increase text size")
+        }
+        .padding(.horizontal, 18)
+        .padding(.vertical, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill(.ultraThinMaterial)
+                .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+                .shadow(color: .black.opacity(0.35), radius: 16, x: 0, y: 8)
+        )
+    }
+
+    private func closeTextSizePanel() {
+        withAnimation(.easeInOut(duration: 0.2)) { showTextSizePanel = false }
+    }
+
     private var emeraldContent: some View {
-        ZStack {
+        ZStack(alignment: .topTrailing) {
             EmeraldBackground()
             VStack(spacing: 0) {
                 emeraldHeader
                 emeraldLayerSelector
                 emeraldReadingContent
             }
+            if showTextSizePanel {
+                Color.black.opacity(0.001)
+                    .ignoresSafeArea()
+                    .onTapGesture { closeTextSizePanel() }
+                textSizePanel
+                    .padding(.top, 68)        // tune so it sits just under the Aa button
+                    .padding(.trailing, 20)
+                    .transition(.scale(scale: 0.92, anchor: .topTrailing).combined(with: .opacity))
+            }
         }
     }
 
     private var emeraldHeader: some View {
-        HStack {
+        HStack(spacing: 0) {
             Button(action: { dismiss() }) {
                 Image(systemName: "xmark").font(.system(size: 15, weight: .semibold))
                     .foregroundColor(themeManager.accentColor)
@@ -91,20 +165,26 @@ struct FullScreenCommentaryView: View {
                     .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
             }
             Spacer()
+            HStack(spacing: 10) {
+                textSizeButton
+                Button(action: { languageManager.toggleLanguage() }) {
+                    HStack(spacing: 4) {
+                        Text(languageManager.selectedLanguage.shortCode).font(.system(size: 13, weight: .semibold))
+                        Image(systemName: "globe").font(.system(size: 12))
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                    .padding(.horizontal, 12).padding(.vertical, 8)
+                    .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                }
+                .accessibilityLabel("Language: \(languageManager.selectedLanguage.displayName)")
+            }
+        }
+        .overlay {
             VStack(spacing: 3) {
                 Text("Commentary").font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.primaryText)
                 Text("\(surah.englishName) · Verse \(verse.number)").font(.system(size: 12, weight: .medium)).foregroundColor(themeManager.tertiaryText)
             }
-            Spacer()
-            Button(action: { languageManager.toggleLanguage() }) {
-                HStack(spacing: 4) {
-                    Text(languageManager.selectedLanguage.displayName).font(.system(size: 13, weight: .semibold))
-                    Image(systemName: "globe").font(.system(size: 12))
-                }
-                .foregroundColor(themeManager.accentColor)
-                .padding(.horizontal, 12).padding(.vertical, 8)
-                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-            }
+            .allowsHitTesting(false)
         }
         .padding(.horizontal, 20).padding(.top, 20).padding(.bottom, 16)
     }
@@ -172,6 +252,7 @@ struct FullScreenCommentaryView: View {
         }
         .animation(.easeInOut(duration: 0.3), value: selectedLayer)
         .animation(.easeInOut(duration: 0.3), value: languageManager.selectedLanguage)
+        .animation(.easeInOut(duration: 0.2), value: readingSettings.stepIndex)
     }
 
     private var emeraldReadingLayerHeader: some View {
@@ -198,6 +279,7 @@ struct FullScreenCommentaryView: View {
     private func emeraldReadingTextContent(_ text: String) -> some View {
         let paragraphs = formattedParagraphs(from: text)
         let isRTL = languageManager.selectedLanguage.isRTL
+        let scale = readingSettings.scale
         return VStack(alignment: isRTL ? .trailing : .leading, spacing: 16) {
             ForEach(Array(paragraphs.enumerated()), id: \.offset) { index, paragraph in
                 let trimmed = paragraph.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -210,10 +292,10 @@ struct FullScreenCommentaryView: View {
                 HighlightedText(
                     text: trimmed,
                     highlightRange: hlRange,
-                    font: isRTL ? EmType.arabic(20) : EmType.serif(19, .medium),
+                    font: isRTL ? EmType.arabic(20 * scale) : EmType.serif(19 * scale, .medium),
                     textColor: themeManager.primaryText,
                     highlightColor: themeManager.accentColor.opacity(0.28),
-                    lineSpacing: 7
+                    lineSpacing: 7 * scale
                 )
                 .multilineTextAlignment(isRTL ? .trailing : .leading)
                 .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
@@ -306,7 +388,10 @@ struct FullScreenCommentaryView: View {
             Spacer()
 
             // Language toggle button
-            languageToggle
+            HStack(spacing: 10) {
+                textSizeButton
+                languageToggle
+            }
         }
         .padding(.horizontal, 24)
         .padding(.top, 20)
@@ -329,7 +414,7 @@ struct FullScreenCommentaryView: View {
             languageManager.toggleLanguage()
         }) {
             HStack(spacing: 4) {
-                Text(languageManager.selectedLanguage.displayName)
+                Text(languageManager.selectedLanguage.shortCode)
                     .font(.system(size: 14, weight: .medium))
                 Text("🌐")
                     .font(.system(size: 14))
@@ -342,6 +427,7 @@ struct FullScreenCommentaryView: View {
                     .fill(themeManager.accentColor.opacity(0.1))
             }
         }
+        .accessibilityLabel("Language: \(languageManager.selectedLanguage.displayName)")
     }
 
     // TTS button in layer header
@@ -469,8 +555,9 @@ struct FullScreenCommentaryView: View {
         }
         .animation(.easeInOut(duration: 0.3), value: selectedLayer)
         .animation(.easeInOut(duration: 0.3), value: languageManager.selectedLanguage)
+        .animation(.easeInOut(duration: 0.2), value: readingSettings.stepIndex)
     }
-    
+
     private var readingLayerHeader: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(spacing: 16) {
@@ -513,6 +600,7 @@ struct FullScreenCommentaryView: View {
 
     private func readingTextContent(_ text: String) -> some View {
         let paragraphs = formattedParagraphs(from: text)
+        let scale = readingSettings.scale
 
         return VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 18) {
             ForEach(Array(paragraphs.enumerated()), id: \.offset) { index, paragraph in
@@ -530,10 +618,10 @@ struct FullScreenCommentaryView: View {
                     HighlightedText(
                         text: trimmedParagraph,
                         highlightRange: paragraphHighlightRange,
-                        font: .system(size: 17, weight: .regular, design: .serif),
+                        font: .system(size: 17 * scale, weight: .regular, design: .serif),
                         textColor: themeManager.primaryText,
                         highlightColor: themeManager.semanticYellow.opacity(themeManager.isDarkMode ? 0.30 : 0.50),
-                        lineSpacing: 6
+                        lineSpacing: 6 * scale
                     )
                         .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                         .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
@@ -731,6 +819,7 @@ struct FullScreenCommentaryView: View {
     let sampleVerse = Verse(
         arabicText: "وَآتُوا الْيَتَامَىٰ أَمْوَالَهُمْ وَلَا تَتَبَدَّلُوا الْخَبِيثَ بِالطَّيِّبِ",
         translation: "And give to the orphans their properties and do not substitute the defective [of your own] for the good [of theirs]. And do not consume their properties into your own...",
+        translationUrdu: nil,
         juz: 1,
         manzil: 1,
         page: 2,
