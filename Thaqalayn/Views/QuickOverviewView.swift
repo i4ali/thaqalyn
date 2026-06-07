@@ -16,9 +16,10 @@ struct HighlightedArabicText: View {
     let isHighlighting: Bool
 
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     private func arabicFont(bold: Bool) -> Font {
-        themeManager.isMidnightEmerald ? EmType.arabic(28, bold: bold) : .system(size: 28, weight: bold ? .bold : .medium)
+        themeManager.isMidnightEmerald ? EmType.arabic(28 * readingSettings.scale, bold: bold) : .system(size: 28 * readingSettings.scale, weight: bold ? .bold : .medium)
     }
 
     var body: some View {
@@ -31,7 +32,7 @@ struct HighlightedArabicText: View {
                 .font(arabicFont(bold: false))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.center)
-                .lineSpacing(12)
+                .lineSpacing(12 * readingSettings.scale)
                 .environment(\.layoutDirection, .rightToLeft)
         }
     }
@@ -54,7 +55,7 @@ struct HighlightedArabicText: View {
             }
         }
         .multilineTextAlignment(.center)
-        .lineSpacing(12)
+        .lineSpacing(12 * readingSettings.scale)
         .environment(\.layoutDirection, .rightToLeft)
     }
 
@@ -101,6 +102,7 @@ struct QuickOverviewView: View {
     @State private var selectedConcept: VerseConcept? = nil
     @State private var showConceptDetail: Bool = false
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
 
     private var isIPad: Bool {
@@ -527,6 +529,7 @@ struct ConceptDetailCardOverlay: View {
     let onViewFullTafsir: () -> Void
 
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     private var conceptColor: Color {
         Color(hex: concept.colorHex) ?? themeManager.accentColor
@@ -576,9 +579,9 @@ struct ConceptDetailCardOverlay: View {
                         .foregroundColor(conceptColor)
 
                     Text(concept.getCoreInsight(language: language))
-                        .font(.system(size: 15, weight: .regular, design: .serif))
+                        .font(.system(size: 15 * readingSettings.scale, weight: .regular, design: .serif))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(7)
+                        .lineSpacing(7 * readingSettings.scale)
                         .multilineTextAlignment(isRTL ? .trailing : .leading)
                         .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                 }
@@ -590,9 +593,9 @@ struct ConceptDetailCardOverlay: View {
                         .foregroundColor(conceptColor)
 
                     Text(concept.getWhyItMatters(language: language))
-                        .font(.system(size: 15, weight: .regular, design: .serif))
+                        .font(.system(size: 15 * readingSettings.scale, weight: .regular, design: .serif))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(7)
+                        .lineSpacing(7 * readingSettings.scale)
                         .multilineTextAlignment(isRTL ? .trailing : .leading)
                         .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                 }
@@ -632,6 +635,7 @@ struct ConceptDetailCard: View {
     let onViewFullTafsir: () -> Void
 
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
 
     private var conceptColor: Color {
@@ -682,9 +686,9 @@ struct ConceptDetailCard: View {
                         .foregroundColor(conceptColor)
 
                     Text(concept.getCoreInsight(language: language))
-                        .font(.system(size: 15, weight: .regular))
+                        .font(.system(size: 15 * readingSettings.scale, weight: .regular))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4)
+                        .lineSpacing(4 * readingSettings.scale)
                         .multilineTextAlignment(isRTL ? .trailing : .leading)
                         .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                 }
@@ -696,9 +700,9 @@ struct ConceptDetailCard: View {
                         .foregroundColor(conceptColor)
 
                     Text(concept.getWhyItMatters(language: language))
-                        .font(.system(size: 15, weight: .regular))
+                        .font(.system(size: 15 * readingSettings.scale, weight: .regular))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(4)
+                        .lineSpacing(4 * readingSettings.scale)
                         .multilineTextAlignment(isRTL ? .trailing : .leading)
                         .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                 }

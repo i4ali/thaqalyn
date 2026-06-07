@@ -22,6 +22,7 @@ struct SurahDetailView: View {
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var audioManager = AudioManager.shared
     @State private var showingGoToVerse = false
+    @State private var showTextSizePanel = false
     @State private var scrollProxy: ScrollViewProxy? = nil
     @Environment(\.dismiss) private var dismiss
 
@@ -61,6 +62,7 @@ struct SurahDetailView: View {
                     surah: surahWithTafsir.surah,
                     verses: surahWithTafsir.verses,
                     hasQuiz: quizManager.hasQuiz(for: surahWithTafsir.surah.number),
+                    showTextSizePanel: $showTextSizePanel,
                     onBack: { dismiss() },
                     onQuizTap: {
                         if premiumManager.canAccessQuiz(surahNumber: surahWithTafsir.surah.number) {
@@ -117,6 +119,7 @@ struct SurahDetailView: View {
                 }
             }
         }
+        .textSizePanelOverlay(isOpen: $showTextSizePanel, topPadding: 60, trailingPadding: 20)
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
@@ -300,6 +303,7 @@ struct ModernSurahHeader: View {
     let surah: Surah
     let verses: [VerseWithTafsir]
     let hasQuiz: Bool
+    @Binding var showTextSizePanel: Bool
     let onBack: () -> Void
     let onQuizTap: () -> Void
     let onGoToVerse: () -> Void
@@ -333,6 +337,7 @@ struct ModernSurahHeader: View {
                         .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
                 }
                 Spacer()
+                TextSizeButton(isPanelOpen: $showTextSizePanel)
             }
             .padding(.horizontal, 20).padding(.top, 12)
 
@@ -420,6 +425,7 @@ struct ModernSurahHeader: View {
                         )
                 }
                 Spacer()
+                TextSizeButton(isPanelOpen: $showTextSizePanel)
             }
             .padding(.horizontal, 24)
             .padding(.top, 20)
@@ -569,6 +575,7 @@ struct ModernVerseCard: View {
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     private var isBookmarked: Bool {
         bookmarkManager.isBookmarked(surahNumber: surah.number, verseNumber: verse.number)
@@ -749,15 +756,17 @@ struct ModernVerseCard: View {
             }
 
             Text(verse.arabicText)
-                .font(EmType.arabic(27))
+                .font(EmType.arabic(27 * readingSettings.scale))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                .lineSpacing(12)
+                .lineSpacing(12 * readingSettings.scale)
                 .environment(\.layoutDirection, .rightToLeft)
 
-            translationLine(urduFont: EmType.arabic(19), englishFont: EmType.serif(17, .medium),
-                            urduLineSpacing: 9, englishLineSpacing: 3)
+            translationLine(urduFont: EmType.arabic(19 * readingSettings.scale),
+                            englishFont: EmType.serif(17 * readingSettings.scale, .medium),
+                            urduLineSpacing: 9 * readingSettings.scale,
+                            englishLineSpacing: 3 * readingSettings.scale)
 
             HStack(spacing: 10) {
                 // Gems (quick overview)
@@ -881,16 +890,17 @@ struct ModernVerseCard: View {
 
             // Arabic text
             Text(verse.arabicText)
-                .font(.system(size: 26, weight: .medium))
+                .font(.system(size: 26 * readingSettings.scale, weight: .medium))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                .lineSpacing(26)  // line-height: 2 = lineSpacing equals font size
+                .lineSpacing(26 * readingSettings.scale)  // line-height: 2 = lineSpacing equals font size
                 .shadow(color: themeManager.isDarkMode && isCurrentlyPlaying ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
 
             // Translation (English / Urdu)
-            translationLine(urduFont: EmType.arabic(18), englishFont: .system(size: 16, weight: .medium),
-                            urduLineSpacing: 9, englishLineSpacing: 4)
+            translationLine(urduFont: EmType.arabic(18 * readingSettings.scale),
+                            englishFont: .system(size: 16 * readingSettings.scale, weight: .medium),
+                            urduLineSpacing: 9 * readingSettings.scale, englishLineSpacing: 4 * readingSettings.scale)
 
             // Commentary buttons (theme-adaptive for all themes)
             // Split button design: Summary (left) + Full Commentary (right)

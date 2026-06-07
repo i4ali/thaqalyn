@@ -14,6 +14,7 @@ struct MuharramDayDetailView: View {
     @StateObject private var journeyManager = MuharramJourneyManager.shared
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
@@ -79,9 +80,9 @@ struct MuharramDayDetailView: View {
                         }
 
                         Text(day.tafsirFocus)
-                            .font(.system(size: 16, weight: .medium))
+                            .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(4)
+                            .lineSpacing(4 * readingSettings.scale)
                     }
                     .padding(20)
                     .background {
@@ -104,9 +105,9 @@ struct MuharramDayDetailView: View {
                         }
 
                         Text(day.reflection)
-                            .font(.system(size: 16, weight: .medium))
+                            .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(4)
+                            .lineSpacing(4 * readingSettings.scale)
                             .italic()
                     }
                     .padding(20)
@@ -191,18 +192,18 @@ struct MuharramDayDetailView: View {
             EmDetailCard(icon: "hands.sparkles", label: "Dua / Ziyarat") {
                 VStack(alignment: .leading, spacing: 12) {
                     Text(day.dua.arabic)
-                        .font(EmType.arabic(24))
+                        .font(EmType.arabic(24 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8)
+                        .lineSpacing(8 * readingSettings.scale)
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     Text(day.dua.transliteration)
-                        .font(EmType.serifItalic(16))
+                        .font(EmType.serifItalic(16 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                     Text(day.dua.english)
-                        .font(EmType.serif(17, .medium))
+                        .font(EmType.serif(17 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4)
+                        .lineSpacing(4 * readingSettings.scale)
                     if let source = day.dua.source {
                         Text("— \(source)")
                             .font(.system(size: 12.5, weight: .medium))
@@ -227,17 +228,17 @@ struct MuharramDayDetailView: View {
 
             EmDetailCard(icon: "lightbulb", label: "Tafsir Focus") {
                 Text(day.tafsirFocus)
-                    .font(EmType.serif(17, .medium))
+                    .font(EmType.serif(17 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(5)
+                    .lineSpacing(5 * readingSettings.scale)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
 
             EmDetailCard(icon: "heart.text.square", label: "Reflection") {
                 Text(day.reflection)
-                    .font(EmType.serifItalic(18))
+                    .font(EmType.serifItalic(18 * readingSettings.scale))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(5)
+                    .lineSpacing(5 * readingSettings.scale)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
 
@@ -358,6 +359,7 @@ struct MuharramDayHeader: View {
 struct MuharramDuaSection: View {
     let dua: MuharramDua
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -376,23 +378,23 @@ struct MuharramDuaSection: View {
 
             // Arabic
             Text(dua.arabic)
-                .font(.custom("AmiriQuran-Regular", size: 24))
+                .font(.custom("AmiriQuran-Regular", size: 24 * readingSettings.scale))
                 .foregroundColor(themeManager.primaryText)
-                .lineSpacing(8)
+                .lineSpacing(8 * readingSettings.scale)
                 .multilineTextAlignment(.trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
 
             // Transliteration
             Text(dua.transliteration)
-                .font(.system(size: 14, weight: .medium))
+                .font(.system(size: 14 * readingSettings.scale, weight: .medium))
                 .foregroundColor(themeManager.secondaryText)
                 .italic()
 
             // English translation
             Text(dua.english)
-                .font(.system(size: 16, weight: .medium))
+                .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                 .foregroundColor(themeManager.primaryText)
-                .lineSpacing(4)
+                .lineSpacing(4 * readingSettings.scale)
 
             // Source
             if let source = dua.source {
@@ -423,6 +425,7 @@ struct MuharramVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
         guard let verses = dataManager.quranData?.verses["\(verse.surahNumber)"],
@@ -459,15 +462,15 @@ struct MuharramVerseCard: View {
                 }
                 if let data = verseData {
                     Text(data.arabic)
-                        .font(EmType.arabic(25))
+                        .font(EmType.arabic(25 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8)
+                        .lineSpacing(8 * readingSettings.scale)
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     Text(data.translation)
-                        .font(EmType.serif(16, .medium))
+                        .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(3)
+                        .lineSpacing(3 * readingSettings.scale)
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "text.bubble")
@@ -520,17 +523,17 @@ struct MuharramVerseCard: View {
                 VStack(alignment: .leading, spacing: 12) {
                     // Arabic
                     Text(data.arabic)
-                        .font(.custom("AmiriQuran-Regular", size: 22))
+                        .font(.custom("AmiriQuran-Regular", size: 22 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(6)
+                        .lineSpacing(6 * readingSettings.scale)
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
 
                     // Translation
                     Text(data.translation)
-                        .font(.system(size: 15, weight: .medium))
+                        .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4)
+                        .lineSpacing(4 * readingSettings.scale)
                 }
                 .padding(16)
 

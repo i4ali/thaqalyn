@@ -54,106 +54,29 @@ struct FullScreenCommentaryView: View {
     }
 
     private var legacyContent: some View {
-        ZStack(alignment: .topTrailing) {
+        ZStack {
             readingBackground
             VStack(spacing: 0) {
                 readingHeader
                 compactLayerSelector
                 readingContent
             }
-            if showTextSizePanel {
-                Color.black.opacity(0.001)
-                    .ignoresSafeArea()
-                    .onTapGesture { closeTextSizePanel() }
-                textSizePanel
-                    .padding(.top, 72)        // tune so it sits just under the Aa button
-                    .padding(.trailing, 24)
-                    .transition(.scale(scale: 0.92, anchor: .topTrailing).combined(with: .opacity))
-            }
         }
+        .textSizePanelOverlay(isOpen: $showTextSizePanel, topPadding: 72, trailingPadding: 24)
     }
     
     // MARK: - Midnight Emerald
 
-    // MARK: - Text-size control (shared by both themes)
-
-    private var textSizeButton: some View {
-        Button(action: {
-            withAnimation(.spring(response: 0.32, dampingFraction: 0.85)) {
-                showTextSizePanel.toggle()
-            }
-        }) {
-            Text("Aa")
-                .font(EmType.serif(18, .semiBold))
-                .foregroundColor(themeManager.accentColor)
-                .frame(width: 40, height: 40)
-                .background(Circle().fill(showTextSizePanel ? themeManager.accentChip : Color.clear))
-                .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
-        }
-        .buttonStyle(PlainButtonStyle())
-        .accessibilityLabel("Text size")
-    }
-
-    private var textSizePanel: some View {
-        HStack(spacing: 16) {
-            Button(action: { withAnimation(.easeInOut(duration: 0.18)) { readingSettings.decrease() } }) {
-                Text("A")
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundColor(readingSettings.canDecrease ? themeManager.accentColor : themeManager.tertiaryText)
-                    .frame(width: 28, height: 28)
-            }
-            .disabled(!readingSettings.canDecrease)
-            .accessibilityLabel("Decrease text size")
-
-            HStack(spacing: 7) {
-                ForEach(0..<readingSettings.stepCount, id: \.self) { i in
-                    Circle()
-                        .fill(i <= readingSettings.stepIndex ? themeManager.accentColor : themeManager.strokeColorStrong)
-                        .frame(width: 6, height: 6)
-                }
-            }
-
-            Button(action: { withAnimation(.easeInOut(duration: 0.18)) { readingSettings.increase() } }) {
-                Text("A")
-                    .font(.system(size: 23, weight: .semibold))
-                    .foregroundColor(readingSettings.canIncrease ? themeManager.accentColor : themeManager.tertiaryText)
-                    .frame(width: 28, height: 28)
-            }
-            .disabled(!readingSettings.canIncrease)
-            .accessibilityLabel("Increase text size")
-        }
-        .padding(.horizontal, 18)
-        .padding(.vertical, 12)
-        .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(.ultraThinMaterial)
-                .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
-                .shadow(color: .black.opacity(0.35), radius: 16, x: 0, y: 8)
-        )
-    }
-
-    private func closeTextSizePanel() {
-        withAnimation(.easeInOut(duration: 0.2)) { showTextSizePanel = false }
-    }
-
     private var emeraldContent: some View {
-        ZStack(alignment: .topTrailing) {
+        ZStack {
             EmeraldBackground()
             VStack(spacing: 0) {
                 emeraldHeader
                 emeraldLayerSelector
                 emeraldReadingContent
             }
-            if showTextSizePanel {
-                Color.black.opacity(0.001)
-                    .ignoresSafeArea()
-                    .onTapGesture { closeTextSizePanel() }
-                textSizePanel
-                    .padding(.top, 68)        // tune so it sits just under the Aa button
-                    .padding(.trailing, 20)
-                    .transition(.scale(scale: 0.92, anchor: .topTrailing).combined(with: .opacity))
-            }
         }
+        .textSizePanelOverlay(isOpen: $showTextSizePanel, topPadding: 68, trailingPadding: 20)
     }
 
     private var emeraldHeader: some View {
@@ -166,7 +89,7 @@ struct FullScreenCommentaryView: View {
             }
             Spacer()
             HStack(spacing: 10) {
-                textSizeButton
+                TextSizeButton(isPanelOpen: $showTextSizePanel)
                 Button(action: { languageManager.toggleLanguage() }) {
                     HStack(spacing: 4) {
                         Text(languageManager.selectedLanguage.shortCode).font(.system(size: 13, weight: .semibold))
@@ -389,7 +312,7 @@ struct FullScreenCommentaryView: View {
 
             // Language toggle button
             HStack(spacing: 10) {
-                textSizeButton
+                TextSizeButton(isPanelOpen: $showTextSizePanel)
                 languageToggle
             }
         }

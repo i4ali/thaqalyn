@@ -167,6 +167,11 @@ struct SettingsView: View {
                                 )
                             }
 
+                            // Reading Section
+                            SettingsSection(title: "Reading") {
+                                ReadingSizeSettingRow()
+                            }
+
                             // Daily Verse Notifications Section
                             SettingsSection(title: "Daily Verse") {
                                 VStack(spacing: 12) {
@@ -495,6 +500,7 @@ struct SettingsView: View {
                 ScrollView {
                     VStack(spacing: 26) {
                         emeraldAppearanceSection
+                        emeraldReadingSection
                         emeraldDailyVerseSection
                         emeraldReadingProgressSection
                         emeraldAccountSection
@@ -545,6 +551,12 @@ struct SettingsView: View {
                 .padding(.vertical, 12)
                 .padding(.horizontal, 14)
             }
+        }
+    }
+
+    private var emeraldReadingSection: some View {
+        SettingsSection(title: "Reading") {
+            ReadingSizeSettingRow()
         }
     }
 
@@ -1390,6 +1402,89 @@ struct SyncStatusDetailView: View {
                 }
             }
         }
+    }
+}
+
+// MARK: - Reading text-size setting
+
+/// "Reading Text Size" control for Settings: label + A−/dots/A+ stepper + a live
+/// preview line that resizes with the global ReadingSettingsManager scale.
+struct ReadingSizeSettingRow: View {
+    @ObservedObject private var tm = ThemeManager.shared
+    @ObservedObject private var settings = ReadingSettingsManager.shared
+
+    private func stepButton(_ label: String, size: CGFloat, enabled: Bool, a11y: String, action: @escaping () -> Void) -> some View {
+        Button(action: { withAnimation(.easeInOut(duration: 0.18)) { action() } }) {
+            Text(label)
+                .font(.system(size: size, weight: .semibold))
+                .foregroundColor(enabled ? tm.accentColor : tm.tertiaryText)
+                .frame(width: 34, height: 34)
+                .background(Circle().fill(tm.accentChip))
+                .overlay(Circle().stroke(tm.strokeColor, lineWidth: 1))
+        }
+        .disabled(!enabled)
+        .accessibilityLabel(a11y)
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 14) {
+                if tm.isMidnightEmerald {
+                    EmIconChip(sfSymbol: "textformat.size", size: 44)
+                } else {
+                    Image(systemName: "textformat.size")
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundColor(tm.accentColor)
+                        .frame(width: 28)
+                }
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Reading Text Size")
+                        .font(tm.isMidnightEmerald ? EmType.serif(19, .semiBold) : .system(size: 16, weight: .semibold))
+                        .foregroundColor(tm.primaryText)
+                    Text("Verses, translation & commentary")
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundColor(tm.secondaryText)
+                }
+                Spacer(minLength: 8)
+            }
+
+            HStack(spacing: 18) {
+                stepButton("A", size: 15, enabled: settings.canDecrease, a11y: "Decrease text size") { settings.decrease() }
+                HStack(spacing: 8) {
+                    ForEach(0..<settings.stepCount, id: \.self) { i in
+                        Circle()
+                            .fill(i <= settings.stepIndex ? tm.accentColor : tm.strokeColorStrong)
+                            .frame(width: 7, height: 7)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                stepButton("A", size: 23, enabled: settings.canIncrease, a11y: "Increase text size") { settings.increase() }
+            }
+
+            Text("In the name of Allah, the Most Gracious, the Most Merciful.")
+                .font(tm.isMidnightEmerald ? EmType.serif(17 * settings.scale, .medium)
+                                           : .system(size: 16 * settings.scale, weight: .medium, design: .serif))
+                .foregroundColor(tm.secondaryText)
+                .lineSpacing(4 * settings.scale)
+                .fixedSize(horizontal: false, vertical: true)
+                .animation(.easeInOut(duration: 0.2), value: settings.stepIndex)
+        }
+        .padding(16)
+        .background(
+            Group {
+                if tm.isMidnightEmerald {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(tm.glassSurface)
+                        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous)
+                            .stroke(tm.strokeColor, lineWidth: 1))
+                } else {
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(tm.glassEffect)
+                        .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .stroke(tm.strokeColor, lineWidth: 1))
+                }
+            }
+        )
     }
 }
 

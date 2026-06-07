@@ -11,6 +11,7 @@ struct FastingCategoryDetailView: View {
     let category: FastingCategory
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
@@ -55,9 +56,9 @@ struct FastingCategoryDetailView: View {
 
                         // Description
                         Text(category.description)
-                            .font(.system(size: 16, weight: .medium))
+                            .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(4)
+                            .lineSpacing(4 * readingSettings.scale)
                     }
                     .padding(24)
                     .background {
@@ -162,9 +163,9 @@ struct FastingCategoryDetailView: View {
                         .fill(themeManager.dividerColor)
                         .frame(height: 1)
                     Text(category.description)
-                        .font(EmType.serif(16, .medium))
+                        .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4)
+                        .lineSpacing(4 * readingSettings.scale)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(20)
@@ -202,6 +203,7 @@ struct FastingVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
         guard let verses = dataManager.quranData?.verses["\(fastingVerse.surahNumber)"],
@@ -247,16 +249,16 @@ struct FastingVerseCard: View {
                 // Verse text
                 if let verse = verseData {
                     Text(verse.arabic)
-                        .font(EmType.arabic(25))
+                        .font(EmType.arabic(25 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8)
+                        .lineSpacing(8 * readingSettings.scale)
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .environment(\.layoutDirection, .rightToLeft)
                     Text(verse.translation)
-                        .font(EmType.serif(16, .medium))
+                        .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(3)
+                        .lineSpacing(3 * readingSettings.scale)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
@@ -345,18 +347,18 @@ struct FastingVerseCard: View {
                 VStack(alignment: .leading, spacing: 16) {
                     // Arabic text
                     Text(verse.arabic)
-                        .font(.custom("AmiriQuran-Regular", size: 24))
+                        .font(.custom("AmiriQuran-Regular", size: 24 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8)
+                        .lineSpacing(8 * readingSettings.scale)
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
 
                     // Translation
                     Text(verse.translation)
-                        .font(.system(size: 16, weight: .medium))
+                        .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4)
+                        .lineSpacing(4 * readingSettings.scale)
                 }
                 .padding(20)
 

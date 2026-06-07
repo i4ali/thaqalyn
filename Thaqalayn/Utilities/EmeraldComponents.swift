@@ -555,6 +555,97 @@ extension View {
     }
 }
 
+// MARK: - Reading text-size control (shared across reading screens)
+
+/// The "Aa" toggle chip. Theme-adaptive (reads ThemeManager tokens, works in both
+/// Midnight Emerald and Light). Binds to a panel-visibility flag the host owns.
+struct TextSizeButton: View {
+    @ObservedObject private var tm = ThemeManager.shared
+    @Binding var isPanelOpen: Bool
+
+    var body: some View {
+        Button(action: {
+            withAnimation(.spring(response: 0.32, dampingFraction: 0.85)) {
+                isPanelOpen.toggle()
+            }
+        }) {
+            Text("Aa")
+                .font(EmType.serif(18, .semiBold))
+                .foregroundColor(tm.accentColor)
+                .frame(width: 40, height: 40)
+                .background(Circle().fill(isPanelOpen ? tm.accentChip : Color.clear))
+                .overlay(Circle().stroke(tm.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(PlainButtonStyle())
+        .accessibilityLabel("Text size")
+    }
+}
+
+/// The floating A− / step-dots / A+ panel. Reads + mutates ReadingSettingsManager directly.
+struct TextSizePanel: View {
+    @ObservedObject private var tm = ThemeManager.shared
+    @ObservedObject private var settings = ReadingSettingsManager.shared
+
+    var body: some View {
+        HStack(spacing: 16) {
+            Button(action: { withAnimation(.easeInOut(duration: 0.18)) { settings.decrease() } }) {
+                Text("A")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(settings.canDecrease ? tm.accentColor : tm.tertiaryText)
+                    .frame(width: 28, height: 28)
+            }
+            .disabled(!settings.canDecrease)
+            .accessibilityLabel("Decrease text size")
+
+            HStack(spacing: 7) {
+                ForEach(0..<settings.stepCount, id: \.self) { i in
+                    Circle()
+                        .fill(i <= settings.stepIndex ? tm.accentColor : tm.strokeColorStrong)
+                        .frame(width: 6, height: 6)
+                }
+            }
+
+            Button(action: { withAnimation(.easeInOut(duration: 0.18)) { settings.increase() } }) {
+                Text("A")
+                    .font(.system(size: 23, weight: .semibold))
+                    .foregroundColor(settings.canIncrease ? tm.accentColor : tm.tertiaryText)
+                    .frame(width: 28, height: 28)
+            }
+            .disabled(!settings.canIncrease)
+            .accessibilityLabel("Increase text size")
+        }
+        .padding(.horizontal, 18)
+        .padding(.vertical, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill(.ultraThinMaterial)
+                .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(tm.strokeColor, lineWidth: 1))
+                .shadow(color: .black.opacity(0.35), radius: 16, x: 0, y: 8)
+        )
+    }
+}
+
+extension View {
+    /// Overlays the floating `TextSizePanel` at top-trailing with a transparent
+    /// outside-tap catcher that closes it. Host owns the `isOpen` flag.
+    func textSizePanelOverlay(isOpen: Binding<Bool>,
+                              topPadding: CGFloat,
+                              trailingPadding: CGFloat) -> some View {
+        ZStack(alignment: .topTrailing) {
+            self
+            if isOpen.wrappedValue {
+                Color.black.opacity(0.001)
+                    .ignoresSafeArea()
+                    .onTapGesture { withAnimation(.easeInOut(duration: 0.2)) { isOpen.wrappedValue = false } }
+                TextSizePanel()
+                    .padding(.top, topPadding)
+                    .padding(.trailing, trailingPadding)
+                    .transition(.scale(scale: 0.92, anchor: .topTrailing).combined(with: .opacity))
+            }
+        }
+    }
+}
+
 // MARK: - Preview
 
 #if DEBUG

@@ -13,6 +13,7 @@ struct VerseSummaryView: View {
     let onViewFullCommentary: () -> Void
     @State private var selectedLanguage: CommentaryLanguage = .english
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
@@ -108,9 +109,9 @@ struct VerseSummaryView: View {
 
                     if let layer2Text = verse.tafsir?.getLayer2Short(language: selectedLanguage) {
                         Text(layer2Text)
-                            .font(EmType.serif(18, .medium))
+                            .font(EmType.serif(18 * readingSettings.scale, .medium))
                             .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(7)
+                            .lineSpacing(7 * readingSettings.scale)
                             .multilineTextAlignment(selectedLanguage.isRTL ? .trailing : .leading)
                             .frame(maxWidth: .infinity, alignment: selectedLanguage.isRTL ? .trailing : .leading)
                             .environment(\.layoutDirection, selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
@@ -278,9 +279,9 @@ struct VerseSummaryView: View {
             // Layer2 classical commentary (short version for overview)
             if let layer2Text = verse.tafsir?.getLayer2Short(language: selectedLanguage) {
                 Text(layer2Text)
-                    .font(.system(size: 17, weight: .regular, design: .serif))
+                    .font(.system(size: 17 * readingSettings.scale, weight: .regular, design: .serif))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(8)
+                    .lineSpacing(8 * readingSettings.scale)
                     .multilineTextAlignment(selectedLanguage.isRTL ? .trailing : .leading)
                     .environment(\.layoutDirection, selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             } else {

@@ -12,6 +12,7 @@ struct DuaDetailView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var tafsirReader = TafsirReader.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -82,10 +83,10 @@ struct DuaDetailView: View {
 
                 EmCard(glow: true) {
                     Text(dua.arabic)
-                        .font(EmType.arabic(30))
+                        .font(EmType.arabic(30 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.center)
-                        .lineSpacing(12)
+                        .lineSpacing(12 * readingSettings.scale)
                         .frame(maxWidth: .infinity)
                         .padding(22)
                         .environment(\.layoutDirection, .rightToLeft)
@@ -95,7 +96,7 @@ struct DuaDetailView: View {
                 emeraldTTSButton
 
                 Text(dua.transliteration)
-                    .font(EmType.serifItalic(17))
+                    .font(EmType.serifItalic(17 * readingSettings.scale))
                     .foregroundColor(themeManager.secondaryText)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity)
@@ -103,7 +104,7 @@ struct DuaDetailView: View {
 
                 EmCard {
                     Text(dua.translation(for: languageManager.selectedLanguage))
-                        .font(EmType.serif(17, .medium))
+                        .font(EmType.serif(17 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(languageManager.selectedLanguage == .urdu ? .trailing : .leading)
                         .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage == .urdu ? .trailing : .leading)
@@ -221,11 +222,11 @@ struct DuaDetailView: View {
 
     private var arabicSection: some View {
         Text(dua.arabic)
-            .font(.system(size: 28, weight: .regular))
+            .font(.system(size: 28 * readingSettings.scale, weight: .regular))
             .foregroundColor(themeManager.primaryText)
             .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
             .multilineTextAlignment(.center)
-            .lineSpacing(12)
+            .lineSpacing(12 * readingSettings.scale)
             .frame(maxWidth: .infinity)
             .padding(20)
             .background(themedCardBackground)
@@ -280,7 +281,7 @@ struct DuaDetailView: View {
 
     private var transliterationSection: some View {
         Text(dua.transliteration)
-            .font(.system(size: 16, weight: .regular, design: .serif))
+            .font(.system(size: 16 * readingSettings.scale, weight: .regular, design: .serif))
             .italic()
             .foregroundColor(themeManager.secondaryText)
             .multilineTextAlignment(.center)
@@ -295,7 +296,7 @@ struct DuaDetailView: View {
         let isRTL = language == .urdu
 
         return Text(translation)
-            .font(.system(size: 17, weight: .medium))
+            .font(.system(size: 17 * readingSettings.scale, weight: .medium))
             .foregroundColor(themeManager.primaryText)
             .multilineTextAlignment(isRTL ? .trailing : .leading)
             .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)

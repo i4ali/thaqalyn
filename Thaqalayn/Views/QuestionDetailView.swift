@@ -277,6 +277,7 @@ struct VerseAnswerCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
         guard let verses = dataManager.quranData?.verses["\(questionVerse.surahNumber)"],
@@ -321,15 +322,15 @@ struct VerseAnswerCard: View {
                 }
                 if let verse = verseData {
                     Text(verse.arabic)
-                        .font(EmType.arabic(25))
+                        .font(EmType.arabic(25 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8)
+                        .lineSpacing(8 * readingSettings.scale)
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     Text(verse.translation)
-                        .font(EmType.serif(16, .medium))
+                        .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(3)
+                        .lineSpacing(3 * readingSettings.scale)
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "lightbulb")
@@ -401,18 +402,18 @@ struct VerseAnswerCard: View {
                 VStack(alignment: .leading, spacing: 16) {
                     // Arabic text
                     Text(verse.arabic)
-                        .font(.custom("AmiriQuran-Regular", size: 24))
+                        .font(.custom("AmiriQuran-Regular", size: 24 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8)
+                        .lineSpacing(8 * readingSettings.scale)
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
 
                     // Translation
                     Text(verse.translation)
-                        .font(.system(size: 16, weight: .medium))
+                        .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4)
+                        .lineSpacing(4 * readingSettings.scale)
                 }
                 .padding(20)
 
