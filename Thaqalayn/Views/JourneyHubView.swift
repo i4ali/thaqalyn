@@ -41,7 +41,7 @@ struct JourneyHubView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     EmHeading(eyebrow: "Sacred Seasons", title: "Journeys",
-                              sub: "Step into each journey when its time arrives.")
+                              sub: "Live each sacred season deeply, and let it transform you.")
                         .padding(.horizontal, 4)
                         .padding(.top, 12)
                         .padding(.bottom, 22)   // clear gap so the cards sit below the top glow/header zone
