@@ -12,11 +12,21 @@ import SwiftUI
 /// Identifiable wrapper so `.fullScreenCover(item:)` can key on a journey id.
 struct PresentedJourney: Identifiable { let id: String }
 
+/// Content for the alert shown when a locked (non-active) journey is tapped.
+struct LockedJourneyAlert: Identifiable {
+    let id = UUID()
+    let title: String       // e.g. "Ramadan has ended"
+    let detail: String      // e.g. "Returns Feb 8, 2027"
+    let pointer: String?    // e.g. "Up next: Muharram · in 8 days"
+}
+
 struct JourneyHubView: View {
     @ObservedObject private var tm = ThemeManager.shared
     @ObservedObject private var cal = IslamicCalendarManager.shared
     @ObservedObject private var router = DeepLinkRouter.shared
     @State private var presented: PresentedJourney?
+    /// Set when a locked journey is tapped — drives the "ended / not open yet" alert.
+    @State private var lockedAlert: LockedJourneyAlert?
 
     /// Descriptors paired with status, sorted Active → Coming soon (soonest) →
     /// Ended (soonest to return).
@@ -77,15 +87,65 @@ struct JourneyHubView: View {
         }
         .onAppear { consumePendingJourney() }
         .onChange(of: router.pendingJourneyId) { _, _ in consumePendingJourney() }
+        .overlay {
+            if let alert = lockedAlert {
+                LockedJourneyOverlay(alert: alert) {
+                    withAnimation(.easeInOut(duration: 0.2)) { lockedAlert = nil }
+                }
+                .transition(.opacity)
+            }
+        }
     }
 
     private func handleTap(_ d: JourneyDescriptor, _ status: JourneyStatus) {
         if status.isActive {
             presented = PresentedJourney(id: d.id)
         } else {
-            // Locked — status is already on the card; just a soft nudge.
+            // Locked — explain why it won't open and point to the next journey.
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            withAnimation(.easeInOut(duration: 0.2)) {
+                lockedAlert = makeLockedAlert(for: d, status: status)
+            }
         }
+    }
+
+    /// Builds the locked-journey alert: a title + reason for the tapped journey,
+    /// plus a pointer to the soonest *other* journey to open.
+    private func makeLockedAlert(for d: JourneyDescriptor, status: JourneyStatus) -> LockedJourneyAlert {
+        let title: String
+        let detail: String
+        switch status {
+        case .ended(_, let returns):
+            title = "\(d.title) has ended"
+            detail = returns
+        case .comingSoon(_, let starts):
+            title = "\(d.title) isn't open yet"
+            detail = starts
+        case .active:
+            title = d.title          // unreachable: active journeys open directly
+            detail = ""
+        }
+        return LockedJourneyAlert(title: title, detail: detail, pointer: pointerLine(excluding: d))
+    }
+
+    /// "Up next: X · in N days" (or "X is open now") for the soonest journey to
+    /// open, excluding the tapped one. Returns nil when the tapped journey IS the
+    /// soonest — it's already the next one up.
+    private func pointerLine(excluding tapped: JourneyDescriptor) -> String? {
+        func opensIn(_ s: JourneyStatus) -> Int {
+            switch s {
+            case .active:               return 0
+            case .comingSoon(let d, _): return d
+            case .ended(let d, _):      return d
+            }
+        }
+        let rows = JourneyDescriptor.all.map { ($0, $0.status(using: cal)) }
+        guard let soonest = rows.min(by: { opensIn($0.1) < opensIn($1.1) }) else { return nil }
+        if soonest.0.id == tapped.id { return nil }
+        if soonest.1.isActive { return "\(soonest.0.title) is open now" }
+        let days = opensIn(soonest.1)
+        if days <= 0 { return "Up next: \(soonest.0.title) · today" }
+        return "Up next: \(soonest.0.title) · in \(days) day\(days == 1 ? "" : "s")"
     }
 
     /// If a deep-link queued a journey and it is currently active, open it.
@@ -195,6 +255,61 @@ struct JourneyCover: View {
     }
 }
 
+/// Centered modal shown when a locked journey is tapped: a dimmed backdrop
+/// (tap to dismiss) over a card that explains the lock and names the next journey.
+struct LockedJourneyOverlay: View {
+    @ObservedObject private var tm = ThemeManager.shared
+    let alert: LockedJourneyAlert
+    let onDismiss: () -> Void
+
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.55)
+                .ignoresSafeArea()
+                .onTapGesture { onDismiss() }
+
+            VStack(spacing: 14) {
+                EmIconChip(sfSymbol: "hourglass", size: 52)
+
+                VStack(spacing: 6) {
+                    Text(alert.title)
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(tm.primaryText)
+                        .multilineTextAlignment(.center)
+                    if !alert.detail.isEmpty {
+                        Text(alert.detail)
+                            .font(.system(size: 13))
+                            .foregroundColor(tm.secondaryText)
+                            .multilineTextAlignment(.center)
+                    }
+                    if let pointer = alert.pointer {
+                        Text(pointer)
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundColor(tm.accentColor)
+                            .multilineTextAlignment(.center)
+                            .padding(.top, 2)
+                    }
+                }
+
+                EmGoldCTA(title: "Got it", small: true) { onDismiss() }
+                    .padding(.top, 4)
+            }
+            .padding(22)
+            .frame(maxWidth: 290)
+            .background(
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .fill(tm.tertiaryBackground)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .stroke(tm.strokeColor, lineWidth: 1)
+            )
+            .shadow(color: .black.opacity(0.5), radius: 40, x: 0, y: 20)
+            .padding(40)
+        }
+    }
+}
+
 #if DEBUG
 private func hijriDate(_ y: Int, _ m: Int, _ d: Int) -> Date {
     IslamicCalendarManager.shared.islamicCalendar
@@ -228,5 +343,16 @@ private func hijriDate(_ y: Int, _ m: Int, _ d: Int) -> Date {
 #Preview("Hub · between Fatimiyyas — coming soon (5/20)") {
     IslamicCalendarManager.debugNowOverride = hijriDate(1449, 5, 20)
     return JourneyHubView()
+}
+#Preview("Locked alert — ended + up-next") {
+    ZStack {
+        AdaptiveModernBackground()
+        LockedJourneyOverlay(
+            alert: LockedJourneyAlert(title: "Ramadan has ended",
+                                      detail: "Returns Feb 8, 2027",
+                                      pointer: "Up next: Muharram · in 8 days"),
+            onDismiss: {}
+        )
+    }
 }
 #endif
