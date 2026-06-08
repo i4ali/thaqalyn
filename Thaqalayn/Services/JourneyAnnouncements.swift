@@ -98,6 +98,17 @@ extension JourneyAnnouncement {
             isWithinAnnounceWindow: { month, day in
                 (month == 12 && day >= 25) || (month == 1 && day <= 10) // NOT the 11-12 grace.
             }
+        ),
+        JourneyAnnouncement(
+            id: "fatimiyya",
+            title: "The Fatimiyya mourning has begun",
+            body: "The days of az-Zahrā (AS). Walk the Ayyam-e-Fatimiyya through the Quran. Tap to begin.",
+            leadInHijriMonth: 5, leadInHijriDay: 8,
+            leadInIsPreviousHijriYear: false,
+            tabTag: 4,
+            isWithinAnnounceWindow: { month, day in
+                month == 5 && day >= 8 && day <= 15
+            }
         )
     ]
 }

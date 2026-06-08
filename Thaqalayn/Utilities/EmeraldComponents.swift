@@ -133,20 +133,28 @@ struct EmIconChip: View {
     var sfSymbol: String
     var size: CGFloat = 46
     var active = false
+    var isCustomAsset = false   // when true, sfSymbol is an asset name rendered as a template
 
     var body: some View {
-        Image(systemName: sfSymbol)
-            .font(.system(size: size * 0.40, weight: .regular))
-            .foregroundColor(active ? tm.onAccentText : tm.accentColor)
-            .frame(width: size, height: size)
-            .background(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(active ? AnyShapeStyle(tm.accentGradient) : AnyShapeStyle(tm.accentChip))
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .stroke(active ? Color.clear : tm.strokeColor, lineWidth: 1)
-            )
+        Group {
+            if isCustomAsset {
+                Image(sfSymbol).renderingMode(.template).resizable().scaledToFit()
+                    .frame(width: size * 0.46, height: size * 0.46)
+            } else {
+                Image(systemName: sfSymbol)
+                    .font(.system(size: size * 0.40, weight: .regular))
+            }
+        }
+        .foregroundColor(active ? tm.onAccentText : tm.accentColor)
+        .frame(width: size, height: size)
+        .background(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(active ? AnyShapeStyle(tm.accentGradient) : AnyShapeStyle(tm.accentChip))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .stroke(active ? Color.clear : tm.strokeColor, lineWidth: 1)
+        )
     }
 }
 
@@ -253,12 +261,13 @@ struct EmJourneyHeader: View {
     var countLine: String
     var percent: Double
     var completionNote: String? = nil
+    var iconIsCustomAsset = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             HStack(alignment: .top, spacing: 12) {
                 EmHeading(eyebrow: eyebrow, title: title)
-                EmIconChip(sfSymbol: sfSymbol, size: 56)
+                EmIconChip(sfSymbol: sfSymbol, size: 56, isCustomAsset: iconIsCustomAsset)
                     .padding(.top, 6)
             }
             EmCard(glow: true) {

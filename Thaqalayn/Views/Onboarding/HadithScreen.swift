@@ -18,6 +18,11 @@ struct HadithScreen: View {
         ZStack {
             OnboardingBackground(tilt: .peach)
 
+            // Ambient drifting gold embers behind the card
+            FloatingEmbers()
+                .opacity(isVisible ? 1 : 0)
+                .animation(Animation.easeOut(duration: 1.2).delay(0.5), value: isVisible)
+
             VStack(spacing: 0) {
                 Spacer()
 
@@ -211,6 +216,107 @@ struct GeometricPatternBackground: View {
             }
         }
         .ignoresSafeArea()
+    }
+}
+
+// MARK: - Floating Embers (ambient gold bokeh)
+
+/// A self-contained ambient layer of soft gold embers that drift slowly
+/// upward with a gentle sideways sway, materialising and dissolving via a
+/// height-based opacity envelope so they loop seamlessly. Rendered in a single
+/// GPU-drawn `Canvas` driven by `TimelineView` for a smooth, cheap effect.
+/// Honours Reduce Motion by falling back to a faint static scatter.
+private struct FloatingEmbers: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    private struct Ember {
+        let baseX: Double        // 0...1 fraction of width
+        let startY: Double       // 0...1 initial vertical fraction
+        let radius: Double       // glow radius in points
+        let speed: Double        // vertical fraction of height per second
+        let swayAmp: Double      // horizontal sway in points
+        let swayFreq: Double     // radians per second
+        let phase: Double        // per-ember phase offset
+        let peakOpacity: Double
+        let twinkleFreq: Double
+    }
+
+    // Generated once and shared — stable across redraws.
+    private static let embers: [Ember] = (0..<16).map { _ in
+        let r = Double.random(in: 3...13)
+        return Ember(
+            baseX: .random(in: 0.04...0.96),
+            startY: .random(in: 0...1),
+            radius: r,
+            speed: .random(in: 0.05...0.085),       // ~12–20s top-to-bottom
+            swayAmp: .random(in: 6...22),
+            swayFreq: .random(in: 0.15...0.45),
+            phase: .random(in: 0...(2 * .pi)),
+            peakOpacity: 0.12 + (r / 13) * 0.38,     // larger embers glow brighter
+            twinkleFreq: .random(in: 0.3...0.9)
+        )
+    }
+
+    var body: some View {
+        Group {
+            if reduceMotion {
+                Canvas { context, size in
+                    draw(context, size: size, t: 0)
+                }
+            } else {
+                TimelineView(.animation) { timeline in
+                    Canvas { context, size in
+                        let t = timeline.date.timeIntervalSinceReferenceDate
+                        draw(context, size: size, t: t)
+                    }
+                }
+            }
+        }
+        .blendMode(.screen)
+        .allowsHitTesting(false)
+        .ignoresSafeArea()
+    }
+
+    private func draw(_ context: GraphicsContext, size: CGSize, t: TimeInterval) {
+        let gold = Color(hex: "ECD49A")
+        let w = Double(size.width)
+        let h = Double(size.height)
+
+        for e in Self.embers {
+            // Drift upward, wrapping seamlessly from top back to bottom.
+            var p = (e.startY - e.speed * t).truncatingRemainder(dividingBy: 1)
+            if p < 0 { p += 1 }
+
+            let y = p * h
+            let x = e.baseX * w + sin(t * e.swayFreq + e.phase) * e.swayAmp
+
+            // Fade in low, fade out near the top, plus a faint twinkle.
+            let envelope = sin(p * .pi)
+            let twinkle = 0.78 + 0.22 * sin(t * e.twinkleFreq + e.phase)
+            let opacity = max(0, e.peakOpacity * envelope * twinkle)
+
+            let r = CGFloat(e.radius)
+            let cx = CGFloat(x)
+            let cy = CGFloat(y)
+
+            // Soft halo
+            context.fill(
+                Path(ellipseIn: CGRect(x: cx - r, y: cy - r, width: r * 2, height: r * 2)),
+                with: .radialGradient(
+                    Gradient(colors: [gold.opacity(opacity * 0.6), .clear]),
+                    center: CGPoint(x: cx, y: cy),
+                    startRadius: 0,
+                    endRadius: r
+                )
+            )
+
+            // Bright core
+            let cr = r * 0.32
+            context.fill(
+                Path(ellipseIn: CGRect(x: cx - cr, y: cy - cr, width: cr * 2, height: cr * 2)),
+                with: .color(gold.opacity(min(opacity * 1.5, 0.9)))
+            )
+        }
     }
 }
 

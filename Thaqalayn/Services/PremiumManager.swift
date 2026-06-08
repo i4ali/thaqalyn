@@ -189,4 +189,14 @@ class PremiumManager: ObservableObject {
         }
         return isPremium
     }
+
+    // MARK: - Fatimiyya Journey Access Control
+
+    /// Check if user can access an Ayyam-e-Fatimiyya day
+    /// - Day 1 is always free
+    /// - Days 2–5 require premium
+    func canAccessFatimiyyaDay(_ dayNumber: Int) -> Bool {
+        if dayNumber == 1 { return true }
+        return isPremium
+    }
 }

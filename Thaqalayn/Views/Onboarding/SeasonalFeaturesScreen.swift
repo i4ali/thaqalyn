@@ -140,7 +140,7 @@ struct SeasonalFeaturesScreen: View {
             Spacer()
 
             // Bottom message
-            Text("Seasonal tabs appear automatically\nduring their blessed times")
+            Text("Find every season in the Journey tab —\neach opens during its blessed time")
                 .onbCaption()
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)

@@ -1613,3 +1613,52 @@ struct DailyDua: Codable, Identifiable {
         }
     }
 }
+
+// MARK: - Fatimiyya Journey Models
+
+struct FatimiyyaJourneyData: Codable {
+    let days: [FatimiyyaDay]
+}
+
+struct FatimiyyaDay: Codable, Identifiable {
+    let id: String
+    let dayNumber: Int
+    let theme: String
+    let themeArabic: String
+    let icon: String
+    let dua: FatimiyyaDua
+    let verses: [FatimiyyaVerse]
+    let tafsirFocus: String
+    let reflection: String
+}
+
+struct FatimiyyaDua: Codable {
+    let arabic: String
+    let transliteration: String
+    let english: String
+    let source: String?
+}
+
+struct FatimiyyaVerse: Codable, Identifiable {
+    let id: String
+    let surahNumber: Int
+    let verseNumber: Int
+    let relevanceNote: String
+
+    var verseReference: String { "Quran \(surahNumber):\(verseNumber)" }
+}
+
+struct FatimiyyaJourneyProgress: Codable {
+    var observedDays: Set<Int>
+    var lastObservedDate: Date?
+    var year: Int
+
+    init(observedDays: Set<Int> = [], lastObservedDate: Date? = nil, year: Int = 0) {
+        self.observedDays = observedDays
+        self.lastObservedDate = lastObservedDate
+        self.year = year
+    }
+
+    /// 5-day journey.
+    var completionPercentage: Double { Double(observedDays.count) / 5.0 }
+}

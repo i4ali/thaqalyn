@@ -13,6 +13,22 @@ class IslamicCalendarManager: ObservableObject {
 
     private init() {}
 
+    #if DEBUG
+    /// Verification-only override for "now". Nil in normal runs. Removable.
+    /// Set this (e.g. from a #Preview) to drive the app's Hijri date to any
+    /// value and exercise Journey-hub Active/Coming-soon/Ended states.
+    static var debugNowOverride: Date? = nil
+    #endif
+
+    /// The instant all Hijri computations are anchored to.
+    var now: Date {
+        #if DEBUG
+        return Self.debugNowOverride ?? Date()
+        #else
+        return Date()
+        #endif
+    }
+
     // MARK: - Islamic Calendar
 
     /// Get the Islamic (Hijri) calendar
@@ -24,7 +40,6 @@ class IslamicCalendarManager: ObservableObject {
 
     /// Get current Islamic date components
     func currentIslamicDate() -> DateComponents {
-        let now = Date()
         let components = islamicCalendar.dateComponents([.year, .month, .day, .weekday], from: now)
         return components
     }
@@ -325,6 +340,32 @@ class IslamicCalendarManager: ObservableObject {
             return ""
         default:
             return ""
+        }
+    }
+
+    // MARK: - Fatimiyya Season Detection
+
+    /// Ayyam-e-Fatimiyya mourning windows (one journey, two narrated dates):
+    /// - First Fatimiyya: Jumada al-Awwal (month 5), days 8–15 (around the 13th)
+    /// - Second Fatimiyya: Jumada al-Thani (month 6), days 1–6 (around the 3rd)
+    func isFatimiyyaSeason() -> Bool {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+        switch month {
+        case 5: return (8...15).contains(day)
+        case 6: return (1...6).contains(day)
+        default: return false
+        }
+    }
+
+    /// Which Fatimiyya is being observed (for the card line + journey header).
+    func fatimiyyaSeasonStatus() -> String {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+        switch month {
+        case 5 where (8...15).contains(day): return "First Fatimiyya — Yā Zahrā (AS)"
+        case 6 where (1...6).contains(day):  return "Second Fatimiyya — Yā Zahrā (AS)"
+        default: return ""
         }
     }
 

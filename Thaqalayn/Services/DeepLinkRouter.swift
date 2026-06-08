@@ -20,5 +20,10 @@ final class DeepLinkRouter: ObservableObject {
 
     @Published var pendingDeepLink: PendingDeepLink? = nil
 
+    /// Journey id ("ramadan" | "hajj" | "muharram") to auto-open once the
+    /// Journey hub becomes the active tab. Set by MainTabView on a
+    /// `.navigateToJourney` deep-link; consumed (and cleared) by JourneyHubView.
+    @Published var pendingJourneyId: String? = nil
+
     private init() {}
 }

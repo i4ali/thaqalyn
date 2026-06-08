@@ -1,0 +1,104 @@
+{
+  "days": [
+    {
+      "id": "day1",
+      "dayNumber": 1,
+      "theme": "Al-Kawthar — The Abundance Given",
+      "themeArabic": "الكَوْثَر",
+      "icon": "drop.fill",
+      "dua": {
+        "arabic": "اللَّهُمَّ صَلِّ عَلَىٰ فَاطِمَةَ وَأَبِيهَا وَبَعْلِهَا وَبَنِيهَا وَالسِّرِّ المُسْتَوْدَعِ فِيهَا بِعَدَدِ مَا أَحَاطَ بِهِ عِلْمُكَ",
+        "transliteration": "Allāhumma ṣalli ʿalā Fāṭimata wa abīhā wa baʿlihā wa banīhā wa-l-sirri-l-mustawdaʿi fīhā bi-ʿadadi mā aḥāṭa bihi ʿilmuk",
+        "english": "O Allah, send blessings upon Fatima and her father, her husband and her sons, and the secret entrusted within her, by the number of all that Your knowledge encompasses.",
+        "source": "Widely-narrated ṣalawāt upon Fāṭima al-Zahrā (AS)"
+      },
+      "verses": [
+        { "id": "f1v1", "surahNumber": 108, "verseNumber": 1, "relevanceNote": "‘Indeed, We have granted you al-Kawthar’ — the abundant good; Shia tradition names Fāṭima (AS) its embodiment, through whom the Prophet's ﷺ lineage flows to the Imams." },
+        { "id": "f1v2", "surahNumber": 108, "verseNumber": 3, "relevanceNote": "‘Indeed, your enemy — he is the one cut off.’ Those who mocked the Prophet ﷺ as without progeny were themselves severed; through az-Zahrā (AS) his line endures." },
+        { "id": "f1v3", "surahNumber": 42, "verseNumber": 23, "relevanceNote": "‘Say: I ask of you no reward for it except love of the kindred.’ The mawadda owed to the Ahl al-Bayt, of whom Fāṭima (AS) is the heart." }
+      ],
+      "tafsirFocus": "Sūrat al-Kawthar in Shia tafsir: the abundant good given to the Prophet ﷺ, and Fāṭima (AS) as the wellspring of his enduring progeny.",
+      "reflection": "We open the mourning by knowing whom we grieve — the Kawthar of the Prophet ﷺ, mother of the Imams, the abundance God gave that no enemy could sever."
+    },
+    {
+      "id": "day2",
+      "dayNumber": 2,
+      "theme": "The Verse of Purification",
+      "themeArabic": "آيَةُ التَّطْهِير",
+      "icon": "sparkles",
+      "dua": {
+        "arabic": "مَا خَلَقْتُ سَمَاءً مَبْنِيَّةً وَلَا أَرْضاً مَدْحِيَّةً وَلَا قَمَراً مُنِيراً وَلَا شَمْساً مُضِيئَةً إِلَّا فِي مَحَبَّةِ هَؤُلَاءِ الْخَمْسَةِ الَّذِينَ تَحْتَ الْكِسَاءِ",
+        "transliteration": "Mā khalaqtu samā'an mabniyyatan wa lā arḍan madḥiyyatan wa lā qamaran munīran wa lā shamsan muḍī'atan illā fī maḥabbati hā'ulā'i-l-khamsati-lladhīna taḥta-l-kisā'",
+        "english": "I did not create the established heaven, nor the outstretched earth, nor a shining moon, nor a radiant sun, save out of love for these Five who are beneath the cloak.",
+        "source": "Ḥadīth al-Kisāʾ, narrated from Fāṭima al-Zahrā (AS) (ʿAwālim al-ʿUlūm)"
+      },
+      "verses": [
+        { "id": "f2v1", "surahNumber": 33, "verseNumber": 33, "relevanceNote": "‘Allah only desires to remove all impurity from you, O People of the House, and to purify you thoroughly.’ Gathered beneath the cloak with the Prophet ﷺ, ʿAlī, Ḥasan and Ḥusayn (AS), Fāṭima is of the purified." },
+        { "id": "f2v2", "surahNumber": 76, "verseNumber": 8, "relevanceNote": "‘They give food, despite their love for it, to the needy, the orphan and the captive.’ Revealed for the household who gave their iftar three nights — purity made into deed." },
+        { "id": "f2v3", "surahNumber": 76, "verseNumber": 9, "relevanceNote": "‘We feed you only for the sake of Allah; we desire from you neither reward nor thanks.’ The unsullied sincerity of az-Zahrā's home." }
+      ],
+      "tafsirFocus": "Āyat al-Taṭhīr (33:33) with Sūrat al-Insān: the God-willed purity of the People of the Cloak, shown in being and in deed.",
+      "reflection": "Her purity was not only granted but lived — vows fulfilled, the hungry fed before herself. To mourn her is to long for that purity."
+    },
+    {
+      "id": "day3",
+      "dayNumber": 3,
+      "theme": "Mubāhala — The Dearest Souls",
+      "themeArabic": "المُبَاهَلَة",
+      "icon": "hands.sparkles.fill",
+      "dua": {
+        "arabic": "السَّلَامُ عَلَيْكِ يَا بِنْتَ رَسُولِ اللَّهِ، السَّلَامُ عَلَيْكِ يَا سَيِّدَةَ نِسَاءِ الْعَالَمِينَ، السَّلَامُ عَلَيْكِ أَيَّتُهَا الصِّدِّيقَةُ الشَّهِيدَة",
+        "transliteration": "As-salāmu ʿalayki yā binta rasūli-llāh, as-salāmu ʿalayki yā sayyidata nisā'i-l-ʿālamīn, as-salāmu ʿalayki ayyatuhā-ṣ-ṣiddīqatu-sh-shahīdah",
+        "english": "Peace be upon you, O daughter of the Messenger of Allah; peace be upon you, O Mistress of the Women of the Worlds; peace be upon you, O truthful one, O martyr.",
+        "source": "From the Ziyāra of Sayyida Fāṭima al-Zahrā (AS)"
+      },
+      "verses": [
+        { "id": "f3v1", "surahNumber": 3, "verseNumber": 61, "relevanceNote": "‘…let us call our sons and your sons, our women and your women, ourselves and yourselves…’ ‘Our women’ was Fāṭima (AS) alone — brought by the Prophet ﷺ as among the dearest souls to God." },
+        { "id": "f3v2", "surahNumber": 9, "verseNumber": 119, "relevanceNote": "‘O you who believe, fear Allah and be with the truthful.’ Shia tafsir reads al-ṣādiqīn as the Ahl al-Bayt; Mubāhala was the party of truth made visible." },
+        { "id": "f3v3", "surahNumber": 33, "verseNumber": 23, "relevanceNote": "‘Among the believers are men true to the covenant they made with Allah.’ The household of fidelity into which Fāṭima (AS) was born and married." }
+      ],
+      "tafsirFocus": "Āyat al-Mubāhala (3:61): when truth itself was to be sworn upon, the Prophet ﷺ brought the dearest souls — and brought Fāṭima (AS) as ‘our women.’",
+      "reflection": "Her rank is measured by the company she kept before her Lord: among the five God named the dearest, on the day truth was laid bare."
+    },
+    {
+      "id": "day4",
+      "dayNumber": 4,
+      "theme": "Fadak & the Sermon — The Voice for Justice",
+      "themeArabic": "خُطْبَةُ فَدَك",
+      "icon": "text.bubble.fill",
+      "dua": {
+        "arabic": "وَاعْلَمُوا أَنِّي فَاطِمَةُ وَأَبِي مُحَمَّدٌ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ، أَقُولُ عَوْداً وَبَدْءاً، وَلَا أَقُولُ مَا أَقُولُ غَلَطاً، وَلَا أَفْعَلُ مَا أَفْعَلُ شَطَطاً",
+        "transliteration": "Wa-ʿlamū annī Fāṭimah, wa abī Muḥammadun ṣalla-llāhu ʿalayhi wa ālih; aqūlu ʿawdan wa bad'an, wa lā aqūlu mā aqūlu ghalaṭan, wa lā afʿalu mā afʿalu shaṭaṭā",
+        "english": "Know that I am Fatima, and my father is Muhammad (may Allah bless him and his family). I say it again as I said at first; I do not say what I say in error, nor do I do what I do without cause.",
+        "source": "From the Khuṭba Fadakiyya (al-Iḥtijāj, al-Ṭabrisī)"
+      },
+      "verses": [
+        { "id": "f4v1", "surahNumber": 3, "verseNumber": 144, "relevanceNote": "‘Muḥammad is but a messenger; messengers have passed before him. If he dies or is killed, will you turn back on your heels?’ A verse of her sermon — a warning to a community already turning." },
+        { "id": "f4v2", "surahNumber": 11, "verseNumber": 88, "relevanceNote": "‘I only desire reform, as much as I am able.’ The words of Shuʿayb (AS) mirror her purpose: not herself, but the setting-right of the Ummah." },
+        { "id": "f4v3", "surahNumber": 12, "verseNumber": 18, "relevanceNote": "‘…so beautiful patience; and Allah is the one whose help is sought.’ Yaʿqūb's (AS) ṣabr foreshadows hers before loss and injustice." }
+      ],
+      "tafsirFocus": "The Khuṭba Fadakiyya: az-Zahrā (AS) in the Prophet's ﷺ mosque, defending wilāya and her right with the Book itself.",
+      "reflection": "Grieving and newly bereaved, she rose to speak truth to power — eloquent, unflinching, citing the Qur'an her father brought. Her sermon is a standard for every seeker of justice."
+    },
+    {
+      "id": "day5",
+      "dayNumber": 5,
+      "theme": "Martyrdom & Lasting Light",
+      "themeArabic": "الشَّهَادَة",
+      "icon": "moon.zzz.fill",
+      "dua": {
+        "arabic": "يَا مُمْتَحَنَةُ امْتَحَنَكِ اللَّهُ الَّذِي خَلَقَكِ قَبْلَ أَنْ يَخْلُقَكِ فَوَجَدَكِ لِمَا امْتَحَنَكِ صَابِرَةً",
+        "transliteration": "Yā mumtaḥanatu-mtaḥanaki-llāhu-lladhī khalaqaki qabla an yakhluqaki fa-wajadaki limā-mtaḥanaki ṣābirah",
+        "english": "O tested one! Allah, who created you, tested you before He created you, and found you patient in that with which He tested you.",
+        "source": "Ziyārat of Sayyida Fāṭima al-Zahrā (AS) (al-Kāfī)"
+      },
+      "verses": [
+        { "id": "f5v1", "surahNumber": 89, "verseNumber": 27, "relevanceNote": "‘O reassured soul, return to your Lord, well-pleased and pleasing.’ The address Shia tradition reads upon az-Zahrā (AS) as she returned to her Lord and her father." },
+        { "id": "f5v2", "surahNumber": 2, "verseNumber": 156, "relevanceNote": "‘…who, when struck by calamity, say: Indeed we belong to Allah, and to Him we return.’ The istirjāʿ of her household before every loss." },
+        { "id": "f5v3", "surahNumber": 3, "verseNumber": 169, "relevanceNote": "‘Do not think those killed in the way of Allah are dead; rather they are alive with their Lord, provided for.’ The wronged who die upon truth live on — and intercede." }
+      ],
+      "tafsirFocus": "Her passing in patience: the reassured soul returning to its Lord, and the living reward of those wronged upon the truth.",
+      "reflection": "Buried at night, her grave concealed by her own will — a silent witness that endures. The mourning closes not in despair but in her promised nearness to God."
+    }
+  ]
+}
