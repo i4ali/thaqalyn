@@ -10,10 +10,12 @@ import SwiftUI
 struct SurahDetailView: View {
     let surahWithTafsir: SurahWithTafsir
     let targetVerse: Int?
+    let targetConceptId: String?
     @State private var selectedVerse: VerseWithTafsir?
     @State private var showingTafsir = false
     @State private var fullScreenCommentaryData: (verse: VerseWithTafsir, layer: TafsirLayer)?
     @State private var selectedVerseForSummary: VerseWithTafsir?
+    @State private var pendingConceptId: String?
     @State private var showingQuiz = false
     @State private var showingPaywall = false
     @StateObject private var themeManager = ThemeManager.shared
@@ -26,9 +28,10 @@ struct SurahDetailView: View {
     @State private var scrollProxy: ScrollViewProxy? = nil
     @Environment(\.dismiss) private var dismiss
 
-    init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil) {
+    init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil, targetConceptId: String? = nil) {
         self.surahWithTafsir = surahWithTafsir
         self.targetVerse = targetVerse
+        self.targetConceptId = targetConceptId
     }
     
     private var showingFullScreenCommentary: Binding<Bool> {
@@ -88,6 +91,7 @@ struct SurahDetailView: View {
                                         fullScreenCommentaryData = (verse: verse, layer: .foundation)
                                     },
                                     onSummaryTap: {
+                                        pendingConceptId = nil
                                         selectedVerseForSummary = verse
                                     }
                                 )
@@ -104,6 +108,14 @@ struct SurahDetailView: View {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 withAnimation(.easeInOut(duration: 0.8)) {
                                     proxy.scrollTo("verse_\(targetVerse)", anchor: .center)
+                                }
+                                // Theme deep-link: open that verse's gem after the scroll settles.
+                                if let conceptId = targetConceptId,
+                                   let verse = surahWithTafsir.verses.first(where: { $0.number == targetVerse }) {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                                        pendingConceptId = conceptId
+                                        selectedVerseForSummary = verse
+                                    }
                                 }
                             }
                         }
@@ -162,7 +174,7 @@ struct SurahDetailView: View {
                 }
             )
         }
-        .fullScreenCover(item: $selectedVerseForSummary) { verse in
+        .fullScreenCover(item: $selectedVerseForSummary, onDismiss: { pendingConceptId = nil }) { verse in
             VerseSummaryView(
                 verse: verse,
                 surah: surahWithTafsir.surah,
@@ -171,7 +183,8 @@ struct SurahDetailView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         fullScreenCommentaryData = (verse: verse, layer: .foundation)
                     }
-                }
+                },
+                initialConceptId: pendingConceptId
             )
         }
     }

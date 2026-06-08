@@ -15,7 +15,9 @@ class DataManager: ObservableObject {
     @Published var availableSurahs: [SurahWithTafsir] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
-    
+    /// Flat search index, built once after availableSurahs is populated. nil until load completes.
+    @Published var searchIndex: QuranSearchIndex?
+
     private var tafsirCache: [Int: TafsirData] = [:]
     private var quranAlignCache: QuranAlignTimingData? // Global quran-align data
     
@@ -82,6 +84,8 @@ class DataManager: ObservableObject {
         
         self.availableSurahs = surahs.sorted { $0.surah.number < $1.surah.number }
         print("✅ Loaded \(surahs.count) surahs (with/without tafsir)")
+        self.searchIndex = QuranSearchIndex(surahs: self.availableSurahs)
+        print("✅ Built search index: \(self.searchIndex?.verseEntries.count ?? 0) verses, \(self.searchIndex?.themeEntries.count ?? 0) themes")
     }
     
     private func loadSurahWithTafsir(surah: Surah) async -> SurahWithTafsir? {

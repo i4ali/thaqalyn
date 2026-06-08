@@ -64,6 +64,8 @@ struct EmCard<Content: View>: View {
     var elevated = false
     var glow = false
     var cornerRadius: CGFloat = 20
+    /// Optional override for the hairline border (defaults to the theme stroke).
+    var borderColor: Color? = nil
     @ViewBuilder var content: Content
 
     var body: some View {
@@ -74,7 +76,7 @@ struct EmCard<Content: View>: View {
             )
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .stroke(tm.strokeColor, lineWidth: 1)
+                    .stroke(borderColor ?? tm.strokeColor, lineWidth: 1)
             )
             .shadow(color: Color.black.opacity(glow ? 0.45 : 0.28),
                     radius: glow ? 40 : 24, x: 0, y: glow ? 16 : 8)

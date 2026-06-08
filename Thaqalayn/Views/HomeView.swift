@@ -18,6 +18,7 @@ struct HomeView: View {
     @State private var showingAuthentication = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
+    @State private var targetConceptId: String?
 
     var body: some View {
         Group {
@@ -75,7 +76,7 @@ struct HomeView: View {
                     Text("\u{1F50D}")
                         .font(.system(size: 20))
 
-                    TextField("Search surahs...", text: $searchText)
+                    TextField("Search surahs, verses, themes…", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
                         .foregroundColor(themeManager.primaryText)
                 }
@@ -94,34 +95,58 @@ struct HomeView: View {
             .padding(.top, 60)
             .padding(.bottom, 20)
 
-            // Surah list
+            // Surah list / search results
             ScrollView {
-                LazyVStack(spacing: 12) {
-                    ForEach(dataManager.availableSurahs.filter { surah in
-                        searchText.isEmpty ||
-                        surah.surah.englishName.localizedCaseInsensitiveContains(searchText) ||
-                        surah.surah.englishNameTranslation.localizedCaseInsensitiveContains(searchText) ||
-                        surah.surah.arabicName.contains(searchText)
-                    }) { surahWithTafsir in
-                        NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)) {
-                            ModernSurahCard(surah: surahWithTafsir.surah)
+                if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
+                    LazyVStack(spacing: 12) {
+                        ForEach(dataManager.availableSurahs.filter { surah in
+                            surah.surah.englishName.localizedCaseInsensitiveContains(searchText) ||
+                            surah.surah.englishNameTranslation.localizedCaseInsensitiveContains(searchText) ||
+                            surah.surah.arabicName.contains(searchText) ||
+                            searchText.isEmpty
+                        }) { surahWithTafsir in
+                            NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)) {
+                                ModernSurahCard(surah: surahWithTafsir.surah)
+                            }
+                            .buttonStyle(EmPressStyle())
                         }
-                        .buttonStyle(EmPressStyle())
                     }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 20)
+                } else {
+                    SearchResultsView(
+                        query: searchText,
+                        onOpenSurah: { swt in
+                            targetConceptId = nil
+                            targetVerseNumber = nil
+                            selectedSurahForDeepLink = swt
+                        },
+                        onOpenVerse: { s, v in
+                            targetConceptId = nil
+                            targetVerseNumber = v
+                            selectedSurahForDeepLink = dataManager.getSurah(number: s)
+                        },
+                        onOpenTheme: { s, v, cid in
+                            targetConceptId = cid
+                            targetVerseNumber = v
+                            selectedSurahForDeepLink = dataManager.getSurah(number: s)
+                        }
+                    )
+                    .padding(.horizontal, 20)
+                    .padding(.top, 20)
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, 20)
             }
 
             // Hidden NavigationLink for deep linking
             if let surahForDeepLink = selectedSurahForDeepLink {
                 NavigationLink(
-                    destination: SurahDetailView(surahWithTafsir: surahForDeepLink, targetVerse: targetVerseNumber),
+                    destination: SurahDetailView(surahWithTafsir: surahForDeepLink, targetVerse: targetVerseNumber, targetConceptId: targetConceptId),
                     isActive: Binding(
                         get: { selectedSurahForDeepLink != nil },
                         set: { if !$0 {
                             selectedSurahForDeepLink = nil
                             targetVerseNumber = nil
+                            targetConceptId = nil
                         } }
                     )
                 ) {

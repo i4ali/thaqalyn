@@ -17,8 +17,10 @@ enum JourneyStatus: Equatable {
     case active(line: String)
     /// Season is still ahead this Hijri year — locked, with a countdown.
     case comingSoon(daysUntil: Int, startsLabel: String)
-    /// Season already passed this Hijri year — locked, returns next year.
-    case ended(returnsLabel: String)
+    /// Season already passed this Hijri year — locked. `daysUntil` counts to next
+    /// year's return so the hub can sort ended journeys by soonest and flag the
+    /// nearest one as "next up".
+    case ended(daysUntil: Int, returnsLabel: String)
 
     var isActive: Bool { if case .active = self { return true } else { return false } }
 }
@@ -101,7 +103,9 @@ struct JourneyDescriptor: Identifiable {
                 if now < secondStart {
                     return .comingSoon(daysUntil: daysBetween(now, secondStart), startsLabel: "Second Fatimiyya · \(medium(secondStart))")
                 }
-                return .ended(returnsLabel: "Returns \(medium(hijri(year + 1, 5, 8)))")
+                let nextReturn = hijri(year + 1, 5, 8)
+                return .ended(daysUntil: daysBetween(now, nextReturn),
+                              returnsLabel: "Returns \(medium(nextReturn))")
             }
         ),
     ]
@@ -139,7 +143,8 @@ extension JourneyDescriptor {
         ) else {
             preconditionFailure("Could not form next Hijri content-start for \(id)")
         }
-        return .ended(returnsLabel: "Returns \(Self.medium(nextYearStart))")
+        return .ended(daysUntil: Self.daysBetween(now, nextYearStart),
+                      returnsLabel: "Returns \(Self.medium(nextYearStart))")
     }
 
     private static func daysBetween(_ a: Date, _ b: Date) -> Int {

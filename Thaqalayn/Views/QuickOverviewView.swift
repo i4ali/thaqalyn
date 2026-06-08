@@ -207,6 +207,20 @@ struct QuickOverviewView: View {
     let quickOverview: QuickOverviewData
     let onViewFullCommentary: () -> Void
 
+    init(verse: VerseWithTafsir,
+         surah: Surah,
+         quickOverview: QuickOverviewData,
+         initialConceptId: String? = nil,
+         onViewFullCommentary: @escaping () -> Void) {
+        self.verse = verse
+        self.surah = surah
+        self.quickOverview = quickOverview
+        self.onViewFullCommentary = onViewFullCommentary
+        _selectedConcept = State(initialValue: initialConceptId.flatMap { id in
+            quickOverview.concepts.first { $0.id == id }
+        })
+    }
+
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedConcept: VerseConcept? = nil
     @StateObject private var themeManager = ThemeManager.shared

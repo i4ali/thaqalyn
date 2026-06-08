@@ -18,6 +18,7 @@ struct EmeraldHomeView: View {
     @Binding var targetVerseNumber: Int?
 
     @State private var showNotifications = false
+    @State private var targetConceptId: String?
     @State private var animateProgress = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
@@ -47,8 +48,29 @@ struct EmeraldHomeView: View {
                     }
 
                     searchField
-                    EmDivider(label: "114 Surahs")
-                    surahList
+                    if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
+                        EmDivider(label: "114 Surahs")
+                        surahList
+                    } else {
+                        SearchResultsView(
+                            query: searchText,
+                            onOpenSurah: { swt in
+                                targetConceptId = nil
+                                targetVerseNumber = nil
+                                selectedSurahForDeepLink = swt
+                            },
+                            onOpenVerse: { s, v in
+                                targetConceptId = nil
+                                targetVerseNumber = v
+                                selectedSurahForDeepLink = dataManager.getSurah(number: s)
+                            },
+                            onOpenTheme: { s, v, cid in
+                                targetConceptId = cid
+                                targetVerseNumber = v
+                                selectedSurahForDeepLink = dataManager.getSurah(number: s)
+                            }
+                        )
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 12)
@@ -165,10 +187,10 @@ struct EmeraldHomeView: View {
     @ViewBuilder private var deepLinkLink: some View {
         if let surah = selectedSurahForDeepLink {
             NavigationLink(
-                destination: SurahDetailView(surahWithTafsir: surah, targetVerse: targetVerseNumber),
+                destination: SurahDetailView(surahWithTafsir: surah, targetVerse: targetVerseNumber, targetConceptId: targetConceptId),
                 isActive: Binding(
                     get: { selectedSurahForDeepLink != nil },
-                    set: { if !$0 { selectedSurahForDeepLink = nil; targetVerseNumber = nil } }
+                    set: { if !$0 { selectedSurahForDeepLink = nil; targetVerseNumber = nil; targetConceptId = nil } }
                 )
             ) { EmptyView() }
             .hidden()

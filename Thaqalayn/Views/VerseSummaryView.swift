@@ -11,6 +11,15 @@ struct VerseSummaryView: View {
     let verse: VerseWithTafsir
     let surah: Surah
     let onViewFullCommentary: () -> Void
+    let initialConceptId: String?
+
+    init(verse: VerseWithTafsir, surah: Surah, onViewFullCommentary: @escaping () -> Void, initialConceptId: String? = nil) {
+        self.verse = verse
+        self.surah = surah
+        self.onViewFullCommentary = onViewFullCommentary
+        self.initialConceptId = initialConceptId
+    }
+
     @State private var selectedLanguage: CommentaryLanguage = .english
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
@@ -42,6 +51,7 @@ struct VerseSummaryView: View {
                 verse: verse,
                 surah: surah,
                 quickOverview: quickOverview,
+                initialConceptId: initialConceptId,
                 onViewFullCommentary: onViewFullCommentary
             )
         } else {

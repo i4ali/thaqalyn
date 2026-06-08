@@ -31,8 +31,20 @@ struct JourneyHubView: View {
         switch s {
         case .active:                      return (0, 0)
         case .comingSoon(let d, _):        return (1, d)
-        case .ended:                       return (2, 0)
+        case .ended(let d, _):             return (2, d)
         }
+    }
+
+    /// The journey to flag as "next up": the soonest journey to open next — but
+    /// only when nothing is currently active (an active card is the sole
+    /// highlight). `ordered` is sorted soonest-first among non-active journeys, so
+    /// the first entry is the answer. This includes an "ended" journey whose
+    /// return is nearest — e.g. mid-Dhul-Hijjah, when every journey reads "ended"
+    /// and Muharram returns within days.
+    private var nextUpId: String? {
+        let items = ordered
+        guard !items.contains(where: { $0.status.isActive }) else { return nil }
+        return items.first?.descriptor.id
     }
 
     var body: some View {
@@ -47,7 +59,8 @@ struct JourneyHubView: View {
                         .padding(.bottom, 22)   // clear gap so the cards sit below the top glow/header zone
 
                     ForEach(ordered, id: \.descriptor.id) { item in
-                        JourneyCard(descriptor: item.descriptor, status: item.status) {
+                        JourneyCard(descriptor: item.descriptor, status: item.status,
+                                    isNextUp: item.descriptor.id == nextUpId) {
                             handleTap(item.descriptor, item.status)
                         }
                     }
@@ -90,17 +103,25 @@ struct JourneyCard: View {
     @ObservedObject private var tm = ThemeManager.shared
     let descriptor: JourneyDescriptor
     let status: JourneyStatus
+    /// When true, this is the soonest upcoming journey — marked with a "NEXT UP"
+    /// pill (in place of the eyebrow) and a brighter gold hairline border.
+    var isNextUp: Bool = false
     let onTap: () -> Void
 
     var body: some View {
         Button(action: onTap) {
-            EmCard(glow: status.isActive) {
+            EmCard(glow: status.isActive,
+                   borderColor: isNextUp ? tm.accentColor.opacity(0.4) : nil) {
                 HStack(spacing: 14) {
                     EmIconChip(sfSymbol: descriptor.sfSymbol, active: status.isActive, isCustomAsset: descriptor.iconIsCustomAsset)
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(descriptor.eyebrow.uppercased())
-                            .font(.system(size: 10.5, weight: .bold)).tracking(2)
-                            .foregroundColor(tm.accentColor)
+                        if isNextUp {
+                            nextUpPill
+                        } else {
+                            Text(descriptor.eyebrow.uppercased())
+                                .font(.system(size: 10.5, weight: .bold)).tracking(2)
+                                .foregroundColor(tm.accentColor)
+                        }
                         Text(descriptor.title)
                             .font(EmType.serif(22, .semiBold))
                             .foregroundColor(tm.primaryText)
@@ -117,11 +138,21 @@ struct JourneyCard: View {
         .buttonStyle(EmPressStyle())
     }
 
+    /// Gold "NEXT UP" capsule shown in the eyebrow slot of the next-up card.
+    private var nextUpPill: some View {
+        Text("NEXT UP")
+            .font(.system(size: 9, weight: .heavy)).tracking(1.6)
+            .foregroundColor(tm.onAccentText)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 3)
+            .background(Capsule().fill(tm.accentGradient))
+    }
+
     private var detailLine: String {
         switch status {
         case .active(let line):                 return line
         case .comingSoon(let days, _):          return "Coming soon · in \(days) day\(days == 1 ? "" : "s")"
-        case .ended(let returns):               return "Ended · \(returns)"
+        case .ended(_, let returns):            return isNextUp ? returns : "Ended · \(returns)"
         }
     }
 
