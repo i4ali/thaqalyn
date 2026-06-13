@@ -359,10 +359,10 @@ struct QuickOverviewView: View {
                 VStack(alignment: .leading, spacing: 18) {
                     HStack(spacing: 10) {
                         Image(systemName: concept.icon)
-                            .font(.system(size: 17, weight: .semibold))
+                            .font(.system(size: 17 * readingSettings.scale, weight: .semibold))
                             .foregroundColor(conceptColor(concept))
                         Text(concept.getTitle(language: lang).uppercased())
-                            .font(.system(size: 14, weight: .bold, design: .rounded)).tracking(1)
+                            .font(.system(size: 14 * readingSettings.scale, weight: .bold, design: .rounded)).tracking(1)
                             .foregroundColor(themeManager.primaryText)
                     }
                     detailSection(conceptColor(concept), "The Core Insight:", concept.getCoreInsight(language: lang), rtl: rtl)
@@ -382,7 +382,7 @@ struct QuickOverviewView: View {
     private func detailSection(_ color: Color, _ title: String, _ text: String, rtl: Bool) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .font(.system(size: 14, weight: .bold))
+                .font(.system(size: 14 * readingSettings.scale, weight: .bold))
                 .foregroundColor(color)
             Text(text)
                 .font(.system(size: 15 * readingSettings.scale, weight: .regular, design: .serif))

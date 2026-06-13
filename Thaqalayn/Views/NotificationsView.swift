@@ -6,46 +6,7 @@
 //
 
 import SwiftUI
-
-struct NotificationItem: Identifiable, Codable {
-    let id: String
-    let title: String
-    let message: String
-    let type: NotificationType
-    let timestamp: Date
-    var isRead: Bool
-    let surahNumber: Int?
-    let verseNumber: Int?
-
-    enum NotificationType: String, Codable {
-        case dailyVerse
-        case streak
-        case milestone
-        case nudge
-        case nearCompletion
-
-        var icon: String {
-            switch self {
-            case .dailyVerse: return "book.fill"
-            case .streak: return "flame.fill"
-            case .milestone: return "star.fill"
-            case .nudge: return "heart.fill"
-            case .nearCompletion: return "checkmark.circle.fill"
-            }
-        }
-
-        @MainActor
-        func color(theme: ThemeManager) -> Color {
-            switch self {
-            case .dailyVerse: return theme.semanticBlue
-            case .streak: return .orange
-            case .milestone: return .green
-            case .nudge: return theme.semanticRed
-            case .nearCompletion: return .purple
-            }
-        }
-    }
-}
+import UserNotifications
 
 struct NotificationsView: View {
     @StateObject private var themeManager = ThemeManager.shared
@@ -66,7 +27,10 @@ struct NotificationsView: View {
         .darkScreenAura()
         .onAppear {
             loadNotifications()
-            addSampleNotifications()
+            Task {
+                await NotificationInboxStore.sweepDelivered(from: UNUserNotificationCenter.current())
+                loadNotifications()
+            }
         }
     }
 
@@ -75,6 +39,19 @@ struct NotificationsView: View {
         if let index = notifications.firstIndex(where: { $0.id == notification.id }) {
             notifications[index].isRead = true
             saveNotifications()
+        }
+
+        // Journey-start notification → open the journey tab
+        if notification.type == .journey, let journeyId = notification.journeyId {
+            dismiss()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                NotificationCenter.default.post(
+                    name: .navigateToJourney,
+                    object: nil,
+                    userInfo: ["journey": journeyId]
+                )
+            }
+            return
         }
 
         // Navigate if it has verse info
@@ -228,16 +205,11 @@ struct NotificationsView: View {
     }
 
     private func loadNotifications() {
-        if let data = UserDefaults.standard.data(forKey: "notificationHistory"),
-           let decoded = try? JSONDecoder().decode([NotificationItem].self, from: data) {
-            notifications = decoded.sorted { $0.timestamp > $1.timestamp }
-        }
+        notifications = NotificationInboxStore.load()
     }
 
     private func saveNotifications() {
-        if let encoded = try? JSONEncoder().encode(notifications) {
-            UserDefaults.standard.set(encoded, forKey: "notificationHistory")
-        }
+        NotificationInboxStore.save(notifications)
     }
 
     private func clearAllNotifications() {
@@ -245,53 +217,6 @@ struct NotificationsView: View {
         saveNotifications()   // persist the cleared state so it survives navigation
     }
 
-    private func addSampleNotifications() {
-        // Seed demo notifications only ONCE, ever. Otherwise an empty list (e.g. after
-        // the user taps "Clear All") would immediately get re-seeded on the next visit,
-        // making Clear All appear not to work.
-        let seededKey = "didSeedNotificationSamples"
-        guard !UserDefaults.standard.bool(forKey: seededKey) else { return }
-        UserDefaults.standard.set(true, forKey: seededKey)
-
-        // Only add samples if empty (for demo purposes)
-        guard notifications.isEmpty else { return }
-
-        let samples: [NotificationItem] = [
-            NotificationItem(
-                id: UUID().uuidString,
-                title: "Verse of the Day - Muharram",
-                message: "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً\n\nAnd when your Lord said to the angels, 'Indeed I am going to set a viceroy on the earth.'",
-                type: .dailyVerse,
-                timestamp: Date().addingTimeInterval(-3600),
-                isRead: false,
-                surahNumber: 2,
-                verseNumber: 30
-            ),
-            NotificationItem(
-                id: UUID().uuidString,
-                title: "Keep Your Streak Going! 🔥",
-                message: "You're on a 7-day reading streak. Don't break it today!",
-                type: .streak,
-                timestamp: Date().addingTimeInterval(-7200),
-                isRead: false,
-                surahNumber: nil,
-                verseNumber: nil
-            ),
-            NotificationItem(
-                id: UUID().uuidString,
-                title: "Congratulations! 🎉",
-                message: "You've completed 5 surahs! Keep up the amazing work.",
-                type: .milestone,
-                timestamp: Date().addingTimeInterval(-86400),
-                isRead: true,
-                surahNumber: nil,
-                verseNumber: nil
-            )
-        ]
-
-        notifications = samples
-        saveNotifications()
-    }
 }
 
 struct NotificationCard: View {

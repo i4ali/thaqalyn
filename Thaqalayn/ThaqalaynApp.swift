@@ -128,8 +128,12 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
         willPresent notification: UNNotification,
         withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
     ) {
-        // Show banner, sound, and badge even when app is in foreground
-        completionHandler([.banner, .sound, .badge])
+        let received = notification
+        Task { @MainActor in
+            NotificationInboxStore.record(received)
+        }
+        // Banner + keep in Notification Center list, sound, badge — even in foreground
+        completionHandler([.banner, .list, .sound, .badge])
     }
 
     // Handle notification tap
@@ -138,6 +142,11 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
         didReceive response: UNNotificationResponse,
         withCompletionHandler completionHandler: @escaping () -> Void
     ) {
+        let received = response.notification
+        Task { @MainActor in
+            NotificationInboxStore.record(received)
+        }
+
         let userInfo = response.notification.request.content.userInfo
 
         // Journey-start notification → open the journey's tab

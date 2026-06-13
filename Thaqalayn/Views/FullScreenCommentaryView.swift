@@ -131,18 +131,28 @@ struct FullScreenCommentaryView: View {
     private func emeraldLayerButton(for layer: TafsirLayer) -> some View {
         let isLocked = !premiumManager.canAccessLayer(layer, surahNumber: surah.number)
         let isActive = selectedLayer == layer && !isLocked
+        let chip = layerChipColor(for: layer)
         return Button(action: {
             if isLocked { showingPaywall = true }
             else { withAnimation(.easeInOut(duration: 0.3)) { selectedLayer = layer } }
         }) {
-            VStack(spacing: 6) {
-                PhosphorIcon(name: layerIcon(for: layer), size: 24)
-                Text(layerShortTitle(for: layer)).font(.system(size: 12, weight: .bold)).multilineTextAlignment(.center)
-                Text(layerShortDescription(for: layer)).font(.system(size: 9.5)).multilineTextAlignment(.center).lineLimit(1)
+            VStack(spacing: 7) {
+                ZStack {
+                    Circle().fill(isActive ? AnyShapeStyle(Color.black.opacity(0.20)) : AnyShapeStyle(chip.bg))
+                    PhosphorIcon(name: layerIcon(for: layer), size: 17)
+                        .foregroundColor(isActive ? Color.white.opacity(0.95) : chip.fg)
+                }
+                .frame(width: 36, height: 36)
+                .opacity(isLocked ? 0.45 : 1)
+
+                Text(layerShortTitle(for: layer))
+                    .font(.system(size: 11.5, weight: .bold))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
             }
             .foregroundColor(isActive ? themeManager.onAccentText : (isLocked ? themeManager.tertiaryText : themeManager.primaryText))
-            .frame(width: 104, height: 92)
-            .padding(10)
+            .frame(width: 84)
+            .padding(.vertical, 11)
             .background {
                 if isActive {
                     RoundedRectangle(cornerRadius: 16, style: .continuous).fill(themeManager.accentGradient)
@@ -154,11 +164,22 @@ struct FullScreenCommentaryView: View {
             }
             .overlay(alignment: .topTrailing) {
                 if isLocked {
-                    Image(systemName: "lock.fill").font(.system(size: 10)).foregroundColor(themeManager.tertiaryText).padding(7)
+                    Image(systemName: "lock.fill").font(.system(size: 9)).foregroundColor(themeManager.tertiaryText).padding(6)
                 }
             }
         }
         .buttonStyle(PlainButtonStyle())
+    }
+
+    /// Per-layer icon tones (matches the app-wide five-layer chip palette).
+    private func layerChipColor(for layer: TafsirLayer) -> ThemeManager.ChipColor {
+        switch layer {
+        case .foundation: return ThemeManager.chipFoundation
+        case .classical: return ThemeManager.chipKnowledge
+        case .contemporary: return ThemeManager.chipProgress
+        case .ahlulBayt: return ThemeManager.chipBrand
+        case .comparative: return ThemeManager.chipComparative
+        }
     }
 
     private var emeraldReadingContent: some View {
@@ -182,9 +203,9 @@ struct FullScreenCommentaryView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(spacing: 14) {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.accentChip)
+                    RoundedRectangle(cornerRadius: 14, style: .continuous).fill(layerChipColor(for: selectedLayer).bg)
                         .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
-                    PhosphorIcon(name: layerIcon(for: selectedLayer), size: 22).foregroundColor(themeManager.accentColor)
+                    PhosphorIcon(name: layerIcon(for: selectedLayer), size: 22).foregroundColor(layerChipColor(for: selectedLayer).fg)
                 }
                 .frame(width: 48, height: 48)
                 VStack(alignment: .leading, spacing: 4) {

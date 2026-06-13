@@ -20,6 +20,7 @@ struct ContentView: View {
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var ratingManager = RatingManager.shared
     @State private var showingWelcome = false
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         Group {
@@ -49,12 +50,13 @@ struct ContentView: View {
         .onAppear {
             checkFirstLaunch()
             ratingManager.recordAppLaunch()
-            if IslamicCalendarManager.shared.isHajjSeason() {
-                Task { await NotificationManager.shared.scheduleArafahReminder() }
+            // Covers Arafah + journey-start + daily-verse window + badge/inbox.
+            Task { await NotificationManager.shared.handleAppBecameActive() }
+        }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active {
+                Task { await NotificationManager.shared.handleAppBecameActive() }
             }
-            // Unconditional: Path A schedules before any season is active;
-            // the scheduler self-guards per journey + on authorization.
-            Task { await NotificationManager.shared.scheduleJourneyStartNotifications() }
         }
         .onChange(of: themeManager.selectedTheme) { _, newValue in
             ChromeAppearance.apply(for: newValue)

@@ -113,10 +113,12 @@ struct OnboardingFlowView: View {
             }
         }
 
-        // Apply progress notification preferences
+        // Apply progress notification preferences (via updatePreferences so they persist)
         let progressManager = ProgressManager.shared
-        progressManager.preferences.notificationsEnabled = progressNotificationsEnabled
-        progressManager.preferences.celebrationsEnabled = progressNotificationsEnabled
+        var progressPrefs = progressManager.preferences
+        progressPrefs.notificationsEnabled = progressNotificationsEnabled
+        progressPrefs.celebrationsEnabled = progressNotificationsEnabled
+        progressManager.updatePreferences(progressPrefs)
 
         // Mark onboarding as complete
         UserDefaults.standard.set(true, forKey: "hasShownWelcome")

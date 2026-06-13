@@ -10,19 +10,16 @@ import Foundation
 import UserNotifications
 import SwiftUI
 
+@MainActor
 class NotificationManager: ObservableObject {
     static let shared = NotificationManager()
 
     @Published var preferences: NotificationPreferences {
         didSet {
             savePreferences()
-            if preferences.enabled {
-                Task {
-                    await scheduleNotifications()
-                }
-            } else {
-                cancelAllNotifications()
-            }
+            // Full refresh: re-times dailies AND seasonal one-shots (they all
+            // fire at preferences.time); disabling cancels only the dailies.
+            Task { await refreshAllSchedules() }
         }
     }
 
@@ -203,34 +200,58 @@ class NotificationManager: ObservableObject {
         return content
     }
 
-    // MARK: - Notification Scheduling
+    // MARK: - Lifecycle Refresh
 
-    /// Schedule notifications for the next 7 days
-    func scheduleNotifications() async {
-        // Check permission first
+    private var refreshChain: Task<Void, Never>?
+
+    /// Single entry point for app activation: re-check permission, clear the
+    /// stale icon badge, sweep delivered notifications into the inbox, and
+    /// refresh every schedule. Called on cold launch and every foregrounding.
+    func handleAppBecameActive() async {
+        await checkPermissionStatus()
+        try? await notificationCenter.setBadgeCount(0)
+        await NotificationInboxStore.sweepDelivered(from: notificationCenter)
+        await refreshAllSchedules()
+    }
+
+    /// Serialized so overlapping triggers (didSet + scenePhase) can't
+    /// interleave their cancel/add sequences.
+    func refreshAllSchedules() async {
+        let previous = refreshChain
+        let task = Task {
+            await previous?.value
+            await self.performRefresh()
+        }
+        refreshChain = task
+        await task.value
+    }
+
+    private func performRefresh() async {
         let settings = await notificationCenter.notificationSettings()
-        guard settings.authorizationStatus == .authorized else {
-            print("⚠️ NotificationManager: Not authorized to schedule notifications")
-            return
+        guard settings.authorizationStatus == .authorized else { return }
+
+        if preferences.enabled {
+            await scheduleDailyVerseNotifications()
+        } else {
+            cancelDailyVerseNotifications()
         }
 
-        // Cancel existing notifications
-        cancelAllNotifications()
-
-        // Schedule for next 7 days
-        for dayOffset in 0..<7 {
-            await scheduleNotification(for: dayOffset)
-        }
-
-        // cancelAllNotifications() above also clears any pending Arafah reminder;
-        // re-arm it during Hajj season so it survives daily-verse rescheduling.
+        // Seasonal one-shots are idempotent (fixed identifiers, handledYears
+        // dedup for journey catch-ups) — safe to re-arm on every refresh.
         if islamicCalendar.isHajjSeason() {
             await scheduleArafahReminder()
         }
-
-        // cancelAllNotifications() also wipes pending journey-start requests;
-        // re-materialize them (idempotent; handledYears prevents a re-fired catch-up).
         await scheduleJourneyStartNotifications()
+    }
+
+    // MARK: - Notification Scheduling
+
+    /// (Re)schedule the rolling 7-day daily-verse window.
+    private func scheduleDailyVerseNotifications() async {
+        cancelDailyVerseNotifications()
+        for dayOffset in 0..<7 {
+            await scheduleNotification(for: dayOffset)
+        }
     }
 
     /// Schedule a notification for a specific day offset
@@ -303,9 +324,10 @@ class NotificationManager: ObservableObject {
         return monthData.verses[verseIndex]
     }
 
-    /// Cancel all scheduled notifications
-    func cancelAllNotifications() {
-        notificationCenter.removeAllPendingNotificationRequests()
+    /// Identifier-scoped: never touches seasonal or progress notifications.
+    func cancelDailyVerseNotifications() {
+        let identifiers = (0..<7).map { "daily_verse_\($0)" }
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: identifiers)
     }
 
     // MARK: - Testing
@@ -434,7 +456,9 @@ class NotificationManager: ObservableObject {
         }
     }
 
-    /// Schedule a gentle nudge if user hasn't read in 2+ days
+    /// Schedule-ahead re-engagement nudge: armed on every read for +2 days at
+    /// the preferred time (fixed identifier replaces the previous one), so it
+    /// only ever fires if the user actually stays away.
     @MainActor
     func scheduleGentleNudge() async {
         // Only schedule if progress notifications are enabled
@@ -444,14 +468,9 @@ class NotificationManager: ObservableObject {
         let settings = await notificationCenter.notificationSettings()
         guard settings.authorizationStatus == .authorized else { return }
 
-        // Check if user hasn't read in 2+ days
-        guard let lastRead = progressManager.stats.lastReadDate else { return }
-        let daysSinceLastRead = Calendar.current.dateComponents([.day], from: lastRead, to: Date()).day ?? 0
-        guard daysSinceLastRead >= 2 else { return }
-
-        // Schedule for tomorrow at preferred time
-        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
-        var dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: tomorrow)
+        // Fire in 2 days at the preferred time
+        let target = Calendar.current.date(byAdding: .day, value: 2, to: Date()) ?? Date()
+        var dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: target)
         let timeComponents = Calendar.current.dateComponents([.hour, .minute], from: preferences.time)
         dateComponents.hour = timeComponents.hour
         dateComponents.minute = timeComponents.minute
@@ -459,7 +478,7 @@ class NotificationManager: ObservableObject {
         // Create content
         let content = UNMutableNotificationContent()
         content.title = "We miss you! 📖"
-        content.body = "It's been \(daysSinceLastRead) days since your last reading. Come back to continue your journey through the Quran."
+        content.body = "It's been 2 days since your last reading. Come back to continue your journey through the Quran."
         content.sound = .default
         content.badge = 1
         content.categoryIdentifier = "GENTLE_NUDGE"
@@ -619,8 +638,8 @@ class NotificationManager: ObservableObject {
 
     /// Schedule "the Journey is open" notifications for all journeys.
     /// Mirrors `scheduleArafahReminder()`'s guards: only if already authorized;
-    /// never requests permission. Safe to call on every app open and after
-    /// `cancelAllNotifications()` (idempotent calendar identifier).
+    /// never requests permission. Safe to call on every refresh
+    /// (idempotent calendar identifier; handledYears dedups catch-ups).
     @MainActor
     func scheduleJourneyStartNotifications() async {
         let settings = await notificationCenter.notificationSettings()
@@ -696,14 +715,24 @@ class NotificationManager: ObservableObject {
         saveJourneyHandledYears(handled)
     }
 
-    /// Cancel progress-related notifications
-    func cancelProgressNotifications() {
-        let identifiers = [
-            "streak_reminder",
-            "gentle_nudge"
-        ]
+    /// Cancel progress-related notifications (covers the dynamic
+    /// near_completion_<surah> and milestone_<uuid> identifiers too).
+    func cancelProgressNotifications() async {
+        let prefixes = ["streak_reminder", "gentle_nudge", "near_completion_", "milestone_"]
+        let pending = await notificationCenter.pendingNotificationRequests()
+        let identifiers = pending.map(\.identifier).filter { id in
+            prefixes.contains { id.hasPrefix($0) }
+        }
         notificationCenter.removePendingNotificationRequests(withIdentifiers: identifiers)
         print("✅ NotificationManager: Progress notifications cancelled")
+    }
+
+    /// Cancel the pending near-completion encouragement for a surah
+    /// (called when the surah is completed before the trigger fires).
+    func cancelNearCompletion(surahNumber: Int) {
+        notificationCenter.removePendingNotificationRequests(
+            withIdentifiers: ["near_completion_\(surahNumber)"]
+        )
     }
 }
 

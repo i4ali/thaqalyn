@@ -44,6 +44,7 @@ class ProgressManager: ObservableObject {
     private var lastAuthenticatedUserId: String?
     private var needsSync: Bool = false // Tracks if local changes need uploading
     private var pendingDeletes: Set<String> = [] // For future use if deletion is needed
+    private var remindersScheduledForDay: Date? // Throttles streak/nudge re-arming to once per day
 
     // MARK: - Initialization
 
@@ -162,6 +163,10 @@ class ProgressManager: ObservableObject {
         preferences = ProgressPreferences()
         progressData = nil
         pendingDeletes.removeAll()
+
+        // Pending reminders reference the cleared streak/progress — drop them
+        remindersScheduledForDay = nil
+        Task { await NotificationManager.shared.cancelProgressNotifications() }
 
         // Clear sync status
         syncStatus = nil
@@ -421,6 +426,9 @@ class ProgressManager: ObservableObject {
         // Sync to cloud if authenticated
         scheduleSync()
 
+        // Re-arm engagement notifications now that progress changed
+        updateEngagementNotifications(afterReadingSurah: surahNumber)
+
         print("✅ ProgressManager: Marked verse \(verseKey) as read")
         return true
     }
@@ -520,6 +528,7 @@ class ProgressManager: ObservableObject {
             if preferences.celebrationsEnabled {
                 pendingBadge = badge
             }
+            notifyBadgeAwarded(badge)
 
             // Check milestone badges
             checkMilestoneBadges()
@@ -564,6 +573,7 @@ class ProgressManager: ObservableObject {
                     if preferences.celebrationsEnabled {
                         pendingBadge = badge
                     }
+                    notifyBadgeAwarded(badge)
 
                     print("🎉 ProgressManager: Milestone badge awarded: \(milestone.type.title)")
                 }
@@ -670,10 +680,56 @@ class ProgressManager: ObservableObject {
                     if preferences.celebrationsEnabled {
                         pendingBadge = badge
                     }
+                    notifyBadgeAwarded(badge)
 
                     print("🔥 ProgressManager: Streak badge awarded: \(milestone.type.title)")
                 }
             }
+        }
+    }
+
+    // MARK: - Engagement Notifications
+
+    /// Re-arm the schedule-ahead reminders (streak + nudge, once per day) and
+    /// fire near-completion encouragement when a long surah gets close.
+    private func updateEngagementNotifications(afterReadingSurah surahNumber: Int) {
+        let completion = getSurahCompletion(surahNumber: surahNumber)
+        let remaining = completion.total - completion.read
+        let surahName = DataManager.shared.getSurah(number: surahNumber)?.surah.englishName
+
+        let today = Calendar.current.startOfDay(for: Date())
+        let shouldArmDailyReminders = remindersScheduledForDay != today
+        if shouldArmDailyReminders { remindersScheduledForDay = today }
+
+        Task {
+            if remaining == 0 {
+                NotificationManager.shared.cancelNearCompletion(surahNumber: surahNumber)
+            } else if remaining == 5, completion.total >= 20, let surahName {
+                await NotificationManager.shared.scheduleNearCompletionEncouragement(
+                    surahNumber: surahNumber,
+                    surahName: surahName,
+                    versesRemaining: remaining
+                )
+            }
+
+            if shouldArmDailyReminders {
+                await NotificationManager.shared.scheduleStreakReminder()
+                await NotificationManager.shared.scheduleGentleNudge()
+            }
+        }
+    }
+
+    /// Send a milestone celebration notification for a freshly awarded badge.
+    private func notifyBadgeAwarded(_ badge: BadgeAward) {
+        let message: String
+        switch badge.badgeType {
+        case .surahCompletion:
+            message = "You've completed Surah \(badge.surahName)! Badge earned: \(badge.badgeType.title)."
+        default:
+            message = "Badge earned: \(badge.badgeType.title) — \(badge.badgeType.description)"
+        }
+        Task {
+            await NotificationManager.shared.scheduleMilestoneCelebration(milestone: message)
         }
     }
 
@@ -852,8 +908,12 @@ class ProgressManager: ObservableObject {
     // MARK: - Preferences
 
     func updatePreferences(_ newPreferences: ProgressPreferences) {
+        let wasEnabled = preferences.notificationsEnabled
         self.preferences = newPreferences
         saveProgress()
+        if wasEnabled && !newPreferences.notificationsEnabled {
+            Task { await NotificationManager.shared.cancelProgressNotifications() }
+        }
     }
 
     // MARK: - Reset Progress

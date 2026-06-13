@@ -12,6 +12,7 @@ struct TodayView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var dailyMessage = DailyMessageProvider.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var duasManager = DuasManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
 
@@ -92,6 +93,8 @@ struct TodayView: View {
 
                 DailyReminderBanner(
                     message: dailyMessage.today,
+                    headline: reminderHeadline.text,
+                    isUrdu: reminderHeadline.isUrdu,
                     surahName: surahName(for: dailyMessage.today.surah),
                     themeManager: themeManager,
                     onTap: { openMessageSource() }
@@ -126,6 +129,18 @@ struct TodayView: View {
             }
             .padding(.bottom, 40)
         }
+    }
+
+    /// Daily-reminder headline in the commentary language: Urdu shows the
+    /// Jawadi verse translation (the curated quote only exists in English);
+    /// any other language falls back to the English line.
+    private var reminderHeadline: (text: String, isUrdu: Bool) {
+        if languageManager.selectedLanguage == .urdu,
+           let verse = dataManager.getVerse(surah: dailyMessage.today.surah, verse: dailyMessage.today.verse),
+           verse.usesUrduTranslation(for: .urdu) {
+            return (verse.displayTranslation(for: .urdu), true)
+        }
+        return (dailyMessage.today.english, false)
     }
 
     private func surahName(for surahNumber: Int) -> String {
@@ -256,6 +271,8 @@ private struct HijriDatePill: View {
 
 private struct DailyReminderBanner: View {
     let message: DailyMessage
+    let headline: String
+    let isUrdu: Bool
     let surahName: String
     let themeManager: ThemeManager
     let onTap: () -> Void
@@ -264,8 +281,9 @@ private struct DailyReminderBanner: View {
         themeManager.accentGradient
     }
 
+    /// Latin curly quotes misbehave around RTL text — Urdu renders unquoted.
     private var headlineText: String {
-        "\u{201C}\(message.english)\u{201D}"
+        isUrdu ? headline : "\u{201C}\(headline)\u{201D}"
     }
 
     private var sourceLabel: String {
@@ -304,12 +322,13 @@ private struct DailyReminderBanner: View {
                     }
 
                     Text(headlineText)
-                        .font(.system(size: 19, weight: .bold))
-                        .kerning(-0.2)
-                        .lineSpacing(3)
+                        .font(isUrdu ? EmType.arabic(20) : .system(size: 19, weight: .bold))
+                        .kerning(isUrdu ? 0 : -0.2)
+                        .lineSpacing(isUrdu ? 7 : 3)
                         .foregroundColor(.white)
-                        .frame(maxWidth: 270, alignment: .leading)
-                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: 270, alignment: isUrdu ? .trailing : .leading)
+                        .multilineTextAlignment(isUrdu ? .trailing : .leading)
+                        .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
                         .fixedSize(horizontal: false, vertical: true)
 
                     Text(sourceLabel)
@@ -335,7 +354,7 @@ private struct DailyReminderBanner: View {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
         }
-        .accessibilityLabel("\(message.english). \(sourceLabel). Double tap to open verse.")
+        .accessibilityLabel("\(headline). \(sourceLabel). Double tap to open verse.")
     }
 }
 
@@ -606,6 +625,7 @@ private struct EmeraldTodayView: View {
     @ObservedObject private var dailyMessage = DailyMessageProvider.shared
     @ObservedObject private var duasManager = DuasManager.shared
     @ObservedObject private var calendarManager = IslamicCalendarManager.shared
+    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
 
     @Binding var selectedTab: Int
     @Binding var selectedSurahForDeepLink: SurahWithTafsir?
@@ -622,6 +642,8 @@ private struct EmeraldTodayView: View {
                 greeting
                 EmDailyReminderHero(
                     message: dailyMessage.today,
+                    headline: reminderHeadline.text,
+                    isUrdu: reminderHeadline.isUrdu,
                     surahName: surahName(for: dailyMessage.today.surah),
                     onTap: openMessageSource
                 )
@@ -673,6 +695,15 @@ private struct EmeraldTodayView: View {
     private func surahName(for n: Int) -> String {
         dataManager.availableSurahs.first(where: { $0.surah.number == n })?.surah.englishName ?? "Surah \(n)"
     }
+    /// Urdu shows the Jawadi verse translation (curated quote is English-only).
+    private var reminderHeadline: (text: String, isUrdu: Bool) {
+        if languageManager.selectedLanguage == .urdu,
+           let verse = dataManager.getVerse(surah: dailyMessage.today.surah, verse: dailyMessage.today.verse),
+           verse.usesUrduTranslation(for: .urdu) {
+            return (verse.displayTranslation(for: .urdu), true)
+        }
+        return (dailyMessage.today.english, false)
+    }
     private func openMessageSource() {
         guard let s = dataManager.availableSurahs.first(where: { $0.surah.number == dailyMessage.today.surah }) else { return }
         targetVerseNumber = dailyMessage.today.verse
@@ -703,8 +734,19 @@ private struct EmeraldTodayView: View {
 private struct EmDailyReminderHero: View {
     @ObservedObject private var themeManager = ThemeManager.shared
     let message: DailyMessage
+    let headline: String
+    let isUrdu: Bool
     let surahName: String
     let onTap: () -> Void
+
+    /// Latin curly quotes misbehave around RTL text — Urdu renders unquoted.
+    private var headlineText: String {
+        isUrdu ? headline : "\u{201C}\(headline)\u{201D}"
+    }
+
+    private var sourceLabel: String {
+        "\(surahName) \u{00B7} \(message.surah):\(message.verse)"
+    }
 
     var body: some View {
         Button(action: onTap) {
@@ -721,14 +763,16 @@ private struct EmDailyReminderHero: View {
                     }
                     .foregroundColor(themeManager.onAccentText.opacity(0.75))
 
-                    Text("\u{201C}\(message.english)\u{201D}")
-                        .font(EmType.serif(24, .semiBold))
+                    Text(headlineText)
+                        .font(isUrdu ? EmType.arabic(22) : EmType.serif(24, .semiBold))
                         .foregroundColor(themeManager.onAccentText)
-                        .lineSpacing(3)
+                        .lineSpacing(isUrdu ? 8 : 3)
+                        .multilineTextAlignment(isUrdu ? .trailing : .leading)
+                        .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
                         .fixedSize(horizontal: false, vertical: true)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: isUrdu ? .trailing : .leading)
 
-                    Text("\(surahName) \u{00B7} \(message.surah):\(message.verse)")
+                    Text(sourceLabel)
                         .font(.system(size: 12.5, weight: .medium))
                         .foregroundColor(themeManager.onAccentText.opacity(0.7))
                 }
@@ -741,7 +785,7 @@ private struct EmDailyReminderHero: View {
         }
         .buttonStyle(EmPressStyle())
         .contextMenu {
-            ShareLink(item: "\u{201C}\(message.english)\u{201D} \u{2014} \(surahName) \u{00B7} \(message.surah):\(message.verse)") {
+            ShareLink(item: "\(headlineText) \u{2014} \(sourceLabel)") {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
         }
