@@ -2,227 +2,323 @@
   "moments": [
     {
       "id": "1",
-      "situation": "You are sad",
+      "situationEn": "You are sad",
+      "situationAr": "أنت حزين",
+      "situationUr": "آپ اداس ہیں",
       "surahNumber": 2,
       "verseNumber": 25,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "2"
     },
     {
       "id": "2",
-      "situation": "You have sinned",
+      "situationEn": "You have sinned",
+      "situationAr": "لقد أذنبت",
+      "situationUr": "آپ سے گناہ ہو گیا ہے",
       "surahNumber": 38,
       "verseNumber": 83,
-      "category": "spiritual"
+      "category": "spiritual",
+      "duaId": "11"
     },
     {
       "id": "3",
-      "situation": "You are seeking peace",
+      "situationEn": "You are seeking peace",
+      "situationAr": "تبحث عن السلام",
+      "situationUr": "آپ سکون کی تلاش میں ہیں",
       "surahNumber": 5,
       "verseNumber": 16,
-      "category": "peace"
+      "category": "peace",
+      "duaId": "3"
     },
     {
       "id": "4",
-      "situation": "You are seeking to thank",
+      "situationEn": "You are seeking to thank",
+      "situationAr": "تريد أن تشكر",
+      "situationUr": "آپ شکر ادا کرنا چاہتے ہیں",
       "surahNumber": 2,
       "verseNumber": 52,
-      "category": "gratitude"
+      "category": "gratitude",
+      "duaId": "13"
     },
     {
       "id": "5",
-      "situation": "You are sexually discriminated",
+      "situationEn": "You are sexually discriminated",
+      "situationAr": "تتعرض للتمييز بسبب جنسك",
+      "situationUr": "آپ کے ساتھ صنفی امتیاز ہوتا ہے",
       "surahNumber": 33,
       "verseNumber": 35,
-      "category": "struggle"
+      "category": "struggle",
+      "duaId": "17"
     },
     {
       "id": "6",
-      "situation": "You are racially discriminated",
+      "situationEn": "You are racially discriminated",
+      "situationAr": "تتعرض للتمييز العنصري",
+      "situationUr": "آپ کے ساتھ نسلی امتیاز ہوتا ہے",
       "surahNumber": 49,
       "verseNumber": 13,
-      "category": "struggle"
+      "category": "struggle",
+      "duaId": "17"
     },
     {
       "id": "7",
-      "situation": "You are seeking love and tranquility",
+      "situationEn": "You are seeking love and tranquility",
+      "situationAr": "تبحث عن المودة والسكينة",
+      "situationUr": "آپ محبت اور سکون کی تلاش میں ہیں",
       "surahNumber": 30,
       "verseNumber": 21,
-      "category": "peace"
+      "category": "peace",
+      "duaId": "3"
     },
     {
       "id": "8",
-      "situation": "You are depressed",
+      "situationEn": "You are depressed",
+      "situationAr": "تشعر بالاكتئاب",
+      "situationUr": "آپ افسردہ ہیں",
       "surahNumber": 93,
       "verseNumber": 5,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "2"
     },
     {
       "id": "9",
-      "situation": "You are yearning for a close friend",
+      "situationEn": "You are yearning for a close friend",
+      "situationAr": "تتوق إلى صديق قريب",
+      "situationUr": "آپ کسی قریبی دوست کے متلاشی ہیں",
       "surahNumber": 50,
       "verseNumber": 16,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "19"
     },
     {
       "id": "10",
-      "situation": "You are not appreciated",
+      "situationEn": "You are not appreciated",
+      "situationAr": "لا يُقدّرك أحد",
+      "situationUr": "آپ کی قدر نہیں کی جاتی",
       "surahNumber": 2,
       "verseNumber": 152,
-      "category": "struggle"
+      "category": "struggle",
+      "duaId": "2"
     },
     {
       "id": "11",
-      "situation": "You feel like a loser",
+      "situationEn": "You feel like a loser",
+      "situationAr": "تشعر بأنك فاشل",
+      "situationUr": "آپ خود کو ناکام محسوس کرتے ہیں",
       "surahNumber": 3,
       "verseNumber": 139,
-      "category": "struggle"
+      "category": "struggle",
+      "duaId": "8"
     },
     {
       "id": "12",
-      "situation": "You feel undervalued",
+      "situationEn": "You feel undervalued",
+      "situationAr": "تشعر بأنك أقل قدراً",
+      "situationUr": "آپ خود کو کم تر محسوس کرتے ہیں",
       "surahNumber": 49,
       "verseNumber": 13,
-      "category": "struggle"
+      "category": "struggle",
+      "duaId": "17"
     },
     {
       "id": "13",
-      "situation": "You are facing hardships",
+      "situationEn": "You are facing hardships",
+      "situationAr": "تواجه الشدائد",
+      "situationUr": "آپ مشکلات کا سامنا کر رہے ہیں",
       "surahNumber": 94,
       "verseNumber": 5,
-      "category": "struggle"
+      "category": "struggle",
+      "duaId": "6"
     },
     {
       "id": "14",
-      "situation": "People come to fight with you",
+      "situationEn": "People come to fight with you",
+      "situationAr": "يأتي الناس لمخاصمتك",
+      "situationUr": "لوگ آپ سے لڑنے آتے ہیں",
       "surahNumber": 7,
       "verseNumber": 62,
-      "category": "struggle"
+      "category": "struggle",
+      "duaId": "17"
     },
     {
       "id": "15",
-      "situation": "You seek forgiveness",
+      "situationEn": "You seek forgiveness",
+      "situationAr": "تطلب المغفرة",
+      "situationUr": "آپ مغفرت کے طلبگار ہیں",
       "surahNumber": 39,
       "verseNumber": 53,
-      "category": "spiritual"
+      "category": "spiritual",
+      "duaId": "11"
     },
     {
       "id": "16",
-      "situation": "You seek deliverance",
+      "situationEn": "You seek deliverance",
+      "situationAr": "تطلب الفرج",
+      "situationUr": "آپ نجات کے طلبگار ہیں",
       "surahNumber": 2,
       "verseNumber": 186,
-      "category": "spiritual"
+      "category": "spiritual",
+      "duaId": "20"
     },
     {
       "id": "17",
-      "situation": "You seek double assurance",
+      "situationEn": "You seek double assurance",
+      "situationAr": "تبحث عن الطمأنينة المؤكدة",
+      "situationUr": "آپ پختہ اطمینان چاہتے ہیں",
       "surahNumber": 15,
       "verseNumber": 49,
-      "category": "peace"
+      "category": "peace",
+      "duaId": "17"
     },
     {
       "id": "18",
-      "situation": "You are anxious",
+      "situationEn": "You are anxious",
+      "situationAr": "تشعر بالقلق",
+      "situationUr": "آپ پریشان ہیں",
       "surahNumber": 13,
       "verseNumber": 28,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "3"
     },
     {
       "id": "19",
-      "situation": "You are heartbroken",
+      "situationEn": "You are heartbroken",
+      "situationAr": "قلبك مكسور",
+      "situationUr": "آپ کا دل ٹوٹا ہوا ہے",
       "surahNumber": 2,
       "verseNumber": 152,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "2"
     },
     {
       "id": "20",
-      "situation": "You need guidance",
+      "situationEn": "You need guidance",
+      "situationAr": "تحتاج إلى الهداية",
+      "situationUr": "آپ کو رہنمائی کی ضرورت ہے",
       "surahNumber": 22,
       "verseNumber": 77,
-      "category": "spiritual"
+      "category": "spiritual",
+      "duaId": "7"
     },
     {
       "id": "21",
-      "situation": "You are angry",
+      "situationEn": "You are angry",
+      "situationAr": "تشعر بالغضب",
+      "situationUr": "آپ غصے میں ہیں",
       "surahNumber": 7,
       "verseNumber": 199,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "3"
     },
     {
       "id": "22",
-      "situation": "You need strength",
+      "situationEn": "You need strength",
+      "situationAr": "تحتاج إلى القوة",
+      "situationUr": "آپ کو قوت کی ضرورت ہے",
       "surahNumber": 2,
       "verseNumber": 286,
-      "category": "hope"
+      "category": "hope",
+      "duaId": "8"
     },
     {
       "id": "23",
-      "situation": "You are seeking blessings",
+      "situationEn": "You are seeking blessings",
+      "situationAr": "تطلب البركة",
+      "situationUr": "آپ برکت کے طلبگار ہیں",
       "surahNumber": 14,
       "verseNumber": 7,
-      "category": "gratitude"
+      "category": "gratitude",
+      "duaId": "12"
     },
     {
       "id": "24",
-      "situation": "You are grateful",
+      "situationEn": "You are grateful",
+      "situationAr": "أنت شاكر",
+      "situationUr": "آپ شکر گزار ہیں",
       "surahNumber": 16,
       "verseNumber": 18,
-      "category": "gratitude"
+      "category": "gratitude",
+      "duaId": "13"
     },
     {
       "id": "25",
-      "situation": "You are confused",
+      "situationEn": "You are confused",
+      "situationAr": "تشعر بالحيرة",
+      "situationUr": "آپ الجھن میں ہیں",
       "surahNumber": 2,
       "verseNumber": 269,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "7"
     },
     {
       "id": "26",
-      "situation": "You are afraid",
+      "situationEn": "You are afraid",
+      "situationAr": "تشعر بالخوف",
+      "situationUr": "آپ خوفزدہ ہیں",
       "surahNumber": 10,
       "verseNumber": 62,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "17"
     },
     {
       "id": "27",
-      "situation": "You are hopeful",
+      "situationEn": "You are hopeful",
+      "situationAr": "أنت مفعم بالأمل",
+      "situationUr": "آپ پُرامید ہیں",
       "surahNumber": 12,
       "verseNumber": 87,
-      "category": "hope"
+      "category": "hope",
+      "duaId": "20"
     },
     {
       "id": "28",
-      "situation": "You are lonely",
+      "situationEn": "You are lonely",
+      "situationAr": "تشعر بالوحدة",
+      "situationUr": "آپ تنہا ہیں",
       "surahNumber": 94,
       "verseNumber": 1,
-      "category": "emotional"
+      "category": "emotional",
+      "duaId": "19"
     },
     {
       "id": "29",
-      "situation": "You need patience",
+      "situationEn": "You need patience",
+      "situationAr": "تحتاج إلى الصبر",
+      "situationUr": "آپ کو صبر کی ضرورت ہے",
       "surahNumber": 2,
       "verseNumber": 153,
-      "category": "hope"
+      "category": "hope",
+      "duaId": "8"
     },
     {
       "id": "30",
-      "situation": "You are seeking wisdom",
+      "situationEn": "You are seeking wisdom",
+      "situationAr": "تطلب الحكمة",
+      "situationUr": "آپ حکمت کے طلبگار ہیں",
       "surahNumber": 2,
       "verseNumber": 269,
-      "category": "spiritual"
+      "category": "spiritual",
+      "duaId": "9"
     },
     {
       "id": "31",
-      "situation": "You are seeking success",
+      "situationEn": "You are seeking success",
+      "situationAr": "تطلب الفلاح",
+      "situationUr": "آپ کامیابی کے طلبگار ہیں",
       "surahNumber": 23,
       "verseNumber": 1,
-      "category": "hope"
+      "category": "hope",
+      "duaId": "12"
     },
     {
       "id": "32",
-      "situation": "You are seeking protection",
+      "situationEn": "You are seeking protection",
+      "situationAr": "تطلب الحماية",
+      "situationUr": "آپ تحفظ کے طلبگار ہیں",
       "surahNumber": 113,
       "verseNumber": 1,
-      "category": "hope"
+      "category": "hope",
+      "duaId": "16"
     }
   ]
 }

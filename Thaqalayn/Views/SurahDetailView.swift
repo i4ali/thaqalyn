@@ -324,16 +324,18 @@ struct ModernSurahHeader: View {
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
-    /// Flip the verse-translation language between English and Urdu (the only two
-    /// languages with verse text). Shared with the tafsir reader's language.
+    /// Cycle the global app language (English → Urdu → Arabic). This is the one in-context
+    /// shortcut kept after language was consolidated into Settings; it writes the same global
+    /// setting as the Settings picker. Verse translations exist only in English/Urdu, so in
+    /// Arabic the English translation is shown (fallback) beneath the Arabic verse.
     private func toggleTranslationLanguage() {
         withAnimation(.easeInOut(duration: 0.2)) {
-            languageManager.setLanguage(languageManager.selectedLanguage == .urdu ? .english : .urdu)
+            languageManager.toggleLanguage()
         }
     }
 
     private var translationLanguageCode: String {
-        languageManager.selectedLanguage == .urdu ? "UR" : "EN"
+        languageManager.selectedLanguage.shortCode
     }
 
     var body: some View {
@@ -550,7 +552,7 @@ struct ModernSurahHeader: View {
                         }
                     }
                     .accessibilityLabel("Translation language")
-                    .accessibilityValue(languageManager.selectedLanguage == .urdu ? "Urdu" : "English")
+                    .accessibilityValue(languageManager.selectedLanguage.displayName)
                 }
                 .padding(.top, 8)
             }

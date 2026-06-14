@@ -199,4 +199,16 @@ class PremiumManager: ObservableObject {
         if dayNumber == 1 { return true }
         return isPremium
     }
+
+    // MARK: - Explore Feature Access Control
+
+    /// Explore sections (Foods, Daily Duas, Life Moments, Q&A, Prophetic
+    /// Parallels, Prophetic Stories, Ahl al-Bayt) use a "first item free, rest
+    /// premium" teaser model: the first (top) card in each section is always
+    /// free, every other card requires premium.
+    /// - Parameter isFirst: whether this is the first card shown in its section.
+    func canAccessExploreItem(isFirst: Bool) -> Bool {
+        if isFirst { return true }  // First card always free
+        return isPremium
+    }
 }

@@ -27,6 +27,19 @@ source .venv/bin/activate
 
 **Rationale**: Fallback logic can mask critical failures, lead to data inconsistency, and make debugging difficult. Clean error handling ensures problems are caught early and addressed properly.
 
+### ⚠️ ALL UI TEXT MUST SCALE WITH THE READING TEXT-SIZE CONTROL ⚠️
+
+**IMPORTANT**: The app has a global reading text-size control (`ReadingSettingsManager.shared`, a `scale: CGFloat` multiplier set in Settings → Reading). Any **reading content** you add or edit — Qur'an Arabic, transliterations, translations, tafsir/commentary, narrations, descriptions, notes, story/answer/comfort body text — MUST scale with it.
+
+**How**:
+- Add `@StateObject private var readingSettings = ReadingSettingsManager.shared` (or `@ObservedObject`) to the view.
+- Multiply the font size by the scale: `.font(EmType.serif(16 * readingSettings.scale, .medium))` or `.font(.system(size: 16 * readingSettings.scale))`, and scale line spacing too: `.lineSpacing(5 * readingSettings.scale)`.
+- Match the pattern already used in `DuaDetailView`, `ParallelDetailView`, `SurahDetailView`, `FoodDetailView`.
+
+**Do NOT scale** (keep fixed): titles/headings, section labels & eyebrows, verse references, source citations, captions, pills/badges, and button labels. The control's scope is "Verses, translation & commentary" — body reading content, not chrome.
+
+**Rationale**: Users rely on this control for accessibility/readability. Hardcoded font sizes ignore it and leave content unreadable at the largest settings.
+
 ### ⚠️ CLOUD SYNC ARCHITECTURE PATTERN ⚠️
 
 **CRITICAL**: For any data type that needs to be synced to cloud (Supabase), follow the **[docs/BOOKMARK_SYNC_ARCHITECTURE.md](docs/BOOKMARK_SYNC_ARCHITECTURE.md)** as closely as possible. This architecture is production-tested and provides:

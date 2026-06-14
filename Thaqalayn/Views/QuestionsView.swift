@@ -10,11 +10,13 @@ import SwiftUI
 struct QuestionsView: View {
     @StateObject private var questionsManager = QuestionsManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     @State private var selectedCategory: QuestionCategory? = nil
     @State private var selectedQuestion: Question?
     @State private var navigateToDetail = false
+    @State private var showPaywall = false
 
     var filteredQuestions: [Question] {
         let searchFiltered = searchText.isEmpty ? questionsManager.questions : questionsManager.search(query: searchText)
@@ -32,6 +34,16 @@ struct QuestionsView: View {
             grouped[question.category, default: []].append(question)
         }
         return grouped.sorted { $0.key.displayName < $1.key.displayName }
+    }
+
+    // The single free question (first question of the first group in the
+    // unfiltered grouping) — stable regardless of search/category filtering
+    private var freeQuestionID: String? {
+        var grouped: [QuestionCategory: [Question]] = [:]
+        for question in questionsManager.questions {
+            grouped[question.category, default: []].append(question)
+        }
+        return grouped.sorted { $0.key.displayName < $1.key.displayName }.first?.value.first?.id
     }
 
     var body: some View {
@@ -128,10 +140,15 @@ struct QuestionsView: View {
                                 ForEach(groupedQuestions, id: \.0) { category, questions in
                                     Section {
                                         ForEach(questions) { question in
-                                            QuestionCardView(question: question)
+                                            let isLocked = !premiumManager.canAccessExploreItem(isFirst: question.id == freeQuestionID)
+                                            QuestionCardView(question: question, isLocked: isLocked)
                                                 .pressable {
-                                                    selectedQuestion = question
-                                                    navigateToDetail = true
+                                                    if isLocked {
+                                                        showPaywall = true
+                                                    } else {
+                                                        selectedQuestion = question
+                                                        navigateToDetail = true
+                                                    }
                                                 }
                                         }
                                     } header: {
@@ -186,11 +203,15 @@ struct QuestionsView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
+        }
     }
 }
 
 struct QuestionCardView: View {
     let question: Question
+    let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
@@ -201,10 +222,20 @@ struct QuestionCardView: View {
             HStack(alignment: .top, spacing: 14) {
                 EmIconChip(sfSymbol: question.categoryIcon, size: 46)
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(question.question)
-                        .font(EmType.serif(19, .semiBold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(3).multilineTextAlignment(.leading)
+                    HStack(alignment: .top, spacing: 8) {
+                        Text(question.question)
+                            .font(EmType.serif(19, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineLimit(3).multilineTextAlignment(.leading)
+                        if isLocked {
+                            Text("PREMIUM")
+                                .font(.system(size: 8.5, weight: .bold)).tracking(1)
+                                .foregroundColor(themeManager.accentColor)
+                                .padding(.horizontal, 6).padding(.vertical, 2)
+                                .background(Capsule().fill(themeManager.accentChip))
+                                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                        }
+                    }
                     HStack(spacing: 8) {
                         HStack(spacing: 4) {
                             Image(systemName: "checkmark.seal.fill").font(.system(size: 11, weight: .semibold))
@@ -219,7 +250,7 @@ struct QuestionCardView: View {
                     }
                 }
                 Spacer(minLength: 8)
-                Image(systemName: "chevron.right").font(.system(size: 13, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
+                Image(systemName: isLocked ? "lock.fill" : "chevron.right").font(.system(size: 13, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
             }
             .padding(16)
         }
@@ -245,11 +276,21 @@ struct QuestionCardView: View {
 
             // Question content
             VStack(alignment: .leading, spacing: 6) {
-                Text(question.question)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(3)
-                    .multilineTextAlignment(.leading)
+                HStack(alignment: .top, spacing: 8) {
+                    Text(question.question)
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(3)
+                        .multilineTextAlignment(.leading)
+
+                    if isLocked {
+                        Text("Premium")
+                            .font(.system(size: 11, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 8).padding(.vertical, 4)
+                            .background(Capsule().fill(Color.orange.gradient))
+                    }
+                }
 
                 // Verse count
                 Text("Answered in \(question.verseCount) verse\(question.verseCount == 1 ? "" : "s")")
@@ -266,8 +307,8 @@ struct QuestionCardView: View {
 
             Spacer()
 
-            // Chevron
-            Image(systemName: "chevron.right")
+            // Chevron or lock icon
+            Image(systemName: isLocked ? "lock.fill" : "chevron.right")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         }

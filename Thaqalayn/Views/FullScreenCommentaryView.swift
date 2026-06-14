@@ -89,17 +89,8 @@ struct FullScreenCommentaryView: View {
             }
             Spacer()
             HStack(spacing: 10) {
+                VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 34)
                 TextSizeButton(isPanelOpen: $showTextSizePanel)
-                Button(action: { languageManager.toggleLanguage() }) {
-                    HStack(spacing: 4) {
-                        Text(languageManager.selectedLanguage.shortCode).font(.system(size: 13, weight: .semibold))
-                        Image(systemName: "globe").font(.system(size: 12))
-                    }
-                    .foregroundColor(themeManager.accentColor)
-                    .padding(.horizontal, 12).padding(.vertical, 8)
-                    .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                }
-                .accessibilityLabel("Language: \(languageManager.selectedLanguage.displayName)")
             }
         }
         .overlay {
@@ -333,8 +324,8 @@ struct FullScreenCommentaryView: View {
 
             // Language toggle button
             HStack(spacing: 10) {
+                VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 34)
                 TextSizeButton(isPanelOpen: $showTextSizePanel)
-                languageToggle
             }
         }
         .padding(.horizontal, 24)
@@ -350,28 +341,6 @@ struct FullScreenCommentaryView: View {
                 endPoint: .bottom
             )
         }
-    }
-
-    // Language selector button (cycles through languages)
-    private var languageToggle: some View {
-        Button(action: {
-            languageManager.toggleLanguage()
-        }) {
-            HStack(spacing: 4) {
-                Text(languageManager.selectedLanguage.shortCode)
-                    .font(.system(size: 14, weight: .medium))
-                Text("🌐")
-                    .font(.system(size: 14))
-            }
-            .foregroundColor(themeManager.accentColor)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(themeManager.accentColor.opacity(0.1))
-            }
-        }
-        .accessibilityLabel("Language: \(languageManager.selectedLanguage.displayName)")
     }
 
     // TTS button in layer header

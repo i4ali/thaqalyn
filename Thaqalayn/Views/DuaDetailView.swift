@@ -13,6 +13,8 @@ struct DuaDetailView: View {
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var tafsirReader = TafsirReader.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @StateObject private var dataManager = DataManager.shared
+    @State private var navigateToVerse = false
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -36,6 +38,16 @@ struct DuaDetailView: View {
                 .padding(.top, 20)
                 .padding(.bottom, 40)
             }
+            }
+
+            // Hidden link: tapping a Qur'anic dua's source opens that verse in the reader.
+            if let surahData = linkedSurah, let v = dua.verseNumber {
+                NavigationLink(
+                    destination: SurahDetailView(surahWithTafsir: surahData, targetVerse: v),
+                    isActive: $navigateToVerse
+                ) { EmptyView() }
+                .frame(width: 0, height: 0)
+                .hidden()
             }
         }
         .onDisappear {
@@ -75,7 +87,6 @@ struct DuaDetailView: View {
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     Spacer(minLength: 8)
-                    emeraldLanguageToggle
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .environment(\.layoutDirection,
@@ -113,9 +124,7 @@ struct DuaDetailView: View {
                         .textSelection(.enabled)
                 }
 
-                Text("Source · \(dua.source)")
-                    .font(.system(size: 12.5, weight: .medium))
-                    .foregroundColor(themeManager.tertiaryText)
+                sourceCitation(prefix: "Source · ", font: .system(size: 12.5, weight: .medium))
                     .frame(maxWidth: .infinity)
                     .padding(.top, 2)
 
@@ -153,20 +162,6 @@ struct DuaDetailView: View {
         .frame(maxWidth: .infinity)
     }
 
-    private var emeraldLanguageToggle: some View {
-        Button(action: { languageManager.toggleLanguage() }) {
-            HStack(spacing: 5) {
-                Image(systemName: "globe").font(.system(size: 12, weight: .semibold))
-                Text(languageManager.selectedLanguage.displayName).font(.system(size: 13, weight: .semibold))
-            }
-            .foregroundColor(themeManager.accentColor)
-            .padding(.horizontal, 12).padding(.vertical, 8)
-            .background(Capsule().fill(themeManager.accentChip))
-            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-        }
-        .buttonStyle(EmPressStyle())
-    }
-
     // MARK: - Sections
 
     private var headerSection: some View {
@@ -181,32 +176,10 @@ struct DuaDetailView: View {
             }
 
             Spacer(minLength: 0)
-
-            languageToggle
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .environment(\.layoutDirection,
                      languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
-    }
-
-    private var languageToggle: some View {
-        Button(action: {
-            languageManager.toggleLanguage()
-        }) {
-            HStack(spacing: 4) {
-                Text(languageManager.selectedLanguage.displayName)
-                    .font(.system(size: 14, weight: .medium))
-                Text("🌐")
-                    .font(.system(size: 14))
-            }
-            .foregroundColor(themeManager.accentColor)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(themeManager.accentColor.opacity(0.1))
-            }
-        }
     }
 
     private var categoryPill: some View {
@@ -218,6 +191,31 @@ struct DuaDetailView: View {
             .background(
                 Capsule().fill(themeManager.accentColor.opacity(0.15))
             )
+    }
+
+    /// The SurahWithTafsir this dua links to, if it is drawn from the Qur'an and loaded.
+    private var linkedSurah: SurahWithTafsir? {
+        guard let s = dua.surahNumber else { return nil }
+        return dataManager.availableSurahs.first(where: { $0.surah.number == s })
+    }
+
+    /// Source citation — tappable (accent + chevron, opens the verse) when the dua is Qur'anic.
+    @ViewBuilder
+    private func sourceCitation(prefix: String, font: Font) -> some View {
+        if linkedSurah != nil {
+            Button(action: { navigateToVerse = true }) {
+                HStack(spacing: 5) {
+                    Text("\(prefix)\(dua.source)").font(font)
+                    Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold))
+                }
+                .foregroundColor(themeManager.accentColor)
+            }
+            .buttonStyle(.plain)
+        } else {
+            Text("\(prefix)\(dua.source)")
+                .font(font)
+                .foregroundColor(themeManager.tertiaryText)
+        }
     }
 
     private var arabicSection: some View {
@@ -309,9 +307,7 @@ struct DuaDetailView: View {
     private var sourceSection: some View {
         HStack {
             Spacer()
-            Text("Source: \(dua.source)")
-                .font(.system(size: 13, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
+            sourceCitation(prefix: "Source: ", font: .system(size: 13, weight: .medium))
             Spacer()
         }
         .padding(.top, 4)
@@ -373,15 +369,17 @@ struct DuaDetailView: View {
     NavigationView {
         DuaDetailView(dua: DailyDua(
             id: "1",
-            situationEn: "Before eating",
-            situationAr: "دعاء قبل الأكل",
-            situationUr: "کھانا کھانے کی دعا",
-            arabic: "بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ",
-            transliteration: "Bismillāhi wa ʿalā barakati'llāh",
-            translationEn: "In the name of Allah, and upon the blessing of Allah.",
-            translationUr: "اللہ کے نام سے اور اللہ کی برکت سے۔",
-            source: "al-Kafi 6:294",
-            category: "eating"
+            situationEn: "For health & healing",
+            situationAr: "لِلصِّحَّةِ وَالشِّفَاءِ",
+            situationUr: "صحت و شفا کے لیے",
+            arabic: "اللّٰهُمَّ اشْفِنِي بِشِفَائِكَ وَدَاوِنِي بِدَوَائِكَ وَعَافِنِي مِنْ بَلَائِكَ",
+            transliteration: "Allāhumma-shfinī bishifāʾik, wa dāwinī bidawāʾik, wa ʿāfinī min balāʾik",
+            translationEn: "O Allah, heal me with Your healing, remedy me with Your remedy, and grant me well-being from Your affliction.",
+            translationUr: "اے اللہ! مجھے اپنی شفا سے شفا عطا فرما، اپنی دوا سے میرا علاج فرما، اور اپنی آزمائش سے مجھے عافیت عطا فرما۔",
+            source: "Supplication for healing, narrated from the Ahlul Bayt (ʿa)",
+            category: "health",
+            surahNumber: nil,
+            verseNumber: nil
         ))
     }
 }

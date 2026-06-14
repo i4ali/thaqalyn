@@ -56,9 +56,13 @@ class LifeMomentsManager: ObservableObject {
         return Array(Set(moments.map { $0.category })).sorted()
     }
 
-    // Search moments by situation text
+    // Search moments by situation text (across all supported languages)
     func search(query: String) -> [LifeMoment] {
         guard !query.isEmpty else { return moments }
-        return moments.filter { $0.situation.localizedCaseInsensitiveContains(query) }
+        return moments.filter {
+            $0.situationEn.localizedCaseInsensitiveContains(query) ||
+            $0.situationUr.localizedCaseInsensitiveContains(query) ||
+            $0.situationAr.localizedCaseInsensitiveContains(query)
+        }
     }
 }

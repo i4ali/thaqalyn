@@ -78,17 +78,17 @@ struct DuasCarouselCard: View {
 
     private var localizedTitle: String {
         switch languageManager.selectedLanguage {
-        case .arabic: return "الأدعية اليومية"
-        case .urdu: return "روزمرہ کی دعائیں"
-        default: return "Daily Duas"
+        case .arabic: return "أدعية لكل حاجة"
+        case .urdu: return "ہر حاجت کی دعا"
+        default: return "Duas for Every Need"
         }
     }
 
     private var localizedSubtitle: String {
         switch languageManager.selectedLanguage {
-        case .arabic: return "20 دعاءً قصيرًا للأكل، النوم، السفر والمزيد"
-        case .urdu: return "کھانا، سونا، سفر اور بہت کچھ کے لیے 20 مختصر دعائیں"
-        default: return "20 short duas for daily life — eating, sleeping, travel, and more"
+        case .arabic: return "أدعية للصحة والحفظ والرزق والمغفرة والمزيد"
+        case .urdu: return "صحت، حفاظت، رزق، مغفرت اور مزید کے لیے دعائیں"
+        default: return "Supplications for health, protection, sustenance, forgiveness, and more"
         }
     }
 }

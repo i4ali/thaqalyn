@@ -9,12 +9,14 @@ import SwiftUI
 
 struct PropheticStoriesView: View {
     @StateObject private var storiesManager = PropheticStoriesManager.shared
+    @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     @State private var selectedCategory: StoryCategory? = nil
     @State private var selectedStory: PropheticStory?
     @State private var navigateToDetail = false
+    @State private var showPaywall = false
 
     var filteredStories: [PropheticStory] {
         let searchFiltered = searchText.isEmpty ? storiesManager.stories : storiesManager.search(query: searchText)
@@ -33,6 +35,9 @@ struct PropheticStoriesView: View {
         }
         return grouped.sorted { $0.key.displayName < $1.key.displayName }
     }
+
+    // The single free story on the whole screen: first story of the first group
+    private var freeStoryID: String? { groupedStories.first?.1.first?.id }
 
     var body: some View {
         NavigationView {
@@ -124,10 +129,15 @@ struct PropheticStoriesView: View {
                                 ForEach(groupedStories, id: \.0) { category, stories in
                                     Section {
                                         ForEach(stories) { story in
-                                            PropheticStoryCardView(story: story)
+                                            let isLocked = !premiumManager.canAccessExploreItem(isFirst: story.id == freeStoryID)
+                                            PropheticStoryCardView(story: story, isLocked: isLocked)
                                                 .pressable {
-                                                    selectedStory = story
-                                                    navigateToDetail = true
+                                                    if isLocked {
+                                                        showPaywall = true
+                                                    } else {
+                                                        selectedStory = story
+                                                        navigateToDetail = true
+                                                    }
                                                 }
                                         }
                                     } header: {
@@ -184,6 +194,9 @@ struct PropheticStoriesView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
+        }
     }
 
     private var emeraldHeader: some View {
@@ -210,6 +223,7 @@ struct PropheticStoriesView: View {
 
 struct PropheticStoryCardView: View {
     let story: PropheticStory
+    let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
@@ -224,18 +238,28 @@ struct PropheticStoryCardView: View {
                     Text(story.prophet)
                         .font(.system(size: 11, weight: .bold)).tracking(0.5)
                         .foregroundColor(themeManager.accentColor)
-                    Text(story.title)
-                        .font(EmType.serif(20, .semiBold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
+                    HStack(spacing: 8) {
+                        Text(story.title)
+                            .font(EmType.serif(20, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                        if isLocked {
+                            Text("PREMIUM")
+                                .font(.system(size: 8.5, weight: .bold)).tracking(1)
+                                .foregroundColor(themeManager.accentColor)
+                                .padding(.horizontal, 6).padding(.vertical, 2)
+                                .background(Capsule().fill(themeManager.accentChip))
+                                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                        }
+                    }
                     Text("\(story.verseCount) verse\(story.verseCount == 1 ? "" : "s") · \(story.category.displayName)")
                         .font(.system(size: 13))
                         .foregroundColor(themeManager.secondaryText)
                         .lineLimit(1)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                Image(systemName: "chevron.right")
+                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -275,11 +299,21 @@ struct PropheticStoryCardView: View {
                             .fill(themeManager.accentColor.opacity(0.15))
                     )
 
-                Text(story.title)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
+                HStack(spacing: 8) {
+                    Text(story.title)
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+
+                    if isLocked {
+                        Text("Premium")
+                            .font(.system(size: 11, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 8).padding(.vertical, 4)
+                            .background(Capsule().fill(Color.orange.gradient))
+                    }
+                }
 
                 // Verse count
                 Text("\(story.verseCount) verse\(story.verseCount == 1 ? "" : "s") • \(story.category.displayName)")
@@ -296,8 +330,8 @@ struct PropheticStoryCardView: View {
 
             Spacer()
 
-            // Chevron
-            Image(systemName: "chevron.right")
+            // Chevron or lock icon
+            Image(systemName: isLocked ? "lock.fill" : "chevron.right")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         }

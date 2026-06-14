@@ -9,10 +9,12 @@ import SwiftUI
 
 struct DuasView: View {
     @StateObject private var duasManager = DuasManager.shared
+    @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedDua: DailyDua?
+    @State private var showPaywall = false
 
     var body: some View {
         NavigationView {
@@ -29,11 +31,19 @@ struct DuasView: View {
                     } else {
                         ScrollView {
                             LazyVStack(spacing: 12) {
-                                ForEach(duasManager.duas) { dua in
-                                    NavigationLink(destination: DuaDetailView(dua: dua)) {
-                                        DuaCard(dua: dua)
+                                ForEach(Array(duasManager.duas.enumerated()), id: \.element.id) { index, dua in
+                                    let isLocked = !premiumManager.canAccessExploreItem(isFirst: index == 0)
+                                    if isLocked {
+                                        Button { showPaywall = true } label: {
+                                            DuaCard(dua: dua, isLocked: true)
+                                        }
+                                        .buttonStyle(EmPressStyle())
+                                    } else {
+                                        NavigationLink(destination: DuaDetailView(dua: dua)) {
+                                            DuaCard(dua: dua, isLocked: false)
+                                        }
+                                        .buttonStyle(EmPressStyle())
                                     }
-                                    .buttonStyle(EmPressStyle())
                                 }
                             }
                             .padding(.horizontal, 20)
@@ -60,6 +70,9 @@ struct DuasView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
+        }
     }
 
     private var headerView: some View {
@@ -77,8 +90,6 @@ struct DuasView: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
                 Spacer()
-
-                languageToggle
             }
         }
         .padding(.horizontal, 20)
@@ -103,7 +114,6 @@ struct DuasView: View {
                     .foregroundColor(themeManager.secondaryText)
             }
             Spacer(minLength: 8)
-            emeraldLanguageToggle
         }
         .padding(.horizontal, 20)
         .padding(.top, 16)
@@ -112,67 +122,34 @@ struct DuasView: View {
                      languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
 
-    private var emeraldLanguageToggle: some View {
-        Button(action: { languageManager.toggleLanguage() }) {
-            HStack(spacing: 5) {
-                Image(systemName: "globe").font(.system(size: 12, weight: .semibold))
-                Text(languageManager.selectedLanguage.displayName).font(.system(size: 13, weight: .semibold))
-            }
-            .foregroundColor(themeManager.accentColor)
-            .padding(.horizontal, 12).padding(.vertical, 8)
-            .background(Capsule().fill(themeManager.accentChip))
-            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-        }
-        .buttonStyle(EmPressStyle())
-    }
-
     private var localizedEyebrow: String {
         switch languageManager.selectedLanguage {
-        case .arabic: return "أدعية مأثورة"
-        case .urdu: return "ماثور دعائیں"
-        default: return "From the Sunnah"
-        }
-    }
-
-    private var languageToggle: some View {
-        Button(action: {
-            languageManager.toggleLanguage()
-        }) {
-            HStack(spacing: 4) {
-                Text(languageManager.selectedLanguage.displayName)
-                    .font(.system(size: 14, weight: .medium))
-                Text("🌐")
-                    .font(.system(size: 14))
-            }
-            .foregroundColor(themeManager.accentColor)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(themeManager.accentColor.opacity(0.1))
-            }
+        case .arabic: return "الأدعية"
+        case .urdu: return "دعائیں"
+        default: return "Supplications"
         }
     }
 
     private var localizedTitle: String {
         switch languageManager.selectedLanguage {
-        case .arabic: return "الأدعية اليومية"
-        case .urdu: return "روزمرہ کی دعائیں"
-        default: return "Daily Duas"
+        case .arabic: return "أدعية لكل حاجة"
+        case .urdu: return "ہر حاجت کی دعا"
+        default: return "Duas for Every Need"
         }
     }
 
     private var localizedSubtitle: String {
         switch languageManager.selectedLanguage {
-        case .arabic: return "20 دعاءً قصيرًا للحظات اليومية"
-        case .urdu: return "روزمرہ کے لمحات کے لیے 20 مختصر دعائیں"
-        default: return "20 short supplications for everyday moments"
+        case .arabic: return "للصحة والحفظ والرزق وغيرها"
+        case .urdu: return "صحت، حفاظت، رزق اور مزید کے لیے"
+        default: return "For health, protection, sustenance & more"
         }
     }
 }
 
 struct DuaCard: View {
     let dua: DailyDua
+    let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
@@ -184,12 +161,22 @@ struct DuaCard: View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: dua.categoryIcon)
-                Text(dua.situation(for: languageManager.selectedLanguage))
-                    .font(EmType.serif(20, .semiBold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Image(systemName: "chevron.right")
+                HStack(spacing: 8) {
+                    Text(dua.situation(for: languageManager.selectedLanguage))
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                    if isLocked {
+                        Text("PREMIUM")
+                            .font(.system(size: 8.5, weight: .bold)).tracking(1)
+                            .foregroundColor(themeManager.accentColor)
+                            .padding(.horizontal, 6).padding(.vertical, 2)
+                            .background(Capsule().fill(themeManager.accentChip))
+                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -212,16 +199,27 @@ struct DuaCard: View {
             }
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(dua.situation(for: languageManager.selectedLanguage))
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
+                HStack(spacing: 8) {
+                    Text(dua.situation(for: languageManager.selectedLanguage))
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+
+                    if isLocked {
+                        Text("Premium")
+                            .font(.system(size: 11, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(Capsule().fill(Color.orange.gradient))
+                    }
+                }
             }
 
             Spacer()
 
-            Image(systemName: "chevron.right")
+            Image(systemName: isLocked ? "lock.fill" : "chevron.right")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         }

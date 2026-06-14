@@ -236,6 +236,7 @@ struct FastingVerseCard: View {
                             .foregroundColor(themeManager.accentColor)
                     }
                     Spacer()
+                    VerseRecitationButton(surahNumber: fastingVerse.surahNumber, verseNumber: fastingVerse.verseNumber, size: 32)
                     if fastingVerse.isKeyVerse {
                         Text("KEY VERSE")
                             .font(.system(size: 9, weight: .bold)).tracking(1)
@@ -268,9 +269,9 @@ struct FastingVerseCard: View {
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
                     Text(fastingVerse.relevanceNote)
-                        .font(.system(size: 13))
+                        .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(2)
+                        .lineSpacing(2 * readingSettings.scale)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -324,6 +325,8 @@ struct FastingVerseCard: View {
                 }
 
                 Spacer()
+
+                VerseRecitationButton(surahNumber: fastingVerse.surahNumber, verseNumber: fastingVerse.verseNumber, size: 32)
 
                 if fastingVerse.isKeyVerse {
                     Text("KEY VERSE")
@@ -379,9 +382,9 @@ struct FastingVerseCard: View {
                 }
 
                 Text(fastingVerse.relevanceNote)
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(4)
+                    .lineSpacing(4 * readingSettings.scale)
             }
             .padding(20)
             .background {

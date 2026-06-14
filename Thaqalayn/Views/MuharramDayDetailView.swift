@@ -451,6 +451,7 @@ struct MuharramVerseCard: View {
                         .font(.system(size: 12, weight: .bold)).tracking(0.3)
                         .foregroundColor(themeManager.accentColor)
                     Spacer()
+                    VerseRecitationButton(surahNumber: verse.surahNumber, verseNumber: verse.verseNumber, size: 32)
                     Button(action: onNavigate) {
                         HStack(spacing: 4) {
                             Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
@@ -477,9 +478,9 @@ struct MuharramVerseCard: View {
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
                     Text(verse.relevanceNote)
-                        .font(.system(size: 13))
+                        .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(2)
+                        .lineSpacing(2 * readingSettings.scale)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -502,6 +503,8 @@ struct MuharramVerseCard: View {
                     .foregroundColor(themeManager.accentColor)
 
                 Spacer()
+
+                VerseRecitationButton(surahNumber: verse.surahNumber, verseNumber: verse.verseNumber, size: 32)
 
                 Button(action: onNavigate) {
                     HStack(spacing: 4) {
@@ -548,9 +551,9 @@ struct MuharramVerseCard: View {
                     .foregroundColor(themeManager.accentColor)
 
                 Text(verse.relevanceNote)
-                    .font(.system(size: 14, weight: .medium))
+                    .font(.system(size: 14 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
-                    .lineSpacing(2)
+                    .lineSpacing(2 * readingSettings.scale)
             }
             .padding(16)
             .background {

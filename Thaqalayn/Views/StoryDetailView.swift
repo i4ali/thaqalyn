@@ -350,6 +350,7 @@ struct StoryVerseCard: View {
                             .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
                     }
                     Spacer()
+                    VerseRecitationButton(surahNumber: storyVerse.surahNumber, verseNumber: storyVerse.verseNumber, size: 32)
                     Button(action: onNavigate) {
                         HStack(spacing: 4) {
                             Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
@@ -376,9 +377,9 @@ struct StoryVerseCard: View {
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
                     Text(storyVerse.storyNote)
-                        .font(.system(size: 13))
+                        .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(2)
+                        .lineSpacing(2 * readingSettings.scale)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -418,6 +419,8 @@ struct StoryVerseCard: View {
                 }
 
                 Spacer()
+
+                VerseRecitationButton(surahNumber: storyVerse.surahNumber, verseNumber: storyVerse.verseNumber, size: 32)
 
                 if storyVerse.isKeyVerse {
                     Text("KEY VERSE")
@@ -473,9 +476,9 @@ struct StoryVerseCard: View {
                 }
 
                 Text(storyVerse.storyNote)
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(4)
+                    .lineSpacing(4 * readingSettings.scale)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)

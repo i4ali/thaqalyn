@@ -41,6 +41,13 @@ enum ExploreSection: CaseIterable {
                     destination: .dailyDuas
                 ),
                 ExploreItem(
+                    id: "foods",
+                    icon: "leaf.fill",
+                    title: "Foods of the Quran",
+                    subtitle: "Nourishment from Qur'an & Ahlul Bayt",
+                    destination: .foods
+                ),
+                ExploreItem(
                     id: "propheticParallels",
                     icon: "person.2.wave.2.fill",
                     title: "Prophetic Parallels",
@@ -97,6 +104,7 @@ enum ExploreDestination {
     case propheticParallels
     case questions
     case fasting
+    case foods
     case propheticStories
     case ahlulbaytQuran
 }
@@ -112,6 +120,7 @@ struct ExploreView: View {
     @State private var showFasting = false
     @State private var showPropheticStories = false
     @State private var showAhlulbaytQuran = false
+    @State private var showFoods = false
 
     var body: some View {
         Group {
@@ -142,6 +151,9 @@ struct ExploreView: View {
         .fullScreenCover(isPresented: $showAhlulbaytQuran) {
             AhlulbaytQuranView()
         }
+        .fullScreenCover(isPresented: $showFoods) {
+            FoodsView()
+        }
     }
 
     private var legacyBody: some View {
@@ -153,7 +165,7 @@ struct ExploreView: View {
                         .font(.system(size: 34, weight: .bold, design: .rounded))
                         .foregroundColor(themeManager.primaryText)
 
-                    Text("Discover Quranic wisdom")
+                    Text("Discover Quranic Wisdom")
                         .font(.system(size: 16, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
                 }
@@ -227,6 +239,8 @@ struct ExploreView: View {
             return "book"
         case .ahlulbaytQuran:
             return "star.fill"
+        case .foods:
+            return "leaf.fill"
         }
     }
 
@@ -246,6 +260,8 @@ struct ExploreView: View {
             showPropheticStories = true
         case .ahlulbaytQuran:
             showAhlulbaytQuran = true
+        case .foods:
+            showFoods = true
         }
     }
 }
@@ -266,7 +282,7 @@ private struct EmeraldExploreView: View {
                     Text("Explore")
                         .font(EmType.serif(40, .semiBold))
                         .foregroundColor(themeManager.primaryText)
-                    Text("Discover Quranic wisdom")
+                    Text("Discover Quranic Wisdom")
                         .font(.system(size: 13.5))
                         .foregroundColor(themeManager.secondaryText)
                 }

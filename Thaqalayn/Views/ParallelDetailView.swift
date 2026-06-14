@@ -488,6 +488,7 @@ struct ParallelVerseCard: View {
                         .font(.system(size: 12, weight: .bold)).tracking(0.3)
                         .foregroundColor(themeManager.accentColor)
                     Spacer()
+                    VerseRecitationButton(surahNumber: verse.surahNumber, verseNumber: verse.verseNumber, size: 32)
                     Button(action: onNavigate) {
                         HStack(spacing: 4) {
                             Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
@@ -514,9 +515,9 @@ struct ParallelVerseCard: View {
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
                     Text(verse.relevanceNote)
-                        .font(.system(size: 13))
+                        .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(2)
+                        .lineSpacing(2 * readingSettings.scale)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -556,6 +557,8 @@ struct ParallelVerseCard: View {
                 }
 
                 Spacer()
+
+                VerseRecitationButton(surahNumber: verse.surahNumber, verseNumber: verse.verseNumber, size: 32)
             }
             .padding(20)
 
@@ -599,9 +602,9 @@ struct ParallelVerseCard: View {
                 }
 
                 Text(verse.relevanceNote)
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(4)
+                    .lineSpacing(4 * readingSettings.scale)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)

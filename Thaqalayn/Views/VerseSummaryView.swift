@@ -20,23 +20,18 @@ struct VerseSummaryView: View {
         self.initialConceptId = initialConceptId
     }
 
-    @State private var selectedLanguage: CommentaryLanguage = .english
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
+    /// The global app language (set in Settings). VerseSummary no longer has its own picker.
+    private var selectedLanguage: CommentaryLanguage { languageManager.selectedLanguage }
+
     // Compute device type for adaptive presentation
     private var isIPad: Bool {
         UIDevice.current.userInterfaceIdiom == .pad
-    }
-
-    // Check if any non-English translated content is available
-    private var hasAnyTranslatedContent: Bool {
-        guard let tafsir = verse.tafsir else { return false }
-        return tafsir.layer2short_urdu != nil ||
-               tafsir.layer2short_ar != nil ||
-               tafsir.layer2short_fr != nil
     }
 
     // Check if quick overview data is available
@@ -109,10 +104,7 @@ struct VerseSummaryView: View {
                             Text("Verse \(verse.number)").font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
                         }
                         Spacer()
-                    }
-
-                    if hasAnyTranslatedContent {
-                        emeraldLanguageSelector
+                        VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 34)
                     }
 
                     EmDivider(label: "The Core Insight")
@@ -145,24 +137,6 @@ struct VerseSummaryView: View {
         }
     }
 
-    private var emeraldLanguageSelector: some View {
-        HStack(spacing: 10) {
-            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
-                Button(action: { selectedLanguage = language }) {
-                    Text(language.displayName)
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(selectedLanguage == language ? themeManager.onAccentText : themeManager.accentColor)
-                        .padding(.horizontal, 14).padding(.vertical, 7)
-                        .background(
-                            Capsule().fill(selectedLanguage == language ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.accentChip))
-                        )
-                        .overlay(Capsule().stroke(selectedLanguage == language ? Color.clear : themeManager.strokeColor, lineWidth: 1))
-                }
-                .buttonStyle(EmPressStyle())
-            }
-        }
-    }
-
     private var legacyFallbackContent: some View {
         VStack(spacing: 0) {
             // Handle bar
@@ -179,11 +153,6 @@ struct VerseSummaryView: View {
 
                     // Verse reference
                     verseReferenceView
-
-                    // Language selector (if any non-English content available)
-                    if hasAnyTranslatedContent {
-                        languageSelectorView
-                    }
 
                     // Summary content
                     summaryContentView
@@ -244,6 +213,10 @@ struct VerseSummaryView: View {
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
             }
+
+            Spacer()
+
+            VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 34)
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -255,33 +228,6 @@ struct VerseSummaryView: View {
                         .stroke(themeManager.strokeColor, lineWidth: 1)
                 )
         )
-    }
-
-    private var languageSelectorView: some View {
-        HStack(spacing: 12) {
-            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
-                Button(action: { selectedLanguage = language }) {
-                    Text(language.displayName)
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(selectedLanguage == language ? .white : themeManager.tertiaryText)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background {
-                            if selectedLanguage == language {
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(themeManager.accentGradient)
-                            } else {
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(Color.clear)
-                            }
-                        }
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(themeManager.strokeColor, lineWidth: selectedLanguage == language ? 0 : 1)
-                        )
-                }
-            }
-        }
     }
 
     private var summaryContentView: some View {

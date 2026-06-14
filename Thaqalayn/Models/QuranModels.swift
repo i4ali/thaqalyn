@@ -1127,13 +1127,25 @@ struct LifeMomentsData: Codable {
 
 struct LifeMoment: Codable, Identifiable {
     let id: String
-    let situation: String
+    let situationEn: String
+    let situationAr: String
+    let situationUr: String
     let surahNumber: Int
     let verseNumber: Int
     let category: String
+    /// Optional id of a Daily Dua (see daily_duas.json) linked to this moment.
+    let duaId: String?
 
     var verseReference: String {
         return "Quran \(surahNumber):\(verseNumber)"
+    }
+
+    func situation(for language: CommentaryLanguage) -> String {
+        switch language {
+        case .arabic: return situationAr
+        case .urdu:   return situationUr
+        default:      return situationEn
+        }
     }
 
     var categoryIcon: String {
@@ -1147,6 +1159,27 @@ struct LifeMoment: Codable, Identifiable {
         default: return "book.fill"
         }
     }
+}
+
+// MARK: - Foods of the Quran Models
+
+struct FoodsData: Codable {
+    let foods: [Food]
+}
+
+struct Food: Codable, Identifiable {
+    let id: String
+    let name: String
+    let emoji: String
+    let illustrationAsset: String
+    let surahNumber: Int
+    let verseNumber: Int
+    let narration: String
+    let narrationSource: String
+    let sunnahTip: String
+    let nutritionNote: String
+
+    var verseReference: String { "Quran \(surahNumber):\(verseNumber)" }
 }
 
 // MARK: - Questions & Answers Models
@@ -1586,6 +1619,9 @@ struct DailyDua: Codable, Identifiable {
     let translationUr: String
     let source: String
     let category: String
+    /// Set for duas drawn from the Qur'an, so the source can link to the verse. nil otherwise.
+    let surahNumber: Int?
+    let verseNumber: Int?
 
     func situation(for language: CommentaryLanguage) -> String {
         switch language {
@@ -1593,6 +1629,12 @@ struct DailyDua: Codable, Identifiable {
         case .urdu: return situationUr
         default: return situationEn
         }
+    }
+
+    /// The Qur'an verse this dua is drawn from, if any.
+    var quranVerse: (surah: Int, verse: Int)? {
+        if let s = surahNumber, let v = verseNumber { return (s, v) }
+        return nil
     }
 
     func translation(for language: CommentaryLanguage) -> String {
@@ -1604,11 +1646,14 @@ struct DailyDua: Codable, Identifiable {
 
     var categoryIcon: String {
         switch category.lowercased() {
-        case "daily": return "sun.max.fill"
-        case "eating": return "fork.knife"
-        case "travel": return "car.fill"
-        case "worship": return "moon.stars.fill"
-        case "other": return "sparkles"
+        case "health": return "heart.fill"
+        case "provision": return "leaf.fill"
+        case "guidance": return "signpost.right.fill"
+        case "faith": return "flame.fill"
+        case "forgiveness": return "drop.fill"
+        case "family": return "house.fill"
+        case "protection": return "shield.fill"
+        case "devotion": return "moon.stars.fill"
         default: return "hands.sparkles.fill"
         }
     }

@@ -379,6 +379,7 @@ struct AhlulbaytVerseCard: View {
                             .foregroundColor(themeManager.accentColor)
                     }
                     Spacer()
+                    VerseRecitationButton(surahNumber: ahlulbaytVerse.surahNumber, verseNumber: ahlulbaytVerse.verseNumber, size: 32)
                     if ahlulbaytVerse.isPrimary {
                         Text("PRIMARY")
                             .font(.system(size: 8.5, weight: .bold)).tracking(1)
@@ -406,9 +407,9 @@ struct AhlulbaytVerseCard: View {
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
                     Text(ahlulbaytVerse.context)
-                        .font(.system(size: 13))
+                        .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(2)
+                        .lineSpacing(2 * readingSettings.scale)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -461,6 +462,8 @@ struct AhlulbaytVerseCard: View {
                 }
 
                 Spacer()
+
+                VerseRecitationButton(surahNumber: ahlulbaytVerse.surahNumber, verseNumber: ahlulbaytVerse.verseNumber, size: 32)
 
                 if ahlulbaytVerse.isPrimary {
                     Text("PRIMARY")
@@ -515,9 +518,9 @@ struct AhlulbaytVerseCard: View {
                 }
 
                 Text(ahlulbaytVerse.context)
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(4)
+                    .lineSpacing(4 * readingSettings.scale)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)

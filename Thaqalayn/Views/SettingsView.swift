@@ -14,6 +14,7 @@ struct SettingsView: View {
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var voiceManager = TTSVoiceManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.presentationMode) var presentationMode
     @State private var showingAuthentication = false
     @State private var showingClearDataAlert = false
@@ -155,6 +156,37 @@ struct SettingsView: View {
                                     }
                                     .pickerStyle(.segmented)
                                     .frame(width: 150)
+                                }
+                                .padding(16)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(themeManager.glassEffect)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 12)
+                                                .stroke(themeManager.strokeColor, lineWidth: 1)
+                                        )
+                                )
+                            }
+
+                            // Language Section
+                            SettingsSection(title: "Language") {
+                                VStack(alignment: .leading, spacing: 14) {
+                                    HStack(spacing: 12) {
+                                        Image(systemName: "globe")
+                                            .font(.system(size: 18, weight: .semibold))
+                                            .foregroundColor(themeManager.accentColor)
+                                            .frame(width: 28)
+                                        VStack(alignment: .leading, spacing: 2) {
+                                            Text("App Language")
+                                                .font(.system(size: 16, weight: .semibold))
+                                                .foregroundColor(themeManager.primaryText)
+                                            Text("Translations, duas & commentary")
+                                                .font(.system(size: 13, weight: .medium))
+                                                .foregroundColor(themeManager.secondaryText)
+                                        }
+                                        Spacer()
+                                    }
+                                    languagePicker
                                 }
                                 .padding(16)
                                 .background(
@@ -500,6 +532,7 @@ struct SettingsView: View {
                 ScrollView {
                     VStack(spacing: 26) {
                         emeraldAppearanceSection
+                        emeraldLanguageSection
                         emeraldReadingSection
                         emeraldDailyVerseSection
                         emeraldReadingProgressSection
@@ -547,6 +580,30 @@ struct SettingsView: View {
                     }
                     .pickerStyle(.segmented)
                     .frame(width: 140)
+                }
+                .padding(.vertical, 12)
+                .padding(.horizontal, 14)
+            }
+        }
+    }
+
+    private var emeraldLanguageSection: some View {
+        SettingsSection(title: "Language") {
+            EmCard(cornerRadius: 18) {
+                VStack(alignment: .leading, spacing: 14) {
+                    HStack(spacing: 14) {
+                        EmIconChip(sfSymbol: "globe", size: 44)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("App Language")
+                                .font(EmType.serif(19, .semiBold))
+                                .foregroundColor(themeManager.primaryText)
+                            Text("Translations, duas & commentary")
+                                .font(.system(size: 13, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                        }
+                        Spacer(minLength: 8)
+                    }
+                    languagePicker
                 }
                 .padding(.vertical, 12)
                 .padding(.horizontal, 14)
@@ -821,6 +878,26 @@ struct SettingsView: View {
                 }
             }
         }
+    }
+
+    // MARK: - Language picker (writes the global app language)
+
+    private var languageBinding: Binding<CommentaryLanguage> {
+        Binding(
+            get: { languageManager.selectedLanguage },
+            set: { newValue in
+                withAnimation(.easeInOut(duration: 0.2)) { languageManager.setLanguage(newValue) }
+            }
+        )
+    }
+
+    private var languagePicker: some View {
+        Picker("Language", selection: languageBinding) {
+            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { lang in
+                Text(lang.displayName).tag(lang)
+            }
+        }
+        .pickerStyle(.segmented)
     }
 
     // MARK: - Helper Methods

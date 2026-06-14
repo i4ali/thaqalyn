@@ -1,0 +1,172 @@
+{
+  "foods": [
+    {
+      "id": "honey",
+      "name": "Honey",
+      "emoji": "🍯",
+      "illustrationAsset": "food_honey",
+      "surahNumber": 16,
+      "verseNumber": 69,
+      "narration": "Imam al-Ṣādiq (ʿa) pointed to honey as a foremost remedy, echoing the Qur'an's words that in it 'is healing for people.' The Imams encouraged it as a cure taken with intention.",
+      "narrationSource": "al-Kāfī, Kitāb al-Aṭʿima (Bāb al-ʿAsal)",
+      "sunnahTip": "Take a little honey on an empty stomach in the morning.",
+      "nutritionNote": "Natural sugars for quick energy, with antioxidant and antibacterial compounds."
+    },
+    {
+      "id": "dates",
+      "name": "Dates",
+      "emoji": "🌴",
+      "illustrationAsset": "food_dates",
+      "surahNumber": 19,
+      "verseNumber": 25,
+      "narration": "The Ahlul Bayt loved dates and especially praised the ʿajwa date of Madīnah. Breaking the fast with dates is reported as their consistent practice.",
+      "narrationSource": "al-Kāfī, Kitāb al-Aṭʿima (Bāb al-Tamr)",
+      "sunnahTip": "Break your fast with an odd number of fresh dates, then pray.",
+      "nutritionNote": "Natural sugars, fiber, potassium and iron — steady energy without a crash."
+    },
+    {
+      "id": "olive",
+      "name": "Olive & Olive Oil",
+      "emoji": "🫒",
+      "illustrationAsset": "food_olive",
+      "surahNumber": 24,
+      "verseNumber": 35,
+      "narration": "Of the olive the Imams said: eat the oil and anoint yourselves with it, for it comes from a blessed tree — reflecting the Qur'an's 'a blessed olive tree.'",
+      "narrationSource": "al-Kāfī, Kitāb al-Aṭʿima (Bāb al-Zayt)",
+      "sunnahTip": "Use olive oil in food and rub a little on skin and hair.",
+      "nutritionNote": "Heart-friendly monounsaturated fats and vitamin E."
+    },
+    {
+      "id": "fig",
+      "name": "Figs",
+      "emoji": "🟣",
+      "illustrationAsset": "food_fig",
+      "surahNumber": 95,
+      "verseNumber": 1,
+      "narration": "Allah swears by the fig in the Qur'an. Narrations of the Ahlul Bayt praise it for easing the stomach and strengthening the body and bones.",
+      "narrationSource": "Qur'an 95:1; Makārim al-Akhlāq",
+      "sunnahTip": "Eat a few figs; they were said to be closest to a fruit of Paradise.",
+      "nutritionNote": "Fiber, potassium and calcium that aid digestion and bones."
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate",
+      "emoji": "🔴",
+      "illustrationAsset": "food_pomegranate",
+      "surahNumber": 55,
+      "verseNumber": 68,
+      "narration": "Imam al-Bāqir and Imam al-Ṣādiq (ʿa) encouraged eating pomegranate, with its soft pith, reporting that it cleanses the stomach and brightens the heart.",
+      "narrationSource": "al-Kāfī, Kitāb al-Aṭʿima (Bāb al-Rummān)",
+      "sunnahTip": "Eat pomegranate on an empty stomach, including the soft inner pith.",
+      "nutritionNote": "Rich in vitamin C and antioxidants (polyphenols) that support the heart."
+    },
+    {
+      "id": "grapes",
+      "name": "Grapes & Raisins",
+      "emoji": "🍇",
+      "illustrationAsset": "food_grapes",
+      "surahNumber": 16,
+      "verseNumber": 11,
+      "narration": "The Ahlul Bayt recommended raisins, reported to strengthen the body, settle the temperament and clear phlegm.",
+      "narrationSource": "Ṭibb al-A'imma; Makārim al-Akhlāq",
+      "sunnahTip": "Eat a small handful of raisins, especially the red ones.",
+      "nutritionNote": "Concentrated natural sugars, iron and antioxidants — quick energy."
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "emoji": "🥛",
+      "illustrationAsset": "food_milk",
+      "surahNumber": 16,
+      "verseNumber": 66,
+      "narration": "The Qur'an calls it 'pure milk, pleasant.' The Imams encouraged drinking it, noting it strengthens the back, and taught the supplication for increase in it.",
+      "narrationSource": "al-Kāfī, Kitāb al-Ashriba (Bāb al-Laban)",
+      "sunnahTip": "Drink fresh milk; it was a favored drink of the Prophet (ṣ).",
+      "nutritionNote": "Protein, calcium and vitamin D for bones and muscles."
+    },
+    {
+      "id": "fish",
+      "name": "Fish",
+      "emoji": "🐟",
+      "illustrationAsset": "food_fish",
+      "surahNumber": 16,
+      "verseNumber": 14,
+      "narration": "The Qur'an calls the catch of the sea 'fresh meat.' The Imams ate and permitted fish that has scales, while counseling moderation.",
+      "narrationSource": "al-Kāfī, Kitāb al-Aṭʿima",
+      "sunnahTip": "Choose fish that has scales; eat it in moderation.",
+      "nutritionNote": "Lean protein and omega-3 fats that support the heart and brain."
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "emoji": "🫚",
+      "illustrationAsset": "food_ginger",
+      "surahNumber": 76,
+      "verseNumber": 17,
+      "narration": "Ginger (zanjabīl) is named among the drinks of Paradise. Narrations mention it sharpens the mind and aids digestion.",
+      "narrationSource": "Qur'an 76:17; Ṭibb al-A'imma",
+      "sunnahTip": "Take a little ginger to warm the stomach and aid digestion.",
+      "nutritionNote": "Eases nausea and supports digestion; warming and anti-inflammatory."
+    },
+    {
+      "id": "gourd",
+      "name": "Gourd & Squash",
+      "emoji": "🎃",
+      "illustrationAsset": "food_gourd",
+      "surahNumber": 37,
+      "verseNumber": 146,
+      "narration": "Gourd (yaqṭīn / dubbāʾ) grew over the Prophet Yūnus (ʿa). The Prophet Muḥammad (ṣ) is reported to have loved it, and narration relates that it strengthens the heart and mind.",
+      "narrationSource": "Qur'an 37:146; Makārim al-Akhlāq",
+      "sunnahTip": "Add gourd or squash to your soups and stews.",
+      "nutritionNote": "Hydrating, light and rich in vitamin A; gentle on digestion."
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "emoji": "🫘",
+      "illustrationAsset": "food_lentils",
+      "surahNumber": 2,
+      "verseNumber": 61,
+      "narration": "Lentils (ʿadas) are reported as blessed and softening to the heart, bringing tears of humility; the Ahlul Bayt encouraged them.",
+      "narrationSource": "Qur'an 2:61; Makārim al-Akhlāq",
+      "sunnahTip": "Include lentils in your meals; they were called a food of the righteous.",
+      "nutritionNote": "Plant protein, fiber and iron — filling and steadying."
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "emoji": "🥒",
+      "illustrationAsset": "food_cucumber",
+      "surahNumber": 2,
+      "verseNumber": 61,
+      "narration": "Among the foods named in the Qur'an (2:61). The Prophet (ṣ) is reported to have eaten cucumber together with dates, balancing its coolness.",
+      "narrationSource": "Qur'an 2:61; Makārim al-Akhlāq",
+      "sunnahTip": "Eat cucumber with a little date or honey to balance its coolness.",
+      "nutritionNote": "Very hydrating and cooling, with light fiber and minerals."
+    },
+    {
+      "id": "basil",
+      "name": "Basil & Fragrant Herbs",
+      "emoji": "🌿",
+      "illustrationAsset": "food_basil",
+      "surahNumber": 55,
+      "verseNumber": 12,
+      "narration": "Fragrant herbs (rayḥān) are named among Allah's bounties. The Imams loved good scent and encouraged sweet basil, disliking the refusal of a gift of fragrance.",
+      "narrationSource": "Qur'an 55:12; al-Kāfī (Bāb al-Rayḥān)",
+      "sunnahTip": "Keep and smell sweet basil; do not refuse a gift of fragrance.",
+      "nutritionNote": "Aromatic herbs aid appetite and digestion and lift the mood."
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "emoji": "💧",
+      "illustrationAsset": "food_water",
+      "surahNumber": 21,
+      "verseNumber": 30,
+      "narration": "From water Allah made every living thing. The Imams taught the manners of drinking — in three breaths, beginning with His name and ending with praise.",
+      "narrationSource": "Qur'an 21:30; al-Kāfī, Kitāb al-Ashriba",
+      "sunnahTip": "Sip water in three breaths; say Bismillāh before and al-ḥamdu lillāh after.",
+      "nutritionNote": "The basis of life and every bodily function — stay well-hydrated."
+    }
+  ]
+}

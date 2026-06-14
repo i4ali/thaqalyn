@@ -169,9 +169,16 @@ private struct PinnedVerseView: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("\(surah.englishName.uppercased()) · \(verse.number)")
-                .font(.system(size: 11, weight: .bold)).tracking(2)
-                .foregroundColor(themeManager.accentColor)
+            ZStack {
+                Text("\(surah.englishName.uppercased()) · \(verse.number)")
+                    .font(.system(size: 11, weight: .bold)).tracking(2)
+                    .foregroundColor(themeManager.accentColor)
+
+                HStack {
+                    Spacer()
+                    VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 34)
+                }
+            }
 
             ScrollView(.vertical, showsIndicators: false) {
                 HighlightedArabicText(
@@ -268,7 +275,6 @@ struct QuickOverviewView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 24) {
                 conceptBubblesGrid
-                languageSelectorView
                 readFullTafsirCTA
             }
             .padding(.horizontal, 24).padding(.top, 16).padding(.bottom, 40)
@@ -309,7 +315,6 @@ struct QuickOverviewView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 22) {
                 conceptBubblesGrid
-                languageSelectorView
                 readFullTafsirCTA
             }
             .padding(.horizontal, 20).padding(.top, 16).padding(.bottom, 40)
@@ -466,35 +471,6 @@ struct QuickOverviewView: View {
                     withAnimation(.spring(response: 0.32, dampingFraction: 0.82)) {
                         selectedConcept = concept
                     }
-                }
-            }
-        }
-    }
-
-    // MARK: - Language Selector
-
-    private var languageSelectorView: some View {
-        HStack(spacing: 12) {
-            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
-                Button(action: { languageManager.setLanguage(language) }) {
-                    Text(language.displayName)
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(languageManager.selectedLanguage == language ? .white : themeManager.tertiaryText)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background {
-                            if languageManager.selectedLanguage == language {
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(themeManager.accentGradient)
-                            } else {
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(Color.clear)
-                            }
-                        }
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(themeManager.strokeColor, lineWidth: languageManager.selectedLanguage == language ? 0 : 1)
-                        )
                 }
             }
         }
