@@ -1,0 +1,30 @@
+{
+  "slug": "aalimran-3-7",
+  "verse_ref": "Sūrat Āl ʿImrān · 3:7",
+  "arabic": "وَمَا يَعْلَمُ تَأْوِيلَهُۥٓ إِلَّا ٱللَّهُ ۗ وَٱلرَّٰسِخُونَ فِى ٱلْعِلْمِ يَقُولُونَ ءَامَنَّا بِهِۦ",
+  "translation": "“And no one knows its true meaning except God. And those firm in knowledge say, ‘We believe in it.’”",
+  "order": ["sunni", "shia"],
+  "readings": {
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Most Sunni scholars put a full stop after God: so only God knows what the unclear verses truly mean, and the deeply learned just believe.",
+      "source": "Tafsīr al-Ṭabarī · Ibn Kathīr"
+    },
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia scholars read straight on: so God and the deeply learned both know that meaning, above all the Prophet and the Imams.",
+      "source": "al-Mīzān (Ṭabāṭabāʾī) · Majmaʿ al-Bayān"
+    }
+  },
+  "voiceover": {
+    "hook": "Two of Islam's great traditions read this verse differently — and it all comes down to where you put a single full stop.",
+    "reference": "Surah Aal Imran, verse seven.",
+    "payoff": "Same words. Different weight.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "show_payoff_text": false,
+  "show_closing_text": false,
+  "caption_desc": "One verse — and scholars don't agree where the sentence ends 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>",
+  "show_captions": true
+}

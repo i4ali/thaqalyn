@@ -1,0 +1,30 @@
+{
+  "slug": "arraad-13-28",
+  "verse_ref": "Sūrat al-Raʿd · 13:28",
+  "arabic": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+  "translation": "“Those who believe, and whose hearts find rest in the remembrance of God. Truly, in the remembrance of God do hearts find rest.”",
+  "order": ["sunni", "shia"],
+  "readings": {
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Sunni tafsir reads the remembrance as turning to God Himself, His names and His promise, and that calms an anxious heart.",
+      "source": "Tafsīr Ibn Kathīr · al-Qurṭubī"
+    },
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia tafsir reads the remembrance as also pointing to the Prophet's Household: a narration names them the remembrance that brings the heart to rest.",
+      "source": "Tafsīr al-Qummī · al-Burhān"
+    }
+  },
+  "voiceover": {
+    "hook": "What calms an anxious heart? This verse answers — and two traditions hear that remembrance differently.",
+    "reference": "Surah ar-Raad, verse twenty-eight.",
+    "payoff": "Same words. Different weight.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "show_payoff_text": false,
+  "show_closing_text": false,
+  "caption_desc": "The cure for an anxious heart 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>",
+  "show_captions": true
+}

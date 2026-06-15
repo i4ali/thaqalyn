@@ -1,0 +1,33 @@
+{
+  "slug": "annisa-4-59",
+  "verse_ref": "Sūrat al-Nisāʾ · 4:59",
+  "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ أَطِيعُوا۟ ٱللَّهَ وَأَطِيعُوا۟ ٱلرَّسُولَ وَأُو۟لِى ٱلْأَمْرِ مِنكُمْ",
+  "translation": "“O you who believe, obey God, obey the Messenger, and those in authority among you.”",
+  "order": [
+    "shia",
+    "sunni"
+  ],
+  "readings": {
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Sunni tradition reads it as the community's rulers and scholars — their obedience is conditional, and disputes return to God and the Messenger.",
+      "source": "Tafsīr al-Ṭabarī · Ibn Kathīr"
+    },
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia tradition reads those in authority as the infallible Imams — their obedience is joined to God's without condition, so they must be divinely appointed.",
+      "source": "al-Mīzān (Ṭabāṭabāʾī) · Majmaʿ al-Bayān"
+    }
+  },
+  "voiceover": {
+    "hook": "One phrase in this verse has been weighed for a thousand years — and two traditions weigh it differently.",
+    "reference": "Surah an-Nisa, verse fifty-nine.",
+    "payoff": "Same words. Different weight.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "show_payoff_text": false,
+  "show_closing_text": false,
+  "caption_desc": "Ūlū al-Amr — one verse, two readings 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>",
+  "show_captions": true
+}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!--
+  THE SHARED VERSE — episode template (preview + render source)
+  ==================================================================
+  ONE file, three modes (toggled by URL query params):
+
+    (no params)   Demo. Phone frame + TikTok chrome (handle, caption,
+                  hashtags, "For You" bar, music line). Tap to play.
+                  This chrome is DEMONSTRATION ONLY — it shows how the
+                  video sits in the feed. It is NOT part of the export.
+
+    ?render=1     Clean full-bleed 9:16 video — no phone frame, no
+                  chrome. Autoplays. Use to eyeball / screen-record the
+                  actual video.
+
+    ?frame=<ms>   Renders ONE exact frame (static) at time <ms>. This is
+                  what the capture pipeline screenshots, frame by frame.
+
+  A single seek(t) function is the one source of truth for the whole
+  animation — the demo loop and the frame export both call it, so the
+  preview is pixel-faithful to the export.
+
+  ------------------------------------------------------------------
+  TO MAKE A NEW EPISODE, do NOT hand-edit this file. Author an episode
+  JSON (see episodes/almaidah-5-55.json) and run:
+
+      python scripts/render_episode.py episodes/<slug>.json
+
+  The pipeline injects window.EPISODE (content + audio-driven beat times)
+  at the EPISODE-INJECT marker (in <head>) and base64-embeds the bundled fonts,
+  then screenshots each frame. This file ships pre-filled with Sūrat
+  al-Māʾidah 5:55 so it previews standalone and is the reference layout.
+
+  CHANNEL-FIXED (never change per episode):
+    - gold = Sunni, teal = Shia (never red/blue)
+    - equal length + structure for the two readings
+    - hook line, "Same words. Different weight.", closing question
+    - no app/product pitch; Arabic shown, never AI-recited
+  ==================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Shared Verse — episode</title>
+
+<!--EPISODE-INJECT-->
+
+<!-- Demo fonts (network). The render pipeline replaces the block between
+     the FONT-FACE markers with base64-embedded bundled Amiri so captured
+     frames need no network and render identically every time. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/*FONT-FACE-START*/
+@font-face{font-family:"AmiriLocal";font-style:normal;font-weight:400;src:url("assets/fonts/Amiri-Regular.ttf") format("truetype")}
+@font-face{font-family:"AmiriLocal";font-style:normal;font-weight:700;src:url("assets/fonts/Amiri-Bold.ttf") format("truetype")}
+@font-face{font-family:"AmiriLocal";font-style:italic;font-weight:400;src:url("assets/fonts/Amiri-Italic.ttf") format("truetype")}
+@font-face{font-family:"AmiriLocal";font-style:italic;font-weight:700;src:url("assets/fonts/Amiri-BoldItalic.ttf") format("truetype")}
+/*FONT-FACE-END*/
+
+  :root{
+    --void:#07101f;
+    --teal:#45c4b8;
+    --gold:#e3c281;
+    --parchment:#f4ecd8;
+    --muted:rgba(244,236,216,.58);
+    --ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --arabic:"AmiriLocal","Amiri","Scheherazade New","Traditional Arabic",serif;
+    --scale:.84;            /* demo scale; render mode overrides to 3 (360x640 -> 1080x1920) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:var(--ui);
+    background:
+      radial-gradient(120% 90% at 50% -10%, #15243a 0%, transparent 55%),
+      linear-gradient(180deg,#060c16 0%, #0a1020 100%);
+    color:var(--parchment);
+    min-height:100%;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:26px;padding:40px 18px 56px;
+  }
+
+  .intro{max-width:340px;text-align:center}
+  .intro .eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:8px}
+  .intro h1{font-family:var(--arabic);font-weight:700;font-size:25px;letter-spacing:.01em;color:var(--parchment)}
+  .intro p{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.5}
+
+  /* ---------- phone (demo chrome) ---------- */
+  .phone{
+    border-radius:40px;background:#0b0f17;padding:9px;
+    box-shadow:0 0 0 2px #1c2433, 0 30px 70px -20px rgba(0,0,0,.8), 0 0 90px -30px rgba(69,196,184,.3);
+    position:relative;flex:none;
+  }
+  .notch{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:96px;height:24px;background:#0b0f17;border-radius:0 0 16px 16px;z-index:40}
+  .notch::after{content:"";position:absolute;top:9px;right:24px;width:7px;height:7px;border-radius:50%;background:#12303a;box-shadow:inset 0 0 0 1.5px #1e4a55}
+
+  /* viewport clips the scaled stage to the right pixel size for each mode */
+  .viewport{width:calc(360px*var(--scale));height:calc(640px*var(--scale));overflow:hidden;border-radius:32px;background:var(--void)}
+  .stage{position:relative;width:360px;height:640px;transform:scale(var(--scale));transform-origin:top left;overflow:hidden;background:var(--void)}
+
+  .cosmos{position:absolute;inset:0;
+    background:
+      radial-gradient(115% 70% at 50% 16%, rgba(69,196,184,.12), transparent 58%),
+      radial-gradient(85% 52% at 50% 11%, rgba(227,194,129,.13), transparent 55%),
+      radial-gradient(150% 100% at 50% 122%, #04110d, transparent 62%),
+      linear-gradient(180deg,#07101f 0%, #0a231f 54%, #050f0d 100%);
+  }
+  .stars,.stars2{position:absolute;inset:-25%;will-change:transform,opacity}
+  .stars{
+    background-image:
+      radial-gradient(1.4px 1.4px at 34px 46px, rgba(244,236,216,.75), transparent),
+      radial-gradient(1px 1px at 140px 104px, rgba(244,236,216,.5), transparent),
+      radial-gradient(1.2px 1.2px at 232px 174px, rgba(227,194,129,.6), transparent),
+      radial-gradient(1px 1px at 92px 232px, rgba(244,236,216,.45), transparent),
+      radial-gradient(1.3px 1.3px at 300px 70px, rgba(69,196,184,.5), transparent),
+      radial-gradient(1px 1px at 60px 360px, rgba(244,236,216,.4), transparent),
+      radial-gradient(1.2px 1.2px at 280px 420px, rgba(227,194,129,.45), transparent);
+    background-size:340px 340px;
+  }
+  .stars2{
+    background-image:
+      radial-gradient(1px 1px at 70px 92px, rgba(244,236,216,.4), transparent),
+      radial-gradient(1px 1px at 208px 46px, rgba(244,236,216,.3), transparent),
+      radial-gradient(1px 1px at 276px 208px, rgba(227,194,129,.35), transparent),
+      radial-gradient(1px 1px at 120px 300px, rgba(244,236,216,.3), transparent);
+    background-size:280px 280px;opacity:.7;
+  }
+
+  .progress-track{position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,.12);z-index:30}
+  .progress{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--teal))}
+  .topbar{position:absolute;top:14px;left:0;right:0;z-index:30;display:flex;justify-content:center;gap:20px;font-size:12px;font-weight:600;color:rgba(244,236,216,.55)}
+  .topbar .active{color:var(--parchment)}
+  .topbar .active::after{content:"";display:block;height:2px;width:18px;margin:5px auto 0;background:var(--parchment);border-radius:2px}
+
+  /* ---------- scene ---------- */
+  .scene{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;padding:80px 20px 104px}
+
+  .verse{flex:none;text-align:center;transform-origin:top center}
+  .verse .ref{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:13px;opacity:0}
+  .verse .arabic{font-family:var(--arabic);font-size:21px;line-height:2;color:var(--parchment);direction:rtl;opacity:0}
+  .verse .trans{font-family:var(--arabic);font-style:italic;font-size:17px;line-height:1.55;color:var(--muted);margin-top:14px;overflow:hidden;opacity:0}
+
+  .mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:8px 0}
+  .panel{border-radius:14px;padding:12px 13px 13px;background:rgba(8,18,24,.55);border:1px solid rgba(255,255,255,.07);opacity:0}
+  .panel .head{display:flex;align-items:center;gap:7px;margin-bottom:6px}
+  .panel .dot{width:8px;height:8px;border-radius:50%;flex:none}
+  .panel .label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+  .panel .body{font-size:11px;line-height:1.45;color:rgba(244,236,216,.88)}
+  .panel .src{margin-top:10px;display:flex;align-items:center;gap:5px;font-size:9px;font-style:italic;letter-spacing:.04em;color:rgba(244,236,216,.52)}
+  .panel .src svg{width:12px;height:12px;flex:none;opacity:.9}
+  .panel.sunni .src svg{color:var(--gold)}
+  .panel.shia  .src svg{color:var(--teal)}
+  .panel.sunni{border-left:3px solid var(--gold)}
+  .panel.sunni .dot{background:var(--gold);box-shadow:0 0 10px var(--gold)}
+  .panel.sunni .label{color:var(--gold)}
+  .panel.shia{border-left:3px solid var(--teal)}
+  .panel.shia .dot{background:var(--teal);box-shadow:0 0 10px var(--teal)}
+  .panel.shia .label{color:var(--teal)}
+
+  .lower{flex:none;text-align:center;min-height:72px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
+  .synth{font-family:var(--arabic);font-style:italic;font-size:16px;color:var(--parchment);opacity:0}
+  .cta{display:inline-flex;align-self:center;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.02em;padding:8px 15px;border-radius:999px;background:linear-gradient(90deg, rgba(227,194,129,.16), rgba(69,196,184,.16));border:1px solid rgba(244,236,216,.2);color:var(--parchment);opacity:0}
+
+  .vo{position:absolute;left:20px;right:20px;bottom:100px;z-index:24;text-align:left;font-size:15px;font-weight:800;line-height:1.3;letter-spacing:-.01em;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.85);opacity:0;pointer-events:none}
+  .vo b{color:var(--gold)}
+  .vo i{color:var(--teal);font-style:normal}
+
+  /* ---------- caption (demo chrome) ---------- */
+  .caption{position:absolute;left:14px;right:18px;bottom:18px;z-index:26}
+  .caption .handle{font-size:13px;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.7)}
+  .caption .desc{font-size:11px;line-height:1.4;margin-top:5px;text-shadow:0 1px 4px rgba(0,0,0,.7);color:rgba(244,236,216,.92)}
+  .caption .tags{color:var(--teal)}
+  .caption .music{display:flex;align-items:center;gap:6px;font-size:10.5px;margin-top:7px;color:rgba(244,236,216,.8)}
+  .caption .music svg{width:12px;height:12px}
+
+  .tap{position:absolute;inset:0;z-index:35;display:flex;align-items:center;justify-content:center;background:rgba(5,10,18,.34);transition:opacity .4s ease}
+  .tap .btn{width:74px;height:74px;border-radius:50%;background:rgba(244,236,216,.14);border:1.5px solid rgba(244,236,216,.55);display:flex;align-items:center;justify-content:center;color:var(--parchment)}
+  .tap .btn svg{width:30px;height:30px;margin-left:3px}
+  .tap .replay-icon{display:none}
+  .tap .hint{position:absolute;bottom:26px;font-size:11px;letter-spacing:.04em;color:rgba(244,236,216,.7)}
+  body.playing .tap{opacity:0;pointer-events:none}
+  body.ended .play-icon{display:none}
+  body.ended .replay-icon{display:block}
+  body.ended .replay-icon svg{margin-left:0}
+
+  /* ---------- beat timeline (demo) ---------- */
+  .beats{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;max-width:560px}
+  .beat{font-size:10px;letter-spacing:.04em;color:var(--muted);border:1px solid rgba(244,236,216,.16);border-radius:999px;padding:5px 10px;white-space:nowrap;transition:all .3s ease}
+  .beat.lit{color:var(--parchment);border-color:rgba(69,196,184,.5);background:rgba(69,196,184,.1)}
+  .sep{color:rgba(244,236,216,.3);font-size:11px}
+  .note{font-size:11px;color:rgba(244,236,216,.4);text-align:center;margin-top:2px}
+
+  /* ================= RENDER MODE: strip all demo chrome ================= */
+  body.render{--scale:3;background:#000;padding:0;gap:0;display:block;overflow:hidden}
+  body.render .intro,body.render .beats,body.render .note,
+  body.render .notch,body.render .progress-track,body.render .topbar,
+  body.render .caption,body.render .tap{display:none!important}
+  body.render .phone{background:none;box-shadow:none;padding:0;border-radius:0}
+  body.render .viewport{border-radius:0}
+  body.render .stage{border-radius:0}
+  body.no-captions .vo{display:none!important}
+</style>
+</head>
+<body>
+
+  <div class="intro">
+    <div class="eyebrow">Episode preview</div>
+    <h1>The Shared Verse</h1>
+    <p>Tap to play. The phone frame, handle and hashtags are demo only — the exported video is the clean 9:16 inside.</p>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="viewport">
+      <div class="stage" id="stage">
+        <div class="cosmos"><div class="stars" id="stars"></div><div class="stars2" id="stars2"></div></div>
+
+        <div class="progress-track"><div class="progress" id="progress"></div></div>
+        <div class="topbar"><span>Following</span><span class="active">For You</span></div>
+
+        <div class="scene">
+          <div class="verse" id="verse">
+            <div class="ref" id="ref"></div>
+            <div class="arabic" id="arabic"></div>
+            <div class="trans" id="trans"></div>
+          </div>
+
+          <!-- panels are built by populate() from EPISODE.content, in reveal/stack order -->
+          <div class="mid" id="mid"></div>
+
+          <div class="lower">
+            <div class="synth" id="synth">Same words. Different weight.</div>
+            <div class="cta" id="cta">Which of these two readings resonates with you?</div>
+          </div>
+        </div>
+
+        <div class="vo" id="vo"></div>
+
+        <!-- caption: DEMO CHROME ONLY (not in export) -->
+        <div class="caption">
+          <div class="handle">@thesharedverse</div>
+          <div class="desc" id="capdesc"></div>
+          <div class="music">
+            <svg viewBox="0 0 24 24" fill="#fff"><path d="M9 18V6l10-2v12"/><circle cx="6" cy="18" r="3" fill="#fff"/><circle cx="16" cy="16" r="3" fill="#fff"/></svg>
+            <span>original audio — The Shared Verse</span>
+          </div>
+        </div>
+
+        <div class="tap" id="tap">
+          <div class="btn">
+            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="replay-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+          </div>
+          <div class="hint">tap to play</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="beats" id="beats">
+    <span class="beat">Hook</span><span class="sep">→</span>
+    <span class="beat">Verse + translation</span><span class="sep">→</span>
+    <span class="beat">Reading A</span><span class="sep">→</span>
+    <span class="beat">Reading B</span><span class="sep">→</span>
+    <span class="beat">Payoff</span><span class="sep">→</span>
+    <span class="beat">Question</span>
+  </div>
+  <div class="note">Prototype · interpretations summarized for length</div>
+
+<script>
+  /* ===== EPISODE: content + timeline. The render pipeline replaces this whole
+     object (via the EPISODE-INJECT marker in the head). The default below is
+     the worked example (al-Māʾidah 5:55) so the file previews standalone. ===== */
+  window.EPISODE = window.EPISODE || {
+    content: {
+      verse_ref: "Sūrat al-Māʾidah · 5:55",
+      arabic: "إِنَّمَا وَلِيُّكُمُ ٱللَّهُ وَرَسُولُهُۥ وَٱلَّذِينَ ءَامَنُوا۟ ٱلَّذِينَ يُقِيمُونَ ٱلصَّلَوٰةَ وَيُؤْتُونَ ٱلزَّكَوٰةَ وَهُمْ رَٰكِعُونَ",
+      translation: "“Your guardian is only God, His Messenger, and those who believe — who keep up prayer and give charity while bowing.”",
+      order: ["sunni","shia"],
+      readings: {
+        sunni: { label:"Sunni emphasis",
+          body:"Guardianship belongs to God, His Messenger, and the believers as a whole. Most Sunni scholars read “while bowing” as a sign of the believers’ humility and devotion — describing the community’s character, not naming a single successor.",
+          source:"Tafsīr Ibn Kathīr · al-Qurṭubī" },
+        shia: { label:"Shia emphasis",
+          body:"Read as Āyat al-Wilāyah. “Those who give charity while bowing” points to Imam ʿAlī, who gave his ring to a beggar during rukūʿ — marking him as the believers’ divinely-appointed guardian after the Prophet.",
+          source:"al-Mīzān (Ṭabāṭabāʾī) · Majmaʿ al-Bayān" }
+      },
+      caption_desc: "Āyat al-Wilāyah — one verse, two readings 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>"
+    },
+    beats: { hook:0, verse:3000, readingA:9000, readingB:16000, payoff:23000, question:27000 },
+    end: 30000,
+    captions: {
+      hook: "How do two of Islam’s great traditions read the same verse?",
+      readingA: "First — the <b>Sunni</b> reading.",
+      readingB: "And the <i>Shia</i> reading."
+    },
+    showCaptions: true
+  };
+
+  const E   = window.EPISODE;
+  const B   = E.beats;
+  const END = E.end;
+  if (E.showCaptions === false) document.body.classList.add('no-captions');
+
+  const $ = id => document.getElementById(id);
+  const stage=$('stage'), progress=$('progress'), verse=$('verse'),
+        ref=$('ref'), arabic=$('arabic'), trans=$('trans'),
+        synth=$('synth'), cta=$('cta'), vo=$('vo'),
+        starsA=$('stars'), starsB=$('stars2');
+  if (E.showSynth === false) synth.style.display = 'none';   // hide "Same words. Different weight." (audio still plays)
+  if (E.showCta   === false) cta.style.display   = 'none';   // hide the closing pill (audio still plays)
+
+  // ---- fill DOM from EPISODE.content (one source of truth for the pipeline) ----
+  const SRC_ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 6c-2.5-1.2-5-1.2-8 0v13c3-1.2 5.5-1.2 8 0"/><path d="M12 6c2.5-1.2 5-1.2 8 0v13c-3-1.2-5.5-1.2-8 0"/></svg>';
+  function populate(){
+    const c=E.content; if(!c) return;
+    ref.textContent=c.verse_ref;
+    arabic.textContent=c.arabic;
+    if(c.transWords && c.transWords.length){
+      trans.innerHTML = c.transWords.map(w=>'<span class="tw">'+w.w+'</span>').join(' ');
+    } else {
+      trans.innerHTML = c.translation;
+    }
+    const mid=$('mid'); mid.innerHTML='';
+    c.order.forEach((trad,i)=>{
+      const r=c.readings[trad];
+      const p=document.createElement('div');
+      p.className='panel '+trad; p.dataset.reveal=i;
+      const bodyHtml = (r.bodyWords && r.bodyWords.length)
+        ? r.bodyWords.map(w=>'<span class="bw">'+w.w+'</span>').join(' ')
+        : r.body;
+      p.innerHTML='<div class="head"><span class="dot"></span><span class="label">'+r.label+'</span></div>'+
+                  '<div class="body">'+bodyHtml+'</div>'+
+                  '<div class="src">'+SRC_ICON+'<span>'+r.source+'</span></div>';
+      mid.appendChild(p);
+    });
+    const cd=$('capdesc'); if(cd&&c.caption_desc) cd.innerHTML=c.caption_desc;
+    if(c.cta){ const ce=$('cta'); if(ce) ce.textContent=c.cta; }
+  }
+  populate();
+  const transWords=(E.content&&E.content.transWords)||[];
+  const transSpans=[...trans.querySelectorAll('.tw')];
+  let panels=[...document.querySelectorAll('.panel')].sort((a,b)=>(+a.dataset.reveal)-(+b.dataset.reveal));
+  const panelHL = panels.map((p,i)=>{
+    const trad = p.classList.contains('sunni')?'sunni':'shia';
+    const r = (E.content&&E.content.readings&&E.content.readings[trad])||{};
+    return { spans:[...p.querySelectorAll('.bw')], words:r.bodyWords||[],
+             beatStart:i===0?B.readingA:B.readingB,
+             accent:trad==='sunni'?'227,194,129':'69,196,184' };   // gold | teal
+  });
+  const beatEls=[...document.querySelectorAll('.beat')];
+
+  // ---- easing helpers ----
+  const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+  const easeOut=p=>1-Math.pow(1-clamp(p,0,1),3);
+  const lerp=(a,b,p)=>a+(b-a)*p;
+  const ramp=(t,start,dur)=>t<=start?0:t>=start+dur?1:easeOut((t-start)/dur);
+  const lin=(t,start,dur)=>clamp((t-start)/dur,0,1);
+
+  // ---- the ONE source of truth: render exact visual state at time t ----
+  function seek(t){
+    starsA.style.transform=`translateY(${-(t/90000)*60}px)`;
+    starsB.style.transform=`translateY(${ (t/140000)*40}px)`;
+    starsA.style.opacity=(0.65+0.20*Math.cos(t/950)).toFixed(3);
+    starsB.style.opacity=(0.50+0.18*Math.cos(t/1500+1.2)).toFixed(3);
+
+    const vIn=ramp(t,B.hook+150,900);
+    const shrink=ramp(t,B.readingA,800);
+    const conv=ramp(t,B.payoff,650);
+
+    ref.style.opacity=vIn;
+    arabic.style.opacity=vIn;
+    verse.style.transform=`scale(${lerp(1,0.86,shrink)}) translateY(${lerp(0,-6,shrink)}px)`;
+    arabic.style.transform=`translateY(${lerp(10,0,vIn)}px)`;
+    arabic.style.textShadow=`0 0 ${lerp(26,40,conv)}px rgba(227,194,129,${lerp(.32,.6,conv).toFixed(3)})`;
+
+    // Keep the verse translation on screen as a quiet reference through the
+    // readings (so viewers see what the two readings refer to) — dim it and
+    // shrink the font (reclaims layout room for the panels) instead of collapsing.
+    trans.style.opacity=vIn*lerp(1,0.6,shrink);
+    trans.style.fontSize=`${lerp(17,12.5,shrink)}px`;
+    trans.style.maxHeight=`${lerp(210,150,shrink)}px`;
+    trans.style.marginTop=`${lerp(14,9,shrink)}px`;
+    highlightTrans(t);
+
+    applyPanel(panels[0],ramp(t,B.readingA,700),conv);
+    applyPanel(panels[1],ramp(t,B.readingB,700),conv);
+    panelHL.forEach(h=>highlightPanel(h,t));
+
+    const sIn=ramp(t,B.payoff,700);
+    synth.style.opacity=sIn; synth.style.transform=`translateY(${lerp(8,0,sIn)}px)`;
+    const cIn=ramp(t,B.question,600);
+    cta.style.opacity=cIn; cta.style.transform=`translateY(${lerp(8,0,cIn)}px)`;
+
+    paintCaption(t);
+    progress.style.width=`${clamp(t/END,0,1)*100}%`;
+    litBeat(t);
+  }
+
+  function applyPanel(p,inF,conv){
+    if(!p) return;
+    p.style.opacity=inF;
+    p.style.transform=`translateY(${lerp(16,0,inF)}px)`;
+    if(conv>0){
+      const col=p.classList.contains('sunni')?'227,194,129':'69,196,184';
+      p.style.boxShadow=`-6px 0 24px -10px rgba(${col},${(.9*conv).toFixed(3)}), 0 0 0 1px rgba(${col},${(.25*conv).toFixed(3)})`;
+    } else { p.style.boxShadow='none'; }
+  }
+
+  function highlightPanel(h,t){
+    if(!h.spans.length) return;
+    const el = t - h.beatStart;                       // ms into this reading's clip
+    for(let i=0;i<h.spans.length;i++){
+      const w=h.words[i]; if(!w) continue;
+      const lit=clamp((el-w.s)/130,0,1);               // brighten as each word is spoken
+      h.spans[i].style.color='rgba(244,236,216,'+lerp(0.42,0.96,lit).toFixed(3)+')';
+      h.spans[i].style.textShadow=(el>=w.s&&el<w.e)?'0 0 12px rgba('+h.accent+',.85)':'none';  // accent glow
+    }
+  }
+
+  function highlightTrans(t){
+    if(!transSpans.length) return;
+    const el = t - B.verse;                          // ms into the verse clip (incl. the spoken reference)
+    for(let i=0;i<transSpans.length;i++){
+      const w = transWords[i];
+      const lit = clamp((el - w.s)/130, 0, 1);        // each word brightens as it's spoken
+      transSpans[i].style.color = 'rgba(244,236,216,'+lerp(0.38,1,lit).toFixed(3)+')';
+      transSpans[i].style.textShadow = (el>=w.s && el<w.e) ? '0 0 12px rgba(244,236,216,.55)' : 'none';
+    }
+  }
+
+  function paintCaption(t){
+    const C=E.captions||{};
+    const W=[
+      {s:B.hook+150,e:B.verse-200,html:C.hook},
+      {s:B.readingA,e:B.readingB-200,html:C.readingA},
+      {s:B.readingB,e:B.payoff-200,html:C.readingB},
+    ].filter(w=>w.html);
+    let html='',op=0;
+    for(const w of W){
+      if(t>=w.s-50 && t<=w.e+250){ html=w.html; op=Math.min(lin(t,w.s,200),1-lin(t,w.e,200)); break; }
+    }
+    if(html && op>0.01){ if(vo.innerHTML!==html) vo.innerHTML=html; vo.style.opacity=op; }
+    else { vo.style.opacity=0; }
+  }
+
+  function litBeat(t){
+    const order=[B.hook,B.verse,B.readingA,B.readingB,B.payoff,B.question];
+    let idx=-1; for(let i=0;i<order.length;i++){ if(t>=order[i]) idx=i; }
+    beatEls.forEach((b,j)=>b.classList.toggle('lit',j===idx));
+  }
+
+  // ---- mode wiring ----
+  const params=new URLSearchParams(location.search);
+  const frameParam=params.get('frame');
+  const captureMode=params.get('capture')==='1';   // CDP drives seek() per frame
+  const renderMode=params.get('render')==='1' || frameParam!==null || captureMode;
+  if(renderMode) document.body.classList.add('render');
+
+  if(captureMode){
+    // idle render surface: populate, wait for fonts, then let the capture
+    // harness call window.seek(t) and screenshot each frame. No autoplay.
+    (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve())
+      .then(()=>{ seek(0); window.__SV_READY=true; });
+  } else if(frameParam!==null){
+    const ms=parseFloat(frameParam);
+    const draw=()=>{ seek(ms); window.__SV_READY=true; };
+    if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(draw); seek(ms); }
+    else { draw(); }
+  } else {
+    seek(0);
+    let raf=null;
+    function play(){
+      cancelAnimationFrame(raf);
+      document.body.classList.remove('ended'); document.body.classList.add('playing');
+      const start=performance.now();
+      (function frame(now){
+        const t=now-start; seek(Math.min(t,END));
+        if(t<END){ raf=requestAnimationFrame(frame); }
+        else { document.body.classList.remove('playing'); document.body.classList.add('ended'); }
+      })(start);
+    }
+    if(renderMode){ (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(play); }
+    else {
+      const tap=$('tap');
+      tap.addEventListener('click',e=>{ e.stopPropagation(); play(); });
+      stage.addEventListener('click',()=>{ if(!document.body.classList.contains('playing')) play(); });
+    }
+  }
+</script>
+</body>
+</html>

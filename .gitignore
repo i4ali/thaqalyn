@@ -135,3 +135,42 @@ video_output/
 
 # Claude Code transient runtime
 .claude/scheduled_tasks.lock
+
+# ── Cleanup 2026-06-15: content/scratch, not app code ──
+
+# Playwright MCP runtime
+.playwright-mcp/
+
+# Scratch handoff files (mockup template, skill drafts)
+/files/
+
+# Stray media dropped at repo root
+/IMG_*.PNG
+/IMG_*.JPG
+/image.png
+/export_*.MOV
+
+# Separate "Shared Verse" video-channel project (not the app)
+/the_shared_verse/
+
+# Throwaway design mockups
+/docs/mockups/
+
+# Onboarding-personalization design scratch (kept local, not committed)
+/docs/superpowers/plans/2026-06-14-onboarding-personalization.md
+/docs/superpowers/specs/2026-06-14-onboarding-personalization-design.md
+
+# Loose content/ad-generation scripts (one-off tooling)
+/scripts/assemble_ad.sh
+/scripts/build_aso_urdu.py
+/scripts/detect_green_quad.py
+/scripts/doodle_talk.py
+/scripts/make_notif_banner.py
+/scripts/nano_banana.py
+/scripts/normalize_doodle_stills.py
+/scripts/screen_composite.py
+/scripts/tts_eleven.py
+
+# Urdu ASO screenshots: keep the 6 final PNGs, ignore intermediates
+/AppStore_Screenshots/ASO/iphone-ur/assets/
+/AppStore_Screenshots/ASO/iphone-ur/captures/

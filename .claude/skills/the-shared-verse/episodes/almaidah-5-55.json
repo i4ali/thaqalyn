@@ -1,0 +1,33 @@
+{
+  "slug": "almaidah-5-55",
+  "verse_ref": "Sūrat al-Māʾidah · 5:55",
+  "arabic": "إِنَّمَا وَلِيُّكُمُ ٱللَّهُ وَرَسُولُهُۥ وَٱلَّذِينَ ءَامَنُوا۟ ٱلَّذِينَ يُقِيمُونَ ٱلصَّلَوٰةَ وَيُؤْتُونَ ٱلزَّكَوٰةَ وَهُمْ رَٰكِعُونَ",
+  "translation": "“Your guardian is only God, His Messenger, and those who believe — who keep up prayer and give charity while bowing.”",
+  "order": ["sunni", "shia"],
+  "readings": {
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Most Sunni scholars read it as the believers as a whole — “while bowing” marks their humility and devotion, not a single successor.",
+      "source": "Tafsīr Ibn Kathīr · al-Qurṭubī"
+    },
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia tradition reads it as Āyat al-Wilāyah — Imam ʿAlī gave his ring to a beggar while bowing, marking him the believers’ guardian.",
+      "source": "al-Mīzān (Ṭabāṭabāʾī) · Majmaʿ al-Bayān"
+    }
+  },
+  "voiceover": {
+    "hook": "How do two of Islam's great traditions read the same verse? Let's look.",
+    "reference": "Surah al-Maaidah, verse fifty-five.",
+    "payoff": "Same words. Different weight.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "pins": {
+    "question": "episodes/pins/almaidah-5-55__question.mp3"
+  },
+  "show_payoff_text": false,
+  "show_closing_text": false,
+  "caption_desc": "Āyat al-Wilāyah — one verse, two readings 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>",
+  "show_captions": true
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "assaffat-37-107",
+  "verse_ref": "Sūrat al-Ṣāffāt · 37:107",
+  "arabic": "وَفَدَيْنَٰهُ بِذِبْحٍ عَظِيمٍ",
+  "translation": "“And We ransomed him with a great sacrifice.”",
+  "order": ["sunni", "shia"],
+  "readings": {
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Sunni tafsir reads the ‘great’ sacrifice as the ram God sent in his place — a mercy beyond doubt accepted, founding the eternal rite of sacrifice.",
+      "source": "Tafsīr Ibn Kathīr · al-Qurṭubī"
+    },
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia narrations read ‘great’ beyond the ram — foreshadowing the supreme sacrifice to come: Imam al-Ḥusayn at Karbala, honouring Ibrahim’s wish to give his dearest.",
+      "source": "Tafsīr al-Qummī · Biḥār al-Anwār"
+    }
+  },
+  "voiceover": {
+    "hook": "A father, in a dream, told to sacrifice his own son — and both submit. But the 'great' sacrifice God sends in his place, two traditions read very differently.",
+    "reference": "Surah as-Saaffaat, verse one hundred and seven, revealed in Mecca.",
+    "payoff": "Same words. Different weight.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "show_payoff_text": false,
+  "show_closing_text": false,
+  "caption_desc": "What makes a sacrifice 'great'? Two traditions, two answers 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>",
+  "show_captions": true
+}
