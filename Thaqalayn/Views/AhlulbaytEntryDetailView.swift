@@ -12,8 +12,17 @@ struct AhlulbaytEntryDetailView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var ahlulbaytManager = AhlulbaytQuranManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
+
+    private var localizedScreenEyebrow: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "أهل البيت في القرآن"
+        case .urdu:   return "قرآن میں اہلِ بیت"
+        default:      return "Ahl al-Bayt in the Quran"
+        }
+    }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
 
@@ -60,13 +69,13 @@ struct AhlulbaytEntryDetailView: View {
                                     .font(.system(size: 20))
                                     .foregroundColor(themeManager.accentColor)
 
-                                Text("AHL AL-BAYT IN THE QURAN")
+                                Text(localizedScreenEyebrow.uppercased())
                                     .font(.system(size: 14, weight: .bold))
                                     .foregroundColor(themeManager.secondaryText)
                                     .tracking(1.2)
                             }
 
-                            Text(entry.title)
+                            Text(entry.title(for: languageManager.selectedLanguage))
                                 .font(.system(size: 24, weight: .bold, design: .rounded))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineSpacing(4)
@@ -86,7 +95,7 @@ struct AhlulbaytEntryDetailView: View {
                     .padding(.top, 20)
 
                     // Ahl al-Bayt Members
-                    if !entry.ahlulbaytMembers.isEmpty {
+                    if !entry.ahlulbaytMembers(for: languageManager.selectedLanguage).isEmpty {
                         VStack(alignment: .leading, spacing: 16) {
                             HStack(alignment: .top, spacing: 8) {
                                 Image(systemName: "person.3.fill")
@@ -100,7 +109,7 @@ struct AhlulbaytEntryDetailView: View {
                             }
 
                             FlowLayout(spacing: 8) {
-                                ForEach(entry.ahlulbaytMembers, id: \.self) { member in
+                                ForEach(entry.ahlulbaytMembers(for: languageManager.selectedLanguage), id: \.self) { member in
                                     Text(member)
                                         .font(.system(size: 14, weight: .semibold))
                                         .foregroundColor(themeManager.accentColor)
@@ -171,10 +180,14 @@ struct AhlulbaytEntryDetailView: View {
                                 .tracking(1.2)
                         }
 
-                        Text(entry.revelationContext)
+                        Text(entry.revelationContext(for: languageManager.selectedLanguage))
                             .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
                             .lineSpacing(6 * readingSettings.scale)
+                            .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                            .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                            .environment(\.layoutDirection,
+                                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                     }
                     .padding(20)
                     .background {
@@ -260,10 +273,10 @@ struct AhlulbaytEntryDetailView: View {
                     .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
 
                     VStack(alignment: .leading, spacing: 7) {
-                        Text("Ahl al-Bayt in the Quran".uppercased())
+                        Text(localizedScreenEyebrow.uppercased())
                             .font(.system(size: 11, weight: .bold)).tracking(3)
                             .foregroundColor(themeManager.accentColor)
-                        Text(entry.title)
+                        Text(entry.title(for: languageManager.selectedLanguage))
                             .font(EmType.serif(30, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .fixedSize(horizontal: false, vertical: true)
@@ -276,10 +289,10 @@ struct AhlulbaytEntryDetailView: View {
             .padding(.top, 12)
 
             // Ahl al-Bayt members
-            if !entry.ahlulbaytMembers.isEmpty {
+            if !entry.ahlulbaytMembers(for: languageManager.selectedLanguage).isEmpty {
                 EmDetailCard(icon: "person.3", label: "Ahl al-Bayt Members") {
                     FlowLayout(spacing: 8) {
-                        ForEach(entry.ahlulbaytMembers, id: \.self) { member in
+                        ForEach(entry.ahlulbaytMembers(for: languageManager.selectedLanguage), id: \.self) { member in
                             Text(member)
                                 .font(.system(size: 13.5, weight: .semibold))
                                 .foregroundColor(themeManager.accentColor)
@@ -318,11 +331,14 @@ struct AhlulbaytEntryDetailView: View {
 
             // Revelation context
             EmDetailCard(icon: "clock", label: "Revelation Context") {
-                Text(entry.revelationContext)
+                Text(entry.revelationContext(for: languageManager.selectedLanguage))
                     .font(EmType.serif(17 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(5 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                    .environment(\.layoutDirection,
+                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             }
 
             // Related entries
@@ -347,6 +363,7 @@ struct AhlulbaytVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
@@ -354,8 +371,18 @@ struct AhlulbaytVerseCard: View {
               let verse = verses["\(ahlulbaytVerse.verseNumber)"] else {
             return nil
         }
-        return (verse.arabicText, verse.translation)
+        // Verse translations exist only in English + Urdu; Arabic/English fall back to English.
+        let translation: String
+        if languageManager.selectedLanguage == .urdu, let urdu = verse.translationUrdu, !urdu.isEmpty {
+            translation = urdu
+        } else {
+            translation = verse.translation
+        }
+        return (verse.arabicText, translation)
     }
+
+    /// Verse translation is Urdu-only (Arabic falls back to English), so RTL only for Urdu.
+    private var verseTranslationIsRTL: Bool { languageManager.selectedLanguage == .urdu }
 
     var surahName: String {
         dataManager.quranData?.surahs.first { $0.number == ahlulbaytVerse.surahNumber }?.englishName ?? "Surah \(ahlulbaytVerse.surahNumber)"
@@ -401,18 +428,24 @@ struct AhlulbaytVerseCard: View {
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(3 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "text.bubble")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(ahlulbaytVerse.context)
+                    Text(ahlulbaytVerse.context(for: languageManager.selectedLanguage))
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
+                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .environment(\.layoutDirection,
+                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                 .background(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(themeManager.accentChip.opacity(0.6))
@@ -498,6 +531,9 @@ struct AhlulbaytVerseCard: View {
                         .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 .padding(20)
 
@@ -517,13 +553,16 @@ struct AhlulbaytVerseCard: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
 
-                Text(ahlulbaytVerse.context)
+                Text(ahlulbaytVerse.context(for: languageManager.selectedLanguage))
                     .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
+                    .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)
+            .environment(\.layoutDirection,
+                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             .background {
                 Rectangle()
                     .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
@@ -572,6 +611,7 @@ struct AhlulbaytVerseCard: View {
 struct RelatedEntryCard: View {
     let entry: AhlulbaytEntry
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var navigateToEntry = false
 
     var body: some View {
@@ -589,7 +629,7 @@ struct RelatedEntryCard: View {
                             .font(.system(size: 10, weight: .bold)).tracking(1.5)
                             .foregroundColor(themeManager.accentColor)
 
-                        Text(entry.title)
+                        Text(entry.title(for: languageManager.selectedLanguage))
                             .font(EmType.serif(17, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(2)
@@ -625,7 +665,7 @@ struct RelatedEntryCard: View {
                         .font(.system(size: 12, weight: .bold))
                         .foregroundColor(themeManager.accentColor)
 
-                    Text(entry.title)
+                    Text(entry.title(for: languageManager.selectedLanguage))
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
@@ -709,19 +749,29 @@ struct FlowLayout: Layout {
         AhlulbaytEntryDetailView(
             entry: AhlulbaytEntry(
                 id: "ab1",
-                title: "Verse of Purification (Ayat al-Tathir)",
-                shortTitle: "Al-Tathir",
+                titleEn: "Verse of Purification (Ayat al-Tathir)",
+                titleAr: "آية التطهير",
+                titleUr: "آیتِ تطہیر",
+                shortTitleEn: "Al-Tathir",
+                shortTitleAr: "آية التطهير",
+                shortTitleUr: "آیتِ تطہیر",
                 category: .purity,
                 verses: [
                     AhlulbaytVerse(
                         surahNumber: 33,
                         verseNumber: 33,
-                        context: "Allah's declaration of the purity of the Prophet's family",
+                        contextEn: "Allah's declaration of the purity of the Prophet's family",
+                        contextAr: "إعلان الله طهارة أهل بيت النبي (ع)",
+                        contextUr: "اللہ کی طرف سے اہلِ بیت کی طہارت کا اعلان",
                         isPrimary: true
                     )
                 ],
-                ahlulbaytMembers: ["Prophet Muhammad (ﷺ)", "Imam Ali (ع)", "Lady Fatimah (ع)", "Imam Hasan (ع)", "Imam Husayn (ع)"],
-                revelationContext: "This verse was revealed specifically about the five members of the Prophet's family.",
+                ahlulbaytMembersEn: ["Prophet Muhammad", "Ali ibn Abi Talib", "Fatimah az-Zahra", "Hasan ibn Ali", "Husayn ibn Ali"],
+                ahlulbaytMembersAr: ["النبي محمد (ص)", "علي بن أبي طالب (ع)", "فاطمة الزهراء (ع)", "الحسن بن علي (ع)", "الحسين بن علي (ع)"],
+                ahlulbaytMembersUr: ["پیغمبر اکرم (ص)", "علی ابن ابی طالب (ع)", "فاطمہ زہرا (س)", "امام حسن (ع)", "امام حسین (ع)"],
+                revelationContextEn: "This verse was revealed specifically about the five members of the Prophet's family.",
+                revelationContextAr: "نزلت هذه الآية خصيصًا في الخمسة من أهل بيت النبي (ع).",
+                revelationContextUr: "یہ آیت خاص طور پر پیغمبر کے پانچ اہلِ بیت کے بارے میں نازل ہوئی۔",
                 relatedEntries: []
             )
         )

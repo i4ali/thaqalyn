@@ -2,165 +2,219 @@
   "categories": [
     {
       "id": "obligation",
-      "title": "Obligation of Fasting",
+      "titleEn": "Obligation of Fasting",
+      "titleAr": "فريضة الصيام",
+      "titleUr": "روزے کی فرضیت",
       "icon": "book.fill",
-      "description": "The foundational verses establishing fasting as an obligation for believers, including the command and its connection to taqwa.",
+      "descriptionEn": "The foundational verses establishing fasting as an obligation for believers, including the command and its connection to taqwa.",
+      "descriptionAr": "الآيات التأسيسية التي تُرسي الصيامَ فريضةً على المؤمنين، وتتضمّن الأمرَ به وصلتَه بالتقوى.",
+      "descriptionUr": "یہ وہ بنیادی آیات ہیں جن میں اللہ تعالیٰ نے اہلِ ایمان پر روزہ فرض قرار دیا ہے، اس حکم کا پس منظر بیان کیا ہے اور تقویٰ کو اس کا اصل مقصد ٹھہرایا ہے۔",
       "verses": [
         {
           "id": "f1",
           "surahNumber": 2,
           "verseNumber": 183,
-          "relevanceNote": "The primary verse prescribing fasting for believers, connecting it to previous nations and emphasizing taqwa as its purpose.",
+          "relevanceNoteEn": "The primary verse prescribing fasting for believers, connecting it to previous nations and emphasizing taqwa as its purpose.",
+          "relevanceNoteAr": "الآية المحورية التي تفرض الصيام على المؤمنين، وتربطه بما فُرض على الأمم السابقة، وتجعل التقوى غايتَه الكبرى: «لَعَلَّكُمْ تَتَّقُونَ».",
+          "relevanceNoteUr": "یہ وہ بنیادی آیت ہے جس میں اہلِ ایمان پر روزہ فرض کیا گیا، پچھلی امتوں سے اس کا تسلسل جوڑا گیا، اور تقویٰ کو اس کا اصل مقصد قرار دیا گیا۔",
           "isKeyVerse": true
         },
         {
           "id": "f2",
           "surahNumber": 2,
           "verseNumber": 184,
-          "relevanceNote": "Specifies fasting is for a counted number of days, with provisions for illness and travel.",
+          "relevanceNoteEn": "Specifies fasting is for a counted number of days, with provisions for illness and travel.",
+          "relevanceNoteAr": "تُحدِّد أن الصيام أيامٌ معدودات، وتُقرّر رخصةً لمن كان مريضًا أو على سفر بأن يقضيَ في أيام أُخر.",
+          "relevanceNoteUr": "یہ آیت بتاتی ہے کہ روزہ گنتی کے چند مقررہ دنوں کا ہے، اور بیماری یا سفر کی حالت میں رخصت دی گئی ہے۔",
           "isKeyVerse": true
         },
         {
           "id": "f3",
           "surahNumber": 2,
           "verseNumber": 185,
-          "relevanceNote": "Identifies Ramadan as the month of fasting, the month the Quran was revealed, emphasizing guidance and criterion.",
+          "relevanceNoteEn": "Identifies Ramadan as the month of fasting, the month the Quran was revealed, emphasizing guidance and criterion.",
+          "relevanceNoteAr": "تُعيّن رمضانَ شهرًا للصيام، وتُعرّفه بأنه الشهر الذي أُنزل فيه القرآن هدىً للناس وفرقانًا بين الحق والباطل.",
+          "relevanceNoteUr": "اس آیت میں رمضان کو روزے کا مہینہ قرار دیا گیا ہے — وہ مبارک مہینہ جس میں قرآنِ کریم نازل ہوا، جو ہدایت اور حق و باطل میں فرق کرنے والا ہے۔",
           "isKeyVerse": true
         }
       ]
     },
     {
       "id": "exemptions",
-      "title": "Exemptions & Provisions",
+      "titleEn": "Exemptions & Provisions",
+      "titleAr": "الإعفاءات والرخص",
+      "titleUr": "رخصتیں اور احکام",
       "icon": "heart.circle.fill",
-      "description": "Verses detailing who is exempt from fasting and the provisions for travelers, the sick, and those facing hardship.",
+      "descriptionEn": "Verses detailing who is exempt from fasting and the provisions for travelers, the sick, and those facing hardship.",
+      "descriptionAr": "آيات تُفصّل من يُعفى من الصيام، وما شُرع من رخص للمسافر والمريض وذوي المشقّة.",
+      "descriptionUr": "یہ آیات بتاتی ہیں کہ کن لوگوں کو روزے سے رخصت ہے — مسافر، مریض، اور مشقت میں مبتلا افراد — اور اللہ تعالیٰ نے کیا آسانیاں عطا فرمائی ہیں۔",
       "verses": [
         {
           "id": "f4",
           "surahNumber": 2,
           "verseNumber": 184,
-          "relevanceNote": "Details exemptions: illness, travel, and the option for those with difficulty to feed the poor instead.",
+          "relevanceNoteEn": "Details exemptions: illness, travel, and the option for those with difficulty to feed the poor instead.",
+          "relevanceNoteAr": "تُفصّل أحكام الإعفاء: المرض والسفر، وتُتيح لمن يُطيقه بمشقّة بالغة إطعامَ مسكين فدية.",
+          "relevanceNoteUr": "اس میں رخصتوں کی تفصیل ہے: بیماری، سفر، اور جو لوگ روزہ رکھنے میں سخت مشقت محسوس کریں وہ فدیے کے طور پر مسکینوں کو کھانا کھلا سکتے ہیں۔",
           "isKeyVerse": true
         },
         {
           "id": "f5",
           "surahNumber": 2,
           "verseNumber": 185,
-          "relevanceNote": "Allah intends ease not hardship - the principle underlying all exemptions.",
+          "relevanceNoteEn": "Allah intends ease not hardship - the principle underlying all exemptions.",
+          "relevanceNoteAr": "المبدأ الجوهري الذي تقوم عليه سائر الرخص: «يُرِيدُ اللَّهُ بِكُمُ الْيُسْرَ وَلَا يُرِيدُ بِكُمُ الْعُسْرَ».",
+          "relevanceNoteUr": "«اللہ تمہارے ساتھ آسانی چاہتا ہے، تنگی نہیں» — یہ وہ اصول ہے جس پر تمام رخصتوں کی بنیاد ہے۔",
           "isKeyVerse": false
         },
         {
           "id": "f6",
           "surahNumber": 2,
           "verseNumber": 286,
-          "relevanceNote": "Allah does not burden a soul beyond its capacity - foundational principle for fasting exemptions.",
+          "relevanceNoteEn": "Allah does not burden a soul beyond its capacity - foundational principle for fasting exemptions.",
+          "relevanceNoteAr": "القاعدة الكلية التي تُسند أحكام الإعفاء من الصيام: «لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا».",
+          "relevanceNoteUr": "«اللہ کسی نفس پر اس کی طاقت سے بڑھ کر بوجھ نہیں ڈالتا» — روزے کی رخصتوں کا یہ بنیادی اصول ہے۔",
           "isKeyVerse": false
         },
         {
           "id": "f7",
           "surahNumber": 4,
           "verseNumber": 43,
-          "relevanceNote": "Context on conditions that temporarily invalidate worship states, relevant to fasting purification.",
+          "relevanceNoteEn": "Context on conditions that temporarily invalidate worship states, relevant to fasting purification.",
+          "relevanceNoteAr": "سياق الأحوال التي تعرض للعبادة مؤقتًا، مما يتصل بمسألة الطهارة المشترطة في الصيام.",
+          "relevanceNoteUr": "یہ آیت ان حالات کا بیان کرتی ہے جو عارضی طور پر عبادت کی حالت متاثر کرتے ہیں، جن کا روزے کی طہارت و پاکیزگی سے بھی تعلق ہے۔",
           "isKeyVerse": false
         }
       ]
     },
     {
       "id": "spiritual_benefits",
-      "title": "Spiritual Benefits",
+      "titleEn": "Spiritual Benefits",
+      "titleAr": "الفوائد الروحية",
+      "titleUr": "روحانی فوائد",
       "icon": "sparkles",
-      "description": "Verses highlighting the spiritual rewards, connection to taqwa, and the blessed nature of fasting and the month of Ramadan.",
+      "descriptionEn": "Verses highlighting the spiritual rewards, connection to taqwa, and the blessed nature of fasting and the month of Ramadan.",
+      "descriptionAr": "آيات تُبرز الثواب الروحي وصلةَ الصيام بالتقوى، وما أُودع في شهر رمضان وليلة القدر من خير وبركة.",
+      "descriptionUr": "یہ آیات روزے کے روحانی ثمرات، تقویٰ سے اس کے گہرے تعلق، اور رمضان المبارک کی عظمت و برکت کو اجاگر کرتی ہیں۔",
       "verses": [
         {
           "id": "f8",
           "surahNumber": 2,
           "verseNumber": 183,
-          "relevanceNote": "Fasting is prescribed so that you may attain taqwa (God-consciousness) - the primary spiritual benefit.",
+          "relevanceNoteEn": "Fasting is prescribed so that you may attain taqwa (God-consciousness) - the primary spiritual benefit.",
+          "relevanceNoteAr": "الصيام مفروض «لَعَلَّكُمْ تَتَّقُونَ» — وهذه الغاية هي الثمرة الروحية الأولى التي يجنيها الصائم.",
+          "relevanceNoteUr": "روزہ اس لیے فرض کیا گیا «تاکہ تم تقویٰ حاصل کرو» — یہ روزے کا سب سے بڑا روحانی فائدہ ہے۔",
           "isKeyVerse": true
         },
         {
           "id": "f9",
           "surahNumber": 97,
           "verseNumber": 1,
-          "relevanceNote": "Laylatul Qadr (Night of Power) - the blessed night in Ramadan better than a thousand months.",
+          "relevanceNoteEn": "Laylatul Qadr (Night of Power) - the blessed night in Ramadan better than a thousand months.",
+          "relevanceNoteAr": "ليلة القدر — تلك الليلة المباركة في رمضان التي هي خيرٌ من ألف شهر.",
+          "relevanceNoteUr": "شبِ قدر — رمضان کی وہ مبارک رات جو ہزار مہینوں سے بہتر ہے۔",
           "isKeyVerse": true
         },
         {
           "id": "f10",
           "surahNumber": 97,
           "verseNumber": 2,
-          "relevanceNote": "What will make you know what the Night of Power is?",
+          "relevanceNoteEn": "What will make you know what the Night of Power is?",
+          "relevanceNoteAr": "تساؤل يُعظّم شأن ليلة القدر ويستثير التأمّل فيها: «وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ».",
+          "relevanceNoteUr": "«تمہیں کیا معلوم کہ شبِ قدر کیا ہے؟» — اس رات کی عظمت بیان کرنے کے لیے سوالیہ انداز اختیار کیا گیا ہے۔",
           "isKeyVerse": false
         },
         {
           "id": "f11",
           "surahNumber": 97,
           "verseNumber": 3,
-          "relevanceNote": "The Night of Power is better than a thousand months of worship.",
+          "relevanceNoteEn": "The Night of Power is better than a thousand months of worship.",
+          "relevanceNoteAr": "ليلة القدر خيرٌ من ألف شهر من العبادة — وهذا يكشف عظيم قدر الصيام وما يتخلّله من طاعة.",
+          "relevanceNoteUr": "شبِ قدر ہزار مہینوں کی عبادت سے بہتر ہے۔",
           "isKeyVerse": true
         },
         {
           "id": "f12",
           "surahNumber": 97,
           "verseNumber": 4,
-          "relevanceNote": "Angels and the Spirit descend on this blessed night with every decree.",
+          "relevanceNoteEn": "Angels and the Spirit descend on this blessed night with every decree.",
+          "relevanceNoteAr": "تتنزّل الملائكة والروح في هذه الليلة المباركة بإذن ربّهم لكل أمر قُدِّر.",
+          "relevanceNoteUr": "اس مبارک رات میں فرشتے اور روح (جبرائیل علیہ السلام) ہر حکمِ الٰہی لے کر نازل ہوتے ہیں۔",
           "isKeyVerse": false
         },
         {
           "id": "f13",
           "surahNumber": 97,
           "verseNumber": 5,
-          "relevanceNote": "Peace it is until the emergence of dawn - describing the nature of this blessed night.",
+          "relevanceNoteEn": "Peace it is until the emergence of dawn - describing the nature of this blessed night.",
+          "relevanceNoteAr": "«سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ» — وصفٌ لما يسود هذه الليلة من طمأنينة وأمان حتى انبلاج الصبح.",
+          "relevanceNoteUr": "«یہ رات طلوعِ فجر تک سراسر سلامتی ہے» — اس مبارک رات کی خصوصی کیفیت کا بیان۔",
           "isKeyVerse": false
         },
         {
           "id": "f14",
           "surahNumber": 2,
           "verseNumber": 186,
-          "relevanceNote": "Allah is near and responds to supplication - emphasizing closeness to Allah during fasting.",
+          "relevanceNoteEn": "Allah is near and responds to supplication - emphasizing closeness to Allah during fasting.",
+          "relevanceNoteAr": "الله قريبٌ يستجيب دعوة الداعي — تأكيدٌ على قرب العبد من ربّه حين يصوم ويدعو.",
+          "relevanceNoteUr": "اللہ قریب ہے اور دعا قبول فرماتا ہے — روزے کی حالت میں اللہ سے قربت اور دعا کی خاص اہمیت اجاگر کی گئی ہے۔",
           "isKeyVerse": true
         }
       ]
     },
     {
       "id": "historical_context",
-      "title": "Historical Context",
+      "titleEn": "Historical Context",
+      "titleAr": "السياق التاريخي",
+      "titleUr": "تاریخی پس منظر",
       "icon": "clock.fill",
-      "description": "Verses showing fasting was prescribed for previous nations and prophets, establishing its universal spiritual significance.",
+      "descriptionEn": "Verses showing fasting was prescribed for previous nations and prophets, establishing its universal spiritual significance.",
+      "descriptionAr": "آيات تُبيّن أن الصيام فُرض على الأمم والأنبياء السابقين، مما يُثبت أهميته الروحية الشاملة عبر الرسالات.",
+      "descriptionUr": "یہ آیات ظاہر کرتی ہیں کہ روزہ پچھلی امتوں اور انبیاء پر بھی فرض تھا، جس سے اس عبادت کی آفاقی روحانی اہمیت ثابت ہوتی ہے۔",
       "verses": [
         {
           "id": "f15",
           "surahNumber": 2,
           "verseNumber": 183,
-          "relevanceNote": "Fasting prescribed for you as it was prescribed for those before you - showing continuity with previous nations.",
+          "relevanceNoteEn": "Fasting prescribed for you as it was prescribed for those before you - showing continuity with previous nations.",
+          "relevanceNoteAr": "«كَمَا كُتِبَ عَلَى الَّذِينَ مِن قَبْلِكُمْ» — فريضة الصيام امتدادٌ لما فُرض على الأمم السابقة، يُجسّد وحدة الرسالات.",
+          "relevanceNoteUr": "«جس طرح تم سے پہلے لوگوں پر فرض کیا گیا تھا» — یہ آیت روزے کے پچھلی امتوں سے تسلسل کو ظاہر کرتی ہے۔",
           "isKeyVerse": true
         },
         {
           "id": "f16",
           "surahNumber": 19,
           "verseNumber": 26,
-          "relevanceNote": "Maryam (Mary) was commanded to fast from speech - showing fasting takes different forms.",
+          "relevanceNoteEn": "Maryam (Mary) was commanded to fast from speech - showing fasting takes different forms.",
+          "relevanceNoteAr": "أُمرت مريم (ع) بصيام الصمت — مما يدلّ على أن الصيام يتجلّى في صور شتّى تتخطّى الإمساك عن الطعام والشراب.",
+          "relevanceNoteUr": "حضرت مریم سلام اللہ علیہا کو گفتگو سے روزہ رکھنے کا حکم دیا گیا — یہ ظاہر کرتا ہے کہ روزے کی مختلف صورتیں ہو سکتی ہیں۔",
           "isKeyVerse": false
         },
         {
           "id": "f17",
           "surahNumber": 2,
           "verseNumber": 187,
-          "relevanceNote": "Regulations for Ramadan fasting including permitted activities during the night, abrogating earlier stricter rules.",
+          "relevanceNoteEn": "Regulations for Ramadan fasting including permitted activities during the night, abrogating earlier stricter rules.",
+          "relevanceNoteAr": "تُنظّم أحكام صيام رمضان، وتُبيح ما يحلّ ليلًا، ناسخةً ما كان مقرّرًا من قيود أشدّ في الابتداء.",
+          "relevanceNoteUr": "رمضان کے روزے سے متعلق احکام، جن میں رات کے وقت جائز امور کا بیان ہے اور پہلے کے سخت قوانین کو منسوخ کیا گیا۔",
           "isKeyVerse": true
         },
         {
           "id": "f18",
           "surahNumber": 5,
           "verseNumber": 89,
-          "relevanceNote": "Fasting three days as expiation for broken oaths - showing fasting as spiritual compensation.",
+          "relevanceNoteEn": "Fasting three days as expiation for broken oaths - showing fasting as spiritual compensation.",
+          "relevanceNoteAr": "صيام ثلاثة أيام كفّارةً لليمين المنعقدة — مثالٌ على الصيام بوصفه جبرًا روحيًا وتطهيرًا للنفس.",
+          "relevanceNoteUr": "قسم توڑنے کے کفّارے کے طور پر تین دن کا روزہ — یہ روزے کو روحانی اصلاح کے ذریعے کے طور پر پیش کرتا ہے۔",
           "isKeyVerse": false
         },
         {
           "id": "f19",
           "surahNumber": 58,
           "verseNumber": 4,
-          "relevanceNote": "Fasting two consecutive months as expiation - another instance of fasting as spiritual remedy.",
+          "relevanceNoteEn": "Fasting two consecutive months as expiation - another instance of fasting as spiritual remedy.",
+          "relevanceNoteAr": "صيام شهرين متتابعين كفّارةً — نموذجٌ آخر يُؤكّد دور الصيام علاجًا روحيًا وتكفيرًا للذنوب.",
+          "relevanceNoteUr": "دو مہینے مسلسل روزہ بطور کفّارہ — روزے کے ایک اور موقع پر روحانی علاج کے طور پر استعمال کی مثال۔",
           "isKeyVerse": false
         }
       ]

@@ -12,6 +12,7 @@ struct FastingVersesView: View {
     @StateObject private var fastingManager = FastingVersesManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedCategory: FastingCategory?
     @State private var navigateToDetail = false
@@ -31,11 +32,11 @@ struct FastingVersesView: View {
                     VStack(spacing: 12) {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Fasting in the Quran")
+                                Text(localizedTitle)
                                     .font(.system(size: 34, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
-                                Text("Verses about fasting and Ramadan")
+                                Text(localizedSubtitle)
                                     .font(.system(size: 16, weight: .medium))
                                     .foregroundColor(themeManager.secondaryText)
                             }
@@ -46,6 +47,8 @@ struct FastingVersesView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 16)
+                    .environment(\.layoutDirection,
+                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                     }
 
                     // Category list
@@ -71,6 +74,8 @@ struct FastingVersesView: View {
                                 }
                             }
                             .padding(.vertical, 16)
+                            .environment(\.layoutDirection,
+                                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                         }
                     }
                 }
@@ -110,14 +115,14 @@ struct FastingVersesView: View {
 
     private var emeraldHeaderView: some View {
         VStack(alignment: .leading, spacing: 7) {
-            Text("Ramadan in the Qur'an".uppercased())
+            Text(localizedEyebrow.uppercased())
                 .font(.system(size: 11, weight: .bold)).tracking(3)
                 .foregroundColor(themeManager.accentColor)
-            Text("Fasting in the Quran")
+            Text(localizedTitle)
                 .font(EmType.serif(36, .semiBold))
                 .foregroundColor(themeManager.primaryText)
                 .fixedSize(horizontal: false, vertical: true)
-            Text("Verses about fasting and Ramadan")
+            Text(localizedSubtitle)
                 .font(.system(size: 13.5))
                 .foregroundColor(themeManager.secondaryText)
         }
@@ -125,6 +130,34 @@ struct FastingVersesView: View {
         .padding(.horizontal, 20)
         .padding(.top, 16)
         .padding(.bottom, 18)
+        .environment(\.layoutDirection,
+                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+    }
+
+    // MARK: - Localized header strings (follow the global app language)
+
+    private var localizedEyebrow: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "رمضان في القرآن"
+        case .urdu:   return "قرآن میں رمضان"
+        default:      return "Ramadan in the Qur'an"
+        }
+    }
+
+    private var localizedTitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "الصيام في القرآن"
+        case .urdu:   return "قرآن میں روزہ"
+        default:      return "Fasting in the Quran"
+        }
+    }
+
+    private var localizedSubtitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "آياتٌ عن الصيام ورمضان"
+        case .urdu:   return "روزے اور رمضان سے متعلق آیات"
+        default:      return "Verses about fasting and Ramadan"
+        }
     }
 }
 
@@ -133,6 +166,7 @@ struct FastingCategoryCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     private var grayGradient: LinearGradient {
         LinearGradient(
@@ -153,7 +187,7 @@ struct FastingCategoryCard: View {
                     EmIconChip(sfSymbol: category.icon)
                     VStack(alignment: .leading, spacing: 4) {
                         HStack(spacing: 8) {
-                            Text(category.title)
+                            Text(category.title(for: languageManager.selectedLanguage))
                                 .font(EmType.serif(20, .semiBold))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineLimit(2)
@@ -167,7 +201,7 @@ struct FastingCategoryCard: View {
                                     .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
                             }
                         }
-                        Text(category.description)
+                        Text(category.description(for: languageManager.selectedLanguage))
                             .font(.system(size: 13))
                             .foregroundColor(themeManager.secondaryText)
                             .lineLimit(2)
@@ -209,7 +243,7 @@ struct FastingCategoryCard: View {
                 // Category content
                 VStack(alignment: .leading, spacing: 6) {
                     HStack {
-                        Text(category.title)
+                        Text(category.title(for: languageManager.selectedLanguage))
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(themeManager.primaryText)
 
@@ -226,7 +260,7 @@ struct FastingCategoryCard: View {
                         }
                     }
 
-                    Text(category.description)
+                    Text(category.description(for: languageManager.selectedLanguage))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineLimit(2)

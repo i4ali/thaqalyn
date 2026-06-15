@@ -196,18 +196,19 @@ class IslamicCalendarManager: ObservableObject {
     func ramadanSeasonStatus() -> String {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
+        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
 
         switch month {
         case 8:
             if let daysUntil = daysUntilRamadan(), daysUntil > 0 {
-                return "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Ramadan"
+                return ur ? "رمضان میں \(daysUntil) دن باقی" : "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Ramadan"
             }
-            return "Ramadan begins soon"
+            return ur ? "رمضان جلد شروع ہو رہا ہے" : "Ramadan begins soon"
         case 9:
-            return "Day \(day) of Ramadan"
+            return ur ? "رمضان کا دن \(day)" : "Day \(day) of Ramadan"
         case 10:
             if day <= 5 {
-                return "Eid Mubarak!"
+                return ur ? "عید مبارک!" : "Eid Mubarak!"
             }
             return ""
         default:
@@ -257,24 +258,25 @@ class IslamicCalendarManager: ObservableObject {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
 
+        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
         switch month {
         case 11:
             if let daysUntil = daysUntilHajj(), daysUntil > 0 {
-                return "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Dhul-Hijjah"
+                return ur ? "ذی الحجہ میں \(daysUntil) دن باقی" : "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Dhul-Hijjah"
             }
-            return "Dhul-Hijjah begins soon"
+            return ur ? "ذی الحجہ جلد شروع ہو رہا ہے" : "Dhul-Hijjah begins soon"
         case 12:
             if day == 9 {
-                return "Day of Arafah"
+                return ur ? "یومِ عرفہ" : "Day of Arafah"
             }
             if day == 10 {
-                return "Eid al-Adha Mubarak!"
+                return ur ? "عیدالاضحیٰ مبارک!" : "Eid al-Adha Mubarak!"
             }
             if day <= 10 {
-                return "Day \(day) of Dhul-Hijjah"
+                return ur ? "ذی الحجہ کا دن \(day)" : "Day \(day) of Dhul-Hijjah"
             }
             if day <= 13 {
-                return "Eid al-Adha Mubarak!"
+                return ur ? "عیدالاضحیٰ مبارک!" : "Eid al-Adha Mubarak!"
             }
             return ""
         default:
@@ -321,21 +323,22 @@ class IslamicCalendarManager: ObservableObject {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
 
+        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
         switch month {
         case 12:
             if let daysUntil = daysUntilMuharram(), daysUntil > 0 {
-                return "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Muharram"
+                return ur ? "محرم میں \(daysUntil) دن باقی" : "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Muharram"
             }
-            return "Muharram begins soon"
+            return ur ? "محرم جلد شروع ہو رہا ہے" : "Muharram begins soon"
         case 1:
             if day == 10 {
-                return "Ashura — Ya Husayn (AS)"
+                return ur ? "عاشورا — یا حسینؑ" : "Ashura — Ya Husayn (AS)"
             }
             if day <= 10 {
-                return "Day \(day) of Muharram"
+                return ur ? "محرم کا دن \(day)" : "Day \(day) of Muharram"
             }
             if day <= 12 {
-                return "The mourning continues — Ya Husayn (AS)"
+                return ur ? "ماتم جاری ہے — یا حسینؑ" : "The mourning continues — Ya Husayn (AS)"
             }
             return ""
         default:
@@ -362,9 +365,10 @@ class IslamicCalendarManager: ObservableObject {
     func fatimiyyaSeasonStatus() -> String {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
+        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
         switch month {
-        case 5 where (8...15).contains(day): return "First Fatimiyya — Yā Zahrā (AS)"
-        case 6 where (1...6).contains(day):  return "Second Fatimiyya — Yā Zahrā (AS)"
+        case 5 where (8...15).contains(day): return ur ? "پہلی فاطمیہ — یا زہراؑ" : "First Fatimiyya — Yā Zahrā (AS)"
+        case 6 where (1...6).contains(day):  return ur ? "دوسری فاطمیہ — یا زہراؑ" : "Second Fatimiyya — Yā Zahrā (AS)"
         default: return ""
         }
     }

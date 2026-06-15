@@ -92,20 +92,23 @@ struct JourneyDescriptor: Identifiable {
                     return max(0, c.dateComponents([.day], from: c.startOfDay(for: a), to: c.startOfDay(for: b)).day ?? 0)
                 }
                 func medium(_ d: Date) -> String {
-                    let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none; return f.string(from: d)
+                    let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
+                    f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en")
+                    return f.string(from: d)
                 }
                 let now = cal.now
                 let firstStart  = hijri(year, 5, 8)
                 let secondStart = hijri(year, 6, 1)
+                let lang = CommentaryLanguageManager.shared.selectedLanguage
                 if now < firstStart {
-                    return .comingSoon(daysUntil: daysBetween(now, firstStart), startsLabel: "First Fatimiyya · \(medium(firstStart))")
+                    return .comingSoon(daysUntil: daysBetween(now, firstStart), startsLabel: JourneyStrings.firstFatimiyya(medium(firstStart), lang))
                 }
                 if now < secondStart {
-                    return .comingSoon(daysUntil: daysBetween(now, secondStart), startsLabel: "Second Fatimiyya · \(medium(secondStart))")
+                    return .comingSoon(daysUntil: daysBetween(now, secondStart), startsLabel: JourneyStrings.secondFatimiyya(medium(secondStart), lang))
                 }
                 let nextReturn = hijri(year + 1, 5, 8)
                 return .ended(daysUntil: daysBetween(now, nextReturn),
-                              returnsLabel: "Returns \(medium(nextReturn))")
+                              returnsLabel: JourneyStrings.returns(medium(nextReturn), lang))
             }
         ),
     ]
@@ -132,10 +135,11 @@ extension JourneyDescriptor {
         }
 
         let now = cal.now
+        let lang = CommentaryLanguageManager.shared.selectedLanguage
         if now < thisYearStart {
             return .comingSoon(
                 daysUntil: Self.daysBetween(now, thisYearStart),
-                startsLabel: "Begins \(Self.medium(thisYearStart))"
+                startsLabel: JourneyStrings.begins(Self.medium(thisYearStart), lang)
             )
         }
         guard let nextYearStart = icalendar.date(
@@ -144,7 +148,7 @@ extension JourneyDescriptor {
             preconditionFailure("Could not form next Hijri content-start for \(id)")
         }
         return .ended(daysUntil: Self.daysBetween(now, nextYearStart),
-                      returnsLabel: "Returns \(Self.medium(nextYearStart))")
+                      returnsLabel: JourneyStrings.returns(Self.medium(nextYearStart), lang))
     }
 
     private static func daysBetween(_ a: Date, _ b: Date) -> Int {
@@ -155,6 +159,7 @@ extension JourneyDescriptor {
 
     private static func medium(_ date: Date) -> String {
         let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
+        f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en")
         return f.string(from: date)
     }
 }

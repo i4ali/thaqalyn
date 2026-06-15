@@ -2,1089 +2,1631 @@
   "questions": [
     {
       "id": "q1",
-      "question": "What is the purpose of life?",
-      "shortQuestion": "Life's purpose?",
+      "questionEn": "What is the purpose of life?",
+      "questionAr": "ما هو الغرض من الحياة؟",
+      "questionUr": "زندگی کا مقصد کیا ہے؟",
+      "shortQuestionEn": "Life's purpose?",
+      "shortQuestionAr": "غرض الحياة؟",
+      "shortQuestionUr": "زندگی کا مقصد؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 51,
           "verseNumber": 56,
-          "relevanceNote": "This verse directly states the purpose: to worship and know Allah. Worship here means complete submission and recognition of the Creator.",
+          "relevanceNoteEn": "This verse directly states the purpose: to worship and know Allah. Worship here means complete submission and recognition of the Creator.",
+          "relevanceNoteAr": "تُصرّح هذه الآية الكريمة صراحةً بالغرض من الوجود: عبادة الله ومعرفته. والعبادة هنا تعني الخضوع التام والإقرار بوجود الخالق جلّ وعلا والاعتراف به.",
+          "relevanceNoteUr": "یہ آیت براہِ راست مقصد بیان کرتی ہے: اللہ کی عبادت اور اُسے پہچاننا۔ یہاں عبادت کا مطلب محض رسمی عمل نہیں بلکہ خالقِ حقیقی کے سامنے مکمل سر تسلیمِ خم کرنا اور اُسے جاننا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 67,
           "verseNumber": 2,
-          "relevanceNote": "Life is a test - we are placed here to demonstrate righteous action. The purpose includes moral growth and spiritual development.",
+          "relevanceNoteEn": "Life is a test - we are placed here to demonstrate righteous action. The purpose includes moral growth and spiritual development.",
+          "relevanceNoteAr": "الحياة الدنيا اختبار — وُضعنا فيها لنُبرهن على صلاح أعمالنا. ويشمل هذا الغرضَ النموَّ الأخلاقي والرقيَّ الروحي.",
+          "relevanceNoteUr": "زندگی ایک آزمائش ہے — ہمیں یہاں اِس لیے بھیجا گیا ہے کہ ہم نیک عمل کریں اور ثابت کریں کہ ہم درستگی پر ہیں۔ اِس مقصد میں اخلاقی ارتقاء اور روحانی بلندی دونوں شامل ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 2,
           "verseNumber": 30,
-          "relevanceNote": "Humanity's role as khalifah (vicegerent) on earth - to establish justice and goodness.",
+          "relevanceNoteEn": "Humanity's role as khalifah (vicegerent) on earth - to establish justice and goodness.",
+          "relevanceNoteAr": "دور الإنسان بوصفه خليفة الله في الأرض — إقامة العدل ونشر الخير وتحقيق الخلافة على وجه الأرض.",
+          "relevanceNoteUr": "انسانیت کا کردار زمین پر خلیفہ (نائبِ خدا) بننا ہے — تاکہ عدل و انصاف اور بھلائی قائم کی جائے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q2", "q3"]
+      "relatedQuestions": [
+        "q2",
+        "q3"
+      ]
     },
     {
       "id": "q2",
-      "question": "Can God forgive any sin?",
-      "shortQuestion": "Divine forgiveness?",
+      "questionEn": "Can God forgive any sin?",
+      "questionAr": "هل يمكن لله أن يغفر أيَّ ذنب؟",
+      "questionUr": "کیا اللہ ہر گناہ معاف کر سکتا ہے؟",
+      "shortQuestionEn": "Divine forgiveness?",
+      "shortQuestionAr": "المغفرة الإلهية؟",
+      "shortQuestionUr": "الٰہی معافی؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 39,
           "verseNumber": 53,
-          "relevanceNote": "Allah's mercy is infinite - despair not! This verse emphasizes that no sin is too great for Allah's forgiveness if one sincerely repents.",
+          "relevanceNoteEn": "Allah's mercy is infinite - despair not! This verse emphasizes that no sin is too great for Allah's forgiveness if one sincerely repents.",
+          "relevanceNoteAr": "رحمة الله لا حدود لها — فلا تقنطوا! تؤكد هذه الآية أنه لا ذنب يعظم على مغفرة الله إذا أخلص العبد في توبته.",
+          "relevanceNoteUr": "اللہ کی رحمت بے انتہا ہے — ناامید نہ ہو! یہ آیت واضح کرتی ہے کہ اگر کوئی سچے دل سے توبہ کرے تو کوئی بھی گناہ اللہ کی مغفرت سے باہر نہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 4,
           "verseNumber": 48,
-          "relevanceNote": "Exception: shirk (associating partners with Allah) if one dies in that state. But even shirk can be forgiven if one repents before death.",
+          "relevanceNoteEn": "Exception: shirk (associating partners with Allah) if one dies in that state. But even shirk can be forgiven if one repents before death.",
+          "relevanceNoteAr": "الاستثناء: الشرك بالله إن مات الإنسان عليه. غير أن الشرك نفسه يُغفر إذا تاب العبد قبل وفاته.",
+          "relevanceNoteUr": "ایک استثنا ہے: شرک (اللہ کے ساتھ کسی کو شریک ٹھہرانا) اگر کوئی اِسی حال میں مر جائے۔ لیکن موت سے پہلے توبہ کر لی جائے تو شرک بھی معاف ہو سکتا ہے۔",
           "isPrimary": true
         }
       ],
-      "relatedQuestions": ["q1", "q15"]
+      "relatedQuestions": [
+        "q1",
+        "q15"
+      ]
     },
     {
       "id": "q3",
-      "question": "Does God need our worship?",
-      "shortQuestion": "Why worship?",
+      "questionEn": "Does God need our worship?",
+      "questionAr": "هل يحتاج الله إلى عبادتنا؟",
+      "questionUr": "کیا اللہ کو ہماری عبادت کی ضرورت ہے؟",
+      "shortQuestionEn": "Why worship?",
+      "shortQuestionAr": "لماذا نعبد؟",
+      "shortQuestionUr": "عبادت کیوں؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 29,
           "verseNumber": 6,
-          "relevanceNote": "Allah is self-sufficient and needs nothing from creation. Worship benefits us, not Allah - it purifies our souls and brings us closer to Him.",
+          "relevanceNoteEn": "Allah is self-sufficient and needs nothing from creation. Worship benefits us, not Allah - it purifies our souls and brings us closer to Him.",
+          "relevanceNoteAr": "الله غنيٌّ عن خلقه ولا يحتاج إلى شيء من الكون. العبادة تنفعنا نحن لا الله — فهي تُطهّر أرواحنا وتُقرّبنا منه سبحانه.",
+          "relevanceNoteUr": "اللہ بے نیاز ہے اور اُسے مخلوق سے کسی چیز کی حاجت نہیں۔ عبادت کا فائدہ ہمیں ہوتا ہے، اللہ کو نہیں — یہ ہماری روحوں کو پاک کرتی اور ہمیں اُس کے قریب لاتی ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 35,
           "verseNumber": 15,
-          "relevanceNote": "Humanity needs Allah, but Allah needs nothing. This verse emphasizes divine transcendence and human dependence.",
+          "relevanceNoteEn": "Humanity needs Allah, but Allah needs nothing. This verse emphasizes divine transcendence and human dependence.",
+          "relevanceNoteAr": "البشر محتاجون إلى الله، والله غنيٌّ عن البشر. تُبرز هذه الآية السموّ الإلهي واعتماد الإنسان على ربه.",
+          "relevanceNoteUr": "انسان کو اللہ کی ضرورت ہے، مگر اللہ کسی کا محتاج نہیں۔ یہ آیت الٰہی بے نیازی اور انسانی محتاجی پر زور دیتی ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q1"]
+      "relatedQuestions": [
+        "q1"
+      ]
     },
     {
       "id": "q4",
-      "question": "How can I strengthen my faith?",
-      "shortQuestion": "Strengthen faith?",
+      "questionEn": "How can I strengthen my faith?",
+      "questionAr": "كيف أُقوّي إيماني؟",
+      "questionUr": "میں اپنا ایمان کیسے مضبوط کروں؟",
+      "shortQuestionEn": "Strengthen faith?",
+      "shortQuestionAr": "تقوية الإيمان؟",
+      "shortQuestionUr": "ایمان مضبوط کریں؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 8,
           "verseNumber": 2,
-          "relevanceNote": "Faith increases through remembrance of Allah, reciting the Quran, and reflecting on His signs. The Quran itself strengthens belief.",
+          "relevanceNoteEn": "Faith increases through remembrance of Allah, reciting the Quran, and reflecting on His signs. The Quran itself strengthens belief.",
+          "relevanceNoteAr": "يزداد الإيمان بذكر الله والتلاوة المستمرة للقرآن الكريم والتدبر في آياته. والقرآن ذاته يُرسّخ اليقين ويُعمّق الاعتقاد.",
+          "relevanceNoteUr": "ایمان اللہ کے ذکر، قرآن کی تلاوت اور اُس کی نشانیوں میں غور و فکر سے بڑھتا ہے۔ قرآن خود یقین کو تقویت دیتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 3,
           "verseNumber": 191,
-          "relevanceNote": "Contemplating creation - the heavens and earth - increases faith and understanding of divine power.",
+          "relevanceNoteEn": "Contemplating creation - the heavens and earth - increases faith and understanding of divine power.",
+          "relevanceNoteAr": "التأمل في الخلق — السماوات والأرض — يُعظّم الإيمان ويُوسّع الإدراك بالقدرة الإلهية.",
+          "relevanceNoteUr": "آسمانوں اور زمین کی تخلیق پر تدبر کرنا ایمان بڑھاتا اور قدرتِ الٰہی کی سمجھ عطا کرتا ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q1", "q5"]
+      "relatedQuestions": [
+        "q1",
+        "q5"
+      ]
     },
     {
       "id": "q5",
-      "question": "Does God hear my prayers?",
-      "shortQuestion": "Does God hear me?",
+      "questionEn": "Does God hear my prayers?",
+      "questionAr": "هل يسمع الله دعائي؟",
+      "questionUr": "کیا اللہ میری دعائیں سنتا ہے؟",
+      "shortQuestionEn": "Does God hear me?",
+      "shortQuestionAr": "هل يسمعني الله؟",
+      "shortQuestionUr": "کیا اللہ سنتا ہے؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 186,
-          "relevanceNote": "Allah is near and responds to those who call upon Him. He hears every prayer and knows every need, even before we ask.",
+          "relevanceNoteEn": "Allah is near and responds to those who call upon Him. He hears every prayer and knows every need, even before we ask.",
+          "relevanceNoteAr": "الله قريب ويستجيب لمن يدعوه. يسمع كل دعاء ويعلم كل حاجة، حتى قبل أن نسأل.",
+          "relevanceNoteUr": "اللہ قریب ہے اور اُنہیں جواب دیتا ہے جو اُسے پکارتے ہیں۔ وہ ہر دعا سنتا اور ہر حاجت جانتا ہے، بلکہ مانگنے سے پہلے بھی۔",
           "isPrimary": true
         },
         {
           "surahNumber": 40,
           "verseNumber": 60,
-          "relevanceNote": "Allah commands us to call upon Him and promises to respond. He considers prayer an act of worship and never ignores it.",
+          "relevanceNoteEn": "Allah commands us to call upon Him and promises to respond. He considers prayer an act of worship and never ignores it.",
+          "relevanceNoteAr": "يأمرنا الله بدعائه ويعدنا بالاستجابة. ويعدّ الدعاء عبادةً ولا يُهمله قط.",
+          "relevanceNoteUr": "اللہ ہمیں حکم دیتا ہے کہ اُسے پکارو اور وعدہ کرتا ہے کہ وہ قبول کرے گا۔ وہ دعا کو عبادت سمجھتا ہے اور اُسے کبھی نظرانداز نہیں کرتا۔",
           "isPrimary": true
         }
       ],
-      "relatedQuestions": ["q4"]
+      "relatedQuestions": [
+        "q4"
+      ]
     },
     {
       "id": "q6",
-      "question": "How do I get closer to God?",
-      "shortQuestion": "Draw near to God?",
+      "questionEn": "How do I get closer to God?",
+      "questionAr": "كيف أتقرّب إلى الله؟",
+      "questionUr": "میں اللہ کے قریب کیسے ہو سکتا ہوں؟",
+      "shortQuestionEn": "Draw near to God?",
+      "shortQuestionAr": "التقرب إلى الله؟",
+      "shortQuestionUr": "اللہ کے قریب ہوں؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 152,
-          "relevanceNote": "Remember Allah constantly, and He will remember you. Divine proximity comes through dhikr (remembrance) and gratitude.",
+          "relevanceNoteEn": "Remember Allah constantly, and He will remember you. Divine proximity comes through dhikr (remembrance) and gratitude.",
+          "relevanceNoteAr": "اذكر الله دائماً يذكرك. تأتي القُربى الإلهية بالذكر والشكر المستمر.",
+          "relevanceNoteUr": "اللہ کو ہمیشہ یاد رکھو، وہ تمہیں یاد رکھے گا۔ الٰہی قربت ذکر اور شکرگزاری سے حاصل ہوتی ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 50,
           "verseNumber": 16,
-          "relevanceNote": "Allah is closer to you than your jugular vein. Closeness is achieved by recognizing His constant presence in your life.",
+          "relevanceNoteEn": "Allah is closer to you than your jugular vein. Closeness is achieved by recognizing His constant presence in your life.",
+          "relevanceNoteAr": "الله أقرب إليك من حبل الوريد. تتحقق القُربى بإدراك حضوره الدائم في حياتك.",
+          "relevanceNoteUr": "اللہ تمہاری شہ رگ سے بھی زیادہ قریب ہے۔ قربت اِسی احساس سے ملتی ہے کہ وہ ہر لمحہ تمہاری زندگی میں موجود ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q4", "q5"]
+      "relatedQuestions": [
+        "q4",
+        "q5"
+      ]
     },
     {
       "id": "q7",
-      "question": "What is true worship?",
-      "shortQuestion": "True worship?",
+      "questionEn": "What is true worship?",
+      "questionAr": "ما هي العبادة الحقيقية؟",
+      "questionUr": "حقیقی عبادت کیا ہے؟",
+      "shortQuestionEn": "True worship?",
+      "shortQuestionAr": "العبادة الحقيقية؟",
+      "shortQuestionUr": "حقیقی عبادت؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 98,
           "verseNumber": 5,
-          "relevanceNote": "True worship means being sincere to Allah alone, establishing prayer, and giving charity. It combines devotion with righteous action.",
+          "relevanceNoteEn": "True worship means being sincere to Allah alone, establishing prayer, and giving charity. It combines devotion with righteous action.",
+          "relevanceNoteAr": "العبادة الحقة تعني الإخلاص لله وحده وإقامة الصلاة وإيتاء الزكاة. وهي تجمع بين الخشوع القلبي والعمل الصالح.",
+          "relevanceNoteUr": "حقیقی عبادت یہ ہے کہ صرف اللہ کے لیے خالص رہو، نماز قائم کرو اور زکوٰۃ ادا کرو۔ یہ عقیدت اور نیک عمل دونوں کو یکجا کرتی ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 107,
           "verseNumber": 4,
-          "relevanceNote": "Prayer without compassion for others is incomplete. True worship integrates ritual with ethics and social responsibility.",
+          "relevanceNoteEn": "Prayer without compassion for others is incomplete. True worship integrates ritual with ethics and social responsibility.",
+          "relevanceNoteAr": "الصلاة دون رحمة بالآخرين عبادة ناقصة. العبادة الصادقة تجمع الطقوس الدينية بالأخلاق والمسؤولية الاجتماعية.",
+          "relevanceNoteUr": "دوسروں پر شفقت کے بغیر نماز ادھوری ہے۔ حقیقی عبادت میں رسمی عبادت اور اخلاقی و سماجی ذمہ داری ساتھ ساتھ چلتی ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q3"]
+      "relatedQuestions": [
+        "q3"
+      ]
     },
     {
       "id": "q8",
-      "question": "Why did God create us?",
-      "shortQuestion": "Why creation?",
+      "questionEn": "Why did God create us?",
+      "questionAr": "لماذا خلقنا الله؟",
+      "questionUr": "اللہ نے ہمیں کیوں پیدا کیا؟",
+      "shortQuestionEn": "Why creation?",
+      "shortQuestionAr": "لماذا الخلق؟",
+      "shortQuestionUr": "تخلیق کیوں؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 51,
           "verseNumber": 56,
-          "relevanceNote": "Allah created humanity and jinn to know and worship Him. Our existence has divine purpose beyond material pursuits.",
+          "relevanceNoteEn": "Allah created humanity and jinn to know and worship Him. Our existence has divine purpose beyond material pursuits.",
+          "relevanceNoteAr": "خلق الله الإنس والجن لمعرفته وعبادته. لوجودنا غاية إلهية تتجاوز المساعي المادية.",
+          "relevanceNoteUr": "اللہ نے انسانوں اور جنوں کو اِس لیے پیدا کیا کہ وہ اُسے جانیں اور اُس کی عبادت کریں۔ ہمارا وجود مادی مقاصد سے بلند ایک الٰہی غرض رکھتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 2,
           "verseNumber": 30,
-          "relevanceNote": "We are created as Allah's vicegerents on earth - to establish justice, goodness, and divine order in creation.",
+          "relevanceNoteEn": "We are created as Allah's vicegerents on earth - to establish justice, goodness, and divine order in creation.",
+          "relevanceNoteAr": "خُلقنا خلفاء الله في الأرض — لإقامة العدل ونشر الخير وتحقيق النظام الإلهي في الخليقة.",
+          "relevanceNoteUr": "ہمیں زمین پر اللہ کا خلیفہ بنا کر بھیجا گیا ہے — تاکہ عدل، بھلائی اور الٰہی نظم قائم کریں۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q1"]
+      "relatedQuestions": [
+        "q1"
+      ]
     },
     {
       "id": "q9",
-      "question": "Why do bad things happen to good people?",
-      "shortQuestion": "Why suffering?",
+      "questionEn": "Why do bad things happen to good people?",
+      "questionAr": "لماذا يتعرض الأخيار للمصائب؟",
+      "questionUr": "نیک لوگوں پر برا کیوں آتا ہے؟",
+      "shortQuestionEn": "Why suffering?",
+      "shortQuestionAr": "لماذا المعاناة؟",
+      "shortQuestionUr": "تکلیف کیوں؟",
       "category": "justice",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 155,
-          "relevanceNote": "Trials test faith and purify souls. Hardship is not punishment but a means of spiritual growth and elevation.",
+          "relevanceNoteEn": "Trials test faith and purify souls. Hardship is not punishment but a means of spiritual growth and elevation.",
+          "relevanceNoteAr": "الابتلاءات تختبر الإيمان وتُصفّي الأرواح. المشقة ليست عقاباً بل وسيلة للنمو الروحي والارتقاء في الدرجات.",
+          "relevanceNoteUr": "مصیبتیں ایمان کو آزماتی اور روحوں کو پاک کرتی ہیں۔ تکلیف سزا نہیں بلکہ روحانی ترقی اور بلندئِ درجہ کا ذریعہ ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 29,
           "verseNumber": 2,
-          "relevanceNote": "Testing is how Allah distinguishes truth from falsehood in hearts. Faith must be proven through trials, not mere words.",
+          "relevanceNoteEn": "Testing is how Allah distinguishes truth from falsehood in hearts. Faith must be proven through trials, not mere words.",
+          "relevanceNoteAr": "الاختبار هو الطريقة التي يُميّز الله بها الصادق من الكاذب في القلوب. لا بد للإيمان أن يُثبَت بالمحن لا بمجرد الأقوال.",
+          "relevanceNoteUr": "آزمائش ہی وہ طریقہ ہے جس سے اللہ دلوں میں سچ کو جھوٹ سے جدا کرتا ہے۔ ایمان کو محض الفاظ سے نہیں بلکہ مشکلات سے گزر کر ثابت کرنا پڑتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 3,
           "verseNumber": 142,
-          "relevanceNote": "Through hardship, Allah identifies true believers who remain steadfast. Ease without trial does not reveal character.",
+          "relevanceNoteEn": "Through hardship, Allah identifies true believers who remain steadfast. Ease without trial does not reveal character.",
+          "relevanceNoteAr": "الله يعرف بالمشقة المؤمنين الصادقين الثابتين. فاليُسر الخالي من الابتلاء لا يكشف حقيقة الطباع.",
+          "relevanceNoteUr": "مصیبتوں کے ذریعے اللہ اُن سچے مؤمنوں کو پہچانتا ہے جو ثابت قدم رہتے ہیں۔ بغیر آزمائش کی آسائش کردار کو ظاہر نہیں کرتی۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q10", "q11"]
+      "relatedQuestions": [
+        "q10",
+        "q11"
+      ]
     },
     {
       "id": "q10",
-      "question": "Why is there suffering in the world?",
-      "shortQuestion": "Why suffering exists?",
+      "questionEn": "Why is there suffering in the world?",
+      "questionAr": "لماذا توجد المعاناة في العالم؟",
+      "questionUr": "دنیا میں تکلیف کیوں ہے؟",
+      "shortQuestionEn": "Why suffering exists?",
+      "shortQuestionAr": "سبب وجود المعاناة؟",
+      "shortQuestionUr": "تکلیف کیوں ہے؟",
       "category": "justice",
       "verses": [
         {
           "surahNumber": 67,
           "verseNumber": 2,
-          "relevanceNote": "Life is a test to see who acts best. Suffering exists as part of this test, revealing our choices between good and evil.",
+          "relevanceNoteEn": "Life is a test to see who acts best. Suffering exists as part of this test, revealing our choices between good and evil.",
+          "relevanceNoteAr": "الحياة اختبار لمعرفة من يُحسن العمل. المعاناة جزء من هذا الاختبار، إذ تكشف خياراتنا بين الخير والشر.",
+          "relevanceNoteUr": "زندگی ایک آزمائش ہے — دیکھنا یہ ہے کہ کون بہترین عمل کرتا ہے۔ تکلیف اِس امتحان کا حصہ ہے، جو ہمارے انتخاب کو نیکی اور بدی کے درمیان ظاہر کرتی ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 18,
           "verseNumber": 7,
-          "relevanceNote": "The world is made beautiful yet temporary to test us. Suffering reminds us not to become attached to this fleeting life.",
+          "relevanceNoteEn": "The world is made beautiful yet temporary to test us. Suffering reminds us not to become attached to this fleeting life.",
+          "relevanceNoteAr": "الدنيا جُعلت جميلة لكنها زائلة لتُمتحن بها. والمعاناة تُذكّرنا بأن لا نتعلق بهذه الحياة الفانية.",
+          "relevanceNoteUr": "دنیا کو خوبصورت بنایا گیا لیکن عارضی رکھا گیا تاکہ ہماری آزمائش ہو۔ تکلیف یاد دلاتی ہے کہ اِس فانی زندگی سے دل نہ لگاؤ۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q9"]
+      "relatedQuestions": [
+        "q9"
+      ]
     },
     {
       "id": "q11",
-      "question": "Where is God when I'm hurting?",
-      "shortQuestion": "God in pain?",
+      "questionEn": "Where is God when I'm hurting?",
+      "questionAr": "أين يكون الله حين أتألم؟",
+      "questionUr": "جب میں تکلیف میں ہوتا ہوں تو اللہ کہاں ہوتا ہے؟",
+      "shortQuestionEn": "God in pain?",
+      "shortQuestionAr": "الله في أوقات الألم؟",
+      "shortQuestionUr": "تکلیف میں اللہ؟",
       "category": "justice",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 186,
-          "relevanceNote": "Allah is near, especially to those who call upon Him in distress. He hears and knows our pain intimately.",
+          "relevanceNoteEn": "Allah is near, especially to those who call upon Him in distress. He hears and knows our pain intimately.",
+          "relevanceNoteAr": "الله قريب، ولا سيما ممن يدعوه في وقت الكرب. يسمع ألمنا ويعلمه معرفةً حقيقية.",
+          "relevanceNoteUr": "اللہ قریب ہے، خاص طور پر اُن لوگوں کے جو تکلیف میں اُسے پکارتے ہیں۔ وہ ہمارے درد کو گہرائی سے سنتا اور جانتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 94,
           "verseNumber": 5,
-          "relevanceNote": "With every hardship comes ease. Allah promises relief and never abandons those who suffer - ease follows difficulty.",
+          "relevanceNoteEn": "With every hardship comes ease. Allah promises relief and never abandons those who suffer - ease follows difficulty.",
+          "relevanceNoteAr": "«فَإِنَّ مَعَ الْعُسْرِ يُسْراً» — يعد الله بالفرج ولا يتخلى عن المبتلين أبداً؛ فاليُسر يعقب العسر لا محالة.",
+          "relevanceNoteUr": "ہر مشکل کے ساتھ آسانی ہے۔ اللہ راحت کا وعدہ کرتا ہے اور تکلیف اٹھانے والوں کو کبھی نہیں چھوڑتا — تنگی کے بعد کشادگی ضرور آتی ہے۔",
           "isPrimary": true
         }
       ],
-      "relatedQuestions": ["q9", "q10"]
+      "relatedQuestions": [
+        "q9",
+        "q10"
+      ]
     },
     {
       "id": "q12",
-      "question": "Will wrongdoers be held accountable?",
-      "shortQuestion": "Divine justice?",
+      "questionEn": "Will wrongdoers be held accountable?",
+      "questionAr": "هل سيُحاسَب الظالمون؟",
+      "questionUr": "کیا ظالموں کو جواب دہ ہونا پڑے گا؟",
+      "shortQuestionEn": "Divine justice?",
+      "shortQuestionAr": "العدل الإلهي؟",
+      "shortQuestionUr": "الٰہی انصاف؟",
       "category": "justice",
       "verses": [
         {
           "surahNumber": 99,
           "verseNumber": 7,
-          "relevanceNote": "Every atom's weight of good or evil will be seen and judged. Perfect justice awaits on the Day of Judgment - nothing escapes Allah's knowledge.",
+          "relevanceNoteEn": "Every atom's weight of good or evil will be seen and judged. Perfect justice awaits on the Day of Judgment - nothing escapes Allah's knowledge.",
+          "relevanceNoteAr": "سيُرى كل مثقال ذرة من خير أو شر ويُحاسَب عليه. العدل الكامل منتظر يوم القيامة — لا يفوت علم الله شيء.",
+          "relevanceNoteUr": "ذرے برابر نیکی یا برائی بھی دیکھی اور پرکھی جائے گی۔ یومِ قیامت میں کامل انصاف ہوگا — اللہ کے علم سے کچھ بھی چھپا نہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 4,
           "verseNumber": 40,
-          "relevanceNote": "Allah does not wrong anyone, not even by an atom's weight. Injustice in this world will be rectified in the Hereafter.",
+          "relevanceNoteEn": "Allah does not wrong anyone, not even by an atom's weight. Injustice in this world will be rectified in the Hereafter.",
+          "relevanceNoteAr": "الله لا يظلم أحداً ولو مثقال ذرة. وما شاع من الظلم في هذه الدنيا سيُقوَّم في الآخرة.",
+          "relevanceNoteUr": "اللہ کسی پر ذرہ برابر بھی ظلم نہیں کرتا۔ اِس دنیا کی ناانصافی آخرت میں درست کر دی جائے گی۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q17"]
+      "relatedQuestions": [
+        "q17"
+      ]
     },
     {
       "id": "q13",
-      "question": "Is life fair?",
-      "shortQuestion": "Life's fairness?",
+      "questionEn": "Is life fair?",
+      "questionAr": "هل الحياة عادلة؟",
+      "questionUr": "کیا زندگی انصاف پر ہے؟",
+      "shortQuestionEn": "Life's fairness?",
+      "shortQuestionAr": "عدالة الحياة؟",
+      "shortQuestionUr": "زندگی کا انصاف؟",
       "category": "justice",
       "verses": [
         {
           "surahNumber": 16,
           "verseNumber": 90,
-          "relevanceNote": "Allah commands justice and good conduct. While this world has trials, ultimate fairness will be established in the Hereafter.",
+          "relevanceNoteEn": "Allah commands justice and good conduct. While this world has trials, ultimate fairness will be established in the Hereafter.",
+          "relevanceNoteAr": "يأمر الله بالعدل والإحسان. وإن كانت الدنيا مليئة بالمحن، فإن العدل المطلق سيُقام في الآخرة.",
+          "relevanceNoteUr": "اللہ عدل و انصاف اور اچھے برتاؤ کا حکم دیتا ہے۔ اگرچہ اِس دنیا میں آزمائشیں ہیں، لیکن حقیقی انصاف آخرت میں قائم ہوگا۔",
           "isPrimary": true
         },
         {
           "surahNumber": 21,
           "verseNumber": 47,
-          "relevanceNote": "On Judgment Day, scales of justice will be set up with perfect precision. No soul will be wronged in the slightest.",
+          "relevanceNoteEn": "On Judgment Day, scales of justice will be set up with perfect precision. No soul will be wronged in the slightest.",
+          "relevanceNoteAr": "يوم القيامة تُنصب الموازين بدقة تامة. لن تُظلم نفس في شيء.",
+          "relevanceNoteUr": "یومِ قیامت بالکل درست میزانِ عدل قائم کیا جائے گا۔ کسی روح پر ذرہ برابر بھی ظلم نہ ہوگا۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q12"]
+      "relatedQuestions": [
+        "q12"
+      ]
     },
     {
       "id": "q14",
-      "question": "Why do children suffer?",
-      "shortQuestion": "Children suffering?",
+      "questionEn": "Why do children suffer?",
+      "questionAr": "لماذا يعاني الأطفال؟",
+      "questionUr": "بچے کیوں تکلیف اٹھاتے ہیں؟",
+      "shortQuestionEn": "Children suffering?",
+      "shortQuestionAr": "معاناة الأطفال؟",
+      "shortQuestionUr": "بچوں کی تکلیف؟",
       "category": "justice",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 286,
-          "relevanceNote": "No soul is burdened beyond its capacity. Children who suffer will be compensated justly by Allah's infinite mercy and wisdom.",
+          "relevanceNoteEn": "No soul is burdened beyond its capacity. Children who suffer will be compensated justly by Allah's infinite mercy and wisdom.",
+          "relevanceNoteAr": "لا تُكلَّف نفس إلا وسعها. الأطفال الذين يعانون سيُعوَّضون بعدل الله ورحمته اللامتناهيَين.",
+          "relevanceNoteUr": "کسی روح پر اُس کی طاقت سے زیادہ بوجھ نہیں ڈالا جاتا۔ جو بچے تکلیف اٹھاتے ہیں، انہیں اللہ اپنی لامحدود رحمت اور حکمت سے پورا پورا بدلہ دے گا۔",
           "isPrimary": true
         },
         {
           "surahNumber": 17,
           "verseNumber": 44,
-          "relevanceNote": "All creation glorifies Allah, even if we don't understand the wisdom. Children's suffering has meaning in Allah's perfect plan.",
+          "relevanceNoteEn": "All creation glorifies Allah, even if we don't understand the wisdom. Children's suffering has meaning in Allah's perfect plan.",
+          "relevanceNoteAr": "كل مخلوق يُسبّح الله وإن خفيت علينا الحكمة. لمعاناة الأطفال معنى في تقدير الله البالغ الحكمة.",
+          "relevanceNoteUr": "تمام مخلوق اللہ کی تسبیح کرتی ہے، چاہے ہم اُس حکمت کو سمجھ نہ سکیں۔ بچوں کی تکلیف اللہ کے کامل منصوبے میں ایک معنی رکھتی ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q9", "q10"]
+      "relatedQuestions": [
+        "q9",
+        "q10"
+      ]
     },
     {
       "id": "q15",
-      "question": "How should I treat others?",
-      "shortQuestion": "Treat others?",
+      "questionEn": "How should I treat others?",
+      "questionAr": "كيف أعامل الآخرين؟",
+      "questionUr": "مجھے دوسروں کے ساتھ کیسا برتاؤ کرنا چاہیے؟",
+      "shortQuestionEn": "Treat others?",
+      "shortQuestionAr": "معاملة الآخرين؟",
+      "shortQuestionUr": "دوسروں سے برتاؤ؟",
       "category": "ethics",
       "verses": [
         {
           "surahNumber": 4,
           "verseNumber": 36,
-          "relevanceNote": "Worship Allah and be good to parents, relatives, orphans, the needy, neighbors, travelers, and all people. Kindness is universal.",
+          "relevanceNoteEn": "Worship Allah and be good to parents, relatives, orphans, the needy, neighbors, travelers, and all people. Kindness is universal.",
+          "relevanceNoteAr": "اعبد الله وأحسن إلى الوالدين والأقارب واليتامى والمساكين والجيران وأبناء السبيل وسائر الناس. الإحسان لا حدود له.",
+          "relevanceNoteUr": "صرف اللہ کی عبادت کرو اور والدین، رشتے داروں، یتیموں، محتاجوں، پڑوسیوں، مسافروں اور سب لوگوں کے ساتھ اچھا برتاؤ کرو۔ مہربانی ہر ایک کا حق ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 49,
           "verseNumber": 13,
-          "relevanceNote": "All humanity comes from one source. The most honored in Allah's sight are those with most taqwa (consciousness of Allah), not race or status.",
+          "relevanceNoteEn": "All humanity comes from one source. The most honored in Allah's sight are those with most taqwa (consciousness of Allah), not race or status.",
+          "relevanceNoteAr": "الناس جميعاً من أصل واحد. أكرمهم عند الله أتقاهم، لا أصحّهم نسباً أو أعلاهم مكانة.",
+          "relevanceNoteUr": "تمام انسانیت ایک ہی سرچشمے سے ہے۔ اللہ کے نزدیک سب سے زیادہ عزت دار وہ ہے جسے تقویٰ (اللہ کا خوف) سب سے زیادہ ہو، نہ کہ نسل یا مقام کی بنیاد پر۔",
           "isPrimary": true
         }
       ],
-      "relatedQuestions": ["q16", "q22"]
+      "relatedQuestions": [
+        "q16",
+        "q22"
+      ]
     },
     {
       "id": "q16",
-      "question": "What makes something right or wrong?",
-      "shortQuestion": "Right vs wrong?",
+      "questionEn": "What makes something right or wrong?",
+      "questionAr": "ما الذي يجعل الشيء صواباً أو خطأً؟",
+      "questionUr": "کوئی چیز صحیح یا غلط کیسے ہوتی ہے؟",
+      "shortQuestionEn": "Right vs wrong?",
+      "shortQuestionAr": "الصواب والخطأ؟",
+      "shortQuestionUr": "صحیح اور غلط؟",
       "category": "ethics",
       "verses": [
         {
           "surahNumber": 91,
           "verseNumber": 8,
-          "relevanceNote": "Allah has inspired every soul with understanding of right (taqwa) and wrong (fujur). Conscience is divinely implanted.",
+          "relevanceNoteEn": "Allah has inspired every soul with understanding of right (taqwa) and wrong (fujur). Conscience is divinely implanted.",
+          "relevanceNoteAr": "ألهم الله كل نفس إدراك التقوى والفجور. الضمير موهبة إلهية مُودَعة في كل إنسان.",
+          "relevanceNoteUr": "اللہ نے ہر روح کو صحیح (تقویٰ) اور غلط (فجور) کی سمجھ عطا کی ہے۔ ضمیر الٰہی طور پر ودیعت کیا گیا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 16,
           "verseNumber": 90,
-          "relevanceNote": "Allah commands justice, good conduct, and generosity. He forbids immorality, wrongdoing, and oppression. These are moral absolutes.",
+          "relevanceNoteEn": "Allah commands justice, good conduct, and generosity. He forbids immorality, wrongdoing, and oppression. These are moral absolutes.",
+          "relevanceNoteAr": "يأمر الله بالعدل والإحسان والبذل، وينهى عن الفحشاء والمنكر والبغي. هذه مطلقات أخلاقية ثابتة.",
+          "relevanceNoteUr": "اللہ عدل، نیکی اور سخاوت کا حکم دیتا ہے اور بے حیائی، ظلم اور زیادتی سے منع کرتا ہے۔ یہ اخلاقی اصول مطلق ہیں۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q15"]
+      "relatedQuestions": [
+        "q15"
+      ]
     },
     {
       "id": "q17",
-      "question": "How do I control my anger?",
-      "shortQuestion": "Control anger?",
+      "questionEn": "How do I control my anger?",
+      "questionAr": "كيف أتحكم في غضبي؟",
+      "questionUr": "میں اپنے غصے پر کیسے قابو پاؤں؟",
+      "shortQuestionEn": "Control anger?",
+      "shortQuestionAr": "ضبط الغضب؟",
+      "shortQuestionUr": "غصہ قابو میں رکھیں؟",
       "category": "ethics",
       "verses": [
         {
           "surahNumber": 3,
           "verseNumber": 134,
-          "relevanceNote": "The righteous are those who restrain anger and pardon others. Allah loves those who show such self-control and forgiveness.",
+          "relevanceNoteEn": "The righteous are those who restrain anger and pardon others. Allah loves those who show such self-control and forgiveness.",
+          "relevanceNoteAr": "الأبرار هم الذين يكظمون الغيظ ويعفون عن الناس. والله يحب أصحاب ضبط النفس والعفو.",
+          "relevanceNoteUr": "نیک لوگ وہ ہیں جو غصہ پی جاتے اور دوسروں کو معاف کر دیتے ہیں۔ اللہ ایسے لوگوں سے محبت کرتا ہے جو خود پر قابو رکھیں اور درگزر کریں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 7,
           "verseNumber": 199,
-          "relevanceNote": "Practice forgiveness, command what is right, and turn away from the ignorant. Respond to anger with grace and wisdom.",
+          "relevanceNoteEn": "Practice forgiveness, command what is right, and turn away from the ignorant. Respond to anger with grace and wisdom.",
+          "relevanceNoteAr": "خذ العفو وأمر بالعرف وأعرض عن الجاهلين. واجه الغضب بالرزانة والحكمة.",
+          "relevanceNoteUr": "معافی کو اپنا شعار بناؤ، نیکی کا حکم دو اور جاہلوں سے منہ پھیر لو۔ غصے کا جواب خوش اخلاقی اور دانائی سے دو۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q19"]
+      "relatedQuestions": [
+        "q19"
+      ]
     },
     {
       "id": "q18",
-      "question": "What is true charity?",
-      "shortQuestion": "True charity?",
+      "questionEn": "What is true charity?",
+      "questionAr": "ما هو الإنفاق الحقيقي في سبيل الله؟",
+      "questionUr": "حقیقی صدقہ کیا ہے؟",
+      "shortQuestionEn": "True charity?",
+      "shortQuestionAr": "الصدقة الحقيقية؟",
+      "shortQuestionUr": "حقیقی صدقہ؟",
       "category": "ethics",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 177,
-          "relevanceNote": "True righteousness includes giving wealth to family, orphans, the needy, travelers, and for freeing slaves - out of love for Allah, not for show.",
+          "relevanceNoteEn": "True righteousness includes giving wealth to family, orphans, the needy, travelers, and for freeing slaves - out of love for Allah, not for show.",
+          "relevanceNoteAr": "البرّ الحق أن تُعطي من مالك الأسرةَ واليتامى والمساكين والمسافرين وتعمل على تحرير الرقاب — حبّاً لله لا رياءً.",
+          "relevanceNoteUr": "حقیقی نیکی یہ ہے کہ اللہ سے محبت کی خاطر اپنا مال رشتے داروں، یتیموں، محتاجوں، مسافروں اور غلاموں کو آزاد کرانے میں لگاؤ — نہ کہ دکھاوے کے لیے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 2,
           "verseNumber": 264,
-          "relevanceNote": "Charity done for show or followed by reminders of generosity is worthless. Give sincerely, in secret, without seeking recognition.",
+          "relevanceNoteEn": "Charity done for show or followed by reminders of generosity is worthless. Give sincerely, in secret, without seeking recognition.",
+          "relevanceNoteAr": "الصدقة المقترنة بالمنّ والأذى لا قيمة لها. أعطِ بإخلاص، في السر، دون انتظار ثناء.",
+          "relevanceNoteUr": "دکھاوے کے لیے دیا گیا صدقہ یا بعد میں احسان جتانے والا صدقہ بے کار ہے۔ خالص نیت سے، پوشیدہ طور پر اور بغیر کسی توقع کے دو۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q15"]
+      "relatedQuestions": [
+        "q15"
+      ]
     },
     {
       "id": "q19",
-      "question": "Should I forgive those who hurt me?",
-      "shortQuestion": "Forgive others?",
+      "questionEn": "Should I forgive those who hurt me?",
+      "questionAr": "هل ينبغي لي أن أعفو عمّن أساء إليّ؟",
+      "questionUr": "کیا مجھے تکلیف دینے والوں کو معاف کرنا چاہیے؟",
+      "shortQuestionEn": "Forgive others?",
+      "shortQuestionAr": "العفو عن الآخرين؟",
+      "shortQuestionUr": "دوسروں کو معاف کریں؟",
       "category": "ethics",
       "verses": [
         {
           "surahNumber": 24,
           "verseNumber": 22,
-          "relevanceNote": "Pardon and overlook offenses. Don't you love that Allah should forgive you? As you show mercy to others, Allah shows mercy to you.",
+          "relevanceNoteEn": "Pardon and overlook offenses. Don't you love that Allah should forgive you? As you show mercy to others, Allah shows mercy to you.",
+          "relevanceNoteAr": "اعفُ وأصفح. أَلا تحبون أن يغفر الله لكم؟ فكما تُعطي الرحمة للآخرين يُعطيك الله الرحمة.",
+          "relevanceNoteUr": "معاف کرو اور درگزر کرو۔ کیا تم نہیں چاہتے کہ اللہ تمہیں معاف کرے؟ جیسے تم دوسروں پر رحم کرتے ہو، اللہ تم پر رحم کرتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 42,
           "verseNumber": 40,
-          "relevanceNote": "While justice is allowed, forgiving is better. Allah loves those who pardon others - forgiveness is a higher virtue than retribution.",
+          "relevanceNoteEn": "While justice is allowed, forgiving is better. Allah loves those who pardon others - forgiveness is a higher virtue than retribution.",
+          "relevanceNoteAr": "حق التقاضي مشروع، غير أن العفو أفضل. يحب الله العافين — والمغفرة فضيلة أسمى من الانتقام.",
+          "relevanceNoteUr": "اگرچہ انصاف لینا جائز ہے، لیکن معاف کر دینا بہتر ہے۔ اللہ معاف کرنے والوں سے محبت کرتا ہے — معافی بدلے سے اعلیٰ فضیلت ہے۔",
           "isPrimary": true
         }
       ],
-      "relatedQuestions": ["q17"]
+      "relatedQuestions": [
+        "q17"
+      ]
     },
     {
       "id": "q20",
-      "question": "What is true humility?",
-      "shortQuestion": "True humility?",
+      "questionEn": "What is true humility?",
+      "questionAr": "ما هو التواضع الحقيقي؟",
+      "questionUr": "حقیقی تواضع کیا ہے؟",
+      "shortQuestionEn": "True humility?",
+      "shortQuestionAr": "التواضع الحقيقي؟",
+      "shortQuestionUr": "حقیقی تواضع؟",
       "category": "ethics",
       "verses": [
         {
           "surahNumber": 25,
           "verseNumber": 63,
-          "relevanceNote": "The servants of the Most Merciful walk on earth humbly, and when the ignorant address them, they say 'Peace.' Gentleness defines character.",
+          "relevanceNoteEn": "The servants of the Most Merciful walk on earth humbly, and when the ignorant address them, they say 'Peace.' Gentleness defines character.",
+          "relevanceNoteAr": "عباد الرحمن يمشون على الأرض هَوناً، وإذا خاطبهم الجاهلون قالوا سلاماً. اللطف عنوان الشخصية المؤمنة.",
+          "relevanceNoteUr": "رحمٰن کے بندے زمین پر عاجزی سے چلتے ہیں، اور جب جاہل لوگ اُنہیں تکلیف دیتے ہیں تو وہ کہتے ہیں: سلام۔ نرم مزاجی کردار کی پہچان ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 31,
           "verseNumber": 18,
-          "relevanceNote": "Do not turn your face away from people arrogantly, nor walk proudly on earth. Allah does not love the self-conceited boaster.",
+          "relevanceNoteEn": "Do not turn your face away from people arrogantly, nor walk proudly on earth. Allah does not love the self-conceited boaster.",
+          "relevanceNoteAr": "لا تُصعّر خدّك للناس ولا تمشِ في الأرض مرحاً. الله لا يحب كل مختال فخور.",
+          "relevanceNoteUr": "لوگوں سے تکبر سے منہ نہ پھیرو اور زمین پر اکڑ کر نہ چلو۔ اللہ متکبر اور شیخی خور کو پسند نہیں کرتا۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q15"]
+      "relatedQuestions": [
+        "q15"
+      ]
     },
     {
       "id": "q21",
-      "question": "How do I avoid backbiting?",
-      "shortQuestion": "Stop backbiting?",
+      "questionEn": "How do I avoid backbiting?",
+      "questionAr": "كيف أتجنب الغيبة؟",
+      "questionUr": "میں غیبت سے کیسے بچوں؟",
+      "shortQuestionEn": "Stop backbiting?",
+      "shortQuestionAr": "الابتعاد عن الغيبة؟",
+      "shortQuestionUr": "غیبت سے بچیں؟",
       "category": "ethics",
       "verses": [
         {
           "surahNumber": 49,
           "verseNumber": 12,
-          "relevanceNote": "Do not backbite - would you like to eat the flesh of your dead brother? Backbiting is compared to this repulsive act. Guard your tongue.",
+          "relevanceNoteEn": "Do not backbite - would you like to eat the flesh of your dead brother? Backbiting is compared to this repulsive act. Guard your tongue.",
+          "relevanceNoteAr": "لا تغتب — أيحب أحدكم أن يأكل لحم أخيه ميتاً؟ شُبّهت الغيبة بهذا الفعل المقزّز. احفظ لسانك.",
+          "relevanceNoteUr": "غیبت مت کرو — کیا تم میں سے کوئی پسند کرے گا کہ اپنے مردہ بھائی کا گوشت کھائے؟ غیبت کو اِس گھناؤنے فعل سے تشبیہ دی گئی ہے۔ اپنی زبان کی حفاظت کرو۔",
           "isPrimary": true
         },
         {
           "surahNumber": 24,
           "verseNumber": 19,
-          "relevanceNote": "Those who spread slander about believers will face painful punishment. Speaking ill of others is a grave sin.",
+          "relevanceNoteEn": "Those who spread slander about believers will face painful punishment. Speaking ill of others is a grave sin.",
+          "relevanceNoteAr": "الذين يُشيعون الفاحشة في المؤمنين ينتظرهم عذاب أليم. الثلب والإيذاء بالكلام ذنب عظيم.",
+          "relevanceNoteUr": "جو لوگ مؤمنوں کے بارے میں بہتان پھیلاتے ہیں انہیں دردناک عذاب ملے گا۔ دوسروں کی برائی کرنا ایک بڑا گناہ ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q15"]
+      "relatedQuestions": [
+        "q15"
+      ]
     },
     {
       "id": "q22",
-      "question": "What happens after we die?",
-      "shortQuestion": "After death?",
+      "questionEn": "What happens after we die?",
+      "questionAr": "ماذا يحدث بعد وفاتنا؟",
+      "questionUr": "مرنے کے بعد کیا ہوتا ہے؟",
+      "shortQuestionEn": "After death?",
+      "shortQuestionAr": "ما بعد الموت؟",
+      "shortQuestionUr": "موت کے بعد؟",
       "category": "afterlife",
       "verses": [
         {
           "surahNumber": 23,
           "verseNumber": 99,
-          "relevanceNote": "After death comes barzakh - an intermediate realm until resurrection. Then all will be raised for the Day of Judgment.",
+          "relevanceNoteEn": "After death comes barzakh - an intermediate realm until resurrection. Then all will be raised for the Day of Judgment.",
+          "relevanceNoteAr": "يعقب الموتَ البرزخُ — عالم وسيط حتى البعث. ثم يُبعث الجميع ليوم الحساب.",
+          "relevanceNoteUr": "موت کے بعد برزخ آتی ہے — قیامت تک کا درمیانی مرحلہ۔ پھر سب کو اٹھایا جائے گا اور یومِ قیامت کا سامنا کرنا ہوگا۔",
           "isPrimary": true
         },
         {
           "surahNumber": 75,
           "verseNumber": 36,
-          "relevanceNote": "Humans were not created to be left purposeless. Death is not the end - resurrection and accountability await everyone.",
+          "relevanceNoteEn": "Humans were not created to be left purposeless. Death is not the end - resurrection and accountability await everyone.",
+          "relevanceNoteAr": "لم يُخلق الإنسان ليُترك سدى. الموت ليس النهاية — البعث والمحاسبة في انتظار الجميع.",
+          "relevanceNoteUr": "انسان کو بے مقصد نہیں چھوڑا گیا۔ موت آخر نہیں ہے — ہر ایک کے لیے قیامت اور حساب و کتاب منتظر ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q23", "q24"]
+      "relatedQuestions": [
+        "q23",
+        "q24"
+      ]
     },
     {
       "id": "q23",
-      "question": "Is there really a Day of Judgment?",
-      "shortQuestion": "Day of Judgment?",
+      "questionEn": "Is there really a Day of Judgment?",
+      "questionAr": "هل يوم القيامة حقيقي؟",
+      "questionUr": "کیا واقعی یومِ قیامت آئے گا؟",
+      "shortQuestionEn": "Day of Judgment?",
+      "shortQuestionAr": "يوم القيامة؟",
+      "shortQuestionUr": "یومِ قیامت؟",
       "category": "afterlife",
       "verses": [
         {
           "surahNumber": 82,
           "verseNumber": 19,
-          "relevanceNote": "The Day of Judgment is real - a day when no soul can help another, and all authority belongs to Allah alone. Perfect justice will prevail.",
+          "relevanceNoteEn": "The Day of Judgment is real - a day when no soul can help another, and all authority belongs to Allah alone. Perfect justice will prevail.",
+          "relevanceNoteAr": "يوم القيامة حق — يوم لا تنفع نفس نفساً، والأمر كله لله وحده. سيسود العدل المطلق.",
+          "relevanceNoteUr": "یومِ قیامت حقیقی ہے — وہ دن جب کوئی روح کسی کے کام نہ آئے گی اور ساری اقتدار صرف اللہ کے لیے ہوگی۔ کامل انصاف ہوگا۔",
           "isPrimary": true
         },
         {
           "surahNumber": 21,
           "verseNumber": 47,
-          "relevanceNote": "Scales of justice will be set up on Judgment Day. Not even an atom's weight of good or evil will be overlooked.",
+          "relevanceNoteEn": "Scales of justice will be set up on Judgment Day. Not even an atom's weight of good or evil will be overlooked.",
+          "relevanceNoteAr": "تُقام يوم القيامة الموازين. لن يُترك مثقال ذرة من خير أو شر دون حساب.",
+          "relevanceNoteUr": "قیامت کے دن میزانِ عدل قائم ہوگی۔ ذرے برابر نیکی یا برائی بھی نظرانداز نہیں ہوگی۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q22", "q12"]
+      "relatedQuestions": [
+        "q22",
+        "q12"
+      ]
     },
     {
       "id": "q24",
-      "question": "What is Paradise like?",
-      "shortQuestion": "Paradise description?",
+      "questionEn": "What is Paradise like?",
+      "questionAr": "كيف تكون الجنة؟",
+      "questionUr": "جنت کیسی ہے؟",
+      "shortQuestionEn": "Paradise description?",
+      "shortQuestionAr": "وصف الجنة؟",
+      "shortQuestionUr": "جنت کا حال؟",
       "category": "afterlife",
       "verses": [
         {
           "surahNumber": 47,
           "verseNumber": 15,
-          "relevanceNote": "Paradise has rivers of water, milk, wine (that doesn't intoxicate), and honey. Gardens of eternal bliss await the righteous.",
+          "relevanceNoteEn": "Paradise has rivers of water, milk, wine (that doesn't intoxicate), and honey. Gardens of eternal bliss await the righteous.",
+          "relevanceNoteAr": "في الجنة أنهار من ماء غير آسن ومن لبن ومن خمر لذة للشاربين ومن عسل مصفى. تنتظر الصالحين جناتُ نعيم أبدية.",
+          "relevanceNoteUr": "جنت میں پانی، دودھ، غیر نشہ آور شراب اور شہد کی نہریں ہیں۔ نیک لوگوں کے لیے ہمیشہ رہنے والی باغات منتظر ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 32,
           "verseNumber": 17,
-          "relevanceNote": "No soul knows the delights of Paradise that await them - rewards beyond imagination as recompense for righteous deeds.",
+          "relevanceNoteEn": "No soul knows the delights of Paradise that await them - rewards beyond imagination as recompense for righteous deeds.",
+          "relevanceNoteAr": "لا تعلم نفس ما أُخفي لها من قرة أعين — مكافآت تفوق الخيال جزاءً للعمل الصالح.",
+          "relevanceNoteUr": "کوئی روح نہیں جانتی کہ اُس کے نیک اعمال کے صلے میں جنت میں کیا کچھ پوشیدہ ہے — وہ انعامات تصور سے بھی پرے ہیں۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q22", "q25"]
+      "relatedQuestions": [
+        "q22",
+        "q25"
+      ]
     },
     {
       "id": "q25",
-      "question": "Who goes to Hell?",
-      "shortQuestion": "Who to Hell?",
+      "questionEn": "Who goes to Hell?",
+      "questionAr": "من يدخل النار؟",
+      "questionUr": "جہنم میں کون جائے گا؟",
+      "shortQuestionEn": "Who to Hell?",
+      "shortQuestionAr": "من يدخل النار؟",
+      "shortQuestionUr": "جہنم میں کون؟",
       "category": "afterlife",
       "verses": [
         {
           "surahNumber": 4,
           "verseNumber": 48,
-          "relevanceNote": "Those who die associating partners with Allah (shirk) without repenting will be denied Paradise. However, Allah forgives all other sins if He wills.",
+          "relevanceNoteEn": "Those who die associating partners with Allah (shirk) without repenting will be denied Paradise. However, Allah forgives all other sins if He wills.",
+          "relevanceNoteAr": "من مات مشركاً دون توبة لا يُغفر له وتُغلق في وجهه أبواب الجنة. أما سائر الذنوب فيغفرها الله لمن يشاء.",
+          "relevanceNoteUr": "جو لوگ شرک کی حالت میں توبہ کیے بغیر مر جائیں انہیں جنت سے محروم رکھا جائے گا۔ البتہ اللہ چاہے تو دیگر تمام گناہ معاف کر دیتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 99,
           "verseNumber": 8,
-          "relevanceNote": "Those who committed evil will see it judged. Hell is for persistent wrongdoers who rejected truth and oppressed others.",
+          "relevanceNoteEn": "Those who committed evil will see it judged. Hell is for persistent wrongdoers who rejected truth and oppressed others.",
+          "relevanceNoteAr": "من اقترف الشر سيرى جزاءه محاسَباً عليه. النار للمصرّين على الباطل، المعاندين للحق، الظالمين لعباد الله.",
+          "relevanceNoteUr": "جنہوں نے برائی کی وہ اُسے جوابدہی کے سامنے پائیں گے۔ جہنم اُن ہٹ دھرم بدکاروں کے لیے ہے جنہوں نے حق کو رد کیا اور لوگوں پر ظلم کیا۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q22", "q2"]
+      "relatedQuestions": [
+        "q22",
+        "q2"
+      ]
     },
     {
       "id": "q26",
-      "question": "Will families reunite in Paradise?",
-      "shortQuestion": "Family in Paradise?",
+      "questionEn": "Will families reunite in Paradise?",
+      "questionAr": "هل تجتمع الأسر في الجنة؟",
+      "questionUr": "کیا جنت میں خاندان ملیں گے؟",
+      "shortQuestionEn": "Family in Paradise?",
+      "shortQuestionAr": "الأسرة في الجنة؟",
+      "shortQuestionUr": "جنت میں خاندان؟",
       "category": "afterlife",
       "verses": [
         {
           "surahNumber": 52,
           "verseNumber": 21,
-          "relevanceNote": "Believers will be reunited with their faithful family members in Paradise. Allah will join them together out of His mercy.",
+          "relevanceNoteEn": "Believers will be reunited with their faithful family members in Paradise. Allah will join them together out of His mercy.",
+          "relevanceNoteAr": "يلتقي المؤمنون بأهلهم الصالحين في الجنة. يجمعهم الله برحمته.",
+          "relevanceNoteUr": "مؤمنوں کو جنت میں اُن کے مؤمن گھر والوں سے ملایا جائے گا۔ اللہ اپنی رحمت سے انہیں اکٹھا کرے گا۔",
           "isPrimary": true
         },
         {
           "surahNumber": 13,
           "verseNumber": 23,
-          "relevanceNote": "Gardens of eternity where righteous ones enter along with their righteous ancestors, spouses, and descendants. A complete family reunion.",
+          "relevanceNoteEn": "Gardens of eternity where righteous ones enter along with their righteous ancestors, spouses, and descendants. A complete family reunion.",
+          "relevanceNoteAr": "جنات عدن يدخلها الصالحون مع آبائهم وأزواجهم وذريتهم الصالحين. لقاء أسري كامل في دار النعيم.",
+          "relevanceNoteUr": "ہمیشگی کے باغات جہاں نیک لوگ اپنے نیک آباء، شریکِ حیات اور اولاد کے ساتھ داخل ہوں گے۔ خاندان کا مکمل ملن ہوگا۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q24"]
+      "relatedQuestions": [
+        "q24"
+      ]
     },
     {
       "id": "q27",
-      "question": "What happens in the grave?",
-      "shortQuestion": "In the grave?",
+      "questionEn": "What happens in the grave?",
+      "questionAr": "ماذا يحدث في القبر؟",
+      "questionUr": "قبر میں کیا ہوتا ہے؟",
+      "shortQuestionEn": "In the grave?",
+      "shortQuestionAr": "ما في القبر؟",
+      "shortQuestionUr": "قبر میں؟",
       "category": "afterlife",
       "verses": [
         {
           "surahNumber": 14,
           "verseNumber": 27,
-          "relevanceNote": "Allah keeps believers firm in the grave and in the Hereafter through their faith. They will answer questions from angels with certainty.",
+          "relevanceNoteEn": "Allah keeps believers firm in the grave and in the Hereafter through their faith. They will answer questions from angels with certainty.",
+          "relevanceNoteAr": "الله يُثبّت المؤمنين في القبر وفي الآخرة بفضل إيمانهم. سيجيبون على أسئلة الملائكة بثقة واطمئنان.",
+          "relevanceNoteUr": "اللہ مؤمنوں کو قبر میں اور آخرت میں اُن کے ایمان کے ذریعے ثابت قدم رکھتا ہے۔ وہ فرشتوں کے سوالوں کا یقین سے جواب دیں گے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 20,
           "verseNumber": 124,
-          "relevanceNote": "Those who turn away from Allah's remembrance will face a constrained life in the grave and be raised blind on Judgment Day.",
+          "relevanceNoteEn": "Those who turn away from Allah's remembrance will face a constrained life in the grave and be raised blind on Judgment Day.",
+          "relevanceNoteAr": "من أعرض عن ذكر الله كانت له معيشة ضنكاً في القبر، ويُحشر يوم القيامة أعمى.",
+          "relevanceNoteUr": "جو لوگ اللہ کے ذکر سے منہ موڑتے ہیں انہیں قبر میں تنگ زندگی ملے گی اور قیامت کے دن انہیں اندھا اٹھایا جائے گا۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q22"]
+      "relatedQuestions": [
+        "q22"
+      ]
     },
     {
       "id": "q28",
-      "question": "How should I treat my parents?",
-      "shortQuestion": "Treat parents?",
+      "questionEn": "How should I treat my parents?",
+      "questionAr": "كيف أعامل والديّ؟",
+      "questionUr": "مجھے اپنے والدین کے ساتھ کیسا برتاؤ کرنا چاہیے؟",
+      "shortQuestionEn": "Treat parents?",
+      "shortQuestionAr": "معاملة الوالدين؟",
+      "shortQuestionUr": "والدین سے برتاؤ؟",
       "category": "relationships",
       "verses": [
         {
           "surahNumber": 17,
           "verseNumber": 23,
-          "relevanceNote": "Worship Allah alone and be kind to parents. If they reach old age, do not say 'uff' to them but speak honorably and gently.",
+          "relevanceNoteEn": "Worship Allah alone and be kind to parents. If they reach old age, do not say 'uff' to them but speak honorably and gently.",
+          "relevanceNoteAr": "اعبد الله وحده وأحسن إلى الوالدين. إن بلغا عندك الكبر فلا تقل لهما أف وخاطبهما قولاً كريماً.",
+          "relevanceNoteUr": "صرف اللہ کی عبادت کرو اور والدین کے ساتھ احسان کرو۔ اگر وہ بڑھاپے کو پہنچیں تو انہیں 'اُف' تک نہ کہو، بلکہ شایستہ اور نرم لہجے میں بات کرو۔",
           "isPrimary": true
         },
         {
           "surahNumber": 31,
           "verseNumber": 14,
-          "relevanceNote": "Be grateful to Allah and your parents. Even if they urge you toward shirk, refuse gently but still treat them kindly in this world.",
+          "relevanceNoteEn": "Be grateful to Allah and your parents. Even if they urge you toward shirk, refuse gently but still treat them kindly in this world.",
+          "relevanceNoteAr": "اشكر الله ووالديك. وإن حثّاك على الشرك فأبَ برفق، وأحسن معاملتهما في الدنيا مع ذلك.",
+          "relevanceNoteUr": "اللہ کا اور اپنے والدین کا شکر ادا کرو۔ اگر وہ شرک کی طرف بھی بلائیں تو نرمی سے انکار کرو، مگر پھر بھی دنیا میں ان کے ساتھ اچھے سلوک سے پیش آؤ۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q15", "q29"]
+      "relatedQuestions": [
+        "q15",
+        "q29"
+      ]
     },
     {
       "id": "q29",
-      "question": "What are the rights of spouses?",
-      "shortQuestion": "Spouse rights?",
+      "questionEn": "What are the rights of spouses?",
+      "questionAr": "ما هي حقوق الزوجين؟",
+      "questionUr": "زوجین کے ایک دوسرے پر کیا حقوق ہیں؟",
+      "shortQuestionEn": "Spouse rights?",
+      "shortQuestionAr": "حقوق الزوج والزوجة؟",
+      "shortQuestionUr": "شوہر اور بیوی کے حقوق؟",
       "category": "relationships",
       "verses": [
         {
           "surahNumber": 30,
           "verseNumber": 21,
-          "relevanceNote": "Allah created spouses as a source of tranquility, love, and mercy. Marriage is a sign of divine wisdom and compassion.",
+          "relevanceNoteEn": "Allah created spouses as a source of tranquility, love, and mercy. Marriage is a sign of divine wisdom and compassion.",
+          "relevanceNoteAr": "جعل الله الأزواج مصدراً للسكينة والمودة والرحمة. الزواج آية من آيات الحكمة الإلهية والرحمة الربانية.",
+          "relevanceNoteUr": "اللہ نے شوہر اور بیوی کو ایک دوسرے کے لیے سکون، محبت اور رحمت کا ذریعہ بنایا ہے۔ نکاح الٰہی حکمت اور رحمت کی نشانی ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 2,
           "verseNumber": 228,
-          "relevanceNote": "Spouses have rights over each other in fairness. Men and women are garments for each other - protection, comfort, and adornment.",
+          "relevanceNoteEn": "Spouses have rights over each other in fairness. Men and women are garments for each other - protection, comfort, and adornment.",
+          "relevanceNoteAr": "للزوجين حقوق متبادلة بالمعروف. الزوجان لباس لبعضهما — ستر وراحة وزينة.",
+          "relevanceNoteUr": "زوجین کے ایک دوسرے پر انصاف کے ساتھ حقوق ہیں۔ مرد اور عورت ایک دوسرے کا لباس ہیں — حفاظت، راحت اور زینت۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q30"]
+      "relatedQuestions": [
+        "q30"
+      ]
     },
     {
       "id": "q30",
-      "question": "How do I raise righteous children?",
-      "shortQuestion": "Raise children?",
+      "questionEn": "How do I raise righteous children?",
+      "questionAr": "كيف أُربّي أبناء صالحين؟",
+      "questionUr": "میں نیک اولاد کیسے تربیت کروں؟",
+      "shortQuestionEn": "Raise children?",
+      "shortQuestionAr": "تربية الأبناء؟",
+      "shortQuestionUr": "اولاد کی تربیت؟",
       "category": "relationships",
       "verses": [
         {
           "surahNumber": 66,
           "verseNumber": 6,
-          "relevanceNote": "Protect yourselves and your families from Hell by teaching them faith, prayer, and righteousness. Parents are responsible for their children's guidance.",
+          "relevanceNoteEn": "Protect yourselves and your families from Hell by teaching them faith, prayer, and righteousness. Parents are responsible for their children's guidance.",
+          "relevanceNoteAr": "قوا أنفسكم وأهليكم ناراً بتعليمهم الإيمان والصلاة والتقوى. الوالدان مسؤولان عن هداية أبنائهما.",
+          "relevanceNoteUr": "اپنے آپ کو اور اپنے گھر والوں کو جہنم سے بچاؤ — انہیں ایمان، نماز اور نیکی سکھاؤ۔ والدین اپنی اولاد کی رہنمائی کے ذمہ دار ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 31,
           "verseNumber": 17,
-          "relevanceNote": "Teach children to establish prayer, command good, forbid evil, and be patient with difficulties. Model these virtues yourself.",
+          "relevanceNoteEn": "Teach children to establish prayer, command good, forbid evil, and be patient with difficulties. Model these virtues yourself.",
+          "relevanceNoteAr": "علّم أبناءك إقامة الصلاة والأمر بالمعروف والنهي عن المنكر والصبر على المصائب. واجعل نفسك قدوة فيها.",
+          "relevanceNoteUr": "بچوں کو نماز قائم کرنا، نیکی کا حکم دینا، برائی سے روکنا اور مشکلات پر صبر کرنا سکھاؤ۔ خود بھی ان فضائل کا نمونہ بنو۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q28"]
+      "relatedQuestions": [
+        "q28"
+      ]
     },
     {
       "id": "q31",
-      "question": "What makes a good friend?",
-      "shortQuestion": "Good friends?",
+      "questionEn": "What makes a good friend?",
+      "questionAr": "ما صفات الصديق الحقيقي؟",
+      "questionUr": "اچھا دوست کون ہوتا ہے؟",
+      "shortQuestionEn": "Good friends?",
+      "shortQuestionAr": "الأصدقاء الصالحون؟",
+      "shortQuestionUr": "اچھے دوست؟",
       "category": "relationships",
       "verses": [
         {
           "surahNumber": 18,
           "verseNumber": 28,
-          "relevanceNote": "Keep company with those who remember Allah morning and evening. Don't follow those whose hearts are heedless and who pursue worldly desires.",
+          "relevanceNoteEn": "Keep company with those who remember Allah morning and evening. Don't follow those whose hearts are heedless and who pursue worldly desires.",
+          "relevanceNoteAr": "احرص على مجالسة من يذكرون الله بكرةً وعشياً. ولا تتبع من غفلت قلوبهم وانهمكوا في زينة الدنيا.",
+          "relevanceNoteUr": "اُن لوگوں کی صحبت میں رہو جو صبح و شام اللہ کو یاد کرتے ہیں۔ اُن لوگوں کی پیروی نہ کرو جن کے دل غافل ہیں اور جو دنیاوی خواہشات کے پیچھے بھاگتے ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 25,
           "verseNumber": 27,
-          "relevanceNote": "On Judgment Day, wrongdoers will regret taking certain people as friends who led them astray. Choose companions who strengthen your faith.",
+          "relevanceNoteEn": "On Judgment Day, wrongdoers will regret taking certain people as friends who led them astray. Choose companions who strengthen your faith.",
+          "relevanceNoteAr": "يوم القيامة يندم الظالمون على صداقاتهم التي أضلّتهم. اختر صحبةً تُقوّي إيمانك وترفعك.",
+          "relevanceNoteUr": "یومِ قیامت گنہگار پچھتائیں گے کہ انہوں نے کچھ لوگوں کو دوست بنایا جنہوں نے انہیں گمراہ کیا۔ ایسے ساتھی چنو جو تمہارے ایمان کو مضبوط کریں۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q15"]
+      "relatedQuestions": [
+        "q15"
+      ]
     },
     {
       "id": "q32",
-      "question": "How do I deal with difficult relatives?",
-      "shortQuestion": "Difficult relatives?",
+      "questionEn": "How do I deal with difficult relatives?",
+      "questionAr": "كيف أتعامل مع الأقارب الصعبين؟",
+      "questionUr": "مشکل رشتے داروں سے کیسے نمٹوں؟",
+      "shortQuestionEn": "Difficult relatives?",
+      "shortQuestionAr": "الأقارب الصعبون؟",
+      "shortQuestionUr": "مشکل رشتے دار؟",
       "category": "relationships",
       "verses": [
         {
           "surahNumber": 4,
           "verseNumber": 1,
-          "relevanceNote": "Maintain ties of kinship - Allah watches over family relationships. Honor relatives even when they make it difficult.",
+          "relevanceNoteEn": "Maintain ties of kinship - Allah watches over family relationships. Honor relatives even when they make it difficult.",
+          "relevanceNoteAr": "صِل رحمك — الله رقيب على صلات القرابة. أكرم أقاربك حتى حين يُصعّبون عليك الأمر.",
+          "relevanceNoteUr": "رشتے ناطے جوڑے رکھو — اللہ خاندانی تعلقات پر نظر رکھتا ہے۔ رشتے دار مشکل بھی ہوں تو انہیں عزت دو۔",
           "isPrimary": true
         },
         {
           "surahNumber": 13,
           "verseNumber": 25,
-          "relevanceNote": "Those who break family ties that Allah commanded to be maintained earn His curse. Patience with difficult relatives brings divine reward.",
+          "relevanceNoteEn": "Those who break family ties that Allah commanded to be maintained earn His curse. Patience with difficult relatives brings divine reward.",
+          "relevanceNoteAr": "الذين يقطعون ما أمر الله بوصله يستحقون اللعنة. الصبر على الأقارب الصعبين يجلب الثواب الإلهي.",
+          "relevanceNoteUr": "جو لوگ اللہ کے حکم کیے گئے خاندانی رشتوں کو توڑتے ہیں وہ اُس کی لعنت کے مستحق ہیں۔ مشکل رشتے داروں پر صبر کا الٰہی اجر ملتا ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q28", "q15"]
+      "relatedQuestions": [
+        "q28",
+        "q15"
+      ]
     },
     {
       "id": "q33",
-      "question": "What is a blessed marriage?",
-      "shortQuestion": "Blessed marriage?",
+      "questionEn": "What is a blessed marriage?",
+      "questionAr": "ما هو الزواج المبارك؟",
+      "questionUr": "بابرکت شادی کیا ہے؟",
+      "shortQuestionEn": "Blessed marriage?",
+      "shortQuestionAr": "الزواج المبارك؟",
+      "shortQuestionUr": "بابرکت شادی؟",
       "category": "relationships",
       "verses": [
         {
           "surahNumber": 30,
           "verseNumber": 21,
-          "relevanceNote": "Allah placed love and mercy between spouses. A blessed marriage is built on mutual tranquility, affection, and compassion.",
+          "relevanceNoteEn": "Allah placed love and mercy between spouses. A blessed marriage is built on mutual tranquility, affection, and compassion.",
+          "relevanceNoteAr": "جعل الله بين الزوجين مودةً ورحمة. الزواج المبارك مبنيٌّ على السكينة المتبادلة والمحبة والرأفة.",
+          "relevanceNoteUr": "اللہ نے شوہر اور بیوی کے درمیان محبت اور رحمت رکھی ہے۔ بابرکت شادی باہمی سکون، الفت اور ہمدردی پر قائم ہوتی ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 25,
           "verseNumber": 74,
-          "relevanceNote": "Righteous spouses pray to be the comfort of each other's eyes and leaders in piety. Shared faith strengthens marital bonds.",
+          "relevanceNoteEn": "Righteous spouses pray to be the comfort of each other's eyes and leaders in piety. Shared faith strengthens marital bonds.",
+          "relevanceNoteAr": "الصالحون يدعون ربهم أن يجعل أزواجهم وذريتهم قرة أعين ويجعلهم للمتقين إماماً. الإيمان المشترك يوطّد أواصر الزواج.",
+          "relevanceNoteUr": "نیک زوجین دعا کرتے ہیں کہ ہم ایک دوسرے کی آنکھوں کی ٹھنڈک اور تقویٰ میں رہنما بنیں۔ مشترکہ ایمان ازدواجی تعلق کو مضبوط کرتا ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q29"]
+      "relatedQuestions": [
+        "q29"
+      ]
     },
     {
       "id": "q34",
-      "question": "What does Islam say about other faiths?",
-      "shortQuestion": "Other faiths?",
+      "questionEn": "What does Islam say about other faiths?",
+      "questionAr": "ماذا يقول الإسلام عن الأديان الأخرى؟",
+      "questionUr": "اسلام دوسرے مذاہب کے بارے میں کیا کہتا ہے؟",
+      "shortQuestionEn": "Other faiths?",
+      "shortQuestionAr": "الأديان الأخرى؟",
+      "shortQuestionUr": "دوسرے مذاہب؟",
       "category": "interfaith",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 62,
-          "relevanceNote": "Believers, Jews, Christians, and Sabians - whoever believes in Allah and the Last Day and does good will be rewarded. Faith and righteous deeds matter most.",
+          "relevanceNoteEn": "Believers, Jews, Christians, and Sabians - whoever believes in Allah and the Last Day and does good will be rewarded. Faith and righteous deeds matter most.",
+          "relevanceNoteAr": "المؤمنون واليهود والنصارى والصابئون — من آمن بالله واليوم الآخر وعمل صالحاً فله أجره. الإيمان والعمل الصالح هما المقياس.",
+          "relevanceNoteUr": "مؤمن، یہودی، عیسائی اور صابئین — جو بھی اللہ اور آخرت پر ایمان رکھے اور نیک عمل کرے، اُسے اُس کا اجر ملے گا۔ ایمان اور نیک عمل سب سے زیادہ اہم ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 29,
           "verseNumber": 46,
-          "relevanceNote": "Argue with People of the Book only in the best manner, acknowledging shared belief in one God. Approach interfaith dialogue with respect.",
+          "relevanceNoteEn": "Argue with People of the Book only in the best manner, acknowledging shared belief in one God. Approach interfaith dialogue with respect.",
+          "relevanceNoteAr": "جادِل أهل الكتاب بالتي هي أحسن، مُقرّاً بوحدانية الإله المشتركة. تناوَل الحوار بين الأديان باحترام.",
+          "relevanceNoteUr": "اہلِ کتاب سے بحث صرف بہترین انداز میں کرو اور ایک خدا پر مشترکہ یقین کو تسلیم کرو۔ بین المذاہب مکالمہ احترام کے ساتھ کرو۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q35", "q36"]
+      "relatedQuestions": [
+        "q35",
+        "q36"
+      ]
     },
     {
       "id": "q35",
-      "question": "Are Christians and Jews believers?",
-      "shortQuestion": "Christians and Jews?",
+      "questionEn": "Are Christians and Jews believers?",
+      "questionAr": "هل المسيحيون واليهود مؤمنون؟",
+      "questionUr": "کیا عیسائی اور یہودی مومن ہیں؟",
+      "shortQuestionEn": "Christians and Jews?",
+      "shortQuestionAr": "المسيحيون واليهود؟",
+      "shortQuestionUr": "عیسائی اور یہودی؟",
       "category": "interfaith",
       "verses": [
         {
           "surahNumber": 3,
           "verseNumber": 113,
-          "relevanceNote": "Among the People of the Book are upright communities who recite Allah's verses throughout the night and prostrate. Not all are the same.",
+          "relevanceNoteEn": "Among the People of the Book are upright communities who recite Allah's verses throughout the night and prostrate. Not all are the same.",
+          "relevanceNoteAr": "في أهل الكتاب أُمة قائمة يتلون آيات الله آناء الليل وهم يسجدون. ليسوا جميعاً سواء.",
+          "relevanceNoteUr": "اہلِ کتاب میں سیدھے راستے پر چلنے والی جماعتیں ہیں جو رات بھر اللہ کی آیات تلاوت کرتی اور سجدہ کرتی ہیں۔ سب یکساں نہیں ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 5,
           "verseNumber": 82,
-          "relevanceNote": "You will find Christians nearest in affection to Muslims because among them are priests and monks who are humble and devout.",
+          "relevanceNoteEn": "You will find Christians nearest in affection to Muslims because among them are priests and monks who are humble and devout.",
+          "relevanceNoteAr": "ستجد المسيحيين أقرب مودةً للمسلمين؛ ذلك بأن منهم قسّيسين ورهباناً لا يستكبرون.",
+          "relevanceNoteUr": "تم پاؤ گے کہ مسلمانوں سے سب سے قریبی محبت رکھنے والے عیسائی ہیں، کیونکہ اُن میں پادری اور راہب ہیں جو عاجز اور عبادت گزار ہیں۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q34"]
+      "relatedQuestions": [
+        "q34"
+      ]
     },
     {
       "id": "q36",
-      "question": "Can people of other faiths be good?",
-      "shortQuestion": "Others be good?",
+      "questionEn": "Can people of other faiths be good?",
+      "questionAr": "هل يمكن أن يكون أتباع الأديان الأخرى صالحين؟",
+      "questionUr": "کیا دوسرے مذاہب کے لوگ نیک ہو سکتے ہیں؟",
+      "shortQuestionEn": "Others be good?",
+      "shortQuestionAr": "صلاح أتباع الأديان الأخرى؟",
+      "shortQuestionUr": "دوسرے بھی نیک؟",
       "category": "interfaith",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 62,
-          "relevanceNote": "Those who believe in Allah, the Last Day, and do righteous deeds will have their reward with Allah. Goodness transcends religious labels.",
+          "relevanceNoteEn": "Those who believe in Allah, the Last Day, and do righteous deeds will have their reward with Allah. Goodness transcends religious labels.",
+          "relevanceNoteAr": "من آمن بالله واليوم الآخر وعمل صالحاً فله أجره عند الله. الصلاح يتجاوز التسميات الدينية.",
+          "relevanceNoteUr": "جو اللہ، آخرت پر ایمان رکھیں اور نیک عمل کریں اُن کا اجر اللہ کے پاس ہے۔ نیکی مذہبی لیبل سے ماورا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 5,
           "verseNumber": 69,
-          "relevanceNote": "Believers, Jews, Sabians, and Christians who believe in Allah and the Last Day and do good have nothing to fear. Sincerity matters.",
+          "relevanceNoteEn": "Believers, Jews, Sabians, and Christians who believe in Allah and the Last Day and do good have nothing to fear. Sincerity matters.",
+          "relevanceNoteAr": "المؤمنون واليهود والصابئون والنصارى من آمن بالله واليوم الآخر وعمل صالحاً فلا خوف عليهم. الإخلاص هو المعيار.",
+          "relevanceNoteUr": "مؤمن، یہودی، صابئین اور عیسائی — جو اللہ اور آخرت پر ایمان رکھیں اور نیک عمل کریں — انہیں کوئی خوف یا غم نہیں۔ اخلاص سب سے بڑھ کر ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q34", "q35"]
+      "relatedQuestions": [
+        "q34",
+        "q35"
+      ]
     },
     {
       "id": "q37",
-      "question": "Why are there different religions?",
-      "shortQuestion": "Different religions?",
+      "questionEn": "Why are there different religions?",
+      "questionAr": "لماذا توجد أديان مختلفة؟",
+      "questionUr": "مختلف مذاہب کیوں ہیں؟",
+      "shortQuestionEn": "Different religions?",
+      "shortQuestionAr": "الأديان المتعددة؟",
+      "shortQuestionUr": "مختلف مذاہب؟",
       "category": "interfaith",
       "verses": [
         {
           "surahNumber": 5,
           "verseNumber": 48,
-          "relevanceNote": "Allah could have made humanity one nation but made you different to test you. Compete in goodness - in the end, Allah will clarify your differences.",
+          "relevanceNoteEn": "Allah could have made humanity one nation but made you different to test you. Compete in goodness - in the end, Allah will clarify your differences.",
+          "relevanceNoteAr": "لو شاء الله لجعل الناس أمة واحدة ولكنه جعلهم مختلفين ليبتليهم. فاستبقوا الخيرات — والله سيُبيّن لكم ما كنتم فيه تختلفون.",
+          "relevanceNoteUr": "اللہ چاہتا تو سب کو ایک امت بنا دیتا، لیکن اُس نے تمہیں مختلف بنایا تاکہ آزمائش ہو۔ نیکیوں میں آگے بڑھو — آخرکار اللہ تمہارے اختلافات واضح کرے گا۔",
           "isPrimary": true
         },
         {
           "surahNumber": 49,
           "verseNumber": 13,
-          "relevanceNote": "Allah made humanity into nations and tribes so you may know one another. Diversity is by divine design, meant to foster understanding.",
+          "relevanceNoteEn": "Allah made humanity into nations and tribes so you may know one another. Diversity is by divine design, meant to foster understanding.",
+          "relevanceNoteAr": "جعل الله الناس شعوباً وقبائل لتعارفوا. التنوع مراد الله، وهو موجود لتعزيز التفاهم لا للتنافر.",
+          "relevanceNoteUr": "اللہ نے انسانیت کو قوموں اور قبیلوں میں بنایا تاکہ تم ایک دوسرے کو پہچانو۔ تنوع الٰہی ارادے سے ہے جس کا مقصد باہمی فہم و ادراک ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q34"]
+      "relatedQuestions": [
+        "q34"
+      ]
     },
     {
       "id": "q38",
-      "question": "How should Muslims treat non-Muslims?",
-      "shortQuestion": "Treat non-Muslims?",
+      "questionEn": "How should Muslims treat non-Muslims?",
+      "questionAr": "كيف يتعامل المسلمون مع غير المسلمين؟",
+      "questionUr": "مسلمانوں کو غیر مسلموں کے ساتھ کیسا سلوک کرنا چاہیے؟",
+      "shortQuestionEn": "Treat non-Muslims?",
+      "shortQuestionAr": "معاملة غير المسلمين؟",
+      "shortQuestionUr": "غیر مسلموں سے سلوک؟",
       "category": "interfaith",
       "verses": [
         {
           "surahNumber": 60,
           "verseNumber": 8,
-          "relevanceNote": "Allah does not forbid you from being kind and just to those who haven't fought you over religion. Allah loves those who are just.",
+          "relevanceNoteEn": "Allah does not forbid you from being kind and just to those who haven't fought you over religion. Allah loves those who are just.",
+          "relevanceNoteAr": "لا ينهاكم الله عن البرّ والقسط مع الذين لم يقاتلوكم في الدين. والله يحب المقسطين.",
+          "relevanceNoteUr": "اللہ تمہیں اُن لوگوں کے ساتھ مہربانی اور انصاف کرنے سے نہیں روکتا جنہوں نے دین کے معاملے میں تم سے لڑائی نہیں کی۔ اللہ انصاف کرنے والوں کو پسند کرتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 49,
           "verseNumber": 13,
-          "relevanceNote": "All humanity comes from one source. Honor is based on righteousness, not ethnicity or religion. Treat all people with dignity.",
+          "relevanceNoteEn": "All humanity comes from one source. Honor is based on righteousness, not ethnicity or religion. Treat all people with dignity.",
+          "relevanceNoteAr": "الناس جميعاً من أصل واحد. الكرامة مبنية على التقوى لا على الانتماء العرقي أو الديني. عامل جميع الناس باحترام.",
+          "relevanceNoteUr": "تمام انسانیت ایک ہی اصل سے ہے۔ عزت نیکی کی بنیاد پر ہے، نسل یا مذہب کی بنیاد پر نہیں۔ سب کے ساتھ وقار کے ساتھ پیش آؤ۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q15", "q34"]
+      "relatedQuestions": [
+        "q15",
+        "q34"
+      ]
     },
     {
       "id": "q39",
-      "question": "Can I lie to save someone?",
-      "shortQuestion": "Lie to save?",
+      "questionEn": "Can I lie to save someone?",
+      "questionAr": "هل يجوز الكذب لإنقاذ شخص؟",
+      "questionUr": "کیا کسی کی جان بچانے کے لیے جھوٹ بولا جا سکتا ہے؟",
+      "shortQuestionEn": "Lie to save?",
+      "shortQuestionAr": "الكذب لإنقاذ حياة؟",
+      "shortQuestionUr": "جان بچانے کو جھوٹ؟",
       "category": "ethics",
       "verses": [
         {
           "surahNumber": 16,
           "verseNumber": 106,
-          "relevanceNote": "Those forced to disbelieve while their hearts remain firm in faith are excused. Under extreme duress, protecting life takes precedence.",
+          "relevanceNoteEn": "Those forced to disbelieve while their hearts remain firm in faith are excused. Under extreme duress, protecting life takes precedence.",
+          "relevanceNoteAr": "المكرهون على الكفر بينما قلوبهم مطمئنة بالإيمان معذورون. في حالات الإكراه الشديد يتقدم حفظ الحياة على غيره.",
+          "relevanceNoteUr": "جو لوگ کفر پر مجبور کیے جائیں جبکہ اُن کے دل ایمان پر قائم ہوں وہ معذور ہیں۔ شدید مجبوری میں جان کی حفاظت کو ترجیح حاصل ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 2,
           "verseNumber": 225,
-          "relevanceNote": "Allah will not take you to task for unintentional oaths. Intentions matter - protecting innocent life is a higher principle than strict truthfulness.",
+          "relevanceNoteEn": "Allah will not take you to task for unintentional oaths. Intentions matter - protecting innocent life is a higher principle than strict truthfulness.",
+          "relevanceNoteAr": "لا يؤاخذكم الله باللغو في أيمانكم. النوايا معتبرة — حفظ حياة بريء مبدأ أسمى من الصدق الحرفي المطلق.",
+          "relevanceNoteUr": "اللہ غیر ارادی قسموں پر محاسبہ نہیں کرے گا۔ نیت کا اعتبار ہے — بے گناہ انسان کی جان بچانا سچائی کی سخت پابندی سے اعلیٰ اصول ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q16"]
+      "relatedQuestions": [
+        "q16"
+      ]
     },
     {
       "id": "q40",
-      "question": "How do I seek forgiveness?",
-      "shortQuestion": "Seek forgiveness?",
+      "questionEn": "How do I seek forgiveness?",
+      "questionAr": "كيف أطلب المغفرة؟",
+      "questionUr": "میں مغفرت کیسے طلب کروں؟",
+      "shortQuestionEn": "Seek forgiveness?",
+      "shortQuestionAr": "طلب المغفرة؟",
+      "shortQuestionUr": "مغفرت کیسے مانگیں؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 3,
           "verseNumber": 135,
-          "relevanceNote": "When believers commit sin, they remember Allah and seek forgiveness immediately. They don't persist in wrongdoing knowingly.",
+          "relevanceNoteEn": "When believers commit sin, they remember Allah and seek forgiveness immediately. They don't persist in wrongdoing knowingly.",
+          "relevanceNoteAr": "حين يقع المؤمنون في ذنب يتذكرون الله ويستغفرونه فوراً. ولا يُصرّون على ما فعلوا وهم يعلمون.",
+          "relevanceNoteUr": "جب مؤمن گناہ کر بیٹھتے ہیں تو فوری طور پر اللہ کو یاد کرتے اور استغفار کرتے ہیں۔ وہ جانتے بوجھتے گناہ پر اڑے نہیں رہتے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 39,
           "verseNumber": 53,
-          "relevanceNote": "Never despair of Allah's mercy. He forgives all sins for those who sincerely repent. Turn to Him with genuine remorse and resolve.",
+          "relevanceNoteEn": "Never despair of Allah's mercy. He forgives all sins for those who sincerely repent. Turn to Him with genuine remorse and resolve.",
+          "relevanceNoteAr": "لا تقنطوا من رحمة الله أبداً. إنه يغفر الذنوب جميعاً لمن تاب توبةً صادقة. فأقبلوا عليه بحسرة حقيقية وعزم راسخ.",
+          "relevanceNoteUr": "اللہ کی رحمت سے ہرگز مایوس نہ ہو۔ جو سچے دل سے توبہ کرے اُس کے تمام گناہ وہ معاف کر دیتا ہے۔ سچی ندامت اور پختہ ارادے کے ساتھ اُس کی طرف پلٹو۔",
           "isPrimary": true
         }
       ],
-      "relatedQuestions": ["q2"]
+      "relatedQuestions": [
+        "q2"
+      ]
     },
     {
       "id": "q41",
-      "question": "What does the Quran say about evolution?",
-      "shortQuestion": "Quran on evolution?",
+      "questionEn": "What does the Quran say about evolution?",
+      "questionAr": "ماذا يقول القرآن عن نظرية التطور؟",
+      "questionUr": "قرآن ارتقاء کے بارے میں کیا کہتا ہے؟",
+      "shortQuestionEn": "Quran on evolution?",
+      "shortQuestionAr": "القرآن والتطور؟",
+      "shortQuestionUr": "قرآن اور ارتقاء؟",
       "category": "science",
       "verses": [
         {
           "surahNumber": 71,
           "verseNumber": 14,
-          "relevanceNote": "Allah created you in stages (atwar). This Quranic term suggests a gradual developmental process that some scholars see as compatible with evolutionary concepts.",
+          "relevanceNoteEn": "Allah created you in stages (atwar). This Quranic term suggests a gradual developmental process that some scholars see as compatible with evolutionary concepts.",
+          "relevanceNoteAr": "خلقكم الله أطواراً. هذه اللفظة القرآنية تُشير إلى مسار تنموي تدريجي يراه بعض العلماء متوافقاً مع المفاهيم التطورية.",
+          "relevanceNoteUr": "اللہ نے تمہیں مراحل میں (اطوار) پیدا کیا۔ یہ قرآنی اصطلاح ایک بتدریج ترقیاتی عمل کی طرف اشارہ کرتی ہے جسے بعض علما ارتقائی تصورات سے ہم آہنگ سمجھتے ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 21,
           "verseNumber": 30,
-          "relevanceNote": "Every living thing was made from water. This aligns with scientific understanding of life's origins and the importance of water for all organisms.",
+          "relevanceNoteEn": "Every living thing was made from water. This aligns with scientific understanding of life's origins and the importance of water for all organisms.",
+          "relevanceNoteAr": "كل شيء حي خُلق من الماء. هذا يتوافق مع الفهم العلمي لأصول الحياة وأهمية الماء لجميع الكائنات.",
+          "relevanceNoteUr": "ہر جاندار چیز پانی سے بنائی گئی۔ یہ زندگی کی ابتدا کے بارے میں سائنسی فہم اور تمام جانداروں کے لیے پانی کی اہمیت سے مطابقت رکھتا ہے۔",
           "isPrimary": false
         },
         {
           "surahNumber": 32,
           "verseNumber": 7,
-          "relevanceNote": "Allah began human creation from clay, then made descendants from a humble fluid. The Quran acknowledges multiple stages in human development.",
+          "relevanceNoteEn": "Allah began human creation from clay, then made descendants from a humble fluid. The Quran acknowledges multiple stages in human development.",
+          "relevanceNoteAr": "بدأ الله خلق الإنسان من طين ثم جعل نسله من سلالة من ماء مهين. يُقرّ القرآن الكريم بمراحل متعددة في خلق الإنسان.",
+          "relevanceNoteUr": "اللہ نے انسانی تخلیق کا آغاز مٹی سے کیا، پھر نسل کو ایک حقیر پانی سے۔ قرآن انسانی نشوونما کے متعدد مراحل کو تسلیم کرتا ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q42", "q44", "q45"]
+      "relatedQuestions": [
+        "q42",
+        "q44",
+        "q45"
+      ]
     },
     {
       "id": "q42",
-      "question": "Did humans originate from apes?",
-      "shortQuestion": "Humans from apes?",
+      "questionEn": "Did humans originate from apes?",
+      "questionAr": "هل ينحدر البشر من القردة؟",
+      "questionUr": "کیا انسان بندروں سے آئے؟",
+      "shortQuestionEn": "Humans from apes?",
+      "shortQuestionAr": "البشر من القردة؟",
+      "shortQuestionUr": "انسان بندروں سے؟",
       "category": "science",
       "verses": [
         {
           "surahNumber": 15,
           "verseNumber": 28,
-          "relevanceNote": "Adam was created from clay, then Allah breathed His spirit into him. Islam teaches Adam was a special creation, distinct from animals.",
+          "relevanceNoteEn": "Adam was created from clay, then Allah breathed His spirit into him. Islam teaches Adam was a special creation, distinct from animals.",
+          "relevanceNoteAr": "خُلق آدم (ع) من طين ثم نفخ الله فيه من روحه. يُعلّم الإسلام أن آدم كان خلقاً خاصاً مميزاً عن سائر الحيوانات.",
+          "relevanceNoteUr": "آدم علیہ السلام کو مٹی سے بنایا گیا، پھر اللہ نے اُن میں اپنی روح پھونکی۔ اسلام یہ سکھاتا ہے کہ آدم علیہ السلام ایک خاص تخلیق تھے جو حیوانوں سے الگ ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 3,
           "verseNumber": 59,
-          "relevanceNote": "Jesus and Adam were created similarly - from dust, then 'Be' and it was. This emphasizes Adam's unique creation without biological parents.",
+          "relevanceNoteEn": "Jesus and Adam were created similarly - from dust, then 'Be' and it was. This emphasizes Adam's unique creation without biological parents.",
+          "relevanceNoteAr": "عيسى (ع) وآدم (ع) خُلقا بالطريقة نفسها — من تراب ثم قال الله له كن فيكون. هذا يؤكد الخلق الفريد لآدم دون أبوين بيولوجيين.",
+          "relevanceNoteUr": "عیسیٰ علیہ السلام اور آدم علیہ السلام کی تخلیق ایک جیسی ہے — مٹی سے، پھر 'ہو جا' تو ہو گیا۔ یہ آدم علیہ السلام کی اُس منفرد تخلیق پر زور دیتا ہے جو ماں باپ کے بغیر ہوئی۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q41", "q8"]
+      "relatedQuestions": [
+        "q41",
+        "q8"
+      ]
     },
     {
       "id": "q43",
-      "question": "Does the Quran mention dinosaurs?",
-      "shortQuestion": "Dinosaurs in Quran?",
+      "questionEn": "Does the Quran mention dinosaurs?",
+      "questionAr": "هل يذكر القرآن الديناصورات؟",
+      "questionUr": "کیا قرآن میں ڈائنوسار کا ذکر ہے؟",
+      "shortQuestionEn": "Dinosaurs in Quran?",
+      "shortQuestionAr": "الديناصورات في القرآن؟",
+      "shortQuestionUr": "قرآن میں ڈائنوسار؟",
       "category": "science",
       "verses": [
         {
           "surahNumber": 24,
           "verseNumber": 45,
-          "relevanceNote": "Allah created every living creature from water - some crawl on bellies, some on two legs, some on four. This encompasses all creatures, past and present.",
+          "relevanceNoteEn": "Allah created every living creature from water - some crawl on bellies, some on two legs, some on four. This encompasses all creatures, past and present.",
+          "relevanceNoteAr": "خلق الله كل دابة من ماء؛ منها ما يمشي على بطنه ومنها ما يمشي على رجلين ومنها ما يمشي على أربع. هذا يشمل جميع الكائنات قديمها وحديثها.",
+          "relevanceNoteUr": "اللہ نے ہر جاندار مخلوق پانی سے بنائی — کچھ پیٹ کے بل چلتی ہیں، کچھ دو پاؤں پر، کچھ چار پر۔ یہ ماضی اور حال کی تمام مخلوقات کو شامل ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 40,
           "verseNumber": 57,
-          "relevanceNote": "The creation of heavens and earth is greater than the creation of humans. Allah's creative power extends to realms we cannot fully comprehend.",
+          "relevanceNoteEn": "The creation of heavens and earth is greater than the creation of humans. Allah's creative power extends to realms we cannot fully comprehend.",
+          "relevanceNoteAr": "لَخَلْقُ السماوات والأرض أكبر من خلق الناس. قدرة الله الخلاقة تمتد إلى عوالم لا نُحيط بها إدراكاً.",
+          "relevanceNoteUr": "آسمانوں اور زمین کی تخلیق انسان کی تخلیق سے بڑھ کر ہے۔ اللہ کی تخلیقی قدرت اُن دائروں تک پھیلی ہے جنہیں ہم پوری طرح نہیں سمجھ سکتے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q44", "q45"]
+      "relatedQuestions": [
+        "q44",
+        "q45"
+      ]
     },
     {
       "id": "q44",
-      "question": "How was the universe created?",
-      "shortQuestion": "Universe creation?",
+      "questionEn": "How was the universe created?",
+      "questionAr": "كيف خُلق الكون؟",
+      "questionUr": "کائنات کیسے بنی؟",
+      "shortQuestionEn": "Universe creation?",
+      "shortQuestionAr": "خلق الكون؟",
+      "shortQuestionUr": "کائنات کی تخلیق؟",
       "category": "science",
       "verses": [
         {
           "surahNumber": 21,
           "verseNumber": 30,
-          "relevanceNote": "The heavens and earth were joined together, then We split them apart. This remarkably parallels the Big Bang theory of cosmic expansion from a singularity.",
+          "relevanceNoteEn": "The heavens and earth were joined together, then We split them apart. This remarkably parallels the Big Bang theory of cosmic expansion from a singularity.",
+          "relevanceNoteAr": "كانت السماوات والأرض رتقاً ففتقناهما. هذا يتوافق توافقاً لافتاً مع نظرية الانفجار العظيم في توسع الكون من نقطة واحدة.",
+          "relevanceNoteUr": "آسمان اور زمین ملے ہوئے تھے، پھر ہم نے انہیں جدا کر دیا۔ یہ بات حیرت انگیز طور پر بگ بینگ نظریے سے مطابقت رکھتی ہے کہ کائنات ایک نقطے سے پھیلی۔",
           "isPrimary": true
         },
         {
           "surahNumber": 41,
           "verseNumber": 11,
-          "relevanceNote": "Allah turned to the heaven when it was smoke. Modern cosmology describes the early universe as a hot, dense cloud - strikingly similar to this Quranic description.",
+          "relevanceNoteEn": "Allah turned to the heaven when it was smoke. Modern cosmology describes the early universe as a hot, dense cloud - strikingly similar to this Quranic description.",
+          "relevanceNoteAr": "استوى الله إلى السماء وهي دخان. يصف علم الكونيات الحديث الكون المبكر بأنه سحابة ساخنة كثيفة — قريب الشبه مما ورد في القرآن الكريم.",
+          "relevanceNoteUr": "اللہ نے آسمان کی طرف توجہ فرمائی جبکہ وہ دھواں تھا۔ جدید کائناتیات ابتدائی کائنات کو ایک گرم، گھنے بادل کے طور پر بیان کرتی ہے — قرآنی بیان سے حیرت انگیز مشابہت ہے۔",
           "isPrimary": true
         }
       ],
-      "relatedQuestions": ["q8", "q41", "q45"]
+      "relatedQuestions": [
+        "q8",
+        "q41",
+        "q45"
+      ]
     },
     {
       "id": "q45",
-      "question": "Can Muslims believe in science?",
-      "shortQuestion": "Science and Islam?",
+      "questionEn": "Can Muslims believe in science?",
+      "questionAr": "هل يجوز للمسلمين الإيمان بالعلم؟",
+      "questionUr": "کیا مسلمان سائنس پر یقین رکھ سکتے ہیں؟",
+      "shortQuestionEn": "Science and Islam?",
+      "shortQuestionAr": "العلم والإسلام؟",
+      "shortQuestionUr": "سائنس اور اسلام؟",
       "category": "science",
       "verses": [
         {
           "surahNumber": 3,
           "verseNumber": 190,
-          "relevanceNote": "In the creation of heavens and earth, and the alternation of night and day, are signs for people of understanding. The Quran encourages scientific observation.",
+          "relevanceNoteEn": "In the creation of heavens and earth, and the alternation of night and day, are signs for people of understanding. The Quran encourages scientific observation.",
+          "relevanceNoteAr": "في خلق السماوات والأرض واختلاف الليل والنهار لآيات لأولي الألباب. يحثّ القرآن على الملاحظة العلمية والتدبر في الكون.",
+          "relevanceNoteUr": "آسمانوں اور زمین کی تخلیق میں اور رات دن کے بدلتے آنے جانے میں عقلمندوں کے لیے نشانیاں ہیں۔ قرآن سائنسی مشاہدے کی حوصلہ افزائی کرتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 96,
           "verseNumber": 1,
-          "relevanceNote": "Read! The first revelation commands reading and learning. Islam's intellectual tradition produced pioneers in astronomy, medicine, mathematics, and chemistry.",
+          "relevanceNoteEn": "Read! The first revelation commands reading and learning. Islam's intellectual tradition produced pioneers in astronomy, medicine, mathematics, and chemistry.",
+          "relevanceNoteAr": "اقرأ! أول وحي نزل يأمر بالقراءة والتعلم. أنتج التراث الفكري الإسلامي رواداً في الفلك والطب والرياضيات والكيمياء.",
+          "relevanceNoteUr": "پڑھو! پہلی وحی پڑھنے اور سیکھنے کا حکم دیتی ہے۔ اسلام کی علمی روایت نے فلکیات، طب، ریاضی اور کیمیا میں پیش رو پیدا کیے۔",
           "isPrimary": true
         }
       ],
-      "relatedQuestions": ["q4", "q44"]
+      "relatedQuestions": [
+        "q4",
+        "q44"
+      ]
     },
     {
       "id": "q46",
-      "question": "Is everything predestined or do we have free will?",
-      "shortQuestion": "Destiny vs free will?",
+      "questionEn": "Is everything predestined or do we have free will?",
+      "questionAr": "هل كل شيء مقدّر أم نملك إرادة حرة؟",
+      "questionUr": "کیا سب کچھ مقدر ہے یا ہمارا اختیار بھی ہے؟",
+      "shortQuestionEn": "Destiny vs free will?",
+      "shortQuestionAr": "القضاء والإرادة الحرة؟",
+      "shortQuestionUr": "تقدیر یا اختیار؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 76,
           "verseNumber": 3,
-          "relevanceNote": "We showed him the path - whether he is grateful or ungrateful. This verse affirms human choice: Allah guides, but we decide whether to follow.",
+          "relevanceNoteEn": "We showed him the path - whether he is grateful or ungrateful. This verse affirms human choice: Allah guides, but we decide whether to follow.",
+          "relevanceNoteAr": "إنا هديناه السبيل إما شاكراً وإما كفوراً. تُثبت الآية الاختيار الإنساني: الله يهدي والإنسان يقرر أيتبع أم يعرض.",
+          "relevanceNoteUr": "ہم نے اُسے راستہ دکھا دیا — چاہے شکرگزار ہو یا ناشکرا۔ یہ آیت انسانی انتخاب کو تسلیم کرتی ہے: اللہ رہنمائی کرتا ہے، لیکن پیروی کرنا یا نہ کرنا ہم طے کرتے ہیں۔",
           "isPrimary": true
         },
         {
           "surahNumber": 18,
           "verseNumber": 29,
-          "relevanceNote": "Say: The truth is from your Lord - let whoever wills believe, and whoever wills disbelieve. This clearly states that belief is a personal choice.",
+          "relevanceNoteEn": "Say: The truth is from your Lord - let whoever wills believe, and whoever wills disbelieve. This clearly states that belief is a personal choice.",
+          "relevanceNoteAr": "قل الحق من ربكم فمن شاء فليؤمن ومن شاء فليكفر. هذا تصريح قاطع بأن الإيمان خيار شخصي.",
+          "relevanceNoteUr": "کہو: حق تمہارے رب کی طرف سے ہے — جو چاہے ایمان لائے اور جو چاہے انکار کرے۔ یہ آیت صراحت سے بیان کرتی ہے کہ ایمان ایک ذاتی انتخاب ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 91,
           "verseNumber": 8,
-          "relevanceNote": "Allah inspired the soul with its wickedness and righteousness. We have inner knowledge of right and wrong, and responsibility for our choices.",
+          "relevanceNoteEn": "Allah inspired the soul with its wickedness and righteousness. We have inner knowledge of right and wrong, and responsibility for our choices.",
+          "relevanceNoteAr": "ألهم الله النفس فجورها وتقواها. لدينا معرفة فطرية بالخير والشر وتبعة على خياراتنا.",
+          "relevanceNoteUr": "اللہ نے روح کو اُس کی نافرمانی اور تقویٰ دونوں الہام کیے۔ ہمارے اندر صحیح اور غلط کا علم ہے اور ہم اپنے انتخاب کے ذمہ دار ہیں۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q9", "q12"]
+      "relatedQuestions": [
+        "q9",
+        "q12"
+      ]
     },
     {
       "id": "q47",
-      "question": "Is the soul real?",
-      "shortQuestion": "Soul's existence?",
+      "questionEn": "Is the soul real?",
+      "questionAr": "هل الروح حقيقية؟",
+      "questionUr": "کیا روح واقعی موجود ہے؟",
+      "shortQuestionEn": "Soul's existence?",
+      "shortQuestionAr": "وجود الروح؟",
+      "shortQuestionUr": "روح کا وجود؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 17,
           "verseNumber": 85,
-          "relevanceNote": "They ask you about the soul. Say: The soul is from the command of my Lord, and you have been given only a little knowledge. The soul is real but mysterious.",
+          "relevanceNoteEn": "They ask you about the soul. Say: The soul is from the command of my Lord, and you have been given only a little knowledge. The soul is real but mysterious.",
+          "relevanceNoteAr": "يسألونك عن الروح. قل الروح من أمر ربي وما أوتيتم من العلم إلا قليلا. الروح حقيقية لكنها من الغيب الذي لا تُدركه العقول.",
+          "relevanceNoteUr": "لوگ تم سے روح کے بارے میں پوچھتے ہیں۔ کہو: روح میرے رب کے حکم سے ہے اور تمہیں تھوڑا ہی علم دیا گیا ہے۔ روح حقیقی ہے لیکن پراسرار ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 32,
           "verseNumber": 9,
-          "relevanceNote": "Then He fashioned him and breathed into him of His spirit. The soul (ruh) is divine in origin, distinguishing humans from mere biological organisms.",
+          "relevanceNoteEn": "Then He fashioned him and breathed into him of His spirit. The soul (ruh) is divine in origin, distinguishing humans from mere biological organisms.",
+          "relevanceNoteAr": "ثم سوّاه ونفخ فيه من روحه. الروح إلهية المصدر، وهي ما يُميّز الإنسان عن مجرد الكائن البيولوجي.",
+          "relevanceNoteUr": "پھر اُسے سنوارا اور اُس میں اپنی روح پھونکی۔ روح (رُوح) کا سرچشمہ الٰہی ہے، جو انسان کو محض ایک حیاتیاتی وجود سے ممتاز کرتا ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q22", "q8"]
+      "relatedQuestions": [
+        "q22",
+        "q8"
+      ]
     },
     {
       "id": "q48",
-      "question": "What does the Quran say about depression and anxiety?",
-      "shortQuestion": "Depression and anxiety?",
+      "questionEn": "What does the Quran say about depression and anxiety?",
+      "questionAr": "ماذا يقول القرآن عن الاكتئاب والقلق؟",
+      "questionUr": "قرآن ڈپریشن اور پریشانی کے بارے میں کیا کہتا ہے؟",
+      "shortQuestionEn": "Depression and anxiety?",
+      "shortQuestionAr": "الاكتئاب والقلق؟",
+      "shortQuestionUr": "ڈپریشن اور پریشانی؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 13,
           "verseNumber": 28,
-          "relevanceNote": "Verily, in the remembrance of Allah do hearts find rest. The Quran acknowledges emotional distress and offers spiritual practices as one source of healing.",
+          "relevanceNoteEn": "Verily, in the remembrance of Allah do hearts find rest. The Quran acknowledges emotional distress and offers spiritual practices as one source of healing.",
+          "relevanceNoteAr": "«أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ» — يُدرك القرآن الضيق النفسي ويُقدّم الممارسات الروحية مصدراً من مصادر الشفاء.",
+          "relevanceNoteUr": "«جان لو کہ اللہ کے ذکر ہی سے دلوں کو سکون ملتا ہے»۔ قرآن جذباتی اضطراب کو تسلیم کرتا ہے اور روحانی عمل کو شفا کے ایک ذریعے کے طور پر پیش کرتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 94,
           "verseNumber": 5,
-          "relevanceNote": "Indeed, with hardship comes ease. Repeated twice for emphasis - Allah promises relief follows difficulty. This gives hope during dark times.",
+          "relevanceNoteEn": "Indeed, with hardship comes ease. Repeated twice for emphasis - Allah promises relief follows difficulty. This gives hope during dark times.",
+          "relevanceNoteAr": "«فَإِنَّ مَعَ الْعُسْرِ يُسْراً» — كُررت مرتين تأكيداً؛ والله يعد بأن الفرج يعقب الشدة. هذا يُبثّ الأمل في أحلك الأوقات.",
+          "relevanceNoteUr": "بے شک تنگی کے ساتھ آسانی ہے — زور دینے کے لیے دو مرتبہ کہا گیا۔ اللہ وعدہ کرتا ہے کہ مشکل کے بعد راحت ملے گی۔ یہ تاریک وقتوں میں امید دیتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 65,
           "verseNumber": 2,
-          "relevanceNote": "Whoever fears Allah, He will make a way out for them. Trust in Allah provides hope and perspective during mental health struggles.",
+          "relevanceNoteEn": "Whoever fears Allah, He will make a way out for them. Trust in Allah provides hope and perspective during mental health struggles.",
+          "relevanceNoteAr": "من يتق الله يجعل له مخرجاً. التوكل على الله يُبعث فيه الأمل ويُعيد للحياة منظورها السليم في مواجهة الأزمات النفسية.",
+          "relevanceNoteUr": "جو اللہ سے ڈرے گا، وہ اُس کے لیے راستہ نکال دے گا۔ اللہ پر بھروسہ ذہنی صحت کی مشکلات کے دوران امید اور سکون فراہم کرتا ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q11", "q5"]
+      "relatedQuestions": [
+        "q11",
+        "q5"
+      ]
     },
     {
       "id": "q49",
-      "question": "Why do some prayers seem unanswered?",
-      "shortQuestion": "Unanswered prayers?",
+      "questionEn": "Why do some prayers seem unanswered?",
+      "questionAr": "لماذا يبدو أن بعض الأدعية لا تُجاب؟",
+      "questionUr": "کچھ دعائیں بے اثر کیوں لگتی ہیں؟",
+      "shortQuestionEn": "Unanswered prayers?",
+      "shortQuestionAr": "الأدعية غير المستجابة؟",
+      "shortQuestionUr": "بے اثر دعائیں؟",
       "category": "faith",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 216,
-          "relevanceNote": "You may dislike something that is good for you, and love something that is bad for you. Allah knows and you do not know. He answers with wisdom.",
+          "relevanceNoteEn": "You may dislike something that is good for you, and love something that is bad for you. Allah knows and you do not know. He answers with wisdom.",
+          "relevanceNoteAr": "قد تكرهون شيئاً وهو خير لكم وتحبون شيئاً وهو شر لكم. والله يعلم وأنتم لا تعلمون. يستجيب بحكمة بالغة.",
+          "relevanceNoteUr": "ہو سکتا ہے کوئی چیز تمہیں ناپسند ہو جو تمہارے لیے بہتر ہو، اور جو تمہیں پسند ہو وہ برُی ہو۔ اللہ جانتا ہے اور تم نہیں جانتے۔ وہ حکمت سے جواب دیتا ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 42,
           "verseNumber": 27,
-          "relevanceNote": "If Allah extended provision to all His servants, they would transgress on earth. He sends down in measure as He wills. Sometimes 'no' protects us.",
+          "relevanceNoteEn": "If Allah extended provision to all His servants, they would transgress on earth. He sends down in measure as He wills. Sometimes 'no' protects us.",
+          "relevanceNoteAr": "لو بسط الله الرزق لعباده لبغوا في الأرض. ينزّل الله بقدر كما يشاء. «لا» أحياناً تكون وقايةً لنا.",
+          "relevanceNoteUr": "اگر اللہ اپنے تمام بندوں کو وسیع رزق دے تو وہ زمین میں فساد کریں۔ وہ جس قدر چاہے اتار دیتا ہے۔ کبھی کبھی 'نہیں' ہماری حفاظت کرتا ہے۔",
           "isPrimary": false
         },
         {
           "surahNumber": 18,
           "verseNumber": 82,
-          "relevanceNote": "The story of Khidr shows events that seemed harmful were actually merciful. Allah's wisdom in answering prayers is often hidden from us.",
+          "relevanceNoteEn": "The story of Khidr shows events that seemed harmful were actually merciful. Allah's wisdom in answering prayers is often hidden from us.",
+          "relevanceNoteAr": "قصة الخضر تُظهر أن ما بدا ضاراً كان في حقيقته رحمة. حكمة الله في استجابة الأدعية كثيراً ما تكون خفية عنا.",
+          "relevanceNoteUr": "حضرت خضر علیہ السلام کا واقعہ بتاتا ہے کہ بظاہر نقصاندہ لگنے والے واقعات دراصل رحمت تھے۔ دعاؤں کے جواب میں اللہ کی حکمت اکثر ہم سے پوشیدہ رہتی ہے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q5", "q9", "q11"]
+      "relatedQuestions": [
+        "q5",
+        "q9",
+        "q11"
+      ]
     },
     {
       "id": "q50",
-      "question": "What about life on other planets?",
-      "shortQuestion": "Extraterrestrial life?",
+      "questionEn": "What about life on other planets?",
+      "questionAr": "ماذا عن الحياة على كواكب أخرى؟",
+      "questionUr": "دوسرے سیاروں پر زندگی کے بارے میں کیا خیال ہے؟",
+      "shortQuestionEn": "Extraterrestrial life?",
+      "shortQuestionAr": "الحياة خارج الأرض؟",
+      "shortQuestionUr": "خلائی مخلوق؟",
       "category": "science",
       "verses": [
         {
           "surahNumber": 42,
           "verseNumber": 29,
-          "relevanceNote": "Among His signs is the creation of the heavens and earth, and the creatures He has scattered in both. This suggests life exists beyond Earth.",
+          "relevanceNoteEn": "Among His signs is the creation of the heavens and earth, and the creatures He has scattered in both. This suggests life exists beyond Earth.",
+          "relevanceNoteAr": "ومن آياته خلق السماوات والأرض وما بثّ فيهما من دابة. يُشير هذا إلى أن الحياة موجودة خارج كوكب الأرض.",
+          "relevanceNoteUr": "اُس کی نشانیوں میں سے آسمانوں اور زمین کی تخلیق ہے اور جو مخلوق اُس نے اُن دونوں میں پھیلا رکھی ہے۔ یہ اِس بات کی طرف اشارہ کرتا ہے کہ زندگی زمین سے پرے بھی موجود ہے۔",
           "isPrimary": true
         },
         {
           "surahNumber": 65,
           "verseNumber": 12,
-          "relevanceNote": "Allah created seven heavens and of the earth the same number. The command descends between them. This hints at vast realms we don't fully understand.",
+          "relevanceNoteEn": "Allah created seven heavens and of the earth the same number. The command descends between them. This hints at vast realms we don't fully understand.",
+          "relevanceNoteAr": "خلق الله سبع سماوات ومن الأرض مثلهن، يتنزل الأمر بينهن. يُلمح هذا إلى عوالم فسيحة لا نُحيط بها فهماً.",
+          "relevanceNoteUr": "اللہ نے سات آسمان اور اُسی طرح زمین بنائی۔ اُن کے درمیان حکم اترتا ہے۔ یہ ان وسیع دائروں کی طرف اشارہ کرتا ہے جنہیں ہم ابھی پوری طرح نہیں سمجھتے۔",
           "isPrimary": false
         }
       ],
-      "relatedQuestions": ["q44", "q45"]
+      "relatedQuestions": [
+        "q44",
+        "q45"
+      ]
     }
   ]
 }

@@ -11,6 +11,7 @@ struct PropheticStoriesView: View {
     @StateObject private var storiesManager = PropheticStoriesManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     @State private var selectedCategory: StoryCategory? = nil
@@ -53,11 +54,11 @@ struct PropheticStoriesView: View {
                     VStack(spacing: 12) {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Prophetic Stories")
+                                Text(localizedTitle)
                                     .font(.system(size: 34, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
-                                Text("Quranic accounts of the messengers")
+                                Text(localizedSubtitle)
                                     .font(.system(size: 16, weight: .medium))
                                     .foregroundColor(themeManager.secondaryText)
                             }
@@ -68,6 +69,8 @@ struct PropheticStoriesView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 12)
+                    .environment(\.layoutDirection,
+                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                     }
 
                     // Search bar
@@ -202,14 +205,14 @@ struct PropheticStoriesView: View {
     private var emeraldHeader: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 7) {
-                Text("From the Qur'an".uppercased())
+                Text(localizedEyebrow.uppercased())
                     .font(.system(size: 11, weight: .bold)).tracking(3)
                     .foregroundColor(themeManager.accentColor)
-                Text("Prophetic Stories")
+                Text(localizedTitle)
                     .font(EmType.serif(36, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .fixedSize(horizontal: false, vertical: true)
-                Text("Quranic accounts of the messengers")
+                Text(localizedSubtitle)
                     .font(.system(size: 13.5))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -218,6 +221,34 @@ struct PropheticStoriesView: View {
         .padding(.horizontal, 20)
         .padding(.top, 16)
         .padding(.bottom, 12)
+        .environment(\.layoutDirection,
+                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+    }
+
+    // MARK: - Localized header strings (follow the global app language)
+
+    private var localizedTitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "قصص الأنبياء"
+        case .urdu:   return "انبیاء کے قصے"
+        default:      return "Prophetic Stories"
+        }
+    }
+
+    private var localizedSubtitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "روايات قرآنية عن الرسل"
+        case .urdu:   return "رسولوں کے قرآنی واقعات"
+        default:      return "Quranic accounts of the messengers"
+        }
+    }
+
+    private var localizedEyebrow: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "من القرآن"
+        case .urdu:   return "قرآن سے"
+        default:      return "From the Qur'an"
+        }
     }
 }
 
@@ -225,9 +256,14 @@ struct PropheticStoryCardView: View {
     let story: PropheticStory
     let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+        Group {
+            if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+        }
+        .environment(\.layoutDirection,
+                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
 
     private var emeraldBody: some View {
@@ -235,11 +271,11 @@ struct PropheticStoryCardView: View {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: story.categoryIcon)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(story.prophet)
+                    Text(story.prophet(for: languageManager.selectedLanguage))
                         .font(.system(size: 11, weight: .bold)).tracking(0.5)
                         .foregroundColor(themeManager.accentColor)
                     HStack(spacing: 8) {
-                        Text(story.title)
+                        Text(story.title(for: languageManager.selectedLanguage))
                             .font(EmType.serif(20, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(2)
@@ -289,7 +325,7 @@ struct PropheticStoryCardView: View {
             // Story content
             VStack(alignment: .leading, spacing: 6) {
                 // Prophet name badge
-                Text(story.prophet)
+                Text(story.prophet(for: languageManager.selectedLanguage))
                     .font(.system(size: 12, weight: .bold))
                     .foregroundColor(themeManager.accentColor)
                     .padding(.horizontal, 10)
@@ -300,7 +336,7 @@ struct PropheticStoryCardView: View {
                     )
 
                 HStack(spacing: 8) {
-                    Text(story.title)
+                    Text(story.title(for: languageManager.selectedLanguage))
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)

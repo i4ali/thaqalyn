@@ -124,6 +124,11 @@ struct SettingsView: View {
                     // Settings content
                     ScrollView {
                         VStack(spacing: 24) {
+                            // Your Name Section
+                            SettingsSection(title: "Your Name") {
+                                NameSettingRow()
+                            }
+
                             // Appearance Section
                             SettingsSection(title: "Appearance") {
                                 HStack(spacing: 12) {
@@ -531,6 +536,7 @@ struct SettingsView: View {
 
                 ScrollView {
                     VStack(spacing: 26) {
+                        emeraldYourNameSection
                         emeraldAppearanceSection
                         emeraldLanguageSection
                         emeraldReadingSection
@@ -549,6 +555,12 @@ struct SettingsView: View {
     }
 
     // MARK: - Emerald sections
+
+    private var emeraldYourNameSection: some View {
+        SettingsSection(title: "Your Name") {
+            NameSettingRow()
+        }
+    }
 
     private var emeraldAppearanceSection: some View {
         SettingsSection(title: "Appearance") {
@@ -1479,6 +1491,65 @@ struct SyncStatusDetailView: View {
                 }
             }
         }
+    }
+}
+
+// MARK: - Your Name setting
+
+struct NameSettingRow: View {
+    @ObservedObject private var tm = ThemeManager.shared
+    @ObservedObject private var profile = UserProfileManager.shared
+
+    private let maxNameLength = 30
+
+    var body: some View {
+        HStack(spacing: 14) {
+            if tm.isMidnightEmerald {
+                EmIconChip(sfSymbol: "person.fill", size: 44)
+            } else {
+                Image(systemName: "person.fill")
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundColor(tm.accentColor)
+                    .frame(width: 28)
+            }
+
+            TextField("Your name", text: $profile.displayName)
+                .font(tm.isMidnightEmerald ? EmType.serif(18, .medium) : .system(size: 16, weight: .medium))
+                .foregroundColor(tm.primaryText)
+                .submitLabel(.done)
+                .onChange(of: profile.displayName) { _, newValue in
+                    if newValue.count > maxNameLength {
+                        profile.displayName = String(newValue.prefix(maxNameLength))
+                    }
+                }
+
+            if !profile.displayName.isEmpty {
+                Button {
+                    profile.displayName = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(tm.tertiaryText)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+        }
+        .padding(16)
+        .background(
+            Group {
+                if tm.isMidnightEmerald {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(tm.glassSurface)
+                        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous)
+                            .stroke(tm.strokeColor, lineWidth: 1))
+                } else {
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(tm.glassEffect)
+                        .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .stroke(tm.strokeColor, lineWidth: 1))
+                }
+            }
+        )
     }
 }
 

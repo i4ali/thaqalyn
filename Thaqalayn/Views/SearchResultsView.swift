@@ -16,8 +16,11 @@ struct SearchResultsView: View {
 
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
+    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @State private var results = QuranSearchResults()
     @State private var didSearch = false
+
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var body: some View {
         LazyVStack(alignment: .leading, spacing: 12) {
@@ -40,7 +43,7 @@ struct SearchResultsView: View {
 
     @ViewBuilder private var surahSection: some View {
         if !results.surahs.isEmpty {
-            sectionLabel("Surahs", count: results.surahs.count)
+            sectionLabel(QuranTabStrings.surahsLabel(lang), count: results.surahs.count)
             ForEach(results.surahs) { hit in
                 Button { onOpenSurah(hit.surah) } label: {
                     ModernSurahCard(surah: hit.surah.surah)
@@ -52,7 +55,7 @@ struct SearchResultsView: View {
 
     @ViewBuilder private var verseSection: some View {
         if !results.verses.isEmpty {
-            sectionLabel("Verses", count: results.verseTotal)
+            sectionLabel(QuranTabStrings.versesLabel(lang), count: results.verseTotal)
             ForEach(results.verses) { hit in
                 Button { onOpenVerse(hit.surahNumber, hit.verseNumber) } label: {
                     VerseResultRow(hit: hit)
@@ -67,7 +70,7 @@ struct SearchResultsView: View {
 
     @ViewBuilder private var themeSection: some View {
         if !results.themes.isEmpty {
-            sectionLabel("Themes", count: results.themeTotal)
+            sectionLabel(QuranTabStrings.themesLabel(lang), count: results.themeTotal)
             ForEach(results.themes) { hit in
                 Button { onOpenTheme(hit.surahNumber, hit.verseNumber, hit.conceptId) } label: {
                     ThemeResultRow(hit: hit)
@@ -94,7 +97,7 @@ struct SearchResultsView: View {
     }
 
     private func moreLabel(showing: Int, of total: Int) -> some View {
-        Text("Showing first \(showing) of \(total)")
+        Text(QuranTabStrings.showingFirst(showing, total, lang))
             .font(.system(size: 12))
             .foregroundColor(themeManager.tertiaryText)
             .padding(.vertical, 4)
@@ -104,7 +107,7 @@ struct SearchResultsView: View {
         VStack(spacing: 8) {
             PhosphorIcon(name: "ph-magnifying-glass", size: 28)
                 .foregroundColor(themeManager.tertiaryText)
-            Text("No results for \u{201C}\(query)\u{201D}")
+            Text(QuranTabStrings.noResults(query, lang))
                 .font(.system(size: 15))
                 .foregroundColor(themeManager.secondaryText)
         }

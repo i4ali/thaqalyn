@@ -367,7 +367,7 @@ struct QuickOverviewView: View {
                             .font(.system(size: 17 * readingSettings.scale, weight: .semibold))
                             .foregroundColor(conceptColor(concept))
                         Text(concept.getTitle(language: lang).uppercased())
-                            .font(.system(size: 14 * readingSettings.scale, weight: .bold, design: .rounded)).tracking(1)
+                            .emEyebrow(lang, size: 14 * readingSettings.scale, tracking: 1, design: .rounded)
                             .foregroundColor(themeManager.primaryText)
                     }
                     detailSection(conceptColor(concept), "The Core Insight:", concept.getCoreInsight(language: lang), rtl: rtl)

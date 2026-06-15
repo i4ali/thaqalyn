@@ -10,15 +10,38 @@
         "arabic": "اللَّهُمَّ صَلِّ عَلَىٰ فَاطِمَةَ وَأَبِيهَا وَبَعْلِهَا وَبَنِيهَا وَالسِّرِّ المُسْتَوْدَعِ فِيهَا بِعَدَدِ مَا أَحَاطَ بِهِ عِلْمُكَ",
         "transliteration": "Allāhumma ṣalli ʿalā Fāṭimata wa abīhā wa baʿlihā wa banīhā wa-l-sirri-l-mustawdaʿi fīhā bi-ʿadadi mā aḥāṭa bihi ʿilmuk",
         "english": "O Allah, send blessings upon Fatima and her father, her husband and her sons, and the secret entrusted within her, by the number of all that Your knowledge encompasses.",
-        "source": "Widely-narrated ṣalawāt upon Fāṭima al-Zahrā (AS)"
+        "source": "Widely-narrated ṣalawāt upon Fāṭima al-Zahrā (AS)",
+        "englishUr": "اے اللہ، درود بھیج سیدہ فاطمہؑ پر اور ان کے والد پر، ان کے شوہر پر اور ان کے بیٹوں پر، اور اس راز پر جو ان کے اندر ودیعت کیا گیا — اتنی بار جتنا تیرا علم احاطہ کرتا ہے۔",
+        "sourceUr": "سیدہ فاطمہ زہراؑ پر مشہور و معروف صلوات"
       },
       "verses": [
-        { "id": "f1v1", "surahNumber": 108, "verseNumber": 1, "relevanceNote": "‘Indeed, We have granted you al-Kawthar’ — the abundant good; Shia tradition names Fāṭima (AS) its embodiment, through whom the Prophet's ﷺ lineage flows to the Imams." },
-        { "id": "f1v2", "surahNumber": 108, "verseNumber": 3, "relevanceNote": "‘Indeed, your enemy — he is the one cut off.’ Those who mocked the Prophet ﷺ as without progeny were themselves severed; through az-Zahrā (AS) his line endures." },
-        { "id": "f1v3", "surahNumber": 42, "verseNumber": 23, "relevanceNote": "‘Say: I ask of you no reward for it except love of the kindred.’ The mawadda owed to the Ahl al-Bayt, of whom Fāṭima (AS) is the heart." }
+        {
+          "id": "f1v1",
+          "surahNumber": 108,
+          "verseNumber": 1,
+          "relevanceNote": "‘Indeed, We have granted you al-Kawthar’ — the abundant good; Shia tradition names Fāṭima (AS) its embodiment, through whom the Prophet's ﷺ lineage flows to the Imams.",
+          "relevanceNoteUr": "«اِنَّا اَعۡطَیۡنٰکَ الۡکَوۡثَرَ» — بے شک ہم نے آپ کو کوثر عطا کیا؛ شیعہ روایت کے مطابق سیدہ فاطمہؑ اس کوثر کی مجسم صورت ہیں، جن کے ذریعے رسول اللہؐ کی نسل ائمہؑ تک پہنچی۔"
+        },
+        {
+          "id": "f1v2",
+          "surahNumber": 108,
+          "verseNumber": 3,
+          "relevanceNote": "‘Indeed, your enemy — he is the one cut off.’ Those who mocked the Prophet ﷺ as without progeny were themselves severed; through az-Zahrā (AS) his line endures.",
+          "relevanceNoteUr": "«اِنَّ شَانِئَکَ ہُوَ الۡاَبۡتَرُ» — بے شک آپ کا دشمن ہی لاولد ہے؛ جنہوں نے رسول اللہؐ کو بے اولاد کہہ کر طعنہ دیا وہ خود کٹ گئے، اور حضرت زہراؑ کے ذریعے آپؐ کا سلسلہ تا قیامت جاری ہے۔"
+        },
+        {
+          "id": "f1v3",
+          "surahNumber": 42,
+          "verseNumber": 23,
+          "relevanceNote": "‘Say: I ask of you no reward for it except love of the kindred.’ The mawadda owed to the Ahl al-Bayt, of whom Fāṭima (AS) is the heart.",
+          "relevanceNoteUr": "«قُل لَّا اَسۡئَلُکُم عَلَیۡہِ اَجۡراً اِلَّا الۡمَوَدَّۃَ فِی الۡقُرۡبٰی» — فرما دیجیے کہ میں اس پر تم سے کوئی اجر نہیں مانگتا سوائے قرابت داروں سے محبت کے؛ اہلِ بیتؑ کی یہی مودت جس کی ادائیگی فرض ہے، اور سیدہ فاطمہؑ ان کا قلب ہیں۔"
+        }
       ],
       "tafsirFocus": "Sūrat al-Kawthar in Shia tafsir: the abundant good given to the Prophet ﷺ, and Fāṭima (AS) as the wellspring of his enduring progeny.",
-      "reflection": "We open the mourning by knowing whom we grieve — the Kawthar of the Prophet ﷺ, mother of the Imams, the abundance God gave that no enemy could sever."
+      "reflection": "We open the mourning by knowing whom we grieve — the Kawthar of the Prophet ﷺ, mother of the Imams, the abundance God gave that no enemy could sever.",
+      "themeUr": "الکوثر — عطا کی گئی فراوانی",
+      "tafsirFocusUr": "شیعہ تفسیر میں سورۃ الکوثر: وہ بے پایاں خیر جو رسول اللہؐ کو عطا کی گئی، اور جنابِ فاطمہؑ بحیثیت اس چشمۂ فیض کے جس سے آپؐ کی نسلِ دائم — یعنی سلسلۂ ائمہؑ — جاری ہوئی۔",
+      "reflectionUr": "ہم اس سوگ کا آغاز یہ جان کر کرتے ہیں کہ ہم کس ہستی کا ماتم کر رہے ہیں — رسول اللہؐ کا کوثر، اماموں کی والدہ، وہ نعمتِ عظمیٰ جو اللہ نے عطا فرمائی اور جسے کوئی دشمن کاٹ نہ سکا۔"
     },
     {
       "id": "day2",
@@ -30,15 +53,38 @@
         "arabic": "مَا خَلَقْتُ سَمَاءً مَبْنِيَّةً وَلَا أَرْضاً مَدْحِيَّةً وَلَا قَمَراً مُنِيراً وَلَا شَمْساً مُضِيئَةً إِلَّا فِي مَحَبَّةِ هَؤُلَاءِ الْخَمْسَةِ الَّذِينَ تَحْتَ الْكِسَاءِ",
         "transliteration": "Mā khalaqtu samā'an mabniyyatan wa lā arḍan madḥiyyatan wa lā qamaran munīran wa lā shamsan muḍī'atan illā fī maḥabbati hā'ulā'i-l-khamsati-lladhīna taḥta-l-kisā'",
         "english": "I did not create the established heaven, nor the outstretched earth, nor a shining moon, nor a radiant sun, save out of love for these Five who are beneath the cloak.",
-        "source": "Ḥadīth al-Kisāʾ, narrated from Fāṭima al-Zahrā (AS) (ʿAwālim al-ʿUlūm)"
+        "source": "Ḥadīth al-Kisāʾ, narrated from Fāṭima al-Zahrā (AS) (ʿAwālim al-ʿUlūm)",
+        "englishUr": "میں نے نہ آسمانِ قائم کو پیدا کیا، نہ زمینِ پھیلی ہوئی کو، نہ روشن چاند کو، نہ تابندہ سورج کو — مگر ان پانچ ہستیوں کی محبت کے لیے جو کساء کے نیچے تھیں۔",
+        "sourceUr": "حدیثِ کساء، سیدہ فاطمہ زہراؑ کی روایت سے (عوالم العلوم)"
       },
       "verses": [
-        { "id": "f2v1", "surahNumber": 33, "verseNumber": 33, "relevanceNote": "‘Allah only desires to remove all impurity from you, O People of the House, and to purify you thoroughly.’ Gathered beneath the cloak with the Prophet ﷺ, ʿAlī, Ḥasan and Ḥusayn (AS), Fāṭima is of the purified." },
-        { "id": "f2v2", "surahNumber": 76, "verseNumber": 8, "relevanceNote": "‘They give food, despite their love for it, to the needy, the orphan and the captive.’ Revealed for the household who gave their iftar three nights — purity made into deed." },
-        { "id": "f2v3", "surahNumber": 76, "verseNumber": 9, "relevanceNote": "‘We feed you only for the sake of Allah; we desire from you neither reward nor thanks.’ The unsullied sincerity of az-Zahrā's home." }
+        {
+          "id": "f2v1",
+          "surahNumber": 33,
+          "verseNumber": 33,
+          "relevanceNote": "‘Allah only desires to remove all impurity from you, O People of the House, and to purify you thoroughly.’ Gathered beneath the cloak with the Prophet ﷺ, ʿAlī, Ḥasan and Ḥusayn (AS), Fāṭima is of the purified.",
+          "relevanceNoteUr": "«اِنَّمَا یُرِیۡدُ اللّٰہُ لِیُذۡہِبَ عَنۡکُمُ الرِّجۡسَ اَہۡلَ الۡبَیۡتِ وَیُطَہِّرَکُمۡ تَطۡہِیۡراً» — اللہ کا ارادہ یہی ہے کہ تم سے ہر ناپاکی دور کرے، اے اہلِ بیتؑ، اور تمہیں بالکل پاک کر دے؛ رسول اللہؐ، امام علیؑ، امام حسنؑ و امام حسینؑ کے ساتھ کساء تلے جمع ہونے والی سیدہ فاطمہؑ انہی پاک شدہ ہستیوں میں سے ہیں۔"
+        },
+        {
+          "id": "f2v2",
+          "surahNumber": 76,
+          "verseNumber": 8,
+          "relevanceNote": "‘They give food, despite their love for it, to the needy, the orphan and the captive.’ Revealed for the household who gave their iftar three nights — purity made into deed.",
+          "relevanceNoteUr": "«وَیُطۡعِمُوۡنَ الطَّعَامَ عَلٰی حُبِّہٖ مِسۡکِیۡناً وَّیَتِیۡماً وَّاَسِیۡراً» — اور وہ کھانا دیتے ہیں، اس سے محبت کے باوجود، محتاج کو، یتیم کو اور قیدی کو؛ یہ آیات اس گھرانے کے لیے نازل ہوئیں جنہوں نے تین راتیں اپنا افطار اوروں کو دے دیا — پاکیزگی عمل میں ڈھلی۔"
+        },
+        {
+          "id": "f2v3",
+          "surahNumber": 76,
+          "verseNumber": 9,
+          "relevanceNote": "‘We feed you only for the sake of Allah; we desire from you neither reward nor thanks.’ The unsullied sincerity of az-Zahrā's home.",
+          "relevanceNoteUr": "«اِنَّمَا نُطۡعِمُکُمۡ لِوَجۡہِ اللّٰہِ لَا نُرِیۡدُ مِنۡکُمۡ جَزَآءً وَّلَا شُکُوۡراً» — ہم تمہیں صرف اللہ کی رضا کے لیے کھلاتے ہیں، نہ تم سے بدلہ چاہتے ہیں نہ شکریہ؛ جنابِ فاطمہؑ کے گھر کا بے داغ اخلاص۔"
+        }
       ],
       "tafsirFocus": "Āyat al-Taṭhīr (33:33) with Sūrat al-Insān: the God-willed purity of the People of the Cloak, shown in being and in deed.",
-      "reflection": "Her purity was not only granted but lived — vows fulfilled, the hungry fed before herself. To mourn her is to long for that purity."
+      "reflection": "Her purity was not only granted but lived — vows fulfilled, the hungry fed before herself. To mourn her is to long for that purity.",
+      "themeUr": "آیتِ تطہیر",
+      "tafsirFocusUr": "آیتِ تطہیر (۳۳:۳۳) اور سورۃ الانسان کی روشنی میں: اصحابِ کساء کی وہ پاکیزگی جو اللہ کے ارادے سے عطا ہوئی — وجود میں بھی اور عمل میں بھی۔",
+      "reflectionUr": "آپؑ کی پاکیزگی صرف موہبتِ الٰہی نہ تھی بلکہ عملی زندگی میں بھی ظاہر ہوئی — نذریں پوری کیں، افطار کا کھانا خود بھوکے رہ کر محتاجوں کو دیا۔ ان پر گریہ کرنا اسی پاکیزگی کی آرزو ہے۔"
     },
     {
       "id": "day3",
@@ -50,15 +96,38 @@
         "arabic": "السَّلَامُ عَلَيْكِ يَا بِنْتَ رَسُولِ اللَّهِ، السَّلَامُ عَلَيْكِ يَا سَيِّدَةَ نِسَاءِ الْعَالَمِينَ، السَّلَامُ عَلَيْكِ أَيَّتُهَا الصِّدِّيقَةُ الشَّهِيدَة",
         "transliteration": "As-salāmu ʿalayki yā binta rasūli-llāh, as-salāmu ʿalayki yā sayyidata nisā'i-l-ʿālamīn, as-salāmu ʿalayki ayyatuhā-ṣ-ṣiddīqatu-sh-shahīdah",
         "english": "Peace be upon you, O daughter of the Messenger of Allah; peace be upon you, O Mistress of the Women of the Worlds; peace be upon you, O truthful one, O martyr.",
-        "source": "From the Ziyāra of Sayyida Fāṭima al-Zahrā (AS)"
+        "source": "From the Ziyāra of Sayyida Fāṭima al-Zahrā (AS)",
+        "englishUr": "آپ پر سلام ہو، اے اللہ کے رسول کی بیٹی؛ آپ پر سلام ہو، اے جہانوں کی عورتوں کی سردار؛ آپ پر سلام ہو، اے سچی، اے شہیدہ۔",
+        "sourceUr": "سیدہ فاطمہ زہراؑ کی زیارت سے"
       },
       "verses": [
-        { "id": "f3v1", "surahNumber": 3, "verseNumber": 61, "relevanceNote": "‘…let us call our sons and your sons, our women and your women, ourselves and yourselves…’ ‘Our women’ was Fāṭima (AS) alone — brought by the Prophet ﷺ as among the dearest souls to God." },
-        { "id": "f3v2", "surahNumber": 9, "verseNumber": 119, "relevanceNote": "‘O you who believe, fear Allah and be with the truthful.’ Shia tafsir reads al-ṣādiqīn as the Ahl al-Bayt; Mubāhala was the party of truth made visible." },
-        { "id": "f3v3", "surahNumber": 33, "verseNumber": 23, "relevanceNote": "‘Among the believers are men true to the covenant they made with Allah.’ The household of fidelity into which Fāṭima (AS) was born and married." }
+        {
+          "id": "f3v1",
+          "surahNumber": 3,
+          "verseNumber": 61,
+          "relevanceNote": "‘…let us call our sons and your sons, our women and your women, ourselves and yourselves…’ ‘Our women’ was Fāṭima (AS) alone — brought by the Prophet ﷺ as among the dearest souls to God.",
+          "relevanceNoteUr": "«فَقُلۡ تَعَالَوۡا نَدۡعُ اَبۡنَآءَنَا وَاَبۡنَآءَکُمۡ وَنِسَآءَنَا وَنِسَآءَکُمۡ وَاَنۡفُسَنَا وَاَنۡفُسَکُمۡ» — «نِسَاءَنَا» سے مراد صرف سیدہ فاطمہؑ تھیں — رسول اللہؐ انہیں اللہ کے نزدیک عزیزترین روح کے طور پر ساتھ لائے۔"
+        },
+        {
+          "id": "f3v2",
+          "surahNumber": 9,
+          "verseNumber": 119,
+          "relevanceNote": "‘O you who believe, fear Allah and be with the truthful.’ Shia tafsir reads al-ṣādiqīn as the Ahl al-Bayt; Mubāhala was the party of truth made visible.",
+          "relevanceNoteUr": "«یٰۤاَیُّہَا الَّذِیۡنَ اٰمَنُوا اتَّقُوا اللّٰہَ وَکُوۡنُوۡا مَعَ الصّٰدِقِیۡنَ» — اے ایمان والو، اللہ سے ڈرو اور سچوں کے ساتھ رہو؛ شیعہ تفسیر میں الصادقین سے مراد اہلِ بیتؑ ہیں، اور مباہلہ وہ لمحہ تھا جب اہلِ حق ظاہر ہو گئے۔"
+        },
+        {
+          "id": "f3v3",
+          "surahNumber": 33,
+          "verseNumber": 23,
+          "relevanceNote": "‘Among the believers are men true to the covenant they made with Allah.’ The household of fidelity into which Fāṭima (AS) was born and married.",
+          "relevanceNoteUr": "«مِنَ الۡمُؤۡمِنِیۡنَ رِجَالٌ صَدَقُوۡا مَا عَاہَدُوا اللّٰہَ عَلَیۡہِ» — ایمان والوں میں سے کچھ مرد ہیں جنہوں نے اللہ سے کیے عہد کو سچ کر دکھایا؛ وہ گھرانۂ وفا جس میں سیدہ فاطمہؑ پیدا ہوئیں اور جس میں بیاہی گئیں۔"
+        }
       ],
       "tafsirFocus": "Āyat al-Mubāhala (3:61): when truth itself was to be sworn upon, the Prophet ﷺ brought the dearest souls — and brought Fāṭima (AS) as ‘our women.’",
-      "reflection": "Her rank is measured by the company she kept before her Lord: among the five God named the dearest, on the day truth was laid bare."
+      "reflection": "Her rank is measured by the company she kept before her Lord: among the five God named the dearest, on the day truth was laid bare.",
+      "themeUr": "مباہلہ — عزیزترین روحیں",
+      "tafsirFocusUr": "آیتِ مباہلہ (۳:۶۱): جب سچ کو سرِعام قسم سے ثابت کرنا تھا، رسول اللہؐ عزیزترین روحوں کو ساتھ لائے — اور سیدہ فاطمہؑ کو «نِسَاءَنَا» کے طور پر لائے۔",
+      "reflectionUr": "آپؑ کا مقام اس صحبت سے عیاں ہوتا ہے جس میں آپؑ اپنے رب کے سامنے شامل تھیں: ان پانچ ہستیوں میں جنہیں اللہ نے عزیزترین قرار دیا، اس دن جب حق بالکل بے نقاب ہو گیا۔"
     },
     {
       "id": "day4",
@@ -70,15 +139,38 @@
         "arabic": "وَاعْلَمُوا أَنِّي فَاطِمَةُ وَأَبِي مُحَمَّدٌ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ، أَقُولُ عَوْداً وَبَدْءاً، وَلَا أَقُولُ مَا أَقُولُ غَلَطاً، وَلَا أَفْعَلُ مَا أَفْعَلُ شَطَطاً",
         "transliteration": "Wa-ʿlamū annī Fāṭimah, wa abī Muḥammadun ṣalla-llāhu ʿalayhi wa ālih; aqūlu ʿawdan wa bad'an, wa lā aqūlu mā aqūlu ghalaṭan, wa lā afʿalu mā afʿalu shaṭaṭā",
         "english": "Know that I am Fatima, and my father is Muhammad (may Allah bless him and his family). I say it again as I said at first; I do not say what I say in error, nor do I do what I do without cause.",
-        "source": "From the Khuṭba Fadakiyya (al-Iḥtijāj, al-Ṭabrisī)"
+        "source": "From the Khuṭba Fadakiyya (al-Iḥtijāj, al-Ṭabrisī)",
+        "englishUr": "جان لو کہ میں فاطمہ ہوں، اور میرے والد محمدؐ ہیں۔ میں آغاز میں بھی یہی کہتی ہوں اور اختتام میں بھی؛ جو کہتی ہوں غلطی سے نہیں کہتی، اور جو کرتی ہوں بلا وجہ نہیں کرتی۔",
+        "sourceUr": "خطبۂ فدکیہ سے (الاحتجاج، طبرسی)"
       },
       "verses": [
-        { "id": "f4v1", "surahNumber": 3, "verseNumber": 144, "relevanceNote": "‘Muḥammad is but a messenger; messengers have passed before him. If he dies or is killed, will you turn back on your heels?’ A verse of her sermon — a warning to a community already turning." },
-        { "id": "f4v2", "surahNumber": 11, "verseNumber": 88, "relevanceNote": "‘I only desire reform, as much as I am able.’ The words of Shuʿayb (AS) mirror her purpose: not herself, but the setting-right of the Ummah." },
-        { "id": "f4v3", "surahNumber": 12, "verseNumber": 18, "relevanceNote": "‘…so beautiful patience; and Allah is the one whose help is sought.’ Yaʿqūb's (AS) ṣabr foreshadows hers before loss and injustice." }
+        {
+          "id": "f4v1",
+          "surahNumber": 3,
+          "verseNumber": 144,
+          "relevanceNote": "‘Muḥammad is but a messenger; messengers have passed before him. If he dies or is killed, will you turn back on your heels?’ A verse of her sermon — a warning to a community already turning.",
+          "relevanceNoteUr": "«وَمَا مُحَمَّدٌ اِلَّا رَسُوۡلٌ ۚ قَدۡ خَلَتۡ مِنۡ قَبۡلِہِ الرُّسُلُ ؕ اَفَاِئِنۡ مَّاتَ اَوۡ قُتِلَ انۡقَلَبۡتُمۡ عَلٰۤی اَعۡقَابِکُمۡ» — یہ آیت آپؑ نے اپنے خطبے میں تلاوت کی — ایسی امت کو تنبیہ جو پہلے سے پیٹھ پھیر رہی تھی۔"
+        },
+        {
+          "id": "f4v2",
+          "surahNumber": 11,
+          "verseNumber": 88,
+          "relevanceNote": "‘I only desire reform, as much as I am able.’ The words of Shuʿayb (AS) mirror her purpose: not herself, but the setting-right of the Ummah.",
+          "relevanceNoteUr": "«اِنۡ اُرِیۡدُ اِلَّا الۡاِصۡلَاحَ مَا اسۡتَطَعۡتُ» — میرا ارادہ صرف اصلاح کا ہے جتنی مجھ میں طاقت ہے؛ حضرت شعیبؑ کے یہ الفاظ آپؑ کے مقصد کے آئینہ دار ہیں: اپنے لیے نہیں، امت کی درستی کے لیے۔"
+        },
+        {
+          "id": "f4v3",
+          "surahNumber": 12,
+          "verseNumber": 18,
+          "relevanceNote": "‘…so beautiful patience; and Allah is the one whose help is sought.’ Yaʿqūb's (AS) ṣabr foreshadows hers before loss and injustice.",
+          "relevanceNoteUr": "«فَصَبۡرٌ جَمِیۡلٌ ؕ وَاللّٰہُ الۡمُسۡتَعَانُ» — سو خوب صبر ہی بہتر ہے، اور اللہ ہی سے مدد مانگی جاتی ہے؛ حضرت یعقوبؑ کا یہ صبر ان کے اپنے صبر کا پیش خیمہ ہے — سراپا نقصان اور ظلم کے سامنے۔"
+        }
       ],
       "tafsirFocus": "The Khuṭba Fadakiyya: az-Zahrā (AS) in the Prophet's ﷺ mosque, defending wilāya and her right with the Book itself.",
-      "reflection": "Grieving and newly bereaved, she rose to speak truth to power — eloquent, unflinching, citing the Qur'an her father brought. Her sermon is a standard for every seeker of justice."
+      "reflection": "Grieving and newly bereaved, she rose to speak truth to power — eloquent, unflinching, citing the Qur'an her father brought. Her sermon is a standard for every seeker of justice.",
+      "themeUr": "فدک اور خطبہ — انصاف کی آواز",
+      "tafsirFocusUr": "خطبۂ فدکیہ: سیدہ زہراؑ مسجدِ نبویؐ میں ولایت اور اپنے حق کا دفاع خود قرآنِ کریم کی آیات سے کرتی ہیں۔",
+      "reflectionUr": "غم میں ڈوبی ہوئیں، ابھی سوگ ہی میں تھیں، مگر اٹھ کر حق کی بات کہی — فصیح، بے باک، اور انہی آیات کا حوالہ دے کر جو ان کے والدؐ لائے تھے۔ ان کا خطبہ ہر طالبِ عدل کا معیار ہے۔"
     },
     {
       "id": "day5",
@@ -90,15 +182,38 @@
         "arabic": "يَا مُمْتَحَنَةُ امْتَحَنَكِ اللَّهُ الَّذِي خَلَقَكِ قَبْلَ أَنْ يَخْلُقَكِ فَوَجَدَكِ لِمَا امْتَحَنَكِ صَابِرَةً",
         "transliteration": "Yā mumtaḥanatu-mtaḥanaki-llāhu-lladhī khalaqaki qabla an yakhluqaki fa-wajadaki limā-mtaḥanaki ṣābirah",
         "english": "O tested one! Allah, who created you, tested you before He created you, and found you patient in that with which He tested you.",
-        "source": "Ziyārat of Sayyida Fāṭima al-Zahrā (AS) (al-Kāfī)"
+        "source": "Ziyārat of Sayyida Fāṭima al-Zahrā (AS) (al-Kāfī)",
+        "englishUr": "اے آزمائی ہوئی! اللہ نے، جس نے تمہیں پیدا کیا، تمہیں پیدا کرنے سے پہلے آزمایا — اور پایا کہ تم اس آزمائش میں صابر ہو۔",
+        "sourceUr": "سیدہ فاطمہ زہراؑ کی زیارت سے (الکافی)"
       },
       "verses": [
-        { "id": "f5v1", "surahNumber": 89, "verseNumber": 27, "relevanceNote": "‘O reassured soul, return to your Lord, well-pleased and pleasing.’ The address Shia tradition reads upon az-Zahrā (AS) as she returned to her Lord and her father." },
-        { "id": "f5v2", "surahNumber": 2, "verseNumber": 156, "relevanceNote": "‘…who, when struck by calamity, say: Indeed we belong to Allah, and to Him we return.’ The istirjāʿ of her household before every loss." },
-        { "id": "f5v3", "surahNumber": 3, "verseNumber": 169, "relevanceNote": "‘Do not think those killed in the way of Allah are dead; rather they are alive with their Lord, provided for.’ The wronged who die upon truth live on — and intercede." }
+        {
+          "id": "f5v1",
+          "surahNumber": 89,
+          "verseNumber": 27,
+          "relevanceNote": "‘O reassured soul, return to your Lord, well-pleased and pleasing.’ The address Shia tradition reads upon az-Zahrā (AS) as she returned to her Lord and her father.",
+          "relevanceNoteUr": "«یٰۤاَیَّتُہَا النَّفۡسُ الۡمُطۡمَئِنَّۃُ ۔ ارۡجِعِیۡۤ اِلٰی رَبِّکِ رَاضِیَۃً مَّرۡضِیَّۃً» — اے مطمئن روح، اپنے رب کی طرف لوٹ آ، اس حال میں کہ تو اس سے راضی ہو اور وہ تجھ سے؛ شیعہ روایت کے مطابق یہ خطاب سیدہ زہراؑ کے حق میں ہے جب وہ اپنے رب اور اپنے والدؐ کے پاس لوٹیں۔"
+        },
+        {
+          "id": "f5v2",
+          "surahNumber": 2,
+          "verseNumber": 156,
+          "relevanceNote": "‘…who, when struck by calamity, say: Indeed we belong to Allah, and to Him we return.’ The istirjāʿ of her household before every loss.",
+          "relevanceNoteUr": "«اَلَّذِیۡنَ اِذَاۤ اَصَابَتۡہُمۡ مُّصِیۡبَۃٌ ۙ قَالُوۡۤا اِنَّا لِلّٰہِ وَاِنَّاۤ اِلَیۡہِ رٰجِعُوۡنَ» — وہ لوگ جو جب کوئی مصیبت آئے تو کہتے ہیں: بے شک ہم اللہ کے ہیں اور ہمیں اسی کی طرف لوٹنا ہے؛ آپؑ کے گھرانے کا استرجاع ہر نقصان کے سامنے۔"
+        },
+        {
+          "id": "f5v3",
+          "surahNumber": 3,
+          "verseNumber": 169,
+          "relevanceNote": "‘Do not think those killed in the way of Allah are dead; rather they are alive with their Lord, provided for.’ The wronged who die upon truth live on — and intercede.",
+          "relevanceNoteUr": "«وَلَا تَحۡسَبَنَّ الَّذِیۡنَ قُتِلُوۡا فِیۡ سَبِیۡلِ اللّٰہِ اَمۡوَاتاً ؕ بَلۡ اَحۡیَآءٌ عِنۡدَ رَبِّہِمۡ یُرۡزَقُوۡنَ» — جو اللہ کی راہ میں قتل کیے گئے انہیں مردہ نہ سمجھو، بلکہ وہ زندہ ہیں اپنے رب کے پاس، رزق پاتے ہیں؛ جو حق پر مظلوم ہو کر شہید ہوں وہ زندہ رہتے ہیں — اور شفاعت کرتے ہیں۔"
+        }
       ],
       "tafsirFocus": "Her passing in patience: the reassured soul returning to its Lord, and the living reward of those wronged upon the truth.",
-      "reflection": "Buried at night, her grave concealed by her own will — a silent witness that endures. The mourning closes not in despair but in her promised nearness to God."
+      "reflection": "Buried at night, her grave concealed by her own will — a silent witness that endures. The mourning closes not in despair but in her promised nearness to God.",
+      "themeUr": "شہادت اور ابدی نور",
+      "tafsirFocusUr": "صبر کے ساتھ آپؑ کا اس دنیا سے رخصت ہونا: وہ مطمئن روح جو اپنے رب کی طرف لوٹ گئی، اور حق پر مظلوم ہو کر شہید ہونے والوں کا وہ زندہ انعام جو ہمیشہ قائم رہتا ہے۔",
+      "reflectionUr": "رات کی تاریکی میں دفن ہوئیں، اپنی ہی خواہش پر قبر پوشیدہ رکھی — ایک خاموش گواہی جو آج بھی باقی ہے۔ یہ سوگ مایوسی پر ختم نہیں ہوتا بلکہ اس وعدے پر کہ آپؑ اپنے رب کے قریب ہیں۔"
     }
   ]
 }

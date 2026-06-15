@@ -19,6 +19,7 @@ struct EmeraldTabItem: Identifiable {
 
 struct EmeraldTabBar: View {
     @ObservedObject private var tm = ThemeManager.shared
+    @ObservedObject private var lang = CommentaryLanguageManager.shared
     let items: [EmeraldTabItem]
     @Binding var selection: Int
 
@@ -40,6 +41,11 @@ struct EmeraldTabBar: View {
         tm.isMidnightEmerald ? tm.tertiaryText : tm.secondaryText
     }
 
+    // Arabic-script labels (Urdu/Arabic) read small at the Latin size, so nudge them up.
+    private var labelSize: CGFloat {
+        lang.selectedLanguage.isRTL ? 12 : 10
+    }
+
     var body: some View {
         HStack(spacing: 0) {
             ForEach(items) { item in
@@ -50,7 +56,7 @@ struct EmeraldTabBar: View {
                         Image(systemName: item.sfSymbol)
                             .font(.system(size: 20, weight: .regular))
                         Text(item.label)
-                            .font(.system(size: 10, weight: .semibold))
+                            .font(.system(size: labelSize, weight: .semibold))
                             .tracking(0.4)
                             .lineLimit(1)
                         Circle()

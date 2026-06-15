@@ -13,6 +13,7 @@ struct RamadanJourneyView: View {
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedDay: RamadanDay?
     @State private var navigateToDetail = false
     @State private var showPaywall = false
@@ -29,7 +30,7 @@ struct RamadanJourneyView: View {
 
                     // Day list
                     if journeyManager.isLoading {
-                        RamadanLoadingSection(message: "Loading journey...")
+                        RamadanLoadingSection(message: JourneyStrings.loadingJourney(languageManager.selectedLanguage))
                     } else if let error = journeyManager.errorMessage {
                         RamadanErrorSection(message: error)
                     } else {
@@ -84,6 +85,8 @@ struct RamadanJourneyHeader: View {
     @StateObject private var journeyManager = RamadanJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var statusMessage: String {
         let month = calendarManager.currentIslamicMonth()
@@ -103,7 +106,7 @@ struct RamadanJourneyHeader: View {
             }
             return "Ramadan has ended"
         default:
-            return "Ramadan Journey"
+            return JourneyStrings.screenTitle("ramadan", lang)
         }
     }
 
@@ -113,13 +116,13 @@ struct RamadanJourneyHeader: View {
 
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: "30-Day Journey",
-            title: "Ramadan",
+            eyebrow: JourneyStrings.eyebrow("ramadan", "30-Day Journey", lang),
+            title: JourneyStrings.title("ramadan", lang),
             sfSymbol: "moon.stars.fill",
             statusLine: statusMessage,
-            countLine: "\(journeyManager.completedDaysCount) of 30 days complete",
+            countLine: JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 30, lang),
             percent: journeyManager.completionPercentage,
-            completionNote: journeyManager.isJourneyCompleted ? "Journey complete · Ramadan Champion earned" : nil
+            completionNote: journeyManager.isJourneyCompleted ? (lang == .urdu ? "سفر مکمل · Ramadan Champion حاصل ہوا" : "Journey complete · Ramadan Champion earned") : nil
         )
     }
 
@@ -129,7 +132,7 @@ struct RamadanJourneyHeader: View {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Ramadan Journey")
+                        Text(JourneyStrings.screenTitle("ramadan", lang))
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
@@ -150,7 +153,7 @@ struct RamadanJourneyHeader: View {
             // Progress bar
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text("\(journeyManager.completedDaysCount) of 30 days completed")
+                    Text(JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 30, lang))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -181,7 +184,7 @@ struct RamadanJourneyHeader: View {
                 HStack(spacing: 8) {
                     Image(systemName: "checkmark.seal.fill")
                         .foregroundColor(.green)
-                    Text("Journey Complete! Ramadan Champion badge earned.")
+                    Text(languageManager.selectedLanguage == .urdu ? "سفر مکمل! Ramadan Champion کا بیج حاصل ہوا۔" : "Journey Complete! Ramadan Champion badge earned.")
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundColor(.green)
                 }
@@ -201,6 +204,8 @@ struct RamadanDayCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var greenGradient: LinearGradient {
         LinearGradient(
@@ -237,7 +242,7 @@ struct RamadanDayCard: View {
     private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
-            theme: day.theme,
+            theme: day.localizedTheme(lang),
             themeArabic: day.themeArabic,
             isDone: isCompleted,
             isCurrent: isCurrentDay,
@@ -279,7 +284,7 @@ struct RamadanDayCard: View {
                 // Day content
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text("Day \(day.dayNumber)")
+                        Text(JourneyStrings.dayN(day.dayNumber, lang))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(themeManager.secondaryText)
 
@@ -294,7 +299,7 @@ struct RamadanDayCard: View {
                                         .fill(Color.orange.gradient)
                                 )
                         } else if isCurrentDay {
-                            Text("TODAY")
+                            Text(JourneyStrings.today(lang))
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 6)
@@ -311,7 +316,7 @@ struct RamadanDayCard: View {
                             .font(.system(size: 14))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
 
-                        Text(day.theme)
+                        Text(day.localizedTheme(lang))
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
                     }
@@ -369,6 +374,7 @@ private struct RamadanLoadingSection: View {
 private struct RamadanErrorSection: View {
     let message: String
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -376,7 +382,7 @@ private struct RamadanErrorSection: View {
                 .font(.system(size: 48))
                 .foregroundColor(.orange)
 
-            Text("Error Loading Journey")
+            Text(JourneyStrings.errorLoadingJourney(languageManager.selectedLanguage))
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
 

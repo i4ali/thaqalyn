@@ -57,9 +57,13 @@ class PropheticParallelsManager: ObservableObject {
         return parallels.filter { $0.category == category }
     }
 
-    /// Filter parallels by prophet name
+    /// Filter parallels by prophet name (matches any language)
     func parallels(byProphet prophet: String) -> [PropheticParallel] {
-        return parallels.filter { $0.prophet.localizedCaseInsensitiveContains(prophet) }
+        return parallels.filter {
+            [$0.prophetEn, $0.prophetAr, $0.prophetUr].contains { name in
+                name.localizedCaseInsensitiveContains(prophet)
+            }
+        }
     }
 
     /// Get all unique categories
@@ -67,22 +71,25 @@ class PropheticParallelsManager: ObservableObject {
         return ParallelCategory.allCases
     }
 
-    /// Get all unique prophets mentioned in parallels
+    /// Get all unique prophets mentioned in parallels (English canonical names)
     var prophets: [String] {
-        return Array(Set(parallels.map { $0.prophet })).sorted()
+        return Array(Set(parallels.map { $0.prophetEn })).sorted()
     }
 
     // MARK: - Search Methods
 
-    /// Search parallels by situation, prophet name, or connection
+    /// Search parallels by situation, prophet, connection or story (across EN/AR/UR)
     func search(query: String) -> [PropheticParallel] {
         guard !query.isEmpty else { return parallels }
 
-        return parallels.filter {
-            $0.situation.localizedCaseInsensitiveContains(query) ||
-            $0.prophet.localizedCaseInsensitiveContains(query) ||
-            $0.connection.localizedCaseInsensitiveContains(query) ||
-            $0.storySummary.localizedCaseInsensitiveContains(query)
+        return parallels.filter { p in
+            let haystack: [String] = [
+                p.situationEn, p.situationAr, p.situationUr,
+                p.prophetEn, p.prophetAr, p.prophetUr,
+                p.connectionEn, p.connectionAr, p.connectionUr,
+                p.storySummaryEn, p.storySummaryAr, p.storySummaryUr,
+            ]
+            return haystack.contains { $0.localizedCaseInsensitiveContains(query) }
         }
     }
 

@@ -14,6 +14,7 @@ struct HomeView: View {
     @StateObject private var bookmarkManager = BookmarkManager.shared
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var deepLinkRouter = DeepLinkRouter.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var searchText = ""
     @State private var showingAuthentication = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
@@ -64,22 +65,24 @@ struct HomeView: View {
                 }
 
                 HStack {
-                    Text("The Holy Quran")
+                    Text(QuranTabStrings.holyQuran(languageManager.selectedLanguage))
                         .font(.system(size: 34, weight: .bold, design: .rounded))
                         .foregroundColor(themeManager.primaryText)
 
                     Spacer()
                 }
+                .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
 
                 // Search bar with glassmorphism
                 HStack {
                     Text("\u{1F50D}")
                         .font(.system(size: 20))
 
-                    TextField("Search surahs, verses, themes…", text: $searchText)
+                    TextField(QuranTabStrings.searchPlaceholder(languageManager.selectedLanguage), text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
                         .foregroundColor(themeManager.primaryText)
                 }
+                .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                 .padding(16)
                 .background {
                     RoundedRectangle(cornerRadius: 16)

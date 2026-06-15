@@ -2,22 +2,36 @@
   "parallels": [
     {
       "id": "p1",
-      "situation": "I feel trapped with no way out",
+      "situationEn": "I feel trapped with no way out",
+      "situationAr": "أشعر بأنني محاصر ولا مخرج لي",
+      "situationUr": "میں پھنسا ہوا محسوس کرتا ہوں، کوئی راستہ نظر نہیں آتا",
       "category": "emotional_struggles",
-      "prophet": "Yunus (Jonah)",
-      "connection": "Yunus was swallowed by a whale in complete darkness - the ultimate feeling of being trapped",
-      "comfortMessage": "Even in the darkest depths, Allah heard Yunus's prayer. No matter how trapped you feel, your sincere call to Allah will never go unanswered. The whale of your difficulty will release you.",
-      "storySummary": "Prophet Yunus left his people in frustration and was swallowed by a whale. In three layers of darkness - the night, the sea, and the whale's belly - he called out to Allah with complete humility: 'There is no god but You, glory be to You, I was indeed wrong.' Allah responded and freed him.",
+      "prophetEn": "Yunus (Jonah)",
+      "prophetAr": "النبي يونس (ع)",
+      "prophetUr": "حضرت یونس علیہ السلام",
+      "connectionEn": "Yunus was swallowed by a whale in complete darkness - the ultimate feeling of being trapped",
+      "connectionAr": "ابتلع النبيَّ يونسَ حوتٌ عظيم في أعماق الظلام — وهو أشد صور الاحتجاز وطأةً",
+      "connectionUr": "حضرت یونس علیہ السلام کو ایک مچھلی نے نگل لیا تھا — مکمل تاریکی میں قید، پھنسے ہونے کا سب سے شدید احساس",
+      "comfortMessageEn": "Even in the darkest depths, Allah heard Yunus's prayer. No matter how trapped you feel, your sincere call to Allah will never go unanswered. The whale of your difficulty will release you.",
+      "comfortMessageAr": "حتى في أعمق الظلمات، سمع الله نداء يونس (ع). مهما اشتد شعورك بالحصار فإن دعاءك الصادق لن يضيع. نادِ ربَّك كما ناداه يونس: «لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ»، وسيخرجك الله مما أنت فيه كما أخرجه.",
+      "comfortMessageUr": "تاریکی کی گہرائیوں میں بھی اللہ نے حضرت یونس علیہ السلام کی پکار سنی۔ آپ خواہ کتنے ہی پھنسے ہوئے محسوس کریں، اللہ کو سچے دل سے پکارنا کبھی بے کار نہیں جاتا۔ آپ کی مشکل کی مچھلی بھی ایک دن آپ کو آزاد کر دے گی، بس پکارتے رہیں۔",
+      "storySummaryEn": "Prophet Yunus left his people in frustration and was swallowed by a whale. In three layers of darkness - the night, the sea, and the whale's belly - he called out to Allah with complete humility: 'There is no god but You, glory be to You, I was indeed wrong.' Allah responded and freed him.",
+      "storySummaryAr": "غاضب النبيُّ يونس (ع) قومَه فتركهم وركب البحر، فابتلعه حوت في ثلاث ظلمات متراكمة: ظلمة الليل، وظلمة البحر، وظلمة بطن الحوت. في تلك الأعماق رفع دعاءه بكل تواضع وانكسار، فاستجاب الله له ونجّاه وألقاه على الشاطئ سالمًا.",
+      "storySummaryUr": "حضرت یونس علیہ السلام اپنی قوم سے ناامید ہو کر چلے گئے اور سمندر میں مچھلی نے انہیں نگل لیا۔ تین تاریکیوں میں — رات کی، سمندر کی اور مچھلی کے پیٹ کی — انہوں نے پورے خشوع کے ساتھ پکارا: «لا إلٰہ إلا أنتَ سبحانک إنی کنتُ من الظالمین» — تیرے سوا کوئی معبود نہیں، تو پاک ہے، بیشک میں نے خود پر ظلم کیا۔ اللہ نے فوراً جواب دیا اور انہیں نجات بخشی۔",
       "verses": [
         {
           "surahNumber": 21,
           "verseNumber": 87,
-          "relevanceNote": "Yunus's powerful prayer from the depths of darkness"
+          "relevanceNoteEn": "Yunus's powerful prayer from the depths of darkness",
+          "relevanceNoteAr": "دعاء النبي يونس (ع) العظيم من أعماق الظلام",
+          "relevanceNoteUr": "تاریکیوں کی گہرائی سے حضرت یونس علیہ السلام کی پُراثر دعا"
         },
         {
           "surahNumber": 21,
           "verseNumber": 88,
-          "relevanceNote": "Allah's immediate response to sincere repentance"
+          "relevanceNoteEn": "Allah's immediate response to sincere repentance",
+          "relevanceNoteAr": "استجابة الله الفورية للتضرع الصادق",
+          "relevanceNoteUr": "سچی توبہ پر اللہ کا فوری جواب"
         }
       ],
       "relatedStoryId": "s11",
@@ -25,27 +39,43 @@
     },
     {
       "id": "p2",
-      "situation": "My family doesn't understand my faith",
+      "situationEn": "My family doesn't understand my faith",
+      "situationAr": "لا تفهم عائلتي إيماني",
+      "situationUr": "میرا خاندان میرے ایمان کو نہیں سمجھتا",
       "category": "family_challenges",
-      "prophet": "Ibrahim (Abraham)",
-      "connection": "Ibrahim's own father threatened to stone him for rejecting idol worship",
-      "comfortMessage": "Ibrahim faced opposition from his own father, yet he maintained respect while standing firm in truth. You can honor your family while staying true to your faith - Ibrahim showed us how.",
-      "storySummary": "Ibrahim called his father Azar to abandon idol worship, but his father threatened to stone him. Despite this painful rejection, Ibrahim prayed for his father and continued his mission. Allah blessed him with a new righteous family when his biological family rejected him.",
+      "prophetEn": "Ibrahim (Abraham)",
+      "prophetAr": "النبي إبراهيم (ع)",
+      "prophetUr": "حضرت ابراہیم علیہ السلام",
+      "connectionEn": "Ibrahim's own father threatened to stone him for rejecting idol worship",
+      "connectionAr": "هدَّد والد إبراهيم (ع) بإيذائه بسبب رفضه عبادة الأصنام",
+      "connectionUr": "حضرت ابراہیم علیہ السلام کے اپنے والد نے بت پرستی چھوڑنے پر انہیں سنگسار کرنے کی دھمکی دی",
+      "comfortMessageEn": "Ibrahim faced opposition from his own father, yet he maintained respect while standing firm in truth. You can honor your family while staying true to your faith - Ibrahim showed us how.",
+      "comfortMessageAr": "واجه إبراهيم (ع) العداء من أقرب الناس إليه — والده — غير أنه حافظ على احترامه وثبت على الحق. بإمكانك أن تبر بأهلك وتحترمهم دون أن تتنازل عن دينك؛ فإبراهيم (ع) أرانا كيف يكون ذلك.",
+      "comfortMessageUr": "حضرت ابراہیم علیہ السلام کو اپنے سگے باپ کی مخالفت کا سامنا کرنا پڑا، پھر بھی وہ ادب و احترام سے پیش آتے ہوئے حق پر قائم رہے۔ آپ بھی اپنے گھر والوں کا احترام کرتے ہوئے اپنے دین پر ثابت قدم رہ سکتے ہیں — حضرت ابراہیم علیہ السلام نے یہی راستہ دکھایا ہے۔",
+      "storySummaryEn": "Ibrahim called his father Azar to abandon idol worship, but his father threatened to stone him. Despite this painful rejection, Ibrahim prayed for his father and continued his mission. Allah blessed him with a new righteous family when his biological family rejected him.",
+      "storySummaryAr": "دعا النبي إبراهيم (ع) أباه آزر إلى ترك الأصنام، فهدَّده أبوه بالرجم والطرد. ورغم هذا الرفض المؤلم ظل إبراهيم (ع) يدعو لأبيه ويمضي في مهمته. وعوَّضه الله بأسرة صالحة جديدة حين خذله ذووه.",
+      "storySummaryUr": "حضرت ابراہیم علیہ السلام نے اپنے والد آزر کو بت پرستی ترک کرنے کی دعوت دی، مگر والد نے سنگسار کرنے کی دھمکی دی۔ اس تکلیف دہ رد کے باوجود حضرت ابراہیم علیہ السلام نے والد کے لیے دعا کی اور اپنا مشن جاری رکھا۔ جب سگا خاندان دور ہو گیا تو اللہ نے انہیں ایک نیک اور صالح خاندان عطا کیا۔",
       "verses": [
         {
           "surahNumber": 19,
           "verseNumber": 46,
-          "relevanceNote": "The father's harsh threat to stone Ibrahim"
+          "relevanceNoteEn": "The father's harsh threat to stone Ibrahim",
+          "relevanceNoteAr": "تهديد الأب القاسي بطرد إبراهيم (ع)",
+          "relevanceNoteUr": "والد کی طرف سے حضرت ابراہیم علیہ السلام کو سنگسار کرنے کی سخت دھمکی"
         },
         {
           "surahNumber": 19,
           "verseNumber": 47,
-          "relevanceNote": "Ibrahim's graceful response and continued prayers"
+          "relevanceNoteEn": "Ibrahim's graceful response and continued prayers",
+          "relevanceNoteAr": "رد إبراهيم (ع) الكريم وإصراره على الدعاء",
+          "relevanceNoteUr": "حضرت ابراہیم علیہ السلام کا شائستہ جواب اور مسلسل دعا"
         },
         {
           "surahNumber": 60,
           "verseNumber": 4,
-          "relevanceNote": "Ibrahim as a model for believers facing family opposition"
+          "relevanceNoteEn": "Ibrahim as a model for believers facing family opposition",
+          "relevanceNoteAr": "إبراهيم (ع) أسوة للمؤمنين في مواجهة معارضة الأهل",
+          "relevanceNoteUr": "خاندانی مخالفت کا سامنا کرنے والے مومنوں کے لیے حضرت ابراہیم علیہ السلام کا نمونہ"
         }
       ],
       "relatedStoryId": "s1",
@@ -53,22 +83,36 @@
     },
     {
       "id": "p3",
-      "situation": "I'm being mocked for my beliefs",
+      "situationEn": "I'm being mocked for my beliefs",
+      "situationAr": "يستهزئ الناس بمعتقداتي",
+      "situationUr": "لوگ میرے عقائد کا مذاق اڑاتے ہیں",
       "category": "persecution",
-      "prophet": "Nuh (Noah)",
-      "connection": "Nuh was mocked for 950 years while building the ark, yet he persevered",
-      "comfortMessage": "For nearly a millennium, Nuh endured ridicule as he built the ark far from any water. Those who mock your faith today will one day see the truth, just as Nuh's mockers did.",
-      "storySummary": "Prophet Nuh called his people to Allah for 950 years. They mocked him relentlessly, especially when he built an ark far from water. The leaders laughed and passed by, ridiculing him. Yet Nuh continued, and when the flood came, the mockers desperately wished they had listened.",
+      "prophetEn": "Nuh (Noah)",
+      "prophetAr": "النبي نوح (ع)",
+      "prophetUr": "حضرت نوح علیہ السلام",
+      "connectionEn": "Nuh was mocked for 950 years while building the ark, yet he persevered",
+      "connectionAr": "استُهزئ بالنبي نوح (ع) نحو تسعمائة وخمسين عامًا وهو يبني السفينة، فصبر ومضى",
+      "connectionUr": "حضرت نوح علیہ السلام ۹۵۰ برس تک کشتی بناتے ہوئے تمسخر کا نشانہ بنتے رہے، پھر بھی ڈٹے رہے",
+      "comfortMessageEn": "For nearly a millennium, Nuh endured ridicule as he built the ark far from any water. Those who mock your faith today will one day see the truth, just as Nuh's mockers did.",
+      "comfortMessageAr": "لما يقارب ألف عام تحمَّل نوح (ع) السخرية وهو يبني سفينته بعيدًا عن الماء. من يسخرون من إيمانك اليوم سيرون الحق غدًا كما رأى المستهزئون بنوح حين جاء الطوفان. الصبر سلاحك كما كان سلاحه.",
+      "comfortMessageUr": "قریب ایک ہزار سال تک حضرت نوح علیہ السلام پانی سے دور کشتی بناتے رہے اور استہزاء سہتے رہے۔ جو لوگ آج آپ کے ایمان کا مذاق اڑاتے ہیں وہ بھی ایک دن حق کو پہچان لیں گے، جیسے حضرت نوح علیہ السلام کے مذاق اڑانے والوں نے پہچانا۔",
+      "storySummaryEn": "Prophet Nuh called his people to Allah for 950 years. They mocked him relentlessly, especially when he built an ark far from water. The leaders laughed and passed by, ridiculing him. Yet Nuh continued, and when the flood came, the mockers desperately wished they had listened.",
+      "storySummaryAr": "دعا النبي نوح (ع) قومه إلى الله تسعمائة وخمسين عامًا، فكانوا يستهزئون به لا سيما حين أخذ يبني سفينة في موضع نأى عن البحر. كان الزعماء يمرون به وهم يسخرون ويضحكون، غير أنه واصل عمله. ولما جاء الطوفان تمنى المستهزئون لو أنهم أطاعوه.",
+      "storySummaryUr": "حضرت نوح علیہ السلام نے ۹۵۰ برس تک اپنی قوم کو اللہ کی طرف بلایا۔ قوم نے بے رحمی سے مذاق اڑایا، خاص طور پر جب انہوں نے پانی سے دور کشتی بنانا شروع کی۔ سردار ہنستے ہوئے گزرتے رہے۔ پھر جب طوفان آیا تو مذاق اڑانے والے تڑپ کر کاش کرتے رہے کہ کاش سن لیتے۔",
       "verses": [
         {
           "surahNumber": 11,
           "verseNumber": 38,
-          "relevanceNote": "The people mocking Nuh as he built the ark"
+          "relevanceNoteEn": "The people mocking Nuh as he built the ark",
+          "relevanceNoteAr": "استهزاء القوم بنوح (ع) أثناء بناء السفينة",
+          "relevanceNoteUr": "کشتی بناتے وقت لوگوں کا حضرت نوح علیہ السلام کا مذاق اڑانا"
         },
         {
           "surahNumber": 11,
           "verseNumber": 36,
-          "relevanceNote": "Allah comforting Nuh after centuries of mockery"
+          "relevanceNoteEn": "Allah comforting Nuh after centuries of mockery",
+          "relevanceNoteAr": "تعزية الله لنوح (ع) بعد قرون من السخرية",
+          "relevanceNoteUr": "صدیوں کے استہزاء کے بعد اللہ کا حضرت نوح علیہ السلام کو دلاسہ"
         }
       ],
       "relatedStoryId": "s3",
@@ -76,27 +120,43 @@
     },
     {
       "id": "p4",
-      "situation": "I was betrayed by people I trusted",
+      "situationEn": "I was betrayed by people I trusted",
+      "situationAr": "خذلني من وثقت بهم",
+      "situationUr": "جن لوگوں پر بھروسا کیا انہوں نے دھوکا دیا",
       "category": "family_challenges",
-      "prophet": "Yusuf (Joseph)",
-      "connection": "Yusuf's own brothers threw him in a well out of jealousy",
-      "comfortMessage": "Your brothers in humanity may betray you, but Allah never will. Yusuf's betrayal led him to become the minister of Egypt. Your pain today may be the path to your elevation tomorrow.",
-      "storySummary": "Yusuf's brothers, consumed by jealousy, threw him into a dark well and told their father he was eaten by a wolf. Sold into slavery, falsely imprisoned - yet through it all, Allah's plan was unfolding. The betrayed child became Egypt's most powerful minister.",
+      "prophetEn": "Yusuf (Joseph)",
+      "prophetAr": "النبي يوسف (ع)",
+      "prophetUr": "حضرت یوسف علیہ السلام",
+      "connectionEn": "Yusuf's own brothers threw him in a well out of jealousy",
+      "connectionAr": "ألقى إخوةُ يوسف (ع) أخاهم في البئر حسدًا له",
+      "connectionUr": "حضرت یوسف علیہ السلام کو ان کے اپنے بھائیوں نے حسد میں کنویں میں پھینک دیا",
+      "comfortMessageEn": "Your brothers in humanity may betray you, but Allah never will. Yusuf's betrayal led him to become the minister of Egypt. Your pain today may be the path to your elevation tomorrow.",
+      "comfortMessageAr": "قد يخذلك البشر لكن الله لن يخذلك أبدًا. أفضت خيانة إخوة يوسف (ع) به إلى أن يصبح عزيز مصر. ألمك اليوم قد يكون الطريق إلى رفعتك غدًا، فلا تيأس.",
+      "comfortMessageUr": "انسانوں میں آپ کے بھائی دھوکا دے سکتے ہیں، مگر اللہ کبھی نہیں دیتا۔ حضرت یوسف علیہ السلام کی اسی غداری نے انہیں مصر کا وزیر بنایا۔ آج کا درد کل کی بلندی کا راستہ ہو سکتا ہے۔",
+      "storySummaryEn": "Yusuf's brothers, consumed by jealousy, threw him into a dark well and told their father he was eaten by a wolf. Sold into slavery, falsely imprisoned - yet through it all, Allah's plan was unfolding. The betrayed child became Egypt's most powerful minister.",
+      "storySummaryAr": "أخذ إخوة يوسف (ع) أخاهم في نوبة من الحسد والحقد، فألقوه في قعر بئر مظلمة وأخبروا أباهم بأن ذئبًا افترسه. بِيع رقيقًا، وزُجَّ به في السجن ظلمًا، لكن الله كان يُحكم خطته في خفاء. وفي نهاية المطاف أصبح ذلك الطفل الذي بِيع بثمن بخس أعظم وزير في مصر.",
+      "storySummaryUr": "حضرت یوسف علیہ السلام کے بھائیوں نے حسد میں انہیں ایک اندھیرے کنویں میں پھینک دیا اور باپ سے کہا کہ بھیڑیا کھا گیا۔ غلامی میں بیچے گئے، جھوٹے الزام میں قید کیے گئے — پھر بھی اللہ کا منصوبہ رفتہ رفتہ کھلتا رہا۔ وہی دھوکا کھایا بچہ مصر کا سب سے طاقتور وزیر بن گیا۔",
       "verses": [
         {
           "surahNumber": 12,
           "verseNumber": 15,
-          "relevanceNote": "The brothers casting Yusuf into the well"
+          "relevanceNoteEn": "The brothers casting Yusuf into the well",
+          "relevanceNoteAr": "إلقاء الإخوة ليوسف (ع) في البئر",
+          "relevanceNoteUr": "بھائیوں کا حضرت یوسف علیہ السلام کو کنویں میں پھینکنا"
         },
         {
           "surahNumber": 12,
           "verseNumber": 92,
-          "relevanceNote": "Yusuf's incredible forgiveness of his brothers"
+          "relevanceNoteEn": "Yusuf's incredible forgiveness of his brothers",
+          "relevanceNoteAr": "عفو يوسف (ع) المذهل عن إخوته",
+          "relevanceNoteUr": "حضرت یوسف علیہ السلام کا اپنے بھائیوں کو놀랍게 معاف کرنا"
         },
         {
           "surahNumber": 12,
           "verseNumber": 100,
-          "relevanceNote": "Yusuf recognizing Allah's plan in all his trials"
+          "relevanceNoteEn": "Yusuf recognizing Allah's plan in all his trials",
+          "relevanceNoteAr": "إدراك يوسف (ع) حكمة الله في كل ابتلاء مر به",
+          "relevanceNoteUr": "حضرت یوسف علیہ السلام کا اپنے تمام آزمائشوں میں اللہ کا منصوبہ پہچاننا"
         }
       ],
       "relatedStoryId": "s4",
@@ -104,27 +164,43 @@
     },
     {
       "id": "p5",
-      "situation": "I'm facing a powerful oppressor",
+      "situationEn": "I'm facing a powerful oppressor",
+      "situationAr": "أواجه ظالمًا جبارًا",
+      "situationUr": "میں کسی طاقتور ظالم کا سامنا کر رہا ہوں",
       "category": "worldly_pressures",
-      "prophet": "Musa (Moses)",
-      "connection": "Musa faced Pharaoh, the most powerful tyrant of his time",
-      "comfortMessage": "Musa had a speech impediment and faced the mightiest empire on Earth. Yet with Allah's support, he prevailed. Your oppressor, no matter how powerful, is nothing compared to the One who parts seas.",
-      "storySummary": "Prophet Musa was commanded to confront Pharaoh, who claimed to be god and had enslaved an entire nation. Despite his fear and speech difficulty, Musa went with his brother Harun. When Pharaoh's magicians threw down their staffs, Musa's staff consumed them all, exposing the truth.",
+      "prophetEn": "Musa (Moses)",
+      "prophetAr": "النبي موسى (ع)",
+      "prophetUr": "حضرت موسیٰ علیہ السلام",
+      "connectionEn": "Musa faced Pharaoh, the most powerful tyrant of his time",
+      "connectionAr": "واجه النبي موسى (ع) فرعون، أعتى طاغية في زمانه",
+      "connectionUr": "حضرت موسیٰ علیہ السلام نے فرعون کا سامنا کیا جو اپنے وقت کا سب سے بڑا ظالم بادشاہ تھا",
+      "comfortMessageEn": "Musa had a speech impediment and faced the mightiest empire on Earth. Yet with Allah's support, he prevailed. Your oppressor, no matter how powerful, is nothing compared to the One who parts seas.",
+      "comfortMessageAr": "كان موسى (ع) يعاني من تعذُّر النطق وأمامه أقوى إمبراطورية على وجه الأرض، ومع ذلك نصره الله عليها. ظالمك مهما بلغت قوته لا يساوي شيئًا أمام من يشقُّ البحار بأمره؛ فتوكل على الله ولا تهن.",
+      "comfortMessageUr": "حضرت موسیٰ علیہ السلام کو ہکلاہٹ تھی اور انہوں نے زمین کی سب سے طاقتور سلطنت کا مقابلہ کیا، پھر بھی اللہ کی مدد سے غالب آئے۔ آپ کا ظالم خواہ کتنا ہی طاقتور ہو، وہ اس ذات کے سامنے کچھ نہیں جو سمندر کو چیر دیتی ہے۔",
+      "storySummaryEn": "Prophet Musa was commanded to confront Pharaoh, who claimed to be god and had enslaved an entire nation. Despite his fear and speech difficulty, Musa went with his brother Harun. When Pharaoh's magicians threw down their staffs, Musa's staff consumed them all, exposing the truth.",
+      "storySummaryAr": "أُمر النبي موسى (ع) بمواجهة فرعون الذي ادّعى الإلوهية واستعبد أمة بأكملها. ورغم خوفه وعسر لسانه انطلق مع أخيه هارون. ولما ألقى سحرة فرعون عِصِيَّهم أمام الجميع، ابتلعت عصا موسى (ع) سحرهم كله فانكشف الحق.",
+      "storySummaryUr": "حضرت موسیٰ علیہ السلام کو حکم ملا کہ فرعون کا سامنا کریں جو خدائی کا دعویدار تھا اور پوری قوم کو غلام بنائے ہوئے تھا۔ ڈر اور ہکلاہٹ کے باوجود حضرت موسیٰ علیہ السلام اپنے بھائی ہارون کے ساتھ گئے۔ جب فرعون کے جادوگروں نے لاٹھیاں پھینکیں، حضرت موسیٰ علیہ السلام کی لاٹھی نے سب کو نگل لیا اور حق ظاہر ہو گیا۔",
       "verses": [
         {
           "surahNumber": 20,
           "verseNumber": 24,
-          "relevanceNote": "Allah commanding Musa to face the tyrant"
+          "relevanceNoteEn": "Allah commanding Musa to face the tyrant",
+          "relevanceNoteAr": "أمر الله لموسى (ع) بمواجهة الطاغية",
+          "relevanceNoteUr": "اللہ کا حضرت موسیٰ علیہ السلام کو ظالم کا سامنا کرنے کا حکم"
         },
         {
           "surahNumber": 20,
           "verseNumber": 67,
-          "relevanceNote": "Musa feeling fear, but Allah reassuring him"
+          "relevanceNoteEn": "Musa feeling fear, but Allah reassuring him",
+          "relevanceNoteAr": "خوف موسى (ع) وتطمين الله له",
+          "relevanceNoteUr": "حضرت موسیٰ علیہ السلام کا ڈر اور اللہ کا انہیں اطمینان دلانا"
         },
         {
           "surahNumber": 26,
           "verseNumber": 62,
-          "relevanceNote": "Musa's declaration of trust at the Red Sea"
+          "relevanceNoteEn": "Musa's declaration of trust at the Red Sea",
+          "relevanceNoteAr": "إعلان موسى (ع) توكله على الله عند البحر الأحمر",
+          "relevanceNoteUr": "بحرِ احمر پر حضرت موسیٰ علیہ السلام کا اللہ پر توکل کا اعلان"
         }
       ],
       "relatedStoryId": "s6",
@@ -132,22 +208,36 @@
     },
     {
       "id": "p6",
-      "situation": "I've lost everything",
+      "situationEn": "I've lost everything",
+      "situationAr": "فقدت كل شيء",
+      "situationUr": "میں نے سب کچھ کھو دیا ہے",
       "category": "emotional_struggles",
-      "prophet": "Ayyub (Job)",
-      "connection": "Ayyub lost his wealth, his children, and his health, yet never complained to anyone but Allah",
-      "comfortMessage": "Ayyub lost it all - family, wealth, health - until his friends abandoned him. Yet his patience made him beloved to Allah, and everything was restored many times over. Your loss is not the end of your story.",
-      "storySummary": "Prophet Ayyub was blessed with wealth, children, and health. Then he lost everything - his children died, his wealth vanished, disease ravaged his body until only his wife remained. Yet through years of suffering, he never complained to anyone but Allah, earning the title 'as-Sabur' (the Patient).",
+      "prophetEn": "Ayyub (Job)",
+      "prophetAr": "النبي أيوب (ع)",
+      "prophetUr": "حضرت ایوب علیہ السلام",
+      "connectionEn": "Ayyub lost his wealth, his children, and his health, yet never complained to anyone but Allah",
+      "connectionAr": "فقد النبي أيوب (ع) ماله وأولاده وصحته، ومع ذلك لم يشكُ إلا لله",
+      "connectionUr": "حضرت ایوب علیہ السلام نے اپنی دولت، اولاد اور صحت سب کھو دیا، پھر بھی صرف اللہ سے فریاد کی",
+      "comfortMessageEn": "Ayyub lost it all - family, wealth, health - until his friends abandoned him. Yet his patience made him beloved to Allah, and everything was restored many times over. Your loss is not the end of your story.",
+      "comfortMessageAr": "فقد أيوب (ع) كل شيء — أسرته وثروته وصحته — حتى تركه أصحابه. غير أن صبره جعله حبيبًا عند الله فرُدَّ عليه كل شيء أضعافًا مضاعفة. خسارتك ليست نهاية قصتك، فاصبر وستجد النهاية مختلفة.",
+      "comfortMessageUr": "حضرت ایوب علیہ السلام نے سب کچھ کھویا — خاندان، دولت، صحت — یہاں تک کہ دوستوں نے بھی ساتھ چھوڑ دیا۔ پھر بھی ان کے صبر نے انہیں اللہ کا محبوب بنا دیا اور سب کچھ کئی گنا بڑھ کر واپس ملا۔ آپ کا نقصان آپ کی داستان کا آخر نہیں ہے۔",
+      "storySummaryEn": "Prophet Ayyub was blessed with wealth, children, and health. Then he lost everything - his children died, his wealth vanished, disease ravaged his body until only his wife remained. Yet through years of suffering, he never complained to anyone but Allah, earning the title 'as-Sabur' (the Patient).",
+      "storySummaryAr": "رُزق النبي أيوب (ع) بالمال والأولاد والصحة والعافية، ثم أُخذ منه كل شيء: فقد أولاده وضاع ماله وأنهكه المرض حتى لم يبقَ معه إلا زوجته. ومع ذلك ظل في سنوات الابتلاء لا يشكو لأحد غير الله، فاستحق لقب «الصابر».",
+      "storySummaryUr": "حضرت ایوب علیہ السلام کو دولت، اولاد اور صحت سے نوازا گیا تھا۔ پھر سب چھن گیا — اولاد گئی، مال گیا، بیماری نے جسم کو گھیر لیا، صرف ان کی بیوی باقی رہی۔ برسوں کی تکلیف میں انہوں نے کبھی کسی اور سے شکوہ نہیں کیا، صرف اللہ سے لو لگائی، اور یہی ان کا لقب بن گیا — الصابر۔",
       "verses": [
         {
           "surahNumber": 21,
           "verseNumber": 83,
-          "relevanceNote": "Ayyub's heartfelt cry to Allah in suffering"
+          "relevanceNoteEn": "Ayyub's heartfelt cry to Allah in suffering",
+          "relevanceNoteAr": "نداء أيوب (ع) الحار لربه في أشد لحظات المعاناة",
+          "relevanceNoteUr": "تکلیف میں حضرت ایوب علیہ السلام کا اللہ سے دل سوز پکار"
         },
         {
           "surahNumber": 38,
           "verseNumber": 44,
-          "relevanceNote": "Allah's praise of Ayyub's patience"
+          "relevanceNoteEn": "Allah's praise of Ayyub's patience",
+          "relevanceNoteAr": "ثناء الله على صبر أيوب (ع)",
+          "relevanceNoteUr": "حضرت ایوب علیہ السلام کے صبر پر اللہ کی تعریف"
         }
       ],
       "relatedStoryId": "s12",
@@ -155,22 +245,36 @@
     },
     {
       "id": "p7",
-      "situation": "I'm tempted to compromise my values",
+      "situationEn": "I'm tempted to compromise my values",
+      "situationAr": "أميل إلى التفريط في قيمي",
+      "situationUr": "میں اپنی اقدار سے سمجھوتہ کرنے کے لالچ میں ہوں",
       "category": "faith_tests",
-      "prophet": "Yusuf (Joseph)",
-      "connection": "Yusuf chose prison over compromising his integrity when tempted by power and beauty",
-      "comfortMessage": "Yusuf was young, enslaved, far from family, and propositioned by a powerful, beautiful woman. He chose prison over sin. Your temptation can be overcome - if Yusuf could resist in such circumstances, so can you with Allah's help.",
-      "storySummary": "As a young slave in Egypt, Yusuf was pursued by the wife of his master, a woman of power and beauty. She locked the doors and called him to her. Yusuf fled to the door, saying 'I seek refuge in Allah.' When she accused him falsely, he preferred years in prison over sinning against Allah.",
+      "prophetEn": "Yusuf (Joseph)",
+      "prophetAr": "النبي يوسف (ع)",
+      "prophetUr": "حضرت یوسف علیہ السلام",
+      "connectionEn": "Yusuf chose prison over compromising his integrity when tempted by power and beauty",
+      "connectionAr": "آثر يوسف (ع) السجن على المساس بشرفه حين أغرته القوة والجمال",
+      "connectionUr": "حضرت یوسف علیہ السلام نے اپنی پاکدامنی پر قائم رہنے کے لیے قید کو ترجیح دی جب طاقت اور حسن نے للچایا",
+      "comfortMessageEn": "Yusuf was young, enslaved, far from family, and propositioned by a powerful, beautiful woman. He chose prison over sin. Your temptation can be overcome - if Yusuf could resist in such circumstances, so can you with Allah's help.",
+      "comfortMessageAr": "كان يوسف (ع) شابًا في الغربة، رقيقًا بعيدًا عن أهله، وراودته امرأة ذات جاه وجمال. فاختار السجن على الخطيئة. إن كان يوسف (ع) قادرًا على مقاومة الإغراء في تلك الظروف، فأنت قادر بعون الله أيضًا.",
+      "comfortMessageUr": "حضرت یوسف علیہ السلام جوان تھے، غلام تھے، گھر سے دور تھے، اور ایک طاقتور و خوبصورت عورت نے انہیں بلایا۔ انہوں نے گناہ کی جگہ قید کو چنا۔ آپ بھی اپنی آزمائش پر قابو پا سکتے ہیں — اگر حضرت یوسف علیہ السلام ایسے حالات میں بچ سکتے ہیں تو اللہ کی مدد سے آپ بھی بچ سکتے ہیں۔",
+      "storySummaryEn": "As a young slave in Egypt, Yusuf was pursued by the wife of his master, a woman of power and beauty. She locked the doors and called him to her. Yusuf fled to the door, saying 'I seek refuge in Allah.' When she accused him falsely, he preferred years in prison over sinning against Allah.",
+      "storySummaryAr": "حين كان يوسف (ع) عبدًا شابًا في مصر راودته امرأة سيده — ذات مكانة وجمال — فأحكمت عليه الأبواب ودعته. ففرَّ يوسف (ع) نحو الباب قائلًا: «مَعَاذَ اللَّهِ». ولما اتهمته زورًا فضَّل السجن سنوات على أن يعصي الله.",
+      "storySummaryUr": "مصر میں ایک غلام کی حیثیت سے حضرت یوسف علیہ السلام کو ان کے مالک کی بیوی نے للچایا جو طاقتور اور خوبصورت تھی۔ اس نے دروازے بند کر لیے اور انہیں اپنی طرف بلایا۔ حضرت یوسف علیہ السلام دروازے کی طرف بھاگے اور کہا «میں اللہ کی پناہ مانگتا ہوں»۔ جھوٹے الزام کے باوجود انہوں نے گناہ کی بجائے سالوں کی قید قبول کی۔",
       "verses": [
         {
           "surahNumber": 12,
           "verseNumber": 23,
-          "relevanceNote": "Yusuf refusing temptation and seeking Allah's refuge"
+          "relevanceNoteEn": "Yusuf refusing temptation and seeking Allah's refuge",
+          "relevanceNoteAr": "رفض يوسف (ع) الإغراء والتجاؤه إلى الله",
+          "relevanceNoteUr": "حضرت یوسف علیہ السلام کا لالچ سے انکار اور اللہ کی پناہ مانگنا"
         },
         {
           "surahNumber": 12,
           "verseNumber": 33,
-          "relevanceNote": "Yusuf preferring prison over sin"
+          "relevanceNoteEn": "Yusuf preferring prison over sin",
+          "relevanceNoteAr": "تفضيل يوسف (ع) السجن على اقتراف الخطيئة",
+          "relevanceNoteUr": "حضرت یوسف علیہ السلام کا گناہ کی جگہ قید کو ترجیح دینا"
         }
       ],
       "relatedStoryId": "s5",
@@ -178,22 +282,36 @@
     },
     {
       "id": "p8",
-      "situation": "I'm old and feel it's too late",
+      "situationEn": "I'm old and feel it's too late",
+      "situationAr": "أنا كبير في السن وأشعر أن الوقت قد فات",
+      "situationUr": "میں بوڑھا ہو گیا ہوں اور لگتا ہے بہت دیر ہو گئی",
       "category": "worldly_pressures",
-      "prophet": "Zakariya (Zechariah)",
-      "connection": "Zakariya was elderly with a barren wife, yet Allah blessed him with a son",
-      "comfortMessage": "Zakariya's bones were brittle and his hair was grey. His wife had never conceived. Yet he still raised his hands to Allah - and Yahya was born. It's never too late for Allah's miracles in your life.",
-      "storySummary": "Prophet Zakariya was old, his bones weak, his hair white, and his wife was barren their whole lives. Yet seeing Maryam receive provision from the unseen gave him hope. He prayed secretly, and Allah granted him Yahya - a child no one thought possible.",
+      "prophetEn": "Zakariya (Zechariah)",
+      "prophetAr": "النبي زكريا (ع)",
+      "prophetUr": "حضرت زکریا علیہ السلام",
+      "connectionEn": "Zakariya was elderly with a barren wife, yet Allah blessed him with a son",
+      "connectionAr": "كان النبي زكريا (ع) شيخًا كبيرًا وزوجه عاقر، فرزقه الله بولد",
+      "connectionUr": "حضرت زکریا علیہ السلام بزرگ تھے اور ان کی اہلیہ بانجھ تھیں، پھر بھی اللہ نے انہیں بیٹا عطا کیا",
+      "comfortMessageEn": "Zakariya's bones were brittle and his hair was grey. His wife had never conceived. Yet he still raised his hands to Allah - and Yahya was born. It's never too late for Allah's miracles in your life.",
+      "comfortMessageAr": "كانت عظام زكريا (ع) قد وهنت وشاب رأسه ولم تنجب زوجه طوال حياتها. ومع ذلك رفع يديه داعيًا، فوُلد له يحيى. لا يوجد في قاموس الله «فوات الأوان»؛ فالمعجزات لا تعرف تقاعدًا.",
+      "comfortMessageUr": "حضرت زکریا علیہ السلام کی ہڈیاں کمزور ہو چکی تھیں اور بال سفید ہو گئے تھے، اہلیہ نے کبھی حمل نہیں ٹھہرا تھا۔ پھر بھی انہوں نے اللہ کے سامنے ہاتھ اٹھائے — اور حضرت یحییٰ علیہ السلام پیدا ہوئے۔ اللہ کے معجزوں کے لیے کبھی دیر نہیں ہوتی۔",
+      "storySummaryEn": "Prophet Zakariya was old, his bones weak, his hair white, and his wife was barren their whole lives. Yet seeing Maryam receive provision from the unseen gave him hope. He prayed secretly, and Allah granted him Yahya - a child no one thought possible.",
+      "storySummaryAr": "كان النبي زكريا (ع) شيخًا كبيرًا وهنت عظامه واشتعل رأسه شيبًا، وزوجه لم تنجب قط. لكن حين رأى مريم تتلقى رزقها من الغيب اشتعل في قلبه الأمل فدعا ربه في خفاء، فبشَّره الله بيحيى — مولود لم يكن يخطر على بال أحد.",
+      "storySummaryUr": "حضرت زکریا علیہ السلام بوڑھے تھے، ہڈیاں کمزور اور بال سفید تھے، اہلیہ ساری زندگی بانجھ رہی تھیں۔ لیکن حضرت مریم علیہا السلام کو غیب سے رزق ملتے دیکھ کر دل میں امید جاگی۔ انہوں نے چھپ کر دعا کی اور اللہ نے انہیں حضرت یحییٰ علیہ السلام جیسا بیٹا عطا کیا جس کا نام پہلے کسی کا نہ رکھا گیا تھا۔",
       "verses": [
         {
           "surahNumber": 19,
           "verseNumber": 4,
-          "relevanceNote": "Zakariya's humble prayer despite his old age"
+          "relevanceNoteEn": "Zakariya's humble prayer despite his old age",
+          "relevanceNoteAr": "دعاء زكريا (ع) المتواضع رغم كِبَر سنه",
+          "relevanceNoteUr": "بڑھاپے کے باوجود حضرت زکریا علیہ السلام کی عاجزانہ دعا"
         },
         {
           "surahNumber": 19,
           "verseNumber": 7,
-          "relevanceNote": "Allah's glad tidings of a son with an unprecedented name"
+          "relevanceNoteEn": "Allah's glad tidings of a son with an unprecedented name",
+          "relevanceNoteAr": "بشرى الله له بابن باسم لم يُسبق إليه",
+          "relevanceNoteUr": "اللہ کی طرف سے بے مثال نام والے بیٹے کی خوشخبری"
         }
       ],
       "relatedStoryId": "s15",
@@ -201,22 +319,36 @@
     },
     {
       "id": "p9",
-      "situation": "I feel like I'm fighting alone",
+      "situationEn": "I feel like I'm fighting alone",
+      "situationAr": "أشعر أنني أخوض المعركة وحدي",
+      "situationUr": "مجھے لگتا ہے میں اکیلا لڑ رہا ہوں",
       "category": "isolation",
-      "prophet": "Dawud (David)",
-      "connection": "Young Dawud stood alone against the giant Goliath when his entire army was terrified",
-      "comfortMessage": "A young shepherd boy against a giant warrior - no one believed Dawud could win. But with a few stones and unshakeable faith, he prevailed. When you feel alone against giants, remember whose side you're really on.",
-      "storySummary": "Goliath terrorized the armies of the believers, and no soldier dared face him. Young Dawud, just a shepherd boy, stepped forward with nothing but stones and his sling. With Allah's permission, he struck down the giant, proving that faith conquers size and numbers.",
+      "prophetEn": "Dawud (David)",
+      "prophetAr": "النبي داود (ع)",
+      "prophetUr": "حضرت داؤد علیہ السلام",
+      "connectionEn": "Young Dawud stood alone against the giant Goliath when his entire army was terrified",
+      "connectionAr": "وقف الشابُّ داود (ع) وحيدًا أمام جالوت الجبار حين ارتعدت فرائص الجيش كله",
+      "connectionUr": "نوجوان حضرت داؤد علیہ السلام اکیلے جالوت کے مقابل کھڑے ہوئے جب پوری فوج ڈری ہوئی تھی",
+      "comfortMessageEn": "A young shepherd boy against a giant warrior - no one believed Dawud could win. But with a few stones and unshakeable faith, he prevailed. When you feel alone against giants, remember whose side you're really on.",
+      "comfortMessageAr": "راعٍ يافع في مواجهة محارب عملاق — لم يصدق أحد أن داود (ع) سينتصر. لكنه انتصر بحجارة قليلة وإيمان راسخ. حين تشعر أنك وحدك في مواجهة العمالقة، تذكَّر من تقف بجانبه.",
+      "comfortMessageUr": "ایک چھوٹا چرواہا بچہ بمقابلہ ایک دیو ہیکل سپاہی — کسی کو یقین نہیں تھا کہ حضرت داؤد علیہ السلام جیت سکتے ہیں۔ لیکن چند پتھروں اور پکے ایمان کے ساتھ وہ غالب آئے۔ جب آپ دیوؤں کے سامنے اکیلے محسوس کریں تو یاد رکھیں کہ آپ واقعی کس کی طرف ہیں۔",
+      "storySummaryEn": "Goliath terrorized the armies of the believers, and no soldier dared face him. Young Dawud, just a shepherd boy, stepped forward with nothing but stones and his sling. With Allah's permission, he struck down the giant, proving that faith conquers size and numbers.",
+      "storySummaryAr": "أرعب جالوتُ جيوشَ المؤمنين ولم يُقدم عليه محارب واحد. فتقدم داود (ع) الفتى الراعي بلا شيء سوى حجارة ومقلاعه. وبإذن الله أسقط العملاق، مُثبتًا للعالم أن الإيمان يتغلب على الحجم والعدد.",
+      "storySummaryUr": "جالوت نے ایمان والوں کی فوج کو دہشت زدہ کر رکھا تھا اور کوئی سپاہی اس کا مقابلہ کرنے کو تیار نہ تھا۔ نوجوان حضرت داؤد علیہ السلام، محض ایک چرواہے، صرف پتھروں اور غلیل کے ساتھ آگے آئے۔ اللہ کے اذن سے انہوں نے اس دیو کو گرا دیا اور ثابت کیا کہ ایمان جسامت اور تعداد کو شکست دیتا ہے۔",
       "verses": [
         {
           "surahNumber": 2,
           "verseNumber": 249,
-          "relevanceNote": "The believers who trusted in meeting Allah despite being outnumbered"
+          "relevanceNoteEn": "The believers who trusted in meeting Allah despite being outnumbered",
+          "relevanceNoteAr": "المؤمنون الذين وثقوا بلقاء الله رغم قلة عددهم",
+          "relevanceNoteUr": "وہ مومنین جنہوں نے تعداد میں کم ہونے کے باوجود اللہ سے ملنے کی امید رکھی"
         },
         {
           "surahNumber": 2,
           "verseNumber": 251,
-          "relevanceNote": "Dawud defeating Goliath with Allah's permission"
+          "relevanceNoteEn": "Dawud defeating Goliath with Allah's permission",
+          "relevanceNoteAr": "انتصار داود (ع) على جالوت بإذن الله",
+          "relevanceNoteUr": "حضرت داؤد علیہ السلام کا اللہ کے اذن سے جالوت کو شکست دینا"
         }
       ],
       "relatedStoryId": "s10",
@@ -224,22 +356,36 @@
     },
     {
       "id": "p10",
-      "situation": "I made a mistake and regret it",
+      "situationEn": "I made a mistake and regret it",
+      "situationAr": "أخطأت وأنا نادم على ما فعلت",
+      "situationUr": "مجھ سے غلطی ہوئی اور مجھے پچھتاوا ہے",
       "category": "faith_tests",
-      "prophet": "Adam",
-      "connection": "Adam made the first human mistake, yet his repentance became a model for all humanity",
-      "comfortMessage": "Adam, the father of humanity and a prophet, made a mistake. But he didn't despair - he turned to Allah immediately with sincere repentance, and Allah forgave him. Your mistake doesn't define you; your repentance does.",
-      "storySummary": "In Paradise, Adam and Hawwa were deceived by Iblis and ate from the forbidden tree. They realized their error immediately. Rather than making excuses, they acknowledged their wrong: 'Our Lord, we have wronged ourselves.' Allah taught them words of repentance, and they were forgiven.",
+      "prophetEn": "Adam",
+      "prophetAr": "النبي آدم (ع)",
+      "prophetUr": "حضرت آدم علیہ السلام",
+      "connectionEn": "Adam made the first human mistake, yet his repentance became a model for all humanity",
+      "connectionAr": "ارتكب آدم (ع) أول خطأ بشري، فكانت توبته نموذجًا يحتذى به لكل البشرية",
+      "connectionUr": "حضرت آدم علیہ السلام سے پہلی انسانی غلطی ہوئی، پھر ان کی توبہ پوری انسانیت کے لیے مثال بن گئی",
+      "comfortMessageEn": "Adam, the father of humanity and a prophet, made a mistake. But he didn't despair - he turned to Allah immediately with sincere repentance, and Allah forgave him. Your mistake doesn't define you; your repentance does.",
+      "comfortMessageAr": "آدم (ع)، أبو البشر ونبيٌّ مكرَّم، أخطأ هو الآخر. لكنه لم ييأس بل أسرع إلى الله بتوبة صادقة فغفر الله له. خطؤك لا يُعرِّفك، توبتك هي التي تُعرِّفك.",
+      "comfortMessageUr": "حضرت آدم علیہ السلام جو انسانیت کے باپ اور نبی تھے، ان سے غلطی ہوئی۔ لیکن انہوں نے مایوسی نہیں کی — فوراً سچے دل سے اللہ کی طرف پلٹے اور اللہ نے معاف فرما دیا۔ آپ کی غلطی آپ کی پہچان نہیں، آپ کی توبہ آپ کی پہچان ہے۔",
+      "storySummaryEn": "In Paradise, Adam and Hawwa were deceived by Iblis and ate from the forbidden tree. They realized their error immediately. Rather than making excuses, they acknowledged their wrong: 'Our Lord, we have wronged ourselves.' Allah taught them words of repentance, and they were forgiven.",
+      "storySummaryAr": "في الجنة خدع إبليسُ آدم (ع) وحواء فأكلا من الشجرة المنهيِّ عنها. وما إن أدركا خطأهما حتى بادرا إلى الاعتراف دون تبرير: «رَبَّنَا ظَلَمْنَا أَنفُسَنَا». فعلَّمهما الله كلمات التوبة وقبلها منهما.",
+      "storySummaryUr": "جنت میں حضرت آدم علیہ السلام اور حضرت حوا علیہا السلام کو ابلیس نے بہکایا اور وہ ممنوع درخت کے قریب چلے گئے۔ انہیں فوراً احساس ہوا۔ بہانے بنانے کی بجائے دونوں نے کہا: «ربنا ظلمنا أنفسنا» — اے ہمارے رب، ہم نے اپنے آپ پر ظلم کیا۔ اللہ نے انہیں توبہ کے الفاظ سکھائے اور انہیں معاف فرما دیا۔",
       "verses": [
         {
           "surahNumber": 7,
           "verseNumber": 23,
-          "relevanceNote": "Adam and Hawwa's immediate and sincere repentance"
+          "relevanceNoteEn": "Adam and Hawwa's immediate and sincere repentance",
+          "relevanceNoteAr": "توبة آدم (ع) وحواء الفورية والصادقة",
+          "relevanceNoteUr": "حضرت آدم علیہ السلام اور حضرت حوا علیہا السلام کی فوری اور سچی توبہ"
         },
         {
           "surahNumber": 2,
           "verseNumber": 37,
-          "relevanceNote": "Allah teaching Adam words of repentance and accepting them"
+          "relevanceNoteEn": "Allah teaching Adam words of repentance and accepting them",
+          "relevanceNoteAr": "تعليم الله لآدم (ع) كلمات التوبة وقبولها منه",
+          "relevanceNoteUr": "اللہ کا حضرت آدم علیہ السلام کو توبہ کے الفاظ سکھانا اور قبول فرمانا"
         }
       ],
       "relatedStoryId": "s21",
@@ -247,27 +393,43 @@
     },
     {
       "id": "p11",
-      "situation": "I'm waiting for something that seems impossible",
+      "situationEn": "I'm waiting for something that seems impossible",
+      "situationAr": "أنتظر شيئًا يبدو مستحيل التحقق",
+      "situationUr": "میں کسی ایسی چیز کا انتظار کر رہا ہوں جو ناممکن لگتی ہے",
       "category": "faith_tests",
-      "prophet": "Yaqub (Jacob)",
-      "connection": "Yaqub waited decades to reunite with his son Yusuf, never losing hope",
-      "comfortMessage": "Yaqub waited so long for Yusuf that he went blind from crying. Yet he never said 'never' - he said 'Perhaps Allah will bring them all to me.' Your impossible wait is not permanent; keep hoping as Yaqub did.",
-      "storySummary": "Prophet Yaqub lost his beloved son Yusuf as a child. For decades, he grieved - his eyes turned white from sorrow. Yet when others told him to give up, he said: 'I only complain of my anguish to Allah.' He held onto hope until the miraculous reunion came.",
+      "prophetEn": "Yaqub (Jacob)",
+      "prophetAr": "النبي يعقوب (ع)",
+      "prophetUr": "حضرت یعقوب علیہ السلام",
+      "connectionEn": "Yaqub waited decades to reunite with his son Yusuf, never losing hope",
+      "connectionAr": "انتظر يعقوب (ع) عقودًا ليلتقي بابنه يوسف دون أن يفقد الأمل",
+      "connectionUr": "حضرت یعقوب علیہ السلام نے حضرت یوسف علیہ السلام سے ملنے کی امید دہائیوں تک نہیں چھوڑی",
+      "comfortMessageEn": "Yaqub waited so long for Yusuf that he went blind from crying. Yet he never said 'never' - he said 'Perhaps Allah will bring them all to me.' Your impossible wait is not permanent; keep hoping as Yaqub did.",
+      "comfortMessageAr": "بكى يعقوب (ع) على يوسف حتى ابيضَّت عيناه، ومع ذلك لم يقل «لن يكون»، بل قال: «عَسَى اللَّهُ أَن يَأْتِيَنِي بِهِمْ جَمِيعًا». انتظارك الذي يبدو مستحيلًا ليس أبديًا؛ أبقِ الأمل كما أبقاه يعقوب.",
+      "comfortMessageUr": "حضرت یعقوب علیہ السلام نے حضرت یوسف علیہ السلام کے لیے اتنا رویا کہ آنکھیں جاتی رہیں۔ پھر بھی انہوں نے کبھی «کبھی نہیں» نہیں کہا — وہ کہتے رہے «شاید اللہ انہیں واپس لے آئے۔» آپ کا ناممکن انتظار ہمیشہ کے لیے نہیں ہے، حضرت یعقوب علیہ السلام کی طرح امید قائم رکھیں۔",
+      "storySummaryEn": "Prophet Yaqub lost his beloved son Yusuf as a child. For decades, he grieved - his eyes turned white from sorrow. Yet when others told him to give up, he said: 'I only complain of my anguish to Allah.' He held onto hope until the miraculous reunion came.",
+      "storySummaryAr": "فقد النبي يعقوب (ع) ابنه الحبيب يوسف وهو طفل، وظل عقودًا يحزن حتى ابيضَّت عيناه من الغم. ولما قال له أبناؤه: استسلم، أجاب: «إِنَّمَا أَشْكُو بَثِّي وَحُزْنِي إِلَى اللَّهِ». تمسَّك بالأمل حتى جاءت لحظة اللقاء المعجز.",
+      "storySummaryUr": "حضرت یعقوب علیہ السلام نے اپنا پیارا بیٹا حضرت یوسف علیہ السلام بچپن میں کھویا۔ دہائیوں تک غم کرتے رہے — آنکھیں رو رو کر سفید ہو گئیں۔ جب لوگوں نے کہا کہ ہار مان لو تو انہوں نے کہا: «میں اپنی بے قراری صرف اللہ سے بیان کرتا ہوں»۔ امید قائم رکھی یہاں تک کہ معجزانہ ملاقات ہوئی۔",
       "verses": [
         {
           "surahNumber": 12,
           "verseNumber": 86,
-          "relevanceNote": "Yaqub directing his pain only to Allah, not despairing"
+          "relevanceNoteEn": "Yaqub directing his pain only to Allah, not despairing",
+          "relevanceNoteAr": "توجيه يعقوب (ع) شكواه إلى الله وحده دون يأس",
+          "relevanceNoteUr": "حضرت یعقوب علیہ السلام کا اپنا درد صرف اللہ سے بیان کرنا، مایوس نہ ہونا"
         },
         {
           "surahNumber": 12,
           "verseNumber": 87,
-          "relevanceNote": "Yaqub's unwavering hope in Allah's mercy"
+          "relevanceNoteEn": "Yaqub's unwavering hope in Allah's mercy",
+          "relevanceNoteAr": "أمل يعقوب (ع) الراسخ في رحمة الله",
+          "relevanceNoteUr": "اللہ کی رحمت سے حضرت یعقوب علیہ السلام کی انتھک امید"
         },
         {
           "surahNumber": 12,
           "verseNumber": 96,
-          "relevanceNote": "The miracle of Yaqub's sight returning at reunion"
+          "relevanceNoteEn": "The miracle of Yaqub's sight returning at reunion",
+          "relevanceNoteAr": "معجزة عودة بصر يعقوب (ع) لحظة اللقاء",
+          "relevanceNoteUr": "حضرت یعقوب علیہ السلام کی آنکھوں کے ملاقات کے وقت معجزانہ طور پر بینا ہونے کا واقعہ"
         }
       ],
       "relatedStoryId": "s24",
@@ -275,22 +437,36 @@
     },
     {
       "id": "p12",
-      "situation": "People don't take me seriously",
+      "situationEn": "People don't take me seriously",
+      "situationAr": "لا يأخذني الناس على محمل الجد",
+      "situationUr": "لوگ مجھے سنجیدگی سے نہیں لیتے",
       "category": "persecution",
-      "prophet": "Lut (Lot)",
-      "connection": "Lut's people dismissed his warnings as the words of someone too pure to understand",
-      "comfortMessage": "Lut's people mocked him for being 'too clean' to understand their ways. When truth-tellers are dismissed, remember that being misunderstood is often the price of standing for what's right.",
-      "storySummary": "Prophet Lut warned his people against their immoral practices. They responded with mockery, saying 'Drive out Lut's family - they want to be pure!' They couldn't believe someone would actually stand against their normalized sins. Yet Lut persisted until Allah's decree came.",
+      "prophetEn": "Lut (Lot)",
+      "prophetAr": "النبي لوط (ع)",
+      "prophetUr": "حضرت لوط علیہ السلام",
+      "connectionEn": "Lut's people dismissed his warnings as the words of someone too pure to understand",
+      "connectionAr": "استهان قوم لوط (ع) بتحذيراته وعدُّوه ساذجًا يرفض أن يفهم واقعهم",
+      "connectionUr": "حضرت لوط علیہ السلام کی قوم نے ان کی تنبیہات کو کسی ایسے شخص کی بات سمجھ کر نظر انداز کر دیا جو بہت پاکیزہ ہے",
+      "comfortMessageEn": "Lut's people mocked him for being 'too clean' to understand their ways. When truth-tellers are dismissed, remember that being misunderstood is often the price of standing for what's right.",
+      "comfortMessageAr": "سخر قوم لوط (ع) منه بحجة أنه «طاهر» يجهل أساليبهم. حين يُستهان بالذين يقولون الحق، فاذكر أن الاستهانة غالبًا ثمن الوقوف مع الصواب، وأن الثبات عليه هو الانتصار الحقيقي.",
+      "comfortMessageUr": "حضرت لوط علیہ السلام کی قوم نے انہیں «بہت پاک و صاف» کہہ کر مسترد کیا۔ جب حق بولنے والوں کو نظر انداز کیا جائے تو یاد رکھیں کہ غلط فہمی اکثر صحیح بات پر ڈٹے رہنے کی قیمت ہوتی ہے۔",
+      "storySummaryEn": "Prophet Lut warned his people against their immoral practices. They responded with mockery, saying 'Drive out Lut's family - they want to be pure!' They couldn't believe someone would actually stand against their normalized sins. Yet Lut persisted until Allah's decree came.",
+      "storySummaryAr": "أنذر النبي لوط (ع) قومه من الفاحشة المنتشرة في مجتمعهم، فردّوا عليه بالسخرية قائلين: «أَخْرِجُوا آلَ لُوطٍ مِن قَرْيَتِكُمْ إِنَّهُمْ أُنَاسٌ يَتَطَهَّرُونَ». لم يتصوروا أن يقف أحد ضد ما درجوا عليه من الفسق. غير أن لوطًا (ع) ثبت حتى نفَّذ الله حكمه فيهم.",
+      "storySummaryUr": "حضرت لوط علیہ السلام نے اپنی قوم کو ان کی بے حیائی سے روکا۔ انہوں نے طنز سے جواب دیا: «لوط کے گھر والوں کو نکال باہر کرو، یہ بہت پاک بننا چاہتے ہیں!» وہ یقین نہیں کر سکتے تھے کہ کوئی ان کی معمول بن چکی برائیوں کے خلاف کھڑا ہو سکتا ہے۔ پھر بھی حضرت لوط علیہ السلام اللہ کا فیصلہ آنے تک ڈٹے رہے۔",
       "verses": [
         {
           "surahNumber": 7,
           "verseNumber": 80,
-          "relevanceNote": "Lut confronting unprecedented immorality with truth"
+          "relevanceNoteEn": "Lut confronting unprecedented immorality with truth",
+          "relevanceNoteAr": "مواجهة لوط (ع) للفاحشة بلا سابقة بالحق",
+          "relevanceNoteUr": "حضرت لوط علیہ السلام کا بے مثال بے حیائی کا سامنا حق کے ساتھ کرنا"
         },
         {
           "surahNumber": 27,
           "verseNumber": 56,
-          "relevanceNote": "The people dismissing Lut for wanting purity"
+          "relevanceNoteEn": "The people dismissing Lut for wanting purity",
+          "relevanceNoteAr": "استهزاء القوم بلوط (ع) بسبب طلبه الطهارة",
+          "relevanceNoteUr": "قوم کا حضرت لوط علیہ السلام کو پاکیزگی چاہنے پر مسترد کرنا"
         }
       ],
       "relatedStoryId": "s17",
@@ -298,27 +474,43 @@
     },
     {
       "id": "p13",
-      "situation": "I'm struggling with financial hardship",
+      "situationEn": "I'm struggling with financial hardship",
+      "situationAr": "أعاني من ضائقة مالية",
+      "situationUr": "میں مالی تنگی میں ہوں",
       "category": "worldly_pressures",
-      "prophet": "Muhammad",
-      "connection": "The Prophet and his companions endured years of poverty and boycott in Mecca",
-      "comfortMessage": "The Prophet Muhammad tied stones to his stomach from hunger. The best of creation knew poverty intimately. Your financial struggle doesn't decrease your worth - some of Allah's most beloved servants knew hardship deeply.",
-      "storySummary": "The Prophet Muhammad and his followers were boycotted by Mecca for three years. They were forbidden from buying food or trading. Some days, the Prophet would tie stones to his stomach to suppress hunger pangs. Yet through this poverty, the foundation of Islam was strengthened.",
+      "prophetEn": "Muhammad",
+      "prophetAr": "النبي محمد (ص)",
+      "prophetUr": "حضرت محمد صلی اللہ علیہ وآلہ وسلم",
+      "connectionEn": "The Prophet and his companions endured years of poverty and boycott in Mecca",
+      "connectionAr": "عانى النبي (ص) وصحابته سنوات من الفقر والحصار في مكة المكرمة",
+      "connectionUr": "نبی اکرم صلی اللہ علیہ وآلہ وسلم اور آپ کے اصحاب نے مکہ میں برسوں غربت اور بائیکاٹ برداشت کیا",
+      "comfortMessageEn": "The Prophet Muhammad tied stones to his stomach from hunger. The best of creation knew poverty intimately. Your financial struggle doesn't decrease your worth - some of Allah's most beloved servants knew hardship deeply.",
+      "comfortMessageAr": "ربط النبي محمد (ص) الحجارة على بطنه من شدة الجوع. خير خلق الله عرف الفقر عن كثب. معاناتك المالية لا تنقص قدرك؛ فمن أحب الله إليه عرفوا الشدة ولم تَحُل بينهم وبين رفيع المقام.",
+      "comfortMessageUr": "نبی اکرم صلی اللہ علیہ وآلہ وسلم بھوک سے پیٹ پر پتھر باندھتے تھے۔ تمام مخلوقات میں سب سے افضل ذات نے غربت کو قریب سے جانا۔ آپ کی مالی تکلیف آپ کی قدر کم نہیں کرتی — اللہ کے کچھ سب سے محبوب بندوں نے بھی شدید تنگی دیکھی ہے۔",
+      "storySummaryEn": "The Prophet Muhammad and his followers were boycotted by Mecca for three years. They were forbidden from buying food or trading. Some days, the Prophet would tie stones to his stomach to suppress hunger pangs. Yet through this poverty, the foundation of Islam was strengthened.",
+      "storySummaryAr": "قاطع المشركون النبيَّ (ص) وصحابته الكرام ثلاث سنوات فمُنعوا من البيع والشراء. وكانت تمر أيام لا يجد النبي (ص) ما يسد الجوع فيشد الحجارة على بطنه. غير أن تلك الشدة كانت زادًا يبني صرح الإسلام الشامخ.",
+      "storySummaryUr": "نبی اکرم صلی اللہ علیہ وآلہ وسلم اور آپ کے ساتھیوں کو مکہ میں تین سال تک بائیکاٹ کا سامنا رہا۔ انہیں کھانا خریدنے اور تجارت کرنے سے روکا گیا۔ کچھ دن نبی اکرم صلی اللہ علیہ وآلہ وسلم بھوک کی تکلیف کم کرنے کے لیے پیٹ پر پتھر باندھتے۔ پھر بھی اسی غربت میں اسلام کی بنیادیں مضبوط ہوتی رہیں۔",
       "verses": [
         {
           "surahNumber": 93,
           "verseNumber": 8,
-          "relevanceNote": "Allah reminding the Prophet of being in need and being enriched"
+          "relevanceNoteEn": "Allah reminding the Prophet of being in need and being enriched",
+          "relevanceNoteAr": "تذكير الله للنبي (ص) بكيف وجده عائلًا فأغناه",
+          "relevanceNoteUr": "اللہ کا نبی اکرم صلی اللہ علیہ وآلہ وسلم کو محتاج ہونے اور پھر غنی کیے جانے کی یاد دہانی"
         },
         {
           "surahNumber": 94,
           "verseNumber": 5,
-          "relevanceNote": "The divine promise that with hardship comes ease"
+          "relevanceNoteEn": "The divine promise that with hardship comes ease",
+          "relevanceNoteAr": "الوعد الإلهي بأن مع العسر يسرًا",
+          "relevanceNoteUr": "اللہ کا وعدہ کہ تکلیف کے ساتھ آسانی بھی ہے"
         },
         {
           "surahNumber": 94,
           "verseNumber": 6,
-          "relevanceNote": "The repeated assurance of ease following difficulty"
+          "relevanceNoteEn": "The repeated assurance of ease following difficulty",
+          "relevanceNoteAr": "تكرار البشرى بأن اليسر يعقب العسر لا محالة",
+          "relevanceNoteUr": "مشکل کے بعد آسانی کی بار بار تسلی"
         }
       ],
       "relatedStoryId": null,
@@ -326,27 +518,43 @@
     },
     {
       "id": "p14",
-      "situation": "I feel insignificant and worthless",
+      "situationEn": "I feel insignificant and worthless",
+      "situationAr": "أشعر بالتفاهة وانعدام القيمة",
+      "situationUr": "مجھے لگتا ہے میں حقیر اور بیکار ہوں",
       "category": "emotional_struggles",
-      "prophet": "Musa (Moses)",
-      "connection": "Musa felt inadequate with his speech impediment, yet Allah chose him for the greatest mission",
-      "comfortMessage": "Musa worried about his stammer when facing Pharaoh. He felt inadequate for the mission. Yet Allah chose him precisely as he was. Your perceived weaknesses don't disqualify you from purpose - sometimes they're exactly what qualifies you.",
-      "storySummary": "When Allah commanded Musa to go to Pharaoh, Musa expressed his fears: his speech impediment, his past mistakes, his inadequacy. Allah didn't remove his stammer - instead, He gave him Harun as support. Musa's weakness became his humility, and his humility became his strength.",
+      "prophetEn": "Musa (Moses)",
+      "prophetAr": "النبي موسى (ع)",
+      "prophetUr": "حضرت موسیٰ علیہ السلام",
+      "connectionEn": "Musa felt inadequate with his speech impediment, yet Allah chose him for the greatest mission",
+      "connectionAr": "شعر موسى (ع) بعجزه بسبب عُقدة لسانه، ومع ذلك اختاره الله لأعظم مهمة",
+      "connectionUr": "حضرت موسیٰ علیہ السلام ہکلاہٹ کی وجہ سے خود کو ناکافی سمجھتے تھے، پھر بھی اللہ نے انہیں سب سے بڑے مشن کے لیے چنا",
+      "comfortMessageEn": "Musa worried about his stammer when facing Pharaoh. He felt inadequate for the mission. Yet Allah chose him precisely as he was. Your perceived weaknesses don't disqualify you from purpose - sometimes they're exactly what qualifies you.",
+      "comfortMessageAr": "قلق موسى (ع) من تلعثمه وهو أمام فرعون وأحس بقصوره عن تحمل المهمة. لكن الله اختاره على ما هو عليه. نقاط ضعفك لا تُسقطك من دائرة العطاء الإلهي — بل ربما كانت تحديدًا ما يؤهلك له.",
+      "comfortMessageUr": "حضرت موسیٰ علیہ السلام نے فرعون کے سامنے جانے پر اپنی ہکلاہٹ کی فکر کی۔ خود کو مشن کے لیے ناکافی سمجھا۔ پھر بھی اللہ نے انہیں ایسا ہی چنا جیسے وہ تھے۔ آپ کی سمجھی ہوئی کمزوریاں آپ کو مقصد سے محروم نہیں کرتیں — کبھی کبھی یہی کمزوریاں آپ کو اہل بناتی ہیں۔",
+      "storySummaryEn": "When Allah commanded Musa to go to Pharaoh, Musa expressed his fears: his speech impediment, his past mistakes, his inadequacy. Allah didn't remove his stammer - instead, He gave him Harun as support. Musa's weakness became his humility, and his humility became his strength.",
+      "storySummaryAr": "حين أمر الله موسى (ع) بالذهاب إلى فرعون أفصح عن مخاوفه: عسر لسانه، وخطيئة ارتكبها في الماضي، وشعوره بعدم الكفاءة. فلم يُزل الله عُقدة لسانه، بل وهبه أخاه هارون عونًا له. فصار ضعف موسى (ع) تواضعًا، وتواضعه قوة.",
+      "storySummaryUr": "جب اللہ نے حضرت موسیٰ علیہ السلام کو فرعون کے پاس جانے کا حکم دیا تو انہوں نے اپنے خدشات بیان کیے: ہکلاہٹ، ماضی کی غلطیاں، اپنی ناکافی ہونے کا احساس۔ اللہ نے ان کی ہکلاہٹ نہیں ہٹائی — بلکہ حضرت ہارون علیہ السلام کو سہارے کے طور پر دے دیا۔ حضرت موسیٰ علیہ السلام کی کمزوری ان کی عاجزی بنی، اور عاجزی ان کی طاقت بن گئی۔",
       "verses": [
         {
           "surahNumber": 26,
           "verseNumber": 13,
-          "relevanceNote": "Musa expressing his fear and perceived inadequacy"
+          "relevanceNoteEn": "Musa expressing his fear and perceived inadequacy",
+          "relevanceNoteAr": "تعبير موسى (ع) عن خوفه وشعوره بعدم الأهلية",
+          "relevanceNoteUr": "حضرت موسیٰ علیہ السلام کا اپنا ڈر اور ناکافی ہونے کا احساس ظاہر کرنا"
         },
         {
           "surahNumber": 20,
           "verseNumber": 25,
-          "relevanceNote": "Musa's prayer for ease in his speech"
+          "relevanceNoteEn": "Musa's prayer for ease in his speech",
+          "relevanceNoteAr": "دعاء موسى (ع) بانطلاق عقدة لسانه",
+          "relevanceNoteUr": "حضرت موسیٰ علیہ السلام کی اپنی زبان میں آسانی کی دعا"
         },
         {
           "surahNumber": 28,
           "verseNumber": 34,
-          "relevanceNote": "Allah granting Harun to support Musa"
+          "relevanceNoteEn": "Allah granting Harun to support Musa",
+          "relevanceNoteAr": "منح الله هارون (ع) لموسى (ع) سندًا ومعينًا",
+          "relevanceNoteUr": "اللہ کا حضرت موسیٰ علیہ السلام کی مدد کے لیے حضرت ہارون علیہ السلام عطا کرنا"
         }
       ],
       "relatedStoryId": "s6",
@@ -354,22 +562,36 @@
     },
     {
       "id": "p15",
-      "situation": "I'm forced to leave my home",
+      "situationEn": "I'm forced to leave my home",
+      "situationAr": "أُضطر إلى مغادرة وطني",
+      "situationUr": "مجھے اپنا گھر چھوڑنے پر مجبور کیا جا رہا ہے",
       "category": "isolation",
-      "prophet": "Ibrahim (Abraham)",
-      "connection": "Ibrahim left his homeland, his family, and eventually settled his family in a barren desert",
-      "comfortMessage": "Ibrahim left everything familiar multiple times - his country, his people, his comfort. He settled Hajar and Ismail in a lifeless desert, trusting Allah completely. Your displacement may be the journey to your destiny.",
-      "storySummary": "Prophet Ibrahim emigrated from his land when his people rejected him. Later, he left his wife Hajar and infant son Ismail in the barren valley of Mecca with just dates and water. When Hajar asked if Allah commanded this, Ibrahim said yes. She replied, 'Then He will not abandon us.' From that desert grew the holiest city.",
+      "prophetEn": "Ibrahim (Abraham)",
+      "prophetAr": "النبي إبراهيم (ع)",
+      "prophetUr": "حضرت ابراہیم علیہ السلام",
+      "connectionEn": "Ibrahim left his homeland, his family, and eventually settled his family in a barren desert",
+      "connectionAr": "ترك إبراهيم (ع) وطنه وأهله وأسكن أسرته في صحراء مقفرة",
+      "connectionUr": "حضرت ابراہیم علیہ السلام نے اپنا وطن، اپنا خاندان چھوڑا اور آخر میں اپنے گھر والوں کو ایک بنجر ریگستان میں بسایا",
+      "comfortMessageEn": "Ibrahim left everything familiar multiple times - his country, his people, his comfort. He settled Hajar and Ismail in a lifeless desert, trusting Allah completely. Your displacement may be the journey to your destiny.",
+      "comfortMessageAr": "فارق إبراهيم (ع) كل ما يألفه مرات ومرات — بلده وقومه وراحته. وأسكن زوجه هاجر وابنه إسماعيل في وادٍ لا ماء فيه ولا زرع ثقةً بالله. نزوحك قد يكون الطريق إلى مصيرك الحقيقي.",
+      "comfortMessageUr": "حضرت ابراہیم علیہ السلام نے کئی بار سب کچھ جانا پہچانا چھوڑا — اپنا ملک، اپنے لوگ، اپنا آرام۔ انہوں نے حاجرہ اور اسماعیل علیہ السلام کو ایک بے آب و گیاہ وادی میں اللہ پر مکمل توکل سے بسایا۔ آپ کی بے گھری آپ کی منزل کا سفر ہو سکتی ہے۔",
+      "storySummaryEn": "Prophet Ibrahim emigrated from his land when his people rejected him. Later, he left his wife Hajar and infant son Ismail in the barren valley of Mecca with just dates and water. When Hajar asked if Allah commanded this, Ibrahim said yes. She replied, 'Then He will not abandon us.' From that desert grew the holiest city.",
+      "storySummaryAr": "هاجر النبي إبراهيم (ع) من بلاده بعد أن رفضه قومه، ثم ترك زوجه هاجر وابنه إسماعيل الرضيع في وادي مكة القاحل بتمر قليل وماء يسير. فلما سألته هاجر: أأمرك الله بهذا؟ قال: نعم. فقالت: إذن لن يضيِّعنا. ومن ذلك الصحراء نبتت أقدس مدينة في الأرض.",
+      "storySummaryUr": "حضرت ابراہیم علیہ السلام نے اپنی قوم کے انکار کے بعد اپنا وطن چھوڑ دیا۔ بعد میں اپنی زوجہ حاجرہ اور شیر خوار بیٹے حضرت اسماعیل علیہ السلام کو مکہ کی بنجر وادی میں صرف کھجوریں اور پانی دے کر چھوڑ آئے۔ جب حاجرہ نے پوچھا کیا اللہ نے یہی حکم دیا ہے، حضرت ابراہیم علیہ السلام نے ہاں کہا۔ انہوں نے جواب دیا: «تو پھر اللہ ہمیں نہیں چھوڑے گا»۔ اسی ریگستان سے مقدس ترین شہر کا آغاز ہوا۔",
       "verses": [
         {
           "surahNumber": 21,
           "verseNumber": 71,
-          "relevanceNote": "Allah saving Ibrahim and guiding him to blessed land"
+          "relevanceNoteEn": "Allah saving Ibrahim and guiding him to blessed land",
+          "relevanceNoteAr": "إنقاذ الله لإبراهيم (ع) وهدايته إلى الأرض المباركة",
+          "relevanceNoteUr": "اللہ کا حضرت ابراہیم علیہ السلام کو نجات دے کر برکت والی زمین کی طرف رہنمائی"
         },
         {
           "surahNumber": 14,
           "verseNumber": 37,
-          "relevanceNote": "Ibrahim settling his family in a barren valley by Allah's House"
+          "relevanceNoteEn": "Ibrahim settling his family in a barren valley by Allah's House",
+          "relevanceNoteAr": "إسكان إبراهيم (ع) أسرته في وادٍ قاحل قرب بيت الله",
+          "relevanceNoteUr": "حضرت ابراہیم علیہ السلام کا اپنے گھر والوں کو اللہ کے گھر کے پاس بنجر وادی میں بسانا"
         }
       ],
       "relatedStoryId": "s2",
@@ -377,27 +599,43 @@
     },
     {
       "id": "p16",
-      "situation": "I'm grieving a loss",
+      "situationEn": "I'm grieving a loss",
+      "situationAr": "أنا حزين على خسارة أعزائي",
+      "situationUr": "میں کسی نقصان پر غم میں ہوں",
       "category": "emotional_struggles",
-      "prophet": "Muhammad",
-      "connection": "The Prophet lost his beloved son Ibrahim and wept openly at his grave",
-      "comfortMessage": "When his son Ibrahim died, the Prophet Muhammad wept. His companions asked about his tears, and he said: 'The eyes shed tears, the heart grieves, but we say only what pleases our Lord.' Grief and faith can coexist.",
-      "storySummary": "Prophet Muhammad lost his infant son Ibrahim. As he held his dying child, tears streamed down his face. When asked about crying, he explained that tears are mercy from Allah, and grieving doesn't contradict acceptance of Allah's decree. He showed that prophets feel pain deeply too.",
+      "prophetEn": "Muhammad",
+      "prophetAr": "النبي محمد (ص)",
+      "prophetUr": "حضرت محمد صلی اللہ علیہ وآلہ وسلم",
+      "connectionEn": "The Prophet lost his beloved son Ibrahim and wept openly at his grave",
+      "connectionAr": "بكى النبي (ص) على ابنه إبراهيم علنًا لدى قبره",
+      "connectionUr": "نبی اکرم صلی اللہ علیہ وآلہ وسلم نے اپنے محبوب فرزند ابراہیم کو کھویا اور ان کی قبر پر کھل کر روئے",
+      "comfortMessageEn": "When his son Ibrahim died, the Prophet Muhammad wept. His companions asked about his tears, and he said: 'The eyes shed tears, the heart grieves, but we say only what pleases our Lord.' Grief and faith can coexist.",
+      "comfortMessageAr": "حين فارق ابنُه إبراهيم الحياة، جرت دموع النبي محمد (ص). فسأله أصحابه عن بكائه فقال: «إن العين لتدمع، وإن القلب ليحزن، ولا نقول إلا ما يُرضي ربنا». الحزن والإيمان يسكنان القلب معًا، فلا تَلُم نفسك على دموعك.",
+      "comfortMessageUr": "جب فرزند ابراہیم کا انتقال ہوا تو نبی اکرم صلی اللہ علیہ وآلہ وسلم کے آنسو بہے۔ صحابہ نے آنسوؤں کے بارے میں پوچھا تو آپ صلی اللہ علیہ وآلہ وسلم نے فرمایا: «آنکھ روتی ہے، دل غمگین ہوتا ہے، لیکن ہم وہی کہتے ہیں جو ہمارے رب کو پسند ہو»۔ غم اور ایمان ساتھ ساتھ رہ سکتے ہیں۔",
+      "storySummaryEn": "Prophet Muhammad lost his infant son Ibrahim. As he held his dying child, tears streamed down his face. When asked about crying, he explained that tears are mercy from Allah, and grieving doesn't contradict acceptance of Allah's decree. He showed that prophets feel pain deeply too.",
+      "storySummaryAr": "فقد النبي محمد (ص) ابنه الرضيع إبراهيم. وبينما كان يودعه تساقطت دموعه. ولما استفسر أصحابه بيَّن أن الدموع رحمة من الله، وأن الحزن لا يتناقض مع الرضا بقضاء الله. فأثبت بذلك أن الأنبياء يشعرون بالألم البشري في أعمق صوره.",
+      "storySummaryUr": "نبی اکرم صلی اللہ علیہ وآلہ وسلم نے اپنے شیر خوار بیٹے ابراہیم کو کھویا۔ جب وہ اپنے مرتے بچے کو تھامے ہوئے تھے تو آنکھوں سے آنسو بہہ رہے تھے۔ رونے کے بارے میں پوچھا گیا تو آپ صلی اللہ علیہ وآلہ وسلم نے سمجھایا کہ آنسو اللہ کی رحمت ہیں، اور غم اللہ کے فیصلے پر راضی ہونے سے نہیں ٹکراتا۔ آپ صلی اللہ علیہ وآلہ وسلم نے دکھایا کہ انبیاء بھی گہرا درد محسوس کرتے ہیں۔",
       "verses": [
         {
           "surahNumber": 93,
           "verseNumber": 6,
-          "relevanceNote": "Allah acknowledging the Prophet's orphan experience"
+          "relevanceNoteEn": "Allah acknowledging the Prophet's orphan experience",
+          "relevanceNoteAr": "اعتراف الله بتجربة النبي (ص) في اليتم",
+          "relevanceNoteUr": "اللہ کا نبی اکرم صلی اللہ علیہ وآلہ وسلم کے یتیم ہونے کے تجربے کو تسلیم کرنا"
         },
         {
           "surahNumber": 93,
           "verseNumber": 7,
-          "relevanceNote": "Allah guiding the Prophet when he was lost"
+          "relevanceNoteEn": "Allah guiding the Prophet when he was lost",
+          "relevanceNoteAr": "هداية الله للنبي (ص) حين كان ضالًا",
+          "relevanceNoteUr": "اللہ کا نبی اکرم صلی اللہ علیہ وآلہ وسلم کی راہنمائی جب وہ بھٹکے ہوئے تھے"
         },
         {
           "surahNumber": 94,
           "verseNumber": 1,
-          "relevanceNote": "Allah expanding the Prophet's chest despite sorrows"
+          "relevanceNoteEn": "Allah expanding the Prophet's chest despite sorrows",
+          "relevanceNoteAr": "شرح الله صدر النبي (ص) رغم الأحزان",
+          "relevanceNoteUr": "تمام غموں کے باوجود اللہ کا نبی اکرم صلی اللہ علیہ وآلہ وسلم کا سینہ کھولنا"
         }
       ],
       "relatedStoryId": null,
@@ -405,27 +643,43 @@
     },
     {
       "id": "p17",
-      "situation": "I'm struggling with bad habits",
+      "situationEn": "I'm struggling with bad habits",
+      "situationAr": "أتصارع مع عادات سيئة",
+      "situationUr": "میں بری عادتوں سے لڑ رہا ہوں",
       "category": "faith_tests",
-      "prophet": "Adam",
-      "connection": "Adam was warned about one thing and still slipped - showing how human weakness is part of our nature",
-      "comfortMessage": "Adam had one prohibition in all of Paradise, and Shaytan still found a way to mislead him. Your struggle with habits is part of being human. The key isn't perfection - it's persistent return to Allah after each fall.",
-      "storySummary": "Adam was given Paradise with only one restriction. Iblis worked on him persistently, using promises of immortality and eternal kingdom. Adam eventually gave in. But the moment he realized his mistake, he turned back to Allah. This cycle of falling and returning is built into human nature.",
+      "prophetEn": "Adam",
+      "prophetAr": "النبي آدم (ع)",
+      "prophetUr": "حضرت آدم علیہ السلام",
+      "connectionEn": "Adam was warned about one thing and still slipped - showing how human weakness is part of our nature",
+      "connectionAr": "نُهي آدم (ع) عن شيء واحد فأزلَّه الشيطان — مما يدل على أن الضعف البشري جزء من طبيعتنا",
+      "connectionUr": "حضرت آدم علیہ السلام کو صرف ایک چیز سے منع کیا گیا تھا اور پھر بھی وہ پھسل گئے — یہ دکھاتا ہے کہ انسانی کمزوری ہماری فطرت کا حصہ ہے",
+      "comfortMessageEn": "Adam had one prohibition in all of Paradise, and Shaytan still found a way to mislead him. Your struggle with habits is part of being human. The key isn't perfection - it's persistent return to Allah after each fall.",
+      "comfortMessageAr": "لم يكن لآدم (ع) في الجنة كلها سوى نهي واحد، ومع ذلك وجد الشيطانُ طريقه إليه. صراعك مع العادات السيئة هو جزء من إنسانيتك. السر ليس في الكمال بل في العودة المستمرة إلى الله بعد كل زلة.",
+      "comfortMessageUr": "حضرت آدم علیہ السلام کے پاس پوری جنت تھی اور صرف ایک پابندی، پھر بھی شیطان نے راستہ ڈھونڈ لیا۔ عادتوں سے آپ کی لڑائی انسان ہونے کا حصہ ہے۔ اہم بات کمال نہیں — بلکہ ہر بار گرنے کے بعد اللہ کی طرف پلٹتے رہنا ہے۔",
+      "storySummaryEn": "Adam was given Paradise with only one restriction. Iblis worked on him persistently, using promises of immortality and eternal kingdom. Adam eventually gave in. But the moment he realized his mistake, he turned back to Allah. This cycle of falling and returning is built into human nature.",
+      "storySummaryAr": "أُعطي آدم (ع) الجنة بكل نعيمها مع نهي واحد فحسب. فراح إبليس يعمل عليه بإصرار، يعده بالخلود والملك الأبدي، حتى أطاعه آدم (ع). لكن ما إن أدرك خطأه حتى أسرع راجعًا إلى الله. هذا الإيقاع من الزلل والعودة مرسوم في طبيعة الإنسان.",
+      "storySummaryUr": "حضرت آدم علیہ السلام کو جنت میں صرف ایک پابندی کے ساتھ رکھا گیا۔ ابلیس نے انہیں مسلسل بہکایا، ہمیشہ کی زندگی اور ابدی بادشاہی کے وعدے دیتا رہا۔ حضرت آدم علیہ السلام آخر کار مان گئے۔ لیکن جیسے ہی احساس ہوا، فوراً اللہ کی طرف پلٹ گئے۔ گرنا اور پلٹنا انسانی فطرت میں رکھا گیا ہے۔",
       "verses": [
         {
           "surahNumber": 20,
           "verseNumber": 115,
-          "relevanceNote": "Adam forgot his covenant - human forgetfulness is natural"
+          "relevanceNoteEn": "Adam forgot his covenant - human forgetfulness is natural",
+          "relevanceNoteAr": "نسيان آدم (ع) عهده — وهو تأكيد بأن النسيان طبيعة بشرية",
+          "relevanceNoteUr": "حضرت آدم علیہ السلام اپنا عہد بھول گئے — انسانی بھول فطری ہے"
         },
         {
           "surahNumber": 20,
           "verseNumber": 121,
-          "relevanceNote": "Adam eating from the tree and facing consequences"
+          "relevanceNoteEn": "Adam eating from the tree and facing consequences",
+          "relevanceNoteAr": "أكل آدم (ع) من الشجرة وتحمُّله عواقب ذلك",
+          "relevanceNoteUr": "حضرت آدم علیہ السلام کا درخت سے کھانا اور نتائج کا سامنا"
         },
         {
           "surahNumber": 20,
           "verseNumber": 122,
-          "relevanceNote": "Allah forgiving Adam and guiding him"
+          "relevanceNoteEn": "Allah forgiving Adam and guiding him",
+          "relevanceNoteAr": "توبة الله على آدم (ع) وهدايته",
+          "relevanceNoteUr": "اللہ کا حضرت آدم علیہ السلام کو معاف کرنا اور رہنمائی دینا"
         }
       ],
       "relatedStoryId": "s21",
@@ -433,27 +687,43 @@
     },
     {
       "id": "p18",
-      "situation": "I'm worried about my children's future",
+      "situationEn": "I'm worried about my children's future",
+      "situationAr": "أقلق على مستقبل أبنائي",
+      "situationUr": "مجھے اپنے بچوں کے مستقبل کی فکر ہے",
       "category": "family_challenges",
-      "prophet": "Ibrahim (Abraham)",
-      "connection": "Ibrahim prayed desperately for his descendants to remain on the right path",
-      "comfortMessage": "Ibrahim made his children his life's prayer project. He prayed for them, their children, and all future generations. Your worry is actually love - channel it into dua like Ibrahim did, and trust Allah with what you cannot control.",
-      "storySummary": "Prophet Ibrahim, after building the Kaaba with his son Ismail, made powerful prayers for his descendants. He asked Allah to keep them away from idol worship, to send them a messenger from among them, to accept their worship. His prayers shaped the destiny of nations for millennia.",
+      "prophetEn": "Ibrahim (Abraham)",
+      "prophetAr": "النبي إبراهيم (ع)",
+      "prophetUr": "حضرت ابراہیم علیہ السلام",
+      "connectionEn": "Ibrahim prayed desperately for his descendants to remain on the right path",
+      "connectionAr": "توجَّه إبراهيم (ع) بأعمق ضراعاته إلى الله من أجل ذريته",
+      "connectionUr": "حضرت ابراہیم علیہ السلام نے اپنی اولاد کے صحیح راستے پر رہنے کے لیے سرگرم دعائیں کیں",
+      "comfortMessageEn": "Ibrahim made his children his life's prayer project. He prayed for them, their children, and all future generations. Your worry is actually love - channel it into dua like Ibrahim did, and trust Allah with what you cannot control.",
+      "comfortMessageAr": "جعل إبراهيم (ع) أبناءه وذريته محور دعائه طوال حياته. دعا لهم ولأولادهم ولكل الأجيال القادمة. قلقك على أبنائك هو في حقيقته محبة — اقتدِ بإبراهيم (ع) وحوِّل هذا القلق دعاءً، وأسلم ما لا تملك إلى الله.",
+      "comfortMessageUr": "حضرت ابراہیم علیہ السلام نے اپنے بچوں کو زندگی بھر کا دعا کا منصوبہ بنایا۔ انہوں نے خود ان کے لیے، ان کی اولاد اور آنے والی نسلوں کے لیے دعا کی۔ آپ کی فکر دراصل محبت ہے — اسے حضرت ابراہیم علیہ السلام کی طرح دعا میں ڈھال لیں اور جو آپ قابو نہیں کر سکتے وہ اللہ پر چھوڑ دیں۔",
+      "storySummaryEn": "Prophet Ibrahim, after building the Kaaba with his son Ismail, made powerful prayers for his descendants. He asked Allah to keep them away from idol worship, to send them a messenger from among them, to accept their worship. His prayers shaped the destiny of nations for millennia.",
+      "storySummaryAr": "بعد أن رفع النبي إبراهيم (ع) قواعد الكعبة مع ابنه إسماعيل رفع يديه بأعمق الأدعية لذريته. طلب من الله أن يصونهم من الوثنية، وأن يبعث فيهم رسولًا منهم، وأن يتقبل عبادتهم. فكانت دعواته تلك تشكِّل مصير أمم وحضارات عبر الأجيال.",
+      "storySummaryUr": "حضرت ابراہیم علیہ السلام نے اپنے بیٹے حضرت اسماعیل علیہ السلام کے ساتھ کعبہ بنانے کے بعد اپنی اولاد کے لیے طاقتور دعائیں کیں۔ انہوں نے اللہ سے مانگا کہ انہیں بت پرستی سے دور رکھے، ان میں سے ایک رسول بھیجے، ان کی عبادت قبول کرے۔ ان کی دعاؤں نے صدیوں تک قوموں کی تقدیر کو ڈھالا۔",
       "verses": [
         {
           "surahNumber": 14,
           "verseNumber": 35,
-          "relevanceNote": "Ibrahim praying for his children to avoid idol worship"
+          "relevanceNoteEn": "Ibrahim praying for his children to avoid idol worship",
+          "relevanceNoteAr": "دعاء إبراهيم (ع) لأبنائه بالحفظ من الوثنية",
+          "relevanceNoteUr": "حضرت ابراہیم علیہ السلام کی اپنے بچوں کو بت پرستی سے بچانے کی دعا"
         },
         {
           "surahNumber": 14,
           "verseNumber": 40,
-          "relevanceNote": "Ibrahim praying for his offspring to establish prayer"
+          "relevanceNoteEn": "Ibrahim praying for his offspring to establish prayer",
+          "relevanceNoteAr": "دعاء إبراهيم (ع) لذريته بإقامة الصلاة",
+          "relevanceNoteUr": "حضرت ابراہیم علیہ السلام کی اپنی نسل کے نماز قائم کرنے کی دعا"
         },
         {
           "surahNumber": 2,
           "verseNumber": 128,
-          "relevanceNote": "Ibrahim praying for his descendants and future generations"
+          "relevanceNoteEn": "Ibrahim praying for his descendants and future generations",
+          "relevanceNoteAr": "دعاء إبراهيم (ع) لأحفاده والأجيال المتعاقبة",
+          "relevanceNoteUr": "حضرت ابراہیم علیہ السلام کی اپنی اولاد اور آنے والی نسلوں کے لیے دعا"
         }
       ],
       "relatedStoryId": "s2",
@@ -461,27 +731,43 @@
     },
     {
       "id": "p19",
-      "situation": "I feel like giving up on people",
+      "situationEn": "I feel like giving up on people",
+      "situationAr": "أشعر بالرغبة في الاستسلام من الناس",
+      "situationUr": "مجھے لگتا ہے لوگوں سے ہار مان لوں",
       "category": "isolation",
-      "prophet": "Nuh (Noah)",
-      "connection": "Nuh called his people for 950 years with almost no results, yet continued",
-      "comfortMessage": "950 years and barely a shipload of believers - Nuh must have wanted to give up countless times. Yet he persisted because his job was to call, not to convert. Do your part and leave the results to Allah.",
-      "storySummary": "Prophet Nuh spent nearly a millennium inviting his people to Allah. Generation after generation rejected him. Fathers taught sons to reject him. He called in public and in private, day and night. In the end, only about 80 people believed - but he never stopped until Allah told him to.",
+      "prophetEn": "Nuh (Noah)",
+      "prophetAr": "النبي نوح (ع)",
+      "prophetUr": "حضرت نوح علیہ السلام",
+      "connectionEn": "Nuh called his people for 950 years with almost no results, yet continued",
+      "connectionAr": "دعا نوح (ع) قومه تسعمائة وخمسين عامًا وكادت النتيجة تكون صفرًا، ومع ذلك واصل",
+      "connectionUr": "حضرت نوح علیہ السلام نے تقریباً بغیر کسی نتیجے کے ۹۵۰ برس تک اپنی قوم کو دعوت دی، پھر بھی جاری رہے",
+      "comfortMessageEn": "950 years and barely a shipload of believers - Nuh must have wanted to give up countless times. Yet he persisted because his job was to call, not to convert. Do your part and leave the results to Allah.",
+      "comfortMessageAr": "تسعمائة وخمسون عامًا ولم يؤمن إلا من يملأ سفينة — لا بد أن نوحًا (ع) أراد الاستسلام مرات لا تحصى. غير أنه استمر لأن مهمته أن يدعو لا أن يهدي. أدِّ ما عليك وأسلم النتائج لله.",
+      "comfortMessageUr": "۹۵۰ برس اور مشکل سے ایک کشتی بھر مومن — حضرت نوح علیہ السلام کو بے شمار بار ہار ماننے کا خیال آیا ہوگا۔ پھر بھی جاری رہے کیونکہ ان کا کام بلانا تھا، ہدایت دینا نہیں۔ اپنا حصہ ادا کریں اور نتائج اللہ پر چھوڑ دیں۔",
+      "storySummaryEn": "Prophet Nuh spent nearly a millennium inviting his people to Allah. Generation after generation rejected him. Fathers taught sons to reject him. He called in public and in private, day and night. In the end, only about 80 people believed - but he never stopped until Allah told him to.",
+      "storySummaryAr": "أمضى النبي نوح (ع) ما يقارب ألف عام يدعو قومه إلى الله جيلًا بعد جيل، وكل جيل يرفضه ويعلِّم أبناءه أن يرفضوه. دعاهم في العلن والسر، بالنهار والليل. وفي نهاية المطاف لم يؤمن إلا نحو ثمانين شخصًا — لكنه لم يتوقف حتى أمره الله بالكف.",
+      "storySummaryUr": "حضرت نوح علیہ السلام نے قریب ایک ہزار سال تک اپنی قوم کو اللہ کی طرف بلایا۔ نسل در نسل انکار ملا۔ باپوں نے بیٹوں کو سکھایا کہ انہیں ٹھکرائیں۔ انہوں نے کھلے عام اور چھپ کر، دن رات دعوت دی۔ آخر میں تقریباً اسی لوگ ایمان لائے — لیکن وہ اس وقت تک نہیں رکے جب تک اللہ نے نہیں کہا۔",
       "verses": [
         {
           "surahNumber": 71,
           "verseNumber": 5,
-          "relevanceNote": "Nuh describing his unrelenting call despite rejection"
+          "relevanceNoteEn": "Nuh describing his unrelenting call despite rejection",
+          "relevanceNoteAr": "وصف نوح (ع) لاستمراريته في الدعوة رغم الرفض",
+          "relevanceNoteUr": "حضرت نوح علیہ السلام کا رد کے باوجود انتھک دعوت دینا"
         },
         {
           "surahNumber": 71,
           "verseNumber": 6,
-          "relevanceNote": "How his invitation only increased their fleeing"
+          "relevanceNoteEn": "How his invitation only increased their fleeing",
+          "relevanceNoteAr": "كيف أن دعوته كانت تزيدهم نفورًا",
+          "relevanceNoteUr": "دعوت سے لوگوں کا اور بھاگنا"
         },
         {
           "surahNumber": 11,
           "verseNumber": 36,
-          "relevanceNote": "Allah telling Nuh no more will believe - time to stop"
+          "relevanceNoteEn": "Allah telling Nuh no more will believe - time to stop",
+          "relevanceNoteAr": "إعلام الله لنوح (ع) أنه لن يؤمن أحد بعد الآن — حان وقت التوقف",
+          "relevanceNoteUr": "اللہ کا حضرت نوح علیہ السلام کو بتانا کہ اب کوئی نہیں مانے گا"
         }
       ],
       "relatedStoryId": "s3",
@@ -489,27 +775,43 @@
     },
     {
       "id": "p20",
-      "situation": "I'm facing injustice with no help",
+      "situationEn": "I'm facing injustice with no help",
+      "situationAr": "أواجه ظلمًا ولا أجد من يعينني",
+      "situationUr": "مجھ پر ظلم ہو رہا ہے اور کوئی مدد کرنے والا نہیں",
       "category": "persecution",
-      "prophet": "Yusuf (Joseph)",
-      "connection": "Yusuf was falsely imprisoned for years despite his complete innocence",
-      "comfortMessage": "Yusuf spent years in prison for a crime he actively resisted. No human court cleared his name - but Allah's plan was bigger than any injustice. Your innocence is known to Allah, even when the world doesn't see it.",
-      "storySummary": "Prophet Yusuf chose prison over sin, then was forgotten there for years. He was innocent, yet no one advocated for him. He helped fellow prisoners, one of whom promised to mention him to the king - but forgot. Yet in Allah's time, Yusuf went from prisoner to the most powerful minister in Egypt.",
+      "prophetEn": "Yusuf (Joseph)",
+      "prophetAr": "النبي يوسف (ع)",
+      "prophetUr": "حضرت یوسف علیہ السلام",
+      "connectionEn": "Yusuf was falsely imprisoned for years despite his complete innocence",
+      "connectionAr": "سُجن يوسف (ع) سنوات رغم براءته الكاملة",
+      "connectionUr": "حضرت یوسف علیہ السلام کو مکمل بے گناہ ہونے کے باوجود سالوں جھوٹی قید میں رکھا گیا",
+      "comfortMessageEn": "Yusuf spent years in prison for a crime he actively resisted. No human court cleared his name - but Allah's plan was bigger than any injustice. Your innocence is known to Allah, even when the world doesn't see it.",
+      "comfortMessageAr": "قضى يوسف (ع) سنوات في السجن بسبب جريمة قاومها واختار السجن دونها، ولم يُنصفه قضاء بشري. لكن تدبير الله كان أكبر من كل ظلم. براءتك معلومة عند الله حتى حين لا يراها أحد من الخلق.",
+      "comfortMessageUr": "حضرت یوسف علیہ السلام نے جس گناہ کو خود نے ٹھکرایا اس کی پاداش میں سالوں قید کاٹی۔ کسی انسانی عدالت نے ان کا نام صاف نہیں کیا — لیکن اللہ کا منصوبہ کسی بھی ظلم سے بڑا تھا۔ آپ کی بے گناہی اللہ کو معلوم ہے، چاہے دنیا نہ دیکھے۔",
+      "storySummaryEn": "Prophet Yusuf chose prison over sin, then was forgotten there for years. He was innocent, yet no one advocated for him. He helped fellow prisoners, one of whom promised to mention him to the king - but forgot. Yet in Allah's time, Yusuf went from prisoner to the most powerful minister in Egypt.",
+      "storySummaryAr": "اختار النبي يوسف (ع) السجن على الخطيئة فزُجَّ به فيه ونُسي سنوات. كان بريئًا تمام البراءة، ومع ذلك لم يسعَ أحد في الإفراج عنه. ساعد زملاءه في السجن، فوعده أحدهم بذكره عند الملك — ثم نسيه. لكن في وقت الله، خرج يوسف (ع) من السجن ليصبح أقوى وزير في مصر.",
+      "storySummaryUr": "حضرت یوسف علیہ السلام نے گناہ کی جگہ قید چنی، پھر وہاں سالوں بھلا دیے گئے۔ بے گناہ تھے، پھر بھی کوئی ان کی وکالت کرنے والا نہ تھا۔ انہوں نے ساتھی قیدیوں کی مدد کی، جن میں سے ایک نے بادشاہ سے ذکر کرنے کا وعدہ کیا — مگر بھول گیا۔ پھر بھی اللہ کے وقت میں حضرت یوسف علیہ السلام قیدی سے مصر کے سب سے طاقتور وزیر بن گئے۔",
       "verses": [
         {
           "surahNumber": 12,
           "verseNumber": 35,
-          "relevanceNote": "Yusuf imprisoned despite clear signs of his innocence"
+          "relevanceNoteEn": "Yusuf imprisoned despite clear signs of his innocence",
+          "relevanceNoteAr": "سجن يوسف (ع) رغم الأدلة الواضحة على براءته",
+          "relevanceNoteUr": "حضرت یوسف علیہ السلام کی بے گناہی کے واضح نشانات کے باوجود قید"
         },
         {
           "surahNumber": 12,
           "verseNumber": 42,
-          "relevanceNote": "The cupbearer forgetting Yusuf for years"
+          "relevanceNoteEn": "The cupbearer forgetting Yusuf for years",
+          "relevanceNoteAr": "نسيان الساقي لذكر يوسف (ع) سنوات",
+          "relevanceNoteUr": "ساقی کا حضرت یوسف علیہ السلام کو سالوں بھلائے رکھنا"
         },
         {
           "surahNumber": 12,
           "verseNumber": 56,
-          "relevanceNote": "Yusuf established in the land with full authority"
+          "relevanceNoteEn": "Yusuf established in the land with full authority",
+          "relevanceNoteAr": "تمكين الله ليوسف (ع) في الأرض وإيتاؤه السلطة",
+          "relevanceNoteUr": "حضرت یوسف علیہ السلام کا پوری طاقت کے ساتھ سرزمین میں اقتدار حاصل کرنا"
         }
       ],
       "relatedStoryId": "s4",

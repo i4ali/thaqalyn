@@ -13,6 +13,7 @@ struct MuharramJourneyView: View {
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedDay: MuharramDay?
     @State private var navigateToDetail = false
     @State private var showPaywall = false
@@ -29,7 +30,7 @@ struct MuharramJourneyView: View {
 
                     // Day list
                     if journeyManager.isLoading {
-                        MuharramLoadingSection(message: "Loading journey...")
+                        MuharramLoadingSection(message: JourneyStrings.loadingJourney(languageManager.selectedLanguage))
                     } else if let error = journeyManager.errorMessage {
                         MuharramErrorSection(message: error)
                     } else {
@@ -84,10 +85,12 @@ struct MuharramJourneyHeader: View {
     @StateObject private var journeyManager = MuharramJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var statusMessage: String {
         let status = calendarManager.muharramSeasonStatus()
-        return status.isEmpty ? "Muharram Journey" : status
+        return status.isEmpty ? JourneyStrings.screenTitle("muharram", lang) : status
     }
 
     var observedCount: Int {
@@ -101,11 +104,11 @@ struct MuharramJourneyHeader: View {
     // Somber observance: no completion/celebration note, "observed" wording.
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: "10-Day Journey",
-            title: "Muharram",
+            eyebrow: JourneyStrings.eyebrow("muharram", "10-Day Journey", lang),
+            title: JourneyStrings.title("muharram", lang),
             sfSymbol: "flame.fill",
             statusLine: statusMessage,
-            countLine: "\(observedCount) of 10 days observed",
+            countLine: JourneyStrings.daysObserved(observedCount, 10, lang),
             percent: journeyManager.completionPercentage
         )
     }
@@ -116,7 +119,7 @@ struct MuharramJourneyHeader: View {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Muharram Journey")
+                        Text(JourneyStrings.screenTitle("muharram", lang))
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
@@ -137,7 +140,7 @@ struct MuharramJourneyHeader: View {
             // Progress bar
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text("\(observedCount) of 10 days observed")
+                    Text(JourneyStrings.daysObserved(observedCount, 10, lang))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -180,6 +183,8 @@ struct MuharramDayCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var grayGradient: LinearGradient {
         LinearGradient(
@@ -209,7 +214,7 @@ struct MuharramDayCard: View {
     private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
-            theme: day.theme,
+            theme: day.localizedTheme(lang),
             themeArabic: day.themeArabic,
             isDone: isObserved,
             isCurrent: isCurrentDay,
@@ -252,7 +257,7 @@ struct MuharramDayCard: View {
                 // Day content
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text("Day \(day.dayNumber)")
+                        Text(JourneyStrings.dayN(day.dayNumber, lang))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(themeManager.secondaryText)
 
@@ -267,7 +272,7 @@ struct MuharramDayCard: View {
                                         .fill(Color.orange.gradient)
                                 )
                         } else if isCurrentDay {
-                            Text("TODAY")
+                            Text(JourneyStrings.today(lang))
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 6)
@@ -284,7 +289,7 @@ struct MuharramDayCard: View {
                             .font(.system(size: 14))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
 
-                        Text(day.theme)
+                        Text(day.localizedTheme(lang))
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
                     }
@@ -342,6 +347,7 @@ private struct MuharramLoadingSection: View {
 private struct MuharramErrorSection: View {
     let message: String
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -349,7 +355,7 @@ private struct MuharramErrorSection: View {
                 .font(.system(size: 48))
                 .foregroundColor(.orange)
 
-            Text("Error Loading Journey")
+            Text(JourneyStrings.errorLoadingJourney(languageManager.selectedLanguage))
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
 

@@ -13,6 +13,7 @@ struct FatimiyyaJourneyView: View {
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedDay: FatimiyyaDay?
     @State private var navigateToDetail = false
     @State private var showPaywall = false
@@ -29,7 +30,7 @@ struct FatimiyyaJourneyView: View {
 
                     // Day list
                     if journeyManager.isLoading {
-                        FatimiyyaLoadingSection(message: "Loading journey...")
+                        FatimiyyaLoadingSection(message: JourneyStrings.loadingJourney(languageManager.selectedLanguage))
                     } else if let error = journeyManager.errorMessage {
                         FatimiyyaErrorSection(message: error)
                     } else {
@@ -84,10 +85,12 @@ struct FatimiyyaJourneyHeader: View {
     @StateObject private var journeyManager = FatimiyyaJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var statusMessage: String {
         let status = calendarManager.fatimiyyaSeasonStatus()
-        return status.isEmpty ? "Ayyam-e-Fatimiyya" : status
+        return status.isEmpty ? JourneyStrings.screenTitle("fatimiyya", lang) : status
     }
 
     var observedCount: Int {
@@ -101,11 +104,11 @@ struct FatimiyyaJourneyHeader: View {
     // Somber observance: no completion/celebration note, "observed" wording.
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: "Mourning of az-Zahrā (AS)",
-            title: "Fatimiyya",
+            eyebrow: JourneyStrings.eyebrow("fatimiyya", "Mourning of az-Zahrā (AS)", lang),
+            title: JourneyStrings.title("fatimiyya", lang),
             sfSymbol: "tulip",
             statusLine: statusMessage,
-            countLine: "\(observedCount) of 5 days observed",
+            countLine: JourneyStrings.daysObserved(observedCount, 5, lang),
             percent: journeyManager.completionPercentage,
             iconIsCustomAsset: true
         )
@@ -117,7 +120,7 @@ struct FatimiyyaJourneyHeader: View {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Ayyam-e-Fatimiyya")
+                        Text(JourneyStrings.screenTitle("fatimiyya", lang))
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
@@ -137,7 +140,7 @@ struct FatimiyyaJourneyHeader: View {
             // Progress bar
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text("\(observedCount) of 5 days observed")
+                    Text(JourneyStrings.daysObserved(observedCount, 5, lang))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -180,6 +183,8 @@ struct FatimiyyaDayCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var grayGradient: LinearGradient {
         LinearGradient(
@@ -209,7 +214,7 @@ struct FatimiyyaDayCard: View {
     private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
-            theme: day.theme,
+            theme: day.localizedTheme(lang),
             themeArabic: day.themeArabic,
             isDone: isObserved,
             isCurrent: isCurrentDay,
@@ -252,7 +257,7 @@ struct FatimiyyaDayCard: View {
                 // Day content
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text("Day \(day.dayNumber)")
+                        Text(JourneyStrings.dayN(day.dayNumber, lang))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(themeManager.secondaryText)
 
@@ -267,7 +272,7 @@ struct FatimiyyaDayCard: View {
                                         .fill(Color.orange.gradient)
                                 )
                         } else if isCurrentDay {
-                            Text("TODAY")
+                            Text(JourneyStrings.today(lang))
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 6)
@@ -284,7 +289,7 @@ struct FatimiyyaDayCard: View {
                             .font(.system(size: 14))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
 
-                        Text(day.theme)
+                        Text(day.localizedTheme(lang))
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
                     }
@@ -342,6 +347,7 @@ private struct FatimiyyaLoadingSection: View {
 private struct FatimiyyaErrorSection: View {
     let message: String
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -349,7 +355,7 @@ private struct FatimiyyaErrorSection: View {
                 .font(.system(size: 48))
                 .foregroundColor(.orange)
 
-            Text("Error Loading Journey")
+            Text(JourneyStrings.errorLoadingJourney(languageManager.selectedLanguage))
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
 

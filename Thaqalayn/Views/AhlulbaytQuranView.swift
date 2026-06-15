@@ -11,6 +11,7 @@ struct AhlulbaytQuranView: View {
     @StateObject private var ahlulbaytManager = AhlulbaytQuranManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     @State private var selectedCategory: AhlulbaytCategory? = nil
@@ -55,11 +56,11 @@ struct AhlulbaytQuranView: View {
                     VStack(spacing: 12) {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Ahl al-Bayt in the Quran")
+                                Text(localizedTitle)
                                     .font(.system(size: 34, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
-                                Text("Verses honoring the Prophet's family")
+                                Text(localizedSubtitle)
                                     .font(.system(size: 16, weight: .medium))
                                     .foregroundColor(themeManager.secondaryText)
                             }
@@ -70,6 +71,8 @@ struct AhlulbaytQuranView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 12)
+                    .environment(\.layoutDirection,
+                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
 
                     // Search bar
                     HStack(spacing: 12) {
@@ -180,6 +183,8 @@ struct AhlulbaytQuranView: View {
                                 }
                             }
                             .padding(.vertical, 12)
+                            .environment(\.layoutDirection,
+                                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                         }
                     }
                 }
@@ -221,14 +226,14 @@ struct AhlulbaytQuranView: View {
 
     private var emeraldHeader: some View {
         VStack(alignment: .leading, spacing: 7) {
-            Text("The Purified Family".uppercased())
+            Text(localizedEyebrow.uppercased())
                 .font(.system(size: 11, weight: .bold)).tracking(3)
                 .foregroundColor(themeManager.accentColor)
-            Text("Ahl al-Bayt in the Quran")
+            Text(localizedTitle)
                 .font(EmType.serif(36, .semiBold))
                 .foregroundColor(themeManager.primaryText)
                 .fixedSize(horizontal: false, vertical: true)
-            Text("Verses honoring the Prophet's family")
+            Text(localizedSubtitle)
                 .font(.system(size: 13.5))
                 .foregroundColor(themeManager.secondaryText)
         }
@@ -236,6 +241,34 @@ struct AhlulbaytQuranView: View {
         .padding(.horizontal, 20)
         .padding(.top, 16)
         .padding(.bottom, 14)
+        .environment(\.layoutDirection,
+                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+    }
+
+    // MARK: - Localized header strings (follow the global app language)
+
+    private var localizedEyebrow: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "العترة الطاهرة"
+        case .urdu:   return "اہلِ بیت اطہار"
+        default:      return "The Purified Family"
+        }
+    }
+
+    private var localizedTitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "أهل البيت في القرآن"
+        case .urdu:   return "قرآن میں اہلِ بیت"
+        default:      return "Ahl al-Bayt in the Quran"
+        }
+    }
+
+    private var localizedSubtitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "آياتٌ في فضل آل النبي (ص)"
+        case .urdu:   return "آلِ رسول کی شان میں آیات"
+        default:      return "Verses honoring the Prophet's family"
+        }
     }
 
     private var emeraldSearchBar: some View {
@@ -291,6 +324,7 @@ struct AhlulbaytEntryCardView: View {
     let entry: AhlulbaytEntry
     let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
@@ -303,7 +337,7 @@ struct AhlulbaytEntryCardView: View {
 
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 8) {
-                        Text(entry.title)
+                        Text(entry.title(for: languageManager.selectedLanguage))
                             .font(EmType.serif(20, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(2)
@@ -318,8 +352,8 @@ struct AhlulbaytEntryCardView: View {
                         }
                     }
 
-                    if !entry.ahlulbaytMembers.isEmpty {
-                        Text(entry.ahlulbaytMembers.prefix(2).joined(separator: ", "))
+                    if !entry.ahlulbaytMembers(for: languageManager.selectedLanguage).isEmpty {
+                        Text(entry.ahlulbaytMembers(for: languageManager.selectedLanguage).prefix(2).joined(separator: ", "))
                             .font(.system(size: 12.5, weight: .semibold))
                             .foregroundColor(themeManager.accentColor)
                             .lineLimit(1)
@@ -370,7 +404,7 @@ struct AhlulbaytEntryCardView: View {
             // Entry content
             VStack(alignment: .leading, spacing: 6) {
                 HStack(spacing: 8) {
-                    Text(entry.title)
+                    Text(entry.title(for: languageManager.selectedLanguage))
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
@@ -386,8 +420,8 @@ struct AhlulbaytEntryCardView: View {
                 }
 
                 // Members involved
-                if !entry.ahlulbaytMembers.isEmpty {
-                    Text(entry.ahlulbaytMembers.prefix(2).joined(separator: ", "))
+                if !entry.ahlulbaytMembers(for: languageManager.selectedLanguage).isEmpty {
+                    Text(entry.ahlulbaytMembers(for: languageManager.selectedLanguage).prefix(2).joined(separator: ", "))
                         .font(.system(size: 13, weight: .medium))
                         .foregroundColor(themeManager.accentColor)
                         .lineLimit(1)

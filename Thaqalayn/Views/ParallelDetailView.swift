@@ -13,8 +13,11 @@ struct ParallelDetailView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var parallelsManager = PropheticParallelsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
+
+    private var isRTL: Bool { languageManager.selectedLanguage.isRTL }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
     @State private var navigateToStory = false
@@ -124,7 +127,7 @@ struct ParallelDetailView: View {
             // Your situation
             VStack(alignment: .leading, spacing: 6) {
                 EmSectionLabel(icon: parallel.icon, text: "Your Situation")
-                Text(parallel.situation)
+                Text(parallel.situation(for: languageManager.selectedLanguage))
                     .font(EmType.serif(28, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(2)
@@ -139,17 +142,18 @@ struct ParallelDetailView: View {
             // Prophet connection
             VStack(alignment: .leading, spacing: 6) {
                 EmSectionLabel(icon: "person.fill", text: "Prophet")
-                Text(parallel.prophet)
+                Text(parallel.prophet(for: languageManager.selectedLanguage))
                     .font(EmType.serif(24, .semiBold))
                     .foregroundColor(themeManager.accentBright)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(parallel.connection)
+                Text(parallel.connection(for: languageManager.selectedLanguage))
                     .font(EmType.serif(17 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         .padding(22)
         .background(
             EmCard { Color.clear }
@@ -168,12 +172,14 @@ struct ParallelDetailView: View {
                 }
                 .foregroundColor(themeManager.accentColor)
 
-                Text(parallel.comfortMessage)
+                Text(parallel.comfortMessage(for: languageManager.selectedLanguage))
                     .font(EmType.serif(18 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(5 * readingSettings.scale)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
             .padding(22)
         }
         .padding(.horizontal, 20)
@@ -207,10 +213,10 @@ struct ParallelDetailView: View {
                             EmIconChip(sfSymbol: story.categoryIcon, size: 40)
 
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(story.prophet)
+                                Text(story.prophet(for: languageManager.selectedLanguage))
                                     .font(.system(size: 11, weight: .bold)).tracking(0.5)
                                     .foregroundColor(themeManager.accentColor)
-                                Text(story.title)
+                                Text(story.title(for: languageManager.selectedLanguage))
                                     .font(EmType.serif(18, .semiBold))
                                     .foregroundColor(themeManager.primaryText)
                                     .lineLimit(2)
@@ -270,7 +276,7 @@ struct ParallelDetailView: View {
                         .tracking(1.2)
                 }
 
-                Text(parallel.situation)
+                Text(parallel.situation(for: languageManager.selectedLanguage))
                     .font(.system(size: 22, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4)
@@ -291,16 +297,17 @@ struct ParallelDetailView: View {
                         .tracking(1.2)
                 }
 
-                Text(parallel.prophet)
+                Text(parallel.prophet(for: languageManager.selectedLanguage))
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.accentColor)
 
-                Text(parallel.connection)
+                Text(parallel.connection(for: languageManager.selectedLanguage))
                     .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
             }
         }
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         .padding(24)
         .background {
             RoundedRectangle(cornerRadius: 24)
@@ -333,12 +340,14 @@ struct ParallelDetailView: View {
                     .tracking(1.2)
             }
 
-            Text(parallel.comfortMessage)
+            Text(parallel.comfortMessage(for: languageManager.selectedLanguage))
                 .font(.system(size: 17 * readingSettings.scale, weight: .medium))
                 .foregroundColor(.white)
                 .lineSpacing(6 * readingSettings.scale)
+                .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
         }
         .padding(24)
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         .background {
             RoundedRectangle(cornerRadius: 24)
                 .fill(themeManager.purpleGradient)
@@ -405,11 +414,11 @@ struct ParallelDetailView: View {
                             }
 
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(story.prophet)
+                            Text(story.prophet(for: languageManager.selectedLanguage))
                                 .font(.system(size: 12, weight: .bold))
                                 .foregroundColor(themeManager.accentColor)
 
-                            Text(story.title)
+                            Text(story.title(for: languageManager.selectedLanguage))
                                 .font(.system(size: 15, weight: .semibold))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineLimit(2)
@@ -462,6 +471,7 @@ struct ParallelVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
@@ -469,8 +479,19 @@ struct ParallelVerseCard: View {
               let verseContent = verses["\(verse.verseNumber)"] else {
             return nil
         }
-        return (verseContent.arabicText, verseContent.translation)
+        // Verse translations exist only in English + Urdu; Arabic/English fall back to English.
+        let translation: String
+        if languageManager.selectedLanguage == .urdu, let urdu = verseContent.translationUrdu, !urdu.isEmpty {
+            translation = urdu
+        } else {
+            translation = verseContent.translation
+        }
+        return (verseContent.arabicText, translation)
     }
+
+    /// Verse translation is Urdu-only (Arabic falls back to English), so RTL only for Urdu.
+    private var verseTranslationIsRTL: Bool { languageManager.selectedLanguage == .urdu }
+    private var noteIsRTL: Bool { languageManager.selectedLanguage.isRTL }
 
     var surahName: String {
         dataManager.quranData?.surahs.first { $0.number == verse.surahNumber }?.englishName ?? "Surah \(verse.surahNumber)"
@@ -509,18 +530,23 @@ struct ParallelVerseCard: View {
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(3 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "lightbulb")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(verse.relevanceNote)
+                    Text(verse.relevanceNote(for: languageManager.selectedLanguage))
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
+                        .frame(maxWidth: .infinity, alignment: noteIsRTL ? .trailing : .leading)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .environment(\.layoutDirection, noteIsRTL ? .rightToLeft : .leftToRight)
                 .background(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(themeManager.accentChip.opacity(0.6))
@@ -582,6 +608,9 @@ struct ParallelVerseCard: View {
                         .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 .padding(20)
 
@@ -601,12 +630,14 @@ struct ParallelVerseCard: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
 
-                Text(verse.relevanceNote)
+                Text(verse.relevanceNote(for: languageManager.selectedLanguage))
                     .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
+                    .frame(maxWidth: .infinity, alignment: noteIsRTL ? .trailing : .leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            .environment(\.layoutDirection, noteIsRTL ? .rightToLeft : .leftToRight)
             .padding(20)
             .background {
                 Rectangle()
@@ -661,14 +692,27 @@ struct ParallelVerseCard: View {
         ParallelDetailView(
             parallel: PropheticParallel(
                 id: "p1",
-                situation: "I feel trapped with no way out",
+                situationEn: "I feel trapped with no way out",
+                situationAr: "أشعر بأنني محاصَر بلا مخرج",
+                situationUr: "میں پھنسا ہوا محسوس کرتا ہوں، کوئی راستہ نہیں",
                 category: .emotionalStruggles,
-                prophet: "Yunus (Jonah)",
-                connection: "Yunus was swallowed by a whale in complete darkness",
-                comfortMessage: "Even in the darkest depths, Allah heard Yunus's prayer.",
-                storySummary: "Prophet Yunus left his people in frustration and was swallowed by a whale.",
+                prophetEn: "Yunus (Jonah)",
+                prophetAr: "النبي يونس (ع)",
+                prophetUr: "حضرت یونس علیہ السلام",
+                connectionEn: "Yunus was swallowed by a whale in complete darkness",
+                connectionAr: "ابتلع الحوتُ يونسَ في ظلمات تامة",
+                connectionUr: "حضرت یونس کو مکمل اندھیرے میں مچھلی نے نگل لیا",
+                comfortMessageEn: "Even in the darkest depths, Allah heard Yunus's prayer.",
+                comfortMessageAr: "حتى في أحلك الأعماق، سمع اللهُ دعاء يونس.",
+                comfortMessageUr: "گہرے ترین اندھیروں میں بھی اللہ نے یونس کی دعا سنی۔",
+                storySummaryEn: "Prophet Yunus left his people in frustration and was swallowed by a whale.",
+                storySummaryAr: "غادر النبيُّ يونس قومه غاضبًا فالتقمه الحوت.",
+                storySummaryUr: "حضرت یونس اپنی قوم کو چھوڑ کر چلے گئے اور مچھلی نے انہیں نگل لیا۔",
                 verses: [
-                    ParallelVerse(surahNumber: 21, verseNumber: 87, relevanceNote: "Yunus's powerful prayer")
+                    ParallelVerse(surahNumber: 21, verseNumber: 87,
+                                  relevanceNoteEn: "Yunus's powerful prayer",
+                                  relevanceNoteAr: "دعاء يونس العظيم",
+                                  relevanceNoteUr: "حضرت یونس کی پُرتاثیر دعا")
                 ],
                 relatedStoryId: "s11",
                 icon: "water.waves"

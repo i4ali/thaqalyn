@@ -14,7 +14,11 @@ struct RamadanDayDetailView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
+
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+    private var isRTL: Bool { lang.isRTL }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
 
@@ -45,10 +49,9 @@ struct RamadanDayDetailView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(themeManager.accentColor)
 
-                            Text("TODAY'S VERSES")
-                                .font(.system(size: 14, weight: .bold))
+                            Text(JourneyStrings.todaysVerses(lang).uppercased())
+                                .emEyebrow(lang, size: 14, tracking: 1.2)
                                 .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
 
                             Spacer()
                         }
@@ -72,16 +75,18 @@ struct RamadanDayDetailView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(themeManager.accentColor)
 
-                            Text("TAFSIR FOCUS")
-                                .font(.system(size: 14, weight: .bold))
+                            Text(JourneyStrings.tafsirFocus(lang).uppercased())
+                                .emEyebrow(lang, size: 14, tracking: 1.2)
                                 .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
                         }
 
-                        Text(day.tafsirFocus)
+                        Text(day.localizedTafsir(lang))
                             .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
                             .lineSpacing(4 * readingSettings.scale)
+                            .multilineTextAlignment(isRTL ? .trailing : .leading)
+                            .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                     }
                     .padding(20)
                     .background {
@@ -97,17 +102,19 @@ struct RamadanDayDetailView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(themeManager.accentColor)
 
-                            Text("REFLECTION")
-                                .font(.system(size: 14, weight: .bold))
+                            Text(JourneyStrings.reflection(lang).uppercased())
+                                .emEyebrow(lang, size: 14, tracking: 1.2)
                                 .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
                         }
 
-                        Text(day.reflection)
+                        Text(day.localizedReflection(lang))
                             .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
                             .lineSpacing(4 * readingSettings.scale)
                             .italic()
+                            .multilineTextAlignment(isRTL ? .trailing : .leading)
+                            .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                     }
                     .padding(20)
                     .background {
@@ -160,7 +167,7 @@ struct RamadanDayDetailView: View {
                 Button(action: { dismiss() }) {
                     HStack(spacing: 4) {
                         Image(systemName: "chevron.left")
-                        Text("Journey")
+                        Text(JourneyStrings.backToJourney(lang))
                     }
                     .foregroundColor(themeManager.accentColor)
                 }
@@ -176,13 +183,13 @@ struct RamadanDayDetailView: View {
             EmJourneyDetailHeader(
                 dayNumber: day.dayNumber,
                 icon: day.icon,
-                theme: day.theme,
+                theme: day.localizedTheme(lang),
                 themeArabic: day.themeArabic,
-                statusLabel: isCompleted ? "Completed" : nil,
+                statusLabel: isCompleted ? JourneyStrings.completed(lang) : nil,
                 statusTint: themeManager.semanticGreen
             )
 
-            EmDetailCard(icon: "hands.sparkles", label: "Today's Dua") {
+            EmDetailCard(icon: "hands.sparkles", label: JourneyStrings.duaZiyarat(lang)) {
                 VStack(alignment: .leading, spacing: 12) {
                     Text(day.dua.arabic)
                         .font(EmType.arabic(24 * readingSettings.scale))
@@ -193,21 +200,26 @@ struct RamadanDayDetailView: View {
                     Text(day.dua.transliteration)
                         .font(EmType.serifItalic(16 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
-                    Text(day.dua.english)
+                    Text(day.dua.localizedEnglish(lang))
                         .font(EmType.serif(17 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
-                    if let source = day.dua.source {
+                        .multilineTextAlignment(isRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+                    if let source = day.dua.localizedSource(lang) {
                         Text("— \(source)")
                             .font(.system(size: 12.5, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
+                            .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                     }
                 }
             }
 
             VStack(alignment: .leading, spacing: 12) {
-                EmSectionLabel(icon: "book.pages", text: "Today's Verses")
+                EmSectionLabel(icon: "book.pages", text: JourneyStrings.todaysVerses(lang))
                     .padding(.horizontal, 20)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                 ForEach(day.verses) { verse in
                     RamadanVerseCard(
                         verse: verse,
@@ -219,26 +231,30 @@ struct RamadanDayDetailView: View {
                 }
             }
 
-            EmDetailCard(icon: "lightbulb", label: "Tafsir Focus") {
-                Text(day.tafsirFocus)
+            EmDetailCard(icon: "lightbulb", label: JourneyStrings.tafsirFocus(lang)) {
+                Text(day.localizedTafsir(lang))
                     .font(EmType.serif(17 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(5 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(isRTL ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                    .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
             }
 
-            EmDetailCard(icon: "heart.text.square", label: "Reflection") {
-                Text(day.reflection)
+            EmDetailCard(icon: "heart.text.square", label: JourneyStrings.reflection(lang)) {
+                Text(day.localizedReflection(lang))
                     .font(EmType.serifItalic(18 * readingSettings.scale))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(5 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(isRTL ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                    .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
             }
 
             EmJourneyToggleButton(
                 isDone: isCompleted,
-                doneLabel: "Day Completed",
-                todoLabel: "Mark Day as Complete",
+                doneLabel: JourneyStrings.completed(lang),
+                todoLabel: JourneyStrings.markComplete(lang),
                 doneTint: themeManager.semanticGreen,
                 onToggle: {
                     if isCompleted {
@@ -259,6 +275,8 @@ struct RamadanDayHeader: View {
     let day: RamadanDay
     let isCompleted: Bool
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var body: some View {
         VStack(spacing: 16) {
@@ -268,7 +286,7 @@ struct RamadanDayHeader: View {
                     Image(systemName: day.icon)
                         .font(.system(size: 14, weight: .semibold))
 
-                    Text("Day \(day.dayNumber)")
+                    Text(JourneyStrings.dayN(day.dayNumber, lang))
                         .font(.system(size: 14, weight: .semibold))
                 }
                 .foregroundColor(themeManager.accentColor)
@@ -282,7 +300,7 @@ struct RamadanDayHeader: View {
                 if isCompleted {
                     HStack(spacing: 4) {
                         Image(systemName: "checkmark.circle.fill")
-                        Text("Completed")
+                        Text(JourneyStrings.completed(lang))
                     }
                     .font(.system(size: 12, weight: .bold))
                     .foregroundColor(.green)
@@ -293,9 +311,10 @@ struct RamadanDayHeader: View {
 
             // Theme
             VStack(alignment: .leading, spacing: 8) {
-                Text(day.theme)
+                Text(day.localizedTheme(lang))
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
+                    .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
 
                 Text(day.themeArabic)
                     .font(.system(size: 20, weight: .medium))
@@ -326,6 +345,9 @@ struct RamadanDuaSection: View {
     let dua: RamadanDua
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+    private var isRTL: Bool { lang.isRTL }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -334,10 +356,9 @@ struct RamadanDuaSection: View {
                     .font(.system(size: 16))
                     .foregroundColor(themeManager.accentColor)
 
-                Text("TODAY'S DUA")
-                    .font(.system(size: 14, weight: .bold))
+                Text(JourneyStrings.duaZiyarat(lang).uppercased())
+                    .emEyebrow(lang, size: 14, tracking: 1.2)
                     .foregroundColor(themeManager.secondaryText)
-                    .tracking(1.2)
 
                 Spacer()
             }
@@ -356,17 +377,21 @@ struct RamadanDuaSection: View {
                 .foregroundColor(themeManager.secondaryText)
                 .italic()
 
-            // English translation
-            Text(dua.english)
+            // English / Urdu translation
+            Text(dua.localizedEnglish(lang))
                 .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                 .foregroundColor(themeManager.primaryText)
                 .lineSpacing(4 * readingSettings.scale)
+                .multilineTextAlignment(isRTL ? .trailing : .leading)
+                .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
 
             // Source
-            if let source = dua.source {
+            if let source = dua.localizedSource(lang) {
                 Text("— \(source)")
                     .font(.system(size: 13, weight: .medium))
                     .foregroundColor(themeManager.tertiaryText)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
             }
         }
         .padding(20)
@@ -392,13 +417,17 @@ struct RamadanVerseCard: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+    private var isRTL: Bool { lang.isRTL }
 
     var verseData: (arabic: String, translation: String)? {
         guard let verses = dataManager.quranData?.verses["\(verse.surahNumber)"],
               let v = verses["\(verse.verseNumber)"] else {
             return nil
         }
-        return (v.arabicText, v.translation)
+        let t = (lang == .urdu ? (v.translationUrdu ?? v.translation) : v.translation)
+        return (v.arabicText, t)
     }
 
     var surahName: String {
@@ -420,7 +449,7 @@ struct RamadanVerseCard: View {
                     VerseRecitationButton(surahNumber: verse.surahNumber, verseNumber: verse.verseNumber, size: 32)
                     Button(action: onNavigate) {
                         HStack(spacing: 4) {
-                            Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
+                            Text(JourneyStrings.fullTafsir(lang)).font(.system(size: 12, weight: .semibold))
                             Image(systemName: "arrow.right").font(.system(size: 10, weight: .semibold))
                         }
                         .foregroundColor(themeManager.accentColor)
@@ -443,7 +472,7 @@ struct RamadanVerseCard: View {
                     Image(systemName: "text.bubble")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(verse.relevanceNote)
+                    Text(verse.localizedNote(lang))
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
@@ -474,7 +503,7 @@ struct RamadanVerseCard: View {
 
                 Button(action: onNavigate) {
                     HStack(spacing: 4) {
-                        Text("Full Tafsir")
+                        Text(JourneyStrings.fullTafsir(lang))
                             .font(.system(size: 12, weight: .semibold))
                         Image(systemName: "arrow.right")
                             .font(.system(size: 10, weight: .semibold))
@@ -516,7 +545,7 @@ struct RamadanVerseCard: View {
                     .font(.system(size: 12))
                     .foregroundColor(themeManager.accentColor)
 
-                Text(verse.relevanceNote)
+                Text(verse.localizedNote(lang))
                     .font(.system(size: 14 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .lineSpacing(2 * readingSettings.scale)
@@ -548,6 +577,7 @@ struct RamadanCompleteButton: View {
     let isCompleted: Bool
     let onToggle: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     private var greenGradient: LinearGradient {
         LinearGradient(
@@ -563,7 +593,7 @@ struct RamadanCompleteButton: View {
                 Image(systemName: isCompleted ? "checkmark.circle.fill" : "circle")
                     .font(.system(size: 24, weight: .semibold))
 
-                Text(isCompleted ? "Day Completed" : "Mark Day as Complete")
+                Text(isCompleted ? JourneyStrings.completed(languageManager.selectedLanguage) : JourneyStrings.markComplete(languageManager.selectedLanguage))
                     .font(.system(size: 18, weight: .bold))
             }
             .foregroundColor(.white)
@@ -595,11 +625,16 @@ struct RamadanCompleteButton: View {
                     arabic: "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ",
                     transliteration: "Allahumma a'inni 'ala dhikrika wa shukrik",
                     english: "O Allah, help me to remember You and be grateful.",
-                    source: "Sahih Abu Dawud"
+                    source: "Sahih Abu Dawud",
+                    englishUr: "اے اللہ، اپنے ذکر اور شکر پر میری مدد فرما۔",
+                    sourceUr: "سنن ابی داؤد"
                 ),
                 verses: [],
                 tafsirFocus: "Explore gratitude in the Quran.",
-                reflection: "What are you grateful for today?"
+                reflection: "What are you grateful for today?",
+                themeUr: "شکرگزاری",
+                tafsirFocusUr: "قرآن میں شکرگزاری پر غور کریں۔",
+                reflectionUr: "آج آپ کس بات پر شکرگزار ہیں؟"
             )
         )
     }

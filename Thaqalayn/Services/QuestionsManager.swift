@@ -56,10 +56,16 @@ class QuestionsManager: ObservableObject {
         return QuestionCategory.allCases
     }
 
-    // Search questions by question text
+    // Search questions by question text or short question, across EN/AR/UR
     func search(query: String) -> [Question] {
         guard !query.isEmpty else { return questions }
-        return questions.filter { $0.question.localizedCaseInsensitiveContains(query) }
+        return questions.filter { q in
+            let haystack: [String] = [
+                q.questionEn, q.questionAr, q.questionUr,
+                q.shortQuestionEn ?? "", q.shortQuestionAr ?? "", q.shortQuestionUr ?? "",
+            ]
+            return haystack.contains { $0.localizedCaseInsensitiveContains(query) }
+        }
     }
 
     // Get a question by ID

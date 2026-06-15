@@ -431,6 +431,7 @@ struct ModernSurahCard: View {
     let surah: Surah
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var progressManager = ProgressManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     private var completion: (read: Int, total: Int) {
         progressManager.getSurahCompletion(surahNumber: surah.number)
@@ -509,7 +510,7 @@ struct ModernSurahCard: View {
                     HStack(spacing: 4) {
                         PhosphorIcon(name: "ph-book-open", size: 12)
                             .foregroundColor(themeManager.tertiaryText)
-                        Text("\(surah.versesCount) verses")
+                        Text(QuranTabStrings.versesCount(surah.versesCount, languageManager.selectedLanguage))
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
                     }
@@ -517,7 +518,7 @@ struct ModernSurahCard: View {
                     HStack(spacing: 4) {
                         PhosphorIcon(name: "ph-map-pin-fill", size: 12)
                             .foregroundColor(themeManager.tertiaryText)
-                        Text(surah.revelationType)
+                        Text(QuranTabStrings.revelation(surah.revelationType, languageManager.selectedLanguage))
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
                     }
@@ -576,10 +577,10 @@ struct ModernSurahCard: View {
                             .lineLimit(1)
                     }
                     HStack(spacing: 8) {
-                        Text("\(surah.versesCount) verses")
+                        Text(QuranTabStrings.versesCount(surah.versesCount, languageManager.selectedLanguage))
                             .foregroundColor(themeManager.tertiaryText)
                         Text("·").foregroundColor(themeManager.tertiaryText)
-                        Text(surah.revelationType)
+                        Text(QuranTabStrings.revelation(surah.revelationType, languageManager.selectedLanguage))
                             .foregroundColor(themeManager.tertiaryText)
                         if readCount > 0 {
                             Text("·").foregroundColor(themeManager.tertiaryText)

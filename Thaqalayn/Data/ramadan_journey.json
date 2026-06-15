@@ -10,24 +10,31 @@
         "arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
         "transliteration": "Allahumma a'inni 'ala dhikrika wa shukrika wa husni 'ibadatik",
         "english": "O Allah, help me to remember You, be grateful to You, and worship You in the best manner.",
-        "source": "Mafatih al-Jinan"
+        "source": "Mafatih al-Jinan",
+        "englishUr": "اے اللہ! مجھے اپنا ذکر کرنے، تیرا شکر بجا لانے، اور بہترین انداز میں تیری عبادت کرنے کی توفیق عطا فرما۔",
+        "sourceUr": "مفاتیح الجنان"
       },
       "verses": [
         {
           "id": "r1v1",
           "surahNumber": 14,
           "verseNumber": 7,
-          "relevanceNote": "If you are grateful, I will surely increase you - the promise of abundance through gratitude."
+          "relevanceNote": "If you are grateful, I will surely increase you - the promise of abundance through gratitude.",
+          "relevanceNoteUr": "اگر تم شکر کرو گے تو میں تمہیں اور زیادہ دوں گا — شکرگزاری کے ذریعے فراوانی کا الٰہی وعدہ۔"
         },
         {
           "id": "r1v2",
           "surahNumber": 2,
           "verseNumber": 152,
-          "relevanceNote": "Remember Me, I will remember you. Be grateful to Me and do not deny Me."
+          "relevanceNote": "Remember Me, I will remember you. Be grateful to Me and do not deny Me.",
+          "relevanceNoteUr": "میرا ذکر کرو، میں تمہارا ذکر کروں گا۔ میرا شکر ادا کرو اور میری ناشکری نہ کرو۔"
         }
       ],
       "tafsirFocus": "Explore how gratitude (shukr) is the foundation of all worship and the beginning of a blessed Ramadan.",
-      "reflection": "Begin your Ramadan by counting your blessings. What are three things you are grateful for today?"
+      "reflection": "Begin your Ramadan by counting your blessings. What are three things you are grateful for today?",
+      "themeUr": "شکر",
+      "tafsirFocusUr": "غور کریں کہ کس طرح شکرگزاری تمام عبادات کی بنیاد ہے اور رمضانِ مبارک کی خوش‌نصیب ابتدا کا ذریعہ ہے۔",
+      "reflectionUr": "اپنے رمضان کا آغاز اپنی نعمتوں کو شمار کرنے سے کریں۔ آج آپ کن تین چیزوں پر اللہ کا شکر ادا کرتے ہیں؟"
     },
     {
       "id": "day2",
@@ -39,24 +46,31 @@
         "arabic": "اللَّهُمَّ اجْعَلْ عَمَلِي كُلَّهُ صَالِحًا وَاجْعَلْهُ لِوَجْهِكَ خَالِصًا",
         "transliteration": "Allahumma-j'al 'amali kullahu salihan wa-j'alhu li-wajhika khalisan",
         "english": "O Allah, make all my deeds righteous and make them purely for Your sake.",
-        "source": "Imam Ali (AS)"
+        "source": "Imam Ali (AS)",
+        "englishUr": "اے اللہ! میرے تمام اعمال کو نیک بنا دے اور انہیں خالصتاً اپنی رضا کے لیے کر دے۔",
+        "sourceUr": "امام علیؑ"
       },
       "verses": [
         {
           "id": "r2v1",
           "surahNumber": 98,
           "verseNumber": 5,
-          "relevanceNote": "They were commanded only to worship Allah, being sincere to Him in religion."
+          "relevanceNote": "They were commanded only to worship Allah, being sincere to Him in religion.",
+          "relevanceNoteUr": "انہیں صرف یہی حکم دیا گیا تھا کہ اللہ کی عبادت کریں، دین کو اسی کے لیے خالص کرتے ہوئے۔"
         },
         {
           "id": "r2v2",
           "surahNumber": 39,
           "verseNumber": 2,
-          "relevanceNote": "Worship Allah, being sincere to Him in religion, even though the disbelievers dislike it."
+          "relevanceNote": "Worship Allah, being sincere to Him in religion, even though the disbelievers dislike it.",
+          "relevanceNoteUr": "اللہ کی عبادت کرو، دین کو اس کے لیے خالص کرتے ہوئے، چاہے کافروں کو یہ ناگوار ہی گزرے۔"
         }
       ],
       "tafsirFocus": "Understand ikhlas (sincerity) and how to purify your intentions during Ramadan.",
-      "reflection": "Examine your intentions today. Are your acts of worship solely for Allah's pleasure?"
+      "reflection": "Examine your intentions today. Are your acts of worship solely for Allah's pleasure?",
+      "themeUr": "اخلاص",
+      "tafsirFocusUr": "اخلاص کی حقیقت کو سمجھیں اور جانیں کہ رمضان میں اپنی نیتوں کو کیسے خالص کیا جائے۔",
+      "reflectionUr": "آج اپنی نیتوں کا جائزہ لیں۔ کیا آپ کی عبادات محض اللہ کی رضا کے لیے ہیں؟"
     },
     {
       "id": "day3",
@@ -68,24 +82,31 @@
         "arabic": "رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنتَ التَّوَّابُ الرَّحِيمُ",
         "transliteration": "Rabbi-ghfir li wa tub 'alayya innaka Anta-t-Tawwab-ur-Rahim",
         "english": "My Lord, forgive me and accept my repentance. Indeed, You are the Accepting of Repentance, the Merciful.",
-        "source": "Sahifa Sajjadiya"
+        "source": "Sahifa Sajjadiya",
+        "englishUr": "اے میرے رب! مجھے بخش دے اور میری توبہ قبول فرما۔ بے شک تو ہی بہت توبہ قبول کرنے والا، بڑا مہربان ہے۔",
+        "sourceUr": "صحیفۂ سجادیہ"
       },
       "verses": [
         {
           "id": "r3v1",
           "surahNumber": 39,
           "verseNumber": 53,
-          "relevanceNote": "Do not despair of the mercy of Allah. Indeed, Allah forgives all sins."
+          "relevanceNote": "Do not despair of the mercy of Allah. Indeed, Allah forgives all sins.",
+          "relevanceNoteUr": "اللہ کی رحمت سے ناامید نہ ہو۔ بے شک اللہ تمام گناہوں کو معاف فرما دیتا ہے۔"
         },
         {
           "id": "r3v2",
           "surahNumber": 66,
           "verseNumber": 8,
-          "relevanceNote": "Turn to Allah in sincere repentance - your Lord may remove your misdeeds."
+          "relevanceNote": "Turn to Allah in sincere repentance - your Lord may remove your misdeeds.",
+          "relevanceNoteUr": "اللہ کے حضور سچی توبہ کرو — شاید تمہارا رب تمہاری برائیاں دور کر دے۔"
         }
       ],
       "tafsirFocus": "Learn about tawbah nasuh (sincere repentance) and Allah's infinite mercy.",
-      "reflection": "What habits or sins do you need to repent from? Make sincere tawbah today."
+      "reflection": "What habits or sins do you need to repent from? Make sincere tawbah today.",
+      "themeUr": "توبہ",
+      "tafsirFocusUr": "توبہ نصوح یعنی سچی اور پکی توبہ کے بارے میں جانیں اور اللہ کی لامحدود رحمت کو سمجھیں۔",
+      "reflectionUr": "آپ کو کن عادات یا گناہوں سے توبہ کرنے کی ضرورت ہے؟ آج سچے دل سے توبہ کریں۔"
     },
     {
       "id": "day4",
@@ -97,24 +118,31 @@
         "arabic": "اللَّهُمَّ ارْحَمْنِي بِرَحْمَتِكَ الْوَاسِعَةِ وَاغْفِرْ لِي ذُنُوبِي",
         "transliteration": "Allahumma-rhamni bi-rahmatika-l-wasi'ah wa-ghfir li dhunubi",
         "english": "O Allah, have mercy on me with Your vast mercy and forgive my sins.",
-        "source": "Mafatih al-Jinan"
+        "source": "Mafatih al-Jinan",
+        "englishUr": "اے اللہ! اپنی وسیع رحمت سے مجھ پر رحم فرما اور میرے گناہ معاف فرما دے۔",
+        "sourceUr": "مفاتیح الجنان"
       },
       "verses": [
         {
           "id": "r4v1",
           "surahNumber": 7,
           "verseNumber": 156,
-          "relevanceNote": "My mercy encompasses all things - Allah's mercy is infinite."
+          "relevanceNote": "My mercy encompasses all things - Allah's mercy is infinite.",
+          "relevanceNoteUr": "میری رحمت ہر چیز کو محیط ہے — اللہ کی رحمت بے انتہا اور لامحدود ہے۔"
         },
         {
           "id": "r4v2",
           "surahNumber": 6,
           "verseNumber": 54,
-          "relevanceNote": "Your Lord has decreed upon Himself mercy."
+          "relevanceNote": "Your Lord has decreed upon Himself mercy.",
+          "relevanceNoteUr": "تمہارے رب نے اپنے اوپر رحمت لازم کر لی ہے۔"
         }
       ],
       "tafsirFocus": "Understand Allah's attribute of Rahma and how to embody mercy toward others.",
-      "reflection": "How can you show mercy to others today? Remember: the merciful receive mercy."
+      "reflection": "How can you show mercy to others today? Remember: the merciful receive mercy.",
+      "themeUr": "رحمت",
+      "tafsirFocusUr": "اللہ کی صفتِ رحمت کو سمجھیں اور جانیں کہ دوسروں کے ساتھ رحم و کرم کا معاملہ کیسے کیا جائے۔",
+      "reflectionUr": "آج آپ دوسروں پر کس طرح رحم کر سکتے ہیں؟ یاد رکھیں: جو رحم کرتے ہیں، اللہ ان پر رحم فرماتا ہے۔"
     },
     {
       "id": "day5",
@@ -126,24 +154,31 @@
         "arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا",
         "transliteration": "Rabbana afrigh 'alayna sabran wa thabbit aqdamana",
         "english": "Our Lord, pour upon us patience and plant firmly our feet.",
-        "source": "Quran 2:250"
+        "source": "Quran 2:250",
+        "englishUr": "اے ہمارے رب! ہم پر صبر انڈیل دے اور ہمارے قدموں کو ثابت رکھ۔",
+        "sourceUr": "قرآن ۲:۲۵۰"
       },
       "verses": [
         {
           "id": "r5v1",
           "surahNumber": 2,
           "verseNumber": 153,
-          "relevanceNote": "O you who believe, seek help through patience and prayer. Indeed, Allah is with the patient."
+          "relevanceNote": "O you who believe, seek help through patience and prayer. Indeed, Allah is with the patient.",
+          "relevanceNoteUr": "اے ایمان والو! صبر اور نماز کے ذریعے مدد مانگو۔ بے شک اللہ صابرین کے ساتھ ہے۔"
         },
         {
           "id": "r5v2",
           "surahNumber": 39,
           "verseNumber": 10,
-          "relevanceNote": "The patient will be given their reward without account - unlimited reward for sabr."
+          "relevanceNote": "The patient will be given their reward without account - unlimited reward for sabr.",
+          "relevanceNoteUr": "صبر کرنے والوں کو ان کا اجر بے حساب دیا جائے گا — صبر پر بے پناہ انعام ملے گا۔"
         }
       ],
       "tafsirFocus": "Learn about the three types of sabr and how fasting trains us in patience.",
-      "reflection": "Fasting is a school of patience. What challenges are testing your sabr today?"
+      "reflection": "Fasting is a school of patience. What challenges are testing your sabr today?",
+      "themeUr": "صبر",
+      "tafsirFocusUr": "صبر کی تین اقسام کے بارے میں جانیں اور یہ سمجھیں کہ روزہ ہمیں صبر کی تربیت کس طرح دیتا ہے۔",
+      "reflectionUr": "روزہ صبر کی درس‌گاہ ہے۔ آج کون سی مشکلات آپ کے صبر کو آزما رہی ہیں؟"
     },
     {
       "id": "day6",
@@ -155,24 +190,31 @@
         "arabic": "حَسْبِيَ اللهُ لَا إِلَٰهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ",
         "transliteration": "Hasbiya-Allahu la ilaha illa Huwa 'alayhi tawakkaltu",
         "english": "Sufficient for me is Allah; there is no deity except Him. On Him I have relied.",
-        "source": "Quran 9:129"
+        "source": "Quran 9:129",
+        "englishUr": "میرے لیے اللہ کافی ہے، اس کے سوا کوئی معبود نہیں۔ میں نے اسی پر بھروسہ کیا ہے۔",
+        "sourceUr": "قرآن ۹:۱۲۹"
       },
       "verses": [
         {
           "id": "r6v1",
           "surahNumber": 65,
           "verseNumber": 3,
-          "relevanceNote": "Whoever relies upon Allah - He is sufficient for him."
+          "relevanceNote": "Whoever relies upon Allah - He is sufficient for him.",
+          "relevanceNoteUr": "جو اللہ پر بھروسہ کرے، وہ اس کے لیے کافی ہے۔"
         },
         {
           "id": "r6v2",
           "surahNumber": 3,
           "verseNumber": 159,
-          "relevanceNote": "When you have decided, rely upon Allah. Allah loves those who rely upon Him."
+          "relevanceNote": "When you have decided, rely upon Allah. Allah loves those who rely upon Him.",
+          "relevanceNoteUr": "جب فیصلہ کر لو تو اللہ پر توکل کرو۔ اللہ توکل کرنے والوں سے محبت کرتا ہے۔"
         }
       ],
       "tafsirFocus": "Understand tawakkul as active trust, not passive resignation.",
-      "reflection": "What worries are you carrying? Surrender them to Allah with complete trust."
+      "reflection": "What worries are you carrying? Surrender them to Allah with complete trust.",
+      "themeUr": "توکل",
+      "tafsirFocusUr": "توکل کو فعال بھروسے کے طور پر سمجھیں، نہ کہ منفعل بے‌پرواہی کے طور پر۔",
+      "reflectionUr": "آپ کے ذہن میں کون سی پریشانیاں ہیں؟ انہیں کامل اعتماد کے ساتھ اللہ کے سپرد کر دیجیے۔"
     },
     {
       "id": "day7",
@@ -184,24 +226,31 @@
         "arabic": "اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
         "transliteration": "Allahumma innaka 'afuwwun tuhibb-ul-'afwa fa'fu 'anni",
         "english": "O Allah, You are Forgiving and love forgiveness, so forgive me.",
-        "source": "Dua for Laylatul Qadr - Mafatih al-Jinan"
+        "source": "Dua for Laylatul Qadr - Mafatih al-Jinan",
+        "englishUr": "اے اللہ! بے شک تو معاف کرنے والا ہے اور معافی کو پسند کرتا ہے، پس مجھے معاف فرما دے۔",
+        "sourceUr": "شبِ قدر کی دعا — مفاتیح الجنان"
       },
       "verses": [
         {
           "id": "r7v1",
           "surahNumber": 24,
           "verseNumber": 22,
-          "relevanceNote": "Let them pardon and overlook. Would you not like that Allah should forgive you?"
+          "relevanceNote": "Let them pardon and overlook. Would you not like that Allah should forgive you?",
+          "relevanceNoteUr": "انہیں چاہیے کہ معاف کریں اور درگزر کریں۔ کیا تم پسند نہیں کرتے کہ اللہ تمہیں معاف فرمائے؟"
         },
         {
           "id": "r7v2",
           "surahNumber": 42,
           "verseNumber": 40,
-          "relevanceNote": "The reward of an evil is an evil like it, but whoever pardons and makes reconciliation - his reward is from Allah."
+          "relevanceNote": "The reward of an evil is an evil like it, but whoever pardons and makes reconciliation - his reward is from Allah.",
+          "relevanceNoteUr": "برائی کا بدلہ اسی جیسی برائی ہے، لیکن جو معاف کرے اور صلح کرے، اس کا اجر اللہ کے ذمے ہے۔"
         }
       ],
       "tafsirFocus": "Learn about 'afw (pardoning) vs. maghfirah (forgiveness) and their spiritual benefits.",
-      "reflection": "Is there anyone you need to forgive? Liberation comes through letting go of grudges."
+      "reflection": "Is there anyone you need to forgive? Liberation comes through letting go of grudges.",
+      "themeUr": "معافی",
+      "tafsirFocusUr": "عفو (درگزر) اور مغفرت کے فرق کو سمجھیں اور جانیں کہ یہ دونوں روحانی طور پر کیا فائدے پہنچاتے ہیں۔",
+      "reflectionUr": "کیا کوئی ایسا شخص ہے جسے آپ کو معاف کرنا چاہیے؟ کینہ کو چھوڑنے میں ہی آزادی ہے۔"
     },
     {
       "id": "day8",
@@ -213,24 +262,31 @@
         "arabic": "اللَّهُمَّ اجْعَلْنِي فِي عَيْنِي صَغِيرًا وَفِي أَعْيُنِ النَّاسِ كَبِيرًا",
         "transliteration": "Allahumma-j'alni fi 'ayni saghiran wa fi a'yun-in-nasi kabiran",
         "english": "O Allah, make me small in my own eyes and great in the eyes of people.",
-        "source": "Imam Ali (AS)"
+        "source": "Imam Ali (AS)",
+        "englishUr": "اے اللہ! مجھے اپنی نظر میں چھوٹا اور لوگوں کی نظر میں بڑا بنا دے۔",
+        "sourceUr": "امام علیؑ"
       },
       "verses": [
         {
           "id": "r8v1",
           "surahNumber": 25,
           "verseNumber": 63,
-          "relevanceNote": "The servants of the Most Merciful walk upon the earth in humility."
+          "relevanceNote": "The servants of the Most Merciful walk upon the earth in humility.",
+          "relevanceNoteUr": "رحمٰن کے بندے وہ ہیں جو زمین پر عاجزی کے ساتھ چلتے ہیں۔"
         },
         {
           "id": "r8v2",
           "surahNumber": 31,
           "verseNumber": 18,
-          "relevanceNote": "Do not turn your cheek in contempt toward people or walk through the earth exultantly."
+          "relevanceNote": "Do not turn your cheek in contempt toward people or walk through the earth exultantly.",
+          "relevanceNoteUr": "لوگوں سے تکبر کے ساتھ منہ نہ پھیرو اور زمین پر اکڑ کر نہ چلو۔"
         }
       ],
       "tafsirFocus": "Explore khushu (humility in worship) and tawadu (humility with people).",
-      "reflection": "Fasting humbles the ego. How has hunger reminded you of your dependence on Allah?"
+      "reflection": "Fasting humbles the ego. How has hunger reminded you of your dependence on Allah?",
+      "themeUr": "تواضع",
+      "tafsirFocusUr": "عبادت میں خشوع اور لوگوں کے ساتھ تواضع کے مفہوم کو سمجھیں اور انہیں اپنی زندگی میں اپنائیں۔",
+      "reflectionUr": "روزہ نفس کو پست کرتا ہے۔ بھوک نے آپ کو اپنے اللہ پر انحصار کا احساس کیسے دلایا ہے؟"
     },
     {
       "id": "day9",
@@ -242,24 +298,31 @@
         "arabic": "اللَّهُمَّ اجْعَلْ يَدِي يَدًا عُلْيَا وَلَا تَجْعَلْهَا يَدًا سُفْلَى",
         "transliteration": "Allahumma-j'al yadi yadan 'ulya wa la taj'alha yadan sufla",
         "english": "O Allah, make my hand an upper hand (giving) and not a lower hand (receiving).",
-        "source": "Hadith - Al-Kafi"
+        "source": "Hadith - Al-Kafi",
+        "englishUr": "اے اللہ! میرے ہاتھ کو دینے والا ہاتھ بنا، لینے والا نہیں۔",
+        "sourceUr": "حدیث — الکافی"
       },
       "verses": [
         {
           "id": "r9v1",
           "surahNumber": 2,
           "verseNumber": 261,
-          "relevanceNote": "The example of those who spend in the way of Allah is like a grain that produces seven spikes."
+          "relevanceNote": "The example of those who spend in the way of Allah is like a grain that produces seven spikes.",
+          "relevanceNoteUr": "جو لوگ اللہ کی راہ میں خرچ کرتے ہیں، ان کی مثال اس دانے کی طرح ہے جو سات بالیں اگائے۔"
         },
         {
           "id": "r9v2",
           "surahNumber": 57,
           "verseNumber": 18,
-          "relevanceNote": "Those who give charity - it will be multiplied for them, and they will have a noble reward."
+          "relevanceNote": "Those who give charity - it will be multiplied for them, and they will have a noble reward.",
+          "relevanceNoteUr": "جو لوگ صدقہ دیتے ہیں، ان کے لیے اسے کئی گنا بڑھا دیا جائے گا، اور ان کے لیے بڑا اجر ہے۔"
         }
       ],
       "tafsirFocus": "Learn about the spiritual purification that comes through giving.",
-      "reflection": "The Prophet was most generous in Ramadan. What can you give today - time, money, or kindness?"
+      "reflection": "The Prophet was most generous in Ramadan. What can you give today - time, money, or kindness?",
+      "themeUr": "صدقہ",
+      "tafsirFocusUr": "جانیں کہ دینے کے عمل سے روحانی پاکیزگی کس طرح حاصل ہوتی ہے۔",
+      "reflectionUr": "رسول اللہؐ رمضان میں سب سے زیادہ سخاوت فرماتے تھے۔ آج آپ کیا دے سکتے ہیں — وقت، مال یا مہربانی؟"
     },
     {
       "id": "day10",
@@ -271,24 +334,31 @@
         "arabic": "رَبِّ زِدْنِي عِلْمًا",
         "transliteration": "Rabbi zidni 'ilma",
         "english": "My Lord, increase me in knowledge.",
-        "source": "Quran 20:114"
+        "source": "Quran 20:114",
+        "englishUr": "اے میرے رب! مجھے علم میں اضافہ فرما۔",
+        "sourceUr": "قرآن ۲۰:۱۱۴"
       },
       "verses": [
         {
           "id": "r10v1",
           "surahNumber": 96,
           "verseNumber": 1,
-          "relevanceNote": "Read in the name of your Lord who created - the first revelation emphasizing knowledge."
+          "relevanceNote": "Read in the name of your Lord who created - the first revelation emphasizing knowledge.",
+          "relevanceNoteUr": "اپنے رب کے نام سے پڑھو جس نے پیدا کیا — علم پر زور دیتی ہوئی پہلی وحی۔"
         },
         {
           "id": "r10v2",
           "surahNumber": 58,
           "verseNumber": 11,
-          "relevanceNote": "Allah will raise those who have believed and those who were given knowledge by degrees."
+          "relevanceNote": "Allah will raise those who have believed and those who were given knowledge by degrees.",
+          "relevanceNoteUr": "اللہ ان لوگوں کے درجات بلند فرمائے گا جو ایمان لائے اور جنہیں علم عطا کیا گیا۔"
         }
       ],
       "tafsirFocus": "The Quran was revealed in Ramadan. Focus on its lessons as the source of true knowledge.",
-      "reflection": "What have you learned from the Quran this Ramadan? Set a goal to learn something new."
+      "reflection": "What have you learned from the Quran this Ramadan? Set a goal to learn something new.",
+      "themeUr": "علم",
+      "tafsirFocusUr": "قرآن رمضان میں نازل ہوا۔ حقیقی علم کے سرچشمے کے طور پر اس کی تعلیمات پر توجہ مرکوز کریں۔",
+      "reflectionUr": "اس رمضان میں آپ نے قرآن سے کیا سیکھا؟ کچھ نیا سیکھنے کا ہدف مقرر کریں۔"
     },
     {
       "id": "day11",
@@ -300,24 +370,31 @@
         "arabic": "اللَّهُمَّ اجْمَعْ بَيْنَ قُلُوبِ الْمُؤْمِنِينَ وَأَلِّفْ بَيْنَهُمْ",
         "transliteration": "Allahumma-jma' bayna qulub-il-mu'minina wa allif baynahum",
         "english": "O Allah, unite the hearts of the believers and bring harmony between them.",
-        "source": "Mafatih al-Jinan"
+        "source": "Mafatih al-Jinan",
+        "englishUr": "اے اللہ! مومنوں کے دلوں کو ایک کر دے اور ان کے درمیان الفت ڈال دے۔",
+        "sourceUr": "مفاتیح الجنان"
       },
       "verses": [
         {
           "id": "r11v1",
           "surahNumber": 49,
           "verseNumber": 10,
-          "relevanceNote": "The believers are but brothers, so make settlement between your brothers."
+          "relevanceNote": "The believers are but brothers, so make settlement between your brothers.",
+          "relevanceNoteUr": "مومن آپس میں بھائی ہیں، پس اپنے بھائیوں کے درمیان صلح کراؤ۔"
         },
         {
           "id": "r11v2",
           "surahNumber": 3,
           "verseNumber": 103,
-          "relevanceNote": "Hold firmly to the rope of Allah all together and do not become divided."
+          "relevanceNote": "Hold firmly to the rope of Allah all together and do not become divided.",
+          "relevanceNoteUr": "سب مل کر اللہ کی رسی کو مضبوطی سے تھامے رہو اور تفرقے میں نہ پڑو۔"
         }
       ],
       "tafsirFocus": "Explore the Islamic concept of ummah and brotherhood in faith.",
-      "reflection": "Reach out to a fellow Muslim today. Strengthen the bonds of brotherhood."
+      "reflection": "Reach out to a fellow Muslim today. Strengthen the bonds of brotherhood.",
+      "themeUr": "اخوت",
+      "tafsirFocusUr": "اسلامی اخوت اور امت کے تصور کو سمجھیں اور اس کی اہمیت کو اپنی زندگی میں محسوس کریں۔",
+      "reflectionUr": "آج کسی مسلمان بھائی یا بہن سے رابطہ کریں اور اخوت کے رشتے کو مضبوط کریں۔"
     },
     {
       "id": "day12",
@@ -329,24 +406,31 @@
         "arabic": "اللَّهُمَّ قَنِّعْنِي بِمَا رَزَقْتَنِي وَبَارِكْ لِي فِيهِ",
         "transliteration": "Allahumma qanni'ni bima razaqtani wa barik li fih",
         "english": "O Allah, make me content with what You have provided me and bless me in it.",
-        "source": "Imam Sajjad (AS)"
+        "source": "Imam Sajjad (AS)",
+        "englishUr": "اے اللہ! جو کچھ تو نے مجھے رزق دیا ہے، اس پر مجھے قناعت عطا فرما اور اس میں برکت ڈال دے۔",
+        "sourceUr": "امام سجادؑ"
       },
       "verses": [
         {
           "id": "r12v1",
           "surahNumber": 16,
           "verseNumber": 97,
-          "relevanceNote": "Whoever does righteousness - We will surely cause him to live a good life."
+          "relevanceNote": "Whoever does righteousness - We will surely cause him to live a good life.",
+          "relevanceNoteUr": "جو نیک عمل کرے — ہم اسے یقیناً پاکیزہ زندگی عطا فریں گے۔"
         },
         {
           "id": "r12v2",
           "surahNumber": 4,
           "verseNumber": 32,
-          "relevanceNote": "Do not wish for that by which Allah has made some of you exceed others."
+          "relevanceNote": "Do not wish for that by which Allah has made some of you exceed others.",
+          "relevanceNoteUr": "اس چیز کی تمنا نہ کرو جس کے ذریعے اللہ نے تم میں سے بعض کو بعض پر فضیلت دی ہے۔"
         }
       ],
       "tafsirFocus": "Learn about qana'ah (contentment) as the key to inner peace.",
-      "reflection": "Fasting teaches contentment with less. What luxuries can you live without?"
+      "reflection": "Fasting teaches contentment with less. What luxuries can you live without?",
+      "themeUr": "قناعت",
+      "tafsirFocusUr": "قناعت کو باطنی سکون کی کنجی کے طور پر سمجھیں اور اسے اپنی زندگی میں اپنانے کی راہیں تلاش کریں۔",
+      "reflectionUr": "روزہ کم پر قناعت سکھاتا ہے۔ آپ کن آسائشوں کے بغیر گزارا کر سکتے ہیں؟"
     },
     {
       "id": "day13",
@@ -358,24 +442,31 @@
         "arabic": "اللَّهُمَّ أَعِنِّي عَلَى نَفْسِي بِمَا تُعِينُ بِهِ الصَّالِحِينَ",
         "transliteration": "Allahumma a'inni 'ala nafsi bima tu'inu bih-is-salihin",
         "english": "O Allah, help me against my self with what You help the righteous.",
-        "source": "Imam Ali (AS)"
+        "source": "Imam Ali (AS)",
+        "englishUr": "اے اللہ! جس طرح تو نیک لوگوں کی مدد فرماتا ہے، اسی طرح میرے نفس کے خلاف میری مدد فرما۔",
+        "sourceUr": "امام علیؑ"
       },
       "verses": [
         {
           "id": "r13v1",
           "surahNumber": 79,
           "verseNumber": 40,
-          "relevanceNote": "As for one who feared the standing before his Lord and restrained the soul from desire."
+          "relevanceNote": "As for one who feared the standing before his Lord and restrained the soul from desire.",
+          "relevanceNoteUr": "جس نے اپنے رب کے سامنے کھڑے ہونے کا خوف رکھا اور نفس کو خواہش سے روکا۔"
         },
         {
           "id": "r13v2",
           "surahNumber": 12,
           "verseNumber": 53,
-          "relevanceNote": "Indeed, the soul is a persistent enjoiner of evil, except those my Lord has mercy upon."
+          "relevanceNote": "Indeed, the soul is a persistent enjoiner of evil, except those my Lord has mercy upon.",
+          "relevanceNoteUr": "بے شک نفس برائی کا حکم دینے والا ہے، مگر جس پر میرا رب رحم فرمائے۔"
         }
       ],
       "tafsirFocus": "Study the Quranic psychology of the nafs and its purification.",
-      "reflection": "Fasting is training for the nafs. What desires have you successfully controlled today?"
+      "reflection": "Fasting is training for the nafs. What desires have you successfully controlled today?",
+      "themeUr": "ضبطِ نفس",
+      "tafsirFocusUr": "قرآن کے بیان کردہ نفسِ انسانی کی نفسیات اور اس کی تزکیہ کی راہوں کا مطالعہ کریں۔",
+      "reflectionUr": "روزہ نفس کی تربیت ہے۔ آج آپ نے کن خواہشات کو کامیابی سے قابو میں رکھا؟"
     },
     {
       "id": "day14",
@@ -387,24 +478,31 @@
         "arabic": "اللَّهُمَّ اجْعَلْنِي مِنَ الصَّادِقِينَ فِي أَقْوَالِي وَأَفْعَالِي",
         "transliteration": "Allahumma-j'alni min-as-sadiqina fi aqwali wa af'ali",
         "english": "O Allah, make me among the truthful in my words and deeds.",
-        "source": "Mafatih al-Jinan"
+        "source": "Mafatih al-Jinan",
+        "englishUr": "اے اللہ! مجھے اپنے قول و عمل میں سچ بولنے والوں میں شامل فرما۔",
+        "sourceUr": "مفاتیح الجنان"
       },
       "verses": [
         {
           "id": "r14v1",
           "surahNumber": 9,
           "verseNumber": 119,
-          "relevanceNote": "O you who believe, fear Allah and be with those who are true."
+          "relevanceNote": "O you who believe, fear Allah and be with those who are true.",
+          "relevanceNoteUr": "اے ایمان والو! اللہ سے ڈرو اور سچے لوگوں کے ساتھ رہو۔"
         },
         {
           "id": "r14v2",
           "surahNumber": 33,
           "verseNumber": 35,
-          "relevanceNote": "The truthful men and truthful women - Allah has prepared for them forgiveness and great reward."
+          "relevanceNote": "The truthful men and truthful women - Allah has prepared for them forgiveness and great reward.",
+          "relevanceNoteUr": "سچے مرد اور سچی عورتیں — اللہ نے ان کے لیے بخشش اور عظیم اجر تیار کیا ہے۔"
         }
       ],
       "tafsirFocus": "Explore sidq (truthfulness) as a foundation of righteous character.",
-      "reflection": "A faster who lies corrupts their fast. Guard your tongue with complete honesty today."
+      "reflection": "A faster who lies corrupts their fast. Guard your tongue with complete honesty today.",
+      "themeUr": "صداقت",
+      "tafsirFocusUr": "صدق کو نیک کردار کی بنیاد کے طور پر سمجھیں اور اسے اپنی زبان و عمل میں اپنائیں۔",
+      "reflectionUr": "جھوٹ بولنے والے روزے دار کا روزہ ناقص ہو جاتا ہے۔ آج کامل سچائی کے ساتھ اپنی زبان کی حفاظت کریں۔"
     },
     {
       "id": "day15",
@@ -416,24 +514,31 @@
         "arabic": "اللَّهُمَّ ارْزُقْنِي قَلْبًا رَحِيمًا وَعَيْنًا دَامِعَةً مِنْ خَشْيَتِكَ",
         "transliteration": "Allahumma-rzuqni qalban rahiman wa 'aynan dami'atan min khashyatik",
         "english": "O Allah, grant me a compassionate heart and eyes that tear from awe of You.",
-        "source": "Sahifa Sajjadiya"
+        "source": "Sahifa Sajjadiya",
+        "englishUr": "اے اللہ! مجھے رحم دل دل عطا فرما اور ایسی آنکھیں دے جو تیرے خوف سے آنسو بہائیں۔",
+        "sourceUr": "صحیفۂ سجادیہ"
       },
       "verses": [
         {
           "id": "r15v1",
           "surahNumber": 90,
           "verseNumber": 17,
-          "relevanceNote": "Then being among those who believed and advised one another to patience and compassion."
+          "relevanceNote": "Then being among those who believed and advised one another to patience and compassion.",
+          "relevanceNoteUr": "پھر ان لوگوں میں سے ہونا جو ایمان لائے اور ایک دوسرے کو صبر اور شفقت کی نصیحت کی۔"
         },
         {
           "id": "r15v2",
           "surahNumber": 48,
           "verseNumber": 29,
-          "relevanceNote": "Merciful among themselves - describing the companions of the Prophet."
+          "relevanceNote": "Merciful among themselves - describing the companions of the Prophet.",
+          "relevanceNoteUr": "آپس میں رحم دل — نبیؐ کے صحابہ کی یہ صفت بیان کی گئی ہے۔"
         }
       ],
       "tafsirFocus": "Learn about rahma (compassion) as a defining quality of believers.",
-      "reflection": "Hunger during fasting connects us to the poor. Let compassion move you to action."
+      "reflection": "Hunger during fasting connects us to the poor. Let compassion move you to action.",
+      "themeUr": "شفقت",
+      "tafsirFocusUr": "رحمت کو مومنین کی پہچان کے طور پر سمجھیں اور اسے اپنی زندگی میں عملی شکل دیں۔",
+      "reflectionUr": "روزے کی بھوک ہمیں محتاجوں سے جوڑتی ہے۔ شفقت کو عمل کا ذریعہ بنائیں۔"
     },
     {
       "id": "day16",
@@ -445,24 +550,31 @@
         "arabic": "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ",
         "transliteration": "Rabbana hab lana min azwajina wa dhurriyyatina qurrata a'yun",
         "english": "Our Lord, grant us from our spouses and offspring comfort to our eyes.",
-        "source": "Quran 25:74"
+        "source": "Quran 25:74",
+        "englishUr": "اے ہمارے رب! ہمیں ہماری بیویوں اور اولاد کی طرف سے آنکھوں کی ٹھنڈک عطا فرما۔",
+        "sourceUr": "قرآن ۲۵:۷۴"
       },
       "verses": [
         {
           "id": "r16v1",
           "surahNumber": 25,
           "verseNumber": 74,
-          "relevanceNote": "And make us leaders for the righteous - prayer for righteous families."
+          "relevanceNote": "And make us leaders for the righteous - prayer for righteous families.",
+          "relevanceNoteUr": "اور ہمیں متقیوں کا پیشوا بنا — نیک خاندانوں کے لیے دعا۔"
         },
         {
           "id": "r16v2",
           "surahNumber": 46,
           "verseNumber": 15,
-          "relevanceNote": "We have enjoined upon man goodness to his parents - honoring family bonds."
+          "relevanceNote": "We have enjoined upon man goodness to his parents - honoring family bonds.",
+          "relevanceNoteUr": "ہم نے انسان کو اپنے والدین کے ساتھ احسان کرنے کا حکم دیا ہے — خاندانی رشتوں کی عزت کا درس۔"
         }
       ],
       "tafsirFocus": "Explore the Quranic emphasis on family bonds and responsibilities.",
-      "reflection": "Ramadan is best spent with family. How can you strengthen family ties this month?"
+      "reflection": "Ramadan is best spent with family. How can you strengthen family ties this month?",
+      "themeUr": "خاندان",
+      "tafsirFocusUr": "قرآن میں خاندانی رشتوں اور ان کی ذمہ داریوں پر جو زور دیا گیا ہے، اسے سمجھیں۔",
+      "reflectionUr": "رمضان خاندان کے ساتھ گزارنا بہترین ہوتا ہے۔ اس مہینے میں آپ خاندانی تعلقات کو کیسے مضبوط کر سکتے ہیں؟"
     },
     {
       "id": "day17",
@@ -474,24 +586,31 @@
         "arabic": "اللَّهُمَّ انْصُرْنَا كَمَا نَصَرْتَ الْمُؤْمِنِينَ فِي بَدْرٍ",
         "transliteration": "Allahumma-nsurna kama nasarta-l-mu'minina fi Badr",
         "english": "O Allah, grant us victory as You granted victory to the believers at Badr.",
-        "source": "Historic supplication"
+        "source": "Historic supplication",
+        "englishUr": "اے اللہ! ہمیں فتح عطا فرما جیسے تو نے بدر میں مومنین کو فتح عطا فرمائی تھی۔",
+        "sourceUr": "تاریخی دعا"
       },
       "verses": [
         {
           "id": "r17v1",
           "surahNumber": 3,
           "verseNumber": 123,
-          "relevanceNote": "Allah had helped you at Badr while you were weak. Fear Allah that you may be grateful."
+          "relevanceNote": "Allah had helped you at Badr while you were weak. Fear Allah that you may be grateful.",
+          "relevanceNoteUr": "اللہ نے بدر میں تمہاری مدد کی جبکہ تم کمزور تھے۔ اللہ سے ڈرتے رہو تاکہ تم شکرگزار ہو۔"
         },
         {
           "id": "r17v2",
           "surahNumber": 8,
           "verseNumber": 17,
-          "relevanceNote": "You did not kill them, but Allah killed them - divine support at Badr."
+          "relevanceNote": "You did not kill them, but Allah killed them - divine support at Badr.",
+          "relevanceNoteUr": "تم نے انہیں قتل نہیں کیا بلکہ اللہ نے انہیں قتل کیا — بدر میں الٰہی نصرت کا بیان۔"
         }
       ],
       "tafsirFocus": "Study the Battle of Badr (17th Ramadan) and its spiritual lessons.",
-      "reflection": "The believers at Badr were few but victorious. What battles do you face with faith?"
+      "reflection": "The believers at Badr were few but victorious. What battles do you face with faith?",
+      "themeUr": "یادِ بدر",
+      "tafsirFocusUr": "غزوۂ بدر (۱۷ رمضان) کا مطالعہ کریں اور اس کے روحانی سبق اپنی زندگی میں اتاریں۔",
+      "reflectionUr": "بدر کے مجاہدین تعداد میں کم تھے، پھر بھی کامیاب ہوئے۔ آپ ایمان کے ساتھ کن مشکلات کا سامنا کر رہے ہیں؟"
     },
     {
       "id": "day18",
@@ -503,24 +622,31 @@
         "arabic": "اللَّهُمَّ اجْعَلْنِي مِنَ الْكُرَمَاءِ الَّذِينَ يُنْفِقُونَ فِي سَبِيلِكَ",
         "transliteration": "Allahumma-j'alni min-al-kurama' alladhina yunfiquna fi sabilik",
         "english": "O Allah, make me among the generous who spend in Your way.",
-        "source": "Imam Sajjad (AS)"
+        "source": "Imam Sajjad (AS)",
+        "englishUr": "اے اللہ! مجھے ان سخی لوگوں میں شامل فرما جو تیری راہ میں خرچ کرتے ہیں۔",
+        "sourceUr": "امام سجادؑ"
       },
       "verses": [
         {
           "id": "r18v1",
           "surahNumber": 76,
           "verseNumber": 8,
-          "relevanceNote": "They give food in spite of love for it to the needy, orphan, and captive."
+          "relevanceNote": "They give food in spite of love for it to the needy, orphan, and captive.",
+          "relevanceNoteUr": "وہ اللہ کی محبت میں، خود ضرورت مند ہوتے ہوئے بھی، مسکین، یتیم اور قیدی کو کھانا کھلاتے ہیں۔"
         },
         {
           "id": "r18v2",
           "surahNumber": 3,
           "verseNumber": 92,
-          "relevanceNote": "Never will you attain righteousness until you spend from that which you love."
+          "relevanceNote": "Never will you attain righteousness until you spend from that which you love.",
+          "relevanceNoteUr": "تم نیکی کو ہرگز نہیں پا سکتے جب تک اپنی پسندیدہ چیزوں میں سے خرچ نہ کرو۔"
         }
       ],
       "tafsirFocus": "Learn about infaq (spending in Allah's way) and its spiritual rewards.",
-      "reflection": "The Prophet was like a generous wind in Ramadan. Give something valuable today."
+      "reflection": "The Prophet was like a generous wind in Ramadan. Give something valuable today.",
+      "themeUr": "سخاوت",
+      "tafsirFocusUr": "اللہ کی راہ میں خرچ کرنے یعنی انفاق اور اس کے روحانی انعامات کے بارے میں جانیں۔",
+      "reflectionUr": "رسول اللہؐ رمضان میں تیز ہوا کی طرح سخاوت فرماتے تھے۔ آج کوئی قیمتی چیز دیجیے۔"
     },
     {
       "id": "day19",
@@ -532,30 +658,38 @@
         "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَجْعَلَنِي مِنْ أَهْلِ لَيْلَةِ الْقَدْرِ",
         "transliteration": "Allahumma inni as'aluka an taj'alani min ahli laylat-il-qadr",
         "english": "O Allah, I ask You to make me among the people of Laylatul Qadr.",
-        "source": "Mafatih al-Jinan"
+        "source": "Mafatih al-Jinan",
+        "englishUr": "اے اللہ! میں تجھ سے سوال کرتا ہوں کہ مجھے شبِ قدر والوں میں شامل فرما۔",
+        "sourceUr": "مفاتیح الجنان"
       },
       "verses": [
         {
           "id": "r19v1",
           "surahNumber": 97,
           "verseNumber": 1,
-          "relevanceNote": "Indeed, We sent it down during the Night of Decree."
+          "relevanceNote": "Indeed, We sent it down during the Night of Decree.",
+          "relevanceNoteUr": "بے شک ہم نے اسے شبِ قدر میں نازل کیا۔"
         },
         {
           "id": "r19v2",
           "surahNumber": 97,
           "verseNumber": 3,
-          "relevanceNote": "The Night of Decree is better than a thousand months."
+          "relevanceNote": "The Night of Decree is better than a thousand months.",
+          "relevanceNoteUr": "شبِ قدر ہزار مہینوں سے بہتر ہے۔"
         },
         {
           "id": "r19v3",
           "surahNumber": 44,
           "verseNumber": 4,
-          "relevanceNote": "On that night is made distinct every precise matter."
+          "relevanceNote": "On that night is made distinct every precise matter.",
+          "relevanceNoteUr": "اس رات میں ہر اہم کام کا فیصلہ کیا جاتا ہے۔"
         }
       ],
       "tafsirFocus": "Study Surah Al-Qadr and the significance of the Night of Power.",
-      "reflection": "Tonight could be Laylatul Qadr. Spend it in worship, supplication, and reflection."
+      "reflection": "Tonight could be Laylatul Qadr. Spend it in worship, supplication, and reflection.",
+      "themeUr": "شبِ قدر",
+      "tafsirFocusUr": "سورۂ قدر اور شبِ قدر کی عظمت و اہمیت کا مطالعہ کریں۔",
+      "reflectionUr": "آج رات شبِ قدر ہو سکتی ہے۔ اسے عبادت، دعا اور غور و فکر میں گزاریں۔"
     },
     {
       "id": "day20",
@@ -567,24 +701,31 @@
         "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
         "transliteration": "Rabbana atina fi-d-dunya hasanatan wa fi-l-akhirati hasanatan wa qina 'adhab-an-nar",
         "english": "Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.",
-        "source": "Quran 2:201"
+        "source": "Quran 2:201",
+        "englishUr": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی عطا فرما اور آخرت میں بھی، اور ہمیں آتشِ جہنم کے عذاب سے بچا۔",
+        "sourceUr": "قرآن ۲:۲۰۱"
       },
       "verses": [
         {
           "id": "r20v1",
           "surahNumber": 2,
           "verseNumber": 186,
-          "relevanceNote": "When My servants ask about Me - indeed I am near. I respond to the supplicant when he calls."
+          "relevanceNote": "When My servants ask about Me - indeed I am near. I respond to the supplicant when he calls.",
+          "relevanceNoteUr": "جب میرے بندے میرے بارے میں پوچھیں تو بے شک میں قریب ہوں۔ پکارنے والے کی دعا قبول کرتا ہوں جب وہ مجھے پکارے۔"
         },
         {
           "id": "r20v2",
           "surahNumber": 40,
           "verseNumber": 60,
-          "relevanceNote": "Call upon Me; I will respond to you."
+          "relevanceNote": "Call upon Me; I will respond to you.",
+          "relevanceNoteUr": "مجھے پکارو، میں تمہاری دعا قبول کروں گا۔"
         }
       ],
       "tafsirFocus": "Learn about the etiquette and conditions of accepted supplication.",
-      "reflection": "Allah is especially close to the fasting person. What is your most heartfelt dua?"
+      "reflection": "Allah is especially close to the fasting person. What is your most heartfelt dua?",
+      "themeUr": "دعا",
+      "tafsirFocusUr": "قبولیتِ دعا کے آداب اور شرائط کے بارے میں جانیں۔",
+      "reflectionUr": "اللہ روزے دار کے خاص طور پر قریب ہوتا ہے۔ آپ کی سب سے گہری دلی تمنا کیا ہے؟"
     },
     {
       "id": "day21",
@@ -596,24 +737,31 @@
         "arabic": "اللَّهُمَّ صَلِّ عَلَى أَمِيرِ الْمُؤْمِنِينَ عَلِيِّ بْنِ أَبِي طَالِبٍ",
         "transliteration": "Allahumma salli 'ala Amir-il-Mu'minina 'Ali ibn Abi Talib",
         "english": "O Allah, send blessings upon the Commander of the Faithful, Ali ibn Abi Talib.",
-        "source": "Memorial prayer"
+        "source": "Memorial prayer",
+        "englishUr": "اے اللہ! امیرالمومنین علی ابن ابی طالبؑ پر درود بھیج۔",
+        "sourceUr": "یادگاری دعا"
       },
       "verses": [
         {
           "id": "r21v1",
           "surahNumber": 5,
           "verseNumber": 55,
-          "relevanceNote": "Your ally is only Allah, His Messenger, and those who believe who establish prayer and give zakah while bowing."
+          "relevanceNote": "Your ally is only Allah, His Messenger, and those who believe who establish prayer and give zakah while bowing.",
+          "relevanceNoteUr": "تمہارے ولی تو صرف اللہ، اس کا رسولؐ اور وہ مومنین ہیں جو نماز قائم کرتے اور رکوع کی حالت میں زکوٰۃ دیتے ہیں۔"
         },
         {
           "id": "r21v2",
           "surahNumber": 2,
           "verseNumber": 207,
-          "relevanceNote": "Among people is he who sells himself seeking the pleasure of Allah - about Imam Ali."
+          "relevanceNote": "Among people is he who sells himself seeking the pleasure of Allah - about Imam Ali.",
+          "relevanceNoteUr": "لوگوں میں وہ بھی ہے جو اللہ کی رضا کی چاہ میں اپنی جان بیچ دیتا ہے — یہ آیت امام علیؑ کے بارے میں ہے۔"
         }
       ],
       "tafsirFocus": "Reflect on Imam Ali's life, sacrifice, and final advice during Ramadan.",
-      "reflection": "Imam Ali was struck on 19th Ramadan and passed on 21st. Honor his legacy through justice and knowledge."
+      "reflection": "Imam Ali was struck on 19th Ramadan and passed on 21st. Honor his legacy through justice and knowledge.",
+      "themeUr": "شہادتِ امام علیؑ",
+      "tafsirFocusUr": "امام علیؑ کی حیاتِ مبارکہ، قربانی اور رمضان میں ان کی آخری وصیت پر غور کریں۔",
+      "reflectionUr": "امام علیؑ پر ۱۹ رمضان کو حملہ ہوا اور ۲۱ رمضان کو آپ شہید ہوئے۔ انصاف اور علم کے ذریعے ان کی میراث کو زندہ رکھیں۔"
     },
     {
       "id": "day22",
@@ -625,24 +773,31 @@
         "arabic": "اللَّهُمَّ ثَبِّتْنِي عَلَى دِينِكَ وَلَا تُزِغْ قَلْبِي بَعْدَ إِذْ هَدَيْتَنِي",
         "transliteration": "Allahumma thabbitni 'ala dinik wa la tuzigh qalbi ba'da idh hadaytani",
         "english": "O Allah, keep me firm upon Your religion and do not let my heart deviate after You have guided me.",
-        "source": "Quran 3:8"
+        "source": "Quran 3:8",
+        "englishUr": "اے اللہ! مجھے اپنے دین پر ثابت قدم رکھ اور میرے دل کو ہدایت کے بعد کجی سے بچا۔",
+        "sourceUr": "قرآن ۳:۸"
       },
       "verses": [
         {
           "id": "r22v1",
           "surahNumber": 41,
           "verseNumber": 30,
-          "relevanceNote": "Those who said 'Our Lord is Allah' then remained steadfast - angels descend upon them."
+          "relevanceNote": "Those who said 'Our Lord is Allah' then remained steadfast - angels descend upon them.",
+          "relevanceNoteUr": "جن لوگوں نے کہا 'ہمارا رب اللہ ہے' پھر اس پر ثابت قدم رہے — ان پر فرشتے نازل ہوتے ہیں۔"
         },
         {
           "id": "r22v2",
           "surahNumber": 46,
           "verseNumber": 13,
-          "relevanceNote": "Indeed, those who said 'Our Lord is Allah' and then remained steadfast - no fear or grief for them."
+          "relevanceNote": "Indeed, those who said 'Our Lord is Allah' and then remained steadfast - no fear or grief for them.",
+          "relevanceNoteUr": "بے شک جن لوگوں نے کہا 'ہمارا رب اللہ ہے' پھر اس پر ڈٹے رہے — ان کے لیے نہ کوئی خوف ہے نہ غم۔"
         }
       ],
       "tafsirFocus": "Study istiqamah (steadfastness) and how to maintain it after Ramadan.",
-      "reflection": "The final ten nights require extra perseverance. Don't let fatigue slow your worship."
+      "reflection": "The final ten nights require extra perseverance. Don't let fatigue slow your worship.",
+      "themeUr": "استقامت",
+      "tafsirFocusUr": "استقامت کا مطالعہ کریں اور جانیں کہ رمضان کے بعد اسے کیسے برقرار رکھا جائے۔",
+      "reflectionUr": "آخری دس راتوں میں مزید محنت درکار ہے۔ تھکاوٹ کو اپنی عبادت میں رکاوٹ نہ بننے دیں۔"
     },
     {
       "id": "day23",
@@ -654,24 +809,31 @@
         "arabic": "اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
         "transliteration": "Allahumma innaka 'afuwwun karimun tuhibb-ul-'afwa fa'fu 'anni",
         "english": "O Allah, You are Pardoning and Generous, You love to pardon, so pardon me.",
-        "source": "Dua for Laylatul Qadr - Mafatih al-Jinan"
+        "source": "Dua for Laylatul Qadr - Mafatih al-Jinan",
+        "englishUr": "اے اللہ! بے شک تو عفو کرنے والا اور کریم ہے، عفو کو پسند کرتا ہے، پس مجھے معاف فرما دے۔",
+        "sourceUr": "شبِ قدر کی دعا — مفاتیح الجنان"
       },
       "verses": [
         {
           "id": "r23v1",
           "surahNumber": 97,
           "verseNumber": 4,
-          "relevanceNote": "The angels and the Spirit descend therein by permission of their Lord for every matter."
+          "relevanceNote": "The angels and the Spirit descend therein by permission of their Lord for every matter.",
+          "relevanceNoteUr": "اس میں فرشتے اور روح اپنے رب کے اذن سے ہر کام کے لیے اتر آتے ہیں۔"
         },
         {
           "id": "r23v2",
           "surahNumber": 97,
           "verseNumber": 5,
-          "relevanceNote": "Peace it is until the emergence of dawn."
+          "relevanceNote": "Peace it is until the emergence of dawn.",
+          "relevanceNoteUr": "یہ رات طلوعِ فجر تک سراسر سلامتی ہے۔"
         }
       ],
       "tafsirFocus": "The 23rd night is particularly emphasized for Laylatul Qadr. Maximize worship.",
-      "reflection": "This is likely the Night of Qadr. Seek it with full devotion and sincere repentance."
+      "reflection": "This is likely the Night of Qadr. Seek it with full devotion and sincere repentance.",
+      "themeUr": "شبِ قدر",
+      "tafsirFocusUr": "تئیسویں رات کو شبِ قدر کے لیے خاص طور پر اہم سمجھا جاتا ہے۔ عبادت کو اپنی انتہا پر پہنچائیں۔",
+      "reflectionUr": "یہ غالباً شبِ قدر ہے۔ اسے کامل عقیدت اور سچی توبہ کے ساتھ تلاش کریں۔"
     },
     {
       "id": "day24",
@@ -683,24 +845,31 @@
         "arabic": "اللَّهُمَّ لَا تَقْطَعْ رَجَائِي مِنْ رَحْمَتِكَ وَلَا تُؤْيِسْنِي مِنْ فَضْلِكَ",
         "transliteration": "Allahumma la taqta' raja'i min rahmatik wa la tu'yisni min fadlik",
         "english": "O Allah, do not cut off my hope from Your mercy and do not make me despair of Your grace.",
-        "source": "Sahifa Sajjadiya"
+        "source": "Sahifa Sajjadiya",
+        "englishUr": "اے اللہ! میری امید کو اپنی رحمت سے نہ کاٹ اور مجھے اپنے فضل سے مایوس نہ فرما۔",
+        "sourceUr": "صحیفۂ سجادیہ"
       },
       "verses": [
         {
           "id": "r24v1",
           "surahNumber": 12,
           "verseNumber": 87,
-          "relevanceNote": "Do not despair of relief from Allah. Indeed, no one despairs of relief from Allah except the disbelieving people."
+          "relevanceNote": "Do not despair of relief from Allah. Indeed, no one despairs of relief from Allah except the disbelieving people.",
+          "relevanceNoteUr": "اللہ کی رحمت سے ناامید نہ ہو۔ اللہ کی رحمت سے صرف کافر ہی ناامید ہوتے ہیں۔"
         },
         {
           "id": "r24v2",
           "surahNumber": 15,
           "verseNumber": 56,
-          "relevanceNote": "And who despairs of the mercy of his Lord except for those astray?"
+          "relevanceNote": "And who despairs of the mercy of his Lord except for those astray?",
+          "relevanceNoteUr": "اپنے رب کی رحمت سے کون ناامید ہوتا ہے سوائے گمراہوں کے؟"
         }
       ],
       "tafsirFocus": "Balance between hope (raja) and fear (khawf) in approaching Allah.",
-      "reflection": "No matter your past, Allah's mercy awaits. Approach Him with hope and optimism."
+      "reflection": "No matter your past, Allah's mercy awaits. Approach Him with hope and optimism.",
+      "themeUr": "امید",
+      "tafsirFocusUr": "اللہ کے قریب جانے میں امید (رجا) اور خوف (خوف) کے درمیان توازن قائم کریں۔",
+      "reflectionUr": "آپ کا ماضی کچھ بھی رہا ہو، اللہ کی رحمت آپ کا انتظار کر رہی ہے۔ امید اور خوش‌بینی کے ساتھ اس کی طرف بڑھیں۔"
     },
     {
       "id": "day25",
@@ -712,24 +881,31 @@
         "arabic": "اللَّهُمَّ اجْعَلْنِي مِنَ الَّذِينَ يَقُومُونَ بِالْقِسْطِ شُهَدَاءَ لِلَّهِ",
         "transliteration": "Allahumma-j'alni min alladhina yaqumuna bi-l-qisti shuhada'a lillah",
         "english": "O Allah, make me among those who stand firmly for justice as witnesses to Allah.",
-        "source": "Based on Quran 4:135"
+        "source": "Based on Quran 4:135",
+        "englishUr": "اے اللہ! مجھے ان لوگوں میں شامل فرما جو اللہ کی گواہی دیتے ہوئے پوری مضبوطی سے عدل قائم کرتے ہیں۔",
+        "sourceUr": "قرآن ۴:۱۳۵ کی بنیاد پر"
       },
       "verses": [
         {
           "id": "r25v1",
           "surahNumber": 4,
           "verseNumber": 135,
-          "relevanceNote": "O you who believe, be persistently standing firm in justice, witnesses for Allah."
+          "relevanceNote": "O you who believe, be persistently standing firm in justice, witnesses for Allah.",
+          "relevanceNoteUr": "اے ایمان والو! اللہ کے لیے گواہی دیتے ہوئے انصاف پر مضبوطی سے قائم رہو۔"
         },
         {
           "id": "r25v2",
           "surahNumber": 5,
           "verseNumber": 8,
-          "relevanceNote": "Do not let hatred of a people prevent you from being just. Be just; that is nearer to righteousness."
+          "relevanceNote": "Do not let hatred of a people prevent you from being just. Be just; that is nearer to righteousness.",
+          "relevanceNoteUr": "کسی قوم کی دشمنی تمہیں انصاف نہ کرنے دے — یہ نہ ہو۔ عدل کرو کہ یہی تقوے کے قریب تر ہے۔"
         }
       ],
       "tafsirFocus": "Explore the Quranic emphasis on justice ('adl) as a divine attribute and human duty.",
-      "reflection": "Justice applies even to those we dislike. Are you being fair in all your dealings?"
+      "reflection": "Justice applies even to those we dislike. Are you being fair in all your dealings?",
+      "themeUr": "عدل",
+      "tafsirFocusUr": "قرآن میں عدل پر جو زور دیا گیا ہے اسے سمجھیں — یہ اللہ کی صفت ہے اور انسان کا فریضہ بھی۔",
+      "reflectionUr": "عدل کا تقاضا ہے کہ ناپسندیدہ لوگوں کے ساتھ بھی انصاف کیا جائے۔ کیا آپ تمام معاملات میں انصاف کر رہے ہیں؟"
     },
     {
       "id": "day26",
@@ -741,24 +917,31 @@
         "arabic": "اللَّهُمَّ اجْعَلْنِي مِنَ الْمُتَفَكِّرِينَ فِي آيَاتِكَ وَخَلْقِكَ",
         "transliteration": "Allahumma-j'alni min-al-mutafakkirina fi ayatika wa khalqik",
         "english": "O Allah, make me among those who reflect upon Your signs and creation.",
-        "source": "Mafatih al-Jinan"
+        "source": "Mafatih al-Jinan",
+        "englishUr": "اے اللہ! مجھے اپنی نشانیوں اور مخلوق میں غور و فکر کرنے والوں میں شامل فرما۔",
+        "sourceUr": "مفاتیح الجنان"
       },
       "verses": [
         {
           "id": "r26v1",
           "surahNumber": 3,
           "verseNumber": 191,
-          "relevanceNote": "Those who remember Allah while standing, sitting, and lying down, and reflect on the creation of the heavens and earth."
+          "relevanceNote": "Those who remember Allah while standing, sitting, and lying down, and reflect on the creation of the heavens and earth.",
+          "relevanceNoteUr": "جو کھڑے، بیٹھے اور لیٹے اللہ کا ذکر کرتے اور آسمانوں و زمین کی تخلیق میں تفکر کرتے ہیں۔"
         },
         {
           "id": "r26v2",
           "surahNumber": 16,
           "verseNumber": 44,
-          "relevanceNote": "We revealed to you the message that you may make clear to people what was sent down, and that they might reflect."
+          "relevanceNote": "We revealed to you the message that you may make clear to people what was sent down, and that they might reflect.",
+          "relevanceNoteUr": "ہم نے تمہاری طرف یہ ذکر نازل کیا تاکہ تم لوگوں کے سامنے وضاحت کرو جو نازل کیا گیا، اور شاید وہ غور کریں۔"
         }
       ],
       "tafsirFocus": "Understand tafakkur (deep reflection) as a form of worship.",
-      "reflection": "Take time today to reflect on what Ramadan has taught you and how you've grown."
+      "reflection": "Take time today to reflect on what Ramadan has taught you and how you've grown.",
+      "themeUr": "تفکر",
+      "tafsirFocusUr": "تفکر کو عبادت کی ایک صورت کے طور پر سمجھیں اور اسے اپنی روزمرہ زندگی میں شامل کریں۔",
+      "reflectionUr": "آج کچھ وقت نکال کر غور کریں کہ رمضان نے آپ کو کیا سکھایا اور آپ کیسے بدلے۔"
     },
     {
       "id": "day27",
@@ -770,24 +953,31 @@
         "arabic": "اللَّهُمَّ اكْتُبْنِي فِي هَذِهِ اللَّيْلَةِ مِنَ السُّعَدَاءِ وَلَا تَكْتُبْنِي مِنَ الْأَشْقِيَاءِ",
         "transliteration": "Allahumma-ktubni fi hadhihi-l-laylati min-as-su'ada' wa la taktubni min-al-ashqiya'",
         "english": "O Allah, write me on this night among the fortunate and do not write me among the wretched.",
-        "source": "Dua for Laylatul Qadr"
+        "source": "Dua for Laylatul Qadr",
+        "englishUr": "اے اللہ! مجھے اس رات خوش‌نصیبوں میں لکھ دے اور بدنصیبوں میں نہ لکھ۔",
+        "sourceUr": "شبِ قدر کی دعا"
       },
       "verses": [
         {
           "id": "r27v1",
           "surahNumber": 2,
           "verseNumber": 185,
-          "relevanceNote": "The month of Ramadan in which was revealed the Quran - guidance for people."
+          "relevanceNote": "The month of Ramadan in which was revealed the Quran - guidance for people.",
+          "relevanceNoteUr": "رمضان کا مہینہ جس میں قرآن نازل کیا گیا — لوگوں کے لیے ہدایت۔"
         },
         {
           "id": "r27v2",
           "surahNumber": 44,
           "verseNumber": 3,
-          "relevanceNote": "Indeed, We sent it down during a blessed night. Indeed, We were to warn."
+          "relevanceNote": "Indeed, We sent it down during a blessed night. Indeed, We were to warn.",
+          "relevanceNoteUr": "بے شک ہم نے اسے ایک بابرکت رات میں نازل کیا، ہم تو ڈرانے والے ہیں۔"
         }
       ],
       "tafsirFocus": "The 27th night is widely believed to be Laylatul Qadr. Give it your all.",
-      "reflection": "Destiny is decreed tonight. What do you want written for your coming year?"
+      "reflection": "Destiny is decreed tonight. What do you want written for your coming year?",
+      "themeUr": "شبِ قدر",
+      "tafsirFocusUr": "ستائیسویں رات کو شبِ قدر سمجھا جاتا ہے۔ اسے اپنی پوری توانائی سے تلاش کریں۔",
+      "reflectionUr": "آج رات تقدیر لکھی جاتی ہے۔ آپ اپنے آنے والے سال کے لیے کیا چاہتے ہیں؟"
     },
     {
       "id": "day28",
@@ -799,24 +989,31 @@
         "arabic": "الْحَمْدُ لِلَّهِ الَّذِي بَلَّغَنَا شَهْرَ رَمَضَانَ وَوَفَّقَنَا لِصِيَامِهِ وَقِيَامِهِ",
         "transliteration": "Alhamdulillah-illadhi ballaghana shahra Ramadan wa waffaqana li-siyamihi wa qiyamih",
         "english": "Praise be to Allah who allowed us to reach Ramadan and enabled us to fast and pray in it.",
-        "source": "Traditional"
+        "source": "Traditional",
+        "englishUr": "اللہ کا شکر ہے جس نے ہمیں رمضان تک پہنچایا اور ہمیں اس کے روزے رکھنے اور قیام کرنے کی توفیق عطا فرمائی۔",
+        "sourceUr": "روایتی دعا"
       },
       "verses": [
         {
           "id": "r28v1",
           "surahNumber": 31,
           "verseNumber": 12,
-          "relevanceNote": "Whoever is grateful - his gratitude is only for himself. And whoever is ungrateful - Allah is Free of need."
+          "relevanceNote": "Whoever is grateful - his gratitude is only for himself. And whoever is ungrateful - Allah is Free of need.",
+          "relevanceNoteUr": "جو شکر کرے وہ اپنے ہی فائدے کے لیے کرتا ہے، اور جو ناشکری کرے تو اللہ بے نیاز ہے۔"
         },
         {
           "id": "r28v2",
           "surahNumber": 14,
           "verseNumber": 34,
-          "relevanceNote": "And He gave you from all you asked of Him. If you should count the favor of Allah, you could not enumerate them."
+          "relevanceNote": "And He gave you from all you asked of Him. If you should count the favor of Allah, you could not enumerate them.",
+          "relevanceNoteUr": "اس نے تمہیں ہر وہ چیز دی جو تم نے مانگی۔ اگر تم اللہ کی نعمتیں گنو تو شمار نہ کر سکو۔"
         }
       ],
       "tafsirFocus": "Gratitude for completing most of Ramadan - appreciate this blessing.",
-      "reflection": "As Ramadan nears its end, what are you most grateful for this month?"
+      "reflection": "As Ramadan nears its end, what are you most grateful for this month?",
+      "themeUr": "شکرِ دوبارہ",
+      "tafsirFocusUr": "رمضان کا بیشتر حصہ مکمل کرنے پر شکرگزاری — اس نعمت کی قدر کریں۔",
+      "reflectionUr": "رمضان ختم ہونے کو ہے۔ آپ اس مہینے کی کس چیز پر سب سے زیادہ شکرگزار ہیں؟"
     },
     {
       "id": "day29",
@@ -828,24 +1025,31 @@
         "arabic": "اللَّهُمَّ اجْمَعْ كَلِمَةَ الْمُسْلِمِينَ وَأَلِّفْ بَيْنَ قُلُوبِهِمْ",
         "transliteration": "Allahumma-jma' kalimat-al-muslimina wa allif bayna qulubihim",
         "english": "O Allah, unite the word of the Muslims and bring their hearts together.",
-        "source": "Dua for the Ummah"
+        "source": "Dua for the Ummah",
+        "englishUr": "اے اللہ! مسلمانوں کی بات کو متحد کر دے اور ان کے دلوں میں الفت ڈال دے۔",
+        "sourceUr": "امت کے لیے دعا"
       },
       "verses": [
         {
           "id": "r29v1",
           "surahNumber": 21,
           "verseNumber": 92,
-          "relevanceNote": "Indeed this, your religion, is one religion, and I am your Lord, so worship Me."
+          "relevanceNote": "Indeed this, your religion, is one religion, and I am your Lord, so worship Me.",
+          "relevanceNoteUr": "بے شک یہ تمہاری امت ایک امت ہے اور میں تمہارا رب ہوں، پس میری عبادت کرو۔"
         },
         {
           "id": "r29v2",
           "surahNumber": 23,
           "verseNumber": 52,
-          "relevanceNote": "And indeed this, your religion, is one religion, and I am your Lord, so fear Me."
+          "relevanceNote": "And indeed this, your religion, is one religion, and I am your Lord, so fear Me.",
+          "relevanceNoteUr": "اور بے شک یہ تمہاری امت ایک امت ہے اور میں تمہارا رب ہوں، پس مجھ سے ڈرو۔"
         }
       ],
       "tafsirFocus": "Reflect on the ummah's unity and our collective responsibility.",
-      "reflection": "Ramadan unites Muslims worldwide in fasting. Pray for the entire ummah today."
+      "reflection": "Ramadan unites Muslims worldwide in fasting. Pray for the entire ummah today.",
+      "themeUr": "اتحاد",
+      "tafsirFocusUr": "امت کے اتحاد اور ہماری اجتماعی ذمہ داری پر غور کریں۔",
+      "reflectionUr": "رمضان دنیا بھر کے مسلمانوں کو روزے میں متحد کرتا ہے۔ آج پوری امت کے لیے دعا کریں۔"
     },
     {
       "id": "day30",
@@ -857,24 +1061,31 @@
         "arabic": "اللَّهُمَّ تَقَبَّلْ مِنَّا صِيَامَنَا وَقِيَامَنَا وَاجْعَلْنَا مِنَ الْعُتَقَاءِ مِنَ النَّارِ",
         "transliteration": "Allahumma taqabbal minna siyamana wa qiyamana wa-j'alna min-al-'utaqa' min-an-nar",
         "english": "O Allah, accept from us our fasting and prayers, and make us among those freed from the Fire.",
-        "source": "Eid preparation dua"
+        "source": "Eid preparation dua",
+        "englishUr": "اے اللہ! ہمارے روزوں اور نمازوں کو قبول فرما اور ہمیں آگ سے آزاد ہونے والوں میں شامل فرما۔",
+        "sourceUr": "عید کی تیاری کی دعا"
       },
       "verses": [
         {
           "id": "r30v1",
           "surahNumber": 2,
           "verseNumber": 185,
-          "relevanceNote": "That you may complete the count and glorify Allah for having guided you, and that you may be grateful."
+          "relevanceNote": "That you may complete the count and glorify Allah for having guided you, and that you may be grateful.",
+          "relevanceNoteUr": "تاکہ تم گنتی پوری کرو اور اللہ کی بڑائی بیان کرو اس بات پر کہ اس نے تمہیں ہدایت دی، اور شاید تم شکرگزار ہو۔"
         },
         {
           "id": "r30v2",
           "surahNumber": 22,
           "verseNumber": 37,
-          "relevanceNote": "Their meat and blood do not reach Allah, but what reaches Him is piety from you."
+          "relevanceNote": "Their meat and blood do not reach Allah, but what reaches Him is piety from you.",
+          "relevanceNoteUr": "اللہ کو ان کا گوشت اور خون نہیں پہنچتا، لیکن اسے تمہارا تقویٰ پہنچتا ہے۔"
         }
       ],
       "tafsirFocus": "The purpose of fasting - to complete the count and glorify Allah.",
-      "reflection": "Ramadan ends, but its lessons continue. How will you carry forward what you've learned?"
+      "reflection": "Ramadan ends, but its lessons continue. How will you carry forward what you've learned?",
+      "themeUr": "جشن اور تجدید",
+      "tafsirFocusUr": "روزے کا مقصد — گنتی کو پورا کرنا اور اللہ کی بڑائی بیان کرنا — کو سمجھیں۔",
+      "reflectionUr": "رمضان ختم ہوتا ہے لیکن اس کے سبق جاری رہتے ہیں۔ جو آپ نے سیکھا، اسے آگے کیسے لے جائیں گے؟"
     }
   ]
 }

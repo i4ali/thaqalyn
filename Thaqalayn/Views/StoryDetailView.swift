@@ -12,8 +12,11 @@ struct StoryDetailView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var storiesManager = PropheticStoriesManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
+
+    private var isRTL: Bool { languageManager.selectedLanguage.isRTL }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
 
@@ -68,7 +71,7 @@ struct StoryDetailView: View {
                                     .tracking(1.2)
                             }
 
-                            Text(story.prophet)
+                            Text(story.prophet(for: languageManager.selectedLanguage))
                                 .font(.system(size: 20, weight: .bold, design: .rounded))
                                 .foregroundColor(themeManager.accentColor)
 
@@ -87,13 +90,14 @@ struct StoryDetailView: View {
                                     .tracking(1.2)
                             }
 
-                            Text(story.title)
+                            Text(story.title(for: languageManager.selectedLanguage))
                                 .font(.system(size: 24, weight: .bold, design: .rounded))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineSpacing(4)
                         }
                     }
                     .padding(24)
+                    .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                     .background {
                         RoundedRectangle(cornerRadius: 24)
                             .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
@@ -143,7 +147,7 @@ struct StoryDetailView: View {
                     }
 
                     // Lessons summary
-                    if let lessons = story.lessonsSummary {
+                    if let lessons = story.lessonsSummary(for: languageManager.selectedLanguage) {
                         VStack(alignment: .leading, spacing: 16) {
                             HStack(alignment: .top, spacing: 8) {
                                 Image(systemName: "lightbulb.fill")
@@ -160,8 +164,10 @@ struct StoryDetailView: View {
                                 .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineSpacing(6 * readingSettings.scale)
+                                .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                         }
                         .padding(20)
+                        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                         .background {
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
@@ -244,10 +250,10 @@ struct StoryDetailView: View {
                     .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
 
                     VStack(alignment: .leading, spacing: 6) {
-                        Text(story.prophet.uppercased())
-                            .font(.system(size: 11, weight: .bold)).tracking(2)
+                        Text(story.prophet(for: languageManager.selectedLanguage).uppercased())
+                            .emEyebrow(languageManager.selectedLanguage, size: 11, tracking: 2)
                             .foregroundColor(themeManager.accentColor)
-                        Text(story.title)
+                        Text(story.title(for: languageManager.selectedLanguage))
                             .font(EmType.serif(30, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .fixedSize(horizontal: false, vertical: true)
@@ -255,6 +261,7 @@ struct StoryDetailView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(22)
+                .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
             }
             .padding(.horizontal, 20)
             .padding(.top, 12)
@@ -283,13 +290,14 @@ struct StoryDetailView: View {
             }
 
             // Lessons summary
-            if let lessons = story.lessonsSummary {
+            if let lessons = story.lessonsSummary(for: languageManager.selectedLanguage) {
                 EmDetailCard(icon: "lightbulb", label: "Lessons to Learn") {
                     Text(lessons)
                         .font(EmType.serif(17 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(5 * readingSettings.scale)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                 }
             }
 
@@ -316,6 +324,7 @@ struct StoryVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
@@ -323,8 +332,18 @@ struct StoryVerseCard: View {
               let verse = verses["\(storyVerse.verseNumber)"] else {
             return nil
         }
-        return (verse.arabicText, verse.translation)
+        // Verse translations exist only in English + Urdu; Arabic/English fall back to English.
+        let translation: String
+        if languageManager.selectedLanguage == .urdu, let urdu = verse.translationUrdu, !urdu.isEmpty {
+            translation = urdu
+        } else {
+            translation = verse.translation
+        }
+        return (verse.arabicText, translation)
     }
+
+    private var verseTranslationIsRTL: Bool { languageManager.selectedLanguage == .urdu }
+    private var noteIsRTL: Bool { languageManager.selectedLanguage.isRTL }
 
     var surahName: String {
         dataManager.quranData?.surahs.first { $0.number == storyVerse.surahNumber }?.englishName ?? "Surah \(storyVerse.surahNumber)"
@@ -371,18 +390,23 @@ struct StoryVerseCard: View {
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(3 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "text.bubble")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(storyVerse.storyNote)
+                    Text(storyVerse.storyNote(for: languageManager.selectedLanguage))
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
+                        .frame(maxWidth: .infinity, alignment: noteIsRTL ? .trailing : .leading)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .environment(\.layoutDirection, noteIsRTL ? .rightToLeft : .leftToRight)
                 .background(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(themeManager.accentChip.opacity(0.6))
@@ -456,6 +480,9 @@ struct StoryVerseCard: View {
                         .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 .padding(20)
 
@@ -475,12 +502,14 @@ struct StoryVerseCard: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
 
-                Text(storyVerse.storyNote)
+                Text(storyVerse.storyNote(for: languageManager.selectedLanguage))
                     .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
+                    .frame(maxWidth: .infinity, alignment: noteIsRTL ? .trailing : .leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            .environment(\.layoutDirection, noteIsRTL ? .rightToLeft : .leftToRight)
             .padding(20)
             .background {
                 Rectangle()
@@ -533,6 +562,7 @@ struct StoryVerseCard: View {
 struct RelatedStoryCard: View {
     let story: PropheticStory
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var navigateToStory = false
 
     var body: some View {
@@ -545,10 +575,10 @@ struct RelatedStoryCard: View {
                 HStack(spacing: 12) {
                     EmIconChip(sfSymbol: story.categoryIcon, size: 38)
                     VStack(alignment: .leading, spacing: 3) {
-                        Text(story.prophet)
+                        Text(story.prophet(for: languageManager.selectedLanguage))
                             .font(.system(size: 11, weight: .bold)).tracking(0.5)
                             .foregroundColor(themeManager.accentColor)
-                        Text(story.title)
+                        Text(story.title(for: languageManager.selectedLanguage))
                             .font(EmType.serif(17, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(2)
@@ -579,11 +609,11 @@ struct RelatedStoryCard: View {
                     }
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(story.prophet)
+                    Text(story.prophet(for: languageManager.selectedLanguage))
                         .font(.system(size: 12, weight: .bold))
                         .foregroundColor(themeManager.accentColor)
 
-                    Text(story.title)
+                    Text(story.title(for: languageManager.selectedLanguage))
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
@@ -618,20 +648,30 @@ struct RelatedStoryCard: View {
         StoryDetailView(
             story: PropheticStory(
                 id: "s1",
-                title: "Prophet Ibrahim and the Idols",
-                shortTitle: "Breaking the Idols",
-                prophet: "Ibrahim (Abraham)",
+                titleEn: "Prophet Ibrahim and the Idols",
+                titleAr: "النبي إبراهيم والأصنام",
+                titleUr: "حضرت ابراہیم اور بت",
+                shortTitleEn: "Breaking the Idols",
+                shortTitleAr: "تحطيم الأصنام",
+                shortTitleUr: "بتوں کو توڑنا",
+                prophetEn: "Ibrahim (Abraham)",
+                prophetAr: "النبي إبراهيم (ع)",
+                prophetUr: "حضرت ابراہیم علیہ السلام",
                 category: .courage,
                 verses: [
                     StoryVerse(
                         surahNumber: 21,
                         verseNumber: 58,
-                        storyNote: "Ibrahim destroys the idols to expose the falsehood of idol worship",
+                        storyNoteEn: "Ibrahim destroys the idols to expose the falsehood of idol worship",
+                        storyNoteAr: "يحطّم إبراهيم الأصنام كاشفاً زيف عبادتها",
+                        storyNoteUr: "حضرت ابراہیم بتوں کو توڑ کر بت پرستی کا باطل ہونا ظاہر کرتے ہیں",
                         isKeyVerse: true
                     )
                 ],
                 relatedStories: [],
-                lessonsSummary: "True courage means standing up for truth even when facing overwhelming opposition."
+                lessonsSummaryEn: "True courage means standing up for truth even when facing overwhelming opposition.",
+                lessonsSummaryAr: "الشجاعة الحقيقية تعني الوقوف في وجه الباطل حتى حين يكون الخصوم أشداء.",
+                lessonsSummaryUr: "حقیقی شجاعت یہ ہے کہ شدید مخالفت کے باوجود حق پر ڈٹے رہا جائے۔"
             )
         )
     }

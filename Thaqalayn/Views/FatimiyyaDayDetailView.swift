@@ -15,7 +15,11 @@ struct FatimiyyaDayDetailView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
+
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+    private var isRTL: Bool { lang.isRTL }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
 
@@ -46,10 +50,9 @@ struct FatimiyyaDayDetailView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(themeManager.accentColor)
 
-                            Text("TODAY'S VERSES")
-                                .font(.system(size: 14, weight: .bold))
+                            Text(JourneyStrings.todaysVerses(lang).uppercased())
+                                .emEyebrow(lang, size: 14, tracking: 1.2)
                                 .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
 
                             Spacer()
                         }
@@ -73,16 +76,18 @@ struct FatimiyyaDayDetailView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(themeManager.accentColor)
 
-                            Text("TAFSIR FOCUS")
-                                .font(.system(size: 14, weight: .bold))
+                            Text(JourneyStrings.tafsirFocus(lang).uppercased())
+                                .emEyebrow(lang, size: 14, tracking: 1.2)
                                 .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
                         }
 
-                        Text(day.tafsirFocus)
+                        Text(day.localizedTafsir(lang))
                             .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
                             .lineSpacing(4 * readingSettings.scale)
+                            .multilineTextAlignment(isRTL ? .trailing : .leading)
+                            .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                     }
                     .padding(20)
                     .background {
@@ -98,17 +103,19 @@ struct FatimiyyaDayDetailView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(themeManager.accentColor)
 
-                            Text("REFLECTION")
-                                .font(.system(size: 14, weight: .bold))
+                            Text(JourneyStrings.reflection(lang).uppercased())
+                                .emEyebrow(lang, size: 14, tracking: 1.2)
                                 .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
                         }
 
-                        Text(day.reflection)
+                        Text(day.localizedReflection(lang))
                             .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
                             .lineSpacing(4 * readingSettings.scale)
                             .italic()
+                            .multilineTextAlignment(isRTL ? .trailing : .leading)
+                            .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                     }
                     .padding(20)
                     .background {
@@ -161,7 +168,7 @@ struct FatimiyyaDayDetailView: View {
                 Button(action: { dismiss() }) {
                     HStack(spacing: 4) {
                         Image(systemName: "chevron.left")
-                        Text("Journey")
+                        Text(JourneyStrings.backToJourney(lang))
                     }
                     .foregroundColor(themeManager.accentColor)
                 }
@@ -177,16 +184,16 @@ struct FatimiyyaDayDetailView: View {
             EmJourneyDetailHeader(
                 dayNumber: day.dayNumber,
                 icon: day.icon,
-                theme: day.theme,
+                theme: day.localizedTheme(lang),
                 themeArabic: day.themeArabic,
-                statusLabel: isObserved ? "Observed" : nil,
+                statusLabel: isObserved ? JourneyStrings.observed(lang) : nil,
                 statusTint: themeManager.secondaryText,
                 emphasized: false,
                 badgeSymbol: nil,
                 badgeText: nil
             )
 
-            EmDetailCard(icon: "hands.sparkles", label: "Dua / Ziyarat") {
+            EmDetailCard(icon: "hands.sparkles", label: JourneyStrings.duaZiyarat(lang)) {
                 VStack(alignment: .leading, spacing: 12) {
                     Text(day.dua.arabic)
                         .font(EmType.arabic(24 * readingSettings.scale))
@@ -197,21 +204,26 @@ struct FatimiyyaDayDetailView: View {
                     Text(day.dua.transliteration)
                         .font(EmType.serifItalic(16 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
-                    Text(day.dua.english)
+                    Text(day.dua.localizedEnglish(lang))
                         .font(EmType.serif(17 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
-                    if let source = day.dua.source {
+                        .multilineTextAlignment(isRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+                    if let source = day.dua.localizedSource(lang) {
                         Text("— \(source)")
                             .font(.system(size: 12.5, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
+                            .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                     }
                 }
             }
 
             VStack(alignment: .leading, spacing: 12) {
-                EmSectionLabel(icon: "book.pages", text: "Today's Verses")
+                EmSectionLabel(icon: "book.pages", text: JourneyStrings.todaysVerses(lang))
                     .padding(.horizontal, 20)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                 ForEach(day.verses) { verse in
                     FatimiyyaVerseCard(
                         verse: verse,
@@ -223,26 +235,30 @@ struct FatimiyyaDayDetailView: View {
                 }
             }
 
-            EmDetailCard(icon: "lightbulb", label: "Tafsir Focus") {
-                Text(day.tafsirFocus)
+            EmDetailCard(icon: "lightbulb", label: JourneyStrings.tafsirFocus(lang)) {
+                Text(day.localizedTafsir(lang))
                     .font(EmType.serif(17 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(5 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(isRTL ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                    .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
             }
 
-            EmDetailCard(icon: "heart.text.square", label: "Reflection") {
-                Text(day.reflection)
+            EmDetailCard(icon: "heart.text.square", label: JourneyStrings.reflection(lang)) {
+                Text(day.localizedReflection(lang))
                     .font(EmType.serifItalic(18 * readingSettings.scale))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(5 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(isRTL ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                    .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
             }
 
             EmJourneyToggleButton(
                 isDone: isObserved,
-                doneLabel: "Observed",
-                todoLabel: "Mark as observed",
+                doneLabel: JourneyStrings.observed(lang),
+                todoLabel: JourneyStrings.markObserved(lang),
                 doneTint: themeManager.secondaryText,
                 onToggle: {
                     if isObserved {
@@ -263,6 +279,8 @@ struct FatimiyyaDayHeader: View {
     let day: FatimiyyaDay
     let isObserved: Bool
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var body: some View {
         VStack(spacing: 16) {
@@ -272,7 +290,7 @@ struct FatimiyyaDayHeader: View {
                     Image(systemName: day.icon)
                         .font(.system(size: 14, weight: .semibold))
 
-                    Text("Day \(day.dayNumber)")
+                    Text(JourneyStrings.dayN(day.dayNumber, lang))
                         .font(.system(size: 14, weight: .semibold))
                 }
                 .foregroundColor(themeManager.accentColor)
@@ -286,7 +304,7 @@ struct FatimiyyaDayHeader: View {
                 if isObserved {
                     HStack(spacing: 4) {
                         Image(systemName: "checkmark.circle.fill")
-                        Text("Observed")
+                        Text(JourneyStrings.observed(lang))
                     }
                     .font(.system(size: 12, weight: .bold))
                     .foregroundColor(themeManager.secondaryText)
@@ -297,9 +315,10 @@ struct FatimiyyaDayHeader: View {
 
             // Theme
             VStack(alignment: .leading, spacing: 8) {
-                Text(day.theme)
+                Text(day.localizedTheme(lang))
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
+                    .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
 
                 Text(day.themeArabic)
                     .font(.system(size: 20, weight: .medium))
@@ -330,6 +349,9 @@ struct FatimiyyaDuaSection: View {
     let dua: FatimiyyaDua
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+    private var isRTL: Bool { lang.isRTL }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -338,10 +360,9 @@ struct FatimiyyaDuaSection: View {
                     .font(.system(size: 16))
                     .foregroundColor(themeManager.accentColor)
 
-                Text("DUA / ZIYARAT")
-                    .font(.system(size: 14, weight: .bold))
+                Text(JourneyStrings.duaZiyarat(lang).uppercased())
+                    .emEyebrow(lang, size: 14, tracking: 1.2)
                     .foregroundColor(themeManager.secondaryText)
-                    .tracking(1.2)
 
                 Spacer()
             }
@@ -360,17 +381,21 @@ struct FatimiyyaDuaSection: View {
                 .foregroundColor(themeManager.secondaryText)
                 .italic()
 
-            // English translation
-            Text(dua.english)
+            // English / Urdu translation
+            Text(dua.localizedEnglish(lang))
                 .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                 .foregroundColor(themeManager.primaryText)
                 .lineSpacing(4 * readingSettings.scale)
+                .multilineTextAlignment(isRTL ? .trailing : .leading)
+                .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
 
             // Source
-            if let source = dua.source {
+            if let source = dua.localizedSource(lang) {
                 Text("— \(source)")
                     .font(.system(size: 13, weight: .medium))
                     .foregroundColor(themeManager.tertiaryText)
+                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
             }
         }
         .padding(20)
@@ -396,13 +421,17 @@ struct FatimiyyaVerseCard: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+    private var isRTL: Bool { lang.isRTL }
 
     var verseData: (arabic: String, translation: String)? {
         guard let verses = dataManager.quranData?.verses["\(verse.surahNumber)"],
               let v = verses["\(verse.verseNumber)"] else {
             return nil
         }
-        return (v.arabicText, v.translation)
+        let t = (lang == .urdu ? (v.translationUrdu ?? v.translation) : v.translation)
+        return (v.arabicText, t)
     }
 
     var surahName: String {
@@ -424,7 +453,7 @@ struct FatimiyyaVerseCard: View {
                     VerseRecitationButton(surahNumber: verse.surahNumber, verseNumber: verse.verseNumber, size: 32)
                     Button(action: onNavigate) {
                         HStack(spacing: 4) {
-                            Text("Full Tafsir").font(.system(size: 12, weight: .semibold))
+                            Text(JourneyStrings.fullTafsir(lang)).font(.system(size: 12, weight: .semibold))
                             Image(systemName: "arrow.right").font(.system(size: 10, weight: .semibold))
                         }
                         .foregroundColor(themeManager.accentColor)
@@ -447,7 +476,7 @@ struct FatimiyyaVerseCard: View {
                     Image(systemName: "text.bubble")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(verse.relevanceNote)
+                    Text(verse.localizedNote(lang))
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
@@ -478,7 +507,7 @@ struct FatimiyyaVerseCard: View {
 
                 Button(action: onNavigate) {
                     HStack(spacing: 4) {
-                        Text("Full Tafsir")
+                        Text(JourneyStrings.fullTafsir(lang))
                             .font(.system(size: 12, weight: .semibold))
                         Image(systemName: "arrow.right")
                             .font(.system(size: 10, weight: .semibold))
@@ -520,7 +549,7 @@ struct FatimiyyaVerseCard: View {
                     .font(.system(size: 12))
                     .foregroundColor(themeManager.accentColor)
 
-                Text(verse.relevanceNote)
+                Text(verse.localizedNote(lang))
                     .font(.system(size: 14 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .lineSpacing(2 * readingSettings.scale)
@@ -552,6 +581,7 @@ struct FatimiyyaObserveButton: View {
     let isObserved: Bool
     let onToggle: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     // Subdued observed state — a quiet, somber confirmation rather than a
     // celebratory green "Completed!" treatment. Fatimiyya is azadari, not achievement.
@@ -572,7 +602,7 @@ struct FatimiyyaObserveButton: View {
                 Image(systemName: isObserved ? "checkmark.circle.fill" : "circle")
                     .font(.system(size: 24, weight: .semibold))
 
-                Text(isObserved ? "Observed" : "Mark as observed")
+                Text(isObserved ? JourneyStrings.observed(languageManager.selectedLanguage) : JourneyStrings.markObserved(languageManager.selectedLanguage))
                     .font(.system(size: 18, weight: .bold))
             }
             .foregroundColor(.white)
@@ -604,11 +634,16 @@ struct FatimiyyaObserveButton: View {
                     arabic: "اللَّهُمَّ صَلِّ عَلَى فَاطِمَةَ وَأَبِيهَا وَبَعْلِهَا وَبَنِيهَا",
                     transliteration: "Allahumma salli 'ala Fatimah wa abeeha wa ba'liha wa baneeha",
                     english: "O Allah, send blessings upon Fatimah, her father, her husband and her sons.",
-                    source: nil
+                    source: nil,
+                    englishUr: "اے اللہ! فاطمہؑ، ان کے والد، ان کے شوہر اور ان کے بیٹوں پر درود بھیج۔",
+                    sourceUr: nil
                 ),
                 verses: [],
                 tafsirFocus: "Reflecting on the station of Lady Fatimah al-Zahrā (AS) in the Quran.",
-                reflection: "How can we honour the memory of az-Zahrā (AS) in our daily lives?"
+                reflection: "How can we honour the memory of az-Zahrā (AS) in our daily lives?",
+                themeUr: "سیدہ زہراؑ کا نور",
+                tafsirFocusUr: "قرآن میں سیدہ فاطمہ زہراؑ کے مقام پر غور و فکر۔",
+                reflectionUr: "ہم اپنی روزمرہ زندگی میں سیدہ زہراؑ کی یاد کو کیسے زندہ رکھ سکتے ہیں؟"
             )
         )
     }

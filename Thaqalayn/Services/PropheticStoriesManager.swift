@@ -57,9 +57,13 @@ class PropheticStoriesManager: ObservableObject {
         return stories.filter { $0.category == category }
     }
 
-    /// Filter stories by prophet name
+    /// Filter stories by prophet name (matches any language)
     func stories(byProphet prophet: String) -> [PropheticStory] {
-        return stories.filter { $0.prophet.localizedCaseInsensitiveContains(prophet) }
+        return stories.filter {
+            [$0.prophetEn, $0.prophetAr, $0.prophetUr].contains { name in
+                name.localizedCaseInsensitiveContains(prophet)
+            }
+        }
     }
 
     /// Get all unique categories
@@ -67,21 +71,24 @@ class PropheticStoriesManager: ObservableObject {
         return StoryCategory.allCases
     }
 
-    /// Get all unique prophets mentioned in stories
+    /// Get all unique prophets mentioned in stories (English canonical names)
     var prophets: [String] {
-        return Array(Set(stories.map { $0.prophet })).sorted()
+        return Array(Set(stories.map { $0.prophetEn })).sorted()
     }
 
     // MARK: - Search Methods
 
-    /// Search stories by title or prophet name
+    /// Search stories by title, prophet or short title (across EN/AR/UR)
     func search(query: String) -> [PropheticStory] {
         guard !query.isEmpty else { return stories }
 
-        return stories.filter {
-            $0.title.localizedCaseInsensitiveContains(query) ||
-            $0.prophet.localizedCaseInsensitiveContains(query) ||
-            ($0.shortTitle?.localizedCaseInsensitiveContains(query) ?? false)
+        return stories.filter { s in
+            let haystack: [String] = [
+                s.titleEn, s.titleAr, s.titleUr,
+                s.prophetEn, s.prophetAr, s.prophetUr,
+                s.shortTitleEn ?? "", s.shortTitleAr ?? "", s.shortTitleUr ?? "",
+            ]
+            return haystack.contains { $0.localizedCaseInsensitiveContains(query) }
         }
     }
 

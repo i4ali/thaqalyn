@@ -12,7 +12,10 @@ struct QuestionDetailView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var questionsManager = QuestionsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
+
+    private var isRTL: Bool { languageManager.selectedLanguage.isRTL }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
 
@@ -84,13 +87,15 @@ struct QuestionDetailView: View {
                                     .tracking(1.2)
                             }
 
-                            Text(question.question)
+                            Text(question.question(for: languageManager.selectedLanguage))
                                 .font(.system(size: 24, weight: .bold, design: .rounded))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineSpacing(4)
+                                .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                         }
                     }
                     .padding(24)
+                    .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                     .background {
                         RoundedRectangle(cornerRadius: 24)
                             .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
@@ -203,15 +208,17 @@ struct QuestionDetailView: View {
                             // Question text (prominent serif)
                             VStack(alignment: .leading, spacing: 10) {
                                 EmSectionLabel(icon: "questionmark.circle", text: "The Question")
-                                Text(question.question)
+                                Text(question.question(for: languageManager.selectedLanguage))
                                     .font(EmType.serif(28, .semiBold))
                                     .foregroundColor(themeManager.primaryText)
                                     .lineSpacing(2)
                                     .fixedSize(horizontal: false, vertical: true)
+                                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         .padding(22)
+                        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 12)
@@ -277,6 +284,7 @@ struct VerseAnswerCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
@@ -284,8 +292,18 @@ struct VerseAnswerCard: View {
               let verse = verses["\(questionVerse.verseNumber)"] else {
             return nil
         }
-        return (verse.arabicText, verse.translation)
+        // Verse translations exist only in English + Urdu; Arabic/English fall back to English.
+        let translation: String
+        if languageManager.selectedLanguage == .urdu, let urdu = verse.translationUrdu, !urdu.isEmpty {
+            translation = urdu
+        } else {
+            translation = verse.translation
+        }
+        return (verse.arabicText, translation)
     }
+
+    private var verseTranslationIsRTL: Bool { languageManager.selectedLanguage == .urdu }
+    private var noteIsRTL: Bool { languageManager.selectedLanguage.isRTL }
 
     var surahName: String {
         dataManager.quranData?.surahs.first { $0.number == questionVerse.surahNumber }?.englishName ?? "Surah \(questionVerse.surahNumber)"
@@ -332,18 +350,23 @@ struct VerseAnswerCard: View {
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(3 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "lightbulb")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(questionVerse.relevanceNote)
+                    Text(questionVerse.relevanceNote(for: languageManager.selectedLanguage))
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
+                        .frame(maxWidth: .infinity, alignment: noteIsRTL ? .trailing : .leading)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .environment(\.layoutDirection, noteIsRTL ? .rightToLeft : .leftToRight)
                 .background(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(themeManager.accentChip.opacity(0.6))
@@ -417,6 +440,9 @@ struct VerseAnswerCard: View {
                         .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 .padding(20)
 
@@ -436,12 +462,14 @@ struct VerseAnswerCard: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
 
-                Text(questionVerse.relevanceNote)
+                Text(questionVerse.relevanceNote(for: languageManager.selectedLanguage))
                     .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
+                    .frame(maxWidth: .infinity, alignment: noteIsRTL ? .trailing : .leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            .environment(\.layoutDirection, noteIsRTL ? .rightToLeft : .leftToRight)
             .padding(20)
             .background {
                 Rectangle()
@@ -494,6 +522,7 @@ struct VerseAnswerCard: View {
 struct RelatedQuestionCard: View {
     let question: Question
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var navigateToQuestion = false
 
     var body: some View {
@@ -505,7 +534,7 @@ struct RelatedQuestionCard: View {
             EmCard(cornerRadius: 16) {
                 HStack(spacing: 12) {
                     EmIconChip(sfSymbol: question.categoryIcon, size: 38)
-                    Text(question.question)
+                    Text(question.question(for: languageManager.selectedLanguage))
                         .font(EmType.serif(17, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
@@ -534,7 +563,7 @@ struct RelatedQuestionCard: View {
                             .fill(themeManager.accentColor.opacity(0.15))
                     }
 
-                Text(question.question)
+                Text(question.question(for: languageManager.selectedLanguage))
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(2)
@@ -568,14 +597,20 @@ struct RelatedQuestionCard: View {
         QuestionDetailView(
             question: Question(
                 id: "q1",
-                question: "What is the purpose of life?",
-                shortQuestion: "Life's purpose?",
+                questionEn: "What is the purpose of life?",
+                questionAr: "ما هو الغرض من الحياة؟",
+                questionUr: "زندگی کا مقصد کیا ہے؟",
+                shortQuestionEn: "Life's purpose?",
+                shortQuestionAr: "غرض الحياة؟",
+                shortQuestionUr: "زندگی کا مقصد؟",
                 category: .faith,
                 verses: [
                     QuestionVerse(
                         surahNumber: 51,
                         verseNumber: 56,
-                        relevanceNote: "This verse directly states the purpose: to worship and know Allah.",
+                        relevanceNoteEn: "This verse directly states the purpose: to worship and know Allah.",
+                        relevanceNoteAr: "تنص هذه الآية مباشرةً على الغرض: عبادة الله ومعرفته.",
+                        relevanceNoteUr: "یہ آیت براہِ راست مقصد بیان کرتی ہے: اللہ کی عبادت اور معرفت۔",
                         isPrimary: true
                     )
                 ],

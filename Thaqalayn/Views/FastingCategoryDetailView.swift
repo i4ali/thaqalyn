@@ -11,8 +11,17 @@ struct FastingCategoryDetailView: View {
     let category: FastingCategory
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
+
+    private var localizedFastingEyebrow: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "الصيام في القرآن"
+        case .urdu:   return "قرآن میں روزہ"
+        default:      return "Fasting in the Quran"
+        }
+    }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
 
@@ -42,7 +51,7 @@ struct FastingCategoryDetailView: View {
                             }
 
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(category.title)
+                                Text(category.title(for: languageManager.selectedLanguage))
                                     .font(.system(size: 24, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
@@ -55,12 +64,14 @@ struct FastingCategoryDetailView: View {
                         }
 
                         // Description
-                        Text(category.description)
+                        Text(category.description(for: languageManager.selectedLanguage))
                             .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
                             .lineSpacing(4 * readingSettings.scale)
                     }
                     .padding(24)
+                    .environment(\.layoutDirection,
+                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                     .background {
                         RoundedRectangle(cornerRadius: 24)
                             .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
@@ -146,10 +157,10 @@ struct FastingCategoryDetailView: View {
                     HStack(spacing: 14) {
                         EmIconChip(sfSymbol: category.icon, size: 56)
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("Fasting in the Quran".uppercased())
+                            Text(localizedFastingEyebrow.uppercased())
                                 .font(.system(size: 11, weight: .bold)).tracking(3)
                                 .foregroundColor(themeManager.accentColor)
-                            Text(category.title)
+                            Text(category.title(for: languageManager.selectedLanguage))
                                 .font(EmType.serif(28, .semiBold))
                                 .foregroundColor(themeManager.primaryText)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -162,13 +173,15 @@ struct FastingCategoryDetailView: View {
                     Rectangle()
                         .fill(themeManager.dividerColor)
                         .frame(height: 1)
-                    Text(category.description)
+                    Text(category.description(for: languageManager.selectedLanguage))
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(20)
+                .environment(\.layoutDirection,
+                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             }
             .padding(.horizontal, 20)
             .padding(.top, 12)
@@ -203,6 +216,7 @@ struct FastingVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
@@ -210,8 +224,18 @@ struct FastingVerseCard: View {
               let verse = verses["\(fastingVerse.verseNumber)"] else {
             return nil
         }
-        return (verse.arabicText, verse.translation)
+        // Verse translations exist only in English + Urdu; Arabic/English fall back to English.
+        let translation: String
+        if languageManager.selectedLanguage == .urdu, let urdu = verse.translationUrdu, !urdu.isEmpty {
+            translation = urdu
+        } else {
+            translation = verse.translation
+        }
+        return (verse.arabicText, translation)
     }
+
+    /// Verse translation is Urdu-only (Arabic falls back to English), so RTL only for Urdu.
+    private var verseTranslationIsRTL: Bool { languageManager.selectedLanguage == .urdu }
 
     var surahName: String {
         dataManager.quranData?.surahs.first { $0.number == fastingVerse.surahNumber }?.englishName ?? "Surah \(fastingVerse.surahNumber)"
@@ -260,7 +284,9 @@ struct FastingVerseCard: View {
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(3 * readingSettings.scale)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
 
                 // Relevance note
@@ -268,13 +294,16 @@ struct FastingVerseCard: View {
                     Image(systemName: "text.bubble")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(fastingVerse.relevanceNote)
+                    Text(fastingVerse.relevanceNote(for: languageManager.selectedLanguage))
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
+                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .environment(\.layoutDirection,
+                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                 .background(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(themeManager.accentChip.opacity(0.6))
@@ -362,6 +391,9 @@ struct FastingVerseCard: View {
                         .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
+                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
                 }
                 .padding(20)
 
@@ -381,12 +413,15 @@ struct FastingVerseCard: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
 
-                Text(fastingVerse.relevanceNote)
+                Text(fastingVerse.relevanceNote(for: languageManager.selectedLanguage))
                     .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
+                    .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
             }
             .padding(20)
+            .environment(\.layoutDirection,
+                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             .background {
                 Rectangle()
                     .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
@@ -440,15 +475,21 @@ struct FastingVerseCard: View {
         FastingCategoryDetailView(
             category: FastingCategory(
                 id: "obligation",
-                title: "Obligation of Fasting",
+                titleEn: "Obligation of Fasting",
+                titleAr: "فريضة الصيام",
+                titleUr: "روزے کی فرضیت",
                 icon: "book.fill",
-                description: "The foundational verses establishing fasting as an obligation for believers.",
+                descriptionEn: "The foundational verses establishing fasting as an obligation for believers.",
+                descriptionAr: "الآيات التأسيسية التي تُرسي الصيام فريضةً على المؤمنين.",
+                descriptionUr: "بنیادی آیات جو اہلِ ایمان پر روزہ فرض قرار دیتی ہیں۔",
                 verses: [
                     FastingVerse(
                         id: "f1",
                         surahNumber: 2,
                         verseNumber: 183,
-                        relevanceNote: "The primary verse prescribing fasting for believers.",
+                        relevanceNoteEn: "The primary verse prescribing fasting for believers.",
+                        relevanceNoteAr: "الآية المحورية التي تفرض الصيام على المؤمنين.",
+                        relevanceNoteUr: "بنیادی آیت جو اہلِ ایمان پر روزہ فرض کرتی ہے۔",
                         isKeyVerse: true
                     )
                 ]

@@ -24,6 +24,8 @@ struct JourneyHubView: View {
     @ObservedObject private var tm = ThemeManager.shared
     @ObservedObject private var cal = IslamicCalendarManager.shared
     @ObservedObject private var router = DeepLinkRouter.shared
+    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     @State private var presented: PresentedJourney?
     /// Set when a locked journey is tapped — drives the "ended / not open yet" alert.
     @State private var lockedAlert: LockedJourneyAlert?
@@ -62,8 +64,10 @@ struct JourneyHubView: View {
             AdaptiveModernBackground()
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    EmHeading(eyebrow: "Sacred Seasons", title: "Journeys",
-                              sub: "Live each sacred season deeply, and let it transform you.")
+                    EmHeading(eyebrow: JourneyStrings.sacredSeasons(lang), title: JourneyStrings.journeys(lang),
+                              sub: JourneyStrings.journeysSub(lang))
+                        .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                         .padding(.horizontal, 4)
                         .padding(.top, 12)
                         .padding(.bottom, 22)   // clear gap so the cards sit below the top glow/header zone
@@ -114,15 +118,16 @@ struct JourneyHubView: View {
     private func makeLockedAlert(for d: JourneyDescriptor, status: JourneyStatus) -> LockedJourneyAlert {
         let title: String
         let detail: String
+        let jTitle = JourneyStrings.title(d.id, lang)
         switch status {
         case .ended(_, let returns):
-            title = "\(d.title) has ended"
+            title = JourneyStrings.hasEnded(jTitle, lang)
             detail = returns
         case .comingSoon(_, let starts):
-            title = "\(d.title) isn't open yet"
+            title = JourneyStrings.notOpenYet(jTitle, lang)
             detail = starts
         case .active:
-            title = d.title          // unreachable: active journeys open directly
+            title = jTitle          // unreachable: active journeys open directly
             detail = ""
         }
         return LockedJourneyAlert(title: title, detail: detail, pointer: pointerLine(excluding: d))
@@ -142,10 +147,11 @@ struct JourneyHubView: View {
         let rows = JourneyDescriptor.all.map { ($0, $0.status(using: cal)) }
         guard let soonest = rows.min(by: { opensIn($0.1) < opensIn($1.1) }) else { return nil }
         if soonest.0.id == tapped.id { return nil }
-        if soonest.1.isActive { return "\(soonest.0.title) is open now" }
+        let sTitle = JourneyStrings.title(soonest.0.id, lang)
+        if soonest.1.isActive { return JourneyStrings.isOpenNow(sTitle, lang) }
         let days = opensIn(soonest.1)
-        if days <= 0 { return "Up next: \(soonest.0.title) · today" }
-        return "Up next: \(soonest.0.title) · in \(days) day\(days == 1 ? "" : "s")"
+        if days <= 0 { return JourneyStrings.upNextToday(sTitle, lang) }
+        return JourneyStrings.upNextInDays(sTitle, days, lang)
     }
 
     /// If a deep-link queued a journey and it is currently active, open it.
@@ -161,6 +167,8 @@ struct JourneyHubView: View {
 
 struct JourneyCard: View {
     @ObservedObject private var tm = ThemeManager.shared
+    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     let descriptor: JourneyDescriptor
     let status: JourneyStatus
     /// When true, this is the soonest upcoming journey — marked with a "NEXT UP"
@@ -178,11 +186,11 @@ struct JourneyCard: View {
                         if isNextUp {
                             nextUpPill
                         } else {
-                            Text(descriptor.eyebrow.uppercased())
-                                .font(.system(size: 10.5, weight: .bold)).tracking(2)
+                            Text(JourneyStrings.eyebrow(descriptor.id, descriptor.eyebrow, lang).uppercased())
+                                .emEyebrow(lang, size: 10.5, tracking: 2)
                                 .foregroundColor(tm.accentColor)
                         }
-                        Text(descriptor.title)
+                        Text(JourneyStrings.title(descriptor.id, lang))
                             .font(EmType.serif(22, .semiBold))
                             .foregroundColor(tm.primaryText)
                         Text(detailLine)
@@ -193,6 +201,7 @@ struct JourneyCard: View {
                     trailingGlyph
                 }
                 .padding(16)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
             }
         }
         .buttonStyle(EmPressStyle())
@@ -200,7 +209,7 @@ struct JourneyCard: View {
 
     /// Gold "NEXT UP" capsule shown in the eyebrow slot of the next-up card.
     private var nextUpPill: some View {
-        Text("NEXT UP")
+        Text(JourneyStrings.nextUp(lang))
             .font(.system(size: 9, weight: .heavy)).tracking(1.6)
             .foregroundColor(tm.onAccentText)
             .padding(.horizontal, 8)
@@ -211,8 +220,8 @@ struct JourneyCard: View {
     private var detailLine: String {
         switch status {
         case .active(let line):                 return line
-        case .comingSoon(let days, _):          return "Coming soon · in \(days) day\(days == 1 ? "" : "s")"
-        case .ended(_, let returns):            return isNextUp ? returns : "Ended · \(returns)"
+        case .comingSoon(let days, _):          return JourneyStrings.comingSoonInDays(days, lang)
+        case .ended(_, let returns):            return isNextUp ? returns : JourneyStrings.endedReturns(returns, lang)
         }
     }
 
@@ -259,6 +268,7 @@ struct JourneyCover: View {
 /// (tap to dismiss) over a card that explains the lock and names the next journey.
 struct LockedJourneyOverlay: View {
     @ObservedObject private var tm = ThemeManager.shared
+    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     let alert: LockedJourneyAlert
     let onDismiss: () -> Void
 
@@ -291,7 +301,7 @@ struct LockedJourneyOverlay: View {
                     }
                 }
 
-                EmGoldCTA(title: "Got it", small: true) { onDismiss() }
+                EmGoldCTA(title: JourneyStrings.gotIt(languageManager.selectedLanguage), small: true) { onDismiss() }
                     .padding(.top, 4)
             }
             .padding(22)

@@ -11,6 +11,7 @@ import SwiftUI
 struct FoodsView: View {
     @StateObject private var foodsManager = FoodsManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var showPaywall = false
@@ -47,6 +48,8 @@ struct FoodsView: View {
                             }
                             .padding(.horizontal, 20)
                             .padding(.vertical, 20)
+                            .environment(\.layoutDirection,
+                                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                         }
                     }
                 }
@@ -76,15 +79,15 @@ struct FoodsView: View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: themeManager.isMidnightEmerald ? 7 : 4) {
                 if themeManager.isMidnightEmerald {
-                    Text("NOURISHMENT")
+                    Text(localizedEyebrow.uppercased())
                         .font(.system(size: 11, weight: .bold)).tracking(3)
                         .foregroundColor(themeManager.accentColor)
                 }
-                Text("Foods of the Quran")
+                Text(localizedTitle)
                     .font(themeManager.isMidnightEmerald ? EmType.serif(34, .semiBold) : .system(size: 34, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
                     .fixedSize(horizontal: false, vertical: true)
-                Text("Nourishment from Qur'an & Ahlul Bayt")
+                Text(localizedSubtitle)
                     .font(.system(size: themeManager.isMidnightEmerald ? 13.5 : 16, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -93,6 +96,34 @@ struct FoodsView: View {
         .padding(.horizontal, 20)
         .padding(.top, 20)
         .padding(.bottom, 18)
+        .environment(\.layoutDirection,
+                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+    }
+
+    // MARK: - Localized header strings (follow the global app language)
+
+    private var localizedEyebrow: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "غذاء"
+        case .urdu:   return "غذائیت"
+        default:      return "Nourishment"
+        }
+    }
+
+    private var localizedTitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "أطعمة القرآن"
+        case .urdu:   return "قرآن کی غذائیں"
+        default:      return "Foods of the Quran"
+        }
+    }
+
+    private var localizedSubtitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "غذاءٌ من القرآن وأهل البيت (ع)"
+        case .urdu:   return "قرآن اور اہلِ بیت سے غذا"
+        default:      return "Nourishment from Qur'an & Ahlul Bayt"
+        }
     }
 
     private var loadingSection: some View {
@@ -111,6 +142,7 @@ struct FoodCard: View {
     let food: Food
     let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
@@ -133,7 +165,7 @@ struct FoodCard: View {
                 chip
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 8) {
-                        Text(food.name)
+                        Text(food.name(for: languageManager.selectedLanguage))
                             .font(EmType.serif(20, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(1)
@@ -165,7 +197,7 @@ struct FoodCard: View {
             chip
             VStack(alignment: .leading, spacing: 4) {
                 HStack(spacing: 8) {
-                    Text(food.name)
+                    Text(food.name(for: languageManager.selectedLanguage))
                         .font(.system(size: 17, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                     if isLocked {

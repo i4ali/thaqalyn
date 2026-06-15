@@ -10,6 +10,7 @@ import SwiftUI
 struct QuestionsView: View {
     @StateObject private var questionsManager = QuestionsManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
@@ -46,6 +47,32 @@ struct QuestionsView: View {
         return grouped.sorted { $0.key.displayName < $1.key.displayName }.first?.value.first?.id
     }
 
+    // MARK: - Localized header strings (follow the global app language)
+
+    private var localizedEyebrow: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "مكتبة الحكمة"
+        case .urdu:   return "حکمت کا خزانہ"
+        default:      return "Wisdom Library"
+        }
+    }
+
+    private var localizedTitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "أسئلة وأجوبة"
+        case .urdu:   return "سوالات و جوابات"
+        default:      return "Questions & Answers"
+        }
+    }
+
+    private var localizedSubtitle: String {
+        switch languageManager.selectedLanguage {
+        case .arabic: return "اعثر على هداية القرآن لأسئلة الحياة"
+        case .urdu:   return "زندگی کے سوالوں کے لیے قرآنی رہنمائی"
+        default:      return "Find Quranic guidance for life's questions"
+        }
+    }
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -58,17 +85,17 @@ struct QuestionsView: View {
                         HStack {
                             if themeManager.isMidnightEmerald {
                                 VStack(alignment: .leading, spacing: 7) {
-                                    Text("WISDOM LIBRARY").font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
-                                    Text("Questions & Answers").font(EmType.serif(34, .semiBold)).foregroundColor(themeManager.primaryText).fixedSize(horizontal: false, vertical: true)
-                                    Text("Find Quranic guidance for life's questions").font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
+                                    Text(localizedEyebrow.uppercased()).font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
+                                    Text(localizedTitle).font(EmType.serif(34, .semiBold)).foregroundColor(themeManager.primaryText).fixedSize(horizontal: false, vertical: true)
+                                    Text(localizedSubtitle).font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
                                 }
                             } else {
                                 VStack(alignment: .leading, spacing: 4) {
-                                    Text("Questions & Answers")
+                                    Text(localizedTitle)
                                         .font(.system(size: 34, weight: .bold, design: .rounded))
                                         .foregroundColor(themeManager.primaryText)
 
-                                    Text("Find Quranic guidance for life's questions")
+                                    Text(localizedSubtitle)
                                         .font(.system(size: 16, weight: .medium))
                                         .foregroundColor(themeManager.secondaryText)
                                 }
@@ -80,6 +107,8 @@ struct QuestionsView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 12)
+                    .environment(\.layoutDirection,
+                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
 
                     // Search bar
                     HStack(spacing: 12) {
@@ -213,9 +242,14 @@ struct QuestionCardView: View {
     let question: Question
     let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+        Group {
+            if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+        }
+        .environment(\.layoutDirection,
+                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
     private var emeraldBody: some View {
         EmCard {
@@ -223,7 +257,7 @@ struct QuestionCardView: View {
                 EmIconChip(sfSymbol: question.categoryIcon, size: 46)
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(alignment: .top, spacing: 8) {
-                        Text(question.question)
+                        Text(question.question(for: languageManager.selectedLanguage))
                             .font(EmType.serif(19, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(3).multilineTextAlignment(.leading)
@@ -277,7 +311,7 @@ struct QuestionCardView: View {
             // Question content
             VStack(alignment: .leading, spacing: 6) {
                 HStack(alignment: .top, spacing: 8) {
-                    Text(question.question)
+                    Text(question.question(for: languageManager.selectedLanguage))
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(3)

@@ -10,18 +10,55 @@ import SwiftUI
 struct MainTabView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var deepLinkRouter = DeepLinkRouter.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var tabBarVisibility = TabBarVisibility.shared
     @State private var selectedTab = 0
+
+    // Localized label for each tab, driven by the global Settings → Language picker.
+    private func tabLabel(_ id: Int) -> String {
+        switch id {
+        case 0:
+            switch languageManager.selectedLanguage {
+            case .arabic: return "اليوم"
+            case .urdu:   return "آج"
+            default:      return "Today"
+            }
+        case 1:
+            switch languageManager.selectedLanguage {
+            case .arabic: return "القرآن"
+            case .urdu:   return "قرآن"
+            default:      return "Quran"
+            }
+        case 2:
+            switch languageManager.selectedLanguage {
+            case .arabic: return "اكتشف"
+            case .urdu:   return "دریافت"
+            default:      return "Explore"
+            }
+        case 3:
+            switch languageManager.selectedLanguage {
+            case .arabic: return "التقدّم"
+            case .urdu:   return "پیش رفت"
+            default:      return "Progress"
+            }
+        default:
+            switch languageManager.selectedLanguage {
+            case .arabic: return "رحلة"
+            case .urdu:   return "سفر"
+            default:      return "Journey"
+            }
+        }
+    }
 
     // Items for the Midnight Emerald floating tab bar — mirrors the five
     // permanent tabs in the TabView below.
     private var emeraldItems: [EmeraldTabItem] {
         [
-            EmeraldTabItem(id: 0, label: "Today",    sfSymbol: "sun.max"),
-            EmeraldTabItem(id: 1, label: "Quran",    sfSymbol: "book.closed"),
-            EmeraldTabItem(id: 2, label: "Explore",  sfSymbol: "sparkles"),
-            EmeraldTabItem(id: 3, label: "Progress", sfSymbol: "chart.bar"),
-            EmeraldTabItem(id: 4, label: "Journey",  sfSymbol: "map"),
+            EmeraldTabItem(id: 0, label: tabLabel(0), sfSymbol: "sun.max"),
+            EmeraldTabItem(id: 1, label: tabLabel(1), sfSymbol: "book.closed"),
+            EmeraldTabItem(id: 2, label: tabLabel(2), sfSymbol: "sparkles"),
+            EmeraldTabItem(id: 3, label: tabLabel(3), sfSymbol: "chart.bar"),
+            EmeraldTabItem(id: 4, label: tabLabel(4), sfSymbol: "map"),
         ]
     }
 
@@ -31,7 +68,7 @@ struct MainTabView: View {
             TodayTab(selectedTab: $selectedTab)
                 .tabItem {
                     Label {
-                        Text("Today")
+                        Text(tabLabel(0))
                     } icon: {
                         Image(systemName: "sun.max.fill")
                     }
@@ -42,7 +79,7 @@ struct MainTabView: View {
             HomeTab()
                 .tabItem {
                     Label {
-                        Text("Quran")
+                        Text(tabLabel(1))
                     } icon: {
                         Image(systemName: "book.closed.fill")
                     }
@@ -53,7 +90,7 @@ struct MainTabView: View {
             ExploreTab()
                 .tabItem {
                     Label {
-                        Text("Explore")
+                        Text(tabLabel(2))
                     } icon: {
                         Image(systemName: "sparkles")
                     }
@@ -64,7 +101,7 @@ struct MainTabView: View {
             ProgressTab()
                 .tabItem {
                     Label {
-                        Text("Progress")
+                        Text(tabLabel(3))
                     } icon: {
                         Image(systemName: "circle.circle")
                     }
@@ -76,7 +113,7 @@ struct MainTabView: View {
             JourneyHubView()
                 .tabItem {
                     Label {
-                        Text("Journey")
+                        Text(tabLabel(4))
                     } icon: {
                         Image(systemName: "map.fill")
                     }

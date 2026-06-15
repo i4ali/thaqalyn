@@ -57,10 +57,11 @@ class AhlulbaytQuranManager: ObservableObject {
         return entries.filter { $0.category == category }
     }
 
-    /// Filter entries by Ahl al-Bayt member mentioned
+    /// Filter entries by Ahl al-Bayt member mentioned (matches any language).
     func entries(byMember member: String) -> [AhlulbaytEntry] {
         return entries.filter { entry in
-            entry.ahlulbaytMembers.contains { $0.localizedCaseInsensitiveContains(member) }
+            (entry.ahlulbaytMembersEn + entry.ahlulbaytMembersAr + entry.ahlulbaytMembersUr)
+                .contains { $0.localizedCaseInsensitiveContains(member) }
         }
     }
 
@@ -69,22 +70,24 @@ class AhlulbaytQuranManager: ObservableObject {
         return AhlulbaytCategory.allCases
     }
 
-    /// Get all unique Ahl al-Bayt members mentioned
+    /// Get all unique Ahl al-Bayt members mentioned (English canonical names).
     var allMembers: [String] {
-        let allMemberNames = entries.flatMap { $0.ahlulbaytMembers }
+        let allMemberNames = entries.flatMap { $0.ahlulbaytMembersEn }
         return Array(Set(allMemberNames)).sorted()
     }
 
     // MARK: - Search Methods
 
-    /// Search entries by title or member name
+    /// Search entries by title or member name, across all languages (EN/AR/UR).
     func search(query: String) -> [AhlulbaytEntry] {
         guard !query.isEmpty else { return entries }
 
-        return entries.filter {
-            $0.title.localizedCaseInsensitiveContains(query) ||
-            ($0.shortTitle?.localizedCaseInsensitiveContains(query) ?? false) ||
-            $0.ahlulbaytMembers.contains(where: { $0.localizedCaseInsensitiveContains(query) })
+        return entries.filter { entry in
+            let titles: [String] = [entry.titleEn, entry.titleAr, entry.titleUr]
+            let shorts: [String] = [entry.shortTitleEn, entry.shortTitleAr, entry.shortTitleUr].compactMap { $0 }
+            let members: [String] = entry.ahlulbaytMembersEn + entry.ahlulbaytMembersAr + entry.ahlulbaytMembersUr
+            let haystack: [String] = titles + shorts + members
+            return haystack.contains { $0.localizedCaseInsensitiveContains(query) }
         }
     }
 

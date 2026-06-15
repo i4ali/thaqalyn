@@ -13,6 +13,8 @@ struct HajjJourneyView: View {
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     @State private var selectedDay: HajjDay?
     @State private var navigateToDetail = false
     @State private var showPaywall = false
@@ -29,7 +31,7 @@ struct HajjJourneyView: View {
 
                     // Day list
                     if journeyManager.isLoading {
-                        HajjLoadingSection(message: "Loading journey...")
+                        HajjLoadingSection(message: JourneyStrings.loadingJourney(languageManager.selectedLanguage))
                     } else if let error = journeyManager.errorMessage {
                         HajjErrorSection(message: error)
                     } else {
@@ -84,10 +86,12 @@ struct HajjJourneyHeader: View {
     @StateObject private var journeyManager = HajjJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var statusMessage: String {
         let status = calendarManager.hajjSeasonStatus()
-        return status.isEmpty ? "Dhul-Hijjah Journey" : status
+        return status.isEmpty ? JourneyStrings.screenTitle("hajj", lang) : status
     }
 
     var body: some View {
@@ -96,13 +100,13 @@ struct HajjJourneyHeader: View {
 
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: "10-Day Journey",
-            title: "Dhul-Hijjah",
+            eyebrow: JourneyStrings.eyebrow("hajj", "10-Day Journey", lang),
+            title: JourneyStrings.title("hajj", lang),
             sfSymbol: "building.columns.fill",
             statusLine: statusMessage,
-            countLine: "\(journeyManager.completedDaysCount) of 10 days completed",
+            countLine: JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 10, lang),
             percent: journeyManager.completionPercentage,
-            completionNote: journeyManager.isJourneyCompleted ? "Journey complete · Hajj Champion earned" : nil
+            completionNote: journeyManager.isJourneyCompleted ? (languageManager.selectedLanguage == .urdu ? "سفر مکمل · Hajj Champion حاصل کر لیا" : "Journey complete · Hajj Champion earned") : nil
         )
     }
 
@@ -112,7 +116,7 @@ struct HajjJourneyHeader: View {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Dhul-Hijjah Journey")
+                        Text(JourneyStrings.screenTitle("hajj", lang))
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
@@ -133,7 +137,7 @@ struct HajjJourneyHeader: View {
             // Progress bar
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text("\(journeyManager.completedDaysCount) of 10 days completed")
+                    Text(JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 10, lang))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -164,7 +168,7 @@ struct HajjJourneyHeader: View {
                 HStack(spacing: 8) {
                     Image(systemName: "checkmark.seal.fill")
                         .foregroundColor(.green)
-                    Text("Journey Complete! Hajj Champion badge earned.")
+                    Text(languageManager.selectedLanguage == .urdu ? "سفر مکمل! Hajj Champion کا بیج حاصل کر لیا۔" : "Journey Complete! Hajj Champion badge earned.")
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundColor(.green)
                 }
@@ -184,6 +188,8 @@ struct HajjDayCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var greenGradient: LinearGradient {
         LinearGradient(
@@ -220,7 +226,7 @@ struct HajjDayCard: View {
     private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
-            theme: day.theme,
+            theme: day.localizedTheme(lang),
             themeArabic: day.themeArabic,
             isDone: isCompleted,
             isCurrent: isCurrentDay,
@@ -262,7 +268,7 @@ struct HajjDayCard: View {
                 // Day content
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text("Day \(day.dayNumber)")
+                        Text(JourneyStrings.dayN(day.dayNumber, lang))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(themeManager.secondaryText)
 
@@ -277,7 +283,7 @@ struct HajjDayCard: View {
                                         .fill(Color.orange.gradient)
                                 )
                         } else if isCurrentDay {
-                            Text("TODAY")
+                            Text(JourneyStrings.today(lang))
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 6)
@@ -294,7 +300,7 @@ struct HajjDayCard: View {
                             .font(.system(size: 14))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
 
-                        Text(day.theme)
+                        Text(day.localizedTheme(lang))
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
                     }
@@ -352,6 +358,7 @@ private struct HajjLoadingSection: View {
 private struct HajjErrorSection: View {
     let message: String
     @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -359,7 +366,7 @@ private struct HajjErrorSection: View {
                 .font(.system(size: 48))
                 .foregroundColor(.orange)
 
-            Text("Error Loading Journey")
+            Text(JourneyStrings.errorLoadingJourney(languageManager.selectedLanguage))
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
 

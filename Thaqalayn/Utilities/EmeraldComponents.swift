@@ -21,6 +21,27 @@ enum EmType {
     static func arabic(_ size: CGFloat, bold: Bool = false) -> Font { .custom(bold ? "Amiri-Bold" : "Amiri-Regular", size: size) }
 }
 
+// MARK: - Eyebrow / small-caps label
+
+extension Text {
+    /// Styling for the app's small-caps "eyebrow" labels (the little
+    /// uppercased section tags like "TODAY'S DUA"), made RTL-aware.
+    ///
+    /// The baseline `size` and letter-`tracking` are tuned for Latin capitals.
+    /// Arabic/Urdu is connected script with no upper-case, so at the same size
+    /// it reads noticeably smaller, and the tracking pulls apart joined glyphs.
+    /// For RTL we raise the size a touch and drop the tracking; LTR is unchanged.
+    func emEyebrow(_ lang: CommentaryLanguage,
+                   size: CGFloat,
+                   tracking: CGFloat = 0,
+                   weight: Font.Weight = .bold,
+                   design: Font.Design = .default) -> Text {
+        self
+            .font(.system(size: lang.isRTL ? size + 2 : size, weight: weight, design: design))
+            .tracking(lang.isRTL ? 0 : tracking)
+    }
+}
+
 // MARK: - Press style
 
 /// Shared tap-feedback for the app: a deep, smooth, no-bounce press.

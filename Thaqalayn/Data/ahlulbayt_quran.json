@@ -2,282 +2,626 @@
   "entries": [
     {
       "id": "ab1",
-      "title": "The Verse of Purification (Ayat al-Tathir)",
-      "shortTitle": "Verse of Purification",
+      "titleEn": "The Verse of Purification (Ayat al-Tathir)",
+      "titleAr": "آية التطهير",
+      "titleUr": "آیتِ تطہیر",
+      "shortTitleEn": "Verse of Purification",
+      "shortTitleAr": "آية التطهير",
+      "shortTitleUr": "آیتِ تطہیر",
       "category": "purity",
       "verses": [
         {
           "surahNumber": 33,
           "verseNumber": 33,
-          "context": "Allah removes all impurity from the Ahl al-Bayt and purifies them completely",
+          "contextEn": "Allah removes all impurity from the Ahl al-Bayt and purifies them completely",
+          "contextAr": "يُزيل اللهُ كلَّ رجسٍ عن أهل البيت (ع) ويُطهِّرهم تطهيرًا كاملًا",
+          "contextUr": "اللہ تعالیٰ نے اہلِ بیت علیہم السلام کو ہر ناپاکی سے پاک کر دیا اور انہیں مکمل طہارت عطا فرمائی",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Prophet Muhammad", "Fatimah az-Zahra", "Ali ibn Abi Talib", "Hasan ibn Ali", "Husayn ibn Ali"],
-      "revelationContext": "Revealed when the Prophet gathered Fatimah, Ali, Hasan, and Husayn under his cloak (Hadith al-Kisa) and declared them as his Ahl al-Bayt, excluding his wives from this designation according to numerous Shia and Sunni narrations.",
-      "relatedEntries": ["ab2", "ab13"]
+      "ahlulbaytMembersEn": [
+        "Prophet Muhammad",
+        "Fatimah az-Zahra",
+        "Ali ibn Abi Talib",
+        "Hasan ibn Ali",
+        "Husayn ibn Ali"
+      ],
+      "ahlulbaytMembersAr": [
+        "النبي محمد (ص)",
+        "فاطمة الزهراء (ع)",
+        "علي بن أبي طالب (ع)",
+        "الحسن بن علي (ع)",
+        "الحسين بن علي (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم",
+        "فاطمہ زہرا سلام اللہ علیہا",
+        "علی ابن ابی طالب علیہ السلام",
+        "امام حسن علیہ السلام",
+        "امام حسین علیہ السلام"
+      ],
+      "revelationContextEn": "Revealed when the Prophet gathered Fatimah, Ali, Hasan, and Husayn under his cloak (Hadith al-Kisa) and declared them as his Ahl al-Bayt, excluding his wives from this designation according to numerous Shia and Sunni narrations.",
+      "revelationContextAr": "نزلت حين جمع النبيُّ (ص) فاطمةَ وعليًّا والحسنَ والحسينَ تحت كسائه —وهو ما يُعرف بحديث الكساء— وأعلنهم أهلَ بيته، مستثنيًا زوجاته من هذا المسمّى وفقًا لروايات السنّة والشيعة المتعددة.",
+      "revelationContextUr": "یہ آیت اس وقت نازل ہوئی جب پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم نے فاطمہ، علی، حسن اور حسین علیہم السلام کو اپنی چادر کے نیچے جمع فرمایا — جسے حدیثِ کساء کے نام سے جانا جاتا ہے — اور انہیں اپنے اہلِ بیت قرار دیا۔ متعدد شیعہ اور سنی روایات کے مطابق آپ صلی اللہ علیہ وآلہ وسلم نے اپنی ازواج کو اس خصوصی مقام سے الگ رکھا۔",
+      "relatedEntries": [
+        "ab2",
+        "ab13"
+      ]
     },
     {
       "id": "ab2",
-      "title": "The Verse of Love (Mawadda fil-Qurba)",
-      "shortTitle": "Verse of Love",
+      "titleEn": "The Verse of Love (Mawadda fil-Qurba)",
+      "titleAr": "آية المودة في القربى",
+      "titleUr": "آیتِ مودّت (مودّت فی القربیٰ)",
+      "shortTitleEn": "Verse of Love",
+      "shortTitleAr": "آية المودة",
+      "shortTitleUr": "آیتِ مودّت",
       "category": "love",
       "verses": [
         {
           "surahNumber": 42,
           "verseNumber": 23,
-          "context": "The Prophet asks for no reward except love for his close family",
+          "contextEn": "The Prophet asks for no reward except love for his close family",
+          "contextAr": "لا يسأل النبيُّ (ص) أجرًا على رسالته إلا المودةَ في القربى",
+          "contextUr": "پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم اپنی تبلیغِ رسالت کا کوئی صلہ نہیں مانگتے، سوائے اپنے قریبی خاندان سے محبت کے",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Prophet Muhammad", "Ahl al-Bayt (family members)"],
-      "revelationContext": "When asked what reward he sought for his prophetic mission, this verse was revealed making love for the Prophet's family the only compensation believers should offer.",
-      "relatedEntries": ["ab1", "ab9"]
+      "ahlulbaytMembersEn": [
+        "Prophet Muhammad",
+        "Ahl al-Bayt (family members)"
+      ],
+      "ahlulbaytMembersAr": [
+        "النبي محمد (ص)",
+        "أهل البيت (ع) (أفراد الأسرة)"
+      ],
+      "ahlulbaytMembersUr": [
+        "پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم",
+        "اہلِ بیت علیہم السلام (افرادِ خاندان)"
+      ],
+      "revelationContextEn": "When asked what reward he sought for his prophetic mission, this verse was revealed making love for the Prophet's family the only compensation believers should offer.",
+      "revelationContextAr": "حين سُئل النبيُّ (ص) عن الأجر الذي يبتغيه على رسالته، نزلت هذه الآية لتجعل مودةَ آل بيته (ص) هي الوحيدةَ التي ينبغي للمؤمنين تقديمها جزاءً له.",
+      "revelationContextUr": "جب لوگوں نے پوچھا کہ آپ اپنی نبوت کا کیا صلہ چاہتے ہیں، تو یہ آیت نازل ہوئی، جس میں پیغمبر کے اہلِ بیت سے محبت کو واحد معاوضہ قرار دیا گیا جو ایمان والوں کو ادا کرنا چاہیے۔",
+      "relatedEntries": [
+        "ab1",
+        "ab9"
+      ]
     },
     {
       "id": "ab3",
-      "title": "The Verse of Mubahala (Mutual Invocation)",
-      "shortTitle": "Mubahala",
+      "titleEn": "The Verse of Mubahala (Mutual Invocation)",
+      "titleAr": "آية المباهلة",
+      "titleUr": "آیتِ مباہلہ",
+      "shortTitleEn": "Mubahala",
+      "shortTitleAr": "المباهلة",
+      "shortTitleUr": "مباہلہ",
       "category": "authority",
       "verses": [
         {
           "surahNumber": 3,
           "verseNumber": 61,
-          "context": "Allah commands the Prophet to bring his family for mutual invocation against the Christians of Najran",
+          "contextEn": "Allah commands the Prophet to bring his family for mutual invocation against the Christians of Najran",
+          "contextAr": "يأمر اللهُ النبيَّ (ص) بأن يُحضر أهلَه للمباهلة ضد نصارى نجران",
+          "contextUr": "اللہ نے نبی اکرم صلی اللہ علیہ وآلہ وسلم کو حکم دیا کہ نجران کے عیسائیوں کے ساتھ مباہلے کے لیے اپنے اہلِ خاندان کو ساتھ لائیں",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Prophet Muhammad", "Fatimah az-Zahra", "Ali ibn Abi Talib", "Hasan ibn Ali", "Husayn ibn Ali"],
-      "revelationContext": "When Christians of Najran disputed with the Prophet about Jesus, Allah commanded both parties to invoke divine curse upon the liars. The Prophet brought Ali (as 'ourselves'), Fatimah (as 'our women'), and Hasan and Husayn (as 'our sons'), demonstrating their supreme spiritual station.",
-      "relatedEntries": ["ab1", "ab4"]
+      "ahlulbaytMembersEn": [
+        "Prophet Muhammad",
+        "Fatimah az-Zahra",
+        "Ali ibn Abi Talib",
+        "Hasan ibn Ali",
+        "Husayn ibn Ali"
+      ],
+      "ahlulbaytMembersAr": [
+        "النبي محمد (ص)",
+        "فاطمة الزهراء (ع)",
+        "علي بن أبي طالب (ع)",
+        "الحسن بن علي (ع)",
+        "الحسين بن علي (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم",
+        "فاطمہ زہرا سلام اللہ علیہا",
+        "علی ابن ابی طالب علیہ السلام",
+        "امام حسن علیہ السلام",
+        "امام حسین علیہ السلام"
+      ],
+      "revelationContextEn": "When Christians of Najran disputed with the Prophet about Jesus, Allah commanded both parties to invoke divine curse upon the liars. The Prophet brought Ali (as 'ourselves'), Fatimah (as 'our women'), and Hasan and Husayn (as 'our sons'), demonstrating their supreme spiritual station.",
+      "revelationContextAr": "لمّا جادل نصارى نجران النبيَّ (ص) في شأن عيسى (ع)، أمر اللهُ كلا الطرفين بالمباهلة ودعاء اللعنة على الكاذبين. فجاء النبيُّ (ص) بعليٍّ (ع) بوصفه «أنفسنا»، وبفاطمة (ع) بوصفها «نساءنا»، وبالحسن والحسين (ع) بوصفهما «أبناءنا»، مُجلِّيًا بذلك علوَّ منزلتهم الروحية.",
+      "revelationContextUr": "جب نجران کے عیسائیوں نے پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم سے حضرت عیسیٰ علیہ السلام کے بارے میں جھگڑا کیا تو اللہ نے دونوں فریقوں کو حکم دیا کہ جھوٹوں پر لعنت بھیجنے کے لیے سامنے آئیں۔ پیغمبر صلی اللہ علیہ وآلہ وسلم علی علیہ السلام کو 'اپنی جانوں' کی نمائندگی میں، فاطمہ سلام اللہ علیہا کو 'اپنی عورتوں' کی نمائندگی میں، اور حسن و حسین علیہما السلام کو 'اپنے بیٹوں' کی نمائندگی میں لائے۔ اس سے ان کا اعلیٰ ترین روحانی مقام ثابت ہوا۔",
+      "relatedEntries": [
+        "ab1",
+        "ab4"
+      ]
     },
     {
       "id": "ab4",
-      "title": "The Verse of Wilayah (Authority and Guardianship)",
-      "shortTitle": "Verse of Wilayah",
+      "titleEn": "The Verse of Wilayah (Authority and Guardianship)",
+      "titleAr": "آية الولاية",
+      "titleUr": "آیتِ ولایت",
+      "shortTitleEn": "Verse of Wilayah",
+      "shortTitleAr": "آية الولاية",
+      "shortTitleUr": "آیتِ ولایت",
       "category": "authority",
       "verses": [
         {
           "surahNumber": 5,
           "verseNumber": 55,
-          "context": "True authority belongs to those who give charity while in prayer",
+          "contextEn": "True authority belongs to those who give charity while in prayer",
+          "contextAr": "الولايةُ الحقّة لمن يُؤتي الزكاةَ وهو راكع",
+          "contextUr": "حقیقی ولایت انہی کو حاصل ہے جو حالتِ نماز میں صدقہ دیتے ہیں",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Ali ibn Abi Talib"],
-      "revelationContext": "Revealed when Imam Ali gave his ring to a beggar while in the state of ruku' (bowing) during prayer. This verse establishes Ali's divinely appointed authority (Wilayah) after the Prophet.",
-      "relatedEntries": ["ab7", "ab11"]
+      "ahlulbaytMembersEn": [
+        "Ali ibn Abi Talib"
+      ],
+      "ahlulbaytMembersAr": [
+        "علي بن أبي طالب (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "علی ابن ابی طالب علیہ السلام"
+      ],
+      "revelationContextEn": "Revealed when Imam Ali gave his ring to a beggar while in the state of ruku' (bowing) during prayer. This verse establishes Ali's divinely appointed authority (Wilayah) after the Prophet.",
+      "revelationContextAr": "نزلت حين تصدَّق الإمام علي (ع) بخاتمه على سائل وهو في حال الركوع في الصلاة. وتُثبت هذه الآية ولايةَ عليٍّ (ع) المقرَّرة إلهيًّا خلفًا للنبي (ص).",
+      "revelationContextUr": "یہ آیت اس وقت نازل ہوئی جب امام علی علیہ السلام نے حالتِ رکوع میں ایک سائل کو اپنی انگوٹھی صدقے میں عطا فرمائی۔ اس آیت سے پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم کے بعد علی علیہ السلام کی الٰہی طور پر مقرر کردہ ولایت ثابت ہوتی ہے۔",
+      "relatedEntries": [
+        "ab7",
+        "ab11"
+      ]
     },
     {
       "id": "ab5",
-      "title": "Feeding the Needy (Surah Al-Insan)",
-      "shortTitle": "Feeding Despite Hunger",
+      "titleEn": "Feeding the Needy (Surah Al-Insan)",
+      "titleAr": "إطعام المحتاجين (سورة الإنسان)",
+      "titleUr": "مساکین کو کھانا کھلانا (سورۃ الانسان)",
+      "shortTitleEn": "Feeding Despite Hunger",
+      "shortTitleAr": "الإطعام رغم الجوع",
+      "shortTitleUr": "بھوک میں دوسروں کو کھانا کھلانا",
       "category": "sacrifice",
       "verses": [
         {
           "surahNumber": 76,
           "verseNumber": 8,
-          "context": "They feed the needy, orphan, and captive despite their own hunger",
+          "contextEn": "They feed the needy, orphan, and captive despite their own hunger",
+          "contextAr": "يُطعمون المسكينَ واليتيمَ والأسيرَ على حبِّه رغم احتياجهم",
+          "contextUr": "وہ اپنی ضرورت کے باوجود محتاجوں، یتیموں اور قیدیوں کو کھانا کھلاتے ہیں",
           "isPrimary": true
         },
         {
           "surahNumber": 76,
           "verseNumber": 9,
-          "context": "We feed you only for Allah's sake, seeking neither reward nor thanks",
+          "contextEn": "We feed you only for Allah's sake, seeking neither reward nor thanks",
+          "contextAr": "إنّما نُطعمكم لوجه الله لا نريد منكم جزاءً ولا شكورًا",
+          "contextUr": "ہم تمہیں صرف اللہ کی رضا کے لیے کھلاتے ہیں، نہ کوئی بدلہ چاہتے ہیں اور نہ شکریہ",
           "isPrimary": false
         }
       ],
-      "ahlulbaytMembers": ["Ali ibn Abi Talib", "Fatimah az-Zahra", "Hasan ibn Ali", "Husayn ibn Ali"],
-      "revelationContext": "When Hasan and Husayn fell ill, their parents vowed to fast for three days if they recovered. Upon recovery, they fasted but gave away their iftar (breaking fast) food for three consecutive nights to a needy person, an orphan, and a captive, breaking their fast only with water.",
-      "relatedEntries": ["ab1", "ab2"]
+      "ahlulbaytMembersEn": [
+        "Ali ibn Abi Talib",
+        "Fatimah az-Zahra",
+        "Hasan ibn Ali",
+        "Husayn ibn Ali"
+      ],
+      "ahlulbaytMembersAr": [
+        "علي بن أبي طالب (ع)",
+        "فاطمة الزهراء (ع)",
+        "الحسن بن علي (ع)",
+        "الحسين بن علي (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "علی ابن ابی طالب علیہ السلام",
+        "فاطمہ زہرا سلام اللہ علیہا",
+        "امام حسن علیہ السلام",
+        "امام حسین علیہ السلام"
+      ],
+      "revelationContextEn": "When Hasan and Husayn fell ill, their parents vowed to fast for three days if they recovered. Upon recovery, they fasted but gave away their iftar (breaking fast) food for three consecutive nights to a needy person, an orphan, and a captive, breaking their fast only with water.",
+      "revelationContextAr": "لمّا مرض الحسن والحسين (ع)، نذر والداهما الصيامَ ثلاثةَ أيام إن شُفيا. فلمّا شُفيا، صاما وأعطيا طعامَ إفطارهما ثلاثَ ليالٍ متتاليات لمسكين ثم يتيم ثم أسير، ولم يُفطرا إلا على الماء.",
+      "revelationContextUr": "جب حسن اور حسین علیہما السلام بیمار پڑے تو ان کے والدین نے نذر مانی کہ اگر وہ صحتیاب ہو گئے تو تین دن کے روزے رکھیں گے۔ صحتیاب ہونے کے بعد انہوں نے روزے رکھے، لیکن تین مسلسل راتوں میں افطار کا کھانا — پہلے ایک محتاج کو، پھر ایک یتیم کو، پھر ایک قیدی کو — دے دیا اور خود صرف پانی پر افطار کیا۔",
+      "relatedEntries": [
+        "ab1",
+        "ab2"
+      ]
     },
     {
       "id": "ab6",
-      "title": "Surah Al-Kawthar (The Abundance)",
-      "shortTitle": "Al-Kawthar",
+      "titleEn": "Surah Al-Kawthar (The Abundance)",
+      "titleAr": "سورة الكوثر",
+      "titleUr": "سورۃ الکوثر",
+      "shortTitleEn": "Al-Kawthar",
+      "shortTitleAr": "الكوثر",
+      "shortTitleUr": "الکوثر",
       "category": "love",
       "verses": [
         {
           "surahNumber": 108,
           "verseNumber": 1,
-          "context": "Allah grants the Prophet abundant good through his progeny",
+          "contextEn": "Allah grants the Prophet abundant good through his progeny",
+          "contextAr": "يمنح اللهُ النبيَّ (ص) الخيرَ الكثير المتواصل عبر ذريته",
+          "contextUr": "اللہ تعالیٰ نے پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم کو اپنی نسل کے ذریعے خیرِ کثیر عطا فرمایا",
           "isPrimary": true
         },
         {
           "surahNumber": 108,
           "verseNumber": 3,
-          "context": "The Prophet's enemies will be cut off, not him",
+          "contextEn": "The Prophet's enemies will be cut off, not him",
+          "contextAr": "شانئو النبيِّ (ص) هم المقطوعون لا هو",
+          "contextUr": "آپ کے دشمن ہی بے نسل و بے نام رہیں گے، آپ نہیں",
           "isPrimary": false
         }
       ],
-      "ahlulbaytMembers": ["Prophet Muhammad", "Fatimah az-Zahra", "Progeny through Fatimah"],
-      "revelationContext": "When the Prophet's sons passed away in infancy, his enemies mocked him as 'abtar' (cut off/without progeny). Allah revealed this surah declaring that abundance and continuity would come through his daughter Fatimah's lineage.",
-      "relatedEntries": ["ab2", "ab15"]
+      "ahlulbaytMembersEn": [
+        "Prophet Muhammad",
+        "Fatimah az-Zahra",
+        "Progeny through Fatimah"
+      ],
+      "ahlulbaytMembersAr": [
+        "النبي محمد (ص)",
+        "فاطمة الزهراء (ع)",
+        "الذرية من فاطمة (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم",
+        "فاطمہ زہرا سلام اللہ علیہا",
+        "فاطمہ سلام اللہ علیہا کی نسل"
+      ],
+      "revelationContextEn": "When the Prophet's sons passed away in infancy, his enemies mocked him as 'abtar' (cut off/without progeny). Allah revealed this surah declaring that abundance and continuity would come through his daughter Fatimah's lineage.",
+      "revelationContextAr": "لمّا توفّي أبناء النبي (ص) في طفولتهم، سخر منه أعداؤه بوصفه «الأبتر» المقطوع الذرية. فأنزل اللهُ هذه السورة مُبشِّرًا بأن الكثرة والاستمرار ستكونان عبر نسل ابنته فاطمة (ع).",
+      "revelationContextUr": "جب پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم کے صاحبزادے بچپن میں ہی وفات پا گئے تو دشمنوں نے آپ کو 'ابتر' — یعنی بے اولاد و بے نسل — کہہ کر طعنہ دیا۔ اللہ نے یہ سورت نازل فرمائی اور اعلان کیا کہ کثرت اور نسل کا تسلسل آپ کی صاحبزادی فاطمہ سلام اللہ علیہا کی نسل سے جاری رہے گا۔",
+      "relatedEntries": [
+        "ab2",
+        "ab15"
+      ]
     },
     {
       "id": "ab7",
-      "title": "The Verse of Proclamation (Tabligh)",
-      "shortTitle": "Verse of Ghadir",
+      "titleEn": "The Verse of Proclamation (Tabligh)",
+      "titleAr": "آية التبليغ",
+      "titleUr": "آیتِ تبلیغ",
+      "shortTitleEn": "Verse of Ghadir",
+      "shortTitleAr": "آية الغدير",
+      "shortTitleUr": "آیتِ غدیر",
       "category": "authority",
       "verses": [
         {
           "surahNumber": 5,
           "verseNumber": 67,
-          "context": "O Messenger, proclaim what has been sent down to you, or you have not fulfilled your mission",
+          "contextEn": "O Messenger, proclaim what has been sent down to you, or you have not fulfilled your mission",
+          "contextAr": "يا أيها الرسول بلِّغ ما أُنزل إليك من ربك وإن لم تفعل فما بلَّغتَ رسالته",
+          "contextUr": "اے رسول! جو کچھ آپ کی طرف نازل کیا گیا ہے اسے پہنچا دیجیے، ورنہ آپ نے رسالت کا حق ادا نہیں کیا",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Prophet Muhammad", "Ali ibn Abi Talib"],
-      "revelationContext": "Revealed at Ghadir Khumm on the Prophet's final pilgrimage, commanding him to announce Ali's succession. The urgency and divine protection promised in this verse indicates the critical importance of this announcement.",
-      "relatedEntries": ["ab4", "ab8", "ab11"]
+      "ahlulbaytMembersEn": [
+        "Prophet Muhammad",
+        "Ali ibn Abi Talib"
+      ],
+      "ahlulbaytMembersAr": [
+        "النبي محمد (ص)",
+        "علي بن أبي طالب (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم",
+        "علی ابن ابی طالب علیہ السلام"
+      ],
+      "revelationContextEn": "Revealed at Ghadir Khumm on the Prophet's final pilgrimage, commanding him to announce Ali's succession. The urgency and divine protection promised in this verse indicates the critical importance of this announcement.",
+      "revelationContextAr": "نزلت في غدير خُمٍّ في حجّة الوداع، آمرةً النبيَّ (ص) بإعلان ولاية عليٍّ (ع) وخلافته. والإلحاحُ الشديد والحمايةُ الإلهية الموعودة في هذه الآية يدلاّن على بالغ أهمية هذا الإعلان.",
+      "revelationContextUr": "یہ آیت حجۃ الوداع کے موقع پر غدیرِ خُم میں نازل ہوئی اور پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم کو حکم دیا گیا کہ علی علیہ السلام کی جانشینی کا اعلان فرمائیں۔ اس آیت میں تاکید اور الٰہی حفاظت کا وعدہ اس اعلان کی غیرمعمولی اہمیت کو ظاہر کرتا ہے۔",
+      "relatedEntries": [
+        "ab4",
+        "ab8",
+        "ab11"
+      ]
     },
     {
       "id": "ab8",
-      "title": "Completion of Religion (Ikmal al-Din)",
-      "shortTitle": "Religion Perfected",
+      "titleEn": "Completion of Religion (Ikmal al-Din)",
+      "titleAr": "اكتمال الدين (إكمال الدين)",
+      "titleUr": "اکمالِ دین (اکمالِ الدّین)",
+      "shortTitleEn": "Religion Perfected",
+      "shortTitleAr": "اكتمال الدين",
+      "shortTitleUr": "دین مکمل ہوا",
       "category": "authority",
       "verses": [
         {
           "surahNumber": 5,
           "verseNumber": 3,
-          "context": "Today I have perfected your religion and completed My favor upon you",
+          "contextEn": "Today I have perfected your religion and completed My favor upon you",
+          "contextAr": "اليومَ أكملتُ لكم دينكم وأتممتُ عليكم نعمتي",
+          "contextUr": "آج میں نے تمہارے لیے تمہارا دین مکمل کر دیا اور تم پر اپنی نعمت پوری کر دی",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Prophet Muhammad", "Ali ibn Abi Talib"],
-      "revelationContext": "Revealed at Ghadir Khumm immediately after the Prophet announced Ali's Wilayah. The religion was completed not just with laws and rituals, but with the establishment of divinely appointed leadership after the Prophet.",
-      "relatedEntries": ["ab7", "ab4"]
+      "ahlulbaytMembersEn": [
+        "Prophet Muhammad",
+        "Ali ibn Abi Talib"
+      ],
+      "ahlulbaytMembersAr": [
+        "النبي محمد (ص)",
+        "علي بن أبي طالب (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم",
+        "علی ابن ابی طالب علیہ السلام"
+      ],
+      "revelationContextEn": "Revealed at Ghadir Khumm immediately after the Prophet announced Ali's Wilayah. The religion was completed not just with laws and rituals, but with the establishment of divinely appointed leadership after the Prophet.",
+      "revelationContextAr": "نزلت في غدير خُمٍّ فور إعلان النبيِّ (ص) ولايةَ عليٍّ (ع). فلم يكتمل الدينُ بالأحكام والعبادات وحدها، بل بإرساء الإمامة المعيَّنة إلهيًّا خلفًا للنبي (ص).",
+      "revelationContextUr": "یہ آیت غدیرِ خُم میں اس فوری لمحے کے بعد نازل ہوئی جب پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم نے علی علیہ السلام کی ولایت کا اعلان فرمایا۔ دین محض احکام و عبادات سے مکمل نہیں ہوا، بلکہ پیغمبر کے بعد الٰہی طور پر مقرر کردہ قیادت کے قیام سے مکمل ہوا۔",
+      "relatedEntries": [
+        "ab7",
+        "ab4"
+      ]
     },
     {
       "id": "ab9",
-      "title": "The Rights of Kinfolk (Khums)",
-      "shortTitle": "Rights of Close Relatives",
+      "titleEn": "The Rights of Kinfolk (Khums)",
+      "titleAr": "حقوق ذوي القربى (الخمس)",
+      "titleUr": "قریبی رشتہ داروں کے حقوق (خمس)",
+      "shortTitleEn": "Rights of Close Relatives",
+      "shortTitleAr": "حقوق ذوي القربى",
+      "shortTitleUr": "قریبی رشتہ داروں کے حقوق",
       "category": "rights",
       "verses": [
         {
           "surahNumber": 8,
           "verseNumber": 41,
-          "context": "Know that one-fifth of war gains belongs to Allah, the Messenger, and close relatives",
+          "contextEn": "Know that one-fifth of war gains belongs to Allah, the Messenger, and close relatives",
+          "contextAr": "اعلموا أن خُمسَ ما غنمتم لله وللرسول ولذي القربى",
+          "contextUr": "جان لو کہ جنگ کے مالِ غنیمت کا پانچواں حصہ اللہ، رسول اور قریبی رشتہ داروں کا ہے",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Ahl al-Bayt (family of the Prophet)"],
-      "revelationContext": "Establishes Khums (one-fifth) as the financial right of Ahl al-Bayt. Since they were forbidden from receiving charity (Zakat), Allah provided for them through Khums, maintaining their dignity and sustenance.",
-      "relatedEntries": ["ab2", "ab10"]
+      "ahlulbaytMembersEn": [
+        "Ahl al-Bayt (family of the Prophet)"
+      ],
+      "ahlulbaytMembersAr": [
+        "أهل البيت (ع) (آل النبي)"
+      ],
+      "ahlulbaytMembersUr": [
+        "اہلِ بیت علیہم السلام (آلِ رسول)"
+      ],
+      "revelationContextEn": "Establishes Khums (one-fifth) as the financial right of Ahl al-Bayt. Since they were forbidden from receiving charity (Zakat), Allah provided for them through Khums, maintaining their dignity and sustenance.",
+      "revelationContextAr": "تُرسي هذه الآية الخُمسَ حقًّا ماليًّا لأهل البيت (ع). إذ لمّا حُرِّم عليهم أخذُ الزكاة (الصدقة)، رزقهم اللهُ من الخُمس صونًا لكرامتهم وضمانًا لعيشهم.",
+      "revelationContextUr": "اس آیت سے اہلِ بیت علیہم السلام کا مالی حق — خمس — ثابت ہوتا ہے۔ چونکہ انہیں زکوٰۃ لینے سے منع کیا گیا تھا، اس لیے اللہ نے خمس کے ذریعے ان کی ضروریات پوری کرنے کا انتظام فرمایا تاکہ ان کا وقار اور معیشت قائم رہے۔",
+      "relatedEntries": [
+        "ab2",
+        "ab10"
+      ]
     },
     {
       "id": "ab10",
-      "title": "Giving to Relatives (Dhil-Qurba)",
-      "shortTitle": "Give Close Relatives Their Due",
+      "titleEn": "Giving to Relatives (Dhil-Qurba)",
+      "titleAr": "إيتاء ذي القربى حقه",
+      "titleUr": "رشتہ داروں کو ان کا حق دینا (ذی القربیٰ)",
+      "shortTitleEn": "Give Close Relatives Their Due",
+      "shortTitleAr": "أعطِ ذوي القربى حقهم",
+      "shortTitleUr": "قریبی رشتہ داروں کا حق ادا کرو",
       "category": "rights",
       "verses": [
         {
           "surahNumber": 17,
           "verseNumber": 26,
-          "context": "Give close relatives their due rights",
+          "contextEn": "Give close relatives their due rights",
+          "contextAr": "وآتِ ذا القربى حقه",
+          "contextUr": "قریبی رشتہ داروں کو ان کا واجب حق دو",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Ahl al-Bayt (family of the Prophet)"],
-      "revelationContext": "Commands believers to give the Prophet's family their due rights, both material (through Khums) and spiritual (through respect, love, and following their guidance).",
-      "relatedEntries": ["ab9", "ab2"]
+      "ahlulbaytMembersEn": [
+        "Ahl al-Bayt (family of the Prophet)"
+      ],
+      "ahlulbaytMembersAr": [
+        "أهل البيت (ع) (آل النبي)"
+      ],
+      "ahlulbaytMembersUr": [
+        "اہلِ بیت علیہم السلام (آلِ رسول)"
+      ],
+      "revelationContextEn": "Commands believers to give the Prophet's family their due rights, both material (through Khums) and spiritual (through respect, love, and following their guidance).",
+      "revelationContextAr": "يأمر اللهُ المؤمنين بإيفاء آل النبي (ص) حقوقهم، ماديًّا بأداء الخُمس، وروحيًّا بإجلالهم ومودّتهم واتّباع هديهم.",
+      "revelationContextUr": "یہ آیت مومنوں کو حکم دیتی ہے کہ پیغمبر کے اہلِ خاندان کو ان کے واجب حقوق ادا کریں — خواہ مادی ہوں (خمس کے ذریعے) یا روحانی (عزت، محبت اور ان کی پیروی کے ذریعے)۔",
+      "relatedEntries": [
+        "ab9",
+        "ab2"
+      ]
     },
     {
       "id": "ab11",
-      "title": "Obey Those in Authority (Ulil-Amr)",
-      "shortTitle": "Obedience to Authority",
+      "titleEn": "Obey Those in Authority (Ulil-Amr)",
+      "titleAr": "أطيعوا أولي الأمر",
+      "titleUr": "اولی الامر کی اطاعت",
+      "shortTitleEn": "Obedience to Authority",
+      "shortTitleAr": "طاعة أولي الأمر",
+      "shortTitleUr": "اولی الامر کی اطاعت",
       "category": "authority",
       "verses": [
         {
           "surahNumber": 4,
           "verseNumber": 59,
-          "context": "Obey Allah, the Messenger, and those in authority among you",
+          "contextEn": "Obey Allah, the Messenger, and those in authority among you",
+          "contextAr": "أطيعوا اللهَ وأطيعوا الرسولَ وأولي الأمر منكم",
+          "contextUr": "اللہ کی اطاعت کرو، رسول کی اطاعت کرو اور اپنے اولی الامر کی اطاعت کرو",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["The Twelve Imams"],
-      "revelationContext": "Establishes the chain of authority after the Prophet. 'Those in authority' (Ulil-Amr) are not elected leaders but divinely appointed Imams from Ahl al-Bayt who possess knowledge and infallibility.",
-      "relatedEntries": ["ab4", "ab7", "ab8"]
+      "ahlulbaytMembersEn": [
+        "The Twelve Imams"
+      ],
+      "ahlulbaytMembersAr": [
+        "الأئمة الاثنا عشر (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "بارہ آئمہ علیہم السلام"
+      ],
+      "revelationContextEn": "Establishes the chain of authority after the Prophet. 'Those in authority' (Ulil-Amr) are not elected leaders but divinely appointed Imams from Ahl al-Bayt who possess knowledge and infallibility.",
+      "revelationContextAr": "تُرسي هذه الآية سلسلةَ الولاية بعد النبي (ص). فـ«أولو الأمر» ليسوا قادةً منتخَبين، بل أئمةٌ معيَّنون إلهيًّا من أهل البيت (ع)، يتمتعون بالعلم والعصمة.",
+      "revelationContextUr": "یہ آیت پیغمبر کے بعد اطاعت کا سلسلہ قائم کرتی ہے۔ 'اولی الامر' منتخب حکمران نہیں بلکہ اہلِ بیت علیہم السلام کے وہ الٰہی طور پر مقرر کردہ آئمہ ہیں جو علم اور عصمت کے حامل ہیں۔",
+      "relatedEntries": [
+        "ab4",
+        "ab7",
+        "ab8"
+      ]
     },
     {
       "id": "ab12",
-      "title": "Follow Those Who Are Guided",
-      "shortTitle": "Following the Guided",
+      "titleEn": "Follow Those Who Are Guided",
+      "titleAr": "اتّبعوا من هداهم الله",
+      "titleUr": "ہدایت یافتہ لوگوں کی پیروی کرو",
+      "shortTitleEn": "Following the Guided",
+      "shortTitleAr": "اتباع المهتدين",
+      "shortTitleUr": "ہدایت یافتہ کی پیروی",
       "category": "knowledge",
       "verses": [
         {
           "surahNumber": 6,
           "verseNumber": 90,
-          "context": "These are the ones Allah has guided, so follow their guidance",
+          "contextEn": "These are the ones Allah has guided, so follow their guidance",
+          "contextAr": "أولئك الذين هدى الله فبهداهم اقتده",
+          "contextUr": "یہی لوگ ہیں جنہیں اللہ نے ہدایت دی، پس ان کی ہدایت کی پیروی کرو",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Ahl al-Bayt as inheritors of prophetic guidance"],
-      "revelationContext": "After mentioning previous prophets, Allah commands following their guidance. This guidance continues through Ahl al-Bayt who inherit the knowledge and spirituality of all prophets.",
-      "relatedEntries": ["ab11", "ab13"]
+      "ahlulbaytMembersEn": [
+        "Ahl al-Bayt as inheritors of prophetic guidance"
+      ],
+      "ahlulbaytMembersAr": [
+        "أهل البيت (ع) ورثة الهداية النبوية"
+      ],
+      "ahlulbaytMembersUr": [
+        "اہلِ بیت علیہم السلام بطور وارثانِ ہدایتِ نبوی"
+      ],
+      "revelationContextEn": "After mentioning previous prophets, Allah commands following their guidance. This guidance continues through Ahl al-Bayt who inherit the knowledge and spirituality of all prophets.",
+      "revelationContextAr": "بعد ذكر الأنبياء السابقين، أمر اللهُ باتّباع هداهم. وهذا الهدى متواصلٌ عبر أهل البيت (ع) الذين يرثون علمَ جميع الأنبياء وروحانيّتهم.",
+      "revelationContextUr": "گزشتہ انبیاء کا ذکر کرنے کے بعد اللہ نے ان کی ہدایت کی پیروی کا حکم دیا۔ یہ ہدایت اہلِ بیت علیہم السلام کے ذریعے جاری ہے جو تمام انبیاء کے علم اور روحانیت کے وارث ہیں۔",
+      "relatedEntries": [
+        "ab11",
+        "ab13"
+      ]
     },
     {
       "id": "ab13",
-      "title": "The Household of Remembrance (Ahl al-Dhikr)",
-      "shortTitle": "Ask the People of Knowledge",
+      "titleEn": "The Household of Remembrance (Ahl al-Dhikr)",
+      "titleAr": "أهل الذكر (أهل العلم)",
+      "titleUr": "اہلِ ذکر (اہلِ علم)",
+      "shortTitleEn": "Ask the People of Knowledge",
+      "shortTitleAr": "اسألوا أهل الذكر",
+      "shortTitleUr": "اہلِ علم سے پوچھو",
       "category": "knowledge",
       "verses": [
         {
           "surahNumber": 16,
           "verseNumber": 43,
-          "context": "Ask the people of knowledge if you do not know",
+          "contextEn": "Ask the people of knowledge if you do not know",
+          "contextAr": "فاسألوا أهلَ الذكر إن كنتم لا تعلمون",
+          "contextUr": "اگر تمہیں علم نہ ہو تو اہلِ علم سے پوچھو",
           "isPrimary": true
         },
         {
           "surahNumber": 21,
           "verseNumber": 7,
-          "context": "Ask the people of remembrance if you do not know",
+          "contextEn": "Ask the people of remembrance if you do not know",
+          "contextAr": "فاسألوا أهلَ الذكر إن كنتم لا تعلمون",
+          "contextUr": "اگر تمہیں علم نہ ہو تو اہلِ ذکر سے دریافت کرو",
           "isPrimary": false
         }
       ],
-      "ahlulbaytMembers": ["The Imams from Ahl al-Bayt"],
-      "revelationContext": "When questioned about religious matters, Allah directs people to 'Ahl al-Dhikr' (People of Remembrance/Knowledge). Numerous hadiths identify Ahl al-Bayt as the true Ahl al-Dhikr who possess complete knowledge of the Quran.",
-      "relatedEntries": ["ab11", "ab12", "ab1"]
+      "ahlulbaytMembersEn": [
+        "The Imams from Ahl al-Bayt"
+      ],
+      "ahlulbaytMembersAr": [
+        "الأئمة من أهل البيت (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "اہلِ بیت کے آئمہ علیہم السلام"
+      ],
+      "revelationContextEn": "When questioned about religious matters, Allah directs people to 'Ahl al-Dhikr' (People of Remembrance/Knowledge). Numerous hadiths identify Ahl al-Bayt as the true Ahl al-Dhikr who possess complete knowledge of the Quran.",
+      "revelationContextAr": "حين يُسأل المؤمنون في أمور الدين، يُرشدهم اللهُ إلى «أهل الذكر». وقد عرَّف أئمةُ أهل البيت (ع) في أحاديث كثيرة أنهم أهلُ الذكر الحقيقيون الذين يحملون العلمَ الكامل بالقرآن.",
+      "revelationContextUr": "دینی مسائل میں اللہ نے لوگوں کو 'اہلِ ذکر' — یعنی اہلِ علم و یادِ الٰہی — کی طرف رجوع کرنے کی ہدایت فرمائی۔ متعدد احادیث میں اہلِ بیت علیہم السلام کو ہی حقیقی اہلِ ذکر قرار دیا گیا ہے جو قرآن کا مکمل علم رکھتے ہیں۔",
+      "relatedEntries": [
+        "ab11",
+        "ab12",
+        "ab1"
+      ]
     },
     {
       "id": "ab14",
-      "title": "Warn Your Closest Relatives",
-      "shortTitle": "Warning the Clan",
+      "titleEn": "Warn Your Closest Relatives",
+      "titleAr": "وأنذر عشيرتك الأقربين",
+      "titleUr": "اپنے قریبی رشتہ داروں کو متنبہ کرو",
+      "shortTitleEn": "Warning the Clan",
+      "shortTitleAr": "إنذار العشيرة",
+      "shortTitleUr": "قبیلے کو تنبیہ",
       "category": "rights",
       "verses": [
         {
           "surahNumber": 26,
           "verseNumber": 214,
-          "context": "And warn your closest relatives",
+          "contextEn": "And warn your closest relatives",
+          "contextAr": "وأنذر عشيرتك الأقربين",
+          "contextUr": "اور اپنے قریبی رشتہ داروں کو ڈراؤ",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Ali ibn Abi Talib"],
-      "revelationContext": "At the feast of Dhul-Asheera, when the Prophet first publicly declared his prophethood to his clan, he also announced Ali as his successor and brother, saying 'Whoever follows me, this Ali will be my successor and inheritor.'",
-      "relatedEntries": ["ab7", "ab11"]
+      "ahlulbaytMembersEn": [
+        "Ali ibn Abi Talib"
+      ],
+      "ahlulbaytMembersAr": [
+        "علي بن أبي طالب (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "علی ابن ابی طالب علیہ السلام"
+      ],
+      "revelationContextEn": "At the feast of Dhul-Asheera, when the Prophet first publicly declared his prophethood to his clan, he also announced Ali as his successor and brother, saying 'Whoever follows me, this Ali will be my successor and inheritor.'",
+      "revelationContextAr": "في وليمة ذي العشيرة حين أعلن النبيُّ (ص) علنًا نبوّتَه لقبيلته، أعلن كذلك عليًّا (ع) وصيَّه وأخاه، قائلًا: «من آمن بي وتابعني فهذا عليٌّ وصيّي ووارثي».",
+      "revelationContextUr": "دعوتِ ذوالعشیرہ کے موقع پر جب پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم نے پہلی بار اپنے قبیلے کے سامنے علناً نبوت کا اعلان فرمایا، اسی موقع پر علی علیہ السلام کو اپنا جانشین اور بھائی قرار دیتے ہوئے فرمایا: 'جو شخص میری پیروی کرے گا، یہ علی اس کے بعد میرا جانشین اور وارث ہوگا'۔",
+      "relatedEntries": [
+        "ab7",
+        "ab11"
+      ]
     },
     {
       "id": "ab15",
-      "title": "Examples of Righteous Women",
-      "shortTitle": "Mary and Asiya",
+      "titleEn": "Examples of Righteous Women",
+      "titleAr": "نماذج من النساء الصالحات",
+      "titleUr": "نیک خواتین کی مثالیں",
+      "shortTitleEn": "Mary and Asiya",
+      "shortTitleAr": "مريم وآسية",
+      "shortTitleUr": "مریم اور آسیہ",
       "category": "purity",
       "verses": [
         {
           "surahNumber": 66,
           "verseNumber": 11,
-          "context": "Allah presents the example of Pharaoh's wife who chose faith",
+          "contextEn": "Allah presents the example of Pharaoh's wife who chose faith",
+          "contextAr": "يضرب اللهُ مثلًا للمؤمنين بامرأة فرعون التي آثرت الإيمان",
+          "contextUr": "اللہ نے فرعون کی بیوی کی مثال بیان فرمائی جس نے ایمان کو اختیار کیا",
           "isPrimary": false
         },
         {
           "surahNumber": 66,
           "verseNumber": 12,
-          "context": "And Mary who guarded her chastity - We breathed into her Our Spirit",
+          "contextEn": "And Mary who guarded her chastity - We breathed into her Our Spirit",
+          "contextAr": "ومريم التي أحصنت فرجها فنفخنا فيه من روحنا",
+          "contextUr": "اور مریم کی مثال جنہوں نے اپنی عفت کی حفاظت کی — ہم نے ان میں اپنی روح پھونکی",
           "isPrimary": true
         }
       ],
-      "ahlulbaytMembers": ["Fatimah az-Zahra"],
-      "revelationContext": "These verses present the two most exalted women before Islam as examples. The Prophet declared Fatimah as the leader of all women in Paradise, surpassing even Mary and Asiya, making her the ultimate example for believers.",
-      "relatedEntries": ["ab1", "ab6"]
+      "ahlulbaytMembersEn": [
+        "Fatimah az-Zahra"
+      ],
+      "ahlulbaytMembersAr": [
+        "فاطمة الزهراء (ع)"
+      ],
+      "ahlulbaytMembersUr": [
+        "فاطمہ زہرا سلام اللہ علیہا"
+      ],
+      "revelationContextEn": "These verses present the two most exalted women before Islam as examples. The Prophet declared Fatimah as the leader of all women in Paradise, surpassing even Mary and Asiya, making her the ultimate example for believers.",
+      "revelationContextAr": "تستحضر هاتان الآيتان أرفعَ امرأتين قبل الإسلام مثالًا يُحتذى به. وقد أعلن النبيُّ (ص) أن فاطمة (ع) سيدةُ نساء أهل الجنة، تفوق مريمَ وآسيةَ مقامًا، فكانت بذلك المثلَ الأعلى للمؤمنين.",
+      "revelationContextUr": "ان آیات میں اسلام سے پہلے کی دو بزرگ ترین خواتین کو بطورِ نمونہ پیش کیا گیا ہے۔ پیغمبر اکرم صلی اللہ علیہ وآلہ وسلم نے فرمایا کہ فاطمہ سلام اللہ علیہا جنت کی تمام خواتین کی سردار ہیں — مریم اور آسیہ سے بھی افضل — یوں وہ تمام مومنین کے لیے اعلیٰ ترین نمونہ ہیں۔",
+      "relatedEntries": [
+        "ab1",
+        "ab6"
+      ]
     }
   ]
 }

@@ -19,10 +19,10 @@ extension View {
         font(.system(size: 11.5, weight: .bold)).tracking(3.4).textCase(.uppercase)
     }
     func onbCardTitle() -> some View {
-        font(.system(size: 16, weight: .heavy)).tracking(-0.3)
+        font(EmType.serif(19, .semiBold))
     }
     func onbRowTitle() -> some View {
-        font(.system(size: 15, weight: .bold)).tracking(-0.2)
+        font(EmType.serif(17, .semiBold))
     }
     func onbBody() -> some View {
         font(.system(size: 14.5, weight: .medium))

@@ -32,9 +32,9 @@ struct FoodDetailView: View {
                 VStack(spacing: 18) {
                     hero
                     verseSection
-                    infoCard(label: "From the Ahl al-Bayt", icon: "book.fill", text: food.narration, source: food.narrationSource)
-                    infoCard(label: "From the Sunnah", icon: "sparkles", text: food.sunnahTip, source: nil)
-                    infoCard(label: "Nutrition", icon: "leaf.fill", text: food.nutritionNote, source: nil)
+                    infoCard(label: "From the Ahl al-Bayt", icon: "book.fill", text: food.narration(for: languageManager.selectedLanguage), source: food.narrationSource)
+                    infoCard(label: "From the Sunnah", icon: "sparkles", text: food.sunnahTip(for: languageManager.selectedLanguage), source: nil)
+                    infoCard(label: "Nutrition", icon: "leaf.fill", text: food.nutritionNote(for: languageManager.selectedLanguage), source: nil)
                     shareSection
                 }
                 .padding(.horizontal, 20)
@@ -80,10 +80,12 @@ struct FoodDetailView: View {
             }
             .shadow(color: themeManager.accentColor.opacity(0.18), radius: 16, x: 0, y: 6)
 
-            Text(food.name)
+            Text(food.name(for: languageManager.selectedLanguage))
                 .font(themeManager.isMidnightEmerald ? EmType.serif(30, .semiBold) : .system(size: 30, weight: .bold, design: .rounded))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.center)
+                .environment(\.layoutDirection,
+                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
         }
         .padding(.top, 8)
     }
@@ -134,7 +136,8 @@ struct FoodDetailView: View {
     }
 
     private func infoCard(label: String, icon: String, text: String, source: String?) -> some View {
-        cardContainer {
+        let isRTL = languageManager.selectedLanguage.isRTL
+        return cardContainer {
             VStack(alignment: .leading, spacing: 8) {
                 HStack(spacing: 7) {
                     Image(systemName: icon).font(.system(size: 12, weight: .bold))
@@ -155,6 +158,7 @@ struct FoodDetailView: View {
                         .foregroundColor(themeManager.tertiaryText)
                 }
             }
+            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         }
     }
 
@@ -176,7 +180,7 @@ struct FoodDetailView: View {
 
     private var shareText: String {
         let lang = languageManager.selectedLanguage
-        var parts: [String] = ["\(food.emoji) \(food.name)"]
+        var parts: [String] = ["\(food.emoji) \(food.name(for: lang))"]
 
         if let v = verse {
             parts.append("Qur'an \(food.surahNumber):\(food.verseNumber)\n\(v.arabicText)")
@@ -185,9 +189,9 @@ struct FoodDetailView: View {
             parts.append("Qur'an \(food.surahNumber):\(food.verseNumber)")
         }
 
-        parts.append("From the Ahl al-Bayt\n\(food.narration)\n— \(food.narrationSource)")
-        parts.append("From the Sunnah\n\(food.sunnahTip)")
-        parts.append("Nutrition\n\(food.nutritionNote)")
+        parts.append("From the Ahl al-Bayt\n\(food.narration(for: lang))\n— \(food.narrationSource)")
+        parts.append("From the Sunnah\n\(food.sunnahTip(for: lang))")
+        parts.append("Nutrition\n\(food.nutritionNote(for: lang))")
         parts.append("Sent via Thaqalayn")
 
         return parts.joined(separator: "\n\n")

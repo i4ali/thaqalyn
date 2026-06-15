@@ -65,7 +65,7 @@ struct MissionScreen: View {
 
                 // Mission statement
                 VStack(spacing: 24) {
-                    Text("This app brings those teachings to your fingertips")
+                    Text("The Quran & Ahlul Bayt, at your fingertips")
                         .onbHeroTitle()
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.center)
@@ -75,7 +75,7 @@ struct MissionScreen: View {
                         .offset(y: isVisible ? 0 : 20)
                         .animation(Animation.easeOut(duration: 0.8).delay(0.8), value: isVisible)
 
-                    Text("Through authentic Shia scholarship, connecting you with the Quran and the wisdom of the Ahlul Bayt")
+                    Text("Authentic Shia scholarship to read, understand, and journey through the Quran — and the wisdom of the Ahlul Bayt")
                         .onbBody()
                         .foregroundColor(themeManager.secondaryText)
                         .multilineTextAlignment(.center)
@@ -90,7 +90,7 @@ struct MissionScreen: View {
                 VStack(spacing: 12) {
                     HighlightRow(
                         icon: "book.closed.fill",
-                        text: "Complete Quranic text with English translation",
+                        text: "The complete Quran in English, Urdu & Arabic",
                         isVisible: isVisible,
                         delay: 1.4,
                         chip: ThemeManager.chipGold
@@ -105,16 +105,16 @@ struct MissionScreen: View {
                     )
 
                     HighlightRow(
-                        icon: "bell.fill",
-                        text: "Daily verses aligned with Islamic calendar",
+                        icon: "books.vertical.fill",
+                        text: "Stories, parallels & Du'as of the Ahlul Bayt",
                         isVisible: isVisible,
                         delay: 1.8,
                         chip: ThemeManager.chipGold
                     )
 
                     HighlightRow(
-                        icon: "heart.fill",
-                        text: "Save and sync bookmarks across devices",
+                        icon: "map.fill",
+                        text: "Seasonal journeys for Ramadan, Muharram, Hajj & more",
                         isVisible: isVisible,
                         delay: 2.0,
                         chip: ThemeManager.chipGold
