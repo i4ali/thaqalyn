@@ -38,7 +38,15 @@
       "relatedQuestions": [
         "q2",
         "q3"
-      ]
+      ],
+      "narration": {
+        "arabic": "أَيُّهَا النَّاسُ إِنَّ اللَّهَ جَلَّ ذِكْرُهُ مَا خَلَقَ الْعِبَادَ إِلَّا لِيَعْرِفُوهُ، فَإِذَا عَرَفُوهُ عَبَدُوهُ، فَإِذَا عَبَدُوهُ اسْتَغْنَوْا بِعِبَادَتِهِ عَنْ عِبَادَةِ مَنْ سِوَاهُ",
+        "translationEn": "O people! Indeed Allah, exalted is His remembrance, did not create the servants except that they may know Him. So when they know Him they worship Him, and when they worship Him they are made independent, through His worship, of the worship of anyone besides Him.",
+        "translationUr": "اے لوگو! بے شک اللہ تعالیٰ — جو بلند ذکر والا ہے — نے بندوں کو صرف اس لیے پیدا کیا کہ وہ اسے پہچانیں۔ پس جب وہ اسے پہچان لیں تو اس کی عبادت کریں، اور جب اس کی عبادت کریں تو اس کی عبادت کی بدولت ہر غیر کی بندگی سے بے نیاز ہو جائیں۔",
+        "sourceEn": "Imam al-Ḥusayn ibn ʿAlī (ʿa) — ʿIlal al-Sharāʾiʿ, vol. 1, p. 9",
+        "sourceAr": "الإمام الحسين بن علي (عليه السلام) — علل الشرائع، ج١، ص٩",
+        "sourceUr": "امام حسین علیہ السلام — علل الشرائع، ج۱، ص۹"
+      }
     },
     {
       "id": "q2",
@@ -70,7 +78,15 @@
       "relatedQuestions": [
         "q1",
         "q15"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِذَا تَابَ الْعَبْدُ تَوْبَةً نَصُوحاً أَحَبَّهُ اللَّهُ فَسَتَرَ عَلَيْهِ فِي الدُّنْيَا وَالْآخِرَةِ، فَقُلْتُ: وَكَيْفَ يَسْتُرُ عَلَيْهِ؟ قَالَ: يُنْسِي مَلَكَيْهِ مَا كَتَبَا عَلَيْهِ مِنَ الذُّنُوبِ، وَيُوحِي إِلَى جَوَارِحِهِ: اكْتُمِي عَلَيْهِ ذُنُوبَهُ، وَيُوحِي إِلَى بِقَاعِ الْأَرْضِ: اكْتُمِي مَا كَانَ يَعْمَلُ عَلَيْكِ مِنَ الذُّنُوبِ، فَيَلْقَى اللَّهَ حِينَ يَلْقَاهُ وَلَيْسَ شَيْءٌ يَشْهَدُ عَلَيْهِ بِشَيْءٍ مِنَ الذُّنُوبِ",
+        "translationEn": "When a servant repents with a sincere repentance, Allah loves him and conceals [his sins] for him in this world and the Hereafter. I asked: How does He conceal them for him? He said: He makes his two angels forget what they had recorded against him of sins, and He inspires his limbs: 'Conceal his sins,' and He inspires the patches of the earth: 'Conceal whatever sins he committed upon you,' so that he meets Allah, when he meets Him, with nothing bearing witness against him of any sin.",
+        "translationUr": "جب بندہ سچی توبہ کرتا ہے تو اللہ اس سے محبت فرماتا ہے اور دنیا و آخرت میں اس کے گناہوں پر پردہ ڈال دیتا ہے۔ میں نے عرض کیا: وہ کیسے پردہ ڈالتا ہے؟ فرمایا: اللہ اس کے دونوں فرشتوں کو بھلا دیتا ہے جو اس کے گناہ لکھتے تھے، اور اس کے اعضا کو وحی کرتا ہے کہ «اس کے گناہ چھپا لو»، اور زمین کے قطعات کو وحی کرتا ہے کہ «جو گناہ اس نے تم پر کیے وہ چھپا لو»۔ پس وہ اللہ سے اس حال میں ملتا ہے کہ اس کے خلاف کوئی چیز گواہی دینے والی نہیں ہوتی۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 430, Kitāb al-Īmān wa-l-Kufr, Bāb al-Tawba",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص٤٣٠، كتاب الإيمان والكفر، باب التوبة",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۴۳۰"
+      }
     },
     {
       "id": "q3",
@@ -101,7 +117,15 @@
       ],
       "relatedQuestions": [
         "q1"
-      ]
+      ],
+      "narration": {
+        "arabic": "أَمَّا بَعْدُ، فَإِنَّ اللَّهَ سُبْحَانَهُ وَتَعَالَى خَلَقَ الْخَلْقَ حِينَ خَلَقَهُمْ غَنِيّاً عَنْ طَاعَتِهِمْ، آمِناً مِنْ مَعْصِيَتِهِمْ، لِأَنَّهُ لَا تَضُرُّهُ مَعْصِيَةُ مَنْ عَصَاهُ، وَلَا تَنْفَعُهُ طَاعَةُ مَنْ أَطَاعَهُ",
+        "translationEn": "Now then, when Allah, the Glorified, created His creation, He was independent of their obedience and secure from their disobedience, because the disobedience of those who disobey Him does not harm Him, nor does the obedience of those who obey Him benefit Him.",
+        "translationUr": "امّا بعد، اللہ سبحانہ وتعالیٰ نے جب مخلوق کو پیدا کیا تو وہ ان کی اطاعت سے بے نیاز اور ان کی نافرمانی سے بالکل محفوظ تھا، کیونکہ نافرمان کی نافرمانی اسے نقصان نہیں پہنچاتی اور فرمانبردار کی اطاعت اسے کوئی فائدہ نہیں دیتی۔",
+        "sourceEn": "Imam ʿAlī ibn Abī Ṭālib (ʿa) — Nahj al-Balāgha, Sermon 193 (Khuṭbat al-Muttaqīn / the Sermon of Hammām)",
+        "sourceAr": "الإمام علي بن أبي طالب (عليه السلام) — نهج البلاغة، الخطبة ١٩٣ (خطبة المتقين / خطبة همّام)",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، خطبہ ۱۹۳"
+      }
     },
     {
       "id": "q4",
@@ -133,7 +157,15 @@
       "relatedQuestions": [
         "q1",
         "q5"
-      ]
+      ],
+      "narration": {
+        "arabic": "يَا عَبْدَ الْعَزِيزِ، إِنَّ الْإِيمَانَ عَشْرُ دَرَجَاتٍ بِمَنْزِلَةِ السُّلَّمِ، يُصْعَدُ مِنْهُ مِرْقَاةً بَعْدَ مِرْقَاةٍ، فَلَا يَقُولَنَّ صَاحِبُ الِاثْنَيْنِ لِصَاحِبِ الْوَاحِدِ: لَسْتَ عَلَى شَيْءٍ، حَتَّى يَنْتَهِيَ إِلَى الْعَاشِرِ",
+        "translationEn": "O ʿAbd al-ʿAzīz, faith has ten degrees, like a ladder: it is ascended one rung after another. So let not the one who holds the second [rung] say to the one on the first, 'You are nothing,' until he reaches the tenth.",
+        "translationUr": "اے عبدالعزیز! ایمان کے دس درجے ہیں، جیسے سیڑھی کے پائدان — انہیں ایک ایک کر کے چڑھا جاتا ہے۔ پس جو دوسرے پائدان پر ہو، وہ پہلے پائدان والے کو یہ ہرگز نہ کہے کہ «تو کچھ بھی نہیں» — یہاں تک کہ دسویں پائدان تک پہنچ جائے۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 45, Kitāb al-Īmān wa-l-Kufr, Bāb darajāt al-īmān",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص٤٥، كتاب الإيمان والكفر، باب درجات الإيمان",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۴۵"
+      }
     },
     {
       "id": "q5",
@@ -164,7 +196,15 @@
       ],
       "relatedQuestions": [
         "q4"
-      ]
+      ],
+      "narration": {
+        "arabic": "مَا أَبْرَزَ عَبْدٌ يَدَهُ إِلَى اللَّهِ الْعَزِيزِ الْجَبَّارِ إِلَّا اسْتَحْيَا اللَّهُ عَزَّ وَجَلَّ أَنْ يَرُدَّهَا صِفْراً حَتَّى يَجْعَلَ فِيهَا مِنْ فَضْلِ رَحْمَتِهِ مَا يَشَاءُ",
+        "translationEn": "No servant stretches out his hand to God, the Mighty, the Compeller, but that God, Almighty and Majestic, is too generous to turn it back empty — until He places in it whatever He wills of the bounty of His mercy.",
+        "translationUr": "کوئی بندہ جب اللہ عزیز و جبار کی طرف ہاتھ پھیلاتا ہے تو اللہ عزوجل اس بات سے حیا فرماتا ہے کہ وہ ہاتھ خالی لوٹائے — یہاں تک کہ اپنی رحمت کے فضل سے جتنا چاہے اس میں عطا فرماتا ہے۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī, Kitāb al-Duʿāʾ",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، كتاب الدعاء",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، کتاب الدعاء"
+      }
     },
     {
       "id": "q6",
@@ -196,7 +236,15 @@
       "relatedQuestions": [
         "q4",
         "q5"
-      ]
+      ],
+      "narration": {
+        "arabic": "وَمَا يَتَقَرَّبُ إِلَيَّ عَبْدٌ مِنْ عِبَادِي بِشَيْءٍ أَحَبَّ إِلَيَّ مِمَّا افْتَرَضْتُ عَلَيْهِ، وَإِنَّهُ لَيَتَقَرَّبُ إِلَيَّ بِالنَّافِلَةِ حَتَّى أُحِبَّهُ، فَإِذَا أَحْبَبْتُهُ كُنْتُ سَمْعَهُ الَّذِي يَسْمَعُ بِهِ، وَبَصَرَهُ الَّذِي يُبْصِرُ بِهِ، وَلِسَانَهُ الَّذِي يَنْطِقُ بِهِ، وَيَدَهُ الَّتِي يَبْطِشُ بِهَا، إِنْ دَعَانِي أَجَبْتُهُ، وَإِنْ سَأَلَنِي أَعْطَيْتُهُ",
+        "translationEn": "No servant of Mine draws near to Me with anything more beloved to Me than the duties I have made obligatory upon him; and he keeps drawing near to Me through the supererogatory acts until I love him. And when I love him I become his hearing by which he hears, his sight by which he sees, his tongue by which he speaks, and his hand by which he grasps. If he calls upon Me I answer him, and if he asks of Me I give him.",
+        "translationUr": "کوئی بندہ میرا قرب کسی ایسی چیز سے حاصل نہیں کرتا جو مجھے اس سے زیادہ محبوب ہو جو میں نے اس پر فرض کی ہے۔ اور وہ نوافل کے ذریعے میرا قرب حاصل کرتا رہتا ہے یہاں تک کہ میں اس سے محبت کرنے لگتا ہوں۔ جب میں اس سے محبت کر لیتا ہوں تو اس کا کان بن جاتا ہوں جس سے وہ سنتا ہے، اس کی آنکھ بن جاتا ہوں جس سے وہ دیکھتا ہے، اس کی زبان بن جاتا ہوں جس سے وہ بولتا ہے، اور اس کا ہاتھ بن جاتا ہوں جس سے وہ پکڑتا ہے۔ اگر وہ مجھے پکارے تو میں جواب دیتا ہوں، اور اگر مجھ سے مانگے تو میں عطا کرتا ہوں۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 352, Kitāb al-Īmān wa-l-Kufr — ḥadīth qurb al-nawāfil",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص٣٥٢، كتاب الإيمان والكفر — حديث قرب النوافل",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۳۵۲"
+      }
     },
     {
       "id": "q7",
@@ -227,7 +275,15 @@
       ],
       "relatedQuestions": [
         "q3"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّ قَوْماً عَبَدُوا اللَّهَ رَغْبَةً فَتِلْكَ عِبَادَةُ التُّجَّارِ، وَإِنَّ قَوْماً عَبَدُوا اللَّهَ رَهْبَةً فَتِلْكَ عِبَادَةُ الْعَبِيدِ، وَإِنَّ قَوْماً عَبَدُوا اللَّهَ شُكْراً فَتِلْكَ عِبَادَةُ الْأَحْرَارِ",
+        "translationEn": "Indeed a group worshipped God out of desire (for reward) — that is the worship of merchants; and a group worshipped God out of fear — that is the worship of slaves; and a group worshipped God out of gratitude — that is the worship of the free.",
+        "translationUr": "ایک گروہ نے اللہ کی عبادت (اجر کی) رغبت سے کی — یہ تاجروں کی عبادت ہے۔ ایک گروہ نے اللہ کی عبادت خوف سے کی — یہ غلاموں کی عبادت ہے۔ اور ایک گروہ نے اللہ کی عبادت شکرگزاری سے کی — یہ آزادوں کی عبادت ہے۔",
+        "sourceEn": "Imam ʿAlī ibn Abī Ṭālib (ʿa) — Nahj al-Balāgha, Ḥikam 237 (Ṣubḥī Ṣāliḥ; 234 in some editions)",
+        "sourceAr": "الإمام علي بن أبي طالب (عليه السلام) — نهج البلاغة، الحكمة ٢٣٧",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، حکمت ۲۳۷"
+      }
     },
     {
       "id": "q8",
@@ -258,7 +314,15 @@
       ],
       "relatedQuestions": [
         "q1"
-      ]
+      ],
+      "narration": {
+        "arabic": "خَلَقَهُمْ لِيَفْعَلُوا مَا يَسْتَوْجِبُونَ بِهِ رَحْمَتَهُ فَيَرْحَمَهُمْ",
+        "translationEn": "He created them so that they would do that by which they would merit His mercy, and so He would have mercy on them.",
+        "translationUr": "اللہ نے انہیں اس لیے پیدا کیا کہ وہ وہ کام کریں جس سے اس کی رحمت کے مستحق بنیں، اور پھر وہ ان پر رحم فرمائے۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — Biḥār al-Anwār, vol. 5, p. 314",
+        "sourceAr": "الإمام الصادق (عليه السلام) — بحار الأنوار، ج٥، ص٣١٤",
+        "sourceUr": "امام جعفر صادق علیہ السلام — بحار الانوار، ج۵، ص۳۱۴"
+      }
     },
     {
       "id": "q9",
@@ -298,7 +362,15 @@
       "relatedQuestions": [
         "q10",
         "q11"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّ فِي كِتَابِ عَلِيٍّ عَلَيْهِ السَّلامُ أَنَّ أَشَدَّ النَّاسِ بَلاءً النَّبِيُّونَ، ثُمَّ الوَصِيُّونَ، ثُمَّ الأمْثَلُ فَالأمْثَلُ. وَإنَّمَا يُبْتَلَى المُؤْمِنُ عَلَى قَدْرِ أَعْمَالِهِ الحَسَنَةِ، فَمَنْ صَحَّ دِينُهُ وَحَسُنَ عَمَلُهُ اشْتَدَّ بَلاؤُهُ، وَذَلِكَ أَنَّ اللهَ عَزَّ وَجَلَّ لَمْ يَجْعَلِ الدُّنْيَا ثَوَاباً لِمُؤْمِنٍ وَلا عُقُوبَةً لِكَافِرٍ",
+        "translationEn": "In the Book of ʿAlī (ʿa) it is written that the most severely tried of people are the prophets, then the successors (awṣiyāʾ), then those most like them and so on. The believer is tried only in proportion to his good deeds: whoever's faith is sound and whose deeds are good, his trial is more severe — and that is because God, Mighty and Majestic, did not make this world a reward for a believer nor a punishment for a disbeliever.",
+        "translationUr": "علی علیہ السلام کی کتاب میں لکھا ہے کہ سب سے سخت آزمائش نبیوں کو ہوتی ہے، پھر اوصیاء کو، پھر جو جتنا ان سے مشابہ ہو۔ مؤمن کی آزمائش صرف اس کے نیک اعمال کے تناسب سے ہوتی ہے: جس کا دین درست اور اعمال نیک ہوں، اس کی آزمائش زیادہ شدید ہوتی ہے — اور اس لیے کہ اللہ عزوجل نے اس دنیا کو کسی مؤمن کا انعام نہیں بنایا اور نہ کسی کافر کی سزا۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 259, hadith 29 (Kitāb al-Īmān wa al-Kufr, bāb shiddat ibtilāʾ al-muʾmin)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي ج٢، ص٢٥٩، حديث ٢٩ (كتاب الإيمان والكفر، باب شدة ابتلاء المؤمن)",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۲۵۹"
+      }
     },
     {
       "id": "q10",
@@ -329,7 +401,15 @@
       ],
       "relatedQuestions": [
         "q9"
-      ]
+      ],
+      "narration": {
+        "arabic": "إنَّ اللهَ عَزَّ وَجَلَّ لَيَتَعَاهَدُ المُؤْمِنَ بِالبَلاءِ كَمَا يَتَعَاهَدُ الرَّجُلُ أَهْلَهُ بِالهَدِيَّةِ مِنَ الغَيْبَةِ، وَيَحْمِيهِ الدُّنْيَا كَمَا يَحْمِي الطَّبِيبُ المَرِيضَ",
+        "translationEn": "Truly God, Mighty and Majestic, attends to the believer with affliction the way a man returning from a journey attends to his family with a gift, and He keeps him from [the indulgences of] this world the way a physician restrains a sick person [from what would harm him].",
+        "translationUr": "بے شک اللہ عزوجل مؤمن کی آزمائش اس طرح کرتا ہے جیسے سفر سے لوٹنے والا شخص اپنے گھر والوں کے لیے تحفہ لاتا ہے، اور وہ اسے دنیا کی (لذتوں سے) اس طرح روکتا ہے جیسے طبیب مریض کو (نقصاندہ چیزوں سے) روکتا ہے۔",
+        "sourceEn": "Imam al-Bāqir (ʿa) — al-Kāfī, vol. 2, p. 255, hadith 17 (Kitāb al-Īmān wa al-Kufr, bāb shiddat ibtilāʾ al-muʾmin)",
+        "sourceAr": "الإمام الباقر (عليه السلام) — الكافي ج٢، ص٢٥٥، حديث ١٧ (كتاب الإيمان والكفر، باب شدة ابتلاء المؤمن)",
+        "sourceUr": "امام محمد باقر علیہ السلام — الکافی، ج۲، ص۲۵۵"
+      }
     },
     {
       "id": "q11",
@@ -361,7 +441,15 @@
       "relatedQuestions": [
         "q9",
         "q10"
-      ]
+      ],
+      "narration": {
+        "arabic": "وَيَا مَنْ قَرُبَتْ نُصْرَتُهُ مِنَ الْمَظْلُومِينَ، وَيَا مَنْ بَعُدَ عَوْنُهُ عَنِ الظَّالِمِينَ",
+        "translationEn": "O He whose help is near to the wronged, and O He whose aid is far from the wrongdoers.",
+        "translationUr": "اے وہ ذات جس کی مدد مظلوموں کے قریب ہے! اے وہ ذات جس کی نصرت ظالموں سے دور ہے!",
+        "sourceEn": "Imam Zayn al-ʿĀbidīn / al-Sajjād (ʿa) — al-Ṣaḥīfa al-Sajjādiyya, Supplication 14 (His supplication when hostility was shown to him)",
+        "sourceAr": "الإمام زين العابدين السجّاد (عليه السلام) — الصحيفة السجادية، الدعاء الرابع عشر (في الاعتداء عليه)",
+        "sourceUr": "امام زین العابدین علیہ السلام — الصحیفہ السجادیہ، دعا ۱۴"
+      }
     },
     {
       "id": "q12",
@@ -392,7 +480,15 @@
       ],
       "relatedQuestions": [
         "q17"
-      ]
+      ],
+      "narration": {
+        "arabic": "يَوْمُ الْمَظْلُومِ عَلَى الظَّالِمِ أَشَدُّ مِنْ يَوْمِ الظَّالِمِ عَلَى الْمَظْلُومِ",
+        "translationEn": "The day of the oppressed against the oppressor will be more severe than the day of the oppressor against the oppressed.",
+        "translationUr": "مظلوم کا ظالم پر وہ دن، ظالم کے مظلوم پر اس دن سے کہیں زیادہ سخت ہوگا۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha, Sayings (Ḥikam) — no. 241 (Ṣubḥī Ṣāliḥ numbering; 224/238 in some editions)",
+        "sourceAr": "الإمام علي (عليه السلام) — نهج البلاغة، باب الحكم، الحكمة ٢٤١",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، حکمت ۲۴۱"
+      }
     },
     {
       "id": "q13",
@@ -423,7 +519,15 @@
       ],
       "relatedQuestions": [
         "q12"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّ الدُّنْيَا دَارُ صِدْقٍ لِمَنْ صَدَقَهَا، وَدَارُ عَافِيَةٍ لِمَنْ فَهِمَ عَنْهَا، وَدَارُ غِنًى لِمَنْ تَزَوَّدَ مِنْهَا، وَدَارُ مَوْعِظَةٍ لِمَنِ اتَّعَظَ بِهَا",
+        "translationEn": "Indeed this world is a house of truthfulness for the one who is truthful with it, a house of well-being for the one who understands it, a house of riches for the one who takes provision from it, and a house of admonition for the one who takes admonition from it.",
+        "translationUr": "بے شک یہ دنیا اس کے لیے سچائی کا گھر ہے جو اس سے سچائی سے پیش آئے، اس کے لیے عافیت کا گھر ہے جو اسے سمجھے، اس کے لیے مالداری کا گھر ہے جو اس سے توشہ لے، اور اس کے لیے نصیحت کا گھر ہے جو اس سے نصیحت حاصل کرے۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha, Saying 131",
+        "sourceAr": "الإمام علي (عليه السلام) — نهج البلاغة، الحكمة ١٣١",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، حکمت ۱۳۱"
+      }
     },
     {
       "id": "q14",
@@ -455,7 +559,15 @@
       "relatedQuestions": [
         "q9",
         "q10"
-      ]
+      ],
+      "narration": {
+        "arabic": "أَمَا عَلِمْتَ أَنَّ اللهَ عَزَّ وَجَلَّ يَخْتَارُ مِنْ مَالِ الْمُؤْمِنِ وَمِنْ وَلَدِهِ أَنْفَسَهُ لِيُؤْجِرَهُ عَلَى ذَلِكَ",
+        "translationEn": "Do you not know that God, Mighty and Majestic, chooses the most precious of the believer's wealth and of his children, in order to reward him for that?",
+        "translationUr": "کیا تجھے معلوم نہیں کہ اللہ عزوجل مؤمن کے مال اور اولاد میں سے جو سب سے قیمتی ہو اسے چن لیتا ہے تاکہ اسے اس کا اجر عطا کرے؟",
+        "sourceEn": "Imam Muhammad al-Jawād (ʿa) — al-Kāfī, vol. 3, p. 218 (Kitāb al-Janāʾiz, bāb al-taʿziya)",
+        "sourceAr": "الإمام الجواد (عليه السلام) — الكافي ج٣، ص٢١٨ (كتاب الجنائز، باب التعزية)",
+        "sourceUr": "امام محمد تقی علیہ السلام — الکافی، ج۳، ص۲۱۸"
+      }
     },
     {
       "id": "q15",
@@ -487,7 +599,15 @@
       "relatedQuestions": [
         "q16",
         "q22"
-      ]
+      ],
+      "narration": {
+        "arabic": "أَيْسَرُ حَقٍّ مِنْهَا أَنْ تُحِبَّ لَهُ مَا تُحِبُّ لِنَفْسِكَ وَتَكْرَهَ لَهُ مَا تَكْرَهُ لِنَفْسِكَ",
+        "translationEn": "The easiest of these rights is that you love for him what you love for yourself, and you hate for him what you hate for yourself.",
+        "translationUr": "ان (بھائی کے) حقوق میں سب سے آسان یہ ہے کہ اس کے لیے وہی پسند کرو جو اپنے لیے پسند کرتے ہو، اور اس کے لیے وہی ناپسند کرو جو اپنے لیے ناپسند کرتے ہو۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 169 (Kitāb al-Īmān wa al-Kufr, bāb ḥaqq al-muʾmin ʿalā akhīh), narrated by Muʿallā ibn Khunays",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص١٦٩، باب حق المؤمن على أخيه، عن معلى بن خنيس",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۱۶۹"
+      }
     },
     {
       "id": "q16",
@@ -518,7 +638,15 @@
       ],
       "relatedQuestions": [
         "q15"
-      ]
+      ],
+      "narration": {
+        "arabic": "صَدِيقُ كُلِّ امْرِئٍ عَقْلُهُ وَعَدُوُّهُ جَهْلُهُ",
+        "translationEn": "Every person's friend is his intellect, and his enemy is his ignorance.",
+        "translationUr": "ہر انسان کا دوست اس کی عقل ہے اور اس کا دشمن اس کی جہالت ہے۔",
+        "sourceEn": "Imam al-Riḍā (ʿa) — al-Kāfī, vol. 1, p. 11 (Kitāb al-ʿAql wa al-Jahl, ḥadīth 4)",
+        "sourceAr": "الإمام الرضا (عليه السلام) — الكافي، ج١، ص١١، كتاب العقل والجهل، ح٤",
+        "sourceUr": "امام علی رضا علیہ السلام — الکافی، ج۱، ص۱۱"
+      }
     },
     {
       "id": "q17",
@@ -549,7 +677,15 @@
       ],
       "relatedQuestions": [
         "q19"
-      ]
+      ],
+      "narration": {
+        "arabic": "مَنْ كَظَمَ غَيْظاً وَلَوْ شَاءَ أَنْ يُمْضِيَهُ أَمْضَاهُ، مَلَأَ اللَّهُ قَلْبَهُ يَوْمَ الْقِيَامَةِ رِضَاهُ",
+        "translationEn": "Whoever restrains his anger when, had he wished, he could have carried it out, God will fill his heart with His good pleasure on the Day of Resurrection.",
+        "translationUr": "جو شخص اپنا غصہ پی جائے جبکہ وہ چاہتا تو اسے نافذ کر سکتا تھا، اللہ قیامت کے دن اس کے دل کو اپنی رضا سے بھر دے گا۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 110 (Kitāb al-Īmān wa al-Kufr, bāb kaẓm al-ghayẓ)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص١١٠، باب كظم الغيظ",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۱۱۰"
+      }
     },
     {
       "id": "q18",
@@ -580,7 +716,15 @@
       ],
       "relatedQuestions": [
         "q15"
-      ]
+      ],
+      "narration": {
+        "arabic": "صَدَقَةُ السِّرِّ تُطْفِئُ غَضَبَ الرَّبِّ",
+        "translationEn": "Charity given in secret extinguishes the wrath of the Lord.",
+        "translationUr": "پوشیدہ صدقہ رب کے غضب کو بجھا دیتا ہے۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 4, p. 8 (Kitāb al-Zakāt, bāb faḍl ṣadaqat al-sirr)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٤، ص٨، باب فضل صدقة السر",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۴، ص۸"
+      }
     },
     {
       "id": "q19",
@@ -611,7 +755,15 @@
       ],
       "relatedQuestions": [
         "q17"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِذَا قَدَرْتَ عَلَى عَدُوِّكَ فَاجْعَلِ الْعَفْوَ عَنْهُ شُكْراً لِلْقُدْرَةِ عَلَيْهِ",
+        "translationEn": "When you gain power over your enemy, make pardoning him a thanksgiving for the power you have over him.",
+        "translationUr": "جب اپنے دشمن پر قابو پاؤ تو اسے معاف کر دینے کو اس قدرت پر شکر بنا لو۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha, ḥikma 11 (saying no. 11)",
+        "sourceAr": "الإمام علي (عليه السلام) — نهج البلاغة، الحكمة ١١",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، حکمت ۱۱"
+      }
     },
     {
       "id": "q20",
@@ -642,7 +794,15 @@
       ],
       "relatedQuestions": [
         "q15"
-      ]
+      ],
+      "narration": {
+        "arabic": "مِنَ التَّوَاضُعِ أَنْ تَرْضَى بِالْمَجْلِسِ دُونَ الْمَجْلِسِ، وَأَنْ تُسَلِّمَ عَلَى مَنْ تَلْقَى، وَأَنْ تَتْرُكَ الْمِرَاءَ وَإِنْ كُنْتَ مُحِقّاً، وَأَنْ لَا تُحِبَّ أَنْ تُحْمَدَ عَلَى التَّقْوَى",
+        "translationEn": "Part of humility is that you are content to sit in a place lower than your station, that you greet whomever you meet, that you abandon disputation even when you are in the right, and that you do not love to be praised for your piety.",
+        "translationUr": "تواضع میں سے یہ ہے کہ تم اپنے مرتبے سے کمتر جگہ پر بیٹھنے میں راضی رہو، جو بھی ملے اسے سلام کرو، حق پر ہونے کے باوجود بحث سے باز رہو، اور یہ نہ چاہو کہ لوگ تمہاری تقویٰ کی وجہ سے تمہاری تعریف کریں۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 122 (Kitāb al-Īmān wa al-Kufr, bāb al-tawāḍuʿ)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص١٢٢، باب التواضع",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۱۲۲"
+      }
     },
     {
       "id": "q21",
@@ -673,7 +833,15 @@
       ],
       "relatedQuestions": [
         "q15"
-      ]
+      ],
+      "narration": {
+        "arabic": "الْغِيبَةُ أَنْ تَقُولَ فِي أَخِيكَ مَا سَتَرَهُ اللَّهُ عَلَيْهِ، وَأَمَّا الْأَمْرُ الظَّاهِرُ فِيهِ مِثْلُ الْحِدَّةِ وَالْعَجَلَةِ فَلَا، وَالْبُهْتَانُ أَنْ تَقُولَ فِيهِ مَا لَيْسَ فِيهِ",
+        "translationEn": "Backbiting is to say about your brother that which God has concealed for him; but as for what is openly apparent in him, such as a quick temper or hastiness, that is not [backbiting]. And slander (buhtān) is to say about him what is not in him.",
+        "translationUr": "غیبت یہ ہے کہ اپنے بھائی کے بارے میں وہ بات کہو جسے اللہ نے اس پر چھپایا ہوا ہے۔ لیکن جو چیز اس میں ظاہر ہو جیسے تیز مزاجی اور جلد بازی، وہ غیبت نہیں۔ اور بہتان یہ ہے کہ اس کے بارے میں وہ بات کہو جو اس میں ہے ہی نہیں۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 358 (Kitāb al-Īmān wa al-Kufr, bāb al-ghība wa al-baht)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص٣٥٨، باب الغيبة والبهت",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۳۵۸"
+      }
     },
     {
       "id": "q22",
@@ -705,7 +873,15 @@
       "relatedQuestions": [
         "q23",
         "q24"
-      ]
+      ],
+      "narration": {
+        "arabic": "مَا الْمَوْتُ إِلَّا قَنْطَرَةٌ تَعْبُرُ بِكُمْ مِنَ الْبُؤْسِ وَالضَّرَّاءِ إِلَى الْجِنَانِ الْوَاسِعَةِ وَالنَّعِيمِ الدَّائِمِ",
+        "translationEn": "Death is nothing but a bridge that carries you across from hardship and adversity to the spacious gardens and the everlasting bliss.",
+        "translationUr": "موت کچھ نہیں مگر ایک پل ہے جو تمہیں تکلیف اور مصیبت سے گزار کر وسیع باغات اور دائمی نعمتوں تک پہنچاتا ہے۔",
+        "sourceEn": "Imam al-Ḥusayn (ʿa) — Biḥār al-Anwār, vol. 6, p. 154",
+        "sourceAr": "الإمام الحسين (عليه السلام) — بحار الأنوار، ج٦، ص١٥٤",
+        "sourceUr": "امام حسین علیہ السلام — بحار الانوار، ج۶، ص۱۵۴"
+      }
     },
     {
       "id": "q23",
@@ -737,7 +913,15 @@
       "relatedQuestions": [
         "q22",
         "q12"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّ الْيَوْمَ عَمَلٌ وَلَا حِسَابَ، وَغَداً حِسَابٌ وَلَا عَمَلَ",
+        "translationEn": "Indeed today there is action and no reckoning, while tomorrow there will be reckoning and no action.",
+        "translationUr": "بے شک آج عمل کا دن ہے اور حساب نہیں، اور کل حساب کا دن ہوگا اور عمل نہیں۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha, Saying 42",
+        "sourceAr": "الإمام علي (عليه السلام) — نهج البلاغة، الحكمة ٤٢",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، حکمت ۴۲"
+      }
     },
     {
       "id": "q24",
@@ -769,7 +953,15 @@
       "relatedQuestions": [
         "q22",
         "q25"
-      ]
+      ],
+      "narration": {
+        "arabic": "دَرَجَاتٌ مُتَفَاضِلَاتٌ، وَمَنَازِلُ مُتَفَاوِتَاتٌ، لَا يَنْقَطِعُ نَعِيمُهَا، وَلَا يَظْعَنُ مُقِيمُهَا، وَلَا يَهْرَمُ خَالِدُهَا، وَلَا يَبْأَسُ سَاكِنُهَا",
+        "translationEn": "(Paradise has) ranks one above another and dwellings of differing degrees. Its bliss never ceases, its resident never departs, the one who abides in it never grows old, and the one who dwells in it is never wretched.",
+        "translationUr": "جنت کے درجے بلند و بالا ہیں اور منازل مختلف مراتب کی ہیں۔ اس کی نعمت کبھی ختم نہیں ہوتی، اس کا مقیم کبھی نہیں جاتا، اس میں رہنے والا کبھی نہیں بوڑھا ہوتا، اور اس کا باشندہ کبھی محتاج نہیں ہوتا۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha, Sermon 85",
+        "sourceAr": "الإمام علي (عليه السلام) — نهج البلاغة، الخطبة ٨٥",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، خطبہ ۸۵"
+      }
     },
     {
       "id": "q25",
@@ -801,7 +993,15 @@
       "relatedQuestions": [
         "q22",
         "q2"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّ فِي جَهَنَّمَ لَوَادِياً لِلْمُتَكَبِّرِينَ يُقَالُ لَهُ سَقَرُ، شَكَا إِلَى اللَّهِ عَزَّ وَجَلَّ شِدَّةَ حَرِّهِ، وَسَأَلَهُ أَنْ يَأْذَنَ لَهُ أَنْ يَتَنَفَّسَ، فَتَنَفَّسَ فَأَحْرَقَ جَهَنَّمَ",
+        "translationEn": "Indeed in Hell there is a valley for the arrogant called Saqar. It complained to God, Mighty and Majestic, of the severity of its heat and asked Him to permit it to breathe; so it breathed, and (its breath) scorched Hell (itself).",
+        "translationUr": "بے شک جہنم میں متکبرین کے لیے ایک وادی ہے جسے «سَقَر» کہتے ہیں۔ اس نے اللہ عزوجل سے اپنی گرمی کی شدت کی شکایت کی اور اجازت مانگی کہ سانس لے سکے۔ پس اس نے سانس لیا تو اس کی سانس سے جہنم خود بھی جل اٹھی۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 310 (Kitāb al-Īmān wa al-Kufr, bāb al-kibr)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص٣١٠ (كتاب الإيمان والكفر، باب الكبر)",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۳۱۰"
+      }
     },
     {
       "id": "q26",
@@ -832,7 +1032,15 @@
       ],
       "relatedQuestions": [
         "q24"
-      ]
+      ],
+      "narration": {
+        "arabic": "قَصَرَتِ الْأَبْنَاءُ عَنْ أَعْمَالِ الْآبَاءِ فَأَلْحَقَ اللَّهُ الْأَبْنَاءَ بِالْآبَاءِ لِتَقَرَّ بِذَلِكَ أَعْيُنُهُمْ",
+        "translationEn": "The children fell short of the deeds of the fathers, so God joined the children with the fathers (in Paradise) so that thereby their eyes would be delighted.",
+        "translationUr": "بچے باپوں کے اعمال سے کم رہے، تو اللہ نے بچوں کو باپوں کے ساتھ ملا دیا تاکہ اس سے ان کی آنکھیں ٹھنڈی ہوں۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 3, p. 249 (commenting on Qurʾān 52:21)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٣، ص٢٤٩ (في قوله تعالى: وألحقنا بهم ذريتهم)",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۳، ص۲۴۹"
+      }
     },
     {
       "id": "q27",
@@ -863,7 +1071,15 @@
       ],
       "relatedQuestions": [
         "q22"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّمَا هِيَ رَوْضَةٌ مِنْ رِيَاضِ الْجَنَّةِ أَوْ حُفْرَةٌ مِنْ حُفَرِ النِّيرَانِ",
+        "translationEn": "It (the grave) is but a garden from among the gardens of Paradise, or a pit from among the pits of the Fire.",
+        "translationUr": "قبر جنت کے باغوں میں سے ایک باغ ہے یا آگ کے گڑھوں میں سے ایک گڑھا۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 3, p. 242 (Kitāb al-Janāʾiz)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٣، ص٢٤٢ (كتاب الجنائز)",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۳، ص۲۴۲"
+      }
     },
     {
       "id": "q28",
@@ -895,7 +1111,15 @@
       "relatedQuestions": [
         "q15",
         "q29"
-      ]
+      ],
+      "narration": {
+        "arabic": "الإِحْسَانُ أَنْ تُحْسِنَ صُحْبَتَهُمَا، وَأَنْ لَا تُكَلِّفَهُمَا أَنْ يَسْأَلَاكَ شَيْئاً مِمَّا يَحْتَاجَانِ إِلَيْهِ وَإِنْ كَانَا مُسْتَغْنِيَيْنِ",
+        "translationEn": "Kindness (iḥsān) is that you keep good company with them, and that you do not make them have to ask you for anything they need — even if they are not in want of it.",
+        "translationUr": "احسان یہ ہے کہ ان کے ساتھ اچھی صحبت رکھو، اور انہیں مجبور نہ کرو کہ وہ اپنی ضرورت کی چیز تم سے مانگیں — چاہے وہ خود مستغنی ہی کیوں نہ ہوں۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 157 (Kitāb al-Birr wa al-Ṣila)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص١٥٧",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۱۵۷"
+      }
     },
     {
       "id": "q29",
@@ -926,7 +1150,15 @@
       ],
       "relatedQuestions": [
         "q30"
-      ]
+      ],
+      "narration": {
+        "arabic": "يُشْبِعُهَا وَيَكْسُوهَا، وَإِنْ جَهِلَتْ غَفَرَ لَهَا",
+        "translationEn": "He should feed her sufficiently and clothe her, and if she behaves ignorantly (foolishly), he should forgive her.",
+        "translationUr": "شوہر کو چاہیے کہ بیوی کو بھرپور کھانا کھلائے اور لباس پہنائے، اور اگر وہ کبھی نادانی کرے تو اسے معاف کر دے۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 5, p. 511 (Kitāb al-Nikāḥ, bāb ḥaqq al-marʾa ʿalā al-zawj)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٥، ص٥١١",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۵، ص۵۱۱"
+      }
     },
     {
       "id": "q30",
@@ -957,7 +1189,15 @@
       ],
       "relatedQuestions": [
         "q28"
-      ]
+      ],
+      "narration": {
+        "arabic": "حَقُّ الْوَلَدِ عَلَى الْوَالِدِ أَنْ يُحْسِنَ اسْمَهُ، وَيُحْسِنَ أَدَبَهُ، وَيُعَلِّمَهُ الْقُرْآنَ",
+        "translationEn": "The right of the child upon the parent is that he give him a good name, refine his manners (upbringing), and teach him the Qur'an.",
+        "translationUr": "اولاد کا والدین پر حق ہے کہ اسے اچھا نام دیں، اس کی اچھی تربیت کریں، اور اسے قرآن سکھائیں۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha, Ḥikma (Saying) 399",
+        "sourceAr": "الإمام علي (عليه السلام) — نهج البلاغة، الحكمة ٣٩٩",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، حکمت ۳۹۹"
+      }
     },
     {
       "id": "q31",
@@ -988,7 +1228,15 @@
       ],
       "relatedQuestions": [
         "q15"
-      ]
+      ],
+      "narration": {
+        "arabic": "عَلَيْكَ بِإِخْوَانِ الصِّدْقِ فَأَكْثِرْ مِنِ اكْتِسَابِهِمْ، فَإِنَّهُمْ عُدَّةٌ عِنْدَ الرَّخَاءِ وَجُنَّةٌ عِنْدَ الْبَلَاءِ",
+        "translationEn": "Keep to sincere/truthful brothers and acquire many of them, for they are a provision in times of ease and a shield in times of affliction.",
+        "translationUr": "سچے بھائیوں کو اپناؤ اور انہیں زیادہ سے زیادہ حاصل کرو، کیونکہ وہ آسانی کے وقت زاد راہ ہیں اور آزمائش کے وقت ڈھال۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Biḥār al-Anwār, vol. 71, p. 187",
+        "sourceAr": "الإمام علي (عليه السلام) — بحار الأنوار، ج٧١، ص١٨٧",
+        "sourceUr": "امام علی علیہ السلام — بحار الانوار، ج۷۱، ص۱۸۷"
+      }
     },
     {
       "id": "q32",
@@ -1020,7 +1268,15 @@
       "relatedQuestions": [
         "q28",
         "q15"
-      ]
+      ],
+      "narration": {
+        "arabic": "أَلَا أُخْبِرُكُمْ بِخَيْرِ خَلَائِقِ الدُّنْيَا وَالْآخِرَةِ؟ الْعَفْوُ عَمَّنْ ظَلَمَكَ، وَتَصِلُ مَنْ قَطَعَكَ، وَالْإِحْسَانُ إِلَى مَنْ أَسَاءَ إِلَيْكَ، وَإِعْطَاءُ مَنْ حَرَمَكَ",
+        "translationEn": "Shall I not tell you of the best character traits of this world and the next? Pardoning the one who wronged you, keeping ties with the one who cut you off, doing good to the one who mistreated you, and giving to the one who withheld from you.",
+        "translationUr": "کیا میں تمہیں دنیا اور آخرت کی بہترین صفات نہ بتاؤں؟ اپنے پر ظلم کرنے والے کو معاف کرنا، تم سے قطع تعلق کرنے والے سے تعلق جوڑنا، تمہارے ساتھ برائی کرنے والے کے ساتھ نیکی کرنا، اور تمہیں محروم کرنے والے کو عطا کرنا۔",
+        "sourceEn": "Prophet Muḥammad (ﷺ) — al-Kāfī, vol. 2, p. 107 (Kitāb al-ʿIshra / bāb al-ʿafw)",
+        "sourceAr": "النبي محمد (صلى الله عليه وآله وسلم) — الكافي، ج٢، ص١٠٧",
+        "sourceUr": "رسول اللہ صلی اللہ علیہ وآلہ وسلم — الکافی، ج۲، ص۱۰۷"
+      }
     },
     {
       "id": "q33",
@@ -1051,7 +1307,15 @@
       ],
       "relatedQuestions": [
         "q29"
-      ]
+      ],
+      "narration": {
+        "arabic": "مِنْ بَرَكَةِ الْمَرْأَةِ قِلَّةُ مَهْرِهَا، وَمِنْ شُؤْمِهَا كَثْرَةُ مَهْرِهَا",
+        "translationEn": "Among the blessings of a woman is the modesty of her dowry, and among her ill-fortune is the largeness of her dowry.",
+        "translationUr": "عورت کی برکت میں سے مہر کا کم ہونا ہے، اور اس کی بدشگونی میں سے مہر کا زیادہ ہونا ہے۔",
+        "sourceEn": "Prophet Muḥammad (ﷺ) — Makārim al-Akhlāq, p. 238",
+        "sourceAr": "النبي محمد (صلى الله عليه وآله وسلم) — مكارم الأخلاق، ص٢٣٨",
+        "sourceUr": "رسول اللہ صلی اللہ علیہ وآلہ وسلم — مکارم الاخلاق، ص۲۳۸"
+      }
     },
     {
       "id": "q34",
@@ -1083,7 +1347,15 @@
       "relatedQuestions": [
         "q35",
         "q36"
-      ]
+      ],
+      "narration": {
+        "arabic": "وَأَشْعِرْ قَلْبَكَ الرَّحْمَةَ لِلرَّعِيَّةِ، وَالْمَحَبَّةَ لَهُمْ، وَاللُّطْفَ بِهِمْ... فَإِنَّهُمْ صِنْفَانِ: إِمَّا أَخٌ لَكَ فِي الدِّينِ، وَإِمَّا نَظِيرٌ لَكَ فِي الْخَلْقِ",
+        "translationEn": "Fill your heart with mercy for the subjects, with love for them and kindness toward them... for they are of two kinds: either a brother to you in religion, or one like you in creation.",
+        "translationUr": "اپنے دل کو رعایا کے لیے رحمت، ان سے محبت اور ان کے ساتھ مہربانی سے بھر لو۔ کیونکہ وہ دو قسم کے ہیں: یا تو دین میں تمہارے بھائی ہیں، یا تخلیق میں تمہارے جیسے انسان۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha, Letter 53 (Imam ʿAlī's covenant to Mālik al-Ashtar)",
+        "sourceAr": "الإمام علي (عليه السلام) — نهج البلاغة، الكتاب ٥٣ (عهد الإمام علي إلى مالك الأشتر)",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، خط ۵۳"
+      }
     },
     {
       "id": "q35",
@@ -1114,7 +1386,15 @@
       ],
       "relatedQuestions": [
         "q34"
-      ]
+      ],
+      "narration": {
+        "arabic": "الإِيمَانُ مَا اسْتَقَرَّ فِي الْقَلْبِ وَأَفْضَى بِهِ إِلَى اللَّهِ عَزَّ وَجَلَّ، وَصَدَّقَهُ الْعَمَلُ بِالطَّاعَةِ. وَالْإِسْلَامُ مَا ظَهَرَ مِنْ قَوْلٍ أَوْ فِعْلٍ، وَهُوَ الَّذِي عَلَيْهِ جَمَاعَةُ النَّاسِ مِنَ الْفِرَقِ كُلِّهَا، وَبِهِ حُقِنَتِ الدِّمَاءُ",
+        "translationEn": "Faith (īmān) is that which settles firmly in the heart and brings one through to God — Mighty and Majestic — and which deeds confirm through obedience. Islam is what is outwardly shown in word or deed; it is what the generality of people of every sect hold to, and by it blood is protected.",
+        "translationUr": "ایمان وہ ہے جو دل میں جم جائے اور بندے کو اللہ عزوجل تک پہنچائے، اور اعمالِ اطاعت اس کی تصدیق کریں۔ اور اسلام وہ ہے جو قول یا فعل میں ظاہر ہو؛ یہ وہی ہے جس پر تمام فرقوں کے لوگوں کا اجتماع ہے، اور اسی سے خون محفوظ رہتے ہیں۔",
+        "sourceEn": "Imam Muḥammad al-Bāqir (ʿa) — al-Kāfī, Kitāb al-Īmān wa al-Kufr, vol. 2, p. 26 (narrated by Ḥamrān ibn Aʿyan)",
+        "sourceAr": "الإمام الباقر (عليه السلام) — الكافي، كتاب الإيمان والكفر، ج٢ ص٢٦ (رواية حمران بن أعين)",
+        "sourceUr": "امام محمد باقر علیہ السلام — الکافی، ج۲، ص۲۶"
+      }
     },
     {
       "id": "q36",
@@ -1146,7 +1426,15 @@
       "relatedQuestions": [
         "q34",
         "q35"
-      ]
+      ],
+      "narration": {
+        "arabic": "مَرَّ شَيْخٌ مَكْفُوفٌ كَبِيرٌ يَسْأَلُ، فَقَالَ أَمِيرُ الْمُؤْمِنِينَ عَلَيْهِ السَّلَامُ: مَا هَذَا؟ فَقَالُوا: يَا أَمِيرَ الْمُؤْمِنِينَ، نَصْرَانِيٌّ! فَقَالَ أَمِيرُ الْمُؤْمِنِينَ: اسْتَعْمَلْتُمُوهُ حَتَّى إِذَا كَبِرَ وَعَجَزَ مَنَعْتُمُوهُ؟! أَنْفِقُوا عَلَيْهِ مِنْ بَيْتِ الْمَالِ",
+        "translationEn": "An old blind man passed by, begging. The Commander of the Faithful (ʿa) asked, 'What is this?' They said, 'O Commander of the Faithful, he is a Christian.' He said, 'You employed him until, when he grew old and unable, you cast him off?! Provide for him from the public treasury.'",
+        "translationUr": "ایک بوڑھا نابینا شخص بھیک مانگتا ہوا گزرا۔ امیرالمؤمنین علیہ السلام نے فرمایا: «یہ کیا ہے؟» لوگوں نے کہا: «یا امیرالمؤمنین، یہ عیسائی ہے۔» آپ نے فرمایا: «تم نے اس سے کام لیا یہاں تک کہ جب بوڑھا اور عاجز ہو گیا تو اسے چھوڑ دیا؟! بیت المال سے اس پر خرچ کرو۔»",
+        "sourceEn": "Imam ʿAlī (ʿa) — Tahdhīb al-Aḥkām, vol. 6, p. 292",
+        "sourceAr": "الإمام علي (عليه السلام) — تهذيب الأحكام ج٦ ص٢٩٢",
+        "sourceUr": "امام علی علیہ السلام — تہذیب الاحکام، ج۶، ص۲۹۲"
+      }
     },
     {
       "id": "q37",
@@ -1177,7 +1465,15 @@
       ],
       "relatedQuestions": [
         "q34"
-      ]
+      ],
+      "narration": {
+        "arabic": "كَانُوا أُمَّةً وَاحِدَةً فَبَعَثَ اللَّهُ النَّبِيِّينَ لِيَتَّخِذَ عَلَيْهِمُ الْحُجَّةَ",
+        "translationEn": "They were one community; then God sent the prophets so as to establish the proof over them.",
+        "translationUr": "وہ (لوگ) ایک ہی امت تھے، پھر اللہ نے انبیاء کو بھیجا تاکہ ان پر حجت قائم کرے۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī (al-Rawḍa), vol. 8, p. 379, on Qurʾān 11:118–119",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي (الروضة)، ج٨ ص٣٧٩",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۸، ص۳۷۹"
+      }
     },
     {
       "id": "q38",
@@ -1209,7 +1505,15 @@
       "relatedQuestions": [
         "q15",
         "q34"
-      ]
+      ],
+      "narration": {
+        "arabic": "الْجِيرَانُ ثَلَاثَةٌ: فَمِنْهُمْ مَنْ لَهُ ثَلَاثَةُ حُقُوقٍ: حَقُّ الْجِوَارِ، وَحَقُّ الْإِسْلَامِ، وَحَقُّ الْقَرَابَةِ؛ وَمِنْهُمْ مَنْ لَهُ حَقَّانِ: حَقُّ الْإِسْلَامِ وَحَقُّ الْجِوَارِ؛ وَمِنْهُمْ مَنْ لَهُ حَقٌّ وَاحِدٌ: الْكَافِرُ لَهُ حَقُّ الْجِوَارِ",
+        "translationEn": "Neighbors are of three kinds: one with three rights — the right of neighborliness, the right of Islam, and the right of kinship; one with two rights — the right of Islam and the right of neighborliness; and one with a single right — the disbeliever, who has the right of neighborliness.",
+        "translationUr": "پڑوسی تین قسم کے ہیں: ایک وہ جس کے تین حق ہیں — پڑوس کا حق، اسلام کا حق اور رشتہ داری کا حق؛ ایک وہ جس کے دو حق ہیں — اسلام کا حق اور پڑوس کا حق؛ اور ایک وہ جس کا صرف ایک حق ہے — اور وہ کافر ہے جس کا صرف پڑوس کا حق ہے۔",
+        "sourceEn": "Prophet Muḥammad (ﷺ) — Mustadrak al-Wasāʾil, vol. 8, p. 424",
+        "sourceAr": "النبي محمد (صلى الله عليه وآله وسلم) — مستدرك الوسائل ج٨ ص٤٢٤",
+        "sourceUr": "رسول اللہ صلی اللہ علیہ وآلہ وسلم — مستدرک الوسائل، ج۸، ص۴۲۴"
+      }
     },
     {
       "id": "q39",
@@ -1240,7 +1544,15 @@
       ],
       "relatedQuestions": [
         "q16"
-      ]
+      ],
+      "narration": {
+        "arabic": "كُلُّ كَذِبٍ مَسْؤُولٌ عَنْهُ صَاحِبُهُ يَوْماً إِلَّا فِي ثَلَاثٍ: رَجُلٌ كَائِدٌ فِي حَرْبِهِ فَهُوَ مَوْضُوعٌ عَنْهُ، أَوْ رَجُلٌ أَصْلَحَ بَيْنَ اثْنَيْنِ يَلْقَى هَذَا بِغَيْرِ مَا يَلْقَى بِهِ هَذَا يُرِيدُ بِذَلِكَ الْإِصْلَاحَ مَا بَيْنَهُمَا، أَوْ رَجُلٌ وَعَدَ أَهْلَهُ شَيْئاً وَهُوَ لَا يُرِيدُ أَنْ يُتِمَّ لَهُمْ",
+        "translationEn": "Every lie its author will be questioned about one day, except in three cases: a man employing a stratagem in his war — that is excused him; or a man who reconciles between two people, meeting one with words other than he meets the other, intending thereby reconciliation between them; or a man who promises his family something he does not intend to fulfil.",
+        "translationUr": "ہر جھوٹ کے بارے میں اس کے کہنے والے سے ایک دن پوچھا جائے گا، سوائے تین صورتوں کے: ایک وہ شخص جو جنگ میں چال چلے — اس سے وہ اٹھا لیا گیا ہے؛ یا وہ شخص جو دو لوگوں کے درمیان صلح کرائے اور ایک سے کچھ اور، دوسرے سے کچھ اور کہے، لیکن اس کا مقصد ان کے درمیان اصلاح ہو؛ یا وہ شخص جو اپنے گھر والوں سے کوئی وعدہ کرے اور اسے پورا کرنے کا ارادہ نہ رکھتا ہو۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 341–342 (Kitāb al-Īmān wa al-Kufr, bāb al-kadhib)",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص٣٤١-٣٤٢، باب الكذب",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۳۴۱"
+      }
     },
     {
       "id": "q40",
@@ -1271,7 +1583,15 @@
       ],
       "relatedQuestions": [
         "q2"
-      ]
+      ],
+      "narration": {
+        "arabic": "قَالَ (عليه السلام) لِقَائِلٍ قَالَ بِحَضْرَتِهِ: أَسْتَغْفِرُ اللَّهَ: ثَكِلَتْكَ أُمُّكَ! أَتَدْرِي مَا الِاسْتِغْفَارُ؟ إِنَّ الِاسْتِغْفَارَ دَرَجَةُ الْعِلِّيِّينَ، وَهُوَ اسْمٌ وَاقِعٌ عَلَى سِتَّةِ مَعَانٍ: أَوَّلُهَا النَّدَمُ عَلَى مَا مَضَى، وَالثَّانِي الْعَزْمُ عَلَى تَرْكِ الْعَوْدِ إِلَيْهِ أَبَداً، وَالثَّالِثُ أَنْ تُؤَدِّيَ إِلَى الْمَخْلُوقِينَ حُقُوقَهُمْ حَتَّى تَلْقَى اللَّهَ أَمْلَسَ لَيْسَ عَلَيْكَ تَبِعَةٌ، وَالرَّابِعُ أَنْ تَعْمِدَ إِلَى كُلِّ فَرِيضَةٍ عَلَيْكَ ضَيَّعْتَهَا فَتُؤَدِّيَ حَقَّهَا، وَالْخَامِسُ أَنْ تَعْمِدَ إِلَى اللَّحْمِ الَّذِي نَبَتَ عَلَى السُّحْتِ فَتُذِيبَهُ بِالْأَحْزَانِ، وَالسَّادِسُ أَنْ تُذِيقَ الْجِسْمَ أَلَمَ الطَّاعَةِ كَمَا أَذَقْتَهُ حَلَاوَةَ الْمَعْصِيَةِ، فَعِنْدَ ذَلِكَ تَقُولُ: أَسْتَغْفِرُ اللَّهَ",
+        "translationEn": "He (ʿa) said to a man who declared in his presence 'I seek God's forgiveness': May your mother lament you! Do you know what seeking forgiveness is? Seeking forgiveness is the rank of the exalted, and it is a name signifying six meanings: first, regret over what has passed; second, the firm resolve never to return to it; third, that you render to people their rights so that you meet God smooth, with no claim against you; fourth, that you fulfill every obligation you neglected; fifth, that you turn to the flesh grown from unlawful gain and melt it away with grief; sixth, that you make the body taste the pain of obedience as you made it taste the sweetness of disobedience. Only then do you say, 'I seek God's forgiveness.'",
+        "translationUr": "آپ علیہ السلام نے ایک ایسے شخص سے فرمایا جس نے آپ کی موجودگی میں «استغفراللہ» کہا: تیری ماں تجھے روئے! کیا تو جانتا ہے استغفار کیا ہے؟ استغفار علیّین کا درجہ ہے، اور یہ لفظ چھ معانی پر مشتمل ہے: پہلا، گذشتہ (گناہوں) پر ندامت؛ دوسرا، ہمیشہ کے لیے واپس نہ لوٹنے کا پختہ عزم؛ تیسرا، مخلوق کے حقوق انہیں ادا کرنا تاکہ اللہ سے صاف اور بے داغ ملو؛ چوتھا، ہر وہ فریضہ جسے تم نے ضائع کیا، اس کی قضا کرنا؛ پانچواں، حرام سے اگا ہوا گوشت غم و الم سے گھلانا؛ اور چھٹا، جسم کو اطاعت کی تکلیف چکھانا جیسے تم نے اسے گناہ کی مٹھاس چکھائی تھی۔ جب یہ سب پورا ہو جائے تب کہو: «أَسْتَغْفِرُ اللهَ»۔",
+        "sourceEn": "Imam ʿAlī ibn Abī Ṭālib (ʿa) — Nahj al-Balāgha, Ḥikam 417 (Ṣubḥī Ṣāliḥ)",
+        "sourceAr": "الإمام علي بن أبي طالب (عليه السلام) — نهج البلاغة، الحكمة ٤١٧",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، حکمت ۴۱۷"
+      }
     },
     {
       "id": "q41",
@@ -1312,7 +1632,15 @@
         "q42",
         "q44",
         "q45"
-      ]
+      ],
+      "narration": {
+        "arabic": "لَقَدْ خَلَقَ اللَّهُ عَزَّ وَجَلَّ فِي الْأَرْضِ مُنْذُ خَلَقَهَا سَبْعَةَ عَالَمِينَ، لَيْسَ هُمْ مِنْ وَلَدِ آدَمَ، خَلَقَهُمْ مِنْ أَدِيمِ الْأَرْضِ، فَأَسْكَنَهُمْ فِيهَا وَاحِداً بَعْدَ وَاحِدٍ مَعَ عَالَمِهِ، ثُمَّ خَلَقَ اللَّهُ عَزَّ وَجَلَّ آدَمَ أَبَا هَذَا الْبَشَرِ وَخَلَقَ ذُرِّيَّتَهُ مِنْهُ.",
+        "translationEn": "Since He created the earth, God — mighty and majestic — has created upon it seven worlds, none of them from the children of Adam; He created them from the surface of the earth and settled them in it one after another, each generation with its own world. Then God created Adam, the father of this human race, and created his progeny from him.",
+        "translationUr": "بے شک اللہ عزوجل نے زمین کو پیدا کرنے کے بعد سے اس پر سات جہانوں کو پیدا کیا جو آدم علیہ السلام کی نسل سے نہیں تھے؛ اللہ نے انہیں زمین کی مٹی سے پیدا کیا اور ایک کے بعد دوسرے کو اپنے اپنے جہان کے ساتھ اس میں بسایا۔ پھر اللہ عزوجل نے آدم کو — اس نسل انسانی کے باپ کو — پیدا کیا اور ان کی ذریت انہی سے پیدا کی۔",
+        "sourceEn": "Imam al-Bāqir (ʿa) — al-Khiṣāl, p. 359",
+        "sourceAr": "الإمام الباقر (عليه السلام) — الخصال، ص٣٥٩",
+        "sourceUr": "امام محمد باقر علیہ السلام — الخصال، ص۳۵۹"
+      }
     },
     {
       "id": "q42",
@@ -1344,7 +1672,15 @@
       "relatedQuestions": [
         "q41",
         "q8"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّ اللَّهَ عَزَّ وَجَلَّ رَكَّبَ فِي الْمَلَائِكَةِ عَقْلاً بِلَا شَهْوَةٍ، وَرَكَّبَ فِي الْبَهَائِمِ شَهْوَةً بِلَا عَقْلٍ، وَرَكَّبَ فِي بَنِي آدَمَ كِلْتَيْهِمَا، فَمَنْ غَلَبَ عَقْلُهُ شَهْوَتَهُ فَهُوَ خَيْرٌ مِنَ الْمَلَائِكَةِ، وَمَنْ غَلَبَتْ شَهْوَتُهُ عَقْلَهُ فَهُوَ شَرٌّ مِنَ الْبَهَائِمِ",
+        "translationEn": "Allah, the Mighty and Majestic, composed in the angels an intellect without desire, and composed in the beasts desire without intellect, and composed in the children of Adam both of them. So whoever's intellect overcomes his desire is better than the angels, and whoever's desire overcomes his intellect is worse than the beasts.",
+        "translationUr": "اللہ عزوجل نے فرشتوں میں عقل رکھی، خواہش کے بغیر؛ اور جانوروں میں خواہش رکھی، عقل کے بغیر؛ اور بنی آدم میں دونوں چیزیں رکھیں۔ پس جس کی عقل اس کی خواہش پر غالب آ جائے وہ فرشتوں سے بھی بہتر ہے، اور جس کی خواہش اس کی عقل پر غالب آ جائے وہ جانوروں سے بھی بدتر ہے۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — ʿIlal al-Sharāʾiʿ, vol. 1, p. 4",
+        "sourceAr": "الإمام علي (عليه السلام) — علل الشرائع، ج١، ص٤",
+        "sourceUr": "امام علی علیہ السلام — علل الشرائع، ج۱، ص۴"
+      }
     },
     {
       "id": "q43",
@@ -1409,7 +1745,15 @@
         "q8",
         "q41",
         "q45"
-      ]
+      ],
+      "narration": {
+        "arabic": "أَفْضَلُ الْعِبَادَةِ إِدْمَانُ التَّفَكُّرِ فِي اللَّهِ وَفِي قُدْرَتِهِ.",
+        "translationEn": "The best act of worship is constant reflection upon God and upon His power.",
+        "translationUr": "سب سے افضل عبادت اللہ اور اس کی قدرت کے بارے میں مستقل تفکر کرنا ہے۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 55, Bāb al-Tafakkur, ḥadīth 3",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي ج٢ ص٥٥، باب التفكّر، الحديث ٣",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۵۵"
+      }
     },
     {
       "id": "q45",
@@ -1441,7 +1785,15 @@
       "relatedQuestions": [
         "q4",
         "q44"
-      ]
+      ],
+      "narration": {
+        "arabic": "طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ، أَلَا إِنَّ اللَّهَ يُحِبُّ بُغَاةَ الْعِلْمِ.",
+        "translationEn": "Seeking knowledge is an obligation upon every Muslim. Indeed, God loves those who earnestly seek knowledge.",
+        "translationUr": "علم کا حاصل کرنا ہر مسلمان پر فرض ہے۔ آگاہ رہو! اللہ علم کے طالبوں سے محبت کرتا ہے۔",
+        "sourceEn": "Prophet Muḥammad (ﷺ) — al-Kāfī, vol. 1, Kitāb Faḍl al-ʿIlm, Bāb Farḍ al-ʿIlm wa Wujūb Ṭalabihi, ḥadīth 1",
+        "sourceAr": "النبي محمد (صلى الله عليه وآله وسلم) — الكافي ج١، كتاب فضل العلم، باب فرض العلم ووجوب طلبه، الحديث ١",
+        "sourceUr": "رسول اللہ صلی اللہ علیہ وآلہ وسلم — الکافی، ج۱، کتاب فضل العلم"
+      }
     },
     {
       "id": "q46",
@@ -1481,7 +1833,15 @@
       "relatedQuestions": [
         "q9",
         "q12"
-      ]
+      ],
+      "narration": {
+        "arabic": "لَا جَبْرَ وَلَا تَفْوِيضَ وَلَكِنْ أَمْرٌ بَيْنَ أَمْرَيْنِ",
+        "translationEn": "There is neither compulsion (jabr) nor total delegation (tafwīḍ), but rather a matter between the two matters.",
+        "translationUr": "نہ جبر ہے اور نہ تفویض، بلکہ ان دونوں کے درمیان ایک معاملہ ہے۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī, vol. 1, p. 160, Kitāb al-Tawḥīd, Bāb al-Jabr wa al-Qadar, ḥadīth 13",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج١، ص١٦٠، كتاب التوحيد، باب الجبر والقدر، ح١٣",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۱، ص۱۶۰"
+      }
     },
     {
       "id": "q47",
@@ -1513,7 +1873,15 @@
       "relatedQuestions": [
         "q22",
         "q8"
-      ]
+      ],
+      "narration": {
+        "arabic": "سَأَلْتُ أَبَا عَبْدِ اللَّهِ (عليه السلام) عَنِ الرُّوحِ الَّتِي فِي آدَمَ (عليه السلام) قَوْلِهِ: «فَإِذَا سَوَّيْتُهُ وَنَفَخْتُ فِيهِ مِنْ رُوحِي» قَالَ: هَذِهِ رُوحٌ مَخْلُوقَةٌ، وَالرُّوحُ الَّتِي فِي عِيسَى مَخْلُوقَةٌ",
+        "translationEn": "I asked Abū ʿAbd Allāh (Imam al-Ṣādiq, ʿa) about the spirit (rūḥ) in Adam (ʿa) — regarding God's words, 'When I have shaped him and breathed into him of My spirit' — and he said: 'This is a created spirit, and the spirit that was in Jesus is [likewise] a created [spirit].'",
+        "translationUr": "میں نے ابوعبداللہ علیہ السلام سے آدم علیہ السلام میں موجود روح کے بارے میں پوچھا — اللہ کے اس قول کے مطابق: «جب میں اسے ہموار کر لوں اور اس میں اپنی روح پھونک دوں» — تو آپ نے فرمایا: «یہ ایک مخلوق روح ہے، اور وہ روح جو عیسیٰ میں تھی وہ بھی مخلوق ہے۔»",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī, vol. 1, p. 133, Kitāb al-Tawḥīd, Bāb al-Rūḥ",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج١، ص١٣٣، كتاب التوحيد، باب الروح",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۱، ص۱۳۳"
+      }
     },
     {
       "id": "q48",
@@ -1553,7 +1921,15 @@
       "relatedQuestions": [
         "q11",
         "q5"
-      ]
+      ],
+      "narration": {
+        "arabic": "عَجِبْتُ لِلْمَرْءِ الْمُسْلِمِ، لَا يَقْضِي اللَّهُ عَزَّ وَجَلَّ لَهُ قَضَاءً إِلَّا كَانَ خَيْراً لَهُ، وَإِنْ قُرِضَ بِالْمَقَارِيضِ كَانَ خَيْراً لَهُ، وَإِنْ مَلَكَ مَشَارِقَ الْأَرْضِ وَمَغَارِبَهَا كَانَ خَيْراً لَهُ",
+        "translationEn": "I marvel at the Muslim: God ordains no decree for him but that it is good for him — even were he cut to pieces with shears it would be good for him, and even were he to possess all the easts and wests of the earth it would be good for him.",
+        "translationUr": "مجھے مسلمان کے حال پر تعجب ہے: اللہ عزوجل اس کے لیے جو بھی فیصلہ کرتا ہے وہ اس کے حق میں بھلا ہی ہوتا ہے — چاہے اسے قینچی سے کاٹا جائے، تب بھی اس کے لیے بھلا ہے؛ اور چاہے وہ مشرق و مغرب کا مالک بن جائے، تب بھی اس کے لیے بھلا ہے۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 62, Kitāb al-Īmān wa-l-Kufr, Bāb al-Riḍā bi-l-qaḍāʾ",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص٦٢، كتاب الإيمان والكفر، باب الرضا بالقضاء",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۶۲"
+      }
     },
     {
       "id": "q49",
@@ -1594,7 +1970,15 @@
         "q5",
         "q9",
         "q11"
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّ الْمُؤْمِنَ لَيَدْعُو اللَّهَ عَزَّ وَجَلَّ فِي حَاجَتِهِ فَيَقُولُ اللَّهُ عَزَّ وَجَلَّ: أَخِّرُوا إِجَابَتَهُ شَوْقاً إِلَى صَوْتِهِ وَدُعَائِهِ، فَإِذَا كَانَ يَوْمُ الْقِيَامَةِ قَالَ اللَّهُ عَزَّ وَجَلَّ: عَبْدِي، دَعَوْتَنِي فَأَخَّرْتُ إِجَابَتَكَ وَثَوَابُكَ كَذَا وَكَذَا، فَيَتَمَنَّى الْمُؤْمِنُ أَنَّهُ لَمْ يُسْتَجَبْ لَهُ دَعْوَةٌ فِي الدُّنْيَا مِمَّا يَرَى مِنْ حُسْنِ الثَّوَابِ",
+        "translationEn": "A believer supplicates to God for his need, and God says [to the angels]: 'Delay answering him, out of My longing for his voice and his supplication.' Then on the Day of Resurrection God will say: 'My servant, you called upon Me and I delayed your answer — and your reward is such and such.' So the believer will wish that not a single supplication of his had been answered in this world, because of the excellence of the reward he sees.",
+        "translationUr": "مؤمن اپنی ضرورت کے لیے اللہ عزوجل سے دعا مانگتا ہے تو اللہ عزوجل (فرشتوں کو) فرماتا ہے: «اس کی دعا کی قبولیت کو مؤخر کرو، کیونکہ مجھے اس کی آواز اور دعا کی آرزو ہے۔» پھر جب قیامت کا دن آئے گا تو اللہ عزوجل فرمائے گا: «اے میرے بندے! تو نے مجھ سے دعا مانگی اور میں نے تیری قبولیت مؤخر کر دی — اور تیرا اجر ایسا اور ایسا ہے۔» پس مؤمن آرزو کرے گا کہ کاش دنیا میں اس کی کوئی دعا قبول نہ ہوئی ہوتی — اس اجر کی خوبی دیکھ کر جو اس کے سامنے ہوگی۔",
+        "sourceEn": "Imam Jaʿfar al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 490, Kitāb al-Duʿāʾ, Bāb man abṭaʾat ʿalayhi al-ijāba",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، ج٢، ص٤٩٠، كتاب الدعاء، باب من أبطأت عليه الإجابة",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۴۹۰"
+      }
     },
     {
       "id": "q50",
@@ -1626,7 +2010,15 @@
       "relatedQuestions": [
         "q44",
         "q45"
-      ]
+      ],
+      "narration": {
+        "arabic": "لَعَلَّكَ تَرَى أَنَّ اللَّهَ إِنَّمَا خَلَقَ هَذَا الْعَالَمَ الْوَاحِدَ، وَتَرَى أَنَّ اللَّهَ لَمْ يَخْلُقْ بَشَراً غَيْرَكُمْ، بَلَى وَاللَّهِ لَقَدْ خَلَقَ اللَّهُ تَبَارَكَ وَتَعَالَى أَلْفَ أَلْفِ عَالَمٍ، وَأَلْفَ أَلْفِ آدَمَ، أَنْتَ فِي آخِرِ تِلْكَ الْعَوَالِمِ وَأُولَئِكَ الْآدَمِيِّينَ.",
+        "translationEn": "Perhaps you think that God created only this single world, and that God created no human beings other than you. Nay, by God, God — blessed and exalted — has created a thousand thousand worlds and a thousand thousand Adams, and you are in the last of those worlds and those Adams.",
+        "translationUr": "شاید تم یہ سمجھتے ہو کہ اللہ نے صرف یہ ایک جہان بنایا ہے، اور یہ کہ اللہ نے تمہارے سوا کوئی اور انسان پیدا نہیں کیا۔ ہرگز نہیں! اللہ کی قسم، اللہ تبارک وتعالیٰ نے ہزار ہزار جہان اور ہزار ہزار آدم پیدا کیے ہیں، اور تم ان جہانوں اور ان آدموں میں سے آخری میں ہو۔",
+        "sourceEn": "Imam al-Bāqir (ʿa) — al-Tawḥīd, p. 277",
+        "sourceAr": "الإمام الباقر (عليه السلام) — التوحيد، ص٢٧٧",
+        "sourceUr": "امام محمد باقر علیہ السلام — التوحید، ص۲۷۷"
+      }
     }
   ]
 }

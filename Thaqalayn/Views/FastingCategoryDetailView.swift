@@ -87,6 +87,10 @@ struct FastingCategoryDetailView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
 
+                    if let narration = category.narration {
+                        AhlulBaytNarrationCard(narration: narration)
+                    }
+
                     // Verses header
                     HStack(alignment: .top, spacing: 8) {
                         Image(systemName: "book.pages.fill")
@@ -185,6 +189,10 @@ struct FastingCategoryDetailView: View {
             }
             .padding(.horizontal, 20)
             .padding(.top, 12)
+
+            if let narration = category.narration {
+                AhlulBaytNarrationCard(narration: narration)
+            }
 
             // Verses section
             VStack(alignment: .leading, spacing: 16) {
@@ -470,6 +478,112 @@ struct FastingVerseCard: View {
     }
 }
 
+/// "From the Ahlul Bayt (ʿa)" card: an attributed narration (Arabic + translation + source).
+/// Shared by the Fasting and Prophetic Parallels detail screens; mirrors the surrounding
+/// cards' theme branching and respects the reading text-size control.
+struct AhlulBaytNarrationCard: View {
+    let narration: AhlulBaytNarration
+    @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
+
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+    private var isUrdu: Bool { lang == .urdu }
+
+    /// Section eyebrow, localized (kept fixed-size — it is chrome, not reading content).
+    private var label: String {
+        switch lang {
+        case .arabic: return "من أهل البيت (ع)"
+        case .urdu:   return "اہلِ بیتؑ سے"
+        default:      return "From the Ahlul Bayt (ʿa)"
+        }
+    }
+
+    var body: some View {
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
+    }
+
+    private var emeraldBody: some View {
+        EmDetailCard(icon: "quote.bubble", label: label) {
+            VStack(alignment: .leading, spacing: 14) {
+                Text(narration.arabic)
+                    .font(EmType.arabic(22 * readingSettings.scale))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(8 * readingSettings.scale)
+                    .multilineTextAlignment(.trailing)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .environment(\.layoutDirection, .rightToLeft)
+
+                // Arabic readers read the narration itself; show a translation only otherwise.
+                if lang != .arabic {
+                    Text(narration.translation(for: lang))
+                        .font(EmType.serif(16 * readingSettings.scale, .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(3 * readingSettings.scale)
+                        .multilineTextAlignment(isUrdu ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: isUrdu ? .trailing : .leading)
+                        .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
+                }
+
+                Text(narration.source(for: lang))
+                    .font(.system(size: 12.5, weight: .semibold))
+                    .foregroundColor(themeManager.accentColor)
+                    .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+            }
+        }
+    }
+
+    private var legacyBody: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 8) {
+                Image(systemName: "quote.bubble.fill")
+                    .font(.system(size: 14))
+                    .foregroundColor(themeManager.accentColor)
+                Text(label)
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundColor(themeManager.secondaryText)
+                Spacer(minLength: 0)
+            }
+
+            Text(narration.arabic)
+                .font(.custom("AmiriQuran-Regular", size: 22 * readingSettings.scale))
+                .foregroundColor(themeManager.primaryText)
+                .lineSpacing(8 * readingSettings.scale)
+                .multilineTextAlignment(.trailing)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .environment(\.layoutDirection, .rightToLeft)
+
+            if lang != .arabic {
+                Text(narration.translation(for: lang))
+                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(4 * readingSettings.scale)
+                    .multilineTextAlignment(isUrdu ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: isUrdu ? .trailing : .leading)
+                    .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
+            }
+
+            Text(narration.source(for: lang))
+                .font(.system(size: 13, weight: .semibold))
+                .foregroundColor(themeManager.accentColor)
+                .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+        }
+        .padding(20)
+        .background {
+            RoundedRectangle(cornerRadius: 24)
+                .fill(Color.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 24)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+                .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
+        }
+        .padding(.horizontal, 20)
+    }
+}
+
 #Preview {
     NavigationView {
         FastingCategoryDetailView(
@@ -492,7 +606,15 @@ struct FastingVerseCard: View {
                         relevanceNoteUr: "بنیادی آیت جو اہلِ ایمان پر روزہ فرض کرتی ہے۔",
                         isKeyVerse: true
                     )
-                ]
+                ],
+                narration: AhlulBaytNarration(
+                    arabic: "بُنِيَ الْإِسْلَامُ عَلَىٰ خَمْسٍ: عَلَى الصَّلَاةِ وَالزَّكَاةِ وَالصَّوْمِ وَالْحَجِّ وَالْوَلَايَةِ.",
+                    translationEn: "Islam is built upon five: prayer, zakāt, fasting, ḥajj, and walāyah.",
+                    translationUr: "اسلام کی بنیاد پانچ چیزوں پر ہے: نماز، زکات، روزہ، حج اور ولایت۔",
+                    sourceEn: "Imam al-Bāqir (ʿa) — al-Kāfī",
+                    sourceAr: "الإمام الباقر (عليه السلام) — الكافي",
+                    sourceUr: "امام محمد باقر علیہ السلام — الکافی"
+                )
             )
         )
     }

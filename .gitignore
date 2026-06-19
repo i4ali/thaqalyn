@@ -156,6 +156,9 @@ video_output/
 # Throwaway design mockups
 /docs/mockups/
 
+# Icon-redesign candidates / montages (throwaway)
+/scratch/
+
 # Onboarding-personalization design scratch (kept local, not committed)
 /docs/superpowers/plans/2026-06-14-onboarding-personalization.md
 /docs/superpowers/specs/2026-06-14-onboarding-personalization-design.md

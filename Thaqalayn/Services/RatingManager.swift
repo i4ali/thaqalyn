@@ -21,6 +21,7 @@ class RatingManager: ObservableObject {
     private let minimumLaunchesBeforePrompt = 5
     private let minimumDaysSinceFirstLaunch = 3
     private let minimumDaysBetweenPrompts = 60
+    private let appStoreID = "6751074983"   // Al-Thaqalayn
 
     // MARK: - Published State
     @Published private(set) var launchCount: Int = 0
@@ -53,6 +54,13 @@ class RatingManager: ObservableObject {
         if shouldPromptForRating() {
             requestReview()
         }
+    }
+
+    /// Opens the App Store straight to the write-a-review screen.
+    /// Used for an explicit "Leave a Review" tap (unlike requestReview, this always opens).
+    func openAppStoreReviewPage() {
+        guard let url = URL(string: "https://apps.apple.com/app/id\(appStoreID)?action=write-review") else { return }
+        UIApplication.shared.open(url)
     }
 
     // MARK: - Private Methods

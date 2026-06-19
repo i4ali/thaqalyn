@@ -465,15 +465,6 @@ struct SettingsView: View {
                                     }
 
                                     SettingsRow(
-                                        icon: "heart.fill",
-                                        title: "Support",
-                                        subtitle: "Rate or review the app",
-                                        iconColor: .red
-                                    ) {
-                                        // Could open App Store review
-                                    }
-
-                                    SettingsRow(
                                         icon: "trash.fill",
                                         title: "Clear All Local Data",
                                         subtitle: "Remove bookmarks, preferences, cache",
@@ -868,15 +859,6 @@ struct SettingsView: View {
                     iconColor: .gray
                 ) {
                     // Could show app info
-                }
-
-                SettingsRow(
-                    icon: "heart.fill",
-                    title: "Support",
-                    subtitle: "Rate or review the app",
-                    iconColor: .red
-                ) {
-                    // Could open App Store review
                 }
 
                 SettingsRow(

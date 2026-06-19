@@ -39,8 +39,10 @@ struct ParallelDetailView: View {
                     // Header with situation and prophet
                     headerSection
 
-                    // Comfort message box
-                    comfortMessageSection
+                    // What the Ahlul Bayt said about this prophet
+                    if let narration = parallel.narration {
+                        AhlulBaytNarrationCard(narration: narration)
+                    }
 
                     // Key verses
                     versesSection
@@ -102,7 +104,9 @@ struct ParallelDetailView: View {
         ScrollView {
             VStack(spacing: 20) {
                 emeraldHeaderSection
-                emeraldComfortSection
+                if let narration = parallel.narration {
+                    AhlulBaytNarrationCard(narration: narration)
+                }
                 emeraldVersesSection
                 if relatedStory != nil {
                     emeraldRelatedStorySection
@@ -158,30 +162,6 @@ struct ParallelDetailView: View {
         .background(
             EmCard { Color.clear }
         )
-        .padding(.horizontal, 20)
-    }
-
-    private var emeraldComfortSection: some View {
-        EmCard(glow: true) {
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 8) {
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 13))
-                    Text("A MESSAGE FOR YOU")
-                        .font(.system(size: 11, weight: .bold)).tracking(2)
-                }
-                .foregroundColor(themeManager.accentColor)
-
-                Text(parallel.comfortMessage(for: languageManager.selectedLanguage))
-                    .font(EmType.serif(18 * readingSettings.scale, .medium))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(5 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
-            .padding(22)
-        }
         .padding(.horizontal, 20)
     }
 
@@ -323,37 +303,6 @@ struct ParallelDetailView: View {
         }
         .padding(.horizontal, 20)
         .padding(.top, 20)
-    }
-
-    // MARK: - Comfort Message Section
-
-    private var comfortMessageSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            HStack(alignment: .top, spacing: 8) {
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 16))
-                    .foregroundColor(.white)
-
-                Text("A MESSAGE FOR YOU")
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundColor(.white.opacity(0.9))
-                    .tracking(1.2)
-            }
-
-            Text(parallel.comfortMessage(for: languageManager.selectedLanguage))
-                .font(.system(size: 17 * readingSettings.scale, weight: .medium))
-                .foregroundColor(.white)
-                .lineSpacing(6 * readingSettings.scale)
-                .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
-        }
-        .padding(24)
-        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
-        .background {
-            RoundedRectangle(cornerRadius: 24)
-                .fill(themeManager.purpleGradient)
-                .shadow(color: themeManager.accentColor.opacity(0.4), radius: 16, x: 0, y: 8)
-        }
-        .padding(.horizontal, 20)
     }
 
     // MARK: - Verses Section
@@ -715,7 +664,15 @@ struct ParallelVerseCard: View {
                                   relevanceNoteUr: "حضرت یونس کی پُرتاثیر دعا")
                 ],
                 relatedStoryId: "s11",
-                icon: "water.waves"
+                icon: "water.waves",
+                narration: AhlulBaytNarration(
+                    arabic: "فَنَادَىٰ فِي الظُّلُمَاتِ: لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ، فَاسْتَجَابَ اللَّهُ لَهُ.",
+                    translationEn: "He called out in the depths of darkness: ‘There is no god but You; glory be to You; truly I was among the wrongdoers.’ So God answered him.",
+                    translationUr: "اُنہوں نے تاریکیوں میں پکارا: «تیرے سوا کوئی معبود نہیں، تو پاک ہے، بیشک میں ظالموں میں سے تھا»، پس اللہ نے اُن کی پکار قبول فرمائی۔",
+                    sourceEn: "Imam al-Riḍā (ʿa) — ʿUyūn Akhbār al-Riḍā, vol. 1, p. 170",
+                    sourceAr: "الإمام الرضا (ع) — عيون أخبار الرضا، ج١ ص١٧٠",
+                    sourceUr: "امام علی رضا علیہ السلام — عیون اخبار الرضا، ج۱، ص۱۷۰"
+                )
             )
         )
     }

@@ -778,6 +778,16 @@ struct ProfileMenuView: View {
                             }
                         )
 
+                        // Leave a Review
+                        ProfileMenuItem(
+                            icon: "star.bubble.fill",
+                            title: "Leave a Review",
+                            subtitle: "Rate Al-Thaqalayn on the App Store",
+                            action: {
+                                RatingManager.shared.openAppStoreReviewPage()
+                            }
+                        )
+
                         // Sync Status (only for authenticated users)
                         if supabaseService.isAuthenticated {
                             ProfileMenuItem(
@@ -939,6 +949,16 @@ struct ProfileMenuView: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     NotificationCenter.default.post(name: .init("showSettings"), object: nil)
                 }
+            }
+        )
+
+        // Leave a Review
+        ProfileMenuItem(
+            icon: "star.bubble.fill",
+            title: "Leave a Review",
+            subtitle: "Rate Al-Thaqalayn on the App Store",
+            action: {
+                RatingManager.shared.openAppStoreReviewPage()
             }
         )
 

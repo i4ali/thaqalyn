@@ -1086,6 +1086,9 @@ struct PropheticParallel: Codable, Identifiable {
     let verses: [ParallelVerse]        // 2-3 key verses
     let relatedStoryId: String?        // Links to PropheticStory.id
     let icon: String                   // SF Symbol name
+    /// One narration from the Ahlul Bayt (ʿa) about this parallel's prophet. Optional so
+    /// parallels without one still decode.
+    let narration: AhlulBaytNarration?
 
     func situation(for language: CommentaryLanguage) -> String {
         switch language {
@@ -1299,6 +1302,9 @@ struct Question: Identifiable, Codable {
     let category: QuestionCategory
     let verses: [QuestionVerse]
     let relatedQuestions: [String]
+    /// One narration from the Ahlul Bayt (ʿa) tied to this question's theme. Optional so
+    /// questions without one still decode.
+    let narration: AhlulBaytNarration?
 
     var categoryIcon: String {
         category.icon
@@ -1642,6 +1648,9 @@ struct FastingCategory: Codable, Identifiable {
     let descriptionAr: String
     let descriptionUr: String
     let verses: [FastingVerse]
+    /// One narration from the Ahlul Bayt (ʿa) tied to this category's theme. Optional so
+    /// categories without a narration still decode.
+    let narration: AhlulBaytNarration?
 
     var verseCount: Int {
         verses.count
@@ -1682,6 +1691,31 @@ struct FastingVerse: Codable, Identifiable {
         case .arabic: return relevanceNoteAr
         case .urdu:   return relevanceNoteUr
         default:      return relevanceNoteEn
+        }
+    }
+}
+
+/// A single attributed narration from the Ahlul Bayt (ʿa) — shared by the Fasting and
+/// Prophetic Parallels features. The Arabic narration is always shown; the
+/// translation is read by language (Arabic readers read the narration itself), and the
+/// source citation is localized like every other field in this feature.
+struct AhlulBaytNarration: Codable {
+    let arabic: String
+    let translationEn: String
+    let translationUr: String
+    let sourceEn: String
+    let sourceAr: String
+    let sourceUr: String
+
+    func translation(for language: CommentaryLanguage) -> String {
+        language == .urdu ? translationUr : translationEn
+    }
+
+    func source(for language: CommentaryLanguage) -> String {
+        switch language {
+        case .arabic: return sourceAr
+        case .urdu:   return sourceUr
+        default:      return sourceEn
         }
     }
 }

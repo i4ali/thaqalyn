@@ -144,6 +144,11 @@ struct QuestionDetailView: View {
                         )
                     }
 
+                    // From the Ahlul Bayt (ʿa)
+                    if let narration = question.narration {
+                        AhlulBaytNarrationCard(narration: narration)
+                    }
+
                     // Related questions
                     if !relatedQuestions.isEmpty {
                         VStack(alignment: .leading, spacing: 16) {
@@ -244,6 +249,11 @@ struct QuestionDetailView: View {
                                 navigateToVerse = true
                             }
                         )
+                    }
+
+                    // From the Ahlul Bayt (ʿa)
+                    if let narration = question.narration {
+                        AhlulBaytNarrationCard(narration: narration)
                     }
 
                     // Related questions
@@ -614,7 +624,8 @@ struct RelatedQuestionCard: View {
                         isPrimary: true
                     )
                 ],
-                relatedQuestions: []
+                relatedQuestions: [],
+                narration: nil
             )
         )
     }

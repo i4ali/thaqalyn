@@ -35,7 +35,15 @@
         }
       ],
       "relatedStoryId": "s11",
-      "icon": "water.waves"
+      "icon": "water.waves",
+      "narration": {
+        "arabic": "فَنَادَىٰ فِي الظُّلُمَاتِ: لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ، فَاسْتَجَابَ اللَّهُ لَهُ.",
+        "translationEn": "He called out in the depths of darkness: ‘There is no god but You; glory be to You; truly I was among the wrongdoers.’ So God answered him.",
+        "translationUr": "اُنہوں نے تاریکیوں میں پکارا: «تیرے سوا کوئی معبود نہیں، تو پاک ہے، بیشک میں ظالموں میں سے تھا»، پس اللہ نے اُن کی پکار قبول فرمائی۔",
+        "sourceEn": "Imam al-Riḍā (ʿa) — ʿUyūn Akhbār al-Riḍā, vol. 1, p. 170",
+        "sourceAr": "الإمام الرضا (ع) — عيون أخبار الرضا، ج١ ص١٧٠",
+        "sourceUr": "امام علی رضا علیہ السلام — عیون اخبار الرضا، ج۱، ص۱۷۰"
+      }
     },
     {
       "id": "p2",
@@ -79,7 +87,15 @@
         }
       ],
       "relatedStoryId": "s1",
-      "icon": "figure.stand.line.dotted.figure.stand"
+      "icon": "figure.stand.line.dotted.figure.stand",
+      "narration": {
+        "arabic": "إِنَّ إِبْرَاهِيمَ وَعَدَهُ أَبُوهُ أَنْ يُسْلِمَ فَاسْتَغْفَرَ لَهُ، فَلَمَّا تَبَيَّنَ لَهُ أَنَّهُ عَدُوٌّ لِلَّهِ تَبَرَّأَ مِنْهُ.",
+        "translationEn": "Ibrāhīm's father had promised him that he would submit, so Ibrāhīm sought forgiveness for him; but when it became clear that he was an enemy of God, he disassociated from him.",
+        "translationUr": "ابراہیمؑ کے باپ نے اُن سے ایمان لانے کا وعدہ کیا تھا، تو اُنہوں نے اُس کے لیے استغفار کیا؛ پھر جب واضح ہو گیا کہ وہ اللہ کا دشمن ہے تو اُس سے بیزاری اختیار کر لی۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — Tafsīr al-ʿAyyāshī, vol. 2, p. 114",
+        "sourceAr": "الإمام الصادق (ع) — تفسير العياشي، ج٢ ص١١٤",
+        "sourceUr": "امام جعفر صادق علیہ السلام — تفسیر العیاشی، ج۲، ص۱۱۴"
+      }
     },
     {
       "id": "p3",
@@ -116,7 +132,15 @@
         }
       ],
       "relatedStoryId": "s3",
-      "icon": "bubble.left.and.exclamationmark.bubble.right.fill"
+      "icon": "bubble.left.and.exclamationmark.bubble.right.fill",
+      "narration": {
+        "arabic": "أَمَرَهُ اللَّهُ أَنْ يَغْرِسَ النَّخْلَ، فَكَانَ قَوْمُهُ يَسْخَرُونَ بِهِ وَيَقُولُونَ: شَيْخٌ يَغْرِسُ النَّخْلَ! ثُمَّ أَمَرَهُ أَنْ يَنْحِتَ السَّفِينَةَ، فَكَانُوا يَسْخَرُونَ وَيَقُولُونَ: يَتَّخِذُ سَفِينَةً فِي الْبَرِّ!",
+        "translationEn": "God commanded him to plant palm trees, and his people mocked him: ‘An old man planting palms!’ Then He commanded him to build the ark, and they mocked: ‘He is making a ship on dry land!’",
+        "translationUr": "اللہ نے نوحؑ کو کھجور کے درخت لگانے کا حکم دیا تو اُن کی قوم مذاق اُڑاتی: «ایک بوڑھا کھجوریں لگا رہا ہے!» پھر کشتی بنانے کا حکم ہوا تو مذاق اُڑاتے: «خشکی میں کشتی بنا رہا ہے!»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — Tafsīr al-Qummī",
+        "sourceAr": "الإمام الصادق (ع) — تفسير القمي",
+        "sourceUr": "امام جعفر صادق علیہ السلام — تفسیر القمی"
+      }
     },
     {
       "id": "p4",
@@ -160,7 +184,15 @@
         }
       ],
       "relatedStoryId": "s4",
-      "icon": "person.fill.xmark"
+      "icon": "person.fill.xmark",
+      "narration": {
+        "arabic": "قَالَ يُوسُفُ لِإِخْوَتِهِ: لَا تَثْرِيبَ عَلَيْكُمُ الْيَوْمَ يَغْفِرُ اللَّهُ لَكُمْ وَهُوَ أَرْحَمُ الرَّاحِمِينَ؛ لِأَنَّ قَلْبَ الشَّابِّ أَرَقُّ مِنْ قَلْبِ الشَّيْخِ، فَبَادَرَ يُوسُفُ إِلَى الْعَفْوِ عَنْ حَقِّهِ.",
+        "translationEn": "Yūsuf said to the brothers who had betrayed him: ‘No reproach upon you this day; may God forgive you, for He is the Most Merciful of the merciful.’ The Imam explained: the heart of the young is more tender than the heart of the old — so Yūsuf hastened to pardon what was his own right.",
+        "translationUr": "یوسفؑ نے اپنے اُن بھائیوں سے جنہوں نے دھوکا دیا تھا کہا: «آج تم پر کوئی ملامت نہیں، اللہ تمہیں بخش دے، اور وہ سب سے زیادہ رحم کرنے والا ہے»؛ امامؑ نے فرمایا: جوان کا دل بوڑھے کے دل سے نرم ہوتا ہے، اِسی لیے یوسفؑ نے اپنے حق کی معافی میں جلدی کی۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — ʿIlal al-Sharāʾiʿ, vol. 1, p. 54",
+        "sourceAr": "الإمام الصادق (ع) — علل الشرائع، ج١ ص٥٤",
+        "sourceUr": "امام جعفر صادق علیہ السلام — علل الشرائع، ج۱، ص۵۴"
+      }
     },
     {
       "id": "p5",
@@ -204,7 +236,15 @@
         }
       ],
       "relatedStoryId": "s6",
-      "icon": "crown.fill"
+      "icon": "crown.fill",
+      "narration": {
+        "arabic": "إِنَّ اللَّهَ يَخْتَبِرُ عِبَادَهُ الْمُسْتَكْبِرِينَ فِي أَنْفُسِهِمْ بِأَوْلِيَائِهِ الْمُسْتَضْعَفِينَ فِي أَعْيُنِهِمْ، وَلَقَدْ دَخَلَ مُوسَىٰ وَمَعَهُ أَخُوهُ هَارُونُ عَلَىٰ فِرْعَوْنَ، وَعَلَيْهِمَا مَدَارِعُ الصُّوفِ، وَبِأَيْدِيهِمَا الْعِصِيُّ.",
+        "translationEn": "God tries His servants who are arrogant in themselves through His friends who are deemed weak in their eyes: Mūsā and his brother Hārūn went in to Pharaoh wearing coarse woollen cloaks, with staffs in their hands.",
+        "translationUr": "اللہ اپنے اُن بندوں کو جو خود کو بڑا سمجھتے ہیں، اپنے اُن اولیاء کے ذریعے آزماتا ہے جنہیں لوگ کمزور سمجھتے ہیں: موسیٰؑ اور اُن کے بھائی ہارونؑ فرعون کے پاس اون کے کھردرے کُرتے پہنے، ہاتھوں میں لاٹھیاں لیے داخل ہوئے۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha, Sermon 192 (al-Qāṣiʿa)",
+        "sourceAr": "الإمام علي (ع) — نهج البلاغة، الخطبة ١٩٢ (القاصعة)",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ، خطبہ ۱۹۲ (القاصعہ)"
+      }
     },
     {
       "id": "p6",
@@ -241,7 +281,15 @@
         }
       ],
       "relatedStoryId": "s12",
-      "icon": "heart.slash"
+      "icon": "heart.slash",
+      "narration": {
+        "arabic": "إِنَّ أَيُّوبَ مِنْ جَمِيعِ مَا ابْتُلِيَ بِهِ لَمْ تُنْتِنْ لَهُ رَائِحَةٌ، وَلَا قَبُحَتْ لَهُ صُورَةٌ، وَلَا خَرَجَتْ مِنْهُ مُدَّةٌ مِنْ دَمٍ وَلَا قَيْحٍ، وَلَا اسْتَقْذَرَهُ أَحَدٌ رَآهُ.",
+        "translationEn": "Through all that Ayyūb was afflicted with, no foul smell ever came from him, nor did his form become ugly, nor did any blood or pus discharge from him, nor did anyone who saw him find him repulsive.",
+        "translationUr": "ایوبؑ کو جتنی بھی آزمائش پہنچی، نہ اُن سے کبھی بدبو آئی، نہ اُن کی صورت بدنما ہوئی، نہ خون یا پیپ بہا، اور نہ کوئی دیکھنے والا اُن سے گھن کھا کر دور ہوا۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) ← Imam al-Bāqir (ʿa) — al-Khiṣāl (al-Ṣadūq)",
+        "sourceAr": "الإمام الصادق (ع) عن الإمام الباقر (ع) — الخصال للصدوق",
+        "sourceUr": "امام جعفر صادق علیہ السلام بحوالہ امام باقر علیہ السلام — الخصال (شیخ صدوق)"
+      }
     },
     {
       "id": "p7",
@@ -278,7 +326,15 @@
         }
       ],
       "relatedStoryId": "s5",
-      "icon": "figure.walk.motion"
+      "icon": "figure.walk.motion",
+      "narration": {
+        "arabic": "لَقَدْ هَمَّتْ بِهِ، وَلَوْلَا أَنْ رَأَىٰ بُرْهَانَ رَبِّهِ لَهَمَّ بِهَا كَمَا هَمَّتْ بِهِ، لَٰكِنَّهُ كَانَ مَعْصُومًا، وَالْمَعْصُومُ لَا يَهُمُّ بِذَنْبٍ وَلَا يَأْتِيهِ.",
+        "translationEn": "She desired him; and had he not seen the proof of his Lord he would have inclined to her as she inclined to him — but he was protected (maʿṣūm), and the protected neither intends a sin nor commits it.",
+        "translationUr": "اُس عورت نے تو اُن کا قصد کیا، اور اگر یوسفؑ اپنے رب کی دلیل نہ دیکھتے تو شاید مائل ہو جاتے جیسے وہ مائل ہوئی — لیکن وہ معصوم تھے، اور معصوم نہ کسی گناہ کا ارادہ کرتا ہے نہ اُسے انجام دیتا ہے۔",
+        "sourceEn": "Imam al-Riḍā (ʿa) — ʿUyūn Akhbār al-Riḍā, vol. 2, p. 179",
+        "sourceAr": "الإمام الرضا (ع) — عيون أخبار الرضا، ج٢ ص١٧٩",
+        "sourceUr": "امام علی رضا علیہ السلام — عیون اخبار الرضا، ج۲، ص۱۷۹"
+      }
     },
     {
       "id": "p8",
@@ -315,7 +371,15 @@
         }
       ],
       "relatedStoryId": "s15",
-      "icon": "hourglass.bottomhalf.filled"
+      "icon": "hourglass.bottomhalf.filled",
+      "narration": {
+        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ بِمَا سَأَلَكَ بِهِ زَكَرِيَّا إِذْ قَالَ: رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ، اللَّهُمَّ هَبْ لِي ذُرِّيَّةً طَيِّبَةً إِنَّكَ سَمِيعُ الدُّعَاءِ.",
+        "translationEn": "‘O Allah, I ask You by that which Zakariyyā asked You when he said: My Lord, leave me not alone, and You are the best of inheritors. O Allah, grant me goodly offspring; truly You are the Hearer of supplication.’",
+        "translationUr": "اے اللہ! میں تجھ سے اُسی چیز کا سوال کرتا ہوں جو زکریاؑ نے مانگی تھی جب کہا: «اے میرے رب! مجھے اکیلا نہ چھوڑ، اور تو سب سے بہتر وارث ہے»؛ اے اللہ! مجھے پاکیزہ اولاد عطا فرما، بیشک تو دعا سننے والا ہے۔",
+        "sourceEn": "Imam al-Bāqir (ʿa) — al-Kāfī (via Tafsīr Nūr al-Thaqalayn)",
+        "sourceAr": "الإمام الباقر (ع) — الكافي (عن تفسير نور الثقلين)",
+        "sourceUr": "امام محمد باقر علیہ السلام — الکافی (بحوالہ تفسیر نور الثقلین)"
+      }
     },
     {
       "id": "p9",
@@ -352,7 +416,15 @@
         }
       ],
       "relatedStoryId": "s10",
-      "icon": "figure.stand"
+      "icon": "figure.stand",
+      "narration": {
+        "arabic": "لَمَّا دَخَلَ دَاوُدُ الْعَسْكَرَ سَمِعَهُمْ يَتَعَظَّمُونَ أَمْرَ جَالُوتَ، فَقَالَ لَهُمْ: مَا تَعَظَّمُونَ مِنْ أَمْرِهِ؟ فَوَاللَّهِ لَئِنْ عَايَنْتُهُ لَأَقْتُلَنَّهُ.",
+        "translationEn": "When Dāwūd entered the army he heard them magnifying the matter of Goliath, so he said to them: ‘Why do you find his affair so great? By God, if I lay eyes on him I will surely kill him.’",
+        "translationUr": "جب داؤدؑ لشکر میں آئے تو سنا کہ لوگ جالوت کے رعب کو بہت بڑا سمجھ رہے ہیں، تو اُن سے کہا: «تم اُس کے معاملے کو اتنا بڑا کیوں سمجھتے ہو؟ اللہ کی قسم! اگر میں نے اُسے دیکھ لیا تو ضرور قتل کر دوں گا۔»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — Tafsīr al-ʿAyyāshī, vol. 1, p. 134",
+        "sourceAr": "الإمام الصادق (ع) — تفسير العياشي، ج١ ص١٣٤",
+        "sourceUr": "امام جعفر صادق علیہ السلام — تفسیر العیاشی، ج۱، ص۱۳۴"
+      }
     },
     {
       "id": "p10",
@@ -389,7 +461,15 @@
         }
       ],
       "relatedStoryId": "s21",
-      "icon": "arrow.uturn.backward.circle.fill"
+      "icon": "arrow.uturn.backward.circle.fill",
+      "narration": {
+        "arabic": "لَمَّا اقْتَرَفَ آدَمُ الْخَطِيئَةَ قَالَ: يَا رَبِّ أَسْأَلُكَ بِحَقِّ مُحَمَّدٍ وَعَلِيٍّ وَفَاطِمَةَ وَالْحَسَنِ وَالْحُسَيْنِ إِلَّا غَفَرْتَ لِي، فَغَفَرَ اللَّهُ لَهُ؛ وَهُوَ قَوْلُهُ: فَتَلَقَّىٰ آدَمُ مِنْ رَبِّهِ كَلِمَاتٍ.",
+        "translationEn": "When Ādam committed the slip he said: ‘My Lord, I ask You by the right of Muḥammad, ʿAlī, Fāṭima, al-Ḥasan and al-Ḥusayn that You forgive me,’ so God forgave him. And that is His saying: ‘Then Ādam received words from his Lord.’",
+        "translationUr": "جب آدمؑ سے لغزش ہوئی تو کہا: «اے میرے رب! میں تجھ سے محمدؐ، علیؑ، فاطمہؑ، حسنؑ اور حسینؑ کے حق کے واسطے سوال کرتا ہوں کہ مجھے بخش دے»، تو اللہ نے اُنہیں بخش دیا — اور یہی اللہ کا فرمان ہے: «پھر آدم نے اپنے رب سے چند کلمات پائے۔»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Amālī (al-Ṣadūq); Majmaʿ al-Bayān, vol. 1, p. 89",
+        "sourceAr": "الإمام الصادق (ع) — الأمالي للصدوق؛ مجمع البيان، ج١ ص٨٩",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الامالی (صدوق)؛ مجمع البیان، ج۱، ص۸۹"
+      }
     },
     {
       "id": "p11",
@@ -433,7 +513,15 @@
         }
       ],
       "relatedStoryId": "s24",
-      "icon": "clock.badge.questionmark"
+      "icon": "clock.badge.questionmark",
+      "narration": {
+        "arabic": "سُئِلَ أَبُو عَبْدِ اللَّهِ (ع): مَا بَلَغَ مِنْ حُزْنِ يَعْقُوبَ عَلَىٰ يُوسُفَ؟ فَقَالَ: حُزْنُ سَبْعِينَ ثَكْلَىٰ بِأَوْلَادِهَا.",
+        "translationEn": "Imam al-Ṣādiq (ʿa) was asked: ‘How great did Yaʿqūb's grief over Yūsuf become?’ He said: ‘The grief of seventy mothers bereaved of their children.’",
+        "translationUr": "امام صادقؑ سے پوچھا گیا: یوسفؑ پر یعقوبؑ کا غم کس حد تک پہنچا تھا؟ فرمایا: «اولاد سے محروم ہو جانے والی ستر ماؤں کے غم کے برابر۔»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — Biḥār al-Anwār, vol. 12",
+        "sourceAr": "الإمام الصادق (ع) — بحار الأنوار، ج١٢",
+        "sourceUr": "امام جعفر صادق علیہ السلام — بحار الانوار، ج۱۲"
+      }
     },
     {
       "id": "p12",
@@ -470,7 +558,15 @@
         }
       ],
       "relatedStoryId": "s17",
-      "icon": "ear.trianglebadge.exclamationmark"
+      "icon": "ear.trianglebadge.exclamationmark",
+      "narration": {
+        "arabic": "مَا بَعَثَ اللَّهُ نَبِيًّا بَعْدَ لُوطٍ إِلَّا فِي عِزٍّ مِنْ قَوْمِهِ.",
+        "translationEn": "God did not send any prophet after Lūṭ except [supported] by might and honour from his own people — Lūṭ himself stood without the protection of a clan.",
+        "translationUr": "اللہ نے لوطؑ کے بعد کوئی نبی نہیں بھیجا مگر اپنی قوم کے درمیان عزت و طاقت کے ساتھ — جبکہ لوطؑ خود کسی محافظ قبیلے کے بغیر تنہا کھڑے رہے۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — Tafsīr al-Qummī, vol. 1, p. 335",
+        "sourceAr": "الإمام الصادق (ع) — تفسير القمي، ج١ ص٣٣٥",
+        "sourceUr": "امام جعفر صادق علیہ السلام — تفسیر القمی، ج۱، ص۳۳۵"
+      }
     },
     {
       "id": "p13",
@@ -514,7 +610,15 @@
         }
       ],
       "relatedStoryId": null,
-      "icon": "banknote"
+      "icon": "banknote",
+      "narration": {
+        "arabic": "كَانَ رَسُولُ اللَّهِ (ص) يَأْكُلُ عَلَى الْأَرْضِ، وَيَجْلِسُ جِلْسَةَ الْعَبْدِ، وَيَخْصِفُ بِيَدِهِ نَعْلَهُ، وَيَرْقَعُ بِيَدِهِ ثَوْبَهُ.",
+        "translationEn": "The Messenger of God (ṣ) used to eat seated on the ground, sit in the posture of a servant, mend his own sandal with his hand, and patch his own garment with his hand.",
+        "translationUr": "رسول اللہ صلی اللہ علیہ وآلہ وسلم زمین پر بیٹھ کر کھانا کھاتے، غلام کی طرح بیٹھتے، اپنے ہاتھ سے اپنی جوتی گانٹھتے اور اپنے ہاتھ سے اپنا کپڑا پیوند کرتے۔",
+        "sourceEn": "Imam ʿAlī (ʿa) — Nahj al-Balāgha (al-Qāṣiʿa)",
+        "sourceAr": "الإمام علي (ع) — نهج البلاغة (القاصعة)",
+        "sourceUr": "امام علی علیہ السلام — نہج البلاغہ (القاصعہ)"
+      }
     },
     {
       "id": "p14",
@@ -558,7 +662,15 @@
         }
       ],
       "relatedStoryId": "s6",
-      "icon": "person.crop.circle.badge.questionmark"
+      "icon": "person.crop.circle.badge.questionmark",
+      "narration": {
+        "arabic": "أَوْحَى اللَّهُ إِلَىٰ مُوسَىٰ: أَتَدْرِي لِمَ اصْطَفَيْتُكَ بِكَلَامِي دُونَ خَلْقِي؟ إِنِّي قَلَّبْتُ عِبَادِي ظَهْرًا لِبَطْنٍ فَلَمْ أَجِدْ فِيهِمْ أَحَدًا أَذَلَّ لِي نَفْسًا مِنْكَ.",
+        "translationEn": "God revealed to Mūsā: ‘Do you know why I chose you with My speech above all My creation? I turned My servants over, top to bottom, and found none among them more humble of soul before Me than you.’",
+        "translationUr": "اللہ نے موسیٰؑ کی طرف وحی کی: «کیا تم جانتے ہو کہ میں نے تمہیں اپنی ساری مخلوق میں سے اپنے کلام کے لیے کیوں چنا؟ میں نے اپنے بندوں کو اُلٹ پلٹ کر دیکھا تو اُن میں تجھ سے زیادہ اپنے نفس کو میرے سامنے جھکانے والا کوئی نہ پایا۔»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, vol. 2, p. 123",
+        "sourceAr": "الإمام الصادق (ع) — الكافي، ج٢ ص١٢٣",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، ج۲، ص۱۲۳"
+      }
     },
     {
       "id": "p15",
@@ -595,7 +707,15 @@
         }
       ],
       "relatedStoryId": "s2",
-      "icon": "figure.walk.departure"
+      "icon": "figure.walk.departure",
+      "narration": {
+        "arabic": "وَذَٰلِكَ قَوْلُ اللَّهِ عَزَّ وَجَلَّ: إِنِّي مُهَاجِرٌ إِلَىٰ رَبِّي إِنَّهُ هُوَ الْعَزِيزُ الْحَكِيمُ، وَكَانَتْ هِجْرَةُ إِبْرَاهِيمَ بِغَيْرِ قِتَالٍ.",
+        "translationEn": "And that is the saying of God, Mighty and Majestic: ‘Indeed I am a migrant to my Lord; truly He is the Mighty, the Wise’ — and Ibrāhīm's migration was without any fighting.",
+        "translationUr": "اور یہی اللہ عزّوجل کا فرمان ہے: «بیشک میں اپنے رب کی طرف ہجرت کرنے والا ہوں، وہی غالب، حکمت والا ہے» — اور ابراہیمؑ کی ہجرت بغیر کسی جنگ کے تھی۔",
+        "sourceEn": "Imam al-Bāqir (ʿa) — Kamāl al-Dīn (al-Ṣadūq)",
+        "sourceAr": "الإمام الباقر (ع) — كمال الدين للصدوق",
+        "sourceUr": "امام محمد باقر علیہ السلام — کمال الدین (صدوق)"
+      }
     },
     {
       "id": "p16",
@@ -639,7 +759,15 @@
         }
       ],
       "relatedStoryId": null,
-      "icon": "heart.fill"
+      "icon": "heart.fill",
+      "narration": {
+        "arabic": "تَبْكِي الْعَيْنُ وَيَحْزَنُ الْقَلْبُ، وَلَا نَقُولُ مَا يُسْخِطُ الرَّبَّ، وَإِنَّا بِكَ يَا إِبْرَاهِيمُ لَمَحْزُونُونَ.",
+        "translationEn": "At the death of his infant son: ‘The eye weeps and the heart grieves, yet we say nothing that angers the Lord; and indeed, O Ibrāhīm, we grieve for you.’",
+        "translationUr": "اپنے شیر خوار بیٹے کی وفات پر: «آنکھ آنسو بہاتی ہے اور دل غم زدہ ہے، مگر ہم وہی کہتے ہیں جو ہمارے رب کو ناراض نہ کرے؛ اور اے ابراہیم! ہم تیری جدائی پر غم زدہ ہیں۔»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) / Jābir — Musakkin al-Fuʾād (al-Shahīd al-Thānī)",
+        "sourceAr": "الإمام الصادق (ع) / جابر — مسكّن الفؤاد للشهيد الثاني",
+        "sourceUr": "امام جعفر صادق علیہ السلام / جابر — مسکّن الفؤاد (شہید ثانی)"
+      }
     },
     {
       "id": "p17",
@@ -683,7 +811,15 @@
         }
       ],
       "relatedStoryId": "s21",
-      "icon": "arrow.triangle.2.circlepath"
+      "icon": "arrow.triangle.2.circlepath",
+      "narration": {
+        "arabic": "هَبَطَ آدَمُ فَمَكَثَ أَرْبَعِينَ صَبَاحًا سَاجِدًا يَبْكِي عَلَىٰ خَطِيئَتِهِ، فَقَالَ لَهُ جَبْرَئِيلُ: يَا آدَمُ تُبْ إِلَى اللَّهِ.",
+        "translationEn": "Ādam descended and remained forty mornings prostrate, weeping over his mistake; then Gabriel said to him: ‘O Ādam, turn back to God in repentance.’",
+        "translationUr": "آدمؑ (زمین پر) اترے تو چالیس صبحیں سجدے میں اپنی خطا پر روتے رہے، پھر جبرائیلؑ نے اُن سے کہا: «اے آدم! اللہ کی طرف توبہ کرو۔»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — Tafsīr al-Qummī",
+        "sourceAr": "الإمام الصادق (ع) — تفسير القمي",
+        "sourceUr": "امام جعفر صادق علیہ السلام — تفسیر القمی"
+      }
     },
     {
       "id": "p18",
@@ -727,7 +863,15 @@
         }
       ],
       "relatedStoryId": "s2",
-      "icon": "figure.2.and.child.holdinghands"
+      "icon": "figure.2.and.child.holdinghands",
+      "narration": {
+        "arabic": "قَالَ اللَّهُ: إِنِّي جَاعِلُكَ لِلنَّاسِ إِمَامًا، فَقَالَ الْخَلِيلُ سُرُورًا بِهَا: وَمِنْ ذُرِّيَّتِي، قَالَ اللَّهُ: لَا يَنَالُ عَهْدِي الظَّالِمِينَ؛ ثُمَّ أَكْرَمَهُ اللَّهُ بِأَنْ جَعَلَهَا فِي ذُرِّيَّتِهِ أَهْلَ الصَّفْوَةِ وَالطَّهَارَةِ.",
+        "translationEn": "God said: ‘I am making you a leader for mankind.’ Out of joy the Khalīl said: ‘And from my offspring?’ God said: ‘My covenant does not reach the wrongdoers.’ Then God honoured him by placing it among the people of purity from his progeny.",
+        "translationUr": "اللہ نے فرمایا: «بیشک میں تمہیں لوگوں کا امام بنانے والا ہوں»، تو خلیلؑ نے خوشی سے کہا: «اور میری اولاد میں سے بھی؟» اللہ نے فرمایا: «میرا عہد ظالموں تک نہیں پہنچتا»؛ پھر اللہ نے اُنہیں یہ شرف بخشا کہ یہ (منصب) اُن کی پاکیزہ نسل میں رکھ دیا۔",
+        "sourceEn": "Imam al-Riḍā (ʿa) — al-Kāfī, vol. 1, p. 199",
+        "sourceAr": "الإمام الرضا (ع) — الكافي، ج١ ص١٩٩",
+        "sourceUr": "امام علی رضا علیہ السلام — الکافی، ج۱، ص۱۹۹"
+      }
     },
     {
       "id": "p19",
@@ -771,7 +915,15 @@
         }
       ],
       "relatedStoryId": "s3",
-      "icon": "person.3.fill"
+      "icon": "person.3.fill",
+      "narration": {
+        "arabic": "عَاشَ نُوحٌ (ع) أَلْفَ سَنَةٍ إِلَّا خَمْسِينَ عَامًا وَهُوَ فِي قَوْمِهِ يَدْعُوهُمْ، فَلَمَّا جَاءَهُ مَلَكُ الْمَوْتِ قَالَ: مَا مَرَّ بِي مِنَ الدُّنْيَا إِلَّا كَتَحَوُّلِي مِنَ الشَّمْسِ إِلَى الظِّلِّ.",
+        "translationEn": "Nūḥ (ʿa) spent nine hundred and fifty years among his people calling them [to God]; and when the Angel of Death came he said: ‘All that has passed of the world for me was but like my moving from the sun into the shade.’",
+        "translationUr": "نوحؑ نو سو پچاس سال اپنی قوم کے درمیان اُنہیں (حق کی) دعوت دیتے رہے؛ پھر جب موت کا فرشتہ آیا تو کہا: «دنیا کا یہ سارا عرصہ میرے لیے بس ایسا تھا جیسے میں دھوپ سے سائے میں آ گیا ہوں۔»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Amālī (al-Ṣadūq)",
+        "sourceAr": "الإمام الصادق (ع) — الأمالي للصدوق",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الامالی (صدوق)"
+      }
     },
     {
       "id": "p20",
@@ -815,7 +967,15 @@
         }
       ],
       "relatedStoryId": "s4",
-      "icon": "scale.3d"
+      "icon": "scale.3d",
+      "narration": {
+        "arabic": "جَاءَ جَبْرَئِيلُ فَقَالَ: يَا يُوسُفُ، مَنْ جَعَلَكَ أَحْسَنَ النَّاسِ؟ قَالَ: رَبِّي، فَقَالَ: إِنَّ رَبَّكَ يَقُولُ: مَا دَعَاكَ أَنْ تُنْزِلَ حَاجَتَكَ بِمَخْلُوقٍ دُونِي؟ الْبَثْ فِي السِّجْنِ بِمَا قُلْتَ بِضْعَ سِنِينَ.",
+        "translationEn": "Jibrīl came and asked: ‘O Yūsuf, who made you the fairest of people?’ He said, ‘My Lord.’ Then he said: ‘Your Lord says: What led you to lay your need before a creature other than Me? Remain in prison, for what you said, several years.’",
+        "translationUr": "جبرائیلؑ آئے اور کہا: «اے یوسف! تمہیں سب سے خوبصورت کس نے بنایا؟» کہا: «میرے رب نے»، پھر کہا: «تمہارا رب فرماتا ہے: تمہیں کس چیز نے اُبھارا کہ اپنی حاجت میرے سوا کسی مخلوق کے سامنے رکھو؟ اب اپنی اِس بات کے سبب کچھ سال قید میں رہو۔»",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — Tafsīr Majmaʿ al-Bayān, vol. 5, p. 235",
+        "sourceAr": "الإمام الصادق (ع) — تفسير مجمع البيان، ج٥ ص٢٣٥",
+        "sourceUr": "امام جعفر صادق علیہ السلام — تفسیر مجمع البیان، ج۵، ص۲۳۵"
+      }
     }
   ]
 }

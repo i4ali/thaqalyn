@@ -37,7 +37,15 @@
           "relevanceNoteUr": "اس آیت میں رمضان کو روزے کا مہینہ قرار دیا گیا ہے — وہ مبارک مہینہ جس میں قرآنِ کریم نازل ہوا، جو ہدایت اور حق و باطل میں فرق کرنے والا ہے۔",
           "isKeyVerse": true
         }
-      ]
+      ],
+      "narration": {
+        "arabic": "بُنِيَ الْإِسْلَامُ عَلَىٰ خَمْسٍ: عَلَى الصَّلَاةِ وَالزَّكَاةِ وَالصَّوْمِ وَالْحَجِّ وَالْوَلَايَةِ.",
+        "translationEn": "Islam is built upon five: prayer, zakāt, fasting, ḥajj, and walāyah (devotion to the Ahlul Bayt).",
+        "translationUr": "اسلام کی بنیاد پانچ چیزوں پر رکھی گئی ہے: نماز، زکات، روزہ، حج اور ولایت (اہلِ بیتؑ سے محبت و پیروی)۔",
+        "sourceEn": "Imam al-Bāqir (ʿa) — al-Kāfī, vol. 2, p. 18",
+        "sourceAr": "الإمام الباقر (عليه السلام) — الكافي، ج٢ ص١٨",
+        "sourceUr": "امام محمد باقر علیہ السلام — الکافی، ج۲، ص۱۸"
+      }
     },
     {
       "id": "exemptions",
@@ -85,7 +93,15 @@
           "relevanceNoteUr": "یہ آیت ان حالات کا بیان کرتی ہے جو عارضی طور پر عبادت کی حالت متاثر کرتے ہیں، جن کا روزے کی طہارت و پاکیزگی سے بھی تعلق ہے۔",
           "isKeyVerse": false
         }
-      ]
+      ],
+      "narration": {
+        "arabic": "إِنَّ اللَّهَ عَزَّ وَجَلَّ يُحِبُّ أَنْ يُؤْخَذَ بِرُخَصِهِ كَمَا يُحِبُّ أَنْ يُؤْخَذَ بِعَزَائِمِهِ.",
+        "translationEn": "Indeed Allah — Mighty and Majestic — loves that His concessions (rukhaṣ) be taken up, just as He loves that His obligations be fulfilled.",
+        "translationUr": "بے شک اللہ عزّوجل پسند کرتا ہے کہ اُس کی دی ہوئی رخصتوں پر عمل کیا جائے، جس طرح وہ پسند کرتا ہے کہ اُس کے لازمی احکام پر عمل کیا جائے۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) — al-Kāfī, Kitāb al-Ṣawm",
+        "sourceAr": "الإمام الصادق (عليه السلام) — الكافي، كتاب الصوم",
+        "sourceUr": "امام جعفر صادق علیہ السلام — الکافی، کتاب الصوم"
+      }
     },
     {
       "id": "spiritual_benefits",
@@ -160,7 +176,15 @@
           "relevanceNoteUr": "اللہ قریب ہے اور دعا قبول فرماتا ہے — روزے کی حالت میں اللہ سے قربت اور دعا کی خاص اہمیت اجاگر کی گئی ہے۔",
           "isKeyVerse": true
         }
-      ]
+      ],
+      "narration": {
+        "arabic": "مَا يَصْنَعُ الصَّائِمُ بِصِيَامِهِ إِذَا لَمْ يَصُنْ لِسَانَهُ وَسَمْعَهُ وَبَصَرَهُ وَجَوَارِحَهُ؟",
+        "translationEn": "What does the fasting one gain from his fast, if he does not guard his tongue, his hearing, his sight, and his limbs?",
+        "translationUr": "روزہ دار اپنے روزے سے کیا حاصل کرتا ہے، اگر وہ اپنی زبان، اپنے کان، اپنی آنکھ اور اپنے دیگر اعضاء کی حفاظت نہ کرے؟",
+        "sourceEn": "Sayyida Fāṭima al-Zahrā (ʿa) — Biḥār al-Anwār, vol. 93",
+        "sourceAr": "السيدة فاطمة الزهراء (عليها السلام) — بحار الأنوار، ج٩٣",
+        "sourceUr": "سیدہ فاطمہ الزہرا سلام اللہ علیہا — بحار الانوار، ج۹۳"
+      }
     },
     {
       "id": "historical_context",
@@ -217,7 +241,15 @@
           "relevanceNoteUr": "دو مہینے مسلسل روزہ بطور کفّارہ — روزے کے ایک اور موقع پر روحانی علاج کے طور پر استعمال کی مثال۔",
           "isKeyVerse": false
         }
-      ]
+      ],
+      "narration": {
+        "arabic": "﴿إِنِّي نَذَرْتُ لِلرَّحْمَٰنِ صَوْمًا﴾ أَيْ صَمْتًا؛ فَكَانَ صِيَامُ مَرْيَمَ (عَلَيْهَا السَّلَامُ) صِيَامَ الصَّمْتِ.",
+        "translationEn": "“I have vowed to the Most Merciful a fast” — that is, silence. So the fast of Maryam (ʿa) was a fast of silence.",
+        "translationUr": "«میں نے رحمٰن کے لیے روزے کی نذر مانی ہے» — یعنی خاموشی کی؛ پس مریم سلام اللہ علیہا کا روزہ خاموشی کا روزہ تھا۔",
+        "sourceEn": "Imam al-Ṣādiq (ʿa) on Sūrat Maryam 19:26 — Biḥār al-Anwār",
+        "sourceAr": "الإمام الصادق (عليه السلام) في قوله تعالى في سورة مريم — بحار الأنوار",
+        "sourceUr": "امام جعفر صادق علیہ السلام، سورۂ مریم (آیت ۲۶) کی تفسیر میں — بحار الانوار"
+      }
     }
   ]
 }
