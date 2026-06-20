@@ -69,12 +69,14 @@ struct SurahDetailView: View {
                     onBack: { dismiss() },
                     onQuizTap: {
                         if premiumManager.canAccessQuiz(surahNumber: surahWithTafsir.surah.number) {
-                            showingQuiz = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                showingQuiz = true
+                            }
                         } else {
                             showingPaywall = true
                         }
                     },
-                    onGoToVerse: { showingGoToVerse = true }
+                    onGoToVerse: { DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { showingGoToVerse = true } }
                 )
 
                 // Verses scroll view
@@ -87,12 +89,18 @@ struct SurahDetailView: View {
                                     surah: surahWithTafsir.surah,
                                     bookmarkManager: bookmarkManager,
                                     onTafsirTap: {
-                                        selectedVerse = verse
-                                        fullScreenCommentaryData = (verse: verse, layer: .foundation)
+                                        // Let the button's press squish play before the full-screen
+                                        // cover slides up and hides it.
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                            selectedVerse = verse
+                                            fullScreenCommentaryData = (verse: verse, layer: .foundation)
+                                        }
                                     },
                                     onSummaryTap: {
-                                        pendingConceptId = nil
-                                        selectedVerseForSummary = verse
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                            pendingConceptId = nil
+                                            selectedVerseForSummary = verse
+                                        }
                                     }
                                 )
                                 .id("verse_\(verse.number)")
@@ -580,7 +588,6 @@ struct ModernVerseCard: View {
     let bookmarkManager: BookmarkManager
     let onTafsirTap: () -> Void
     let onSummaryTap: () -> Void
-    @State private var isPressed = false
     @State private var showingBookmarkFeedback = false
     @State private var showingPaywall = false
     @State private var canAccessTafsir = false
@@ -943,8 +950,6 @@ struct ModernVerseCard: View {
                 }
             }
         }
-        .scaleEffect(isPressed ? 0.98 : 1.0)
-        .animation(.easeInOut(duration: 0.1), value: isPressed)
         .animation(.easeInOut(duration: 0.3), value: isCurrentlyPlaying)
         .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView()
@@ -976,6 +981,7 @@ struct ModernVerseCard: View {
                         .fill((themeManager.isDarkMode ? themeManager.accentColor : Color(red: 0.91, green: 0.604, blue: 0.435)).opacity(0.1))
                 )
             }
+            .buttonStyle(EmPressStyle())
             .opacity(verse.tafsir != nil ? 1.0 : 0.5)
             .disabled(verse.tafsir == nil)
 
@@ -1000,6 +1006,7 @@ struct ModernVerseCard: View {
                         .fill(themeManager.accentColor.opacity(0.1))
                 )
             }
+            .buttonStyle(EmPressStyle())
         }
     }
 

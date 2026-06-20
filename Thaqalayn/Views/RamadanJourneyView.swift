@@ -44,8 +44,10 @@ struct RamadanJourneyView: View {
                                         isLocked: !premiumManager.canAccessRamadanDay(day.dayNumber)
                                     ) {
                                         if premiumManager.canAccessRamadanDay(day.dayNumber) {
-                                            selectedDay = day
-                                            navigateToDetail = true
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                selectedDay = day
+                                                navigateToDetail = true
+                                            }
                                         } else {
                                             showPaywall = true
                                         }

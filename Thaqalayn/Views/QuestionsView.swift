@@ -175,8 +175,10 @@ struct QuestionsView: View {
                                                     if isLocked {
                                                         showPaywall = true
                                                     } else {
-                                                        selectedQuestion = question
-                                                        navigateToDetail = true
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                            selectedQuestion = question
+                                                            navigateToDetail = true
+                                                        }
                                                     }
                                                 }
                                         }

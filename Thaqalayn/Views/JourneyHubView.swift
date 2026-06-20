@@ -103,7 +103,10 @@ struct JourneyHubView: View {
 
     private func handleTap(_ d: JourneyDescriptor, _ status: JourneyStatus) {
         if status.isActive {
-            presented = PresentedJourney(id: d.id)
+            // Let the card's press squish play before the cover slides up and hides it.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                presented = PresentedJourney(id: d.id)
+            }
         } else {
             // Locked — explain why it won't open and point to the next journey.
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()

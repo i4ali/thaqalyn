@@ -39,10 +39,11 @@ struct FoodsView: View {
                                         }
                                         .buttonStyle(EmPressStyle())
                                     } else {
-                                        NavigationLink(destination: FoodDetailView(food: food)) {
+                                        PressableNavLink {
+                                            FoodDetailView(food: food)
+                                        } label: {
                                             FoodCard(food: food, isLocked: false)
                                         }
-                                        .buttonStyle(EmPressStyle())
                                     }
                                 }
                             }

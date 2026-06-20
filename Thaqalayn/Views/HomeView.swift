@@ -108,10 +108,11 @@ struct HomeView: View {
                             surah.surah.arabicName.contains(searchText) ||
                             searchText.isEmpty
                         }) { surahWithTafsir in
-                            NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)) {
+                            PressableNavLink {
+                                SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)
+                            } label: {
                                 ModernSurahCard(surah: surahWithTafsir.surah)
                             }
-                            .buttonStyle(EmPressStyle())
                         }
                     }
                     .padding(.horizontal, 20)

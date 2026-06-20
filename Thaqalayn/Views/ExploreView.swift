@@ -326,23 +326,26 @@ struct ExploreView: View {
     }
 
     private func handleTap(_ destination: ExploreDestination) {
-        switch destination {
-        case .lifeMoments:
-            showLifeMoments = true
-        case .dailyDuas:
-            showDailyDuas = true
-        case .propheticParallels:
-            showPropheticParallels = true
-        case .questions:
-            showQuestions = true
-        case .fasting:
-            showFasting = true
-        case .propheticStories:
-            showPropheticStories = true
-        case .ahlulbaytQuran:
-            showAhlulbaytQuran = true
-        case .foods:
-            showFoods = true
+        // Let the card's press squish play before the cover slides up and hides it.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            switch destination {
+            case .lifeMoments:
+                showLifeMoments = true
+            case .dailyDuas:
+                showDailyDuas = true
+            case .propheticParallels:
+                showPropheticParallels = true
+            case .questions:
+                showQuestions = true
+            case .fasting:
+                showFasting = true
+            case .propheticStories:
+                showPropheticStories = true
+            case .ahlulbaytQuran:
+                showAhlulbaytQuran = true
+            case .foods:
+                showFoods = true
+            }
         }
     }
 }

@@ -371,6 +371,7 @@ struct BookmarkCardContent: View {
             dragOffset: dragOffset,
             onDelete: onDelete
         )
+        .pressFeedback(depth: 0.98, dim: 0.96)
         .onLongPressGesture(minimumDuration: 0.5) {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                 showingDeleteButton.toggle()
@@ -569,6 +570,7 @@ struct BookmarkCard: View {
             dragOffset: dragOffset,
             onDelete: onDelete
         )
+        .pressFeedback(depth: 0.98, dim: 0.96)
         .onLongPressGesture(minimumDuration: 0.5) {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                 showingDeleteButton.toggle()

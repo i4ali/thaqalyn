@@ -207,8 +207,10 @@ struct TodayView: View {
             print("⚠️ TodayView: daily-message surah \(dailyMessage.today.surah) not in availableSurahs")
             return
         }
-        targetVerseNumber = dailyMessage.today.verse
-        selectedSurahForDeepLink = surah
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            targetVerseNumber = dailyMessage.today.verse
+            selectedSurahForDeepLink = surah
+        }
     }
 
     private var lastReadSurah: SurahWithTafsir? {
@@ -227,14 +229,18 @@ struct TodayView: View {
     private func openLastRead() {
         guard let info = progressManager.lastReadInfo,
               let surah = lastReadSurah else { return }
-        targetVerseNumber = info.verseNumber
-        selectedSurahForDeepLink = surah
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            targetVerseNumber = info.verseNumber
+            selectedSurahForDeepLink = surah
+        }
     }
 
     private func openSurah1() {
         guard let surah = dataManager.availableSurahs.first(where: { $0.surah.number == 1 }) else { return }
-        targetVerseNumber = 1
-        selectedSurahForDeepLink = surah
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            targetVerseNumber = 1
+            selectedSurahForDeepLink = surah
+        }
     }
 
     // MARK: - Header row
@@ -639,7 +645,9 @@ private struct DuaOfTheDayCard: View {
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
-        NavigationLink(destination: DuaDetailView(dua: dua)) {
+        PressableNavLink {
+            DuaDetailView(dua: dua)
+        } label: {
             HStack(spacing: 12) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
@@ -673,7 +681,6 @@ private struct DuaOfTheDayCard: View {
             .background(cardBackground)
             .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
         }
-        .buttonStyle(EmPressStyle())
     }
 
     private var iconBackground: Color {
@@ -787,8 +794,10 @@ private struct EmeraldTodayView: View {
     }
     private func openMessageSource() {
         guard let s = dataManager.availableSurahs.first(where: { $0.surah.number == dailyMessage.today.surah }) else { return }
-        targetVerseNumber = dailyMessage.today.verse
-        selectedSurahForDeepLink = s
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            targetVerseNumber = dailyMessage.today.verse
+            selectedSurahForDeepLink = s
+        }
     }
     private var lastReadSurah: SurahWithTafsir? {
         guard let info = progressManager.lastReadInfo else { return nil }
@@ -801,13 +810,17 @@ private struct EmeraldTodayView: View {
     }
     private func openLastRead() {
         guard let info = progressManager.lastReadInfo, let s = lastReadSurah else { return }
-        targetVerseNumber = info.verseNumber
-        selectedSurahForDeepLink = s
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            targetVerseNumber = info.verseNumber
+            selectedSurahForDeepLink = s
+        }
     }
     private func openSurah1() {
         guard let s = dataManager.availableSurahs.first(where: { $0.surah.number == 1 }) else { return }
-        targetVerseNumber = 1
-        selectedSurahForDeepLink = s
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            targetVerseNumber = 1
+            selectedSurahForDeepLink = s
+        }
     }
 }
 
@@ -975,7 +988,9 @@ private struct EmDuaOfTheDayCard: View {
     let dua: DailyDua
 
     var body: some View {
-        NavigationLink(destination: DuaDetailView(dua: dua)) {
+        PressableNavLink {
+            DuaDetailView(dua: dua)
+        } label: {
             EmCard {
                 HStack(spacing: 12) {
                     EmIconChip(sfSymbol: "quote.bubble.fill", size: 40)
@@ -991,7 +1006,6 @@ private struct EmDuaOfTheDayCard: View {
                 .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             }
         }
-        .buttonStyle(EmPressStyle())
     }
 }
 

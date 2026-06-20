@@ -71,8 +71,10 @@ struct LifeMomentsView: View {
                                             if isLocked {
                                                 showPaywall = true
                                             } else {
-                                                selectedMoment = moment
-                                                navigateToDetail = true
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                    selectedMoment = moment
+                                                    navigateToDetail = true
+                                                }
                                             }
                                         }
                                 }

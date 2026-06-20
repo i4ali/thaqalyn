@@ -138,8 +138,10 @@ struct QuestionDetailView: View {
                             index: index + 1,
                             totalVerses: question.verseCount,
                             onNavigate: {
-                                selectedVerseForNav = (questionVerse.surahNumber, questionVerse.verseNumber)
-                                navigateToVerse = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                    selectedVerseForNav = (questionVerse.surahNumber, questionVerse.verseNumber)
+                                    navigateToVerse = true
+                                }
                             }
                         )
                     }
@@ -245,8 +247,10 @@ struct QuestionDetailView: View {
                             index: index + 1,
                             totalVerses: question.verseCount,
                             onNavigate: {
-                                selectedVerseForNav = (questionVerse.surahNumber, questionVerse.verseNumber)
-                                navigateToVerse = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                    selectedVerseForNav = (questionVerse.surahNumber, questionVerse.verseNumber)
+                                    navigateToVerse = true
+                                }
                             }
                         )
                     }

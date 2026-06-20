@@ -113,8 +113,10 @@ struct FastingCategoryDetailView: View {
                             index: index + 1,
                             totalVerses: category.verseCount,
                             onNavigate: {
-                                selectedVerseForNav = (fastingVerse.surahNumber, fastingVerse.verseNumber)
-                                navigateToVerse = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                    selectedVerseForNav = (fastingVerse.surahNumber, fastingVerse.verseNumber)
+                                    navigateToVerse = true
+                                }
                             }
                         )
                     }
@@ -204,8 +206,10 @@ struct FastingCategoryDetailView: View {
                         index: index + 1,
                         totalVerses: category.verseCount,
                         onNavigate: {
-                            selectedVerseForNav = (fastingVerse.surahNumber, fastingVerse.verseNumber)
-                            navigateToVerse = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                selectedVerseForNav = (fastingVerse.surahNumber, fastingVerse.verseNumber)
+                                navigateToVerse = true
+                            }
                         }
                     )
                 }

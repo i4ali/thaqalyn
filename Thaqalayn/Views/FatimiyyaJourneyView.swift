@@ -44,8 +44,10 @@ struct FatimiyyaJourneyView: View {
                                         isLocked: !premiumManager.canAccessFatimiyyaDay(day.dayNumber)
                                     ) {
                                         if premiumManager.canAccessFatimiyyaDay(day.dayNumber) {
-                                            selectedDay = day
-                                            navigateToDetail = true
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                selectedDay = day
+                                                navigateToDetail = true
+                                            }
                                         } else {
                                             showPaywall = true
                                         }

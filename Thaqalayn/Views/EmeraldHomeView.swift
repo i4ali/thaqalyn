@@ -95,13 +95,14 @@ struct EmeraldHomeView: View {
         HStack(alignment: .center, spacing: 10) {
             Spacer()
 
-            NavigationLink(destination: BookmarksView()) {
+            PressableNavLink {
+                BookmarksView()
+            } label: {
                 PhosphorIcon(name: "ph-heart-fill", size: 15)
                     .foregroundColor(themeManager.accentColor)
                     .frame(width: 36, height: 36)
                     .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
             }
-            .buttonStyle(EmPressStyle())
 
             Button { showNotifications = true } label: {
                 PhosphorIcon(name: "ph-bell", size: 16)
@@ -182,10 +183,11 @@ struct EmeraldHomeView: View {
     private var surahList: some View {
         LazyVStack(spacing: 12) {
             ForEach(filteredSurahs) { swt in
-                NavigationLink(destination: SurahDetailView(surahWithTafsir: swt, targetVerse: nil)) {
+                PressableNavLink {
+                    SurahDetailView(surahWithTafsir: swt, targetVerse: nil)
+                } label: {
                     ModernSurahCard(surah: swt.surah)
                 }
-                .buttonStyle(EmPressStyle())
             }
         }
     }

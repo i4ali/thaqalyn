@@ -140,8 +140,10 @@ struct StoryDetailView: View {
                             index: index + 1,
                             totalVerses: story.verseCount,
                             onNavigate: {
-                                selectedVerseForNav = (storyVerse.surahNumber, storyVerse.verseNumber)
-                                navigateToVerse = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                    selectedVerseForNav = (storyVerse.surahNumber, storyVerse.verseNumber)
+                                    navigateToVerse = true
+                                }
                             }
                         )
                     }
@@ -283,8 +285,10 @@ struct StoryDetailView: View {
                     index: index + 1,
                     totalVerses: story.verseCount,
                     onNavigate: {
-                        selectedVerseForNav = (storyVerse.surahNumber, storyVerse.verseNumber)
-                        navigateToVerse = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                            selectedVerseForNav = (storyVerse.surahNumber, storyVerse.verseNumber)
+                            navigateToVerse = true
+                        }
                     }
                 )
             }

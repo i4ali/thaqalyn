@@ -138,8 +138,10 @@ struct PropheticStoriesView: View {
                                                     if isLocked {
                                                         showPaywall = true
                                                     } else {
-                                                        selectedStory = story
-                                                        navigateToDetail = true
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                            selectedStory = story
+                                                            navigateToDetail = true
+                                                        }
                                                     }
                                                 }
                                         }

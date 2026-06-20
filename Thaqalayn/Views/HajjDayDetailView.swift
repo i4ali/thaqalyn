@@ -61,8 +61,10 @@ struct HajjDayDetailView: View {
                             HajjVerseCard(
                                 verse: verse,
                                 onNavigate: {
-                                    selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
-                                    navigateToVerse = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                        selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                                        navigateToVerse = true
+                                    }
                                 }
                             )
                         }
@@ -224,8 +226,10 @@ struct HajjDayDetailView: View {
                     HajjVerseCard(
                         verse: verse,
                         onNavigate: {
-                            selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
-                            navigateToVerse = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                                navigateToVerse = true
+                            }
                         }
                     )
                 }

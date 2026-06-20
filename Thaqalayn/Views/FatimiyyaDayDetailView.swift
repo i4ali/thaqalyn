@@ -62,8 +62,10 @@ struct FatimiyyaDayDetailView: View {
                             FatimiyyaVerseCard(
                                 verse: verse,
                                 onNavigate: {
-                                    selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
-                                    navigateToVerse = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                        selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                                        navigateToVerse = true
+                                    }
                                 }
                             )
                         }
@@ -228,8 +230,10 @@ struct FatimiyyaDayDetailView: View {
                     FatimiyyaVerseCard(
                         verse: verse,
                         onNavigate: {
-                            selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
-                            navigateToVerse = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                                navigateToVerse = true
+                            }
                         }
                     )
                 }

@@ -42,26 +42,160 @@ extension Text {
     }
 }
 
+// MARK: - Haptics
+
+/// Centralized tap/press haptics. One place to tune the subtle tactile
+/// feel that pairs with the visual press squish across the app.
+enum Haptics {
+    /// A gentle light impact for press-down feedback on buttons & cards.
+    static func press() {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        generator.impactOccurred(intensity: 0.6)
+    }
+}
+
 // MARK: - Press style
 
 /// Shared tap-feedback for the app: a deep, smooth, no-bounce press.
 /// Default = "Deep & Soft" (scale 0.92 + slight dim). All existing
 /// `.buttonStyle(EmPressStyle())` call sites inherit this automatically.
+///
+/// A quick tap is usually shorter than the press-in animation, so a naïve
+/// `.animation(_, value: isPressed)` barely moves before the finger lifts and
+/// the squish only "reads" on a long press. `PressableContent` fixes that: it
+/// snaps in fast, holds the pressed look for a short floor, then eases back —
+/// so every tap plays the full squish — and fires a light haptic on press-down.
 struct EmPressStyle: ButtonStyle {
     var depth: CGFloat = 0.92   // pressed scale
     var dim: Double = 0.90      // pressed opacity
 
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? depth : 1)
-            .opacity(configuration.isPressed ? dim : 1)
-            .animation(.spring(response: 0.34, dampingFraction: 0.86),
-                       value: configuration.isPressed)
+        PressableContent(isPressed: configuration.isPressed, depth: depth, dim: dim) {
+            configuration.label
+        }
     }
 
     /// Gentler preset for full-width rows so they sink in place rather than
     /// appearing to "jump" away from neighboring rows.
     static var gentle: EmPressStyle { EmPressStyle(depth: 0.97, dim: 0.94) }
+}
+
+/// Renders press feedback for a pressed flag: scale + dim + a light haptic on
+/// press-down, with a minimum-visible floor so the full squish shows even on a
+/// very quick tap. Shared by `EmPressStyle` (driven by a `Button`'s pressed
+/// state) and `.pressFeedback()` (driven by a gesture, for non-`Button`
+/// surfaces like the bookmark cards).
+struct PressableContent<Label: View>: View {
+    private let isPressed: Bool
+    private let depth: CGFloat
+    private let dim: Double
+    private let label: Label
+
+    /// Minimum time the pressed look stays on screen, so a tap shorter than
+    /// the press-in animation still plays the complete squish.
+    private let minHold: TimeInterval = 0.11
+
+    @State private var held = false
+    @State private var isDown = false
+    @State private var pressStart: Date?
+
+    init(isPressed: Bool,
+         depth: CGFloat = 0.92,
+         dim: Double = 0.90,
+         @ViewBuilder label: () -> Label) {
+        self.isPressed = isPressed
+        self.depth = depth
+        self.dim = dim
+        self.label = label()
+    }
+
+    var body: some View {
+        label
+            .scaleEffect(held ? depth : 1)
+            .opacity(held ? dim : 1)
+            .animation(held ? .easeOut(duration: 0.07)
+                            : .spring(response: 0.3, dampingFraction: 0.8),
+                       value: held)
+            .onChange(of: isPressed) { _, pressed in
+                isDown = pressed
+                if pressed {
+                    pressStart = Date()
+                    held = true
+                    Haptics.press()
+                } else {
+                    let elapsed = pressStart.map { Date().timeIntervalSince($0) } ?? minHold
+                    let remaining = max(0, minHold - elapsed)
+                    if remaining == 0 {
+                        held = false
+                    } else {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + remaining) {
+                            if !isDown { held = false }
+                        }
+                    }
+                }
+            }
+    }
+}
+
+/// Press feedback for a surface that already owns gestures (drag / long-press)
+/// and so can't be a plain `Button`. Recognizes a zero-distance drag
+/// *simultaneously*, so it adds the press squish + haptic on tap-down without
+/// consuming the existing taps, long presses, or swipes.
+extension View {
+    func pressFeedback(depth: CGFloat = 0.92, dim: Double = 0.90) -> some View {
+        modifier(PressFeedbackModifier(depth: depth, dim: dim))
+    }
+}
+
+private struct PressFeedbackModifier: ViewModifier {
+    let depth: CGFloat
+    let dim: Double
+    @State private var pressed = false
+
+    func body(content: Content) -> some View {
+        PressableContent(isPressed: pressed, depth: depth, dim: dim) { content }
+            .simultaneousGesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged { _ in pressed = true }
+                    .onEnded { _ in pressed = false }
+            )
+    }
+}
+
+/// A tappable row/card that pushes a destination, but plays its press squish
+/// *before* navigating. A plain `NavigationLink` pushes the instant you lift
+/// your finger, so the `EmPressStyle` squish is hidden by the incoming screen.
+/// This defers the push by a short beat so the press is acknowledged first —
+/// the same "press, then open" feel as the in-place buttons. Drop-in
+/// replacement for `NavigationLink(destination:) { label }.buttonStyle(EmPressStyle())`.
+struct PressableNavLink<Label: View, Destination: View>: View {
+    private let delay: Double
+    private let destination: Destination
+    private let label: Label
+    @State private var isActive = false
+
+    init(delay: Double = 0.12,
+         @ViewBuilder destination: () -> Destination,
+         @ViewBuilder label: () -> Label) {
+        self.delay = delay
+        self.destination = destination()
+        self.label = label()
+    }
+
+    var body: some View {
+        Button {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { isActive = true }
+        } label: {
+            label
+        }
+        .buttonStyle(EmPressStyle())
+        .background(
+            NavigationLink(destination: destination, isActive: $isActive) { EmptyView() }
+                .hidden()
+                .accessibilityHidden(true)
+        )
+    }
 }
 
 /// Press feedback for a tappable card/row that is NOT already a `Button`

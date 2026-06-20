@@ -161,8 +161,10 @@ struct AhlulbaytEntryDetailView: View {
                             index: index + 1,
                             totalVerses: entry.verseCount,
                             onNavigate: {
-                                selectedVerseForNav = (ahlulbaytVerse.surahNumber, ahlulbaytVerse.verseNumber)
-                                navigateToVerse = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                    selectedVerseForNav = (ahlulbaytVerse.surahNumber, ahlulbaytVerse.verseNumber)
+                                    navigateToVerse = true
+                                }
                             }
                         )
                     }
@@ -323,8 +325,10 @@ struct AhlulbaytEntryDetailView: View {
                     index: index + 1,
                     totalVerses: entry.verseCount,
                     onNavigate: {
-                        selectedVerseForNav = (ahlulbaytVerse.surahNumber, ahlulbaytVerse.verseNumber)
-                        navigateToVerse = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                            selectedVerseForNav = (ahlulbaytVerse.surahNumber, ahlulbaytVerse.verseNumber)
+                            navigateToVerse = true
+                        }
                     }
                 )
             }

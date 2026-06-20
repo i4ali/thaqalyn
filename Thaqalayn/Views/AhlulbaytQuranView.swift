@@ -140,8 +140,10 @@ struct AhlulbaytQuranView: View {
                                                     if isLocked {
                                                         showPaywall = true
                                                     } else {
-                                                        selectedEntry = entry
-                                                        navigateToDetail = true
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                            selectedEntry = entry
+                                                            navigateToDetail = true
+                                                        }
                                                     }
                                                 }
                                         }

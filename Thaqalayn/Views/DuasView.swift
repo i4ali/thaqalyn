@@ -39,10 +39,11 @@ struct DuasView: View {
                                         }
                                         .buttonStyle(EmPressStyle())
                                     } else {
-                                        NavigationLink(destination: DuaDetailView(dua: dua)) {
+                                        PressableNavLink {
+                                            DuaDetailView(dua: dua)
+                                        } label: {
                                             DuaCard(dua: dua, isLocked: false)
                                         }
-                                        .buttonStyle(EmPressStyle())
                                     }
                                 }
                             }

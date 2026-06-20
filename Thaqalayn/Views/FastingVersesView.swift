@@ -65,8 +65,10 @@ struct FastingVersesView: View {
                                         isLocked: !premiumManager.canAccessFastingCategory(category.id)
                                     ) {
                                         if premiumManager.canAccessFastingCategory(category.id) {
-                                            selectedCategory = category
-                                            navigateToDetail = true
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                selectedCategory = category
+                                                navigateToDetail = true
+                                            }
                                         } else {
                                             showPaywall = true
                                         }

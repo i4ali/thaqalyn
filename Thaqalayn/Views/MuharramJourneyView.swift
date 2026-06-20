@@ -44,8 +44,10 @@ struct MuharramJourneyView: View {
                                         isLocked: !premiumManager.canAccessMuharramDay(day.dayNumber)
                                     ) {
                                         if premiumManager.canAccessMuharramDay(day.dayNumber) {
-                                            selectedDay = day
-                                            navigateToDetail = true
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                selectedDay = day
+                                                navigateToDetail = true
+                                            }
                                         } else {
                                             showPaywall = true
                                         }

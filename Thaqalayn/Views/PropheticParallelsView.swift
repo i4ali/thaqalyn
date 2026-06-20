@@ -180,8 +180,10 @@ struct PropheticParallelsView: View {
                                                     if isLocked {
                                                         showPaywall = true
                                                     } else {
-                                                        selectedParallel = parallel
-                                                        navigateToDetail = true
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                            selectedParallel = parallel
+                                                            navigateToDetail = true
+                                                        }
                                                     }
                                                 }
                                         }

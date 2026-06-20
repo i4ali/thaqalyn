@@ -176,8 +176,10 @@ struct ParallelDetailView: View {
                     index: index + 1,
                     totalVerses: parallel.verses.count,
                     onNavigate: {
-                        selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
-                        navigateToVerse = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                            selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                            navigateToVerse = true
+                        }
                     }
                 )
             }
@@ -188,7 +190,7 @@ struct ParallelDetailView: View {
         VStack(alignment: .leading, spacing: 0) {
             if let story = relatedStory {
                 EmDetailCard(icon: "link", label: "Full Story") {
-                    Button(action: { navigateToStory = true }) {
+                    Button(action: { DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { navigateToStory = true } }) {
                         HStack(spacing: 12) {
                             EmIconChip(sfSymbol: story.categoryIcon, size: 40)
 
@@ -327,8 +329,10 @@ struct ParallelDetailView: View {
                     index: index + 1,
                     totalVerses: parallel.verses.count,
                     onNavigate: {
-                        selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
-                        navigateToVerse = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                            selectedVerseForNav = (verse.surahNumber, verse.verseNumber)
+                            navigateToVerse = true
+                        }
                     }
                 )
             }
@@ -351,7 +355,7 @@ struct ParallelDetailView: View {
             }
 
             if let story = relatedStory {
-                Button(action: { navigateToStory = true }) {
+                Button(action: { DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { navigateToStory = true } }) {
                     HStack(spacing: 12) {
                         Image(systemName: story.categoryIcon)
                             .font(.system(size: 16, weight: .semibold))
