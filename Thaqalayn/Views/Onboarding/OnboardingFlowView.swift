@@ -14,7 +14,7 @@ struct OnboardingFlowView: View {
     @State private var notificationsEnabled = false
     @State private var progressNotificationsEnabled = false
 
-    private let totalPages = 11
+    private let totalPages = 12
 
     var body: some View {
         ZStack {
@@ -48,29 +48,33 @@ struct OnboardingFlowView: View {
                 QuizFeatureScreen()
                     .tag(5)
 
-                // Screen 7: Seasonal Features (Ramadan Journey)
-                SeasonalFeaturesScreen()
+                // Screen 7: Daily Challenge
+                DailyChallengeScreen()
                     .tag(6)
 
-                // Screen 8: Daily Verse
-                DailyVerseScreen(notificationsEnabled: $notificationsEnabled)
+                // Screen 8: Seasonal Features (Ramadan Journey)
+                SeasonalFeaturesScreen()
                     .tag(7)
 
-                // Screen 9: Progress Notifications
-                ProgressNotificationsScreen(progressNotificationsEnabled: $progressNotificationsEnabled)
+                // Screen 9: Daily Verse
+                DailyVerseScreen(notificationsEnabled: $notificationsEnabled)
                     .tag(8)
 
-                // Screen 10: Personalize (name + preferred language)
-                PersonalizeScreen(currentPage: $currentPage)
+                // Screen 10: Progress Notifications
+                ProgressNotificationsScreen(progressNotificationsEnabled: $progressNotificationsEnabled)
                     .tag(9)
 
-                // Screen 11: Final Setup (account only — theme picker removed)
+                // Screen 11: Personalize (name + preferred language)
+                PersonalizeScreen(currentPage: $currentPage)
+                    .tag(10)
+
+                // Screen 12: Final Setup (account only — theme picker removed)
                 FinalScreen(
                     onComplete: {
                         completeOnboarding()
                     }
                 )
-                .tag(10)
+                .tag(11)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))

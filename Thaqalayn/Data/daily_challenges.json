@@ -1,0 +1,2180 @@
+[
+  {
+    "id": "dc_001",
+    "format": "multipleChoice",
+    "topic": "quran",
+    "prompt": {
+      "en": "How many chapters (surahs) are in the Qur'an?",
+      "ur": "قرآن میں کتنی سورتیں ہیں؟",
+      "ar": "كم عدد السور في القرآن الكريم؟"
+    },
+    "options": [
+      {
+        "en": "100",
+        "ur": "۱۰۰",
+        "ar": "١٠٠"
+      },
+      {
+        "en": "114",
+        "ur": "۱۱۴",
+        "ar": "١١٤"
+      },
+      {
+        "en": "120",
+        "ur": "۱۲۰",
+        "ar": "١٢٠"
+      },
+      {
+        "en": "99",
+        "ur": "۹۹",
+        "ar": "٩٩"
+      }
+    ],
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "The Qur'an has 114 surahs, beginning with al-Fatiha.",
+      "ur": "قرآن میں ۱۱۴ سورتیں ہیں، جن کا آغاز سورۃ الفاتحہ سے ہوتا ہے۔",
+      "ar": "يتألف القرآن الكريم من ١١٤ سورة، تبدأ بسورة الفاتحة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_002",
+    "format": "trueFalse",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Imam Ali (a) was born inside the Holy Kaʿba.",
+      "ur": "امام علی علیہ السلام خانہ کعبہ کے اندر پیدا ہوئے۔",
+      "ar": "وُلد الإمام علي عليه السلام داخل الكعبة المشرفة."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "By well-known reports, Imam Ali (a) was born inside the Kaʿba in Mecca.",
+      "ur": "معروف روایات کے مطابق امام علی علیہ السلام مکہ مکرمہ میں خانہ کعبہ کے اندر پیدا ہوئے۔",
+      "ar": "وفقاً للروايات المشهورة، وُلد الإمام علي عليه السلام داخل الكعبة المشرفة في مكة المكرمة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_003",
+    "format": "flashcard",
+    "topic": "quran",
+    "prompt": {
+      "en": "What does ‘Bismillahir-Rahmanir-Rahim’ mean?",
+      "ur": "بِسْمِ اللّٰہِ الرَّحْمٰنِ الرَّحِیمِ کا مطلب کیا ہے؟",
+      "ar": "ما معنى «بسم الله الرحمن الرحيم»؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "In the name of God, the All-Merciful, the Ever-Merciful.",
+      "ur": "اللہ کے نام سے جو بے حد مہربان، نہایت رحم والا ہے۔",
+      "ar": "بسم الله، الرحمن الواسع الرحمة، الرحيم الدائم الرحمة."
+    },
+    "explanation": {
+      "en": "It opens almost every surah and is recited before acts of worship.",
+      "ur": "یہ تقریباً ہر سورت کے آغاز میں آتی ہے اور عبادت سے پہلے پڑھی جاتی ہے۔",
+      "ar": "تفتتح به تقريباً كل سورة من سور القرآن الكريم، ويُقال قبل الشروع في أعمال العبادة."
+    },
+    "arabicText": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    "source": null
+  },
+  {
+    "id": "dc_004",
+    "format": "fillInBlank",
+    "topic": "quran",
+    "prompt": {
+      "en": "“Iyyaka naʿbudu wa iyyaka ____.”",
+      "ur": "اِیَّاکَ نَعْبُدُ وَاِیَّاکَ ____۔",
+      "ar": "«إِيَّاكَ نَعْبُدُ وَإِيَّاكَ ____»."
+    },
+    "options": [
+      {
+        "en": "nastaʿin (we seek help)",
+        "ur": "نَسْتَعِینُ (ہم مدد مانگتے ہیں)",
+        "ar": "نَسْتَعِينُ (نطلب العون)"
+      },
+      {
+        "en": "nahmadu (we praise)",
+        "ur": "نَحْمَدُ (ہم تعریف کرتے ہیں)",
+        "ar": "نَحْمَدُ (نحمد)"
+      },
+      {
+        "en": "nadhkuru (we remember)",
+        "ur": "نَذْکُرُ (ہم یاد کرتے ہیں)",
+        "ar": "نَذْكُرُ (نذكر)"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Al-Fatiha 1:5 — ‘You alone we worship, and You alone we ask for help.’",
+      "ur": "سورۃ الفاتحہ ۱:۵ — ''ہم صرف تیری عبادت کرتے ہیں اور صرف تجھ سے مدد مانگتے ہیں۔''",
+      "ar": "الفاتحة ١:٥ — «إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ»."
+    },
+    "arabicText": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+    "source": "Qur'an 1:5"
+  },
+  {
+    "id": "dc_005",
+    "format": "multipleChoice",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Who is the first Imam in Shia Islam?",
+      "ur": "شیعہ اسلام میں پہلے امام کون ہیں؟",
+      "ar": "من هو الإمام الأول في الإسلام الشيعي؟"
+    },
+    "options": [
+      {
+        "en": "Abu Bakr",
+        "ur": "ابوبکر",
+        "ar": "أبو بكر"
+      },
+      {
+        "en": "Imam Ali ibn Abi Talib (a)",
+        "ur": "امام علی ابن ابی طالب علیہ السلام",
+        "ar": "الإمام علي بن أبي طالب عليه السلام"
+      },
+      {
+        "en": "Imam Hasan (a)",
+        "ur": "امام حسن علیہ السلام",
+        "ar": "الإمام الحسن عليه السلام"
+      },
+      {
+        "en": "Imam Husayn (a)",
+        "ur": "امام حسین علیہ السلام",
+        "ar": "الإمام الحسين عليه السلام"
+      }
+    ],
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Imam Ali (a) is the first of the Twelve Imams, appointed successor to the Prophet (s).",
+      "ur": "امام علی علیہ السلام بارہ اماموں میں پہلے ہیں، جنہیں نبی اکرم صلی اللہ علیہ وآلہ وسلم نے اپنا جانشین مقرر فرمایا۔",
+      "ar": "الإمام علي عليه السلام هو أول الأئمة الاثني عشر، وقد نُصِّب خليفةً للنبي صلى الله عليه وآله وسلم."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_006",
+    "format": "trueFalse",
+    "topic": "quran",
+    "prompt": {
+      "en": "Ayat al-Kursi (the Throne Verse) is verse 255 of Surah al-Baqara.",
+      "ur": "آیت الکرسی (تخت کی آیت) سورۃ البقرہ کی آیت نمبر ۲۵۵ ہے۔",
+      "ar": "آية الكرسي هي الآية ٢٥٥ من سورة البقرة."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Ayat al-Kursi is Qur'an 2:255, one of the most beloved and recited verses.",
+      "ur": "آیت الکرسی قرآن ۲:۲۵۵ ہے، جو سب سے محبوب اور زیادہ پڑھی جانے والی آیات میں سے ایک ہے۔",
+      "ar": "آية الكرسي هي الآية ٢٥٥ من سورة البقرة، وهي من أحب الآيات وأكثرها تلاوةً."
+    },
+    "arabicText": "",
+    "source": "Qur'an 2:255"
+  },
+  {
+    "id": "dc_007",
+    "format": "flashcard",
+    "topic": "event",
+    "prompt": {
+      "en": "What happened at Ghadeer Khumm?",
+      "ur": "غدیرِ خم میں کیا ہوا؟",
+      "ar": "ماذا جرى في غدير خُم؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "Returning from the Farewell Pilgrimage, the Prophet (s) declared: ‘Whoever I am his mawla, this Ali is his mawla.’",
+      "ur": "حجۃ الوداع سے واپسی پر نبی اکرم صلی اللہ علیہ وآلہ وسلم نے فرمایا: ''جس کا میں مولا ہوں، یہ علی اس کے مولا ہیں۔''",
+      "ar": "في طريق عودته من حجة الوداع، أعلن النبي صلى الله عليه وآله وسلم: «مَنْ كُنْتُ مَوْلَاهُ فَهَٰذَا عَلِيٌّ مَوْلَاهُ»."
+    },
+    "explanation": {
+      "en": "It took place on 18 Dhul-Hijjah and is commemorated as Eid al-Ghadeer.",
+      "ur": "یہ واقعہ ۱۸ ذی الحجہ کو پیش آیا اور اسے عید الغدیر کے طور پر منایا جاتا ہے۔",
+      "ar": "جرى هذا الحدث في الثامن عشر من ذي الحجة، ويُحتفل به يوم عيد الغدير."
+    },
+    "arabicText": null,
+    "source": "Hadith al-Ghadeer"
+  },
+  {
+    "id": "dc_008",
+    "format": "fillInBlank",
+    "topic": "practice",
+    "prompt": {
+      "en": "On hearing of a loss, Muslims say: “Inna lillahi wa inna ilayhi ____.”",
+      "ur": "کسی نقصان کی خبر سنتے وقت مسلمان کہتے ہیں: اِنَّا لِلّٰہِ وَاِنَّا اِلَیۡہِ ____۔",
+      "ar": "عند سماع خبر المصيبة يقول المسلمون: «إِنَّا لِلَّٰهِ وَإِنَّا إِلَيْهِ ____»."
+    },
+    "options": [
+      {
+        "en": "rajiʿun (we shall return)",
+        "ur": "رَاجِعُونَ (ہم لوٹنے والے ہیں)",
+        "ar": "رَاجِعُونَ (إنا إليه راجعون)"
+      },
+      {
+        "en": "sabirun (the patient)",
+        "ur": "صَابِرُونَ (صبر کرنے والے)",
+        "ar": "صَابِرُونَ (الصابرون)"
+      },
+      {
+        "en": "hamidun (the praising)",
+        "ur": "حَامِدُونَ (تعریف کرنے والے)",
+        "ar": "حَامِدُونَ (الحامدون)"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Qur'an 2:156 — ‘Indeed we belong to God, and to Him we shall return.’",
+      "ur": "قرآن ۲:۱۵۶ — ''بے شک ہم اللہ ہی کے ہیں اور اسی کی طرف لوٹ کر جانے والے ہیں۔''",
+      "ar": "القرآن ٢:١٥٦ — «إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ»."
+    },
+    "arabicText": "إِنَّا لِلَّٰهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
+    "source": "Qur'an 2:156"
+  },
+  {
+    "id": "dc_009",
+    "format": "multipleChoice",
+    "topic": "event",
+    "prompt": {
+      "en": "At which battle did Imam Ali (a) famously open the fortress?",
+      "ur": "کس غزوے میں امام علی علیہ السلام نے مشہور طور پر قلعہ فتح کیا؟",
+      "ar": "في أي غزوة اشتُهر الإمام علي عليه السلام بفتح الحصن؟"
+    },
+    "options": [
+      {
+        "en": "Badr",
+        "ur": "بدر",
+        "ar": "بدر"
+      },
+      {
+        "en": "Uhud",
+        "ur": "احد",
+        "ar": "أُحد"
+      },
+      {
+        "en": "Khaybar",
+        "ur": "خیبر",
+        "ar": "خيبر"
+      },
+      {
+        "en": "Hunayn",
+        "ur": "حنین",
+        "ar": "حُنين"
+      }
+    ],
+    "correctIndex": 2,
+    "answer": null,
+    "explanation": {
+      "en": "At Khaybar the Prophet (s) gave the banner to Ali (a), ‘one whom God and His Messenger love.’",
+      "ur": "خیبر میں نبی اکرم صلی اللہ علیہ وآلہ وسلم نے علم علی علیہ السلام کو عطا فرمایا — ''وہ جسے اللہ اور اس کا رسول محبوب رکھتے ہیں۔''",
+      "ar": "في خيبر أعطى النبي صلى الله عليه وآله وسلم الراية لعلي عليه السلام، قائلاً إنه «يُحبه الله ورسوله»."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_010",
+    "format": "trueFalse",
+    "topic": "event",
+    "prompt": {
+      "en": "Imam Husayn (a) was martyred at Karbala on the 10th of Muharram.",
+      "ur": "امام حسین علیہ السلام کربلا میں دس محرم کو شہید ہوئے۔",
+      "ar": "استُشهد الإمام الحسين عليه السلام في كربلاء في اليوم العاشر من المحرم."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "The Day of Ashura, 10 Muharram 61 AH, marks the martyrdom of Imam Husayn (a) and his companions.",
+      "ur": "یوم عاشورا، ۱۰ محرم ۶۱ ہجری، امام حسین علیہ السلام اور ان کے اصحاب کی شہادت کا دن ہے۔",
+      "ar": "يوم عاشوراء، العاشر من المحرم سنة ٦١ هجرية، يُخلِّد ذكرى استشهاد الإمام الحسين عليه السلام وأصحابه الكرام."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_011",
+    "format": "flashcard",
+    "topic": "dua",
+    "prompt": {
+      "en": "What is Duʿa Kumayl, and when is it traditionally recited?",
+      "ur": "دعائے کمیل کیا ہے اور روایتی طور پر کب پڑھی جاتی ہے؟",
+      "ar": "ما هو دعاء كميل، ومتى يُستحب قراءته؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "A supplication taught by Imam Ali (a) to his companion Kumayl ibn Ziyad; recited on Thursday nights.",
+      "ur": "یہ وہ دعا ہے جو امام علی علیہ السلام نے اپنے صحابی کمیل ابن زیاد کو سکھائی؛ جمعرات کی رات پڑھی جاتی ہے۔",
+      "ar": "دعاء علّمه الإمام علي عليه السلام لصاحبه كُميل بن زياد، ويُقرأ في ليالي الخميس."
+    },
+    "explanation": {
+      "en": "Its themes include seeking forgiveness, reliance on God, and refuge from the Fire.",
+      "ur": "اس کے موضوعات میں توبہ و استغفار، اللہ پر توکل اور آگ سے پناہ طلب کرنا شامل ہیں۔",
+      "ar": "تتضمن موضوعاته طلب المغفرة، والتوكل على الله، والاستعاذة من النار."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_012",
+    "format": "fillInBlank",
+    "topic": "quran",
+    "prompt": {
+      "en": "The opening of al-Fatiha: “Al-hamdu lillahi rabbil-____.”",
+      "ur": "سورۃ الفاتحہ کا آغاز: اَلْحَمْدُ لِلّٰہِ رَبِّ الْ____۔",
+      "ar": "مطلع سورة الفاتحة: «الْحَمْدُ لِلَّهِ رَبِّ الْ____»."
+    },
+    "options": [
+      {
+        "en": "ʿalamin (the worlds)",
+        "ur": "عَالَمِینَ (تمام جہانوں کے)",
+        "ar": "عَالَمِينَ (العالمين)"
+      },
+      {
+        "en": "din (judgement)",
+        "ur": "دِینِ (جزاء کے دن کے)",
+        "ar": "دِّين (الدين)"
+      },
+      {
+        "en": "nas (mankind)",
+        "ur": "نَاسِ (لوگوں کے)",
+        "ar": "نَّاس (الناس)"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Qur'an 1:2 — ‘All praise is for God, Lord of the worlds.’",
+      "ur": "قرآن ۱:۲ — ''تمام تعریفیں اللہ کے لیے ہیں جو تمام جہانوں کا رب ہے۔''",
+      "ar": "القرآن ١:٢ — «الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ»."
+    },
+    "arabicText": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+    "source": "Qur'an 1:2"
+  },
+  {
+    "id": "dc_013",
+    "format": "multipleChoice",
+    "topic": "quran",
+    "prompt": {
+      "en": "Which is the longest surah in the Qur'an?",
+      "ur": "قرآن کی سب سے طویل سورت کون سی ہے؟",
+      "ar": "ما هي أطول سورة في القرآن الكريم؟"
+    },
+    "options": [
+      {
+        "en": "Surah al-Baqara",
+        "ur": "سورۃ البقرہ",
+        "ar": "سورة البقرة"
+      },
+      {
+        "en": "Surah Ya-Sin",
+        "ur": "سورۃ یٰسین",
+        "ar": "سورة يس"
+      },
+      {
+        "en": "Surah al-Kahf",
+        "ur": "سورۃ الکہف",
+        "ar": "سورة الكهف"
+      },
+      {
+        "en": "Surah al-Fatiha",
+        "ur": "سورۃ الفاتحہ",
+        "ar": "سورة الفاتحة"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Surah al-Baqara (The Cow) is the longest surah, with 286 verses.",
+      "ur": "سورۃ البقرہ قرآن کی سب سے طویل سورت ہے جس میں ۲۸۶ آیات ہیں۔",
+      "ar": "سورة البقرة هي أطول سور القرآن الكريم، إذ تحتوي على ٢٨٦ آية."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_014",
+    "format": "trueFalse",
+    "topic": "practice",
+    "prompt": {
+      "en": "Khums is an obligatory payment of one-fifth on certain surplus wealth.",
+      "ur": "خمس بعض اضافی مال پر پانچواں حصہ ادا کرنے کی واجب ذمہ داری ہے۔",
+      "ar": "الخمس واجب شرعي يبلغ خُمس بعض أنواع الأموال الفائضة."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Khums (literally ‘a fifth’) is a distinctive obligation in Shia jurisprudence (Qur'an 8:41).",
+      "ur": "خمس (لفظی معنیٰ ''پانچواں حصہ'') شیعہ فقہ کا ایک مخصوص واجب ہے (قرآن ۸:۴۱)۔",
+      "ar": "الخمس — بمعنى الجزء الخامس حرفياً — فريضة متميزة في الفقه الشيعي (القرآن ٨:٤١)."
+    },
+    "arabicText": "",
+    "source": "Qur'an 8:41"
+  },
+  {
+    "id": "dc_015",
+    "format": "flashcard",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Who are the Ahl al-Kisaʾ (the People of the Cloak)?",
+      "ur": "اہلِ کساء (چادر والے) کون ہیں؟",
+      "ar": "مَن هم أهل الكساء؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "The Prophet Muhammad (s), Imam Ali (a), Lady Fatima (a), Imam Hasan (a) and Imam Husayn (a).",
+      "ur": "حضرت محمد صلی اللہ علیہ وآلہ وسلم، امام علی علیہ السلام، حضرت فاطمہ علیہا السلام، امام حسن علیہ السلام اور امام حسین علیہ السلام۔",
+      "ar": "النبي محمد صلى الله عليه وآله وسلم، والإمام علي عليه السلام، والسيدة فاطمة عليها السلام، والإمام الحسن عليه السلام، والإمام الحسين عليه السلام."
+    },
+    "explanation": {
+      "en": "They were gathered under the cloak when the Verse of Purification (33:33) was revealed.",
+      "ur": "جب آیت تطہیر (۳۳:۳۳) نازل ہوئی تو یہ پانچ ہستیاں چادر کے نیچے جمع تھیں۔",
+      "ar": "اجتمعوا تحت الكساء حين نزلت آية التطهير (٣٣:٣٣)."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_016",
+    "format": "fillInBlank",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "“The twelfth and final Imam is Muhammad al-____.”",
+      "ur": "بارھویں اور آخری امام محمد الـ____ ہیں۔",
+      "ar": "«الإمام الثاني عشر والأخير هو محمد الـ____»."
+    },
+    "options": [
+      {
+        "en": "Mahdi",
+        "ur": "مہدی",
+        "ar": "مهدي"
+      },
+      {
+        "en": "Baqir",
+        "ur": "باقر",
+        "ar": "باقر"
+      },
+      {
+        "en": "Riḍa",
+        "ur": "رضا",
+        "ar": "رضا"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Imam al-Mahdi (a) is the awaited twelfth Imam, currently in occultation (ghayba).",
+      "ur": "امام مہدی علیہ السلام بارھویں اور منتظَر امام ہیں جو اس وقت غیبت میں ہیں۔",
+      "ar": "الإمام المهدي عليه السلام هو الإمام الثاني عشر المنتظر، وهو الآن في الغيبة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_017",
+    "format": "multipleChoice",
+    "topic": "practice",
+    "prompt": {
+      "en": "How many rakʿahs (units) are in the Maghrib prayer?",
+      "ur": "نماز مغرب میں کتنی رکعات ہیں؟",
+      "ar": "كم عدد ركعات صلاة المغرب؟"
+    },
+    "options": [
+      {
+        "en": "Two",
+        "ur": "دو",
+        "ar": "ركعتان"
+      },
+      {
+        "en": "Three",
+        "ur": "تین",
+        "ar": "ثلاث ركعات"
+      },
+      {
+        "en": "Four",
+        "ur": "چار",
+        "ar": "أربع ركعات"
+      },
+      {
+        "en": "Five",
+        "ur": "پانچ",
+        "ar": "خمس ركعات"
+      }
+    ],
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Maghrib is three rakʿahs; Fajr is two, and Dhuhr, Asr and Isha are four each.",
+      "ur": "مغرب تین رکعات کی ہے؛ فجر دو رکعات کی ہے، جبکہ ظہر، عصر اور عشاء چار چار رکعات کی ہیں۔",
+      "ar": "صلاة المغرب ثلاث ركعات؛ والفجر ركعتان؛ والظهر والعصر والعشاء أربع ركعات لكل منها."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_018",
+    "format": "trueFalse",
+    "topic": "quran",
+    "prompt": {
+      "en": "Surah al-Tawba (9) is the only surah that does not begin with Bismillah.",
+      "ur": "سورۃ التوبہ (۹) واحد سورت ہے جو بسم اللہ سے شروع نہیں ہوتی۔",
+      "ar": "سورة التوبة (٩) هي السورة الوحيدة التي لا تبدأ بالبسملة."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Surah al-Tawba uniquely opens without the Bismillah.",
+      "ur": "سورۃ التوبہ منفرد طور پر بسم اللہ کے بغیر شروع ہوتی ہے۔",
+      "ar": "تتميز سورة التوبة بأنها تبدأ دون البسملة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_019",
+    "format": "flashcard",
+    "topic": "event",
+    "prompt": {
+      "en": "What was Laylat al-Mabit?",
+      "ur": "لیلۃ المبیت کیا تھی؟",
+      "ar": "ما هي ليلة المبيت؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "The night Imam Ali (a) slept in the Prophet's bed during the Hijra, risking his life to protect him.",
+      "ur": "وہ رات جب امام علی علیہ السلام نے ہجرت کے موقع پر نبی صلی اللہ علیہ وآلہ وسلم کو بچانے کے لیے اپنی جان خطرے میں ڈال کر آپؐ کے بستر پر سوئے۔",
+      "ar": "هي الليلة التي نام فيها الإمام علي عليه السلام في فراش النبي صلى الله عليه وآله وسلم إبان الهجرة، مُعرِّضاً نفسه للخطر فداءً له."
+    },
+    "explanation": {
+      "en": "Verse 2:207, about one who sells his soul seeking God's pleasure, is linked to this event.",
+      "ur": "آیت ۲:۲۰۷ — جو اپنی جان اللہ کی رضا کے لیے بیچ دیتا ہے — اس واقعے سے منسوب ہے۔",
+      "ar": "الآية ٢:٢٠٧ التي تتحدث عمن يبيع نفسه ابتغاء مرضاة الله تُربط بهذا الحدث العظيم."
+    },
+    "arabicText": null,
+    "source": "Qur'an 2:207"
+  },
+  {
+    "id": "dc_020",
+    "format": "fillInBlank",
+    "topic": "quran",
+    "prompt": {
+      "en": "Surah al-Ikhlas opens: “Qul huwa Allahu ____.”",
+      "ur": "سورۃ الاخلاص کا آغاز: قُلْ ہُوَ اللّٰہُ ____۔",
+      "ar": "تبدأ سورة الإخلاص بـ: «قُلْ هُوَ اللَّهُ ____»."
+    },
+    "options": [
+      {
+        "en": "ahad (One)",
+        "ur": "اَحَدٌ (ایک)",
+        "ar": "أَحَد (الواحد الأحد)"
+      },
+      {
+        "en": "samad (Eternal)",
+        "ur": "صَمَدٌ (بے نیاز)",
+        "ar": "صَمَد (الصمد)"
+      },
+      {
+        "en": "kufuwan (equal)",
+        "ur": "کُفُوًا (ہم سر)",
+        "ar": "كُفُواً (كفواً أحد)"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Qur'an 112:1 — ‘Say: He is God, the One.’",
+      "ur": "قرآن ۱۱۲:۱ — ''کہو: وہ اللہ ایک ہے۔''",
+      "ar": "القرآن ١١٢:١ — «قُلْ هُوَ اللَّهُ أَحَدٌ»."
+    },
+    "arabicText": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+    "source": "Qur'an 112:1"
+  },
+  {
+    "id": "dc_021",
+    "format": "multipleChoice",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Imam al-Riḍa (a), the 8th Imam, is buried in which city?",
+      "ur": "آٹھویں امام، امام رضا علیہ السلام کا روضہ کس شہر میں ہے؟",
+      "ar": "في أي مدينة يقع مرقد الإمام الرضا عليه السلام، الإمام الثامن؟"
+    },
+    "options": [
+      {
+        "en": "Najaf",
+        "ur": "نجف",
+        "ar": "النجف"
+      },
+      {
+        "en": "Karbala",
+        "ur": "کربلا",
+        "ar": "كربلاء"
+      },
+      {
+        "en": "Mashhad",
+        "ur": "مشہد",
+        "ar": "مشهد"
+      },
+      {
+        "en": "Samarra",
+        "ur": "سامرہ",
+        "ar": "سامراء"
+      }
+    ],
+    "correctIndex": 2,
+    "answer": null,
+    "explanation": {
+      "en": "Imam al-Riḍa (a) is buried in Mashhad, Iran — his shrine is a major place of pilgrimage.",
+      "ur": "امام رضا علیہ السلام ایران کے شہر مشہد میں مدفون ہیں — آپؑ کا روضہ ایک عظیم زیارت گاہ ہے۔",
+      "ar": "يرقد الإمام الرضا عليه السلام في مشهد بإيران، وضريحه من أعظم مقاصد الزيارة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_022",
+    "format": "trueFalse",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "There are fourteen Maʿsumin (Infallibles): the Prophet, Lady Fatima, and the Twelve Imams.",
+      "ur": "چودہ معصومین ہیں: نبی اکرمؐ، حضرت فاطمہ علیہا السلام اور بارہ امام علیہم السلام۔",
+      "ar": "المعصومون أربعة عشر: النبي صلى الله عليه وآله وسلم، والسيدة فاطمة عليها السلام، والأئمة الاثنا عشر عليهم السلام."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "The Fourteen Infallibles are the Prophet (s), Fatima al-Zahra (a), and the twelve Imams (a).",
+      "ur": "چودہ معصومین میں نبی اکرم صلی اللہ علیہ وآلہ وسلم، فاطمہ الزہراء علیہا السلام اور بارہ امام علیہم السلام شامل ہیں۔",
+      "ar": "المعصومون الأربعة عشر هم: النبي محمد صلى الله عليه وآله وسلم، وفاطمة الزهراء عليها السلام، والأئمة الاثنا عشر عليهم السلام."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_023",
+    "format": "flashcard",
+    "topic": "quran",
+    "prompt": {
+      "en": "Which surah is recited in every unit of the daily prayer?",
+      "ur": "روزانہ کی نماز کی ہر رکعت میں کون سی سورت پڑھی جاتی ہے؟",
+      "ar": "ما السورة التي تُقرأ في كل ركعة من ركعات الصلاة اليومية؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "Surah al-Fatiha — ‘the Opening.’",
+      "ur": "سورۃ الفاتحہ — ''کھولنے والی۔''",
+      "ar": "سورة الفاتحة — «أم الكتاب»."
+    },
+    "explanation": {
+      "en": "Its recitation is required in each rakʿah, making it the most-recited surah.",
+      "ur": "اسے ہر رکعت میں پڑھنا واجب ہے، جس کی وجہ سے یہ سب سے زیادہ پڑھی جانے والی سورت ہے۔",
+      "ar": "قراءتها واجبة في كل ركعة، مما يجعلها أكثر سور القرآن تلاوةً."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_024",
+    "format": "fillInBlank",
+    "topic": "practice",
+    "prompt": {
+      "en": "“The roots of religion (Usul al-Din) include Tawhid, ʿAdl, Nubuwwah, Imamah and ____.”",
+      "ur": "اصول دین میں توحید، عدل، نبوت، امامت اور ____ شامل ہیں۔",
+      "ar": "«أصول الدين تشمل التوحيد والعدل والنبوة والإمامة و____»."
+    },
+    "options": [
+      {
+        "en": "Maʿad (Resurrection)",
+        "ur": "معاد (قیامت)",
+        "ar": "المعاد (البعث والقيامة)"
+      },
+      {
+        "en": "Khums",
+        "ur": "خمس",
+        "ar": "الخمس"
+      },
+      {
+        "en": "Salah",
+        "ur": "صلاۃ",
+        "ar": "الصلاة"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "The five Usul al-Din are Tawhid, ʿAdl (divine justice), Nubuwwah, Imamah and Maʿad.",
+      "ur": "پانچ اصول دین یہ ہیں: توحید، عدل (الٰہی انصاف)، نبوت، امامت اور معاد۔",
+      "ar": "أصول الدين الخمسة هي: التوحيد، والعدل (العدل الإلهي)، والنبوة، والإمامة، والمعاد."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_025",
+    "format": "multipleChoice",
+    "topic": "event",
+    "prompt": {
+      "en": "On which date is Eid al-Ghadeer commemorated?",
+      "ur": "عید الغدیر کس تاریخ کو منائی جاتی ہے؟",
+      "ar": "في أي تاريخ يُحتفل بعيد الغدير؟"
+    },
+    "options": [
+      {
+        "en": "10 Muharram",
+        "ur": "۱۰ محرم",
+        "ar": "١٠ محرم"
+      },
+      {
+        "en": "18 Dhul-Hijjah",
+        "ur": "۱۸ ذی الحجہ",
+        "ar": "١٨ ذو الحجة"
+      },
+      {
+        "en": "15 Shaʿban",
+        "ur": "۱۵ شعبان",
+        "ar": "١٥ شعبان"
+      },
+      {
+        "en": "27 Rajab",
+        "ur": "۲۷ رجب",
+        "ar": "٢٧ رجب"
+      }
+    ],
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Eid al-Ghadeer falls on 18 Dhul-Hijjah, marking the declaration at Ghadeer Khumm.",
+      "ur": "عید الغدیر ۱۸ ذی الحجہ کو آتی ہے، جو غدیرِ خم کے اعلان کی یاد میں منائی جاتی ہے۔",
+      "ar": "يقع عيد الغدير في الثامن عشر من ذي الحجة، إحياءً لذكرى إعلان النبي صلى الله عليه وآله وسلم في غدير خُم."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_026",
+    "format": "trueFalse",
+    "topic": "quran",
+    "prompt": {
+      "en": "The Qur'an is divided into 30 ajzaʾ (juz).",
+      "ur": "قرآن ۳۰ اجزاء میں تقسیم ہے۔",
+      "ar": "يُقسَّم القرآن الكريم إلى ثلاثين جزءاً."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "The 30 ajzaʾ allow the whole Qur'an to be recited across a month, especially in Ramadan.",
+      "ur": "۳۰ پاروں کی تقسیم ایک ماہ میں پورے قرآن کی تلاوت ممکن بناتی ہے، خاص طور پر رمضان المبارک میں۔",
+      "ar": "تُتيح الأجزاء الثلاثون ختم القرآن الكريم كاملاً خلال شهر، ولا سيما في رمضان المبارك."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_027",
+    "format": "flashcard",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Who is Lady Fatima al-Zahra (a)?",
+      "ur": "حضرت فاطمہ الزہراء علیہا السلام کون ہیں؟",
+      "ar": "من هي السيدة فاطمة الزهراء عليها السلام؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "The daughter of the Prophet (s), wife of Imam Ali (a), and mother of Imam Hasan and Imam Husayn (a).",
+      "ur": "نبی اکرم صلی اللہ علیہ وآلہ وسلم کی صاحبزادی، امام علی علیہ السلام کی زوجہ اور امام حسن و امام حسین علیہما السلام کی والدہ۔",
+      "ar": "ابنة النبي محمد صلى الله عليه وآله وسلم، وزوجة الإمام علي عليه السلام، وأم الإمام الحسن والإمام الحسين عليهما السلام."
+    },
+    "explanation": {
+      "en": "She is honoured as Sayyidat Nisaʾ al-ʿAlamin — leader of the women of the worlds.",
+      "ur": "انہیں سیدۃ نساء العالمین — تمام جہانوں کی خواتین کی سردار — کے اعزاز سے یاد کیا جاتا ہے۔",
+      "ar": "تُكرَّم بلقب سيدة نساء العالمين."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_028",
+    "format": "fillInBlank",
+    "topic": "event",
+    "prompt": {
+      "en": "“The Prophet's migration from Mecca to Medina is called the ____.”",
+      "ur": "نبی اکرمؐ کا مکہ سے مدینہ ہجرت کو ____ کہتے ہیں۔",
+      "ar": "«تُسمى هجرة النبي صلى الله عليه وآله وسلم من مكة إلى المدينة بـ____»."
+    },
+    "options": [
+      {
+        "en": "Hijra",
+        "ur": "ہجرت",
+        "ar": "الهجرة"
+      },
+      {
+        "en": "Miʿraj",
+        "ur": "معراج",
+        "ar": "المعراج"
+      },
+      {
+        "en": "Mubahala",
+        "ur": "مباہلہ",
+        "ar": "المباهلة"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "The Hijra (622 CE) marks the start of the Islamic lunar calendar.",
+      "ur": "ہجرت (۶۲۲ عیسوی) اسلامی قمری تقویم کا نقطہ آغاز ہے۔",
+      "ar": "الهجرة (٦٢٢م) تُمثِّل بداية التقويم الهجري الإسلامي."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_029",
+    "format": "multipleChoice",
+    "topic": "quran",
+    "prompt": {
+      "en": "Which surah of the Qur'an is named after a woman by her name?",
+      "ur": "قرآن کی کون سی سورت کسی خاتون کے نام پر رکھی گئی ہے؟",
+      "ar": "أي سورة من سور القرآن الكريم سُمِّيت باسم امرأة بعينها؟"
+    },
+    "options": [
+      {
+        "en": "Surah Maryam",
+        "ur": "سورۃ مریم",
+        "ar": "سورة مريم"
+      },
+      {
+        "en": "Surah al-Nisaʾ",
+        "ur": "سورۃ النساء",
+        "ar": "سورة النساء"
+      },
+      {
+        "en": "Surah Fatir",
+        "ur": "سورۃ فاطر",
+        "ar": "سورة فاطر"
+      },
+      {
+        "en": "Surah al-Nur",
+        "ur": "سورۃ النور",
+        "ar": "سورة النور"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Surah Maryam (19) is named after Lady Maryam (Mary), mother of Prophet ʿIsa (a).",
+      "ur": "سورۃ مریم (۱۹) حضرت مریم علیہا السلام کے نام پر ہے، جو حضرت عیسیٰ علیہ السلام کی والدہ ہیں۔",
+      "ar": "سورة مريم (١٩) سُمِّيت باسم السيدة مريم، والدة النبي عيسى عليه السلام."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_030",
+    "format": "trueFalse",
+    "topic": "dua",
+    "prompt": {
+      "en": "Al-Sahifa al-Sajjadiyya is a collection of supplications from Imam Zayn al-ʿAbidin (a).",
+      "ur": "الصحیفہ السجادیہ امام زین العابدین علیہ السلام کی دعاؤں کا مجموعہ ہے۔",
+      "ar": "الصحيفة السجادية مجموعة أدعية مأثورة عن الإمام زين العابدين عليه السلام."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Imam Ali ibn al-Husayn, al-Sajjad (a), authored this celebrated book of duʿas.",
+      "ur": "امام علی ابن الحسین، امام سجاد علیہ السلام نے اس مشہور کتاب دعا کو تصنیف فرمایا۔",
+      "ar": "ألَّف الإمام علي بن الحسين السجاد عليه السلام هذا الكتاب المبارك من الأدعية."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_031",
+    "format": "flashcard",
+    "topic": "event",
+    "prompt": {
+      "en": "What was the event of Mubahala?",
+      "ur": "مباہلہ کا واقعہ کیا تھا؟",
+      "ar": "ما هو حدث المباهلة؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "The Prophet (s) brought Ali, Fatima, Hasan and Husayn (a) to invoke God's judgement with the Christians of Najran.",
+      "ur": "نبی اکرم صلی اللہ علیہ وآلہ وسلم علی، فاطمہ، حسن اور حسین علیہم السلام کو ساتھ لے کر نجران کے عیسائیوں سے اللہ کا فیصلہ طلب کرنے نکلے۔",
+      "ar": "أحضر النبي صلى الله عليه وآله وسلم علياً وفاطمة والحسن والحسين عليهم السلام ليدعو مع نصارى نجران ويُنزِل حكم الله بينهم."
+    },
+    "explanation": {
+      "en": "It is referenced in Qur'an 3:61 and shows the Prophet's family as ‘our selves, our sons, our women.’",
+      "ur": "اس کا حوالہ قرآن ۳:۶۱ میں ہے اور یہ نبی کے خاندان کو 'ہماری جانیں، ہمارے بیٹے، ہماری عورتیں' ثابت کرتا ہے۔",
+      "ar": "أشارت إليها الآية ٣:٦١، وتُظهر آل النبي بوصفهم «أنفسنا وأبناءنا ونساءنا»."
+    },
+    "arabicText": null,
+    "source": "Qur'an 3:61"
+  },
+  {
+    "id": "dc_032",
+    "format": "fillInBlank",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "“Imam Husayn (a) is honoured with the title Sayyid al-____.”",
+      "ur": "امام حسین علیہ السلام کو سید الـ____ کے لقب سے یاد کیا جاتا ہے۔",
+      "ar": "«يُكرَّم الإمام الحسين عليه السلام بلقب سيد الـ____»."
+    },
+    "options": [
+      {
+        "en": "Shuhadaʾ (Master of Martyrs)",
+        "ur": "شُہَداء (شہیدوں کے سردار)",
+        "ar": "شهداء (سيد الشهداء)"
+      },
+      {
+        "en": "Awsiyaʾ",
+        "ur": "اوصیاء",
+        "ar": "أوصياء"
+      },
+      {
+        "en": "Anbiyaʾ",
+        "ur": "انبیاء",
+        "ar": "أنبياء"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Imam Husayn (a) is called Sayyid al-Shuhadaʾ for his sacrifice at Karbala.",
+      "ur": "امام حسین علیہ السلام کو کربلا میں قربانی کی وجہ سے سید الشہداء کہا جاتا ہے۔",
+      "ar": "لُقِّب الإمام الحسين عليه السلام بسيد الشهداء لتضحيته العظيمة في كربلاء."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_033",
+    "format": "multipleChoice",
+    "topic": "practice",
+    "prompt": {
+      "en": "How many branches of religion (Furuʿ al-Din) are emphasised in Shia Islam?",
+      "ur": "شیعہ اسلام میں فروع دین کتنی ہیں؟",
+      "ar": "كم عدد فروع الدين المُؤكَّد عليها في الإسلام الشيعي؟"
+    },
+    "options": [
+      {
+        "en": "Five",
+        "ur": "پانچ",
+        "ar": "خمسة"
+      },
+      {
+        "en": "Eight",
+        "ur": "آٹھ",
+        "ar": "ثمانية"
+      },
+      {
+        "en": "Ten",
+        "ur": "دس",
+        "ar": "عشرة"
+      },
+      {
+        "en": "Twelve",
+        "ur": "بارہ",
+        "ar": "اثنا عشر"
+      }
+    ],
+    "correctIndex": 2,
+    "answer": null,
+    "explanation": {
+      "en": "The ten Furuʿ include Salah, Sawm, Zakah, Khums, Hajj, Jihad, enjoining good, forbidding wrong, Tawalla and Tabarra.",
+      "ur": "دس فروع میں نماز، روزہ، زکات، خمس، حج، جہاد، امر بالمعروف، نہی عن المنکر، تولّا اور تبرّا شامل ہیں۔",
+      "ar": "فروع الدين العشرة هي: الصلاة، والصوم، والزكاة، والخمس، والحج، والجهاد، والأمر بالمعروف، والنهي عن المنكر، والتولي، والتبري."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_034",
+    "format": "trueFalse",
+    "topic": "event",
+    "prompt": {
+      "en": "The Islamic (Hijri) calendar begins from the Prophet's migration to Medina.",
+      "ur": "اسلامی (ہجری) تقویم کا آغاز نبی اکرمؐ کی مدینہ ہجرت سے ہوتا ہے۔",
+      "ar": "يبدأ التقويم الهجري الإسلامي من هجرة النبي صلى الله عليه وآله وسلم إلى المدينة."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Year 1 AH corresponds to the year of the Hijra.",
+      "ur": "سال ۱ ہجری ہجرت کے سال سے مطابقت رکھتا ہے۔",
+      "ar": "السنة الأولى هجرية تقابل عام الهجرة النبوية الشريفة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_035",
+    "format": "flashcard",
+    "topic": "dua",
+    "prompt": {
+      "en": "What is Ziyarat ʿAshura?",
+      "ur": "زیارتِ عاشورا کیا ہے؟",
+      "ar": "ما هي زيارة عاشوراء؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "A salutation to Imam Husayn (a) and the martyrs of Karbala, recited especially on and around Ashura.",
+      "ur": "امام حسین علیہ السلام اور شہدائے کربلا کو سلام پیش کرنے کی دعا، جو خاص طور پر عاشورا کے دن اور اس کے آس پاس پڑھی جاتی ہے۔",
+      "ar": "تحية وسلام موجَّهان إلى الإمام الحسين عليه السلام وشهداء كربلاء، تُقرأ تحديداً في يوم عاشوراء وما حوله."
+    },
+    "explanation": {
+      "en": "It expresses loyalty to the Ahlul Bayt and dissociation from their oppressors.",
+      "ur": "یہ اہل بیتؑ کے ساتھ محبت و وفاداری اور ان کے ظالموں سے برأت کا اظہار ہے۔",
+      "ar": "تُعبِّر عن الولاء لأهل البيت عليهم السلام والبراءة من ظالميهم."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_036",
+    "format": "fillInBlank",
+    "topic": "quran",
+    "prompt": {
+      "en": "“Reciting Surah al-Ikhlas is said to equal one-____ of the Qur'an.”",
+      "ur": "سورۃ الاخلاص پڑھنا قرآن کے ایک ____ کے برابر کہا جاتا ہے۔",
+      "ar": "«يُقال إن قراءة سورة الإخلاص تعدل ____ القرآن الكريم»."
+    },
+    "options": [
+      {
+        "en": "third",
+        "ur": "تہائی",
+        "ar": "ثلث"
+      },
+      {
+        "en": "half",
+        "ur": "نصف",
+        "ar": "نصف"
+      },
+      {
+        "en": "quarter",
+        "ur": "چوتھائی",
+        "ar": "ربع"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "A well-known hadith states Surah al-Ikhlas equals a third of the Qur'an in reward.",
+      "ur": "ایک مشہور حدیث کے مطابق سورۃ الاخلاص ثواب میں قرآن کے ایک تہائی کے برابر ہے۔",
+      "ar": "يُفيد حديث مشهور بأن ثواب قراءة سورة الإخلاص يعدل ثلث القرآن الكريم."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_037",
+    "format": "multipleChoice",
+    "topic": "quran",
+    "prompt": {
+      "en": "What was the first revelation given to the Prophet (s)?",
+      "ur": "نبی اکرم صلی اللہ علیہ وآلہ وسلم پر پہلی وحی کیا نازل ہوئی؟",
+      "ar": "ما هي أول آيات نزلت على النبي صلى الله عليه وآله وسلم؟"
+    },
+    "options": [
+      {
+        "en": "Surah al-Fatiha",
+        "ur": "سورۃ الفاتحہ",
+        "ar": "سورة الفاتحة"
+      },
+      {
+        "en": "Surah al-ʿAlaq (‘Iqraʾ’)",
+        "ur": "سورۃ العلق (اقرأ)",
+        "ar": "سورة العلق («اقرأ»)"
+      },
+      {
+        "en": "Surah al-Nas",
+        "ur": "سورۃ الناس",
+        "ar": "سورة الناس"
+      },
+      {
+        "en": "Surah al-Kawthar",
+        "ur": "سورۃ الکوثر",
+        "ar": "سورة الكوثر"
+      }
+    ],
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "The first revealed verses were the opening of Surah al-ʿAlaq (96): ‘Read in the name of your Lord.’",
+      "ur": "سب سے پہلے نازل ہونے والی آیات سورۃ العلق (۹۶) کا آغاز ہے: ''اپنے رب کے نام سے پڑھو۔''",
+      "ar": "أول ما نزل كانت الآيات الأولى من سورة العلق (٩٦): «اقْرَأْ بِاسْمِ رَبِّكَ»."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_038",
+    "format": "trueFalse",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Imam Jaʿfar al-Sadiq (a) is the sixth Imam, after whom the Jaʿfari school is named.",
+      "ur": "امام جعفر صادق علیہ السلام چھٹے امام ہیں جن کے نام پر جعفری مکتبِ فقہ قائم ہے۔",
+      "ar": "الإمام جعفر الصادق عليه السلام هو الإمام السادس، وإليه تُنسب المذهب الجعفري."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "The Jaʿfari school of jurisprudence is named after Imam al-Sadiq (a).",
+      "ur": "مکتبِ فقہ جعفریہ کا نام امام صادق علیہ السلام کے نام پر ہے۔",
+      "ar": "يُنسب المذهب الجعفري في الفقه الإسلامي إلى الإمام جعفر الصادق عليه السلام."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_039",
+    "format": "flashcard",
+    "topic": "practice",
+    "prompt": {
+      "en": "What is Khums?",
+      "ur": "خمس کیا ہے؟",
+      "ar": "ما هو الخمس؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "An obligatory annual payment of one-fifth on certain surplus wealth and gains.",
+      "ur": "بعض اضافی مال اور آمدنی پر سالانہ پانچواں حصہ ادا کرنا واجب ہے۔",
+      "ar": "مقدار واجب سنوي يبلغ خُمس بعض أنواع الأموال الفائضة والأرباح."
+    },
+    "explanation": {
+      "en": "It is divided into the share of the Imam and the share of the sayyids/needy (Qur'an 8:41).",
+      "ur": "اسے حصہ امام اور حصہ سادات/فقراء میں تقسیم کیا جاتا ہے (قرآن ۸:۴۱)۔",
+      "ar": "يُقسَّم إلى سهم الإمام وسهم السادة والمحتاجين (القرآن ٨:٤١)."
+    },
+    "arabicText": null,
+    "source": "Qur'an 8:41"
+  },
+  {
+    "id": "dc_040",
+    "format": "fillInBlank",
+    "topic": "event",
+    "prompt": {
+      "en": "At Ghadeer the Prophet said: “Man kuntu mawlahu fa-hadha ʿAliyyun ____.”",
+      "ur": "غدیر پر نبیؐ نے فرمایا: مَنْ کُنْتُ مَوْلَاہُ فَہٰذَا عَلِیٌّ ____۔",
+      "ar": "قال النبي صلى الله عليه وآله وسلم في الغدير: «مَنْ كُنْتُ مَوْلَاهُ فَهَٰذَا عَلِيٌّ ____»."
+    },
+    "options": [
+      {
+        "en": "mawlah (his mawla)",
+        "ur": "مَوْلَاہُ (اس کے مولا)",
+        "ar": "مَوْلَاهُ (مولاه)"
+      },
+      {
+        "en": "nabiyyuh (his prophet)",
+        "ur": "نَبِیُّہٗ (اس کے نبی)",
+        "ar": "نَبِيُّهُ (نبيه)"
+      },
+      {
+        "en": "akhuh (his brother)",
+        "ur": "اَخُوہُ (اس کے بھائی)",
+        "ar": "أَخُوهُ (أخوه)"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "‘Whoever I am his mawla, this Ali is his mawla’ — the declaration of Ghadeer.",
+      "ur": "''جس کا میں مولا ہوں، یہ علی اس کے مولا ہیں'' — یہ غدیر کا اعلان ہے۔",
+      "ar": "«مَنْ كُنْتُ مَوْلَاهُ فَهَٰذَا عَلِيٌّ مَوْلَاهُ» — إعلان الغدير الخالد."
+    },
+    "arabicText": "مَنْ كُنْتُ مَوْلَاهُ فَهَٰذَا عَلِيٌّ مَوْلَاهُ",
+    "source": "Hadith al-Ghadeer"
+  },
+  {
+    "id": "dc_041",
+    "format": "multipleChoice",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "How many Imams are there in Twelver Shia Islam?",
+      "ur": "اثنا عشری شیعہ اسلام میں کتنے امام ہیں؟",
+      "ar": "كم عدد الأئمة في الإسلام الشيعي الاثني عشري؟"
+    },
+    "options": [
+      {
+        "en": "Seven",
+        "ur": "سات",
+        "ar": "سبعة"
+      },
+      {
+        "en": "Eleven",
+        "ur": "گیارہ",
+        "ar": "أحد عشر"
+      },
+      {
+        "en": "Twelve",
+        "ur": "بارہ",
+        "ar": "اثنا عشر"
+      },
+      {
+        "en": "Fourteen",
+        "ur": "چودہ",
+        "ar": "أربعة عشر"
+      }
+    ],
+    "correctIndex": 2,
+    "answer": null,
+    "explanation": {
+      "en": "There are twelve Imams (a), from Imam Ali to Imam al-Mahdi (a).",
+      "ur": "بارہ امام علیہم السلام ہیں، امام علیؑ سے امام مہدیؑ تک۔",
+      "ar": "الأئمة اثنا عشر عليهم السلام، من الإمام علي إلى الإمام المهدي عليهما السلام."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_042",
+    "format": "trueFalse",
+    "topic": "practice",
+    "prompt": {
+      "en": "Laylat al-Qadr (the Night of Decree) is better than a thousand months.",
+      "ur": "لیلۃ القدر (شبِ قدر) ہزار مہینوں سے بہتر ہے۔",
+      "ar": "ليلة القدر خير من ألف شهر."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Qur'an 97:3 — ‘The Night of Decree is better than a thousand months.’",
+      "ur": "قرآن ۹۷:۳ — ''شبِ قدر ہزار مہینوں سے بہتر ہے۔''",
+      "ar": "القرآن ٩٧:٣ — «لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ»."
+    },
+    "arabicText": "",
+    "source": "Qur'an 97:3"
+  },
+  {
+    "id": "dc_043",
+    "format": "flashcard",
+    "topic": "quran",
+    "prompt": {
+      "en": "What is Ayat al-Kursi?",
+      "ur": "آیت الکرسی کیا ہے؟",
+      "ar": "ما هي آية الكرسي؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "The ‘Verse of the Throne’ (al-Baqara 2:255), describing God's sovereignty, knowledge and preserving of all things.",
+      "ur": "''آیت الکرسی'' (البقرہ ۲:۲۵۵) جس میں اللہ کی حاکمیت، علم اور ہر چیز کی نگہداشت کا بیان ہے۔",
+      "ar": "آية الكرسي (البقرة ٢:٢٥٥)، تصف سيادة الله وعلمه الشامل وحفظه لكل شيء."
+    },
+    "explanation": {
+      "en": "It is among the most recited verses for protection and remembrance.",
+      "ur": "یہ حفاظت اور ذکر کے لیے سب سے زیادہ پڑھی جانے والی آیات میں سے ہے۔",
+      "ar": "تُعدُّ من أكثر الآيات تلاوةً للحفظ والذكر."
+    },
+    "arabicText": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+    "source": "Qur'an 2:255"
+  },
+  {
+    "id": "dc_044",
+    "format": "fillInBlank",
+    "topic": "dua",
+    "prompt": {
+      "en": "“Tasbih al-Zahra (a) is 34 takbir, 33 tahmid, and 33 ____.”",
+      "ur": "تسبیح فاطمہ الزہراء علیہا السلام ۳۴ تکبیر، ۳۳ تحمید اور ۳۳ ____ ہے۔",
+      "ar": "«تسبيح الزهراء عليها السلام هو ٣٤ تكبيرة، و٣٣ تحميدة، و٣٣ ____»."
+    },
+    "options": [
+      {
+        "en": "tasbih (Subhan-Allah)",
+        "ur": "تسبیح (سبحان اللہ)",
+        "ar": "تسبيحة (سبحان الله)"
+      },
+      {
+        "en": "istighfar",
+        "ur": "استغفار",
+        "ar": "استغفار"
+      },
+      {
+        "en": "salawat",
+        "ur": "صلوات",
+        "ar": "صلوات"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Taught by the Prophet (s) to Lady Fatima (a): 34 Allahu akbar, 33 al-hamdu lillah, 33 Subhan-Allah.",
+      "ur": "نبی اکرم صلی اللہ علیہ وآلہ وسلم نے حضرت فاطمہ علیہا السلام کو تعلیم دی: ۳۴ اللہ اکبر، ۳۳ الحمد للہ، ۳۳ سبحان اللہ۔",
+      "ar": "علَّمه النبي صلى الله عليه وآله وسلم للسيدة فاطمة عليها السلام: ٣٤ الله أكبر، و٣٣ الحمد لله، و٣٣ سبحان الله."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_045",
+    "format": "multipleChoice",
+    "topic": "event",
+    "prompt": {
+      "en": "In which year did the tragedy of Karbala take place?",
+      "ur": "کربلا کا سانحہ کس سال پیش آیا؟",
+      "ar": "في أي سنة وقعت مأساة كربلاء؟"
+    },
+    "options": [
+      {
+        "en": "40 AH",
+        "ur": "۴۰ ہجری",
+        "ar": "٤٠ هجرية"
+      },
+      {
+        "en": "50 AH",
+        "ur": "۵۰ ہجری",
+        "ar": "٥٠ هجرية"
+      },
+      {
+        "en": "61 AH",
+        "ur": "۶۱ ہجری",
+        "ar": "٦١ هجرية"
+      },
+      {
+        "en": "72 AH",
+        "ur": "۷۲ ہجری",
+        "ar": "٧٢ هجرية"
+      }
+    ],
+    "correctIndex": 2,
+    "answer": null,
+    "explanation": {
+      "en": "The martyrdom of Imam Husayn (a) at Karbala occurred in 61 AH (680 CE).",
+      "ur": "امام حسین علیہ السلام کی کربلا میں شہادت ۶۱ ہجری (۶۸۰ عیسوی) میں واقع ہوئی۔",
+      "ar": "استشهد الإمام الحسين عليه السلام في كربلاء سنة ٦١ هجرية (٦٨٠م)."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_046",
+    "format": "trueFalse",
+    "topic": "quran",
+    "prompt": {
+      "en": "Surah al-Fatiha consists of seven verses.",
+      "ur": "سورۃ الفاتحہ سات آیات پر مشتمل ہے۔",
+      "ar": "تتكون سورة الفاتحة من سبع آيات."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Al-Fatiha is called Sabʿ al-Mathani — ‘the seven oft-repeated’ verses.",
+      "ur": "الفاتحہ کو سبع المثانی کہا جاتا ہے — ''سات بار بار دہرائی جانے والی آیات۔''",
+      "ar": "تُسمى الفاتحة السبع المثاني — أي الآيات السبع المتكررة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_047",
+    "format": "flashcard",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Who is the twelfth Imam?",
+      "ur": "بارھویں امام کون ہیں؟",
+      "ar": "من هو الإمام الثاني عشر؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "Imam Muhammad al-Mahdi (a), al-Hujja, who is in occultation (ghayba) and is the awaited saviour.",
+      "ur": "امام محمد المہدی علیہ السلام، الحجت، جو غیبت میں ہیں اور منتظَر نجات دہندہ ہیں۔",
+      "ar": "الإمام محمد المهدي عليه السلام، الحجة، الموجود في الغيبة والمنتظر منقذاً للبشرية."
+    },
+    "explanation": {
+      "en": "Shia await his reappearance to fill the earth with justice.",
+      "ur": "شیعہ ان کے ظہور کے منتظر ہیں کہ وہ زمین کو عدل و انصاف سے بھر دیں گے۔",
+      "ar": "ينتظر الشيعة ظهوره ليملأ الأرض عدلاً وقسطاً."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_048",
+    "format": "fillInBlank",
+    "topic": "practice",
+    "prompt": {
+      "en": "“Fasting (Sawm) is obligatory during the month of ____.”",
+      "ur": "روزہ (صوم) ____ کے مہینے میں واجب ہے۔",
+      "ar": "«الصيام (الصوم) فريضة في شهر ____»."
+    },
+    "options": [
+      {
+        "en": "Ramadan",
+        "ur": "رمضان",
+        "ar": "رمضان"
+      },
+      {
+        "en": "Shaʿban",
+        "ur": "شعبان",
+        "ar": "شعبان"
+      },
+      {
+        "en": "Muharram",
+        "ur": "محرم",
+        "ar": "محرم"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Qur'an 2:185 makes fasting the month of Ramadan obligatory.",
+      "ur": "قرآن ۲:۱۸۵ رمضان المبارک کے روزے واجب قرار دیتا ہے۔",
+      "ar": "أوجب القرآن الكريم في الآية ٢:١٨٥ صيام شهر رمضان المبارك."
+    },
+    "arabicText": "",
+    "source": "Qur'an 2:185"
+  },
+  {
+    "id": "dc_049",
+    "format": "multipleChoice",
+    "topic": "dua",
+    "prompt": {
+      "en": "Duʿa al-Iftitah is especially recited during which month?",
+      "ur": "دعائے افتتاح خاص طور پر کس مہینے میں پڑھی جاتی ہے؟",
+      "ar": "في أي شهر يُستحب بصفة خاصة قراءة دعاء الافتتاح؟"
+    },
+    "options": [
+      {
+        "en": "Rajab",
+        "ur": "رجب",
+        "ar": "رجب"
+      },
+      {
+        "en": "Shaʿban",
+        "ur": "شعبان",
+        "ar": "شعبان"
+      },
+      {
+        "en": "Ramadan",
+        "ur": "رمضان",
+        "ar": "رمضان"
+      },
+      {
+        "en": "Muharram",
+        "ur": "محرم",
+        "ar": "محرم"
+      }
+    ],
+    "correctIndex": 2,
+    "answer": null,
+    "explanation": {
+      "en": "Duʿa al-Iftitah is recited on the nights of Ramadan.",
+      "ur": "دعائے افتتاح رمضان کی راتوں میں پڑھی جاتی ہے۔",
+      "ar": "يُقرأ دعاء الافتتاح في ليالي شهر رمضان المبارك."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_050",
+    "format": "trueFalse",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Imam Zayn al-ʿAbidin (a) survived the events of Karbala.",
+      "ur": "امام زین العابدین علیہ السلام کربلا کے واقعات سے زندہ بچے۔",
+      "ar": "نجا الإمام زين العابدين عليه السلام من أحداث كربلاء."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Imam al-Sajjad (a), the fourth Imam, was present at Karbala and continued the Imamate after it.",
+      "ur": "امام سجاد علیہ السلام، چوتھے امام، کربلا میں موجود تھے اور اس کے بعد امامت کا سلسلہ جاری رکھا۔",
+      "ar": "كان الإمام السجاد عليه السلام، الإمام الرابع، حاضراً في كربلاء، واستمر في الإمامة بعدها."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_051",
+    "format": "flashcard",
+    "topic": "event",
+    "prompt": {
+      "en": "Why is the Battle of Khaybar significant?",
+      "ur": "غزوۂ خیبر کی کیا اہمیت ہے؟",
+      "ar": "ما أهمية غزوة خيبر؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "Imam Ali (a) opened its fortress after the Prophet (s) said he would give the banner to one who loves God and His Messenger.",
+      "ur": "نبی اکرم صلی اللہ علیہ وآلہ وسلم کے یہ فرمانے کے بعد کہ علم اس شخص کو دوں گا جو اللہ اور اس کے رسول کو محبوب رکھتا ہے، امام علی علیہ السلام نے قلعہ فتح کیا۔",
+      "ar": "فتح الإمام علي عليه السلام حصنها بعد أن أعلن النبي صلى الله عليه وآله وسلم أنه سيعطي الراية لمن يُحب الله ورسوله ويُحبانه."
+    },
+    "explanation": {
+      "en": "It demonstrated Imam Ali's courage and closeness to the Prophet (s).",
+      "ur": "اس نے امام علی علیہ السلام کی شجاعت اور نبی اکرمؐ سے قربت کو ظاہر کیا۔",
+      "ar": "أظهرت شجاعة الإمام علي عليه السلام وقُربه من النبي صلى الله عليه وآله وسلم."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_052",
+    "format": "fillInBlank",
+    "topic": "quran",
+    "prompt": {
+      "en": "“Ayat al-Tathir (the Verse of Purification) is found in Surah al-____.”",
+      "ur": "آیت تطہیر (پاکیزگی کی آیت) سورۃ الـ____ میں ہے۔",
+      "ar": "«آية التطهير توجد في سورة الـ____»."
+    },
+    "options": [
+      {
+        "en": "Ahzab (33:33)",
+        "ur": "احزاب (۳۳:۳۳)",
+        "ar": "أحزاب (٣٣:٣٣)"
+      },
+      {
+        "en": "Maʾida",
+        "ur": "مائدہ",
+        "ar": "مائدة"
+      },
+      {
+        "en": "Nisaʾ",
+        "ur": "نساء",
+        "ar": "نساء"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Qur'an 33:33 affirms God's wish to purify the Ahlul Bayt (a).",
+      "ur": "قرآن ۳۳:۳۳ اللہ کی مشیت کا اثبات کرتی ہے کہ وہ اہل بیتؑ کو پاک و طاہر رکھنا چاہتا ہے۔",
+      "ar": "القرآن ٣٣:٣٣ يُؤكد إرادة الله في تطهير أهل البيت عليهم السلام."
+    },
+    "arabicText": "",
+    "source": "Qur'an 33:33"
+  },
+  {
+    "id": "dc_053",
+    "format": "multipleChoice",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "In which city is Imam Ali (a) buried?",
+      "ur": "امام علی علیہ السلام کا مزار کس شہر میں ہے؟",
+      "ar": "في أي مدينة يرقد الإمام علي عليه السلام؟"
+    },
+    "options": [
+      {
+        "en": "Najaf",
+        "ur": "نجف",
+        "ar": "النجف"
+      },
+      {
+        "en": "Karbala",
+        "ur": "کربلا",
+        "ar": "كربلاء"
+      },
+      {
+        "en": "Mashhad",
+        "ur": "مشہد",
+        "ar": "مشهد"
+      },
+      {
+        "en": "Medina",
+        "ur": "مدینہ",
+        "ar": "المدينة المنورة"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Imam Ali (a) is buried in Najaf, Iraq.",
+      "ur": "امام علی علیہ السلام عراق کے شہر نجف میں مدفون ہیں۔",
+      "ar": "يرقد الإمام علي عليه السلام في النجف الأشرف بالعراق."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_054",
+    "format": "trueFalse",
+    "topic": "practice",
+    "prompt": {
+      "en": "The Qibla — the direction of prayer — is towards the Kaʿba in Mecca.",
+      "ur": "قبلہ — نماز کی سمت — مکہ مکرمہ میں کعبے کی طرف ہے۔",
+      "ar": "القبلة — أي اتجاه الصلاة — نحو الكعبة المشرفة في مكة المكرمة."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Muslims face the Kaʿba in Mecca during the daily prayers (Qur'an 2:144).",
+      "ur": "مسلمان روزانہ کی نمازوں میں مکہ مکرمہ کے کعبے کی طرف منہ کرتے ہیں (قرآن ۲:۱۴۴)۔",
+      "ar": "يستقبل المسلمون الكعبة المشرفة في مكة المكرمة في صلواتهم اليومية (القرآن ٢:١٤٤)."
+    },
+    "arabicText": "",
+    "source": "Qur'an 2:144"
+  },
+  {
+    "id": "dc_055",
+    "format": "flashcard",
+    "topic": "dua",
+    "prompt": {
+      "en": "What is Duʿa al-Faraj?",
+      "ur": "دعائے فرج کیا ہے؟",
+      "ar": "ما هو دعاء الفرج؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "A supplication asking God to hasten the relief (faraj) and reappearance of Imam al-Mahdi (a).",
+      "ur": "ایک دعا جس میں اللہ سے فرج (گشایش) اور امام مہدی علیہ السلام کے ظہور میں تعجیل کی درخواست کی جاتی ہے۔",
+      "ar": "دعاء يُطلب فيه من الله تعجيل الفرج وظهور الإمام المهدي عليه السلام."
+    },
+    "explanation": {
+      "en": "It expresses hope and longing for the awaited Imam.",
+      "ur": "یہ منتظَر امام کے لیے امید اور شوق و اشتیاق کا اظہار ہے۔",
+      "ar": "يُعبِّر عن الأمل والشوق العميق للإمام المنتظر عليه السلام."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_056",
+    "format": "fillInBlank",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "“Lady Fatima (a) is known by the title al-____ (the Radiant).”",
+      "ur": "حضرت فاطمہ علیہا السلام الـ____ (روشن و تابناک) کے لقب سے مشہور ہیں۔",
+      "ar": "«تُعرف السيدة فاطمة عليها السلام بلقب الـ____ (المضيئة)»."
+    },
+    "options": [
+      {
+        "en": "Zahraʾ",
+        "ur": "زہراء",
+        "ar": "زهراء"
+      },
+      {
+        "en": "Kubra",
+        "ur": "کبریٰ",
+        "ar": "كبرى"
+      },
+      {
+        "en": "Sughra",
+        "ur": "صغریٰ",
+        "ar": "صغرى"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Al-Zahra, ‘the Radiant,’ is among Lady Fatima's most famous titles.",
+      "ur": "الزہراء، ''روشن و تابناک،'' حضرت فاطمہ علیہا السلام کے مشہور ترین القاب میں سے ہے۔",
+      "ar": "الزهراء بمعنى «المضيئة النيِّرة» من أشهر ألقاب السيدة فاطمة عليها السلام."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_057",
+    "format": "multipleChoice",
+    "topic": "quran",
+    "prompt": {
+      "en": "Which surah is recommended on Fridays and recounts the People of the Cave?",
+      "ur": "کون سی سورت جمعہ کو پڑھنا مستحب ہے اور اصحاب کہف کا قصہ بیان کرتی ہے؟",
+      "ar": "أي سورة يُستحب قراءتها يوم الجمعة وتتضمن قصة أصحاب الكهف؟"
+    },
+    "options": [
+      {
+        "en": "Surah al-Kahf",
+        "ur": "سورۃ الکہف",
+        "ar": "سورة الكهف"
+      },
+      {
+        "en": "Surah al-Mulk",
+        "ur": "سورۃ الملک",
+        "ar": "سورة الملك"
+      },
+      {
+        "en": "Surah Ya-Sin",
+        "ur": "سورۃ یٰسین",
+        "ar": "سورة يس"
+      },
+      {
+        "en": "Surah al-Rahman",
+        "ur": "سورۃ الرحمٰن",
+        "ar": "سورة الرحمن"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Surah al-Kahf (18) narrates the People of the Cave and is recommended on Fridays.",
+      "ur": "سورۃ الکہف (۱۸) اصحاب کہف کا قصہ بیان کرتی ہے اور جمعہ کو اسے پڑھنا مستحب ہے۔",
+      "ar": "سورة الكهف (١٨) تقصُّ حكاية أصحاب الكهف، ويُستحب تلاوتها يوم الجمعة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_058",
+    "format": "trueFalse",
+    "topic": "event",
+    "prompt": {
+      "en": "At Mubahala, the Prophet (s) brought Ali, Fatima, Hasan and Husayn (a).",
+      "ur": "مباہلہ میں نبی اکرم صلی اللہ علیہ وآلہ وسلم علی، فاطمہ، حسن اور حسین علیہم السلام کو ساتھ لائے۔",
+      "ar": "في المباهلة أحضر النبي صلى الله عليه وآله وسلم علياً وفاطمة والحسن والحسين عليهم السلام."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "These were ‘our sons, our women, and our selves’ referred to in Qur'an 3:61.",
+      "ur": "یہ ''ہمارے بیٹے، ہماری عورتیں اور ہماری جانیں'' ہیں جن کا ذکر قرآن ۳:۶۱ میں ہے۔",
+      "ar": "هؤلاء هم «أبناءنا ونساءنا وأنفسنا» الوارد ذكرهم في الآية ٣:٦١."
+    },
+    "arabicText": "",
+    "source": "Qur'an 3:61"
+  },
+  {
+    "id": "dc_059",
+    "format": "flashcard",
+    "topic": "practice",
+    "prompt": {
+      "en": "What are the five Usul al-Din (roots of religion) in Shia Islam?",
+      "ur": "شیعہ اسلام میں پانچ اصول دین کون سے ہیں؟",
+      "ar": "ما هي أصول الدين الخمسة في الإسلام الشيعي؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "Tawhid (oneness of God), ʿAdl (divine justice), Nubuwwah (prophethood), Imamah (leadership), and Maʿad (resurrection).",
+      "ur": "توحید (اللہ کی وحدانیت)، عدل (الٰہی انصاف)، نبوت (پیغمبری)، امامت (قیادت) اور معاد (قیامت)۔",
+      "ar": "التوحيد (وحدانية الله)، والعدل (العدل الإلهي)، والنبوة، والإمامة، والمعاد (البعث)."
+    },
+    "explanation": {
+      "en": "They are the foundational beliefs each believer is to understand.",
+      "ur": "یہ بنیادی عقائد ہیں جنہیں ہر مؤمن کو سمجھنا چاہیے۔",
+      "ar": "هي العقائد الأساسية التي يجب على كل مؤمن أن يفهمها ويتحقق منها."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_060",
+    "format": "fillInBlank",
+    "topic": "dua",
+    "prompt": {
+      "en": "“Duʿa Abu Hamza al-Thumali is recited at dawn during ____.”",
+      "ur": "دعائے ابو حمزہ ثمالی ____ کے دوران سحر کے وقت پڑھی جاتی ہے۔",
+      "ar": "«يُقرأ دعاء أبي حمزة الثمالي في وقت السحر خلال ____»."
+    },
+    "options": [
+      {
+        "en": "Ramadan",
+        "ur": "رمضان",
+        "ar": "رمضان"
+      },
+      {
+        "en": "Rajab",
+        "ur": "رجب",
+        "ar": "رجب"
+      },
+      {
+        "en": "Dhul-Hijja",
+        "ur": "ذی الحجہ",
+        "ar": "ذو الحجة"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Imam Zayn al-ʿAbidin (a) used to recite it in the pre-dawn hours of Ramadan.",
+      "ur": "امام زین العابدین علیہ السلام رمضان کی سحری کے اوقات میں اسے پڑھا کرتے تھے۔",
+      "ar": "كان الإمام زين العابدين عليه السلام يقرؤه في ساعات السحر من شهر رمضان المبارك."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_061",
+    "format": "multipleChoice",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Imam Hasan al-ʿAskari (a), the 11th Imam, is buried (with Imam al-Hadi) in which city?",
+      "ur": "گیارھویں امام، امام حسن العسکری علیہ السلام (امام الہادیؑ کے ساتھ) کا مزار کس شہر میں ہے؟",
+      "ar": "في أي مدينة يرقد الإمام الحسن العسكري عليه السلام، الإمام الحادي عشر، (إلى جانب الإمام الهادي عليه السلام)؟"
+    },
+    "options": [
+      {
+        "en": "Samarra",
+        "ur": "سامرہ",
+        "ar": "سامراء"
+      },
+      {
+        "en": "Mashhad",
+        "ur": "مشہد",
+        "ar": "مشهد"
+      },
+      {
+        "en": "Medina",
+        "ur": "مدینہ",
+        "ar": "المدينة المنورة"
+      },
+      {
+        "en": "Kufa",
+        "ur": "کوفہ",
+        "ar": "الكوفة"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "The 10th and 11th Imams (a) are buried in Samarra, Iraq.",
+      "ur": "دسویں اور گیارھویں امام علیہما السلام عراق کے شہر سامرہ میں مدفون ہیں۔",
+      "ar": "يرقد الإمامان العاشر والحادي عشر عليهما السلام في سامراء بالعراق."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_062",
+    "format": "trueFalse",
+    "topic": "quran",
+    "prompt": {
+      "en": "The shortest surah in the Qur'an is Surah al-Kawthar.",
+      "ur": "قرآن کی سب سے چھوٹی سورت سورۃ الکوثر ہے۔",
+      "ar": "أقصر سور القرآن الكريم هي سورة الكوثر."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Surah al-Kawthar (108) is the shortest surah, with three verses.",
+      "ur": "سورۃ الکوثر (۱۰۸) قرآن کی سب سے چھوٹی سورت ہے جس میں صرف تین آیات ہیں۔",
+      "ar": "سورة الكوثر (١٠٨) هي أقصر سور القرآن الكريم، وتتكون من ثلاث آيات."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_063",
+    "format": "flashcard",
+    "topic": "event",
+    "prompt": {
+      "en": "What is ʿAm al-Huzn (the Year of Sorrow)?",
+      "ur": "عام الحزن (غم کا سال) کیا ہے؟",
+      "ar": "ما هو عام الحزن؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "The year in which the Prophet (s) lost both his uncle Abu Talib and his wife Lady Khadija (a).",
+      "ur": "وہ سال جس میں نبی اکرم صلی اللہ علیہ وآلہ وسلم نے اپنے چچا ابوطالب اور اپنی زوجہ حضرت خدیجہ علیہا السلام دونوں کو کھو دیا۔",
+      "ar": "العام الذي فُجع فيه النبي صلى الله عليه وآله وسلم بوفاة عمه أبي طالب وزوجته السيدة خديجة عليها السلام."
+    },
+    "explanation": {
+      "en": "Their deaths removed two great sources of his support in Mecca.",
+      "ur": "ان دونوں کی وفات سے مکہ میں آپؐ کی حمایت کے دو بڑے ستون ختم ہو گئے۔",
+      "ar": "أفضى رحيلهما إلى فقدان النبي صلى الله عليه وآله وسلم ركيزتين عظيمتين من ركائز دعمه في مكة المكرمة."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_064",
+    "format": "fillInBlank",
+    "topic": "practice",
+    "prompt": {
+      "en": "“Zakat al-____ is given at the end of Ramadan, before the Eid prayer.”",
+      "ur": "زکوۃ الـ____ رمضان کے اختتام پر نماز عید سے پہلے ادا کی جاتی ہے۔",
+      "ar": "«زكاة الـ____ تُؤدَّى في نهاية رمضان قبل صلاة العيد»."
+    },
+    "options": [
+      {
+        "en": "Fitr",
+        "ur": "فطر",
+        "ar": "فطر"
+      },
+      {
+        "en": "Mal",
+        "ur": "مال",
+        "ar": "مال"
+      },
+      {
+        "en": "Badan",
+        "ur": "بدن",
+        "ar": "بدن"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Zakat al-Fitr is given on behalf of each person before the Eid al-Fitr prayer.",
+      "ur": "زکوۃ الفطر ہر شخص کی جانب سے نماز عید الفطر سے پہلے ادا کی جاتی ہے۔",
+      "ar": "تُؤدَّى زكاة الفطر عن كل فرد قبل صلاة عيد الفطر المبارك."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_065",
+    "format": "multipleChoice",
+    "topic": "dua",
+    "prompt": {
+      "en": "Al-Sahifa al-Sajjadiyya is sometimes called the Psalms of the Household of ____.",
+      "ur": "الصحیفہ السجادیہ کو کبھی کبھی ____ کے خاندان کی زبور کہا جاتا ہے۔",
+      "ar": "تُعرف الصحيفة السجادية أحياناً بزبور آل ____."
+    },
+    "options": [
+      {
+        "en": "Muhammad",
+        "ur": "محمد صلی اللہ علیہ وآلہ وسلم",
+        "ar": "محمد"
+      },
+      {
+        "en": "Ibrahim",
+        "ur": "ابراہیم علیہ السلام",
+        "ar": "إبراهيم"
+      },
+      {
+        "en": "Dawud",
+        "ur": "داؤد علیہ السلام",
+        "ar": "داوود"
+      },
+      {
+        "en": "Musa",
+        "ur": "موسیٰ علیہ السلام",
+        "ar": "موسى"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "It is known as Zabur Al Muhammad — the Psalms of the Family of Muhammad (s).",
+      "ur": "اسے زبور آل محمد — خاندان محمد صلی اللہ علیہ وآلہ وسلم کی زبور — کے نام سے جانا جاتا ہے۔",
+      "ar": "تُعرف بزبور آل محمد صلى الله عليه وآله وسلم."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_066",
+    "format": "trueFalse",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "Imam al-Mahdi (a) was born and later entered occultation (ghayba).",
+      "ur": "امام مہدی علیہ السلام پیدا ہوئے اور بعد میں غیبت میں چلے گئے۔",
+      "ar": "وُلد الإمام المهدي عليه السلام ثم دخل الغيبة."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Shia belief holds that the twelfth Imam was born and lives in occultation until his reappearance.",
+      "ur": "شیعہ عقیدے کے مطابق بارھویں امام پیدا ہوئے اور اپنے ظہور تک غیبت میں زندگی بسر کر رہے ہیں۔",
+      "ar": "يعتقد الشيعة أن الإمام الثاني عشر وُلد ويعيش في الغيبة إلى حين ظهوره المنتظر."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_067",
+    "format": "flashcard",
+    "topic": "quran",
+    "prompt": {
+      "en": "What does ‘La ilaha illa Allah’ mean?",
+      "ur": "لَا اِلٰہَ اِلَّا اللّٰہُ کا مطلب کیا ہے؟",
+      "ar": "ما معنى «لَا إِلَٰهَ إِلَّا اللَّهُ»؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "‘There is no god but God’ — the testimony of divine oneness (tawhid).",
+      "ur": "''اللہ کے سوا کوئی معبود نہیں'' — توحید الٰہی کی گواہی۔",
+      "ar": "«لا إله إلا الله» — شهادة التوحيد الإلهي."
+    },
+    "explanation": {
+      "en": "It is the first part of the shahada, the foundation of faith.",
+      "ur": "یہ کلمہ شہادت کا پہلا حصہ ہے، جو ایمان کی بنیاد ہے۔",
+      "ar": "هي الشطر الأول من الشهادتين، وتمثل أساس الإيمان."
+    },
+    "arabicText": "لَا إِلَٰهَ إِلَّا اللَّهُ",
+    "source": null
+  },
+  {
+    "id": "dc_068",
+    "format": "fillInBlank",
+    "topic": "event",
+    "prompt": {
+      "en": "“The Conquest of Mecca (Fath ____) occurred in 8 AH.”",
+      "ur": "فتحِ ____ ۸ ہجری میں ہوئی۔",
+      "ar": "«وقع فتح ____ في السنة الثامنة الهجرية»."
+    },
+    "options": [
+      {
+        "en": "Makkah",
+        "ur": "مکہ",
+        "ar": "مكة"
+      },
+      {
+        "en": "Madina",
+        "ur": "مدینہ",
+        "ar": "المدينة"
+      },
+      {
+        "en": "Khaybar",
+        "ur": "خیبر",
+        "ar": "خيبر"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "In 8 AH the Prophet (s) entered Mecca peacefully and cleansed the Kaʿba of idols.",
+      "ur": "۸ ہجری میں نبی اکرم صلی اللہ علیہ وآلہ وسلم امن کے ساتھ مکہ میں داخل ہوئے اور کعبے کو بتوں سے پاک کیا۔",
+      "ar": "في السنة الثامنة الهجرية دخل النبي صلى الله عليه وآله وسلم مكة المكرمة سلماً وطهَّر الكعبة من الأصنام."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_069",
+    "format": "multipleChoice",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "The fifth Imam, father of Imam al-Sadiq (a), is known by which title?",
+      "ur": "پانچویں امام، امام صادق علیہ السلام کے والد، کس لقب سے معروف ہیں؟",
+      "ar": "بأي لقب يُعرف الإمام الخامس، والد الإمام الصادق عليه السلام؟"
+    },
+    "options": [
+      {
+        "en": "al-Baqir",
+        "ur": "الباقر",
+        "ar": "الباقر"
+      },
+      {
+        "en": "al-Kazim",
+        "ur": "الکاظم",
+        "ar": "الكاظم"
+      },
+      {
+        "en": "al-Jawad",
+        "ur": "الجواد",
+        "ar": "الجواد"
+      },
+      {
+        "en": "al-Hadi",
+        "ur": "الہادی",
+        "ar": "الهادي"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Imam Muhammad al-Baqir (a) is the fifth Imam; ‘al-Baqir’ means the one who splits open knowledge.",
+      "ur": "امام محمد الباقر علیہ السلام پانچویں امام ہیں؛ ''الباقر'' کا مطلب ہے علم کو شگافتہ کرنے والا۔",
+      "ar": "الإمام محمد الباقر عليه السلام هو الإمام الخامس؛ ومعنى «الباقر» شاقُّ العلم ومُفصِّله."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_070",
+    "format": "trueFalse",
+    "topic": "dua",
+    "prompt": {
+      "en": "Duʿa al-Nudba is recited on Fridays and Eids, expressing longing for Imam al-Mahdi (a).",
+      "ur": "دعائے ندبہ جمعہ اور عیدوں کو پڑھی جاتی ہے، جس میں امام مہدی علیہ السلام کی یاد میں تڑپ کا اظہار ہوتا ہے۔",
+      "ar": "يُقرأ دعاء الندبة يوم الجمعة وفي أيام الأعياد تعبيراً عن الشوق للإمام المهدي عليه السلام."
+    },
+    "options": null,
+    "correctIndex": 1,
+    "answer": null,
+    "explanation": {
+      "en": "Duʿa al-Nudba voices grief at the absence of the awaited Imam and yearning for his return.",
+      "ur": "دعائے ندبہ منتظَر امام کی غیبت پر غم اور ان کی واپسی کی شدید تمنا کا اظہار کرتی ہے۔",
+      "ar": "يُعبِّر دعاء الندبة عن الحزن لغياب الإمام المنتظر والتوق العميق لعودته."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_071",
+    "format": "flashcard",
+    "topic": "ahlulbayt",
+    "prompt": {
+      "en": "What does ʿisma (infallibility) mean regarding the Fourteen Infallibles?",
+      "ur": "چودہ معصومین کے حوالے سے عصمت (معصومیت) کا کیا مطلب ہے؟",
+      "ar": "ما معنى العصمة في حق المعصومين الأربعة عشر؟"
+    },
+    "options": null,
+    "correctIndex": null,
+    "answer": {
+      "en": "Their God-given protection from sin and error in belief, speech and action.",
+      "ur": "اللہ کی عطا کردہ ایسی حفاظت جو انہیں عقیدے، قول اور عمل میں گناہ اور خطا سے محفوظ رکھتی ہے۔",
+      "ar": "العصمة هي الحفظ الإلهي من الذنب والخطأ في العقيدة والقول والعمل."
+    },
+    "explanation": {
+      "en": "It is why their guidance can be followed with complete trust.",
+      "ur": "یہی وجہ ہے کہ ان کی رہنمائی پر مکمل اعتماد کے ساتھ عمل کیا جا سکتا ہے۔",
+      "ar": "ولهذا يمكن اتباع هدايتهم ببالغ الثقة والاطمئنان."
+    },
+    "arabicText": null,
+    "source": null
+  },
+  {
+    "id": "dc_072",
+    "format": "fillInBlank",
+    "topic": "quran",
+    "prompt": {
+      "en": "“The opening chapter of the Qur'an is Surah al-____.”",
+      "ur": "قرآن کا پہلا باب سورۃ الـ____ ہے۔",
+      "ar": "«السورة الأولى في القرآن الكريم هي سورة الـ____»."
+    },
+    "options": [
+      {
+        "en": "Fatiha",
+        "ur": "فاتحہ",
+        "ar": "فاتحة"
+      },
+      {
+        "en": "Baqara",
+        "ur": "بقرہ",
+        "ar": "بقرة"
+      },
+      {
+        "en": "Nas",
+        "ur": "ناس",
+        "ar": "ناس"
+      }
+    ],
+    "correctIndex": 0,
+    "answer": null,
+    "explanation": {
+      "en": "Al-Fatiha, ‘the Opening,’ is the first surah of the Qur'an.",
+      "ur": "الفاتحہ، ''کھولنے والی،'' قرآن کی پہلی سورت ہے۔",
+      "ar": "الفاتحة، أي «السورة الفاتحة»، هي أولى سور القرآن الكريم."
+    },
+    "arabicText": null,
+    "source": null
+  }
+]

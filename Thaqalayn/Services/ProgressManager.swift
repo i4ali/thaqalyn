@@ -725,12 +725,41 @@ class ProgressManager: ObservableObject {
         switch badge.badgeType {
         case .surahCompletion:
             message = "You've completed Surah \(badge.surahName)! Badge earned: \(badge.badgeType.title)."
+        case .dailyChallengeFirst, .dailyChallengeStreak7, .dailyChallengeStreak30, .dailyChallengeStreak100:
+            message = "Daily Challenge badge earned: \(badge.badgeType.title) — \(badge.badgeType.description)"
         default:
             message = "Badge earned: \(badge.badgeType.title) — \(badge.badgeType.description)"
         }
         Task {
             await NotificationManager.shared.scheduleMilestoneCelebration(milestone: message)
         }
+    }
+
+    /// Award a daily-challenge badge. Idempotent — does nothing if already awarded.
+    func awardDailyChallengeBadge(_ type: BadgeType) {
+        guard !badges.contains(where: { $0.badgeType == type }) else { return }
+
+        let badge = BadgeAward(
+            surahNumber: 0,
+            surahName: type.title,
+            arabicName: type.subtitle,
+            badgeType: type
+        )
+        badges.append(badge)
+
+        // Award sawab bonus (same pattern as Ramadan/Hajj badges)
+        stats.totalSawab += type.sawabValue
+        print("✨ ProgressManager: +\(type.sawabValue) sawab earned from \(type.title)! Total: \(stats.totalSawab)")
+
+        if preferences.celebrationsEnabled {
+            pendingBadge = badge
+        }
+        notifyBadgeAwarded(badge)
+
+        saveProgress()
+        scheduleSync()
+
+        print("🎉 ProgressManager: Daily Challenge badge awarded: \(type.title)")
     }
 
     // MARK: - Today's Verses Count

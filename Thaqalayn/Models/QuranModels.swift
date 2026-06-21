@@ -813,6 +813,10 @@ enum BadgeType: String, Codable {
     case streak100 = "streak_100"
     case ramadanCompletion = "ramadan_completion"
     case hajjCompletion = "hajj_completion"
+    case dailyChallengeFirst = "daily_challenge_first"
+    case dailyChallengeStreak7 = "daily_challenge_streak_7"
+    case dailyChallengeStreak30 = "daily_challenge_streak_30"
+    case dailyChallengeStreak100 = "daily_challenge_streak_100"
 
     var title: String {
         switch self {
@@ -826,6 +830,10 @@ enum BadgeType: String, Codable {
         case .streak100: return "Mukhlis"
         case .ramadanCompletion: return "Ramadan Champion"
         case .hajjCompletion: return "Hajj Champion"
+        case .dailyChallengeFirst: return "First Challenge"
+        case .dailyChallengeStreak7: return "7-Day Challenge Streak"
+        case .dailyChallengeStreak30: return "30-Day Challenge Streak"
+        case .dailyChallengeStreak100: return "100-Day Challenge Streak"
         }
     }
 
@@ -841,6 +849,10 @@ enum BadgeType: String, Codable {
         case .streak100: return "المخلص"
         case .ramadanCompletion: return "بطل رمضان"
         case .hajjCompletion: return "بطل الحج"
+        case .dailyChallengeFirst: return "أول تحدٍّ يومي"
+        case .dailyChallengeStreak7: return "سلسلة التحدي ٧ أيام"
+        case .dailyChallengeStreak30: return "سلسلة التحدي ٣٠ يوماً"
+        case .dailyChallengeStreak100: return "سلسلة التحدي ١٠٠ يوم"
         }
     }
 
@@ -856,6 +868,10 @@ enum BadgeType: String, Codable {
         case .streak100: return "crown.fill"
         case .ramadanCompletion: return "moon.stars.fill"
         case .hajjCompletion: return "building.columns.fill"
+        case .dailyChallengeFirst: return "brain.head.profile"
+        case .dailyChallengeStreak7: return "flame.fill"
+        case .dailyChallengeStreak30: return "bolt.fill"
+        case .dailyChallengeStreak100: return "crown.fill"
         }
     }
 
@@ -871,6 +887,10 @@ enum BadgeType: String, Codable {
         case .streak100: return "purple"
         case .ramadanCompletion: return "gold"
         case .hajjCompletion: return "gold"
+        case .dailyChallengeFirst: return "blue"
+        case .dailyChallengeStreak7: return "orange"
+        case .dailyChallengeStreak30: return "green"
+        case .dailyChallengeStreak100: return "purple"
         }
     }
 
@@ -896,6 +916,14 @@ enum BadgeType: String, Codable {
             return "Completed the entire 30-day Ramadan Journey"
         case .hajjCompletion:
             return "Completed the entire 10-day Dhul-Hijjah Journey"
+        case .dailyChallengeFirst:
+            return "Completed your first Daily Challenge"
+        case .dailyChallengeStreak7:
+            return "Completed Daily Challenges for 7 days in a row"
+        case .dailyChallengeStreak30:
+            return "Completed Daily Challenges for 30 days in a row"
+        case .dailyChallengeStreak100:
+            return "Completed Daily Challenges for 100 days in a row"
         }
     }
 
@@ -911,6 +939,10 @@ enum BadgeType: String, Codable {
         case .streak100: return 10000
         case .ramadanCompletion: return 500
         case .hajjCompletion: return 500
+        case .dailyChallengeFirst: return 50
+        case .dailyChallengeStreak7: return 150
+        case .dailyChallengeStreak30: return 600
+        case .dailyChallengeStreak100: return 2500
         }
     }
 
@@ -926,6 +958,8 @@ enum BadgeType: String, Codable {
             return "Whoever fasts Ramadan out of faith and seeking reward, his previous sins will be forgiven. - Prophet Muhammad (PBUH)"
         case .hajjCompletion:
             return "There are no days in which righteous deeds are more beloved to Allah than these ten days. - Prophet Muhammad (PBUH)"
+        case .dailyChallengeFirst, .dailyChallengeStreak7, .dailyChallengeStreak30, .dailyChallengeStreak100:
+            return "Seek knowledge from the cradle to the grave. - Prophet Muhammad (PBUH)"
         default:
             return nil
         }

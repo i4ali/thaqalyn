@@ -254,6 +254,12 @@ struct PaywallView: View {
                 description: "Test your understanding, earn badges"
             )
             featureRow(
+                icon: "calendar.badge.checkmark",
+                title: "Daily Challenge",
+                pill: nil,
+                description: "A new quiz, flashcard or puzzle daily — build a streak, earn sawab"
+            )
+            featureRow(
                 icon: "speaker.wave.2.fill",
                 title: "Listen Mode",
                 pill: nil,

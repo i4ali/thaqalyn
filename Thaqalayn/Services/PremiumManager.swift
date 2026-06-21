@@ -211,4 +211,9 @@ class PremiumManager: ObservableObject {
         if isFirst { return true }  // First card always free
         return isPremium
     }
+
+    // MARK: - Daily Challenge Access Control
+
+    /// Daily Challenge is a premium feature.
+    func canAccessDailyChallenge() -> Bool { isPremium }
 }
