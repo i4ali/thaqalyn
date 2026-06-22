@@ -53,7 +53,6 @@ struct DailyChallengeCompletion: Codable {
     let challengeId: String
     let format: DailyChallengeFormat
     let wasCorrect: Bool                 // flashcards: true (self-graded "got it") or store user's choice
-    let sawabEarned: Int
     let completedAt: Date
 }
 

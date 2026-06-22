@@ -216,4 +216,9 @@ class PremiumManager: ObservableObject {
 
     /// Daily Challenge is a premium feature.
     func canAccessDailyChallenge() -> Bool { isPremium }
+
+    // MARK: - Daily Crossword Access Control
+
+    /// Daily Crossword is a premium feature.
+    func canAccessDailyCrossword() -> Bool { isPremium }
 }

@@ -33,7 +33,6 @@ struct DailyChallengeView: View {
     @State private var revealed = false             // answer locked + explanation shown
     @State private var flipped = false              // flashcard face
     @State private var flashcardGotIt: Bool? = nil // nil = not yet graded
-    @State private var earnedSawab = 0
     @State private var showCompletion = false
 
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
@@ -457,7 +456,7 @@ struct DailyChallengeView: View {
         Button {
             Haptics.press()
             flashcardGotIt = gotIt
-            earnedSawab = manager.completeFlashcard(challenge: challenge, gotIt: gotIt)
+            manager.completeFlashcard(challenge: challenge, gotIt: gotIt)
             withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
                 showCompletion = true
             }
@@ -556,7 +555,7 @@ struct DailyChallengeView: View {
         default:
             wasCorrect = selectedIndex == challenge.correctIndex
         }
-        earnedSawab = manager.complete(challenge: challenge, wasCorrect: wasCorrect)
+        manager.complete(challenge: challenge, wasCorrect: wasCorrect)
         withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
             showCompletion = true
         }
@@ -568,28 +567,21 @@ struct DailyChallengeView: View {
         VStack(spacing: 28) {
             Spacer()
 
-            // Sawab burst (chrome icon + scaled number)
+            // Completion seal (chrome icon + title)
             VStack(spacing: 14) {
                 ZStack {
                     Circle()
                         .fill(themeManager.accentChip)
                         .frame(width: 96, height: 96)
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 36))
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 40, weight: .bold))
                         .foregroundColor(themeManager.accentBright)
                 }
 
-                Text(DailyChallengeStrings.sawabEarned(earnedSawab, lang))
-                    .font(themeManager.isMidnightEmerald
-                          ? EmType.serif(34, .semiBold)
-                          : .system(size: 32, weight: .bold))
-                    .foregroundColor(themeManager.accentBright)
-                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
-
                 Text(DailyChallengeStrings.completionTitle(lang))
                     .font(themeManager.isMidnightEmerald
-                          ? EmType.serif(22, .medium)
-                          : .system(size: 20, weight: .semibold))
+                          ? EmType.serif(28, .semiBold)
+                          : .system(size: 26, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
             }
 

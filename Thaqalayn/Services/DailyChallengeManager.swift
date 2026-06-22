@@ -2,8 +2,8 @@
 //  DailyChallengeManager.swift
 //  Thaqalayn
 //
-//  Manages daily-challenge completion, streak tracking, sawab awards, and badge
-//  integration into the shared ProgressManager system.
+//  Manages daily-challenge completion and streak tracking. Streak-only:
+//  no reward points and no badges are awarded.
 //
 
 import Foundation
@@ -32,50 +32,25 @@ final class DailyChallengeManager: ObservableObject {
 
     // MARK: - Completion
 
-    /// MC / true-false / fill-in. Returns the sawab earned for the reveal animation.
-    @discardableResult
-    func complete(challenge: DailyChallenge, wasCorrect: Bool) -> Int {
-        guard !isCompletedToday else { return 0 }
-        let sawab = 15 + (wasCorrect ? 10 : 0)
-        recordCompletion(challenge: challenge, wasCorrect: wasCorrect, sawab: sawab)
-        return sawab
+    /// MC / true-false / fill-in.
+    func complete(challenge: DailyChallenge, wasCorrect: Bool) {
+        guard !isCompletedToday else { return }
+        recordCompletion(challenge: challenge, wasCorrect: wasCorrect)
     }
 
     /// Flashcards are self-graded — always counts as done. (gotIt informs nothing scoring-wise in v1.)
-    @discardableResult
-    func completeFlashcard(challenge: DailyChallenge, gotIt: Bool) -> Int {
-        guard !isCompletedToday else { return 0 }
-        let sawab = 15
-        recordCompletion(challenge: challenge, wasCorrect: gotIt, sawab: sawab)
-        return sawab
+    func completeFlashcard(challenge: DailyChallenge, gotIt: Bool) {
+        guard !isCompletedToday else { return }
+        recordCompletion(challenge: challenge, wasCorrect: gotIt)
     }
 
-    private func recordCompletion(challenge: DailyChallenge, wasCorrect: Bool, sawab: Int) {
-        let isFirstEver = lastCompletion == nil
-
+    private func recordCompletion(challenge: DailyChallenge, wasCorrect: Bool) {
         let key = Self.dayKey()
         lastCompletion = DailyChallengeCompletion(
             dayKey: key, challengeId: challenge.id, format: challenge.format,
-            wasCorrect: wasCorrect, sawabEarned: sawab, completedAt: Date()
+            wasCorrect: wasCorrect, completedAt: Date()
         )
         updateStreak(forNewCompletionDayKey: key)
-
-        // Award sawab via the shared ProgressManager
-        ProgressManager.shared.addSawab(sawab, reason: "Daily Challenge")
-
-        // Award badges via ProgressManager (each call is idempotent)
-        if isFirstEver {
-            ProgressManager.shared.awardDailyChallengeBadge(.dailyChallengeFirst)
-        }
-        if streak.currentStreak >= 7 {
-            ProgressManager.shared.awardDailyChallengeBadge(.dailyChallengeStreak7)
-        }
-        if streak.currentStreak >= 30 {
-            ProgressManager.shared.awardDailyChallengeBadge(.dailyChallengeStreak30)
-        }
-        if streak.currentStreak >= 100 {
-            ProgressManager.shared.awardDailyChallengeBadge(.dailyChallengeStreak100)
-        }
 
         save()
     }

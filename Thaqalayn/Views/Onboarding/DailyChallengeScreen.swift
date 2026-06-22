@@ -5,7 +5,7 @@
 //  Onboarding Screen: Daily Challenge Feature Highlight
 //
 //  Loops through three formats (~4–5s each), each self-answering, with a
-//  streak +1 bump and a gold "✨ +N sawab" pill float-up flourish.
+//  🔥 streak +1 bump flourish.
 //  Reduce Motion → static representative state (no loop).
 //
 
@@ -31,8 +31,6 @@ struct DailyChallengeScreen: View {
     // Shared flourish state
     @State private var streakCount: Int = 6
     @State private var showStreakBump = false
-    @State private var showSawabPill = false
-    @State private var sawabAmount: Int = 25
     // Card cross-fade
     @State private var cardOpacity: Double = 1.0
 
@@ -55,7 +53,7 @@ struct DailyChallengeScreen: View {
                     .offset(y: isVisible ? 0 : -20)
                     .animation(Animation.easeOut(duration: 0.6).delay(0.4), value: isVisible)
 
-                Text("A bite-sized challenge every day — multiple-choice, true/false, flip-cards and more. Answer it to build your streak and earn sawab.")
+                Text("A bite-sized challenge every day — multiple-choice, true/false, flip-cards and more. Answer it to build your streak.")
                     .onbBody()
                     .foregroundColor(themeManager.secondaryText)
                     .multilineTextAlignment(.center)
@@ -109,16 +107,13 @@ struct DailyChallengeScreen: View {
         switch demoStep {
         case .multipleChoice:
             DemoMCCard(answered: mcAnswered, streakCount: streakCount,
-                       showStreakBump: showStreakBump, showSawabPill: showSawabPill,
-                       sawabAmount: sawabAmount, reduceMotion: reduceMotion)
+                       showStreakBump: showStreakBump, reduceMotion: reduceMotion)
         case .trueFalse:
             DemoTFCard(answered: tfAnswered, streakCount: streakCount,
-                       showStreakBump: showStreakBump, showSawabPill: showSawabPill,
-                       sawabAmount: sawabAmount)
+                       showStreakBump: showStreakBump)
         case .flashcard:
             DemoFlashCard(flipped: flashFlipped, streakCount: streakCount,
-                          showStreakBump: showStreakBump, showSawabPill: showSawabPill,
-                          sawabAmount: sawabAmount)
+                          showStreakBump: showStreakBump)
         }
     }
 
@@ -147,15 +142,11 @@ struct DailyChallengeScreen: View {
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.65)) {
                     showStreakBump = true
                 }
-                withAnimation(Animation.easeOut(duration: 0.35).delay(0.1)) {
-                    showSawabPill = true
-                }
 
-                // Dismiss pill at 3.0s (relative = 1.8 + 1.2)
+                // Dismiss bump at 3.0s (relative = 1.8 + 1.2)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                     guard loopRunning else { return }
                     withAnimation(.easeIn(duration: 0.25)) {
-                        showSawabPill = false
                         showStreakBump = false
                     }
 
@@ -163,7 +154,6 @@ struct DailyChallengeScreen: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                         guard loopRunning else { return }
                         let next = step.next
-                        sawabAmount = next == .flashcard ? 15 : 25
                         withAnimation(.easeInOut(duration: 0.35)) {
                             cardOpacity = 0
                         }
@@ -191,7 +181,6 @@ struct DailyChallengeScreen: View {
         tfAnswered   = false
         flashFlipped = false
         showStreakBump = false
-        showSawabPill  = false
     }
 
     private func autoAnswer(_ step: DemoChallengeStep) {
@@ -263,37 +252,16 @@ private struct DemoChallengeHeader: View {
     }
 }
 
-// MARK: - Shared Sawab Pill
-
-private struct SawabPill: View {
-    let amount: Int
-
-    var body: some View {
-        Text("✨ +\(amount) sawab")
-            .font(.system(size: 12, weight: .bold))
-            .foregroundColor(ThemeManager.chipGold.fg)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 6)
-            .background(
-                Capsule().fill(ThemeManager.chipGold.bg)
-                    .overlay(Capsule().stroke(ThemeManager.chipGold.fg.opacity(0.25), lineWidth: 1))
-            )
-    }
-}
-
 // MARK: - Multiple-Choice Demo Card
 
 private struct DemoMCCard: View {
     let answered: Bool
     let streakCount: Int
     let showStreakBump: Bool
-    let showSawabPill: Bool
-    let sawabAmount: Int
     let reduceMotion: Bool
 
     // For reduce-motion static state: show as answered
     private var effectiveAnswered: Bool { reduceMotion ? true : answered }
-    private var effectiveShowPill: Bool { reduceMotion ? true : showSawabPill }
     private var effectiveShowBump: Bool { reduceMotion ? false : showStreakBump }
     private var effectiveStreak:  Int   { reduceMotion ? 7    : streakCount }
 
@@ -326,15 +294,6 @@ private struct DemoMCCard: View {
                 }
             }
             .onboardingCard()
-
-            // Sawab pill floats above center-right
-            if effectiveShowPill {
-                SawabPill(amount: sawabAmount)
-                    .offset(y: -18)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing, 24)
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
-            }
         }
     }
 }
@@ -399,8 +358,6 @@ private struct DemoTFCard: View {
     let answered: Bool
     let streakCount: Int
     let showStreakBump: Bool
-    let showSawabPill: Bool
-    let sawabAmount: Int
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -429,14 +386,6 @@ private struct DemoTFCard: View {
                 }
             }
             .onboardingCard()
-
-            if showSawabPill {
-                SawabPill(amount: sawabAmount)
-                    .offset(y: -18)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing, 24)
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
-            }
         }
     }
 }
@@ -487,8 +436,6 @@ private struct DemoFlashCard: View {
     let flipped: Bool
     let streakCount: Int
     let showStreakBump: Bool
-    let showSawabPill: Bool
-    let sawabAmount: Int
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -534,14 +481,6 @@ private struct DemoFlashCard: View {
                 .animation(.spring(response: 0.45, dampingFraction: 0.82), value: flipped)
             }
             .onboardingCard()
-
-            if showSawabPill {
-                SawabPill(amount: sawabAmount)
-                    .offset(y: -18)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing, 24)
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
-            }
         }
     }
 }

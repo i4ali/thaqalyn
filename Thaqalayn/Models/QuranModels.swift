@@ -817,6 +817,10 @@ enum BadgeType: String, Codable {
     case dailyChallengeStreak7 = "daily_challenge_streak_7"
     case dailyChallengeStreak30 = "daily_challenge_streak_30"
     case dailyChallengeStreak100 = "daily_challenge_streak_100"
+    case crosswordFirst = "crossword_first"
+    case crossword7 = "crossword_7"
+    case crossword30 = "crossword_30"
+    case crossword100 = "crossword_100"
 
     var title: String {
         switch self {
@@ -834,6 +838,10 @@ enum BadgeType: String, Codable {
         case .dailyChallengeStreak7: return "7-Day Challenge Streak"
         case .dailyChallengeStreak30: return "30-Day Challenge Streak"
         case .dailyChallengeStreak100: return "100-Day Challenge Streak"
+        case .crosswordFirst: return "First Crossword"
+        case .crossword7: return "Crossword Adept"
+        case .crossword30: return "Crossword Devotee"
+        case .crossword100: return "Crossword Master"
         }
     }
 
@@ -853,6 +861,10 @@ enum BadgeType: String, Codable {
         case .dailyChallengeStreak7: return "سلسلة التحدي ٧ أيام"
         case .dailyChallengeStreak30: return "سلسلة التحدي ٣٠ يوماً"
         case .dailyChallengeStreak100: return "سلسلة التحدي ١٠٠ يوم"
+        case .crosswordFirst: return "أول كلمات متقاطعة"
+        case .crossword7: return "سلسلة الكلمات ٧ أيام"
+        case .crossword30: return "سلسلة الكلمات ٣٠ يوماً"
+        case .crossword100: return "سلسلة الكلمات ١٠٠ يوم"
         }
     }
 
@@ -872,6 +884,10 @@ enum BadgeType: String, Codable {
         case .dailyChallengeStreak7: return "flame.fill"
         case .dailyChallengeStreak30: return "bolt.fill"
         case .dailyChallengeStreak100: return "crown.fill"
+        case .crosswordFirst: return "square.grid.3x3.fill"
+        case .crossword7: return "flame.fill"
+        case .crossword30: return "bolt.fill"
+        case .crossword100: return "crown.fill"
         }
     }
 
@@ -891,6 +907,10 @@ enum BadgeType: String, Codable {
         case .dailyChallengeStreak7: return "orange"
         case .dailyChallengeStreak30: return "green"
         case .dailyChallengeStreak100: return "purple"
+        case .crosswordFirst: return "blue"
+        case .crossword7: return "orange"
+        case .crossword30: return "green"
+        case .crossword100: return "purple"
         }
     }
 
@@ -924,6 +944,14 @@ enum BadgeType: String, Codable {
             return "Completed Daily Challenges for 30 days in a row"
         case .dailyChallengeStreak100:
             return "Completed Daily Challenges for 100 days in a row"
+        case .crosswordFirst:
+            return "Completed your first Daily Crossword"
+        case .crossword7:
+            return "Completed Daily Crosswords for 7 days in a row"
+        case .crossword30:
+            return "Completed Daily Crosswords for 30 days in a row"
+        case .crossword100:
+            return "Completed Daily Crosswords for 100 days in a row"
         }
     }
 
@@ -943,6 +971,10 @@ enum BadgeType: String, Codable {
         case .dailyChallengeStreak7: return 150
         case .dailyChallengeStreak30: return 600
         case .dailyChallengeStreak100: return 2500
+        case .crosswordFirst: return 50
+        case .crossword7: return 150
+        case .crossword30: return 600
+        case .crossword100: return 2500
         }
     }
 

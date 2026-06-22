@@ -1,14 +1,14 @@
 //
-//  DailyChallengeCard.swift
+//  DailyCrosswordCard.swift
 //  Thaqalayn
 //
-//  Today-screen entry card for the Daily Challenge feature.
-//  Styled to match MomentCard (LifeMomentsView) exactly — EmIconChip(46) + serif title +
+//  Today-screen entry card for the Daily Crossword feature.
+//  Styled to match DailyChallengeCard exactly — EmIconChip(46) + serif title +
 //  inline PREMIUM capsule when locked + gold uppercased sub-line + right lock/chevron/checkmark.
 //
-//  Three states driven by PremiumManager + DailyChallengeManager:
+//  Three states driven by PremiumManager + DailyCrosswordManager:
 //    • Locked   — free user → taps to PaywallView
-//    • Pending  — premium, not done today → taps to DailyChallengeView
+//    • Pending  — premium, not done today → taps to DailyCrosswordView
 //    • Done     — premium, completed today → non-tappable
 //
 //  Chrome is fixed-size (no ReadingSettingsManager scaling).
@@ -18,7 +18,7 @@ import SwiftUI
 
 // MARK: - State enum
 
-private enum DailyChallengeCardState {
+private enum DailyCrosswordCardState {
     case locked
     case pending
     case done
@@ -27,9 +27,9 @@ private enum DailyChallengeCardState {
 // MARK: - Public entry point
 
 /// Drop into TodayView/EmeraldTodayView.
-struct DailyChallengeCard: View {
-    @ObservedObject private var manager = DailyChallengeManager.shared
-    @ObservedObject private var provider = DailyChallengeProvider.shared
+struct DailyCrosswordCard: View {
+    @ObservedObject private var manager = DailyCrosswordManager.shared
+    @ObservedObject private var provider = DailyCrosswordProvider.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var premiumManager = PremiumManager.shared
@@ -38,8 +38,8 @@ struct DailyChallengeCard: View {
 
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
-    private var cardState: DailyChallengeCardState {
-        if !premiumManager.canAccessDailyChallenge() { return .locked }
+    private var cardState: DailyCrosswordCardState {
+        if !premiumManager.canAccessDailyCrossword() { return .locked }
         return manager.isCompletedToday ? .done : .pending
     }
 
@@ -52,14 +52,14 @@ struct DailyChallengeCard: View {
             }
         }
         .sheet(isPresented: $showSheet) {
-            DailyChallengeView(challenge: provider.today, onCompleted: {})
+            DailyCrosswordView(puzzle: provider.today, onCompleted: {})
         }
         .sheet(isPresented: $showPaywall) {
             PaywallView()
         }
     }
 
-    // MARK: - Emerald body (mirrors MomentCard.emeraldBody)
+    // MARK: - Emerald body (mirrors DailyChallengeCard.emeraldCard)
 
     @ViewBuilder
     private var emeraldCard: some View {
@@ -89,24 +89,24 @@ struct DailyChallengeCard: View {
         }
     }
 
-    private func emeraldInner(state: DailyChallengeCardState) -> some View {
+    private func emeraldInner(state: DailyCrosswordCardState) -> some View {
         let isLocked = state == .locked
         let isDone = state == .done
 
         return HStack(spacing: 14) {
-            EmIconChip(sfSymbol: "brain.head.profile", size: 46)
+            EmIconChip(sfSymbol: "square.grid.3x3.fill", size: 46)
 
             VStack(alignment: .leading, spacing: 4) {
                 // Title row: serif title + optional inline PREMIUM capsule
                 HStack(spacing: 8) {
-                    Text(DailyChallengeStrings.dailyChallenge(lang))
+                    Text(DailyCrosswordStrings.dailyCrossword(lang))
                         .font(EmType.serif(20, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
 
                     if isLocked {
-                        Text(DailyChallengeStrings.premiumLabel(lang).uppercased())
+                        Text(DailyCrosswordStrings.premiumLabel(lang).uppercased())
                             .font(.system(size: 8.5, weight: .bold)).tracking(1)
                             .foregroundColor(themeManager.accentColor)
                             .padding(.horizontal, 6).padding(.vertical, 2)
@@ -130,24 +130,24 @@ struct DailyChallengeCard: View {
         .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 
-    private func emeraldSubLine(state: DailyChallengeCardState) -> String {
+    private func emeraldSubLine(state: DailyCrosswordCardState) -> String {
         switch state {
         case .locked:
-            return DailyChallengeStrings.lockedTagline(lang).uppercased()
+            return DailyCrosswordStrings.lockedTagline(lang).uppercased()
         case .pending:
-            let teaser = DailyChallengeStrings.teaser(for: provider.today.format, lang)
+            let teaser = DailyCrosswordStrings.teaser(lang)
             if manager.streak.currentStreak > 0 {
                 return "🔥 \(manager.streak.currentStreak) · \(teaser.uppercased())"
             }
             return teaser.uppercased()
         case .done:
-            let base = DailyChallengeStrings.doneForToday(lang).uppercased()
+            let base = DailyCrosswordStrings.doneForToday(lang).uppercased()
             return "\(base) · 🔥 \(manager.streak.currentStreak)"
         }
     }
 
     @ViewBuilder
-    private func emeraldRightIcon(state: DailyChallengeCardState) -> some View {
+    private func emeraldRightIcon(state: DailyCrosswordCardState) -> some View {
         switch state {
         case .locked:
             Image(systemName: "lock.fill")
@@ -164,7 +164,7 @@ struct DailyChallengeCard: View {
         }
     }
 
-    // MARK: - Legacy body (mirrors MomentCard.legacyBody)
+    // MARK: - Legacy body (mirrors DailyChallengeCard.legacyCard)
 
     @ViewBuilder
     private var legacyCard: some View {
@@ -188,7 +188,7 @@ struct DailyChallengeCard: View {
         }
     }
 
-    private func legacyInner(state: DailyChallengeCardState) -> some View {
+    private func legacyInner(state: DailyCrosswordCardState) -> some View {
         let isLocked = state == .locked
         let isDone = state == .done
 
@@ -199,7 +199,7 @@ struct DailyChallengeCard: View {
                     .fill(themeManager.accentGradient)
                     .frame(width: 50, height: 50)
                     .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                Image(systemName: "brain.head.profile")
+                Image(systemName: "square.grid.3x3.fill")
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(.white)
             }
@@ -207,14 +207,14 @@ struct DailyChallengeCard: View {
             // Text stack
             VStack(alignment: .leading, spacing: 4) {
                 HStack(spacing: 8) {
-                    Text(DailyChallengeStrings.dailyChallenge(lang))
+                    Text(DailyCrosswordStrings.dailyCrossword(lang))
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
 
                     if isLocked {
-                        Text(DailyChallengeStrings.premiumLabel(lang))
+                        Text(DailyCrosswordStrings.premiumLabel(lang))
                             .font(.system(size: 11, weight: .bold))
                             .foregroundColor(.white)
                             .padding(.horizontal, 8).padding(.vertical, 4)
@@ -250,24 +250,24 @@ struct DailyChallengeCard: View {
         .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 
-    private func legacySubLine(state: DailyChallengeCardState) -> String {
+    private func legacySubLine(state: DailyCrosswordCardState) -> String {
         switch state {
         case .locked:
-            return DailyChallengeStrings.lockedTagline(lang)
+            return DailyCrosswordStrings.lockedTagline(lang)
         case .pending:
-            let teaser = DailyChallengeStrings.teaser(for: provider.today.format, lang)
+            let teaser = DailyCrosswordStrings.teaser(lang)
             if manager.streak.currentStreak > 0 {
                 return "🔥 \(manager.streak.currentStreak) · \(teaser)"
             }
             return teaser
         case .done:
-            let base = DailyChallengeStrings.doneForToday(lang)
+            let base = DailyCrosswordStrings.doneForToday(lang)
             return "\(base) · 🔥 \(manager.streak.currentStreak)"
         }
     }
 
     @ViewBuilder
-    private func legacyRightIcon(state: DailyChallengeCardState) -> some View {
+    private func legacyRightIcon(state: DailyCrosswordCardState) -> some View {
         switch state {
         case .locked:
             Image(systemName: "lock.fill")
@@ -291,45 +291,45 @@ struct DailyChallengeCard: View {
 
 // MARK: Locked (free) previews
 
-#Preview("Card — LOCKED, English, Emerald") {
+#Preview("Crossword Card — LOCKED, English, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
     let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     let _ = PremiumManager.shared.isPremium = false
     return VStack(spacing: 16) {
-        DailyChallengeCard()
+        DailyCrosswordCard()
     }
     .padding(20)
     .background(Color.black)
 }
 
-#Preview("Card — LOCKED, English, Light") {
+#Preview("Crossword Card — LOCKED, English, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
     let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     let _ = PremiumManager.shared.isPremium = false
     return VStack(spacing: 16) {
-        DailyChallengeCard()
+        DailyCrosswordCard()
     }
     .padding(20)
     .background(Color(red: 0.97, green: 0.95, blue: 0.92))
 }
 
-#Preview("Card — LOCKED, Urdu, Emerald") {
+#Preview("Crossword Card — LOCKED, Urdu, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
     let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
     let _ = PremiumManager.shared.isPremium = false
     return VStack(spacing: 16) {
-        DailyChallengeCard()
+        DailyCrosswordCard()
     }
     .padding(20)
     .background(Color.black)
 }
 
-#Preview("Card — LOCKED, Urdu, Light") {
+#Preview("Crossword Card — LOCKED, Urdu, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
     let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
     let _ = PremiumManager.shared.isPremium = false
     return VStack(spacing: 16) {
-        DailyChallengeCard()
+        DailyCrosswordCard()
     }
     .padding(20)
     .background(Color(red: 0.97, green: 0.95, blue: 0.92))
@@ -337,45 +337,45 @@ struct DailyChallengeCard: View {
 
 // MARK: Pending (premium, not done) previews
 
-#Preview("Card — Pending, English, Emerald") {
+#Preview("Crossword Card — Pending, English, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
     let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
-        DailyChallengeCard()
+        DailyCrosswordCard()
     }
     .padding(20)
     .background(Color.black)
 }
 
-#Preview("Card — Pending, English, Light") {
+#Preview("Crossword Card — Pending, English, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
     let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
-        DailyChallengeCard()
+        DailyCrosswordCard()
     }
     .padding(20)
     .background(Color(red: 0.97, green: 0.95, blue: 0.92))
 }
 
-#Preview("Card — Pending, Urdu, Emerald") {
+#Preview("Crossword Card — Pending, Urdu, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
     let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
     let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
-        DailyChallengeCard()
+        DailyCrosswordCard()
     }
     .padding(20)
     .background(Color.black)
 }
 
-#Preview("Card — Pending, Urdu, Light") {
+#Preview("Crossword Card — Pending, Urdu, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
     let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
     let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
-        DailyChallengeCard()
+        DailyCrosswordCard()
     }
     .padding(20)
     .background(Color(red: 0.97, green: 0.95, blue: 0.92))
@@ -383,12 +383,12 @@ struct DailyChallengeCard: View {
 
 // MARK: Done (premium, completed) previews
 //
-// DailyChallengeManager.isCompletedToday is driven by UserDefaults and cannot be directly
+// DailyCrosswordManager.isCompletedToday is driven by UserDefaults and cannot be directly
 // overridden from a preview without running the full completion flow. We render the done
 // visual directly here using the same layout helpers, mirroring the pattern used in the
-// previous implementation for faithful preview coverage.
+// DailyChallengeCard previews for faithful preview coverage.
 
-private struct _DebugDoneCard: View {
+private struct _DebugCrosswordDoneCard: View {
     let theme: ThemeVariant
     let language: CommentaryLanguage
 
@@ -410,15 +410,15 @@ private struct _DebugDoneCard: View {
     private var emeraldDone: some View {
         EmCard {
             HStack(spacing: 14) {
-                EmIconChip(sfSymbol: "brain.head.profile", size: 46)
+                EmIconChip(sfSymbol: "square.grid.3x3.fill", size: 46)
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 8) {
-                        Text(DailyChallengeStrings.dailyChallenge(lang))
+                        Text(DailyCrosswordStrings.dailyCrossword(lang))
                             .font(EmType.serif(20, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(2).multilineTextAlignment(.leading)
                     }
-                    let subLine = "\(DailyChallengeStrings.doneForToday(lang).uppercased()) · 🔥 5"
+                    let subLine = "\(DailyCrosswordStrings.doneForToday(lang).uppercased()) · 🔥 5"
                     Text(subLine)
                         .font(.system(size: 11, weight: .bold)).tracking(1)
                         .foregroundColor(.green)
@@ -438,14 +438,14 @@ private struct _DebugDoneCard: View {
             ZStack {
                 Circle().fill(themeManager.accentGradient).frame(width: 50, height: 50)
                     .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                Image(systemName: "brain.head.profile")
+                Image(systemName: "square.grid.3x3.fill")
                     .font(.system(size: 20, weight: .semibold)).foregroundColor(.white)
             }
             VStack(alignment: .leading, spacing: 4) {
-                Text(DailyChallengeStrings.dailyChallenge(lang))
+                Text(DailyCrosswordStrings.dailyCrossword(lang))
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(themeManager.primaryText).lineLimit(2)
-                Text("\(DailyChallengeStrings.doneForToday(lang)) · 🔥 5")
+                Text("\(DailyCrosswordStrings.doneForToday(lang)) · 🔥 5")
                     .font(.system(size: 14, weight: .medium)).foregroundColor(.green)
             }
             Spacer()
@@ -465,26 +465,26 @@ private struct _DebugDoneCard: View {
     }
 }
 
-#Preview("Card — Done, English, Emerald") {
-    _DebugDoneCard(theme: .nightSanctuary, language: .english)
+#Preview("Crossword Card — Done, English, Emerald") {
+    _DebugCrosswordDoneCard(theme: .nightSanctuary, language: .english)
         .padding(20)
         .background(Color.black)
 }
 
-#Preview("Card — Done, English, Light") {
-    _DebugDoneCard(theme: .warmInviting, language: .english)
+#Preview("Crossword Card — Done, English, Light") {
+    _DebugCrosswordDoneCard(theme: .warmInviting, language: .english)
         .padding(20)
         .background(Color(red: 0.97, green: 0.95, blue: 0.92))
 }
 
-#Preview("Card — Done, Urdu, Emerald") {
-    _DebugDoneCard(theme: .nightSanctuary, language: .urdu)
+#Preview("Crossword Card — Done, Urdu, Emerald") {
+    _DebugCrosswordDoneCard(theme: .nightSanctuary, language: .urdu)
         .padding(20)
         .background(Color.black)
 }
 
-#Preview("Card — Done, Urdu, Light") {
-    _DebugDoneCard(theme: .warmInviting, language: .urdu)
+#Preview("Crossword Card — Done, Urdu, Light") {
+    _DebugCrosswordDoneCard(theme: .warmInviting, language: .urdu)
         .padding(20)
         .background(Color(red: 0.97, green: 0.95, blue: 0.92))
 }

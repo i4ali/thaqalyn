@@ -108,16 +108,7 @@ enum DailyChallengeStrings {
         }
     }
 
-    // MARK: - Streak / sawab
-
-    /// "+N sawab" label for the completion reveal.
-    static func sawabEarned(_ count: Int, _ l: CommentaryLanguage) -> String {
-        switch l {
-        case .arabic: return "+\(count) ثواب"
-        case .urdu:   return "+\(count) ثواب"
-        default:      return "+\(count) sawab"
-        }
-    }
+    // MARK: - Streak
 
     /// "N day(s)" with proper singular/plural in each language.
     static func dayUnit(_ count: Int, _ l: CommentaryLanguage) -> String {

@@ -127,6 +127,8 @@ struct TodayView: View {
             if phase == .active {
                 dailyMessage.refreshIfDayChanged()
                 DailyChallengeProvider.shared.refreshIfDayChanged()
+                DailyCrosswordProvider.shared.refreshIfDayChanged()
+                DailyCrosswordManager.shared.refreshForToday()
             }
         }
     }
@@ -166,6 +168,9 @@ struct TodayView: View {
                 .padding(.horizontal, 18)
 
                 DailyChallengeCard()
+                    .padding(.horizontal, 18)
+
+                DailyCrosswordCard()
                     .padding(.horizontal, 18)
 
                 if let dua = duasManager.duaOfTheDay() {
@@ -745,6 +750,7 @@ private struct EmeraldTodayView: View {
                     onBegin: openSurah1
                 )
                 DailyChallengeCard()
+                DailyCrosswordCard()
                 if let dua = duasManager.duaOfTheDay() {
                     EmDuaOfTheDayCard(dua: dua)
                 }

@@ -36,6 +36,22 @@ class ProgressManager: ObservableObject {
     private let statsKey = "progressStats"
     private let preferencesKey = "progressPreferences"
 
+    // MARK: - Retired Badges
+    //
+    // Daily Challenge & Daily Crossword are now streak-only: they no longer award badges.
+    // Their BadgeType cases are kept (decode safety for stored/synced BadgeAward data), but
+    // any badge of these types is filtered out wherever badges are loaded so previously-earned
+    // ones disappear from the UI and none are ever shown again.
+    static let retiredBadgeTypes: Set<BadgeType> = [
+        .dailyChallengeFirst, .dailyChallengeStreak7, .dailyChallengeStreak30, .dailyChallengeStreak100,
+        .crosswordFirst, .crossword7, .crossword30, .crossword100
+    ]
+
+    /// Drop any retired (challenge/crossword) badges from a badge array.
+    private static func filteringRetiredBadges(_ badges: [BadgeAward]) -> [BadgeAward] {
+        badges.filter { !retiredBadgeTypes.contains($0.badgeType) }
+    }
+
     // MARK: - Sync Properties
 
     private var supabaseService = SupabaseService.shared
@@ -68,10 +84,15 @@ class ProgressManager: ObservableObject {
             self.streak = decoded
         }
 
-        // Load badges
+        // Load badges (drop retired challenge/crossword badges, persisting the cleaned array)
         if let data = UserDefaults.standard.data(forKey: badgesKey),
            let decoded = try? JSONDecoder().decode([BadgeAward].self, from: data) {
-            self.badges = decoded
+            let cleaned = Self.filteringRetiredBadges(decoded)
+            self.badges = cleaned
+            if cleaned.count != decoded.count,
+               let encoded = try? JSONEncoder().encode(cleaned) {
+                UserDefaults.standard.set(encoded, forKey: badgesKey)
+            }
         }
 
         // Load stats
@@ -333,7 +354,8 @@ class ProgressManager: ObservableObject {
     private func applyRemoteData(_ remoteData: ReadingProgressData) {
         verseProgress = remoteData.verseProgress
         streak = remoteData.readingStreak
-        badges = remoteData.badges
+        // Drop retired challenge/crossword badges that may exist in synced data
+        badges = Self.filteringRetiredBadges(remoteData.badges)
         stats = remoteData.stats
         preferences = remoteData.preferences
         saveProgress()
@@ -733,33 +755,6 @@ class ProgressManager: ObservableObject {
         Task {
             await NotificationManager.shared.scheduleMilestoneCelebration(milestone: message)
         }
-    }
-
-    /// Award a daily-challenge badge. Idempotent — does nothing if already awarded.
-    func awardDailyChallengeBadge(_ type: BadgeType) {
-        guard !badges.contains(where: { $0.badgeType == type }) else { return }
-
-        let badge = BadgeAward(
-            surahNumber: 0,
-            surahName: type.title,
-            arabicName: type.subtitle,
-            badgeType: type
-        )
-        badges.append(badge)
-
-        // Award sawab bonus (same pattern as Ramadan/Hajj badges)
-        stats.totalSawab += type.sawabValue
-        print("✨ ProgressManager: +\(type.sawabValue) sawab earned from \(type.title)! Total: \(stats.totalSawab)")
-
-        if preferences.celebrationsEnabled {
-            pendingBadge = badge
-        }
-        notifyBadgeAwarded(badge)
-
-        saveProgress()
-        scheduleSync()
-
-        print("🎉 ProgressManager: Daily Challenge badge awarded: \(type.title)")
     }
 
     // MARK: - Today's Verses Count

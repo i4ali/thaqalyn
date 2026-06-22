@@ -257,7 +257,13 @@ struct PaywallView: View {
                 icon: "calendar.badge.checkmark",
                 title: "Daily Challenge",
                 pill: nil,
-                description: "A new quiz, flashcard or puzzle daily — build a streak, earn sawab"
+                description: "A new quiz, flashcard or puzzle daily — build a streak"
+            )
+            featureRow(
+                icon: "square.grid.3x3.fill",
+                title: "Daily Crossword",
+                pill: nil,
+                description: "Every clue teaches you something real — learn your deen, not just pass time"
             )
             featureRow(
                 icon: "speaker.wave.2.fill",
@@ -287,8 +293,9 @@ struct PaywallView: View {
                 Text(description)
                     .font(.system(size: 12, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .minimumScaleFactor(0.85)
             }
 
             Spacer(minLength: 0)
