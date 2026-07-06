@@ -203,6 +203,7 @@ struct FatimiyyaDayDetailView: View {
                         .lineSpacing(8 * readingSettings.scale)
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
+                    DuaListenButton(arabic: day.dua.arabic)
                     Text(day.dua.transliteration)
                         .font(EmType.serifItalic(16 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
@@ -378,6 +379,8 @@ struct FatimiyyaDuaSection: View {
                 .lineSpacing(8 * readingSettings.scale)
                 .multilineTextAlignment(.trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
+
+            DuaListenButton(arabic: dua.arabic)
 
             // Transliteration
             Text(dua.transliteration)

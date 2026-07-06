@@ -1,17 +1,18 @@
 //
-//  MuharramDayDetailView.swift
+//  ArbaeenDayDetailView.swift
 //  Thaqalayn
 //
-//  Detail view for a single day of the First Ten Days of Muharram Journey
-//  Shows theme, dua/ziyarat, verses, reflection, and observance button.
-//  Muharram is a somber azadari (mourning) observance — no celebratory treatment.
+//  Detail view for a single station of the Arbaeen Journey ("The Return").
+//  Shows theme, dua/ziyarat (with an optional "read full ziyarat" disclosure on the
+//  Station 8 finale), verses, tafsir focus, reflection, and the observance button.
+//  Arbaeen is a somber azadari (mourning) observance — no celebratory treatment.
 //
 
 import SwiftUI
 
-struct MuharramDayDetailView: View {
-    let day: MuharramDay
-    @StateObject private var journeyManager = MuharramJourneyManager.shared
+struct ArbaeenDayDetailView: View {
+    let day: ArbaeenDay
+    @StateObject private var journeyManager = ArbaeenJourneyManager.shared
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
@@ -22,6 +23,7 @@ struct MuharramDayDetailView: View {
     private var isRTL: Bool { lang.isRTL }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
+    @State private var showFullZiyarat = false
 
     var isObserved: Bool {
         journeyManager.isDayObserved(day.dayNumber)
@@ -37,11 +39,11 @@ struct MuharramDayDetailView: View {
                     emeraldSections
                 } else {
                 VStack(spacing: 24) {
-                    // Day header
-                    MuharramDayHeader(day: day, isObserved: isObserved)
+                    // Station header
+                    ArbaeenStationHeader(day: day, isObserved: isObserved)
 
                     // Dua / Ziyarat section
-                    MuharramDuaSection(dua: day.dua)
+                    ArbaeenDuaSection(dua: day.dua)
 
                     // Verses section
                     VStack(alignment: .leading, spacing: 16) {
@@ -59,7 +61,7 @@ struct MuharramDayDetailView: View {
                         .padding(.horizontal, 20)
 
                         ForEach(day.verses) { verse in
-                            MuharramVerseCard(
+                            ArbaeenVerseCard(
                                 verse: verse,
                                 onNavigate: {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
@@ -135,7 +137,7 @@ struct MuharramDayDetailView: View {
                     .padding(.horizontal, 20)
 
                     // Mark as observed button
-                    MuharramObserveButton(
+                    ArbaeenObserveButton(
                         isObserved: isObserved,
                         onToggle: {
                             if isObserved {
@@ -176,13 +178,19 @@ struct MuharramDayDetailView: View {
                 }
             }
         }
+        .sheet(isPresented: $showFullZiyarat) {
+            if let full = day.dua.fullArabic {
+                ArbaeenFullZiyaratSheet(
+                    arabic: full,
+                    english: day.dua.fullEnglish,
+                    source: day.dua.localizedSource(lang)
+                )
+            }
+        }
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura(glowOpacity: 0.36)
         .hideTabBarInEmerald()
     }
-
-    // Day 10 is Ashura — the grief summit; it receives a dignified, somber emphasis.
-    private var isAshura: Bool { day.dayNumber == 10 }
 
     @ViewBuilder private var emeraldSections: some View {
         VStack(spacing: 20) {
@@ -193,9 +201,9 @@ struct MuharramDayDetailView: View {
                 themeArabic: day.themeArabic,
                 statusLabel: isObserved ? JourneyStrings.observed(lang) : nil,
                 statusTint: themeManager.secondaryText,
-                emphasized: isAshura,
-                badgeSymbol: isAshura ? "moon.fill" : nil,
-                badgeText: isAshura ? JourneyStrings.ashura(lang) : nil
+                emphasized: false,
+                badgeSymbol: nil,
+                badgeText: nil
             )
 
             EmDetailCard(icon: "hands.sparkles", label: JourneyStrings.duaZiyarat(lang)) {
@@ -223,6 +231,21 @@ struct MuharramDayDetailView: View {
                             .foregroundColor(themeManager.tertiaryText)
                             .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                     }
+                    if day.dua.fullArabic != nil {
+                        Button {
+                            showFullZiyarat = true
+                        } label: {
+                            HStack(spacing: 4) {
+                                Text(JourneyStrings.readFullZiyarat(lang))
+                                    .font(.system(size: 13, weight: .semibold))
+                                Image(systemName: "arrow.right")
+                                    .font(.system(size: 11, weight: .semibold))
+                            }
+                            .foregroundColor(themeManager.accentColor)
+                        }
+                        .buttonStyle(EmPressStyle())
+                        .padding(.top, 2)
+                    }
                 }
             }
 
@@ -231,7 +254,7 @@ struct MuharramDayDetailView: View {
                     .padding(.horizontal, 20)
                     .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
                 ForEach(day.verses) { verse in
-                    MuharramVerseCard(
+                    ArbaeenVerseCard(
                         verse: verse,
                         onNavigate: {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
@@ -283,28 +306,82 @@ struct MuharramDayDetailView: View {
     }
 }
 
-struct MuharramDayHeader: View {
-    let day: MuharramDay
+/// The full Ziyarat of Arbaeen, shown in a sheet from the Station 8 "read full" link.
+struct ArbaeenFullZiyaratSheet: View {
+    let arabic: String
+    let english: String?
+    let source: String?
+    @Environment(\.dismiss) private var dismiss
+    @StateObject private var themeManager = ThemeManager.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+    private var isRTL: Bool { lang.isRTL }
+
+    var body: some View {
+        NavigationView {
+            ZStack {
+                AdaptiveModernBackground()
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text(arabic)
+                            .font(EmType.arabic(23 * readingSettings.scale))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineSpacing(12 * readingSettings.scale)
+                            .multilineTextAlignment(.trailing)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+
+                        DuaListenButton(arabic: arabic)
+
+                        if let english = english {
+                            Text(english)
+                                .font(EmType.serif(16 * readingSettings.scale, .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                                .lineSpacing(5 * readingSettings.scale)
+                                .multilineTextAlignment(isRTL ? .trailing : .leading)
+                                .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+                                .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+                        }
+
+                        if let source = source {
+                            Text("— \(source)")
+                                .font(.system(size: 12.5, weight: .medium))
+                                .foregroundColor(themeManager.tertiaryText)
+                        }
+                    }
+                    .padding(20)
+                    .padding(.bottom, 30)
+                }
+            }
+            .navigationTitle(JourneyStrings.fullZiyaratTitle(lang))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(JourneyStrings.done(lang)) { dismiss() }
+                        .foregroundColor(themeManager.accentColor)
+                }
+            }
+        }
+        .preferredColorScheme(themeManager.colorScheme)
+    }
+}
+
+struct ArbaeenStationHeader: View {
+    let day: ArbaeenDay
     let isObserved: Bool
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
-    // Day 10 is Ashura — the grief summit of the mourning of Imam al-Husayn (AS).
-    // It receives a distinct, dignified, somber emphasis (not celebratory).
-    private var isAshura: Bool {
-        day.dayNumber == 10
-    }
-
     var body: some View {
         VStack(spacing: 16) {
-            // Day badge
+            // Station badge
             HStack {
                 HStack(spacing: 8) {
                     Image(systemName: day.icon)
                         .font(.system(size: 14, weight: .semibold))
 
-                    Text(JourneyStrings.dayN(day.dayNumber, lang))
+                    Text(JourneyStrings.stationN(day.dayNumber, lang))
                         .font(.system(size: 14, weight: .semibold))
                 }
                 .foregroundColor(themeManager.accentColor)
@@ -313,22 +390,6 @@ struct MuharramDayHeader: View {
                 .background {
                     Capsule()
                         .fill(themeManager.accentColor.opacity(0.15))
-                }
-
-                // Ashura mourning marker — somber, restrained (no festive/green state)
-                if isAshura {
-                    HStack(spacing: 4) {
-                        Image(systemName: "moon.fill")
-                        Text(JourneyStrings.ashura(lang))
-                    }
-                    .font(.system(size: 12, weight: .bold))
-                    .foregroundColor(themeManager.secondaryText)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 4)
-                    .background {
-                        Capsule()
-                            .fill(themeManager.secondaryText.opacity(0.12))
-                    }
                 }
 
                 if isObserved {
@@ -346,12 +407,12 @@ struct MuharramDayHeader: View {
             // Theme
             VStack(alignment: .leading, spacing: 8) {
                 Text(day.localizedTheme(lang))
-                    .font(.system(size: isAshura ? 32 : 28, weight: .bold, design: .rounded))
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
                     .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
 
                 Text(day.themeArabic)
-                    .font(.system(size: isAshura ? 22 : 20, weight: .medium))
+                    .font(.system(size: 20, weight: .medium))
                     .foregroundColor(themeManager.accentColor)
                     .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
             }
@@ -363,12 +424,7 @@ struct MuharramDayHeader: View {
                 .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
                 .overlay(
                     RoundedRectangle(cornerRadius: 24)
-                        // Ashura: a deeper, restrained accent edge — emphasis through
-                        // gravity, not ornament. All other days keep the standard stroke.
-                        .stroke(
-                            isAshura ? themeManager.accentColor.opacity(0.55) : themeManager.strokeColor,
-                            lineWidth: isAshura ? 1.5 : 1
-                        )
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
                 )
                 .shadow(
                     color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
@@ -380,8 +436,9 @@ struct MuharramDayHeader: View {
     }
 }
 
-struct MuharramDuaSection: View {
-    let dua: MuharramDua
+struct ArbaeenDuaSection: View {
+    let dua: ArbaeenDua
+    @State private var showFull = false
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
@@ -434,6 +491,20 @@ struct MuharramDuaSection: View {
                     .foregroundColor(themeManager.tertiaryText)
                     .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
             }
+
+            if dua.fullArabic != nil {
+                Button {
+                    showFull = true
+                } label: {
+                    HStack(spacing: 4) {
+                        Text(JourneyStrings.readFullZiyarat(lang))
+                            .font(.system(size: 13, weight: .semibold))
+                        Image(systemName: "arrow.right")
+                            .font(.system(size: 11, weight: .semibold))
+                    }
+                    .foregroundColor(themeManager.accentColor)
+                }
+            }
         }
         .padding(20)
         .background {
@@ -449,11 +520,16 @@ struct MuharramDuaSection: View {
                 )
         }
         .padding(.horizontal, 20)
+        .sheet(isPresented: $showFull) {
+            if let full = dua.fullArabic {
+                ArbaeenFullZiyaratSheet(arabic: full, english: dua.fullEnglish, source: dua.localizedSource(lang))
+            }
+        }
     }
 }
 
-struct MuharramVerseCard: View {
-    let verse: MuharramVerse
+struct ArbaeenVerseCard: View {
+    let verse: ArbaeenVerse
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
@@ -560,7 +636,6 @@ struct MuharramVerseCard: View {
             // Verse text
             if let data = verseData {
                 VStack(alignment: .leading, spacing: 12) {
-                    // Arabic
                     Text(data.arabic)
                         .font(.custom("AmiriQuran-Regular", size: 22 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
@@ -568,7 +643,6 @@ struct MuharramVerseCard: View {
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)
 
-                    // Translation
                     Text(data.translation)
                         .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
@@ -614,14 +688,14 @@ struct MuharramVerseCard: View {
     }
 }
 
-struct MuharramObserveButton: View {
+struct ArbaeenObserveButton: View {
     let isObserved: Bool
     let onToggle: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     // Subdued observed state — a quiet, somber confirmation rather than a
-    // celebratory green "Completed!" treatment. Muharram is azadari, not achievement.
+    // celebratory green "Completed!" treatment. Arbaeen is azadari, not achievement.
     private var observedGradient: LinearGradient {
         LinearGradient(
             colors: [
@@ -655,33 +729,5 @@ struct MuharramObserveButton: View {
             }
         }
         .padding(.horizontal, 20)
-    }
-}
-
-#Preview {
-    NavigationView {
-        MuharramDayDetailView(
-            day: MuharramDay(
-                id: "day10",
-                dayNumber: 10,
-                theme: "Ashura — The Day of Sacrifice",
-                themeArabic: "يَوْمُ عَاشُورَاء",
-                icon: "moon.fill",
-                dua: MuharramDua(
-                    arabic: "السَّلَامُ عَلَيْكَ يَا أَبَا عَبْدِ اللَّهِ",
-                    transliteration: "As-salamu 'alayka ya Aba 'Abdillah",
-                    english: "Peace be upon you, O Aba 'Abdillah (al-Husayn).",
-                    source: "Ziyarat Ashura",
-                    englishUr: "تم پر سلام ہو، اے ابا عبداللہؑ (الحسین)۔",
-                    sourceUr: "زیارتِ عاشورا"
-                ),
-                verses: [],
-                tafsirFocus: "The meaning of sacrifice and steadfastness in the face of oppression.",
-                reflection: "What does the stand of Imam al-Husayn (AS) at Karbala demand of us today?",
-                themeUr: "عاشورا — قربانی کا دن",
-                tafsirFocusUr: "ظلم کے سامنے قربانی اور استقامت کا مفہوم۔",
-                reflectionUr: "کربلا میں امام حسینؑ کا قیام آج ہم سے کیا تقاضا کرتا ہے؟"
-            )
-        )
     }
 }

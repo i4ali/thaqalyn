@@ -220,7 +220,7 @@ class IslamicCalendarManager: ObservableObject {
 
     /// Check if we're in the "Hajj season" window (first ten days of Dhul-Hijjah)
     /// - Last 5-6 days of Dhul-Qa'dah (month 11) as a lead-in countdown
-    /// - Dhul-Hijjah (month 12) days 1-13: the 10-day journey + Eid al-Adha + Days of Tashriq tail
+    /// - Dhul-Hijjah (month 12) days 1-15: the 10-day journey + Eid al-Adha + Tashriq + a 5-day grace tail
     /// Ramadan season touches months 8/9/10; Hajj season touches 11/12 - mutually exclusive.
     func isHajjSeason() -> Bool {
         let month = currentIslamicMonth()
@@ -229,8 +229,8 @@ class IslamicCalendarManager: ObservableObject {
         switch month {
         case 11: // Dhul-Qa'dah - last 5 days (days 25-30)
             return day >= 25
-        case 12: // Dhul-Hijjah - first 10 days + Eid + Tashriq tail
-            return day <= 13
+        case 12: // Dhul-Hijjah - 10 content days + grace tail through day 15
+            return day <= 15
         default:
             return false
         }
@@ -275,7 +275,7 @@ class IslamicCalendarManager: ObservableObject {
             if day <= 10 {
                 return ur ? "ذی الحجہ کا دن \(day)" : "Day \(day) of Dhul-Hijjah"
             }
-            if day <= 13 {
+            if day <= 15 {
                 return ur ? "عیدالاضحیٰ مبارک!" : "Eid al-Adha Mubarak!"
             }
             return ""
@@ -288,23 +288,23 @@ class IslamicCalendarManager: ObservableObject {
 
     /// Muharram Journey window:
     /// - Last days of Dhul-Hijjah (month 12, day >= 25) as a lead-in countdown
-    /// - Muharram (month 1) days 1-10 content + days 11-12 quiet grace (no new content)
-    /// Hajj season is month 12 day <= 13; Ramadan is months 8-10 — all mutually exclusive.
+    /// - Muharram (month 1) days 1-10 content + days 11-15 quiet grace (no new content)
+    /// Hajj season is month 12 day <= 15; Ramadan is months 8-10 — all mutually exclusive.
     func isMuharramSeason() -> Bool {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
 
         switch month {
-        case 12: // Dhul-Hijjah lead-in (does not collide with Hajj's day <= 13)
+        case 12: // Dhul-Hijjah lead-in (does not collide with Hajj's day <= 15)
             return day >= 25
-        case 1:  // Muharram: 10 content days + 11-12 quiet grace
-            return day <= 12
+        case 1:  // Muharram: 10 content days + 11-15 quiet grace
+            return day <= 15
         default:
             return false
         }
     }
 
-    /// Current Muharram Journey day (1-10), nil during lead-in and the 11-12 grace.
+    /// Current Muharram Journey day (1-10), nil during lead-in and the 11-15 grace.
     func currentMuharramDay() -> Int? {
         guard currentIslamicMonth() == 1 else { return nil }
         let day = currentIslamicDay()
@@ -337,7 +337,7 @@ class IslamicCalendarManager: ObservableObject {
             if day <= 10 {
                 return ur ? "محرم کا دن \(day)" : "Day \(day) of Muharram"
             }
-            if day <= 12 {
+            if day <= 15 {
                 return ur ? "ماتم جاری ہے — یا حسینؑ" : "The mourning continues — Ya Husayn (AS)"
             }
             return ""
@@ -349,14 +349,14 @@ class IslamicCalendarManager: ObservableObject {
     // MARK: - Fatimiyya Season Detection
 
     /// Ayyam-e-Fatimiyya mourning windows (one journey, two narrated dates):
-    /// - First Fatimiyya: Jumada al-Awwal (month 5), days 8–15 (around the 13th)
-    /// - Second Fatimiyya: Jumada al-Thani (month 6), days 1–6 (around the 3rd)
+    /// - First Fatimiyya: Jumada al-Awwal (month 5), days 8–18 (around the 13th + a 5-day grace tail)
+    /// - Second Fatimiyya: Jumada al-Thani (month 6), days 1–8 (around the 3rd + a 5-day grace tail)
     func isFatimiyyaSeason() -> Bool {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
         switch month {
-        case 5: return (8...15).contains(day)
-        case 6: return (1...6).contains(day)
+        case 5: return (8...18).contains(day)
+        case 6: return (1...8).contains(day)
         default: return false
         }
     }
@@ -367,9 +367,69 @@ class IslamicCalendarManager: ObservableObject {
         let day = currentIslamicDay()
         let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
         switch month {
-        case 5 where (8...15).contains(day): return ur ? "پہلی فاطمیہ — یا زہراؑ" : "First Fatimiyya — Yā Zahrā (AS)"
-        case 6 where (1...6).contains(day):  return ur ? "دوسری فاطمیہ — یا زہراؑ" : "Second Fatimiyya — Yā Zahrā (AS)"
+        case 5 where (8...18).contains(day): return ur ? "پہلی فاطمیہ — یا زہراؑ" : "First Fatimiyya — Yā Zahrā (AS)"
+        case 6 where (1...8).contains(day):  return ur ? "دوسری فاطمیہ — یا زہراؑ" : "Second Fatimiyya — Yā Zahrā (AS)"
         default: return ""
+        }
+    }
+
+    // MARK: - Arbaeen Season Detection
+
+    /// The Arbaeen Journey ("The Return") window — the 40 days from Ashura to Arbaeen:
+    /// - Muharram (month 1), days 11–30 (from the day after Ashura through the return)
+    /// - Safar (month 2), days 1–25 (culminating on the 20th, + a short grace tail)
+    func isArbaeenSeason() -> Bool {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+        switch month {
+        case 1: return day >= 11
+        case 2: return day <= 25
+        default: return false
+        }
+    }
+
+    /// Current Arbaeen station (1–8), mapping the ~40-day span onto the 8 stations.
+    /// Returns nil outside the season.
+    func currentArbaeenStation() -> Int? {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+        switch month {
+        case 1 where day >= 11:            // Muharram 11–30
+            switch day {
+            case 11...13: return 1         // The Morning After
+            case 14...17: return 2         // The Road to Kufa
+            default:      return 3         // Kufa: Zaynab's sermon (18–30)
+            }
+        case 2:                            // Safar 1–25
+            switch day {
+            case 1:       return 4         // The Long Road to Sham (entered ~1 Safar)
+            case 2...8:   return 5         // The Court of Yazid
+            case 9...15:  return 6         // The Ruin of Damascus
+            case 16...19: return 7         // The Turn Homeward
+            default:      return 8         // Arbaeen: Jabir at the Grave (20+)
+            }
+        default:
+            return nil
+        }
+    }
+
+    /// Somber status line for the Arbaeen Journey header.
+    func arbaeenSeasonStatus() -> String {
+        let month = currentIslamicMonth()
+        let day = currentIslamicDay()
+        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
+        switch month {
+        case 1 where day >= 11:
+            return ur ? "راہِ اربعین — عودتِ کاروان" : "The Return — the road to Arbaeen"
+        case 2 where day < 20:
+            let left = 20 - day
+            return ur ? "اربعین میں \(left) دن باقی" : "\(left) day\(left == 1 ? "" : "s") until Arbaeen"
+        case 2 where day == 20:
+            return ur ? "اربعین — یا حسینؑ" : "Arbaeen — Ya Husayn (AS)"
+        case 2 where day <= 25:
+            return ur ? "زیارتِ اربعین — یا حسینؑ" : "Ziyarat of Arbaeen — Ya Husayn (AS)"
+        default:
+            return ""
         }
     }
 

@@ -111,6 +111,46 @@ struct JourneyDescriptor: Identifiable {
                               returnsLabel: JourneyStrings.returns(medium(nextReturn), lang))
             }
         ),
+        JourneyDescriptor(
+            id: "arbaeen", eyebrow: "40-Day Journey", title: "Arbaeen",
+            sfSymbol: "figure.walk", contentStartMonth: 2,
+            isActive: { IslamicCalendarManager.shared.isArbaeenSeason() },
+            statusLine: { IslamicCalendarManager.shared.arbaeenSeasonStatus() },
+            destination: { AnyView(ArbaeenJourneyView()) },
+            statusOverride: { cal in
+                if cal.isArbaeenSeason() { return .active(line: cal.arbaeenSeasonStatus()) }
+                let icalendar = cal.islamicCalendar
+                guard let year = cal.currentIslamicDate().year else {
+                    preconditionFailure("Hijri year unavailable for arbaeen")
+                }
+                func hijri(_ y: Int, _ m: Int, _ d: Int) -> Date {
+                    guard let date = icalendar.date(from: DateComponents(year: y, month: m, day: d)) else {
+                        preconditionFailure("Could not form Hijri date for arbaeen")
+                    }
+                    return date
+                }
+                func daysBetween(_ a: Date, _ b: Date) -> Int {
+                    let c = Calendar.current
+                    return max(0, c.dateComponents([.day], from: c.startOfDay(for: a), to: c.startOfDay(for: b)).day ?? 0)
+                }
+                func medium(_ d: Date) -> String {
+                    let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
+                    f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en")
+                    return f.string(from: d)
+                }
+                let now = cal.now
+                let lang = CommentaryLanguageManager.shared.selectedLanguage
+                // Window opens 11 Muharram (the day after Ashura) of the current Hijri year.
+                let windowStart = hijri(year, 1, 11)
+                if now < windowStart {
+                    return .comingSoon(daysUntil: daysBetween(now, windowStart),
+                                       startsLabel: JourneyStrings.begins(medium(windowStart), lang))
+                }
+                let nextStart = hijri(year + 1, 1, 11)
+                return .ended(daysUntil: daysBetween(now, nextStart),
+                              returnsLabel: JourneyStrings.returns(medium(nextStart), lang))
+            }
+        ),
     ]
 
     static func byId(_ id: String) -> JourneyDescriptor? { all.first { $0.id == id } }

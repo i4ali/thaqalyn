@@ -26,6 +26,7 @@ struct SettingsView: View {
     @State private var showingTTSVoiceSelection = false
     @State private var selectedTTSLanguage: CommentaryLanguage = .english
     @State private var showingTafsirSources = false
+    @State private var showingMailCopiedAlert = false
     
     var body: some View {
         Group {
@@ -81,6 +82,11 @@ struct SettingsView: View {
             }
         } message: {
             Text("This will clear all your reading progress, streaks, and badges. This action cannot be undone.")
+        }
+        .alert("Email Address Copied", isPresented: $showingMailCopiedAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("We couldn't open a mail app, so \(SupportContact.recipient) was copied to your clipboard.")
         }
     }
 
@@ -453,6 +459,17 @@ struct SettingsView: View {
                                         iconColor: .indigo
                                     ) {
                                         showingTafsirSources = true
+                                    }
+
+                                    SettingsRow(
+                                        icon: "envelope.fill",
+                                        title: "Contact Us",
+                                        subtitle: "Email the developer",
+                                        iconColor: .blue
+                                    ) {
+                                        SupportContact.composeFeedbackEmail {
+                                            showingMailCopiedAlert = true
+                                        }
                                     }
 
                                     SettingsRow(
@@ -850,6 +867,17 @@ struct SettingsView: View {
                     iconColor: .indigo
                 ) {
                     showingTafsirSources = true
+                }
+
+                SettingsRow(
+                    icon: "envelope.fill",
+                    title: "Contact Us",
+                    subtitle: "Email the developer",
+                    iconColor: .blue
+                ) {
+                    SupportContact.composeFeedbackEmail {
+                        showingMailCopiedAlert = true
+                    }
                 }
 
                 SettingsRow(

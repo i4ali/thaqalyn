@@ -1,0 +1,294 @@
+{
+  "days": [
+    {
+      "id": "station1",
+      "dayNumber": 1,
+      "theme": "The Morning After",
+      "themeArabic": "مَا بَعْدَ عَاشُورَاء",
+      "icon": "sunrise",
+      "dua": {
+        "arabic": "فَلَأَنْدُبَنَّكَ صَبَاحًا وَمَسَاءً، وَلَأَبْكِيَنَّ لَكَ بَدَلَ الدُّمُوعِ دَمًا، حَسْرَةً عَلَيْكَ وَتَأَسُّفًا عَلَىٰ مَا دَهَاكَ وَتَلَهُّفًا",
+        "transliteration": "Fa-la-andubannaka ṣabāḥan wa masāʾā, wa la-abkiyanna laka badala l-dumūʿi damā, ḥasratan ʿalayka wa taʾassufan ʿalā mā dahāka wa talahhufā",
+        "english": "I will lament you morning and evening, and weep for you blood in place of tears, in anguish and sorrow for all that befell you.",
+        "source": "Ziyārat al-Nāḥiya al-Muqaddasa",
+        "englishUr": "میں صبح و شام تجھ پر نوحہ کروں گی، اور آنسوؤں کے بدلے تیرے لیے خون روؤں گی، اس دکھ اور افسوس میں جو تجھ پر گزرا۔",
+        "sourceUr": "زیارت الناحیہ المقدسہ"
+      },
+      "verses": [
+        {
+          "id": "station1_v1",
+          "surahNumber": 2,
+          "verseNumber": 155,
+          "relevanceNote": "The verse of the patient: God tests “with fear and hunger and loss,” then bids glad tidings to the steadfast - Karbala is that trial, its survivors the ṣābirīn.",
+          "relevanceNoteUr": "صبر کرنے والوں کی آیت: اللہ تعالیٰ “خوف، بھوک اور نقصان” کے ذریعے آزماتا ہے، پھر صبر کرنے والوں کو خوشخبری دیتا ہے - کربلا وہی آزمائش ہے، اور اس کے بچ جانے والے ہی صابرین ہیں۔"
+        },
+        {
+          "id": "station1_v2",
+          "surahNumber": 2,
+          "verseNumber": 156,
+          "relevanceNote": "Their answer to catastrophe - “Indeed we belong to God, and to Him we return” - spoken over the unburied bodies.",
+          "relevanceNoteUr": "مصیبت کے وقت ان کا جواب - “بے شک ہم اللہ ہی کے لیے ہیں اور اسی کی طرف لوٹنے والے ہیں” - یہ کلمات ان لاشوں کے اوپر کہے گئے جنہیں ابھی دفن بھی نہیں کیا گیا تھا۔"
+        }
+      ],
+      "tafsirFocus": "By the morning of the eleventh, Ashura’s silence had a sound: burning tents, the wail of children, the clank of the sick Imam’s chains. The bodies lay unburied as the women were seated on bare camels and driven away. Passing her brother’s body, Zaynab (AS) cried out to her grandfather: “This is Husayn, in the open, smeared with blood.” The battle was over; the harder work - keeping Karbala from being buried in silence - had begun.",
+      "reflection": "We assume the test is the loss itself. The survivors reveal a second test that comes after: to carry the truth of what happened when silence would be easier. Their patience is not passivity - it is a refusal to let Husayn be forgotten.",
+      "themeUr": "عاشورہ کے بعد کی صبح",
+      "tafsirFocusUr": "گیارہ محرم کی صبح تک، عاشور کی خاموشی کی بھی ایک آواز تھی: جلتے ہوئے خیمے، بچوں کی چیخ و پکار، اور بیمار امامؑ کی زنجیروں کی جھنکار۔ لاشیں بے گور و کفن پڑی رہیں جبکہ خواتین کو بغیر کجاووں کے اونٹوں پر بٹھا کر روانہ کر دیا گیا۔ اپنے بھائی کی لاش کے پاس سے گزرتے ہوئے سیدہ زینبؑ نے اپنے نانا سے پکار کر کہا: “یہ حسینؑ ہے، کھلے میدان میں، خون میں لتھڑا ہوا۔” جنگ ختم ہو چکی تھی، لیکن ایک زیادہ مشکل کام شروع ہو چکا تھا - کربلا کو خاموشی میں دفن ہونے سے بچانا۔",
+      "reflectionUr": "ہم یہ سمجھتے ہیں کہ آزمائش صرف نقصان کا لمحہ ہے۔ لیکن بچ جانے والے ہمیں ایک دوسری آزمائش دکھاتے ہیں جو اس کے بعد آتی ہے: اس حقیقت کو زندہ رکھنا جو پیش آئی، جبکہ خاموش رہنا کہیں آسان ہوتا۔ ان کا صبر بے عملی نہیں تھا - یہ اس بات سے انکار تھا کہ امام حسینؑ کو بھلا دیا جائے۔"
+    },
+    {
+      "id": "station2",
+      "dayNumber": 2,
+      "theme": "The Road to Kufa",
+      "themeArabic": "الطَّرِيقُ إِلَى الْكُوفَة",
+      "icon": "figure.walk",
+      "dua": {
+        "arabic": "اللَّهُمَّ لَا طَاقَةَ لِي بِالْجَهْدِ، وَلَا صَبْرَ لِي عَلَى الْبَلَاءِ، وَلَا قُوَّةَ لِي عَلَى الْفَقْرِ، فَلَا تَحْظُرْ عَلَيَّ رِزْقِي",
+        "transliteration": "Allāhumma lā ṭāqata lī bi’l-jahd, wa lā ṣabra lī ʿala’l-balāʾ, wa lā quwwata lī ʿala’l-faqr, fa-lā taḥẓur ʿalayya rizqī",
+        "english": "O God, I have no endurance for effort, no patience in affliction, no strength to bear poverty; so withhold not from me my provision.",
+        "source": "al-Ṣaḥīfa al-Sajjādiyya · Supplication 22",
+        "englishUr": "اے اللہ! مجھ میں مشقت برداشت کرنے کی طاقت نہیں، مصیبت میں صبر کرنے کی سکت نہیں، اور فقر برداشت کرنے کی قوت نہیں؛ پس میرا رزق مجھ سے روک نہ رکھ۔",
+        "sourceUr": "الصحیفہ السجادیہ · دعا ۲۲"
+      },
+      "verses": [
+        {
+          "id": "station2_v1",
+          "surahNumber": 3,
+          "verseNumber": 186,
+          "relevanceNote": "“You will be tested in your wealth and your selves, and you will hear much hurt” - the abuse hurled at the captives on the road, met with patience.",
+          "relevanceNoteUr": "“تم اپنے مالوں اور اپنی جانوں میں ضرور آزمائے جاؤ گے، اور تم ضرور بہت سی تکلیف دہ باتیں سنو گے” - وہ گالیاں اور طعنے جو راستے میں قیدیوں پر برسائے گئے، اور جنہیں صبر کے ساتھ سہا گیا۔"
+        },
+        {
+          "id": "station2_v2",
+          "surahNumber": 2,
+          "verseNumber": 153,
+          "relevanceNote": "“Seek help in patience and prayer” - the only provisions the caravan carried.",
+          "relevanceNoteUr": "“صبر اور نماز سے مدد طلب کرو” - یہی وہ واحد زادِ راہ تھا جو یہ قافلہ اپنے ساتھ لیے ہوئے تھا۔"
+        }
+      ],
+      "tafsirFocus": "The heads went ahead on spears; the family of the Prophet came behind, unveiled, on bare-backed camels, the sick Imam in an iron collar. When a Kufan woman leaned from her window and learned who they were, she wept and threw down cloths to cover them. This is the ordeal the Qur’an names - to be tested and to “hear much hurt,” and to answer it not with despair but with patience and prayer.",
+      "reflection": "Bearing witness is rarely dramatic. Sometimes it is only refusing to look away, or covering another’s shame with your own cloak. The road to Kufa asks what small dignity we can still offer when we ourselves have lost everything.",
+      "themeUr": "کوفہ کا راستہ",
+      "tafsirFocusUr": "سرِ مبارک نیزوں پر آگے آگے تھے؛ رسول اللہﷺ کا خاندان ان کے پیچھے، بے نقاب، بغیر کجاووں کے اونٹوں پر سوار، اور بیمار امامؑ کی گردن میں لوہے کا طوق تھا۔ جب کوفہ کی ایک عورت نے اپنی کھڑکی سے جھانک کر معلوم کیا کہ یہ کون لوگ ہیں، تو وہ رو پڑی اور انہیں ڈھانپنے کے لیے کپڑے نیچے پھینک دیے۔ یہی وہ آزمائش ہے جس کا ذکر قرآن نے کیا ہے - آزمایا جانا اور “بہت سی تکلیف دہ باتیں سننا”، اور اس کا جواب ناامیدی سے نہیں بلکہ صبر اور نماز سے دینا۔",
+      "reflectionUr": "گواہی دینا شاذ و نادر ہی کوئی ڈرامائی عمل ہوتا ہے۔ کبھی یہ صرف نظر نہ پھیرنے یا اپنی چادر سے کسی اور کی بے پردگی ڈھانپنے کا نام ہوتا ہے۔ کوفہ کا راستہ ہم سے یہ سوال کرتا ہے کہ جب ہم خود سب کچھ کھو چکے ہوں، تب بھی ہم کون سی چھوٹی سی عزت کسی اور کو دے سکتے ہیں۔"
+    },
+    {
+      "id": "station3",
+      "dayNumber": 3,
+      "theme": "The Voice That Would Not Break",
+      "themeArabic": "خُطْبَةُ زَيْنَب",
+      "icon": "quote.bubble",
+      "dua": {
+        "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي يَفْقَهُوا قَوْلِي",
+        "transliteration": "Rabbi-shraḥ lī ṣadrī, wa yassir lī amrī, waḥlul ʿuqdatan min lisānī, yafqahū qawlī",
+        "english": "My Lord, expand for me my breast, and ease for me my task, and untie the knot from my tongue, that they may understand my speech.",
+        "source": "Qur’an 20:25–28 · the prayer of Musa (AS)",
+        "englishUr": "اے میرے رب! میرا سینہ کھول دے، اور میرا کام میرے لیے آسان کر دے، اور میری زبان کی گرہ کھول دے، تاکہ لوگ میری بات سمجھ سکیں۔",
+        "sourceUr": "قرآن ۲۰:۲۵-۲۸ · حضرت موسیٰؑ کی دعا"
+      },
+      "verses": [
+        {
+          "id": "station3_v1",
+          "surahNumber": 16,
+          "verseNumber": 91,
+          "relevanceNote": "“Fulfil the covenant of God when you have pledged it, and break not your oaths” - the very pledge Kufa made to Husayn, then broke.",
+          "relevanceNoteUr": "“اور اللہ کے عہد کو پورا کرو جب تم عہد کر چکے ہو، اور قسمیں کھا کر انہیں مت توڑو” - یہی وہ عہد تھا جو کوفہ نے امام حسینؑ سے کیا اور پھر توڑ ڈالا۔"
+        },
+        {
+          "id": "station3_v2",
+          "surahNumber": 16,
+          "verseNumber": 92,
+          "relevanceNote": "“Be not like her who unravels her yarn after it was strong” - the exact image Zaynab (AS) flung at Kufa in her sermon.",
+          "relevanceNoteUr": "“اس عورت کی طرح نہ ہو جاؤ جو اپنا سوت مضبوط کاتنے کے بعد ادھیڑ ڈالتی ہے” - یہی وہ استعارہ ہے جو سیدہ زینبؑ نے اپنے خطبے میں کوفہ کے منہ پر دے مارا۔"
+        }
+      ],
+      "tafsirFocus": "In Kufa - the city that had invited Husayn and then abandoned him - the captives were paraded before weeping crowds. Then Zaynab raised her hand and “even the camel-bells fell still.” She turned their tears into a mirror: “You are like her who unravels her yarn after it was strong” - the image of the Qur’an itself - people who spun a covenant and then tore it apart. Before Ibn Ziyad, asked how she found what God had done, she answered: “I saw nothing but beauty.”",
+      "reflection": "Grief can collapse a person into silence, or be forged into speech that outlives the sword. Zaynab had no army and no freedom - only her voice. It was enough to keep Karbala from being erased. What truth are we staying silent about?",
+      "themeUr": "وہ آواز جو ٹوٹی نہیں",
+      "tafsirFocusUr": "کوفہ میں - وہی شہر جس نے امام حسینؑ کو بلایا اور پھر انہیں تنہا چھوڑ دیا - قیدیوں کو روتی ہوئی بھیڑ کے سامنے سے گزارا گیا۔ پھر سیدہ زینبؑ نے اپنا ہاتھ بلند کیا اور “اونٹوں کی گھنٹیاں تک خاموش ہو گئیں”۔ انہوں نے لوگوں کے آنسوؤں کو آئینہ بنا کر ان کے سامنے رکھ دیا: “تم اس عورت کی مانند ہو جو اپنا سوت مضبوط کاتنے کے بعد ادھیڑ ڈالتی ہے” - یہ خود قرآن ہی کا استعارہ تھا - ایسے لوگوں کے لیے جنہوں نے عہد باندھا اور پھر اسے توڑ ڈالا۔ ابن زیاد کے دربار میں جب ان سے پوچھا گیا کہ انہوں نے اللہ کے اس فیصلے کو کیسا پایا، تو انہوں نے جواب دیا: “میں نے سوائے خوبصورتی کے کچھ نہیں دیکھا۔”",
+      "reflectionUr": "غم انسان کو خاموشی میں ڈبو سکتا ہے، یا اسے ایسی گویائی میں ڈھال سکتا ہے جو تلوار سے بھی زیادہ زندہ رہے۔ سیدہ زینبؑ کے پاس نہ کوئی لشکر تھا نہ آزادی - صرف ان کی آواز تھی۔ اور وہی آواز کربلا کو مٹنے سے بچانے کے لیے کافی ثابت ہوئی۔ سوال یہ ہے کہ ہم کس سچائی پر خاموش بیٹھے ہیں؟"
+    },
+    {
+      "id": "station4",
+      "dayNumber": 4,
+      "theme": "The Long Road to Sham",
+      "themeArabic": "الطَّرِيقُ إِلَى الشَّام",
+      "icon": "sun.dust",
+      "dua": {
+        "arabic": "يَا مَنْ تُحَلُّ بِهِ عُقَدُ الْمَكَارِهِ، وَيَا مَنْ يُفْثَأُ بِهِ حَدُّ الشَّدَائِدِ، وَيَا مَنْ يُلْتَمَسُ مِنْهُ الْمَخْرَجُ إِلَىٰ رَوْحِ الْفَرَجِ",
+        "transliteration": "Yā man tuḥallu bihi ʿuqadu’l-makārih, wa yā man yufthaʾu bihi ḥaddu’l-shadāʾid, wa yā man yultamasu minhu’l-makhraju ilā rawḥi’l-faraj",
+        "english": "O You by whom the knots of adversity are untied, O You by whom the edge of hardships is blunted, O You from whom is sought the way out to the ease of relief.",
+        "source": "al-Ṣaḥīfa al-Sajjādiyya · Supplication 7",
+        "englishUr": "اے وہ ذات جس کے ذریعے مصیبتوں کی گرہیں کھلتی ہیں، اے وہ ذات جس کے ذریعے مشکلات کی دھار کند ہو جاتی ہے، اے وہ ذات جس سے راحت و آسانی کی راہ طلب کی جاتی ہے۔",
+        "sourceUr": "الصحیفہ السجادیہ · دعا ۷"
+      },
+      "verses": [
+        {
+          "id": "station4_v1",
+          "surahNumber": 2,
+          "verseNumber": 214,
+          "relevanceNote": "“Do you suppose you will enter the Garden without the trial of those before you? … God’s help is near” - endurance as the gateway, relief at its edge.",
+          "relevanceNoteUr": "“کیا تم یہ گمان کرتے ہو کہ تم جنت میں داخل ہو جاؤ گے حالانکہ ابھی تم پر وہ حالات نہیں گزرے جو تم سے پہلے لوگوں پر گزرے تھے؟ … اللہ کی مدد قریب ہے” - صبر ہی وہ دروازہ ہے جس کے کنارے پر راحت ملتی ہے۔"
+        },
+        {
+          "id": "station4_v2",
+          "surahNumber": 39,
+          "verseNumber": 10,
+          "relevanceNote": "“The patient will be paid their reward in full, without measure.”",
+          "relevanceNoteUr": "“صبر کرنے والوں کو ان کا اجر بغیر حساب کے پورا پورا دیا جائے گا۔”"
+        }
+      ],
+      "tafsirFocus": "From Kufa the captives were driven weeks across the desert, entering Damascus on the first of Safar to drums and celebration. The sources spare us a tidy itinerary and give only the hardship: heat, exhaustion, humiliation, the sick Imam bound through all of it. The Qur’an had asked whether anyone supposes they will enter the Garden without the trial of those before them - and promised, at the edge of endurance, that God’s help is near.",
+      "reflection": "The long road is its own test - not a single blow but a weariness that will not end. Endurance, offered to God, becomes worship. “I have no patience in affliction,” the Imam prays - and in that honest helplessness casts himself on God alone.",
+      "themeUr": "شام کا طویل سفر",
+      "tafsirFocusUr": "کوفہ سے قیدیوں کو ہفتوں تک صحرا کے پار دھکیلا گیا، اور یکم صفر کو وہ دمشق میں طبل و شادیانوں کے درمیان داخل ہوئے۔ روایات ہمیں سفر کی مکمل تفصیل نہیں دیتیں، بس مشقت کا بیان چھوڑ جاتی ہیں: گرمی، تھکن، ذلت آمیزی، اور اس سارے سفر میں بیمار امامؑ کا بندھا رہنا۔ قرآن نے پہلے ہی پوچھا تھا کہ کیا کوئی یہ سمجھتا ہے کہ وہ جنت میں داخل ہو جائے گا بغیر اس آزمائش کے جو اس سے پہلے لوگوں پر آئی - اور صبر کی انتہا پر یہ وعدہ دیا کہ اللہ کی مدد قریب ہے۔",
+      "reflectionUr": "طویل راستہ خود ایک الگ آزمائش ہے - یہ کوئی ایک ضرب نہیں بلکہ وہ تھکن ہے جو ختم ہونے کا نام ہی نہیں لیتی۔ جب صبر اللہ کے لیے کیا جائے تو وہ عبادت بن جاتا ہے۔ “مجھ میں مصیبت پر صبر کرنے کی سکت نہیں”، امامؑ یہ دعا مانگتے ہیں - اور اسی سچی بے بسی میں خود کو مکمل طور پر اللہ کے سپرد کر دیتے ہیں۔"
+    },
+    {
+      "id": "station5",
+      "dayNumber": 5,
+      "theme": "The Court of Yazid",
+      "themeArabic": "مَجْلِسُ يَزِيد",
+      "icon": "building.columns",
+      "dua": {
+        "arabic": "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ وَتُعِزُّ مَن تَشَاءُ وَتُذِلُّ مَن تَشَاءُ ۖ بِيَدِكَ الْخَيْرُ ۖ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+        "transliteration": "Quli’llāhumma Mālika’l-mulki tu’ti’l-mulka man tashāʾu wa tanziʿu’l-mulka mimman tashāʾu wa tuʿizzu man tashāʾu wa tudhillu man tashāʾ, bi-yadika’l-khayr, innaka ʿalā kulli shayʾin qadīr",
+        "english": "Say: O God, Master of all sovereignty, You give sovereignty to whom You will and strip sovereignty from whom You will; You honour whom You will and abase whom You will. In Your hand is all good. Indeed You have power over all things.",
+        "source": "Qur’an 3:26",
+        "englishUr": "کہہ دو: اے اللہ، بادشاہت کے مالک! تو جسے چاہے بادشاہت عطا کرتا ہے اور جس سے چاہے بادشاہت چھین لیتا ہے؛ تو جسے چاہے عزت دیتا ہے اور جسے چاہے ذلیل کرتا ہے۔ ساری بھلائی تیرے ہی ہاتھ میں ہے۔ بے شک تو ہر چیز پر قادر ہے۔",
+        "sourceUr": "قرآن ۳:۲۶"
+      },
+      "verses": [
+        {
+          "id": "station5_v1",
+          "surahNumber": 3,
+          "verseNumber": 178,
+          "relevanceNote": "“Let not the disbelievers think Our respite is good for them; We only respite them to increase in sin” - the verse Zaynab (AS) recited to Yazid on his throne.",
+          "relevanceNoteUr": "“اور کافر لوگ ہرگز یہ گمان نہ کریں کہ ہم انہیں جو مہلت دے رہے ہیں وہ ان کے لیے بہتر ہے، ہم تو انہیں صرف اس لیے مہلت دیتے ہیں کہ وہ گناہ میں اور بڑھ جائیں” - یہی وہ آیت ہے جو سیدہ زینبؑ نے یزید کے تخت کے سامنے تلاوت کی۔"
+        },
+        {
+          "id": "station5_v2",
+          "surahNumber": 14,
+          "verseNumber": 42,
+          "relevanceNote": "“Think not God unaware of what the wrongdoers do; He only delays them” - her warning that his triumph was a reprieve, not approval.",
+          "relevanceNoteUr": "“اور ہرگز یہ خیال نہ کر کہ اللہ ظالموں کے کاموں سے بے خبر ہے، وہ تو انہیں صرف مہلت دے رہا ہے” - یہ ان کا تنبیہی پیغام تھا کہ یزید کی یہ فتح محض ایک مہلت ہے، نہ کہ اللہ کی رضامندی۔"
+        }
+      ],
+      "tafsirFocus": "In Yazid’s court the family stood bound by a single rope while he struck Husayn’s lips with a cane and recited pagan verse gloating over the House of the Prophet. Zaynab rose: “Do you think that by taking us captive you have shamed us?” She recited that the wrongdoer’s respite only lets him increase in sin, and that the slain of God are not dead but living. Then the young Imam took the pulpit: “I am the son of Mecca and Mina, the son of Muhammad the Chosen.”",
+      "reflection": "Tyranny wants its victims silent and small. The answer of the Ahl al-Bayt was to speak - to name themselves before the very throne that tried to erase them. Sovereignty, Zaynab reminded the court, is God’s to give and to strip. Thrones end; the truth spoken before them does not.",
+      "themeUr": "یزید کا دربار",
+      "tafsirFocusUr": "یزید کے دربار میں خاندانِ رسالت ایک ہی رسی میں بندھا کھڑا تھا، جبکہ وہ اپنی چھڑی سے امام حسینؑ کے لبوں پر ضربیں لگاتے ہوئے جاہلیت کے اشعار پڑھ کر آلِ رسولﷺ پر طنز کر رہا تھا۔ سیدہ زینبؑ کھڑی ہوئیں: “کیا تم یہ سمجھتے ہو کہ ہمیں قیدی بنا کر تم نے ہمیں ذلیل کر دیا ہے؟” انہوں نے تلاوت کی کہ ظالم کو دی جانے والی مہلت اسے صرف گناہ میں بڑھاتی ہے، اور یہ کہ اللہ کی راہ میں مارے جانے والے مردہ نہیں بلکہ زندہ ہیں۔ پھر نوجوان امامؑ منبر پر چڑھے اور فرمایا: “میں مکہ و منیٰ کا بیٹا ہوں، میں محمدِ مصطفیٰﷺ کا فرزند ہوں۔”",
+      "reflectionUr": "ظلم اپنے شکار کو خاموش اور بے بس دیکھنا چاہتا ہے۔ اہل بیتؑ کا جواب یہ تھا کہ وہ بولے - اسی تخت کے سامنے اپنا تعارف کرایا جو انہیں مٹانے کی کوشش کر رہا تھا۔ سیدہ زینبؑ نے دربار کو یاد دلایا کہ بادشاہت دینا اور چھیننا صرف اللہ کے اختیار میں ہے۔ تخت ختم ہو جاتے ہیں، لیکن ان کے سامنے کہی گئی سچائی کبھی ختم نہیں ہوتی۔"
+    },
+    {
+      "id": "station6",
+      "dayNumber": 6,
+      "theme": "The Ruin of Damascus",
+      "themeArabic": "خَرِبَةُ الشَّام",
+      "icon": "moon.stars",
+      "dua": {
+        "arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+        "transliteration": "Rabbanā afrigh ʿalaynā ṣabran wa thabbit aqdāmanā wanṣurnā ʿala’l-qawmi’l-kāfirīn",
+        "english": "Our Lord, pour upon us patience, make firm our feet, and give us victory over the disbelieving people.",
+        "source": "Qur’an 2:250",
+        "englishUr": "اے ہمارے رب! ہم پر صبر کا فیضان فرما، ہمارے قدم جما دے، اور کافر قوم کے مقابلے میں ہماری مدد فرما۔",
+        "sourceUr": "قرآن ۲:۲۵۰"
+      },
+      "verses": [
+        {
+          "id": "station6_v1",
+          "surahNumber": 12,
+          "verseNumber": 86,
+          "relevanceNote": "“I complain of my grief and sorrow only to God” - Yaqub’s words, and the posture of the captives’ mourning in the ruin of Sham.",
+          "relevanceNoteUr": "“میں اپنے غم اور رنج کی فریاد صرف اللہ ہی سے کرتا ہوں” - یہ حضرت یعقوبؑ کے الفاظ ہیں، اور یہی خرابۂ شام میں قیدیوں کے ماتم کا انداز بھی تھا۔"
+        },
+        {
+          "id": "station6_v2",
+          "surahNumber": 94,
+          "verseNumber": 6,
+          "relevanceNote": "“Indeed, with hardship comes ease” - the promise, doubled, for a sorrow that felt endless.",
+          "relevanceNoteUr": "“بے شک ہر مشکل کے ساتھ آسانی ہے” - یہ وعدہ دو بار دہرایا گیا، اس غم کے لیے جو ختم ہونے کا نام ہی نہیں لے رہا تھا۔"
+        }
+      ],
+      "tafsirFocus": "Yazid lodged the family in a ruin exposed to heat and cold, and there they mourned Husayn openly. The grief did not stay hidden: as the days passed, the people of Sham began to learn who these captives were, and the city’s mood turned until Yazid feared for himself. (A beloved later tradition places the death of a small daughter of Husayn here; it is treasured in the mourning gatherings, though it is not found in the earliest sources.) Grief, carried to God, became a summons even Damascus could not ignore.",
+      "reflection": "There is a sorrow that curdles into despair, and a sorrow that is poured out before God and becomes light. The captives’ mourning was not weakness; it was the seed that turned a hostile city. “I complain of my grief only to God” - and God answered through a watching people.",
+      "themeUr": "خرابۂ شام",
+      "tafsirFocusUr": "یزید نے خاندان کو ایک ایسے کھنڈر میں ٹھہرایا جو گرمی اور سردی دونوں کے سامنے کھلا تھا، اور وہیں انہوں نے کھلے عام امام حسینؑ کا ماتم کیا۔ یہ غم چھپا نہ رہ سکا: دن گزرتے گئے اور شام کے لوگوں کو معلوم ہونے لگا کہ یہ قیدی کون ہیں، یہاں تک کہ شہر کا رجحان بدلنے لگا اور یزید کو خود اپنی جان کا خطرہ محسوس ہونے لگا۔ (ایک محبوب روایت میں یہیں حسینؑ کی ایک کم سن بیٹی کی وفات کا ذکر ملتا ہے، جو مجالسِ عزا میں نہایت عزیز رکھی جاتی ہے، اگرچہ یہ قدیم ترین مآخذ میں موجود نہیں۔) غم، جب اللہ کے حضور پیش کیا جائے، تو ایک ایسی پکار بن جاتا ہے جسے دمشق جیسا شہر بھی نظرانداز نہ کر سکا۔",
+      "reflectionUr": "ایک غم وہ ہوتا ہے جو ناامیدی میں بدل جاتا ہے، اور ایک غم وہ ہوتا ہے جو اللہ کے حضور بہا دیا جائے اور نور بن جائے۔ قیدیوں کا ماتم کمزوری نہیں تھا؛ یہ وہ بیج تھا جس نے ایک دشمن شہر کا رخ بدل دیا۔ “میں اپنا غم صرف اللہ سے کہتا ہوں” - اور اللہ نے دیکھنے والے لوگوں کے ذریعے اس کا جواب دیا۔"
+    },
+    {
+      "id": "station7",
+      "dayNumber": 7,
+      "theme": "The Turn Homeward",
+      "themeArabic": "الْعَوْدَة",
+      "icon": "arrow.uturn.left",
+      "dua": {
+        "arabic": "لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+        "transliteration": "Lā ilāha illā anta subḥānaka innī kuntu mina’l-ẓālimīn",
+        "english": "There is no god but You; glory be to You. Indeed, I was among the wrongdoers.",
+        "source": "Qur’an 21:87 · the prayer of Yunus (AS)",
+        "englishUr": "تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ظالموں میں سے تھا۔",
+        "sourceUr": "قرآن ۲۱:۸۷ · حضرت یونسؑ کی دعا"
+      },
+      "verses": [
+        {
+          "id": "station7_v1",
+          "surahNumber": 21,
+          "verseNumber": 88,
+          "relevanceNote": "“We answered him and delivered him from grief; thus do We deliver the believers” - Yunus’s rescue, and the caravan’s release.",
+          "relevanceNoteUr": "“تو ہم نے اس کی دعا قبول کی اور اسے غم سے نجات دی، اور ہم اسی طرح ایمان والوں کو نجات دیتے ہیں” - یہ حضرت یونسؑ کی رہائی تھی، اور یہی قافلے کی رہائی بھی۔"
+        },
+        {
+          "id": "station7_v2",
+          "surahNumber": 65,
+          "verseNumber": 3,
+          "relevanceNote": "“Whoever relies upon God, He is sufficient for him … God will accomplish His purpose” - the way out that opened homeward.",
+          "relevanceNoteUr": "“اور جو اللہ پر بھروسہ کرے تو وہ اس کے لیے کافی ہے … بے شک اللہ اپنا کام پورا کر کے رہتا ہے” - یہی وہ راہ تھی جو گھر کی طرف کھلی۔"
+        }
+      ],
+      "tafsirFocus": "Fearing the turning mood, Yazid released the family, returned their looted belongings, and sent them under escort toward Medina. Reaching Iraq, they asked the guide to lead them by way of Karbala. The tyrant who meant to break them now sped them home - and the road bent, as it always would, back toward Husayn’s grave. (Tradition relates that the caravan reached the grave on Arbaeen itself; scholars differ on the dating, so we hold it gently.)",
+      "reflection": "Deliverance rarely looks like victory in the moment. Here it looked like a weary caravan turning, of its own longing, back toward a grave. The covenant was not signed in triumph but in return - choosing, again and again, to come back to Husayn.",
+      "themeUr": "وطن کی جانب واپسی",
+      "tafsirFocusUr": "بدلتے ہوئے حالات سے خوفزدہ ہو کر یزید نے خاندان کو رہا کر دیا، ان کا لوٹا ہوا سامان واپس کیا، اور انہیں محافظوں کے ساتھ مدینہ کی طرف روانہ کر دیا۔ عراق پہنچ کر انہوں نے راہنما سے درخواست کی کہ انہیں کربلا کے راستے سے لے جایا جائے۔ وہی ظالم جس نے انہیں توڑنے کا ارادہ کیا تھا، اب انہیں گھر کی طرف بھیج رہا تھا - اور راستہ، جیسا کہ ہمیشہ ہونا تھا، پھر امام حسینؑ کی قبر کی طرف مڑ گیا۔ (روایت میں آتا ہے کہ یہ قافلہ عین اربعین کے دن قبر پر پہنچا؛ علماء اس تاریخ میں اختلاف رکھتے ہیں، اس لیے ہم اسے احتیاط کے ساتھ بیان کرتے ہیں۔)",
+      "reflectionUr": "نجات شاذ ہی اس لمحے فتح کی صورت میں نظر آتی ہے۔ یہاں یہ ایک تھکے ہارے قافلے کی صورت میں دکھائی دی جو اپنے ہی اشتیاق سے ایک قبر کی طرف مڑ گیا۔ یہ عہد فتح کے لمحے میں نہیں بلکہ لوٹنے میں طے پایا - بار بار امام حسینؑ کی طرف واپس آنے کے انتخاب میں۔"
+    },
+    {
+      "id": "station8",
+      "dayNumber": 8,
+      "theme": "Arbaeen: Jabir at the Grave",
+      "themeArabic": "الْأَرْبَعِين",
+      "icon": "hands.sparkles",
+      "dua": {
+        "arabic": "السَّلَامُ عَلَىٰ وَلِيِّ اللَّهِ وَحَبِيبِهِ، السَّلَامُ عَلَىٰ خَلِيلِ اللَّهِ وَنَجِيبِهِ، السَّلَامُ عَلَىٰ صَفِيِّ اللَّهِ وَابْنِ صَفِيِّهِ، السَّلَامُ عَلَى الْحُسَيْنِ الْمَظْلُومِ الشَّهِيدِ، السَّلَامُ عَلَىٰ أَسِيرِ الْكُرُبَاتِ وَقَتِيلِ الْعَبَرَاتِ",
+        "transliteration": "As-salāmu ʿalā waliyyi’llāhi wa ḥabībih, as-salāmu ʿalā khalīli’llāhi wa najībih, as-salāmu ʿalā ṣafiyyi’llāhi wa’bni ṣafiyyih, as-salāmu ʿala’l-Ḥusayni’l-maẓlūmi’sh-shahīd, as-salāmu ʿalā asīri’l-kurubāti wa qatīli’l-ʿabarāt",
+        "english": "Peace be upon the intimate friend of God and His beloved. Peace be upon the close friend of God and His chosen one. Peace be upon the pure one of God and the son of His pure one. Peace be upon al-Husayn, the wronged, the martyred. Peace be upon the captive of agonies and the slain over whom tears are shed.",
+        "source": "Ziyārat al-Arbaʿīn · from Imam al-Ṣādiq (AS)",
+        "englishUr": "سلام ہو اللہ کے دوست اور اس کے محبوب پر۔ سلام ہو اللہ کے قریبی دوست اور اس کے برگزیدہ پر۔ سلام ہو اللہ کے پاکیزہ بندے اور اس کے پاکیزہ بندے کے فرزند پر۔ سلام ہو حسینؑ پر، جو مظلوم اور شہید ہیں۔ سلام ہو اس اسیر پر جس نے مصیبتیں جھیلیں، اور اس مقتول پر جس پر آنسو بہائے گئے۔",
+        "sourceUr": "زیارتِ اربعین · امام جعفر صادقؑ سے مروی",
+        "fullArabic": "اَلسَّلاَمُ عَلَىٰ وَلِيِّ ٱللَّهِ وَحَبِيبِهِ اَلسَّلاَمُ عَلَىٰ خَلِيلِ ٱللَّهِ وَنَجِيبِهِ اَلسَّلاَمُ عَلَىٰ صَفِيِّ ٱللَّهِ وَٱبْنِ صَفِيِّهِ اَلسَّلاَمُ عَلَىٰ ٱلْحُسَيْنِ ٱلْمَظْلُومِ ٱلشَّهِيدِ اَلسَّلاَمُ علىٰ اسِيرِ ٱلْكُرُبَاتِ وَقَتِيلِ ٱلْعَبَرَاتِ اَللَّهُمَّ إِِنِّي اشْهَدُ انَّهُ وَلِيُّكَ وَٱبْنُ وَلِيِّكَ وَصَفِيُّكَ وَٱبْنُ صَفِيِّكَ ٱلْفَائِزُ بِكَرَامَتِكَ اكْرَمْتَهُ بِٱلشَّهَادَةِ وَحَبَوْتَهُ بِٱلسَّعَادَةِ وَٱجْتَبَيْتَهُ بِطِيبِ ٱلْوِلاَدَةِ وَجَعَلْتَهُ سَيِّداً مِنَ ٱلسَّادَةِ وَقَائِداً مِنَ ٱلْقَادَةِ وَذَائِداً مِنْ ٱلذَّادَةِ وَاعْطَيْتَهُ مَوَارِيثَ ٱلانْبِيَاءِ وَجَعَلْتَهُ حُجَّةً عَلَىٰ خَلْقِكَ مِنَ ٱلاوْصِيَاءِ فَاعْذَرَ فِي ٱلدُّعَاءِ وَمَنَحَ ٱلنُّصْحَ وَبَذَلَ مُهْجَتَهُ فِيكَ لِيَسْتَنْقِذَ عِبَادَكَ مِنَ ٱلْجَهَالَةِ وَحَيْرَةِ ٱلضَّلاَلَةِ وَقَدْ تَوَازَرَ عَلَيْهِ مَنْ غَرَّتْهُ ٱلدُّنْيَا وَبَاعَ حَظَّهُ بِٱلارْذَلِ ٱلادْنَىٰ وَشَرَىٰ آخِرَتَهُ بِٱلثَّمَنِ ٱلاوْكَسِ وَتَغَطْرَسَ وَتَرَدَّىٰ فِي هَوَاهُ وَاسْخَطَكَ وَاسْخَطَ نَبِيَّكَ وَاطَاعَ مِنْ عِبَادِكَ اهْلَ ٱلشِّقَاقِ وَٱلنِّفَاقِ وَحَمَلَةَ ٱلاوْزَارِ ٱلْمُسْتَوْجِبِينَ ٱلنَّارَ فَجَاهَدَهُمْ فِيكَ صَابِراً مُحْتَسِباً حَتَّىٰ سُفِكَ فِي طَاعَتِكَ دَمُهُ وَٱسْتُبِيحَ حَرِيـمُهُ اَللَّهُمَّ فَٱلْعَنْهُمْ لَعْناً وَبيلاًَ وَعَذِّبْهُمْ عَذَاباً الِيماً اَلسَّلاَمُ عَلَيْكَ يَا بْنَ رَسُولِ ٱللَّهِ اَلسَّلاَمُ عَلَيْكَ يَا بْنَ سَيِّدِ ٱلاوْصِيَاءِ اشْهَدُ انَّكَ امِينُ ٱللَّهِ وَٱبْنُ امِينِهِ عِشْتَ سَعيداً وَمَضَيْتَ حَمِيداً وَمُتَّ فَقِيداً مَظْلُوماً شَهِيداً وَاشْهَدُ انَّ ٱللَّهَ مُنْجِزٌ مَا وَعَدَكَ وَمُهْلِكٌ مَنْ خَذَلَكَ وَمُعَذِّبٌ مَنْ قَتَلَكَ وَاشْهَدُ انَّكَ وَفَيْتَ بِعَهْدِ ٱللَّهِ وَجَاهَدْتَ فِي سَبِيلِهِ حَتَّىٰ اتَاكَ ٱلْيَقِينُ فَلَعَنَ ٱللَّهُ مَنْ قَتَلَكَ وَلَعَنَ ٱللَّهُ مَنْ ظَلَمَكَ وَلَعَنَ ٱللَّهُ امَّةً سَمِعَتْ بِذٰلِكَ فَرَضِيَتْ بِهِ اَللَّهُمَّ إِِنِّي اشْهِدُكَ انِّي وَلِيٌّ لِمَنْ وَالاَهُ وَعَدُوٌّ لِمَنْ عَادَاهُ بِابِي انْتَ وَامِّي يَا بْنَ رَسُولِ ٱللَّهِ اشْهَدُ انَّكَ كُنْتَ نُوراً فِي ٱلاصْلاَبِ ٱلشَّامِخَةِ وَٱلارْحَامِ ٱلْمُطَهَّرَةِ لَمْ تُنَجِّسْكَ ٱلْجَاهِلِيَّةُ بِانْجَاسِهَا وَلَمْ تُلْبِسْكَ ٱلْمُدْلَهِمَّاتُ مِنْ ثِيَابِهَا وَاشْهَدُ انَّكَ مِنْ دَعَائِمِ ٱلدِّينِ وَارْكَانِ ٱلْمُسْلِمِينَ وَمَعْقِلِ ٱلْمُؤْمِنِينَ وَاشْهَدُ انَّكَ ٱلإِمَامُ ٱلْبَرُّ ٱلتَّقِيُّ ٱلرَّضِيُّ ٱلزَّكِيُّ ٱلْهَادِي ٱلْمَهْدِيُّ وَاشْهَدُ انَّ ٱلائِمَّةَ مِنْ وُلْدِكَ كَلِمَةُ ٱلتَّقْوَىٰ وَاعْلاَمُ ٱلْهُدَىٰ وَٱلْعُرْوَةُ ٱلْوُثْقَىٰ وَٱلْحُجَّةُ علىٰ اهْلِ ٱلدُّنْيَا وَاشْهَدُ انِّي بِكُمْ مُؤْمِنٌ وَبِإِِيَابِكُمْ مُوقِنٌ بِشَرَايِعِ دِينِي وَخَوَاتِيمِ عَمَلِي وَقَلْبِي لِقَلْبِكُمْ سِلْمٌ وَامْرِي لاِمْرِكُمْ مُتَّبِعٌ وَنُصْرَتِي لَكُمْ مُعَدَّةٌ حَتَّىٰ يَاذَنَ اللَّهُ لَكُمْ فَمَعَكُمْ مَعَكُمْ لاََ مَعَ عَدُوِّكُمْ صَلَوَاتُ ٱللَّهِ عَلَيْكُمْ وَعَلَىٰ ارْوَاحِكُمْ وَاجْسَادِكُمْ وَشَاهِدِكُمْ وَغَائِبِكُمْ وَظَاهِرِكُمْ وَبَاطِنِكُمْ آمِينَ رَبَّ ٱلْعَالَمِينَ",
+        "fullEnglish": "Peace be upon the intimate servant of Allah and His most-beloved. Peace be upon the friend of Allah and His elite. Peace be upon the choice of Allah and son of His choice. Peace be upon al-Husayn the wronged and martyred. Peace be upon the captive of agonies and victim of the shed tears. O Allah, I do bear witness that he is verily Your intimate servant and son of Your intimate servant, Your choice and son of Your choice, and the winner of Your honoring. You have honored him with martyrdom, endued him with happiness, privileged him with legitimate birth, made him one of the chiefs, one of the leaders, and one of the defenders (of Your religion), gave him the inheritances of the Prophets, and chose him as argument against Your created beings and one of the Prophets’ successors. So, he called to you flawlessly, gave advices, and sacrificed his soul for You to save Your servants from ignorance and perplexity of straying off. Yet, those whom were seduced by this worldly life, who sold their share (of reward) with the lowliest and meanest, retailed their Hereafter with the cheapest price, acted haughtily, perished because of following their desires, brought to themselves Your wrath and the wrath of Your Prophet, and obeyed the dissident and hypocritical servants of You and the bearers of the burdens (of sins) who deserve Hellfire—all those supported each other against him. However, he fought against them painstakingly with steadfastness expecting Your reward until his blood was shed on account of his obedience to You and his women were violated. So, O Allah, pour heavy curses on them and chastise them with painful chastisement. Peace be upon you, O son of Allah’s Messenger. Peace be upon you, O son of the chief of the Prophets’ successors. I bear witness that you are verily the trustee of Allah and the son of His trustee. You lived with happiness, passed away with praiseworthiness, and died missed, wronged, and martyred. I also bear witness that Allah shall inevitably fulfill His promise to You, exterminate those who disappointed you, and chastise those who slew you. I also bear witness that you fulfilled your pledge to Allah and strove hard in His way until death came upon you. So, may Allah curse those who slew you. May Allah curse those who wronged you. May Allah curse the people who, when informed about that, were pleased with it. O Allah, I do ask You to witness for me that I am loyalist to those who are loyalists to him and enemy of those who are enemies of him. May my father and mother be accepted as ransoms for you, O son of Allah’s Messenger. I bear witness that you were light in the sublime loins and purified wombs; the impurities of the Ignorance Era could not object you to filth nor could its murky clothes dress you. I also bear witness that you are one of the mainstays of the religion, the supports of Muslims, and the haven of the believers. I also bear witness that you are the God-fearing, pious, pleased, immaculate, guide, and well-guided Imam. And I bear witness that the Imams from your progeny are the spokesmen of piety, the signs of guidance, the firmest handle (of Islam), and the decisive Argument against the inhabitants of the world. I also bear witness that I believe in you all and in your Return, I have full confidence in the laws of my religion and in the seals of my deeds, my heart is at peace with you all, all my affairs are based on your commands, and my support for you all is already all set until Allah permits you. So, I am with you. I am with you, not with your enemies. Allah’s blessings be upon you, upon your souls, upon your bodies, upon the present and the absent from you, and upon the apparent and the invisible from you. Respond to us, O Lord of the Worlds."
+      },
+      "verses": [
+        {
+          "id": "station8_v1",
+          "surahNumber": 3,
+          "verseNumber": 169,
+          "relevanceNote": "“Think not those slain in the way of God dead; they are alive, provided for by their Lord” - the ground of the ziyarat: the pilgrim greets a living Husayn.",
+          "relevanceNoteUr": "“اور جو لوگ اللہ کی راہ میں قتل کیے گئے انہیں مردہ مت سمجھو، بلکہ وہ زندہ ہیں، اپنے رب کے پاس رزق پا رہے ہیں” - یہی زیارت کی بنیاد ہے: زائر ایک زندہ امام حسینؑ سے ملاقات کرتا ہے۔"
+        },
+        {
+          "id": "station8_v2",
+          "surahNumber": 89,
+          "verseNumber": 28,
+          "relevanceNote": "“Return to your Lord, well-pleased and pleasing to Him” - the Return that Arbaeen names, the soul’s homecoming to God.",
+          "relevanceNoteUr": "“اپنے رب کی طرف لوٹ آ، اس حال میں کہ تو راضی ہو اور وہ تجھ سے راضی ہو” - یہی وہ واپسی ہے جس کا نام اربعین ہے، روح کی اللہ کی طرف گھر واپسی۔"
+        }
+      ],
+      "tafsirFocus": "On the fortieth day, an old and near-blind companion of the Prophet - Jabir ibn Abdullah al-Ansari - came with Atiyya to the grave: the first pilgrim of Husayn. He bathed in the Euphrates, perfumed himself, and walked “taking no step but in the remembrance of God,” then fell upon the grave crying “Ya Husayn!” When Atiyya asked how they could share in the martyrs’ reward, Jabir answered with the Prophet’s words: “Whoever loves a people is raised with them.” What Jabir began that day, millions have never stopped.",
+      "reflection": "“Think not them dead,” says the Qur’an; “they are alive.” The Ziyarat of Arbaeen is spoken to a Husayn who hears. Loyalty is measured not on the day of the tragedy, but forty days later - when the crowds have gone home and only the faithful return. Jabir asks, across the centuries: will you still come?",
+      "themeUr": "اربعین: قبر پر جابرؓ",
+      "tafsirFocusUr": "چالیسویں دن، رسول اللہﷺ کے ایک بزرگ اور تقریباً نابینا صحابی - جابر بن عبداللہ انصاریؓ - عطیہ کے ہمراہ قبر پر حاضر ہوئے: امام حسینؑ کے پہلے زائر۔ انہوں نے دریائے فرات میں غسل کیا، خوشبو لگائی، اور اس طرح چلے کہ “ہر قدم اللہ کے ذکر کے ساتھ اٹھایا”، پھر قبر پر گر کر پکار اٹھے: “یا حسینؑ!” جب عطیہ نے پوچھا کہ ہم شہداء کے اجر میں کیسے شریک ہو سکتے ہیں، تو جابرؓ نے رسول اللہﷺ کے یہ الفاظ دہرائے: “جو کسی قوم سے محبت کرے وہ انہی کے ساتھ اٹھایا جائے گا۔” جو سلسلہ جابرؓ نے اس دن شروع کیا، لاکھوں لوگ آج تک اسے جاری رکھے ہوئے ہیں۔",
+      "reflectionUr": "“انہیں مردہ مت سمجھو”، قرآن فرماتا ہے، “بلکہ وہ زندہ ہیں”۔ زیارتِ اربعین اس امام حسینؑ سے مخاطب ہو کر پڑھی جاتی ہے جو سنتا ہے۔ وفاداری کا امتحان سانحے کے دن نہیں بلکہ چالیس دن بعد ہوتا ہے - جب ہجوم گھر لوٹ چکا ہو اور صرف سچے چاہنے والے ہی واپس آئیں۔ جابرؓ صدیوں کے پار سے پوچھتے ہیں: کیا تم اب بھی آؤ گے؟"
+    }
+  ]
+}

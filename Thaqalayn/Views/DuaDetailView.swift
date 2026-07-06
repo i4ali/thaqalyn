@@ -11,7 +11,6 @@ struct DuaDetailView: View {
     let dua: DailyDua
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
-    @StateObject private var tafsirReader = TafsirReader.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @StateObject private var dataManager = DataManager.shared
     @State private var navigateToVerse = false
@@ -28,7 +27,7 @@ struct DuaDetailView: View {
                 VStack(spacing: 24) {
                     headerSection
                     arabicSection
-                    ttsButton
+                    DuaListenButton(arabic: dua.arabic)
                     transliterationSection
                     translationSection
                     sourceSection
@@ -48,11 +47,6 @@ struct DuaDetailView: View {
                 ) { EmptyView() }
                 .frame(width: 0, height: 0)
                 .hidden()
-            }
-        }
-        .onDisappear {
-            if tafsirReader.currentText == dua.arabic {
-                tafsirReader.stop()
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -104,7 +98,7 @@ struct DuaDetailView: View {
                         .textSelection(.enabled)
                 }
 
-                emeraldTTSButton
+                DuaListenButton(arabic: dua.arabic)
 
                 Text(dua.transliteration)
                     .font(EmType.serifItalic(17 * readingSettings.scale))
@@ -145,21 +139,6 @@ struct DuaDetailView: View {
             .padding(.top, 16)
             .padding(.bottom, 40)
         }
-    }
-
-    private var emeraldTTSButton: some View {
-        Button(action: handleTTSTap) {
-            HStack(spacing: 8) {
-                Image(systemName: ttsIconName).font(.system(size: 15, weight: .semibold))
-                Text(ttsLabel).font(.system(size: 14.5, weight: .semibold))
-            }
-            .foregroundColor(themeManager.accentColor)
-            .padding(.horizontal, 20).padding(.vertical, 11)
-            .background(Capsule().fill(themeManager.accentChip))
-            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-        }
-        .buttonStyle(EmPressStyle())
-        .frame(maxWidth: .infinity)
     }
 
     // MARK: - Sections
@@ -230,51 +209,6 @@ struct DuaDetailView: View {
             .background(themedCardBackground)
             .environment(\.layoutDirection, .rightToLeft)
             .textSelection(.enabled)
-    }
-
-    private var ttsButton: some View {
-        Button(action: handleTTSTap) {
-            HStack(spacing: 8) {
-                Image(systemName: ttsIconName)
-                    .font(.system(size: 16, weight: .semibold))
-                Text(ttsLabel)
-                    .font(.system(size: 15, weight: .semibold))
-            }
-            .foregroundColor(themeManager.primaryText)
-            .padding(.horizontal, 18)
-            .padding(.vertical, 12)
-            .background(
-                Capsule()
-                    .fill(themeManager.secondaryBackground.opacity(0.8))
-                    .overlay(
-                        Capsule().stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            )
-        }
-        .frame(maxWidth: .infinity)
-    }
-
-    private var ttsIconName: String {
-        if tafsirReader.currentText == dua.arabic && tafsirReader.isPlaying {
-            return "pause.fill"
-        }
-        return "speaker.wave.2.fill"
-    }
-
-    private var ttsLabel: String {
-        if tafsirReader.currentText == dua.arabic {
-            if tafsirReader.isPlaying { return "Pause" }
-            if tafsirReader.isPaused { return "Resume" }
-        }
-        return "Listen"
-    }
-
-    private func handleTTSTap() {
-        if tafsirReader.currentText == dua.arabic && (tafsirReader.isPlaying || tafsirReader.isPaused) {
-            tafsirReader.togglePlayPause()
-        } else {
-            tafsirReader.speak(text: dua.arabic, language: .arabic)
-        }
     }
 
     private var transliterationSection: some View {

@@ -2,9 +2,9 @@
 //  JourneyStrings.swift
 //  Thaqalayn
 //
-//  Language-driven copy for the Journey tab — hub, the four seasonal journeys
-//  (Ramadan, Dhul-Hijjah/Hajj, Muharram, Fatimiyya), their day lists and day-detail
-//  screens. Keyed off the global Settings → Language picker.
+//  Language-driven copy for the Journey tab — hub, the seasonal journeys
+//  (Ramadan, Dhul-Hijjah/Hajj, Muharram, Fatimiyya, Arbaeen), their day lists and
+//  day-detail screens. Keyed off the global Settings → Language picker.
 //
 //  Per product decision this tab is localized to Urdu only; Arabic falls back to
 //  English here. Day NARRATIVE content (theme/tafsir/reflection/du'a/notes) is
@@ -20,7 +20,14 @@ enum JourneyStrings {
     static func sacredSeasons(_ l: CommentaryLanguage) -> String { ur(l) ? "مقدس ایام" : "Sacred Seasons" }
     static func journeys(_ l: CommentaryLanguage) -> String { ur(l) ? "روحانی سفر" : "Journeys" }
     static func journeysSub(_ l: CommentaryLanguage) -> String {
-        ur(l) ? "ہر مقدس موسم کو گہرائی سے جئیں، اور اسے اپنے آپ کو بدلنے دیں۔" : "Live each sacred season deeply, and let it transform you."
+        ur(l) ? "کسی مقدس موسم کو جئیں، یا کسی موضوع کی گہرائی میں اتریں۔" : "Live a sacred season, or descend into a theme."
+    }
+    static func grow(_ l: CommentaryLanguage) -> String { ur(l) ? "نشوونما" : "Grow" }
+    static func deepDives(_ l: CommentaryLanguage) -> String { ur(l) ? "گہرے سفر" : "Deep Dives" }
+    static func deepDivesSub(_ l: CommentaryLanguage) -> String { ur(l) ? "جب چاہیں دریافت کریں" : "explore anytime" }
+    static func comingSoon(_ l: CommentaryLanguage) -> String { ur(l) ? "جلد آ رہا ہے" : "Coming soon" }
+    static func deepDiveOnItsWay(_ title: String, _ l: CommentaryLanguage) -> String {
+        ur(l) ? "\(title) جلد دستیاب ہوگا۔" : "\(title) is on its way."
     }
     static func nextUp(_ l: CommentaryLanguage) -> String { ur(l) ? "اگلا" : "NEXT UP" }
     static func comingSoonInDays(_ days: Int, _ l: CommentaryLanguage) -> String {
@@ -68,6 +75,7 @@ enum JourneyStrings {
         case "hajj":     return "ذی الحجہ"
         case "muharram": return "محرم"
         case "fatimiyya":return "ایامِ فاطمیہ"
+        case "arbaeen":  return "اربعین"
         default:         return englishTitle(id)
         }
     }
@@ -77,6 +85,7 @@ enum JourneyStrings {
         case "hajj":     return "Dhul-Hijjah"
         case "muharram": return "Muharram"
         case "fatimiyya":return "Fatimiyya"
+        case "arbaeen":  return "Arbaeen"
         default:         return id.capitalized
         }
     }
@@ -87,6 +96,7 @@ enum JourneyStrings {
         case "hajj":     return "10 روزہ سفر"
         case "muharram": return "10 روزہ سفر"
         case "fatimiyya":return "عزائے زہراؑ"
+        case "arbaeen":  return "40 روزہ سفر"
         default:         return english
         }
     }
@@ -99,10 +109,14 @@ enum JourneyStrings {
     static func daysObserved(_ done: Int, _ total: Int, _ l: CommentaryLanguage) -> String {
         ur(l) ? "\(total) میں سے \(done) دن منائے گئے" : "\(done) of \(total) days observed"
     }
+    static func stationsObserved(_ done: Int, _ total: Int, _ l: CommentaryLanguage) -> String {
+        ur(l) ? "\(total) میں سے \(done) منزلیں منائی گئیں" : "\(done) of \(total) stations observed"
+    }
     static func daysCompleted(_ done: Int, _ total: Int, _ l: CommentaryLanguage) -> String {
         ur(l) ? "\(total) میں سے \(done) دن مکمل" : "\(done) of \(total) days completed"
     }
     static func dayN(_ n: Int, _ l: CommentaryLanguage) -> String { ur(l) ? "دن \(n)" : "Day \(n)" }
+    static func stationN(_ n: Int, _ l: CommentaryLanguage) -> String { ur(l) ? "منزل \(n)" : "Station \(n)" }
     static func today(_ l: CommentaryLanguage) -> String { ur(l) ? "آج" : "TODAY" }
     static func loadingJourney(_ l: CommentaryLanguage) -> String { ur(l) ? "سفر لوڈ ہو رہا ہے…" : "Loading journey..." }
     static func errorLoadingJourney(_ l: CommentaryLanguage) -> String { ur(l) ? "سفر لوڈ کرنے میں خرابی" : "Error Loading Journey" }
@@ -113,6 +127,9 @@ enum JourneyStrings {
     static func reflection(_ l: CommentaryLanguage) -> String { ur(l) ? "غور و فکر" : "Reflection" }
     static func duaZiyarat(_ l: CommentaryLanguage) -> String { ur(l) ? "دعا / زیارت" : "Dua / Ziyarat" }
     static func fullTafsir(_ l: CommentaryLanguage) -> String { ur(l) ? "مکمل تفسیر" : "Full Tafsir" }
+    static func readFullZiyarat(_ l: CommentaryLanguage) -> String { ur(l) ? "مکمل زیارت پڑھیں" : "Read the full ziyarat" }
+    static func fullZiyaratTitle(_ l: CommentaryLanguage) -> String { ur(l) ? "زیارتِ اربعین" : "Ziyarat of Arbaeen" }
+    static func done(_ l: CommentaryLanguage) -> String { ur(l) ? "مکمل" : "Done" }
     static func backToJourney(_ l: CommentaryLanguage) -> String { ur(l) ? "واپس" : "Journey" }
     static func ashura(_ l: CommentaryLanguage) -> String { ur(l) ? "عاشورا" : "Ashura" }
 

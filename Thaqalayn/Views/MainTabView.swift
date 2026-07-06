@@ -156,6 +156,9 @@ struct MainTabView: View {
             DeepLinkRouter.shared.pendingJourneyId = journeyId
             selectedTab = 4
         }
+        #if DEBUG
+        .onAppear { if ProcessInfo.processInfo.arguments.contains("-ddYaqin") { selectedTab = 4 } }
+        #endif
     }
 }
 

@@ -85,7 +85,7 @@ extension JourneyAnnouncement {
             leadInIsPreviousHijriYear: false,
             tabTag: 5,
             isWithinAnnounceWindow: { month, day in
-                (month == 11 && day >= 25) || (month == 12 && day <= 10) // NOT the 11-13 tail.
+                (month == 11 && day >= 25) || (month == 12 && day <= 10) // NOT the 11-15 tail.
             }
         ),
         JourneyAnnouncement(
@@ -96,7 +96,7 @@ extension JourneyAnnouncement {
             leadInIsPreviousHijriYear: true,
             tabTag: 6,
             isWithinAnnounceWindow: { month, day in
-                (month == 12 && day >= 25) || (month == 1 && day <= 10) // NOT the 11-12 grace.
+                (month == 12 && day >= 25) || (month == 1 && day <= 10) // NOT the 11-15 grace.
             }
         ),
         JourneyAnnouncement(
@@ -108,6 +108,19 @@ extension JourneyAnnouncement {
             tabTag: 4,
             isWithinAnnounceWindow: { month, day in
                 month == 5 && day >= 8 && day <= 15
+            }
+        ),
+        JourneyAnnouncement(
+            id: "arbaeen",
+            title: "The Arbaeen Journey is open",
+            body: "Ashura has passed; the caravan sets out. Walk the forty-day road of the return with the family of al-Husayn (AS). Tap to begin.",
+            leadInHijriMonth: 1, leadInHijriDay: 11,
+            leadInIsPreviousHijriYear: false,
+            tabTag: 4,
+            isWithinAnnounceWindow: { month, day in
+                // From 11 Muharram (the day after Ashura) through Arbaeen (20 Safar);
+                // matches the openable window's start, minus the 21–25 grace tail.
+                (month == 1 && day >= 11) || (month == 2 && day <= 20)
             }
         )
     ]

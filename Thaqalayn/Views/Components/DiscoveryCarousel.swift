@@ -13,7 +13,6 @@ struct DiscoveryCarousel: View {
     @State private var pauseAutoScroll = false
     @State private var showLifeMoments = false
     @State private var showDuas = false
-    @State private var showQuestions = false
     @State private var showPropheticStories = false
     @State private var showAhlulbaytQuran = false
 
@@ -27,14 +26,11 @@ struct DiscoveryCarousel: View {
                 DuasCarouselCard(showFullView: $showDuas)
                     .tag(1)
 
-                QuestionsCarouselCard(showFullView: $showQuestions)
+                PropheticStoriesCarouselCard(showFullView: $showPropheticStories)
                     .tag(2)
 
-                PropheticStoriesCarouselCard(showFullView: $showPropheticStories)
-                    .tag(3)
-
                 AhlulbaytQuranCarouselCard(showFullView: $showAhlulbaytQuran)
-                    .tag(4)
+                    .tag(3)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .frame(height: 145)
@@ -47,7 +43,7 @@ struct DiscoveryCarousel: View {
 
             // Page indicators
             HStack(spacing: 6) {
-                ForEach(0..<5, id: \.self) { index in
+                ForEach(0..<4, id: \.self) { index in
                     Circle()
                         .fill(currentPage == index ?
                               Color.accentColor : Color.gray.opacity(0.3))
@@ -78,9 +74,6 @@ struct DiscoveryCarousel: View {
         .fullScreenCover(isPresented: $showDuas) {
             DuasView()
         }
-        .fullScreenCover(isPresented: $showQuestions) {
-            QuestionsView()
-        }
         .fullScreenCover(isPresented: $showPropheticStories) {
             PropheticStoriesView()
         }
@@ -92,7 +85,7 @@ struct DiscoveryCarousel: View {
     private func startAutoScroll() {
         autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: true) { _ in
             withAnimation(.easeInOut(duration: 0.5)) {
-                currentPage = (currentPage + 1) % 5
+                currentPage = (currentPage + 1) % 4
             }
         }
     }

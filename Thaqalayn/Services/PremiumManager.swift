@@ -200,6 +200,16 @@ class PremiumManager: ObservableObject {
         return isPremium
     }
 
+    // MARK: - Arbaeen Journey Access Control
+
+    /// Check if user can access an Arbaeen ("The Return") station
+    /// - Station 1 is always free
+    /// - Stations 2–8 require premium
+    func canAccessArbaeenStation(_ stationNumber: Int) -> Bool {
+        if stationNumber == 1 { return true }
+        return isPremium
+    }
+
     // MARK: - Explore Feature Access Control
 
     /// Explore sections (Foods, Daily Duas, Life Moments, Q&A, Prophetic

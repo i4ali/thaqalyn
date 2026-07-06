@@ -79,17 +79,6 @@ enum ExploreSection: CaseIterable {
                     destination: .propheticParallels
                 ),
                 ExploreItem(
-                    id: "questions",
-                    icon: "questionmark.circle",
-                    titleEn: "Questions & Answers",
-                    titleAr: "أسئلة وأجوبة",
-                    titleUr: "سوالات و جوابات",
-                    subtitleEn: "Quranic answers to questions",
-                    subtitleAr: "أجوبة قرآنية على تساؤلاتك",
-                    subtitleUr: "سوالوں کے قرآنی جوابات",
-                    destination: .questions
-                ),
-                ExploreItem(
                     id: "fasting",
                     icon: "moon.fill",
                     titleEn: "Fasting in the Quran",
@@ -162,7 +151,6 @@ enum ExploreDestination {
     case lifeMoments
     case dailyDuas
     case propheticParallels
-    case questions
     case fasting
     case foods
     case propheticStories
@@ -177,7 +165,6 @@ struct ExploreView: View {
     @State private var showLifeMoments = false
     @State private var showDailyDuas = false
     @State private var showPropheticParallels = false
-    @State private var showQuestions = false
     @State private var showFasting = false
     @State private var showPropheticStories = false
     @State private var showAhlulbaytQuran = false
@@ -218,9 +205,6 @@ struct ExploreView: View {
         }
         .fullScreenCover(isPresented: $showPropheticParallels) {
             PropheticParallelsView()
-        }
-        .fullScreenCover(isPresented: $showQuestions) {
-            QuestionsView()
         }
         .fullScreenCover(isPresented: $showFasting) {
             FastingVersesView()
@@ -312,8 +296,6 @@ struct ExploreView: View {
             return "hands.sparkles.fill"
         case .propheticParallels:
             return "person.2.wave.2.fill"
-        case .questions:
-            return "questionmark.circle"
         case .fasting:
             return "moon.fill"
         case .propheticStories:
@@ -335,8 +317,6 @@ struct ExploreView: View {
                 showDailyDuas = true
             case .propheticParallels:
                 showPropheticParallels = true
-            case .questions:
-                showQuestions = true
             case .fasting:
                 showFasting = true
             case .propheticStories:

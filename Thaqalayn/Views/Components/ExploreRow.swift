@@ -72,9 +72,9 @@ struct ExploreRow: View {
             Divider()
 
             ExploreRow(
-                icon: "questionmark.circle",
-                title: "Questions & Answers",
-                subtitle: "Quranic answers to questions"
+                icon: "hands.sparkles.fill",
+                title: "Daily Duas",
+                subtitle: "20 supplications for everyday moments"
             ) {
                 print("Tapped")
             }

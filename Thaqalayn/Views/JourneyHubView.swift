@@ -12,6 +12,9 @@ import SwiftUI
 /// Identifiable wrapper so `.fullScreenCover(item:)` can key on a journey id.
 struct PresentedJourney: Identifiable { let id: String }
 
+/// Identifiable wrapper so `.fullScreenCover(item:)` can key on a deep-dive id.
+struct PresentedDeepDive: Identifiable { let id: String }
+
 /// Content for the alert shown when a locked (non-active) journey is tapped.
 struct LockedJourneyAlert: Identifiable {
     let id = UUID()
@@ -27,6 +30,8 @@ struct JourneyHubView: View {
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     @State private var presented: PresentedJourney?
+    /// Set when an available deep dive is tapped — drives its full-screen descent.
+    @State private var presentedDive: PresentedDeepDive?
     /// Set when a locked journey is tapped — drives the "ended / not open yet" alert.
     @State private var lockedAlert: LockedJourneyAlert?
 
@@ -64,7 +69,7 @@ struct JourneyHubView: View {
             AdaptiveModernBackground()
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    EmHeading(eyebrow: JourneyStrings.sacredSeasons(lang), title: JourneyStrings.journeys(lang),
+                    EmHeading(eyebrow: JourneyStrings.grow(lang), title: JourneyStrings.journeys(lang),
                               sub: JourneyStrings.journeysSub(lang))
                         .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
                         .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
@@ -72,11 +77,21 @@ struct JourneyHubView: View {
                         .padding(.top, 12)
                         .padding(.bottom, 22)   // clear gap so the cards sit below the top glow/header zone
 
+                    EmDivider(label: JourneyStrings.sacredSeasons(lang))
+                        .padding(.horizontal, 4).padding(.bottom, 2)
+
                     ForEach(ordered, id: \.descriptor.id) { item in
                         JourneyCard(descriptor: item.descriptor, status: item.status,
                                     isNextUp: item.descriptor.id == nextUpId) {
                             handleTap(item.descriptor, item.status)
                         }
+                    }
+
+                    EmDivider(label: JourneyStrings.deepDives(lang))
+                        .padding(.horizontal, 4).padding(.top, 14).padding(.bottom, 2)
+
+                    ForEach(DeepDiveDescriptor.all) { d in
+                        DeepDiveCard(descriptor: d) { handleDiveTap(d) }
                     }
                 }
                 .padding(.horizontal, 20)
@@ -89,7 +104,19 @@ struct JourneyHubView: View {
                 JourneyCover(descriptor: d) { presented = nil }
             }
         }
-        .onAppear { consumePendingJourney() }
+        .fullScreenCover(item: $presentedDive) { p in
+            if let dive = DeepDiveDescriptor.byId(p.id)?.dive {
+                DeepDiveView(dive: dive) { presentedDive = nil }
+            }
+        }
+        .onAppear {
+            consumePendingJourney()
+            #if DEBUG
+            if ProcessInfo.processInfo.arguments.contains("-ddYaqin") {
+                presentedDive = PresentedDeepDive(id: "yaqin")
+            }
+            #endif
+        }
         .onChange(of: router.pendingJourneyId) { _, _ in consumePendingJourney() }
         .overlay {
             if let alert = lockedAlert {
@@ -112,6 +139,23 @@ struct JourneyHubView: View {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
             withAnimation(.easeInOut(duration: 0.2)) {
                 lockedAlert = makeLockedAlert(for: d, status: status)
+            }
+        }
+    }
+
+    /// Available dives open their full-screen descent (after the press squish);
+    /// coming-soon dives reuse the locked overlay with a short "on its way" note.
+    private func handleDiveTap(_ d: DeepDiveDescriptor) {
+        if d.available {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                presentedDive = PresentedDeepDive(id: d.id)
+            }
+        } else {
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            withAnimation(.easeInOut(duration: 0.2)) {
+                lockedAlert = LockedJourneyAlert(title: JourneyStrings.comingSoon(lang),
+                                                 detail: JourneyStrings.deepDiveOnItsWay(d.titleEn, lang),
+                                                 pointer: nil)
             }
         }
     }
