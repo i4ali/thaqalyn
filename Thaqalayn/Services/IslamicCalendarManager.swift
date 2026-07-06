@@ -193,22 +193,32 @@ class IslamicCalendarManager: ObservableObject {
     }
 
     /// Get the Ramadan season status message
+    /// Localize a season-status line (English / Urdu / Arabic; English is the fallback).
+    private func seasonText(en: String, ur: String, ar: String) -> String {
+        switch CommentaryLanguageManager.shared.selectedLanguage {
+        case .urdu:   return ur
+        case .arabic: return ar
+        default:      return en
+        }
+    }
+
     func ramadanSeasonStatus() -> String {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
-        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
 
         switch month {
         case 8:
             if let daysUntil = daysUntilRamadan(), daysUntil > 0 {
-                return ur ? "رمضان میں \(daysUntil) دن باقی" : "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Ramadan"
+                return seasonText(en: "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Ramadan",
+                                  ur: "رمضان میں \(daysUntil) دن باقی",
+                                  ar: "\(daysUntil) يوماً حتى رمضان")
             }
-            return ur ? "رمضان جلد شروع ہو رہا ہے" : "Ramadan begins soon"
+            return seasonText(en: "Ramadan begins soon", ur: "رمضان جلد شروع ہو رہا ہے", ar: "رمضان يبدأ قريباً")
         case 9:
-            return ur ? "رمضان کا دن \(day)" : "Day \(day) of Ramadan"
+            return seasonText(en: "Day \(day) of Ramadan", ur: "رمضان کا دن \(day)", ar: "اليوم \(day) من رمضان")
         case 10:
             if day <= 5 {
-                return ur ? "عید مبارک!" : "Eid Mubarak!"
+                return seasonText(en: "Eid Mubarak!", ur: "عید مبارک!", ar: "عيد مبارك!")
             }
             return ""
         default:
@@ -258,25 +268,26 @@ class IslamicCalendarManager: ObservableObject {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
 
-        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
         switch month {
         case 11:
             if let daysUntil = daysUntilHajj(), daysUntil > 0 {
-                return ur ? "ذی الحجہ میں \(daysUntil) دن باقی" : "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Dhul-Hijjah"
+                return seasonText(en: "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Dhul-Hijjah",
+                                  ur: "ذی الحجہ میں \(daysUntil) دن باقی",
+                                  ar: "\(daysUntil) يوماً حتى ذي الحجة")
             }
-            return ur ? "ذی الحجہ جلد شروع ہو رہا ہے" : "Dhul-Hijjah begins soon"
+            return seasonText(en: "Dhul-Hijjah begins soon", ur: "ذی الحجہ جلد شروع ہو رہا ہے", ar: "ذو الحجة يبدأ قريباً")
         case 12:
             if day == 9 {
-                return ur ? "یومِ عرفہ" : "Day of Arafah"
+                return seasonText(en: "Day of Arafah", ur: "یومِ عرفہ", ar: "يوم عرفة")
             }
             if day == 10 {
-                return ur ? "عیدالاضحیٰ مبارک!" : "Eid al-Adha Mubarak!"
+                return seasonText(en: "Eid al-Adha Mubarak!", ur: "عیدالاضحیٰ مبارک!", ar: "عيد الأضحى مبارك!")
             }
             if day <= 10 {
-                return ur ? "ذی الحجہ کا دن \(day)" : "Day \(day) of Dhul-Hijjah"
+                return seasonText(en: "Day \(day) of Dhul-Hijjah", ur: "ذی الحجہ کا دن \(day)", ar: "اليوم \(day) من ذي الحجة")
             }
             if day <= 15 {
-                return ur ? "عیدالاضحیٰ مبارک!" : "Eid al-Adha Mubarak!"
+                return seasonText(en: "Eid al-Adha Mubarak!", ur: "عیدالاضحیٰ مبارک!", ar: "عيد الأضحى مبارك!")
             }
             return ""
         default:
@@ -323,22 +334,23 @@ class IslamicCalendarManager: ObservableObject {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
 
-        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
         switch month {
         case 12:
             if let daysUntil = daysUntilMuharram(), daysUntil > 0 {
-                return ur ? "محرم میں \(daysUntil) دن باقی" : "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Muharram"
+                return seasonText(en: "\(daysUntil) day\(daysUntil == 1 ? "" : "s") until Muharram",
+                                  ur: "محرم میں \(daysUntil) دن باقی",
+                                  ar: "\(daysUntil) يوماً حتى المحرّم")
             }
-            return ur ? "محرم جلد شروع ہو رہا ہے" : "Muharram begins soon"
+            return seasonText(en: "Muharram begins soon", ur: "محرم جلد شروع ہو رہا ہے", ar: "المحرّم يبدأ قريباً")
         case 1:
             if day == 10 {
-                return ur ? "عاشورا — یا حسینؑ" : "Ashura — Ya Husayn (AS)"
+                return seasonText(en: "Ashura — Ya Husayn (AS)", ur: "عاشورا — یا حسینؑ", ar: "عاشوراء - يا حسين (ع)")
             }
             if day <= 10 {
-                return ur ? "محرم کا دن \(day)" : "Day \(day) of Muharram"
+                return seasonText(en: "Day \(day) of Muharram", ur: "محرم کا دن \(day)", ar: "اليوم \(day) من المحرّم")
             }
             if day <= 15 {
-                return ur ? "ماتم جاری ہے — یا حسینؑ" : "The mourning continues — Ya Husayn (AS)"
+                return seasonText(en: "The mourning continues — Ya Husayn (AS)", ur: "ماتم جاری ہے — یا حسینؑ", ar: "الحزن مستمر - يا حسين (ع)")
             }
             return ""
         default:
@@ -365,10 +377,9 @@ class IslamicCalendarManager: ObservableObject {
     func fatimiyyaSeasonStatus() -> String {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
-        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
         switch month {
-        case 5 where (8...18).contains(day): return ur ? "پہلی فاطمیہ — یا زہراؑ" : "First Fatimiyya — Yā Zahrā (AS)"
-        case 6 where (1...8).contains(day):  return ur ? "دوسری فاطمیہ — یا زہراؑ" : "Second Fatimiyya — Yā Zahrā (AS)"
+        case 5 where (8...18).contains(day): return seasonText(en: "First Fatimiyya — Yā Zahrā (AS)", ur: "پہلی فاطمیہ — یا زہراؑ", ar: "الفاطمية الأولى - يا زهراء (ع)")
+        case 6 where (1...8).contains(day):  return seasonText(en: "Second Fatimiyya — Yā Zahrā (AS)", ur: "دوسری فاطمیہ — یا زہراؑ", ar: "الفاطمية الثانية - يا زهراء (ع)")
         default: return ""
         }
     }
@@ -417,17 +428,18 @@ class IslamicCalendarManager: ObservableObject {
     func arbaeenSeasonStatus() -> String {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
-        let ur = CommentaryLanguageManager.shared.selectedLanguage == .urdu
         switch month {
         case 1 where day >= 11:
-            return ur ? "راہِ اربعین — عودتِ کاروان" : "The Return — the road to Arbaeen"
+            return seasonText(en: "The Return — the road to Arbaeen", ur: "راہِ اربعین — عودتِ کاروان", ar: "الطريق إلى الأربعين - عودة القافلة")
         case 2 where day < 20:
             let left = 20 - day
-            return ur ? "اربعین میں \(left) دن باقی" : "\(left) day\(left == 1 ? "" : "s") until Arbaeen"
+            return seasonText(en: "\(left) day\(left == 1 ? "" : "s") until Arbaeen",
+                              ur: "اربعین میں \(left) دن باقی",
+                              ar: "\(left) يوماً حتى الأربعين")
         case 2 where day == 20:
-            return ur ? "اربعین — یا حسینؑ" : "Arbaeen — Ya Husayn (AS)"
+            return seasonText(en: "Arbaeen — Ya Husayn (AS)", ur: "اربعین — یا حسینؑ", ar: "الأربعين - يا حسين (ع)")
         case 2 where day <= 25:
-            return ur ? "زیارتِ اربعین — یا حسینؑ" : "Ziyarat of Arbaeen — Ya Husayn (AS)"
+            return seasonText(en: "Ziyarat of Arbaeen — Ya Husayn (AS)", ur: "زیارتِ اربعین — یا حسینؑ", ar: "زيارة الأربعين - يا حسين (ع)")
         default:
             return ""
         }

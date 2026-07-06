@@ -93,7 +93,7 @@ struct JourneyDescriptor: Identifiable {
                 }
                 func medium(_ d: Date) -> String {
                     let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
-                    f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en")
+                    f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .arabic ? "ar" : (CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en"))
                     return f.string(from: d)
                 }
                 let now = cal.now
@@ -135,7 +135,7 @@ struct JourneyDescriptor: Identifiable {
                 }
                 func medium(_ d: Date) -> String {
                     let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
-                    f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en")
+                    f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .arabic ? "ar" : (CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en"))
                     return f.string(from: d)
                 }
                 let now = cal.now
@@ -199,7 +199,7 @@ extension JourneyDescriptor {
 
     private static func medium(_ date: Date) -> String {
         let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
-        f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en")
+        f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .arabic ? "ar" : (CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en"))
         return f.string(from: date)
     }
 }
