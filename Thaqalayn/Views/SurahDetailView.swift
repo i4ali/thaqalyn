@@ -1150,13 +1150,6 @@ struct ModernTafsirTabs: View {
         return VStack(spacing: 4) {
             HStack(spacing: 4) {
                 PhosphorIcon(name: layerIcon(for: layer), size: 16)
-
-                // Lock icon for locked layers
-                if isLocked {
-                    Image(systemName: "lock.fill")
-                        .font(.system(size: 10, weight: .semibold))
-                        .foregroundColor(.yellow)
-                }
             }
 
             Text(layerShortTitle(for: layer))

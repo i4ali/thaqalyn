@@ -6,6 +6,12 @@
 //  alongside the seasonal journeys. Mirrors JourneyCatalog's shape but carries no
 //  calendar logic — a dive is simply available or coming soon.
 //
+//  Card copy (title + subtitle) is localized via `LocalizedText` — the same type the
+//  `DeepDive` model uses. Per the Journey-tab product decision, only Urdu is authored
+//  here; Arabic falls back to English (see JourneyStrings). The shared "Deep Dive"
+//  eyebrow and the FEATURED / PREMIUM / SOON chrome are localized in the card via
+//  `JourneyStrings`, not per entry.
+//
 
 import SwiftUI
 
@@ -13,11 +19,10 @@ import SwiftUI
 struct DeepDiveDescriptor: Identifiable {
     /// Stable id — matches the deep-link id if/when deep dives get deep links.
     let id: String
-    let eyebrow: String        // e.g. "Deep Dive"
-    let titleEn: String        // e.g. "Yaqīn · Certainty"
+    let title: LocalizedText   // e.g. "Yaqīn · Certainty" / "یقین"
     let titleAr: String        // e.g. "يَقِين"
     let sfSymbol: String       // card icon
-    let subtitle: String       // one-line descriptor
+    let subtitle: LocalizedText // one-line descriptor (EN + UR; AR → EN)
     /// True when the dive is built and openable. False = "coming soon" placeholder.
     let available: Bool
     /// The dive content, present only when `available`.
@@ -25,24 +30,66 @@ struct DeepDiveDescriptor: Identifiable {
 
     static let all: [DeepDiveDescriptor] = [
         DeepDiveDescriptor(
-            id: "yaqin", eyebrow: "Deep Dive",
-            titleEn: "Yaqīn · Certainty", titleAr: "يَقِين",
+            id: "yaqin",
+            title: LocalizedText(en: "Yaqīn · Certainty", ur: "یقین"),
+            titleAr: "يَقِين",
             sfSymbol: "eye",
-            subtitle: "A descent through three depths - Qur'an to Karbala",
+            subtitle: LocalizedText(en: "A descent through three depths - Qur'an to Karbala",
+                                    ur: "تین گہرائیوں میں اترتا ایک سفر - قرآن سے کربلا تک"),
             available: true, dive: .yaqin
         ),
         DeepDiveDescriptor(
-            id: "sabr", eyebrow: "Deep Dive",
-            titleEn: "Ṣabr · Patience", titleAr: "صَبْر",
+            id: "sabr",
+            title: LocalizedText(en: "Ṣabr · Patience", ur: "صبر"),
+            titleAr: "صَبْر",
             sfSymbol: "hourglass",
-            subtitle: "Standing firm through trial",
+            subtitle: LocalizedText(en: "A descent through three stations - Qur'an to Karbala",
+                                    ur: "تین منزلوں میں اترتا ایک سفر - قرآن سے کربلا تک"),
+            available: true, dive: .sabr
+        ),
+        DeepDiveDescriptor(
+            id: "tawakkul",
+            title: LocalizedText(en: "Tawakkul · Reliance", ur: "توکل"),
+            titleAr: "تَوَكُّل",
+            sfSymbol: "hands.and.sparkles",
+            subtitle: LocalizedText(en: "Trusting God with the outcome",
+                                    ur: "انجام کو اللہ کے سپرد کر دینا"),
             available: false, dive: nil
         ),
         DeepDiveDescriptor(
-            id: "tawakkul", eyebrow: "Deep Dive",
-            titleEn: "Tawakkul · Reliance", titleAr: "تَوَكُّل",
-            sfSymbol: "hands.and.sparkles",
-            subtitle: "Trusting God with the outcome",
+            id: "shukr",
+            title: LocalizedText(en: "Shukr · Gratitude", ur: "شکر"),
+            titleAr: "شُكْر",
+            sfSymbol: "hands.clap",
+            subtitle: LocalizedText(en: "Turning every blessing into remembrance",
+                                    ur: "ہر نعمت کو یاد میں بدل دینا"),
+            available: false, dive: nil
+        ),
+        DeepDiveDescriptor(
+            id: "ikhlas",
+            title: LocalizedText(en: "Ikhlāṣ · Sincerity", ur: "اخلاص"),
+            titleAr: "إِخْلَاص",
+            sfSymbol: "drop.fill",
+            subtitle: LocalizedText(en: "Purifying the intention for God alone",
+                                    ur: "نیت کو صرف اللہ کے لیے خالص کرنا"),
+            available: false, dive: nil
+        ),
+        DeepDiveDescriptor(
+            id: "taqwa",
+            title: LocalizedText(en: "Taqwā · God-consciousness", ur: "تقویٰ"),
+            titleAr: "تَقْوَىٰ",
+            sfSymbol: "shield",
+            subtitle: LocalizedText(en: "The awareness that guards the heart",
+                                    ur: "وہ شعور جو دل کی حفاظت کرے"),
+            available: false, dive: nil
+        ),
+        DeepDiveDescriptor(
+            id: "rida",
+            title: LocalizedText(en: "Riḍā · Contentment", ur: "رضا"),
+            titleAr: "رِضَا",
+            sfSymbol: "heart.fill",
+            subtitle: LocalizedText(en: "Meeting God's decree with a still heart",
+                                    ur: "اللہ کے فیصلے کو مطمئن دل سے قبول کرنا"),
             available: false, dive: nil
         ),
     ]

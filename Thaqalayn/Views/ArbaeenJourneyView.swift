@@ -241,11 +241,7 @@ struct ArbaeenStationCard: View {
                                 .stroke(isCurrentDay && !isObserved && !isLocked ? themeManager.accentColor : Color.clear, lineWidth: 2)
                         )
 
-                    if isLocked {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(themeManager.secondaryText)
-                    } else if isObserved {
+                    if isObserved {
                         Image(systemName: "checkmark")
                             .font(.system(size: 20, weight: .bold))
                             .foregroundColor(.white)
@@ -303,7 +299,7 @@ struct ArbaeenStationCard: View {
 
                 Spacer()
 
-                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.tertiaryText)
             }

@@ -29,6 +29,19 @@ enum JourneyStrings {
     static func deepDiveOnItsWay(_ title: String, _ l: CommentaryLanguage) -> String {
         ur(l) ? "\(title) جلد دستیاب ہوگا۔" : "\(title) is on its way."
     }
+    // Deep Dive card chrome — shared across every dive card, so localized here rather
+    // than per catalog entry. `premium` mirrors DailyCrosswordStrings.premiumLabel so
+    // the Premium chip reads identically across the app.
+    static func deepDiveEyebrow(_ l: CommentaryLanguage) -> String { ur(l) ? "گہرا مطالعہ" : "Deep Dive" }
+    static func featured(_ l: CommentaryLanguage) -> String { ur(l) ? "نمایاں" : "FEATURED" }
+    static func soon(_ l: CommentaryLanguage) -> String { ur(l) ? "جلد" : "SOON" }
+    static func premium(_ l: CommentaryLanguage) -> String {
+        switch l {
+        case .arabic: return "بريميوم"
+        case .urdu:   return "پریمیئم"
+        default:      return "Premium"
+        }
+    }
     static func nextUp(_ l: CommentaryLanguage) -> String { ur(l) ? "اگلا" : "NEXT UP" }
     static func comingSoonInDays(_ days: Int, _ l: CommentaryLanguage) -> String {
         ur(l) ? "جلد آ رہا ہے · \(days) دن میں" : "Coming soon · in \(days) day\(days == 1 ? "" : "s")"

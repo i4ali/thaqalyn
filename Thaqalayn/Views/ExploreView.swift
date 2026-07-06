@@ -68,17 +68,6 @@ enum ExploreSection: CaseIterable {
                     destination: .foods
                 ),
                 ExploreItem(
-                    id: "propheticParallels",
-                    icon: "person.2.wave.2.fill",
-                    titleEn: "Prophetic Parallels",
-                    titleAr: "أمثلة الأنبياء",
-                    titleUr: "انبیائی مثالیں",
-                    subtitleEn: "You aren't alone in your struggles",
-                    subtitleAr: "لستَ وحدك في محنتك",
-                    subtitleUr: "اپنی آزمائشوں میں آپ اکیلے نہیں",
-                    destination: .propheticParallels
-                ),
-                ExploreItem(
                     id: "fasting",
                     icon: "moon.fill",
                     titleEn: "Fasting in the Quran",
@@ -102,6 +91,17 @@ enum ExploreSection: CaseIterable {
                     subtitleAr: "سِيَر الرسل",
                     subtitleUr: "رسولوں کے واقعات",
                     destination: .propheticStories
+                ),
+                ExploreItem(
+                    id: "propheticParallels",
+                    icon: "person.2.wave.2.fill",
+                    titleEn: "Prophetic Parallels",
+                    titleAr: "أمثلة الأنبياء",
+                    titleUr: "انبیائی مثالیں",
+                    subtitleEn: "You aren't alone in your struggles",
+                    subtitleAr: "لستَ وحدك في محنتك",
+                    subtitleUr: "اپنی آزمائشوں میں آپ اکیلے نہیں",
+                    destination: .propheticParallels
                 ),
                 ExploreItem(
                     id: "ahlulbaytQuran",

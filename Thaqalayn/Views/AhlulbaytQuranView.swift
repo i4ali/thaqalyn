@@ -376,7 +376,7 @@ struct AhlulbaytEntryCardView: View {
                     .background(Circle().fill(themeManager.accentChip))
                     .overlay(Circle().stroke(themeManager.accentColor, lineWidth: 1))
 
-                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -445,7 +445,7 @@ struct AhlulbaytEntryCardView: View {
             Spacer()
 
             // Chevron or lock icon
-            Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+            Image(systemName: "chevron.right")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         }

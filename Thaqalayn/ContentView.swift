@@ -78,10 +78,18 @@ struct ContentView: View {
     private func checkFirstLaunch() {
         // Only show welcome screen on first launch, not for authentication
         let hasShownWelcome = UserDefaults.standard.bool(forKey: "hasShownWelcome")
-        
+
         if !hasShownWelcome {
             showingWelcome = true
+            // Brand-new install: suppress the What's New backlog (whole app is new to them).
+            WhatsNewManager.shared.seedAllAsSeenForFreshInstall()
         }
+
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-wnReset") {
+            WhatsNewManager.shared.debugReset()
+        }
+        #endif
     }
 }
 

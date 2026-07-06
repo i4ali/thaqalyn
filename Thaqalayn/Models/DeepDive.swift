@@ -5,15 +5,38 @@
 //  Data for one immersive "deep dive": a themed, single-sitting descent rendered
 //  by DeepDiveView. Section cases mirror the `type`s in MajlisYaqeen.jsx.
 //
+//  Prose is localized (EN / UR / AR) via `LocalizedText`. Qur'an Arabic, references,
+//  and surah/ayah numbers stay single-string (identical across languages).
+//
 
 import SwiftUI
+
+// `LocalizedText` (en + optional ur/ar, resolved via `.text(for:)`) is defined once in
+// DailyChallengeModels.swift and reused here - no duplicate type. These additive conveniences
+// let the deep-dive content read ergonomically:
+extension LocalizedText {
+    /// Resolve like a function: `field(lang)` == `field.text(for: lang)`.
+    func callAsFunction(_ l: CommentaryLanguage) -> String { text(for: l) }
+    /// Text identical in every language (proper nouns, transliterations, symbols).
+    init(_ shared: String) { self.init(en: shared, ur: shared, ar: shared) }
+    /// English + Urdu only; Arabic falls back to English. For copy localized to Urdu
+    /// but not Arabic (e.g. Journey-tab deep-dive card text).
+    init(en: String, ur: String) { self.init(en: en, ur: ur, ar: nil) }
+}
+
+extension LocalizedText: ExpressibleByStringLiteral {
+    /// A plain string literal is treated as English-only (ur/ar fall back to en). Keeps
+    /// not-yet-localized dive content compiling - `subtitle: "…"` works alongside
+    /// `LocalizedText(en:ur:ar:)`.
+    init(stringLiteral value: String) { self.init(en: value, ur: nil, ar: nil) }
+}
 
 /// The three-part structure metadata (ʿIlm / ʿAyn / Ḥaqq al-Yaqīn for the Yaqīn dive).
 struct ActInfo: Identifiable {
     let number: Int
     let ar: String
     let tr: String
-    let name: String
+    let name: LocalizedText
     var id: Int { number }
 }
 
@@ -21,10 +44,10 @@ struct ActInfo: Identifiable {
 struct Depth: Identifiable {
     let ar: String
     let tr: String
-    let label: String
-    let desc: String
+    let label: LocalizedText
+    let desc: LocalizedText
     let reference: String?
-    let embodies: String
+    let embodies: LocalizedText
     var id: String { tr }
 }
 
@@ -33,25 +56,25 @@ struct BridgeVerse {
     let surah: Int
     let ayah: Int
     let arabic: String
-    let translation: String
+    let translation: LocalizedText
     let reference: String
 }
 
 /// One full-screen beat in the descent. Cases mirror the section `type`s in
 /// MajlisYaqeen.jsx.
 enum DeepDiveSection {
-    case open(kicker: String, titleAr: String, titleEn: String, subtitle: String, line: String)
+    case open(kicker: LocalizedText, titleAr: String, titleEn: String, subtitle: LocalizedText, line: LocalizedText)
     /// A guiding "how this works + the promise" beat, shown right after the open.
-    case orientation(eyebrow: String, promise: String, leaveWith: String)
-    case verse(act: Int, tag: String, surah: Int, ayah: Int, arabic: String, translation: String, reference: String, reflection: String)
-    case depths(act: Int, tag: String, reference: String, items: [Depth])
+    case orientation(eyebrow: LocalizedText, promise: LocalizedText, leaveWith: LocalizedText)
+    case verse(act: Int, tag: LocalizedText, surah: Int, ayah: Int, arabic: String, translation: LocalizedText, reference: String, reflection: LocalizedText)
+    case depths(act: Int, tag: LocalizedText, reference: String, items: [Depth])
     /// A movement divider. `connector` names the thread back to the prior movement
     /// (e.g. "You have known it by proof.") so the KNOW → SEE → LIVE arc is explicit.
-    case act(act: Int, connector: String?, line: String, bridge: BridgeVerse?)
-    case narration(act: Int, tag: String, source: String, body: String, reflection: String)
-    case climax(act: Int, tag: String, source: String, arabic: String, translation: String, body: String, reflection: String)
-    case reflectionPrompt(tag: String, prompt: String, placeholder: String)
-    case dua(tag: String, intro: String, arabic: String, translation: String, source: String, note: String)
+    case act(act: Int, connector: LocalizedText?, line: LocalizedText, bridge: BridgeVerse?)
+    case narration(act: Int, tag: LocalizedText, source: LocalizedText, body: LocalizedText, reflection: LocalizedText)
+    case climax(act: Int, tag: LocalizedText, source: LocalizedText, arabic: String, translation: LocalizedText, body: LocalizedText, reflection: LocalizedText)
+    case reflectionPrompt(tag: LocalizedText, prompt: LocalizedText, placeholder: LocalizedText)
+    case dua(tag: LocalizedText, intro: LocalizedText, arabic: String, translation: LocalizedText, source: LocalizedText, note: LocalizedText)
 
     /// Act number for the persistent depth stepper (0 = opening, 4 = reflection/dua close).
     var act: Int {
@@ -73,7 +96,7 @@ struct DeepDive: Identifiable {
     let id: String
     let titleEn: String
     let titleAr: String
-    let subtitle: String
+    let subtitle: LocalizedText
     let sfSymbol: String
     let estMinutes: Int
     let acts: [ActInfo]

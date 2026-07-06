@@ -248,16 +248,16 @@ struct PaywallView: View {
                 description: "Muharram · Ramadan · Hajj · Fatimiyya"
             )
             featureRow(
+                icon: "water.waves",
+                title: "Deep Dives",
+                pill: "IMMERSIVE",
+                description: "A single-sitting descent through one sacred theme"
+            )
+            featureRow(
                 icon: "brain.head.profile",
                 title: "Surah Quizzes",
                 pill: nil,
                 description: "Test your understanding, earn badges"
-            )
-            featureRow(
-                icon: "calendar.badge.checkmark",
-                title: "Daily Challenge",
-                pill: nil,
-                description: "A new quiz, flashcard or puzzle daily — build a streak"
             )
             featureRow(
                 icon: "square.grid.3x3.fill",
@@ -467,8 +467,6 @@ struct PaywallView: View {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: themeManager.onAccentText))
                 } else {
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 15, weight: .semibold))
                     Text("Unlock Premium")
                         .font(.system(size: 15.5, weight: .bold)).tracking(0.3)
                 }

@@ -222,13 +222,18 @@ class PremiumManager: ObservableObject {
         return isPremium
     }
 
-    // MARK: - Daily Challenge Access Control
-
-    /// Daily Challenge is a premium feature.
-    func canAccessDailyChallenge() -> Bool { isPremium }
-
     // MARK: - Daily Crossword Access Control
 
     /// Daily Crossword is a premium feature.
     func canAccessDailyCrossword() -> Bool { isPremium }
+
+    // MARK: - Deep Dive Access Control
+
+    /// Deep Dives use the app's "first free, rest premium" teaser model:
+    /// - Yaqīn (the introductory dive) is always free
+    /// - Every other dive (Ṣabr, Tawakkul, …) requires premium
+    func canAccessDeepDive(_ id: String) -> Bool {
+        if id == "yaqin" { return true }  // Intro dive always free
+        return isPremium
+    }
 }

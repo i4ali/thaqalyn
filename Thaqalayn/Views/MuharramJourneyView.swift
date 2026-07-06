@@ -240,11 +240,7 @@ struct MuharramDayCard: View {
                                 .stroke(isCurrentDay && !isObserved && !isLocked ? themeManager.accentColor : Color.clear, lineWidth: 2)
                         )
 
-                    if isLocked {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(themeManager.secondaryText)
-                    } else if isObserved {
+                    if isObserved {
                         // Simple checkmark — subdued, not festive
                         Image(systemName: "checkmark")
                             .font(.system(size: 20, weight: .bold))
@@ -304,7 +300,7 @@ struct MuharramDayCard: View {
                 Spacer()
 
                 // Chevron or lock icon
-                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.tertiaryText)
             }

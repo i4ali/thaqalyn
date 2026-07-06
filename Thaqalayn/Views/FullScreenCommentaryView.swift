@@ -153,11 +153,6 @@ struct FullScreenCommentaryView: View {
                         .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
                 }
             }
-            .overlay(alignment: .topTrailing) {
-                if isLocked {
-                    Image(systemName: "lock.fill").font(.system(size: 9)).foregroundColor(themeManager.tertiaryText).padding(6)
-                }
-            }
         }
         .buttonStyle(PlainButtonStyle())
     }

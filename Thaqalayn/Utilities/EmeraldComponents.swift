@@ -474,7 +474,7 @@ struct EmJourneyHeader: View {
 
 /// One day row in a seasonal journey list (Screen 04). Marker: done → gold-gradient circle + check
 /// (or, `.subdued`, a gold-chip circle + gold check); else a numeral circle. The current day's card
-/// gains a gold border + gold-chip fill. Locked days show a lock chip + "PREMIUM" tag.
+/// gains a gold border + gold-chip fill. Locked days show a "PREMIUM" tag (no lock, per the premium-label convention).
 struct EmJourneyDayRow: View {
     @ObservedObject private var tm = ThemeManager.shared
     var dayNumber: Int
@@ -489,14 +489,7 @@ struct EmJourneyDayRow: View {
     private var highlighted: Bool { isCurrent && !isLocked }
 
     @ViewBuilder private var marker: some View {
-        if isLocked {
-            Image(systemName: "lock.fill")
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundColor(tm.tertiaryText)
-                .frame(width: 42, height: 42)
-                .background(Circle().fill(tm.accentChip))
-                .overlay(Circle().stroke(tm.strokeColor, lineWidth: 1))
-        } else if isDone {
+        if isDone {
             switch doneStyle {
             case .gold:
                 Image(systemName: "checkmark")

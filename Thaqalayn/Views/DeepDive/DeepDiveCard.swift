@@ -13,9 +13,16 @@ import SwiftUI
 struct DeepDiveCard: View {
     @ObservedObject private var tm = ThemeManager.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
+    @ObservedObject private var premiumManager = PremiumManager.shared
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     let descriptor: DeepDiveDescriptor
     let onTap: () -> Void
+
+    /// An available dive the user cannot yet open (premium-gated, not subscribed).
+    /// Coming-soon dives are not "locked" in this sense - they read as "Soon".
+    private var locked: Bool {
+        descriptor.available && !premiumManager.canAccessDeepDive(descriptor.id)
+    }
 
     var body: some View {
         Button(action: onTap) {
@@ -25,16 +32,16 @@ struct DeepDiveCard: View {
                     EmIconChip(sfSymbol: descriptor.sfSymbol, active: descriptor.available)
                     VStack(alignment: .leading, spacing: 4) {
                         if descriptor.available {
-                            featuredPill
+                            if locked { premiumPill } else { featuredPill }
                         } else {
-                            Text(descriptor.eyebrow.uppercased())
+                            Text(JourneyStrings.deepDiveEyebrow(lang).uppercased())
                                 .emEyebrow(lang, size: 10.5, tracking: 2)
                                 .foregroundColor(tm.accentColor)
                         }
-                        Text(descriptor.titleEn)
+                        Text(descriptor.title(lang))
                             .font(EmType.serif(22, .semiBold))
                             .foregroundColor(tm.primaryText)
-                        Text(descriptor.subtitle)
+                        Text(descriptor.subtitle(lang))
                             .font(.system(size: 13))
                             .foregroundColor(tm.secondaryText)
                             .lineLimit(2)
@@ -54,7 +61,7 @@ struct DeepDiveCard: View {
     /// Gold "FEATURED" capsule — mirrors JourneyCard's "NEXT UP" pill so the two
     /// sections' highlighted cards match.
     private var featuredPill: some View {
-        Text("FEATURED")
+        Text(JourneyStrings.featured(lang))
             .font(.system(size: 9, weight: .heavy)).tracking(1.6)
             .foregroundColor(tm.onAccentText)
             .padding(.horizontal, 8)
@@ -62,15 +69,30 @@ struct DeepDiveCard: View {
             .background(Capsule().fill(tm.accentGradient))
     }
 
+    /// "PREMIUM" chip shown in place of FEATURED when the dive is subscriber-only
+    /// and the user is not premium - the same accent-chip treatment the app's other
+    /// premium-gated cards use (Daily Crossword, journey days). No lock glyph.
+    private var premiumPill: some View {
+        Text(JourneyStrings.premium(lang).uppercased())
+            .font(.system(size: 9, weight: .bold)).tracking(1.4)
+            .foregroundColor(tm.accentColor)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 3)
+            .background(Capsule().fill(tm.accentChip))
+            .overlay(Capsule().stroke(tm.strokeColor, lineWidth: 1))
+    }
+
     @ViewBuilder private var trailingGlyph: some View {
         if descriptor.available {
+            // Always a chevron for available dives (free or premium-gated) - the
+            // PREMIUM chip carries the gated signal; no lock, per the app's style.
             Image(systemName: "chevron.right")
                 .font(.system(size: 15, weight: .semibold))
                 .foregroundColor(tm.accentColor)
         } else {
             // A quiet "Soon" marker rather than a lock icon — matches the app's
             // convention of never letting a coming-soon card read as a paywall.
-            Text("SOON")
+            Text(JourneyStrings.soon(lang))
                 .font(.system(size: 9, weight: .heavy)).tracking(1.4)
                 .foregroundColor(tm.tertiaryText)
                 .padding(.horizontal, 8).padding(.vertical, 3)

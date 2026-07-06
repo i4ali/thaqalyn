@@ -83,3 +83,11 @@ source .venv/bin/activate
 **IMPORTANT**: Never launch more than two subagents (the Agent/Task tool) concurrently. When work needs many subagents — fan-out content authoring, parallel search, multi-file edits — batch them into **waves of at most two** and wait for each wave to finish before starting the next. Do NOT launch 3+ Agent calls in a single message.
 
 **Rationale**: Running many subagents in parallel burns through tokens fast. Capping concurrency at two keeps token usage under control.
+
+### ⚠️ ANNOUNCE EVERY NEW USER-FACING FEATURE IN "WHAT'S NEW" ⚠️
+
+**IMPORTANT**: When you ship a new user-facing feature, add one entry to `WhatsNewCatalog.all` in `Thaqalayn/Models/WhatsNewItem.swift` so it surfaces on the Today tab's "What's New" spotlight. Provide title/blurb/CTA in all three languages (EN/UR/AR) and a `destination`. The card handles surfacing/retiring automatically; if the feature isn't a Deep Dive, add a `WhatsNewDestination` case and handle it in `WhatsNewCard.open()` (one-time). Do not use an em dash in the copy.
+
+### ⚠️ PREMIUM-GATED FEATURES SHOW A "PREMIUM" LABEL, NOT A LOCK ⚠️
+
+**IMPORTANT**: When gating a feature behind premium, signal it with a "Premium" chip/label in the app's accent style - never a lock icon (`lock.fill`). Match the existing treatment: the `DailyCrosswordCard` accent-chip `PREMIUM` capsule, or the journey day-row "Premium" capsule (`RamadanJourneyView`). Keep the card's normal chevron/affordance; the "Premium" label alone carries the gated signal. Do NOT add `lock.fill` glyphs (and avoid the lock-bearing `PremiumBadgeView`). Gate access with a `PremiumManager.canAccessX()` method and route locked taps to `PaywallView`.

@@ -28,10 +28,13 @@ struct JourneyHubView: View {
     @ObservedObject private var cal = IslamicCalendarManager.shared
     @ObservedObject private var router = DeepLinkRouter.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
+    @ObservedObject private var premiumManager = PremiumManager.shared
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     @State private var presented: PresentedJourney?
     /// Set when an available deep dive is tapped — drives its full-screen descent.
     @State private var presentedDive: PresentedDeepDive?
+    /// Set when a premium-gated deep dive is tapped by a non-subscriber.
+    @State private var showingPaywall = false
     /// Set when a locked journey is tapped — drives the "ended / not open yet" alert.
     @State private var lockedAlert: LockedJourneyAlert?
 
@@ -109,8 +112,10 @@ struct JourneyHubView: View {
                 DeepDiveView(dive: dive) { presentedDive = nil }
             }
         }
+        .sheet(isPresented: $showingPaywall) { PaywallView() }
         .onAppear {
             consumePendingJourney()
+            consumePendingDeepDive()
             #if DEBUG
             if ProcessInfo.processInfo.arguments.contains("-ddYaqin") {
                 presentedDive = PresentedDeepDive(id: "yaqin")
@@ -118,6 +123,7 @@ struct JourneyHubView: View {
             #endif
         }
         .onChange(of: router.pendingJourneyId) { _, _ in consumePendingJourney() }
+        .onChange(of: router.pendingDeepDiveId) { _, _ in consumePendingDeepDive() }
         .overlay {
             if let alert = lockedAlert {
                 LockedJourneyOverlay(alert: alert) {
@@ -147,14 +153,23 @@ struct JourneyHubView: View {
     /// coming-soon dives reuse the locked overlay with a short "on its way" note.
     private func handleDiveTap(_ d: DeepDiveDescriptor) {
         if d.available {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                presentedDive = PresentedDeepDive(id: d.id)
+            if premiumManager.canAccessDeepDive(d.id) {
+                // Let the card's press squish play before the cover slides up.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    presentedDive = PresentedDeepDive(id: d.id)
+                }
+            } else {
+                // Premium-gated dive: soft haptic, then the paywall after the squish.
+                UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    showingPaywall = true
+                }
             }
         } else {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
             withAnimation(.easeInOut(duration: 0.2)) {
                 lockedAlert = LockedJourneyAlert(title: JourneyStrings.comingSoon(lang),
-                                                 detail: JourneyStrings.deepDiveOnItsWay(d.titleEn, lang),
+                                                 detail: JourneyStrings.deepDiveOnItsWay(d.title(lang), lang),
                                                  pointer: nil)
             }
         }
@@ -209,6 +224,23 @@ struct JourneyHubView: View {
             presented = PresentedJourney(id: id)
         }
         router.pendingJourneyId = nil
+    }
+
+    /// Opens a deep dive requested from another tab (e.g. a What's New card). The small
+    /// delay lets the tab switch settle before the full-screen cover slides up.
+    private func consumePendingDeepDive() {
+        guard let id = router.pendingDeepDiveId else { return }
+        router.pendingDeepDiveId = nil
+        guard DeepDiveDescriptor.byId(id)?.dive != nil else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            // Honor the gate even when the dive is reached via a deep link (e.g. a
+            // What's New card): non-subscribers get the paywall, not the dive.
+            if premiumManager.canAccessDeepDive(id) {
+                presentedDive = PresentedDeepDive(id: id)
+            } else {
+                showingPaywall = true
+            }
+        }
     }
 }
 

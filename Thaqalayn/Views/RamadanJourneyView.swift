@@ -268,11 +268,7 @@ struct RamadanDayCard: View {
                                 .stroke(isCurrentDay && !isCompleted && !isLocked ? themeManager.accentColor : Color.clear, lineWidth: 2)
                         )
 
-                    if isLocked {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(themeManager.secondaryText)
-                    } else if isCompleted {
+                    if isCompleted {
                         Image(systemName: "checkmark")
                             .font(.system(size: 20, weight: .bold))
                             .foregroundColor(.white)
@@ -331,7 +327,7 @@ struct RamadanDayCard: View {
                 Spacer()
 
                 // Chevron or lock icon
-                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.tertiaryText)
             }

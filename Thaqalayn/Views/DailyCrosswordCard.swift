@@ -150,7 +150,7 @@ struct DailyCrosswordCard: View {
     private func emeraldRightIcon(state: DailyCrosswordCardState) -> some View {
         switch state {
         case .locked:
-            Image(systemName: "lock.fill")
+            Image(systemName: "chevron.right")
                 .font(.system(size: 13, weight: .semibold))
                 .foregroundColor(themeManager.tertiaryText)
         case .pending:
@@ -270,7 +270,7 @@ struct DailyCrosswordCard: View {
     private func legacyRightIcon(state: DailyCrosswordCardState) -> some View {
         switch state {
         case .locked:
-            Image(systemName: "lock.fill")
+            Image(systemName: "chevron.right")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         case .pending:

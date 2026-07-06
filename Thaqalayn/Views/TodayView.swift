@@ -67,6 +67,7 @@ struct TodayView: View {
     @StateObject private var duasManager = DuasManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var profile = UserProfileManager.shared
+    @StateObject private var whatsNew = WhatsNewManager.shared
 
     @Binding var selectedTab: Int
 
@@ -122,7 +123,7 @@ struct TodayView: View {
         .onReceive(NotificationCenter.default.publisher(for: .init("showSettings"))) { _ in
             showingSettings = true
         }
-        .onAppear { hasAppeared = true }
+        .onAppear { hasAppeared = true; whatsNew.refresh() }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
                 dailyMessage.refreshIfDayChanged()
@@ -145,6 +146,12 @@ struct TodayView: View {
                 greeting
                     .padding(.horizontal, 18)
                     .padding(.top, 18)
+
+                if let item = whatsNew.spotlight {
+                    WhatsNewCard(item: item, selectedTab: $selectedTab)
+                        .padding(.horizontal, 18)
+                        .padding(.top, 6)
+                }
 
                 DailyReminderBanner(
                     message: dailyMessage.today,
@@ -720,6 +727,7 @@ private struct EmeraldTodayView: View {
     @ObservedObject private var calendarManager = IslamicCalendarManager.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var profile = UserProfileManager.shared
+    @ObservedObject private var whatsNew = WhatsNewManager.shared
 
     @Binding var selectedTab: Int
     @Binding var selectedSurahForDeepLink: SurahWithTafsir?
@@ -734,6 +742,9 @@ private struct EmeraldTodayView: View {
             VStack(alignment: .leading, spacing: 16) {
                 headerRow
                 greeting
+                if let item = whatsNew.spotlight {
+                    WhatsNewCard(item: item, selectedTab: $selectedTab)
+                }
                 EmDailyReminderHero(
                     message: dailyMessage.today,
                     headline: reminderHeadline.text,
@@ -760,6 +771,7 @@ private struct EmeraldTodayView: View {
             .padding(.bottom, 120)
         }
         .onAppear {
+            whatsNew.refresh()
             withAnimation(reduceMotion ? nil : .easeOut(duration: 0.6)) { animateProgress = true }
         }
     }

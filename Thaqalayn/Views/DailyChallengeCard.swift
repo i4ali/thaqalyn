@@ -4,12 +4,11 @@
 //
 //  Today-screen entry card for the Daily Challenge feature.
 //  Styled to match MomentCard (LifeMomentsView) exactly — EmIconChip(46) + serif title +
-//  inline PREMIUM capsule when locked + gold uppercased sub-line + right lock/chevron/checkmark.
+//  gold uppercased sub-line + right chevron/checkmark.
 //
-//  Three states driven by PremiumManager + DailyChallengeManager:
-//    • Locked   — free user → taps to PaywallView
-//    • Pending  — premium, not done today → taps to DailyChallengeView
-//    • Done     — premium, completed today → non-tappable
+//  Two states driven by DailyChallengeManager (the feature is free for everyone):
+//    • Pending: not done today, taps to DailyChallengeView
+//    • Done: completed today, non-tappable
 //
 //  Chrome is fixed-size (no ReadingSettingsManager scaling).
 //
@@ -19,7 +18,6 @@ import SwiftUI
 // MARK: - State enum
 
 private enum DailyChallengeCardState {
-    case locked
     case pending
     case done
 }
@@ -32,15 +30,12 @@ struct DailyChallengeCard: View {
     @ObservedObject private var provider = DailyChallengeProvider.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var premiumManager = PremiumManager.shared
     @State private var showSheet = false
-    @State private var showPaywall = false
 
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var cardState: DailyChallengeCardState {
-        if !premiumManager.canAccessDailyChallenge() { return .locked }
-        return manager.isCompletedToday ? .done : .pending
+        manager.isCompletedToday ? .done : .pending
     }
 
     var body: some View {
@@ -54,9 +49,6 @@ struct DailyChallengeCard: View {
         .sheet(isPresented: $showSheet) {
             DailyChallengeView(challenge: provider.today, onCompleted: {})
         }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
     }
 
     // MARK: - Emerald body (mirrors MomentCard.emeraldBody)
@@ -64,7 +56,6 @@ struct DailyChallengeCard: View {
     @ViewBuilder
     private var emeraldCard: some View {
         let state = cardState
-        let isLocked = state == .locked
         let isDone = state == .done
 
         Group {
@@ -74,10 +65,10 @@ struct DailyChallengeCard: View {
                     emeraldInner(state: state)
                 }
             } else {
-                // Locked or pending: tappable
+                // Pending: tappable, opens the challenge
                 Button {
                     Haptics.press()
-                    if isLocked { showPaywall = true } else { showSheet = true }
+                    showSheet = true
                 } label: {
                     EmCard {
                         emeraldInner(state: state)
@@ -90,30 +81,17 @@ struct DailyChallengeCard: View {
     }
 
     private func emeraldInner(state: DailyChallengeCardState) -> some View {
-        let isLocked = state == .locked
         let isDone = state == .done
 
         return HStack(spacing: 14) {
             EmIconChip(sfSymbol: "brain.head.profile", size: 46)
 
             VStack(alignment: .leading, spacing: 4) {
-                // Title row: serif title + optional inline PREMIUM capsule
-                HStack(spacing: 8) {
-                    Text(DailyChallengeStrings.dailyChallenge(lang))
-                        .font(EmType.serif(20, .semiBold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    if isLocked {
-                        Text(DailyChallengeStrings.premiumLabel(lang).uppercased())
-                            .font(.system(size: 8.5, weight: .bold)).tracking(1)
-                            .foregroundColor(themeManager.accentColor)
-                            .padding(.horizontal, 6).padding(.vertical, 2)
-                            .background(Capsule().fill(themeManager.accentChip))
-                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                    }
-                }
+                Text(DailyChallengeStrings.dailyChallenge(lang))
+                    .font(EmType.serif(20, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
                 // Gold uppercased sub-line
                 Text(emeraldSubLine(state: state))
@@ -132,8 +110,6 @@ struct DailyChallengeCard: View {
 
     private func emeraldSubLine(state: DailyChallengeCardState) -> String {
         switch state {
-        case .locked:
-            return DailyChallengeStrings.lockedTagline(lang).uppercased()
         case .pending:
             let teaser = DailyChallengeStrings.teaser(for: provider.today.format, lang)
             if manager.streak.currentStreak > 0 {
@@ -149,10 +125,6 @@ struct DailyChallengeCard: View {
     @ViewBuilder
     private func emeraldRightIcon(state: DailyChallengeCardState) -> some View {
         switch state {
-        case .locked:
-            Image(systemName: "lock.fill")
-                .font(.system(size: 13, weight: .semibold))
-                .foregroundColor(themeManager.tertiaryText)
         case .pending:
             Image(systemName: "chevron.right")
                 .font(.system(size: 13, weight: .semibold))
@@ -169,7 +141,6 @@ struct DailyChallengeCard: View {
     @ViewBuilder
     private var legacyCard: some View {
         let state = cardState
-        let isLocked = state == .locked
         let isDone = state == .done
 
         Group {
@@ -178,7 +149,7 @@ struct DailyChallengeCard: View {
             } else {
                 Button {
                     Haptics.press()
-                    if isLocked { showPaywall = true } else { showSheet = true }
+                    showSheet = true
                 } label: {
                     legacyInner(state: state)
                         .contentShape(Rectangle())
@@ -189,7 +160,6 @@ struct DailyChallengeCard: View {
     }
 
     private func legacyInner(state: DailyChallengeCardState) -> some View {
-        let isLocked = state == .locked
         let isDone = state == .done
 
         return HStack(alignment: .center, spacing: 16) {
@@ -206,21 +176,11 @@ struct DailyChallengeCard: View {
 
             // Text stack
             VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 8) {
-                    Text(DailyChallengeStrings.dailyChallenge(lang))
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    if isLocked {
-                        Text(DailyChallengeStrings.premiumLabel(lang))
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 8).padding(.vertical, 4)
-                            .background(Capsule().fill(Color.orange.gradient))
-                    }
-                }
+                Text(DailyChallengeStrings.dailyChallenge(lang))
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
                 // Sub-line
                 Text(legacySubLine(state: state))
@@ -252,8 +212,6 @@ struct DailyChallengeCard: View {
 
     private func legacySubLine(state: DailyChallengeCardState) -> String {
         switch state {
-        case .locked:
-            return DailyChallengeStrings.lockedTagline(lang)
         case .pending:
             let teaser = DailyChallengeStrings.teaser(for: provider.today.format, lang)
             if manager.streak.currentStreak > 0 {
@@ -269,10 +227,6 @@ struct DailyChallengeCard: View {
     @ViewBuilder
     private func legacyRightIcon(state: DailyChallengeCardState) -> some View {
         switch state {
-        case .locked:
-            Image(systemName: "lock.fill")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
         case .pending:
             Image(systemName: "chevron.right")
                 .font(.system(size: 14, weight: .medium))
@@ -289,58 +243,11 @@ struct DailyChallengeCard: View {
 
 #if DEBUG
 
-// MARK: Locked (free) previews
-
-#Preview("Card — LOCKED, English, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    let _ = PremiumManager.shared.isPremium = false
-    return VStack(spacing: 16) {
-        DailyChallengeCard()
-    }
-    .padding(20)
-    .background(Color.black)
-}
-
-#Preview("Card — LOCKED, English, Light") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    let _ = PremiumManager.shared.isPremium = false
-    return VStack(spacing: 16) {
-        DailyChallengeCard()
-    }
-    .padding(20)
-    .background(Color(red: 0.97, green: 0.95, blue: 0.92))
-}
-
-#Preview("Card — LOCKED, Urdu, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    let _ = PremiumManager.shared.isPremium = false
-    return VStack(spacing: 16) {
-        DailyChallengeCard()
-    }
-    .padding(20)
-    .background(Color.black)
-}
-
-#Preview("Card — LOCKED, Urdu, Light") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    let _ = PremiumManager.shared.isPremium = false
-    return VStack(spacing: 16) {
-        DailyChallengeCard()
-    }
-    .padding(20)
-    .background(Color(red: 0.97, green: 0.95, blue: 0.92))
-}
-
-// MARK: Pending (premium, not done) previews
+// MARK: Pending (not done) previews
 
 #Preview("Card — Pending, English, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
     let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
         DailyChallengeCard()
     }
@@ -351,7 +258,6 @@ struct DailyChallengeCard: View {
 #Preview("Card — Pending, English, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
     let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
         DailyChallengeCard()
     }
@@ -362,7 +268,6 @@ struct DailyChallengeCard: View {
 #Preview("Card — Pending, Urdu, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
     let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
         DailyChallengeCard()
     }
@@ -373,7 +278,6 @@ struct DailyChallengeCard: View {
 #Preview("Card — Pending, Urdu, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
     let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
         DailyChallengeCard()
     }
@@ -381,7 +285,7 @@ struct DailyChallengeCard: View {
     .background(Color(red: 0.97, green: 0.95, blue: 0.92))
 }
 
-// MARK: Done (premium, completed) previews
+// MARK: Done (completed) previews
 //
 // DailyChallengeManager.isCompletedToday is driven by UserDefaults and cannot be directly
 // overridden from a preview without running the full completion flow. We render the done

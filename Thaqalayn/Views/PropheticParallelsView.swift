@@ -423,7 +423,7 @@ struct PropheticParallelCard: View {
                         .foregroundColor(themeManager.tertiaryText)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -494,7 +494,7 @@ struct PropheticParallelCard: View {
             Spacer()
 
             // Chevron or lock icon
-            Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+            Image(systemName: "chevron.right")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         }

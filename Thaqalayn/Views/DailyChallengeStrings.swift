@@ -168,26 +168,6 @@ enum DailyChallengeStrings {
         }
     }
 
-    // MARK: - Premium lock strings (locked-card chrome — fixed size, not scaled)
-
-    /// Short label shown in the gold pill on the locked card ("Premium").
-    static func premiumLabel(_ l: CommentaryLanguage) -> String {
-        switch l {
-        case .arabic: return "مميّز"
-        case .urdu:   return "پریمیم"
-        default:      return "Premium"
-        }
-    }
-
-    /// Generic teaser line shown on the locked card when no live challenge is available.
-    static func lockedTagline(_ l: CommentaryLanguage) -> String {
-        switch l {
-        case .arabic: return "تحدٍ جديد كل يوم"
-        case .urdu:   return "روز ایک نیا چیلنج"
-        default:      return "A new challenge every day"
-        }
-    }
-
     // MARK: - Completion screen
 
     static func completionTitle(_ l: CommentaryLanguage) -> String {

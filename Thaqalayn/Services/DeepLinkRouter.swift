@@ -25,5 +25,9 @@ final class DeepLinkRouter: ObservableObject {
     /// `.navigateToJourney` deep-link; consumed (and cleared) by JourneyHubView.
     @Published var pendingJourneyId: String? = nil
 
+    /// Deep-dive id to auto-open once the Journey hub becomes the active tab. Set by a
+    /// What's New card tap; consumed (and cleared) by JourneyHubView.
+    @Published var pendingDeepDiveId: String? = nil
+
     private init() {}
 }

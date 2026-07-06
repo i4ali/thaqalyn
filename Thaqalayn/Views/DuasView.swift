@@ -177,7 +177,7 @@ struct DuaCard: View {
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -220,7 +220,7 @@ struct DuaCard: View {
 
             Spacer()
 
-            Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+            Image(systemName: "chevron.right")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         }

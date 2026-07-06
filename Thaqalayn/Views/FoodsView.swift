@@ -184,7 +184,7 @@ struct FoodCard: View {
                         .foregroundColor(themeManager.accentColor)
                 }
                 Spacer(minLength: 8)
-                Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -214,7 +214,7 @@ struct FoodCard: View {
                     .foregroundColor(themeManager.secondaryText)
             }
             Spacer()
-            Image(systemName: isLocked ? "lock.fill" : "chevron.right")
+            Image(systemName: "chevron.right")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
         }
