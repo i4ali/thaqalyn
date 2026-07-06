@@ -26,8 +26,9 @@ APP_SCREENSHOT = Path("scripts/dhul_hijjah_carousel/assets/app_screen_journey.pn
 # Shared background style appended to every bg prompt
 BG_STYLE = (
     "Dark, dramatic, reverent, cinematic spiritual atmosphere. Deep near-black "
-    "night palette with a single warm gold light source. Abstract, no text, no "
-    "letters, no words, no human figures, no faces, no animals. Minimal, "
+    "night palette with a single warm gold light source. A purely atmospheric "
+    "abstract field - only light, shadow, texture, and negative space; the scene "
+    "is empty and unpopulated, every surface plain and unlettered. Minimal, "
     "elegant, lots of negative space. Subtle film grain. 4:5 vertical portrait."
 )
 

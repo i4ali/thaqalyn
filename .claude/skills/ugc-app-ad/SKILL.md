@@ -49,17 +49,26 @@ Work under `ads/<name>/{inputs,stills,clips,work}`; activate `.venv`;
 scripts live in this skill's `scripts/`. **STOP for user approval after
 every API-cost asset.**
 
-1. **Character reference** — `nano_banana.py` (OPENROUTER_API_KEY): one
-   strong reference still of the actor in the setting. Approve before reuse.
-2. **Per-beat stills** — for each beat, `nano_banana.py --ref <reference>`
-   (ALWAYS pass `--ref` — this is what keeps the character consistent).
-   For a beat that shows the app in-hand, generate the actor holding a
-   phone with a FLAT solid chroma-green screen placeholder.
-3. **Animate** — `kie_kling.py --mode v3-0 --duration 5` per beat. For
-   beats that must stay framed (anything you'll composite onto, or an
-   emotional payoff), prompt for **minimal motion** and/or use a
-   **still-hold** instead (loop the approved still + slow zoom) — Kling
-   v3-0 always drifts and reaction clips often dip mid-shot.
+1. **Character reference** — `nano_banana.py --size 4K` (OPENROUTER_API_KEY):
+   one strong reference still of the actor in the setting. Use `--size 4K` for a
+   crisp photoreal face — the "2K" tier is a no-op for this model and 1K is only
+   ~768px (soft at 1080). Approve before reuse.
+2. **Per-beat stills** — for each beat, `nano_banana.py --ref <reference>
+   --size 4K --aspect 9:16` (ALWAYS pass `--ref` for character consistency, and
+   set `--aspect` explicitly so the output doesn't snap to the reference's
+   ratio). Describe the change with a verb — "keep the actor identical; change
+   only the pose to …". For a beat that shows the app in-hand, generate the actor
+   holding a phone with a flat, solid chroma-green screen (an even green panel,
+   ready for compositing).
+3. **Animate** — `kie_kling.py --mode v3-0-pro --duration 5` per beat. Write
+   the motion prompt as **motion + one camera move (with a speed word) + an
+   explicit end-state** ("...then holds", "...settles") - Kling loops and
+   stalls at 99% without an endpoint - and don't re-describe the actor (the
+   still already locks appearance). For beats that must stay framed (anything
+   you'll composite onto, or an emotional payoff), prompt for **minimal
+   motion**, add `--lock-end-frame` (reuses the still as the end frame to pin
+   drift), and/or use a **still-hold** instead (loop the approved still + slow
+   zoom) — Kling drifts and reaction clips often dip mid-shot.
 4. **In-app screen (only if a beat shows it)** — extract a frame strip;
    the phone is stable only briefly. `detect_green_quad.py` on a stable
    frame → quad; `screen_composite.py` warps the retina screenshot onto
@@ -96,6 +105,18 @@ off the bottom edge. Make caption copy accurate to what's actually on screen.
 | `make_notif_banner.py` | Branded iOS notification card (optional) |
 | `assemble.sh` | Generic: segments.txt → captioned, scored MP4 |
 
+> **Nano Banana Pro prompting** — `nano_banana.py` calls `google/gemini-3-pro-image`
+> via OpenRouter's Unified Image API. See
+> [`.claude/skills/_shared/nano-banana-pro-conventions.md`](../_shared/nano-banana-pro-conventions.md)
+> for the model id, `--size`/`--aspect` behaviour (2K == 1K; use 4K for hi-res),
+> positive-framing, and the reference-image ratio gotcha.
+>
+> **Kling animation** — `kie_kling.py` animates via kie.ai (`--mode v3-0-pro`). See
+> [`.claude/skills/_shared/kling-i2v-conventions.md`](../_shared/kling-i2v-conventions.md):
+> write motion + one camera move + an explicit end-state (never re-describe the still),
+> and use `--lock-end-frame` to pin a framed/payoff beat. kie.ai exposes no
+> negative_prompt / cfg_scale / camera_control.
+
 ## Common mistakes
 
 | Mistake | Fix |
@@ -105,7 +126,7 @@ off the bottom edge. Make caption copy accurate to what's actually on screen.
 | Character looks different per beat | ALWAYS pass `--ref` to nano_banana |
 | Screenshot slides off the phone | Single static quad valid only on the stable window; freeze-extend or full-screen |
 | Pixelated full-screen UI | Require retina screenshot; never AI-upscale |
-| Payoff beat looks away/drifts | Use a still-hold, not the raw clip |
+| Payoff beat looks away/drifts | Use a still-hold or `--lock-end-frame`, not the raw clip |
 | `concat` "No such file" | segments list uses bare filenames |
 | Silently degrading a risky beat | Surface it to the user as a decision |
 

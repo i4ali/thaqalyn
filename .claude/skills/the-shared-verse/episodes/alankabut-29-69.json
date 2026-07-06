@@ -1,0 +1,30 @@
+{
+  "slug": "alankabut-29-69",
+  "verse_ref": "Sūrat al-ʿAnkabūt · 29:69",
+  "arabic": "وَٱلَّذِينَ جَٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ ٱللَّهَ لَمَعَ ٱلْمُحْسِنِينَ",
+  "translation": "“And those who strive for Us, We will surely guide them to Our paths. And truly, God is with the doers of good.”",
+  "order": ["shia", "sunni"],
+  "readings": {
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia tafsir reads the plural ‘paths’ as layered struggle — against the enemy, against Satan, deepest against the self — the effort itself the first guidance.",
+      "source": "al-Mīzān (Ṭabāṭabāʾī) · Tafsīr-e Namūne"
+    },
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Sunni tafsir reads striving in God’s cause — the Prophet, his companions, and all who follow — answered with steadfast guidance along His straight path.",
+      "source": "Tafsīr Ibn Kathīr · al-Ṭabarī"
+    }
+  },
+  "voiceover": {
+    "hook": "One verse makes a promise: if you keep struggling, God will guide you. Two of Islam's great traditions read that promise a little differently.",
+    "reference": "Surah al-Ankaboot, verse sixty-nine.",
+    "payoff": "Both make the same promise — strive, and you will be guided. For the Shia, those paths turn inward, deepest against the self; for the Sunni, straight along God's one road to Him.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "show_payoff_text": false,
+  "show_closing_text": true,
+  "caption_desc": "Struggle, and you'll be guided — one verse, two readings 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni #selfhelp #motivation</span>",
+  "show_captions": true
+}

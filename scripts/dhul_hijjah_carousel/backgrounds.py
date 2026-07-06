@@ -12,14 +12,12 @@ from . import config
 load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-MODEL = "google/gemini-3-pro-image-preview"
+MODEL = "google/gemini-3-pro-image"
 
 
 def build_bg_prompt(slide: dict) -> str:
-    return (
-        f"Generate a 4:5 vertical portrait image (1080x1350 pixels). "
-        f"{slide['bg_prompt']} {config.BG_STYLE}"
-    )
+    # Aspect ratio is now an API parameter, so it no longer needs stating in prose.
+    return f"{slide['bg_prompt']} {config.BG_STYLE}"
 
 
 def normalize(img: Image.Image) -> Image.Image:
@@ -44,24 +42,19 @@ def _request_image(prompt: str) -> bytes:
     }
     payload = {
         "model": MODEL,
-        "messages": [{"role": "user", "content": prompt}],
-        "modalities": ["image", "text"],
+        "prompt": prompt,
+        "resolution": "1K",  # abstract bg; composited + center-cropped to 1080x1350 later
+        "aspect_ratio": "4:5",
     }
     resp = requests.post(
-        "https://openrouter.ai/api/v1/chat/completions",
-        headers=headers, json=payload, timeout=120,
+        "https://openrouter.ai/api/v1/images",
+        headers=headers, json=payload, timeout=300,
     )
     if resp.status_code != 200:
         raise Exception(f"API error {resp.status_code}: {resp.text}")
-    message = resp.json()["choices"][0]["message"]
-    for img in message.get("images", []):
-        url = img.get("image_url", {}).get("url", "")
-        if url.startswith("data:"):
-            return base64.b64decode(url.split(",", 1)[1])
-        if url:
-            r = requests.get(url, timeout=60)
-            r.raise_for_status()
-            return r.content
+    items = resp.json().get("data") or []
+    if items and items[0].get("b64_json"):
+        return base64.b64decode(items[0]["b64_json"])
     raise Exception(f"No image in response: {resp.json()}")
 
 

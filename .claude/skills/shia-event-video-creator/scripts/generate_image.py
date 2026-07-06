@@ -64,10 +64,12 @@ def openai_aspect_to_size(aspect: str) -> str:
     return mapping.get(aspect, "1024x1536")
 
 
-def generate_nano_banana(prompt: str, output: Path, aspect: str, model: str = "gemini-2.5-flash-image-preview") -> None:
+def generate_nano_banana(prompt: str, output: Path, aspect: str, size: str = "1K",
+                         model: str = "gemini-2.5-flash-image-preview") -> None:
     """
     Call Google Gemini image generation via REST.
     Endpoint: https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent
+    Note: only Gemini 3 Pro Image supports 2K/4K; the 2.5 Flash base model is 1K only.
     """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -78,22 +80,25 @@ def generate_nano_banana(prompt: str, output: Path, aspect: str, model: str = "g
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "responseModalities": ["IMAGE"],
-            "imageConfig": {"aspectRatio": gemini_aspect_to_size(aspect)},
+            "imageConfig": {"aspectRatio": gemini_aspect_to_size(aspect), "imageSize": size},
         },
     }
 
-    r = requests.post(url, json=payload, timeout=120)
+    r = requests.post(url, json=payload, timeout=300)
     if r.status_code != 200:
         raise RuntimeError(f"Gemini API error {r.status_code}: {r.text[:500]}")
 
     data = r.json()
-    # Walk the response to find the inline image data
     candidates = data.get("candidates", [])
     if not candidates:
         raise RuntimeError(f"No candidates in Gemini response: {data}")
 
+    # Take the LAST non-thought image: on the reasoning (Pro) model, earlier inline
+    # images can be interim "thought" drafts, so iterate in reverse and skip them.
     parts = candidates[0].get("content", {}).get("parts", [])
-    for part in parts:
+    for part in reversed(parts):
+        if part.get("thought"):
+            continue
         inline = part.get("inlineData") or part.get("inline_data")
         if inline and inline.get("data"):
             image_bytes = base64.b64decode(inline["data"])
@@ -101,26 +106,27 @@ def generate_nano_banana(prompt: str, output: Path, aspect: str, model: str = "g
             output.write_bytes(image_bytes)
             return
 
-    # Fallback: sometimes text-only refusal
+    # Text-only refusal surfaces the model's message rather than a generic error.
     for part in parts:
         if part.get("text"):
             raise RuntimeError(f"Gemini refused or returned text instead of image: {part['text'][:500]}")
     raise RuntimeError(f"No image data found in Gemini response: {data}")
 
 
-def generate_openrouter(prompt: str, output: Path, aspect: str, model: str = "google/gemini-3-pro-image-preview") -> None:
+def generate_openrouter(prompt: str, output: Path, aspect: str, size: str = "1K",
+                        model: str = "google/gemini-3-pro-image") -> None:
     """
-    Call Google Gemini 3 Pro Image via OpenRouter's chat completions endpoint.
-    OpenRouter accepts `modalities: ["image", "text"]` and returns images inline.
+    Generate an image via OpenRouter's Unified Image API (POST /api/v1/images).
+
+    Resolution + aspect ratio are real API parameters here (unlike the old chat
+    endpoint, which ignored them). For this model the "2K" tier is currently
+    identical to "1K" (~768px wide); pass size="4K" for crisp, hi-res stills.
     """
     api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
         raise RuntimeError("OPENROUTER_API_KEY is not set. Add it to .env or export it.")
 
-    aspect_hint = f"Generate a vertical {aspect} story format image, very tall and narrow (1080x1920 pixels)." if aspect == "9:16" else f"Generate an image with aspect ratio {aspect}."
-    full_prompt = f"{aspect_hint}\n\n{prompt}"
-
-    url = "https://openrouter.ai/api/v1/chat/completions"
+    url = "https://openrouter.ai/api/v1/images"
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
@@ -129,58 +135,22 @@ def generate_openrouter(prompt: str, output: Path, aspect: str, model: str = "go
     }
     payload = {
         "model": model,
-        "messages": [{"role": "user", "content": full_prompt}],
-        "modalities": ["image", "text"],
+        "prompt": prompt,
+        "resolution": size,
+        "aspect_ratio": aspect,
     }
 
-    r = requests.post(url, headers=headers, json=payload, timeout=180)
+    r = requests.post(url, headers=headers, json=payload, timeout=300)
     if r.status_code != 200:
         raise RuntimeError(f"OpenRouter API error {r.status_code}: {r.text[:500]}")
 
     data = r.json()
-    choices = data.get("choices", [])
-    if not choices:
-        raise RuntimeError(f"No choices in OpenRouter response: {data}")
+    items = data.get("data") or []
+    if not items or not items[0].get("b64_json"):
+        raise RuntimeError(f"No image data in OpenRouter response: {data}")
 
-    message = choices[0].get("message", {})
-
-    # Primary: message.images array
-    for img in message.get("images", []) or []:
-        if isinstance(img, dict) and "image_url" in img:
-            u = img["image_url"].get("url", "")
-            if u.startswith("data:"):
-                b64 = u.split(",", 1)[1]
-                output.parent.mkdir(parents=True, exist_ok=True)
-                output.write_bytes(base64.b64decode(b64))
-                return
-            if u:
-                fetched = requests.get(u, timeout=120)
-                fetched.raise_for_status()
-                output.parent.mkdir(parents=True, exist_ok=True)
-                output.write_bytes(fetched.content)
-                return
-
-    # Fallback: content with inline_data (raw Gemini format passthrough)
-    content = message.get("content", [])
-    if isinstance(content, list):
-        for part in content:
-            if not isinstance(part, dict):
-                continue
-            if "inline_data" in part and "data" in part["inline_data"]:
-                output.parent.mkdir(parents=True, exist_ok=True)
-                output.write_bytes(base64.b64decode(part["inline_data"]["data"]))
-                return
-            if "image_url" in part:
-                u = part["image_url"].get("url", "")
-                if u.startswith("data:"):
-                    output.parent.mkdir(parents=True, exist_ok=True)
-                    output.write_bytes(base64.b64decode(u.split(",", 1)[1]))
-                    return
-
-    # Final fallback: text-only refusal
-    if isinstance(content, str) and content:
-        raise RuntimeError(f"OpenRouter returned text instead of image: {content[:500]}")
-    raise RuntimeError(f"No image data in OpenRouter response: {data}")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_bytes(base64.b64decode(items[0]["b64_json"]))
 
 
 def generate_chatgpt(prompt: str, output: Path, aspect: str) -> None:
@@ -241,6 +211,8 @@ def main() -> int:
         help="Which API to call.",
     )
     ap.add_argument("--aspect", default="9:16", help="Aspect ratio (default 9:16 for TikTok).")
+    ap.add_argument("--size", default="1K", choices=["1K", "2K", "4K"],
+                    help="Resolution tier (2K==1K for this model; use 4K for crisp stills).")
     ap.add_argument("--scene-num", type=int, default=None, help="Optional scene number for logging.")
     args = ap.parse_args()
 
@@ -251,11 +223,11 @@ def main() -> int:
 
     try:
         if args.provider == "nano-banana":
-            generate_nano_banana(args.prompt, output_path, args.aspect, model="gemini-2.5-flash-image-preview")
+            generate_nano_banana(args.prompt, output_path, args.aspect, args.size, model="gemini-2.5-flash-image-preview")
         elif args.provider == "nano-banana-pro":
-            generate_nano_banana(args.prompt, output_path, args.aspect, model="gemini-3-pro-image-preview")
+            generate_nano_banana(args.prompt, output_path, args.aspect, args.size, model="gemini-3-pro-image")
         elif args.provider == "openrouter":
-            generate_openrouter(args.prompt, output_path, args.aspect)
+            generate_openrouter(args.prompt, output_path, args.aspect, args.size)
         elif args.provider == "chatgpt":
             generate_chatgpt(args.prompt, output_path, args.aspect)
     except Exception as e:

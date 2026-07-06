@@ -51,18 +51,23 @@ Present back as a short confirmation card listing: chosen model + key prompt-gui
 
 ### Stage 1 — Scene breakdown
 
-Generate the proposed scenes. Each scene needs:
+**First, lock the continuity block - the single most important thing for a video that flows as ONE piece instead of a slideshow of look-alike strangers in similar places.** Before listing scenes, define and write down, at the TOP of `scenes.md`, the constants that must be identical in every shot:
+- **Locked wardrobe** - the exact garments, colours and accessories of each recurring figure (e.g. "chain mail over a deep-green robe, green sash, flowing deep-green cloak, olive-green turban over a steel helmet, sword on a leather baldric"). Be specific; vague wardrobe drifts between scenes.
+- **Locked setting** - location, time of day, palette, terrain, and the standing props/landmarks that recur (e.g. "edge of the Karbala camp at golden hour, parched red-ochre plain, dark goat-hair tents, a tall black banner, dry riverbed, dusty amber sky").
+- **Locked recurring subjects** - the specific animal/object that reappears (e.g. "the same white Arabian horse"), described identically each time.
 
-- **Title** — short, e.g., "The Raising of the Hand"
-- **Beat** — what happens in this scene (1 sentence)
-- **Setting** — location, time of day, weather, landscape
-- **Figures** — who is present, which ones have veiled faces
-- **Symbolic elements** — banners, color palette, objects (e.g., Dhul-Fiqar, black flag, green flag, Quran, water skin)
-- **Camera** — composition suggestion (wide establishing, medium two-shot, low-angle hero, etc.)
+Then generate the proposed scenes. Each scene needs:
+
+- **Title** - short, e.g., "The Raising of the Hand"
+- **Beat** - what happens in this scene (1 sentence)
+- **Setting** - restate the locked setting (plus any scene-specific change)
+- **Figures** - who is present, which ones have veiled faces; their wardrobe = the locked wardrobe
+- **Symbolic elements** - banners, color palette, objects (e.g., Dhul-Fiqar, black flag, green flag, Quran, water skin)
+- **Camera** - composition (wide establishing, medium two-shot, low-angle hero, etc.), chosen so the scenes **connect into one continuous beat**: plan a deliberate progression (e.g. wide mount -> closer refusal -> low reveal) where the action and framing of one shot lead the eye into the next, not three unrelated angles of the same costume.
 
 Output as a numbered list so the user can reference scenes by number ("redo scene 3"). Wait for approval before generating images. Revise freely.
 
-See `references/style_guide.md` for the locked aesthetic and `references/religious_accuracy.md` for doctrinal guardrails.
+See `references/style_guide.md` (esp. "Consistency between scenes") for the locked aesthetic and `references/religious_accuracy.md` for doctrinal guardrails.
 
 ### Stage 2 — Image prompts and generation
 
@@ -70,15 +75,21 @@ Once scenes are approved:
 
 1. For each scene, construct a **detailed image generation prompt** using the template in `references/prompt_templates.md`. Every prompt includes:
    - The locked style preamble (golden hour, oil-painting cinematic, 7th century Arabia, 9:16)
+   - **The locked continuity block from Stage 1, pasted in VERBATIM - this is what makes the video flow as one piece:** the recurring figure's wardrobe worded as "the EXACT SAME [garments] as before: ...", the same setting description, and the same recurring subject ("the same white Arabian horse"). Do NOT paraphrase it differently per scene - reuse the identical wording, or Nano Banana drifts the clothes / place / animal between shots and the cuts jar.
    - The blank-face veiling instruction for sacred figures (mandatory) — use the **blank-face language** from `references/prompt_templates.md` ("a completely smooth, blank, featureless soft matte pale ivory-white face... NOT a glowing sun, NOT a hard disc, NOT a floating orb"), listed once per figure. Never use the retired bright sun-ball / opaque-disc phrasing.
-   - Scene-specific content
-   - **Explicit "no text in image" clause** — Nano Banana sometimes bakes Arabic/English text into the sky area. Always negative-prompt this (the user wants to add overlay text in CapCut, not have it rendered).
-   - Negative prompt (no faces on sacred figures, no modern elements, no text artifacts)
+   - Scene-specific content (the action and framing unique to this shot)
+   - **Text-free framing** — Nano Banana sometimes bakes Arabic/English text into the sky. State it positively ("every surface plain and unlettered, the sky clean painterly space") so the user can add overlay text in CapCut instead of having it rendered.
+   - **Face-safety + style line** — keep the featureless-face wording verbatim (the doctrinal core), and state the rest positively (period dress, oil-painting medium, not photo/3D/cartoon). See `references/prompt_templates.md`.
 
 2. Call the image API. **Default to `--provider openrouter`** (uses Nano Banana Pro
-   = `google/gemini-3-pro-image-preview` via the same OpenRouter key the user already
-   has for verse-art generation). Fall back to `nano-banana-pro` (direct Gemini) or
-   `chatgpt` only if OpenRouter is unavailable.
+   = `google/gemini-3-pro-image` via OpenRouter's Unified Image API, on the same
+   OpenRouter key the user already has for verse-art generation). The `nano-banana-pro`
+   (direct Gemini) and `chatgpt` providers are alternates that need their own keys
+   (`GEMINI_API_KEY` / `OPENAI_API_KEY`); use them only if asked.
+
+   Pass `--size 4K` for scene stills - the "2K" tier is a no-op for this model (same as
+   1K, ~768px wide), and 768px is soft at the 1080 delivery size; 4K stays crisp and
+   Kling downscales it.
 
    ```bash
    python scripts/generate_image.py \
@@ -86,7 +97,8 @@ Once scenes are approved:
      --prompt "$(cat video_output/<event>/prompts/scene_1.txt)" \
      --output video_output/<event>/images/scene_1.png \
      --provider openrouter \
-     --aspect 9:16
+     --aspect 9:16 \
+     --size 4K
    ```
 
 3. Save all images to a single output directory (e.g., `video_output/<event>/images/`). Use consistent naming: `scene_1.png`, `scene_2.png`, etc.
@@ -101,7 +113,9 @@ The user will either approve everything or flag specific scenes. For each flagge
 - Regenerate with an adjusted prompt. Nano Banana/Gemini responds well to iterative edits if you feed the existing image back with a delta instruction ("same scene, but move the banner to the left and make the light softer").
 - Loop until the user approves all scenes.
 
-Do not proceed to video until every image is approved. A bad image becomes a bad 5-second video, and Kling generations are slow + expensive.
+**Continuity QC (do this yourself before showing the user, and again before video):** view all scene images together and check the cross-scene constants line up - same wardrobe (colours AND garments), same setting / palette / lighting, same recurring subject (the horse, the banner), same rendering style. Wardrobe drift is the most common miss (the figure in different clothes in one scene than the rest). To fix a drifter, regenerate it feeding an approved scene back as the reference - "match the clothing, setting and rendering of this reference exactly" - or re-paste the locked continuity block. Don't ship a set where the figure or the world changes between shots.
+
+Do not proceed to video until every image is approved AND continuous across the set. A bad or off-continuity image becomes a bad 5-second video, and Kling generations are slow + expensive.
 
 ### Stage 4 — Video prompts and Kling generation
 
@@ -109,15 +123,14 @@ For each approved image:
 
 1. **Pull up the model-specific prompt-guide cheat sheet from Stage 0.** Different Kling versions have different word-count limits, magic phrases, and what-not-to-mention rules. Apply them — don't write generic motion prompts. See `references/video_model_research.md`.
 
-2. Write a **Kling image-to-video prompt** using the template in `references/prompt_templates.md`. Motion should be **gentle, cinematic, and reverent** — not an action movie, but **not a frozen still either**. A tasteful camera move is the default:
-   - **Default: a gentle camera move** — slow push-in, slow pull-back, or a gentle ~20–30° partial arc / slow parallax around static figures — paired with wind in robes and drifting dust. This is the norm; see the "safe camera-movement envelope" table in `references/prompt_templates.md`.
-   - Soft particulate light (dust motes, shimmering heat), sunset rays shifting slowly, crowd sway without individual movement
-   - Subjects stay locked while the camera moves — a *gentle* move + static figure is the proven sweet spot.
-   - Bad motion: a sacred figure turning/looking up/lifting the head (risks completing the face), a **full 360° orbit**, any camera move combined with an upward gaze, fast pans, lip-sync, handheld shake
+2. Write a **Kling image-to-video prompt** using the template in `references/prompt_templates.md`. Motion should be **cinematic and reverent, with real movement** - figures included, not a frozen still. **Proper figure movement is the default, not static figures:**
+   - **Move the figures, lock the camera.** Horses toss/stamp/rear in place, robes and banners billow, dust blows, non-sacred people move freely - and sacred figures' bodies and heads can move too (bowing the head DOWN, leaning, swaying, turning AWAY). Pair big figure motion with `"Locked-off tripod shot, completely static camera."` - pinning the camera is the PREFERRED setup for movement-heavy scenes, because it stops Kling from pulling back / widening (which drifts the composition or drags in content you deliberately cropped out, e.g. a horse's legs) and pours all the energy into the figures. See the "safe movement envelope" table in `references/prompt_templates.md`.
+   - A gentle *camera* move (slow push-in, gentle ~20-30 degree arc) is still fine for calm scenes - but only when nothing important sits just outside the frame edge, since Kling may invert a "push-in" into a pull-back that widens the shot.
+   - **The ONLY motion forbidden on a sacred figure is the face-completion trigger:** the sacred head craning UP or turning to face the camera *during motion*. Bowing the head down, turning away, body/arm motion, the mount and robes in full motion - all safe. Also forbidden regardless: a **full 360 degree orbit**, and any camera move combined with an upward gaze. Avoid fast pans, lip-sync, handheld shake
 
    **Critical rules** (apply regardless of model):
    - **Never** mention "halo", "glow", "veil", "radiant", "face", "blank face", or sacred-figure names ("Prophet", "Imam", "Ali", "Fatima") in the motion prompt. Mentioning them invites Kling to *animate* or *complete* those regions. Describe sacred figures by physical appearance/position only ("the kneeling figure in the brown robe", "the standing figure on the left").
-   - **Reserve the locked-off magic phrase** (`"Locked-off tripod shot, completely static camera."`) **for fragile scenes only** — unavoidable upward gaze, framing very tight on the face, or QC de-escalation. It is not the default.
+   - **`"Locked-off tripod shot, completely static camera."` is now a go-to**, not a last resort - lead with it whenever the figures carry the motion, or when content sits cropped at a frame edge that a pull-back would expose. Still mandatory for genuinely fragile scenes (unavoidable upward gaze, framing very tight on the face, QC de-escalation).
    - Keep prompts within the model's documented word limit (Kling 3.0: ~15-40 words). Longer prompts overload the motion model and it adds spurious motion.
 
 3. Call Kling. **Use the project's `scripts/kie_kling.py`** — NOT this skill's generic `scripts/generate_video.py`. Reasons:
@@ -136,7 +149,7 @@ For each approved image:
      --output video_output/<event>/videos/scene_1.mp4
    ```
 
-   **For locked-end-frame mode** (mathematically prevents halo/lighting drift by forcing Kling to interpolate between two identical endpoints), pass `--lock-end-frame`. Use this for any scene where halo intensity must stay constant.
+   **To lock the end frame**, pass `--lock-end-frame` - `kie_kling.py` reuses the start frame as the end frame (v3 sends `image_urls: [start, start]`), so Kling interpolates between two identical endpoints, strongly reducing blank-face / halo / lighting drift. Use it for any scene where the blank face or halo must stay constant. (For a distinct last frame, use `--end-image <path>`.)
 
 4. Kling is async. The script handles submit → poll → download. Expect 1–5 minutes per clip on Kling 3.0. If generating 6+ scenes, submit them **in parallel** by running multiple script invocations in the background, then wait for all to finish.
 
@@ -157,7 +170,7 @@ when a scene's face completes or drifts:
 1. **Regenerate the SOURCE IMAGE so the figures face forward, heads level or slightly bowed** — never craned/looking up. The upward-gaze + motion combination is the single biggest completion trigger (see `references/prompt_templates.md`).
 2. **De-escalate the camera move.** Drop a partial arc → slow push-in, or all the way to fully locked-off (`"Locked-off tripod shot, completely static camera."`) for that scene. Lock all subjects motionless, environment-only, no upward gaze. Prefer **5s**. Strip every mention of the face, glow, or the figure's name.
 3. **Regenerate Kling with a different seed.** Just re-submit — Kling uses a different random seed each attempt.
-4. **Add `--lock-end-frame`** (if available) so Kling interpolates between two identical endpoints.
+4. **Add `--lock-end-frame`** so Kling interpolates between two identical endpoints (the start frame is reused as the end frame) - a strong drift / face-completion guard. Try it before dropping to Ken Burns for a scene that only mildly drifts.
 5. **Ken Burns fallback (the reliable fix — escalate here fast for any climactic or upward-gaze scene).** Skip Kling entirely for that scene, apply an FFmpeg slow-zoom to the approved still PNG (whose blank faces are perfect). Zero AI animation = zero face-completion risk. This is the standard, expected outcome for reflective/closing/upward-gaze shots — not a last resort.
    ```bash
    python scripts/ken_burns.py \
@@ -306,12 +319,15 @@ Keep messages short on mobile. One action per turn when possible.
 - `references/religious_accuracy.md` — Shia doctrinal guardrails; what's authentic, what's controversial, what to avoid.
 - `references/prompt_templates.md` — Copy-paste templates for image generation prompts and Kling motion prompts.
 - `references/video_model_research.md` — How to research a Kling model's prompt guide upfront in Stage 0. **Required reading before writing any motion prompts.**
+- `references/kling_hybrid_playbook.md` - Adopted Kling hybrid plan: prompt craft to apply + our verified motion rules (walk/warp/orbit-light) + Motion Brush manual lane; camera_control evaluated and rejected. Read alongside video_model_research.md before writing motion prompts.
+- `../_shared/nano-banana-pro-conventions.md` - shared Nano Banana Pro calling conventions (GA model id, Unified Image API, `--size`/`--aspect` behaviour, positive-framing, reference-image ratio gotcha).
+- `../_shared/kling-i2v-conventions.md` - shared Kling image-to-video conventions (kie.ai exposes no negative_prompt/cfg_scale/camera_control; motion + camera + end-state; `--lock-end-frame` = `image_urls[start,end]`; duration/mode tiers).
 
 ## Scripts
 
 ### Production-tested path (use these)
 
-- **`scripts/kie_kling.py` (in project root, NOT this skill folder)** — Kling image-to-video via kie.ai gateway. Supports v2.1 master, v2.1 standard/pro, v3-0-std/pro/4k. Handles Kling 3.0's different payload shape (image_urls array, mode std/pro/4K, multi_shots, etc.). Has `--lock-end-frame` for mathematically preventing lighting drift. **This is the default video-generation path.**
+- **`scripts/kie_kling.py` (in project root, NOT this skill folder)** — Kling image-to-video via kie.ai gateway. Supports v2.1 master, v2.1 standard/pro, v3-0-std/pro/4k. Handles Kling 3.0's different payload shape (image_urls array, mode std/pro/4K, multi_shots, etc.). Has `--lock-end-frame` (reuses the start frame as the end frame) to hold the blank face and lighting steady, plus `--end-image` for a distinct last frame. Default mode is now `v3-0-pro`. **This is the default video-generation path.**
 - `scripts/generate_image.py` (in this skill) — Nano Banana Pro via OpenRouter (default), direct Gemini, or ChatGPT Image. Saves 9:16 PNG.
 - `scripts/generate_narration.py` — ElevenLabs TTS per-scene narration. Reads `<event-dir>/narration.json`, writes `audio/scene_N.mp3`.
 - `scripts/stitch_video.py` — Single-pass FFmpeg stitch. Auto-detects any scene count, handles video/audio duration mismatches, no AAC priming drift.

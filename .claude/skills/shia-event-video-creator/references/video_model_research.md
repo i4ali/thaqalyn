@@ -36,8 +36,9 @@ Capture these as a cheat sheet inline in the conversation so Stages 2 and 4 refe
   - Kling 3.0+: `"Locked-off tripod shot, completely static camera"` for forcing zero camera movement.
   - Kling 2.6 Motion Control: bracketed parameters like `[actor: camera] [action: zoom-in]`.
 - **Negative prompt support** — does the API have a separate `negative_prompt` field, or do you have to bake "NO X" clauses into the positive prompt?
-  - Kling 3.0 on kie.ai: **no** native negative prompt field as of April 2026. Bake constraints into positive prompt.
+  - Kling 3.0 on kie.ai: **no** native negative prompt field (re-verified against the kie.ai `kling-3.0/video` schema on 2026-07-02 — `negative_prompt`, `cfg_scale`, and `camera_control` are all absent). Bake constraints into the positive prompt.
   - Kling 2.x on kie.ai: also no separate negative prompt field.
+  - NOTE: the official Kling API and other gateways (fal.ai, Segmind, kling.ai) DO expose `negative_prompt` + `cfg_scale`, so best-practice guides that treat the negative prompt as the #1 stability lever assume those paths, not our kie.ai one. On kie.ai the levers we have are prompt wording, an explicit motion end-state, and `--lock-end-frame` (`image_urls: [start, start]`).
 - **Subject Binding behavior** — does the model preserve character features across camera moves automatically, or do you have to explicitly lock them?
   - Kling 3.0: built-in Subject Binding; mentioning the figure once is enough.
   - Kling 2.x: no Subject Binding; must explicitly say "completely motionless, does not move at all."

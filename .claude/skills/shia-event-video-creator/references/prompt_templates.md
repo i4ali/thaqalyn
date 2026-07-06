@@ -6,9 +6,12 @@ Copy-paste scaffolds for image and video prompts. Adjust bracketed sections per 
 
 ## Image generation prompt (Nano Banana Pro via OpenRouter)
 
-Nano Banana Pro (`google/gemini-3-pro-image-preview` via OpenRouter) responds well to
-natural-language descriptive prompts. Stack the locked style preamble + scene content +
-blank-face veiling instruction + negative prompt.
+Nano Banana Pro (`google/gemini-3-pro-image` via OpenRouter's Unified Image API) is a
+reasoning model - it responds best to natural-language descriptive briefs and to
+**positive framing** ("plain and unlettered", not "no text"). Stack the locked style
+preamble + scene content + blank-face veiling instruction. The blank-face description is
+the doctrinal core: keep its wording verbatim (see the CRITICAL FACE RULE below). Only
+the generic text/style exclusions are reworded to positive framing.
 
 ### The veiling technique — BLANK FACE (production default, canonical Al-Thaqalayn look)
 
@@ -56,18 +59,25 @@ with indistinct features. Animals have normal natural faces.]
 [SYMBOLIC ELEMENTS — banners, specific objects, colors]
 [CAMERA — angle, framing, composition. Leave clean sky headroom for text overlay.]
 
-ABSOLUTELY NO TEXT IN THE IMAGE: NO Arabic words, NO English text, NO subtitles, NO
-calligraphy, NO inscriptions, NO writing of any kind. Banners contain NO readable
-text — abstract colored cloth shapes only.
+TEXT-FREE FRAME: every surface is plain and unlettered. Banners are abstract panels of
+colored cloth, and the open sky is clean painterly space. The frame carries no writing
+of any kind.
 
-Negative: NO visible facial features on sacred figures, NO eyes, NO nose, NO mouth,
-NO bright glowing sun face, NO blinding light, NO hard-edged disc, NO pasted-on
-sphere, NO floating orb, NO oversized glowing ball, NO ring-shaped halo behind the
-head, NO circular shape, NO face looking up / head craned upward, NO text of any
-kind, NO modern clothing, NO modern architecture, NO anachronistic objects, NO neon
-colors, NO photorealistic selfie style, NO AI plastic skin, NO distorted anatomy,
-NO cartoon style, NO anime, NO 3D render look.
+The sacred figures' faces stay completely featureless: no eyes, no nose, no mouth, no
+bright glowing sun face, no blinding light, no hard-edged disc, no pasted-on sphere, no
+floating orb, no oversized glowing ball, no ring-shaped halo behind the head, no circular
+shape, and the face is never turned up or craned upward.
+
+Style: authentic 7th-century Arabian dress, materials, and architecture throughout,
+rendered entirely as a matte oil-on-canvas historical painting with natural anatomy and
+visible painterly brushwork. A reverent Orientalist oil painting, not a photograph, a
+3D render, a cartoon, or anime.
 ```
+
+> **What changed vs the old template:** the blank-face description (the CRITICAL FACE
+> RULE, above) is unchanged and every face-safety term is preserved - only re-led
+> positively ("faces stay completely featureless: no eyes...") and the generic text /
+> modern / 3D-render negatives are stated positively, per the model's prompting guide.
 
 **Why the per-figure list matters:** When multiple sacred figures appear in one scene,
 a single collective mention tends to veil only one of them. Nano Banana weights each
@@ -93,11 +103,10 @@ Nano Banana sometimes bakes Arabic/English text into the sky, especially if the 
 mentions "space for text overlay." Always negative-prompt it:
 
 ```
-ABSOLUTELY NO TEXT IN THE IMAGE. The image must contain ZERO written letters, ZERO
-words, ZERO Arabic script, ZERO English text, ZERO subtitles, ZERO calligraphy, ZERO
-inscriptions, ZERO numbers, ZERO writing of any kind anywhere in the frame. The empty
-sky area is pure clean painterly sky with NO text rendered on it. Banners in the
-distance contain NO readable text — abstract colored cloth shapes only.
+TEXT-FREE FRAME. Every surface in the image is plain and unlettered: the open sky is
+pure, clean painterly space, and banners in the distance are abstract panels of colored
+cloth. Keep the frame free of letters, words, Arabic or English script, subtitles,
+calligraphy, inscriptions, and numbers of any kind.
 ```
 
 ### Worked example — Ghadeer scene 4 (the raising of the hand)
@@ -132,15 +141,17 @@ The crowd behind them has indistinct painterly faces.
 Low-angle hero shot looking up toward the two raised figures, sun centered behind them.
 Generous clean empty sky space at the top of frame for later text overlay.
 
-ABSOLUTELY NO TEXT IN THE IMAGE: NO Arabic words, NO English text, NO subtitles, NO
-calligraphy, NO writing of any kind. Banners contain NO readable text.
+TEXT-FREE FRAME: every surface is plain and unlettered. The open sky is clean painterly
+space and the banners are abstract colored cloth with no readable text.
 
-Negative: NO visible facial features on the Prophet or Imam Ali, NO eyes, NO nose,
-NO mouth, NO bright glowing sun face, NO hard-edged disc, NO pasted-on sphere, NO
-floating orb, NO ring-shaped halo, NO circular shape, NO text of any kind, NO modern
-clothing, NO modern architecture, NO anachronistic objects, NO neon colors, NO
-photorealistic selfie style, NO AI plastic skin, NO distorted anatomy, NO cartoon
-style, NO anime, NO 3D render look.
+The faces of the Prophet and Imam Ali stay completely featureless: no eyes, no nose, no
+mouth, no bright glowing sun face, no hard-edged disc, no pasted-on sphere, no floating
+orb, no ring-shaped halo, no circular shape, and the face is never turned up or craned
+upward.
+
+Style: authentic 7th-century dress and setting, rendered entirely as a matte oil-on-canvas
+historical painting with natural anatomy. A reverent Orientalist oil painting, not a
+photograph, a 3D render, a cartoon, or anime.
 ```
 
 ---
@@ -169,43 +180,67 @@ style, NO anime, NO 3D render look.
    upward gaze, regenerate the source image forward-facing FIRST, or go straight to
    Ken Burns. Don't try to fix an upward-gaze scene with prompt wording alone.
 
-4. **Gentle camera movement is the DEFAULT and encouraged — locked-off is NOT the
-   norm.** A tasteful slow move makes the video feel cinematic instead of a still.
-   Keep figures static while the *camera* moves gently. Use the safe envelope below.
+4. **Real figure movement is the DEFAULT - frozen figures are NOT the goal.** Horses
+   toss/stamp/rear-in-place, robes and banners billow, non-sacred people move freely,
+   and sacred figures' bodies and heads move too (bowing the head DOWN, leaning, swaying,
+   turning AWAY). A still video is no longer the target; proper movement is.
 
-5. **The safe camera-movement envelope** (empirically validated — production-tested on
-   blank-face veiled figures):
+5. **Move the figures, lock the camera.** `"Locked-off tripod shot, completely static
+   camera."` is the PREFERRED setup for movement-heavy scenes, not a last resort, for two
+   reasons: (a) it stops Kling from pulling back / widening / re-framing - which otherwise
+   drifts the composition or drags in content you deliberately cropped out (e.g. a horse's
+   legs framed out at the chest); (b) with the camera pinned, all the motion energy goes
+   into the figures and environment. Pin the camera, move everything else.
 
-   | Tier | Moves | Use when |
+6. **The safe movement envelope** (production-tested on blank-face veiled figures):
+
+   | Tier | What | Use when |
    |---|---|---|
-   | **SAFE (default)** | slow push-in / slow pull-back / **gentle ~20–30° partial arc** / slow lateral parallax — paired with wind in robes + drifting dust | Figures forward-facing or heads level/bowed (never craned up). 5s. This is the default for most scenes. |
-   | **RISKY (QC every frame)** | longer/faster arc, 8s, mild crane | Only forward-facing figures, never tight on the face. Extract & inspect ~5 frames. |
-   | **FORBIDDEN** | full 360° orbit; ANY camera move combined with an upward gaze or a turning/​moving sacred figure; fast pans; handheld shake | — |
+   | **DEFAULT - move figures, lock camera** | Big figure + environment motion: horse tossing/stamping/rearing in place, rider bowing the head down / leaning, robes & banners billowing, dust blowing - under `"Locked-off tripod shot, completely static camera."` | Sacred heads bowed / level / turned away (never craned up or to camera). 5s. The norm for dramatic scenes. |
+   | **ALSO FINE - gentle camera** | slow push-in / gentle ~20-30 degree arc + lighter figure motion | Calm scenes where NOTHING is cropped just outside the frame (a widen won't expose anything). Forward-facing or heads level/bowed. |
+   | **RISKY (QC every frame)** | big figure motion + a moving camera; 8s+; mild crane | Only forward-facing, never tight on a sacred face. Extract & inspect ~5 frames. |
+   | **FORBIDDEN** | a sacred head craning UP or turning to face camera *during motion*; full 360 degree orbit; any camera move + upward gaze; a camera pull-back / widen when content is cropped at the frame edge; fast pans; handheld shake | - |
 
-   The subjects stay locked even though the camera moves — that combination is fine
-   (a *gentle* move + static subject is the proven sweet spot). The thing that
-   completes faces is **upward gaze / head-turn during motion**, not camera motion itself.
+   The one thing that completes a blank face is the **sacred head craning up / turning to
+   camera during motion** - NOT figure movement itself, and not a bowed or turned-away
+   head. Move the body and the bowed head freely; just never point the face up or at camera.
 
-6. **Reserve locked-off for FRAGILE scenes only:** an unavoidable upward gaze, framing
-   very tight on the face, or a scene that already failed QC (de-escalation). For those,
-   lead with `"Locked-off tripod shot, completely static camera."`
+7. **Watch the camera, not only the figures.** Kling often ignores or *inverts* a camera
+   instruction - a requested "push-in" can come back as a pull-back that widens the frame
+   and drags in whatever you cropped out. If anything important sits just outside a frame
+   edge, lock the camera off so it cannot widen.
 
-7. **Environment always moves too:** robes/banners "gently shift in the wind", dust
-   "drifts", light "slowly blooms", stars "twinkle". Never: a sacred figure turning,
-   looking, lifting the head, "breathing visibly".
+8. **Environment always moves too:** robes/banners billow in the wind, dust blows/drifts,
+   light blooms, stars twinkle. The forbidden move stays narrow: a sacred head craning UP
+   or the face turning to camera - never that.
 
-8. **Keep prompts SHORT** (2–4 sentences), prefer **5s**, `--mode v3-0-pro` via
-   `scripts/kie_kling.py`. **Always QC start/mid/end (5 frames if the camera moves)
-   AND the final stitch.**
+9. **Keep prompts SHORT** (2-4 sentences, ~15-40 words), prefer **5s**, `--mode v3-0-pro`
+   via `scripts/kie_kling.py`. **Always QC start/mid/end (all 5 frames if the camera moves
+   OR the figures move a lot) AND the final stitch.**
+
+10. **Give every motion an end-state.** Close the prompt with where the motion comes to
+    rest - "...then steadies", "...and settles", "...and holds still", "...eases to a
+    stop". Kling needs a place to finish the shot; a motion with no endpoint can loop and
+    stall the render at 99% (per the Kling i2v guide). An end-state also stops a 5s clip
+    drifting in its final second.
 
 ### Templates
 
-**Default — gentle movement (use this for most scenes):**
+**Default - move the figures, lock the camera (use this for most dramatic scenes):**
 ```
-[CAMERA: slow push-in / slow pull-back / a gentle slow partial orbit, smooth and
-cinematic — pick one]. [ENVIRONMENT: robes ripple in a steady wind, dust drifts, light
-blooms]. The [figure-by-appearance] and the [figure-by-appearance] stay completely
-still and do not move at all.
+Locked-off tripod shot, completely static camera. The [animal/object in BIG in-place
+motion - tosses its head, mane whipping; stamps; rears in place]. The [figure-by-
+appearance] [body motion - sways, bows the head down over the neck, leans], [his] cloak
+and the banner billowing. Dust blows, then the motion settles and the shot holds.
+(Sacred head bows DOWN or turns away - never up or to camera. Pinned camera = it cannot
+widen and reveal cropped-out content.)
+```
+
+**Gentle-camera alternative (calm scene, nothing cropped at the frame edge):**
+```
+[CAMERA: slow push-in that eases to a stop - avoid pull-back if content sits just out of
+frame]. [ENVIRONMENT: robes ripple, dust drifts]. The [figure-by-appearance] moves
+lightly - [small body motion], head level or bowed, never craned up, then settles.
 ```
 
 **Fragile only — locked-off (upward gaze / tight on face / QC de-escalation):**
@@ -217,19 +252,22 @@ Locked-off tripod shot, completely static camera.
 
 ### Worked examples
 
-**Gentle partial arc, static figures — 5s (validated default):**
+**Movement-heavy, locked camera - 5s (validated default):**
 ```
-The camera slowly arcs a short distance around the two still figures — a gentle, slow
-partial orbit, smooth and cinematic. Their robes ripple softly in a steady wind. Fine
-dust drifts low across the ground. The two figures stay completely still and do not
-move at all.
+Locked-off tripod shot, completely static camera. The white horse stays planted, tossing
+its head, mane and forelock whipping in the wind. The rider sways, his green cloak
+billowing, and bows his head over the neck. Dust blows across the ground, then the horse
+steadies and the dust settles.
 ```
+Big mane/cloak/head motion and the rider bowing his head DOWN; the pinned camera cannot
+widen to expose the horse's legs cropped out at the chest. This is the Karbala "horse
+will not move" beat.
 
 **Reverent night prayer (kneeling figure) — 5s, slow push-in:**
 ```
 The kneeling figure in the brown robe stays completely motionless and does not move
 at all. Stars subtly twinkle across the night sky. The robe shifts faintly in a soft
-night breeze. Camera: slow, gentle push-in.
+night breeze. Camera: slow, gentle push-in that eases to a stop and holds.
 ```
 
 **Fragile / upward-gaze climax — 5s locked-off (de-escalation):**
@@ -251,8 +289,10 @@ Work through these IN ORDER. Escalate to Ken Burns fast for any climactic / upwa
    locked-off (the "Fragile only" template), 5s, environment-only, no figure/face/glow
    words.
 3. **Re-roll Kling with a new seed.** Just re-submit.
-4. **`--lock-end-frame`** (if the script supports it) — interpolate between identical
-   endpoints.
+4. **`--lock-end-frame`** — pass it to `kie_kling.py` to reuse the start frame as the end
+   frame (v3 sends `image_urls: [start, start]`), so Kling interpolates between two
+   identical endpoints. This holds the blank face far better than a free clip; try it
+   before Ken Burns for a scene that only mildly drifts.
 5. **Ken Burns fallback (the reliable fix).** Skip Kling for that scene; FFmpeg
    slow-zoom on the approved still PNG (perfect blank faces). Zero AI = zero
    completion risk:
@@ -268,15 +308,19 @@ with ffmpeg, view them). Never ship a clip where any feature appears on a sacred
 
 ### Motion vocabulary cheat sheet
 
-**Good (default — gentle camera + environment):** "slow push-in", "slow pull-back",
-"gentle partial orbit / short arc", "slow parallax", "gently", "slowly", "softly",
-"drifts", "ripples", "blooms", "robes ripple in the wind", "dust drifts",
-"locked-off"/"completely static" (fragile scenes only).
+**Good (move the figures + environment, camera usually pinned):** "Locked-off tripod
+shot, completely static camera" (now a default for movement-heavy scenes), "tosses its
+head", "mane whipping", "stays planted / rears in place / stamps", "sways", "bows the
+head down", "leans", "turns away", "cloak billowing", "banner waving", "robes ripple",
+"dust blows / drifts", and for calm scenes "slow push-in", "gentle short arc". Close every
+prompt with a settle / end-state: "then steadies", "and settles", "holds still", "eases to
+a stop".
 
-**Bad (never on veiled figures):** the face/blank-face/glow/aura/figure's name,
-a sacred figure that "turns / looks up / lifts head / speaks / breathes visibly",
-"full 360 orbit", any camera move + upward gaze together, "fast", "sudden",
-"handheld shake".
+**Bad (never on a SACRED figure):** the sacred head "looks up / cranes up / lifts the
+face / turns to face the camera"; the face/blank-face/glow/aura/figure's name; "full 360
+orbit"; any camera move + upward gaze together; a camera "pull-back / zoom out / widen"
+when content is cropped at the frame edge; "fast", "sudden", "handheld shake". (A sacred
+figure moving the body, bowing the head DOWN, or turning AWAY is fine.)
 
 ---
 
@@ -294,9 +338,12 @@ For a 4–6-scene video, typical budget: 5s per scene, 8s for one forward-facing
 
 ---
 
-## Aspect ratio
+## Aspect ratio & resolution
 
-Always `9:16` for TikTok/Reels/Shorts. Both Nano Banana and Kling support this directly.
+Always `9:16` for TikTok/Reels/Shorts - now passed as a real API parameter (`--aspect
+9:16`), not just prose. Generate scene stills at `--size 4K` for crisp faces and detail:
+for this model the "2K" tier is a no-op (identical to 1K, ~768px wide), and 768px is soft
+once the clip is delivered at 1080. Kling accepts the high-res still and downscales it.
 
 ---
 

@@ -67,8 +67,10 @@ stills/audio/video in the visual companion (embed as base64 so it renders).
 
 1. **Character refs** — `nano_banana.py` (`OPENROUTER_API_KEY`): one line-doodle ref
    for **A**, then **B** with `--ref <A>` (same style, distinct identity). Style:
-   clean uniform BLACK outline, flat WHITE fill, no colour/shading, big simple eyes,
-   plain off-white bg, head-and-torso, 9:16. Approve.
+   flat monochrome line art — a single clean black outline with solid white fill,
+   big simple eyes, a plain off-white background, head-and-torso framing, 9:16.
+   Doodles stay at the default `--size 1K` (flat line art upscales cleanly to 1080).
+   Approve.
 2. **Per-beat stills** — for each beat, `nano_banana.py --ref <char>` changing ONLY
    the expression. Then `normalize_doodle_stills.py <stills...> --outdir work/norm`
    (outputs are `norm-` prefixed; `--span-frac/--head-frac` tune size/clearance).
@@ -124,6 +126,12 @@ stills/audio/video in the visual companion (embed as base64 so it renders).
 | `templates/captions.ass.example` | Copyable ASS skeleton (10-field Format line, Cap/Cite styles) |
 
 Run any script with `--help` (or read its header) for full flags.
+
+> **Nano Banana Pro prompting** — `nano_banana.py` calls `google/gemini-3-pro-image`
+> via OpenRouter's Unified Image API. See
+> [`.claude/skills/_shared/nano-banana-pro-conventions.md`](../_shared/nano-banana-pro-conventions.md)
+> for the model id, `--size`/`--aspect` behaviour (2K == 1K; use 4K for hi-res),
+> positive-framing, and the reference-image ratio gotcha.
 
 ## Common mistakes
 | Mistake | Fix |

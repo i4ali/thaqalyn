@@ -6,9 +6,16 @@ silent base video at `assets/tafsir_base/tafsir_base.mp4`.
 **Total length target:** ~40 seconds (8 scenes × ~5s each).
 **Format:** 1080×1920 vertical, no audio, no text overlays of any kind.
 
-**Hard rule for every scene:** Add to the negative prompt: `"no text, no Arabic
-calligraphy in image, no captions, no watermarks, no UI elements"`. The skill adds
-all overlay text in CapCut-style during per-verse rendering.
+**Hard rule for every scene:** Neither Nano Banana nor kie.ai's Kling accepts a
+negative-prompt field, so put the "no text" constraint positively in the image prompt -
+e.g. "clean, unlettered cosmic space, every surface plain, no writing of any kind." The
+skill adds all overlay text in CapCut-style during per-verse rendering.
+
+**Motion note:** end each scene's Motion line with where the motion comes to rest
+("...easing to a stop", "...settling") - per the Kling i2v guide, a motion with no
+endpoint can loop and stall the render at 99%. See
+`../../_shared/kling-i2v-conventions.md` for the full Kling motion-prompt formula and
+kie.ai's limits.
 
 ## Scenes
 

@@ -85,27 +85,35 @@ heads level/slightly bowed (never craned up), use locked-off motion prompts, pre
 5s, and fall back to Ken Burns for climactic/upward-gaze scenes. See
 `references/prompt_templates.md` and SKILL.md Stage 4b.
 
-## Negative prompt — use in every image generation
+## Face-safety exclusion + positive style (weave into every image prompt)
+
+The Unified Image API has no separate negative-prompt field, so fold these into the
+prompt text itself. Keep the face-safety wording (the doctrinal core); state the rest
+positively, per the model's prompting guide.
 
 ```
-no visible facial features on sacred figures, no eyes, no nose, no mouth, no bright 
-glowing sun face, no hard-edged disc, no pasted-on sphere, no floating orb, no 
-oversized glowing ball, no circular shape, no modern clothing, no modern architecture, 
-no anachronistic objects (watches, glasses, cars, electronics, modern weapons), 
-no neon colors, no photorealistic selfie style, no AI plastic skin, no text artifacts, 
-no distorted anatomy, no cartoon style, no anime, no 3D render look
+The sacred figures' faces stay completely featureless: no eyes, no nose, no mouth, no
+bright glowing sun face, no hard-edged disc, no pasted-on sphere, no floating orb, no
+oversized glowing ball, no circular shape, and the face is never turned up or craned
+upward. Every surface is plain and unlettered. Authentic 7th-century Arabian dress,
+materials, and architecture throughout, rendered entirely as a matte oil-on-canvas
+historical painting with natural anatomy and warm earth-tone color - a reverent
+Orientalist oil painting, not a photograph, a 3D render, a cartoon, or anime.
 ```
 
 ## Consistency between scenes
 
-Across the 4–8 scenes of one video, keep these constants:
+A video that flows feels like ONE piece, not a slideshow of look-alike strangers in similar places. The technique that delivers this (validated on the Karbala "last farewell" video): **define a locked continuity block once, and reuse its exact wording in every scene's image prompt.**
 
-1. **Same lighting mood** — if scene 1 is golden hour, scene 4 better be too (unless there's a narrative reason — e.g., night scenes for Laylat al-Mabit).
-2. **Same color palette** — don't introduce a new dominant color mid-video.
-3. **Same figures look the same** — same blank-face size/warmth/aura, same body build, same clothing colors and head covering for the same person across every scene. *If the image model supports reference images, feed scene 1's character as a reference for scenes 2+.*
-4. **Same rendering style** — don't let one scene drift into photorealism while another is painterly.
+**Lock these and paste them VERBATIM into each prompt:**
+1. **Wardrobe** - the same garments, colours and accessories on each recurring figure, worded identically every time ("the EXACT SAME chain mail over a deep-green robe, green sash, deep-green cloak, olive-green turban over a steel helmet..."). Paraphrasing per scene is what makes the clothes drift.
+2. **Setting** - same location, time of day, terrain, palette and standing props / landmarks ("edge of the Karbala camp at golden hour, red-ochre plain, dark goat-hair tents, tall black banner, dusty amber sky").
+3. **Recurring subjects** - the same animal / object, described the same way ("the same white Arabian horse").
+4. **Lighting mood, colour palette and rendering style** - golden hour stays golden hour; one dominant palette; painterly stays painterly (no drift into photorealism). Record the locked wardrobe + setting blocks at the top of `scenes.md` so every prompt draws from one source.
 
-When a scene comes back inconsistent, the fastest fix is usually to tell the model explicitly: "match the rendering style and lighting of the reference image" and feed in the previous approved scene.
+**Flow, not just matching:** plan the shots as a connected progression (e.g. wide mount -> closer refusal -> low reveal at the leg), where the action and framing of one shot lead the eye into the next, so the cuts feel continuous rather than like three unrelated angles of the same costume.
+
+When a scene comes back inconsistent, the fastest fix is to feed the previous approved scene back as a reference image: "match the clothing, setting, rendering style and lighting of this reference exactly." If the model supports reference images, feed scene 1's character into scenes 2+ from the start.
 
 ## Examples of what to avoid
 

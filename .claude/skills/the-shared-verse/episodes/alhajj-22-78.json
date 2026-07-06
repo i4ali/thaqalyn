@@ -1,0 +1,30 @@
+{
+  "slug": "alhajj-22-78",
+  "verse_ref": "Sūrat al-Ḥajj · 22:78",
+  "arabic": "هُوَ سَمَّىٰكُمُ ٱلۡمُسۡلِمِينَ مِن قَبۡلُ وَفِي هَٰذَا لِيَكُونَ ٱلرَّسُولُ شَهِيدًا عَلَيۡكُمۡ وَتَكُونُوا۟ شُهَدَآءَ عَلَى ٱلنَّاسِ",
+  "translation": "“He named you ‘Muslims’ before, and in this Qur’an, so that the Messenger may be a witness over you, and that you may be witnesses over mankind.”",
+  "order": ["sunni", "shia"],
+  "readings": {
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Sunni tafsir reads the witnesses as the whole Muslim community — God’s chosen nation, which on Judgment Day testifies that the prophets delivered their message.",
+      "source": "Tafsīr al-Ṭabarī · Ibn Kathīr"
+    },
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia tafsir reads the witnesses as the purified Imams of the Prophet’s Household — God’s witnesses over creation, a standing witness in every age.",
+      "source": "al-Mīzān (Ṭabāṭabāʾī) · Tafsīr al-ʿAyyāshī"
+    }
+  },
+  "voiceover": {
+    "hook": "This verse hands the believers a title — witnesses over mankind. But who does that mean?",
+    "reference": "Surah al-Hajj, verse seventy-eight.",
+    "payoff": "Same words. Different weight.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "show_payoff_text": false,
+  "show_closing_text": false,
+  "caption_desc": "Witnesses over mankind — one verse, two readings 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>",
+  "show_captions": true
+}

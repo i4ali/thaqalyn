@@ -10,6 +10,11 @@ so this adapter exists. It:
   3. Polls /api/v1/jobs/recordInfo until state == 'success' or 'fail'.
   4. Downloads the resulting MP4 to --output.
 
+On Kling 3.0, input.image_urls is "first and last frame image URLs", so --lock-end-frame
+(reuse the start frame as the end frame) and --end-image pin the last frame to reduce
+drift (e.g. a blank veiled face being "completed" mid-clip). Use --dry-run to print the
+payload without uploading or calling the API (no cost).
+
 Env: KLING_API_KEY (Kie.ai key)
 """
 
@@ -73,14 +78,25 @@ def main():
     ap.add_argument("--output", required=True)
     ap.add_argument("--duration", type=int, default=5,
                     help="Clip duration in seconds. v2 supports 5/10; v3-0 supports 3-15.")
-    ap.add_argument("--mode", default="v2-1-master",
+    ap.add_argument("--mode", default="v3-0-pro",
                     help="One of v2-1-master, v2-1, v2-1-pro, v3-0, v3-0-std, v3-0-pro, v3-0-4k.")
     ap.add_argument("--image-url", default=None,
                     help="Optional: pre-uploaded public image URL (skips tmpfiles upload).")
+    ap.add_argument("--end-image", default=None,
+                    help="Optional distinct end/last frame (v3 only; sent as image_urls[1]).")
+    ap.add_argument("--end-image-url", default=None,
+                    help="Optional pre-uploaded end-frame URL (v3 only; skips upload).")
+    ap.add_argument("--lock-end-frame", action="store_true",
+                    help="Reuse the start frame as the end frame so v3 interpolates between "
+                         "two identical endpoints - minimizes drift / blank-face completion. "
+                         "v3 only.")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="Print the createTask payload and exit without uploading or calling "
+                         "the API (no cost).")
     args = ap.parse_args()
 
     api_key = os.environ.get("KLING_API_KEY")
-    if not api_key:
+    if not api_key and not args.dry_run:
         print("ERROR: KLING_API_KEY not set", file=sys.stderr)
         return 1
 
@@ -91,6 +107,8 @@ def main():
     if args.image_url:
         image_url = args.image_url
         print(f"Using pre-uploaded image_url={image_url}", file=sys.stderr)
+    elif args.dry_run:
+        image_url = f"<upload:{image_path.name}>"
     else:
         print(f"Uploading {image_path.name} to tmpfiles.org...", file=sys.stderr)
         image_url = upload_to_tmpfiles(image_path)
@@ -102,15 +120,38 @@ def main():
     }
 
     is_v3 = model.startswith("kling-3")
+
+    # End-frame handling. On Kling 3.0, input.image_urls is "first and last frame image
+    # URLs", so a 2-element array pins the last frame. Passing the SAME image as start and
+    # end makes Kling interpolate between identical endpoints, minimizing drift (e.g. a
+    # blank veiled face being "completed" into features mid-clip).
+    end_image_url = None
+    if args.lock_end_frame or args.end_image or args.end_image_url:
+        if not is_v3:
+            print("ERROR: --lock-end-frame/--end-image are v3-only (v2 has no image_urls "
+                  "array). Use --mode v3-0-pro.", file=sys.stderr)
+            return 1
+        if args.end_image_url:
+            end_image_url = args.end_image_url
+        elif args.end_image:
+            if args.dry_run:
+                end_image_url = f"<upload:{Path(args.end_image).name}>"
+            else:
+                print(f"Uploading end frame {Path(args.end_image).name} to tmpfiles.org...", file=sys.stderr)
+                end_image_url = upload_to_tmpfiles(Path(args.end_image))
+        else:  # --lock-end-frame: reuse the start frame as the end frame
+            end_image_url = image_url
+
     if is_v3:
         # Kling 3.0 has a different payload shape: image_urls array, mode, sound,
         # multi_shots, multi_prompt are all required by the OpenAPI spec.
         v3_mode = V3_RESOLUTION_MODE.get(args.mode, "pro")
+        image_urls = [image_url, end_image_url] if end_image_url else [image_url]
         submit_payload = {
             "model": model,
             "input": {
                 "prompt": args.prompt,
-                "image_urls": [image_url],
+                "image_urls": image_urls,
                 "duration": str(args.duration),
                 "aspect_ratio": "9:16",
                 "sound": False,
@@ -131,6 +172,10 @@ def main():
             },
         }
         print(f"Submitting to Kie.ai ({model}, {args.duration}s)...", file=sys.stderr)
+
+    if args.dry_run:
+        print(json.dumps(submit_payload, indent=2))
+        return 0
     r = requests.post(
         "https://api.kie.ai/api/v1/jobs/createTask",
         json=submit_payload,
