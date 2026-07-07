@@ -11,8 +11,16 @@ struct FinalScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var supabaseService = SupabaseService.shared
     let onComplete: () -> Void
-    @State private var showingAuthentication = false
+    @State private var authMode: AuthMode?
     @State private var isVisible = false
+
+    /// Which mode to open the auth screen in. Carried by the cover's `item` so
+    /// the presented view is always built with the correct mode (an isPresented
+    /// flag plus a separate mode state races and can read the stale value).
+    private enum AuthMode: Identifiable {
+        case signIn, signUp
+        var id: Int { self == .signIn ? 0 : 1 }
+    }
 
     var body: some View {
         ScrollView {
@@ -40,12 +48,14 @@ struct FinalScreen: View {
 
                     // Account buttons
                     VStack(spacing: 16) {
-                        // Continue as Guest (primary)
-                        Button(action: onComplete) {
+                        // Create Account (primary)
+                        Button(action: {
+                            authMode = .signUp
+                        }) {
                             HStack {
-                                Image(systemName: "book.closed")
+                                Image(systemName: "person.badge.plus")
                                     .font(.system(size: 18, weight: .semibold))
-                                Text("Continue as Guest")
+                                Text("Create Account")
                                     .font(.system(size: 18, weight: .semibold))
                             }
                             .foregroundColor(Color(hex: "1A1408"))
@@ -60,33 +70,9 @@ struct FinalScreen: View {
                         }
                         .buttonStyle(EmPressStyle())
 
-                        // Sign Up
+                        // Sign In (secondary)
                         Button(action: {
-                            showingAuthentication = true
-                        }) {
-                            HStack {
-                                Image(systemName: "person.badge.plus")
-                                    .font(.system(size: 18, weight: .semibold))
-                                Text("Create Account")
-                                    .font(.system(size: 18, weight: .semibold))
-                            }
-                            .foregroundColor(themeManager.onAccentText)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 16)
-                            .background(
-                                RoundedRectangle(cornerRadius: 18)
-                                    .fill(Color.white)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 18)
-                                            .stroke(Color(red: 31/255, green: 22/255, blue: 18/255).opacity(0.07), lineWidth: 1)
-                                    )
-                            )
-                        }
-                        .buttonStyle(EmPressStyle())
-
-                        // Sign In
-                        Button(action: {
-                            showingAuthentication = true
+                            authMode = .signIn
                         }) {
                             HStack {
                                 Image(systemName: "person.circle")
@@ -94,15 +80,15 @@ struct FinalScreen: View {
                                 Text("Sign In")
                                     .font(.system(size: 18, weight: .semibold))
                             }
-                            .foregroundColor(themeManager.onAccentText)
+                            .foregroundColor(Color(hex: "ECD49A"))
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(
                                 RoundedRectangle(cornerRadius: 18)
-                                    .fill(Color.white)
+                                    .fill(Color(hex: "ECD49A").opacity(0.08))
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 18)
-                                            .stroke(Color(red: 31/255, green: 22/255, blue: 18/255).opacity(0.07), lineWidth: 1)
+                                            .stroke(Color(hex: "ECD49A").opacity(0.5), lineWidth: 1.5)
                                     )
                             )
                         }
@@ -128,6 +114,21 @@ struct FinalScreen: View {
                         }
                         .onboardingCard(padding: 16)
                         .padding(.top, 8)
+
+                        // Continue as Guest (quiet opt-out)
+                        Button(action: onComplete) {
+                            HStack(spacing: 7) {
+                                Image(systemName: "book.closed")
+                                    .font(.system(size: 15, weight: .semibold))
+                                Text("Continue as Guest")
+                                    .font(.system(size: 16, weight: .semibold))
+                            }
+                            .foregroundColor(themeManager.secondaryText)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 12)
+                        }
+                        .buttonStyle(EmPressStyle())
+                        .padding(.top, 4)
                     }
                     .padding(.horizontal, 24)
                     .opacity(isVisible ? 1 : 0)
@@ -142,8 +143,8 @@ struct FinalScreen: View {
         .onAppear {
             isVisible = true
         }
-        .fullScreenCover(isPresented: $showingAuthentication) {
-            AuthenticationView()
+        .fullScreenCover(item: $authMode) { mode in
+            AuthenticationView(startInSignUp: mode == .signUp)
                 .onDisappear {
                     if supabaseService.isAuthenticated {
                         onComplete()

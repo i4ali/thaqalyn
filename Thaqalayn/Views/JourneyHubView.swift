@@ -39,20 +39,10 @@ struct JourneyHubView: View {
     @State private var lockedAlert: LockedJourneyAlert?
 
     /// Descriptors paired with status, sorted Active → Coming soon (soonest) →
-    /// Ended (soonest to return).
+    /// Ended (soonest to return). Ordering lives in JourneyCatalog so the hub and
+    /// the onboarding "Special Seasons" spotlight stay in agreement.
     private var ordered: [(descriptor: JourneyDescriptor, status: JourneyStatus)] {
-        JourneyDescriptor.all
-            .map { ($0, $0.status(using: cal)) }
-            .sorted { lhs, rhs in sortKey(lhs.1) < sortKey(rhs.1) }
-    }
-
-    /// (bucket, tiebreak-days) — lower sorts first.
-    private func sortKey(_ s: JourneyStatus) -> (Int, Int) {
-        switch s {
-        case .active:                      return (0, 0)
-        case .comingSoon(let d, _):        return (1, d)
-        case .ended(let d, _):             return (2, d)
-        }
+        JourneyDescriptor.orderedByStatus(using: cal)
     }
 
     /// The journey to flag as "next up": the soonest journey to open next — but

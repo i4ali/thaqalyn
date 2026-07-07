@@ -51,7 +51,7 @@ struct DailyCrosswordScreen: View {
                     .offset(y: isVisible ? 0 : -20)
                     .animation(Animation.easeOut(duration: 0.6).delay(0.4), value: isVisible)
 
-                Text("Most puzzles just pass the time — this one fills it. Every clue is a verse, an Imam, or a practice worth knowing. Solve the daily mini to build your streak.")
+                Text("Most puzzles just pass the time - this one fills it. Every clue is a verse, an Imam, or a practice worth knowing. Solve the daily mini to build your streak.")
                     .onbBody()
                     .foregroundColor(themeManager.secondaryText)
                     .multilineTextAlignment(.center)

@@ -83,66 +83,41 @@ enum DeepDivePalette {
     }
 }
 
-// MARK: - Descent background view
+// MARK: - Rising motes (shared)
 
-/// Immersive background whose colour + vignette deepen as `progress` (0...1)
-/// advances, with slow rising gold motes drifting up the screen.
-struct DeepDiveBackground: View {
-    /// Descent progress, 0 (surface) ... 1 (deepest).
-    var progress: CGFloat
+/// Slow rising gold light-motes over a transparent background. Extracted from
+/// `DeepDiveBackground` so both the immersive descent and the onboarding
+/// `DeepDiveScreen` share one implementation. Honours Reduce Motion (a static
+/// scatter with no per-frame redraw).
+struct DeepDiveMotes: View {
+    /// How many motes to draw. The immersive background uses 16.
+    let count: Int
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     /// Random mote parameters, generated ONCE so they stay stable across redraws.
-    @State private var motes: [Mote] = DeepDiveBackground.makeMotes()
+    @State private var motes: [Mote]
 
-    var body: some View {
-        ZStack {
-            // Base fill: interpolated background colour. Animates smoothly when
-            // progress changes so discrete jumps cross-fade.
-            DeepDivePalette.bg(progress)
-                .animation(.linear(duration: 0.4), value: progress)
-
-            // Rising gold light-motes.
-            moteLayer
-
-            // Vignette on top: transparent core, darkening toward the edges,
-            // centred slightly above the middle.
-            GeometryReader { geo in
-                let vig = DeepDivePalette.vignette(progress)
-                let maxDim = max(geo.size.width, geo.size.height)
-                RadialGradient(
-                    gradient: Gradient(stops: [
-                        .init(color: .clear, location: 0.30),
-                        .init(color: Color.black.opacity(vig), location: 1.0),
-                    ]),
-                    center: UnitPoint(x: 0.5, y: 0.42),
-                    startRadius: 0,
-                    endRadius: maxDim * 0.72
-                )
-                .animation(.linear(duration: 0.4), value: progress)
-            }
-            .allowsHitTesting(false)
-        }
-        .ignoresSafeArea()
+    init(count: Int = 16) {
+        self.count = count
+        _motes = State(initialValue: DeepDiveMotes.makeMotes(count))
     }
 
-    // MARK: Motes
-
-    /// Animated (or, under Reduce Motion, static) mote layer.
-    @ViewBuilder
-    private var moteLayer: some View {
-        if reduceMotion {
-            // Reduce Motion: draw the motes once at fixed scattered positions,
-            // with no animation and no per-frame redraw.
-            moteCanvas(time: nil)
-        } else {
-            // Continuous slow rise: each mote loops on its own 16-36s period,
-            // phase-staggered, forever.
-            TimelineView(.animation) { timeline in
-                moteCanvas(time: timeline.date.timeIntervalSinceReferenceDate)
+    var body: some View {
+        Group {
+            if reduceMotion {
+                // Reduce Motion: draw the motes once at fixed scattered positions,
+                // with no animation and no per-frame redraw.
+                moteCanvas(time: nil)
+            } else {
+                // Continuous slow rise: each mote loops on its own 16-36s period,
+                // phase-staggered, forever.
+                TimelineView(.animation) { timeline in
+                    moteCanvas(time: timeline.date.timeIntervalSinceReferenceDate)
+                }
             }
         }
+        .allowsHitTesting(false)
     }
 
     /// Draws all motes. `time == nil` -> static placement (Reduce Motion).
@@ -182,9 +157,9 @@ struct DeepDiveBackground: View {
         }
     }
 
-    /// Generates the 16 motes' random parameters once.
-    private static func makeMotes() -> [Mote] {
-        (0 ..< 16).map { _ in
+    /// Generates the motes' random parameters once.
+    private static func makeMotes(_ count: Int) -> [Mote] {
+        (0 ..< count).map { _ in
             Mote(
                 x: CGFloat.random(in: 0 ... 1),
                 size: CGFloat.random(in: 1 ... 3),
@@ -194,6 +169,46 @@ struct DeepDiveBackground: View {
                 seed: CGFloat.random(in: 0 ... 1)
             )
         }
+    }
+}
+
+// MARK: - Descent background view
+
+/// Immersive background whose colour + vignette deepen as `progress` (0...1)
+/// advances, with slow rising gold motes drifting up the screen.
+struct DeepDiveBackground: View {
+    /// Descent progress, 0 (surface) ... 1 (deepest).
+    var progress: CGFloat
+
+    var body: some View {
+        ZStack {
+            // Base fill: interpolated background colour. Animates smoothly when
+            // progress changes so discrete jumps cross-fade.
+            DeepDivePalette.bg(progress)
+                .animation(.linear(duration: 0.4), value: progress)
+
+            // Rising gold light-motes (shared implementation).
+            DeepDiveMotes()
+
+            // Vignette on top: transparent core, darkening toward the edges,
+            // centred slightly above the middle.
+            GeometryReader { geo in
+                let vig = DeepDivePalette.vignette(progress)
+                let maxDim = max(geo.size.width, geo.size.height)
+                RadialGradient(
+                    gradient: Gradient(stops: [
+                        .init(color: .clear, location: 0.30),
+                        .init(color: Color.black.opacity(vig), location: 1.0),
+                    ]),
+                    center: UnitPoint(x: 0.5, y: 0.42),
+                    startRadius: 0,
+                    endRadius: maxDim * 0.72
+                )
+                .animation(.linear(duration: 0.4), value: progress)
+            }
+            .allowsHitTesting(false)
+        }
+        .ignoresSafeArea()
     }
 }
 

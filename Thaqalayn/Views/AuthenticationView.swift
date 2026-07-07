@@ -20,6 +20,12 @@ struct AuthenticationView: View {
     @State private var showingForgotPassword = false
     @State private var isLoading = false
     @State private var errorMessage: String?
+
+    /// Seeds the initial mode so a caller can open straight to sign-up or
+    /// sign-in. Defaults to sign-in, preserving existing callers.
+    init(startInSignUp: Bool = false) {
+        _isSignUp = State(initialValue: startInSignUp)
+    }
     
     var body: some View {
         Group {

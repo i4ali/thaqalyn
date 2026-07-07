@@ -23,6 +23,11 @@ struct HadithScreen: View {
                 .opacity(isVisible ? 1 : 0)
                 .animation(Animation.easeOut(duration: 1.2).delay(0.5), value: isVisible)
 
+            // Doves wheeling above the rim-lit shrine silhouette
+            ShrineDovesLayer()
+                .opacity(isVisible ? 1 : 0)
+                .animation(Animation.easeOut(duration: 1.0).delay(0.2), value: isVisible)
+
             VStack(spacing: 0) {
                 Spacer()
 
@@ -147,8 +152,12 @@ struct HadithScreen: View {
             isVisible = true
             startTitleAnimations()
 
-            // Auto-advance after 5 seconds
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            // Auto-advance after 10 seconds - but only if the user is still on
+            // this first page. Without this guard the delayed closure fires
+            // unconditionally and yanks the user back here from whatever screen
+            // they have since swiped to.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+                guard currentPage == 0 else { return }
                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     currentPage = 1
                 }

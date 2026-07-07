@@ -75,7 +75,7 @@ struct MissionScreen: View {
                         .offset(y: isVisible ? 0 : 20)
                         .animation(Animation.easeOut(duration: 0.8).delay(0.8), value: isVisible)
 
-                    Text("Authentic Shia scholarship to read, understand, and journey through the Quran — and the wisdom of the Ahlul Bayt")
+                    Text("Authentic Shia scholarship to read, understand, and journey through the Quran - and the wisdom of the Ahlul Bayt")
                         .onbBody()
                         .foregroundColor(themeManager.secondaryText)
                         .multilineTextAlignment(.center)

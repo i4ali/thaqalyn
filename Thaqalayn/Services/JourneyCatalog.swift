@@ -191,6 +191,26 @@ extension JourneyDescriptor {
                       returnsLabel: JourneyStrings.returns(Self.medium(nextYearStart), lang))
     }
 
+    /// Sort bucket for a status: `(bucket, tiebreak-days)`, lower sorts first.
+    /// Active → coming soon (soonest) → ended (soonest to return).
+    static func statusSortKey(_ s: JourneyStatus) -> (Int, Int) {
+        switch s {
+        case .active:                      return (0, 0)
+        case .comingSoon(let d, _):        return (1, d)
+        case .ended(let d, _):             return (2, d)
+        }
+    }
+
+    /// Every journey paired with its current status, sorted active → coming soon
+    /// (soonest) → ended (soonest to return). Shared by the Journey hub and the
+    /// onboarding "Special Seasons" spotlight so both agree on which season is
+    /// current and how the rest are ordered.
+    static func orderedByStatus(using cal: IslamicCalendarManager = .shared)
+        -> [(descriptor: JourneyDescriptor, status: JourneyStatus)] {
+        all.map { ($0, $0.status(using: cal)) }
+            .sorted { statusSortKey($0.1) < statusSortKey($1.1) }
+    }
+
     private static func daysBetween(_ a: Date, _ b: Date) -> Int {
         let c = Calendar.current
         let d = c.dateComponents([.day], from: c.startOfDay(for: a), to: c.startOfDay(for: b)).day ?? 0
