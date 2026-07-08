@@ -108,11 +108,7 @@ struct HomeView: View {
                             surah.surah.arabicName.contains(searchText) ||
                             searchText.isEmpty
                         }) { surahWithTafsir in
-                            PressableNavLink {
-                                SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)
-                            } label: {
-                                ModernSurahCard(surah: surahWithTafsir.surah)
-                            }
+                            SurahListRow(surahWithTafsir: surahWithTafsir)
                         }
                     }
                     .padding(.horizontal, 20)
@@ -120,11 +116,6 @@ struct HomeView: View {
                 } else {
                     SearchResultsView(
                         query: searchText,
-                        onOpenSurah: { swt in
-                            targetConceptId = nil
-                            targetVerseNumber = nil
-                            selectedSurahForDeepLink = swt
-                        },
                         onOpenVerse: { s, v in
                             targetConceptId = nil
                             targetVerseNumber = v

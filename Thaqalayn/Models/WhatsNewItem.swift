@@ -13,6 +13,8 @@ import Foundation
 enum WhatsNewDestination: Equatable {
     /// Open an immersive deep dive by id (lives in the Journey hub, tab 4).
     case deepDive(String)
+    /// Open an "Inside the Sūrah" experience by id (lives in the Journey hub, tab 4).
+    case surahExperience(String)
     // Reserved for later: case journey(String), case tab(Int)
 }
 
@@ -52,6 +54,36 @@ struct WhatsNewItem: Identifiable, Equatable {
 enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
+        WhatsNewItem(
+            id: "surahExperience-fatiha",
+            sfSymbol: "book.closed",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 27).date ?? .distantPast,
+            destination: .surahExperience("surah-fatiha"),
+            titleEN: "Inside the Sūrah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Sūrah al-Fātiḥa - the prayer beneath every prayer. Walk the opening you know by heart as a conversation with God, and hear what He says back, line by line.",
+            blurbUR: "سورۂ فاتحہ - ہر نماز کے پیچھے چھپی دعا۔ جس سورت کو آپ زبانی جانتے ہیں، اُسے اللہ سے ایک مکالمے کے طور پر دیکھیں، اور سنیں کہ وہ ہر سطر کا کیا جواب دیتا ہے۔",
+            blurbAR: "سورة الفاتحة - الصلاةُ الكامنة خلف كل صلاة. اسلك الفاتحةَ التي تحفظها عن ظهر قلب حواراً مع الله، واسمع ما يردّ به عليك، سطراً بسطر.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-yusuf",
+            sfSymbol: "moon.stars",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 20).date ?? .distantPast,
+            destination: .surahExperience("surah-yusuf"),
+            titleEN: "Inside the Sūrah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Sūrah Yūsuf - an immersive journey through the most beautiful of stories, from the dream to the reunion.",
+            blurbUR: "سورۂ یوسف - خواب سے وصال تک، بہترین قصے کا ایک عمیق سفر۔",
+            blurbAR: "سورة يوسف - رحلة غامرة عبر أحسن القصص، من الرؤيا إلى اللقاء.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
         WhatsNewItem(
             id: "deepDives-sabr",
             sfSymbol: "hourglass",

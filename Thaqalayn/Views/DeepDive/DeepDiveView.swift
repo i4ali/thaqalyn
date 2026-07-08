@@ -44,6 +44,9 @@ private let romans = ["", "I", "II", "III"]
 struct DeepDiveView: View {
     let dive: DeepDive
     var onClose: () -> Void
+    /// Present on sūrah experiences: invoked by the closing beat's
+    /// "Read the full sūrah" button. nil hides the button (theme dives).
+    var onReadSurah: (() -> Void)? = nil
 
     @StateObject private var reading = ReadingSettingsManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
@@ -153,6 +156,7 @@ struct DeepDiveView: View {
         case .open, .orientation, .act: return nil
         case .reflectionPrompt:         return ("The Return", 3)
         case .dua:                      return ("The Close", 3)
+        case .closing:                  return ("The Close", 3)
         default:
             let a = section.act
             guard (1...3).contains(a), let info = dive.actInfo(a) else { return nil }
@@ -231,12 +235,16 @@ struct DeepDiveView: View {
             actPage(act, connector.map { $0(lang) }, line(lang), bridge, show)
         case let .narration(_, tag, source, body, reflection):
             narrationPage(tag(lang), source(lang), body(lang), reflection(lang), show)
+        case let .response(_, replyingTo, arabic, words, source, reflection):
+            responsePage(replyingTo(lang), arabic, words(lang), source(lang), reflection(lang), show)
         case let .climax(_, tag, source, arabic, translation, body, reflection):
             climaxPage(tag(lang), source(lang), arabic, translation(lang), body(lang), reflection(lang), show)
-        case let .reflectionPrompt(_, prompt, _):
-            reflectionPage(prompt(lang), show)
-        case let .dua(tag, intro, arabic, translation, source, note):
-            duaPage(tag(lang), intro(lang), arabic, translation(lang), source(lang), note(lang), show)
+        case let .reflectionPrompt(_, prompt, _, subline, nextLabel):
+            reflectionPage(prompt(lang), subline(lang), nextLabel(lang), show)
+        case let .dua(tag, intro, arabic, translation, source, note, close):
+            duaPage(tag(lang), intro(lang), arabic, translation(lang), source(lang), note(lang), close(lang), show)
+        case let .closing(tag, titleAr, essence, line):
+            closingPage(tag(lang), titleAr, essence(lang), line(lang), show)
         }
     }
 
@@ -259,7 +267,7 @@ struct DeepDiveView: View {
         VStack(spacing: 8) {
             Text(label.uppercased())
                 .font(.system(size: 10.5, weight: .regular)).tracking(3)
-                .foregroundColor(DeepDivePalette.faint)
+                .foregroundColor(DeepDivePalette.mute)
             Image(systemName: "chevron.compact.down").foregroundColor(DeepDivePalette.gold)
         }
         .reveal(show, delay, reduce: reduceMotion)
@@ -310,7 +318,7 @@ struct DeepDiveView: View {
                 hintRow("square.and.pencil", "Reflect at the end")
             }
             .reveal(show, 0.5, reduce: reduceMotion)
-            Text(leaveWith).font(.system(size: 13 * s)).foregroundColor(DeepDivePalette.faint)
+            Text(leaveWith).font(.system(size: 13 * s)).foregroundColor(DeepDivePalette.mute)
                 .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 26).frame(maxWidth: 250)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.7, reduce: reduceMotion)
@@ -489,6 +497,51 @@ struct DeepDiveView: View {
         }
     }
 
+    /// The ḥadīth-qudsī reply. God's answer to the line just recited, staged as a
+    /// call-and-response: a thread of light descends from above, a fixed "He answers"
+    /// eyebrow gives the three replies one recurring identity, then His words glow.
+    private func responsePage(_ replyingTo: String, _ arabic: String, _ words: String, _ source: String, _ reflection: String, _ show: Bool) -> some View {
+        VStack(spacing: 0) {
+            Rectangle()
+                .fill(LinearGradient(colors: [DeepDivePalette.goldBright.opacity(0.7), DeepDivePalette.goldBright.opacity(0)],
+                                     startPoint: .top, endPoint: .bottom))
+                .frame(width: 1, height: 22)
+                .reveal(show, 0.06, reduce: reduceMotion)
+            Text("He Answers".uppercased())
+                .font(.system(size: 11, weight: .semibold)).tracking(4)
+                .foregroundColor(DeepDivePalette.goldBright)
+                .padding(.top, 10).reveal(show, 0.12, reduce: reduceMotion)
+            Text(replyingTo.uppercased())
+                .font(.system(size: 10, weight: .semibold)).tracking(2)
+                .foregroundColor(DeepDivePalette.mute)
+                .multilineTextAlignment(.center).padding(.top, 12)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .reveal(show, 0.18, reduce: reduceMotion)
+            if !arabic.isEmpty {
+                Text(arabic).font(EmType.arabic(23 * s, bold: true))
+                    .foregroundColor(DeepDivePalette.goldBright)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .shadow(color: DeepDivePalette.goldBright.opacity(0.3), radius: 16)
+                    .padding(.top, 24).reveal(show, 0.32, reduce: reduceMotion)
+            }
+            Text(words).font(EmType.serifItalic(25 * s)).foregroundColor(DeepDivePalette.cream)
+                .multilineTextAlignment(.center).lineSpacing(6 * s).frame(maxWidth: 320)
+                .shadow(color: DeepDivePalette.goldBright.opacity(0.22), radius: 22)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .padding(.top, 20).reveal(show, 0.52, reduce: reduceMotion)
+            Text(source).font(.system(size: 11, weight: .semibold)).tracking(2)
+                .foregroundColor(DeepDivePalette.gold.opacity(0.8))
+                .multilineTextAlignment(.center).padding(.top, 22)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .reveal(show, 0.82, reduce: reduceMotion)
+            hairline.padding(.top, 26).padding(.bottom, 20).reveal(show, 1.0, reduce: reduceMotion)
+            Text(reflection).font(.system(size: 15 * s)).foregroundColor(DeepDivePalette.mute)
+                .multilineTextAlignment(.center).lineSpacing(6 * s).frame(maxWidth: 330)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .reveal(show, 1.0, reduce: reduceMotion)
+        }
+    }
+
     private func climaxPage(_ tag: String, _ source: String, _ arabic: String, _ translation: String, _ body: String, _ reflection: String, _ show: Bool) -> some View {
         VStack(spacing: 0) {
             tagLabel(tag, show).padding(.bottom, 26)
@@ -519,7 +572,7 @@ struct DeepDiveView: View {
         }
     }
 
-    private func reflectionPage(_ prompt: String, _ show: Bool) -> some View {
+    private func reflectionPage(_ prompt: String, _ subline: String, _ nextLabel: String, _ show: Bool) -> some View {
         VStack(spacing: 0) {
             Text("✦").font(.system(size: 20)).foregroundColor(DeepDivePalette.gold).padding(.bottom, 22)
                 .reveal(show, reduce: reduceMotion)
@@ -527,15 +580,16 @@ struct DeepDiveView: View {
                 .multilineTextAlignment(.center)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.15, reduce: reduceMotion)
-            Text("You've descended all three depths - knowing, witnessing, living. The map is yours. Before the prayer, name the certainty you long for.")
+            Text(subline)
                 .font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.66))
                 .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 16).frame(maxWidth: 340)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.35, reduce: reduceMotion)
-            bob("And one prayer", show).padding(.top, 34)
+            bob(nextLabel, show).padding(.top, 34)
         }
     }
 
-    private func duaPage(_ tag: String, _ intro: String, _ arabic: String, _ translation: String, _ source: String, _ note: String, _ show: Bool) -> some View {
+    private func duaPage(_ tag: String, _ intro: String, _ arabic: String, _ translation: String, _ source: String, _ note: String, _ close: String, _ show: Bool) -> some View {
         VStack(spacing: 0) {
             Text(tag.uppercased()).font(.system(size: 11, weight: .semibold)).tracking(3.4)
                 .foregroundColor(DeepDivePalette.gold).padding(.bottom, 22)
@@ -566,12 +620,12 @@ struct DeepDiveView: View {
                 .multilineTextAlignment(.center).lineSpacing(6 * s).frame(maxWidth: 350)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.98, reduce: reduceMotion)
-            aminBlock(show).padding(.top, 30)
+            aminBlock(close, show).padding(.top, 30)
         }
     }
 
     @ViewBuilder
-    private func aminBlock(_ show: Bool) -> some View {
+    private func aminBlock(_ close: String, _ show: Bool) -> some View {
         if !saidAmin {
             Button {
                 UIImpactFeedbackGenerator(style: .soft).impactOccurred()
@@ -589,7 +643,7 @@ struct DeepDiveView: View {
         } else {
             VStack(spacing: 14) {
                 Text("Āmīn.").font(EmType.serifItalic(26)).foregroundColor(DeepDivePalette.goldBright)
-                Text("The descent ends. The certainty is yours to keep.")
+                Text("The descent ends. \(close)")
                     .font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute).multilineTextAlignment(.center)
                 Button {
                     withAnimation { saidAmin = false; openDepths = [0] }
@@ -601,6 +655,45 @@ struct DeepDiveView: View {
                 }
                 .buttonStyle(.plain).padding(.top, 14)
             }
+        }
+    }
+
+    private func closingPage(_ tag: String, _ titleAr: String, _ essence: String, _ line: String, _ show: Bool) -> some View {
+        VStack(spacing: 0) {
+            tagLabel(tag, show).padding(.bottom, 26)
+            Text(titleAr).font(EmType.arabic(56)).foregroundColor(DeepDivePalette.goldBright)
+                .shadow(color: DeepDivePalette.goldBright.opacity(0.2), radius: 20)
+                .reveal(show, 0.2, reduce: reduceMotion)
+            Text(essence).font(EmType.serifItalic(20 * s)).foregroundColor(DeepDivePalette.cream)
+                .multilineTextAlignment(.center).lineSpacing(5 * s).padding(.top, 20).frame(maxWidth: 340)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .reveal(show, 0.45, reduce: reduceMotion)
+            hairline.padding(.vertical, 26).reveal(show, 0.7, reduce: reduceMotion)
+            Text(line).font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute)
+                .multilineTextAlignment(.center).lineSpacing(6 * s).frame(maxWidth: 340)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .reveal(show, 0.7, reduce: reduceMotion)
+            VStack(spacing: 12) {
+                if let onReadSurah {
+                    Button(action: onReadSurah) {
+                        Text(JourneyStrings.readTheFullSurah(lang))
+                            .font(.system(size: 13, weight: .semibold)).tracking(1)
+                            .foregroundColor(Color(red: 0.12, green: 0.09, blue: 0.03))
+                            .padding(.horizontal, 26).padding(.vertical, 13)
+                            .background(Capsule().fill(
+                                LinearGradient(colors: [DeepDivePalette.gold, DeepDivePalette.goldBright],
+                                               startPoint: .leading, endPoint: .trailing)))
+                    }
+                    .buttonStyle(.plain)
+                }
+                Button(action: onClose) {
+                    Text(JourneyStrings.done(lang)).font(.system(size: 11, weight: .regular)).tracking(2)
+                        .foregroundColor(DeepDivePalette.gold).padding(.horizontal, 22).padding(.vertical, 11)
+                        .overlay(Capsule().stroke(DeepDivePalette.gold.opacity(0.24), lineWidth: 1))
+                }
+                .buttonStyle(.plain)
+            }
+            .padding(.top, 30).reveal(show, 1.0, reduce: reduceMotion)
         }
     }
 }

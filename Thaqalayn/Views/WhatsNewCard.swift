@@ -42,6 +42,12 @@ struct WhatsNewCard: View {
                 router.pendingDeepDiveId = diveId
                 selectedTab = 4
             }
+        case .surahExperience(let experienceId):
+            // Same hand-off: stash the id, switch to the Journey hub; it opens the experience.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                router.pendingSurahExperienceId = experienceId
+                selectedTab = 4
+            }
         }
     }
 

@@ -43,6 +43,16 @@ extension DeepDive {
                 leaveWith: LocalizedText(en: "You'll leave with a map of certainty - and a prayer to deepen your own.", ur: "آپ یہاں سے یقین کا ایک نقشہ لے کر جائیں گے - اور ایک ایسی دعا بھی، جو آپ کے اپنے یقین کو مزید گہرا کر دے۔", ar: "ستخرج بخريطةٍ لليقين - ودعاءٍ يعمّق يقينَك أنت.")
             ),
 
+            // 02b. Threshold - The Three Depths (overview map, before the descent)
+            .depths(
+                act: 0, tag: LocalizedText(en: "The Three Depths", ur: "تین گہرائیاں", ar: "الأعماق الثلاثة"), reference: "al-Takāthur · al-Wāqiʿah",
+                items: [
+                    Depth(ar: "عِلْمُ الْيَقِين", tr: "‘Ilm al-Yaqīn", label: LocalizedText(en: "Knowledge of Certainty", ur: "علم الیقین", ar: "عِلْمُ اليَقِين"), desc: LocalizedText(en: "To know the fire exists - by the smoke on the horizon.", ur: "آگ کا وجود جاننا - افق پر اٹھتے دھوئیں سے۔", ar: "أن تعلم أنّ النار موجودة - من الدخان المتصاعد في الأفق."), reference: nil, embodies: LocalizedText(en: "the mind that reasons", ur: "غور و فکر کرنے والا ذہن", ar: "العقل الذي يستدلّ")),
+                    Depth(ar: "عَيْنُ الْيَقِين", tr: "‘Ayn al-Yaqīn", label: LocalizedText(en: "Eye of Certainty", ur: "عین الیقین", ar: "عَيْنُ اليَقِين"), desc: LocalizedText(en: "To see the fire with your own eyes.", ur: "آگ کو اپنی آنکھوں سے دیکھنا۔", ar: "أن ترى النار بعينك."), reference: "102:7", embodies: LocalizedText(en: "the prophets who saw", ur: "وہ انبیاءؑ جنہوں نے دیکھا", ar: "الأنبياء الذين رأوا")),
+                    Depth(ar: "حَقُّ الْيَقِين", tr: "Ḥaqq al-Yaqīn", label: LocalizedText(en: "Truth of Certainty", ur: "حق الیقین", ar: "حَقُّ اليَقِين"), desc: LocalizedText(en: "To stand within the flame itself.", ur: "خود شعلے کے اندر کھڑا ہونا۔", ar: "أن تقف داخل اللهب نفسه."), reference: "56:95", embodies: LocalizedText(en: "the family who lived it", ur: "وہ خاندان جس نے اسے جیا", ar: "الأسرة التي عاشته")),
+                ]
+            ),
+
             // 03. Movement I - The Knowing (movement card)
             .act(act: 1, connector: nil, line: LocalizedText(en: "It begins in the mind. Before certainty can be witnessed or lived, it must first be known - reasoned out and held as true, though the eyes have not yet seen.", ur: "یہ ذہن سے شروع ہوتا ہے۔ یقین کو دیکھنے یا جینے سے پہلے، اسے پہلے جاننا ضروری ہے - عقل سے سمجھا جائے اور سچ تسلیم کیا جائے، اگرچہ آنکھوں نے ابھی اسے دیکھا نہ ہو۔", ar: "يبدأ اليقينُ في العقل. فقبل أن يُشاهَد أو يُعاش، لا بدّ أن يُعرَف أولاً - أن يُستدلّ عليه ويُعتقَد صدقُه، وإن لم تره العينُ بعد."), bridge: nil),
 
@@ -53,16 +63,6 @@ extension DeepDive {
                 translation: LocalizedText(en: "No - if only you knew with the knowledge of certainty…", ur: "ہرگز نہیں! کاش تم علمِ یقین کے ساتھ جان لیتے…", ar: ""),
                 reference: "al-Takāthur · 102 : 5",
                 reflection: LocalizedText(en: "Before certainty can be lived, it must be understood. The Qur'an says it arrives in depths - three of them.", ur: "یقین کو جینے سے پہلے، اسے سمجھنا ضروری ہے۔ قرآن کہتا ہے کہ یہ گہرائیوں کی صورت میں آتا ہے - اور یہ گہرائیاں تین ہیں۔", ar: "قبل أن يُعاش اليقين، لا بدّ أن يُفهَم. يخبرنا القرآن أنه يأتي في أعماق - ثلاثة أعماق.")
-            ),
-
-            // 05. Movement I - The Three Depths
-            .depths(
-                act: 1, tag: LocalizedText(en: "The Three Depths", ur: "تین گہرائیاں", ar: "الأعماق الثلاثة"), reference: "al-Takāthur · al-Wāqiʿah",
-                items: [
-                    Depth(ar: "عِلْمُ الْيَقِين", tr: "‘Ilm al-Yaqīn", label: LocalizedText(en: "Knowledge of Certainty", ur: "علم الیقین", ar: "عِلْمُ اليَقِين"), desc: LocalizedText(en: "To know the fire exists - by the smoke on the horizon.", ur: "آگ کا وجود جاننا - افق پر اٹھتے دھوئیں سے۔", ar: "أن تعلم أنّ النار موجودة - من الدخان المتصاعد في الأفق."), reference: nil, embodies: LocalizedText(en: "the mind that reasons", ur: "غور و فکر کرنے والا ذہن", ar: "العقل الذي يستدلّ")),
-                    Depth(ar: "عَيْنُ الْيَقِين", tr: "‘Ayn al-Yaqīn", label: LocalizedText(en: "Eye of Certainty", ur: "عین الیقین", ar: "عَيْنُ اليَقِين"), desc: LocalizedText(en: "To see the fire with your own eyes.", ur: "آگ کو اپنی آنکھوں سے دیکھنا۔", ar: "أن ترى النار بعينك."), reference: "102:7", embodies: LocalizedText(en: "the prophets who saw", ur: "وہ انبیاءؑ جنہوں نے دیکھا", ar: "الأنبياء الذين رأوا")),
-                    Depth(ar: "حَقُّ الْيَقِين", tr: "Ḥaqq al-Yaqīn", label: LocalizedText(en: "Truth of Certainty", ur: "حق الیقین", ar: "حَقُّ اليَقِين"), desc: LocalizedText(en: "To stand within the flame itself.", ur: "خود شعلے کے اندر کھڑا ہونا۔", ar: "أن تقف داخل اللهب نفسه."), reference: "56:95", embodies: LocalizedText(en: "the family who lived it", ur: "وہ خاندان جس نے اسے جیا", ar: "الأسرة التي عاشته")),
-                ]
             ),
 
             // 06. Movement I - Ibrahīm Reasons His Way (al-Anʿām 6:76)
@@ -132,7 +132,12 @@ extension DeepDive {
             ),
 
             // 14. The Close - reflection prompt
-            .reflectionPrompt(tag: LocalizedText(en: "Return", ur: "واپسی", ar: "العودة"), prompt: LocalizedText(en: "Where is your yaqīn?", ur: "آپ کا یقین کہاں ہے؟", ar: "أين يَقِينُكَ؟"), placeholder: LocalizedText(en: "Faith, a decision, a loss, the unseen ahead…", ur: "ایمان، کوئی فیصلہ، کوئی نقصان، سامنے کا اَن دیکھا…", ar: "الإيمان، قرارٌ، فقدٌ، الغيب الذي ينتظر…")),
+            .reflectionPrompt(tag: LocalizedText(en: "Return", ur: "واپسی", ar: "العودة"), prompt: LocalizedText(en: "Where is your yaqīn?", ur: "آپ کا یقین کہاں ہے؟", ar: "أين يَقِينُكَ؟"), placeholder: LocalizedText(en: "Faith, a decision, a loss, the unseen ahead…", ur: "ایمان، کوئی فیصلہ، کوئی نقصان، سامنے کا اَن دیکھا…", ar: "الإيمان، قرارٌ، فقدٌ، الغيب الذي ينتظر…"),
+                subline: LocalizedText(
+                    en: "You've descended all three depths - knowing, witnessing, living. The map is yours. Before the prayer, name the certainty you long for.",
+                    ur: "آپ تینوں گہرائیوں میں اتر چکے ہیں - جاننا، دیکھنا، جینا۔ نقشہ اب آپ کا ہے۔ دعا سے پہلے، اُس یقین کا نام لیں جس کی آپ کو تلاش ہے۔",
+                    ar: "لقد نزلتَ الأعماق الثلاثة - أن تعلم، أن ترى، أن تعيش. الخريطة لك. قبل الدعاء، سمِّ اليقين الذي تشتاق إليه."),
+                nextLabel: LocalizedText(en: "And one prayer", ur: "اور ایک دعا", ar: "ودعاءٌ واحد")),
 
             // 15. The Close - a prayer for certainty
             .dua(
@@ -140,7 +145,8 @@ extension DeepDive {
                 arabic: "وَبَلِّغْ بِإِيمَانِي أَكْمَلَ الْإِيمَانِ، وَاجْعَلْ يَقِينِي أَفْضَلَ الْيَقِينِ",
                 translation: LocalizedText(en: "“Bring my faith to the most perfect faith, and make my certainty the most excellent certainty.”", ur: "“میرے ایمان کو کامل ترین ایمان تک پہنچا دے، اور میرے یقین کو بہترین یقین بنا دے۔”", ar: ""),
                 source: LocalizedText(en: "Imam ʿAlī ibn al-Ḥusayn · al-Ṣaḥīfa al-Sajjādiyya", ur: "امام علی ابن الحسینؑ · الصحیفہ السجادیہ", ar: "الإمام علي بن الحسين عليه السلام · الصحيفة السجادية"),
-                note: LocalizedText(en: "The son of Ḥusayn - present at Karbalā, the one who lived to carry it. He witnessed certainty's severest trial, and still asked God to deepen his own.", ur: "امام حسینؑ کے فرزند - جو کربلا میں موجود تھے اور زندہ رہ کر اسے آگے لے جانے والے تھے۔ انہوں نے یقین کی سب سے سخت آزمائش کا مشاہدہ کیا، اور پھر بھی اللہ سے اپنے یقین کو مزید گہرا کرنے کی دعا مانگی۔", ar: "ابنُ الحسين عليه السلام - كان حاضراً في كربلاء، وهو مَن عاش ليحمل أمانتَها. شهد أقسى اختبارٍ لليقين، ومع ذلك سأل اللهَ أن يزيد يقينَه عمقاً.")
+                note: LocalizedText(en: "The son of Ḥusayn - present at Karbalā, the one who lived to carry it. He witnessed certainty's severest trial, and still asked God to deepen his own.", ur: "امام حسینؑ کے فرزند - جو کربلا میں موجود تھے اور زندہ رہ کر اسے آگے لے جانے والے تھے۔ انہوں نے یقین کی سب سے سخت آزمائش کا مشاہدہ کیا، اور پھر بھی اللہ سے اپنے یقین کو مزید گہرا کرنے کی دعا مانگی۔", ar: "ابنُ الحسين عليه السلام - كان حاضراً في كربلاء، وهو مَن عاش ليحمل أمانتَها. شهد أقسى اختبارٍ لليقين، ومع ذلك سأل اللهَ أن يزيد يقينَه عمقاً."),
+                close: "The certainty is yours to keep."
             ),
         ]
     )

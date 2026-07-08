@@ -15,6 +15,9 @@ struct PresentedJourney: Identifiable { let id: String }
 /// Identifiable wrapper so `.fullScreenCover(item:)` can key on a deep-dive id.
 struct PresentedDeepDive: Identifiable { let id: String }
 
+/// Identifiable wrapper so `.fullScreenCover(item:)` can key on a sūrah-experience id.
+struct PresentedSurahExperience: Identifiable { let id: String }
+
 /// Content for the alert shown when a locked (non-active) journey is tapped.
 struct LockedJourneyAlert: Identifiable {
     let id = UUID()
@@ -33,10 +36,15 @@ struct JourneyHubView: View {
     @State private var presented: PresentedJourney?
     /// Set when an available deep dive is tapped — drives its full-screen descent.
     @State private var presentedDive: PresentedDeepDive?
+    /// Set when an available sūrah experience is tapped - drives its descent.
+    @State private var presentedSurahExperience: PresentedSurahExperience?
     /// Set when a premium-gated deep dive is tapped by a non-subscriber.
     @State private var showingPaywall = false
     /// Set when a locked journey is tapped — drives the "ended / not open yet" alert.
     @State private var lockedAlert: LockedJourneyAlert?
+    /// Uniform height every shelf card pins to — the tallest natural card measured
+    /// across all three shelves, so cards line up even between shelves.
+    @State private var shelfCardHeight: CGFloat = 0
 
     /// Descriptors paired with status, sorted Active → Coming soon (soonest) →
     /// Ended (soonest to return). Ordering lives in JourneyCatalog so the hub and
@@ -57,39 +65,121 @@ struct JourneyHubView: View {
         return items.first?.descriptor.id
     }
 
+    // MARK: - Shelf data
+
+    /// Sacred Seasons shelf items, in the same status order as the full list.
+    private var sacredSeasonItems: [ShelfItem] {
+        ordered.map { entry in
+            let d = entry.descriptor
+            let shelfStatus: ShelfStatus
+            switch entry.status {
+            case .active:                  shelfStatus = .live
+            case .comingSoon(let days, _): shelfStatus = .inDays(days)
+            case .ended:                   shelfStatus = .ended
+            }
+            return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: d.iconIsCustomAsset,
+                             isAvailable: entry.status.isActive, status: shelfStatus,
+                             title: JourneyStrings.title(d.id, lang),
+                             description: JourneyStrings.seasonTagline(d.id, lang),
+                             onTap: { handleTap(d, entry.status) })
+        }
+    }
+
+    /// Deep Dives shelf items (catalog order already front-loads available dives).
+    private var deepDiveItems: [ShelfItem] {
+        DeepDiveDescriptor.all.map { d in
+            let shelfStatus: ShelfStatus = d.available
+                ? (premiumManager.canAccessDeepDive(d.id) ? .ready : .premium)
+                : .soon
+            return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: false,
+                             isAvailable: d.available, status: shelfStatus,
+                             title: d.title(lang), description: d.subtitle(lang),
+                             onTap: { handleDiveTap(d) })
+        }
+    }
+
+    /// Inside the Sūrah shelf items (catalog order already front-loads available).
+    private var surahItems: [ShelfItem] {
+        SurahExperienceDescriptor.all.map { d in
+            let shelfStatus: ShelfStatus = d.available
+                ? (premiumManager.canAccessSurahExperience(d.id) ? .ready : .premium)
+                : .soon
+            return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: false,
+                             isAvailable: d.available, status: shelfStatus,
+                             title: d.title(lang), description: d.subtitle(lang),
+                             onTap: { handleSurahExperienceTap(d) })
+        }
+    }
+
+    // MARK: - "All N" full lists (pushed from a shelf header)
+
+    private var sacredSeasonsList: some View {
+        SectionFullList(title: JourneyStrings.sacredSeasons(lang)) {
+            ForEach(ordered, id: \.descriptor.id) { entry in
+                JourneyCard(descriptor: entry.descriptor, status: entry.status,
+                            isNextUp: entry.descriptor.id == nextUpId) {
+                    handleTap(entry.descriptor, entry.status)
+                }
+            }
+        }
+    }
+
+    private var deepDivesList: some View {
+        SectionFullList(title: JourneyStrings.deepDives(lang)) {
+            ForEach(DeepDiveDescriptor.all) { d in
+                DeepDiveCard(descriptor: d) { handleDiveTap(d) }
+            }
+        }
+    }
+
+    private var surahList: some View {
+        SectionFullList(title: JourneyStrings.insideTheSurah(lang)) {
+            ForEach(SurahExperienceDescriptor.all) { d in
+                SurahExperienceCard(descriptor: d) { handleSurahExperienceTap(d) }
+            }
+        }
+    }
+
     var body: some View {
-        ZStack {
-            AdaptiveModernBackground()
-            ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
-                    EmHeading(eyebrow: JourneyStrings.grow(lang), title: JourneyStrings.journeys(lang),
-                              sub: JourneyStrings.journeysSub(lang))
-                        .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
-                        .padding(.horizontal, 4)
-                        .padding(.top, 12)
-                        .padding(.bottom, 22)   // clear gap so the cards sit below the top glow/header zone
+        NavigationStack {
+            ZStack {
+                AdaptiveModernBackground()
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 0) {
+                        EmHeading(eyebrow: JourneyStrings.grow(lang), title: JourneyStrings.journeys(lang))
+                            .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                            .padding(.horizontal, 20)
+                            .padding(.top, 12)
 
-                    EmDivider(label: JourneyStrings.sacredSeasons(lang))
-                        .padding(.horizontal, 4).padding(.bottom, 2)
+                        JourneyShelf(label: JourneyStrings.sacredSeasons(lang),
+                                     count: JourneyDescriptor.all.count,
+                                     items: sacredSeasonItems,
+                                     destination: AnyView(sacredSeasonsList),
+                                     pinnedHeight: shelfCardHeight)
+                            .padding(.top, 20)
 
-                    ForEach(ordered, id: \.descriptor.id) { item in
-                        JourneyCard(descriptor: item.descriptor, status: item.status,
-                                    isNextUp: item.descriptor.id == nextUpId) {
-                            handleTap(item.descriptor, item.status)
-                        }
+                        JourneyShelf(label: JourneyStrings.deepDives(lang),
+                                     count: DeepDiveDescriptor.all.count,
+                                     items: deepDiveItems,
+                                     destination: AnyView(deepDivesList),
+                                     pinnedHeight: shelfCardHeight)
+                            .padding(.top, 24)
+
+                        JourneyShelf(label: JourneyStrings.insideTheSurah(lang),
+                                     count: SurahExperienceDescriptor.all.count,
+                                     items: surahItems,
+                                     destination: AnyView(surahList),
+                                     pinnedHeight: shelfCardHeight)
+                            .padding(.top, 24)
                     }
-
-                    EmDivider(label: JourneyStrings.deepDives(lang))
-                        .padding(.horizontal, 4).padding(.top, 14).padding(.bottom, 2)
-
-                    ForEach(DeepDiveDescriptor.all) { d in
-                        DeepDiveCard(descriptor: d) { handleDiveTap(d) }
+                    .padding(.bottom, 120)   // clear the floating EmeraldTabBar
+                    .onPreferenceChange(ShelfCardHeightKey.self) { height in
+                        if height > 0 { shelfCardHeight = height }
                     }
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 120)   // clear the floating EmeraldTabBar
             }
+            .toolbar(.hidden, for: .navigationBar)
         }
         .preferredColorScheme(tm.colorScheme)
         .fullScreenCover(item: $presented) { p in
@@ -102,10 +192,28 @@ struct JourneyHubView: View {
                 DeepDiveView(dive: dive) { presentedDive = nil }
             }
         }
+        .fullScreenCover(item: $presentedSurahExperience) { p in
+            if let d = SurahExperienceDescriptor.byId(p.id), let dive = d.dive {
+                DeepDiveView(dive: dive,
+                             onClose: { presentedSurahExperience = nil },
+                             onReadSurah: {
+                                 // Dismiss the descent, then hand off to the Quran tab -
+                                 // MainTabView's .navigateToVerse listener stashes the deep
+                                 // link and switches tabs; HomeView pushes the sūrah.
+                                 presentedSurahExperience = nil
+                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                                     NotificationCenter.default.post(
+                                         name: .navigateToVerse, object: nil,
+                                         userInfo: ["surah": d.surahNumber, "verse": 1])
+                                 }
+                             })
+            }
+        }
         .sheet(isPresented: $showingPaywall) { PaywallView() }
         .onAppear {
             consumePendingJourney()
             consumePendingDeepDive()
+            consumePendingSurahExperience()
             #if DEBUG
             if ProcessInfo.processInfo.arguments.contains("-ddYaqin") {
                 presentedDive = PresentedDeepDive(id: "yaqin")
@@ -114,6 +222,7 @@ struct JourneyHubView: View {
         }
         .onChange(of: router.pendingJourneyId) { _, _ in consumePendingJourney() }
         .onChange(of: router.pendingDeepDiveId) { _, _ in consumePendingDeepDive() }
+        .onChange(of: router.pendingSurahExperienceId) { _, _ in consumePendingSurahExperience() }
         .overlay {
             if let alert = lockedAlert {
                 LockedJourneyOverlay(alert: alert) {
@@ -150,6 +259,30 @@ struct JourneyHubView: View {
                 }
             } else {
                 // Premium-gated dive: soft haptic, then the paywall after the squish.
+                UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    showingPaywall = true
+                }
+            }
+        } else {
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            withAnimation(.easeInOut(duration: 0.2)) {
+                lockedAlert = LockedJourneyAlert(title: JourneyStrings.comingSoon(lang),
+                                                 detail: JourneyStrings.deepDiveOnItsWay(d.title(lang), lang),
+                                                 pointer: nil)
+            }
+        }
+    }
+
+    /// Available sūrah experiences open their descent (after the press squish);
+    /// premium-gated taps get the paywall; coming-soon reuses the locked overlay.
+    private func handleSurahExperienceTap(_ d: SurahExperienceDescriptor) {
+        if d.available {
+            if premiumManager.canAccessSurahExperience(d.id) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    presentedSurahExperience = PresentedSurahExperience(id: d.id)
+                }
+            } else {
                 UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
                     showingPaywall = true
@@ -227,6 +360,21 @@ struct JourneyHubView: View {
             // What's New card): non-subscribers get the paywall, not the dive.
             if premiumManager.canAccessDeepDive(id) {
                 presentedDive = PresentedDeepDive(id: id)
+            } else {
+                showingPaywall = true
+            }
+        }
+    }
+
+    /// Opens a sūrah experience requested from another tab (e.g. a What's New card).
+    private func consumePendingSurahExperience() {
+        guard let id = router.pendingSurahExperienceId else { return }
+        router.pendingSurahExperienceId = nil
+        guard SurahExperienceDescriptor.byId(id)?.dive != nil else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            // Honor the gate even via deep link: non-subscribers get the paywall.
+            if premiumManager.canAccessSurahExperience(id) {
+                presentedSurahExperience = PresentedSurahExperience(id: id)
             } else {
                 showingPaywall = true
             }

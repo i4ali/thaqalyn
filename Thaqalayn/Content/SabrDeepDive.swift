@@ -39,29 +39,9 @@ extension DeepDive {
                 leaveWith: "You’ll leave with a map of patience - and a prayer to carry you through your own trial."
             ),
 
-            // 03. Movement I - The Enduring (movement card)
-            .act(
-                act: 1,
-                connector: nil,
-                line: "It begins with the clenched heart. Before patience can become contentment, it is simply this: to hold firm, to restrain the self, to bear what has come - and to carry the grief to God alone.",
-                bridge: nil
-            ),
-
-            // 04. Movement I - Those Who Return (al-Baqarah 2:156)
-            .verse(
-                act: 1,
-                tag: "Those Who Return",
-                surah: 2,
-                ayah: 156,
-                arabic: "الَّذِينَ إِذَا أَصَابَتْهُم مُّصِيبَةٌ قَالُوا إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
-                translation: "Those who, when calamity strikes them, say: “Indeed we belong to God, and indeed to Him we return.”",
-                reference: "al-Baqarah · 2 : 156",
-                reflection: "This is the first breath of patience - not that the blow does not land, but that the heart, even as it breaks, remembers where it is going. To Him we belong; to Him we return."
-            ),
-
-            // 05. Movement I - The Three Stations
+            // 02b. Threshold - The Three Stations (overview map, before the descent)
             .depths(
-                act: 1,
+                act: 0,
                 tag: "The Three Stations",
                 reference: "al-Kāfī · al-Fajr 89:27",
                 items: [
@@ -90,6 +70,26 @@ extension DeepDive {
                         embodies: "the family who bore it"
                     ),
                 ]
+            ),
+
+            // 03. Movement I - The Enduring (movement card)
+            .act(
+                act: 1,
+                connector: nil,
+                line: "It begins with the clenched heart. Before patience can become contentment, it is simply this: to hold firm, to restrain the self, to bear what has come - and to carry the grief to God alone.",
+                bridge: nil
+            ),
+
+            // 04. Movement I - Those Who Return (al-Baqarah 2:156)
+            .verse(
+                act: 1,
+                tag: "Those Who Return",
+                surah: 2,
+                ayah: 156,
+                arabic: "الَّذِينَ إِذَا أَصَابَتْهُم مُّصِيبَةٌ قَالُوا إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
+                translation: "Those who, when calamity strikes them, say: “Indeed we belong to God, and indeed to Him we return.”",
+                reference: "al-Baqarah · 2 : 156",
+                reflection: "This is the first breath of patience - not that the blow does not land, but that the heart, even as it breaks, remembers where it is going. To Him we belong; to Him we return."
             ),
 
             // 06. Movement I - The Beautiful Patience (Yūsuf 12:86, Yaʿqūb)
@@ -174,7 +174,12 @@ extension DeepDive {
             .reflectionPrompt(
                 tag: "Return",
                 prompt: "What are you being asked to bear?",
-                placeholder: "An illness, a loss, a long wait, an injustice…"
+                placeholder: "An illness, a loss, a long wait, an injustice…",
+                subline: LocalizedText(
+                    en: "You've descended all three stations - enduring, accepting, at peace. The map is yours. Before the prayer, name the trial you are carrying.",
+                    ur: "آپ تینوں منزلوں سے گزر چکے ہیں - صبر، رضا، اطمینان۔ نقشہ اب آپ کا ہے۔ دعا سے پہلے، اُس آزمائش کا نام لیں جو آپ اٹھائے ہوئے ہیں۔",
+                    ar: "لقد نزلتَ المحطات الثلاث - صبرًا ورضًا وطمأنينة. الخريطة لك. قبل الدعاء، سمِّ البلاء الذي تحمله."),
+                nextLabel: LocalizedText(en: "And one prayer", ur: "اور ایک دعا", ar: "ودعاءٌ واحد")
             ),
 
             // 14. The Close - a prayer in trial (Imam Jaʿfar al-Ṣādiq)
@@ -184,7 +189,8 @@ extension DeepDive {
                 arabic: "رَبِّ كَمْ مِنْ نِعْمَةٍ أَنْعَمْتَ بِهَا عَلَيَّ قَلَّ عِنْدَهَا شُكْرِي، وَكَمْ مِنْ بَلِيَّةٍ ابْتَلَيْتَنِي بِهَا قَلَّ لَكَ عِنْدَهَا صَبْرِي، فَيَا مَنْ قَلَّ عِنْدَ نِعْمَتِهِ شُكْرِي فَلَمْ يَحْرِمْنِي، وَيَا مَنْ قَلَّ عِنْدَ بَلِيَّتِهِ صَبْرِي فَلَمْ يَخْذُلْنِي",
                 translation: "“My Lord - how many a blessing You gave me, and how little my thanks; how many a trial You tested me with, and how little my patience. O You who did not deprive me though my thanks was little, and did not forsake me though my patience was little.”",
                 source: "Imam Jaʿfar al-Ṣādiq · al-Amālī of al-Ṣadūq",
-                note: "The towering patience of Karbalāʾ is not asked of you. Only this: to bear a little, to return to Him - and to trust that the One who never forsook the patient will not forsake you either."
+                note: "The towering patience of Karbalāʾ is not asked of you. Only this: to bear a little, to return to Him - and to trust that the One who never forsook the patient will not forsake you either.",
+                close: "The patience is yours to keep."
             ),
         ]
     )

@@ -391,13 +391,13 @@ struct PaywallView: View {
 
                 Text("“\(CuratedReview.body)”")
                     .font(EmType.serifItalic(15))
-                    .foregroundColor(themeManager.secondaryText)
+                    .foregroundColor(themeManager.primaryText) // hero testimonial - thin italic serif needs full contrast, not secondary
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
 
                 Text("\(CuratedReview.author) · App Store review")
                     .font(.system(size: 10.5, weight: .medium)).tracking(0.3)
-                    .foregroundColor(themeManager.tertiaryText)
+                    .foregroundColor(themeManager.secondaryText)
                     .padding(.top, 3)
             }
             .padding(.horizontal, 16)

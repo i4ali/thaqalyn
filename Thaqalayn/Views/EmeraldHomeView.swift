@@ -61,11 +61,6 @@ struct EmeraldHomeView: View {
                     } else {
                         SearchResultsView(
                             query: searchText,
-                            onOpenSurah: { swt in
-                                targetConceptId = nil
-                                targetVerseNumber = nil
-                                selectedSurahForDeepLink = swt
-                            },
                             onOpenVerse: { s, v in
                                 targetConceptId = nil
                                 targetVerseNumber = v
@@ -183,11 +178,7 @@ struct EmeraldHomeView: View {
     private var surahList: some View {
         LazyVStack(spacing: 12) {
             ForEach(filteredSurahs) { swt in
-                PressableNavLink {
-                    SurahDetailView(surahWithTafsir: swt, targetVerse: nil)
-                } label: {
-                    ModernSurahCard(surah: swt.surah)
-                }
+                SurahListRow(surahWithTafsir: swt)
             }
         }
     }

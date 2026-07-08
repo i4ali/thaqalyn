@@ -2,7 +2,12 @@
 //  MissionScreen.swift
 //  Thaqalayn
 //
-//  Onboarding Screen 2: App Mission
+//  Onboarding Screen 2: App Mission.
+//  A "manifesto" screen - a punchy claim (this is not just another Quran app)
+//  that resolves into four gold-verb beats: Reflect, Journey, Descend, and
+//  Beside (the Ahlul Bayt). The two weighty things - the Book and the Ahlul
+//  Bayt - are the app's namesake (Hadith of Thaqalayn), crowned here by the
+//  ثقلين wordmark. English-only, matching the rest of onboarding.
 //
 
 import SwiftUI
@@ -10,170 +15,146 @@ import SwiftUI
 struct MissionScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @State private var isVisible = false
-    @State private var shimmerOffset: CGFloat = -1.0
+    @State private var glowPulse = false
+    @State private var shimmer: CGFloat = -1
+
+    private let gold = Color(hex: "ECD49A")
+    private let wordmark = "ثقلين"
+
+    /// A single manifesto beat: a gold verb and the line it governs.
+    private struct Beat {
+        let verb: String
+        let line: String
+    }
+
+    private let beats: [Beat] = [
+        Beat(verb: "Reflect", line: "on a verse until it stays with you."),
+        Beat(verb: "Journey", line: "through the seasons of faith, day by day."),
+        Beat(verb: "Descend", line: "layer by layer, into the words you thought you knew."),
+        Beat(verb: "Walk",    line: "beside the Ahlul Bayt, who never leave the Quran's side."),
+    ]
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
+            Spacer(minLength: 0)
 
-            VStack(spacing: 32) {
-                // App icon with glow
+            VStack(alignment: .leading, spacing: 0) {
+                // Brand wordmark (ثقلين = "the two weighty things"), centered and
+                // crowned by a gently breathing gold glow.
                 ZStack {
-                    // Glow effect
-                    ForEach(0..<3) { index in
-                        Circle()
-                            .fill(Color(hex: "ECD49A").opacity(0.16))
-                            .frame(width: 140 - CGFloat(index * 20), height: 140 - CGFloat(index * 20))
-                            .blur(radius: 10)
-                            .scaleEffect(isVisible ? 1 : 0.5)
-                            .opacity(isVisible ? 1 : 0)
-                            .animation(
-                                Animation.easeOut(duration: 1.0).delay(Double(index) * 0.2),
-                                value: isVisible
-                            )
-                    }
+                    Circle()
+                        .fill(RadialGradient(
+                            colors: [gold.opacity(0.18), .clear],
+                            center: .center, startRadius: 0, endRadius: 95))
+                        .frame(width: 210, height: 210)
+                        .blur(radius: 8)
+                        .scaleEffect(glowPulse ? 1.06 : 0.92)
+                        .opacity(glowPulse ? 1.0 : 0.6)
+                        .animation(.easeInOut(duration: 2.8).repeatForever(autoreverses: true), value: glowPulse)
 
-                    // App icon representation with shimmer
-                    Text("ثقلين")
-                        .font(.system(size: 48, weight: .light, design: .default))
-                        .foregroundColor(themeManager.primaryText)
+                    Text(wordmark)
+                        .font(EmType.arabic(48))
+                        .foregroundColor(gold)
                         .overlay(
-                            GeometryReader { geometry in
+                            // Gold sweep that travels across the letters.
+                            GeometryReader { geo in
                                 LinearGradient(
-                                    colors: [
-                                        .clear,
-                                        .white.opacity(0.6),
-                                        .clear
-                                    ],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                                .frame(width: geometry.size.width * 0.5)
-                                .offset(x: shimmerOffset * geometry.size.width * 1.5)
-                                .blendMode(.overlay)
+                                    colors: [.clear, Color(hex: "FFF4D2").opacity(0.9), .clear],
+                                    startPoint: .leading, endPoint: .trailing)
+                                    .frame(width: geo.size.width * 0.55)
+                                    .offset(x: shimmer * geo.size.width * 1.7)
+                                    .blendMode(.screen)
                             }
-                            .mask(
-                                Text("ثقلين")
-                                    .font(.system(size: 48, weight: .light, design: .default))
-                            )
+                            .mask(Text(wordmark).font(EmType.arabic(48)))
                         )
-                        .scaleEffect(isVisible ? 1 : 0.5)
-                        .opacity(isVisible ? 1 : 0)
-                        .animation(.spring(response: 0.8, dampingFraction: 0.6).delay(0.3), value: isVisible)
+                        .scaleEffect(isVisible ? 1 : 0.6)
+                        .opacity(isVisible ? 0.95 : 0)
+                        .animation(.spring(response: 0.8, dampingFraction: 0.62).delay(0.12), value: isVisible)
                 }
-                .frame(height: 150)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .frame(height: 120)
 
-                // Mission statement
-                VStack(spacing: 24) {
-                    Text("The Quran & Ahlul Bayt, at your fingertips")
-                        .onbHeroTitle()
-                        .foregroundColor(themeManager.primaryText)
-                        .multilineTextAlignment(.center)
-                        .lineSpacing(6)
-                        .padding(.horizontal, 30)
-                        .opacity(isVisible ? 1 : 0)
-                        .offset(y: isVisible ? 0 : 20)
-                        .animation(Animation.easeOut(duration: 0.8).delay(0.8), value: isVisible)
+                // Manifesto headline
+                Text("This was never meant to be just another Quran app.")
+                    .font(EmType.serif(30))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(4)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 22)
+                    .opacity(isVisible ? 1 : 0)
+                    .offset(y: isVisible ? 0 : 22)
+                    .animation(.easeOut(duration: 0.6).delay(0.30), value: isVisible)
 
-                    Text("Authentic Shia scholarship to read, understand, and journey through the Quran - and the wisdom of the Ahlul Bayt")
-                        .onbBody()
-                        .foregroundColor(themeManager.secondaryText)
-                        .multilineTextAlignment(.center)
-                        .lineSpacing(5)
-                        .padding(.horizontal, 40)
-                        .opacity(isVisible ? 1 : 0)
-                        .offset(y: isVisible ? 0 : 20)
-                        .animation(Animation.easeOut(duration: 0.8).delay(1.1), value: isVisible)
+                // Four gold-verb beats
+                VStack(alignment: .leading, spacing: 22) {
+                    ForEach(Array(beats.enumerated()), id: \.offset) { index, beat in
+                        if index > 0 {
+                            Rectangle()
+                                .fill(LinearGradient(
+                                    colors: [gold.opacity(0.30), .clear],
+                                    startPoint: .leading, endPoint: .trailing))
+                                .frame(height: 1)
+                                .opacity(isVisible ? 1 : 0)
+                                .animation(.easeOut(duration: 0.5).delay(0.55 + Double(index) * 0.14), value: isVisible)
+                        }
+
+                        BeatRow(verb: beat.verb, line: beat.line, gold: gold, lineColor: themeManager.secondaryText)
+                            .opacity(isVisible ? 1 : 0)
+                            .offset(x: isVisible ? 0 : -24)
+                            .animation(.easeOut(duration: 0.55).delay(0.50 + Double(index) * 0.14), value: isVisible)
+                    }
                 }
-
-                // Feature highlights
-                VStack(spacing: 12) {
-                    HighlightRow(
-                        icon: "book.closed.fill",
-                        text: "The complete Quran in English, Urdu & Arabic",
-                        isVisible: isVisible,
-                        delay: 1.4,
-                        chip: ThemeManager.chipGold
-                    )
-
-                    HighlightRow(
-                        icon: "sparkles",
-                        text: "5 layers of authentic Shia commentary",
-                        isVisible: isVisible,
-                        delay: 1.6,
-                        chip: ThemeManager.chipGold
-                    )
-
-                    HighlightRow(
-                        icon: "books.vertical.fill",
-                        text: "Stories, parallels & Du'as of the Ahlul Bayt",
-                        isVisible: isVisible,
-                        delay: 1.8,
-                        chip: ThemeManager.chipGold
-                    )
-
-                    HighlightRow(
-                        icon: "map.fill",
-                        text: "Seasonal journeys for Ramadan, Muharram, Hajj & more",
-                        isVisible: isVisible,
-                        delay: 2.0,
-                        chip: ThemeManager.chipGold
-                    )
-                }
-                .padding(.horizontal, 30)
+                .padding(.top, 44)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 34)
 
-            Spacer()
+            Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(OnboardingBackground(tilt: .lavender))
         .onAppear {
             isVisible = true
-            startShimmerAnimation()
+            glowPulse = true
+            startShimmer()
         }
     }
 
-    private func startShimmerAnimation() {
-        // Start shimmer after initial animation completes
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-            withAnimation(
-                Animation.easeInOut(duration: 1.5)
-                    .repeatForever(autoreverses: false)
-            ) {
-                shimmerOffset = 1.0
+    /// Kicks off a repeating gold sweep across the wordmark, after the
+    /// entrance settles.
+    private func startShimmer() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            withAnimation(.easeInOut(duration: 2.6).repeatForever(autoreverses: false)) {
+                shimmer = 1
             }
         }
     }
 }
 
-// MARK: - Highlight Row
+// MARK: - Beat Row
 
-struct HighlightRow: View {
-    @StateObject private var themeManager = ThemeManager.shared
-    let icon: String
-    let text: String
-    let isVisible: Bool
-    let delay: Double
-    let chip: ThemeManager.ChipColor
+private struct BeatRow: View {
+    let verb: String
+    let line: String
+    let gold: Color
+    let lineColor: Color
 
     var body: some View {
-        HStack(spacing: 14) {
-            Image(systemName: icon)
-                .font(.system(size: 18, weight: .semibold))
-                .foregroundColor(chip.fg)
-                .frame(width: 38, height: 38)
-                .background(RoundedRectangle(cornerRadius: 10).fill(chip.bg))
+        HStack(alignment: .firstTextBaseline, spacing: 16) {
+            Text(verb)
+                .font(EmType.serif(29))
+                .foregroundColor(gold)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+                .frame(width: 132, alignment: .leading)
 
-            Text(text)
-                .onbRowTitle()
-                .foregroundColor(themeManager.primaryText)
+            Text(line)
+                .font(.system(size: 15.5, weight: .medium))
+                .foregroundColor(lineColor)
+                .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .onboardingRow()
-        .opacity(isVisible ? 1 : 0)
-        .offset(x: isVisible ? 0 : -30)
-        .animation(Animation.easeOut(duration: 0.6).delay(delay), value: isVisible)
     }
 }
 

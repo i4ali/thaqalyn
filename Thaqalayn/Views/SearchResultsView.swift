@@ -10,7 +10,6 @@ import SwiftUI
 
 struct SearchResultsView: View {
     let query: String
-    let onOpenSurah: (SurahWithTafsir) -> Void
     let onOpenVerse: (_ surahNumber: Int, _ verseNumber: Int) -> Void
     let onOpenTheme: (_ surahNumber: Int, _ verseNumber: Int, _ conceptId: String) -> Void
 
@@ -44,11 +43,10 @@ struct SearchResultsView: View {
     @ViewBuilder private var surahSection: some View {
         if !results.surahs.isEmpty {
             sectionLabel(QuranTabStrings.surahsLabel(lang), count: results.surahs.count)
+            // Same row as the browse list, so a sūrah with an "Inside the Sūrah"
+            // experience shows the Read & Tafsir | Journey toggle here too.
             ForEach(results.surahs) { hit in
-                Button { onOpenSurah(hit.surah) } label: {
-                    ModernSurahCard(surah: hit.surah.surah)
-                }
-                .buttonStyle(EmPressStyle())
+                SurahListRow(surahWithTafsir: hit.surah)
             }
         }
     }
@@ -168,7 +166,7 @@ private struct ThemeResultRow: View {
 #if DEBUG
 #Preview("Results — populated") {
     ScrollView {
-        SearchResultsView(query: "light", onOpenSurah: { _ in }, onOpenVerse: { _, _ in }, onOpenTheme: { _, _, _ in })
+        SearchResultsView(query: "light", onOpenVerse: { _, _ in }, onOpenTheme: { _, _, _ in })
             .padding(.horizontal, 20)
     }
     .background(Color(hex: "0A1512"))

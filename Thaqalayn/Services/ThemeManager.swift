@@ -108,16 +108,19 @@ class ThemeManager: ObservableObject {
         case .warmInviting:
             return Color(red: 0.42, green: 0.365, blue: 0.329) // #6B5D54
         case .nightSanctuary:
-            return Color(hex: "F1E8D6").opacity(0.60)
+            return Color(hex: "F1E8D6").opacity(0.74)
         }
     }
 
     var tertiaryText: Color {
         switch selectedTheme {
         case .warmInviting:
-            return Color(red: 0.69, green: 0.64, blue: 0.6) // #B0A399
+            // Lifted from #B0A399 (~2.3:1, unreadable) to ~4.2:1 for legible captions/metadata,
+            // kept a clear step below secondaryText so the hierarchy stays intact.
+            return Color(red: 0.510, green: 0.471, blue: 0.435) // #82786F
         case .nightSanctuary:
-            return Color(hex: "F1E8D6").opacity(0.38)
+            // Lifted from 0.38 (~2.9:1) to ~4.5:1, still below secondaryText's 0.74.
+            return Color(hex: "F1E8D6").opacity(0.52)
         }
     }
 

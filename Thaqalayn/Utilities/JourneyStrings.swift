@@ -57,14 +57,54 @@ enum JourneyStrings {
     static func deepDiveEyebrow(_ l: CommentaryLanguage) -> String {
         pick(l, en: "Deep Dive", ur: "گہرا مطالعہ", ar: "غوص عميق")
     }
-    static func featured(_ l: CommentaryLanguage) -> String {
-        pick(l, en: "FEATURED", ur: "نمایاں", ar: "مميّز")
-    }
     static func soon(_ l: CommentaryLanguage) -> String {
         pick(l, en: "SOON", ur: "جلد", ar: "قريباً")
     }
     static func premium(_ l: CommentaryLanguage) -> String {
         pick(l, en: "Premium", ur: "پریمیئم", ar: "بريميوم")
+    }
+
+    // MARK: - Shelf status eyebrows (compact hub cards)
+    // Short status words shown in the eyebrow slot of the horizontal-shelf cards.
+    // Longer, full-sentence variants (comingSoonInDays / endedReturns) still drive
+    // the full-width "All N" list cards.
+    static func live(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "LIVE", ur: "جاری", ar: "جارٍ")
+    }
+    static func ready(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "READY", ur: "تیار", ar: "جاهز")
+    }
+    static func inDaysShort(_ days: Int, _ l: CommentaryLanguage) -> String {
+        pick(l, en: "IN \(days) DAY\(days == 1 ? "" : "S")",
+             ur: "\(days) دن میں",
+             ar: "بعد \(days) يوماً")
+    }
+    static func endedShort(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "ENDED", ur: "ختم", ar: "انتهت")
+    }
+    /// "See all" link on a shelf header - count is that section's live total.
+    static func allCount(_ n: Int, _ l: CommentaryLanguage) -> String {
+        pick(l, en: "All \(n)", ur: "تمام \(n)", ar: "الكل \(n)")
+    }
+    // Sūrah experiences ("Inside the Sūrah") - hub section, card eyebrow, closing CTA.
+    static func insideTheSurah(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "Inside the Sūrah", ur: "سورہ کے اندر", ar: "في قلب السورة")
+    }
+    static func anImmersiveJourney(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "An immersive journey", ur: "ایک عمیق سفر", ar: "رحلة غامرة")
+    }
+    static func surahJourneyEyebrow(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "Sūrah Journey", ur: "سورہ کا سفر", ar: "رحلة السورة")
+    }
+    static func readTheFullSurah(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "Read the full sūrah", ur: "مکمل سورہ پڑھیں", ar: "اقرأ السورة كاملة")
+    }
+    // Sūrah-card mode toggle: Read & Tafsir | Journey.
+    static func readAndTafsir(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "Read & Tafsir", ur: "مطالعہ و تفسیر", ar: "القراءة والتفسير")
+    }
+    static func journey(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "Journey", ur: "سفر", ar: "رحلة")
     }
     static func nextUp(_ l: CommentaryLanguage) -> String {
         pick(l, en: "NEXT UP", ur: "اگلا", ar: "التالي")
@@ -133,6 +173,20 @@ enum JourneyStrings {
         default:         return english
         }
     }
+    /// Short evocative tagline for a seasonal journey - shown as the description
+    /// line on the compact hub shelf card (not the full-width "All" list, which
+    /// keeps the status detail line). English + Urdu + Arabic.
+    static func seasonTagline(_ id: String, _ l: CommentaryLanguage) -> String {
+        switch id {
+        case "ramadan":  return pick(l, en: "Thirty nights of nearness", ur: "قربِ الٰہی کی تیس راتیں", ar: "ثلاثون ليلةً من القُرب")
+        case "hajj":     return pick(l, en: "The best ten days", ur: "سال کے بہترین دس دن", ar: "أفضلُ عشرةِ أيّام")
+        case "muharram": return pick(l, en: "The stand at Karbala", ur: "کربلا کا قیام", ar: "وقفةُ كربلاء")
+        case "arbaeen":  return pick(l, en: "The road to Arbaeen", ur: "اربعین کی راہ", ar: "الطريق إلى الأربعين")
+        case "fatimiyya":return pick(l, en: "Mourning of az-Zahrā (AS)", ur: "عزائے زہراؑ", ar: "عزاء الزهراء (ع)")
+        default:         return ""
+        }
+    }
+
     /// Legacy in-screen header title, e.g. "Muharram Journey".
     static func screenTitle(_ id: String, _ l: CommentaryLanguage) -> String {
         let name = title(id, l)

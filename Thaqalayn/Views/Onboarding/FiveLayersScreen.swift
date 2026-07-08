@@ -2,7 +2,11 @@
 //  FiveLayersScreen.swift
 //  Thaqalayn
 //
-//  Onboarding Screen 3: Five Layers of Wisdom
+//  Onboarding: Five Layers of Wisdom.
+//  A glanceable, passive redesign - the five tafsir layers shown as a single
+//  colour-coded stack (icon + name + a 2-3 word tag), labelled "Five lenses" to
+//  frame them as five parallel angles on one verse (not a difficulty ramp). No
+//  tap-to-expand, no paragraphs to read.
 //
 
 import SwiftUI
@@ -10,187 +14,143 @@ import SwiftUI
 struct FiveLayersScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @State private var isVisible = false
-    @State private var selectedLayer: TafsirLayer?
 
-    private let layers: [(layer: TafsirLayer, emoji: String, title: String, description: String)] = [
-        (.foundation, "ph-bank-fill", "Foundation", "Simple explanations and historical context"),
-        (.classical, "ph-books-fill", "Classical Shia", "Tabatabai, Tabrisi, traditional scholars"),
-        (.contemporary, "ph-globe-hemisphere-west-fill", "Contemporary", "Modern perspectives and scientific analysis"),
-        (.ahlulBayt, "ph-star-fill", "Ahlul Bayt", "Hadith from the 14 Infallibles"),
-        (.comparative, "ph-scales-fill", "Comparative", "Balanced Shia and Sunni scholarly analysis")
+    private let gold = Color(hex: "ECD49A")
+
+    /// One lens: the tafsir layer, its Phosphor icon, name, a short tag, and the
+    /// accent chip that colour-codes it (matching the reading view's layers).
+    private struct Lens {
+        let icon: String
+        let title: String
+        let tag: String
+        let chip: ThemeManager.ChipColor
+    }
+
+    private let lenses: [Lens] = [
+        Lens(icon: "ph-bank-fill",                 title: "Foundation",     tag: "the basics",          chip: ThemeManager.chipFoundation),
+        Lens(icon: "ph-books-fill",                title: "Classical Shia", tag: "Tabatabai & Tabrisi", chip: ThemeManager.chipKnowledge),
+        Lens(icon: "ph-globe-hemisphere-west-fill", title: "Contemporary",   tag: "modern & scientific", chip: ThemeManager.chipProgress),
+        Lens(icon: "ph-star-fill",                 title: "Ahlul Bayt",     tag: "the 14 Infallibles",  chip: ThemeManager.chipBrand),
+        Lens(icon: "ph-scales-fill",               title: "Comparative",    tag: "Shia & Sunni",        chip: ThemeManager.chipComparative),
     ]
 
     var body: some View {
         VStack(spacing: 0) {
-            // Header
-            VStack(spacing: 16) {
-                HeroChip(palette: ThemeManager.chipGold) {
-                    Image(systemName: "square.stack.3d.up.fill").font(.system(size: 38, weight: .semibold))
-                }
-                .opacity(isVisible ? 1 : 0)
-                .scaleEffect(isVisible ? 1 : 0.5)
-                .animation(Animation.spring(response: 0.6, dampingFraction: 0.7).delay(0.1), value: isVisible)
+            Spacer(minLength: 0)
 
-                Text("5 Layers of Wisdom")
-                    .onbHeroTitle()
-                    .foregroundColor(themeManager.primaryText)
-                    .opacity(isVisible ? 1 : 0)
-                    .offset(y: isVisible ? 0 : -20)
-                    .animation(Animation.easeOut(duration: 0.6).delay(0.2), value: isVisible)
+            header
+                .padding(.bottom, 30)
 
-                Text("Tap each layer to explore")
-                    .onbBody()
-                    .foregroundColor(themeManager.secondaryText)
-                    .opacity(isVisible ? 1 : 0)
-                    .animation(Animation.easeOut(duration: 0.6).delay(0.4), value: isVisible)
-            }
-            .padding(.top, 80)
-            .padding(.bottom, 30)
+            stackWithAxis
+                .padding(.horizontal, 26)
 
-            // Layers stack
-            ScrollView {
-                VStack(spacing: 12) {
-                    ForEach(Array(layers.enumerated()), id: \.offset) { index, item in
-                        LayerCard(
-                            layer: item.layer,
-                            emoji: item.emoji,
-                            title: item.title,
-                            description: item.description,
-                            index: index,
-                            isExpanded: selectedLayer == item.layer,
-                            isVisible: isVisible,
-                            chip: [ThemeManager.chipFoundation, ThemeManager.chipKnowledge, ThemeManager.chipProgress, ThemeManager.chipBrand, ThemeManager.chipComparative][index],
-                            onTap: {
-                                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                    selectedLayer = selectedLayer == item.layer ? nil : item.layer
-                                }
-                            }
-                        )
-                    }
-                }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 40)
-            }
+            Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(OnboardingBackground(tilt: .mauve))
-        .onAppear {
-            isVisible = true
+        .onAppear { isVisible = true }
+    }
+
+    // MARK: - Header
+
+    private var header: some View {
+        VStack(spacing: 12) {
+            // Gold "layers" badge crowning the header - mirrors the Gems screen's
+            // HeroChip treatment, with a glyph that reads as the five-layer stack
+            // below it.
+            HeroChip(palette: ThemeManager.chipGold, pulseDuration: 2.4) {
+                Image(systemName: "square.3.layers.3d")
+                    .font(.system(size: 36, weight: .semibold))
+            }
+            .opacity(isVisible ? 1 : 0)
+            .scaleEffect(isVisible ? 1 : 0.5)
+            .animation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.05), value: isVisible)
+            .padding(.bottom, 8)
+
+            Text("5 Layers of Wisdom")
+                .onbHeroTitle()
+                .foregroundColor(themeManager.primaryText)
+                .multilineTextAlignment(.center)
+                .opacity(isVisible ? 1 : 0)
+                .offset(y: isVisible ? 0 : -20)
+                .animation(.easeOut(duration: 0.6).delay(0.15), value: isVisible)
+
+            Text("See every verse from every angle.")
+                .onbBody()
+                .foregroundColor(themeManager.secondaryText)
+                .multilineTextAlignment(.center)
+                .opacity(isVisible ? 1 : 0)
+                .animation(.easeOut(duration: 0.6).delay(0.3), value: isVisible)
         }
     }
-}
 
-// MARK: - Layer Card
+    // MARK: - "Five lenses" axis + the colour-coded stack
 
-struct LayerCard: View {
-    @StateObject private var themeManager = ThemeManager.shared
-    let layer: TafsirLayer
-    let emoji: String
-    let title: String
-    let description: String
-    let index: Int
-    let isExpanded: Bool
-    let isVisible: Bool
-    let chip: ThemeManager.ChipColor
-    let onTap: () -> Void
+    private var stackWithAxis: some View {
+        HStack(spacing: 14) {
+            Text("Five lenses")
+                .font(.system(size: 10.5, weight: .bold))
+                .tracking(3)
+                .textCase(.uppercase)
+                .foregroundColor(gold)
+                .fixedSize()
+                .rotationEffect(.degrees(-90))
+                .frame(width: 20)
+                .opacity(isVisible ? 1 : 0)
+                .animation(.easeOut(duration: 0.6).delay(0.5), value: isVisible)
 
-    var body: some View {
-        Button(action: onTap) {
-            VStack(alignment: .leading, spacing: 12) {
-                // Header
-                HStack(spacing: 14) {
-                    // Layer icon
-                    PhosphorIcon(name: emoji, size: 28)
-                        .foregroundColor(chip.fg)
-                        .frame(width: 50, height: 50)
-                        .background(Circle().fill(chip.bg))
-
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(title)
-                            .onbCardTitle()
-                            .foregroundColor(themeManager.primaryText)
-
-                        if !isExpanded {
-                            Text(description)
-                                .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(themeManager.secondaryText)
-                                .lineLimit(1)
-                        }
-                    }
-
-                    Spacer()
-
-                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(themeManager.tertiaryText)
-                }
-
-                // Expanded content
-                if isExpanded {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text(description)
-                            .font(.system(size: 15, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(4)
-
-                        // Layer-specific details
-                        Text(layerDetails)
-                            .font(.system(size: 14, weight: .regular))
-                            .foregroundColor(themeManager.secondaryText)
-                            .lineSpacing(3)
-
-                        // Badge
-                        HStack {
-                            Text(layer.title)
-                                .font(.system(size: 12, weight: .semibold))
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 6)
-                                .background(
-                                    Capsule()
-                                        .fill(chip.fg)
-                                )
-
-                            Spacer()
-                        }
-                    }
-                    .padding(.top, 4)
-                    .transition(.opacity.combined(with: .move(edge: .top)))
+            VStack(spacing: 0) {
+                ForEach(Array(lenses.enumerated()), id: \.offset) { index, lens in
+                    stratum(lens, isLast: index == lenses.count - 1)
+                        .opacity(isVisible ? 1 : 0)
+                        .offset(y: isVisible ? 0 : 22)
+                        .animation(.easeOut(duration: 0.55).delay(0.45 + Double(index) * 0.1), value: isVisible)
                 }
             }
-            .padding(18)
-            .background(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .fill(Color.white.opacity(0.05))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 18, style: .continuous)
-                            .strokeBorder(
-                                isExpanded ? chip.fg.opacity(0.5) : Color(hex: "ECD49A").opacity(0.10),
-                                lineWidth: isExpanded ? 2 : 1
-                            )
-                    )
-                    .shadow(color: Color.black.opacity(0.35), radius: 14, x: 0, y: 8)
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .strokeBorder(gold.opacity(0.10), lineWidth: 1)
             )
-            .shadow(color: isExpanded ? chip.fg.opacity(0.18) : Color.clear, radius: isExpanded ? 12 : 0)
+            .shadow(color: .black.opacity(0.4), radius: 16, x: 0, y: 10)
         }
-        .buttonStyle(PlainButtonStyle())
-        .opacity(isVisible ? 1 : 0)
-        .offset(y: isVisible ? 0 : 30)
-        .animation(Animation.easeOut(duration: 0.6).delay(0.6 + Double(index) * 0.1), value: isVisible)
     }
 
-    private var layerDetails: String {
-        switch layer {
-        case .foundation:
-            return "Perfect for beginners. Clear explanations of verses with historical context and basic Islamic principles."
-        case .classical:
-            return "Dive deep into traditional Shia scholarship with insights from Allamah Tabatabai's Al-Mizan and Sheikh Tabrisi's Majma al-Bayan."
-        case .contemporary:
-            return "Modern Islamic scholars provide fresh perspectives, addressing contemporary issues and scientific connections."
-        case .ahlulBayt:
-            return "Authentic narrations and spiritual wisdom from the Prophet and the 14 Infallibles (peace be upon them)."
-        case .comparative:
-            return "Unique to Thaqalayn: Balanced analysis comparing Shia and Sunni scholarly interpretations with academic integrity."
+    /// One flush stratum in the stack: icon, name, and tag, with the accent
+    /// colour drawn as a leading strip (an overlay, so it takes the row's own
+    /// height rather than greedily filling the stack).
+    private func stratum(_ lens: Lens, isLast: Bool) -> some View {
+        HStack(spacing: 13) {
+            PhosphorIcon(name: lens.icon, size: 22)
+                .foregroundColor(lens.chip.fg)
+                .frame(width: 30)
+
+            Text(lens.title)
+                .onbCardTitle()
+                .foregroundColor(themeManager.primaryText)
+
+            Spacer(minLength: 8)
+
+            Text(lens.tag)
+                .font(.system(size: 12.5, weight: .medium))
+                .foregroundColor(themeManager.secondaryText)
+        }
+        .padding(.leading, 18)
+        .padding(.trailing, 15)
+        .padding(.vertical, 26)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.white.opacity(0.06))
+        .overlay(alignment: .leading) {
+            Rectangle()
+                .fill(lens.chip.fg)
+                .frame(width: 3)
+        }
+        .overlay(alignment: .bottom) {
+            if !isLast {
+                Rectangle()
+                    .fill(gold.opacity(0.08))
+                    .frame(height: 1)
+            }
         }
     }
 }

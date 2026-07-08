@@ -88,7 +88,7 @@ struct WelcomeView: View {
                                 .foregroundColor(themeManager.primaryText)
                                 .multilineTextAlignment(.center)
                             
-                            Text("Discover the profound depths of the Quran through AI-powered Shia commentary with four layers of scholarly wisdom.")
+                            Text("Discover the profound depths of the Quran.")
                                 .font(.system(size: 18, weight: .medium))
                                 .foregroundColor(themeManager.secondaryText)
                                 .multilineTextAlignment(.center)

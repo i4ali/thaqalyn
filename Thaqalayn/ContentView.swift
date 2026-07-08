@@ -20,6 +20,8 @@ struct ContentView: View {
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var ratingManager = RatingManager.shared
     @State private var showingWelcome = false
+    /// First-launch onboarding is deferred until the loading splash finishes.
+    @State private var pendingWelcome = false
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -61,6 +63,10 @@ struct ContentView: View {
         .onChange(of: themeManager.selectedTheme) { _, newValue in
             ChromeAppearance.apply(for: newValue)
         }
+        .onChange(of: dataManager.isLoading) { _, loading in
+            // Present onboarding only once the loading splash has finished.
+            if !loading { presentWelcomeIfReady() }
+        }
         .fullScreenCover(isPresented: $showingWelcome) {
             OnboardingFlowView()
         }
@@ -80,7 +86,10 @@ struct ContentView: View {
         let hasShownWelcome = UserDefaults.standard.bool(forKey: "hasShownWelcome")
 
         if !hasShownWelcome {
-            showingWelcome = true
+            // Defer presentation until the loading splash finishes, so the
+            // splash gets its full moment before onboarding slides up.
+            pendingWelcome = true
+            presentWelcomeIfReady()
             // Brand-new install: suppress the What's New backlog (whole app is new to them).
             WhatsNewManager.shared.seedAllAsSeenForFreshInstall()
         }
@@ -90,6 +99,14 @@ struct ContentView: View {
             WhatsNewManager.shared.debugReset()
         }
         #endif
+    }
+
+    /// Presents the deferred first-launch onboarding once the loading splash
+    /// (`dataManager.isLoading`) has finished.
+    private func presentWelcomeIfReady() {
+        guard pendingWelcome, !dataManager.isLoading else { return }
+        pendingWelcome = false
+        showingWelcome = true
     }
 }
 
@@ -168,7 +185,7 @@ struct LoadingView: View {
                 .foregroundColor(themeManager.primaryText)
                 .shadow(color: themeManager.semanticBlue.opacity(0.5), radius: 30)
             
-            Text("Experience the Quran like never before\nwith AI-powered Shia commentary")
+            Text("Experience the Quran like never before\n")
                 .font(.system(size: 18, weight: .light))
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
@@ -179,7 +196,7 @@ struct LoadingView: View {
                     .scaleEffect(1.2)
                     .tint(themeManager.semanticBlue)
                 
-                Text("Initializing AI Commentary...")
+                Text("Preparing your journey...")
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -437,6 +454,12 @@ struct StatCard: View {
 
 struct ModernSurahCard: View {
     let surah: Surah
+    /// True when an experience toggle is attached below - squares the bottom
+    /// corners so card + toggle read as one card.
+    var squaredBottom = false
+    /// False when the row draws a single combined border around card + toggle,
+    /// so the card must not stroke its own (seam-creating) outline.
+    var showsBorder = true
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
@@ -467,6 +490,16 @@ struct ModernSurahCard: View {
 
     private var surahNumberShadowColor: Color {
         Color(red: 0.91, green: 0.604, blue: 0.435).opacity(0.3)
+    }
+
+    /// Card container shape - all four corners round at 20, or the bottom two
+    /// squared off when an experience strip is attached directly below.
+    private var cardShape: UnevenRoundedRectangle {
+        UnevenRoundedRectangle(topLeadingRadius: 20,
+                               bottomLeadingRadius: squaredBottom ? 0 : 20,
+                               bottomTrailingRadius: squaredBottom ? 0 : 20,
+                               topTrailingRadius: 20,
+                               style: .continuous)
     }
 
     var body: some View {
@@ -545,16 +578,18 @@ struct ModernSurahCard: View {
                 }
             }
         }
-        .padding(20)
+        .padding(.horizontal, 20).padding(.top, 20)
+        .padding(.bottom, squaredBottom ? 10 : 20)
         .background {
-            RoundedRectangle(cornerRadius: 20)
+            cardShape
                 .fill(themeManager.selectedTheme == .nightSanctuary
                       ? themeManager.glassSurface
                       : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
+                .overlay {
+                    if showsBorder {
+                        cardShape.stroke(themeManager.strokeColor, lineWidth: 1)
+                    }
+                }
                 .shadow(
                     color: themeManager.selectedTheme == .nightSanctuary
                         ? Color.black.opacity(0.45)
@@ -565,44 +600,52 @@ struct ModernSurahCard: View {
     }
 
     private var emeraldBody: some View {
-        EmCard {
-            HStack(spacing: 16) {
-                EmNumeralCircle(n: surah.number, size: 46)
-                VStack(alignment: .leading, spacing: 6) {
-                    HStack(alignment: .firstTextBaseline) {
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(surah.englishName)
-                                .font(EmType.serif(20, .semiBold))
-                                .foregroundColor(themeManager.primaryText)
-                            Text(surah.englishNameTranslation)
-                                .font(.system(size: 12, weight: .medium))
-                                .foregroundColor(themeManager.tertiaryText)
-                        }
-                        Spacer(minLength: 8)
-                        Text(surah.arabicName)
-                            .font(EmType.arabic(24))
-                            .foregroundColor(themeManager.accentBright)
-                            .lineLimit(1)
-                    }
-                    HStack(spacing: 8) {
-                        Text(QuranTabStrings.versesCount(surah.versesCount, languageManager.selectedLanguage))
+        HStack(spacing: 16) {
+            EmNumeralCircle(n: surah.number, size: 46)
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(alignment: .firstTextBaseline) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(surah.englishName)
+                            .font(EmType.serif(20, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                        Text(surah.englishNameTranslation)
+                            .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
-                        Text("·").foregroundColor(themeManager.tertiaryText)
-                        Text(QuranTabStrings.revelation(surah.revelationType, languageManager.selectedLanguage))
-                            .foregroundColor(themeManager.tertiaryText)
-                        if readCount > 0 {
-                            Text("·").foregroundColor(themeManager.tertiaryText)
-                            Text("\(percentage)%")
-                                .foregroundColor(themeManager.accentColor)
-                                .fontWeight(.semibold)
-                        }
-                        Spacer(minLength: 0)
                     }
-                    .font(.system(size: 12, weight: .medium))
+                    Spacer(minLength: 8)
+                    Text(surah.arabicName)
+                        .font(EmType.arabic(24))
+                        .foregroundColor(themeManager.accentBright)
+                        .lineLimit(1)
                 }
+                HStack(spacing: 8) {
+                    Text(QuranTabStrings.versesCount(surah.versesCount, languageManager.selectedLanguage))
+                        .foregroundColor(themeManager.tertiaryText)
+                    Text("·").foregroundColor(themeManager.tertiaryText)
+                    Text(QuranTabStrings.revelation(surah.revelationType, languageManager.selectedLanguage))
+                        .foregroundColor(themeManager.tertiaryText)
+                    if readCount > 0 {
+                        Text("·").foregroundColor(themeManager.tertiaryText)
+                        Text("\(percentage)%")
+                            .foregroundColor(themeManager.accentColor)
+                            .fontWeight(.semibold)
+                    }
+                    Spacer(minLength: 0)
+                }
+                .font(.system(size: 12, weight: .medium))
             }
-            .padding(20)
         }
+        .padding(.horizontal, 20).padding(.top, 20)
+        // Tighter bottom inset when a toggle is attached, so the buttons sit
+        // closer to the metadata rather than floating far below it.
+        .padding(.bottom, squaredBottom ? 10 : 20)
+        .background(cardShape.fill(themeManager.glassSurface))
+        .overlay {
+            if showsBorder {
+                cardShape.stroke(themeManager.strokeColor, lineWidth: 1)
+            }
+        }
+        .shadow(color: Color.black.opacity(0.28), radius: 24, x: 0, y: 8)
     }
 }
 

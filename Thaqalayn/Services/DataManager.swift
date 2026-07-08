@@ -27,19 +27,33 @@ class DataManager: ObservableObject {
     
     // MARK: - Data Loading
     
+    /// Minimum time the branded loading splash stays on screen, so it doesn't
+    /// just flash by on fast local loads.
+    private static let minimumSplashDuration: TimeInterval = 2.5
+
     func loadData() {
         isLoading = true
         errorMessage = nil
-        
+        let startTime = Date()
+
         Task {
             do {
                 try await loadQuranData()
                 await loadAvailableTafsir()
+                await Self.holdSplash(since: startTime)
                 isLoading = false
             } catch {
                 errorMessage = "Failed to load data: \(error.localizedDescription)"
                 isLoading = false
             }
+        }
+    }
+
+    /// Sleeps for whatever remains of `minimumSplashDuration` after loading finishes.
+    private static func holdSplash(since start: Date) async {
+        let remaining = minimumSplashDuration - Date().timeIntervalSince(start)
+        if remaining > 0 {
+            try? await Task.sleep(nanoseconds: UInt64(remaining * 1_000_000_000))
         }
     }
     

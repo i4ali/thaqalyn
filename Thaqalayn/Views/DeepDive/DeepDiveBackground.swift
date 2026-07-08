@@ -24,7 +24,6 @@ enum DeepDivePalette {
     static let goldBright = Color(.sRGB, red: 227.0/255.0, green: 195.0/255.0, blue: 126.0/255.0, opacity: 1) // #E3C37E
     static let cream      = Color(.sRGB, red: 236.0/255.0, green: 231.0/255.0, blue: 219.0/255.0, opacity: 1) // #ECE7DB
     static let mute       = Color(.sRGB, red: 143.0/255.0, green: 154.0/255.0, blue: 140.0/255.0, opacity: 1) // #8F9A8C
-    static let faint      = Color(.sRGB, red:  92.0/255.0, green: 102.0/255.0, blue:  93.0/255.0, opacity: 1) // #5C665D
 
     /// Background colour stops (BG_STOPS). `p` is the descent progress 0...1;
     /// r/g/b are already normalised to 0...1 (hex value divided by 255).

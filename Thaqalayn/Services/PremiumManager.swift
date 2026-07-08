@@ -236,4 +236,15 @@ class PremiumManager: ObservableObject {
         if id == "yaqin" { return true }  // Intro dive always free
         return isPremium
     }
+
+    // MARK: - Surah Experience Access Control
+
+    /// Sūrah experiences ("Inside the Sūrah") use the app's "first free, rest
+    /// premium" teaser model: al-Fātiḥa - the Opening, at the top of the Qur'an
+    /// tab - is always free so every user can experience the format; every other
+    /// sūrah journey requires premium.
+    func canAccessSurahExperience(_ id: String) -> Bool {
+        if id == "surah-fatiha" { return true }  // free flagship teaser - the Opening is for everyone
+        return isPremium
+    }
 }
