@@ -119,9 +119,11 @@ struct PaywallView: View {
                     .foregroundColor(themeManager.accentBright)
             }
 
-            priceChip
+            anchorLine
 
-            Text("One payment. No renewals. Your daily companion, for life.")
+            priceRow
+
+            Text("One payment. No renewals. Yours for life.")
                 .font(.system(size: 13, weight: .medium))
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
@@ -131,24 +133,37 @@ struct PaywallView: View {
         .padding(.top, 2)
     }
 
-    private var priceChip: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 8) {
+    /// Value anchor: comparable "deep" libraries charge this much every year;
+    /// the struck figure frames our one-time price as the bargain it is.
+    /// Fixed USD copy (a comparison claim, not a real charge) — the actual
+    /// price below stays dynamic/localized via `getProductPrice()`.
+    private var anchorLine: some View {
+        (
+            Text("Libraries this deep run ")
+                .foregroundColor(themeManager.secondaryText)
+            + Text("$39.99/yr")
+                .foregroundColor(themeManager.tertiaryText)
+                .strikethrough(true, color: themeManager.tertiaryText)
+        )
+        .font(.system(size: 13.5, weight: .medium))
+        .multilineTextAlignment(.center)
+        .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private var priceRow: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 9) {
             if let price = purchaseManager.getProductPrice() {
                 Text(price)
-                    .font(EmType.serif(30, .semiBold))
+                    .font(EmType.serif(38, .semiBold))
                     .foregroundColor(themeManager.accentBright)
             } else {
                 ProgressView()
                     .tint(themeManager.accentColor)
             }
             Text("ONE-TIME")
-                .font(.system(size: 11, weight: .bold)).tracking(2)
+                .font(.system(size: 12, weight: .bold)).tracking(2)
                 .foregroundColor(themeManager.accentColor)
         }
-        .padding(.horizontal, 18)
-        .padding(.vertical, 8)
-        .background(Capsule().fill(themeManager.accentChip))
-        .overlay(Capsule().stroke(themeManager.strokeColorStrong, lineWidth: 1))
         .padding(.top, 2)
     }
 

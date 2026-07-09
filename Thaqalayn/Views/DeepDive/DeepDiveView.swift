@@ -37,7 +37,10 @@ private extension View {
     }
 }
 
-private let romans = ["", "I", "II", "III"]
+private let romans = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII"]
+/// Safe roman numeral for a movement number. Falls back to the raw number so a
+/// dive declaring more movements than the table covers can never crash.
+private func roman(_ n: Int) -> String { (n >= 0 && n < romans.count) ? romans[n] : "\(n)" }
 
 // MARK: - View
 
@@ -154,13 +157,13 @@ struct DeepDiveView: View {
     private func placeInfo(_ section: DeepDiveSection) -> (label: String, filled: Int)? {
         switch section {
         case .open, .orientation, .act: return nil
-        case .reflectionPrompt:         return ("The Return", 3)
-        case .dua:                      return ("The Close", 3)
-        case .closing:                  return ("The Close", 3)
+        case .reflectionPrompt:         return ("The Return", dive.acts.count)
+        case .dua:                      return ("The Close", dive.acts.count)
+        case .closing:                  return ("The Close", dive.acts.count)
         default:
             let a = section.act
-            guard (1...3).contains(a), let info = dive.actInfo(a) else { return nil }
-            return ("Movement \(romans[a]) · \(info.name(lang))", a)
+            guard let info = dive.actInfo(a) else { return nil }
+            return ("Movement \(roman(a)) · \(info.name(lang))", a)
         }
     }
 
@@ -173,7 +176,7 @@ struct DeepDiveView: View {
                     .foregroundColor(DeepDivePalette.gold)
                 Spacer(minLength: 8)
                 HStack(spacing: 5) {
-                    ForEach(0..<3, id: \.self) { i in
+                    ForEach(0..<dive.acts.count, id: \.self) { i in
                         Circle()
                             .fill(i < info.filled ? DeepDivePalette.gold : Color.clear)
                             .frame(width: 5, height: 5)
@@ -400,7 +403,7 @@ struct DeepDiveView: View {
             VStack(alignment: .leading, spacing: 0) {
                 HStack(alignment: .firstTextBaseline) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("\(romans[di + 1]) · \(d.tr)").font(EmType.serif(17)).foregroundColor(DeepDivePalette.cream)
+                        Text("\(roman(di + 1)) · \(d.tr)").font(EmType.serif(17)).foregroundColor(DeepDivePalette.cream)
                         Text(d.label(lang)).font(.system(size: 11)).foregroundColor(DeepDivePalette.mute)
                             .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
                             .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
@@ -440,13 +443,13 @@ struct DeepDiveView: View {
             }
             Text("Movement").font(.system(size: 11, weight: .semibold)).tracking(6)
                 .foregroundColor(DeepDivePalette.gold).padding(.bottom, 14).reveal(show, 0.1, reduce: reduceMotion)
-            Text(romans[act]).font(EmType.serif(80)).foregroundColor(DeepDivePalette.goldBright.opacity(0.28))
+            Text(roman(act)).font(EmType.serif(80)).foregroundColor(DeepDivePalette.goldBright.opacity(0.28))
                 .reveal(show, 0.2, reduce: reduceMotion)
             Text(dive.actInfo(act)?.ar ?? "").font(EmType.arabic(40, bold: true)).foregroundColor(DeepDivePalette.goldBright)
                 .padding(.top, 8).reveal(show, 0.36, reduce: reduceMotion)
             Text(dive.actInfo(act)?.tr ?? "").font(EmType.serif(26)).foregroundColor(DeepDivePalette.cream)
                 .padding(.top, 6).reveal(show, 0.36, reduce: reduceMotion)
-            Text("\(dive.actInfo(act)?.name(lang) ?? "") · Depth \(act) of 3".uppercased())
+            Text("\(dive.actInfo(act)?.name(lang) ?? "") · Depth \(act) of \(dive.acts.count)".uppercased())
                 .font(.system(size: 10, weight: .semibold)).tracking(2.4)
                 .foregroundColor(DeepDivePalette.mute).padding(.top, 8)
                 .multilineTextAlignment(lang.isRTL ? .trailing : .leading)

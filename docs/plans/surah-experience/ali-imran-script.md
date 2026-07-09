@@ -1,0 +1,133 @@
+# "Inside the Sūrah - Āl ʿImrān" - Master Script (English)
+
+**Status:** DRAFT for approval (English). UR/AR deferred (bare string literals).
+**Surah:** 3 (Āl ʿImrān), 200 verses. Gating: Premium (default). Placement: in the hub.
+**Slice:** NOT full coverage. The narrative heart that names the sūrah (3:33-61): the chosen, purified house of ʿImrān (Maryam), and the Mubāhala that answers it.
+**Framing:** *God carries His truth through households He Himself chooses and purifies.* One chosen house (ʿImrān / Maryam - chosen, purified, sustained by miracles in her prayer-niche) rhymes, six centuries on, with another (Muḥammad's ﷺ, unveiled at the Mubāhala). The word ṭahhara, "purified," said of Maryam at 3:42, comes to rest on the People of the Cloak (33:33) at the climax.
+**Structure:** **2 movements (a diptych), no coda.** The slice has one natural hinge - the dispute over ʿĪsā that summons the Mubāhala. Reaching three would inflate the two-verse election principle (3:33-34) into a padded movement; the diptych is the truer shape (one house answering another). Close beats are `act: 4` (standard). Renders honestly as "Depth N of 2" (`dive.acts.count`).
+**Depth:** 15 beats, est. 11 min.
+
+## Sourcing notes (every narration / tafsir claim)
+- **iṣṭifāʾ; "family" = the worthy, not every descendant; "one of another" (3:34) = one unbroken chain** → **al-Mīzān** (Ṭabāṭabāʾī), **Majmaʿ al-Bayān** (Ṭabrisī) → app tafsir layer2 (3:33-34).
+- **The chain of the chosen reaches the family of Muḥammad ﷺ** → **Imam Jaʿfar al-Ṣādiq (ʿalayhi al-salām)** → app tafsir layer4 (3:33).
+- **Ḥannah's vow; dedication expected to be male; an unconditional surrender** → al-Mīzān; **Imam al-Ṣādiq (ʿalayhi al-salām)** → app tafsir layer2/4 (3:35).
+- **The miḥrāb provision (fruit out of season); "from God, without measure"; angels spoke with Maryam** → al-Mīzān; **Imam al-Bāqir, Imam al-Riḍā (ʿalayhim al-salām)** → app tafsir layer2/4 (3:37).
+- **Maryam and ʿĪsā the only two untouched by Satan at birth (Ḥannah's refuge, 3:36)** → the Prophet ﷺ; cross-tradition (**Ṣaḥīḥ al-Bukhārī** + Shia) → app tafsir layer4 (3:36).
+- **3:42 chosen / purified / preferred as three rising stages; ṭahhara** → al-Mīzān → app tafsir layer2 (3:42).
+- **The four best women of the worlds (Maryam, Āsiya, Khadīja, Fāṭima)** → the Prophet ﷺ · **Musnad Aḥmad** (cross-tradition, graded ṣaḥīḥ). *Web-verified: Musnad Aḥmad 2896.*
+- **Āyat al-Taṭhīr rhyme: ṭahhara said of the Ahl al-Bayt (33:33); the People of the Cloak** → Qurʾān 33:33; the Cloak ḥadīth, **Ṣaḥīḥ Muslim 2424** (cross-tradition). *Web-verified.*
+- **3:45 ʿĪsā as kalima, "Be"; honored and brought near, yet a servant** → al-Mīzān → app tafsir layer2 (3:45).
+- **3:59 ʿĪsā like Adam - a decisive proof (qiyās awlā) to Najrān; Imam al-Riḍā's debate with Christian scholars** → al-Mīzān; **Imam al-Riḍā, Imam ʿAlī (ʿalayhim al-salām)** → app tafsir layer2/4 (3:59).
+- **3:61 Mubāhala: the Prophet ﷺ brought ʿAlī, Fāṭima, Ḥasan, Ḥusayn, "these are my family"; the bishop of Najrān's testimony ("faces that could move a mountain"); they withdrew and took a treaty** → al-Mīzān; **Majmaʿ al-Bayān** (the bishop); **Imam al-Ṣādiq** (identification), **Imam ʿAlī** → app tafsir layer2/4 (3:61); cross-tradition **Ṣaḥīḥ Muslim 2404**. *Web-verified.*
+- **anfusanā ("our selves") = ʿAlī; "one soul in two bodies"** → **Imam Muḥammad al-Bāqir (ʿalayhi al-salām)** → app tafsir layer4 (3:61) / al-Mīzān.
+- **Ḥadīth al-Thaqalayn (the two weighty things: the Book and the household)** → mutawātir; the app's namesake.
+- Honorifics: the Prophet Muḥammad ﷺ; Maryam and ʿĪsā (ʿalayhimā al-salām); the Imams and the People of the Cloak (ʿalayhim al-salām). **No em dashes.** Qurʾān Arabic verbatim from quran_data.json (pulled via `scripts/pull_arabic.py`).
+
+---
+
+## DeepDive meta
+- **id:** `surah-ali-imran`
+- **titleEn:** Āl ʿImrān
+- **titleAr:** آلِ عِمْرَان
+- **subtitle:** The Family of ʿImrān - how God carries His truth through the households He chooses and purifies
+- **sfSymbol:** person.3.sequence.fill
+- **estMinutes:** 11
+
+## Acts (movements) - two, a diptych
+1. **Āl ʿImrān** (آلُ عِمْرَان) - "The Chosen House" (verses 33-42, + the four women)
+2. **al-Mubāhala** (الْمُبَاهَلَة) - "The Ordeal" (verses 45-61, + "our selves")
+- *Close beats (reflection prompt, closing) carry `act: 4`, the standard close; no movement chrome.*
+
+---
+
+## Beat 1 - OPEN
+- **kicker:** INSIDE THE SŪRAH
+- **titleAr:** آلِ عِمْرَان
+- **titleEn:** Āl ʿImrān
+- **subtitle:** The Family of ʿImrān
+- **line:** God named only a few of His sūrahs after a family, and this is the longest of them. It opens the door of a house He chose before its children were born, purified with His own hand, and fed with fruit out of season. And it does not end there. When the truth itself was one day put on trial, this sūrah answered with the faces of another house entirely. Come inside.
+
+## Beat 2 - ORIENTATION
+- **eyebrow:** Before you begin
+- **promise:** The sūrah takes its name from ʿImrān, the father of Maryam (ʿalayhā al-salām), and it rests on a single daring idea: that God carries His truth through households He Himself chooses and makes pure. You will watch Him do exactly that in the house of ʿImrān - a girl chosen before her birth, kept spotless, sustained by miracles in the corner where she prayed. And then you will watch what happened when the truth that house carried was denied to God's face.
+- **leaveWith:** You will leave knowing this sūrah's quiet secret: that the surest proof God ever offered of His own truth was not an army and not a wonder, but a small circle of faces He had chosen and purified - and you will know exactly whose they were.
+
+## Beat 3 - ACT I divider (Āl ʿImrān / The Chosen House)
+- **act:** 1
+- **connector:** nil
+- **line:** The sūrah does not open with a story. It opens with a law - the law the whole chapter runs on. Before God shows you a single family, He tells you how He works: He chooses. Not everyone, and never at random, but particular souls and particular houses, lifted above the worlds to carry what He entrusts to no one else. Watch that law take flesh.
+- **bridge:** nil
+
+## Beat 4 - VERSE 3:33 (God Chose)
+- **act:** 1  **tag:** God Chose  **surah/ayah:** 3:33  **reference:** Āl ʿImrān · 3 : 33
+- **arabic:** ۞ إِنَّ ٱللَّهَ ٱصْطَفَىٰٓ ءَادَمَ وَنُوحًۭا وَءَالَ إِبْرَٰهِيمَ وَءَالَ عِمْرَٰنَ عَلَى ٱلْعَٰلَمِينَ
+- **translation:** Indeed, God chose Adam, and Noah, and the family of Abraham, and the family of ʿImrān above all the worlds -
+- **reflection:** The foundation stone of the sūrah: iṣṭifāʾ, God's choosing. Al-Mīzān is careful with the word "family" - it never meant every child of a bloodline, but only the ones in it who were worthy of it, pure and wholly surrendered. And the next verse calls them dhurriyyatan baʿḍuhā min baʿḍ, "one of another": not scattered favorites but a single unbroken chain, each link passing the light to the next. Imam al-Ṣādiq (ʿalayhi al-salām) taught that this chain, followed to its end, arrives at the family of Muḥammad ﷺ. Hold that thought. The house you are about to enter is not the last one God chose.
+
+## Beat 5 - VERSE 3:35 (The Vow)
+- **act:** 1  **tag:** The Vow  **surah/ayah:** 3:35  **reference:** Āl ʿImrān · 3 : 35
+- **arabic:** إِذْ قَالَتِ ٱمْرَأَتُ عِمْرَٰنَ رَبِّ إِنِّى نَذَرْتُ لَكَ مَا فِى بَطْنِى مُحَرَّرًۭا فَتَقَبَّلْ مِنِّىٓ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ
+- **translation:** When the wife of ʿImrān said, "My Lord, I have vowed to You what is in my womb, dedicated to Your service. So accept it from me. Indeed You are the Hearing, the Knowing."
+- **reflection:** The chosen house does not begin with a child. It begins with a mother's surrender. ʿImrān's wife - the traditions call her Ḥannah - vows the baby in her womb to God's service before she knows its face, before she even knows if it is the son she was promised. Al-Mīzān notes that such children were dedicated to serve at the Temple, and that this was expected to be a boy. She does not bargain, and she does not wait to see what she is getting. She hands over the first and the best, sight unseen. This is how a house becomes worthy of being chosen: someone inside it gives God everything before God has shown His hand.
+
+## Beat 6 - VERSE 3:37 (Fruit Out of Season)
+- **act:** 1  **tag:** Fruit Out of Season  **surah/ayah:** 3:37  **reference:** Āl ʿImrān · 3 : 37
+- **arabic:** فَتَقَبَّلَهَا رَبُّهَا بِقَبُولٍ حَسَنٍۢ وَأَنۢبَتَهَا نَبَاتًا حَسَنًۭا وَكَفَّلَهَا زَكَرِيَّا ۖ كُلَّمَا دَخَلَ عَلَيْهَا زَكَرِيَّا ٱلْمِحْرَابَ وَجَدَ عِندَهَا رِزْقًۭا ۖ قَالَ يَٰمَرْيَمُ أَنَّىٰ لَكِ هَٰذَا ۖ قَالَتْ هُوَ مِنْ عِندِ ٱللَّهِ ۖ إِنَّ ٱللَّهَ يَرْزُقُ مَن يَشَآءُ بِغَيْرِ حِسَابٍ
+- **translation:** So her Lord accepted her with a beautiful acceptance, and made her grow in a beautiful way, and placed her in the care of Zakariyya. Whenever Zakariyya entered upon her in the prayer-niche, he found provision with her. He said, "O Maryam, from where is this to you?" She said, "It is from God. Indeed God provides for whom He wills without measure."
+- **reflection:** A girl is born where a boy was awaited, and God accepts her "with a beautiful acceptance" - the expectation had been human; the choosing was His. She grows up inside the miḥrāb, the prayer-niche, and Zakariyya (ʿalayhi al-salām) keeps finding food beside her that no hand had carried in - summer fruit in the dead of winter, the commentators say. "From where is this to you?" "It is from God, who provides without measure." Her mother had begged God's refuge for her and her offspring from Satan, and the Prophet ﷺ said that Maryam and her son were the only two ever born whom Satan could not touch. Imam al-Bāqir (ʿalayhi al-salām) said the angels themselves spoke with her. This is what a purified soul looks like from the outside: fed by a hand no one else can see.
+
+## Beat 7 - VERSE 3:42 (Chosen and Purified)
+- **act:** 1  **tag:** Chosen and Purified  **surah/ayah:** 3:42  **reference:** Āl ʿImrān · 3 : 42
+- **arabic:** وَإِذْ قَالَتِ ٱلْمَلَٰٓئِكَةُ يَٰمَرْيَمُ إِنَّ ٱللَّهَ ٱصْطَفَىٰكِ وَطَهَّرَكِ وَٱصْطَفَىٰكِ عَلَىٰ نِسَآءِ ٱلْعَٰلَمِينَ
+- **translation:** And when the angels said, "O Maryam, God has chosen you and purified you, and chosen you above the women of the worlds."
+- **reflection:** Now the sūrah says outright what the miḥrāb had only hinted. The angels come to Maryam (ʿalayhā al-salām) with three declarations in a row: God has chosen you, purified you, and chosen you above all the women of the worlds. Al-Mīzān reads them as three rising stages - selection, purification, preference. Rest on the middle one: ṭahharaki, He has made you pure. It is a rare thing for God to say of any human being, and He says it here of a woman. Keep the word - ṭahhara, purified. God declares this purification of only one other household in all the Qurʾān, and this sūrah is quietly carrying the word toward them.
+
+## Beat 8 - NARRATION (The Four)
+- **act:** 1  **tag:** The Four
+- **source:** The Prophet Muḥammad ﷺ · Musnad Aḥmad
+- **body:** When the angels named Maryam the best of the women of the worlds, they left a question hanging in the air: who else stands in that rank? The Prophet ﷺ answered it, by name. "The best of the women of all the worlds are four," he said: "Maryam bint ʿImrān, Āsiya bint Muzāḥim the wife of Pharaoh, Khadīja bint Khuwaylid, and Fāṭima bint Muḥammad." It is a narration kept in the books of Shia and Sunni alike.
+- **reflection:** Hold the four names together and a bridge appears across six hundred years. Among the four greatest women God ever raised, the Prophet ﷺ named his own daughter, Fāṭima (ʿalayhā al-salām), in the same breath as Maryam. Remember her name. Before the sūrah closes, it is going to need it.
+
+## Beat 9 - ACT II divider (al-Mubāhala / The Ordeal)
+- **act:** 2
+- **connector:** You have watched God choose a house and purify a daughter within it, and name her among the four best women ever to live.
+- **line:** Now the sūrah turns to the child that house was given, and to the storm that gathered around him. For men would take this servant of God and lift him into the place of God - and when they would not let the error go, God did something He did for no other dispute in the whole Qurʾān. He called for an ordeal.
+- **bridge:** nil
+
+## Beat 10 - VERSE 3:45 (A Word from Him)
+- **act:** 2  **tag:** A Word from Him  **surah/ayah:** 3:45  **reference:** Āl ʿImrān · 3 : 45
+- **arabic:** إِذْ قَالَتِ ٱلْمَلَٰٓئِكَةُ يَٰمَرْيَمُ إِنَّ ٱللَّهَ يُبَشِّرُكِ بِكَلِمَةٍۢ مِّنْهُ ٱسْمُهُ ٱلْمَسِيحُ عِيسَى ٱبْنُ مَرْيَمَ وَجِيهًۭا فِى ٱلدُّنْيَا وَٱلْءَاخِرَةِ وَمِنَ ٱلْمُقَرَّبِينَ
+- **translation:** When the angels said, "O Maryam, God gives you good news of a word from Him: his name is the Messiah, ʿĪsā son of Maryam, honored in this world and the Hereafter, and among those brought near."
+- **reflection:** The child is announced as a kalima, a word from God. Al-Mīzān explains why: ʿĪsā (ʿalayhi al-salām) came to be by God's bare command "Be," with no father, so that his very existence is God’s creative word given a body. Now count the honors the verse heaps on him - the Messiah, honored in both worlds, among those brought near - and then notice the one thing it never says: that he is God. A word from Him is not Him. The highest and nearest of servants is a servant still. This single phrase already holds the whole of the coming storm: everything men would argue about ʿĪsā, the Qurʾān settled here, in four words.
+
+## Beat 11 - VERSE 3:59 (Like Adam)
+- **act:** 2  **tag:** Like Adam  **surah/ayah:** 3:59  **reference:** Āl ʿImrān · 3 : 59
+- **arabic:** إِنَّ مَثَلَ عِيسَىٰ عِندَ ٱللَّهِ كَمَثَلِ ءَادَمَ ۖ خَلَقَهُۥ مِن تُرَابٍۢ ثُمَّ قَالَ لَهُۥ كُن فَيَكُونُ
+- **translation:** Indeed, the likeness of ʿĪsā before God is as the likeness of Adam. He created him from dust, then said to him, "Be," and he was.
+- **reflection:** Here is God's argument, laid before the Christians of Najrān who had come to Medina certain that ʿĪsā (ʿalayhi al-salām) was divine. It is, al-Mīzān says, a decisive proof: if you do not call Adam a god - and Adam had neither father nor mother, shaped straight from dust - how can a birth from a mother alone make ʿĪsā one? Imam al-Riḍā (ʿalayhi al-salām) put exactly this question to Christian scholars in his own day. A miraculous birth was never meant to point at the child and say "God." It points past him, at the One who said "Be." The wonder is a signpost to the Maker, never a rival beside Him.
+
+## Beat 12 - CLIMAX 3:61 (Whom He Brought)
+- **act:** 2  **tag:** Whom He Brought  **source:** Āl ʿImrān · 3 : 61
+- **arabic:** فَمَنْ حَآجَّكَ فِيهِ مِنۢ بَعْدِ مَا جَآءَكَ مِنَ ٱلْعِلْمِ فَقُلْ تَعَالَوْا۟ نَدْعُ أَبْنَآءَنَا وَأَبْنَآءَكُمْ وَنِسَآءَنَا وَنِسَآءَكُمْ وَأَنفُسَنَا وَأَنفُسَكُمْ ثُمَّ نَبْتَهِلْ فَنَجْعَل لَّعْنَتَ ٱللَّهِ عَلَى ٱلْكَٰذِبِينَ
+- **translation:** So whoever disputes with you about him after the knowledge that has come to you, say: "Come, let us call our sons and your sons, our women and your women, ourselves and yourselves; then let us pray earnestly, and place the curse of God upon the liars."
+- **body:** The delegation from Najrān heard the argument, and still would not yield. So came the challenge in the verse: if you are so certain, let each side bring the dearest souls they have - their sons, their women, their very selves - stand together, and call down the curse of God on whichever side is lying. It is the gravest dare in the Qurʾān, and God set it down only here. On the morning it was to happen, all of Medina watched to see whom the Prophet ﷺ would bring, for a man stakes only his most beloved when he swears his life before God. He brought four. He came out with ʿAlī, with Fāṭima, and with their two sons Ḥasan and Ḥusayn (ʿalayhim al-salām), gathered them close, and said: "O God, these are my family." The bishop of Najrān looked at the five faces and turned to his people: "I see faces that, were they to ask God to move a mountain, He would move it for them. Do not contest them." They withdrew, and paid a treaty instead. Not one word of the curse was ever needed.
+- **reflection:** See what the sūrah has quietly done. It carries the name of the family of ʿImrān, and at its very summit it has unveiled the family of Muḥammad ﷺ. When the oneness of God had to be staked on something, God did not reach for a sword or a wonder - He reached for a purified household, the very shape the sūrah opened with. The rank the angels gave Maryam is worn now by Fāṭima (ʿalayhā al-salām); one chosen house has answered another across six hundred years. In the end, the proof of the truth was a family God had made pure.
+
+## Beat 13 - NARRATION (Our Selves)
+- **act:** 2  **tag:** Our Selves
+- **source:** Imam Muḥammad al-Bāqir (ʿalayhi al-salām) · Tafsīr al-Mīzān; Āyat al-Taṭhīr (33:33)
+- **body:** Return to the exact words God chose: "our sons, and our women, and our selves." The sons the Prophet ﷺ brought were Ḥasan and Ḥusayn; the woman was Fāṭima. But he brought no second man to stand as "our selves," anfusanā - only ʿAlī (ʿalayhi al-salām). God's own verse had set ʿAlī in the place of the Prophet's very self. Imam al-Bāqir (ʿalayhi al-salām) said the two were one soul in two bodies. And now recall the word you have carried since the prayer-niche: purified. On days like this the Prophet ﷺ would gather these same five beneath his cloak, and God sent down over them: "God only desires to remove all impurity from you, People of the House, and to purify you completely." The very word spoken of Maryam, ṭahhara, spoken now of them - a verse kept, like the Mubāhala itself, in the books of Shia and Sunni together.
+- **reflection:** This is why the ordeal is the sūrah's summit, and not merely its victory. The word "purified," first breathed over a girl in her prayer-niche, has traveled the whole length of the sūrah to come to rest on the family beneath the cloak. The Prophet ﷺ said he was leaving two weighty things among us - the Book of God, and his household - and that the two would never part. This sūrah has been naming them both from its first page: the truth, and the purified house God chose to carry it.
+
+## Beat 14 - REFLECTION PROMPT (The Return)
+- **tag:** The Return
+- **prompt:** Whose house are you holding to?
+- **placeholder:** The Book, the household, a name you reach for when the truth is disputed…
+- **subline:** You have walked from one chosen house to another - from Maryam in her prayer-niche to the five beneath the cloak. The whole claim of the sūrah is that God never left you to find the truth alone: He left it in a Book and in a purified family, and told you to hold to both and never let go. Before you leave, name what you are holding to.
+- **nextLabel:** One last thing
+
+## Beat 15 - CLOSING (The Close)
+- **tag:** The Close
+- **titleAr:** آلِ عِمْرَان
+- **essence:** God chooses households and makes them pure, so that His truth would never stand in the world without a family to carry it.
+- **line:** You have seen the pattern drawn twice now - the house of ʿImrān, and the house of Muḥammad ﷺ. Read the sūrah now in its own words, unhurried, and watch the same hand that fed Maryam (ʿalayhā al-salām) in her niche reach all the way to the cloak.

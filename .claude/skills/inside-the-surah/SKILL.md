@@ -23,7 +23,18 @@ of it is optional. **If a beat is there only because the other dives have it, cu
 Add beats, drop beats, reorder, or invent new framings as the sūrah demands. When in
 doubt, ask: *does this beat earn its place for THIS sūrah?*
 
-### Hard-won learnings (from building al-Fātiḥa; see `docs/plans/2026-07-08-fatiha-what-he-says-back-design.md`)
+**Derive the movement count; never default to it.** All four reference dives happen to run
+three movements - a fact about those four sūrahs, not a target. Do NOT open the blueprint
+assuming three. Find the sūrah's own **natural joints** (the places its meaning actually
+turns) and let their number set the movements: one held idea, a two-panel diptych, three,
+or al-Kahf's four stories are all correct when the text asks for them. **The force-fit
+tell:** if hitting a number makes you promote a bare principle, a lone climax, or two thin
+verses into a "movement" just to fill a slot, that movement is padding - merge it away. A
+thin or abstract movement standing beside fat ones is the smell. Each dive must have its
+**own natural, unique shape and identity**; a structure that would fit many different
+sūrahs equally well fits none of them.
+
+### Hard-won learnings (from building al-Fātiḥa and Āl ʿImrān; al-Fātiḥa design doc: `docs/plans/2026-07-08-fatiha-what-he-says-back-design.md`)
 
 1. **No spoilers.** A sūrah's payoff - a reveal, a ḥadīth, a divine response, the turn -
    must unfold **in-flow, where it is felt**, not be pre-dumped in an early card. (al-Fātiḥa's
@@ -42,6 +53,12 @@ doubt, ask: *does this beat earn its place for THIS sūrah?*
 5. **Sourcing is Shia and verified**: al-Mīzān (Ṭabāṭabāʾī), Tafsīr Nūr al-Thaqalayn,
    Majmaʿ al-Bayān, and Ahl al-Bayt narrations with real sources; honorifics on the
    Prophet ﷺ and the Imams (ʿalayhi al-salām). Verify every narration before it ships.
+6. **Derive the movement count from the sūrah; never default to three** (see the Prime
+   Directive's "force-fit tell"). al-Fātiḥa is a conversation, al-Baqara runs two movements
+   plus a coda, and Āl ʿImrān's "chosen households" spine is truest as a **two-panel
+   diptych** - the house of ʿImrān answered by the Mubāhala - where three movements only
+   survived by inflating a two-verse principle into a "movement" of its own. Count the
+   natural joints first; let them decide the number.
 
 ## Scope of this run
 
@@ -80,8 +97,10 @@ Present a concise blueprint to the user and **stop for approval**. It must conta
 - **The sūrah's shape** in one paragraph: theme, genre (narrative / hymn / legal /
   devotional / mixed), length strategy (full or thematic slice + why).
 - **Template fit - explicit**: state where you FOLLOW the house template and where you
-  deliberately BREAK it for this sūrah, and why. (E.g. "no map card - this is a prayer, not a
-  plot"; "four movements, not three"; "no climax beat - the sūrah's peak is verse 3 itself".)
+  deliberately BREAK it for this sūrah, and why - including the **movement count**, which
+  you derive from the sūrah's natural joints and never default to three (Prime Directive).
+  (E.g. "no map card - this is a prayer, not a plot"; "a two-panel diptych, not three
+  movements"; "no climax beat - the sūrah's peak is verse 3 itself".)
 - **The beat outline**: an ordered list of beats (type + one-line purpose + verse ref),
   the movement/act grouping, and the estimated length. Mark any `.depths` overview as `act: 0`
   threshold. Flag any duʿā/ziyārat beats (they need a Listen button).

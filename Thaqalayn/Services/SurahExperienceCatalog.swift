@@ -37,6 +37,24 @@ struct SurahExperienceDescriptor: Identifiable {
             available: true, dive: .surahFatiha
         ),
         SurahExperienceDescriptor(
+            id: "surah-baqara",
+            surahNumber: 2,
+            title: "Sūrah al-Baqara",
+            titleAr: "الْبَقَرَة",
+            sfSymbol: "hands.sparkles.fill",
+            subtitle: "The Cow - the mirror inside the mightiest sūrah",
+            available: true, dive: .surahBaqara
+        ),
+        SurahExperienceDescriptor(
+            id: "surah-ali-imran",
+            surahNumber: 3,
+            title: "Sūrah Āl ʿImrān",
+            titleAr: "آلِ عِمْرَان",
+            sfSymbol: "person.3.sequence.fill",
+            subtitle: "The Family of ʿImrān - one chosen house, and the house that answered it",
+            available: true, dive: .surahAliImran
+        ),
+        SurahExperienceDescriptor(
             id: "surah-yusuf",
             surahNumber: 12,
             title: LocalizedText(en: "Sūrah Yūsuf", ur: "سورۂ یوسف", ar: "سورة يوسف"),

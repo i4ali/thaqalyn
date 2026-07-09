@@ -55,6 +55,36 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "surahExperience-ali-imran",
+            sfSymbol: "person.3.sequence.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 1).date ?? .distantPast,
+            destination: .surahExperience("surah-ali-imran"),
+            titleEN: "Inside the Sūrah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Sūrah Āl ʿImrān - how God carries His truth through the households He chooses and purifies. From Maryam, chosen and purified in her prayer-niche, to the day God let His Prophet ﷺ stake the truth itself on a single purified household.",
+            blurbUR: "سورۂ آلِ عمران - اللہ اپنی سچائی اُن گھرانوں کے ذریعے تھامتا ہے جنہیں وہ چنتا اور پاک کرتا ہے۔ محرابِ مریم سے لے کر اُس دن تک جب اللہ نے اپنے نبی ﷺ کے ذریعے سچائی کو ایک پاکیزہ گھرانے پر داؤ پر لگوایا۔",
+            blurbAR: "سورة آل عمران - كيف يحمل الله حقَّه عبر البيوت التي يصطفيها ويطهّرها. من محراب مريم إلى اليوم الذي جعل الله فيه نبيَّه ﷺ يجعل الحقَّ رهاناً على بيتٍ طاهرٍ واحد.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-baqara",
+            sfSymbol: "hands.sparkles.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 30).date ?? .distantPast,
+            destination: .surahExperience("surah-baqara"),
+            titleEN: "Inside the Sūrah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Sūrah al-Baqara - why the mightiest sūrah is named after a cow. An immersive descent through a command, the questions that made it heavy, and the sign that answered it all.",
+            blurbUR: "سورۂ بقرہ - سب سے بڑی سورت کا نام ایک گائے پر کیوں؟ ایک حکم، اُسے بھاری بنانے والے سوالات، اور وہ نشانی جس نے سب کا جواب دیا - ایک عمیق سفر۔",
+            blurbAR: "سورة البقرة - لماذا سُمّيت أعظم سورة باسم بقرة؟ نزولٌ غامرٌ عبر الأمر، والأسئلة التي أثقلته، والآية التي أجابت عن كل شيء.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
             id: "surahExperience-fatiha",
             sfSymbol: "book.closed",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 27).date ?? .distantPast,
