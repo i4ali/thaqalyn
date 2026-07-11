@@ -52,3 +52,16 @@ source .venv/bin/activate
 ### ⚠️ PREMIUM-GATED FEATURES SHOW A "PREMIUM" LABEL, NOT A LOCK ⚠️
 
 **IMPORTANT**: When gating a feature behind premium, signal it with a "Premium" chip/label in the app's accent style - never a lock icon (`lock.fill`). Match the existing treatment: the `DailyCrosswordCard` accent-chip `PREMIUM` capsule, or the journey day-row "Premium" capsule (`RamadanJourneyView`). Keep the card's normal chevron/affordance; the "Premium" label alone carries the gated signal. Do NOT add `lock.fill` glyphs (and avoid the lock-bearing `PremiumBadgeView`). Gate access with a `PremiumManager.canAccessX()` method and route locked taps to `PaywallView`.
+
+### ⚠️ WRITE ENGLISH CONTENT IN PLAIN SPELLING - NO TRANSLITERATION DIACRITICS ⚠️
+
+**IMPORTANT**: All English-facing text you author - titles, translations, prose, transliterated duʿās/ziyārāt, source citations, card copy - must use plain English spelling WITHOUT academic transliteration diacritics. Do not write macrons (ā ī ū), under-dotted consonants (ḥ ṣ ḍ ṭ ẓ), or the ʿayn/hamza half-ring marks (ʿ ʾ). This is the house style going forward.
+
+**Rules** (encoded in `scripts/strip_diacritics.py`):
+- Macrons and under-dots → base letter, preserving case: ā→a, ī→i, ū→u, ḥ→h, ṣ→s, ḍ→d, ṭ→t, ẓ→z.
+- ʿayn (`ʿ`) and hamza (`ʾ`) → a straight apostrophe `'` when it sits **between two letters**, otherwise dropped: `Qurʾān`→`Qur'an`, `Shīʿa`→`Shi'a`, `ʿImrān`→`Imran`, `Karbalāʾ`→`Karbala`.
+- Examples: "Sūrah Āl ʿImrān" → "Surah Al Imran"; "Allāhumma ṣalli ʿalā Muḥammad" → "Allahumma salli ala Muhammad".
+
+**Scope**: English only. Real Arabic script (`arabic:`/`titleAr:` fields, JSON `ar`) and Urdu stay untouched. To retrofit existing files, run `python3 scripts/strip_diacritics.py --apply <files>` (or `--report` first to preview). Migration is rolling out area by area (Journey/Deep Dive/Inside-the-Sūrah first).
+
+**Rationale**: The academic diacritics read as visual clutter to users; plain spelling is cleaner and is now the standard for all new content.

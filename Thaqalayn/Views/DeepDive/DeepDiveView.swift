@@ -47,8 +47,8 @@ private func roman(_ n: Int) -> String { (n >= 0 && n < romans.count) ? romans[n
 struct DeepDiveView: View {
     let dive: DeepDive
     var onClose: () -> Void
-    /// Present on sūrah experiences: invoked by the closing beat's
-    /// "Read the full sūrah" button. nil hides the button (theme dives).
+    /// Present on surah experiences: invoked by the closing beat's
+    /// "Read the full surah" button. nil hides the button (theme dives).
     var onReadSurah: (() -> Void)? = nil
 
     @StateObject private var reading = ReadingSettingsManager.shared
@@ -500,7 +500,7 @@ struct DeepDiveView: View {
         }
     }
 
-    /// The ḥadīth-qudsī reply. God's answer to the line just recited, staged as a
+    /// The hadith-qudsi reply. God's answer to the line just recited, staged as a
     /// call-and-response: a thread of light descends from above, a fixed "He answers"
     /// eyebrow gives the three replies one recurring identity, then His words glow.
     private func responsePage(_ replyingTo: String, _ arabic: String, _ words: String, _ source: String, _ reflection: String, _ show: Bool) -> some View {
@@ -637,7 +637,7 @@ struct DeepDiveView: View {
                 VStack(spacing: 8) {
                     Text("آمِين").font(EmType.arabic(34)).foregroundColor(DeepDivePalette.goldBright)
                         .shadow(color: DeepDivePalette.goldBright.opacity(0.2), radius: 20)
-                    Text("Tap to say Āmīn").font(.system(size: 10.5, weight: .medium)).tracking(3)
+                    Text("Tap to say Amin").font(.system(size: 10.5, weight: .medium)).tracking(3)
                         .foregroundColor(DeepDivePalette.gold).opacity(0.7)
                 }
             }
@@ -645,7 +645,7 @@ struct DeepDiveView: View {
             .reveal(show, 1.25, reduce: reduceMotion)
         } else {
             VStack(spacing: 14) {
-                Text("Āmīn.").font(EmType.serifItalic(26)).foregroundColor(DeepDivePalette.goldBright)
+                Text("Amin.").font(EmType.serifItalic(26)).foregroundColor(DeepDivePalette.goldBright)
                 Text("The descent ends. \(close)")
                     .font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute).multilineTextAlignment(.center)
                 Button {
@@ -702,7 +702,7 @@ struct DeepDiveView: View {
 }
 
 #if DEBUG
-#Preview("Yaqīn Deep Dive") {
+#Preview("Yaqin Deep Dive") {
     DeepDiveView(dive: .yaqin, onClose: {})
 }
 #endif

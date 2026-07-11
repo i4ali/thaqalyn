@@ -86,20 +86,20 @@ enum JourneyStrings {
     static func allCount(_ n: Int, _ l: CommentaryLanguage) -> String {
         pick(l, en: "All \(n)", ur: "تمام \(n)", ar: "الكل \(n)")
     }
-    // Sūrah experiences ("Inside the Sūrah") - hub section, card eyebrow, closing CTA.
+    // Surah experiences ("Inside the Surah") - hub section, card eyebrow, closing CTA.
     static func insideTheSurah(_ l: CommentaryLanguage) -> String {
-        pick(l, en: "Inside the Sūrah", ur: "سورہ کے اندر", ar: "في قلب السورة")
+        pick(l, en: "Inside the Surah", ur: "سورہ کے اندر", ar: "في قلب السورة")
     }
     static func anImmersiveJourney(_ l: CommentaryLanguage) -> String {
         pick(l, en: "An immersive journey", ur: "ایک عمیق سفر", ar: "رحلة غامرة")
     }
     static func surahJourneyEyebrow(_ l: CommentaryLanguage) -> String {
-        pick(l, en: "Sūrah Journey", ur: "سورہ کا سفر", ar: "رحلة السورة")
+        pick(l, en: "Surah Journey", ur: "سورہ کا سفر", ar: "رحلة السورة")
     }
     static func readTheFullSurah(_ l: CommentaryLanguage) -> String {
-        pick(l, en: "Read the full sūrah", ur: "مکمل سورہ پڑھیں", ar: "اقرأ السورة كاملة")
+        pick(l, en: "Read the full surah", ur: "مکمل سورہ پڑھیں", ar: "اقرأ السورة كاملة")
     }
-    // Sūrah-card mode toggle: Read & Tafsir | Journey.
+    // Surah-card mode toggle: Read & Tafsir | Journey.
     static func readAndTafsir(_ l: CommentaryLanguage) -> String {
         pick(l, en: "Read & Tafsir", ur: "مطالعہ و تفسیر", ar: "القراءة والتفسير")
     }
@@ -182,7 +182,7 @@ enum JourneyStrings {
         case "hajj":     return pick(l, en: "The best ten days", ur: "سال کے بہترین دس دن", ar: "أفضلُ عشرةِ أيّام")
         case "muharram": return pick(l, en: "The stand at Karbala", ur: "کربلا کا قیام", ar: "وقفةُ كربلاء")
         case "arbaeen":  return pick(l, en: "The road to Arbaeen", ur: "اربعین کی راہ", ar: "الطريق إلى الأربعين")
-        case "fatimiyya":return pick(l, en: "Mourning of az-Zahrā (AS)", ur: "عزائے زہراؑ", ar: "عزاء الزهراء (ع)")
+        case "fatimiyya":return pick(l, en: "Mourning of az-Zahra (AS)", ur: "عزائے زہراؑ", ar: "عزاء الزهراء (ع)")
         default:         return ""
         }
     }

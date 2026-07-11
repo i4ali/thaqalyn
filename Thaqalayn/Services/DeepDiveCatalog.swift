@@ -18,7 +18,7 @@ import SwiftUI
 struct DeepDiveDescriptor: Identifiable {
     /// Stable id — matches the deep-link id if/when deep dives get deep links.
     let id: String
-    let title: LocalizedText   // e.g. "Yaqīn · Certainty" / "یقین" / "اليقين"
+    let title: LocalizedText   // e.g. "Yaqin · Certainty" / "یقین" / "اليقين"
     let titleAr: String        // e.g. "يَقِين"
     let sfSymbol: String       // card icon
     let subtitle: LocalizedText // one-line descriptor (EN / UR / AR)
@@ -30,7 +30,7 @@ struct DeepDiveDescriptor: Identifiable {
     static let all: [DeepDiveDescriptor] = [
         DeepDiveDescriptor(
             id: "yaqin",
-            title: LocalizedText(en: "Yaqīn · Certainty", ur: "یقین", ar: "اليقين"),
+            title: LocalizedText(en: "Yaqin · Certainty", ur: "یقین", ar: "اليقين"),
             titleAr: "يَقِين",
             sfSymbol: "eye",
             subtitle: LocalizedText(en: "A descent through three depths - Qur'an to Karbala",
@@ -40,7 +40,7 @@ struct DeepDiveDescriptor: Identifiable {
         ),
         DeepDiveDescriptor(
             id: "sabr",
-            title: LocalizedText(en: "Ṣabr · Patience", ur: "صبر", ar: "الصبر"),
+            title: LocalizedText(en: "Sabr · Patience", ur: "صبر", ar: "الصبر"),
             titleAr: "صَبْر",
             sfSymbol: "hourglass",
             subtitle: LocalizedText(en: "A descent through three stations - Qur'an to Karbala",
@@ -70,7 +70,7 @@ struct DeepDiveDescriptor: Identifiable {
         ),
         DeepDiveDescriptor(
             id: "ikhlas",
-            title: LocalizedText(en: "Ikhlāṣ · Sincerity", ur: "اخلاص", ar: "الإخلاص"),
+            title: LocalizedText(en: "Ikhlas · Sincerity", ur: "اخلاص", ar: "الإخلاص"),
             titleAr: "إِخْلَاص",
             sfSymbol: "drop.fill",
             subtitle: LocalizedText(en: "Purifying the intention for God alone",
@@ -80,7 +80,7 @@ struct DeepDiveDescriptor: Identifiable {
         ),
         DeepDiveDescriptor(
             id: "taqwa",
-            title: LocalizedText(en: "Taqwā · God-consciousness", ur: "تقویٰ", ar: "التقوى"),
+            title: LocalizedText(en: "Taqwa · God-consciousness", ur: "تقویٰ", ar: "التقوى"),
             titleAr: "تَقْوَىٰ",
             sfSymbol: "shield",
             subtitle: LocalizedText(en: "The awareness that guards the heart",
@@ -90,7 +90,7 @@ struct DeepDiveDescriptor: Identifiable {
         ),
         DeepDiveDescriptor(
             id: "rida",
-            title: LocalizedText(en: "Riḍā · Contentment", ur: "رضا", ar: "الرضا"),
+            title: LocalizedText(en: "Rida · Contentment", ur: "رضا", ar: "الرضا"),
             titleAr: "رِضَا",
             sfSymbol: "heart.fill",
             subtitle: LocalizedText(en: "Meeting God's decree with a still heart",

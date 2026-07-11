@@ -8,9 +8,9 @@
       "icon": "sunrise",
       "dua": {
         "arabic": "فَلَأَنْدُبَنَّكَ صَبَاحًا وَمَسَاءً، وَلَأَبْكِيَنَّ لَكَ بَدَلَ الدُّمُوعِ دَمًا، حَسْرَةً عَلَيْكَ وَتَأَسُّفًا عَلَىٰ مَا دَهَاكَ وَتَلَهُّفًا",
-        "transliteration": "Fa-la-andubannaka ṣabāḥan wa masāʾā, wa la-abkiyanna laka badala l-dumūʿi damā, ḥasratan ʿalayka wa taʾassufan ʿalā mā dahāka wa talahhufā",
+        "transliteration": "Fa-la-andubannaka sabahan wa masa'a, wa la-abkiyanna laka badala l-dumu'i dama, hasratan alayka wa ta'assufan ala ma dahaka wa talahhufa",
         "english": "I will lament you morning and evening, and weep for you blood in place of tears, in anguish and sorrow for all that befell you.",
-        "source": "Ziyārat al-Nāḥiya al-Muqaddasa",
+        "source": "Ziyarat al-Nahiya al-Muqaddasa",
         "englishUr": "میں صبح و شام تجھ پر نوحہ کروں گی، اور آنسوؤں کے بدلے تیرے لیے خون روؤں گی، اس دکھ اور افسوس میں جو تجھ پر گزرا۔",
         "sourceUr": "زیارت الناحیہ المقدسہ"
       },
@@ -19,7 +19,7 @@
           "id": "station1_v1",
           "surahNumber": 2,
           "verseNumber": 155,
-          "relevanceNote": "The verse of the patient: God tests “with fear and hunger and loss,” then bids glad tidings to the steadfast - Karbala is that trial, its survivors the ṣābirīn.",
+          "relevanceNote": "The verse of the patient: God tests “with fear and hunger and loss,” then bids glad tidings to the steadfast - Karbala is that trial, its survivors the sabirin.",
           "relevanceNoteUr": "صبر کرنے والوں کی آیت: اللہ تعالیٰ “خوف، بھوک اور نقصان” کے ذریعے آزماتا ہے، پھر صبر کرنے والوں کو خوشخبری دیتا ہے - کربلا وہی آزمائش ہے، اور اس کے بچ جانے والے ہی صابرین ہیں۔"
         },
         {
@@ -44,9 +44,9 @@
       "icon": "figure.walk",
       "dua": {
         "arabic": "اللَّهُمَّ لَا طَاقَةَ لِي بِالْجَهْدِ، وَلَا صَبْرَ لِي عَلَى الْبَلَاءِ، وَلَا قُوَّةَ لِي عَلَى الْفَقْرِ، فَلَا تَحْظُرْ عَلَيَّ رِزْقِي",
-        "transliteration": "Allāhumma lā ṭāqata lī bi’l-jahd, wa lā ṣabra lī ʿala’l-balāʾ, wa lā quwwata lī ʿala’l-faqr, fa-lā taḥẓur ʿalayya rizqī",
+        "transliteration": "Allahumma la taqata li bi’l-jahd, wa la sabra li ala’l-bala, wa la quwwata li ala’l-faqr, fa-la tahzur alayya rizqi",
         "english": "O God, I have no endurance for effort, no patience in affliction, no strength to bear poverty; so withhold not from me my provision.",
-        "source": "al-Ṣaḥīfa al-Sajjādiyya · Supplication 22",
+        "source": "al-Sahifa al-Sajjadiyya · Supplication 22",
         "englishUr": "اے اللہ! مجھ میں مشقت برداشت کرنے کی طاقت نہیں، مصیبت میں صبر کرنے کی سکت نہیں، اور فقر برداشت کرنے کی قوت نہیں؛ پس میرا رزق مجھ سے روک نہ رکھ۔",
         "sourceUr": "الصحیفہ السجادیہ · دعا ۲۲"
       },
@@ -80,7 +80,7 @@
       "icon": "quote.bubble",
       "dua": {
         "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي يَفْقَهُوا قَوْلِي",
-        "transliteration": "Rabbi-shraḥ lī ṣadrī, wa yassir lī amrī, waḥlul ʿuqdatan min lisānī, yafqahū qawlī",
+        "transliteration": "Rabbi-shrah li sadri, wa yassir li amri, wahlul uqdatan min lisani, yafqahu qawli",
         "english": "My Lord, expand for me my breast, and ease for me my task, and untie the knot from my tongue, that they may understand my speech.",
         "source": "Qur’an 20:25–28 · the prayer of Musa (AS)",
         "englishUr": "اے میرے رب! میرا سینہ کھول دے، اور میرا کام میرے لیے آسان کر دے، اور میری زبان کی گرہ کھول دے، تاکہ لوگ میری بات سمجھ سکیں۔",
@@ -116,9 +116,9 @@
       "icon": "sun.dust",
       "dua": {
         "arabic": "يَا مَنْ تُحَلُّ بِهِ عُقَدُ الْمَكَارِهِ، وَيَا مَنْ يُفْثَأُ بِهِ حَدُّ الشَّدَائِدِ، وَيَا مَنْ يُلْتَمَسُ مِنْهُ الْمَخْرَجُ إِلَىٰ رَوْحِ الْفَرَجِ",
-        "transliteration": "Yā man tuḥallu bihi ʿuqadu’l-makārih, wa yā man yufthaʾu bihi ḥaddu’l-shadāʾid, wa yā man yultamasu minhu’l-makhraju ilā rawḥi’l-faraj",
+        "transliteration": "Ya man tuhallu bihi uqadu’l-makarih, wa ya man yuftha'u bihi haddu’l-shada'id, wa ya man yultamasu minhu’l-makhraju ila rawhi’l-faraj",
         "english": "O You by whom the knots of adversity are untied, O You by whom the edge of hardships is blunted, O You from whom is sought the way out to the ease of relief.",
-        "source": "al-Ṣaḥīfa al-Sajjādiyya · Supplication 7",
+        "source": "al-Sahifa al-Sajjadiyya · Supplication 7",
         "englishUr": "اے وہ ذات جس کے ذریعے مصیبتوں کی گرہیں کھلتی ہیں، اے وہ ذات جس کے ذریعے مشکلات کی دھار کند ہو جاتی ہے، اے وہ ذات جس سے راحت و آسانی کی راہ طلب کی جاتی ہے۔",
         "sourceUr": "الصحیفہ السجادیہ · دعا ۷"
       },
@@ -152,7 +152,7 @@
       "icon": "building.columns",
       "dua": {
         "arabic": "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ وَتُعِزُّ مَن تَشَاءُ وَتُذِلُّ مَن تَشَاءُ ۖ بِيَدِكَ الْخَيْرُ ۖ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
-        "transliteration": "Quli’llāhumma Mālika’l-mulki tu’ti’l-mulka man tashāʾu wa tanziʿu’l-mulka mimman tashāʾu wa tuʿizzu man tashāʾu wa tudhillu man tashāʾ, bi-yadika’l-khayr, innaka ʿalā kulli shayʾin qadīr",
+        "transliteration": "Quli’llahumma Malika’l-mulki tu’ti’l-mulka man tasha'u wa tanzi'u’l-mulka mimman tasha'u wa tu'izzu man tasha'u wa tudhillu man tasha, bi-yadika’l-khayr, innaka ala kulli shay'in qadir",
         "english": "Say: O God, Master of all sovereignty, You give sovereignty to whom You will and strip sovereignty from whom You will; You honour whom You will and abase whom You will. In Your hand is all good. Indeed You have power over all things.",
         "source": "Qur’an 3:26",
         "englishUr": "کہہ دو: اے اللہ، بادشاہت کے مالک! تو جسے چاہے بادشاہت عطا کرتا ہے اور جس سے چاہے بادشاہت چھین لیتا ہے؛ تو جسے چاہے عزت دیتا ہے اور جسے چاہے ذلیل کرتا ہے۔ ساری بھلائی تیرے ہی ہاتھ میں ہے۔ بے شک تو ہر چیز پر قادر ہے۔",
@@ -188,7 +188,7 @@
       "icon": "moon.stars",
       "dua": {
         "arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
-        "transliteration": "Rabbanā afrigh ʿalaynā ṣabran wa thabbit aqdāmanā wanṣurnā ʿala’l-qawmi’l-kāfirīn",
+        "transliteration": "Rabbana afrigh alayna sabran wa thabbit aqdamana wansurna ala’l-qawmi’l-kafirin",
         "english": "Our Lord, pour upon us patience, make firm our feet, and give us victory over the disbelieving people.",
         "source": "Qur’an 2:250",
         "englishUr": "اے ہمارے رب! ہم پر صبر کا فیضان فرما، ہمارے قدم جما دے، اور کافر قوم کے مقابلے میں ہماری مدد فرما۔",
@@ -224,7 +224,7 @@
       "icon": "arrow.uturn.left",
       "dua": {
         "arabic": "لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
-        "transliteration": "Lā ilāha illā anta subḥānaka innī kuntu mina’l-ẓālimīn",
+        "transliteration": "La ilaha illa anta subhanaka inni kuntu mina’l-zalimin",
         "english": "There is no god but You; glory be to You. Indeed, I was among the wrongdoers.",
         "source": "Qur’an 21:87 · the prayer of Yunus (AS)",
         "englishUr": "تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ظالموں میں سے تھا۔",
@@ -260,9 +260,9 @@
       "icon": "hands.sparkles",
       "dua": {
         "arabic": "السَّلَامُ عَلَىٰ وَلِيِّ اللَّهِ وَحَبِيبِهِ، السَّلَامُ عَلَىٰ خَلِيلِ اللَّهِ وَنَجِيبِهِ، السَّلَامُ عَلَىٰ صَفِيِّ اللَّهِ وَابْنِ صَفِيِّهِ، السَّلَامُ عَلَى الْحُسَيْنِ الْمَظْلُومِ الشَّهِيدِ، السَّلَامُ عَلَىٰ أَسِيرِ الْكُرُبَاتِ وَقَتِيلِ الْعَبَرَاتِ",
-        "transliteration": "As-salāmu ʿalā waliyyi’llāhi wa ḥabībih, as-salāmu ʿalā khalīli’llāhi wa najībih, as-salāmu ʿalā ṣafiyyi’llāhi wa’bni ṣafiyyih, as-salāmu ʿala’l-Ḥusayni’l-maẓlūmi’sh-shahīd, as-salāmu ʿalā asīri’l-kurubāti wa qatīli’l-ʿabarāt",
+        "transliteration": "As-salamu ala waliyyi’llahi wa habibih, as-salamu ala khalili’llahi wa najibih, as-salamu ala safiyyi’llahi wa’bni safiyyih, as-salamu ala’l-Husayni’l-mazlumi’sh-shahid, as-salamu ala asiri’l-kurubati wa qatili’l-abarat",
         "english": "Peace be upon the intimate friend of God and His beloved. Peace be upon the close friend of God and His chosen one. Peace be upon the pure one of God and the son of His pure one. Peace be upon al-Husayn, the wronged, the martyred. Peace be upon the captive of agonies and the slain over whom tears are shed.",
-        "source": "Ziyārat al-Arbaʿīn · from Imam al-Ṣādiq (AS)",
+        "source": "Ziyarat al-Arba'in · from Imam al-Sadiq (AS)",
         "englishUr": "سلام ہو اللہ کے دوست اور اس کے محبوب پر۔ سلام ہو اللہ کے قریبی دوست اور اس کے برگزیدہ پر۔ سلام ہو اللہ کے پاکیزہ بندے اور اس کے پاکیزہ بندے کے فرزند پر۔ سلام ہو حسینؑ پر، جو مظلوم اور شہید ہیں۔ سلام ہو اس اسیر پر جس نے مصیبتیں جھیلیں، اور اس مقتول پر جس پر آنسو بہائے گئے۔",
         "sourceUr": "زیارتِ اربعین · امام جعفر صادقؑ سے مروی",
         "fullArabic": "اَلسَّلاَمُ عَلَىٰ وَلِيِّ ٱللَّهِ وَحَبِيبِهِ اَلسَّلاَمُ عَلَىٰ خَلِيلِ ٱللَّهِ وَنَجِيبِهِ اَلسَّلاَمُ عَلَىٰ صَفِيِّ ٱللَّهِ وَٱبْنِ صَفِيِّهِ اَلسَّلاَمُ عَلَىٰ ٱلْحُسَيْنِ ٱلْمَظْلُومِ ٱلشَّهِيدِ اَلسَّلاَمُ علىٰ اسِيرِ ٱلْكُرُبَاتِ وَقَتِيلِ ٱلْعَبَرَاتِ اَللَّهُمَّ إِِنِّي اشْهَدُ انَّهُ وَلِيُّكَ وَٱبْنُ وَلِيِّكَ وَصَفِيُّكَ وَٱبْنُ صَفِيِّكَ ٱلْفَائِزُ بِكَرَامَتِكَ اكْرَمْتَهُ بِٱلشَّهَادَةِ وَحَبَوْتَهُ بِٱلسَّعَادَةِ وَٱجْتَبَيْتَهُ بِطِيبِ ٱلْوِلاَدَةِ وَجَعَلْتَهُ سَيِّداً مِنَ ٱلسَّادَةِ وَقَائِداً مِنَ ٱلْقَادَةِ وَذَائِداً مِنْ ٱلذَّادَةِ وَاعْطَيْتَهُ مَوَارِيثَ ٱلانْبِيَاءِ وَجَعَلْتَهُ حُجَّةً عَلَىٰ خَلْقِكَ مِنَ ٱلاوْصِيَاءِ فَاعْذَرَ فِي ٱلدُّعَاءِ وَمَنَحَ ٱلنُّصْحَ وَبَذَلَ مُهْجَتَهُ فِيكَ لِيَسْتَنْقِذَ عِبَادَكَ مِنَ ٱلْجَهَالَةِ وَحَيْرَةِ ٱلضَّلاَلَةِ وَقَدْ تَوَازَرَ عَلَيْهِ مَنْ غَرَّتْهُ ٱلدُّنْيَا وَبَاعَ حَظَّهُ بِٱلارْذَلِ ٱلادْنَىٰ وَشَرَىٰ آخِرَتَهُ بِٱلثَّمَنِ ٱلاوْكَسِ وَتَغَطْرَسَ وَتَرَدَّىٰ فِي هَوَاهُ وَاسْخَطَكَ وَاسْخَطَ نَبِيَّكَ وَاطَاعَ مِنْ عِبَادِكَ اهْلَ ٱلشِّقَاقِ وَٱلنِّفَاقِ وَحَمَلَةَ ٱلاوْزَارِ ٱلْمُسْتَوْجِبِينَ ٱلنَّارَ فَجَاهَدَهُمْ فِيكَ صَابِراً مُحْتَسِباً حَتَّىٰ سُفِكَ فِي طَاعَتِكَ دَمُهُ وَٱسْتُبِيحَ حَرِيـمُهُ اَللَّهُمَّ فَٱلْعَنْهُمْ لَعْناً وَبيلاًَ وَعَذِّبْهُمْ عَذَاباً الِيماً اَلسَّلاَمُ عَلَيْكَ يَا بْنَ رَسُولِ ٱللَّهِ اَلسَّلاَمُ عَلَيْكَ يَا بْنَ سَيِّدِ ٱلاوْصِيَاءِ اشْهَدُ انَّكَ امِينُ ٱللَّهِ وَٱبْنُ امِينِهِ عِشْتَ سَعيداً وَمَضَيْتَ حَمِيداً وَمُتَّ فَقِيداً مَظْلُوماً شَهِيداً وَاشْهَدُ انَّ ٱللَّهَ مُنْجِزٌ مَا وَعَدَكَ وَمُهْلِكٌ مَنْ خَذَلَكَ وَمُعَذِّبٌ مَنْ قَتَلَكَ وَاشْهَدُ انَّكَ وَفَيْتَ بِعَهْدِ ٱللَّهِ وَجَاهَدْتَ فِي سَبِيلِهِ حَتَّىٰ اتَاكَ ٱلْيَقِينُ فَلَعَنَ ٱللَّهُ مَنْ قَتَلَكَ وَلَعَنَ ٱللَّهُ مَنْ ظَلَمَكَ وَلَعَنَ ٱللَّهُ امَّةً سَمِعَتْ بِذٰلِكَ فَرَضِيَتْ بِهِ اَللَّهُمَّ إِِنِّي اشْهِدُكَ انِّي وَلِيٌّ لِمَنْ وَالاَهُ وَعَدُوٌّ لِمَنْ عَادَاهُ بِابِي انْتَ وَامِّي يَا بْنَ رَسُولِ ٱللَّهِ اشْهَدُ انَّكَ كُنْتَ نُوراً فِي ٱلاصْلاَبِ ٱلشَّامِخَةِ وَٱلارْحَامِ ٱلْمُطَهَّرَةِ لَمْ تُنَجِّسْكَ ٱلْجَاهِلِيَّةُ بِانْجَاسِهَا وَلَمْ تُلْبِسْكَ ٱلْمُدْلَهِمَّاتُ مِنْ ثِيَابِهَا وَاشْهَدُ انَّكَ مِنْ دَعَائِمِ ٱلدِّينِ وَارْكَانِ ٱلْمُسْلِمِينَ وَمَعْقِلِ ٱلْمُؤْمِنِينَ وَاشْهَدُ انَّكَ ٱلإِمَامُ ٱلْبَرُّ ٱلتَّقِيُّ ٱلرَّضِيُّ ٱلزَّكِيُّ ٱلْهَادِي ٱلْمَهْدِيُّ وَاشْهَدُ انَّ ٱلائِمَّةَ مِنْ وُلْدِكَ كَلِمَةُ ٱلتَّقْوَىٰ وَاعْلاَمُ ٱلْهُدَىٰ وَٱلْعُرْوَةُ ٱلْوُثْقَىٰ وَٱلْحُجَّةُ علىٰ اهْلِ ٱلدُّنْيَا وَاشْهَدُ انِّي بِكُمْ مُؤْمِنٌ وَبِإِِيَابِكُمْ مُوقِنٌ بِشَرَايِعِ دِينِي وَخَوَاتِيمِ عَمَلِي وَقَلْبِي لِقَلْبِكُمْ سِلْمٌ وَامْرِي لاِمْرِكُمْ مُتَّبِعٌ وَنُصْرَتِي لَكُمْ مُعَدَّةٌ حَتَّىٰ يَاذَنَ اللَّهُ لَكُمْ فَمَعَكُمْ مَعَكُمْ لاََ مَعَ عَدُوِّكُمْ صَلَوَاتُ ٱللَّهِ عَلَيْكُمْ وَعَلَىٰ ارْوَاحِكُمْ وَاجْسَادِكُمْ وَشَاهِدِكُمْ وَغَائِبِكُمْ وَظَاهِرِكُمْ وَبَاطِنِكُمْ آمِينَ رَبَّ ٱلْعَالَمِينَ",
