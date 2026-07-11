@@ -112,7 +112,8 @@ struct FatimiyyaJourneyHeader: View {
             statusLine: statusMessage,
             countLine: JourneyStrings.daysObserved(observedCount, 5, lang),
             percent: journeyManager.completionPercentage,
-            iconIsCustomAsset: true
+            iconIsCustomAsset: true,
+            coverAssetName: "FatimiyyaCover"
         )
     }
 

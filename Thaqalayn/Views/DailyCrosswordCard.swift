@@ -4,12 +4,11 @@
 //
 //  Today-screen entry card for the Daily Crossword feature.
 //  Styled to match DailyChallengeCard exactly — EmIconChip(46) + serif title +
-//  inline PREMIUM capsule when locked + gold uppercased sub-line + right lock/chevron/checkmark.
+//  gold uppercased sub-line + right chevron/checkmark.
 //
-//  Three states driven by PremiumManager + DailyCrosswordManager:
-//    • Locked   — free user → taps to PaywallView
-//    • Pending  — premium, not done today → taps to DailyCrosswordView
-//    • Done     — premium, completed today → non-tappable
+//  Two states driven by DailyCrosswordManager:
+//    • Pending  — not done today → taps to DailyCrosswordView
+//    • Done     — completed today → non-tappable
 //
 //  Chrome is fixed-size (no ReadingSettingsManager scaling).
 //
@@ -19,7 +18,6 @@ import SwiftUI
 // MARK: - State enum
 
 private enum DailyCrosswordCardState {
-    case locked
     case pending
     case done
 }
@@ -32,15 +30,12 @@ struct DailyCrosswordCard: View {
     @ObservedObject private var provider = DailyCrosswordProvider.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var premiumManager = PremiumManager.shared
     @State private var showSheet = false
-    @State private var showPaywall = false
 
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var cardState: DailyCrosswordCardState {
-        if !premiumManager.canAccessDailyCrossword() { return .locked }
-        return manager.isCompletedToday ? .done : .pending
+        manager.isCompletedToday ? .done : .pending
     }
 
     var body: some View {
@@ -54,9 +49,6 @@ struct DailyCrosswordCard: View {
         .sheet(isPresented: $showSheet) {
             DailyCrosswordView(puzzle: provider.today, onCompleted: {})
         }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
     }
 
     // MARK: - Emerald body (mirrors DailyChallengeCard.emeraldCard)
@@ -64,7 +56,6 @@ struct DailyCrosswordCard: View {
     @ViewBuilder
     private var emeraldCard: some View {
         let state = cardState
-        let isLocked = state == .locked
         let isDone = state == .done
 
         Group {
@@ -74,10 +65,10 @@ struct DailyCrosswordCard: View {
                     emeraldInner(state: state)
                 }
             } else {
-                // Locked or pending: tappable
+                // Pending: tappable
                 Button {
                     Haptics.press()
-                    if isLocked { showPaywall = true } else { showSheet = true }
+                    showSheet = true
                 } label: {
                     EmCard {
                         emeraldInner(state: state)
@@ -90,30 +81,18 @@ struct DailyCrosswordCard: View {
     }
 
     private func emeraldInner(state: DailyCrosswordCardState) -> some View {
-        let isLocked = state == .locked
         let isDone = state == .done
 
         return HStack(spacing: 14) {
             EmIconChip(sfSymbol: "square.grid.3x3.fill", size: 46)
 
             VStack(alignment: .leading, spacing: 4) {
-                // Title row: serif title + optional inline PREMIUM capsule
-                HStack(spacing: 8) {
-                    Text(DailyCrosswordStrings.dailyCrossword(lang))
-                        .font(EmType.serif(20, .semiBold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    if isLocked {
-                        Text(DailyCrosswordStrings.premiumLabel(lang).uppercased())
-                            .font(.system(size: 8.5, weight: .bold)).tracking(1)
-                            .foregroundColor(themeManager.accentColor)
-                            .padding(.horizontal, 6).padding(.vertical, 2)
-                            .background(Capsule().fill(themeManager.accentChip))
-                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                    }
-                }
+                // Title row: serif title
+                Text(DailyCrosswordStrings.dailyCrossword(lang))
+                    .font(EmType.serif(20, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
                 // Gold uppercased sub-line
                 Text(emeraldSubLine(state: state))
@@ -132,8 +111,6 @@ struct DailyCrosswordCard: View {
 
     private func emeraldSubLine(state: DailyCrosswordCardState) -> String {
         switch state {
-        case .locked:
-            return DailyCrosswordStrings.lockedTagline(lang).uppercased()
         case .pending:
             let teaser = DailyCrosswordStrings.teaser(lang)
             if manager.streak.currentStreak > 0 {
@@ -149,10 +126,6 @@ struct DailyCrosswordCard: View {
     @ViewBuilder
     private func emeraldRightIcon(state: DailyCrosswordCardState) -> some View {
         switch state {
-        case .locked:
-            Image(systemName: "chevron.right")
-                .font(.system(size: 13, weight: .semibold))
-                .foregroundColor(themeManager.tertiaryText)
         case .pending:
             Image(systemName: "chevron.right")
                 .font(.system(size: 13, weight: .semibold))
@@ -169,7 +142,6 @@ struct DailyCrosswordCard: View {
     @ViewBuilder
     private var legacyCard: some View {
         let state = cardState
-        let isLocked = state == .locked
         let isDone = state == .done
 
         Group {
@@ -178,7 +150,7 @@ struct DailyCrosswordCard: View {
             } else {
                 Button {
                     Haptics.press()
-                    if isLocked { showPaywall = true } else { showSheet = true }
+                    showSheet = true
                 } label: {
                     legacyInner(state: state)
                         .contentShape(Rectangle())
@@ -189,7 +161,6 @@ struct DailyCrosswordCard: View {
     }
 
     private func legacyInner(state: DailyCrosswordCardState) -> some View {
-        let isLocked = state == .locked
         let isDone = state == .done
 
         return HStack(alignment: .center, spacing: 16) {
@@ -206,21 +177,11 @@ struct DailyCrosswordCard: View {
 
             // Text stack
             VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 8) {
-                    Text(DailyCrosswordStrings.dailyCrossword(lang))
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    if isLocked {
-                        Text(DailyCrosswordStrings.premiumLabel(lang))
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 8).padding(.vertical, 4)
-                            .background(Capsule().fill(Color.orange.gradient))
-                    }
-                }
+                Text(DailyCrosswordStrings.dailyCrossword(lang))
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
                 // Sub-line
                 Text(legacySubLine(state: state))
@@ -252,8 +213,6 @@ struct DailyCrosswordCard: View {
 
     private func legacySubLine(state: DailyCrosswordCardState) -> String {
         switch state {
-        case .locked:
-            return DailyCrosswordStrings.lockedTagline(lang)
         case .pending:
             let teaser = DailyCrosswordStrings.teaser(lang)
             if manager.streak.currentStreak > 0 {
@@ -269,10 +228,6 @@ struct DailyCrosswordCard: View {
     @ViewBuilder
     private func legacyRightIcon(state: DailyCrosswordCardState) -> some View {
         switch state {
-        case .locked:
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
         case .pending:
             Image(systemName: "chevron.right")
                 .font(.system(size: 14, weight: .medium))
@@ -289,58 +244,11 @@ struct DailyCrosswordCard: View {
 
 #if DEBUG
 
-// MARK: Locked (free) previews
-
-#Preview("Crossword Card — LOCKED, English, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    let _ = PremiumManager.shared.isPremium = false
-    return VStack(spacing: 16) {
-        DailyCrosswordCard()
-    }
-    .padding(20)
-    .background(Color.black)
-}
-
-#Preview("Crossword Card — LOCKED, English, Light") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    let _ = PremiumManager.shared.isPremium = false
-    return VStack(spacing: 16) {
-        DailyCrosswordCard()
-    }
-    .padding(20)
-    .background(Color(red: 0.97, green: 0.95, blue: 0.92))
-}
-
-#Preview("Crossword Card — LOCKED, Urdu, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    let _ = PremiumManager.shared.isPremium = false
-    return VStack(spacing: 16) {
-        DailyCrosswordCard()
-    }
-    .padding(20)
-    .background(Color.black)
-}
-
-#Preview("Crossword Card — LOCKED, Urdu, Light") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    let _ = PremiumManager.shared.isPremium = false
-    return VStack(spacing: 16) {
-        DailyCrosswordCard()
-    }
-    .padding(20)
-    .background(Color(red: 0.97, green: 0.95, blue: 0.92))
-}
-
-// MARK: Pending (premium, not done) previews
+// MARK: Pending (not done) previews
 
 #Preview("Crossword Card — Pending, English, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
     let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
         DailyCrosswordCard()
     }
@@ -351,7 +259,6 @@ struct DailyCrosswordCard: View {
 #Preview("Crossword Card — Pending, English, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
     let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
         DailyCrosswordCard()
     }
@@ -362,7 +269,6 @@ struct DailyCrosswordCard: View {
 #Preview("Crossword Card — Pending, Urdu, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
     let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
         DailyCrosswordCard()
     }
@@ -373,7 +279,6 @@ struct DailyCrosswordCard: View {
 #Preview("Crossword Card — Pending, Urdu, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
     let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    let _ = PremiumManager.shared.isPremium = true
     return VStack(spacing: 16) {
         DailyCrosswordCard()
     }

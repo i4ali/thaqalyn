@@ -111,7 +111,8 @@ struct MuharramJourneyHeader: View {
             sfSymbol: "flame.fill",
             statusLine: statusMessage,
             countLine: JourneyStrings.daysObserved(observedCount, 10, lang),
-            percent: journeyManager.completionPercentage
+            percent: journeyManager.completionPercentage,
+            coverAssetName: "MuharramCover"
         )
     }
 

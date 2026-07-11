@@ -12,9 +12,7 @@ struct FoodsView: View {
     @StateObject private var foodsManager = FoodsManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
-    @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
-    @State private var showPaywall = false
 
     var body: some View {
         NavigationView {
@@ -31,19 +29,11 @@ struct FoodsView: View {
                     } else {
                         ScrollView {
                             LazyVStack(spacing: 12) {
-                                ForEach(Array(foodsManager.foods.enumerated()), id: \.element.id) { index, food in
-                                    let isLocked = !premiumManager.canAccessExploreItem(isFirst: index == 0)
-                                    if isLocked {
-                                        Button { showPaywall = true } label: {
-                                            FoodCard(food: food, isLocked: true)
-                                        }
-                                        .buttonStyle(EmPressStyle())
-                                    } else {
-                                        PressableNavLink {
-                                            FoodDetailView(food: food)
-                                        } label: {
-                                            FoodCard(food: food, isLocked: false)
-                                        }
+                                ForEach(foodsManager.foods, id: \.id) { food in
+                                    PressableNavLink {
+                                        FoodDetailView(food: food)
+                                    } label: {
+                                        FoodCard(food: food)
                                     }
                                 }
                             }
@@ -71,9 +61,6 @@ struct FoodsView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
     }
 
     private var header: some View {
@@ -141,7 +128,6 @@ struct FoodsView: View {
 
 struct FoodCard: View {
     let food: Food
-    let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
@@ -165,20 +151,10 @@ struct FoodCard: View {
             HStack(spacing: 14) {
                 chip
                 VStack(alignment: .leading, spacing: 4) {
-                    HStack(spacing: 8) {
-                        Text(food.name(for: languageManager.selectedLanguage))
-                            .font(EmType.serif(20, .semiBold))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineLimit(1)
-                        if isLocked {
-                            Text("PREMIUM")
-                                .font(.system(size: 8.5, weight: .bold)).tracking(1)
-                                .foregroundColor(themeManager.accentColor)
-                                .padding(.horizontal, 6).padding(.vertical, 2)
-                                .background(Capsule().fill(themeManager.accentChip))
-                                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                        }
-                    }
+                    Text(food.name(for: languageManager.selectedLanguage))
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(1)
                     Text("QUR'AN \(food.surahNumber):\(food.verseNumber)")
                         .font(.system(size: 11, weight: .bold)).tracking(1)
                         .foregroundColor(themeManager.accentColor)
@@ -197,18 +173,9 @@ struct FoodCard: View {
         HStack(spacing: 16) {
             chip
             VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 8) {
-                    Text(food.name(for: languageManager.selectedLanguage))
-                        .font(.system(size: 17, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                    if isLocked {
-                        Text("Premium")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 8).padding(.vertical, 4)
-                            .background(Capsule().fill(Color.orange.gradient))
-                    }
-                }
+                Text(food.name(for: languageManager.selectedLanguage))
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
                 Text("Quran \(food.surahNumber):\(food.verseNumber)")
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)

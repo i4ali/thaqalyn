@@ -142,18 +142,6 @@ class PremiumManager: ObservableObject {
         return Reciter.popularReciters // All reciters are free
     }
 
-    // MARK: - Fasting Feature Access Control
-
-    /// Check if user can access a fasting category
-    /// - "obligation" category is always free
-    /// - Other categories require premium
-    func canAccessFastingCategory(_ categoryId: String) -> Bool {
-        if categoryId == "obligation" {
-            return true  // Always free
-        }
-        return isPremium
-    }
-
     // MARK: - Ramadan Journey Access Control
 
     /// Check if user can access a Ramadan Journey day
@@ -209,23 +197,6 @@ class PremiumManager: ObservableObject {
         if stationNumber == 1 { return true }
         return isPremium
     }
-
-    // MARK: - Explore Feature Access Control
-
-    /// Explore sections (Foods, Daily Duas, Life Moments, Q&A, Prophetic
-    /// Parallels, Prophetic Stories, Ahl al-Bayt) use a "first item free, rest
-    /// premium" teaser model: the first (top) card in each section is always
-    /// free, every other card requires premium.
-    /// - Parameter isFirst: whether this is the first card shown in its section.
-    func canAccessExploreItem(isFirst: Bool) -> Bool {
-        if isFirst { return true }  // First card always free
-        return isPremium
-    }
-
-    // MARK: - Daily Crossword Access Control
-
-    /// Daily Crossword is a premium feature.
-    func canAccessDailyCrossword() -> Bool { isPremium }
 
     // MARK: - Deep Dive Access Control
 

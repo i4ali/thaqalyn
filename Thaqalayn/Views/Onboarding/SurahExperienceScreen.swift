@@ -50,19 +50,13 @@ struct SurahExperienceScreen: View {
         }
     }
 
-    // MARK: - Background (a gentler read of the descent ramp, top -> bottom)
+    // MARK: - Background
+    // The shared Midnight Emerald onboarding background, for one consistent
+    // theme across the whole onboarding flow (the feature's own descent ramp
+    // read as a different, browner theme here).
 
     private var descentBackground: some View {
-        LinearGradient(
-            gradient: Gradient(stops: [
-                .init(color: DeepDivePalette.bg(0.00), location: 0.0),
-                .init(color: DeepDivePalette.bg(0.32), location: 0.35),
-                .init(color: DeepDivePalette.bg(0.55), location: 0.64),
-                .init(color: DeepDivePalette.bg(0.82), location: 1.0),
-            ]),
-            startPoint: .top, endPoint: .bottom
-        )
-        .ignoresSafeArea()
+        OnboardingBackground(tilt: .lavender)
     }
 
     // MARK: - Content
@@ -86,7 +80,7 @@ struct SurahExperienceScreen: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Inside the Surah")
                 .onbEyebrow()
-                .foregroundColor(DeepDivePalette.gold)
+                .foregroundColor(Color(hex: "ECD49A"))
                 .opacity(isVisible ? 1 : 0)
                 .offset(y: isVisible ? 0 : -16)
                 .animation(.easeOut(duration: 0.6).delay(0.15), value: isVisible)
@@ -118,9 +112,9 @@ struct SurahExperienceScreen: View {
         ZStack {
             Circle()
                 .fill(RadialGradient(
-                    colors: [DeepDivePalette.goldBright.opacity(0.20), .clear],
-                    center: .center, startRadius: 0, endRadius: 150))
-                .frame(width: 300, height: 300)
+                    colors: [Color(hex: "ECD49A").opacity(0.15), .clear],
+                    center: .center, startRadius: 0, endRadius: 135))
+                .frame(width: 270, height: 270)
                 .scaleEffect(haloPulse ? 1.08 : 0.96)
                 .animation(.easeInOut(duration: 2.6).repeatForever(autoreverses: true),
                            value: haloPulse)
@@ -128,13 +122,13 @@ struct SurahExperienceScreen: View {
             VStack(spacing: 12) {
                 Text(surahs[index].ar)
                     .font(EmType.arabic(68))
-                    .foregroundColor(DeepDivePalette.cream)
+                    .foregroundColor(Color(hex: "F1E8D6"))
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
                 Text(surahs[index].en.uppercased())
                     .font(.system(size: 14, weight: .bold))
                     .tracking(3)
-                    .foregroundColor(DeepDivePalette.gold)
+                    .foregroundColor(Color(hex: "ECD49A"))
                 Text(surahs[index].story)
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(DeepDivePalette.mute)

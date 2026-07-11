@@ -10,13 +10,11 @@ import SwiftUI
 
 struct FastingVersesView: View {
     @StateObject private var fastingManager = FastingVersesManager.shared
-    @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedCategory: FastingCategory?
     @State private var navigateToDetail = false
-    @State private var showPaywall = false
 
     var body: some View {
         NavigationView {
@@ -60,17 +58,10 @@ struct FastingVersesView: View {
                         ScrollView {
                             LazyVStack(spacing: 16) {
                                 ForEach(fastingManager.categories) { category in
-                                    FastingCategoryCard(
-                                        category: category,
-                                        isLocked: !premiumManager.canAccessFastingCategory(category.id)
-                                    ) {
-                                        if premiumManager.canAccessFastingCategory(category.id) {
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                                                selectedCategory = category
-                                                navigateToDetail = true
-                                            }
-                                        } else {
-                                            showPaywall = true
+                                    FastingCategoryCard(category: category) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                            selectedCategory = category
+                                            navigateToDetail = true
                                         }
                                     }
                                 }
@@ -110,9 +101,6 @@ struct FastingVersesView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
     }
 
     private var emeraldHeaderView: some View {
@@ -165,18 +153,9 @@ struct FastingVersesView: View {
 
 struct FastingCategoryCard: View {
     let category: FastingCategory
-    let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
-
-    private var grayGradient: LinearGradient {
-        LinearGradient(
-            colors: [Color.gray.opacity(0.3), Color.gray.opacity(0.2)],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-    }
 
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
@@ -188,21 +167,11 @@ struct FastingCategoryCard: View {
                 HStack(spacing: 14) {
                     EmIconChip(sfSymbol: category.icon)
                     VStack(alignment: .leading, spacing: 4) {
-                        HStack(spacing: 8) {
-                            Text(category.title(for: languageManager.selectedLanguage))
-                                .font(EmType.serif(20, .semiBold))
-                                .foregroundColor(themeManager.primaryText)
-                                .lineLimit(2)
-                                .fixedSize(horizontal: false, vertical: true)
-                            if isLocked {
-                                Text("PREMIUM")
-                                    .font(.system(size: 8.5, weight: .bold)).tracking(1)
-                                    .foregroundColor(themeManager.accentColor)
-                                    .padding(.horizontal, 6).padding(.vertical, 2)
-                                    .background(Capsule().fill(themeManager.accentChip))
-                                    .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                            }
-                        }
+                        Text(category.title(for: languageManager.selectedLanguage))
+                            .font(EmType.serif(20, .semiBold))
+                            .foregroundColor(themeManager.primaryText)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
                         Text(category.description(for: languageManager.selectedLanguage))
                             .font(.system(size: 13))
                             .foregroundColor(themeManager.secondaryText)
@@ -230,37 +199,23 @@ struct FastingCategoryCard: View {
                 // Category icon
                 ZStack {
                     Circle()
-                        .fill(isLocked ? grayGradient : themeManager.accentGradient)
+                        .fill(themeManager.accentGradient)
                         .frame(width: 50, height: 50)
                         .shadow(
-                            color: isLocked ? Color.clear : themeManager.accentColor.opacity(0.3),
+                            color: themeManager.accentColor.opacity(0.3),
                             radius: 8
                         )
 
                     Image(systemName: category.icon)
                         .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(isLocked ? themeManager.secondaryText : .white)
+                        .foregroundColor(.white)
                 }
 
                 // Category content
                 VStack(alignment: .leading, spacing: 6) {
-                    HStack {
-                        Text(category.title(for: languageManager.selectedLanguage))
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(themeManager.primaryText)
-
-                        if isLocked {
-                            Text("Premium")
-                                .font(.system(size: 11, weight: .bold))
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 4)
-                                .background(
-                                    Capsule()
-                                        .fill(Color.orange.gradient)
-                                )
-                        }
-                    }
+                    Text(category.title(for: languageManager.selectedLanguage))
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(themeManager.primaryText)
 
                     Text(category.description(for: languageManager.selectedLanguage))
                         .font(.system(size: 14, weight: .medium))
@@ -276,10 +231,9 @@ struct FastingCategoryCard: View {
 
                 Spacer()
 
-                // Chevron or lock icon
                 Image(systemName: "chevron.right")
                     .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.tertiaryText)
+                    .foregroundColor(themeManager.tertiaryText)
             }
             .padding(20)
             .background {

@@ -12,8 +12,12 @@ struct OnboardingBackground: View {
     let tilt: ThemeManager.OnboardingTilt
 
     var body: some View {
-        ZStack {
-            Color(hex: "0A1512").ignoresSafeArea()
+        // One ignoresSafeArea on the whole stack. The previous version expanded
+        // each piece separately (the amber glow used .offset THEN
+        // .ignoresSafeArea), and that combination rendered a faint full-width
+        // luminance seam across onboarding screens.
+        ZStack(alignment: .top) {
+            Color(hex: "0A1512")
             GeometryReader { geo in
                 RadialGradient(
                     gradient: Gradient(stops: [
@@ -25,18 +29,17 @@ struct OnboardingBackground: View {
                     startRadius: 0,
                     endRadius: max(geo.size.width, geo.size.height) * 1.1
                 )
-                .ignoresSafeArea()
             }
             RadialGradient(
                 gradient: Gradient(colors: [Color(hex: "ECD49A").opacity(0.13), .clear]),
                 center: .top, startRadius: 0, endRadius: 230
             )
             .frame(height: 320)
-            .frame(maxWidth: .infinity, alignment: .top)
+            .frame(maxWidth: .infinity)
             .offset(y: -90)
             .allowsHitTesting(false)
-            .ignoresSafeArea()
         }
+        .ignoresSafeArea()
     }
 }
 

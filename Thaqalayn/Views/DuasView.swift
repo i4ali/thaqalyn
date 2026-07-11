@@ -9,12 +9,10 @@ import SwiftUI
 
 struct DuasView: View {
     @StateObject private var duasManager = DuasManager.shared
-    @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedDua: DailyDua?
-    @State private var showPaywall = false
 
     var body: some View {
         NavigationView {
@@ -31,19 +29,11 @@ struct DuasView: View {
                     } else {
                         ScrollView {
                             LazyVStack(spacing: 12) {
-                                ForEach(Array(duasManager.duas.enumerated()), id: \.element.id) { index, dua in
-                                    let isLocked = !premiumManager.canAccessExploreItem(isFirst: index == 0)
-                                    if isLocked {
-                                        Button { showPaywall = true } label: {
-                                            DuaCard(dua: dua, isLocked: true)
-                                        }
-                                        .buttonStyle(EmPressStyle())
-                                    } else {
-                                        PressableNavLink {
-                                            DuaDetailView(dua: dua)
-                                        } label: {
-                                            DuaCard(dua: dua, isLocked: false)
-                                        }
+                                ForEach(duasManager.duas, id: \.id) { dua in
+                                    PressableNavLink {
+                                        DuaDetailView(dua: dua)
+                                    } label: {
+                                        DuaCard(dua: dua)
                                     }
                                 }
                             }
@@ -71,9 +61,6 @@ struct DuasView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
     }
 
     private var headerView: some View {
@@ -150,7 +137,6 @@ struct DuasView: View {
 
 struct DuaCard: View {
     let dua: DailyDua
-    let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
@@ -162,21 +148,11 @@ struct DuaCard: View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: dua.categoryIcon)
-                HStack(spacing: 8) {
-                    Text(dua.situation(for: languageManager.selectedLanguage))
-                        .font(EmType.serif(20, .semiBold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                    if isLocked {
-                        Text("PREMIUM")
-                            .font(.system(size: 8.5, weight: .bold)).tracking(1)
-                            .foregroundColor(themeManager.accentColor)
-                            .padding(.horizontal, 6).padding(.vertical, 2)
-                            .background(Capsule().fill(themeManager.accentChip))
-                            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                    }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                Text(dua.situation(for: languageManager.selectedLanguage))
+                    .font(EmType.serif(20, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 Image(systemName: "chevron.right")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
@@ -200,22 +176,11 @@ struct DuaCard: View {
             }
 
             VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 8) {
-                    Text(dua.situation(for: languageManager.selectedLanguage))
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    if isLocked {
-                        Text("Premium")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
-                            .background(Capsule().fill(Color.orange.gradient))
-                    }
-                }
+                Text(dua.situation(for: languageManager.selectedLanguage))
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
             }
 
             Spacer()

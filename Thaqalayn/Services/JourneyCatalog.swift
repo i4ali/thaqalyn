@@ -157,10 +157,23 @@ struct JourneyDescriptor: Identifiable {
 }
 
 extension JourneyDescriptor {
+    #if DEBUG
+    /// Debug-only review switch: set to `true` to force every seasonal journey
+    /// open (status = .active) so content and cover art can be reviewed
+    /// off-season in the Simulator. Keep `false` normally - when on, the hub,
+    /// status pills, and the onboarding "Special Seasons" spotlight all show
+    /// every journey as open. DEBUG builds only; Release/Archive always keeps
+    /// real seasonal gating.
+    static let debugUnlockAllJourneys = false
+    #endif
+
     /// Status for the current Hijri date. Bucketing: active → in season;
     /// else if this Hijri year's content-start is still ahead → coming soon;
     /// else (it already began this year and we're not active) → ended.
     func status(using cal: IslamicCalendarManager = .shared) -> JourneyStatus {
+        #if DEBUG
+        if Self.debugUnlockAllJourneys { return .active(line: statusLine()) }
+        #endif
         if let statusOverride { return statusOverride(cal) }
         if isActive() { return .active(line: statusLine()) }
 

@@ -104,50 +104,99 @@ struct PaywallView: View {
 
     // MARK: - Hero
 
+    /// Band-local text colors: the hero sits on the night-shrine art, which is
+    /// dark in BOTH themes, so these are fixed to the emerald-dark palette
+    /// instead of following the (possibly light) active theme.
+    private enum HeroBand {
+        static let ivory = Color(hex: "F1E8D6")
+        static let gold = Color(hex: "ECD49A")
+        static let ivorySoft = Color(hex: "F1E8D6").opacity(0.78)
+        static let ivoryFaint = Color(hex: "F1E8D6").opacity(0.56)
+        static let height: CGFloat = 348
+    }
+
     private var heroSection: some View {
-        VStack(spacing: 9) {
-            Text("THAQALAYN PREMIUM")
-                .font(.system(size: 11, weight: .bold)).tracking(3)
-                .foregroundColor(themeManager.accentColor)
+        ZStack(alignment: .top) {
+            heroArt
 
-            VStack(spacing: -4) {
-                Text("Everything.")
-                    .font(EmType.serif(40, .semiBold))
-                    .foregroundColor(themeManager.primaryText)
-                Text("Forever.")
-                    .font(EmType.serif(40, .semiBold))
-                    .foregroundColor(themeManager.accentBright)
+            VStack(spacing: 9) {
+                Text("THAQALAYN PREMIUM")
+                    .font(.system(size: 11, weight: .bold)).tracking(3)
+                    .foregroundColor(HeroBand.gold)
+
+                VStack(spacing: -4) {
+                    Text("Everything.")
+                        .font(EmType.serif(40, .semiBold))
+                        .foregroundColor(HeroBand.ivory)
+                    Text("Forever.")
+                        .font(EmType.serif(40, .semiBold))
+                        .foregroundColor(HeroBand.gold)
+                }
+                .shadow(color: .black.opacity(0.45), radius: 14, x: 0, y: 2)
+
+                anchorLine
+
+                Spacer(minLength: 0)
+
+                priceRow
+
+                Text("One payment. No renewals. Yours for life.")
+                    .font(.system(size: 13, weight: .medium))
+                    .foregroundColor(HeroBand.ivorySoft)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .shadow(color: .black.opacity(0.5), radius: 8, x: 0, y: 1)
             }
-
-            anchorLine
-
-            priceRow
-
-            Text("One payment. No renewals. Yours for life.")
-                .font(.system(size: 13, weight: .medium))
-                .foregroundColor(themeManager.secondaryText)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+            .padding(.top, 8)
+            .frame(height: HeroBand.height)
         }
         .frame(maxWidth: .infinity)
         .padding(.top, 2)
     }
 
+    /// Cinematic dome-crown art behind the hero: the shrine of Imam Husayn at
+    /// night, doves above, "Ya Husayn" flag on the dome. Bleeds past the
+    /// content padding to full width and edge-fades into the background so it
+    /// reads as part of the emerald night, not a pasted photo.
+    private var heroArt: some View {
+        Image("PaywallHeroDome")
+            .resizable()
+            .scaledToFill()
+            .frame(height: HeroBand.height)
+            .frame(maxWidth: .infinity)
+            .clipped()
+            .mask(
+                LinearGradient(
+                    stops: [
+                        .init(color: .black.opacity(0.72), location: 0),
+                        .init(color: .black, location: 0.12),
+                        .init(color: .black, location: 0.55),
+                        .init(color: .clear, location: 1),
+                    ],
+                    startPoint: .top, endPoint: .bottom
+                )
+            )
+            .padding(.horizontal, -20)
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
+    }
+
     /// Value anchor: comparable "deep" libraries charge this much every year;
     /// the struck figure frames our one-time price as the bargain it is.
-    /// Fixed USD copy (a comparison claim, not a real charge) — the actual
+    /// Fixed USD copy (a comparison claim, not a real charge) - the actual
     /// price below stays dynamic/localized via `getProductPrice()`.
     private var anchorLine: some View {
         (
             Text("Libraries this deep run ")
-                .foregroundColor(themeManager.secondaryText)
+                .foregroundColor(HeroBand.ivorySoft)
             + Text("$39.99/yr")
-                .foregroundColor(themeManager.tertiaryText)
-                .strikethrough(true, color: themeManager.tertiaryText)
+                .foregroundColor(HeroBand.ivoryFaint)
+                .strikethrough(true, color: HeroBand.ivoryFaint)
         )
         .font(.system(size: 13.5, weight: .medium))
         .multilineTextAlignment(.center)
         .fixedSize(horizontal: false, vertical: true)
+        .shadow(color: .black.opacity(0.5), radius: 8, x: 0, y: 1)
     }
 
     private var priceRow: some View {
@@ -155,16 +204,17 @@ struct PaywallView: View {
             if let price = purchaseManager.getProductPrice() {
                 Text(price)
                     .font(EmType.serif(38, .semiBold))
-                    .foregroundColor(themeManager.accentBright)
+                    .foregroundColor(HeroBand.gold)
             } else {
                 ProgressView()
-                    .tint(themeManager.accentColor)
+                    .tint(HeroBand.gold)
             }
             Text("ONE-TIME")
                 .font(.system(size: 12, weight: .bold)).tracking(2)
-                .foregroundColor(themeManager.accentColor)
+                .foregroundColor(HeroBand.gold)
         }
         .padding(.top, 2)
+        .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 2)
     }
 
     // MARK: - 5 Layers depth ladder
@@ -273,12 +323,6 @@ struct PaywallView: View {
                 title: "Surah Quizzes",
                 pill: nil,
                 description: "Test your understanding, earn badges"
-            )
-            featureRow(
-                icon: "square.grid.3x3.fill",
-                title: "Daily Crossword",
-                pill: nil,
-                description: "Every clue teaches you something real — learn your deen, not just pass time"
             )
             featureRow(
                 icon: "speaker.wave.2.fill",

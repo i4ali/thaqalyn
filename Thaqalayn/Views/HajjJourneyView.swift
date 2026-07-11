@@ -108,7 +108,8 @@ struct HajjJourneyHeader: View {
             statusLine: statusMessage,
             countLine: JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 10, lang),
             percent: journeyManager.completionPercentage,
-            completionNote: journeyManager.isJourneyCompleted ? (languageManager.selectedLanguage == .urdu ? "سفر مکمل · Hajj Champion حاصل کر لیا" : "Journey complete · Hajj Champion earned") : nil
+            completionNote: journeyManager.isJourneyCompleted ? (languageManager.selectedLanguage == .urdu ? "سفر مکمل · Hajj Champion حاصل کر لیا" : "Journey complete · Hajj Champion earned") : nil,
+            coverAssetName: "HajjCover"
         )
     }
 

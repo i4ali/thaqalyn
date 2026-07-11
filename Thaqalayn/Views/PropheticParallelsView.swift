@@ -12,13 +12,11 @@ struct PropheticParallelsView: View {
     @StateObject private var parallelsManager = PropheticParallelsManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
-    @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     @State private var selectedCategory: ParallelCategory? = nil
     @State private var selectedParallel: PropheticParallel?
     @State private var navigateToDetail = false
-    @State private var showPaywall = false
 
     var filteredParallels: [PropheticParallel] {
         let searchFiltered = searchText.isEmpty ? parallelsManager.parallels : parallelsManager.search(query: searchText)
@@ -37,9 +35,6 @@ struct PropheticParallelsView: View {
         }
         return grouped.sorted { $0.key.displayName < $1.key.displayName }
     }
-
-    // The single free parallel: first parallel of the first group (matches body render order)
-    private var freeParallelID: String? { groupedParallels.first?.1.first?.id }
 
     // MARK: - Localized header strings (follow the global app language)
 
@@ -174,16 +169,11 @@ struct PropheticParallelsView: View {
                                 ForEach(groupedParallels, id: \.0) { category, parallels in
                                     Section {
                                         ForEach(parallels) { parallel in
-                                            let isLocked = !premiumManager.canAccessExploreItem(isFirst: parallel.id == freeParallelID)
-                                            PropheticParallelCard(parallel: parallel, isLocked: isLocked)
+                                            PropheticParallelCard(parallel: parallel)
                                                 .pressable {
-                                                    if isLocked {
-                                                        showPaywall = true
-                                                    } else {
-                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                                                            selectedParallel = parallel
-                                                            navigateToDetail = true
-                                                        }
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                        selectedParallel = parallel
+                                                        navigateToDetail = true
                                                     }
                                                 }
                                         }
@@ -240,9 +230,6 @@ struct PropheticParallelsView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
     }
 
     // MARK: - Emerald
@@ -328,16 +315,11 @@ struct PropheticParallelsView: View {
                         ForEach(groupedParallels, id: \.0) { category, parallels in
                             Section {
                                 ForEach(parallels) { parallel in
-                                    let isLocked = !premiumManager.canAccessExploreItem(isFirst: parallel.id == freeParallelID)
-                                    PropheticParallelCard(parallel: parallel, isLocked: isLocked)
+                                    PropheticParallelCard(parallel: parallel)
                                         .padding(.horizontal, 20)
                                         .pressable {
-                                            if isLocked {
-                                                showPaywall = true
-                                            } else {
-                                                selectedParallel = parallel
-                                                navigateToDetail = true
-                                            }
+                                            selectedParallel = parallel
+                                            navigateToDetail = true
                                         }
                                 }
                             } header: {
@@ -370,7 +352,6 @@ struct PropheticParallelsView: View {
 
 struct PropheticParallelCard: View {
     let parallel: PropheticParallel
-    let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
@@ -396,22 +377,12 @@ struct PropheticParallelCard: View {
                         .background(Capsule().fill(themeManager.accentChip))
                         .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
 
-                    HStack(spacing: 8) {
-                        Text(parallel.situation(for: languageManager.selectedLanguage))
-                            .font(EmType.serif(20, .semiBold))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineLimit(2)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                        if isLocked {
-                            Text("PREMIUM")
-                                .font(.system(size: 8.5, weight: .bold)).tracking(1)
-                                .foregroundColor(themeManager.accentColor)
-                                .padding(.horizontal, 6).padding(.vertical, 2)
-                                .background(Capsule().fill(themeManager.accentChip))
-                                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                        }
-                    }
+                    Text(parallel.situation(for: languageManager.selectedLanguage))
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
 
                     Text(parallel.connection(for: languageManager.selectedLanguage))
                         .font(.system(size: 13))
@@ -463,21 +434,11 @@ struct PropheticParallelCard: View {
                     )
 
                 // Situation text
-                HStack(spacing: 8) {
-                    Text(parallel.situation(for: languageManager.selectedLanguage))
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    if isLocked {
-                        Text("Premium")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 8).padding(.vertical, 4)
-                            .background(Capsule().fill(Color.orange.gradient))
-                    }
-                }
+                Text(parallel.situation(for: languageManager.selectedLanguage))
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
                 // Connection preview
                 Text(parallel.connection(for: languageManager.selectedLanguage))

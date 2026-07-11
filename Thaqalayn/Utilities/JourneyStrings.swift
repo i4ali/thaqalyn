@@ -52,8 +52,8 @@ enum JourneyStrings {
         pick(l, en: "\(title) is on its way.", ur: "\(title) جلد دستیاب ہوگا۔", ar: "\(title) قادمٌ قريباً.")
     }
     // Deep Dive card chrome - shared across every dive card, so localized here rather
-    // than per catalog entry. `premium` mirrors DailyCrosswordStrings.premiumLabel so
-    // the Premium chip reads identically across the app.
+    // than per catalog entry. `premium` is the shared Premium chip label, kept
+    // consistent across the app.
     static func deepDiveEyebrow(_ l: CommentaryLanguage) -> String {
         pick(l, en: "Deep Dive", ur: "گہرا مطالعہ", ar: "غوص عميق")
     }

@@ -20,24 +20,6 @@ enum DailyCrosswordStrings {
         }
     }
 
-    // MARK: - Premium chrome
-
-    static func premiumLabel(_ l: CommentaryLanguage) -> String {
-        switch l {
-        case .arabic: return "بريميوم"
-        case .urdu:   return "پریمیئم"
-        default:      return "Premium"
-        }
-    }
-
-    static func lockedTagline(_ l: CommentaryLanguage) -> String {
-        switch l {
-        case .arabic: return "افتح لغز اليوم"
-        case .urdu:   return "روزانہ معمہ کھولیں"
-        default:      return "Unlock the daily puzzle"
-        }
-    }
-
     // MARK: - Entry card teaser
 
     static func teaser(_ l: CommentaryLanguage) -> String {

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AhlulbaytQuranView: View {
     @StateObject private var ahlulbaytManager = AhlulbaytQuranManager.shared
-    @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
@@ -17,10 +16,6 @@ struct AhlulbaytQuranView: View {
     @State private var selectedCategory: AhlulbaytCategory? = nil
     @State private var selectedEntry: AhlulbaytEntry?
     @State private var navigateToDetail = false
-    @State private var showPaywall = false
-
-    // The single free entry: first entry of the first rendered group
-    private var freeEntryID: String? { groupedEntries.first?.1.first?.id }
 
     var filteredEntries: [AhlulbaytEntry] {
         let searchFiltered = searchText.isEmpty ? ahlulbaytManager.entries : ahlulbaytManager.search(query: searchText)
@@ -134,16 +129,11 @@ struct AhlulbaytQuranView: View {
                                 ForEach(groupedEntries, id: \.0) { category, entries in
                                     Section {
                                         ForEach(entries) { entry in
-                                            let isLocked = !premiumManager.canAccessExploreItem(isFirst: entry.id == freeEntryID)
-                                            AhlulbaytEntryCardView(entry: entry, isLocked: isLocked)
+                                            AhlulbaytEntryCardView(entry: entry)
                                                 .pressable {
-                                                    if isLocked {
-                                                        showPaywall = true
-                                                    } else {
-                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                                                            selectedEntry = entry
-                                                            navigateToDetail = true
-                                                        }
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                        selectedEntry = entry
+                                                        navigateToDetail = true
                                                     }
                                                 }
                                         }
@@ -219,9 +209,6 @@ struct AhlulbaytQuranView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
     }
 
     // MARK: - Emerald
@@ -324,7 +311,6 @@ struct AhlulbaytQuranView: View {
 
 struct AhlulbaytEntryCardView: View {
     let entry: AhlulbaytEntry
-    let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
@@ -338,21 +324,11 @@ struct AhlulbaytEntryCardView: View {
                 EmIconChip(sfSymbol: entry.categoryIcon)
 
                 VStack(alignment: .leading, spacing: 4) {
-                    HStack(spacing: 8) {
-                        Text(entry.title(for: languageManager.selectedLanguage))
-                            .font(EmType.serif(20, .semiBold))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineLimit(2)
-                            .multilineTextAlignment(.leading)
-                        if isLocked {
-                            Text("PREMIUM")
-                                .font(.system(size: 8.5, weight: .bold)).tracking(1)
-                                .foregroundColor(themeManager.accentColor)
-                                .padding(.horizontal, 6).padding(.vertical, 2)
-                                .background(Capsule().fill(themeManager.accentChip))
-                                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                        }
-                    }
+                    Text(entry.title(for: languageManager.selectedLanguage))
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
 
                     if !entry.ahlulbaytMembers(for: languageManager.selectedLanguage).isEmpty {
                         Text(entry.ahlulbaytMembers(for: languageManager.selectedLanguage).prefix(2).joined(separator: ", "))
@@ -405,21 +381,11 @@ struct AhlulbaytEntryCardView: View {
 
             // Entry content
             VStack(alignment: .leading, spacing: 6) {
-                HStack(spacing: 8) {
-                    Text(entry.title(for: languageManager.selectedLanguage))
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    if isLocked {
-                        Text("Premium")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 8).padding(.vertical, 4)
-                            .background(Capsule().fill(Color.orange.gradient))
-                    }
-                }
+                Text(entry.title(for: languageManager.selectedLanguage))
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
                 // Members involved
                 if !entry.ahlulbaytMembers(for: languageManager.selectedLanguage).isEmpty {

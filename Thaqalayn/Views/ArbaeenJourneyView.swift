@@ -115,7 +115,8 @@ struct ArbaeenJourneyHeader: View {
             statusLine: statusMessage,
             countLine: JourneyStrings.stationsObserved(observedCount, 8, lang),
             percent: journeyManager.completionPercentage,
-            iconIsCustomAsset: false
+            iconIsCustomAsset: false,
+            coverAssetName: "ArbaeenCover"
         )
     }
 

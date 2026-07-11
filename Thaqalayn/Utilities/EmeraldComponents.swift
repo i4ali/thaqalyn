@@ -419,9 +419,16 @@ struct EmJourneyHeader: View {
     var percent: Double
     var completionNote: String? = nil
     var iconIsCustomAsset = false
+    /// Optional cinematic cover art rendered behind the header (premium-art
+    /// initiative): bleeds behind the status bar and edge-fades out before the
+    /// day list begins. Composed dark-sky-on-top, so the eyebrow/title stay
+    /// legible with the emerald palette. Nil = the plain header, unchanged.
+    var coverAssetName: String? = nil
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 18) {
+        // Extra heading-to-card spacing when cover art is present, so the art's
+        // focal subject can breathe between the title and the progress card.
+        VStack(alignment: .leading, spacing: coverAssetName == nil ? 18 : 30) {
             HStack(alignment: .top, spacing: 12) {
                 EmHeading(eyebrow: eyebrow, title: title)
                 EmIconChip(sfSymbol: sfSymbol, size: 56, isCustomAsset: iconIsCustomAsset)
@@ -465,10 +472,48 @@ struct EmJourneyHeader: View {
                 }
                 .padding(18)
             }
+            // Over cover art the glass card needs body: a deep-emerald backing
+            // keeps the status/count text legible against the bright subject.
+            .background(
+                Group {
+                    if coverAssetName != nil {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .fill(Color(hex: "06120E").opacity(0.45))
+                    }
+                }
+            )
         }
         .padding(.horizontal, 20)
-        .padding(.top, 8)
+        // 48pt top inset clears the floating chevron-down dismiss button that
+        // JourneyCover overlays at top-leading (it was clipping the leading
+        // characters of every journey's eyebrow, e.g. "40-" of 40-DAY JOURNEY).
+        .padding(.top, 48)
         .padding(.bottom, 16)
+        .background(alignment: .top) {
+            if let coverAssetName {
+                GeometryReader { geo in
+                    Image(coverAssetName)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: geo.size.height)
+                        .clipped()
+                        .mask(
+                            LinearGradient(
+                                stops: [
+                                    .init(color: .black.opacity(0.92), location: 0),
+                                    .init(color: .black, location: 0.18),
+                                    .init(color: .black, location: 0.62),
+                                    .init(color: .clear, location: 1),
+                                ],
+                                startPoint: .top, endPoint: .bottom
+                            )
+                        )
+                }
+                .ignoresSafeArea(edges: .top)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+            }
+        }
     }
 }
 

@@ -124,7 +124,8 @@ struct RamadanJourneyHeader: View {
             statusLine: statusMessage,
             countLine: JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 30, lang),
             percent: journeyManager.completionPercentage,
-            completionNote: journeyManager.isJourneyCompleted ? (lang == .urdu ? "سفر مکمل · Ramadan Champion حاصل ہوا" : "Journey complete · Ramadan Champion earned") : nil
+            completionNote: journeyManager.isJourneyCompleted ? (lang == .urdu ? "سفر مکمل · Ramadan Champion حاصل ہوا" : "Journey complete · Ramadan Champion earned") : nil,
+            coverAssetName: "RamadanCover"
         )
     }
 

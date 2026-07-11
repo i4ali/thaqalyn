@@ -11,13 +11,9 @@ struct LifeMomentsView: View {
     @StateObject private var lifeMomentsManager = LifeMomentsManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
-    @StateObject private var premiumManager = PremiumManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedMoment: LifeMoment?
     @State private var navigateToDetail = false
-    @State private var showPaywall = false
-
-    private var freeMomentID: String? { lifeMomentsManager.moments.first?.id }
 
     var body: some View {
         NavigationView {
@@ -65,16 +61,11 @@ struct LifeMomentsView: View {
                         ScrollView {
                             LazyVStack(spacing: 12) {
                                 ForEach(lifeMomentsManager.moments) { moment in
-                                    let isLocked = !premiumManager.canAccessExploreItem(isFirst: moment.id == freeMomentID)
-                                    MomentCard(moment: moment, isLocked: isLocked)
+                                    MomentCard(moment: moment)
                                         .pressable {
-                                            if isLocked {
-                                                showPaywall = true
-                                            } else {
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                                                    selectedMoment = moment
-                                                    navigateToDetail = true
-                                                }
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                selectedMoment = moment
+                                                navigateToDetail = true
                                             }
                                         }
                                 }
@@ -115,9 +106,6 @@ struct LifeMomentsView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
     }
 
     // MARK: - Localized header strings (follow the global app language)
@@ -149,7 +137,6 @@ struct LifeMomentsView: View {
 
 struct MomentCard: View {
     let moment: LifeMoment
-    let isLocked: Bool
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
@@ -162,20 +149,10 @@ struct MomentCard: View {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: moment.categoryIcon, size: 46)
                 VStack(alignment: .leading, spacing: 4) {
-                    HStack(spacing: 8) {
-                        Text(moment.situation(for: languageManager.selectedLanguage))
-                            .font(EmType.serif(20, .semiBold))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineLimit(2).multilineTextAlignment(.leading)
-                        if isLocked {
-                            Text("PREMIUM")
-                                .font(.system(size: 8.5, weight: .bold)).tracking(1)
-                                .foregroundColor(themeManager.accentColor)
-                                .padding(.horizontal, 6).padding(.vertical, 2)
-                                .background(Capsule().fill(themeManager.accentChip))
-                                .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-                        }
-                    }
+                    Text(moment.situation(for: languageManager.selectedLanguage))
+                        .font(EmType.serif(20, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2).multilineTextAlignment(.leading)
                     Text(moment.verseReference.uppercased())
                         .font(.system(size: 11, weight: .bold)).tracking(1)
                         .foregroundColor(themeManager.accentColor)
@@ -209,22 +186,11 @@ struct MomentCard: View {
 
             // Situation text
             VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 8) {
-                    Text(moment.situation(for: languageManager.selectedLanguage))
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    if isLocked {
-                        Text("Premium")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
-                            .background(Capsule().fill(Color.orange.gradient))
-                    }
-                }
+                Text(moment.situation(for: languageManager.selectedLanguage))
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
                 // Verse reference
                 Text(moment.verseReference)

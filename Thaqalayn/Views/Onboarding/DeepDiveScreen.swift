@@ -49,19 +49,13 @@ struct DeepDiveScreen: View {
         }
     }
 
-    // MARK: - Background (the descent ramp, painted top -> bottom from the palette)
+    // MARK: - Background
+    // The shared Midnight Emerald onboarding background. (This screen used to
+    // preview the feature's own descent ramp, but its near-black stops plus the
+    // warm halo read as a different, browner theme inside the onboarding flow.)
 
     private var descentBackground: some View {
-        LinearGradient(
-            gradient: Gradient(stops: [
-                .init(color: DeepDivePalette.bg(0.00), location: 0.0),
-                .init(color: DeepDivePalette.bg(0.32), location: 0.35),
-                .init(color: DeepDivePalette.bg(0.55), location: 0.64),
-                .init(color: DeepDivePalette.bg(0.82), location: 1.0),
-            ]),
-            startPoint: .top, endPoint: .bottom
-        )
-        .ignoresSafeArea()
+        OnboardingBackground(tilt: .peach)
     }
 
     // MARK: - Content
@@ -85,7 +79,7 @@ struct DeepDiveScreen: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Deep Dive")
                 .onbEyebrow()
-                .foregroundColor(DeepDivePalette.gold)
+                .foregroundColor(Color(hex: "ECD49A"))
                 .opacity(isVisible ? 1 : 0)
                 .offset(y: isVisible ? 0 : -16)
                 .animation(.easeOut(duration: 0.6).delay(0.15), value: isVisible)
@@ -117,9 +111,9 @@ struct DeepDiveScreen: View {
         ZStack {
             Circle()
                 .fill(RadialGradient(
-                    colors: [DeepDivePalette.goldBright.opacity(0.20), .clear],
-                    center: .center, startRadius: 0, endRadius: 150))
-                .frame(width: 300, height: 300)
+                    colors: [Color(hex: "ECD49A").opacity(0.15), .clear],
+                    center: .center, startRadius: 0, endRadius: 135))
+                .frame(width: 270, height: 270)
                 .scaleEffect(haloPulse ? 1.08 : 0.96)
                 .animation(.easeInOut(duration: 2.6).repeatForever(autoreverses: true),
                            value: haloPulse)
@@ -127,13 +121,13 @@ struct DeepDiveScreen: View {
             VStack(spacing: 12) {
                 Text(themes[themeIndex].ar)
                     .font(EmType.arabic(78))
-                    .foregroundColor(DeepDivePalette.cream)
+                    .foregroundColor(Color(hex: "F1E8D6"))
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
                 Text(themes[themeIndex].en.uppercased())
                     .font(.system(size: 15, weight: .bold))
                     .tracking(3.5)
-                    .foregroundColor(DeepDivePalette.gold)
+                    .foregroundColor(Color(hex: "ECD49A"))
             }
             .id(themeIndex)
             .transition(.asymmetric(

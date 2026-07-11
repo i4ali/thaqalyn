@@ -9,24 +9,38 @@ import SwiftUI
 
 struct HadithScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Binding var currentPage: Int
     @State private var isVisible = false
     @State private var shimmerOffset: CGFloat = -1.0
     @State private var glowPulse = false
 
+    /// Cinematic hero loop when the bundled video is present and motion is
+    /// allowed; otherwise the original procedural embers + doves layers.
+    private var showsHeroVideo: Bool {
+        ShrineHeroVideoLayer.isAvailable && !reduceMotion
+    }
+
     var body: some View {
         ZStack {
             OnboardingBackground(tilt: .peach)
 
-            // Ambient drifting gold embers behind the card
-            FloatingEmbers()
-                .opacity(isVisible ? 1 : 0)
-                .animation(Animation.easeOut(duration: 1.2).delay(0.5), value: isVisible)
+            if showsHeroVideo {
+                // Doves over the floodlit shrine - full-bleed video loop
+                ShrineHeroVideoLayer(isActive: currentPage == 0)
+                    .opacity(isVisible ? 1 : 0)
+                    .animation(Animation.easeOut(duration: 1.0).delay(0.2), value: isVisible)
+            } else {
+                // Ambient drifting gold embers behind the card
+                FloatingEmbers()
+                    .opacity(isVisible ? 1 : 0)
+                    .animation(Animation.easeOut(duration: 1.2).delay(0.5), value: isVisible)
 
-            // Doves wheeling above the rim-lit shrine silhouette
-            ShrineDovesLayer()
-                .opacity(isVisible ? 1 : 0)
-                .animation(Animation.easeOut(duration: 1.0).delay(0.2), value: isVisible)
+                // Doves wheeling above the rim-lit shrine silhouette
+                ShrineDovesLayer()
+                    .opacity(isVisible ? 1 : 0)
+                    .animation(Animation.easeOut(duration: 1.0).delay(0.2), value: isVisible)
+            }
 
             VStack(spacing: 0) {
                 Spacer()
@@ -91,34 +105,18 @@ struct HadithScreen: View {
                             .scaleEffect(x: isVisible ? 1 : 0, y: 1)
                             .animation(Animation.easeOut(duration: 0.5).delay(0.9), value: isVisible)
 
-                        // English Translation
-                        VStack(spacing: 12) {
-                            Text("\"I am leaving among you two weighty things:")
-                                .font(.system(size: 18, weight: .medium))
-                                .foregroundColor(themeManager.primaryText)
-
-                            Text("the Book of Allah and my progeny,")
-                                .font(.system(size: 18, weight: .medium))
-                                .foregroundColor(themeManager.primaryText)
-
-                            Text("the people of my household.")
-                                .font(.system(size: 18, weight: .medium))
-                                .foregroundColor(themeManager.primaryText)
-
-                            Text("As long as you hold fast to them,")
-                                .font(.system(size: 18, weight: .medium))
-                                .foregroundColor(themeManager.primaryText)
-
-                            Text("you shall never go astray.\"")
-                                .font(.system(size: 18, weight: .medium))
-                                .foregroundColor(themeManager.primaryText)
-                        }
-                        .multilineTextAlignment(.center)
-                        .lineSpacing(4)
-                        .padding(.horizontal, 30)
-                        .opacity(isVisible ? 1 : 0)
-                        .offset(y: isVisible ? 0 : 30)
-                        .animation(Animation.easeOut(duration: 0.8).delay(1.1), value: isVisible)
+                        // English Translation - serif quote treatment to match
+                        // the sacred register of the screen
+                        Text("\"I am leaving among you two weighty things:\nthe Book of Allah and my progeny,\nthe people of my household.\nAs long as you hold fast to them,\nyou shall never go astray.\"")
+                            .font(EmType.serifItalic(22))
+                            .foregroundColor(Color(hex: "F7F1E3"))
+                            .shadow(color: .black.opacity(0.65), radius: 5, x: 0, y: 1)
+                            .multilineTextAlignment(.center)
+                            .lineSpacing(6)
+                            .padding(.horizontal, 24)
+                            .opacity(isVisible ? 1 : 0)
+                            .offset(y: isVisible ? 0 : 30)
+                            .animation(Animation.easeOut(duration: 0.8).delay(1.1), value: isVisible)
 
                         // Attribution
                         Text("— Prophet Muhammad ﷺ")
@@ -127,7 +125,18 @@ struct HadithScreen: View {
                             .opacity(isVisible ? 1 : 0)
                             .animation(Animation.easeOut(duration: 0.6).delay(1.4), value: isVisible)
                     }
-                    .onboardingCard()
+                    .padding(24)
+                    .background(
+                        // Deep emerald glass so the hadith reads clearly over
+                        // the bright gold dome of the hero video (the shared
+                        // onboardingCard's 5% white is invisible on a photo).
+                        RoundedRectangle(cornerRadius: 24, style: .continuous)
+                            .fill(Color(hex: "06120E").opacity(0.52))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                                    .stroke(Color(hex: "ECD49A").opacity(0.13), lineWidth: 1)
+                            )
+                    )
                     .padding(.horizontal, 22)
                 }
 
