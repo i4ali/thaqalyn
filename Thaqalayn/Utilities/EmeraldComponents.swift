@@ -529,6 +529,9 @@ struct EmJourneyDayRow: View {
     var isCurrent: Bool
     var isLocked: Bool
     var doneStyle: EmDayDoneStyle = .gold
+    /// Overrides the "Day N" eyebrow. Arbaeen's 8 units span 40 real days, so it passes
+    /// "Station N" instead - calling them days would imply a counter that advances daily.
+    var numberLabel: String? = nil
     var onTap: () -> Void
 
     private var highlighted: Bool { isCurrent && !isLocked }
@@ -561,7 +564,7 @@ struct EmJourneyDayRow: View {
                 marker
                 VStack(alignment: .leading, spacing: 1) {
                     HStack(spacing: 7) {
-                        Text("Day \(dayNumber)")
+                        Text(numberLabel ?? "Day \(dayNumber)")
                             .font(.system(size: 10.5)).tracking(0.5)
                             .foregroundColor(tm.tertiaryText)
                         if isLocked {

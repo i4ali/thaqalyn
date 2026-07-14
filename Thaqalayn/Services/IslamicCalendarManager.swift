@@ -401,23 +401,29 @@ class IslamicCalendarManager: ObservableObject {
 
     /// Current Arbaeen station (1–8), mapping the ~40-day span onto the 8 stations.
     /// Returns nil outside the season.
+    ///
+    /// The stations are chapters of a 40-day arc, not one per day, so each spans several
+    /// days. The buckets follow the caravan's own narrated timeline: it is driven out of
+    /// Karbala on 11 Muharram, enters Damascus on 1 Safar (Station 5), and Arbaeen falls
+    /// on 20 Safar (Station 8). Station 4 carries the longest stretch by design - the weeks
+    /// of desert road between Kufa and Sham that its own content describes.
     func currentArbaeenStation() -> Int? {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
         switch month {
-        case 1 where day >= 11:            // Muharram 11–30
+        case 1 where day >= 11:            // Muharram 11 – end of month (29 or 30)
             switch day {
-            case 11...13: return 1         // The Morning After
-            case 14...17: return 2         // The Road to Kufa
-            default:      return 3         // Kufa: Zaynab's sermon (18–30)
+            case 11...13: return 1         // The Morning After — Karbala
+            case 14...16: return 2         // The Road to Kufa
+            case 17...20: return 3         // The Voice That Would Not Break — Kufa
+            default:      return 4         // The Long Road to Sham — 21 to month's end
             }
-        case 2:                            // Safar 1–25
+        case 2 where day <= 25:            // Safar 1–25
             switch day {
-            case 1:       return 4         // The Long Road to Sham (entered ~1 Safar)
-            case 2...8:   return 5         // The Court of Yazid
-            case 9...15:  return 6         // The Ruin of Damascus
-            case 16...19: return 7         // The Turn Homeward
-            default:      return 8         // Arbaeen: Jabir at the Grave (20+)
+            case 1...5:   return 5         // The Court of Yazid — Damascus entered 1 Safar
+            case 6...13:  return 6         // The Ruin of Damascus
+            case 14...19: return 7         // The Turn Homeward
+            default:      return 8         // Arbaeen: Jabir at the Grave — 20 Safar onward
             }
         default:
             return nil

@@ -224,6 +224,7 @@ struct ArbaeenStationCard: View {
             isCurrent: isCurrentDay,
             isLocked: isLocked,
             doneStyle: .subdued,
+            numberLabel: JourneyStrings.stationN(day.dayNumber, lang),
             onTap: onTap
         )
         .padding(.horizontal, 20)

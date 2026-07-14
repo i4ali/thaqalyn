@@ -55,21 +55,6 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
-            id: "surahExperience-nisa",
-            sfSymbol: "building.columns",
-            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 2).date ?? .distantPast,
-            destination: .surahExperience("surah-nisa"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Nisa - the surah named for the powerless, and the one command that runs through it: render every trust to the one it belongs to. An immersive descent from the orphan's coin and the woman's right, to the seat of judgment, to the authority God entrusted only to the pure.",
-            blurbUR: "سورۂ نساء - وہ سورت جو بے بسوں کے نام سے موسوم ہے، اور اِس میں ایک ہی حکم سب کچھ چلاتا ہے: ہر امانت اُس کے حقدار کو لوٹا دو۔ یتیم کے مال اور عورت کے حق سے لے کر مسندِ انصاف تک، اور اُس اختیار تک جو اللہ نے صرف پاکیزہ لوگوں کے سپرد کیا - ایک عمیق روحانی سفر۔",
-            blurbAR: "سورة النساء - السورةُ التي حملت اسم المستضعفين، وأمرٌ واحدٌ يسري فيها كلِّها: أدِّ كلَّ أمانةٍ إلى أهلها. نزولٌ غامرٌ من مال اليتيم وحقِّ المرأة، إلى مقعد القضاء، إلى السلطةِ التي جعلها الله في الطاهرين وحدهم.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
-        ),
-        WhatsNewItem(
             id: "surahExperience-ali-imran",
             sfSymbol: "person.3.sequence.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 1).date ?? .distantPast,

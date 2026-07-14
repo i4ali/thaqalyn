@@ -61,7 +61,9 @@ struct SurahExperienceDescriptor: Identifiable {
             titleAr: "النِّسَاء",
             sfSymbol: "building.columns",
             subtitle: "The Women - one trust, from the orphan's coin to the seat of authority",
-            available: true, dive: .surahNisa
+            // Withdrawn 2026-07-14: the written experience was too hard to follow. Being
+            // rewritten for comprehension; content recoverable from git (commit f35b980).
+            available: false, dive: nil
         ),
         SurahExperienceDescriptor(
             id: "surah-yusuf",
