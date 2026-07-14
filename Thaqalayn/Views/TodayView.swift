@@ -174,6 +174,9 @@ struct TodayView: View {
                 )
                 .padding(.horizontal, 18)
 
+                BookmarkSpotlightCard()
+                    .padding(.horizontal, 18)
+
                 DailyChallengeCard()
                     .padding(.horizontal, 18)
 
@@ -760,6 +763,7 @@ private struct EmeraldTodayView: View {
                     onResume: openLastRead,
                     onBegin: openSurah1
                 )
+                BookmarkSpotlightCard()
                 DailyChallengeCard()
                 DailyCrosswordCard()
                 if let dua = duasManager.duaOfTheDay() {
