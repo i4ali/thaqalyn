@@ -78,7 +78,12 @@ struct FatimiyyaJourneyView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
         .sheet(isPresented: $showPaywall) {
-            PaywallView()
+            // A locked day is a locked day of *this* journey - carry its art and name
+            // into the ask instead of opening on the generic dome.
+            PaywallView(context: JourneyDescriptor.byId("fatimiyya").map {
+                PaywallContext(coverAssetName: $0.coverAssetName,
+                               eyebrow: JourneyStrings.title($0.id, languageManager.selectedLanguage))
+            })
         }
     }
 }

@@ -18,8 +18,8 @@ struct SurahListRow: View {
     let surahWithTafsir: SurahWithTafsir
     @ObservedObject private var tm = ThemeManager.shared
     @ObservedObject private var premiumManager = PremiumManager.shared
+    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @State private var presentedExperience: PresentedSurahExperience?
-    @State private var showingPaywall = false
 
     /// The "Inside the Surah" experience for this surah, when one is built.
     private var experience: SurahExperienceDescriptor? {
@@ -73,21 +73,22 @@ struct SurahListRow: View {
                                          name: .navigateToVerse, object: nil,
                                          userInfo: ["surah": d.surahNumber, "verse": 1])
                                  }
-                             })
+                             },
+                             coverAssetName: d.coverAssetName,
+                             lockedPaywallContext: premiumManager.canAccessSurahExperience(d.id) ? nil
+                                : PaywallContext(coverAssetName: d.coverAssetName,
+                                                 eyebrow: "\(JourneyStrings.surahJourneyEyebrow(languageManager.selectedLanguage)) \u{00B7} \(d.title(languageManager.selectedLanguage))"))
             }
         }
-        .sheet(isPresented: $showingPaywall) { PaywallView() }
     }
 
+    /// The Journey toggle spends real effort making this tap wanted - it breathes, sweeps
+    /// light and rises embers. So the tap always opens the descent; a gated reader simply
+    /// gets the veiled preview rather than being bounced to a page that sells them
+    /// something else. The gate is applied where the experience is presented.
     private func handleTap(_ d: SurahExperienceDescriptor) {
-        if premiumManager.canAccessSurahExperience(d.id) {
-            // Let the press squish play before the cover slides up.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                presentedExperience = PresentedSurahExperience(id: d.id)
-            }
-        } else {
-            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { showingPaywall = true }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            presentedExperience = PresentedSurahExperience(id: d.id)
         }
     }
 }

@@ -23,7 +23,10 @@ enum DeepDivePalette {
     static let gold       = Color(.sRGB, red: 201.0/255.0, green: 165.0/255.0, blue:  92.0/255.0, opacity: 1) // #C9A55C
     static let goldBright = Color(.sRGB, red: 227.0/255.0, green: 195.0/255.0, blue: 126.0/255.0, opacity: 1) // #E3C37E
     static let cream      = Color(.sRGB, red: 236.0/255.0, green: 231.0/255.0, blue: 219.0/255.0, opacity: 1) // #ECE7DB
-    static let mute       = Color(.sRGB, red: 143.0/255.0, green: 154.0/255.0, blue: 140.0/255.0, opacity: 1) // #8F9A8C
+    // Deliberately diverges from the JSX's #8F9A8C (6.2:1): as a thin serif-italic on the
+    // near-black descent that rendered at ~4.2:1 and read as dim. Held level with the
+    // Color(white: 0.72) secondary tier DeepDiveView uses for its other body text.
+    static let mute       = Color(.sRGB, red: 179.0/255.0, green: 188.0/255.0, blue: 176.0/255.0, opacity: 1) // #B3BCB0
 
     /// Background colour stops (BG_STOPS). `p` is the descent progress 0...1;
     /// r/g/b are already normalised to 0...1 (hex value divided by 255).

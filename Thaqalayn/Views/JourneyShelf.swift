@@ -52,6 +52,10 @@ struct ShelfItem: Identifiable {
     let title: String
     let description: String?
     let onTap: () -> Void
+    /// Cover art (Assets.xcassets). When set, the card renders as a poster - the art
+    /// fills it and the title sits in the art's own dark sky. When nil, the card falls
+    /// back to the original icon-chip layout.
+    var coverAssetName: String? = nil
 }
 
 // MARK: - Compact card
@@ -71,51 +75,18 @@ struct ShelfCard: View {
 
     private static let cardWidth: CGFloat = 190
     private static let cornerRadius: CGFloat = 18
+    /// 4:5 - the aspect every cover is composed at.
+    private static let posterHeight: CGFloat = 238
 
     var body: some View {
         Button(action: item.onTap) {
-            VStack(alignment: .leading, spacing: 0) {
-                EmIconChip(sfSymbol: item.sfSymbol, size: 40,
-                           active: item.isAvailable, isCustomAsset: item.isCustomAsset)
-
-                eyebrow
-                    .padding(.top, 10)
-
-                Text(item.title)
-                    .font(EmType.serif(19, .semiBold))
-                    .foregroundColor(tm.primaryText)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, 2)
-
-                if let description = item.description, !description.isEmpty {
-                    Text(description)
-                        .font(.system(size: 12))
-                        .foregroundColor(item.isAvailable ? tm.secondaryText : tm.tertiaryText)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding(.top, 3)
+            Group {
+                if let cover = item.coverAssetName {
+                    posterFace(cover)
+                } else {
+                    iconFace
                 }
             }
-            .padding(14)
-            .frame(width: Self.cardWidth, alignment: .topLeading)
-            .background(
-                // Measure this card's natural height (before pinning) so the hub can
-                // find the tallest across all shelves. Stays natural under the pin,
-                // so the reported max is stable (no layout feedback loop).
-                GeometryReader { geo in
-                    Color.clear.preference(key: ShelfCardHeightKey.self, value: geo.size.height)
-                }
-            )
-            .frame(height: pinnedHeight > 0 ? pinnedHeight : nil, alignment: .topLeading)
-            .background(
-                RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous)
-                    .fill(item.isAvailable ? tm.glassSurfaceElevated : tm.glassSurface)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous)
-                    .stroke(item.isAvailable ? tm.accentColor.opacity(0.4) : tm.strokeColor, lineWidth: 1)
-            )
-            .shadow(color: Color.black.opacity(0.28), radius: 20, x: 0, y: 8)
             .contentShape(RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous))
             .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
         }
@@ -123,6 +94,98 @@ struct ShelfCard: View {
         .accessibilityElement(children: .ignore)
         .accessibilityAddTraits(.isButton)
         .accessibilityLabel(Text("\(item.title), \(statusText), \(section)"))
+    }
+
+    /// The art is the whole card, and the title sits in its sky. Every cover is composed
+    /// 4:5 with an uncluttered dark top third precisely so the title can live there -
+    /// a bottom scrim would land on the subject instead (the well, the tree, the road).
+    private func posterFace(_ cover: String) -> some View {
+        ZStack(alignment: .topLeading) {
+            Image(cover)
+                .resizable()
+                .scaledToFill()
+                .frame(width: Self.cardWidth, height: Self.posterHeight)
+                .clipped()
+
+            // The art's own top is already dark; this only guarantees the floor across
+            // every cover, and never reaches the subject.
+            LinearGradient(colors: [Color.black.opacity(0.60),
+                                    Color.black.opacity(0.26),
+                                    .clear],
+                           startPoint: .top, endPoint: .center)
+
+            VStack(alignment: .leading, spacing: 6) {
+                eyebrow
+                Text(item.title)
+                    .font(EmType.serif(19, .semiBold))
+                    .foregroundColor(.white)
+                    .shadow(color: .black.opacity(0.55), radius: 8, x: 0, y: 2)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(14)
+        }
+        .frame(width: Self.cardWidth, height: Self.posterHeight)
+        .clipShape(RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous)
+                .stroke(item.isAvailable ? tm.accentColor.opacity(0.4) : tm.strokeColor, lineWidth: 1)
+        )
+        // Deliberately lighter than the 0.72 the text-row cards use: a poster at 0.72
+        // reads washed out, and a coming-soon cover still has to be worth wanting.
+        .opacity(item.isAvailable ? 1 : 0.82)
+        .shadow(color: Color.black.opacity(0.34), radius: 22, x: 0, y: 10)
+        .background(
+            // Keep the hub's uniform-height machinery fed even on the poster path.
+            GeometryReader { geo in
+                Color.clear.preference(key: ShelfCardHeightKey.self, value: geo.size.height)
+            }
+        )
+    }
+
+    /// Original layout, kept for any shelf item that has no cover art yet.
+    private var iconFace: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            EmIconChip(sfSymbol: item.sfSymbol, size: 40,
+                       active: item.isAvailable, isCustomAsset: item.isCustomAsset)
+
+            eyebrow
+                .padding(.top, 10)
+
+            Text(item.title)
+                .font(EmType.serif(19, .semiBold))
+                .foregroundColor(tm.primaryText)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 2)
+
+            if let description = item.description, !description.isEmpty {
+                Text(description)
+                    .font(.system(size: 12))
+                    .foregroundColor(item.isAvailable ? tm.secondaryText : tm.tertiaryText)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 3)
+            }
+        }
+        .padding(14)
+        .frame(width: Self.cardWidth, alignment: .topLeading)
+        .background(
+            // Measure this card's natural height (before pinning) so the hub can
+            // find the tallest across all shelves. Stays natural under the pin,
+            // so the reported max is stable (no layout feedback loop).
+            GeometryReader { geo in
+                Color.clear.preference(key: ShelfCardHeightKey.self, value: geo.size.height)
+            }
+        )
+        .frame(height: pinnedHeight > 0 ? pinnedHeight : nil, alignment: .topLeading)
+        .background(
+            RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous)
+                .fill(item.isAvailable ? tm.glassSurfaceElevated : tm.glassSurface)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous)
+                .stroke(item.isAvailable ? tm.accentColor.opacity(0.4) : tm.strokeColor, lineWidth: 1)
+        )
+        .shadow(color: Color.black.opacity(0.28), radius: 20, x: 0, y: 8)
     }
 
     /// Status eyebrow - a small-caps tinted label, or the PREMIUM chip.

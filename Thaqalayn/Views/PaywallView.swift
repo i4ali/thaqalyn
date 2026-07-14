@@ -9,10 +9,40 @@
 
 import SwiftUI
 
+/// What the user was reaching for when the paywall fired.
+///
+/// The *offer* never changes - it really is "everything, forever", and shrinking the
+/// headline to "unlock this one surah" would shrink the thing they're being sold. So a
+/// context only swaps the hero art and the eyebrow above the headline: the art honours
+/// the specific thing they wanted, and the headline still sells the whole library.
+///
+/// Entries with no art of their own (a locked tafsir layer, a quiz, the profile upgrade
+/// row) pass `coverAssetName: nil` and fall back to the shrine dome.
+struct PaywallContext {
+    /// Cover art for the hero band. nil = the default shrine dome.
+    let coverAssetName: String?
+    /// Small gold caps line above the headline, e.g. "Inside the Surah · Yusuf".
+    let eyebrow: String
+
+    /// Fired from inside a surah: a locked tafsir layer, In-Depth, Gems, the quiz. These
+    /// are the highest-volume gates in the app and have no art of their own - but a surah
+    /// that happens to have an "Inside the Surah" experience lends its cover, and the rest
+    /// fall back to the shrine dome. Either way the eyebrow names the exact thing the user
+    /// just reached for.
+    static func inSurah(_ surah: Surah, _ what: String) -> PaywallContext {
+        PaywallContext(
+            coverAssetName: SurahExperienceDescriptor.bySurahNumber(surah.number)?.coverAssetName,
+            eyebrow: "\(surah.englishName) \u{00B7} \(what)")
+    }
+}
+
 struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var purchaseManager = PurchaseManager.shared
     @StateObject private var themeManager = ThemeManager.shared
+
+    /// The moment that sent the user here. nil = they came browsing (profile upgrade row).
+    var context: PaywallContext? = nil
 
     @State private var showingAlert = false
     @State private var alertMessage = ""
@@ -120,9 +150,13 @@ struct PaywallView: View {
             heroArt
 
             VStack(spacing: 9) {
-                Text("THAQALAYN PREMIUM")
+                Text((context?.eyebrow ?? "Thaqalayn Premium").uppercased())
                     .font(.system(size: 11, weight: .bold)).tracking(3)
                     .foregroundColor(HeroBand.gold)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, 24)
+                    .shadow(color: .black.opacity(0.5), radius: 8, x: 0, y: 1)
 
                 VStack(spacing: -4) {
                     Text("Everything.")
@@ -154,15 +188,22 @@ struct PaywallView: View {
         .padding(.top, 2)
     }
 
-    /// Cinematic dome-crown art behind the hero: the shrine of Imam Husayn at
-    /// night, doves above, "Ya Husayn" flag on the dome. Bleeds past the
-    /// content padding to full width and edge-fades into the background so it
-    /// reads as part of the emerald night, not a pasted photo.
+    /// Behind the hero: by default the shrine of Imam Husayn at night, doves above,
+    /// "Ya Husayn" flag on the dome. When the paywall was fired by a specific locked
+    /// thing, it is that thing's own cover instead - the well, the olive tree, the
+    /// lantern road. Bleeds past the content padding to full width and edge-fades into
+    /// the background so it reads as part of the emerald night, not a pasted photo.
     private var heroArt: some View {
-        Image("PaywallHeroDome")
+        Image(context?.coverAssetName ?? "PaywallHeroDome")
             .resizable()
             .scaledToFill()
-            .frame(height: HeroBand.height)
+            // The experience covers are 4:5 and overflow this wide band a long way, so
+            // a centred crop would ride the bright subject (a lit arch, a lantern) up
+            // under the 40pt headline. Top-aligning keeps the headline on the cover's
+            // dark sky, which is precisely what the covers are composed for. The dome
+            // art nearly fills the band as-is, so it keeps its original centred crop.
+            .frame(height: HeroBand.height,
+                   alignment: context?.coverAssetName == nil ? .center : .top)
             .frame(maxWidth: .infinity)
             .clipped()
             .mask(
@@ -307,16 +348,22 @@ struct PaywallView: View {
                 featured: true
             )
             featureRow(
-                icon: "moon.stars.fill",
-                title: "Seasonal Journeys",
-                pill: journeysPill,
-                description: "Muharram · Ramadan · Hajj · Fatimiyya"
+                icon: "book.closed.fill",
+                title: "Inside the Surah",
+                pill: "IMMERSIVE",
+                description: "A whole surah, walked through beat by beat"
             )
             featureRow(
                 icon: "water.waves",
                 title: "Deep Dives",
-                pill: "IMMERSIVE",
+                pill: nil,
                 description: "A single-sitting descent through one sacred theme"
+            )
+            featureRow(
+                icon: "moon.stars.fill",
+                title: "Seasonal Journeys",
+                pill: journeysPill,
+                description: "Muharram · Arbaeen · Ramadan · Hajj · Fatimiyya"
             )
             featureRow(
                 icon: "brain.head.profile",

@@ -96,6 +96,22 @@ enum JourneyStrings {
     static func surahJourneyEyebrow(_ l: CommentaryLanguage) -> String {
         pick(l, en: "Surah Journey", ur: "سورہ کا سفر", ar: "رحلة السورة")
     }
+
+    // MARK: - The veil (a gated descent, previewed)
+
+    /// Copy for the beat a non-subscriber reaches when the descent is gated. House rule:
+    /// name what lies behind the veil, and never show a lock.
+    static func veilEyebrow(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "The descent continues", ur: "سفر ابھی باقی ہے", ar: "ويستمرّ النزول")
+    }
+    static func veilCta(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "Continue the descent", ur: "سفر جاری رکھیں", ar: "واصل النزول")
+    }
+    static func veilNote(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "One payment. Yours for life.",
+             ur: "ایک بار ادائیگی۔ ہمیشہ کے لیے آپ کا۔",
+             ar: "دفعةٌ واحدة. لك مدى الحياة.")
+    }
     static func readTheFullSurah(_ l: CommentaryLanguage) -> String {
         pick(l, en: "Read the full surah", ur: "مکمل سورہ پڑھیں", ar: "اقرأ السورة كاملة")
     }

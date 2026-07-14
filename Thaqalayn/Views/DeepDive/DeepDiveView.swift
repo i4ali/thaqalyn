@@ -50,6 +50,15 @@ struct DeepDiveView: View {
     /// Present on surah experiences: invoked by the closing beat's
     /// "Read the full surah" button. nil hides the button (theme dives).
     var onReadSurah: (() -> Void)? = nil
+    /// The experience's cover art. Renders behind the opening beat as the threshold you
+    /// step through, then dissolves into `DeepDiveBackground` over the first scroll.
+    /// nil = no art, and the descent looks exactly as it did before.
+    var coverAssetName: String? = nil
+    /// When set, the descent is gated and renders as a *veiled preview*: the reader gets
+    /// the threshold and the orientation - everything before Movement I - and then the
+    /// veil, which names what lies beneath it. The context drives the paywall the veil's
+    /// button opens. nil = full access, and the dive behaves exactly as it always has.
+    var lockedPaywallContext: PaywallContext? = nil
 
     @StateObject private var reading = ReadingSettingsManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
@@ -57,12 +66,27 @@ struct DeepDiveView: View {
 
     @State private var currentID: Int? = 0
     @State private var progress: CGFloat = 0
+    @State private var showingPaywall = false
     /// First depth starts open so the "tap to open" gesture is obvious.
     @State private var openDepths: Set<Int> = [0]
     @State private var saidAmin = false
 
     private var s: CGFloat { reading.scale }
     private var currentIndex: Int { currentID ?? 0 }
+
+    /// True when this reader has not paid for this descent.
+    private var isLocked: Bool { lockedPaywallContext != nil }
+
+    /// What a gated reader may actually read: everything before Movement I. `.open` and
+    /// `.orientation` both report act 0, so the cut is drawn by the content itself - the
+    /// threshold, and the dive's own statement of what it will leave you with - rather
+    /// than by an arbitrary page count. Every dive has exactly one of each.
+    private var visibleSections: [DeepDiveSection] {
+        isLocked ? Array(dive.sections.prefix { $0.act == 0 }) : dive.sections
+    }
+
+    /// Beats in the scroll, counting the veil as one.
+    private var pageCount: Int { visibleSections.count + (isLocked ? 1 : 0) }
     /// Active commentary language - resolves every `LocalizedText` field below and
     /// drives RTL layout for Urdu/Arabic.
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
@@ -72,12 +96,21 @@ struct DeepDiveView: View {
             ZStack(alignment: .top) {
                 DeepDiveBackground(progress: progress).ignoresSafeArea()
 
+                if let cover = coverAssetName {
+                    thresholdCover(cover, size: geo.size)
+                }
+
                 ScrollView {
                     LazyVStack(spacing: 0) {
-                        ForEach(Array(dive.sections.enumerated()), id: \.offset) { idx, section in
+                        ForEach(Array(visibleSections.enumerated()), id: \.offset) { idx, section in
                             page(section, index: idx)
                                 .frame(width: geo.size.width, height: geo.size.height)
                                 .id(idx)
+                        }
+                        if isLocked {
+                            veilPage(index: visibleSections.count, size: geo.size)
+                                .frame(width: geo.size.width, height: geo.size.height)
+                                .id(visibleSections.count)
                         }
                     }
                     .scrollTargetLayout()
@@ -93,7 +126,7 @@ struct DeepDiveView: View {
                 .scrollIndicators(.hidden)
                 .coordinateSpace(name: "dive")
                 .onPreferenceChange(DeepDiveOffsetKey.self) { minY in
-                    let total = max(geo.size.height * CGFloat(dive.sections.count - 1), 1)
+                    let total = max(geo.size.height * CGFloat(pageCount - 1), 1)
                     progress = min(max(-minY / total, 0), 1)
                 }
 
@@ -103,6 +136,9 @@ struct DeepDiveView: View {
         }
         .preferredColorScheme(.dark)
         .statusBarHidden(true)
+        .fullScreenCover(isPresented: $showingPaywall) {
+            PaywallView(context: lockedPaywallContext)
+        }
         #if DEBUG
         .onAppear {
             if let arg = ProcessInfo.processInfo.arguments.first(where: { $0.hasPrefix("-ddPage=") }),
@@ -116,6 +152,163 @@ struct DeepDiveView: View {
     }
 
     private func shown(_ index: Int) -> Bool { currentIndex >= index }
+
+    // MARK: Threshold cover
+
+    /// 1 on the opening beat, 0 once the first beat is behind you. Measured in *pages
+    /// scrolled* rather than raw `progress`, so the handoff lands at the same place
+    /// whether a dive has twelve beats or thirty.
+    private var coverOpacity: Double {
+        let pagesScrolled = progress * CGFloat(max(pageCount - 1, 1))
+        return Double(1 - min(max(pagesScrolled / 0.85, 0), 1))
+    }
+
+    /// The cover art as the doorway you step through, dissolving into the procedural
+    /// background as you sink. The scrim is deliberately heavy: the opening beat lays a
+    /// 72pt gold Arabic title across the middle of the frame and every cover has a bright
+    /// gold light source somewhere in it, so the art has to read as a lit room rather than
+    /// a photograph. Ghosting the art instead of scrimming it was tried and is worse on
+    /// both counts - the bright areas punch straight through the text, and the art washes out.
+    private func thresholdCover(_ asset: String, size: CGSize) -> some View {
+        let scrim = Color(.sRGB, red: 4.0 / 255.0, green: 10.0 / 255.0, blue: 7.0 / 255.0, opacity: 1)
+        return Image(asset)
+            .resizable()
+            .scaledToFill()
+            .frame(width: size.width, height: size.height)
+            .clipped()
+            .overlay(
+                LinearGradient(stops: [
+                    .init(color: scrim.opacity(0.50), location: 0.00),
+                    .init(color: scrim.opacity(0.66), location: 0.34),
+                    .init(color: scrim.opacity(0.74), location: 0.62),
+                    .init(color: scrim.opacity(0.60), location: 1.00),
+                ], startPoint: .top, endPoint: .bottom)
+            )
+            .overlay(
+                RadialGradient(stops: [
+                    .init(color: .clear, location: 0.32),
+                    .init(color: scrim.opacity(0.55), location: 1.00),
+                ], center: .center, startRadius: 0,
+                   endRadius: max(size.width, size.height) * 0.62)
+            )
+            .opacity(coverOpacity)
+            .allowsHitTesting(false)
+            .ignoresSafeArea()
+    }
+
+    // MARK: The veil
+
+    /// The beat a gated reader lands on when the descent runs out. Deliberately NOT a
+    /// wall: the dive's own cover sits behind it, blurred past legibility, and every
+    /// movement beneath is named in the content's own words. A wall tells you something
+    /// exists; a veil tells you what it is. House rule - no lock glyph anywhere.
+    private func veilPage(index: Int, size: CGSize) -> some View {
+        let show = shown(index)
+        return ZStack {
+            veiledArt(size: size)
+            GeometryReader { pgeo in
+                ScrollView(.vertical) {
+                    VStack(spacing: 0) {
+                        Color.clear.frame(height: 1)   // the slot placeBar occupies on a real beat
+                        Spacer(minLength: 20)
+                        veilContent(show)
+                        Spacer(minLength: 20)
+                    }
+                    .frame(maxWidth: 480)
+                    .padding(.horizontal, 30)
+                    .padding(.top, 52)
+                    .padding(.bottom, 40)
+                    .frame(maxWidth: .infinity, minHeight: pgeo.size.height)
+                }
+                .scrollIndicators(.hidden)
+                .scrollBounceBehavior(.basedOnSize)
+            }
+        }
+    }
+
+    /// The cover, blurred until only its shape survives. You can see that there is
+    /// something through there; you cannot see what.
+    @ViewBuilder
+    private func veiledArt(size: CGSize) -> some View {
+        if let cover = coverAssetName {
+            Image(cover)
+                .resizable()
+                .scaledToFill()
+                .frame(width: size.width, height: size.height)
+                // Overscan before blurring: a blur samples past its own bounds, so without
+                // the extra material the frame picks up a dark vignette at every edge.
+                .scaleEffect(1.22)
+                .blur(radius: 44, opaque: true)
+                .frame(width: size.width, height: size.height)
+                .clipped()
+                .overlay(Color.black.opacity(0.46))
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+        }
+    }
+
+    private func veilContent(_ show: Bool) -> some View {
+        VStack(spacing: 0) {
+            Text(JourneyStrings.veilEyebrow(lang).uppercased())
+                .font(.system(size: 10, weight: .semibold)).tracking(4)
+                .foregroundColor(DeepDivePalette.gold)
+                .multilineTextAlignment(.center)
+                .reveal(show, reduce: reduceMotion)
+
+            hairline.padding(.vertical, 26).reveal(show, 0.2, reduce: reduceMotion)
+
+            // What lies beneath, named. This is the entire mechanic - the reader leaves
+            // knowing exactly what they did not get, in the dive's own language.
+            VStack(alignment: .leading, spacing: 16) {
+                ForEach(dive.acts) { act in
+                    HStack(alignment: .firstTextBaseline, spacing: 14) {
+                        Text(roman(act.number))
+                            .font(.system(size: 11, weight: .semibold)).tracking(1.6)
+                            .foregroundColor(DeepDivePalette.gold.opacity(0.8))
+                            .frame(width: 24, alignment: .leading)
+                        Text(act.name(lang))
+                            .font(EmType.serif(22 * s, .semiBold))
+                            .foregroundColor(DeepDivePalette.cream.opacity(0.62))
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+            .reveal(show, 0.35, reduce: reduceMotion)
+
+            hairline.padding(.vertical, 26).reveal(show, 0.5, reduce: reduceMotion)
+
+            unlockButton.reveal(show, 0.62, reduce: reduceMotion)
+
+            Text("\(JourneyStrings.premium(lang)) \u{00B7} \(JourneyStrings.veilNote(lang))")
+                .font(.system(size: 11))
+                .foregroundColor(DeepDivePalette.mute)
+                .multilineTextAlignment(.center)
+                .padding(.top, 14)
+                .reveal(show, 0.62, reduce: reduceMotion)
+        }
+    }
+
+    private var unlockButton: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            showingPaywall = true
+        } label: {
+            Text(JourneyStrings.veilCta(lang))
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundColor(Color(.sRGB, red: 11.0 / 255.0, green: 20.0 / 255.0,
+                                       blue: 15.0 / 255.0, opacity: 1))
+                .padding(.horizontal, 28)
+                .padding(.vertical, 14)
+                .background(
+                    Capsule().fill(
+                        LinearGradient(colors: [DeepDivePalette.goldBright, DeepDivePalette.gold],
+                                       startPoint: .top, endPoint: .bottom))
+                )
+                .shadow(color: DeepDivePalette.gold.opacity(0.35), radius: 16, x: 0, y: 6)
+        }
+        .buttonStyle(EmPressStyle())
+    }
 
     // MARK: Chrome
 
@@ -548,7 +741,7 @@ struct DeepDiveView: View {
     private func climaxPage(_ tag: String, _ source: String, _ arabic: String, _ translation: String, _ body: String, _ reflection: String, _ show: Bool) -> some View {
         VStack(spacing: 0) {
             tagLabel(tag, show).padding(.bottom, 26)
-            Text(body).font(.system(size: 15 * s)).foregroundColor(Color(white: 0.66))
+            Text(body).font(.system(size: 15 * s)).foregroundColor(Color(white: 0.72))
                 .multilineTextAlignment(.center).lineSpacing(6 * s).frame(maxWidth: 360).padding(.bottom, 30)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.2, reduce: reduceMotion)
@@ -584,7 +777,7 @@ struct DeepDiveView: View {
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.15, reduce: reduceMotion)
             Text(subline)
-                .font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.66))
+                .font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
                 .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 16).frame(maxWidth: 340)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.35, reduce: reduceMotion)
@@ -599,7 +792,7 @@ struct DeepDiveView: View {
                 .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, reduce: reduceMotion)
-            Text(intro).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.66))
+            Text(intro).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
                 .multilineTextAlignment(.center).lineSpacing(3 * s).frame(maxWidth: 340)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.15, reduce: reduceMotion)

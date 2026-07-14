@@ -18,6 +18,8 @@ struct SurahDetailView: View {
     @State private var pendingConceptId: String?
     @State private var showingQuiz = false
     @State private var showingPaywall = false
+    /// What the user reached for when the paywall fired - drives its hero art.
+    @State private var paywallContext: PaywallContext? = nil
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var quizManager = QuizManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
@@ -73,6 +75,7 @@ struct SurahDetailView: View {
                                 showingQuiz = true
                             }
                         } else {
+                            paywallContext = .inSurah(surahWithTafsir.surah, "Quiz")
                             showingPaywall = true
                         }
                     },
@@ -167,7 +170,7 @@ struct SurahDetailView: View {
             )
         }
         .sheet(isPresented: $showingPaywall) {
-            PaywallView()
+            PaywallView(context: paywallContext)
         }
         .sheet(isPresented: $showingGoToVerse) {
             GoToVerseSheet(
@@ -590,6 +593,8 @@ struct ModernVerseCard: View {
     let onSummaryTap: () -> Void
     @State private var showingBookmarkFeedback = false
     @State private var showingPaywall = false
+    /// What the user reached for when the paywall fired - drives its hero art.
+    @State private var paywallContext: PaywallContext? = nil
     @State private var canAccessTafsir = false
     @State private var canAccessOverview = false
     @StateObject private var themeManager = ThemeManager.shared
@@ -793,7 +798,10 @@ struct ModernVerseCard: View {
             HStack(spacing: 10) {
                 // Gems (quick overview)
                 Button(action: {
-                    if !canAccessOverview && surah.number > 1 { showingPaywall = true }
+                    if !canAccessOverview && surah.number > 1 {
+                        paywallContext = .inSurah(surah, "Gems")
+                        showingPaywall = true
+                    }
                     else if verse.tafsir != nil { onSummaryTap() }
                 }) {
                     HStack(spacing: 6) {
@@ -811,7 +819,10 @@ struct ModernVerseCard: View {
 
                 // In-Depth (5-layer commentary)
                 Button(action: {
-                    if !canAccessTafsir && surah.number > 1 { showingPaywall = true }
+                    if !canAccessTafsir && surah.number > 1 {
+                        paywallContext = .inSurah(surah, "In-Depth")
+                        showingPaywall = true
+                    }
                     else if verse.tafsir != nil { onTafsirTap() }
                 }) {
                     HStack(spacing: 6) {
@@ -844,7 +855,7 @@ struct ModernVerseCard: View {
                     radius: isCurrentlyPlaying ? 24 : 16, x: 0, y: 8)
         }
         .animation(.easeInOut(duration: 0.3), value: isCurrentlyPlaying)
-        .fullScreenCover(isPresented: $showingPaywall) { PaywallView() }
+        .fullScreenCover(isPresented: $showingPaywall) { PaywallView(context: paywallContext) }
     }
 
     private var legacyBody: some View {
@@ -952,7 +963,7 @@ struct ModernVerseCard: View {
         }
         .animation(.easeInOut(duration: 0.3), value: isCurrentlyPlaying)
         .fullScreenCover(isPresented: $showingPaywall) {
-            PaywallView()
+            PaywallView(context: paywallContext)
         }
     }
 
@@ -963,6 +974,7 @@ struct ModernVerseCard: View {
             // Overview button (shows layer2 classical commentary)
             Button(action: {
                 if !canAccessOverview && surah.number > 1 {
+                    paywallContext = .inSurah(surah, "Gems")
                     showingPaywall = true
                 } else if verse.tafsir != nil {
                     onSummaryTap()
@@ -988,6 +1000,7 @@ struct ModernVerseCard: View {
             // Full commentary button
             Button(action: {
                 if !canAccessTafsir && surah.number > 1 {
+                    paywallContext = .inSurah(surah, "In-Depth")
                     showingPaywall = true
                 } else if verse.tafsir != nil {
                     onTafsirTap()
@@ -1122,6 +1135,8 @@ struct ModernTafsirTabs: View {
     let surah: Surah
     let onDoubleTap: (TafsirLayer) -> Void
     @State private var showingPaywall = false
+    /// What the user reached for when the paywall fired - drives its hero art.
+    @State private var paywallContext: PaywallContext? = nil
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
 
@@ -1140,7 +1155,7 @@ struct ModernTafsirTabs: View {
                 .fill(themeManager.glassEffect)
         )
         .fullScreenCover(isPresented: $showingPaywall) {
-            PaywallView()
+            PaywallView(context: paywallContext)
         }
     }
 
@@ -1180,6 +1195,7 @@ struct ModernTafsirTabs: View {
         .opacity(isLocked ? 0.6 : 1.0)
         .onTapGesture {
             if isLocked {
+                paywallContext = .inSurah(surah, layer.title)
                 showingPaywall = true
             } else {
                 selectedLayer = layer

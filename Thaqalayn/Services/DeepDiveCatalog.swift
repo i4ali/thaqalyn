@@ -26,6 +26,10 @@ struct DeepDiveDescriptor: Identifiable {
     let available: Bool
     /// The dive content, present only when `available`.
     let dive: DeepDive?
+    /// Cover art (Assets.xcassets), composed 4:5 with a dark top so the title can sit
+    /// in the sky. Drives the shelf poster and the list-row tile. Coming-soon entries
+    /// carry one too - the art is what makes the roadmap worth buying into.
+    var coverAssetName: String? = nil
 
     static let all: [DeepDiveDescriptor] = [
         DeepDiveDescriptor(
@@ -36,7 +40,8 @@ struct DeepDiveDescriptor: Identifiable {
             subtitle: LocalizedText(en: "A descent through three depths - Qur'an to Karbala",
                                     ur: "تین گہرائیوں میں اترتا ایک سفر - قرآن سے کربلا تک",
                                     ar: "نزولٌ عبر ثلاثة أعماق - من القرآن إلى كربلاء"),
-            available: true, dive: .yaqin
+            available: true, dive: .yaqin,
+            coverAssetName: "YaqinCover"
         ),
         DeepDiveDescriptor(
             id: "sabr",
@@ -46,7 +51,8 @@ struct DeepDiveDescriptor: Identifiable {
             subtitle: LocalizedText(en: "A descent through three stations - Qur'an to Karbala",
                                     ur: "تین منزلوں میں اترتا ایک سفر - قرآن سے کربلا تک",
                                     ar: "نزولٌ عبر ثلاث محطات - من القرآن إلى كربلاء"),
-            available: true, dive: .sabr
+            available: true, dive: .sabr,
+            coverAssetName: "SabrCover"
         ),
         DeepDiveDescriptor(
             id: "tawakkul",
@@ -56,7 +62,8 @@ struct DeepDiveDescriptor: Identifiable {
             subtitle: LocalizedText(en: "Trusting God with the outcome",
                                     ur: "انجام کو اللہ کے سپرد کر دینا",
                                     ar: "أن تُسلّم النتيجة لله"),
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "TawakkulCover"
         ),
         DeepDiveDescriptor(
             id: "shukr",
@@ -66,7 +73,8 @@ struct DeepDiveDescriptor: Identifiable {
             subtitle: LocalizedText(en: "Turning every blessing into remembrance",
                                     ur: "ہر نعمت کو یاد میں بدل دینا",
                                     ar: "تحويل كل نعمة إلى ذِكر"),
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "ShukrCover"
         ),
         DeepDiveDescriptor(
             id: "ikhlas",
@@ -76,7 +84,8 @@ struct DeepDiveDescriptor: Identifiable {
             subtitle: LocalizedText(en: "Purifying the intention for God alone",
                                     ur: "نیت کو صرف اللہ کے لیے خالص کرنا",
                                     ar: "إخلاص النية لله وحده"),
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "IkhlasCover"
         ),
         DeepDiveDescriptor(
             id: "taqwa",
@@ -86,7 +95,8 @@ struct DeepDiveDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The awareness that guards the heart",
                                     ur: "وہ شعور جو دل کی حفاظت کرے",
                                     ar: "الوعي الذي يحرس القلب"),
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "TaqwaCover"
         ),
         DeepDiveDescriptor(
             id: "rida",
@@ -96,7 +106,8 @@ struct DeepDiveDescriptor: Identifiable {
             subtitle: LocalizedText(en: "Meeting God's decree with a still heart",
                                     ur: "اللہ کے فیصلے کو مطمئن دل سے قبول کرنا",
                                     ar: "لقاء قضاء الله بقلبٍ مطمئن"),
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "RidaCover"
         ),
     ]
 

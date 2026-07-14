@@ -25,6 +25,10 @@ struct SurahExperienceDescriptor: Identifiable {
     let available: Bool
     /// The experience content, present only when `available`.
     let dive: DeepDive?
+    /// Cover art (Assets.xcassets), composed 4:5 with a dark top so the title can sit
+    /// in the sky. Drives the shelf poster and the list-row tile. Coming-soon entries
+    /// carry one too - the art is what makes the roadmap worth buying into.
+    var coverAssetName: String? = nil
 
     static let all: [SurahExperienceDescriptor] = [
         SurahExperienceDescriptor(
@@ -36,7 +40,8 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The Opening - the prayer beneath every prayer",
                                     ur: "فاتحہ - ہر نماز میں چھپی ہوئی دعا",
                                     ar: "الفاتحة - الدعاء الكامن في كل صلاة"),
-            available: true, dive: .surahFatiha
+            available: true, dive: .surahFatiha,
+            coverAssetName: "FatihaCover"
         ),
         SurahExperienceDescriptor(
             id: "surah-baqara",
@@ -47,7 +52,8 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The Cow - the mirror inside the mightiest surah",
                                     ur: "البقرہ - عظیم ترین سورہ کے اندر ایک آئینہ",
                                     ar: "البقرة - مرآةٌ في أعظم السور"),
-            available: true, dive: .surahBaqara
+            available: true, dive: .surahBaqara,
+            coverAssetName: "BaqaraCover"
         ),
         SurahExperienceDescriptor(
             id: "surah-ali-imran",
@@ -58,7 +64,8 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The Family of Imran - one chosen house, and the house that answered it",
                                     ur: "آلِ عمران - ایک برگزیدہ گھرانہ، اور وہ گھرانہ جس نے لبیک کہا",
                                     ar: "آل عمران - بيتٌ اصطفاه الله، والبيتُ الذي أجابه"),
-            available: true, dive: .surahAliImran
+            available: true, dive: .surahAliImran,
+            coverAssetName: "AliImranCover"
         ),
         SurahExperienceDescriptor(
             id: "surah-nisa",
@@ -71,7 +78,8 @@ struct SurahExperienceDescriptor: Identifiable {
                                     ar: "النساء - أمانةٌ واحدة، من مال اليتيم إلى مقام الولاية"),
             // Withdrawn 2026-07-14: the written experience was too hard to follow. Being
             // rewritten for comprehension; content recoverable from git (commit f35b980).
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "NisaCover"
         ),
         SurahExperienceDescriptor(
             id: "surah-yusuf",
@@ -82,7 +90,8 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The most beautiful of stories - loss, patience, reunion",
                                     ur: "بہترین قصہ - جدائی، صبر، وصال",
                                     ar: "أحسن القصص - فقدٌ وصبرٌ ولقاء"),
-            available: true, dive: .surahYusuf
+            available: true, dive: .surahYusuf,
+            coverAssetName: "YusufCover"
         ),
         SurahExperienceDescriptor(
             id: "surah-yasin",
@@ -93,7 +102,8 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The heart of the Qur'an - and what it keeps asking you",
                                     ur: "قرآن کا دل - اور اس کا آپ سے سوال",
                                     ar: "قلب القرآن - وما يسألك عنه"),
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "YasinCover"
         ),
         SurahExperienceDescriptor(
             id: "surah-rahman",
@@ -104,7 +114,8 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "One question, asked thirty-one times",
                                     ur: "ایک سوال، اکتیس بار",
                                     ar: "سؤالٌ واحد، إحدى وثلاثون مرة"),
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "RahmanCover"
         ),
         SurahExperienceDescriptor(
             id: "surah-mulk",
@@ -115,7 +126,8 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The protector - whose hand holds the kingdom",
                                     ur: "محافظ سورہ - بادشاہی کس کے ہاتھ میں ہے",
                                     ar: "السورة الحامية - بيد مَن الملك"),
-            available: false, dive: nil
+            available: false, dive: nil,
+            coverAssetName: "MulkCover"
         ),
     ]
 

@@ -39,7 +39,6 @@ struct JourneyHubView: View {
     /// Set when an available surah experience is tapped - drives its descent.
     @State private var presentedSurahExperience: PresentedSurahExperience?
     /// Set when a premium-gated deep dive is tapped by a non-subscriber.
-    @State private var showingPaywall = false
     /// Set when a locked journey is tapped — drives the "ended / not open yet" alert.
     @State private var lockedAlert: LockedJourneyAlert?
     /// Uniform height every shelf card pins to — the tallest natural card measured
@@ -81,7 +80,8 @@ struct JourneyHubView: View {
                              isAvailable: entry.status.isActive, status: shelfStatus,
                              title: JourneyStrings.title(d.id, lang),
                              description: JourneyStrings.seasonTagline(d.id, lang),
-                             onTap: { handleTap(d, entry.status) })
+                             onTap: { handleTap(d, entry.status) },
+                             coverAssetName: d.coverAssetName)
         }
     }
 
@@ -94,7 +94,8 @@ struct JourneyHubView: View {
             return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: false,
                              isAvailable: d.available, status: shelfStatus,
                              title: d.title(lang), description: d.subtitle(lang),
-                             onTap: { handleDiveTap(d) })
+                             onTap: { handleDiveTap(d) },
+                             coverAssetName: d.coverAssetName)
         }
     }
 
@@ -107,7 +108,8 @@ struct JourneyHubView: View {
             return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: false,
                              isAvailable: d.available, status: shelfStatus,
                              title: d.title(lang), description: d.subtitle(lang),
-                             onTap: { handleSurahExperienceTap(d) })
+                             onTap: { handleSurahExperienceTap(d) },
+                             coverAssetName: d.coverAssetName)
         }
     }
 
@@ -188,8 +190,13 @@ struct JourneyHubView: View {
             }
         }
         .fullScreenCover(item: $presentedDive) { p in
-            if let dive = DeepDiveDescriptor.byId(p.id)?.dive {
-                DeepDiveView(dive: dive) { presentedDive = nil }
+            if let d = DeepDiveDescriptor.byId(p.id), let dive = d.dive {
+                DeepDiveView(dive: dive,
+                             onClose: { presentedDive = nil },
+                             coverAssetName: d.coverAssetName,
+                             lockedPaywallContext: premiumManager.canAccessDeepDive(d.id) ? nil
+                                : PaywallContext(coverAssetName: d.coverAssetName,
+                                                 eyebrow: "\(JourneyStrings.deepDiveEyebrow(lang)) \u{00B7} \(d.title(lang))"))
             }
         }
         .fullScreenCover(item: $presentedSurahExperience) { p in
@@ -206,10 +213,13 @@ struct JourneyHubView: View {
                                          name: .navigateToVerse, object: nil,
                                          userInfo: ["surah": d.surahNumber, "verse": 1])
                                  }
-                             })
+                             },
+                             coverAssetName: d.coverAssetName,
+                             lockedPaywallContext: premiumManager.canAccessSurahExperience(d.id) ? nil
+                                : PaywallContext(coverAssetName: d.coverAssetName,
+                                                 eyebrow: "\(JourneyStrings.surahJourneyEyebrow(lang)) \u{00B7} \(d.title(lang))"))
             }
         }
-        .sheet(isPresented: $showingPaywall) { PaywallView() }
         .onAppear {
             consumePendingJourney()
             consumePendingDeepDive()
@@ -252,17 +262,11 @@ struct JourneyHubView: View {
     /// coming-soon dives reuse the locked overlay with a short "on its way" note.
     private func handleDiveTap(_ d: DeepDiveDescriptor) {
         if d.available {
-            if premiumManager.canAccessDeepDive(d.id) {
-                // Let the card's press squish play before the cover slides up.
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                    presentedDive = PresentedDeepDive(id: d.id)
-                }
-            } else {
-                // Premium-gated dive: soft haptic, then the paywall after the squish.
-                UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                    showingPaywall = true
-                }
+            // Locked or not, the dive opens - a gated reader gets the veiled preview
+            // (threshold + orientation, then the veil). The gate is applied where the
+            // dive is presented, not here.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                presentedDive = PresentedDeepDive(id: d.id)
             }
         } else {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
@@ -278,15 +282,9 @@ struct JourneyHubView: View {
     /// premium-gated taps get the paywall; coming-soon reuses the locked overlay.
     private func handleSurahExperienceTap(_ d: SurahExperienceDescriptor) {
         if d.available {
-            if premiumManager.canAccessSurahExperience(d.id) {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                    presentedSurahExperience = PresentedSurahExperience(id: d.id)
-                }
-            } else {
-                UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                    showingPaywall = true
-                }
+            // Gated readers get the veiled preview rather than a bounce; see handleDiveTap.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                presentedSurahExperience = PresentedSurahExperience(id: d.id)
             }
         } else {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
@@ -358,11 +356,8 @@ struct JourneyHubView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             // Honor the gate even when the dive is reached via a deep link (e.g. a
             // What's New card): non-subscribers get the paywall, not the dive.
-            if premiumManager.canAccessDeepDive(id) {
-                presentedDive = PresentedDeepDive(id: id)
-            } else {
-                showingPaywall = true
-            }
+            // The gate is honoured by veiling the descent, not by refusing to open it.
+            presentedDive = PresentedDeepDive(id: id)
         }
     }
 
@@ -373,11 +368,7 @@ struct JourneyHubView: View {
         guard SurahExperienceDescriptor.byId(id)?.dive != nil else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             // Honor the gate even via deep link: non-subscribers get the paywall.
-            if premiumManager.canAccessSurahExperience(id) {
-                presentedSurahExperience = PresentedSurahExperience(id: id)
-            } else {
-                showingPaywall = true
-            }
+            presentedSurahExperience = PresentedSurahExperience(id: id)
         }
     }
 }

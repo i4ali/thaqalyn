@@ -14,6 +14,8 @@ struct FullScreenCommentaryView: View {
     let initialLayer: TafsirLayer
     @State private var selectedLayer: TafsirLayer
     @State private var showingPaywall = false
+    /// What the user reached for when the paywall fired - drives its hero art.
+    @State private var paywallContext: PaywallContext? = nil
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
@@ -40,7 +42,7 @@ struct FullScreenCommentaryView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura(glowOpacity: 0.36, starCount: 14)
         .fullScreenCover(isPresented: $showingPaywall) {
-            PaywallView()
+            PaywallView(context: paywallContext)
         }
         .onDisappear {
             tafsirReader.stop()
@@ -124,7 +126,11 @@ struct FullScreenCommentaryView: View {
         let isActive = selectedLayer == layer && !isLocked
         let chip = layerChipColor(for: layer)
         return Button(action: {
-            if isLocked { showingPaywall = true }
+            if isLocked {
+                // They are already reading, and reached for the next layer by name.
+                paywallContext = .inSurah(surah, layer.title)
+                showingPaywall = true
+            }
             else { withAnimation(.easeInOut(duration: 0.3)) { selectedLayer = layer } }
         }) {
             VStack(spacing: 7) {
@@ -389,7 +395,7 @@ struct FullScreenCommentaryView: View {
 
         return Button(action: {
             if isLocked {
-                // Show paywall for locked layers
+                paywallContext = .inSurah(surah, layer.title)
                 showingPaywall = true
             } else {
                 withAnimation(.easeInOut(duration: 0.3)) {

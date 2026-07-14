@@ -30,7 +30,11 @@ struct SurahExperienceCard: View {
             EmCard(glow: descriptor.available,
                    borderColor: descriptor.available ? tm.accentColor.opacity(0.4) : nil) {
                 HStack(spacing: 14) {
-                    EmIconChip(sfSymbol: descriptor.sfSymbol, active: descriptor.available)
+                    if let cover = descriptor.coverAssetName {
+                        EmCoverTile(assetName: cover, dimmed: !descriptor.available)
+                    } else {
+                        EmIconChip(sfSymbol: descriptor.sfSymbol, active: descriptor.available)
+                    }
                     VStack(alignment: .leading, spacing: 4) {
                         if locked {
                             premiumPill

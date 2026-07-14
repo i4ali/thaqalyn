@@ -45,6 +45,9 @@ struct JourneyDescriptor: Identifiable {
     /// Optional custom status (for journeys whose schedule isn't a single content month,
     /// e.g. Fatimiyya's two windows). When set, `status(using:)` uses it verbatim.
     var statusOverride: ((IslamicCalendarManager) -> JourneyStatus)? = nil
+    /// Cover art (Assets.xcassets) for the hub shelf poster. These are the same assets the
+    /// journey's own `EmJourneyHeader` already uses - the shelf just never showed them.
+    var coverAssetName: String? = nil
 
     static let all: [JourneyDescriptor] = [
         JourneyDescriptor(
@@ -52,21 +55,24 @@ struct JourneyDescriptor: Identifiable {
             sfSymbol: "moon.stars.fill", contentStartMonth: 9,
             isActive: { IslamicCalendarManager.shared.isRamadanSeason() },
             statusLine: { IslamicCalendarManager.shared.ramadanSeasonStatus() },
-            destination: { AnyView(RamadanJourneyView()) }
+            destination: { AnyView(RamadanJourneyView()) },
+            coverAssetName: "RamadanCover"
         ),
         JourneyDescriptor(
             id: "hajj", eyebrow: "10-Day Journey", title: "Dhul-Hijjah",
             sfSymbol: "building.columns.fill", contentStartMonth: 12,
             isActive: { IslamicCalendarManager.shared.isHajjSeason() },
             statusLine: { IslamicCalendarManager.shared.hajjSeasonStatus() },
-            destination: { AnyView(HajjJourneyView()) }
+            destination: { AnyView(HajjJourneyView()) },
+            coverAssetName: "HajjCover"
         ),
         JourneyDescriptor(
             id: "muharram", eyebrow: "10-Day Journey", title: "Muharram",
             sfSymbol: "flame.fill", contentStartMonth: 1,
             isActive: { IslamicCalendarManager.shared.isMuharramSeason() },
             statusLine: { IslamicCalendarManager.shared.muharramSeasonStatus() },
-            destination: { AnyView(MuharramJourneyView()) }
+            destination: { AnyView(MuharramJourneyView()) },
+            coverAssetName: "MuharramCover"
         ),
         JourneyDescriptor(
             id: "fatimiyya", eyebrow: "Mourning of az-Zahra (AS)", title: "Fatimiyya",
@@ -109,7 +115,8 @@ struct JourneyDescriptor: Identifiable {
                 let nextReturn = hijri(year + 1, 5, 8)
                 return .ended(daysUntil: daysBetween(now, nextReturn),
                               returnsLabel: JourneyStrings.returns(medium(nextReturn), lang))
-            }
+            },
+            coverAssetName: "FatimiyyaCover"
         ),
         JourneyDescriptor(
             id: "arbaeen", eyebrow: "40-Day Journey", title: "Arbaeen",
@@ -149,7 +156,8 @@ struct JourneyDescriptor: Identifiable {
                 let nextStart = hijri(year + 1, 1, 11)
                 return .ended(daysUntil: daysBetween(now, nextStart),
                               returnsLabel: JourneyStrings.returns(medium(nextStart), lang))
-            }
+            },
+            coverAssetName: "ArbaeenCover"
         ),
     ]
 

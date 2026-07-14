@@ -315,6 +315,34 @@ struct EmIconChip: View {
     }
 }
 
+// MARK: - Cover tile
+
+/// A small portrait tile of a piece of cover art, used on list rows where an
+/// `EmIconChip` would otherwise sit. Sized 4:5 to match how every cover is composed,
+/// so the tile shows the whole image rather than a crop of it - a mini poster.
+struct EmCoverTile: View {
+    @ObservedObject private var tm = ThemeManager.shared
+    let assetName: String
+    var width: CGFloat = 54
+    /// Coming-soon rows dim their art the same way the row itself dims.
+    var dimmed = false
+
+    private var height: CGFloat { (width * 5 / 4).rounded() }
+
+    var body: some View {
+        Image(assetName)
+            .resizable()
+            .scaledToFill()
+            .frame(width: width, height: height)
+            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .stroke(tm.strokeColor, lineWidth: 1)
+            )
+            .opacity(dimmed ? 0.7 : 1)
+    }
+}
+
 // MARK: - Gold CTA
 
 struct EmGoldCTA: View {
