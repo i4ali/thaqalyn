@@ -30,37 +30,45 @@ struct SurahExperienceDescriptor: Identifiable {
         SurahExperienceDescriptor(
             id: "surah-fatiha",
             surahNumber: 1,
-            title: "Surah al-Fatiha",
+            title: LocalizedText(en: "Surah al-Fatiha", ur: "سورۂ فاتحہ", ar: "سورة الفاتحة"),
             titleAr: "الْفَاتِحَة",
             sfSymbol: "book.closed",
-            subtitle: "The Opening - the prayer beneath every prayer",
+            subtitle: LocalizedText(en: "The Opening - the prayer beneath every prayer",
+                                    ur: "فاتحہ - ہر نماز میں چھپی ہوئی دعا",
+                                    ar: "الفاتحة - الدعاء الكامن في كل صلاة"),
             available: true, dive: .surahFatiha
         ),
         SurahExperienceDescriptor(
             id: "surah-baqara",
             surahNumber: 2,
-            title: "Surah al-Baqara",
+            title: LocalizedText(en: "Surah al-Baqara", ur: "سورۂ بقرہ", ar: "سورة البقرة"),
             titleAr: "الْبَقَرَة",
             sfSymbol: "hands.sparkles.fill",
-            subtitle: "The Cow - the mirror inside the mightiest surah",
+            subtitle: LocalizedText(en: "The Cow - the mirror inside the mightiest surah",
+                                    ur: "البقرہ - عظیم ترین سورہ کے اندر ایک آئینہ",
+                                    ar: "البقرة - مرآةٌ في أعظم السور"),
             available: true, dive: .surahBaqara
         ),
         SurahExperienceDescriptor(
             id: "surah-ali-imran",
             surahNumber: 3,
-            title: "Surah Al Imran",
+            title: LocalizedText(en: "Surah Al Imran", ur: "سورۂ آلِ عمران", ar: "سورة آل عمران"),
             titleAr: "آلِ عِمْرَان",
             sfSymbol: "person.3.sequence.fill",
-            subtitle: "The Family of Imran - one chosen house, and the house that answered it",
+            subtitle: LocalizedText(en: "The Family of Imran - one chosen house, and the house that answered it",
+                                    ur: "آلِ عمران - ایک برگزیدہ گھرانہ، اور وہ گھرانہ جس نے لبیک کہا",
+                                    ar: "آل عمران - بيتٌ اصطفاه الله، والبيتُ الذي أجابه"),
             available: true, dive: .surahAliImran
         ),
         SurahExperienceDescriptor(
             id: "surah-nisa",
             surahNumber: 4,
-            title: "Surah al-Nisa",
+            title: LocalizedText(en: "Surah al-Nisa", ur: "سورۂ نساء", ar: "سورة النساء"),
             titleAr: "النِّسَاء",
             sfSymbol: "building.columns",
-            subtitle: "The Women - one trust, from the orphan's coin to the seat of authority",
+            subtitle: LocalizedText(en: "The Women - one trust, from the orphan's coin to the seat of authority",
+                                    ur: "النساء - ایک ہی امانت، یتیم کے مال سے لے کر منصبِ ولایت تک",
+                                    ar: "النساء - أمانةٌ واحدة، من مال اليتيم إلى مقام الولاية"),
             // Withdrawn 2026-07-14: the written experience was too hard to follow. Being
             // rewritten for comprehension; content recoverable from git (commit f35b980).
             available: false, dive: nil
