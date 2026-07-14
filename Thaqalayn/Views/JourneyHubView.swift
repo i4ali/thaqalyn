@@ -15,7 +15,7 @@ struct PresentedJourney: Identifiable { let id: String }
 /// Identifiable wrapper so `.fullScreenCover(item:)` can key on a deep-dive id.
 struct PresentedDeepDive: Identifiable { let id: String }
 
-/// Identifiable wrapper so `.fullScreenCover(item:)` can key on a sūrah-experience id.
+/// Identifiable wrapper so `.fullScreenCover(item:)` can key on a surah-experience id.
 struct PresentedSurahExperience: Identifiable { let id: String }
 
 /// Content for the alert shown when a locked (non-active) journey is tapped.
@@ -36,7 +36,7 @@ struct JourneyHubView: View {
     @State private var presented: PresentedJourney?
     /// Set when an available deep dive is tapped — drives its full-screen descent.
     @State private var presentedDive: PresentedDeepDive?
-    /// Set when an available sūrah experience is tapped - drives its descent.
+    /// Set when an available surah experience is tapped - drives its descent.
     @State private var presentedSurahExperience: PresentedSurahExperience?
     /// Set when a premium-gated deep dive is tapped by a non-subscriber.
     @State private var showingPaywall = false
@@ -98,7 +98,7 @@ struct JourneyHubView: View {
         }
     }
 
-    /// Inside the Sūrah shelf items (catalog order already front-loads available).
+    /// Inside the Surah shelf items (catalog order already front-loads available).
     private var surahItems: [ShelfItem] {
         SurahExperienceDescriptor.all.map { d in
             let shelfStatus: ShelfStatus = d.available
@@ -199,7 +199,7 @@ struct JourneyHubView: View {
                              onReadSurah: {
                                  // Dismiss the descent, then hand off to the Quran tab -
                                  // MainTabView's .navigateToVerse listener stashes the deep
-                                 // link and switches tabs; HomeView pushes the sūrah.
+                                 // link and switches tabs; HomeView pushes the surah.
                                  presentedSurahExperience = nil
                                  DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
                                      NotificationCenter.default.post(
@@ -274,7 +274,7 @@ struct JourneyHubView: View {
         }
     }
 
-    /// Available sūrah experiences open their descent (after the press squish);
+    /// Available surah experiences open their descent (after the press squish);
     /// premium-gated taps get the paywall; coming-soon reuses the locked overlay.
     private func handleSurahExperienceTap(_ d: SurahExperienceDescriptor) {
         if d.available {
@@ -366,7 +366,7 @@ struct JourneyHubView: View {
         }
     }
 
-    /// Opens a sūrah experience requested from another tab (e.g. a What's New card).
+    /// Opens a surah experience requested from another tab (e.g. a What's New card).
     private func consumePendingSurahExperience() {
         guard let id = router.pendingSurahExperienceId else { return }
         router.pendingSurahExperienceId = nil

@@ -43,7 +43,7 @@ struct SearchResultsView: View {
     @ViewBuilder private var surahSection: some View {
         if !results.surahs.isEmpty {
             sectionLabel(QuranTabStrings.surahsLabel(lang), count: results.surahs.count)
-            // Same row as the browse list, so a sūrah with an "Inside the Sūrah"
+            // Same row as the browse list, so a surah with an "Inside the Surah"
             // experience shows the Read & Tafsir | Journey toggle here too.
             ForEach(results.surahs) { hit in
                 SurahListRow(surahWithTafsir: hit.surah)

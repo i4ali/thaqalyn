@@ -378,8 +378,8 @@ class IslamicCalendarManager: ObservableObject {
         let month = currentIslamicMonth()
         let day = currentIslamicDay()
         switch month {
-        case 5 where (8...18).contains(day): return seasonText(en: "First Fatimiyya — Yā Zahrā (AS)", ur: "پہلی فاطمیہ — یا زہراؑ", ar: "الفاطمية الأولى - يا زهراء (ع)")
-        case 6 where (1...8).contains(day):  return seasonText(en: "Second Fatimiyya — Yā Zahrā (AS)", ur: "دوسری فاطمیہ — یا زہراؑ", ar: "الفاطمية الثانية - يا زهراء (ع)")
+        case 5 where (8...18).contains(day): return seasonText(en: "First Fatimiyya — Ya Zahra (AS)", ur: "پہلی فاطمیہ — یا زہراؑ", ar: "الفاطمية الأولى - يا زهراء (ع)")
+        case 6 where (1...8).contains(day):  return seasonText(en: "Second Fatimiyya — Ya Zahra (AS)", ur: "دوسری فاطمیہ — یا زہراؑ", ar: "الفاطمية الثانية - يا زهراء (ع)")
         default: return ""
         }
     }

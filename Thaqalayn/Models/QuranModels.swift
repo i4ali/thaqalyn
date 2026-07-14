@@ -660,29 +660,82 @@ enum CommentaryLanguage: String, CaseIterable, Codable {
     }
 }
 
-// MARK: - Daily Verse Notification Models
+// MARK: - Daily Verse
 
-struct IslamicMonthVerseData: Codable {
-    let months: [IslamicMonth]
-}
-
-struct IslamicMonth: Codable {
-    let month: Int
-    let name: String
-    let arabicName: String
-    let theme: String
-    let significance: String
+/// The whole pool, decoded from daily_verses.json.
+struct DailyVersePool: Codable {
+    let version: Int
+    let themes: [String]
     let verses: [DailyVerseEntry]
+    let sacredDays: [SacredDay]
 }
 
+/// One curated reference. Carries no verse text - Arabic, translations and
+/// tafsir all hydrate from quran_data.json at read time.
 struct DailyVerseEntry: Codable, Identifiable {
+    let id: Int
     let surah: Int
     let verse: Int
-    let relevance: String
-    let theme: String
+    /// Vocabulary key. Drives the no-two-days-running spacing rule.
+    let themeKey: String
+    let themeEn: String
+    let themeUr: String
+    let themeAr: String
+}
 
-    var id: String {
-        return "\(surah):\(verse)"
+/// A Hijri date that overrides the pool.
+struct SacredDay: Codable {
+    let month: Int   // Hijri month, 1-12
+    let day: Int     // Hijri day, 1-30
+    let surah: Int
+    let verse: Int
+    let occasionEn: String, occasionUr: String, occasionAr: String
+    let themeEn: String, themeUr: String, themeAr: String
+}
+
+/// What a surface renders. `occasion` is non-nil only on a sacred day.
+struct DailyVerseSelection: Equatable {
+    let surah: Int
+    let verse: Int
+    /// The vocabulary key, or nil on a sacred day (which is not drawn from the pool).
+    /// This is the axis the no-two-days-running rule is enforced on - NOT `themeEn`,
+    /// which is a per-verse display label and is near-unique, so comparing it would
+    /// silently pass even when the rule is broken.
+    let themeKey: String?
+    let themeEn: String, themeUr: String, themeAr: String
+    let occasionEn: String?, occasionUr: String?, occasionAr: String?
+
+    var id: String { "\(surah):\(verse)" }
+
+    func theme(_ language: CommentaryLanguage) -> String {
+        switch language {
+        case .arabic: return themeAr
+        case .urdu:   return themeUr
+        default:      return themeEn
+        }
+    }
+
+    /// nil on an ordinary day.
+    func occasion(_ language: CommentaryLanguage) -> String? {
+        switch language {
+        case .arabic: return occasionAr
+        case .urdu:   return occasionUr
+        default:      return occasionEn
+        }
+    }
+
+    init(entry: DailyVerseEntry) {
+        surah = entry.surah; verse = entry.verse
+        themeKey = entry.themeKey
+        themeEn = entry.themeEn; themeUr = entry.themeUr; themeAr = entry.themeAr
+        occasionEn = nil; occasionUr = nil; occasionAr = nil
+    }
+
+    init(sacred: SacredDay) {
+        surah = sacred.surah; verse = sacred.verse
+        themeKey = nil
+        themeEn = sacred.themeEn; themeUr = sacred.themeUr; themeAr = sacred.themeAr
+        occasionEn = sacred.occasionEn; occasionUr = sacred.occasionUr; occasionAr = sacred.occasionAr
     }
 }
 
@@ -738,18 +791,6 @@ struct VerseProgress: Codable, Identifiable {
 }
 
 // MARK: - Today Tab Models
-
-struct DailyMessage: Codable, Identifiable {
-    let id: Int               // stable index in JSON
-    let arabic: String?       // optional; some entries are translation-only
-    let english: String       // headline (curly-quoted at render time)
-    let surah: Int
-    let verse: Int
-}
-
-struct DailyMessagesData: Codable {
-    let messages: [DailyMessage]
-}
 
 struct LastReadInfo {
     let surahNumber: Int
@@ -1152,7 +1193,7 @@ struct PropheticParallel: Codable, Identifiable {
     let verses: [ParallelVerse]        // 2-3 key verses
     let relatedStoryId: String?        // Links to PropheticStory.id
     let icon: String                   // SF Symbol name
-    /// One narration from the Ahlul Bayt (ʿa) about this parallel's prophet. Optional so
+    /// One narration from the Ahlul Bayt (a) about this parallel's prophet. Optional so
     /// parallels without one still decode.
     let narration: AhlulBaytNarration?
 
@@ -1609,7 +1650,7 @@ struct FastingCategory: Codable, Identifiable {
     let descriptionAr: String
     let descriptionUr: String
     let verses: [FastingVerse]
-    /// One narration from the Ahlul Bayt (ʿa) tied to this category's theme. Optional so
+    /// One narration from the Ahlul Bayt (a) tied to this category's theme. Optional so
     /// categories without a narration still decode.
     let narration: AhlulBaytNarration?
 
@@ -1656,7 +1697,7 @@ struct FastingVerse: Codable, Identifiable {
     }
 }
 
-/// A single attributed narration from the Ahlul Bayt (ʿa) — shared by the Fasting and
+/// A single attributed narration from the Ahlul Bayt (a) — shared by the Fasting and
 /// Prophetic Parallels features. The Arabic narration is always shown; the
 /// translation is read by language (Arabic readers read the narration itself), and the
 /// source citation is localized like every other field in this feature.

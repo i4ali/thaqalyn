@@ -69,7 +69,7 @@ struct JourneyDescriptor: Identifiable {
             destination: { AnyView(MuharramJourneyView()) }
         ),
         JourneyDescriptor(
-            id: "fatimiyya", eyebrow: "Mourning of az-Zahrā (AS)", title: "Fatimiyya",
+            id: "fatimiyya", eyebrow: "Mourning of az-Zahra (AS)", title: "Fatimiyya",
             sfSymbol: "tulip", contentStartMonth: 5,
             isActive: { IslamicCalendarManager.shared.isFatimiyyaSeason() },
             statusLine: { IslamicCalendarManager.shared.fatimiyyaSeasonStatus() },

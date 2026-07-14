@@ -15,7 +15,7 @@ import Foundation
 
 enum QuranTabStrings {
     static func greeting(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "السلام عليكم"; case .urdu: return "السلام علیکم"; default: return "Assalāmu ʿalaykum" }
+        switch l { case .arabic: return "السلام عليكم"; case .urdu: return "السلام علیکم"; default: return "Assalamu alaykum" }
     }
     /// Emerald header eyebrow.
     static func nobleQuranEyebrow(_ l: CommentaryLanguage) -> String {

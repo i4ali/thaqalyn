@@ -14,7 +14,7 @@ import SwiftUI
 // Arabic/Urdu). The Hijri date pill is intentionally kept English.
 private enum TodayStrings {
     static func greeting(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "السلام عليكم"; case .urdu: return "السلام علیکم"; default: return "Assalāmu ʿalaykum" }
+        switch l { case .arabic: return "السلام عليكم"; case .urdu: return "السلام علیکم"; default: return "Assalamu alaykum" }
     }
     /// Greeting with the user's name appended (RTL-aware separator). Falls back
     /// to the bare greeting when no name is set.
@@ -39,7 +39,7 @@ private enum TodayStrings {
         switch l { case .arabic: return "ابدأ رحلتك"; case .urdu: return "اپنا سفر شروع کریں"; default: return "Start your journey" }
     }
     static func openFatiha(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "افتح سورة الفاتحة"; case .urdu: return "سورۃ الفاتحہ کھولیں"; default: return "Open Surah Al-Fātiḥa" }
+        switch l { case .arabic: return "افتح سورة الفاتحة"; case .urdu: return "سورۃ الفاتحہ کھولیں"; default: return "Open Surah Al-Fatiha" }
     }
     static func begin(_ l: CommentaryLanguage) -> String {
         switch l { case .arabic: return "ابدأ"; case .urdu: return "شروع کریں"; default: return "Begin" }
@@ -62,7 +62,7 @@ struct TodayView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var progressManager = ProgressManager.shared
-    @StateObject private var dailyMessage = DailyMessageProvider.shared
+    @StateObject private var dailyVerse = DailyVerseProvider.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var duasManager = DuasManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
@@ -112,7 +112,7 @@ struct TodayView: View {
             }
         }
         .refreshable {
-            dailyMessage.refreshIfDayChanged()
+            dailyVerse.refreshIfDayChanged()
         }
         .sheet(isPresented: $showingNotifications) {
             NotificationsView()
@@ -126,7 +126,7 @@ struct TodayView: View {
         .onAppear { hasAppeared = true; whatsNew.refresh() }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
-                dailyMessage.refreshIfDayChanged()
+                dailyVerse.refreshIfDayChanged()
                 DailyChallengeProvider.shared.refreshIfDayChanged()
                 DailyCrosswordProvider.shared.refreshIfDayChanged()
                 DailyCrosswordManager.shared.refreshForToday()
@@ -154,10 +154,10 @@ struct TodayView: View {
                 }
 
                 DailyReminderBanner(
-                    message: dailyMessage.today,
+                    selection: dailyVerse.today,
                     headline: reminderHeadline.text,
                     isUrdu: reminderHeadline.isUrdu,
-                    surahName: surahName(for: dailyMessage.today.surah),
+                    surahName: surahName(for: dailyVerse.today.surah),
                     themeManager: themeManager,
                     onTap: { openMessageSource() }
                 )
@@ -202,16 +202,20 @@ struct TodayView: View {
         }
     }
 
-    /// Daily-reminder headline in the commentary language: Urdu shows the
-    /// Jawadi verse translation (the curated quote only exists in English);
-    /// any other language falls back to the English line.
+    /// Daily-reminder headline in the commentary language. Both translations now
+    /// come from quran_data.json (the old pool inlined its own English; the new one
+    /// stores references only), so Urdu readers finally get the Jawadi translation
+    /// rather than silently falling back to English.
     private var reminderHeadline: (text: String, isUrdu: Bool) {
-        if languageManager.selectedLanguage == .urdu,
-           let verse = dataManager.getVerse(surah: dailyMessage.today.surah, verse: dailyMessage.today.verse),
-           verse.usesUrduTranslation(for: .urdu) {
+        guard let verse = dataManager.getVerse(surah: dailyVerse.today.surah,
+                                               verse: dailyVerse.today.verse) else {
+            print("⚠️ TodayView: daily verse \(dailyVerse.today.id) did not hydrate")
+            return ("", false)
+        }
+        if languageManager.selectedLanguage == .urdu, verse.usesUrduTranslation(for: .urdu) {
             return (verse.displayTranslation(for: .urdu), true)
         }
-        return (dailyMessage.today.english, false)
+        return (verse.translation, false)
     }
 
     private func surahName(for surahNumber: Int) -> String {
@@ -222,12 +226,12 @@ struct TodayView: View {
     }
 
     private func openMessageSource() {
-        guard let surah = dataManager.availableSurahs.first(where: { $0.surah.number == dailyMessage.today.surah }) else {
-            print("⚠️ TodayView: daily-message surah \(dailyMessage.today.surah) not in availableSurahs")
+        guard let surah = dataManager.availableSurahs.first(where: { $0.surah.number == dailyVerse.today.surah }) else {
+            print("⚠️ TodayView: daily-message surah \(dailyVerse.today.surah) not in availableSurahs")
             return
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-            targetVerseNumber = dailyMessage.today.verse
+            targetVerseNumber = dailyVerse.today.verse
             selectedSurahForDeepLink = surah
         }
     }
@@ -350,7 +354,7 @@ private struct HijriDatePill: View {
 }
 
 private struct DailyReminderBanner: View {
-    let message: DailyMessage
+    let selection: DailyVerseSelection
     let headline: String
     let isUrdu: Bool
     let surahName: String
@@ -368,7 +372,7 @@ private struct DailyReminderBanner: View {
     }
 
     private var sourceLabel: String {
-        "\(surahName) · \(message.surah):\(message.verse)"
+        "\(surahName) · \(selection.surah):\(selection.verse)"
     }
 
     private var shareText: String {
@@ -725,7 +729,7 @@ private struct EmeraldTodayView: View {
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var progressManager = ProgressManager.shared
-    @ObservedObject private var dailyMessage = DailyMessageProvider.shared
+    @ObservedObject private var dailyVerse = DailyVerseProvider.shared
     @ObservedObject private var duasManager = DuasManager.shared
     @ObservedObject private var calendarManager = IslamicCalendarManager.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
@@ -749,10 +753,10 @@ private struct EmeraldTodayView: View {
                     WhatsNewCard(item: item, selectedTab: $selectedTab)
                 }
                 EmDailyReminderHero(
-                    message: dailyMessage.today,
+                    selection: dailyVerse.today,
                     headline: reminderHeadline.text,
                     isUrdu: reminderHeadline.isUrdu,
-                    surahName: surahName(for: dailyMessage.today.surah),
+                    surahName: surahName(for: dailyVerse.today.surah),
                     onTap: openMessageSource
                 )
                 EmContinueReadingCard(
@@ -810,19 +814,23 @@ private struct EmeraldTodayView: View {
     private func surahName(for n: Int) -> String {
         dataManager.availableSurahs.first(where: { $0.surah.number == n })?.surah.englishName ?? "Surah \(n)"
     }
-    /// Urdu shows the Jawadi verse translation (curated quote is English-only).
+    /// Both translations come from quran_data.json now, so Urdu readers get the
+    /// Jawadi translation instead of silently falling back to English.
     private var reminderHeadline: (text: String, isUrdu: Bool) {
-        if languageManager.selectedLanguage == .urdu,
-           let verse = dataManager.getVerse(surah: dailyMessage.today.surah, verse: dailyMessage.today.verse),
-           verse.usesUrduTranslation(for: .urdu) {
+        guard let verse = dataManager.getVerse(surah: dailyVerse.today.surah,
+                                               verse: dailyVerse.today.verse) else {
+            print("⚠️ EmeraldTodayView: daily verse \(dailyVerse.today.id) did not hydrate")
+            return ("", false)
+        }
+        if languageManager.selectedLanguage == .urdu, verse.usesUrduTranslation(for: .urdu) {
             return (verse.displayTranslation(for: .urdu), true)
         }
-        return (dailyMessage.today.english, false)
+        return (verse.translation, false)
     }
     private func openMessageSource() {
-        guard let s = dataManager.availableSurahs.first(where: { $0.surah.number == dailyMessage.today.surah }) else { return }
+        guard let s = dataManager.availableSurahs.first(where: { $0.surah.number == dailyVerse.today.surah }) else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-            targetVerseNumber = dailyMessage.today.verse
+            targetVerseNumber = dailyVerse.today.verse
             selectedSurahForDeepLink = s
         }
     }
@@ -855,7 +863,7 @@ private struct EmeraldTodayView: View {
 private struct EmDailyReminderHero: View {
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
-    let message: DailyMessage
+    let selection: DailyVerseSelection
     let headline: String
     let isUrdu: Bool
     let surahName: String
@@ -867,7 +875,7 @@ private struct EmDailyReminderHero: View {
     }
 
     private var sourceLabel: String {
-        "\(surahName) \u{00B7} \(message.surah):\(message.verse)"
+        "\(surahName) \u{00B7} \(selection.surah):\(selection.verse)"
     }
 
     var body: some View {

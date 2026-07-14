@@ -2,9 +2,9 @@
 //  JourneyModeToggle.swift
 //  Thaqalayn
 //
-//  The segmented "Read & Tafsir | Journey" control attached under a sūrah's
-//  Quran-list card (browse + search), for sūrahs that have a built "Inside the
-//  Sūrah" experience. The Read tab pushes the reading view; the Journey tab
+//  The segmented "Read & Tafsir | Journey" control attached under a surah's
+//  Quran-list card (browse + search), for surahs that have a built "Inside the
+//  Surah" experience. The Read tab pushes the reading view; the Journey tab
 //  opens the immersive dive (premium-gated). The Journey tab is alive - a
 //  breathing glow, a diagonal light-sweep, and embers rising behind the label -
 //  to signal an experience waiting behind the tap. No icon, no arrow.
@@ -19,7 +19,7 @@
 
 import SwiftUI
 
-/// The split-toggle region under a sūrah card. Squared top + rounded bottom with
+/// The split-toggle region under a surah card. Squared top + rounded bottom with
 /// a hairline top divider so the card and the toggle read as one card - matching
 /// the `squaredBottom` treatment on `ModernSurahCard`.
 struct JourneyModeToggle<ReadDestination: View>: View {
@@ -30,7 +30,7 @@ struct JourneyModeToggle<ReadDestination: View>: View {
     let descriptor: SurahExperienceDescriptor
     /// True when the experience is premium-gated for this user - surfaces a PREMIUM chip.
     let locked: Bool
-    /// The reading view for this sūrah; the Read tab pushes it.
+    /// The reading view for this surah; the Read tab pushes it.
     @ViewBuilder var readDestination: () -> ReadDestination
     /// Fired when the Journey tab is tapped (the caller runs the premium check).
     let onJourney: () -> Void

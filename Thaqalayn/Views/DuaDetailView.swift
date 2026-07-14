@@ -307,10 +307,10 @@ struct DuaDetailView: View {
             situationAr: "لِلصِّحَّةِ وَالشِّفَاءِ",
             situationUr: "صحت و شفا کے لیے",
             arabic: "اللّٰهُمَّ اشْفِنِي بِشِفَائِكَ وَدَاوِنِي بِدَوَائِكَ وَعَافِنِي مِنْ بَلَائِكَ",
-            transliteration: "Allāhumma-shfinī bishifāʾik, wa dāwinī bidawāʾik, wa ʿāfinī min balāʾik",
+            transliteration: "Allahumma-shfini bishifa'ik, wa dawini bidawa'ik, wa afini min bala'ik",
             translationEn: "O Allah, heal me with Your healing, remedy me with Your remedy, and grant me well-being from Your affliction.",
             translationUr: "اے اللہ! مجھے اپنی شفا سے شفا عطا فرما، اپنی دوا سے میرا علاج فرما، اور اپنی آزمائش سے مجھے عافیت عطا فرما۔",
-            source: "Supplication for healing, narrated from the Ahlul Bayt (ʿa)",
+            source: "Supplication for healing, narrated from the Ahlul Bayt (a)",
             category: "health",
             surahNumber: nil,
             verseNumber: nil

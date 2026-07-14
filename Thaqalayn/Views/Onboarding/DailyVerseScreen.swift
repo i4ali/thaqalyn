@@ -11,6 +11,8 @@ struct DailyVerseScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var notificationManager = NotificationManager.shared
     @StateObject private var dataManager = DataManager.shared
+    @StateObject private var dailyVerse = DailyVerseProvider.shared
+    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Binding var notificationsEnabled: Bool
     @State private var isVisible = false
 
@@ -46,18 +48,18 @@ struct DailyVerseScreen: View {
                     }
 
                     // Notification preview card
-                    if let todayVerse = notificationManager.selectTodayVerse(),
-                       let monthData = notificationManager.currentMonthData(),
-                       let verse = dataManager.getVerse(surah: todayVerse.surah, verse: todayVerse.verse) {
+                    if let verse = dataManager.getVerse(surah: dailyVerse.today.surah,
+                                                        verse: dailyVerse.today.verse) {
                         VStack(alignment: .leading, spacing: 16) {
-                            // Header
+                            // Header. On a sacred day the occasion replaces the theme line.
                             HStack {
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text("Verse of the Day")
                                         .font(.system(size: 14, weight: .semibold))
                                         .foregroundColor(themeManager.secondaryText)
 
-                                    Text(monthData.name)
+                                    Text(dailyVerse.today.occasion(languageManager.selectedLanguage)
+                                         ?? dailyVerse.today.theme(languageManager.selectedLanguage))
                                         .font(.system(size: 16, weight: .bold))
                                         .foregroundColor(themeManager.primaryText)
                                 }
@@ -86,13 +88,13 @@ struct DailyVerseScreen: View {
                                     .lineSpacing(4)
 
                                 // Reference
-                                Text("Surah \(todayVerse.surah), Verse \(todayVerse.verse)")
+                                Text("Surah \(dailyVerse.today.surah), Verse \(dailyVerse.today.verse)")
                                     .font(.system(size: 13, weight: .semibold))
                                     .foregroundColor(themeManager.tertiaryText)
 
                                 // Theme tag
                                 HStack {
-                                    Text(todayVerse.theme)
+                                    Text(dailyVerse.today.theme(languageManager.selectedLanguage))
                                         .font(.system(size: 12, weight: .medium))
                                         .foregroundColor(ThemeManager.chipGold.fg)
                                         .padding(.horizontal, 12)

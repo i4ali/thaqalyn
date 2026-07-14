@@ -1,0 +1,3540 @@
+{
+  "version": 1,
+  "themes": [
+    "tawhid",
+    "mercy",
+    "patience",
+    "gratitude",
+    "trust",
+    "repentance",
+    "prayer",
+    "remembrance",
+    "knowledge",
+    "justice",
+    "charity",
+    "character",
+    "family",
+    "hardship-and-ease",
+    "creation",
+    "hereafter",
+    "guidance",
+    "striving"
+  ],
+  "verses": [
+    {
+      "surah": 2,
+      "verse": 115,
+      "themeKey": "tawhid",
+      "themeEn": "Wherever you turn, His face",
+      "themeUr": "جدھر بھی رخ کرو، وہیں اللہ ہے",
+      "themeAr": "أينما تولوا فثم وجه الله",
+      "id": 0
+    },
+    {
+      "surah": 2,
+      "verse": 255,
+      "themeKey": "tawhid",
+      "themeEn": "Neither drowsiness nor sleep",
+      "themeUr": "نہ اونگھ آتی ہے، نہ نیند",
+      "themeAr": "لا تأخذه سنة ولا نوم",
+      "id": 1
+    },
+    {
+      "surah": 3,
+      "verse": 18,
+      "themeKey": "tawhid",
+      "themeEn": "God Himself bears witness",
+      "themeUr": "خود اللہ گواہی دیتا ہے",
+      "themeAr": "شهد الله أنه لا إله إلا هو",
+      "id": 2
+    },
+    {
+      "surah": 3,
+      "verse": 26,
+      "themeKey": "tawhid",
+      "themeEn": "In Your hand is all good",
+      "themeUr": "تیرے ہی ہاتھ میں ہر بھلائی ہے",
+      "themeAr": "بيدك الخير",
+      "id": 3
+    },
+    {
+      "surah": 3,
+      "verse": 31,
+      "themeKey": "mercy",
+      "themeEn": "He will love you and forgive you",
+      "themeUr": "وہ تم سے محبت کرے گا اور بخش دے گا",
+      "themeAr": "يحببكم الله ويغفر لكم",
+      "id": 4
+    },
+    {
+      "surah": 4,
+      "verse": 28,
+      "themeKey": "mercy",
+      "themeEn": "He wants to lighten your burden",
+      "themeUr": "وہ تمہارا بوجھ ہلکا کرنا چاہتا ہے",
+      "themeAr": "يريد الله أن يخفف عنكم",
+      "id": 5
+    },
+    {
+      "surah": 4,
+      "verse": 110,
+      "themeKey": "mercy",
+      "themeEn": "Ask, and you will find Him forgiving",
+      "themeUr": "بخشش مانگو، اسے بخشنے والا پاؤ گے",
+      "themeAr": "يجد الله غفورا رحيما",
+      "id": 6
+    },
+    {
+      "surah": 6,
+      "verse": 54,
+      "themeKey": "mercy",
+      "themeEn": "He has written mercy upon Himself",
+      "themeUr": "اس نے رحمت کو اپنے اوپر لازم کر لیا",
+      "themeAr": "كتب على نفسه الرحمة",
+      "id": 7
+    },
+    {
+      "surah": 6,
+      "verse": 59,
+      "themeKey": "tawhid",
+      "themeEn": "Not a leaf falls unknown to Him",
+      "themeUr": "کوئی پتہ اس کے علم کے بغیر نہیں گرتا",
+      "themeAr": "ما تسقط من ورقة إلا يعلمها",
+      "id": 8
+    },
+    {
+      "surah": 6,
+      "verse": 103,
+      "themeKey": "tawhid",
+      "themeEn": "No vision can grasp Him",
+      "themeUr": "نگاہیں اس کا ادراک نہیں کر سکتیں",
+      "themeAr": "لا تدركه الأبصار",
+      "id": 9
+    },
+    {
+      "surah": 7,
+      "verse": 56,
+      "themeKey": "mercy",
+      "themeEn": "Near to those who do good",
+      "themeUr": "اللہ کی رحمت نیکوکاروں کے قریب ہے",
+      "themeAr": "رحمة الله قريب من المحسنين",
+      "id": 10
+    },
+    {
+      "surah": 8,
+      "verse": 29,
+      "themeKey": "mercy",
+      "themeEn": "He erases your wrongs and forgives",
+      "themeUr": "وہ تمہاری خطائیں مٹا کر بخش دے گا",
+      "themeAr": "يكفر عنكم سيئاتكم ويغفر لكم",
+      "id": 11
+    },
+    {
+      "surah": 9,
+      "verse": 128,
+      "themeKey": "mercy",
+      "themeEn": "A Messenger kind and merciful to you",
+      "themeUr": "ایک نرم دل اور مہربان رسول",
+      "themeAr": "بالمؤمنين رؤوف رحيم",
+      "id": 12
+    },
+    {
+      "surah": 10,
+      "verse": 57,
+      "themeKey": "mercy",
+      "themeEn": "A healing for the heart",
+      "themeUr": "دلوں کے لیے شفا اور رحمت",
+      "themeAr": "شفاء لما في الصدور",
+      "id": 13
+    },
+    {
+      "surah": 11,
+      "verse": 90,
+      "themeKey": "mercy",
+      "themeEn": "My Lord is Merciful and Loving",
+      "themeUr": "میرا رب مہربان اور محبت کرنے والا ہے",
+      "themeAr": "إن ربي رحيم ودود",
+      "id": 14
+    },
+    {
+      "surah": 13,
+      "verse": 15,
+      "themeKey": "tawhid",
+      "themeEn": "Even the shadows bow to Him",
+      "themeUr": "سائے بھی اسے سجدہ کرتے ہیں",
+      "themeAr": "وظلالهم تسجد له",
+      "id": 15
+    },
+    {
+      "surah": 15,
+      "verse": 49,
+      "themeKey": "mercy",
+      "themeEn": "Tell My servants I am the Forgiving",
+      "themeUr": "میرے بندوں کو بتا دو، میں بخشنے والا ہوں",
+      "themeAr": "أني أنا الغفور الرحيم",
+      "id": 16
+    },
+    {
+      "surah": 16,
+      "verse": 18,
+      "themeKey": "mercy",
+      "themeEn": "His favors beyond counting",
+      "themeUr": "اس کی نعمتیں گنی نہیں جا سکتیں",
+      "themeAr": "وإن تعدوا نعمة الله لا تحصوها",
+      "id": 17
+    },
+    {
+      "surah": 19,
+      "verse": 96,
+      "themeKey": "mercy",
+      "themeEn": "The Merciful will grant them love",
+      "themeUr": "رحمٰن ان کے لیے محبت پیدا کرے گا",
+      "themeAr": "سيجعل لهم الرحمن ودا",
+      "id": 18
+    },
+    {
+      "surah": 20,
+      "verse": 8,
+      "themeKey": "tawhid",
+      "themeEn": "To Him belong the most beautiful names",
+      "themeUr": "اسی کے لیے سب اچھے نام ہیں",
+      "themeAr": "له الأسماء الحسنى",
+      "id": 19
+    },
+    {
+      "surah": 20,
+      "verse": 82,
+      "themeKey": "mercy",
+      "themeEn": "Endlessly forgiving to whoever turns back",
+      "themeUr": "جو توبہ کرے، اس کے لیے بہت بخشنے والا",
+      "themeAr": "وإني لغفار لمن تاب",
+      "id": 20
+    },
+    {
+      "surah": 21,
+      "verse": 83,
+      "themeKey": "mercy",
+      "themeEn": "Most Merciful of the merciful",
+      "themeUr": "تو سب رحم کرنے والوں سے بڑھ کر رحیم ہے",
+      "themeAr": "أنت أرحم الراحمين",
+      "id": 21
+    },
+    {
+      "surah": 24,
+      "verse": 35,
+      "themeKey": "tawhid",
+      "themeEn": "Light of the heavens and the earth",
+      "themeUr": "آسمانوں اور زمین کا نور",
+      "themeAr": "الله نور السماوات والأرض",
+      "id": 22
+    },
+    {
+      "surah": 28,
+      "verse": 16,
+      "themeKey": "mercy",
+      "themeEn": "He asked forgiveness and was forgiven",
+      "themeUr": "اس نے بخشش مانگی اور بخش دیا گیا",
+      "themeAr": "فاغفر لي فغفر له",
+      "id": 23
+    },
+    {
+      "surah": 30,
+      "verse": 50,
+      "themeKey": "mercy",
+      "themeEn": "He revives the earth after its death",
+      "themeUr": "وہ مردہ زمین کو زندہ کرتا ہے",
+      "themeAr": "يحيي الأرض بعد موتها",
+      "id": 24
+    },
+    {
+      "surah": 31,
+      "verse": 27,
+      "themeKey": "tawhid",
+      "themeEn": "His words would never run out",
+      "themeUr": "اس کے کلمات کبھی ختم نہ ہوں",
+      "themeAr": "ما نفدت كلمات الله",
+      "id": 25
+    },
+    {
+      "surah": 33,
+      "verse": 43,
+      "themeKey": "mercy",
+      "themeEn": "He brings you out into the light",
+      "themeUr": "وہ تمہیں اندھیروں سے نور کی طرف لاتا ہے",
+      "themeAr": "يخرجكم من الظلمات إلى النور",
+      "id": 26
+    },
+    {
+      "surah": 35,
+      "verse": 2,
+      "themeKey": "mercy",
+      "themeEn": "No one can withhold His mercy",
+      "themeUr": "اس کی رحمت کو کوئی روک نہیں سکتا",
+      "themeAr": "لا ممسك لرحمته",
+      "id": 27
+    },
+    {
+      "surah": 35,
+      "verse": 15,
+      "themeKey": "tawhid",
+      "themeEn": "You are the ones in need",
+      "themeUr": "تم سب اس کے محتاج ہو",
+      "themeAr": "أنتم الفقراء إلى الله",
+      "id": 28
+    },
+    {
+      "surah": 39,
+      "verse": 53,
+      "themeKey": "mercy",
+      "themeEn": "Do not despair of His mercy",
+      "themeUr": "اللہ کی رحمت سے مایوس نہ ہو",
+      "themeAr": "لا تقنطوا من رحمة الله",
+      "id": 29
+    },
+    {
+      "surah": 40,
+      "verse": 65,
+      "themeKey": "tawhid",
+      "themeEn": "The Ever-Living, so call upon Him",
+      "themeUr": "وہ ہمیشہ زندہ ہے، اسی کو پکارو",
+      "themeAr": "هو الحي فادعوه",
+      "id": 30
+    },
+    {
+      "surah": 42,
+      "verse": 11,
+      "themeKey": "tawhid",
+      "themeEn": "There is nothing like Him",
+      "themeUr": "اس جیسا کوئی نہیں",
+      "themeAr": "ليس كمثله شيء",
+      "id": 31
+    },
+    {
+      "surah": 42,
+      "verse": 19,
+      "themeKey": "mercy",
+      "themeEn": "Gentle with His servants",
+      "themeUr": "وہ اپنے بندوں پر نہایت مہربان ہے",
+      "themeAr": "الله لطيف بعباده",
+      "id": 32
+    },
+    {
+      "surah": 50,
+      "verse": 16,
+      "themeKey": "tawhid",
+      "themeEn": "Closer than your jugular vein",
+      "themeUr": "شہ رگ سے بھی زیادہ قریب",
+      "themeAr": "أقرب من حبل الوريد",
+      "id": 33
+    },
+    {
+      "surah": 51,
+      "verse": 56,
+      "themeKey": "tawhid",
+      "themeEn": "Created to worship Him alone",
+      "themeUr": "صرف اسی کی عبادت کے لیے پیدا کیے گئے",
+      "themeAr": "خلقوا لعبادته وحده",
+      "id": 34
+    },
+    {
+      "surah": 55,
+      "verse": 29,
+      "themeKey": "tawhid",
+      "themeEn": "Every day He is at work",
+      "themeUr": "ہر روز وہ نئی شان میں ہے",
+      "themeAr": "كل يوم هو في شأن",
+      "id": 35
+    },
+    {
+      "surah": 57,
+      "verse": 3,
+      "themeKey": "tawhid",
+      "themeEn": "The First and the Last",
+      "themeUr": "وہی اول ہے، وہی آخر",
+      "themeAr": "هو الأول والآخر",
+      "id": 36
+    },
+    {
+      "surah": 59,
+      "verse": 22,
+      "themeKey": "tawhid",
+      "themeEn": "Knower of the unseen and the seen",
+      "themeUr": "غیب اور حاضر، سب کا جاننے والا",
+      "themeAr": "عالم الغيب والشهادة",
+      "id": 37
+    },
+    {
+      "surah": 59,
+      "verse": 23,
+      "themeKey": "tawhid",
+      "themeEn": "Sovereign, Holy, Source of peace",
+      "themeUr": "بادشاہ، نہایت پاک، سلامتی والا",
+      "themeAr": "الملك القدوس السلام",
+      "id": 38
+    },
+    {
+      "surah": 67,
+      "verse": 1,
+      "themeKey": "tawhid",
+      "themeEn": "In His hand is all dominion",
+      "themeUr": "ساری بادشاہی اسی کے ہاتھ میں ہے",
+      "themeAr": "بيده الملك",
+      "id": 39
+    },
+    {
+      "surah": 93,
+      "verse": 3,
+      "themeKey": "mercy",
+      "themeEn": "Your Lord has not forsaken you",
+      "themeUr": "تمہارے رب نے تمہیں نہیں چھوڑا",
+      "themeAr": "ما ودعك ربك وما قلى",
+      "id": 40
+    },
+    {
+      "surah": 112,
+      "verse": 1,
+      "themeKey": "tawhid",
+      "themeEn": "Say: He is God, the One",
+      "themeUr": "کہو: وہ اللہ ایک ہے",
+      "themeAr": "قل هو الله أحد",
+      "id": 41
+    },
+    {
+      "surah": 2,
+      "verse": 153,
+      "themeKey": "patience",
+      "themeEn": "Seek help through patience and prayer",
+      "themeUr": "صبر اور نماز سے مدد چاہو",
+      "themeAr": "استعينوا بالصبر والصلاة",
+      "id": 42
+    },
+    {
+      "surah": 2,
+      "verse": 155,
+      "themeKey": "patience",
+      "themeEn": "Good news for those who endure",
+      "themeUr": "صبر کرنے والوں کے لیے خوشخبری",
+      "themeAr": "وبشر الصابرين",
+      "id": 43
+    },
+    {
+      "surah": 3,
+      "verse": 186,
+      "themeKey": "patience",
+      "themeEn": "You will be tested in wealth and self",
+      "themeUr": "مال و جان میں آزمائش ہو گی",
+      "themeAr": "لتبلون في أموالكم وأنفسكم",
+      "id": 44
+    },
+    {
+      "surah": 3,
+      "verse": 200,
+      "themeKey": "patience",
+      "themeEn": "Be patient and outlast",
+      "themeUr": "صبر کرو اور ثابت قدم رہو",
+      "themeAr": "اصبروا وصابروا ورابطوا",
+      "id": 45
+    },
+    {
+      "surah": 6,
+      "verse": 34,
+      "themeKey": "patience",
+      "themeEn": "They endured until help arrived",
+      "themeUr": "وہ صبر کرتے رہے یہاں تک کہ نصرت آ گئی",
+      "themeAr": "صبروا حتى أتاهم نصرنا",
+      "id": 46
+    },
+    {
+      "surah": 7,
+      "verse": 128,
+      "themeKey": "patience",
+      "themeEn": "Seek God's help and hold on",
+      "themeUr": "اللہ سے مدد مانگو اور صبر کرو",
+      "themeAr": "استعينوا بالله واصبروا",
+      "id": 47
+    },
+    {
+      "surah": 8,
+      "verse": 46,
+      "themeKey": "patience",
+      "themeEn": "Do not quarrel, do not lose heart",
+      "themeUr": "آپس میں جھگڑا نہ کرو، ہمت نہ ہارو",
+      "themeAr": "ولا تنازعوا فتفشلوا",
+      "id": 48
+    },
+    {
+      "surah": 11,
+      "verse": 115,
+      "themeKey": "patience",
+      "themeEn": "No good you do is ever lost",
+      "themeUr": "نیکی کا اجر ضائع نہیں ہوتا",
+      "themeAr": "لا يضيع أجر المحسنين",
+      "id": 49
+    },
+    {
+      "surah": 13,
+      "verse": 24,
+      "themeKey": "patience",
+      "themeEn": "Peace on you for what you endured",
+      "themeUr": "تمہارے صبر کے صلے میں سلام",
+      "themeAr": "سلام عليكم بما صبرتم",
+      "id": 50
+    },
+    {
+      "surah": 16,
+      "verse": 96,
+      "themeKey": "patience",
+      "themeEn": "What is with God lasts",
+      "themeUr": "جو اللہ کے پاس ہے وہ باقی ہے",
+      "themeAr": "ما عند الله باق",
+      "id": 51
+    },
+    {
+      "surah": 16,
+      "verse": 127,
+      "themeKey": "patience",
+      "themeEn": "Your patience comes from God alone",
+      "themeUr": "تمہارا صبر اللہ ہی سے ہے",
+      "themeAr": "وما صبرك إلا بالله",
+      "id": 52
+    },
+    {
+      "surah": 18,
+      "verse": 28,
+      "themeKey": "patience",
+      "themeEn": "Stay with those who call on Him",
+      "themeUr": "ان کے ساتھ رہو جو اپنے رب کو پکارتے ہیں",
+      "themeAr": "واصبر نفسك مع الذين يدعون ربهم",
+      "id": 53
+    },
+    {
+      "surah": 20,
+      "verse": 130,
+      "themeKey": "patience",
+      "themeEn": "Endure, and praise Him before sunrise",
+      "themeUr": "صبر کرو اور طلوعِ آفتاب سے پہلے تسبیح کرو",
+      "themeAr": "واصبر وسبح قبل طلوع الشمس",
+      "id": 54
+    },
+    {
+      "surah": 29,
+      "verse": 2,
+      "themeKey": "patience",
+      "themeEn": "Did you think you would not be tested?",
+      "themeUr": "کیا تم نے سمجھا کہ آزمائے نہ جاؤ گے؟",
+      "themeAr": "أحسب الناس أن يتركوا",
+      "id": 55
+    },
+    {
+      "surah": 30,
+      "verse": 60,
+      "themeKey": "patience",
+      "themeEn": "God's promise is true, so hold on",
+      "themeUr": "اللہ کا وعدہ سچا ہے، صبر کرو",
+      "themeAr": "فاصبر إن وعد الله حق",
+      "id": 56
+    },
+    {
+      "surah": 31,
+      "verse": 17,
+      "themeKey": "patience",
+      "themeEn": "Bear what befalls you",
+      "themeUr": "جو مصیبت آئے اس پر صبر کرو",
+      "themeAr": "واصبر على ما أصابك",
+      "id": 57
+    },
+    {
+      "surah": 32,
+      "verse": 24,
+      "themeKey": "patience",
+      "themeEn": "They led because they endured",
+      "themeUr": "صبر کیا تو پیشوا بنے",
+      "themeAr": "لما صبروا جعلناهم أئمة",
+      "id": 58
+    },
+    {
+      "surah": 39,
+      "verse": 10,
+      "themeKey": "patience",
+      "themeEn": "Reward beyond measure",
+      "themeUr": "صابروں کا اجر بے حساب",
+      "themeAr": "أجر الصابرين بغير حساب",
+      "id": 59
+    },
+    {
+      "surah": 42,
+      "verse": 43,
+      "themeKey": "patience",
+      "themeEn": "To endure and to forgive",
+      "themeUr": "صبر کرنا اور معاف کر دینا",
+      "themeAr": "من صبر وغفر",
+      "id": 60
+    },
+    {
+      "surah": 52,
+      "verse": 48,
+      "themeKey": "patience",
+      "themeEn": "You are before Our eyes",
+      "themeUr": "تم ہماری نگاہوں میں ہو",
+      "themeAr": "فإنك بأعيننا",
+      "id": 61
+    },
+    {
+      "surah": 70,
+      "verse": 5,
+      "themeKey": "patience",
+      "themeEn": "Patience, beautiful patience",
+      "themeUr": "صبرِ جمیل کرو",
+      "themeAr": "فاصبر صبرا جميلا",
+      "id": 62
+    },
+    {
+      "surah": 2,
+      "verse": 152,
+      "themeKey": "gratitude",
+      "themeEn": "Remember Me and thank Me",
+      "themeUr": "مجھے یاد کرو اور میرا شکر ادا کرو",
+      "themeAr": "واشكروا لي ولا تكفرون",
+      "id": 63
+    },
+    {
+      "surah": 2,
+      "verse": 172,
+      "themeKey": "gratitude",
+      "themeEn": "Eat what is good and give thanks",
+      "themeUr": "پاکیزہ رزق کھاؤ اور شکر کرو",
+      "themeAr": "كلوا من طيبات ما رزقناكم واشكروا",
+      "id": 64
+    },
+    {
+      "surah": 3,
+      "verse": 103,
+      "themeKey": "gratitude",
+      "themeEn": "He joined your hearts together",
+      "themeUr": "اس نے تمہارے دلوں کو جوڑ دیا",
+      "themeAr": "فألف بين قلوبكم",
+      "id": 65
+    },
+    {
+      "surah": 4,
+      "verse": 147,
+      "themeKey": "gratitude",
+      "themeEn": "God Himself is appreciative",
+      "themeUr": "اللہ بڑا قدر دان ہے",
+      "themeAr": "وكان الله شاكرا عليما",
+      "id": 66
+    },
+    {
+      "surah": 8,
+      "verse": 26,
+      "themeKey": "gratitude",
+      "themeEn": "You were few, He sheltered you",
+      "themeUr": "تم تھوڑے تھے، اس نے پناہ دی",
+      "themeAr": "كنتم قليلا فآواكم",
+      "id": 67
+    },
+    {
+      "surah": 14,
+      "verse": 7,
+      "themeKey": "gratitude",
+      "themeEn": "Give thanks and He gives more",
+      "themeUr": "شکر کرو گے تو اور زیادہ دوں گا",
+      "themeAr": "لئن شكرتم لأزيدنكم",
+      "id": 68
+    },
+    {
+      "surah": 16,
+      "verse": 53,
+      "themeKey": "gratitude",
+      "themeEn": "Every blessing is from Him",
+      "themeUr": "جو نعمت بھی ہے اللہ کی طرف سے ہے",
+      "themeAr": "وما بكم من نعمة فمن الله",
+      "id": 69
+    },
+    {
+      "surah": 16,
+      "verse": 78,
+      "themeKey": "gratitude",
+      "themeEn": "He gave you hearing, sight, heart",
+      "themeUr": "کان، آنکھ اور دل عطا کیے",
+      "themeAr": "وجعل لكم السمع والأبصار والأفئدة",
+      "id": 70
+    },
+    {
+      "surah": 17,
+      "verse": 70,
+      "themeKey": "gratitude",
+      "themeEn": "He honoured the children of Adam",
+      "themeUr": "اولادِ آدم کو عزت بخشی",
+      "themeAr": "ولقد كرمنا بني آدم",
+      "id": 71
+    },
+    {
+      "surah": 26,
+      "verse": 80,
+      "themeKey": "gratitude",
+      "themeEn": "When I fall ill, He heals me",
+      "themeUr": "جب بیمار ہوں تو وہی شفا دیتا ہے",
+      "themeAr": "وإذا مرضت فهو يشفين",
+      "id": 72
+    },
+    {
+      "surah": 27,
+      "verse": 15,
+      "themeKey": "gratitude",
+      "themeEn": "Given knowledge, they gave praise",
+      "themeUr": "علم عطا ہوا تو شکر بجا لائے",
+      "themeAr": "الحمد لله الذي فضلنا",
+      "id": 73
+    },
+    {
+      "surah": 28,
+      "verse": 73,
+      "themeKey": "gratitude",
+      "themeEn": "Night for rest, day for work",
+      "themeUr": "رات آرام کے لیے، دن روزی کے لیے",
+      "themeAr": "جعل لكم الليل والنهار",
+      "id": 74
+    },
+    {
+      "surah": 30,
+      "verse": 46,
+      "themeKey": "gratitude",
+      "themeEn": "He sends the winds with good news",
+      "themeUr": "وہ خوشخبری دینے والی ہوائیں بھیجتا ہے",
+      "themeAr": "يرسل الرياح مبشرات",
+      "id": 75
+    },
+    {
+      "surah": 31,
+      "verse": 12,
+      "themeKey": "gratitude",
+      "themeEn": "Thankfulness is for your own good",
+      "themeUr": "شکر کرنے والا اپنے ہی فائدے میں ہے",
+      "themeAr": "ومن يشكر فإنما يشكر لنفسه",
+      "id": 76
+    },
+    {
+      "surah": 34,
+      "verse": 15,
+      "themeKey": "gratitude",
+      "themeEn": "A good land, a forgiving Lord",
+      "themeUr": "پاکیزہ شہر اور بخشنے والا رب",
+      "themeAr": "بلدة طيبة ورب غفور",
+      "id": 77
+    },
+    {
+      "surah": 35,
+      "verse": 34,
+      "themeKey": "gratitude",
+      "themeEn": "Praise to Him who removed our sorrow",
+      "themeUr": "شکر اس کا جس نے غم دور کیا",
+      "themeAr": "الحمد لله الذي أذهب عنا الحزن",
+      "id": 78
+    },
+    {
+      "surah": 40,
+      "verse": 64,
+      "themeKey": "gratitude",
+      "themeEn": "He perfected your form",
+      "themeUr": "اس نے تمہاری صورت بہترین بنائی",
+      "themeAr": "وصوركم فأحسن صوركم",
+      "id": 79
+    },
+    {
+      "surah": 55,
+      "verse": 13,
+      "themeKey": "gratitude",
+      "themeEn": "Which of His favours will you deny?",
+      "themeUr": "تم اپنے رب کی کن نعمتوں کو جھٹلاؤ گے؟",
+      "themeAr": "فبأي آلاء ربكما تكذبان",
+      "id": 80
+    },
+    {
+      "surah": 67,
+      "verse": 15,
+      "themeKey": "gratitude",
+      "themeEn": "Walk the earth, eat of His provision",
+      "themeUr": "زمین پر چلو اور اس کا رزق کھاؤ",
+      "themeAr": "فامشوا في مناكبها وكلوا من رزقه",
+      "id": 81
+    },
+    {
+      "surah": 76,
+      "verse": 22,
+      "themeKey": "gratitude",
+      "themeEn": "Your effort has been appreciated",
+      "themeUr": "تمہاری کوشش قابلِ قدر ٹھہری",
+      "themeAr": "وكان سعيكم مشكورا",
+      "id": 82
+    },
+    {
+      "surah": 93,
+      "verse": 11,
+      "themeKey": "gratitude",
+      "themeEn": "Speak of your Lord's blessing",
+      "themeUr": "اپنے رب کی نعمت کا ذکر کرو",
+      "themeAr": "وأما بنعمة ربك فحدث",
+      "id": 83
+    },
+    {
+      "surah": 3,
+      "verse": 160,
+      "themeKey": "trust",
+      "themeEn": "None can overcome those He helps",
+      "themeUr": "جسے اللہ کی مدد حاصل ہو، اس پر کوئی غالب نہیں",
+      "themeAr": "إن ينصركم الله فلا غالب لكم",
+      "id": 84
+    },
+    {
+      "surah": 7,
+      "verse": 196,
+      "themeKey": "trust",
+      "themeEn": "My protector is Allah",
+      "themeUr": "میرا سرپرست اللہ ہے",
+      "themeAr": "إن وليي الله",
+      "id": 85
+    },
+    {
+      "surah": 8,
+      "verse": 64,
+      "themeKey": "trust",
+      "themeEn": "Allah suffices you and the believers",
+      "themeUr": "اللہ تمہیں اور مومنوں کو کافی ہے",
+      "themeAr": "حسبك الله ومن اتبعك",
+      "id": 86
+    },
+    {
+      "surah": 9,
+      "verse": 51,
+      "themeKey": "trust",
+      "themeEn": "Nothing befalls us but what He decreed",
+      "themeUr": "ہمیں وہی پہنچتا ہے جو اللہ نے لکھا",
+      "themeAr": "لن يصيبنا إلا ما كتب الله لنا",
+      "id": 87
+    },
+    {
+      "surah": 10,
+      "verse": 107,
+      "themeKey": "trust",
+      "themeEn": "None can remove harm but Him",
+      "themeUr": "تکلیف کو اس کے سوا کوئی نہیں ہٹا سکتا",
+      "themeAr": "لا كاشف له إلا هو",
+      "id": 88
+    },
+    {
+      "surah": 11,
+      "verse": 6,
+      "themeKey": "trust",
+      "themeEn": "Every creature's provision is upon Allah",
+      "themeUr": "ہر جاندار کا رزق اللہ کے ذمے ہے",
+      "themeAr": "على الله رزقها",
+      "id": 89
+    },
+    {
+      "surah": 11,
+      "verse": 123,
+      "themeKey": "trust",
+      "themeEn": "Worship Him and rely on Him",
+      "themeUr": "اسی کی عبادت کرو اور اسی پر بھروسہ رکھو",
+      "themeAr": "فاعبده وتوكل عليه",
+      "id": 90
+    },
+    {
+      "surah": 14,
+      "verse": 12,
+      "themeKey": "trust",
+      "themeEn": "Why should we not rely on Him?",
+      "themeUr": "ہم اللہ پر بھروسہ کیوں نہ کریں؟",
+      "themeAr": "وما لنا ألا نتوكل على الله",
+      "id": 91
+    },
+    {
+      "surah": 20,
+      "verse": 46,
+      "themeKey": "trust",
+      "themeEn": "Do not fear, I am with you",
+      "themeUr": "ڈرو مت، میں تمہارے ساتھ ہوں",
+      "themeAr": "إنني معكما أسمع وأرى",
+      "id": 92
+    },
+    {
+      "surah": 25,
+      "verse": 58,
+      "themeKey": "trust",
+      "themeEn": "Trust the Living who never dies",
+      "themeUr": "اس زندہ پر بھروسہ کرو جو کبھی نہیں مرتا",
+      "themeAr": "وتوكل على الحي الذي لا يموت",
+      "id": 93
+    },
+    {
+      "surah": 26,
+      "verse": 62,
+      "themeKey": "trust",
+      "themeEn": "My Lord is with me; He will guide",
+      "themeUr": "میرا رب میرے ساتھ ہے، وہ راہ دکھائے گا",
+      "themeAr": "إن معي ربي سيهدين",
+      "id": 94
+    },
+    {
+      "surah": 27,
+      "verse": 79,
+      "themeKey": "trust",
+      "themeEn": "Rely on Allah, you stand on truth",
+      "themeUr": "اللہ پر بھروسہ کرو، تم حق پر ہو",
+      "themeAr": "فتوكل على الله إنك على الحق المبين",
+      "id": 95
+    },
+    {
+      "surah": 29,
+      "verse": 60,
+      "themeKey": "trust",
+      "themeEn": "He feeds them, and He feeds you",
+      "themeUr": "وہ انہیں بھی رزق دیتا ہے اور تمہیں بھی",
+      "themeAr": "الله يرزقها وإياكم",
+      "id": 96
+    },
+    {
+      "surah": 31,
+      "verse": 22,
+      "themeKey": "trust",
+      "themeEn": "Every outcome returns to Allah",
+      "themeUr": "ہر معاملے کا انجام اللہ کی طرف ہے",
+      "themeAr": "وإلى الله عاقبة الأمور",
+      "id": 97
+    },
+    {
+      "surah": 33,
+      "verse": 3,
+      "themeKey": "trust",
+      "themeEn": "Rely on Allah; He is enough",
+      "themeUr": "اللہ پر بھروسہ کرو، وہی کافی ہے",
+      "themeAr": "وتوكل على الله",
+      "id": 98
+    },
+    {
+      "surah": 40,
+      "verse": 44,
+      "themeKey": "trust",
+      "themeEn": "I entrust my affair to Allah",
+      "themeUr": "میں اپنا معاملہ اللہ کے سپرد کرتا ہوں",
+      "themeAr": "أفوض أمري إلى الله",
+      "id": 99
+    },
+    {
+      "surah": 41,
+      "verse": 30,
+      "themeKey": "trust",
+      "themeEn": "Stand firm; do not fear or grieve",
+      "themeUr": "ثابت قدم رہو، نہ ڈرو نہ غم کرو",
+      "themeAr": "ألا تخافوا ولا تحزنوا",
+      "id": 100
+    },
+    {
+      "surah": 51,
+      "verse": 58,
+      "themeKey": "trust",
+      "themeEn": "Allah is the Provider, the Strong",
+      "themeUr": "اللہ ہی رزق دینے والا، قوت والا ہے",
+      "themeAr": "الله هو الرزاق ذو القوة",
+      "id": 101
+    },
+    {
+      "surah": 64,
+      "verse": 11,
+      "themeKey": "trust",
+      "themeEn": "Believe, and He will guide your heart",
+      "themeUr": "ایمان لاؤ، وہ دل کو ہدایت دے گا",
+      "themeAr": "ومن يؤمن بالله يهد قلبه",
+      "id": 102
+    },
+    {
+      "surah": 65,
+      "verse": 3,
+      "themeKey": "trust",
+      "themeEn": "Provision from where you least expect",
+      "themeUr": "رزق وہاں سے جہاں گمان بھی نہ ہو",
+      "themeAr": "ويرزقه من حيث لا يحتسب",
+      "id": 103
+    },
+    {
+      "surah": 73,
+      "verse": 9,
+      "themeKey": "trust",
+      "themeEn": "Put your affairs in His hands",
+      "themeUr": "اپنے کام اسی کے سپرد کر دو",
+      "themeAr": "فاتخذه وكيلا",
+      "id": 104
+    },
+    {
+      "surah": 2,
+      "verse": 37,
+      "themeKey": "repentance",
+      "themeEn": "Adam was taught the words of return",
+      "themeUr": "آدم کو لوٹنے کے کلمات سکھائے گئے",
+      "themeAr": "فتلقى آدم من ربه كلمات",
+      "id": 105
+    },
+    {
+      "surah": 3,
+      "verse": 133,
+      "themeKey": "repentance",
+      "themeEn": "Hurry toward His forgiveness",
+      "themeUr": "اپنے رب کی مغفرت کی طرف دوڑو",
+      "themeAr": "وسارعوا إلى مغفرة من ربكم",
+      "id": 106
+    },
+    {
+      "surah": 4,
+      "verse": 27,
+      "themeKey": "repentance",
+      "themeEn": "He wants to accept your return",
+      "themeUr": "وہ تمہاری توبہ قبول کرنا چاہتا ہے",
+      "themeAr": "والله يريد أن يتوب عليكم",
+      "id": 107
+    },
+    {
+      "surah": 4,
+      "verse": 106,
+      "themeKey": "repentance",
+      "themeEn": "Ask forgiveness, He is always forgiving",
+      "themeUr": "اللہ سے بخشش مانگو، وہ بخشنے والا ہے",
+      "themeAr": "واستغفر الله",
+      "id": 108
+    },
+    {
+      "surah": 5,
+      "verse": 39,
+      "themeKey": "repentance",
+      "themeEn": "Repent and set it right",
+      "themeUr": "توبہ کرو اور اصلاح کر لو",
+      "themeAr": "فمن تاب من بعد ظلمه وأصلح",
+      "id": 109
+    },
+    {
+      "surah": 7,
+      "verse": 23,
+      "themeKey": "repentance",
+      "themeEn": "Our Lord, we have wronged ourselves",
+      "themeUr": "اے ہمارے رب، ہم نے اپنے اوپر ظلم کیا",
+      "themeAr": "ربنا ظلمنا أنفسنا",
+      "id": 110
+    },
+    {
+      "surah": 9,
+      "verse": 104,
+      "themeKey": "repentance",
+      "themeEn": "He accepts repentance from His servants",
+      "themeUr": "وہی اپنے بندوں کی توبہ قبول کرتا ہے",
+      "themeAr": "يقبل التوبة عن عباده",
+      "id": 111
+    },
+    {
+      "surah": 11,
+      "verse": 61,
+      "themeKey": "repentance",
+      "themeEn": "My Lord is near and answers",
+      "themeUr": "میرا رب قریب ہے، دعا سنتا ہے",
+      "themeAr": "إن ربي قريب مجيب",
+      "id": 112
+    },
+    {
+      "surah": 12,
+      "verse": 53,
+      "themeKey": "repentance",
+      "themeEn": "The soul urges wrong; He is forgiving",
+      "themeUr": "نفس برائی پر اکساتا ہے، وہ بخشنے والا ہے",
+      "themeAr": "إن النفس لأمارة بالسوء",
+      "id": 113
+    },
+    {
+      "surah": 12,
+      "verse": 92,
+      "themeKey": "repentance",
+      "themeEn": "No blame on you today",
+      "themeUr": "آج تم پر کوئی ملامت نہیں",
+      "themeAr": "لا تثريب عليكم اليوم",
+      "id": 114
+    },
+    {
+      "surah": 14,
+      "verse": 41,
+      "themeKey": "repentance",
+      "themeEn": "Forgive me, my parents, and the believers",
+      "themeUr": "مجھے، میرے والدین اور مومنوں کو بخش دے",
+      "themeAr": "ربنا اغفر لي ولوالدي وللمؤمنين",
+      "id": 115
+    },
+    {
+      "surah": 17,
+      "verse": 25,
+      "themeKey": "repentance",
+      "themeEn": "Forgiving to those who keep returning",
+      "themeUr": "بار بار لوٹنے والوں کو بخشنے والا",
+      "themeAr": "إنه كان للأوابين غفورا",
+      "id": 116
+    },
+    {
+      "surah": 21,
+      "verse": 87,
+      "themeKey": "repentance",
+      "themeEn": "A call from inside the darkness",
+      "themeUr": "اندھیروں میں سے ایک پکار",
+      "themeAr": "فنادى في الظلمات",
+      "id": 117
+    },
+    {
+      "surah": 23,
+      "verse": 118,
+      "themeKey": "repentance",
+      "themeEn": "My Lord, forgive and have mercy",
+      "themeUr": "اے میرے رب، بخش دے اور رحم فرما",
+      "themeAr": "رب اغفر وارحم",
+      "id": 118
+    },
+    {
+      "surah": 25,
+      "verse": 71,
+      "themeKey": "repentance",
+      "themeEn": "Repent, then live it out",
+      "themeUr": "توبہ کرو اور نیک عمل کرو",
+      "themeAr": "ومن تاب وعمل صالحا",
+      "id": 119
+    },
+    {
+      "surah": 28,
+      "verse": 67,
+      "themeKey": "repentance",
+      "themeEn": "The one who returns will succeed",
+      "themeUr": "جو لوٹ آئے وہ کامیاب ہوگا",
+      "themeAr": "فأما من تاب وآمن وعمل صالحا",
+      "id": 120
+    },
+    {
+      "surah": 42,
+      "verse": 25,
+      "themeKey": "repentance",
+      "themeEn": "He pardons what you have done",
+      "themeUr": "وہ برائیوں کو معاف کر دیتا ہے",
+      "themeAr": "ويعفو عن السيئات",
+      "id": 121
+    },
+    {
+      "surah": 47,
+      "verse": 19,
+      "themeKey": "repentance",
+      "themeEn": "Ask forgiveness for yourself and others",
+      "themeUr": "اپنے لیے اور مومنوں کے لیے بخشش مانگو",
+      "themeAr": "واستغفر لذنبك وللمؤمنين والمؤمنات",
+      "id": 122
+    },
+    {
+      "surah": 66,
+      "verse": 8,
+      "themeKey": "repentance",
+      "themeEn": "Repent with a sincere heart",
+      "themeUr": "سچے دل سے توبہ کرو",
+      "themeAr": "توبوا إلى الله توبة نصوحا",
+      "id": 123
+    },
+    {
+      "surah": 110,
+      "verse": 3,
+      "themeKey": "repentance",
+      "themeEn": "Praise Him and ask His pardon",
+      "themeUr": "اس کی حمد کرو اور مغفرت مانگو",
+      "themeAr": "فسبح بحمد ربك واستغفره",
+      "id": 124
+    },
+    {
+      "surah": 1,
+      "verse": 5,
+      "themeKey": "prayer",
+      "themeEn": "You alone we ask for help",
+      "themeUr": "تجھ ہی سے مدد مانگتے ہیں",
+      "themeAr": "إياك نعبد وإياك نستعين",
+      "id": 125
+    },
+    {
+      "surah": 2,
+      "verse": 186,
+      "themeKey": "prayer",
+      "themeEn": "I am near, I answer",
+      "themeUr": "میں قریب ہوں، دعا سنتا ہوں",
+      "themeAr": "إني قريب أجيب دعوة الداع",
+      "id": 126
+    },
+    {
+      "surah": 3,
+      "verse": 38,
+      "themeKey": "prayer",
+      "themeEn": "You hear every prayer",
+      "themeUr": "تو ہر دعا سننے والا ہے",
+      "themeAr": "إنك سميع الدعاء",
+      "id": 127
+    },
+    {
+      "surah": 6,
+      "verse": 162,
+      "themeKey": "prayer",
+      "themeEn": "My prayer, my living, my dying",
+      "themeUr": "میری نماز اور میری زندگی اللہ کے لیے",
+      "themeAr": "إن صلاتي ونسكي ومحياي ومماتي لله",
+      "id": 128
+    },
+    {
+      "surah": 7,
+      "verse": 55,
+      "themeKey": "prayer",
+      "themeEn": "Call Him humbly, in secret",
+      "themeUr": "عاجزی اور خاموشی سے پکارو",
+      "themeAr": "ادعوا ربكم تضرعا وخفية",
+      "id": 129
+    },
+    {
+      "surah": 12,
+      "verse": 86,
+      "themeKey": "prayer",
+      "themeEn": "I complain only to God",
+      "themeUr": "اپنا غم صرف اللہ سے کہتا ہوں",
+      "themeAr": "إنما أشكو بثي وحزني إلى الله",
+      "id": 130
+    },
+    {
+      "surah": 12,
+      "verse": 101,
+      "themeKey": "prayer",
+      "themeEn": "My protector in both worlds",
+      "themeUr": "دنیا و آخرت میں تو ہی میرا کارساز",
+      "themeAr": "أنت وليي في الدنيا والآخرة",
+      "id": 131
+    },
+    {
+      "surah": 14,
+      "verse": 40,
+      "themeKey": "prayer",
+      "themeEn": "Make me one who prays",
+      "themeUr": "مجھے نماز قائم کرنے والا بنا",
+      "themeAr": "رب اجعلني مقيم الصلاة",
+      "id": 132
+    },
+    {
+      "surah": 21,
+      "verse": 89,
+      "themeKey": "prayer",
+      "themeEn": "Do not leave me alone",
+      "themeUr": "مجھے اکیلا نہ چھوڑ",
+      "themeAr": "رب لا تذرني فردا وأنت خير الوارثين",
+      "id": 133
+    },
+    {
+      "surah": 17,
+      "verse": 79,
+      "themeKey": "prayer",
+      "themeEn": "Night prayer, a praised station",
+      "themeUr": "رات کی نماز، مقامِ محمود",
+      "themeAr": "ومن الليل فتهجد به",
+      "id": 134
+    },
+    {
+      "surah": 17,
+      "verse": 80,
+      "themeKey": "prayer",
+      "themeEn": "Bring me in with truth",
+      "themeUr": "سچائی کے ساتھ داخل کر، سچائی کے ساتھ نکال",
+      "themeAr": "رب أدخلني مدخل صدق وأخرجني مخرج صدق",
+      "id": 135
+    },
+    {
+      "surah": 19,
+      "verse": 4,
+      "themeKey": "prayer",
+      "themeEn": "My prayer never went unanswered",
+      "themeUr": "میری دعا کبھی رائیگاں نہ گئی",
+      "themeAr": "ولم أكن بدعائك رب شقيا",
+      "id": 136
+    },
+    {
+      "surah": 20,
+      "verse": 14,
+      "themeKey": "prayer",
+      "themeEn": "Pray to remember Me",
+      "themeUr": "میری یاد کے لیے نماز قائم کرو",
+      "themeAr": "وأقم الصلاة لذكري",
+      "id": 137
+    },
+    {
+      "surah": 20,
+      "verse": 132,
+      "themeKey": "prayer",
+      "themeEn": "Call your family to prayer",
+      "themeUr": "اپنے گھر والوں کو نماز کا حکم دو",
+      "themeAr": "وأمر أهلك بالصلاة",
+      "id": 138
+    },
+    {
+      "surah": 22,
+      "verse": 77,
+      "themeKey": "prayer",
+      "themeEn": "Bow, prostrate, and do good",
+      "themeUr": "رکوع کرو، سجدہ کرو، نیکی کرو",
+      "themeAr": "اركعوا واسجدوا واعبدوا ربكم",
+      "id": 139
+    },
+    {
+      "surah": 72,
+      "verse": 20,
+      "themeKey": "prayer",
+      "themeEn": "I invoke my Lord alone",
+      "themeUr": "میں صرف اپنے رب کو پکارتا ہوں",
+      "themeAr": "إنما أدعو ربي ولا أشرك به أحدا",
+      "id": 140
+    },
+    {
+      "surah": 27,
+      "verse": 62,
+      "themeKey": "prayer",
+      "themeEn": "He answers the desperate",
+      "themeUr": "بےقرار کی پکار سنتا ہے",
+      "themeAr": "يجيب المضطر إذا دعاه",
+      "id": 141
+    },
+    {
+      "surah": 29,
+      "verse": 45,
+      "themeKey": "prayer",
+      "themeEn": "Prayer keeps you from wrong",
+      "themeUr": "نماز برائی سے روکتی ہے",
+      "themeAr": "إن الصلاة تنهى عن الفحشاء والمنكر",
+      "id": 142
+    },
+    {
+      "surah": 37,
+      "verse": 75,
+      "themeKey": "prayer",
+      "themeEn": "Noah called, and We answered",
+      "themeUr": "نوح نے پکارا، ہم نے جواب دیا",
+      "themeAr": "ولقد نادانا نوح فلنعم المجيبون",
+      "id": 143
+    },
+    {
+      "surah": 66,
+      "verse": 11,
+      "themeKey": "prayer",
+      "themeEn": "A house near You",
+      "themeUr": "اپنے پاس جنت میں گھر بنا دے",
+      "themeAr": "رب ابن لي عندك بيتا في الجنة",
+      "id": 144
+    },
+    {
+      "surah": 7,
+      "verse": 205,
+      "themeKey": "remembrance",
+      "themeEn": "Remember your Lord within yourself",
+      "themeUr": "اپنے دل میں اپنے رب کو یاد کرو",
+      "themeAr": "واذكر ربك في نفسك تضرعا",
+      "id": 145
+    },
+    {
+      "surah": 7,
+      "verse": 206,
+      "themeKey": "remembrance",
+      "themeEn": "They glorify Him and prostrate",
+      "themeUr": "وہ اس کی تسبیح کرتے اور سجدہ کرتے ہیں",
+      "themeAr": "ويسبحونه وله يسجدون",
+      "id": 146
+    },
+    {
+      "surah": 8,
+      "verse": 2,
+      "themeKey": "remembrance",
+      "themeEn": "Hearts tremble at His name",
+      "themeUr": "اللہ کے ذکر سے دل لرز اٹھتے ہیں",
+      "themeAr": "إذا ذكر الله وجلت قلوبهم",
+      "id": 147
+    },
+    {
+      "surah": 13,
+      "verse": 28,
+      "themeKey": "remembrance",
+      "themeEn": "In His remembrance hearts find rest",
+      "themeUr": "اللہ کے ذکر سے دلوں کو سکون ملتا ہے",
+      "themeAr": "بذكر الله تطمئن القلوب",
+      "id": 148
+    },
+    {
+      "surah": 15,
+      "verse": 99,
+      "themeKey": "remembrance",
+      "themeEn": "Worship Him until the end",
+      "themeUr": "یقین آنے تک اپنے رب کی عبادت کرو",
+      "themeAr": "واعبد ربك حتى يأتيك اليقين",
+      "id": 149
+    },
+    {
+      "surah": 17,
+      "verse": 44,
+      "themeKey": "remembrance",
+      "themeEn": "A praise you cannot hear",
+      "themeUr": "تم ان کی تسبیح نہیں سمجھتے",
+      "themeAr": "لا تفقهون تسبيحهم",
+      "id": 150
+    },
+    {
+      "surah": 24,
+      "verse": 41,
+      "themeKey": "remembrance",
+      "themeEn": "The birds know their praise",
+      "themeUr": "پرندے بھی اپنی تسبیح جانتے ہیں",
+      "themeAr": "والطير صافات كل قد علم تسبيحه",
+      "id": 151
+    },
+    {
+      "surah": 30,
+      "verse": 17,
+      "themeKey": "remembrance",
+      "themeEn": "Glorify Him, evening and morning",
+      "themeUr": "شام اور صبح اللہ کی تسبیح کرو",
+      "themeAr": "فسبحان الله حين تمسون وحين تصبحون",
+      "id": 152
+    },
+    {
+      "surah": 32,
+      "verse": 15,
+      "themeKey": "remembrance",
+      "themeEn": "Reminded, they fall in prostration",
+      "themeUr": "یاد دلانے پر سجدے میں گر پڑتے ہیں",
+      "themeAr": "خروا سجدا وسبحوا بحمد ربهم",
+      "id": 153
+    },
+    {
+      "surah": 33,
+      "verse": 41,
+      "themeKey": "remembrance",
+      "themeEn": "Remember God, and remember much",
+      "themeUr": "اللہ کو بکثرت یاد کرو",
+      "themeAr": "اذكروا الله ذكرا كثيرا",
+      "id": 154
+    },
+    {
+      "surah": 33,
+      "verse": 56,
+      "themeKey": "remembrance",
+      "themeEn": "Send blessings on the Prophet",
+      "themeUr": "نبی پر درود بھیجو",
+      "themeAr": "صلوا عليه وسلموا تسليما",
+      "id": 155
+    },
+    {
+      "surah": 59,
+      "verse": 24,
+      "themeKey": "remembrance",
+      "themeEn": "All creation exalts Him",
+      "themeUr": "ساری کائنات اس کی تسبیح کرتی ہے",
+      "themeAr": "يسبح له ما في السماوات والأرض",
+      "id": 156
+    },
+    {
+      "surah": 55,
+      "verse": 78,
+      "themeKey": "remembrance",
+      "themeEn": "Blessed is your Lord's name",
+      "themeUr": "برکت والا ہے تیرے رب کا نام",
+      "themeAr": "تبارك اسم ربك ذي الجلال والإكرام",
+      "id": 157
+    },
+    {
+      "surah": 62,
+      "verse": 1,
+      "themeKey": "remembrance",
+      "themeEn": "Creation glorifies the Holy King",
+      "themeUr": "ساری کائنات پاک بادشاہ کی تسبیح کرتی ہے",
+      "themeAr": "يسبح لله ما في السماوات وما في الأرض",
+      "id": 158
+    },
+    {
+      "surah": 62,
+      "verse": 10,
+      "themeKey": "remembrance",
+      "themeEn": "Remember Him as you work",
+      "themeUr": "کام کاج میں بھی اللہ کو یاد رکھو",
+      "themeAr": "واذكروا الله كثيرا لعلكم تفلحون",
+      "id": 159
+    },
+    {
+      "surah": 63,
+      "verse": 9,
+      "themeKey": "remembrance",
+      "themeEn": "Wealth must not distract you",
+      "themeUr": "مال و اولاد ذکر سے غافل نہ کریں",
+      "themeAr": "لا تلهكم أموالكم عن ذكر الله",
+      "id": 160
+    },
+    {
+      "surah": 73,
+      "verse": 8,
+      "themeKey": "remembrance",
+      "themeEn": "Devote yourself to Him wholly",
+      "themeUr": "اپنے رب کا نام یاد کرو اور اسی کے ہو رہو",
+      "themeAr": "واذكر اسم ربك وتبتل إليه",
+      "id": 161
+    },
+    {
+      "surah": 76,
+      "verse": 25,
+      "themeKey": "remembrance",
+      "themeEn": "His name, morning and evening",
+      "themeUr": "صبح و شام اپنے رب کا نام لو",
+      "themeAr": "واذكر اسم ربك بكرة وأصيلا",
+      "id": 162
+    },
+    {
+      "surah": 76,
+      "verse": 26,
+      "themeKey": "remembrance",
+      "themeEn": "Prostrate to Him at night",
+      "themeUr": "رات کو اس کے حضور سجدہ کرو",
+      "themeAr": "ومن الليل فاسجد له",
+      "id": 163
+    },
+    {
+      "surah": 87,
+      "verse": 1,
+      "themeKey": "remembrance",
+      "themeEn": "Praise your Lord Most High",
+      "themeUr": "اپنے بلند و بالا رب کے نام کی تسبیح کرو",
+      "themeAr": "سبح اسم ربك الأعلى",
+      "id": 164
+    },
+    {
+      "surah": 2,
+      "verse": 269,
+      "themeKey": "knowledge",
+      "themeEn": "Given wisdom, given much good",
+      "themeUr": "جسے حکمت ملی، اسے بہت بھلائی ملی",
+      "themeAr": "ومن يؤت الحكمة فقد أوتي خيرا كثيرا",
+      "id": 165
+    },
+    {
+      "surah": 3,
+      "verse": 190,
+      "themeKey": "knowledge",
+      "themeEn": "Signs in night and day",
+      "themeUr": "رات اور دن میں نشانیاں",
+      "themeAr": "لآيات لأولي الألباب",
+      "id": 166
+    },
+    {
+      "surah": 6,
+      "verse": 97,
+      "themeKey": "knowledge",
+      "themeEn": "Stars to guide you home",
+      "themeUr": "ستارے جو راستہ دکھاتے ہیں",
+      "themeAr": "جعل لكم النجوم لتهتدوا بها",
+      "id": 167
+    },
+    {
+      "surah": 10,
+      "verse": 5,
+      "themeKey": "knowledge",
+      "themeEn": "The moon marks the years",
+      "themeUr": "چاند سے سالوں کا حساب",
+      "themeAr": "لتعلموا عدد السنين والحساب",
+      "id": 168
+    },
+    {
+      "surah": 13,
+      "verse": 3,
+      "themeKey": "knowledge",
+      "themeEn": "Rivers, mountains, fruit in pairs",
+      "themeUr": "زمین، پہاڑ اور دریا، سوچنے والوں کے لیے",
+      "themeAr": "مد الأرض وجعل فيها رواسي",
+      "id": 169
+    },
+    {
+      "surah": 16,
+      "verse": 43,
+      "themeKey": "knowledge",
+      "themeEn": "Ask those who know",
+      "themeUr": "نہ جانتے ہو تو اہلِ ذکر سے پوچھو",
+      "themeAr": "فاسألوا أهل الذكر إن كنتم لا تعلمون",
+      "id": 170
+    },
+    {
+      "surah": 17,
+      "verse": 36,
+      "themeKey": "knowledge",
+      "themeEn": "Do not follow guesswork",
+      "themeUr": "جس کا علم نہیں، اس کے پیچھے نہ چلو",
+      "themeAr": "ولا تقف ما ليس لك به علم",
+      "id": 171
+    },
+    {
+      "surah": 17,
+      "verse": 85,
+      "themeKey": "knowledge",
+      "themeEn": "Given only a little knowledge",
+      "themeUr": "علم میں سے تمہیں تھوڑا ہی دیا گیا",
+      "themeAr": "وما أوتيتم من العلم إلا قليلا",
+      "id": 172
+    },
+    {
+      "surah": 18,
+      "verse": 109,
+      "themeKey": "knowledge",
+      "themeEn": "If the sea were ink",
+      "themeUr": "سمندر سیاہی بن جائے تو بھی کم ہے",
+      "themeAr": "لو كان البحر مدادا لكلمات ربي",
+      "id": 173
+    },
+    {
+      "surah": 20,
+      "verse": 114,
+      "themeKey": "knowledge",
+      "themeEn": "My Lord, increase me in knowledge",
+      "themeUr": "اے میرے رب، میرے علم میں اضافہ فرما",
+      "themeAr": "رب زدني علما",
+      "id": 174
+    },
+    {
+      "surah": 22,
+      "verse": 46,
+      "themeKey": "knowledge",
+      "themeEn": "Hearts go blind, not eyes",
+      "themeUr": "آنکھیں نہیں، دل اندھے ہوتے ہیں",
+      "themeAr": "لا تعمى الأبصار ولكن تعمى القلوب",
+      "id": 175
+    },
+    {
+      "surah": 29,
+      "verse": 20,
+      "themeKey": "knowledge",
+      "themeEn": "Travel and see how creation began",
+      "themeUr": "زمین میں چلو، دیکھو تخلیق کیسے شروع ہوئی",
+      "themeAr": "سيروا في الأرض فانظروا كيف بدأ الخلق",
+      "id": 176
+    },
+    {
+      "surah": 30,
+      "verse": 22,
+      "themeKey": "knowledge",
+      "themeEn": "Your many languages and colors",
+      "themeUr": "تمہاری زبانوں اور رنگوں کا اختلاف",
+      "themeAr": "اختلاف ألسنتكم وألوانكم",
+      "id": 177
+    },
+    {
+      "surah": 38,
+      "verse": 29,
+      "themeKey": "knowledge",
+      "themeEn": "A Book to be pondered",
+      "themeUr": "کتاب اتری، تاکہ اس پر غور کرو",
+      "themeAr": "ليدبروا آياته",
+      "id": 178
+    },
+    {
+      "surah": 39,
+      "verse": 9,
+      "themeKey": "knowledge",
+      "themeEn": "Are those who know equal?",
+      "themeUr": "کیا جاننے والے اور نہ جاننے والے برابر ہیں؟",
+      "themeAr": "هل يستوي الذين يعلمون والذين لا يعلمون",
+      "id": 179
+    },
+    {
+      "surah": 41,
+      "verse": 53,
+      "themeKey": "knowledge",
+      "themeEn": "Signs outside you and within",
+      "themeUr": "آفاق میں بھی نشانیاں، تمہارے اندر بھی",
+      "themeAr": "آياتنا في الآفاق وفي أنفسهم",
+      "id": 180
+    },
+    {
+      "surah": 45,
+      "verse": 13,
+      "themeKey": "knowledge",
+      "themeEn": "All subjected, for those who think",
+      "themeUr": "سب کچھ مسخر، غور کرنے والوں کے لیے",
+      "themeAr": "سخر لكم ما في السماوات وما في الأرض",
+      "id": 181
+    },
+    {
+      "surah": 47,
+      "verse": 24,
+      "themeKey": "knowledge",
+      "themeEn": "Reflect upon the Qur'an",
+      "themeUr": "کیا وہ قرآن پر غور نہیں کرتے؟",
+      "themeAr": "أفلا يتدبرون القرآن",
+      "id": 182
+    },
+    {
+      "surah": 49,
+      "verse": 6,
+      "themeKey": "knowledge",
+      "themeEn": "Verify before you act",
+      "themeUr": "خبر آئے تو پہلے تحقیق کرو",
+      "themeAr": "إن جاءكم فاسق بنبإ فتبينوا",
+      "id": 183
+    },
+    {
+      "surah": 59,
+      "verse": 21,
+      "themeKey": "knowledge",
+      "themeEn": "A mountain would break apart",
+      "themeUr": "یہ قرآن پہاڑ پر اترتا تو وہ ریزہ ریزہ ہو جاتا",
+      "themeAr": "لو أنزلنا هذا القرآن على جبل لرأيته خاشعا",
+      "id": 184
+    },
+    {
+      "surah": 2,
+      "verse": 188,
+      "themeKey": "justice",
+      "themeEn": "No bribes, no stolen wealth",
+      "themeUr": "ناحق مال نہ کھاؤ، رشوت نہ دو",
+      "themeAr": "ولا تأكلوا أموالكم بينكم بالباطل",
+      "id": 185
+    },
+    {
+      "surah": 4,
+      "verse": 1,
+      "themeKey": "justice",
+      "themeEn": "All of you from one soul",
+      "themeUr": "سب ایک ہی جان سے پیدا ہوئے",
+      "themeAr": "خلقكم من نفس واحدة",
+      "id": 186
+    },
+    {
+      "surah": 4,
+      "verse": 40,
+      "themeKey": "justice",
+      "themeEn": "Not one atom of injustice",
+      "themeUr": "ذرہ برابر بھی ظلم نہیں کرتا",
+      "themeAr": "إن الله لا يظلم مثقال ذرة",
+      "id": 187
+    },
+    {
+      "surah": 4,
+      "verse": 58,
+      "themeKey": "justice",
+      "themeEn": "Judge between people with justice",
+      "themeUr": "لوگوں کے درمیان انصاف سے فیصلہ کرو",
+      "themeAr": "وإذا حكمتم بين الناس أن تحكموا بالعدل",
+      "id": 188
+    },
+    {
+      "surah": 4,
+      "verse": 135,
+      "themeKey": "justice",
+      "themeEn": "Justice, even against yourself",
+      "themeUr": "انصاف پر قائم رہو، چاہے اپنے خلاف ہو",
+      "themeAr": "كونوا قوامين بالقسط ولو على أنفسكم",
+      "id": 189
+    },
+    {
+      "surah": 4,
+      "verse": 148,
+      "themeKey": "justice",
+      "themeEn": "The wronged may speak out",
+      "themeUr": "مظلوم کو آواز اٹھانے کا حق ہے",
+      "themeAr": "لا يحب الله الجهر بالسوء من القول إلا من ظلم",
+      "id": 190
+    },
+    {
+      "surah": 5,
+      "verse": 8,
+      "themeKey": "justice",
+      "themeEn": "Never let hatred bend justice",
+      "themeUr": "کسی کی دشمنی تمہیں ناانصافی پر آمادہ نہ کرے",
+      "themeAr": "ولا يجرمنكم شنآن قوم على ألا تعدلوا",
+      "id": 191
+    },
+    {
+      "surah": 7,
+      "verse": 181,
+      "themeKey": "justice",
+      "themeEn": "Guiding by truth, judging justly",
+      "themeUr": "ایک جماعت جو حق سے رہنمائی کرتی ہے",
+      "themeAr": "أمة يهدون بالحق وبه يعدلون",
+      "id": 192
+    },
+    {
+      "surah": 10,
+      "verse": 44,
+      "themeKey": "justice",
+      "themeEn": "God wrongs no one",
+      "themeUr": "اللہ لوگوں پر ذرا ظلم نہیں کرتا",
+      "themeAr": "إن الله لا يظلم الناس شيئا",
+      "id": 193
+    },
+    {
+      "surah": 16,
+      "verse": 90,
+      "themeKey": "justice",
+      "themeEn": "Justice, kindness, giving to kin",
+      "themeUr": "اللہ عدل اور احسان کا حکم دیتا ہے",
+      "themeAr": "إن الله يأمر بالعدل والإحسان",
+      "id": 194
+    },
+    {
+      "surah": 17,
+      "verse": 35,
+      "themeKey": "justice",
+      "themeEn": "Give full measure, weigh evenly",
+      "themeUr": "پورا ناپو اور ٹھیک ترازو سے تولو",
+      "themeAr": "وأوفوا الكيل إذا كلتم وزنوا بالقسطاس المستقيم",
+      "id": 195
+    },
+    {
+      "surah": 21,
+      "verse": 47,
+      "themeKey": "justice",
+      "themeEn": "Scales that miss nothing",
+      "themeUr": "انصاف کے ترازو، ذرہ برابر بھی نہیں چھوٹے گا",
+      "themeAr": "ونضع الموازين القسط ليوم القيامة",
+      "id": 196
+    },
+    {
+      "surah": 26,
+      "verse": 183,
+      "themeKey": "justice",
+      "themeEn": "Do not shortchange people",
+      "themeUr": "لوگوں کو ان کا حق کم نہ دو",
+      "themeAr": "ولا تبخسوا الناس أشياءهم",
+      "id": 197
+    },
+    {
+      "surah": 33,
+      "verse": 35,
+      "themeKey": "justice",
+      "themeEn": "Men and women, the same reward",
+      "themeUr": "مرد ہوں یا عورتیں، اجر ایک جیسا",
+      "themeAr": "أعد الله لهم مغفرة وأجرا عظيما",
+      "id": 198
+    },
+    {
+      "surah": 41,
+      "verse": 46,
+      "themeKey": "justice",
+      "themeEn": "What you do returns to you",
+      "themeUr": "جو نیکی کرے، اپنے ہی لیے کرے",
+      "themeAr": "من عمل صالحا فلنفسه",
+      "id": 199
+    },
+    {
+      "surah": 45,
+      "verse": 22,
+      "themeKey": "justice",
+      "themeEn": "Every soul paid in full",
+      "themeUr": "ہر جان کو اس کی کمائی کا پورا بدلہ",
+      "themeAr": "ولتجزى كل نفس بما كسبت وهم لا يظلمون",
+      "id": 200
+    },
+    {
+      "surah": 49,
+      "verse": 13,
+      "themeKey": "justice",
+      "themeEn": "The most noble is the most righteous",
+      "themeUr": "سب سے معزز وہی ہے جو سب سے متقی ہے",
+      "themeAr": "إن أكرمكم عند الله أتقاكم",
+      "id": 201
+    },
+    {
+      "surah": 55,
+      "verse": 9,
+      "themeKey": "justice",
+      "themeEn": "Do not tip the scale",
+      "themeUr": "انصاف سے تولو، ترازو میں کمی نہ کرو",
+      "themeAr": "وأقيموا الوزن بالقسط ولا تخسروا الميزان",
+      "id": 202
+    },
+    {
+      "surah": 60,
+      "verse": 8,
+      "themeKey": "justice",
+      "themeEn": "Be just to the peaceable",
+      "themeUr": "جو تم سے نہ لڑے، اس سے بھلائی اور انصاف کرو",
+      "themeAr": "أن تبروهم وتقسطوا إليهم",
+      "id": 203
+    },
+    {
+      "surah": 95,
+      "verse": 8,
+      "themeKey": "justice",
+      "themeEn": "The most just of judges",
+      "themeUr": "کیا اللہ سب سے بہتر فیصلہ کرنے والا نہیں؟",
+      "themeAr": "أليس الله بأحكم الحاكمين",
+      "id": 204
+    },
+    {
+      "surah": 2,
+      "verse": 261,
+      "themeKey": "charity",
+      "themeEn": "One seed, seven ears, a hundred grains",
+      "themeUr": "ایک دانہ، سات بالیں، ہر بالی میں سو دانے",
+      "themeAr": "كمثل حبة أنبتت سبع سنابل",
+      "id": 205
+    },
+    {
+      "surah": 2,
+      "verse": 263,
+      "themeKey": "charity",
+      "themeEn": "A kind word beats a charity followed by hurt",
+      "themeUr": "اچھی بات دکھ دینے والے صدقے سے بہتر ہے",
+      "themeAr": "قول معروف ومغفرة خير من صدقة يتبعها أذى",
+      "id": 206
+    },
+    {
+      "surah": 3,
+      "verse": 92,
+      "themeKey": "charity",
+      "themeEn": "You reach it only by giving what you love",
+      "themeUr": "جو تمہیں محبوب ہے، اسے دیے بغیر نیکی نہیں ملتی",
+      "themeAr": "لن تنالوا البر حتى تنفقوا مما تحبون",
+      "id": 207
+    },
+    {
+      "surah": 3,
+      "verse": 159,
+      "themeKey": "character",
+      "themeEn": "By God's mercy you were gentle with them",
+      "themeUr": "اللہ کی رحمت سے آپ ان کے لیے نرم دل ہوئے",
+      "themeAr": "فبما رحمة من الله لنت لهم",
+      "id": 208
+    },
+    {
+      "surah": 4,
+      "verse": 36,
+      "themeKey": "charity",
+      "themeEn": "The near neighbor, the far neighbor, the traveler",
+      "themeUr": "قریب کا پڑوسی، دور کا پڑوسی، مسافر",
+      "themeAr": "والجار ذي القربى والجار الجنب",
+      "id": 209
+    },
+    {
+      "surah": 4,
+      "verse": 86,
+      "themeKey": "character",
+      "themeEn": "Answer a greeting with a better one",
+      "themeUr": "سلام کا جواب اس سے بہتر دو",
+      "themeAr": "فحيوا بأحسن منها أو ردوها",
+      "id": 210
+    },
+    {
+      "surah": 4,
+      "verse": 149,
+      "themeKey": "character",
+      "themeEn": "Pardon an offense, and God is All-Pardoning",
+      "themeUr": "کسی کی خطا معاف کرو، اللہ بہت معاف کرنے والا ہے",
+      "themeAr": "أو تعفوا عن سوء فإن الله كان عفوا قديرا",
+      "id": 211
+    },
+    {
+      "surah": 7,
+      "verse": 199,
+      "themeKey": "character",
+      "themeEn": "Take what comes easily, turn from the ignorant",
+      "themeUr": "درگزر کرو، بھلائی کا حکم دو، جاہلوں سے کنارہ کرو",
+      "themeAr": "خذ العفو وأمر بالعرف وأعرض عن الجاهلين",
+      "id": 212
+    },
+    {
+      "surah": 9,
+      "verse": 103,
+      "themeKey": "charity",
+      "themeEn": "Charity that purifies and makes you grow",
+      "themeUr": "صدقہ جو پاک کرتا اور بڑھاتا ہے",
+      "themeAr": "خذ من أموالهم صدقة تطهرهم وتزكيهم بها",
+      "id": 213
+    },
+    {
+      "surah": 9,
+      "verse": 119,
+      "themeKey": "character",
+      "themeEn": "Keep the company of the truthful",
+      "themeUr": "سچے لوگوں کا ساتھ اختیار کرو",
+      "themeAr": "اتقوا الله وكونوا مع الصادقين",
+      "id": 214
+    },
+    {
+      "surah": 14,
+      "verse": 31,
+      "themeKey": "charity",
+      "themeEn": "Give before the day of no bargaining",
+      "themeUr": "اس دن سے پہلے دو جب کوئی سودا نہ چلے گا",
+      "themeAr": "من قبل أن يأتي يوم لا بيع فيه ولا خلال",
+      "id": 215
+    },
+    {
+      "surah": 16,
+      "verse": 91,
+      "themeKey": "character",
+      "themeEn": "Keep the promise once you have made it",
+      "themeUr": "جو عہد کیا ہے، اسے پورا کرو",
+      "themeAr": "وأوفوا بعهد الله إذا عاهدتم",
+      "id": 216
+    },
+    {
+      "surah": 16,
+      "verse": 125,
+      "themeKey": "character",
+      "themeEn": "Invite with wisdom, argue with beauty",
+      "themeUr": "حکمت اور اچھی نصیحت سے بلاؤ",
+      "themeAr": "ادع إلى سبيل ربك بالحكمة والموعظة الحسنة",
+      "id": 217
+    },
+    {
+      "surah": 17,
+      "verse": 28,
+      "themeKey": "charity",
+      "themeEn": "Nothing to give? Then give a gentle word",
+      "themeUr": "کچھ نہ ہو تو نرم بات ہی کہہ دو",
+      "themeAr": "فقل لهم قولا ميسورا",
+      "id": 218
+    },
+    {
+      "surah": 17,
+      "verse": 29,
+      "themeKey": "charity",
+      "themeEn": "Neither a chained hand nor an empty one",
+      "themeUr": "نہ ہاتھ باندھ رکھو، نہ سب کچھ لٹا دو",
+      "themeAr": "ولا تجعل يدك مغلولة إلى عنقك",
+      "id": 219
+    },
+    {
+      "surah": 17,
+      "verse": 37,
+      "themeKey": "character",
+      "themeEn": "You will never tear the earth apart",
+      "themeUr": "تم نہ زمین کو پھاڑ سکتے ہو، نہ پہاڑوں تک پہنچ سکتے ہو",
+      "themeAr": "إنك لن تخرق الأرض ولن تبلغ الجبال طولا",
+      "id": 220
+    },
+    {
+      "surah": 24,
+      "verse": 27,
+      "themeKey": "character",
+      "themeEn": "Ask permission, greet, then enter",
+      "themeUr": "اجازت لو، سلام کرو، پھر گھر میں داخل ہو",
+      "themeAr": "حتى تستأنسوا وتسلموا على أهلها",
+      "id": 221
+    },
+    {
+      "surah": 25,
+      "verse": 63,
+      "themeKey": "character",
+      "themeEn": "They walk gently and answer with peace",
+      "themeUr": "نرمی سے چلتے ہیں، جواب میں سلام کہتے ہیں",
+      "themeAr": "يمشون على الأرض هونا",
+      "id": 222
+    },
+    {
+      "surah": 29,
+      "verse": 46,
+      "themeKey": "character",
+      "themeEn": "Our God and your God is one",
+      "themeUr": "ہمارا معبود اور تمہارا معبود ایک ہے",
+      "themeAr": "وإلهنا وإلهكم واحد",
+      "id": 223
+    },
+    {
+      "surah": 30,
+      "verse": 38,
+      "themeKey": "charity",
+      "themeEn": "Give the relative his due",
+      "themeUr": "رشتہ دار کا حق ادا کرو",
+      "themeAr": "فآت ذا القربى حقه",
+      "id": 224
+    },
+    {
+      "surah": 30,
+      "verse": 39,
+      "themeKey": "charity",
+      "themeEn": "Only what you give for God's sake grows",
+      "themeUr": "اللہ کے ہاں وہی بڑھتا ہے جو اس کی رضا کے لیے دیا جائے",
+      "themeAr": "وما آتيتم من زكاة تريدون وجه الله",
+      "id": 225
+    },
+    {
+      "surah": 31,
+      "verse": 18,
+      "themeKey": "character",
+      "themeEn": "Do not turn your cheek away from people",
+      "themeUr": "لوگوں سے منہ پھیر کر بات نہ کرو",
+      "themeAr": "ولا تصعر خدك للناس",
+      "id": 226
+    },
+    {
+      "surah": 33,
+      "verse": 21,
+      "themeKey": "character",
+      "themeEn": "A beautiful example to follow",
+      "themeUr": "رسول اللہ کی ذات میں بہترین نمونہ ہے",
+      "themeAr": "لقد كان لكم في رسول الله أسوة حسنة",
+      "id": 227
+    },
+    {
+      "surah": 34,
+      "verse": 39,
+      "themeKey": "charity",
+      "themeEn": "Whatever you spend, He replaces",
+      "themeUr": "جو کچھ خرچ کرو گے، وہ اس کا بدل دے گا",
+      "themeAr": "وما أنفقتم من شيء فهو يخلفه",
+      "id": 228
+    },
+    {
+      "surah": 35,
+      "verse": 29,
+      "themeKey": "charity",
+      "themeEn": "A trade that will never go under",
+      "themeUr": "ایسی تجارت جس میں کبھی خسارہ نہیں",
+      "themeAr": "يرجون تجارة لن تبور",
+      "id": 229
+    },
+    {
+      "surah": 41,
+      "verse": 33,
+      "themeKey": "character",
+      "themeEn": "No speech is better than calling to God",
+      "themeUr": "اللہ کی طرف بلانے سے بہتر کوئی بات نہیں",
+      "themeAr": "ومن أحسن قولا ممن دعا إلى الله",
+      "id": 230
+    },
+    {
+      "surah": 41,
+      "verse": 34,
+      "themeKey": "character",
+      "themeEn": "Answer evil with better, and enmity melts",
+      "themeUr": "برائی کا جواب بھلائی سے دو، دشمنی دوستی بن جائے گی",
+      "themeAr": "ادفع بالتي هي أحسن",
+      "id": 231
+    },
+    {
+      "surah": 49,
+      "verse": 10,
+      "themeKey": "character",
+      "themeEn": "The believers are brothers, so mend it",
+      "themeUr": "مومن آپس میں بھائی ہیں، ان میں صلح کراؤ",
+      "themeAr": "إنما المؤمنون إخوة",
+      "id": 232
+    },
+    {
+      "surah": 49,
+      "verse": 11,
+      "themeKey": "character",
+      "themeEn": "Do not mock, do not hand out nicknames",
+      "themeUr": "کسی کا مذاق نہ اڑاؤ، برے نام نہ رکھو",
+      "themeAr": "لا يسخر قوم من قوم ولا تنابزوا بالألقاب",
+      "id": 233
+    },
+    {
+      "surah": 49,
+      "verse": 12,
+      "themeKey": "character",
+      "themeEn": "Do not spy, do not backbite",
+      "themeUr": "نہ ٹوہ لگاؤ، نہ ایک دوسرے کی غیبت کرو",
+      "themeAr": "ولا تجسسوا ولا يغتب بعضكم بعضا",
+      "id": 234
+    },
+    {
+      "surah": 50,
+      "verse": 18,
+      "themeKey": "character",
+      "themeEn": "Not a word without a watcher",
+      "themeUr": "کوئی بات ایسی نہیں جو لکھی نہ جائے",
+      "themeAr": "ما يلفظ من قول إلا لديه رقيب عتيد",
+      "id": 235
+    },
+    {
+      "surah": 57,
+      "verse": 7,
+      "themeKey": "charity",
+      "themeEn": "You are only trustees of what you hold",
+      "themeUr": "جو مال ہے، اس میں تم صرف امانت دار ہو",
+      "themeAr": "وأنفقوا مما جعلكم مستخلفين فيه",
+      "id": 236
+    },
+    {
+      "surah": 57,
+      "verse": 11,
+      "themeKey": "charity",
+      "themeEn": "Who will lend to God a beautiful loan?",
+      "themeUr": "کون ہے جو اللہ کو قرضِ حسنہ دے؟",
+      "themeAr": "من ذا الذي يقرض الله قرضا حسنا",
+      "id": 237
+    },
+    {
+      "surah": 57,
+      "verse": 18,
+      "themeKey": "charity",
+      "themeEn": "The men and the women who give",
+      "themeUr": "صدقہ دینے والے مرد اور صدقہ دینے والی عورتیں",
+      "themeAr": "إن المصدقين والمصدقات",
+      "id": 238
+    },
+    {
+      "surah": 64,
+      "verse": 16,
+      "themeKey": "charity",
+      "themeEn": "Whoever is saved from his own greed",
+      "themeUr": "جو اپنے نفس کے لالچ سے بچا لیا گیا",
+      "themeAr": "ومن يوق شح نفسه فأولئك هم المفلحون",
+      "id": 239
+    },
+    {
+      "surah": 64,
+      "verse": 17,
+      "themeKey": "charity",
+      "themeEn": "He multiplies it, and forgives you too",
+      "themeUr": "وہ بڑھا بھی دے گا اور بخش بھی دے گا",
+      "themeAr": "يضاعفه لكم ويغفر لكم",
+      "id": 240
+    },
+    {
+      "surah": 65,
+      "verse": 7,
+      "themeKey": "charity",
+      "themeEn": "Give out of what God has given you",
+      "themeUr": "جو اللہ نے دیا ہے، اسی میں سے خرچ کرو",
+      "themeAr": "لينفق ذو سعة من سعته",
+      "id": 241
+    },
+    {
+      "surah": 68,
+      "verse": 4,
+      "themeKey": "character",
+      "themeEn": "You are of a great character",
+      "themeUr": "آپ عظیم اخلاق پر فائز ہیں",
+      "themeAr": "وإنك لعلى خلق عظيم",
+      "id": 242
+    },
+    {
+      "surah": 93,
+      "verse": 9,
+      "themeKey": "charity",
+      "themeEn": "Do not crush the orphan",
+      "themeUr": "یتیم پر سختی نہ کرو",
+      "themeAr": "فأما اليتيم فلا تقهر",
+      "id": 243
+    },
+    {
+      "surah": 93,
+      "verse": 10,
+      "themeKey": "charity",
+      "themeEn": "Do not turn away the one who asks",
+      "themeUr": "مانگنے والے کو نہ جھڑکو",
+      "themeAr": "وأما السائل فلا تنهر",
+      "id": 244
+    },
+    {
+      "surah": 3,
+      "verse": 6,
+      "themeKey": "family",
+      "themeEn": "He shapes you in the womb",
+      "themeUr": "وہی تمہیں رحموں میں صورت دیتا ہے",
+      "themeAr": "هو الذي يصوركم في الأرحام",
+      "id": 245
+    },
+    {
+      "surah": 11,
+      "verse": 73,
+      "themeKey": "family",
+      "themeEn": "Mercy and blessings upon this household",
+      "themeUr": "اس گھرانے پر اللہ کی رحمت اور برکتیں",
+      "themeAr": "رحمة الله وبركاته عليكم أهل البيت",
+      "id": 246
+    },
+    {
+      "surah": 13,
+      "verse": 8,
+      "themeKey": "family",
+      "themeEn": "He knows what every mother carries",
+      "themeUr": "وہ جانتا ہے ہر ماں کیا اٹھائے ہوئے ہے",
+      "themeAr": "الله يعلم ما تحمل كل أنثى",
+      "id": 247
+    },
+    {
+      "surah": 14,
+      "verse": 35,
+      "themeKey": "family",
+      "themeEn": "A father prays for his children's faith",
+      "themeUr": "ایک باپ اپنے بیٹوں کے ایمان کی دعا کرتا ہے",
+      "themeAr": "واجنبني وبني أن نعبد الأصنام",
+      "id": 248
+    },
+    {
+      "surah": 14,
+      "verse": 39,
+      "themeKey": "family",
+      "themeEn": "Children granted in old age",
+      "themeUr": "بڑھاپے میں اولاد کی نعمت",
+      "themeAr": "الحمد لله الذي وهب لي على الكبر",
+      "id": 249
+    },
+    {
+      "surah": 16,
+      "verse": 72,
+      "themeKey": "family",
+      "themeEn": "Spouses, children and grandchildren",
+      "themeUr": "بیویاں، بیٹے اور پوتے",
+      "themeAr": "جعل لكم من أزواجكم بنين وحفدة",
+      "id": 250
+    },
+    {
+      "surah": 17,
+      "verse": 23,
+      "themeKey": "family",
+      "themeEn": "Never say a harsh word to them",
+      "themeUr": "والدین سے اف تک نہ کہو",
+      "themeAr": "فلا تقل لهما أف",
+      "id": 251
+    },
+    {
+      "surah": 17,
+      "verse": 24,
+      "themeKey": "family",
+      "themeEn": "Lower the wing of humility to them",
+      "themeUr": "ان کے لیے عاجزی کے بازو جھکا دو",
+      "themeAr": "واخفض لهما جناح الذل من الرحمة",
+      "id": 252
+    },
+    {
+      "surah": 23,
+      "verse": 50,
+      "themeKey": "family",
+      "themeEn": "A mother and her son given shelter",
+      "themeUr": "ماں اور بیٹے کو پناہ دی گئی",
+      "themeAr": "وآويناهما إلى ربوة",
+      "id": 253
+    },
+    {
+      "surah": 25,
+      "verse": 54,
+      "themeKey": "family",
+      "themeEn": "He made us kin by blood and by marriage",
+      "themeUr": "اس نے نسب اور سسرال کے رشتے بنائے",
+      "themeAr": "فجعله نسبا وصهرا",
+      "id": 254
+    },
+    {
+      "surah": 29,
+      "verse": 8,
+      "themeKey": "family",
+      "themeEn": "Goodness to parents was enjoined on you",
+      "themeUr": "والدین کے ساتھ نیکی کا حکم دیا گیا",
+      "themeAr": "ووصينا الإنسان بوالديه حسنا",
+      "id": 255
+    },
+    {
+      "surah": 30,
+      "verse": 21,
+      "themeKey": "family",
+      "themeEn": "He placed affection and mercy between you",
+      "themeUr": "اس نے تمہارے درمیان محبت اور رحمت رکھی",
+      "themeAr": "وجعل بينكم مودة ورحمة",
+      "id": 256
+    },
+    {
+      "surah": 31,
+      "verse": 13,
+      "themeKey": "family",
+      "themeEn": "A father's first counsel to his son",
+      "themeUr": "باپ کی اپنے بیٹے کو پہلی نصیحت",
+      "themeAr": "يا بني لا تشرك بالله",
+      "id": 257
+    },
+    {
+      "surah": 31,
+      "verse": 14,
+      "themeKey": "family",
+      "themeEn": "His mother carried him, weakness upon weakness",
+      "themeUr": "ماں نے کمزوری پر کمزوری سہہ کر اٹھایا",
+      "themeAr": "حملته أمه وهنا على وهن",
+      "id": 258
+    },
+    {
+      "surah": 37,
+      "verse": 100,
+      "themeKey": "family",
+      "themeEn": "My Lord, grant me a righteous child",
+      "themeUr": "اے میرے رب، مجھے نیک اولاد عطا فرما",
+      "themeAr": "رب هب لي من الصالحين",
+      "id": 259
+    },
+    {
+      "surah": 42,
+      "verse": 49,
+      "themeKey": "family",
+      "themeEn": "He gives daughters, He gives sons",
+      "themeUr": "وہ بیٹیاں دیتا ہے، وہ بیٹے دیتا ہے",
+      "themeAr": "يهب لمن يشاء إناثا ويهب لمن يشاء الذكور",
+      "id": 260
+    },
+    {
+      "surah": 46,
+      "verse": 15,
+      "themeKey": "family",
+      "themeEn": "Make my offspring righteous for me",
+      "themeUr": "میری اولاد کو میرے لیے نیک بنا دے",
+      "themeAr": "وأصلح لي في ذريتي",
+      "id": 261
+    },
+    {
+      "surah": 3,
+      "verse": 40,
+      "themeKey": "family",
+      "themeEn": "A child promised past all hope",
+      "themeUr": "ناامیدی کے باوجود اولاد کی بشارت",
+      "themeAr": "كذلك الله يفعل ما يشاء",
+      "id": 262
+    },
+    {
+      "surah": 52,
+      "verse": 21,
+      "themeKey": "family",
+      "themeEn": "Families joined together again",
+      "themeUr": "خاندان دوبارہ ملا دیے جائیں گے",
+      "themeAr": "ألحقنا بهم ذريتهم",
+      "id": 263
+    },
+    {
+      "surah": 60,
+      "verse": 7,
+      "themeKey": "family",
+      "themeEn": "He can turn enmity into affection",
+      "themeUr": "وہ دشمنی کو محبت میں بدل سکتا ہے",
+      "themeAr": "عسى الله أن يجعل بينكم مودة",
+      "id": 264
+    },
+    {
+      "surah": 2,
+      "verse": 214,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "The help of God is near",
+      "themeUr": "اللہ کی مدد قریب ہے",
+      "themeAr": "ألا إن نصر الله قريب",
+      "id": 265
+    },
+    {
+      "surah": 2,
+      "verse": 286,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He burdens no soul beyond its capacity",
+      "themeUr": "اللہ کسی جان پر اس کی طاقت سے زیادہ بوجھ نہیں ڈالتا",
+      "themeAr": "لا يكلف الله نفسا إلا وسعها",
+      "id": 266
+    },
+    {
+      "surah": 3,
+      "verse": 139,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Do not weaken and do not grieve",
+      "themeUr": "نہ کمزور پڑو، نہ غم کرو",
+      "themeAr": "ولا تهنوا ولا تحزنوا",
+      "id": 267
+    },
+    {
+      "surah": 4,
+      "verse": 100,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "The earth has room and abundance",
+      "themeUr": "زمین میں کشادگی اور فراخی ہے",
+      "themeAr": "يجد في الأرض مراغما كثيرا وسعة",
+      "id": 268
+    },
+    {
+      "surah": 10,
+      "verse": 62,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "No fear upon them, and no grief",
+      "themeUr": "نہ ان پر خوف ہے، نہ وہ غمگین ہوں گے",
+      "themeAr": "لا خوف عليهم ولا هم يحزنون",
+      "id": 269
+    },
+    {
+      "surah": 11,
+      "verse": 120,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "These accounts steady your heart",
+      "themeUr": "یہ قصے تمہارے دل کو مضبوط کرتے ہیں",
+      "themeAr": "ما نثبت به فؤادك",
+      "id": 270
+    },
+    {
+      "surah": 13,
+      "verse": 39,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He erases and He confirms what He wills",
+      "themeUr": "وہ جو چاہے مٹا دے اور جو چاہے ثابت رکھے",
+      "themeAr": "يمحو الله ما يشاء ويثبت",
+      "id": 271
+    },
+    {
+      "surah": 16,
+      "verse": 97,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He will give you a good life",
+      "themeUr": "وہ تمہیں پاکیزہ زندگی عطا کرے گا",
+      "themeAr": "فلنحيينه حياة طيبة",
+      "id": 272
+    },
+    {
+      "surah": 20,
+      "verse": 2,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "This was not sent down to distress you",
+      "themeUr": "یہ تمہیں مشقت میں ڈالنے کو نہیں اتارا گیا",
+      "themeAr": "ما أنزلنا عليك القرآن لتشقى",
+      "id": 273
+    },
+    {
+      "surah": 21,
+      "verse": 88,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "So do We deliver the believers",
+      "themeUr": "اسی طرح ہم مومنوں کو نجات دیتے ہیں",
+      "themeAr": "وكذلك ننجي المؤمنين",
+      "id": 274
+    },
+    {
+      "surah": 22,
+      "verse": 38,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "God defends those who believe",
+      "themeUr": "اللہ مومنوں کا دفاع کرتا ہے",
+      "themeAr": "إن الله يدافع عن الذين آمنوا",
+      "id": 275
+    },
+    {
+      "surah": 29,
+      "verse": 56,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "My earth is spacious",
+      "themeUr": "میری زمین کشادہ ہے",
+      "themeAr": "إن أرضي واسعة",
+      "id": 276
+    },
+    {
+      "surah": 42,
+      "verse": 28,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Rain sent down after they despaired",
+      "themeUr": "مایوسی کے بعد بارش برسائی",
+      "themeAr": "ينزل الغيث من بعد ما قنطوا",
+      "id": 277
+    },
+    {
+      "surah": 47,
+      "verse": 7,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Stand with Him and He steadies your feet",
+      "themeUr": "اس کا ساتھ دو، وہ تمہارے قدم جما دے گا",
+      "themeAr": "إن تنصروا الله ينصركم ويثبت أقدامكم",
+      "id": 278
+    },
+    {
+      "surah": 48,
+      "verse": 4,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He sent calm down into their hearts",
+      "themeUr": "اس نے دلوں میں سکینت اتاری",
+      "themeAr": "أنزل السكينة في قلوب المؤمنين",
+      "id": 279
+    },
+    {
+      "surah": 84,
+      "verse": 6,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "You are laboring toward your Lord",
+      "themeUr": "تم اپنے رب کی طرف محنت کرتے جا رہے ہو",
+      "themeAr": "إنك كادح إلى ربك كدحا",
+      "id": 280
+    },
+    {
+      "surah": 87,
+      "verse": 8,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He will ease you toward ease",
+      "themeUr": "وہ تمہیں آسانی کی راہ پر لے جائے گا",
+      "themeAr": "ونيسرك لليسرى",
+      "id": 281
+    },
+    {
+      "surah": 90,
+      "verse": 4,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Man was made to labor",
+      "themeUr": "انسان مشقت میں پیدا کیا گیا",
+      "themeAr": "لقد خلقنا الإنسان في كبد",
+      "id": 282
+    },
+    {
+      "surah": 93,
+      "verse": 5,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Your Lord will give until you are content",
+      "themeUr": "تمہارا رب تمہیں اتنا دے گا کہ تم راضی ہو جاؤ",
+      "themeAr": "ولسوف يعطيك ربك فترضى",
+      "id": 283
+    },
+    {
+      "surah": 94,
+      "verse": 6,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "With hardship comes ease",
+      "themeUr": "مشکل کے ساتھ آسانی ہے",
+      "themeAr": "إن مع العسر يسرا",
+      "id": 284
+    },
+    {
+      "surah": 2,
+      "verse": 164,
+      "themeKey": "creation",
+      "themeEn": "Everything around you speaks",
+      "themeUr": "ہر چیز گواہی دیتی ہے",
+      "themeAr": "آيات لقوم يعقلون",
+      "id": 285
+    },
+    {
+      "surah": 6,
+      "verse": 99,
+      "themeKey": "creation",
+      "themeEn": "Look at the fruit ripening",
+      "themeUr": "پھل کو پکتے ہوئے دیکھو",
+      "themeAr": "انظروا إلى ثمره إذا أثمر",
+      "id": 286
+    },
+    {
+      "surah": 7,
+      "verse": 54,
+      "themeKey": "creation",
+      "themeEn": "Night chasing the day",
+      "themeUr": "رات دن کا پیچھا کرتی ہے",
+      "themeAr": "يغشي الليل النهار يطلبه حثيثا",
+      "id": 287
+    },
+    {
+      "surah": 13,
+      "verse": 4,
+      "themeKey": "creation",
+      "themeEn": "One water, many fruits",
+      "themeUr": "ایک ہی پانی، مختلف پھل",
+      "themeAr": "يسقى بماء واحد",
+      "id": 288
+    },
+    {
+      "surah": 15,
+      "verse": 19,
+      "themeKey": "creation",
+      "themeEn": "Everything grown in balance",
+      "themeUr": "ہر چیز ٹھیک اندازے سے اگائی",
+      "themeAr": "من كل شيء موزون",
+      "id": 289
+    },
+    {
+      "surah": 15,
+      "verse": 22,
+      "themeKey": "creation",
+      "themeEn": "The winds that carry rain",
+      "themeUr": "بارش لانے والی ہوائیں",
+      "themeAr": "وأرسلنا الرياح لواقح",
+      "id": 290
+    },
+    {
+      "surah": 16,
+      "verse": 79,
+      "themeKey": "creation",
+      "themeEn": "Who holds the birds up",
+      "themeUr": "پرندوں کو کون تھامے ہوئے ہے",
+      "themeAr": "ما يمسكهن إلا الله",
+      "id": 291
+    },
+    {
+      "surah": 17,
+      "verse": 12,
+      "themeKey": "creation",
+      "themeEn": "Night and day, two signs",
+      "themeUr": "رات اور دن، دو نشانیاں",
+      "themeAr": "وجعلنا الليل والنهار آيتين",
+      "id": 292
+    },
+    {
+      "surah": 21,
+      "verse": 33,
+      "themeKey": "creation",
+      "themeEn": "Each one swimming in orbit",
+      "themeUr": "ہر ایک اپنے مدار میں تیر رہا ہے",
+      "themeAr": "كل في فلك يسبحون",
+      "id": 293
+    },
+    {
+      "surah": 24,
+      "verse": 45,
+      "themeKey": "creation",
+      "themeEn": "Every living thing from water",
+      "themeUr": "ہر جاندار پانی سے",
+      "themeAr": "خلق كل دابة من ماء",
+      "id": 294
+    },
+    {
+      "surah": 25,
+      "verse": 47,
+      "themeKey": "creation",
+      "themeEn": "Sleep, then a new rising",
+      "themeUr": "نیند آرام، اور دن نئی زندگی",
+      "themeAr": "وجعل النهار نشورا",
+      "id": 295
+    },
+    {
+      "surah": 25,
+      "verse": 53,
+      "themeKey": "creation",
+      "themeEn": "The barrier between two seas",
+      "themeUr": "دو سمندروں کے درمیان پردہ",
+      "themeAr": "وجعل بينهما برزخا",
+      "id": 296
+    },
+    {
+      "surah": 25,
+      "verse": 61,
+      "themeKey": "creation",
+      "themeEn": "Stars and a shining moon",
+      "themeUr": "ستارے اور روشن چاند",
+      "themeAr": "وجعل فيها سراجا وقمرا منيرا",
+      "id": 297
+    },
+    {
+      "surah": 30,
+      "verse": 20,
+      "themeKey": "creation",
+      "themeEn": "From dust, and then you",
+      "themeUr": "مٹی سے، اور پھر تم",
+      "themeAr": "خلقكم من تراب",
+      "id": 298
+    },
+    {
+      "surah": 35,
+      "verse": 41,
+      "themeKey": "creation",
+      "themeEn": "He holds the heavens up",
+      "themeUr": "وہی آسمانوں کو تھامے ہوئے ہے",
+      "themeAr": "يمسك السماوات والأرض أن تزولا",
+      "id": 299
+    },
+    {
+      "surah": 36,
+      "verse": 36,
+      "themeKey": "creation",
+      "themeEn": "All things made in pairs",
+      "themeUr": "ہر چیز جوڑوں میں پیدا کی",
+      "themeAr": "خلق الأزواج كلها",
+      "id": 300
+    },
+    {
+      "surah": 39,
+      "verse": 5,
+      "themeKey": "creation",
+      "themeEn": "Night wrapped over the day",
+      "themeUr": "رات دن پر لپیٹی جاتی ہے",
+      "themeAr": "يكور الليل على النهار",
+      "id": 301
+    },
+    {
+      "surah": 41,
+      "verse": 39,
+      "themeKey": "creation",
+      "themeEn": "The earth stirs and grows",
+      "themeUr": "زمین لہلہا اٹھتی ہے",
+      "themeAr": "اهتزت وربت",
+      "id": 302
+    },
+    {
+      "surah": 51,
+      "verse": 47,
+      "themeKey": "creation",
+      "themeEn": "A sky still expanding",
+      "themeUr": "آسمان کو وسعت دی جا رہی ہے",
+      "themeAr": "وإنا لموسعون",
+      "id": 303
+    },
+    {
+      "surah": 95,
+      "verse": 4,
+      "themeKey": "creation",
+      "themeEn": "Made in the finest form",
+      "themeUr": "بہترین ساخت میں پیدا کیا",
+      "themeAr": "في أحسن تقويم",
+      "id": 304
+    },
+    {
+      "surah": 4,
+      "verse": 69,
+      "themeKey": "hereafter",
+      "themeEn": "The company you will keep",
+      "themeUr": "بہترین رفیق ساتھ ہوں گے",
+      "themeAr": "وحسن أولئك رفيقا",
+      "id": 305
+    },
+    {
+      "surah": 4,
+      "verse": 134,
+      "themeKey": "hereafter",
+      "themeEn": "With Him, both rewards",
+      "themeUr": "دونوں جہاں کا اجر اسی کے پاس",
+      "themeAr": "فعند الله ثواب الدنيا والآخرة",
+      "id": 306
+    },
+    {
+      "surah": 5,
+      "verse": 119,
+      "themeKey": "hereafter",
+      "themeEn": "He is pleased with them",
+      "themeUr": "اللہ ان سے راضی، وہ اس سے",
+      "themeAr": "رضي الله عنهم ورضوا عنه",
+      "id": 307
+    },
+    {
+      "surah": 9,
+      "verse": 72,
+      "themeKey": "hereafter",
+      "themeEn": "His approval, greater than gardens",
+      "themeUr": "اللہ کی رضا سب سے بڑی",
+      "themeAr": "ورضوان من الله أكبر",
+      "id": 308
+    },
+    {
+      "surah": 10,
+      "verse": 25,
+      "themeKey": "hereafter",
+      "themeEn": "He invites you home",
+      "themeUr": "وہ سلامتی کے گھر بلاتا ہے",
+      "themeAr": "يدعو إلى دار السلام",
+      "id": 309
+    },
+    {
+      "surah": 10,
+      "verse": 26,
+      "themeKey": "hereafter",
+      "themeEn": "The best, and more besides",
+      "themeUr": "بہترین اجر، اور کچھ زیادہ",
+      "themeAr": "للذين أحسنوا الحسنى وزيادة",
+      "id": 310
+    },
+    {
+      "surah": 18,
+      "verse": 46,
+      "themeKey": "hereafter",
+      "themeEn": "What outlasts wealth and children",
+      "themeUr": "مال و اولاد سے زیادہ باقی رہنے والا",
+      "themeAr": "والباقيات الصالحات خير",
+      "id": 311
+    },
+    {
+      "surah": 28,
+      "verse": 60,
+      "themeKey": "hereafter",
+      "themeEn": "Better, and longer lasting",
+      "themeUr": "جو اللہ کے پاس ہے وہ بہتر اور باقی",
+      "themeAr": "وما عند الله خير وأبقى",
+      "id": 312
+    },
+    {
+      "surah": 29,
+      "verse": 57,
+      "themeKey": "hereafter",
+      "themeEn": "The journey home to Him",
+      "themeUr": "پھر اسی کی طرف لوٹنا ہے",
+      "themeAr": "ثم إلينا ترجعون",
+      "id": 313
+    },
+    {
+      "surah": 29,
+      "verse": 64,
+      "themeKey": "hereafter",
+      "themeEn": "That is the real life",
+      "themeUr": "اصل زندگی وہی ہے",
+      "themeAr": "وإن الدار الآخرة لهي الحيوان",
+      "id": 314
+    },
+    {
+      "surah": 32,
+      "verse": 17,
+      "themeKey": "hereafter",
+      "themeEn": "Joy kept hidden for you",
+      "themeUr": "آنکھوں کی ٹھنڈک، چھپا کر رکھی گئی",
+      "themeAr": "ما أخفي لهم من قرة أعين",
+      "id": 315
+    },
+    {
+      "surah": 33,
+      "verse": 44,
+      "themeKey": "hereafter",
+      "themeEn": "The greeting will be peace",
+      "themeUr": "ملاقات کے دن سلام کہا جائے گا",
+      "themeAr": "تحيتهم يوم يلقونه سلام",
+      "id": 316
+    },
+    {
+      "surah": 36,
+      "verse": 58,
+      "themeKey": "hereafter",
+      "themeEn": "Peace, spoken by your Lord",
+      "themeUr": "رب رحیم کی طرف سے سلام",
+      "themeAr": "سلام قولا من رب رحيم",
+      "id": 317
+    },
+    {
+      "surah": 41,
+      "verse": 8,
+      "themeKey": "hereafter",
+      "themeEn": "A reward without end",
+      "themeUr": "کبھی نہ ختم ہونے والا اجر",
+      "themeAr": "لهم أجر غير ممنون",
+      "id": 318
+    },
+    {
+      "surah": 43,
+      "verse": 68,
+      "themeKey": "hereafter",
+      "themeEn": "No fear, and no grief",
+      "themeUr": "نہ کوئی خوف، نہ غم",
+      "themeAr": "لا خوف عليكم اليوم ولا أنتم تحزنون",
+      "id": 319
+    },
+    {
+      "surah": 55,
+      "verse": 60,
+      "themeKey": "hereafter",
+      "themeEn": "Good is answered with good",
+      "themeUr": "نیکی کا بدلہ نیکی ہی تو ہے",
+      "themeAr": "هل جزاء الإحسان إلا الإحسان",
+      "id": 320
+    },
+    {
+      "surah": 68,
+      "verse": 34,
+      "themeKey": "hereafter",
+      "themeEn": "Gardens waiting with their Lord",
+      "themeUr": "رب کے پاس نعمتوں کے باغ",
+      "themeAr": "إن للمتقين عند ربهم جنات النعيم",
+      "id": 321
+    },
+    {
+      "surah": 89,
+      "verse": 28,
+      "themeKey": "hereafter",
+      "themeEn": "Come home, content and welcomed",
+      "themeUr": "اپنے رب کی طرف لوٹ آ، راضی اور پسندیدہ",
+      "themeAr": "ارجعي إلى ربك راضية مرضية",
+      "id": 322
+    },
+    {
+      "surah": 93,
+      "verse": 4,
+      "themeKey": "hereafter",
+      "themeEn": "What comes next is better",
+      "themeUr": "آنے والا وقت پہلے سے بہتر ہے",
+      "themeAr": "وللآخرة خير لك من الأولى",
+      "id": 323
+    },
+    {
+      "surah": 99,
+      "verse": 7,
+      "themeKey": "hereafter",
+      "themeEn": "Not one atom is lost",
+      "themeUr": "ذرہ برابر نیکی بھی رائیگاں نہیں",
+      "themeAr": "مثقال ذرة خيرا يره",
+      "id": 324
+    },
+    {
+      "surah": 1,
+      "verse": 6,
+      "themeKey": "guidance",
+      "themeEn": "Guide us to the straight path",
+      "themeUr": "ہمیں سیدھا راستہ دکھا",
+      "themeAr": "اهدنا الصراط المستقيم",
+      "id": 325
+    },
+    {
+      "surah": 2,
+      "verse": 256,
+      "themeKey": "guidance",
+      "themeEn": "Faith cannot be forced on anyone",
+      "themeUr": "دین میں کوئی زبردستی نہیں",
+      "themeAr": "لا إكراه في الدين",
+      "id": 326
+    },
+    {
+      "surah": 4,
+      "verse": 174,
+      "themeKey": "guidance",
+      "themeEn": "A clear light has come to you",
+      "themeUr": "تمہارے پاس روشن نور آ چکا ہے",
+      "themeAr": "وأنزلنا إليكم نورا مبينا",
+      "id": 327
+    },
+    {
+      "surah": 4,
+      "verse": 175,
+      "themeKey": "guidance",
+      "themeEn": "Hold fast to Him and He leads you",
+      "themeUr": "اسے مضبوطی سے تھامو، وہ راہ دکھائے گا",
+      "themeAr": "ويهديهم إليه صراطا مستقيما",
+      "id": 328
+    },
+    {
+      "surah": 6,
+      "verse": 153,
+      "themeKey": "guidance",
+      "themeEn": "This is My path - follow it",
+      "themeUr": "یہی میرا سیدھا راستہ ہے، اسی پر چلو",
+      "themeAr": "وأن هذا صراطي مستقيما فاتبعوه",
+      "id": 329
+    },
+    {
+      "surah": 10,
+      "verse": 108,
+      "themeKey": "guidance",
+      "themeEn": "The truth has reached you from your Lord",
+      "themeUr": "تمہارے رب کی طرف سے حق آ چکا ہے",
+      "themeAr": "قد جاءكم الحق من ربكم",
+      "id": 330
+    },
+    {
+      "surah": 14,
+      "verse": 1,
+      "themeKey": "guidance",
+      "themeEn": "A Book to bring people out of darkness",
+      "themeUr": "کتاب، تاکہ لوگوں کو اندھیروں سے نکالے",
+      "themeAr": "لتخرج الناس من الظلمات إلى النور",
+      "id": 331
+    },
+    {
+      "surah": 15,
+      "verse": 9,
+      "themeKey": "guidance",
+      "themeEn": "We sent it down, and We guard it",
+      "themeUr": "ہم نے اتارا، ہم ہی اس کی حفاظت کریں گے",
+      "themeAr": "إنا نحن نزلنا الذكر وإنا له لحافظون",
+      "id": 332
+    },
+    {
+      "surah": 16,
+      "verse": 64,
+      "themeKey": "guidance",
+      "themeEn": "Sent to make clear what people dispute",
+      "themeUr": "تاکہ اختلاف کی بات واضح ہو جائے",
+      "themeAr": "لتبين لهم الذي اختلفوا فيه",
+      "id": 333
+    },
+    {
+      "surah": 17,
+      "verse": 9,
+      "themeKey": "guidance",
+      "themeEn": "It guides to what stands most upright",
+      "themeUr": "یہ سب سے سیدھی راہ دکھاتا ہے",
+      "themeAr": "يهدي للتي هي أقوم",
+      "id": 334
+    },
+    {
+      "surah": 22,
+      "verse": 16,
+      "themeKey": "guidance",
+      "themeEn": "Sent down as verses of clear evidence",
+      "themeUr": "روشن نشانیاں بنا کر اتارا",
+      "themeAr": "أنزلناه آيات بينات",
+      "id": 335
+    },
+    {
+      "surah": 28,
+      "verse": 56,
+      "themeKey": "guidance",
+      "themeEn": "No one can guide a heart but God",
+      "themeUr": "ہدایت صرف اللہ کے اختیار میں ہے",
+      "themeAr": "إن الله يهدي من يشاء",
+      "id": 336
+    },
+    {
+      "surah": 34,
+      "verse": 50,
+      "themeKey": "guidance",
+      "themeEn": "If I am guided, it is by revelation",
+      "themeUr": "اگر میں راہ پر ہوں تو وحی کے سبب",
+      "themeAr": "وإن اهتديت فبما يوحي إلي ربي",
+      "id": 337
+    },
+    {
+      "surah": 42,
+      "verse": 52,
+      "themeKey": "guidance",
+      "themeEn": "He made the Book a light to guide by",
+      "themeUr": "اس نے کتاب کو نور بنایا",
+      "themeAr": "جعلناه نورا نهدي به من نشاء",
+      "id": 338
+    },
+    {
+      "surah": 43,
+      "verse": 43,
+      "themeKey": "guidance",
+      "themeEn": "Hold to what was revealed to you",
+      "themeUr": "جو وحی کی گئی، اسے تھامے رہو",
+      "themeAr": "فاستمسك بالذي أوحي إليك",
+      "id": 339
+    },
+    {
+      "surah": 45,
+      "verse": 20,
+      "themeKey": "guidance",
+      "themeEn": "Insight for all people",
+      "themeUr": "سب لوگوں کے لیے بصیرت",
+      "themeAr": "هذا بصائر للناس",
+      "id": 340
+    },
+    {
+      "surah": 47,
+      "verse": 17,
+      "themeKey": "guidance",
+      "themeEn": "The guided are given more guidance",
+      "themeUr": "جو راہ پا لیں، انہیں مزید ہدایت ملتی ہے",
+      "themeAr": "والذين اهتدوا زادهم هدى",
+      "id": 341
+    },
+    {
+      "surah": 54,
+      "verse": 17,
+      "themeKey": "guidance",
+      "themeEn": "We made the Qur'an easy to remember",
+      "themeUr": "ہم نے قرآن کو یاد کرنے کے لیے آسان بنایا",
+      "themeAr": "ولقد يسرنا القرآن للذكر",
+      "id": 342
+    },
+    {
+      "surah": 4,
+      "verse": 26,
+      "themeKey": "guidance",
+      "themeEn": "He wants to make it clear for you",
+      "themeUr": "وہ تمہارے لیے واضح کرنا چاہتا ہے",
+      "themeAr": "يريد الله ليبين لكم ويهديكم",
+      "id": 343
+    },
+    {
+      "surah": 92,
+      "verse": 12,
+      "themeKey": "guidance",
+      "themeEn": "The guiding is upon Us",
+      "themeUr": "ہدایت دینا ہمارے ذمے ہے",
+      "themeAr": "إن علينا للهدى",
+      "id": 344
+    },
+    {
+      "surah": 2,
+      "verse": 148,
+      "themeKey": "striving",
+      "themeEn": "Race toward all that is good",
+      "themeUr": "نیکیوں کی طرف ایک دوسرے سے آگے بڑھو",
+      "themeAr": "فاستبقوا الخيرات",
+      "id": 345
+    },
+    {
+      "surah": 3,
+      "verse": 104,
+      "themeKey": "striving",
+      "themeEn": "Call others toward what is good",
+      "themeUr": "بھلائی کی طرف بلانے والے بنو",
+      "themeAr": "ولتكن منكم أمة يدعون إلى الخير",
+      "id": 346
+    },
+    {
+      "surah": 3,
+      "verse": 146,
+      "themeKey": "striving",
+      "themeEn": "They did not weaken, nor did they yield",
+      "themeUr": "نہ وہ کمزور پڑے، نہ جھکے",
+      "themeAr": "فما وهنوا وما استكانوا",
+      "id": 347
+    },
+    {
+      "surah": 3,
+      "verse": 195,
+      "themeKey": "striving",
+      "themeEn": "No worker's work is ever lost",
+      "themeUr": "کسی محنت کرنے والے کا عمل ضائع نہیں ہوتا",
+      "themeAr": "لا أضيع عمل عامل منكم",
+      "id": 348
+    },
+    {
+      "surah": 5,
+      "verse": 35,
+      "themeKey": "striving",
+      "themeEn": "Seek the way to Him, and strive",
+      "themeUr": "اس تک پہنچنے کا ذریعہ ڈھونڈو اور کوشش کرو",
+      "themeAr": "وابتغوا إليه الوسيلة وجاهدوا",
+      "id": 349
+    },
+    {
+      "surah": 6,
+      "verse": 132,
+      "themeKey": "striving",
+      "themeEn": "Ranks are earned by what you do",
+      "themeUr": "درجے اعمال سے بنتے ہیں",
+      "themeAr": "ولكل درجات مما عملوا",
+      "id": 350
+    },
+    {
+      "surah": 8,
+      "verse": 24,
+      "themeKey": "striving",
+      "themeEn": "Answer the call that gives you life",
+      "themeUr": "جو زندگی بخشے، اس پکار پر لبیک کہو",
+      "themeAr": "استجيبوا لله وللرسول إذا دعاكم لما يحييكم",
+      "id": 351
+    },
+    {
+      "surah": 9,
+      "verse": 41,
+      "themeKey": "striving",
+      "themeEn": "Set out, light or heavy",
+      "themeUr": "ہلکے ہو یا بوجھل، نکل پڑو",
+      "themeAr": "انفروا خفافا وثقالا",
+      "id": 352
+    },
+    {
+      "surah": 9,
+      "verse": 105,
+      "themeKey": "striving",
+      "themeEn": "Work, and God will see your work",
+      "themeUr": "عمل کرو، اللہ تمہارا عمل دیکھے گا",
+      "themeAr": "اعملوا فسيرى الله عملكم",
+      "id": 353
+    },
+    {
+      "surah": 11,
+      "verse": 112,
+      "themeKey": "striving",
+      "themeEn": "Stay steady, as you were told to",
+      "themeUr": "جیسا حکم ملا، اسی پر جمے رہو",
+      "themeAr": "فاستقم كما أمرت",
+      "id": 354
+    },
+    {
+      "surah": 16,
+      "verse": 128,
+      "themeKey": "striving",
+      "themeEn": "He is with those who do good",
+      "themeUr": "وہ نیکی کرنے والوں کے ساتھ ہے",
+      "themeAr": "إن الله مع الذين اتقوا والذين هم محسنون",
+      "id": 355
+    },
+    {
+      "surah": 17,
+      "verse": 84,
+      "themeKey": "striving",
+      "themeEn": "Each one works in his own way",
+      "themeUr": "ہر شخص اپنے طریقے پر عمل کرتا ہے",
+      "themeAr": "كل يعمل على شاكلته",
+      "id": 356
+    },
+    {
+      "surah": 21,
+      "verse": 94,
+      "themeKey": "striving",
+      "themeEn": "No effort is denied, all is recorded",
+      "themeUr": "کوئی کوشش رائیگاں نہیں، سب لکھا جاتا ہے",
+      "themeAr": "فلا كفران لسعيه وإنا له كاتبون",
+      "id": 357
+    },
+    {
+      "surah": 22,
+      "verse": 78,
+      "themeKey": "striving",
+      "themeEn": "Strive for Him as He deserves",
+      "themeUr": "اللہ کی راہ میں حق کے مطابق کوشش کرو",
+      "themeAr": "وجاهدوا في الله حق جهاده",
+      "id": 358
+    },
+    {
+      "surah": 29,
+      "verse": 6,
+      "themeKey": "striving",
+      "themeEn": "Whoever strives, strives for his own soul",
+      "themeUr": "جو کوشش کرتا ہے، اپنے ہی بھلے کے لیے",
+      "themeAr": "ومن جاهد فإنما يجاهد لنفسه",
+      "id": 359
+    },
+    {
+      "surah": 29,
+      "verse": 69,
+      "themeKey": "striving",
+      "themeEn": "Those who strive, He guides",
+      "themeUr": "جو ہماری راہ میں کوشش کرتے ہیں",
+      "themeAr": "والذين جاهدوا فينا لنهدينهم سبلنا",
+      "id": 360
+    },
+    {
+      "surah": 39,
+      "verse": 2,
+      "themeKey": "striving",
+      "themeEn": "Serve Him with a sincere heart",
+      "themeUr": "خالص ہو کر اس کی بندگی کرو",
+      "themeAr": "فاعبد الله مخلصا له الدين",
+      "id": 361
+    },
+    {
+      "surah": 47,
+      "verse": 33,
+      "themeKey": "striving",
+      "themeEn": "Do not undo your own deeds",
+      "themeUr": "اپنے اعمال خود ضائع نہ کرو",
+      "themeAr": "ولا تبطلوا أعمالكم",
+      "id": 362
+    },
+    {
+      "surah": 49,
+      "verse": 15,
+      "themeKey": "striving",
+      "themeEn": "Believed, never doubted, then strove",
+      "themeUr": "ایمان لائے، شک نہ کیا، پھر جدوجہد کی",
+      "themeAr": "آمنوا ثم لم يرتابوا وجاهدوا",
+      "id": 363
+    },
+    {
+      "surah": 94,
+      "verse": 7,
+      "themeKey": "striving",
+      "themeEn": "When one task ends, begin the next",
+      "themeUr": "ایک کام سے فارغ ہو تو دوسرے میں لگ جاؤ",
+      "themeAr": "فإذا فرغت فانصب",
+      "id": 364
+    }
+  ],
+  "sacredDays": [
+    {
+      "month": 1,
+      "day": 10,
+      "surah": 3,
+      "verse": 169,
+      "occasionEn": "Ashura",
+      "occasionUr": "عاشورا",
+      "occasionAr": "عاشوراء",
+      "themeEn": "The martyrs are alive",
+      "themeUr": "شہدا زندہ ہیں",
+      "themeAr": "الشهداء أحياء"
+    },
+    {
+      "month": 2,
+      "day": 20,
+      "surah": 22,
+      "verse": 27,
+      "occasionEn": "Arbaeen",
+      "occasionUr": "اربعین",
+      "occasionAr": "الأربعين",
+      "themeEn": "They come to you on foot",
+      "themeUr": "وہ پیدل تیری طرف آتے ہیں",
+      "themeAr": "يأتوك رجالا"
+    },
+    {
+      "month": 2,
+      "day": 28,
+      "surah": 3,
+      "verse": 144,
+      "occasionEn": "Passing of the Prophet",
+      "occasionUr": "رحلتِ رسولِ اکرم",
+      "occasionAr": "رحلة النبي",
+      "themeEn": "Muhammad is but a messenger",
+      "themeUr": "محمد صرف ایک رسول ہیں",
+      "themeAr": "وما محمد إلا رسول"
+    },
+    {
+      "month": 3,
+      "day": 17,
+      "surah": 21,
+      "verse": 107,
+      "occasionEn": "Mawlid an-Nabi",
+      "occasionUr": "میلادِ نبی",
+      "occasionAr": "المولد النبوي",
+      "themeEn": "A mercy to all the worlds",
+      "themeUr": "تمام جہانوں کے لیے رحمت",
+      "themeAr": "رحمة للعالمين"
+    },
+    {
+      "month": 6,
+      "day": 3,
+      "surah": 33,
+      "verse": 33,
+      "occasionEn": "Martyrdom of Sayyida Fatima",
+      "occasionUr": "شہادتِ سیدہ فاطمہ",
+      "occasionAr": "شهادة السيدة فاطمة",
+      "themeEn": "The People of the House, purified",
+      "themeUr": "اہلِ بیت، پاک و پاکیزہ",
+      "themeAr": "أهل البيت والتطهير"
+    },
+    {
+      "month": 7,
+      "day": 13,
+      "surah": 2,
+      "verse": 207,
+      "occasionEn": "Birth of Imam Ali",
+      "occasionUr": "ولادتِ امام علی",
+      "occasionAr": "مولد الإمام علي",
+      "themeEn": "He who gives his soul seeking God's pleasure",
+      "themeUr": "جو رضائے الٰہی کے لیے جان دے",
+      "themeAr": "من يشري نفسه ابتغاء مرضاة الله"
+    },
+    {
+      "month": 7,
+      "day": 27,
+      "surah": 96,
+      "verse": 1,
+      "occasionEn": "Mab'ath",
+      "occasionUr": "مبعث",
+      "occasionAr": "المبعث",
+      "themeEn": "Read, in the name of your Lord",
+      "themeUr": "پڑھ اپنے رب کے نام سے",
+      "themeAr": "اقرأ باسم ربك"
+    },
+    {
+      "month": 8,
+      "day": 3,
+      "surah": 42,
+      "verse": 23,
+      "occasionEn": "Birth of Imam Husayn",
+      "occasionUr": "ولادتِ امام حسین",
+      "occasionAr": "مولد الإمام الحسين",
+      "themeEn": "Love for the kin",
+      "themeUr": "قرابت داروں سے محبت",
+      "themeAr": "المودة في القربى"
+    },
+    {
+      "month": 8,
+      "day": 15,
+      "surah": 28,
+      "verse": 5,
+      "occasionEn": "Birth of Imam al-Mahdi",
+      "occasionUr": "ولادتِ امام مہدی",
+      "occasionAr": "مولد الإمام المهدي",
+      "themeEn": "The oppressed shall inherit the earth",
+      "themeUr": "مستضعفین زمین کے وارث ہوں گے",
+      "themeAr": "ونجعلهم الوارثين"
+    },
+    {
+      "month": 9,
+      "day": 1,
+      "surah": 2,
+      "verse": 183,
+      "occasionEn": "Ramadan begins",
+      "occasionUr": "آغازِ ماہِ رمضان",
+      "occasionAr": "بداية شهر رمضان",
+      "themeEn": "Fasting was prescribed for you",
+      "themeUr": "روزہ تم پر فرض کیا گیا",
+      "themeAr": "كتب عليكم الصيام"
+    },
+    {
+      "month": 9,
+      "day": 15,
+      "surah": 21,
+      "verse": 73,
+      "occasionEn": "Birth of Imam Hasan",
+      "occasionUr": "ولادتِ امام حسن",
+      "occasionAr": "مولد الإمام الحسن",
+      "themeEn": "Leaders who guide by Our command",
+      "themeUr": "ہمارے حکم سے ہدایت دینے والے پیشوا",
+      "themeAr": "أئمة يهدون بأمرنا"
+    },
+    {
+      "month": 9,
+      "day": 21,
+      "surah": 33,
+      "verse": 23,
+      "occasionEn": "Martyrdom of Imam Ali",
+      "occasionUr": "شہادتِ امام علی",
+      "occasionAr": "شهادة الإمام علي",
+      "themeEn": "Men true to what they promised God",
+      "themeUr": "وہ مرد جنہوں نے اپنا عہد سچ کر دکھایا",
+      "themeAr": "رجال صدقوا ما عاهدوا الله"
+    },
+    {
+      "month": 9,
+      "day": 23,
+      "surah": 97,
+      "verse": 1,
+      "occasionEn": "Laylat al-Qadr",
+      "occasionUr": "شبِ قدر",
+      "occasionAr": "ليلة القدر",
+      "themeEn": "We sent it down on the Night of Decree",
+      "themeUr": "ہم نے اسے شبِ قدر میں نازل کیا",
+      "themeAr": "إنا أنزلناه في ليلة القدر"
+    },
+    {
+      "month": 10,
+      "day": 1,
+      "surah": 87,
+      "verse": 14,
+      "occasionEn": "Eid al-Fitr",
+      "occasionUr": "عید الفطر",
+      "occasionAr": "عيد الفطر",
+      "themeEn": "Successful is the one who purifies himself",
+      "themeUr": "کامیاب ہوا وہ جس نے خود کو پاک کیا",
+      "themeAr": "قد أفلح من تزكى"
+    },
+    {
+      "month": 12,
+      "day": 9,
+      "surah": 2,
+      "verse": 198,
+      "occasionEn": "Arafah",
+      "occasionUr": "روزِ عرفہ",
+      "occasionAr": "يوم عرفة",
+      "themeEn": "Remember Him as He has guided you",
+      "themeUr": "اسے یاد کرو جیسے اس نے تمہیں ہدایت دی",
+      "themeAr": "واذكروه كما هداكم"
+    },
+    {
+      "month": 12,
+      "day": 10,
+      "surah": 37,
+      "verse": 107,
+      "occasionEn": "Eid al-Adha",
+      "occasionUr": "عید الاضحیٰ",
+      "occasionAr": "عيد الأضحى",
+      "themeEn": "We ransomed him with a great sacrifice",
+      "themeUr": "ہم نے اسے عظیم قربانی کے بدلے بچا لیا",
+      "themeAr": "وفديناه بذبح عظيم"
+    },
+    {
+      "month": 12,
+      "day": 18,
+      "surah": 5,
+      "verse": 67,
+      "occasionEn": "Ghadeer",
+      "occasionUr": "عید غدیر",
+      "occasionAr": "عيد الغدير",
+      "themeEn": "Convey what has been revealed",
+      "themeUr": "جو نازل ہوا ہے اسے پہنچا دیں",
+      "themeAr": "بلغ ما أنزل إليك"
+    },
+    {
+      "month": 12,
+      "day": 24,
+      "surah": 3,
+      "verse": 61,
+      "occasionEn": "Mubahala",
+      "occasionUr": "مباہلہ",
+      "occasionAr": "المباهلة",
+      "themeEn": "Our sons and your sons",
+      "themeUr": "ہمارے بیٹے اور تمہارے بیٹے",
+      "themeAr": "أبناءنا وأبناءكم"
+    },
+    {
+      "month": 12,
+      "day": 25,
+      "surah": 76,
+      "verse": 8,
+      "occasionEn": "Surah al-Insan",
+      "occasionUr": "سورہ الانسان",
+      "occasionAr": "سورة الإنسان",
+      "themeEn": "They give food out of love for Him",
+      "themeUr": "وہ اس کی محبت میں کھانا کھلاتے ہیں",
+      "themeAr": "ويطعمون الطعام على حبه"
+    }
+  ]
+}

@@ -673,7 +673,7 @@ struct ParallelVerseCard: View {
                     arabic: "فَنَادَىٰ فِي الظُّلُمَاتِ: لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ، فَاسْتَجَابَ اللَّهُ لَهُ.",
                     translationEn: "He called out in the depths of darkness: ‘There is no god but You; glory be to You; truly I was among the wrongdoers.’ So God answered him.",
                     translationUr: "اُنہوں نے تاریکیوں میں پکارا: «تیرے سوا کوئی معبود نہیں، تو پاک ہے، بیشک میں ظالموں میں سے تھا»، پس اللہ نے اُن کی پکار قبول فرمائی۔",
-                    sourceEn: "Imam al-Riḍā (ʿa) — ʿUyūn Akhbār al-Riḍā, vol. 1, p. 170",
+                    sourceEn: "Imam al-Rida (a) — Uyun Akhbar al-Rida, vol. 1, p. 170",
                     sourceAr: "الإمام الرضا (ع) — عيون أخبار الرضا، ج١ ص١٧٠",
                     sourceUr: "امام علی رضا علیہ السلام — عیون اخبار الرضا، ج۱، ص۱۷۰"
                 )

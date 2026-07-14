@@ -673,20 +673,20 @@ extension DailyChallenge {
         format: .multipleChoice,
         topic: "Qur'an",
         prompt: LocalizedText(
-            en: "In which surah does the Āyat al-Kursī (Verse of the Throne) appear?",
+            en: "In which surah does the Ayat al-Kursi (Verse of the Throne) appear?",
             ur: "آیۃ الکرسی کس سورۃ میں ہے؟",
             ar: "في أي سورة تقع آية الكرسي؟"
         ),
         options: [
-            LocalizedText(en: "Surah Yāsīn (36)", ur: "سورۃ یٰس (۳۶)", ar: "سورة يس (٣٦)"),
+            LocalizedText(en: "Surah Yasin (36)", ur: "سورۃ یٰس (۳۶)", ar: "سورة يس (٣٦)"),
             LocalizedText(en: "Surah Al-Baqarah (2)", ur: "سورۃ البقرہ (۲)", ar: "سورة البقرة (٢)"),
-            LocalizedText(en: "Surah Al-Fātiḥah (1)", ur: "سورۃ الفاتحہ (۱)", ar: "سورة الفاتحة (١)"),
-            LocalizedText(en: "Surah Āl ʿImrān (3)", ur: "سورۃ آل عمران (۳)", ar: "سورة آل عمران (٣)")
+            LocalizedText(en: "Surah Al-Fatihah (1)", ur: "سورۃ الفاتحہ (۱)", ar: "سورة الفاتحة (١)"),
+            LocalizedText(en: "Surah Al Imran (3)", ur: "سورۃ آل عمران (۳)", ar: "سورة آل عمران (٣)")
         ],
         correctIndex: 1,
         answer: nil,
         explanation: LocalizedText(
-            en: "Āyat al-Kursī is verse 255 of Surah Al-Baqarah, the longest verse about Allah's sovereignty and knowledge.",
+            en: "Ayat al-Kursi is verse 255 of Surah Al-Baqarah, the longest verse about Allah's sovereignty and knowledge.",
             ur: "آیۃ الکرسی سورۃ البقرہ کی آیت نمبر ۲۵۵ ہے۔ یہ اللہ کی حاکمیت پر عظیم ترین آیت ہے۔",
             ar: "آية الكرسي هي الآية ٢٥٥ من سورة البقرة، وهي أعظم آية في القرآن عن سيادة الله وعلمه."
         ),
@@ -750,9 +750,9 @@ extension DailyChallenge {
             ar: "أكمل العبارة: \"إِنَّا لِلَّٰهِ وَإِنَّا إِلَيْهِ _______\""
         ),
         options: [
-            LocalizedText(en: "rāji'ūn (returners)", ur: "رَاجِعُونَ (لوٹنے والے)", ar: "رَاجِعُونَ"),
-            LocalizedText(en: "sābirūn (patient ones)", ur: "صَابِرُونَ (صابر لوگ)", ar: "صَابِرُونَ"),
-            LocalizedText(en: "ḥāmidūn (praisers)", ur: "حَامِدُونَ (حمد کرنے والے)", ar: "حَامِدُونَ")
+            LocalizedText(en: "raji'un (returners)", ur: "رَاجِعُونَ (لوٹنے والے)", ar: "رَاجِعُونَ"),
+            LocalizedText(en: "sabirun (patient ones)", ur: "صَابِرُونَ (صابر لوگ)", ar: "صَابِرُونَ"),
+            LocalizedText(en: "hamidun (praisers)", ur: "حَامِدُونَ (حمد کرنے والے)", ar: "حَامِدُونَ")
         ],
         correctIndex: 0,
         answer: nil,

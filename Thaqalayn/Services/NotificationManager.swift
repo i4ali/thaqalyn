@@ -3,7 +3,8 @@
 //  Thaqalayn
 //
 //  Service for managing daily verse notifications
-//  Handles permissions, scheduling, and verse selection based on Islamic calendar
+//  Handles permissions and scheduling. Verse selection lives in DailyVerseProvider,
+//  which the Today-tab card reads from too, so the push and the card always agree.
 //
 
 import Foundation
@@ -27,11 +28,31 @@ class NotificationManager: ObservableObject {
 
     private let islamicCalendar = IslamicCalendarManager.shared
     private let notificationCenter = UNUserNotificationCenter.current()
-    private var verseData: IslamicMonthVerseData?
     private let progressManager = ProgressManager.shared
 
     // UserDefaults keys
     private let preferencesKey = "notificationPreferences"
+
+    /// iOS caps an app at 64 pending notification requests, and that budget is shared
+    /// with streak_reminder, gentle_nudge, milestone_*, near_completion_*,
+    /// arafah_reminder and journey_start_*. Thirty days of verses leaves headroom
+    /// while still covering a user who does not open the app for a month - which is
+    /// exactly the user this notification exists for. Raise this and iOS will start
+    /// silently dropping requests.
+    private static let scheduleWindowDays = 30
+    private static let dailyVersePrefix = "daily_verse_"
+
+    private static let dayKeyFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+
+    private static func identifier(for date: Date) -> String {
+        dailyVersePrefix + dayKeyFormatter.string(from: date)
+    }
 
     private init() {
         // Load preferences
@@ -42,30 +63,9 @@ class NotificationManager: ObservableObject {
             self.preferences = NotificationPreferences()
         }
 
-        // Load verse data
-        loadVerseData()
-
         // Check permission status
         Task {
             await checkPermissionStatus()
-        }
-    }
-
-    // MARK: - Data Loading
-
-    private func loadVerseData() {
-        guard let url = Bundle.main.url(forResource: "islamic_month_verses", withExtension: "json") else {
-            print("❌ NotificationManager: Could not find islamic_month_verses.json in bundle")
-            print("📁 Bundle path: \(Bundle.main.bundlePath)")
-            return
-        }
-
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            self.verseData = try decoder.decode(IslamicMonthVerseData.self, from: data)
-        } catch {
-            print("❌ NotificationManager: Error loading verse data - \(error)")
         }
     }
 
@@ -105,99 +105,70 @@ class NotificationManager: ObservableObject {
         }
     }
 
-    // MARK: - Verse Selection
-
-    /// Select today's verse based on Islamic calendar
-    func selectTodayVerse() -> DailyVerseEntry? {
-        guard let verseData = verseData else {
-            print("❌ NotificationManager: Verse data not loaded")
-            return nil
-        }
-
-        let monthNumber = islamicCalendar.currentIslamicMonth()
-        let dayOfMonth = islamicCalendar.currentIslamicDay()
-
-        guard let monthData = verseData.months.first(where: { $0.month == monthNumber }) else {
-            print("❌ NotificationManager: Could not find month \(monthNumber)")
-            return nil
-        }
-
-        // Rotate through verses using day of month
-        let verseIndex = (dayOfMonth - 1) % monthData.verses.count
-        let selectedVerse = monthData.verses[verseIndex]
-
-        return selectedVerse
-    }
-
-    /// Get Islamic month data for current month
-    func currentMonthData() -> IslamicMonth? {
-        guard let verseData = verseData else { return nil }
-        let monthNumber = islamicCalendar.currentIslamicMonth()
-        return verseData.months.first(where: { $0.month == monthNumber })
-    }
-
     // MARK: - Notification Content
 
-    /// Build notification content for a verse
-    private func buildNotificationContent(for verseEntry: DailyVerseEntry) async -> UNMutableNotificationContent? {
-        let content = UNMutableNotificationContent()
+    private func buildNotificationContent(for selection: DailyVerseSelection) async -> UNMutableNotificationContent? {
+        let language = preferences.language
 
-        // Load verse data (DataManager is @MainActor)
         let verse = await MainActor.run {
-            DataManager.shared.getVerse(surah: verseEntry.surah, verse: verseEntry.verse)
+            DataManager.shared.getVerse(surah: selection.surah, verse: selection.verse)
         }
-
-        guard let verse = verse else {
-            print("❌ NotificationManager: Could not load verse \(verseEntry.surah):\(verseEntry.verse)")
+        guard let verse else {
+            print("❌ NotificationManager: could not hydrate \(selection.id)")
             return nil
         }
 
-        // Get month name
-        let monthData = currentMonthData()
-        let monthName = monthData?.name ?? islamicCalendar.monthName(for: islamicCalendar.currentIslamicMonth())
+        let content = UNMutableNotificationContent()
 
-        // Title
-        content.title = "Verse of the Day - \(monthName)"
+        // On a sacred day the occasion replaces the generic title.
+        content.title = selection.occasion(language) ?? Self.verseOfTheDayTitle(language)
+        // The theme lives in the subtitle so the body is nothing but the verse.
+        // iOS shows roughly four body lines on the lock screen; spending one on a
+        // "tap to explore" CTA only restated the tap gesture, so it is gone.
+        content.subtitle = selection.theme(language)
 
-        // Body
-        var body = ""
-
-        // Arabic text
-        body += verse.arabicText + "\n\n"
-
-        // Translation
-        body += verse.translation
-
-        // Optional: Add brief tafsir snippet if enabled
-        if preferences.includeTafsir {
-            if let tafsir = verse.tafsir {
-                let tafsirText = tafsir.content(for: TafsirLayer.foundation, language: preferences.language)
-                let snippet = String(tafsirText.prefix(150))
-                body += "\n\n💡 \(snippet)..."
+        var body = verse.arabicText
+        if let translation = Self.translation(from: verse, for: language), !translation.isEmpty {
+            body += "\n\n" + translation
+        }
+        if preferences.includeTafsir, let tafsir = verse.tafsir {
+            let text = tafsir.content(for: TafsirLayer.foundation, language: language)
+            if !text.isEmpty {
+                body += "\n\n💡 " + String(text.prefix(150)) + "..."
             }
         }
-
-        body += "\n\n📚 Tap to explore the 5-layer tafsir"
-
         content.body = body
 
-        // Sound
         content.sound = .default
-
-        // Badge
         content.badge = 1
-
-        // Category
         content.categoryIdentifier = "DAILY_VERSE"
-
-        // User info for deep linking
         content.userInfo = [
-            "surah": verseEntry.surah,
-            "verse": verseEntry.verse,
+            "surah": selection.surah,
+            "verse": selection.verse,
             "type": "daily_verse"
         ]
 
         return content
+    }
+
+    private static func verseOfTheDayTitle(_ language: CommentaryLanguage) -> String {
+        switch language {
+        case .arabic: return "آية اليوم"
+        case .urdu:   return "آیتِ روز"
+        default:      return "Verse of the Day"
+        }
+    }
+
+    /// An Arabic reader already has the verse itself in the body, so we do not repeat
+    /// it as a "translation". Urdu falls back to English if the Urdu translation is
+    /// missing, though quran_data.json covers all 6,236 verses in both.
+    private static func translation(from verse: VerseWithTafsir,
+                                    for language: CommentaryLanguage) -> String? {
+        switch language {
+        case .arabic: return nil
+        case .urdu:   return verse.translationUrdu ?? verse.translation
+        default:      return verse.translation
+        }
     }
 
     // MARK: - Lifecycle Refresh
@@ -233,7 +204,7 @@ class NotificationManager: ObservableObject {
         if preferences.enabled {
             await scheduleDailyVerseNotifications()
         } else {
-            cancelDailyVerseNotifications()
+            await cancelDailyVerseNotifications()
         }
 
         // Seasonal one-shots are idempotent (fixed identifiers, handledYears
@@ -246,111 +217,56 @@ class NotificationManager: ObservableObject {
 
     // MARK: - Notification Scheduling
 
-    /// (Re)schedule the rolling 7-day daily-verse window.
+    /// (Re)schedule the rolling daily-verse window.
+    ///
+    /// Cancel-all-then-re-add rather than an incremental diff: content is baked into
+    /// each request at schedule time, so a change to time / language / includeTafsir
+    /// has to rewrite every pending request anyway. Thirty rebuilds on a foreground
+    /// is cheap - the pool is in memory and getVerse is an in-memory lookup.
     private func scheduleDailyVerseNotifications() async {
-        cancelDailyVerseNotifications()
-        for dayOffset in 0..<7 {
-            await scheduleNotification(for: dayOffset)
+        await cancelDailyVerseNotifications()
+
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+
+        for dayOffset in 0..<Self.scheduleWindowDays {
+            guard let date = calendar.date(byAdding: .day, value: dayOffset, to: today) else { continue }
+            await scheduleNotification(on: date)
         }
     }
 
-    /// Schedule a notification for a specific day offset
-    private func scheduleNotification(for dayOffset: Int) async {
-        // Calculate target date (add dayOffset days to today)
-        let targetDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: Date()) ?? Date()
+    private func scheduleNotification(on date: Date) async {
+        let calendar = Calendar.current
 
-        // Get hour and minute from user preferences
-        let timeComponents = Calendar.current.dateComponents([.hour, .minute], from: preferences.time)
-
-        // Extract all components from target date and override time
-        var targetComponents = Calendar.current.dateComponents([.year, .month, .day], from: targetDate)
+        let timeComponents = calendar.dateComponents([.hour, .minute], from: preferences.time)
+        var targetComponents = calendar.dateComponents([.year, .month, .day], from: date)
         targetComponents.hour = timeComponents.hour
         targetComponents.minute = timeComponents.minute
 
-        // For today, only schedule if time hasn't passed
-        if dayOffset == 0 {
-            let now = Date()
-            if let notificationTime = Calendar.current.date(from: targetComponents),
-               notificationTime <= now {
-                return
-            }
-        }
+        // Today's slot may already have passed.
+        guard let fireDate = calendar.date(from: targetComponents), fireDate > Date() else { return }
 
-        // Get verse for that day (simulate by using dayOffset to select verse)
-        guard let verse = selectVerseForDay(dayOffset: dayOffset) else {
-            print("❌ NotificationManager: Could not select verse for day \(dayOffset)")
-            return
-        }
+        let selection = DailyVerseProvider.shared.verse(for: date)
+        guard let content = await buildNotificationContent(for: selection) else { return }
 
-        // Build content
-        guard let content = await buildNotificationContent(for: verse) else {
-            print("❌ NotificationManager: Could not build content for day \(dayOffset)")
-            return
-        }
-
-        // Create trigger
         let trigger = UNCalendarNotificationTrigger(dateMatching: targetComponents, repeats: false)
-
-        // Create request
-        let identifier = "daily_verse_\(dayOffset)"
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-
-        // Schedule
+        let request = UNNotificationRequest(identifier: Self.identifier(for: date),
+                                            content: content,
+                                            trigger: trigger)
         do {
             try await notificationCenter.add(request)
         } catch {
-            print("❌ NotificationManager: Error scheduling notification - \(error)")
+            print("❌ NotificationManager: failed to schedule \(Self.identifier(for: date)) - \(error)")
         }
     }
 
-    /// Select verse for a specific day offset (used for scheduling future notifications)
-    private func selectVerseForDay(dayOffset: Int) -> DailyVerseEntry? {
-        guard let verseData = verseData else { return nil }
-
-        // Calculate Islamic date for target day
-        let targetDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: Date()) ?? Date()
-        let islamicComponents = islamicCalendar.islamicCalendar.dateComponents([.month, .day], from: targetDate)
-
-        guard let monthNumber = islamicComponents.month,
-              let dayOfMonth = islamicComponents.day else {
-            return nil
-        }
-
-        guard let monthData = verseData.months.first(where: { $0.month == monthNumber }) else {
-            return nil
-        }
-
-        let verseIndex = (dayOfMonth - 1) % monthData.verses.count
-        return monthData.verses[verseIndex]
-    }
-
-    /// Identifier-scoped: never touches seasonal or progress notifications.
-    func cancelDailyVerseNotifications() {
-        let identifiers = (0..<7).map { "daily_verse_\($0)" }
+    /// Removes every pending daily-verse request whatever its date key. Prefix-scoped,
+    /// so it never touches seasonal or progress notifications.
+    func cancelDailyVerseNotifications() async {
+        let pending = await notificationCenter.pendingNotificationRequests()
+        let identifiers = pending.map(\.identifier).filter { $0.hasPrefix(Self.dailyVersePrefix) }
+        guard !identifiers.isEmpty else { return }
         notificationCenter.removePendingNotificationRequests(withIdentifiers: identifiers)
-    }
-
-    // MARK: - Testing
-
-    /// Send a test notification immediately (for testing purposes)
-    func sendTestNotification() async {
-        guard let verse = selectTodayVerse() else {
-            return
-        }
-
-        guard let content = await buildNotificationContent(for: verse) else {
-            return
-        }
-
-        // Schedule for 5 seconds from now
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        let request = UNNotificationRequest(identifier: "test_notification", content: content, trigger: trigger)
-
-        do {
-            try await notificationCenter.add(request)
-        } catch {
-            print("❌ NotificationManager: Error scheduling test notification - \(error)")
-        }
     }
 
     // MARK: - Pending Notifications

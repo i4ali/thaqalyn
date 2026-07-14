@@ -36,7 +36,7 @@ struct OnboardingFlowView: View {
                 DeepDiveScreen()
                     .tag(2)
 
-                // Screen 4: Inside the Sūrah (immersive teaser)
+                // Screen 4: Inside the Surah (immersive teaser)
                 SurahExperienceScreen()
                     .tag(3)
 

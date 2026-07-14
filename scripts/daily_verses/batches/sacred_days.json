@@ -1,0 +1,156 @@
+{
+  "sacredDays": [
+    {
+      "month": 1, "day": 10,
+      "surah": 3, "verse": 169,
+      "occasionEn": "Ashura", "occasionUr": "عاشورا", "occasionAr": "عاشوراء",
+      "themeEn": "The martyrs are alive",
+      "themeUr": "شہدا زندہ ہیں",
+      "themeAr": "الشهداء أحياء"
+    },
+    {
+      "month": 2, "day": 20,
+      "surah": 22, "verse": 27,
+      "occasionEn": "Arbaeen", "occasionUr": "اربعین", "occasionAr": "الأربعين",
+      "themeEn": "They come to you on foot",
+      "themeUr": "وہ پیدل تیری طرف آتے ہیں",
+      "themeAr": "يأتوك رجالا"
+    },
+    {
+      "month": 2, "day": 28,
+      "surah": 3, "verse": 144,
+      "occasionEn": "Passing of the Prophet", "occasionUr": "رحلتِ رسولِ اکرم", "occasionAr": "رحلة النبي",
+      "themeEn": "Muhammad is but a messenger",
+      "themeUr": "محمد صرف ایک رسول ہیں",
+      "themeAr": "وما محمد إلا رسول"
+    },
+    {
+      "month": 3, "day": 17,
+      "surah": 21, "verse": 107,
+      "occasionEn": "Mawlid an-Nabi", "occasionUr": "میلادِ نبی", "occasionAr": "المولد النبوي",
+      "themeEn": "A mercy to all the worlds",
+      "themeUr": "تمام جہانوں کے لیے رحمت",
+      "themeAr": "رحمة للعالمين"
+    },
+    {
+      "month": 6, "day": 3,
+      "surah": 33, "verse": 33,
+      "occasionEn": "Martyrdom of Sayyida Fatima", "occasionUr": "شہادتِ سیدہ فاطمہ", "occasionAr": "شهادة السيدة فاطمة",
+      "themeEn": "The People of the House, purified",
+      "themeUr": "اہلِ بیت، پاک و پاکیزہ",
+      "themeAr": "أهل البيت والتطهير"
+    },
+    {
+      "month": 7, "day": 13,
+      "surah": 2, "verse": 207,
+      "occasionEn": "Birth of Imam Ali", "occasionUr": "ولادتِ امام علی", "occasionAr": "مولد الإمام علي",
+      "themeEn": "He who gives his soul seeking God's pleasure",
+      "themeUr": "جو رضائے الٰہی کے لیے جان دے",
+      "themeAr": "من يشري نفسه ابتغاء مرضاة الله"
+    },
+    {
+      "month": 7, "day": 27,
+      "surah": 96, "verse": 1,
+      "occasionEn": "Mab'ath", "occasionUr": "مبعث", "occasionAr": "المبعث",
+      "themeEn": "Read, in the name of your Lord",
+      "themeUr": "پڑھ اپنے رب کے نام سے",
+      "themeAr": "اقرأ باسم ربك"
+    },
+    {
+      "month": 8, "day": 3,
+      "surah": 42, "verse": 23,
+      "occasionEn": "Birth of Imam Husayn", "occasionUr": "ولادتِ امام حسین", "occasionAr": "مولد الإمام الحسين",
+      "themeEn": "Love for the kin",
+      "themeUr": "قرابت داروں سے محبت",
+      "themeAr": "المودة في القربى"
+    },
+    {
+      "month": 8, "day": 15,
+      "surah": 28, "verse": 5,
+      "occasionEn": "Birth of Imam al-Mahdi", "occasionUr": "ولادتِ امام مہدی", "occasionAr": "مولد الإمام المهدي",
+      "themeEn": "The oppressed shall inherit the earth",
+      "themeUr": "مستضعفین زمین کے وارث ہوں گے",
+      "themeAr": "ونجعلهم الوارثين"
+    },
+    {
+      "month": 9, "day": 1,
+      "surah": 2, "verse": 183,
+      "occasionEn": "Ramadan begins", "occasionUr": "آغازِ ماہِ رمضان", "occasionAr": "بداية شهر رمضان",
+      "themeEn": "Fasting was prescribed for you",
+      "themeUr": "روزہ تم پر فرض کیا گیا",
+      "themeAr": "كتب عليكم الصيام"
+    },
+    {
+      "month": 9, "day": 15,
+      "surah": 21, "verse": 73,
+      "occasionEn": "Birth of Imam Hasan", "occasionUr": "ولادتِ امام حسن", "occasionAr": "مولد الإمام الحسن",
+      "themeEn": "Leaders who guide by Our command",
+      "themeUr": "ہمارے حکم سے ہدایت دینے والے پیشوا",
+      "themeAr": "أئمة يهدون بأمرنا"
+    },
+    {
+      "month": 9, "day": 21,
+      "surah": 33, "verse": 23,
+      "occasionEn": "Martyrdom of Imam Ali", "occasionUr": "شہادتِ امام علی", "occasionAr": "شهادة الإمام علي",
+      "themeEn": "Men true to what they promised God",
+      "themeUr": "وہ مرد جنہوں نے اپنا عہد سچ کر دکھایا",
+      "themeAr": "رجال صدقوا ما عاهدوا الله"
+    },
+    {
+      "month": 9, "day": 23,
+      "surah": 97, "verse": 1,
+      "occasionEn": "Laylat al-Qadr", "occasionUr": "شبِ قدر", "occasionAr": "ليلة القدر",
+      "themeEn": "We sent it down on the Night of Decree",
+      "themeUr": "ہم نے اسے شبِ قدر میں نازل کیا",
+      "themeAr": "إنا أنزلناه في ليلة القدر"
+    },
+    {
+      "month": 10, "day": 1,
+      "surah": 87, "verse": 14,
+      "occasionEn": "Eid al-Fitr", "occasionUr": "عید الفطر", "occasionAr": "عيد الفطر",
+      "themeEn": "Successful is the one who purifies himself",
+      "themeUr": "کامیاب ہوا وہ جس نے خود کو پاک کیا",
+      "themeAr": "قد أفلح من تزكى"
+    },
+    {
+      "month": 12, "day": 9,
+      "surah": 2, "verse": 198,
+      "occasionEn": "Arafah", "occasionUr": "روزِ عرفہ", "occasionAr": "يوم عرفة",
+      "themeEn": "Remember Him as He has guided you",
+      "themeUr": "اسے یاد کرو جیسے اس نے تمہیں ہدایت دی",
+      "themeAr": "واذكروه كما هداكم"
+    },
+    {
+      "month": 12, "day": 10,
+      "surah": 37, "verse": 107,
+      "occasionEn": "Eid al-Adha", "occasionUr": "عید الاضحیٰ", "occasionAr": "عيد الأضحى",
+      "themeEn": "We ransomed him with a great sacrifice",
+      "themeUr": "ہم نے اسے عظیم قربانی کے بدلے بچا لیا",
+      "themeAr": "وفديناه بذبح عظيم"
+    },
+    {
+      "month": 12, "day": 18,
+      "surah": 5, "verse": 67,
+      "occasionEn": "Ghadeer", "occasionUr": "عید غدیر", "occasionAr": "عيد الغدير",
+      "themeEn": "Convey what has been revealed",
+      "themeUr": "جو نازل ہوا ہے اسے پہنچا دیں",
+      "themeAr": "بلغ ما أنزل إليك"
+    },
+    {
+      "month": 12, "day": 24,
+      "surah": 3, "verse": 61,
+      "occasionEn": "Mubahala", "occasionUr": "مباہلہ", "occasionAr": "المباهلة",
+      "themeEn": "Our sons and your sons",
+      "themeUr": "ہمارے بیٹے اور تمہارے بیٹے",
+      "themeAr": "أبناءنا وأبناءكم"
+    },
+    {
+      "month": 12, "day": 25,
+      "surah": 76, "verse": 8,
+      "occasionEn": "Surah al-Insan", "occasionUr": "سورہ الانسان", "occasionAr": "سورة الإنسان",
+      "themeEn": "They give food out of love for Him",
+      "themeUr": "وہ اس کی محبت میں کھانا کھلاتے ہیں",
+      "themeAr": "ويطعمون الطعام على حبه"
+    }
+  ]
+}

@@ -2,18 +2,18 @@
 //  DuaListenButton.swift
 //  Thaqalayn
 //
-//  Reusable "Listen" control for a supplication's Arabic text. Speaks the duʿā via
+//  Reusable "Listen" control for a supplication's Arabic text. Speaks the du'a via
 //  the shared TTS reader (AVSpeechSynthesizer) and reflects Listen / Pause / Resume
 //  state. Used by DuaDetailView and every journey day detail view (Muharram, Hajj,
-//  Ramadan, Fatimiyya) so each duʿā/ziyārat across the app has a consistent listen
-//  option. Duʿās have no pre-recorded audio, so playback is system text-to-speech.
+//  Ramadan, Fatimiyya) so each du'a/ziyarat across the app has a consistent listen
+//  option. Du'as have no pre-recorded audio, so playback is system text-to-speech.
 //
 
 import SwiftUI
 
 struct DuaListenButton: View {
     /// The Arabic supplication to speak. Play/pause state is keyed off this string so
-    /// the button reflects activity only while *this* duʿā is the one being read.
+    /// the button reflects activity only while *this* du'a is the one being read.
     let arabic: String
 
     @StateObject private var themeManager = ThemeManager.shared
@@ -28,7 +28,7 @@ struct DuaListenButton: View {
             }
         }
         .onDisappear {
-            // Stop speaking when the screen goes away, but only if it was this duʿā.
+            // Stop speaking when the screen goes away, but only if it was this du'a.
             if tafsirReader.currentText == arabic {
                 tafsirReader.stop()
             }

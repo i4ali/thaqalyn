@@ -45,7 +45,7 @@
     "format": "trueFalse",
     "topic": "ahlulbayt",
     "prompt": {
-      "en": "Imam Ali (a) was born inside the Holy Kaʿba.",
+      "en": "Imam Ali (a) was born inside the Holy Ka'ba.",
       "ur": "امام علی علیہ السلام خانہ کعبہ کے اندر پیدا ہوئے۔",
       "ar": "وُلد الإمام علي عليه السلام داخل الكعبة المشرفة."
     },
@@ -53,7 +53,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "By well-known reports, Imam Ali (a) was born inside the Kaʿba in Mecca.",
+      "en": "By well-known reports, Imam Ali (a) was born inside the Ka'ba in Mecca.",
       "ur": "معروف روایات کے مطابق امام علی علیہ السلام مکہ مکرمہ میں خانہ کعبہ کے اندر پیدا ہوئے۔",
       "ar": "وفقاً للروايات المشهورة، وُلد الإمام علي عليه السلام داخل الكعبة المشرفة في مكة المكرمة."
     },
@@ -89,13 +89,13 @@
     "format": "fillInBlank",
     "topic": "quran",
     "prompt": {
-      "en": "“Iyyaka naʿbudu wa iyyaka ____.”",
+      "en": "“Iyyaka na'budu wa iyyaka ____.”",
       "ur": "اِیَّاکَ نَعْبُدُ وَاِیَّاکَ ____۔",
       "ar": "«إِيَّاكَ نَعْبُدُ وَإِيَّاكَ ____»."
     },
     "options": [
       {
-        "en": "nastaʿin (we seek help)",
+        "en": "nasta'in (we seek help)",
         "ur": "نَسْتَعِینُ (ہم مدد مانگتے ہیں)",
         "ar": "نَسْتَعِينُ (نطلب العون)"
       },
@@ -216,7 +216,7 @@
     },
     "options": [
       {
-        "en": "rajiʿun (we shall return)",
+        "en": "raji'un (we shall return)",
         "ur": "رَاجِعُونَ (ہم لوٹنے والے ہیں)",
         "ar": "رَاجِعُونَ (إنا إليه راجعون)"
       },
@@ -307,7 +307,7 @@
     "format": "flashcard",
     "topic": "dua",
     "prompt": {
-      "en": "What is Duʿa Kumayl, and when is it traditionally recited?",
+      "en": "What is Du'a Kumayl, and when is it traditionally recited?",
       "ur": "دعائے کمیل کیا ہے اور روایتی طور پر کب پڑھی جاتی ہے؟",
       "ar": "ما هو دعاء كميل، ومتى يُستحب قراءته؟"
     },
@@ -337,7 +337,7 @@
     },
     "options": [
       {
-        "en": "ʿalamin (the worlds)",
+        "en": "alamin (the worlds)",
         "ur": "عَالَمِینَ (تمام جہانوں کے)",
         "ar": "عَالَمِينَ (العالمين)"
       },
@@ -428,7 +428,7 @@
     "format": "flashcard",
     "topic": "ahlulbayt",
     "prompt": {
-      "en": "Who are the Ahl al-Kisaʾ (the People of the Cloak)?",
+      "en": "Who are the Ahl al-Kisa (the People of the Cloak)?",
       "ur": "اہلِ کساء (چادر والے) کون ہیں؟",
       "ar": "مَن هم أهل الكساء؟"
     },
@@ -468,7 +468,7 @@
         "ar": "باقر"
       },
       {
-        "en": "Riḍa",
+        "en": "Rida",
         "ur": "رضا",
         "ar": "رضا"
       }
@@ -488,7 +488,7 @@
     "format": "multipleChoice",
     "topic": "practice",
     "prompt": {
-      "en": "How many rakʿahs (units) are in the Maghrib prayer?",
+      "en": "How many rak'ahs (units) are in the Maghrib prayer?",
       "ur": "نماز مغرب میں کتنی رکعات ہیں؟",
       "ar": "كم عدد ركعات صلاة المغرب؟"
     },
@@ -517,7 +517,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "Maghrib is three rakʿahs; Fajr is two, and Dhuhr, Asr and Isha are four each.",
+      "en": "Maghrib is three rak'ahs; Fajr is two, and Dhuhr, Asr and Isha are four each.",
       "ur": "مغرب تین رکعات کی ہے؛ فجر دو رکعات کی ہے، جبکہ ظہر، عصر اور عشاء چار چار رکعات کی ہیں۔",
       "ar": "صلاة المغرب ثلاث ركعات؛ والفجر ركعتان؛ والظهر والعصر والعشاء أربع ركعات لكل منها."
     },
@@ -609,7 +609,7 @@
     "format": "multipleChoice",
     "topic": "ahlulbayt",
     "prompt": {
-      "en": "Imam al-Riḍa (a), the 8th Imam, is buried in which city?",
+      "en": "Imam al-Rida (a), the 8th Imam, is buried in which city?",
       "ur": "آٹھویں امام، امام رضا علیہ السلام کا روضہ کس شہر میں ہے؟",
       "ar": "في أي مدينة يقع مرقد الإمام الرضا عليه السلام، الإمام الثامن؟"
     },
@@ -638,7 +638,7 @@
     "correctIndex": 2,
     "answer": null,
     "explanation": {
-      "en": "Imam al-Riḍa (a) is buried in Mashhad, Iran — his shrine is a major place of pilgrimage.",
+      "en": "Imam al-Rida (a) is buried in Mashhad, Iran — his shrine is a major place of pilgrimage.",
       "ur": "امام رضا علیہ السلام ایران کے شہر مشہد میں مدفون ہیں — آپؑ کا روضہ ایک عظیم زیارت گاہ ہے۔",
       "ar": "يرقد الإمام الرضا عليه السلام في مشهد بإيران، وضريحه من أعظم مقاصد الزيارة."
     },
@@ -650,7 +650,7 @@
     "format": "trueFalse",
     "topic": "ahlulbayt",
     "prompt": {
-      "en": "There are fourteen Maʿsumin (Infallibles): the Prophet, Lady Fatima, and the Twelve Imams.",
+      "en": "There are fourteen Ma'sumin (Infallibles): the Prophet, Lady Fatima, and the Twelve Imams.",
       "ur": "چودہ معصومین ہیں: نبی اکرمؐ، حضرت فاطمہ علیہا السلام اور بارہ امام علیہم السلام۔",
       "ar": "المعصومون أربعة عشر: النبي صلى الله عليه وآله وسلم، والسيدة فاطمة عليها السلام، والأئمة الاثنا عشر عليهم السلام."
     },
@@ -682,7 +682,7 @@
       "ar": "سورة الفاتحة — «أم الكتاب»."
     },
     "explanation": {
-      "en": "Its recitation is required in each rakʿah, making it the most-recited surah.",
+      "en": "Its recitation is required in each rak'ah, making it the most-recited surah.",
       "ur": "اسے ہر رکعت میں پڑھنا واجب ہے، جس کی وجہ سے یہ سب سے زیادہ پڑھی جانے والی سورت ہے۔",
       "ar": "قراءتها واجبة في كل ركعة، مما يجعلها أكثر سور القرآن تلاوةً."
     },
@@ -694,13 +694,13 @@
     "format": "fillInBlank",
     "topic": "practice",
     "prompt": {
-      "en": "“The roots of religion (Usul al-Din) include Tawhid, ʿAdl, Nubuwwah, Imamah and ____.”",
+      "en": "“The roots of religion (Usul al-Din) include Tawhid, Adl, Nubuwwah, Imamah and ____.”",
       "ur": "اصول دین میں توحید، عدل، نبوت، امامت اور ____ شامل ہیں۔",
       "ar": "«أصول الدين تشمل التوحيد والعدل والنبوة والإمامة و____»."
     },
     "options": [
       {
-        "en": "Maʿad (Resurrection)",
+        "en": "Ma'ad (Resurrection)",
         "ur": "معاد (قیامت)",
         "ar": "المعاد (البعث والقيامة)"
       },
@@ -718,7 +718,7 @@
     "correctIndex": 0,
     "answer": null,
     "explanation": {
-      "en": "The five Usul al-Din are Tawhid, ʿAdl (divine justice), Nubuwwah, Imamah and Maʿad.",
+      "en": "The five Usul al-Din are Tawhid, Adl (divine justice), Nubuwwah, Imamah and Ma'ad.",
       "ur": "پانچ اصول دین یہ ہیں: توحید، عدل (الٰہی انصاف)، نبوت، امامت اور معاد۔",
       "ar": "أصول الدين الخمسة هي: التوحيد، والعدل (العدل الإلهي)، والنبوة، والإمامة، والمعاد."
     },
@@ -746,7 +746,7 @@
         "ar": "١٨ ذو الحجة"
       },
       {
-        "en": "15 Shaʿban",
+        "en": "15 Sha'ban",
         "ur": "۱۵ شعبان",
         "ar": "١٥ شعبان"
       },
@@ -771,7 +771,7 @@
     "format": "trueFalse",
     "topic": "quran",
     "prompt": {
-      "en": "The Qur'an is divided into 30 ajzaʾ (juz).",
+      "en": "The Qur'an is divided into 30 ajza (juz).",
       "ur": "قرآن ۳۰ اجزاء میں تقسیم ہے۔",
       "ar": "يُقسَّم القرآن الكريم إلى ثلاثين جزءاً."
     },
@@ -779,7 +779,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "The 30 ajzaʾ allow the whole Qur'an to be recited across a month, especially in Ramadan.",
+      "en": "The 30 ajza allow the whole Qur'an to be recited across a month, especially in Ramadan.",
       "ur": "۳۰ پاروں کی تقسیم ایک ماہ میں پورے قرآن کی تلاوت ممکن بناتی ہے، خاص طور پر رمضان المبارک میں۔",
       "ar": "تُتيح الأجزاء الثلاثون ختم القرآن الكريم كاملاً خلال شهر، ولا سيما في رمضان المبارك."
     },
@@ -803,7 +803,7 @@
       "ar": "ابنة النبي محمد صلى الله عليه وآله وسلم، وزوجة الإمام علي عليه السلام، وأم الإمام الحسن والإمام الحسين عليهما السلام."
     },
     "explanation": {
-      "en": "She is honoured as Sayyidat Nisaʾ al-ʿAlamin — leader of the women of the worlds.",
+      "en": "She is honoured as Sayyidat Nisa al-Alamin — leader of the women of the worlds.",
       "ur": "انہیں سیدۃ نساء العالمین — تمام جہانوں کی خواتین کی سردار — کے اعزاز سے یاد کیا جاتا ہے۔",
       "ar": "تُكرَّم بلقب سيدة نساء العالمين."
     },
@@ -826,7 +826,7 @@
         "ar": "الهجرة"
       },
       {
-        "en": "Miʿraj",
+        "en": "Mi'raj",
         "ur": "معراج",
         "ar": "المعراج"
       },
@@ -862,7 +862,7 @@
         "ar": "سورة مريم"
       },
       {
-        "en": "Surah al-Nisaʾ",
+        "en": "Surah al-Nisa",
         "ur": "سورۃ النساء",
         "ar": "سورة النساء"
       },
@@ -880,7 +880,7 @@
     "correctIndex": 0,
     "answer": null,
     "explanation": {
-      "en": "Surah Maryam (19) is named after Lady Maryam (Mary), mother of Prophet ʿIsa (a).",
+      "en": "Surah Maryam (19) is named after Lady Maryam (Mary), mother of Prophet Isa (a).",
       "ur": "سورۃ مریم (۱۹) حضرت مریم علیہا السلام کے نام پر ہے، جو حضرت عیسیٰ علیہ السلام کی والدہ ہیں۔",
       "ar": "سورة مريم (١٩) سُمِّيت باسم السيدة مريم، والدة النبي عيسى عليه السلام."
     },
@@ -892,7 +892,7 @@
     "format": "trueFalse",
     "topic": "dua",
     "prompt": {
-      "en": "Al-Sahifa al-Sajjadiyya is a collection of supplications from Imam Zayn al-ʿAbidin (a).",
+      "en": "Al-Sahifa al-Sajjadiyya is a collection of supplications from Imam Zayn al-Abidin (a).",
       "ur": "الصحیفہ السجادیہ امام زین العابدین علیہ السلام کی دعاؤں کا مجموعہ ہے۔",
       "ar": "الصحيفة السجادية مجموعة أدعية مأثورة عن الإمام زين العابدين عليه السلام."
     },
@@ -900,7 +900,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "Imam Ali ibn al-Husayn, al-Sajjad (a), authored this celebrated book of duʿas.",
+      "en": "Imam Ali ibn al-Husayn, al-Sajjad (a), authored this celebrated book of du'as.",
       "ur": "امام علی ابن الحسین، امام سجاد علیہ السلام نے اس مشہور کتاب دعا کو تصنیف فرمایا۔",
       "ar": "ألَّف الإمام علي بن الحسين السجاد عليه السلام هذا الكتاب المبارك من الأدعية."
     },
@@ -942,17 +942,17 @@
     },
     "options": [
       {
-        "en": "Shuhadaʾ (Master of Martyrs)",
+        "en": "Shuhada (Master of Martyrs)",
         "ur": "شُہَداء (شہیدوں کے سردار)",
         "ar": "شهداء (سيد الشهداء)"
       },
       {
-        "en": "Awsiyaʾ",
+        "en": "Awsiya",
         "ur": "اوصیاء",
         "ar": "أوصياء"
       },
       {
-        "en": "Anbiyaʾ",
+        "en": "Anbiya",
         "ur": "انبیاء",
         "ar": "أنبياء"
       }
@@ -960,7 +960,7 @@
     "correctIndex": 0,
     "answer": null,
     "explanation": {
-      "en": "Imam Husayn (a) is called Sayyid al-Shuhadaʾ for his sacrifice at Karbala.",
+      "en": "Imam Husayn (a) is called Sayyid al-Shuhada for his sacrifice at Karbala.",
       "ur": "امام حسین علیہ السلام کو کربلا میں قربانی کی وجہ سے سید الشہداء کہا جاتا ہے۔",
       "ar": "لُقِّب الإمام الحسين عليه السلام بسيد الشهداء لتضحيته العظيمة في كربلاء."
     },
@@ -972,7 +972,7 @@
     "format": "multipleChoice",
     "topic": "practice",
     "prompt": {
-      "en": "How many branches of religion (Furuʿ al-Din) are emphasised in Shia Islam?",
+      "en": "How many branches of religion (Furu al-Din) are emphasised in Shia Islam?",
       "ur": "شیعہ اسلام میں فروع دین کتنی ہیں؟",
       "ar": "كم عدد فروع الدين المُؤكَّد عليها في الإسلام الشيعي؟"
     },
@@ -1001,7 +1001,7 @@
     "correctIndex": 2,
     "answer": null,
     "explanation": {
-      "en": "The ten Furuʿ include Salah, Sawm, Zakah, Khums, Hajj, Jihad, enjoining good, forbidding wrong, Tawalla and Tabarra.",
+      "en": "The ten Furu include Salah, Sawm, Zakah, Khums, Hajj, Jihad, enjoining good, forbidding wrong, Tawalla and Tabarra.",
       "ur": "دس فروع میں نماز، روزہ، زکات، خمس، حج، جہاد، امر بالمعروف، نہی عن المنکر، تولّا اور تبرّا شامل ہیں۔",
       "ar": "فروع الدين العشرة هي: الصلاة، والصوم، والزكاة، والخمس، والحج، والجهاد، والأمر بالمعروف، والنهي عن المنكر، والتولي، والتبري."
     },
@@ -1033,7 +1033,7 @@
     "format": "flashcard",
     "topic": "dua",
     "prompt": {
-      "en": "What is Ziyarat ʿAshura?",
+      "en": "What is Ziyarat Ashura?",
       "ur": "زیارتِ عاشورا کیا ہے؟",
       "ar": "ما هي زيارة عاشوراء؟"
     },
@@ -1104,7 +1104,7 @@
         "ar": "سورة الفاتحة"
       },
       {
-        "en": "Surah al-ʿAlaq (‘Iqraʾ’)",
+        "en": "Surah al-Alaq (‘Iqra’)",
         "ur": "سورۃ العلق (اقرأ)",
         "ar": "سورة العلق («اقرأ»)"
       },
@@ -1122,7 +1122,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "The first revealed verses were the opening of Surah al-ʿAlaq (96): ‘Read in the name of your Lord.’",
+      "en": "The first revealed verses were the opening of Surah al-Alaq (96): ‘Read in the name of your Lord.’",
       "ur": "سب سے پہلے نازل ہونے والی آیات سورۃ العلق (۹۶) کا آغاز ہے: ''اپنے رب کے نام سے پڑھو۔''",
       "ar": "أول ما نزل كانت الآيات الأولى من سورة العلق (٩٦): «اقْرَأْ بِاسْمِ رَبِّكَ»."
     },
@@ -1134,7 +1134,7 @@
     "format": "trueFalse",
     "topic": "ahlulbayt",
     "prompt": {
-      "en": "Imam Jaʿfar al-Sadiq (a) is the sixth Imam, after whom the Jaʿfari school is named.",
+      "en": "Imam Ja'far al-Sadiq (a) is the sixth Imam, after whom the Ja'fari school is named.",
       "ur": "امام جعفر صادق علیہ السلام چھٹے امام ہیں جن کے نام پر جعفری مکتبِ فقہ قائم ہے۔",
       "ar": "الإمام جعفر الصادق عليه السلام هو الإمام السادس، وإليه تُنسب المذهب الجعفري."
     },
@@ -1142,7 +1142,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "The Jaʿfari school of jurisprudence is named after Imam al-Sadiq (a).",
+      "en": "The Ja'fari school of jurisprudence is named after Imam al-Sadiq (a).",
       "ur": "مکتبِ فقہ جعفریہ کا نام امام صادق علیہ السلام کے نام پر ہے۔",
       "ar": "يُنسب المذهب الجعفري في الفقه الإسلامي إلى الإمام جعفر الصادق عليه السلام."
     },
@@ -1178,7 +1178,7 @@
     "format": "fillInBlank",
     "topic": "event",
     "prompt": {
-      "en": "At Ghadeer the Prophet said: “Man kuntu mawlahu fa-hadha ʿAliyyun ____.”",
+      "en": "At Ghadeer the Prophet said: “Man kuntu mawlahu fa-hadha Aliyyun ____.”",
       "ur": "غدیر پر نبیؐ نے فرمایا: مَنْ کُنْتُ مَوْلَاہُ فَہٰذَا عَلِیٌّ ____۔",
       "ar": "قال النبي صلى الله عليه وآله وسلم في الغدير: «مَنْ كُنْتُ مَوْلَاهُ فَهَٰذَا عَلِيٌّ ____»."
     },
@@ -1384,7 +1384,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "Al-Fatiha is called Sabʿ al-Mathani — ‘the seven oft-repeated’ verses.",
+      "en": "Al-Fatiha is called Sab al-Mathani — ‘the seven oft-repeated’ verses.",
       "ur": "الفاتحہ کو سبع المثانی کہا جاتا ہے — ''سات بار بار دہرائی جانے والی آیات۔''",
       "ar": "تُسمى الفاتحة السبع المثاني — أي الآيات السبع المتكررة."
     },
@@ -1431,7 +1431,7 @@
         "ar": "رمضان"
       },
       {
-        "en": "Shaʿban",
+        "en": "Sha'ban",
         "ur": "شعبان",
         "ar": "شعبان"
       },
@@ -1456,7 +1456,7 @@
     "format": "multipleChoice",
     "topic": "dua",
     "prompt": {
-      "en": "Duʿa al-Iftitah is especially recited during which month?",
+      "en": "Du'a al-Iftitah is especially recited during which month?",
       "ur": "دعائے افتتاح خاص طور پر کس مہینے میں پڑھی جاتی ہے؟",
       "ar": "في أي شهر يُستحب بصفة خاصة قراءة دعاء الافتتاح؟"
     },
@@ -1467,7 +1467,7 @@
         "ar": "رجب"
       },
       {
-        "en": "Shaʿban",
+        "en": "Sha'ban",
         "ur": "شعبان",
         "ar": "شعبان"
       },
@@ -1485,7 +1485,7 @@
     "correctIndex": 2,
     "answer": null,
     "explanation": {
-      "en": "Duʿa al-Iftitah is recited on the nights of Ramadan.",
+      "en": "Du'a al-Iftitah is recited on the nights of Ramadan.",
       "ur": "دعائے افتتاح رمضان کی راتوں میں پڑھی جاتی ہے۔",
       "ar": "يُقرأ دعاء الافتتاح في ليالي شهر رمضان المبارك."
     },
@@ -1497,7 +1497,7 @@
     "format": "trueFalse",
     "topic": "ahlulbayt",
     "prompt": {
-      "en": "Imam Zayn al-ʿAbidin (a) survived the events of Karbala.",
+      "en": "Imam Zayn al-Abidin (a) survived the events of Karbala.",
       "ur": "امام زین العابدین علیہ السلام کربلا کے واقعات سے زندہ بچے۔",
       "ar": "نجا الإمام زين العابدين عليه السلام من أحداث كربلاء."
     },
@@ -1552,12 +1552,12 @@
         "ar": "أحزاب (٣٣:٣٣)"
       },
       {
-        "en": "Maʾida",
+        "en": "Ma'ida",
         "ur": "مائدہ",
         "ar": "مائدة"
       },
       {
-        "en": "Nisaʾ",
+        "en": "Nisa",
         "ur": "نساء",
         "ar": "نساء"
       }
@@ -1618,7 +1618,7 @@
     "format": "trueFalse",
     "topic": "practice",
     "prompt": {
-      "en": "The Qibla — the direction of prayer — is towards the Kaʿba in Mecca.",
+      "en": "The Qibla — the direction of prayer — is towards the Ka'ba in Mecca.",
       "ur": "قبلہ — نماز کی سمت — مکہ مکرمہ میں کعبے کی طرف ہے۔",
       "ar": "القبلة — أي اتجاه الصلاة — نحو الكعبة المشرفة في مكة المكرمة."
     },
@@ -1626,7 +1626,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "Muslims face the Kaʿba in Mecca during the daily prayers (Qur'an 2:144).",
+      "en": "Muslims face the Ka'ba in Mecca during the daily prayers (Qur'an 2:144).",
       "ur": "مسلمان روزانہ کی نمازوں میں مکہ مکرمہ کے کعبے کی طرف منہ کرتے ہیں (قرآن ۲:۱۴۴)۔",
       "ar": "يستقبل المسلمون الكعبة المشرفة في مكة المكرمة في صلواتهم اليومية (القرآن ٢:١٤٤)."
     },
@@ -1638,7 +1638,7 @@
     "format": "flashcard",
     "topic": "dua",
     "prompt": {
-      "en": "What is Duʿa al-Faraj?",
+      "en": "What is Du'a al-Faraj?",
       "ur": "دعائے فرج کیا ہے؟",
       "ar": "ما هو دعاء الفرج؟"
     },
@@ -1668,7 +1668,7 @@
     },
     "options": [
       {
-        "en": "Zahraʾ",
+        "en": "Zahra",
         "ur": "زہراء",
         "ar": "زهراء"
       },
@@ -1766,7 +1766,7 @@
     "options": null,
     "correctIndex": null,
     "answer": {
-      "en": "Tawhid (oneness of God), ʿAdl (divine justice), Nubuwwah (prophethood), Imamah (leadership), and Maʿad (resurrection).",
+      "en": "Tawhid (oneness of God), Adl (divine justice), Nubuwwah (prophethood), Imamah (leadership), and Ma'ad (resurrection).",
       "ur": "توحید (اللہ کی وحدانیت)، عدل (الٰہی انصاف)، نبوت (پیغمبری)، امامت (قیادت) اور معاد (قیامت)۔",
       "ar": "التوحيد (وحدانية الله)، والعدل (العدل الإلهي)، والنبوة، والإمامة، والمعاد (البعث)."
     },
@@ -1783,7 +1783,7 @@
     "format": "fillInBlank",
     "topic": "dua",
     "prompt": {
-      "en": "“Duʿa Abu Hamza al-Thumali is recited at dawn during ____.”",
+      "en": "“Du'a Abu Hamza al-Thumali is recited at dawn during ____.”",
       "ur": "دعائے ابو حمزہ ثمالی ____ کے دوران سحر کے وقت پڑھی جاتی ہے۔",
       "ar": "«يُقرأ دعاء أبي حمزة الثمالي في وقت السحر خلال ____»."
     },
@@ -1807,7 +1807,7 @@
     "correctIndex": 0,
     "answer": null,
     "explanation": {
-      "en": "Imam Zayn al-ʿAbidin (a) used to recite it in the pre-dawn hours of Ramadan.",
+      "en": "Imam Zayn al-Abidin (a) used to recite it in the pre-dawn hours of Ramadan.",
       "ur": "امام زین العابدین علیہ السلام رمضان کی سحری کے اوقات میں اسے پڑھا کرتے تھے۔",
       "ar": "كان الإمام زين العابدين عليه السلام يقرؤه في ساعات السحر من شهر رمضان المبارك."
     },
@@ -1819,7 +1819,7 @@
     "format": "multipleChoice",
     "topic": "ahlulbayt",
     "prompt": {
-      "en": "Imam Hasan al-ʿAskari (a), the 11th Imam, is buried (with Imam al-Hadi) in which city?",
+      "en": "Imam Hasan al-Askari (a), the 11th Imam, is buried (with Imam al-Hadi) in which city?",
       "ur": "گیارھویں امام، امام حسن العسکری علیہ السلام (امام الہادیؑ کے ساتھ) کا مزار کس شہر میں ہے؟",
       "ar": "في أي مدينة يرقد الإمام الحسن العسكري عليه السلام، الإمام الحادي عشر، (إلى جانب الإمام الهادي عليه السلام)؟"
     },
@@ -1880,7 +1880,7 @@
     "format": "flashcard",
     "topic": "event",
     "prompt": {
-      "en": "What is ʿAm al-Huzn (the Year of Sorrow)?",
+      "en": "What is Am al-Huzn (the Year of Sorrow)?",
       "ur": "عام الحزن (غم کا سال) کیا ہے؟",
       "ar": "ما هو عام الحزن؟"
     },
@@ -2049,7 +2049,7 @@
     "correctIndex": 0,
     "answer": null,
     "explanation": {
-      "en": "In 8 AH the Prophet (s) entered Mecca peacefully and cleansed the Kaʿba of idols.",
+      "en": "In 8 AH the Prophet (s) entered Mecca peacefully and cleansed the Ka'ba of idols.",
       "ur": "۸ ہجری میں نبی اکرم صلی اللہ علیہ وآلہ وسلم امن کے ساتھ مکہ میں داخل ہوئے اور کعبے کو بتوں سے پاک کیا۔",
       "ar": "في السنة الثامنة الهجرية دخل النبي صلى الله عليه وآله وسلم مكة المكرمة سلماً وطهَّر الكعبة من الأصنام."
     },
@@ -2102,7 +2102,7 @@
     "format": "trueFalse",
     "topic": "dua",
     "prompt": {
-      "en": "Duʿa al-Nudba is recited on Fridays and Eids, expressing longing for Imam al-Mahdi (a).",
+      "en": "Du'a al-Nudba is recited on Fridays and Eids, expressing longing for Imam al-Mahdi (a).",
       "ur": "دعائے ندبہ جمعہ اور عیدوں کو پڑھی جاتی ہے، جس میں امام مہدی علیہ السلام کی یاد میں تڑپ کا اظہار ہوتا ہے۔",
       "ar": "يُقرأ دعاء الندبة يوم الجمعة وفي أيام الأعياد تعبيراً عن الشوق للإمام المهدي عليه السلام."
     },
@@ -2110,7 +2110,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "Duʿa al-Nudba voices grief at the absence of the awaited Imam and yearning for his return.",
+      "en": "Du'a al-Nudba voices grief at the absence of the awaited Imam and yearning for his return.",
       "ur": "دعائے ندبہ منتظَر امام کی غیبت پر غم اور ان کی واپسی کی شدید تمنا کا اظہار کرتی ہے۔",
       "ar": "يُعبِّر دعاء الندبة عن الحزن لغياب الإمام المنتظر والتوق العميق لعودته."
     },
@@ -2122,7 +2122,7 @@
     "format": "flashcard",
     "topic": "ahlulbayt",
     "prompt": {
-      "en": "What does ʿisma (infallibility) mean regarding the Fourteen Infallibles?",
+      "en": "What does isma (infallibility) mean regarding the Fourteen Infallibles?",
       "ur": "چودہ معصومین کے حوالے سے عصمت (معصومیت) کا کیا مطلب ہے؟",
       "ar": "ما معنى العصمة في حق المعصومين الأربعة عشر؟"
     },
@@ -2250,12 +2250,12 @@
     "options": null,
     "correctIndex": null,
     "answer": {
-      "en": "Fajr, Dhuhr, ʿAsr, Maghrib, and ʿIsha.",
+      "en": "Fajr, Dhuhr, Asr, Maghrib, and Isha.",
       "ur": "فجر، ظہر، عصر، مغرب اور عشاء۔",
       "ar": "الفجر والظهر والعصر والمغرب والعشاء."
     },
     "explanation": {
-      "en": "These five daily prayers (salah) together total 17 rakʿahs.",
+      "en": "These five daily prayers (salah) together total 17 rak'ahs.",
       "ur": "یہ پانچ روزانہ نمازیں (صلوٰۃ) مجموعی طور پر ۱۷ رکعات پر مشتمل ہیں۔",
       "ar": "تبلغ هذه الصلوات الخمس اليومية سبع عشرة ركعةً في المجموع."
     },
@@ -2344,7 +2344,7 @@
     "format": "trueFalse",
     "topic": "practice",
     "prompt": {
-      "en": "The five daily obligatory prayers consist of 17 rakʿahs in total.",
+      "en": "The five daily obligatory prayers consist of 17 rak'ahs in total.",
       "ur": "پانچ روزانہ فرض نمازیں کل ملا کر ۱۷ رکعات پر مشتمل ہیں۔",
       "ar": "تبلغ الصلوات الخمس الواجبة اليومية سبع عشرة ركعةً في المجموع."
     },
@@ -2352,7 +2352,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "Fajr 2 + Dhuhr 4 + ʿAsr 4 + Maghrib 3 + ʿIsha 4 = 17 rakʿahs.",
+      "en": "Fajr 2 + Dhuhr 4 + Asr 4 + Maghrib 3 + Isha 4 = 17 rak'ahs.",
       "ur": "فجر ۲ + ظہر ۴ + عصر ۴ + مغرب ۳ + عشاء ۴ = ۱۷ رکعات۔",
       "ar": "الفجر ٢ + الظهر ٤ + العصر ٤ + المغرب ٣ + العشاء ٤ = ١٧ ركعة."
     },
@@ -2424,7 +2424,7 @@
     "format": "multipleChoice",
     "topic": "practice",
     "prompt": {
-      "en": "How many rakʿahs is the obligatory Fajr (dawn) prayer?",
+      "en": "How many rak'ahs is the obligatory Fajr (dawn) prayer?",
       "ur": "فرض نمازِ فجر میں کتنی رکعات ہیں؟",
       "ar": "كم عدد ركعات صلاة الفجر الواجبة؟"
     },
@@ -2453,7 +2453,7 @@
     "correctIndex": 0,
     "answer": null,
     "explanation": {
-      "en": "The Fajr prayer consists of 2 rakʿahs.",
+      "en": "The Fajr prayer consists of 2 rak'ahs.",
       "ur": "نمازِ فجر ۲ رکعات پر مشتمل ہے۔",
       "ar": "تتكون صلاة الفجر من ركعتين."
     },
@@ -2949,7 +2949,7 @@
     "format": "trueFalse",
     "topic": "practice",
     "prompt": {
-      "en": "In Twelver fiqh it is permissible to combine the Dhuhr and ʿAsr prayers, and to combine the Maghrib and ʿIsha prayers.",
+      "en": "In Twelver fiqh it is permissible to combine the Dhuhr and Asr prayers, and to combine the Maghrib and Isha prayers.",
       "ur": "اثنا عشری فقہ میں نمازِ ظہر اور عصر کو جمع کرنا اور نمازِ مغرب اور عشاء کو جمع کرنا جائز ہے۔",
       "ar": "في الفقه الجعفري، يجوز الجمع بين صلاتَي الظهر والعصر، وبين صلاتَي المغرب والعشاء."
     },
@@ -2957,7 +2957,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "Twelvers may pray Dhuhr with ʿAsr, and Maghrib with ʿIsha, together.",
+      "en": "Twelvers may pray Dhuhr with Asr, and Maghrib with Isha, together.",
       "ur": "اثنا عشری حضرات ظہر کو عصر کے ساتھ اور مغرب کو عشاء کے ساتھ جمع کر کے پڑھ سکتے ہیں۔",
       "ar": "يجوز للجعفريين الجمع بين الظهر والعصر، وبين المغرب والعشاء."
     },
@@ -3029,7 +3029,7 @@
     "format": "multipleChoice",
     "topic": "practice",
     "prompt": {
-      "en": "How many rakʿahs is the obligatory ʿIsha prayer?",
+      "en": "How many rak'ahs is the obligatory Isha prayer?",
       "ur": "فرض نمازِ عشاء میں کتنی رکعات ہیں؟",
       "ar": "كم عدد ركعات صلاة العشاء الواجبة؟"
     },
@@ -3058,7 +3058,7 @@
     "correctIndex": 2,
     "answer": null,
     "explanation": {
-      "en": "The ʿIsha prayer consists of 4 rakʿahs.",
+      "en": "The Isha prayer consists of 4 rak'ahs.",
       "ur": "نمازِ عشاء ۴ رکعات پر مشتمل ہے۔",
       "ar": "تتكون صلاة العشاء من أربع ركعات."
     },
@@ -3465,7 +3465,7 @@
       "ar": "هيئة الانحناء التي يميل فيها المصلي إلى الأمام ويتلو ذكر الركوع."
     },
     "explanation": {
-      "en": "In ruku one bows and glorifies Allah, e.g. 'Subhana rabbiyal-ʿazimi wa bi-hamdih.'",
+      "en": "In ruku one bows and glorifies Allah, e.g. 'Subhana rabbiyal-azimi wa bi-hamdih.'",
       "ur": "رکوع میں آگے جھک کر اللہ کی تسبیح کی جاتی ہے، مثلاً 'سُبْحَانَ رَبِّيَ الْعَظِيمِ وَبِحَمْدِهِ'۔",
       "ar": "يُسبّح المصلي في الركوع ربّه، كقول «سبحان ربي العظيم وبحمده»."
     },
@@ -4324,7 +4324,7 @@
     "format": "fillInBlank",
     "topic": "practice",
     "prompt": {
-      "en": "The ____ prayer, performed after midday, consists of four rakʿahs.",
+      "en": "The ____ prayer, performed after midday, consists of four rak'ahs.",
       "ur": "____ کی نماز، جو دوپہر کے بعد پڑھی جاتی ہے، چار رکعات پر مشتمل ہے۔",
       "ar": "صلاة ____ التي تُؤدَّى بعد الزوال تتكوَّن من أربع ركعات."
     },
@@ -4348,7 +4348,7 @@
     "correctIndex": 0,
     "answer": null,
     "explanation": {
-      "en": "Dhuhr is a 4-rakʿah prayer prayed after the sun passes its zenith.",
+      "en": "Dhuhr is a 4-rak'ah prayer prayed after the sun passes its zenith.",
       "ur": "ظہر ۴ رکعات کی نماز ہے جو سورج زوال کے بعد پڑھی جاتی ہے۔",
       "ar": "الظهر صلاة من أربع ركعات تُصلَّى بعد زوال الشمس عن كبد السماء."
     },
@@ -4670,12 +4670,12 @@
     "options": null,
     "correctIndex": null,
     "answer": {
-      "en": "A highly recommended (mustahabb) night prayer of 11 rakʿahs, prayed after midnight before Fajr.",
+      "en": "A highly recommended (mustahabb) night prayer of 11 rak'ahs, prayed after midnight before Fajr.",
       "ur": "ایک انتہائی مستحب رات کی نماز جو ۱۱ رکعات پر مشتمل ہے، نصف شب کے بعد فجر سے پہلے پڑھی جاتی ہے۔",
       "ar": "صلاةٌ مستحبَّةٌ مؤكَّدةٌ تتكوَّن من ١١ ركعة، تُصلَّى بعد منتصف الليل وقبل الفجر."
     },
     "explanation": {
-      "en": "It comprises 8 rakʿahs of night prayer, 2 rakʿahs of Shafʿ, and 1 rakʿah of Witr.",
+      "en": "It comprises 8 rak'ahs of night prayer, 2 rak'ahs of Shaf, and 1 rak'ah of Witr.",
       "ur": "یہ رات کی نماز کی ۸ رکعات، شفع کی ۲ رکعات اور وتر کی ۱ رکعت پر مشتمل ہے۔",
       "ar": "تتألَّف من ٨ ركعات لصلاة الليل، وركعتَين للشفع، وركعة واحدة للوتر."
     },
@@ -4850,12 +4850,12 @@
     },
     "options": [
       {
-        "en": "Hayya ʿala al-falah",
+        "en": "Hayya ala al-falah",
         "ur": "حَیَّ عَلَی الْفَلَاحِ",
         "ar": "حيّ على الفلاح"
       },
       {
-        "en": "Hayya ʿala khayr al-ʿamal",
+        "en": "Hayya ala khayr al-amal",
         "ur": "حَیَّ عَلیٰ خَیْرِ الْعَمَلِ",
         "ar": "حيّ على خير العمل"
       },
@@ -4873,7 +4873,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "'Hayya ʿala khayr al-ʿamal' (Hasten to the best of deeds) is recited in the Shia adhan and iqama.",
+      "en": "'Hayya ala khayr al-amal' (Hasten to the best of deeds) is recited in the Shia adhan and iqama.",
       "ur": "'حَیَّ عَلیٰ خَیْرِ الْعَمَلِ' (بہترین عمل کی طرف آؤ) شیعہ اذان اور اقامت میں پڑھا جاتا ہے۔",
       "ar": "تُتلى «حيّ على خير العمل» في الأذان والإقامة الشيعية."
     },
@@ -5280,7 +5280,7 @@
       "ar": "ذِكرٌ يُؤدَّى في وضع الجلوس، يتضمَّن الشهادتَين وإرسال الصلوات على النبيِّ ﷺ وآله."
     },
     "explanation": {
-      "en": "Tashahhud is recited while sitting in the second rakʿah and in the final rakʿah before the salam.",
+      "en": "Tashahhud is recited while sitting in the second rak'ah and in the final rak'ah before the salam.",
       "ur": "تشہد دوسری رکعت میں اور آخری رکعت میں سلام سے پہلے بیٹھ کر پڑھا جاتا ہے۔",
       "ar": "يُقرأ التشهُّد جالسًا في الركعة الثانية وفي الركعة الأخيرة قبل التسليم."
     },
@@ -5369,7 +5369,7 @@
     "format": "trueFalse",
     "topic": "practice",
     "prompt": {
-      "en": "The ʿAsr prayer consists of three rakʿahs.",
+      "en": "The Asr prayer consists of three rak'ahs.",
       "ur": "نمازِ عصر تین رکعات پر مشتمل ہے۔",
       "ar": "تتألف صلاة العصر من ثلاث ركعات."
     },
@@ -5377,7 +5377,7 @@
     "correctIndex": 0,
     "answer": null,
     "explanation": {
-      "en": "ʿAsr is a 4-rakʿah prayer; only Maghrib among the daily prayers has 3 rakʿahs.",
+      "en": "Asr is a 4-rak'ah prayer; only Maghrib among the daily prayers has 3 rak'ahs.",
       "ur": "عصر ۴ رکعتی نماز ہے؛ روزانہ کی نمازوں میں صرف مغرب ۳ رکعتی ہے۔",
       "ar": "صلاة العصر أربع ركعات؛ والمغرب وحدها من بين الصلوات اليومية التي تتكون من ثلاث ركعات."
     },
@@ -5465,7 +5465,7 @@
         "ar": "تكبيرة الركوع"
       },
       {
-        "en": "Tasbihat al-arbaʿa",
+        "en": "Tasbihat al-arba'a",
         "ur": "تسبیحاتِ اربعہ",
         "ar": "تسبيحات الأربع"
       },
@@ -5880,7 +5880,7 @@
     "options": null,
     "correctIndex": null,
     "answer": {
-      "en": "The taslim (salam): saying 'Assalamu ʿalaykum wa rahmatullahi wa barakatuh.'",
+      "en": "The taslim (salam): saying 'Assalamu alaykum wa rahmatullahi wa barakatuh.'",
       "ur": "تسلیم (سلام): یعنی 'اَلسَّلَامُ عَلَیْکُمْ وَرَحْمَۃُ اللہِ وَبَرَکَاتُہٗ' کہنا۔",
       "ar": "التسليم: قول «السَّلامُ عليكم ورحمةُ اللهِ وبركاتُه»."
     },
@@ -6054,28 +6054,28 @@
     "format": "multipleChoice",
     "topic": "practice",
     "prompt": {
-      "en": "In Twelver practice, the recommended qunut (raising the hands in supplication) is performed before ruku in which rakʿah?",
+      "en": "In Twelver practice, the recommended qunut (raising the hands in supplication) is performed before ruku in which rak'ah?",
       "ur": "اثنا عشری طریقے میں مستحب قنوت (دعا کے لیے ہاتھ اٹھانا) کس رکعت میں رکوع سے پہلے ادا کیا جاتا ہے؟",
       "ar": "في الممارسة الجعفرية، يُستحب أداء القنوت (رفع اليدين بالدعاء) قبل الركوع في أيّ ركعة؟"
     },
     "options": [
       {
-        "en": "The first rakʿah",
+        "en": "The first rak'ah",
         "ur": "پہلی رکعت میں",
         "ar": "الركعة الأولى"
       },
       {
-        "en": "The second rakʿah",
+        "en": "The second rak'ah",
         "ur": "دوسری رکعت میں",
         "ar": "الركعة الثانية"
       },
       {
-        "en": "The third rakʿah",
+        "en": "The third rak'ah",
         "ur": "تیسری رکعت میں",
         "ar": "الركعة الثالثة"
       },
       {
-        "en": "Every rakʿah",
+        "en": "Every rak'ah",
         "ur": "ہر رکعت میں",
         "ar": "كل ركعة"
       }
@@ -6083,7 +6083,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "The recommended qunut is performed in the second rakʿah, just before bowing into ruku.",
+      "en": "The recommended qunut is performed in the second rak'ah, just before bowing into ruku.",
       "ur": "مستحب قنوت دوسری رکعت میں، رکوع میں جھکنے سے ٹھیک پہلے ادا کیا جاتا ہے۔",
       "ar": "يُستحب أداء القنوت في الركعة الثانية قُبيل الانحناء إلى الركوع."
     },
@@ -7056,7 +7056,7 @@
       "ar": "في الفقه الجعفري، يُغسل الساعد من المرفق نزولاً إلى رؤوس الأصابع."
     },
     "arabicText": null,
-    "source": "Qurʾan 5:6"
+    "source": "Qur'an 5:6"
   },
   {
     "id": "dc_234",
@@ -7083,7 +7083,7 @@
     "format": "flashcard",
     "topic": "practice",
     "prompt": {
-      "en": "What are the 'tasbihat al-arbaʿa' that may be recited in the third and fourth rakʿahs?",
+      "en": "What are the 'tasbihat al-arba'a' that may be recited in the third and fourth rak'ahs?",
       "ur": "تسبیحاتِ اربعہ کیا ہیں جو تیسری اور چوتھی رکعت میں پڑھی جا سکتی ہیں؟",
       "ar": "ما هي «التسبيحات الأربع» التي يجوز قراءتها في الركعتَين الثالثة والرابعة؟"
     },
@@ -7095,7 +7095,7 @@
       "ar": "«سُبحانَ اللهِ، والحمدُ للهِ، ولا إلهَ إلَّا اللهُ، واللهُ أكبر»."
     },
     "explanation": {
-      "en": "In the later rakʿahs one may recite these four glorifications in place of Surah al-Fatiha.",
+      "en": "In the later rak'ahs one may recite these four glorifications in place of Surah al-Fatiha.",
       "ur": "بعد کی رکعات میں سورۂ فاتحہ کے بجائے یہ چار تسبیحات پڑھی جا سکتی ہیں۔",
       "ar": "يجوز في الركعات الأخيرة قراءة هذه التسبيحات الأربع بدلًا من سورة الفاتحة."
     },
@@ -7453,7 +7453,7 @@
     "options": null,
     "correctIndex": null,
     "answer": {
-      "en": "That Allah wills to remove all impurity (rijs) from them and purify them completely - cited by Shia Muslims as evidence of the infallibility (ʿisma) of the Ahl al-Bayt.",
+      "en": "That Allah wills to remove all impurity (rijs) from them and purify them completely - cited by Shia Muslims as evidence of the infallibility (isma) of the Ahl al-Bayt.",
       "ur": "یہ کہ اللہ کا ارادہ ہے کہ اہلِ بیت علیہم السلام سے ہر رجس (ناپاکی) کو دور فرمائے اور انہیں مکمل طور پر پاک کردے - شیعہ مسلمان اسے اہلِ بیت کی عصمت کی دلیل کے طور پر پیش کرتے ہیں۔",
       "ar": "أن الله يريد أن يُذهب الرجسَ عنهم ويُطهِّرهم تطهيراً كاملاً - وهو ما يستشهد به الشيعة دليلاً على عصمة أهل البيت عليهم السلام."
     },
@@ -7486,7 +7486,7 @@
         "ar": "ساجد"
       },
       {
-        "en": "bowing (in rukuʿ)",
+        "en": "bowing (in ruku)",
         "ur": "رکوع میں",
         "ar": "راكع (في الركوع)"
       }
@@ -7494,7 +7494,7 @@
     "correctIndex": 2,
     "answer": null,
     "explanation": {
-      "en": "Qur'an 5:55 says 'wa hum rakiʿun'; Shia tafsir links it to Imam Ali (a) giving his ring to a beggar during rukuʿ.",
+      "en": "Qur'an 5:55 says 'wa hum raki'un'; Shia tafsir links it to Imam Ali (a) giving his ring to a beggar during ruku.",
       "ur": "قرآن ۵:۵۵ میں 'وَہُم رَاکِعُونَ' آیا ہے؛ شیعہ تفسیر اسے امام علی علیہ السلام سے جوڑتی ہے جنہوں نے رکوع کی حالت میں ایک سائل کو اپنی انگوٹھی دی۔",
       "ar": "تقول الآية الكريمة (٥:٥٥): «وَهُمْ رَاكِعُونَ»؛ ويربط التفسير الشيعي هذه الآية بالإمام علي عليه السلام إذ أعطى خاتمه لسائل وهو في حال الركوع."
     },
@@ -7723,7 +7723,7 @@
         "ar": "الميثاق"
       },
       {
-        "en": "favour (niʿma)",
+        "en": "favour (ni'ma)",
         "ur": "نعمت",
         "ar": "النعمة"
       },
@@ -8031,7 +8031,7 @@
     "format": "trueFalse",
     "topic": "quran",
     "prompt": {
-      "en": "The Verse of Wilaya (5:55) connects the believers' guardianship to giving charity while bowing (rukuʿ) in prayer.",
+      "en": "The Verse of Wilaya (5:55) connects the believers' guardianship to giving charity while bowing (ruku) in prayer.",
       "ur": "آیتِ ولایت (۵:۵۵) میں مومنوں کی ولایت کو نماز میں رکوع کی حالت میں صدقہ دینے سے جوڑا گیا ہے۔",
       "ar": "تربط آية الولاية (٥:٥٥) ولاية المؤمنين بإيتاء الزكاة في حال الركوع في الصلاة."
     },
@@ -9164,7 +9164,7 @@
     "format": "multipleChoice",
     "topic": "quran",
     "prompt": {
-      "en": "According to the Qur'an, which prophet raised the foundations of the Kaʿba together with his son Ismaʿil (a)?",
+      "en": "According to the Qur'an, which prophet raised the foundations of the Ka'ba together with his son Isma'il (a)?",
       "ur": "قرآن کے مطابق، کس نبی نے اپنے بیٹے اسماعیل علیہ السلام کے ساتھ مل کر کعبہ کی بنیادیں اٹھائیں؟",
       "ar": "وفق القرآن الكريم، أيُّ نبي رفع قواعد الكعبة مع ابنه إسماعيل عليه السلام؟"
     },
@@ -9193,7 +9193,7 @@
     "correctIndex": 1,
     "answer": null,
     "explanation": {
-      "en": "Qur'an 2:127 describes Ibrahim (a) and Ismaʿil (a) raising the foundations of the House.",
+      "en": "Qur'an 2:127 describes Ibrahim (a) and Isma'il (a) raising the foundations of the House.",
       "ur": "قرآن ۲:۱۲۷ میں ابراہیم علیہ السلام اور اسماعیل علیہ السلام کے بیتِ اللہ کی بنیادیں اٹھانے کا ذکر ہے۔",
       "ar": "يصف القرآن الكريم (٢:١٢٧) إبراهيم عليه السلام وإسماعيل عليه السلام وهما يرفعان قواعد البيت."
     },
@@ -9237,7 +9237,7 @@
       "ar": "تحوَّلت عصاه إلى ثعبان، وأضاءت يدُه بياضاً ساطعاً، وفلق البحرَ لينجو بنو إسرائيل من فرعون."
     },
     "explanation": {
-      "en": "These signs appear across Surahs al-Aʿraf, Ta-Ha, and al-Shuʿara.",
+      "en": "These signs appear across Surahs al-A'raf, Ta-Ha, and al-Shu'ara.",
       "ur": "یہ نشانیاں سورۃ الاعراف، طٰہٰ اور الشعراء میں مذکور ہیں۔",
       "ar": "ترد هذه الآياتُ في سور الأعراف وطه والشعراء."
     },
@@ -9945,7 +9945,7 @@
         "ar": "موسى عليه السلام"
       },
       {
-        "en": "Yaʿqub (a)",
+        "en": "Ya'qub (a)",
         "ur": "یعقوب علیہ السلام",
         "ar": "يعقوب عليه السلام"
       },
@@ -9997,7 +9997,7 @@
     "options": null,
     "correctIndex": null,
     "answer": {
-      "en": "A righteous, powerful traveller who journeyed to the far west and east and built a barrier of iron and molten copper to hold back the corrupting peoples of Gog and Magog (Yaʾjuj and Maʾjuj).",
+      "en": "A righteous, powerful traveller who journeyed to the far west and east and built a barrier of iron and molten copper to hold back the corrupting peoples of Gog and Magog (Ya'juj and Ma'juj).",
       "ur": "ایک نیک اور طاقتور مسافر جنہوں نے دور مغرب اور مشرق تک سفر کیا اور یاجوج و ماجوج (یَأْجُوج وَمَأْجُوج) کی فسادی اقوام کو روکنے کے لیے لوہے اور پگھلے ہوئے تانبے کی دیوار بنائی۔",
       "ar": "رجلٌ صالح ذو قوة وسلطان، جاب المشرقَ والمغرب، وشيَّد سداً من الحديد والنحاس المذاب لمنع مفسدي يأجوج ومأجوج."
     },
@@ -10245,14 +10245,14 @@
     "format": "flashcard",
     "topic": "quran",
     "prompt": {
-      "en": "What was the al-Isra wal-Miʿraj?",
+      "en": "What was the al-Isra wal-Mi'raj?",
       "ur": "اسراء والمعراج کیا تھی؟",
       "ar": "ما الإسراءُ والمعراج؟"
     },
     "options": null,
     "correctIndex": null,
     "answer": {
-      "en": "The Prophet's ﷺ miraculous night journey from the Sacred Mosque in Mecca to al-Masjid al-Aqsa in Jerusalem (al-Isra), followed by his ascension through the heavens (al-Miʿraj).",
+      "en": "The Prophet's ﷺ miraculous night journey from the Sacred Mosque in Mecca to al-Masjid al-Aqsa in Jerusalem (al-Isra), followed by his ascension through the heavens (al-Mi'raj).",
       "ur": "نبی اکرم ﷺ کا اعجازی شبانہ سفر جو مکہ کی مسجد الحرام سے القدس (یروشلم) میں مسجد الاقصیٰ تک تھا (اسراء)، اس کے بعد آسمانوں میں آپ ﷺ کی معراج (اَلْمِعْرَاج)۔",
       "ar": "رحلةُ النبي ﷺ الليليةُ المعجزة من المسجد الحرام في مكة المكرمة إلى المسجد الأقصى في القدس (الإسراء)، ثم صعودُه إلى السماوات (المعراج)."
     },
@@ -10445,7 +10445,7 @@
     },
     "options": [
       {
-        "en": "Yaʿqub (a)",
+        "en": "Ya'qub (a)",
         "ur": "یعقوب علیہ السلام",
         "ar": "يعقوب عليه السلام"
       },

@@ -2,9 +2,9 @@
 //  SurahExperienceCard.swift
 //  Thaqalayn
 //
-//  Hub card for one "Inside the Sūrah" experience. Deliberately the SAME
+//  Hub card for one "Inside the Surah" experience. Deliberately the SAME
 //  EmCard/EmIconChip/serif layout as JourneyCard and DeepDiveCard so the three
-//  hub sections read as peers. All sūrah experiences are premium-gated: available
+//  hub sections read as peers. All surah experiences are premium-gated: available
 //  cards show a PREMIUM chip to non-subscribers (never a lock), a plain eyebrow to
 //  subscribers; coming-soon cards are dimmed with a "Soon" marker.
 //

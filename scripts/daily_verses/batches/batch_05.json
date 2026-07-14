@@ -1,0 +1,324 @@
+{
+  "verses": [
+    {
+      "surah": 2,
+      "verse": 269,
+      "themeKey": "knowledge",
+      "themeEn": "Given wisdom, given much good",
+      "themeUr": "جسے حکمت ملی، اسے بہت بھلائی ملی",
+      "themeAr": "ومن يؤت الحكمة فقد أوتي خيرا كثيرا"
+    },
+    {
+      "surah": 3,
+      "verse": 190,
+      "themeKey": "knowledge",
+      "themeEn": "Signs in night and day",
+      "themeUr": "رات اور دن میں نشانیاں",
+      "themeAr": "لآيات لأولي الألباب"
+    },
+    {
+      "surah": 6,
+      "verse": 97,
+      "themeKey": "knowledge",
+      "themeEn": "Stars to guide you home",
+      "themeUr": "ستارے جو راستہ دکھاتے ہیں",
+      "themeAr": "جعل لكم النجوم لتهتدوا بها"
+    },
+    {
+      "surah": 10,
+      "verse": 5,
+      "themeKey": "knowledge",
+      "themeEn": "The moon marks the years",
+      "themeUr": "چاند سے سالوں کا حساب",
+      "themeAr": "لتعلموا عدد السنين والحساب"
+    },
+    {
+      "surah": 13,
+      "verse": 3,
+      "themeKey": "knowledge",
+      "themeEn": "Rivers, mountains, fruit in pairs",
+      "themeUr": "زمین، پہاڑ اور دریا، سوچنے والوں کے لیے",
+      "themeAr": "مد الأرض وجعل فيها رواسي"
+    },
+    {
+      "surah": 16,
+      "verse": 43,
+      "themeKey": "knowledge",
+      "themeEn": "Ask those who know",
+      "themeUr": "نہ جانتے ہو تو اہلِ ذکر سے پوچھو",
+      "themeAr": "فاسألوا أهل الذكر إن كنتم لا تعلمون"
+    },
+    {
+      "surah": 17,
+      "verse": 36,
+      "themeKey": "knowledge",
+      "themeEn": "Do not follow guesswork",
+      "themeUr": "جس کا علم نہیں، اس کے پیچھے نہ چلو",
+      "themeAr": "ولا تقف ما ليس لك به علم"
+    },
+    {
+      "surah": 17,
+      "verse": 85,
+      "themeKey": "knowledge",
+      "themeEn": "Given only a little knowledge",
+      "themeUr": "علم میں سے تمہیں تھوڑا ہی دیا گیا",
+      "themeAr": "وما أوتيتم من العلم إلا قليلا"
+    },
+    {
+      "surah": 18,
+      "verse": 109,
+      "themeKey": "knowledge",
+      "themeEn": "If the sea were ink",
+      "themeUr": "سمندر سیاہی بن جائے تو بھی کم ہے",
+      "themeAr": "لو كان البحر مدادا لكلمات ربي"
+    },
+    {
+      "surah": 20,
+      "verse": 114,
+      "themeKey": "knowledge",
+      "themeEn": "My Lord, increase me in knowledge",
+      "themeUr": "اے میرے رب، میرے علم میں اضافہ فرما",
+      "themeAr": "رب زدني علما"
+    },
+    {
+      "surah": 22,
+      "verse": 46,
+      "themeKey": "knowledge",
+      "themeEn": "Hearts go blind, not eyes",
+      "themeUr": "آنکھیں نہیں، دل اندھے ہوتے ہیں",
+      "themeAr": "لا تعمى الأبصار ولكن تعمى القلوب"
+    },
+    {
+      "surah": 29,
+      "verse": 20,
+      "themeKey": "knowledge",
+      "themeEn": "Travel and see how creation began",
+      "themeUr": "زمین میں چلو، دیکھو تخلیق کیسے شروع ہوئی",
+      "themeAr": "سيروا في الأرض فانظروا كيف بدأ الخلق"
+    },
+    {
+      "surah": 30,
+      "verse": 22,
+      "themeKey": "knowledge",
+      "themeEn": "Your many languages and colors",
+      "themeUr": "تمہاری زبانوں اور رنگوں کا اختلاف",
+      "themeAr": "اختلاف ألسنتكم وألوانكم"
+    },
+    {
+      "surah": 38,
+      "verse": 29,
+      "themeKey": "knowledge",
+      "themeEn": "A Book to be pondered",
+      "themeUr": "کتاب اتری، تاکہ اس پر غور کرو",
+      "themeAr": "ليدبروا آياته"
+    },
+    {
+      "surah": 39,
+      "verse": 9,
+      "themeKey": "knowledge",
+      "themeEn": "Are those who know equal?",
+      "themeUr": "کیا جاننے والے اور نہ جاننے والے برابر ہیں؟",
+      "themeAr": "هل يستوي الذين يعلمون والذين لا يعلمون"
+    },
+    {
+      "surah": 41,
+      "verse": 53,
+      "themeKey": "knowledge",
+      "themeEn": "Signs outside you and within",
+      "themeUr": "آفاق میں بھی نشانیاں، تمہارے اندر بھی",
+      "themeAr": "آياتنا في الآفاق وفي أنفسهم"
+    },
+    {
+      "surah": 45,
+      "verse": 13,
+      "themeKey": "knowledge",
+      "themeEn": "All subjected, for those who think",
+      "themeUr": "سب کچھ مسخر، غور کرنے والوں کے لیے",
+      "themeAr": "سخر لكم ما في السماوات وما في الأرض"
+    },
+    {
+      "surah": 47,
+      "verse": 24,
+      "themeKey": "knowledge",
+      "themeEn": "Reflect upon the Qur'an",
+      "themeUr": "کیا وہ قرآن پر غور نہیں کرتے؟",
+      "themeAr": "أفلا يتدبرون القرآن"
+    },
+    {
+      "surah": 49,
+      "verse": 6,
+      "themeKey": "knowledge",
+      "themeEn": "Verify before you act",
+      "themeUr": "خبر آئے تو پہلے تحقیق کرو",
+      "themeAr": "إن جاءكم فاسق بنبإ فتبينوا"
+    },
+    {
+      "surah": 59,
+      "verse": 21,
+      "themeKey": "knowledge",
+      "themeEn": "A mountain would break apart",
+      "themeUr": "یہ قرآن پہاڑ پر اترتا تو وہ ریزہ ریزہ ہو جاتا",
+      "themeAr": "لو أنزلنا هذا القرآن على جبل لرأيته خاشعا"
+    },
+    {
+      "surah": 2,
+      "verse": 188,
+      "themeKey": "justice",
+      "themeEn": "No bribes, no stolen wealth",
+      "themeUr": "ناحق مال نہ کھاؤ، رشوت نہ دو",
+      "themeAr": "ولا تأكلوا أموالكم بينكم بالباطل"
+    },
+    {
+      "surah": 4,
+      "verse": 1,
+      "themeKey": "justice",
+      "themeEn": "All of you from one soul",
+      "themeUr": "سب ایک ہی جان سے پیدا ہوئے",
+      "themeAr": "خلقكم من نفس واحدة"
+    },
+    {
+      "surah": 4,
+      "verse": 40,
+      "themeKey": "justice",
+      "themeEn": "Not one atom of injustice",
+      "themeUr": "ذرہ برابر بھی ظلم نہیں کرتا",
+      "themeAr": "إن الله لا يظلم مثقال ذرة"
+    },
+    {
+      "surah": 4,
+      "verse": 58,
+      "themeKey": "justice",
+      "themeEn": "Judge between people with justice",
+      "themeUr": "لوگوں کے درمیان انصاف سے فیصلہ کرو",
+      "themeAr": "وإذا حكمتم بين الناس أن تحكموا بالعدل"
+    },
+    {
+      "surah": 4,
+      "verse": 135,
+      "themeKey": "justice",
+      "themeEn": "Justice, even against yourself",
+      "themeUr": "انصاف پر قائم رہو، چاہے اپنے خلاف ہو",
+      "themeAr": "كونوا قوامين بالقسط ولو على أنفسكم"
+    },
+    {
+      "surah": 4,
+      "verse": 148,
+      "themeKey": "justice",
+      "themeEn": "The wronged may speak out",
+      "themeUr": "مظلوم کو آواز اٹھانے کا حق ہے",
+      "themeAr": "لا يحب الله الجهر بالسوء من القول إلا من ظلم"
+    },
+    {
+      "surah": 5,
+      "verse": 8,
+      "themeKey": "justice",
+      "themeEn": "Never let hatred bend justice",
+      "themeUr": "کسی کی دشمنی تمہیں ناانصافی پر آمادہ نہ کرے",
+      "themeAr": "ولا يجرمنكم شنآن قوم على ألا تعدلوا"
+    },
+    {
+      "surah": 7,
+      "verse": 181,
+      "themeKey": "justice",
+      "themeEn": "Guiding by truth, judging justly",
+      "themeUr": "ایک جماعت جو حق سے رہنمائی کرتی ہے",
+      "themeAr": "أمة يهدون بالحق وبه يعدلون"
+    },
+    {
+      "surah": 10,
+      "verse": 44,
+      "themeKey": "justice",
+      "themeEn": "God wrongs no one",
+      "themeUr": "اللہ لوگوں پر ذرا ظلم نہیں کرتا",
+      "themeAr": "إن الله لا يظلم الناس شيئا"
+    },
+    {
+      "surah": 16,
+      "verse": 90,
+      "themeKey": "justice",
+      "themeEn": "Justice, kindness, giving to kin",
+      "themeUr": "اللہ عدل اور احسان کا حکم دیتا ہے",
+      "themeAr": "إن الله يأمر بالعدل والإحسان"
+    },
+    {
+      "surah": 17,
+      "verse": 35,
+      "themeKey": "justice",
+      "themeEn": "Give full measure, weigh evenly",
+      "themeUr": "پورا ناپو اور ٹھیک ترازو سے تولو",
+      "themeAr": "وأوفوا الكيل إذا كلتم وزنوا بالقسطاس المستقيم"
+    },
+    {
+      "surah": 21,
+      "verse": 47,
+      "themeKey": "justice",
+      "themeEn": "Scales that miss nothing",
+      "themeUr": "انصاف کے ترازو، ذرہ برابر بھی نہیں چھوٹے گا",
+      "themeAr": "ونضع الموازين القسط ليوم القيامة"
+    },
+    {
+      "surah": 26,
+      "verse": 183,
+      "themeKey": "justice",
+      "themeEn": "Do not shortchange people",
+      "themeUr": "لوگوں کو ان کا حق کم نہ دو",
+      "themeAr": "ولا تبخسوا الناس أشياءهم"
+    },
+    {
+      "surah": 33,
+      "verse": 35,
+      "themeKey": "justice",
+      "themeEn": "Men and women, the same reward",
+      "themeUr": "مرد ہوں یا عورتیں، اجر ایک جیسا",
+      "themeAr": "أعد الله لهم مغفرة وأجرا عظيما"
+    },
+    {
+      "surah": 41,
+      "verse": 46,
+      "themeKey": "justice",
+      "themeEn": "What you do returns to you",
+      "themeUr": "جو نیکی کرے، اپنے ہی لیے کرے",
+      "themeAr": "من عمل صالحا فلنفسه"
+    },
+    {
+      "surah": 45,
+      "verse": 22,
+      "themeKey": "justice",
+      "themeEn": "Every soul paid in full",
+      "themeUr": "ہر جان کو اس کی کمائی کا پورا بدلہ",
+      "themeAr": "ولتجزى كل نفس بما كسبت وهم لا يظلمون"
+    },
+    {
+      "surah": 49,
+      "verse": 13,
+      "themeKey": "justice",
+      "themeEn": "The most noble is the most righteous",
+      "themeUr": "سب سے معزز وہی ہے جو سب سے متقی ہے",
+      "themeAr": "إن أكرمكم عند الله أتقاكم"
+    },
+    {
+      "surah": 55,
+      "verse": 9,
+      "themeKey": "justice",
+      "themeEn": "Do not tip the scale",
+      "themeUr": "انصاف سے تولو، ترازو میں کمی نہ کرو",
+      "themeAr": "وأقيموا الوزن بالقسط ولا تخسروا الميزان"
+    },
+    {
+      "surah": 60,
+      "verse": 8,
+      "themeKey": "justice",
+      "themeEn": "Be just to the peaceable",
+      "themeUr": "جو تم سے نہ لڑے، اس سے بھلائی اور انصاف کرو",
+      "themeAr": "أن تبروهم وتقسطوا إليهم"
+    },
+    {
+      "surah": 95,
+      "verse": 8,
+      "themeKey": "justice",
+      "themeEn": "The most just of judges",
+      "themeUr": "کیا اللہ سب سے بہتر فیصلہ کرنے والا نہیں؟",
+      "themeAr": "أليس الله بأحكم الحاكمين"
+    }
+  ]
+}

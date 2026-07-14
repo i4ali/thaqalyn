@@ -31,7 +31,7 @@ extension LocalizedText: ExpressibleByStringLiteral {
     init(stringLiteral value: String) { self.init(en: value, ur: nil, ar: nil) }
 }
 
-/// The three-part structure metadata (ʿIlm / ʿAyn / Ḥaqq al-Yaqīn for the Yaqīn dive).
+/// The three-part structure metadata (Ilm / Ayn / Haqq al-Yaqin for the Yaqin dive).
 struct ActInfo: Identifiable {
     let number: Int
     let ar: String
@@ -72,20 +72,20 @@ enum DeepDiveSection {
     /// (e.g. "You have known it by proof.") so the KNOW → SEE → LIVE arc is explicit.
     case act(act: Int, connector: LocalizedText?, line: LocalizedText, bridge: BridgeVerse?)
     case narration(act: Int, tag: LocalizedText, source: LocalizedText, body: LocalizedText, reflection: LocalizedText)
-    /// A ḥadīth-qudsī "reply" beat: after a verse the servant has recited, God's answer
-    /// in the division of the prayer (ʿUyūn Akhbār al-Riḍā). Distinct from `narration`
+    /// A hadith-qudsi "reply" beat: after a verse the servant has recited, God's answer
+    /// in the division of the prayer (Uyun Akhbar al-Rida). Distinct from `narration`
     /// so it renders as a call-and-response reply ("He answers"), not a story block.
     /// `replyingTo` names the line He is answering; `arabic` is the anchor of His words.
     case response(act: Int, replyingTo: LocalizedText, arabic: String, words: LocalizedText, source: LocalizedText, reflection: LocalizedText)
     case climax(act: Int, tag: LocalizedText, source: LocalizedText, arabic: String, translation: LocalizedText, body: LocalizedText, reflection: LocalizedText)
     case reflectionPrompt(tag: LocalizedText, prompt: LocalizedText, placeholder: LocalizedText, subline: LocalizedText, nextLabel: LocalizedText)
     /// `close` is the theme-specific final clause shown after "The descent ends." in the
-    /// Āmīn block (e.g. "The certainty is yours to keep." for Yaqīn) — per-dive so it never
+    /// Amin block (e.g. "The certainty is yours to keep." for Yaqin) — per-dive so it never
     /// carries another dive's theme.
     case dua(tag: LocalizedText, intro: LocalizedText, arabic: String, translation: LocalizedText, source: LocalizedText, note: LocalizedText, close: LocalizedText)
-    /// The final beat of a sūrah experience: restates the sūrah's essence and
-    /// hands off to reading the full sūrah. Replaces `dua` for sūrah dives -
-    /// a sūrah experience is an understanding journey, not a devotional close.
+    /// The final beat of a surah experience: restates the surah's essence and
+    /// hands off to reading the full surah. Replaces `dua` for surah dives -
+    /// a surah experience is an understanding journey, not a devotional close.
     case closing(tag: LocalizedText, titleAr: String, essence: LocalizedText, line: LocalizedText)
 
     /// Act number for the persistent depth stepper (0 = opening, 4 = reflection/dua close).
@@ -103,7 +103,7 @@ enum DeepDiveSection {
     }
 }
 
-/// One immersive deep dive. Data-driven so future dives (Ṣabr, Tawakkul, …) are
+/// One immersive deep dive. Data-driven so future dives (Sabr, Tawakkul, …) are
 /// pure content additions rendered by the same `DeepDiveView`.
 struct DeepDive: Identifiable {
     let id: String

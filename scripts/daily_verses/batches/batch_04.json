@@ -1,0 +1,324 @@
+{
+  "verses": [
+    {
+      "surah": 1,
+      "verse": 5,
+      "themeKey": "prayer",
+      "themeEn": "You alone we ask for help",
+      "themeUr": "تجھ ہی سے مدد مانگتے ہیں",
+      "themeAr": "إياك نعبد وإياك نستعين"
+    },
+    {
+      "surah": 2,
+      "verse": 186,
+      "themeKey": "prayer",
+      "themeEn": "I am near, I answer",
+      "themeUr": "میں قریب ہوں، دعا سنتا ہوں",
+      "themeAr": "إني قريب أجيب دعوة الداع"
+    },
+    {
+      "surah": 3,
+      "verse": 38,
+      "themeKey": "prayer",
+      "themeEn": "You hear every prayer",
+      "themeUr": "تو ہر دعا سننے والا ہے",
+      "themeAr": "إنك سميع الدعاء"
+    },
+    {
+      "surah": 6,
+      "verse": 162,
+      "themeKey": "prayer",
+      "themeEn": "My prayer, my living, my dying",
+      "themeUr": "میری نماز اور میری زندگی اللہ کے لیے",
+      "themeAr": "إن صلاتي ونسكي ومحياي ومماتي لله"
+    },
+    {
+      "surah": 7,
+      "verse": 55,
+      "themeKey": "prayer",
+      "themeEn": "Call Him humbly, in secret",
+      "themeUr": "عاجزی اور خاموشی سے پکارو",
+      "themeAr": "ادعوا ربكم تضرعا وخفية"
+    },
+    {
+      "surah": 12,
+      "verse": 86,
+      "themeKey": "prayer",
+      "themeEn": "I complain only to God",
+      "themeUr": "اپنا غم صرف اللہ سے کہتا ہوں",
+      "themeAr": "إنما أشكو بثي وحزني إلى الله"
+    },
+    {
+      "surah": 12,
+      "verse": 101,
+      "themeKey": "prayer",
+      "themeEn": "My protector in both worlds",
+      "themeUr": "دنیا و آخرت میں تو ہی میرا کارساز",
+      "themeAr": "أنت وليي في الدنيا والآخرة"
+    },
+    {
+      "surah": 14,
+      "verse": 40,
+      "themeKey": "prayer",
+      "themeEn": "Make me one who prays",
+      "themeUr": "مجھے نماز قائم کرنے والا بنا",
+      "themeAr": "رب اجعلني مقيم الصلاة"
+    },
+    {
+      "surah": 21,
+      "verse": 89,
+      "themeKey": "prayer",
+      "themeEn": "Do not leave me alone",
+      "themeUr": "مجھے اکیلا نہ چھوڑ",
+      "themeAr": "رب لا تذرني فردا وأنت خير الوارثين"
+    },
+    {
+      "surah": 17,
+      "verse": 79,
+      "themeKey": "prayer",
+      "themeEn": "Night prayer, a praised station",
+      "themeUr": "رات کی نماز، مقامِ محمود",
+      "themeAr": "ومن الليل فتهجد به"
+    },
+    {
+      "surah": 17,
+      "verse": 80,
+      "themeKey": "prayer",
+      "themeEn": "Bring me in with truth",
+      "themeUr": "سچائی کے ساتھ داخل کر، سچائی کے ساتھ نکال",
+      "themeAr": "رب أدخلني مدخل صدق وأخرجني مخرج صدق"
+    },
+    {
+      "surah": 19,
+      "verse": 4,
+      "themeKey": "prayer",
+      "themeEn": "My prayer never went unanswered",
+      "themeUr": "میری دعا کبھی رائیگاں نہ گئی",
+      "themeAr": "ولم أكن بدعائك رب شقيا"
+    },
+    {
+      "surah": 20,
+      "verse": 14,
+      "themeKey": "prayer",
+      "themeEn": "Pray to remember Me",
+      "themeUr": "میری یاد کے لیے نماز قائم کرو",
+      "themeAr": "وأقم الصلاة لذكري"
+    },
+    {
+      "surah": 20,
+      "verse": 132,
+      "themeKey": "prayer",
+      "themeEn": "Call your family to prayer",
+      "themeUr": "اپنے گھر والوں کو نماز کا حکم دو",
+      "themeAr": "وأمر أهلك بالصلاة"
+    },
+    {
+      "surah": 22,
+      "verse": 77,
+      "themeKey": "prayer",
+      "themeEn": "Bow, prostrate, and do good",
+      "themeUr": "رکوع کرو، سجدہ کرو، نیکی کرو",
+      "themeAr": "اركعوا واسجدوا واعبدوا ربكم"
+    },
+    {
+      "surah": 72,
+      "verse": 20,
+      "themeKey": "prayer",
+      "themeEn": "I invoke my Lord alone",
+      "themeUr": "میں صرف اپنے رب کو پکارتا ہوں",
+      "themeAr": "إنما أدعو ربي ولا أشرك به أحدا"
+    },
+    {
+      "surah": 27,
+      "verse": 62,
+      "themeKey": "prayer",
+      "themeEn": "He answers the desperate",
+      "themeUr": "بےقرار کی پکار سنتا ہے",
+      "themeAr": "يجيب المضطر إذا دعاه"
+    },
+    {
+      "surah": 29,
+      "verse": 45,
+      "themeKey": "prayer",
+      "themeEn": "Prayer keeps you from wrong",
+      "themeUr": "نماز برائی سے روکتی ہے",
+      "themeAr": "إن الصلاة تنهى عن الفحشاء والمنكر"
+    },
+    {
+      "surah": 37,
+      "verse": 75,
+      "themeKey": "prayer",
+      "themeEn": "Noah called, and We answered",
+      "themeUr": "نوح نے پکارا، ہم نے جواب دیا",
+      "themeAr": "ولقد نادانا نوح فلنعم المجيبون"
+    },
+    {
+      "surah": 66,
+      "verse": 11,
+      "themeKey": "prayer",
+      "themeEn": "A house near You",
+      "themeUr": "اپنے پاس جنت میں گھر بنا دے",
+      "themeAr": "رب ابن لي عندك بيتا في الجنة"
+    },
+    {
+      "surah": 7,
+      "verse": 205,
+      "themeKey": "remembrance",
+      "themeEn": "Remember your Lord within yourself",
+      "themeUr": "اپنے دل میں اپنے رب کو یاد کرو",
+      "themeAr": "واذكر ربك في نفسك تضرعا"
+    },
+    {
+      "surah": 7,
+      "verse": 206,
+      "themeKey": "remembrance",
+      "themeEn": "They glorify Him and prostrate",
+      "themeUr": "وہ اس کی تسبیح کرتے اور سجدہ کرتے ہیں",
+      "themeAr": "ويسبحونه وله يسجدون"
+    },
+    {
+      "surah": 8,
+      "verse": 2,
+      "themeKey": "remembrance",
+      "themeEn": "Hearts tremble at His name",
+      "themeUr": "اللہ کے ذکر سے دل لرز اٹھتے ہیں",
+      "themeAr": "إذا ذكر الله وجلت قلوبهم"
+    },
+    {
+      "surah": 13,
+      "verse": 28,
+      "themeKey": "remembrance",
+      "themeEn": "In His remembrance hearts find rest",
+      "themeUr": "اللہ کے ذکر سے دلوں کو سکون ملتا ہے",
+      "themeAr": "بذكر الله تطمئن القلوب"
+    },
+    {
+      "surah": 15,
+      "verse": 99,
+      "themeKey": "remembrance",
+      "themeEn": "Worship Him until the end",
+      "themeUr": "یقین آنے تک اپنے رب کی عبادت کرو",
+      "themeAr": "واعبد ربك حتى يأتيك اليقين"
+    },
+    {
+      "surah": 17,
+      "verse": 44,
+      "themeKey": "remembrance",
+      "themeEn": "A praise you cannot hear",
+      "themeUr": "تم ان کی تسبیح نہیں سمجھتے",
+      "themeAr": "لا تفقهون تسبيحهم"
+    },
+    {
+      "surah": 24,
+      "verse": 41,
+      "themeKey": "remembrance",
+      "themeEn": "The birds know their praise",
+      "themeUr": "پرندے بھی اپنی تسبیح جانتے ہیں",
+      "themeAr": "والطير صافات كل قد علم تسبيحه"
+    },
+    {
+      "surah": 30,
+      "verse": 17,
+      "themeKey": "remembrance",
+      "themeEn": "Glorify Him, evening and morning",
+      "themeUr": "شام اور صبح اللہ کی تسبیح کرو",
+      "themeAr": "فسبحان الله حين تمسون وحين تصبحون"
+    },
+    {
+      "surah": 32,
+      "verse": 15,
+      "themeKey": "remembrance",
+      "themeEn": "Reminded, they fall in prostration",
+      "themeUr": "یاد دلانے پر سجدے میں گر پڑتے ہیں",
+      "themeAr": "خروا سجدا وسبحوا بحمد ربهم"
+    },
+    {
+      "surah": 33,
+      "verse": 41,
+      "themeKey": "remembrance",
+      "themeEn": "Remember God, and remember much",
+      "themeUr": "اللہ کو بکثرت یاد کرو",
+      "themeAr": "اذكروا الله ذكرا كثيرا"
+    },
+    {
+      "surah": 33,
+      "verse": 56,
+      "themeKey": "remembrance",
+      "themeEn": "Send blessings on the Prophet",
+      "themeUr": "نبی پر درود بھیجو",
+      "themeAr": "صلوا عليه وسلموا تسليما"
+    },
+    {
+      "surah": 59,
+      "verse": 24,
+      "themeKey": "remembrance",
+      "themeEn": "All creation exalts Him",
+      "themeUr": "ساری کائنات اس کی تسبیح کرتی ہے",
+      "themeAr": "يسبح له ما في السماوات والأرض"
+    },
+    {
+      "surah": 55,
+      "verse": 78,
+      "themeKey": "remembrance",
+      "themeEn": "Blessed is your Lord's name",
+      "themeUr": "برکت والا ہے تیرے رب کا نام",
+      "themeAr": "تبارك اسم ربك ذي الجلال والإكرام"
+    },
+    {
+      "surah": 62,
+      "verse": 1,
+      "themeKey": "remembrance",
+      "themeEn": "Creation glorifies the Holy King",
+      "themeUr": "ساری کائنات پاک بادشاہ کی تسبیح کرتی ہے",
+      "themeAr": "يسبح لله ما في السماوات وما في الأرض"
+    },
+    {
+      "surah": 62,
+      "verse": 10,
+      "themeKey": "remembrance",
+      "themeEn": "Remember Him as you work",
+      "themeUr": "کام کاج میں بھی اللہ کو یاد رکھو",
+      "themeAr": "واذكروا الله كثيرا لعلكم تفلحون"
+    },
+    {
+      "surah": 63,
+      "verse": 9,
+      "themeKey": "remembrance",
+      "themeEn": "Wealth must not distract you",
+      "themeUr": "مال و اولاد ذکر سے غافل نہ کریں",
+      "themeAr": "لا تلهكم أموالكم عن ذكر الله"
+    },
+    {
+      "surah": 73,
+      "verse": 8,
+      "themeKey": "remembrance",
+      "themeEn": "Devote yourself to Him wholly",
+      "themeUr": "اپنے رب کا نام یاد کرو اور اسی کے ہو رہو",
+      "themeAr": "واذكر اسم ربك وتبتل إليه"
+    },
+    {
+      "surah": 76,
+      "verse": 25,
+      "themeKey": "remembrance",
+      "themeEn": "His name, morning and evening",
+      "themeUr": "صبح و شام اپنے رب کا نام لو",
+      "themeAr": "واذكر اسم ربك بكرة وأصيلا"
+    },
+    {
+      "surah": 76,
+      "verse": 26,
+      "themeKey": "remembrance",
+      "themeEn": "Prostrate to Him at night",
+      "themeUr": "رات کو اس کے حضور سجدہ کرو",
+      "themeAr": "ومن الليل فاسجد له"
+    },
+    {
+      "surah": 87,
+      "verse": 1,
+      "themeKey": "remembrance",
+      "themeEn": "Praise your Lord Most High",
+      "themeUr": "اپنے بلند و بالا رب کے نام کی تسبیح کرو",
+      "themeAr": "سبح اسم ربك الأعلى"
+    }
+  ]
+}

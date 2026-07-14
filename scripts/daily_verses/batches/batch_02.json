@@ -1,0 +1,340 @@
+{
+  "verses": [
+    {
+      "surah": 2,
+      "verse": 153,
+      "themeKey": "patience",
+      "themeEn": "Seek help through patience and prayer",
+      "themeUr": "صبر اور نماز سے مدد چاہو",
+      "themeAr": "استعينوا بالصبر والصلاة"
+    },
+    {
+      "surah": 2,
+      "verse": 155,
+      "themeKey": "patience",
+      "themeEn": "Good news for those who endure",
+      "themeUr": "صبر کرنے والوں کے لیے خوشخبری",
+      "themeAr": "وبشر الصابرين"
+    },
+    {
+      "surah": 3,
+      "verse": 186,
+      "themeKey": "patience",
+      "themeEn": "You will be tested in wealth and self",
+      "themeUr": "مال و جان میں آزمائش ہو گی",
+      "themeAr": "لتبلون في أموالكم وأنفسكم"
+    },
+    {
+      "surah": 3,
+      "verse": 200,
+      "themeKey": "patience",
+      "themeEn": "Be patient and outlast",
+      "themeUr": "صبر کرو اور ثابت قدم رہو",
+      "themeAr": "اصبروا وصابروا ورابطوا"
+    },
+    {
+      "surah": 6,
+      "verse": 34,
+      "themeKey": "patience",
+      "themeEn": "They endured until help arrived",
+      "themeUr": "وہ صبر کرتے رہے یہاں تک کہ نصرت آ گئی",
+      "themeAr": "صبروا حتى أتاهم نصرنا"
+    },
+    {
+      "surah": 7,
+      "verse": 128,
+      "themeKey": "patience",
+      "themeEn": "Seek God's help and hold on",
+      "themeUr": "اللہ سے مدد مانگو اور صبر کرو",
+      "themeAr": "استعينوا بالله واصبروا"
+    },
+    {
+      "surah": 8,
+      "verse": 46,
+      "themeKey": "patience",
+      "themeEn": "Do not quarrel, do not lose heart",
+      "themeUr": "آپس میں جھگڑا نہ کرو، ہمت نہ ہارو",
+      "themeAr": "ولا تنازعوا فتفشلوا"
+    },
+    {
+      "surah": 11,
+      "verse": 115,
+      "themeKey": "patience",
+      "themeEn": "No good you do is ever lost",
+      "themeUr": "نیکی کا اجر ضائع نہیں ہوتا",
+      "themeAr": "لا يضيع أجر المحسنين"
+    },
+    {
+      "surah": 13,
+      "verse": 24,
+      "themeKey": "patience",
+      "themeEn": "Peace on you for what you endured",
+      "themeUr": "تمہارے صبر کے صلے میں سلام",
+      "themeAr": "سلام عليكم بما صبرتم"
+    },
+    {
+      "surah": 16,
+      "verse": 96,
+      "themeKey": "patience",
+      "themeEn": "What is with God lasts",
+      "themeUr": "جو اللہ کے پاس ہے وہ باقی ہے",
+      "themeAr": "ما عند الله باق"
+    },
+    {
+      "surah": 16,
+      "verse": 127,
+      "themeKey": "patience",
+      "themeEn": "Your patience comes from God alone",
+      "themeUr": "تمہارا صبر اللہ ہی سے ہے",
+      "themeAr": "وما صبرك إلا بالله"
+    },
+    {
+      "surah": 18,
+      "verse": 28,
+      "themeKey": "patience",
+      "themeEn": "Stay with those who call on Him",
+      "themeUr": "ان کے ساتھ رہو جو اپنے رب کو پکارتے ہیں",
+      "themeAr": "واصبر نفسك مع الذين يدعون ربهم"
+    },
+    {
+      "surah": 20,
+      "verse": 130,
+      "themeKey": "patience",
+      "themeEn": "Endure, and praise Him before sunrise",
+      "themeUr": "صبر کرو اور طلوعِ آفتاب سے پہلے تسبیح کرو",
+      "themeAr": "واصبر وسبح قبل طلوع الشمس"
+    },
+    {
+      "surah": 29,
+      "verse": 2,
+      "themeKey": "patience",
+      "themeEn": "Did you think you would not be tested?",
+      "themeUr": "کیا تم نے سمجھا کہ آزمائے نہ جاؤ گے؟",
+      "themeAr": "أحسب الناس أن يتركوا"
+    },
+    {
+      "surah": 30,
+      "verse": 60,
+      "themeKey": "patience",
+      "themeEn": "God's promise is true, so hold on",
+      "themeUr": "اللہ کا وعدہ سچا ہے، صبر کرو",
+      "themeAr": "فاصبر إن وعد الله حق"
+    },
+    {
+      "surah": 31,
+      "verse": 17,
+      "themeKey": "patience",
+      "themeEn": "Bear what befalls you",
+      "themeUr": "جو مصیبت آئے اس پر صبر کرو",
+      "themeAr": "واصبر على ما أصابك"
+    },
+    {
+      "surah": 32,
+      "verse": 24,
+      "themeKey": "patience",
+      "themeEn": "They led because they endured",
+      "themeUr": "صبر کیا تو پیشوا بنے",
+      "themeAr": "لما صبروا جعلناهم أئمة"
+    },
+    {
+      "surah": 39,
+      "verse": 10,
+      "themeKey": "patience",
+      "themeEn": "Reward beyond measure",
+      "themeUr": "صابروں کا اجر بے حساب",
+      "themeAr": "أجر الصابرين بغير حساب"
+    },
+    {
+      "surah": 42,
+      "verse": 43,
+      "themeKey": "patience",
+      "themeEn": "To endure and to forgive",
+      "themeUr": "صبر کرنا اور معاف کر دینا",
+      "themeAr": "من صبر وغفر"
+    },
+    {
+      "surah": 52,
+      "verse": 48,
+      "themeKey": "patience",
+      "themeEn": "You are before Our eyes",
+      "themeUr": "تم ہماری نگاہوں میں ہو",
+      "themeAr": "فإنك بأعيننا"
+    },
+    {
+      "surah": 70,
+      "verse": 5,
+      "themeKey": "patience",
+      "themeEn": "Patience, beautiful patience",
+      "themeUr": "صبرِ جمیل کرو",
+      "themeAr": "فاصبر صبرا جميلا"
+    },
+    {
+      "surah": 2,
+      "verse": 152,
+      "themeKey": "gratitude",
+      "themeEn": "Remember Me and thank Me",
+      "themeUr": "مجھے یاد کرو اور میرا شکر ادا کرو",
+      "themeAr": "واشكروا لي ولا تكفرون"
+    },
+    {
+      "surah": 2,
+      "verse": 172,
+      "themeKey": "gratitude",
+      "themeEn": "Eat what is good and give thanks",
+      "themeUr": "پاکیزہ رزق کھاؤ اور شکر کرو",
+      "themeAr": "كلوا من طيبات ما رزقناكم واشكروا"
+    },
+    {
+      "surah": 3,
+      "verse": 103,
+      "themeKey": "gratitude",
+      "themeEn": "He joined your hearts together",
+      "themeUr": "اس نے تمہارے دلوں کو جوڑ دیا",
+      "themeAr": "فألف بين قلوبكم"
+    },
+    {
+      "surah": 4,
+      "verse": 147,
+      "themeKey": "gratitude",
+      "themeEn": "God Himself is appreciative",
+      "themeUr": "اللہ بڑا قدر دان ہے",
+      "themeAr": "وكان الله شاكرا عليما"
+    },
+    {
+      "surah": 8,
+      "verse": 26,
+      "themeKey": "gratitude",
+      "themeEn": "You were few, He sheltered you",
+      "themeUr": "تم تھوڑے تھے، اس نے پناہ دی",
+      "themeAr": "كنتم قليلا فآواكم"
+    },
+    {
+      "surah": 14,
+      "verse": 7,
+      "themeKey": "gratitude",
+      "themeEn": "Give thanks and He gives more",
+      "themeUr": "شکر کرو گے تو اور زیادہ دوں گا",
+      "themeAr": "لئن شكرتم لأزيدنكم"
+    },
+    {
+      "surah": 16,
+      "verse": 53,
+      "themeKey": "gratitude",
+      "themeEn": "Every blessing is from Him",
+      "themeUr": "جو نعمت بھی ہے اللہ کی طرف سے ہے",
+      "themeAr": "وما بكم من نعمة فمن الله"
+    },
+    {
+      "surah": 16,
+      "verse": 78,
+      "themeKey": "gratitude",
+      "themeEn": "He gave you hearing, sight, heart",
+      "themeUr": "کان، آنکھ اور دل عطا کیے",
+      "themeAr": "وجعل لكم السمع والأبصار والأفئدة"
+    },
+    {
+      "surah": 17,
+      "verse": 70,
+      "themeKey": "gratitude",
+      "themeEn": "He honoured the children of Adam",
+      "themeUr": "اولادِ آدم کو عزت بخشی",
+      "themeAr": "ولقد كرمنا بني آدم"
+    },
+    {
+      "surah": 26,
+      "verse": 80,
+      "themeKey": "gratitude",
+      "themeEn": "When I fall ill, He heals me",
+      "themeUr": "جب بیمار ہوں تو وہی شفا دیتا ہے",
+      "themeAr": "وإذا مرضت فهو يشفين"
+    },
+    {
+      "surah": 27,
+      "verse": 15,
+      "themeKey": "gratitude",
+      "themeEn": "Given knowledge, they gave praise",
+      "themeUr": "علم عطا ہوا تو شکر بجا لائے",
+      "themeAr": "الحمد لله الذي فضلنا"
+    },
+    {
+      "surah": 28,
+      "verse": 73,
+      "themeKey": "gratitude",
+      "themeEn": "Night for rest, day for work",
+      "themeUr": "رات آرام کے لیے، دن روزی کے لیے",
+      "themeAr": "جعل لكم الليل والنهار"
+    },
+    {
+      "surah": 30,
+      "verse": 46,
+      "themeKey": "gratitude",
+      "themeEn": "He sends the winds with good news",
+      "themeUr": "وہ خوشخبری دینے والی ہوائیں بھیجتا ہے",
+      "themeAr": "يرسل الرياح مبشرات"
+    },
+    {
+      "surah": 31,
+      "verse": 12,
+      "themeKey": "gratitude",
+      "themeEn": "Thankfulness is for your own good",
+      "themeUr": "شکر کرنے والا اپنے ہی فائدے میں ہے",
+      "themeAr": "ومن يشكر فإنما يشكر لنفسه"
+    },
+    {
+      "surah": 34,
+      "verse": 15,
+      "themeKey": "gratitude",
+      "themeEn": "A good land, a forgiving Lord",
+      "themeUr": "پاکیزہ شہر اور بخشنے والا رب",
+      "themeAr": "بلدة طيبة ورب غفور"
+    },
+    {
+      "surah": 35,
+      "verse": 34,
+      "themeKey": "gratitude",
+      "themeEn": "Praise to Him who removed our sorrow",
+      "themeUr": "شکر اس کا جس نے غم دور کیا",
+      "themeAr": "الحمد لله الذي أذهب عنا الحزن"
+    },
+    {
+      "surah": 40,
+      "verse": 64,
+      "themeKey": "gratitude",
+      "themeEn": "He perfected your form",
+      "themeUr": "اس نے تمہاری صورت بہترین بنائی",
+      "themeAr": "وصوركم فأحسن صوركم"
+    },
+    {
+      "surah": 55,
+      "verse": 13,
+      "themeKey": "gratitude",
+      "themeEn": "Which of His favours will you deny?",
+      "themeUr": "تم اپنے رب کی کن نعمتوں کو جھٹلاؤ گے؟",
+      "themeAr": "فبأي آلاء ربكما تكذبان"
+    },
+    {
+      "surah": 67,
+      "verse": 15,
+      "themeKey": "gratitude",
+      "themeEn": "Walk the earth, eat of His provision",
+      "themeUr": "زمین پر چلو اور اس کا رزق کھاؤ",
+      "themeAr": "فامشوا في مناكبها وكلوا من رزقه"
+    },
+    {
+      "surah": 76,
+      "verse": 22,
+      "themeKey": "gratitude",
+      "themeEn": "Your effort has been appreciated",
+      "themeUr": "تمہاری کوشش قابلِ قدر ٹھہری",
+      "themeAr": "وكان سعيكم مشكورا"
+    },
+    {
+      "surah": 93,
+      "verse": 11,
+      "themeKey": "gratitude",
+      "themeEn": "Speak of your Lord's blessing",
+      "themeUr": "اپنے رب کی نعمت کا ذکر کرو",
+      "themeAr": "وأما بنعمة ربك فحدث"
+    }
+  ]
+}

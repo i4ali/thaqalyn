@@ -2,8 +2,8 @@
 //  SurahListRow.swift
 //  Thaqalayn
 //
-//  One sūrah row in the Quran-tab list (browse + search): the navigation card,
-//  plus - for sūrahs with a built "Inside the Sūrah" experience - the attached
+//  One surah row in the Quran-tab list (browse + search): the navigation card,
+//  plus - for surahs with a built "Inside the Surah" experience - the attached
 //  Read & Tafsir | Journey mode toggle. The card and the Read tab open the
 //  reading view; the Journey tab opens the immersive experience (premium-gated,
 //  PREMIUM chip - never a lock). Theme-adaptive (emerald + standard).
@@ -11,7 +11,7 @@
 
 import SwiftUI
 
-/// The navigation card plus, for sūrahs with an experience, the attached mode
+/// The navigation card plus, for surahs with an experience, the attached mode
 /// toggle. Drop-in replacement for the bare PressableNavLink + ModernSurahCard
 /// pattern in both themes and in search results.
 struct SurahListRow: View {
@@ -21,7 +21,7 @@ struct SurahListRow: View {
     @State private var presentedExperience: PresentedSurahExperience?
     @State private var showingPaywall = false
 
-    /// The "Inside the Sūrah" experience for this sūrah, when one is built.
+    /// The "Inside the Surah" experience for this surah, when one is built.
     private var experience: SurahExperienceDescriptor? {
         guard let d = SurahExperienceDescriptor.bySurahNumber(surahWithTafsir.surah.number),
               d.available else { return nil }
@@ -64,7 +64,7 @@ struct SurahListRow: View {
                 DeepDiveView(dive: dive,
                              onClose: { presentedExperience = nil },
                              onReadSurah: {
-                                 // Dismiss the descent, then hand off to the sūrah -
+                                 // Dismiss the descent, then hand off to the surah -
                                  // MainTabView's .navigateToVerse listener stashes the
                                  // deep link and HomeView pushes SurahDetailView.
                                  presentedExperience = nil

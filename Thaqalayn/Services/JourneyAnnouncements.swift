@@ -102,7 +102,7 @@ extension JourneyAnnouncement {
         JourneyAnnouncement(
             id: "fatimiyya",
             title: "The Fatimiyya mourning has begun",
-            body: "The days of az-Zahrā (AS). Walk the Ayyam-e-Fatimiyya through the Quran. Tap to begin.",
+            body: "The days of az-Zahra (AS). Walk the Ayyam-e-Fatimiyya through the Quran. Tap to begin.",
             leadInHijriMonth: 5, leadInHijriDay: 8,
             leadInIsPreviousHijriYear: false,
             tabTag: 4,

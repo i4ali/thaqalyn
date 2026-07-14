@@ -1,0 +1,324 @@
+{
+  "verses": [
+    {
+      "surah": 1,
+      "verse": 6,
+      "themeKey": "guidance",
+      "themeEn": "Guide us to the straight path",
+      "themeUr": "ہمیں سیدھا راستہ دکھا",
+      "themeAr": "اهدنا الصراط المستقيم"
+    },
+    {
+      "surah": 2,
+      "verse": 256,
+      "themeKey": "guidance",
+      "themeEn": "Faith cannot be forced on anyone",
+      "themeUr": "دین میں کوئی زبردستی نہیں",
+      "themeAr": "لا إكراه في الدين"
+    },
+    {
+      "surah": 4,
+      "verse": 174,
+      "themeKey": "guidance",
+      "themeEn": "A clear light has come to you",
+      "themeUr": "تمہارے پاس روشن نور آ چکا ہے",
+      "themeAr": "وأنزلنا إليكم نورا مبينا"
+    },
+    {
+      "surah": 4,
+      "verse": 175,
+      "themeKey": "guidance",
+      "themeEn": "Hold fast to Him and He leads you",
+      "themeUr": "اسے مضبوطی سے تھامو، وہ راہ دکھائے گا",
+      "themeAr": "ويهديهم إليه صراطا مستقيما"
+    },
+    {
+      "surah": 6,
+      "verse": 153,
+      "themeKey": "guidance",
+      "themeEn": "This is My path - follow it",
+      "themeUr": "یہی میرا سیدھا راستہ ہے، اسی پر چلو",
+      "themeAr": "وأن هذا صراطي مستقيما فاتبعوه"
+    },
+    {
+      "surah": 10,
+      "verse": 108,
+      "themeKey": "guidance",
+      "themeEn": "The truth has reached you from your Lord",
+      "themeUr": "تمہارے رب کی طرف سے حق آ چکا ہے",
+      "themeAr": "قد جاءكم الحق من ربكم"
+    },
+    {
+      "surah": 14,
+      "verse": 1,
+      "themeKey": "guidance",
+      "themeEn": "A Book to bring people out of darkness",
+      "themeUr": "کتاب، تاکہ لوگوں کو اندھیروں سے نکالے",
+      "themeAr": "لتخرج الناس من الظلمات إلى النور"
+    },
+    {
+      "surah": 15,
+      "verse": 9,
+      "themeKey": "guidance",
+      "themeEn": "We sent it down, and We guard it",
+      "themeUr": "ہم نے اتارا، ہم ہی اس کی حفاظت کریں گے",
+      "themeAr": "إنا نحن نزلنا الذكر وإنا له لحافظون"
+    },
+    {
+      "surah": 16,
+      "verse": 64,
+      "themeKey": "guidance",
+      "themeEn": "Sent to make clear what people dispute",
+      "themeUr": "تاکہ اختلاف کی بات واضح ہو جائے",
+      "themeAr": "لتبين لهم الذي اختلفوا فيه"
+    },
+    {
+      "surah": 17,
+      "verse": 9,
+      "themeKey": "guidance",
+      "themeEn": "It guides to what stands most upright",
+      "themeUr": "یہ سب سے سیدھی راہ دکھاتا ہے",
+      "themeAr": "يهدي للتي هي أقوم"
+    },
+    {
+      "surah": 22,
+      "verse": 16,
+      "themeKey": "guidance",
+      "themeEn": "Sent down as verses of clear evidence",
+      "themeUr": "روشن نشانیاں بنا کر اتارا",
+      "themeAr": "أنزلناه آيات بينات"
+    },
+    {
+      "surah": 28,
+      "verse": 56,
+      "themeKey": "guidance",
+      "themeEn": "No one can guide a heart but God",
+      "themeUr": "ہدایت صرف اللہ کے اختیار میں ہے",
+      "themeAr": "إن الله يهدي من يشاء"
+    },
+    {
+      "surah": 34,
+      "verse": 50,
+      "themeKey": "guidance",
+      "themeEn": "If I am guided, it is by revelation",
+      "themeUr": "اگر میں راہ پر ہوں تو وحی کے سبب",
+      "themeAr": "وإن اهتديت فبما يوحي إلي ربي"
+    },
+    {
+      "surah": 42,
+      "verse": 52,
+      "themeKey": "guidance",
+      "themeEn": "He made the Book a light to guide by",
+      "themeUr": "اس نے کتاب کو نور بنایا",
+      "themeAr": "جعلناه نورا نهدي به من نشاء"
+    },
+    {
+      "surah": 43,
+      "verse": 43,
+      "themeKey": "guidance",
+      "themeEn": "Hold to what was revealed to you",
+      "themeUr": "جو وحی کی گئی، اسے تھامے رہو",
+      "themeAr": "فاستمسك بالذي أوحي إليك"
+    },
+    {
+      "surah": 45,
+      "verse": 20,
+      "themeKey": "guidance",
+      "themeEn": "Insight for all people",
+      "themeUr": "سب لوگوں کے لیے بصیرت",
+      "themeAr": "هذا بصائر للناس"
+    },
+    {
+      "surah": 47,
+      "verse": 17,
+      "themeKey": "guidance",
+      "themeEn": "The guided are given more guidance",
+      "themeUr": "جو راہ پا لیں، انہیں مزید ہدایت ملتی ہے",
+      "themeAr": "والذين اهتدوا زادهم هدى"
+    },
+    {
+      "surah": 54,
+      "verse": 17,
+      "themeKey": "guidance",
+      "themeEn": "We made the Qur'an easy to remember",
+      "themeUr": "ہم نے قرآن کو یاد کرنے کے لیے آسان بنایا",
+      "themeAr": "ولقد يسرنا القرآن للذكر"
+    },
+    {
+      "surah": 4,
+      "verse": 26,
+      "themeKey": "guidance",
+      "themeEn": "He wants to make it clear for you",
+      "themeUr": "وہ تمہارے لیے واضح کرنا چاہتا ہے",
+      "themeAr": "يريد الله ليبين لكم ويهديكم"
+    },
+    {
+      "surah": 92,
+      "verse": 12,
+      "themeKey": "guidance",
+      "themeEn": "The guiding is upon Us",
+      "themeUr": "ہدایت دینا ہمارے ذمے ہے",
+      "themeAr": "إن علينا للهدى"
+    },
+    {
+      "surah": 2,
+      "verse": 148,
+      "themeKey": "striving",
+      "themeEn": "Race toward all that is good",
+      "themeUr": "نیکیوں کی طرف ایک دوسرے سے آگے بڑھو",
+      "themeAr": "فاستبقوا الخيرات"
+    },
+    {
+      "surah": 3,
+      "verse": 104,
+      "themeKey": "striving",
+      "themeEn": "Call others toward what is good",
+      "themeUr": "بھلائی کی طرف بلانے والے بنو",
+      "themeAr": "ولتكن منكم أمة يدعون إلى الخير"
+    },
+    {
+      "surah": 3,
+      "verse": 146,
+      "themeKey": "striving",
+      "themeEn": "They did not weaken, nor did they yield",
+      "themeUr": "نہ وہ کمزور پڑے، نہ جھکے",
+      "themeAr": "فما وهنوا وما استكانوا"
+    },
+    {
+      "surah": 3,
+      "verse": 195,
+      "themeKey": "striving",
+      "themeEn": "No worker's work is ever lost",
+      "themeUr": "کسی محنت کرنے والے کا عمل ضائع نہیں ہوتا",
+      "themeAr": "لا أضيع عمل عامل منكم"
+    },
+    {
+      "surah": 5,
+      "verse": 35,
+      "themeKey": "striving",
+      "themeEn": "Seek the way to Him, and strive",
+      "themeUr": "اس تک پہنچنے کا ذریعہ ڈھونڈو اور کوشش کرو",
+      "themeAr": "وابتغوا إليه الوسيلة وجاهدوا"
+    },
+    {
+      "surah": 6,
+      "verse": 132,
+      "themeKey": "striving",
+      "themeEn": "Ranks are earned by what you do",
+      "themeUr": "درجے اعمال سے بنتے ہیں",
+      "themeAr": "ولكل درجات مما عملوا"
+    },
+    {
+      "surah": 8,
+      "verse": 24,
+      "themeKey": "striving",
+      "themeEn": "Answer the call that gives you life",
+      "themeUr": "جو زندگی بخشے، اس پکار پر لبیک کہو",
+      "themeAr": "استجيبوا لله وللرسول إذا دعاكم لما يحييكم"
+    },
+    {
+      "surah": 9,
+      "verse": 41,
+      "themeKey": "striving",
+      "themeEn": "Set out, light or heavy",
+      "themeUr": "ہلکے ہو یا بوجھل، نکل پڑو",
+      "themeAr": "انفروا خفافا وثقالا"
+    },
+    {
+      "surah": 9,
+      "verse": 105,
+      "themeKey": "striving",
+      "themeEn": "Work, and God will see your work",
+      "themeUr": "عمل کرو، اللہ تمہارا عمل دیکھے گا",
+      "themeAr": "اعملوا فسيرى الله عملكم"
+    },
+    {
+      "surah": 11,
+      "verse": 112,
+      "themeKey": "striving",
+      "themeEn": "Stay steady, as you were told to",
+      "themeUr": "جیسا حکم ملا، اسی پر جمے رہو",
+      "themeAr": "فاستقم كما أمرت"
+    },
+    {
+      "surah": 16,
+      "verse": 128,
+      "themeKey": "striving",
+      "themeEn": "He is with those who do good",
+      "themeUr": "وہ نیکی کرنے والوں کے ساتھ ہے",
+      "themeAr": "إن الله مع الذين اتقوا والذين هم محسنون"
+    },
+    {
+      "surah": 17,
+      "verse": 84,
+      "themeKey": "striving",
+      "themeEn": "Each one works in his own way",
+      "themeUr": "ہر شخص اپنے طریقے پر عمل کرتا ہے",
+      "themeAr": "كل يعمل على شاكلته"
+    },
+    {
+      "surah": 21,
+      "verse": 94,
+      "themeKey": "striving",
+      "themeEn": "No effort is denied, all is recorded",
+      "themeUr": "کوئی کوشش رائیگاں نہیں، سب لکھا جاتا ہے",
+      "themeAr": "فلا كفران لسعيه وإنا له كاتبون"
+    },
+    {
+      "surah": 22,
+      "verse": 78,
+      "themeKey": "striving",
+      "themeEn": "Strive for Him as He deserves",
+      "themeUr": "اللہ کی راہ میں حق کے مطابق کوشش کرو",
+      "themeAr": "وجاهدوا في الله حق جهاده"
+    },
+    {
+      "surah": 29,
+      "verse": 6,
+      "themeKey": "striving",
+      "themeEn": "Whoever strives, strives for his own soul",
+      "themeUr": "جو کوشش کرتا ہے، اپنے ہی بھلے کے لیے",
+      "themeAr": "ومن جاهد فإنما يجاهد لنفسه"
+    },
+    {
+      "surah": 29,
+      "verse": 69,
+      "themeKey": "striving",
+      "themeEn": "Those who strive, He guides",
+      "themeUr": "جو ہماری راہ میں کوشش کرتے ہیں",
+      "themeAr": "والذين جاهدوا فينا لنهدينهم سبلنا"
+    },
+    {
+      "surah": 39,
+      "verse": 2,
+      "themeKey": "striving",
+      "themeEn": "Serve Him with a sincere heart",
+      "themeUr": "خالص ہو کر اس کی بندگی کرو",
+      "themeAr": "فاعبد الله مخلصا له الدين"
+    },
+    {
+      "surah": 47,
+      "verse": 33,
+      "themeKey": "striving",
+      "themeEn": "Do not undo your own deeds",
+      "themeUr": "اپنے اعمال خود ضائع نہ کرو",
+      "themeAr": "ولا تبطلوا أعمالكم"
+    },
+    {
+      "surah": 49,
+      "verse": 15,
+      "themeKey": "striving",
+      "themeEn": "Believed, never doubted, then strove",
+      "themeUr": "ایمان لائے، شک نہ کیا، پھر جدوجہد کی",
+      "themeAr": "آمنوا ثم لم يرتابوا وجاهدوا"
+    },
+    {
+      "surah": 94,
+      "verse": 7,
+      "themeKey": "striving",
+      "themeEn": "When one task ends, begin the next",
+      "themeUr": "ایک کام سے فارغ ہو تو دوسرے میں لگ جاؤ",
+      "themeAr": "فإذا فرغت فانصب"
+    }
+  ]
+}

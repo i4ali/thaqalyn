@@ -3,7 +3,7 @@
 //  Thaqalayn
 //
 //  Horizontal-shelf layout for the Journey hub. Each of the three hub sections
-//  (Sacred Seasons, Deep Dives, Inside the Sūrah) renders as a `JourneyShelf`: a
+//  (Sacred Seasons, Deep Dives, Inside the Surah) renders as a `JourneyShelf`: a
 //  header row (section label + "All N ›") over a horizontally scrolling row of
 //  compact `ShelfCard`s. Available/live items sort to the front and wear the gold
 //  hairline + gold icon tile; upcoming/soon items are muted. Tapping "All N ›"
@@ -33,8 +33,8 @@ enum ShelfStatus {
     case live           // a seasonal journey in season
     case inDays(Int)    // a seasonal journey still ahead this year
     case ended          // a seasonal journey already passed this year
-    case ready          // a built deep dive / sūrah experience the user can open
-    case soon           // a not-yet-built deep dive / sūrah experience
+    case ready          // a built deep dive / surah experience the user can open
+    case soon           // a not-yet-built deep dive / surah experience
     case premium        // built but premium-gated for a non-subscriber (shown as a chip)
 }
 

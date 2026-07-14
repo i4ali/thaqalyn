@@ -634,7 +634,7 @@ struct FatimiyyaObserveButton: View {
             day: FatimiyyaDay(
                 id: "day1",
                 dayNumber: 1,
-                theme: "The Light of az-Zahrā",
+                theme: "The Light of az-Zahra",
                 themeArabic: "نُورُ الزَّهْرَاء",
                 icon: "star.fill",
                 dua: FatimiyyaDua(
@@ -646,8 +646,8 @@ struct FatimiyyaObserveButton: View {
                     sourceUr: nil
                 ),
                 verses: [],
-                tafsirFocus: "Reflecting on the station of Lady Fatimah al-Zahrā (AS) in the Quran.",
-                reflection: "How can we honour the memory of az-Zahrā (AS) in our daily lives?",
+                tafsirFocus: "Reflecting on the station of Lady Fatimah al-Zahra (AS) in the Quran.",
+                reflection: "How can we honour the memory of az-Zahra (AS) in our daily lives?",
                 themeUr: "سیدہ زہراؑ کا نور",
                 tafsirFocusUr: "قرآن میں سیدہ فاطمہ زہراؑ کے مقام پر غور و فکر۔",
                 reflectionUr: "ہم اپنی روزمرہ زندگی میں سیدہ زہراؑ کی یاد کو کیسے زندہ رکھ سکتے ہیں؟"

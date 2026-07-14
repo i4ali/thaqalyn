@@ -1,0 +1,332 @@
+{
+  "verses": [
+    {
+      "surah": 3,
+      "verse": 160,
+      "themeKey": "trust",
+      "themeEn": "None can overcome those He helps",
+      "themeUr": "جسے اللہ کی مدد حاصل ہو، اس پر کوئی غالب نہیں",
+      "themeAr": "إن ينصركم الله فلا غالب لكم"
+    },
+    {
+      "surah": 7,
+      "verse": 196,
+      "themeKey": "trust",
+      "themeEn": "My protector is Allah",
+      "themeUr": "میرا سرپرست اللہ ہے",
+      "themeAr": "إن وليي الله"
+    },
+    {
+      "surah": 8,
+      "verse": 64,
+      "themeKey": "trust",
+      "themeEn": "Allah suffices you and the believers",
+      "themeUr": "اللہ تمہیں اور مومنوں کو کافی ہے",
+      "themeAr": "حسبك الله ومن اتبعك"
+    },
+    {
+      "surah": 9,
+      "verse": 51,
+      "themeKey": "trust",
+      "themeEn": "Nothing befalls us but what He decreed",
+      "themeUr": "ہمیں وہی پہنچتا ہے جو اللہ نے لکھا",
+      "themeAr": "لن يصيبنا إلا ما كتب الله لنا"
+    },
+    {
+      "surah": 10,
+      "verse": 107,
+      "themeKey": "trust",
+      "themeEn": "None can remove harm but Him",
+      "themeUr": "تکلیف کو اس کے سوا کوئی نہیں ہٹا سکتا",
+      "themeAr": "لا كاشف له إلا هو"
+    },
+    {
+      "surah": 11,
+      "verse": 6,
+      "themeKey": "trust",
+      "themeEn": "Every creature's provision is upon Allah",
+      "themeUr": "ہر جاندار کا رزق اللہ کے ذمے ہے",
+      "themeAr": "على الله رزقها"
+    },
+    {
+      "surah": 11,
+      "verse": 123,
+      "themeKey": "trust",
+      "themeEn": "Worship Him and rely on Him",
+      "themeUr": "اسی کی عبادت کرو اور اسی پر بھروسہ رکھو",
+      "themeAr": "فاعبده وتوكل عليه"
+    },
+    {
+      "surah": 14,
+      "verse": 12,
+      "themeKey": "trust",
+      "themeEn": "Why should we not rely on Him?",
+      "themeUr": "ہم اللہ پر بھروسہ کیوں نہ کریں؟",
+      "themeAr": "وما لنا ألا نتوكل على الله"
+    },
+    {
+      "surah": 20,
+      "verse": 46,
+      "themeKey": "trust",
+      "themeEn": "Do not fear, I am with you",
+      "themeUr": "ڈرو مت، میں تمہارے ساتھ ہوں",
+      "themeAr": "إنني معكما أسمع وأرى"
+    },
+    {
+      "surah": 25,
+      "verse": 58,
+      "themeKey": "trust",
+      "themeEn": "Trust the Living who never dies",
+      "themeUr": "اس زندہ پر بھروسہ کرو جو کبھی نہیں مرتا",
+      "themeAr": "وتوكل على الحي الذي لا يموت"
+    },
+    {
+      "surah": 26,
+      "verse": 62,
+      "themeKey": "trust",
+      "themeEn": "My Lord is with me; He will guide",
+      "themeUr": "میرا رب میرے ساتھ ہے، وہ راہ دکھائے گا",
+      "themeAr": "إن معي ربي سيهدين"
+    },
+    {
+      "surah": 27,
+      "verse": 79,
+      "themeKey": "trust",
+      "themeEn": "Rely on Allah, you stand on truth",
+      "themeUr": "اللہ پر بھروسہ کرو، تم حق پر ہو",
+      "themeAr": "فتوكل على الله إنك على الحق المبين"
+    },
+    {
+      "surah": 29,
+      "verse": 60,
+      "themeKey": "trust",
+      "themeEn": "He feeds them, and He feeds you",
+      "themeUr": "وہ انہیں بھی رزق دیتا ہے اور تمہیں بھی",
+      "themeAr": "الله يرزقها وإياكم"
+    },
+    {
+      "surah": 31,
+      "verse": 22,
+      "themeKey": "trust",
+      "themeEn": "Every outcome returns to Allah",
+      "themeUr": "ہر معاملے کا انجام اللہ کی طرف ہے",
+      "themeAr": "وإلى الله عاقبة الأمور"
+    },
+    {
+      "surah": 33,
+      "verse": 3,
+      "themeKey": "trust",
+      "themeEn": "Rely on Allah; He is enough",
+      "themeUr": "اللہ پر بھروسہ کرو، وہی کافی ہے",
+      "themeAr": "وتوكل على الله"
+    },
+    {
+      "surah": 40,
+      "verse": 44,
+      "themeKey": "trust",
+      "themeEn": "I entrust my affair to Allah",
+      "themeUr": "میں اپنا معاملہ اللہ کے سپرد کرتا ہوں",
+      "themeAr": "أفوض أمري إلى الله"
+    },
+    {
+      "surah": 41,
+      "verse": 30,
+      "themeKey": "trust",
+      "themeEn": "Stand firm; do not fear or grieve",
+      "themeUr": "ثابت قدم رہو، نہ ڈرو نہ غم کرو",
+      "themeAr": "ألا تخافوا ولا تحزنوا"
+    },
+    {
+      "surah": 51,
+      "verse": 58,
+      "themeKey": "trust",
+      "themeEn": "Allah is the Provider, the Strong",
+      "themeUr": "اللہ ہی رزق دینے والا، قوت والا ہے",
+      "themeAr": "الله هو الرزاق ذو القوة"
+    },
+    {
+      "surah": 64,
+      "verse": 11,
+      "themeKey": "trust",
+      "themeEn": "Believe, and He will guide your heart",
+      "themeUr": "ایمان لاؤ، وہ دل کو ہدایت دے گا",
+      "themeAr": "ومن يؤمن بالله يهد قلبه"
+    },
+    {
+      "surah": 65,
+      "verse": 3,
+      "themeKey": "trust",
+      "themeEn": "Provision from where you least expect",
+      "themeUr": "رزق وہاں سے جہاں گمان بھی نہ ہو",
+      "themeAr": "ويرزقه من حيث لا يحتسب"
+    },
+    {
+      "surah": 73,
+      "verse": 9,
+      "themeKey": "trust",
+      "themeEn": "Put your affairs in His hands",
+      "themeUr": "اپنے کام اسی کے سپرد کر دو",
+      "themeAr": "فاتخذه وكيلا"
+    },
+    {
+      "surah": 2,
+      "verse": 37,
+      "themeKey": "repentance",
+      "themeEn": "Adam was taught the words of return",
+      "themeUr": "آدم کو لوٹنے کے کلمات سکھائے گئے",
+      "themeAr": "فتلقى آدم من ربه كلمات"
+    },
+    {
+      "surah": 3,
+      "verse": 133,
+      "themeKey": "repentance",
+      "themeEn": "Hurry toward His forgiveness",
+      "themeUr": "اپنے رب کی مغفرت کی طرف دوڑو",
+      "themeAr": "وسارعوا إلى مغفرة من ربكم"
+    },
+    {
+      "surah": 4,
+      "verse": 27,
+      "themeKey": "repentance",
+      "themeEn": "He wants to accept your return",
+      "themeUr": "وہ تمہاری توبہ قبول کرنا چاہتا ہے",
+      "themeAr": "والله يريد أن يتوب عليكم"
+    },
+    {
+      "surah": 4,
+      "verse": 106,
+      "themeKey": "repentance",
+      "themeEn": "Ask forgiveness, He is always forgiving",
+      "themeUr": "اللہ سے بخشش مانگو، وہ بخشنے والا ہے",
+      "themeAr": "واستغفر الله"
+    },
+    {
+      "surah": 5,
+      "verse": 39,
+      "themeKey": "repentance",
+      "themeEn": "Repent and set it right",
+      "themeUr": "توبہ کرو اور اصلاح کر لو",
+      "themeAr": "فمن تاب من بعد ظلمه وأصلح"
+    },
+    {
+      "surah": 7,
+      "verse": 23,
+      "themeKey": "repentance",
+      "themeEn": "Our Lord, we have wronged ourselves",
+      "themeUr": "اے ہمارے رب، ہم نے اپنے اوپر ظلم کیا",
+      "themeAr": "ربنا ظلمنا أنفسنا"
+    },
+    {
+      "surah": 9,
+      "verse": 104,
+      "themeKey": "repentance",
+      "themeEn": "He accepts repentance from His servants",
+      "themeUr": "وہی اپنے بندوں کی توبہ قبول کرتا ہے",
+      "themeAr": "يقبل التوبة عن عباده"
+    },
+    {
+      "surah": 11,
+      "verse": 61,
+      "themeKey": "repentance",
+      "themeEn": "My Lord is near and answers",
+      "themeUr": "میرا رب قریب ہے، دعا سنتا ہے",
+      "themeAr": "إن ربي قريب مجيب"
+    },
+    {
+      "surah": 12,
+      "verse": 53,
+      "themeKey": "repentance",
+      "themeEn": "The soul urges wrong; He is forgiving",
+      "themeUr": "نفس برائی پر اکساتا ہے، وہ بخشنے والا ہے",
+      "themeAr": "إن النفس لأمارة بالسوء"
+    },
+    {
+      "surah": 12,
+      "verse": 92,
+      "themeKey": "repentance",
+      "themeEn": "No blame on you today",
+      "themeUr": "آج تم پر کوئی ملامت نہیں",
+      "themeAr": "لا تثريب عليكم اليوم"
+    },
+    {
+      "surah": 14,
+      "verse": 41,
+      "themeKey": "repentance",
+      "themeEn": "Forgive me, my parents, and the believers",
+      "themeUr": "مجھے، میرے والدین اور مومنوں کو بخش دے",
+      "themeAr": "ربنا اغفر لي ولوالدي وللمؤمنين"
+    },
+    {
+      "surah": 17,
+      "verse": 25,
+      "themeKey": "repentance",
+      "themeEn": "Forgiving to those who keep returning",
+      "themeUr": "بار بار لوٹنے والوں کو بخشنے والا",
+      "themeAr": "إنه كان للأوابين غفورا"
+    },
+    {
+      "surah": 21,
+      "verse": 87,
+      "themeKey": "repentance",
+      "themeEn": "A call from inside the darkness",
+      "themeUr": "اندھیروں میں سے ایک پکار",
+      "themeAr": "فنادى في الظلمات"
+    },
+    {
+      "surah": 23,
+      "verse": 118,
+      "themeKey": "repentance",
+      "themeEn": "My Lord, forgive and have mercy",
+      "themeUr": "اے میرے رب، بخش دے اور رحم فرما",
+      "themeAr": "رب اغفر وارحم"
+    },
+    {
+      "surah": 25,
+      "verse": 71,
+      "themeKey": "repentance",
+      "themeEn": "Repent, then live it out",
+      "themeUr": "توبہ کرو اور نیک عمل کرو",
+      "themeAr": "ومن تاب وعمل صالحا"
+    },
+    {
+      "surah": 28,
+      "verse": 67,
+      "themeKey": "repentance",
+      "themeEn": "The one who returns will succeed",
+      "themeUr": "جو لوٹ آئے وہ کامیاب ہوگا",
+      "themeAr": "فأما من تاب وآمن وعمل صالحا"
+    },
+    {
+      "surah": 42,
+      "verse": 25,
+      "themeKey": "repentance",
+      "themeEn": "He pardons what you have done",
+      "themeUr": "وہ برائیوں کو معاف کر دیتا ہے",
+      "themeAr": "ويعفو عن السيئات"
+    },
+    {
+      "surah": 47,
+      "verse": 19,
+      "themeKey": "repentance",
+      "themeEn": "Ask forgiveness for yourself and others",
+      "themeUr": "اپنے لیے اور مومنوں کے لیے بخشش مانگو",
+      "themeAr": "واستغفر لذنبك وللمؤمنين والمؤمنات"
+    },
+    {
+      "surah": 66,
+      "verse": 8,
+      "themeKey": "repentance",
+      "themeEn": "Repent with a sincere heart",
+      "themeUr": "سچے دل سے توبہ کرو",
+      "themeAr": "توبوا إلى الله توبة نصوحا"
+    },
+    {
+      "surah": 110,
+      "verse": 3,
+      "themeKey": "repentance",
+      "themeEn": "Praise Him and ask His pardon",
+      "themeUr": "اس کی حمد کرو اور مغفرت مانگو",
+      "themeAr": "فسبح بحمد ربك واستغفره"
+    }
+  ]
+}

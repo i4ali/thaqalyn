@@ -1,0 +1,340 @@
+{
+  "verses": [
+    {
+      "surah": 2,
+      "verse": 115,
+      "themeKey": "tawhid",
+      "themeEn": "Wherever you turn, His face",
+      "themeUr": "جدھر بھی رخ کرو، وہیں اللہ ہے",
+      "themeAr": "أينما تولوا فثم وجه الله"
+    },
+    {
+      "surah": 2,
+      "verse": 255,
+      "themeKey": "tawhid",
+      "themeEn": "Neither drowsiness nor sleep",
+      "themeUr": "نہ اونگھ آتی ہے، نہ نیند",
+      "themeAr": "لا تأخذه سنة ولا نوم"
+    },
+    {
+      "surah": 3,
+      "verse": 18,
+      "themeKey": "tawhid",
+      "themeEn": "God Himself bears witness",
+      "themeUr": "خود اللہ گواہی دیتا ہے",
+      "themeAr": "شهد الله أنه لا إله إلا هو"
+    },
+    {
+      "surah": 3,
+      "verse": 26,
+      "themeKey": "tawhid",
+      "themeEn": "In Your hand is all good",
+      "themeUr": "تیرے ہی ہاتھ میں ہر بھلائی ہے",
+      "themeAr": "بيدك الخير"
+    },
+    {
+      "surah": 3,
+      "verse": 31,
+      "themeKey": "mercy",
+      "themeEn": "He will love you and forgive you",
+      "themeUr": "وہ تم سے محبت کرے گا اور بخش دے گا",
+      "themeAr": "يحببكم الله ويغفر لكم"
+    },
+    {
+      "surah": 4,
+      "verse": 28,
+      "themeKey": "mercy",
+      "themeEn": "He wants to lighten your burden",
+      "themeUr": "وہ تمہارا بوجھ ہلکا کرنا چاہتا ہے",
+      "themeAr": "يريد الله أن يخفف عنكم"
+    },
+    {
+      "surah": 4,
+      "verse": 110,
+      "themeKey": "mercy",
+      "themeEn": "Ask, and you will find Him forgiving",
+      "themeUr": "بخشش مانگو، اسے بخشنے والا پاؤ گے",
+      "themeAr": "يجد الله غفورا رحيما"
+    },
+    {
+      "surah": 6,
+      "verse": 54,
+      "themeKey": "mercy",
+      "themeEn": "He has written mercy upon Himself",
+      "themeUr": "اس نے رحمت کو اپنے اوپر لازم کر لیا",
+      "themeAr": "كتب على نفسه الرحمة"
+    },
+    {
+      "surah": 6,
+      "verse": 59,
+      "themeKey": "tawhid",
+      "themeEn": "Not a leaf falls unknown to Him",
+      "themeUr": "کوئی پتہ اس کے علم کے بغیر نہیں گرتا",
+      "themeAr": "ما تسقط من ورقة إلا يعلمها"
+    },
+    {
+      "surah": 6,
+      "verse": 103,
+      "themeKey": "tawhid",
+      "themeEn": "No vision can grasp Him",
+      "themeUr": "نگاہیں اس کا ادراک نہیں کر سکتیں",
+      "themeAr": "لا تدركه الأبصار"
+    },
+    {
+      "surah": 7,
+      "verse": 56,
+      "themeKey": "mercy",
+      "themeEn": "Near to those who do good",
+      "themeUr": "اللہ کی رحمت نیکوکاروں کے قریب ہے",
+      "themeAr": "رحمة الله قريب من المحسنين"
+    },
+    {
+      "surah": 8,
+      "verse": 29,
+      "themeKey": "mercy",
+      "themeEn": "He erases your wrongs and forgives",
+      "themeUr": "وہ تمہاری خطائیں مٹا کر بخش دے گا",
+      "themeAr": "يكفر عنكم سيئاتكم ويغفر لكم"
+    },
+    {
+      "surah": 9,
+      "verse": 128,
+      "themeKey": "mercy",
+      "themeEn": "A Messenger kind and merciful to you",
+      "themeUr": "ایک نرم دل اور مہربان رسول",
+      "themeAr": "بالمؤمنين رؤوف رحيم"
+    },
+    {
+      "surah": 10,
+      "verse": 57,
+      "themeKey": "mercy",
+      "themeEn": "A healing for the heart",
+      "themeUr": "دلوں کے لیے شفا اور رحمت",
+      "themeAr": "شفاء لما في الصدور"
+    },
+    {
+      "surah": 11,
+      "verse": 90,
+      "themeKey": "mercy",
+      "themeEn": "My Lord is Merciful and Loving",
+      "themeUr": "میرا رب مہربان اور محبت کرنے والا ہے",
+      "themeAr": "إن ربي رحيم ودود"
+    },
+    {
+      "surah": 13,
+      "verse": 15,
+      "themeKey": "tawhid",
+      "themeEn": "Even the shadows bow to Him",
+      "themeUr": "سائے بھی اسے سجدہ کرتے ہیں",
+      "themeAr": "وظلالهم تسجد له"
+    },
+    {
+      "surah": 15,
+      "verse": 49,
+      "themeKey": "mercy",
+      "themeEn": "Tell My servants I am the Forgiving",
+      "themeUr": "میرے بندوں کو بتا دو، میں بخشنے والا ہوں",
+      "themeAr": "أني أنا الغفور الرحيم"
+    },
+    {
+      "surah": 16,
+      "verse": 18,
+      "themeKey": "mercy",
+      "themeEn": "His favors beyond counting",
+      "themeUr": "اس کی نعمتیں گنی نہیں جا سکتیں",
+      "themeAr": "وإن تعدوا نعمة الله لا تحصوها"
+    },
+    {
+      "surah": 19,
+      "verse": 96,
+      "themeKey": "mercy",
+      "themeEn": "The Merciful will grant them love",
+      "themeUr": "رحمٰن ان کے لیے محبت پیدا کرے گا",
+      "themeAr": "سيجعل لهم الرحمن ودا"
+    },
+    {
+      "surah": 20,
+      "verse": 8,
+      "themeKey": "tawhid",
+      "themeEn": "To Him belong the most beautiful names",
+      "themeUr": "اسی کے لیے سب اچھے نام ہیں",
+      "themeAr": "له الأسماء الحسنى"
+    },
+    {
+      "surah": 20,
+      "verse": 82,
+      "themeKey": "mercy",
+      "themeEn": "Endlessly forgiving to whoever turns back",
+      "themeUr": "جو توبہ کرے، اس کے لیے بہت بخشنے والا",
+      "themeAr": "وإني لغفار لمن تاب"
+    },
+    {
+      "surah": 21,
+      "verse": 83,
+      "themeKey": "mercy",
+      "themeEn": "Most Merciful of the merciful",
+      "themeUr": "تو سب رحم کرنے والوں سے بڑھ کر رحیم ہے",
+      "themeAr": "أنت أرحم الراحمين"
+    },
+    {
+      "surah": 24,
+      "verse": 35,
+      "themeKey": "tawhid",
+      "themeEn": "Light of the heavens and the earth",
+      "themeUr": "آسمانوں اور زمین کا نور",
+      "themeAr": "الله نور السماوات والأرض"
+    },
+    {
+      "surah": 28,
+      "verse": 16,
+      "themeKey": "mercy",
+      "themeEn": "He asked forgiveness and was forgiven",
+      "themeUr": "اس نے بخشش مانگی اور بخش دیا گیا",
+      "themeAr": "فاغفر لي فغفر له"
+    },
+    {
+      "surah": 30,
+      "verse": 50,
+      "themeKey": "mercy",
+      "themeEn": "He revives the earth after its death",
+      "themeUr": "وہ مردہ زمین کو زندہ کرتا ہے",
+      "themeAr": "يحيي الأرض بعد موتها"
+    },
+    {
+      "surah": 31,
+      "verse": 27,
+      "themeKey": "tawhid",
+      "themeEn": "His words would never run out",
+      "themeUr": "اس کے کلمات کبھی ختم نہ ہوں",
+      "themeAr": "ما نفدت كلمات الله"
+    },
+    {
+      "surah": 33,
+      "verse": 43,
+      "themeKey": "mercy",
+      "themeEn": "He brings you out into the light",
+      "themeUr": "وہ تمہیں اندھیروں سے نور کی طرف لاتا ہے",
+      "themeAr": "يخرجكم من الظلمات إلى النور"
+    },
+    {
+      "surah": 35,
+      "verse": 2,
+      "themeKey": "mercy",
+      "themeEn": "No one can withhold His mercy",
+      "themeUr": "اس کی رحمت کو کوئی روک نہیں سکتا",
+      "themeAr": "لا ممسك لرحمته"
+    },
+    {
+      "surah": 35,
+      "verse": 15,
+      "themeKey": "tawhid",
+      "themeEn": "You are the ones in need",
+      "themeUr": "تم سب اس کے محتاج ہو",
+      "themeAr": "أنتم الفقراء إلى الله"
+    },
+    {
+      "surah": 39,
+      "verse": 53,
+      "themeKey": "mercy",
+      "themeEn": "Do not despair of His mercy",
+      "themeUr": "اللہ کی رحمت سے مایوس نہ ہو",
+      "themeAr": "لا تقنطوا من رحمة الله"
+    },
+    {
+      "surah": 40,
+      "verse": 65,
+      "themeKey": "tawhid",
+      "themeEn": "The Ever-Living, so call upon Him",
+      "themeUr": "وہ ہمیشہ زندہ ہے، اسی کو پکارو",
+      "themeAr": "هو الحي فادعوه"
+    },
+    {
+      "surah": 42,
+      "verse": 11,
+      "themeKey": "tawhid",
+      "themeEn": "There is nothing like Him",
+      "themeUr": "اس جیسا کوئی نہیں",
+      "themeAr": "ليس كمثله شيء"
+    },
+    {
+      "surah": 42,
+      "verse": 19,
+      "themeKey": "mercy",
+      "themeEn": "Gentle with His servants",
+      "themeUr": "وہ اپنے بندوں پر نہایت مہربان ہے",
+      "themeAr": "الله لطيف بعباده"
+    },
+    {
+      "surah": 50,
+      "verse": 16,
+      "themeKey": "tawhid",
+      "themeEn": "Closer than your jugular vein",
+      "themeUr": "شہ رگ سے بھی زیادہ قریب",
+      "themeAr": "أقرب من حبل الوريد"
+    },
+    {
+      "surah": 51,
+      "verse": 56,
+      "themeKey": "tawhid",
+      "themeEn": "Created to worship Him alone",
+      "themeUr": "صرف اسی کی عبادت کے لیے پیدا کیے گئے",
+      "themeAr": "خلقوا لعبادته وحده"
+    },
+    {
+      "surah": 55,
+      "verse": 29,
+      "themeKey": "tawhid",
+      "themeEn": "Every day He is at work",
+      "themeUr": "ہر روز وہ نئی شان میں ہے",
+      "themeAr": "كل يوم هو في شأن"
+    },
+    {
+      "surah": 57,
+      "verse": 3,
+      "themeKey": "tawhid",
+      "themeEn": "The First and the Last",
+      "themeUr": "وہی اول ہے، وہی آخر",
+      "themeAr": "هو الأول والآخر"
+    },
+    {
+      "surah": 59,
+      "verse": 22,
+      "themeKey": "tawhid",
+      "themeEn": "Knower of the unseen and the seen",
+      "themeUr": "غیب اور حاضر، سب کا جاننے والا",
+      "themeAr": "عالم الغيب والشهادة"
+    },
+    {
+      "surah": 59,
+      "verse": 23,
+      "themeKey": "tawhid",
+      "themeEn": "Sovereign, Holy, Source of peace",
+      "themeUr": "بادشاہ، نہایت پاک، سلامتی والا",
+      "themeAr": "الملك القدوس السلام"
+    },
+    {
+      "surah": 67,
+      "verse": 1,
+      "themeKey": "tawhid",
+      "themeEn": "In His hand is all dominion",
+      "themeUr": "ساری بادشاہی اسی کے ہاتھ میں ہے",
+      "themeAr": "بيده الملك"
+    },
+    {
+      "surah": 93,
+      "verse": 3,
+      "themeKey": "mercy",
+      "themeEn": "Your Lord has not forsaken you",
+      "themeUr": "تمہارے رب نے تمہیں نہیں چھوڑا",
+      "themeAr": "ما ودعك ربك وما قلى"
+    },
+    {
+      "surah": 112,
+      "verse": 1,
+      "themeKey": "tawhid",
+      "themeEn": "Say: He is God, the One",
+      "themeUr": "کہو: وہ اللہ ایک ہے",
+      "themeAr": "قل هو الله أحد"
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "verses": [
+    {
+      "surah": 2,
+      "verse": 261,
+      "themeKey": "charity",
+      "themeEn": "One seed, seven ears, a hundred grains",
+      "themeUr": "ایک دانہ، سات بالیں، ہر بالی میں سو دانے",
+      "themeAr": "كمثل حبة أنبتت سبع سنابل"
+    },
+    {
+      "surah": 2,
+      "verse": 263,
+      "themeKey": "charity",
+      "themeEn": "A kind word beats a charity followed by hurt",
+      "themeUr": "اچھی بات دکھ دینے والے صدقے سے بہتر ہے",
+      "themeAr": "قول معروف ومغفرة خير من صدقة يتبعها أذى"
+    },
+    {
+      "surah": 3,
+      "verse": 92,
+      "themeKey": "charity",
+      "themeEn": "You reach it only by giving what you love",
+      "themeUr": "جو تمہیں محبوب ہے، اسے دیے بغیر نیکی نہیں ملتی",
+      "themeAr": "لن تنالوا البر حتى تنفقوا مما تحبون"
+    },
+    {
+      "surah": 3,
+      "verse": 159,
+      "themeKey": "character",
+      "themeEn": "By God's mercy you were gentle with them",
+      "themeUr": "اللہ کی رحمت سے آپ ان کے لیے نرم دل ہوئے",
+      "themeAr": "فبما رحمة من الله لنت لهم"
+    },
+    {
+      "surah": 4,
+      "verse": 36,
+      "themeKey": "charity",
+      "themeEn": "The near neighbor, the far neighbor, the traveler",
+      "themeUr": "قریب کا پڑوسی، دور کا پڑوسی، مسافر",
+      "themeAr": "والجار ذي القربى والجار الجنب"
+    },
+    {
+      "surah": 4,
+      "verse": 86,
+      "themeKey": "character",
+      "themeEn": "Answer a greeting with a better one",
+      "themeUr": "سلام کا جواب اس سے بہتر دو",
+      "themeAr": "فحيوا بأحسن منها أو ردوها"
+    },
+    {
+      "surah": 4,
+      "verse": 149,
+      "themeKey": "character",
+      "themeEn": "Pardon an offense, and God is All-Pardoning",
+      "themeUr": "کسی کی خطا معاف کرو، اللہ بہت معاف کرنے والا ہے",
+      "themeAr": "أو تعفوا عن سوء فإن الله كان عفوا قديرا"
+    },
+    {
+      "surah": 7,
+      "verse": 199,
+      "themeKey": "character",
+      "themeEn": "Take what comes easily, turn from the ignorant",
+      "themeUr": "درگزر کرو، بھلائی کا حکم دو، جاہلوں سے کنارہ کرو",
+      "themeAr": "خذ العفو وأمر بالعرف وأعرض عن الجاهلين"
+    },
+    {
+      "surah": 9,
+      "verse": 103,
+      "themeKey": "charity",
+      "themeEn": "Charity that purifies and makes you grow",
+      "themeUr": "صدقہ جو پاک کرتا اور بڑھاتا ہے",
+      "themeAr": "خذ من أموالهم صدقة تطهرهم وتزكيهم بها"
+    },
+    {
+      "surah": 9,
+      "verse": 119,
+      "themeKey": "character",
+      "themeEn": "Keep the company of the truthful",
+      "themeUr": "سچے لوگوں کا ساتھ اختیار کرو",
+      "themeAr": "اتقوا الله وكونوا مع الصادقين"
+    },
+    {
+      "surah": 14,
+      "verse": 31,
+      "themeKey": "charity",
+      "themeEn": "Give before the day of no bargaining",
+      "themeUr": "اس دن سے پہلے دو جب کوئی سودا نہ چلے گا",
+      "themeAr": "من قبل أن يأتي يوم لا بيع فيه ولا خلال"
+    },
+    {
+      "surah": 16,
+      "verse": 91,
+      "themeKey": "character",
+      "themeEn": "Keep the promise once you have made it",
+      "themeUr": "جو عہد کیا ہے، اسے پورا کرو",
+      "themeAr": "وأوفوا بعهد الله إذا عاهدتم"
+    },
+    {
+      "surah": 16,
+      "verse": 125,
+      "themeKey": "character",
+      "themeEn": "Invite with wisdom, argue with beauty",
+      "themeUr": "حکمت اور اچھی نصیحت سے بلاؤ",
+      "themeAr": "ادع إلى سبيل ربك بالحكمة والموعظة الحسنة"
+    },
+    {
+      "surah": 17,
+      "verse": 28,
+      "themeKey": "charity",
+      "themeEn": "Nothing to give? Then give a gentle word",
+      "themeUr": "کچھ نہ ہو تو نرم بات ہی کہہ دو",
+      "themeAr": "فقل لهم قولا ميسورا"
+    },
+    {
+      "surah": 17,
+      "verse": 29,
+      "themeKey": "charity",
+      "themeEn": "Neither a chained hand nor an empty one",
+      "themeUr": "نہ ہاتھ باندھ رکھو، نہ سب کچھ لٹا دو",
+      "themeAr": "ولا تجعل يدك مغلولة إلى عنقك"
+    },
+    {
+      "surah": 17,
+      "verse": 37,
+      "themeKey": "character",
+      "themeEn": "You will never tear the earth apart",
+      "themeUr": "تم نہ زمین کو پھاڑ سکتے ہو، نہ پہاڑوں تک پہنچ سکتے ہو",
+      "themeAr": "إنك لن تخرق الأرض ولن تبلغ الجبال طولا"
+    },
+    {
+      "surah": 24,
+      "verse": 27,
+      "themeKey": "character",
+      "themeEn": "Ask permission, greet, then enter",
+      "themeUr": "اجازت لو، سلام کرو، پھر گھر میں داخل ہو",
+      "themeAr": "حتى تستأنسوا وتسلموا على أهلها"
+    },
+    {
+      "surah": 25,
+      "verse": 63,
+      "themeKey": "character",
+      "themeEn": "They walk gently and answer with peace",
+      "themeUr": "نرمی سے چلتے ہیں، جواب میں سلام کہتے ہیں",
+      "themeAr": "يمشون على الأرض هونا"
+    },
+    {
+      "surah": 29,
+      "verse": 46,
+      "themeKey": "character",
+      "themeEn": "Our God and your God is one",
+      "themeUr": "ہمارا معبود اور تمہارا معبود ایک ہے",
+      "themeAr": "وإلهنا وإلهكم واحد"
+    },
+    {
+      "surah": 30,
+      "verse": 38,
+      "themeKey": "charity",
+      "themeEn": "Give the relative his due",
+      "themeUr": "رشتہ دار کا حق ادا کرو",
+      "themeAr": "فآت ذا القربى حقه"
+    },
+    {
+      "surah": 30,
+      "verse": 39,
+      "themeKey": "charity",
+      "themeEn": "Only what you give for God's sake grows",
+      "themeUr": "اللہ کے ہاں وہی بڑھتا ہے جو اس کی رضا کے لیے دیا جائے",
+      "themeAr": "وما آتيتم من زكاة تريدون وجه الله"
+    },
+    {
+      "surah": 31,
+      "verse": 18,
+      "themeKey": "character",
+      "themeEn": "Do not turn your cheek away from people",
+      "themeUr": "لوگوں سے منہ پھیر کر بات نہ کرو",
+      "themeAr": "ولا تصعر خدك للناس"
+    },
+    {
+      "surah": 33,
+      "verse": 21,
+      "themeKey": "character",
+      "themeEn": "A beautiful example to follow",
+      "themeUr": "رسول اللہ کی ذات میں بہترین نمونہ ہے",
+      "themeAr": "لقد كان لكم في رسول الله أسوة حسنة"
+    },
+    {
+      "surah": 34,
+      "verse": 39,
+      "themeKey": "charity",
+      "themeEn": "Whatever you spend, He replaces",
+      "themeUr": "جو کچھ خرچ کرو گے، وہ اس کا بدل دے گا",
+      "themeAr": "وما أنفقتم من شيء فهو يخلفه"
+    },
+    {
+      "surah": 35,
+      "verse": 29,
+      "themeKey": "charity",
+      "themeEn": "A trade that will never go under",
+      "themeUr": "ایسی تجارت جس میں کبھی خسارہ نہیں",
+      "themeAr": "يرجون تجارة لن تبور"
+    },
+    {
+      "surah": 41,
+      "verse": 33,
+      "themeKey": "character",
+      "themeEn": "No speech is better than calling to God",
+      "themeUr": "اللہ کی طرف بلانے سے بہتر کوئی بات نہیں",
+      "themeAr": "ومن أحسن قولا ممن دعا إلى الله"
+    },
+    {
+      "surah": 41,
+      "verse": 34,
+      "themeKey": "character",
+      "themeEn": "Answer evil with better, and enmity melts",
+      "themeUr": "برائی کا جواب بھلائی سے دو، دشمنی دوستی بن جائے گی",
+      "themeAr": "ادفع بالتي هي أحسن"
+    },
+    {
+      "surah": 49,
+      "verse": 10,
+      "themeKey": "character",
+      "themeEn": "The believers are brothers, so mend it",
+      "themeUr": "مومن آپس میں بھائی ہیں، ان میں صلح کراؤ",
+      "themeAr": "إنما المؤمنون إخوة"
+    },
+    {
+      "surah": 49,
+      "verse": 11,
+      "themeKey": "character",
+      "themeEn": "Do not mock, do not hand out nicknames",
+      "themeUr": "کسی کا مذاق نہ اڑاؤ، برے نام نہ رکھو",
+      "themeAr": "لا يسخر قوم من قوم ولا تنابزوا بالألقاب"
+    },
+    {
+      "surah": 49,
+      "verse": 12,
+      "themeKey": "character",
+      "themeEn": "Do not spy, do not backbite",
+      "themeUr": "نہ ٹوہ لگاؤ، نہ ایک دوسرے کی غیبت کرو",
+      "themeAr": "ولا تجسسوا ولا يغتب بعضكم بعضا"
+    },
+    {
+      "surah": 50,
+      "verse": 18,
+      "themeKey": "character",
+      "themeEn": "Not a word without a watcher",
+      "themeUr": "کوئی بات ایسی نہیں جو لکھی نہ جائے",
+      "themeAr": "ما يلفظ من قول إلا لديه رقيب عتيد"
+    },
+    {
+      "surah": 57,
+      "verse": 7,
+      "themeKey": "charity",
+      "themeEn": "You are only trustees of what you hold",
+      "themeUr": "جو مال ہے، اس میں تم صرف امانت دار ہو",
+      "themeAr": "وأنفقوا مما جعلكم مستخلفين فيه"
+    },
+    {
+      "surah": 57,
+      "verse": 11,
+      "themeKey": "charity",
+      "themeEn": "Who will lend to God a beautiful loan?",
+      "themeUr": "کون ہے جو اللہ کو قرضِ حسنہ دے؟",
+      "themeAr": "من ذا الذي يقرض الله قرضا حسنا"
+    },
+    {
+      "surah": 57,
+      "verse": 18,
+      "themeKey": "charity",
+      "themeEn": "The men and the women who give",
+      "themeUr": "صدقہ دینے والے مرد اور صدقہ دینے والی عورتیں",
+      "themeAr": "إن المصدقين والمصدقات"
+    },
+    {
+      "surah": 64,
+      "verse": 16,
+      "themeKey": "charity",
+      "themeEn": "Whoever is saved from his own greed",
+      "themeUr": "جو اپنے نفس کے لالچ سے بچا لیا گیا",
+      "themeAr": "ومن يوق شح نفسه فأولئك هم المفلحون"
+    },
+    {
+      "surah": 64,
+      "verse": 17,
+      "themeKey": "charity",
+      "themeEn": "He multiplies it, and forgives you too",
+      "themeUr": "وہ بڑھا بھی دے گا اور بخش بھی دے گا",
+      "themeAr": "يضاعفه لكم ويغفر لكم"
+    },
+    {
+      "surah": 65,
+      "verse": 7,
+      "themeKey": "charity",
+      "themeEn": "Give out of what God has given you",
+      "themeUr": "جو اللہ نے دیا ہے، اسی میں سے خرچ کرو",
+      "themeAr": "لينفق ذو سعة من سعته"
+    },
+    {
+      "surah": 68,
+      "verse": 4,
+      "themeKey": "character",
+      "themeEn": "You are of a great character",
+      "themeUr": "آپ عظیم اخلاق پر فائز ہیں",
+      "themeAr": "وإنك لعلى خلق عظيم"
+    },
+    {
+      "surah": 93,
+      "verse": 9,
+      "themeKey": "charity",
+      "themeEn": "Do not crush the orphan",
+      "themeUr": "یتیم پر سختی نہ کرو",
+      "themeAr": "فأما اليتيم فلا تقهر"
+    },
+    {
+      "surah": 93,
+      "verse": 10,
+      "themeKey": "charity",
+      "themeEn": "Do not turn away the one who asks",
+      "themeUr": "مانگنے والے کو نہ جھڑکو",
+      "themeAr": "وأما السائل فلا تنهر"
+    }
+  ]
+}

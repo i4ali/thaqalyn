@@ -1,0 +1,324 @@
+{
+  "verses": [
+    {
+      "surah": 2,
+      "verse": 164,
+      "themeKey": "creation",
+      "themeEn": "Everything around you speaks",
+      "themeUr": "ہر چیز گواہی دیتی ہے",
+      "themeAr": "آيات لقوم يعقلون"
+    },
+    {
+      "surah": 6,
+      "verse": 99,
+      "themeKey": "creation",
+      "themeEn": "Look at the fruit ripening",
+      "themeUr": "پھل کو پکتے ہوئے دیکھو",
+      "themeAr": "انظروا إلى ثمره إذا أثمر"
+    },
+    {
+      "surah": 7,
+      "verse": 54,
+      "themeKey": "creation",
+      "themeEn": "Night chasing the day",
+      "themeUr": "رات دن کا پیچھا کرتی ہے",
+      "themeAr": "يغشي الليل النهار يطلبه حثيثا"
+    },
+    {
+      "surah": 13,
+      "verse": 4,
+      "themeKey": "creation",
+      "themeEn": "One water, many fruits",
+      "themeUr": "ایک ہی پانی، مختلف پھل",
+      "themeAr": "يسقى بماء واحد"
+    },
+    {
+      "surah": 15,
+      "verse": 19,
+      "themeKey": "creation",
+      "themeEn": "Everything grown in balance",
+      "themeUr": "ہر چیز ٹھیک اندازے سے اگائی",
+      "themeAr": "من كل شيء موزون"
+    },
+    {
+      "surah": 15,
+      "verse": 22,
+      "themeKey": "creation",
+      "themeEn": "The winds that carry rain",
+      "themeUr": "بارش لانے والی ہوائیں",
+      "themeAr": "وأرسلنا الرياح لواقح"
+    },
+    {
+      "surah": 16,
+      "verse": 79,
+      "themeKey": "creation",
+      "themeEn": "Who holds the birds up",
+      "themeUr": "پرندوں کو کون تھامے ہوئے ہے",
+      "themeAr": "ما يمسكهن إلا الله"
+    },
+    {
+      "surah": 17,
+      "verse": 12,
+      "themeKey": "creation",
+      "themeEn": "Night and day, two signs",
+      "themeUr": "رات اور دن، دو نشانیاں",
+      "themeAr": "وجعلنا الليل والنهار آيتين"
+    },
+    {
+      "surah": 21,
+      "verse": 33,
+      "themeKey": "creation",
+      "themeEn": "Each one swimming in orbit",
+      "themeUr": "ہر ایک اپنے مدار میں تیر رہا ہے",
+      "themeAr": "كل في فلك يسبحون"
+    },
+    {
+      "surah": 24,
+      "verse": 45,
+      "themeKey": "creation",
+      "themeEn": "Every living thing from water",
+      "themeUr": "ہر جاندار پانی سے",
+      "themeAr": "خلق كل دابة من ماء"
+    },
+    {
+      "surah": 25,
+      "verse": 47,
+      "themeKey": "creation",
+      "themeEn": "Sleep, then a new rising",
+      "themeUr": "نیند آرام، اور دن نئی زندگی",
+      "themeAr": "وجعل النهار نشورا"
+    },
+    {
+      "surah": 25,
+      "verse": 53,
+      "themeKey": "creation",
+      "themeEn": "The barrier between two seas",
+      "themeUr": "دو سمندروں کے درمیان پردہ",
+      "themeAr": "وجعل بينهما برزخا"
+    },
+    {
+      "surah": 25,
+      "verse": 61,
+      "themeKey": "creation",
+      "themeEn": "Stars and a shining moon",
+      "themeUr": "ستارے اور روشن چاند",
+      "themeAr": "وجعل فيها سراجا وقمرا منيرا"
+    },
+    {
+      "surah": 30,
+      "verse": 20,
+      "themeKey": "creation",
+      "themeEn": "From dust, and then you",
+      "themeUr": "مٹی سے، اور پھر تم",
+      "themeAr": "خلقكم من تراب"
+    },
+    {
+      "surah": 35,
+      "verse": 41,
+      "themeKey": "creation",
+      "themeEn": "He holds the heavens up",
+      "themeUr": "وہی آسمانوں کو تھامے ہوئے ہے",
+      "themeAr": "يمسك السماوات والأرض أن تزولا"
+    },
+    {
+      "surah": 36,
+      "verse": 36,
+      "themeKey": "creation",
+      "themeEn": "All things made in pairs",
+      "themeUr": "ہر چیز جوڑوں میں پیدا کی",
+      "themeAr": "خلق الأزواج كلها"
+    },
+    {
+      "surah": 39,
+      "verse": 5,
+      "themeKey": "creation",
+      "themeEn": "Night wrapped over the day",
+      "themeUr": "رات دن پر لپیٹی جاتی ہے",
+      "themeAr": "يكور الليل على النهار"
+    },
+    {
+      "surah": 41,
+      "verse": 39,
+      "themeKey": "creation",
+      "themeEn": "The earth stirs and grows",
+      "themeUr": "زمین لہلہا اٹھتی ہے",
+      "themeAr": "اهتزت وربت"
+    },
+    {
+      "surah": 51,
+      "verse": 47,
+      "themeKey": "creation",
+      "themeEn": "A sky still expanding",
+      "themeUr": "آسمان کو وسعت دی جا رہی ہے",
+      "themeAr": "وإنا لموسعون"
+    },
+    {
+      "surah": 95,
+      "verse": 4,
+      "themeKey": "creation",
+      "themeEn": "Made in the finest form",
+      "themeUr": "بہترین ساخت میں پیدا کیا",
+      "themeAr": "في أحسن تقويم"
+    },
+    {
+      "surah": 4,
+      "verse": 69,
+      "themeKey": "hereafter",
+      "themeEn": "The company you will keep",
+      "themeUr": "بہترین رفیق ساتھ ہوں گے",
+      "themeAr": "وحسن أولئك رفيقا"
+    },
+    {
+      "surah": 4,
+      "verse": 134,
+      "themeKey": "hereafter",
+      "themeEn": "With Him, both rewards",
+      "themeUr": "دونوں جہاں کا اجر اسی کے پاس",
+      "themeAr": "فعند الله ثواب الدنيا والآخرة"
+    },
+    {
+      "surah": 5,
+      "verse": 119,
+      "themeKey": "hereafter",
+      "themeEn": "He is pleased with them",
+      "themeUr": "اللہ ان سے راضی، وہ اس سے",
+      "themeAr": "رضي الله عنهم ورضوا عنه"
+    },
+    {
+      "surah": 9,
+      "verse": 72,
+      "themeKey": "hereafter",
+      "themeEn": "His approval, greater than gardens",
+      "themeUr": "اللہ کی رضا سب سے بڑی",
+      "themeAr": "ورضوان من الله أكبر"
+    },
+    {
+      "surah": 10,
+      "verse": 25,
+      "themeKey": "hereafter",
+      "themeEn": "He invites you home",
+      "themeUr": "وہ سلامتی کے گھر بلاتا ہے",
+      "themeAr": "يدعو إلى دار السلام"
+    },
+    {
+      "surah": 10,
+      "verse": 26,
+      "themeKey": "hereafter",
+      "themeEn": "The best, and more besides",
+      "themeUr": "بہترین اجر، اور کچھ زیادہ",
+      "themeAr": "للذين أحسنوا الحسنى وزيادة"
+    },
+    {
+      "surah": 18,
+      "verse": 46,
+      "themeKey": "hereafter",
+      "themeEn": "What outlasts wealth and children",
+      "themeUr": "مال و اولاد سے زیادہ باقی رہنے والا",
+      "themeAr": "والباقيات الصالحات خير"
+    },
+    {
+      "surah": 28,
+      "verse": 60,
+      "themeKey": "hereafter",
+      "themeEn": "Better, and longer lasting",
+      "themeUr": "جو اللہ کے پاس ہے وہ بہتر اور باقی",
+      "themeAr": "وما عند الله خير وأبقى"
+    },
+    {
+      "surah": 29,
+      "verse": 57,
+      "themeKey": "hereafter",
+      "themeEn": "The journey home to Him",
+      "themeUr": "پھر اسی کی طرف لوٹنا ہے",
+      "themeAr": "ثم إلينا ترجعون"
+    },
+    {
+      "surah": 29,
+      "verse": 64,
+      "themeKey": "hereafter",
+      "themeEn": "That is the real life",
+      "themeUr": "اصل زندگی وہی ہے",
+      "themeAr": "وإن الدار الآخرة لهي الحيوان"
+    },
+    {
+      "surah": 32,
+      "verse": 17,
+      "themeKey": "hereafter",
+      "themeEn": "Joy kept hidden for you",
+      "themeUr": "آنکھوں کی ٹھنڈک، چھپا کر رکھی گئی",
+      "themeAr": "ما أخفي لهم من قرة أعين"
+    },
+    {
+      "surah": 33,
+      "verse": 44,
+      "themeKey": "hereafter",
+      "themeEn": "The greeting will be peace",
+      "themeUr": "ملاقات کے دن سلام کہا جائے گا",
+      "themeAr": "تحيتهم يوم يلقونه سلام"
+    },
+    {
+      "surah": 36,
+      "verse": 58,
+      "themeKey": "hereafter",
+      "themeEn": "Peace, spoken by your Lord",
+      "themeUr": "رب رحیم کی طرف سے سلام",
+      "themeAr": "سلام قولا من رب رحيم"
+    },
+    {
+      "surah": 41,
+      "verse": 8,
+      "themeKey": "hereafter",
+      "themeEn": "A reward without end",
+      "themeUr": "کبھی نہ ختم ہونے والا اجر",
+      "themeAr": "لهم أجر غير ممنون"
+    },
+    {
+      "surah": 43,
+      "verse": 68,
+      "themeKey": "hereafter",
+      "themeEn": "No fear, and no grief",
+      "themeUr": "نہ کوئی خوف، نہ غم",
+      "themeAr": "لا خوف عليكم اليوم ولا أنتم تحزنون"
+    },
+    {
+      "surah": 55,
+      "verse": 60,
+      "themeKey": "hereafter",
+      "themeEn": "Good is answered with good",
+      "themeUr": "نیکی کا بدلہ نیکی ہی تو ہے",
+      "themeAr": "هل جزاء الإحسان إلا الإحسان"
+    },
+    {
+      "surah": 68,
+      "verse": 34,
+      "themeKey": "hereafter",
+      "themeEn": "Gardens waiting with their Lord",
+      "themeUr": "رب کے پاس نعمتوں کے باغ",
+      "themeAr": "إن للمتقين عند ربهم جنات النعيم"
+    },
+    {
+      "surah": 89,
+      "verse": 28,
+      "themeKey": "hereafter",
+      "themeEn": "Come home, content and welcomed",
+      "themeUr": "اپنے رب کی طرف لوٹ آ، راضی اور پسندیدہ",
+      "themeAr": "ارجعي إلى ربك راضية مرضية"
+    },
+    {
+      "surah": 93,
+      "verse": 4,
+      "themeKey": "hereafter",
+      "themeEn": "What comes next is better",
+      "themeUr": "آنے والا وقت پہلے سے بہتر ہے",
+      "themeAr": "وللآخرة خير لك من الأولى"
+    },
+    {
+      "surah": 99,
+      "verse": 7,
+      "themeKey": "hereafter",
+      "themeEn": "Not one atom is lost",
+      "themeUr": "ذرہ برابر نیکی بھی رائیگاں نہیں",
+      "themeAr": "مثقال ذرة خيرا يره"
+    }
+  ]
+}

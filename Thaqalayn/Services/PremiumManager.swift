@@ -201,8 +201,8 @@ class PremiumManager: ObservableObject {
     // MARK: - Deep Dive Access Control
 
     /// Deep Dives use the app's "first free, rest premium" teaser model:
-    /// - Yaqīn (the introductory dive) is always free
-    /// - Every other dive (Ṣabr, Tawakkul, …) requires premium
+    /// - Yaqin (the introductory dive) is always free
+    /// - Every other dive (Sabr, Tawakkul, …) requires premium
     func canAccessDeepDive(_ id: String) -> Bool {
         if id == "yaqin" { return true }  // Intro dive always free
         return isPremium
@@ -210,10 +210,10 @@ class PremiumManager: ObservableObject {
 
     // MARK: - Surah Experience Access Control
 
-    /// Sūrah experiences ("Inside the Sūrah") use the app's "first free, rest
-    /// premium" teaser model: al-Fātiḥa - the Opening, at the top of the Qur'an
+    /// Surah experiences ("Inside the Surah") use the app's "first free, rest
+    /// premium" teaser model: al-Fatiha - the Opening, at the top of the Qur'an
     /// tab - is always free so every user can experience the format; every other
-    /// sūrah journey requires premium.
+    /// surah journey requires premium.
     func canAccessSurahExperience(_ id: String) -> Bool {
         if id == "surah-fatiha" { return true }  // free flagship teaser - the Opening is for everyone
         return isPremium

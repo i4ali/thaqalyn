@@ -154,7 +154,7 @@ struct LifeMomentDetailView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack(spacing: 7) {
                         Image(systemName: "hands.sparkles.fill").font(.system(size: 12, weight: .bold))
-                        Text("A DUʿĀ FOR THIS MOMENT").font(.system(size: 11, weight: .bold)).tracking(1.5)
+                        Text("A DU'A FOR THIS MOMENT").font(.system(size: 11, weight: .bold)).tracking(1.5)
                     }
                     .foregroundColor(themeManager.accentColor)
 
@@ -184,7 +184,7 @@ struct LifeMomentDetailView: View {
                         .padding(.vertical, 2)
 
                     HStack(spacing: 6) {
-                        Text("Open duʿā").font(.system(size: 13.5, weight: .bold))
+                        Text("Open du'a").font(.system(size: 13.5, weight: .bold))
                         Image(systemName: "chevron.right").font(.system(size: 11, weight: .bold))
                         Spacer(minLength: 8)
                         Text(dua.source)
@@ -200,7 +200,7 @@ struct LifeMomentDetailView: View {
     }
 
     // Themed card container — EmCard glass for emerald, rounded glass/white for legacy.
-    // `highlight` gives the duʿā card a gold edge + soft glow so it stands apart.
+    // `highlight` gives the du'a card a gold edge + soft glow so it stands apart.
     @ViewBuilder
     private func cardContainer<Content: View>(highlight: Bool = false, @ViewBuilder _ content: () -> Content) -> some View {
         if themeManager.isMidnightEmerald {

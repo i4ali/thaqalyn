@@ -1,0 +1,324 @@
+{
+  "verses": [
+    {
+      "surah": 3,
+      "verse": 6,
+      "themeKey": "family",
+      "themeEn": "He shapes you in the womb",
+      "themeUr": "وہی تمہیں رحموں میں صورت دیتا ہے",
+      "themeAr": "هو الذي يصوركم في الأرحام"
+    },
+    {
+      "surah": 11,
+      "verse": 73,
+      "themeKey": "family",
+      "themeEn": "Mercy and blessings upon this household",
+      "themeUr": "اس گھرانے پر اللہ کی رحمت اور برکتیں",
+      "themeAr": "رحمة الله وبركاته عليكم أهل البيت"
+    },
+    {
+      "surah": 13,
+      "verse": 8,
+      "themeKey": "family",
+      "themeEn": "He knows what every mother carries",
+      "themeUr": "وہ جانتا ہے ہر ماں کیا اٹھائے ہوئے ہے",
+      "themeAr": "الله يعلم ما تحمل كل أنثى"
+    },
+    {
+      "surah": 14,
+      "verse": 35,
+      "themeKey": "family",
+      "themeEn": "A father prays for his children's faith",
+      "themeUr": "ایک باپ اپنے بیٹوں کے ایمان کی دعا کرتا ہے",
+      "themeAr": "واجنبني وبني أن نعبد الأصنام"
+    },
+    {
+      "surah": 14,
+      "verse": 39,
+      "themeKey": "family",
+      "themeEn": "Children granted in old age",
+      "themeUr": "بڑھاپے میں اولاد کی نعمت",
+      "themeAr": "الحمد لله الذي وهب لي على الكبر"
+    },
+    {
+      "surah": 16,
+      "verse": 72,
+      "themeKey": "family",
+      "themeEn": "Spouses, children and grandchildren",
+      "themeUr": "بیویاں، بیٹے اور پوتے",
+      "themeAr": "جعل لكم من أزواجكم بنين وحفدة"
+    },
+    {
+      "surah": 17,
+      "verse": 23,
+      "themeKey": "family",
+      "themeEn": "Never say a harsh word to them",
+      "themeUr": "والدین سے اف تک نہ کہو",
+      "themeAr": "فلا تقل لهما أف"
+    },
+    {
+      "surah": 17,
+      "verse": 24,
+      "themeKey": "family",
+      "themeEn": "Lower the wing of humility to them",
+      "themeUr": "ان کے لیے عاجزی کے بازو جھکا دو",
+      "themeAr": "واخفض لهما جناح الذل من الرحمة"
+    },
+    {
+      "surah": 23,
+      "verse": 50,
+      "themeKey": "family",
+      "themeEn": "A mother and her son given shelter",
+      "themeUr": "ماں اور بیٹے کو پناہ دی گئی",
+      "themeAr": "وآويناهما إلى ربوة"
+    },
+    {
+      "surah": 25,
+      "verse": 54,
+      "themeKey": "family",
+      "themeEn": "He made us kin by blood and by marriage",
+      "themeUr": "اس نے نسب اور سسرال کے رشتے بنائے",
+      "themeAr": "فجعله نسبا وصهرا"
+    },
+    {
+      "surah": 29,
+      "verse": 8,
+      "themeKey": "family",
+      "themeEn": "Goodness to parents was enjoined on you",
+      "themeUr": "والدین کے ساتھ نیکی کا حکم دیا گیا",
+      "themeAr": "ووصينا الإنسان بوالديه حسنا"
+    },
+    {
+      "surah": 30,
+      "verse": 21,
+      "themeKey": "family",
+      "themeEn": "He placed affection and mercy between you",
+      "themeUr": "اس نے تمہارے درمیان محبت اور رحمت رکھی",
+      "themeAr": "وجعل بينكم مودة ورحمة"
+    },
+    {
+      "surah": 31,
+      "verse": 13,
+      "themeKey": "family",
+      "themeEn": "A father's first counsel to his son",
+      "themeUr": "باپ کی اپنے بیٹے کو پہلی نصیحت",
+      "themeAr": "يا بني لا تشرك بالله"
+    },
+    {
+      "surah": 31,
+      "verse": 14,
+      "themeKey": "family",
+      "themeEn": "His mother carried him, weakness upon weakness",
+      "themeUr": "ماں نے کمزوری پر کمزوری سہہ کر اٹھایا",
+      "themeAr": "حملته أمه وهنا على وهن"
+    },
+    {
+      "surah": 37,
+      "verse": 100,
+      "themeKey": "family",
+      "themeEn": "My Lord, grant me a righteous child",
+      "themeUr": "اے میرے رب، مجھے نیک اولاد عطا فرما",
+      "themeAr": "رب هب لي من الصالحين"
+    },
+    {
+      "surah": 42,
+      "verse": 49,
+      "themeKey": "family",
+      "themeEn": "He gives daughters, He gives sons",
+      "themeUr": "وہ بیٹیاں دیتا ہے، وہ بیٹے دیتا ہے",
+      "themeAr": "يهب لمن يشاء إناثا ويهب لمن يشاء الذكور"
+    },
+    {
+      "surah": 46,
+      "verse": 15,
+      "themeKey": "family",
+      "themeEn": "Make my offspring righteous for me",
+      "themeUr": "میری اولاد کو میرے لیے نیک بنا دے",
+      "themeAr": "وأصلح لي في ذريتي"
+    },
+    {
+      "surah": 3,
+      "verse": 40,
+      "themeKey": "family",
+      "themeEn": "A child promised past all hope",
+      "themeUr": "ناامیدی کے باوجود اولاد کی بشارت",
+      "themeAr": "كذلك الله يفعل ما يشاء"
+    },
+    {
+      "surah": 52,
+      "verse": 21,
+      "themeKey": "family",
+      "themeEn": "Families joined together again",
+      "themeUr": "خاندان دوبارہ ملا دیے جائیں گے",
+      "themeAr": "ألحقنا بهم ذريتهم"
+    },
+    {
+      "surah": 60,
+      "verse": 7,
+      "themeKey": "family",
+      "themeEn": "He can turn enmity into affection",
+      "themeUr": "وہ دشمنی کو محبت میں بدل سکتا ہے",
+      "themeAr": "عسى الله أن يجعل بينكم مودة"
+    },
+    {
+      "surah": 2,
+      "verse": 214,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "The help of God is near",
+      "themeUr": "اللہ کی مدد قریب ہے",
+      "themeAr": "ألا إن نصر الله قريب"
+    },
+    {
+      "surah": 2,
+      "verse": 286,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He burdens no soul beyond its capacity",
+      "themeUr": "اللہ کسی جان پر اس کی طاقت سے زیادہ بوجھ نہیں ڈالتا",
+      "themeAr": "لا يكلف الله نفسا إلا وسعها"
+    },
+    {
+      "surah": 3,
+      "verse": 139,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Do not weaken and do not grieve",
+      "themeUr": "نہ کمزور پڑو، نہ غم کرو",
+      "themeAr": "ولا تهنوا ولا تحزنوا"
+    },
+    {
+      "surah": 4,
+      "verse": 100,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "The earth has room and abundance",
+      "themeUr": "زمین میں کشادگی اور فراخی ہے",
+      "themeAr": "يجد في الأرض مراغما كثيرا وسعة"
+    },
+    {
+      "surah": 10,
+      "verse": 62,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "No fear upon them, and no grief",
+      "themeUr": "نہ ان پر خوف ہے، نہ وہ غمگین ہوں گے",
+      "themeAr": "لا خوف عليهم ولا هم يحزنون"
+    },
+    {
+      "surah": 11,
+      "verse": 120,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "These accounts steady your heart",
+      "themeUr": "یہ قصے تمہارے دل کو مضبوط کرتے ہیں",
+      "themeAr": "ما نثبت به فؤادك"
+    },
+    {
+      "surah": 13,
+      "verse": 39,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He erases and He confirms what He wills",
+      "themeUr": "وہ جو چاہے مٹا دے اور جو چاہے ثابت رکھے",
+      "themeAr": "يمحو الله ما يشاء ويثبت"
+    },
+    {
+      "surah": 16,
+      "verse": 97,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He will give you a good life",
+      "themeUr": "وہ تمہیں پاکیزہ زندگی عطا کرے گا",
+      "themeAr": "فلنحيينه حياة طيبة"
+    },
+    {
+      "surah": 20,
+      "verse": 2,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "This was not sent down to distress you",
+      "themeUr": "یہ تمہیں مشقت میں ڈالنے کو نہیں اتارا گیا",
+      "themeAr": "ما أنزلنا عليك القرآن لتشقى"
+    },
+    {
+      "surah": 21,
+      "verse": 88,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "So do We deliver the believers",
+      "themeUr": "اسی طرح ہم مومنوں کو نجات دیتے ہیں",
+      "themeAr": "وكذلك ننجي المؤمنين"
+    },
+    {
+      "surah": 22,
+      "verse": 38,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "God defends those who believe",
+      "themeUr": "اللہ مومنوں کا دفاع کرتا ہے",
+      "themeAr": "إن الله يدافع عن الذين آمنوا"
+    },
+    {
+      "surah": 29,
+      "verse": 56,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "My earth is spacious",
+      "themeUr": "میری زمین کشادہ ہے",
+      "themeAr": "إن أرضي واسعة"
+    },
+    {
+      "surah": 42,
+      "verse": 28,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Rain sent down after they despaired",
+      "themeUr": "مایوسی کے بعد بارش برسائی",
+      "themeAr": "ينزل الغيث من بعد ما قنطوا"
+    },
+    {
+      "surah": 47,
+      "verse": 7,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Stand with Him and He steadies your feet",
+      "themeUr": "اس کا ساتھ دو، وہ تمہارے قدم جما دے گا",
+      "themeAr": "إن تنصروا الله ينصركم ويثبت أقدامكم"
+    },
+    {
+      "surah": 48,
+      "verse": 4,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He sent calm down into their hearts",
+      "themeUr": "اس نے دلوں میں سکینت اتاری",
+      "themeAr": "أنزل السكينة في قلوب المؤمنين"
+    },
+    {
+      "surah": 84,
+      "verse": 6,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "You are laboring toward your Lord",
+      "themeUr": "تم اپنے رب کی طرف محنت کرتے جا رہے ہو",
+      "themeAr": "إنك كادح إلى ربك كدحا"
+    },
+    {
+      "surah": 87,
+      "verse": 8,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "He will ease you toward ease",
+      "themeUr": "وہ تمہیں آسانی کی راہ پر لے جائے گا",
+      "themeAr": "ونيسرك لليسرى"
+    },
+    {
+      "surah": 90,
+      "verse": 4,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Man was made to labor",
+      "themeUr": "انسان مشقت میں پیدا کیا گیا",
+      "themeAr": "لقد خلقنا الإنسان في كبد"
+    },
+    {
+      "surah": 93,
+      "verse": 5,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "Your Lord will give until you are content",
+      "themeUr": "تمہارا رب تمہیں اتنا دے گا کہ تم راضی ہو جاؤ",
+      "themeAr": "ولسوف يعطيك ربك فترضى"
+    },
+    {
+      "surah": 94,
+      "verse": 6,
+      "themeKey": "hardship-and-ease",
+      "themeEn": "With hardship comes ease",
+      "themeUr": "مشکل کے ساتھ آسانی ہے",
+      "themeAr": "إن مع العسر يسرا"
+    }
+  ]
+}

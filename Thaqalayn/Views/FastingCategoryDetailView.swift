@@ -482,7 +482,7 @@ struct FastingVerseCard: View {
     }
 }
 
-/// "From the Ahlul Bayt (ʿa)" card: an attributed narration (Arabic + translation + source).
+/// "From the Ahlul Bayt (a)" card: an attributed narration (Arabic + translation + source).
 /// Shared by the Fasting and Prophetic Parallels detail screens; mirrors the surrounding
 /// cards' theme branching and respects the reading text-size control.
 struct AhlulBaytNarrationCard: View {
@@ -499,7 +499,7 @@ struct AhlulBaytNarrationCard: View {
         switch lang {
         case .arabic: return "من أهل البيت (ع)"
         case .urdu:   return "اہلِ بیتؑ سے"
-        default:      return "From the Ahlul Bayt (ʿa)"
+        default:      return "From the Ahlul Bayt (a)"
         }
     }
 
@@ -613,9 +613,9 @@ struct AhlulBaytNarrationCard: View {
                 ],
                 narration: AhlulBaytNarration(
                     arabic: "بُنِيَ الْإِسْلَامُ عَلَىٰ خَمْسٍ: عَلَى الصَّلَاةِ وَالزَّكَاةِ وَالصَّوْمِ وَالْحَجِّ وَالْوَلَايَةِ.",
-                    translationEn: "Islam is built upon five: prayer, zakāt, fasting, ḥajj, and walāyah.",
+                    translationEn: "Islam is built upon five: prayer, zakat, fasting, hajj, and walayah.",
                     translationUr: "اسلام کی بنیاد پانچ چیزوں پر ہے: نماز، زکات، روزہ، حج اور ولایت۔",
-                    sourceEn: "Imam al-Bāqir (ʿa) — al-Kāfī",
+                    sourceEn: "Imam al-Baqir (a) — al-Kafi",
                     sourceAr: "الإمام الباقر (عليه السلام) — الكافي",
                     sourceUr: "امام محمد باقر علیہ السلام — الکافی"
                 )

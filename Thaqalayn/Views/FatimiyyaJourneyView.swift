@@ -106,7 +106,7 @@ struct FatimiyyaJourneyHeader: View {
     // Somber observance: no completion/celebration note, "observed" wording.
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: JourneyStrings.eyebrow("fatimiyya", "Mourning of az-Zahrā (AS)", lang),
+            eyebrow: JourneyStrings.eyebrow("fatimiyya", "Mourning of az-Zahra (AS)", lang),
             title: JourneyStrings.title("fatimiyya", lang),
             sfSymbol: "tulip",
             statusLine: statusMessage,

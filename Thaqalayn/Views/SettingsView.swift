@@ -15,6 +15,7 @@ struct SettingsView: View {
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var voiceManager = TTSVoiceManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
+    @StateObject private var dailyVerse = DailyVerseProvider.shared
     @Environment(\.presentationMode) var presentationMode
     @State private var showingAuthentication = false
     @State private var showingClearDataAlert = false
@@ -260,7 +261,7 @@ struct SettingsView: View {
                                             subtitle: notificationManager.preferences.language.displayName,
                                             iconColor: .green
                                         ) {
-                                            toggleNotificationLanguage()
+                                            cycleNotificationLanguage()
                                         }
 
                                         // Include tafsir toggle
@@ -275,43 +276,41 @@ struct SettingsView: View {
                                             )
                                         )
 
-                                        // Today's verse preview
-                                        if let verse = notificationManager.selectTodayVerse(),
-                                           let monthData = notificationManager.currentMonthData() {
-                                            VStack(alignment: .leading, spacing: 8) {
-                                                HStack {
-                                                    Image(systemName: "star.fill")
-                                                        .font(.system(size: 12))
-                                                        .foregroundColor(.yellow)
-                                                    Text("Today's Verse (\(monthData.name))")
-                                                        .font(.system(size: 14, weight: .semibold))
-                                                        .foregroundColor(themeManager.primaryText)
-                                                }
-                                                .padding(.horizontal, 16)
-                                                .padding(.top, 12)
-
-                                                Text("Surah \(verse.surah), Verse \(verse.verse)")
-                                                    .font(.system(size: 13, weight: .medium))
-                                                    .foregroundColor(themeManager.secondaryText)
-                                                    .padding(.horizontal, 16)
-
-                                                Text(verse.theme)
+                                        // Today's verse preview. On a sacred day the
+                                        // occasion replaces the generic header.
+                                        VStack(alignment: .leading, spacing: 8) {
+                                            HStack {
+                                                Image(systemName: "star.fill")
                                                     .font(.system(size: 12))
-                                                    .foregroundColor(themeManager.tertiaryText)
-                                                    .padding(.horizontal, 16)
-                                                    .padding(.bottom, 12)
+                                                    .foregroundColor(.yellow)
+                                                Text(dailyVerse.today.occasion(languageManager.selectedLanguage) ?? "Today's Verse")
+                                                    .font(.system(size: 14, weight: .semibold))
+                                                    .foregroundColor(themeManager.primaryText)
                                             }
-                                            .background(
-                                                RoundedRectangle(cornerRadius: 12)
-                                                    .fill(themeManager.primaryBackground.opacity(0.5))
-                                            )
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 12)
-                                                    .stroke(themeManager.strokeColor.opacity(0.5), lineWidth: 1)
-                                            )
                                             .padding(.horizontal, 16)
-                                            .padding(.vertical, 8)
+                                            .padding(.top, 12)
+
+                                            Text("Surah \(dailyVerse.today.surah), Verse \(dailyVerse.today.verse)")
+                                                .font(.system(size: 13, weight: .medium))
+                                                .foregroundColor(themeManager.secondaryText)
+                                                .padding(.horizontal, 16)
+
+                                            Text(dailyVerse.today.theme(languageManager.selectedLanguage))
+                                                .font(.system(size: 12))
+                                                .foregroundColor(themeManager.tertiaryText)
+                                                .padding(.horizontal, 16)
+                                                .padding(.bottom, 12)
                                         }
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 12)
+                                                .fill(themeManager.primaryBackground.opacity(0.5))
+                                        )
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 12)
+                                                .stroke(themeManager.strokeColor.opacity(0.5), lineWidth: 1)
+                                        )
+                                        .padding(.horizontal, 16)
+                                        .padding(.vertical, 8)
                                     }
                                 }
                             }
@@ -682,7 +681,7 @@ struct SettingsView: View {
                         subtitle: notificationManager.preferences.language.displayName,
                         iconColor: .green
                     ) {
-                        toggleNotificationLanguage()
+                        cycleNotificationLanguage()
                     }
 
                     // Include tafsir toggle
@@ -697,22 +696,23 @@ struct SettingsView: View {
                         )
                     )
 
-                    // Today's verse preview
-                    if let verse = notificationManager.selectTodayVerse(),
-                       let monthData = notificationManager.currentMonthData() {
-                        EmCard(cornerRadius: 16) {
-                            VStack(alignment: .leading, spacing: 6) {
-                                EmSectionLabel(icon: "star.fill", text: "Today's Verse (\(monthData.name))")
-                                Text("Surah \(verse.surah), Verse \(verse.verse)")
-                                    .font(.system(size: 13, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
-                                Text(verse.theme)
-                                    .font(EmType.serif(18, .medium))
-                                    .foregroundColor(themeManager.primaryText)
-                            }
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(16)
+                    // Today's verse preview. On a sacred day the occasion replaces
+                    // the generic header.
+                    EmCard(cornerRadius: 16) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            EmSectionLabel(
+                                icon: "star.fill",
+                                text: dailyVerse.today.occasion(languageManager.selectedLanguage) ?? "Today's Verse"
+                            )
+                            Text("Surah \(dailyVerse.today.surah), Verse \(dailyVerse.today.verse)")
+                                .font(.system(size: 13, weight: .medium))
+                                .foregroundColor(themeManager.secondaryText)
+                            Text(dailyVerse.today.theme(languageManager.selectedLanguage))
+                                .font(EmType.serif(18, .medium))
+                                .foregroundColor(themeManager.primaryText)
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(16)
                     }
                 }
             }
@@ -930,8 +930,15 @@ struct SettingsView: View {
         return formatter.string(from: date)
     }
 
-    private func toggleNotificationLanguage() {
-        notificationManager.preferences.language = notificationManager.preferences.language == .english ? .urdu : .english
+    /// Cycles English -> Urdu -> Arabic -> English. The old version was a 2-way
+    /// English/Urdu toggle, which made Arabic unreachable even though the tafsir
+    /// accessor and the notification body both support it. French is excluded
+    /// because it has no tafsir content (see CommentaryLanguage.supportedTafsirLanguages).
+    private func cycleNotificationLanguage() {
+        let languages = CommentaryLanguage.supportedTafsirLanguages
+        let current = notificationManager.preferences.language
+        let index = languages.firstIndex(of: current) ?? 0
+        notificationManager.preferences.language = languages[(index + 1) % languages.count]
     }
 
     private func cycleRepeatMode() {
