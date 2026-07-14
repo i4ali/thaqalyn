@@ -15,6 +15,22 @@
 
 import SwiftUI
 
+// MARK: - Zoom-transition source
+
+fileprivate extension View {
+    /// Marks this view as a zoom-transition source when a namespace is supplied.
+    /// A nil namespace leaves the view untouched, so the same card can appear on a
+    /// shelf (zoom) and in an "All N" list (no zoom) without conflicting sources.
+    @ViewBuilder
+    func matchedZoomSource(_ id: String, in namespace: Namespace.ID?) -> some View {
+        if let namespace {
+            matchedTransitionSource(id: id, in: namespace)
+        } else {
+            self
+        }
+    }
+}
+
 // MARK: - Uniform height
 
 /// Collects the tallest natural card height across every shelf so all shelf cards
@@ -72,6 +88,10 @@ struct ShelfCard: View {
     let section: String
     /// Uniform height to pin to (0 = not measured yet; card uses its natural height).
     var pinnedHeight: CGFloat = 0
+    /// When set, this card is the source of a zoom transition into the descent it
+    /// opens - the tapped poster grows into the full-screen dive. nil = no zoom
+    /// (the "All N" lists and deep links present without a matching source).
+    var zoomNamespace: Namespace.ID? = nil
 
     private static let cardWidth: CGFloat = 190
     private static let cornerRadius: CGFloat = 18
@@ -91,6 +111,7 @@ struct ShelfCard: View {
             .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
         }
         .buttonStyle(EmPressStyle())
+        .matchedZoomSource(item.id, in: zoomNamespace)
         .accessibilityElement(children: .ignore)
         .accessibilityAddTraits(.isButton)
         .accessibilityLabel(Text("\(item.title), \(statusText), \(section)"))
@@ -239,6 +260,8 @@ struct JourneyShelf: View {
     let destination: AnyView
     /// Uniform card height, supplied by the hub after measuring every shelf.
     var pinnedHeight: CGFloat = 0
+    /// Shared namespace for the poster -> descent zoom transition (nil = no zoom).
+    var zoomNamespace: Namespace.ID? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -263,7 +286,8 @@ struct JourneyShelf: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
                     ForEach(items) { item in
-                        ShelfCard(item: item, section: label, pinnedHeight: pinnedHeight)
+                        ShelfCard(item: item, section: label, pinnedHeight: pinnedHeight,
+                                  zoomNamespace: zoomNamespace)
                     }
                 }
                 .padding(.horizontal, 20)

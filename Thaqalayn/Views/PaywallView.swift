@@ -48,6 +48,14 @@ struct PaywallView: View {
     @State private var alertMessage = ""
     @State private var alertTitle = ""
 
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    /// Drives the slow Ken Burns push on the hero art (loops for the life of the screen).
+    @State private var heroDrift = false
+    /// Flips true on appear to fade + rise the ladder and feature rows in a cascade.
+    @State private var contentIn = false
+    /// The amount the price count-up has reached; animates 0 -> real price on appear.
+    @State private var shownPrice: Double = 0
+
     /// The one curated App Store review shown on the paywall. Swap when a
     /// stronger review lands — body stays verbatim (spacing tidied only).
     private enum CuratedReview {
@@ -97,6 +105,38 @@ struct PaywallView: View {
             Button("OK", role: .cancel) { }
         } message: {
             Text(alertMessage)
+        }
+        .onAppear { startEntrance() }
+        // The product usually loads before the paywall appears, but if it lands
+        // after, start (or restart) the count-up the moment the price arrives.
+        .onChange(of: purchaseManager.isProductLoaded) { _, loaded in
+            if loaded { startPriceCountUp() }
+        }
+    }
+
+    // MARK: - Entrance motion
+
+    private func startEntrance() {
+        guard !reduceMotion else {
+            contentIn = true
+            startPriceCountUp()
+            return
+        }
+        withAnimation(.easeOut(duration: 0.6)) { contentIn = true }
+        withAnimation(.easeInOut(duration: 22).repeatForever(autoreverses: true)) { heroDrift = true }
+        startPriceCountUp()
+    }
+
+    /// Counts the price up from zero on appear. Uses the store's real numeric
+    /// value; the format style (currency + locale) is applied by `CountUpPrice`.
+    private func startPriceCountUp() {
+        guard let target = purchaseManager.getPriceComponents()?.value else { return }
+        let targetValue = NSDecimalNumber(decimal: target).doubleValue
+        if reduceMotion {
+            shownPrice = targetValue
+        } else {
+            shownPrice = 0
+            withAnimation(.easeOut(duration: 0.7)) { shownPrice = targetValue }
         }
     }
 
@@ -197,6 +237,11 @@ struct PaywallView: View {
         Image(context?.coverAssetName ?? "PaywallHeroDome")
             .resizable()
             .scaledToFill()
+            // Slow Ken Burns push - the one moment on this otherwise still screen. The
+            // anchor matches the crop alignment below so the zoom grows away from the
+            // headline's dark sky, never up into it. Disabled under reduce-motion.
+            .scaleEffect(reduceMotion ? 1 : (heroDrift ? 1.09 : 1.0),
+                         anchor: context?.coverAssetName == nil ? .center : .top)
             // The experience covers are 4:5 and overflow this wide band a long way, so
             // a centred crop would ride the bright subject (a lit arch, a lantern) up
             // under the 40pt headline. Top-aligning keeps the headline on the cover's
@@ -242,10 +287,9 @@ struct PaywallView: View {
 
     private var priceRow: some View {
         HStack(alignment: .firstTextBaseline, spacing: 9) {
-            if let price = purchaseManager.getProductPrice() {
-                Text(price)
-                    .font(EmType.serif(38, .semiBold))
-                    .foregroundColor(HeroBand.gold)
+            if let comps = purchaseManager.getPriceComponents() {
+                CountUpPrice(amount: shownPrice, format: comps.format,
+                             font: EmType.serif(38, .semiBold), color: HeroBand.gold)
             } else {
                 ProgressView()
                     .tint(HeroBand.gold)
@@ -276,8 +320,8 @@ struct PaywallView: View {
 
             EmCard(cornerRadius: 16) {
                 VStack(spacing: 0) {
-                    ForEach(layers, id: \.number) { layer in
-                        ladderRow(layer)
+                    ForEach(Array(layers.enumerated()), id: \.element.number) { i, layer in
+                        staggeredRow(i, ladderRow(layer))
                     }
                 }
                 .padding(.horizontal, 14)
@@ -339,51 +383,55 @@ struct PaywallView: View {
     // MARK: - Feature rows
 
     private var featureRows: some View {
+        // Indices continue past the 5 ladder rows so the whole page reads as one
+        // cascade from the top rather than two sections starting at once.
         VStack(spacing: 10) {
-            featureRow(
+            staggeredRow(layers.count + 0, featureRow(
                 icon: "sparkles",
                 title: "Gems",
                 pill: "MOST LOVED",
                 description: "Bite-size insights for every verse",
-                featured: true
-            )
-            featureRow(
+                featured: true,
+                animatedIcon: true
+            ))
+            staggeredRow(layers.count + 1, featureRow(
                 icon: "book.closed.fill",
                 title: "Inside the Surah",
                 pill: "IMMERSIVE",
                 description: "A whole surah, walked through beat by beat"
-            )
-            featureRow(
+            ))
+            staggeredRow(layers.count + 2, featureRow(
                 icon: "water.waves",
                 title: "Deep Dives",
                 pill: nil,
                 description: "A single-sitting descent through one sacred theme"
-            )
-            featureRow(
+            ))
+            staggeredRow(layers.count + 3, featureRow(
                 icon: "moon.stars.fill",
                 title: "Seasonal Journeys",
                 pill: journeysPill,
                 description: "Muharram · Arbaeen · Ramadan · Hajj · Fatimiyya"
-            )
-            featureRow(
+            ))
+            staggeredRow(layers.count + 4, featureRow(
                 icon: "brain.head.profile",
                 title: "Surah Quizzes",
                 pill: nil,
                 description: "Test your understanding, earn badges"
-            )
-            featureRow(
+            ))
+            staggeredRow(layers.count + 5, featureRow(
                 icon: "speaker.wave.2.fill",
                 title: "Listen Mode",
                 pill: nil,
                 description: "Commentary read aloud, word by word"
-            )
+            ))
         }
     }
 
     private func featureRow(icon: String, title: String, pill: String?,
-                            description: String, featured: Bool = false) -> some View {
+                            description: String, featured: Bool = false,
+                            animatedIcon: Bool = false) -> some View {
         HStack(spacing: 12) {
-            featureIconChip(icon)
+            featureIconChip(icon, animated: animatedIcon)
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 7) {
@@ -418,13 +466,25 @@ struct PaywallView: View {
         )
     }
 
-    private func featureIconChip(_ sfSymbol: String) -> some View {
+    private func featureIconChip(_ sfSymbol: String, animated: Bool = false) -> some View {
         Image(systemName: sfSymbol)
             .font(.system(size: 13, weight: .semibold))
             .foregroundColor(themeManager.accentColor)
+            // A living shimmer on the most-loved feature's glyph - the app's first use
+            // of symbolEffect. Only the flagged chip animates; the rest pass it inert.
+            .symbolEffect(.variableColor.iterative, options: .repeating, isActive: animated && !reduceMotion)
             .frame(width: 30, height: 30)
             .background(RoundedRectangle(cornerRadius: 9, style: .continuous).fill(themeManager.accentChip))
             .overlay(RoundedRectangle(cornerRadius: 9, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+    }
+
+    /// Fade + rise entrance for a row, staggered by its position in the page.
+    /// No-op under reduce motion (rows appear in place, fully visible).
+    private func staggeredRow<V: View>(_ index: Int, _ view: V) -> some View {
+        view
+            .opacity(contentIn || reduceMotion ? 1 : 0)
+            .offset(y: contentIn || reduceMotion ? 0 : 14)
+            .animation(reduceMotion ? nil : .easeOut(duration: 0.5).delay(Double(index) * 0.05), value: contentIn)
     }
 
     private func goldPill(_ label: String) -> some View {
@@ -633,6 +693,32 @@ struct PaywallView: View {
                 showingAlert = true
             }
         }
+    }
+}
+
+// MARK: - Count-up price
+
+/// A currency amount that animates its value. Conforms to `Animatable` so SwiftUI
+/// interpolates `amount` across a `withAnimation` transaction, re-rendering the
+/// formatted price at each step - a count-up from zero to the real price. Formatted
+/// with the store's own currency style, so it is correct in every locale (no
+/// hardcoded symbol).
+private struct CountUpPrice: View, Animatable {
+    var amount: Double
+    let format: Decimal.FormatStyle.Currency
+    let font: Font
+    let color: Color
+
+    var animatableData: Double {
+        get { amount }
+        set { amount = newValue }
+    }
+
+    var body: some View {
+        Text(Decimal(amount).formatted(format))
+            .font(font)
+            .foregroundColor(color)
+            .monospacedDigit()
     }
 }
 

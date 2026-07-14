@@ -112,6 +112,40 @@ enum JourneyStrings {
              ur: "ایک بار ادائیگی۔ ہمیشہ کے لیے آپ کا۔",
              ar: "دفعةٌ واحدة. لك مدى الحياة.")
     }
+
+    // The veil, extended to a locked journey day. Same rule: name what waits, never a
+    // lock. The day's theme and opening line are shown for real; these name the rest.
+    // `station: true` swaps the unit noun for Arbaeen (stations, not days). The Arabic
+    // and Urdu carry the gender agreement the noun swap needs (محطة / منزل are feminine).
+    static func dayVeilEyebrow(station: Bool = false, _ l: CommentaryLanguage) -> String {
+        station
+            ? pick(l, en: "The station continues", ur: "منزل ابھی باقی ہے", ar: "وتستمرّ المحطة")
+            : pick(l, en: "The day continues", ur: "دن ابھی باقی ہے", ar: "ويستمرّ اليوم")
+    }
+    static func dayVeilDua(_ l: CommentaryLanguage) -> String {
+        pick(l, en: "The supplication, with translation and audio",
+             ur: "دعا، ترجمے اور آواز کے ساتھ",
+             ar: "الدعاء، مع الترجمة والصوت")
+    }
+    static func dayVeilVerses(_ count: Int, _ l: CommentaryLanguage) -> String {
+        pick(l, en: "\(count) verse\(count == 1 ? "" : "s"), each with a reflection",
+             ur: "\(count) آیات، ہر ایک پر تدبر",
+             ar: "\(count) آيات، مع تأمّلٍ لكلٍّ منها")
+    }
+    static func dayVeilReflection(station: Bool = false, _ l: CommentaryLanguage) -> String {
+        station
+            ? pick(l, en: "A reflection to close the station",
+                   ur: "منزل کے اختتام پر ایک تدبر",
+                   ar: "تأمّلٌ يختم المحطة")
+            : pick(l, en: "A reflection to close the day",
+                   ur: "دن کے اختتام پر ایک تدبر",
+                   ar: "تأمّلٌ يختم اليوم")
+    }
+    static func dayVeilCta(station: Bool = false, _ l: CommentaryLanguage) -> String {
+        station
+            ? pick(l, en: "Open the full station", ur: "پوری منزل کھولیں", ar: "افتح المحطة كاملةً")
+            : pick(l, en: "Open the full day", ur: "پورا دن کھولیں", ar: "افتح اليوم كاملاً")
+    }
     static func readTheFullSurah(_ l: CommentaryLanguage) -> String {
         pick(l, en: "Read the full surah", ur: "مکمل سورہ پڑھیں", ar: "اقرأ السورة كاملة")
     }

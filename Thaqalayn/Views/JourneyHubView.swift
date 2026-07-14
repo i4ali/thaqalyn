@@ -9,14 +9,28 @@
 
 import SwiftUI
 
-/// Identifiable wrapper so `.fullScreenCover(item:)` can key on a journey id.
-struct PresentedJourney: Identifiable { let id: String }
+fileprivate extension View {
+    /// Applies the zoom transition when a source id is present (the descent was
+    /// opened from a shelf poster), otherwise leaves the default cover transition.
+    @ViewBuilder
+    func navigationZoom(_ sourceID: String?, in namespace: Namespace.ID) -> some View {
+        if let sourceID {
+            navigationTransition(.zoom(sourceID: sourceID, in: namespace))
+        } else {
+            self
+        }
+    }
+}
 
-/// Identifiable wrapper so `.fullScreenCover(item:)` can key on a deep-dive id.
-struct PresentedDeepDive: Identifiable { let id: String }
+/// Identifiable wrappers so `.fullScreenCover(item:)` can key on an id. `transitionID`
+/// is set only when the descent was opened from a shelf poster - it names the zoom
+/// source so the poster grows into the cover. nil (from an "All N" list or a deep
+/// link) presents with the default transition, since no matching source is on screen.
+struct PresentedJourney: Identifiable { let id: String; var transitionID: String? = nil }
 
-/// Identifiable wrapper so `.fullScreenCover(item:)` can key on a surah-experience id.
-struct PresentedSurahExperience: Identifiable { let id: String }
+struct PresentedDeepDive: Identifiable { let id: String; var transitionID: String? = nil }
+
+struct PresentedSurahExperience: Identifiable { let id: String; var transitionID: String? = nil }
 
 /// Content for the alert shown when a locked (non-active) journey is tapped.
 struct LockedJourneyAlert: Identifiable {
@@ -44,6 +58,8 @@ struct JourneyHubView: View {
     /// Uniform height every shelf card pins to — the tallest natural card measured
     /// across all three shelves, so cards line up even between shelves.
     @State private var shelfCardHeight: CGFloat = 0
+    /// Shared namespace for the shelf-poster -> descent zoom transition.
+    @Namespace private var diveZoom
 
     /// Descriptors paired with status, sorted Active → Coming soon (soonest) →
     /// Ended (soonest to return). Ordering lives in JourneyCatalog so the hub and
@@ -80,7 +96,7 @@ struct JourneyHubView: View {
                              isAvailable: entry.status.isActive, status: shelfStatus,
                              title: JourneyStrings.title(d.id, lang),
                              description: JourneyStrings.seasonTagline(d.id, lang),
-                             onTap: { handleTap(d, entry.status) },
+                             onTap: { handleTap(d, entry.status, fromShelf: true) },
                              coverAssetName: d.coverAssetName)
         }
     }
@@ -94,7 +110,7 @@ struct JourneyHubView: View {
             return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: false,
                              isAvailable: d.available, status: shelfStatus,
                              title: d.title(lang), description: d.subtitle(lang),
-                             onTap: { handleDiveTap(d) },
+                             onTap: { handleDiveTap(d, fromShelf: true) },
                              coverAssetName: d.coverAssetName)
         }
     }
@@ -108,7 +124,7 @@ struct JourneyHubView: View {
             return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: false,
                              isAvailable: d.available, status: shelfStatus,
                              title: d.title(lang), description: d.subtitle(lang),
-                             onTap: { handleSurahExperienceTap(d) },
+                             onTap: { handleSurahExperienceTap(d, fromShelf: true) },
                              coverAssetName: d.coverAssetName)
         }
     }
@@ -158,21 +174,24 @@ struct JourneyHubView: View {
                                      count: JourneyDescriptor.all.count,
                                      items: sacredSeasonItems,
                                      destination: AnyView(sacredSeasonsList),
-                                     pinnedHeight: shelfCardHeight)
+                                     pinnedHeight: shelfCardHeight,
+                                     zoomNamespace: diveZoom)
                             .padding(.top, 20)
 
                         JourneyShelf(label: JourneyStrings.deepDives(lang),
                                      count: DeepDiveDescriptor.all.count,
                                      items: deepDiveItems,
                                      destination: AnyView(deepDivesList),
-                                     pinnedHeight: shelfCardHeight)
+                                     pinnedHeight: shelfCardHeight,
+                                     zoomNamespace: diveZoom)
                             .padding(.top, 24)
 
                         JourneyShelf(label: JourneyStrings.insideTheSurah(lang),
                                      count: SurahExperienceDescriptor.all.count,
                                      items: surahItems,
                                      destination: AnyView(surahList),
-                                     pinnedHeight: shelfCardHeight)
+                                     pinnedHeight: shelfCardHeight,
+                                     zoomNamespace: diveZoom)
                             .padding(.top, 24)
                     }
                     .padding(.bottom, 120)   // clear the floating EmeraldTabBar
@@ -187,6 +206,7 @@ struct JourneyHubView: View {
         .fullScreenCover(item: $presented) { p in
             if let d = JourneyDescriptor.byId(p.id) {
                 JourneyCover(descriptor: d) { presented = nil }
+                    .navigationZoom(p.transitionID, in: diveZoom)
             }
         }
         .fullScreenCover(item: $presentedDive) { p in
@@ -197,6 +217,7 @@ struct JourneyHubView: View {
                              lockedPaywallContext: premiumManager.canAccessDeepDive(d.id) ? nil
                                 : PaywallContext(coverAssetName: d.coverAssetName,
                                                  eyebrow: "\(JourneyStrings.deepDiveEyebrow(lang)) \u{00B7} \(d.title(lang))"))
+                    .navigationZoom(p.transitionID, in: diveZoom)
             }
         }
         .fullScreenCover(item: $presentedSurahExperience) { p in
@@ -218,6 +239,7 @@ struct JourneyHubView: View {
                              lockedPaywallContext: premiumManager.canAccessSurahExperience(d.id) ? nil
                                 : PaywallContext(coverAssetName: d.coverAssetName,
                                                  eyebrow: "\(JourneyStrings.surahJourneyEyebrow(lang)) \u{00B7} \(d.title(lang))"))
+                    .navigationZoom(p.transitionID, in: diveZoom)
             }
         }
         .onAppear {
@@ -243,11 +265,11 @@ struct JourneyHubView: View {
         }
     }
 
-    private func handleTap(_ d: JourneyDescriptor, _ status: JourneyStatus) {
+    private func handleTap(_ d: JourneyDescriptor, _ status: JourneyStatus, fromShelf: Bool = false) {
         if status.isActive {
             // Let the card's press squish play before the cover slides up and hides it.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                presented = PresentedJourney(id: d.id)
+                presented = PresentedJourney(id: d.id, transitionID: fromShelf ? d.id : nil)
             }
         } else {
             // Locked — explain why it won't open and point to the next journey.
@@ -260,13 +282,13 @@ struct JourneyHubView: View {
 
     /// Available dives open their full-screen descent (after the press squish);
     /// coming-soon dives reuse the locked overlay with a short "on its way" note.
-    private func handleDiveTap(_ d: DeepDiveDescriptor) {
+    private func handleDiveTap(_ d: DeepDiveDescriptor, fromShelf: Bool = false) {
         if d.available {
             // Locked or not, the dive opens - a gated reader gets the veiled preview
             // (threshold + orientation, then the veil). The gate is applied where the
             // dive is presented, not here.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                presentedDive = PresentedDeepDive(id: d.id)
+                presentedDive = PresentedDeepDive(id: d.id, transitionID: fromShelf ? d.id : nil)
             }
         } else {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
@@ -280,11 +302,11 @@ struct JourneyHubView: View {
 
     /// Available surah experiences open their descent (after the press squish);
     /// premium-gated taps get the paywall; coming-soon reuses the locked overlay.
-    private func handleSurahExperienceTap(_ d: SurahExperienceDescriptor) {
+    private func handleSurahExperienceTap(_ d: SurahExperienceDescriptor, fromShelf: Bool = false) {
         if d.available {
             // Gated readers get the veiled preview rather than a bounce; see handleDiveTap.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                presentedSurahExperience = PresentedSurahExperience(id: d.id)
+                presentedSurahExperience = PresentedSurahExperience(id: d.id, transitionID: fromShelf ? d.id : nil)
             }
         } else {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
@@ -389,7 +411,14 @@ struct JourneyCard: View {
             EmCard(glow: status.isActive,
                    borderColor: isNextUp ? tm.accentColor.opacity(0.4) : nil) {
                 HStack(spacing: 14) {
-                    EmIconChip(sfSymbol: descriptor.sfSymbol, active: status.isActive, isCustomAsset: descriptor.iconIsCustomAsset)
+                    // Show the journey's cover art, matching DeepDiveCard / SurahExperienceCard
+                    // so all three "All N" lists read the same. Falls back to the icon chip
+                    // only if a journey ever ships without a cover.
+                    if let cover = descriptor.coverAssetName {
+                        EmCoverTile(assetName: cover, dimmed: !status.isActive)
+                    } else {
+                        EmIconChip(sfSymbol: descriptor.sfSymbol, active: status.isActive, isCustomAsset: descriptor.iconIsCustomAsset)
+                    }
                     VStack(alignment: .leading, spacing: 4) {
                         if isNextUp {
                             nextUpPill

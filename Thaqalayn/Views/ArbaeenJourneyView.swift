@@ -17,7 +17,8 @@ struct ArbaeenJourneyView: View {
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedDay: ArbaeenDay?
     @State private var navigateToDetail = false
-    @State private var showPaywall = false
+    /// A locked station the user tapped - opens the veiled preview instead of the paywall.
+    @State private var lockedPreviewDay: ArbaeenDay?
 
     private var currentStation: Int? { calendarManager.currentArbaeenStation() }
 
@@ -52,7 +53,9 @@ struct ArbaeenJourneyView: View {
                                                 navigateToDetail = true
                                             }
                                         } else {
-                                            showPaywall = true
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                lockedPreviewDay = day
+                                            }
                                         }
                                     }
                                 }
@@ -80,13 +83,21 @@ struct ArbaeenJourneyView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            // A locked day is a locked day of *this* journey - carry its art and name
-            // into the ask instead of opening on the generic dome.
-            PaywallView(context: JourneyDescriptor.byId("arbaeen").map {
-                PaywallContext(coverAssetName: $0.coverAssetName,
-                               eyebrow: JourneyStrings.title($0.id, languageManager.selectedLanguage))
-            })
+        .fullScreenCover(item: $lockedPreviewDay) { day in
+            // A locked station opens into the veil - its theme and opening line, then
+            // what waits beneath - rather than jumping straight to the paywall. The
+            // paywall it carries still wears this journey's art and name.
+            VeiledDayPreview(
+                dayLabel: "\(JourneyStrings.title("arbaeen", languageManager.selectedLanguage)) \u{00B7} \(JourneyStrings.stationN(day.dayNumber, languageManager.selectedLanguage))",
+                theme: day.localizedTheme(languageManager.selectedLanguage),
+                themeArabic: day.themeArabic,
+                openingLine: day.localizedTafsir(languageManager.selectedLanguage),
+                verseCount: day.verses.count,
+                unitIsStation: true,
+                coverAssetName: JourneyDescriptor.byId("arbaeen")?.coverAssetName ?? "ArbaeenCover",
+                paywallContext: PaywallContext(
+                    coverAssetName: JourneyDescriptor.byId("arbaeen")?.coverAssetName,
+                    eyebrow: JourneyStrings.title("arbaeen", languageManager.selectedLanguage)))
         }
     }
 }

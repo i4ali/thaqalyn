@@ -16,7 +16,8 @@ struct RamadanJourneyView: View {
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedDay: RamadanDay?
     @State private var navigateToDetail = false
-    @State private var showPaywall = false
+    /// A locked day the user tapped - opens the veiled preview instead of the paywall.
+    @State private var lockedPreviewDay: RamadanDay?
 
     var body: some View {
         NavigationView {
@@ -49,7 +50,9 @@ struct RamadanJourneyView: View {
                                                 navigateToDetail = true
                                             }
                                         } else {
-                                            showPaywall = true
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                lockedPreviewDay = day
+                                            }
                                         }
                                     }
                                 }
@@ -77,13 +80,20 @@ struct RamadanJourneyView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            // A locked day is a locked day of *this* journey - carry its art and name
-            // into the ask instead of opening on the generic dome.
-            PaywallView(context: JourneyDescriptor.byId("ramadan").map {
-                PaywallContext(coverAssetName: $0.coverAssetName,
-                               eyebrow: JourneyStrings.title($0.id, languageManager.selectedLanguage))
-            })
+        .fullScreenCover(item: $lockedPreviewDay) { day in
+            // A locked day opens into the veil - the day's theme and opening line, then
+            // what waits beneath - rather than jumping straight to the paywall. The
+            // paywall it carries still wears this journey's art and name.
+            VeiledDayPreview(
+                dayLabel: "\(JourneyStrings.title("ramadan", languageManager.selectedLanguage)) \u{00B7} \(JourneyStrings.dayN(day.dayNumber, languageManager.selectedLanguage))",
+                theme: day.localizedTheme(languageManager.selectedLanguage),
+                themeArabic: day.themeArabic,
+                openingLine: day.localizedTafsir(languageManager.selectedLanguage),
+                verseCount: day.verses.count,
+                coverAssetName: JourneyDescriptor.byId("ramadan")?.coverAssetName ?? "RamadanCover",
+                paywallContext: PaywallContext(
+                    coverAssetName: JourneyDescriptor.byId("ramadan")?.coverAssetName,
+                    eyebrow: JourneyStrings.title("ramadan", languageManager.selectedLanguage)))
         }
     }
 }

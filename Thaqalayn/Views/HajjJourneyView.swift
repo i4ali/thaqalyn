@@ -17,7 +17,8 @@ struct HajjJourneyView: View {
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     @State private var selectedDay: HajjDay?
     @State private var navigateToDetail = false
-    @State private var showPaywall = false
+    /// A locked day the user tapped - opens the veiled preview instead of the paywall.
+    @State private var lockedPreviewDay: HajjDay?
 
     var body: some View {
         NavigationView {
@@ -50,7 +51,9 @@ struct HajjJourneyView: View {
                                                 navigateToDetail = true
                                             }
                                         } else {
-                                            showPaywall = true
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                                                lockedPreviewDay = day
+                                            }
                                         }
                                     }
                                 }
@@ -78,13 +81,20 @@ struct HajjJourneyView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
-        .sheet(isPresented: $showPaywall) {
-            // A locked day is a locked day of *this* journey - carry its art and name
-            // into the ask instead of opening on the generic dome.
-            PaywallView(context: JourneyDescriptor.byId("hajj").map {
-                PaywallContext(coverAssetName: $0.coverAssetName,
-                               eyebrow: JourneyStrings.title($0.id, languageManager.selectedLanguage))
-            })
+        .fullScreenCover(item: $lockedPreviewDay) { day in
+            // A locked day opens into the veil - the day's theme and opening line, then
+            // what waits beneath - rather than jumping straight to the paywall. The
+            // paywall it carries still wears this journey's art and name.
+            VeiledDayPreview(
+                dayLabel: "\(JourneyStrings.title("hajj", languageManager.selectedLanguage)) \u{00B7} \(JourneyStrings.dayN(day.dayNumber, languageManager.selectedLanguage))",
+                theme: day.localizedTheme(languageManager.selectedLanguage),
+                themeArabic: day.themeArabic,
+                openingLine: day.localizedTafsir(languageManager.selectedLanguage),
+                verseCount: day.verses.count,
+                coverAssetName: JourneyDescriptor.byId("hajj")?.coverAssetName ?? "HajjCover",
+                paywallContext: PaywallContext(
+                    coverAssetName: JourneyDescriptor.byId("hajj")?.coverAssetName,
+                    eyebrow: JourneyStrings.title("hajj", languageManager.selectedLanguage)))
         }
     }
 }

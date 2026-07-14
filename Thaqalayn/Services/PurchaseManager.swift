@@ -221,6 +221,14 @@ class PurchaseManager: ObservableObject {
         return product?.displayPrice
     }
 
+    /// The product's numeric price paired with the store's own currency format
+    /// style, so the paywall can animate a count-up in the real currency and
+    /// locale (never hardcoding a symbol). nil until the product loads.
+    func getPriceComponents() -> (value: Decimal, format: Decimal.FormatStyle.Currency)? {
+        guard let product else { return nil }
+        return (product.price, product.priceFormatStyle)
+    }
+
     /// Returns true if the product has been loaded from App Store Connect
     var isProductLoaded: Bool {
         return product != nil
