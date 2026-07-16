@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arabic App Store Listing — Thaqalayn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg0:#04130e; --bg1:#0a2a1e; --bg2:#0d3527;
+    --card:rgba(255,255,255,.05); --cardline:rgba(232,199,122,.18);
+    --gold:#e8c77a; --gold-dim:#caa85f; --cream:#f3eee2; --muted:#9fb6a8;
+    --orange:#e67a3c; --good:#7fd6a8; --warn:#f0b86c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:radial-gradient(1200px 700px at 80% -10%,#11402e 0%,transparent 55%),
+               radial-gradient(900px 600px at 0% 10%,#0a2c1f 0%,transparent 50%),
+               linear-gradient(160deg,var(--bg0),var(--bg1) 60%,var(--bg2));
+    color:var(--cream); min-height:100vh; padding:46px 22px 80px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto}
+  header{text-align:center;margin-bottom:30px}
+  .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim);font-weight:600}
+  h1{font-size:31px;font-weight:800;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 .ar{font-family:'Noto Naskh Arabic',serif;color:var(--gold);font-weight:700}
+  .sub{color:var(--muted);font-size:14.5px;max-width:580px;margin:0 auto;line-height:1.55}
+
+  .card{background:var(--card);border:1px solid var(--cardline);border-radius:18px;
+    padding:22px 24px;margin-bottom:20px;backdrop-filter:blur(8px)}
+  .field-label{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .field-label .name{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px}
+  .badge.ok{color:var(--good);background:rgba(127,214,168,.12);border:1px solid rgba(127,214,168,.28)}
+  .badge.warn{color:var(--warn);background:rgba(240,184,108,.12);border:1px solid rgba(240,184,108,.3)}
+
+  .en{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:10px;
+    padding-left:11px;border-left:2px solid rgba(159,182,168,.3)}
+  .en .t{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dim);display:block;margin-bottom:3px;opacity:.8}
+
+  .ar-line{font-family:'Noto Naskh Arabic',serif;direction:rtl;text-align:right;
+    color:var(--cream);background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.05);
+    border-radius:11px;padding:14px 17px;line-height:1.9}
+  .ar-line.big{font-size:24px;font-weight:600;color:#fff}
+  .ar-line.mid{font-size:19px;font-weight:500}
+
+  textarea.ar-desc{font-family:'Noto Naskh Arabic',serif;direction:rtl;text-align:right;
+    width:100%;color:var(--cream);background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.06);
+    border-radius:11px;padding:16px 18px;line-height:2.05;font-size:17px;resize:vertical;min-height:330px}
+
+  .copy{margin-top:12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;
+    color:var(--bg0);background:linear-gradient(135deg,var(--gold),var(--gold-dim));
+    border:none;border-radius:9px;padding:9px 17px;transition:.15s}
+  .copy:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .copy:active{transform:translateY(0)}
+
+  .note{margin-top:13px;font-size:12.5px;color:var(--muted);line-height:1.6;
+    background:rgba(240,184,108,.07);border-left:3px solid var(--warn);padding:9px 13px;border-radius:0 9px 9px 0}
+  .note b{color:var(--cream);font-weight:600}
+
+  .alt{margin-top:16px;padding-top:16px;border-top:1px dashed rgba(232,199,122,.22)}
+  .desc-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:760px){.desc-grid{grid-template-columns:0.85fr 1.15fr}}
+  .desc-en{font-size:12.5px;color:var(--muted);line-height:1.65;white-space:pre-wrap}
+  .desc-en .t{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dim);display:block;margin-bottom:6px}
+  footer{text-align:center;margin-top:42px;font-size:12px;color:var(--muted);opacity:.75;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Thaqalayn · App Store Connect</div>
+    <h1>Arabic Listing &nbsp;<span class="ar">النسخة العربية</span></h1>
+    <p class="sub">Paste each block into the <b>Arabic</b> localization in App Store Connect. English is shown beside every block for verification. Name &amp; Subtitle are capped at 30 characters each.</p>
+  </header>
+
+  <!-- APP NAME -->
+  <div class="card">
+    <div class="field-label"><span class="name">App Name</span><span class="badge ok">29 / 30</span></div>
+    <div class="en"><span class="t">English</span>Thaqalayn - Shia Quran Tafsir</div>
+    <div class="ar-line big" id="nameAr">الثقلين – تفسير القرآن الشيعي</div>
+    <button class="copy" onclick="copyText(document.getElementById('nameAr').textContent.trim(),this)">⧉ Copy name</button>
+    <div class="note"><b>Brand option:</b> if you want one recognizable brand across all storefronts, you can keep <span dir="rtl">«Thaqalayn»</span> in Latin and only translate the tail: <span dir="rtl">«Thaqalayn – تفسير القرآن الشيعي»</span>.</div>
+  </div>
+
+  <!-- SUBTITLE -->
+  <div class="card">
+    <div class="field-label"><span class="name">Subtitle</span><span class="badge warn">~67 chars — over the 30 limit</span></div>
+    <div class="en"><span class="t">English</span>Authentic Shia Quran easy to understand commentary in English, Urdu and Arabic</div>
+    <div class="ar-line mid" id="subAr">تفسير شيعي أصيل وميسَّر للقرآن الكريم بالعربية والأردية والإنجليزية</div>
+    <button class="copy" onclick="copyText(document.getElementById('subAr').textContent.trim(),this)">⧉ Copy full line</button>
+    <div class="note"><b>Heads-up:</b> your subtitle line is ~67 chars — too long for the 30-char <b>Subtitle</b> field. Use this full sentence as <b>Promotional Text</b> (170 max, editable anytime) or as the description's opening line, and use the short subtitle below for the actual Subtitle field.</div>
+
+    <div class="alt">
+      <div class="field-label"><span class="name">Short subtitle (fits Subtitle field)</span><span class="badge ok">26 / 30</span></div>
+      <div class="ar-line mid" id="subShortAr">تفسير شيعي أصيل وسهل الفهم</div>
+      <div class="en" style="margin-top:8px;margin-bottom:0">≈ “Authentic, easy-to-understand Shia tafsir”</div>
+      <button class="copy" onclick="copyText(document.getElementById('subShortAr').textContent.trim(),this)">⧉ Copy short subtitle</button>
+    </div>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="card">
+    <div class="field-label"><span class="name">Description</span></div>
+    <div class="desc-grid">
+      <div class="desc-en"><span class="t">English (original)</span>Features
+- Quick Gems: Tappable verse insights for daily inspiration
+- Surah Quizzes: Test and track your understanding
+- 5-Layer Tafsir: Foundation, Classical Shia, Contemporary, Ahlul Bayt, Comparative
+- AI Powered Commentary: Intelligent insights for all 114 surahs
+- Premium Audio: 6 reciters, verse-by-verse playback
+- Progress Tracking: Streaks, badges, and statistics
+
+Premium - One-time, lifetime access
+All surahs • Full tafsir • Offline • No ads
+
+Start free with Al-Fatiha. Built by Muslims, for Muslims</div>
+      <div>
+<textarea class="ar-desc" id="descAr" readonly dir="rtl">المميّزات
+- جواهر سريعة: إضاءات على الآيات بلمسة واحدة لإلهامٍ يوميّ
+- اختبارات السور: اختبر فهمك وتابع تقدّمك
+- تفسير من 5 طبقات: التأسيسي، الشيعي التراثي، المعاصر، أهل البيت، والمقارن
+- تفسير مدعوم بالذكاء الاصطناعي: رؤى ذكية لجميع السور الـ114
+- تلاوات صوتية مميَّزة: 6 قُرّاء، وتشغيل آية بآية
+- تتبّع التقدّم: سلاسل المواظبة، الأوسمة، والإحصاءات
+
+النسخة المميَّزة — دفعة واحدة، ووصول مدى الحياة
+جميع السور • التفسير الكامل • بدون إنترنت • بلا إعلانات
+
+ابدأ مجانًا بسورة الفاتحة. صُنع بأيدي مسلمين، للمسلمين</textarea>
+        <button class="copy" onclick="copyText(document.getElementById('descAr').value,this)">⧉ Copy full description</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>Translation is natural Modern Standard Arabic, faithful to your English. Have a native speaker glance over it before publishing — and double-check the Name (29) and short Subtitle (26) against App Store Connect's live character counter.</footer>
+</div>
+<script>
+  function copyText(txt, btn){
+    navigator.clipboard.writeText(txt).then(function(){
+      var o=btn.textContent; btn.textContent='✓ Copied'; btn.style.filter='brightness(1.15)';
+      setTimeout(function(){btn.textContent=o; btn.style.filter='';},1500);
+    });
+  }
+</script>
+</body>
+</html>

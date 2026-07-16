@@ -86,6 +86,7 @@ struct FastingVersesView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -122,6 +123,7 @@ struct FastingVersesView: View {
         .padding(.bottom, 18)
         .environment(\.layoutDirection,
                      languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+        .emCoverHeaderBand("FastingCover", height: 280)
     }
 
     // MARK: - Localized header strings (follow the global app language)

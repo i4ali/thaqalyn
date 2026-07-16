@@ -137,17 +137,20 @@ type ... in scope" diagnostics on the new file** - they are stale-index false po
 green `xcodebuild` is the truth. No XCTest. Do not launch the simulator - the user does the
 device pass themselves.
 
-### Stage 5 - AUDIT (flag-only, two agents)  ← REQUIRED for every new sūrah
+### Stage 5 - AUDIT (flag-only, three agents)  ← REQUIRED for every new sūrah
 
-Once the build is green, run the flow audit per `references/audit.md`: **exactly two**
-subagents in a single wave (never more than two at once):
+Once the build is green, run the flow audit per `references/audit.md`: **three** auditors
+in **two waves** - A and B together, then C (never more than two at once):
 - **Auditor A - Flow & learnings**: walks every beat in order and checks coherence, pacing,
   transitions, and the learnings-checklist (no spoilers, overview at threshold, every beat
   earns its place, template not forced, no em dashes, Listen buttons present).
 - **Auditor B - Theology, sourcing & Arabic**: verifies Shia sourcing and honorifics, each
   narration's attribution, and that every `arabic:` verse field matches `quran_data.json`.
+- **Auditor C - Readability**: reads every user-facing English string as a first-time
+  reader on a phone and flags anything hard to follow on the first pass, each finding with
+  a suggested plainer rewrite.
 
-Both **report only** - they do not edit. Consolidate their findings into a single ranked
+All three **report only** - they do not edit. Consolidate their findings into a single ranked
 list of issues/risks (most severe first) and present it. The user decides what to fix.
 
 ---

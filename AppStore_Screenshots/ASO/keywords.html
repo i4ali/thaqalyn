@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Store Keywords — Arabic & Urdu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg0:#04130e; --bg1:#0a2a1e; --bg2:#0d3527;
+    --card:rgba(255,255,255,.045); --cardline:rgba(232,199,122,.16);
+    --gold:#e8c77a; --gold-dim:#caa85f; --cream:#f3eee2; --muted:#9fb6a8;
+    --orange:#e67a3c; --orange-soft:rgba(230,122,60,.14);
+    --good:#7fd6a8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:radial-gradient(1200px 700px at 80% -10%,#11402e 0%,transparent 55%),
+               radial-gradient(900px 600px at 0% 10%,#0a2c1f 0%,transparent 50%),
+               linear-gradient(160deg,var(--bg0),var(--bg1) 60%,var(--bg2));
+    color:var(--cream); min-height:100vh; padding:48px 24px 80px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+  header{text-align:center;margin-bottom:14px}
+  .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim);font-weight:600}
+  h1{font-size:34px;font-weight:800;margin:10px 0 8px;letter-spacing:-.02em}
+  h1 .amp{color:var(--gold)}
+  .sub{color:var(--muted);font-size:15px;max-width:560px;margin:0 auto;line-height:1.5}
+  .legend{display:flex;gap:18px;justify-content:center;margin-top:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .dot.learn{background:var(--orange)}
+  .dot.combo{background:var(--gold)}
+
+  section{margin-top:44px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+  .sec-head h2{font-size:22px;font-weight:700;letter-spacing:-.01em}
+  .sec-head .native{font-size:20px;color:var(--gold)}
+
+  .field{
+    background:var(--card);border:1px solid var(--cardline);border-radius:16px;
+    padding:18px 20px;margin:14px 0 26px;backdrop-filter:blur(8px);
+  }
+  .field-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:12px;flex-wrap:wrap}
+  .field-top .lbl{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .count{font-size:12.5px;font-weight:700;color:var(--good);
+    background:rgba(127,214,168,.12);border:1px solid rgba(127,214,168,.25);
+    padding:3px 10px;border-radius:999px}
+  .field-str{
+    display:block;direction:rtl;text-align:right;unicode-bidi:plaintext;
+    font-family:'Noto Naskh Arabic',serif;font-size:21px;line-height:2;
+    color:var(--cream);background:rgba(0,0,0,.22);border-radius:10px;
+    padding:12px 16px;word-break:break-word;border:1px solid rgba(255,255,255,.05)
+  }
+  .urdu .field-str{font-family:'Noto Nastaliq Urdu',serif;font-size:19px;line-height:2.5}
+  .copy{
+    margin-top:12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;
+    color:var(--bg0);background:linear-gradient(135deg,var(--gold),var(--gold-dim));
+    border:none;border-radius:9px;padding:9px 16px;transition:.15s;
+  }
+  .copy:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .copy:active{transform:translateY(0)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px}
+  .kw{
+    position:relative;background:var(--card);border:1px solid var(--cardline);
+    border-radius:14px;padding:16px 14px 14px;text-align:center;transition:.15s;
+  }
+  .kw:hover{border-color:rgba(232,199,122,.4);transform:translateY(-2px)}
+  .kw .num{position:absolute;top:9px;left:11px;font-size:11px;font-weight:700;color:var(--gold-dim);opacity:.7}
+  .kw .word{font-family:'Noto Naskh Arabic',serif;font-size:30px;font-weight:500;color:var(--gold);line-height:1.3;margin:6px 0 8px;direction:rtl}
+  .urdu .kw .word{font-family:'Noto Nastaliq Urdu',serif;font-size:27px;padding-top:4px}
+  .kw .translit{font-size:13.5px;font-style:italic;color:var(--cream);font-weight:500}
+  .kw .mean{font-size:12.5px;color:var(--muted);margin-top:3px}
+  .kw.learn{background:var(--orange-soft);border-color:rgba(230,122,60,.4)}
+  .kw.learn .word{color:#ffd9bf}
+  .kw .tag{display:inline-block;margin-top:8px;font-size:9.5px;letter-spacing:.12em;font-weight:700;
+    text-transform:uppercase;color:var(--orange);background:rgba(230,122,60,.16);
+    padding:2px 8px;border-radius:999px}
+  .kw.combo{border-style:dashed;border-color:rgba(232,199,122,.5)}
+  .kw .arrow{font-size:11px;color:var(--gold-dim);margin-top:5px}
+
+  .note{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.6;
+    background:rgba(232,199,122,.06);border-left:3px solid var(--gold-dim);
+    padding:10px 14px;border-radius:0 10px 10px 0}
+  .note b{color:var(--cream);font-weight:600}
+  footer{text-align:center;margin-top:50px;font-size:12px;color:var(--muted);opacity:.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Thaqalayn · App Store Connect</div>
+    <h1>Arabic <span class="amp">&amp;</span> Urdu Keywords</h1>
+    <p class="sub">Each keyword shown with its transliteration and English meaning so you can verify every term before publishing. Copy buttons paste the exact comma-separated string.</p>
+    <div class="legend">
+      <span><i class="dot learn"></i> Learning / quiz term</span>
+      <span><i class="dot combo"></i> Combines into a phrase</span>
+    </div>
+  </header>
+
+  <!-- ARABIC -->
+  <section>
+    <div class="sec-head"><h2>Arabic</h2><span class="native">العربية</span></div>
+    <div class="field">
+      <div class="field-top"><span class="lbl">Keyword field — paste as-is</span><span class="count">99 / 100 chars</span></div>
+      <code class="field-str">شيعة,قرآن,تفسير,اهل,البيت,حديث,دعاء,اختبار,تعلم,امام,علي,كربلاء,الحسين,فاطمة,سورة,تلاوة,رمضان,جعفري</code>
+      <button class="copy" data-copy="شيعة,قرآن,تفسير,اهل,البيت,حديث,دعاء,اختبار,تعلم,امام,علي,كربلاء,الحسين,فاطمة,سورة,تلاوة,رمضان,جعفري">⧉ Copy exact string</button>
+    </div>
+    <div class="grid">
+      <div class="kw"><span class="num">1</span><div class="word">شيعة</div><div class="translit">Shīʿa</div><div class="mean">Shia</div></div>
+      <div class="kw"><span class="num">2</span><div class="word">قرآن</div><div class="translit">Qurʾān</div><div class="mean">Quran</div></div>
+      <div class="kw"><span class="num">3</span><div class="word">تفسير</div><div class="translit">Tafsīr</div><div class="mean">Commentary</div></div>
+      <div class="kw combo"><span class="num">4</span><div class="word">اهل</div><div class="translit">Ahl</div><div class="mean">People / family of</div><div class="arrow">↓ combines</div></div>
+      <div class="kw combo"><span class="num">5</span><div class="word">البيت</div><div class="translit">al-Bayt</div><div class="mean">the House → “Ahl al-Bayt”</div></div>
+      <div class="kw"><span class="num">6</span><div class="word">حديث</div><div class="translit">Ḥadīth</div><div class="mean">Narration / hadith</div></div>
+      <div class="kw"><span class="num">7</span><div class="word">دعاء</div><div class="translit">Duʿāʾ</div><div class="mean">Supplication / dua</div></div>
+      <div class="kw learn"><span class="num">8</span><div class="word">اختبار</div><div class="translit">Ikhtibār</div><div class="mean">Test / quiz</div><span class="tag">Learning</span></div>
+      <div class="kw learn"><span class="num">9</span><div class="word">تعلم</div><div class="translit">Taʿallum</div><div class="mean">Learning</div><span class="tag">Learning</span></div>
+      <div class="kw"><span class="num">10</span><div class="word">امام</div><div class="translit">Imām</div><div class="mean">Imam</div></div>
+      <div class="kw"><span class="num">11</span><div class="word">علي</div><div class="translit">ʿAlī</div><div class="mean">Ali</div></div>
+      <div class="kw"><span class="num">12</span><div class="word">كربلاء</div><div class="translit">Karbalāʾ</div><div class="mean">Karbala</div></div>
+      <div class="kw"><span class="num">13</span><div class="word">الحسين</div><div class="translit">al-Ḥusayn</div><div class="mean">Husayn</div></div>
+      <div class="kw"><span class="num">14</span><div class="word">فاطمة</div><div class="translit">Fāṭima</div><div class="mean">Fatima</div></div>
+      <div class="kw"><span class="num">15</span><div class="word">سورة</div><div class="translit">Sūra</div><div class="mean">Surah / chapter</div></div>
+      <div class="kw"><span class="num">16</span><div class="word">تلاوة</div><div class="translit">Tilāwa</div><div class="mean">Recitation</div></div>
+      <div class="kw"><span class="num">17</span><div class="word">رمضان</div><div class="translit">Ramaḍān</div><div class="mean">Ramadan</div></div>
+      <div class="kw"><span class="num">18</span><div class="word">جعفري</div><div class="translit">Jaʿfarī</div><div class="mean">Jaʿfari (Shia school)</div></div>
+    </div>
+    <div class="note"><b>Note:</b> <span dir="rtl">اهل</span> + <span dir="rtl">البيت</span> are split on purpose — Apple auto-combines them into the phrase “Ahl al-Bayt” while keeping each word reusable. Bare spellings (no hamza on <span dir="rtl">اهل</span>/<span dir="rtl">امام</span>) match how people actually type.</div>
+  </section>
+
+  <!-- URDU -->
+  <section class="urdu">
+    <div class="sec-head"><h2>Urdu</h2><span class="native">اردو</span></div>
+    <div class="field">
+      <div class="field-top"><span class="lbl">Keyword field — paste as-is</span><span class="count">98 / 100 chars</span></div>
+      <code class="field-str">شیعہ,قرآن,تفسیر,اہل,بیت,حدیث,دعا,کوئز,تعلیم,امام,علی,کربلا,حسین,فاطمہ,سورہ,تلاوت,رمضان,جعفری,ترجمہ</code>
+      <button class="copy" data-copy="شیعہ,قرآن,تفسیر,اہل,بیت,حدیث,دعا,کوئز,تعلیم,امام,علی,کربلا,حسین,فاطمہ,سورہ,تلاوت,رمضان,جعفری,ترجمہ">⧉ Copy exact string</button>
+    </div>
+    <div class="grid">
+      <div class="kw"><span class="num">1</span><div class="word">شیعہ</div><div class="translit">Shīʿa</div><div class="mean">Shia</div></div>
+      <div class="kw"><span class="num">2</span><div class="word">قرآن</div><div class="translit">Qurʾān</div><div class="mean">Quran</div></div>
+      <div class="kw"><span class="num">3</span><div class="word">تفسیر</div><div class="translit">Tafsīr</div><div class="mean">Commentary</div></div>
+      <div class="kw combo"><span class="num">4</span><div class="word">اہل</div><div class="translit">Ahl</div><div class="mean">People / family of</div><div class="arrow">↓ combines</div></div>
+      <div class="kw combo"><span class="num">5</span><div class="word">بیت</div><div class="translit">Bait</div><div class="mean">House → “Ahl-e-Bait”</div></div>
+      <div class="kw"><span class="num">6</span><div class="word">حدیث</div><div class="translit">Hadīs</div><div class="mean">Narration / hadith</div></div>
+      <div class="kw"><span class="num">7</span><div class="word">دعا</div><div class="translit">Duʿā</div><div class="mean">Supplication / dua</div></div>
+      <div class="kw learn"><span class="num">8</span><div class="word">کوئز</div><div class="translit">Kwiz</div><div class="mean">Quiz</div><span class="tag">Learning</span></div>
+      <div class="kw learn"><span class="num">9</span><div class="word">تعلیم</div><div class="translit">Taʿlīm</div><div class="mean">Education / learning</div><span class="tag">Learning</span></div>
+      <div class="kw"><span class="num">10</span><div class="word">امام</div><div class="translit">Imām</div><div class="mean">Imam</div></div>
+      <div class="kw"><span class="num">11</span><div class="word">علی</div><div class="translit">ʿAlī</div><div class="mean">Ali</div></div>
+      <div class="kw"><span class="num">12</span><div class="word">کربلا</div><div class="translit">Karbalā</div><div class="mean">Karbala</div></div>
+      <div class="kw"><span class="num">13</span><div class="word">حسین</div><div class="translit">Husain</div><div class="mean">Husain</div></div>
+      <div class="kw"><span class="num">14</span><div class="word">فاطمہ</div><div class="translit">Fātima</div><div class="mean">Fatima</div></div>
+      <div class="kw"><span class="num">15</span><div class="word">سورہ</div><div class="translit">Sūrah</div><div class="mean">Surah / chapter</div></div>
+      <div class="kw"><span class="num">16</span><div class="word">تلاوت</div><div class="translit">Tilāwat</div><div class="mean">Recitation</div></div>
+      <div class="kw"><span class="num">17</span><div class="word">رمضان</div><div class="translit">Ramzān</div><div class="mean">Ramadan</div></div>
+      <div class="kw"><span class="num">18</span><div class="word">جعفری</div><div class="translit">Jaʿfarī</div><div class="mean">Jaʿfari (Shia school)</div></div>
+      <div class="kw"><span class="num">19</span><div class="word">ترجمہ</div><div class="translit">Tarjuma</div><div class="mean">Translation</div></div>
+    </div>
+    <div class="note"><b>Note:</b> Urdu uses its own letters (<span dir="rtl">ہ، ی، ک</span>) which differ from Arabic — these match an Urdu keyboard, so they index correctly for Urdu-storefront searches. <span dir="rtl">اہل</span> + <span dir="rtl">بیت</span> combine into “Ahl-e-Bait”.</div>
+  </section>
+
+  <footer>Counts assume App Store Connect's per-character limit (100). Have a native speaker glance over the spellings before publishing — headroom is only 1–2 chars.</footer>
+</div>
+<script>
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      navigator.clipboard.writeText(b.dataset.copy).then(function(){
+        var t=b.textContent; b.textContent='✓ Copied'; b.style.filter='brightness(1.15)';
+        setTimeout(function(){b.textContent=t;b.style.filter='';},1500);
+      });
+    });
+  });
+</script>
+</body>
+</html>

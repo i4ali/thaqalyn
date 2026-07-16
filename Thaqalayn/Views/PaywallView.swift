@@ -267,17 +267,18 @@ struct PaywallView: View {
             .accessibilityHidden(true)
     }
 
-    /// Value anchor: comparable "deep" libraries charge this much every year;
-    /// the struck figure frames our one-time price as the bargain it is.
-    /// Fixed USD copy (a comparison claim, not a real charge) - the actual
-    /// price below stays dynamic/localized via `getProductPrice()`.
+    /// Value anchor: comparable "deep" libraries are yearly subscriptions,
+    /// which frames our one-time purchase as the better deal. Carries no
+    /// currency figure by design - the real, localized price sits just below
+    /// via `getPriceComponents()`, and any hardcoded comparison amount read
+    /// wrong on non-USD stores (a fixed "$39.99" against a localized price).
     private var anchorLine: some View {
         (
-            Text("Libraries this deep run ")
+            Text("Libraries this deep charge every year. ")
                 .foregroundColor(HeroBand.ivorySoft)
-            + Text("$39.99/yr")
-                .foregroundColor(HeroBand.ivoryFaint)
-                .strikethrough(true, color: HeroBand.ivoryFaint)
+            + Text("Yours is a single payment.")
+                .fontWeight(.semibold)
+                .foregroundColor(HeroBand.ivory)
         )
         .font(.system(size: 13.5, weight: .medium))
         .multilineTextAlignment(.center)
@@ -417,12 +418,6 @@ struct PaywallView: View {
                 title: "Surah Quizzes",
                 pill: nil,
                 description: "Test your understanding, earn badges"
-            ))
-            staggeredRow(layers.count + 5, featureRow(
-                icon: "speaker.wave.2.fill",
-                title: "Listen Mode",
-                pill: nil,
-                description: "Commentary read aloud, word by word"
             ))
         }
     }

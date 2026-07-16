@@ -366,7 +366,9 @@ private struct EmeraldExploreView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
+            VStack(alignment: .leading, spacing: 0) {
+                // Cinematic cover hero: the art bleeds up behind the status bar and
+                // edge-fades into the emerald body, the title set in its dark sky.
                 VStack(alignment: .leading, spacing: 7) {
                     Text(localizedEyebrow.uppercased())
                         .font(.system(size: 11, weight: .bold)).tracking(3)
@@ -378,45 +380,51 @@ private struct EmeraldExploreView: View {
                         .font(.system(size: 13.5))
                         .foregroundColor(themeManager.secondaryText)
                 }
-                .padding(.top, 8)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 20)
+                .padding(.top, 62)
+                .emCoverHeaderBand("ExploreCover", height: 440)
 
-                ForEach(ExploreSection.allCases, id: \.self) { section in
-                    VStack(alignment: .leading, spacing: 10) {
-                        EmDivider(label: section.title(for: lang))
-                        VStack(spacing: 10) {
-                            ForEach(section.items) { item in
-                                Button { onTap(item.destination) } label: {
-                                    EmCard {
-                                        HStack(spacing: 14) {
-                                            EmIconChip(sfSymbol: item.icon, size: 44)
-                                            VStack(alignment: .leading, spacing: 3) {
-                                                Text(item.title(for: lang))
-                                                    .font(EmType.serif(19, .semiBold))
-                                                    .foregroundColor(themeManager.primaryText)
-                                                Text(item.subtitle(for: lang))
-                                                    .font(.system(size: 12.5))
+                VStack(alignment: .leading, spacing: 22) {
+                    ForEach(ExploreSection.allCases, id: \.self) { section in
+                        VStack(alignment: .leading, spacing: 10) {
+                            EmDivider(label: section.title(for: lang))
+                            VStack(spacing: 10) {
+                                ForEach(section.items) { item in
+                                    Button { onTap(item.destination) } label: {
+                                        EmCard {
+                                            HStack(spacing: 14) {
+                                                EmIconChip(sfSymbol: item.icon, size: 44)
+                                                VStack(alignment: .leading, spacing: 3) {
+                                                    Text(item.title(for: lang))
+                                                        .font(EmType.serif(19, .semiBold))
+                                                        .foregroundColor(themeManager.primaryText)
+                                                    Text(item.subtitle(for: lang))
+                                                        .font(.system(size: 12.5))
+                                                        .foregroundColor(themeManager.tertiaryText)
+                                                        .lineLimit(1)
+                                                }
+                                                Spacer(minLength: 8)
+                                                Image(systemName: "chevron.right")
+                                                    .font(.system(size: 13, weight: .semibold))
                                                     .foregroundColor(themeManager.tertiaryText)
-                                                    .lineLimit(1)
                                             }
-                                            Spacer(minLength: 8)
-                                            Image(systemName: "chevron.right")
-                                                .font(.system(size: 13, weight: .semibold))
-                                                .foregroundColor(themeManager.tertiaryText)
+                                            .padding(16)
                                         }
-                                        .padding(16)
                                     }
+                                    .buttonStyle(EmPressStyle())
                                 }
-                                .buttonStyle(EmPressStyle())
                             }
                         }
                     }
                 }
+                .padding(.horizontal, 20)
+                .padding(.top, 22)
+                .padding(.bottom, 120)
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 60)
-            .padding(.bottom, 120)
             .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         }
+        .ignoresSafeArea(edges: .top)
     }
 }
 

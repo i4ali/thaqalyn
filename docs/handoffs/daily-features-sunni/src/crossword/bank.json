@@ -1,0 +1,677 @@
+{
+  "_note": "Transliterated Shia-Islamic term bank for the Daily Crossword. Each entry: answer (A-Z only), clue (English, concise), theme. Clues are the content to confirm; Urdu/Arabic translations are a downstream step.",
+  "entries": [
+    {
+      "answer": "ALI",
+      "theme": "ahlulbayt",
+      "clue_en": "First Imam; cousin and son-in-law of the Prophet ﷺ",
+      "clue_ur": "پہلے امام؛ نبی ﷺ کے چچا زاد اور داماد",
+      "clue_ar": "الإمامُ الأوَّل، ابنُ عمِّ النبيِّ ﷺ وصِهرُه"
+    },
+    {
+      "answer": "ISA",
+      "theme": "prophets",
+      "clue_en": "Prophet Jesus in Islam",
+      "clue_ur": "حضرت عیسیٰ علیہ السلام — اسلام میں",
+      "clue_ar": "النبيُّ عيسى عليه السلام في الإسلام"
+    },
+    {
+      "answer": "NUH",
+      "theme": "prophets",
+      "clue_en": "Prophet who built the ark",
+      "clue_ur": "وہ نبی جنہوں نے کشتی بنائی",
+      "clue_ar": "النبيُّ الذي بنى السفينة"
+    },
+    {
+      "answer": "HUD",
+      "theme": "prophets",
+      "clue_en": "Prophet sent to the people of Aad",
+      "clue_ur": "قومِ عاد کی طرف بھیجے گئے نبی",
+      "clue_ar": "نبيٌّ أُرسِل إلى قوم عاد"
+    },
+    {
+      "answer": "DUA",
+      "theme": "practice",
+      "clue_en": "Personal supplication to God",
+      "clue_ur": "اللہ سے ذاتی التجا و مناجات",
+      "clue_ar": "المناجاةُ الشخصيَّة ورفعُ الحاجة إلى الله"
+    },
+    {
+      "answer": "ASR",
+      "theme": "practice",
+      "clue_en": "The afternoon prayer",
+      "clue_ur": "عصر کی نماز",
+      "clue_ar": "صلاةُ العصر"
+    },
+    {
+      "answer": "EID",
+      "theme": "practice",
+      "clue_en": "Festival of al-Fitr or al-Adha",
+      "clue_ur": "عیدالفطر یا عیدالاضحی کا تہوار",
+      "clue_ar": "عيدُ الفطر أو عيدُ الأضحى"
+    },
+    {
+      "answer": "SAD",
+      "theme": "quran",
+      "clue_en": "The 38th surah, named for a letter",
+      "clue_ur": "اڑتیسویں سورت، ایک حرف کے نام پر",
+      "clue_ar": "السورةُ الثامنة والثلاثون، سُمِّيت بحرف"
+    },
+    {
+      "answer": "QAF",
+      "theme": "quran",
+      "clue_en": "The 50th surah, named for a letter",
+      "clue_ur": "پچاسویں سورت، ایک حرف کے نام پر",
+      "clue_ar": "السورةُ الخمسون، سُمِّيت بحرف"
+    },
+    {
+      "answer": "NUN",
+      "theme": "quran",
+      "clue_en": "Letter that opens Surah al-Qalam",
+      "clue_ur": "سورۃ القلم کا ابتدائی حرف",
+      "clue_ar": "الحرفُ الذي تُفتَتح به سورة القلم"
+    },
+    {
+      "answer": "NUR",
+      "theme": "concept",
+      "clue_en": "Divine light",
+      "clue_ur": "الٰہی نور",
+      "clue_ar": "النورُ الإلهي"
+    },
+    {
+      "answer": "RUH",
+      "theme": "concept",
+      "clue_en": "The spirit breathed into Adam",
+      "clue_ur": "وہ روح جو آدم علیہ السلام میں پھونکی گئی",
+      "clue_ar": "الرُّوحُ التي نُفِخت في آدم عليه السلام"
+    },
+    {
+      "answer": "ILM",
+      "theme": "concept",
+      "clue_en": "Sacred knowledge",
+      "clue_ur": "مقدس علم و دانش",
+      "clue_ar": "العلمُ المقدَّس"
+    },
+    {
+      "answer": "DIN",
+      "theme": "concept",
+      "clue_en": "Religion or way of life",
+      "clue_ur": "دین یا طرزِ زندگی",
+      "clue_ar": "الدِّينُ ومنهجُ الحياة"
+    },
+    {
+      "answer": "HAQ",
+      "theme": "names",
+      "clue_en": "The Truth; a name of God (al-Haqq)",
+      "clue_ur": "الحق؛ اللہ کا ایک نام",
+      "clue_ar": "الحقيقةُ المطلقة؛ اسمٌ من أسماء الله الحُسنى (الحقُّ)"
+    },
+    {
+      "answer": "TUR",
+      "theme": "quran",
+      "clue_en": "The Mount (Sinai); the 52nd surah",
+      "clue_ur": "کوہِ طور (سینا)؛ باون ویں سورت",
+      "clue_ar": "الجبلُ (سيناء)؛ السورةُ الثانية والخمسون"
+    },
+    {
+      "answer": "QUM",
+      "theme": "places",
+      "clue_en": "Iran's foremost seminary city",
+      "clue_ur": "ایران کا اہم ترین دینی علمی شہر",
+      "clue_ar": "أعظمُ مدينة علميَّة في إيران"
+    },
+    {
+      "answer": "ADN",
+      "theme": "concept",
+      "clue_en": "Eden; a garden of paradise",
+      "clue_ur": "عدن؛ جنت کا ایک باغ",
+      "clue_ar": "عَدْن؛ جنَّةٌ من جنَّات الفردوس"
+    },
+    {
+      "answer": "IMAM",
+      "theme": "ahlulbayt",
+      "clue_en": "Divinely-appointed leader of the community",
+      "clue_ur": "امتِ مسلمہ کا خداداد رہنما",
+      "clue_ar": "القائدُ المعصوم المعيَّن من الله لقيادة الأمَّة"
+    },
+    {
+      "answer": "HAJJ",
+      "theme": "practice",
+      "clue_en": "The annual pilgrimage to Mecca",
+      "clue_ur": "مکہ مکرمہ کا سالانہ حج",
+      "clue_ar": "الحجُّ إلى مكَّة المكرَّمة"
+    },
+    {
+      "answer": "SAWM",
+      "theme": "practice",
+      "clue_en": "Ritual fasting",
+      "clue_ur": "روزہ؛ شرعی فریضۂ صیام",
+      "clue_ar": "الصيامُ الشرعي"
+    },
+    {
+      "answer": "NABI",
+      "theme": "concept",
+      "clue_en": "A prophet of God",
+      "clue_ur": "اللہ کا نبی",
+      "clue_ar": "نبيٌّ من أنبياء الله"
+    },
+    {
+      "answer": "AYAH",
+      "theme": "quran",
+      "clue_en": "A single verse of the Qur'an",
+      "clue_ur": "قرآن کریم کی ایک آیت",
+      "clue_ar": "آيةٌ واحدة من آيات القرآن الكريم"
+    },
+    {
+      "answer": "SURA",
+      "theme": "quran",
+      "clue_en": "A chapter of the Qur'an",
+      "clue_ur": "قرآن کریم کی ایک سورت",
+      "clue_ar": "سورةٌ من سُوَر القرآن الكريم"
+    },
+    {
+      "answer": "DEEN",
+      "theme": "concept",
+      "clue_en": "Religion; the path of life",
+      "clue_ur": "دین؛ راہِ حیات",
+      "clue_ar": "الدِّينُ وطريقُ الحياة"
+    },
+    {
+      "answer": "FAJR",
+      "theme": "practice",
+      "clue_en": "The dawn prayer",
+      "clue_ur": "فجر کی نماز",
+      "clue_ar": "صلاةُ الفجر"
+    },
+    {
+      "answer": "ISHA",
+      "theme": "practice",
+      "clue_en": "The night prayer",
+      "clue_ur": "عشاء کی نماز",
+      "clue_ar": "صلاةُ العشاء"
+    },
+    {
+      "answer": "ZUHR",
+      "theme": "practice",
+      "clue_en": "The midday prayer",
+      "clue_ur": "ظہر کی نماز",
+      "clue_ar": "صلاةُ الظُّهر"
+    },
+    {
+      "answer": "NOOR",
+      "theme": "quran",
+      "clue_en": "Light; the 24th surah",
+      "clue_ur": "نور؛ چوبیسویں سورت",
+      "clue_ar": "النُّور؛ السورةُ الرابعة والعشرون"
+    },
+    {
+      "answer": "SABR",
+      "theme": "concept",
+      "clue_en": "Patience and steadfastness",
+      "clue_ur": "صبر و استقامت",
+      "clue_ar": "الصبرُ والثبات"
+    },
+    {
+      "answer": "BADR",
+      "theme": "history",
+      "clue_en": "The first great battle, 624 CE",
+      "clue_ur": "پہلا عظیم معرکہ، ۶۲۴ عیسوی",
+      "clue_ar": "أوَّلُ الغزوات الكبرى، سنة 624م"
+    },
+    {
+      "answer": "UHUD",
+      "theme": "history",
+      "clue_en": "Battle fought near Medina, 625 CE",
+      "clue_ur": "مدینہ کے قریب لڑی گئی جنگ، ۶۲۵ عیسوی",
+      "clue_ar": "غزوةٌ دارت بالقُرب من المدينة المنوَّرة، 625م"
+    },
+    {
+      "answer": "KUFA",
+      "theme": "places",
+      "clue_en": "Iraqi city, seat of Imam Ali's rule",
+      "clue_ur": "عراقی شہر، امام علی علیہ السلام کا دارالحکومت",
+      "clue_ar": "مدينةٌ عراقية كانت عاصمة حُكم الإمام علي عليه السلام"
+    },
+    {
+      "answer": "ADAM",
+      "theme": "prophets",
+      "clue_en": "The first prophet and human",
+      "clue_ur": "پہلے نبی اور پہلے انسان",
+      "clue_ar": "أوَّلُ الأنبياء والبشر"
+    },
+    {
+      "answer": "MUSA",
+      "theme": "prophets",
+      "clue_en": "Prophet Moses",
+      "clue_ur": "حضرت موسیٰ علیہ السلام",
+      "clue_ar": "النبيُّ موسى عليه السلام"
+    },
+    {
+      "answer": "KAHF",
+      "theme": "quran",
+      "clue_en": "Surah of the Cave (18)",
+      "clue_ur": "سورۃ الکہف؛ غار والی سورت (۱۸)",
+      "clue_ar": "سورةُ الكهف (18)"
+    },
+    {
+      "answer": "TAHA",
+      "theme": "quran",
+      "clue_en": "The 20th surah (Ta-Ha)",
+      "clue_ur": "بیسویں سورت (طٰہٰ)",
+      "clue_ar": "السورةُ العشرون (طه)"
+    },
+    {
+      "answer": "JUDI",
+      "theme": "quran",
+      "clue_en": "Mount where Nuh's ark came to rest",
+      "clue_ur": "جودی پہاڑ، جہاں نوح علیہ السلام کی کشتی ٹھہری",
+      "clue_ar": "الجبلُ الذي استقرَّت عليه سفينة نوح عليه السلام"
+    },
+    {
+      "answer": "SHIA",
+      "theme": "concept",
+      "clue_en": "Followers of the Ahl al-Bayt",
+      "clue_ur": "اہلِ بیت علیہم السلام کے پیروکار",
+      "clue_ar": "أتباعُ أهل البيت عليهم السلام"
+    },
+    {
+      "answer": "IMAN",
+      "theme": "concept",
+      "clue_en": "Faith and belief",
+      "clue_ur": "ایمان و یقین",
+      "clue_ar": "الإيمانُ والتصديقُ بالله"
+    },
+    {
+      "answer": "WUDU",
+      "theme": "practice",
+      "clue_en": "Ablution before prayer",
+      "clue_ur": "نماز سے پہلے وضو",
+      "clue_ar": "الطهارةُ قبل الصلاة"
+    },
+    {
+      "answer": "RAKA",
+      "theme": "practice",
+      "clue_en": "A single cycle of the prayer",
+      "clue_ur": "نماز کا ایک رکعت",
+      "clue_ar": "ركعةٌ واحدة من ركعات الصلاة"
+    },
+    {
+      "answer": "MINA",
+      "theme": "places",
+      "clue_en": "Valley of the Hajj rites near Mecca",
+      "clue_ur": "مکہ کے قریب منٰی کی وادی، حج کی رسومات کا مقام",
+      "clue_ar": "وادي منى قُرب مكَّة، موقعٌ من مناسك الحج"
+    },
+    {
+      "answer": "SAFA",
+      "theme": "places",
+      "clue_en": "Hill walked between in the saee",
+      "clue_ur": "سعی کے دوران طواف کی جانے والی پہاڑی",
+      "clue_ar": "الجبلُ الذي يُسعى بينه وبين المروة"
+    },
+    {
+      "answer": "AQSA",
+      "theme": "places",
+      "clue_en": "Al-___ Mosque in Jerusalem",
+      "clue_ur": "مسجدالاقصیٰ، بیت المقدس",
+      "clue_ar": "المسجدُ الأقصى في القدس (الاسم مع الفراغ: ___)"
+    },
+    {
+      "answer": "BAYT",
+      "theme": "concept",
+      "clue_en": "House, as in Ahl al-___",
+      "clue_ur": "گھر، جیسے اہلِ ___",
+      "clue_ar": "البيت، كما في أهل ___"
+    },
+    {
+      "answer": "ZAYD",
+      "theme": "history",
+      "clue_en": "Zayd ibn Haritha, beloved Companion",
+      "clue_ur": "زید ابن حارثہ، محبوب صحابی",
+      "clue_ar": "زيدُ بن حارثة، الصحابيُّ الحبيب"
+    },
+    {
+      "answer": "AMAL",
+      "theme": "concept",
+      "clue_en": "A righteous deed",
+      "clue_ur": "نیک عمل",
+      "clue_ar": "العملُ الصالح"
+    },
+    {
+      "answer": "RABB",
+      "theme": "names",
+      "clue_en": "The Lord and Sustainer",
+      "clue_ur": "پروردگار اور پالنے والا",
+      "clue_ar": "الرَّبُّ والمُدبِّر"
+    },
+    {
+      "answer": "SALAH",
+      "theme": "practice",
+      "clue_en": "Ritual prayer performed five times daily",
+      "clue_ur": "روزانہ پانچ وقت کی نماز",
+      "clue_ar": "الصلاةُ المفروضة خمسَ مرَّات في اليوم"
+    },
+    {
+      "answer": "ZAKAT",
+      "theme": "practice",
+      "clue_en": "Obligatory almsgiving",
+      "clue_ur": "واجب زکوٰۃ",
+      "clue_ar": "الزكاةُ الواجبة"
+    },
+    {
+      "answer": "QURAN",
+      "theme": "quran",
+      "clue_en": "The final revealed scripture",
+      "clue_ur": "آخری آسمانی کتاب",
+      "clue_ar": "الكتابُ المنزَّل الخاتَم"
+    },
+    {
+      "answer": "ISLAM",
+      "theme": "concept",
+      "clue_en": "Submission to the will of God",
+      "clue_ur": "اللہ کی مرضی کے آگے سرِ تسلیم خم کرنا",
+      "clue_ar": "الاستسلامُ لإرادة الله"
+    },
+    {
+      "answer": "TAQWA",
+      "theme": "concept",
+      "clue_en": "God-consciousness and mindful piety",
+      "clue_ur": "خداترسی اور تقوا",
+      "clue_ar": "مراقبةُ الله والخشيةُ منه"
+    },
+    {
+      "answer": "QIBLA",
+      "theme": "practice",
+      "clue_en": "The direction faced in prayer",
+      "clue_ur": "نماز میں رخ کی سمت",
+      "clue_ar": "الاتِّجاهُ الذي يستقبله المصلِّي"
+    },
+    {
+      "answer": "IHRAM",
+      "theme": "practice",
+      "clue_en": "The sacred state and garb of pilgrimage",
+      "clue_ur": "حج کی مقدس حالت اور لباس",
+      "clue_ar": "الحالةُ المقدَّسة ولباسُ الحاج"
+    },
+    {
+      "answer": "UMMAH",
+      "theme": "concept",
+      "clue_en": "The worldwide Muslim community",
+      "clue_ur": "عالمی مسلم برادری",
+      "clue_ar": "الأمَّةُ الإسلاميَّة في أنحاء العالم"
+    },
+    {
+      "answer": "ADHAN",
+      "theme": "practice",
+      "clue_en": "The call to prayer",
+      "clue_ur": "اذان؛ نماز کی آواز",
+      "clue_ar": "النِّداءُ إلى الصلاة"
+    },
+    {
+      "answer": "SUJUD",
+      "theme": "practice",
+      "clue_en": "Prostration before God in prayer",
+      "clue_ur": "نماز میں سجدہ",
+      "clue_ar": "السجودُ لله في الصلاة"
+    },
+    {
+      "answer": "KAABA",
+      "theme": "places",
+      "clue_en": "The cube-shaped shrine in Mecca",
+      "clue_ur": "مکہ مکرمہ کا مکعب نما مقدس گھر",
+      "clue_ar": "البيتُ المكعَّب الحرام في مكَّة المكرَّمة"
+    },
+    {
+      "answer": "IBLIS",
+      "theme": "concept",
+      "clue_en": "The devil who refused to bow to Adam",
+      "clue_ur": "وہ شیطان جس نے آدم کو سجدہ کرنے سے انکار کیا",
+      "clue_ar": "الشيطانُ الذي أبى أن يسجد لآدم"
+    },
+    {
+      "answer": "HASAN",
+      "theme": "ahlulbayt",
+      "clue_en": "The second Imam, grandson of the Prophet ﷺ",
+      "clue_ur": "دوسرے امام، نبی ﷺ کے نواسے",
+      "clue_ar": "الإمامُ الثاني، سِبطُ النبيِّ ﷺ"
+    },
+    {
+      "answer": "ZAHRA",
+      "theme": "ahlulbayt",
+      "clue_en": "Al-___, title of Lady Fatima",
+      "clue_ur": "الزہرا ___، حضرت فاطمہ کا لقب",
+      "clue_ar": "الزَّهراء ___، لقبُ السيِّدة فاطمة"
+    },
+    {
+      "answer": "MAHDI",
+      "theme": "ahlulbayt",
+      "clue_en": "The awaited twelfth Imam",
+      "clue_ur": "منتظَر بارہویں امام",
+      "clue_ar": "الإمامُ الثاني عشر المنتَظَر"
+    },
+    {
+      "answer": "SADIQ",
+      "theme": "ahlulbayt",
+      "clue_en": "Imam Jafar al-___, the sixth Imam",
+      "clue_ur": "امام جعفر الصادق ___، چھٹے امام",
+      "clue_ar": "الإمامُ جعفر ___، الإمامُ السادس"
+    },
+    {
+      "answer": "BAQIR",
+      "theme": "ahlulbayt",
+      "clue_en": "Imam Muhammad al-___, the fifth Imam",
+      "clue_ur": "امام محمد الباقر ___، پانچویں امام",
+      "clue_ar": "الإمامُ محمَّد ___، الإمامُ الخامس"
+    },
+    {
+      "answer": "KAZIM",
+      "theme": "ahlulbayt",
+      "clue_en": "Imam Musa al-___, the seventh Imam",
+      "clue_ur": "امام موسیٰ الکاظم ___، ساتویں امام",
+      "clue_ar": "الإمامُ موسى ___، الإمامُ السابع"
+    },
+    {
+      "answer": "JAWAD",
+      "theme": "ahlulbayt",
+      "clue_en": "Imam Muhammad al-___, the ninth Imam",
+      "clue_ur": "امام محمد الجواد ___، نویں امام",
+      "clue_ar": "الإمامُ محمَّد ___، الإمامُ التاسع"
+    },
+    {
+      "answer": "ABBAS",
+      "theme": "history",
+      "clue_en": "Standard-bearer for Imam Husayn at Karbala",
+      "clue_ur": "کربلا میں امام حسین علیہ السلام کے علمبردار",
+      "clue_ar": "حاملُ الراية في كربلاء، أخو الإمام الحسين عليه السلام"
+    },
+    {
+      "answer": "AKBAR",
+      "theme": "practice",
+      "clue_en": "Allahu ___ (God is greatest)",
+      "clue_ur": "اللہ ___ (اللہ سب سے بڑا ہے)",
+      "clue_ar": "اللهُ ___ (الله أكبر)"
+    },
+    {
+      "answer": "TALIB",
+      "theme": "history",
+      "clue_en": "Abu ___, the uncle who protected the Prophet ﷺ",
+      "clue_ur": "ابو ___، نبی ﷺ کے محافظ چچا",
+      "clue_ar": "أبو ___، عمُّ النبيِّ ﷺ وحاميه"
+    },
+    {
+      "answer": "JAFAR",
+      "theme": "history",
+      "clue_en": "___ al-Tayyar, brother of Imam Ali",
+      "clue_ur": "___ الطیار، امام علی علیہ السلام کے بھائی",
+      "clue_ar": "___ الطيَّار، أخو الإمام علي عليه السلام"
+    },
+    {
+      "answer": "UMRAH",
+      "theme": "practice",
+      "clue_en": "The lesser pilgrimage",
+      "clue_ur": "عمرہ؛ چھوٹا حج",
+      "clue_ar": "العُمرة؛ الحجُّ الأصغر"
+    },
+    {
+      "answer": "HALAL",
+      "theme": "concept",
+      "clue_en": "Permissible under sacred law",
+      "clue_ur": "شریعت کے مطابق جائز",
+      "clue_ar": "ما أحلَّه الشرعُ وأجازه"
+    },
+    {
+      "answer": "HARAM",
+      "theme": "concept",
+      "clue_en": "Forbidden; also the sacred sanctuary",
+      "clue_ur": "حرام؛ نیز مقدس حرم",
+      "clue_ar": "المحرَّمُ شرعاً؛ ويُطلَق أيضاً على الحَرَم المقدَّس"
+    },
+    {
+      "answer": "DHIKR",
+      "theme": "practice",
+      "clue_en": "Remembrance and invocation of God",
+      "clue_ur": "اللہ کا ذکر و وِرد",
+      "clue_ar": "ذكرُ الله ومناجاته"
+    },
+    {
+      "answer": "NIYYA",
+      "theme": "practice",
+      "clue_en": "The intention preceding worship",
+      "clue_ur": "عبادت سے پہلے کی نیت",
+      "clue_ar": "النيَّةُ التي تسبق العبادة"
+    },
+    {
+      "answer": "FATWA",
+      "theme": "concept",
+      "clue_en": "A formal scholarly ruling",
+      "clue_ur": "علمی شرعی فیصلہ",
+      "clue_ar": "حُكمٌ شرعيٌّ صادرٌ عن عالِم"
+    },
+    {
+      "answer": "JIHAD",
+      "theme": "concept",
+      "clue_en": "Struggle and striving in God's path",
+      "clue_ur": "اللہ کی راہ میں جدوجہد",
+      "clue_ar": "الجهادُ والسعيُ في سبيل الله"
+    },
+    {
+      "answer": "TAWAF",
+      "theme": "practice",
+      "clue_en": "Circling the Kaaba in worship",
+      "clue_ur": "کعبہ کا عبادت میں چکر لگانا",
+      "clue_ar": "الطوافُ حول الكعبة المشرَّفة"
+    },
+    {
+      "answer": "KHUMS",
+      "theme": "practice",
+      "clue_en": "The one-fifth religious due (Qur'an 8:41)",
+      "clue_ur": "خمس؛ پانچواں حصہ (القرآن ۸:۴۱)",
+      "clue_ar": "الخُمُس؛ الخُمُسُ الواجبُ (القرآن 8:41)"
+    },
+    {
+      "answer": "IMAAN",
+      "theme": "concept",
+      "clue_en": "Conviction held firmly in the heart",
+      "clue_ur": "دل میں پختہ یقین",
+      "clue_ar": "اليقينُ الراسخُ في القلب"
+    },
+    {
+      "answer": "MECCA",
+      "theme": "places",
+      "clue_en": "Holiest city in Islam",
+      "clue_ur": "اسلام کا مقدس ترین شہر",
+      "clue_ar": "أقدسُ مدينة في الإسلام"
+    },
+    {
+      "answer": "TABUK",
+      "theme": "history",
+      "clue_en": "The expedition of 630 CE",
+      "clue_ur": "۶۳۰ عیسوی کا غزوۂ تبوک",
+      "clue_ar": "غزوةُ تبوك، 630م"
+    },
+    {
+      "answer": "SHAAM",
+      "theme": "places",
+      "clue_en": "Greater Syria (al-Sham)",
+      "clue_ur": "شام؛ ارضِ الشام",
+      "clue_ar": "بلادُ الشَّام (سوريا الكبرى)"
+    },
+    {
+      "answer": "YASIN",
+      "theme": "quran",
+      "clue_en": "The 36th surah, heart of the Qur'an",
+      "clue_ur": "چھتیسویں سورت، قرآن کا دل",
+      "clue_ar": "السورةُ السادسة والثلاثون، قلبُ القرآن"
+    },
+    {
+      "answer": "AMINA",
+      "theme": "history",
+      "clue_en": "Mother of the Prophet ﷺ",
+      "clue_ur": "نبی ﷺ کی والدہ ماجدہ",
+      "clue_ar": "أمُّ النبيِّ ﷺ"
+    },
+    {
+      "answer": "BILAL",
+      "theme": "history",
+      "clue_en": "Islam's first muezzin",
+      "clue_ur": "اسلام کے پہلے مؤذن",
+      "clue_ar": "أوَّلُ مؤذِّن في الإسلام"
+    },
+    {
+      "answer": "SABUR",
+      "theme": "names",
+      "clue_en": "The Patient One, a name of God",
+      "clue_ur": "الصبور؛ اللہ کا ایک نام",
+      "clue_ar": "الصَّبورُ؛ اسمٌ من أسماء الله الحُسنى"
+    },
+    {
+      "answer": "WAHID",
+      "theme": "names",
+      "clue_en": "The One, a name of God",
+      "clue_ur": "الواحد؛ اللہ کا ایک نام",
+      "clue_ar": "الواحدُ؛ اسمٌ من أسماء الله الحُسنى"
+    },
+    {
+      "answer": "RAHIM",
+      "theme": "names",
+      "clue_en": "The Merciful, a name of God",
+      "clue_ur": "الرحیم؛ اللہ کا ایک نام",
+      "clue_ar": "الرَّحيمُ؛ اسمٌ من أسماء الله الحُسنى"
+    },
+    {
+      "answer": "KARIM",
+      "theme": "names",
+      "clue_en": "The Generous, a name of God",
+      "clue_ur": "الکریم؛ اللہ کا ایک نام",
+      "clue_ar": "الكريمُ؛ اسمٌ من أسماء الله الحُسنى"
+    },
+    {
+      "answer": "BASIR",
+      "theme": "names",
+      "clue_en": "The All-Seeing, a name of God",
+      "clue_ur": "البصیر؛ اللہ کا ایک نام",
+      "clue_ar": "البصيرُ؛ اسمٌ من أسماء الله الحُسنى"
+    },
+    {
+      "answer": "SAMAD",
+      "theme": "names",
+      "clue_en": "The Eternal Refuge (Surah 112)",
+      "clue_ur": "الصمد؛ بے نیاز (سورۃ الاخلاص ۱۱۲)",
+      "clue_ar": "الصَّمد؛ كما في سورة الإخلاص (112)"
+    },
+    {
+      "answer": "MUMIN",
+      "theme": "concept",
+      "clue_en": "A faithful believer",
+      "clue_ur": "پختہ ایمان والا مؤمن",
+      "clue_ar": "المؤمنُ الصادقُ بقلبه"
+    },
+    {
+      "answer": "RAQIB",
+      "theme": "names",
+      "clue_en": "The Watchful, a name of God",
+      "clue_ur": "الرقیب؛ اللہ کا ایک نام",
+      "clue_ar": "الرَّقيبُ؛ اسمٌ من أسماء الله الحُسنى"
+    }
+  ]
+}

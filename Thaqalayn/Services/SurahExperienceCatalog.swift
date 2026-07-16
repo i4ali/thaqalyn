@@ -72,13 +72,13 @@ struct SurahExperienceDescriptor: Identifiable {
             surahNumber: 4,
             title: LocalizedText(en: "Surah al-Nisa", ur: "سورۂ نساء", ar: "سورة النساء"),
             titleAr: "النِّسَاء",
-            sfSymbol: "building.columns",
+            sfSymbol: "figure.2.and.child.holdinghands",
             subtitle: LocalizedText(en: "The Women - one trust, from the orphan's coin to the seat of authority",
                                     ur: "النساء - ایک ہی امانت، یتیم کے مال سے لے کر منصبِ ولایت تک",
                                     ar: "النساء - أمانةٌ واحدة، من مال اليتيم إلى مقام الولاية"),
-            // Withdrawn 2026-07-14: the written experience was too hard to follow. Being
-            // rewritten for comprehension; content recoverable from git (commit f35b980).
-            available: false, dive: nil,
+            // Rewritten from scratch 2026-07-16 (the earlier version was withdrawn for
+            // comprehension; old text recoverable from git, commit f35b980).
+            available: true, dive: .surahNisa,
             coverAssetName: "NisaCover"
         ),
         SurahExperienceDescriptor(

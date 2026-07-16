@@ -215,6 +215,7 @@ struct PropheticParallelsView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -255,6 +256,7 @@ struct PropheticParallelsView: View {
             .padding(.bottom, 14)
             .environment(\.layoutDirection,
                          languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+            .emCoverHeaderBand("PropheticParallelsCover", height: 280)
 
             // Search bar
             HStack(spacing: 12) {

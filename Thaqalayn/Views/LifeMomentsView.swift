@@ -51,6 +51,7 @@ struct LifeMomentsView: View {
                     .padding(.bottom, 20)
                     .environment(\.layoutDirection,
                                  languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+                    .emCoverHeaderBandIfEmerald("LifeMomentsCover", height: 280)
 
                     // Moments list
                     if lifeMomentsManager.isLoading {
@@ -91,6 +92,7 @@ struct LifeMomentsView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {

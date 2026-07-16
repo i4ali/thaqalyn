@@ -194,6 +194,7 @@ struct AhlulbaytQuranView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -232,6 +233,7 @@ struct AhlulbaytQuranView: View {
         .padding(.bottom, 14)
         .environment(\.layoutDirection,
                      languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+        .emCoverHeaderBand("AhlulBaytCover", height: 280)
     }
 
     // MARK: - Localized header strings (follow the global app language)

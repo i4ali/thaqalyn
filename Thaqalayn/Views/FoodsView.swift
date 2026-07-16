@@ -46,6 +46,7 @@ struct FoodsView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -86,6 +87,7 @@ struct FoodsView: View {
         .padding(.bottom, 18)
         .environment(\.layoutDirection,
                      languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+        .emCoverHeaderBandIfEmerald("FoodsCover", height: 280)
     }
 
     // MARK: - Localized header strings (follow the global app language)

@@ -859,10 +859,48 @@ private struct EmeraldTodayView: View {
     }
 }
 
-// Refined gold hero — gold-gradient block with near-black serif text
+/// The Hijri-calendar season that selects the daily-reminder hero art. The
+/// windows mirror the app's seasonal journeys (see `JourneyAnnouncements`);
+/// every other month falls back to `.everyday`.
+private enum ReminderSeason {
+    case everyday, ramadan, muharram, arbaeen, fatimiyya, hajj
+
+    var assetName: String {
+        switch self {
+        case .everyday:  return "TodayHeroEveryday"
+        case .ramadan:   return "TodayHeroRamadan"
+        case .muharram:  return "TodayHeroMuharram"
+        case .arbaeen:   return "TodayHeroArbaeen"
+        case .fatimiyya: return "TodayHeroFatimiyya"
+        case .hajj:      return "TodayHeroHajj"
+        }
+    }
+
+    /// Resolve from a Hijri (month, day). Order matters: the Muharram/Arbaeen
+    /// split inside month 1 is by day.
+    static func current(month: Int, day: Int) -> ReminderSeason {
+        switch month {
+        case 9:  return .ramadan
+        case 12: return .hajj
+        case 1:  return day <= 10 ? .muharram : .arbaeen
+        case 2:  return day <= 20 ? .arbaeen : .everyday
+        case 5:  return (day >= 8 && day <= 15) ? .fatimiyya : .everyday
+        default: return .everyday
+        }
+    }
+}
+
+// Daily-reminder hero - a Hijri-seasonal cover-art band with the day's verse in
+// cream serif over a legibility scrim (was a flat gold-gradient block).
 private struct EmDailyReminderHero: View {
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
+    private var season: ReminderSeason {
+        ReminderSeason.current(
+            month: IslamicCalendarManager.shared.currentIslamicMonth(),
+            day: IslamicCalendarManager.shared.currentIslamicDay()
+        )
+    }
     let selection: DailyVerseSelection
     let headline: String
     let isUrdu: Bool
@@ -880,39 +918,64 @@ private struct EmDailyReminderHero: View {
 
     var body: some View {
         Button(action: onTap) {
-            ZStack(alignment: .topTrailing) {
-                ZStack {
-                    Circle().fill(themeManager.onAccentText.opacity(0.08)).frame(width: 110, height: 110).offset(x: 30, y: -30)
-                    Circle().fill(themeManager.onAccentText.opacity(0.08)).frame(width: 100, height: 100).offset(x: 50, y: -10)
-                }.allowsHitTesting(false)
-
-                VStack(alignment: .leading, spacing: 12) {
-                    HStack(spacing: 6) {
-                        Image(systemName: "sparkles").font(.system(size: 13, weight: .semibold))
-                        Text(TodayStrings.reminderEyebrow(languageManager.selectedLanguage).uppercased()).emEyebrow(languageManager.selectedLanguage, size: 11, tracking: 1.3)
-                    }
-                    .foregroundColor(themeManager.onAccentText.opacity(0.75))
-
-                    Text(headlineText)
-                        .font(isUrdu ? EmType.arabic(22) : EmType.serif(24, .semiBold))
-                        .foregroundColor(themeManager.onAccentText)
-                        .lineSpacing(isUrdu ? 8 : 3)
-                        .multilineTextAlignment(isUrdu ? .trailing : .leading)
-                        .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .frame(maxWidth: .infinity, alignment: isUrdu ? .trailing : .leading)
-
-                    Text(sourceLabel)
-                        .font(.system(size: 12.5, weight: .medium))
-                        .foregroundColor(themeManager.onAccentText.opacity(0.7))
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 6) {
+                    Image(systemName: "sparkles").font(.system(size: 13, weight: .semibold))
+                    Text(TodayStrings.reminderEyebrow(languageManager.selectedLanguage).uppercased()).emEyebrow(languageManager.selectedLanguage, size: 11, tracking: 1.3)
                 }
-                .padding(20)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+                .foregroundColor(themeManager.accentBright)
+
+                Text(headlineText)
+                    .font(isUrdu ? EmType.arabic(22) : EmType.serif(24, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(isUrdu ? 8 : 3)
+                    .multilineTextAlignment(isUrdu ? .trailing : .leading)
+                    .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: isUrdu ? .trailing : .leading)
+                    .shadow(color: .black.opacity(0.55), radius: 10, x: 0, y: 1)
+
+                Text(sourceLabel)
+                    .font(.system(size: 12.5, weight: .medium))
+                    .foregroundColor(themeManager.primaryText.opacity(0.72))
             }
-            .background(RoundedRectangle(cornerRadius: 22, style: .continuous).fill(themeManager.accentGradient))
+            .padding(20)
+            .frame(maxWidth: .infinity, minHeight: 136, alignment: .leading)
+            .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+            .background(
+                GeometryReader { geo in
+                    ZStack {
+                        Image(season.assetName)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geo.size.width, height: geo.size.height)
+                            .clipped()
+                        // Legibility scrim: darken the text side, keep the warm focal glow.
+                        LinearGradient(
+                            stops: [
+                                .init(color: Color(hex: "06110D").opacity(0.88), location: 0),
+                                .init(color: Color(hex: "06110D").opacity(0.60), location: 0.38),
+                                .init(color: Color(hex: "06110D").opacity(0.16), location: 0.64),
+                                .init(color: Color(hex: "06110D").opacity(0.0),  location: 0.84),
+                            ],
+                            startPoint: .leading, endPoint: .trailing
+                        )
+                        LinearGradient(
+                            colors: [Color(hex: "06110D").opacity(0.5), .clear],
+                            startPoint: .bottom, endPoint: .center
+                        )
+                    }
+                    // Urdu reads right-to-left; mirror the art so its dark, empty
+                    // side stays under the text and the warm glow sits opposite.
+                    .scaleEffect(x: isUrdu ? -1 : 1, y: 1)
+                }
+            )
             .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-            .shadow(color: themeManager.accentColor.opacity(0.30), radius: 24, x: 0, y: 12)
+            .overlay(
+                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                    .strokeBorder(themeManager.accentColor.opacity(0.14), lineWidth: 1)
+            )
+            .shadow(color: .black.opacity(0.42), radius: 20, x: 0, y: 10)
         }
         .buttonStyle(EmPressStyle())
         .contextMenu {

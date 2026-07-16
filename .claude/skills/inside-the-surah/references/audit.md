@@ -1,9 +1,9 @@
-# Stage 5 - the flow audit (flag-only, two agents, one wave)
+# Stage 5 - the flow audit (flag-only, three agents, two waves)
 
-Run **after** the build is green, for **every** new sūrah. Dispatch **exactly two**
-subagents **in a single wave** (never more than two at once). Both **report only - they do
-not edit anything.** When both return, consolidate into one ranked list and present it; the
-user decides what to change.
+Run **after** the build is green, for **every** new sūrah. Dispatch **three** subagents
+in **two waves**: Auditors A and B together, then Auditor C (never more than two at once).
+All **report only - they do not edit anything.** When all three return, consolidate into
+one ranked list and present it; the user decides what to change.
 
 Give each auditor: the sūrah id, the path to `Thaqalayn/Content/Surah<Name>Dive.swift`, and
 the approved script at `docs/plans/surah-experience/<id>-script.md`.
@@ -63,15 +63,45 @@ the approved script at `docs/plans/surah-experience/<id>-script.md`.
 > Return a ranked list of issues, most severe first: location, the problem, the evidence
 > (source checked / expected vs actual bytes), and a suggested correction (do NOT apply it).
 
+## Auditor C - Readability
+
+> You are auditing the READABILITY of a new "Inside the Sūrah" journey for the Thaqalayn
+> iOS app, defined in `<dive file>` (approved script: `<script file>`). REPORT ONLY - do
+> not edit anything.
+>
+> Read every English string a user sees (open line, orientation, movement dividers, verse
+> translations and reflections, narration bodies, climax, reflection prompt, closing) as a
+> first-time reader on a phone - possibly tired, possibly reading English as a second
+> language. The bar: every sentence understood on the FIRST pass, no rereading, no stopping
+> to work out what a sentence means. (The first al-Nisa dive was withdrawn for failing
+> exactly this - approved structure, verified sourcing, prose too hard to follow.)
+>
+> Flag:
+> 1. **Sentences that demand rereading** - long or winding sentences, stacked clauses,
+>    asides nested inside asides, a verb that arrives late.
+> 2. **Described-not-shown arguments** - prose that talks ABOUT its evidence instead of
+>    laying the evidence out step by step (quote the words, then say plainly what they mean).
+> 3. **Unglossed Arabic terms** - a transliterated term carrying the meaning of a sentence
+>    with no instant plain-English gloss.
+> 4. **Walls of text** - a reflection stacking several scholarly points or too many ideas
+>    for one beat.
+> 5. **Rhetorical scaffolding** - literary throat-clearing ("Watch how the verse is built",
+>    inverted syntax) where saying the thing directly would be clearer.
+>
+> Return a ranked list, hardest-to-read first: for each, the beat (tag/index), the exact
+> sentence(s), why a first-pass reader stumbles, and a suggested plainer rewrite (do NOT
+> apply it). Simple does not mean shallow - every suggestion must keep the full meaning.
+
 ---
 
 ## Consolidating
 
-Merge both reports into one list, most severe first. Suggested severity bands:
+Merge all three reports into one list, most severe first. Suggested severity bands:
 - **Blocker** - a sourcing/theology error, an unverifiable narration presented as fact, an
   Arabic mismatch, or a spoiler that breaks the journey.
 - **Should-fix** - a misplaced overview, a beat that does not earn its place, a flow/pacing
-  snag, a missing honorific or Listen control.
+  snag, a missing honorific or Listen control, or copy a first-time reader cannot follow
+  on the first pass.
 - **Polish** - wording, an em dash, a soft transition.
 
 Present the list plainly and let the user pick what to fix. Do not apply fixes as part of

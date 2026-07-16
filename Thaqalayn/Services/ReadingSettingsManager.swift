@@ -16,9 +16,9 @@ final class ReadingSettingsManager: ObservableObject {
     private static let storageKey = "commentaryFontScaleIndex"
 
     /// Discrete multiplier steps applied to the commentary body font + leading.
-    /// Default is index 1 (= 1.0×): one step smaller, three larger.
+    /// Default is index 2 (= 1.15×): two steps smaller, two larger.
     static let steps: [CGFloat] = [0.9, 1.0, 1.15, 1.3, 1.5]
-    static let defaultIndex = 1
+    static let defaultIndex = 2
 
     @Published var stepIndex: Int {
         didSet { UserDefaults.standard.set(stepIndex, forKey: Self.storageKey) }

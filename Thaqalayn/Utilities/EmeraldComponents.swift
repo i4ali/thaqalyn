@@ -545,6 +545,67 @@ struct EmJourneyHeader: View {
     }
 }
 
+// MARK: - Cover-art header band (Explore overview + its detail screens)
+
+/// A cinematic cover-art band for a fixed screen header. Renders `assetName`
+/// bleeding up behind the status/nav bar and edge-fading into the emerald body
+/// below, composed dark-on-top so the header's eyebrow/title stay legible over
+/// the art. This is the `EmJourneyHeader` cover treatment factored out for the
+/// Explore surfaces, which use a short fixed header rather than the tall journey
+/// header + progress card.
+struct EmCoverBand: View {
+    let assetName: String
+
+    var body: some View {
+        GeometryReader { geo in
+            Image(assetName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .clipped()
+                .mask(
+                    LinearGradient(
+                        stops: [
+                            .init(color: .black.opacity(0.92), location: 0),
+                            .init(color: .black, location: 0.18),
+                            .init(color: .black, location: 0.62),
+                            .init(color: .clear, location: 1),
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
+        }
+        .ignoresSafeArea(edges: .top)
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
+    }
+}
+
+extension View {
+    /// Pins an `EmCoverBand` behind a fixed screen header: the header content is
+    /// top-aligned within a band of `height`, the art bleeds up behind the status/
+    /// nav bar and fades into the emerald body beneath the title. Used by the
+    /// Explore overview and its seven detail screens.
+    func emCoverHeaderBand(_ assetName: String, height: CGFloat) -> some View {
+        self
+            .frame(maxWidth: .infinity, minHeight: height, alignment: .topLeading)
+            .background(alignment: .top) { EmCoverBand(assetName: assetName) }
+    }
+
+    /// Applies `emCoverHeaderBand` only under Midnight Emerald; other themes keep
+    /// their original header untouched. Reads `ThemeManager.shared` (callers already
+    /// re-evaluate on theme change because they observe it) - for the two Explore
+    /// detail screens whose header is inline-branched rather than a separate subview.
+    @ViewBuilder
+    func emCoverHeaderBandIfEmerald(_ assetName: String, height: CGFloat) -> some View {
+        if ThemeManager.shared.isMidnightEmerald {
+            emCoverHeaderBand(assetName, height: height)
+        } else {
+            self
+        }
+    }
+}
+
 /// One day row in a seasonal journey list (Screen 04). Marker: done → gold-gradient circle + check
 /// (or, `.subdued`, a gold-chip circle + gold check); else a numeral circle. The current day's card
 /// gains a gold border + gold-chip fill. Locked days show a "PREMIUM" tag (no lock, per the premium-label convention).

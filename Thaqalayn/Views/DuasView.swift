@@ -46,6 +46,7 @@ struct DuasView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -108,6 +109,7 @@ struct DuasView: View {
         .padding(.bottom, 18)
         .environment(\.layoutDirection,
                      languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+        .emCoverHeaderBand("DailyDuasCover", height: 280)
     }
 
     private var localizedEyebrow: String {
