@@ -79,6 +79,11 @@ enum DeepDiveSection {
     case response(act: Int, replyingTo: LocalizedText, arabic: String, words: LocalizedText, source: LocalizedText, reflection: LocalizedText)
     case climax(act: Int, tag: LocalizedText, source: LocalizedText, arabic: String, translation: LocalizedText, body: LocalizedText, reflection: LocalizedText)
     case reflectionPrompt(tag: LocalizedText, prompt: LocalizedText, placeholder: LocalizedText, subline: LocalizedText, nextLabel: LocalizedText)
+    /// The interactive close of a dive built on entrustment (Tawakkul): the reader names
+    /// what they are gripping - in their heart - presses and holds the ring (that is the
+    /// grip), and the lifting of the finger IS the release, resolving into the entrusting
+    /// verse. Replaces `reflectionPrompt` for such dives.
+    case release(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText, arabic: String, translation: LocalizedText, reference: String, note: LocalizedText, nextLabel: LocalizedText)
     /// `close` is the theme-specific final clause shown after "The descent ends." in the
     /// Amin block (e.g. "The certainty is yours to keep." for Yaqin) — per-dive so it never
     /// carries another dive's theme.
@@ -98,7 +103,7 @@ enum DeepDiveSection {
         case .narration(let a, _, _, _, _):                return a
         case .response(let a, _, _, _, _, _):              return a
         case .climax(let a, _, _, _, _, _, _):             return a
-        case .reflectionPrompt, .dua, .closing:            return 4
+        case .reflectionPrompt, .release, .dua, .closing:  return 4
         }
     }
 }

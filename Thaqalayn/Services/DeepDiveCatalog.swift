@@ -59,10 +59,10 @@ struct DeepDiveDescriptor: Identifiable {
             title: LocalizedText(en: "Tawakkul · Reliance", ur: "توکل", ar: "التوكّل"),
             titleAr: "تَوَكُّل",
             sfSymbol: "hands.and.sparkles",
-            subtitle: LocalizedText(en: "Trusting God with the outcome",
-                                    ur: "انجام کو اللہ کے سپرد کر دینا",
-                                    ar: "أن تُسلّم النتيجة لله"),
-            available: false, dive: nil,
+            subtitle: LocalizedText(en: "A descent through three motions - Qur'an to Karbala",
+                                    ur: "تین حرکتوں میں اترتا ایک سفر - قرآن سے کربلا تک",
+                                    ar: "نزولٌ عبر ثلاث حركات - من القرآن إلى كربلاء"),
+            available: true, dive: .tawakkul,
             coverAssetName: "TawakkulCover"
         ),
         DeepDiveDescriptor(

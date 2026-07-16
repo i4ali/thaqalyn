@@ -55,6 +55,36 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "deepDives-tawakkul",
+            sfSymbol: "hands.and.sparkles",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 3).date ?? .distantPast,
+            destination: .deepDive("tawakkul"),
+            titleEN: "New Deep Dive",
+            titleUR: "نیا گہرا غوطہ",
+            titleAR: "غوصٌ عميقٌ جديد",
+            blurbEN: "Tawakkul - Reliance. A descent through three motions of the trusting hand, from the parted sea to the morning of Ashura - ending with a release you perform with your own hand.",
+            blurbUR: "توکل - بھروسے والے ہاتھ کی تین حرکتوں میں اترتا ہوا ایک عمیق سفر، شقِ دریا سے صبحِ عاشورا تک - جس کا اختتام ایک ایسی رہائی پر ہوتا ہے جو آپ خود اپنے ہاتھ سے ادا کرتے ہیں۔",
+            blurbAR: "التوكّل - نزولٌ عبر ثلاث حركاتٍ لليد المتوكّلة، من انفلاق البحر إلى صباح عاشوراء - يُختَم بإفلاتٍ تؤدّيه بيدك أنت.",
+            ctaEN: "Begin the descent",
+            ctaUR: "نزول کا آغاز کریں",
+            ctaAR: "ابدأ النزول"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-nisa",
+            sfSymbol: "figure.2.and.child.holdinghands",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 2).date ?? .distantPast,
+            destination: .surahExperience("surah-nisa"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah al-Nisa - why the mightiest book of rights is named The Women. From the orphan's coin to the seat of authority, one trust runs through it all - and one verse names the company promised to those who guard it.",
+            blurbUR: "سورۂ نساء - حقوق کی سب سے بڑی کتاب کا نام 'النساء' کیوں؟ یتیم کے مال سے منصبِ اختیار تک ایک ہی امانت سب میں جاری ہے - اور ایک آیت اُس رفاقت کا نام لیتی ہے جس کا وعدہ امانت کے محافظوں سے ہے۔",
+            blurbAR: "سورة النساء - لماذا سُمّي أعظمُ كتابِ حقوقٍ باسم النساء؟ من مال اليتيم إلى مقام الولاية أمانةٌ واحدة تجري في السورة كلها - وآيةٌ واحدة تسمّي الرفقةَ الموعودة لمن حفظها.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
             id: "surahExperience-ali-imran",
             sfSymbol: "person.3.sequence.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 1).date ?? .distantPast,
