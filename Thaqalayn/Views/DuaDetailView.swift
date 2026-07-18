@@ -21,6 +21,12 @@ struct DuaDetailView: View {
             AdaptiveModernBackground()
 
             if themeManager.isMidnightEmerald {
+                EmCoverBand(assetName: "DailyDuasCover")
+                    .frame(height: 300)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+
+            if themeManager.isMidnightEmerald {
                 emeraldScroll
             } else {
             ScrollView {
@@ -50,6 +56,7 @@ struct DuaDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {

@@ -33,6 +33,12 @@ struct LifeMomentDetailView: View {
         ZStack {
             AdaptiveModernBackground()
 
+            if themeManager.isMidnightEmerald {
+                EmCoverBand(assetName: "LifeMomentsCover")
+                    .frame(height: 300)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+
             ScrollView {
                 VStack(spacing: 18) {
                     hero
@@ -57,6 +63,7 @@ struct LifeMomentDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {

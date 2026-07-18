@@ -83,6 +83,31 @@ Card-treatment mockup: `docs/plans/2026-07-14-cover-art-treatments.html`.
 
 ---
 
+## Shipped 2026-07-18 (Tier 1 - shipped art, new surfaces) - build-green, not committed
+
+Zero new generations; every change reuses art already in the bundle. Mockups: `mockups/tier1-art/`.
+
+- **Discovery carousel posters.** New shared `PosterCarouselCard` (Components/): full-bleed cover
+  art, serif title over a left scrim, quiet gold "Explore" affordance, whole card tappable
+  (EmPressStyle), art+scrim mirror for RTL (EmDailyReminderHero rule). All four cards
+  (Duas/LifeMoments/PropheticStories/AhlulbaytQuran) are now thin wrappers over it, and all four
+  are trilingual (three were English-only). Crop biased 26% up because covers are 4:5 dark-top.
+- **Leaf detail cover bands.** All 7 leaf screens (DuaDetail, FoodDetail, LifeMomentDetail,
+  StoryDetail, ParallelDetail, AhlulbaytEntryDetail, FastingCategoryDetail) now show their
+  parent's `EmCoverBand` (height 300, emerald-gated, fixed behind the scroll) +
+  `toolbarBackground(.hidden)` in emerald, so list -> detail keeps the art continuous.
+- **Welcome screen.** Rebuilt around the shrine hero loop (`ShrineHeroVideoLayer`, 440pt top band,
+  masked fade + title scrim), fixed emerald-night palette, gold CTA replaces the purple one,
+  the two same-action auth buttons merged into one "Create Account or Sign In". Reduce-motion /
+  missing-video falls back to `ShrineDovesLayer`.
+- **Onboarding reuse.** SurahExperienceScreen: text-in-halo hero replaced by a fanned cover deck
+  (Yusuf/Yasin/Rahman/Mulk covers) cross-fading on the existing 2.6s cycle.
+  SeasonalFeaturesScreen: spotlight card now crowned by the season's `TodayHero*` band
+  (132pt, masked fade); big glyph block dropped, NEXT UP pill got a dark backing.
+
+Sim eyeball list: leaf-band scroll behavior (band is fixed, content scrolls over the fade),
+carousel poster crop per card, Welcome video start/fallback, deck cross-fade rhythm.
+
 ## Remaining
 
 ### ~~1. Motion on the paywall~~ - DONE (round 2)

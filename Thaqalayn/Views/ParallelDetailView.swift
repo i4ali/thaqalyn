@@ -32,6 +32,12 @@ struct ParallelDetailView: View {
             AdaptiveModernBackground()
 
             if themeManager.isMidnightEmerald {
+                EmCoverBand(assetName: "PropheticParallelsCover")
+                    .frame(height: 300)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+
+            if themeManager.isMidnightEmerald {
                 emeraldScroll
             } else {
             ScrollView {
@@ -83,6 +89,7 @@ struct ParallelDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {

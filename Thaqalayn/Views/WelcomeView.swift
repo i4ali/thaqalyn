@@ -2,226 +2,82 @@
 //  WelcomeView.swift
 //  Thaqalayn
 //
-//  Beautiful first launch welcome screen with authentication options
+//  First-launch welcome screen. The shrine hero loop (doves over the floodlit
+//  shrine at night) greets the user before anything else - wordmark and welcome
+//  set in the art's dark sky, feature rows and the account options on emerald
+//  below. Reduce Motion / missing video falls back to the procedural doves.
 //
 
 import SwiftUI
 
 struct WelcomeView: View {
-    @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var supabaseService = SupabaseService.shared
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var showingAuthentication = false
-    @State private var isAnimating = false
-    
+
+    // The screen is fixed emerald-night regardless of the active theme,
+    // matching the onboarding flow it leads into.
+    private let gold = Color(hex: "ECD49A")
+    private let cream = Color(hex: "F0EDE4")
+    private let night = Color(hex: "0A1512")
+
     var body: some View {
         ZStack {
-            // Background gradient with floating orbs
-            LinearGradient(
-                colors: [
-                    themeManager.primaryBackground,
-                    themeManager.secondaryBackground,
-                    themeManager.tertiaryBackground
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-            
-            // Floating gradient orbs
-            RadialGradient(
-                colors: [
-                    themeManager.floatingOrbColors[0],
-                    Color.clear
-                ],
-                center: .topTrailing,
-                startRadius: 0,
-                endRadius: 250
-            )
-            
-            RadialGradient(
-                colors: [
-                    themeManager.floatingOrbColors[1],
-                    Color.clear
-                ],
-                center: .bottomLeading,
-                startRadius: 0,
-                endRadius: 300
-            )
-            
+            OnboardingBackground(tilt: .peach)
+
+            hero
+
             ScrollView {
-                VStack(spacing: 40) {
-                    Spacer(minLength: 80)
-                    
-                    // Welcome content
-                    VStack(spacing: 32) {
-                        // App icon and name
-                        VStack(spacing: 20) {
-                            // Animated floating circles
-                            ZStack {
-                                ForEach(0..<3) { index in
-                                    Circle()
-                                        .fill(themeManager.accentGradient.opacity(0.4))
-                                        .frame(width: 80 - CGFloat(index * 15), height: 80 - CGFloat(index * 15))
-                                        .blur(radius: 3)
-                                        .offset(y: isAnimating ? -10 : 10)
-                                        .animation(
-                                            Animation.easeInOut(duration: 2.5)
-                                                .repeatForever(autoreverses: true)
-                                                .delay(Double(index) * 0.4),
-                                            value: isAnimating
-                                        )
-                                }
-                            }
-                            .frame(height: 100)
-                            
-                            Text("ثقلين")
-                                .font(.system(size: 64, weight: .light, design: .default))
-                                .foregroundColor(themeManager.primaryText)
-                                .shadow(color: themeManager.semanticBlue.opacity(0.6), radius: 25)
-                        }
-                        
-                        // Welcome message
-                        VStack(spacing: 16) {
-                            Text("Welcome to Thaqalayn")
-                                .font(.system(size: 28, weight: .semibold))
-                                .foregroundColor(themeManager.primaryText)
-                                .multilineTextAlignment(.center)
-                            
-                            Text("Discover the profound depths of the Quran.")
-                                .font(.system(size: 18, weight: .medium))
-                                .foregroundColor(themeManager.secondaryText)
-                                .multilineTextAlignment(.center)
-                                .lineLimit(nil)
-                        }
-                        .padding(.horizontal, 20)
-                        
-                        // Features highlight
-                        VStack(spacing: 16) {
-                            FeatureRow(
-                                icon: "ph-bank-fill",
-                                title: "Foundation Layer",
-                                description: "Simple explanations and historical context"
-                            )
+                VStack(spacing: 0) {
+                    Color.clear.frame(height: 64)
 
-                            FeatureRow(
-                                icon: "ph-books-fill",
-                                title: "Classical Shia Commentary",
-                                description: "Tabatabai, Tabrisi, and traditional scholars"
-                            )
+                    Text("ثقلين")
+                        .font(.system(size: 54, weight: .light))
+                        .foregroundColor(cream)
+                        .shadow(color: .black.opacity(0.55), radius: 18, x: 0, y: 2)
 
-                            FeatureRow(
-                                icon: "ph-globe-hemisphere-west-fill",
-                                title: "Contemporary Insights",
-                                description: "Modern perspectives and scientific analysis"
-                            )
+                    Text("Welcome to Thaqalayn")
+                        .font(EmType.serif(27, .semiBold))
+                        .foregroundColor(cream)
+                        .shadow(color: .black.opacity(0.5), radius: 12, x: 0, y: 2)
+                        .padding(.top, 12)
 
-                            FeatureRow(
-                                icon: "ph-star-fill",
-                                title: "Ahlul Bayt Wisdom",
-                                description: "Hadith from the 14 Infallibles"
-                            )
-                        }
-                        .padding(.horizontal, 20)
-                    }
-                    
-                    // Access options
-                    VStack(spacing: 20) {
-                        // Continue as Guest button (primary)
-                        Button(action: {
-                            markWelcomeAsShown()
-                            dismiss()
-                        }) {
-                            HStack {
-                                Image(systemName: "book.closed")
-                                    .font(.system(size: 18, weight: .semibold))
-                                Text("Continue as Guest")
-                                    .font(.system(size: 18, weight: .semibold))
-                            }
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 16)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(themeManager.purpleGradient)
-                            )
-                            .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 12)
-                        }
-                        .buttonStyle(EmPressStyle())
-
-                        // Sign up button
-                        Button(action: {
-                            showingAuthentication = true
-                        }) {
-                            HStack {
-                                Image(systemName: "person.badge.plus")
-                                    .font(.system(size: 18, weight: .semibold))
-                                Text("Create Account")
-                                    .font(.system(size: 18, weight: .semibold))
-                            }
-                            .foregroundColor(themeManager.primaryText)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 16)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1.5)
-                                    )
-                            )
-                        }
-                        .buttonStyle(EmPressStyle())
-
-                        // Sign in button
-                        Button(action: {
-                            showingAuthentication = true
-                        }) {
-                            HStack {
-                                Image(systemName: "person.circle")
-                                    .font(.system(size: 18, weight: .semibold))
-                                Text("Sign In")
-                                    .font(.system(size: 18, weight: .semibold))
-                            }
-                            .foregroundColor(themeManager.primaryText)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 16)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(themeManager.glassEffect)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(themeManager.strokeColor, lineWidth: 1.5)
-                                    )
-                            )
-                        }
-                        .buttonStyle(EmPressStyle())
-
-                        // Note about account benefits (optional)
-                        VStack(spacing: 8) {
-                            Text("Account Benefits")
-                                .font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(themeManager.primaryText)
-                            
-                            Text("Create an account to sync your bookmarks across devices and access additional features.")
-                                .font(.system(size: 12, weight: .medium))
-                                .foregroundColor(themeManager.secondaryText)
-                                .multilineTextAlignment(.center)
-                        }
+                    Text("The Qur'an and the Ahlul Bayt, together.")
+                        .font(.system(size: 15, weight: .medium))
+                        .foregroundColor(cream.opacity(0.82))
+                        .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 1)
                         .padding(.top, 8)
+
+                    Color.clear.frame(height: 150)
+
+                    VStack(spacing: 9) {
+                        featureRow(icon: "ph-books-fill",
+                                   title: "Five layers of tafsir",
+                                   description: "From foundation to Ahlul Bayt wisdom")
+                        featureRow(icon: "ph-moon-stars-fill",
+                                   title: "Journeys and Deep Dives",
+                                   description: "Sacred seasons, surahs, and themes")
                     }
-                    .padding(.horizontal, 24)
-                    
-                    Spacer(minLength: 40)
+
+                    continueButton
+                        .padding(.top, 20)
+
+                    accountButton
+                        .padding(.top, 12)
+
+                    Text("An account syncs your bookmarks and progress across devices.")
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundColor(cream.opacity(0.5))
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 16)
+                        .padding(.bottom, 40)
                 }
+                .padding(.horizontal, 24)
             }
         }
-        .darkScreenAura()
         .navigationBarHidden(true)
-        .preferredColorScheme(themeManager.colorScheme)
-        .onAppear {
-            isAnimating = true
-        }
+        .preferredColorScheme(.dark)
         .fullScreenCover(isPresented: $showingAuthentication) {
             AuthenticationView()
                 .onDisappear {
@@ -233,46 +89,123 @@ struct WelcomeView: View {
                 }
         }
     }
-    
-    private func markWelcomeAsShown() {
-        UserDefaults.standard.set(true, forKey: "hasShownWelcome")
-    }
-}
 
-struct FeatureRow: View {
-    let icon: String
-    let title: String
-    let description: String
-    @StateObject private var themeManager = ThemeManager.shared
-    
-    var body: some View {
-        HStack(spacing: 16) {
-            PhosphorIcon(name: icon, size: 24)
-                .foregroundColor(themeManager.accentColor)
-                .frame(width: 32, height: 32)
+    // MARK: - Hero
 
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                
-                Text(description)
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
+    private var hero: some View {
+        VStack(spacing: 0) {
+            Group {
+                if ShrineHeroVideoLayer.isAvailable && !reduceMotion {
+                    ShrineHeroVideoLayer(isActive: true)
+                } else {
+                    ShrineDovesLayer()
+                }
             }
-            
+            .frame(height: 440)
+            .clipped()
+            .mask(
+                LinearGradient(
+                    stops: [
+                        .init(color: .black, location: 0),
+                        .init(color: .black, location: 0.62),
+                        .init(color: .clear, location: 1),
+                    ],
+                    startPoint: .top, endPoint: .bottom
+                )
+            )
+            .overlay(
+                // Legibility scrim for the wordmark zone; the loop's own scrim
+                // is tuned for the hadith card, not a top-set title.
+                LinearGradient(
+                    stops: [
+                        .init(color: night.opacity(0.55), location: 0),
+                        .init(color: night.opacity(0.28), location: 0.55),
+                        .init(color: .clear, location: 1),
+                    ],
+                    startPoint: .top, endPoint: .bottom
+                )
+            )
+
+            Spacer(minLength: 0)
+        }
+        .ignoresSafeArea(edges: .top)
+        .allowsHitTesting(false)
+    }
+
+    // MARK: - Rows + buttons
+
+    private func featureRow(icon: String, title: String, description: String) -> some View {
+        HStack(spacing: 14) {
+            PhosphorIcon(name: icon, size: 20)
+                .foregroundColor(gold)
+                .frame(width: 28, height: 28)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(cream)
+                Text(description)
+                    .font(.system(size: 12.5, weight: .medium))
+                    .foregroundColor(cream.opacity(0.55))
+            }
+
             Spacer()
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 16)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
         .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(themeManager.glassEffect)
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(Color.white.opacity(0.05))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(themeManager.strokeColor, lineWidth: 0.5)
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .stroke(Color.white.opacity(0.07), lineWidth: 1)
                 )
         )
+    }
+
+    private var continueButton: some View {
+        Button(action: {
+            markWelcomeAsShown()
+            dismiss()
+        }) {
+            Text("Continue as Guest")
+                .font(.system(size: 16.5, weight: .bold))
+                .foregroundColor(night)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .background(
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .fill(LinearGradient(colors: [Color(hex: "F3DFA6"), Color(hex: "E3C078")],
+                                             startPoint: .top, endPoint: .bottom))
+                )
+                .shadow(color: gold.opacity(0.25), radius: 24, x: 0, y: 10)
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private var accountButton: some View {
+        Button(action: {
+            showingAuthentication = true
+        }) {
+            Text("Create Account or Sign In")
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundColor(cream)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .background(
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .fill(Color.white.opacity(0.05))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                                .stroke(Color.white.opacity(0.14), lineWidth: 1.5)
+                        )
+                )
+        }
+        .buttonStyle(EmPressStyle())
+    }
+
+    private func markWelcomeAsShown() {
+        UserDefaults.standard.set(true, forKey: "hasShownWelcome")
     }
 }
 

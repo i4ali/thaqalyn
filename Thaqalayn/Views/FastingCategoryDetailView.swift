@@ -30,6 +30,12 @@ struct FastingCategoryDetailView: View {
             // Adaptive background
             AdaptiveModernBackground()
 
+            if themeManager.isMidnightEmerald {
+                EmCoverBand(assetName: "FastingCover")
+                    .frame(height: 300)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+
             ScrollView {
                 if themeManager.isMidnightEmerald {
                     emeraldSections
@@ -140,6 +146,7 @@ struct FastingCategoryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {

@@ -124,48 +124,66 @@ private struct SeasonSpotlightHero: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            SeasonGlyph(descriptor: descriptor, pointSize: 32)
-                .frame(width: 68, height: 68)
-                .background(
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .fill(RadialGradient(colors: [gold.opacity(0.26), gold.opacity(0.05)],
-                                             center: .center, startRadius: 2, endRadius: 44))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                .stroke(gold.opacity(0.3), lineWidth: 1)
-                        )
+            // The season's TodayHero art crowns the card - the same band the
+            // Today tab will greet the user with when the season arrives.
+            Image(heroAsset)
+                .resizable()
+                .scaledToFill()
+                .frame(height: 132)
+                .frame(maxWidth: .infinity)
+                .clipped()
+                .mask(
+                    LinearGradient(
+                        stops: [
+                            .init(color: .black, location: 0),
+                            .init(color: .black, location: 0.55),
+                            .init(color: .black.opacity(0.05), location: 1),
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
                 )
-                .shadow(color: isActive ? gold.opacity(0.35) : .clear, radius: 18)
-                .padding(.bottom, 16)
+                .accessibilityHidden(true)
 
-            Text(descriptor.eyebrow)
-                .onbEyebrow()
-                .foregroundColor(gold.opacity(0.6))
+            VStack(alignment: .leading, spacing: 0) {
+                Text(descriptor.eyebrow)
+                    .onbEyebrow()
+                    .foregroundColor(gold.opacity(0.6))
 
-            Text(descriptor.title)
-                .onbHeroTitle()
-                .foregroundColor(themeManager.primaryText)
-                .padding(.top, 4)
-                .padding(.bottom, 13)
+                Text(descriptor.title)
+                    .onbHeroTitle()
+                    .foregroundColor(themeManager.primaryText)
+                    .padding(.top, 4)
+                    .padding(.bottom, 13)
 
-            statusPill
+                statusPill
 
-            Text(SeasonCopy.blurb(descriptor.id))
-                .onbBody()
-                .foregroundColor(themeManager.secondaryText)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.top, 14)
+                Text(SeasonCopy.blurb(descriptor.id))
+                    .onbBody()
+                    .foregroundColor(themeManager.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 14)
+            }
+            .padding(.horizontal, 22)
+            .padding(.bottom, 22)
+            .padding(.top, 2)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(22)
-        .background(heroBackground)
+        .background(RoundedRectangle(cornerRadius: 26, style: .continuous).fill(Color.white.opacity(0.05)))
+        .clipShape(RoundedRectangle(cornerRadius: 26, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 26, style: .continuous)
+                .stroke(gold.opacity(isActive ? 0.4 : 0.12), lineWidth: 1)
+        )
+        .shadow(color: isActive ? gold.opacity(0.16) : .black.opacity(0.35),
+                radius: isActive ? 22 : 16, x: 0, y: 8)
         .overlay(alignment: .topTrailing) {
             if !isActive {
                 Text("NEXT UP")
                     .onbPill()
                     .foregroundColor(gold)
                     .padding(.horizontal, 9).padding(.vertical, 4)
-                    .background(Capsule().stroke(gold.opacity(0.4), lineWidth: 1))
+                    .background(Capsule().fill(Color(hex: "0A1512").opacity(0.45)))
+                    .overlay(Capsule().stroke(gold.opacity(0.4), lineWidth: 1))
                     .padding(16)
             }
         }
@@ -174,15 +192,17 @@ private struct SeasonSpotlightHero: View {
         .animation(.easeOut(duration: 0.5).delay(0.1), value: isVisible)
     }
 
-    private var heroBackground: some View {
-        RoundedRectangle(cornerRadius: 26, style: .continuous)
-            .fill(Color.white.opacity(0.05))
-            .overlay(
-                RoundedRectangle(cornerRadius: 26, style: .continuous)
-                    .stroke(gold.opacity(isActive ? 0.4 : 0.12), lineWidth: 1)
-            )
-            .shadow(color: isActive ? gold.opacity(0.16) : .black.opacity(0.35),
-                    radius: isActive ? 22 : 16, x: 0, y: 8)
+    /// The TodayHero band for this season (same windows as `ReminderSeason`);
+    /// the everyday band backstops any future season without art.
+    private var heroAsset: String {
+        switch descriptor.id {
+        case "ramadan":   return "TodayHeroRamadan"
+        case "hajj":      return "TodayHeroHajj"
+        case "muharram":  return "TodayHeroMuharram"
+        case "fatimiyya": return "TodayHeroFatimiyya"
+        case "arbaeen":   return "TodayHeroArbaeen"
+        default:          return "TodayHeroEveryday"
+        }
     }
 
     @ViewBuilder private var statusPill: some View {

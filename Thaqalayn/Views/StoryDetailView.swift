@@ -31,6 +31,12 @@ struct StoryDetailView: View {
             // Adaptive background
             AdaptiveModernBackground()
 
+            if themeManager.isMidnightEmerald {
+                EmCoverBand(assetName: "PropheticStoriesCover")
+                    .frame(height: 300)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+
             ScrollView {
                 if themeManager.isMidnightEmerald {
                     emeraldSections
@@ -220,6 +226,7 @@ struct StoryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {

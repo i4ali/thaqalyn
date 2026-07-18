@@ -35,6 +35,12 @@ struct AhlulbaytEntryDetailView: View {
             // Adaptive background
             AdaptiveModernBackground()
 
+            if themeManager.isMidnightEmerald {
+                EmCoverBand(assetName: "AhlulBaytCover")
+                    .frame(height: 300)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+
             ScrollView {
                 if themeManager.isMidnightEmerald {
                     emeraldSections
@@ -241,6 +247,7 @@ struct AhlulbaytEntryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {

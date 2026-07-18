@@ -9,70 +9,15 @@ import SwiftUI
 
 struct DuasCarouselCard: View {
     @Binding var showFullView: Bool
-    @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 10) {
-                ZStack {
-                    Circle()
-                        .fill(themeManager.accentGradient)
-                        .frame(width: 44, height: 44)
-                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 6)
-
-                    Image(systemName: "hands.sparkles.fill")
-                        .font(.system(size: 22, weight: .semibold))
-                        .foregroundColor(.white)
-                }
-
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(localizedTitle)
-                        .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(themeManager.primaryText)
-
-                    Text(localizedSubtitle)
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-
-                Spacer()
-            }
-
-            Button(action: { showFullView = true }) {
-                HStack {
-                    Text("Tap to explore")
-                        .font(.system(size: 14, weight: .semibold))
-
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: 13, weight: .semibold))
-                }
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background {
-                    Capsule()
-                        .fill(themeManager.accentGradient)
-                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 6)
-                }
-            }
-        }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 16)
-        .frame(height: 145)
-        .background {
-            RoundedRectangle(cornerRadius: 24)
-                .fill(themeManager.isDarkMode ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(
-                    color: themeManager.isDarkMode ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
-                    radius: 16, x: 0, y: 4
-                )
+        PosterCarouselCard(
+            assetName: "DailyDuasCover",
+            title: localizedTitle,
+            subtitle: localizedSubtitle
+        ) {
+            showFullView = true
         }
     }
 
@@ -95,4 +40,5 @@ struct DuasCarouselCard: View {
 
 #Preview {
     DuasCarouselCard(showFullView: .constant(false))
+        .padding()
 }

@@ -17,16 +17,16 @@ struct SurahExperienceScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     @State private var isVisible = false      // staggered entrance
-    @State private var haloPulse = false      // hero glow breathes
     @State private var index = 0              // which surah the hero shows
 
     /// Featured surahs a user can step inside (drawn from the real
-    /// "Inside the Surah" catalog - `SurahExperienceDescriptor.all`).
-    private let surahs: [(ar: String, en: String, story: String)] = [
-        ("يُوسُف",      "Surah Yusuf",     "The most beautiful of stories - loss, patience, reunion."),
-        ("يس",          "Surah Yasin",     "The heart of the Qur'an - and what it keeps asking you."),
-        ("الرَّحْمَٰن",  "Surah al-Rahman", "One question, asked thirty-one times."),
-        ("الْمُلْك",     "Surah al-Mulk",   "The protector - whose hand holds the kingdom."),
+    /// "Inside the Surah" catalog - `SurahExperienceDescriptor.all`),
+    /// each with the cover art the user will meet again on the shelf.
+    private let surahs: [(ar: String, en: String, story: String, cover: String)] = [
+        ("يُوسُف",      "Surah Yusuf",     "The most beautiful of stories - loss, patience, reunion.", "YusufCover"),
+        ("يس",          "Surah Yasin",     "The heart of the Qur'an - and what it keeps asking you.", "YasinCover"),
+        ("الرَّحْمَٰن",  "Surah al-Rahman", "One question, asked thirty-one times.", "RahmanCover"),
+        ("الْمُلْك",     "Surah al-Mulk",   "The protector - whose hand holds the kingdom.", "MulkCover"),
     ]
 
     /// Advances the cross-fading hero every 2.6s.
@@ -41,7 +41,6 @@ struct SurahExperienceScreen: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
             isVisible = true
-            haloPulse = true
         }
         .onReceive(cycle) { _ in
             withAnimation(.easeInOut(duration: 0.7)) {
@@ -106,47 +105,74 @@ struct SurahExperienceScreen: View {
         }
     }
 
-    // MARK: - Cross-fading surah hero (always-on motion + breadth of surahs)
+    // MARK: - Cross-fading cover deck (always-on motion + breadth of surahs)
+    // The real shelf covers, fanned like a hand of posters: the front card
+    // cross-fades through the catalog, the two behind whisper "there are more".
 
     private var surahHero: some View {
-        ZStack {
-            Circle()
-                .fill(RadialGradient(
-                    colors: [Color(hex: "ECD49A").opacity(0.15), .clear],
-                    center: .center, startRadius: 0, endRadius: 135))
-                .frame(width: 270, height: 270)
-                .scaleEffect(haloPulse ? 1.08 : 0.96)
-                .animation(.easeInOut(duration: 2.6).repeatForever(autoreverses: true),
-                           value: haloPulse)
+        VStack(spacing: 16) {
+            ZStack {
+                deckCard(surahs[(index + 3) % surahs.count].cover)
+                    .scaleEffect(0.92)
+                    .rotationEffect(.degrees(-7))
+                    .offset(x: -58)
+                    .opacity(0.55)
+                    .id("left\(index)")
+                    .transition(.opacity)
 
-            VStack(spacing: 12) {
+                deckCard(surahs[(index + 1) % surahs.count].cover)
+                    .scaleEffect(0.92)
+                    .rotationEffect(.degrees(7))
+                    .offset(x: 58)
+                    .opacity(0.55)
+                    .id("right\(index)")
+                    .transition(.opacity)
+
+                deckCard(surahs[index].cover)
+                    .shadow(color: .black.opacity(0.5), radius: 26, x: 0, y: 14)
+                    .id("front\(index)")
+                    .transition(.opacity)
+            }
+
+            VStack(spacing: 6) {
                 Text(surahs[index].ar)
-                    .font(EmType.arabic(68))
-                    .foregroundColor(Color(hex: "F1E8D6"))
+                    .font(EmType.arabic(24))
+                    .foregroundColor(Color(hex: "ECD49A"))
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
                 Text(surahs[index].en.uppercased())
-                    .font(.system(size: 14, weight: .bold))
+                    .font(.system(size: 13, weight: .bold))
                     .tracking(3)
-                    .foregroundColor(Color(hex: "ECD49A"))
+                    .foregroundColor(Color(hex: "F1E8D6"))
                 Text(surahs[index].story)
-                    .font(.system(size: 14, weight: .medium))
+                    .font(.system(size: 13.5, weight: .medium))
                     .foregroundColor(DeepDivePalette.mute)
                     .multilineTextAlignment(.center)
                     .lineSpacing(3)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, 4)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 10)
             }
-            .id(index)
+            .id("name\(index)")
             .transition(.asymmetric(
-                insertion: .opacity.combined(with: .offset(y: 20)),
-                removal: .opacity.combined(with: .offset(y: -20))))
+                insertion: .opacity.combined(with: .offset(y: 14)),
+                removal: .opacity.combined(with: .offset(y: -14))))
         }
-        .frame(height: 250)
+        .frame(height: 340)
         .scaleEffect(isVisible ? 1 : 0.82)
         .opacity(isVisible ? 1 : 0)
         .animation(.spring(response: 0.7, dampingFraction: 0.72).delay(0.55), value: isVisible)
+    }
+
+    private func deckCard(_ asset: String) -> some View {
+        Image(asset)
+            .resizable()
+            .scaledToFill()
+            .frame(width: 186, height: 232)
+            .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                    .stroke(Color(hex: "ECD49A").opacity(0.28), lineWidth: 1)
+            )
     }
 
     // MARK: - Footer
