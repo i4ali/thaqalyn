@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabr Deep Dive - Audit Findings</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Fragment+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0F0B; --bg2:#0D130E; --surface:#111A13; --surface2:#152017;
+  --border:rgba(227,195,126,.13); --hair:rgba(255,255,255,.07);
+  --text:#ECE7DB; --dim:#9FAA9C; --faint:#6E7A6F;
+  --gold:#C9A55C; --goldB:#E3C37E;
+  --blocker:#C4614E; --blocker-dim:rgba(196,97,78,.12);
+  --should:#C9A55C; --should-dim:rgba(201,165,92,.10);
+  --polish:#7FA184; --polish-dim:rgba(127,161,132,.10);
+  --clean:#8CAE6E; --clean-dim:rgba(140,174,110,.10);
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --mono:'Fragment Mono', ui-monospace, 'SF Mono', monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#F6F3EA; --bg2:#F1EDE2; --surface:#FBF9F2; --surface2:#F4F0E5;
+    --border:rgba(138,109,51,.22); --hair:rgba(0,0,0,.08);
+    --text:#26301F; --dim:#5C6A57; --faint:#8A937F;
+    --gold:#8A6D33; --goldB:#6E5626;
+    --blocker:#A6402E; --blocker-dim:rgba(166,64,46,.09);
+    --should:#8A6D33; --should-dim:rgba(138,109,51,.09);
+    --polish:#4F7A57; --polish-dim:rgba(79,122,87,.09);
+    --clean:#5B7F3B; --clean-dim:rgba(91,127,59,.09);
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:
+    radial-gradient(120% 50% at 50% -10%, rgba(227,195,126,.05), transparent 60%),
+    var(--bg);
+  color:var(--text); font-family:var(--mono); font-size:14px; line-height:1.65;
+  padding:0 20px 90px;
+}
+.wrap{max-width:960px; margin:0 auto;}
+header{padding:64px 0 40px; border-bottom:1px solid var(--border);}
+.eyebrow{color:var(--gold); font-size:11px; letter-spacing:4px; text-transform:uppercase;}
+h1{font-family:var(--serif); font-weight:600; font-size:46px; line-height:1.1; margin-top:14px;}
+h1 em{font-style:italic; color:var(--goldB);}
+.sub{color:var(--dim); max-width:640px; margin-top:14px; font-size:13.5px;}
+.verdict{
+  margin-top:26px; padding:18px 22px; border:1px solid var(--border); border-left:3px solid var(--blocker);
+  background:var(--blocker-dim); border-radius:0 10px 10px 0; max-width:720px;
+}
+.verdict p{font-family:var(--serif); font-size:19px; line-height:1.45;}
+.verdict small{display:block; margin-top:8px; color:var(--dim); font-family:var(--mono); font-size:11.5px;}
+.stats{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px;}
+.stat{border:1px solid var(--hair); border-radius:10px; padding:12px 18px; background:var(--surface); min-width:118px;}
+.stat b{font-family:var(--serif); font-size:30px; font-weight:600; display:block; line-height:1;}
+.stat span{font-size:10.5px; letter-spacing:1.6px; text-transform:uppercase; color:var(--dim);}
+.stat.s-blocker b{color:var(--blocker);} .stat.s-should b{color:var(--should);}
+.stat.s-polish b{color:var(--polish);} .stat.s-clean b{color:var(--clean);}
+nav{
+  position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--hair);
+  display:flex; gap:4px; overflow-x:auto; padding:10px 0; margin-bottom:8px;
+}
+nav a{color:var(--dim); text-decoration:none; font-size:11px; letter-spacing:1.4px; text-transform:uppercase; padding:6px 12px; border-radius:20px; white-space:nowrap;}
+nav a:hover{color:var(--text); background:var(--surface2);}
+nav a .dot{display:inline-block; width:6px; height:6px; border-radius:50%; margin-right:7px; vertical-align:1px;}
+section{padding-top:44px;}
+.sechead{display:flex; align-items:baseline; gap:14px; margin-bottom:8px;}
+.sechead h2{font-family:var(--serif); font-weight:600; font-size:30px;}
+.sechead .count{color:var(--faint); font-size:12px;}
+.secnote{color:var(--dim); font-size:12.5px; max-width:680px; margin-bottom:22px;}
+.finding{border:1px solid var(--hair); border-radius:12px; background:var(--surface); margin-bottom:18px; overflow:hidden; animation:fadeUp .45s ease both;}
+.finding:nth-child(odd){animation-delay:.05s;}
+.f-head{display:flex; align-items:flex-start; gap:16px; padding:18px 22px 0;}
+.f-num{font-family:var(--serif); font-weight:600; font-size:34px; line-height:1; min-width:44px; color:var(--faint);}
+.f-titlewrap{flex:1; min-width:0;}
+.f-title{font-family:var(--serif); font-weight:600; font-size:20.5px; line-height:1.3;}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:9px;}
+.chip{font-size:9.5px; letter-spacing:1.4px; text-transform:uppercase; padding:3px 10px; border-radius:20px; border:1px solid var(--hair); color:var(--dim); background:var(--bg2);}
+.chip.sev-b{color:var(--blocker); border-color:var(--blocker); background:var(--blocker-dim);}
+.chip.sev-s{color:var(--should); border-color:var(--should); background:var(--should-dim);}
+.chip.sev-p{color:var(--polish); border-color:var(--polish); background:var(--polish-dim);}
+.f-body{padding:14px 22px 20px 82px;}
+.f-body p{color:var(--dim); font-size:13px; max-width:700px;}
+.f-body p + p{margin-top:10px;}
+.f-body p b{color:var(--text); font-weight:400;}
+.f-body code{font-size:12px; background:var(--bg2); border:1px solid var(--hair); border-radius:4px; padding:1px 6px;}
+.finding.b{border-left:3px solid var(--blocker);}
+.finding.s{border-left:3px solid var(--should);}
+.finding.p{border-left:3px solid var(--polish);}
+.rw{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; max-width:760px;}
+@media (max-width:700px){ .rw{grid-template-columns:1fr;} .f-body{padding-left:22px;} .f-num{min-width:32px; font-size:26px;} }
+.rw > div{border:1px solid var(--hair); border-radius:8px; padding:12px 14px; background:var(--bg2); min-width:0;}
+.rw .lbl{font-size:9.5px; letter-spacing:1.6px; text-transform:uppercase; margin-bottom:8px; display:block;}
+.rw .before .lbl{color:var(--blocker);} .rw .after .lbl{color:var(--clean);}
+.rw q{font-family:var(--serif); font-size:16.5px; line-height:1.45; quotes:'\201C' '\201D'; color:var(--text); overflow-wrap:break-word;}
+.rw .before q{color:var(--dim);}
+.cleangrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px;}
+.cl{border:1px solid var(--hair); border-left:3px solid var(--clean); border-radius:10px; background:var(--surface); padding:14px 16px; animation:fadeUp .45s ease both;}
+.cl b{font-family:var(--serif); font-size:17px; font-weight:600; display:block; margin-bottom:5px;}
+.cl span{color:var(--dim); font-size:12px;}
+.replybox{margin-top:52px; border:1px solid var(--border); border-radius:12px; padding:22px 26px; background:linear-gradient(180deg, var(--should-dim), transparent);}
+.replybox h3{font-family:var(--serif); font-size:22px; font-weight:600; margin-bottom:8px;}
+.replybox p{color:var(--dim); font-size:12.5px; max-width:640px;}
+.replybox p + p{margin-top:8px;}
+.replybox code{background:var(--bg2); border:1px solid var(--hair); border-radius:4px; padding:1px 7px; font-size:12px;}
+@keyframes fadeUp{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;}}
+@media (prefers-reduced-motion: reduce){ .finding,.cl{animation:none;} html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Thaqalayn · Theme Deep Dive Audit · 2026-07-17</div>
+  <h1>Sabr - <em>Three Stations of the Patient Heart</em><br>Consolidated Audit Findings</h1>
+  <p class="sub">Retroactive audit of the second-shipped theme dive, per the theme-deep-dive skill: three flag-only auditors - A (flow, shape &amp; the ledger), B (theology, sourcing &amp; Arabic), C (readability). Auditor B ran full-text searches against digitized primary sources (OpenITI corpus: al-Irshad, al-Luhuf &times;2, complete Bihar al-Anwar, al-Amali &times;2, al-Kafi, Khwarazmi, Waq'at al-Taff). Overlapping findings are merged; every item names its auditor(s). Nothing has been changed - each finding awaits your approval.</p>
+  <div class="verdict">
+    <p>The Qur'anic layer is perfect (5/5 word-perfect) and the ledger is clean in every direction - but both of Sabr's devotional anchors, the climax line and the closing dua, are cited to books that do not contain them, and the two Karbala beats assume a story the surface never tells.</p>
+    <small>Auditor A: "connectors truthful, pacing holds, no filler" &nbsp;·&nbsp; Auditor B: "zero hits in two complete al-Luhuf digitizations" &nbsp;·&nbsp; Auditor C: "beat 09 (Ayyub) is the model card"</small>
+  </div>
+  <div class="stats">
+    <div class="stat s-blocker"><b>2</b><span>Blockers</span></div>
+    <div class="stat s-should"><b>15</b><span>Should-fix</span></div>
+    <div class="stat s-polish"><b>10</b><span>Polish</span></div>
+    <div class="stat s-clean"><b>10</b><span>Clean areas</span></div>
+  </div>
+</header>
+
+<nav>
+  <a href="#blocker"><span class="dot" style="background:var(--blocker)"></span>Blockers</a>
+  <a href="#should"><span class="dot" style="background:var(--should)"></span>Should-fix</a>
+  <a href="#polish"><span class="dot" style="background:var(--polish)"></span>Polish</a>
+  <a href="#clean"><span class="dot" style="background:var(--clean)"></span>Clean areas</a>
+  <a href="#reply"><span class="dot" style="background:var(--goldB)"></span>How to approve</a>
+</nav>
+
+<!-- ============ BLOCKERS ============ -->
+<section id="blocker">
+  <div class="sechead"><h2>Blockers</h2><span class="count">2 findings</span></div>
+  <p class="secnote">Both are cited-book failures on the dive's most sacred beats - the design doc's own verification rows ("Confirm the fuller wording / exact citation") were never closed before shipping. The words themselves are attested in the tradition; the citations are wrong.</p>
+
+  <article class="finding b">
+    <div class="f-head">
+      <div class="f-num">1</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The climax line is not in al-Luhuf</div>
+        <div class="chips"><span class="chip sev-b">Blocker</span><span class="chip">Beat 12 · The Last Prostration</span><span class="chip">Auditors A + B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;صَبْرًا عَلَىٰ قَضَائِكَ يَا رَبِّ، لَا إِلَٰهَ سِوَاكَ&rdquo; is sourced to <code>al-Luhuf of Ibn Tawus</code> - but two complete al-Luhuf digitizations return <b>zero hits</b> for any fragment of it. Al-Luhuf's actual final-moment words are different (&ldquo;بسم الله وبالله وعلى ملة رسول الله&rdquo; as he falls). The line is also absent from all of Bihar al-Anwar, al-Irshad, Khwarazmi's Maqtal, and Waq'at al-Taff. Its traceable carrier is the <b>late maqtal tradition</b>: Maqtal al-Husayn of al-Muqarram p. 283 (20th c.), quoting the popular &ldquo;Maqtal Abi Mikhnaf&rdquo; print. Same failure mode the Shukr audit caught - but on the dive's climax.</p>
+      <p><b>Fix options:</b> (a) keep the beloved line and recite honestly - <code>Maqtal al-Husayn of al-Muqarram</code> or &ldquo;the maqtal histories record&rdquo; (weaker authority, stated plainly); (b) keep al-Luhuf and swap the Arabic to its attested final-moment words. Auditor B's option (c) - the Ashura-morning dua in al-Irshad - is <b>off the table</b>: it is verbatim Tawakkul's climax (&ldquo;اللهم أنت ثقتي في كل كرب&rdquo;), verified in TawakkulDeepDive.swift.</p>
+    </div>
+  </article>
+
+  <article class="finding b">
+    <div class="f-head">
+      <div class="f-num">2</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The closing dua is not in al-Amali of al-Saduq</div>
+        <div class="chips"><span class="chip sev-b">Blocker</span><span class="chip">Beat 14 · A Prayer in Trial</span><span class="chip">Auditor B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;رَبِّ كَمْ مِنْ نِعْمَةٍ&hellip; فَلَمْ يَخْذُلْنِي&rdquo; is sourced to <code>Imam Ja'far al-Sadiq · al-Amali of al-Saduq</code> - zero hits for every fragment in two complete Amali digitizations (the Amali's al-Sadiq-before-al-Mansur audience, h. 978, contains dialogue only). The real carriers: <b>(a)</b> as Imam al-Sadiq entering upon al-Mansur - <b>Muhaj al-Da'awat of Ibn Tawus</b>, copied in Bihar al-Anwar 91:312-313; <b>(b)</b> near-identical wording as Imam al-Sajjad during Musrif ibn Uqba's march on Medina - <b>al-Irshad of al-Mufid 2:150-151</b> / Bihar 46:121. The dive's Arabic also mixes recensions: it drops the <code>لك</code> both sources have in clause one (&ldquo;قَلَّ لَكَ عِنْدَهَا شُكْرِي&rdquo;).</p>
+      <p><b>Fix options:</b> (a) <b>keep Imam al-Sadiq</b>, cite Muhaj al-Da'awat (· Bihar al-Anwar), restore the <code>لك</code> - recommended, because Sabr's is the only non-Sajjad close in the series (Yaqin Dua 20, Tawakkul Dua 28, Shukr Dua 37 are all Imam al-Sajjad; option (b) would make it four Sajjad closes in four dives); or (b) reattribute to Imam al-Sajjad citing al-Irshad, matching that recension - which also changes the intro's &ldquo;sixth Imam&rdquo; to &ldquo;fourth&rdquo;.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ SHOULD-FIX ============ -->
+<section id="should">
+  <div class="sechead"><h2>Should-fix</h2><span class="count">15 findings</span></div>
+  <p class="secnote">Findings 3 and 4 were rated Blocker-grade by Auditor C - the two Karbala-arc beats fail the &ldquo;surface of the text&rdquo; bar the later audits were hardened against. Then the Movement II ladder, a factual overshoot at the summit, and the series-ledger gaps.</p>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">3</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The Willing Son&rdquo;: the entire story is off the surface</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 08 · 37:102</span><span class="chip">Auditors A + C · C rated Blocker</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Nothing on the card names Isma'il, Ibrahim, the dream, or the sacrifice. &ldquo;He said&rdquo; - who? Commanded to do <i>what</i>? Then &ldquo;submit to the knife&rdquo; arrives with no knife ever established. Beats 06 and 09 both name their figures; this one leaves an unnamed boy urging an unnamed man toward an unexplained violent command - the exact al-Duha failure the Shukr post-audit made a mandatory finding.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current (reflection)</span><q>The son does not merely submit to the knife - he urges his father toward the command, and names himself patient before the trial has even begun.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>This is Isma'il - the son Ibrahim saw himself sacrificing in a dream that was God's command. He does not merely submit to the knife: he urges his father on, and names himself patient before the blade is even raised.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">4</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The Last Night&rdquo;: a scene with no stage</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 11 · body + reflection</span><span class="chip">Auditors B + C · C rated Blocker</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Four compounding surface gaps: bare <b>&ldquo;Husayn&rdquo;</b> is never identified (not as Imam - house style violation, flagged by B - not as the Prophet's ﷺ grandson; his title only arrives one card later); <b>&ldquo;they want no one but me&rdquo;</b> has no antecedent - no army, siege, or Karbala is on the card; <b>&ldquo;lifted his oath from their shoulders&rdquo;</b> leaves the bay'a unglossed with the pronoun inverted (it is their pledge to him); and the Imam's speech carries <b>no quotation marks</b>, so it reads as narrator voice. The reflection's &ldquo;knowing the morning&rdquo; is elliptical on top - knowing <i>what</i> about the morning?</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current (body)</span><q>On the last night, Husayn gathered those with him and lifted his oath from their shoulders: the darkness is a curtain - take it, and go; they want no one but me. Not one of them left.</q></div>
+        <div class="after"><span class="lbl">Suggested direction</span><q>On the night before the battle, with the enemy army camped around them, Imam Husayn gathered his companions and released them from their pledge to him: &ldquo;The night has covered you - take it as your mount, and go. They want no one but me.&rdquo; Not one of them left.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">5</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The Last Night welds al-Luhuf details under an al-Irshad-only citation</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 11 · source</span><span class="chip">Auditor B</span><span class="chip">Fix with #4</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Al-Irshad 2:91-94 carries the core scene (oath-release, night-as-mount, all refusing, the night of worship in plain wording) - but <b>&ldquo;like the humming of bees&rdquo;</b> (لهم دوي كدوي النحل) and <b>&ldquo;they want no one but me&rdquo;</b> are al-Luhuf's wording for the same night; Bihar 44:393-394 proves the split (Majlisi marks the bees passage &ldquo;وقال السيد&rdquo; = Ibn Tawus, then &ldquo;رجعنا إلى رواية المفيد&rdquo;). Same welded-detail class as Shukr's swollen-feet blocker. <b>Fix:</b> widen the source line to <code>al-Irshad of al-Mufid · al-Luhuf of Ibn Tawus</code> (al-Luhuf alone also covers every element).</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">6</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Movement II's ladder wobbles: both rida proof-texts say sabr on screen</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beats 08 + 09 vs 07</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Movement II claims &ldquo;the station past endurance&rdquo; - but Isma'il says &ldquo;among the <b>patient</b>&rdquo; (الصابرين) and God's verdict on Ayyub is &ldquo;<b>patient</b>&rdquo; (صابراً); the word rida appears in no Movement II text. 37:102 survives - its reflection confronts the tension and locates the leap in &ldquo;do as you are commanded.&rdquo; 38:44 does not: its rida case rests on &ldquo;never once resented his Lord,&rdquo; which is extra-textual (38:41, the verse immediately before, is Ayyub's plea about his affliction). Auditor B judged the reflection internally consistent with the dive's own complaint-to-God doctrine - the problem is the surface anchor, not theology. <b>Direction:</b> rebuild the 38:44 reflection around <b>أوّاب</b> (&ldquo;ever returning&rdquo;) as the visible rida marker - returning without demand, praised <i>after</i> the complaint - and drop the &ldquo;never once resented&rdquo; assertion.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">7</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;Rida made visible&rdquo; - a station regression at the summit junction</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 11 · reflection</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The Movement III divider declares rida complete (&ldquo;You have learned to accept it.&rdquo;) and promises the summit - then the very next beat's reflection says &ldquo;This is rida made visible.&rdquo; The dive's strongest demonstration of acceptance sits in the movement that claims to be past acceptance, while Movement II (finding 6) had no such demonstration. <b>Direction:</b> reframe the Last Night reflection as the hinge - rida ripening into peace, the night acceptance was finished and stillness began - so the summit movement does not open on the previous station's name.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">8</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;Bereaved of every son&rdquo; is factually wrong</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 12 · body</span><span class="chip">Auditors A + B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Imam Ali al-Sajjad - Husayn's son - survived Karbala; in al-Irshad it is <b>he</b> who narrates the last-night khutba from his sickbed. Yaqin's dua note leans on precisely this fact (&ldquo;the one who lived to carry it&rdquo;), and today's Yaqin revision made him the summit narrator - so the two dives now assert contradictory facts about the same day. In the series' most solemn beat, the false universal also cheapens the real losses (Ali al-Akbar, the infant).</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>Bereaved of every son and brother and companion, his body wounded past counting&hellip;</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>Bereaved of sons and brothers and companions, his body bearing wounds past counting&hellip;</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">9</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Ya'qub's beat never says Yusuf is his lost son</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 06 · 12:86</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The text never states Yusuf is Ya'qub's son or that he was lost, so the grief's scale is invisible without the backstory; &ldquo;until the light left his eyes&rdquo; reads first-pass as poetic rather than the literal blindness of 12:84; &ldquo;in all those years&rdquo; points at a separation never established.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>Ya'qub wept for Yusuf until the light left his eyes - yet in all those years he laid his grief before no one but God.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>Ya'qub wept for his lost son Yusuf through years of separation, until he went blind from grief - yet in all that time he laid his sorrow before no one but God.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">10</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The dua beat: stacked archaisms + &ldquo;the sixth Imam&rdquo; unconnected</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 14 · translation + intro</span><span class="chip">Auditor C</span><span class="chip">Pairs with #2</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;How many a blessing You gave me, and how little my thanks&rdquo; stacks three archaisms (exclamative &ldquo;how many a&rdquo;, fronted object, verbless clause) - not first-pass parseable for an ESL reader, while the dua's own second sentence shows the plainer register. And the intro's &ldquo;the sixth Imam&rdquo; is never connected to the source line's &ldquo;Imam Ja'far al-Sadiq&rdquo; - nothing says they are the same person.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>My Lord - how many a blessing You gave me, and how little my thanks; how many a trial You tested me with, and how little my patience.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>My Lord - You have given me so many blessings, and I gave so little thanks; You have tested me with so many trials, and I showed so little patience.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">11</div>
+      <div class="f-titlewrap">
+        <div class="f-title">2:156 is a headless clause - and its free &ldquo;glad tidings to the patient&rdquo; link goes unclaimed</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 04 · 2:156</span><span class="chip">Auditors A + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;Those who, when calamity strikes them, say&hellip;&rdquo; is a subject with no predicate - the verse completes 2:155's &ldquo;give glad tidings to the <b>patient</b>, who&hellip;&rdquo;. The reader hits the period expecting a main verb that never came, and the one antecedent that literally names the movement's word goes unused - in a dive whose Movement II struggles for surface anchors. <b>Direction:</b> supply the antecedent in the reflection (&ldquo;the verse before it says whom this describes - give glad tidings to the patient: those who&hellip;&rdquo;) or a bracketed lead-in on the translation, as Yaqin's 2:260 now does.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">12</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;Ahl al-Bayt&rdquo; unglossed on the dive's first line</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 01 · open</span><span class="chip">Auditor C</span><span class="chip">Yaqin precedent</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Same finding fixed in Yaqin today, plus the category strain of descending &ldquo;through&rdquo; people. Suggested, matching the Yaqin fix: <b>&ldquo;A descent in three stations, through the Qur'an and the Ahl al-Bayt - the household of the Prophet ﷺ.&rdquo;</b> (No other surface in the dive identifies the term.)</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">13</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;Pleased, and pleasing&rdquo; doubles on one screen before the climax needs it</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 10 · Act III card</span><span class="chip">Auditors A + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The Act III card's line and its bridge translation render on one screen, so the reader meets the phrase twice within seconds - occurrences two and three of four. The climax callback (the right place for it) then lands worn. <b>Fix:</b> end the card line at &ldquo;&hellip;returns to its Lord not broken but serene.&rdquo; and let the bridge verse own the phrase; the climax hears it third, not fourth.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">14</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The family who bore it&rdquo; - unnamed referent (auditors disagree)</div>
+        <div class="chips"><span class="chip sev-s">Should-fix (low)</span><span class="chip">Beat 02b · map station 3</span><span class="chip">Auditor C · A judged clean</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Auditor C: the other two <code>embodies</code> lines are generic types (&ldquo;the heart that holds firm&rdquo;), but this one points at a real family never named anywhere in the dive, with an ambiguous &ldquo;it&rdquo;. Auditor A: it orients rather than spoils and matches the series pattern (Yaqin's &ldquo;the family who lived it&rdquo;, Tawakkul's &ldquo;the family who was carried&rdquo;, both audit-cleared). Reported ranked per the no-downgrade rule - your call. If fixed: &ldquo;the family of Imam Husayn, who bore it&rdquo; (or go generic: &ldquo;the soul that returns whole&rdquo;).</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">15</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Series ledger: Sabr has pre-spent the announced Rida dive's ground</div>
+        <div class="chips"><span class="chip sev-s">Should-fix · ledger only</span><span class="chip">Beats 02b · 07 · 10</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The catalog ships a coming-soon <code>Rida · Contentment</code> card - but Sabr's Movement II spends rida's definitive framing (&ldquo;to stop wishing the decree were otherwise&rdquo;) and the Movement III bridge spends <b>راضِيَةً مَرْضِيَّةً</b> (89:27-28), the natural namesake verse of a Rida dive. No doc records the pre-occupation. <b>Fix (doc only):</b> a series-ledger line stating what Sabr consumed, so the Rida dive is designed as a deliberate expansion - or the roadmap entry is reconsidered.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">16</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Sabr's doc lacks the Ashura scene-echo note - the only dive doc without one</div>
+        <div class="chips"><span class="chip sev-s">Should-fix · doc only</span><span class="chip">Design doc</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Yaqin, Sabr, and Tawakkul all summit on Ashura; Tawakkul's doc documents its Yaqin echo and Shukr's doc documents its Sabr &ldquo;Last Night&rdquo; echo - Sabr's doc has only a text-level &ldquo;no content reused from Yaqin&rdquo; line, nothing on the shared day or the shared al-Luhuf sourcebook. <b>Fix (doc only):</b> a dated scene-echo note mirroring Tawakkul's section 5 - Yaqin watched his face, Sabr watches the night's choice and the final prostration, Tawakkul hears the dawn address - recording the triple occupation for future designers.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">17</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Engine chrome prints &ldquo;DEPTH 1 OF 3&rdquo; under a dive built on stations</div>
+        <div class="chips"><span class="chip sev-s">Should-fix · engine</span><span class="chip">DeepDiveView.swift:680</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The movement-card sublabel hardcodes <code>&middot; Depth \(act) of \(dive.acts.count)</code> - so Sabr's cards read &ldquo;THE ENDURING &middot; DEPTH 1 OF 3&rdquo; against a dive whose vocabulary is stations everywhere. Same leak hits Tawakkul (motions) and Shukr (tongues); only Yaqin matches. <b>Fix (one-line engine change):</b> a <code>stageNoun</code> on <code>DeepDive</code> (depth / station / motion / tongue), or neutralize to &ldquo;Movement 1 of 3&rdquo;.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ POLISH ============ -->
+<section id="polish">
+  <div class="sechead"><h2>Polish</h2><span class="count">10 findings</span></div>
+  <p class="secnote">Wording, register, and hygiene; items 26-27 are largely recorded-only.</p>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">18</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Three curly apostrophes in English prose</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Lines 32 · 39 · 111</span><span class="chip">Auditor B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;Qur&rsquo;an&rdquo;, &ldquo;You&rsquo;ll&rdquo;, &ldquo;God&rsquo;s&rdquo; use curly U+2019 where Yaqin/Shukr use straight <code>'</code>. (Tawakkul shares the same slip if a series sweep is done.) Curly double quotes inside quoted speech are house-normal - not a finding.</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">19</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The darkness is a curtain&rdquo; replaces the attested mount image</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 11</span><span class="chip">Auditors A + B</span><span class="chip">Fix with #4</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Both al-Irshad and al-Luhuf read &ldquo;هذا الليل قد غشيكم فاتخذوه جملا&rdquo; - take this night as a mount, and go. &ldquo;Curtain&rdquo; keeps the covering sense but swaps out the Imam's celebrated image inside a sourced-narration beat. The #4 rewrite restores it.</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">20</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;In the very fire&rdquo; borrows Yaqin's governing image at Sabr's climax</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 12 · reflection</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Fire/flame is Yaqin's schema; Sabr never establishes it. The Tawakkul audit removed the identical class of bleed. Suggested: &ldquo;in the very loss&rdquo; (already the map's phrase) or &ldquo;on the earth of Karbala&rdquo;.</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">21</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Map descs and movement cards restate each other</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beats 02b vs 07 · 10</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Map item 2 and the Movement II card say the same sentence in reversed order; map item 3 and the Movement III card likewise. Yaqin's map avoided this by running on an image (smoke/fire) rather than definitions. Direction: give the stations a concrete image, or make the movement-card lines advance rather than restate (partly covered by #13's trim).</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">22</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;Wounded past counting&rdquo; counts the wrong word</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 12 · body</span><span class="chip">Auditor C</span><span class="chip">Fix with #8</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Wounds are countable; &ldquo;wounded&rdquo; is not - and two stacked absolute phrases delay the subject. The #8 rewrite covers both (&ldquo;his body bearing wounds past counting&rdquo;).</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">23</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The decree&rdquo; lands cold on first use</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 02 · orientation</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>An ESL reader's nearest sense is a government order; that it is God's decree is only inferable until the climax translation finally supplies it. One word on first use fixes the chain: &ldquo;to endure what God decrees, to accept it, and to find peace within it.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">24</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Double-negative opener: &ldquo;not that the blow does not land&rdquo;</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beats 04 + 12 reflections</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Parses on the second look, not the first - and the climax reflection repeats the frame deliberately (&ldquo;Not that the loss had stopped wounding&rdquo;), so fix both or neither: &ldquo;the blow still lands, but the heart, even breaking, remembers where it is going.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">25</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;Truly he turned ever back to Us&rdquo; - archaic word order</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 09 · translation</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;Ever back&rdquo; trips as a unit; the reflection already carries the idea plainly. Suggested: &ldquo;Truly he turned back to Us, again and again.&rdquo; (Also serves #6's awwab-centered rebuild.)</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">26</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Recorded-only: soft map citation + dua/Shukr thematic adjacency</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beats 02b · 14</span><span class="chip">Auditors A + B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The map's bare &ldquo;al-Kafi&rdquo; is grounded (B verified bab al-sabr and bab al-rida carry the paraphrased doctrine) but could cite the chapters. And Sabr's dua is half a gratitude confession - the &ldquo;thanks never suffices&rdquo; ground Shukr's close now owns; worth a ledger line, no content change.</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">27</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Recorded-only: doc drift + file artifacts</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Design doc + file</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The doc still places the map at beat 05, act 1 (&ldquo;built directly from this spec&rdquo;) - the 2026-07-08 threshold relocation was never amended in; the comment numbering skips 05 (same artifact as Yaqin's file). Add a dated amendment note; renumber comments on next touch.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ CLEAN ============ -->
+<section id="clean">
+  <div class="sechead"><h2>Clean areas</h2><span class="count">verified by the auditors</span></div>
+  <div class="cleangrid">
+    <div class="cl"><b>Qur'an Arabic: 5 / 5 word-perfect</b><span>2:156, 12:86, 37:102, 38:44 match quran_data.json exactly in plain orthography; the bridge's 89:27+28 weld is word-perfect against both ayat and its reference honestly reads "27-28"; the ayah: 27 anchor is harmless (bridges render text-only, no recitation button).</span></div>
+    <div class="cl"><b>Excerpts anchored honestly</b><span>All three cuts (12:86, 37:102, 38:44) fall at clause boundaries, translate only the text shown, and omit nothing that distorts - verified against the canonical full ayat.</span></div>
+    <div class="cl"><b>The Last Night core scene attested</b><span>Oath-release, night-as-mount, every companion refusing, and the night of worship are all in al-Irshad 2:91-94; the "night before Ashura" placement is correct in both al-Irshad and al-Luhuf. Only the two welded details migrate (finding 5).</span></div>
+    <div class="cl"><b>Map doctrine grounded in al-Kafi</b><span>Station 1's "complain of it to God alone" matches bab al-sabr's "صبر ليس فيه شكوى إلى الناس"; station 2's gloss is a fair paraphrase of bab al-rida. 89:27 genuinely carries al-nafs al-mutma'inna.</span></div>
+    <div class="cl"><b>Ledger clean in all three directions</b><span>Nothing reused from Yaqin (its avoided-list fully honored); Shukr and Tawakkul both documented their Sabr echoes accurately; nothing any doc reserves is touched. The 2:260/mutma'inna adjacency is root-level only.</span></div>
+    <div class="cl"><b>Ayyub beat theology sound</b><span>"Complaint to God is not impatience" is internally consistent with the dive's own Movement I doctrine; 21:83/38:41 are cries to God, not resentment; "turned back" mirrors awwab. (The surface-anchor issue is finding 6, not a theology error.)</span></div>
+    <div class="cl"><b>Connectors truthful, pacing holds</b><span>Both dividers accurately name what the reader just did; 14 beats, symmetric movements, Movement III escalates eve to final moments; no filler, no sag; ~5 min correct.</span></div>
+    <div class="cl"><b>The close is earned</b><span>"What are you being asked to bear?" plus the grounding placeholder is direct and humane; the dua note ("The towering patience of Karbala is not asked of you") is the dive's emotional landing, fully first-pass readable.</span></div>
+    <div class="cl"><b>Register near-clean</b><span>Zero em dashes; zero transliteration diacritics (every apostrophe sits between letters per the strip rule); prophets named bare per house style. Only exceptions: three curly apostrophes (#18) and bare "Husayn" (#4).</span></div>
+    <div class="cl"><b>Model card: beat 09</b><span>Auditor C: Ayyub's card is the standard the others should be brought to - figure named, trial on the surface, payoff plain and earned ("Rida is what turns loss into nearness").</span></div>
+  </div>
+</section>
+
+<!-- ============ REPLY ============ -->
+<section id="reply">
+  <div class="replybox">
+    <h3>Resolution - 2026-07-17</h3>
+    <p><b>Applied: 1 (option a), 2 (option a), 3-8, 11-13, 17.</b> The climax keeps its line, recited honestly to <code>Maqtal al-Husayn of al-Muqarram</code> (option 1b would have gutted the beat's sabr content; 1c was Tawakkul's climax verbatim). The dua keeps Imam al-Sadiq - the series' only non-Sajjad close - cited to <code>Muhaj al-Da'awat of Ibn Tawus</code> with the <code>لك</code> restored. The Last Night was restaged with the mount image and the widened al-Irshad · al-Luhuf citation; its reflection is now the rida-to-peace hinge. #17 shipped as a data-driven <code>stageNoun</code> (Sabr &ldquo;Station&rdquo;, Tawakkul &ldquo;Motion&rdquo;, Shukr &ldquo;Tongue&rdquo;, default &ldquo;Depth&rdquo;). Build re-run: <b>green</b>; guardrail greps clean.</p>
+    <p><b>Declined - recorded as known, accepted</b> in the design doc's new &ldquo;Retro-audit&rdquo; section: 9, 10, 14, 15, 16, and all Polish (18-27).</p>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

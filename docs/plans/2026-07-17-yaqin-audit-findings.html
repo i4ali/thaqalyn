@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaqin Deep Dive - Audit Findings</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Fragment+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0F0B; --bg2:#0D130E; --surface:#111A13; --surface2:#152017;
+  --border:rgba(227,195,126,.13); --hair:rgba(255,255,255,.07);
+  --text:#ECE7DB; --dim:#9FAA9C; --faint:#6E7A6F;
+  --gold:#C9A55C; --goldB:#E3C37E;
+  --blocker:#C4614E; --blocker-dim:rgba(196,97,78,.12);
+  --should:#C9A55C; --should-dim:rgba(201,165,92,.10);
+  --polish:#7FA184; --polish-dim:rgba(127,161,132,.10);
+  --clean:#8CAE6E; --clean-dim:rgba(140,174,110,.10);
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --mono:'Fragment Mono', ui-monospace, 'SF Mono', monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#F6F3EA; --bg2:#F1EDE2; --surface:#FBF9F2; --surface2:#F4F0E5;
+    --border:rgba(138,109,51,.22); --hair:rgba(0,0,0,.08);
+    --text:#26301F; --dim:#5C6A57; --faint:#8A937F;
+    --gold:#8A6D33; --goldB:#6E5626;
+    --blocker:#A6402E; --blocker-dim:rgba(166,64,46,.09);
+    --should:#8A6D33; --should-dim:rgba(138,109,51,.09);
+    --polish:#4F7A57; --polish-dim:rgba(79,122,87,.09);
+    --clean:#5B7F3B; --clean-dim:rgba(91,127,59,.09);
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:
+    radial-gradient(120% 50% at 50% -10%, rgba(227,195,126,.05), transparent 60%),
+    var(--bg);
+  color:var(--text); font-family:var(--mono); font-size:14px; line-height:1.65;
+  padding:0 20px 90px;
+}
+.wrap{max-width:960px; margin:0 auto;}
+
+/* ---------- header ---------- */
+header{padding:64px 0 40px; border-bottom:1px solid var(--border);}
+.eyebrow{color:var(--gold); font-size:11px; letter-spacing:4px; text-transform:uppercase;}
+h1{font-family:var(--serif); font-weight:600; font-size:46px; line-height:1.1; margin-top:14px;}
+h1 em{font-style:italic; color:var(--goldB);}
+.sub{color:var(--dim); max-width:640px; margin-top:14px; font-size:13.5px;}
+.verdict{
+  margin-top:26px; padding:18px 22px; border:1px solid var(--border); border-left:3px solid var(--should);
+  background:var(--should-dim); border-radius:0 10px 10px 0; max-width:720px;
+}
+.verdict p{font-family:var(--serif); font-size:19px; line-height:1.45;}
+.verdict small{display:block; margin-top:8px; color:var(--dim); font-family:var(--mono); font-size:11.5px;}
+
+.stats{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px;}
+.stat{
+  border:1px solid var(--hair); border-radius:10px; padding:12px 18px; background:var(--surface);
+  min-width:118px;
+}
+.stat b{font-family:var(--serif); font-size:30px; font-weight:600; display:block; line-height:1;}
+.stat span{font-size:10.5px; letter-spacing:1.6px; text-transform:uppercase; color:var(--dim);}
+.stat.s-blocker b{color:var(--blocker);} .stat.s-should b{color:var(--should);}
+.stat.s-polish b{color:var(--polish);} .stat.s-clean b{color:var(--clean);}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--hair);
+  display:flex; gap:4px; overflow-x:auto; padding:10px 0; margin-bottom:8px;
+}
+nav a{
+  color:var(--dim); text-decoration:none; font-size:11px; letter-spacing:1.4px; text-transform:uppercase;
+  padding:6px 12px; border-radius:20px; white-space:nowrap;
+}
+nav a:hover{color:var(--text); background:var(--surface2);}
+nav a .dot{display:inline-block; width:6px; height:6px; border-radius:50%; margin-right:7px; vertical-align:1px;}
+
+/* ---------- sections ---------- */
+section{padding-top:44px;}
+.sechead{display:flex; align-items:baseline; gap:14px; margin-bottom:8px;}
+.sechead h2{font-family:var(--serif); font-weight:600; font-size:30px;}
+.sechead .count{color:var(--faint); font-size:12px;}
+.secnote{color:var(--dim); font-size:12.5px; max-width:680px; margin-bottom:22px;}
+
+/* ---------- finding cards ---------- */
+.finding{
+  border:1px solid var(--hair); border-radius:12px; background:var(--surface);
+  margin-bottom:18px; overflow:hidden;
+  animation:fadeUp .45s ease both;
+}
+.finding:nth-child(odd){animation-delay:.05s;}
+.f-head{display:flex; align-items:flex-start; gap:16px; padding:18px 22px 0;}
+.f-num{
+  font-family:var(--serif); font-weight:600; font-size:34px; line-height:1; min-width:44px;
+  color:var(--faint);
+}
+.f-titlewrap{flex:1; min-width:0;}
+.f-title{font-family:var(--serif); font-weight:600; font-size:20.5px; line-height:1.3;}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:9px;}
+.chip{
+  font-size:9.5px; letter-spacing:1.4px; text-transform:uppercase; padding:3px 10px;
+  border-radius:20px; border:1px solid var(--hair); color:var(--dim); background:var(--bg2);
+}
+.chip.sev-b{color:var(--blocker); border-color:var(--blocker); background:var(--blocker-dim);}
+.chip.sev-s{color:var(--should); border-color:var(--should); background:var(--should-dim);}
+.chip.sev-p{color:var(--polish); border-color:var(--polish); background:var(--polish-dim);}
+.f-body{padding:14px 22px 20px 82px;}
+.f-body p{color:var(--dim); font-size:13px; max-width:700px;}
+.f-body p + p{margin-top:10px;}
+.f-body p b{color:var(--text); font-weight:400;}
+.f-body code{
+  font-size:12px; background:var(--bg2); border:1px solid var(--hair); border-radius:4px; padding:1px 6px;
+}
+.finding.b{border-left:3px solid var(--blocker);}
+.finding.s{border-left:3px solid var(--should);}
+.finding.p{border-left:3px solid var(--polish);}
+
+/* before / after */
+.rw{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; max-width:760px;}
+@media (max-width:700px){ .rw{grid-template-columns:1fr;} .f-body{padding-left:22px;} .f-num{min-width:32px; font-size:26px;} }
+.rw > div{border:1px solid var(--hair); border-radius:8px; padding:12px 14px; background:var(--bg2); min-width:0;}
+.rw .lbl{font-size:9.5px; letter-spacing:1.6px; text-transform:uppercase; margin-bottom:8px; display:block;}
+.rw .before .lbl{color:var(--blocker);} .rw .after .lbl{color:var(--clean);}
+.rw q{font-family:var(--serif); font-size:16.5px; line-height:1.45; quotes:'\201C' '\201D'; color:var(--text); overflow-wrap:break-word;}
+.rw .before q{color:var(--dim);}
+
+/* ---------- clean areas ---------- */
+.cleangrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px;}
+.cl{
+  border:1px solid var(--hair); border-left:3px solid var(--clean); border-radius:10px;
+  background:var(--surface); padding:14px 16px; animation:fadeUp .45s ease both;
+}
+.cl b{font-family:var(--serif); font-size:17px; font-weight:600; display:block; margin-bottom:5px;}
+.cl span{color:var(--dim); font-size:12px;}
+
+/* ---------- reply hint ---------- */
+.replybox{
+  margin-top:52px; border:1px solid var(--border); border-radius:12px; padding:22px 26px;
+  background:linear-gradient(180deg, var(--should-dim), transparent);
+}
+.replybox h3{font-family:var(--serif); font-size:22px; font-weight:600; margin-bottom:8px;}
+.replybox p{color:var(--dim); font-size:12.5px; max-width:640px;}
+.replybox code{background:var(--bg2); border:1px solid var(--hair); border-radius:4px; padding:1px 7px; font-size:12px;}
+
+@keyframes fadeUp{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;}}
+@media (prefers-reduced-motion: reduce){ .finding,.cl{animation:none;} html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Thaqalayn · Theme Deep Dive Audit · 2026-07-17</div>
+  <h1>Yaqin - <em>A Descent Through Three Depths</em><br>Consolidated Audit Findings</h1>
+  <p class="sub">Retroactive audit of the first shipped theme dive, per the theme-deep-dive skill: three flag-only auditors - A (flow, shape &amp; the ledger), B (theology, sourcing &amp; Arabic), C (readability). Yaqin predates the design-doc convention, so every source was verified from scratch and the ledger check ran in reverse (did later dives reuse Yaqin material?). Overlapping findings are merged; every item names its auditor(s). Nothing has been changed - each finding awaits your approval.</p>
+  <div class="verdict">
+    <p>The Qur'anic layer is fully verified (8/8) and the ledger is clean - but the dive's only narration is a misattributed composite of two reports, and much of the prose predates the &ldquo;surface of the text&rdquo; readability bar the later dives were held to.</p>
+    <small>Auditor A: "the summit escalation is the strongest stretch of the dive" &nbsp;·&nbsp; Auditor B: "8/8 verses semantically clean" &nbsp;·&nbsp; Auditor C: "the dive's best sentence carries a deep idea with zero rereading"</small>
+  </div>
+  <div class="stats">
+    <div class="stat s-blocker"><b>2</b><span>Blockers</span></div>
+    <div class="stat s-should"><b>15</b><span>Should-fix</span></div>
+    <div class="stat s-polish"><b>9</b><span>Polish</span></div>
+    <div class="stat s-clean"><b>10</b><span>Clean areas</span></div>
+  </div>
+</header>
+
+<nav>
+  <a href="#blocker"><span class="dot" style="background:var(--blocker)"></span>Blockers</a>
+  <a href="#should"><span class="dot" style="background:var(--should)"></span>Should-fix</a>
+  <a href="#polish"><span class="dot" style="background:var(--polish)"></span>Polish</a>
+  <a href="#clean"><span class="dot" style="background:var(--clean)"></span>Clean areas</a>
+  <a href="#reply"><span class="dot" style="background:var(--goldB)"></span>How to approve</a>
+</nav>
+
+<!-- ============ BLOCKERS ============ -->
+<section id="blocker">
+  <div class="sechead"><h2>Blockers</h2><span class="count">2 findings</span></div>
+  <p class="secnote">One sourcing blocker on the dive's only narration, and one first-pass misparse that briefly reads God as the smoke - on the dive's flagship metaphor.</p>
+
+  <article class="finding b">
+    <div class="f-head">
+      <div class="f-num">1</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The Morning of Ashura&rdquo; is a misattributed composite - and cites no book</div>
+        <div class="chips"><span class="chip sev-b">Blocker</span><span class="chip">Beat 12 · Narration</span><span class="chip">Auditors A + B + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The beat welds two different reports into one, under the wrong single narrator at the wrong time of day. <b>Hilal ibn Nafi's genuine report is at the Imam's last breath</b>, not the morning: standing in Umar ibn Sa'd's ranks he said he had never seen a slain man drenched in his blood &ldquo;more handsome or more luminous of face&rdquo; (Maqtal al-Husayn of al-Muqarram; quoted in Bihar al-Anwar) - it says nothing about arrows falling thicker. The <b>&ldquo;as the trial intensified, his face grew brighter and calmer&rdquo;</b> report is narrated from <b>Imam Ali ibn al-Husayn</b> (Ma'ani al-Akhbar of al-Saduq / Bihar al-Anwar). The source line - <code>Radiance at Karbala - narrated of Hilal ibn Nafi</code> - names no book at all: &ldquo;Radiance at Karbala&rdquo; is an invented display title, and &ldquo;narrated of&rdquo; is non-idiomatic besides. WikiShia also flags a known name-inversion confusion between Nafi' ibn Hilal (a martyred companion) and &ldquo;Hilal ibn Nafi'&rdquo; of the opposing army, which makes a bare-name citation weaker still. Every other dive in the series names a real collection.</p>
+      <p><b>Fix options:</b> (a) re-anchor the body to Hilal's genuine death-scene report - even the enemy soldier saw the light - retag away from &ldquo;The Morning of Ashura&rdquo;, and cite <code>Maqtal al-Husayn of al-Muqarram · Bihar al-Anwar</code>; or (b) keep the intensification framing, retitle (e.g. &ldquo;When the Trial Grew Fierce&rdquo;), re-attribute to Imam Ali ibn al-Husayn, drop the arrows detail, and cite <code>Ma'ani al-Akhbar · Bihar al-Anwar</code>. Note option (b) makes the dua beat's author the narrator of the summit scene - a weld Yaqin already plays (&ldquo;present at Karbala&rdquo;), which would strengthen it further.</p>
+    </div>
+  </article>
+
+  <article class="finding b">
+    <div class="f-head">
+      <div class="f-num">2</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The flagship metaphor's first application parses as &ldquo;God is the smoke&rdquo;</div>
+        <div class="chips"><span class="chip sev-b">Blocker</span><span class="chip">Beat 06 · 6:76 reflection</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The colon appositive grammatically attaches to the nearest noun phrase - &ldquo;the One who never does&rdquo; - so the first-pass parse makes <b>God</b> the smoke: a reading that is wrong and momentarily blasphemy-adjacent, at the first real application of the dive's central image. The intended referent (the setting stars as Depth I's inferential evidence) is nowhere on the sentence's surface. Secondary: the inner quote &ldquo;that he might be of those of certainty&rdquo; is 6:75 - a verse not shown on this screen and not cited, so it floats. Ranked Blocker on Auditor C's judgment: a theologically wrong first-pass reading, not mere elevation.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>Star, moon, sun - each one sets, until Ibrahim turns his face to the One who never does: the smoke on the horizon that proves the fire.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>Star, moon, sun - each one sets, until Ibrahim turns his face to the One who never sets. The setting stars were his smoke on the horizon: proof of a fire he had not yet seen.</q></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ SHOULD-FIX ============ -->
+<section id="should">
+  <div class="sechead"><h2>Should-fix</h2><span class="count">15 findings</span></div>
+  <p class="secnote">Two structural (the Mother of Musa beat and the flame hinge), one narrative gap on the summit approach, and a cluster of unglossed references - the exact al-Duha pattern the later audits were tightened against. Yaqin fixes must be mirrored into the UR/AR strings.</p>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">3</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;After the sons.&rdquo; - the deaths are never stated anywhere in the dive</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 13 · The Court</span><span class="chip">Auditor C · borderline Blocker</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;After the sons&rdquo; elides a predicate (&ldquo;were killed&rdquo;) that English ellipsis cannot recover forward - and no beat ever says the Imam and his men were killed: beat 12 shows only arrows and a luminous face. A first-pass reader reaches &ldquo;After the sons.&rdquo; with no on-screen event to attach it to; the third fragment finally carries a verb and repairs the pattern retroactively - which is precisely a reread. &ldquo;The tyrant&rdquo; resolves only against the source caption.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>After the sons. After the brothers. After the tents burned and the caravan was driven in chains - she stood in the court of the tyrant and said she had witnessed nothing but beauty.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>After her sons were killed. After her brothers. After the tents burned and the caravan was driven to Kufa in chains - she stood in the tyrant's court and said she had seen nothing but beauty.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">4</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The Mother of Musa does Movement III's work inside Movement II</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 10 · 28:7</span><span class="chip">Auditors A + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Movement II is &ldquo;The Witnessing&rdquo; - but nothing is <b>seen</b> in this beat: she casts her infant on the water sight-unseen, on God's word alone. The reflection then lands Movement III's turn a movement early (&ldquo;certainty is no longer a thought. It has become an act&rdquo; is the &ldquo;live it&rdquo; language the Act III card is about to claim as its reveal), so the summit's step-change is dulled. She is also not a prophet, yet the Act III connector says <code>You have seen it in the prophets.</code></p>
+      <p><b>Direction:</b> re-point the beat at the seeing that seals her story - 28:13, the child returned &ldquo;that she might know that the promise of God is true&rdquo; (she trusted first, then her eyes confirmed) - or retire the &ldquo;act&rdquo; sentence and let the beat be about trusting the unseen word. Align the Act III connector either way (e.g. &ldquo;You have seen it in those God chose.&rdquo;).</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">5</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Depth 3's image is enacted in Depth 2, and the hinge is never drawn</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beats 02b · 09 · 11</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The threshold map defines Haqq al-Yaqin as &ldquo;To stand within the flame itself&rdquo; - and two beats later Ibrahim is literally standing within a flame, alive, filed under &ldquo;witnessing.&rdquo; The Act III card's differentiator (&ldquo;was asked to stand inside the flame - while still alive&rdquo;) is also literally true of Ibrahim, so it fails to distinguish. The intended hinge - Ibrahim's fire was commanded cool, the family's fire at Karbala was not - is never said, so the ladder wobbles at its central image.</p>
+      <p><b>Direction:</b> one clause, in the beat 09 reflection or on the Act III card, naming the hinge: for Ibrahim the flame was made cool - he witnessed; for the family the flame was not cooled - they lived it. That single distinction repairs the whole ladder.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">6</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Beat 12's surface assumes the whole story: who, where, what day</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 12 · body + reflection</span><span class="chip">Auditor C</span><span class="chip">Pairs with #1</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;Upon them&rdquo; has no antecedent on the screen; &ldquo;They said&rdquo; opens with a second unanchored pronoun; Husayn is never identified as the family of beat 11 or the Prophet's ﷺ grandson; the day called Ashura is never placed at Karbala. In the reflection, &ldquo;the Beloved&rdquo; and &ldquo;the meeting&rdquo; are unglossed euphemisms (God; death) a first-pass reader does not get from the surface - the exact al-Duha pattern. Whichever fix option #1 takes, the rewrite should carry these identifications in-text (e.g. &ldquo;as the arrows fell thicker on Husayn - the Prophet's ﷺ grandson - and his companions&hellip;&rdquo;; &ldquo;The closer he drew to meeting his Lord, the brighter the certainty grew.&rdquo;).</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">7</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The Court's source line names no book - and identifies no one</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 13 · source</span><span class="chip">Auditors B + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The content itself verified fully (see clean areas) - but <code>Sayyida Zaynab, in the court of Ibn Ziyad - Kufa</code> cites no book (the report's earliest appearance is al-Luhuf of Ibn Tawus; also Bihar al-Anwar 45:115-116), and neither person is identified: Zaynab's relation to Husayn and Ibn Ziyad's role are both assumed, so the body's &ldquo;the tyrant&rdquo; resolves only for a reader who already knows. Suggested: <b>&ldquo;Sayyida Zaynab, sister of Husayn, in the court of Ibn Ziyad - al-Luhuf of Ibn Tawus&rdquo;</b> (mirrored in UR/AR).</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">8</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The three-depths frame is announced three times before the first story</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beats 02 · 02b · 04</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The orientation promises &ldquo;to know it, to see it, to live it&rdquo;; the depths map details the same three; then beat 04's reflection announces it a third time: &ldquo;The Qur'an says it arrives in depths - three of them.&rdquo; Since Movement I holds only two beats and one is spent re-stating the map, the first movement effectively contains a single narrative beat - five screens pass before anything happens. <b>Direction:</b> keep 102:5 (it is where the term lives) but retask its reflection to Ilm-specific work - al-Takathur's own scene: the rivalry that distracts &ldquo;until you visit the graves&rdquo;; knowing before seeing.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">9</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The Question&rdquo; has no question under it, and the conditional dangles</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 04 · 102:5</span><span class="chip">Auditors A + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>102:5 is a rebuke-conditional - nothing on the screen asks anything, so the tag and the text point in different directions on the dive's first content screen. And &ldquo;if only you knew&hellip;&rdquo; is left hanging: the apodosis (102:6-7 - <i>you would surely see the Blaze&hellip; then see it with the eye of certainty</i>, the very verse the map cites for Depth 2) is never delivered anywhere in the dive. <b>Direction:</b> retag (e.g. &ldquo;The Naming&rdquo; / &ldquo;The First Depth&rdquo;) or let the reflection close the conditional - knowledge first, then the eye - which also quietly justifies the map's 102:7 reference.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">10</div>
+      <div class="f-titlewrap">
+        <div class="f-title">2:260's excerpt hides both the asker and the ask</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 08 · translation</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The first speaker is never named (it is God), and &ldquo;but so that my heart may be at rest&rdquo; answers a request cut from the excerpt (show me how You give life to the dead) - so &ldquo;so that&rdquo; hangs: so that <i>what</i> may happen? The tag supplies &ldquo;asks to see&rdquo; but not what he asked to see. <b>Direction:</b> a bracketed lead-in, e.g. <i>[Ibrahim said: &ldquo;My Lord, show me how You give life to the dead.&rdquo;] God said: &ldquo;Do you not believe?&rdquo; He said: &ldquo;Yes - but so that my heart may be at rest.&rdquo;</i></p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">11</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Garden path on the Movement II card: &ldquo;those God chose to merely believe&rdquo;</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 07 · Act II card</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>First-pass parse attaches &ldquo;to merely believe&rdquo; to &ldquo;chose&rdquo; - people whom God chose <i>for the purpose of</i> merely believing - and the semicolon clause forces a re-parse.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>The Qur'an did not leave the prophets or those God chose to merely believe; it let them witness, with their own eyes.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>The Qur'an did not leave the prophets, or the ones God chose, with belief alone; it let them witness with their own eyes.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">12</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The Friend of God&rdquo; unglossed, and the depths unnamed at the hinge</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 08 · reflection</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;The Friend of God&rdquo; requires knowing Khalilullah to link epithet to the Ibrahim named in the tag; and &ldquo;the first depth to the second&rdquo; names neither depth on this screen (the names live on the map and movement cards).</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>Even the Friend of God, who already believed, longed to witness. He is asking to move from the first depth to the second.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>Even Ibrahim - the Friend of God - who already believed, longed to witness. He is asking to move from the first depth to the second: from knowing to seeing.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">13</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Beat 09: a fire with no event, credited to the wrong cause</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 09 · 21:69</span><span class="chip">Auditors A + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Two stumbles on one screen. (a) &ldquo;Cast into the flames&rdquo; arrives with no agent and no event - nothing prior says his people threw him into a fire, and a reader who just learned &ldquo;fire&rdquo; as the dive's metaphor may briefly read this fire figuratively too. (b) The verse shows <b>God</b> commanding (&ldquo;We said: O fire - be coolness&rdquo;) while the reflection says &ldquo;the fire itself submits <b>to his certainty</b>&rdquo; - screen and reflection assign the cause differently, a slippage visible in a single glance. <b>Direction:</b> <i>&ldquo;His people cast him into a fire for breaking their idols - and there, at his Lord's word, the fire submits: coolness and peace for the one who was certain of Him.&rdquo;</i></p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">14</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;Ahl al-Bayt&rdquo; unglossed on the dive's very first line</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 01 · open</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;A descent through the Qur'an and the Ahl al-Bayt - in three depths&rdquo; leads with a transliterated term whose plain-English identification does not arrive until beat 11 (and reads oddly literally - descending &ldquo;through&rdquo; people). This is the app's core vocabulary, which may be reason to accept it - but per the audit bar it is ranked, not footnoted. <b>Options:</b> &ldquo;&hellip;the Qur'an and the Prophet's ﷺ household&rdquo;, or keep and gloss: &ldquo;&hellip;and the Ahl al-Bayt, the Prophet's ﷺ household - in three depths.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">15</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The dua cites no number</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 15 · source</span><span class="chip">Auditors A + B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The Arabic verified word-for-word as the opening of <b>Sahifa Dua 20 (Makarim al-Akhlaq)</b>, fairly omitting the opening salawat - but <code>Imam Ali ibn al-Husayn · al-Sahifa al-Sajjadiyya</code> gives no dua number, so a 54-dua compilation citation is not locatable by the reader. Tawakkul and Shukr cite &ldquo;Dua 28&rdquo; / &ldquo;Dua 37&rdquo;. Suggested: <code>al-Sahifa al-Sajjadiyya, Dua 20 (Makarim al-Akhlaq)</code> in all three languages.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">16</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Leading ayn marks break the house rule - with two different characters</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">ActInfo + depths map</span><span class="chip">Auditor B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>House rule: ayn becomes a straight apostrophe only <b>between two letters</b>, otherwise dropped - word-initial ayn in &ldquo;Ilm&rdquo;/&ldquo;Ayn&rdquo; takes no mark. The file has it both ways: ActInfo <code>tr: "'Ilm al-Yaqin"</code> / <code>"'Ayn al-Yaqin"</code> (straight apostrophe U+0027) and depths items <code>"&lsquo;Ilm al-Yaqin"</code> / <code>"&lsquo;Ayn al-Yaqin"</code> (curly U+2018) - a violation twice over and internally inconsistent (&ldquo;Haqq al-Yaqin&rdquo; is clean in both sites). All four become <b>&ldquo;Ilm al-Yaqin&rdquo; / &ldquo;Ayn al-Yaqin&rdquo;</b>.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head">
+      <div class="f-num">17</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Missing ﷺ on the Prophet's one English mention</div>
+        <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 11 · Act III card</span><span class="chip">Auditor B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;But one family, the Prophet's own household, was asked to stand inside the flame&rdquo; - no ﷺ in English, while the Urdu (رسول اللہﷺ) and Arabic (صلى الله عليه وآله وسلم) both carry the honorific. Suggested: &ldquo;the Prophet's ﷺ own household&rdquo; or &ldquo;the household of the Prophet ﷺ&rdquo;.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ POLISH ============ -->
+<section id="polish">
+  <div class="sechead"><h2>Polish</h2><span class="count">9 findings</span></div>
+  <p class="secnote">Wording and register refinements; items 25-26 are recorded-only (series ledger + file artifacts, no prose edit proposed).</p>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">18</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The closing prompt asks two different questions</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 14 · Return</span><span class="chip">Auditors A + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The prompt (&ldquo;Where is your yaqin?&rdquo;) asks the reader to locate existing certainty; the subline asks them to &ldquo;name the certainty you <b>long for</b>&rdquo; - a certainty they lack. The placeholder rescues it, but Sabr and Tawakkul's prompts are single-minded. Suggested: align on the subline's intent - &ldquo;What do you long to be certain of?&rdquo; (or &ldquo;Where do you need yaqin?&rdquo;).</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">19</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Bare &ldquo;Husayn&rdquo; without &ldquo;Imam&rdquo; twice in English</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beats 12 + 15</span><span class="chip">Auditor B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;the face of Husayn only grew more luminous&rdquo; (beat 12) and &ldquo;The son of Husayn&rdquo; (beat 15 note) drop the title the parallel Urdu carries (امام حسینؑ) and the file itself uses elsewhere (&ldquo;Imam Ali ibn al-Husayn&rdquo;). Suggested: &ldquo;the face of Imam Husayn&rdquo;, &ldquo;The son of Imam Husayn&rdquo;.</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">20</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Excerpt cuts carry no ellipsis; the 6:75 quote is untagged</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beats 06 · 08 · 10</span><span class="chip">Auditor B</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The 2:260 and 28:7 excerpts start/stop mid-ayah with no &ldquo;&hellip;&rdquo; in Arabic or translation - neither cut distorts meaning (judged honest), but a marker would be transparent and house-consistent with 102:5's trailing &ldquo;&hellip;&rdquo;. Separately, the beat 06 reflection's quote &ldquo;that he might be of those of certainty&rdquo; is accurate 6:75 wording with no &ldquo;(6:75)&rdquo; tag (folded into #2's rewrite if approved).</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">21</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;For most, certainty comes only at death&rdquo; lands as a puzzle</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 11 · Act III card</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>The card asserts the classical reading of its own bridge verse (15:99, yaqin = death) without stating the link. One clause closes it: &ldquo;For most of us, certainty arrives only at death - when the unseen is finally seen.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">22</div>
+      <div class="f-titlewrap">
+        <div class="f-title">The map's first rung states the metaphor as fact</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 02b · Depth 1 card</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;To know the fire exists - by the smoke on the horizon&rdquo; is the metaphor's first appearance, unmarked as analogy - and the map's cards are collapsed until tapped, so a reader who opens only one card loses the ladder that teaches it. A two-word simile marker anchors it: &ldquo;<b>Like</b> knowing a fire exists - by the smoke on the horizon.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">23</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;The one who lived to carry it&rdquo; + unglossed Sahifa</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 15 · note + source</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;Carry it&rdquo; has a fuzzy antecedent (Karbala? the story? the trial?) - &ldquo;the one who lived to carry its story&rdquo; fixes it. And al-Sahifa al-Sajjadiyya is an unglossed book title; two words cover it: &ldquo;his book of prayers, al-Sahifa al-Sajjadiyya&rdquo;. (The note's glossing instinct is otherwise the right one - see clean areas.)</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">24</div>
+      <div class="f-titlewrap">
+        <div class="f-title">&ldquo;I love not those that set&rdquo; - archaic inversion</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 06 · translation</span><span class="chip">Auditor C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>&ldquo;I love not&rdquo; plus &ldquo;those&rdquo; for celestial objects are mild ESL speed bumps. &ldquo;I do not love the things that set&rdquo; keeps the meaning at no cost.</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">25</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Recorded-only: three dives now summit on the same Ashura morning</div>
+        <div class="chips"><span class="chip sev-p">No edit proposed</span><span class="chip">Series ledger</span><span class="chip">Auditor A</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p>Yaqin (the radiant face), Sabr (the last prostration), and Tawakkul (the dawn address) all place summit beats on the morning of Ashura. Only the Tawakkul&harr;Yaqin echo is documented; no ledger entry records that the scene is triple-occupied for the next dive's designer (Shukr consciously moved to the eve). <b>Direction:</b> record it in the series ledger. Note that if finding #1 takes fix option (a), Yaqin's beat moves to the Imam's last moments - which also happens to relieve the crowding, though it then abuts Sabr's final-moments climax; the choice between #1's options should weigh this.</p>
+    </div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head">
+      <div class="f-num">26</div>
+      <div class="f-titlewrap">
+        <div class="f-title">Recorded-only: file artifacts</div>
+        <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">File-level</span><span class="chip">Auditors A + C</span></div>
+      </div>
+    </div>
+    <div class="f-body">
+      <p><b>Comment numbering</b> skips 05 (<code>// 04</code> &rarr; <code>// 06</code>, a removed-beat artifact; same gap exists in Sabr) and uses <code>02b</code> - can mislead future editors; renumber on next touch. <b>Localization gap on the last line:</b> <code>close: "The certainty is yours to keep."</code> uses the bare string-literal shorthand, as all four dives do - harmless in the EN-first siblings, but Yaqin is the only fully-localized dive, so its UR/AR readers get an English final line. Worth a LocalizedText on next touch.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ CLEAN ============ -->
+<section id="clean">
+  <div class="sechead"><h2>Clean areas</h2><span class="count">verified by the auditors</span></div>
+  <div class="cleangrid">
+    <div class="cl"><b>The ledger, in reverse: clean</b><span>No later dive reuses Yaqin's verses, narrations, or dua (verse sets fully disjoint; Sahifa duas #20/#28/#37 distinct). Tawakkul's Ashura-morning echo is documented as deliberate; later docs treat Ibrahim's fire, the mother of Musa, and Zaynab's court as Yaqin's property; nothing reserved is touched.</span></div>
+    <div class="cl"><b>Qur'an Arabic: 8 / 8 semantically clean</b><span>102:5, 6:76, 2:260, 21:69, 28:7, 15:99 all match the canonical text word-for-word in plain orthography; depths references 102:7 and 56:95 genuinely carry Ayn al-Yaqin / Haqq al-Yaqin; 102:5 genuinely carries Ilm al-Yaqin.</span></div>
+    <div class="cl"><b>Excerpts anchored honestly</b><span>Both mid-ayah cuts (2:260, 28:7) anchor the right verse, translate only the text shown, and do not distort meaning; 102:5's trailing "&hellip;" for the suppressed conditional is appropriate.</span></div>
+    <div class="cl"><b>The Court: content verified</b><span>"Ma ra'aytu illa jamilan" confirmed in al-Luhuf / Bihar al-Anwar 45:115-116; speaker, interlocutor (Ubaydullah ibn Ziyad), and venue (the Kufa palace - not the Damascus sermon) all verified; context details historically standard.</span></div>
+    <div class="cl"><b>Sahifa Dua 20 verified word-for-word</b><span>Attribution to Imam Ali ibn al-Husayn confirmed; the quoted Arabic matches the canonical Makarim al-Akhlaq opening including harakat, fairly omitting the opening salawat; the biographical note is accurate.</span></div>
+    <div class="cl"><b>Style sweep near-clean</b><span>Zero em/en dashes in the file (all EN dashes are " - "); no macrons, underdots, or half-ring characters in English prose; "Sayyida Zaynab", "Imam Ali ibn al-Husayn", "Ashura", "Yaqin" all plain-spelled per house style. Only exceptions: the ayn marks (#16) and bare "Husayn" (#19).</span></div>
+    <div class="cl"><b>Depths map orients, does not spoil</b><span>The payoffs (the radiant face, ma ra'aytu illa jamilan, the fire made cool) are nowhere pre-announced; the map's smoke/fire/flame triplet productively seeds the imagery, and beat 12's "the very fire the depths spoke of" is a callback, not a spoiler.</span></div>
+    <div class="cl"><b>Close complete and earned</b><span>The plain reflectionPrompt + dua close is a sanctioned, complete close; Imam al-Sajjad as the voice ("present at Karbala, the one who lived to carry it") is called the best dua-fit in the series; "The certainty is yours to keep." lands.</span></div>
+    <div class="cl"><b>Pacing and the summit</b><span>15 beats reads in ~5 minutes; ask &rarr; see &rarr; Ashura &rarr; the court builds properly, and the summit escalation (radiant face &rarr; "I saw nothing but beauty") is the strongest stretch of the dive. Ibrahim recurring across beats 06-09 reads as one man ascending, not repetition.</span></div>
+    <div class="cl"><b>What reads well</b><span>"Not the absence of grief, but the certainty that sees the divine beauty through it" - the dive's best sentence. The orientation triad, the map ladder's parallelism, and beat 11's naming-done-right ("one family, the Prophet's own household") all pass first-read. Yaqin is also the only dive with full UR/AR prose in place.</span></div>
+  </div>
+</section>
+
+<!-- ============ REPLY ============ -->
+<section id="reply">
+  <div class="replybox">
+    <h3>Resolution - 2026-07-17</h3>
+    <p><b>Findings 1-17 applied</b> to <code>YaqinDeepDive.swift</code>, with UR/AR strings mirrored on every changed beat. Finding 1 took <b>option 1b</b>: the summit narration is re-attributed to Imam Ali ibn al-Husayn (Ma'ani al-Akhbar &middot; Bihar al-Anwar), retagged &ldquo;When the Trial Grew Fierce&rdquo;, the arrows detail dropped - and the dua note now names the weld (the man who prayed the dua is the man who described that face). Build re-run: <b>green</b>; guardrail greps (em dashes, diacritics, curly ayn marks) clean. <b>Findings 18-26 not applied</b> - recorded here as known and accepted.</p>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

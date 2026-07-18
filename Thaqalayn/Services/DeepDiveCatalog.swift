@@ -70,10 +70,10 @@ struct DeepDiveDescriptor: Identifiable {
             title: LocalizedText(en: "Shukr · Gratitude", ur: "شکر", ar: "الشكر"),
             titleAr: "شُكْر",
             sfSymbol: "hands.clap",
-            subtitle: LocalizedText(en: "Turning every blessing into remembrance",
-                                    ur: "ہر نعمت کو یاد میں بدل دینا",
-                                    ar: "تحويل كل نعمة إلى ذِكر"),
-            available: false, dive: nil,
+            subtitle: LocalizedText(en: "A descent through three tongues - Qur'an to Karbala",
+                                    ur: "تین زبانوں میں اترتا ایک سفر - قرآن سے کربلا تک",
+                                    ar: "نزولٌ عبر ثلاثة ألسنة - من القرآن إلى كربلاء"),
+            available: true, dive: .shukr,
             coverAssetName: "ShukrCover"
         ),
         DeepDiveDescriptor(

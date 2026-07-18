@@ -114,7 +114,7 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "One question, asked thirty-one times",
                                     ur: "ایک سوال، اکتیس بار",
                                     ar: "سؤالٌ واحد، إحدى وثلاثون مرة"),
-            available: false, dive: nil,
+            available: true, dive: .surahRahman,
             coverAssetName: "RahmanCover"
         ),
         SurahExperienceDescriptor(

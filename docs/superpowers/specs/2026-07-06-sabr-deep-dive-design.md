@@ -192,3 +192,24 @@ Update the existing `sabr` descriptor:
 - No new audio assets (duʿā is TTS; āyāt use existing recitation).
 - Tawakkul (the third dive) is not built here; it remains a "coming soon" card.
 - No persistence/sync of the reflection-prompt text (local-only, exactly as Yaqīn).
+
+## Retro-audit - 2026-07-17 (3-auditor stage; findings: docs/plans/2026-07-17-sabr-audit-findings.html)
+
+**Applied** (findings 1-8, 11-13, 17): climax re-cited to Maqtal al-Husayn of al-Muqarram (the
+"صبرا على قضائك" line is NOT in al-Luhuf - zero hits in two full digitizations; carrier is the late
+maqtal tradition). Closing dua re-cited to Muhaj al-Da'awat of Ibn Tawus (NOT in al-Amali of
+al-Saduq; kept Imam al-Sadiq - the series' only non-Sajjad close - and restored the لك of clause 1).
+Last Night source widened to al-Irshad · al-Luhuf (bees + "no one but me" are al-Luhuf's wording),
+body restaged (Imam Husayn identified, army on the surface, mount image restored, speech quoted),
+reflection reframed as the rida-to-peace hinge. Beat 08 names Isma'il/Ibrahim/the dream. Beat 09
+reflection rebuilt on awwab (dropped "never once resented"). "Bereaved of every son" corrected
+(al-Sajjad survived). 2:156 given its 2:155 lead-in. Open line glosses Ahl al-Bayt + ﷺ. Act III
+card ends at "serene" (bridge owns "pleased and pleasing"). Engine: movement-card chrome noun is
+now data-driven (`stageNoun`; Sabr "Station", Tawakkul "Motion", Shukr "Tongue", default "Depth").
+
+**Known, accepted** (declined 2026-07-17): #9 Ya'qub/Yusuf backstory unsurfaced; #10 dua-translation
+archaisms + "sixth Imam" unconnected; #14 map's "the family who bore it" unnamed (A judged it
+series-consistent orientation); #15 Rida-dive forward collision unrecorded; #16 no Ashura scene-echo
+note here (see the findings HTML for the triple-occupation fact); #18-27 polish (curly apostrophes,
+map/card restatement, "in the very fire" image bleed, "the decree" cold open, double negatives,
+archaic verse wording, soft map citation, doc-drift/comment-numbering artifacts).

@@ -71,9 +71,9 @@ Metadata: id `tawakkul` · titleEn `Tawakkul` · titleAr `تَوَكُّل` · s
 ### 03 - `depths` - "The Three Motions" (act 0)
 - tag: The Three Motions · reference: Al Imran 3:159 · al-Talaq 65:3
 - items:
-  1. العَزْم · al-'Azm · The Doing · "To rise and take the means - resolve, work, tie the camel." · ref nil · embodies: the hand that works
+  1. العَزْم · al-'Azm · The Doing · "To rise and take the means at hand - resolve, work, do everything that is yours to do." · ref nil · embodies: the hand that works
   2. التَّفْوِيض · al-Tafwid · The Handing Over · "When the means end, to place the outcome in His hands - and keep walking." · ref 40:44 · embodies: the hand that releases
-  3. الكِفَايَة · al-Kifaya · The Sufficiency · "To be carried by the One you trusted - whose answer is Himself." · ref 65:3 · embodies: the family who was carried
+  3. الكِفَايَة · al-Kifaya · The Sufficiency · "To be carried by the One you trusted - when every means has ended." · ref 65:3 · embodies: the family who was carried
 
 ### 04 - `act` I (connector nil, bridge nil)
 - line: It begins in the hands. Tawakkul is not the folding of arms - it is the work done fully, then signed over to the One who holds the result.
@@ -82,27 +82,27 @@ Metadata: id `tawakkul` · titleEn `Tawakkul` · titleAr `تَوَكُّل` · s
 - arabic: فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى اللَّهِ ۚ إِنَّ اللَّهَ يُحِبُّ الْمُتَوَكِّلِينَ
 - translation: "And when you have resolved, rely upon God. Indeed God loves those who rely."
 - reference: Al Imran · 3 : 159
-- reflection: The order of the verse is the whole teaching. Consult them, the Prophet is told; then resolve; then rely. Trust is what the resolved hand does with the outcome - not what the idle hand does instead of the work.
+- reflection: The sequence of the verse is the whole teaching. Consult your companions, the Prophet is told in its opening words; then resolve; then rely. Trust is what the resolved hand does with the outcome - not what the idle hand does instead of the work.
 
 ### 06 - `narration` - "The Unanswered Prayer" (act 1)
-- source: Imam Ja'far al-Sadiq · al-Kafi, on seeking livelihood
-- body: Four there are, said the Imam, whose prayer returns to them unanswered. One is the man who sits at home and says, "O Lord, provide for me" - and is told: have I not commanded you to seek?
+- source: Imam Ja'far al-Sadiq · al-Kafi, on those whose prayer is not answered
+- body: Four there are, said the Imam, whose prayer returns to them unanswered. One is the man who sits at home and says, "O God, provide for me" - and is told: have I not commanded you to seek?
 - reflection: Tawakkul that skips the work is not trust - it is a request that God do your part, when He has already asked it of you.
 
 ### 07 - `act` II (connector "You have done what is yours.", bridge nil)
-- line: Now - the harder motion. Open the hand. Trust is proven not while the means still work, but at the moment they end: the sea in front, the army behind.
+- line: Now - the harder motion. Open the hand. Trust is proven not while there is still something you can do, but at the moment your means run out: the sea in front, the army behind.
 
 ### 08 - `verse` - al-Shu'ara 26:62 (act 2, tag "The Sea in Front")
 - arabic: قَالَ كَلَّا ۖ إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ
 - translation: "He said: Never - indeed my Lord is with me; He will guide me."
 - reference: al-Shu'ara · 26 : 62
-- reflection: Pharaoh's army behind, the water ahead. "We are overtaken!" cry his people. The sea has not yet split when Musa answers - trust speaks before the way appears.
+- reflection: "We are overtaken!" cry the people behind Musa. The sea has not yet split when he answers - trust speaks before the way appears.
 
 ### 09 - `verse` - Ghafir 40:44 (act 2, tag "The Entrusted Affair")
 - arabic: وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ ۚ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ
 - translation: "And I entrust my affair to God. Indeed God is ever seeing of His servants."
 - reference: Ghafir · 40 : 44
-- reflection: A lone believer in Pharaoh's court, his warning finished, hands the consequence over. The very next verse answers him: so God protected him from the evils they plotted.
+- reflection: The same court Musa fled - now answered from within it. A lone believer, his warning finished, hands the consequence over. The very next verse answers him: so God protected him from the evils they plotted.
 
 ### 10 - `act` III (connector "You have opened the hand.") + bridge al-Talaq 65:3
 - line: Now - what receives it. On the other side of the release is not a void but a Trustee - and His promise is not always the outcome you asked for. It is Himself.
@@ -111,11 +111,11 @@ Metadata: id `tawakkul` · titleEn `Tawakkul` · titleAr `تَوَكُّل` · s
 ### 11 - `response` - He Answers (act 3)
 - replyingTo: To the one who lets go of every rope but His
 - arabic: جَعَلْتُ لَهُ الْمَخْرَجَ مِنْ بَيْنِهِنَّ
-- words: "No servant of Mine takes refuge in Me rather than in My creation - I know it from his intention - but that if the heavens and the earth and all within them plotted against him, I would make for him a way out from among them all."
-- source: His revelation to Dawud · al-Kafi
-- reflection: Not that the plot stops - but that the way out is His to make. And the hand that grips creation instead finds the ropes of the heavens cut.
+- words: "Whenever a servant of Mine takes refuge in Me and not in My creation - and I know it from his intention - then even if the heavens and the earth and all within them plotted against him, I would make for him a way out from among them all."
+- source: His revelation to the prophet Dawud · al-Kafi
+- reflection: Not that the plot stops - but that the way out is His to make. And whoever grips creation's ropes instead finds that the rope from heaven has been cut.
 
-### 12 - `verse` - al-A'raf 7:196 (act 3, tag "The Verse He Answered With")
+### 12 - `verse` - al-A'raf 7:196 (act 3, tag "His Answer at Dawn")
 - arabic: إِنَّ وَلِيِّيَ اللَّهُ الَّذِي نَزَّلَ الْكِتَابَ ۖ وَهُوَ يَتَوَلَّى الصَّالِحِينَ
 - translation: "Indeed my Protector is God, who sent down the Book - and He takes care of the righteous."
 - reference: al-A'raf · 7 : 196
@@ -125,8 +125,8 @@ Metadata: id `tawakkul` · titleEn `Tawakkul` · titleAr `تَوَكُّل` · s
 - source: Imam al-Husayn, the morning of Ashura - al-Irshad of al-Mufid
 - arabic: اللَّهُمَّ أَنْتَ ثِقَتِي فِي كُلِّ كَرْبٍ، وَرَجَائِي فِي كُلِّ شِدَّةٍ
 - translation: "O God, You are my trust in every distress, and my hope in every hardship."
-- body: As the army closed in, he raised his hands - not for rescue, but to name the One who held him: You are, in everything that befalls me, my confidence and my strength.
-- reflection: No sea split that morning; no fire cooled. And the trust did not break - because it had never been placed in the outcome. It was placed in Him.
+- body: As the army closed in, he raised his hands - not for rescue, but to name the One who held him: in every distress You are my trust, in every hardship my hope.
+- reflection: No sea split that morning; no rescue came. The way out promised to Dawud was made - not through the army, but through Him: the trust did not break, because it had never been placed in the outcome. It was placed in Him.
 
 ### 14 - `release` - "The Release" (NEW beat)
 - tag: The Release
@@ -144,7 +144,7 @@ Metadata: id `tawakkul` · titleEn `Tawakkul` · titleAr `تَوَكُّل` · s
 - arabic: اللَّهُمَّ إِنِّي أَخْلَصْتُ بِانْقِطَاعِي إِلَيْكَ، وَأَقْبَلْتُ بِكُلِّي عَلَيْكَ
 - translation: "My God, I have cut myself off from all but You, and turned toward You with the whole of myself."
 - source: Imam Ali ibn al-Husayn · al-Sahifa al-Sajjadiyya, Dua 28
-- note: The great entrustings are not asked of you this morning. Only this: one grip loosened, one affair signed over to the One who does not drop what He holds.
+- note: The great entrustings are not asked of you this morning. Only this: one grip loosened, one affair signed over - and the rest left to the One who is enough.
 - close: The trust is yours to keep.
 
 ## 5. Sourcing & verification (done 2026-07-16)
@@ -152,13 +152,15 @@ Metadata: id `tawakkul` · titleEn `Tawakkul` · titleAr `تَوَكُّل` · s
 | Item | Source | Status |
 |------|--------|--------|
 | Ayat 3:159, 26:62, 40:44(-45), 65:3, 7:196 | Qur'an | Text checked against app `quran_data.json` (plain orthography per Yaqin/Sabr house style; recitation anchored per single ayah). |
-| Four whose prayer is unanswered (beat 06) | al-Kafi (bab seeking rizq) / Da'awat al-Rawandi, from Imam al-Sadiq | Verified: man at home saying "يا رب ارزقني" told "ألم آمرك بالطلب". |
+| Four whose prayer is unanswered (beat 06) | al-Kafi (Kitab al-Du'a, bab "man la tustajab da'watuhu", ~2:511), from Imam al-Sadiq | Verified: man at home saying "اللهم ارزقني" told "ألم آمرك بالطلب". **Audit correction 2026-07-17:** the beat now uses al-Kafi's "O God, provide for me" (the "يا رب" vocative is the al-Khisal/Qurb al-Isnad wording); source label changed from "on seeking livelihood" (a thematic gloss) to the actual chapter. |
 | Revelation to Dawud (beat 11) | al-Kafi, from Imam al-Sadiq | Verified verbatim: «ما اعتصم بي عبد من عبادي دون أحد من خلقي عرفت ذلك من نيته ثم تكيده السماوات والأرض ومن فيهن إلا جعلت له المخرج من بينهن…». |
 | Morning-of-Ashura address ending 10:71 + 7:196 (beat 12) | Maqtal histories (al-Tabari et al.) | Verified; beat cites the ayah, prose says "the histories record". |
 | "You are my trust in every distress" (beat 13) | al-Irshad of al-Mufid, vol 2 (~p. 96) | Verified: «اللهم أنت ثقتي في كل كرب ورجائي في كل شدة وأنت لي في كل أمر نزل بي ثقة وعدة». |
 | Sahifa Dua 28 opening (beat 15) | al-Sahifa al-Sajjadiyya #28 (fleeing to God) | Verified: «اللهم إني أخلصت بانقطاعي إليك وأقبلت بكلي عليك». |
 
-**Nothing reused from Yaqin/Sabr.** Explicitly avoided: Ibrahim's fire, the mother of Musa (Yaqin); Ya'qub, Ismail, Ayyub, the Last Night, the last prostration (Sabr). Sahifa duas differ (#20 Yaqin, #28 here).
+**No text reused from Yaqin/Sabr** (no verse, narration, or dua overlaps). Explicitly avoided: the mother of Musa (Yaqin); Ya'qub, Ismail, Ayyub, the Last Night, the last prostration (Sabr). Sahifa duas differ (#20 Yaqin, #28 here).
+
+**Deliberate scene echo (documented 2026-07-17, per audit finding 14):** Movement III's summit (beats 12-13) revisits the same dawn as Yaqin's "The Morning of Ashura" beat - the army arrayed, Husayn before it - but through a different lens and with entirely different texts. Yaqin watched his *face* (the Hilal ibn Nafi radiance narration); Tawakkul hears what he *said* (7:196 ending his address) and where his *hands* went (the al-Irshad trust dua). The revisit is intentional, in the same spirit as Shukr's deliberate revisit of Sabr's "Last Night." Earlier the doc claimed "nothing reused" without acknowledging this scene-level echo. (Ibrahim's fire is NOT used - the earlier "avoided" note is retained: audit finding 3 removed the lone "no fire cooled" allusion from beat 13, which had brushed that same avoided list.)
 
 ## 6. Catalog + What's New
 
@@ -170,3 +172,40 @@ Metadata: id `tawakkul` · titleEn `Tawakkul` · titleAr `تَوَكُّل` · s
 - Urdu/Arabic dive content (EN-first; localize later like Sabr).
 - No persistence of the release interaction; no new audio assets.
 - Remaining placeholder dives (Shukr, Ikhlas, Taqwa, Rida) untouched.
+
+## 8. Audit outcome (2026-07-17)
+
+Three flag-only auditors run retroactively per the `/theme-deep-dive` skill (full report:
+`docs/plans/2026-07-17-tawakkul-audit-findings.html`). **0 Blockers** - sourcing verified
+at the detail level. All **14 Should-fix** findings were approved and applied to
+`TawakkulDeepDive.swift` and section 4 above:
+- 1: response beat `words` rewritten from the archaic "No X... but that" correlative to
+  "Whenever... then even if..."; reflection close de-compressed ("the rope from heaven has
+  been cut").
+- 2 + 3: the climax reflection now closes the Dawud-promise loop ("the way out... made not
+  through the army, but through Him") and drops the out-of-dive "no fire cooled" allusion
+  ("no rescue came").
+- 4: threshold al-Kifaya desc no longer spoils the turn ("when every means has ended").
+- 5: 3:159 reflection no longer quotes the off-screen "consult" clause as if shown
+  ("in its opening words").
+- 6: climax body paraphrase now matches the displayed dua translation ("my trust... my hope").
+- 7: "tie the camel" replaced with "do everything that is yours to do".
+- 8: beat 06 source label corrected to the real al-Kafi chapter; "O Lord" -> "O God"
+  (al-Kafi wording; see sourcing table).
+- 9: bare "the means" anchored ("the means at hand" / "something you can do... your means
+  run out").
+- 10: Movement II diptych named in beat 09 ("the same court Musa fled - now answered from
+  within it"); the sea-and-army image no longer repainted in beat 08.
+- 11: dua note given a distinct final clause ("the One who is enough"), no longer echoing
+  the release note.
+- 12: beat 12 tag "The Verse He Answered With" -> "His Answer at Dawn" (no pronoun clash
+  with the preceding "He answers").
+- 13: Dawud identified ("the prophet Dawud").
+- 14: this doc's scene-echo note added (section 5) - the Yaqin morning-of-Ashura revisit is
+  now documented as deliberate.
+
+**Findings 15-19 declined - known, accepted (Polish):** "Qur'an" curly apostrophe
+family-split; "Now - what receives it." keeps its elliptical form; "Four there are"
+inversion kept; beat 08 pronouns; "entrustings"/"this morning" in the dua note. Also
+recorded-only: the release's deliberate 40:44 wa- trim, the connector-after-negative-
+exemplar, "The Sufficiency" as a state, and the Dua 28 ikhlas compression.

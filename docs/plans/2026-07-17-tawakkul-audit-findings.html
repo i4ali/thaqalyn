@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tawakkul Deep Dive - Audit Findings</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Fragment+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0F0B; --bg2:#0D130E; --surface:#111A13; --surface2:#152017;
+  --border:rgba(227,195,126,.13); --hair:rgba(255,255,255,.07);
+  --text:#ECE7DB; --dim:#9FAA9C; --faint:#6E7A6F;
+  --gold:#C9A55C; --goldB:#E3C37E;
+  --blocker:#C4614E; --blocker-dim:rgba(196,97,78,.12);
+  --should:#C9A55C; --should-dim:rgba(201,165,92,.10);
+  --polish:#7FA184; --polish-dim:rgba(127,161,132,.10);
+  --clean:#8CAE6E; --clean-dim:rgba(140,174,110,.10);
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --mono:'Fragment Mono', ui-monospace, 'SF Mono', monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#F6F3EA; --bg2:#F1EDE2; --surface:#FBF9F2; --surface2:#F4F0E5;
+    --border:rgba(138,109,51,.22); --hair:rgba(0,0,0,.08);
+    --text:#26301F; --dim:#5C6A57; --faint:#8A937F;
+    --gold:#8A6D33; --goldB:#6E5626;
+    --blocker:#A6402E; --blocker-dim:rgba(166,64,46,.09);
+    --should:#8A6D33; --should-dim:rgba(138,109,51,.09);
+    --polish:#4F7A57; --polish-dim:rgba(79,122,87,.09);
+    --clean:#5B7F3B; --clean-dim:rgba(91,127,59,.09);
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:
+    radial-gradient(120% 50% at 50% -10%, rgba(227,195,126,.05), transparent 60%),
+    var(--bg);
+  color:var(--text); font-family:var(--mono); font-size:14px; line-height:1.65;
+  padding:0 20px 90px;
+}
+.wrap{max-width:960px; margin:0 auto;}
+header{padding:64px 0 40px; border-bottom:1px solid var(--border);}
+.eyebrow{color:var(--gold); font-size:11px; letter-spacing:4px; text-transform:uppercase;}
+h1{font-family:var(--serif); font-weight:600; font-size:46px; line-height:1.1; margin-top:14px;}
+h1 em{font-style:italic; color:var(--goldB);}
+.sub{color:var(--dim); max-width:640px; margin-top:14px; font-size:13.5px;}
+.verdict{
+  margin-top:26px; padding:18px 22px; border:1px solid var(--border); border-left:3px solid var(--clean);
+  background:var(--clean-dim); border-radius:0 10px 10px 0; max-width:720px;
+}
+.verdict p{font-family:var(--serif); font-size:19px; line-height:1.45;}
+.verdict small{display:block; margin-top:8px; color:var(--dim); font-family:var(--mono); font-size:11.5px;}
+.stats{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px;}
+.stat{border:1px solid var(--hair); border-radius:10px; padding:12px 18px; background:var(--surface); min-width:118px;}
+.stat b{font-family:var(--serif); font-size:30px; font-weight:600; display:block; line-height:1;}
+.stat span{font-size:10.5px; letter-spacing:1.6px; text-transform:uppercase; color:var(--dim);}
+.stat.s-blocker b{color:var(--blocker);} .stat.s-should b{color:var(--should);}
+.stat.s-polish b{color:var(--polish);} .stat.s-clean b{color:var(--clean);}
+nav{
+  position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--hair);
+  display:flex; gap:4px; overflow-x:auto; padding:10px 0; margin-bottom:8px;
+}
+nav a{color:var(--dim); text-decoration:none; font-size:11px; letter-spacing:1.4px; text-transform:uppercase; padding:6px 12px; border-radius:20px; white-space:nowrap;}
+nav a:hover{color:var(--text); background:var(--surface2);}
+nav a .dot{display:inline-block; width:6px; height:6px; border-radius:50%; margin-right:7px; vertical-align:1px;}
+section{padding-top:44px;}
+.sechead{display:flex; align-items:baseline; gap:14px; margin-bottom:8px;}
+.sechead h2{font-family:var(--serif); font-weight:600; font-size:30px;}
+.sechead .count{color:var(--faint); font-size:12px;}
+.secnote{color:var(--dim); font-size:12.5px; max-width:680px; margin-bottom:22px;}
+.finding{border:1px solid var(--hair); border-radius:12px; background:var(--surface); margin-bottom:18px; overflow:hidden; animation:fadeUp .45s ease both;}
+.finding:nth-child(odd){animation-delay:.05s;}
+.f-head{display:flex; align-items:flex-start; gap:16px; padding:18px 22px 0;}
+.f-num{font-family:var(--serif); font-weight:600; font-size:34px; line-height:1; min-width:44px; color:var(--faint);}
+.f-titlewrap{flex:1; min-width:0;}
+.f-title{font-family:var(--serif); font-weight:600; font-size:20.5px; line-height:1.3;}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:9px;}
+.chip{font-size:9.5px; letter-spacing:1.4px; text-transform:uppercase; padding:3px 10px; border-radius:20px; border:1px solid var(--hair); color:var(--dim); background:var(--bg2);}
+.chip.sev-b{color:var(--blocker); border-color:var(--blocker); background:var(--blocker-dim);}
+.chip.sev-s{color:var(--should); border-color:var(--should); background:var(--should-dim);}
+.chip.sev-p{color:var(--polish); border-color:var(--polish); background:var(--polish-dim);}
+.f-body{padding:14px 22px 20px 82px;}
+.f-body p{color:var(--dim); font-size:13px; max-width:700px;}
+.f-body p + p{margin-top:10px;}
+.f-body p b{color:var(--text); font-weight:400;}
+.f-body code{font-size:12px; background:var(--bg2); border:1px solid var(--hair); border-radius:4px; padding:1px 6px;}
+.finding.s{border-left:3px solid var(--should);}
+.finding.p{border-left:3px solid var(--polish);}
+.rw{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; max-width:760px;}
+@media (max-width:700px){ .rw{grid-template-columns:1fr;} .f-body{padding-left:22px;} .f-num{min-width:32px; font-size:26px;} }
+.rw > div{border:1px solid var(--hair); border-radius:8px; padding:12px 14px; background:var(--bg2); min-width:0;}
+.rw .lbl{font-size:9.5px; letter-spacing:1.6px; text-transform:uppercase; margin-bottom:8px; display:block;}
+.rw .before .lbl{color:var(--blocker);} .rw .after .lbl{color:var(--clean);}
+.rw q{font-family:var(--serif); font-size:16.5px; line-height:1.45; quotes:'\201C' '\201D'; color:var(--text); overflow-wrap:break-word;}
+.rw .before q{color:var(--dim);}
+.cleangrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px;}
+.cl{border:1px solid var(--hair); border-left:3px solid var(--clean); border-radius:10px; background:var(--surface); padding:14px 16px; animation:fadeUp .45s ease both;}
+.cl b{font-family:var(--serif); font-size:17px; font-weight:600; display:block; margin-bottom:5px;}
+.cl span{color:var(--dim); font-size:12px;}
+.replybox{margin-top:52px; border:1px solid var(--border); border-radius:12px; padding:22px 26px; background:linear-gradient(180deg, var(--should-dim), transparent);}
+.replybox h3{font-family:var(--serif); font-size:22px; font-weight:600; margin-bottom:8px;}
+.replybox p{color:var(--dim); font-size:12.5px; max-width:640px;}
+.replybox code{background:var(--bg2); border:1px solid var(--hair); border-radius:4px; padding:1px 7px; font-size:12px;}
+@keyframes fadeUp{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;}}
+@media (prefers-reduced-motion: reduce){ .finding,.cl{animation:none;} html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Thaqalayn · Theme Deep Dive Audit · 2026-07-17</div>
+  <h1>Tawakkul - <em>The Handing Over</em><br>Consolidated Audit Findings</h1>
+  <p class="sub">Three flag-only auditors on the shipped Tawakkul dive, with the hardened prompts (detail-level source verification; unglossed allusions are ranked findings). Overlapping findings merged; every item names its auditor(s). Nothing has been changed - each finding awaits your approval.</p>
+  <div class="verdict">
+    <p>Sourcing is fully verified - no severe findings from the fact-check, and the release beat was called &ldquo;the strongest identity beat in the series.&rdquo; The work is concentrated in the third movement: the response beat's centerpiece sentence fails first-pass reading, and the summit leaves the Dawud promise unreconciled.</p>
+    <small>Auditor A: structural loop open at the summit &nbsp;·&nbsp; Auditor B: "no severe findings" &nbsp;·&nbsp; Auditor C: "fix 1-4 before considering this dive at the family's readability bar"</small>
+  </div>
+  <div class="stats">
+    <div class="stat s-blocker"><b>0</b><span>Blocker</span></div>
+    <div class="stat s-should"><b>14</b><span>Should-fix</span></div>
+    <div class="stat s-polish"><b>5</b><span>Polish</span></div>
+    <div class="stat s-clean"><b>8</b><span>Clean areas</span></div>
+  </div>
+</header>
+
+<nav>
+  <a href="#should"><span class="dot" style="background:var(--should)"></span>Should-fix</a>
+  <a href="#polish"><span class="dot" style="background:var(--polish)"></span>Polish</a>
+  <a href="#recorded"><span class="dot" style="background:var(--faint)"></span>Recorded only</a>
+  <a href="#clean"><span class="dot" style="background:var(--clean)"></span>Clean areas</a>
+  <a href="#reply"><span class="dot" style="background:var(--goldB)"></span>How to approve</a>
+</nav>
+
+<section id="should">
+  <div class="sechead"><h2>Should-fix</h2><span class="count">14 findings · no Blockers</span></div>
+  <p class="secnote">Findings 1-5 are the substantive ones - four sit on the third movement, where the dive stakes its identity. 6-14 are one-line or doc-level.</p>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">1</div><div class="f-titlewrap">
+      <div class="f-title">The response beat's centerpiece sentence fails first-pass reading</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 11 · He Answers</span><span class="chip">Auditors A + C</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>Three problems on the dive's signature screen. <b>(a)</b> The English uses the archaic &ldquo;No X&hellip; but that B&rdquo; correlative - a first pass can yield the <b>opposite</b> meaning (&ldquo;no servant takes refuge in Me&rdquo;), with an aside wedged exactly where the reader holds the structure open, and a nested conditional inside. The hardest sentence shipped in any of the four dives. <b>(b)</b> The gold Arabic shows only the final clause while the italic English quotes the whole hadith - an Arabic-reading user sees a &ldquo;quote&rdquo; whose displayed original doesn't correspond (Shukr's response beat aligned the two; the cleaner standard). <b>(c)</b> The reflection's closing metaphor - &ldquo;the hand that grips creation instead finds the ropes of the heavens cut&rdquo; - stacks three compressions and misparses as &ldquo;ropes which cut.&rdquo;</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current (words)</span><q>No servant of Mine takes refuge in Me rather than in My creation - I know it from his intention - but that if the heavens and the earth and all within them plotted against him, I would make for him a way out from among them all.</q></div>
+        <div class="after"><span class="lbl">Suggested (words)</span><q>Whenever a servant of Mine takes refuge in Me and not in My creation - and I know it from his intention - then even if the heavens and the earth and all within them plotted against him, I would make for him a way out from among them all.</q></div>
+      </div>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current (reflection close)</span><q>And the hand that grips creation instead finds the ropes of the heavens cut.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>And whoever grips creation's ropes instead finds that the rope from heaven has been cut.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">2</div><div class="f-titlewrap">
+      <div class="f-title">The Dawud promise is never reconciled with the summit</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beats 11 → 13</span><span class="chip">Auditor A</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>Beat 11 stakes Movement III on a concrete promise: &ldquo;I would make for him a way out from among them all.&rdquo; Two swipes later the climax says &ldquo;No sea split that morning; no fire cooled&rdquo; - and never says what the way out <b>was</b>. A careful reader at the emotional peak can experience the revelation as contradicted by Karbala rather than transfigured by it - the opposite of the design doc's &ldquo;honest turn.&rdquo; One clause in beat 12 or 13 closes the loop: the way out ran not through the army but through Him - the promise kept in a different currency, not quietly dropped.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">3</div><div class="f-titlewrap">
+      <div class="f-title">&ldquo;No fire cooled&rdquo; leans on a story this dive never tells</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 13 · Climax reflection</span><span class="chip">Auditors A + C</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>The sea is earned (beat 08, Musa). The fire is Ibrahim's furnace - <b>Yaqin's</b> material, which Tawakkul's own doc lists under &ldquo;explicitly avoided.&rdquo; Inside this dive the most weight-bearing sentence has no antecedent for it: a first-time reader asks &ldquo;what fire?&rdquo; The exact allusion class the hardened audit rule bans.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>No sea split that morning; no fire cooled.</q></div>
+        <div class="after"><span class="lbl">Suggested (in-dive option)</span><q>No sea split that morning; no rescue came.</q></div>
+      </div>
+      <p>Alternative that keeps both images by glossing them: &ldquo;No sea split that morning, as it had for Musa; no fire turned cool, as it once had for Ibrahim.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">4</div><div class="f-titlewrap">
+      <div class="f-title">The honest turn is spoiled on the threshold map - and cryptic there too</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 03 · depths item 3</span><span class="chip">Auditors A + C</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>The summit's one revelation (&ldquo;His answer is Himself&rdquo;) is handed out eight screens early on the al-Kifaya card - Yaqin's and Sabr's thresholds describe their summits' state without giving away the twist. And at the map, with no question yet asked, &ldquo;whose answer is Himself&rdquo; is also cryptic on first pass. One change fixes both: neutralize the card and let the Movement III divider (beat 10, which needs the turn to frame Dawud correctly) carry it alone.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>To be carried by the One you trusted - whose answer is Himself.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>To be carried by the One you trusted - when every means has ended.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">5</div><div class="f-titlewrap">
+      <div class="f-title">The 3:159 reflection quotes a clause the screen does not show</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 05 · Resolve, Then Rely</span><span class="chip">Auditors A + C</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>&ldquo;Consult them, the Prophet is told&rdquo; - but the displayed excerpt begins at &ldquo;And when you have resolved,&rdquo; so the reader re-scans the verse for &ldquo;consult&rdquo; and doesn't find it; &ldquo;them&rdquo; has no referent; and &ldquo;the order of the verse&rdquo; briefly reads as &ldquo;the command.&rdquo; The whole claim rests on a sequence whose first step is invisible.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>The order of the verse is the whole teaching. Consult them, the Prophet is told; then resolve; then rely.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>The sequence of the verse is the whole teaching. Consult your companions, the Prophet is told in its opening words; then resolve; then rely.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">6</div><div class="f-titlewrap">
+      <div class="f-title">Climax body paraphrase clashes with the displayed translation</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 13 · body</span><span class="chip">Auditors B + C</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>The translation renders the dua &ldquo;my trust&hellip; my hope&rdquo;; the body paraphrases the same Arabic as &ldquo;my confidence and my strength&rdquo; - and &ldquo;strength&rdquo; is also a loose rendering of «عدة» (support/resource). An attentive reader pauses over which is the quote; the payload also arrives late behind an interpolated aside. One rewrite fixes all three.</p>
+      <div class="rw">
+        <div class="before"><span class="lbl">Current</span><q>&hellip;to name the One who held him: You are, in everything that befalls me, my confidence and my strength.</q></div>
+        <div class="after"><span class="lbl">Suggested</span><q>&hellip;to name the One who held him: in every distress You are my trust, in every hardship my hope.</q></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">7</div><div class="f-titlewrap">
+      <div class="f-title">&ldquo;Tie the camel&rdquo; is an unglossed hadith allusion</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 03 · depths item 1</span><span class="chip">Auditors C + B</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>&ldquo;Resolve, work, tie the camel&rdquo; leans entirely on the &ldquo;tie your camel, then trust&rdquo; hadith - never quoted or hinted anywhere in the dive; a reader who doesn't know it meets a literal camel at the end of an abstract list. (Auditor B adds: the hadith's classic isnad is Sunni - benign as an idiom since nothing is claimed, but another reason not to lean on it silently.) Gloss it (&ldquo;tie the camel first, as the Prophet taught&rdquo;) or replace the clause (&ldquo;do everything that is in your hands&rdquo;).</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">8</div><div class="f-titlewrap">
+      <div class="f-title">Unanswered Prayer: source descriptor is a gloss, and one word tracks a parallel source</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 06 · source + body</span><span class="chip">Auditor B</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>The narration is genuinely al-Kafi (2:~511, Imam al-Sadiq) but sits in the chapter on <b>those whose supplication is not answered</b> - &ldquo;on seeking livelihood&rdquo; reads like a locus and isn't one. And al-Kafi's text has the man say «اللهم ارزقني» (&ldquo;O <b>God</b>, provide for me&rdquo;); &ldquo;O Lord&rdquo; is the al-Khisal / Qurb al-Isnad wording - the same cross-source detail-bleed class as Shukr's feet-swelled finding, one synonymous word here. Suggested: source → <code>al-Kafi, on those whose prayer is not answered</code>; quote → &ldquo;O God, provide for me.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">9</div><div class="f-titlewrap">
+      <div class="f-title">Bare &ldquo;the means&rdquo; is translationese carrying three screens</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beats 03 · 07</span><span class="chip">Auditor C</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>&ldquo;Take the means&rdquo; / &ldquo;when the means end&rdquo; / &ldquo;while the means still work&rdquo; - English wants an anchor (&ldquo;the means <b>at hand</b>&rdquo;, &ldquo;something you can do&rdquo;); the bare absolute forces ESL readers to infer a technical sense (asbab) the text never establishes. Anchor it once at first use; e.g. divider: &ldquo;Trust is proven not while there is still something you can do, but at the moment your means run out.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">10</div><div class="f-titlewrap">
+      <div class="f-title">Movement II: the diptych goes unnamed, and one image is painted twice</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beats 07-09</span><span class="chip">Auditor A</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>Both content beats are verse beats, same era, same antagonist, same move - and the real design (the same tyrant answered twice: once from the shore, once from inside his own palace) is never named, so it reads as sameness. Meanwhile &ldquo;the sea in front, the army behind&rdquo; (divider) is immediately repainted as &ldquo;Pharaoh's army behind, the water ahead&rdquo; (beat 08). One clause in beat 09's reflection names the pairing (&ldquo;the same court Musa fled - answered now from within it&rdquo;); let one screen own the sea-and-army image.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">11</div><div class="f-titlewrap">
+      <div class="f-title">The same closing image on two consecutive screens</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beats 14 → 15</span><span class="chip">Auditor A</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>Release note: &ldquo;the hands that do not drop what they hold&rdquo; → next screen, dua note: &ldquo;the One who does not drop what He holds.&rdquo; A refrain wants distance; stacked, the second lands as accidental repetition. Keep it in the release (it completes the hands spine); give the dua note a different final clause.</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">12</div><div class="f-titlewrap">
+      <div class="f-title">Beat 12's tag flips &ldquo;He&rdquo; from God to Husayn unannounced</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 12 · tag</span><span class="chip">Auditors A + C</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>&ldquo;The Verse He Answered With&rdquo; directly follows &ldquo;HE ANSWERS&rdquo; - where He is God; a reader carrying that thread misassigns the pronoun until mid-reflection. Suggested tag: <b>&ldquo;His Answer at Dawn&rdquo;</b> or &ldquo;The Verse Husayn Answered With.&rdquo;</p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">13</div><div class="f-titlewrap">
+      <div class="f-title">Dawud is never identified</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beat 11 · source</span><span class="chip">Auditor C</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>&ldquo;His revelation to Dawud · al-Kafi&rdquo; - a bare name; the siblings stage their figures (&ldquo;the Mother of Musa,&rdquo; &ldquo;a lone believer in Pharaoh's court&rdquo;). One word: <b>&ldquo;His revelation to the prophet Dawud.&rdquo;</b></p>
+    </div>
+  </article>
+
+  <article class="finding s">
+    <div class="f-head"><div class="f-num">14</div><div class="f-titlewrap">
+      <div class="f-title">The Yaqin scene echo is real and undocumented (doc-only fix)</div>
+      <div class="chips"><span class="chip sev-s">Should-fix</span><span class="chip">Beats 12-13 · design doc</span><span class="chip">Auditor A</span></div>
+    </div></div>
+    <div class="f-body">
+      <p>Yaqin already stages a beat inside the morning of Ashura (the Hilal ibn Nafi radiance); Tawakkul returns to the same dawn with different texts. No content reuse - but unlike Shukr's doc (which names its revisit of Sabr's Last Night as a deliberate lens change), Tawakkul's doc claims &ldquo;nothing reused&rdquo; and never acknowledges the echo. Fix is documentation, not content: add the deliberate-echo note (Yaqin watched his face; Tawakkul hears what he said and where his hands went).</p>
+    </div>
+  </article>
+</section>
+
+<section id="polish">
+  <div class="sechead"><h2>Polish</h2><span class="count">5 findings</span></div>
+
+  <article class="finding p">
+    <div class="f-head"><div class="f-num">15</div><div class="f-titlewrap">
+      <div class="f-title">&ldquo;Qur&rsquo;an&rdquo; curly apostrophe splits the family</div>
+      <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 01 · open line</span><span class="chip">Auditor B</span></div>
+    </div></div>
+    <div class="f-body"><p>Tawakkul and Sabr use the typographic apostrophe in &ldquo;Qur&rsquo;an&rdquo;; Yaqin and Shukr use the straight one. Not a rule violation - pick one family-wide (straight matches the house diacritics script's output).</p></div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head"><div class="f-num">16</div><div class="f-titlewrap">
+      <div class="f-title">&ldquo;Now - what receives it.&rdquo; breaks the imperative slot</div>
+      <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 10 · divider</span><span class="chip">Auditor C</span></div>
+    </div></div>
+    <div class="f-body"><p>Every other dive's divider opens with an imperative (&ldquo;Now - accept it.&rdquo; / &ldquo;Now - say it.&rdquo;); the bare noun phrase makes the reader grope for a verb. One word: &ldquo;Now - <b>see</b> what receives it.&rdquo;</p></div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head"><div class="f-num">17</div><div class="f-titlewrap">
+      <div class="f-title">&ldquo;Four there are&rdquo; double inversion</div>
+      <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 06 · body</span><span class="chip">Auditor C</span></div>
+    </div></div>
+    <div class="f-body"><p>Inverted opening plus interposed attribution on the beat's first sentence. Plain order costs nothing: &ldquo;There are four, said the Imam, whose prayers return to them unanswered.&rdquo;</p></div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head"><div class="f-num">18</div><div class="f-titlewrap">
+      <div class="f-title">Beat 08's pronouns run ahead of Musa's name</div>
+      <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 08 · reflection</span><span class="chip">Auditor C</span></div>
+    </div></div>
+    <div class="f-body"><p>&ldquo;His people&rdquo; and the translation's &ldquo;He said&rdquo; precede the name. Name him in the first clause: &ldquo;Pharaoh's army behind <b>Musa</b>, the water ahead.&rdquo;</p></div>
+  </article>
+
+  <article class="finding p">
+    <div class="f-head"><div class="f-num">19</div><div class="f-titlewrap">
+      <div class="f-title">&ldquo;The great entrustings&rdquo; + &ldquo;this morning&rdquo;</div>
+      <div class="chips"><span class="chip sev-p">Polish</span><span class="chip">Beat 15 · dua note</span><span class="chip">Auditor C</span></div>
+    </div></div>
+    <div class="f-body"><p>&ldquo;Entrustings&rdquo; is an invented plural (a blink), and &ldquo;this morning&rdquo; assumes the reader's clock. Suggested: &ldquo;The great acts of entrusting are not asked of you today.&rdquo; (Pairs naturally with finding 11's new final clause.)</p></div>
+  </article>
+</section>
+
+<section id="recorded">
+  <div class="sechead"><h2>Recorded only</h2><span class="count">no edit proposed</span></div>
+  <div class="cleangrid">
+    <div class="cl" style="border-left-color:var(--faint)"><b>Release verse wa- trim</b><span>The release drops 40:44's leading وَ for a standalone first-person recitation - deliberate, semantically null, reference honest. (Auditor B, transparency note.)</span></div>
+    <div class="cl" style="border-left-color:var(--faint)"><b>Connector after a negative exemplar</b><span>&ldquo;You have done what is yours.&rdquo; affirms off the rebuked idler - the only connector in the series to do so; reads acceptably. (Auditor A.)</span></div>
+    <div class="cl" style="border-left-color:var(--faint)"><b>&ldquo;The Sufficiency&rdquo; is a state, not a motion</b><span>Strictly two reader-motions + one received; defensible (His hands make the third motion) - noted only. (Auditor A.)</span></div>
+    <div class="cl" style="border-left-color:var(--faint)"><b>Dua 28 compression</b><span>&ldquo;I have cut myself off from all but You&rdquo; drops the ikhlas nuance of «أخلصت بانقطاعي إليك» - defensible devotional compression. (Auditor B.)</span></div>
+  </div>
+</section>
+
+<section id="clean">
+  <div class="sechead"><h2>Clean areas</h2><span class="count">verified by the auditors</span></div>
+  <div class="cleangrid">
+    <div class="cl"><b>Attributions: 5 / 5 verified at detail level</b><span>Four-unanswered (al-Kafi 2:~511), revelation to Dawud (al-Kafi - even &ldquo;ropes of the heavens&rdquo; is genuinely in the text), 7:196 ending the first Ashura address (Shia recensions + Tabari), the al-Irshad vol 2 p. 96 dua with its raised-hands frame, Sahifa Dua 28 (title matches &ldquo;fleeing to Him&rdquo;).</span></div>
+    <div class="cl"><b>Qur'an Arabic: 6 / 6 semantically clean</b><span>3:159, 26:62, 40:44, 65:3, 7:196 + the release anchor all word-align with quran_data.json; apparent deltas are Uthmani orthography only.</span></div>
+    <div class="cl"><b>Excerpts anchored honestly</b><span>Every surah:ayah correct; translations render only what is shown; side-claims check out (26:61, 40:45).</span></div>
+    <div class="cl"><b>Hadith Arabic anchors verbatim</b><span>Response, climax, and dua Arabic all match the verified source texts.</span></div>
+    <div class="cl"><b>Interactive close: earned</b><span>Hold-fill-release maps one-to-one onto entrustment, resolving into the verse the reader learned at beat 09 - &ldquo;the strongest identity beat in the series.&rdquo;</span></div>
+    <div class="cl"><b>Ledger texts clean</b><span>No verse/narration/dua overlaps Yaqin or Sabr; the response-form echo and Dawud adjacency are owned by Shukr (the later dive); no reserved material touched. Only the scene-level Yaqin echo (finding 14) needs documenting.</span></div>
+    <div class="cl"><b>Spine &amp; pacing</b><span>Hand works → hand opens → His hands hold; 2-2-3 build with the weight on the summit; no padding, no sag, right length.</span></div>
+    <div class="cl"><b>House rules</b><span>Zero em dashes, zero transliteration diacritics, honorifics per house style, plain spellings throughout.</span></div>
+  </div>
+</section>
+
+<section id="reply">
+  <div class="replybox">
+    <h3>How to approve</h3>
+    <p>Nothing has been applied. Reply with the finding numbers to fix - e.g. <code>fix 1-14</code>, <code>fix everything except 10</code>, or a hand-picked list. Approved fixes are applied to <code>TawakkulDeepDive.swift</code> (finding 14 to the design doc), the build re-run, and declined findings recorded in the design doc as known and accepted.</p>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

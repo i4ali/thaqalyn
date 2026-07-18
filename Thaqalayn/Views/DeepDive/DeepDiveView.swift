@@ -80,6 +80,30 @@ struct DeepDiveView: View {
     /// How long the grip must be held before it can be released.
     private let releaseHoldDuration: TimeInterval = 2.2
 
+    /// The `refrain` beats' state: which occurrences (by section index) the reader
+    /// has answered. Four independent askings in al-Rahman; each remembers its own.
+    @State private var answeredRefrains: Set<Int> = []
+
+    /// The `count` beat's state machine. Each tap logs one blessing and births a
+    /// light; after `countOverflowAt` taps the lights start multiplying on their
+    /// own - outrunning the finger - and the verse takes over.
+    @State private var countTaps = 0
+    @State private var countTally = 0
+    @State private var countOverflow = false
+    @State private var countDone = false
+    @State private var countLights: [CountLight] = []
+    @State private var countTimer: Timer? = nil
+    private let countOverflowAt = 7
+
+    /// One blessing-light in the count field, positioned in unit space.
+    private struct CountLight: Identifiable {
+        let id = UUID()
+        let x: CGFloat
+        let y: CGFloat
+        let size: CGFloat
+        let opacity: Double
+    }
+
     private var s: CGFloat { reading.scale }
     private var currentIndex: Int { currentID ?? 0 }
 
@@ -361,6 +385,7 @@ struct DeepDiveView: View {
         case .open, .orientation, .act: return nil
         case .reflectionPrompt:         return ("The Return", dive.acts.count)
         case .release(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
+        case .count(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
         case .dua:                      return ("The Close", dive.acts.count)
         case .closing:                  return ("The Close", dive.acts.count)
         default:
@@ -408,7 +433,7 @@ struct DeepDiveView: View {
                 VStack(spacing: 0) {
                     placeBar(for: section, show)
                     Spacer(minLength: 20)
-                    content(section, show)
+                    content(section, show, index)
                     Spacer(minLength: 20)
                 }
                 .frame(maxWidth: 480)
@@ -427,8 +452,12 @@ struct DeepDiveView: View {
     }
 
     @ViewBuilder
-    private func content(_ section: DeepDiveSection, _ show: Bool) -> some View {
+    private func content(_ section: DeepDiveSection, _ show: Bool, _ index: Int = 0) -> some View {
         switch section {
+        case let .refrain(_, tag, _, _, arabic, translation, reference, intro, teachSource, replyArabic, replyTransliteration, replyTranslation, reflection):
+            refrainPage(index, tag(lang), arabic, translation(lang), reference, intro(lang),
+                        teachSource.map { $0(lang) }, replyArabic, replyTransliteration,
+                        replyTranslation(lang), reflection(lang), show)
         case let .open(kicker, titleAr, titleEn, subtitle, line):
             openPage(kicker(lang), titleAr, titleEn, subtitle(lang), line(lang), show)
         case let .orientation(eyebrow, promise, leaveWith):
@@ -449,6 +478,8 @@ struct DeepDiveView: View {
             reflectionPage(prompt(lang), subline(lang), nextLabel(lang), show)
         case let .release(_, prompt, subline, arabic, translation, reference, note, nextLabel):
             releasePage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
+        case let .count(_, prompt, subline, arabic, translation, reference, note, nextLabel):
+            countPage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
         case let .dua(tag, intro, arabic, translation, source, note, close):
             duaPage(tag(lang), intro(lang), arabic, translation(lang), source(lang), note(lang), close(lang), show)
         case let .closing(tag, titleAr, essence, line):
@@ -654,7 +685,7 @@ struct DeepDiveView: View {
                 .padding(.top, 8).reveal(show, 0.36, reduce: reduceMotion)
             Text(dive.actInfo(act)?.tr ?? "").font(EmType.serif(26)).foregroundColor(DeepDivePalette.cream)
                 .padding(.top, 6).reveal(show, 0.36, reduce: reduceMotion)
-            Text("\(dive.actInfo(act)?.name(lang) ?? "") · Depth \(act) of \(dive.acts.count)".uppercased())
+            Text("\(dive.actInfo(act)?.name(lang) ?? "") · \(dive.stageNoun) \(act) of \(dive.acts.count)".uppercased())
                 .font(.system(size: 10, weight: .semibold)).tracking(2.4)
                 .foregroundColor(DeepDivePalette.mute).padding(.top, 8)
                 .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
@@ -748,6 +779,97 @@ struct DeepDiveView: View {
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 1.0, reduce: reduceMotion)
         }
+    }
+
+    /// The recurring question of al-Rahman. The refrain verse glows; the reader presses
+    /// "Answer Him" and the taught reply RISES on an ascending thread of light - the
+    /// deliberate inverse of `responsePage`'s descending one (there He answers you; here
+    /// He asks and you answer). First occurrence carries the teaching source; later
+    /// occurrences just ask again. The reflection is written to be read after answering,
+    /// so it only appears once the answer is given.
+    private func refrainPage(_ index: Int, _ tag: String, _ arabic: String, _ translation: String, _ reference: String, _ intro: String, _ teachSource: String?, _ replyArabic: String, _ replyTransliteration: String, _ replyTranslation: String, _ reflection: String, _ show: Bool) -> some View {
+        let answered = answeredRefrains.contains(index)
+        return VStack(spacing: 0) {
+            tagLabel(tag, show).padding(.bottom, 26)
+            Text(arabic).font(EmType.arabic(26 * s, bold: true)).foregroundColor(DeepDivePalette.cream)
+                .multilineTextAlignment(.center).lineSpacing(12 * s)
+                .environment(\.layoutDirection, .rightToLeft)
+                .shadow(color: DeepDivePalette.goldBright.opacity(0.2), radius: 18)
+                .reveal(show, 0.2, reduce: reduceMotion)
+            Text(translation).font(EmType.serifItalic(19 * s)).foregroundColor(Color(white: 0.8))
+                .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 20).frame(maxWidth: 380)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .reveal(show, 0.45, reduce: reduceMotion)
+            Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
+                .foregroundColor(DeepDivePalette.gold.opacity(0.85)).padding(.top, 14)
+                .reveal(show, 0.45, reduce: reduceMotion)
+            hairline.padding(.top, 24).padding(.bottom, 18).reveal(show, 0.7, reduce: reduceMotion)
+            Text(intro).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                .multilineTextAlignment(.center).lineSpacing(3 * s).frame(maxWidth: 340)
+                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .reveal(show, 0.7, reduce: reduceMotion)
+            if answered {
+                // The answer, risen: a thread of light that intensifies downward into
+                // the reader's own words - light on its way up.
+                Rectangle()
+                    .fill(LinearGradient(colors: [DeepDivePalette.goldBright.opacity(0), DeepDivePalette.goldBright.opacity(0.7)],
+                                         startPoint: .top, endPoint: .bottom))
+                    .frame(width: 1, height: 22)
+                    .padding(.top, 24)
+                Text("You Answer".uppercased())
+                    .font(.system(size: 11, weight: .semibold)).tracking(4)
+                    .foregroundColor(DeepDivePalette.goldBright)
+                    .padding(.top, 10)
+                Text(replyArabic).font(EmType.arabic(26 * s, bold: true))
+                    .foregroundColor(DeepDivePalette.goldBright)
+                    .multilineTextAlignment(.center).lineSpacing(10 * s)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 20)
+                    .padding(.top, 18)
+                Text(replyTransliteration)
+                    .font(.system(size: 12, weight: .medium)).tracking(0.6)
+                    .foregroundColor(DeepDivePalette.mute)
+                    .multilineTextAlignment(.center).padding(.top, 10)
+                Text(replyTranslation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 330)
+                    .shadow(color: DeepDivePalette.goldBright.opacity(0.2), radius: 22)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .padding(.top, 14)
+                DuaListenButton(arabic: replyArabic).padding(.top, 16)
+                if let teachSource {
+                    Text(teachSource).font(.system(size: 11, weight: .semibold)).tracking(2)
+                        .foregroundColor(DeepDivePalette.gold.opacity(0.8))
+                        .multilineTextAlignment(.center).padding(.top, 18)
+                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                }
+                hairline.padding(.top, 24).padding(.bottom, 18)
+                Text(reflection).font(.system(size: 15 * s)).foregroundColor(DeepDivePalette.mute)
+                    .multilineTextAlignment(.center).lineSpacing(6 * s).frame(maxWidth: 340)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+            } else {
+                Button {
+                    UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                    withAnimation(reduceMotion ? nil : .easeOut(duration: 0.7)) {
+                        _ = answeredRefrains.insert(index)
+                    }
+                } label: {
+                    VStack(spacing: 8) {
+                        Image(systemName: "chevron.compact.up")
+                            .font(.system(size: 14)).foregroundColor(DeepDivePalette.goldBright)
+                        Text("Answer Him".uppercased())
+                            .font(.system(size: 12, weight: .semibold)).tracking(3.5)
+                            .foregroundColor(DeepDivePalette.goldBright)
+                            .padding(.horizontal, 26).padding(.vertical, 13)
+                            .overlay(Capsule().stroke(DeepDivePalette.goldBright.opacity(0.35), lineWidth: 1))
+                            .shadow(color: DeepDivePalette.goldBright.opacity(0.25), radius: 14)
+                    }
+                }
+                .buttonStyle(EmPressStyle())
+                .padding(.top, 30)
+                .reveal(show, 0.95, reduce: reduceMotion)
+            }
+        }
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.7), value: answered)
     }
 
     private func climaxPage(_ tag: String, _ source: String, _ arabic: String, _ translation: String, _ body: String, _ reflection: String, _ show: Bool) -> some View {
@@ -905,6 +1027,158 @@ struct DeepDiveView: View {
             }
     }
 
+    // MARK: The count (Shukr)
+
+    /// The interactive counting. Idle: the prompt and a single seed-light. Counting:
+    /// each tap births a light and ticks the tally. At `countOverflowAt` taps the
+    /// cascade begins - the tally accelerates past any finger and lights pour in -
+    /// then the verse takes over: the count cannot be finished. The failure IS the
+    /// meaning, so the reader never reaches an end.
+    private func countPage(_ prompt: String, _ subline: String, _ arabic: String, _ translation: String, _ reference: String, _ note: String, _ nextLabel: String, _ show: Bool) -> some View {
+        VStack(spacing: 0) {
+            if countDone {
+                Text(arabic).font(EmType.arabic(30 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
+                    .multilineTextAlignment(.center).lineSpacing(10 * s)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
+                    .foregroundColor(DeepDivePalette.gold.opacity(0.85)).padding(.top, 14)
+                hairline.padding(.vertical, 22)
+                Text(note).font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute)
+                    .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 320)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                bob(nextLabel, true, 0.4).padding(.top, 30)
+            } else {
+                Text("✦").font(.system(size: 20)).foregroundColor(DeepDivePalette.gold)
+                    .opacity(countOverflow ? 0.35 : 1)
+                    .reveal(show, reduce: reduceMotion)
+                Text(prompt).font(EmType.serif(34)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).padding(.top, 20)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .opacity(countOverflow ? 0.4 : 1)
+                    .reveal(show, 0.15, reduce: reduceMotion)
+                if countTaps == 0 {
+                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                        .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
+                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                        .reveal(show, 0.3, reduce: reduceMotion)
+                }
+                if countTaps > 0 {
+                    VStack(spacing: 10) {
+                        Text("\(countTally)")
+                            .font(EmType.serif(54)).foregroundColor(DeepDivePalette.goldBright)
+                            .shadow(color: DeepDivePalette.goldBright.opacity(0.4), radius: 22)
+                            .contentTransition(.numericText())
+                        if countOverflow {
+                            Text("And counting itself".uppercased())
+                                .font(.system(size: 9.5, weight: .semibold)).tracking(2.6)
+                                .foregroundColor(DeepDivePalette.mute)
+                        }
+                    }
+                    .padding(.top, 22)
+                    .animation(reduceMotion ? nil : .easeOut(duration: 0.2), value: countTally)
+                }
+                countField
+                    .padding(.top, countTaps == 0 ? 34 : 14)
+                    .reveal(show, 0.5, reduce: reduceMotion)
+                Text((countOverflow ? "They outrun the count" : "Tap - each tap, one blessing").uppercased())
+                    .font(.system(size: countOverflow ? 12 : 10.5, weight: .semibold))
+                    .tracking(countOverflow ? 4 : 3)
+                    .foregroundColor(countOverflow ? DeepDivePalette.goldBright : DeepDivePalette.gold)
+                    .shadow(color: countOverflow ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .padding(.top, 18)
+                    .reveal(show, 0.6, reduce: reduceMotion)
+            }
+        }
+        .contentShape(Rectangle())
+        .onTapGesture { if !countDone { countTap() } }
+        .background {
+            if countDone {
+                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                               center: .center, startRadius: 10, endRadius: 280)
+                    .allowsHitTesting(false)
+            }
+        }
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.45), value: countOverflow)
+        .onDisappear { countTimer?.invalidate(); countTimer = nil }
+    }
+
+    /// The field of blessing-lights. A single seed-light invites the first tap;
+    /// each light after that is one counted blessing (then many uncounted ones).
+    private var countField: some View {
+        GeometryReader { geo in
+            ZStack {
+                if countLights.isEmpty {
+                    Circle().fill(DeepDivePalette.goldBright)
+                        .frame(width: 14, height: 14)
+                        .shadow(color: DeepDivePalette.goldBright.opacity(0.8), radius: 12)
+                        .position(x: geo.size.width / 2, y: geo.size.height / 2)
+                }
+                ForEach(countLights) { light in
+                    Circle().fill(DeepDivePalette.goldBright)
+                        .frame(width: light.size, height: light.size)
+                        .opacity(light.opacity)
+                        .shadow(color: DeepDivePalette.goldBright.opacity(0.7), radius: light.size)
+                        .position(x: light.x * geo.size.width, y: light.y * geo.size.height)
+                        .transition(reduceMotion ? .opacity :
+                            .scale(scale: 0.2).combined(with: .opacity))
+                }
+            }
+        }
+        .frame(maxWidth: 300)
+        .frame(height: 190)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.5), value: countLights.count)
+    }
+
+    private func addCountLight() {
+        countLights.append(CountLight(
+            x: .random(in: 0.03...0.97), y: .random(in: 0.05...0.95),
+            size: .random(in: 2.5...4.5), opacity: .random(in: 0.5...0.95)))
+    }
+
+    private func countTap() {
+        guard !countOverflow, !countDone else { return }
+        countTaps += 1
+        countTally = countTaps
+        addCountLight()
+        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+        if countTaps >= countOverflowAt { beginCountOverflow() }
+    }
+
+    /// The cascade: the tally accelerates past any finger and lights pour in for
+    /// ~2.2s, then the verse takes over. With reduceMotion the field appears as a
+    /// single state swap and resolves after a beat - no cascade.
+    private func beginCountOverflow() {
+        countOverflow = true
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        if reduceMotion {
+            (0..<40).forEach { _ in addCountLight() }
+            countTally = 999
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                guard countOverflow, !countDone else { return }
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
+                countDone = true
+            }
+            return
+        }
+        var tick = 0
+        countTimer?.invalidate()
+        countTimer = Timer.scheduledTimer(withTimeInterval: 0.12, repeats: true) { timer in
+            tick += 1
+            countTally += tick * Int.random(in: 2...5)
+            if countLights.count < 110 { (0..<4).forEach { _ in addCountLight() } }
+            if tick >= 18 {
+                timer.invalidate()
+                countTimer = nil
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
+                withAnimation(.easeInOut(duration: 0.6)) { countDone = true }
+            }
+        }
+    }
+
     private func duaPage(_ tag: String, _ intro: String, _ arabic: String, _ translation: String, _ source: String, _ note: String, _ close: String, _ show: Bool) -> some View {
         VStack(spacing: 0) {
             Text(tag.uppercased()).font(.system(size: 11, weight: .semibold)).tracking(3.4)
@@ -966,6 +1240,10 @@ struct DeepDiveView: View {
                         saidAmin = false; openDepths = [0]
                         releaseHolding = false; releasePrimed = false
                         releaseDone = false; releaseHoldStart = nil
+                        countTimer?.invalidate(); countTimer = nil
+                        countTaps = 0; countTally = 0
+                        countOverflow = false; countDone = false; countLights = []
+                        answeredRefrains = []
                     }
                     withAnimation(.easeInOut(duration: 0.6)) { currentID = 0 }
                 } label: {

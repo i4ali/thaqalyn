@@ -22,8 +22,8 @@ extension DeepDive {
         sfSymbol: "eye",
         estMinutes: 5,
         acts: [
-            ActInfo(number: 1, ar: "عِلْمُ الْيَقِين", tr: "'Ilm al-Yaqin", name: LocalizedText(en: "The Knowing", ur: "جاننا", ar: "المعرفة")),
-            ActInfo(number: 2, ar: "عَيْنُ الْيَقِين", tr: "'Ayn al-Yaqin", name: LocalizedText(en: "The Witnessing", ur: "دیکھنا", ar: "المشاهدة")),
+            ActInfo(number: 1, ar: "عِلْمُ الْيَقِين", tr: "Ilm al-Yaqin", name: LocalizedText(en: "The Knowing", ur: "جاننا", ar: "المعرفة")),
+            ActInfo(number: 2, ar: "عَيْنُ الْيَقِين", tr: "Ayn al-Yaqin", name: LocalizedText(en: "The Witnessing", ur: "دیکھنا", ar: "المشاهدة")),
             ActInfo(number: 3, ar: "حَقُّ الْيَقِين", tr: "Haqq al-Yaqin", name: LocalizedText(en: "The Living", ur: "جینا", ar: "المعايشة")),
         ],
         sections: [
@@ -33,7 +33,7 @@ extension DeepDive {
                 titleAr: "يَقِين",
                 titleEn: "Yaqin",
                 subtitle: LocalizedText(en: "Certainty", ur: "یقین", ar: "اليقين"),
-                line: LocalizedText(en: "A descent through the Qur'an and the Ahl al-Bayt - in three depths.", ur: "قرآن اور اہل بیتؑ کی معیت میں ایک سفر - تین گہرائیوں کے اندر اترتا ہوا۔", ar: "نزولٌ عبر القرآن الكريم وأهل البيت عليهم السلام - في ثلاثة أعماق.")
+                line: LocalizedText(en: "A descent in three depths, through the Qur'an and the Ahl al-Bayt - the household of the Prophet ﷺ.", ur: "قرآن اور اہل بیتؑ کی معیت میں ایک سفر - تین گہرائیوں کے اندر اترتا ہوا۔", ar: "نزولٌ عبر القرآن الكريم وأهل البيت عليهم السلام - في ثلاثة أعماق.")
             ),
 
             // 02. Before you descend
@@ -47,8 +47,8 @@ extension DeepDive {
             .depths(
                 act: 0, tag: LocalizedText(en: "The Three Depths", ur: "تین گہرائیاں", ar: "الأعماق الثلاثة"), reference: "al-Takathur · al-Waqi'ah",
                 items: [
-                    Depth(ar: "عِلْمُ الْيَقِين", tr: "‘Ilm al-Yaqin", label: LocalizedText(en: "Knowledge of Certainty", ur: "علم الیقین", ar: "عِلْمُ اليَقِين"), desc: LocalizedText(en: "To know the fire exists - by the smoke on the horizon.", ur: "آگ کا وجود جاننا - افق پر اٹھتے دھوئیں سے۔", ar: "أن تعلم أنّ النار موجودة - من الدخان المتصاعد في الأفق."), reference: nil, embodies: LocalizedText(en: "the mind that reasons", ur: "غور و فکر کرنے والا ذہن", ar: "العقل الذي يستدلّ")),
-                    Depth(ar: "عَيْنُ الْيَقِين", tr: "‘Ayn al-Yaqin", label: LocalizedText(en: "Eye of Certainty", ur: "عین الیقین", ar: "عَيْنُ اليَقِين"), desc: LocalizedText(en: "To see the fire with your own eyes.", ur: "آگ کو اپنی آنکھوں سے دیکھنا۔", ar: "أن ترى النار بعينك."), reference: "102:7", embodies: LocalizedText(en: "the prophets who saw", ur: "وہ انبیاءؑ جنہوں نے دیکھا", ar: "الأنبياء الذين رأوا")),
+                    Depth(ar: "عِلْمُ الْيَقِين", tr: "Ilm al-Yaqin", label: LocalizedText(en: "Knowledge of Certainty", ur: "علم الیقین", ar: "عِلْمُ اليَقِين"), desc: LocalizedText(en: "To know the fire exists - by the smoke on the horizon.", ur: "آگ کا وجود جاننا - افق پر اٹھتے دھوئیں سے۔", ar: "أن تعلم أنّ النار موجودة - من الدخان المتصاعد في الأفق."), reference: nil, embodies: LocalizedText(en: "the mind that reasons", ur: "غور و فکر کرنے والا ذہن", ar: "العقل الذي يستدلّ")),
+                    Depth(ar: "عَيْنُ الْيَقِين", tr: "Ayn al-Yaqin", label: LocalizedText(en: "Eye of Certainty", ur: "عین الیقین", ar: "عَيْنُ اليَقِين"), desc: LocalizedText(en: "To see the fire with your own eyes.", ur: "آگ کو اپنی آنکھوں سے دیکھنا۔", ar: "أن ترى النار بعينك."), reference: "102:7", embodies: LocalizedText(en: "the prophets who saw", ur: "وہ انبیاءؑ جنہوں نے دیکھا", ar: "الأنبياء الذين رأوا")),
                     Depth(ar: "حَقُّ الْيَقِين", tr: "Haqq al-Yaqin", label: LocalizedText(en: "Truth of Certainty", ur: "حق الیقین", ar: "حَقُّ اليَقِين"), desc: LocalizedText(en: "To stand within the flame itself.", ur: "خود شعلے کے اندر کھڑا ہونا۔", ar: "أن تقف داخل اللهب نفسه."), reference: "56:95", embodies: LocalizedText(en: "the family who lived it", ur: "وہ خاندان جس نے اسے جیا", ar: "الأسرة التي عاشته")),
                 ]
             ),
@@ -58,11 +58,11 @@ extension DeepDive {
 
             // 04. Movement I - The Question (al-Takathur 102:5)
             .verse(
-                act: 1, tag: LocalizedText(en: "The Question", ur: "سوال", ar: "السؤال"), surah: 102, ayah: 5,
+                act: 1, tag: LocalizedText(en: "The First Depth", ur: "پہلی گہرائی", ar: "العمق الأول"), surah: 102, ayah: 5,
                 arabic: "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ",
                 translation: LocalizedText(en: "No - if only you knew with the knowledge of certainty…", ur: "ہرگز نہیں! کاش تم علمِ یقین کے ساتھ جان لیتے…", ar: ""),
                 reference: "al-Takathur · 102 : 5",
-                reflection: LocalizedText(en: "Before certainty can be lived, it must be understood. The Qur'an says it arrives in depths - three of them.", ur: "یقین کو جینے سے پہلے، اسے سمجھنا ضروری ہے۔ قرآن کہتا ہے کہ یہ گہرائیوں کی صورت میں آتا ہے - اور یہ گہرائیاں تین ہیں۔", ar: "قبل أن يُعاش اليقين، لا بدّ أن يُفهَم. يخبرنا القرآن أنه يأتي في أعماق - ثلاثة أعماق.")
+                reflection: LocalizedText(en: "The sentence breaks off - and the next verses complete it: you would surely see the Fire; you would see it with the very eye of certainty. Knowing comes first, and knowing is already a summons to see.", ur: "بات ادھوری چھوڑ دی گئی ہے - اور اگلی آیات اسے مکمل کرتی ہیں: تم ضرور دوزخ کو دیکھو گے؛ پھر تم اسے عین الیقین سے دیکھو گے۔ جاننا پہلے آتا ہے، اور جاننا خود دیکھنے کی طرف ایک بلاوا ہے۔", ar: "تنقطع الجملة - وتُتمّها الآيات التالية: لتَرَوُنَّ الجحيم؛ ثم لتَرَوُنَّها عينَ اليقين. المعرفةُ تأتي أولاً، والمعرفةُ نفسُها دعوةٌ إلى الرؤية.")
             ),
 
             // 06. Movement I - Ibrahim Reasons His Way (al-An'am 6:76)
@@ -71,19 +71,19 @@ extension DeepDive {
                 arabic: "فَلَمَّا جَنَّ عَلَيْهِ اللَّيْلُ رَأَىٰ كَوْكَبًا ۖ قَالَ هَٰذَا رَبِّي ۖ فَلَمَّا أَفَلَ قَالَ لَا أُحِبُّ الْآفِلِينَ",
                 translation: LocalizedText(en: "When night covered him, he saw a star. He said, “This is my Lord.” But when it set, he said, “I love not those that set.”", ur: "پھر جب رات نے اسے ڈھانپ لیا تو انہوں نے ایک ستارہ دیکھا۔ انہوں نے کہا، “یہ میرا رب ہے۔” پھر جب وہ غروب ہو گیا تو انہوں نے کہا، “میں غروب ہونے والوں سے محبت نہیں رکھتا۔”", ar: ""),
                 reference: "al-An'am · 6 : 76",
-                reflection: LocalizedText(en: "God showed him the kingdom of the heavens and the earth, 'that he might be of those of certainty.' Star, moon, sun - each one sets, until Ibrahim turns his face to the One who never does: the smoke on the horizon that proves the fire.", ur: "اللہ نے انہیں آسمانوں اور زمین کی بادشاہت دکھائی، ‘تاکہ وہ یقین رکھنے والوں میں سے ہو جائیں۔’ ستارہ، چاند، سورج - ہر ایک غروب ہو جاتا ہے، یہاں تک کہ حضرت ابراہیمؑ اپنا رخ اس ذات کی طرف موڑ لیتے ہیں جو کبھی غروب نہیں ہوتی: وہی افق پر اٹھتا دھواں جو آگ کے ہونے کی دلیل ہے۔", ar: "أرى اللهُ إبراهيمَ عليه السلام ملكوتَ السماوات والأرض 'وَلِيَكُونَ مِنَ الْمُوقِنِينَ'. النجمُ والقمرُ والشمسُ - كلٌّ منها يأفل ويغيب، حتى يُولّي إبراهيمُ عليه السلام وجهَه نحو مَن لا يأفل أبداً: الدخانُ في الأفق الذي يدلّ على النار.")
+                reflection: LocalizedText(en: "God showed him the kingdom of the heavens and the earth, 'that he might be of those of certainty' (6:75). Star, moon, sun - each one sets, until Ibrahim turns his face to the One who never sets. The setting stars were his smoke on the horizon: proof of a fire he had not yet seen.", ur: "اللہ نے انہیں آسمانوں اور زمین کی بادشاہت دکھائی، ‘تاکہ وہ یقین رکھنے والوں میں سے ہو جائیں’ (6:75)۔ ستارہ، چاند، سورج - ہر ایک غروب ہو جاتا ہے، یہاں تک کہ حضرت ابراہیمؑ اپنا رخ اس ذات کی طرف موڑ لیتے ہیں جو کبھی غروب نہیں ہوتی۔ یہی غروب ہوتے ستارے ان کے لیے افق پر اٹھتا دھواں تھے: اس آگ کی دلیل جو انہوں نے ابھی دیکھی نہ تھی۔", ar: "أرى اللهُ إبراهيمَ عليه السلام ملكوتَ السماوات والأرض 'وَلِيَكُونَ مِنَ الْمُوقِنِينَ' (6:75). النجمُ والقمرُ والشمسُ - كلٌّ منها يأفل ويغيب، حتى يُولّي إبراهيمُ عليه السلام وجهَه نحو مَن لا يأفل أبداً. كانت النجومُ الآفلة دخانَه في الأفق: دليلاً على نارٍ لم يرها بعد.")
             ),
 
             // 07. Movement II - opening card
-            .act(act: 2, connector: LocalizedText(en: "You have known it by proof.", ur: "آپ نے اسے دلیل کے ذریعے جان لیا ہے۔", ar: "لقد عرفتَه بالبرهان."), line: LocalizedText(en: "Now - see it. The Qur'an did not leave the prophets or those God chose to merely believe; it let them witness, with their own eyes.", ur: "اب - اسے دیکھیے۔ قرآن نے انبیاءؑ اور اللہ کے برگزیدہ بندوں کو محض ایمان لانے پر نہیں چھوڑا؛ بلکہ انہیں اپنی آنکھوں سے مشاہدہ کرنے دیا۔", ar: "والآن - شاهِدْه. لم يترك القرآنُ الأنبياءَ ولا مَن اصطفاهم اللهُ على مجرد الإيمان؛ بل جعلهم يشهدون بأعينهم."), bridge: nil),
+            .act(act: 2, connector: LocalizedText(en: "You have known it by proof.", ur: "آپ نے اسے دلیل کے ذریعے جان لیا ہے۔", ar: "لقد عرفتَه بالبرهان."), line: LocalizedText(en: "Now - see it. The Qur'an did not leave the prophets, or the ones God chose, with belief alone; it let them witness with their own eyes.", ur: "اب - اسے دیکھیے۔ قرآن نے انبیاءؑ اور اللہ کے برگزیدہ بندوں کو محض ایمان لانے پر نہیں چھوڑا؛ بلکہ انہیں اپنی آنکھوں سے مشاہدہ کرنے دیا۔", ar: "والآن - شاهِدْه. لم يترك القرآنُ الأنبياءَ ولا مَن اصطفاهم اللهُ على مجرد الإيمان؛ بل جعلهم يشهدون بأعينهم."), bridge: nil),
 
             // 08. Movement II - Ibrahim Asks to See (al-Baqarah 2:260)
             .verse(
                 act: 2, tag: LocalizedText(en: "Ibrahim Asks to See", ur: "ابراہیمؑ دیکھنے کی درخواست کرتے ہیں", ar: "إبراهيم عليه السلام يطلب أن يرى"), surah: 2, ayah: 260,
                 arabic: "قَالَ أَوَلَمْ تُؤْمِن ۖ قَالَ بَلَىٰ وَلَٰكِن لِّيَطْمَئِنَّ قَلْبِي",
-                translation: LocalizedText(en: "“Do you not believe?” He said: “Yes - but so that my heart may be at rest.”", ur: "“کیا تم ایمان نہیں رکھتے؟” انہوں نے کہا: “کیوں نہیں - مگر یہ چاہتا ہوں کہ میرا دل مطمئن ہو جائے۔”", ar: ""),
+                translation: LocalizedText(en: "[Ibrahim had asked: “My Lord, show me how You give life to the dead.”] God said: “Do you not believe?” He said: “Yes - but so that my heart may be at rest.”", ur: "[ابراہیمؑ نے عرض کیا تھا: “میرے رب! مجھے دکھا کہ تو مُردوں کو کیسے زندہ کرتا ہے۔”] اللہ نے فرمایا: “کیا تم ایمان نہیں رکھتے؟” انہوں نے کہا: “کیوں نہیں - مگر یہ چاہتا ہوں کہ میرا دل مطمئن ہو جائے۔”", ar: ""),
                 reference: "al-Baqarah · 2 : 260",
-                reflection: LocalizedText(en: "Even the Friend of God, who already believed, longed to witness. He is asking to move from the first depth to the second.", ur: "اللہ کے خلیل بھی، جو پہلے سے ایمان رکھتے تھے، مشاہدے کے آرزو مند تھے۔ وہ پہلی گہرائی سے دوسری گہرائی کی طرف بڑھنے کی درخواست کر رہے ہیں۔", ar: "حتى خليلُ اللهِ عليه السلام، الذي كان مؤمناً بالفعل، تاق إلى المشاهدة. إنه يطلب الانتقال من العمق الأول إلى الثاني.")
+                reflection: LocalizedText(en: "Even Ibrahim - the Friend of God - who already believed, longed to witness. He is asking to move from the first depth to the second: from knowing to seeing.", ur: "حضرت ابراہیمؑ - اللہ کے خلیل - جو پہلے سے ایمان رکھتے تھے، وہ بھی مشاہدے کے آرزو مند تھے۔ وہ پہلی گہرائی سے دوسری گہرائی کی طرف بڑھنے کی درخواست کر رہے ہیں: جاننے سے دیکھنے کی طرف۔", ar: "حتى إبراهيمُ عليه السلام - خليلُ الله - الذي كان مؤمناً بالفعل، تاق إلى المشاهدة. إنه يطلب الانتقال من العمق الأول إلى الثاني: من المعرفة إلى الرؤية.")
             ),
 
             // 09. Movement II - And Then He Sees (al-Anbiya 21:69)
@@ -92,7 +92,7 @@ extension DeepDive {
                 arabic: "قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ",
                 translation: LocalizedText(en: "We said: “O fire - be coolness and peace upon Ibrahim.”", ur: "ہم نے فرمایا: “اے آگ! تو ابراہیمؑ پر ٹھنڈک اور سلامتی بن جا۔”", ar: ""),
                 reference: "al-Anbiya · 21 : 69",
-                reflection: LocalizedText(en: "He had asked to witness. Now, cast into the flames, he does - and the fire itself submits to his certainty.", ur: "انہوں نے مشاہدے کی درخواست کی تھی۔ اب، آگ میں ڈالے جانے کے بعد، وہ مشاہدہ کر رہے ہیں - اور خود آگ ان کے یقین کے سامنے سرِ تسلیم خم کر دیتی ہے۔", ar: "لقد طلب أن يشهد. والآن، وهو يُلقى في اللهب، يشهد - والنارُ نفسُها تستسلم ليقينه.")
+                reflection: LocalizedText(en: "His people cast him into a fire for breaking their idols. He had asked to witness - now, at his Lord's word, he does: the flame itself made cool and safe around him.", ur: "ان کی قوم نے بتوں کو توڑنے پر انہیں آگ میں ڈال دیا۔ انہوں نے مشاہدے کی درخواست کی تھی - اب، اپنے رب کے حکم سے، وہ مشاہدہ کرتے ہیں: خود شعلہ ان کے گرد ٹھنڈک اور سلامتی بنا دیا گیا۔", ar: "ألقاه قومُه في النار لأنه حطّم أصنامهم. كان قد طلب أن يشهد - والآن، بكلمة ربه، يشهد: اللهبُ نفسُه جُعل حوله برداً وسلاماً.")
             ),
 
             // 10. Movement II - The Mother of Musa (al-Qasas 28:7)
@@ -101,12 +101,12 @@ extension DeepDive {
                 arabic: "فَإِذَا خِفْتِ عَلَيْهِ فَأَلْقِيهِ فِي الْيَمِّ وَلَا تَخَافِي",
                 translation: LocalizedText(en: "When you fear for him, cast him into the river - and do not fear.", ur: "جب تجھے اس کے بارے میں خوف ہو تو اسے دریا میں ڈال دے - اور خوف نہ کر۔", ar: ""),
                 reference: "al-Qasas · 28 : 7",
-                reflection: LocalizedText(en: "To lay her infant upon the water on nothing but God's word - certainty is no longer a thought. It has become an act.", ur: "اپنے شیرخوار بچے کو محض اللہ کے کلام پر بھروسہ کرتے ہوئے پانی کے سپرد کر دینا - یہاں یقین محض ایک خیال نہیں رہتا۔ یہ ایک عمل بن جاتا ہے۔", ar: "أن تضع رضيعَها على الماء بمجرد كلمةِ الله - لم يعد اليقينُ حينئذٍ فكرةً، بل أصبح فعلاً.")
+                reflection: LocalizedText(en: "To lay her infant upon the water on nothing but God's word - and to receive him back, 'that she might know that the promise of God is true' (28:13). She trusted first; then she saw.", ur: "اپنے شیرخوار بچے کو محض اللہ کے کلام پر بھروسہ کرتے ہوئے پانی کے سپرد کر دینا - اور پھر اسے واپس پا لینا، ‘تاکہ وہ جان لے کہ اللہ کا وعدہ سچا ہے’ (28:13)۔ انہوں نے پہلے بھروسہ کیا؛ پھر انہوں نے دیکھ لیا۔", ar: "أن تضع رضيعَها على الماء بمجرد كلمةِ الله - ثم أن تستردَّه، 'لِتَعْلَمَ أَنَّ وَعْدَ اللَّهِ حَقٌّ' (28:13). وثقت أولاً؛ ثم رأت.")
             ),
 
             // 11. Movement III - opening card with bridge verse
             .act(
-                act: 3, connector: LocalizedText(en: "You have seen it in the prophets.", ur: "آپ نے اسے انبیاءؑ میں دیکھ لیا ہے۔", ar: "لقد رأيتَه في الأنبياء."), line: LocalizedText(en: "Now - live it. For most, certainty comes only at death. But one family, the Prophet's own household, was asked to stand inside the flame - while still alive.", ur: "اب - اسے جیئے۔ اکثر لوگوں کے لیے یقین موت کے وقت ہی آتا ہے۔ لیکن ایک خاندان سے - خود رسول اللہﷺ کے اہل بیتؑ سے - یہ طلب کیا گیا کہ وہ زندہ رہتے ہوئے ہی شعلے کے اندر کھڑے ہوں۔", ar: "والآن - عِشْه. فعند أكثر الناس، لا يأتي اليقينُ إلا عند الموت. غير أنّ أسرةً واحدة، هي أهلُ بيت النبي صلى الله عليه وآله وسلم أنفسهم، طُلب منها أن تقف داخل اللهب - وهي على قيد الحياة."),
+                act: 3, connector: LocalizedText(en: "You have seen it in those God chose.", ur: "آپ نے اسے اللہ کے برگزیدہ بندوں میں دیکھ لیا ہے۔", ar: "لقد رأيتَه فيمن اصطفاهم الله."), line: LocalizedText(en: "Now - live it. For most, certainty comes only at death. But one family, the household of the Prophet ﷺ, was asked to stand inside a flame that would not be made cool - while still alive.", ur: "اب - اسے جیئے۔ اکثر لوگوں کے لیے یقین موت کے وقت ہی آتا ہے۔ لیکن ایک خاندان سے - خود رسول اللہﷺ کے اہل بیتؑ سے - یہ طلب کیا گیا کہ وہ زندہ رہتے ہوئے ہی ایسے شعلے کے اندر کھڑے ہوں جو ٹھنڈا نہیں کیا جائے گا۔", ar: "والآن - عِشْه. فعند أكثر الناس، لا يأتي اليقينُ إلا عند الموت. غير أنّ أسرةً واحدة، هي أهلُ بيت النبي صلى الله عليه وآله وسلم أنفسهم، طُلب منها أن تقف داخل لهبٍ لن يُجعل برداً - وهي على قيد الحياة."),
                 bridge: BridgeVerse(
                     surah: 15, ayah: 99,
                     arabic: "وَاعْبُدْ رَبَّكَ حَتَّىٰ يَأْتِيَكَ الْيَقِينُ",
@@ -115,19 +115,19 @@ extension DeepDive {
                 )
             ),
 
-            // 12. Movement III - The Morning of Ashura
+            // 12. Movement III - When the Trial Grew Fierce
             .narration(
-                act: 3, tag: LocalizedText(en: "The Morning of Ashura", ur: "عاشورہ کی صبح", ar: "صباح عاشوراء"), source: LocalizedText(en: "Radiance at Karbala - narrated of Hilal ibn Nafi", ur: "کربلا کی تابانی - ہلال بن نافع سے مروی", ar: "إشراقٌ في كربلاء - رُوي عن هلال بن نافع"),
-                body: LocalizedText(en: "They said that as the arrows fell thicker upon them, the face of Husayn only grew more luminous and calm - so much so that those who looked on were struck by its light.", ur: "کہا گیا ہے کہ جوں جوں تیر ان پر کثرت سے برستے گئے، امام حسینؑ کا چہرہ اور بھی روشن اور پرسکون ہوتا گیا - یہاں تک کہ دیکھنے والے اس کے نور سے مبہوت رہ گئے۔", ar: "قالوا إنه كلما اشتدّ وقعُ السهام عليهم، ازداد وجهُ الحسين عليه السلام إشراقاً وسكينةً - حتى إنّ مَن نظر إليه بُهر بنوره."),
-                reflection: LocalizedText(en: "The closer the meeting with the Beloved, the brighter the certainty. This is no longer witnessing from the outside - it is standing within the very fire the depths spoke of.", ur: "محبوبِ حقیقی سے ملاقات جتنی قریب آتی، یقین اتنا ہی روشن ہوتا جاتا۔ یہ اب باہر سے مشاہدہ کرنا نہیں رہا - یہ خود اسی آگ کے اندر کھڑا ہونا ہے جس کا ذکر تینوں گہرائیوں میں ہوا۔", ar: "كلما اقترب اللقاءُ بالمحبوب، ازداد اليقينُ تألقاً. لم تعد هذه مشاهدةً من الخارج - إنها الوقوفُ داخل النار نفسِها التي تحدثت عنها الأعماقُ.")
+                act: 3, tag: LocalizedText(en: "When the Trial Grew Fierce", ur: "جب آزمائش سخت ہوئی", ar: "حين اشتدّ البلاء"), source: LocalizedText(en: "Narrated from Imam Ali ibn al-Husayn - Ma'ani al-Akhbar · Bihar al-Anwar", ur: "امام علی ابن الحسینؑ سے مروی - معانی الاخبار · بحار الانوار", ar: "مرويٌّ عن الإمام علي بن الحسين عليهما السلام - معاني الأخبار · بحار الأنوار"),
+                body: LocalizedText(en: "When the trial grew fierce at Karbala, said Imam Ali ibn al-Husayn, the men looked at his father and saw him unlike them: as faces changed and limbs trembled, the face of Imam Husayn, the Prophet's ﷺ grandson, only grew brighter, his limbs more still. Some said to one another: 'Look - he does not fear death.'", ur: "امام علی ابن الحسینؑ نے فرمایا کہ جب کربلا میں آزمائش سخت ہوئی تو لوگوں نے ان کے والد کی طرف دیکھا اور انہیں سب سے مختلف پایا: چہرے بدل رہے تھے اور اعضاء کانپ رہے تھے، مگر رسول اللہﷺ کے نواسے امام حسینؑ کا چہرہ اور روشن ہوتا گیا، اور ان کے اعضاء اور پرسکون۔ کچھ نے ایک دوسرے سے کہا: ‘دیکھو - انہیں موت کا کوئی خوف نہیں۔’", ar: "قال الإمامُ علي بن الحسين عليهما السلام: لما اشتدّ الأمرُ بالحسين عليه السلام في كربلاء نظر إليه مَن كان معه فإذا هو بخلافهم: كلما اشتدّ الأمرُ تغيّرت الألوانُ وارتعدت الفرائصُ، وكان وجهُ الإمام الحسين عليه السلام، سبطِ رسول الله صلى الله عليه وآله وسلم، يزداد إشراقاً وجوارحُه سكوناً. فقال بعضُهم لبعض: انظروا، لا يبالي بالموت."),
+                reflection: LocalizedText(en: "The closer he drew to meeting his Lord, the brighter the certainty grew. This is no longer witnessing from the outside - it is standing within the very fire the depths spoke of.", ur: "اپنے رب سے ملاقات جتنی قریب آتی گئی، یقین اتنا ہی روشن ہوتا گیا۔ یہ اب باہر سے مشاہدہ کرنا نہیں رہا - یہ خود اسی آگ کے اندر کھڑا ہونا ہے جس کا ذکر تینوں گہرائیوں میں ہوا۔", ar: "كلما اقترب من لقاء ربِّه، ازداد اليقينُ تألقاً. لم تعد هذه مشاهدةً من الخارج - إنها الوقوفُ داخل النار نفسِها التي تحدثت عنها الأعماقُ.")
             ),
 
             // 13. Movement III - The Court (Sayyida Zaynab)
             .climax(
-                act: 3, tag: LocalizedText(en: "The Court", ur: "دربار", ar: "المجلس"), source: LocalizedText(en: "Sayyida Zaynab, in the court of Ibn Ziyad - Kufa", ur: "سیدہ زینبؑ، ابن زیاد کے دربار میں - کوفہ", ar: "السيدة زينب عليها السلام، في مجلس ابن زياد - الكوفة"),
+                act: 3, tag: LocalizedText(en: "The Court", ur: "دربار", ar: "المجلس"), source: LocalizedText(en: "Sayyida Zaynab, sister of Imam Husayn, before the governor Ibn Ziyad in Kufa - al-Luhuf of Ibn Tawus", ur: "سیدہ زینبؑ، امام حسینؑ کی بہن، کوفہ میں گورنر ابن زیاد کے سامنے - اللہوف، ابن طاؤس", ar: "السيدة زينب عليها السلام، أختُ الإمام الحسين عليه السلام، أمام الوالي ابن زياد في الكوفة - اللهوف لابن طاووس"),
                 arabic: "مَا رَأَيْتُ إِلَّا جَمِيلًا",
                 translation: LocalizedText(en: "I saw nothing but beauty.", ur: "میں نے سوائے خوبصورتی کے کچھ نہیں دیکھا۔", ar: ""),
-                body: LocalizedText(en: "After the sons. After the brothers. After the tents burned and the caravan was driven in chains - she stood in the court of the tyrant and said she had witnessed nothing but beauty.", ur: "بیٹوں کے بعد۔ بھائیوں کے بعد۔ خیمے جلائے جانے اور قافلے کو زنجیروں میں جکڑ کر لے جانے کے بعد - وہ ظالم کے دربار میں کھڑی ہوئیں اور فرمایا کہ انہوں نے سوائے خوبصورتی کے کچھ نہیں دیکھا۔", ar: "بعد فقد الأبناء. بعد فقد الإخوة. بعد أن أُحرقت الخيام وسِيق الركبُ مكبّلاً بالأغلال - وقفت في مجلس الطاغية، وقالت: ما رأت إلا جميلاً."),
+                body: LocalizedText(en: "After her sons were killed. After her brothers. After the tents burned and the caravan was driven to Kufa in chains - she stood in the tyrant's court and said she had seen nothing but beauty.", ur: "اپنے بیٹوں کے قتل کے بعد۔ اپنے بھائیوں کے بعد۔ خیمے جلائے جانے اور قافلے کو زنجیروں میں جکڑ کر کوفہ لے جائے جانے کے بعد - وہ ظالم کے دربار میں کھڑی ہوئیں اور فرمایا کہ انہوں نے سوائے خوبصورتی کے کچھ نہیں دیکھا۔", ar: "بعد أن قُتل أبناؤها. بعد إخوتها. بعد أن أُحرقت الخيامُ وسِيق الركبُ إلى الكوفة مكبّلاً بالأغلال - وقفت في مجلس الطاغية، وقالت: ما رأت إلا جميلاً."),
                 reflection: LocalizedText(en: "This is Haqq al-Yaqin - the truth of certainty. Not the absence of grief, but the certainty that sees the divine beauty through it.", ur: "یہی حق الیقین ہے - یقین کی حقیقت۔ یہ غم کی عدم موجودگی نہیں، بلکہ وہ یقین ہے جو غم کے اندر سے بھی الٰہی خوبصورتی کو دیکھ لیتا ہے۔", ar: "هذا هو حَقُّ اليَقِين. ليس غيابَ الحزن، بل اليقينُ الذي يرى الجمالَ الإلهي من خلاله.")
             ),
 
@@ -144,8 +144,8 @@ extension DeepDive {
                 tag: LocalizedText(en: "A Prayer for Certainty", ur: "یقین کے لیے ایک دعا", ar: "دعاءٌ لليقين"), intro: LocalizedText(en: "After all of it - one prayer, from the family you just stood beside.", ur: "اس سب کے بعد - ایک دعا، اسی خاندان کی طرف سے جس کے ساتھ آپ ابھی کھڑے تھے۔", ar: "بعد كل هذا - دعاءٌ واحد، من الأسرة التي وقفتَ بجوارها للتو."),
                 arabic: "وَبَلِّغْ بِإِيمَانِي أَكْمَلَ الْإِيمَانِ، وَاجْعَلْ يَقِينِي أَفْضَلَ الْيَقِينِ",
                 translation: LocalizedText(en: "“Bring my faith to the most perfect faith, and make my certainty the most excellent certainty.”", ur: "“میرے ایمان کو کامل ترین ایمان تک پہنچا دے، اور میرے یقین کو بہترین یقین بنا دے۔”", ar: ""),
-                source: LocalizedText(en: "Imam Ali ibn al-Husayn · al-Sahifa al-Sajjadiyya", ur: "امام علی ابن الحسینؑ · الصحیفہ السجادیہ", ar: "الإمام علي بن الحسين عليه السلام · الصحيفة السجادية"),
-                note: LocalizedText(en: "The son of Husayn - present at Karbala, the one who lived to carry it. He witnessed certainty's severest trial, and still asked God to deepen his own.", ur: "امام حسینؑ کے فرزند - جو کربلا میں موجود تھے اور زندہ رہ کر اسے آگے لے جانے والے تھے۔ انہوں نے یقین کی سب سے سخت آزمائش کا مشاہدہ کیا، اور پھر بھی اللہ سے اپنے یقین کو مزید گہرا کرنے کی دعا مانگی۔", ar: "ابنُ الحسين عليه السلام - كان حاضراً في كربلاء، وهو مَن عاش ليحمل أمانتَها. شهد أقسى اختبارٍ لليقين، ومع ذلك سأل اللهَ أن يزيد يقينَه عمقاً."),
+                source: LocalizedText(en: "Imam Ali ibn al-Husayn · al-Sahifa al-Sajjadiyya, Dua 20 (Makarim al-Akhlaq)", ur: "امام علی ابن الحسینؑ · الصحیفہ السجادیہ، دعا 20 (مکارم الاخلاق)", ar: "الإمام علي بن الحسين عليه السلام · الصحيفة السجادية، الدعاء 20 (مكارم الأخلاق)"),
+                note: LocalizedText(en: "The son of Husayn - present at Karbala, the one who lived to carry it. It was he who described his father's radiant face that day; and still he asked God to deepen his own certainty.", ur: "امام حسینؑ کے فرزند - جو کربلا میں موجود تھے اور زندہ رہ کر اسے آگے لے جانے والے تھے۔ یہی وہ ہیں جنہوں نے اُس دن اپنے والد کے روشن چہرے کا حال بیان کیا؛ اور پھر بھی اللہ سے اپنے یقین کو مزید گہرا کرنے کی دعا مانگی۔", ar: "ابنُ الحسين عليه السلام - كان حاضراً في كربلاء، وهو مَن عاش ليحمل أمانتَها. هو نفسُه مَن وصف وجهَ أبيه المشرقَ في ذلك اليوم؛ ومع ذلك سأل اللهَ أن يزيد يقينَه عمقاً."),
                 close: "The certainty is yours to keep."
             ),
         ]

@@ -55,6 +55,36 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "surahExperience-rahman",
+            sfSymbol: "water.waves",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 5).date ?? .distantPast,
+            destination: .surahExperience("surah-rahman"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah al-Rahman - the bride of the Qur'an asks one question thirty-one times. Walk its four registers of favors, and answer the question yourself, in the very words the Ahl al-Bayt taught.",
+            blurbUR: "سورۂ رحمٰن - عروس القرآن ایک ہی سوال اکتیس بار پوچھتی ہے۔ نعمتوں کی چار منزلوں سے گزریں اور خود اس سوال کا جواب دیں، انہی لفظوں میں جو اہلِ بیت نے سکھائے۔",
+            blurbAR: "سورة الرحمن - عروس القرآن تسأل سؤالاً واحداً إحدى وثلاثين مرة. اعبر منازل الآلاء الأربع وأجب عن السؤال بنفسك، بالكلمات التي علّمها أهل البيت.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
+            id: "deepDives-shukr",
+            sfSymbol: "hands.clap",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 4).date ?? .distantPast,
+            destination: .deepDive("shukr"),
+            titleEN: "New Deep Dive",
+            titleUR: "نیا گہرا غوطہ",
+            titleAR: "غوصٌ عميقٌ جديد",
+            blurbEN: "Shukr - Gratitude. A descent through the three tongues of thanks, from the first gifts to the praise in the dark of Ashura eve - ending with a count you will lose on purpose.",
+            blurbUR: "شکر - شکرگزاری۔ شکر کی تین زبانوں میں اترتا ہوا ایک عمیق سفر، پہلی نعمتوں سے شبِ عاشورا کی حمد تک - جس کا اختتام ایک ایسی گنتی پر ہوتا ہے جو آپ جان بوجھ کر ہار جاتے ہیں۔",
+            blurbAR: "الشكر - نزولٌ عبر ألسنة الشكر الثلاثة، من أولى العطايا إلى الثناء في ظلمة ليلة عاشوراء - يُختَم بعدٍّ تخسره عن قصد.",
+            ctaEN: "Begin the descent",
+            ctaUR: "نزول کا آغاز کریں",
+            ctaAR: "ابدأ النزول"
+        ),
+        WhatsNewItem(
             id: "deepDives-tawakkul",
             sfSymbol: "hands.and.sparkles",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 3).date ?? .distantPast,

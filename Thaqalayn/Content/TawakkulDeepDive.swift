@@ -20,6 +20,7 @@ extension DeepDive {
         subtitle: "Reliance - a descent through three motions",
         sfSymbol: "hands.and.sparkles",
         estMinutes: 5,
+        stageNoun: "Motion",
         acts: [
             ActInfo(number: 1, ar: "العَزْم", tr: "al-'Azm", name: "The Doing"),
             ActInfo(number: 2, ar: "التَّفْوِيض", tr: "al-Tafwid", name: "The Handing Over"),
@@ -52,7 +53,7 @@ extension DeepDive {
                         ar: "العَزْم",
                         tr: "al-'Azm",
                         label: "The Doing",
-                        desc: "To rise and take the means - resolve, work, tie the camel.",
+                        desc: "To rise and take the means at hand - resolve, work, do everything that is yours to do.",
                         reference: nil,
                         embodies: "the hand that works"
                     ),
@@ -68,7 +69,7 @@ extension DeepDive {
                         ar: "الكِفَايَة",
                         tr: "al-Kifaya",
                         label: "The Sufficiency",
-                        desc: "To be carried by the One you trusted - whose answer is Himself.",
+                        desc: "To be carried by the One you trusted - when every means has ended.",
                         reference: "65:3",
                         embodies: "the family who was carried"
                     ),
@@ -92,15 +93,15 @@ extension DeepDive {
                 arabic: "فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى اللَّهِ ۚ إِنَّ اللَّهَ يُحِبُّ الْمُتَوَكِّلِينَ",
                 translation: "“And when you have resolved, rely upon God. Indeed God loves those who rely.”",
                 reference: "Al Imran · 3 : 159",
-                reflection: "The order of the verse is the whole teaching. Consult them, the Prophet is told; then resolve; then rely. Trust is what the resolved hand does with the outcome - not what the idle hand does instead of the work."
+                reflection: "The sequence of the verse is the whole teaching. Consult your companions, the Prophet is told in its opening words; then resolve; then rely. Trust is what the resolved hand does with the outcome - not what the idle hand does instead of the work."
             ),
 
             // 06. Movement I - The Unanswered Prayer (Imam al-Sadiq)
             .narration(
                 act: 1,
                 tag: "The Unanswered Prayer",
-                source: "Imam Ja'far al-Sadiq · al-Kafi, on seeking livelihood",
-                body: "Four there are, said the Imam, whose prayer returns to them unanswered. One is the man who sits at home and says, “O Lord, provide for me” - and is told: have I not commanded you to seek?",
+                source: "Imam Ja'far al-Sadiq · al-Kafi, on those whose prayer is not answered",
+                body: "Four there are, said the Imam, whose prayer returns to them unanswered. One is the man who sits at home and says, “O God, provide for me” - and is told: have I not commanded you to seek?",
                 reflection: "Tawakkul that skips the work is not trust - it is a request that God do your part, when He has already asked it of you."
             ),
 
@@ -108,7 +109,7 @@ extension DeepDive {
             .act(
                 act: 2,
                 connector: "You have done what is yours.",
-                line: "Now - the harder motion. Open the hand. Trust is proven not while the means still work, but at the moment they end: the sea in front, the army behind.",
+                line: "Now - the harder motion. Open the hand. Trust is proven not while there is still something you can do, but at the moment your means run out: the sea in front, the army behind.",
                 bridge: nil
             ),
 
@@ -121,7 +122,7 @@ extension DeepDive {
                 arabic: "قَالَ كَلَّا ۖ إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ",
                 translation: "“He said: Never - indeed my Lord is with me; He will guide me.”",
                 reference: "al-Shu'ara · 26 : 62",
-                reflection: "Pharaoh’s army behind, the water ahead. “We are overtaken!” cry his people. The sea has not yet split when Musa answers - trust speaks before the way appears."
+                reflection: "“We are overtaken!” cry the people behind Musa. The sea has not yet split when he answers - trust speaks before the way appears."
             ),
 
             // 09. Movement II - The Entrusted Affair (Ghafir 40:44, the believer of Pharaoh's house)
@@ -133,7 +134,7 @@ extension DeepDive {
                 arabic: "وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ ۚ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ",
                 translation: "“And I entrust my affair to God. Indeed God is ever seeing of His servants.”",
                 reference: "Ghafir · 40 : 44",
-                reflection: "A lone believer in Pharaoh’s court, his warning finished, hands the consequence over. The very next verse answers him: so God protected him from the evils they plotted."
+                reflection: "The same court Musa fled - now answered from within it. A lone believer, his warning finished, hands the consequence over. The very next verse answers him: so God protected him from the evils they plotted."
             ),
 
             // 10. Movement III - opening card with bridge verse (thread: HAND OVER -> BE CARRIED)
@@ -155,15 +156,15 @@ extension DeepDive {
                 act: 3,
                 replyingTo: "To the one who lets go of every rope but His",
                 arabic: "جَعَلْتُ لَهُ الْمَخْرَجَ مِنْ بَيْنِهِنَّ",
-                words: "“No servant of Mine takes refuge in Me rather than in My creation - I know it from his intention - but that if the heavens and the earth and all within them plotted against him, I would make for him a way out from among them all.”",
-                source: "His revelation to Dawud · al-Kafi",
-                reflection: "Not that the plot stops - but that the way out is His to make. And the hand that grips creation instead finds the ropes of the heavens cut."
+                words: "“Whenever a servant of Mine takes refuge in Me and not in My creation - and I know it from his intention - then even if the heavens and the earth and all within them plotted against him, I would make for him a way out from among them all.”",
+                source: "His revelation to the prophet Dawud · al-Kafi",
+                reflection: "Not that the plot stops - but that the way out is His to make. And whoever grips creation's ropes instead finds that the rope from heaven has been cut."
             ),
 
             // 12. Movement III - The Verse He Answered With (al-A'raf 7:196, morning of Ashura)
             .verse(
                 act: 3,
-                tag: "The Verse He Answered With",
+                tag: "His Answer at Dawn",
                 surah: 7,
                 ayah: 196,
                 arabic: "إِنَّ وَلِيِّيَ اللَّهُ الَّذِي نَزَّلَ الْكِتَابَ ۖ وَهُوَ يَتَوَلَّى الصَّالِحِينَ",
@@ -179,8 +180,8 @@ extension DeepDive {
                 source: "Imam al-Husayn, the morning of Ashura - al-Irshad of al-Mufid",
                 arabic: "اللَّهُمَّ أَنْتَ ثِقَتِي فِي كُلِّ كَرْبٍ، وَرَجَائِي فِي كُلِّ شِدَّةٍ",
                 translation: "“O God, You are my trust in every distress, and my hope in every hardship.”",
-                body: "As the army closed in, he raised his hands - not for rescue, but to name the One who held him: You are, in everything that befalls me, my confidence and my strength.",
-                reflection: "No sea split that morning; no fire cooled. And the trust did not break - because it had never been placed in the outcome. It was placed in Him."
+                body: "As the army closed in, he raised his hands - not for rescue, but to name the One who held him: in every distress You are my trust, in every hardship my hope.",
+                reflection: "No sea split that morning; no rescue came. The way out promised to Dawud was made - not through the army, but through Him: the trust did not break, because it had never been placed in the outcome. It was placed in Him."
             ),
 
             // 14. The Close - the release (interactive entrusting)
@@ -202,7 +203,7 @@ extension DeepDive {
                 arabic: "اللَّهُمَّ إِنِّي أَخْلَصْتُ بِانْقِطَاعِي إِلَيْكَ، وَأَقْبَلْتُ بِكُلِّي عَلَيْكَ",
                 translation: "“My God, I have cut myself off from all but You, and turned toward You with the whole of myself.”",
                 source: "Imam Ali ibn al-Husayn · al-Sahifa al-Sajjadiyya, Dua 28",
-                note: "The great entrustings are not asked of you this morning. Only this: one grip loosened, one affair signed over to the One who does not drop what He holds.",
+                note: "The great entrustings are not asked of you this morning. Only this: one grip loosened, one affair signed over - and the rest left to the One who is enough.",
                 close: "The trust is yours to keep."
             ),
         ]

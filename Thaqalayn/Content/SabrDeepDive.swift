@@ -17,6 +17,7 @@ extension DeepDive {
         subtitle: "Patience - a descent through three stations",
         sfSymbol: "hourglass",
         estMinutes: 5,
+        stageNoun: "Station",
         acts: [
             ActInfo(number: 1, ar: "الصَّبْر", tr: "al-Sabr", name: "The Enduring"),
             ActInfo(number: 2, ar: "الرِّضَا", tr: "al-Rida", name: "The Accepting"),
@@ -29,7 +30,7 @@ extension DeepDive {
                 titleAr: "صَبْر",
                 titleEn: "Sabr",
                 subtitle: "Patience",
-                line: "A descent through the Qur’an and the Ahl al-Bayt - through three stations of the patient heart."
+                line: "A descent in three stations of the patient heart, through the Qur'an and the Ahl al-Bayt - the household of the Prophet ﷺ."
             ),
 
             // 02. Before you descend - how this works + the promise
@@ -87,7 +88,7 @@ extension DeepDive {
                 surah: 2,
                 ayah: 156,
                 arabic: "الَّذِينَ إِذَا أَصَابَتْهُم مُّصِيبَةٌ قَالُوا إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
-                translation: "Those who, when calamity strikes them, say: “Indeed we belong to God, and indeed to Him we return.”",
+                translation: "[Give glad tidings to the patient:] those who, when calamity strikes them, say: “Indeed we belong to God, and indeed to Him we return.”",
                 reference: "al-Baqarah · 2 : 156",
                 reflection: "This is the first breath of patience - not that the blow does not land, but that the heart, even as it breaks, remembers where it is going. To Him we belong; to Him we return."
             ),
@@ -121,7 +122,7 @@ extension DeepDive {
                 arabic: "قَالَ يَا أَبَتِ افْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِي إِن شَاءَ اللَّهُ مِنَ الصَّابِرِينَ",
                 translation: "He said: “O my father, do as you are commanded. You will find me, if God wills, among the patient.”",
                 reference: "al-Saffat · 37 : 102",
-                reflection: "The son does not merely submit to the knife - he urges his father toward the command, and names himself patient before the trial has even begun. This is the leap from sabr to rida: from “I will bear it” to “do as you are commanded.”"
+                reflection: "This is Isma'il - the son Ibrahim saw himself sacrificing in a dream that was God's command. He does not merely submit to the knife: he urges his father on, and names himself patient before the blade is even raised. This is the leap from sabr to rida: from “I will bear it” to “do as you are commanded.”"
             ),
 
             // 09. Movement II - The Excellent Servant (Saad 38:44, Ayyub)
@@ -133,14 +134,14 @@ extension DeepDive {
                 arabic: "إِنَّا وَجَدْنَاهُ صَابِرًا ۚ نِّعْمَ الْعَبْدُ ۖ إِنَّهُ أَوَّابٌ",
                 translation: "“Indeed We found him patient - an excellent servant. Truly he turned ever back to Us.”",
                 reference: "Saad · 38 : 44",
-                reflection: "Stripped of his health, his wealth, his children, Ayyub never once resented his Lord - he only turned back to Him, and back again. And so God Himself names him: an excellent servant. Rida is what turns loss into nearness."
+                reflection: "Stripped of his health, his wealth, his children, Ayyub carried his pain to God - and kept returning, and returning again: awwab, the verse's own word for him. The praise comes after the complaint. Rida is what turns loss into nearness."
             ),
 
             // 10. Movement III - opening card with bridge verse (thread: ACCEPT -> BE AT PEACE)
             .act(
                 act: 3,
                 connector: "You have learned to accept it.",
-                line: "Now - the summit. Where patience has become peace, and the soul, stripped of everything, returns to its Lord not broken but serene - pleased, and pleasing to Him.",
+                line: "Now - the summit. Where patience has become peace, and the soul, stripped of everything, returns to its Lord not broken but serene.",
                 bridge: BridgeVerse(
                     surah: 89,
                     ayah: 27,
@@ -154,19 +155,19 @@ extension DeepDive {
             .narration(
                 act: 3,
                 tag: "The Last Night",
-                source: "The night before Ashura - al-Irshad of al-Mufid",
-                body: "On the last night, Husayn gathered those with him and lifted his oath from their shoulders: the darkness is a curtain - take it, and go; they want no one but me. Not one of them left. And they passed that night in prayer, standing and bowing, their voices murmuring low - like the humming of bees.",
-                reflection: "This is rida made visible. Not people trapped into patience, but people who chose it with open eyes, knowing the morning - and turned their last night on earth into worship."
+                source: "The night before Ashura - al-Irshad of al-Mufid · al-Luhuf of Ibn Tawus",
+                body: "On the night before the battle, with the enemy army camped in the dark around them, Imam Husayn - the Prophet's ﷺ grandson - gathered his companions and released them from their pledge to him: “The night has covered you - take it as your mount, and go. They want no one but me.” Not one of them left. And they passed that last night in prayer, standing and bowing, their voices murmuring low - like the humming of bees.",
+                reflection: "Here acceptance ripens into peace. Not people trapped into patience, but people who chose it with open eyes, knowing what the morning would bring - and turned their last night on earth into worship."
             ),
 
             // 12. Movement III - The Last Prostration (Imam al-Husayn)
             .climax(
                 act: 3,
                 tag: "The Last Prostration",
-                source: "Imam al-Husayn, in his final moments at Karbala - al-Luhuf of Ibn Tawus",
+                source: "Imam al-Husayn, in his final moments at Karbala - Maqtal al-Husayn of al-Muqarram",
                 arabic: "صَبْرًا عَلَىٰ قَضَائِكَ يَا رَبِّ، لَا إِلَٰهَ سِوَاكَ",
                 translation: "“Patience upon Your decree, O my Lord. There is no god but You.”",
-                body: "Bereaved of every son and brother and companion, his body wounded past counting, he lowered his face to the earth of Karbala. No word of complaint left him - only surrender: patience with the decree, and there is no god but You.",
+                body: "Bereaved of sons and brothers and companions, his body bearing wounds past counting, he lowered his face to the earth of Karbala. No word of complaint left him - only surrender: patience with the decree, and there is no god but You.",
                 reflection: "This is the summit - al-nafs al-mutma'inna. Not that the loss had stopped wounding, but that the heart, in the very fire, had returned to its Lord: pleased, and pleasing. Patience had become peace."
             ),
 
@@ -186,9 +187,9 @@ extension DeepDive {
             .dua(
                 tag: "A Prayer in Trial",
                 intro: "After the prophets, after Karbala - one prayer, in the voice of the sixth Imam, that asks nothing but honesty about our own small patience.",
-                arabic: "رَبِّ كَمْ مِنْ نِعْمَةٍ أَنْعَمْتَ بِهَا عَلَيَّ قَلَّ عِنْدَهَا شُكْرِي، وَكَمْ مِنْ بَلِيَّةٍ ابْتَلَيْتَنِي بِهَا قَلَّ لَكَ عِنْدَهَا صَبْرِي، فَيَا مَنْ قَلَّ عِنْدَ نِعْمَتِهِ شُكْرِي فَلَمْ يَحْرِمْنِي، وَيَا مَنْ قَلَّ عِنْدَ بَلِيَّتِهِ صَبْرِي فَلَمْ يَخْذُلْنِي",
+                arabic: "رَبِّ كَمْ مِنْ نِعْمَةٍ أَنْعَمْتَ بِهَا عَلَيَّ قَلَّ لَكَ عِنْدَهَا شُكْرِي، وَكَمْ مِنْ بَلِيَّةٍ ابْتَلَيْتَنِي بِهَا قَلَّ لَكَ عِنْدَهَا صَبْرِي، فَيَا مَنْ قَلَّ عِنْدَ نِعْمَتِهِ شُكْرِي فَلَمْ يَحْرِمْنِي، وَيَا مَنْ قَلَّ عِنْدَ بَلِيَّتِهِ صَبْرِي فَلَمْ يَخْذُلْنِي",
                 translation: "“My Lord - how many a blessing You gave me, and how little my thanks; how many a trial You tested me with, and how little my patience. O You who did not deprive me though my thanks was little, and did not forsake me though my patience was little.”",
-                source: "Imam Ja'far al-Sadiq · al-Amali of al-Saduq",
+                source: "Imam Ja'far al-Sadiq · Muhaj al-Da'awat of Ibn Tawus",
                 note: "The towering patience of Karbala is not asked of you. Only this: to bear a little, to return to Him - and to trust that the One who never forsook the patient will not forsake you either.",
                 close: "The patience is yours to keep."
             ),

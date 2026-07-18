@@ -78,12 +78,24 @@ enum DeepDiveSection {
     /// `replyingTo` names the line He is answering; `arabic` is the anchor of His words.
     case response(act: Int, replyingTo: LocalizedText, arabic: String, words: LocalizedText, source: LocalizedText, reflection: LocalizedText)
     case climax(act: Int, tag: LocalizedText, source: LocalizedText, arabic: String, translation: LocalizedText, body: LocalizedText, reflection: LocalizedText)
+    /// The recurring question of al-Rahman: the refrain verse glows, and the reader
+    /// answers it in the words the Ahl al-Bayt taught - the reply rising as an
+    /// ascending thread of light, the deliberate inverse of `response`'s descending
+    /// one (there He answers you; here He asks and you answer). `teachSource` is
+    /// non-nil on the first occurrence only, where the reply is being taught;
+    /// `replyArabic` is a taught devotional phrase, not Qur'an (no byte-check).
+    case refrain(act: Int, tag: LocalizedText, surah: Int, ayah: Int, arabic: String, translation: LocalizedText, reference: String, intro: LocalizedText, teachSource: LocalizedText?, replyArabic: String, replyTransliteration: String, replyTranslation: LocalizedText, reflection: LocalizedText)
     case reflectionPrompt(tag: LocalizedText, prompt: LocalizedText, placeholder: LocalizedText, subline: LocalizedText, nextLabel: LocalizedText)
     /// The interactive close of a dive built on entrustment (Tawakkul): the reader names
     /// what they are gripping - in their heart - presses and holds the ring (that is the
     /// grip), and the lifting of the finger IS the release, resolving into the entrusting
     /// verse. Replaces `reflectionPrompt` for such dives.
     case release(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText, arabic: String, translation: LocalizedText, reference: String, note: LocalizedText, nextLabel: LocalizedText)
+    /// The interactive close of a dive built on gratitude (Shukr): the reader taps to
+    /// count blessings - each tap births a point of light - until the lights begin
+    /// multiplying on their own, outrunning the finger, and the screen resolves into
+    /// the verse: the count cannot be finished. Replaces `reflectionPrompt` for such dives.
+    case count(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText, arabic: String, translation: LocalizedText, reference: String, note: LocalizedText, nextLabel: LocalizedText)
     /// `close` is the theme-specific final clause shown after "The descent ends." in the
     /// Amin block (e.g. "The certainty is yours to keep." for Yaqin) — per-dive so it never
     /// carries another dive's theme.
@@ -103,7 +115,8 @@ enum DeepDiveSection {
         case .narration(let a, _, _, _, _):                return a
         case .response(let a, _, _, _, _, _):              return a
         case .climax(let a, _, _, _, _, _, _):             return a
-        case .reflectionPrompt, .release, .dua, .closing:  return 4
+        case .refrain(let a, _, _, _, _, _, _, _, _, _, _, _, _): return a
+        case .reflectionPrompt, .release, .count, .dua, .closing:  return 4
         }
     }
 }
@@ -117,6 +130,9 @@ struct DeepDive: Identifiable {
     let subtitle: LocalizedText
     let sfSymbol: String
     let estMinutes: Int
+    /// Noun in the movement-card chrome ("THE ENDURING · STATION 1 OF 3") - each
+    /// dive's own spine vocabulary: Depth (Yaqin), Station (Sabr), Motion (Tawakkul), Tongue (Shukr).
+    var stageNoun: String = "Depth"
     let acts: [ActInfo]
     let sections: [DeepDiveSection]
 
