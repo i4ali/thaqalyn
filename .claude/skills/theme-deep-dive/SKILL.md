@@ -1,6 +1,6 @@
 ---
 name: theme-deep-dive
-description: Author a new theme "Deep Dive" (Yaqin/Sabr/Tawakkul/Shukr family) for the Thaqalayn iOS app - a single-sitting descent through a spiritual theme like Ikhlas, Taqwa, Rida, shown on the Journeys tab. Use when asked to create/build "the next deep dive", a deep dive for a named theme ("make the Ikhlas deep dive", "build Taqwa"), or a new entry in the deep-dive roadmap. Runs research → spine → design+mock → implement → build → 3-auditor audit with two approval gates, letting each theme find its own shape instead of forcing the house template. NOT for surah experiences - those use /inside-the-surah.
+description: Author a new theme "Deep Dive" (Yaqin/Sabr/Tawakkul/Shukr family) for the Thaqalayn iOS app - a single-sitting descent through a spiritual theme like Ikhlas, Taqwa, Rida, shown on the Journeys tab. Use when asked to create/build "the next deep dive", a deep dive for a named theme ("make the Ikhlas deep dive", "build Taqwa"), or a new entry in the deep-dive roadmap. Runs research → spine → design+mock → implement → build → 4-auditor audit with two approval gates, letting each theme find its own shape instead of forcing the house template. NOT for surah experiences - those use /inside-the-surah.
 ---
 
 # Theme Deep Dive - author a new themed descent
@@ -136,10 +136,10 @@ diacritics report, no `lock.fill`, fixed strings present). Ignore SourceKit
 `xcodebuild` is the truth. No XCTest. Do not launch the simulator - the user does the
 device pass themselves.
 
-### Stage 5 - AUDIT (flag-only, three agents)  ← REQUIRED for every new dive
+### Stage 5 - AUDIT (flag-only, four agents)  ← REQUIRED for every new dive
 
-Once the build is green, run the audit per `references/audit.md`: **three** auditors in
-**two waves** - A and B together, then C (never more than two at once):
+Once the build is green, run the audit per `references/audit.md`: **four** auditors in
+**two waves** - A and B together, then C and D (never more than two at once), all four pinned to Opus 4.6 (`model: "opus"`):
 - **Auditor A - Flow, shape & the ledger**: walks every beat in order; coherence, pacing,
   transitions, template-not-forced, interactive-close earned, no-reuse ledger honored.
 - **Auditor B - Theology, sourcing & Arabic**: Shia sourcing, honorifics, narration
@@ -147,8 +147,11 @@ Once the build is green, run the audit per `references/audit.md`: **three** audi
   text - not a byte-check), excerpt-vs-recitation anchoring.
 - **Auditor C - Readability**: every English string read as a tired first-time phone
   reader; first-pass comprehension is the bar.
+- **Auditor D - Voice & reverence**: every English string read for register and dignity,
+  flagging prose that is crude, casual, or over-familiar toward the sacred (clear but
+  undignified - e.g. "placed it in your mouth"), each finding with a dignified rewrite.
 
-All three **report only - they do not edit anything**. Consolidate into one ranked list
+All four **report only - they do not edit anything**. Consolidate into one ranked list
 (Blocker / Should-fix / Polish), present it, and **stop**. The user picks which findings
 to fix; apply ONLY the approved ones, then re-run the build gate. Unapproved findings are
 recorded in the design doc as "known, accepted".

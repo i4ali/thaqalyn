@@ -16,6 +16,8 @@ struct SettingsView: View {
     @StateObject private var voiceManager = TTSVoiceManager.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var dailyVerse = DailyVerseProvider.shared
+    @StateObject private var premiumManager = PremiumManager.shared
+    @State private var showingPaywall = false
     @Environment(\.presentationMode) var presentationMode
     @State private var showingAuthentication = false
     @State private var showingClearDataAlert = false
@@ -543,6 +545,7 @@ struct SettingsView: View {
 
                 ScrollView {
                     VStack(spacing: 26) {
+                        emeraldPremiumSection
                         emeraldYourNameSection
                         emeraldAppearanceSection
                         emeraldLanguageSection
@@ -562,6 +565,60 @@ struct SettingsView: View {
     }
 
     // MARK: - Emerald sections
+
+    // The one road to the paywall from Settings. Premium chip, never a lock
+    // (house rule); for premium users it settles into a quiet "active" state.
+    private var emeraldPremiumSection: some View {
+        Button {
+            if !premiumManager.isPremium { showingPaywall = true }
+        } label: {
+            HStack(spacing: 13) {
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("Thaqalayn Premium")
+                        .font(EmType.serif(17, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                    Text(premiumManager.isPremium
+                         ? "Every dive, journey and layer is yours."
+                         : "Everything. Forever. Every dive, journey and layer.")
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+
+                Spacer(minLength: 8)
+
+                if premiumManager.isPremium {
+                    Text("ACTIVE")
+                        .font(.system(size: 10, weight: .heavy)).tracking(1.6)
+                        .foregroundColor(themeManager.accentColor)
+                        .padding(.horizontal, 10).padding(.vertical, 5)
+                        .background(Capsule().stroke(themeManager.accentColor.opacity(0.4), lineWidth: 1))
+                } else {
+                    Text("PREMIUM")
+                        .font(.system(size: 10, weight: .heavy)).tracking(1.6)
+                        .foregroundColor(themeManager.onAccentText)
+                        .padding(.horizontal, 10).padding(.vertical, 5)
+                        .background(Capsule().fill(themeManager.accentGradient))
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 17)
+            .background(
+                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    .fill(LinearGradient(colors: [themeManager.accentColor.opacity(0.10),
+                                                  themeManager.accentColor.opacity(0.03)],
+                                         startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 18, style: .continuous)
+                            .stroke(themeManager.accentColor.opacity(0.34), lineWidth: 1)
+                    )
+                    .shadow(color: themeManager.accentColor.opacity(0.09), radius: 20)
+            )
+        }
+        .buttonStyle(EmPressStyle())
+        .disabled(premiumManager.isPremium)
+        .fullScreenCover(isPresented: $showingPaywall) { PaywallView() }
+    }
 
     private var emeraldYourNameSection: some View {
         SettingsSection(title: "Your Name") {

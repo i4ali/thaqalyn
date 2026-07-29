@@ -413,6 +413,16 @@ struct DailyCrosswordView: View {
     // MARK: - Solved overlay (mockup right phone)
 
     private var solvedOverlay: some View {
+        ZStack {
+            if themeManager.isMidnightEmerald {
+                CelebrationBackdrop()
+            }
+            CelebrationConfetti()
+            solvedContent
+        }
+    }
+
+    private var solvedContent: some View {
         VStack(spacing: 26) {
             Spacer()
 

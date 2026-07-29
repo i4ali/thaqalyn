@@ -104,6 +104,20 @@ struct DeepDiveView: View {
         let opacity: Double
     }
 
+    /// The `sujud` beat's state machine. The prostration is a press-and-hold: the core
+    /// of light sinks from the ring's top to the earth-line while the finger is down,
+    /// and the held stillness at the bottom IS the sujud - the verse resolves while
+    /// still held. Lifting after the turn is the rising; lifting early resets gently.
+    @State private var sujudHolding = false
+    @State private var sujudAtBottom = false     // core landed on the earth-line while still holding
+    @State private var sujudDone = false
+    @State private var sujudHoldStart: Date? = nil
+    @State private var sujudTimer: Timer? = nil
+    /// How long the core takes to sink from the ring's top to the earth-line.
+    private let sujudSinkDuration: TimeInterval = 2.2
+    /// How much longer the stillness must hold at the bottom before the verse resolves.
+    private let sujudStayDuration: TimeInterval = 2.0
+
     private var s: CGFloat { reading.scale }
     private var currentIndex: Int { currentID ?? 0 }
 
@@ -386,12 +400,13 @@ struct DeepDiveView: View {
         case .reflectionPrompt:         return ("The Return", dive.acts.count)
         case .release(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
         case .count(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
+        case .sujud(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
         case .dua:                      return ("The Close", dive.acts.count)
         case .closing:                  return ("The Close", dive.acts.count)
         default:
             let a = section.act
             guard let info = dive.actInfo(a) else { return nil }
-            return ("Movement \(roman(a)) · \(info.name(lang))", a)
+            return ("\(dive.stageWord) \(roman(a)) · \(info.name(lang))", a)
         }
     }
 
@@ -480,6 +495,8 @@ struct DeepDiveView: View {
             releasePage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
         case let .count(_, prompt, subline, arabic, translation, reference, note, nextLabel):
             countPage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
+        case let .sujud(_, prompt, subline, arabic, translation, reference, note, nextLabel):
+            sujudPage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
         case let .dua(tag, intro, arabic, translation, source, note, close):
             duaPage(tag(lang), intro(lang), arabic, translation(lang), source(lang), note(lang), close(lang), show)
         case let .closing(tag, titleAr, essence, line):
@@ -535,7 +552,7 @@ struct DeepDiveView: View {
                 .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 320)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.78, reduce: reduceMotion)
-            bob("Descend", show).padding(.top, 44)
+            bob(dive.descendCta, show).padding(.top, 44)
         }
     }
 
@@ -552,7 +569,7 @@ struct DeepDiveView: View {
                 .reveal(show, 0.2, reduce: reduceMotion)
             hairline.padding(.vertical, 24).reveal(show, 0.35, reduce: reduceMotion)
             VStack(alignment: .leading, spacing: 14) {
-                hintRow("arrow.down", "Scroll to sink deeper")
+                hintRow(dive.scrollHintIcon, dive.scrollHint)
                 hintRow("hand.tap", "Tap what draws you")
                 hintRow("square.and.pencil", "Reflect at the end")
             }
@@ -561,7 +578,7 @@ struct DeepDiveView: View {
                 .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 26).frame(maxWidth: 250)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.7, reduce: reduceMotion)
-            bob("Begin the descent", show, 0.9).padding(.top, 30)
+            bob(dive.beginCta, show, 0.9).padding(.top, 30)
         }
     }
 
@@ -609,8 +626,8 @@ struct DeepDiveView: View {
                 .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
                 .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .reveal(show, 0.06, reduce: reduceMotion)
-            Text("The map for everything below.")
-                .font(EmType.serifItalic(15)).foregroundColor(DeepDivePalette.mute)
+            Text(dive.mapLine)
+                .font(EmType.serifItalic(16)).foregroundColor(DeepDivePalette.mute)
                 .multilineTextAlignment(.center).padding(.top, 4)
                 .reveal(show, 0.12, reduce: reduceMotion)
             HStack(spacing: 8) {
@@ -677,7 +694,7 @@ struct DeepDiveView: View {
                     .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                     .padding(.bottom, 24).reveal(show, reduce: reduceMotion)
             }
-            Text("Movement").font(.system(size: 11, weight: .semibold)).tracking(6)
+            Text(dive.stageWord).font(.system(size: 11, weight: .semibold)).tracking(6)
                 .foregroundColor(DeepDivePalette.gold).padding(.bottom, 14).reveal(show, 0.1, reduce: reduceMotion)
             Text(roman(act)).font(EmType.serif(80)).foregroundColor(DeepDivePalette.goldBright.opacity(0.28))
                 .reveal(show, 0.2, reduce: reduceMotion)
@@ -1179,6 +1196,138 @@ struct DeepDiveView: View {
         }
     }
 
+    // MARK: The sujud (Salah)
+
+    /// The interactive prostration. Idle: the prompt and a thin gold ring - the core of
+    /// light resting at its top, an earth-line at its base. Holding: the core sinks to
+    /// the earth-line over `sujudSinkDuration` while the ring warms; once it lands, the
+    /// label turns to "Stay". The held stillness IS the sujud - after `sujudStayDuration`
+    /// more of it (or on lifting after the turn - the rising), the verse resolves.
+    /// Lifting before the turn resets the core gently to the top.
+    private func sujudPage(_ prompt: String, _ subline: String, _ arabic: String, _ translation: String, _ reference: String, _ note: String, _ nextLabel: String, _ show: Bool) -> some View {
+        VStack(spacing: 0) {
+            if sujudDone {
+                Text(arabic).font(EmType.arabic(30 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
+                    .multilineTextAlignment(.center).lineSpacing(10 * s)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
+                    .foregroundColor(DeepDivePalette.gold.opacity(0.85)).padding(.top, 14)
+                hairline.padding(.vertical, 22)
+                Text(note).font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute)
+                    .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 320)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                bob(nextLabel, true, 0.4).padding(.top, 30)
+            } else {
+                Text("✦").font(.system(size: 20)).foregroundColor(DeepDivePalette.gold)
+                    .opacity(sujudHolding ? 0.35 : 1)
+                    .reveal(show, reduce: reduceMotion)
+                Text(prompt).font(EmType.serif(34)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).padding(.top, 20)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .opacity(sujudHolding ? 0.45 : 1)
+                    .reveal(show, 0.15, reduce: reduceMotion)
+                Text(subline)
+                    .font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                    .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .opacity(sujudHolding ? 0.5 : 1)
+                    .reveal(show, 0.3, reduce: reduceMotion)
+                sujudRing.padding(.top, 34).reveal(show, 0.5, reduce: reduceMotion)
+                Text((sujudAtBottom ? "Stay - this is the nearest point" : "Press and hold - go down").uppercased())
+                    .font(.system(size: sujudAtBottom ? 12 : 10.5, weight: .semibold))
+                    .tracking(sujudAtBottom ? 4 : 3)
+                    .foregroundColor(sujudAtBottom ? DeepDivePalette.goldBright : DeepDivePalette.gold)
+                    .shadow(color: sujudAtBottom ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .padding(.top, 22)
+                    .reveal(show, 0.6, reduce: reduceMotion)
+            }
+        }
+        .background {
+            if sujudDone {
+                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                               center: .center, startRadius: 10, endRadius: 280)
+                    .allowsHitTesting(false)
+            }
+        }
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.45), value: sujudHolding)
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.5), value: sujudAtBottom)
+        .onDisappear { sujudTimer?.invalidate(); sujudTimer = nil }
+    }
+
+    /// The prostration itself: the ring is the place of it, the core of light is the
+    /// reader, and the earth-line tangent to the ring's base is where the core comes
+    /// to rest - the nearest point.
+    private var sujudRing: some View {
+        ZStack {
+            Circle().stroke(DeepDivePalette.gold.opacity(0.5), lineWidth: 1.5)
+            // Warms and brightens on the same clock as the sink.
+            Circle()
+                .stroke(DeepDivePalette.goldBright.opacity(sujudHolding || sujudAtBottom ? 0.85 : 0), lineWidth: 2)
+                .animation(reduceMotion ? nil :
+                            (sujudHolding ? .linear(duration: sujudSinkDuration) : .easeOut(duration: 0.3)),
+                           value: sujudHolding)
+            Rectangle()
+                .fill(LinearGradient(colors: [DeepDivePalette.gold.opacity(0),
+                                              DeepDivePalette.gold.opacity(sujudAtBottom ? 0.6 : 0.35),
+                                              DeepDivePalette.gold.opacity(0)],
+                                     startPoint: .leading, endPoint: .trailing))
+                .frame(width: 170, height: 1)
+                .offset(y: 64)
+            Circle().fill(DeepDivePalette.goldBright)
+                .frame(width: sujudAtBottom ? 20 : 12, height: sujudAtBottom ? 20 : 12)
+                .shadow(color: DeepDivePalette.goldBright.opacity(0.8), radius: sujudAtBottom ? 22 : 12)
+                .offset(y: sujudHolding || sujudAtBottom ? 54 : -54)
+                .animation(reduceMotion ? nil :
+                            (sujudHolding ? .linear(duration: sujudSinkDuration) : .easeOut(duration: 0.3)),
+                           value: sujudHolding)
+        }
+        .frame(width: 120, height: 120)
+        .contentShape(Circle())
+        .gesture(sujudGesture)
+    }
+
+    private var sujudGesture: some Gesture {
+        DragGesture(minimumDistance: 0)
+            .onChanged { _ in
+                guard !sujudDone, !sujudHolding else { return }
+                sujudHolding = true
+                let started = Date()
+                sujudHoldStart = started
+                UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                sujudTimer?.invalidate()
+                sujudTimer = Timer.scheduledTimer(withTimeInterval: sujudSinkDuration, repeats: false) { _ in
+                    // Only turn if this same uninterrupted hold is still down.
+                    guard sujudHolding, sujudHoldStart == started else { return }
+                    sujudAtBottom = true
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    sujudTimer = Timer.scheduledTimer(withTimeInterval: sujudStayDuration, repeats: false) { _ in
+                        guard sujudHolding, sujudHoldStart == started, !sujudDone else { return }
+                        resolveSujud()
+                    }
+                }
+            }
+            .onEnded { _ in
+                sujudTimer?.invalidate(); sujudTimer = nil
+                guard !sujudDone else { return }
+                if sujudAtBottom {
+                    // Lifting after the turn is the rising from sujud.
+                    resolveSujud()
+                } else {
+                    sujudHoldStart = nil
+                    sujudHolding = false
+                }
+            }
+    }
+
+    private func resolveSujud() {
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.6)) { sujudDone = true }
+    }
+
     private func duaPage(_ tag: String, _ intro: String, _ arabic: String, _ translation: String, _ source: String, _ note: String, _ close: String, _ show: Bool) -> some View {
         VStack(spacing: 0) {
             Text(tag.uppercased()).font(.system(size: 11, weight: .semibold)).tracking(3.4)
@@ -1233,7 +1382,7 @@ struct DeepDiveView: View {
         } else {
             VStack(spacing: 14) {
                 Text("Amin.").font(EmType.serifItalic(26)).foregroundColor(DeepDivePalette.goldBright)
-                Text("The descent ends. \(close)")
+                Text("\(dive.endLine) \(close)")
                     .font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute).multilineTextAlignment(.center)
                 Button {
                     withAnimation {
@@ -1243,6 +1392,9 @@ struct DeepDiveView: View {
                         countTimer?.invalidate(); countTimer = nil
                         countTaps = 0; countTally = 0
                         countOverflow = false; countDone = false; countLights = []
+                        sujudTimer?.invalidate(); sujudTimer = nil
+                        sujudHolding = false; sujudAtBottom = false
+                        sujudDone = false; sujudHoldStart = nil
                         answeredRefrains = []
                     }
                     withAnimation(.easeInOut(duration: 0.6)) { currentID = 0 }

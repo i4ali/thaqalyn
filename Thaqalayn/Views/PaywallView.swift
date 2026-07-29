@@ -551,7 +551,7 @@ struct PaywallView: View {
                     .foregroundColor(themeManager.primaryText)
 
                 Text("“\(CuratedReview.body)”")
-                    .font(EmType.serifItalic(15))
+                    .font(EmType.serifItalic(16))
                     .foregroundColor(themeManager.primaryText) // hero testimonial - thin italic serif needs full contrast, not secondary
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)

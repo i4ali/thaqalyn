@@ -1,8 +1,8 @@
-# Stage 5 - the audit (flag-only, three agents, two waves)
+# Stage 5 - the audit (flag-only, four agents, two waves)
 
-Run **after** the final build is green, for **every** new theme dive. Dispatch **three**
-subagents in **two waves**: Auditors A and B together, then Auditor C (never more than
-two at once). All **report only - they do not edit anything.** When all three return,
+Run **after** the final build is green, for **every** new theme dive. Dispatch **four**
+subagents in **two waves**: Auditors A and B together, then Auditors C and D (never more than
+two at once). **Dispatch all four auditors on Opus 4.6 (`model: "opus"`).** All **report only - they do not edit anything.** When all four return,
 consolidate into one ranked list and present it; **stop there**. The user picks which
 findings to fix. Apply ONLY the approved fixes, re-run the build gate, and record any
 findings the user declined in the design doc as "known, accepted".
@@ -119,16 +119,56 @@ paths of the other shipped dive content files + design docs (for the ledger chec
 > acceptable" on the strength of assumed audience knowledge - report it ranked and let
 > the user decide.
 
+## Auditor D - Voice & reverence
+
+> You are auditing the VOICE and REVERENCE of a new theme "Deep Dive" for the Thaqalayn iOS
+> app, a Twelver Shia app, defined in `<dive file>`. REPORT ONLY - do not edit anything.
+>
+> Read every English string a user sees (open line, orientation, movement dividers, verse
+> translations and reflections, narration bodies, the response beat, climax, interactive-
+> close prompt/subline/note, dua intro/note/close) and ask ONE question of each line: does
+> it carry the dignity that sacred content demands? A sentence can be perfectly clear (that
+> is Auditor C's job) and still fail here - crude, casual, or over-familiar in a way that
+> ill-fits the Qur'an, Allah, the Prophet ﷺ, or the Ahl al-Bayt (a). This is **register and
+> reverence, not comprehension**. (The canonical miss, from a surah dive: "the Ahl al-Bayt
+> placed it in your mouth every night" - instantly understood, but bodily and undignified
+> for scripture.)
+>
+> Flag:
+> 1. **Undignified or bodily register** - wording a reader understands fine but that reads as
+>    crude, flippant, slangy, or physically over-literal about the sacred. Give a rewrite that
+>    keeps the meaning with dignity.
+> 2. **Over-familiarity with the sacred** - the narrator speaking of Allah, the Prophet ﷺ, or
+>    the Imams (a) with a chumminess or breeziness that presumes on the relationship; jokey or
+>    throwaway tone around what should be revered.
+> 3. **Crude anthropomorphism of God** - describing Allah in bluntly physical or human terms
+>    beyond what the tradition's own language warrants. (Auditor B checks doctrinal
+>    correctness; you check how it *reads*.)
+> 4. **Emotional manipulation / devotional overreach** - prose that tells the reader what they
+>    now feel, manufactures a lump in the throat, or claims a spiritual state the beat has not
+>    earned. Reverence invites; it does not coerce.
+> 5. **Voice inconsistency** - the narrator's register lurching between beats (intimate second
+>    person, then dry lecture, then sermon) so it no longer reads as one voice.
+>
+> Note: honorific PRESENCE (ﷺ / a) and transliteration-diacritic house style are Auditor B's
+> job - you check the tone AROUND the sacred, not whether the glyphs are there. Return a
+> ranked list, most severe first: for each, the beat (tag/index), the exact sentence(s), why
+> the register is wrong for sacred content, and a suggested rewrite that preserves the full
+> meaning (do NOT apply it).
+
 ---
 
 ## Consolidating
 
-Merge all three reports into one list, most severe first:
+Merge all four reports into one list, most severe first:
 - **Blocker** - a sourcing/theology error, an unverifiable attribution, a real Arabic
-  textual divergence, reserved-material misuse, or a spoiler that breaks the descent.
+  textual divergence, reserved-material misuse, a spoiler that breaks the descent, or prose
+  that is irreverent toward the sacred (crude anthropomorphism of God, a flippant depiction
+  of the Prophet ﷺ or Imams).
 - **Should-fix** - a ledger collision not named as deliberate, a padded movement, an
   unearned interactive close, a flow/pacing snag, a missing honorific, an unnamed
-  reference carrying a beat's meaning, or copy a first-time reader cannot follow.
+  reference carrying a beat's meaning, an undignified or over-familiar register for sacred
+  content, or copy a first-time reader cannot follow.
 - **Polish** - wording, an em dash, a soft transition.
 
 Auditors' own "minor notes / acceptable" items are NOT automatically Polish - re-judge

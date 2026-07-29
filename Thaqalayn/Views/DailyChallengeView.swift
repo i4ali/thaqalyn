@@ -564,6 +564,16 @@ struct DailyChallengeView: View {
     // MARK: - Completion layer
 
     private var completionLayer: some View {
+        ZStack {
+            if themeManager.isMidnightEmerald {
+                CelebrationBackdrop()
+            }
+            CelebrationConfetti()
+            completionContent
+        }
+    }
+
+    private var completionContent: some View {
         VStack(spacing: 28) {
             Spacer()
 

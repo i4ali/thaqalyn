@@ -1,30 +1,30 @@
 {
   "slug": "arrahman-55-22",
-  "verse_ref": "Sūrat al-Raḥmān · 55:22",
-  "arabic": "يَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ",
-  "translation": "“From both of them come forth the pearl and the coral.”",
+  "verse_ref": "Sūrat al-Raḥmān · 55:19-20, 22",
+  "arabic": "مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ\nبَيْنَهُمَا بَرْزَخٌ لَّا يَبْغِيَانِ\n۞\nيَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ",
+  "translation": "“He set the two seas flowing, meeting side by side; between them a barrier they do not overstep. From both of them come forth the pearl and the coral.”",
   "order": ["sunni", "shia"],
   "readings": {
     "sunni": {
       "label": "Sunni emphasis",
-      "body": "Classical Sunni tafsir reads this as God’s open wonder: where salt and sweet seas meet, He brings out pearl and coral, treasure from the deep, a favor to reflect on.",
+      "body": "Classical Sunni tafsir reads a wonder of creation: two seas meet, a barrier keeps each itself, and from them God brings pearl and coral, a favor to ponder.",
       "source": "Tafsīr Ibn Kathīr · al-Qurṭubī"
     },
     "shia": {
       "label": "Shia emphasis",
-      "body": "Shia tafsir carries a narration from Imam al-Ṣādiq: the two seas that meet are ʿAlī and Fāṭima, joined in marriage, and from their union come the pearl and coral, al-Ḥasan and al-Ḥusayn.",
-      "source": "Majmaʿ al-Bayān · Tafsīr al-Qummī"
+      "body": "Shia tafsir carries a narration: the two seas that meet are ʿAlī and Fāṭima, the barrier between them the Prophet, and the pearl and coral their sons al-Ḥasan and al-Ḥusayn.",
+      "source": "Majmaʿ al-Bayān · Tafsīr al-Burhān"
     }
   },
   "voiceover": {
-    "hook": "Two seas, a pearl, a coral. One tradition reads them as the Prophet's own family.",
-    "reference": "Surah al-Rahman, verse twenty-two.",
-    "payoff": "Same words. One tradition hears the sea's own wonder, a reason to give thanks. The other hears the Prophet's household, one of many verses Shia tradition reads as naming that family. A narration both traditions record.",
+    "hook": "Two seas that meet. A pearl, a coral. One tradition reads them as the Prophet's own family.",
+    "reference": "Surah al-Rahman, verses nineteen, twenty, and twenty-two.",
+    "payoff": "Same words. Different depths. One tradition hears a wonder of the sea; the other hears the Prophet's own family.",
     "question": "Which of these two readings resonates with you"
   },
   "cta_text": "Which of these two readings resonates with you?",
   "show_payoff_text": false,
   "show_closing_text": true,
-  "caption_desc": "One verse about pearls and coral, read two ways for a thousand years 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni #ahlulbayt #surahrahman</span>",
+  "caption_desc": "Two seas, a pearl, and a coral - one passage of the Qur'an, read two ways for a thousand years 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni #ahlulbayt #surahrahman</span>",
   "show_captions": true
 }

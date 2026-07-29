@@ -77,6 +77,17 @@ struct DeepDiveDescriptor: Identifiable {
             coverAssetName: "ShukrCover"
         ),
         DeepDiveDescriptor(
+            id: "salah",
+            title: LocalizedText(en: "Salah · Prayer", ur: "نماز", ar: "الصلاة"),
+            titleAr: "صَلَاة",
+            sfSymbol: "stairs",
+            subtitle: LocalizedText(en: "An ascent through three names - Qur'an to Karbala",
+                                    ur: "تین ناموں میں چڑھتا ایک سفر - قرآن سے کربلا تک",
+                                    ar: "صعودٌ عبر ثلاثة أسماء - من القرآن إلى كربلاء"),
+            available: true, dive: .salah,
+            coverAssetName: "SalahCover"
+        ),
+        DeepDiveDescriptor(
             id: "ikhlas",
             title: LocalizedText(en: "Ikhlas · Sincerity", ur: "اخلاص", ar: "الإخلاص"),
             titleAr: "إِخْلَاص",

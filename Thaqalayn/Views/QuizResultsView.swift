@@ -39,6 +39,11 @@ struct QuizResultsView: View {
                     .ignoresSafeArea()
             }
 
+            // Celebration plate for good scores; a plain result stays on quiet emerald.
+            if isGood && themeManager.isMidnightEmerald {
+                CelebrationBackdrop()
+            }
+
             // Confetti for good scores
             if showConfetti && isGood {
                 confettiView
@@ -409,11 +414,7 @@ struct QuizResultsView: View {
     // MARK: - Confetti
 
     private var confettiView: some View {
-        ZStack {
-            ForEach(0..<30, id: \.self) { index in
-                QuizConfettiPiece(delay: Double(index) * 0.03)
-            }
-        }
+        CelebrationConfetti()
     }
 
     // MARK: - Helpers
@@ -444,48 +445,6 @@ struct QuizResultsView: View {
                 showDetails = true
             }
         }
-    }
-}
-
-// MARK: - Quiz Confetti Piece
-
-struct QuizConfettiPiece: View {
-    let delay: Double
-    @State private var yOffset: CGFloat = -100
-    @State private var xOffset: CGFloat = 0
-    @State private var rotation: Double = 0
-    @State private var opacity: Double = 1
-
-    private let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink]
-    private let randomColor: Color
-    private let randomXStart: CGFloat
-    private let randomRotation: Double
-
-    init(delay: Double) {
-        self.delay = delay
-        self.randomColor = colors.randomElement() ?? .blue
-        self.randomXStart = CGFloat.random(in: -150...150)
-        self.randomRotation = Double.random(in: 0...360)
-    }
-
-    var body: some View {
-        Circle()
-            .fill(randomColor)
-            .frame(width: 8, height: 8)
-            .offset(x: xOffset, y: yOffset)
-            .rotationEffect(.degrees(rotation))
-            .opacity(opacity)
-            .onAppear {
-                xOffset = randomXStart
-                withAnimation(
-                    .easeIn(duration: 2.0)
-                    .delay(delay)
-                ) {
-                    yOffset = UIScreen.main.bounds.height
-                    rotation = randomRotation * 3
-                    opacity = 0
-                }
-            }
     }
 }
 

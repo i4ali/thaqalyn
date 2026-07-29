@@ -108,6 +108,30 @@ Zero new generations; every change reuses art already in the bundle. Mockups: `m
 Sim eyeball list: leaf-band scroll behavior (band is fixed, content scrolls over the fade),
 carousel poster crop per card, Welcome video start/fallback, deck cross-fade rhythm.
 
+## Shipped 2026-07-18 (Tier 2) - build-green, not committed
+
+4 credits of new art (nano_banana_pro 2K x2 concepts + celebration plate; balance ~545). Mockups: `mockups/tier2-art/`.
+
+- **Qur'an tab hero.** New `QuranTabCover` imageset ("book of light" - open mushaf whose pages are pure
+  light, no script so no AI-garbled Arabic; user picked it over the closed-mushaf concept, both masters in
+  `assets/premium-art/quran-tab/`). `EmeraldHomeView` wears it via `EmCoverBand` (h340,
+  `.background(alignment: .top)`), heading dropped 78pt into the art's sky, greeting icons got a dark
+  chip backing. The flagship tab now opens on art like every other main tab.
+- **Celebration moments.** New `CelebrationDoves` imageset (doves rising out of golden light, 9:16) +
+  shared `CelebrationBackdrop` / `CelebrationConfetti` (Components/CelebrationBackdrop.swift - the plate
+  with a 4-stop legibility scrim, and BadgeAwardView's theme-aware `ConfettiPiece` rain packaged for
+  full-screen use). Wired: crossword `solvedOverlay`, challenge `completionLayer` (backdrop emerald-only,
+  confetti both themes), quiz results (backdrop when `isGood` + emerald; the rainbow-circle
+  `QuizConfettiPiece` deleted in favour of the shared piece).
+- **Settings premium row.** `emeraldPremiumSection` at the top of Settings - serif title, one-line pitch,
+  gradient PREMIUM chip (never a lock), opens `PaywallView()`; premium users see a quiet stroked
+  "ACTIVE" chip and the row is disabled. Settings finally has a road to the paywall.
+
+**Dropped by user decision (2026-07-18): the onboarding upsell wall (old item 3). Do not re-propose.**
+
+Sim eyeball list: band crop on the Qur'an tab (title must sit in the dark sky; bias the crop if the glow
+rides up), celebration scrim vs gold CTA, confetti over the quiz card.
+
 ## Remaining
 
 ### ~~1. Motion on the paywall~~ - DONE (round 2)

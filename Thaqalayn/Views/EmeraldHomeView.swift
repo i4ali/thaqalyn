@@ -96,6 +96,7 @@ struct EmeraldHomeView: View {
                 PhosphorIcon(name: "ph-heart-fill", size: 15)
                     .foregroundColor(themeManager.accentColor)
                     .frame(width: 36, height: 36)
+                    .background(Circle().fill(Color(hex: "050E0B").opacity(0.28)))
                     .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
             }
 
@@ -103,6 +104,7 @@ struct EmeraldHomeView: View {
                 PhosphorIcon(name: "ph-bell", size: 16)
                     .foregroundColor(themeManager.accentColor)
                     .frame(width: 36, height: 36)
+                    .background(Circle().fill(Color(hex: "050E0B").opacity(0.28)))
                     .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
             }
             .buttonStyle(EmPressStyle())

@@ -1,8 +1,8 @@
-# Stage 5 - the flow audit (flag-only, three agents, two waves)
+# Stage 5 - the flow audit (flag-only, four agents, two waves)
 
-Run **after** the build is green, for **every** new sūrah. Dispatch **three** subagents
-in **two waves**: Auditors A and B together, then Auditor C (never more than two at once).
-All **report only - they do not edit anything.** When all three return, consolidate into
+Run **after** the build is green, for **every** new sūrah. Dispatch **four** subagents
+in **two waves**: Auditors A and B together, then Auditors C and D (never more than two at once).
+**Dispatch all four auditors on Opus 4.6 (`model: "opus"`).**  All **report only - they do not edit anything.** When all four return, consolidate into
 one ranked list and present it; the user decides what to change.
 
 Give each auditor: the sūrah id, the path to `Thaqalayn/Content/Surah<Name>Dive.swift`, and
@@ -49,11 +49,11 @@ the approved script at `docs/plans/surah-experience/<id>-script.md`.
 > 1. **Shia sourcing** - every tafsir point / narration should trace to a Shia source
 >    (al-Mīzān / Ṭabāṭabāʾī, Tafsīr Nūr al-Thaqalayn, Majmaʿ al-Bayān / Ṭabrisī, al-Kāfī,
 >    ʿUyūn Akhbār al-Riḍā, or an Ahl al-Bayt narration). Flag anything unsourced, or that
->    reads as a Sunni-only interpretation presented as the Shia reading.
+>    reads as a Sunni-only interpretation presented as the Shia reading. **Named attributions must be correct, not just Shia:** when the prose pins a point on a specific scholar/work ("al-Mīzān notes…", "Ṭabrisī reads…"), confirm that source actually makes THAT specific point, and flag any claim that in fact belongs to a different mufassir - even a fellow Shia one (e.g. the developmental, heard-in-the-womb order-of-faculties reading is Makārim Shīrāzī's in Tafsīr Namūna / al-Amthāl, not al-Mīzān's). The app's own layer2 tafsir (`tafsir_<n>.json`) conflates commentators and over-labels points as al-Mīzān's, so any named attribution echoing it is especially suspect - trace it to the primary source.
 > 2. **Honorifics** - the Prophet Muḥammad ﷺ, and ʿalayhi al-salām (or equivalent) for the
 >    Imams and prophets. Flag omissions.
 > 3. **Narration verification** - for each `.narration`/`.response`/`.climax` source, does
->    the attribution hold up (the source exists and plausibly contains it)? Flag any you
+>    the attribution hold up (the named source actually makes THIS specific point, not merely that the source exists and is on-topic)? Flag any you
 >    cannot verify, with what you checked.
 > 4. **Qur'an Arabic** - run
 >    `python3 .claude/skills/inside-the-surah/scripts/pull_arabic.py <all surah:ayah used>`
@@ -92,16 +92,51 @@ the approved script at `docs/plans/surah-experience/<id>-script.md`.
 > sentence(s), why a first-pass reader stumbles, and a suggested plainer rewrite (do NOT
 > apply it). Simple does not mean shallow - every suggestion must keep the full meaning.
 
+## Auditor D - Voice & reverence
+
+> You are auditing the VOICE and REVERENCE of a new "Inside the Sūrah" journey for the
+> Thaqalayn iOS app, a Twelver Shia app, defined in `<dive file>` (approved script:
+> `<script file>`). REPORT ONLY - do not edit anything.
+>
+> Read every English string a user sees and ask ONE question of each line: does it carry the
+> dignity that sacred content demands? A sentence can be perfectly clear (that is Auditor C's
+> job) and still fail here - crude, casual, or over-familiar in a way that ill-fits the Qur'an,
+> Allah, the Prophet ﷺ, or the Ahl al-Bayt (a). This is **register and reverence, not
+> comprehension**. The phrase "the Ahl al-Bayt placed it in your mouth every night" is the
+> canonical miss: instantly understood, but bodily and undignified for scripture.
+>
+> Flag:
+> 1. **Undignified or bodily register** - wording a reader understands fine but that reads as
+>    crude, flippant, slangy, or physically over-literal about the sacred. Give a rewrite that
+>    keeps the meaning with dignity.
+> 2. **Over-familiarity with the sacred** - the narrator speaking of Allah, the Prophet ﷺ, or
+>    the Imams (a) with a chumminess or breeziness that presumes on the relationship; jokey or
+>    throwaway tone around what should be revered.
+> 3. **Crude anthropomorphism of God** - describing Allah in bluntly physical or human terms
+>    beyond what the tradition's own language warrants. (Auditor B checks doctrinal
+>    correctness; you check how it *reads*.)
+> 4. **Emotional manipulation / devotional overreach** - prose that tells the reader what they
+>    now feel, manufactures a lump in the throat, or claims a spiritual state the beat has not
+>    earned. Reverence invites; it does not coerce.
+> 5. **Voice inconsistency** - the narrator's register lurching between beats (intimate second
+>    person, then dry lecture, then sermon) so it no longer reads as one voice.
+>
+> Note: honorific PRESENCE (ﷺ / a) is Auditor B's job - you check the tone AROUND the sacred,
+> not whether the honorific glyph is there. Return a ranked list, most severe first: for each,
+> the beat (tag/index), the exact sentence(s), why the register is wrong for sacred content,
+> and a suggested rewrite that preserves the full meaning (do NOT apply it).
+
 ---
 
 ## Consolidating
 
-Merge all three reports into one list, most severe first. Suggested severity bands:
+Merge all four reports into one list, most severe first. Suggested severity bands:
 - **Blocker** - a sourcing/theology error, an unverifiable narration presented as fact, an
-  Arabic mismatch, or a spoiler that breaks the journey.
+  Arabic mismatch, a spoiler that breaks the journey, or prose that is irreverent toward the
+  sacred (crude anthropomorphism of God, a flippant depiction of the Prophet ﷺ or Imams).
 - **Should-fix** - a misplaced overview, a beat that does not earn its place, a flow/pacing
-  snag, a missing honorific or Listen control, or copy a first-time reader cannot follow
-  on the first pass.
+  snag, a missing honorific or Listen control, an undignified or over-familiar register for
+  sacred content, or copy a first-time reader cannot follow on the first pass.
 - **Polish** - wording, an em dash, a soft transition.
 
 Present the list plainly and let the user pick what to fix. Do not apply fixes as part of

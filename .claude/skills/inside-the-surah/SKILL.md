@@ -137,10 +137,10 @@ type ... in scope" diagnostics on the new file** - they are stale-index false po
 green `xcodebuild` is the truth. No XCTest. Do not launch the simulator - the user does the
 device pass themselves.
 
-### Stage 5 - AUDIT (flag-only, three agents)  ← REQUIRED for every new sūrah
+### Stage 5 - AUDIT (flag-only, four agents)  ← REQUIRED for every new sūrah
 
-Once the build is green, run the flow audit per `references/audit.md`: **three** auditors
-in **two waves** - A and B together, then C (never more than two at once):
+Once the build is green, run the flow audit per `references/audit.md`: **four** auditors
+in **two waves** - A and B together, then C and D (never more than two at once), all four pinned to Opus 4.6 (`model: "opus"`):
 - **Auditor A - Flow & learnings**: walks every beat in order and checks coherence, pacing,
   transitions, and the learnings-checklist (no spoilers, overview at threshold, every beat
   earns its place, template not forced, no em dashes, Listen buttons present).
@@ -149,15 +149,18 @@ in **two waves** - A and B together, then C (never more than two at once):
 - **Auditor C - Readability**: reads every user-facing English string as a first-time
   reader on a phone and flags anything hard to follow on the first pass, each finding with
   a suggested plainer rewrite.
+- **Auditor D - Voice & reverence**: reads every user-facing English string for register and
+  dignity, flagging prose that is crude, casual, or over-familiar toward the sacred (clear but
+  undignified - e.g. "placed it in your mouth"), each finding with a dignified rewrite.
 
-All three **report only** - they do not edit. Consolidate their findings into a single ranked
+All four **report only** - they do not edit. Consolidate their findings into a single ranked
 list of issues/risks (most severe first) and present it. The user decides what to fix.
 
 ---
 
 ## Guardrails
 - **Two gates are mandatory.** Never write Swift before the blueprint AND script are approved.
-- **Max two subagents at a time** (the audit is exactly two, one wave).
+- **Max two subagents at a time** (the audit runs four auditors in two waves of two).
 - **Never auto-commit** - the user commits themselves.
 - **No em dashes**, anywhere, ever. Reading-scale and Listen-button rules from the repo
   `CLAUDE.md` are non-negotiable.

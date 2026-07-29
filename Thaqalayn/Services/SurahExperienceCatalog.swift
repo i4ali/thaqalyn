@@ -102,7 +102,7 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The heart of the Qur'an - and what it keeps asking you",
                                     ur: "قرآن کا دل - اور اس کا آپ سے سوال",
                                     ar: "قلب القرآن - وما يسألك عنه"),
-            available: false, dive: nil,
+            available: true, dive: .surahYasin,
             coverAssetName: "YasinCover"
         ),
         SurahExperienceDescriptor(
@@ -126,8 +126,20 @@ struct SurahExperienceDescriptor: Identifiable {
             subtitle: LocalizedText(en: "The protector - whose hand holds the kingdom",
                                     ur: "محافظ سورہ - بادشاہی کس کے ہاتھ میں ہے",
                                     ar: "السورة الحامية - بيد مَن الملك"),
-            available: false, dive: nil,
+            available: true, dive: .surahMulk,
             coverAssetName: "MulkCover"
+        ),
+        SurahExperienceDescriptor(
+            id: "surah-kawthar",
+            surahNumber: 108,
+            title: LocalizedText(en: "Surah al-Kawthar", ur: "سورۂ کوثر", ar: "سورة الكوثر"),
+            titleAr: "الْكَوْثَر",
+            sfSymbol: "drop.fill",
+            subtitle: LocalizedText(en: "The shortest surah - God's answer to a taunt",
+                                    ur: "سب سے چھوٹی سورت - طعنے پر اللہ کا جواب",
+                                    ar: "أقصر سورة - ردّ الله على السخرية"),
+            available: true, dive: .surahKawthar,
+            coverAssetName: "KawtharCover"
         ),
     ]
 

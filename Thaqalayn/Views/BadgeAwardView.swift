@@ -323,7 +323,7 @@ struct BadgeAwardView: View {
                                 VStack(spacing: 10) {
                                     EmDivider()
                                     Text(hadith)
-                                        .font(EmType.serifItalic(15))
+                                        .font(EmType.serifItalic(16))
                                         .foregroundColor(themeManager.tertiaryText)
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal, 4)

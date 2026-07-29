@@ -96,6 +96,11 @@ enum DeepDiveSection {
     /// multiplying on their own, outrunning the finger, and the screen resolves into
     /// the verse: the count cannot be finished. Replaces `reflectionPrompt` for such dives.
     case count(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText, arabic: String, translation: LocalizedText, reference: String, note: LocalizedText, nextLabel: LocalizedText)
+    /// The interactive close of a dive built on prayer and nearness. The reader presses
+    /// and holds - the held stillness IS the prostration: a point of light sinks to the
+    /// earth-line while the screen draws close, and the verse resolves while still held.
+    /// Lifting the finger afterward is the rising from sujud, into the closing dua.
+    case sujud(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText, arabic: String, translation: LocalizedText, reference: String, note: LocalizedText, nextLabel: LocalizedText)
     /// `close` is the theme-specific final clause shown after "The descent ends." in the
     /// Amin block (e.g. "The certainty is yours to keep." for Yaqin) — per-dive so it never
     /// carries another dive's theme.
@@ -116,7 +121,7 @@ enum DeepDiveSection {
         case .response(let a, _, _, _, _, _):              return a
         case .climax(let a, _, _, _, _, _, _):             return a
         case .refrain(let a, _, _, _, _, _, _, _, _, _, _, _, _): return a
-        case .reflectionPrompt, .release, .count, .dua, .closing:  return 4
+        case .reflectionPrompt, .release, .count, .sujud, .dua, .closing: return 4
         }
     }
 }
@@ -133,6 +138,19 @@ struct DeepDive: Identifiable {
     /// Noun in the movement-card chrome ("THE ENDURING · STATION 1 OF 3") - each
     /// dive's own spine vocabulary: Depth (Yaqin), Station (Sabr), Motion (Tawakkul), Tongue (Shukr).
     var stageNoun: String = "Depth"
+    /// CTA under the open beat. "Descend" for the classic dives; "Ascend" for Salah.
+    var descendCta: String = "Descend"
+    /// CTA under the orientation beat.
+    var beginCta: String = "Begin the descent"
+    /// Subline under the threshold-map title.
+    var mapLine: String = "The map for everything below."
+    /// The big label on movement cards and the place-bar noun ("Movement I · ...").
+    var stageWord: String = "Movement"
+    /// The line in the Amin block before the dive's `close` clause.
+    var endLine: String = "The descent ends."
+    /// The orientation beat's scroll hint row - the journey metaphor, not the gesture.
+    var scrollHint: String = "Scroll to sink deeper"
+    var scrollHintIcon: String = "arrow.down"
     let acts: [ActInfo]
     let sections: [DeepDiveSection]
 
