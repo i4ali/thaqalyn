@@ -82,6 +82,30 @@ struct SurahExperienceDescriptor: Identifiable {
             coverAssetName: "NisaCover"
         ),
         SurahExperienceDescriptor(
+            id: "surah-maida",
+            surahNumber: 5,
+            title: LocalizedText(en: "Surah al-Maida", ur: "سورۂ مائدہ", ar: "سورة المائدة"),
+            titleAr: "الْمَائِدَة",
+            sfSymbol: "link",
+            subtitle: LocalizedText(en: "The Table Spread - a bond made, broken, and sealed",
+                                    ur: "المائدہ - ایک عہد جو بندھا، ٹوٹا اور مکمل ہوا",
+                                    ar: "المائدة - عهدٌ عُقِد ونُقِض ثم أُكمِل"),
+            available: true, dive: .surahMaida,
+            coverAssetName: "MaidaCover"
+        ),
+        SurahExperienceDescriptor(
+            id: "surah-anam",
+            surahNumber: 6,
+            title: LocalizedText(en: "Surah al-An'am", ur: "سورۂ انعام", ar: "سورة الأنعام"),
+            titleAr: "الْأَنْعَام",
+            sfSymbol: "sun.and.horizon.fill",
+            subtitle: LocalizedText(en: "The Cattle - no partner, and no share",
+                                    ur: "الانعام - نہ کوئی شریک، نہ کوئی حصہ",
+                                    ar: "الأنعام - لا شريك، ولا نصيب"),
+            available: true, dive: .surahAnam,
+            coverAssetName: "AnamCover"
+        ),
+        SurahExperienceDescriptor(
             id: "surah-yusuf",
             surahNumber: 12,
             title: LocalizedText(en: "Surah Yusuf", ur: "سورۂ یوسف", ar: "سورة يوسف"),

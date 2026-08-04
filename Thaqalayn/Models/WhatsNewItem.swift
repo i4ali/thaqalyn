@@ -55,6 +55,36 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "surahExperience-anam",
+            sfSymbol: "sun.and.horizon.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 14).date ?? .distantPast,
+            destination: .surahExperience("surah-anam"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah al-An'am - the Qur'an's great argument for the oneness of God, named, of all things, after cattle. Watch Ibrahim reason past every setting light to the One who never sets, until the surah asks the only question left: why are you still giving God a mere share of a life that is wholly His? No partner, no share.",
+            blurbUR: "سورۂ انعام - قرآن کی توحید کے لیے عظیم دلیل، اور نام رکھا گیا - سب چیزوں میں سے - مویشیوں پر۔ دیکھیے ابراہیمؑ کیسے ہر ڈوبنے والی روشنی سے گزر کر اُس ذات تک پہنچتے ہیں جو کبھی غروب نہیں ہوتی، یہاں تک کہ سورہ وہ واحد سوال پوچھتی ہے: تم اُس زندگی کا محض ایک حصہ اللہ کو کیوں دے رہے ہو جو پوری کی پوری اُسی کی ہے؟ نہ کوئی شریک، نہ کوئی حصہ۔",
+            blurbAR: "سورة الأنعام - حجّةُ القرآن الكبرى على وحدانية الله، وقد سُمّيت - من كل شيء - باسم الأنعام. انظر كيف يستدلّ إبراهيم (عليه السلام) متجاوزاً كلَّ نورٍ آفلٍ إلى الذي لا يأفل، حتى تسألك السورة السؤال الوحيد الباقي: لماذا لا تزال تعطي الله نصيباً من حياةٍ هي كلُّها له؟ لا شريك له، ولا نصيب.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-maida",
+            sfSymbol: "link",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 13).date ?? .distantPast,
+            destination: .surahExperience("surah-maida"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah al-Maida - one of the last surahs revealed, and the surah of the covenant. Trace a single bond across it: the pledge you gave God, a people before you who broke theirs and lost the leaders sent to guide them, and the day the religion was completed - a hand raised at Ghadir, and heaven's word that nothing was left to add.",
+            blurbUR: "سورۂ مائدہ - آخری نازل ہونے والی سورتوں میں سے ایک، اور عہد کی سورہ۔ اس میں ایک ہی بندھن کا سراغ لگائیے: وہ عہد جو آپ نے اللہ سے کیا، آپ سے پہلے وہ لوگ جنہوں نے اپنا عہد توڑا اور اُن رہنماؤں کو کھو دیا جو اُن کی ہدایت کے لیے بھیجے گئے تھے، اور وہ دن جب دین مکمل ہوا - غدیر میں بلند ہوتا ایک ہاتھ، اور آسمان کا فرمان کہ اب کچھ باقی نہ رہا۔",
+            blurbAR: "سورة المائدة - من آخر ما نزل من السور، وسورةُ العهد. تتبّعْ فيها رباطاً واحداً: العهدَ الذي قطعتَه لله، وقوماً من قبلك نقضوا عهدهم وفرّطوا في القادة الذين بُعثوا لهدايتهم، واليومَ الذي أُكمل فيه الدين - يدٌ تُرفع في غدير، وكلمةُ السماء أن لم يبقَ شيءٌ يُضاف.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
             id: "deepDives-salah",
             sfSymbol: "stairs",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 12).date ?? .distantPast,
