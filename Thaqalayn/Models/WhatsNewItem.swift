@@ -55,6 +55,21 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "surahExperience-araf",
+            sfSymbol: "mountain.2",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 15).date ?? .distantPast,
+            destination: .surahExperience("surah-araf"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah al-A'raf - the second-longest surah in the Qur'an, named after a wall between the Garden and the Fire, with men on its heights who know every soul by sight. Beneath all its stories runs one question, asked before you were born: 'Am I not your Lord?' - and every soul answered yes. Watch that yes refused by Iblis, kept by Pharaoh's magicians in a single hour, broken by those who knew best, and discover the question was always yours to answer again.",
+            blurbUR: "سورۂ اعراف - قرآن کی دوسری سب سے طویل سورہ، جس کا نام جنت اور جہنم کے درمیان ایک دیوار پر رکھا گیا، جس کی بلندیوں پر وہ لوگ کھڑے ہیں جو ہر روح کو اُس کی نشانی سے پہچانتے ہیں۔ اِس کی تمام کہانیوں کے نیچے ایک ہی سوال بہتا ہے، جو تمہاری پیدائش سے پہلے پوچھا گیا: 'کیا میں تمہارا رب نہیں؟' - اور ہر روح نے کہا: ہاں۔ دیکھیے یہ 'ہاں' کیسے ابلیس نے ٹھکرائی، فرعون کے جادوگروں نے ایک ہی گھڑی میں نبھائی، اور اُن لوگوں نے توڑی جو سب سے بہتر جانتے تھے - اور جانیے کہ یہ سوال ہمیشہ سے تمہارا اپنا تھا۔",
+            blurbAR: "سورة الأعراف - ثاني أطول سور القرآن، سُمّيت باسم سورٍ بين الجنة والنار، على أعرافه رجالٌ يعرفون كل نفسٍ بسيماها. تحت جميع قصصها يجري سؤالٌ واحد، طُرح قبل أن تُولد: 'ألستُ بربكم؟' - فقالت كل نفسٍ: بلى. انظر كيف رفض إبليسُ هذه 'البلى'، وحفظها سحرةُ فرعون في ساعةٍ واحدة، ونقضها من كانوا أعلمَ الناس - واكتشف أن السؤال كان دائمًا سؤالَك أنت.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
             id: "surahExperience-anam",
             sfSymbol: "sun.and.horizon.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 14).date ?? .distantPast,

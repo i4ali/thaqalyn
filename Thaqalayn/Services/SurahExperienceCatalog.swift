@@ -106,6 +106,18 @@ struct SurahExperienceDescriptor: Identifiable {
             coverAssetName: "AnamCover"
         ),
         SurahExperienceDescriptor(
+            id: "surah-araf",
+            surahNumber: 7,
+            title: LocalizedText(en: "Surah al-A'raf", ur: "سورۂ اعراف", ar: "سورة الأعراف"),
+            titleAr: "الْأَعْرَاف",
+            sfSymbol: "mountain.2",
+            subtitle: LocalizedText(en: "The Heights - the pledge you gave before you were born",
+                                    ur: "الاعراف - وہ عہد جو تم نے پیدائش سے پہلے باندھا",
+                                    ar: "الأعراف - العهد الذي قطعتَه قبل أن تُولد"),
+            available: true, dive: .surahAraf,
+            coverAssetName: "ArafCover"
+        ),
+        SurahExperienceDescriptor(
             id: "surah-yusuf",
             surahNumber: 12,
             title: LocalizedText(en: "Surah Yusuf", ur: "سورۂ یوسف", ar: "سورة يوسف"),
