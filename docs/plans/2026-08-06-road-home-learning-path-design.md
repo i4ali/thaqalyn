@@ -102,14 +102,14 @@ Five blocks, in the app voice, on the standard adaptive background:
 
 1. **The Heart of It** - 2-3 warm teaching paragraphs. Scales with `ReadingSettingsManager` (house rule).
 2. **In the Qur'an** - verse cards; tap opens that verse via the `.navigateToVerse` route.
-3. **Take It With You** - link cards to duas (with `DuaListenButton` on the dua screen), deep dives, surah experiences, Foods, journeys.
+3. **Take It With You** - link cards to duas (with `DuaListenButton` on the dua screen), deep dives, surah experiences, Foods, journeys, and - where the station has a clear anchor surah - that surah's quiz. Quiz links are optional per station, assigned at authoring time (every surah has quiz data: `Data/quiz_1.json` ... `quiz_114.json`). Examples: One God -> Surah al-Ikhlas quiz, The Book -> Surah al-Fatiha quiz (free), Wudu -> Surah al-Ma'ida quiz, Fatima -> Surah al-Kawthar quiz. Presented via `QuizView(surah:onDismiss:)` full-screen cover (the `SurahDetailView` pattern), gated by the existing `PremiumManager.canAccessQuiz(surahNumber:)`.
 4. **Try This Today** - one small concrete action.
 5. **Mark station complete** - updates progress, advances the Continue point.
 
 ## Architecture
 
 - `Models/RevertPath.swift` - `RevertPath > PathStage > PathStation`; template section types; typed link enum:
-  `enum StationLink { case verse(surah: Int, verse: Int), dua(id: String), deepDive(id: String), surahExperience(id: String), journey(id: String), explore(ExploreDestination) }`
+  `enum StationLink { case verse(surah: Int, verse: Int), dua(id: String), deepDive(id: String), surahExperience(id: String), journey(id: String), quiz(surahNumber: Int), explore(ExploreDestination) }`
   Compile-checked links: a station can never point at nothing.
 - `Content/RoadHomeStage1.swift` ... `RoadHomeStage5.swift` - typed content, one file per stage, `LocalizedText` fields (EN now, UR/AR later).
 - `Services/RevertPathCatalog.swift` - descriptor registry mirroring `DeepDiveCatalog` (future paths join this shelf).
@@ -133,7 +133,7 @@ Five blocks, in the app voice, on the standard adaptive background:
 - UR/AR content for the stations (slots exist; authored later, matching recent ships).
 - Supabase sync of path progress (all journeys are device-local today).
 - A second learning path (the shelf and catalog are built to take one later).
-- Per-station quizzes or badges.
+- Purpose-built per-station quiz content (stations link to the existing surah quizzes instead) and badges.
 
 ## Next steps
 
