@@ -20,6 +20,7 @@ A new "Learning Paths" category on the Journeys tab, launching with **The Road H
 | Architecture | Purpose-built typed Swift content (not JSON), mirroring deep-dive authoring |
 | Languages | English first; `LocalizedText` slots so UR/AR drop in later |
 | Reminder | Daily learning reminder notification, default ON at 5:00 PM, configurable in Settings |
+| Artwork | Reuse the existing `RidaCover` asset (lamp in an arched window - a light left on for the one coming home); no new art generated |
 
 ## Concept
 
@@ -88,7 +89,8 @@ Landmark stations (6, 17, 30) use the same template plus a fuller celebratory cl
 
 ## Journeys tab presence and progression UX
 
-- A fourth `JourneyShelf`, **"Learning Paths"**, placed first on the Journeys tab, holding one poster `ShelfCard` for The Road Home (new cover art via the usual art pipeline).
+- A fourth `JourneyShelf`, **"Learning Paths"**, placed first on the Journeys tab, holding one poster `ShelfCard` for The Road Home.
+- **Artwork**: reuse the existing `RidaCover` asset (lamp burning in an arched stone window). It reads as "a light left on for the returning traveler" - the journey's exact metaphor - and is season-neutral. Alternatives considered and rejected: `ArbaeenCover` (literal road imagery but mourning-coded with black flags, and already the active Arbaeen poster on the same tab) and `HajjCover` (the House, but monumental rather than intimate, also an active poster on the same tab). `RidaCover`'s only current use is the unbuilt Rida deep dive's coming-soon card; when that dive ships, generate fresh Rida art then.
 - Tapping opens the **path view**: header with progress ("14 of 30 stations"), a prominent **Continue** card for the next uncompleted station, then stages as titled groups of station rows.
 - **Soft locks**: undone stations render dimmed but always tappable. No hard sequential locking.
 - **Premium**: stations in Stages 2-5 show the accent "Premium" capsule (house rule: never a lock icon) and open a veiled preview (VeiledDayPreview pattern) leading to `PaywallView`.
@@ -137,4 +139,3 @@ Five blocks, in the app voice, on the standard adaptive background:
 
 1. Visual mock of the path view and station screen (user-requested gate before implementation).
 2. Implementation plan via writing-plans.
-3. Cover art for The Road Home poster.
