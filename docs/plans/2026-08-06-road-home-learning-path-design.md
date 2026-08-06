@@ -21,6 +21,7 @@ A new "Learning Paths" category on the Journeys tab, launching with **The Road H
 | Languages | English first; `LocalizedText` slots so UR/AR drop in later |
 | Reminder | Daily learning reminder notification, default ON at 5:00 PM, configurable in Settings |
 | Artwork | Reuse the existing `RidaCover` asset (lamp in an arched window - a light left on for the one coming home); no new art generated |
+| In-station resume | Stations track the furthest template block reached; reopening an in-progress station offers "Resume where you left off" |
 
 ## Concept
 
@@ -95,6 +96,7 @@ Landmark stations (6, 17, 30) use the same template plus a fuller celebratory cl
 - **Soft locks**: undone stations render dimmed but always tappable. No hard sequential locking.
 - **Premium**: stations in Stages 2-5 show the accent "Premium" capsule (house rule: never a lock icon) and open a veiled preview (VeiledDayPreview pattern) leading to `PaywallView`.
 - **Progress**: Codable struct -> UserDefaults, like the seasonal journey managers, but with no Hijri year reset (the path is not seasonal). Device-local, matching all other journeys.
+- **Three station states**: not started / in progress / complete. A station becomes "in progress" the moment any block progress is recorded; "complete" only via the Mark complete button. In-progress rows show a half-filled ring instead of a checkmark, and the Continue card targets an in-progress station before the next unstarted one, with its subtitle naming the resume point ("Resume at 'In the Qur'an'").
 
 ## Station screen (fixed template)
 
@@ -106,6 +108,8 @@ Five blocks, in the app voice, on the standard adaptive background:
 4. **Try This Today** - one small concrete action.
 5. **Mark station complete** - updates progress, advances the Continue point.
 
+**Pick up where you left off**: because the template's blocks are fixed, they double as resume anchors. As the reader scrolls, the manager records the furthest block whose header has appeared (`blockProgress: [stationId: blockIndex]` in the progress struct - no fragile scroll offsets). Reopening an in-progress station shows a small "Resume - In the Qur'an" pill under the header; tapping it scrolls to that block. Reading a station never auto-completes it; only the button does.
+
 ## Architecture
 
 - `Models/RevertPath.swift` - `RevertPath > PathStage > PathStation`; template section types; typed link enum:
@@ -113,7 +117,7 @@ Five blocks, in the app voice, on the standard adaptive background:
   Compile-checked links: a station can never point at nothing.
 - `Content/RoadHomeStage1.swift` ... `RoadHomeStage5.swift` - typed content, one file per stage, `LocalizedText` fields (EN now, UR/AR later).
 - `Services/RevertPathCatalog.swift` - descriptor registry mirroring `DeepDiveCatalog` (future paths join this shelf).
-- `Services/RevertPathManager.swift` - progress (completed station ids, continue point, completion %), UserDefaults persistence, no year reset.
+- `Services/RevertPathManager.swift` - progress (completed station ids, per-station `blockProgress` for in-station resume, continue point, completion %), UserDefaults persistence, no year reset.
 - `Views/RevertPath/RoadHomeJourneyView.swift` (path view) and `RoadHomeStationView.swift` (template screen); shelf wiring in `JourneyHubView` per the established six-step recipe.
 - `PremiumManager.canAccessRoadHomeStation(_:)` - free while the station's stage is 1; else premium. Follows `canAccessArbaeenStation`.
 - Strings: section label + vocabulary in `JourneyStrings` (EN/UR/AR).
