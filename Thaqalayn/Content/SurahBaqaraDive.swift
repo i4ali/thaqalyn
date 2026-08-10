@@ -97,7 +97,7 @@ extension DeepDive {
                 arabic: "وَإِذْ قَتَلْتُمْ نَفْسًۭا فَٱدَّٰرَْٰٔتُمْ فِيهَا ۖ وَٱللَّهُ مُخْرِجٌۭ مَّا كُنتُمْ تَكْتُمُونَ",
                 translation: "And when you killed a soul and cast the blame on one another over it, God was to bring out what you were hiding.",
                 reference: "al-Baqara · 2 : 72",
-                reflection: "Here is the floor giving way. There had been a murder. Al-Mizan and the narrations of the Ahl al-Bayt fill in what the verse compresses: a wealthy man killed by a relative who wanted his inheritance, the body left where it would fall on another tribe, and then the killer himself loudest among those crying for justice. A community was tearing itself apart with accusation, and no one could find the truth. This was the crisis under everything. The cow was never a riddle. It was God's answer to a murder, and they had spent all their questions delaying it."
+                reflection: "Here is the floor giving way. There had been a murder. Al-Mizan and the narrations of the Ahl al-Bayt fill in what the verse compresses: a wealthy man killed by a relative who wanted his inheritance, the body left where suspicion would fall on another tribe, and then the killer himself loudest among those crying for justice. A community was tearing itself apart with accusation, and no one could find the truth. This was the crisis under everything. The cow was never a riddle. It was God's answer to a murder, and they had spent all their questions delaying it."
             ),
             .verse(
                 act: 2, tag: "Thus God Gives Life", surah: 2, ayah: 73,

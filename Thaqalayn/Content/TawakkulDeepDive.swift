@@ -134,7 +134,7 @@ extension DeepDive {
                 arabic: "وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ ۚ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ",
                 translation: "“And I entrust my affair to God. Indeed God is ever seeing of His servants.”",
                 reference: "Ghafir · 40 : 44",
-                reflection: "The same court Musa fled - now answered from within it. A lone believer, his warning finished, hands the consequence over. The very next verse answers him: so God protected him from the evils they plotted."
+                reflection: "The same court Musa fled - Pharaoh's - now a lone believer speaks from within it. His warning finished, he hands the consequence over. The very next verse answers him: so God protected him from the evils they plotted."
             ),
 
             // 10. Movement III - opening card with bridge verse (thread: HAND OVER -> BE CARRIED)

@@ -25,6 +25,12 @@ struct ThaqalaynApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .task {
+                    // Cold-launch entitlement check: a paying user who
+                    // reinstalled (or never signed in) must not read as free
+                    // until they discover Restore.
+                    await PurchaseManager.shared.verifyEntitlementsAtLaunch()
+                }
                 .onOpenURL { url in
                     handleDeepLink(url)
                 }

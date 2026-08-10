@@ -118,6 +118,18 @@ struct SurahExperienceDescriptor: Identifiable {
             coverAssetName: "ArafCover"
         ),
         SurahExperienceDescriptor(
+            id: "surah-anfal",
+            surahNumber: 8,
+            title: LocalizedText(en: "Surah al-Anfal", ur: "سورۂ انفال", ar: "سورة الأنفال"),
+            titleAr: "الْأَنْفَال",
+            sfSymbol: "hand.raised.fill",
+            subtitle: LocalizedText(en: "The Spoils of War - the day a victory was handed back to God",
+                                    ur: "مالِ غنیمت - وہ دن جب فتح خدا کے حوالے کر دی گئی",
+                                    ar: "الأنفال - يومَ رُدَّ النصرُ كلُّه إلى الله"),
+            available: true, dive: .surahAnfal,
+            coverAssetName: "AnfalCover"
+        ),
+        SurahExperienceDescriptor(
             id: "surah-yusuf",
             surahNumber: 12,
             title: LocalizedText(en: "Surah Yusuf", ur: "سورۂ یوسف", ar: "سورة يوسف"),

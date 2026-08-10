@@ -92,10 +92,10 @@ struct DeepDiveDescriptor: Identifiable {
             title: LocalizedText(en: "Ikhlas · Sincerity", ur: "اخلاص", ar: "الإخلاص"),
             titleAr: "إِخْلَاص",
             sfSymbol: "drop.fill",
-            subtitle: LocalizedText(en: "Purifying the intention for God alone",
-                                    ur: "نیت کو صرف اللہ کے لیے خالص کرنا",
-                                    ar: "إخلاص النية لله وحده"),
-            available: false, dive: nil,
+            subtitle: LocalizedText(en: "A descent through three purities - Qur'an to the house of Fatima",
+                                    ur: "تین پاکیزگیوں میں اترتا ایک سفر - قرآن سے خانۂ فاطمہؑ تک",
+                                    ar: "نزولٌ عبر ثلاث صفاءات - من القرآن إلى بيت فاطمة عليها السلام"),
+            available: true, dive: .ikhlas,
             coverAssetName: "IkhlasCover"
         ),
         DeepDiveDescriptor(
@@ -103,11 +103,22 @@ struct DeepDiveDescriptor: Identifiable {
             title: LocalizedText(en: "Taqwa · God-consciousness", ur: "تقویٰ", ar: "التقوى"),
             titleAr: "تَقْوَىٰ",
             sfSymbol: "shield",
-            subtitle: LocalizedText(en: "The awareness that guards the heart",
-                                    ur: "وہ شعور جو دل کی حفاظت کرے",
-                                    ar: "الوعي الذي يحرس القلب"),
-            available: false, dive: nil,
+            subtitle: LocalizedText(en: "A descent through three guards - Qur'an to Karbala",
+                                    ur: "تین پہروں میں اترتا ایک سفر - قرآن سے کربلا تک",
+                                    ar: "نزولٌ عبر ثلاثة حُرّاس - من القرآن إلى كربلاء"),
+            available: true, dive: .taqwa,
             coverAssetName: "TaqwaCover"
+        ),
+        DeepDiveDescriptor(
+            id: "kisa",
+            title: LocalizedText(en: "al-Kisa · The Cloak", ur: "حدیث کساء", ar: "الكساء"),
+            titleAr: "الكِسَاء",
+            sfSymbol: "moon.stars.fill",
+            subtitle: LocalizedText(en: "A gathering beneath one cloak - told in the voice of Fatima",
+                                    ur: "ایک چادر تلے ایک اجتماع - فاطمہ زہرا کی زبانی",
+                                    ar: "اجتماعٌ تحت كساءٍ واحد - بلسان فاطمة الزهراء"),
+            available: true, dive: .kisa,
+            coverAssetName: "KisaCover"
         ),
         DeepDiveDescriptor(
             id: "rida",

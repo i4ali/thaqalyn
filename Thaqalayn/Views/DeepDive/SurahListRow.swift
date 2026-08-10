@@ -2,11 +2,12 @@
 //  SurahListRow.swift
 //  Thaqalayn
 //
-//  One surah row in the Quran-tab list (browse + search): the navigation card,
-//  plus - for surahs with a built "Inside the Surah" experience - the attached
-//  Read & Tafsir | Journey mode toggle. The card and the Read tab open the
-//  reading view; the Journey tab opens the immersive experience (premium-gated,
-//  PREMIUM chip - never a lock). Theme-adaptive (emerald + standard).
+//  One surah row in the Quran-tab list (browse + search): the navigation card
+//  plus the attached Read & Tafsir | Journey mode toggle. The card and the Read
+//  tab open the reading view; the Journey tab opens the immersive experience
+//  (premium-gated, PREMIUM chip - never a lock). Surahs without a built
+//  experience show the same toggle with the Journey tab greyed out and marked
+//  SOON. Theme-adaptive (emerald + standard).
 //
 
 import SwiftUI
@@ -33,11 +34,11 @@ struct SurahListRow: View {
             PressableNavLink {
                 SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)
             } label: {
-                // When a toggle is attached, the card drops its own border - the
-                // row draws one combined border below so the two read as one card.
+                // The toggle is always attached, so the card drops its own border -
+                // the row draws one combined border below so the two read as one card.
                 ModernSurahCard(surah: surahWithTafsir.surah,
-                                squaredBottom: experience != nil,
-                                showsBorder: experience == nil)
+                                squaredBottom: true,
+                                showsBorder: false)
             }
             if let d = experience {
                 JourneyModeToggle(
@@ -49,15 +50,25 @@ struct SurahListRow: View {
                     onJourney: { handleTap(d) },
                     showsOuterBorder: false
                 )
+            } else {
+                // No experience built yet: same toggle, Journey greyed out + SOON.
+                JourneyModeToggle(
+                    descriptor: nil,
+                    locked: false,
+                    readDestination: {
+                        SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)
+                    },
+                    onJourney: {},
+                    comingSoon: true,
+                    showsOuterBorder: false
+                )
             }
         }
         .overlay {
             // Single continuous outline around card + toggle - no seam between them.
-            if experience != nil {
-                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .stroke(tm.strokeColor, lineWidth: 1)
-                    .allowsHitTesting(false)
-            }
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .stroke(tm.strokeColor, lineWidth: 1)
+                .allowsHitTesting(false)
         }
         .fullScreenCover(item: $presentedExperience) { p in
             if let d = SurahExperienceDescriptor.byId(p.id), let dive = d.dive {

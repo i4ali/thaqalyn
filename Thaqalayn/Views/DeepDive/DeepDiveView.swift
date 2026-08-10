@@ -118,6 +118,76 @@ struct DeepDiveView: View {
     /// How much longer the stillness must hold at the bottom before the verse resolves.
     private let sujudStayDuration: TimeInterval = 2.0
 
+    /// The `extinguish` beat's state machine (Ikhlas). A fixed scatter of audience-lights;
+    /// each tap puts one out (soft haptic), dimming it to a faint outline. The last light
+    /// will not go out - tapping it flares it (light haptic) and the label turns; the verse
+    /// then resolves. Subtraction to the one unremovable Watcher - the inverse of `count`.
+    @State private var extinguishedLights: Set<Int> = []
+    @State private var extinguishFlared = false      // the last light has been tapped and flared
+    @State private var extinguishDone = false
+    @State private var extinguishTimer: Timer? = nil
+
+    /// The `door` beat's state machine (Taqwa). A warm forbidden opening rests, then drifts
+    /// across the screen and away; withholding - NOT touching it - is the gesture. Holding still
+    /// through the drift resolves into the verse; reaching for it (a tap on the field) gently
+    /// resets it. The one interactive close where acting is the failure.
+    @State private var doorBegun = false        // beat reached; the pre-roll (reading window) is scheduled
+    @State private var doorStarted = false       // the temptation is now drifting past
+    @State private var doorOffset: CGFloat = 0    // 0 = resting at center, ~1.15 = drifted off to the right
+    @State private var doorReached = false        // transient: the reader reached (tapped) - reset flash
+    @State private var doorDone = false
+    @State private var doorTimer: Timer? = nil
+    private let doorDriftDuration: TimeInterval = 4.0
+
+    /// One audience-light in the extinguish field, at a fixed position in unit space
+    /// (stable across taps, unlike the count field's random births).
+    private struct ExtinguishLight: Identifiable {
+        let id: Int
+        let x: CGFloat
+        let y: CGFloat
+        let size: CGFloat
+    }
+    /// The fixed scatter of eight audience-lights - each an eye the deed was performed for.
+    private let extinguishLights: [ExtinguishLight] = [
+        ExtinguishLight(id: 0, x: 0.16, y: 0.30, size: 6),
+        ExtinguishLight(id: 1, x: 0.50, y: 0.15, size: 5),
+        ExtinguishLight(id: 2, x: 0.84, y: 0.26, size: 6.5),
+        ExtinguishLight(id: 3, x: 0.29, y: 0.63, size: 5.5),
+        ExtinguishLight(id: 4, x: 0.68, y: 0.54, size: 6),
+        ExtinguishLight(id: 5, x: 0.13, y: 0.82, size: 5),
+        ExtinguishLight(id: 6, x: 0.52, y: 0.85, size: 6.5),
+        ExtinguishLight(id: 7, x: 0.88, y: 0.74, size: 5.5),
+    ]
+
+    /// The `salawat` beat's state machine (al-Kisa). Five dim lights on a low cloak-edge
+    /// arc - one per soul beneath the cloak. Each tap lights the NEXT name in the order
+    /// the cloak gathered them (soft haptic); at four lit the label turns ("One name
+    /// remains", light haptic); the fifth tap joins the arc into a single glow and
+    /// resolves into the salawat formula (success haptic). A count that COMPLETES at
+    /// exactly five - the meaning-inverse of `count`. No timers.
+    @State private var salawatLit = 0
+    @State private var salawatDone = false
+
+    /// One light of the salawat arc, at a fixed position in unit space, carrying its name.
+    /// EN labels are fixed renderer strings for now (localization debt tracked with the
+    /// dive's UR/AR pass).
+    private struct SalawatLight: Identifiable {
+        let id: Int
+        let x: CGFloat
+        let y: CGFloat
+        let ar: String
+        let en: String
+    }
+    /// The five souls beneath the cloak, in the order the cloak gathered them -
+    /// left to right along a low arc.
+    private let salawatLights: [SalawatLight] = [
+        SalawatLight(id: 0, x: 0.08, y: 0.24, ar: "مُحَمَّد ﷺ", en: "Muhammad ﷺ"),
+        SalawatLight(id: 1, x: 0.29, y: 0.56, ar: "الحَسَن", en: "Hasan"),
+        SalawatLight(id: 2, x: 0.50, y: 0.68, ar: "الحُسَيْن", en: "Husayn"),
+        SalawatLight(id: 3, x: 0.71, y: 0.56, ar: "عَلِيّ", en: "Ali"),
+        SalawatLight(id: 4, x: 0.92, y: 0.24, ar: "فَاطِمَة", en: "Fatima"),
+    ]
+
     private var s: CGFloat { reading.scale }
     private var currentIndex: Int { currentID ?? 0 }
 
@@ -401,6 +471,9 @@ struct DeepDiveView: View {
         case .release(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
         case .count(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
         case .sujud(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
+        case .extinguish(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
+        case .door(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
+        case .salawat(let tag, _, _, _, _, _, _, _): return (tag(lang), dive.acts.count)
         case .dua:                      return ("The Close", dive.acts.count)
         case .closing:                  return ("The Close", dive.acts.count)
         default:
@@ -497,6 +570,12 @@ struct DeepDiveView: View {
             countPage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
         case let .sujud(_, prompt, subline, arabic, translation, reference, note, nextLabel):
             sujudPage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
+        case let .extinguish(_, prompt, subline, arabic, translation, reference, note, nextLabel):
+            extinguishPage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
+        case let .door(_, prompt, subline, arabic, translation, reference, note, nextLabel):
+            doorPage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
+        case let .salawat(_, prompt, subline, arabic, translation, reference, note, nextLabel):
+            salawatPage(prompt(lang), subline(lang), arabic, translation(lang), reference, note(lang), nextLabel(lang), show)
         case let .dua(tag, intro, arabic, translation, source, note, close):
             duaPage(tag(lang), intro(lang), arabic, translation(lang), source(lang), note(lang), close(lang), show)
         case let .closing(tag, titleAr, essence, line):
@@ -718,6 +797,12 @@ struct DeepDiveView: View {
                             .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                     }
                     Text(b.reference).font(.system(size: 11, weight: .semibold)).tracking(2).foregroundColor(DeepDivePalette.gold.opacity(0.8))
+                    VStack(spacing: 6) {
+                        VerseRecitationButton(surahNumber: b.surah, verseNumber: b.ayah)
+                        Text("Hear it recited").font(.system(size: 9.5, weight: .semibold)).tracking(1.5)
+                            .foregroundColor(DeepDivePalette.gold.opacity(0.7))
+                    }
+                    .padding(.top, 8)
                 }
                 .padding(18).frame(maxWidth: 380)
                 .background(RoundedRectangle(cornerRadius: 14).fill(Color.white.opacity(0.02)))
@@ -1196,6 +1281,283 @@ struct DeepDiveView: View {
         }
     }
 
+    // MARK: The extinguish (Ikhlas)
+
+    /// The interactive extinguishing. Idle: the prompt and a fixed scatter of audience-
+    /// lights. Each tap puts one out - soft haptic, the light dimming to a faint outline -
+    /// and the prompt fades as the field empties. When one light remains it stands subtly
+    /// larger; tapping it does not put it out - it flares (light haptic), the label turns to
+    /// "This one does not go out", and the verse takes over: everything perishes except His
+    /// Face. Subtraction to the one unremovable Watcher - the meaning-inverse of `count`.
+    private func extinguishPage(_ prompt: String, _ subline: String, _ arabic: String, _ translation: String, _ reference: String, _ note: String, _ nextLabel: String, _ show: Bool) -> some View {
+        let remaining = extinguishLights.count - extinguishedLights.count
+        let promptOpacity: Double = extinguishFlared ? 0.35
+            : 1.0 - 0.5 * (1.0 - Double(remaining) / Double(extinguishLights.count))
+        return VStack(spacing: 0) {
+            if extinguishDone {
+                Text(arabic).font(EmType.arabic(30 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
+                    .multilineTextAlignment(.center).lineSpacing(10 * s)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
+                    .foregroundColor(DeepDivePalette.gold.opacity(0.85)).padding(.top, 14)
+                hairline.padding(.vertical, 22)
+                Text(note).font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute)
+                    .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 320)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                bob(nextLabel, true, 0.4).padding(.top, 30)
+            } else {
+                Text("✦").font(.system(size: 20)).foregroundColor(DeepDivePalette.gold)
+                    .opacity(extinguishFlared ? 0.35 : 1)
+                    .reveal(show, reduce: reduceMotion)
+                Text(prompt).font(EmType.serif(34)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).padding(.top, 20)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .opacity(promptOpacity)
+                    .animation(reduceMotion ? nil : .easeInOut(duration: 0.4), value: extinguishedLights)
+                    .reveal(show, 0.15, reduce: reduceMotion)
+                if extinguishedLights.isEmpty {
+                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                        .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
+                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                        .reveal(show, 0.3, reduce: reduceMotion)
+                }
+                extinguishField
+                    .padding(.top, extinguishedLights.isEmpty ? 34 : 14)
+                    .reveal(show, 0.5, reduce: reduceMotion)
+                Text((extinguishFlared ? "This one does not go out" : "Tap each light - put it out").uppercased())
+                    .font(.system(size: extinguishFlared ? 12 : 10.5, weight: .semibold))
+                    .tracking(extinguishFlared ? 4 : 3)
+                    .foregroundColor(extinguishFlared ? DeepDivePalette.goldBright : DeepDivePalette.gold)
+                    .shadow(color: extinguishFlared ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .padding(.top, 18)
+                    .reveal(show, 0.6, reduce: reduceMotion)
+            }
+        }
+        .background {
+            if extinguishDone {
+                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                               center: .center, startRadius: 10, endRadius: 280)
+                    .allowsHitTesting(false)
+            }
+        }
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.45), value: extinguishFlared)
+        .onDisappear { extinguishTimer?.invalidate(); extinguishTimer = nil }
+    }
+
+    /// The fixed field of audience-lights. Tapping one puts it out; extinguished lights
+    /// remain as faint outlines and stop taking taps. The last light standing is drawn
+    /// larger, and tapping it flares rather than extinguishes.
+    private var extinguishField: some View {
+        GeometryReader { geo in
+            ZStack {
+                ForEach(extinguishLights) { light in
+                    extinguishDot(light)
+                        .position(x: light.x * geo.size.width, y: light.y * geo.size.height)
+                }
+            }
+        }
+        .frame(maxWidth: 300)
+        .frame(height: 190)
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.4), value: extinguishedLights)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.5), value: extinguishFlared)
+    }
+
+    @ViewBuilder
+    private func extinguishDot(_ light: ExtinguishLight) -> some View {
+        let isOut = extinguishedLights.contains(light.id)
+        let isLast = !isOut && (extinguishLights.count - extinguishedLights.count) == 1
+        let flared = isLast && extinguishFlared
+        ZStack {
+            if isOut {
+                Circle().stroke(DeepDivePalette.gold.opacity(0.16), lineWidth: 1)
+                    .frame(width: light.size + 3, height: light.size + 3)
+            } else {
+                Circle().fill(DeepDivePalette.goldBright)
+                    .frame(width: flared ? light.size * 2.6 : (isLast ? light.size * 1.5 : light.size),
+                           height: flared ? light.size * 2.6 : (isLast ? light.size * 1.5 : light.size))
+                    .shadow(color: DeepDivePalette.goldBright.opacity(flared ? 0.9 : (isLast ? 0.85 : 0.6)),
+                            radius: flared ? 26 : (isLast ? 16 : 10))
+            }
+        }
+        .frame(width: 40, height: 40)
+        .contentShape(Circle())
+        .allowsHitTesting(!isOut)
+        .onTapGesture { tapExtinguish(light.id) }
+    }
+
+    private func tapExtinguish(_ id: Int) {
+        guard !extinguishDone, !extinguishedLights.contains(id) else { return }
+        if extinguishLights.count - extinguishedLights.count > 1 {
+            extinguishedLights.insert(id)
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+        } else if !extinguishFlared {
+            extinguishFlared = true
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            scheduleExtinguishResolve()
+        } else {
+            resolveExtinguish()
+        }
+    }
+
+    /// After the last light flares, the verse resolves on its own (or on a second tap of it).
+    private func scheduleExtinguishResolve() {
+        extinguishTimer?.invalidate()
+        extinguishTimer = Timer.scheduledTimer(withTimeInterval: reduceMotion ? 1.0 : 1.5, repeats: false) { _ in
+            resolveExtinguish()
+        }
+    }
+
+    private func resolveExtinguish() {
+        guard !extinguishDone else { return }
+        extinguishTimer?.invalidate(); extinguishTimer = nil
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.6)) { extinguishDone = true }
+    }
+
+    // MARK: The door (Taqwa) - restraint; withholding is the gesture
+
+    /// Idle: the prompt, the subline, and a warm doorway of light resting at center - "Do not
+    /// touch it - let it pass." After a short reading pre-roll the opening begins to drift away;
+    /// the label turns to "Hold still - it is passing." Reaching for it (a tap on the field)
+    /// flashes "It opens again," returns the glow to center, and restarts the drift. Holding
+    /// still until it has passed resolves into 79:40-41.
+    private func doorPage(_ prompt: String, _ subline: String, _ arabic: String, _ translation: String, _ reference: String, _ note: String, _ nextLabel: String, _ show: Bool) -> some View {
+        VStack(spacing: 0) {
+            if doorDone {
+                Text(arabic).font(EmType.arabic(27 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
+                    .multilineTextAlignment(.center).lineSpacing(10 * s)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .shadow(color: DeepDivePalette.goldBright.opacity(0.4), radius: 22)
+                Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 330)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
+                    .foregroundColor(DeepDivePalette.gold.opacity(0.85)).padding(.top, 14)
+                hairline.padding(.vertical, 22)
+                Text(note).font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute)
+                    .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 310)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                bob(nextLabel, true, 0.4).padding(.top, 30)
+            } else {
+                Text("✦").font(.system(size: 20)).foregroundColor(DeepDivePalette.gold)
+                    .opacity(doorStarted ? 0.5 : 1)
+                    .reveal(show, reduce: reduceMotion)
+                Text(prompt).font(EmType.serif(33)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).padding(.top, 20)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .opacity(doorStarted || doorReached ? 0.4 : 1)
+                    .animation(reduceMotion ? nil : .easeInOut(duration: 0.5), value: doorStarted)
+                    .reveal(show, 0.15, reduce: reduceMotion)
+                if !doorStarted && !doorReached {
+                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                        .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
+                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                        .reveal(show, 0.3, reduce: reduceMotion)
+                }
+                doorField
+                    .padding(.top, (doorStarted || doorReached) ? 18 : 30)
+                    .reveal(show, 0.5, reduce: reduceMotion)
+                Text((doorReached ? "It opens again" : (doorStarted ? "Hold still - it is passing" : "Do not touch it - let it pass")).uppercased())
+                    .font(.system(size: doorStarted && !doorReached ? 12 : 10.5, weight: .semibold))
+                    .tracking(doorStarted && !doorReached ? 4 : 3)
+                    .foregroundColor(doorStarted && !doorReached ? DeepDivePalette.goldBright : DeepDivePalette.gold)
+                    .shadow(color: doorStarted && !doorReached ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .padding(.top, 18)
+                    .reveal(show, 0.6, reduce: reduceMotion)
+            }
+        }
+        .background {
+            if doorDone {
+                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                               center: .center, startRadius: 10, endRadius: 280)
+                    .allowsHitTesting(false)
+            }
+        }
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.4), value: doorReached)
+        .onChange(of: show) { _, newValue in if newValue { beginDoor() } }
+        .onAppear { if show { beginDoor() } }
+        .onDisappear { doorTimer?.invalidate(); doorTimer = nil }
+    }
+
+    /// The warm forbidden opening, positioned by `doorOffset` (0 center -> ~1.15 off the right
+    /// edge). The whole field is the "reach zone": a tap anywhere on it counts as reaching.
+    private var doorField: some View {
+        GeometryReader { geo in
+            let x = (geo.size.width / 2) + doorOffset * (geo.size.width * 0.62)
+            doorGlow
+                .opacity(doorReached ? 0.4 : 1)
+                .position(x: x, y: geo.size.height / 2)
+        }
+        .frame(maxWidth: 300)
+        .frame(height: 190)
+        .contentShape(Rectangle())
+        .onTapGesture { reachDoor() }
+    }
+
+    /// A doorway of warm light - deliberately the one warm (amber) element in an emerald/gold
+    /// dive, so the temptation reads as foreign to everything the descent has valued.
+    private var doorGlow: some View {
+        RoundedRectangle(cornerRadius: 44, style: .continuous)
+            .fill(LinearGradient(colors: [Color(red: 0.91, green: 0.77, blue: 0.55).opacity(0.55),
+                                          Color(red: 0.78, green: 0.47, blue: 0.23).opacity(0.24)],
+                                 startPoint: .top, endPoint: .bottom))
+            .frame(width: 78, height: 120)
+            .overlay(
+                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                    .fill(LinearGradient(colors: [Color(red: 1.0, green: 0.91, blue: 0.73).opacity(0.5), .clear],
+                                         startPoint: .top, endPoint: .bottom))
+                    .frame(width: 40, height: 86).offset(y: -6)
+            )
+            .shadow(color: Color(red: 0.89, green: 0.59, blue: 0.33).opacity(0.42), radius: 26)
+    }
+
+    /// Beat reached: schedule a short reading pre-roll (the idle instruction is visible), then drift.
+    private func beginDoor() {
+        guard !doorBegun, !doorDone else { return }
+        doorBegun = true
+        doorTimer?.invalidate()
+        doorTimer = Timer.scheduledTimer(withTimeInterval: reduceMotion ? 1.2 : 1.6, repeats: false) { _ in
+            startDoorDrift()
+        }
+    }
+
+    private func startDoorDrift() {
+        guard !doorDone else { return }
+        doorStarted = true
+        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+        withAnimation(reduceMotion ? nil : .easeIn(duration: doorDriftDuration)) { doorOffset = 1.15 }
+        doorTimer?.invalidate()
+        doorTimer = Timer.scheduledTimer(withTimeInterval: reduceMotion ? 3.0 : doorDriftDuration, repeats: false) { _ in
+            resolveDoor()
+        }
+    }
+
+    /// The reader reached for it (tapped the field): restraint broke. Gentle - no penalty. The
+    /// opening returns to center and begins again.
+    private func reachDoor() {
+        guard doorBegun, !doorDone, !doorReached else { return }
+        doorTimer?.invalidate()
+        doorReached = true
+        doorStarted = false
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.4)) { doorOffset = 0 }
+        doorTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
+            doorReached = false
+            startDoorDrift()
+        }
+    }
+
+    private func resolveDoor() {
+        guard !doorDone else { return }
+        doorTimer?.invalidate(); doorTimer = nil
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.6)) { doorDone = true }
+    }
+
     // MARK: The sujud (Salah)
 
     /// The interactive prostration. Idle: the prompt and a thin gold ring - the core of
@@ -1328,6 +1690,144 @@ struct DeepDiveView: View {
         withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.6)) { sujudDone = true }
     }
 
+    // MARK: The salawat (al-Kisa) - the gathering's answer; a count that completes
+
+    /// Idle: the prompt, the subline, and five dim lights on a low cloak-edge arc. Each
+    /// tap lights the next name in the order the cloak gathered them - the order is
+    /// enforced by the beat, not the finger. At four lit the label turns to "One name
+    /// remains"; the fifth tap joins the arc into a single glow and resolves into the
+    /// salawat formula.
+    private func salawatPage(_ prompt: String, _ subline: String, _ arabic: String, _ translation: String, _ reference: String, _ note: String, _ nextLabel: String, _ show: Bool) -> some View {
+        VStack(spacing: 0) {
+            if salawatDone {
+                salawatField.padding(.bottom, 22)
+                Text(arabic).font(EmType.arabic(26 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
+                    .multilineTextAlignment(.center).lineSpacing(10 * s)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                Text(reference.uppercased()).font(.system(size: 11, weight: .semibold)).tracking(2)
+                    .foregroundColor(DeepDivePalette.gold.opacity(0.85)).padding(.top, 14)
+                hairline.padding(.vertical, 22)
+                Text(note).font(.system(size: 14 * s)).foregroundColor(DeepDivePalette.mute)
+                    .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 320)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                bob(nextLabel, true, 0.4).padding(.top, 30)
+            } else {
+                Text("✦").font(.system(size: 20)).foregroundColor(DeepDivePalette.gold)
+                    .opacity(salawatLit > 0 ? 0.35 : 1)
+                    .reveal(show, reduce: reduceMotion)
+                Text(prompt).font(EmType.serif(34)).foregroundColor(DeepDivePalette.cream)
+                    .multilineTextAlignment(.center).padding(.top, 20)
+                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .opacity(salawatLit > 0 ? 0.4 : 1)
+                    .animation(reduceMotion ? nil : .easeInOut(duration: 0.4), value: salawatLit)
+                    .reveal(show, 0.15, reduce: reduceMotion)
+                if salawatLit == 0 {
+                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                        .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
+                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                        .reveal(show, 0.3, reduce: reduceMotion)
+                }
+                salawatField
+                    .padding(.top, salawatLit == 0 ? 30 : 14)
+                    .reveal(show, 0.5, reduce: reduceMotion)
+                Text((salawatLit == salawatLights.count - 1 ? "One name remains" : "Tap each light - greet them by name").uppercased())
+                    .font(.system(size: salawatLit == salawatLights.count - 1 ? 12 : 10.5, weight: .semibold))
+                    .tracking(salawatLit == salawatLights.count - 1 ? 4 : 3)
+                    .foregroundColor(salawatLit == salawatLights.count - 1 ? DeepDivePalette.goldBright : DeepDivePalette.gold)
+                    .shadow(color: salawatLit == salawatLights.count - 1 ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .padding(.top, 16)
+                    .reveal(show, 0.6, reduce: reduceMotion)
+            }
+        }
+        .background {
+            if salawatDone {
+                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                               center: .center, startRadius: 10, endRadius: 280)
+                    .allowsHitTesting(false)
+            }
+        }
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.45), value: salawatDone)
+    }
+
+    /// The arc of five. The whole field takes the tap - each tap lights the next light
+    /// in order, so the greeting always runs Muhammad ﷺ → Fatima, however the finger
+    /// lands. On resolve the joined arc glows beneath the five and the names withdraw.
+    private var salawatField: some View {
+        GeometryReader { geo in
+            ZStack {
+                if salawatDone {
+                    SalawatArc()
+                        .stroke(DeepDivePalette.goldBright.opacity(0.55), lineWidth: 1.5)
+                        .shadow(color: DeepDivePalette.goldBright.opacity(0.5), radius: 14)
+                }
+                ForEach(salawatLights) { light in
+                    salawatDot(light)
+                        .position(x: light.x * geo.size.width, y: light.y * geo.size.height + 24)
+                }
+            }
+        }
+        .frame(maxWidth: 310)
+        .frame(height: salawatDone ? 120 : 165)
+        .contentShape(Rectangle())
+        .onTapGesture { tapSalawat() }
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.4), value: salawatLit)
+    }
+
+    /// The joined cloak-edge curve drawn beneath the five on resolve.
+    private struct SalawatArc: Shape {
+        func path(in rect: CGRect) -> Path {
+            var p = Path()
+            p.move(to: CGPoint(x: rect.width * 0.08, y: rect.height * 0.24 + 24))
+            p.addQuadCurve(to: CGPoint(x: rect.width * 0.92, y: rect.height * 0.24 + 24),
+                           control: CGPoint(x: rect.width * 0.50, y: rect.height * 0.95 + 24))
+            return p
+        }
+    }
+
+    @ViewBuilder
+    private func salawatDot(_ light: SalawatLight) -> some View {
+        let isLit = light.id < salawatLit || salawatDone
+        VStack(spacing: 6) {
+            ZStack {
+                if isLit {
+                    Circle().fill(DeepDivePalette.goldBright)
+                        .frame(width: 12, height: 12)
+                        .shadow(color: DeepDivePalette.goldBright.opacity(0.8), radius: 12)
+                } else {
+                    Circle().stroke(DeepDivePalette.goldBright.opacity(0.25), lineWidth: 1)
+                        .background(Circle().fill(DeepDivePalette.goldBright.opacity(0.08)).clipShape(Circle()))
+                        .frame(width: 12, height: 12)
+                }
+            }
+            .frame(width: 18, height: 18)
+            if isLit && !salawatDone {
+                VStack(spacing: 1) {
+                    Text(light.ar).font(EmType.arabic(15)).foregroundColor(DeepDivePalette.goldBright)
+                    Text(light.en.uppercased()).font(.system(size: 8, weight: .semibold)).tracking(1.2)
+                        .foregroundColor(DeepDivePalette.mute)
+                }
+                .transition(reduceMotion ? .identity : .opacity)
+            }
+        }
+        .frame(width: 84, height: 64, alignment: .top)
+    }
+
+    private func tapSalawat() {
+        guard !salawatDone else { return }
+        if salawatLit < salawatLights.count - 1 {
+            salawatLit += 1
+            UIImpactFeedbackGenerator(style: salawatLit == salawatLights.count - 1 ? .light : .soft).impactOccurred()
+        } else {
+            salawatLit = salawatLights.count
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.6)) { salawatDone = true }
+        }
+    }
+
     private func duaPage(_ tag: String, _ intro: String, _ arabic: String, _ translation: String, _ source: String, _ note: String, _ close: String, _ show: Bool) -> some View {
         VStack(spacing: 0) {
             Text(tag.uppercased()).font(.system(size: 11, weight: .semibold)).tracking(3.4)
@@ -1395,6 +1895,12 @@ struct DeepDiveView: View {
                         sujudTimer?.invalidate(); sujudTimer = nil
                         sujudHolding = false; sujudAtBottom = false
                         sujudDone = false; sujudHoldStart = nil
+                        extinguishTimer?.invalidate(); extinguishTimer = nil
+                        extinguishedLights = []; extinguishFlared = false; extinguishDone = false
+                        doorTimer?.invalidate(); doorTimer = nil
+                        doorBegun = false; doorStarted = false; doorOffset = 0
+                        doorReached = false; doorDone = false
+                        salawatLit = 0; salawatDone = false
                         answeredRefrains = []
                     }
                     withAnimation(.easeInOut(duration: 0.6)) { currentID = 0 }

@@ -55,6 +55,67 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "deepDives-kisa",
+            sfSymbol: "moon.stars.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 19).date ?? .distantPast, // placeholder - set at ship time (must stay later than taqwa's so this card surfaces first)
+            destination: .deepDive("kisa"),
+            titleEN: "New Deep Dive: Under the Cloak",
+            titleUR: "نیا گہرا غوطہ: حدیث کساء",
+            titleAR: "غوصٌ عميقٌ جديد: حديث الكساء",
+            blurbEN: "The story of Hadith al-Kisa, told in Fatima al-Zahra's own voice - the arrivals one by one, heaven naming the five, and the promise to every gathering that retells it. Ends with a new salawat close: five lights, five names.",
+            blurbUR: "حدیث کساء کا واقعہ فاطمہ زہرا کی اپنی زبانی - یکے بعد دیگرے آمد، آسمان کی طرف سے پانچ ہستیوں کی شناخت، اور ہر اس محفل سے وعدہ جہاں یہ قصہ دہرایا جائے۔ اختتام ایک نئی صلوات کے ساتھ: پانچ روشنیاں، پانچ نام۔",
+            blurbAR: "قصة حديث الكساء بلسان فاطمة الزهراء - القدوم واحدًا بعد واحد، وتسمية الخمسة من السماء، والوعد لكل مجلس يُروى فيه هذا الحديث. ويُختم بصلوات جديدة: خمسة أنوار، خمسة أسماء.",
+            ctaEN: "Enter the gathering",
+            ctaUR: "محفل میں داخل ہوں",
+            ctaAR: "ادخل المجلس"
+        ),
+        WhatsNewItem(
+            id: "deepDives-taqwa",
+            sfSymbol: "shield",
+            // PLACEHOLDER ship date - adjust to the actual release at ship time.
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 18).date ?? .distantPast,
+            destination: .deepDive("taqwa"),
+            titleEN: "New Deep Dive",
+            titleUR: "نیا گہرا غوطہ",
+            titleAR: "غوصٌ عميقٌ جديد",
+            blurbEN: "Taqwa - God-consciousness. A descent through three guards, from the fear that halts the hand to the watch that keeps the heart for Him alone - summiting on al-Hurr, the free man of Karbala, and closing on a new beat where the hand that does not move is the whole of it.",
+            blurbUR: "تقویٰ - خدا آگاہی۔ تین پہروں میں اترتا ہوا ایک سفر، اُس خوف سے جو ہاتھ روک دے اُس نگہبانی تک جو دل کو صرف اُسی کے لیے رکھے - اختتام کربلا کے آزاد مرد حُر پر، اور ایک نئے مرحلے کے ساتھ جہاں نہ ہلنے والا ہاتھ ہی سب کچھ ہے۔",
+            blurbAR: "التقوى - وعيُ القلب بالله. نزولٌ عبر ثلاثة حُرّاس، من الخوف الذي يوقف اليد إلى المراقبة التي تحفظ القلب له وحده - يتوّج بقصة الحُرّ، حُرّ كربلاء، ويُختَم بمشهدٍ جديد تكون فيه اليدُ التي لا تتحرّك هي كلَّ شيء.",
+            ctaEN: "Begin the descent",
+            ctaUR: "نزول کا آغاز کریں",
+            ctaAR: "ابدأ النزول"
+        ),
+        WhatsNewItem(
+            id: "deepDives-ikhlas",
+            sfSymbol: "drop.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 17).date ?? .distantPast,
+            destination: .deepDive("ikhlas"),
+            titleEN: "New Deep Dive",
+            titleUR: "نیا گہرا غوطہ",
+            titleAR: "غوصٌ عميقٌ جديد",
+            blurbEN: "Ikhlas - The Unmixing. A descent through three purities, from the address every deed carries to the three hidden nights of Surah al-Insan - ending with one light that will not go out.",
+            blurbUR: "اخلاص - خالص کرنے کا سفر۔ تین پاکیزگیوں میں اترتا ہوا ایک عمیق سفر، ہر عمل کے پتے سے سورۂ انسان کی تین پوشیدہ راتوں تک - اختتام اُس ایک روشنی پر جو بجھتی نہیں۔",
+            blurbAR: "الإخلاص - التصفية. نزولٌ عبر ثلاث صفاءات، من العنوان الذي يحمله كل عمل إلى ليالي سورة الإنسان الثلاث الخفية - يُختَم بنورٍ واحدٍ لا ينطفئ.",
+            ctaEN: "Begin the descent",
+            ctaUR: "نزول کا آغاز کریں",
+            ctaAR: "ابدأ النزول"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-anfal",
+            sfSymbol: "hand.raised.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 16).date ?? .distantPast,
+            destination: .surahExperience("surah-anfal"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah al-Anfal - the surah of Badr, Islam's first battle, and the startling claim it makes about that victory: it was never yours. Watch the spoils, the courage, and even the handful of dust that broke the enemy handed back to God, cause by cause - 'you did not throw when you threw, but Allah threw' - until a battle turns into a lesson in whose hands you were in the whole time.",
+            blurbUR: "سورۂ انفال - بدر کی سورہ، اسلام کی پہلی جنگ، اور اُس فتح کے بارے میں ایک حیران کن دعویٰ: یہ کبھی تمہاری تھی ہی نہیں۔ دیکھیے کیسے مالِ غنیمت، شجاعت، اور وہ مٹھی بھر خاک تک جس نے دشمن کو شکست دی - سب کچھ ایک ایک کر کے خدا کے حوالے کر دیا جاتا ہے: 'تم نے نہیں پھینکا جب تم نے پھینکا، بلکہ اللہ نے پھینکا' - یہاں تک کہ ایک جنگ اِس سبق میں بدل جاتی ہے کہ تم ہمیشہ کس کے ہاتھ میں تھے۔",
+            blurbAR: "سورة الأنفال - سورةُ بدر، أولى معارك الإسلام، والدعوى المذهلة التي تطرحها عن ذلك النصر: أنه لم يكن لك قط. انظر كيف تُردّ الغنائمُ والشجاعةُ وحتى الحفنةُ من التراب التي هزمت العدو - كلُّها إلى الله، واحدةً تلو الأخرى: 'وما رميتَ إذ رميتَ ولكنّ اللهَ رمى' - حتى تتحوّل المعركةُ إلى درسٍ في بيدِ مَن كنتَ طوال الوقت.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
             id: "surahExperience-araf",
             sfSymbol: "mountain.2",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 15).date ?? .distantPast,

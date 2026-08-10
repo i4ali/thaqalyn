@@ -162,8 +162,8 @@ extension DeepDive {
             .narration(
                 act: 3,
                 tag: "The Grateful Servant",
-                source: "The Messenger of God ﷺ · narrated of Imam al-Baqir, al-Kafi",
-                body: "He stood in the night on the tips of his toes, until standing itself was a labor. He was asked: but you are already forgiven - everything past, everything to come - why this? He said: “Shall I not be a grateful servant?”",
+                source: "The Messenger of God ﷺ · narrated from Imam al-Baqir, al-Kafi",
+                body: "The Prophet ﷺ stood in the night prayer on the tips of his toes, until standing itself was a labor. He was asked: but you are already forgiven - everything past, everything to come - why this? He said: “Shall I not be a grateful servant?”",
                 reflection: "Forgiveness did not retire his worship - it changed what the worship was. No longer a plea; a thank-you. The most truthful tongue on earth was not enough for him. He thanked with his feet."
             ),
 
@@ -205,7 +205,7 @@ extension DeepDive {
             // 16. The Close - a prayer of the unfinished thanks (Sahifa 37)
             .dua(
                 tag: "A Prayer of the Unfinished Thanks",
-                intro: "After the heart, the tongue, the limbs - after Karbala - one prayer, in the voice of the fourth Imam: the confession that no thanks arrives at the end.",
+                intro: "After the heart, the tongue, the limbs - after Karbala - one prayer, in the voice of the fourth Imam: the confession that thanks never reaches its end.",
                 arabic: "اللَّهُمَّ إِنَّ أَحَدًا لَا يَبْلُغُ مِنْ شُكْرِكَ غَايَةً إِلَّا حَصَلَ عَلَيْهِ مِنْ إِحْسَانِكَ مَا يُلْزِمُهُ شُكْرًا",
                 translation: "“O God, no one ever reaches an end in thanking You - for with every thanks, more of Your goodness settles upon him, and binds him to thank You again.”",
                 source: "Imam Ali ibn al-Husayn · al-Sahifa al-Sajjadiyya, Dua 37",

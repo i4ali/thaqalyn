@@ -145,6 +145,19 @@ class PurchaseManager: ObservableObject {
         isLoading = false
     }
 
+    // MARK: - Cold Launch Entitlement Check
+
+    /// Re-derive premium from StoreKit at app launch. Without this, a paying
+    /// user who reinstalls (or stays in guest mode) reads as free until they
+    /// find Restore: the UserDefaults cache is wiped and Supabase only
+    /// refreshes on login. Reads local entitlements only - never presents an
+    /// App Store sign-in prompt (unlike `AppStore.sync()`).
+    func verifyEntitlementsAtLaunch() async {
+        guard await verifyPurchase() else { return }
+        PremiumManager.shared.activatePremiumFromStoreKit()
+        await syncPremiumStatusToSupabase()
+    }
+
     // MARK: - Transaction Verification
 
     func verifyPurchase() async -> Bool {

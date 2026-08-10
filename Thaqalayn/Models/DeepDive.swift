@@ -101,6 +101,33 @@ enum DeepDiveSection {
     /// earth-line while the screen draws close, and the verse resolves while still held.
     /// Lifting the finger afterward is the rising from sujud, into the closing dua.
     case sujud(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText, arabic: String, translation: LocalizedText, reference: String, note: LocalizedText, nextLabel: LocalizedText)
+    /// The interactive close of a dive built on sincerity (Ikhlas): a fixed scatter of
+    /// small lights - the audiences the reader has performed for. Tapping a light puts it
+    /// out; the last light cannot be put out - tapping it only makes it flare - and the
+    /// screen resolves into the verse: everything perishes except His Face. The gesture is
+    /// subtraction to the one unremovable Watcher, the meaning-inverse of `count`. Replaces
+    /// `reflectionPrompt` for such dives.
+    case extinguish(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText,
+                    arabic: String, translation: LocalizedText, reference: String,
+                    note: LocalizedText, nextLabel: LocalizedText)
+    /// The interactive close of a dive built on the guarding fear (Taqwa): a warm "forbidden"
+    /// opening rests, then drifts across the screen and away. The reader must WITHHOLD - not
+    /// touch it - and let it pass; holding still until it has passed resolves into the verse,
+    /// while reaching for it (a tap) gently resets the drift ("it opens again"). The one
+    /// interactive close in the series where acting is the failure - restraint itself is the
+    /// gesture, the meaning-inverse of every tap/press/hold beat. Replaces `reflectionPrompt`.
+    case door(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText,
+              arabic: String, translation: LocalizedText, reference: String,
+              note: LocalizedText, nextLabel: LocalizedText)
+    /// The interactive close of a dive built on the gathering's answer (al-Kisa): five dim
+    /// lights in a low arc - one for each soul beneath the cloak. Each tap lights the next
+    /// name in the order the cloak gathered them (Muhammad ﷺ, Hasan, Husayn, Ali, Fatima);
+    /// at five the arc joins into a single glow and resolves into the salawat formula. A
+    /// count that COMPLETES at exactly five - the meaning-inverse of `count` (blessings
+    /// cannot be counted; the beloved can). Replaces `reflectionPrompt` for such dives.
+    case salawat(tag: LocalizedText, prompt: LocalizedText, subline: LocalizedText,
+                 arabic: String, translation: LocalizedText, reference: String,
+                 note: LocalizedText, nextLabel: LocalizedText)
     /// `close` is the theme-specific final clause shown after "The descent ends." in the
     /// Amin block (e.g. "The certainty is yours to keep." for Yaqin) — per-dive so it never
     /// carries another dive's theme.
@@ -121,7 +148,7 @@ enum DeepDiveSection {
         case .response(let a, _, _, _, _, _):              return a
         case .climax(let a, _, _, _, _, _, _):             return a
         case .refrain(let a, _, _, _, _, _, _, _, _, _, _, _, _): return a
-        case .reflectionPrompt, .release, .count, .sujud, .dua, .closing: return 4
+        case .reflectionPrompt, .release, .count, .sujud, .extinguish, .door, .salawat, .dua, .closing: return 4
         }
     }
 }

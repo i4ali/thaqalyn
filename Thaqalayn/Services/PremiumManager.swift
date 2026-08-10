@@ -52,6 +52,18 @@ class PremiumManager: ObservableObject {
     func checkPremiumStatus() async {
         do {
             let fetchedStatus = try await SupabaseService.shared.getUserPremiumStatus()
+
+            // A verified App Store entitlement outranks a false account row
+            // (guest purchase, fresh account, earlier failed sync): keep
+            // premium and heal the row instead of downgrading the user.
+            if !fetchedStatus, await PurchaseManager.shared.verifyPurchase() {
+                isPremium = true
+                savePremiumStatus(true)
+                try? await SupabaseService.shared.updateUserPremiumStatus(isPremium: true)
+                print("✅ Premium kept via StoreKit entitlement; Supabase row updated")
+                return
+            }
+
             isPremium = fetchedStatus
             savePremiumStatus(fetchedStatus)
             print("✅ Premium status fetched and cached: \(fetchedStatus)")
@@ -60,6 +72,16 @@ class PremiumManager: ObservableObject {
             print("💾 Preserving cached premium status: \(isPremium)")
             // Don't default to false on error - keep cached value for offline access
         }
+    }
+
+    /// Grant premium from a verified App Store entitlement (cold launch or a
+    /// transaction update). StoreKit is authoritative for granting only -
+    /// never for revoking, since Supabase also carries comped accounts.
+    func activatePremiumFromStoreKit() {
+        guard !isPremium else { return }
+        isPremium = true
+        savePremiumStatus(true)
+        print("✅ Premium activated from StoreKit entitlement")
     }
 
     /// Clear premium status (called on logout)

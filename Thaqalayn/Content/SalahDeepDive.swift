@@ -89,7 +89,7 @@ extension DeepDive {
             .act(
                 act: 1,
                 connector: nil,
-                line: "It begins at the top. Every revelation came down to the Prophet ﷺ - once, he went up. What he carried back down from that night above the heavens was this - and the name held: the tradition still calls the prayer the believer's ascent.",
+                line: "It begins at the top. Every revelation came down to the Prophet ﷺ - once, he went up. What he carried back down from that night above the heavens was this prayer - and the name never left it: the tradition still calls the prayer the believer's ascent.",
                 bridge: nil
             ),
 
@@ -99,7 +99,7 @@ extension DeepDive {
                 tag: "The Night of Fifty",
                 source: "Imam Ali ibn al-Husayn · Man la yahduruh al-Faqih",
                 body: "On the night the Prophet ﷺ was taken up through the heavens, fifty prayers were written upon his people. He would not ask his Lord for less - it was Musa, whom he had passed among the heavens, who pressed him to go back and ask that the number be lightened. And when fifty had become five, the word came down: “They are five, worth fifty. The word is not changed with Me.”",
-                reflection: "This is its birth: not a burden imposed, but a mercy pleaded down - with the full reward left attached. Five, carrying fifty. The prayer arrived as a gift twice over."
+                reflection: "This is its birth: not a burden imposed, but a mercy pleaded down - with the full reward left attached. Five, carrying fifty: lightened in number, whole in reward. The prayer arrived as a gift twice over."
             ),
 
             // 06. Name I - What It Is For (Ta-Ha 20:14)
@@ -185,7 +185,7 @@ extension DeepDive {
                 tag: "The Last Sentence",
                 source: "Imam Ja'far al-Sadiq, in his final moments · al-Amali of al-Saduq",
                 body: "In his final moments, Imam Ja'far al-Sadiq, the sixth Imam, opened his eyes and said: gather to me every relative of mine. When they had assembled, he looked at them and said: “Our intercession will not reach one who takes the prayer lightly.”",
-                reflection: "A man spends his last sentence on the heaviest thing he knows. Intercession - the Imams' pleading before God for their own - was the inheritance of that room; and he tied it to the prayer, held at its full weight."
+                reflection: "A man spends his last sentence on the heaviest thing he knows. Intercession - the Imams' pleading before God for their own - was the inheritance of the family gathered in that room; and even for them, he tied it to one condition: the prayer, held at its full weight."
             ),
 
             // 14. Name III - The Prayer Under Arrows (Zuhr of Ashura)
@@ -195,8 +195,8 @@ extension DeepDive {
                 source: "Imam al-Husayn to Abu Thumama, noon of Ashura · Tarikh al-Tabari · al-Luhuf of Ibn Tawus",
                 arabic: "ذَكَرْتَ الصَّلَاةَ، جَعَلَكَ اللَّهُ مِنَ الْمُصَلِّينَ الذَّاكِرِينَ",
                 translation: "“You remembered the prayer - may God place you among the praying, the remembering.”",
-                body: "Noon on Ashura - the tenth of Muharram, on the plain of Karbala. Most of Imam Husayn's men already lie dead when Abu Thumama, one of his last companions, notices the sun at its height: I would love to meet my Lord having prayed this one last prayer. They ask for the fighting to pause while they pray; it does not pause. So the prayer is prayed under the arrows. Sa'id ibn Abdullah stands in front of the Imam, taking them with his own body, and falls at last with thirteen arrows in him: O God - convey my greeting to Your Prophet, and tell him what I met of the pain of these wounds.",
-                reflection: "God's own law would have excused a delay - a battlefield is reason enough. But the third name is the offering, and they held it up on time, at the price of a man. On that plain, nobody thought the prayer was a ritual. It was the thing being defended."
+                body: "Noon on Ashura - the tenth of Muharram, on the plain of Karbala. Most of Imam Husayn's men already lie dead when Abu Thumama, one of his last companions, notices the sun at its height: I would love to meet my Lord having prayed this one last prayer. They ask for the fighting to pause while they pray; it does not pause. So the prayer is prayed under the arrows. Sa'id ibn Abdullah stands in front of the Imam, taking the arrows with his own body, and falls at last with thirteen arrows in him: O God - convey my greeting to Your Prophet, and tell him what I met of the pain of these wounds.",
+                reflection: "God's own law would have excused a delay - a battlefield is reason enough. But the third name is the offering, and they offered it on time, at the price of a man. On that plain, nobody thought the prayer was a ritual. It was the thing being defended."
             ),
 
             // 15. The Last Rung (interactive sujud close)

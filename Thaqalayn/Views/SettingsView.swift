@@ -133,6 +133,9 @@ struct SettingsView: View {
                     // Settings content
                     ScrollView {
                         VStack(spacing: 24) {
+                            // Premium Section
+                            legacyPremiumSection
+
                             // Your Name Section
                             SettingsSection(title: "Your Name") {
                                 NameSettingRow()
@@ -499,6 +502,65 @@ struct SettingsView: View {
                 }
             }
             .darkScreenAura()
+        }
+    }
+
+    // MARK: - Legacy premium section
+
+    // Same road to the paywall as emeraldPremiumSection, in the legacy card
+    // idiom - premium chip, never a lock (house rule). Without this the Light
+    // theme has no Settings path to the paywall at all.
+    private var legacyPremiumSection: some View {
+        SettingsSection(title: "Premium") {
+            Button {
+                if !premiumManager.isPremium { showingPaywall = true }
+            } label: {
+                HStack(spacing: 13) {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("Thaqalayn Premium")
+                            .font(.system(size: 17, weight: .bold))
+                            .foregroundColor(themeManager.primaryText)
+                        Text(premiumManager.isPremium
+                             ? "Every dive, journey and layer is yours."
+                             : "Everything. Forever. Every dive, journey and layer.")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(themeManager.secondaryText)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
+                    }
+
+                    Spacer(minLength: 8)
+
+                    if premiumManager.isPremium {
+                        Text("ACTIVE")
+                            .font(.system(size: 10, weight: .heavy)).tracking(1.6)
+                            .foregroundColor(themeManager.accentColor)
+                            .padding(.horizontal, 10).padding(.vertical, 5)
+                            .background(Capsule().stroke(themeManager.accentColor.opacity(0.4), lineWidth: 1))
+                    } else {
+                        Text("PREMIUM")
+                            .font(.system(size: 10, weight: .heavy)).tracking(1.6)
+                            .foregroundColor(themeManager.accentColor)
+                            .padding(.horizontal, 10).padding(.vertical, 5)
+                            .background(Capsule().fill(themeManager.accentColorSoft))
+                            .overlay(Capsule().stroke(themeManager.accentColor.opacity(0.35), lineWidth: 1))
+                    }
+                }
+                .padding(16)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(LinearGradient(colors: [themeManager.accentColor.opacity(0.10),
+                                                      themeManager.accentColor.opacity(0.03)],
+                                             startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(themeManager.accentColor.opacity(0.34), lineWidth: 1)
+                        )
+                )
+            }
+            .buttonStyle(.plain)
+            .disabled(premiumManager.isPremium)
+            .fullScreenCover(isPresented: $showingPaywall) { PaywallView() }
         }
     }
 

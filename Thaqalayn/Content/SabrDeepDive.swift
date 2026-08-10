@@ -122,7 +122,7 @@ extension DeepDive {
                 arabic: "قَالَ يَا أَبَتِ افْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِي إِن شَاءَ اللَّهُ مِنَ الصَّابِرِينَ",
                 translation: "He said: “O my father, do as you are commanded. You will find me, if God wills, among the patient.”",
                 reference: "al-Saffat · 37 : 102",
-                reflection: "This is Isma'il - the son Ibrahim saw himself sacrificing in a dream that was God's command. He does not merely submit to the knife: he urges his father on, and names himself patient before the blade is even raised. This is the leap from sabr to rida: from “I will bear it” to “do as you are commanded.”"
+                reflection: "This is Isma'il - the son Ibrahim saw himself sacrificing, in a dream that was God's command. He does not merely submit to the knife: he urges his father on, and names himself patient before the blade is even raised. This is the leap from sabr to rida: from “I will bear it” to “do as you are commanded.”"
             ),
 
             // 09. Movement II - The Excellent Servant (Saad 38:44, Ayyub)
@@ -134,7 +134,7 @@ extension DeepDive {
                 arabic: "إِنَّا وَجَدْنَاهُ صَابِرًا ۚ نِّعْمَ الْعَبْدُ ۖ إِنَّهُ أَوَّابٌ",
                 translation: "“Indeed We found him patient - an excellent servant. Truly he turned ever back to Us.”",
                 reference: "Saad · 38 : 44",
-                reflection: "Stripped of his health, his wealth, his children, Ayyub carried his pain to God - and kept returning, and returning again: awwab, the verse's own word for him. The praise comes after the complaint. Rida is what turns loss into nearness."
+                reflection: "Stripped of his health, his wealth, his children, Ayyub carried his pain to God - and kept returning, and returning again: awwab, the verse's own word for him. The praise came after the complaint - pain carried to God does not break patience. Rida is what turns loss into nearness."
             ),
 
             // 10. Movement III - opening card with bridge verse (thread: ACCEPT -> BE AT PEACE)

@@ -3,11 +3,15 @@
 //  Thaqalayn
 //
 //  The segmented "Read & Tafsir | Journey" control attached under a surah's
-//  Quran-list card (browse + search), for surahs that have a built "Inside the
-//  Surah" experience. The Read tab pushes the reading view; the Journey tab
+//  Quran-list card (browse + search). For surahs with a built "Inside the
+//  Surah" experience, the Read tab pushes the reading view and the Journey tab
 //  opens the immersive dive (premium-gated). The Journey tab is alive - a
 //  breathing glow, a diagonal light-sweep, and embers rising behind the label -
 //  to signal an experience waiting behind the tap. No icon, no arrow.
+//
+//  Surahs without a built experience show the same control with the Journey tab
+//  greyed out and marked SOON (comingSoon mode) - a quiet roadmap signal, per
+//  the app's coming-soon convention (never a lock).
 //
 //  Pure chrome: fixed sizes, no reading-scale. Theme-adaptive (Midnight Emerald
 //  + standard); the handoff's gold-on-dark palette is intentionally ignored in
@@ -27,13 +31,17 @@ struct JourneyModeToggle<ReadDestination: View>: View {
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
-    let descriptor: SurahExperienceDescriptor
+    /// The experience behind the Journey tab - nil in comingSoon mode.
+    let descriptor: SurahExperienceDescriptor?
     /// True when the experience is premium-gated for this user - surfaces a PREMIUM chip.
     let locked: Bool
     /// The reading view for this surah; the Read tab pushes it.
     @ViewBuilder var readDestination: () -> ReadDestination
     /// Fired when the Journey tab is tapped (the caller runs the premium check).
     let onJourney: () -> Void
+    /// True when this surah has no built experience yet: the Journey tab renders
+    /// greyed out with a SOON marker and does not respond to taps.
+    var comingSoon = false
     /// False when the row draws a single combined border around card + toggle,
     /// so this region must not stroke its own (seam-creating) outline.
     var showsOuterBorder = true
@@ -56,7 +64,11 @@ struct JourneyModeToggle<ReadDestination: View>: View {
             // Segmented track (recessed) holding the two equal-width tabs.
             HStack(spacing: 8) {
                 readTab
-                journeyTab
+                if comingSoon {
+                    journeySoonTab
+                } else {
+                    journeyTab
+                }
             }
             .padding(6)
             .background(
@@ -110,6 +122,36 @@ struct JourneyModeToggle<ReadDestination: View>: View {
                                glowColor: tm.accentColor)
         }
         .buttonStyle(EmPressStyle())
+    }
+
+    // MARK: Journey tab, coming-soon variant (inert - greyed with a SOON marker)
+
+    /// The greyed-out Journey slot for surahs whose experience is not built yet.
+    /// Same geometry as the live tab, none of its life: muted text, a quiet SOON
+    /// capsule, no action. Matches DeepDiveCard's coming-soon treatment.
+    private var journeySoonTab: some View {
+        HStack(spacing: 6) {
+            Text(JourneyStrings.journey(lang))
+                .font(.system(size: 14, weight: .medium))
+                .lineLimit(1).minimumScaleFactor(0.8)
+            Text(JourneyStrings.soon(lang))
+                .font(.system(size: 8, weight: .heavy)).tracking(1.2)
+                .padding(.horizontal, 6).padding(.vertical, 2)
+                .overlay(Capsule().stroke(tm.strokeColor, lineWidth: 1))
+        }
+        .foregroundColor(tm.tertiaryText)
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 13)
+        .background(
+            RoundedRectangle(cornerRadius: 11, style: .continuous)
+                .fill(tm.glassSurface)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 11, style: .continuous)
+                .stroke(tm.strokeColor, lineWidth: 1)
+        )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(JourneyStrings.journey(lang)), \(JourneyStrings.comingSoon(lang))")
     }
 
     /// "PREMIUM" chip in the app's accent-chip treatment - never a lock glyph.
@@ -265,6 +307,22 @@ private struct RisingEmber: View {
                 locked: true,
                 readDestination: { Text("Reading view") },
                 onJourney: {}
+            )
+        }
+        .padding()
+    }
+}
+
+#Preview("Coming soon") {
+    ZStack {
+        Color.black.ignoresSafeArea()
+        VStack(spacing: 0) {
+            JourneyModeToggle(
+                descriptor: nil,
+                locked: false,
+                readDestination: { Text("Reading view") },
+                onJourney: {},
+                comingSoon: true
             )
         }
         .padding()
