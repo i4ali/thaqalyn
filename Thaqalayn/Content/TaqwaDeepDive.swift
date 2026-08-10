@@ -104,7 +104,7 @@ extension DeepDive {
                 act: 1,
                 tag: "The Open Door",
                 source: "Imam Ja'far al-Sadiq · al-Kafi, the chapter of obedience and taqwa",
-                body: "A little deed with taqwa, said Imam al-Sadiq, is worth more than a great deal without it. Picture two men. One keeps an open, generous house - yet when a door to the forbidden swings open before him, he walks through. The other has none of that giving - but when the same door opens, he will not step through it.",
+                body: "A little deed with taqwa, said Imam al-Sadiq, is worth more than many deeds without it. Picture two men. One keeps an open, generous house - yet when a door to the forbidden swings open before him, he walks through. The other has none of that giving - but when the same door opens, he will not step through it.",
                 reflection: "The first man's good is real, and still it drains away: one unguarded door empties the house behind it. Taqwa is not the size of what you do. It is what you refuse to do when the door swings open and no one alive would know."
             ),
 
