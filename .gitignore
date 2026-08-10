@@ -177,3 +177,24 @@ video_output/
 # Urdu ASO screenshots: keep the 6 final PNGs, ignore intermediates
 /AppStore_Screenshots/ASO/iphone-ur/assets/
 /AppStore_Screenshots/ASO/iphone-ur/captures/
+
+# ── Cleanup 2026-08-10: throwaway working dirs / scratch / PII at root ──
+
+# Local art-working directory (~1.7 GB source art; the app ships from Assets.xcassets)
+/assets/
+
+# Throwaway design mockups (HTML/PNG scratch)
+/mockups/
+
+# One-off Kling image-to-video report
+/kling/
+
+# Archived video-creator skill working copy
+/july1-26-shia-event-video-creator-old/
+
+# User email export (PII - never commit)
+/emailedusers.csv
+
+# Loose screenshots / temp images at repo root
+/temp.png
+/Screenshot*.png
