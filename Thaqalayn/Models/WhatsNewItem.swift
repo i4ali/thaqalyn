@@ -55,6 +55,81 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "surahExperience-rad",
+            sfSymbol: "cloud.bolt.rain",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 24).date ?? .distantPast, // placeholder - set at ship time (later than ibrahim's so this card surfaces first)
+            destination: .surahExperience("surah-rad"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah al-Ra'd - the surah named for thunder, answering the oldest demand: if God is real, why no sign? Descend through the sky that was praising all along, the flood whose glittering foam vanishes while the water stays, and the verse where hearts finally find rest - down to a final verse that waited forty-three verses to say a name.",
+            blurbUR: "سورۂ رعد - گرج کے نام والی سورہ، جو سب سے پرانے مطالبے کا جواب دیتی ہے: اگر خدا سچ ہے تو کوئی نشانی کیوں نہیں؟ اُس آسمان سے اتریے جو ہمیشہ سے حمد میں تھا، اُس سیلاب سے گزریے جس کی چمکتی جھاگ مٹ جاتی ہے اور پانی باقی رہتا ہے، اور اُس آیت تک پہنچیے جہاں دلوں کو قرار ملتا ہے - یہاں تک کہ وہ آخری آیت آ جائے جو تینتالیس آیتوں سے ایک نام لینے کی منتظر تھی۔",
+            blurbAR: "سورة الرعد - سورةٌ سُمّيت باسم صوتٍ في السماء، تجيب أقدم مطلبٍ في الأرض: إن كان الله حقاً فأين الآية؟ انزل عبر السماء التي كانت تسبّح منذ البدء، والسيلِ الذي يذهب زبدُه اللامع ويبقى ماؤه، والآيةِ التي تطمئنّ بها القلوب - وصولاً إلى آيةٍ أخيرة انتظرت ثلاثاً وأربعين آية لتنطق باسم.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-ibrahim",
+            sfSymbol: "tree",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 23).date ?? .distantPast, // placeholder - set at ship time (later than hud's so this card surfaces first)
+            destination: .surahExperience("surah-ibrahim"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah Ibrahim - the surah that weighs words. Descend through God's oath-bound promise, the sermon in which Satan confesses his empire was only an invitation, and the parable of the two trees - down to an old man in a barren valley, planting a handful of sentences in dead ground, and the count of what they became.",
+            blurbUR: "سورۂ ابراہیم - وہ سورہ جو لفظوں کو تولتی ہے۔ خدا کے قسم سے بندھے وعدے سے اتریے، اُس خطبے سے گزریے جس میں شیطان اقرار کرتا ہے کہ اس کی ساری سلطنت محض ایک دعوت تھی، اور دو درختوں کی مثال سے - یہاں تک کہ بنجر وادی میں کھڑے اُس بوڑھے تک پہنچیے جو مردہ زمین میں چند جملے بو رہا ہے، اور دیکھیے کہ وہ جملے کیا بن گئے۔",
+            blurbAR: "سورة إبراهيم - السورة التي تزن الكلمات. انزل عبر وعد الله الموثَّق بالقسَم، والخطبةِ التي يعترف فيها الشيطان بأن مملكته كلها لم تكن إلا دعوة، ومثَلِ الشجرتين - وصولاً إلى شيخٍ في وادٍ قاحل يغرس جملاتٍ معدودة في أرضٍ موات، ثم انظر ماذا صارت.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-hud",
+            sfSymbol: "figure.stand",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 22).date ?? .distantPast, // placeholder - set at ship time (later than yunus's so this card surfaces first)
+            destination: .surahExperience("surah-hud"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah Hud - when the Prophet ﷺ was asked why gray had come to his hair so early, he answered with the name of this surah. Descend through the ark built through years of laughter, the wave that came between a father and his son, and the lone man who dared a whole nation to do its worst - down to the one-word command that carried all that weight, and the quiet verse that reveals what the surah was really sent to do to a heart.",
+            blurbUR: "سورۂ ہود - جب نبی کریم ﷺ سے پوچھا گیا کہ اتنی جلدی بال کیوں سفید ہو گئے تو آپ نے جواب میں اِسی سورہ کا نام لیا۔ اُس کشتی سے اتریے جو برسوں کی ہنسی کے بیچ بنتی رہی، اُس موج سے گزریے جو باپ اور بیٹے کے درمیان حائل ہو گئی، اور اُس تنہا مرد تک پہنچیے جس نے پوری قوم کو للکارا - یہاں تک کہ ایک لفظ کا وہ حکم آ جائے جس نے یہ سارا بوجھ اٹھایا، اور وہ خاموش آیت جو بتاتی ہے کہ یہ سورہ دل کے ساتھ اصل میں کیا کرنے آئی تھی۔",
+            blurbAR: "سورة هود - حين سُئل النبي ﷺ عن الشيب الذي أسرع إليه، أجاب باسم هذه السورة. انزل عبر السفينة التي بُنيت وسط سنين من السخرية، والموج الذي حال بين الأب وابنه، والرجل الوحيد الذي تحدّى أمة بأكملها - وصولاً إلى الأمر المكوّن من كلمة واحدة الذي حمل كل ذلك الثقل، والآية الهادئة التي تكشف ما جاءت هذه السورة لتفعله بالقلب حقاً.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-yunus",
+            sfSymbol: "water.waves",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 21).date ?? .distantPast, // placeholder - set at ship time (later than tawba's so this card surfaces first)
+            destination: .surahExperience("surah-yunus"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah Yunus - one hundred and nine verses, named for a prophet who appears in just one of them. Descend through the storm-prayer that evaporates on the shore, the standing invitation to the Home of Peace, and the yes that came one wave too late - and learn why this surah, of all surahs, carries the name of Yunus.",
+            blurbUR: "سورۂ یونس - ایک سو نو آیتیں، جن کا نام اُس نبی پر ہے جو صرف ایک آیت میں آتے ہیں۔ اُس طوفانی دعا سے اتریے جو ساحل پر پہنچتے ہی اڑ جاتی ہے، دارالسلام کی کھلی دعوت سے گزریے، اور اُس اقرار تک پہنچیے جو ایک موج کی دیر سے کیا گیا - اور جانیے کہ تمام سورتوں میں سے اِس سورہ کا نام یونس کیوں ہے۔",
+            blurbAR: "سورة يونس - مئةٌ وتسعُ آيات، سُمّيت باسم نبيٍّ لا يَرِد إلا في آيةٍ واحدة. انزل عبر دعاء العاصفة الذي يتبخّر على الشاطئ، والدعوةِ القائمة إلى دار السلام، والإيمانِ الذي جاء متأخراً موجةً واحدة - واعرف لماذا حملت هذه السورة، من بين السور كلِّها، اسمَ يونس.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-tawba",
+            sfSymbol: "door.left.hand.open",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 20).date ?? .distantPast, // placeholder - set at ship time (later than kisa's so this card surfaces first)
+            destination: .surahExperience("surah-tawba"),
+            titleEN: "Inside the Surah",
+            titleUR: "سورہ کے اندر",
+            titleAR: "في قلب السورة",
+            blurbEN: "Surah al-Tawba - the only surah with no Bismillah, and the one named for God's own turning back. Walk from Bara'a to al-Tawba - an ultimatum, a battlefield, a mosque pillar, fifty days of silence - and watch a door open in every wall the surah builds, until you find where the missing mercy went.",
+            blurbUR: "سورۂ توبہ - قرآن کی واحد سورہ جس کے آغاز میں بسم اللہ نہیں، اور وہی سورہ جس کا نام خدا کے اپنے پلٹنے پر ہے۔ براءت سے توبہ تک چلیے - ایک اعلان، ایک میدانِ جنگ، مسجد کا ایک ستون، اور پچاس دن کی خاموشی - اور دیکھیے کہ یہ سورہ جو بھی دیوار اٹھاتی ہے اُس میں ایک دروازہ کھلتا ہے، یہاں تک کہ معلوم ہو جائے کہ گم شدہ رحمت کہاں گئی۔",
+            blurbAR: "سورة التوبة - السورة الوحيدة بلا بسملة، وهي التي تحمل اسم عودته هو. سِر من البراءة إلى التوبة - إنذارٌ، وساحةُ معركة، وساريةُ مسجد، وخمسون يوماً من الصمت - وانظر كيف يُفتَح بابٌ في كل جدارٍ تبنيه السورة، حتى تعرف أين ذهبت الرحمة الغائبة.",
+            ctaEN: "Begin the journey",
+            ctaUR: "سفر شروع کریں",
+            ctaAR: "ابدأ الرحلة"
+        ),
+        WhatsNewItem(
             id: "deepDives-kisa",
             sfSymbol: "moon.stars.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 19).date ?? .distantPast, // placeholder - set at ship time (must stay later than taqwa's so this card surfaces first)

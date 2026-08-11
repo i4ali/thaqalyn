@@ -130,6 +130,42 @@ struct SurahExperienceDescriptor: Identifiable {
             coverAssetName: "AnfalCover"
         ),
         SurahExperienceDescriptor(
+            id: "surah-tawba",
+            surahNumber: 9,
+            title: LocalizedText(en: "Surah al-Tawba", ur: "سورۂ توبہ", ar: "سورة التوبة"),
+            titleAr: "التَّوْبَة",
+            sfSymbol: "door.left.hand.open",
+            subtitle: LocalizedText(en: "The Repentance - the surah with no Bismillah, named for the door God holds open",
+                                    ur: "التوبہ - بسم اللہ کے بغیر واحد سورہ، جس کا نام اُس دروازے پر ہے جو خدا کھلا رکھتا ہے",
+                                    ar: "التوبة - السورة بلا بسملة، سُمّيت بالباب الذي يُبقيه الله مفتوحاً"),
+            available: true, dive: .surahTawba,
+            coverAssetName: "TawbaCover"
+        ),
+        SurahExperienceDescriptor(
+            id: "surah-yunus",
+            surahNumber: 10,
+            title: LocalizedText(en: "Surah Yunus", ur: "سورۂ یونس", ar: "سورة يونس"),
+            titleAr: "يُونُس",
+            sfSymbol: "water.waves",
+            subtitle: LocalizedText(en: "Jonah - how late is too late to turn back to God?",
+                                    ur: "یونس - واپسی کا دروازہ کب تک کھلا ہے؟",
+                                    ar: "يونس - إلى متى يبقى بابُ العودة مفتوحاً؟"),
+            available: true, dive: .surahYunus,
+            coverAssetName: "YunusCover"
+        ),
+        SurahExperienceDescriptor(
+            id: "surah-hud",
+            surahNumber: 11,
+            title: LocalizedText(en: "Surah Hud", ur: "سورۂ ہود", ar: "سورة هود"),
+            titleAr: "هُود",
+            sfSymbol: "figure.stand",
+            subtitle: LocalizedText(en: "Hud - the surah the Prophet ﷺ said turned his hair gray",
+                                    ur: "ہود - وہ سورہ جس نے نبی ﷺ کے بال سفید کر دیے",
+                                    ar: "هود - السورة التي شيّبت النبي ﷺ"),
+            available: true, dive: .surahHud,
+            coverAssetName: "HudCover"
+        ),
+        SurahExperienceDescriptor(
             id: "surah-yusuf",
             surahNumber: 12,
             title: LocalizedText(en: "Surah Yusuf", ur: "سورۂ یوسف", ar: "سورة يوسف"),
@@ -140,6 +176,30 @@ struct SurahExperienceDescriptor: Identifiable {
                                     ar: "أحسن القصص - فقدٌ وصبرٌ ولقاء"),
             available: true, dive: .surahYusuf,
             coverAssetName: "YusufCover"
+        ),
+        SurahExperienceDescriptor(
+            id: "surah-rad",
+            surahNumber: 13,
+            title: LocalizedText(en: "Surah al-Ra'd", ur: "سورۂ رعد", ar: "سورة الرعد"),
+            titleAr: "الرَّعْد",
+            sfSymbol: "cloud.bolt.rain",
+            subtitle: LocalizedText(en: "The Thunder - where is the sign you have been asking for?",
+                                    ur: "رعد - وہ نشانی کہاں ہے جو تم مانگتے آئے ہو؟",
+                                    ar: "الرعد - أين الآية التي كنتم تطلبونها؟"),
+            available: true, dive: .surahRad,
+            coverAssetName: "RadCover"
+        ),
+        SurahExperienceDescriptor(
+            id: "surah-ibrahim",
+            surahNumber: 14,
+            title: LocalizedText(en: "Surah Ibrahim", ur: "سورۂ ابراہیم", ar: "سورة إبراهيم"),
+            titleAr: "إِبْرَاهِيم",
+            sfSymbol: "tree",
+            subtitle: LocalizedText(en: "Abraham - what one word planted in dead ground can become",
+                                    ur: "ابراہیم - بنجر زمین میں بویا گیا ایک لفظ کیا بن سکتا ہے",
+                                    ar: "إبراهيم - ماذا تصير كلمةٌ غُرست في أرضٍ موات"),
+            available: true, dive: .surahIbrahim,
+            coverAssetName: "IbrahimCover"
         ),
         SurahExperienceDescriptor(
             id: "surah-yasin",

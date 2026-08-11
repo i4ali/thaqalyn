@@ -87,6 +87,13 @@ sūrahs equally well fits none of them.
    Ṭabāṭabāʾī/al-Mīzān, layer 4 = Ahl al-Bayt narrations are the richest for this). Then do
    **targeted web research** only for the specific narrations, occasions of revelation, or
    al-Mīzān points you will actually use. Note every source as you go.
+   ⚠️ **The shipped tafsir_N.json layers are a DRAFTING AID, never verification.** They are
+   machine-generated: layer 2 over-labels points as al-Mīzān's (several are Ṭabrisī's, Ibn
+   ʿAbbās's, or invented), and layer 4 manufactures Imam attributions with no book citation
+   (the al-Ra'd audit found six such misattributions, including a nonexistent al-Ṣādiq
+   narration). Every named attribution ("al-Mīzān says…", "Imam X taught…") must be traced
+   to the primary source (al-Mīzān Arabic, Majmaʿ al-Bayān, al-Kāfī via thaqalayn.net, etc.)
+   at script stage - "VERIFIED (in-app tafsir)" is not a valid verification status.
 3. **Decide the spine.** What is this sūrah's single organizing idea, and its natural shape?
    For a long sūrah, choose a focused thematic slice and the handful of verses that carry it -
    do NOT attempt full coverage. Write down candidate verses (surah:ayah) you may quote.
