@@ -124,7 +124,16 @@ subagent waves of **max two**, each wave ending in a build gate:
 - Wave 1: engine changes if a new beat was earned (`DeepDive.swift` + `DeepDiveView.swift`
   are one atomic unit - the exhaustive switch will not compile between them).
 - Wave 2: the content file, transcribed **verbatim** from the design doc.
-- Wave 3: catalog flip + What's New entry (required for every dive).
+- Wave 3: catalog flip + What's New entry (required for every dive) + **the dive's 2-3 widget
+  essence lines** (REQUIRED - the widget build gate fails without them): run
+  `python3 scripts/make_reflection_batches.py --missing-only`, write the lines into
+  `scratch/reflection_batches/out_journeys_<id>.json`
+  (`{"journeys": {"<id>": {"lines": [{"en": "...", "source": "..." or null}]}}}`), merge with
+  `python3 scripts/build_widget_reflections.py`. Essence line = a complete reflective thought
+  from inside the dive (<= 90 chars, plain spelling, no em dash): prefer a narration the dive
+  itself quotes WITH its citation (source `"<speaker> - <book>"`, <= 48 chars), else the dive's
+  distilled takeaway (source null); no teasers, no questions. Voice bar: existing `journeys`
+  entries in `Thaqalayn/Data/widget_reflections.json`.
 Skip any code-quality-review stage; keep build + behavior-guardrail checks.
 
 ### Stage 4 - BUILD

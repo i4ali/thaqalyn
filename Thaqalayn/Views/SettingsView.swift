@@ -30,6 +30,7 @@ struct SettingsView: View {
     @State private var selectedTTSLanguage: CommentaryLanguage = .english
     @State private var showingTafsirSources = false
     @State private var showingMailCopiedAlert = false
+    @State private var showingWidgetExplainer = false
     
     var body: some View {
         Group {
@@ -62,6 +63,9 @@ struct SettingsView: View {
         }
         .sheet(isPresented: $showingTTSVoiceSelection) {
             TTSVoicePickerView(language: selectedTTSLanguage)
+        }
+        .sheet(isPresented: $showingWidgetExplainer) {
+            WidgetExplainerView()
         }
         .fullScreenCover(isPresented: $showingTafsirSources) {
             TafsirSourcesView()
@@ -246,6 +250,16 @@ struct SettingsView: View {
                                             }
                                         )
                                     )
+
+                                    // Daily Reflection home-screen widget
+                                    SettingsRow(
+                                        icon: "square.grid.2x2.fill",
+                                        title: "Daily Reflection Widget",
+                                        subtitle: "Verse, gems & prayer times on your Home Screen",
+                                        iconColor: .teal
+                                    ) {
+                                        showingWidgetExplainer = true
+                                    }
 
                                     // Show additional settings only if enabled
                                     if notificationManager.preferences.enabled {
@@ -780,6 +794,16 @@ struct SettingsView: View {
                         }
                     )
                 )
+
+                // Daily Reflection home-screen widget
+                SettingsRow(
+                    icon: "square.grid.2x2.fill",
+                    title: "Daily Reflection Widget",
+                    subtitle: "Verse, gems & prayer times on your Home Screen",
+                    iconColor: .teal
+                ) {
+                    showingWidgetExplainer = true
+                }
 
                 // Show additional settings only if enabled
                 if notificationManager.preferences.enabled {

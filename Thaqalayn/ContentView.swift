@@ -11,6 +11,8 @@ extension Notification.Name {
     static let showAuthentication = Notification.Name("showAuthentication")
     static let navigateToVerse = Notification.Name("NavigateToVerse")
     static let navigateToJourney = Notification.Name("NavigateToJourney")
+    static let navigateToSurahExperience = Notification.Name("NavigateToSurahExperience")
+    static let navigateToDeepDive = Notification.Name("NavigateToDeepDive")
 }
 
 struct ContentView: View {

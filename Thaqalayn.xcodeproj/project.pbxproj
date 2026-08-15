@@ -8,19 +8,81 @@
 
 /* Begin PBXBuildFile section */
 		73412EC52E42B89100AE42D0 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 73E0BC202E3D3ABB00E517DE /* Supabase */; };
+		AD4A20260000000000000001 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = AD4A20260000000000000004 /* Adhan */; };
+		AD4A20260000000000000002 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = AD4A20260000000000000005 /* Adhan */; };
+		CD19C69D302B97EB005B40C7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD19C69C302B97EB005B40C7 /* WidgetKit.framework */; };
+		CD19C69F302B97EB005B40C7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD19C69E302B97EB005B40C7 /* SwiftUI.framework */; };
+		CD19C6AE302B97EC005B40C7 /* ThaqalaynWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CD19C69A302B97EB005B40C7 /* ThaqalaynWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD19C6AC302B97EC005B40C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73E0BC072E3D3AB900E517DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD19C699302B97EB005B40C7;
+			remoteInfo = ThaqalaynWidgetsExtension;
+		};
+		CD19C6BC302B9826005B40C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73E0BC072E3D3AB900E517DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73E0BC0E2E3D3AB900E517DE;
+			remoteInfo = Thaqalayn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD19C6B3302B97EC005B40C7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CD19C6AE302B97EC005B40C7 /* ThaqalaynWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		73E0BC0F2E3D3AB900E517DE /* Thaqalayn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thaqalayn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD19C69A302B97EB005B40C7 /* ThaqalaynWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ThaqalaynWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD19C69C302B97EB005B40C7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CD19C69E302B97EB005B40C7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CD19C6B8302B9826005B40C7 /* ThaqalaynTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThaqalaynTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		73412EEE2E42B8BC00AE42D0 /* Exceptions for "Thaqalayn" folder in "Thaqalayn" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Data/salah_lines.json,
+				Data/widget_daily.json,
 				Info.plist,
 			);
 			target = 73E0BC0E2E3D3AB900E517DE /* Thaqalayn */;
+		};
+		CD19C6B2302B97EC005B40C7 /* Exceptions for "ThaqalaynWidgets" folder in "ThaqalaynWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CD19C699302B97EB005B40C7 /* ThaqalaynWidgetsExtension */;
+		};
+		CD19F9D7302B9AD6005B40C7 /* Exceptions for "Thaqalayn" folder in "ThaqalaynWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Data/daily_verses.json,
+				Data/salah_lines.json,
+				Data/widget_daily.json,
+				Shared/DailyVerseCore.swift,
+				Shared/PrayerTimesEngine.swift,
+				Shared/WidgetLocationStore.swift,
+				Shared/WidgetScheduleBuilder.swift,
+			);
+			target = CD19C699302B97EB005B40C7 /* ThaqalaynWidgetsExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,8 +91,22 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				73412EEE2E42B8BC00AE42D0 /* Exceptions for "Thaqalayn" folder in "Thaqalayn" target */,
+				CD19F9D7302B9AD6005B40C7 /* Exceptions for "Thaqalayn" folder in "ThaqalaynWidgetsExtension" target */,
 			);
 			path = Thaqalayn;
+			sourceTree = "<group>";
+		};
+		CD19C6A0302B97EB005B40C7 /* ThaqalaynWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CD19C6B2302B97EC005B40C7 /* Exceptions for "ThaqalaynWidgets" folder in "ThaqalaynWidgetsExtension" target */,
+			);
+			path = ThaqalaynWidgets;
+			sourceTree = "<group>";
+		};
+		CD19C6B9302B9826005B40C7 /* ThaqalaynTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ThaqalaynTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -41,6 +117,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				73412EC52E42B89100AE42D0 /* Supabase in Frameworks */,
+				AD4A20260000000000000001 /* Adhan in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD19C697302B97EB005B40C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD19C69F302B97EB005B40C7 /* SwiftUI.framework in Frameworks */,
+				CD19C69D302B97EB005B40C7 /* WidgetKit.framework in Frameworks */,
+				AD4A20260000000000000002 /* Adhan in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD19C6B5302B9826005B40C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				73E0BC112E3D3AB900E517DE /* Thaqalayn */,
+				CD19C6A0302B97EB005B40C7 /* ThaqalaynWidgets */,
+				CD19C6B9302B9826005B40C7 /* ThaqalaynTests */,
+				CD19C69B302B97EB005B40C7 /* Frameworks */,
 				73E0BC102E3D3AB900E517DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,8 +156,19 @@
 			isa = PBXGroup;
 			children = (
 				73E0BC0F2E3D3AB900E517DE /* Thaqalayn.app */,
+				CD19C69A302B97EB005B40C7 /* ThaqalaynWidgetsExtension.appex */,
+				CD19C6B8302B9826005B40C7 /* ThaqalaynTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CD19C69B302B97EB005B40C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD19C69C302B97EB005B40C7 /* WidgetKit.framework */,
+				CD19C69E302B97EB005B40C7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,10 +181,12 @@
 				73E0BC0B2E3D3AB900E517DE /* Sources */,
 				73E0BC0C2E3D3AB900E517DE /* Frameworks */,
 				73E0BC0D2E3D3AB900E517DE /* Resources */,
+				CD19C6B3302B97EC005B40C7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CD19C6AD302B97EC005B40C7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				73E0BC112E3D3AB900E517DE /* Thaqalayn */,
@@ -84,10 +194,58 @@
 			name = Thaqalayn;
 			packageProductDependencies = (
 				73E0BC202E3D3ABB00E517DE /* Supabase */,
+				AD4A20260000000000000004 /* Adhan */,
 			);
 			productName = Thaqalayn;
 			productReference = 73E0BC0F2E3D3AB900E517DE /* Thaqalayn.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CD19C699302B97EB005B40C7 /* ThaqalaynWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD19C6AF302B97EC005B40C7 /* Build configuration list for PBXNativeTarget "ThaqalaynWidgetsExtension" */;
+			buildPhases = (
+				AD4A20260000000000000007 /* Generate Widget Daily Content */,
+				CD19C696302B97EB005B40C7 /* Sources */,
+				CD19C697302B97EB005B40C7 /* Frameworks */,
+				CD19C698302B97EB005B40C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CD19C6A0302B97EB005B40C7 /* ThaqalaynWidgets */,
+			);
+			name = ThaqalaynWidgetsExtension;
+			packageProductDependencies = (
+				AD4A20260000000000000005 /* Adhan */,
+			);
+			productName = ThaqalaynWidgetsExtension;
+			productReference = CD19C69A302B97EB005B40C7 /* ThaqalaynWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		CD19C6B7302B9826005B40C7 /* ThaqalaynTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD19C6BE302B9826005B40C7 /* Build configuration list for PBXNativeTarget "ThaqalaynTests" */;
+			buildPhases = (
+				CD19C6B4302B9826005B40C7 /* Sources */,
+				CD19C6B5302B9826005B40C7 /* Frameworks */,
+				CD19C6B6302B9826005B40C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD19C6BD302B9826005B40C7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CD19C6B9302B9826005B40C7 /* ThaqalaynTests */,
+			);
+			name = ThaqalaynTests;
+			packageProductDependencies = (
+			);
+			productName = ThaqalaynTests;
+			productReference = CD19C6B8302B9826005B40C7 /* ThaqalaynTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,11 +254,18 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					73E0BC0E2E3D3AB900E517DE = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					CD19C699302B97EB005B40C7 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					CD19C6B7302B9826005B40C7 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = 73E0BC0E2E3D3AB900E517DE;
 					};
 				};
 			};
@@ -115,6 +280,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				73E0BC212E3D3ABB00E517DE /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				AD4A20260000000000000003 /* XCRemoteSwiftPackageReference "adhan-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 73E0BC102E3D3AB900E517DE /* Products */;
@@ -122,6 +288,8 @@
 			projectRoot = "";
 			targets = (
 				73E0BC0E2E3D3AB900E517DE /* Thaqalayn */,
+				CD19C699302B97EB005B40C7 /* ThaqalaynWidgetsExtension */,
+				CD19C6B7302B9826005B40C7 /* ThaqalaynTests */,
 			);
 		};
 /* End PBXProject section */
@@ -134,7 +302,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD19C698302B97EB005B40C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD19C6B6302B9826005B40C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AD4A20260000000000000007 /* Generate Widget Daily Content */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Widget Daily Content";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Re-hydrate widget_daily.json from the catalogs, tafsir and daily pool on\n# every build, so new journeys and deep dives reach the widget automatically.\n# --require-full: a new journey/dive/verse WITHOUT authored widget reflections\n# fails the build loudly (delta workflow: make_reflection_batches.py --missing-only).\ncd \"$SRCROOT\"\n/usr/bin/python3 scripts/generate_widget_daily.py --require-full\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		73E0BC0B2E3D3AB900E517DE /* Sources */ = {
@@ -144,7 +348,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD19C696302B97EB005B40C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD19C6B4302B9826005B40C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD19C6AD302B97EC005B40C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD19C699302B97EB005B40C7 /* ThaqalaynWidgetsExtension */;
+			targetProxy = CD19C6AC302B97EC005B40C7 /* PBXContainerItemProxy */;
+		};
+		CD19C6BD302B9826005B40C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73E0BC0E2E3D3AB900E517DE /* Thaqalayn */;
+			targetProxy = CD19C6BC302B9826005B40C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		73E0BC1B2E3D3ABB00E517DE /* Debug */ = {
@@ -274,7 +505,7 @@
 				CODE_SIGN_ENTITLEMENTS = Thaqalayn/Thaqalayn.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 88;
+				CURRENT_PROJECT_VERSION = 94;
 				DEVELOPMENT_ASSET_PATHS = "\"Thaqalayn/Preview Content\"";
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_PREVIEWS = YES;
@@ -289,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 7.8;
+				MARKETING_VERSION = 7.9;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -307,7 +538,7 @@
 				CODE_SIGN_ENTITLEMENTS = Thaqalayn/Thaqalayn.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 88;
+				CURRENT_PROJECT_VERSION = 94;
 				DEVELOPMENT_ASSET_PATHS = "\"Thaqalayn/Preview Content\"";
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_PREVIEWS = YES;
@@ -322,13 +553,125 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 7.8;
+				MARKETING_VERSION = 7.9;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD19C6B0302B97EC005B40C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ThaqalaynWidgets/ThaqalaynWidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 94;
+				DEVELOPMENT_TEAM = 2J2GCJ25MK;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThaqalaynWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ThaqalaynWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 7.9;
+				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn.ThaqalaynWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD19C6B1302B97EC005B40C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ThaqalaynWidgets/ThaqalaynWidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 94;
+				DEVELOPMENT_TEAM = 2J2GCJ25MK;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThaqalaynWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ThaqalaynWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 7.9;
+				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn.ThaqalaynWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD19C6BF302B9826005B40C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2J2GCJ25MK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn.ThaqalaynTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thaqalayn.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thaqalayn";
+			};
+			name = Debug;
+		};
+		CD19C6C0302B9826005B40C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2J2GCJ25MK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn.ThaqalaynTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thaqalayn.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thaqalayn";
 			};
 			name = Release;
 		};
@@ -353,6 +696,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		CD19C6AF302B97EC005B40C7 /* Build configuration list for PBXNativeTarget "ThaqalaynWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD19C6B0302B97EC005B40C7 /* Debug */,
+				CD19C6B1302B97EC005B40C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD19C6BE302B9826005B40C7 /* Build configuration list for PBXNativeTarget "ThaqalaynTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD19C6BF302B9826005B40C7 /* Debug */,
+				CD19C6C0302B9826005B40C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -364,6 +725,14 @@
 				minimumVersion = 2.5.1;
 			};
 		};
+		AD4A20260000000000000003 /* XCRemoteSwiftPackageReference "adhan-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/batoulapps/adhan-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -371,6 +740,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 73E0BC212E3D3ABB00E517DE /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
+		};
+		AD4A20260000000000000004 /* Adhan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD4A20260000000000000003 /* XCRemoteSwiftPackageReference "adhan-swift" */;
+			productName = Adhan;
+		};
+		AD4A20260000000000000005 /* Adhan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD4A20260000000000000003 /* XCRemoteSwiftPackageReference "adhan-swift" */;
+			productName = Adhan;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -662,51 +662,12 @@ enum CommentaryLanguage: String, CaseIterable, Codable {
 
 // MARK: - Daily Verse
 
-/// The whole pool, decoded from daily_verses.json.
-struct DailyVersePool: Codable {
-    let version: Int
-    let themes: [String]
-    let verses: [DailyVerseEntry]
-    let sacredDays: [SacredDay]
-}
+// DailyVersePool, DailyVerseEntry, SacredDay, DailyVerseSelection and the
+// selection engine live in Shared/DailyVerseCore.swift (shared with the
+// ThaqalaynWidgets target). Only the app-side language helpers stay here,
+// because CommentaryLanguage is app-only.
 
-/// One curated reference. Carries no verse text - Arabic, translations and
-/// tafsir all hydrate from quran_data.json at read time.
-struct DailyVerseEntry: Codable, Identifiable {
-    let id: Int
-    let surah: Int
-    let verse: Int
-    /// Vocabulary key. Drives the no-two-days-running spacing rule.
-    let themeKey: String
-    let themeEn: String
-    let themeUr: String
-    let themeAr: String
-}
-
-/// A Hijri date that overrides the pool.
-struct SacredDay: Codable {
-    let month: Int   // Hijri month, 1-12
-    let day: Int     // Hijri day, 1-30
-    let surah: Int
-    let verse: Int
-    let occasionEn: String, occasionUr: String, occasionAr: String
-    let themeEn: String, themeUr: String, themeAr: String
-}
-
-/// What a surface renders. `occasion` is non-nil only on a sacred day.
-struct DailyVerseSelection: Equatable {
-    let surah: Int
-    let verse: Int
-    /// The vocabulary key, or nil on a sacred day (which is not drawn from the pool).
-    /// This is the axis the no-two-days-running rule is enforced on - NOT `themeEn`,
-    /// which is a per-verse display label and is near-unique, so comparing it would
-    /// silently pass even when the rule is broken.
-    let themeKey: String?
-    let themeEn: String, themeUr: String, themeAr: String
-    let occasionEn: String?, occasionUr: String?, occasionAr: String?
-
-    var id: String { "\(surah):\(verse)" }
-
+extension DailyVerseSelection {
     func theme(_ language: CommentaryLanguage) -> String {
         switch language {
         case .arabic: return themeAr
@@ -722,20 +683,6 @@ struct DailyVerseSelection: Equatable {
         case .urdu:   return occasionUr
         default:      return occasionEn
         }
-    }
-
-    init(entry: DailyVerseEntry) {
-        surah = entry.surah; verse = entry.verse
-        themeKey = entry.themeKey
-        themeEn = entry.themeEn; themeUr = entry.themeUr; themeAr = entry.themeAr
-        occasionEn = nil; occasionUr = nil; occasionAr = nil
-    }
-
-    init(sacred: SacredDay) {
-        surah = sacred.surah; verse = sacred.verse
-        themeKey = nil
-        themeEn = sacred.themeEn; themeUr = sacred.themeUr; themeAr = sacred.themeAr
-        occasionEn = sacred.occasionEn; occasionUr = sacred.occasionUr; occasionAr = sacred.occasionAr
     }
 }
 

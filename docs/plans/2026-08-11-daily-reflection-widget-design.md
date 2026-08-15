@@ -1,7 +1,9 @@
 # Daily Reflection Widget - Design
 
 Date: 2026-08-11
-Status: Approved
+Status: Approved. SUPERSEDED IN PART by `2026-08-11-widget-reflection-content-design.md`
+(content redesign: titles/teasers on non-prayer beats replaced by authored anchored
+reflections; beat structure, prayer beats, and deep links here remain accurate).
 Visual proposal: presented and iterated in-session (mockups of all widget states)
 
 ## Goal

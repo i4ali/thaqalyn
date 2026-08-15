@@ -15,6 +15,8 @@ enum WhatsNewDestination: Equatable {
     case deepDive(String)
     /// Open an "Inside the Surah" experience by id (lives in the Journey hub, tab 4).
     case surahExperience(String)
+    /// Present the Daily Reflection widget explainer sheet (setup + location capture).
+    case widgetExplainer
     // Reserved for later: case journey(String), case tab(Int)
 }
 
@@ -54,6 +56,21 @@ struct WhatsNewItem: Identifiable, Equatable {
 enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
+        WhatsNewItem(
+            id: "widget-daily-reflection",
+            sfSymbol: "square.grid.2x2.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 25).date ?? .distantPast, // placeholder - set at ship time (later than rad's so this card surfaces first)
+            destination: .widgetExplainer,
+            titleEN: "The Daily Reflection Widget",
+            titleUR: "ڈیلی ریفلیکشن ویجیٹ",
+            titleAR: "ودجة التأمل اليومي",
+            blurbEN: "One verse that unfolds through your day, right on your Home Screen: the verse in the morning, a hidden gem after midday, a doorway into a journey or deep dive, and the five prayer times on Shia (Ja'fari) timings. Add it once and let the day carry you.",
+            blurbUR: "ایک آیت جو دن بھر آپ کی ہوم اسکرین پر کھلتی رہتی ہے: صبح آیت، دوپہر کے بعد ایک موتی، پھر کسی سفر یا گہرے غوطے کا دروازہ، اور شیعہ (جعفری) اوقات کے مطابق پانچوں نمازوں کے اوقات۔ ایک بار شامل کریں اور دن کو ساتھ لے چلنے دیں۔",
+            blurbAR: "آية واحدة تتكشف على شاشتك الرئيسية على مدار اليوم: الآية في الصباح، وجوهرة بعد الظهر، وباب إلى رحلة أو غوص عميق، مع أوقات الصلوات الخمس وفق التوقيت الجعفري. أضفها مرة واحدة ودع اليوم يحملك.",
+            ctaEN: "Set it up",
+            ctaUR: "سیٹ اپ کریں",
+            ctaAR: "جهّزها الآن"
+        ),
         WhatsNewItem(
             id: "surahExperience-rad",
             sfSymbol: "cloud.bolt.rain",

@@ -9,6 +9,12 @@ source .venv/bin/activate
 ```
 ## Critical Development Guidelines
 
+### ⚠️ NEVER COMMIT WITHOUT ASKING FIRST (AskUserQuestion) ⚠️
+
+**IMPORTANT**: Never create a git commit without first confirming via the AskUserQuestion tool - even when the user invoked /commit. Before committing, present what will be staged (files, any pre-existing deletions, anything unrelated sitting in the working tree) and the proposed commit message summary, and commit only after the user approves. Never push unless explicitly asked.
+
+**Rationale**: The working tree often carries unrelated changes (cleanups, deletions, scratch files) from other sessions. A commit made without confirmation can bake those in or use the wrong scope.
+
 ### ⚠️ ALL UI TEXT MUST SCALE WITH THE READING TEXT-SIZE CONTROL ⚠️
 
 **IMPORTANT**: The app has a global reading text-size control (`ReadingSettingsManager.shared`, a `scale: CGFloat` multiplier set in Settings → Reading). Any **reading content** you add or edit — Qur'an Arabic, transliterations, translations, tafsir/commentary, narrations, descriptions, notes, story/answer/comfort body text — MUST scale with it.

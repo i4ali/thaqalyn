@@ -20,6 +20,7 @@ struct WhatsNewCard: View {
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var router = DeepLinkRouter.shared
+    @State private var showingWidgetExplainer = false
 
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
@@ -28,6 +29,9 @@ struct WhatsNewCard: View {
             if themeManager.isMidnightEmerald { emeraldCard } else { legacyCard }
         }
         .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+        .sheet(isPresented: $showingWidgetExplainer) {
+            WidgetExplainerView()
+        }
     }
 
     // MARK: Actions
@@ -47,6 +51,11 @@ struct WhatsNewCard: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
                 router.pendingSurahExperienceId = experienceId
                 selectedTab = 4
+            }
+        case .widgetExplainer:
+            // No tab switch; the explainer presents as a sheet over Today.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                showingWidgetExplainer = true
             }
         }
     }

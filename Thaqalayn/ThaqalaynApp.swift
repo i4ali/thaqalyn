@@ -8,6 +8,7 @@
 import SwiftUI
 import Supabase
 import UserNotifications
+import WidgetKit
 
 @main
 struct ThaqalaynApp: App {
@@ -31,6 +32,12 @@ struct ThaqalaynApp: App {
                     // until they discover Restore.
                     await PurchaseManager.shared.verifyEntitlementsAtLaunch()
                 }
+                .task {
+                    // Rebuild widget timelines once per launch so an app
+                    // update never leaves a widget serving yesterday's code
+                    // or data until the midnight reload.
+                    WidgetCenter.shared.reloadAllTimelines()
+                }
                 .onOpenURL { url in
                     handleDeepLink(url)
                 }
@@ -52,6 +59,31 @@ struct ThaqalaynApp: App {
         else if url.scheme == "thaqalayn" && url.host == "journey" {
             handleJourneyDeepLink(url)
         }
+        // Handle surah experience deep link (widget doorway beats)
+        else if url.scheme == "thaqalayn" && url.host == "experience" {
+            handleIdDeepLink(url, notification: .navigateToSurahExperience)
+        }
+        // Handle deep dive deep link (widget doorway beats)
+        else if url.scheme == "thaqalayn" && url.host == "deepdive" {
+            handleIdDeepLink(url, notification: .navigateToDeepDive)
+        }
+    }
+
+    /// Shared "?id=" parser for experience/deep-dive links.
+    private func handleIdDeepLink(_ url: URL, notification: Notification.Name) {
+        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+              let queryItems = components.queryItems else {
+            return
+        }
+
+        var linkedId: String?
+        for item in queryItems where item.name == "id" {
+            linkedId = item.value
+        }
+
+        guard let id = linkedId else { return }
+
+        NotificationCenter.default.post(name: notification, object: nil, userInfo: ["id": id])
     }
 
     private func handleJourneyDeepLink(_ url: URL) {

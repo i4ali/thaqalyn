@@ -156,6 +156,22 @@ struct MainTabView: View {
             DeepLinkRouter.shared.pendingJourneyId = journeyId
             selectedTab = 4
         }
+        .onReceive(NotificationCenter.default.publisher(for: .navigateToSurahExperience)) { notification in
+            guard let userInfo = notification.userInfo,
+                  let experienceId = userInfo["id"] as? String else { return }
+
+            // Widget doorway beat -> the Journey hub auto-opens the experience.
+            DeepLinkRouter.shared.pendingSurahExperienceId = experienceId
+            selectedTab = 4
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .navigateToDeepDive)) { notification in
+            guard let userInfo = notification.userInfo,
+                  let deepDiveId = userInfo["id"] as? String else { return }
+
+            // Widget doorway beat -> the Journey hub auto-opens the deep dive.
+            DeepLinkRouter.shared.pendingDeepDiveId = deepDiveId
+            selectedTab = 4
+        }
         #if DEBUG
         .onAppear { if ProcessInfo.processInfo.arguments.contains("-ddYaqin") { selectedTab = 4 } }
         #endif

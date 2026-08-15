@@ -135,6 +135,15 @@ Follow `references/technical-integration.md` exactly. In short:
    - fill the existing stub if one exists (Yāsīn/Raḥmān/Mulk are stubbed), else add an entry.
 4. Add a `WhatsNewItem` in `Thaqalayn/Models/WhatsNewItem.swift` (`destination: .surahExperience("surah-<id>")`).
 5. Wrap the `#Preview` in `#if DEBUG` (Release/Archive breaks otherwise).
+6. **Author the journey's 2-3 widget essence lines** (REQUIRED - the widget build gate fails
+   without them): run `python3 scripts/make_reflection_batches.py --missing-only`, write the
+   lines into a staging file (`scratch/reflection_batches/out_journeys_<id>.json`, shape
+   `{"journeys": {"<id>": {"lines": [{"en": "...", "source": "..." or null}]}}}`), then merge
+   with `python3 scripts/build_widget_reflections.py`. An essence line is a complete reflective
+   thought from inside the journey (<= 90 chars, plain spelling, no em dash): prefer a narration
+   the journey itself quotes WITH its citation (`"source": "<speaker> - <book>"`, <= 48 chars),
+   else the journey's distilled takeaway (`"source": null`). No teasers, no questions. The
+   voice bar is the existing `journeys` entries in `Thaqalayn/Data/widget_reflections.json`.
 
 ### Stage 4 - BUILD
 
