@@ -92,8 +92,9 @@ struct ContentView: View {
             // splash gets its full moment before onboarding slides up.
             pendingWelcome = true
             presentWelcomeIfReady()
-            // Brand-new install: suppress the What's New backlog (whole app is new to them).
-            WhatsNewManager.shared.seedAllAsSeenForFreshInstall()
+            // Brand-new install: suppress the What's New backlog but keep the newest
+            // announcement live, so day-one users still see the current headline card.
+            WhatsNewManager.shared.seedBacklogAsSeenForFreshInstall()
         }
 
         #if DEBUG

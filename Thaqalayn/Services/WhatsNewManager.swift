@@ -64,12 +64,17 @@ final class WhatsNewManager: ObservableObject {
     }
 
     /// Fresh-install suppression: a brand-new user is discovering the whole app, so mark
-    /// every currently-shipped announcement as already seen. Only features added in LATER
-    /// updates will surface for them. Idempotent. Call from the app's first-launch path.
-    func seedAllAsSeenForFreshInstall() {
+    /// the announcement BACKLOG as already seen, keeping only the newest entry live. That
+    /// way day-one users still get the current headline card without being walked through
+    /// the full history one dismissal at a time, and features added in LATER updates
+    /// surface for them normally. Idempotent. Call from the app's first-launch path.
+    func seedBacklogAsSeenForFreshInstall() {
         let d = UserDefaults.standard
         guard !d.bool(forKey: seededKey) else { return }
-        seenIds.formUnion(WhatsNewCatalog.all.map { $0.id })
+        let backlog = WhatsNewCatalog.all
+            .sorted { $0.releaseDate > $1.releaseDate }
+            .dropFirst()
+        seenIds.formUnion(backlog.map { $0.id })
         d.set(true, forKey: seededKey)
         persist()
         refresh()
