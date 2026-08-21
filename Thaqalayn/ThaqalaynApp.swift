@@ -21,6 +21,13 @@ struct ThaqalaynApp: App {
 
         // Apply native chrome (UITabBar / UINavigationBar) for current theme
         ChromeAppearance.apply(for: ThemeManager.shared.selectedTheme)
+
+        #if DEBUG
+        let mp3s = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: nil)?.count ?? -1
+        let direct = Bundle.main.url(forResource: "4940d83b01c9cba205c8", withExtension: "mp3") != nil
+        let healing = "اللّٰهُمَّ اشْفِنِي بِشِفَائِكَ وَدَاوِنِي بِدَوَائِكَ وَعَافِنِي مِنْ بَلَائِكَ"
+        NSLog("DUAAUDIODIAG mp3Count=\(mp3s) direct4940=\(direct) key=\(DuaAudioKey.key(for: healing)) recURLfound=\(DuaAudioKey.recordingURL(for: healing) != nil)")
+        #endif
     }
     
     var body: some Scene {

@@ -34,6 +34,8 @@ class TafsirReader: NSObject, ObservableObject {
 
     /// Start speaking the provided text in the specified language
     func speak(text: String, language: CommentaryLanguage = .english) {
+        // Mutual exclusion: a pre-recorded dua and TTS must never overlap.
+        DuaAudioPlayer.shared.stop()
         // Stop any current speech
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
