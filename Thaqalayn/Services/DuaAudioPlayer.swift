@@ -25,6 +25,7 @@ final class DuaAudioPlayer: NSObject, ObservableObject {
     /// Start playback of `url` (identified by `key`), or resume if it's the same key paused.
     func play(key: String, url: URL) {
         TafsirReader.shared.stop()                       // mutual exclusion with TTS
+        JourneyAudioPlayer.shared.stop()                 // mutual exclusion with journey narration
         if currentKey == key, let p = player, isPaused {
             p.play(); isPlaying = true; isPaused = false; return
         }

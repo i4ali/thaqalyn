@@ -111,7 +111,14 @@ struct JourneyHubView: View {
                              isAvailable: d.available, status: shelfStatus,
                              title: d.title(lang), description: d.subtitle(lang),
                              onTap: { handleDiveTap(d, fromShelf: true) },
-                             coverAssetName: d.coverAssetName)
+                             coverAssetName: d.coverAssetName,
+                             // Listen only for built dives, and only in English (audio is EN-only).
+                             onListen: (d.available && lang == .english && d.dive != nil) ? {
+                                 JourneyListenPresenter.shared.requestListen(
+                                     d.dive!, isFree: premiumManager.canAccessDeepDive(d.id),
+                                     paywall: PaywallContext(coverAssetName: d.coverAssetName,
+                                                             eyebrow: "\(JourneyStrings.deepDiveEyebrow(lang)) \u{00B7} \(d.title(lang))"))
+                             } : nil)
         }
     }
 
@@ -125,7 +132,14 @@ struct JourneyHubView: View {
                              isAvailable: d.available, status: shelfStatus,
                              title: d.title(lang), description: d.subtitle(lang),
                              onTap: { handleSurahExperienceTap(d, fromShelf: true) },
-                             coverAssetName: d.coverAssetName)
+                             coverAssetName: d.coverAssetName,
+                             // Listen only for built experiences, and only in English (audio is EN-only).
+                             onListen: (d.available && lang == .english && d.dive != nil) ? {
+                                 JourneyListenPresenter.shared.requestListen(
+                                     d.dive!, isFree: premiumManager.canAccessSurahExperience(d.id),
+                                     paywall: PaywallContext(coverAssetName: d.coverAssetName,
+                                                             eyebrow: "\(JourneyStrings.surahJourneyEyebrow(lang)) \u{00B7} \(d.title(lang))"))
+                             } : nil)
         }
     }
 

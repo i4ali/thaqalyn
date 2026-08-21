@@ -12,7 +12,15 @@ struct MainTabView: View {
     @StateObject private var deepLinkRouter = DeepLinkRouter.shared
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var tabBarVisibility = TabBarVisibility.shared
+    @StateObject private var listen = JourneyListenPresenter.shared
     @State private var selectedTab = 0
+
+    /// The docked journey mini-player shows when a journey is loaded but its full-screen
+    /// player is minimized - and never while the tab bar itself is hidden (immersive
+    /// screens), since it docks against that bar.
+    private var showMiniPlayer: Bool {
+        listen.dive != nil && !listen.expanded && !tabBarVisibility.isHidden
+    }
 
     // Localized label for each tab, driven by the global Settings → Language picker.
     private func tabLabel(_ id: Int) -> String {
@@ -133,6 +141,30 @@ struct MainTabView: View {
         if !tabBarVisibility.isHidden {
             EmeraldTabBar(items: emeraldItems, selection: $selectedTab)
         }
+
+        // Docked journey narration mini-player, floating just above the tab bar. Persists
+        // across all tabs while a journey is playing and its full player is minimized.
+        if showMiniPlayer {
+            JourneyMiniPlayer()
+                .padding(.bottom, JourneyMiniPlayer.bottomInset)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+        }
+        }
+        .animation(.spring(response: 0.38, dampingFraction: 0.86), value: showMiniPlayer)
+        // The full-screen journey player - hosted once at the root so minimizing it drops
+        // to the docked mini-player instead of tearing narration down. Dismissal (chevron
+        // or a swipe) minimizes rather than stops; the mini-player keeps the controls.
+        .fullScreenCover(isPresented: Binding(
+            get: { listen.expanded && listen.dive != nil },
+            set: { if !$0 { listen.minimize() } }
+        )) {
+            if let dive = listen.dive {
+                JourneyListenView(dive: dive, onClose: { listen.minimize() })
+            }
+        }
+        // A locked "Listen" tap routes here through the presenter.
+        .fullScreenCover(item: $listen.paywall) { ctx in
+            PaywallView(context: ctx)
         }
         .onReceive(NotificationCenter.default.publisher(for: .navigateToVerse)) { notification in
             guard let userInfo = notification.userInfo,

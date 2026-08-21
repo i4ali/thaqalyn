@@ -18,7 +18,12 @@ import SwiftUI
 ///
 /// Entries with no art of their own (a locked tafsir layer, a quiz, the profile upgrade
 /// row) pass `coverAssetName: nil` and fall back to the shrine dome.
-struct PaywallContext {
+struct PaywallContext: Identifiable {
+    /// Stable identity so the paywall can be raised via `.fullScreenCover(item:)` - e.g.
+    /// from `JourneyListenPresenter` when a locked "Listen" is tapped. Each reach-for-
+    /// premium is its own presentation. Defaulted, so every existing `PaywallContext(...)`
+    /// call site (which passes only cover + eyebrow) is unaffected.
+    let id = UUID()
     /// Cover art for the hero band. nil = the default shrine dome.
     let coverAssetName: String?
     /// Small gold caps line above the headline, e.g. "Inside the Surah · Yusuf".

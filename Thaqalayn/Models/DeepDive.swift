@@ -153,6 +153,122 @@ enum DeepDiveSection {
     }
 }
 
+// MARK: - Narration (audio journey)
+
+/// A real Arabic recitation woven into the narration. `verse` is Qur'an, played
+/// with reciter audio (cache-on-play, a later task); `dua` is a captured devotional
+/// recording resolved through `DuaAudioKey.recordingURL(for:)`. When no recording
+/// exists the player skips the segment gracefully - the narrator never speaks Arabic.
+enum Recitation: Equatable {
+    case verse(surah: Int, ayah: Int)   // reciter audio (cache-on-play, later task)
+    case dua(arabic: String)            // DuaAudioKey.recordingURL(for:) - captured dua recordings
+}
+
+/// A unit of journey narration. `speech` is English narrator audio (pre-rendered);
+/// `recitation` is real Arabic audio (verse reciter or captured dua recording);
+/// `pause` is reflective silence (interactive/close beats).
+enum NarrationSegment: Equatable {
+    case speech(String)
+    case recitation(Recitation)
+    case pause(TimeInterval)
+}
+
+extension DeepDiveSection {
+    /// This beat as an ordered list of narrator segments, in `lang` (English for now).
+    /// Only reading content is spoken; chrome (tags, references, sources, placeholders,
+    /// titles, next-labels) is dropped. Guaranteed-audio verse recitations are framed
+    /// "The Qur'an says:" → recitation → "which means:" → the translation. The intro and
+    /// per-movement announcements are added at the timeline level, not here.
+    func narrationSegments(for lang: CommentaryLanguage) -> [NarrationSegment] {
+        // Localized text → a speech segment, or nil when empty/absent (so it drops out).
+        func s(_ text: LocalizedText?) -> NarrationSegment? {
+            guard let str = text?.text(for: lang), !str.isEmpty else { return nil }
+            return .speech(str)
+        }
+        // Framed recitation of a guaranteed-audio Qur'an verse.
+        func verse(_ surah: Int, _ ayah: Int, _ translation: LocalizedText) -> [NarrationSegment?] {
+            [.speech(JourneyNarration.verseLeadIn),
+             .recitation(.verse(surah: surah, ayah: ayah)),
+             .pause(0.8),
+             .speech(JourneyNarration.meaning),
+             s(translation)]
+        }
+        let gap: NarrationSegment = .pause(JourneyNarration.beatGap)
+
+        let raw: [NarrationSegment?]
+        switch self {
+        case let .open(_, _, _, _, line):
+            raw = [s(line), gap]
+
+        case let .orientation(_, promise, leaveWith):
+            raw = [s(promise), s(leaveWith), gap]
+
+        case let .depths(_, _, _, items):
+            var segs: [NarrationSegment?] = []
+            for (i, d) in items.enumerated() {
+                segs += [s(d.label), s(d.desc), s(d.embodies)]
+                if i < items.count - 1 { segs.append(.pause(0.6)) }
+            }
+            segs.append(gap)
+            raw = segs
+
+        case let .act(_, connector, line, bridge):
+            var segs: [NarrationSegment?] = [s(connector), s(line)]
+            if let b = bridge { segs += verse(b.surah, b.ayah, b.translation) }
+            segs.append(gap)
+            raw = segs
+
+        case let .verse(_, _, surah, ayah, _, translation, _, reflection):
+            raw = verse(surah, ayah, translation) + [s(reflection), gap]
+
+        case let .narration(_, _, _, body, reflection):
+            raw = [s(body), s(reflection), gap]
+
+        case let .response(_, _, arabic, words, _, reflection):
+            // Optimistic dua recitation: this hadith-qudsi Arabic has no recording yet,
+            // so the player skips it - emitting it keeps the narrator from speaking Arabic
+            // and future-proofs the beat. No `meaning` connector: `words` is not its gloss.
+            raw = [.recitation(.dua(arabic: arabic)), s(words), s(reflection), gap]
+
+        case let .climax(_, _, _, arabic, _, body, reflection):
+            // Optimistic dua recitation (same reasoning as `response`). `translation` is
+            // skipped: the iconic line already lives inside `body`, so it would be redundant.
+            raw = [.recitation(.dua(arabic: arabic)), s(body), s(reflection), gap]
+
+        case let .refrain(_, _, surah, ayah, _, translation, _, intro, _, replyArabic, _, replyTranslation, reflection):
+            raw = [s(intro)]
+                + verse(surah, ayah, translation)
+                + [.recitation(.dua(arabic: replyArabic)), s(replyTranslation), s(reflection), gap]
+
+        case let .reflectionPrompt(_, prompt, _, subline, _):
+            raw = [s(prompt), s(subline), .pause(4.0)]
+
+        // The interactive closes all share the same shape: name the gesture, recite the
+        // resolving verse (optimistic - no captured audio yet, player skips), then its
+        // meaning and note, ending on a reflective pause. No `meaning` connector.
+        case let .release(_, prompt, subline, arabic, translation, _, note, _),
+             let .count(_, prompt, subline, arabic, translation, _, note, _),
+             let .sujud(_, prompt, subline, arabic, translation, _, note, _),
+             let .extinguish(_, prompt, subline, arabic, translation, _, note, _),
+             let .door(_, prompt, subline, arabic, translation, _, note, _),
+             let .salawat(_, prompt, subline, arabic, translation, _, note, _):
+            raw = [s(prompt), s(subline),
+                   .recitation(.dua(arabic: arabic)),
+                   s(translation), s(note), .pause(3.0)]
+
+        case let .dua(_, intro, arabic, translation, _, note, close):
+            raw = [s(intro),
+                   .recitation(.dua(arabic: arabic)),
+                   .speech(JourneyNarration.meaning),
+                   s(translation), s(note), s(close), gap]
+
+        case let .closing(_, _, essence, line):
+            raw = [s(essence), s(line), gap]
+        }
+        return raw.compactMap { $0 }
+    }
+}
+
 /// One immersive deep dive. Data-driven so future dives (Sabr, Tawakkul, …) are
 /// pure content additions rendered by the same `DeepDiveView`.
 struct DeepDive: Identifiable {

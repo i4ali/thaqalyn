@@ -26,6 +26,21 @@ struct SurahExperienceCard: View {
     }
 
     var body: some View {
+        // The card body and the "Listen" affordance are two independent tap targets in
+        // one ZStack: SwiftUI routes a tap to the topmost button under the finger, so the
+        // headphones handles its corner and the rest of the cell still opens the visual
+        // journey. Listen shows only on built experiences, and only in English (audio is EN-only).
+        ZStack(alignment: .topTrailing) {
+            cardButton
+            if descriptor.available && lang == .english && descriptor.dive != nil {
+                listenButton
+            }
+        }
+    }
+
+    /// The card itself - a whole-cell button opening the visual journey. Named so the
+    /// "Listen" affordance can overlay it without becoming part of its tap.
+    private var cardButton: some View {
         Button(action: onTap) {
             EmCard(glow: descriptor.available,
                    borderColor: descriptor.available ? tm.accentColor.opacity(0.4) : nil) {
@@ -73,6 +88,32 @@ struct SurahExperienceCard: View {
             .padding(.vertical, 3)
             .background(Capsule().fill(tm.accentChip))
             .overlay(Capsule().stroke(tm.strokeColor, lineWidth: 1))
+    }
+
+    /// Headphones "Listen" affordance overlaid in the card's top-trailing corner - a
+    /// separate tap target from the card body. Free users open the audio player; premium-
+    /// locked users are routed to the paywall. No lock glyph - the PREMIUM chip already
+    /// carries the gating signal.
+    private var listenButton: some View {
+        Button {
+            guard let dive = descriptor.dive else { return }
+            JourneyListenPresenter.shared.requestListen(
+                dive,
+                isFree: premiumManager.canAccessSurahExperience(descriptor.id),
+                paywall: PaywallContext(
+                    coverAssetName: descriptor.coverAssetName,
+                    eyebrow: "\(JourneyStrings.surahJourneyEyebrow(lang)) \u{00B7} \(descriptor.title(lang))"))
+        } label: {
+            Image(systemName: "headphones")
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundColor(tm.accentColor)
+                .padding(10)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(EmPressStyle())
+        .padding(.top, 4)
+        .padding(.trailing, 6)
+        .accessibilityLabel("Listen")
     }
 
     @ViewBuilder private var trailingGlyph: some View {

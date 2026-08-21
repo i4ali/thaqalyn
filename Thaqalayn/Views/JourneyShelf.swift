@@ -72,6 +72,10 @@ struct ShelfItem: Identifiable {
     /// fills it and the title sits in the art's own dark sky. When nil, the card falls
     /// back to the original icon-chip layout.
     var coverAssetName: String? = nil
+    /// Present when this shelf card should offer a "Listen" (audio narration) affordance -
+    /// set only for narratable journeys (Deep Dives / Surah experiences) in English. nil
+    /// (the default) means no headphones - e.g. Sacred Seasons and the onboarding spotlight.
+    var onListen: (() -> Void)? = nil
 }
 
 // MARK: - Compact card
@@ -99,6 +103,22 @@ struct ShelfCard: View {
     private static let posterHeight: CGFloat = 238
 
     var body: some View {
+        // The card body and the "Listen" affordance are two independent tap targets in
+        // one ZStack: SwiftUI routes a tap to the topmost button under the finger, so the
+        // headphones handles its corner and the rest of the card still opens the descent.
+        // `onListen` is set only for narratable journeys (Deep Dives / Surah experiences)
+        // in English; Sacred Seasons and the onboarding spotlight leave it nil.
+        ZStack(alignment: .topTrailing) {
+            cardButton
+            if item.onListen != nil {
+                listenButton
+            }
+        }
+    }
+
+    /// The card itself - a whole-card button opening the descent. Named so the "Listen"
+    /// affordance can overlay it in the top-trailing corner without joining its tap.
+    private var cardButton: some View {
         Button(action: item.onTap) {
             Group {
                 if let cover = item.coverAssetName {
@@ -115,6 +135,27 @@ struct ShelfCard: View {
         .accessibilityElement(children: .ignore)
         .accessibilityAddTraits(.isButton)
         .accessibilityLabel(Text("\(item.title), \(statusText), \(section)"))
+    }
+
+    /// Headphones "Listen" affordance overlaid in the card's top-trailing corner - a
+    /// separate tap target from the card body, matching DeepDiveCard / SurahExperienceCard.
+    /// It sits over the poster's own dark top scrim (or the icon face's empty corner), so
+    /// the accent glyph reads without a lock: the `.premium` status pill already carries
+    /// any gating signal, and a locked tap is routed to the paywall by the `onListen` closure.
+    private var listenButton: some View {
+        Button {
+            item.onListen?()
+        } label: {
+            Image(systemName: "headphones")
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundColor(tm.accentColor)
+                .padding(10)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(EmPressStyle())
+        .padding(.top, 4)
+        .padding(.trailing, 6)
+        .accessibilityLabel("Listen")
     }
 
     /// The art is the whole card, and the title sits in its sky. Every cover is composed
