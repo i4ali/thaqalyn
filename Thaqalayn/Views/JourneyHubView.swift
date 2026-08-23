@@ -113,7 +113,8 @@ struct JourneyHubView: View {
                              onTap: { handleDiveTap(d, fromShelf: true) },
                              coverAssetName: d.coverAssetName,
                              // Listen only for built dives, and only in English (audio is EN-only).
-                             onListen: (d.available && lang == .english && d.dive != nil) ? {
+                             onListen: (d.available && lang == .english && d.dive != nil
+                                        && JourneyAudioAvailability.isAudioReady(d.id)) ? {
                                  JourneyListenPresenter.shared.requestListen(
                                      d.dive!, isFree: premiumManager.canAccessDeepDive(d.id),
                                      paywall: PaywallContext(coverAssetName: d.coverAssetName,
@@ -134,7 +135,8 @@ struct JourneyHubView: View {
                              onTap: { handleSurahExperienceTap(d, fromShelf: true) },
                              coverAssetName: d.coverAssetName,
                              // Listen only for built experiences, and only in English (audio is EN-only).
-                             onListen: (d.available && lang == .english && d.dive != nil) ? {
+                             onListen: (d.available && lang == .english && d.dive != nil
+                                        && JourneyAudioAvailability.isAudioReady(d.id)) ? {
                                  JourneyListenPresenter.shared.requestListen(
                                      d.dive!, isFree: premiumManager.canAccessSurahExperience(d.id),
                                      paywall: PaywallContext(coverAssetName: d.coverAssetName,
@@ -215,6 +217,14 @@ struct JourneyHubView: View {
                 }
             }
             .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(isPresented: Binding(
+                get: { router.revealSurahExperienceId != nil },
+                set: { if !$0 { router.revealSurahExperienceId = nil } }
+            )) {
+                SurahExperienceRevealList { d in
+                    handleSurahExperienceTap(d)
+                }
+            }
         }
         .preferredColorScheme(tm.colorScheme)
         .fullScreenCover(item: $presented) { p in
@@ -567,6 +577,119 @@ struct LockedJourneyOverlay: View {
             )
             .shadow(color: .black.opacity(0.5), radius: 40, x: 0, y: 20)
             .padding(40)
+        }
+    }
+}
+
+// MARK: - Inside-the-Surah reveal list
+
+/// The Inside-the-Surah list opened when a Quran-tab "Journey" tab is tapped. Same
+/// full-width `SurahExperienceCard`s as the browse "All N" list, but scrolled to the
+/// tapped surah and briefly lit, so the reader lands on that surah's card - Watch (tap
+/// the card) or Listen (headphones) - instead of diving straight in. Watch is handed
+/// back to the hub via `onTap` (so dive presentation and gating stay in one place);
+/// Listen is self-contained in the card (routes through the global listen presenter).
+///
+/// The target is read live from `DeepLinkRouter.revealSurahExperienceId`: if a *different*
+/// surah's Journey tab is tapped while this list is still on the stack (e.g. after a tab
+/// switch away and back), the id changes and `onChange` re-scrolls and re-lights the new
+/// card, instead of the list staying stuck on whichever surah opened it first.
+private struct SurahExperienceRevealList: View {
+    @ObservedObject private var tm = ThemeManager.shared
+    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
+    @ObservedObject private var router = DeepLinkRouter.shared
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
+
+    /// Opens the visual descent for a tapped card - handed back to the hub.
+    let onTap: (SurahExperienceDescriptor) -> Void
+
+    /// The surah-experience id to scroll to and highlight, read live from the router.
+    private var targetID: String { router.revealSurahExperienceId ?? "" }
+
+    /// Drives the target card's brief highlight (an accent glow that fades).
+    @State private var highlight = false
+    /// The in-flight highlight timing, cancelled when the target changes so an old
+    /// fade-out can't cut a freshly retargeted highlight short.
+    @State private var highlightTask: Task<Void, Never>?
+
+    var body: some View {
+        ZStack {
+            AdaptiveModernBackground()
+            VStack(spacing: 0) {
+                header
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack(spacing: 12) {
+                            ForEach(SurahExperienceDescriptor.all) { d in
+                                SurahExperienceCard(descriptor: d) { onTap(d) }
+                                    .id(d.id)
+                                    .scaleEffect(d.id == targetID && highlight && !reduceMotion ? 1.02 : 1.0)
+                                    .shadow(color: d.id == targetID && highlight ? tm.accentColor.opacity(0.8) : .clear,
+                                            radius: d.id == targetID && highlight ? 18 : 0)
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 8)
+                        .padding(.bottom, 120)   // clear the floating EmeraldTabBar
+                    }
+                    .onAppear { reveal(proxy) }
+                    .onChange(of: router.revealSurahExperienceId) { _, newValue in
+                        // Retarget when a different surah is chosen while this list is open.
+                        if newValue != nil { reveal(proxy) }
+                    }
+                }
+            }
+        }
+        .toolbar(.hidden, for: .navigationBar)
+        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+        .onDisappear { highlightTask?.cancel() }
+    }
+
+    private var header: some View {
+        HStack(spacing: 12) {
+            Button(action: { dismiss() }) {
+                Image(systemName: "chevron.backward")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(tm.primaryText)
+                    .frame(width: 38, height: 38)
+                    .background(.ultraThinMaterial, in: Circle())
+                    .overlay(Circle().stroke(tm.strokeColor, lineWidth: 1))
+            }
+            .buttonStyle(EmPressStyle())
+            Text(JourneyStrings.insideTheSurah(lang))
+                .font(EmType.serif(28, .semiBold))
+                .foregroundColor(tm.primaryText)
+            Spacer(minLength: 0)
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 6)
+        .padding(.bottom, 8)
+        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+    }
+
+    /// Scroll the target card to centre (after a beat so a freshly-pushed list has laid
+    /// out) and light it briefly. Re-runs whenever the target changes, so retargeting an
+    /// already-open list is smooth. The prior highlight timer is cancelled first so a
+    /// stale fade-out can't kill the new glow. Reduce Motion skips the motion.
+    private func reveal(_ proxy: ScrollViewProxy) {
+        let id = targetID
+        guard !id.isEmpty else { return }
+        highlightTask?.cancel()
+        highlightTask = Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(60))
+            guard !Task.isCancelled else { return }
+            if reduceMotion {
+                proxy.scrollTo(id, anchor: .center)
+                highlight = true
+            } else {
+                withAnimation(.easeInOut(duration: 0.35)) { proxy.scrollTo(id, anchor: .center) }
+                withAnimation(.easeInOut(duration: 0.4)) { highlight = true }
+            }
+            try? await Task.sleep(for: .seconds(1.6))
+            guard !Task.isCancelled else { return }
+            withAnimation(.easeInOut(duration: 0.7)) { highlight = false }
         }
     }
 }

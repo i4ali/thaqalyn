@@ -3,8 +3,8 @@
 //  Thaqalayn
 //
 //  Paywall screen for premium upgrade.
-//  Design: docs/mockups/paywall-redesign-final.png — price-forward hero,
-//  5-layer depth ladder, feature rows, real App Store review, pinned CTA.
+//  Design: docs/mockups/paywall-redesign-final.png - price-forward hero,
+//  5-layer depth ladder, feature rows, rotating App Store reviews, pinned CTA.
 //
 
 import SwiftUI
@@ -61,13 +61,37 @@ struct PaywallView: View {
     /// The amount the price count-up has reached; animates 0 -> real price on appear.
     @State private var shownPrice: Double = 0
 
-    /// The one curated App Store review shown on the paywall. Swap when a
-    /// stronger review lands — body stays verbatim (spacing tidied only).
-    private enum CuratedReview {
-        static let title = "What I needed"
-        static let body = "That’s the App I was searching for. Quran (reading, listening, traduction), quiz, daily reminder, Tafsir."
-        static let author = "BiBiGeRm"
+    /// Which curated review is showing in the rotating review card.
+    @State private var reviewIndex = 0
+    /// The auto-advance loop for the review card; cancelled on disappear and
+    /// restarted when a dot is tapped, so a tap doesn't fight the timer.
+    @State private var reviewRotation: Task<Void, Never>?
+
+    /// A curated App Store review shown on the paywall.
+    private struct CuratedReview {
+        let title: String
+        let body: String
+        let author: String
     }
+
+    /// The reviews shown on the paywall, auto-rotated one at a time (see
+    /// `reviewCard` / `startReviewRotation`). Bodies are from the App Store,
+    /// lightly tidied - spacing, sentence casing, one trimmed aside. Swap or
+    /// extend as stronger reviews land.
+    private let reviews: [CuratedReview] = [
+        CuratedReview(
+            title: "What I needed",
+            body: "That’s the App I was searching for. Quran (reading, listening, traduction), quiz, daily reminder, Tafsir.",
+            author: "BiBiGeRm"),
+        CuratedReview(
+            title: "Very well thought out and put together",
+            body: "It’s a great companion app that I use daily for reading and reflection. Some of the features are quite unique like journeys, verse insights and deep dives. Amazing work, mashallah!",
+            author: "SyedaRzvi"),
+        CuratedReview(
+            title: "Mashallah",
+            body: "I love this so much! It truly is amazing. Well done, may Allah bless you and your team!",
+            author: "Anonymous_rules4ever"),
+    ]
 
     private struct LayerInfo {
         let number: Int
@@ -112,6 +136,7 @@ struct PaywallView: View {
             Text(alertMessage)
         }
         .onAppear { startEntrance() }
+        .onDisappear { stopReviewRotation() }
         // The product usually loads before the paywall appears, but if it lands
         // after, start (or restart) the count-up the moment the price arrives.
         .onChange(of: purchaseManager.isProductLoaded) { _, loaded in
@@ -122,6 +147,11 @@ struct PaywallView: View {
     // MARK: - Entrance motion
 
     private func startEntrance() {
+        // A different curated review greets each open; the timer then cycles the
+        // rest (a no-op under reduce motion, which leaves this one static).
+        reviewIndex = Int.random(in: 0..<reviews.count)
+        startReviewRotation()
+
         guard !reduceMotion else {
             contentIn = true
             startPriceCountUp()
@@ -143,6 +173,37 @@ struct PaywallView: View {
             shownPrice = 0
             withAnimation(.easeOut(duration: 0.7)) { shownPrice = targetValue }
         }
+    }
+
+    // MARK: - Review rotation
+
+    /// Auto-advances the review card on a slow cross-fade. A no-op when there's a
+    /// single review or under reduce motion (which keeps the shown review static).
+    /// Re-callable: it cancels any running loop first, so a dot tap can restart the
+    /// countdown cleanly instead of advancing again a moment later.
+    private func startReviewRotation() {
+        reviewRotation?.cancel()
+        guard reviews.count > 1, !reduceMotion else { return }
+        reviewRotation = Task { @MainActor in
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(5))
+                if Task.isCancelled { return }
+                withAnimation(.easeInOut(duration: 0.6)) {
+                    reviewIndex = (reviewIndex + 1) % reviews.count
+                }
+            }
+        }
+    }
+
+    private func stopReviewRotation() {
+        reviewRotation?.cancel()
+        reviewRotation = nil
+    }
+
+    /// Jump to a tapped review and restart the countdown from full.
+    private func showReview(_ index: Int) {
+        withAnimation(.easeInOut(duration: 0.4)) { reviewIndex = index }
+        startReviewRotation()
     }
 
     // MARK: - Background
@@ -541,35 +602,86 @@ struct PaywallView: View {
     // MARK: - Review card
 
     private var reviewCard: some View {
-        EmCard(cornerRadius: 16) {
-            VStack(spacing: 5) {
-                HStack(spacing: 3) {
-                    ForEach(0..<5, id: \.self) { _ in
-                        Image(systemName: "star.fill")
-                            .font(.system(size: 11))
-                            .foregroundColor(themeManager.semanticYellow)
+        VStack(spacing: 10) {
+            EmCard(cornerRadius: 16) {
+                VStack(spacing: 8) {
+                    reviewStars
+
+                    // Every review is stacked and cross-faded in place; the ZStack
+                    // sizes to the tallest, so rotating never reflows the page.
+                    ZStack(alignment: .top) {
+                        ForEach(reviews.indices, id: \.self) { i in
+                            reviewText(reviews[i])
+                                .opacity(i == reviewIndex ? 1 : 0)
+                                .accessibilityHidden(i != reviewIndex)
+                        }
                     }
                 }
-
-                Text("“\(CuratedReview.title)”")
-                    .font(EmType.serif(19, .semiBold))
-                    .foregroundColor(themeManager.primaryText)
-
-                Text("“\(CuratedReview.body)”")
-                    .font(EmType.serifItalic(16))
-                    .foregroundColor(themeManager.primaryText) // hero testimonial - thin italic serif needs full contrast, not secondary
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-
-                Text("\(CuratedReview.author) · App Store review")
-                    .font(.system(size: 10.5, weight: .medium)).tracking(0.3)
-                    .foregroundColor(themeManager.secondaryText)
-                    .padding(.top, 3)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 13)
+                .frame(maxWidth: .infinity)
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 13)
-            .frame(maxWidth: .infinity)
+
+            if reviews.count > 1 {
+                reviewDots
+            }
         }
+    }
+
+    private var reviewStars: some View {
+        HStack(spacing: 3) {
+            ForEach(0..<5, id: \.self) { _ in
+                Image(systemName: "star.fill")
+                    .font(.system(size: 11))
+                    .foregroundColor(themeManager.semanticYellow)
+            }
+        }
+    }
+
+    private func reviewText(_ review: CuratedReview) -> some View {
+        VStack(spacing: 5) {
+            Text("“\(review.title)”")
+                .font(EmType.serif(19, .semiBold))
+                .foregroundColor(themeManager.primaryText)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text("“\(review.body)”")
+                .font(EmType.serifItalic(16))
+                .foregroundColor(themeManager.primaryText) // hero testimonial - thin italic serif needs full contrast, not secondary
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text("\(review.author) · App Store review")
+                .font(.system(size: 10.5, weight: .medium)).tracking(0.3)
+                .foregroundColor(themeManager.secondaryText)
+                .padding(.top, 3)
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    /// Tappable progress dots under the review card. The active dot wears the
+    /// accent; tapping one jumps to that review and restarts the rotation.
+    private var reviewDots: some View {
+        HStack(spacing: 2) {
+            ForEach(reviews.indices, id: \.self) { i in
+                Button {
+                    showReview(i)
+                } label: {
+                    Circle()
+                        .fill(i == reviewIndex
+                              ? AnyShapeStyle(themeManager.accentColor)
+                              : AnyShapeStyle(themeManager.tertiaryText.opacity(0.35)))
+                        .frame(width: 6.5, height: 6.5)
+                        .frame(width: 18, height: 18)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Review \(i + 1) of \(reviews.count)")
+                .accessibilityAddTraits(i == reviewIndex ? [.isSelected] : [])
+            }
+        }
+        .animation(.easeInOut(duration: 0.3), value: reviewIndex)
     }
 
     // MARK: - Pinned CTA bar

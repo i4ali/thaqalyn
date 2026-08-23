@@ -37,6 +37,7 @@ class TafsirReader: NSObject, ObservableObject {
         // Mutual exclusion: a pre-recorded dua and TTS must never overlap.
         DuaAudioPlayer.shared.stop()
         JourneyAudioPlayer.shared.stop()                 // and never over journey narration
+        DuaStreamPlayer.shared.stop()                    // and never over a streamed recitation
         // Stop any current speech
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)

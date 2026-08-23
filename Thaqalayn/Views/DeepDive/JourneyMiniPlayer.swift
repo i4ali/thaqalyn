@@ -39,10 +39,13 @@ struct JourneyMiniPlayer: View {
         tm.isMidnightEmerald ? Color(hex: "0A1512").opacity(0.72) : Color.white.opacity(0.6)
     }
 
-    /// Fraction of the current clip elapsed, clamped - drives the accent hairline.
+    /// Fraction of the WHOLE journey elapsed, clamped - drives the accent hairline. Falls
+    /// back to the current clip until the journey durations resolve (then cached).
     private var progress: CGFloat {
-        guard player.duration > 0 else { return 0 }
-        return min(max(CGFloat(player.currentTime / player.duration), 0), 1)
+        let total = player.journeyDuration > 0 ? player.journeyDuration : player.duration
+        guard total > 0 else { return 0 }
+        let elapsed = player.journeyDuration > 0 ? player.journeyElapsed : player.currentTime
+        return min(max(CGFloat(elapsed / total), 0), 1)
     }
 
     var body: some View {
@@ -149,7 +152,7 @@ struct JourneyMiniPlayer: View {
         }
     }
 
-    /// A thin accent line along the bottom edge tracking progress through the current clip.
+    /// A thin accent line along the bottom edge tracking progress through the whole journey.
     private var progressHairline: some View {
         GeometryReader { geo in
             tm.accentColor

@@ -21,6 +21,7 @@ struct WhatsNewCard: View {
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var router = DeepLinkRouter.shared
     @State private var showingWidgetExplainer = false
+    @State private var showingDuasZiyarat = false
 
     private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
@@ -31,6 +32,9 @@ struct WhatsNewCard: View {
         .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
         .sheet(isPresented: $showingWidgetExplainer) {
             WidgetExplainerView()
+        }
+        .fullScreenCover(isPresented: $showingDuasZiyarat) {
+            DuasZiyaratView()
         }
     }
 
@@ -56,6 +60,20 @@ struct WhatsNewCard: View {
             // No tab switch; the explainer presents as a sheet over Today.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
                 showingWidgetExplainer = true
+            }
+        case .duasZiyarat:
+            // No tab switch; the library presents as a full-screen cover over Today.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                showingDuasZiyarat = true
+            }
+        case .journeyListen(let diveId):
+            // Open the narrated Listen player app-wide (MainTabView hosts it) - no tab switch.
+            // The showcased journey is free/bundled, so it plays immediately.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                if let dive = DeepDiveDescriptor.all.first(where: { $0.dive?.id == diveId })?.dive
+                    ?? SurahExperienceDescriptor.all.first(where: { $0.dive?.id == diveId })?.dive {
+                    JourneyListenPresenter.shared.open(dive)
+                }
             }
         }
     }

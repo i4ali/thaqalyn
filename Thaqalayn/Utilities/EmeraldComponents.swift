@@ -555,6 +555,10 @@ struct EmJourneyHeader: View {
 /// header + progress card.
 struct EmCoverBand: View {
     let assetName: String
+    /// Extra darkening laid over the art (0 = none, the default) to keep header
+    /// text legible on covers whose lit areas would otherwise wash it out. Sits
+    /// under the same bottom mask as the art, so it fades out with no hard edge.
+    var dim: Double = 0
 
     var body: some View {
         GeometryReader { geo in
@@ -563,6 +567,7 @@ struct EmCoverBand: View {
                 .scaledToFill()
                 .frame(width: geo.size.width, height: geo.size.height)
                 .clipped()
+                .overlay(Color.black.opacity(dim))
                 .mask(
                     LinearGradient(
                         stops: [

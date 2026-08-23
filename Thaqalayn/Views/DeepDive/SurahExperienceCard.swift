@@ -29,10 +29,13 @@ struct SurahExperienceCard: View {
         // The card body and the "Listen" affordance are two independent tap targets in
         // one ZStack: SwiftUI routes a tap to the topmost button under the finger, so the
         // headphones handles its corner and the rest of the cell still opens the visual
-        // journey. Listen shows only on built experiences, and only in English (audio is EN-only).
+        // journey. Listen shows only where the narration is actually rendered, and only in
+        // English (audio is EN-only) - matching the shelf card, so an audio-less surah
+        // (e.g. one still awaiting its render) never shows a headphones that can't play.
         ZStack(alignment: .topTrailing) {
             cardButton
-            if descriptor.available && lang == .english && descriptor.dive != nil {
+            if descriptor.available && lang == .english && descriptor.dive != nil
+                && JourneyAudioAvailability.isAudioReady(descriptor.id) {
                 listenButton
             }
         }

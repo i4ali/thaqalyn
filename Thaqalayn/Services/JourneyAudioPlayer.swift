@@ -47,8 +47,16 @@ final class JourneyAudioPlayer: ObservableObject {
     /// `currentDive` - e.g. "The First Depth", "The Court", "He Answers". Drives the
     /// now-playing subtitle and is read by the Phase 3 narration UI.
     @Published private(set) var currentBeatTitle: String = ""
+    /// Progress WITHIN the current clip (used internally for resume offsets, and as a
+    /// fallback for the UI before the whole-journey durations resolve).
     @Published private(set) var currentTime: TimeInterval = 0
     @Published private(set) var duration: TimeInterval = 0
+    /// The whole-journey timeline (all clips stitched into one): cumulative elapsed and the
+    /// total length. `journeyDuration` is 0 until the clip durations resolve - the first
+    /// play measures the streamed verses, then everything is cached - after which the Listen
+    /// scrubber and mini-player track the entire journey rather than the current clip.
+    @Published private(set) var journeyElapsed: TimeInterval = 0
+    @Published private(set) var journeyDuration: TimeInterval = 0
     @Published private(set) var playbackRate: Float = 1.0
     /// Remaining time on the optional sleep timer, or nil when none is armed. Counts down
     /// once a second and calls `stop()` at zero; surfaced on the Listen screen. Mirrors the
@@ -60,6 +68,12 @@ final class JourneyAudioPlayer: ObservableObject {
     private let player = AVPlayer()
     private var clips: [PlayableClip] = []
     private var index: Int = 0
+    /// Per-clip durations aligned to `clips`, and their prefix start offsets in the whole
+    /// journey - the map between clip-local time and journey-global time. Empty until the
+    /// async duration resolve completes (see `resolveJourneyDurations`).
+    private var clipDurations: [TimeInterval] = []
+    private var clipStarts: [TimeInterval] = []
+    private var durationsResolved = false
     private var endObserver: NSObjectProtocol?
     private var failObserver: NSObjectProtocol?
     private var statusObserver: NSKeyValueObservation?
@@ -107,8 +121,9 @@ final class JourneyAudioPlayer: ObservableObject {
         }
     }
 
-    /// Streamed reciter URL for a verse (default reciter Alafasy, everyayah). On-disk
-    /// caching is a later task; for now AVPlayer streams this remote URL directly.
+    /// Remote reciter URL for a verse (default reciter Alafasy, everyayah). The first play
+    /// streams this; `VerseAudioCache` saves it to disk so later plays (and offline replay)
+    /// read the local copy - see `url(for:)`.
     nonisolated static func verseURL(surah: Int, ayah: Int) -> URL? {
         let s = String(format: "%03d", surah)
         let a = String(format: "%03d", ayah)
@@ -164,6 +179,7 @@ final class JourneyAudioPlayer: ObservableObject {
         // Mutual exclusion: narration and the other audio services never overlap.
         TafsirReader.shared.stop()
         DuaAudioPlayer.shared.stop()
+        DuaStreamPlayer.shared.stop()                    // mutual exclusion with streamed recitation
         AudioManager.shared.stop()
 
         configureSession()
@@ -172,6 +188,7 @@ final class JourneyAudioPlayer: ObservableObject {
 
         currentDive = dive
         clips = Self.buildPlaylist(for: dive)
+        resolveJourneyDurations()          // async: fills the whole-journey timeline (cached after first play)
         preloaded = nil
         didFinish = false
 
@@ -230,6 +247,11 @@ final class JourneyAudioPlayer: ObservableObject {
         isPlaying = false
         currentTime = 0
         duration = 0
+        journeyElapsed = 0
+        journeyDuration = 0
+        clipDurations = []
+        clipStarts = []
+        durationsResolved = false
         clips = []
         index = 0
         currentBeatIndex = 0
@@ -259,7 +281,80 @@ final class JourneyAudioPlayer: ObservableObject {
         let t = max(0, time)
         player.seek(to: CMTime(seconds: t, preferredTimescale: 600))
         currentTime = t
+        updateJourneyElapsed()
         updateNowPlayingProgress()                // move the lock-screen scrubber
+    }
+
+    // MARK: - Whole-journey timeline (all clips stitched into one seekable track)
+
+    /// Measure every clip's length (cached; only the first play of new material touches the
+    /// network, for streamed verses), then publish the total and the prefix start offsets so
+    /// the UI can show a whole-journey scrubber. Runs async; until it lands, `journeyDuration`
+    /// stays 0 and the UI falls back to the per-clip readout.
+    private func resolveJourneyDurations() {
+        durationsResolved = false
+        clipDurations = []
+        clipStarts = []
+        journeyDuration = 0
+        journeyElapsed = 0
+        let snapshot = clips
+        guard !snapshot.isEmpty else { return }
+        Task { [weak self] in
+            guard let self else { return }
+            let durs = await JourneyDurationStore.shared.resolveDurations(for: snapshot) { source in
+                self.url(for: source)
+            }
+            guard self.clips == snapshot else { return }   // a different journey started meanwhile
+            self.clipDurations = durs
+            var starts = [TimeInterval](); starts.reserveCapacity(durs.count)
+            var acc: TimeInterval = 0
+            for d in durs { starts.append(acc); acc += d }
+            self.clipStarts = starts
+            self.journeyDuration = acc
+            self.durationsResolved = true
+            self.updateJourneyElapsed()
+            self.updateNowPlayingInfo()            // refresh the lock screen with the real total
+        }
+    }
+
+    /// Recompute cumulative elapsed = (this clip's start in the journey) + (offset into it).
+    /// Before durations resolve, falls back to the clip-local time so the readout isn't blank.
+    private func updateJourneyElapsed() {
+        guard durationsResolved, clipStarts.indices.contains(index) else {
+            journeyElapsed = currentTime
+            return
+        }
+        journeyElapsed = clipStarts[index] + max(0, currentTime)
+    }
+
+    /// Seek to an absolute position on the whole-journey timeline, mapping it to the right
+    /// clip + in-clip offset and preserving play/pause state. Falls back to a clip-local seek
+    /// until the durations have resolved.
+    func seekJourney(to globalTime: TimeInterval) {
+        guard durationsResolved, journeyDuration > 0,
+              clipStarts.count == clips.count, !clips.isEmpty else {
+            seek(to: globalTime)
+            return
+        }
+        let t = max(0, min(globalTime, journeyDuration))
+        // Target clip = the last whose start offset is <= t.
+        var k = clips.count - 1
+        for i in clips.indices where clipStarts[i] > t { k = i - 1; break }
+        k = max(0, k)
+        let offset = t - clipStarts[k]
+        let wasPlaying = isPlaying
+
+        if case .pause = clips[k].source {
+            restart(at: k)                          // into a reflective gap: restart it (<=~1s slack)
+        } else if k == index, player.currentItem != nil {
+            seek(to: offset)                        // same audio clip: precise in-clip seek
+        } else {
+            pendingResumeSeek = (clipIndex: k, offset: offset)
+            restart(at: k)                          // jump to clip k; offset applied when it's ready
+        }
+        if !wasPlaying { pause() }                  // a seek must not start playback that was paused
+        journeyElapsed = t                          // reflect the target immediately
+        updateNowPlayingProgress()
     }
 
     /// Set the narrator playback rate (1.0 / 1.25 / 1.5). Applied live to the current clip.
@@ -317,6 +412,7 @@ final class JourneyAudioPlayer: ObservableObject {
             updateNowPlayingInfo()               // beat/clip change: full refresh incl. artwork
         }
 
+        updateJourneyElapsed()                   // snap the whole-journey clock to this clip's start
         if beatChanged { saveResumePosition() }  // beat-granular checkpoint (offset now 0)
     }
 
@@ -388,9 +484,19 @@ final class JourneyAudioPlayer: ObservableObject {
 
     private func url(for source: PlayableClip.Source) -> URL? {
         switch source {
-        case .speech(let text):     return JourneyAudioKey.recordingURL(for: text)
+        case .speech(let text):
+            // Bundled free journeys resolve flat; a premium journey's narration resolves from
+            // its downloaded ODR pack (subdirectory named for the journey id).
+            return JourneyAudioKey.recordingURL(for: text, packSubdirectory: currentDive?.id)
         case .dua(let arabic):      return DuaAudioKey.recordingURL(for: arabic)
-        case .verse(let s, let ay): return Self.verseURL(surah: s, ayah: ay)
+        case .verse(let s, let ay):
+            // Prefer the on-disk copy (offline, and after relaunch); otherwise stream the
+            // remote once and cache it in the background so the next play - and any offline
+            // replay - reads it locally.
+            if let cached = VerseAudioCache.shared.cachedURL(surah: s, ayah: ay) { return cached }
+            guard let remote = Self.verseURL(surah: s, ayah: ay) else { return nil }
+            VerseAudioCache.shared.ensureCached(surah: s, ayah: ay, remote: remote)
+            return remote
         case .pause:                return nil
         }
     }
@@ -451,6 +557,7 @@ final class JourneyAudioPlayer: ObservableObject {
                 guard let self, self.pauseWork == nil else { return }
                 self.currentTime = time.seconds
                 if let d = self.player.currentItem?.duration.seconds, d.isFinite { self.duration = d }
+                self.updateJourneyElapsed()      // advance the whole-journey clock
                 self.updateNowPlayingProgress()  // elapsed/duration only - artwork stays out of the tick
             }
         }
@@ -482,6 +589,10 @@ final class JourneyAudioPlayer: ObservableObject {
         return image
     }
 
+    /// Lock-screen duration/elapsed: the whole journey once resolved, else the current clip.
+    private var nowPlayingDuration: TimeInterval { journeyDuration > 0 ? journeyDuration : duration }
+    private var nowPlayingElapsed: TimeInterval { journeyDuration > 0 ? journeyElapsed : currentTime }
+
     /// Full now-playing refresh - title, current beat, cover artwork, and progress. Called
     /// on play and every beat/clip change only; the artwork is deliberately kept off the
     /// 0.2s tick (see `updateNowPlayingProgress`).
@@ -493,8 +604,8 @@ final class JourneyAudioPlayer: ObservableObject {
         var info: [String: Any] = [
             MPMediaItemPropertyTitle: dive.titleEn,
             MPMediaItemPropertyArtist: "Thaqalayn · \(currentBeatTitle)",
-            MPMediaItemPropertyPlaybackDuration: duration,
-            MPNowPlayingInfoPropertyElapsedPlaybackTime: currentTime,
+            MPMediaItemPropertyPlaybackDuration: nowPlayingDuration,
+            MPNowPlayingInfoPropertyElapsedPlaybackTime: nowPlayingElapsed,
             MPNowPlayingInfoPropertyPlaybackRate: isPlaying ? playbackRate : 0,
         ]
         if let image = coverImage(for: dive) {
@@ -508,8 +619,8 @@ final class JourneyAudioPlayer: ObservableObject {
     /// toggles (pause/resume/seek/setRate) so the cover is never re-sent every tick.
     private func updateNowPlayingProgress() {
         guard var info = MPNowPlayingInfoCenter.default().nowPlayingInfo else { return }
-        info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = currentTime
-        info[MPMediaItemPropertyPlaybackDuration] = duration
+        info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = nowPlayingElapsed
+        info[MPMediaItemPropertyPlaybackDuration] = nowPlayingDuration
         info[MPNowPlayingInfoPropertyPlaybackRate] = isPlaying ? playbackRate : 0
         MPNowPlayingInfoCenter.default().nowPlayingInfo = info
     }
@@ -565,7 +676,7 @@ final class JourneyAudioPlayer: ObservableObject {
             MainActor.assumeIsolated {
                 guard let self, self.currentDive != nil,
                       let event = event as? MPChangePlaybackPositionCommandEvent else { return .commandFailed }
-                self.seek(to: event.positionTime)
+                self.seekJourney(to: event.positionTime)
                 return .success
             }
         }

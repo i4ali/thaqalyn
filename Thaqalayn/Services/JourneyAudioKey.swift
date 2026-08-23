@@ -20,13 +20,20 @@ enum JourneyAudioKey {
         return String(hex.prefix(20))
     }
 
-    /// URL of the bundled recording for this narration string, or nil if none is shipped.
-    /// The app's synchronized-folder build flattens resources into the bundle root, so
-    /// look up flat first; the subdirectory form is a harmless fallback.
-    /// Downloaded (on-demand) packs are resolved by JourneyAudioAvailability (a later task), not here.
-    static func recordingURL(for text: String) -> URL? {
+    /// URL of the recording for this narration string, or nil if none is available.
+    /// Resolution order: the bundled free-tier clips (flattened into the bundle root by the
+    /// synchronized-folder build), then - for a premium journey - its On-Demand Resources
+    /// pack, whose folder reference preserves a subdirectory named for the journey id (only
+    /// resolvable while JourneyAudioAvailability holds the ODR request accessing). The trailing
+    /// "JourneyAudio" form is a harmless fallback for non-flattened builds.
+    ///
+    /// - Parameter packSubdirectory: the active premium journey's id (its ODR pack subdir), or
+    ///   nil for a bundled/free journey.
+    static func recordingURL(for text: String, packSubdirectory: String? = nil) -> URL? {
         let k = key(for: text)
-        return Bundle.main.url(forResource: k, withExtension: "mp3")
-            ?? Bundle.main.url(forResource: k, withExtension: "mp3", subdirectory: "JourneyAudio")
+        if let url = Bundle.main.url(forResource: k, withExtension: "mp3") { return url }
+        if let sub = packSubdirectory,
+           let url = Bundle.main.url(forResource: k, withExtension: "mp3", subdirectory: sub) { return url }
+        return Bundle.main.url(forResource: k, withExtension: "mp3", subdirectory: "JourneyAudio")
     }
 }

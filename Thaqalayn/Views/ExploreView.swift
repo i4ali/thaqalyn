@@ -57,6 +57,17 @@ enum ExploreSection: CaseIterable {
                     destination: .dailyDuas
                 ),
                 ExploreItem(
+                    id: "duasZiyarat",
+                    icon: "text.book.closed.fill",
+                    titleEn: "Duas & Ziyarat",
+                    titleAr: "الأدعية والزيارات",
+                    titleUr: "دعائیں و زیارات",
+                    subtitleEn: "Kumayl, Ashura, Tawassul & more, with recitation",
+                    subtitleAr: "كميل وعاشوراء والتوسل والمزيد مع التلاوة",
+                    subtitleUr: "کمیل، عاشورا، توسل اور مزید، تلاوت کے ساتھ",
+                    destination: .duasZiyarat
+                ),
+                ExploreItem(
                     id: "foods",
                     icon: "leaf.fill",
                     titleEn: "Foods of the Quran",
@@ -150,6 +161,7 @@ struct ExploreItem: Identifiable {
 enum ExploreDestination {
     case lifeMoments
     case dailyDuas
+    case duasZiyarat
     case propheticParallels
     case fasting
     case foods
@@ -164,6 +176,7 @@ struct ExploreView: View {
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var showLifeMoments = false
     @State private var showDailyDuas = false
+    @State private var showDuasZiyarat = false
     @State private var showPropheticParallels = false
     @State private var showFasting = false
     @State private var showPropheticStories = false
@@ -202,6 +215,9 @@ struct ExploreView: View {
         }
         .fullScreenCover(isPresented: $showDailyDuas) {
             DuasView()
+        }
+        .fullScreenCover(isPresented: $showDuasZiyarat) {
+            DuasZiyaratView()
         }
         .fullScreenCover(isPresented: $showPropheticParallels) {
             PropheticParallelsView()
@@ -294,6 +310,8 @@ struct ExploreView: View {
             return "heart.fill"
         case .dailyDuas:
             return "hands.sparkles.fill"
+        case .duasZiyarat:
+            return "text.book.closed.fill"
         case .propheticParallels:
             return "person.2.wave.2.fill"
         case .fasting:
@@ -315,6 +333,8 @@ struct ExploreView: View {
                 showLifeMoments = true
             case .dailyDuas:
                 showDailyDuas = true
+            case .duasZiyarat:
+                showDuasZiyarat = true
             case .propheticParallels:
                 showPropheticParallels = true
             case .fasting:

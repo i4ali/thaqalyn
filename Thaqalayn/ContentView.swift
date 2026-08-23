@@ -12,6 +12,10 @@ extension Notification.Name {
     static let navigateToVerse = Notification.Name("NavigateToVerse")
     static let navigateToJourney = Notification.Name("NavigateToJourney")
     static let navigateToSurahExperience = Notification.Name("NavigateToSurahExperience")
+    /// Reveal (not auto-open) a surah experience: switch to the Journey hub and
+    /// scroll its Inside-the-Surah list to that surah's card, so the user can
+    /// choose Watch or Listen. Posted by the Quran-list Journey tab.
+    static let revealSurahExperience = Notification.Name("RevealSurahExperience")
     static let navigateToDeepDive = Notification.Name("NavigateToDeepDive")
 }
 

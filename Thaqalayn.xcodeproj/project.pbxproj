@@ -7,12 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087F28EEB3E7DD1C868B791D /* surah-anam in Resources */ = {isa = PBXBuildFile; fileRef = EEEC0207F880D831C1AF1F48 /* surah-anam */; settings = {ASSET_TAGS = ("surah-anam", ); }; };
+		117BCA5D992A149709F43964 /* surah-maida in Resources */ = {isa = PBXBuildFile; fileRef = 14365B6A7CEDCD20234BE327 /* surah-maida */; settings = {ASSET_TAGS = ("surah-maida", ); }; };
+		280599F6738F2CA4D46635F6 /* kisa in Resources */ = {isa = PBXBuildFile; fileRef = 21F1320F4D245EC85FF9BC8C /* kisa */; settings = {ASSET_TAGS = (kisa, ); }; };
+		2AF64CB99F1F78B8D94761CD /* surah-anfal in Resources */ = {isa = PBXBuildFile; fileRef = CEAF4317A091879C014FF969 /* surah-anfal */; settings = {ASSET_TAGS = ("surah-anfal", ); }; };
+		2FA8F6F064D700B1296B31C6 /* surah-yusuf in Resources */ = {isa = PBXBuildFile; fileRef = 79A4C8BD45D7B149B4036DC9 /* surah-yusuf */; settings = {ASSET_TAGS = ("surah-yusuf", ); }; };
+		34E1AD2A65175B0DA4DB9671 /* salah in Resources */ = {isa = PBXBuildFile; fileRef = 97903BCF5526F457E0A18F87 /* salah */; settings = {ASSET_TAGS = (salah, ); }; };
+		357FD7ED796BFD48100E101A /* surah-araf in Resources */ = {isa = PBXBuildFile; fileRef = F2FE8A3A5147915F400089F6 /* surah-araf */; settings = {ASSET_TAGS = ("surah-araf", ); }; };
+		5E9E09C4FEF0E4EED2A92B48 /* surah-tawba in Resources */ = {isa = PBXBuildFile; fileRef = 0F33765B7F95BC89809F70BA /* surah-tawba */; settings = {ASSET_TAGS = ("surah-tawba", ); }; };
 		73412EC52E42B89100AE42D0 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 73E0BC202E3D3ABB00E517DE /* Supabase */; };
+		A30662D8B15B73F4C851ECB5 /* shukr in Resources */ = {isa = PBXBuildFile; fileRef = D316723732B68BCD40B85DA4 /* shukr */; settings = {ASSET_TAGS = (shukr, ); }; };
+		A6FE4B681666F6FD328A825E /* taqwa in Resources */ = {isa = PBXBuildFile; fileRef = 80AC097A5A450386DA434B54 /* taqwa */; settings = {ASSET_TAGS = (taqwa, ); }; };
+		A707B901CBAC3AEFB0B1D060 /* surah-hud in Resources */ = {isa = PBXBuildFile; fileRef = D6A17731E5108CA731268AC7 /* surah-hud */; settings = {ASSET_TAGS = ("surah-hud", ); }; };
 		AD4A20260000000000000001 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = AD4A20260000000000000004 /* Adhan */; };
 		AD4A20260000000000000002 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = AD4A20260000000000000005 /* Adhan */; };
+		B7AFCF9AD2D32DA2DCA4E5F9 /* sabr in Resources */ = {isa = PBXBuildFile; fileRef = 83504AF8A948101A1F8F46C6 /* sabr */; settings = {ASSET_TAGS = (sabr, ); }; };
+		BB84768BD0C5F6622ABE24B2 /* ikhlas in Resources */ = {isa = PBXBuildFile; fileRef = C4F1DB208DFB68E38FBA18C4 /* ikhlas */; settings = {ASSET_TAGS = (ikhlas, ); }; };
 		CD19C69D302B97EB005B40C7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD19C69C302B97EB005B40C7 /* WidgetKit.framework */; };
 		CD19C69F302B97EB005B40C7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD19C69E302B97EB005B40C7 /* SwiftUI.framework */; };
 		CD19C6AE302B97EC005B40C7 /* ThaqalaynWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CD19C69A302B97EB005B40C7 /* ThaqalaynWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E847A6330F1054B8ADA4B22F /* surah-nisa in Resources */ = {isa = PBXBuildFile; fileRef = F4C996A350081C1C86DD75FE /* surah-nisa */; settings = {ASSET_TAGS = ("surah-nisa", ); }; };
+		E8DAF3BFCFCA6C6E52B92389 /* surah-yunus in Resources */ = {isa = PBXBuildFile; fileRef = FDA205C2D34989CF97D75433 /* surah-yunus */; settings = {ASSET_TAGS = ("surah-yunus", ); }; };
+		ECAD9089E72DE2289A1FC668 /* surah-ali-imran in Resources */ = {isa = PBXBuildFile; fileRef = 4EFA2E2FFD069F95B4624EF1 /* surah-ali-imran */; settings = {ASSET_TAGS = ("surah-ali-imran", ); }; };
+		EF947106BAD372181B83693A /* surah-baqara in Resources */ = {isa = PBXBuildFile; fileRef = CE09E1E1B4FC1749B2A4F84E /* surah-baqara */; settings = {ASSET_TAGS = ("surah-baqara", ); }; };
+		F96D36F09275B3F75ACC601A /* surah-rad in Resources */ = {isa = PBXBuildFile; fileRef = 704FC71D618288456987B7B3 /* surah-rad */; settings = {ASSET_TAGS = ("surah-rad", ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +65,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F33765B7F95BC89809F70BA /* surah-tawba */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-tawba"; sourceTree = "<group>"; };
+		14365B6A7CEDCD20234BE327 /* surah-maida */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-maida"; sourceTree = "<group>"; };
+		21F1320F4D245EC85FF9BC8C /* kisa */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kisa; sourceTree = "<group>"; };
+		4EFA2E2FFD069F95B4624EF1 /* surah-ali-imran */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-ali-imran"; sourceTree = "<group>"; };
+		704FC71D618288456987B7B3 /* surah-rad */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-rad"; sourceTree = "<group>"; };
 		73E0BC0F2E3D3AB900E517DE /* Thaqalayn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thaqalayn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A4C8BD45D7B149B4036DC9 /* surah-yusuf */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-yusuf"; sourceTree = "<group>"; };
+		80AC097A5A450386DA434B54 /* taqwa */ = {isa = PBXFileReference; lastKnownFileType = folder; path = taqwa; sourceTree = "<group>"; };
+		83504AF8A948101A1F8F46C6 /* sabr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sabr; sourceTree = "<group>"; };
+		97903BCF5526F457E0A18F87 /* salah */ = {isa = PBXFileReference; lastKnownFileType = folder; path = salah; sourceTree = "<group>"; };
+		C4F1DB208DFB68E38FBA18C4 /* ikhlas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ikhlas; sourceTree = "<group>"; };
 		CD19C69A302B97EB005B40C7 /* ThaqalaynWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ThaqalaynWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD19C69C302B97EB005B40C7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CD19C69E302B97EB005B40C7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CD19C6B8302B9826005B40C7 /* ThaqalaynTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThaqalaynTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE09E1E1B4FC1749B2A4F84E /* surah-baqara */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-baqara"; sourceTree = "<group>"; };
+		CEAF4317A091879C014FF969 /* surah-anfal */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-anfal"; sourceTree = "<group>"; };
+		D316723732B68BCD40B85DA4 /* shukr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shukr; sourceTree = "<group>"; };
+		D6A17731E5108CA731268AC7 /* surah-hud */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-hud"; sourceTree = "<group>"; };
+		EEEC0207F880D831C1AF1F48 /* surah-anam */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-anam"; sourceTree = "<group>"; };
+		F2FE8A3A5147915F400089F6 /* surah-araf */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-araf"; sourceTree = "<group>"; };
+		F4C996A350081C1C86DD75FE /* surah-nisa */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-nisa"; sourceTree = "<group>"; };
+		FDA205C2D34989CF97D75433 /* surah-yunus */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-yunus"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -144,6 +180,7 @@
 		73E0BC062E3D3AB900E517DE = {
 			isa = PBXGroup;
 			children = (
+				EAA060CE4CA3920CB671D84A /* OnDemandAudio */,
 				73E0BC112E3D3AB900E517DE /* Thaqalayn */,
 				CD19C6A0302B97EB005B40C7 /* ThaqalaynWidgets */,
 				CD19C6B9302B9826005B40C7 /* ThaqalaynTests */,
@@ -169,6 +206,31 @@
 				CD19C69E302B97EB005B40C7 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAA060CE4CA3920CB671D84A /* OnDemandAudio */ = {
+			isa = PBXGroup;
+			children = (
+				C4F1DB208DFB68E38FBA18C4 /* ikhlas */,
+				21F1320F4D245EC85FF9BC8C /* kisa */,
+				83504AF8A948101A1F8F46C6 /* sabr */,
+				97903BCF5526F457E0A18F87 /* salah */,
+				D316723732B68BCD40B85DA4 /* shukr */,
+				4EFA2E2FFD069F95B4624EF1 /* surah-ali-imran */,
+				EEEC0207F880D831C1AF1F48 /* surah-anam */,
+				CEAF4317A091879C014FF969 /* surah-anfal */,
+				F2FE8A3A5147915F400089F6 /* surah-araf */,
+				CE09E1E1B4FC1749B2A4F84E /* surah-baqara */,
+				D6A17731E5108CA731268AC7 /* surah-hud */,
+				14365B6A7CEDCD20234BE327 /* surah-maida */,
+				F4C996A350081C1C86DD75FE /* surah-nisa */,
+				704FC71D618288456987B7B3 /* surah-rad */,
+				0F33765B7F95BC89809F70BA /* surah-tawba */,
+				FDA205C2D34989CF97D75433 /* surah-yunus */,
+				79A4C8BD45D7B149B4036DC9 /* surah-yusuf */,
+				80AC097A5A450386DA434B54 /* taqwa */,
+			);
+			path = OnDemandAudio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +361,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB84768BD0C5F6622ABE24B2 /* ikhlas in Resources */,
+				280599F6738F2CA4D46635F6 /* kisa in Resources */,
+				B7AFCF9AD2D32DA2DCA4E5F9 /* sabr in Resources */,
+				34E1AD2A65175B0DA4DB9671 /* salah in Resources */,
+				A30662D8B15B73F4C851ECB5 /* shukr in Resources */,
+				ECAD9089E72DE2289A1FC668 /* surah-ali-imran in Resources */,
+				087F28EEB3E7DD1C868B791D /* surah-anam in Resources */,
+				2AF64CB99F1F78B8D94761CD /* surah-anfal in Resources */,
+				357FD7ED796BFD48100E101A /* surah-araf in Resources */,
+				EF947106BAD372181B83693A /* surah-baqara in Resources */,
+				A707B901CBAC3AEFB0B1D060 /* surah-hud in Resources */,
+				117BCA5D992A149709F43964 /* surah-maida in Resources */,
+				E847A6330F1054B8ADA4B22F /* surah-nisa in Resources */,
+				F96D36F09275B3F75ACC601A /* surah-rad in Resources */,
+				5E9E09C4FEF0E4EED2A92B48 /* surah-tawba in Resources */,
+				E8DAF3BFCFCA6C6E52B92389 /* surah-yunus in Resources */,
+				2FA8F6F064D700B1296B31C6 /* surah-yusuf in Resources */,
+				A6FE4B681666F6FD328A825E /* taqwa in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +585,7 @@
 				CODE_SIGN_ENTITLEMENTS = Thaqalayn/Thaqalayn.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 95;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"Thaqalayn/Preview Content\"";
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_PREVIEWS = YES;
@@ -520,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.0;
+				MARKETING_VERSION = 8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -538,7 +618,7 @@
 				CODE_SIGN_ENTITLEMENTS = Thaqalayn/Thaqalayn.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 95;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"Thaqalayn/Preview Content\"";
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_PREVIEWS = YES;
@@ -553,7 +633,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.0;
+				MARKETING_VERSION = 8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -571,7 +651,7 @@
 				CODE_SIGN_ENTITLEMENTS = ThaqalaynWidgets/ThaqalaynWidgetsExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 95;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -584,7 +664,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 8.0;
+				MARKETING_VERSION = 8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn.ThaqalaynWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -605,7 +685,7 @@
 				CODE_SIGN_ENTITLEMENTS = ThaqalaynWidgets/ThaqalaynWidgetsExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 95;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -618,7 +698,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 8.0;
+				MARKETING_VERSION = 8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn.ThaqalaynWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

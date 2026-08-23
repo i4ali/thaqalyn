@@ -116,6 +116,7 @@ class AudioManager: NSObject, ObservableObject {
     
     func playVerse(_ verse: VerseWithTafsir, in surah: Surah) async {
         JourneyAudioPlayer.shared.stop()             // mutual exclusion with journey narration
+        DuaStreamPlayer.shared.stop()                // mutual exclusion with streamed dua recitation
         currentSurah = surah
         currentVerses = [verse] // Single verse mode
         currentVerseIndex = 0
@@ -135,6 +136,7 @@ class AudioManager: NSObject, ObservableObject {
     
     func playVerseSequence(_ verses: [VerseWithTafsir], in surah: Surah, startingFrom verseIndex: Int = 0) async {
         JourneyAudioPlayer.shared.stop()             // mutual exclusion with journey narration
+        DuaStreamPlayer.shared.stop()                // mutual exclusion with streamed dua recitation
         currentSurah = surah
         currentVerses = verses // Keep all verses for sequence playback
         currentVerseIndex = verseIndex

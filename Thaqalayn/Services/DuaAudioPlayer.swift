@@ -26,6 +26,7 @@ final class DuaAudioPlayer: NSObject, ObservableObject {
     func play(key: String, url: URL) {
         TafsirReader.shared.stop()                       // mutual exclusion with TTS
         JourneyAudioPlayer.shared.stop()                 // mutual exclusion with journey narration
+        DuaStreamPlayer.shared.stop()                    // mutual exclusion with streamed recitation
         if currentKey == key, let p = player, isPaused {
             p.play(); isPlaying = true; isPaused = false; return
         }

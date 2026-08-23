@@ -17,6 +17,11 @@ enum WhatsNewDestination: Equatable {
     case surahExperience(String)
     /// Present the Daily Reflection widget explainer sheet (setup + location capture).
     case widgetExplainer
+    /// Open the Duas & Ziyarat library (Explore tab feature), presented over Today.
+    case duasZiyarat
+    /// Open a journey's narrated Listen player directly (the id must be a FREE/bundled journey,
+    /// e.g. "yaqin" - the showcase is opened without a paywall pass).
+    case journeyListen(String)
     // Reserved for later: case journey(String), case tab(Int)
 }
 
@@ -56,6 +61,36 @@ struct WhatsNewItem: Identifiable, Equatable {
 enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
+        WhatsNewItem(
+            id: "journey-listen",
+            sfSymbol: "headphones",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 28).date ?? .distantPast, // placeholder - set at ship time (after the ODR wiring + device pass), latest so this card surfaces first
+            destination: .journeyListen("yaqin"),
+            titleEN: "Listen to a Journey",
+            titleUR: "سفر کو سنیں",
+            titleAR: "استمع إلى الرحلة",
+            blurbEN: "Every Deep Dive and Surah journey can now be heard, not only read. A narrator carries you through the whole journey from start to finish, with the Quran verses and closing duas woven in as real recitation. Tap the headphones on a journey, let the screen dim, and simply listen. Free for Yaqin and al-Fatiha.",
+            blurbUR: "اب ہر ڈیپ ڈائیو اور سورہ سفر صرف پڑھا ہی نہیں، سنا بھی جا سکتا ہے۔ ایک راوی آپ کو پورے سفر میں شروع سے آخر تک لے جاتا ہے، جس میں قرآنی آیات اور اختتامی دعائیں اصل تلاوت کے ساتھ پروئی گئی ہیں۔ کسی بھی سفر پر ہیڈفون دبائیں، اسکرین کو مدھم ہونے دیں، اور بس سنیں۔ سماعت انگریزی میں ہے۔ یقین اور سورہ فاتحہ کے لیے مفت۔",
+            blurbAR: "كل غوص عميق ورحلة سورة يمكن الآن سماعها لا قراءتها فحسب. يأخذك الراوي عبر الرحلة كاملة من البداية إلى النهاية، مع آيات القرآن والأدعية الختامية منسوجةً بتلاوة حقيقية. اضغط على سماعة الرأس في أي رحلة، ودع الشاشة تخفت، واستمع فحسب. السرد باللغة الإنجليزية. مجانًا لليقين وسورة الفاتحة.",
+            ctaEN: "Listen now",
+            ctaUR: "ابھی سنیں",
+            ctaAR: "استمع الآن"
+        ),
+        WhatsNewItem(
+            id: "duas-ziyarat",
+            sfSymbol: "text.book.closed.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 26).date ?? .distantPast, // placeholder - set at ship time (later than the widget's so this card surfaces first)
+            destination: .duasZiyarat,
+            titleEN: "Duas & Ziyarat",
+            titleUR: "دعائیں و زیارات",
+            titleAR: "الأدعية والزيارات",
+            blurbEN: "The great supplications of Shia devotion, now with recitation - Dua Kumayl for Thursday nights, Ziyarat Ashura, Tawassul, Nudba, and Dua al-Ahd. Read each one line by line in Arabic, transliteration, and translation, and as the recitation plays, every word glows gold the moment it is recited - tap any line to jump there.",
+            blurbUR: "شیعہ عبادت کی عظیم دعائیں، اب تلاوت کے ساتھ - جمعرات کی رات کے لیے دعائے کمیل، زیارتِ عاشورا، توسل، ندبہ، اور دعائے عہد۔ ہر ایک کو عربی، رومن اور ترجمے کے ساتھ سطر بہ سطر پڑھیں، اور تلاوت کے دوران ہر لفظ اپنی باری پر سنہری چمکتا ہے - کسی بھی سطر پر ٹیپ کر کے وہیں پہنچیں۔",
+            blurbAR: "أعظم أدعية التشيّع، الآن مع التلاوة - دعاء كميل لليالي الخميس، وزيارة عاشوراء، والتوسل، والندبة، ودعاء العهد. اقرأ كلاً منها سطراً بسطر بالعربية والنقحرة والترجمة، وأثناء التلاوة تضيء كل كلمة بالذهبي لحظة تلاوتها - وانقر أي سطر للانتقال إليه.",
+            ctaEN: "Open the library",
+            ctaUR: "لائبریری کھولیں",
+            ctaAR: "افتح المكتبة"
+        ),
         WhatsNewItem(
             id: "widget-daily-reflection",
             sfSymbol: "square.grid.2x2.fill",

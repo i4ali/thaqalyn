@@ -198,3 +198,7 @@ video_output/
 # Loose screenshots / temp images at repo root
 /temp.png
 /Screenshot*.png
+journey-audio-render/
+
+# Duas & Ziyarat recitation audio cache (downloaded by scripts/align_special_duas.py)
+/scripts/special_duas_src/audio/

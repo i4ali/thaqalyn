@@ -4,10 +4,11 @@
 //
 //  One surah row in the Quran-tab list (browse + search): the navigation card
 //  plus the attached Read & Tafsir | Journey mode toggle. The card and the Read
-//  tab open the reading view; the Journey tab opens the immersive experience
-//  (premium-gated, PREMIUM chip - never a lock). Surahs without a built
-//  experience show the same toggle with the Journey tab greyed out and marked
-//  SOON. Theme-adaptive (emerald + standard).
+//  tab open the reading view; the Journey tab hands off to the Journey hub, which
+//  reveals this surah's Inside-the-Surah card (scroll + highlight) so the reader
+//  can choose Watch or Listen (PREMIUM chip on the toggle - never a lock). Surahs
+//  without a built experience show the same toggle with the Journey tab greyed
+//  out and marked SOON. Theme-adaptive (emerald + standard).
 //
 
 import SwiftUI
@@ -19,8 +20,6 @@ struct SurahListRow: View {
     let surahWithTafsir: SurahWithTafsir
     @ObservedObject private var tm = ThemeManager.shared
     @ObservedObject private var premiumManager = PremiumManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
-    @State private var presentedExperience: PresentedSurahExperience?
 
     /// The "Inside the Surah" experience for this surah, when one is built.
     private var experience: SurahExperienceDescriptor? {
@@ -47,7 +46,7 @@ struct SurahListRow: View {
                     readDestination: {
                         SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)
                     },
-                    onJourney: { handleTap(d) },
+                    onJourney: { revealJourney(d) },
                     showsOuterBorder: false
                 )
             } else {
@@ -70,36 +69,17 @@ struct SurahListRow: View {
                 .stroke(tm.strokeColor, lineWidth: 1)
                 .allowsHitTesting(false)
         }
-        .fullScreenCover(item: $presentedExperience) { p in
-            if let d = SurahExperienceDescriptor.byId(p.id), let dive = d.dive {
-                DeepDiveView(dive: dive,
-                             onClose: { presentedExperience = nil },
-                             onReadSurah: {
-                                 // Dismiss the descent, then hand off to the surah -
-                                 // MainTabView's .navigateToVerse listener stashes the
-                                 // deep link and HomeView pushes SurahDetailView.
-                                 presentedExperience = nil
-                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-                                     NotificationCenter.default.post(
-                                         name: .navigateToVerse, object: nil,
-                                         userInfo: ["surah": d.surahNumber, "verse": 1])
-                                 }
-                             },
-                             coverAssetName: d.coverAssetName,
-                             lockedPaywallContext: premiumManager.canAccessSurahExperience(d.id) ? nil
-                                : PaywallContext(coverAssetName: d.coverAssetName,
-                                                 eyebrow: "\(JourneyStrings.surahJourneyEyebrow(languageManager.selectedLanguage)) \u{00B7} \(d.title(languageManager.selectedLanguage))"))
-            }
-        }
     }
 
-    /// The Journey toggle spends real effort making this tap wanted - it breathes, sweeps
-    /// light and rises embers. So the tap always opens the descent; a gated reader simply
-    /// gets the veiled preview rather than being bounced to a page that sells them
-    /// something else. The gate is applied where the experience is presented.
-    private func handleTap(_ d: SurahExperienceDescriptor) {
+    /// The Journey tab no longer dives straight in - it hands off to the Journey hub,
+    /// which reveals this surah's Inside-the-Surah card (scroll + highlight) so the
+    /// reader chooses Watch or Listen. The small delay lets the tab's press-squish play
+    /// before the tab switch; gating is applied where each mode is presented.
+    private func revealJourney(_ d: SurahExperienceDescriptor) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-            presentedExperience = PresentedSurahExperience(id: d.id)
+            NotificationCenter.default.post(
+                name: .revealSurahExperience, object: nil,
+                userInfo: ["id": d.id])
         }
     }
 }

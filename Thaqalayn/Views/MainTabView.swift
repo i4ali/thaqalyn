@@ -13,13 +13,24 @@ struct MainTabView: View {
     @StateObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var tabBarVisibility = TabBarVisibility.shared
     @StateObject private var listen = JourneyListenPresenter.shared
+    @StateObject private var duaStream = DuaStreamPlayer.shared
     @State private var selectedTab = 0
+    /// The dua whose reader is being shown full-screen from the docked dua mini-player
+    /// (reopening it from any tab). The Duas & Ziyarat library pushes its own copy.
+    @State private var expandedDua: SpecialDua?
 
     /// The docked journey mini-player shows when a journey is loaded but its full-screen
     /// player is minimized - and never while the tab bar itself is hidden (immersive
     /// screens), since it docks against that bar.
     private var showMiniPlayer: Bool {
         listen.dive != nil && !listen.expanded && !tabBarVisibility.isHidden
+    }
+
+    /// The docked dua mini-player shows while a streamed recitation is loaded (playing
+    /// or paused). Starting a stream closes the journey Listen session (and vice versa),
+    /// so the two bars never stack.
+    private var showDuaMiniPlayer: Bool {
+        duaStream.currentDua != nil && listen.dive == nil && !tabBarVisibility.isHidden
     }
 
     // Localized label for each tab, driven by the global Settings → Language picker.
@@ -149,8 +160,18 @@ struct MainTabView: View {
                 .padding(.bottom, JourneyMiniPlayer.bottomInset)
                 .transition(.move(edge: .bottom).combined(with: .opacity))
         }
+
+        // Docked dua-recitation mini-player, floating just above the tab bar. Persists
+        // across all tabs while a streamed dua/ziyarat recitation is loaded; tapping it
+        // reopens the dua's reader full-screen.
+        if showDuaMiniPlayer {
+            DuaMiniPlayer { expandedDua = duaStream.currentDua }
+                .padding(.bottom, JourneyMiniPlayer.bottomInset)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+        }
         }
         .animation(.spring(response: 0.38, dampingFraction: 0.86), value: showMiniPlayer)
+        .animation(.spring(response: 0.38, dampingFraction: 0.86), value: showDuaMiniPlayer)
         // The full-screen journey player - hosted once at the root so minimizing it drops
         // to the docked mini-player instead of tearing narration down. Dismissal (chevron
         // or a swipe) minimizes rather than stops; the mini-player keeps the controls.
@@ -165,6 +186,17 @@ struct MainTabView: View {
         // A locked "Listen" tap routes here through the presenter.
         .fullScreenCover(item: $listen.paywall) { ctx in
             PaywallView(context: ctx)
+        }
+        // The dua reader, reopened from the docked dua mini-player. Wrapped in its own
+        // NavigationView (the same shell DuasZiyaratView gives it) so the toolbar Back
+        // button dismisses the cover; the recitation keeps playing either way.
+        .fullScreenCover(item: $expandedDua) { dua in
+            NavigationView {
+                SpecialDuaDetailView(dua: dua)
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .preferredColorScheme(themeManager.colorScheme)
+            .darkScreenAura()
         }
         .onReceive(NotificationCenter.default.publisher(for: .navigateToVerse)) { notification in
             guard let userInfo = notification.userInfo,
@@ -194,6 +226,17 @@ struct MainTabView: View {
 
             // Widget doorway beat -> the Journey hub auto-opens the experience.
             DeepLinkRouter.shared.pendingSurahExperienceId = experienceId
+            selectedTab = 4
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .revealSurahExperience)) { notification in
+            guard let userInfo = notification.userInfo,
+                  let experienceId = userInfo["id"] as? String else { return }
+
+            // Quran-list Journey tab -> the Journey hub reveals the experience's card
+            // (scroll + highlight) so the user chooses Watch or Listen, rather than
+            // diving straight in. The hub reads this live, so tapping a different surah
+            // while the reveal list is open retargets it.
+            DeepLinkRouter.shared.revealSurahExperienceId = experienceId
             selectedTab = 4
         }
         .onReceive(NotificationCenter.default.publisher(for: .navigateToDeepDive)) { notification in

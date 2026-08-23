@@ -22,6 +22,16 @@ struct JourneyListenView: View {
 
     @StateObject private var player = JourneyAudioPlayer.shared
     @StateObject private var themeManager = ThemeManager.shared
+    /// Drives the "Preparing this journey…" state while a premium journey's on-demand pack
+    /// downloads before playback can start. The presenter owns starting playback (after the
+    /// download); this view only reflects it.
+    @ObservedObject private var presenter = JourneyListenPresenter.shared
+
+    /// The scrubber's own value. Driven from the player's live `journeyElapsed` via an
+    /// explicit subscription (see `scrubber`), except while the user is dragging - so it
+    /// tracks playback and can never stick at a stale position after a seek.
+    @State private var isScrubbing = false
+    @State private var scrubValue: TimeInterval = 0
 
     /// The narrator rates offered (matches JourneyAudioPlayer.setRate's live-applied values).
     private let rates: [Float] = [1.0, 1.25, 1.5]
@@ -46,9 +56,10 @@ struct JourneyListenView: View {
         // neutral text remain legible even under the legacy (light) theme.
         .preferredColorScheme(.dark)
         .onAppear {
-            // Audio already drives this screen; only kick playback off when a different dive
-            // (or none) is loaded. play(dive:) resumes from the saved position.
-            if player.currentDive?.id != dive.id {
+            // The presenter owns starting playback (for a premium journey it must wait for the
+            // on-demand pack). Only self-start in the plain case: nothing is preparing and a
+            // different dive is loaded - e.g. re-expanding is a no-op since the guard matches.
+            if presenter.preparing == nil, player.currentDive?.id != dive.id {
                 player.play(dive: dive)
             }
         }
@@ -76,7 +87,60 @@ struct JourneyListenView: View {
             .padding(.horizontal, 20)
             .padding(.top, 8)
             .padding(.bottom, 24)
+            // While a premium journey's on-demand pack downloads, the transport is dimmed and a
+            // "Preparing…" overlay covers the panel until playback can begin.
+            .opacity(presenter.preparing == nil ? 1 : 0.15)
+
+            if let prep = presenter.preparing {
+                preparingOverlay(prep, tint: tint)
+                    .transition(.opacity)
+            }
         }
+        .animation(.easeInOut(duration: 0.25), value: presenter.preparing)
+    }
+
+    /// Covers the transport while a premium journey's narration downloads on first Listen
+    /// (Apple-hosted on-demand), then clears itself when playback starts. On failure it offers
+    /// a retry. Bundled journeys never show this.
+    @ViewBuilder
+    private func preparingOverlay(_ prep: JourneyListenPresenter.Preparing, tint: Color) -> some View {
+        VStack(spacing: 16) {
+            switch prep {
+            case .downloading(let progress):
+                ProgressView(value: progress > 0 ? progress : nil)
+                    .progressViewStyle(.circular)
+                    .tint(tint)
+                Text("Preparing this journey…")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(.white.opacity(0.9))
+                if progress > 0 {
+                    Text("\(Int(progress * 100))%")
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundColor(.white.opacity(0.55))
+                        .monospacedDigit()
+                }
+            case .failed:
+                Image(systemName: "wifi.exclamationmark")
+                    .font(.system(size: 30, weight: .light))
+                    .foregroundColor(.white.opacity(0.85))
+                Text("Couldn't download this journey")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(.white.opacity(0.9))
+                Text("Check your connection and try again.")
+                    .font(.system(size: 13))
+                    .foregroundColor(.white.opacity(0.55))
+                Button { presenter.retryPreparing() } label: {
+                    Text("Retry")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(tint)
+                        .padding(.horizontal, 24).padding(.vertical, 10)
+                        .background(Capsule().fill(.white.opacity(0.12)))
+                }
+                .padding(.top, 4)
+            }
+        }
+        .padding(28)
+        .frame(maxWidth: 300)
     }
 
     // MARK: - Background - the cover blurred until only its shape survives, darkened for legibility.
@@ -203,28 +267,43 @@ struct JourneyListenView: View {
         .animation(.easeInOut(duration: 0.25), value: player.currentBeatTitle)
     }
 
-    /// Scrubber over the current clip - elapsed on the left, total on the right. A reflective
-    /// `.pause` clip reports its length as `duration` with `currentTime` at 0; that's fine.
+    /// Scrubber over the WHOLE journey - cumulative elapsed on the left, the journey's total
+    /// length on the right - seeking anywhere across all the stitched clips. Until the clip
+    /// durations resolve (first play measures the streamed verses, then they're cached) it
+    /// falls back to the current clip's readout. Dragging commits the seek on release.
     private func scrubber(tint: Color) -> some View {
-        VStack(spacing: 8) {
+        let total = player.journeyDuration > 0 ? player.journeyDuration : max(player.duration, 1)
+        return VStack(spacing: 8) {
             Slider(
-                value: Binding(
-                    get: { player.currentTime },
-                    set: { player.seek(to: $0) }
-                ),
-                in: 0...max(player.duration, 1)
+                value: $scrubValue,
+                in: 0...max(total, 1),
+                onEditingChanged: { editing in
+                    isScrubbing = editing
+                    if !editing {
+                        if player.journeyDuration > 0 { player.seekJourney(to: scrubValue) }
+                        else { player.seek(to: scrubValue) }
+                    }
+                }
             )
             .tint(tint)
 
             HStack {
-                Text(formatTime(player.currentTime))
+                Text(formatTime(scrubValue))
                     .font(.system(size: 12, weight: .medium))
                     .foregroundColor(.white.opacity(0.55))
                 Spacer()
-                Text(formatTime(player.duration))
+                Text(formatTime(total))
                     .font(.system(size: 12, weight: .medium))
                     .foregroundColor(.white.opacity(0.55))
             }
+        }
+        // Track live playback via an explicit subscription (never a captured value), so the
+        // scrubber follows `journeyElapsed` and can't freeze after a seek. Paused only while
+        // the user is actively dragging.
+        .onReceive(player.$journeyElapsed) { v in
+            guard !isScrubbing else { return }
+            let cap = player.journeyDuration > 0 ? player.journeyDuration : max(player.duration, 1)
+            scrubValue = min(max(v, 0), max(cap, 1))
         }
     }
 

@@ -34,5 +34,11 @@ final class DeepLinkRouter: ObservableObject {
     /// cleared) by JourneyHubView.
     @Published var pendingSurahExperienceId: String? = nil
 
+    /// The surah-experience id the Journey hub's Inside-the-Surah reveal list should
+    /// currently be showing (scrolled to + highlighted). Set by the Quran-list Journey
+    /// tab; retargeted live if another surah's Journey tab is tapped while the list is
+    /// still open; cleared when that list is dismissed. Distinct from the auto-open path.
+    @Published var revealSurahExperienceId: String? = nil
+
     private init() {}
 }
