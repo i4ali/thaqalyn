@@ -15,12 +15,8 @@ import SwiftUI
 // MARK: - Localization
 
 private enum BookmarkSpotlightStrings {
-    static func eyebrow(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "آياتك المحفوظة"; case .urdu: return "محفوظ کردہ آیات"; default: return "Your bookmarks" }
-    }
-    static func allBookmarks(_ n: Int, _ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "كل الآيات المحفوظة (\(n))"; case .urdu: return "تمام محفوظ آیات (\(n))"; default: return "All bookmarks (\(n))" }
-    }
+    static let eyebrow = "Your bookmarks"
+    static func allBookmarks(_ n: Int) -> String { "All bookmarks (\(n))" }
 }
 
 // MARK: - Card
@@ -29,11 +25,9 @@ private enum BookmarkSpotlightStrings {
 struct BookmarkSpotlightCard: View {
     @ObservedObject private var bookmarkManager = BookmarkManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var dataManager = DataManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var latest: Bookmark? {
         bookmarkManager.bookmarks.max(by: { $0.createdAt < $1.createdAt })
@@ -77,30 +71,28 @@ struct BookmarkSpotlightCard: View {
         surahWithTafsir(for: bookmark)?.verses.first(where: { $0.number == bookmark.verseNumber })
     }
 
-    /// Live translation in the reading language when the verse resolves (so Urdu
-    /// readers see Urdu); the snapshot stored on the bookmark otherwise.
+    /// Live translation when the verse resolves; the snapshot stored on the
+    /// bookmark otherwise.
     private func translation(for bookmark: Bookmark) -> String {
-        liveVerse(for: bookmark)?.displayTranslation(for: lang) ?? bookmark.verseTranslation
+        liveVerse(for: bookmark)?.translation ?? bookmark.verseTranslation
     }
 
     private func arabicText(for bookmark: Bookmark) -> String {
         liveVerse(for: bookmark)?.arabicText ?? bookmark.verseText
     }
 
-    /// Latin curly quotes misbehave around RTL text — Urdu renders unquoted.
     private func translationDisplay(for bookmark: Bookmark) -> String {
-        let text = translation(for: bookmark)
-        return lang == .urdu ? text : "\u{201C}\(text)\u{201D}"
+        "\u{201C}\(translation(for: bookmark))\u{201D}"
     }
 
     // MARK: - Midnight Emerald
 
     private func emeraldCard(_ bookmark: Bookmark) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(BookmarkSpotlightStrings.eyebrow(lang).uppercased())
-                .emEyebrow(lang, size: 11, tracking: 2)
+            Text(BookmarkSpotlightStrings.eyebrow.uppercased())
+                .emEyebrow(size: 11, tracking: 2)
                 .foregroundColor(themeManager.accentColor)
-                .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
 
             EmCard {
                 VStack(spacing: 0) {
@@ -159,9 +151,8 @@ struct BookmarkSpotlightCard: View {
                 .lineSpacing(3 * readingSettings.scale)
                 .foregroundColor(themeManager.secondaryText)
                 .lineLimit(2)
-                .multilineTextAlignment(lang == .urdu ? .trailing : .leading)
-                .frame(maxWidth: .infinity, alignment: lang == .urdu ? .trailing : .leading)
-                .environment(\.layoutDirection, lang == .urdu ? .rightToLeft : .leftToRight)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(17)
         .contentShape(Rectangle())
@@ -171,11 +162,10 @@ struct BookmarkSpotlightCard: View {
 
     private func legacyCard(_ bookmark: Bookmark) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(BookmarkSpotlightStrings.eyebrow(lang).uppercased())
-                .emEyebrow(lang, size: 13, tracking: 0.4)
+            Text(BookmarkSpotlightStrings.eyebrow.uppercased())
+                .emEyebrow(size: 13, tracking: 0.4)
                 .foregroundColor(themeManager.secondaryText)
-                .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .frame(maxWidth: .infinity, alignment: .leading)
 
             VStack(spacing: 0) {
                 spotlightLink(bookmark) {
@@ -230,9 +220,8 @@ struct BookmarkSpotlightCard: View {
                 .lineSpacing(2 * readingSettings.scale)
                 .foregroundColor(themeManager.secondaryText)
                 .lineLimit(2)
-                .multilineTextAlignment(lang == .urdu ? .trailing : .leading)
-                .frame(maxWidth: .infinity, alignment: lang == .urdu ? .trailing : .leading)
-                .environment(\.layoutDirection, lang == .urdu ? .rightToLeft : .leftToRight)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(16)
         .contentShape(Rectangle())
@@ -267,7 +256,7 @@ struct BookmarkSpotlightCard: View {
 
     private func footerRow(color: Color) -> some View {
         HStack {
-            Text(BookmarkSpotlightStrings.allBookmarks(bookmarkManager.bookmarks.count, lang))
+            Text(BookmarkSpotlightStrings.allBookmarks(bookmarkManager.bookmarks.count))
                 .font(.system(size: 12, weight: .semibold))
                 .foregroundColor(color)
             Spacer()
@@ -278,7 +267,6 @@ struct BookmarkSpotlightCard: View {
         .padding(.horizontal, 17)
         .padding(.vertical, 13)
         .contentShape(Rectangle())
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 }
 

@@ -19,7 +19,6 @@ struct DuaMiniPlayer: View {
 
     @ObservedObject private var stream = DuaStreamPlayer.shared
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
 
     /// Glass tint layered over `.ultraThinMaterial` - mirrors JourneyMiniPlayer /
     /// EmeraldTabBar so the bars read as one floating family.
@@ -53,7 +52,7 @@ struct DuaMiniPlayer: View {
                 HStack(spacing: 12) {
                     cover(dua)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(dua.title(for: languageManager.selectedLanguage))
+                        Text(dua.titleEn)
                             .font(EmType.serif(18, .semiBold))
                             .foregroundColor(tm.primaryText)
                             .lineLimit(1)

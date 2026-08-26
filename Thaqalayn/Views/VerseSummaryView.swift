@@ -355,15 +355,9 @@ struct VerseSummaryView: View {
         layer3_ar: nil,
         layer4_ar: nil,
         layer5_ar: nil,
-        layer1_fr: nil,
-        layer2_fr: nil,
-        layer3_fr: nil,
-        layer4_fr: nil,
-        layer5_fr: nil,
         layer2short: "The Bismillah invokes Allah's infinite mercy and compassion.",
         layer2short_urdu: nil,
         layer2short_ar: nil,
-        layer2short_fr: nil,
         quickOverview: nil
     )
 

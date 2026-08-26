@@ -7,55 +7,28 @@
 
 import SwiftUI
 
-// MARK: - Today localization
-// Language-driven copy for the Today tab (greeting, section labels, buttons),
-// keyed off the global Settings → Language picker. English is stored in natural
-// case; call sites that render small-caps apply `.uppercased()` (a no-op for
-// Arabic/Urdu). The Hijri date pill is intentionally kept English.
+// MARK: - Today copy
+// Copy for the Today tab (greeting, section labels, buttons). English is stored
+// in natural case; call sites that render small-caps apply `.uppercased()`.
 private enum TodayStrings {
-    static func greeting(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "السلام عليكم"; case .urdu: return "السلام علیکم"; default: return "Assalamu alaykum" }
+    static let greeting = "Assalamu alaykum"
+    /// Greeting with the user's name appended. Falls back to the bare greeting
+    /// when no name is set.
+    static func greeting(name: String) -> String {
+        guard !name.isEmpty else { return greeting }
+        return greeting + ", " + name
     }
-    /// Greeting with the user's name appended (RTL-aware separator). Falls back
-    /// to the bare greeting when no name is set.
-    static func greeting(name: String, _ l: CommentaryLanguage) -> String {
-        let base = greeting(l)
-        guard !name.isEmpty else { return base }
-        return base + (l.isRTL ? "، " : ", ") + name
-    }
-    static func today(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "اليوم"; case .urdu: return "آج"; default: return "Today" }
-    }
-    static func reminderEyebrow(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "تذكير اليوم"; case .urdu: return "آج کی نصیحت"; default: return "A reminder for today" }
-    }
-    static func continueReading(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "متابعة القراءة"; case .urdu: return "مطالعہ جاری رکھیں"; default: return "Continue reading" }
-    }
-    static func duaOfTheDay(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "دعاء اليوم"; case .urdu: return "آج کی دعا"; default: return "Du'a of the day" }
-    }
-    static func startJourney(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "ابدأ رحلتك"; case .urdu: return "اپنا سفر شروع کریں"; default: return "Start your journey" }
-    }
-    static func openFatiha(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "افتح سورة الفاتحة"; case .urdu: return "سورۃ الفاتحہ کھولیں"; default: return "Open Surah Al-Fatiha" }
-    }
-    static func begin(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "ابدأ"; case .urdu: return "شروع کریں"; default: return "Begin" }
-    }
-    static func resume(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "استئناف"; case .urdu: return "جاری رکھیں"; default: return "Resume" }
-    }
-    static func share(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "مشاركة"; case .urdu: return "شیئر کریں"; default: return "Share" }
-    }
-    static func verseOf(_ n: Int, _ total: Int, _ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "الآية \(n) من \(total)"; case .urdu: return "آیت \(n) از \(total)"; default: return "Verse \(n) of \(total)" }
-    }
-    static func percentComplete(_ p: Int, _ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return "\(p)% مكتمل"; case .urdu: return "\(p)% مکمل"; default: return "\(p)% complete" }
-    }
+    static let today = "Today"
+    static let reminderEyebrow = "A reminder for today"
+    static let continueReading = "Continue reading"
+    static let duaOfTheDay = "Du'a of the day"
+    static let startJourney = "Start your journey"
+    static let openFatiha = "Open Surah Al-Fatiha"
+    static let begin = "Begin"
+    static let resume = "Resume"
+    static let share = "Share"
+    static func verseOf(_ n: Int, _ total: Int) -> String { "Verse \(n) of \(total)" }
+    static func percentComplete(_ p: Int) -> String { "\(p)% complete" }
 }
 
 struct TodayView: View {
@@ -63,7 +36,6 @@ struct TodayView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var dailyVerse = DailyVerseProvider.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var duasManager = DuasManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var profile = UserProfileManager.shared
@@ -155,8 +127,7 @@ struct TodayView: View {
 
                 DailyReminderBanner(
                     selection: dailyVerse.today,
-                    headline: reminderHeadline.text,
-                    isUrdu: reminderHeadline.isUrdu,
+                    headline: reminderHeadline,
                     surahName: surahName(for: dailyVerse.today.surah),
                     themeManager: themeManager,
                     onTap: { openMessageSource() }
@@ -206,16 +177,13 @@ struct TodayView: View {
     /// come from quran_data.json (the old pool inlined its own English; the new one
     /// stores references only), so Urdu readers finally get the Jawadi translation
     /// rather than silently falling back to English.
-    private var reminderHeadline: (text: String, isUrdu: Bool) {
+    private var reminderHeadline: String {
         guard let verse = dataManager.getVerse(surah: dailyVerse.today.surah,
                                                verse: dailyVerse.today.verse) else {
             print("⚠️ TodayView: daily verse \(dailyVerse.today.id) did not hydrate")
-            return ("", false)
+            return ""
         }
-        if languageManager.selectedLanguage == .urdu, verse.usesUrduTranslation(for: .urdu) {
-            return (verse.displayTranslation(for: .urdu), true)
-        }
-        return (verse.translation, false)
+        return verse.translation
     }
 
     private func surahName(for surahNumber: Int) -> String {
@@ -290,7 +258,7 @@ struct TodayView: View {
     private var greeting: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack(spacing: 6) {
-                Text(TodayStrings.greeting(name: profile.greetingName, languageManager.selectedLanguage))
+                Text(TodayStrings.greeting(name: profile.greetingName))
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .lineLimit(1)
@@ -299,7 +267,7 @@ struct TodayView: View {
                     .foregroundColor(themeManager.accentColor)
             }
 
-            Text(TodayStrings.today(languageManager.selectedLanguage))
+            Text(TodayStrings.today)
                 .font(.system(size: 32, weight: .heavy))
                 .kerning(-0.6)
                 .foregroundColor(themeManager.primaryText)
@@ -307,7 +275,6 @@ struct TodayView: View {
             Spacer().frame(height: 0)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
 }
 
@@ -356,11 +323,9 @@ private struct HijriDatePill: View {
 private struct DailyReminderBanner: View {
     let selection: DailyVerseSelection
     let headline: String
-    let isUrdu: Bool
     let surahName: String
     let themeManager: ThemeManager
     let onTap: () -> Void
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
 
     private var bannerGradient: LinearGradient {
         themeManager.accentGradient
@@ -368,7 +333,7 @@ private struct DailyReminderBanner: View {
 
     /// Latin curly quotes misbehave around RTL text — Urdu renders unquoted.
     private var headlineText: String {
-        isUrdu ? headline : "\u{201C}\(headline)\u{201D}"
+        "\u{201C}\(headline)\u{201D}"
     }
 
     private var sourceLabel: String {
@@ -400,19 +365,17 @@ private struct DailyReminderBanner: View {
                         Image(systemName: "sparkles")
                             .font(.system(size: 14))
                             .foregroundColor(.white.opacity(0.92))
-                        Text(TodayStrings.reminderEyebrow(languageManager.selectedLanguage).uppercased())
-                            .emEyebrow(languageManager.selectedLanguage, size: 11, tracking: 1.3)
+                        Text(TodayStrings.reminderEyebrow.uppercased())
+                            .emEyebrow(size: 11, tracking: 1.3)
                             .foregroundColor(.white.opacity(0.92))
                     }
 
                     Text(headlineText)
-                        .font(isUrdu ? EmType.arabic(20) : .system(size: 19, weight: .bold))
-                        .kerning(isUrdu ? 0 : -0.2)
-                        .lineSpacing(isUrdu ? 7 : 3)
+                        .font(.system(size: 19, weight: .bold))
+                        .kerning(-0.2)
+                        .lineSpacing(3)
                         .foregroundColor(.white)
-                        .frame(maxWidth: 270, alignment: isUrdu ? .trailing : .leading)
-                        .multilineTextAlignment(isUrdu ? .trailing : .leading)
-                        .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
+                        .frame(maxWidth: 270, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
 
                     Text(sourceLabel)
@@ -421,7 +384,6 @@ private struct DailyReminderBanner: View {
                 }
                 .padding(18)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             }
             .background(
                 RoundedRectangle(cornerRadius: 22)
@@ -436,7 +398,7 @@ private struct DailyReminderBanner: View {
         .buttonStyle(PlainButtonStyle())
         .contextMenu {
             ShareLink(item: shareText) {
-                Label(TodayStrings.share(languageManager.selectedLanguage), systemImage: "square.and.arrow.up")
+                Label(TodayStrings.share, systemImage: "square.and.arrow.up")
             }
         }
         .accessibilityLabel("\(headline). \(sourceLabel). Double tap to open verse.")
@@ -450,7 +412,6 @@ private struct ContinueReadingHero: View {
     let themeManager: ThemeManager
     let onResume: () -> Void
     let onBegin: () -> Void
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
 
     private static let relativeFormatter: RelativeDateTimeFormatter = {
         let f = RelativeDateTimeFormatter()
@@ -458,24 +419,19 @@ private struct ContinueReadingHero: View {
         return f
     }()
 
-    private var isRTL: Bool { languageManager.selectedLanguage.isRTL }
 
-    /// Relative timestamp ("2h ago") in the active reading language.
+    /// Relative timestamp ("2h ago").
     private func relativeString(_ date: Date) -> String {
         let f = Self.relativeFormatter
-        switch languageManager.selectedLanguage {
-        case .urdu:   f.locale = Locale(identifier: "ur")
-        case .arabic: f.locale = Locale(identifier: "ar")
-        default:      f.locale = Locale(identifier: "en")
-        }
+        f.locale = Locale(identifier: "en")
         return f.localizedString(for: date, relativeTo: Date())
     }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                Text(TodayStrings.continueReading(languageManager.selectedLanguage).uppercased())
-                    .emEyebrow(languageManager.selectedLanguage, size: 13, tracking: 0.4)
+                Text(TodayStrings.continueReading.uppercased())
+                    .emEyebrow(size: 13, tracking: 0.4)
                     .foregroundColor(themeManager.secondaryText)
                 Spacer()
                 if let info = info {
@@ -484,7 +440,6 @@ private struct ContinueReadingHero: View {
                         .foregroundColor(themeManager.tertiaryText)
                 }
             }
-            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
 
             cardBody
         }
@@ -528,7 +483,7 @@ private struct ContinueReadingHero: View {
                 Text(surah.surah.englishName)
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
-                Text("\(TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount, languageManager.selectedLanguage)) · \(surah.surah.englishNameTranslation)")
+                Text("\(TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount)) · \(surah.surah.englishNameTranslation)")
                     .font(.system(size: 12))
                     .foregroundColor(themeManager.tertiaryText)
                     .lineLimit(1)
@@ -553,15 +508,12 @@ private struct ContinueReadingHero: View {
                 .environment(\.layoutDirection, .rightToLeft)
                 .foregroundColor(themeManager.primaryText)
 
-            Text(languageManager.selectedLanguage == .urdu
-                 ? verse.displayTranslation(for: .urdu)
-                 : "\u{201C}\(verse.displayTranslation(for: languageManager.selectedLanguage))\u{201D}")
+            Text("\u{201C}\(verse.translation)\u{201D}")
                 .font(.system(size: 12.5))
                 .lineSpacing(2)
                 .foregroundColor(themeManager.secondaryText)
-                .multilineTextAlignment(languageManager.selectedLanguage == .urdu ? .trailing : .leading)
-                .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage == .urdu ? .trailing : .leading)
-                .environment(\.layoutDirection, languageManager.selectedLanguage == .urdu ? .rightToLeft : .leftToRight)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(14)
         .background(
@@ -586,7 +538,7 @@ private struct ContinueReadingHero: View {
                 }
                 .frame(height: 6)
 
-                Text(TodayStrings.percentComplete(Int(info.progress * 100), languageManager.selectedLanguage))
+                Text(TodayStrings.percentComplete(Int(info.progress * 100)))
                     .font(.system(size: 11, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -595,7 +547,7 @@ private struct ContinueReadingHero: View {
                 HStack(spacing: 6) {
                     Image(systemName: "play.fill")
                         .font(.system(size: 12))
-                    Text(TodayStrings.resume(languageManager.selectedLanguage))
+                    Text(TodayStrings.resume)
                         .font(.system(size: 13, weight: .bold))
                 }
                 .foregroundColor(.white)
@@ -610,15 +562,15 @@ private struct ContinueReadingHero: View {
     @ViewBuilder
     private var emptyCard: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(TodayStrings.startJourney(languageManager.selectedLanguage))
+            Text(TodayStrings.startJourney)
                 .font(.system(size: 16, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
-            Text(TodayStrings.openFatiha(languageManager.selectedLanguage))
+            Text(TodayStrings.openFatiha)
                 .font(.system(size: 13))
                 .foregroundColor(themeManager.secondaryText)
 
             Button(action: onBegin) {
-                Text(TodayStrings.begin(languageManager.selectedLanguage))
+                Text(TodayStrings.begin)
                     .font(.system(size: 14, weight: .bold))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
@@ -627,8 +579,7 @@ private struct ContinueReadingHero: View {
             }
             .buttonStyle(PlainButtonStyle())
         }
-        .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
-        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     // MARK: - Theme tokens
@@ -665,7 +616,6 @@ private struct ContinueReadingHero: View {
 private struct DuaOfTheDayCard: View {
     let dua: DailyDua
     let themeManager: ThemeManager
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         PressableNavLink {
@@ -682,10 +632,10 @@ private struct DuaOfTheDayCard: View {
                 .frame(width: 28, height: 28)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(TodayStrings.duaOfTheDay(languageManager.selectedLanguage))
+                    Text(TodayStrings.duaOfTheDay)
                         .font(.system(size: 12, weight: .bold))
                         .foregroundColor(themeManager.secondaryText)
-                    Text(dua.situation(for: languageManager.selectedLanguage))
+                    Text(dua.situationEn)
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
@@ -702,7 +652,6 @@ private struct DuaOfTheDayCard: View {
             }
             .padding(14)
             .background(cardBackground)
-            .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
         }
     }
 
@@ -732,7 +681,6 @@ private struct EmeraldTodayView: View {
     @ObservedObject private var dailyVerse = DailyVerseProvider.shared
     @ObservedObject private var duasManager = DuasManager.shared
     @ObservedObject private var calendarManager = IslamicCalendarManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var profile = UserProfileManager.shared
     @ObservedObject private var whatsNew = WhatsNewManager.shared
 
@@ -754,8 +702,7 @@ private struct EmeraldTodayView: View {
                 }
                 EmDailyReminderHero(
                     selection: dailyVerse.today,
-                    headline: reminderHeadline.text,
-                    isUrdu: reminderHeadline.isUrdu,
+                    headline: reminderHeadline,
                     surahName: surahName(for: dailyVerse.today.surah),
                     onTap: openMessageSource
                 )
@@ -798,17 +745,16 @@ private struct EmeraldTodayView: View {
     private var greeting: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack(spacing: 6) {
-                Text(TodayStrings.greeting(name: profile.greetingName, languageManager.selectedLanguage))
+                Text(TodayStrings.greeting(name: profile.greetingName))
                     .font(.system(size: 12, weight: .semibold)).tracking(0.5)
                     .foregroundColor(themeManager.tertiaryText)
                     .lineLimit(1)
                     .truncationMode(.tail)
                 PhosphorIcon(name: "ph-moon-stars-fill", size: 13).foregroundColor(themeManager.accentColor)
             }
-            Text(TodayStrings.today(languageManager.selectedLanguage)).font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
+            Text(TodayStrings.today).font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
 
     private func surahName(for n: Int) -> String {
@@ -816,16 +762,13 @@ private struct EmeraldTodayView: View {
     }
     /// Both translations come from quran_data.json now, so Urdu readers get the
     /// Jawadi translation instead of silently falling back to English.
-    private var reminderHeadline: (text: String, isUrdu: Bool) {
+    private var reminderHeadline: String {
         guard let verse = dataManager.getVerse(surah: dailyVerse.today.surah,
                                                verse: dailyVerse.today.verse) else {
             print("⚠️ EmeraldTodayView: daily verse \(dailyVerse.today.id) did not hydrate")
-            return ("", false)
+            return ""
         }
-        if languageManager.selectedLanguage == .urdu, verse.usesUrduTranslation(for: .urdu) {
-            return (verse.displayTranslation(for: .urdu), true)
-        }
-        return (verse.translation, false)
+        return verse.translation
     }
     private func openMessageSource() {
         guard let s = dataManager.availableSurahs.first(where: { $0.surah.number == dailyVerse.today.surah }) else { return }
@@ -894,7 +837,6 @@ private enum ReminderSeason {
 // cream serif over a legibility scrim (was a flat gold-gradient block).
 private struct EmDailyReminderHero: View {
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     private var season: ReminderSeason {
         ReminderSeason.current(
             month: IslamicCalendarManager.shared.currentIslamicMonth(),
@@ -903,13 +845,12 @@ private struct EmDailyReminderHero: View {
     }
     let selection: DailyVerseSelection
     let headline: String
-    let isUrdu: Bool
     let surahName: String
     let onTap: () -> Void
 
     /// Latin curly quotes misbehave around RTL text — Urdu renders unquoted.
     private var headlineText: String {
-        isUrdu ? headline : "\u{201C}\(headline)\u{201D}"
+        "\u{201C}\(headline)\u{201D}"
     }
 
     private var sourceLabel: String {
@@ -921,18 +862,16 @@ private struct EmDailyReminderHero: View {
             VStack(alignment: .leading, spacing: 12) {
                 HStack(spacing: 6) {
                     Image(systemName: "sparkles").font(.system(size: 13, weight: .semibold))
-                    Text(TodayStrings.reminderEyebrow(languageManager.selectedLanguage).uppercased()).emEyebrow(languageManager.selectedLanguage, size: 11, tracking: 1.3)
+                    Text(TodayStrings.reminderEyebrow.uppercased()).emEyebrow(size: 11, tracking: 1.3)
                 }
                 .foregroundColor(themeManager.accentBright)
 
                 Text(headlineText)
-                    .font(isUrdu ? EmType.arabic(22) : EmType.serif(24, .semiBold))
+                    .font(EmType.serif(24, .semiBold))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(isUrdu ? 8 : 3)
-                    .multilineTextAlignment(isUrdu ? .trailing : .leading)
-                    .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
+                    .lineSpacing(3)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: isUrdu ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .shadow(color: .black.opacity(0.55), radius: 10, x: 0, y: 1)
 
                 Text(sourceLabel)
@@ -941,7 +880,6 @@ private struct EmDailyReminderHero: View {
             }
             .padding(20)
             .frame(maxWidth: .infinity, minHeight: 136, alignment: .leading)
-            .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             .background(
                 GeometryReader { geo in
                     ZStack {
@@ -967,7 +905,7 @@ private struct EmDailyReminderHero: View {
                     }
                     // Urdu reads right-to-left; mirror the art so its dark, empty
                     // side stays under the text and the warm glow sits opposite.
-                    .scaleEffect(x: isUrdu ? -1 : 1, y: 1)
+                    
                 }
             )
             .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
@@ -980,7 +918,7 @@ private struct EmDailyReminderHero: View {
         .buttonStyle(EmPressStyle())
         .contextMenu {
             ShareLink(item: "\(headlineText) \u{2014} \(sourceLabel)") {
-                Label(TodayStrings.share(languageManager.selectedLanguage), systemImage: "square.and.arrow.up")
+                Label(TodayStrings.share, systemImage: "square.and.arrow.up")
             }
         }
     }
@@ -988,7 +926,6 @@ private struct EmDailyReminderHero: View {
 
 private struct EmContinueReadingCard: View {
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     let info: LastReadInfo?
     let surah: SurahWithTafsir?
     let verse: VerseWithTafsir?
@@ -998,8 +935,8 @@ private struct EmContinueReadingCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(TodayStrings.continueReading(languageManager.selectedLanguage).uppercased()).emEyebrow(languageManager.selectedLanguage, size: 11, tracking: 2).foregroundColor(themeManager.accentColor)
-                .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+            Text(TodayStrings.continueReading.uppercased()).emEyebrow(size: 11, tracking: 2).foregroundColor(themeManager.accentColor)
+                .frame(maxWidth: .infinity, alignment: .leading)
             EmCard(glow: true) {
                 Group {
                     if let info, let surah, let verse {
@@ -1019,7 +956,7 @@ private struct EmContinueReadingCard: View {
                 EmNumeralCircle(n: surah.surah.number, size: 48)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(surah.surah.englishName).font(EmType.serif(20, .semiBold)).foregroundColor(themeManager.primaryText)
-                    Text(TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount, languageManager.selectedLanguage)).font(.system(size: 12)).foregroundColor(themeManager.tertiaryText).lineLimit(1)
+                    Text(TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount)).font(.system(size: 12)).foregroundColor(themeManager.tertiaryText).lineLimit(1)
                 }
                 Spacer(minLength: 8)
                 Text(surah.surah.arabicName).font(EmType.arabic(22)).foregroundColor(themeManager.accentBright).lineLimit(1)
@@ -1031,14 +968,11 @@ private struct EmContinueReadingCard: View {
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .environment(\.layoutDirection, .rightToLeft)
                     .foregroundColor(themeManager.primaryText)
-                Text(languageManager.selectedLanguage == .urdu
-                     ? verse.displayTranslation(for: .urdu)
-                     : "\u{201C}\(verse.displayTranslation(for: languageManager.selectedLanguage))\u{201D}")
+                Text("\u{201C}\(verse.translation)\u{201D}")
                     .font(.system(size: 12.5)).lineSpacing(2)
                     .foregroundColor(themeManager.secondaryText)
-                    .multilineTextAlignment(languageManager.selectedLanguage == .urdu ? .trailing : .leading)
-                    .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage == .urdu ? .trailing : .leading)
-                    .environment(\.layoutDirection, languageManager.selectedLanguage == .urdu ? .rightToLeft : .leftToRight)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(14)
             .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.glassSurfaceElevated))
@@ -1053,12 +987,12 @@ private struct EmContinueReadingCard: View {
                                 .frame(width: max(0, geo.size.width * CGFloat(animateProgress ? info.progress : 0)), height: 6)
                         }.frame(height: 6)
                     }.frame(height: 6)
-                    Text(TodayStrings.percentComplete(Int(info.progress * 100), languageManager.selectedLanguage)).font(.system(size: 11, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
+                    Text(TodayStrings.percentComplete(Int(info.progress * 100))).font(.system(size: 11, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
                 }
                 Button(action: onResume) {
                     HStack(spacing: 6) {
                         Image(systemName: "play.fill").font(.system(size: 12, weight: .semibold))
-                        Text(TodayStrings.resume(languageManager.selectedLanguage)).font(.system(size: 13, weight: .bold))
+                        Text(TodayStrings.resume).font(.system(size: 13, weight: .bold))
                     }
                     .foregroundColor(themeManager.onAccentText)
                     .padding(.horizontal, 16).padding(.vertical, 10)
@@ -1071,18 +1005,16 @@ private struct EmContinueReadingCard: View {
 
     private var empty: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(TodayStrings.startJourney(languageManager.selectedLanguage)).font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.primaryText)
-            Text(TodayStrings.openFatiha(languageManager.selectedLanguage)).font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
-            EmGoldCTA(title: TodayStrings.begin(languageManager.selectedLanguage), sfSymbol: "play.fill") { onBegin() }
+            Text(TodayStrings.startJourney).font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.primaryText)
+            Text(TodayStrings.openFatiha).font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
+            EmGoldCTA(title: TodayStrings.begin, sfSymbol: "play.fill") { onBegin() }
         }
-        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-        .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
 private struct EmDuaOfTheDayCard: View {
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     let dua: DailyDua
 
     var body: some View {
@@ -1093,15 +1025,14 @@ private struct EmDuaOfTheDayCard: View {
                 HStack(spacing: 12) {
                     EmIconChip(sfSymbol: "quote.bubble.fill", size: 40)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(TodayStrings.duaOfTheDay(languageManager.selectedLanguage).uppercased()).emEyebrow(languageManager.selectedLanguage, size: 11, tracking: 1.5).foregroundColor(themeManager.accentColor)
-                        Text(dua.situation(for: languageManager.selectedLanguage)).font(EmType.serif(18, .semiBold)).foregroundColor(themeManager.primaryText).lineLimit(2)
+                        Text(TodayStrings.duaOfTheDay.uppercased()).emEyebrow(size: 11, tracking: 1.5).foregroundColor(themeManager.accentColor)
+                        Text(dua.situationEn).font(EmType.serif(18, .semiBold)).foregroundColor(themeManager.primaryText).lineLimit(2)
                         Text(dua.category.capitalized).font(.system(size: 11)).foregroundColor(themeManager.tertiaryText)
                     }
                     Spacer(minLength: 8)
                     Image(systemName: "chevron.right").font(.system(size: 13, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
                 }
                 .padding(16)
-                .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             }
         }
     }

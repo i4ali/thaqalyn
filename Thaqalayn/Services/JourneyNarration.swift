@@ -21,7 +21,7 @@ enum JourneyNarration {
     static func movementAnnouncement(for dive: DeepDive, act n: Int) -> String {
         let word = dive.stageWord                       // "Movement" by default
         let ord = ordinal(n)
-        if let name = dive.actInfo(n)?.name.text(for: .english), !name.isEmpty {
+        if let name = dive.actInfo(n)?.name.text, !name.isEmpty {
             return "\(word) \(ord). \(name)."
         }
         return "\(word) \(ord)."
@@ -29,7 +29,7 @@ enum JourneyNarration {
 
     /// Journey intro built from titleEn + the dive-level subtitle.
     static func intro(for dive: DeepDive) -> [NarrationSegment] {
-        [.speech("\(dive.titleEn). \(dive.subtitle.text(for: .english))"), .pause(beatGap)]
+        [.speech("\(dive.titleEn). \(dive.subtitle.text)"), .pause(beatGap)]
     }
 
     /// A narration segment tagged with the dive.sections index it belongs to
@@ -48,7 +48,7 @@ enum JourneyNarration {
             if case .act(let a, _, _, _) = section, a >= 1 {
                 out.append(.init(segment: .speech(movementAnnouncement(for: dive, act: a)), beatIndex: i))
             }
-            for seg in section.narrationSegments(for: .english) {
+            for seg in section.narrationSegments() {
                 out.append(.init(segment: seg, beatIndex: i))
             }
         }

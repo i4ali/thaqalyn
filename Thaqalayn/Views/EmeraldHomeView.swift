@@ -12,7 +12,6 @@ struct EmeraldHomeView: View {
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var progressManager = ProgressManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
 
     @Binding var searchText: String
     @Binding var selectedSurahForDeepLink: SurahWithTafsir?
@@ -23,8 +22,6 @@ struct EmeraldHomeView: View {
     @State private var animateProgress = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
-    private var isRTL: Bool { lang.isRTL }
 
     private var filteredSurahs: [SurahWithTafsir] {
         dataManager.availableSurahs.filter { s in
@@ -44,19 +41,17 @@ struct EmeraldHomeView: View {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
-                    EmHeading(eyebrow: QuranTabStrings.nobleQuranEyebrow(lang), title: QuranTabStrings.readAndReflect(lang))
-                        .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+                    EmHeading(eyebrow: QuranTabStrings.nobleQuranEyebrow, title: QuranTabStrings.readAndReflect)
+                        .frame(maxWidth: .infinity, alignment: .leading)
 
                     if let info = progressManager.lastReadInfo,
                        let s = dataManager.availableSurahs.first(where: { $0.surah.number == info.surahNumber }) {
                         continueReadingCard(info: info, surah: s)
-                            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                     }
 
                     searchField
                     if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
-                        EmDivider(label: QuranTabStrings.surahsCount(dataManager.availableSurahs.count, lang))
+                        EmDivider(label: QuranTabStrings.surahsCount(dataManager.availableSurahs.count))
                         surahList
                     } else {
                         SearchResultsView(
@@ -109,7 +104,6 @@ struct EmeraldHomeView: View {
             }
             .buttonStyle(EmPressStyle())
         }
-        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
     }
 
     private func continueReadingCard(info: LastReadInfo, surah s: SurahWithTafsir) -> some View {
@@ -122,13 +116,13 @@ struct EmeraldHomeView: View {
                     .allowsHitTesting(false)
 
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(QuranTabStrings.continueReading(lang).uppercased())
-                        .emEyebrow(lang, size: 11, tracking: 2)
+                    Text(QuranTabStrings.continueReading.uppercased())
+                        .emEyebrow(size: 11, tracking: 2)
                         .foregroundColor(themeManager.accentColor)
                     Text(s.surah.englishName)
                         .font(EmType.serif(27, .semiBold))
                         .foregroundColor(themeManager.primaryText)
-                    Text("\(QuranTabStrings.verseOf(info.verseNumber, s.surah.versesCount, lang)) · \(QuranTabStrings.percentComplete(Int(info.progress * 100), lang))")
+                    Text("\(QuranTabStrings.verseOf(info.verseNumber, s.surah.versesCount)) · \(QuranTabStrings.percentComplete(Int(info.progress * 100)))")
                         .font(.system(size: 13))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -148,7 +142,7 @@ struct EmeraldHomeView: View {
                     } label: {
                         HStack(spacing: 7) {
                             Image(systemName: "play.fill").font(.system(size: 12, weight: .semibold))
-                            Text(QuranTabStrings.resume(lang)).font(.system(size: 14, weight: .bold)).tracking(0.3)
+                            Text(QuranTabStrings.resume).font(.system(size: 14, weight: .bold)).tracking(0.3)
                         }
                         .foregroundColor(themeManager.onAccentText)
                         .padding(.horizontal, 18).padding(.vertical, 10)
@@ -167,14 +161,13 @@ struct EmeraldHomeView: View {
         HStack(spacing: 10) {
             PhosphorIcon(name: "ph-magnifying-glass", size: 16).foregroundColor(themeManager.accentColor)
             TextField("", text: $searchText,
-                      prompt: Text(QuranTabStrings.searchPlaceholder(lang)).foregroundColor(themeManager.tertiaryText))
+                      prompt: Text(QuranTabStrings.searchPlaceholder).foregroundColor(themeManager.tertiaryText))
                 .foregroundColor(themeManager.primaryText)
                 .font(.system(size: 15))
         }
         .padding(.horizontal, 14).padding(.vertical, 13)
         .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.glassSurface))
         .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
-        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
     }
 
     private var surahList: some View {

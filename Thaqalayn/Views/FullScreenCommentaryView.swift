@@ -204,12 +204,43 @@ struct FullScreenCommentaryView: View {
                     Text(selectedLayer.title).font(EmType.serif(24, .semiBold)).foregroundColor(themeManager.primaryText)
                     Text(selectedLayer.description).font(.system(size: 14, weight: .medium)).foregroundColor(themeManager.secondaryText).lineSpacing(2)
                 }
-                Spacer()
+                Spacer(minLength: 8)
+                languageMenu
                 if voiceManager.hasVoicesAvailable(for: languageManager.selectedLanguage) { ttsButton }
             }
             EmDivider()
         }
         .padding(.bottom, 28)
+    }
+
+    /// The app's one language control: switches the tafsir reading language
+    /// (English / Urdu / Arabic) for the 5 layers, the verse translation shown
+    /// here, and what the speaker button reads aloud.
+    private var languageMenu: some View {
+        Menu {
+            Picker("Tafsir language", selection: Binding(
+                get: { languageManager.selectedLanguage },
+                set: { languageManager.setLanguage($0) }
+            )) {
+                ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { language in
+                    Text(language.displayName).tag(language)
+                }
+            }
+        } label: {
+            HStack(spacing: 5) {
+                Image(systemName: "globe").font(.system(size: 13, weight: .semibold))
+                Text(languageManager.selectedLanguage.shortCode)
+                    .font(.system(size: 13, weight: .bold))
+            }
+            .foregroundColor(themeManager.accentColor)
+            .padding(.horizontal, 12)
+            .frame(height: 36)
+            .background(Capsule().fill(themeManager.accentChip))
+            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+            .contentShape(Capsule())
+        }
+        .accessibilityLabel("Tafsir language")
+        .accessibilityValue(languageManager.selectedLanguage.displayName)
     }
 
     private func emeraldReadingTextContent(_ text: String) -> some View {
@@ -323,7 +354,8 @@ struct FullScreenCommentaryView: View {
 
             Spacer()
 
-            // Language toggle button
+            // Verse recitation + text size (the language control lives in the
+            // layer header beside the tafsir speaker button)
             HStack(spacing: 10) {
                 VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 34)
                 TextSizeButton(isPanelOpen: $showTextSizePanel)
@@ -495,14 +527,16 @@ struct FullScreenCommentaryView: View {
                         .lineSpacing(2)
                 }
 
-                Spacer()
+                Spacer(minLength: 8)
+
+                languageMenu
 
                 // TTS play/pause button (show if voices available for language)
                 if voiceManager.hasVoicesAvailable(for: languageManager.selectedLanguage) {
                     ttsButton
                 }
             }
-            
+
             // Divider matching mockup
             Rectangle()
                 .fill(themeManager.accentColor.opacity(0.2))
@@ -758,15 +792,9 @@ struct FullScreenCommentaryView: View {
         layer3_ar: nil,
         layer4_ar: nil,
         layer5_ar: nil,
-        layer1_fr: nil,
-        layer2_fr: nil,
-        layer3_fr: nil,
-        layer4_fr: nil,
-        layer5_fr: nil,
         layer2short: nil,
         layer2short_urdu: nil,
         layer2short_ar: nil,
-        layer2short_fr: nil,
         quickOverview: nil
     )
 

@@ -12,9 +12,7 @@ import SwiftUI
 
 struct DeepDiveCard: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var premiumManager = PremiumManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     let descriptor: DeepDiveDescriptor
     let onTap: () -> Void
 
@@ -28,10 +26,10 @@ struct DeepDiveCard: View {
         // The card body and the "Listen" affordance are two independent tap targets in
         // one ZStack: SwiftUI routes a tap to the topmost button under the finger, so the
         // headphones handles its corner and the rest of the cell still opens the visual
-        // journey. Listen shows only on built dives, and only in English (audio is EN-only).
+        // journey. Listen shows only on built dives.
         ZStack(alignment: .topTrailing) {
             cardButton
-            if descriptor.available && lang == .english && descriptor.dive != nil {
+            if descriptor.available && descriptor.dive != nil {
                 listenButton
             }
         }
@@ -56,14 +54,14 @@ struct DeepDiveCard: View {
                         if locked {
                             premiumPill
                         } else {
-                            Text(JourneyStrings.deepDiveEyebrow(lang).uppercased())
-                                .emEyebrow(lang, size: 10.5, tracking: 2)
+                            Text(JourneyStrings.deepDiveEyebrow.uppercased())
+                                .emEyebrow(size: 10.5, tracking: 2)
                                 .foregroundColor(tm.accentColor)
                         }
-                        Text(descriptor.title(lang))
+                        Text(descriptor.title())
                             .font(EmType.serif(22, .semiBold))
                             .foregroundColor(tm.primaryText)
-                        Text(descriptor.subtitle(lang))
+                        Text(descriptor.subtitle())
                             .font(.system(size: 13))
                             .foregroundColor(tm.secondaryText)
                             .lineLimit(2)
@@ -73,7 +71,6 @@ struct DeepDiveCard: View {
                     trailingGlyph
                 }
                 .padding(16)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
             }
             .opacity(descriptor.available ? 1 : 0.72)
         }
@@ -84,7 +81,7 @@ struct DeepDiveCard: View {
     /// and the user is not premium - the same accent-chip treatment the app's other
     /// premium-gated cards use (Daily Crossword, journey days). No lock glyph.
     private var premiumPill: some View {
-        Text(JourneyStrings.premium(lang).uppercased())
+        Text(JourneyStrings.premium.uppercased())
             .font(.system(size: 9, weight: .bold)).tracking(1.4)
             .foregroundColor(tm.accentColor)
             .padding(.horizontal, 8)
@@ -105,7 +102,7 @@ struct DeepDiveCard: View {
                 isFree: premiumManager.canAccessDeepDive(descriptor.id),
                 paywall: PaywallContext(
                     coverAssetName: descriptor.coverAssetName,
-                    eyebrow: "\(JourneyStrings.deepDiveEyebrow(lang)) \u{00B7} \(descriptor.title(lang))"))
+                    eyebrow: "\(JourneyStrings.deepDiveEyebrow) \u{00B7} \(descriptor.title())"))
         } label: {
             Image(systemName: "headphones")
                 .font(.system(size: 15, weight: .semibold))
@@ -129,7 +126,7 @@ struct DeepDiveCard: View {
         } else {
             // A quiet "Soon" marker rather than a lock icon — matches the app's
             // convention of never letting a coming-soon card read as a paywall.
-            Text(JourneyStrings.soon(lang))
+            Text(JourneyStrings.soon)
                 .font(.system(size: 9, weight: .heavy)).tracking(1.4)
                 .foregroundColor(tm.tertiaryText)
                 .padding(.horizontal, 8).padding(.vertical, 3)

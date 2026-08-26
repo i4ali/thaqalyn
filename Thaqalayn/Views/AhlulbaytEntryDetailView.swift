@@ -12,17 +12,10 @@ struct AhlulbaytEntryDetailView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var ahlulbaytManager = AhlulbaytQuranManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
 
-    private var localizedScreenEyebrow: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "أهل البيت في القرآن"
-        case .urdu:   return "قرآن میں اہلِ بیت"
-        default:      return "Ahl al-Bayt in the Quran"
-        }
-    }
+    private let screenEyebrow = "Ahl al-Bayt in the Quran"
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
 
@@ -75,13 +68,13 @@ struct AhlulbaytEntryDetailView: View {
                                     .font(.system(size: 20))
                                     .foregroundColor(themeManager.accentColor)
 
-                                Text(localizedScreenEyebrow.uppercased())
+                                Text(screenEyebrow.uppercased())
                                     .font(.system(size: 14, weight: .bold))
                                     .foregroundColor(themeManager.secondaryText)
                                     .tracking(1.2)
                             }
 
-                            Text(entry.title(for: languageManager.selectedLanguage))
+                            Text(entry.titleEn)
                                 .font(.system(size: 24, weight: .bold, design: .rounded))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineSpacing(4)
@@ -101,7 +94,7 @@ struct AhlulbaytEntryDetailView: View {
                     .padding(.top, 20)
 
                     // Ahl al-Bayt Members
-                    if !entry.ahlulbaytMembers(for: languageManager.selectedLanguage).isEmpty {
+                    if !entry.ahlulbaytMembersEn.isEmpty {
                         VStack(alignment: .leading, spacing: 16) {
                             HStack(alignment: .top, spacing: 8) {
                                 Image(systemName: "person.3.fill")
@@ -115,7 +108,7 @@ struct AhlulbaytEntryDetailView: View {
                             }
 
                             FlowLayout(spacing: 8) {
-                                ForEach(entry.ahlulbaytMembers(for: languageManager.selectedLanguage), id: \.self) { member in
+                                ForEach(entry.ahlulbaytMembersEn, id: \.self) { member in
                                     Text(member)
                                         .font(.system(size: 14, weight: .semibold))
                                         .foregroundColor(themeManager.accentColor)
@@ -188,14 +181,12 @@ struct AhlulbaytEntryDetailView: View {
                                 .tracking(1.2)
                         }
 
-                        Text(entry.revelationContext(for: languageManager.selectedLanguage))
+                        Text(entry.revelationContextEn)
                             .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
                             .lineSpacing(6 * readingSettings.scale)
-                            .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-                            .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-                            .environment(\.layoutDirection,
-                                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .padding(20)
                     .background {
@@ -282,10 +273,10 @@ struct AhlulbaytEntryDetailView: View {
                     .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
 
                     VStack(alignment: .leading, spacing: 7) {
-                        Text(localizedScreenEyebrow.uppercased())
+                        Text(screenEyebrow.uppercased())
                             .font(.system(size: 11, weight: .bold)).tracking(3)
                             .foregroundColor(themeManager.accentColor)
-                        Text(entry.title(for: languageManager.selectedLanguage))
+                        Text(entry.titleEn)
                             .font(EmType.serif(30, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .fixedSize(horizontal: false, vertical: true)
@@ -298,10 +289,10 @@ struct AhlulbaytEntryDetailView: View {
             .padding(.top, 12)
 
             // Ahl al-Bayt members
-            if !entry.ahlulbaytMembers(for: languageManager.selectedLanguage).isEmpty {
+            if !entry.ahlulbaytMembersEn.isEmpty {
                 EmDetailCard(icon: "person.3", label: "Ahl al-Bayt Members") {
                     FlowLayout(spacing: 8) {
-                        ForEach(entry.ahlulbaytMembers(for: languageManager.selectedLanguage), id: \.self) { member in
+                        ForEach(entry.ahlulbaytMembersEn, id: \.self) { member in
                             Text(member)
                                 .font(.system(size: 13.5, weight: .semibold))
                                 .foregroundColor(themeManager.accentColor)
@@ -342,14 +333,12 @@ struct AhlulbaytEntryDetailView: View {
 
             // Revelation context
             EmDetailCard(icon: "clock", label: "Revelation Context") {
-                Text(entry.revelationContext(for: languageManager.selectedLanguage))
+                Text(entry.revelationContextEn)
                     .font(EmType.serif(17 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(5 * readingSettings.scale)
-                    .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-                    .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-                    .environment(\.layoutDirection,
-                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
 
             // Related entries
@@ -374,7 +363,6 @@ struct AhlulbaytVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
@@ -382,18 +370,8 @@ struct AhlulbaytVerseCard: View {
               let verse = verses["\(ahlulbaytVerse.verseNumber)"] else {
             return nil
         }
-        // Verse translations exist only in English + Urdu; Arabic/English fall back to English.
-        let translation: String
-        if languageManager.selectedLanguage == .urdu, let urdu = verse.translationUrdu, !urdu.isEmpty {
-            translation = urdu
-        } else {
-            translation = verse.translation
-        }
-        return (verse.arabicText, translation)
+        return (verse.arabicText, verse.translation)
     }
-
-    /// Verse translation is Urdu-only (Arabic falls back to English), so RTL only for Urdu.
-    private var verseTranslationIsRTL: Bool { languageManager.selectedLanguage == .urdu }
 
     var surahName: String {
         dataManager.quranData?.surahs.first { $0.number == ahlulbaytVerse.surahNumber }?.englishName ?? "Surah \(ahlulbaytVerse.surahNumber)"
@@ -439,24 +417,21 @@ struct AhlulbaytVerseCard: View {
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(3 * readingSettings.scale)
-                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "text.bubble")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(ahlulbaytVerse.context(for: languageManager.selectedLanguage))
+                    Text(ahlulbaytVerse.contextEn)
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
-                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .environment(\.layoutDirection,
-                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                 .background(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(themeManager.accentChip.opacity(0.6))
@@ -542,9 +517,8 @@ struct AhlulbaytVerseCard: View {
                         .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
-                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(20)
 
@@ -564,16 +538,14 @@ struct AhlulbaytVerseCard: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
 
-                Text(ahlulbaytVerse.context(for: languageManager.selectedLanguage))
+                Text(ahlulbaytVerse.contextEn)
                     .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)
-            .environment(\.layoutDirection,
-                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             .background {
                 Rectangle()
                     .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
@@ -622,7 +594,6 @@ struct AhlulbaytVerseCard: View {
 struct RelatedEntryCard: View {
     let entry: AhlulbaytEntry
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var navigateToEntry = false
 
     var body: some View {
@@ -640,7 +611,7 @@ struct RelatedEntryCard: View {
                             .font(.system(size: 10, weight: .bold)).tracking(1.5)
                             .foregroundColor(themeManager.accentColor)
 
-                        Text(entry.title(for: languageManager.selectedLanguage))
+                        Text(entry.titleEn)
                             .font(EmType.serif(17, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(2)
@@ -676,7 +647,7 @@ struct RelatedEntryCard: View {
                         .font(.system(size: 12, weight: .bold))
                         .foregroundColor(themeManager.accentColor)
 
-                    Text(entry.title(for: languageManager.selectedLanguage))
+                    Text(entry.titleEn)
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)

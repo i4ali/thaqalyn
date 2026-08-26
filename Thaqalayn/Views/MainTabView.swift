@@ -10,7 +10,6 @@ import SwiftUI
 struct MainTabView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var deepLinkRouter = DeepLinkRouter.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var tabBarVisibility = TabBarVisibility.shared
     @StateObject private var listen = JourneyListenPresenter.shared
     @StateObject private var duaStream = DuaStreamPlayer.shared
@@ -33,39 +32,13 @@ struct MainTabView: View {
         duaStream.currentDua != nil && listen.dive == nil && !tabBarVisibility.isHidden
     }
 
-    // Localized label for each tab, driven by the global Settings → Language picker.
     private func tabLabel(_ id: Int) -> String {
         switch id {
-        case 0:
-            switch languageManager.selectedLanguage {
-            case .arabic: return "اليوم"
-            case .urdu:   return "آج"
-            default:      return "Today"
-            }
-        case 1:
-            switch languageManager.selectedLanguage {
-            case .arabic: return "القرآن"
-            case .urdu:   return "قرآن"
-            default:      return "Quran"
-            }
-        case 2:
-            switch languageManager.selectedLanguage {
-            case .arabic: return "اكتشف"
-            case .urdu:   return "دریافت"
-            default:      return "Explore"
-            }
-        case 3:
-            switch languageManager.selectedLanguage {
-            case .arabic: return "التقدّم"
-            case .urdu:   return "پیش رفت"
-            default:      return "Progress"
-            }
-        default:
-            switch languageManager.selectedLanguage {
-            case .arabic: return "رحلة"
-            case .urdu:   return "سفر"
-            default:      return "Journey"
-            }
+        case 0:  return "Today"
+        case 1:  return "Quran"
+        case 2:  return "Explore"
+        case 3:  return "Progress"
+        default: return "Journey"
         }
     }
 

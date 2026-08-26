@@ -11,7 +11,6 @@ import SwiftUI
 struct FoodDetailView: View {
     let food: Food
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @State private var navigateToVerse = false
@@ -38,9 +37,9 @@ struct FoodDetailView: View {
                 VStack(spacing: 18) {
                     hero
                     verseSection
-                    infoCard(label: "From the Ahl al-Bayt", icon: "book.fill", text: food.narration(for: languageManager.selectedLanguage), source: food.narrationSource)
-                    infoCard(label: "From the Sunnah", icon: "sparkles", text: food.sunnahTip(for: languageManager.selectedLanguage), source: nil)
-                    infoCard(label: "Nutrition", icon: "leaf.fill", text: food.nutritionNote(for: languageManager.selectedLanguage), source: nil)
+                    infoCard(label: "From the Ahl al-Bayt", icon: "book.fill", text: food.narrationEn, source: food.narrationSource)
+                    infoCard(label: "From the Sunnah", icon: "sparkles", text: food.sunnahTipEn, source: nil)
+                    infoCard(label: "Nutrition", icon: "leaf.fill", text: food.nutritionNoteEn, source: nil)
                     shareSection
                 }
                 .padding(.horizontal, 20)
@@ -87,12 +86,10 @@ struct FoodDetailView: View {
             }
             .shadow(color: themeManager.accentColor.opacity(0.18), radius: 16, x: 0, y: 6)
 
-            Text(food.name(for: languageManager.selectedLanguage))
+            Text(food.nameEn)
                 .font(themeManager.isMidnightEmerald ? EmType.serif(30, .semiBold) : .system(size: 30, weight: .bold, design: .rounded))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.center)
-                .environment(\.layoutDirection,
-                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
         }
         .padding(.top, 8)
     }
@@ -126,13 +123,12 @@ struct FoodDetailView: View {
                         .environment(\.layoutDirection, .rightToLeft)
                         .textSelection(.enabled)
 
-                    Text(v.displayTranslation(for: languageManager.selectedLanguage))
+                    Text(v.translation)
                         .font(themeManager.isMidnightEmerald ? EmType.serif(16 * readingSettings.scale, .medium) : .system(size: 16 * readingSettings.scale, weight: .regular))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(5 * readingSettings.scale)
-                        .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 } else {
                     Text("Tap to open this verse in the reader.")
                         .font(.system(size: 14, weight: .regular))
@@ -143,8 +139,7 @@ struct FoodDetailView: View {
     }
 
     private func infoCard(label: String, icon: String, text: String, source: String?) -> some View {
-        let isRTL = languageManager.selectedLanguage.isRTL
-        return cardContainer {
+        cardContainer {
             VStack(alignment: .leading, spacing: 8) {
                 HStack(spacing: 7) {
                     Image(systemName: icon).font(.system(size: 12, weight: .bold))
@@ -165,7 +160,6 @@ struct FoodDetailView: View {
                         .foregroundColor(themeManager.tertiaryText)
                 }
             }
-            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         }
     }
 
@@ -186,19 +180,18 @@ struct FoodDetailView: View {
     }
 
     private var shareText: String {
-        let lang = languageManager.selectedLanguage
-        var parts: [String] = ["\(food.emoji) \(food.name(for: lang))"]
+        var parts: [String] = ["\(food.emoji) \(food.nameEn)"]
 
         if let v = verse {
             parts.append("Qur'an \(food.surahNumber):\(food.verseNumber)\n\(v.arabicText)")
-            parts.append(v.displayTranslation(for: lang))
+            parts.append(v.translation)
         } else {
             parts.append("Qur'an \(food.surahNumber):\(food.verseNumber)")
         }
 
-        parts.append("From the Ahl al-Bayt\n\(food.narration(for: lang))\n— \(food.narrationSource)")
-        parts.append("From the Sunnah\n\(food.sunnahTip(for: lang))")
-        parts.append("Nutrition\n\(food.nutritionNote(for: lang))")
+        parts.append("From the Ahl al-Bayt\n\(food.narrationEn)\n— \(food.narrationSource)")
+        parts.append("From the Sunnah\n\(food.sunnahTipEn)")
+        parts.append("Nutrition\n\(food.nutritionNoteEn)")
         parts.append("Sent via Thaqalayn")
 
         return parts.joined(separator: "\n\n")

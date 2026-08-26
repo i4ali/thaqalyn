@@ -13,7 +13,6 @@ import SwiftUI
 struct DuasZiyaratView: View {
     @StateObject private var manager = SpecialDuasManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var stream = DuaStreamPlayer.shared
     @Environment(\.dismiss) private var dismiss
 
@@ -99,10 +98,10 @@ struct DuasZiyaratView: View {
     private var headerView: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text(localizedTitle)
+                Text(headerTitle)
                     .font(.system(size: 34, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
-                Text(localizedSubtitle)
+                Text(headerSubtitle)
                     .font(.system(size: 16, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -111,20 +110,19 @@ struct DuasZiyaratView: View {
         .padding(.horizontal, 20)
         .padding(.top, 20)
         .padding(.bottom, 20)
-        .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
 
     private var emeraldHeaderView: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 7) {
-                Text(localizedEyebrow.uppercased())
+                Text(headerEyebrow.uppercased())
                     .font(.system(size: 11, weight: .bold)).tracking(3)
                     .foregroundColor(themeManager.accentColor)
-                Text(localizedTitle)
+                Text(headerTitle)
                     .font(EmType.serif(36, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(localizedSubtitle)
+                Text(headerSubtitle)
                     .font(.system(size: 13.5))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -133,33 +131,12 @@ struct DuasZiyaratView: View {
         .padding(.horizontal, 20)
         .padding(.top, 16)
         .padding(.bottom, 18)
-        .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
         .emCoverHeaderBand("DuasZiyaratCover", height: 280)
     }
 
-    private var localizedEyebrow: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "الأدعية والزيارات"
-        case .urdu:   return "دعائیں و زیارات"
-        default:      return "Supplications"
-        }
-    }
-
-    private var localizedTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "الأدعية والزيارات"
-        case .urdu:   return "دعائیں و زیارات"
-        default:      return "Duas & Ziyarat"
-        }
-    }
-
-    private var localizedSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "أشهر الأدعية والزيارات مع التلاوة"
-        case .urdu:   return "مشہور دعائیں و زیارات، تلاوت کے ساتھ"
-        default:      return "The great supplications, with recitation"
-        }
-    }
+    private let headerEyebrow = "Supplications"
+    private let headerTitle = "Duas & Ziyarat"
+    private let headerSubtitle = "The great supplications, with recitation"
 }
 
 /// Symbol for each dua in the library.
@@ -180,7 +157,6 @@ enum SpecialDuaIcon {
 struct SpecialDuaCard: View {
     let dua: SpecialDua
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     private var icon: String { SpecialDuaIcon.symbol(for: dua.id) }
 
@@ -193,7 +169,7 @@ struct SpecialDuaCard: View {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: icon)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(dua.title(for: languageManager.selectedLanguage))
+                    Text(dua.titleEn)
                         .font(EmType.serif(20, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(1)
@@ -225,7 +201,7 @@ struct SpecialDuaCard: View {
             }
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(dua.title(for: languageManager.selectedLanguage))
+                Text(dua.titleEn)
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(1)

@@ -202,6 +202,18 @@ struct SurahExperienceDescriptor: Identifiable {
             coverAssetName: "IbrahimCover"
         ),
         SurahExperienceDescriptor(
+            id: "surah-hijr",
+            surahNumber: 15,
+            title: LocalizedText(en: "Surah al-Hijr", ur: "سورۂ حجر", ar: "سورة الحجر"),
+            titleAr: "الْحِجْر",
+            sfSymbol: "mountain.2",
+            subtitle: LocalizedText(en: "The Rock City - what can mockery touch, and what can it never reach?",
+                                    ur: "شہرِ سنگ - تمسخر کس چیز کو چھو سکتا ہے، اور کس تک کبھی نہیں پہنچ سکتا؟",
+                                    ar: "مدينة الصخر - ما الذي يبلغه الاستهزاء، وما الذي لا يناله أبداً؟"),
+            available: true, dive: .surahHijr,
+            coverAssetName: "HijrCover"
+        ),
+        SurahExperienceDescriptor(
             id: "surah-yasin",
             surahNumber: 36,
             title: LocalizedText(en: "Surah Yasin", ur: "سورۂ یٰسین", ar: "سورة يس"),

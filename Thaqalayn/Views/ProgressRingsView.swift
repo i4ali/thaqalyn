@@ -14,10 +14,7 @@ struct ProgressRingsView: View {
     @StateObject private var ramadanManager = RamadanJourneyManager.shared
     @StateObject private var hajjManager = HajjJourneyManager.shared
     @StateObject private var muharramManager = MuharramJourneyManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
-    private var isRTL: Bool { lang.isRTL }
 
     private let totalQuranVerses = 6236
     private let totalSurahs = 114
@@ -83,7 +80,7 @@ struct ProgressRingsView: View {
                 ringsSection
 
                 // Ring Legend
-                RingLegend(showRamadanRing: showSeasonalRing, seasonalLabel: ProgressTabStrings.seasonal(seasonalLabel, lang))
+                RingLegend(showRamadanRing: showSeasonalRing, seasonalLabel: ProgressTabStrings.seasonal(seasonalLabel))
                     .padding(.top, WarmSpacing.small)
 
                 // Stats Grid
@@ -101,7 +98,6 @@ struct ProgressRingsView: View {
             }
             .padding(.horizontal, WarmSpacing.generous)
             .padding(.top, WarmSpacing.large)
-            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         }
     }
 
@@ -119,15 +115,14 @@ struct ProgressRingsView: View {
             .padding(.horizontal, 20)
             .padding(.top, 60)
             .padding(.bottom, 120)
-            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         }
     }
 
     private var emeraldHeader: some View {
         VStack(alignment: .leading, spacing: 7) {
-            Text(ProgressTabStrings.yourJourneyEyebrow(lang).uppercased()).emEyebrow(lang, size: 11, tracking: 3).foregroundColor(themeManager.accentColor)
-            Text(ProgressTabStrings.progressTitle(lang)).font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
-            Text(ProgressTabStrings.progressSubtitle(lang)).font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
+            Text(ProgressTabStrings.yourJourneyEyebrow.uppercased()).emEyebrow(size: 11, tracking: 3).foregroundColor(themeManager.accentColor)
+            Text(ProgressTabStrings.progressTitle).font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
+            Text(ProgressTabStrings.progressSubtitle).font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -143,7 +138,7 @@ struct ProgressRingsView: View {
                     showRamadanRing: showSeasonalRing
                 )
                 .padding(.vertical, 8)
-                RingLegend(showRamadanRing: showSeasonalRing, seasonalLabel: ProgressTabStrings.seasonal(seasonalLabel, lang))
+                RingLegend(showRamadanRing: showSeasonalRing, seasonalLabel: ProgressTabStrings.seasonal(seasonalLabel))
             }
             .frame(maxWidth: .infinity)
             .padding(20)
@@ -152,10 +147,10 @@ struct ProgressRingsView: View {
 
     private var emeraldStatsGrid: some View {
         LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
-            emeraldStat(sf: "book.closed.fill", value: "\(progressManager.stats.totalVersesRead)", label: ProgressTabStrings.versesRead(lang), sub: ProgressTabStrings.ofTotal(totalQuranVerses, lang))
-            emeraldStat(sf: "checkmark.seal.fill", value: "\(progressManager.stats.totalSurahsCompleted)", label: ProgressTabStrings.surahsComplete(lang), sub: ProgressTabStrings.ofTotal(totalSurahs, lang))
-            emeraldStat(sf: "questionmark.circle.fill", value: "\(quizManager.completedSurahCount)", label: ProgressTabStrings.quizzesDone(lang), sub: ProgressTabStrings.surahsTested(lang))
-            emeraldStat(sf: "sparkles", value: formatSawab(progressManager.stats.totalSawab), label: ProgressTabStrings.totalSawab(lang), sub: ProgressTabStrings.blessingsEarned(lang))
+            emeraldStat(sf: "book.closed.fill", value: "\(progressManager.stats.totalVersesRead)", label: ProgressTabStrings.versesRead, sub: ProgressTabStrings.ofTotal(totalQuranVerses))
+            emeraldStat(sf: "checkmark.seal.fill", value: "\(progressManager.stats.totalSurahsCompleted)", label: ProgressTabStrings.surahsComplete, sub: ProgressTabStrings.ofTotal(totalSurahs))
+            emeraldStat(sf: "questionmark.circle.fill", value: "\(quizManager.completedSurahCount)", label: ProgressTabStrings.quizzesDone, sub: ProgressTabStrings.surahsTested)
+            emeraldStat(sf: "sparkles", value: formatSawab(progressManager.stats.totalSawab), label: ProgressTabStrings.totalSawab, sub: ProgressTabStrings.blessingsEarned)
         }
     }
 
@@ -177,12 +172,12 @@ struct ProgressRingsView: View {
             HStack(spacing: 12) {
                 PhosphorIcon(name: "ph-flame-fill", size: 28).foregroundColor(themeManager.accentColor)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(ProgressTabStrings.dayStreak(progressManager.stats.currentStreak, lang)).font(EmType.serif(20, .semiBold)).foregroundColor(themeManager.primaryText)
-                    Text(ProgressTabStrings.keepItGoing(lang)).font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
+                    Text(ProgressTabStrings.dayStreak(progressManager.stats.currentStreak)).font(EmType.serif(20, .semiBold)).foregroundColor(themeManager.primaryText)
+                    Text(ProgressTabStrings.keepItGoing).font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 2) {
-                    Text(ProgressTabStrings.best(lang).uppercased()).emEyebrow(lang, size: 10, tracking: 1).foregroundColor(themeManager.tertiaryText)
+                    Text(ProgressTabStrings.best.uppercased()).emEyebrow(size: 10, tracking: 1).foregroundColor(themeManager.tertiaryText)
                     Text("\(progressManager.stats.longestStreak)").font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.accentBright)
                 }
             }
@@ -192,13 +187,13 @@ struct ProgressRingsView: View {
 
     private var emeraldBadges: some View {
         VStack(alignment: .leading, spacing: 12) {
-            EmDivider(label: ProgressTabStrings.badgesDivider(progressManager.badges.count, 24, lang))
+            EmDivider(label: ProgressTabStrings.badgesDivider(progressManager.badges.count, 24))
             if progressManager.badges.isEmpty {
                 EmCard {
                     VStack(spacing: 12) {
                         Image(systemName: "star.slash").font(.system(size: 40)).foregroundColor(themeManager.tertiaryText)
-                        Text(ProgressTabStrings.noBadgesYet(lang)).font(EmType.serif(18, .semiBold)).foregroundColor(themeManager.primaryText)
-                        Text(ProgressTabStrings.earnBadgesHint(lang)).font(.system(size: 12.5)).foregroundColor(themeManager.tertiaryText).multilineTextAlignment(.center)
+                        Text(ProgressTabStrings.noBadgesYet).font(EmType.serif(18, .semiBold)).foregroundColor(themeManager.primaryText)
+                        Text(ProgressTabStrings.earnBadgesHint).font(.system(size: 12.5)).foregroundColor(themeManager.tertiaryText).multilineTextAlignment(.center)
                     }
                     .frame(maxWidth: .infinity).padding(.vertical, 32).padding(.horizontal, 16)
                 }
@@ -220,7 +215,7 @@ struct ProgressRingsView: View {
                         .overlay(Circle().stroke(themeManager.accentColor, lineWidth: 1))
                     Image(systemName: badge.badgeType.icon).font(.system(size: 22, weight: .semibold)).foregroundColor(themeManager.accentBright)
                 }
-                Text(ProgressTabStrings.badgeLabel(badge, lang))
+                Text(ProgressTabStrings.badgeLabel(badge))
                     .font(.system(size: 11, weight: .semibold)).foregroundColor(themeManager.primaryText)
                     .multilineTextAlignment(.center).lineLimit(2).fixedSize(horizontal: false, vertical: true)
             }
@@ -233,11 +228,11 @@ struct ProgressRingsView: View {
 
     private var headerSection: some View {
         VStack(alignment: .leading, spacing: WarmSpacing.small) {
-            Text(ProgressTabStrings.yourProgress(lang))
+            Text(ProgressTabStrings.yourProgress)
                 .font(.system(size: 28, weight: .bold, design: .rounded))
                 .foregroundColor(themeManager.primaryText)
 
-            Text(ProgressTabStrings.trackJourney(lang))
+            Text(ProgressTabStrings.trackJourney)
                 .font(.system(size: 15, weight: .medium, design: .rounded))
                 .foregroundColor(themeManager.secondaryText)
         }
@@ -279,33 +274,33 @@ struct ProgressRingsView: View {
             RingsStatCard(
                 icon: "book.fill",
                 iconColor: themeManager.semanticRed,
-                title: ProgressTabStrings.versesRead(lang),
+                title: ProgressTabStrings.versesRead,
                 value: "\(progressManager.stats.totalVersesRead)",
-                subtitle: ProgressTabStrings.ofTotal(totalQuranVerses, lang)
+                subtitle: ProgressTabStrings.ofTotal(totalQuranVerses)
             )
 
             RingsStatCard(
                 icon: "checkmark.seal.fill",
                 iconColor: themeManager.semanticGreen,
-                title: ProgressTabStrings.surahsComplete(lang),
+                title: ProgressTabStrings.surahsComplete,
                 value: "\(progressManager.stats.totalSurahsCompleted)",
-                subtitle: ProgressTabStrings.ofTotal(totalSurahs, lang)
+                subtitle: ProgressTabStrings.ofTotal(totalSurahs)
             )
 
             RingsStatCard(
                 icon: "questionmark.circle.fill",
                 iconColor: themeManager.semanticBlue,
-                title: ProgressTabStrings.quizzesDone(lang),
+                title: ProgressTabStrings.quizzesDone,
                 value: "\(quizManager.completedSurahCount)",
-                subtitle: ProgressTabStrings.surahsTested(lang)
+                subtitle: ProgressTabStrings.surahsTested
             )
 
             RingsStatCard(
                 icon: "sparkles",
                 iconColor: themeManager.semanticYellow,
-                title: ProgressTabStrings.totalSawab(lang),
+                title: ProgressTabStrings.totalSawab,
                 value: formatSawab(progressManager.stats.totalSawab),
-                subtitle: ProgressTabStrings.blessingsEarned(lang)
+                subtitle: ProgressTabStrings.blessingsEarned
             )
         }
     }
@@ -325,11 +320,11 @@ struct ProgressRingsView: View {
                 )
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(ProgressTabStrings.dayStreak(progressManager.stats.currentStreak, lang))
+                Text(ProgressTabStrings.dayStreak(progressManager.stats.currentStreak))
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
 
-                Text(ProgressTabStrings.keepItGoing(lang))
+                Text(ProgressTabStrings.keepItGoing)
                     .font(.system(size: 14, weight: .medium, design: .rounded))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -337,7 +332,7 @@ struct ProgressRingsView: View {
             Spacer()
 
             VStack(alignment: .trailing, spacing: 2) {
-                Text(ProgressTabStrings.best(lang))
+                Text(ProgressTabStrings.best)
                     .font(.system(size: 12, weight: .medium, design: .rounded))
                     .foregroundColor(themeManager.tertiaryText)
 
@@ -362,7 +357,7 @@ struct ProgressRingsView: View {
     private var badgeCollectionSection: some View {
         VStack(alignment: .leading, spacing: WarmSpacing.regular) {
             HStack {
-                Text(ProgressTabStrings.badges(lang))
+                Text(ProgressTabStrings.badges)
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
 
@@ -379,11 +374,11 @@ struct ProgressRingsView: View {
                         .font(.system(size: 48))
                         .foregroundColor(themeManager.tertiaryText.opacity(0.5))
 
-                    Text(ProgressTabStrings.noBadgesYet(lang))
+                    Text(ProgressTabStrings.noBadgesYet)
                         .font(.system(size: 16, weight: .medium, design: .rounded))
                         .foregroundColor(themeManager.secondaryText)
 
-                    Text(ProgressTabStrings.earnBadgesHint(lang))
+                    Text(ProgressTabStrings.earnBadgesHint)
                         .font(.system(size: 14, weight: .regular, design: .rounded))
                         .foregroundColor(themeManager.tertiaryText)
                         .multilineTextAlignment(.center)
@@ -478,7 +473,6 @@ struct RingsStatCard: View {
 struct ProgressBadgeCard: View {
     let badge: BadgeAward
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 8) {
@@ -492,7 +486,7 @@ struct ProgressBadgeCard: View {
                     .foregroundColor(badgeColor)
             }
 
-            Text(ProgressTabStrings.badgeLabel(badge, languageManager.selectedLanguage))
+            Text(ProgressTabStrings.badgeLabel(badge))
                 .font(.system(size: 12, weight: .semibold, design: .rounded))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.center)

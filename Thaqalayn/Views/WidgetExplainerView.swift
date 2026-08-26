@@ -13,7 +13,6 @@ import SwiftUI
 struct WidgetExplainerView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var locationService = PrayerLocationService()
 
     // MARK: - Copy (en authored; plain spelling, no em dashes)
@@ -65,7 +64,6 @@ struct WidgetExplainerView: View {
             ar: "يبقى موقعك محفوظا على جهازك فقط ويستخدم لحساب أوقات الصلاة لا غير.")
     }
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var body: some View {
         ZStack {
@@ -77,12 +75,12 @@ struct WidgetExplainerView: View {
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
-                        Text(Copy.intro.text(for: lang))
+                        Text(Copy.intro.text)
                             .font(bodyFont)
                             .foregroundColor(themeManager.primaryText)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        Text(Copy.prayers.text(for: lang))
+                        Text(Copy.prayers.text)
                             .font(bodyFont)
                             .foregroundColor(themeManager.secondaryText)
                             .fixedSize(horizontal: false, vertical: true)
@@ -91,14 +89,13 @@ struct WidgetExplainerView: View {
 
                         enableCard
 
-                        Text(Copy.privacy.text(for: lang))
+                        Text(Copy.privacy.text)
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.tertiaryText)
                             .fixedSize(horizontal: false, vertical: true)
                     }
-                    .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-                    .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
-                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20)
                     .padding(.top, 8)
                     .padding(.bottom, 32)
@@ -121,7 +118,7 @@ struct WidgetExplainerView: View {
 
             Spacer()
 
-            Text(Copy.title.text(for: lang))
+            Text(Copy.title.text)
                 .font(titleFont)
                 .foregroundColor(themeManager.primaryText)
                 .lineLimit(1)
@@ -140,21 +137,21 @@ struct WidgetExplainerView: View {
 
     private var addCard: some View {
         card {
-            VStack(alignment: lang.isRTL ? .trailing : .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 8) {
                 HStack(spacing: 10) {
                     Image(systemName: "plus.square.on.square")
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(themeManager.accentColor)
-                    Text(Copy.addTitle.text(for: lang))
+                    Text(Copy.addTitle.text)
                         .font(headingFont)
                         .foregroundColor(themeManager.primaryText)
                 }
-                Text(Copy.addSteps.text(for: lang))
+                Text(Copy.addSteps.text)
                     .font(.system(size: 14, weight: .regular))
                     .foregroundColor(themeManager.secondaryText)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(16)
         }
     }
@@ -168,8 +165,8 @@ struct WidgetExplainerView: View {
                               ? "checkmark.circle.fill" : "location.fill")
                             .font(.system(size: 15, weight: .semibold))
                         Text(locationService.status == .saved
-                             ? Copy.saved.text(for: lang)
-                             : Copy.enableButton.text(for: lang))
+                             ? Copy.saved.text
+                             : Copy.enableButton.text)
                             .font(.system(size: 16, weight: .semibold))
                     }
                     .foregroundColor(.white)
@@ -200,10 +197,10 @@ struct WidgetExplainerView: View {
     private var statusNote: String? {
         switch locationService.status {
         case .idle: return nil
-        case .locating: return Copy.locating.text(for: lang)
-        case .saved: return Copy.saved.text(for: lang)
-        case .denied: return Copy.denied.text(for: lang)
-        case .failed: return Copy.failed.text(for: lang)
+        case .locating: return Copy.locating.text
+        case .saved: return Copy.saved.text
+        case .denied: return Copy.denied.text
+        case .failed: return Copy.failed.text
         }
     }
 

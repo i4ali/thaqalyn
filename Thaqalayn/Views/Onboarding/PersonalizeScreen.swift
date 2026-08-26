@@ -2,7 +2,7 @@
 //  PersonalizeScreen.swift
 //  Thaqalayn
 //
-//  Onboarding Screen 10: Personalize — display name + preferred app language.
+//  Onboarding Screen 10: Personalize - display name.
 //
 
 import SwiftUI
@@ -10,7 +10,6 @@ import SwiftUI
 struct PersonalizeScreen: View {
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var profile = UserProfileManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Binding var currentPage: Int
     @State private var isVisible = false
     @FocusState private var nameFieldFocused: Bool
@@ -28,7 +27,6 @@ struct PersonalizeScreen: View {
                     VStack(spacing: 30) {
                         header
                         nameField
-                        languageSelector
                         continueButton
                     }
                     .padding(.horizontal, 24)
@@ -51,7 +49,7 @@ struct PersonalizeScreen: View {
                 .offset(y: isVisible ? 0 : -20)
                 .animation(.easeOut(duration: 0.6).delay(0.2), value: isVisible)
 
-            Text("Add your name and choose the language you'd like to read in. You can change these anytime in Settings.")
+            Text("Add your name so the app can greet you. You can change it anytime in Settings.")
                 .onbBody()
                 .foregroundColor(themeManager.secondaryText)
                 .multilineTextAlignment(.center)
@@ -90,46 +88,6 @@ struct PersonalizeScreen: View {
         .animation(.easeOut(duration: 0.6).delay(0.45), value: isVisible)
     }
 
-    private var languageSelector: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("PREFERRED LANGUAGE")
-                .onbEyebrow()
-                .foregroundColor(themeManager.accentColor)
-
-            VStack(spacing: 10) {
-                ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { lang in
-                    languageRow(lang)
-                }
-            }
-        }
-        .opacity(isVisible ? 1 : 0)
-        .offset(y: isVisible ? 0 : 20)
-        .animation(.easeOut(duration: 0.6).delay(0.6), value: isVisible)
-    }
-
-    private func languageRow(_ lang: CommentaryLanguage) -> some View {
-        let selected = languageManager.selectedLanguage == lang
-        return Button {
-            withAnimation(.easeInOut(duration: 0.2)) { languageManager.setLanguage(lang) }
-        } label: {
-            HStack(spacing: 14) {
-                Text(lang.displayName)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                Spacer(minLength: 8)
-                Image(systemName: selected ? "checkmark.circle.fill" : "circle")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(selected ? themeManager.accentColor : themeManager.tertiaryText)
-            }
-            .onboardingRow(padding: 16)
-            .overlay(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .stroke(selected ? Color(hex: "ECD49A").opacity(0.6) : Color.clear, lineWidth: 1.5)
-            )
-        }
-        .buttonStyle(EmPressStyle())
-    }
-
     private var continueButton: some View {
         Button(action: advance) {
             Text("Continue")
@@ -146,7 +104,7 @@ struct PersonalizeScreen: View {
         }
         .buttonStyle(EmPressStyle())
         .opacity(isVisible ? 1 : 0)
-        .animation(.easeOut(duration: 0.6).delay(0.75), value: isVisible)
+        .animation(.easeOut(duration: 0.6).delay(0.6), value: isVisible)
     }
 
     private func advance() {

@@ -12,13 +12,11 @@
 import SwiftUI
 
 struct PosterCarouselCard: View {
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     let assetName: String
     let title: String
     let subtitle: String
     let action: () -> Void
 
-    private var isRTL: Bool { languageManager.selectedLanguage.isRTL }
 
     // The covers read as emerald-night art in every app theme, so the poster
     // uses the art's own fixed palette rather than the active theme's.
@@ -57,7 +55,6 @@ struct PosterCarouselCard: View {
                 .offset(y: -(imgH - geo.size.height) * 0.26)
                 .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
                 .clipped()
-                .scaleEffect(x: isRTL ? -1 : 1)
         }
         .accessibilityHidden(true)
     }
@@ -81,7 +78,6 @@ struct PosterCarouselCard: View {
                 startPoint: .top, endPoint: .bottom
             )
         }
-        .scaleEffect(x: isRTL ? -1 : 1)
     }
 
     private var content: some View {
@@ -122,24 +118,11 @@ struct PosterCarouselCard: View {
         .padding(.top, 19)
         .padding(.bottom, 15)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
     }
 
-    private var discoverLabel: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "اكتشف"
-        case .urdu: return "دریافت کریں"
-        default: return "DISCOVER"
-        }
-    }
+    private let discoverLabel = "DISCOVER"
 
-    private var exploreLabel: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "استكشف"
-        case .urdu: return "دیکھیں"
-        default: return "Explore"
-        }
-    }
+    private let exploreLabel = "Explore"
 }
 
 #Preview {

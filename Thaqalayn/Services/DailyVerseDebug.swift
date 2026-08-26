@@ -42,7 +42,7 @@ enum DailyVerseDebug {
         var refs: [String] = []
         for offset in 0..<365 {
             let selection = provider.verse(for: day(offset))
-            if selection.occasion(.english) == nil { refs.append(selection.id) }
+            if selection.occasionEn == nil { refs.append(selection.id) }
         }
         let unique = Set(refs)
         check("no verse repeats in 365 days",
@@ -86,7 +86,7 @@ enum DailyVerseDebug {
             let selection = provider.verse(for: date)
             foundAshura = true
             check("10 Muharram overrides the pool",
-                  selection.occasion(.english) != nil,
+                  selection.occasionEn != nil,
                   "got no occasion")
             check("10 Muharram serves 3:169", selection.id == "3:169", "got \(selection.id)")
             break

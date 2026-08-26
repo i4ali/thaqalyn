@@ -165,8 +165,6 @@ struct TTSVoicePickerView: View {
             sampleText = "هذا نموذج للصوت المحدد لقراءة تفسير القرآن الكريم."
         case .urdu:
             sampleText = "یہ منتخب آواز کا نمونہ ہے تفسیر پڑھنے کے لیے۔"
-        case .french:
-            sampleText = "" // French TTS not supported
         }
         tafsirReader.speak(text: sampleText, language: language)
     }

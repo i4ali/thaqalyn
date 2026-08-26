@@ -10,7 +10,6 @@ import SwiftUI
 struct PropheticStoriesView: View {
     @StateObject private var storiesManager = PropheticStoriesManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     @State private var selectedCategory: StoryCategory? = nil
@@ -49,11 +48,11 @@ struct PropheticStoriesView: View {
                     VStack(spacing: 12) {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(localizedTitle)
+                                Text("Prophetic Stories")
                                     .font(.system(size: 34, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
-                                Text(localizedSubtitle)
+                                Text("Quranic accounts of the messengers")
                                     .font(.system(size: 16, weight: .medium))
                                     .foregroundColor(themeManager.secondaryText)
                             }
@@ -64,8 +63,6 @@ struct PropheticStoriesView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 12)
-                    .environment(\.layoutDirection,
-                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                     }
 
                     // Search bar
@@ -195,14 +192,14 @@ struct PropheticStoriesView: View {
     private var emeraldHeader: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 7) {
-                Text(localizedEyebrow.uppercased())
+                Text("FROM THE QUR'AN")
                     .font(.system(size: 11, weight: .bold)).tracking(3)
                     .foregroundColor(themeManager.accentColor)
-                Text(localizedTitle)
+                Text("Prophetic Stories")
                     .font(EmType.serif(36, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(localizedSubtitle)
+                Text("Quranic accounts of the messengers")
                     .font(.system(size: 13.5))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -211,49 +208,16 @@ struct PropheticStoriesView: View {
         .padding(.horizontal, 20)
         .padding(.top, 16)
         .padding(.bottom, 12)
-        .environment(\.layoutDirection,
-                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
         .emCoverHeaderBand("PropheticStoriesCover", height: 280)
-    }
-
-    // MARK: - Localized header strings (follow the global app language)
-
-    private var localizedTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "قصص الأنبياء"
-        case .urdu:   return "انبیاء کے قصے"
-        default:      return "Prophetic Stories"
-        }
-    }
-
-    private var localizedSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "روايات قرآنية عن الرسل"
-        case .urdu:   return "رسولوں کے قرآنی واقعات"
-        default:      return "Quranic accounts of the messengers"
-        }
-    }
-
-    private var localizedEyebrow: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "من القرآن"
-        case .urdu:   return "قرآن سے"
-        default:      return "From the Qur'an"
-        }
     }
 }
 
 struct PropheticStoryCardView: View {
     let story: PropheticStory
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-        }
-        .environment(\.layoutDirection,
-                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
     }
 
     private var emeraldBody: some View {
@@ -261,10 +225,10 @@ struct PropheticStoryCardView: View {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: story.categoryIcon)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(story.prophet(for: languageManager.selectedLanguage))
+                    Text(story.prophetEn)
                         .font(.system(size: 11, weight: .bold)).tracking(0.5)
                         .foregroundColor(themeManager.accentColor)
-                    Text(story.title(for: languageManager.selectedLanguage))
+                    Text(story.titleEn)
                         .font(EmType.serif(20, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
@@ -305,7 +269,7 @@ struct PropheticStoryCardView: View {
             // Story content
             VStack(alignment: .leading, spacing: 6) {
                 // Prophet name badge
-                Text(story.prophet(for: languageManager.selectedLanguage))
+                Text(story.prophetEn)
                     .font(.system(size: 12, weight: .bold))
                     .foregroundColor(themeManager.accentColor)
                     .padding(.horizontal, 10)
@@ -315,7 +279,7 @@ struct PropheticStoryCardView: View {
                             .fill(themeManager.accentColor.opacity(0.15))
                     )
 
-                Text(story.title(for: languageManager.selectedLanguage))
+                Text(story.titleEn)
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(2)

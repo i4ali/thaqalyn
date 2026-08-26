@@ -11,17 +11,10 @@ struct FastingCategoryDetailView: View {
     let category: FastingCategory
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
 
-    private var localizedFastingEyebrow: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "الصيام في القرآن"
-        case .urdu:   return "قرآن میں روزہ"
-        default:      return "Fasting in the Quran"
-        }
-    }
+    private let fastingEyebrow = "Fasting in the Quran"
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
 
@@ -57,7 +50,7 @@ struct FastingCategoryDetailView: View {
                             }
 
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(category.title(for: languageManager.selectedLanguage))
+                                Text(category.titleEn)
                                     .font(.system(size: 24, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
@@ -70,14 +63,12 @@ struct FastingCategoryDetailView: View {
                         }
 
                         // Description
-                        Text(category.description(for: languageManager.selectedLanguage))
+                        Text(category.descriptionEn)
                             .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                             .foregroundColor(themeManager.primaryText)
                             .lineSpacing(4 * readingSettings.scale)
                     }
                     .padding(24)
-                    .environment(\.layoutDirection,
-                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                     .background {
                         RoundedRectangle(cornerRadius: 24)
                             .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
@@ -170,10 +161,10 @@ struct FastingCategoryDetailView: View {
                     HStack(spacing: 14) {
                         EmIconChip(sfSymbol: category.icon, size: 56)
                         VStack(alignment: .leading, spacing: 5) {
-                            Text(localizedFastingEyebrow.uppercased())
+                            Text(fastingEyebrow.uppercased())
                                 .font(.system(size: 11, weight: .bold)).tracking(3)
                                 .foregroundColor(themeManager.accentColor)
-                            Text(category.title(for: languageManager.selectedLanguage))
+                            Text(category.titleEn)
                                 .font(EmType.serif(28, .semiBold))
                                 .foregroundColor(themeManager.primaryText)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -186,15 +177,13 @@ struct FastingCategoryDetailView: View {
                     Rectangle()
                         .fill(themeManager.dividerColor)
                         .frame(height: 1)
-                    Text(category.description(for: languageManager.selectedLanguage))
+                    Text(category.descriptionEn)
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(20)
-                .environment(\.layoutDirection,
-                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             }
             .padding(.horizontal, 20)
             .padding(.top, 12)
@@ -235,7 +224,6 @@ struct FastingVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
@@ -243,18 +231,8 @@ struct FastingVerseCard: View {
               let verse = verses["\(fastingVerse.verseNumber)"] else {
             return nil
         }
-        // Verse translations exist only in English + Urdu; Arabic/English fall back to English.
-        let translation: String
-        if languageManager.selectedLanguage == .urdu, let urdu = verse.translationUrdu, !urdu.isEmpty {
-            translation = urdu
-        } else {
-            translation = verse.translation
-        }
-        return (verse.arabicText, translation)
+        return (verse.arabicText, verse.translation)
     }
-
-    /// Verse translation is Urdu-only (Arabic falls back to English), so RTL only for Urdu.
-    private var verseTranslationIsRTL: Bool { languageManager.selectedLanguage == .urdu }
 
     var surahName: String {
         dataManager.quranData?.surahs.first { $0.number == fastingVerse.surahNumber }?.englishName ?? "Surah \(fastingVerse.surahNumber)"
@@ -303,9 +281,8 @@ struct FastingVerseCard: View {
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(3 * readingSettings.scale)
-                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
                 // Relevance note
@@ -313,16 +290,14 @@ struct FastingVerseCard: View {
                     Image(systemName: "text.bubble")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(fastingVerse.relevanceNote(for: languageManager.selectedLanguage))
+                    Text(fastingVerse.relevanceNoteEn)
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
-                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .environment(\.layoutDirection,
-                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                 .background(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(themeManager.accentChip.opacity(0.6))
@@ -410,9 +385,8 @@ struct FastingVerseCard: View {
                         .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
-                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(20)
 
@@ -432,15 +406,13 @@ struct FastingVerseCard: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
 
-                Text(fastingVerse.relevanceNote(for: languageManager.selectedLanguage))
+                Text(fastingVerse.relevanceNoteEn)
                     .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(20)
-            .environment(\.layoutDirection,
-                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             .background {
                 Rectangle()
                     .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
@@ -495,20 +467,10 @@ struct FastingVerseCard: View {
 struct AhlulBaytNarrationCard: View {
     let narration: AhlulBaytNarration
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
-    private var isUrdu: Bool { lang == .urdu }
-
-    /// Section eyebrow, localized (kept fixed-size — it is chrome, not reading content).
-    private var label: String {
-        switch lang {
-        case .arabic: return "من أهل البيت (ع)"
-        case .urdu:   return "اہلِ بیتؑ سے"
-        default:      return "From the Ahlul Bayt (a)"
-        }
-    }
+    /// Section eyebrow (kept fixed-size - it is chrome, not reading content).
+    private let label = "From the Ahlul Bayt (a)"
 
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
@@ -525,22 +487,17 @@ struct AhlulBaytNarrationCard: View {
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .environment(\.layoutDirection, .rightToLeft)
 
-                // Arabic readers read the narration itself; show a translation only otherwise.
-                if lang != .arabic {
-                    Text(narration.translation(for: lang))
-                        .font(EmType.serif(16 * readingSettings.scale, .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                        .lineSpacing(3 * readingSettings.scale)
-                        .multilineTextAlignment(isUrdu ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: isUrdu ? .trailing : .leading)
-                        .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
-                }
+                Text(narration.translationEn)
+                    .font(EmType.serif(16 * readingSettings.scale, .medium))
+                    .foregroundColor(themeManager.secondaryText)
+                    .lineSpacing(3 * readingSettings.scale)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
-                Text(narration.source(for: lang))
+                Text(narration.sourceEn)
                     .font(.system(size: 12.5, weight: .semibold))
                     .foregroundColor(themeManager.accentColor)
-                    .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
     }
@@ -565,21 +522,17 @@ struct AhlulBaytNarrationCard: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .environment(\.layoutDirection, .rightToLeft)
 
-            if lang != .arabic {
-                Text(narration.translation(for: lang))
-                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(4 * readingSettings.scale)
-                    .multilineTextAlignment(isUrdu ? .trailing : .leading)
-                    .frame(maxWidth: .infinity, alignment: isUrdu ? .trailing : .leading)
-                    .environment(\.layoutDirection, isUrdu ? .rightToLeft : .leftToRight)
-            }
+            Text(narration.translationEn)
+                .font(.system(size: 15 * readingSettings.scale, weight: .medium))
+                .foregroundColor(themeManager.primaryText)
+                .lineSpacing(4 * readingSettings.scale)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
 
-            Text(narration.source(for: lang))
+            Text(narration.sourceEn)
                 .font(.system(size: 13, weight: .semibold))
                 .foregroundColor(themeManager.accentColor)
-                .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(20)
         .background {

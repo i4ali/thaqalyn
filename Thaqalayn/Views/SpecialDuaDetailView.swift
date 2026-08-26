@@ -20,7 +20,6 @@ struct SpecialDuaDetailView: View {
     let dua: SpecialDua
 
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @StateObject private var stream = DuaStreamPlayer.shared
     @StateObject private var karaoke = DuaKaraokeEngine()
@@ -98,7 +97,7 @@ struct SpecialDuaDetailView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(dua.title(for: languageManager.selectedLanguage))
+            Text(dua.titleEn)
                 .font(em ? EmType.serif(30, .semiBold) : .system(size: 28, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
                 .fixedSize(horizontal: false, vertical: true)
@@ -290,7 +289,7 @@ struct SpecialDuaDetailView: View {
 
     private var shareText: String {
         """
-        \(dua.title(for: languageManager.selectedLanguage))
+        \(dua.titleEn)
         \(dua.whenEn) · \(dua.attributionEn)
 
         \(dua.introEn)

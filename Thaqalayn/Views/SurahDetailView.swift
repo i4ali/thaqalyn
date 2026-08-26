@@ -333,21 +333,6 @@ struct ModernSurahHeader: View {
     let onGoToVerse: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var audioManager = AudioManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-
-    /// Cycle the global app language (English → Urdu → Arabic). This is the one in-context
-    /// shortcut kept after language was consolidated into Settings; it writes the same global
-    /// setting as the Settings picker. Verse translations exist only in English/Urdu, so in
-    /// Arabic the English translation is shown (fallback) beneath the Arabic verse.
-    private func toggleTranslationLanguage() {
-        withAnimation(.easeInOut(duration: 0.2)) {
-            languageManager.toggleLanguage()
-        }
-    }
-
-    private var translationLanguageCode: String {
-        languageManager.selectedLanguage.shortCode
-    }
 
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
@@ -394,7 +379,6 @@ struct ModernSurahHeader: View {
 
                         emHeaderChip(system: "magnifyingglass", action: onGoToVerse)
                         if hasQuiz { emHeaderChip(system: "brain.head.profile", action: onQuizTap) }
-                        emLanguageChip()
                     }
                     .padding(.top, 4)
                 }
@@ -415,24 +399,6 @@ struct ModernSurahHeader: View {
                 .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
         }
         .buttonStyle(EmPressStyle())
-    }
-
-    /// EN/UR translation-language toggle, styled to sit beside the emerald header chips.
-    private func emLanguageChip() -> some View {
-        Button(action: toggleTranslationLanguage) {
-            HStack(spacing: 5) {
-                Image(systemName: "globe").font(.system(size: 14, weight: .semibold))
-                Text(translationLanguageCode).font(.system(size: 14, weight: .bold))
-            }
-            .foregroundColor(themeManager.accentColor)
-            .frame(height: 50)
-            .padding(.horizontal, 13)
-            .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.accentChip))
-            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
-        }
-        .buttonStyle(EmPressStyle())
-        .accessibilityLabel("Translation language")
-        .accessibilityValue(languageManager.selectedLanguage == .urdu ? "Urdu" : "English")
     }
 
     private var legacyBody: some View {
@@ -544,26 +510,6 @@ struct ModernSurahHeader: View {
                         }
                     }
 
-                    // Translation language toggle (EN/UR)
-                    Button(action: toggleTranslationLanguage) {
-                        HStack(spacing: 6) {
-                            Image(systemName: "globe")
-                                .font(.system(size: 15, weight: .semibold))
-                            Text(translationLanguageCode)
-                                .font(.system(size: 16, weight: .semibold))
-                                .fixedSize()
-                        }
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 16)
-                        .frame(height: 48)
-                        .background {
-                            RoundedRectangle(cornerRadius: 24)
-                                .fill(themeManager.purpleGradient)
-                                .shadow(color: themeManager.accentColor.opacity(0.3), radius: 12)
-                        }
-                    }
-                    .accessibilityLabel("Translation language")
-                    .accessibilityValue(languageManager.selectedLanguage.displayName)
                 }
                 .padding(.top, 8)
             }
@@ -601,7 +547,6 @@ struct ModernVerseCard: View {
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var progressManager = ProgressManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     private var isBookmarked: Bool {
@@ -746,20 +691,14 @@ struct ModernVerseCard: View {
         .opacity(dimmed ? 0.45 : 1)
     }
 
-    /// Verse translation line that switches between English (LTR) and Urdu (RTL,
-    /// Arabic-script font) based on the surah-screen language toggle.
+    /// Verse translation line (English).
     @ViewBuilder
-    private func translationLine(urduFont: Font, englishFont: Font,
-                                 urduLineSpacing: CGFloat, englishLineSpacing: CGFloat) -> some View {
-        let showUrdu = verse.usesUrduTranslation(for: languageManager.selectedLanguage)
-        Text(verse.displayTranslation(for: languageManager.selectedLanguage))
-            .font(showUrdu ? urduFont : englishFont)
+    private func translationLine(englishFont: Font, englishLineSpacing: CGFloat) -> some View {
+        Text(verse.translation)
+            .font(englishFont)
             .foregroundColor(themeManager.secondaryText)
-            .lineSpacing(showUrdu ? urduLineSpacing : englishLineSpacing)
-            .multilineTextAlignment(showUrdu ? .trailing : .leading)
-            .frame(maxWidth: .infinity, alignment: showUrdu ? .trailing : .leading)
-            .environment(\.layoutDirection, showUrdu ? .rightToLeft : .leftToRight)
-            .animation(.easeInOut(duration: 0.25), value: languageManager.selectedLanguage)
+            .lineSpacing(englishLineSpacing)
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private var emeraldBody: some View {
@@ -790,9 +729,7 @@ struct ModernVerseCard: View {
                 .lineSpacing(12 * readingSettings.scale)
                 .environment(\.layoutDirection, .rightToLeft)
 
-            translationLine(urduFont: EmType.arabic(19 * readingSettings.scale),
-                            englishFont: EmType.serif(17 * readingSettings.scale, .medium),
-                            urduLineSpacing: 9 * readingSettings.scale,
+            translationLine(englishFont: EmType.serif(17 * readingSettings.scale, .medium),
                             englishLineSpacing: 3 * readingSettings.scale)
 
             HStack(spacing: 10) {
@@ -930,10 +867,9 @@ struct ModernVerseCard: View {
                 .lineSpacing(26 * readingSettings.scale)  // line-height: 2 = lineSpacing equals font size
                 .shadow(color: themeManager.isDarkMode && isCurrentlyPlaying ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
 
-            // Translation (English / Urdu)
-            translationLine(urduFont: EmType.arabic(18 * readingSettings.scale),
-                            englishFont: .system(size: 16 * readingSettings.scale, weight: .medium),
-                            urduLineSpacing: 9 * readingSettings.scale, englishLineSpacing: 4 * readingSettings.scale)
+            // Translation (English)
+            translationLine(englishFont: .system(size: 16 * readingSettings.scale, weight: .medium),
+                            englishLineSpacing: 4 * readingSettings.scale)
 
             // Commentary buttons (theme-adaptive for all themes)
             // Split button design: Summary (left) + Full Commentary (right)
@@ -1610,15 +1546,9 @@ struct TafsirLayerSelector: View {
         layer3_ar: nil,
         layer4_ar: nil,
         layer5_ar: nil,
-        layer1_fr: nil,
-        layer2_fr: nil,
-        layer3_fr: nil,
-        layer4_fr: nil,
-        layer5_fr: nil,
         layer2short: nil,
         layer2short_urdu: nil,
         layer2short_ar: nil,
-        layer2short_fr: nil,
         quickOverview: nil
     )
 

@@ -108,8 +108,6 @@ class NotificationManager: ObservableObject {
     // MARK: - Notification Content
 
     private func buildNotificationContent(for selection: DailyVerseSelection) async -> UNMutableNotificationContent? {
-        let language = preferences.language
-
         let verse = await MainActor.run {
             DataManager.shared.getVerse(surah: selection.surah, verse: selection.verse)
         }
@@ -121,18 +119,18 @@ class NotificationManager: ObservableObject {
         let content = UNMutableNotificationContent()
 
         // On a sacred day the occasion replaces the generic title.
-        content.title = selection.occasion(language) ?? Self.verseOfTheDayTitle(language)
+        content.title = selection.occasionEn ?? "Verse of the Day"
         // The theme lives in the subtitle so the body is nothing but the verse.
         // iOS shows roughly four body lines on the lock screen; spending one on a
         // "tap to explore" CTA only restated the tap gesture, so it is gone.
-        content.subtitle = selection.theme(language)
+        content.subtitle = selection.themeEn
 
         var body = verse.arabicText
-        if let translation = Self.translation(from: verse, for: language), !translation.isEmpty {
-            body += "\n\n" + translation
+        if !verse.translation.isEmpty {
+            body += "\n\n" + verse.translation
         }
         if preferences.includeTafsir, let tafsir = verse.tafsir {
-            let text = tafsir.content(for: TafsirLayer.foundation, language: language)
+            let text = tafsir.content(for: TafsirLayer.foundation, language: .english)
             if !text.isEmpty {
                 body += "\n\n💡 " + String(text.prefix(150)) + "..."
             }
@@ -149,26 +147,6 @@ class NotificationManager: ObservableObject {
         ]
 
         return content
-    }
-
-    private static func verseOfTheDayTitle(_ language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return "آية اليوم"
-        case .urdu:   return "آیتِ روز"
-        default:      return "Verse of the Day"
-        }
-    }
-
-    /// An Arabic reader already has the verse itself in the body, so we do not repeat
-    /// it as a "translation". Urdu falls back to English if the Urdu translation is
-    /// missing, though quran_data.json covers all 6,236 verses in both.
-    private static func translation(from verse: VerseWithTafsir,
-                                    for language: CommentaryLanguage) -> String? {
-        switch language {
-        case .arabic: return nil
-        case .urdu:   return verse.translationUrdu ?? verse.translation
-        default:      return verse.translation
-        }
     }
 
     // MARK: - Lifecycle Refresh
@@ -220,7 +198,7 @@ class NotificationManager: ObservableObject {
     /// (Re)schedule the rolling daily-verse window.
     ///
     /// Cancel-all-then-re-add rather than an incremental diff: content is baked into
-    /// each request at schedule time, so a change to time / language / includeTafsir
+    /// each request at schedule time, so a change to time / includeTafsir
     /// has to rewrite every pending request anyway. Thirty rebuilds on a foreground
     /// is cheap - the pool is in memory and getVerse is an in-memory lookup.
     private func scheduleDailyVerseNotifications() async {

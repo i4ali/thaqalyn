@@ -10,7 +10,6 @@ import SwiftUI
 struct LifeMomentsView: View {
     @StateObject private var lifeMomentsManager = LifeMomentsManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedMoment: LifeMoment?
     @State private var navigateToDetail = false
@@ -27,17 +26,17 @@ struct LifeMomentsView: View {
                         HStack(alignment: themeManager.isMidnightEmerald ? .top : .center) {
                             if themeManager.isMidnightEmerald {
                                 VStack(alignment: .leading, spacing: 7) {
-                                    Text(localizedEyebrow.uppercased()).font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
-                                    Text(localizedTitle).font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
-                                    Text(localizedSubtitle).font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
+                                    Text("GUIDANCE").font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
+                                    Text("Life Moments").font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
+                                    Text("Find guidance for any situation").font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
                                 }
                             } else {
                                 VStack(alignment: .leading, spacing: 4) {
-                                    Text(localizedTitle)
+                                    Text("Life Moments")
                                         .font(.system(size: 34, weight: .bold, design: .rounded))
                                         .foregroundColor(themeManager.primaryText)
 
-                                    Text(localizedSubtitle)
+                                    Text("Find guidance for any situation")
                                         .font(.system(size: 16, weight: .medium))
                                         .foregroundColor(themeManager.secondaryText)
                                 }
@@ -49,8 +48,6 @@ struct LifeMomentsView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 20)
-                    .environment(\.layoutDirection,
-                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                     .emCoverHeaderBandIfEmerald("LifeMomentsCover", height: 280)
 
                     // Moments list
@@ -73,8 +70,6 @@ struct LifeMomentsView: View {
                             }
                             .padding(.horizontal, 20)
                             .padding(.vertical, 20)
-                            .environment(\.layoutDirection,
-                                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                         }
                     }
                 }
@@ -109,38 +104,11 @@ struct LifeMomentsView: View {
         .preferredColorScheme(themeManager.colorScheme)
         .darkScreenAura()
     }
-
-    // MARK: - Localized header strings (follow the global app language)
-
-    private var localizedEyebrow: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "هداية"
-        case .urdu:   return "رہنمائی"
-        default:      return "Guidance"
-        }
-    }
-
-    private var localizedTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "لحظات الحياة"
-        case .urdu:   return "زندگی کے لمحات"
-        default:      return "Life Moments"
-        }
-    }
-
-    private var localizedSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "اعثر على التوجيه لكل موقف"
-        case .urdu:   return "ہر موقع کے لیے رہنمائی پائیں"
-        default:      return "Find guidance for any situation"
-        }
-    }
 }
 
 struct MomentCard: View {
     let moment: LifeMoment
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
@@ -151,7 +119,7 @@ struct MomentCard: View {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: moment.categoryIcon, size: 46)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(moment.situation(for: languageManager.selectedLanguage))
+                    Text(moment.situationEn)
                         .font(EmType.serif(20, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2).multilineTextAlignment(.leading)
@@ -188,7 +156,7 @@ struct MomentCard: View {
 
             // Situation text
             VStack(alignment: .leading, spacing: 4) {
-                Text(moment.situation(for: languageManager.selectedLanguage))
+                Text(moment.situationEn)
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(2)

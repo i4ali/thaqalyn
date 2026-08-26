@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DuasCarouselCard: View {
     @Binding var showFullView: Bool
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         PosterCarouselCard(
@@ -21,21 +20,9 @@ struct DuasCarouselCard: View {
         }
     }
 
-    private var localizedTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "أدعية لكل حاجة"
-        case .urdu: return "ہر حاجت کی دعا"
-        default: return "Duas for Every Need"
-        }
-    }
+    private let localizedTitle = "Duas for Every Need"
 
-    private var localizedSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "أدعية للصحة والحفظ والرزق والمغفرة والمزيد"
-        case .urdu: return "صحت، حفاظت، رزق، مغفرت اور مزید کے لیے دعائیں"
-        default: return "Supplications for health, protection, sustenance, forgiveness, and more"
-        }
-    }
+    private let localizedSubtitle = "Supplications for health, protection, sustenance, forgiveness, and more"
 }
 
 #Preview {

@@ -28,11 +28,9 @@ private enum DailyCrosswordCardState {
 struct DailyCrosswordCard: View {
     @ObservedObject private var manager = DailyCrosswordManager.shared
     @ObservedObject private var provider = DailyCrosswordProvider.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
     @State private var showSheet = false
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var cardState: DailyCrosswordCardState {
         manager.isCompletedToday ? .done : .pending
@@ -88,7 +86,7 @@ struct DailyCrosswordCard: View {
 
             VStack(alignment: .leading, spacing: 4) {
                 // Title row: serif title
-                Text(DailyCrosswordStrings.dailyCrossword(lang))
+                Text(DailyCrosswordStrings.dailyCrossword)
                     .font(EmType.serif(20, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(2)
@@ -106,19 +104,18 @@ struct DailyCrosswordCard: View {
             emeraldRightIcon(state: state)
         }
         .padding(16)
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 
     private func emeraldSubLine(state: DailyCrosswordCardState) -> String {
         switch state {
         case .pending:
-            let teaser = DailyCrosswordStrings.teaser(lang)
+            let teaser = DailyCrosswordStrings.teaser
             if manager.streak.currentStreak > 0 {
                 return "🔥 \(manager.streak.currentStreak) · \(teaser.uppercased())"
             }
             return teaser.uppercased()
         case .done:
-            let base = DailyCrosswordStrings.doneForToday(lang).uppercased()
+            let base = DailyCrosswordStrings.doneForToday.uppercased()
             return "\(base) · 🔥 \(manager.streak.currentStreak)"
         }
     }
@@ -177,7 +174,7 @@ struct DailyCrosswordCard: View {
 
             // Text stack
             VStack(alignment: .leading, spacing: 4) {
-                Text(DailyCrosswordStrings.dailyCrossword(lang))
+                Text(DailyCrosswordStrings.dailyCrossword)
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(2)
@@ -208,19 +205,18 @@ struct DailyCrosswordCard: View {
                 )
         }
         .contentShape(Rectangle())
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 
     private func legacySubLine(state: DailyCrosswordCardState) -> String {
         switch state {
         case .pending:
-            let teaser = DailyCrosswordStrings.teaser(lang)
+            let teaser = DailyCrosswordStrings.teaser
             if manager.streak.currentStreak > 0 {
                 return "🔥 \(manager.streak.currentStreak) · \(teaser)"
             }
             return teaser
         case .done:
-            let base = DailyCrosswordStrings.doneForToday(lang)
+            let base = DailyCrosswordStrings.doneForToday
             return "\(base) · 🔥 \(manager.streak.currentStreak)"
         }
     }
@@ -248,7 +244,6 @@ struct DailyCrosswordCard: View {
 
 #Preview("Crossword Card — Pending, English, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     return VStack(spacing: 16) {
         DailyCrosswordCard()
     }
@@ -258,27 +253,6 @@ struct DailyCrosswordCard: View {
 
 #Preview("Crossword Card — Pending, English, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    return VStack(spacing: 16) {
-        DailyCrosswordCard()
-    }
-    .padding(20)
-    .background(Color(red: 0.97, green: 0.95, blue: 0.92))
-}
-
-#Preview("Crossword Card — Pending, Urdu, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    return VStack(spacing: 16) {
-        DailyCrosswordCard()
-    }
-    .padding(20)
-    .background(Color.black)
-}
-
-#Preview("Crossword Card — Pending, Urdu, Light") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
     return VStack(spacing: 16) {
         DailyCrosswordCard()
     }
@@ -295,12 +269,9 @@ struct DailyCrosswordCard: View {
 
 private struct _DebugCrosswordDoneCard: View {
     let theme: ThemeVariant
-    let language: CommentaryLanguage
 
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
-    private var lang: CommentaryLanguage { language }
 
     var body: some View {
         Group {
@@ -308,7 +279,6 @@ private struct _DebugCrosswordDoneCard: View {
         }
         .onAppear {
             ThemeManager.shared.selectedTheme = theme
-            CommentaryLanguageManager.shared.setLanguage(language)
         }
     }
 
@@ -318,12 +288,12 @@ private struct _DebugCrosswordDoneCard: View {
                 EmIconChip(sfSymbol: "square.grid.3x3.fill", size: 46)
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 8) {
-                        Text(DailyCrosswordStrings.dailyCrossword(lang))
+                        Text(DailyCrosswordStrings.dailyCrossword)
                             .font(EmType.serif(20, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .lineLimit(2).multilineTextAlignment(.leading)
                     }
-                    let subLine = "\(DailyCrosswordStrings.doneForToday(lang).uppercased()) · 🔥 5"
+                    let subLine = "\(DailyCrosswordStrings.doneForToday.uppercased()) · 🔥 5"
                     Text(subLine)
                         .font(.system(size: 11, weight: .bold)).tracking(1)
                         .foregroundColor(.green)
@@ -334,7 +304,6 @@ private struct _DebugCrosswordDoneCard: View {
                     .foregroundColor(.green)
             }
             .padding(16)
-            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
         }
     }
 
@@ -347,10 +316,10 @@ private struct _DebugCrosswordDoneCard: View {
                     .font(.system(size: 20, weight: .semibold)).foregroundColor(.white)
             }
             VStack(alignment: .leading, spacing: 4) {
-                Text(DailyCrosswordStrings.dailyCrossword(lang))
+                Text(DailyCrosswordStrings.dailyCrossword)
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(themeManager.primaryText).lineLimit(2)
-                Text("\(DailyCrosswordStrings.doneForToday(lang)) · 🔥 5")
+                Text("\(DailyCrosswordStrings.doneForToday) · 🔥 5")
                     .font(.system(size: 14, weight: .medium)).foregroundColor(.green)
             }
             Spacer()
@@ -366,30 +335,17 @@ private struct _DebugCrosswordDoneCard: View {
                 .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
         }
         .contentShape(Rectangle())
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 }
 
 #Preview("Crossword Card — Done, English, Emerald") {
-    _DebugCrosswordDoneCard(theme: .nightSanctuary, language: .english)
+    _DebugCrosswordDoneCard(theme: .nightSanctuary)
         .padding(20)
         .background(Color.black)
 }
 
 #Preview("Crossword Card — Done, English, Light") {
-    _DebugCrosswordDoneCard(theme: .warmInviting, language: .english)
-        .padding(20)
-        .background(Color(red: 0.97, green: 0.95, blue: 0.92))
-}
-
-#Preview("Crossword Card — Done, Urdu, Emerald") {
-    _DebugCrosswordDoneCard(theme: .nightSanctuary, language: .urdu)
-        .padding(20)
-        .background(Color.black)
-}
-
-#Preview("Crossword Card — Done, Urdu, Light") {
-    _DebugCrosswordDoneCard(theme: .warmInviting, language: .urdu)
+    _DebugCrosswordDoneCard(theme: .warmInviting)
         .padding(20)
         .background(Color(red: 0.97, green: 0.95, blue: 0.92))
 }

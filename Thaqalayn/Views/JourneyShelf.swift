@@ -56,8 +56,8 @@ enum ShelfStatus {
 
 // MARK: - Item model
 
-/// One card's worth of data for a shelf. Title/description arrive already
-/// localized (they come from three different sources); `status` is resolved to
+/// One card's worth of data for a shelf. Title/description arrive as display-ready
+/// strings (they come from three different sources); `status` is resolved to
 /// copy inside `ShelfCard` so the status vocabulary stays in one place.
 struct ShelfItem: Identifiable {
     let id: String
@@ -85,8 +85,6 @@ struct ShelfItem: Identifiable {
 /// their bottoms line up even when some carry a description and some don't.
 struct ShelfCard: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     let item: ShelfItem
     /// Section label, spoken as the third clause of the card's accessibility label.
     let section: String
@@ -128,7 +126,6 @@ struct ShelfCard: View {
                 }
             }
             .contentShape(RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous))
-            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
         }
         .buttonStyle(EmPressStyle())
         .matchedZoomSource(item.id, in: zoomNamespace)
@@ -253,7 +250,7 @@ struct ShelfCard: View {
     /// Status eyebrow - a small-caps tinted label, or the PREMIUM chip.
     @ViewBuilder private var eyebrow: some View {
         if case .premium = item.status {
-            Text(JourneyStrings.premium(lang).uppercased())
+            Text(JourneyStrings.premium.uppercased())
                 .font(.system(size: 9, weight: .bold)).tracking(1.4)
                 .foregroundColor(tm.accentColor)
                 .padding(.horizontal, 8)
@@ -262,19 +259,19 @@ struct ShelfCard: View {
                 .overlay(Capsule().stroke(tm.strokeColor, lineWidth: 1))
         } else {
             Text(statusText)
-                .emEyebrow(lang, size: 10, tracking: 1.6, weight: .bold)
+                .emEyebrow(size: 10, tracking: 1.6, weight: .bold)
                 .foregroundColor(eyebrowTint)
         }
     }
 
     private var statusText: String {
         switch item.status {
-        case .live:            return JourneyStrings.live(lang)
-        case .inDays(let d):   return JourneyStrings.inDaysShort(d, lang)
-        case .ended:           return JourneyStrings.endedShort(lang)
-        case .ready:           return JourneyStrings.ready(lang)
-        case .soon:            return JourneyStrings.soon(lang)
-        case .premium:         return JourneyStrings.premium(lang)
+        case .live:            return JourneyStrings.live
+        case .inDays(let d):   return JourneyStrings.inDaysShort(d)
+        case .ended:           return JourneyStrings.endedShort
+        case .ready:           return JourneyStrings.ready
+        case .soon:            return JourneyStrings.soon
+        case .premium:         return JourneyStrings.premium
         }
     }
 
@@ -293,8 +290,6 @@ struct ShelfCard: View {
 /// list for this section).
 struct JourneyShelf: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     let label: String
     let count: Int
     let items: [ShelfItem]
@@ -308,12 +303,12 @@ struct JourneyShelf: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {
                 Text(label.uppercased())
-                    .emEyebrow(lang, size: 12, tracking: 2, weight: .bold)
+                    .emEyebrow(size: 12, tracking: 2, weight: .bold)
                     .foregroundColor(tm.accentColor)
                 Spacer(minLength: 8)
                 NavigationLink { destination } label: {
                     HStack(spacing: 3) {
-                        Text(JourneyStrings.allCount(count, lang))
+                        Text(JourneyStrings.allCount(count))
                             .font(.system(size: 12.5))
                         Image(systemName: "chevron.forward")
                             .font(.system(size: 10, weight: .semibold))
@@ -334,7 +329,6 @@ struct JourneyShelf: View {
                 .padding(.horizontal, 20)
             }
         }
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 }
 
@@ -346,9 +340,7 @@ struct JourneyShelf: View {
 /// handlers and presentation state stay in one place.
 struct SectionFullList<Content: View>: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     let title: String
     @ViewBuilder let content: Content
 
@@ -386,6 +378,5 @@ struct SectionFullList<Content: View>: View {
             }
         }
         .toolbar(.hidden, for: .navigationBar)
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 }

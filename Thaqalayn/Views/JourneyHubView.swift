@@ -44,9 +44,7 @@ struct JourneyHubView: View {
     @ObservedObject private var tm = ThemeManager.shared
     @ObservedObject private var cal = IslamicCalendarManager.shared
     @ObservedObject private var router = DeepLinkRouter.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var premiumManager = PremiumManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     @State private var presented: PresentedJourney?
     /// Set when an available deep dive is tapped — drives its full-screen descent.
     @State private var presentedDive: PresentedDeepDive?
@@ -94,8 +92,8 @@ struct JourneyHubView: View {
             }
             return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: d.iconIsCustomAsset,
                              isAvailable: entry.status.isActive, status: shelfStatus,
-                             title: JourneyStrings.title(d.id, lang),
-                             description: JourneyStrings.seasonTagline(d.id, lang),
+                             title: JourneyStrings.title(d.id),
+                             description: JourneyStrings.seasonTagline(d.id),
                              onTap: { handleTap(d, entry.status, fromShelf: true) },
                              coverAssetName: d.coverAssetName)
         }
@@ -109,16 +107,16 @@ struct JourneyHubView: View {
                 : .soon
             return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: false,
                              isAvailable: d.available, status: shelfStatus,
-                             title: d.title(lang), description: d.subtitle(lang),
+                             title: d.title(), description: d.subtitle(),
                              onTap: { handleDiveTap(d, fromShelf: true) },
                              coverAssetName: d.coverAssetName,
-                             // Listen only for built dives, and only in English (audio is EN-only).
-                             onListen: (d.available && lang == .english && d.dive != nil
+                             // Listen only for built dives.
+                             onListen: (d.available && d.dive != nil
                                         && JourneyAudioAvailability.isAudioReady(d.id)) ? {
                                  JourneyListenPresenter.shared.requestListen(
                                      d.dive!, isFree: premiumManager.canAccessDeepDive(d.id),
                                      paywall: PaywallContext(coverAssetName: d.coverAssetName,
-                                                             eyebrow: "\(JourneyStrings.deepDiveEyebrow(lang)) \u{00B7} \(d.title(lang))"))
+                                                             eyebrow: "\(JourneyStrings.deepDiveEyebrow) \u{00B7} \(d.title())"))
                              } : nil)
         }
     }
@@ -131,16 +129,16 @@ struct JourneyHubView: View {
                 : .soon
             return ShelfItem(id: d.id, sfSymbol: d.sfSymbol, isCustomAsset: false,
                              isAvailable: d.available, status: shelfStatus,
-                             title: d.title(lang), description: d.subtitle(lang),
+                             title: d.title(), description: d.subtitle(),
                              onTap: { handleSurahExperienceTap(d, fromShelf: true) },
                              coverAssetName: d.coverAssetName,
-                             // Listen only for built experiences, and only in English (audio is EN-only).
-                             onListen: (d.available && lang == .english && d.dive != nil
+                             // Listen only for built experiences.
+                             onListen: (d.available && d.dive != nil
                                         && JourneyAudioAvailability.isAudioReady(d.id)) ? {
                                  JourneyListenPresenter.shared.requestListen(
                                      d.dive!, isFree: premiumManager.canAccessSurahExperience(d.id),
                                      paywall: PaywallContext(coverAssetName: d.coverAssetName,
-                                                             eyebrow: "\(JourneyStrings.surahJourneyEyebrow(lang)) \u{00B7} \(d.title(lang))"))
+                                                             eyebrow: "\(JourneyStrings.surahJourneyEyebrow) \u{00B7} \(d.title())"))
                              } : nil)
         }
     }
@@ -148,7 +146,7 @@ struct JourneyHubView: View {
     // MARK: - "All N" full lists (pushed from a shelf header)
 
     private var sacredSeasonsList: some View {
-        SectionFullList(title: JourneyStrings.sacredSeasons(lang)) {
+        SectionFullList(title: JourneyStrings.sacredSeasons) {
             ForEach(ordered, id: \.descriptor.id) { entry in
                 JourneyCard(descriptor: entry.descriptor, status: entry.status,
                             isNextUp: entry.descriptor.id == nextUpId) {
@@ -159,7 +157,7 @@ struct JourneyHubView: View {
     }
 
     private var deepDivesList: some View {
-        SectionFullList(title: JourneyStrings.deepDives(lang)) {
+        SectionFullList(title: JourneyStrings.deepDives) {
             ForEach(DeepDiveDescriptor.all) { d in
                 DeepDiveCard(descriptor: d) { handleDiveTap(d) }
             }
@@ -167,7 +165,7 @@ struct JourneyHubView: View {
     }
 
     private var surahList: some View {
-        SectionFullList(title: JourneyStrings.insideTheSurah(lang)) {
+        SectionFullList(title: JourneyStrings.insideTheSurah) {
             ForEach(SurahExperienceDescriptor.all) { d in
                 SurahExperienceCard(descriptor: d) { handleSurahExperienceTap(d) }
             }
@@ -180,13 +178,12 @@ struct JourneyHubView: View {
                 AdaptiveModernBackground()
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
-                        EmHeading(eyebrow: JourneyStrings.grow(lang), title: JourneyStrings.journeys(lang))
-                            .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-                            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                        EmHeading(eyebrow: JourneyStrings.grow, title: JourneyStrings.journeys)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
                             .padding(.top, 12)
 
-                        JourneyShelf(label: JourneyStrings.sacredSeasons(lang),
+                        JourneyShelf(label: JourneyStrings.sacredSeasons,
                                      count: JourneyDescriptor.all.count,
                                      items: sacredSeasonItems,
                                      destination: AnyView(sacredSeasonsList),
@@ -194,7 +191,7 @@ struct JourneyHubView: View {
                                      zoomNamespace: diveZoom)
                             .padding(.top, 20)
 
-                        JourneyShelf(label: JourneyStrings.deepDives(lang),
+                        JourneyShelf(label: JourneyStrings.deepDives,
                                      count: DeepDiveDescriptor.all.count,
                                      items: deepDiveItems,
                                      destination: AnyView(deepDivesList),
@@ -202,7 +199,7 @@ struct JourneyHubView: View {
                                      zoomNamespace: diveZoom)
                             .padding(.top, 24)
 
-                        JourneyShelf(label: JourneyStrings.insideTheSurah(lang),
+                        JourneyShelf(label: JourneyStrings.insideTheSurah,
                                      count: SurahExperienceDescriptor.all.count,
                                      items: surahItems,
                                      destination: AnyView(surahList),
@@ -240,7 +237,7 @@ struct JourneyHubView: View {
                              coverAssetName: d.coverAssetName,
                              lockedPaywallContext: premiumManager.canAccessDeepDive(d.id) ? nil
                                 : PaywallContext(coverAssetName: d.coverAssetName,
-                                                 eyebrow: "\(JourneyStrings.deepDiveEyebrow(lang)) \u{00B7} \(d.title(lang))"))
+                                                 eyebrow: "\(JourneyStrings.deepDiveEyebrow) \u{00B7} \(d.title())"))
                     .navigationZoom(p.transitionID, in: diveZoom)
             }
         }
@@ -262,7 +259,7 @@ struct JourneyHubView: View {
                              coverAssetName: d.coverAssetName,
                              lockedPaywallContext: premiumManager.canAccessSurahExperience(d.id) ? nil
                                 : PaywallContext(coverAssetName: d.coverAssetName,
-                                                 eyebrow: "\(JourneyStrings.surahJourneyEyebrow(lang)) \u{00B7} \(d.title(lang))"))
+                                                 eyebrow: "\(JourneyStrings.surahJourneyEyebrow) \u{00B7} \(d.title())"))
                     .navigationZoom(p.transitionID, in: diveZoom)
             }
         }
@@ -317,8 +314,8 @@ struct JourneyHubView: View {
         } else {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
             withAnimation(.easeInOut(duration: 0.2)) {
-                lockedAlert = LockedJourneyAlert(title: JourneyStrings.comingSoon(lang),
-                                                 detail: JourneyStrings.deepDiveOnItsWay(d.title(lang), lang),
+                lockedAlert = LockedJourneyAlert(title: JourneyStrings.comingSoon,
+                                                 detail: JourneyStrings.deepDiveOnItsWay(d.title()),
                                                  pointer: nil)
             }
         }
@@ -335,8 +332,8 @@ struct JourneyHubView: View {
         } else {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
             withAnimation(.easeInOut(duration: 0.2)) {
-                lockedAlert = LockedJourneyAlert(title: JourneyStrings.comingSoon(lang),
-                                                 detail: JourneyStrings.deepDiveOnItsWay(d.title(lang), lang),
+                lockedAlert = LockedJourneyAlert(title: JourneyStrings.comingSoon,
+                                                 detail: JourneyStrings.deepDiveOnItsWay(d.title()),
                                                  pointer: nil)
             }
         }
@@ -347,13 +344,13 @@ struct JourneyHubView: View {
     private func makeLockedAlert(for d: JourneyDescriptor, status: JourneyStatus) -> LockedJourneyAlert {
         let title: String
         let detail: String
-        let jTitle = JourneyStrings.title(d.id, lang)
+        let jTitle = JourneyStrings.title(d.id)
         switch status {
         case .ended(_, let returns):
-            title = JourneyStrings.hasEnded(jTitle, lang)
+            title = JourneyStrings.hasEnded(jTitle)
             detail = returns
         case .comingSoon(_, let starts):
-            title = JourneyStrings.notOpenYet(jTitle, lang)
+            title = JourneyStrings.notOpenYet(jTitle)
             detail = starts
         case .active:
             title = jTitle          // unreachable: active journeys open directly
@@ -376,11 +373,11 @@ struct JourneyHubView: View {
         let rows = JourneyDescriptor.all.map { ($0, $0.status(using: cal)) }
         guard let soonest = rows.min(by: { opensIn($0.1) < opensIn($1.1) }) else { return nil }
         if soonest.0.id == tapped.id { return nil }
-        let sTitle = JourneyStrings.title(soonest.0.id, lang)
-        if soonest.1.isActive { return JourneyStrings.isOpenNow(sTitle, lang) }
+        let sTitle = JourneyStrings.title(soonest.0.id)
+        if soonest.1.isActive { return JourneyStrings.isOpenNow(sTitle) }
         let days = opensIn(soonest.1)
-        if days <= 0 { return JourneyStrings.upNextToday(sTitle, lang) }
-        return JourneyStrings.upNextInDays(sTitle, days, lang)
+        if days <= 0 { return JourneyStrings.upNextToday(sTitle) }
+        return JourneyStrings.upNextInDays(sTitle, days)
     }
 
     /// If a deep-link queued a journey and it is currently active, open it.
@@ -421,8 +418,6 @@ struct JourneyHubView: View {
 
 struct JourneyCard: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     let descriptor: JourneyDescriptor
     let status: JourneyStatus
     /// When true, this is the soonest upcoming journey — marked with a "NEXT UP"
@@ -447,11 +442,11 @@ struct JourneyCard: View {
                         if isNextUp {
                             nextUpPill
                         } else {
-                            Text(JourneyStrings.eyebrow(descriptor.id, descriptor.eyebrow, lang).uppercased())
-                                .emEyebrow(lang, size: 10.5, tracking: 2)
+                            Text(JourneyStrings.eyebrow(descriptor.id, descriptor.eyebrow).uppercased())
+                                .emEyebrow(size: 10.5, tracking: 2)
                                 .foregroundColor(tm.accentColor)
                         }
-                        Text(JourneyStrings.title(descriptor.id, lang))
+                        Text(JourneyStrings.title(descriptor.id))
                             .font(EmType.serif(22, .semiBold))
                             .foregroundColor(tm.primaryText)
                         Text(detailLine)
@@ -462,7 +457,6 @@ struct JourneyCard: View {
                     trailingGlyph
                 }
                 .padding(16)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
             }
         }
         .buttonStyle(EmPressStyle())
@@ -470,7 +464,7 @@ struct JourneyCard: View {
 
     /// Gold "NEXT UP" capsule shown in the eyebrow slot of the next-up card.
     private var nextUpPill: some View {
-        Text(JourneyStrings.nextUp(lang))
+        Text(JourneyStrings.nextUp)
             .font(.system(size: 9, weight: .heavy)).tracking(1.6)
             .foregroundColor(tm.onAccentText)
             .padding(.horizontal, 8)
@@ -481,8 +475,8 @@ struct JourneyCard: View {
     private var detailLine: String {
         switch status {
         case .active(let line):                 return line
-        case .comingSoon(let days, _):          return JourneyStrings.comingSoonInDays(days, lang)
-        case .ended(_, let returns):            return isNextUp ? returns : JourneyStrings.endedReturns(returns, lang)
+        case .comingSoon(let days, _):          return JourneyStrings.comingSoonInDays(days)
+        case .ended(_, let returns):            return isNextUp ? returns : JourneyStrings.endedReturns(returns)
         }
     }
 
@@ -529,7 +523,6 @@ struct JourneyCover: View {
 /// (tap to dismiss) over a card that explains the lock and names the next journey.
 struct LockedJourneyOverlay: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     let alert: LockedJourneyAlert
     let onDismiss: () -> Void
 
@@ -562,7 +555,7 @@ struct LockedJourneyOverlay: View {
                     }
                 }
 
-                EmGoldCTA(title: JourneyStrings.gotIt(languageManager.selectedLanguage), small: true) { onDismiss() }
+                EmGoldCTA(title: JourneyStrings.gotIt, small: true) { onDismiss() }
                     .padding(.top, 4)
             }
             .padding(22)
@@ -596,11 +589,9 @@ struct LockedJourneyOverlay: View {
 /// card, instead of the list staying stuck on whichever surah opened it first.
 private struct SurahExperienceRevealList: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var router = DeepLinkRouter.shared
     @Environment(\.dismiss) private var dismiss
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     /// Opens the visual descent for a tapped card - handed back to the hub.
     let onTap: (SurahExperienceDescriptor) -> Void
@@ -643,7 +634,6 @@ private struct SurahExperienceRevealList: View {
             }
         }
         .toolbar(.hidden, for: .navigationBar)
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
         .onDisappear { highlightTask?.cancel() }
     }
 
@@ -658,7 +648,7 @@ private struct SurahExperienceRevealList: View {
                     .overlay(Circle().stroke(tm.strokeColor, lineWidth: 1))
             }
             .buttonStyle(EmPressStyle())
-            Text(JourneyStrings.insideTheSurah(lang))
+            Text(JourneyStrings.insideTheSurah)
                 .font(EmType.serif(28, .semiBold))
                 .foregroundColor(tm.primaryText)
             Spacer(minLength: 0)
@@ -666,7 +656,6 @@ private struct SurahExperienceRevealList: View {
         .padding(.horizontal, 20)
         .padding(.top, 6)
         .padding(.bottom, 8)
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 
     /// Scroll the target card to centre (after a beat so a freshly-pushed list has laid

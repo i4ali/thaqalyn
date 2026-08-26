@@ -15,7 +15,6 @@ struct ProgressRingsStack: View {
     let showRamadanRing: Bool
 
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     // Theme-aware vibrant ring gradients (Apple Watch style).
     // Both stops are derived from the same semantic token so they auto-adapt across themes.
@@ -97,7 +96,7 @@ struct ProgressRingsStack: View {
                     .font(.system(size: showRamadanRing ? 18 : 24, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
 
-                Text(ProgressTabStrings.quran(languageManager.selectedLanguage))
+                Text(ProgressTabStrings.quran)
                     .font(.system(size: showRamadanRing ? 10 : 12, weight: .medium, design: .rounded))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -112,13 +111,12 @@ struct RingLegend: View {
     let showRamadanRing: Bool
     var seasonalLabel: String = "Ramadan"
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         HStack(spacing: 16) {
-            LegendItem(color: themeManager.isMidnightEmerald ? themeManager.accentColor : themeManager.semanticRed, label: ProgressTabStrings.quran(languageManager.selectedLanguage))
-            LegendItem(color: themeManager.semanticGreen, label: ProgressTabStrings.surahs(languageManager.selectedLanguage))
-            LegendItem(color: themeManager.isMidnightEmerald ? themeManager.primaryText : themeManager.semanticBlue, label: ProgressTabStrings.quizzes(languageManager.selectedLanguage))
+            LegendItem(color: themeManager.isMidnightEmerald ? themeManager.accentColor : themeManager.semanticRed, label: ProgressTabStrings.quran)
+            LegendItem(color: themeManager.semanticGreen, label: ProgressTabStrings.surahs)
+            LegendItem(color: themeManager.isMidnightEmerald ? themeManager.primaryText : themeManager.semanticBlue, label: ProgressTabStrings.quizzes)
 
             if showRamadanRing {
                 LegendItem(color: themeManager.isMidnightEmerald ? themeManager.accentBright : themeManager.semanticYellow, label: seasonalLabel)

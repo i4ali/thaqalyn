@@ -139,17 +139,17 @@ final class JourneyAudioPlayer: ObservableObject {
     nonisolated static func beatTitle(for section: DeepDiveSection, in dive: DeepDive) -> String {
         // A tag's English text, falling back to the dive title when it is empty.
         func tagged(_ tag: LocalizedText) -> String {
-            let s = tag.text(for: .english)
+            let s = tag.text
             return s.isEmpty ? dive.titleEn : s
         }
         switch section {
         case let .open(_, _, titleEn, _, _):
             return titleEn.isEmpty ? "Opening" : titleEn
         case let .orientation(eyebrow, _, _):
-            let s = eyebrow.text(for: .english)
+            let s = eyebrow.text
             return s.isEmpty ? "Before you begin" : s
         case let .act(act, _, _, _):
-            let name = dive.actInfo(act)?.name.text(for: .english) ?? ""
+            let name = dive.actInfo(act)?.name.text ?? ""
             return name.isEmpty ? "Movement" : name
         case .response:
             return "He Answers"                                          // no tag; matches the beat's header

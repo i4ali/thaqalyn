@@ -9,8 +9,7 @@
 //    Reading content (prompt, options, explanation, arabicText) → size * readingSettings.scale
 //    Chrome (eyebrow, title, source citation, button labels)    → fixed size
 //
-//  RTL: .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
-//       + .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+//       + .frame(maxWidth: .infinity, alignment: .leading)
 //  Mirrors: DuaDetailView (scaling + RTL), TodayView/TodayStrings (string pattern).
 //
 
@@ -23,7 +22,6 @@ struct DailyChallengeView: View {
     var onCompleted: () -> Void
 
     @StateObject private var readingSettings = ReadingSettingsManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var manager = DailyChallengeManager.shared
     @Environment(\.dismiss) private var dismiss
@@ -35,7 +33,6 @@ struct DailyChallengeView: View {
     @State private var flashcardGotIt: Bool? = nil // nil = not yet graded
     @State private var showCompletion = false
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     // MARK: - Body
 
@@ -77,9 +74,9 @@ struct DailyChallengeView: View {
 
     private var headerRow: some View {
         HStack(alignment: .top) {
-            VStack(alignment: lang.isRTL ? .trailing : .leading, spacing: 5) {
-                Text(DailyChallengeStrings.dailyChallenge(lang).uppercased())
-                    .emEyebrow(lang, size: 11, tracking: 1.5)
+            VStack(alignment: .leading, spacing: 5) {
+                Text(DailyChallengeStrings.dailyChallenge.uppercased())
+                    .emEyebrow(size: 11, tracking: 1.5)
                     .foregroundColor(themeManager.accentColor)
                 Text(challenge.topic.capitalized)
                     .font(themeManager.isMidnightEmerald
@@ -87,8 +84,7 @@ struct DailyChallengeView: View {
                           : .system(size: 22, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
             }
-            .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+            .frame(maxWidth: .infinity, alignment: .leading)
 
             Spacer(minLength: 8)
 
@@ -136,7 +132,7 @@ struct DailyChallengeView: View {
             if let options = challenge.options {
                 VStack(spacing: 10) {
                     ForEach(Array(options.enumerated()), id: \.offset) { index, option in
-                        optionRow(text: option.text(for: lang), index: index)
+                        optionRow(text: option.text, index: index)
                     }
                 }
             }
@@ -171,9 +167,8 @@ struct DailyChallengeView: View {
                           : .system(size: 16 * readingSettings.scale))
                     .foregroundColor(optionText(state))
                     .lineSpacing(4 * readingSettings.scale)
-                    .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
-                    .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
                 // Correct / wrong icon
                 if revealed {
@@ -285,10 +280,10 @@ struct DailyChallengeView: View {
             }
 
             HStack(spacing: 12) {
-                tfButton(label: DailyChallengeStrings.trueLabel(lang),
+                tfButton(label: DailyChallengeStrings.trueLabel,
                          answer: true,
                          sfSymbol: "checkmark.circle.fill")
-                tfButton(label: DailyChallengeStrings.falseLabel(lang),
+                tfButton(label: DailyChallengeStrings.falseLabel,
                          answer: false,
                          sfSymbol: "xmark.circle.fill")
             }
@@ -373,10 +368,10 @@ struct DailyChallengeView: View {
             // "Got it" / "Review again" buttons — appear after flip
             if flipped && flashcardGotIt == nil {
                 HStack(spacing: 12) {
-                    flashcardGradeButton(label: DailyChallengeStrings.reviewAgain(lang),
+                    flashcardGradeButton(label: DailyChallengeStrings.reviewAgain,
                                          sfSymbol: "arrow.counterclockwise",
                                          gotIt: false)
-                    flashcardGradeButton(label: DailyChallengeStrings.gotIt(lang),
+                    flashcardGradeButton(label: DailyChallengeStrings.gotIt,
                                          sfSymbol: "hand.thumbsup.fill",
                                          gotIt: true)
                 }
@@ -405,45 +400,42 @@ struct DailyChallengeView: View {
                             .frame(maxWidth: .infinity)
                             .environment(\.layoutDirection, .rightToLeft)
                     }
-                    Text(challenge.prompt.text(for: lang))
+                    Text(challenge.prompt.text)
                         .font(themeManager.isMidnightEmerald
                               ? EmType.serif(17 * readingSettings.scale, .medium)
                               : .system(size: 17 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .lineSpacing(5 * readingSettings.scale)
-                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
 
                     // Tap hint (chrome — fixed)
-                    Text(DailyChallengeStrings.flipCard(lang).uppercased())
-                        .emEyebrow(lang, size: 10, tracking: 1.2)
+                    Text(DailyChallengeStrings.flipCard.uppercased())
+                        .emEyebrow(size: 10, tracking: 1.2)
                         .foregroundColor(themeManager.accentColor)
                         .padding(.top, 4)
                 } else {
                     // Back: answer + explanation
                     if let answer = challenge.answer {
-                        Text(answer.text(for: lang))
+                        Text(answer.text)
                             .font(themeManager.isMidnightEmerald
                                   ? EmType.serif(18 * readingSettings.scale, .semiBold)
                                   : .system(size: 18 * readingSettings.scale, weight: .semibold))
                             .foregroundColor(themeManager.accentBright)
-                            .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
-                            .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .lineSpacing(5 * readingSettings.scale)
-                            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                     }
                     if let explanation = challenge.explanation {
                         Divider().background(themeManager.strokeColor)
-                        Text(explanation.text(for: lang))
+                        Text(explanation.text)
                             .font(themeManager.isMidnightEmerald
                                   ? EmType.serif(15 * readingSettings.scale, .medium)
                                   : .system(size: 15 * readingSettings.scale))
                             .foregroundColor(themeManager.secondaryText)
-                            .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
-                            .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .lineSpacing(5 * readingSettings.scale)
-                            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                     }
                 }
             }
@@ -501,26 +493,24 @@ struct DailyChallengeView: View {
                     .font(.system(size: 16))
                     .foregroundColor(wasCorrect ? .green : themeManager.accentColor)
                 Text(wasCorrect
-                     ? DailyChallengeStrings.correct(lang)
-                     : DailyChallengeStrings.notQuite(lang))
+                     ? DailyChallengeStrings.correct
+                     : DailyChallengeStrings.notQuite)
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(wasCorrect ? .green : themeManager.accentColor)
             }
-            .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+            .frame(maxWidth: .infinity, alignment: .leading)
 
             // Explanation (reading content — scaled)
             if let explanation = challenge.explanation {
                 EmCard {
-                    Text(explanation.text(for: lang))
+                    Text(explanation.text)
                         .font(themeManager.isMidnightEmerald
                               ? EmType.serif(16 * readingSettings.scale, .medium)
                               : .system(size: 16 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
-                        .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .lineSpacing(5 * readingSettings.scale)
-                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                         .padding(18)
                 }
             }
@@ -536,7 +526,7 @@ struct DailyChallengeView: View {
     // MARK: - Done button (leads to completion)
 
     private var doneButton: some View {
-        EmGoldCTA(title: DailyChallengeStrings.doneButton(lang)) {
+        EmGoldCTA(title: DailyChallengeStrings.doneButton) {
             triggerCompletion()
         }
         .transition(.move(edge: .bottom).combined(with: .opacity))
@@ -588,7 +578,7 @@ struct DailyChallengeView: View {
                         .foregroundColor(themeManager.accentBright)
                 }
 
-                Text(DailyChallengeStrings.completionTitle(lang))
+                Text(DailyChallengeStrings.completionTitle)
                     .font(themeManager.isMidnightEmerald
                           ? EmType.serif(28, .semiBold)
                           : .system(size: 26, weight: .bold))
@@ -601,7 +591,7 @@ struct DailyChallengeView: View {
             Spacer()
 
             // Dismiss CTA (chrome — fixed)
-            EmGoldCTA(title: DailyChallengeStrings.doneForToday(lang),
+            EmGoldCTA(title: DailyChallengeStrings.doneForToday,
                       sfSymbol: "checkmark") {
                 onCompleted()
                 dismiss()
@@ -610,7 +600,6 @@ struct DailyChallengeView: View {
             .padding(.bottom, 32)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 
     private var streakBadge: some View {
@@ -618,7 +607,7 @@ struct DailyChallengeView: View {
             Image(systemName: "flame.fill")
                 .font(.system(size: 16))
                 .foregroundColor(themeManager.accentColor)
-            Text(DailyChallengeStrings.streakLabel(manager.streak.currentStreak, lang))
+            Text(DailyChallengeStrings.streakLabel(manager.streak.currentStreak))
                 .font(.system(size: 15, weight: .semibold))
                 .foregroundColor(themeManager.secondaryText)
         }
@@ -628,7 +617,6 @@ struct DailyChallengeView: View {
             Capsule().fill(themeManager.accentChip)
         )
         .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 
     // MARK: - Shared subviews
@@ -636,15 +624,14 @@ struct DailyChallengeView: View {
     /// Prompt card — reading content, scaled.
     private var promptCard: some View {
         EmCard {
-            Text(challenge.prompt.text(for: lang))
+            Text(challenge.prompt.text)
                 .font(themeManager.isMidnightEmerald
                       ? EmType.serif(18 * readingSettings.scale, .medium)
                       : .system(size: 18 * readingSettings.scale))
                 .foregroundColor(themeManager.primaryText)
-                .multilineTextAlignment(lang.isRTL ? .trailing : .leading)
-                .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .lineSpacing(5 * readingSettings.scale)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .padding(20)
         }
     }
@@ -669,8 +656,7 @@ struct DailyChallengeView: View {
         Text(source)
             .font(.system(size: 12, weight: .medium))
             .foregroundColor(themeManager.tertiaryText)
-            .frame(maxWidth: .infinity, alignment: lang.isRTL ? .trailing : .leading)
-            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
@@ -780,49 +766,22 @@ extension DailyChallenge {
 
 #Preview("Multiple Choice — English (Emerald)") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    DailyChallengeView(challenge: .sampleMultipleChoice, onCompleted: {})
-}
-
-#Preview("Multiple Choice — Urdu RTL (Light)") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
     DailyChallengeView(challenge: .sampleMultipleChoice, onCompleted: {})
 }
 
 #Preview("True/False — English (Emerald)") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    DailyChallengeView(challenge: .sampleTrueFalse, onCompleted: {})
-}
-
-#Preview("True/False — Urdu RTL (Light)") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
     DailyChallengeView(challenge: .sampleTrueFalse, onCompleted: {})
 }
 
 #Preview("Flashcard — English (Emerald)") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    DailyChallengeView(challenge: .sampleFlashcard, onCompleted: {})
-}
-
-#Preview("Flashcard — Arabic RTL (Emerald)") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.arabic)
     DailyChallengeView(challenge: .sampleFlashcard, onCompleted: {})
 }
 
 #Preview("Fill-in-Blank — English (Light)") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     DailyChallengeView(challenge: .sampleFillInBlank, onCompleted: {})
 }
 
-#Preview("Fill-in-Blank — Urdu RTL (Emerald)") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    DailyChallengeView(challenge: .sampleFillInBlank, onCompleted: {})
-}
 #endif

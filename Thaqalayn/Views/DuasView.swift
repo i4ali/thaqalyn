@@ -10,7 +10,6 @@ import SwiftUI
 struct DuasView: View {
     @StateObject private var duasManager = DuasManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var selectedDua: DailyDua?
 
@@ -39,8 +38,6 @@ struct DuasView: View {
                             }
                             .padding(.horizontal, 20)
                             .padding(.vertical, 20)
-                            .environment(\.layoutDirection,
-                                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
                         }
                     }
                 }
@@ -68,13 +65,13 @@ struct DuasView: View {
         VStack(spacing: 12) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(localizedTitle)
+                    Text(headerTitle)
                         .font(.system(size: 34,
                                       weight: .bold,
                                       design: .rounded))
                         .foregroundColor(themeManager.primaryText)
 
-                    Text(localizedSubtitle)
+                    Text(headerSubtitle)
                         .font(.system(size: 16, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
                 }
@@ -84,21 +81,19 @@ struct DuasView: View {
         .padding(.horizontal, 20)
         .padding(.top, 20)
         .padding(.bottom, 20)
-        .environment(\.layoutDirection,
-                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
 
     private var emeraldHeaderView: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 7) {
-                Text(localizedEyebrow.uppercased())
+                Text(headerEyebrow.uppercased())
                     .font(.system(size: 11, weight: .bold)).tracking(3)
                     .foregroundColor(themeManager.accentColor)
-                Text(localizedTitle)
+                Text(headerTitle)
                     .font(EmType.serif(36, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(localizedSubtitle)
+                Text(headerSubtitle)
                     .font(.system(size: 13.5))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -107,40 +102,17 @@ struct DuasView: View {
         .padding(.horizontal, 20)
         .padding(.top, 16)
         .padding(.bottom, 18)
-        .environment(\.layoutDirection,
-                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
         .emCoverHeaderBand("DailyDuasCover", height: 280)
     }
 
-    private var localizedEyebrow: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "الأدعية"
-        case .urdu: return "دعائیں"
-        default: return "Supplications"
-        }
-    }
-
-    private var localizedTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "أدعية لكل حاجة"
-        case .urdu: return "ہر حاجت کی دعا"
-        default: return "Duas for Every Need"
-        }
-    }
-
-    private var localizedSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "للصحة والحفظ والرزق وغيرها"
-        case .urdu: return "صحت، حفاظت، رزق اور مزید کے لیے"
-        default: return "For health, protection, sustenance & more"
-        }
-    }
+    private let headerEyebrow = "Supplications"
+    private let headerTitle = "Duas for Every Need"
+    private let headerSubtitle = "For health, protection, sustenance & more"
 }
 
 struct DuaCard: View {
     let dua: DailyDua
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
@@ -150,7 +122,7 @@ struct DuaCard: View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: dua.categoryIcon)
-                Text(dua.situation(for: languageManager.selectedLanguage))
+                Text(dua.situationEn)
                     .font(EmType.serif(20, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(2)
@@ -178,7 +150,7 @@ struct DuaCard: View {
             }
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(dua.situation(for: languageManager.selectedLanguage))
+                Text(dua.situationEn)
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(2)

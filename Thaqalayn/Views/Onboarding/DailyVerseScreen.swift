@@ -12,7 +12,6 @@ struct DailyVerseScreen: View {
     @StateObject private var notificationManager = NotificationManager.shared
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var dailyVerse = DailyVerseProvider.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Binding var notificationsEnabled: Bool
     @State private var isVisible = false
 
@@ -58,8 +57,7 @@ struct DailyVerseScreen: View {
                                         .font(.system(size: 14, weight: .semibold))
                                         .foregroundColor(themeManager.secondaryText)
 
-                                    Text(dailyVerse.today.occasion(languageManager.selectedLanguage)
-                                         ?? dailyVerse.today.theme(languageManager.selectedLanguage))
+                                    Text(dailyVerse.today.occasionEn ?? dailyVerse.today.themeEn)
                                         .font(.system(size: 16, weight: .bold))
                                         .foregroundColor(themeManager.primaryText)
                                 }
@@ -94,7 +92,7 @@ struct DailyVerseScreen: View {
 
                                 // Theme tag
                                 HStack {
-                                    Text(dailyVerse.today.theme(languageManager.selectedLanguage))
+                                    Text(dailyVerse.today.themeEn)
                                         .font(.system(size: 12, weight: .medium))
                                         .foregroundColor(ThemeManager.chipGold.fg)
                                         .padding(.horizontal, 12)

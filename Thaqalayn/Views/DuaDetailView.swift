@@ -10,7 +10,6 @@ import SwiftUI
 struct DuaDetailView: View {
     let dua: DailyDua
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @StateObject private var dataManager = DataManager.shared
     @State private var navigateToVerse = false
@@ -82,7 +81,7 @@ struct DuaDetailView: View {
                         Text(dua.category.uppercased())
                             .font(.system(size: 11, weight: .bold)).tracking(3)
                             .foregroundColor(themeManager.accentColor)
-                        Text(dua.situation(for: languageManager.selectedLanguage))
+                        Text(dua.situationEn)
                             .font(EmType.serif(30, .semiBold))
                             .foregroundColor(themeManager.primaryText)
                             .fixedSize(horizontal: false, vertical: true)
@@ -90,8 +89,6 @@ struct DuaDetailView: View {
                     Spacer(minLength: 8)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .environment(\.layoutDirection,
-                             languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
 
                 EmCard(glow: true) {
                     Text(dua.arabic)
@@ -115,13 +112,12 @@ struct DuaDetailView: View {
                     .textSelection(.enabled)
 
                 EmCard {
-                    Text(dua.translation(for: languageManager.selectedLanguage))
+                    Text(dua.translationEn)
                         .font(EmType.serif(17 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
-                        .multilineTextAlignment(languageManager.selectedLanguage == .urdu ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage == .urdu ? .trailing : .leading)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(20)
-                        .environment(\.layoutDirection, languageManager.selectedLanguage == .urdu ? .rightToLeft : .leftToRight)
                         .textSelection(.enabled)
                 }
 
@@ -153,7 +149,7 @@ struct DuaDetailView: View {
     private var headerSection: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 8) {
-                Text(dua.situation(for: languageManager.selectedLanguage))
+                Text(dua.situationEn)
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
                     .multilineTextAlignment(.leading)
@@ -164,8 +160,6 @@ struct DuaDetailView: View {
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .environment(\.layoutDirection,
-                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
     }
 
     private var categoryPill: some View {
@@ -230,18 +224,13 @@ struct DuaDetailView: View {
     }
 
     private var translationSection: some View {
-        let language = languageManager.selectedLanguage
-        let translation = dua.translation(for: language)
-        let isRTL = language == .urdu
-
-        return Text(translation)
+        Text(dua.translationEn)
             .font(.system(size: 17 * readingSettings.scale, weight: .medium))
             .foregroundColor(themeManager.primaryText)
-            .multilineTextAlignment(isRTL ? .trailing : .leading)
-            .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)
             .background(themedCardBackground)
-            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
             .textSelection(.enabled)
     }
 
@@ -276,15 +265,14 @@ struct DuaDetailView: View {
     // MARK: - Helpers
 
     private var shareText: String {
-        let lang = languageManager.selectedLanguage
-        return """
-        \(dua.situation(for: lang))
+        """
+        \(dua.situationEn)
 
         \(dua.arabic)
 
         \(dua.transliteration)
 
-        \(dua.translation(for: lang))
+        \(dua.translationEn)
 
         — Source: \(dua.source)
         Sent via Thaqalayn

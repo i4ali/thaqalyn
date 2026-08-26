@@ -13,7 +13,6 @@ struct FatimiyyaJourneyView: View {
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedDay: FatimiyyaDay?
     @State private var navigateToDetail = false
     /// A locked day the user tapped - opens the veiled preview instead of the paywall.
@@ -31,7 +30,7 @@ struct FatimiyyaJourneyView: View {
 
                     // Day list
                     if journeyManager.isLoading {
-                        FatimiyyaLoadingSection(message: JourneyStrings.loadingJourney(languageManager.selectedLanguage))
+                        FatimiyyaLoadingSection(message: JourneyStrings.loadingJourney)
                     } else if let error = journeyManager.errorMessage {
                         FatimiyyaErrorSection(message: error)
                     } else {
@@ -85,15 +84,15 @@ struct FatimiyyaJourneyView: View {
             // what waits beneath - rather than jumping straight to the paywall. The
             // paywall it carries still wears this journey's art and name.
             VeiledDayPreview(
-                dayLabel: "\(JourneyStrings.title("fatimiyya", languageManager.selectedLanguage)) \u{00B7} \(JourneyStrings.dayN(day.dayNumber, languageManager.selectedLanguage))",
-                theme: day.localizedTheme(languageManager.selectedLanguage),
+                dayLabel: "\(JourneyStrings.title("fatimiyya")) \u{00B7} \(JourneyStrings.dayN(day.dayNumber))",
+                theme: day.theme,
                 themeArabic: day.themeArabic,
-                openingLine: day.localizedTafsir(languageManager.selectedLanguage),
+                openingLine: day.tafsirFocus,
                 verseCount: day.verses.count,
                 coverAssetName: JourneyDescriptor.byId("fatimiyya")?.coverAssetName ?? "FatimiyyaCover",
                 paywallContext: PaywallContext(
                     coverAssetName: JourneyDescriptor.byId("fatimiyya")?.coverAssetName,
-                    eyebrow: JourneyStrings.title("fatimiyya", languageManager.selectedLanguage)))
+                    eyebrow: JourneyStrings.title("fatimiyya")))
         }
     }
 }
@@ -102,12 +101,10 @@ struct FatimiyyaJourneyHeader: View {
     @StateObject private var journeyManager = FatimiyyaJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var statusMessage: String {
         let status = calendarManager.fatimiyyaSeasonStatus()
-        return status.isEmpty ? JourneyStrings.screenTitle("fatimiyya", lang) : status
+        return status.isEmpty ? JourneyStrings.screenTitle("fatimiyya") : status
     }
 
     var observedCount: Int {
@@ -121,11 +118,11 @@ struct FatimiyyaJourneyHeader: View {
     // Somber observance: no completion/celebration note, "observed" wording.
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: JourneyStrings.eyebrow("fatimiyya", "Mourning of az-Zahra (AS)", lang),
-            title: JourneyStrings.title("fatimiyya", lang),
+            eyebrow: JourneyStrings.eyebrow("fatimiyya", "Mourning of az-Zahra (AS)"),
+            title: JourneyStrings.title("fatimiyya"),
             sfSymbol: "tulip",
             statusLine: statusMessage,
-            countLine: JourneyStrings.daysObserved(observedCount, 5, lang),
+            countLine: JourneyStrings.daysObserved(observedCount, 5),
             percent: journeyManager.completionPercentage,
             iconIsCustomAsset: true,
             coverAssetName: "FatimiyyaCover"
@@ -138,7 +135,7 @@ struct FatimiyyaJourneyHeader: View {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(JourneyStrings.screenTitle("fatimiyya", lang))
+                        Text(JourneyStrings.screenTitle("fatimiyya"))
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
@@ -158,7 +155,7 @@ struct FatimiyyaJourneyHeader: View {
             // Progress bar
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text(JourneyStrings.daysObserved(observedCount, 5, lang))
+                    Text(JourneyStrings.daysObserved(observedCount, 5))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -201,8 +198,6 @@ struct FatimiyyaDayCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var grayGradient: LinearGradient {
         LinearGradient(
@@ -232,7 +227,7 @@ struct FatimiyyaDayCard: View {
     private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
-            theme: day.localizedTheme(lang),
+            theme: day.theme,
             themeArabic: day.themeArabic,
             isDone: isObserved,
             isCurrent: isCurrentDay,
@@ -271,7 +266,7 @@ struct FatimiyyaDayCard: View {
                 // Day content
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text(JourneyStrings.dayN(day.dayNumber, lang))
+                        Text(JourneyStrings.dayN(day.dayNumber))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(themeManager.secondaryText)
 
@@ -286,7 +281,7 @@ struct FatimiyyaDayCard: View {
                                         .fill(Color.orange.gradient)
                                 )
                         } else if isCurrentDay {
-                            Text(JourneyStrings.today(lang))
+                            Text(JourneyStrings.today)
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 6)
@@ -303,7 +298,7 @@ struct FatimiyyaDayCard: View {
                             .font(.system(size: 14))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
 
-                        Text(day.localizedTheme(lang))
+                        Text(day.theme)
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
                     }
@@ -361,7 +356,6 @@ private struct FatimiyyaLoadingSection: View {
 private struct FatimiyyaErrorSection: View {
     let message: String
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -369,7 +363,7 @@ private struct FatimiyyaErrorSection: View {
                 .font(.system(size: 48))
                 .foregroundColor(.orange)
 
-            Text(JourneyStrings.errorLoadingJourney(languageManager.selectedLanguage))
+            Text(JourneyStrings.errorLoadingJourney)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
 

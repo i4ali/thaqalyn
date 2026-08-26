@@ -14,7 +14,6 @@ struct ArbaeenJourneyView: View {
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedDay: ArbaeenDay?
     @State private var navigateToDetail = false
     /// A locked station the user tapped - opens the veiled preview instead of the paywall.
@@ -34,7 +33,7 @@ struct ArbaeenJourneyView: View {
 
                     // Station list
                     if journeyManager.isLoading {
-                        ArbaeenLoadingSection(message: JourneyStrings.loadingJourney(languageManager.selectedLanguage))
+                        ArbaeenLoadingSection(message: JourneyStrings.loadingJourney)
                     } else if let error = journeyManager.errorMessage {
                         ArbaeenErrorSection(message: error)
                     } else {
@@ -88,16 +87,16 @@ struct ArbaeenJourneyView: View {
             // what waits beneath - rather than jumping straight to the paywall. The
             // paywall it carries still wears this journey's art and name.
             VeiledDayPreview(
-                dayLabel: "\(JourneyStrings.title("arbaeen", languageManager.selectedLanguage)) \u{00B7} \(JourneyStrings.stationN(day.dayNumber, languageManager.selectedLanguage))",
-                theme: day.localizedTheme(languageManager.selectedLanguage),
+                dayLabel: "\(JourneyStrings.title("arbaeen")) \u{00B7} \(JourneyStrings.stationN(day.dayNumber))",
+                theme: day.theme,
                 themeArabic: day.themeArabic,
-                openingLine: day.localizedTafsir(languageManager.selectedLanguage),
+                openingLine: day.tafsirFocus,
                 verseCount: day.verses.count,
                 unitIsStation: true,
                 coverAssetName: JourneyDescriptor.byId("arbaeen")?.coverAssetName ?? "ArbaeenCover",
                 paywallContext: PaywallContext(
                     coverAssetName: JourneyDescriptor.byId("arbaeen")?.coverAssetName,
-                    eyebrow: JourneyStrings.title("arbaeen", languageManager.selectedLanguage)))
+                    eyebrow: JourneyStrings.title("arbaeen")))
         }
     }
 }
@@ -106,12 +105,10 @@ struct ArbaeenJourneyHeader: View {
     @StateObject private var journeyManager = ArbaeenJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var statusMessage: String {
         let status = calendarManager.arbaeenSeasonStatus()
-        return status.isEmpty ? JourneyStrings.screenTitle("arbaeen", lang) : status
+        return status.isEmpty ? JourneyStrings.screenTitle("arbaeen") : status
     }
 
     var observedCount: Int {
@@ -125,11 +122,11 @@ struct ArbaeenJourneyHeader: View {
     // Somber observance: no completion/celebration note, "observed" wording.
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: JourneyStrings.eyebrow("arbaeen", "40-Day Journey", lang),
-            title: JourneyStrings.title("arbaeen", lang),
+            eyebrow: JourneyStrings.eyebrow("arbaeen", "40-Day Journey"),
+            title: JourneyStrings.title("arbaeen"),
             sfSymbol: "figure.walk",
             statusLine: statusMessage,
-            countLine: JourneyStrings.stationsObserved(observedCount, 8, lang),
+            countLine: JourneyStrings.stationsObserved(observedCount, 8),
             percent: journeyManager.completionPercentage,
             iconIsCustomAsset: false,
             coverAssetName: "ArbaeenCover"
@@ -142,7 +139,7 @@ struct ArbaeenJourneyHeader: View {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(JourneyStrings.screenTitle("arbaeen", lang))
+                        Text(JourneyStrings.screenTitle("arbaeen"))
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
@@ -163,7 +160,7 @@ struct ArbaeenJourneyHeader: View {
             // Progress bar
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text(JourneyStrings.stationsObserved(observedCount, 8, lang))
+                    Text(JourneyStrings.stationsObserved(observedCount, 8))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -204,8 +201,6 @@ struct ArbaeenStationCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var grayGradient: LinearGradient {
         LinearGradient(
@@ -234,13 +229,13 @@ struct ArbaeenStationCard: View {
     private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
-            theme: day.localizedTheme(lang),
+            theme: day.theme,
             themeArabic: day.themeArabic,
             isDone: isObserved,
             isCurrent: isCurrentDay,
             isLocked: isLocked,
             doneStyle: .subdued,
-            numberLabel: JourneyStrings.stationN(day.dayNumber, lang),
+            numberLabel: JourneyStrings.stationN(day.dayNumber),
             onTap: onTap
         )
         .padding(.horizontal, 20)
@@ -273,7 +268,7 @@ struct ArbaeenStationCard: View {
                 // Station content
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text(JourneyStrings.stationN(day.dayNumber, lang))
+                        Text(JourneyStrings.stationN(day.dayNumber))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(themeManager.secondaryText)
 
@@ -288,7 +283,7 @@ struct ArbaeenStationCard: View {
                                         .fill(Color.orange.gradient)
                                 )
                         } else if isCurrentDay {
-                            Text(JourneyStrings.today(lang))
+                            Text(JourneyStrings.today)
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 6)
@@ -305,7 +300,7 @@ struct ArbaeenStationCard: View {
                             .font(.system(size: 14))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
 
-                        Text(day.localizedTheme(lang))
+                        Text(day.theme)
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
                     }
@@ -362,7 +357,6 @@ private struct ArbaeenLoadingSection: View {
 private struct ArbaeenErrorSection: View {
     let message: String
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -370,7 +364,7 @@ private struct ArbaeenErrorSection: View {
                 .font(.system(size: 48))
                 .foregroundColor(.orange)
 
-            Text(JourneyStrings.errorLoadingJourney(languageManager.selectedLanguage))
+            Text(JourneyStrings.errorLoadingJourney)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
 

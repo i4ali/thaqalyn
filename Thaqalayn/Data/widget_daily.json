@@ -918,7 +918,25 @@
      "line": "'Inform My servants' - hope was made part of the prophetic mission, not left as an afterthought."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-hijr",
+    "name": "Surah al-Hijr",
+    "lines": [
+     {
+      "text": "Indeed, it is We who sent down the Reminder, and indeed, it is We who will guard it.",
+      "source": "Qur'an 15:9"
+     },
+     {
+      "text": "Gracious forgiveness is pardon without reproach.",
+      "source": "Imam Ali (a) - Majma al-Bayan"
+     },
+     {
+      "text": "The surah says 'secure' twice: on walls carved into rock, and at a door He opens in peace.",
+      "source": null
+     }
+    ]
+   },
    "morning": "He had Himself announced to you as the Forgiving, the Merciful - that introduction stands over today.",
    "night": "Before sleep, the announcement stands as sent: it is I who am the Forgiving, the Merciful."
   },
@@ -7580,7 +7598,25 @@
      "line": "After all its stories and warnings, the surah closes on one directive: keep worshipping your Lord."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-hijr",
+    "name": "Surah al-Hijr",
+    "lines": [
+     {
+      "text": "Indeed, it is We who sent down the Reminder, and indeed, it is We who will guard it.",
+      "source": "Qur'an 15:9"
+     },
+     {
+      "text": "Gracious forgiveness is pardon without reproach.",
+      "source": "Imam Ali (a) - Majma al-Bayan"
+     },
+     {
+      "text": "The surah says 'secure' twice: on walls carved into rock, and at a door He opens in peace.",
+      "source": null
+     }
+    ]
+   },
    "morning": "'Worship your Lord until certainty comes to you' - there is no retirement from faith, only continuation.",
    "night": "The day's worship ends but the command does not - service to Him simply continues into tomorrow."
   },
@@ -13479,7 +13515,25 @@
      "line": "From tiny seeds He grows forests, crops, and medicine - what sustains life starts small with Him."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-hijr",
+    "name": "Surah al-Hijr",
+    "lines": [
+     {
+      "text": "Indeed, it is We who sent down the Reminder, and indeed, it is We who will guard it.",
+      "source": "Qur'an 15:9"
+     },
+     {
+      "text": "Gracious forgiveness is pardon without reproach.",
+      "source": "Imam Ali (a) - Majma al-Bayan"
+     },
+     {
+      "text": "The surah says 'secure' twice: on walls carved into rock, and at a door He opens in peace.",
+      "source": null
+     }
+    ]
+   },
    "morning": "The earth is spread, pinned by mountains, grown in measure - your day opens on a world kept in balance.",
    "night": "Everything that grew today grew in measure. The balance that held the world will hold it while you sleep."
   },
@@ -13519,7 +13573,25 @@
      "line": "'We gave you drink' - every glass of water today was a gift handed down, not a human achievement."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-hijr",
+    "name": "Surah al-Hijr",
+    "lines": [
+     {
+      "text": "Indeed, it is We who sent down the Reminder, and indeed, it is We who will guard it.",
+      "source": "Qur'an 15:9"
+     },
+     {
+      "text": "Gracious forgiveness is pardon without reproach.",
+      "source": "Imam Ali (a) - Majma al-Bayan"
+     },
+     {
+      "text": "The surah says 'secure' twice: on walls carved into rock, and at a door He opens in peace.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Winds are sent bearing rain, and your drink is poured from the sky - today runs on what He sends.",
    "night": "Every drink of water today was given, not made. The verse leaves you supplied by Him, not self-sufficient."
   },
@@ -15319,7 +15391,25 @@
      "line": "It is called the Reminder - theology, law, ethics, history, guidance, all in one protected place."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-hijr",
+    "name": "Surah al-Hijr",
+    "lines": [
+     {
+      "text": "Indeed, it is We who sent down the Reminder, and indeed, it is We who will guard it.",
+      "source": "Qur'an 15:9"
+     },
+     {
+      "text": "Gracious forgiveness is pardon without reproach.",
+      "source": "Imam Ali (a) - Majma al-Bayan"
+     },
+     {
+      "text": "The surah says 'secure' twice: on walls carved into rock, and at a door He opens in peace.",
+      "source": null
+     }
+    ]
+   },
    "morning": "The Book you open today is under guard - the One who sent it down took its protection on Himself.",
    "night": "Tonight the Reminder rests under the same guard as always - His promise does not sleep."
   },
@@ -17887,6 +17977,25 @@
   },
   {
    "kind": "experience",
+   "id": "surah-hijr",
+   "name": "Surah al-Hijr",
+   "lines": [
+    {
+     "text": "Indeed, it is We who sent down the Reminder, and indeed, it is We who will guard it.",
+     "source": "Qur'an 15:9"
+    },
+    {
+     "text": "Gracious forgiveness is pardon without reproach.",
+     "source": "Imam Ali (a) - Majma al-Bayan"
+    },
+    {
+     "text": "The surah says 'secure' twice: on walls carved into rock, and at a door He opens in peace.",
+     "source": null
+    }
+   ]
+  },
+  {
+   "kind": "experience",
    "id": "surah-yasin",
    "name": "Surah Yasin",
    "lines": [
@@ -17900,25 +18009,6 @@
     },
     {
      "text": "An awake heart runs toward the truth; it never quite learned how to walk.",
-     "source": null
-    }
-   ]
-  },
-  {
-   "kind": "experience",
-   "id": "surah-rahman",
-   "name": "Surah al-Rahman",
-   "lines": [
-    {
-     "text": "None of Your favors, my Lord, do I deny.",
-     "source": "Imam Ja'far al-Sadiq - Thawab al-A'mal"
-    },
-    {
-     "text": "Guidance was prepared before you existed, the way a cradle is made ready before a birth.",
-     "source": null
-    },
-    {
-     "text": "Everything passes; what remains is not a cold survivor but generosity that stays.",
      "source": null
     }
    ]
@@ -17938,6 +18028,25 @@
     },
     {
      "text": "Certainty has three depths: to know the fire by its smoke, to see it, to stand within it.",
+     "source": null
+    }
+   ]
+  },
+  {
+   "kind": "experience",
+   "id": "surah-rahman",
+   "name": "Surah al-Rahman",
+   "lines": [
+    {
+     "text": "None of Your favors, my Lord, do I deny.",
+     "source": "Imam Ja'far al-Sadiq - Thawab al-A'mal"
+    },
+    {
+     "text": "Guidance was prepared before you existed, the way a cradle is made ready before a birth.",
+     "source": null
+    },
+    {
+     "text": "Everything passes; what remains is not a cold survivor but generosity that stays.",
      "source": null
     }
    ]

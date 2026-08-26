@@ -9,20 +9,17 @@ enum DailyChallengeFormat: String, Codable {
     case fillInBlank
 }
 
-// MARK: - Localized text (en authored; ur/ar filled by translator agents; English fallback)
+// MARK: - Localized text
+// The struct keeps its ur/ar fields so existing JSON and content files decode
+// unchanged, but the app displays English only.
 
 struct LocalizedText: Codable, Hashable {
     let en: String
     let ur: String?
     let ar: String?
 
-    func text(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .english, .french: return en          // French not authored for this feature → English
-        case .urdu:   return (ur?.isEmpty == false ? ur! : en)
-        case .arabic: return (ar?.isEmpty == false ? ar! : en)
-        }
-    }
+    /// The displayed (English) text.
+    var text: String { en }
 }
 
 // MARK: - The challenge

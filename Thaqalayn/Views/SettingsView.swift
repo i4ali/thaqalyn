@@ -14,7 +14,6 @@ struct SettingsView: View {
     @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var voiceManager = TTSVoiceManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var dailyVerse = DailyVerseProvider.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @State private var showingPaywall = false
@@ -189,37 +188,6 @@ struct SettingsView: View {
                                 )
                             }
 
-                            // Language Section
-                            SettingsSection(title: "Language") {
-                                VStack(alignment: .leading, spacing: 14) {
-                                    HStack(spacing: 12) {
-                                        Image(systemName: "globe")
-                                            .font(.system(size: 18, weight: .semibold))
-                                            .foregroundColor(themeManager.accentColor)
-                                            .frame(width: 28)
-                                        VStack(alignment: .leading, spacing: 2) {
-                                            Text("App Language")
-                                                .font(.system(size: 16, weight: .semibold))
-                                                .foregroundColor(themeManager.primaryText)
-                                            Text("Translations, duas & commentary")
-                                                .font(.system(size: 13, weight: .medium))
-                                                .foregroundColor(themeManager.secondaryText)
-                                        }
-                                        Spacer()
-                                    }
-                                    languagePicker
-                                }
-                                .padding(16)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(themeManager.glassEffect)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 12)
-                                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                                        )
-                                )
-                            }
-
                             // Reading Section
                             SettingsSection(title: "Reading") {
                                 ReadingSizeSettingRow()
@@ -273,16 +241,6 @@ struct SettingsView: View {
                                             showingTimePickerSheet = true
                                         }
 
-                                        // Language preference
-                                        SettingsRow(
-                                            icon: "globe",
-                                            title: "Language",
-                                            subtitle: notificationManager.preferences.language.displayName,
-                                            iconColor: .green
-                                        ) {
-                                            cycleNotificationLanguage()
-                                        }
-
                                         // Include tafsir toggle
                                         SettingsToggleRow(
                                             icon: "book.fill",
@@ -302,7 +260,7 @@ struct SettingsView: View {
                                                 Image(systemName: "star.fill")
                                                     .font(.system(size: 12))
                                                     .foregroundColor(.yellow)
-                                                Text(dailyVerse.today.occasion(languageManager.selectedLanguage) ?? "Today's Verse")
+                                                Text(dailyVerse.today.occasionEn ?? "Today's Verse")
                                                     .font(.system(size: 14, weight: .semibold))
                                                     .foregroundColor(themeManager.primaryText)
                                             }
@@ -314,7 +272,7 @@ struct SettingsView: View {
                                                 .foregroundColor(themeManager.secondaryText)
                                                 .padding(.horizontal, 16)
 
-                                            Text(dailyVerse.today.theme(languageManager.selectedLanguage))
+                                            Text(dailyVerse.today.themeEn)
                                                 .font(.system(size: 12))
                                                 .foregroundColor(themeManager.tertiaryText)
                                                 .padding(.horizontal, 16)
@@ -624,7 +582,6 @@ struct SettingsView: View {
                         emeraldPremiumSection
                         emeraldYourNameSection
                         emeraldAppearanceSection
-                        emeraldLanguageSection
                         emeraldReadingSection
                         emeraldDailyVerseSection
                         emeraldReadingProgressSection
@@ -739,30 +696,6 @@ struct SettingsView: View {
         }
     }
 
-    private var emeraldLanguageSection: some View {
-        SettingsSection(title: "Language") {
-            EmCard(cornerRadius: 18) {
-                VStack(alignment: .leading, spacing: 14) {
-                    HStack(spacing: 14) {
-                        EmIconChip(sfSymbol: "globe", size: 44)
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text("App Language")
-                                .font(EmType.serif(19, .semiBold))
-                                .foregroundColor(themeManager.primaryText)
-                            Text("Translations, duas & commentary")
-                                .font(.system(size: 13, weight: .medium))
-                                .foregroundColor(themeManager.secondaryText)
-                        }
-                        Spacer(minLength: 8)
-                    }
-                    languagePicker
-                }
-                .padding(.vertical, 12)
-                .padding(.horizontal, 14)
-            }
-        }
-    }
-
     private var emeraldReadingSection: some View {
         SettingsSection(title: "Reading") {
             ReadingSizeSettingRow()
@@ -817,16 +750,6 @@ struct SettingsView: View {
                         showingTimePickerSheet = true
                     }
 
-                    // Language preference
-                    SettingsRow(
-                        icon: "globe",
-                        title: "Language",
-                        subtitle: notificationManager.preferences.language.displayName,
-                        iconColor: .green
-                    ) {
-                        cycleNotificationLanguage()
-                    }
-
                     // Include tafsir toggle
                     SettingsToggleRow(
                         icon: "book.fill",
@@ -845,12 +768,12 @@ struct SettingsView: View {
                         VStack(alignment: .leading, spacing: 6) {
                             EmSectionLabel(
                                 icon: "star.fill",
-                                text: dailyVerse.today.occasion(languageManager.selectedLanguage) ?? "Today's Verse"
+                                text: dailyVerse.today.occasionEn ?? "Today's Verse"
                             )
                             Text("Surah \(dailyVerse.today.surah), Verse \(dailyVerse.today.verse)")
                                 .font(.system(size: 13, weight: .medium))
                                 .foregroundColor(themeManager.secondaryText)
-                            Text(dailyVerse.today.theme(languageManager.selectedLanguage))
+                            Text(dailyVerse.today.themeEn)
                                 .font(EmType.serif(18, .medium))
                                 .foregroundColor(themeManager.primaryText)
                         }
@@ -1047,41 +970,12 @@ struct SettingsView: View {
 
     // MARK: - Language picker (writes the global app language)
 
-    private var languageBinding: Binding<CommentaryLanguage> {
-        Binding(
-            get: { languageManager.selectedLanguage },
-            set: { newValue in
-                withAnimation(.easeInOut(duration: 0.2)) { languageManager.setLanguage(newValue) }
-            }
-        )
-    }
-
-    private var languagePicker: some View {
-        Picker("Language", selection: languageBinding) {
-            ForEach(CommentaryLanguage.supportedTafsirLanguages, id: \.self) { lang in
-                Text(lang.displayName).tag(lang)
-            }
-        }
-        .pickerStyle(.segmented)
-    }
-
     // MARK: - Helper Methods
 
     private func formatTime(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         return formatter.string(from: date)
-    }
-
-    /// Cycles English -> Urdu -> Arabic -> English. The old version was a 2-way
-    /// English/Urdu toggle, which made Arabic unreachable even though the tafsir
-    /// accessor and the notification body both support it. French is excluded
-    /// because it has no tafsir content (see CommentaryLanguage.supportedTafsirLanguages).
-    private func cycleNotificationLanguage() {
-        let languages = CommentaryLanguage.supportedTafsirLanguages
-        let current = notificationManager.preferences.language
-        let index = languages.firstIndex(of: current) ?? 0
-        notificationManager.preferences.language = languages[(index + 1) % languages.count]
     }
 
     private func cycleRepeatMode() {

@@ -13,7 +13,6 @@ struct MuharramJourneyView: View {
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedDay: MuharramDay?
     @State private var navigateToDetail = false
     /// A locked day the user tapped - opens the veiled preview instead of the paywall.
@@ -31,7 +30,7 @@ struct MuharramJourneyView: View {
 
                     // Day list
                     if journeyManager.isLoading {
-                        MuharramLoadingSection(message: JourneyStrings.loadingJourney(languageManager.selectedLanguage))
+                        MuharramLoadingSection(message: JourneyStrings.loadingJourney)
                     } else if let error = journeyManager.errorMessage {
                         MuharramErrorSection(message: error)
                     } else {
@@ -85,15 +84,15 @@ struct MuharramJourneyView: View {
             // what waits beneath - rather than jumping straight to the paywall. The
             // paywall it carries still wears this journey's art and name.
             VeiledDayPreview(
-                dayLabel: "\(JourneyStrings.title("muharram", languageManager.selectedLanguage)) \u{00B7} \(JourneyStrings.dayN(day.dayNumber, languageManager.selectedLanguage))",
-                theme: day.localizedTheme(languageManager.selectedLanguage),
+                dayLabel: "\(JourneyStrings.title("muharram")) \u{00B7} \(JourneyStrings.dayN(day.dayNumber))",
+                theme: day.theme,
                 themeArabic: day.themeArabic,
-                openingLine: day.localizedTafsir(languageManager.selectedLanguage),
+                openingLine: day.tafsirFocus,
                 verseCount: day.verses.count,
                 coverAssetName: JourneyDescriptor.byId("muharram")?.coverAssetName ?? "MuharramCover",
                 paywallContext: PaywallContext(
                     coverAssetName: JourneyDescriptor.byId("muharram")?.coverAssetName,
-                    eyebrow: JourneyStrings.title("muharram", languageManager.selectedLanguage)))
+                    eyebrow: JourneyStrings.title("muharram")))
         }
     }
 }
@@ -102,12 +101,10 @@ struct MuharramJourneyHeader: View {
     @StateObject private var journeyManager = MuharramJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var statusMessage: String {
         let status = calendarManager.muharramSeasonStatus()
-        return status.isEmpty ? JourneyStrings.screenTitle("muharram", lang) : status
+        return status.isEmpty ? JourneyStrings.screenTitle("muharram") : status
     }
 
     var observedCount: Int {
@@ -121,11 +118,11 @@ struct MuharramJourneyHeader: View {
     // Somber observance: no completion/celebration note, "observed" wording.
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: JourneyStrings.eyebrow("muharram", "10-Day Journey", lang),
-            title: JourneyStrings.title("muharram", lang),
+            eyebrow: JourneyStrings.eyebrow("muharram", "10-Day Journey"),
+            title: JourneyStrings.title("muharram"),
             sfSymbol: "flame.fill",
             statusLine: statusMessage,
-            countLine: JourneyStrings.daysObserved(observedCount, 10, lang),
+            countLine: JourneyStrings.daysObserved(observedCount, 10),
             percent: journeyManager.completionPercentage,
             coverAssetName: "MuharramCover"
         )
@@ -137,7 +134,7 @@ struct MuharramJourneyHeader: View {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(JourneyStrings.screenTitle("muharram", lang))
+                        Text(JourneyStrings.screenTitle("muharram"))
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
@@ -158,7 +155,7 @@ struct MuharramJourneyHeader: View {
             // Progress bar
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text(JourneyStrings.daysObserved(observedCount, 10, lang))
+                    Text(JourneyStrings.daysObserved(observedCount, 10))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -201,8 +198,6 @@ struct MuharramDayCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var grayGradient: LinearGradient {
         LinearGradient(
@@ -232,7 +227,7 @@ struct MuharramDayCard: View {
     private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
-            theme: day.localizedTheme(lang),
+            theme: day.theme,
             themeArabic: day.themeArabic,
             isDone: isObserved,
             isCurrent: isCurrentDay,
@@ -271,7 +266,7 @@ struct MuharramDayCard: View {
                 // Day content
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text(JourneyStrings.dayN(day.dayNumber, lang))
+                        Text(JourneyStrings.dayN(day.dayNumber))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(themeManager.secondaryText)
 
@@ -286,7 +281,7 @@ struct MuharramDayCard: View {
                                         .fill(Color.orange.gradient)
                                 )
                         } else if isCurrentDay {
-                            Text(JourneyStrings.today(lang))
+                            Text(JourneyStrings.today)
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 6)
@@ -303,7 +298,7 @@ struct MuharramDayCard: View {
                             .font(.system(size: 14))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
 
-                        Text(day.localizedTheme(lang))
+                        Text(day.theme)
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
                     }
@@ -361,7 +356,6 @@ private struct MuharramLoadingSection: View {
 private struct MuharramErrorSection: View {
     let message: String
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -369,7 +363,7 @@ private struct MuharramErrorSection: View {
                 .font(.system(size: 48))
                 .foregroundColor(.orange)
 
-            Text(JourneyStrings.errorLoadingJourney(languageManager.selectedLanguage))
+            Text(JourneyStrings.errorLoadingJourney)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
 

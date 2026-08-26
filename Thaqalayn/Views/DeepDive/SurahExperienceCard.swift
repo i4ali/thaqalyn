@@ -13,9 +13,7 @@ import SwiftUI
 
 struct SurahExperienceCard: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var premiumManager = PremiumManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     let descriptor: SurahExperienceDescriptor
     let onTap: () -> Void
 
@@ -29,12 +27,12 @@ struct SurahExperienceCard: View {
         // The card body and the "Listen" affordance are two independent tap targets in
         // one ZStack: SwiftUI routes a tap to the topmost button under the finger, so the
         // headphones handles its corner and the rest of the cell still opens the visual
-        // journey. Listen shows only where the narration is actually rendered, and only in
-        // English (audio is EN-only) - matching the shelf card, so an audio-less surah
-        // (e.g. one still awaiting its render) never shows a headphones that can't play.
+        // journey. Listen shows only where the narration is actually rendered - matching
+        // the shelf card, so an audio-less surah (e.g. one still awaiting its render)
+        // never shows a headphones that can't play.
         ZStack(alignment: .topTrailing) {
             cardButton
-            if descriptor.available && lang == .english && descriptor.dive != nil
+            if descriptor.available && descriptor.dive != nil
                 && JourneyAudioAvailability.isAudioReady(descriptor.id) {
                 listenButton
             }
@@ -57,14 +55,14 @@ struct SurahExperienceCard: View {
                         if locked {
                             premiumPill
                         } else {
-                            Text(JourneyStrings.surahJourneyEyebrow(lang).uppercased())
-                                .emEyebrow(lang, size: 10.5, tracking: 2)
+                            Text(JourneyStrings.surahJourneyEyebrow.uppercased())
+                                .emEyebrow(size: 10.5, tracking: 2)
                                 .foregroundColor(tm.accentColor)
                         }
-                        Text(descriptor.title(lang))
+                        Text(descriptor.title())
                             .font(EmType.serif(22, .semiBold))
                             .foregroundColor(tm.primaryText)
-                        Text(descriptor.subtitle(lang))
+                        Text(descriptor.subtitle())
                             .font(.system(size: 13))
                             .foregroundColor(tm.secondaryText)
                             .lineLimit(2)
@@ -74,7 +72,6 @@ struct SurahExperienceCard: View {
                     trailingGlyph
                 }
                 .padding(16)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
             }
             .opacity(descriptor.available ? 1 : 0.72)
         }
@@ -84,7 +81,7 @@ struct SurahExperienceCard: View {
     /// "PREMIUM" chip in the app's accent-chip treatment - no lock glyph, matching
     /// DeepDiveCard / DailyCrosswordCard.
     private var premiumPill: some View {
-        Text(JourneyStrings.premium(lang).uppercased())
+        Text(JourneyStrings.premium.uppercased())
             .font(.system(size: 9, weight: .bold)).tracking(1.4)
             .foregroundColor(tm.accentColor)
             .padding(.horizontal, 8)
@@ -105,7 +102,7 @@ struct SurahExperienceCard: View {
                 isFree: premiumManager.canAccessSurahExperience(descriptor.id),
                 paywall: PaywallContext(
                     coverAssetName: descriptor.coverAssetName,
-                    eyebrow: "\(JourneyStrings.surahJourneyEyebrow(lang)) \u{00B7} \(descriptor.title(lang))"))
+                    eyebrow: "\(JourneyStrings.surahJourneyEyebrow) \u{00B7} \(descriptor.title())"))
         } label: {
             Image(systemName: "headphones")
                 .font(.system(size: 15, weight: .semibold))
@@ -125,7 +122,7 @@ struct SurahExperienceCard: View {
                 .font(.system(size: 15, weight: .semibold))
                 .foregroundColor(tm.accentColor)
         } else {
-            Text(JourneyStrings.soon(lang))
+            Text(JourneyStrings.soon)
                 .font(.system(size: 9, weight: .heavy)).tracking(1.4)
                 .foregroundColor(tm.tertiaryText)
                 .padding(.horizontal, 8).padding(.vertical, 3)

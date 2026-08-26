@@ -28,8 +28,6 @@ import SwiftUI
 /// the `squaredBottom` treatment on `ModernSurahCard`.
 struct JourneyModeToggle<ReadDestination: View>: View {
     @ObservedObject private var tm = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     /// The experience behind the Journey tab - nil in comingSoon mode.
     let descriptor: SurahExperienceDescriptor?
@@ -90,7 +88,6 @@ struct JourneyModeToggle<ReadDestination: View>: View {
                 regionShape.stroke(tm.strokeColor, lineWidth: 1)
             }
         }
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
     }
 
     // MARK: Read tab (inactive - pushes the reading view)
@@ -102,7 +99,7 @@ struct JourneyModeToggle<ReadDestination: View>: View {
             HStack(spacing: 8) {
                 Image(systemName: "line.3.horizontal")
                     .font(.system(size: 13, weight: .semibold))
-                Text(JourneyStrings.readAndTafsir(lang))
+                Text(JourneyStrings.readAndTafsir)
                     .font(.system(size: 14, weight: .medium))
                     .lineLimit(1).minimumScaleFactor(0.8)
             }
@@ -117,7 +114,7 @@ struct JourneyModeToggle<ReadDestination: View>: View {
 
     private var journeyTab: some View {
         Button(action: onJourney) {
-            AnimatedJourneyTab(label: JourneyStrings.journey(lang),
+            AnimatedJourneyTab(label: JourneyStrings.journey,
                                gradient: tm.accentGradient,
                                glowColor: tm.accentColor)
         }
@@ -131,10 +128,10 @@ struct JourneyModeToggle<ReadDestination: View>: View {
     /// capsule, no action. Matches DeepDiveCard's coming-soon treatment.
     private var journeySoonTab: some View {
         HStack(spacing: 6) {
-            Text(JourneyStrings.journey(lang))
+            Text(JourneyStrings.journey)
                 .font(.system(size: 14, weight: .medium))
                 .lineLimit(1).minimumScaleFactor(0.8)
-            Text(JourneyStrings.soon(lang))
+            Text(JourneyStrings.soon)
                 .font(.system(size: 8, weight: .heavy)).tracking(1.2)
                 .padding(.horizontal, 6).padding(.vertical, 2)
                 .overlay(Capsule().stroke(tm.strokeColor, lineWidth: 1))
@@ -151,12 +148,12 @@ struct JourneyModeToggle<ReadDestination: View>: View {
                 .stroke(tm.strokeColor, lineWidth: 1)
         )
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(JourneyStrings.journey(lang)), \(JourneyStrings.comingSoon(lang))")
+        .accessibilityLabel("\(JourneyStrings.journey), \(JourneyStrings.comingSoon)")
     }
 
     /// "PREMIUM" chip in the app's accent-chip treatment - never a lock glyph.
     private var premiumChip: some View {
-        Text(JourneyStrings.premium(lang).uppercased())
+        Text(JourneyStrings.premium.uppercased())
             .font(.system(size: 9, weight: .bold)).tracking(1.4)
             .foregroundColor(tm.accentColor)
             .padding(.horizontal, 8).padding(.vertical, 3)

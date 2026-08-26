@@ -179,33 +179,6 @@ struct VerseConcept: Codable, Identifiable {
     let title_ar: String?
     let coreInsight_ar: String?
     let whyItMatters_ar: String?
-
-    /// Get localized title for specified language
-    func getTitle(language: CommentaryLanguage) -> String {
-        switch language {
-        case .english, .french: return title
-        case .urdu: return title_urdu ?? title
-        case .arabic: return title_ar ?? title
-        }
-    }
-
-    /// Get localized core insight for specified language
-    func getCoreInsight(language: CommentaryLanguage) -> String {
-        switch language {
-        case .english, .french: return coreInsight
-        case .urdu: return coreInsight_urdu ?? coreInsight
-        case .arabic: return coreInsight_ar ?? coreInsight
-        }
-    }
-
-    /// Get localized why it matters for specified language
-    func getWhyItMatters(language: CommentaryLanguage) -> String {
-        switch language {
-        case .english, .french: return whyItMatters
-        case .urdu: return whyItMatters_urdu ?? whyItMatters
-        case .arabic: return whyItMatters_ar ?? whyItMatters
-        }
-    }
 }
 
 /// Complete Quick Overview data for a verse
@@ -241,18 +214,10 @@ struct TafsirVerse: Codable {
     let layer4_ar: String?
     let layer5_ar: String?
 
-    // French content (optional)
-    let layer1_fr: String?
-    let layer2_fr: String?
-    let layer3_fr: String?
-    let layer4_fr: String?
-    let layer5_fr: String?
-
     // Short versions for Overview feature (optional)
     let layer2short: String?
     let layer2short_urdu: String?
     let layer2short_ar: String?
-    let layer2short_fr: String?
 
     // Quick Overview data for interactive concept display (optional)
     let quickOverview: QuickOverviewData?
@@ -263,23 +228,18 @@ struct TafsirVerse: Codable {
         case (.foundation, .english): return layer1
         case (.foundation, .urdu): return layer1_urdu ?? layer1
         case (.foundation, .arabic): return layer1_ar ?? layer1
-        case (.foundation, .french): return layer1_fr ?? layer1
         case (.classical, .english): return layer2
         case (.classical, .urdu): return layer2_urdu ?? layer2
         case (.classical, .arabic): return layer2_ar ?? layer2
-        case (.classical, .french): return layer2_fr ?? layer2
         case (.contemporary, .english): return layer3
         case (.contemporary, .urdu): return layer3_urdu ?? layer3
         case (.contemporary, .arabic): return layer3_ar ?? layer3
-        case (.contemporary, .french): return layer3_fr ?? layer3
         case (.ahlulBayt, .english): return layer4
         case (.ahlulBayt, .urdu): return layer4_urdu ?? layer4
         case (.ahlulBayt, .arabic): return layer4_ar ?? layer4
-        case (.ahlulBayt, .french): return layer4_fr ?? layer4
         case (.comparative, .english): return layer5 ?? ""
         case (.comparative, .urdu): return layer5_urdu ?? layer5 ?? ""
         case (.comparative, .arabic): return layer5_ar ?? layer5 ?? ""
-        case (.comparative, .french): return layer5_fr ?? layer5 ?? ""
         }
     }
 
@@ -289,23 +249,18 @@ struct TafsirVerse: Codable {
         case (.foundation, .english): return true
         case (.foundation, .urdu): return layer1_urdu != nil
         case (.foundation, .arabic): return layer1_ar != nil
-        case (.foundation, .french): return layer1_fr != nil
         case (.classical, .english): return true
         case (.classical, .urdu): return layer2_urdu != nil
         case (.classical, .arabic): return layer2_ar != nil
-        case (.classical, .french): return layer2_fr != nil
         case (.contemporary, .english): return true
         case (.contemporary, .urdu): return layer3_urdu != nil
         case (.contemporary, .arabic): return layer3_ar != nil
-        case (.contemporary, .french): return layer3_fr != nil
         case (.ahlulBayt, .english): return true
         case (.ahlulBayt, .urdu): return layer4_urdu != nil
         case (.ahlulBayt, .arabic): return layer4_ar != nil
-        case (.ahlulBayt, .french): return layer4_fr != nil
         case (.comparative, .english): return layer5 != nil
         case (.comparative, .urdu): return layer5_urdu != nil
         case (.comparative, .arabic): return layer5_ar != nil
-        case (.comparative, .french): return layer5_fr != nil
         }
     }
 
@@ -320,7 +275,6 @@ struct TafsirVerse: Codable {
         case .english: return layer2
         case .urdu: return layer2_urdu ?? layer2
         case .arabic: return layer2_ar ?? layer2
-        case .french: return layer2_fr ?? layer2
         }
     }
 
@@ -330,7 +284,6 @@ struct TafsirVerse: Codable {
         case .english: return layer2short ?? layer2
         case .urdu: return layer2short_urdu ?? layer2_urdu ?? layer2
         case .arabic: return layer2short_ar ?? layer2_ar ?? layer2
-        case .french: return layer2short_fr ?? layer2_fr ?? layer2
         }
     }
 
@@ -616,13 +569,16 @@ enum TafsirLayer: String, CaseIterable {
 
 // MARK: - Commentary Language Support
 
+/// The tafsir reading language. This is the ONLY language preference in the app:
+/// all UI chrome and non-tafsir content is English; the 5-layer tafsir (and the
+/// verse translation shown with it) can be read in English, Urdu, or Arabic via
+/// the toggle inside the tafsir reader.
 enum CommentaryLanguage: String, CaseIterable, Codable {
     case english = "en"
     case urdu = "ur"
     case arabic = "ar"
-    case french = "fr"
 
-    /// Languages that have tafsir content available (excludes French)
+    /// Languages that have tafsir content available
     static let supportedTafsirLanguages: [CommentaryLanguage] = [.english, .urdu, .arabic]
 
     var displayName: String {
@@ -630,7 +586,6 @@ enum CommentaryLanguage: String, CaseIterable, Codable {
         case .english: return "English"
         case .urdu: return "اردو"
         case .arabic: return "العربية"
-        case .french: return "Français"
         }
     }
 
@@ -641,22 +596,11 @@ enum CommentaryLanguage: String, CaseIterable, Codable {
         case .english: return "EN"
         case .urdu: return "UR"
         case .arabic: return "AR"
-        case .french: return "FR"
         }
     }
 
     var isRTL: Bool {
         return self == .urdu || self == .arabic
-    }
-
-    /// Language code for NLLB translation model
-    var nllbCode: String {
-        switch self {
-        case .english: return "eng_Latn"
-        case .urdu: return "urd_Arab"
-        case .arabic: return "arb_Arab"
-        case .french: return "fra_Latn"
-        }
     }
 }
 
@@ -664,48 +608,25 @@ enum CommentaryLanguage: String, CaseIterable, Codable {
 
 // DailyVersePool, DailyVerseEntry, SacredDay, DailyVerseSelection and the
 // selection engine live in Shared/DailyVerseCore.swift (shared with the
-// ThaqalaynWidgets target). Only the app-side language helpers stay here,
-// because CommentaryLanguage is app-only.
-
-extension DailyVerseSelection {
-    func theme(_ language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return themeAr
-        case .urdu:   return themeUr
-        default:      return themeEn
-        }
-    }
-
-    /// nil on an ordinary day.
-    func occasion(_ language: CommentaryLanguage) -> String? {
-        switch language {
-        case .arabic: return occasionAr
-        case .urdu:   return occasionUr
-        default:      return occasionEn
-        }
-    }
-}
+// ThaqalaynWidgets target).
 
 struct NotificationPreferences: Codable {
     var enabled: Bool
     var time: Date
-    var language: CommentaryLanguage
     var includeTafsir: Bool
 
     init(
         enabled: Bool = false,
         time: Date = Calendar.current.date(from: DateComponents(hour: 9, minute: 0)) ?? Date(),
-        language: CommentaryLanguage = .english,
         includeTafsir: Bool = true
     ) {
         self.enabled = enabled
         self.time = time
-        self.language = language
         self.includeTafsir = includeTafsir
     }
 
     enum CodingKeys: String, CodingKey {
-        case enabled, time, language, includeTafsir
+        case enabled, time, includeTafsir
     }
 }
 
@@ -1143,46 +1064,6 @@ struct PropheticParallel: Codable, Identifiable {
     /// One narration from the Ahlul Bayt (a) about this parallel's prophet. Optional so
     /// parallels without one still decode.
     let narration: AhlulBaytNarration?
-
-    func situation(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return situationAr
-        case .urdu:   return situationUr
-        default:      return situationEn
-        }
-    }
-
-    func prophet(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return prophetAr
-        case .urdu:   return prophetUr
-        default:      return prophetEn
-        }
-    }
-
-    func connection(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return connectionAr
-        case .urdu:   return connectionUr
-        default:      return connectionEn
-        }
-    }
-
-    func comfortMessage(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return comfortMessageAr
-        case .urdu:   return comfortMessageUr
-        default:      return comfortMessageEn
-        }
-    }
-
-    func storySummary(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return storySummaryAr
-        case .urdu:   return storySummaryUr
-        default:      return storySummaryEn
-        }
-    }
 }
 
 struct ParallelVerse: Codable {
@@ -1194,14 +1075,6 @@ struct ParallelVerse: Codable {
 
     var verseReference: String {
         "Quran \(surahNumber):\(verseNumber)"
-    }
-
-    func relevanceNote(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return relevanceNoteAr
-        case .urdu:   return relevanceNoteUr
-        default:      return relevanceNoteEn
-        }
     }
 }
 
@@ -1257,14 +1130,6 @@ struct LifeMoment: Codable, Identifiable {
         return "Quran \(surahNumber):\(verseNumber)"
     }
 
-    func situation(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return situationAr
-        case .urdu:   return situationUr
-        default:      return situationEn
-        }
-    }
-
     var categoryIcon: String {
         switch category.lowercased() {
         case "emotional": return "heart.fill"
@@ -1305,38 +1170,6 @@ struct Food: Codable, Identifiable {
     let nutritionNoteUr: String
 
     var verseReference: String { "Quran \(surahNumber):\(verseNumber)" }
-
-    func name(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return nameAr
-        case .urdu:   return nameUr
-        default:      return nameEn
-        }
-    }
-
-    func narration(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return narrationAr
-        case .urdu:   return narrationUr
-        default:      return narrationEn
-        }
-    }
-
-    func sunnahTip(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return sunnahTipAr
-        case .urdu:   return sunnahTipUr
-        default:      return sunnahTipEn
-        }
-    }
-
-    func nutritionNote(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return nutritionNoteAr
-        case .urdu:   return nutritionNoteUr
-        default:      return nutritionNoteEn
-        }
-    }
 }
 
 // MARK: - Prophetic Stories Models
@@ -1374,38 +1207,6 @@ struct PropheticStory: Codable, Identifiable {
     var keyVerses: [StoryVerse] {
         verses.filter { $0.isKeyVerse }
     }
-
-    func title(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return titleAr
-        case .urdu:   return titleUr
-        default:      return titleEn
-        }
-    }
-
-    func shortTitle(for language: CommentaryLanguage) -> String? {
-        switch language {
-        case .arabic: return shortTitleAr
-        case .urdu:   return shortTitleUr
-        default:      return shortTitleEn
-        }
-    }
-
-    func prophet(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return prophetAr
-        case .urdu:   return prophetUr
-        default:      return prophetEn
-        }
-    }
-
-    func lessonsSummary(for language: CommentaryLanguage) -> String? {
-        switch language {
-        case .arabic: return lessonsSummaryAr
-        case .urdu:   return lessonsSummaryUr
-        default:      return lessonsSummaryEn
-        }
-    }
 }
 
 struct StoryVerse: Codable {
@@ -1418,14 +1219,6 @@ struct StoryVerse: Codable {
 
     var verseReference: String {
         "Quran \(surahNumber):\(verseNumber)"
-    }
-
-    func storyNote(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return storyNoteAr
-        case .urdu:   return storyNoteUr
-        default:      return storyNoteEn
-        }
     }
 }
 
@@ -1495,38 +1288,6 @@ struct AhlulbaytEntry: Codable, Identifiable {
     var primaryVerses: [AhlulbaytVerse] {
         verses.filter { $0.isPrimary }
     }
-
-    func title(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return titleAr
-        case .urdu:   return titleUr
-        default:      return titleEn
-        }
-    }
-
-    func shortTitle(for language: CommentaryLanguage) -> String? {
-        switch language {
-        case .arabic: return shortTitleAr
-        case .urdu:   return shortTitleUr
-        default:      return shortTitleEn
-        }
-    }
-
-    func ahlulbaytMembers(for language: CommentaryLanguage) -> [String] {
-        switch language {
-        case .arabic: return ahlulbaytMembersAr
-        case .urdu:   return ahlulbaytMembersUr
-        default:      return ahlulbaytMembersEn
-        }
-    }
-
-    func revelationContext(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return revelationContextAr
-        case .urdu:   return revelationContextUr
-        default:      return revelationContextEn
-        }
-    }
 }
 
 struct AhlulbaytVerse: Codable {
@@ -1539,14 +1300,6 @@ struct AhlulbaytVerse: Codable {
 
     var verseReference: String {
         "Quran \(surahNumber):\(verseNumber)"
-    }
-
-    func context(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return contextAr
-        case .urdu:   return contextUr
-        default:      return contextEn
-        }
     }
 }
 
@@ -1604,22 +1357,6 @@ struct FastingCategory: Codable, Identifiable {
     var verseCount: Int {
         verses.count
     }
-
-    func title(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return titleAr
-        case .urdu:   return titleUr
-        default:      return titleEn
-        }
-    }
-
-    func description(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return descriptionAr
-        case .urdu:   return descriptionUr
-        default:      return descriptionEn
-        }
-    }
 }
 
 struct FastingVerse: Codable, Identifiable {
@@ -1634,14 +1371,6 @@ struct FastingVerse: Codable, Identifiable {
     var verseReference: String {
         "Quran \(surahNumber):\(verseNumber)"
     }
-
-    func relevanceNote(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return relevanceNoteAr
-        case .urdu:   return relevanceNoteUr
-        default:      return relevanceNoteEn
-        }
-    }
 }
 
 /// A single attributed narration from the Ahlul Bayt (a) — shared by the Fasting and
@@ -1655,18 +1384,6 @@ struct AhlulBaytNarration: Codable {
     let sourceEn: String
     let sourceAr: String
     let sourceUr: String
-
-    func translation(for language: CommentaryLanguage) -> String {
-        language == .urdu ? translationUr : translationEn
-    }
-
-    func source(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return sourceAr
-        case .urdu:   return sourceUr
-        default:      return sourceEn
-        }
-    }
 }
 
 // MARK: - Ramadan Journey Models
@@ -1688,10 +1405,6 @@ struct RamadanDay: Codable, Identifiable {
     let themeUr: String
     let tafsirFocusUr: String
     let reflectionUr: String
-
-    func localizedTheme(_ l: CommentaryLanguage) -> String { l == .urdu ? themeUr : theme }
-    func localizedTafsir(_ l: CommentaryLanguage) -> String { l == .urdu ? tafsirFocusUr : tafsirFocus }
-    func localizedReflection(_ l: CommentaryLanguage) -> String { l == .urdu ? reflectionUr : reflection }
 }
 
 struct RamadanDua: Codable {
@@ -1701,9 +1414,6 @@ struct RamadanDua: Codable {
     let source: String?
     let englishUr: String
     let sourceUr: String?
-
-    func localizedEnglish(_ l: CommentaryLanguage) -> String { l == .urdu ? englishUr : english }
-    func localizedSource(_ l: CommentaryLanguage) -> String? { l == .urdu ? (sourceUr ?? source) : source }
 }
 
 struct RamadanVerse: Codable, Identifiable {
@@ -1712,8 +1422,6 @@ struct RamadanVerse: Codable, Identifiable {
     let verseNumber: Int
     let relevanceNote: String
     let relevanceNoteUr: String
-
-    func localizedNote(_ l: CommentaryLanguage) -> String { l == .urdu ? relevanceNoteUr : relevanceNote }
 
     var verseReference: String {
         "Quran \(surahNumber):\(verseNumber)"
@@ -1763,10 +1471,6 @@ struct HajjDay: Codable, Identifiable {
     let themeUr: String
     let tafsirFocusUr: String
     let reflectionUr: String
-
-    func localizedTheme(_ l: CommentaryLanguage) -> String { l == .urdu ? themeUr : theme }
-    func localizedTafsir(_ l: CommentaryLanguage) -> String { l == .urdu ? tafsirFocusUr : tafsirFocus }
-    func localizedReflection(_ l: CommentaryLanguage) -> String { l == .urdu ? reflectionUr : reflection }
 }
 
 struct HajjDua: Codable {
@@ -1776,9 +1480,6 @@ struct HajjDua: Codable {
     let source: String?
     let englishUr: String
     let sourceUr: String?
-
-    func localizedEnglish(_ l: CommentaryLanguage) -> String { l == .urdu ? englishUr : english }
-    func localizedSource(_ l: CommentaryLanguage) -> String? { l == .urdu ? (sourceUr ?? source) : source }
 }
 
 struct HajjVerse: Codable, Identifiable {
@@ -1787,8 +1488,6 @@ struct HajjVerse: Codable, Identifiable {
     let verseNumber: Int
     let relevanceNote: String
     let relevanceNoteUr: String
-
-    func localizedNote(_ l: CommentaryLanguage) -> String { l == .urdu ? relevanceNoteUr : relevanceNote }
 
     var verseReference: String {
         "Quran \(surahNumber):\(verseNumber)"
@@ -1838,10 +1537,6 @@ struct MuharramDay: Codable, Identifiable {
     let themeUr: String
     let tafsirFocusUr: String
     let reflectionUr: String
-
-    func localizedTheme(_ l: CommentaryLanguage) -> String { l == .urdu ? themeUr : theme }
-    func localizedTafsir(_ l: CommentaryLanguage) -> String { l == .urdu ? tafsirFocusUr : tafsirFocus }
-    func localizedReflection(_ l: CommentaryLanguage) -> String { l == .urdu ? reflectionUr : reflection }
 }
 
 struct MuharramDua: Codable {
@@ -1851,9 +1546,6 @@ struct MuharramDua: Codable {
     let source: String?
     let englishUr: String
     let sourceUr: String?
-
-    func localizedEnglish(_ l: CommentaryLanguage) -> String { l == .urdu ? englishUr : english }
-    func localizedSource(_ l: CommentaryLanguage) -> String? { l == .urdu ? (sourceUr ?? source) : source }
 }
 
 struct MuharramVerse: Codable, Identifiable {
@@ -1862,8 +1554,6 @@ struct MuharramVerse: Codable, Identifiable {
     let verseNumber: Int
     let relevanceNote: String
     let relevanceNoteUr: String
-
-    func localizedNote(_ l: CommentaryLanguage) -> String { l == .urdu ? relevanceNoteUr : relevanceNote }
 
     var verseReference: String {
         "Quran \(surahNumber):\(verseNumber)"
@@ -1911,25 +1601,10 @@ struct DailyDua: Codable, Identifiable {
     let surahNumber: Int?
     let verseNumber: Int?
 
-    func situation(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return situationAr
-        case .urdu: return situationUr
-        default: return situationEn
-        }
-    }
-
     /// The Qur'an verse this dua is drawn from, if any.
     var quranVerse: (surah: Int, verse: Int)? {
         if let s = surahNumber, let v = verseNumber { return (s, v) }
         return nil
-    }
-
-    func translation(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .urdu: return translationUr
-        default: return translationEn
-        }
     }
 
     var categoryIcon: String {
@@ -1966,10 +1641,6 @@ struct FatimiyyaDay: Codable, Identifiable {
     let themeUr: String
     let tafsirFocusUr: String
     let reflectionUr: String
-
-    func localizedTheme(_ l: CommentaryLanguage) -> String { l == .urdu ? themeUr : theme }
-    func localizedTafsir(_ l: CommentaryLanguage) -> String { l == .urdu ? tafsirFocusUr : tafsirFocus }
-    func localizedReflection(_ l: CommentaryLanguage) -> String { l == .urdu ? reflectionUr : reflection }
 }
 
 struct FatimiyyaDua: Codable {
@@ -1979,9 +1650,6 @@ struct FatimiyyaDua: Codable {
     let source: String?
     let englishUr: String
     let sourceUr: String?
-
-    func localizedEnglish(_ l: CommentaryLanguage) -> String { l == .urdu ? englishUr : english }
-    func localizedSource(_ l: CommentaryLanguage) -> String? { l == .urdu ? (sourceUr ?? source) : source }
 }
 
 struct FatimiyyaVerse: Codable, Identifiable {
@@ -1990,8 +1658,6 @@ struct FatimiyyaVerse: Codable, Identifiable {
     let verseNumber: Int
     let relevanceNote: String
     let relevanceNoteUr: String
-
-    func localizedNote(_ l: CommentaryLanguage) -> String { l == .urdu ? relevanceNoteUr : relevanceNote }
 
     var verseReference: String { "Quran \(surahNumber):\(verseNumber)" }
 }
@@ -2030,10 +1696,6 @@ struct ArbaeenDay: Codable, Identifiable {
     let themeUr: String
     let tafsirFocusUr: String
     let reflectionUr: String
-
-    func localizedTheme(_ l: CommentaryLanguage) -> String { l == .urdu ? themeUr : theme }
-    func localizedTafsir(_ l: CommentaryLanguage) -> String { l == .urdu ? tafsirFocusUr : tafsirFocus }
-    func localizedReflection(_ l: CommentaryLanguage) -> String { l == .urdu ? reflectionUr : reflection }
 }
 
 struct ArbaeenDua: Codable {
@@ -2046,9 +1708,6 @@ struct ArbaeenDua: Codable {
     /// Optional full text for a "Read the full ziyarat" disclosure (Station 8 finale only).
     let fullArabic: String?
     let fullEnglish: String?
-
-    func localizedEnglish(_ l: CommentaryLanguage) -> String { l == .urdu ? englishUr : english }
-    func localizedSource(_ l: CommentaryLanguage) -> String? { l == .urdu ? (sourceUr ?? source) : source }
 }
 
 struct ArbaeenVerse: Codable, Identifiable {
@@ -2057,8 +1716,6 @@ struct ArbaeenVerse: Codable, Identifiable {
     let verseNumber: Int
     let relevanceNote: String
     let relevanceNoteUr: String
-
-    func localizedNote(_ l: CommentaryLanguage) -> String { l == .urdu ? relevanceNoteUr : relevanceNote }
 
     var verseReference: String { "Quran \(surahNumber):\(verseNumber)" }
 }

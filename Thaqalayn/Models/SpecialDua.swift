@@ -38,15 +38,6 @@ struct SpecialDua: Codable, Identifiable {
     let sourceCreditEn: String
     let segments: [SpecialDuaSegment]
 
-    /// Title in the reader's language (Arabic/Urdu titles fall through to English elsewhere for now).
-    func title(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return titleAr
-        case .urdu:   return titleUr
-        default:      return titleEn
-        }
-    }
-
     /// Parsed stream URL, or nil when there is no recording.
     var audioURL: URL? {
         guard let audioUrl, !audioUrl.isEmpty else { return nil }

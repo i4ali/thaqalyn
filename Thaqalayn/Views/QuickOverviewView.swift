@@ -228,7 +228,6 @@ struct QuickOverviewView: View {
         })
     }
 
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var selectedConcept: VerseConcept? = nil
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
@@ -347,8 +346,6 @@ struct QuickOverviewView: View {
     /// Detail pane that REPLACES the gem grid when a gem is selected.
     /// Back-chip + fade-masked scrolling insight + pinned CTA. Verse stays pinned above.
     private func gemDetailPane(_ concept: VerseConcept) -> some View {
-        let lang = languageManager.selectedLanguage
-        let rtl = lang.isRTL
         return VStack(spacing: 0) {
             HStack {
                 BackToGemsChip {
@@ -366,12 +363,12 @@ struct QuickOverviewView: View {
                         Image(systemName: concept.icon)
                             .font(.system(size: 17 * readingSettings.scale, weight: .semibold))
                             .foregroundColor(conceptColor(concept))
-                        Text(concept.getTitle(language: lang).uppercased())
-                            .emEyebrow(lang, size: 14 * readingSettings.scale, tracking: 1, design: .rounded)
+                        Text(concept.title.uppercased())
+                            .emEyebrow(size: 14 * readingSettings.scale, tracking: 1, design: .rounded)
                             .foregroundColor(themeManager.primaryText)
                     }
-                    detailSection(conceptColor(concept), "The Core Insight:", concept.getCoreInsight(language: lang), rtl: rtl)
-                    detailSection(conceptColor(concept), "Why it matters:", concept.getWhyItMatters(language: lang), rtl: rtl)
+                    detailSection(conceptColor(concept), "The Core Insight:", concept.coreInsight)
+                    detailSection(conceptColor(concept), "Why it matters:", concept.whyItMatters)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 22).padding(.top, 8).padding(.bottom, 26)
@@ -384,7 +381,7 @@ struct QuickOverviewView: View {
     }
 
     @ViewBuilder
-    private func detailSection(_ color: Color, _ title: String, _ text: String, rtl: Bool) -> some View {
+    private func detailSection(_ color: Color, _ title: String, _ text: String) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
                 .font(.system(size: 14 * readingSettings.scale, weight: .bold))
@@ -393,9 +390,7 @@ struct QuickOverviewView: View {
                 .font(.system(size: 15 * readingSettings.scale, weight: .regular, design: .serif))
                 .foregroundColor(themeManager.primaryText)
                 .lineSpacing(7 * readingSettings.scale)
-                .multilineTextAlignment(rtl ? .trailing : .leading)
-                .frame(maxWidth: .infinity, alignment: rtl ? .trailing : .leading)
-                .environment(\.layoutDirection, rtl ? .rightToLeft : .leftToRight)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
@@ -465,7 +460,6 @@ struct QuickOverviewView: View {
             ForEach(concepts) { concept in
                 ConceptBubbleView(
                     concept: concept,
-                    language: languageManager.selectedLanguage,
                     isSelected: selectedConcept?.id == concept.id
                 ) {
                     withAnimation(.spring(response: 0.32, dampingFraction: 0.82)) {
@@ -495,7 +489,6 @@ struct QuickOverviewView: View {
 
 struct ConceptBubbleView: View {
     let concept: VerseConcept
-    let language: CommentaryLanguage
     let isSelected: Bool
     let onTap: () -> Void
 
@@ -512,7 +505,7 @@ struct ConceptBubbleView: View {
                     .font(.system(size: 14, weight: .semibold))
                     .foregroundColor(bubbleColor)
 
-                Text(concept.getTitle(language: language))
+                Text(concept.title)
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(1)
@@ -579,8 +572,7 @@ struct ConceptBubbleView: View {
         layer1: "", layer2: "", layer3: "", layer4: "", layer5: nil,
         layer1_urdu: nil, layer2_urdu: nil, layer3_urdu: nil, layer4_urdu: nil, layer5_urdu: nil,
         layer1_ar: nil, layer2_ar: nil, layer3_ar: nil, layer4_ar: nil, layer5_ar: nil,
-        layer1_fr: nil, layer2_fr: nil, layer3_fr: nil, layer4_fr: nil, layer5_fr: nil,
-        layer2short: nil, layer2short_urdu: nil, layer2short_ar: nil, layer2short_fr: nil,
+        layer2short: nil, layer2short_urdu: nil, layer2short_ar: nil,
         quickOverview: QuickOverviewData(concepts: sampleConcepts)
     )
     let sampleVWT = VerseWithTafsir(number: 1, verse: sampleVerse, tafsir: sampleTafsir)

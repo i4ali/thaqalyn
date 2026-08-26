@@ -11,7 +11,6 @@ import SwiftUI
 struct LifeMomentDetailView: View {
     let moment: LifeMoment
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var duasManager = DuasManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
@@ -93,11 +92,10 @@ struct LifeMomentDetailView: View {
             }
             .shadow(color: themeManager.accentColor.opacity(0.18), radius: 16, x: 0, y: 6)
 
-            Text(moment.situation(for: languageManager.selectedLanguage))
+            Text(moment.situationEn)
                 .font(themeManager.isMidnightEmerald ? EmType.serif(30, .semiBold) : .system(size: 30, weight: .bold, design: .rounded))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.center)
-                .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
 
             Text(moment.category.uppercased())
                 .font(.system(size: 11, weight: .bold)).tracking(1.5)
@@ -138,13 +136,12 @@ struct LifeMomentDetailView: View {
                         .environment(\.layoutDirection, .rightToLeft)
                         .textSelection(.enabled)
 
-                    Text(v.displayTranslation(for: languageManager.selectedLanguage))
+                    Text(v.translation)
                         .font(themeManager.isMidnightEmerald ? EmType.serif(16 * readingSettings.scale, .medium) : .system(size: 16 * readingSettings.scale, weight: .regular))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(5 * readingSettings.scale)
-                        .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 } else {
                     Text("Tap to open this verse in the reader.")
                         .font(.system(size: 14, weight: .regular))
@@ -165,7 +162,7 @@ struct LifeMomentDetailView: View {
                     }
                     .foregroundColor(themeManager.accentColor)
 
-                    Text(dua.situation(for: languageManager.selectedLanguage))
+                    Text(dua.situationEn)
                         .font(themeManager.isMidnightEmerald ? EmType.serif(20, .semiBold) : .system(size: 19, weight: .bold))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.leading)

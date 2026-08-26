@@ -5,18 +5,18 @@
 //  Data for one immersive "deep dive": a themed, single-sitting descent rendered
 //  by DeepDiveView. Section cases mirror the `type`s in MajlisYaqeen.jsx.
 //
-//  Prose is localized (EN / UR / AR) via `LocalizedText`. Qur'an Arabic, references,
-//  and surah/ayah numbers stay single-string (identical across languages).
+//  Prose is carried by `LocalizedText` (English displayed; legacy ur/ar decode fields
+//  are ignored). Qur'an Arabic, references, and surah/ayah numbers are single-string.
 //
 
 import SwiftUI
 
-// `LocalizedText` (en + optional ur/ar, resolved via `.text(for:)`) is defined once in
+// `LocalizedText` (en + optional ur/ar decode fields, displayed via `.text`) is defined once in
 // DailyChallengeModels.swift and reused here - no duplicate type. These additive conveniences
 // let the deep-dive content read ergonomically:
 extension LocalizedText {
-    /// Resolve like a function: `field(lang)` == `field.text(for: lang)`.
-    func callAsFunction(_ l: CommentaryLanguage) -> String { text(for: l) }
+    /// Resolve like a function: `field()` == `field.text`.
+    func callAsFunction() -> String { text }
     /// Text identical in every language (proper nouns, transliterations, symbols).
     init(_ shared: String) { self.init(en: shared, ur: shared, ar: shared) }
     /// English + Urdu only; Arabic falls back to English. For copy localized to Urdu
@@ -174,15 +174,15 @@ enum NarrationSegment: Equatable {
 }
 
 extension DeepDiveSection {
-    /// This beat as an ordered list of narrator segments, in `lang` (English for now).
+    /// This beat as an ordered list of narrator segments (English).
     /// Only reading content is spoken; chrome (tags, references, sources, placeholders,
     /// titles, next-labels) is dropped. Guaranteed-audio verse recitations are framed
     /// "The Qur'an says:" → recitation → "which means:" → the translation. The intro and
     /// per-movement announcements are added at the timeline level, not here.
-    func narrationSegments(for lang: CommentaryLanguage) -> [NarrationSegment] {
-        // Localized text → a speech segment, or nil when empty/absent (so it drops out).
+    func narrationSegments() -> [NarrationSegment] {
+        // Text → a speech segment, or nil when empty/absent (so it drops out).
         func s(_ text: LocalizedText?) -> NarrationSegment? {
-            guard let str = text?.text(for: lang), !str.isEmpty else { return nil }
+            guard let str = text?.text, !str.isEmpty else { return nil }
             return .speech(str)
         }
         // Framed recitation of a guaranteed-audio Qur'an verse.

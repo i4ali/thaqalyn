@@ -13,20 +13,10 @@ enum ExploreSection: CaseIterable {
     case lifeAndGuidance
     case storiesAndFigures
 
-    func title(for language: CommentaryLanguage) -> String {
+    var title: String {
         switch self {
-        case .lifeAndGuidance:
-            switch language {
-            case .arabic: return "الحياة والهداية"
-            case .urdu:   return "زندگی و رہنمائی"
-            default:      return "Life & Guidance"
-            }
-        case .storiesAndFigures:
-            switch language {
-            case .arabic: return "القصص والشخصيات"
-            case .urdu:   return "قصے اور شخصیات"
-            default:      return "Stories & Figures"
-            }
+        case .lifeAndGuidance:   return "Life & Guidance"
+        case .storiesAndFigures: return "Stories & Figures"
         }
     }
 
@@ -37,56 +27,36 @@ enum ExploreSection: CaseIterable {
                 ExploreItem(
                     id: "lifeMoments",
                     icon: "heart.fill",
-                    titleEn: "Life Moments",
-                    titleAr: "لحظات الحياة",
-                    titleUr: "زندگی کے لمحات",
-                    subtitleEn: "Find solace for any situation",
-                    subtitleAr: "اعثر على السكينة في كل حال",
-                    subtitleUr: "ہر حال میں سکون پائیں",
+                    title: "Life Moments",
+                    subtitle: "Find solace for any situation",
                     destination: .lifeMoments
                 ),
                 ExploreItem(
                     id: "dailyDuas",
                     icon: "hands.sparkles.fill",
-                    titleEn: "Daily Duas",
-                    titleAr: "أدعية يومية",
-                    titleUr: "روزمرہ دعائیں",
-                    subtitleEn: "20 supplications for everyday moments",
-                    subtitleAr: "20 دعاءً للحظات اليومية",
-                    subtitleUr: "روزمرہ لمحات کے لیے 20 دعائیں",
+                    title: "Daily Duas",
+                    subtitle: "20 supplications for everyday moments",
                     destination: .dailyDuas
                 ),
                 ExploreItem(
                     id: "duasZiyarat",
                     icon: "text.book.closed.fill",
-                    titleEn: "Duas & Ziyarat",
-                    titleAr: "الأدعية والزيارات",
-                    titleUr: "دعائیں و زیارات",
-                    subtitleEn: "Kumayl, Ashura, Tawassul & more, with recitation",
-                    subtitleAr: "كميل وعاشوراء والتوسل والمزيد مع التلاوة",
-                    subtitleUr: "کمیل، عاشورا، توسل اور مزید، تلاوت کے ساتھ",
+                    title: "Duas & Ziyarat",
+                    subtitle: "Kumayl, Ashura, Tawassul & more, with recitation",
                     destination: .duasZiyarat
                 ),
                 ExploreItem(
                     id: "foods",
                     icon: "leaf.fill",
-                    titleEn: "Foods of the Quran",
-                    titleAr: "أطعمة القرآن",
-                    titleUr: "قرآن کی غذائیں",
-                    subtitleEn: "Nourishment from Qur'an & Ahlul Bayt",
-                    subtitleAr: "غذاءٌ من القرآن وأهل البيت (ع)",
-                    subtitleUr: "قرآن اور اہلِ بیت سے غذا",
+                    title: "Foods of the Quran",
+                    subtitle: "Nourishment from Qur'an & Ahlul Bayt",
                     destination: .foods
                 ),
                 ExploreItem(
                     id: "fasting",
                     icon: "moon.fill",
-                    titleEn: "Fasting in the Quran",
-                    titleAr: "الصيام في القرآن",
-                    titleUr: "قرآن میں روزہ",
-                    subtitleEn: "Verses about fasting & Ramadan",
-                    subtitleAr: "آياتٌ عن الصيام ورمضان",
-                    subtitleUr: "روزے اور رمضان سے متعلق آیات",
+                    title: "Fasting in the Quran",
+                    subtitle: "Verses about fasting & Ramadan",
                     destination: .fasting
                 )
             ]
@@ -95,34 +65,22 @@ enum ExploreSection: CaseIterable {
                 ExploreItem(
                     id: "propheticStories",
                     icon: "book",
-                    titleEn: "Prophetic Stories",
-                    titleAr: "قصص الأنبياء",
-                    titleUr: "انبیاء کے قصے",
-                    subtitleEn: "Accounts of the messengers",
-                    subtitleAr: "سِيَر الرسل",
-                    subtitleUr: "رسولوں کے واقعات",
+                    title: "Prophetic Stories",
+                    subtitle: "Accounts of the messengers",
                     destination: .propheticStories
                 ),
                 ExploreItem(
                     id: "propheticParallels",
                     icon: "person.2.wave.2.fill",
-                    titleEn: "Prophetic Parallels",
-                    titleAr: "أمثلة الأنبياء",
-                    titleUr: "انبیائی مثالیں",
-                    subtitleEn: "You aren't alone in your struggles",
-                    subtitleAr: "لستَ وحدك في محنتك",
-                    subtitleUr: "اپنی آزمائشوں میں آپ اکیلے نہیں",
+                    title: "Prophetic Parallels",
+                    subtitle: "You aren't alone in your struggles",
                     destination: .propheticParallels
                 ),
                 ExploreItem(
                     id: "ahlulbaytQuran",
                     icon: "star.fill",
-                    titleEn: "Ahl al-Bayt in Quran",
-                    titleAr: "أهل البيت في القرآن",
-                    titleUr: "قرآن میں اہلِ بیت",
-                    subtitleEn: "Verses honoring the family",
-                    subtitleAr: "آياتٌ في فضل آل النبي (ص)",
-                    subtitleUr: "آلِ رسول کی شان میں آیات",
+                    title: "Ahl al-Bayt in Quran",
+                    subtitle: "Verses honoring the family",
                     destination: .ahlulbaytQuran
                 )
             ]
@@ -133,29 +91,9 @@ enum ExploreSection: CaseIterable {
 struct ExploreItem: Identifiable {
     let id: String
     let icon: String
-    let titleEn: String
-    let titleAr: String
-    let titleUr: String
-    let subtitleEn: String
-    let subtitleAr: String
-    let subtitleUr: String
+    let title: String
+    let subtitle: String
     let destination: ExploreDestination
-
-    func title(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return titleAr
-        case .urdu:   return titleUr
-        default:      return titleEn
-        }
-    }
-
-    func subtitle(for language: CommentaryLanguage) -> String {
-        switch language {
-        case .arabic: return subtitleAr
-        case .urdu:   return subtitleUr
-        default:      return subtitleEn
-        }
-    }
 }
 
 enum ExploreDestination {
@@ -173,7 +111,6 @@ enum ExploreDestination {
 
 struct ExploreView: View {
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var showLifeMoments = false
     @State private var showDailyDuas = false
     @State private var showDuasZiyarat = false
@@ -183,24 +120,9 @@ struct ExploreView: View {
     @State private var showAhlulbaytQuran = false
     @State private var showFoods = false
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
-    private var isRTL: Bool { lang.isRTL }
 
-    private var localizedTitle: String {
-        switch lang {
-        case .arabic: return "استكشف"
-        case .urdu:   return "تلاش کریں"
-        default:      return "Explore"
-        }
-    }
-
-    private var localizedSubtitle: String {
-        switch lang {
-        case .arabic: return "تأمّل حكمة القرآن الكريم"
-        case .urdu:   return "قرآنی حکمت پر غور کریں"
-        default:      return "Discover Quranic Wisdom"
-        }
-    }
+    private let localizedTitle = "Explore"
+    private let localizedSubtitle = "Discover Quranic Wisdom"
 
     var body: some View {
         Group {
@@ -261,7 +183,6 @@ struct ExploreView: View {
 
                 Spacer(minLength: 100)
             }
-            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         }
     }
 
@@ -269,15 +190,15 @@ struct ExploreView: View {
     private func sectionView(_ section: ExploreSection) -> some View {
         VStack(spacing: 0) {
             // Section header
-            ExploreSectionHeader(title: section.title(for: lang))
+            ExploreSectionHeader(title: section.title)
 
             // Section card with rows
             VStack(spacing: 0) {
                 ForEach(Array(section.items.enumerated()), id: \.element.id) { index, item in
                     ExploreRow(
                         icon: iconForItem(item),
-                        title: item.title(for: lang),
-                        subtitle: item.subtitle(for: lang)
+                        title: item.title,
+                        subtitle: item.subtitle
                     ) {
                         handleTap(item.destination)
                     }
@@ -354,35 +275,13 @@ struct ExploreView: View {
 
 private struct EmeraldExploreView: View {
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     let onTap: (ExploreDestination) -> Void
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
-    private var isRTL: Bool { lang.isRTL }
 
-    private var localizedEyebrow: String {
-        switch lang {
-        case .arabic: return "اكتشف"
-        case .urdu:   return "دریافت"
-        default:      return "Discover"
-        }
-    }
+    private let localizedEyebrow = "Discover"
 
-    private var localizedTitle: String {
-        switch lang {
-        case .arabic: return "استكشف"
-        case .urdu:   return "تلاش کریں"
-        default:      return "Explore"
-        }
-    }
-
-    private var localizedSubtitle: String {
-        switch lang {
-        case .arabic: return "تأمّل حكمة القرآن الكريم"
-        case .urdu:   return "قرآنی حکمت پر غور کریں"
-        default:      return "Discover Quranic Wisdom"
-        }
-    }
+    private let localizedTitle = "Explore"
+    private let localizedSubtitle = "Discover Quranic Wisdom"
 
     var body: some View {
         ScrollView {
@@ -408,7 +307,7 @@ private struct EmeraldExploreView: View {
                 VStack(alignment: .leading, spacing: 22) {
                     ForEach(ExploreSection.allCases, id: \.self) { section in
                         VStack(alignment: .leading, spacing: 10) {
-                            EmDivider(label: section.title(for: lang))
+                            EmDivider(label: section.title)
                             VStack(spacing: 10) {
                                 ForEach(section.items) { item in
                                     Button { onTap(item.destination) } label: {
@@ -416,10 +315,10 @@ private struct EmeraldExploreView: View {
                                             HStack(spacing: 14) {
                                                 EmIconChip(sfSymbol: item.icon, size: 44)
                                                 VStack(alignment: .leading, spacing: 3) {
-                                                    Text(item.title(for: lang))
+                                                    Text(item.title)
                                                         .font(EmType.serif(19, .semiBold))
                                                         .foregroundColor(themeManager.primaryText)
-                                                    Text(item.subtitle(for: lang))
+                                                    Text(item.subtitle)
                                                         .font(.system(size: 12.5))
                                                         .foregroundColor(themeManager.tertiaryText)
                                                         .lineLimit(1)
@@ -442,7 +341,6 @@ private struct EmeraldExploreView: View {
                 .padding(.top, 22)
                 .padding(.bottom, 120)
             }
-            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         }
         .ignoresSafeArea(edges: .top)
     }

@@ -25,37 +25,15 @@ enum WhatsNewDestination: Equatable {
     // Reserved for later: case journey(String), case tab(Int)
 }
 
-/// One feature announcement. Copy is per-language (EN / UR / AR), matching the Today tab.
+/// One feature announcement. English copy only.
 struct WhatsNewItem: Identifiable, Equatable {
     let id: String
     let sfSymbol: String
     let releaseDate: Date
     let destination: WhatsNewDestination
-
-    private let titleEN: String, titleUR: String, titleAR: String
-    private let blurbEN: String, blurbUR: String, blurbAR: String
-    private let ctaEN: String, ctaUR: String, ctaAR: String
-
-    init(id: String, sfSymbol: String, releaseDate: Date, destination: WhatsNewDestination,
-         titleEN: String, titleUR: String, titleAR: String,
-         blurbEN: String, blurbUR: String, blurbAR: String,
-         ctaEN: String, ctaUR: String, ctaAR: String) {
-        self.id = id; self.sfSymbol = sfSymbol; self.releaseDate = releaseDate
-        self.destination = destination
-        self.titleEN = titleEN; self.titleUR = titleUR; self.titleAR = titleAR
-        self.blurbEN = blurbEN; self.blurbUR = blurbUR; self.blurbAR = blurbAR
-        self.ctaEN = ctaEN; self.ctaUR = ctaUR; self.ctaAR = ctaAR
-    }
-
-    func title(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return titleAR; case .urdu: return titleUR; default: return titleEN }
-    }
-    func blurb(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return blurbAR; case .urdu: return blurbUR; default: return blurbEN }
-    }
-    func cta(_ l: CommentaryLanguage) -> String {
-        switch l { case .arabic: return ctaAR; case .urdu: return ctaUR; default: return ctaEN }
-    }
+    let title: String
+    let blurb: String
+    let cta: String
 }
 
 enum WhatsNewCatalog {
@@ -66,135 +44,90 @@ enum WhatsNewCatalog {
             sfSymbol: "headphones",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 28).date ?? .distantPast, // placeholder - set at ship time (after the ODR wiring + device pass), latest so this card surfaces first
             destination: .journeyListen("yaqin"),
-            titleEN: "Listen to a Journey",
-            titleUR: "سفر کو سنیں",
-            titleAR: "استمع إلى الرحلة",
-            blurbEN: "Every Deep Dive and Surah journey can now be heard, not only read. A narrator carries you through the whole journey from start to finish, with the Quran verses and closing duas woven in as real recitation. Tap the headphones on a journey, let the screen dim, and simply listen. Free for Yaqin and al-Fatiha.",
-            blurbUR: "اب ہر ڈیپ ڈائیو اور سورہ سفر صرف پڑھا ہی نہیں، سنا بھی جا سکتا ہے۔ ایک راوی آپ کو پورے سفر میں شروع سے آخر تک لے جاتا ہے، جس میں قرآنی آیات اور اختتامی دعائیں اصل تلاوت کے ساتھ پروئی گئی ہیں۔ کسی بھی سفر پر ہیڈفون دبائیں، اسکرین کو مدھم ہونے دیں، اور بس سنیں۔ سماعت انگریزی میں ہے۔ یقین اور سورہ فاتحہ کے لیے مفت۔",
-            blurbAR: "كل غوص عميق ورحلة سورة يمكن الآن سماعها لا قراءتها فحسب. يأخذك الراوي عبر الرحلة كاملة من البداية إلى النهاية، مع آيات القرآن والأدعية الختامية منسوجةً بتلاوة حقيقية. اضغط على سماعة الرأس في أي رحلة، ودع الشاشة تخفت، واستمع فحسب. السرد باللغة الإنجليزية. مجانًا لليقين وسورة الفاتحة.",
-            ctaEN: "Listen now",
-            ctaUR: "ابھی سنیں",
-            ctaAR: "استمع الآن"
+            title: "Listen to a Journey",
+            blurb: "Every Deep Dive and Surah journey can now be heard, not only read. A narrator carries you through the whole journey from start to finish, with the Quran verses and closing duas woven in as real recitation. Tap the headphones on a journey, let the screen dim, and simply listen. Free for Yaqin and al-Fatiha.",
+            cta: "Listen now"
         ),
         WhatsNewItem(
             id: "duas-ziyarat",
             sfSymbol: "text.book.closed.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 26).date ?? .distantPast, // placeholder - set at ship time (later than the widget's so this card surfaces first)
             destination: .duasZiyarat,
-            titleEN: "Duas & Ziyarat",
-            titleUR: "دعائیں و زیارات",
-            titleAR: "الأدعية والزيارات",
-            blurbEN: "The great supplications of Shia devotion, now with recitation - Dua Kumayl for Thursday nights, Ziyarat Ashura, Tawassul, Nudba, and Dua al-Ahd. Read each one line by line in Arabic, transliteration, and translation, and as the recitation plays, every word glows gold the moment it is recited - tap any line to jump there.",
-            blurbUR: "شیعہ عبادت کی عظیم دعائیں، اب تلاوت کے ساتھ - جمعرات کی رات کے لیے دعائے کمیل، زیارتِ عاشورا، توسل، ندبہ، اور دعائے عہد۔ ہر ایک کو عربی، رومن اور ترجمے کے ساتھ سطر بہ سطر پڑھیں، اور تلاوت کے دوران ہر لفظ اپنی باری پر سنہری چمکتا ہے - کسی بھی سطر پر ٹیپ کر کے وہیں پہنچیں۔",
-            blurbAR: "أعظم أدعية التشيّع، الآن مع التلاوة - دعاء كميل لليالي الخميس، وزيارة عاشوراء، والتوسل، والندبة، ودعاء العهد. اقرأ كلاً منها سطراً بسطر بالعربية والنقحرة والترجمة، وأثناء التلاوة تضيء كل كلمة بالذهبي لحظة تلاوتها - وانقر أي سطر للانتقال إليه.",
-            ctaEN: "Open the library",
-            ctaUR: "لائبریری کھولیں",
-            ctaAR: "افتح المكتبة"
+            title: "Duas & Ziyarat",
+            blurb: "The great supplications of Shia devotion, now with recitation - Dua Kumayl for Thursday nights, Ziyarat Ashura, Tawassul, Nudba, and Dua al-Ahd. Read each one line by line in Arabic, transliteration, and translation, and as the recitation plays, every word glows gold the moment it is recited - tap any line to jump there.",
+            cta: "Open the library"
         ),
         WhatsNewItem(
             id: "widget-daily-reflection",
             sfSymbol: "square.grid.2x2.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 25).date ?? .distantPast, // placeholder - set at ship time (later than rad's so this card surfaces first)
             destination: .widgetExplainer,
-            titleEN: "The Daily Reflection Widget",
-            titleUR: "ڈیلی ریفلیکشن ویجیٹ",
-            titleAR: "ودجة التأمل اليومي",
-            blurbEN: "One verse that unfolds through your day, right on your Home Screen: the verse in the morning, a hidden gem after midday, a doorway into a journey or deep dive, and the five prayer times on Shia (Ja'fari) timings. Add it once and let the day carry you.",
-            blurbUR: "ایک آیت جو دن بھر آپ کی ہوم اسکرین پر کھلتی رہتی ہے: صبح آیت، دوپہر کے بعد ایک موتی، پھر کسی سفر یا گہرے غوطے کا دروازہ، اور شیعہ (جعفری) اوقات کے مطابق پانچوں نمازوں کے اوقات۔ ایک بار شامل کریں اور دن کو ساتھ لے چلنے دیں۔",
-            blurbAR: "آية واحدة تتكشف على شاشتك الرئيسية على مدار اليوم: الآية في الصباح، وجوهرة بعد الظهر، وباب إلى رحلة أو غوص عميق، مع أوقات الصلوات الخمس وفق التوقيت الجعفري. أضفها مرة واحدة ودع اليوم يحملك.",
-            ctaEN: "Set it up",
-            ctaUR: "سیٹ اپ کریں",
-            ctaAR: "جهّزها الآن"
+            title: "The Daily Reflection Widget",
+            blurb: "One verse that unfolds through your day, right on your Home Screen: the verse in the morning, a hidden gem after midday, a doorway into a journey or deep dive, and the five prayer times on Shia (Ja'fari) timings. Add it once and let the day carry you.",
+            cta: "Set it up"
+        ),
+        WhatsNewItem(
+            id: "surahExperience-hijr",
+            sfSymbol: "mountain.2",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 25).date ?? .distantPast, // placeholder - set at ship time (later than rad's so this card surfaces first)
+            destination: .surahExperience("surah-hijr"),
+            title: "Inside the Surah",
+            blurb: "Surah al-Hijr - named for a people who carved their safety into mountains. Descend through the mockery of Mecca and the Word God swore to guard, the first sneer in creation and the fence around the enemy, three visits that end at dawn - down to the gentlest sentence in the Qur'an, and the three-line prescription it comes with.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-rad",
             sfSymbol: "cloud.bolt.rain",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 24).date ?? .distantPast, // placeholder - set at ship time (later than ibrahim's so this card surfaces first)
             destination: .surahExperience("surah-rad"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Ra'd - the surah named for thunder, answering the oldest demand: if God is real, why no sign? Descend through the sky that was praising all along, the flood whose glittering foam vanishes while the water stays, and the verse where hearts finally find rest - down to a final verse that waited forty-three verses to say a name.",
-            blurbUR: "سورۂ رعد - گرج کے نام والی سورہ، جو سب سے پرانے مطالبے کا جواب دیتی ہے: اگر خدا سچ ہے تو کوئی نشانی کیوں نہیں؟ اُس آسمان سے اتریے جو ہمیشہ سے حمد میں تھا، اُس سیلاب سے گزریے جس کی چمکتی جھاگ مٹ جاتی ہے اور پانی باقی رہتا ہے، اور اُس آیت تک پہنچیے جہاں دلوں کو قرار ملتا ہے - یہاں تک کہ وہ آخری آیت آ جائے جو تینتالیس آیتوں سے ایک نام لینے کی منتظر تھی۔",
-            blurbAR: "سورة الرعد - سورةٌ سُمّيت باسم صوتٍ في السماء، تجيب أقدم مطلبٍ في الأرض: إن كان الله حقاً فأين الآية؟ انزل عبر السماء التي كانت تسبّح منذ البدء، والسيلِ الذي يذهب زبدُه اللامع ويبقى ماؤه، والآيةِ التي تطمئنّ بها القلوب - وصولاً إلى آيةٍ أخيرة انتظرت ثلاثاً وأربعين آية لتنطق باسم.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Ra'd - the surah named for thunder, answering the oldest demand: if God is real, why no sign? Descend through the sky that was praising all along, the flood whose glittering foam vanishes while the water stays, and the verse where hearts finally find rest - down to a final verse that waited forty-three verses to say a name.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-ibrahim",
             sfSymbol: "tree",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 23).date ?? .distantPast, // placeholder - set at ship time (later than hud's so this card surfaces first)
             destination: .surahExperience("surah-ibrahim"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah Ibrahim - the surah that weighs words. Descend through God's oath-bound promise, the sermon in which Satan confesses his empire was only an invitation, and the parable of the two trees - down to an old man in a barren valley, planting a handful of sentences in dead ground, and the count of what they became.",
-            blurbUR: "سورۂ ابراہیم - وہ سورہ جو لفظوں کو تولتی ہے۔ خدا کے قسم سے بندھے وعدے سے اتریے، اُس خطبے سے گزریے جس میں شیطان اقرار کرتا ہے کہ اس کی ساری سلطنت محض ایک دعوت تھی، اور دو درختوں کی مثال سے - یہاں تک کہ بنجر وادی میں کھڑے اُس بوڑھے تک پہنچیے جو مردہ زمین میں چند جملے بو رہا ہے، اور دیکھیے کہ وہ جملے کیا بن گئے۔",
-            blurbAR: "سورة إبراهيم - السورة التي تزن الكلمات. انزل عبر وعد الله الموثَّق بالقسَم، والخطبةِ التي يعترف فيها الشيطان بأن مملكته كلها لم تكن إلا دعوة، ومثَلِ الشجرتين - وصولاً إلى شيخٍ في وادٍ قاحل يغرس جملاتٍ معدودة في أرضٍ موات، ثم انظر ماذا صارت.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah Ibrahim - the surah that weighs words. Descend through God's oath-bound promise, the sermon in which Satan confesses his empire was only an invitation, and the parable of the two trees - down to an old man in a barren valley, planting a handful of sentences in dead ground, and the count of what they became.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-hud",
             sfSymbol: "figure.stand",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 22).date ?? .distantPast, // placeholder - set at ship time (later than yunus's so this card surfaces first)
             destination: .surahExperience("surah-hud"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah Hud - when the Prophet ﷺ was asked why gray had come to his hair so early, he answered with the name of this surah. Descend through the ark built through years of laughter, the wave that came between a father and his son, and the lone man who dared a whole nation to do its worst - down to the one-word command that carried all that weight, and the quiet verse that reveals what the surah was really sent to do to a heart.",
-            blurbUR: "سورۂ ہود - جب نبی کریم ﷺ سے پوچھا گیا کہ اتنی جلدی بال کیوں سفید ہو گئے تو آپ نے جواب میں اِسی سورہ کا نام لیا۔ اُس کشتی سے اتریے جو برسوں کی ہنسی کے بیچ بنتی رہی، اُس موج سے گزریے جو باپ اور بیٹے کے درمیان حائل ہو گئی، اور اُس تنہا مرد تک پہنچیے جس نے پوری قوم کو للکارا - یہاں تک کہ ایک لفظ کا وہ حکم آ جائے جس نے یہ سارا بوجھ اٹھایا، اور وہ خاموش آیت جو بتاتی ہے کہ یہ سورہ دل کے ساتھ اصل میں کیا کرنے آئی تھی۔",
-            blurbAR: "سورة هود - حين سُئل النبي ﷺ عن الشيب الذي أسرع إليه، أجاب باسم هذه السورة. انزل عبر السفينة التي بُنيت وسط سنين من السخرية، والموج الذي حال بين الأب وابنه، والرجل الوحيد الذي تحدّى أمة بأكملها - وصولاً إلى الأمر المكوّن من كلمة واحدة الذي حمل كل ذلك الثقل، والآية الهادئة التي تكشف ما جاءت هذه السورة لتفعله بالقلب حقاً.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah Hud - when the Prophet ﷺ was asked why gray had come to his hair so early, he answered with the name of this surah. Descend through the ark built through years of laughter, the wave that came between a father and his son, and the lone man who dared a whole nation to do its worst - down to the one-word command that carried all that weight, and the quiet verse that reveals what the surah was really sent to do to a heart.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-yunus",
             sfSymbol: "water.waves",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 21).date ?? .distantPast, // placeholder - set at ship time (later than tawba's so this card surfaces first)
             destination: .surahExperience("surah-yunus"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah Yunus - one hundred and nine verses, named for a prophet who appears in just one of them. Descend through the storm-prayer that evaporates on the shore, the standing invitation to the Home of Peace, and the yes that came one wave too late - and learn why this surah, of all surahs, carries the name of Yunus.",
-            blurbUR: "سورۂ یونس - ایک سو نو آیتیں، جن کا نام اُس نبی پر ہے جو صرف ایک آیت میں آتے ہیں۔ اُس طوفانی دعا سے اتریے جو ساحل پر پہنچتے ہی اڑ جاتی ہے، دارالسلام کی کھلی دعوت سے گزریے، اور اُس اقرار تک پہنچیے جو ایک موج کی دیر سے کیا گیا - اور جانیے کہ تمام سورتوں میں سے اِس سورہ کا نام یونس کیوں ہے۔",
-            blurbAR: "سورة يونس - مئةٌ وتسعُ آيات، سُمّيت باسم نبيٍّ لا يَرِد إلا في آيةٍ واحدة. انزل عبر دعاء العاصفة الذي يتبخّر على الشاطئ، والدعوةِ القائمة إلى دار السلام، والإيمانِ الذي جاء متأخراً موجةً واحدة - واعرف لماذا حملت هذه السورة، من بين السور كلِّها، اسمَ يونس.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah Yunus - one hundred and nine verses, named for a prophet who appears in just one of them. Descend through the storm-prayer that evaporates on the shore, the standing invitation to the Home of Peace, and the yes that came one wave too late - and learn why this surah, of all surahs, carries the name of Yunus.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-tawba",
             sfSymbol: "door.left.hand.open",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 20).date ?? .distantPast, // placeholder - set at ship time (later than kisa's so this card surfaces first)
             destination: .surahExperience("surah-tawba"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Tawba - the only surah with no Bismillah, and the one named for God's own turning back. Walk from Bara'a to al-Tawba - an ultimatum, a battlefield, a mosque pillar, fifty days of silence - and watch a door open in every wall the surah builds, until you find where the missing mercy went.",
-            blurbUR: "سورۂ توبہ - قرآن کی واحد سورہ جس کے آغاز میں بسم اللہ نہیں، اور وہی سورہ جس کا نام خدا کے اپنے پلٹنے پر ہے۔ براءت سے توبہ تک چلیے - ایک اعلان، ایک میدانِ جنگ، مسجد کا ایک ستون، اور پچاس دن کی خاموشی - اور دیکھیے کہ یہ سورہ جو بھی دیوار اٹھاتی ہے اُس میں ایک دروازہ کھلتا ہے، یہاں تک کہ معلوم ہو جائے کہ گم شدہ رحمت کہاں گئی۔",
-            blurbAR: "سورة التوبة - السورة الوحيدة بلا بسملة، وهي التي تحمل اسم عودته هو. سِر من البراءة إلى التوبة - إنذارٌ، وساحةُ معركة، وساريةُ مسجد، وخمسون يوماً من الصمت - وانظر كيف يُفتَح بابٌ في كل جدارٍ تبنيه السورة، حتى تعرف أين ذهبت الرحمة الغائبة.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Tawba - the only surah with no Bismillah, and the one named for God's own turning back. Walk from Bara'a to al-Tawba - an ultimatum, a battlefield, a mosque pillar, fifty days of silence - and watch a door open in every wall the surah builds, until you find where the missing mercy went.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "deepDives-kisa",
             sfSymbol: "moon.stars.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 19).date ?? .distantPast, // placeholder - set at ship time (must stay later than taqwa's so this card surfaces first)
             destination: .deepDive("kisa"),
-            titleEN: "New Deep Dive: Under the Cloak",
-            titleUR: "نیا گہرا غوطہ: حدیث کساء",
-            titleAR: "غوصٌ عميقٌ جديد: حديث الكساء",
-            blurbEN: "The story of Hadith al-Kisa, told in Fatima al-Zahra's own voice - the arrivals one by one, heaven naming the five, and the promise to every gathering that retells it. Ends with a new salawat close: five lights, five names.",
-            blurbUR: "حدیث کساء کا واقعہ فاطمہ زہرا کی اپنی زبانی - یکے بعد دیگرے آمد، آسمان کی طرف سے پانچ ہستیوں کی شناخت، اور ہر اس محفل سے وعدہ جہاں یہ قصہ دہرایا جائے۔ اختتام ایک نئی صلوات کے ساتھ: پانچ روشنیاں، پانچ نام۔",
-            blurbAR: "قصة حديث الكساء بلسان فاطمة الزهراء - القدوم واحدًا بعد واحد، وتسمية الخمسة من السماء، والوعد لكل مجلس يُروى فيه هذا الحديث. ويُختم بصلوات جديدة: خمسة أنوار، خمسة أسماء.",
-            ctaEN: "Enter the gathering",
-            ctaUR: "محفل میں داخل ہوں",
-            ctaAR: "ادخل المجلس"
+            title: "New Deep Dive: Under the Cloak",
+            blurb: "The story of Hadith al-Kisa, told in Fatima al-Zahra's own voice - the arrivals one by one, heaven naming the five, and the promise to every gathering that retells it. Ends with a new salawat close: five lights, five names.",
+            cta: "Enter the gathering"
         ),
         WhatsNewItem(
             id: "deepDives-taqwa",
@@ -202,300 +135,180 @@ enum WhatsNewCatalog {
             // PLACEHOLDER ship date - adjust to the actual release at ship time.
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 18).date ?? .distantPast,
             destination: .deepDive("taqwa"),
-            titleEN: "New Deep Dive",
-            titleUR: "نیا گہرا غوطہ",
-            titleAR: "غوصٌ عميقٌ جديد",
-            blurbEN: "Taqwa - God-consciousness. A descent through three guards, from the fear that halts the hand to the watch that keeps the heart for Him alone - summiting on al-Hurr, the free man of Karbala, and closing on a new beat where the hand that does not move is the whole of it.",
-            blurbUR: "تقویٰ - خدا آگاہی۔ تین پہروں میں اترتا ہوا ایک سفر، اُس خوف سے جو ہاتھ روک دے اُس نگہبانی تک جو دل کو صرف اُسی کے لیے رکھے - اختتام کربلا کے آزاد مرد حُر پر، اور ایک نئے مرحلے کے ساتھ جہاں نہ ہلنے والا ہاتھ ہی سب کچھ ہے۔",
-            blurbAR: "التقوى - وعيُ القلب بالله. نزولٌ عبر ثلاثة حُرّاس، من الخوف الذي يوقف اليد إلى المراقبة التي تحفظ القلب له وحده - يتوّج بقصة الحُرّ، حُرّ كربلاء، ويُختَم بمشهدٍ جديد تكون فيه اليدُ التي لا تتحرّك هي كلَّ شيء.",
-            ctaEN: "Begin the descent",
-            ctaUR: "نزول کا آغاز کریں",
-            ctaAR: "ابدأ النزول"
+            title: "New Deep Dive",
+            blurb: "Taqwa - God-consciousness. A descent through three guards, from the fear that halts the hand to the watch that keeps the heart for Him alone - summiting on al-Hurr, the free man of Karbala, and closing on a new beat where the hand that does not move is the whole of it.",
+            cta: "Begin the descent"
         ),
         WhatsNewItem(
             id: "deepDives-ikhlas",
             sfSymbol: "drop.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 17).date ?? .distantPast,
             destination: .deepDive("ikhlas"),
-            titleEN: "New Deep Dive",
-            titleUR: "نیا گہرا غوطہ",
-            titleAR: "غوصٌ عميقٌ جديد",
-            blurbEN: "Ikhlas - The Unmixing. A descent through three purities, from the address every deed carries to the three hidden nights of Surah al-Insan - ending with one light that will not go out.",
-            blurbUR: "اخلاص - خالص کرنے کا سفر۔ تین پاکیزگیوں میں اترتا ہوا ایک عمیق سفر، ہر عمل کے پتے سے سورۂ انسان کی تین پوشیدہ راتوں تک - اختتام اُس ایک روشنی پر جو بجھتی نہیں۔",
-            blurbAR: "الإخلاص - التصفية. نزولٌ عبر ثلاث صفاءات، من العنوان الذي يحمله كل عمل إلى ليالي سورة الإنسان الثلاث الخفية - يُختَم بنورٍ واحدٍ لا ينطفئ.",
-            ctaEN: "Begin the descent",
-            ctaUR: "نزول کا آغاز کریں",
-            ctaAR: "ابدأ النزول"
+            title: "New Deep Dive",
+            blurb: "Ikhlas - The Unmixing. A descent through three purities, from the address every deed carries to the three hidden nights of Surah al-Insan - ending with one light that will not go out.",
+            cta: "Begin the descent"
         ),
         WhatsNewItem(
             id: "surahExperience-anfal",
             sfSymbol: "hand.raised.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 16).date ?? .distantPast,
             destination: .surahExperience("surah-anfal"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Anfal - the surah of Badr, Islam's first battle, and the startling claim it makes about that victory: it was never yours. Watch the spoils, the courage, and even the handful of dust that broke the enemy handed back to God, cause by cause - 'you did not throw when you threw, but Allah threw' - until a battle turns into a lesson in whose hands you were in the whole time.",
-            blurbUR: "سورۂ انفال - بدر کی سورہ، اسلام کی پہلی جنگ، اور اُس فتح کے بارے میں ایک حیران کن دعویٰ: یہ کبھی تمہاری تھی ہی نہیں۔ دیکھیے کیسے مالِ غنیمت، شجاعت، اور وہ مٹھی بھر خاک تک جس نے دشمن کو شکست دی - سب کچھ ایک ایک کر کے خدا کے حوالے کر دیا جاتا ہے: 'تم نے نہیں پھینکا جب تم نے پھینکا، بلکہ اللہ نے پھینکا' - یہاں تک کہ ایک جنگ اِس سبق میں بدل جاتی ہے کہ تم ہمیشہ کس کے ہاتھ میں تھے۔",
-            blurbAR: "سورة الأنفال - سورةُ بدر، أولى معارك الإسلام، والدعوى المذهلة التي تطرحها عن ذلك النصر: أنه لم يكن لك قط. انظر كيف تُردّ الغنائمُ والشجاعةُ وحتى الحفنةُ من التراب التي هزمت العدو - كلُّها إلى الله، واحدةً تلو الأخرى: 'وما رميتَ إذ رميتَ ولكنّ اللهَ رمى' - حتى تتحوّل المعركةُ إلى درسٍ في بيدِ مَن كنتَ طوال الوقت.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Anfal - the surah of Badr, Islam's first battle, and the startling claim it makes about that victory: it was never yours. Watch the spoils, the courage, and even the handful of dust that broke the enemy handed back to God, cause by cause - 'you did not throw when you threw, but Allah threw' - until a battle turns into a lesson in whose hands you were in the whole time.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-araf",
             sfSymbol: "mountain.2",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 15).date ?? .distantPast,
             destination: .surahExperience("surah-araf"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-A'raf - the second-longest surah in the Qur'an, named after a wall between the Garden and the Fire, with men on its heights who know every soul by sight. Beneath all its stories runs one question, asked before you were born: 'Am I not your Lord?' - and every soul answered yes. Watch that yes refused by Iblis, kept by Pharaoh's magicians in a single hour, broken by those who knew best, and discover the question was always yours to answer again.",
-            blurbUR: "سورۂ اعراف - قرآن کی دوسری سب سے طویل سورہ، جس کا نام جنت اور جہنم کے درمیان ایک دیوار پر رکھا گیا، جس کی بلندیوں پر وہ لوگ کھڑے ہیں جو ہر روح کو اُس کی نشانی سے پہچانتے ہیں۔ اِس کی تمام کہانیوں کے نیچے ایک ہی سوال بہتا ہے، جو تمہاری پیدائش سے پہلے پوچھا گیا: 'کیا میں تمہارا رب نہیں؟' - اور ہر روح نے کہا: ہاں۔ دیکھیے یہ 'ہاں' کیسے ابلیس نے ٹھکرائی، فرعون کے جادوگروں نے ایک ہی گھڑی میں نبھائی، اور اُن لوگوں نے توڑی جو سب سے بہتر جانتے تھے - اور جانیے کہ یہ سوال ہمیشہ سے تمہارا اپنا تھا۔",
-            blurbAR: "سورة الأعراف - ثاني أطول سور القرآن، سُمّيت باسم سورٍ بين الجنة والنار، على أعرافه رجالٌ يعرفون كل نفسٍ بسيماها. تحت جميع قصصها يجري سؤالٌ واحد، طُرح قبل أن تُولد: 'ألستُ بربكم؟' - فقالت كل نفسٍ: بلى. انظر كيف رفض إبليسُ هذه 'البلى'، وحفظها سحرةُ فرعون في ساعةٍ واحدة، ونقضها من كانوا أعلمَ الناس - واكتشف أن السؤال كان دائمًا سؤالَك أنت.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-A'raf - the second-longest surah in the Qur'an, named after a wall between the Garden and the Fire, with men on its heights who know every soul by sight. Beneath all its stories runs one question, asked before you were born: 'Am I not your Lord?' - and every soul answered yes. Watch that yes refused by Iblis, kept by Pharaoh's magicians in a single hour, broken by those who knew best, and discover the question was always yours to answer again.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-anam",
             sfSymbol: "sun.and.horizon.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 14).date ?? .distantPast,
             destination: .surahExperience("surah-anam"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-An'am - the Qur'an's great argument for the oneness of God, named, of all things, after cattle. Watch Ibrahim reason past every setting light to the One who never sets, until the surah asks the only question left: why are you still giving God a mere share of a life that is wholly His? No partner, no share.",
-            blurbUR: "سورۂ انعام - قرآن کی توحید کے لیے عظیم دلیل، اور نام رکھا گیا - سب چیزوں میں سے - مویشیوں پر۔ دیکھیے ابراہیمؑ کیسے ہر ڈوبنے والی روشنی سے گزر کر اُس ذات تک پہنچتے ہیں جو کبھی غروب نہیں ہوتی، یہاں تک کہ سورہ وہ واحد سوال پوچھتی ہے: تم اُس زندگی کا محض ایک حصہ اللہ کو کیوں دے رہے ہو جو پوری کی پوری اُسی کی ہے؟ نہ کوئی شریک، نہ کوئی حصہ۔",
-            blurbAR: "سورة الأنعام - حجّةُ القرآن الكبرى على وحدانية الله، وقد سُمّيت - من كل شيء - باسم الأنعام. انظر كيف يستدلّ إبراهيم (عليه السلام) متجاوزاً كلَّ نورٍ آفلٍ إلى الذي لا يأفل، حتى تسألك السورة السؤال الوحيد الباقي: لماذا لا تزال تعطي الله نصيباً من حياةٍ هي كلُّها له؟ لا شريك له، ولا نصيب.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-An'am - the Qur'an's great argument for the oneness of God, named, of all things, after cattle. Watch Ibrahim reason past every setting light to the One who never sets, until the surah asks the only question left: why are you still giving God a mere share of a life that is wholly His? No partner, no share.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-maida",
             sfSymbol: "link",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 13).date ?? .distantPast,
             destination: .surahExperience("surah-maida"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Maida - one of the last surahs revealed, and the surah of the covenant. Trace a single bond across it: the pledge you gave God, a people before you who broke theirs and lost the leaders sent to guide them, and the day the religion was completed - a hand raised at Ghadir, and heaven's word that nothing was left to add.",
-            blurbUR: "سورۂ مائدہ - آخری نازل ہونے والی سورتوں میں سے ایک، اور عہد کی سورہ۔ اس میں ایک ہی بندھن کا سراغ لگائیے: وہ عہد جو آپ نے اللہ سے کیا، آپ سے پہلے وہ لوگ جنہوں نے اپنا عہد توڑا اور اُن رہنماؤں کو کھو دیا جو اُن کی ہدایت کے لیے بھیجے گئے تھے، اور وہ دن جب دین مکمل ہوا - غدیر میں بلند ہوتا ایک ہاتھ، اور آسمان کا فرمان کہ اب کچھ باقی نہ رہا۔",
-            blurbAR: "سورة المائدة - من آخر ما نزل من السور، وسورةُ العهد. تتبّعْ فيها رباطاً واحداً: العهدَ الذي قطعتَه لله، وقوماً من قبلك نقضوا عهدهم وفرّطوا في القادة الذين بُعثوا لهدايتهم، واليومَ الذي أُكمل فيه الدين - يدٌ تُرفع في غدير، وكلمةُ السماء أن لم يبقَ شيءٌ يُضاف.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Maida - one of the last surahs revealed, and the surah of the covenant. Trace a single bond across it: the pledge you gave God, a people before you who broke theirs and lost the leaders sent to guide them, and the day the religion was completed - a hand raised at Ghadir, and heaven's word that nothing was left to add.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "deepDives-salah",
             sfSymbol: "stairs",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 12).date ?? .distantPast,
             destination: .deepDive("salah"),
-            titleEN: "New Deep Dive",
-            titleUR: "نیا گہرا غوطہ",
-            titleAR: "غوصٌ عميقٌ جديد",
-            blurbEN: "Salah - The Believer's Ascent. The first dive that climbs: three names of the prayer, from the night fifty were made five, through the answered Fatiha, to the prayer under arrows at Karbala - closing with Fatima's gift.",
-            blurbUR: "نماز - مومن کی معراج۔ پہلا غوطہ جو اوپر چڑھتا ہے: نماز کے تین نام، اُس رات سے جب پچاس نمازیں پانچ ہوئیں، جواب پانے والی فاتحہ سے ہوتے ہوئے، کربلا میں تیروں کے سائے میں نماز تک - اختتام حضرت فاطمہؑ کے تحفے پر۔",
-            blurbAR: "الصلاة - معراج المؤمن. أول غوصٍ يصعد: ثلاثة أسماء للصلاة، من ليلة صارت الخمسون خمساً، مروراً بالفاتحة التي تُجاب آيةً آية، إلى الصلاة تحت السهام في كربلاء - وختاماً بهدية فاطمة عليها السلام.",
-            ctaEN: "Begin the ascent",
-            ctaUR: "صعود کا آغاز کریں",
-            ctaAR: "ابدأ الصعود"
+            title: "New Deep Dive",
+            blurb: "Salah - The Believer's Ascent. The first dive that climbs: three names of the prayer, from the night fifty were made five, through the answered Fatiha, to the prayer under arrows at Karbala - closing with Fatima's gift.",
+            cta: "Begin the ascent"
         ),
         WhatsNewItem(
             id: "surahExperience-kawthar",
             sfSymbol: "drop.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 8).date ?? .distantPast,
             destination: .surahExperience("surah-kawthar"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Kawthar - the shortest surah in the Qur'an, sent down to answer a single insult. They called the Prophet cut off; God answered with abundance itself: a river at the end of the world, and a gift wearing a face the mockers never thought to count.",
-            blurbUR: "سورۂ کوثر - قرآن کی سب سے چھوٹی سورت، جو ایک طعنے کے جواب میں نازل ہوئی۔ انہوں نے نبی کو ابتر کہا؛ اللہ نے خود کثرت سے جواب دیا: دنیا کے آخری کنارے پر ایک نہر، اور ایک ایسا عطیہ جس کا چہرہ طعنہ دینے والوں کے شمار میں کبھی نہ آیا۔",
-            blurbAR: "سورة الكوثر - أقصر سورة في القرآن، نزلت رداً على شتيمة واحدة. قالوا عن النبي إنه الأبتر؛ فأجاب الله بالكثرة نفسها: نهرٌ عند منتهى الدنيا، وعطيةٌ لها وجهٌ لم يخطر للساخرين أن يعدّوه.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Kawthar - the shortest surah in the Qur'an, sent down to answer a single insult. They called the Prophet cut off; God answered with abundance itself: a river at the end of the world, and a gift wearing a face the mockers never thought to count.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-yasin",
             sfSymbol: "heart",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 7).date ?? .distantPast,
             destination: .surahExperience("surah-yasin"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah Ya-Sin - the heart of the Qur'an, and the surah read over the dying. Its whole labor is to wake a sleeping heart: the one who ran, the signs all around you, and the morning every soul is raised - met now, while waking is still a choice.",
-            blurbUR: "سورۂ یٰسین - قرآن کا دل، اور وہ سورہ جو محتضر کے سرہانے پڑھی جاتی ہے۔ اس کی ساری محنت سوئے ہوئے دل کو جگانا ہے: وہ شخص جو دوڑا، آپ کے چاروں طرف پھیلی نشانیاں، اور وہ صبح جب ہر جان اٹھائی جائے گی - ابھی، جب جاگنا اب بھی ایک اختیار ہے۔",
-            blurbAR: "سورة يس - قلبُ القرآن، والسورةُ التي تُقرأ عند المحتضر. همُّها كلُّه أن توقظ القلب النائم: الرجلُ الذي سعى، والآياتُ من حولك، والصباحُ الذي تُبعث فيه كلُّ نفس - تلقاها الآن، والاستيقاظ لا يزال اختياراً.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah Ya-Sin - the heart of the Qur'an, and the surah read over the dying. Its whole labor is to wake a sleeping heart: the one who ran, the signs all around you, and the morning every soul is raised - met now, while waking is still a choice.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-mulk",
             sfSymbol: "crown",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 6).date ?? .distantPast,
             destination: .surahExperience("surah-mulk"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Mulk - the Kingdom, and the surah that guards the grave. It proves Whose hand holds everything by teaching the eye to look: up at a flawless sky, out at the bird held aloft by nothing, down at the water beneath your feet.",
-            blurbUR: "سورۂ ملک - بادشاہی، اور وہ سورہ جو قبر میں محافظ بنتی ہے۔ یہ ثابت کرتی ہے کہ ہر چیز کس کے ہاتھ میں ہے، آنکھ کو دیکھنا سکھا کر: اوپر بے عیب آسمان کی طرف، سامنے اُس پرندے کی طرف جسے رحمٰن کے سوا کوئی نہیں تھامتا، اور نیچے اُس پانی کی طرف جو تمہارے قدموں کے نیچے ہے۔",
-            blurbAR: "سورة الملك - المُلك، والسورةُ التي تحمي في القبر. تُثبت بيدِ مَن كلُّ شيءٍ بأن تُعلّم العين أن تنظر: فوقُ إلى سماءٍ لا فطور فيها، وأمامُ إلى الطير الذي لا يُمسكه إلا الرحمن، وتحتُ إلى الماء الذي تحت قدميك.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Mulk - the Kingdom, and the surah that guards the grave. It proves Whose hand holds everything by teaching the eye to look: up at a flawless sky, out at the bird held aloft by nothing, down at the water beneath your feet.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-rahman",
             sfSymbol: "water.waves",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 5).date ?? .distantPast,
             destination: .surahExperience("surah-rahman"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Rahman - the bride of the Qur'an asks one question thirty-one times. Walk its four registers of favors, and answer the question yourself, in the very words the Ahl al-Bayt taught.",
-            blurbUR: "سورۂ رحمٰن - عروس القرآن ایک ہی سوال اکتیس بار پوچھتی ہے۔ نعمتوں کی چار منزلوں سے گزریں اور خود اس سوال کا جواب دیں، انہی لفظوں میں جو اہلِ بیت نے سکھائے۔",
-            blurbAR: "سورة الرحمن - عروس القرآن تسأل سؤالاً واحداً إحدى وثلاثين مرة. اعبر منازل الآلاء الأربع وأجب عن السؤال بنفسك، بالكلمات التي علّمها أهل البيت.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Rahman - the bride of the Qur'an asks one question thirty-one times. Walk its four registers of favors, and answer the question yourself, in the very words the Ahl al-Bayt taught.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "deepDives-shukr",
             sfSymbol: "hands.clap",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 4).date ?? .distantPast,
             destination: .deepDive("shukr"),
-            titleEN: "New Deep Dive",
-            titleUR: "نیا گہرا غوطہ",
-            titleAR: "غوصٌ عميقٌ جديد",
-            blurbEN: "Shukr - Gratitude. A descent through the three tongues of thanks, from the first gifts to the praise in the dark of Ashura eve - ending with a count you will lose on purpose.",
-            blurbUR: "شکر - شکرگزاری۔ شکر کی تین زبانوں میں اترتا ہوا ایک عمیق سفر، پہلی نعمتوں سے شبِ عاشورا کی حمد تک - جس کا اختتام ایک ایسی گنتی پر ہوتا ہے جو آپ جان بوجھ کر ہار جاتے ہیں۔",
-            blurbAR: "الشكر - نزولٌ عبر ألسنة الشكر الثلاثة، من أولى العطايا إلى الثناء في ظلمة ليلة عاشوراء - يُختَم بعدٍّ تخسره عن قصد.",
-            ctaEN: "Begin the descent",
-            ctaUR: "نزول کا آغاز کریں",
-            ctaAR: "ابدأ النزول"
+            title: "New Deep Dive",
+            blurb: "Shukr - Gratitude. A descent through the three tongues of thanks, from the first gifts to the praise in the dark of Ashura eve - ending with a count you will lose on purpose.",
+            cta: "Begin the descent"
         ),
         WhatsNewItem(
             id: "deepDives-tawakkul",
             sfSymbol: "hands.and.sparkles",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 3).date ?? .distantPast,
             destination: .deepDive("tawakkul"),
-            titleEN: "New Deep Dive",
-            titleUR: "نیا گہرا غوطہ",
-            titleAR: "غوصٌ عميقٌ جديد",
-            blurbEN: "Tawakkul - Reliance. A descent through three motions of the trusting hand, from the parted sea to the morning of Ashura - ending with a release you perform with your own hand.",
-            blurbUR: "توکل - بھروسے والے ہاتھ کی تین حرکتوں میں اترتا ہوا ایک عمیق سفر، شقِ دریا سے صبحِ عاشورا تک - جس کا اختتام ایک ایسی رہائی پر ہوتا ہے جو آپ خود اپنے ہاتھ سے ادا کرتے ہیں۔",
-            blurbAR: "التوكّل - نزولٌ عبر ثلاث حركاتٍ لليد المتوكّلة، من انفلاق البحر إلى صباح عاشوراء - يُختَم بإفلاتٍ تؤدّيه بيدك أنت.",
-            ctaEN: "Begin the descent",
-            ctaUR: "نزول کا آغاز کریں",
-            ctaAR: "ابدأ النزول"
+            title: "New Deep Dive",
+            blurb: "Tawakkul - Reliance. A descent through three motions of the trusting hand, from the parted sea to the morning of Ashura - ending with a release you perform with your own hand.",
+            cta: "Begin the descent"
         ),
         WhatsNewItem(
             id: "surahExperience-nisa",
             sfSymbol: "figure.2.and.child.holdinghands",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 2).date ?? .distantPast,
             destination: .surahExperience("surah-nisa"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Nisa - why the mightiest book of rights is named The Women. From the orphan's coin to the seat of authority, one trust runs through it all - and one verse names the company promised to those who guard it.",
-            blurbUR: "سورۂ نساء - حقوق کی سب سے بڑی کتاب کا نام 'النساء' کیوں؟ یتیم کے مال سے منصبِ اختیار تک ایک ہی امانت سب میں جاری ہے - اور ایک آیت اُس رفاقت کا نام لیتی ہے جس کا وعدہ امانت کے محافظوں سے ہے۔",
-            blurbAR: "سورة النساء - لماذا سُمّي أعظمُ كتابِ حقوقٍ باسم النساء؟ من مال اليتيم إلى مقام الولاية أمانةٌ واحدة تجري في السورة كلها - وآيةٌ واحدة تسمّي الرفقةَ الموعودة لمن حفظها.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Nisa - why the mightiest book of rights is named The Women. From the orphan's coin to the seat of authority, one trust runs through it all - and one verse names the company promised to those who guard it.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-ali-imran",
             sfSymbol: "person.3.sequence.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 1).date ?? .distantPast,
             destination: .surahExperience("surah-ali-imran"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah Al Imran - how God carries His truth through the households He chooses and purifies. From Maryam, chosen and purified in her prayer-niche, to the day God let His Prophet ﷺ stake the truth itself on a single purified household.",
-            blurbUR: "سورۂ آلِ عمران - اللہ اپنی سچائی اُن گھرانوں کے ذریعے تھامتا ہے جنہیں وہ چنتا اور پاک کرتا ہے۔ محرابِ مریم سے لے کر اُس دن تک جب اللہ نے اپنے نبی ﷺ کے ذریعے سچائی کو ایک پاکیزہ گھرانے پر داؤ پر لگوایا۔",
-            blurbAR: "سورة آل عمران - كيف يحمل الله حقَّه عبر البيوت التي يصطفيها ويطهّرها. من محراب مريم إلى اليوم الذي جعل الله فيه نبيَّه ﷺ يجعل الحقَّ رهاناً على بيتٍ طاهرٍ واحد.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah Al Imran - how God carries His truth through the households He chooses and purifies. From Maryam, chosen and purified in her prayer-niche, to the day God let His Prophet ﷺ stake the truth itself on a single purified household.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-baqara",
             sfSymbol: "hands.sparkles.fill",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 30).date ?? .distantPast,
             destination: .surahExperience("surah-baqara"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Baqara - why the mightiest surah is named after a cow. An immersive descent through a command, the questions that made it heavy, and the sign that answered it all.",
-            blurbUR: "سورۂ بقرہ - سب سے بڑی سورت کا نام ایک گائے پر کیوں؟ ایک حکم، اُسے بھاری بنانے والے سوالات، اور وہ نشانی جس نے سب کا جواب دیا - ایک عمیق سفر۔",
-            blurbAR: "سورة البقرة - لماذا سُمّيت أعظم سورة باسم بقرة؟ نزولٌ غامرٌ عبر الأمر، والأسئلة التي أثقلته، والآية التي أجابت عن كل شيء.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Baqara - why the mightiest surah is named after a cow. An immersive descent through a command, the questions that made it heavy, and the sign that answered it all.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-fatiha",
             sfSymbol: "book.closed",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 27).date ?? .distantPast,
             destination: .surahExperience("surah-fatiha"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah al-Fatiha - the prayer beneath every prayer. Walk the opening you know by heart as a conversation with God, and hear what He says back, line by line.",
-            blurbUR: "سورۂ فاتحہ - ہر نماز کے پیچھے چھپی دعا۔ جس سورت کو آپ زبانی جانتے ہیں، اُسے اللہ سے ایک مکالمے کے طور پر دیکھیں، اور سنیں کہ وہ ہر سطر کا کیا جواب دیتا ہے۔",
-            blurbAR: "سورة الفاتحة - الصلاةُ الكامنة خلف كل صلاة. اسلك الفاتحةَ التي تحفظها عن ظهر قلب حواراً مع الله، واسمع ما يردّ به عليك، سطراً بسطر.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah al-Fatiha - the prayer beneath every prayer. Walk the opening you know by heart as a conversation with God, and hear what He says back, line by line.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "surahExperience-yusuf",
             sfSymbol: "moon.stars",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 20).date ?? .distantPast,
             destination: .surahExperience("surah-yusuf"),
-            titleEN: "Inside the Surah",
-            titleUR: "سورہ کے اندر",
-            titleAR: "في قلب السورة",
-            blurbEN: "Surah Yusuf - an immersive journey through the most beautiful of stories, from the dream to the reunion.",
-            blurbUR: "سورۂ یوسف - خواب سے وصال تک، بہترین قصے کا ایک عمیق سفر۔",
-            blurbAR: "سورة يوسف - رحلة غامرة عبر أحسن القصص، من الرؤيا إلى اللقاء.",
-            ctaEN: "Begin the journey",
-            ctaUR: "سفر شروع کریں",
-            ctaAR: "ابدأ الرحلة"
+            title: "Inside the Surah",
+            blurb: "Surah Yusuf - an immersive journey through the most beautiful of stories, from the dream to the reunion.",
+            cta: "Begin the journey"
         ),
         WhatsNewItem(
             id: "deepDives-sabr",
             sfSymbol: "hourglass",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 13).date ?? .distantPast,
             destination: .deepDive("sabr"),
-            titleEN: "New Deep Dive",
-            titleUR: "نیا گہرا غوطہ",
-            titleAR: "غوصٌ عميقٌ جديد",
-            blurbEN: "Sabr - Patience. An immersive descent through three stations of the heart, from the patient prophets to Karbala.",
-            blurbUR: "صبر - دل کے تین مقامات سے گزرتا ہوا ایک عمیق روحانی سفر، صبر کرنے والے انبیاء سے کربلا تک۔",
-            blurbAR: "الصَّبْر - نزولٌ غامرٌ عبر ثلاثة مقامات للقلب، من الأنبياء الصابرين إلى كربلاء.",
-            ctaEN: "Begin the descent",
-            ctaUR: "نزول کا آغاز کریں",
-            ctaAR: "ابدأ النزول"
+            title: "New Deep Dive",
+            blurb: "Sabr - Patience. An immersive descent through three stations of the heart, from the patient prophets to Karbala.",
+            cta: "Begin the descent"
         ),
         WhatsNewItem(
             id: "deepDives-yaqin",
             sfSymbol: "eye",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 7, day: 6).date ?? .distantPast,
             destination: .deepDive("yaqin"),
-            titleEN: "Deep Dives",
-            titleUR: "گہرے غوطے",
-            titleAR: "الغوص العميق",
-            blurbEN: "Yaqin - Certainty. An immersive descent through three depths, from Qur'an to Karbala.",
-            blurbUR: "یقین - کامل یقین۔ تین درجاتِ یقین میں اترتا ہوا ایک عمیق روحانی سفر، قرآن سے کربلا تک۔",
-            blurbAR: "يَقِين - نزول غامر عبر ثلاثة أعماق من اليقين، من القرآن إلى كربلاء.",
-            ctaEN: "Begin the descent",
-            ctaUR: "نزول کا آغاز کریں",
-            ctaAR: "ابدأ النزول"
+            title: "Deep Dives",
+            blurb: "Yaqin - Certainty. An immersive descent through three depths, from Qur'an to Karbala.",
+            cta: "Begin the descent"
         )
     ]
 

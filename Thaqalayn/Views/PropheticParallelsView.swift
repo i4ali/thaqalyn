@@ -11,7 +11,6 @@ import SwiftUI
 struct PropheticParallelsView: View {
     @StateObject private var parallelsManager = PropheticParallelsManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     @State private var selectedCategory: ParallelCategory? = nil
@@ -36,48 +35,6 @@ struct PropheticParallelsView: View {
         return grouped.sorted { $0.key.displayName < $1.key.displayName }
     }
 
-    // MARK: - Localized header strings (follow the global app language)
-
-    private var localizedTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "أمثلة الأنبياء"
-        case .urdu:   return "انبیائی مثالیں"
-        default:      return "Prophetic Parallels"
-        }
-    }
-
-    private var localizedSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "لستَ وحدك في محنتك"
-        case .urdu:   return "اپنی آزمائشوں میں آپ اکیلے نہیں"
-        default:      return "You aren't alone in your struggles"
-        }
-    }
-
-    private var localizedEyebrow: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "أمثلة الأنبياء"
-        case .urdu:   return "انبیائی مثالیں"
-        default:      return "Prophetic Parallels"
-        }
-    }
-
-    private var localizedEmeraldTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "لستَ وحدك"
-        case .urdu:   return "آپ اکیلے نہیں ہیں"
-        default:      return "You Aren't Alone"
-        }
-    }
-
-    private var localizedEmeraldSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "قصصُ أنبياءَ ساروا الطريق نفسه"
-        case .urdu:   return "انہی راہوں پر چلنے والے انبیاء کی داستانیں"
-        default:      return "Stories of Prophets who walked the same road"
-        }
-    }
-
     var body: some View {
         NavigationView {
             ZStack {
@@ -92,11 +49,11 @@ struct PropheticParallelsView: View {
                     VStack(spacing: 12) {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(localizedTitle)
+                                Text("Prophetic Parallels")
                                     .font(.system(size: 34, weight: .bold, design: .rounded))
                                     .foregroundColor(themeManager.primaryText)
 
-                                Text(localizedSubtitle)
+                                Text("You aren't alone in your struggles")
                                     .font(.system(size: 16, weight: .medium))
                                     .foregroundColor(themeManager.secondaryText)
                             }
@@ -107,8 +64,6 @@ struct PropheticParallelsView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 12)
-                    .environment(\.layoutDirection,
-                                 languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
 
                     // Search bar
                     HStack(spacing: 12) {
@@ -239,14 +194,14 @@ struct PropheticParallelsView: View {
         VStack(spacing: 0) {
             // Header — gold eyebrow + serif title
             VStack(alignment: .leading, spacing: 7) {
-                Text(localizedEyebrow.uppercased())
+                Text("PROPHETIC PARALLELS")
                     .font(.system(size: 11, weight: .bold)).tracking(3)
                     .foregroundColor(themeManager.accentColor)
-                Text(localizedEmeraldTitle)
+                Text("You Aren't Alone")
                     .font(EmType.serif(36, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(localizedEmeraldSubtitle)
+                Text("Stories of Prophets who walked the same road")
                     .font(.system(size: 13.5))
                     .foregroundColor(themeManager.secondaryText)
             }
@@ -254,8 +209,6 @@ struct PropheticParallelsView: View {
             .padding(.horizontal, 20)
             .padding(.top, 16)
             .padding(.bottom, 14)
-            .environment(\.layoutDirection,
-                         languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
             .emCoverHeaderBand("PropheticParallelsCover", height: 280)
 
             // Search bar
@@ -355,14 +308,9 @@ struct PropheticParallelsView: View {
 struct PropheticParallelCard: View {
     let parallel: PropheticParallel
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-        }
-        .environment(\.layoutDirection,
-                     languageManager.selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
+        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
     }
 
     private var emeraldBody: some View {
@@ -371,7 +319,7 @@ struct PropheticParallelCard: View {
                 EmIconChip(sfSymbol: parallel.icon)
                 VStack(alignment: .leading, spacing: 6) {
                     // Prophet figure pairing
-                    Text(parallel.prophet(for: languageManager.selectedLanguage))
+                    Text(parallel.prophetEn)
                         .font(.system(size: 11, weight: .bold)).tracking(0.5)
                         .foregroundColor(themeManager.accentColor)
                         .padding(.horizontal, 9)
@@ -379,14 +327,14 @@ struct PropheticParallelCard: View {
                         .background(Capsule().fill(themeManager.accentChip))
                         .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
 
-                    Text(parallel.situation(for: languageManager.selectedLanguage))
+                    Text(parallel.situationEn)
                         .font(EmType.serif(20, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
 
-                    Text(parallel.connection(for: languageManager.selectedLanguage))
+                    Text(parallel.connectionEn)
                         .font(.system(size: 13))
                         .foregroundColor(themeManager.secondaryText)
                         .lineLimit(2)
@@ -425,7 +373,7 @@ struct PropheticParallelCard: View {
             // Parallel content
             VStack(alignment: .leading, spacing: 6) {
                 // Prophet name badge
-                Text(parallel.prophet(for: languageManager.selectedLanguage))
+                Text(parallel.prophetEn)
                     .font(.system(size: 12, weight: .bold))
                     .foregroundColor(themeManager.accentColor)
                     .padding(.horizontal, 10)
@@ -436,14 +384,14 @@ struct PropheticParallelCard: View {
                     )
 
                 // Situation text
-                Text(parallel.situation(for: languageManager.selectedLanguage))
+                Text(parallel.situationEn)
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
 
                 // Connection preview
-                Text(parallel.connection(for: languageManager.selectedLanguage))
+                Text(parallel.connectionEn)
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .lineLimit(2)

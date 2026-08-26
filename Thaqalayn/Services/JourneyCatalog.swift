@@ -99,22 +99,20 @@ struct JourneyDescriptor: Identifiable {
                 }
                 func medium(_ d: Date) -> String {
                     let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
-                    f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .arabic ? "ar" : (CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en"))
                     return f.string(from: d)
                 }
                 let now = cal.now
                 let firstStart  = hijri(year, 5, 8)
                 let secondStart = hijri(year, 6, 1)
-                let lang = CommentaryLanguageManager.shared.selectedLanguage
                 if now < firstStart {
-                    return .comingSoon(daysUntil: daysBetween(now, firstStart), startsLabel: JourneyStrings.firstFatimiyya(medium(firstStart), lang))
+                    return .comingSoon(daysUntil: daysBetween(now, firstStart), startsLabel: JourneyStrings.firstFatimiyya(medium(firstStart)))
                 }
                 if now < secondStart {
-                    return .comingSoon(daysUntil: daysBetween(now, secondStart), startsLabel: JourneyStrings.secondFatimiyya(medium(secondStart), lang))
+                    return .comingSoon(daysUntil: daysBetween(now, secondStart), startsLabel: JourneyStrings.secondFatimiyya(medium(secondStart)))
                 }
                 let nextReturn = hijri(year + 1, 5, 8)
                 return .ended(daysUntil: daysBetween(now, nextReturn),
-                              returnsLabel: JourneyStrings.returns(medium(nextReturn), lang))
+                              returnsLabel: JourneyStrings.returns(medium(nextReturn)))
             },
             coverAssetName: "FatimiyyaCover"
         ),
@@ -142,20 +140,18 @@ struct JourneyDescriptor: Identifiable {
                 }
                 func medium(_ d: Date) -> String {
                     let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
-                    f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .arabic ? "ar" : (CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en"))
                     return f.string(from: d)
                 }
                 let now = cal.now
-                let lang = CommentaryLanguageManager.shared.selectedLanguage
                 // Window opens 11 Muharram (the day after Ashura) of the current Hijri year.
                 let windowStart = hijri(year, 1, 11)
                 if now < windowStart {
                     return .comingSoon(daysUntil: daysBetween(now, windowStart),
-                                       startsLabel: JourneyStrings.begins(medium(windowStart), lang))
+                                       startsLabel: JourneyStrings.begins(medium(windowStart)))
                 }
                 let nextStart = hijri(year + 1, 1, 11)
                 return .ended(daysUntil: daysBetween(now, nextStart),
-                              returnsLabel: JourneyStrings.returns(medium(nextStart), lang))
+                              returnsLabel: JourneyStrings.returns(medium(nextStart)))
             },
             coverAssetName: "ArbaeenCover"
         ),
@@ -196,11 +192,10 @@ extension JourneyDescriptor {
         }
 
         let now = cal.now
-        let lang = CommentaryLanguageManager.shared.selectedLanguage
         if now < thisYearStart {
             return .comingSoon(
                 daysUntil: Self.daysBetween(now, thisYearStart),
-                startsLabel: JourneyStrings.begins(Self.medium(thisYearStart), lang)
+                startsLabel: JourneyStrings.begins(Self.medium(thisYearStart))
             )
         }
         guard let nextYearStart = icalendar.date(
@@ -209,7 +204,7 @@ extension JourneyDescriptor {
             preconditionFailure("Could not form next Hijri content-start for \(id)")
         }
         return .ended(daysUntil: Self.daysBetween(now, nextYearStart),
-                      returnsLabel: JourneyStrings.returns(Self.medium(nextYearStart), lang))
+                      returnsLabel: JourneyStrings.returns(Self.medium(nextYearStart)))
     }
 
     /// Sort bucket for a status: `(bucket, tiebreak-days)`, lower sorts first.
@@ -240,7 +235,6 @@ extension JourneyDescriptor {
 
     private static func medium(_ date: Date) -> String {
         let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .none
-        f.locale = Locale(identifier: CommentaryLanguageManager.shared.selectedLanguage == .arabic ? "ar" : (CommentaryLanguageManager.shared.selectedLanguage == .urdu ? "ur" : "en"))
         return f.string(from: date)
     }
 }

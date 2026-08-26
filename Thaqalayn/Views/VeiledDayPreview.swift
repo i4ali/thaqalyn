@@ -24,13 +24,13 @@ private extension View {
 }
 
 struct VeiledDayPreview: View {
-    /// Localized unit label shown as the eyebrow, e.g. "Muharram · Day 3" or
+    /// Unit label shown as the eyebrow, e.g. "Muharram · Day 3" or
     /// "Arbaeen · Station 3" - built by the caller so each journey names its own unit.
     let dayLabel: String
-    /// Localized theme title + its Arabic.
+    /// Theme title + its Arabic.
     let theme: String
     let themeArabic: String
-    /// The day's opening line (its localized tafsir focus) - the taste that is shown for real.
+    /// The day's opening line (its tafsir focus) - the taste that is shown for real.
     let openingLine: String
     /// How many verses wait beneath the veil (named, not shown).
     let verseCount: Int
@@ -44,12 +44,10 @@ struct VeiledDayPreview: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @StateObject private var reading = ReadingSettingsManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @State private var showingPaywall = false
     @State private var shown = false
 
     private var s: CGFloat { reading.scale }
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var body: some View {
         GeometryReader { geo in
@@ -107,7 +105,6 @@ struct VeiledDayPreview: View {
                 .font(EmType.serif(28))
                 .foregroundColor(DeepDivePalette.cream)
                 .multilineTextAlignment(.center)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .padding(.top, 10)
                 .revealDay(shown, 0.24, reduce: reduceMotion)
 
@@ -119,7 +116,6 @@ struct VeiledDayPreview: View {
                 .foregroundColor(Color(white: 0.74))
                 .multilineTextAlignment(.center)
                 .lineSpacing(5 * s)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 .revealDay(shown, 0.44, reduce: reduceMotion)
         }
     }
@@ -128,7 +124,7 @@ struct VeiledDayPreview: View {
 
     private var veilSection: some View {
         VStack(spacing: 0) {
-            Text(JourneyStrings.dayVeilEyebrow(station: unitIsStation, lang).uppercased())
+            Text(JourneyStrings.dayVeilEyebrow(station: unitIsStation).uppercased())
                 .font(.system(size: 10, weight: .semibold)).tracking(4)
                 .foregroundColor(DeepDivePalette.gold)
                 .multilineTextAlignment(.center)
@@ -147,7 +143,6 @@ struct VeiledDayPreview: View {
                     }
                 }
             }
-            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
             .padding(.top, 22)
             .revealDay(shown, 0.64, reduce: reduceMotion)
 
@@ -155,7 +150,7 @@ struct VeiledDayPreview: View {
 
             unlockButton.revealDay(shown, 0.82, reduce: reduceMotion)
 
-            Text("\(JourneyStrings.premium(lang)) \u{00B7} \(JourneyStrings.veilNote(lang))")
+            Text("\(JourneyStrings.premium) \u{00B7} \(JourneyStrings.veilNote)")
                 .font(.system(size: 11))
                 .foregroundColor(DeepDivePalette.mute)
                 .multilineTextAlignment(.center)
@@ -166,9 +161,9 @@ struct VeiledDayPreview: View {
 
     /// What lies beneath, named in plain words. Every day carries these three.
     private var beneath: [String] {
-        [JourneyStrings.dayVeilDua(lang),
-         JourneyStrings.dayVeilVerses(verseCount, lang),
-         JourneyStrings.dayVeilReflection(station: unitIsStation, lang)]
+        [JourneyStrings.dayVeilDua,
+         JourneyStrings.dayVeilVerses(verseCount),
+         JourneyStrings.dayVeilReflection(station: unitIsStation)]
     }
 
     private var unlockButton: some View {
@@ -176,7 +171,7 @@ struct VeiledDayPreview: View {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
             showingPaywall = true
         } label: {
-            Text(JourneyStrings.dayVeilCta(station: unitIsStation, lang))
+            Text(JourneyStrings.dayVeilCta(station: unitIsStation))
                 .font(.system(size: 15, weight: .semibold))
                 .foregroundColor(Color(.sRGB, red: 11.0 / 255.0, green: 20.0 / 255.0,
                                        blue: 15.0 / 255.0, opacity: 1))

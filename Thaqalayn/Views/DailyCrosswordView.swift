@@ -30,7 +30,6 @@ struct DailyCrosswordView: View {
     var onCompleted: () -> Void = {}
 
     @ObservedObject private var manager = DailyCrosswordManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
     @Environment(\.dismiss) private var dismiss
 
@@ -50,7 +49,6 @@ struct DailyCrosswordView: View {
 
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     // MARK: Init — seed `selected` to the first cell of the first Across entry (fallback: first entry).
 
@@ -138,13 +136,12 @@ struct DailyCrosswordView: View {
             Spacer(minLength: 0)
 
             VStack(spacing: 3) {
-                Text(DailyCrosswordStrings.dailyCrossword(lang))
+                Text(DailyCrosswordStrings.dailyCrossword)
                     .font(themeManager.isMidnightEmerald
                           ? EmType.serif(20, .semiBold)
                           : .system(size: 18, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(1)
-                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
 
                 HStack(spacing: 10) {
                     Text("🔥 \(manager.streak.currentStreak)")
@@ -165,7 +162,7 @@ struct DailyCrosswordView: View {
                 VStack(spacing: 3) {
                     Image(systemName: "lightbulb.fill")
                         .font(.system(size: 16, weight: .semibold))
-                    Text(DailyCrosswordStrings.hint(lang))
+                    Text(DailyCrosswordStrings.hint)
                         .font(.system(size: 9, weight: .bold)).tracking(0.5)
                 }
                 .foregroundColor(themeManager.accentColor)
@@ -180,7 +177,7 @@ struct DailyCrosswordView: View {
                 )
             }
             .buttonStyle(EmPressStyle.gentle)
-            .accessibilityLabel(DailyCrosswordStrings.hint(lang))
+            .accessibilityLabel(DailyCrosswordStrings.hint)
         }
     }
 
@@ -267,7 +264,7 @@ struct DailyCrosswordView: View {
     private var clueBar: some View {
         HStack(spacing: 12) {
             clueNavButton(systemName: "chevron.left",
-                          label: DailyCrosswordStrings.prevClue(lang)) {
+                          label: DailyCrosswordStrings.prevClue) {
                 step(by: -1)
             }
 
@@ -278,7 +275,7 @@ struct DailyCrosswordView: View {
                         .foregroundColor(themeManager.accentColor)
                         .frame(maxWidth: .infinity, alignment: .center)
 
-                    Text(e.clue.text(for: lang))
+                    Text(e.clue.text)
                         .font(themeManager.isMidnightEmerald
                               ? EmType.serif(17, .medium)
                               : .system(size: 15, weight: .medium))
@@ -287,13 +284,12 @@ struct DailyCrosswordView: View {
                         .lineLimit(2)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
                 }
             }
             .frame(maxWidth: .infinity)
 
             clueNavButton(systemName: "chevron.right",
-                          label: DailyCrosswordStrings.nextClue(lang)) {
+                          label: DailyCrosswordStrings.nextClue) {
                 step(by: 1)
             }
         }
@@ -327,7 +323,7 @@ struct DailyCrosswordView: View {
 
     /// "<num> <Across|Down> (<len>)" — chrome, always LTR (Latin numerals + direction word).
     private func clueHeadline(for e: CrosswordEntry) -> String {
-        let dir = e.isAcross ? DailyCrosswordStrings.across(lang) : DailyCrosswordStrings.down(lang)
+        let dir = e.isAcross ? DailyCrosswordStrings.across : DailyCrosswordStrings.down
         return "\(e.num) \(dir.uppercased()) · (\(e.answer.count))"
     }
 
@@ -438,12 +434,11 @@ struct DailyCrosswordView: View {
             }
 
             VStack(spacing: 6) {
-                Text(DailyCrosswordStrings.solved(lang))
+                Text(DailyCrosswordStrings.solved)
                     .font(themeManager.isMidnightEmerald
                           ? EmType.serif(40, .semiBold)
                           : .system(size: 34, weight: .bold))
                     .foregroundColor(themeManager.accentBright)
-                    .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
 
                 Text(puzzleSubtitle)
                     .font(.system(size: 13, weight: .medium))
@@ -455,7 +450,6 @@ struct DailyCrosswordView: View {
                 statPill(systemName: "clock", text: timeString(manager.lastCompletion?.seconds ?? seconds))
                 statPill(text: "🔥 \(streakLabel(manager.streak.currentStreak))")
             }
-            .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
 
             Spacer()
 
@@ -465,12 +459,11 @@ struct DailyCrosswordView: View {
             }
             .padding(.horizontal, 24)
 
-            Text(DailyCrosswordStrings.comeBackTomorrow(lang))
+            Text(DailyCrosswordStrings.comeBackTomorrow)
                 .font(.system(size: 12.5, weight: .medium))
                 .foregroundColor(themeManager.tertiaryText)
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 28)
-                .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 20)
@@ -679,30 +672,12 @@ struct DailyCrosswordView: View {
     // play-screen vocabulary the brief lists; these few overlay-only labels live here so we
     // don't have to touch a second file.
 
-    private var doneLabel: String {
-        switch lang {
-        case .arabic: return "تم"
-        case .urdu:   return "مکمل"
-        default:      return "Done"
-        }
-    }
+    private let doneLabel = "Done"
 
-    private var wordsLabel: String {
-        switch lang {
-        case .arabic: return "كلمات"
-        case .urdu:   return "الفاظ"
-        default:      return "words"
-        }
-    }
+    private let wordsLabel = "words"
 
-    /// "<n>-day streak" — chrome label for the streak pill.
-    private func streakLabel(_ n: Int) -> String {
-        switch lang {
-        case .arabic: return "\(n) أيام متتالية"
-        case .urdu:   return "\(n) دن کا سلسلہ"
-        default:      return "\(n)-day streak"
-        }
-    }
+    /// "<n>-day streak" - chrome label for the streak pill.
+    private func streakLabel(_ n: Int) -> String { "\(n)-day streak" }
 
     private func cellAccessibilityLabel(_ p: CellPos) -> String {
         var parts: [String] = []
@@ -717,19 +692,11 @@ struct DailyCrosswordView: View {
 #if DEBUG
 #Preview("Crossword — Emerald, English") {
     let _ = (ThemeManager.shared.selectedTheme = .nightSanctuary)
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
-    DailyCrosswordView(puzzle: DailyCrosswordProvider.shared.today)
-}
-
-#Preview("Crossword — Emerald, Urdu RTL") {
-    let _ = (ThemeManager.shared.selectedTheme = .nightSanctuary)
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
     DailyCrosswordView(puzzle: DailyCrosswordProvider.shared.today)
 }
 
 #Preview("Crossword — Light, English") {
     let _ = (ThemeManager.shared.selectedTheme = .warmInviting)
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     DailyCrosswordView(puzzle: DailyCrosswordProvider.shared.today)
 }
 #endif

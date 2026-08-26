@@ -13,11 +13,9 @@ struct ParallelDetailView: View {
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var parallelsManager = PropheticParallelsManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
 
-    private var isRTL: Bool { languageManager.selectedLanguage.isRTL }
     @State private var selectedVerseForNav: (surah: Int, verse: Int)?
     @State private var navigateToVerse = false
     @State private var navigateToStory = false
@@ -138,7 +136,7 @@ struct ParallelDetailView: View {
             // Your situation
             VStack(alignment: .leading, spacing: 6) {
                 EmSectionLabel(icon: parallel.icon, text: "Your Situation")
-                Text(parallel.situation(for: languageManager.selectedLanguage))
+                Text(parallel.situationEn)
                     .font(EmType.serif(28, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(2)
@@ -153,18 +151,17 @@ struct ParallelDetailView: View {
             // Prophet connection
             VStack(alignment: .leading, spacing: 6) {
                 EmSectionLabel(icon: "person.fill", text: "Prophet")
-                Text(parallel.prophet(for: languageManager.selectedLanguage))
+                Text(parallel.prophetEn)
                     .font(EmType.serif(24, .semiBold))
                     .foregroundColor(themeManager.accentBright)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(parallel.connection(for: languageManager.selectedLanguage))
+                Text(parallel.connectionEn)
                     .font(EmType.serif(17 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         .padding(22)
         .background(
             EmCard { Color.clear }
@@ -202,10 +199,10 @@ struct ParallelDetailView: View {
                             EmIconChip(sfSymbol: story.categoryIcon, size: 40)
 
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(story.prophet(for: languageManager.selectedLanguage))
+                                Text(story.prophetEn)
                                     .font(.system(size: 11, weight: .bold)).tracking(0.5)
                                     .foregroundColor(themeManager.accentColor)
-                                Text(story.title(for: languageManager.selectedLanguage))
+                                Text(story.titleEn)
                                     .font(EmType.serif(18, .semiBold))
                                     .foregroundColor(themeManager.primaryText)
                                     .lineLimit(2)
@@ -265,7 +262,7 @@ struct ParallelDetailView: View {
                         .tracking(1.2)
                 }
 
-                Text(parallel.situation(for: languageManager.selectedLanguage))
+                Text(parallel.situationEn)
                     .font(.system(size: 22, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4)
@@ -286,17 +283,16 @@ struct ParallelDetailView: View {
                         .tracking(1.2)
                 }
 
-                Text(parallel.prophet(for: languageManager.selectedLanguage))
+                Text(parallel.prophetEn)
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .foregroundColor(themeManager.accentColor)
 
-                Text(parallel.connection(for: languageManager.selectedLanguage))
+                Text(parallel.connectionEn)
                     .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
             }
         }
-        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         .padding(24)
         .background {
             RoundedRectangle(cornerRadius: 24)
@@ -374,11 +370,11 @@ struct ParallelDetailView: View {
                             }
 
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(story.prophet(for: languageManager.selectedLanguage))
+                            Text(story.prophetEn)
                                 .font(.system(size: 12, weight: .bold))
                                 .foregroundColor(themeManager.accentColor)
 
-                            Text(story.title(for: languageManager.selectedLanguage))
+                            Text(story.titleEn)
                                 .font(.system(size: 15, weight: .semibold))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineLimit(2)
@@ -431,7 +427,6 @@ struct ParallelVerseCard: View {
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     var verseData: (arabic: String, translation: String)? {
@@ -439,19 +434,8 @@ struct ParallelVerseCard: View {
               let verseContent = verses["\(verse.verseNumber)"] else {
             return nil
         }
-        // Verse translations exist only in English + Urdu; Arabic/English fall back to English.
-        let translation: String
-        if languageManager.selectedLanguage == .urdu, let urdu = verseContent.translationUrdu, !urdu.isEmpty {
-            translation = urdu
-        } else {
-            translation = verseContent.translation
-        }
-        return (verseContent.arabicText, translation)
+        return (verseContent.arabicText, verseContent.translation)
     }
-
-    /// Verse translation is Urdu-only (Arabic falls back to English), so RTL only for Urdu.
-    private var verseTranslationIsRTL: Bool { languageManager.selectedLanguage == .urdu }
-    private var noteIsRTL: Bool { languageManager.selectedLanguage.isRTL }
 
     var surahName: String {
         dataManager.quranData?.surahs.first { $0.number == verse.surahNumber }?.englishName ?? "Surah \(verse.surahNumber)"
@@ -490,23 +474,21 @@ struct ParallelVerseCard: View {
                         .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(3 * readingSettings.scale)
-                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "lightbulb")
                         .font(.system(size: 12))
                         .foregroundColor(themeManager.accentColor)
-                    Text(verse.relevanceNote(for: languageManager.selectedLanguage))
+                    Text(verse.relevanceNoteEn)
                         .font(.system(size: 13 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(2 * readingSettings.scale)
-                        .frame(maxWidth: .infinity, alignment: noteIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(12)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .environment(\.layoutDirection, noteIsRTL ? .rightToLeft : .leftToRight)
                 .background(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(themeManager.accentChip.opacity(0.6))
@@ -568,9 +550,8 @@ struct ParallelVerseCard: View {
                         .font(.system(size: 16 * readingSettings.scale, weight: .medium))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(4 * readingSettings.scale)
-                        .multilineTextAlignment(verseTranslationIsRTL ? .trailing : .leading)
-                        .frame(maxWidth: .infinity, alignment: verseTranslationIsRTL ? .trailing : .leading)
-                        .environment(\.layoutDirection, verseTranslationIsRTL ? .rightToLeft : .leftToRight)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(20)
 
@@ -590,14 +571,13 @@ struct ParallelVerseCard: View {
                         .foregroundColor(themeManager.secondaryText)
                 }
 
-                Text(verse.relevanceNote(for: languageManager.selectedLanguage))
+                Text(verse.relevanceNoteEn)
                     .font(.system(size: 15 * readingSettings.scale, weight: .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(4 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: noteIsRTL ? .trailing : .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .environment(\.layoutDirection, noteIsRTL ? .rightToLeft : .leftToRight)
             .padding(20)
             .background {
                 Rectangle()

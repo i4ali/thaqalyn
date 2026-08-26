@@ -15,11 +15,9 @@ struct SearchResultsView: View {
 
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @State private var results = QuranSearchResults()
     @State private var didSearch = false
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var body: some View {
         LazyVStack(alignment: .leading, spacing: 12) {
@@ -42,7 +40,7 @@ struct SearchResultsView: View {
 
     @ViewBuilder private var surahSection: some View {
         if !results.surahs.isEmpty {
-            sectionLabel(QuranTabStrings.surahsLabel(lang), count: results.surahs.count)
+            sectionLabel(QuranTabStrings.surahsLabel, count: results.surahs.count)
             // Same row as the browse list, so a surah with an "Inside the Surah"
             // experience shows the Read & Tafsir | Journey toggle here too.
             ForEach(results.surahs) { hit in
@@ -53,7 +51,7 @@ struct SearchResultsView: View {
 
     @ViewBuilder private var verseSection: some View {
         if !results.verses.isEmpty {
-            sectionLabel(QuranTabStrings.versesLabel(lang), count: results.verseTotal)
+            sectionLabel(QuranTabStrings.versesLabel, count: results.verseTotal)
             ForEach(results.verses) { hit in
                 Button { onOpenVerse(hit.surahNumber, hit.verseNumber) } label: {
                     VerseResultRow(hit: hit)
@@ -68,7 +66,7 @@ struct SearchResultsView: View {
 
     @ViewBuilder private var themeSection: some View {
         if !results.themes.isEmpty {
-            sectionLabel(QuranTabStrings.themesLabel(lang), count: results.themeTotal)
+            sectionLabel(QuranTabStrings.themesLabel, count: results.themeTotal)
             ForEach(results.themes) { hit in
                 Button { onOpenTheme(hit.surahNumber, hit.verseNumber, hit.conceptId) } label: {
                     ThemeResultRow(hit: hit)
@@ -95,7 +93,7 @@ struct SearchResultsView: View {
     }
 
     private func moreLabel(showing: Int, of total: Int) -> some View {
-        Text(QuranTabStrings.showingFirst(showing, total, lang))
+        Text(QuranTabStrings.showingFirst(showing, total))
             .font(.system(size: 12))
             .foregroundColor(themeManager.tertiaryText)
             .padding(.vertical, 4)
@@ -105,7 +103,7 @@ struct SearchResultsView: View {
         VStack(spacing: 8) {
             PhosphorIcon(name: "ph-magnifying-glass", size: 28)
                 .foregroundColor(themeManager.tertiaryText)
-            Text(QuranTabStrings.noResults(query, lang))
+            Text(QuranTabStrings.noResults(query))
                 .font(.system(size: 15))
                 .foregroundColor(themeManager.secondaryText)
         }

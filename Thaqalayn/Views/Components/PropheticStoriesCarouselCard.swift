@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PropheticStoriesCarouselCard: View {
     @Binding var showFullView: Bool
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         PosterCarouselCard(
@@ -21,21 +20,9 @@ struct PropheticStoriesCarouselCard: View {
         }
     }
 
-    private var localizedTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "قصص الأنبياء"
-        case .urdu: return "انبیاء کے قصے"
-        default: return "Prophetic Stories"
-        }
-    }
+    private let localizedTitle = "Prophetic Stories"
 
-    private var localizedSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "قصص المرسلين في القرآن الكريم"
-        case .urdu: return "قرآن میں رسولوں کے واقعات"
-        default: return "Quranic accounts of the messengers"
-        }
-    }
+    private let localizedSubtitle = "Quranic accounts of the messengers"
 }
 
 #Preview {

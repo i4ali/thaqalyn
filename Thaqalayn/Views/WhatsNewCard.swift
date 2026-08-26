@@ -18,18 +18,15 @@ struct WhatsNewCard: View {
 
     @ObservedObject private var manager = WhatsNewManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var router = DeepLinkRouter.shared
     @State private var showingWidgetExplainer = false
     @State private var showingDuasZiyarat = false
 
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var body: some View {
         Group {
             if themeManager.isMidnightEmerald { emeraldCard } else { legacyCard }
         }
-        .environment(\.layoutDirection, lang.isRTL ? .rightToLeft : .leftToRight)
         .sheet(isPresented: $showingWidgetExplainer) {
             WidgetExplainerView()
         }
@@ -86,7 +83,7 @@ struct WhatsNewCard: View {
     // MARK: Shared bits
 
     private var newPill: some View {
-        Text(WhatsNewStrings.newPill(lang).uppercased())
+        Text(WhatsNewStrings.newPill.uppercased())
             .font(.system(size: 9, weight: .heavy)).tracking(1)
             .foregroundColor(themeManager.onAccentText)
             .padding(.horizontal, 8).padding(.vertical, 3)
@@ -108,11 +105,11 @@ struct WhatsNewCard: View {
     // MARK: Emerald
 
     private var emeraldCard: some View {
-        ZStack(alignment: lang.isRTL ? .topLeading : .topTrailing) {
+        ZStack(alignment: .topTrailing) {
             Button(action: open) {
                 EmCard(glow: true) {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text(WhatsNewStrings.eyebrow(lang).uppercased())
+                        Text(WhatsNewStrings.eyebrow.uppercased())
                             .font(.system(size: 11, weight: .bold)).tracking(2)
                             .foregroundColor(themeManager.accentColor)
 
@@ -120,13 +117,13 @@ struct WhatsNewCard: View {
                             EmIconChip(sfSymbol: item.sfSymbol, size: 46)
                             VStack(alignment: .leading, spacing: 5) {
                                 HStack(spacing: 8) {
-                                    Text(item.title(lang))
+                                    Text(item.title)
                                         .font(EmType.serif(21, .semiBold))
                                         .foregroundColor(themeManager.primaryText)
                                         .lineLimit(1)
                                     newPill
                                 }
-                                Text(item.blurb(lang))
+                                Text(item.blurb)
                                     .font(.system(size: 13))
                                     .foregroundColor(themeManager.secondaryText)
                                     .lineSpacing(2)
@@ -138,7 +135,7 @@ struct WhatsNewCard: View {
                         Rectangle().fill(themeManager.strokeColor).frame(height: 1)
 
                         HStack(spacing: 6) {
-                            Text(item.cta(lang))
+                            Text(item.cta)
                                 .font(.system(size: 13, weight: .semibold))
                                 .foregroundColor(themeManager.accentBright)
                             Image(systemName: "arrow.right")
@@ -160,10 +157,10 @@ struct WhatsNewCard: View {
     // MARK: Legacy (Light / Night Sanctuary)
 
     private var legacyCard: some View {
-        ZStack(alignment: lang.isRTL ? .topLeading : .topTrailing) {
+        ZStack(alignment: .topTrailing) {
             Button(action: open) {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text(WhatsNewStrings.eyebrow(lang).uppercased())
+                    Text(WhatsNewStrings.eyebrow.uppercased())
                         .font(.system(size: 11, weight: .bold)).tracking(2)
                         .foregroundColor(themeManager.accentColor)
 
@@ -177,13 +174,13 @@ struct WhatsNewCard: View {
                         }
                         VStack(alignment: .leading, spacing: 5) {
                             HStack(spacing: 8) {
-                                Text(item.title(lang))
+                                Text(item.title)
                                     .font(.system(size: 17, weight: .semibold))
                                     .foregroundColor(themeManager.primaryText)
                                     .lineLimit(1)
                                 newPill
                             }
-                            Text(item.blurb(lang))
+                            Text(item.blurb)
                                 .font(.system(size: 13))
                                 .foregroundColor(themeManager.secondaryText)
                                 .lineSpacing(2)
@@ -195,7 +192,7 @@ struct WhatsNewCard: View {
                     Rectangle().fill(themeManager.strokeColor).frame(height: 1)
 
                     HStack(spacing: 6) {
-                        Text(item.cta(lang))
+                        Text(item.cta)
                             .font(.system(size: 13, weight: .semibold))
                             .foregroundColor(themeManager.accentColor)
                         Image(systemName: "arrow.right")
@@ -229,22 +226,14 @@ private func _wnPreviewItem() -> WhatsNewItem { WhatsNewCatalog.all[0] }
 
 #Preview("What's New - English, Emerald") {
     let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     return WhatsNewCard(item: _wnPreviewItem(), selectedTab: .constant(0))
         .padding(20).background(Color.black)
 }
 
 #Preview("What's New - English, Light") {
     let _ = ThemeManager.shared.selectedTheme = .warmInviting
-    let _ = CommentaryLanguageManager.shared.setLanguage(.english)
     return WhatsNewCard(item: _wnPreviewItem(), selectedTab: .constant(0))
         .padding(20).background(Color(red: 0.97, green: 0.95, blue: 0.92))
 }
 
-#Preview("What's New - Urdu, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
-    let _ = CommentaryLanguageManager.shared.setLanguage(.urdu)
-    return WhatsNewCard(item: _wnPreviewItem(), selectedTab: .constant(0))
-        .padding(20).background(Color.black)
-}
 #endif

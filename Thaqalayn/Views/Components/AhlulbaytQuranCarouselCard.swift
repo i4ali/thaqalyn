@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AhlulbaytQuranCarouselCard: View {
     @Binding var showFullView: Bool
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         PosterCarouselCard(
@@ -21,21 +20,9 @@ struct AhlulbaytQuranCarouselCard: View {
         }
     }
 
-    private var localizedTitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "أهل البيت في القرآن"
-        case .urdu: return "قرآن میں اہل بیت"
-        default: return "Ahl al-Bayt in the Quran"
-        }
-    }
+    private let localizedTitle = "Ahl al-Bayt in the Quran"
 
-    private var localizedSubtitle: String {
-        switch languageManager.selectedLanguage {
-        case .arabic: return "آيات في فضل عترة النبي"
-        case .urdu: return "خاندانِ رسول کی شان میں آیات"
-        default: return "Verses honoring the Prophet's family"
-        }
-    }
+    private let localizedSubtitle = "Verses honoring the Prophet's family"
 }
 
 #Preview {

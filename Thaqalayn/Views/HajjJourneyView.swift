@@ -13,8 +13,6 @@ struct HajjJourneyView: View {
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var premiumManager = PremiumManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
     @State private var selectedDay: HajjDay?
     @State private var navigateToDetail = false
     /// A locked day the user tapped - opens the veiled preview instead of the paywall.
@@ -32,7 +30,7 @@ struct HajjJourneyView: View {
 
                     // Day list
                     if journeyManager.isLoading {
-                        HajjLoadingSection(message: JourneyStrings.loadingJourney(languageManager.selectedLanguage))
+                        HajjLoadingSection(message: JourneyStrings.loadingJourney)
                     } else if let error = journeyManager.errorMessage {
                         HajjErrorSection(message: error)
                     } else {
@@ -86,15 +84,15 @@ struct HajjJourneyView: View {
             // what waits beneath - rather than jumping straight to the paywall. The
             // paywall it carries still wears this journey's art and name.
             VeiledDayPreview(
-                dayLabel: "\(JourneyStrings.title("hajj", languageManager.selectedLanguage)) \u{00B7} \(JourneyStrings.dayN(day.dayNumber, languageManager.selectedLanguage))",
-                theme: day.localizedTheme(languageManager.selectedLanguage),
+                dayLabel: "\(JourneyStrings.title("hajj")) \u{00B7} \(JourneyStrings.dayN(day.dayNumber))",
+                theme: day.theme,
                 themeArabic: day.themeArabic,
-                openingLine: day.localizedTafsir(languageManager.selectedLanguage),
+                openingLine: day.tafsirFocus,
                 verseCount: day.verses.count,
                 coverAssetName: JourneyDescriptor.byId("hajj")?.coverAssetName ?? "HajjCover",
                 paywallContext: PaywallContext(
                     coverAssetName: JourneyDescriptor.byId("hajj")?.coverAssetName,
-                    eyebrow: JourneyStrings.title("hajj", languageManager.selectedLanguage)))
+                    eyebrow: JourneyStrings.title("hajj")))
         }
     }
 }
@@ -103,12 +101,10 @@ struct HajjJourneyHeader: View {
     @StateObject private var journeyManager = HajjJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     var statusMessage: String {
         let status = calendarManager.hajjSeasonStatus()
-        return status.isEmpty ? JourneyStrings.screenTitle("hajj", lang) : status
+        return status.isEmpty ? JourneyStrings.screenTitle("hajj") : status
     }
 
     var body: some View {
@@ -117,13 +113,13 @@ struct HajjJourneyHeader: View {
 
     private var emeraldBody: some View {
         EmJourneyHeader(
-            eyebrow: JourneyStrings.eyebrow("hajj", "10-Day Journey", lang),
-            title: JourneyStrings.title("hajj", lang),
+            eyebrow: JourneyStrings.eyebrow("hajj", "10-Day Journey"),
+            title: JourneyStrings.title("hajj"),
             sfSymbol: "building.columns.fill",
             statusLine: statusMessage,
-            countLine: JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 10, lang),
+            countLine: JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 10),
             percent: journeyManager.completionPercentage,
-            completionNote: journeyManager.isJourneyCompleted ? (languageManager.selectedLanguage == .urdu ? "سفر مکمل · Hajj Champion حاصل کر لیا" : "Journey complete · Hajj Champion earned") : nil,
+            completionNote: journeyManager.isJourneyCompleted ? "Journey complete · Hajj Champion earned" : nil,
             coverAssetName: "HajjCover"
         )
     }
@@ -134,7 +130,7 @@ struct HajjJourneyHeader: View {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(JourneyStrings.screenTitle("hajj", lang))
+                        Text(JourneyStrings.screenTitle("hajj"))
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(themeManager.primaryText)
 
@@ -155,7 +151,7 @@ struct HajjJourneyHeader: View {
             // Progress bar
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text(JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 10, lang))
+                    Text(JourneyStrings.daysCompleted(journeyManager.completedDaysCount, 10))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
 
@@ -186,7 +182,7 @@ struct HajjJourneyHeader: View {
                 HStack(spacing: 8) {
                     Image(systemName: "checkmark.seal.fill")
                         .foregroundColor(.green)
-                    Text(languageManager.selectedLanguage == .urdu ? "سفر مکمل! Hajj Champion کا بیج حاصل کر لیا۔" : "Journey Complete! Hajj Champion badge earned.")
+                    Text("Journey Complete! Hajj Champion badge earned.")
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundColor(.green)
                 }
@@ -206,8 +202,6 @@ struct HajjDayCard: View {
     let isLocked: Bool
     let onTap: () -> Void
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
-    private var lang: CommentaryLanguage { languageManager.selectedLanguage }
 
     private var greenGradient: LinearGradient {
         LinearGradient(
@@ -244,7 +238,7 @@ struct HajjDayCard: View {
     private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
-            theme: day.localizedTheme(lang),
+            theme: day.theme,
             themeArabic: day.themeArabic,
             isDone: isCompleted,
             isCurrent: isCurrentDay,
@@ -282,7 +276,7 @@ struct HajjDayCard: View {
                 // Day content
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text(JourneyStrings.dayN(day.dayNumber, lang))
+                        Text(JourneyStrings.dayN(day.dayNumber))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(themeManager.secondaryText)
 
@@ -297,7 +291,7 @@ struct HajjDayCard: View {
                                         .fill(Color.orange.gradient)
                                 )
                         } else if isCurrentDay {
-                            Text(JourneyStrings.today(lang))
+                            Text(JourneyStrings.today)
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 6)
@@ -314,7 +308,7 @@ struct HajjDayCard: View {
                             .font(.system(size: 14))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
 
-                        Text(day.localizedTheme(lang))
+                        Text(day.theme)
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
                     }
@@ -372,7 +366,6 @@ private struct HajjLoadingSection: View {
 private struct HajjErrorSection: View {
     let message: String
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
 
     var body: some View {
         VStack(spacing: 16) {
@@ -380,7 +373,7 @@ private struct HajjErrorSection: View {
                 .font(.system(size: 48))
                 .foregroundColor(.orange)
 
-            Text(JourneyStrings.errorLoadingJourney(languageManager.selectedLanguage))
+            Text(JourneyStrings.errorLoadingJourney)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(themeManager.primaryText)
 
