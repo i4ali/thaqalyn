@@ -86,6 +86,9 @@ struct SpecialDuaDetailView: View {
                 }
             }
         }
+        // Pushed from DuasZiyaratView's stack: hide the system back button so the
+        // custom one above is the only "Back" (otherwise both render side by side).
+        .navigationBarBackButtonHidden(true)
         // No onDisappear stop: like verse audio and journey narration, the recitation
         // keeps playing when the reader navigates away - the docked DuaMiniPlayer
         // (MainTabView / DuasZiyaratView) keeps the controls in reach.

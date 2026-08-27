@@ -67,6 +67,9 @@ struct DuaDetailView: View {
                 }
             }
         }
+        // Pushed from DuasView's stack: hide the system back button so the custom
+        // one above is the only "Back" (otherwise both render side by side).
+        .navigationBarBackButtonHidden(true)
         .darkScreenAura()
         .hideTabBarInEmerald()
     }
