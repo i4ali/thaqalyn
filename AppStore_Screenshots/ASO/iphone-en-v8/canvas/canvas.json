@@ -1,0 +1,79 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "1 Today",
+      "x": 0,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot2.dc.html",
+      "title": "2 Quran",
+      "x": 1440,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot3.dc.html",
+      "title": "3 Tafsir",
+      "x": 2880,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot4.dc.html",
+      "title": "4 Duas",
+      "x": 4320,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot5.dc.html",
+      "title": "5 Journeys",
+      "x": 5760,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot6.dc.html",
+      "title": "6 Inside",
+      "x": 7200,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot7.dc.html",
+      "title": "7 Quiz",
+      "x": 8640,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot8.dc.html",
+      "title": "8 Progress",
+      "x": 10080,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot9.dc.html",
+      "title": "9 Gems",
+      "x": 11520,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}
