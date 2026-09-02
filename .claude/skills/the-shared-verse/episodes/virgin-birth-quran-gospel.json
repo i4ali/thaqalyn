@@ -1,0 +1,40 @@
+{
+  "slug": "virgin-birth-quran-gospel",
+  "template": "episode-template-editorial.html",
+  "title": "The Virgin Birth, Twice Told",
+  "verse_ref": "Sūrat Āl ʿImrān · 3:47",
+  "arabic": "قَالَتْ رَبِّ أَنَّىٰ يَكُونُ لِى وَلَدٌ وَلَمْ يَمْسَسْنِى بَشَرٌ قَالَ كَذَٰلِكِ ٱللَّهُ يَخْلُقُ مَا يَشَآءُ إِذَا قَضَىٰٓ أَمْرًا فَإِنَّمَا يَقُولُ لَهُۥ كُن فَيَكُونُ",
+  "translation": "“My Lord, how can I have a child when no man has touched me? God creates what He wills; when He decrees a thing, He says to it: Be, and it is.”",
+  "order": ["sunni", "shia"],
+  "readings": {
+    "sunni": {
+      "label": "The Qur'an",
+      "intro": "In the Quran.",
+      "body": "The virgin birth is a sign of God's power: He need only say “Be,” and it is. Jesus is created by that command, a prophet, not divine.",
+      "source": "Qur'an · Āl ʿImrān 3:47 & 3:59"
+    },
+    "shia": {
+      "label": "The Gospel",
+      "intro": "In the Gospel.",
+      "body": "The same virgin birth is the Incarnation: the Holy Spirit overshadows Mary, and the child born is God the Son himself, the eternal Word made flesh.",
+      "source": "Gospel of Luke 1:35 · Nicene Creed"
+    }
+  },
+  "voiceover": {
+    "hook": "In two scriptures, centuries apart, Mary asks the very same question.",
+    "hook_caption": "Two scriptures. The same question.",
+    "reference": "The Quran, Surah Al Imran, verse forty-seven.",
+    "payoff": "The same miracle. Two meanings.",
+    "question": "Christian or Muslim, what does the virgin birth mean to you"
+  },
+  "cta_text": "Christian or Muslim - what does the virgin birth mean to you?",
+  "captions": {
+    "readingA": "First - how the <b>Quran</b> tells it.",
+    "readingB": "And how the <i>Gospel</i> tells it."
+  },
+  "hashtags": ["jesus", "mary", "virginbirth", "quran", "bible", "christianity", "islam", "interfaith", "gospel", "nativity"],
+  "caption_desc": "The Quran and the Gospel both say Mary was a virgin. Here is where they meet, and where they part. ✨ <span class=\"tags\">#jesus #mary #virginbirth #quran #bible #christianity #islam #interfaith</span>",
+  "show_captions": false,
+  "show_payoff_text": true,
+  "show_closing_text": true
+}

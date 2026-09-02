@@ -1,0 +1,37 @@
+{
+  "slug": "attawbah-9-128",
+  "title": "One of You, or the Finest of You?",
+  "verse_ref": "Sūrat at-Tawbah · 9:128",
+  "arabic": "لَقَدْ جَآءَكُمْ رَسُولٌ مِّنْ أَنفُسِكُمْ عَزِيزٌ عَلَيْهِ مَا عَنِتُّمْ حَرِيصٌ عَلَيْكُم بِٱلْمُؤْمِنِينَ رَءُوفٌ رَّحِيمٌ",
+  "translation": "“There has come to you a Messenger from your own selves - your suffering grieves him, he is anxious over you; to the believers, kind and merciful.”",
+  "order": ["shia", "sunni"],
+  "readings": {
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia tafsir treasures a reading remembered from Fāṭima - min anfasikum, 'from the noblest of you': a purified, chosen line, answering Ibrāhīm's prayer for a Messenger raised from his own descendants.",
+      "source": "Majmaʿ al-Bayān (al-Ṭabrisī)"
+    },
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Sunni tafsir hears min anfusikum, 'from your own selves': a Messenger human like you - your tongue, your kin - one you already know and trust, so his mercy is lived close.",
+      "source": "Tafsīr al-Ṭabarī · Ibn Kathīr"
+    }
+  },
+  "voiceover": {
+    "hook": "In this verse, one word about the Prophet's origin has been read two ways for over a thousand years.",
+    "reference": "Surah at-Tawbah, verse one hundred twenty-eight.",
+    "payoff": "One vowel apart. Born one of you - and born the finest of you.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "pins": {
+    "hook": "episodes/pins/attawbah-9-128__hook.mp3",
+    "payoff": "episodes/pins/attawbah-9-128__payoff.mp3",
+    "question": "episodes/pins/almaidah-5-55__question.mp3"
+  },
+  "hashtags": ["quran", "tafsir", "shia", "sunni", "prophetmuhammad", "mawlid", "islam", "rabiulawal"],
+  "caption_desc": "In the week of his birth - one verse, two ways of hearing where he came from 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni #prophetmuhammad #mawlid #islam</span>",
+  "show_captions": true,
+  "show_payoff_text": true,
+  "show_closing_text": true
+}

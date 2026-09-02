@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--
+  THE SHARED WORD — editorial template (Muslim × Christian one-off / spinoff skin)
+  ==================================================================
+  Same pipeline contract as episode-template.html (window.EPISODE + seek(t) +
+  __SV_READY + ?render/?frame/?capture modes), but a completely different brand:
+  a light "gallery / magazine" editorial layout — warm stone, a big Didot pull-
+  quote, hairline rules, tracked small-caps labels with thin colored underlines.
+
+  Select it from an episode JSON with:  "template": "episode-template-editorial.html"
+
+  Panels: the first (`sunni`) slot renders GREEN, the second (`shia`) slot BLUE —
+  in this spinoff those slots carry Islam / Christianity, labelled by the JSON.
+  ==================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Shared Word — episode</title>
+
+<!--EPISODE-INJECT-->
+
+<style>
+/*FONT-FACE-START*/
+@font-face{font-family:"AmiriLocal";font-style:normal;font-weight:400;src:url("assets/fonts/Amiri-Regular.ttf") format("truetype")}
+@font-face{font-family:"AmiriLocal";font-style:normal;font-weight:700;src:url("assets/fonts/Amiri-Bold.ttf") format("truetype")}
+@font-face{font-family:"AmiriLocal";font-style:italic;font-weight:400;src:url("assets/fonts/Amiri-Italic.ttf") format("truetype")}
+@font-face{font-family:"AmiriLocal";font-style:italic;font-weight:700;src:url("assets/fonts/Amiri-BoldItalic.ttf") format("truetype")}
+/*FONT-FACE-END*/
+
+  :root{
+    --stone:#ece7dd;
+    --ink:#191713;
+    --muted:#a2937a;
+    --hair:#cabfa8;
+    --green:#1f6b47;   /* first slot (Islam) */
+    --blue:#2f4f8c;    /* second slot (Christianity) */
+    --disp:"Didot","Bodoni 72","Playfair Display","Hoefler Text",Georgia,serif;
+    --sans:"Helvetica Neue","Inter","Segoe UI",Arial,sans-serif;
+    --arabic:"AmiriLocal","Amiri","Scheherazade New","Traditional Arabic",serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:#0b0b0d;font-family:var(--sans);-webkit-font-smoothing:antialiased}
+
+  .page{position:relative;width:1080px;height:1920px;background:var(--stone);color:var(--ink);overflow:hidden}
+  .inner{position:absolute;top:132px;left:120px;right:120px;bottom:112px;display:flex;flex-direction:column}
+
+  /* top row */
+  .toprow{display:flex;justify-content:space-between;align-items:baseline;opacity:0}
+  .kick{letter-spacing:.46em;font-size:21px;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .kick b{color:var(--green);font-weight:600}
+  .ref{letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--muted)}
+  .hair{height:1px;background:var(--hair);margin-top:22px;transform:scaleX(0);transform-origin:left center}
+
+  /* verse group */
+  .arabic{font-family:var(--arabic);direction:rtl;text-align:center;color:#20303a;font-size:50px;line-height:1.95;margin-top:44px;opacity:0}
+  .pull{font-family:var(--disp);font-size:56px;line-height:1.28;letter-spacing:-.01em;color:var(--ink);margin-top:34px;opacity:0}
+  .pull .drop{font-size:1.18em}
+  .tw{color:rgba(20,18,16,.28)}
+
+  /* reading blocks */
+  .mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:44px;padding:36px 0}
+  .blk{opacity:0}
+  .blk .lab{display:inline-block;position:relative}
+  .blk .lab span{letter-spacing:.3em;font-size:22px;text-transform:uppercase;font-weight:700;display:inline-block;padding-bottom:10px}
+  .blk .lab .ul{position:absolute;left:0;bottom:0;height:3px;width:0}
+  .blk.q .lab span{color:var(--green)} .blk.q .lab .ul{background:var(--green)}
+  .blk.g .lab span{color:var(--blue)}  .blk.g .lab .ul{background:var(--blue)}
+  .blk .body{font-family:var(--disp);font-size:34px;line-height:1.44;color:var(--ink);margin-top:18px;max-width:860px}
+  .blk .bw{color:rgba(25,23,19,.34)}
+  .blk .src{letter-spacing:.16em;font-size:18px;text-transform:uppercase;color:var(--muted);margin-top:16px}
+
+  /* foot */
+  .foot{flex:none}
+  .foothair{height:1px;background:var(--hair);margin-bottom:34px}
+  .payoff{font-family:var(--disp);font-size:50px;line-height:1.2;color:var(--ink);opacity:0}
+  .closing{letter-spacing:.2em;font-size:22px;text-transform:uppercase;color:var(--muted);margin-top:24px;opacity:0}
+
+  /* burned cue caption (hidden when show_captions:false) */
+  .vo{position:absolute;left:120px;right:120px;bottom:150px;letter-spacing:.16em;font-size:22px;text-transform:uppercase;font-weight:600;color:var(--muted);opacity:0;pointer-events:none}
+  .vo b{color:var(--green)} .vo i{color:var(--blue);font-style:normal}
+  body.no-captions .vo{display:none!important}
+
+  /* modes */
+  body.render{overflow:hidden}
+  body.render .page{position:absolute;top:0;left:0}
+  body:not(.render){display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+  body:not(.render) .page{transform:scale(.46);flex:none;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
+</style>
+</head>
+<body>
+  <div class="page" id="page">
+    <div class="inner">
+      <div class="toprow" id="toprow">
+        <div class="kick">Two <b>Scriptures</b></div>
+        <div class="ref" id="ref"></div>
+      </div>
+      <div class="hair" id="hair"></div>
+
+      <div class="arabic" id="arabic"></div>
+      <div class="pull" id="trans"></div>
+
+      <div class="mid" id="mid"><!-- blocks built by populate() in reveal order --></div>
+
+      <div class="foot">
+        <div class="foothair"></div>
+        <div class="payoff" id="synth">The same miracle. Two meanings.</div>
+        <div class="closing" id="cta">Christian or Muslim - what does it mean to you?</div>
+      </div>
+    </div>
+    <div class="vo" id="vo"></div>
+  </div>
+
+<script>
+  /* ===== default EPISODE so the file previews standalone ===== */
+  window.EPISODE = window.EPISODE || {
+    content: {
+      verse_ref: "Surat Al Imran · 3:47",
+      arabic: "قَالَتْ رَبِّ أَنَّىٰ يَكُونُ لِى وَلَدٌ وَلَمْ يَمْسَسْنِى بَشَرٌ قَالَ كَذَٰلِكِ ٱللَّهُ يَخْلُقُ مَا يَشَآءُ إِذَا قَضَىٰٓ أَمْرًا فَإِنَّمَا يَقُولُ لَهُۥ كُن فَيَكُونُ",
+      translation: "“How can I have a child when no man has touched me? … He says to it: Be, and it is.”",
+      order: ["sunni","shia"],
+      readings: {
+        sunni: { label:"The Qur'an", body:"The virgin birth is a sign of God's power: He need only say “Be,” and it is. Jesus is created by that command, a prophet, not divine.", source:"Qur'an · Al Imran 3:47 & 3:59" },
+        shia:  { label:"The Gospel", body:"The same virgin birth is the Incarnation: the Holy Spirit overshadows Mary, and the child born is God the Son himself, the eternal Word made flesh.", source:"Gospel of Luke 1:35 · Nicene Creed" }
+      },
+      payoff: "The same miracle. Two meanings.",
+      cta: "Christian or Muslim - what does it mean to you?"
+    },
+    beats: { hook:0, verse:3000, readingA:9500, readingB:16500, payoff:23500, question:27500 },
+    end: 30500,
+    captions: { hook:"", readingA:"First - how the <b>Qur'an</b> tells it.", readingB:"And how the <i>Gospel</i> tells it." },
+    showCaptions: false, showSynth: true, showCta: true
+  };
+
+  const E=window.EPISODE, B=E.beats, END=E.end;
+  if(E.showCaptions===false) document.body.classList.add('no-captions');
+
+  const $=id=>document.getElementById(id);
+  const toprow=$('toprow'), hair=$('hair'), ref=$('ref'), arabic=$('arabic'),
+        trans=$('trans'), synth=$('synth'), cta=$('cta'), vo=$('vo');
+  if(E.showSynth===false) synth.style.display='none';
+  if(E.showCta===false) cta.style.display='none';
+
+  function populate(){
+    const c=E.content; if(!c) return;
+    ref.textContent=c.verse_ref;
+    arabic.textContent=c.arabic;
+    if(c.transWords && c.transWords.length){
+      trans.innerHTML=c.transWords.map(w=>'<span class="tw">'+w.w+'</span>').join(' ');
+    } else { trans.innerHTML=c.translation; }
+    const mid=$('mid'); mid.innerHTML='';
+    c.order.forEach((trad,i)=>{
+      const r=c.readings[trad];
+      const cls=trad==='sunni'?'q':'g';
+      const p=document.createElement('div');
+      p.className='blk '+cls; p.dataset.reveal=i;
+      const bodyHtml=(r.bodyWords && r.bodyWords.length)
+        ? r.bodyWords.map(w=>'<span class="bw">'+w.w+'</span>').join(' ') : r.body;
+      p.innerHTML='<div class="lab"><span>'+r.label+'</span><i class="ul"></i></div>'+
+                  '<div class="body">'+bodyHtml+'</div>'+
+                  '<div class="src">'+r.source+'</div>';
+      mid.appendChild(p);
+    });
+    if(c.payoff) synth.textContent=c.payoff;
+    if(c.cta) cta.textContent=c.cta;
+  }
+  populate();
+
+  const transWords=(E.content&&E.content.transWords)||[];
+  const transSpans=[...trans.querySelectorAll('.tw')];
+  let panels=[...document.querySelectorAll('.blk')].sort((a,b)=>(+a.dataset.reveal)-(+b.dataset.reveal));
+  const panelHL=panels.map((p,i)=>{
+    const isQ=p.classList.contains('q');
+    const trad=isQ?'sunni':'shia';
+    const r=(E.content&&E.content.readings&&E.content.readings[trad])||{};
+    return { spans:[...p.querySelectorAll('.bw')], words:r.bodyWords||[],
+             beatStart:i===0?B.readingA:B.readingB, accent:isQ?'#1f6b47':'#2f4f8c' };
+  });
+
+  const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+  const easeOut=p=>1-Math.pow(1-clamp(p,0,1),3);
+  const lerp=(a,b,p)=>a+(b-a)*p;
+  const ramp=(t,s,d)=>t<=s?0:t>=s+d?1:easeOut((t-s)/d);
+  const lin=(t,s,d)=>clamp((t-s)/d,0,1);
+
+  function applyBlock(p,inF){
+    if(!p) return;
+    p.style.opacity=inF.toFixed(3);
+    p.style.transform='translateY('+lerp(20,0,inF).toFixed(1)+'px)';
+    const ul=p.querySelector('.ul'); if(ul) ul.style.width=(inF*100).toFixed(1)+'%';
+  }
+  function highlightTrans(t){
+    if(!transSpans.length) return;
+    const el=t-B.verse;
+    for(let i=0;i<transSpans.length;i++){
+      const w=transWords[i]; if(!w) continue;
+      const lit=clamp((el-w.s)/130,0,1);
+      transSpans[i].style.color='rgba(20,18,16,'+lerp(0.24,1,lit).toFixed(3)+')';
+    }
+  }
+  function highlightPanel(h,t){
+    if(!h.spans.length) return;
+    const el=t-h.beatStart;
+    for(let i=0;i<h.spans.length;i++){
+      const w=h.words[i]; if(!w) continue;
+      const cur=(el>=w.s&&el<w.e);
+      const lit=clamp((el-w.s)/130,0,1);
+      h.spans[i].style.color=cur?h.accent:'rgba(25,23,19,'+lerp(0.34,1,lit).toFixed(3)+')';
+    }
+  }
+  function paintCaption(t){
+    const C=E.captions||{};
+    const W=[
+      {s:B.hook+150,e:B.verse-200,html:C.hook},
+      {s:B.readingA,e:B.readingB-200,html:C.readingA},
+      {s:B.readingB,e:B.payoff-200,html:C.readingB},
+    ].filter(w=>w.html);
+    let html='',op=0;
+    for(const w of W){ if(t>=w.s-50 && t<=w.e+250){ html=w.html; op=Math.min(lin(t,w.s,200),1-lin(t,w.e,200)); break; } }
+    if(html && op>0.01){ if(vo.innerHTML!==html) vo.innerHTML=html; vo.style.opacity=op; } else { vo.style.opacity=0; }
+  }
+
+  function seek(t){
+    const hookIn=ramp(t,B.hook+150,800);
+    const verseIn=ramp(t,B.verse,700);
+    const shrink=ramp(t,B.readingA,850);
+    const pIn=ramp(t,B.payoff,700);
+    const cIn=ramp(t,B.question,600);
+
+    toprow.style.opacity=hookIn.toFixed(3);
+    hair.style.transform='scaleX('+hookIn.toFixed(3)+')';
+
+    arabic.style.opacity=(hookIn*lerp(1,.5,shrink)).toFixed(3);
+    arabic.style.fontSize=lerp(50,40,shrink).toFixed(1)+'px';
+    arabic.style.marginTop=lerp(44,26,shrink).toFixed(1)+'px';
+
+    trans.style.opacity=(verseIn*lerp(1,.5,shrink)).toFixed(3);
+    trans.style.fontSize=lerp(56,32,shrink).toFixed(1)+'px';
+    trans.style.lineHeight=lerp(1.28,1.4,shrink).toFixed(3);
+    trans.style.marginTop=lerp(34,20,shrink).toFixed(1)+'px';
+    highlightTrans(t);
+
+    applyBlock(panels[0],ramp(t,B.readingA,700));
+    applyBlock(panels[1],ramp(t,B.readingB,700));
+    panelHL.forEach(h=>highlightPanel(h,t));
+
+    synth.style.opacity=pIn.toFixed(3);
+    synth.style.transform='translateY('+lerp(12,0,pIn).toFixed(1)+'px)';
+    cta.style.opacity=cIn.toFixed(3);
+    cta.style.transform='translateY('+lerp(12,0,cIn).toFixed(1)+'px)';
+
+    paintCaption(t);
+  }
+
+  const params=new URLSearchParams(location.search);
+  const frameParam=params.get('frame');
+  const captureMode=params.get('capture')==='1';
+  const renderMode=params.get('render')==='1' || frameParam!==null || captureMode;
+  if(renderMode) document.body.classList.add('render');
+  const fontsReady=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
+
+  if(captureMode){
+    fontsReady.then(()=>{ seek(0); window.__SV_READY=true; });
+  } else if(frameParam!==null){
+    const ms=parseFloat(frameParam);
+    seek(ms); fontsReady.then(()=>{ seek(ms); window.__SV_READY=true; });
+  } else {
+    seek(0);
+    const play=()=>{
+      const start=performance.now();
+      (function frame(now){
+        const t=now-start; seek(Math.min(t,END));
+        if(t<END) requestAnimationFrame(frame);
+      })(start);
+    };
+    fontsReady.then(play);
+  }
+  window.seek=seek;
+</script>
+</body>
+</html>

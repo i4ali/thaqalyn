@@ -21,7 +21,7 @@ final class NarrationSegmentsTests: XCTestCase {
 
     func test_narrationBeat_emitsBodyThenReflection_noChrome() {
         let s = firstSection(.yaqin) { if case .narration = $0 { return true }; return false }
-            .narrationSegments(for: .english)
+            .narrationSegments()
         let sp = speeches(s)
         XCTAssertTrue(sp.first?.contains("the trial grew fierce") == true)   // body is first speech
         XCTAssertTrue(sp.contains { $0.contains("closer he drew") })         // reflection present
@@ -30,13 +30,13 @@ final class NarrationSegmentsTests: XCTestCase {
 
     func test_verseBeat_weavesVerseRecitation() {
         let s = firstSection(.surahFatiha) { if case .verse = $0 { return true }; return false }
-            .narrationSegments(for: .english)
+            .narrationSegments()
         XCTAssertTrue(s.contains { if case .recitation(.verse) = $0 { return true }; return false })
     }
 
     func test_verseBeat_framesRecitation_leadInThenMeaningThenTranslation() {
         let s = firstSection(.surahFatiha) { if case .verse = $0 { return true }; return false }
-            .narrationSegments(for: .english)
+            .narrationSegments()
         let i = s.firstIndex { if case .recitation = $0 { return true }; return false }!
         XCTAssertEqual(s[i-1], .speech(JourneyNarration.verseLeadIn))         // "The Qur'an says:" right before recitation
         let m = s.firstIndex { $0 == .speech(JourneyNarration.meaning) }!     // "which means:" appears after recitation
@@ -47,7 +47,7 @@ final class NarrationSegmentsTests: XCTestCase {
 
     func test_duaBeat_recitesDuaReadsIntroAndClose() {
         let s = firstSection(.yaqin) { if case .dua = $0 { return true }; return false }
-            .narrationSegments(for: .english)
+            .narrationSegments()
         XCTAssertTrue(s.contains { if case .recitation(.dua) = $0 { return true }; return false })
         let sp = speeches(s)
         XCTAssertTrue(sp.contains { $0.contains("one prayer") })              // intro
@@ -57,7 +57,7 @@ final class NarrationSegmentsTests: XCTestCase {
 
     func test_reflectionPromptBeat_endsWithReflectivePause() {
         let s = firstSection(.yaqin) { if case .reflectionPrompt = $0 { return true }; return false }
-            .narrationSegments(for: .english)
+            .narrationSegments()
         guard case .pause(let d) = s.last! else { return XCTFail() }
         XCTAssertGreaterThanOrEqual(d, 3.0)
         XCTAssertFalse(speeches(s).contains { $0.contains("Faith, a decision") }) // placeholder NOT spoken
@@ -65,7 +65,7 @@ final class NarrationSegmentsTests: XCTestCase {
 
     func test_responseBeat_readsWordsNotChrome() {
         let s = firstSection(.surahFatiha) { if case .response = $0 { return true }; return false }
-            .narrationSegments(for: .english)
+            .narrationSegments()
         let sp = speeches(s)
         XCTAssertTrue(sp.contains { $0.contains("praised Me") })              // `words`
         XCTAssertFalse(sp.contains { $0.contains("to your praise") })         // `replyingTo` chrome NOT spoken
@@ -73,7 +73,7 @@ final class NarrationSegmentsTests: XCTestCase {
 
     func test_closingBeat_readsEssenceAndLine() {
         let s = firstSection(.surahFatiha) { if case .closing = $0 { return true }; return false }
-            .narrationSegments(for: .english)
+            .narrationSegments()
         XCTAssertTrue(speeches(s).contains { $0.contains("Seven verses") })
     }
 
@@ -81,7 +81,7 @@ final class NarrationSegmentsTests: XCTestCase {
         // Yaqin Movement III .act carries a bridge verse (15:99)
         let withBridge = DeepDive.yaqin.sections
             .filter { if case .act = $0 { return true }; return false }
-            .map { $0.narrationSegments(for: .english) }
+            .map { $0.narrationSegments() }
             .first { segs in segs.contains { if case .recitation(.verse) = $0 { return true }; return false } }
         XCTAssertNotNil(withBridge)
     }

@@ -1,0 +1,32 @@
+{
+  "slug": "maryam-19-33",
+  "title": "Jesus Spoke from the Cradle",
+  "verse_ref": "Sūrat Maryam · 19:33",
+  "arabic": "وَٱلسَّلَٰمُ عَلَىَّ يَوْمَ وُلِدتُّ وَيَوْمَ أَمُوتُ وَيَوْمَ أُبْعَثُ حَيًّا",
+  "translation": "“Peace be on me the day I was born, the day I die, and the day I am raised alive.”",
+  "order": ["sunni", "shia"],
+  "readings": {
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Sunni tafsir hears God's protection - safety granted at life's three hardest thresholds: birth, death, and resurrection. The infant's speech clears his mother's name and proclaims his prophethood.",
+      "source": "Tafsīr Ibn Kathīr · al-Qurṭubī"
+    },
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia tafsir hears the same peace - inner security carried through those three passages. Spoken first as the servant of God, the child names servanthood the highest human station.",
+      "source": "al-Mīzān (Ṭabāṭabāʾī) · al-Amthal (Makārim Shīrāzī)"
+    }
+  },
+  "voiceover": {
+    "hook": "In the Quran, Jesus speaks as a newborn - his very first words, from the cradle.",
+    "reference": "Surah Maryam, verse thirty-three.",
+    "payoff": "Same words. One reverence.",
+    "question": "Christian or Muslim, what does this verse stir in you"
+  },
+  "cta_text": "Christian or Muslim - what does this verse stir in you?",
+  "hashtags": ["quran", "jesus", "isa", "christianity", "interfaith", "tafsir", "shia", "sunni", "maryam", "islam"],
+  "caption_desc": "Did you know the Quran gives Jesus his own words - spoken from the cradle? 🌙 <span class=\"tags\">#quran #jesus #isa #christianity #tafsir #shia #sunni #maryam #interfaith</span>",
+  "show_captions": true,
+  "show_payoff_text": true,
+  "show_closing_text": true
+}

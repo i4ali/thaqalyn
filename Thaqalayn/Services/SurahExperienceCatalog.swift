@@ -214,6 +214,18 @@ struct SurahExperienceDescriptor: Identifiable {
             coverAssetName: "HijrCover"
         ),
         SurahExperienceDescriptor(
+            id: "surah-nahl",
+            surahNumber: 16,
+            title: LocalizedText(en: "Surah al-Nahl", ur: "سورۂ نحل", ar: "سورة النحل"),
+            titleAr: "النَّحْل",
+            sfSymbol: "hexagon.fill",
+            subtitle: LocalizedText(en: "The Bee - what do you do with a gift you cannot count?",
+                                    ur: "النحل - اُس نعمت کا کیا کرو گے جو گنی نہ جا سکے؟",
+                                    ar: "النحل - ماذا تصنع بنعمةٍ لا تُحصى؟"),
+            available: true, dive: .surahNahl,
+            coverAssetName: "NahlCover"
+        ),
+        SurahExperienceDescriptor(
             id: "surah-yasin",
             surahNumber: 36,
             title: LocalizedText(en: "Surah Yasin", ur: "سورۂ یٰسین", ar: "سورة يس"),

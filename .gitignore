@@ -210,3 +210,8 @@ journey-audio-render/
 
 # sketchnote-explainer skill working copy
 /sketchnote-explainer/
+
+# ── Cleanup 2026-09-01: content-pipeline scratch output ──
+
+# paper-explainer / other skill scratch output (stills, renders, logs - not source)
+/output/

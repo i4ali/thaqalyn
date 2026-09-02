@@ -969,7 +969,25 @@
      "line": "The eye drifts to what is missing - the verse turns it back to gifts too many to enumerate."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Counting His favors is a task no one completes - today opens with more than you can number.",
    "night": "The favors of today alone were past counting - and the Forgiving overlooked the thanks that fell short."
   },
@@ -2408,20 +2426,20 @@
     }
    ],
    "doorway": {
-    "kind": "deepDive",
-    "id": "sabr",
-    "name": "Sabr · Patience",
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
     "lines": [
      {
-      "text": "Patience upon Your decree, O my Lord. There is no god but You.",
-      "source": "Imam al-Husayn - Maqtal al-Husayn of al-Muqarram"
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
      },
      {
-      "text": "I complain of my anguish and my grief only to God.",
-      "source": "Qur'an 12:86"
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
      },
      {
-      "text": "Patience has three stations: to endure the decree, to accept it, to find peace within it.",
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
       "source": null
      }
     ]
@@ -2466,20 +2484,20 @@
     }
    ],
    "doorway": {
-    "kind": "deepDive",
-    "id": "sabr",
-    "name": "Sabr · Patience",
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
     "lines": [
      {
-      "text": "Patience upon Your decree, O my Lord. There is no god but You.",
-      "source": "Imam al-Husayn - Maqtal al-Husayn of al-Muqarram"
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
      },
      {
-      "text": "I complain of my anguish and my grief only to God.",
-      "source": "Qur'an 12:86"
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
      },
      {
-      "text": "Patience has three stations: to endure the decree, to accept it, to find peace within it.",
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
       "source": null
      }
     ]
@@ -3392,20 +3410,20 @@
     }
    ],
    "doorway": {
-    "kind": "deepDive",
-    "id": "shukr",
-    "name": "Shukr · Gratitude",
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
     "lines": [
      {
-      "text": "I praise God with the best of praise, and I thank Him in ease and in hardship.",
-      "source": "Imam al-Husayn - al-Irshad of al-Mufid"
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
      },
      {
-      "text": "Now you have thanked Me - now that you know that even the thanks is from Me.",
-      "source": "His words to Musa - al-Kafi"
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
      },
      {
-      "text": "Thanks is the one debt that grows by being paid.",
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
       "source": null
      }
     ]
@@ -3443,20 +3461,20 @@
     }
    ],
    "doorway": {
-    "kind": "deepDive",
-    "id": "shukr",
-    "name": "Shukr · Gratitude",
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
     "lines": [
      {
-      "text": "I praise God with the best of praise, and I thank Him in ease and in hardship.",
-      "source": "Imam al-Husayn - al-Irshad of al-Mufid"
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
      },
      {
-      "text": "Now you have thanked Me - now that you know that even the thanks is from Me.",
-      "source": "His words to Musa - al-Kafi"
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
      },
      {
-      "text": "Thanks is the one debt that grows by being paid.",
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
       "source": null
      }
     ]
@@ -8483,7 +8501,25 @@
      "line": "The messengers conveyed what was revealed to them - the teaching was received, not invented."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Not knowing is no dead end - 'ask the people of the reminder' is the verse's open door for today.",
    "night": "Questions left open tonight have a direction to travel - toward the people of the reminder."
   },
@@ -9535,7 +9571,25 @@
      "line": "The reminder repeats because forgetting repeats - His guidance arrives as often as you need it."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "One verse sets today's standard: justice as the floor, excellence above it, and your own kin first in line.",
    "night": "Justice, excellence, care for kin - wherever today touched them, it stood inside this verse's command."
   },
@@ -10546,7 +10600,25 @@
      "line": "Kept or broken, your word sits in His full view - He knows what you do with every promise."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Every promise you make today gains a witness at once - you place Allah as guarantor over your word.",
    "night": "The promises still standing tonight are still witnessed - Allah knows what you do with each one."
   },
@@ -10586,7 +10658,25 @@
      "line": "Guidance is His work, not yours - your part ends at the invitation, and that lifts the weight."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Truth travels on manner - wisdom, beauty, and grace are how the way of your Lord is offered to anyone.",
    "night": "Every word of truth you offered today was the whole of your job - who it guides rests with your Lord."
   },
@@ -11894,7 +11984,25 @@
      "line": "The verse marvels at favor denied - seeing your blessings as His keeps that denial far from you."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Spouse, children, provision - the verse counts the blessings woven into your ordinary day as His giving.",
    "night": "The people under your roof and the food on your table were today's evidence - His favor, close at hand."
   },
@@ -12826,7 +12934,25 @@
      "line": "The blessing is doubled - a wholesome life here, and reward measured by your best in the hereafter."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Righteous work joined to faith carries a promise for today - a good life beginning now, not only later.",
    "night": "The good you joined to faith today is already working - a pure life now, best-deed reward ahead."
   },
@@ -13624,7 +13750,25 @@
      "line": "Faith is the eye that catches these signs - belief turns an everyday sky into evidence."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Every bird overhead today is held by nothing except Allah - the sky carries His signature all day.",
    "night": "The birds rest tonight held by the same One who held them aloft - His support does not set with the sun."
   },
@@ -15442,7 +15586,25 @@
      "line": "Its full benefit opens to those who believe - faith unlocks its transformative power."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Where people disagree, the Book was sent to make things clear - clarity is part of today's inheritance.",
    "night": "Disputes may continue around you; for the believer, the Book remains guidance and mercy at day's end."
   },
@@ -16424,7 +16586,25 @@
      "line": "Surah an-Nahl ends on this promise - after every blessing and trial, His companionship is the close."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-nahl",
+    "name": "Surah al-Nahl",
+    "lines": [
+     {
+      "text": "They recognize the blessing of Allah - then they deny it.",
+      "source": "Qur'an 16:83"
+     },
+     {
+      "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+      "source": "Imam Ali (a) - Nahj al-Balagha"
+     },
+     {
+      "text": "The surah is named not for the pouring, but for the one who received it rightly.",
+      "source": null
+     }
+    ]
+   },
    "morning": "The verse names who Allah is with - those conscious of Him and those who do good. Today can place you there.",
    "night": "Where today held taqwa and good deeds, it held His company - the surah's closing promise ends the day."
   },
@@ -17996,19 +18176,19 @@
   },
   {
    "kind": "experience",
-   "id": "surah-yasin",
-   "name": "Surah Yasin",
+   "id": "surah-nahl",
+   "name": "Surah al-Nahl",
    "lines": [
     {
-     "text": "People are asleep, and when they die they wake.",
-     "source": "Imam Ali"
+     "text": "They recognize the blessing of Allah - then they deny it.",
+     "source": "Qur'an 16:83"
     },
     {
-     "text": "\"Peace\" - a word from a Merciful Lord.",
-     "source": "Qur'an 36:58"
+     "text": "Asked what a good life means in the Qur'an, he said: it is contentment.",
+     "source": "Imam Ali (a) - Nahj al-Balagha"
     },
     {
-     "text": "An awake heart runs toward the truth; it never quite learned how to walk.",
+     "text": "The surah is named not for the pouring, but for the one who received it rightly.",
      "source": null
     }
    ]
@@ -18028,6 +18208,25 @@
     },
     {
      "text": "Certainty has three depths: to know the fire by its smoke, to see it, to stand within it.",
+     "source": null
+    }
+   ]
+  },
+  {
+   "kind": "experience",
+   "id": "surah-yasin",
+   "name": "Surah Yasin",
+   "lines": [
+    {
+     "text": "People are asleep, and when they die they wake.",
+     "source": "Imam Ali"
+    },
+    {
+     "text": "\"Peace\" - a word from a Merciful Lord.",
+     "source": "Qur'an 36:58"
+    },
+    {
+     "text": "An awake heart runs toward the truth; it never quite learned how to walk.",
      "source": null
     }
    ]

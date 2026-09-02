@@ -67,6 +67,15 @@ enum WhatsNewCatalog {
             cta: "Set it up"
         ),
         WhatsNewItem(
+            id: "surahExperience-nahl",
+            sfSymbol: "hexagon.fill",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 30).date ?? .distantPast, // placeholder - set at ship time (later than hijr's so this card surfaces first)
+            destination: .surahExperience("surah-nahl"),
+            title: "Inside the Surah",
+            blurb: "Surah al-Nahl - the Surah of Blessings, which dares you to count what you have been given and then shows you why the count was never the point. Descend through beauty entered into the ledger, a gift renamed a shame, three bellies and the smallest receiver in the Book - down to a two-word promise of a good life, and the one word the Ahl al-Bayt gave as its key.",
+            cta: "Begin the journey"
+        ),
+        WhatsNewItem(
             id: "surahExperience-hijr",
             sfSymbol: "mountain.2",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 8, day: 25).date ?? .distantPast, // placeholder - set at ship time (later than rad's so this card surfaces first)

@@ -27,6 +27,7 @@ import base64
 import json
 import math
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -48,8 +49,23 @@ import unicodedata
 SKILL_ROOT = HERE.parent
 TEMPLATE = SKILL_ROOT / "episode-template.html"
 FONT_DIR = SKILL_ROOT / "assets" / "fonts"
+
+
+def episode_template(ep: dict) -> "Path":
+    """Which HTML template renders this episode. Defaults to the brand template;
+    an episode may opt into a different skin (e.g. a spinoff) via its "template"
+    key. The chosen template must expose the same contract (window.EPISODE +
+    seek(t) + __SV_READY + the FONT-FACE / EPISODE-INJECT markers)."""
+    return SKILL_ROOT / (ep.get("template") or "episode-template.html")
 PROJECT_ROOT = SKILL_ROOT.parents[2]
 OUTPUT_DIR = PROJECT_ROOT / "the_shared_verse"
+
+# House plain-spelling: reuse the project's canonical transliteration-stripper so the
+# video's on-screen English matches the app exactly (macrons/under-dots -> base letter;
+# ʿayn/hamza -> apostrophe between letters, else dropped; curated exceptions like
+# Ṭabāṭabāʾī -> Tabatabai). The Arabic verse script is NEVER passed through this.
+sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
+from strip_diacritics import transform as plain_spelling  # noqa: E402
 
 FONT_FILES = {
     ("normal", 400): "Amiri-Regular.ttf",
@@ -73,6 +89,12 @@ LEAD_MS = 250         # tiny lead-in before any audio
 
 TRAD_NAME = {"sunni": "Sunni", "shia": "Shia"}
 TRAD_TAG = {"sunni": "b", "shia": "i"}   # matches .vo b{gold} / .vo i{teal} in the template
+
+# Spoken lead-in that NAMES the tradition before its description is read aloud,
+# mirroring how the verse beat speaks the sūra:āya reference before the translation.
+# Like that reference, the intro is spoken but NOT highlighted — only the body words
+# map 1:1 to the on-screen word-by-word highlight. {name} -> "Sunni" / "Shia".
+READING_INTRO = "The {name} emphasis."
 
 
 
@@ -101,9 +123,9 @@ def find_chrome() -> str:
     )
 
 
-def preflight() -> str:
-    if not TEMPLATE.exists():
-        raise FileNotFoundError(f"Template missing: {TEMPLATE}")
+def preflight(template: Path) -> str:
+    if not template.exists():
+        raise FileNotFoundError(f"Template missing: {template}")
     if shutil.which("ffmpeg") is None or shutil.which("ffprobe") is None:
         raise EnvironmentError("ffmpeg/ffprobe not found. Install with: brew install ffmpeg")
     for fn in FONT_FILES.values():
@@ -146,34 +168,51 @@ def load_episode(path: Path) -> dict:
 
 
 def build_episode_js(ep: dict, beats: dict, end_ms: int, trans_words: list | None = None, reading_words: dict | None = None) -> dict:
-    """Assemble the window.EPISODE object the template consumes."""
+    """Assemble the window.EPISODE object the template consumes.
+
+    All on-screen English is run through the house plain-spelling rule, so the video
+    carries no transliteration diacritics (ʿAlī -> Ali, al-Mīzān -> al-Mizan). The
+    `arabic` script is passed through verbatim — never stripped. Word-highlight timing
+    is unaffected: stripping is per-character (plus whole-word exceptions), so the
+    bodyWords/transWords token counts and their s/e timings stay put.
+    """
     order = ep["order"]
     first, second = order[0], order[1]
     vo = ep["voiceover"]
     hook_cap = vo.get("hook_caption") or "How do two of Islam’s great traditions read the same verse?"
+
+    def strip_words(words):
+        return [{**w, "w": plain_spelling(w["w"])} for w in (words or [])]
+
     return {
         "content": {
-            "verse_ref": ep["verse_ref"],
-            "arabic": ep["arabic"],
-            "translation": ep["translation"],
+            "verse_ref": plain_spelling(ep["verse_ref"]),
+            "arabic": ep["arabic"],                        # Arabic script — never stripped
+            "translation": plain_spelling(ep["translation"]),
             "order": order,
             "readings": {
-                t: {"label": ep["readings"][t]["label"],
-                    "body": ep["readings"][t]["body"],
-                    "source": ep["readings"][t]["source"],
-                    "bodyWords": (reading_words or {}).get(t, [])}
+                t: {"label": plain_spelling(ep["readings"][t]["label"]),
+                    "body": plain_spelling(ep["readings"][t]["body"]),
+                    "source": plain_spelling(ep["readings"][t]["source"]),
+                    "bodyWords": strip_words((reading_words or {}).get(t, []))}
                 for t in ("sunni", "shia")
             },
-            "caption_desc": ep.get("caption_desc", ""),
-            "transWords": trans_words or [],
-            "cta": ep.get("cta_text") or ep["voiceover"].get("question", ""),
+            "caption_desc": ep.get("caption_desc", ""),    # demo chrome only (not in export)
+            "transWords": strip_words(trans_words),
+            "payoff": plain_spelling(ep["voiceover"].get("payoff", "")),   # on-screen payoff line (shown when show_payoff_text)
+            "cta": plain_spelling(ep.get("cta_text") or ep["voiceover"].get("question", "")),
         },
         "beats": beats,
         "end": end_ms,
+        "theme": ep.get("theme"),   # optional per-episode re-skin; None = brand default (gold/teal)
         "captions": {
-            "hook": hook_cap,
-            "readingA": f"First — the <{TRAD_TAG[first]}>{TRAD_NAME[first]}</{TRAD_TAG[first]}> reading.",
-            "readingB": f"And the <{TRAD_TAG[second]}>{TRAD_NAME[second]}</{TRAD_TAG[second]}> reading.",
+            "hook": plain_spelling(hook_cap),
+            # readingA/B cue text may be overridden per episode; the defaults name the
+            # tradition ("First — the Sunni reading."). <b> = accentA, <i> = accentB.
+            "readingA": plain_spelling((ep.get("captions") or {}).get("readingA")
+                        or f"First — the <{TRAD_TAG[first]}>{TRAD_NAME[first]}</{TRAD_TAG[first]}> reading."),
+            "readingB": plain_spelling((ep.get("captions") or {}).get("readingB")
+                        or f"And the <{TRAD_TAG[second]}>{TRAD_NAME[second]}</{TRAD_TAG[second]}> reading."),
         },
         "showCaptions": ep.get("show_captions", True),
         "showSynth": ep.get("show_payoff_text", True),
@@ -196,10 +235,12 @@ def ffprobe_duration(path: Path) -> float:
 def synth_segments(ep: dict, tmp: Path):
     """TTS the 6 beats. Returns (segments, translation_words, reading_words).
 
-    The verse and the two readings speak the SAME text shown on screen, via the
-    timestamped endpoint, so their words can be highlighted in sync. Readings are
-    normalized for TTS (diacritics stripped) but displayed with diacritics intact —
-    normalization is per-character, so the word mapping stays 1:1.
+    The verse and the two readings use the timestamped endpoint so their words can
+    be highlighted in sync. Each reading is preceded by a short spoken intro that
+    names the tradition ("The Shia emphasis.") — like the verse's sūra:āya reference,
+    the intro is spoken but NOT highlighted (words[intro_n:] are the body). Readings
+    are normalized for TTS (diacritics stripped) but displayed with diacritics intact —
+    normalization is per-character, so the body's word mapping stays 1:1.
     """
     order = ep["order"]
     vo = ep["voiceover"]
@@ -241,16 +282,23 @@ def synth_segments(ep: dict, tmp: Path):
             trans_words = [{"w": w["word"], "s": int(round(w["start"] * 1000)), "e": int(round(w["end"] * 1000))}
                            for w in words[ref_n:]]
         elif trad is not None:
-            spoken = normalize_for_tts(text)
+            # Speak "The <Trad> emphasis." first (not highlighted), then the body —
+            # one utterance, so the words[intro_n:] split mirrors the verse's
+            # words[ref_n:]. The body words keep their real (intro-offset) timings,
+            # so the highlight begins exactly when the body speech begins.
+            intro = ep["readings"][trad].get("intro") or READING_INTRO.format(name=TRAD_NAME[trad])
+            intro_n = len(intro.split())
+            spoken = f"{intro} {normalize_for_tts(text)}"
             words = synthesize_timed(spoken, mp3)
             display = text.split()
-            if len(words) != len(display):
+            if len(words) - intro_n != len(display):
                 raise RuntimeError(
-                    f"reading {trad}: {len(words)} spoken words != {len(display)} displayed words. "
+                    f"reading {trad}: {len(words) - intro_n} spoken body words != "
+                    f"{len(display)} displayed words (intro {intro!r} = {intro_n} words). "
                     f"Reword the body so display and speech tokenize the same.")
             reading_words[trad] = [{"w": display[j],
-                                    "s": int(round(words[j]["start"] * 1000)),
-                                    "e": int(round(words[j]["end"] * 1000))}
+                                    "s": int(round(words[intro_n + j]["start"] * 1000)),
+                                    "e": int(round(words[intro_n + j]["end"] * 1000))}
                                    for j in range(len(display))]
         else:
             synthesize(text, mp3)
@@ -305,8 +353,8 @@ def font_face_block() -> str:
     return "\n".join(lines)
 
 
-def build_render_html(episode_js: dict, out_html: Path) -> Path:
-    html = TEMPLATE.read_text()
+def build_render_html(episode_js: dict, out_html: Path, template: Path = TEMPLATE) -> Path:
+    html = template.read_text()
 
     # 1) self-contained fonts (no network during capture)
     start, end = "/*FONT-FACE-START*/", "/*FONT-FACE-END*/"
@@ -367,13 +415,35 @@ def preview(ep: dict) -> None:
     out = OUTPUT_DIR / "temp" / f"{ep['slug']}_preview.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     # keep network fonts for the hand-preview; just inject the episode object
-    html = TEMPLATE.read_text().replace(
+    html = episode_template(ep).read_text().replace(
         "<!--EPISODE-INJECT-->",
         "<script>window.EPISODE = " + json.dumps(episode_js, ensure_ascii=False) + ";</script>", 1)
     out.write_text(html)
     print(f"Preview written: {out}")
     if sys.platform == "darwin":
         subprocess.run(["open", str(out)])
+
+
+# ----------------------------- post suggestion -----------------------------
+
+def suggested_post(ep: dict) -> tuple[str, str]:
+    """The title + hashtags to post the clip with, echoed at the end of a render.
+
+    Title comes from the authored `title` field — a short, curiosity-inviting line;
+    it falls back to the verse reference. Hashtags come from an optional `hashtags`
+    field (a list, or a pre-joined string), else are lifted from the caption's
+    <span class="tags">…</span> so there is a single source of truth for tags.
+    """
+    title = (ep.get("title") or ep.get("verse_ref") or "").strip()
+    tags = ep.get("hashtags")
+    if isinstance(tags, (list, tuple)):
+        hashtags = " ".join("#" + str(t).lstrip("#") for t in tags if str(t).strip())
+    elif isinstance(tags, str) and tags.strip():
+        hashtags = tags.strip()
+    else:
+        m = re.search(r'<span class="tags">(.*?)</span>', ep.get("caption_desc", ""), re.S)
+        hashtags = re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
+    return title, hashtags
 
 
 # ----------------------------- main -----------------------------
@@ -395,7 +465,8 @@ def main() -> int:
         preview(ep)
         return 0
 
-    chrome = preflight()
+    template = episode_template(ep)
+    chrome = preflight(template)
     slug = ep["slug"]
     tmp = OUTPUT_DIR / "temp" / slug
     frames_dir = tmp / "frames"
@@ -413,7 +484,7 @@ def main() -> int:
 
     print("[3/5] Building self-contained render HTML…")
     episode_js = build_episode_js(ep, beats, end_ms, trans_words, reading_words)
-    render_html = build_render_html(episode_js, tmp / "render.html")
+    render_html = build_render_html(episode_js, tmp / "render.html", template)
 
     print(f"[4/5] Capturing frames @ {args.fps}fps with {args.workers} workers…")
     capture_frames(chrome, render_html, end_ms, args.fps, frames_dir, args.workers)
@@ -429,6 +500,12 @@ def main() -> int:
     print(f"\n✅ Done: {out_mp4}  ({dur:.1f}s, 1080x1920)")
     print("   Reminder: voiceover carries the English + commentary only; the Arabic is "
           "shown silently (never AI-recited).")
+
+    title, hashtags = suggested_post(ep)
+    print("\n📌 Post as (title invites curiosity, never names a winner):")
+    print(f"   Title:    {title}")
+    if hashtags:
+        print(f"   Hashtags: {hashtags}")
     return 0
 
 

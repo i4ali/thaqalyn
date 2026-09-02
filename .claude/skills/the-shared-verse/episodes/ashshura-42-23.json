@@ -1,0 +1,32 @@
+{
+  "slug": "ashshura-42-23",
+  "title": "Love for Whom?",
+  "verse_ref": "Sūrat al-Shūrā · 42:23",
+  "arabic": "ذَٰلِكَ ٱلَّذِى يُبَشِّرُ ٱللَّهُ عِبَادَهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ ۗ قُل لَّآ أَسْـَٔلُكُمْ عَلَيْهِ أَجْرًا إِلَّا ٱلْمَوَدَّةَ فِى ٱلْقُرْبَىٰ",
+  "translation": "“That is the good news God gives His servants who believe and do righteous deeds. Say: I ask of you no reward for this except love for the near of kin.”",
+  "order": ["shia", "sunni"],
+  "readings": {
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "'The near of kin' are the Prophet's own family - ʿAlī, Fāṭima, al-Ḥasan and al-Ḥusayn. He commands every believer to love them; that love is his mission's whole reward.",
+      "source": "al-Mīzān (Ṭabāṭabāʾī) · Majmaʿ al-Bayān"
+    },
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "'The near of kin' is the Prophet's blood tie to the Quraysh. He asks his own tribe for no reward - only to honour the kinship they share with him.",
+      "source": "Tafsīr al-Ṭabarī · Ibn Kathīr"
+    }
+  },
+  "voiceover": {
+    "hook": "The Prophet asked for just one reward - love. But love for whom? Two great traditions answer that differently.",
+    "reference": "Surah al-Shura, verse twenty-three.",
+    "payoff": "Three words - 'love for the near of kin.' One tradition hears a command to love the Prophet's family. The other, a plea to his own tribe: honour the kinship between us.",
+    "question": "Which of these two readings resonates with you"
+  },
+  "cta_text": "Which of these two readings resonates with you?",
+  "show_payoff_text": false,
+  "show_closing_text": true,
+  "hashtags": ["quran", "tafsir", "ahlulbayt", "mawadda", "shia", "sunni", "surahshura", "islam", "quranexplained"],
+  "caption_desc": "'Love for the near of kin' - but who are they? Shia and Sunni tafsir read this one phrase very differently 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni #ahlulbayt #mawadda #surahshura</span>",
+  "show_captions": true
+}

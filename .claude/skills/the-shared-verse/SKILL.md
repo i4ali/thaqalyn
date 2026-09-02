@@ -18,8 +18,8 @@ The channel is **its own thing, not an advertisement**. Episodes never pitch an 
 When the user wants an episode, deliver:
 
 1. A complete **episode script** following the six-beat flow below — use the *Episode script template* section as the fill-in structure.
-2. An **episode JSON** under `episodes/<slug>.json` (verse + translation, the two readings with sources, and the voiceover lines). This is the single source of truth the renderer consumes.
-3. A **finished video** — a clean 1080×1920 mp4 with voiceover — via the pipeline (*Rendering the video* below). Optionally show the **in-feed preview** first.
+2. An **episode JSON** under `episodes/<slug>.json` (verse + translation, the two readings with sources, the voiceover lines, plus a short curiosity-inviting **`title`** and recommended **`hashtags`**). This is the single source of truth the renderer consumes.
+3. A **finished video** — a clean 1080×1920 mp4 with voiceover — via the pipeline (*Rendering the video* below); the render prints a suggested **post title + hashtags** at the end, ready to paste. Optionally show the **in-feed preview** first.
 
 Always run the **fairness + accuracy checklist** before calling an episode done.
 
@@ -112,13 +112,14 @@ Don't hand-edit the HTML per episode. It reads its content from `window.EPISODE`
 ```jsonc
 {
   "slug": "almaidah-5-55",                  // output filename
+  "title": "Who Is Your Guardian?",         // SHORT, curiosity-inviting post title; echoed at render end (falls back to verse_ref)
   "verse_ref": "Sūrat al-Māʾidah · 5:55",
   "arabic": "…Uthmani + diacritics…",       // SHOWN ONLY — never voiced
   "translation": "“…English…”",             // shown on screen AND read aloud (after the reference); each word brightens as it is narrated
   "order": ["sunni", "shia"],               // reveal/stack order — ROTATE each episode
   "readings": {                               // body is SHOWN, read aloud, AND highlighted word-by-word
     "sunni": { "label": "Sunni emphasis",
-               "body": "~20–24 words, matched to the other; highlights GOLD as narrated. Diacritics (ʿAlī) stay on screen, auto-stripped for TTS.",
+               "body": "~20–24 words, matched to the other; highlights GOLD as narrated. Author with diacritics if you like (ʿAlī); they render as plain spelling (Ali) on screen AND for TTS.",
                "source": "Tafsīr Ibn Kathīr · al-Qurṭubī" },
     "shia":  { "label": "Shia emphasis",
                "body": "… matched in length … (highlights TEAL)",
@@ -134,6 +135,7 @@ Don't hand-edit the HTML per episode. It reads its content from `window.EPISODE`
   "pins": {                                 // OPTIONAL — reuse an approved audio take verbatim instead of re-synthesizing
     "question": "episodes/pins/<slug>__question.mp3"   // hook / payoff / question only (never a highlighted beat)
   },
+  "hashtags": ["quran", "tafsir", "shia", "sunni"],  // OPTIONAL recommended tags echoed at render end; if omitted, lifted from caption_desc's tags
   "caption_desc": "demo-only feed caption 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>",
   "show_captions": true,                    // burn the short on-screen cue phrases ("First — the Sunni reading", …)
   "show_payoff_text": true,                 // show "Same words. Different weight." on screen (voiceover plays regardless)
@@ -142,9 +144,11 @@ Don't hand-edit the HTML per episode. It reads its content from `window.EPISODE`
 ```
 
 - **`order` is how you rotate.** `["sunni","shia"]` = Sunni first/on top; `["shia","sunni"]` flips reveal order, stacking, *and* the gold/teal caption cues — all from this one field.
-- **One reading text.** Each reading's `body` is shown, narrated, AND highlighted word-by-word — the current word glows in the tradition's accent (gold/teal) — so display = speech. Keep the two bodies matched in length (~20–24 words). Diacritics (`ʿAlī`, `rukūʿ`) stay on screen and are auto-stripped just for TTS, so they pronounce cleanly.
+- **One reading text.** Each reading's `body` is shown, narrated, AND highlighted word-by-word — the current word glows in the tradition's accent (gold/teal) — so display = speech. Keep the two bodies matched in length (~20–24 words).
+- **Plain spelling on screen (no transliteration diacritics).** You may author with diacritics (`ʿAlī`, `al-Mīzān`, `rukūʿ`); the renderer strips every on-screen English string to the house **plain spelling** — `ʿAlī → Ali`, `al-Mīzān → al-Mizan`, `Ṭabāṭabāʾī → Tabatabai` — via the project's canonical `scripts/strip_diacritics.py` (same rules + exceptions as the app), and TTS is stripped too, so nothing carries macrons or ʿayn/hamza marks. Only the **`arabic`** script is left untouched. Stripping is per-character, so the word-by-word highlight stays perfectly in sync.
 - **Closing line, two parts.** `voiceover.question` is what's **spoken**; the **on-screen** prompt defaults to it but `cta_text` can override it. Best practice: speak it as a calm declarative (no `?` in `voiceover.question`) but show the `?` via `cta_text`. Hide the on-screen prompt entirely with `show_closing_text: false` — the voiceover still plays.
 - **Pinned audio (optional).** `pins: { <beat>: <path> }` reuses an approved take verbatim instead of re-synthesizing — for when ElevenLabs variance hands you a take worth locking. Works for `hook`, `payoff`, `question` (beats with no word-highlight); paths are relative to the skill root.
+- **Title & hashtags (for posting).** `title` is a **short line that invites curiosity** without naming a "winner" or spoiling the payoff (e.g. "Who Is Your Guardian?", "Love for Whom?", "The Only Reward He Asked For") - it falls back to `verse_ref` if omitted. `hashtags` is the recommended tag set (a list like `["quran","tafsir",…]`, or a pre-joined string); if omitted, the renderer lifts the tags from `caption_desc`, so there is one source of truth for tags. Neither is shown in the video - both are **printed at the end of every render**, ready to paste into the post.
 
 ### Run it
 
@@ -170,11 +174,11 @@ python scripts/render_episode.py episodes/almaidah-5-55.json --fps 30 --workers 
 5. **Capture** every frame by driving a few **warm** headless-Chrome instances over the DevTools Protocol (`scripts/capture_cdp.py`): each loads `?capture=1` once, then `seek(t)` + screenshots per frame. The animation is a pure function of `t` (inline styles, no CSS transitions), so frames are deterministic; reusing a warm browser is far faster than a cold `--screenshot` per frame.
 6. **Compose** with ffmpeg → 1080×1920 H.264/AAC mp4.
 
-No fallbacks anywhere: any failed step raises a clear error. Output lands in `the_shared_verse/<slug>.mp4`.
+No fallbacks anywhere: any failed step raises a clear error. Output lands in `the_shared_verse/<slug>.mp4`, and the run prints a suggested post **title + hashtags** at the end.
 
 ### Posting
 
-The mp4 is bare on purpose. Post it natively to TikTok/Reels/Shorts and let the platform add its own UI; write the caption/hashtags in the post (start from `caption_desc`). Do **not** burn the handle or hashtags into the video.
+The mp4 is bare on purpose. Post it natively to TikTok/Reels/Shorts and let the platform add its own UI. The render prints a suggested **title** and **hashtags** at the end - use the title as the post's headline and paste the hashtags (or start the caption from `caption_desc`). Do **not** burn the handle, title, or hashtags into the video.
 
 ---
 
