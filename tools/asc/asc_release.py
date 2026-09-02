@@ -11,7 +11,7 @@ import hashlib, json, os, sys, time, urllib.request
 sys.path.insert(0, os.path.dirname(__file__))
 from asc import req, get, app_id
 
-VERSION = "8.4"
+VERSION = os.environ.get("ASC_VERSION", "8.5")
 
 
 def create_version():
@@ -63,10 +63,15 @@ def upload(set_id, path):
     return sid
 
 
+# 8.5 (build 106): Qarai translation swap + Surah al-Nahl. Keyed by language code; a
+# store locale (en-US, es-MX, ar-SA, hi, ur-PK, fr-FR ...) matches on its language prefix.
 NOTES = {
-    "en": "Refreshed and refined. A new build with small improvements under the hood, so everything from the Quran reader to your progress rings runs a little smoother.",
-    "ar-SA": "تحديث وتحسين. إصدار جديد مع تحسينات صغيرة خلف الكواليس، ليعمل كل شيء من قارئ القرآن إلى حلقات التقدم بسلاسة أكبر.",
-    "ur-PK": "تازہ اور بہتر۔ ایک نیا بلڈ جس میں پس منظر میں چھوٹی بہتریاں شامل ہیں، تاکہ قرآن ریڈر سے لے کر آپ کی پیش رفت تک سب کچھ مزید ہموار چلے۔",
+    "en": "New: the Quran's English translation is now Ali Quli Qarai's phrase-by-phrase Shia translation, replacing Sahih International, across the reader, daily verse, search, and widget. New Inside the Surah journey: Surah al-Nahl, the Surah of Blessings.",
+    "es": "Nuevo: la traducción al inglés del Corán ahora es la traducción chií frase por frase de Ali Quli Qarai, que reemplaza a Sahih International, en el lector, el versículo diario, la búsqueda y el widget. Nuevo recorrido Inside the Surah: Sura an-Nahl, la Sura de las Bendiciones.",
+    "fr": "Nouveau : la traduction anglaise du Coran est désormais la traduction chiite phrase par phrase d'Ali Quli Qarai, qui remplace Sahih International, dans le lecteur, le verset du jour, la recherche et le widget. Nouveau parcours Inside the Surah : Sourate an-Nahl, la sourate des Bienfaits.",
+    "ar": "جديد: أصبحت الترجمة الإنجليزية للقرآن الآن ترجمة علي قلي قرائي الشيعية عبارةً بعبارة، بدلاً من ترجمة صحيح إنترناشيونال، في القارئ والآية اليومية والبحث والودجت. رحلة جديدة داخل السورة: سورة النحل، سورة النعم.",
+    "ur": "نیا: قرآن کا انگریزی ترجمہ اب علی قلی قرائی کا فقرہ بہ فقرہ شیعہ ترجمہ ہے، جو صحیح انٹرنیشنل کی جگہ لے چکا ہے، ریڈر، روزانہ کی آیت، تلاش اور ویجٹ میں۔ سورہ کے اندر کا نیا سفر: سورۃ النحل، نعمتوں کی سورت۔",
+    "hi": "नया: क़ुरआन का अंग्रेज़ी अनुवाद अब अली क़ुली क़राई का वाक्यांश-दर-वाक्यांश शिया अनुवाद है, जो सहीह इंटरनेशनल की जगह लेता है, रीडर, दैनिक आयत, खोज और विजेट में। नई Inside the Surah यात्रा: सूरह अन-नहल, नेमतों की सूरह।",
 }
 
 
@@ -74,7 +79,7 @@ def whatsnew(version_id):
     locs = get(f"/v1/appStoreVersions/{version_id}/appStoreVersionLocalizations", **{"fields[appStoreVersionLocalizations]": "locale,whatsNew", "limit": 50})["data"]
     for loc in locs:
         locale = loc["attributes"]["locale"]
-        text = NOTES.get(locale, NOTES["en"])
+        text = NOTES.get(locale) or NOTES.get(locale.split("-")[0].lower(), NOTES["en"])
         req("PATCH", f"/v1/appStoreVersionLocalizations/{loc['id']}", {"data": {"type": "appStoreVersionLocalizations", "id": loc["id"], "attributes": {"whatsNew": text}}})
         print("whatsNew set", locale)
 

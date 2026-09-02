@@ -36,6 +36,9 @@ struct Surah: Codable, Identifiable {
 
 struct Verse: Codable {
     let arabicText: String
+    /// English translation: Ali Quli Qarai's phrase-by-phrase translation (the standard
+    /// modern Shia rendering). Replaced Sahih International on 2026-09-01; refresh or
+    /// switch editions with scripts/fetch_quran_english.py.
     let translation: String
     /// Urdu translation (Allama Jawadi). Optional for backward compatibility with
     /// any data that predates the translationUrdu field.

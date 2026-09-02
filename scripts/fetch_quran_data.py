@@ -58,9 +58,11 @@ class QuranDataFetcher:
             arabic_response.raise_for_status()
             arabic_data = arabic_response.json()
             
-            # Fetch English translation (Sahih International)
+            # Fetch English translation (Ali Quli Qarai - the Shia translation the app
+            # ships; see scripts/fetch_quran_english.py for the in-place refresh path,
+            # which also keeps the Urdu field this from-scratch rebuild would drop)
             print("  → Fetching English translation...")
-            translation_response = requests.get(f"{self.base_url}/quran/en.sahih")
+            translation_response = requests.get(f"{self.base_url}/quran/en.qarai")
             translation_response.raise_for_status()
             translation_data = translation_response.json()
             

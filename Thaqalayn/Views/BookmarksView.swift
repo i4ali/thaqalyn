@@ -100,15 +100,17 @@ struct BookmarksView: View {
         }
     }
     
+    @MainActor
     private var filteredBookmarks: [Bookmark] {
         let sorted = bookmarkManager.getSortedBookmarks()
-        
+
         if searchText.isEmpty {
             return sorted
         }
-        
+
         return sorted.filter { bookmark in
             bookmark.surahName.localizedCaseInsensitiveContains(searchText) ||
+            bookmark.displayTranslation.localizedCaseInsensitiveContains(searchText) ||
             bookmark.verseTranslation.localizedCaseInsensitiveContains(searchText) ||
             bookmark.notes?.localizedCaseInsensitiveContains(searchText) == true ||
             bookmark.tags.contains { $0.localizedCaseInsensitiveContains(searchText) }
@@ -333,7 +335,7 @@ struct BookmarkCardView: View {
             }
 
             // Verse translation preview
-            Text(bookmark.verseTranslation)
+            Text(bookmark.displayTranslation)
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(themeManager.secondaryText)
                 .lineLimit(2)
@@ -429,7 +431,7 @@ struct EmBookmarkCardBody: View {
                     .environment(\.layoutDirection, .rightToLeft)
 
                 // Translation preview
-                Text(bookmark.verseTranslation)
+                Text(bookmark.displayTranslation)
                     .font(EmType.serif(17, .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .lineSpacing(3)
@@ -595,7 +597,7 @@ struct BookmarkDetailView: View {
                                 .font(.system(size: 14, weight: .semibold))
                                 .foregroundColor(themeManager.secondaryText)
                             
-                            Text(bookmark.verseTranslation)
+                            Text(bookmark.displayTranslation)
                                 .font(.system(size: 16, weight: .medium))
                                 .foregroundColor(themeManager.primaryText)
                                 .lineSpacing(4)
@@ -663,6 +665,22 @@ struct BookmarkDetailView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
+    }
+}
+
+// MARK: - Live verse text
+
+private extension Bookmark {
+    /// The verse's current English translation from the bundled Quran data, falling
+    /// back to the text snapshotted when the bookmark was saved. The snapshot stays
+    /// on the synced record untouched (see docs/BOOKMARK_SYNC_ARCHITECTURE.md); it
+    /// only goes stale for display when the shipped translation edition changes, as
+    /// it did with the 2026-09 move from Sahih International to Ali Quli Qarai.
+    @MainActor
+    var displayTranslation: String {
+        DataManager.shared.quranData?
+            .verses[String(surahNumber)]?[String(verseNumber)]?
+            .translation ?? verseTranslation
     }
 }
 
