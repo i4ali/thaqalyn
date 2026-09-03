@@ -1,0 +1,471 @@
+{
+  "surah": 2,
+  "verses": {
+    "41": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai explains that the Quran confirming what they possessed meant validating the original divine message of the Torah while exposing later human alterations and interpretations",
+            "claim": "Tabatabai: confirming what they had meant validating the Torah's original message while exposing later alterations",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:41",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=41&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "al-Mizan's cached text on this verse is a short intro block about the twelve Israelite episodes and covenant-breaking; it does not discuss the Quran confirming/validating the Torah's original message in these terms."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi notes that exchanging signs for small prices refers to religious leaders who suppressed knowledge of Muhammad's coming to maintain their positions and income from their communities",
+            "claim": "Tabrisi: 'small price' means Jewish leaders suppressing knowledge of Muhammad's coming to protect their income",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:41",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=41&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Jafar al-Sadiq taught that the Jewish scholars of Medina knew from their scriptures that Prophet Muhammad would appear, and some even recognized the descriptions matched him perfectly",
+            "claim": "an Imam taught that Jewish scholars of Medina knew from scripture that Muhammad would appear",
+            "source": "Majma al-Bayan",
+            "author": "Imam al-Baqir (Abu Ja'far)",
+            "locator": "commentary on 2:41",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=41&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "The underlying narration (Hayy ibn Akhtab and Ka'b al-Ashraf distorting Torah verses to protect their yearly stipend) is in Majma al-Bayan attributed to Abu Ja'far (Imam al-Baqir), not Imam Ja'far al-Sadiq; misattribution logged."
+          },
+          {
+            "id": 2,
+            "anchor": "Imam al-Baqir explained that the small price mentioned includes not just money but also social status, political influence, and communal leadership",
+            "claim": "Imam al-Baqir: the 'small price' includes status and leadership, not just money",
+            "source": "Majma al-Bayan",
+            "author": "Imam al-Baqir",
+            "locator": "commentary on 2:41",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=41&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "The narration specifies a yearly communal stipend (ma'kala) and fear of losing standing among their people as the motive; it does not separately mention 'political influence' as the paragraph does."
+          }
+        ]
+      },
+      "layer5": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Sunni exegetes like Ibn Kathir explain that this verse addressed the Jews of Medina who possessed descriptions of the final prophet in their scriptures but rejected Muhammad despite recognizing the",
+            "claim": "Ibn Kathir: verse addressed Jews of Medina who recognized the Prophet from their scriptures but rejected him",
+            "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+            "author": "Ibn Kathir",
+            "locator": "commentary on 2:41",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=2&tAyahNo=41&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "42": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai explains that this includes adding human interpretations to divine revelation and presenting them as equally authoritative, or using authentic texts to justify false conclusions",
+            "claim": "Tabatabai: mixing truth with falsehood includes adding human interpretation to revelation as equally authoritative",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:42",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=42&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "al-Mizan's cached text on this verse is the same short intro block as 2:40-41 and does not discuss 'la talbisu al-haqq bi'l-batil' specifically."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi notes that concealing truth often occurred when Jewish scholars omitted or downplayed passages in their scriptures that clearly indicated Muhammad's prophethood",
+            "claim": "Tabrisi: concealing truth = Jewish scholars omitting Torah passages indicating Muhammad's prophethood",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:42",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=42&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Ali taught that the worst form of falsehood is mixing it with truth, because pure falsehood is easily recognized and rejected, but when mixed with truth it becomes dangerously deceptive",
+            "claim": "Imam Ali: falsehood mixed with truth is more dangerous than pure falsehood",
+            "source": "Nahj al-Balagha",
+            "author": "Imam Ali",
+            "locator": "Sermon 50",
+            "url": "https://en.al-shia.org/falsehood-and-falsehoods-adherents/",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Imam Jafar al-Sadiq explained that some People of the Book would cite authentic passages about God's oneness and prophets' missions while concealing passages about Muhammad and the Ahlul Bayt",
+            "claim": "Imam al-Sadiq: People of the Book cited passages on God's oneness while concealing ones about Muhammad and Ahlul Bayt",
+            "source": "none named",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "Checked Tafsir al-Qummi and Majma al-Bayan on 2:42 (no match) and one web search; found no such narration from Imam al-Sadiq on this verse."
+          },
+          {
+            "id": 3,
+            "anchor": "Imam al-Baqir taught that concealing knowledge when someone genuinely seeks guidance is a grave sin that brings divine displeasure",
+            "claim": "Imam al-Baqir: concealing knowledge from a genuine seeker is a grave sin",
+            "source": "none named",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "One web search found only a related but distinct statement from Imam al-Baqir about concealing testimony/evidence tied to Qur'an 2:283, not a narration specific to this verse about concealing knowledge from seekers."
+          }
+        ]
+      }
+    },
+    "43": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai notes that establishing prayer means setting it up as a pillar of daily life, not merely performing it as a ritual",
+            "claim": "Tabatabai: establishing prayer means making it a pillar of daily life",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:43",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=43&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "al-Mizan's cached text on this verse is again the same 2:40-41 intro block; no distinct comment on 2:43's establishing-prayer phrase was found."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi explains that zakah purifies both wealth and soul, removing attachment to material possessions while helping those in need",
+            "claim": "Tabrisi: zakah purifies wealth and soul",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:43",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=43&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan defines zakah's linguistic root as 'purification of wealth' (zakat al-mal, tathiruhu); the 'and soul' addition is the paragraph's own gloss, not explicit in the text."
+          },
+          {
+            "id": 3,
+            "anchor": "According to Shia interpretation, bowing with those who bow has particular significance, as it connects to following the guidance of divinely appointed leaders who lead the community in worship",
+            "claim": "bowing with those who bow connects to following divinely appointed leaders",
+            "source": "Majma al-Bayan",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "Majma al-Bayan's own three explanations of 'wa'rka'u ma'a al-raki'in' are about congregational prayer and emphasis, not about following divinely appointed leaders; Tafsir al-Qummi returned no text for this verse."
+          }
+        ]
+      },
+      "layer5": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Sunni exegetes like Ibn Kathir explain that this verse commanded the Jews to join the Muslim community and adopt Islamic practices, particularly the five daily prayers and obligatory charity",
+            "claim": "Ibn Kathir: verse commanded the Jews to join the Muslim community and adopt Islamic practice",
+            "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+            "author": "Ibn Kathir",
+            "locator": "commentary on 2:43",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=2&tAyahNo=43&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "44": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai explains that this verse specifically targeted the Jewish religious scholars of Medina who would command their followers to believe in the coming prophet while themselves refusing to accept",
+            "claim": "Tabatabai: verse targeted Jewish scholars of Medina who commanded belief in the coming prophet but refused Muhammad themselves",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:44",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=44&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "al-Mizan's cached text on this verse is again the same 2:40-41 intro block; no distinct comment on 2:44 was found."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Ali taught that the most wretched person is one who sells their Hereafter for someone else's worldly gain, referring to scholars who compromise truth to please others while damaging their own",
+            "claim": "Imam Ali: the most wretched person sells his Hereafter for someone else's worldly gain",
+            "source": "none named",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "One web search found this saying attested in Sunni adab literature attributed to Imam Malik or Umar ibn Abd al-Aziz, not to Imam Ali; misattribution logged."
+          },
+          {
+            "id": 2,
+            "anchor": "Imam Ali said that one should begin with reforming oneself before attempting to reform others, and that personal example is more powerful than verbal instruction",
+            "claim": "Imam Ali: begin reforming oneself before others; teach by conduct not just words",
+            "source": "Nahj al-Balagha",
+            "author": "Imam Ali",
+            "locator": "Saying 75",
+            "url": "https://islamicthought.co.uk/nahjul-balagha-sayings-71-to-80/",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      },
+      "layer5": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Sunni exegetes like Ibn Kathir explain that this verse addressed the Jewish scholars who would command people to follow prophecies in the Torah while themselves rejecting Muhammad despite clear",
+            "claim": "Ibn Kathir: verse addressed Jewish scholars who commanded following Torah prophecies while rejecting Muhammad themselves",
+            "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+            "author": "Ibn Kathir",
+            "locator": "commentary on 2:44",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=2&tAyahNo=44&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "45": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "According to narrations from Imam Jafar al-Sadiq, patience here specifically refers to fasting, which trains the soul in self-control and dependence on Allah",
+            "claim": "Imam al-Sadiq: patience in this verse means fasting",
+            "source": "al-Kafi",
+            "author": "Imam Ja'far al-Sadiq",
+            "locator": "quoted in al-Mizan's riwaya section on 2:45",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=45&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi notes that when Imam Ali faced difficulties, he would immediately stand for prayer and recite this verse, demonstrating its practical application in the lives of the Ahlul Bayt",
+            "claim": "Tabrisi: Imam Ali would stand for prayer and recite this verse in difficulty",
+            "source": "al-Kafi",
+            "author": "Imam al-Sadiq (narrating about Imam Ali)",
+            "locator": "quoted in al-Mizan's riwaya section on 2:45",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=45&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "The point is a real al-Kafi hadith (via al-Sadiq) quoted in al-Mizan, but Majma al-Bayan's own text on 2:45 instead reports the Prophet turning to prayer in distress, not Imam Ali; misattribution to Tabrisi logged."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "when Imam Jafar al-Sadiq was asked about this verse, he explained that patience means fasting, which trains the soul in restraint and dependence on Allah",
+            "claim": "Imam al-Sadiq explained patience in this verse as fasting",
+            "source": "Tafsir al-Qummi",
+            "author": "Imam Ja'far al-Sadiq",
+            "locator": "commentary on 2:45",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=38&tSoraNo=2&tAyahNo=45&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Imam Ali taught that patience is of three types: patience in obedience to Allah, patience in avoiding sins, and patience in facing trials",
+            "claim": "Imam Ali: patience has three types (obedience, avoiding sin, trials)",
+            "source": "none named",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "unchecked",
+            "note": "One web search found this hadith with mixed attribution - some sources present it as the Prophet's words narrated through Imam Ali, others as Imam Ali's own saying - and no specific verse-level locator could be confirmed."
+          }
+        ]
+      },
+      "layer5": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Shia scholars add the specific interpretation, based on hadith from the Imams, that patience particularly refers to fasting, which embodies self-restraint and spiritual discipline",
+            "claim": "Shia hadith interpretation: patience in this verse means fasting",
+            "source": "Majma al-Bayan",
+            "author": "",
+            "locator": "commentary on 2:45",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=45&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "46": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai explains that the word translated as certainty indicates not intellectual belief but deep conviction that permeates consciousness and shapes behavior",
+            "claim": "Tabatabai: 'yazunnun/certainty' in this verse means deep conviction (yaqin), not mere probability",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:46",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=46&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "According to Shia interpretation, this certainty includes belief in the Barzakh, the intermediate realm between death and resurrection, making the return to Allah a vivid reality rather than abstract",
+            "claim": "certainty of meeting Allah includes belief in the Barzakh",
+            "source": "al-Mizan",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "Grep for 'al-Barzakh' in al-Mizan's text on this verse found no matches."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "According to traditions, Imam Ali would say that if the veils were removed, his certainty would not increase, indicating that his conviction about divine meeting was absolute",
+            "claim": "Imam Ali: 'if the veil were lifted, my certainty would not increase' (law kushifa al-ghita)",
+            "source": "none named",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "This widely repeated saying could not be traced to a checkable primary hadith source in one web search; some Islamic scholarly discussion notes it lacks documentation in the classical hadith corpus."
+          }
+        ]
+      }
+    },
+    "47": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi explains that the favors included miraculous deliverance from Pharaoh, provision in the wilderness, revelation of divine law, and numerous prophets from among them",
+            "claim": "Tabrisi: Israel's favors included deliverance from Pharaoh, provision, divine law, and prophets",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:47",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=47&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Classical Shia scholars explain that the preference of Israel was temporal and conditional, limited to their era when they received prophets like Moses and were given the Torah",
+            "claim": "Israel's preference was temporal, limited to their era",
+            "source": "Majma al-Bayan",
+            "author": "",
+            "locator": "commentary on 2:47",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=47&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Matches Majma al-Bayan's cited explanation (via Ibn Abbas) that 'al-alamin' meant the peoples of their own era, and that being favored in specific things does not make them absolutely superior."
+          },
+          {
+            "id": 3,
+            "anchor": "Tabatabai notes that this preference did not extend to all time, as the final and complete guidance came through Prophet Muhammad and continues through his family",
+            "claim": "Tabatabai: Israel's preference did not extend past the coming of Muhammad and his family",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:47",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=47&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "al-Mizan's entry on this verse is very long (26 pages); the paragraphs matched by keyword search did not contain this specific point, and a full read was outside this verse's source-call budget."
+          }
+        ]
+      }
+    },
+    "48": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai explains that this verse denies unauthorized intercession or intercession for disbelievers, not the legitimate intercession that will occur by divine permission for believers",
+            "claim": "Tabatabai: verse denies intercession without divine permission, not legitimate intercession for believers",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:48",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=48&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "The compensation mentioned refers to the concept in pre-Islamic Arabia where blood money could substitute for justice; the verse establishes that divine justice cannot be purchased or negotiated",
+            "claim": "'adl' (compensation) in the verse alludes to pre-Islamic Arabian blood-money substitution",
+            "source": "Majma al-Bayan",
+            "author": "",
+            "locator": "commentary on 2:48",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=48&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "The classical tafsirs gloss 'adl' as fidyah/ransom (a substitute payment for wrongdoing), not specifically as pre-Islamic Arabian blood money (diya); the broader 'cannot be purchased' point is supported."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Ali taught that intercession is real and will occur, but only by Allah's permission and only for believers whose fundamental faith qualifies them",
+            "claim": "intercession is real but conditioned on Allah's permission",
+            "source": "al-Mizan",
+            "author": "",
+            "locator": "commentary on 2:48",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=48&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "al-Mizan has an extensive discussion establishing that intercession (shafa'a) is real but only bi-idhnihi (by God's permission); this is Tabatabai's own analysis, not a specific quoted statement of Imam Ali."
+          },
+          {
+            "id": 2,
+            "anchor": "Imam Jafar al-Sadiq explained that the Ahlul Bayt will intercede for their sincere followers, but this occurs by divine permission and grace, not as an automatic right",
+            "claim": "Imam al-Sadiq: the Ahlul Bayt intercede for sincere followers by divine permission",
+            "source": "Majma al-Bayan",
+            "author": "the Prophet (narrated via Shia chains)",
+            "locator": "commentary on 2:48",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=48&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan quotes a hadith marfu' to the Prophet about himself, Ali, and the Ahlul Bayt interceding and being granted it; the paragraph credits this to Imam al-Sadiq's own explanation instead; misattribution logged."
+          }
+        ]
+      },
+      "layer5": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Sunni exegetes like Ibn Kathir explain that this verse denies intercession without divine permission and compensation that could override divine justice, while affirming that legitimate intercession",
+            "claim": "Ibn Kathir: verse denies intercession/compensation for disbelievers, while legitimate intercession occurs by permission",
+            "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+            "author": "Ibn Kathir",
+            "locator": "commentary on 2:48",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=2&tAyahNo=48&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Ibn Kathir's text explicitly ties the denial of intercession/ransom on this verse to disbelievers; it does not itself state the 'legitimate intercession by permission' affirmation on this page (that is Ibn Kathir's position elsewhere in his tafsir)."
+          }
+        ]
+      }
+    }
+  }
+}

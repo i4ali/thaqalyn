@@ -1,0 +1,808 @@
+{
+  "surah": 2,
+  "verses": {
+    "1": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "suggesting they represent secrets between God and the Prophet Muhammad, inaccessible to ordinary understanding",
+            "claim": "Tabatabai: disjoined letters are secrets between God and the Prophet",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:1",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=1&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's entry on 2:1 explicitly defers detailed discussion of the disjoined letters to Surah al-Shura (42:1); this specific claim (secrets between God and Prophet, thematically related chapters) was not found in its commentary on 2:1."
+          },
+          {
+            "id": 2,
+            "anchor": "proposes that these letters serve as names or titles for the chapters themselves, a view he considers among the most sound interpretations",
+            "claim": "Tabrisi/Tusi: the letters are names or titles of the chapters",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:1",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=1&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan does list 'they are names/titles of the surahs' as one of several classical opinions (attributed there to al-Hasan and Zayd ibn Aslam), but the text does not attribute it to Shaykh Tusi specifically nor call it the soundest view."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Hasan Askari's tafsir emphasizes that the Quran contains layers of meaning accessible to different levels of understanding",
+            "claim": "Imam Hasan Askari's tafsir on layered meaning and the muqatta'at as the deepest layer",
+            "source": "Tafsir Imam Hasan Askari",
+            "author": "Imam Hasan al-Askari",
+            "locator": "",
+            "url": "",
+            "status": "unchecked",
+            "note": "One web search located general information about this tafsir but did not confirm this specific passage on 2:1."
+          },
+          {
+            "id": 2,
+            "anchor": "The Prophet Muhammad reportedly said that the Quran has an outward meaning and an inward meaning, and that inward meaning has an inward meaning up to seven layers.",
+            "claim": "Prophetic hadith on seven inner layers of Quranic meaning",
+            "source": "none named",
+            "author": "Prophet Muhammad",
+            "locator": "",
+            "url": "",
+            "status": "unchecked",
+            "note": "A related hadith ('every verse has a zahir and a batin') is narrated from Ibn Mas'ud in Ibn Hibban's Sahih (no. 75) but is disputed (graded weak by al-Albani); the specific 'up to seven layers' wording was not confirmed to a citable primary source in this session."
+          }
+        ]
+      }
+    },
+    "2": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "the negation of doubt refers to the Quran's internal coherence, miraculous eloquence, and fulfilled prophecies",
+            "claim": "Tabatabai: no rational basis for doubt given the Quran's coherence and eloquence",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:1-5",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=2&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan elaborates on the characteristics of the muttaqin, noting that subsequent verses detail their qualities.",
+            "claim": "Tabrisi: the muttaqin's qualities are detailed in the following verses",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:2",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=2&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "explaining that the guidance for the muttaqin specifically refers to the Shias of Muhammad and Ali",
+            "claim": "Imam Hasan Askari: hudan lil-muttaqin refers specifically to the Shia of Muhammad and Ali",
+            "source": "Tafsir Imam Hasan Askari",
+            "author": "Imam Hasan al-Askari",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "Two web searches did not locate this passage; also checked Tafsir al-Qummi on 2:2, which instead has a different (unrelated) esoteric reading of this verse."
+          },
+          {
+            "id": 2,
+            "anchor": "Imam Ali described the muttaqin in a famous sermon as people who speak with truth, dress modestly, walk humbly, lower their gazes from what Allah has forbidden",
+            "claim": "Imam Ali's Sermon of the Pious (Hammam) describing the muttaqin",
+            "source": "Nahj al-Balagha",
+            "author": "Imam Ali",
+            "locator": "Sermon 193 (Sermon of the Pious / the Hammam sermon)",
+            "url": "https://en.wikishia.net/view/Al-Muttaqin_Sermon",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "3": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "explaining that 'al-ghayb' refers not to what is merely hidden from current view, but to realities fundamentally beyond sensory perception",
+            "claim": "Tabatabai on the meaning of belief in the unseen (al-ghayb)",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:1-5",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=3&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan elaborates that these three qualities represent the pillars of faith: sound belief, proper worship, and righteous action toward others.",
+            "claim": "Tabrisi: the three qualities as pillars of faith",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:3",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=3&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan gives detailed definitions of belief in the unseen, establishing prayer (performing it 'bi-hududiha wa fara'idiha'), and spending, but does not frame the three explicitly as 'pillars of faith' in the retrieved text."
+          }
+        ]
+      }
+    },
+    "4": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "he clarifies that this belief applies to the original, uncorrupted revelations, not necessarily to the current versions of Torah and Gospel which Muslims believe have undergone alteration",
+            "claim": "Tabatabai: belief in earlier revelations applies to their original, uncorrupted form",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:1-5",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=4&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "The retrieved block confirms belief in earlier revelation as one of three foundational articles of faith, but the specific tahrif (corruption) argument was not found in the retrieved text on this block."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan elaborates that the muttaqin believe in all prophets without distinction, as rejecting any prophet constitutes rejecting the entire prophetic tradition.",
+            "claim": "Tabrisi: rejecting one prophet is rejecting all prophets",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:4",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=4&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan explains belief in 'what was revealed before you' as belief in the earlier scriptures and defines yaqin regarding the afterlife, but the specific 'rejecting one prophet = rejecting all' formulation was not found in the retrieved text."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "The Prophet Muhammad said that whoever believes in Allah and the Last Day should speak good or remain silent, linking afterlife conviction to ethical behavior.",
+            "claim": "Prophetic hadith linking belief in the Last Day to guarding one's speech",
+            "source": "Sahih al-Bukhari",
+            "author": "Prophet Muhammad",
+            "locator": "Sahih al-Bukhari 6136 (also Sahih Muslim 47)",
+            "url": "https://sunnah.com/bukhari:6136",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "5": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "explaining that 'ala hudaa min rabbihim' indicates these people stand firmly established upon a foundation of guidance from Allah",
+            "claim": "Tabatabai on being 'upon guidance from their Lord'",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:1-5",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=5&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan elaborates on the comprehensive nature of falah, explaining it includes achieving one's objectives, attaining desired goals, and permanent success.",
+            "claim": "Tabrisi on the comprehensive meaning of falah (success)",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:5",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=5&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Ali taught that the people of taqwa are the people of virtue, their speech is truth, their clothing is moderation, and their gait is humility.",
+            "claim": "Imam Ali's Sermon of the Pious describing the muttaqin (reused at 2:5)",
+            "source": "Nahj al-Balagha",
+            "author": "Imam Ali",
+            "locator": "Sermon 193 (Sermon of the Pious / the Hammam sermon)",
+            "url": "https://en.wikishia.net/view/Al-Muttaqin_Sermon",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "6": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "explaining that it addresses those who have stubbornly persisted in disbelief despite clear evidence, not those who simply haven't encountered Islam or who sincerely doubt",
+            "claim": "Tabatabai: verse addresses obstinate, entrenched disbelief",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:6-7",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=6&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan notes that this verse was revealed about specific individuals among the Quraysh leadership who demonstrated intractable hostility to Islam.",
+            "claim": "Tabrisi: revealed about specific hostile individuals",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:6",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=6&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan records several occasions of revelation: Abu Jahl and five of his household killed at Badr (Rabi ibn Anas), or Jewish rabbis who concealed the truth out of envy (Ibn Abbas), among others; not narrowed to 'Quraysh leadership' specifically as the paragraph states."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Ali taught that the worst blindness is blindness of heart, not eyes, as some disbelievers could see the truth but chose to deny it.",
+            "claim": "Imam Ali: worst blindness is blindness of the heart",
+            "source": "none named",
+            "author": "Imam Ali",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "This phrasing echoes Qur'an 22:46 ('it is not the eyes that are blind, but the hearts') rather than a specific traceable saying of Imam Ali; no primary source located in one search."
+          }
+        ]
+      }
+    },
+    "7": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai distinguishes between the seal on hearts and hearing versus the covering on sight, noting different Arabic terms used: 'khatama' for sealing and 'ghishawah' for covering.",
+            "claim": "Tabatabai: distinct terms khatama (seal) vs ghishawah (covering), attributed differently",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:6-7",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=7&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Al-Mizan explicitly notes the khatm (seal) is attributed to Allah Himself while the ghishawah (covering) is attributed to the disbelievers themselves."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan explains that the seal doesn't mean physical alteration but spiritual incapacity to receive truth, like a sealed letter cannot be read.",
+            "claim": "Tabrisi: the seal is metaphorical, not physical alteration",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:7",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=7&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan (citing Abu Ali al-Farisi) explains the sealing as describing their unwillingness to accept the truth after proof was established against them, comparable to calling a coward 'heartless' - the general metaphorical point matches, but the specific 'sealed letter' simile was not found."
+          }
+        ]
+      }
+    },
+    "8": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai notes that the Quran dedicates extensive attention to hypocrites, with thirteen verses in this section alone",
+            "claim": "Tabatabai: thirteen verses in this section address hypocrites",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=8&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's entry (a single brief block covering 2:8-20) does not state a specific verse count; this figure was not found."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan identifies specific individuals among the Medinan hypocrites, including Abdullah ibn Ubayy and his followers",
+            "claim": "Tabrisi identifies Abdullah ibn Ubayy and companions as the hypocrites",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:8",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=8&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Confirmed: Abdullah ibn Ubayy ibn Salul, Jadd ibn Qays, Mu'tab ibn Qushayr and their companions, most of them from the Jews."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Ali famously said that the hypocrite has two faces and two tongues, praising people in their presence while disparaging them in their absence.",
+            "claim": "Imam Ali on the two-faced, two-tongued hypocrite",
+            "source": "Sahih al-Bukhari",
+            "author": "Prophet Muhammad",
+            "locator": "hadith on dhu al-wajhayn (the two-faced person)",
+            "url": "",
+            "status": "partial",
+            "note": "Misattribution logged: the widely attested 'two-faced/two-tongued' warning is a Prophetic hadith (dhu al-wajhayn); no specific Imam Ali saying with this wording was located."
+          },
+          {
+            "id": 2,
+            "anchor": "The Prophet Muhammad taught that signs of the hypocrite include: lying when speaking, breaking promises, and betraying trust.",
+            "claim": "Prophetic hadith on the three signs of a hypocrite",
+            "source": "Sahih al-Bukhari",
+            "author": "Prophet Muhammad",
+            "locator": "Sahih al-Bukhari 33 (also Sahih Muslim 59)",
+            "url": "https://sunnah.com/bukhari:33",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "9": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai notes that thinking one can deceive Allah represents the ultimate foolishness, as He knows not only actions but intentions, not only words but the heart's secrets.",
+            "claim": "Tabatabai on the folly of thinking one can deceive Allah",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=9&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's entry on this block gives only the two parables in brief; this specific analysis of self-deception was not found in the retrieved text."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan explains that attempting to deceive believers means the hypocrites perform outward religious acts, attend prayers",
+            "claim": "Tabrisi on hypocrites' outward deception of believers",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:9",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=9&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan explains the hypocrites conceal disbelief and that this deception rebounds only on themselves ('wa ma yakhda'una illa anfusahum'), matching the general point, though the specific 'attend prayers to gain trust' detail was not found."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "The Prophet Muhammad warned that the hypocrite sits between believers and disbelievers, belonging truly to neither, in a state of constant anxiety and internal conflict.",
+            "claim": "Prophetic hadith comparing the hypocrite to one caught between two groups",
+            "source": "Sahih Muslim",
+            "author": "Prophet Muhammad",
+            "locator": "Sahih Muslim 2784",
+            "url": "https://sunnah.com/muslim:2784a",
+            "status": "partial",
+            "note": "The authentic hadith (narrated by Ibn Umar) compares the hypocrite to a sheep wandering confused between two flocks, not exactly the paragraph's 'sits between... constant anxiety' wording, but the substance (torn between two groups) matches."
+          }
+        ]
+      }
+    },
+    "10": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "He explains that 'marad' refers not to doubt about Allah's existence, which even the polytheists didn't harbor, but to doubt about the Prophet's message, uncertainty about revelation",
+            "claim": "Tabatabai on the meaning of 'disease' (marad) as doubt about the Prophet's message",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=10&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's brief block on 2:8-20 does not analyze 'marad' at this level of detail; not found in the retrieved text."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan identifies the disease specifically as doubt and hypocrisy that afflicted the Medinan hypocrites.",
+            "claim": "Tabrisi: the disease is doubt and hypocrisy",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:10",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=10&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Confirmed: 'al-marad... al-shakk wal-nifaq bila khilaf' (the disease is doubt and hypocrisy, without dispute)."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "The Prophet Muhammad taught that hearts rust like metal rusts, and the polish for the heart is remembrance of Allah and reciting the Quran.",
+            "claim": "Prophetic hadith on hearts rusting and being polished by dhikr and Qur'an recitation",
+            "source": "none named",
+            "author": "Prophet Muhammad",
+            "locator": "reported in Shu'ab al-Iman (al-Bayhaqi) no. 1859 / Musnad al-Shihab no. 1179",
+            "url": "",
+            "status": "partial",
+            "note": "Found via search summary only (not a primary page opened this session); wording of the 'polish' varies by narration (dhikr Allah vs. dhikr al-mawt wa qira'at al-Qur'an) and grading is disputed among scholars."
+          }
+        ]
+      }
+    },
+    "11": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai in Al-Mizan explains that the corruption hypocrites spread includes undermining faith, breaking social cohesion, and supporting Islam's enemies while claiming to help Muslims.",
+            "claim": "Tabatabai on the nature of the hypocrites' corruption",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=11&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Not found in al-Mizan's brief block on 2:8-20, which only covers the two parables."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan provides historical context, explaining that when the hypocrites were advised not to conspire with Muslims' enemies",
+            "claim": "Tabrisi on the hypocrites claiming to be peacemakers",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:11",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=11&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Majma al-Bayan gives three explanations of the corruption (disobedience/turning people from faith, allying with disbelievers, altering scripture) and the hypocrites' claim that this was actually reconciliation."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "The Prophet Muhammad warned against innovations in religion presented as reforms, teaching that the best guidance is that which he brought",
+            "claim": "Prophetic hadith 'kullu bid'atin dalalah' (every innovation is misguidance)",
+            "source": "Sahih Muslim",
+            "author": "Prophet Muhammad",
+            "locator": "Khutbat al-Hajah, as recorded in Sahih Muslim",
+            "url": "",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "12": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi in Majma al-Bayan explains that corruption includes all opposition to divine guidance, particularly the hypocrites' specific actions",
+            "claim": "Tabrisi on the scope of the hypocrites' corruption",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:12",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=12&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "The retrieved text on 2:12 mainly repeats the three corruption explanations already given at 2:11 (disobedience, allying with kuffar, altering scripture); the specific mention of 'discouraging jihad' was not found there."
+          }
+        ]
+      }
+    },
+    "13": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi in Majma al-Bayan identifies the believers referred to as the sincere companions of the Prophet who fully embraced Islam with conviction and commitment.",
+            "claim": "Tabrisi: the believers mocked as 'fools' are the Prophet's companions",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:13",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=13&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Confirmed: 'al-murad bihim al-mu'minun min ashab al-nabi' (they mean the believers among the Companions of the Prophet)."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabatabai in Al-Mizan provides detailed analysis of this exchange. He explains that the hypocrites used the term 'sufaha' - fools - to describe believers",
+            "claim": "Tabatabai's detailed analysis of the term 'sufaha'",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=13&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's brief block on 2:8-20 does not analyze the term 'sufaha' in this detail; not found in the retrieved text."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "The Prophet Muhammad taught that the wise person is one who holds themselves accountable and works for what comes after death",
+            "claim": "Prophetic hadith 'al-kayyisu man dana nafsahu' (the wise person holds himself accountable)",
+            "source": "Jami al-Tirmidhi",
+            "author": "Prophet Muhammad",
+            "locator": "Jami al-Tirmidhi 2459 (graded hasan by al-Tirmidhi; weak by al-Albani)",
+            "url": "https://hadithunlocked.com/tirmidhi:2459",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "14": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi in Majma al-Bayan provides historical context, identifying Abdullah ibn Ubayy and similar individuals who would perform this duplicitous behavior.",
+            "claim": "Tabrisi identifies Abdullah ibn Ubayy as engaging in this duplicity",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:8, 2:14",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=14&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Abdullah ibn Ubayy and companions are named at 2:8; the 2:14 entry discusses the same circle's 'shayatinuhum' (their associates)."
+          },
+          {
+            "id": 2,
+            "anchor": "He explains that their evil associates included the Jewish tribes who opposed Islam and the Quraysh enemies in Mecca with whom they maintained secret communication.",
+            "claim": "Tabrisi: their associates were Jewish tribes and Quraysh enemies",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:14",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=14&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan gives 'shayatinuhum' as either their chiefs among the disbelievers (Ibn Abbas) or the Jews who commanded them to deny the Prophet (another opinion), and separately narrates from Imam Muhammad al-Baqir that they were their soothsayers (kahanahum); the specific 'Quraysh enemies in Mecca' framing was not found."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Ali famously taught that the hypocrite has two tongues and two faces, praising people to their faces while disparaging them behind their backs, representing the worst moral character.",
+            "claim": "Imam Ali on the two-tongued, two-faced hypocrite (reused from 2:8)",
+            "source": "Sahih al-Bukhari",
+            "author": "Prophet Muhammad",
+            "locator": "hadith on dhu al-wajhayn (the two-faced person)",
+            "url": "",
+            "status": "partial",
+            "note": "Same misattribution as logged at 2:8: this is a Prophetic hadith, not a traceable saying of Imam Ali."
+          }
+        ]
+      }
+    },
+    "15": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi in Majma al-Bayan explains that divine mockery is metaphorical, meaning Allah punishes their mockery with fitting recompense.",
+            "claim": "Tabrisi: Allah's 'mockery' means just recompense",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:15",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=15&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Tabatabai in Al-Mizan provides sophisticated theological analysis of divine mockery. He explains that Allah's mockery of hypocrites means responding to their deception",
+            "claim": "Tabatabai's detailed theological analysis of divine mockery",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=15&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's brief block on 2:8-20 does not contain this detailed analysis; not found in the retrieved text."
+          }
+        ]
+      }
+    },
+    "16": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Allamah Tabatabai in Al-Mizan explains that this verse uses the metaphor of trade to illustrate the voluntary nature of the hypocrites' choice.",
+            "claim": "Tabatabai: the trade metaphor shows the voluntary nature of their choice",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=16&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Al-Mizan's brief block does not elaborate on the trade metaphor for 2:16 specifically; the 'voluntary' framing is instead confirmed in Majma al-Bayan ('every buyer is one who chooses')."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan notes that the phrase 'their transaction has brought no profit' indicates that they expected worldly benefits from their hypocrisy",
+            "claim": "Tabrisi on the failed transaction of the hypocrites",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:16",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=16&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Confirmed: 'fa-ma rabihat tijaratuhum ay khasiru' (their transaction brought no profit, meaning they lost)."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "According to hadith from Imam Muhammad al-Baqir, hypocrisy begins when one's actions contradict one's words, when the public face differs from the private heart.",
+            "claim": "Imam al-Baqir hadith defining hypocrisy on this verse",
+            "source": "none named",
+            "author": "Imam Muhammad al-Baqir",
+            "locator": "",
+            "url": "",
+            "status": "unchecked",
+            "note": "No specific verse-level primary source located in this session."
+          },
+          {
+            "id": 2,
+            "anchor": "Abdullah ibn Masud reported that during the Prophet's time, they could only recognize hypocrites by their disliking of Ali.",
+            "claim": "Ibn Mas'ud: hypocrites were known by their hatred of Ali",
+            "source": "none named",
+            "author": "Abdullah ibn Masud",
+            "locator": "narration cited by Ibn Mardawayh in his tafsir (per secondary scholarly discussion)",
+            "url": "",
+            "status": "partial",
+            "note": "A hadith with this content is attributed to Ibn Mas'ud (via Ibn Mardawayh) in secondary discussion, and a parallel version is attributed to Abu Sa'id al-Khudri in Ahmad's Musnad; authenticity is disputed among scholars and no primary hadith page was opened this session to confirm chain/wording."
+          }
+        ]
+      }
+    },
+    "17": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Allamah Tabatabai in Al-Mizan explains that this parable refers to the complete hypocrites who initially believed but then disbelieved, as Allah states in other Quranic passages.",
+            "claim": "Tabatabai: the fire parable is about hypocrites who believed then disbelieved, losing benefit at death",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=17&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Al-Mizan's block explains the hypocrite outwardly benefits from Islam (through inheritance and marriage rights shared with believers) until death, 'the moment of complete benefit from faith,' when Allah takes away his light - matching the paragraph's claim closely."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan notes that Allah's taking away their light represents the removal of spiritual benefit and understanding",
+            "claim": "Tabrisi on the removal of light as loss of spiritual benefit",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:17",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=17&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Confirmed: the majority narration (Ibn Abbas, Qatada, al-Dahhak, al-Suddi) explains that when the hypocrites died, they returned to darkness and fear ('fa lamma matu 'adu ila al-zulma wal-khawf')."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Jafar al-Sadiq narrated that the fire in this parable represents the initial faith that some companions showed",
+            "claim": "Imam Sadiq's ta'wil connecting the fire parable to rejection of the Prophet's successor",
+            "source": "none named",
+            "author": "Imam Jafar al-Sadiq",
+            "locator": "",
+            "url": "",
+            "status": "unchecked",
+            "note": "One search did not locate a primary-source narration matching this specific wording."
+          }
+        ]
+      }
+    },
+    "18": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi in Majma al-Bayan elaborates that their muteness indicates their inability to articulate truth or call others to guidance",
+            "claim": "Tabrisi on the deaf/mute/blind metaphors",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:18",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=18&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan (via Qatada) explains deaf/mute/blind as not heeding proofs, not affirming Allah and His Messenger, and not reflecting on the dominion of the heavens and earth respectively; it also confirms sealing is not literal prevention of faith but describes their own choice - matching the paragraph's broader point, though not the exact phrasing."
+          },
+          {
+            "id": 2,
+            "anchor": "Allamah Tabatabai in Al-Mizan explains that this verse describes the complete incapacity of the hypocrites for spiritual reformation.",
+            "claim": "Tabatabai on the hypocrites' complete incapacity",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=18&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's brief block on 2:8-20 does not contain this specific analysis; not found in the retrieved text."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "He taught that the greatest blindness is not recognizing the Imam of one's time, as such a person dies the death of ignorance regardless of their religious practices.",
+            "claim": "Imam Sadiq teaches the 'man mata' hadith about knowing the Imam of one's time",
+            "source": "none named",
+            "author": "Prophet Muhammad (explained by Imam Jafar al-Sadiq)",
+            "locator": "Hadith Man Mata",
+            "url": "https://en.wikishia.net/view/Hadith_Man_Mat",
+            "status": "partial",
+            "note": "Misattribution logged: the 'man mata wa lam ya'rif imama zamanihi' saying is a Prophetic hadith; Imam al-Sadiq's recorded role is explaining its meaning (that it refers to dying in misguidance), not originating the teaching."
+          }
+        ]
+      }
+    },
+    "19": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi in Majma al-Bayan notes that the rainstorm, which should be a source of mercy and life-giving water, becomes a source of terror for them due to their spiritual condition.",
+            "claim": "Tabrisi on the rainstorm parable and the hypocrites' spiritual condition",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:19",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=19&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Majma al-Bayan records several classical readings of this parable (rain = Quran per Ibn Abbas, with thunder explained as an angel 'and this is narrated from our Imams'; a parable of the world per al-Hasan; a parable of Islam; and a literal historical story from Ibn Mas'ud about two hypocrites caught in a storm); the paragraph's specific framing is closest to the Ibn Abbas reading but not verbatim."
+          },
+          {
+            "id": 2,
+            "anchor": "Allamah Tabatabai in Al-Mizan explains that this second parable addresses a different category of hypocrites, those whose faith fluctuates rather than those who completely abandoned it.",
+            "claim": "Tabatabai: second parable addresses a distinct, less severe category of hypocrite",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=19&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's brief block presents the two parables in parallel without distinguishing them as different categories or degrees of hypocrisy; this specific claim was not found."
+          }
+        ]
+      }
+    },
+    "20": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi in Majma al-Bayan notes that the lightning represents clear evidences and miracles that temporarily strengthen their wavering faith",
+            "claim": "Tabrisi: lightning represents clear proofs that temporarily move the wavering hypocrites",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=20&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Confirmed: lightning is glossed as the clear proofs (hujaj) in the Qur'an; whenever called to good or spoils they hastened, but when hardship came upon the Muslims they grew confused and stood still."
+          },
+          {
+            "id": 2,
+            "anchor": "Allamah Tabatabai in Al-Mizan explains that the alternating movement and stillness represents the fluctuating nature of the hypocrites' relationship with Islam.",
+            "claim": "Tabatabai on the alternating movement/stillness as fluctuating hypocrisy",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:8-20",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=20&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Al-Mizan's brief block on 2:8-20 does not contain this specific analysis for 2:20; not found in the retrieved text."
+          }
+        ]
+      }
+    }
+  }
+}

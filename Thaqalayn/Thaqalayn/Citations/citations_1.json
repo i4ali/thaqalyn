@@ -1,0 +1,561 @@
+{
+ "surah": 1,
+ "verses": {
+  "1": {
+   "layer2": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "beginning with God's name signifies that every action undertaken by a believer should be done for Allah's sake, not for personal glory or worldly gain",
+      "claim": "Tabatabai: beginning with God's name ties the act to Him so it is not void or in vain",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=1&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     },
+     {
+      "id": 2,
+      "anchor": "Rahman is an essential attribute of God's essence, manifesting His mercy to all creation without discrimination, whereas Rahim is an active attribute",
+      "claim": "Tabatabai: Rahman is an essential attribute of the divine essence extended to all, Rahim an active attribute that responds to believers",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=1&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "al-Mizan confirms Rahman = general mercy extended to believer and unbeliever alike and Rahim = mercy particular to believers, but frames both as one 'infi'ali' (affective) description rather than as an 'essential attribute of essence' versus an 'active attribute' - that specific philosophical framing was not found in the text."
+     },
+     {
+      "id": 3,
+      "anchor": "Shaykh Tabrisi in Majma al-Bayan notes that the Basmala appears 114 times in the Quran when counting its occurrence at the beginning of each surah",
+      "claim": "Tabrisi: the Basmala appears 114 times in the Quran",
+      "source": "Majma al-Bayan",
+      "author": "Tabrisi",
+      "locator": "commentary on 1:1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=1&tAyahNo=1&tDisplay=yes&LanguageID=1",
+      "status": "not_found",
+      "note": "The retrieved Majma al-Bayan text on 1:1 discusses the Basmala's virtue and hadiths about it (including Imam al-Sadiq calling it the greatest verse) but does not state a count of 114 occurrences."
+     },
+     {
+      "id": 4,
+      "anchor": "The Shia position, supported by narrations from the Ahlul Bayt, affirms that it is indeed the first verse of this blessed chapter.",
+      "claim": "Shia position, per Ahlul Bayt narrations, that the Basmala is the first verse of al-Fatiha",
+      "source": "Majma al-Bayan",
+      "author": "Tabrisi",
+      "locator": "commentary on 1:1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=1&tAyahNo=1&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     }
+    ]
+   },
+   "layer4": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "all of Al-Fatiha is contained in the Basmala, and all of the Basmala is contained in the letter Ba, and he himself is the dot beneath the Ba",
+      "claim": "Imam Ali: the Quran is in al-Fatiha, al-Fatiha in the Basmala, the Basmala in the Ba, and he is the dot under the Ba",
+      "source": "Shia oral tradition",
+      "author": "Imam Ali",
+      "locator": "Shia devotional/mystical literature (no primary hadith-collection citation located)",
+      "url": "https://imamhussain.org/19320",
+      "status": "partial",
+      "note": "This saying is widely attributed to Imam Ali in Shia devotional and mystical literature (see e.g. imamhussain.org and rohani.ir discussions of the hadith), but no primary hadith-collection citation (book/chapter/number) could be located in this session; some sources discuss it as a mystical maxim of contested chain rather than a graded hadith."
+     },
+     {
+      "id": 2,
+      "anchor": "Imam Jafar al-Sadiq, the sixth Imam, explained that when a believer recites the Basmala with true understanding and sincerity, Allah forgives their sins and envelops them in His mercy.",
+      "claim": "Imam Sadiq: sincere recitation of the Basmala brings forgiveness and divine mercy",
+      "source": "attributed narration",
+      "author": "Imam Jafar al-Sadiq",
+      "locator": "",
+      "url": "",
+      "status": "not_found",
+      "note": "A web search and follow-up did not locate this narration. Majma al-Bayan instead records Imam al-Sadiq calling the Basmala 'the greatest verse in the Book of Allah' (a different point, in response to those who denied it was part of the Quran)."
+     }
+    ]
+   },
+   "layer5": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Ibn Kathir in his tafsir explains that the Basmala serves to remind Muslims that every action should be dedicated to Allah, aligning closely with the Shia understanding presented by Tabatabai.",
+      "claim": "Ibn Kathir: the Basmala reminds Muslims every action should be dedicated to Allah",
+      "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+      "author": "Ibn Kathir",
+      "locator": "commentary on 1:1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=1&tAyahNo=1&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "This 'begin every act/speech in His name' point is stated clearly in al-Tabari's commentary on 1:1 ('abda'a bi-tasmiyat Allah qabla kulli shay''). The portion of Ibn Kathir's commentary on 1:1 retrieved instead covers the surah's names, virtues, and the legal debate on reciting the basmala aloud; this specific reminder-framing was not seen there."
+     },
+     {
+      "id": 2,
+      "anchor": "Al-Tabari notes that early Muslim scholars debated whether the Basmala is part of each surah or merely a separator between chapters.",
+      "claim": "Tabari records an early debate on whether the Basmala is a verse of each surah or a separator",
+      "source": "Jami al-Bayan (al-Tabari)",
+      "author": "al-Tabari",
+      "locator": "commentary on 1:1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=1&tSoraNo=1&tAyahNo=1&tDisplay=yes&LanguageID=1",
+      "status": "not_found",
+      "note": "The retrieved portion of al-Tabari's commentary on 1:1 addresses the grammar of 'bism Allah' (an elided verb), not a verse-status/separator debate; this specific debate was not seen in the text sampled with --grep in this session."
+     },
+     {
+      "id": 3,
+      "anchor": "The majority Sunni view, following the Maliki school, considers it a transitional phrase rather than a formal verse of Al-Fatiha",
+      "claim": "Maliki school holds the Basmala is not a formal verse of al-Fatiha",
+      "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+      "author": "Ibn Kathir",
+      "locator": "commentary on 1:1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=1&tAyahNo=1&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "Ibn Kathir's text confirms Imam Malik's view that the Basmala is not recited at all, aloud or silently, in prayer - consistent with not treating it as a formal recited verse. The further claim that 'Hanafi scholars among Sunnis' affirm its status as the first verse (like the Shia position) was not found in the text retrieved."
+     }
+    ]
+   },
+   "layer3": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Shirazi emphasizes that invoking God's mercy before any undertaking serves as a moral checkpoint, reminding individuals to evaluate whether their actions align with divine justice and compassion.",
+      "claim": "Makarem Shirazi: invoking God's mercy before acting serves as a moral checkpoint",
+      "source": "An Enlightening Commentary into the Light of the Holy Qur'an (Tafsir Nemooneh)",
+      "author": "Makarem Shirazi",
+      "locator": "Surah al-Fatiha, verse 1",
+      "url": "https://al-islam.org/enlightening-commentary-light-holy-quran-1/surah-al-fatiha-chapter-1",
+      "status": "unchecked",
+      "note": "al-islam.org blocked direct page fetch (403 Forbidden) in this session. A web search snippet confirms the commentary discusses beginning every act with Allah's Holy Name and being enveloped in His light, but the specific 'moral checkpoint' / modern-ethics framing could not be directly confirmed on the page."
+     }
+    ]
+   }
+  },
+  "2": {
+   "layer2": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Tabatabai explains that 'alamin' encompasses all categories of existence, each functioning as a distinct world with its own laws and inhabitants",
+      "claim": "Tabatabai: 'alamin' covers every category of existence, each a distinct world, unified under God's lordship",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:2",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=2&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     },
+     {
+      "id": 2,
+      "anchor": "the definite article in 'al-hamd' signifies that genuine praise, in its true and complete form, can only be directed toward Allah",
+      "claim": "Tabatabai: the definite article restricts genuine/complete praise to Allah alone",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:2",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=2&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "al-Mizan discusses the definite article's grammatical function (genus/inclusive) and that all hamd ultimately returns to Allah as the source of every praiseworthy quality, but does not use the specific 'exclusivity of genuine praise' phrasing the paragraph gives; the underlying idea is present in a more diffuse philosophical argument."
+     },
+     {
+      "id": 3,
+      "anchor": "Shaykh Tabrisi in Majma al-Bayan discusses the significance of the word 'Rabb,' noting that it implies a relationship of care, education, and gradual perfection.",
+      "claim": "Tabrisi: 'Rabb' implies care, nurturing (tarbiya) and gradual perfection",
+      "source": "Majma al-Bayan",
+      "author": "Tabrisi",
+      "locator": "commentary on 1:2",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=1&tAyahNo=2&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": "Majma al-Bayan lists 'al-murabbi'/'al-muslih', from the root 'al-tarbiya' (nurturing), among the meanings of Rabb; the specific 'plant nurtured from seed' image was not found verbatim, but the nurturing/gradual-perfection sense is confirmed."
+     }
+    ]
+   },
+   "layer4": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Imam Ali is reported to have said that when a servant sincerely says 'Alhamdulillah,' Allah grants them a blessing greater than all the material world",
+      "claim": "Imam Ali: sincerely saying Alhamdulillah earns a blessing greater than the whole material world",
+      "source": "attributed narration",
+      "author": "Imam Ali",
+      "locator": "closest match: commentary on 1:2 (Qurtubi, quoting Nawadir al-Usul on Anas ibn Malik's authority - a Prophetic hadith, not Imam Ali)",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=1&tAyahNo=2&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "Web searches found no primary source attributing this to Imam Ali. A closely matching hadith is instead recorded as a Prophetic saying in Sunni sources (via Qurtubi's tafsir on 1:2, quoting 'Nawadir al-Usul' on the authority of Anas ibn Malik): 'law anna al-dunya kulluha bi-hadhafiriha bi-yadi rajulin min ummati thumma qala al-hamdu lillah lakanat al-hamdu lillah afdal min dhalik.'"
+     },
+     {
+      "id": 2,
+      "anchor": "Imam Muhammad al-Baqir, the fifth Imam, explained that 'Rabb al-alamin' signifies that Allah does not abandon His creation after bringing it into existence",
+      "claim": "Imam al-Baqir: Rabb al-alamin means Allah continues to sustain, guide and perfect creation",
+      "source": "attributed narration",
+      "author": "Imam Muhammad al-Baqir",
+      "locator": "",
+      "url": "",
+      "status": "not_found",
+      "note": "A web search did not locate this specific narration attributed to Imam al-Baqir."
+     }
+    ]
+   },
+   "layer5": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Ibn Kathir in his tafsir explains that 'alhamdulillah' establishes that all forms of praise, whether expressed or unexpressed, ultimately belong to Allah",
+      "claim": "Ibn Kathir: the definite article in al-hamd covers all forms/kinds of praise for Allah",
+      "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+      "author": "Ibn Kathir",
+      "locator": "commentary on 1:2",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=1&tAyahNo=2&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     },
+     {
+      "id": 2,
+      "anchor": "Al-Tabari notes that the phrase 'Rabb al-alamin' affirms God's active role in sustaining creation",
+      "claim": "Tabari: Rabb al-alamin affirms God's active sustaining/nurturing role over creation",
+      "source": "Jami al-Bayan (al-Tabari)",
+      "author": "al-Tabari",
+      "locator": "commentary on 1:2",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=1&tSoraNo=1&tAyahNo=2&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     },
+     {
+      "id": 3,
+      "anchor": "Qurtubi in his legal-oriented commentary discusses the implications of this verse for Islamic jurisprudence, noting that recognizing God as the ultimate authority necessitates submission",
+      "claim": "Qurtubi draws jurisprudential implications from this verse about submission to God's authority",
+      "source": "al-Jami li-Ahkam al-Qur'an (al-Qurtubi)",
+      "author": "al-Qurtubi",
+      "locator": "commentary on 1:2",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=1&tAyahNo=2&tDisplay=yes&LanguageID=1",
+      "status": "not_found",
+      "note": "The retrieved portion of Qurtubi's commentary on 1:2 covers hadiths on the virtue of hamd and the linguistic/etymological analysis of Rabb (including the fi'l/dhat attribute distinction); no explicit jurisprudential-submission argument was seen in the text sampled."
+     },
+     {
+      "id": 4,
+      "anchor": "Fakhr al-Din al-Razi provides extensive philosophical analysis of the term 'alamin,' exploring the Quranic use of the plural to denote the multiplicity of created realms",
+      "claim": "Razi analyzes 'alamin' philosophically as denoting the multiplicity of created realms",
+      "source": "Mafatih al-Ghayb (Fakhr al-Din al-Razi)",
+      "author": "Fakhr al-Din al-Razi",
+      "locator": "commentary on 1:2",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=4&tSoraNo=1&tAyahNo=2&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     }
+    ]
+   }
+  },
+  "3": {
+   "layer2": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Allamah Tabatabai in Al-Mizan explores why these attributes are repeated immediately after being mentioned in the Basmala",
+      "claim": "Tabatabai explains the rhetorical purpose of repeating Rahman/Rahim right after the Basmala",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:1-3",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=3&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "altafsir's al-Mizan text for 1:3 is identical to its commentary on 1:1 (a single block on the Basmala). It establishes the general/specific (Rahman = mercy to all, Rahim = mercy to believers) distinction the paragraph draws on, but does not explicitly discuss why the attributes are repeated as a distinct rhetorical question."
+     },
+     {
+      "id": 2,
+      "anchor": "explaining that the order of these attributes, with Rahman preceding Rahim, reflects a progression from general to specific mercy",
+      "claim": "Tabrisi: repeating Rahman then Rahim reflects a general-to-specific progression",
+      "source": "Majma al-Bayan",
+      "author": "Tabrisi",
+      "locator": "commentary on 1:3",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=1&tAyahNo=3&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "Majma al-Bayan's text on 1:3 says the repetition is 'for emphasis' (li'l-mubalagha) and cites al-Rummani's view that it is not really repetition because verse 1 connects to servitude and verse 3 connects to the praise/blessings just mentioned - not the 'general to specific mercy progression' framing given in the paragraph."
+     }
+    ]
+   },
+   "layer4": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Imam Ali is narrated to have said that God's mercy precedes His wrath, and that divine compassion is so vast that even the most hardened sinner should never despair of forgiveness.",
+      "claim": "Imam Ali: God's mercy precedes His wrath",
+      "source": "attributed narration",
+      "author": "Imam Ali",
+      "locator": "closest match: Sahih al-Bukhari 7453 / Sahih Muslim 2751 (hadith qudsi via Abu Hurayrah, not Imam Ali)",
+      "url": "https://islamqa.info/ar/answers/332284",
+      "status": "partial",
+      "note": "'My mercy precedes My wrath' is an authentic hadith qudsi transmitted from the Prophet on the authority of Abu Hurayrah (Sahih al-Bukhari 7453, Sahih Muslim 2751), not a saying located as Imam Ali's in this session."
+     },
+     {
+      "id": 2,
+      "anchor": "saying that whoever does not show mercy to people will not receive mercy from Allah",
+      "claim": "Imam Sadiq: whoever does not show mercy to people will not receive mercy from Allah",
+      "source": "attributed narration",
+      "author": "Imam Jafar al-Sadiq",
+      "locator": "closest match: Sahih al-Bukhari 7376 / Sahih Muslim 2319 / Sunan al-Tirmidhi 1922 (narrated by Jarir ibn Abdullah, not Imam al-Sadiq)",
+      "url": "https://dorar.net/hadith/sharh/145481",
+      "status": "partial",
+      "note": "This is a well-known Prophetic hadith ('man la yarham al-nas la yarhamhu Allah'), narrated by Jarir ibn Abdullah in Sahih al-Bukhari (7376) and Sahih Muslim (2319) and Sunan al-Tirmidhi (1922); a search did not turn up this wording attributed to Imam al-Sadiq."
+     }
+    ]
+   }
+  },
+  "4": {
+   "layer2": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Tabatabai notes that the verse uses 'Malik' rather than 'Mulk,' emphasizing God's personal sovereignty rather than abstract dominion",
+      "claim": "Tabatabai contrasts the reading 'Malik' with an abstract 'Mulk' to stress personal sovereignty",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:4",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=4&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "al-Mizan discusses both the majority reading ('Malik' without alif, sovereign) and explains Rabb as 'al-malik alladhi yudabbir amra mamlukihi' (the owner who personally manages what he owns), extensively contrasting real ownership/governance with merely conventional (i'tibari) ownership - consistent with the paragraph's point about personal, non-abstract sovereignty, though the paragraph's specific 'Malik vs Mulk' terminology is not how al-Mizan frames the contrast."
+     },
+     {
+      "id": 2,
+      "anchor": "Shaykh Tabrisi in Majma al-Bayan discusses variant readings of this word, noting that both 'Malik' meaning sovereign and 'Maalik' meaning owner appear in authentic recitations.",
+      "claim": "Tabrisi: both Malik and Maalik are valid, authentic Quranic readings",
+      "source": "Majma al-Bayan",
+      "author": "Tabrisi",
+      "locator": "commentary on 1:4",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=1&tAyahNo=4&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     }
+    ]
+   },
+   "layer4": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "this world is a place of action without full recompense, while the hereafter is the place of recompense without further opportunity for action",
+      "claim": "Imam Ali: today is action without reckoning, tomorrow is reckoning without action",
+      "source": "Nahj al-Balagha",
+      "author": "Imam Ali",
+      "locator": "Hikam (short sayings)",
+      "url": "https://www.aletihad.ae/article/60196/2011/%D8%B9%D9%84%D9%8A-%D8%A8%D9%86-%D8%A3%D8%A8%D9%8A-%D8%B7%D8%A7%D9%84%D8%A8:-%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D9%88%D9%84%D8%A7-%D8%AD%D8%B3%D8%A7%D8%A8-%D9%88%D8%BA%D8%AF%D8%A7-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A1-%D9%88%D9%84%D8%A7-%D8%B9%D9%85%D9%84",
+      "status": "verified",
+      "note": "Confirmed as a well-known saying in Nahj al-Balagha's Hikam ('al-yawmu 'amalun wa la hisab, wa ghadan hisabun wa la 'amal'); no specific hikmah number could be confirmed in this session, so none is given."
+     }
+    ]
+   },
+   "layer5": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Ibn Kathir in his tafsir emphasizes that this verse establishes God's exclusive sovereignty on the Day of Recompense, when all worldly claims to power will be exposed as illusory",
+      "claim": "Ibn Kathir: this verse establishes God's exclusive sovereignty on the Day of Recompense",
+      "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+      "author": "Ibn Kathir",
+      "locator": "commentary on 1:4",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=1&tAyahNo=4&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     },
+     {
+      "id": 2,
+      "anchor": "Al-Tabari discusses the linguistic choice between Malik and Maalik, noting both are valid recitations that complement each other in meaning",
+      "claim": "Tabari: both Malik and Maalik readings are valid and complementary",
+      "source": "Jami al-Bayan (al-Tabari)",
+      "author": "al-Tabari",
+      "locator": "commentary on 1:4",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=1&tSoraNo=1&tAyahNo=4&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     },
+     {
+      "id": 3,
+      "anchor": "Fakhr al-Din al-Razi provides philosophical analysis of resurrection, engaging with rational arguments for bodily return to life, paralleling discussions in Shia theological works.",
+      "claim": "Razi gives a philosophical/rational analysis of bodily resurrection on this verse",
+      "source": "Mafatih al-Ghayb (Fakhr al-Din al-Razi)",
+      "author": "Fakhr al-Din al-Razi",
+      "locator": "commentary on 1:4",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=4&tSoraNo=1&tAyahNo=4&tDisplay=yes&LanguageID=1",
+      "status": "not_found",
+      "note": "Razi's fetched page for 1:4 returned no text matching 'malik/al-din' in this session; no substantive commentary on resurrection was retrieved to confirm this claim."
+     }
+    ]
+   }
+  },
+  "5": {
+   "layer2": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Tabatabai notes that the verse specifically places worship before seeking help, teaching that the primary relationship with God should be one of love and devotion",
+      "claim": "Tabatabai: worship is placed before seeking help because the primary relationship is devotion, not utilitarian request",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:5",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=5&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "al-Mizan confirms the object ('Iyyaka') is fronted and worship is made exclusive/unqualified ('al-rabbu maqsurun fi'l-malikiyya, wa'l-'abdu maqsurun fi'l-'ubudiyya'), and discusses avoiding shirk in worship (seeking reward/fearing punishment as the goal). The specific framing that this ordering shows worship is primarily 'love and devotion, not utilitarian request' was not found stated in those terms."
+     }
+    ]
+   },
+   "layer5": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Ibn Kathir explains that placing 'You alone' before 'we worship' grammatically emphasizes exclusivity, negating all forms of polytheism and ensuring that devotion is directed solely to the Creator.",
+      "claim": "Ibn Kathir: fronting 'Iyyaka' emphasizes exclusivity, negating polytheism",
+      "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+      "author": "Ibn Kathir",
+      "locator": "commentary on 1:5",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=1&tAyahNo=5&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     },
+     {
+      "id": 2,
+      "anchor": "Al-Tabari notes that the shift to direct address reflects the intimacy and immediacy of the relationship between worshipper and God, a theme echoed in both traditions' mystical literature.",
+      "claim": "Tabari: the shift to direct address reflects intimacy/immediacy with God",
+      "source": "Jami al-Bayan (al-Tabari)",
+      "author": "al-Tabari",
+      "locator": "commentary on 1:5",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=1&tSoraNo=1&tAyahNo=5&tDisplay=yes&LanguageID=1",
+      "status": "not_found",
+      "note": "The retrieved al-Tabari text on 1:5 is devoted to the grammar of repeating 'Iyyaka'; the 'intimacy/immediacy' point is not stated there. A similar idea ('as if he has drawn near and is present before Allah') appears instead in Ibn Kathir's commentary on 1:5."
+     }
+    ]
+   }
+  },
+  "6": {
+   "layer2": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "At a deeper level, it means granting tawfiq, the divine enabling that allows a person to recognize truth and act upon it despite internal and external obstacles.",
+      "claim": "Tabatabai: guidance at a deeper level means tawfiq, divine enabling to recognize and act on truth",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:6",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=6&tDisplay=yes&LanguageID=1",
+      "status": "not_found",
+      "note": "The retrieved al-Mizan text on 1:6 (sampled with --grep for 'al-sirat'/'al-mustaqim') extensively defines the Straight Path and distinguishes it from 'sabil' but does not use the term tawfiq or discuss this two-level (showing vs enabling) structure of guidance within the text seen."
+     },
+     {
+      "id": 2,
+      "anchor": "Tabrisi also notes that the companions of the Prophet and the Ahlul Bayt understood this path to refer specifically to adherence to Quranic teachings as explained by the Prophet and his family",
+      "claim": "Tabrisi records a Shia-transmitted view that the Straight Path is the Prophet and the Imams who stand in his place",
+      "source": "Majma al-Bayan",
+      "author": "Tabrisi",
+      "locator": "commentary on 1:6",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=1&tAyahNo=6&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": "Majma al-Bayan lists as a fourth interpretation 'al-Nabi wa'l-a'immah al-qa'imun maqamahu, wa huwa al-marwiyy fi akhbarina' (the Prophet and the Imams standing in his place, as narrated in our [Shia] reports)."
+     }
+    ]
+   },
+   "layer4": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "he was leaving two weighty things for the Muslim community, the Quran and his Ahlul Bayt, and that the two would never separate until they meet him at the heavenly fountain",
+      "claim": "Prophet: hadith al-Thaqalayn, leaving the Quran and the Ahlul Bayt, inseparable until they meet him at the Pool",
+      "source": "Hadith al-Thaqalayn",
+      "author": "Prophet Muhammad",
+      "locator": "",
+      "url": "https://ar.wikipedia.org/wiki/%D8%AD%D8%AF%D9%8A%D8%AB_%D8%A7%D9%84%D8%AB%D9%82%D9%84%D9%8A%D9%86",
+      "status": "verified",
+      "note": "Widely narrated (e.g. Sunan al-Tirmidhi, Musnad Ahmad) via multiple Companions with the wording 'taraktu fikum al-thaqalayn... kitab Allah wa 'itrati ahl bayti'; graded variably by different hadith critics (some grade parts hasan/sahih, others weak), but the narration itself is well attested."
+     },
+     {
+      "id": 2,
+      "anchor": "he is the gate to the city of knowledge that the Prophet represented",
+      "claim": "Imam Ali is the gate to the Prophet's city of knowledge",
+      "source": "hadith 'madinat al-'ilm'",
+      "author": "Prophet Muhammad",
+      "locator": "hadith 'ana madinat al-'ilm wa Aliyyun babuha' - contested authenticity, see note",
+      "url": "https://ar.wikipedia.org/wiki/%D8%AD%D8%AF%D9%8A%D8%AB_%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%A7%D9%84%D8%B9%D9%84%D9%85",
+      "status": "partial",
+      "note": "The hadith itself is 'ana madinat al-'ilm wa 'Aliyyun babuha' (I am the city of knowledge and Ali is its gate) - i.e. it is the Prophet's statement about Ali, not a saying by Imam Ali about himself as the paragraph implies. Its authenticity is heavily disputed: widely accepted in Shia hadith literature, but graded weak-to-fabricated by many Sunni critics (al-Bukhari, al-Tirmidhi, al-Daraqutni, al-Albani), while a minority (e.g. al-Hakim, Ibn Hajar al-Haytami) accepted it."
+     }
+    ]
+   },
+   "layer5": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Ibn Kathir explains that the straight path is Islam itself, the way of the prophets and righteous people throughout history, a definition affirmed in Shia sources as well.",
+      "claim": "Ibn Kathir: the Straight Path is Islam, the way of the prophets and the righteous",
+      "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+      "author": "Ibn Kathir",
+      "locator": "commentary on 1:6",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=1&tAyahNo=6&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     },
+     {
+      "id": 2,
+      "anchor": "Al-Tabari discusses various opinions among early Muslims about the specific referent of the straight path, including the Quran, Islam, the Prophet, and righteous companions",
+      "claim": "Tabari records various early views of what the Straight Path refers to",
+      "source": "Jami al-Bayan (al-Tabari)",
+      "author": "al-Tabari",
+      "locator": "commentary on 1:6",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=1&tSoraNo=1&tAyahNo=6&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     }
+    ]
+   }
+  },
+  "7": {
+   "layer2": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Tabatabai notes that divine favor, ni'mah, refers to the comprehensive blessing of guidance, righteousness, and ultimate success",
+      "claim": "Tabatabai: ni'mah in this verse means guidance/righteousness, not worldly blessings which even the misguided may receive",
+      "source": "al-Mizan",
+      "author": "Tabatabai",
+      "locator": "commentary on 1:7",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=1&tAyahNo=7&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": "al-Mizan cites Ma'ani al-Akhbar (via Imam al-Rida, from his ancestors, on Imam Ali's authority): 'qulu ihdina sirat alladhina an'amta 'alayhim bi'l-tawfiq li-dinika wa ta'atika, la bi'l-mal wa'l-sihha, fa-innahum qad yakununa kuffaran aw fussaqan' - favor is guidance/obedience, not wealth or health, since those can be given to disbelievers or sinners."
+     },
+     {
+      "id": 2,
+      "anchor": "identifying those who earned anger as certain Jewish communities who altered scriptures and rejected prophets, and those who went astray as certain Christian communities",
+      "claim": "Tabrisi identifies 'those who earned anger' as Jews and 'those who went astray' as Christians",
+      "source": "Majma al-Bayan",
+      "author": "Tabrisi",
+      "locator": "commentary on 1:7",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=1&tAyahNo=7&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": ""
+     }
+    ]
+   },
+   "layer4": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "identified those favored by God as the prophets, the siddiqun meaning the utterly truthful, the martyrs, and the righteous, categories mentioned in Surah al-Nisa",
+      "claim": "Prophet identified 'those favored' as the prophets, siddiqun, martyrs and righteous of Q4:69",
+      "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir) / Majma al-Bayan",
+      "author": "Ibn Kathir / Tabrisi",
+      "locator": "commentary on 1:7",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=1&tAyahNo=7&tDisplay=yes&LanguageID=1",
+      "status": "partial",
+      "note": "These four categories (prophets, siddiqun, martyrs, righteous) are the Qur'an's own wording at Q4:69, quoted by both Ibn Kathir and Tabrisi to gloss 'those You have favored' - it is a Qur'anic cross-reference used by the exegetes, not a separately reported saying of the Prophet naming these categories."
+     }
+    ]
+   },
+   "layer5": {
+    "citations": [
+     {
+      "id": 1,
+      "anchor": "Ibn Kathir identifies those who earned anger as Jews who altered scriptures and killed prophets, and those who went astray as Christians who deviated into false doctrines",
+      "claim": "Ibn Kathir: those who earned anger are the Jews, those who went astray are the Christians",
+      "source": "Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+      "author": "Ibn Kathir",
+      "locator": "commentary on 1:7",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=1&tAyahNo=7&tDisplay=yes&LanguageID=1",
+      "status": "verified",
+      "note": "Confirmed via the hadith of Adi ibn Hatim that Ibn Kathir quotes: the Prophet said 'inna al-maghdub 'alayhim al-yahud, wa'l-dallin al-nasara,' graded hasan gharib by al-Tirmidhi."
+     }
+    ]
+   }
+  }
+ }
+}

@@ -247,6 +247,7 @@ struct FullScreenCommentaryView: View {
         let paragraphs = formattedParagraphs(from: text)
         let isRTL = languageManager.selectedLanguage.isRTL
         let scale = readingSettings.scale
+        let citations = currentCitations
         return VStack(alignment: isRTL ? .trailing : .leading, spacing: 16) {
             ForEach(Array(paragraphs.enumerated()), id: \.offset) { index, paragraph in
                 let trimmed = paragraph.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -262,7 +263,9 @@ struct FullScreenCommentaryView: View {
                     font: isRTL ? EmType.arabic(20 * scale) : EmType.serif(19 * scale, .medium),
                     textColor: themeManager.primaryText,
                     highlightColor: themeManager.accentColor.opacity(0.28),
-                    lineSpacing: 7 * scale
+                    lineSpacing: 7 * scale,
+                    markers: citationMarkers(in: trimmed, citations: citations),
+                    markerFontSize: 11 * scale
                 )
                 .multilineTextAlignment(isRTL ? .trailing : .leading)
                 .frame(maxWidth: .infinity, alignment: isRTL ? .trailing : .leading)
@@ -274,7 +277,42 @@ struct FullScreenCommentaryView: View {
                         .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
                 }
             }
+            CitationSourcesList(citations: citations)
+                .padding(.top, 4)
         }
+    }
+
+    // MARK: - Citations
+
+    /// Reader-visible citations for the verse and selected layer (empty for surahs not yet cited).
+    private var currentCitations: [DisplayCitation] {
+        CitationsManager.shared.readerCitations(surah: surah.number, verse: verse.number, layer: selectedLayer)
+    }
+
+    /// Superscript markers for one displayed paragraph. Anchors are verbatim clauses of the
+    /// English layer text, so markers only apply when reading in English; Urdu and Arabic
+    /// readers still get the Sources list below the text.
+    private func citationMarkers(in paragraph: String, citations: [DisplayCitation]) -> [TextMarker] {
+        guard languageManager.selectedLanguage == .english, !citations.isEmpty else { return [] }
+        var markers: [TextMarker] = []
+        for item in citations {
+            let anchor = item.citation.anchor
+            // The paragraph splitter can cut an anchor across two cards; fall back to its tail.
+            var range = paragraph.range(of: anchor)
+            if range == nil, anchor.count > 40 {
+                range = paragraph.range(of: String(anchor.suffix(40)))
+            }
+            guard let found = range else { continue }
+            var end = found.upperBound
+            // Sit the marker after closing punctuation that immediately follows the anchor.
+            while end < paragraph.endIndex, ".'\"\u{201D}\u{2019})".contains(paragraph[end]) {
+                end = paragraph.index(after: end)
+            }
+            let offset = paragraph.distance(from: paragraph.startIndex, to: end)
+            let color = item.citation.status == .partial ? themeManager.semanticYellow : themeManager.accentColor
+            markers.append(TextMarker(offset: offset, label: "\(item.number)", color: color))
+        }
+        return markers
     }
 
     private var readingBackground: some View {
@@ -549,6 +587,7 @@ struct FullScreenCommentaryView: View {
     private func readingTextContent(_ text: String) -> some View {
         let paragraphs = formattedParagraphs(from: text)
         let scale = readingSettings.scale
+        let citations = currentCitations
 
         return VStack(alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading, spacing: 18) {
             ForEach(Array(paragraphs.enumerated()), id: \.offset) { index, paragraph in
@@ -569,7 +608,9 @@ struct FullScreenCommentaryView: View {
                         font: .system(size: 17 * scale, weight: .regular, design: .serif),
                         textColor: themeManager.primaryText,
                         highlightColor: themeManager.semanticYellow.opacity(themeManager.isDarkMode ? 0.30 : 0.50),
-                        lineSpacing: 6 * scale
+                        lineSpacing: 6 * scale,
+                        markers: citationMarkers(in: trimmedParagraph, citations: citations),
+                        markerFontSize: 10 * scale
                     )
                         .multilineTextAlignment(languageManager.selectedLanguage.isRTL ? .trailing : .leading)
                         .frame(maxWidth: .infinity, alignment: languageManager.selectedLanguage.isRTL ? .trailing : .leading)
@@ -599,6 +640,8 @@ struct FullScreenCommentaryView: View {
                         }
                 }
             }
+            CitationSourcesList(citations: citations)
+                .padding(.top, 4)
         }
     }
     

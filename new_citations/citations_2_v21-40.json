@@ -1,0 +1,435 @@
+{
+  "surah": 2,
+  "verses": {
+    "21": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Allamah Tabatabai in Al-Mizan explains that this verse marks a transition from describing different categories of people to directly addressing humanity with the call to tawhid and worship",
+            "claim": "Tabatabai: the verse transitions from describing the three groups (muttaqin, kafirin, munafiqin) to a universal call to worship",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:21-25",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=21&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan elaborates that mentioning creation serves as proof of God's right to be worshipped, as the relationship between Creator and created inherently implies the duty of worship",
+            "claim": "Tabrisi: creation of past generations shown alongside the command to worship as basis of the obligation",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:21",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=21&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "The concept of taqwa was elaborated by Imam Ali in his famous letter to Imam Hasan, describing it as the highest virtue that combines fear of divine punishment, hope for divine mercy",
+            "claim": "Imam Ali's letter to Imam Hasan (Nahj al-Balagha, Letter 31) elaborates taqwa as combining fear, hope, truthfulness and awareness of Allah",
+            "source": "Nahj al-Balagha",
+            "author": "Imam Ali",
+            "locator": "Letter 31 (to Imam Hasan)",
+            "url": "",
+            "status": "partial",
+            "note": "Confirmed Letter 31 is indeed Imam Ali's letter to Imam Hasan and its known themes include taqwa, fear of Allah and truthfulness, but al-islam.org blocked automated fetching (403) so the exact combination of fear/hope/truthfulness/awareness described could not be verified against the full text."
+          }
+        ]
+      }
+    },
+    "22": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai explains that 'andad' (equals or rivals) refers not only to idols but to anyone or anything that is elevated to a status that belongs only to Allah",
+            "claim": "Tabatabai: andad extends beyond idols to anything elevated to Allah's exclusive status",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:22",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=22&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "al-Mizan's text on this verse discusses andad as rivals set up despite Allah being the sole creator/sustainer, but the specific extension to 'worship, obedience, love, or trust' wording was not found in the matched passages."
+          },
+          {
+            "id": 2,
+            "anchor": "Tabrisi in Majma al-Bayan notes that the sky as a ceiling refers to the atmosphere that protects earth from harmful cosmic radiation while allowing beneficial sunlight",
+            "claim": "Tabrisi explains 'sky as ceiling' in terms of atmospheric radiation protection",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:22",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=22&tDisplay=yes&LanguageID=1",
+            "status": "not_found",
+            "note": "Majma al-Bayan's text simply glosses 'the sky as a building' as a raised, constructed ceiling; no mention of radiation or atmospheric protection, which is a modern gloss not present in the classical text."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "He narrated that the Prophet said: 'Whoever obeys a created being in disobedience to the Creator has taken that being as a lord besides Allah.'",
+            "claim": "Prophetic hadith (narrated via Imam al-Sadiq) equating obedience to creation over Creator with taking a lord besides Allah",
+            "source": "none named",
+            "author": "",
+            "locator": "no specific verse-level source located",
+            "url": "",
+            "status": "partial",
+            "note": "A closely related, well-attested Prophetic saying exists ('la ta'ata li-makhluqin fi ma'siyat al-khaliq' - no obedience to a created being in disobedience to the Creator), and a separate hadith explains 'taking scholars/rulers as lords' (tied to 9:31, e.g. Adi ibn Hatim's report in Tirmidhi). The exact combined wording quoted in the paragraph was not located in one source."
+          }
+        ]
+      }
+    },
+    "23": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "The classical scholars discuss how the challenge was graduated in the Quran: first, to produce something like the entire Quran, then ten chapters, finally just one chapter",
+            "claim": "al-Mizan discusses the graduated Quranic challenge (whole Quran / ten surahs / one surah)",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:23",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=23&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Tabatabai explains that the reference to Muhammad as 'Our servant' is significant, emphasizing his human nature while highlighting that such extraordinary revelation could only come",
+            "claim": "Tabatabai on the significance of 'abduna' (Our servant) in the challenge verse",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:23",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=23&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "24": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabrisi in Majma al-Bayan elaborates on the meaning of men and stones as fuel, noting that this creates a terrifying image where the fire is so intense it consumes even stones",
+            "claim": "Tabrisi: the 'stones' as Hellfire fuel refers to the idols people worshipped",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:24",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=24&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Both al-Mizan and Majma al-Bayan confirm the stones refer to idols (citing Q21:98); the 'so intense it consumes stones' phrasing is not itself quoted but is a reasonable gloss on the same point."
+          }
+        ]
+      }
+    },
+    "25": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Classical scholars offered several interpretations: the fruits resemble each other in perfection and beauty though varying in taste; they resemble earthly fruits in form but surpass",
+            "claim": "Majma al-Bayan lists multiple classical interpretations of 'mutashabihan' (fruits resembling what came before)",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:25",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=25&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Majma gives 'similar in color, different in taste' and 'similar in excellent quality' among cited opinions, matching two of the three listed; the third ('resembles previous paradisiacal provision') is closer to a worldly-provision reading found in the same passage."
+          }
+        ]
+      }
+    },
+    "26": {
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "The Imam also taught that the mosquito example demonstrates divine creative power, as this tiny creature possesses complex organs and capacities that testify to intentional design",
+            "claim": "Imam al-Sadiq: the mosquito, despite its small size, has all the organs of an elephant plus two more, showing Allah's subtle creation",
+            "source": "al-Tibyan",
+            "author": "Imam Ja'far al-Sadiq (narrated in)",
+            "locator": "commentary on 2:26",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=39&tSoraNo=2&tAyahNo=26&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Same narration also quoted in Majma al-Bayan on this verse."
+          },
+          {
+            "id": 2,
+            "anchor": "explaining that just as the mosquito draws blood yet spreads disease, some people appear to take only small portions from others but spread corruption disproportionate to what they take",
+            "claim": "Imam al-Sadiq: mosquito/blood-disease analogy for people who take little but cause disproportionate corruption",
+            "source": "none named",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "Checked al-Mizan, Majma al-Bayan, Tafsir al-Qummi and al-Tibyan on this verse; only the elephant/organs narration from Imam al-Sadiq was found, not this blood/disease analogy."
+          }
+        ]
+      },
+      "layer5": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Sunni exegetes like Al-Tabari, Ibn Kathir, and Qurtubi explain that this verse responds to objections raised by hypocrites and some Jews who mocked the Quran's use of humble examples",
+            "claim": "Tabari and Ibn Kathir cite the mockery of fly/spider/mosquito examples as occasion for revelation",
+            "source": "Jami al-Bayan (Tabari) / Tafsir al-Qur'an al-Azim (Ibn Kathir)",
+            "author": "Tabari, Ibn Kathir",
+            "locator": "commentary on 2:26",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=7&tSoraNo=2&tAyahNo=26&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "Both sources confirm hypocrites (munafiqun) and mushrikin/'ahl al-dalala' mocked the mention of the fly and spider; neither passage found specifically names 'Jews' as objectors."
+          }
+        ]
+      }
+    },
+    "27": {
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "He explained that some people accepted the Prophet but rejected his designated successor, thereby severing what Allah explicitly ordered to be joined",
+            "claim": "Tafsir al-Qummi reads 'breaking the covenant' and 'severing what Allah ordered joined' as referring to rejecting Imam Ali's wilayah",
+            "source": "Tafsir al-Qummi",
+            "author": "Ali ibn Ibrahim al-Qummi (narrating Imam al-Sadiq)",
+            "locator": "commentary on 2:26-27",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=38&tSoraNo=2&tAyahNo=26&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "He explained that what Allah ordered to be joined includes the connection between the Quran and Ahlul Bayt, whom the Prophet described as the two weighty things that must never be separated",
+            "claim": "Hadith al-Thaqalayn: the Prophet left the Book of Allah and his family as two weighty things",
+            "source": "Sahih Muslim",
+            "author": "Prophet Muhammad",
+            "locator": "2408a, Book of the Merits of the Companions",
+            "url": "https://sunnah.com/muslim:2408a",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "28": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai explains that the first death refers to natural death experienced in this world, while the second life refers to resurrection for judgment",
+            "claim": "al-Mizan: the sequence in 2:28 is non-existence, worldly life, death, then resurrection",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:28",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=28&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "29": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "He explains that the phrase 'created for you' indicates purpose and intention in creation, opposing materialistic views of random or purposeless existence",
+            "claim": "Majma al-Bayan: 'created for you' means the earth's contents are provided as a purposeful favor (religious and worldly benefit)",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi",
+            "locator": "commentary on 2:29",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=29&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "30": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "He explains that khalifa means a representative who exercises delegated authority on behalf of another, in this case divine authority on earth",
+            "claim": "Tabatabai: khalifa as one who represents/stands in for another, here representing Allah's authority",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:30",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=30&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Jafar al-Sadiq narrated that the angels' question about corruption and bloodshed was indeed based on knowledge of previous earthly inhabitants who had corrupted the earth",
+            "claim": "Imam al-Sadiq: the angels' question was based on having witnessed a prior corrupt/bloodshedding creation on earth",
+            "source": "al-Mizan (quoting Tafsir al-Ayyashi)",
+            "author": "Imam Ja'far al-Sadiq",
+            "locator": "commentary on 2:30",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=30&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "31": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Many Shia commentators understand that among these names were the blessed names of Prophet Muhammad and his purified family, the Ahlul Bayt",
+            "claim": "The names taught to Adam included the names of Muhammad, Ali, Fatima, Hasan and Husain",
+            "source": "al-Mizan (quoting Ma'ani al-Akhbar)",
+            "author": "Shaykh al-Saduq (narration quoted by Tabatabai)",
+            "locator": "commentary on 2:31",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=31&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "al-Mizan quotes one narration (from Ma'ani al-Akhbar) that Adam was taught the names of Allah's 'hujaj' (proofs/Imams), not explicitly naming the five; this sits alongside other quoted narrations (also in Majma al-Bayan and Tafsir al-Qummi on this verse) that the names were mountains, valleys and plants. See logged misattribution for the specific overstatement regarding Tabrisi/Majma al-Bayan."
+          }
+        ]
+      },
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "According to traditions, when Allah created Adam, He placed within him the souls of the five Pure Ones: Muhammad, Ali, Fatima, Hassan, and Hussain",
+            "claim": "Narration that the souls of the Five Pure Ones (Ahl al-Kisa) resided within Adam and the angels' prostration honored this",
+            "source": "A Shi'ite Creed (I'tiqadat al-Imamiyyah)",
+            "author": "Shaykh al-Saduq",
+            "locator": "chapter on Prophets, Apostles, Imams and Angels",
+            "url": "",
+            "status": "partial",
+            "note": "A web search located this narration (angels prostrated 'out of respect for the prophets and Imams whom He had placed in his loins', plus a separate 'divine light' narration naming Muhammad, Ali, Fatima, Hasan and Husain) in Shaykh al-Saduq's A Shi'ite Creed on al-islam.org, but the site returned 403 on direct fetch so the exact wording and full chain (including whether it is specifically transmitted via Imam al-Ridha) could not be confirmed."
+          }
+        ]
+      }
+    },
+    "34": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Shia commentators note that Iblis was among the jinn, not angels, but was elevated to their ranks through worship, demonstrating that acquired righteousness can elevate one's station",
+            "claim": "Imami position (per Shaykh al-Mufid, cited as mutawatir from the Imams) that Iblis was of the jinn, not the angels",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi (citing Shaykh al-Mufid)",
+            "locator": "commentary on 2:34",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=34&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": ""
+          },
+          {
+            "id": 2,
+            "anchor": "Imam Ali ibn Musa al-Ridha taught that the angels prostrated in worship of Allah and in respect for Adam, recognizing the divine light of the Ahlul Bayt within him",
+            "claim": "Imam al-Ridha: the angels' prostration honored the divine light of the Ahlul Bayt residing in Adam",
+            "source": "A Shi'ite Creed (I'tiqadat al-Imamiyyah)",
+            "author": "Shaykh al-Saduq",
+            "locator": "chapter on Prophets, Apostles, Imams and Angels",
+            "url": "",
+            "status": "partial",
+            "note": "Same narration as logged for 2:31 layer4; general theme located via web search snippet from Shaykh al-Saduq's A Shi'ite Creed, but al-islam.org blocked direct fetch (403) so the exact wording and attribution specifically to Imam al-Ridha could not be confirmed."
+          }
+        ]
+      }
+    },
+    "35": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Tabatabai explains that Adam was a prophet even in Paradise, and prophets possess 'ismah or protection from major sins. Therefore, Adam's eventual eating from the tree was not a sin",
+            "claim": "Tabatabai holds that Adam, as a prophet, was infallible, so his eating from the tree was tark al-awla, not a sin",
+            "source": "al-Mizan",
+            "author": "Tabatabai",
+            "locator": "commentary on 2:35",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=35&tDisplay=yes&LanguageID=1",
+            "status": "partial",
+            "note": "al-Mizan explicitly affirms the Imami doctrine of prophetic isma from minor and major sins even before prophethood, and criticizes a narration (attributed via Ibn al-Jahm to Imam al-Ridha) suggesting Adam committed a minor sin, as inconsistent with that doctrine. This supports the 'not a conventional sin' framing, but the exact term 'tark al-awla' was not found in the matched passages."
+          }
+        ]
+      }
+    },
+    "37": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "According to numerous narrations from the Imams, the words taught to Adam were the blessed names of Muhammad, Ali, Fatima, Hassan, and Hussain",
+            "claim": "The words of repentance taught to Adam were an appeal by the names of Muhammad, Ali, Fatima, Hasan and Husain",
+            "source": "al-Kafi",
+            "author": "al-Kulayni (quoted in al-Mizan)",
+            "locator": "commentary on 2:37 (quoting al-Kafi)",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=56&tSoraNo=2&tAyahNo=37&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "al-Mizan explicitly quotes al-Kafi: Adam 'asked Him by the right of Muhammad, Ali, Fatima, al-Hasan and al-Husain.' Note Tafsir al-Qummi on the same verse instead transmits a different tradition (words recited at Arafat during Hajj), so this is one of several Shia traditions rather than the sole account."
+          }
+        ]
+      }
+    },
+    "38": {
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "as indicated by the Hadith of Thaqalayn where the Prophet Muhammad said he was leaving two weighty things for guidance: the Book of Allah and his family",
+            "claim": "Hadith al-Thaqalayn: the Prophet left the Book of Allah and his family (Ahlul Bayt) as guidance",
+            "source": "Sahih Muslim",
+            "author": "Prophet Muhammad",
+            "locator": "2408a, Book of the Merits of the Companions",
+            "url": "https://sunnah.com/muslim:2408a",
+            "status": "verified",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "39": {
+      "layer4": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "Imam Jafar al-Sadiq explained that among the signs people deny are the clear proofs of the Imamate and the divinely appointed leadership of the Ahlul Bayt",
+            "claim": "Imam al-Sadiq: denying Allah's signs in this verse includes denying the Imamate",
+            "source": "none named",
+            "author": "",
+            "locator": "",
+            "url": "",
+            "status": "not_found",
+            "note": "Checked Tafsir al-Qummi on 2:39 (the most likely source for this reading, and one which gives explicit Imamate-focused readings on nearby verses such as 2:26-27); it has no distinct commentary text for this verse."
+          }
+        ]
+      }
+    },
+    "40": {
+      "layer2": {
+        "citations": [
+          {
+            "id": 1,
+            "anchor": "According to Shia interpretation, this covenant also included the promise to believe in the final Prophet Muhammad when he appeared, as mentioned in their scriptures",
+            "claim": "The covenant with the Children of Israel included a promise (from the Torah) to believe in Prophet Muhammad when he came",
+            "source": "Majma al-Bayan",
+            "author": "Tabrisi (citing Ibn Abbas)",
+            "locator": "commentary on 2:40",
+            "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=4&tTafsirNo=3&tSoraNo=2&tAyahNo=40&tDisplay=yes&LanguageID=1",
+            "status": "verified",
+            "note": "Majma al-Bayan cites this as one of several classical opinions (attributed to Ibn Abbas), not the sole reading; presented here as a Shia-emphasized point though it is also found among Sunni-transmitted opinions in the same source."
+          }
+        ]
+      }
+    }
+  }
+}
