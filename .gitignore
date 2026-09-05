@@ -215,3 +215,6 @@ journey-audio-render/
 
 # paper-explainer / other skill scratch output (stills, renders, logs - not source)
 /output/
+
+# passage commentary pipeline scratch state (scripts/passages.py)
+passages_work/

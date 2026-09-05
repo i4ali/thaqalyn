@@ -1,0 +1,8 @@
+{"passage": "2:4", "gathered_at": "2026-09-08T10:00:00Z", "unavailable": {}, "sources": [
+  {"id": "s1", "key": "mizan", "kind": "tafsir", "work": "al-Mizan fi Tafsir al-Quran", "author": "Allamah Muhammad Husayn Tabatabai", "tradition": "shia", "tier": "B", "role": "essay", "verses": [30, 31, 32, 33], "locus": "on Al-Baqara 30 to 33", "url": "https://www.altafsir.com/x?Page=1", "sha256": "a", "fetched_at": "2026-09-08T10:00:00Z",
+   "text": "بيان الآيات تنبىء عن غرض إنزال الإِنسان إلى الدنيا. وهذا الكلام من الملائكة في مقام تعرف ما جهلوه واستيضاح ما أشكل عليهم من أمر هذا الخليفة، وليس من الاعتراض والخصومة في شيء."},
+  {"id": "s2", "key": "burhan", "kind": "hadith", "work": "al-Burhan fi Tafsir al-Quran", "author": "Sayyid Hashim al-Bahrani", "tradition": "shia", "tier": "A", "role": "narrations", "verses": [34], "locus": "on Al-Baqara 34", "url": "https://www.altafsir.com/y?Page=1", "sha256": "b", "fetched_at": "2026-09-08T10:00:00Z",
+   "text": "385/ [4]- علي بن إبراهيم، قال: حدثني أبي، عن ابن أبي عمير، عن جميل، عن أبي عبد الله (عليه السلام)، قال: فلما أمر الله الملائكة بالسجود لآدم، أخرج ما كان في قلب إبليس من الحسد، فعلمت الملائكة عند ذلك أن إبليس لم يكن منهم."},
+  {"id": "s3", "key": "tabari", "kind": "tafsir", "work": "Jami al-Bayan", "author": "al-Tabari", "tradition": "sunni", "tier": "A", "role": "perspectives", "verses": [34], "locus": "on Al-Baqara 34", "url": "https://www.altafsir.com/z?Page=1", "sha256": "c", "fetched_at": "2026-09-08T10:00:00Z",
+   "text": "وكان سجود الملائكة لآدم تكرمة له وطاعة لله، لا عبادة لآدم."}
+]}

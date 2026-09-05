@@ -1,0 +1,22 @@
+{
+  "passage": "2:4",
+  "title": {"en": "Adam and the angels"},
+  "essay": {"en": "ESSAY_PLACEHOLDER"},
+  "verses": [
+    {"verse": 34, "heading": {"en": "Iblis refuses"},
+     "note": {"en": "Iblis was of the jinn (18:50), raised among the angels by his worship. Refused, then arrogant, then faithless."},
+     "narrations": [
+       {"id": "n1", "speaker": "Imam al-Sadiq", "addressee": null,
+        "arabic": "فلما أمر الله الملائكة بالسجود لآدم، أخرج ما كان في قلب إبليس من الحسد، فعلمت الملائكة عند ذلك أن إبليس لم يكن منهم",
+        "chain": "Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Jamil, from Abu Abdillah",
+        "text": {"en": "When Allah commanded the angels to prostrate to Adam, He brought out the envy that was in the heart of Iblis, and at that the angels knew that Iblis had not been one of them."},
+        "source": "s2"}
+     ]}
+  ],
+  "perspectives": {"en": "PERSPECTIVES_PLACEHOLDER"},
+  "sources": [
+    {"id": "s1", "excerpt": {"lang": "ar", "text": "وهذا الكلام من الملائكة في مقام تعرف ما جهلوه واستيضاح ما أشكل عليهم من أمر هذا الخليفة، وليس من الاعتراض والخصومة في شيء"}, "gloss": "This speech of the angels was a seeking to know what they did not know, and a request for clarity about this viceroy. It was not an objection or a dispute in any way."},
+    {"id": "s2", "excerpt": {"lang": "ar", "text": "أخرج ما كان في قلب إبليس من الحسد"}, "gloss": "He brought out the envy that was in the heart of Iblis."},
+    {"id": "s3", "excerpt": {"lang": "ar", "text": "تكرمة له وطاعة لله، لا عبادة لآدم"}, "gloss": "An honouring of him and obedience to Allah, not worship of Adam."}
+  ]
+}
