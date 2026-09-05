@@ -3,6 +3,10 @@
 Gate to batch: all five pass audit with a mean of at most 1.5 attempts, and you are
 happy with the drafts as a reader.
 
+The whole loop below is packaged as the `/passages` skill
+(`.claude/skills/passages/SKILL.md`): `/passages 2:6-2:10`, `/passages 36`, or
+`/passages next 2 --surah 2`.
+
 ## Per passage
 
 1. `passages.py gather 2:N` (main session, once). Check `unavailable` in the output; a
