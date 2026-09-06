@@ -1,0 +1,640 @@
+{
+  "1": {
+    "id": "1:1",
+    "surah": 1,
+    "index": 1,
+    "range": [
+      1,
+      7
+    ],
+    "title": {
+      "en": "Praise and the straight path"
+    },
+    "essay": {
+      "en": "Seven verses, and all of them are words God gives the worshipper to say. It opens with His Name. Tabatabai reads that opening as the way a deed is marked with God's Name and bound to it, so that it is not left void and cut off, since to the Name of Allah no perishing has any way [1]. Tabrisi records that our companions hold this to be a verse of this surah and of every surah, and that a prayer which drops it is void [3].\n\nThen praise. Tabrisi separates praise from thanks: thanks answers a favour, while praise may be given where none was received, and Lord is a word drawn from nurture, used without qualification of God alone [4]. The two mercy names return, and Tabrisi passes on al-Rummani's answer to the charge of repetition: the first joins them to worship, the second to praise [5]. Then the Day of Retribution, read both with the alif and without it [6].\n\nHere the surah turns and speaks to God directly. Worship, Tusi writes, is thanks joined to humility, deserved only for the first blessings of life and power, so it belongs to God alone [13]. What is asked next is a road. Every road of truth is straight, Tusi notes, so the closing verse says which one [15]; Tabatabai finds three kinds of traveller in it, those whose road climbs, those whose road descends, and those who lose it and wander [2]."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "In the Name of Allah"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "the Prophet",
+            "addressee": null,
+            "arabic": "قَسَمْتُ فَاتِحَةَ الْكِتَابِ بَيْنِي وَبَيْنَ عَبْدِي، فَنِصْفُهَا لِي وَنِصْفُهَا لِعَبْدِي. وَلِعَبْدِي مَا سَأَلَ … إِذَا قَالَ الْعَبْدُ بِسْمِ اللَّهِ الرَّحْمنِ الرَّحِيمِ، قَالَ اللَّهُ عَزَّ وَجَلَّ بَدَأَ عَبْدِي بِاسْمِي، وَحَقٌّ عَلَيَّ أَنْ أُتَمِّمَ لَهُ أُمُورَهُ وَأُبَارِكَ لَهُ فِي أَحْوَالِهِ",
+            "chain": "Muhammad ibn al-Qasim al-Astarabadi, from Yusuf ibn Muhammad ibn Ziyad and Ali ibn Muhammad ibn Sayyar, from their fathers, from al-Hasan ibn Ali, from his fathers, from Amir al-Muminin, from the Messenger of God",
+            "text": {
+              "en": "God said: I have divided the Opening of the Book between Me and My servant: half Mine, half My servant's, and My servant shall have what he asks. When the servant says 'In the Name of Allah, the All-beneficent, the All-merciful,' God says: My servant has begun with My Name; I shall complete his affairs and bless his states."
+            },
+            "source": "s53"
+          },
+          {
+            "id": "n2",
+            "speaker": "Amir al-Muminin",
+            "addressee": null,
+            "arabic": "الله هو الذي يتأله إليه كل مخلوق عند الحوائج والشدائد … تقول بسم الله أي أستعين على أموري كلها بالله الذي لا تحق العبادة الاّ له المغيث إذا استغيث والمجيب إذا دعي",
+            "chain": null,
+            "text": {
+              "en": "Allah is He to whom every creature turns in needs and hardships. You say 'In the Name of Allah', that is: I seek help in all my affairs from Allah, who alone deserves worship, who succours when succour is sought and answers when He is called."
+            },
+            "source": "s21"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Hisham ibn al-Hakam",
+            "arabic": "يا هشام، الله مشتق من إله، و الإله يقتضي مألوها، و الاسم غير المسمى، فمن عبد الاسم دون المعنى فقد كفر و لم يعبد شيئا، و من عبد الاسم و المعنى فقد أشرك و عبد اثنين، و من عبد المعنى دون الاسم فذاك التوحيد",
+            "chain": "Ali ibn Ibrahim, from al-Nadr ibn Suwayd, from Hisham ibn al-Hakam",
+            "text": {
+              "en": "O Hisham, Allah is derived from ilah, and a god requires one who worships. The name is not the named. Whoever worships the name without the meaning has disbelieved and worshipped nothing; whoever worships name and meaning has associated and worshipped two; whoever worships the meaning without the name, that is monotheism."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 2,
+        "heading": {
+          "en": "All praise belongs to Allah"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "شكر النعمة اجتناب المحارم، و تمام الشكر قول الرجل: { ٱلْحَمْدُ للَّهِ رَبِّ ٱلْعَالَمِينَ }",
+            "chain": "a number of our companions, from Ahmad ibn Muhammad ibn Khalid, from one of our companions, from Muhammad ibn Hisham, from Maysar, from Abu Abdillah",
+            "text": {
+              "en": "Thanking for a blessing is avoiding what is forbidden, and the completeness of thanks is a man's saying: All praise belongs to Allah, Lord of all the worlds."
+            },
+            "source": "s20"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "فقد أبي بغلة له، فقال: إن ردها الله علي لأحمدنه بمحامد يرضاها، فلما لبث أن أتي بها بسرجها و لجامها، فلما استوى [عليها] و ضم إليه ثيابه، رفع رأسه إلى السماء، و قال: الْحَمْدُ لِلَّهِ و لم يزد … ما تركت و لا أبقيت شيئا، جعلت جميع أنواع المحامد لله عز و جل، فما من حمد إلا و هو داخل فيما قلت",
+            "chain": "Ali ibn Isa in Kashf al-Ghumma, from Imam al-Sadiq",
+            "text": {
+              "en": "My father lost a mule and said: if God returns her to me I shall praise Him with praises that please Him. When she was brought back and he had settled on her, he raised his head and said only, All praise belongs to Allah. Then: I have left nothing out; every kind of praise is God's."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 3,
+        "heading": {
+          "en": "Two names of mercy"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الرحمن اسم خاص لصفة عامة والرحيم اسم عام لصفة خاصة",
+            "chain": null,
+            "text": {
+              "en": "The All-beneficent is a name specific to a general attribute, and the All-merciful is a general name for a specific attribute."
+            },
+            "source": "s21"
+          },
+          {
+            "id": "n7",
+            "speaker": "Amir al-Muminin",
+            "addressee": null,
+            "arabic": "الرحمن الذي يرحم ببسط الرزق علينا … الرحيم بنا في أدياننا ودنيانا وآخرتنا خفف علينا الدين وجعله سهلاً خفيفاً",
+            "chain": null,
+            "text": {
+              "en": "The All-beneficent is He who shows mercy by spreading provision upon us. The All-merciful is merciful to us in our religion, our world and our hereafter; He lightened the religion for us and made it easy."
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "Master of the Day"
+        },
+        "note": {
+          "en": "The verse is read two ways, owner of the Day and king of the Day; Tusi glosses the second as: that day the kingship is His alone, given to no one as it was given in this world [12]."
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يوم الحساب، و الدليل على ذلك قوله: { وَقَالُواْ يٰوَيْلَنَا هَـٰذَا يَوْمُ ٱلدِّينِ } … يعني يوم الحساب",
+            "chain": "Ali ibn Ibrahim, from his father, from Muhammad ibn Abi Umayr, from al-Nadr ibn Suwayd, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "The Day of Retribution is the day of reckoning. The proof is His word, 'And they will say, Woe to us! This is the Day of Retribution', meaning the day of reckoning."
+            },
+            "source": "s20"
+          },
+          {
+            "id": "n9",
+            "speaker": "Imam Ali ibn al-Husayn",
+            "addressee": null,
+            "arabic": "لَوْ مَاتَ مَنْ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ لَمَا اسْتَوْحَشْتُ بَعْدَ أَنْ يَكُونَ الْقُرْآنُ مَعِي وَكَانَ (عَلَيهِ السَّلام) إِذَا قَرَأَ مالِكِ يَوْمِ الدِّينِ يُكَرِّرُهَا حَتَّى كَادَ أَنْ يَمُوتَ",
+            "chain": "Ali ibn Ibrahim, from his father and Ali ibn Muhammad al-Qasani, from al-Qasim ibn Muhammad, from Sulayman ibn Dawud, from Sufyan ibn Uyayna, from al-Zuhri",
+            "text": {
+              "en": "Were all between east and west to die, I would feel no desolation so long as the Quran was with me. And when he recited 'Master of the Day of Retribution' he would repeat it until he was near to death."
+            },
+            "source": "s54"
+          }
+        ]
+      },
+      {
+        "verse": 5,
+        "heading": {
+          "en": "Turning to speak to God"
+        },
+        "note": {
+          "en": "Tusi glosses 'we turn for help' as help upon obeying and worshipping You, and reads the surah from its start as words God tells the Prophet to say [13]."
+        },
+        "narrations": [
+          {
+            "id": "n10",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يعني لا نريد منك غيرك لا نعبدك بالعوض والبدل كما يعبدك الجاهلون بك المغيبون عنك",
+            "chain": null,
+            "text": {
+              "en": "It means: we want nothing from You but You. We do not worship You for a reward or a substitute, as those who are ignorant of You and veiled from You worship You."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "The road asked for"
+        },
+        "note": {
+          "en": "Tabrisi gives three senses for 'guide us': keep us firm on the true religion, guide us to the road of paradise as our reward, and show us the truth to come as You showed us before [8]."
+        },
+        "narrations": [
+          {
+            "id": "n11",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هو أمير المؤمنين عليه السلام ومعرفته، والدليل على أنه أمير المؤمنين عليه السلام قوله عز وجل: \" وإنه في أم الكتاب لدينا لعلي حكيم \" وهو أمير المؤمنين عليه السلام في أم الكتاب",
+            "chain": "Ahmad ibn Ali ibn Ibrahim ibn Hashim, from his father, from his grandfather, from Hammad ibn Isa, from Abu Abdillah",
+            "text": {
+              "en": "It is Amir al-Muminin and knowledge of him. The proof that it is Amir al-Muminin is God's word, 'And indeed it is in the Mother of the Book with Us, sublime and wise'; and he is Amir al-Muminin in the Mother of the Book."
+            },
+            "source": "s63"
+          },
+          {
+            "id": "n12",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يَقُولُ أَرْشِدْنَا إِلَى الصِّرَاطِ الْمُسْتَقِيمِ أَرْشِدْنَا لِلُزُومِ الطَّرِيقِ الْمُؤَدِّي إِلَى مَحَبَّتِكَ وَالْمُبَلِّغِ إِلَى دِينِكَ وَالْمَانِعِ مِنْ أَنْ نَتَّبِعَ أَهْوَاءَنَا فَنَعْطَبَ أَوْ نَأْخُذَ بِآرَائِنَا فَنَهْلِكَ",
+            "chain": "Muhammad ibn al-Qasim al-Astarabadi, from Yusuf ibn Muhammad ibn Ziyad and Ali ibn Muhammad ibn Sayyar, from their fathers, from al-Hasan ibn Ali, from his fathers, from Musa ibn Jafar, from Jafar ibn Muhammad al-Sadiq",
+            "text": {
+              "en": "He says: direct us to the straight path. Direct us to hold to the road that leads to Your love and brings us to Your religion, and keeps us from following our desires so that we are ruined, or taking our own opinions so that we perish."
+            },
+            "source": "s60"
+          },
+          {
+            "id": "n13",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "وهي الطريق إلى معرفة الله وهما صراطان صراط في الدنيا وصراط في الآخرة فأما الصراط في الدنيا فهو الإمام المفترض الطاعة من عرفه في الدنيا واقتدى بهداه مرّ على الصراط الذي هو جسر جهنّم في الآخرة ومن لم يعرفه في الدنيا زلت قدمه عن الصراط في الآخرة فتردّى في نار جهنّم",
+            "chain": null,
+            "text": {
+              "en": "It is the road to knowledge of God. There are two paths, one in this world and one in the hereafter. The path in this world is the Imam whose obedience is obligatory: whoever knew him here and followed his guidance crosses the bridge over hell there; whoever did not, his foot slips."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 7,
+        "heading": {
+          "en": "Those blessed, and the rest"
+        },
+        "note": {
+          "en": "Tusi reports all commentators, Shia and Sunni, call those under wrath the Jews; the astray are the Christians, from the verse on their straying and a report from the Prophet [16]. Amir al-Muminin adds every unbeliever is both [23]."
+        },
+        "narrations": [
+          {
+            "id": "n14",
+            "speaker": "Amir al-Muminin",
+            "addressee": null,
+            "arabic": "أي قولوا إهدنا صراط الذين أنعمت عليهم بالتوفيق لدينك وطاعتك لا بالمال والصحة فانهم قد يكونون كفاراً أو فساقاً",
+            "chain": null,
+            "text": {
+              "en": "That is, say: guide us to the path of those You have blessed with success in Your religion and Your obedience, not with wealth and health, for such people may be unbelievers or transgressors."
+            },
+            "source": "s23"
+          },
+          {
+            "id": "n15",
+            "speaker": "the Prophet",
+            "addressee": null,
+            "arabic": "شيعة عليّ الذين أنعمت عليهم بولاية عليّ بن أبي طالب عليه السلام لم تغضب عليهم ولم يضلّوا",
+            "chain": "Furat ibn Ibrahim al-Kufi, from Ubayd ibn Kathir, from Muhammad ibn Marwan, from Ubayd ibn Yahya ibn Mihran al-Attar, from Muhammad ibn al-Husayn, from his father, from his grandfather",
+            "text": {
+              "en": "The Shia of Ali, whom You have blessed with the guardianship of Ali ibn Abi Talib: You were not angry with them, and they did not go astray."
+            },
+            "source": "s24"
+          },
+          {
+            "id": "n16",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "المغضوب عليهم النصاب والضالين والشكاك والذين لا يعرفون الإمام",
+            "chain": "from him, from Ibn Abi Umayr, from Ibn Udhayna, from Abu Abdillah",
+            "text": {
+              "en": "Those who have incurred wrath are those hostile to the Ahl al-Bayt, and the astray are the doubters and those who do not know the Imam."
+            },
+            "source": "s18"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The two traditions divide over the first verse. Tabrisi reports that our companions agree the Name-verse is a verse of this surah and of every surah, and that a prayer in which it is dropped is void [3]. Tabari argues the opposite: he takes the return of \"the All-beneficent, the All-merciful\" in the third verse as proof that the opening formula is no verse of the Fatiha, since two neighbouring verses are never repeated word for word with nothing between them [27]. Ibn Kathir records three Sunni positions: an independent verse, part of a verse, or no part of the surah at all, the last being the view of the reciters and jurists of Medina [32]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Faatiha 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فيكون ما يعملونه معلماً باسمه منعوتاً بنعته تعالى مقصوداً لأجله سبحانه فلا يكون العمل هالكاً باطلاً مبتراً، لأنه باسم الله الذي لا سبيل للهلاك والبطلان إليه"
+        },
+        "gloss": "What they do is then marked with His name, described by His description and meant for Him, and the deed is not perishing, void and cut off, because it is in the name of Allah, to whom perishing and voidness have no way."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Faatiha 6 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=1&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعند ذلك تقسم الناس في طرقهم ثلثه أقسام من طريقه إلى فوق وهم الذين يؤمنون بآيات الله ولا يستكبرون عن عبادته، ومن طريقه إلى السفل، وهم المغضوب عليهم، ومن ضل الطريق وهو حيران فيه وهم الضالون"
+        },
+        "gloss": "At that point people divide, in their roads, into three: one whose road goes upward, and they are those who believe in God's signs and are not too proud to worship Him; one whose road goes downward, and they are those under wrath; and one who has lost the road and wanders in it, and they are the astray."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اتفق أصحابنا أنها آية من سورة الحمد ومن كل سورة وأنَّ من تركها في الصلاة بطلت صلاته سواء كانت الصلاة فرضاً أو نفلاً"
+        },
+        "gloss": "Our companions agree that it is a verse of Surat al-Hamd and of every surah, and that whoever leaves it out in the prayer has voided his prayer, whether the prayer is obligatory or voluntary."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=1&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والحمد قد يكون من غير نعمة والشكر يختص بالنعمة … واشتقاقه من التربية يقال ربيته وربيته بمعنى وفلان يرب صنيعته إذا كان ينمّمها ولا يطلق هذا الاسم إلا على الله ويقيد في غيره فيقال رب الدار ورب الضيعة"
+        },
+        "gloss": "Praise may be offered where there is no favour, while thanks is peculiar to a favour. ... Rabb is derived from nurture: one says 'I reared him', and 'so and so tends his work' when he develops it. The name is not used absolutely of any but God, and of others it is qualified: master of the house, master of the estate."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=1&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال علي بن عيسى الرمّاني: في الأول ذكر العبودية فوصل ذلك بشكر النعم التي بها يستحق العبادة وهاهنا ذكر الحمد فوصله بذكر ما به يستحق الحمد من النعم فليس فيه تكرار"
+        },
+        "gloss": "Ali ibn Isa al-Rummani said: in the first place servitude was mentioned, so it was joined to thanks for the blessings by which He deserves worship; here praise is mentioned, so it was joined to what among the blessings deserves praise. So there is no repetition in it."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=1&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قرأ عاصم والكسائي وخلف ويعقوب الحضرمي مالك بالألف والباقون ملك بغير ألف"
+        },
+        "gloss": "Asim, al-Kisai, Khalaf and Yaqub al-Hadrami read it with the alif, owner; the rest read it without the alif, king."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=1&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قيل في معنى اهدنا وجوه أحدها: أن معناه ثبتنا على الدين الحق … وثانيها: أن الهداية هي الثواب … وثالثها: أن المراد دلنا على الدين الحق في مستقبل العمر كما دللتنا عليه في الماضي"
+        },
+        "gloss": "Several senses have been given for 'guide us'. The first is: keep us firm on the true religion. ... The second: guidance here is the reward. ... The third: what is meant is, show us the true religion in the life to come as You showed it to us in the past."
+      },
+      {
+        "id": "s12",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=1&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومعنى ملك يوم الدين باسقاط الألف أنه الملك يومئذ لا ملك غيره وأنه لا يؤتى في ذلك الوقت أحداً الملك كما اتاه في الدنيا"
+        },
+        "gloss": "The sense of 'king of the Day of Retribution', dropping the alif, is that He is the King on that day and there is no king besides Him, and that at that time kingship is given to no one as He gave it in this world."
+      },
+      {
+        "id": "s13",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=1&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والعبادة ضرب من الشكر، مع ضرب من الخضوع ولا تستحق إلا باصول النعم التي هي خلق الحياة والقدرة والشهوة … ونستعين اي نطلب منك المعونة على طاعتك وعبادتك … والتقدير في اول السورة إلى ها هنا، اي قل يا محمد هذا الحمد"
+        },
+        "gloss": "Worship is a kind of thanks joined to a kind of humility, and it is deserved only for the root blessings, which are the creation of life, of power and of desire. ... 'And we seek help' means: we ask You for help upon obeying and worshipping You. ... The implied words from the start of the surah to here are: say, Muhammad, this praise."
+      },
+      {
+        "id": "s15",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=1&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معناه بيان الصراط المستقيم، إذ كان كل طريق من طرق الحق صراطاً مستقيماً. والمعنى صراط من أنعمت عليهم بطاعتك"
+        },
+        "gloss": "Its meaning is the clarification of the straight path, since every road among the roads of truth is a straight path. The sense is: the path of those You have blessed with obedience to You."
+      },
+      {
+        "id": "s16",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=1&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ والمغضوب عليهم } هم اليهود عند جميع المفسرين الخاص والعام … { ولا الضالين } هم النصارى لأنه قال: { وضلوا عن سواء السبيل } وقال { لعن الذين كفروا } يعني النصارى. وروي ذلك عن النبي"
+        },
+        "gloss": "'Those who have incurred wrath' are the Jews, in the view of all the commentators, ours and theirs. ... 'Nor those who are astray' are the Christians, because He said, 'and they strayed from the right way', and He said, 'cursed were the faithless', meaning the Christians. And that has been reported from the Prophet."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=1&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المغضوب عليهم النصاب والضالين والشكاك والذين لا يعرفون الإمام"
+        },
+        "gloss": "Those who have incurred wrath are those hostile to the Ahl al-Bayt, and the astray are the doubters and those who do not know the Imam."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الله مشتق من إله، و الإله يقتضي مألوها، و الاسم غير المسمى، فمن عبد الاسم دون المعنى فقد كفر و لم يعبد شيئا"
+        },
+        "gloss": "Allah is derived from ilah, and a god requires one who worships. The name is not the named. Whoever worships the name without the meaning has disbelieved and has worshipped nothing."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 2 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=1&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "شكر النعمة اجتناب المحارم، و تمام الشكر قول الرجل: { ٱلْحَمْدُ للَّهِ رَبِّ ٱلْعَالَمِينَ }"
+        },
+        "gloss": "Thanking for a blessing is avoiding what is forbidden, and the completeness of thanks is a man's saying: All praise belongs to Allah, Lord of all the worlds."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 1 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تقول بسم الله أي أستعين على أموري كلها بالله الذي لا تحق العبادة الاّ له المغيث إذا استغيث والمجيب إذا دعي"
+        },
+        "gloss": "You say 'In the Name of Allah', that is: I seek help in all my affairs from Allah, who alone deserves worship, who succours when succour is sought and answers when He is called."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 5 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=1&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأما الصراط في الدنيا فهو الإمام المفترض الطاعة من عرفه في الدنيا واقتدى بهداه مرّ على الصراط الذي هو جسر جهنّم في الآخرة"
+        },
+        "gloss": "As for the path in this world, it is the Imam whose obedience is obligatory: whoever knew him in this world and followed his guidance passed over the path, which is the bridge of hell, in the hereafter."
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=1&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي قولوا إهدنا صراط الذين أنعمت عليهم بالتوفيق لدينك وطاعتك لا بالمال والصحة فانهم قد يكونون كفاراً أو فساقاً … كل من كفر بالله فهو مغضوب عليه وضال عن سبيل الله"
+        },
+        "gloss": "That is, say: guide us to the path of those You have blessed with success in Your religion and Your obedience, not with wealth and health, for such people may be unbelievers or transgressors. ... Everyone who disbelieves in God is under wrath and astray from God's way."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Faatiha 6 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=1&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "شيعة عليّ الذين أنعمت عليهم بولاية عليّ بن أبي طالب عليه السلام لم تغضب عليهم ولم يضلّوا"
+        },
+        "gloss": "The Shia of Ali, whom You have blessed with the guardianship of Ali ibn Abi Talib: You were not angry with them and they did not go astray."
+      },
+      {
+        "id": "s27",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Faatiha 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=1&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بل ذلك لنا حجة علـى خطأ دعوى من ادعى أن بسم الله الرحمن الرحيـم من فـاتـحة الكتاب آية"
+        },
+        "gloss": "Rather, that is a proof for us of the error of the claim that 'In the name of Allah, the All-beneficent, the All-merciful' is a verse of the Opening of the Book."
+      },
+      {
+        "id": "s32",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Faatiha 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإنما اختلفوا في البسملة هل هي آية مستقلة من أولها كما هو عند جمهور قراء الكوفة وقول جماعة من الصحابة والتابعين وخلق من الخلف، أو بعض آية، أو لا تعد من أولها بالكلية كما هو قول أهل المدينة من القراء والفقهاء، على ثلاثة أقوال"
+        },
+        "gloss": "They differed only about the basmala: is it an independent verse at the start of the surah, as with the majority of the reciters of Kufa and a group of the Companions, the Followers and many of the later scholars, or part of a verse, or not counted from its beginning at all, as the people of Medina among the reciters and jurists say. Three views."
+      },
+      {
+        "id": "s53",
+        "kind": "hadith",
+        "work": "Uyun akhbar al-Rida",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 54, cited at Al-Faatiha 4",
+        "url": "https://thaqalayn.com/book/4",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "قَسَمْتُ فَاتِحَةَ الْكِتَابِ بَيْنِي وَبَيْنَ عَبْدِي، فَنِصْفُهَا لِي وَنِصْفُهَا لِعَبْدِي. وَلِعَبْدِي مَا سَأَلَ"
+        },
+        "gloss": "I have divided the Opening of the Book between Me and My servant: half of it is Mine and half of it is My servant's, and My servant shall have what he asks."
+      },
+      {
+        "id": "s54",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 2, hadith 13, cited at Al-Faatiha 4",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "ضعيف"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَكَانَ (عَلَيهِ السَّلام) إِذَا قَرَأَ مالِكِ يَوْمِ الدِّينِ يُكَرِّرُهَا حَتَّى كَادَ أَنْ يَمُوتَ"
+        },
+        "gloss": "And when he recited 'Master of the Day of Retribution' he would repeat it until he was near to death."
+      },
+      {
+        "id": "s60",
+        "kind": "hadith",
+        "work": "Uyun akhbar al-Rida",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 60, cited at Al-Faatiha 6",
+        "url": "https://thaqalayn.com/book/4",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "أَرْشِدْنَا لِلُزُومِ الطَّرِيقِ الْمُؤَدِّي إِلَى مَحَبَّتِكَ وَالْمُبَلِّغِ إِلَى دِينِكَ وَالْمَانِعِ مِنْ أَنْ نَتَّبِعَ أَهْوَاءَنَا فَنَعْطَبَ أَوْ نَأْخُذَ بِآرَائِنَا فَنَهْلِكَ"
+        },
+        "gloss": "Direct us to hold to the road that leads to Your love and brings us to Your religion, and that keeps us from following our desires so that we are ruined, or taking our own opinions so that we perish."
+      },
+      {
+        "id": "s63",
+        "kind": "hadith",
+        "work": "Ma'ani al-Akhbar",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 3, cited at Al-Faatiha 6",
+        "url": "https://thaqalayn.com/book/14",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو أمير المؤمنين عليه السلام ومعرفته"
+        },
+        "gloss": "It is Amir al-Muminin and knowledge of him."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-06T01:11:22Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-06T01:44:38Z",
+      "assembled_at": "2026-09-06T01:45:54Z"
+    }
+  }
+}
