@@ -1,0 +1,599 @@
+{
+  "id": "2:4",
+  "surah": 2,
+  "index": 4,
+  "range": [
+    30,
+    39
+  ],
+  "title": {
+    "en": "Adam and the angels"
+  },
+  "essay": {
+    "en": "The passage steps back before the human story begins: ‘When your Lord said to the angels, “Indeed I am going to set a viceroy on the earth.”’ Tabatabai reads that vicegerency as God’s own, not the succession of one earthly species to another, and holds that it is not confined to Adam but shared by his children [1]. The angels’ question, he insists, is not objection but a request to understand what puzzled them, and their closing words, ‘Indeed You are the All-knowing, the All-wise,’ concede the point [1]. Tabrisi notes that khalifa and imam name one office but come from different roots: khalifa from standing in another’s place, imam from precedence that obliges obedience [4].\n\nThe answer is knowledge. God teaches Adam the names, then puts the question to the angels. Tabrisi says He asked them what He knew they could not answer, to settle that they know only what He teaches them and to raise Adam’s rank in their sight [6]. On ‘whatever you disclose and whatever you conceal’, he records several readings, one taking the disclosed as their own question and the concealed as what Iblis was hiding, and prefers the most general sense [7]. Tabatabai hears in that phrase a hint that something hidden was about to surface, which suits ‘he refused and acted arrogantly’ [2].\n\nThe prostration verse is set here as a short bridge into the garden, and from ‘Prostrate before Adam’ Tabatabai draws that bowing to another is admissible when it honours him and is itself obedience to God [2]. Tusi holds the plain sense addresses all the angels, against those who confined it to one company [18].\n\nWhich garden this was is disputed. Tusi reports that some made it a garden of this world, since Iblis could not reach the eternal garden, while most commentators held otherwise [19]. Tabatabai answers from the opening line: Adam was made to live and die on earth, and the garden was the road there [3]. Hamza read ‘he removed them’ for ‘he caused them to stumble’, and Tabrisi insists the expulsion was no punishment, since the ugly is not permitted of prophets [10]. Adam then receives words and is turned to; the descent is repeated with a promise and a warning, and Tabrisi takes the closing verse to prove that whoever dies denying the signs stays in the Fire [13]."
+  },
+  "verses": [
+    {
+      "verse": 30,
+      "heading": {
+        "en": "A viceroy on earth"
+      },
+      "note": null,
+      "narrations": [
+        {
+          "id": "n1",
+          "speaker": "Imam Ali",
+          "addressee": null,
+          "arabic": "قال فلما سمع ذلك من الملائكة قال { إني جاعل في الأرض خليفة } يكون حجة لي في الأرض على خلقي … إني أريد أن أخلق خلقاً بيدي واجعل من ذريته أنبياء ومرسلين وعباداً صالحين أئمة مهتدين واجعلهم خلفاء على خلقي في أرضي",
+          "chain": "his father, from al-Hasan ibn Mahbub, from Amr ibn Abi Miqdam, from Thabit al-Haddha, from Jabir ibn Yazid al-Jufi, from Abu Jafar, from his father, from his forefathers, from Amir al-Muminin",
+          "text": {
+            "en": "When He heard that from the angels He said, ‘Indeed I am going to set a viceroy on the earth,’ one who will be a proof of Mine on the earth over My creation. I will make of his offspring prophets and messengers, righteous servants and rightly guided Imams, and set them as vicegerents over My creation."
+          },
+          "source": "s25"
+        },
+        {
+          "id": "n2",
+          "speaker": "Imam Ali",
+          "addressee": "Maytham",
+          "arabic": "إنّ حديثنا أهل البيت صعبٌ مستصعب لا يحتمله إلاّ ملكٌ مقرّب، أو نبىٌّ مرسل، أو مؤمنٌ قد امتحن الله قلبه للإيمان … فهل رأيت الملائكة احتملوا العلم؟",
+          "chain": "Ali ibn Hamdun, from Isa ibn Mihran, from Faraj ibn Farwa, from Masada, from Salih ibn Maytham, from his father",
+          "text": {
+            "en": "Our hadith, we the People of the House, is difficult, exceedingly difficult; none can bear it except an angel brought near, or a sent prophet, or a believer whose heart God has tested for faith. Have you seen the angels bear the knowledge?"
+          },
+          "source": "s39"
+        }
+      ]
+    },
+    {
+      "verse": 31,
+      "heading": {
+        "en": "The names taught to Adam"
+      },
+      "note": {
+        "en": "Fayd Kashani holds that the names are not mere words but the realities of the created things, which is why the reports attach them both to all creation and to God’s chosen [34]."
+      },
+      "narrations": [
+        {
+          "id": "n3",
+          "speaker": "Imam al-Sadiq",
+          "addressee": null,
+          "arabic": "أنّه سئل ماذا علّمه قال الأرضين والجبال والشّعاب والأودية ثم نظر إلى بساط تحته فقال وهذا البساط ممّا علّمه",
+          "chain": null,
+          "text": {
+            "en": "He was asked what God had taught him. He said: the lands, the mountains, the ravines and the valleys. Then he looked at a rug beneath him and said: and this rug is among what He taught him."
+          },
+          "source": "s34"
+        },
+        {
+          "id": "n4",
+          "speaker": "Imam al-Sadiq",
+          "addressee": null,
+          "arabic": "أَنَّ اللَّهَ تَبَارَكَ وَ تَعَالَى عَلَّمَ آدَمَ عليه السلام أَسْمَاءَ حُجَجِ اللَّهِ كُلَّهَا ثُمَّ عَرَضَهُمْ وَ هُمْ أَرْوَاحٌ عَلَى الْمَلَائِكَةِ فَقالَ أَنْبِئُونِي بِأَسْماءِ هؤُلاءِ إِنْ كُنْتُمْ صادِقِينَ‌ بِأَنَّكُمْ أَحَقُّ بِالْخِلَافَةِ فِي الْأَرْضِ لِتَسْبِيحِكُمْ وَ تَقْدِيسِكُمْ مِنْ آدَمَ ع‌",
+          "chain": "Muhammad ibn Musa ibn al-Mutawakkil, from Muhammad ibn Abi Abdillah al-Kufi, from Muhammad ibn Ismail al-Barmaki, from Jafar ibn Abdillah al-Kufi, from al-Hasan ibn Said, from Muhammad ibn Ziyad, from Ayman ibn Muhriz, from al-Sadiq",
+          "text": {
+            "en": "God taught Adam the names of all God’s proofs, then presented them, and they were spirits, to the angels, and said: ‘Tell me the names of these, if you are truthful’ that you are more entitled than Adam to the vicegerency on earth for your glorifying and sanctifying."
+          },
+          "source": "s84"
+        }
+      ]
+    },
+    {
+      "verse": 34,
+      "heading": {
+        "en": "Iblis refuses to prostrate"
+      },
+      "note": null,
+      "narrations": [
+        {
+          "id": "n5",
+          "speaker": "Imam al-Sadiq",
+          "addressee": null,
+          "arabic": "لأن الله تبارك و تعالى أمر الملائكة بالسجود لآدم، فدخل في أمره الملائكة و إبليس فإن إبليس كان مع الملائكة في السماء يعبد الله، و كانت الملائكة تظن أنه منهم، و لم يكن منهم، فلما أمر الله الملائكة بالسجود لآدم، أخرج ما كان في قلب إبليس من الحسد، فعلمت الملائكة عند ذلك أن إبليس لم يكن منهم",
+          "chain": "Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Jamil, from Abu Abdillah",
+          "text": {
+            "en": "God commanded the angels to prostrate before Adam, and His command took in both the angels and Iblis. Iblis was with the angels in heaven worshipping God, and they supposed he was one of them, though he was not. When the command came it drew out the envy in his heart."
+          },
+          "source": "s29"
+        },
+        {
+          "id": "n6",
+          "speaker": "Imam al-Sadiq",
+          "addressee": null,
+          "arabic": "الكفر أقدم، و ذلك أن إبليس أول من كفر، و كان كفره غير شرك، لأنه لم يدع إلى عبادة غير الله، و إنما دعا إلى ذلك بعد فأشرك",
+          "chain": "Ali ibn Ibrahim, from Harun ibn Muslim, from Masada ibn Sadaqa",
+          "text": {
+            "en": "Disbelief is older, for Iblis was the first to disbelieve, and his disbelief was not associating partners with God, since he did not call to the worship of any other than God. He called to that only later, and so associated."
+          },
+          "source": "s29"
+        },
+        {
+          "id": "n7",
+          "speaker": "Imam Abu al-Hasan",
+          "addressee": null,
+          "arabic": "لَمَّا رَأَى رَسُولُ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) تَيْماً وَعَدِيّاً وَبَنِي أُمَيَّةَ يَرْكَبُونَ مِنْبَرَهُ أَفْظَعَهُ فَأَنْزَلَ الله تَبَارَكَ وَتَعَالَى قُرْآناً يَتَأَسَّى بِهِ … يَا مُحَمَّدُ إِنِّي أَمَرْتُ فَلَمْ أُطَعْ فَلا تَجْزَعْ أَنْتَ إِذَا أَمَرْتَ فَلَمْ تُطَعْ فِي وَصِيِّكَ",
+          "chain": "al-Husayn ibn Muhammad, from Mualla ibn Muhammad, from one who informed him, from Ali ibn Jafar",
+          "text": {
+            "en": "When the Messenger of God saw Taym, Adi and Banu Umayya mounting his pulpit it appalled him, so God sent down a Quran by which he might be consoled. Then He revealed: O Muhammad, I commanded and was not obeyed; do not grieve when you command and are not obeyed about your successor."
+          },
+          "source": "s85"
+        }
+      ]
+    },
+    {
+      "verse": 35,
+      "heading": {
+        "en": "The garden and the tree"
+      },
+      "note": null,
+      "narrations": [
+        {
+          "id": "n8",
+          "speaker": "Imam al-Sadiq",
+          "addressee": null,
+          "arabic": "سئل الصادق عليه السلام عن جنة آدم أمن جنان الدنيا كانت أم من جنان الآخرة فقال كانت من جنان الدنيا تطلع فيها الشمس والقمر ولو كانت من جنان الآخرة ما أخرج منها أبدا آدم ولم يدخلها إبليس",
+          "chain": "his father, raising it",
+          "text": {
+            "en": "He was asked whether Adam’s garden was one of the gardens of this world or of the hereafter. He said: it was of the gardens of this world, in which the sun and the moon rise. Had it been of the hereafter, Adam would never have been expelled from it, nor would Iblis have entered it."
+          },
+          "source": "s26"
+        },
+        {
+          "id": "n9",
+          "speaker": "Imam al-Rida",
+          "addressee": "Abd al-Salam al-Harawi",
+          "arabic": "فقال كل ذلك حق قلت فما معنى هذه الوجوه على اختلافها فقال يا أبا الصّلت انّ شجرة الجنّة تحمل أنواعاً وكانت شجرة الحنطة وفيها عنب ليست كشجرة الدنيا",
+          "chain": "with his chain to Abd al-Salam ibn Salih al-Harawi",
+          "text": {
+            "en": "He said: all of that is true. I said: then what do these differing accounts mean? He said: Abu al-Salt, a tree of the garden bears many kinds. It was a wheat tree and there were grapes in it; it is not like a tree of this world."
+          },
+          "source": "s36"
+        }
+      ]
+    },
+    {
+      "verse": 37,
+      "heading": {
+        "en": "The words Adam received"
+      },
+      "note": null,
+      "narrations": [
+        {
+          "id": "n10",
+          "speaker": "Imam al-Baqir or Imam al-Sadiq",
+          "addressee": null,
+          "arabic": "لا إله إلا أنت سبحانك اللهم و بحمدك عملت سوءا و ظلمت نفسي فاغفر لي و أنت خير الغافرين، لا إله إلا أنت سبحانك اللهم و بحمدك عملت سوءا و ظلمت نفسي فاغفر لي و ارحمني و أنت خير الراحمين، لا إله إلا أنت سبحانك اللهم و بحمدك عملت سوءا و ظلمت نفسي فتب علي إنك أنت التواب الرحيم",
+          "chain": "Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Ibrahim sahib al-shair, from Kathir ibn Kalthama, from one of the two Imams",
+          "text": {
+            "en": "There is no god but You. Glory be to You, O God, and praise. I have done evil and wronged myself; forgive me, and You are the best of forgivers; and have mercy on me, and You are the best of the merciful; and turn to me, for You are the All-clement, the All-merciful."
+          },
+          "source": "s31"
+        },
+        {
+          "id": "n11",
+          "speaker": "The Prophet Muhammad",
+          "addressee": null,
+          "arabic": "قل: ربّ أسألك بحق محمد نبيك وبحق علي وصي نبيك وبحق فاطمة بنت نبيك وبحق الحسن والحسين سبطي نبيك إلا تبت عليّ ورحمتني … فدعا بهنّ آدم فتاب الله عليه",
+          "chain": "Muhammad ibn al-Qasim ibn Ubayd, from al-Hasan ibn Jafar, from al-Husayn ibn Sawad, from Muhammad ibn Abdillah, from Shuja ibn al-Walid Abu Badr al-Sakuni, from Sulayman ibn Mihran al-Amash, from Abu Salih, from Ibn Abbas",
+          "text": {
+            "en": "Say: Lord, I ask You by the right of Muhammad Your prophet, by the right of Ali the successor of Your prophet, by the right of Fatimah the daughter of Your prophet, and by the right of al-Hasan and al-Husayn the grandsons of Your prophet, that You turn to me. Adam called by them, and God turned to him."
+          },
+          "source": "s41"
+        }
+      ]
+    },
+    {
+      "verse": 38,
+      "heading": {
+        "en": "Guidance after the descent"
+      },
+      "note": {
+        "en": "Tusi reports al-Jubbai’s view that the first descent was from the garden to the heaven, and this second one from the heaven to the earth [22]."
+      },
+      "narrations": [
+        {
+          "id": "n12",
+          "speaker": "Imam al-Baqir",
+          "addressee": null,
+          "arabic": "وقوله: { فإما يأتينكم منّي هدىً } قال: فهو … علي",
+          "chain": null,
+          "text": {
+            "en": "As for His words, ‘should any guidance come to you from Me’: he said, he is Ali."
+          },
+          "source": "s42"
+        }
+      ]
+    }
+  ],
+  "perspectives": {
+    "en": "Both traditions read the refusal as arrogance, but they part over what Iblis was. Asked directly whether he was an angel, al-Hasan, the father of the Qa’im, answers, ‘No, rather he was of the jinn’ [86]. Tabari reports from Ibn Abbas that Iblis belonged to a clan of angels called ‘the jinn’, created from the fire of the scorching wind, and himself argues from the exception in the verse that he was among those commanded [47]. They differ on the prostration too: Tabatabai reads it as honour paid to Adam while obeying God [2], while Qurtubi answers those who infer Adam’s superiority that it means prostrating to God facing Adam, as one prays toward the Kaaba [62]."
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "tafsir",
+      "work": "al-Mizan fi Tafsir al-Quran",
+      "author": "Allamah Muhammad Husayn Tabatabai",
+      "tradition": "shia",
+      "tier": "B",
+      "locus": "on Al-Baqara 30 to 33",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=2&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وهذا الكلام من الملائكة في مقام تعرف ما جهلوه واستيضاح ما أشكل عليهم من أمر هذا الخليفة، وليس من الاعتراض والخصومة في شيء"
+      },
+      "gloss": "This speech of the angels is in the position of coming to know what they were ignorant of and seeking clarity about what puzzled them concerning this viceroy, and is in no way objection or dispute."
+    },
+    {
+      "id": "s2",
+      "kind": "tafsir",
+      "work": "al-Mizan fi Tafsir al-Quran",
+      "author": "Allamah Muhammad Husayn Tabatabai",
+      "tradition": "shia",
+      "tier": "B",
+      "locus": "on Al-Baqara 34",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=2&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وقوله تعالى { اسجدوا لآدم } ، يستفاد منه جواز السجود لغير الله في الجملة إذا كان تحيَّة وتكرمة للغير وفيه خضوع لله تعالى بموافقة أمره"
+      },
+      "gloss": "From His words ‘Prostrate before Adam’ it is drawn that prostration to other than God is in general permissible when it is a greeting and an honouring of another and contains submission to God by conforming to His command."
+    },
+    {
+      "id": "s3",
+      "kind": "tafsir",
+      "work": "al-Mizan fi Tafsir al-Quran",
+      "author": "Allamah Muhammad Husayn Tabatabai",
+      "tradition": "shia",
+      "tier": "B",
+      "locus": "on Al-Baqara 35 to 39",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=2&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وسياق الآيات وخاصة قوله تعالى في صدر القصة { إني جاعل في الأرض خليفة } يعطي أن آدم عليه السلام إنما خلق ليحيا في الأرض ويموت فيها وإنما أسكنهما الله الجنة لاختبارهما"
+      },
+      "gloss": "The context of the verses, and especially His words at the head of the story, ‘Indeed I am going to set a viceroy on the earth’, yields that Adam was created to live on the earth and die in it, and that God settled the two in the garden to test them."
+    },
+    {
+      "id": "s4",
+      "kind": "tafsir",
+      "work": "Majma al-Bayan",
+      "author": "Shaykh al-Tabrisi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 30",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=2&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "والخليفة والإِمام واحد في الاستعمال إلا أن بينهما فرقاً فالخليفة استخلف في الأمر مكان من كان قبله فهو مأخوذ من أنه خلف غيره وقام مقامه والإِمام مأخوذ من التقدم"
+      },
+      "gloss": "Khalifa and imam are one in usage, save that there is a difference between them: khalifa is one put in the place of whoever was before him, taken from his succeeding another and standing in his place, while imam is taken from precedence."
+    },
+    {
+      "id": "s6",
+      "kind": "tafsir",
+      "work": "Majma al-Bayan",
+      "author": "Shaykh al-Tabrisi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 32",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=2&tAyahNo=32&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وإِنما سألهم سبحانه عما علم أنهم لا يعلمونه ليقررهم على أنهم لا يعلمون إلا ما علّمهم الله وليرفع به درجة آدم عندهم بأنه علّمه ما لم يعلموه"
+      },
+      "gloss": "He asked them only about what He knew they did not know, in order to establish for them that they know nothing except what God has taught them, and to raise Adam’s rank in their eyes by teaching him what they did not know."
+    },
+    {
+      "id": "s7",
+      "kind": "tafsir",
+      "work": "Majma al-Bayan",
+      "author": "Shaykh al-Tabrisi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 33",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=2&tAyahNo=33&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وثانيها: أنه أراد أعلم { ما تبدون } من قولكم أتجعل فيها من يفسد فيها { وما كنتم تكتمون } من إِضمار إِبليس المعصية والمخالفة"
+      },
+      "gloss": "The second view: He meant, I know what you disclose, namely your saying ‘Will You set in it someone who will cause corruption in it’, and what you were concealing, namely Iblis harbouring disobedience and opposition."
+    },
+    {
+      "id": "s10",
+      "kind": "tafsir",
+      "work": "Majma al-Bayan",
+      "author": "Shaykh al-Tabrisi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 36",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=2&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "ولم يكن إخراجهما من الجنة وإهباطهما إلى الأرض على وجه العقوبة لأن الدليل قد دل على أن الأنبياء عليهم السلام لا تجوز عليهم القبائح على حال"
+      },
+      "gloss": "Their removal from the garden and their descent to the earth was not by way of punishment, for the proof has established that ugly deeds are in no state permissible of the prophets."
+    },
+    {
+      "id": "s13",
+      "kind": "tafsir",
+      "work": "Majma al-Bayan",
+      "author": "Shaykh al-Tabrisi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 39",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=2&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وفي هذه الآية دلالة على أن من مات مصرّاً على كفره غير تائب منه وكذب بآيات ربه فهو مخلد في نار جهنم"
+      },
+      "gloss": "In this verse is an indication that whoever dies persisting in his disbelief, unrepentant of it, and denying the signs of his Lord, remains for ever in the fire of hell."
+    },
+    {
+      "id": "s18",
+      "kind": "tafsir",
+      "work": "al-Tibyan fi Tafsir al-Quran",
+      "author": "Shaykh al-Tusi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 34",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=2&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وظاهر الآية يقتضي ان الأمر كان لجميع الملائكة بالسجود، لعمومها"
+      },
+      "gloss": "The apparent sense of the verse requires that the command to prostrate was to all the angels, because of its generality."
+    },
+    {
+      "id": "s19",
+      "kind": "tafsir",
+      "work": "al-Tibyan fi Tafsir al-Quran",
+      "author": "Shaykh al-Tusi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 35",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=2&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "والجنة التي اسكن فيها آدم، قال قوم: هي بستان من بساتين الدنيا، لأن جنة الخلد لا يصل اليها إبليس ووسوسته"
+      },
+      "gloss": "As for the garden in which Adam was settled, a group said: it is one of the orchards of this world, because Iblis and his whispering cannot reach the garden of eternity."
+    },
+    {
+      "id": "s22",
+      "kind": "tafsir",
+      "work": "al-Tibyan fi Tafsir al-Quran",
+      "author": "Shaykh al-Tusi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 38",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=2&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وقال الجبائي: الهبوط الأول: هو الهبوط من الجنة إلى السماء، وهذا الهبوط من السماء إلى الأرض"
+      },
+      "gloss": "Al-Jubbai said: the first descent is the descent from the garden to the heaven, and this descent is from the heaven to the earth."
+    },
+    {
+      "id": "s25",
+      "kind": "hadith",
+      "work": "Tafsir al-Qummi",
+      "author": "Ali ibn Ibrahim al-Qummi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 34",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=2&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "قال { إني جاعل في الأرض خليفة } يكون حجة لي في الأرض على خلقي"
+      },
+      "gloss": "He said, ‘Indeed I am going to set a viceroy on the earth’, one who will be a proof of Mine on the earth over My creation."
+    },
+    {
+      "id": "s26",
+      "kind": "hadith",
+      "work": "Tafsir al-Qummi",
+      "author": "Ali ibn Ibrahim al-Qummi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 35 to 36",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=2&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "كانت من جنان الدنيا تطلع فيها الشمس والقمر ولو كانت من جنان الآخرة ما أخرج منها أبدا آدم"
+      },
+      "gloss": "It was of the gardens of this world, in which the sun and the moon rise; had it been of the gardens of the hereafter, Adam would never have been expelled from it."
+    },
+    {
+      "id": "s29",
+      "kind": "hadith",
+      "work": "al-Burhan fi Tafsir al-Quran",
+      "author": "Sayyid Hashim al-Bahrani",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 34",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=2&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "الكفر أقدم، و ذلك أن إبليس أول من كفر، و كان كفره غير شرك، لأنه لم يدع إلى عبادة غير الله"
+      },
+      "gloss": "Disbelief is older, and that is because Iblis was the first to disbelieve, and his disbelief was not associating partners with God, since he did not call to the worship of any other than God."
+    },
+    {
+      "id": "s31",
+      "kind": "hadith",
+      "work": "al-Burhan fi Tafsir al-Quran",
+      "author": "Sayyid Hashim al-Bahrani",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 37 to 38",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "لا إله إلا أنت سبحانك اللهم و بحمدك عملت سوءا و ظلمت نفسي فتب علي إنك أنت التواب الرحيم"
+      },
+      "gloss": "There is no god but You. Glory be to You, O God, and praise. I have done evil and wronged myself, so turn to me, for You are the All-clement, the All-merciful."
+    },
+    {
+      "id": "s34",
+      "kind": "hadith",
+      "work": "Tafsir al-Safi",
+      "author": "Fayd Kashani",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 31",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=2&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "بل المراد بالأسماء حقائق المخلوقات الكائنة في عالم الجَبَروت"
+      },
+      "gloss": "Rather what is meant by the names is the realities of the created things that are in the world of dominion."
+    },
+    {
+      "id": "s36",
+      "kind": "hadith",
+      "work": "Tafsir al-Safi",
+      "author": "Fayd Kashani",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 35",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=2&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "انّ شجرة الجنّة تحمل أنواعاً وكانت شجرة الحنطة وفيها عنب ليست كشجرة الدنيا"
+      },
+      "gloss": "A tree of the garden bears many kinds: it was a wheat tree and there were grapes in it; it is not like a tree of this world."
+    },
+    {
+      "id": "s39",
+      "kind": "hadith",
+      "work": "Tafsir Furat al-Kufi",
+      "author": "Furat ibn Ibrahim al-Kufi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 30",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=2&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "إنّ حديثنا أهل البيت صعبٌ مستصعب لا يحتمله إلاّ ملكٌ مقرّب، أو نبىٌّ مرسل، أو مؤمنٌ قد امتحن الله قلبه للإيمان"
+      },
+      "gloss": "Our hadith, we the People of the House, is difficult, exceedingly difficult; none bears it except an angel brought near, or a sent prophet, or a believer whose heart God has tested for faith."
+    },
+    {
+      "id": "s41",
+      "kind": "hadith",
+      "work": "Tafsir Furat al-Kufi",
+      "author": "Furat ibn Ibrahim al-Kufi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 37",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "ربّ أسألك بحق محمد نبيك وبحق علي وصي نبيك وبحق فاطمة بنت نبيك وبحق الحسن والحسين سبطي نبيك إلا تبت عليّ ورحمتني"
+      },
+      "gloss": "Lord, I ask You by the right of Muhammad Your prophet, by the right of Ali the successor of Your prophet, by the right of Fatimah the daughter of Your prophet, and by the right of al-Hasan and al-Husayn the grandsons of Your prophet, that You turn to me and have mercy on me."
+    },
+    {
+      "id": "s42",
+      "kind": "hadith",
+      "work": "Tafsir Furat al-Kufi",
+      "author": "Furat ibn Ibrahim al-Kufi",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "on Al-Baqara 38",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=2&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "وقوله: { فإما يأتينكم منّي هدىً } قال: فهو"
+      },
+      "gloss": "And His words, ‘should any guidance come to you from Me’: he said, he is [Ali]."
+    },
+    {
+      "id": "s47",
+      "kind": "tafsir",
+      "work": "Jami al-Bayan",
+      "author": "al-Tabari",
+      "tradition": "sunni",
+      "tier": "A",
+      "locus": "on Al-Baqara 34",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=2&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "كان إبلـيس من حيّ من أحياء الـملائكة، يقال لهم «الـجنّ»، خـلقوا من نار السموم من بـين الـملائكة"
+      },
+      "gloss": "Iblis was of a clan among the clans of the angels called ‘the jinn’, created from the fire of the scorching wind, from among the angels."
+    },
+    {
+      "id": "s62",
+      "kind": "tafsir",
+      "work": "al-Jami li-Ahkam al-Quran",
+      "author": "al-Qurtubi",
+      "tradition": "sunni",
+      "tier": "A",
+      "locus": "on Al-Baqara 34",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=2&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+      "excerpt": {
+        "lang": "ar",
+        "text": "والجواب أن معنى { ٱسْجُدُواْ لآدَمَ } ٱسجدوا لي مستقبلين وَجْه آدم"
+      },
+      "gloss": "The answer is that the meaning of ‘Prostrate before Adam’ is: prostrate to Me while facing Adam."
+    },
+    {
+      "id": "s84",
+      "kind": "hadith",
+      "work": "Kamal al-Din wa Tamam al-Ni'ma",
+      "author": "shaykh muhammad b. ali al-saduq",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "vol. 1, hadith 1, cited at Al-Baqara 32",
+      "url": "https://thaqalayn.com/book/21",
+      "grades": [],
+      "excerpt": {
+        "lang": "ar",
+        "text": "عَلَّمَ آدَمَ عليه السلام أَسْمَاءَ حُجَجِ اللَّهِ كُلَّهَا ثُمَّ عَرَضَهُمْ وَ هُمْ أَرْوَاحٌ عَلَى الْمَلَائِكَةِ"
+      },
+      "gloss": "He taught Adam the names of all God’s proofs, then presented them, and they were spirits, to the angels."
+    },
+    {
+      "id": "s85",
+      "kind": "hadith",
+      "work": "Al-Kafi",
+      "author": "shaykh muhammad b. yaqub al-kulayni",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "vol. 1, hadith 72, cited at Al-Baqara 34",
+      "url": "https://thaqalayn.com/book/1",
+      "grades": [
+        "ضعيف",
+        "لم يخرجه"
+      ],
+      "excerpt": {
+        "lang": "ar",
+        "text": "يَا مُحَمَّدُ إِنِّي أَمَرْتُ فَلَمْ أُطَعْ فَلا تَجْزَعْ أَنْتَ إِذَا أَمَرْتَ فَلَمْ تُطَعْ فِي وَصِيِّكَ"
+      },
+      "gloss": "O Muhammad, I commanded and was not obeyed, so do not grieve when you command and are not obeyed regarding your successor."
+    },
+    {
+      "id": "s86",
+      "kind": "hadith",
+      "work": "Uyun akhbar al-Rida",
+      "author": "shaykh muhammad b. ali al-saduq",
+      "tradition": "shia",
+      "tier": "A",
+      "locus": "vol. 1, hadith 1, cited at Al-Baqara 34",
+      "url": "https://thaqalayn.com/book/4",
+      "grades": [],
+      "excerpt": {
+        "lang": "ar",
+        "text": "فَقُلْنَا لِلْحَسَنِ أَبِي الْقَائِمِ‏ عَلَيْهِ السَّلامُ … قَالا: قُلْنَا لَهُ: فَعَلَى هَذَا لَمْ يَكُنْ إِبْلِيسُ أَيْضاً مَلَكاً.فَقَالَ: لا. بَلْ كَانَ مِنَ الْجِنِّ"
+      },
+      "gloss": "We said to al-Hasan, the father of the Qa’im … They said: we said to him, on this reckoning Iblis too was not an angel. He said: No, rather he was of the jinn."
+    }
+  ],
+  "status": {
+    "gathered_at": "2026-09-05T21:26:26Z",
+    "audit_attempts": 3,
+    "audited_at": "2026-09-05T22:28:26Z",
+    "assembled_at": "2026-09-05T22:57:39Z"
+  }
+}

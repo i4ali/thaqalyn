@@ -28,7 +28,26 @@ private enum TodayStrings {
     static let resume = "Resume"
     static let share = "Share"
     static func verseOf(_ n: Int, _ total: Int) -> String { "Verse \(n) of \(total)" }
+    /// Continue-reading position: "<passage title> · passage 3 of 40". The no-break
+    /// space keeps the dot with the title when the line wraps.
+    static func passagePosition(_ title: String, _ index: Int, _ total: Int) -> String {
+        "\(title)\u{00A0}· passage \(index) of \(total)"
+    }
+    /// Title fallback for a passage without commentary yet: "Verses 30 to 39".
+    static func versesRange(_ label: String) -> String { "Verses \(label)" }
     static func percentComplete(_ p: Int) -> String { "\(p)% complete" }
+}
+
+/// "<title> · passage i of n" for the passage holding the last-read verse. nil until
+/// DataManager's passage index has loaded, so callers fall back to the verse line.
+@MainActor
+private func passagePositionLine(for info: LastReadInfo) -> String? {
+    guard let index = DataManager.shared.passageIndex,
+          let ref = index.passage(surah: info.surahNumber, containing: info.verseNumber) else { return nil }
+    let total = index.passages(forSurah: info.surahNumber).count
+    let title = PassageStore.shared.passage(surah: ref.surah, index: ref.index)?.title.en
+        ?? TodayStrings.versesRange(ref.rangeLabel)
+    return TodayStrings.passagePosition(title, ref.index, total)
 }
 
 struct TodayView: View {
@@ -483,10 +502,12 @@ private struct ContinueReadingHero: View {
                 Text(surah.surah.englishName)
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(themeManager.primaryText)
-                Text("\(TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount)) · \(surah.surah.englishNameTranslation)")
+                // The passage the reader is in; the verse line until the passage index loads.
+                Text(passagePositionLine(for: info)
+                     ?? "\(TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount)) · \(surah.surah.englishNameTranslation)")
                     .font(.system(size: 12))
                     .foregroundColor(themeManager.tertiaryText)
-                    .lineLimit(1)
+                    .lineLimit(2)
             }
 
             Spacer()
@@ -956,7 +977,9 @@ private struct EmContinueReadingCard: View {
                 EmNumeralCircle(n: surah.surah.number, size: 48)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(surah.surah.englishName).font(EmType.serif(20, .semiBold)).foregroundColor(themeManager.primaryText)
-                    Text(TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount)).font(.system(size: 12)).foregroundColor(themeManager.tertiaryText).lineLimit(1)
+                    // The passage the reader is in; the verse line until the passage index loads.
+                    Text(passagePositionLine(for: info) ?? TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount))
+                        .font(.system(size: 12)).foregroundColor(themeManager.tertiaryText).lineLimit(2)
                 }
                 Spacer(minLength: 8)
                 Text(surah.surah.arabicName).font(EmType.arabic(22)).foregroundColor(themeManager.accentBright).lineLimit(1)

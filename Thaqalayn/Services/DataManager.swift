@@ -12,6 +12,8 @@ class DataManager: ObservableObject {
     static let shared = DataManager()
     
     @Published var quranData: QuranData?
+    /// Passage (ruku) boundaries for all 114 surahs, built once from quranData. nil until load completes.
+    @Published var passageIndex: PassageIndex?
     @Published var availableSurahs: [SurahWithTafsir] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
@@ -76,7 +78,9 @@ class DataManager: ObservableObject {
         
         let decoder = JSONDecoder()
         do {
-            self.quranData = try decoder.decode(QuranData.self, from: data)
+            let decoded = try decoder.decode(QuranData.self, from: data)
+            self.quranData = decoded
+            self.passageIndex = PassageIndex(quran: decoded)
             print("✅ Successfully decoded QuranData with \(self.quranData?.surahs.count ?? 0) surahs")
         } catch {
             print("❌ JSON decode error: \(error)")
@@ -188,152 +192,6 @@ class DataManager: ObservableObject {
     func getVerseTimingData(surahNumber: Int, ayahNumber: Int) async -> VerseTimingData? {
         guard let quranAlignData = await getQuranAlignData() else { return nil }
         return quranAlignData.getVerseTimingData(surahNumber: surahNumber, ayahNumber: ayahNumber)
-    }
-    
-    func getTafsirText(for verse: VerseWithTafsir, layer: TafsirLayer) -> String? {
-        print("🔍 Getting tafsir text for verse \(verse.number), layer \(layer.rawValue)")
-        
-        guard let tafsir = verse.tafsir else { 
-            print("❌ No tafsir data found for verse \(verse.number)")
-            return nil 
-        }
-        
-        let rawText: String?
-        switch layer {
-        case .foundation:
-            rawText = tafsir.layer1
-        case .classical:
-            rawText = tafsir.layer2
-        case .contemporary:
-            rawText = tafsir.layer3
-        case .ahlulBayt:
-            rawText = tafsir.layer4
-        case .comparative:
-            rawText = tafsir.layer5
-        }
-        
-        guard let rawText = rawText else {
-            print("❌ No text found for verse \(verse.number), layer \(layer.rawValue)")
-            return nil
-        }
-        
-        // Clean and format the text for mobile display
-        let cleanedText = cleanTafsirText(rawText, layer: layer)
-        
-        print("✅ Found and cleaned tafsir text (\(cleanedText.count) characters) for verse \(verse.number), layer \(layer.rawValue)")
-        return cleanedText
-    }
-    
-    private func cleanTafsirText(_ text: String, layer: TafsirLayer) -> String {
-        print("🧹 BEFORE cleaning (first 200 chars): \(String(text.prefix(200)))")
-        var cleanedText = text
-        
-        // Remove redundant introductory sentences that repeat UI info
-        let redundantPatterns = [
-            "Here is a Layer \\d+ .*? Commentary.*?:",
-            "Here is the foundational commentary.*?:",
-            "Here is a contemporary commentary.*?:",
-            "Here is a Layer \\d+ Classical Shia Commentary.*?:",
-            "\\*\\*Layer \\d+ .*? Commentary.*?\\*\\*",
-            "### Layer \\d+ Foundation Commentary.*?\\n",
-            "📚 \\*\\*Classical Shia Commentary.*?\\*\\*",
-            "🌍 \\*\\*Contemporary Insights.*?\\*\\*",
-            "## Layer \\d+ Ahlul Bayt Wisdom.*?\\n",
-            // Remove verse reference lines that duplicate UI info - more specific patterns
-            "\\*\\*Surah [A-Za-z-]+, Verse \\d+:.*?\\*\\*",
-            "Surah [A-Za-z-]+, Verse \\d+:.*?:",
-            "^Surah [A-Za-z-]+, Verse \\d+.*?\\n",
-            // Remove Arabic text repetitions - exact patterns from data
-            "\\*\\*.*?بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ\\*\\*",
-            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ:?",
-            ".*?بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ.*",
-            // Remove Arabic-only lines
-            "^[\\u0600-\\u06FF\\s]+:?\\s*$",
-            "\\n[\\u0600-\\u06FF\\s]+:\\s*\\n"
-        ]
-        
-        for pattern in redundantPatterns {
-            cleanedText = cleanedText.replacingOccurrences(
-                of: pattern,
-                with: "",
-                options: [.regularExpression, .caseInsensitive]
-            )
-        }
-        
-        // Clean up numbered section headers - exact patterns from data
-        cleanedText = cleanedText.replacingOccurrences(
-            of: "\\d+\\. \\*\\*([^:]+):\\*\\*",
-            with: "$1",
-            options: .regularExpression
-        )
-        
-        // Clean up markdown bold patterns
-        cleanedText = cleanedText.replacingOccurrences(
-            of: "\\*\\*(\\d+)\\. ([^:]+):\\*\\*",
-            with: "$2",
-            options: .regularExpression
-        )
-        
-        // Clean up plain numbered headers (without markdown)
-        cleanedText = cleanedText.replacingOccurrences(
-            of: "(\\d+)\\. ([^:]+):",
-            with: "$2",
-            options: .regularExpression
-        )
-        
-        // Convert markdown bold to plain text with better formatting
-        cleanedText = cleanedText.replacingOccurrences(
-            of: "\\*\\*([^*]+)\\*\\*",
-            with: "$1",
-            options: .regularExpression
-        )
-        
-        // Convert markdown italic to plain text
-        cleanedText = cleanedText.replacingOccurrences(
-            of: "\\*([^*]+)\\*",
-            with: "$1",
-            options: .regularExpression
-        )
-        
-        // Clean up section headers and make them more readable
-        let headerReplacements = [
-            "SIMPLE EXPLANATION:": "Simple Explanation:",
-            "HISTORICAL CONTEXT:": "Historical Context:",
-            "KEY ARABIC TERMS:": "Key Terms:",
-            "CONTEMPORARY RELEVANCE:": "Modern Relevance:",
-            "RELEVANT HADITH:": "Relevant Teachings:",
-            "THEOLOGICAL CONCEPTS:": "Theological Concepts:",
-            "Simple Explanation:": "Simple Explanation",
-            "Historical Context:": "Historical Context",
-            "Key Terms:": "Key Terms",
-            "Modern Relevance:": "Modern Relevance",
-            "Relevant Teachings:": "Relevant Teachings",
-            "Theological Concepts:": "Theological Concepts"
-        ]
-        
-        for (old, new) in headerReplacements {
-            cleanedText = cleanedText.replacingOccurrences(of: old, with: new)
-        }
-        
-        // Remove excessive newlines and clean up spacing
-        cleanedText = cleanedText.replacingOccurrences(
-            of: "\\n\\s*\\n\\s*\\n+",
-            with: "\n\n",
-            options: .regularExpression
-        )
-        
-        // Remove any leading/trailing colons or periods that might be artifacts
-        cleanedText = cleanedText.replacingOccurrences(
-            of: "^[:.]\\s*",
-            with: "",
-            options: .regularExpression
-        )
-        
-        // Remove leading/trailing whitespace and newlines
-        cleanedText = cleanedText.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        print("🧹 AFTER cleaning (first 200 chars): \(String(cleanedText.prefix(200)))")
-        return cleanedText
     }
 }
 

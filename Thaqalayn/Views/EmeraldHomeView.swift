@@ -50,12 +50,15 @@ struct EmeraldHomeView: View {
                     }
 
                     searchField
+                    // One Set over all progress records per render, shared by every surah row.
+                    let readVerseKeys = progressManager.readVerseKeys
                     if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
                         EmDivider(label: QuranTabStrings.surahsCount(dataManager.availableSurahs.count))
-                        surahList
+                        surahList(readVerseKeys: readVerseKeys)
                     } else {
                         SearchResultsView(
                             query: searchText,
+                            readVerseKeys: readVerseKeys,
                             onOpenVerse: { s, v in
                                 targetConceptId = nil
                                 targetVerseNumber = v
@@ -170,10 +173,10 @@ struct EmeraldHomeView: View {
         .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
     }
 
-    private var surahList: some View {
+    private func surahList(readVerseKeys: Set<String>) -> some View {
         LazyVStack(spacing: 12) {
             ForEach(filteredSurahs) { swt in
-                SurahListRow(surahWithTafsir: swt)
+                SurahListRow(surahWithTafsir: swt, readVerseKeys: readVerseKeys)
             }
         }
     }

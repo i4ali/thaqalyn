@@ -52,7 +52,7 @@ struct HeroChip<Icon: View>: View {
 #Preview {
     ZStack {
         OnboardingBackground(tilt: .lavender)
-        HeroChip(palette: ThemeManager.chipKnowledge) {
+        HeroChip(palette: ThemeManager.chipGold) {
             Image(systemName: "sparkles").font(.system(size: 38, weight: .semibold))
         }
     }

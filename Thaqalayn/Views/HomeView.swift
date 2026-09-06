@@ -97,6 +97,8 @@ struct HomeView: View {
 
             // Surah list / search results
             ScrollView {
+                // One Set over all progress records per render, shared by every surah row.
+                let readVerseKeys = progressManager.readVerseKeys
                 if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
                     LazyVStack(spacing: 12) {
                         ForEach(dataManager.availableSurahs.filter { surah in
@@ -105,7 +107,7 @@ struct HomeView: View {
                             surah.surah.arabicName.contains(searchText) ||
                             searchText.isEmpty
                         }) { surahWithTafsir in
-                            SurahListRow(surahWithTafsir: surahWithTafsir)
+                            SurahListRow(surahWithTafsir: surahWithTafsir, readVerseKeys: readVerseKeys)
                         }
                     }
                     .padding(.horizontal, 20)
@@ -113,6 +115,7 @@ struct HomeView: View {
                 } else {
                     SearchResultsView(
                         query: searchText,
+                        readVerseKeys: readVerseKeys,
                         onOpenVerse: { s, v in
                             targetConceptId = nil
                             targetVerseNumber = v

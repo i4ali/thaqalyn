@@ -206,12 +206,6 @@ class ThemeManager: ObservableObject {
     struct ChipColor { let bg: Color; let fg: Color }
 
     static let chipGold        = ChipColor(bg: Color(hex: "ECD49A").opacity(0.15), fg: Color(hex: "ECD49A")) // decorative default
-    // Five-layer semantic tones (FiveLayersScreen rows), retuned to glow on dark:
-    static let chipFoundation  = ChipColor(bg: Color(hex: "6FA5E8").opacity(0.15), fg: Color(hex: "6FA5E8")) // blue
-    static let chipKnowledge   = ChipColor(bg: Color(hex: "B8A6D9").opacity(0.15), fg: Color(hex: "B8A6D9")) // lilac
-    static let chipProgress    = ChipColor(bg: Color(hex: "6FD0A6").opacity(0.15), fg: Color(hex: "6FD0A6")) // green
-    static let chipBrand       = ChipColor(bg: Color(hex: "ECD49A").opacity(0.16), fg: Color(hex: "ECD49A")) // gold (Ahlul Bayt)
-    static let chipComparative = ChipColor(bg: Color(hex: "D69BB0").opacity(0.15), fg: Color(hex: "D69BB0")) // mauve
     // Decorative leftovers (no longer semantic) -> gold:
     static let chipFeatured    = ChipColor(bg: Color(hex: "ECD49A").opacity(0.15), fg: Color(hex: "ECD49A"))
     static let chipWarmth      = ChipColor(bg: Color(hex: "ECD49A").opacity(0.15), fg: Color(hex: "ECD49A"))

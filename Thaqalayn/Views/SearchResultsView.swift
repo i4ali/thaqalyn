@@ -10,6 +10,9 @@ import SwiftUI
 
 struct SearchResultsView: View {
     let query: String
+    /// Read state for the surah rows' passage progress, computed once by the host
+    /// list per render (see ModernSurahCard).
+    let readVerseKeys: Set<String>
     let onOpenVerse: (_ surahNumber: Int, _ verseNumber: Int) -> Void
     let onOpenTheme: (_ surahNumber: Int, _ verseNumber: Int, _ conceptId: String) -> Void
 
@@ -44,7 +47,7 @@ struct SearchResultsView: View {
             // Same row as the browse list, so a surah with an "Inside the Surah"
             // experience shows the Read & Tafsir | Journey toggle here too.
             ForEach(results.surahs) { hit in
-                SurahListRow(surahWithTafsir: hit.surah)
+                SurahListRow(surahWithTafsir: hit.surah, readVerseKeys: readVerseKeys)
             }
         }
     }
@@ -164,7 +167,7 @@ private struct ThemeResultRow: View {
 #if DEBUG
 #Preview("Results — populated") {
     ScrollView {
-        SearchResultsView(query: "light", onOpenVerse: { _, _ in }, onOpenTheme: { _, _, _ in })
+        SearchResultsView(query: "light", readVerseKeys: [], onOpenVerse: { _, _ in }, onOpenTheme: { _, _, _ in })
             .padding(.horizontal, 20)
     }
     .background(Color(hex: "0A1512"))

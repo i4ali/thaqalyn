@@ -10,24 +10,17 @@ import SwiftUI
 struct VerseSummaryView: View {
     let verse: VerseWithTafsir
     let surah: Surah
-    let onViewFullCommentary: () -> Void
     let initialConceptId: String?
 
-    init(verse: VerseWithTafsir, surah: Surah, onViewFullCommentary: @escaping () -> Void, initialConceptId: String? = nil) {
+    init(verse: VerseWithTafsir, surah: Surah, initialConceptId: String? = nil) {
         self.verse = verse
         self.surah = surah
-        self.onViewFullCommentary = onViewFullCommentary
         self.initialConceptId = initialConceptId
     }
 
-    @StateObject private var languageManager = CommentaryLanguageManager.shared
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-
-    /// The global app language (set in Settings). VerseSummary no longer has its own picker.
-    private var selectedLanguage: CommentaryLanguage { languageManager.selectedLanguage }
 
     // Compute device type for adaptive presentation
     private var isIPad: Bool {
@@ -46,8 +39,7 @@ struct VerseSummaryView: View {
                 verse: verse,
                 surah: surah,
                 quickOverview: quickOverview,
-                initialConceptId: initialConceptId,
-                onViewFullCommentary: onViewFullCommentary
+                initialConceptId: initialConceptId
             )
         } else {
             textBasedOverviewView
@@ -109,27 +101,9 @@ struct VerseSummaryView: View {
 
                     EmDivider(label: "The Core Insight")
 
-                    if let layer2Text = verse.tafsir?.getLayer2Short(language: selectedLanguage) {
-                        Text(layer2Text)
-                            .font(EmType.serif(18 * readingSettings.scale, .medium))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(7 * readingSettings.scale)
-                            .multilineTextAlignment(selectedLanguage.isRTL ? .trailing : .leading)
-                            .frame(maxWidth: .infinity, alignment: selectedLanguage.isRTL ? .trailing : .leading)
-                            .environment(\.layoutDirection, selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
-                    } else {
-                        Text("Overview not available for this verse.")
-                            .font(EmType.serifItalic(16))
-                            .foregroundColor(themeManager.secondaryText)
-                    }
-
-                    EmGoldCTA(title: "Read In-Depth Commentary", sfSymbol: "book.fill") {
-                        dismiss()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            onViewFullCommentary()
-                        }
-                    }
-                    .padding(.top, 4)
+                    Text("Overview not available for this verse.")
+                        .font(EmType.serifItalic(16))
+                        .foregroundColor(themeManager.secondaryText)
                 }
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
@@ -156,9 +130,6 @@ struct VerseSummaryView: View {
 
                     // Summary content
                     summaryContentView
-
-                    // Full commentary link
-                    fullCommentaryButtonView
                 }
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
@@ -232,20 +203,10 @@ struct VerseSummaryView: View {
 
     private var summaryContentView: some View {
         VStack(alignment: .leading, spacing: 16) {
-            // Layer2 classical commentary (short version for overview)
-            if let layer2Text = verse.tafsir?.getLayer2Short(language: selectedLanguage) {
-                Text(layer2Text)
-                    .font(.system(size: 17 * readingSettings.scale, weight: .regular, design: .serif))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(8 * readingSettings.scale)
-                    .multilineTextAlignment(selectedLanguage.isRTL ? .trailing : .leading)
-                    .environment(\.layoutDirection, selectedLanguage.isRTL ? .rightToLeft : .leftToRight)
-            } else {
-                Text("Overview not available for this verse.")
-                    .font(.system(size: 16, weight: .regular, design: .serif))
-                    .foregroundColor(themeManager.secondaryText)
-                    .italic()
-            }
+            Text("Overview not available for this verse.")
+                .font(.system(size: 16, weight: .regular, design: .serif))
+                .foregroundColor(themeManager.secondaryText)
+                .italic()
         }
         .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -267,35 +228,6 @@ struct VerseSummaryView: View {
                         )
                 )
         )
-    }
-
-    private var fullCommentaryButtonView: some View {
-        Button(action: {
-            dismiss()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                onViewFullCommentary()
-            }
-        }) {
-            HStack(spacing: 8) {
-                Image(systemName: "book.fill")
-                    .font(.system(size: 16, weight: .semibold))
-
-                Text("Read In-Depth Commentary")
-                    .font(.system(size: 16, weight: .semibold))
-
-                Image(systemName: "arrow.right")
-                    .font(.system(size: 14, weight: .semibold))
-            }
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.purpleGradient)
-                    .shadow(color: themeManager.semanticBlue.opacity(0.3), radius: 12)
-            )
-        }
-        .padding(.top, 8)
     }
 
     @ViewBuilder
@@ -339,27 +271,7 @@ struct VerseSummaryView: View {
         sajda: SajdaInfo(hasSajda: false, id: nil, recommended: nil)
     )
 
-    let sampleTafsir = TafsirVerse(
-        layer1: "Foundation commentary...",
-        layer2: "This opening verse invokes Allah's infinite mercy and compassion, as explained by classical scholars like Tabatabai. The Bismillah establishes that all actions should begin with remembrance of Allah's attributes of mercy and compassion, reflecting the core theological principle that divine mercy encompasses all creation.",
-        layer3: "Contemporary commentary...",
-        layer4: "Ahlul Bayt commentary...",
-        layer5: "Comparative commentary...",
-        layer1_urdu: nil,
-        layer2_urdu: nil,
-        layer3_urdu: nil,
-        layer4_urdu: nil,
-        layer5_urdu: nil,
-        layer1_ar: nil,
-        layer2_ar: nil,
-        layer3_ar: nil,
-        layer4_ar: nil,
-        layer5_ar: nil,
-        layer2short: "The Bismillah invokes Allah's infinite mercy and compassion.",
-        layer2short_urdu: nil,
-        layer2short_ar: nil,
-        quickOverview: nil
-    )
+    let sampleTafsir = TafsirVerse(quickOverview: nil)
 
     let sampleVerseWithTafsir = VerseWithTafsir(
         number: 1,
@@ -371,8 +283,7 @@ struct VerseSummaryView: View {
         Spacer()
         VerseSummaryView(
             verse: sampleVerseWithTafsir,
-            surah: sampleSurah,
-            onViewFullCommentary: {}
+            surah: sampleSurah
         )
     }
 }

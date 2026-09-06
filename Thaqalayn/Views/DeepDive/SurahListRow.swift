@@ -18,6 +18,10 @@ import SwiftUI
 /// pattern in both themes and in search results.
 struct SurahListRow: View {
     let surahWithTafsir: SurahWithTafsir
+    /// Read state for the card's passage progress. The list computes
+    /// `ProgressManager.shared.readVerseKeys` once per render and passes it to
+    /// every row (see ModernSurahCard).
+    let readVerseKeys: Set<String>
     @ObservedObject private var tm = ThemeManager.shared
     @ObservedObject private var premiumManager = PremiumManager.shared
 
@@ -36,6 +40,7 @@ struct SurahListRow: View {
                 // The toggle is always attached, so the card drops its own border -
                 // the row draws one combined border below so the two read as one card.
                 ModernSurahCard(surah: surahWithTafsir.surah,
+                                readVerseKeys: readVerseKeys,
                                 squaredBottom: true,
                                 showsBorder: false)
             }

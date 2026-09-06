@@ -335,6 +335,8 @@ struct SurahListView: View {
             
             // Surah list
             ScrollView {
+                // One Set over all progress records per render, shared by every row.
+                let readVerseKeys = progressManager.readVerseKeys
                 LazyVStack(spacing: 12) {
                     ForEach(dataManager.availableSurahs.filter { surah in
                         searchText.isEmpty ||
@@ -343,7 +345,7 @@ struct SurahListView: View {
                         surah.surah.arabicName.contains(searchText)
                     }) { surahWithTafsir in
                         NavigationLink(destination: SurahDetailView(surahWithTafsir: surahWithTafsir, targetVerse: nil)) {
-                            ModernSurahCard(surah: surahWithTafsir.surah)
+                            ModernSurahCard(surah: surahWithTafsir.surah, readVerseKeys: readVerseKeys)
                         }
                         .buttonStyle(EmPressStyle())
                     }
@@ -461,6 +463,11 @@ struct StatCard: View {
 
 struct ModernSurahCard: View {
     let surah: Surah
+    /// Keys "surah:verse" of every verse marked read. The list that renders these
+    /// rows computes `ProgressManager.shared.readVerseKeys` once per render and
+    /// passes it down: it builds a Set over every progress record, so it must not
+    /// be rebuilt per row.
+    let readVerseKeys: Set<String>
     /// True when an experience toggle is attached below - squares the bottom
     /// corners so card + toggle read as one card.
     var squaredBottom = false
@@ -468,22 +475,36 @@ struct ModernSurahCard: View {
     /// so the card must not stroke its own (seam-creating) outline.
     var showsBorder = true
     @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var progressManager = ProgressManager.shared
+    @ObservedObject private var dataManager = DataManager.shared
 
-    private var completion: (read: Int, total: Int) {
-        progressManager.getSurahCompletion(surahNumber: surah.number)
+    /// The surah's passages (rukus); empty until the passage index has loaded.
+    private var passages: [PassageRef] {
+        dataManager.passageIndex?.passages(forSurah: surah.number) ?? []
     }
+
+    private var totalCount: Int { passages.count }
 
     private var readCount: Int {
-        completion.read
+        PassageProgress.readCount(passages, readVerseKeys: readVerseKeys)
     }
 
-    private var totalCount: Int {
-        completion.total
+    private var isComplete: Bool { totalCount > 0 && readCount == totalCount }
+
+    /// "40 passages" until the first passage is read, then "3 of 40 passages".
+    private var passagesLabel: String {
+        readCount > 0
+            ? QuranTabStrings.passagesRead(readCount, of: totalCount)
+            : QuranTabStrings.passagesCount(totalCount)
     }
 
-    private var percentage: Int {
-        totalCount > 0 ? Int((Double(readCount) / Double(totalCount)) * 100) : 0
+    /// Legacy chip: books until reading starts, seal while in progress, trophy when done
+    /// (the icons and colours the verse percentage used).
+    private var passagesIcon: String {
+        isComplete ? "ph-trophy-fill" : (readCount > 0 ? "ph-seal-check-fill" : "ph-books-fill")
+    }
+
+    private var passagesColor: Color {
+        isComplete ? .orange : (readCount > 0 ? .green : themeManager.tertiaryText)
     }
 
     private var surahNumberGradient: LinearGradient {
@@ -553,34 +574,39 @@ struct ModernSurahCard: View {
                         .multilineTextAlignment(.trailing)
                 }
 
-                HStack(spacing: 16) {
-                    HStack(spacing: 4) {
-                        PhosphorIcon(name: "ph-book-open", size: 12)
-                            .foregroundColor(themeManager.tertiaryText)
-                        Text(QuranTabStrings.versesCount(surah.versesCount))
-                            .font(.system(size: 12, weight: .medium))
-                            .foregroundColor(themeManager.tertiaryText)
-                    }
-
-                    HStack(spacing: 4) {
-                        PhosphorIcon(name: "ph-map-pin-fill", size: 12)
-                            .foregroundColor(themeManager.tertiaryText)
-                        Text(QuranTabStrings.revelation(surah.revelationType))
-                            .font(.system(size: 12, weight: .medium))
-                            .foregroundColor(themeManager.tertiaryText)
-                    }
-
-                    if readCount > 0 {
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack(spacing: 16) {
                         HStack(spacing: 4) {
-                            PhosphorIcon(name: percentage >= 100 ? "ph-trophy-fill" : "ph-seal-check-fill", size: 12)
-                                .foregroundColor(percentage >= 100 ? .orange : .green)
-                            Text("\(percentage)%")
-                                .font(.system(size: 12, weight: .semibold))
-                                .foregroundColor(percentage >= 100 ? .orange : .green)
+                            PhosphorIcon(name: "ph-book-open", size: 12)
+                                .foregroundColor(themeManager.tertiaryText)
+                            Text(QuranTabStrings.versesCount(surah.versesCount))
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(themeManager.tertiaryText)
+                        }
+
+                        HStack(spacing: 4) {
+                            PhosphorIcon(name: "ph-map-pin-fill", size: 12)
+                                .foregroundColor(themeManager.tertiaryText)
+                            Text(QuranTabStrings.revelation(surah.revelationType))
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(themeManager.tertiaryText)
+                        }
+
+                        Spacer()
+                    }
+
+                    // Passage count and progress, in place of the old verse percentage.
+                    // Its own line: "3 of 40 passages" does not fit beside the verse
+                    // count and revelation type on narrow phones.
+                    if totalCount > 0 {
+                        HStack(spacing: 4) {
+                            PhosphorIcon(name: passagesIcon, size: 12)
+                                .foregroundColor(passagesColor)
+                            Text(passagesLabel)
+                                .font(.system(size: 12, weight: readCount > 0 ? .semibold : .medium))
+                                .foregroundColor(passagesColor)
                         }
                     }
-
-                    Spacer()
                 }
             }
         }
@@ -624,19 +650,22 @@ struct ModernSurahCard: View {
                         .foregroundColor(themeManager.accentBright)
                         .lineLimit(1)
                 }
-                HStack(spacing: 8) {
-                    Text(QuranTabStrings.versesCount(surah.versesCount))
-                        .foregroundColor(themeManager.tertiaryText)
-                    Text("·").foregroundColor(themeManager.tertiaryText)
-                    Text(QuranTabStrings.revelation(surah.revelationType))
-                        .foregroundColor(themeManager.tertiaryText)
-                    if readCount > 0 {
+                VStack(alignment: .leading, spacing: 3) {
+                    HStack(spacing: 8) {
+                        Text(QuranTabStrings.versesCount(surah.versesCount))
+                            .foregroundColor(themeManager.tertiaryText)
                         Text("·").foregroundColor(themeManager.tertiaryText)
-                        Text("\(percentage)%")
-                            .foregroundColor(themeManager.accentColor)
-                            .fontWeight(.semibold)
+                        Text(QuranTabStrings.revelation(surah.revelationType))
+                            .foregroundColor(themeManager.tertiaryText)
+                        Spacer(minLength: 0)
                     }
-                    Spacer(minLength: 0)
+                    // Passage count and progress on its own line (see legacyBody);
+                    // accent once reading has started, as the verse percentage was.
+                    if totalCount > 0 {
+                        Text(passagesLabel)
+                            .foregroundColor(readCount > 0 ? themeManager.accentColor : themeManager.tertiaryText)
+                            .fontWeight(readCount > 0 ? .semibold : .medium)
+                    }
                 }
                 .font(.system(size: 12, weight: .medium))
             }

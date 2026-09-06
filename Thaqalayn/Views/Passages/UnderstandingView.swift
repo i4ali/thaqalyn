@@ -1,0 +1,483 @@
+//
+//  UnderstandingView.swift
+//  Thaqalayn
+//
+//  The passage commentary read in full: the essay with its citation markers,
+//  then verse by verse notes and narrations, perspectives where present, the
+//  bibliography, and the link to the next passage. Tapping a marker, a
+//  narration's source line or a bibliography row opens the source sheet.
+//
+
+import SwiftUI
+import UIKit
+
+struct UnderstandingView: View {
+    let surahWithTafsir: SurahWithTafsir
+    let ref: PassageRef
+    let passage: Passage
+
+    @ObservedObject private var themeManager = ThemeManager.shared
+    @ObservedObject private var languageManager = CommentaryLanguageManager.shared
+    @ObservedObject private var dataManager = DataManager.shared
+    @ObservedObject private var tafsirReader = TafsirReader.shared
+    @StateObject private var readingSettings = ReadingSettingsManager.shared
+    @Environment(\.dismiss) private var dismiss
+
+    @State private var showTextSizePanel = false
+    @State private var openedSource: PassageSource?
+
+    init(surahWithTafsir: SurahWithTafsir, ref: PassageRef, passage: Passage) {
+        self.surahWithTafsir = surahWithTafsir
+        self.ref = ref
+        self.passage = passage
+    }
+
+    // MARK: - Derived
+
+    private var surah: Surah { surahWithTafsir.surah }
+
+    private var scale: CGFloat { readingSettings.scale }
+
+    private var availableLanguages: [CommentaryLanguage] { passage.essay.availableLanguages }
+
+    /// The reader's language, or English when this passage has not been translated into it.
+    private var lang: CommentaryLanguage {
+        availableLanguages.contains(languageManager.selectedLanguage) ? languageManager.selectedLanguage : .english
+    }
+
+    private var isRTL: Bool { lang.isRTL }
+
+    /// Every block of commentary text is laid out in the reader's direction, so
+    /// `.leading` always means the start of the line: the right edge for Urdu and Arabic.
+    private var direction: LayoutDirection { isRTL ? .rightToLeft : .leftToRight }
+
+    private var nextRef: PassageRef? {
+        dataManager.passageIndex?.next(after: ref)
+    }
+
+    private var eyebrow: String {
+        "Understanding · \(surah.englishName) \(ref.rangeLabel)"
+    }
+
+    private var essayParagraphs: [String] {
+        Self.paragraphs(passage.essay.text(for: lang))
+    }
+
+    private var perspectiveParagraphs: [String] {
+        passage.perspectives.map { Self.paragraphs($0.text(for: lang)) } ?? []
+    }
+
+    /// Bibliography order: by marker number, so [10] follows [9] rather than [1].
+    private var orderedSources: [PassageSource] {
+        passage.sources.sorted { $0.number < $1.number }
+    }
+
+    private static func paragraphs(_ text: String) -> [String] {
+        text.components(separatedBy: "\n\n")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+    }
+
+    // MARK: - Fonts
+
+    /// The Cormorant Garamond face behind `EmType.serif`, as a UIFont for attributed prose.
+    private static func serifUIFont(_ size: CGFloat, _ weight: EmType.Weight = .medium) -> UIFont {
+        UIFont(name: weight.face, size: size) ?? .systemFont(ofSize: size)
+    }
+
+    /// The italic face behind `EmType.serifItalic`.
+    private static func serifItalicUIFont(_ size: CGFloat) -> UIFont {
+        UIFont(name: "CormorantGaramondItalic-MediumItalic", size: size) ?? .italicSystemFont(ofSize: size)
+    }
+
+    // MARK: - Listen
+
+    /// Everything on the screen in reading order, citation markers removed so
+    /// the voice does not read the numbers aloud.
+    private var listenText: String {
+        var parts: [String] = [passage.essay.text(for: lang)]
+        for entry in passage.verses {
+            if let heading = entry.heading { parts.append(heading.text(for: lang)) }
+            if let note = entry.note { parts.append(note.text(for: lang)) }
+            for narration in entry.narrations { parts.append(narration.text.text(for: lang)) }
+        }
+        if let perspectives = passage.perspectives { parts.append(perspectives.text(for: lang)) }
+        return parts.map(Self.stripMarkers).joined(separator: "\n\n")
+    }
+
+    private static func stripMarkers(_ text: String) -> String {
+        PassageMarkup.segments(text).compactMap { segment -> String? in
+            if case .text(let s) = segment { return s }
+            return nil
+        }.joined()
+    }
+
+    private var isListeningToThis: Bool { tafsirReader.currentText == listenText }
+    private var isPlayingThis: Bool { isListeningToThis && tafsirReader.isPlaying }
+    private var isPausedThis: Bool { isListeningToThis && tafsirReader.isPaused }
+
+    private var listenLabel: String {
+        if isPlayingThis { return "Pause" }
+        if isPausedThis { return "Resume" }
+        return "Listen"
+    }
+
+    private func toggleListen() {
+        if isListeningToThis && (tafsirReader.isPlaying || tafsirReader.isPaused) {
+            tafsirReader.togglePlayPause()
+        } else {
+            tafsirReader.speak(text: listenText, language: lang)
+        }
+    }
+
+    // MARK: - Body
+
+    var body: some View {
+        ZStack {
+            if themeManager.isMidnightEmerald {
+                EmeraldBackground()
+            } else {
+                LinearGradient(
+                    colors: [
+                        themeManager.primaryBackground,
+                        themeManager.secondaryBackground,
+                        themeManager.tertiaryBackground
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+            }
+
+            VStack(spacing: 0) {
+                header
+
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 0) {
+                        titleBlock
+                            .padding(.bottom, 14)
+
+                        languagePills
+                            .padding(.bottom, 18)
+
+                        essaySection
+
+                        verseByVerseSection
+                            .padding(.top, 30)
+
+                        perspectivesSection
+                            .padding(.top, 30)
+
+                        sourcesSection
+                            .padding(.top, 30)
+
+                        if let next = nextRef {
+                            NextPassageCard(surahWithTafsir: surahWithTafsir, next: next)
+                                .padding(.top, 30)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 4)
+                    .padding(.bottom, 48)
+                }
+            }
+        }
+        .environment(\.openURL, OpenURLAction { url in
+            if let n = PassageMarkup.sourceNumber(from: url) {
+                openSource(n)
+                return .handled
+            }
+            return .systemAction
+        })
+        .textSizePanelOverlay(isOpen: $showTextSizePanel, topPadding: 60, trailingPadding: 20)
+        .navigationBarHidden(true)
+        .hideTabBar()
+        .preferredColorScheme(themeManager.colorScheme)
+        .darkScreenAura(glowOpacity: 0.22, starCount: 10)
+        .sheet(item: $openedSource) { source in
+            SourceSheet(source: source, passage: passage, surahName: surah.englishName)
+                .presentationDetents([.medium, .large])
+        }
+        .onChange(of: lang) { _, _ in
+            // The spoken text changed with the language; stop rather than finish the old one.
+            TafsirReader.shared.stop()
+        }
+        .onDisappear { TafsirReader.shared.stop() }
+    }
+
+    // MARK: - Header
+
+    private var header: some View {
+        HStack(spacing: 10) {
+            Button(action: { dismiss() }) {
+                Image(systemName: "chevron.left")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(themeManager.accentColor)
+                    .frame(width: 40, height: 40)
+                    .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+            }
+            .buttonStyle(EmPressStyle())
+
+            Spacer()
+
+            TextSizeButton(isPanelOpen: $showTextSizePanel)
+
+            listenChip
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 12)
+        .padding(.bottom, 8)
+    }
+
+    private var listenChip: some View {
+        Button(action: toggleListen) {
+            HStack(spacing: 7) {
+                Image(systemName: isPlayingThis ? "pause.fill" : "play.fill")
+                    .font(.system(size: 12, weight: .semibold))
+                Text(listenLabel)
+                    .font(.system(size: 14, weight: .semibold))
+            }
+            .foregroundColor(themeManager.accentColor)
+            .padding(.horizontal, 16)
+            .frame(height: 40)
+            .background(Capsule().fill(themeManager.accentChip))
+            .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
+        }
+        .buttonStyle(EmPressStyle())
+        .accessibilityLabel(isPlayingThis ? "Pause reading" : "Listen to the commentary")
+    }
+
+    private var titleBlock: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(eyebrow.uppercased())
+                .emEyebrow(size: 11, tracking: 2)
+                .foregroundColor(themeManager.accentColor)
+            Text(passage.title.text(for: lang))
+                .font(EmType.serif(30, .semiBold))
+                .foregroundColor(themeManager.primaryText)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .environment(\.layoutDirection, direction)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.top, 8)
+    }
+
+    @ViewBuilder
+    private var languagePills: some View {
+        if availableLanguages.count > 1 {
+            HStack(spacing: 8) {
+                ForEach(availableLanguages, id: \.self) { language in
+                    let selected = language == lang
+                    Button(action: { languageManager.setLanguage(language) }) {
+                        Text(language.displayName)
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundColor(selected ? themeManager.onAccentText : themeManager.accentColor)
+                            .padding(.horizontal, 14)
+                            .frame(height: 32)
+                            .background(
+                                Capsule().fill(selected ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.accentChip))
+                            )
+                            .overlay(Capsule().stroke(selected ? Color.clear : themeManager.strokeColor, lineWidth: 1))
+                    }
+                    .buttonStyle(EmPressStyle())
+                    .accessibilityAddTraits(selected ? .isSelected : [])
+                }
+                Spacer()
+            }
+        }
+    }
+
+    // MARK: - Essay and perspectives
+
+    private var essaySection: some View {
+        proseBlock(essayParagraphs)
+    }
+
+    @ViewBuilder
+    private var perspectivesSection: some View {
+        if !perspectiveParagraphs.isEmpty {
+            VStack(alignment: .leading, spacing: 18) {
+                EmDivider(label: "Perspectives")
+                proseBlock(perspectiveParagraphs)
+            }
+        }
+    }
+
+    /// Paragraphs of reading prose with citation markers, in the reader's direction.
+    private func proseBlock(_ paragraphs: [String]) -> some View {
+        VStack(alignment: .leading, spacing: 14 * scale) {
+            ForEach(paragraphs.indices, id: \.self) { i in
+                markedText(
+                    paragraphs[i],
+                    font: Self.serifUIFont(17 * scale),
+                    color: themeManager.primaryText,
+                    lineSpacing: 6 * scale
+                )
+            }
+        }
+        .environment(\.layoutDirection, direction)
+    }
+
+    /// One run of prose whose "[n]" markers become tappable superscripts.
+    private func markedText(_ text: String, font: UIFont, color: Color, lineSpacing: CGFloat) -> some View {
+        Text(PassageMarkup.attributed(text, baseFont: font, color: UIColor(color), accent: UIColor(themeManager.accentColor)))
+            .tint(themeManager.accentColor)
+            .lineSpacing(lineSpacing)
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    // MARK: - Verse by verse
+
+    @ViewBuilder
+    private var verseByVerseSection: some View {
+        if !passage.verses.isEmpty {
+            VStack(alignment: .leading, spacing: 22) {
+                EmDivider(label: "Verse by verse")
+                ForEach(passage.verses) { entry in
+                    verseEntry(entry)
+                }
+            }
+            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+        }
+    }
+
+    private func verseEntry(_ entry: PassageVerseEntry) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .center, spacing: 10) {
+                EmNumeralCircle(n: entry.verse, size: 26)
+                if let heading = entry.heading {
+                    Text(heading.text(for: lang))
+                        .font(EmType.serif(17, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+
+            if let note = entry.note {
+                markedText(
+                    note.text(for: lang),
+                    font: Self.serifItalicUIFont(16 * scale),
+                    color: themeManager.secondaryText,
+                    lineSpacing: 5 * scale
+                )
+            }
+
+            ForEach(entry.narrations) { narration in
+                narrationBlock(narration)
+            }
+        }
+    }
+
+    /// A narration: speaker, English text and the source line, behind a thin accent rule.
+    /// The verbatim Arabic and the chain live on the source sheet.
+    private func narrationBlock(_ narration: Narration) -> some View {
+        let source = passage.source(id: narration.source)
+
+        return HStack(alignment: .top, spacing: 14) {
+            RoundedRectangle(cornerRadius: 1, style: .continuous)
+                .fill(themeManager.accentColor)
+                .frame(width: 2)
+
+            VStack(alignment: .leading, spacing: 8) {
+                speakerLine(narration)
+
+                Text(narration.text.text(for: lang))
+                    .font(EmType.serif(16 * scale, .medium))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineSpacing(5 * scale)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                if let source {
+                    Button(action: { openedSource = source }) {
+                        Text("Sourced · \(source.work) · \(source.locus)")
+                            .emEyebrow(size: 10, tracking: 1)
+                            .foregroundColor(themeManager.accentColor)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .buttonStyle(EmPressStyle.gentle)
+                    .accessibilityLabel("Open source, \(source.work)")
+                }
+            }
+        }
+        .padding(.top, 4)
+    }
+
+    private func speakerLine(_ narration: Narration) -> some View {
+        var line = Text(narration.speaker)
+            .font(EmType.serif(15, .semiBold))
+            .foregroundColor(themeManager.primaryText)
+        if let addressee = narration.addressee, !addressee.isEmpty {
+            line = line + Text(" to \(addressee)")
+                .font(EmType.serif(15, .medium))
+                .foregroundColor(themeManager.secondaryText)
+        }
+        return line
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    // MARK: - Sources
+
+    @ViewBuilder
+    private var sourcesSection: some View {
+        if !orderedSources.isEmpty {
+            VStack(alignment: .leading, spacing: 14) {
+                EmDivider(label: "Sources")
+                VStack(spacing: 0) {
+                    ForEach(Array(orderedSources.enumerated()), id: \.element.id) { i, source in
+                        sourceRow(source)
+                        if i < orderedSources.count - 1 {
+                            Rectangle()
+                                .fill(themeManager.dividerColor)
+                                .frame(height: 1)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private func sourceRow(_ source: PassageSource) -> some View {
+        Button(action: { openedSource = source }) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                Text("[\(source.number)]")
+                    .font(EmType.serif(15, .semiBold))
+                    .foregroundColor(themeManager.accentColor)
+                    .frame(width: 36, alignment: .leading)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(source.work)
+                        .font(EmType.serif(16, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                    Text(source.author)
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                    Text(source.locus)
+                        .font(.system(size: 12))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+
+                Spacer(minLength: 0)
+            }
+            .padding(.vertical, 10)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(EmPressStyle.gentle)
+    }
+
+    // MARK: - Actions
+
+    private func openSource(_ number: Int) {
+        guard let source = passage.sources.first(where: { $0.number == number }) else { return }
+        openedSource = source
+    }
+}

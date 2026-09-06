@@ -3,8 +3,9 @@
 //  Thaqalayn
 //
 //  User reading preferences. Currently: commentary body font scale, adjusted
-//  from the in-context "Aa" control in FullScreenCommentaryView and persisted
-//  across launches. Same singleton + UserDefaults pattern as ThemeManager.
+//  from the in-context "Aa" control in the passage reader (PassageView and
+//  UnderstandingView) and persisted across launches. Same singleton +
+//  UserDefaults pattern as ThemeManager.
 //
 
 import SwiftUI

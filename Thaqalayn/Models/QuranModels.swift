@@ -195,104 +195,15 @@ struct TafsirData: Codable {
     let verses: [String: TafsirVerse]
 }
 
+/// Per-verse data decoded from `tafsir_N.json`. Only the Quick Overview gems
+/// are read now; the layered commentary keys those files still carry are
+/// ignored by the decoder. Passage commentary lives in `PassageStore`.
 struct TafsirVerse: Codable {
-    // Existing English content
-    let layer1: String
-    let layer2: String
-    let layer3: String
-    let layer4: String
-    let layer5: String?
-
-    // Urdu content (optional for backward compatibility)
-    let layer1_urdu: String?
-    let layer2_urdu: String?
-    let layer3_urdu: String?
-    let layer4_urdu: String?
-    let layer5_urdu: String?
-
-    // Arabic content (optional)
-    let layer1_ar: String?
-    let layer2_ar: String?
-    let layer3_ar: String?
-    let layer4_ar: String?
-    let layer5_ar: String?
-
-    // Short versions for Overview feature (optional)
-    let layer2short: String?
-    let layer2short_urdu: String?
-    let layer2short_ar: String?
-
     // Quick Overview data for interactive concept display (optional)
     let quickOverview: QuickOverviewData?
 
-    // Helper method to get content by language and layer
-    func content(for layer: TafsirLayer, language: CommentaryLanguage) -> String {
-        switch (layer, language) {
-        case (.foundation, .english): return layer1
-        case (.foundation, .urdu): return layer1_urdu ?? layer1
-        case (.foundation, .arabic): return layer1_ar ?? layer1
-        case (.classical, .english): return layer2
-        case (.classical, .urdu): return layer2_urdu ?? layer2
-        case (.classical, .arabic): return layer2_ar ?? layer2
-        case (.contemporary, .english): return layer3
-        case (.contemporary, .urdu): return layer3_urdu ?? layer3
-        case (.contemporary, .arabic): return layer3_ar ?? layer3
-        case (.ahlulBayt, .english): return layer4
-        case (.ahlulBayt, .urdu): return layer4_urdu ?? layer4
-        case (.ahlulBayt, .arabic): return layer4_ar ?? layer4
-        case (.comparative, .english): return layer5 ?? ""
-        case (.comparative, .urdu): return layer5_urdu ?? layer5 ?? ""
-        case (.comparative, .arabic): return layer5_ar ?? layer5 ?? ""
-        }
-    }
-
-    // Generic method to check if content exists for a specific language and layer
-    func hasContent(for layer: TafsirLayer, language: CommentaryLanguage) -> Bool {
-        switch (layer, language) {
-        case (.foundation, .english): return true
-        case (.foundation, .urdu): return layer1_urdu != nil
-        case (.foundation, .arabic): return layer1_ar != nil
-        case (.classical, .english): return true
-        case (.classical, .urdu): return layer2_urdu != nil
-        case (.classical, .arabic): return layer2_ar != nil
-        case (.contemporary, .english): return true
-        case (.contemporary, .urdu): return layer3_urdu != nil
-        case (.contemporary, .arabic): return layer3_ar != nil
-        case (.ahlulBayt, .english): return true
-        case (.ahlulBayt, .urdu): return layer4_urdu != nil
-        case (.ahlulBayt, .arabic): return layer4_ar != nil
-        case (.comparative, .english): return layer5 != nil
-        case (.comparative, .urdu): return layer5_urdu != nil
-        case (.comparative, .arabic): return layer5_ar != nil
-        }
-    }
-
-    // Legacy method for backward compatibility
-    func hasUrduContent(for layer: TafsirLayer) -> Bool {
-        return hasContent(for: layer, language: .urdu)
-    }
-
-    // Helper method to get layer2 content by language for overview
-    func getLayer2(language: CommentaryLanguage) -> String {
-        switch language {
-        case .english: return layer2
-        case .urdu: return layer2_urdu ?? layer2
-        case .arabic: return layer2_ar ?? layer2
-        }
-    }
-
-    // Helper method to get layer2short content by language for overview
-    func getLayer2Short(language: CommentaryLanguage) -> String {
-        switch language {
-        case .english: return layer2short ?? layer2
-        case .urdu: return layer2short_urdu ?? layer2_urdu ?? layer2
-        case .arabic: return layer2short_ar ?? layer2_ar ?? layer2
-        }
-    }
-
-    // Layer2 always exists (required field)
-    var hasLayer2: Bool {
-        return true
+    init(quickOverview: QuickOverviewData?) {
+        self.quickOverview = quickOverview
     }
 }
 
@@ -520,62 +431,12 @@ enum BookmarkGroupBy: String, Codable, CaseIterable {
     }
 }
 
-// MARK: - Tafsir Layer Types
-
-enum TafsirLayer: String, CaseIterable {
-    case foundation = "layer1"
-    case classical = "layer2"
-    case contemporary = "layer3"
-    case ahlulBayt = "layer4"
-    case comparative = "layer5"
-    
-    var title: String {
-        switch self {
-        case .foundation:
-            return "Foundation"
-        case .classical:
-            return "Classical Shia"
-        case .contemporary:
-            return "Contemporary"
-        case .ahlulBayt:
-            return "Ahlul Bayt"
-        case .comparative:
-            return "Comparative"
-        }
-    }
-    
-    var description: String {
-        switch self {
-        case .foundation:
-            return "Simple explanations, historical context, contemporary relevance"
-        case .classical:
-            return "Tabatabai, Tabrisi, traditional scholarly consensus"
-        case .contemporary:
-            return "Modern scholars, scientific insights, social justice themes"
-        case .ahlulBayt:
-            return "Hadith from Imams, theological concepts, spiritual guidance"
-        case .comparative:
-            return "Shia vs Sunni scholarly perspectives"
-        }
-    }
-
-    /// Check if this layer is free for a given surah
-    /// - Surah 1: Layers 1 & 2 are free
-    /// - All other surahs: No free layers
-    func isFree(forSurah surahNumber: Int) -> Bool {
-        if surahNumber == 1 {
-            return self == .foundation || self == .classical
-        }
-        return false
-    }
-}
-
 // MARK: - Commentary Language Support
 
-/// The tafsir reading language. This is the ONLY language preference in the app:
-/// all UI chrome and non-tafsir content is English; the 5-layer tafsir (and the
-/// verse translation shown with it) can be read in English, Urdu, or Arabic via
-/// the toggle inside the tafsir reader.
+/// The commentary reading language. This is the ONLY language preference in the app:
+/// all UI chrome and non-commentary content is English; the passage commentary (and
+/// the verse translation shown with it) can be read in English, Urdu, or Arabic via
+/// the toggle inside the passage reader.
 enum CommentaryLanguage: String, CaseIterable, Codable {
     case english = "en"
     case urdu = "ur"

@@ -18,8 +18,25 @@ import UIKit
 @MainActor
 final class TabBarVisibility: ObservableObject {
     static let shared = TabBarVisibility()
-    @Published var isHidden = false
+    @Published private(set) var isHidden = false
+
+    /// The screens currently asking for the bar to be hidden. Pushed screens
+    /// overlap: a child's onAppear fires before its parent's onDisappear, so a
+    /// single flag flips back to visible one step into a nested push (surah,
+    /// passage, understanding). The bar stays hidden while any screen asks.
+    private var hiders = Set<UUID>()
+
     private init() {}
+
+    func hide(_ token: UUID) {
+        hiders.insert(token)
+        isHidden = true
+    }
+
+    func show(_ token: UUID) {
+        hiders.remove(token)
+        isHidden = !hiders.isEmpty
+    }
 }
 
 extension View {
@@ -30,6 +47,8 @@ extension View {
 }
 
 private struct HideTabBarModifier: ViewModifier {
+    @State private var token = UUID()
+
     @ViewBuilder
     private func hideNative(_ content: Content) -> some View {
         if #available(iOS 16.0, *) {
@@ -45,7 +64,7 @@ private struct HideTabBarModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         hideNative(content)
-            .onAppear { TabBarVisibility.shared.isHidden = true }
-            .onDisappear { TabBarVisibility.shared.isHidden = false }
+            .onAppear { TabBarVisibility.shared.hide(token) }
+            .onDisappear { TabBarVisibility.shared.show(token) }
     }
 }

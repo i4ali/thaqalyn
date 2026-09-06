@@ -51,6 +51,16 @@ struct ThaqalaynApp: App {
         }
     }
     
+    /// Custom URL routes (scheme `thaqalayn`):
+    /// - `thaqalayn://auth?...`                   Supabase authentication callback
+    /// - `thaqalayn://verse?surah=2&verse=255`    open a surah at a verse (notifications, cards)
+    /// - `thaqalayn://passage?surah=2&index=4`    open a surah at a passage (1-based ruku index):
+    ///                                            resolves the passage's first verse through
+    ///                                            DataManager.passageIndex, waiting for the index
+    ///                                            if data is still loading, then takes the verse route
+    /// - `thaqalayn://journey?id=ramadan`         open a journey in the Journey hub
+    /// - `thaqalayn://experience?id=surah-yusuf`  open an Inside the Surah experience
+    /// - `thaqalayn://deepdive?id=yaqin`          open a deep dive
     private func handleDeepLink(_ url: URL) {
         // Handle Supabase authentication callback
         if url.scheme == "thaqalayn" && url.host == "auth" {
@@ -61,6 +71,10 @@ struct ThaqalaynApp: App {
         // Handle verse deep link from notifications
         else if url.scheme == "thaqalayn" && url.host == "verse" {
             handleVerseDeepLink(url)
+        }
+        // Handle passage deep link (What's New card, passage links)
+        else if url.scheme == "thaqalayn" && url.host == "passage" {
+            handlePassageDeepLink(url)
         }
         // Handle journey deep link from journey-start notifications
         else if url.scheme == "thaqalayn" && url.host == "journey" {
@@ -113,30 +127,57 @@ struct ThaqalaynApp: App {
         )
     }
 
-    private func handleVerseDeepLink(_ url: URL) {
-        // Parse query parameters
+    /// Integer query items of a link, e.g. `?surah=2&verse=255` -> ["surah": 2, "verse": 255].
+    /// A repeated name keeps its last value; non-integer values are ignored.
+    private func intQueryItems(_ url: URL) -> [String: Int] {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
               let queryItems = components.queryItems else {
-            return
+            return [:]
         }
-
-        // Extract surah and verse numbers
-        var surahNumber: Int?
-        var verseNumber: Int?
-
+        var out: [String: Int] = [:]
         for item in queryItems {
-            if item.name == "surah", let value = item.value, let number = Int(value) {
-                surahNumber = number
-            } else if item.name == "verse", let value = item.value, let number = Int(value) {
-                verseNumber = number
+            if let value = item.value, let number = Int(value) {
+                out[item.name] = number
             }
         }
+        return out
+    }
 
-        guard let surah = surahNumber, let verse = verseNumber else {
+    private func handleVerseDeepLink(_ url: URL) {
+        let query = intQueryItems(url)
+        guard let surah = query["surah"], let verse = query["verse"] else {
+            return
+        }
+        navigateToVerse(surah: surah, verse: verse)
+    }
+
+    /// `thaqalayn://passage?surah=2&index=4`: the passage's first verse takes the
+    /// verse route, so the Quran tab pushes the surah and SurahDetailView pushes
+    /// the passage holding that verse. The passage index is built during data
+    /// load; if the link arrives before then, wait for it (the publisher replays
+    /// the current value, so a loaded index resolves at once). An unknown surah
+    /// or index is dropped, as the verse route drops an unknown surah.
+    private func handlePassageDeepLink(_ url: URL) {
+        let query = intQueryItems(url)
+        guard let surah = query["surah"], let index = query["index"] else {
             return
         }
 
-        // Post notification to trigger navigation
+        Task { @MainActor in
+            for await passageIndex in DataManager.shared.$passageIndex.values {
+                guard let passageIndex else { continue }
+                if let passage = passageIndex.passage(surah: surah, index: index) {
+                    navigateToVerse(surah: surah, verse: passage.start)
+                }
+                return
+            }
+        }
+    }
+
+    /// Posts the app-wide NavigateToVerse notification: MainTabView stashes it in
+    /// DeepLinkRouter and switches to the Quran tab, and HomeView pushes the surah
+    /// at that verse.
+    private func navigateToVerse(surah: Int, verse: Int) {
         NotificationCenter.default.post(
             name: NSNotification.Name("NavigateToVerse"),
             object: nil,

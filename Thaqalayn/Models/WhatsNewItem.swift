@@ -22,6 +22,9 @@ enum WhatsNewDestination: Equatable {
     /// Open a journey's narrated Listen player directly (the id must be a FREE/bundled journey,
     /// e.g. "yaqin" - the showcase is opened without a paywall pass).
     case journeyListen(String)
+    /// Open a surah in the passage reader at passage `index` (1-based ruku index),
+    /// through the `thaqalayn://passage` deep link (Quran tab, tab 1).
+    case passage(surah: Int, index: Int)
     // Reserved for later: case journey(String), case tab(Int)
 }
 
@@ -39,6 +42,15 @@ struct WhatsNewItem: Identifiable, Equatable {
 enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
+        WhatsNewItem(
+            id: "passages-baqarah",
+            sfSymbol: "text.book.closed",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 9, day: 5).date ?? .distantPast, // placeholder - set at ship time (later than nahl's so this card surfaces first)
+            destination: .passage(surah: 2, index: 1),
+            title: "Understanding, passage by passage",
+            blurb: "Al-Baqarah now opens as passages. Read the verses, then Understand the passage: an essay, verse notes, narrations and their sources, all tappable.",
+            cta: "Open al-Baqarah"
+        ),
         WhatsNewItem(
             id: "journey-listen",
             sfSymbol: "headphones",

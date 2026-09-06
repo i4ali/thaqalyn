@@ -400,21 +400,33 @@ class ProgressManager: ObservableObject {
             return false
         }
 
+        recordVerseRead(surahNumber: surahNumber, verseNumber: verseNumber)
+        finishMarkingRead(surahNumber: surahNumber)
+
+        print("✅ ProgressManager: Marked verse \(surahNumber):\(verseNumber) as read")
+        return true
+    }
+
+    /// Upserts one verse as read (refreshing its read date) and awards its sawab
+    /// when it was not read before. Returns true for a new read. Does not touch
+    /// stats totals, streak, badges, persistence, sync or reminders; the caller
+    /// runs `finishMarkingRead` once after recording one or many verses.
+    @discardableResult
+    private func recordVerseRead(surahNumber: Int, verseNumber: Int) -> Bool {
         let verseKey = "\(surahNumber):\(verseNumber)"
 
         // Check if already marked
         var isNewRead = false
         if let existingIndex = verseProgress.firstIndex(where: { $0.verseKey == verseKey }) {
             // Update existing
-            var updated = verseProgress[existingIndex]
-            updated = VerseProgress(
-                id: updated.id,
+            let existing = verseProgress[existingIndex]
+            verseProgress[existingIndex] = VerseProgress(
+                id: existing.id,
                 surahNumber: surahNumber,
                 verseNumber: verseNumber,
                 readDate: Date(),
                 isRead: true
             )
-            verseProgress[existingIndex] = updated
         } else {
             // Add new
             let progress = VerseProgress(
@@ -425,16 +437,23 @@ class ProgressManager: ObservableObject {
             isNewRead = true
         }
 
-        // Update stats
-        stats.totalVersesRead = verseProgress.filter { $0.isRead }.count
-        updateTodayVersesCount()
-        stats.lastReadDate = Date()
-
         // Award sawab for verse reading (10 sawab per verse, based on hadith)
         if isNewRead {
             stats.totalSawab += 10
             print("✨ ProgressManager: +10 sawab earned! Total: \(stats.totalSawab)")
         }
+
+        return isNewRead
+    }
+
+    /// Everything that follows one or more verses of `surahNumber` being recorded
+    /// read: stats totals, streak, surah completion and badges, save, cloud sync
+    /// and engagement reminders. Runs once per marking, not once per verse.
+    private func finishMarkingRead(surahNumber: Int) {
+        // Update stats
+        stats.totalVersesRead = verseProgress.filter { $0.isRead }.count
+        updateTodayVersesCount()
+        stats.lastReadDate = Date()
 
         // Update streak
         updateStreak()
@@ -450,9 +469,6 @@ class ProgressManager: ObservableObject {
 
         // Re-arm engagement notifications now that progress changed
         updateEngagementNotifications(afterReadingSurah: surahNumber)
-
-        print("✅ ProgressManager: Marked verse \(verseKey) as read")
-        return true
     }
 
     @discardableResult
@@ -491,6 +507,40 @@ class ProgressManager: ObservableObject {
     func isVerseRead(surahNumber: Int, verseNumber: Int) -> Bool {
         let verseKey = "\(surahNumber):\(verseNumber)"
         return verseProgress.contains(where: { $0.verseKey == verseKey && $0.isRead })
+    }
+
+    // MARK: - Passage Progress
+
+    /// Keys "surah:verse" of every verse marked read. Used by the passage reader.
+    var readVerseKeys: Set<String> {
+        Set(verseProgress.filter { $0.isRead }.map { $0.verseKey })
+    }
+
+    func isPassageRead(_ ref: PassageRef) -> Bool {
+        PassageProgress.isRead(ref, readVerseKeys: readVerseKeys)
+    }
+
+    /// Reaching the end of a passage marks every verse in it read, once. Verses
+    /// are recorded through the same helper as `markVerseAsRead`, so each new
+    /// verse still earns its 10 sawab, but the streak, badge check, save, sync
+    /// and reminder re-arm run once for the whole passage instead of per verse.
+    /// Verses already read are left untouched, so re-reaching the end of a
+    /// finished passage does nothing.
+    func markPassageRead(_ ref: PassageRef) {
+        guard ref.surah > 0 && ref.surah <= 114 else {
+            errorMessage = "Invalid surah number"
+            return
+        }
+
+        let unread = ref.verses.filter { !isVerseRead(surahNumber: ref.surah, verseNumber: $0) }
+        guard !unread.isEmpty else { return }
+
+        for verse in unread {
+            recordVerseRead(surahNumber: ref.surah, verseNumber: verse)
+        }
+        finishMarkingRead(surahNumber: ref.surah)
+
+        print("✅ ProgressManager: Marked passage \(ref.id) as read (\(unread.count) new verses)")
     }
 
     func getVerseProgress(surahNumber: Int, verseNumber: Int) -> VerseProgress? {

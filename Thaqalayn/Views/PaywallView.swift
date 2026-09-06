@@ -4,7 +4,7 @@
 //
 //  Paywall screen for premium upgrade.
 //  Design: docs/mockups/paywall-redesign-final.png - price-forward hero,
-//  5-layer depth ladder, feature rows, rotating App Store reviews, pinned CTA.
+//  Understanding depth ladder, feature rows, rotating App Store reviews, pinned CTA.
 //
 
 import SwiftUI
@@ -100,12 +100,12 @@ struct PaywallView: View {
         var isGold: Bool = false
     }
 
+    /// The four parts of a passage's Understanding, in reading order.
     private let layers: [LayerInfo] = [
-        LayerInfo(number: 1, name: "Foundation", tagline: "Historical context & basics"),
-        LayerInfo(number: 2, name: "Classical Shia", tagline: "Tabatabai & Tabrisi"),
-        LayerInfo(number: 3, name: "Contemporary", tagline: "Modern perspectives"),
-        LayerInfo(number: 4, name: "Ahlul Bayt", tagline: "Wisdom of the Infallibles"),
-        LayerInfo(number: 5, name: "Comparative", tagline: "Shia & Sunni, side by side", isGold: true),
+        LayerInfo(number: 1, name: "Essay", tagline: "The passage told once, in order"),
+        LayerInfo(number: 2, name: "Verse by verse", tagline: "Notes on the verses that need them"),
+        LayerInfo(number: 3, name: "Narrations", tagline: "From the Imams, with their sources"),
+        LayerInfo(number: 4, name: "Perspectives", tagline: "Where Shia and Sunni readings differ", isGold: true),
     ]
 
     var body: some View {
@@ -369,14 +369,14 @@ struct PaywallView: View {
         .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 2)
     }
 
-    // MARK: - 5 Layers depth ladder
+    // MARK: - Understanding depth ladder
 
     private var layersSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 12) {
                 featureIconChip("square.stack.3d.up.fill")
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("5 Layers of Tafsir")
+                    Text("Understanding")
                         .font(EmType.serif(21, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                     Text("All 114 surahs · English, Urdu & Arabic")
@@ -450,7 +450,7 @@ struct PaywallView: View {
     // MARK: - Feature rows
 
     private var featureRows: some View {
-        // Indices continue past the 5 ladder rows so the whole page reads as one
+        // Indices continue past the ladder rows so the whole page reads as one
         // cascade from the top rather than two sections starting at once.
         VStack(spacing: 10) {
             staggeredRow(layers.count + 0, featureRow(

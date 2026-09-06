@@ -212,17 +212,14 @@ struct QuickOverviewView: View {
     let verse: VerseWithTafsir
     let surah: Surah
     let quickOverview: QuickOverviewData
-    let onViewFullCommentary: () -> Void
 
     init(verse: VerseWithTafsir,
          surah: Surah,
          quickOverview: QuickOverviewData,
-         initialConceptId: String? = nil,
-         onViewFullCommentary: @escaping () -> Void) {
+         initialConceptId: String? = nil) {
         self.verse = verse
         self.surah = surah
         self.quickOverview = quickOverview
-        self.onViewFullCommentary = onViewFullCommentary
         _selectedConcept = State(initialValue: initialConceptId.flatMap { id in
             quickOverview.concepts.first { $0.id == id }
         })
@@ -272,11 +269,8 @@ struct QuickOverviewView: View {
 
     private var legacyBrowseScroll: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack(spacing: 24) {
-                conceptBubblesGrid
-                readFullTafsirCTA
-            }
-            .padding(.horizontal, 24).padding(.top, 16).padding(.bottom, 40)
+            conceptBubblesGrid
+                .padding(.horizontal, 24).padding(.top, 16).padding(.bottom, 40)
         }
     }
 
@@ -312,11 +306,8 @@ struct QuickOverviewView: View {
 
     private var emeraldBrowseScroll: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack(spacing: 22) {
-                conceptBubblesGrid
-                readFullTafsirCTA
-            }
-            .padding(.horizontal, 20).padding(.top, 16).padding(.bottom, 40)
+            conceptBubblesGrid
+                .padding(.horizontal, 20).padding(.top, 16).padding(.bottom, 40)
         }
     }
 
@@ -344,7 +335,7 @@ struct QuickOverviewView: View {
     }
 
     /// Detail pane that REPLACES the gem grid when a gem is selected.
-    /// Back-chip + fade-masked scrolling insight + pinned CTA. Verse stays pinned above.
+    /// Back-chip + fade-masked scrolling insight. Verse stays pinned above.
     private func gemDetailPane(_ concept: VerseConcept) -> some View {
         return VStack(spacing: 0) {
             HStack {
@@ -374,9 +365,6 @@ struct QuickOverviewView: View {
                 .padding(.horizontal, 22).padding(.top, 8).padding(.bottom, 26)
             }
             .scrollEdgeFade()
-
-            readFullTafsirCTA
-                .padding(.horizontal, 22).padding(.top, 6).padding(.bottom, 18)
         }
     }
 
@@ -392,29 +380,6 @@ struct QuickOverviewView: View {
                 .lineSpacing(7 * readingSettings.scale)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-    }
-
-    /// Single "Read Full Tafsir" CTA shared by browse + detail, both themes.
-    /// Emerald → gold gradient + dark text; Legacy → its purple gradient + white.
-    private var readFullTafsirCTA: some View {
-        Button(action: {
-            dismiss()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { onViewFullCommentary() }
-        }) {
-            HStack(spacing: 8) {
-                Image(systemName: "book.fill").font(.system(size: 15, weight: .semibold))
-                Text("Read Full Tafsir").font(.system(size: 15, weight: .bold))
-                Image(systemName: "arrow.right").font(.system(size: 13, weight: .semibold))
-            }
-            .foregroundColor(themeManager.isMidnightEmerald ? themeManager.onAccentText : .white)
-            .frame(maxWidth: .infinity).padding(.vertical, 16)
-            .background(
-                RoundedRectangle(cornerRadius: 15, style: .continuous)
-                    .fill(themeManager.isMidnightEmerald ? themeManager.accentGradient : themeManager.purpleGradient)
-            )
-            .shadow(color: themeManager.accentColor.opacity(0.28), radius: 16, x: 0, y: 8)
-        }
-        .buttonStyle(EmPressStyle())
     }
 
     // MARK: - Header
@@ -568,19 +533,12 @@ struct ConceptBubbleView: View {
             title_ar: "اسم الله", coreInsight_ar: "الله هو الاسم الجامع لكل الصفات الإلهية.", whyItMatters_ar: "بذكر اسم الله نقر بأن كل قوة منه وحده."
         )
     ]
-    let sampleTafsir = TafsirVerse(
-        layer1: "", layer2: "", layer3: "", layer4: "", layer5: nil,
-        layer1_urdu: nil, layer2_urdu: nil, layer3_urdu: nil, layer4_urdu: nil, layer5_urdu: nil,
-        layer1_ar: nil, layer2_ar: nil, layer3_ar: nil, layer4_ar: nil, layer5_ar: nil,
-        layer2short: nil, layer2short_urdu: nil, layer2short_ar: nil,
-        quickOverview: QuickOverviewData(concepts: sampleConcepts)
-    )
+    let sampleTafsir = TafsirVerse(quickOverview: QuickOverviewData(concepts: sampleConcepts))
     let sampleVWT = VerseWithTafsir(number: 1, verse: sampleVerse, tafsir: sampleTafsir)
 
     return QuickOverviewView(
         verse: sampleVWT, surah: sampleSurah,
-        quickOverview: QuickOverviewData(concepts: sampleConcepts),
-        onViewFullCommentary: {}
+        quickOverview: QuickOverviewData(concepts: sampleConcepts)
     )
 }
 

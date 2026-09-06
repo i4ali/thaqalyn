@@ -132,21 +132,9 @@ class PremiumManager: ObservableObject {
         return isPremium
     }
 
-    /// Check if user can access a specific tafsir layer for a given surah
-    /// - Surah 1 (Al-Fatiha): Layers 1 & 2 free, Layers 3-5 require premium
-    /// - Surahs 2-114: All layers require premium
-    func canAccessLayer(_ layer: TafsirLayer, surahNumber: Int) -> Bool {
-        // Surah 1: Layers 1 & 2 are free
-        if surahNumber == 1 {
-            switch layer {
-            case .foundation, .classical:
-                return true  // Always free for Surah 1
-            case .contemporary, .ahlulBayt, .comparative:
-                return isPremium  // Require premium for Surah 1
-            }
-        }
-
-        // Surahs 2-114: All layers require premium
+    /// The single gate of the passage reader: the Understand button. Surah 1 is free.
+    func canAccessUnderstanding(surahNumber: Int) -> Bool {
+        if surahNumber == 1 { return true }
         return isPremium
     }
 

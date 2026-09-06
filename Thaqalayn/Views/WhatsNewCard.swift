@@ -72,6 +72,14 @@ struct WhatsNewCard: View {
                     JourneyListenPresenter.shared.open(dive)
                 }
             }
+        case .passage(let surah, let index):
+            // Take the passage deep link: the app resolves the passage's first verse,
+            // switches to the Quran tab and pushes the surah at that passage.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                if let url = URL(string: "thaqalayn://passage?surah=\(surah)&index=\(index)") {
+                    UIApplication.shared.open(url)
+                }
+            }
         }
     }
 
@@ -116,11 +124,14 @@ struct WhatsNewCard: View {
                         HStack(alignment: .top, spacing: 13) {
                             EmIconChip(sfSymbol: item.sfSymbol, size: 46)
                             VStack(alignment: .leading, spacing: 5) {
-                                HStack(spacing: 8) {
+                                // A long title wraps to a second line rather than truncating;
+                                // the pill stays on the first line's baseline.
+                                HStack(alignment: .firstTextBaseline, spacing: 8) {
                                     Text(item.title)
                                         .font(EmType.serif(21, .semiBold))
                                         .foregroundColor(themeManager.primaryText)
-                                        .lineLimit(1)
+                                        .lineLimit(2)
+                                        .fixedSize(horizontal: false, vertical: true)
                                     newPill
                                 }
                                 Text(item.blurb)
@@ -173,11 +184,14 @@ struct WhatsNewCard: View {
                                 .foregroundColor(.white)
                         }
                         VStack(alignment: .leading, spacing: 5) {
-                            HStack(spacing: 8) {
+                            // A long title wraps to a second line rather than truncating;
+                            // the pill stays on the first line's baseline.
+                            HStack(alignment: .firstTextBaseline, spacing: 8) {
                                 Text(item.title)
                                     .font(.system(size: 17, weight: .semibold))
                                     .foregroundColor(themeManager.primaryText)
-                                    .lineLimit(1)
+                                    .lineLimit(2)
+                                    .fixedSize(horizontal: false, vertical: true)
                                 newPill
                             }
                             Text(item.blurb)

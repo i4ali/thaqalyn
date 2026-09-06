@@ -24,11 +24,16 @@ struct TafsirSourcesView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         // Introduction
-                        Text("The commentary in this app draws from classical and contemporary Shia scholarship. Below are the primary sources referenced for each layer.")
+                        Text("Passage commentary (2026) is written from the sources listed on each passage's source sheet. The notes below describe the earlier layered commentary.")
                             .font(.system(size: 15, weight: .regular))
                             .foregroundColor(themeManager.secondaryText)
                             .padding(.horizontal, 20)
                             .padding(.top, 16)
+
+                        Text("The commentary in this app draws from classical and contemporary Shia scholarship. Below are the primary sources referenced for each layer.")
+                            .font(.system(size: 15, weight: .regular))
+                            .foregroundColor(themeManager.secondaryText)
+                            .padding(.horizontal, 20)
 
                         // Layer 1 - Foundation
                         SourceSection(
@@ -117,7 +122,7 @@ struct TafsirSourcesView: View {
                         EmHeading(
                             eyebrow: "Scholarship",
                             title: "Tafsir Sources",
-                            sub: "The commentary in this app draws from classical and contemporary Shia scholarship. Below are the primary sources referenced for each layer."
+                            sub: "Passage commentary (2026) is written from the sources listed on each passage's source sheet. The notes below describe the earlier layered commentary.\n\nThe commentary in this app draws from classical and contemporary Shia scholarship. Below are the primary sources referenced for each layer."
                         )
                         .padding(.horizontal, 20)
                         .padding(.top, 8)

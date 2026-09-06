@@ -129,11 +129,11 @@ class NotificationManager: ObservableObject {
         if !verse.translation.isEmpty {
             body += "\n\n" + verse.translation
         }
-        if preferences.includeTafsir, let tafsir = verse.tafsir {
-            let text = tafsir.content(for: TafsirLayer.foundation, language: .english)
-            if !text.isEmpty {
-                body += "\n\n💡 " + String(text.prefix(150)) + "..."
-            }
+        // The first gem's core insight stands in for the old foundation commentary.
+        if preferences.includeTafsir,
+           let insight = verse.tafsir?.quickOverview?.concepts.first?.coreInsight,
+           !insight.isEmpty {
+            body += "\n\n💡 " + String(insight.prefix(150)) + "..."
         }
         content.body = body
 
