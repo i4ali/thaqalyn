@@ -33,9 +33,12 @@ def build_record(ref: rukus.PassageRef) -> dict:
         rec["gloss"] = s.get("gloss")
         merged_sources.append(rec)
     latest = audit_mod.latest(d)
+    # A note-only entry may leave `narrations` out of the draft; the app model
+    # expects the key on every entry, so always emit it.
+    verses = [{**v, "narrations": v.get("narrations") or []} for v in draft.get("verses") or []]
     return {
         "id": ref.id, "surah": ref.surah, "index": ref.index, "range": [ref.start, ref.end],
-        "title": draft["title"], "essay": draft["essay"], "verses": draft.get("verses") or [],
+        "title": draft["title"], "essay": draft["essay"], "verses": verses,
         "perspectives": draft.get("perspectives"), "sources": merged_sources,
         "status": {"gathered_at": gathered.get("gathered_at"),
                    "audit_attempts": audit_mod.next_attempt(d) - 1,

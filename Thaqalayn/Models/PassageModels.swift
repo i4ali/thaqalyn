@@ -65,6 +65,18 @@ struct PassageVerseEntry: Codable, Identifiable, Hashable {
     let note: LocalizedText?
     let narrations: [Narration]
     var id: Int { verse }
+
+    enum CodingKeys: String, CodingKey { case verse, heading, note, narrations }
+
+    /// A note-only entry may omit `narrations` entirely; treat that as empty
+    /// rather than failing the whole surah file.
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        verse = try c.decode(Int.self, forKey: .verse)
+        heading = try c.decodeIfPresent(LocalizedText.self, forKey: .heading)
+        note = try c.decodeIfPresent(LocalizedText.self, forKey: .note)
+        narrations = try c.decodeIfPresent([Narration].self, forKey: .narrations) ?? []
+    }
 }
 
 struct Narration: Codable, Identifiable, Hashable {

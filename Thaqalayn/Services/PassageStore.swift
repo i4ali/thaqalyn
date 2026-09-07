@@ -17,13 +17,21 @@ final class PassageStore: ObservableObject {
         if let cached = cache[surah] { return cached }
         if missing.contains(surah) { return [:] }
         guard let url = Bundle.main.url(forResource: "passages_\(surah)", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let decoded = try? JSONDecoder().decode([String: Passage].self, from: data) else {
+              let data = try? Data(contentsOf: url) else {
             missing.insert(surah)
             return [:]
         }
-        cache[surah] = decoded
-        return decoded
+        do {
+            let decoded = try JSONDecoder().decode([String: Passage].self, from: data)
+            cache[surah] = decoded
+            return decoded
+        } catch {
+            // A shipped file that fails to decode is a data bug, not "no commentary yet".
+            // Surface it in debug builds instead of silently hiding the surah.
+            assertionFailure("PassageStore: passages_\(surah).json failed to decode: \(error)")
+            missing.insert(surah)
+            return [:]
+        }
     }
 
     func passage(surah: Int, index: Int) -> Passage? { load(surah: surah)[String(index)] }
