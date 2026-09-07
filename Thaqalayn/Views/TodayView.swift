@@ -36,18 +36,22 @@ private enum TodayStrings {
     /// Title fallback for a passage without commentary yet: "Verses 30 to 39".
     static func versesRange(_ label: String) -> String { "Verses \(label)" }
     static func percentComplete(_ p: Int) -> String { "\(p)% complete" }
+    static func passagesRead(_ read: Int, _ total: Int) -> String { "\(read) of \(total) passages read" }
 }
 
-/// "<title> · passage i of n" for the passage holding the last-read verse. nil until
-/// DataManager's passage index has loaded, so callers fall back to the verse line.
-@MainActor
+/// "<title> · passage i of n" for the passage holding the reading position.
+/// nil until the passage index has loaded, so callers fall back to the verse line.
 private func passagePositionLine(for info: LastReadInfo) -> String? {
-    guard let index = DataManager.shared.passageIndex,
-          let ref = index.passage(surah: info.surahNumber, containing: info.verseNumber) else { return nil }
-    let total = index.passages(forSurah: info.surahNumber).count
-    let title = PassageStore.shared.passage(surah: ref.surah, index: ref.index)?.title.en
-        ?? TodayStrings.versesRange(ref.rangeLabel)
-    return TodayStrings.passagePosition(title, ref.index, total)
+    guard let index = info.passageIndex, let title = info.passageTitle, info.passagesTotal > 0 else { return nil }
+    return TodayStrings.passagePosition(title, index, info.passagesTotal)
+}
+
+/// "3 of 24 passages read", or the percentage of verses until the passage
+/// index has loaded.
+private func progressLine(for info: LastReadInfo) -> String {
+    info.passagesTotal > 0
+        ? TodayStrings.passagesRead(info.passagesRead, info.passagesTotal)
+        : TodayStrings.percentComplete(Int(info.progress * 100))
 }
 
 struct TodayView: View {
@@ -559,7 +563,7 @@ private struct ContinueReadingHero: View {
                 }
                 .frame(height: 6)
 
-                Text(TodayStrings.percentComplete(Int(info.progress * 100)))
+                Text(progressLine(for: info))
                     .font(.system(size: 11, weight: .semibold))
                     .foregroundColor(themeManager.tertiaryText)
             }
@@ -1010,7 +1014,7 @@ private struct EmContinueReadingCard: View {
                                 .frame(width: max(0, geo.size.width * CGFloat(animateProgress ? info.progress : 0)), height: 6)
                         }.frame(height: 6)
                     }.frame(height: 6)
-                    Text(TodayStrings.percentComplete(Int(info.progress * 100))).font(.system(size: 11, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
+                    Text(progressLine(for: info)).font(.system(size: 11, weight: .semibold)).foregroundColor(themeManager.tertiaryText)
                 }
                 Button(action: onResume) {
                     HStack(spacing: 6) {

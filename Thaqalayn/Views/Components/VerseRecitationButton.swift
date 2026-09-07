@@ -13,6 +13,10 @@ struct VerseRecitationButton: View {
     let surahNumber: Int
     let verseNumber: Int
     var size: CGFloat = 36
+    /// Quiet draws a bare glyph at reduced strength while idle and only grows
+    /// its chip once this verse is loaded, for rails that sit beside reading
+    /// text on every verse. The default is the full chip at all times.
+    var quiet = false
 
     @StateObject private var audioManager = AudioManager.shared
     @StateObject private var dataManager = DataManager.shared
@@ -28,14 +32,19 @@ struct VerseRecitationButton: View {
         isActive && (audioManager.playerState == .loading || audioManager.playerState == .buffering)
     }
 
+    /// Quiet and idle: no chip, so the glyph reads as marginalia.
+    private var isBare: Bool { quiet && !isActive }
+
     var body: some View {
         Button(action: handleTap) {
             ZStack {
-                RoundedRectangle(cornerRadius: 11, style: .continuous)
-                    .fill(isActive ? AnyShapeStyle(themeManager.accentGradient)
-                                   : AnyShapeStyle(themeManager.accentChip))
-                    .overlay(RoundedRectangle(cornerRadius: 11, style: .continuous)
-                        .stroke(isActive ? Color.clear : themeManager.strokeColor, lineWidth: 1))
+                if !isBare {
+                    RoundedRectangle(cornerRadius: 11, style: .continuous)
+                        .fill(isActive ? AnyShapeStyle(themeManager.accentGradient)
+                                       : AnyShapeStyle(themeManager.accentChip))
+                        .overlay(RoundedRectangle(cornerRadius: 11, style: .continuous)
+                            .stroke(isActive ? Color.clear : themeManager.strokeColor, lineWidth: 1))
+                }
 
                 if isLoading {
                     ProgressView()
@@ -45,9 +54,11 @@ struct VerseRecitationButton: View {
                     Image(systemName: isPlaying ? "pause.fill" : "play.fill")
                         .font(.system(size: size * 0.36, weight: .semibold))
                         .foregroundColor(isActive ? themeManager.onAccentText : themeManager.accentColor)
+                        .opacity(isBare ? 0.55 : 1)
                 }
             }
             .frame(width: size, height: size)
+            .contentShape(Rectangle())
         }
         .buttonStyle(EmPressStyle())
         .accessibilityLabel(isPlaying ? "Pause recitation" : "Play recitation")

@@ -814,6 +814,9 @@ struct EmJourneyToggleButton: View {
     var doneLabel: String
     var todoLabel: String
     var doneTint: Color
+    /// Journey screens place the button edge to edge and let it inset itself;
+    /// a host whose content is already inset passes 0.
+    var horizontalPadding: CGFloat = 20
     var onToggle: () -> Void
 
     var body: some View {
@@ -838,7 +841,7 @@ struct EmJourneyToggleButton: View {
             .shadow(color: isDone ? .clear : tm.accentColor.opacity(0.28), radius: 24, x: 0, y: 10)
         }
         .buttonStyle(EmPressStyle())
-        .padding(.horizontal, 20)
+        .padding(.horizontal, horizontalPadding)
     }
 }
 

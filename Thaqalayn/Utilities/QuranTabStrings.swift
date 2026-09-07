@@ -35,6 +35,7 @@ enum QuranTabStrings {
     static func revelation(_ raw: String) -> String { raw }
     static func verseOf(_ n: Int, _ total: Int) -> String { "Verse \(n) of \(total)" }
     static func percentComplete(_ p: Int) -> String { "\(p)% complete" }
+    static func passagesRead(_ read: Int, _ total: Int) -> String { "\(read) of \(total) passages read" }
 
     // MARK: - Search results
     static let surahsLabel = "Surahs"

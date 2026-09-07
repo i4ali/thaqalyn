@@ -125,9 +125,10 @@ struct EmeraldHomeView: View {
                     Text(s.surah.englishName)
                         .font(EmType.serif(27, .semiBold))
                         .foregroundColor(themeManager.primaryText)
-                    Text("\(QuranTabStrings.verseOf(info.verseNumber, s.surah.versesCount)) · \(QuranTabStrings.percentComplete(Int(info.progress * 100)))")
+                    Text(positionLine(info: info, surah: s))
                         .font(.system(size: 13))
                         .foregroundColor(themeManager.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
 
                     ZStack(alignment: .leading) {
                         Capsule().fill(themeManager.accentChip).frame(height: 4)
@@ -158,6 +159,15 @@ struct EmeraldHomeView: View {
                 .padding(20)
             }
         }
+    }
+
+    /// "<passage title> · 3 of 24 passages read"; the verse line stands in
+    /// until the passage index has loaded.
+    private func positionLine(info: LastReadInfo, surah s: SurahWithTafsir) -> String {
+        if let title = info.passageTitle, info.passagesTotal > 0 {
+            return "\(title) · \(QuranTabStrings.passagesRead(info.passagesRead, info.passagesTotal))"
+        }
+        return "\(QuranTabStrings.verseOf(info.verseNumber, s.surah.versesCount)) · \(QuranTabStrings.percentComplete(Int(info.progress * 100)))"
     }
 
     private var searchField: some View {

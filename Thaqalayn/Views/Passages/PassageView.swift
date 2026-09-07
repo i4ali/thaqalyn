@@ -2,9 +2,10 @@
 //  PassageView.swift
 //  Thaqalayn
 //
-//  One passage (a ruku) read in full: its verses in order, then the
-//  Understand card for the passage commentary and a link to the next
-//  passage. Reaching the end of the verses marks the passage read.
+//  One passage (a ruku) read in full: its verses in order, then a Mark as
+//  read toggle, the Understand card for the passage commentary and a link
+//  to the next passage. Only the toggle (or reading every verse elsewhere)
+//  marks the passage read; scrolling to the end does not.
 //
 
 import SwiftUI
@@ -23,8 +24,6 @@ struct PassageView: View {
     @ObservedObject private var passageStore = PassageStore.shared
     @Environment(\.dismiss) private var dismiss
 
-    /// The verse whose action row (listen, bookmark, gems) is open.
-    @State private var selectedVerse: Int?
     @State private var selectedVerseForSummary: VerseWithTafsir?
     @State private var pendingConceptId: String?
     @State private var showTextSizePanel = false
@@ -38,6 +37,10 @@ struct PassageView: View {
     /// True while the end-of-verses Understand card is on screen. The pinned
     /// Understand bar shows only while it is not, so the two never stack.
     @State private var endCardVisible = false
+    /// The verse at the top of the screen, from the rows' frames. Recorded as
+    /// the reading position when the reader leaves, so Continue Reading
+    /// returns here.
+    @State private var topVerse: Int?
 
     init(surahWithTafsir: SurahWithTafsir, ref: PassageRef, scrollToVerse: Int? = nil, openConceptId: String? = nil) {
         self.surahWithTafsir = surahWithTafsir
@@ -45,6 +48,8 @@ struct PassageView: View {
         self.scrollToVerse = scrollToVerse
         self.openConceptId = openConceptId
     }
+
+    private static let scrollSpace = "passageScroll"
 
     // MARK: - Derived
 
@@ -91,6 +96,12 @@ struct PassageView: View {
         return playback.verseNumber
     }
 
+    /// Every verse in the passage is marked read; the same test the list uses
+    /// for its checkmark.
+    private var isPassageRead: Bool {
+        progressManager.isPassageRead(ref)
+    }
+
     // MARK: - Body
 
     var body: some View {
@@ -123,23 +134,27 @@ struct PassageView: View {
                                 PassageVerseRow(
                                     verse: verse,
                                     surah: surah,
-                                    isSelected: selectedVerse == verse.number,
                                     isPlaying: playingVerse == verse.number,
-                                    onTap: { toggleSelection(verse.number) },
                                     onGems: { openGems(for: verse) }
                                 )
                                 .id("verse_\(verse.number)")
+                                .background(
+                                    GeometryReader { geo in
+                                        Color.clear.preference(
+                                            key: VerseBottomsKey.self,
+                                            value: [verse.number: geo.frame(in: .named(Self.scrollSpace)).maxY]
+                                        )
+                                    }
+                                )
                             }
 
-                            understandCard
+                            markReadButton
                                 .padding(.top, 28)
+
+                            understandCard
+                                .padding(.top, 14)
                                 .onAppear { endCardVisible = true }
                                 .onDisappear { endCardVisible = false }
-
-                            // Reaching this point means the verses were scrolled through.
-                            Color.clear
-                                .frame(height: 1)
-                                .onAppear { progressManager.markPassageRead(ref) }
 
                             if let next = nextRef {
                                 NextPassageCard(surahWithTafsir: surahWithTafsir, next: next)
@@ -149,6 +164,14 @@ struct PassageView: View {
                         .padding(.horizontal, 20)
                         .padding(.top, 4)
                         .padding(.bottom, 48)
+                    }
+                    .coordinateSpace(name: Self.scrollSpace)
+                    .onPreferenceChange(VerseBottomsKey.self) { bottoms in
+                        // The first verse still meaningfully on screen: its
+                        // bottom edge sits below the top of the scroll view
+                        // by more than a sliver.
+                        let top = bottoms.filter { $0.value > 80 }.keys.min()
+                        if top != topVerse { topVerse = top }
                     }
                     .onAppear { handleScrollTarget(proxy) }
                     .onChange(of: audioManager.currentPlayback?.verseNumber) { _, newVerse in
@@ -169,6 +192,8 @@ struct PassageView: View {
                 .accessibilityHidden(true)
         )
         .textSizePanelOverlay(isOpen: $showTextSizePanel, topPadding: 60, trailingPadding: 20)
+        .onAppear { progressManager.enterPassage(ref) }
+        .onDisappear { progressManager.leavePassage(ref, topVerse: topVerse ?? ref.start) }
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
@@ -255,6 +280,22 @@ struct PassageView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, 8)
         .padding(.bottom, 12)
+    }
+
+    // MARK: - Mark as read
+
+    /// The one explicit way to finish a passage: the same done/todo toggle the
+    /// journey days use. Tapping it again takes the passage back to unread.
+    private var markReadButton: some View {
+        EmJourneyToggleButton(
+            isDone: isPassageRead,
+            doneLabel: "Marked as read",
+            todoLabel: "Mark as read",
+            doneTint: themeManager.semanticGreen,
+            horizontalPadding: 0,
+            onToggle: toggleRead
+        )
+        .accessibilityLabel(isPassageRead ? "Marked as read. Tap to unmark" : "Mark passage as read")
     }
 
     // MARK: - Understand
@@ -388,12 +429,6 @@ struct PassageView: View {
 
     // MARK: - Actions
 
-    private func toggleSelection(_ verse: Int) {
-        withAnimation(.easeInOut(duration: 0.2)) {
-            selectedVerse = selectedVerse == verse ? nil : verse
-        }
-    }
-
     private func openGems(for verse: VerseWithTafsir) {
         if premiumManager.canAccessOverview(surahNumber: surah.number) {
             // Let the chip's press squish play before the cover slides up.
@@ -404,6 +439,15 @@ struct PassageView: View {
         } else {
             paywallContext = .inSurah(surah, "Gems")
             showingPaywall = true
+        }
+    }
+
+    private func toggleRead() {
+        if isPassageRead {
+            progressManager.unmarkPassageRead(ref)
+        } else {
+            progressManager.markPassageRead(ref)
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
         }
     }
 
@@ -444,12 +488,24 @@ struct PassageView: View {
 /// One verse: numeral, Arabic, translation, and (when selected) the action
 /// row with listen, bookmark and gems. The verse loaded in the player gets a
 /// faint accent wash.
+/// Bottom edge of each built verse row in the passage scroll space, keyed by
+/// verse number. Only rows the lazy stack has built report, which is all the
+/// top-of-screen search needs.
+private struct VerseBottomsKey: PreferenceKey {
+    static var defaultValue: [Int: CGFloat] = [:]
+    static func reduce(value: inout [Int: CGFloat], nextValue: () -> [Int: CGFloat]) {
+        value.merge(nextValue()) { $1 }
+    }
+}
+
+/// One verse: the numeral row, whose empty right side carries the verse's
+/// tools (listen, save, gems) on every verse as quiet glyphs, then the Arabic
+/// and the translation. The tools are chrome, so they keep a fixed size while
+/// the reading text scales.
 private struct PassageVerseRow: View {
     let verse: VerseWithTafsir
     let surah: Surah
-    let isSelected: Bool
     let isPlaying: Bool
-    let onTap: () -> Void
     let onGems: () -> Void
 
     @ObservedObject private var themeManager = ThemeManager.shared
@@ -461,10 +517,18 @@ private struct PassageVerseRow: View {
         bookmarkManager.isBookmarked(surahNumber: surah.number, verseNumber: verse.number)
     }
 
+    /// Idle glyphs sit at this strength so the page still reads as a page;
+    /// only state (saved, playing) brings a glyph to full strength.
+    private let idleOpacity = 0.55
+
     var body: some View {
         VStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 14) {
-                EmNumeralCircle(n: verse.number, size: 30)
+                HStack(spacing: 0) {
+                    EmNumeralCircle(n: verse.number, size: 30)
+                    Spacer(minLength: 8)
+                    rail
+                }
 
                 // Laid out right to left, so leading is the right edge.
                 Text(verse.arabicText)
@@ -481,11 +545,6 @@ private struct PassageVerseRow: View {
                     .lineSpacing(6 * readingSettings.scale)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .fixedSize(horizontal: false, vertical: true)
-
-                if isSelected {
-                    actionRow
-                        .transition(.opacity.combined(with: .move(edge: .top)))
-                }
             }
             .padding(.vertical, 18)
             .padding(.horizontal, 12)
@@ -493,8 +552,6 @@ private struct PassageVerseRow: View {
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
                     .fill(isPlaying ? themeManager.accentColor.opacity(0.08) : Color.clear)
             )
-            .contentShape(Rectangle())
-            .onTapGesture(perform: onTap)
 
             Rectangle()
                 .fill(themeManager.dividerColor)
@@ -503,45 +560,38 @@ private struct PassageVerseRow: View {
         }
     }
 
-    private var actionRow: some View {
-        HStack(spacing: 10) {
-            VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 32)
+    /// Listen, save and gems on the right of the numeral row.
+    private var rail: some View {
+        HStack(spacing: 2) {
+            VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 32, quiet: true)
 
             Button(action: toggleBookmark) {
                 Image(systemName: isBookmarked ? "heart.fill" : "heart")
-                    .font(.system(size: 13, weight: .semibold))
-                    .foregroundColor(isBookmarked ? themeManager.onAccentText : themeManager.accentColor)
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(isBookmarked ? themeManager.accentBright : themeManager.accentColor)
+                    .opacity(isBookmarked ? 1 : idleOpacity)
                     .frame(width: 32, height: 32)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(isBookmarked ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.accentChip))
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .stroke(isBookmarked ? Color.clear : themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .scaleEffect(showingBookmarkFeedback ? 1.2 : 1.0)
+                    .contentShape(Rectangle())
+                    .scaleEffect(showingBookmarkFeedback ? 1.25 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.6), value: showingBookmarkFeedback)
             }
             .buttonStyle(EmPressStyle())
             .accessibilityLabel(isBookmarked ? "Remove bookmark" : "Bookmark verse")
 
             Button(action: onGems) {
-                HStack(spacing: 6) {
+                HStack(spacing: 5) {
                     Image(systemName: "sparkles").font(.system(size: 13, weight: .semibold))
-                    Text("Gems").font(.system(size: 14, weight: .semibold))
+                    Text("Gems").font(.system(size: 12.5, weight: .semibold))
                 }
                 .foregroundColor(themeManager.accentColor)
-                .padding(.horizontal, 14)
+                .opacity(verse.tafsir != nil ? idleOpacity : 0.28)
+                .padding(.horizontal, 6)
                 .frame(height: 32)
-                .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(themeManager.accentChip))
-                .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+                .contentShape(Rectangle())
             }
             .buttonStyle(EmPressStyle())
-            .opacity(verse.tafsir != nil ? 1 : 0.45)
             .disabled(verse.tafsir == nil)
-
-            Spacer()
+            .accessibilityLabel("Gems for this verse")
         }
     }
 

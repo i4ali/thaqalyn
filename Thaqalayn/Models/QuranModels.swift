@@ -524,10 +524,19 @@ struct VerseProgress: Codable, Identifiable {
 
 // MARK: - Today Tab Models
 
+/// Where Continue Reading points: the reader's position (surah and the verse
+/// at the top of the screen when they left) plus the passage holding it and
+/// how much of that surah is read, in passages.
 struct LastReadInfo {
     let surahNumber: Int
     let verseNumber: Int
-    let progress: Double      // 0…1 within that surah
+    /// The passage holding the verse and its title; nil until the passage
+    /// index has loaded.
+    let passageIndex: Int?
+    let passageTitle: String?
+    let passagesRead: Int
+    let passagesTotal: Int
+    let progress: Double      // 0…1, passages read within that surah
     let updatedAt: Date
 }
 
@@ -780,6 +789,11 @@ struct ProgressStats: Codable {
     var lastReadDate: Date?
     var startDate: Date
     var totalSawab: Int  // Total sawab (spiritual rewards) earned
+    /// The reading position: the passage screen records the verse at the top
+    /// of the screen as the reader leaves. Drives Continue Reading. Absent in
+    /// records saved before positions existed.
+    var lastReadSurah: Int?
+    var lastReadVerse: Int?
 
     init(
         totalVersesRead: Int = 0,
@@ -789,7 +803,9 @@ struct ProgressStats: Codable {
         versesReadToday: Int = 0,
         lastReadDate: Date? = nil,
         startDate: Date = Date(),
-        totalSawab: Int = 0
+        totalSawab: Int = 0,
+        lastReadSurah: Int? = nil,
+        lastReadVerse: Int? = nil
     ) {
         self.totalVersesRead = totalVersesRead
         self.totalSurahsCompleted = totalSurahsCompleted
@@ -799,6 +815,8 @@ struct ProgressStats: Codable {
         self.lastReadDate = lastReadDate
         self.startDate = startDate
         self.totalSawab = totalSawab
+        self.lastReadSurah = lastReadSurah
+        self.lastReadVerse = lastReadVerse
     }
 }
 

@@ -4,8 +4,9 @@
 //
 //  A surah as the list of its passages (one per ruku). SurahDetailView wraps
 //  this screen for every navigation into a surah. Tapping a row pushes
-//  PassageView; a target verse (deep link or go-to-verse) pushes the passage
-//  that holds it and scrolls to the verse.
+//  PassageView; swiping a row from the leading edge marks the passage read or
+//  unread; a target verse (deep link or go-to-verse) pushes the passage that
+//  holds it and scrolls to the verse.
 //
 
 import SwiftUI
@@ -94,9 +95,13 @@ struct SurahPassagesView: View {
             VStack(spacing: 0) {
                 header(readCount: readCount)
 
-                ScrollView {
-                    LazyVStack(spacing: 0) {
-                        ForEach(passages) { ref in
+                // A List rather than a ScrollView so rows get native swipe
+                // actions; drawn transparent so it sits on the same ground.
+                List {
+                    ForEach(passages) { ref in
+                        let isRead = PassageProgress.isRead(ref, readVerseKeys: readVerseKeys)
+
+                        VStack(spacing: 0) {
                             if ref.index > 1 {
                                 Rectangle()
                                     .fill(themeManager.dividerColor)
@@ -111,16 +116,33 @@ struct SurahPassagesView: View {
                                     ref: ref,
                                     title: passageTitle(ref),
                                     hasCommentary: passageStore.hasCommentary(surah: surah.number, index: ref.index),
-                                    isRead: PassageProgress.isRead(ref, readVerseKeys: readVerseKeys),
+                                    isRead: isRead,
                                     isReading: ref == readingRef
                                 )
                             }
                         }
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                            Button {
+                                toggleRead(ref, isRead: isRead)
+                            } label: {
+                                Label(isRead ? "Unread" : "Read", systemImage: isRead ? "arrow.uturn.backward" : "checkmark")
+                            }
+                            .tint(isRead ? themeManager.tertiaryText : themeManager.accentColor)
+                        }
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 8)
-                    .padding(.bottom, 40)
+
+                    Color.clear
+                        .frame(height: 40)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
                 }
+                .listStyle(.plain)
+                .scrollContentBackground(.hidden)
+                .padding(.top, 8)
             }
         }
         .background(
@@ -161,6 +183,17 @@ struct SurahPassagesView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 pendingTarget = PassageTarget(verse: targetVerse, conceptId: targetConceptId)
             }
+        }
+    }
+
+    /// Leading swipe on a row: the same mark and unmark the passage screen's
+    /// button performs, so the checkmark and the header count follow at once.
+    private func toggleRead(_ ref: PassageRef, isRead: Bool) {
+        if isRead {
+            progressManager.unmarkPassageRead(ref)
+        } else {
+            progressManager.markPassageRead(ref)
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
         }
     }
 

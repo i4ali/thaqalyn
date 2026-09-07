@@ -139,6 +139,14 @@ class ProgressManager: ObservableObject {
         }
     }
 
+    /// Stats alone. The full save also encodes every verse record, which is
+    /// too much for something that runs while the reader scrolls.
+    private func saveStats() {
+        if let encoded = try? JSONEncoder().encode(stats) {
+            UserDefaults.standard.set(encoded, forKey: statsKey)
+        }
+    }
+
     // MARK: - Supabase Sync
 
     private func setupSupabaseObservers() {
@@ -458,7 +466,8 @@ class ProgressManager: ObservableObject {
         // Update streak
         updateStreak()
 
-        // Check for surah completion and badges
+        // Surah completion count, then any badge the completion earns
+        recomputeSurahsCompleted()
         checkSurahCompletion(surahNumber: surahNumber)
 
         // Save changes
@@ -487,6 +496,7 @@ class ProgressManager: ObservableObject {
             // Update stats
             stats.totalVersesRead = verseProgress.filter { $0.isRead }.count
             updateTodayVersesCount()
+            recomputeSurahsCompleted()
 
             // Deduct sawab for unmarking verse
             stats.totalSawab = max(0, stats.totalSawab - 10)
@@ -520,12 +530,11 @@ class ProgressManager: ObservableObject {
         PassageProgress.isRead(ref, readVerseKeys: readVerseKeys)
     }
 
-    /// Reaching the end of a passage marks every verse in it read, once. Verses
-    /// are recorded through the same helper as `markVerseAsRead`, so each new
-    /// verse still earns its 10 sawab, but the streak, badge check, save, sync
-    /// and reminder re-arm run once for the whole passage instead of per verse.
-    /// Verses already read are left untouched, so re-reaching the end of a
-    /// finished passage does nothing.
+    /// Marks every verse in a passage read, once. Verses are recorded through
+    /// the same helper as `markVerseAsRead`, so each new verse still earns its
+    /// 10 sawab, but the streak, badge check, save, sync and reminder re-arm
+    /// run once for the whole passage instead of per verse. Verses already
+    /// read are left untouched, so marking a finished passage does nothing.
     func markPassageRead(_ ref: PassageRef) {
         guard ref.surah > 0 && ref.surah <= 114 else {
             errorMessage = "Invalid surah number"
@@ -540,7 +549,80 @@ class ProgressManager: ObservableObject {
         }
         finishMarkingRead(surahNumber: ref.surah)
 
+        // Finishing the passage the reader is in moves Continue Reading on to
+        // the next one. A passage marked from the list while the reader is
+        // elsewhere leaves the position alone.
+        if isPositionInside(ref), let next = DataManager.shared.passageIndex?.next(after: ref) {
+            updateReadingPosition(surahNumber: next.surah, verseNumber: next.start, sync: true)
+        }
+
         print("✅ ProgressManager: Marked passage \(ref.id) as read (\(unread.count) new verses)")
+    }
+
+    // MARK: - Reading Position
+
+    /// Records where the reader is: `verseNumber` is the verse at the top of
+    /// the screen in the passage being read. Saved locally at once (stats
+    /// only, so it is cheap while scrolling); `sync` also schedules the cloud
+    /// upload and is passed when the reader arrives or leaves.
+    func updateReadingPosition(surahNumber: Int, verseNumber: Int, sync: Bool = false) {
+        guard surahNumber > 0 && surahNumber <= 114, verseNumber > 0 else { return }
+        if stats.lastReadSurah != surahNumber || stats.lastReadVerse != verseNumber {
+            stats.lastReadSurah = surahNumber
+            stats.lastReadVerse = verseNumber
+            stats.lastReadDate = Date()
+            saveStats()
+            needsSync = true
+        }
+        if sync { scheduleSync() }
+    }
+
+    /// Opening a passage puts the position at its first verse, unless the
+    /// reader is already somewhere inside it; then the deeper verse stays.
+    func enterPassage(_ ref: PassageRef) {
+        guard !isPositionInside(ref) else { return }
+        updateReadingPosition(surahNumber: ref.surah, verseNumber: ref.start, sync: true)
+    }
+
+    /// Leaving a passage records the verse at the top of the screen, unless
+    /// the position has already moved on (the passage was just marked read,
+    /// which advances it to the next passage).
+    func leavePassage(_ ref: PassageRef, topVerse: Int) {
+        guard isPositionInside(ref) else { return }
+        updateReadingPosition(surahNumber: ref.surah, verseNumber: topVerse, sync: true)
+    }
+
+    private func isPositionInside(_ ref: PassageRef) -> Bool {
+        guard stats.lastReadSurah == ref.surah, let verse = stats.lastReadVerse else { return false }
+        return ref.start...ref.end ~= verse
+    }
+
+    /// The reverse of `markPassageRead`: drops every read verse in the passage
+    /// and takes back its sawab, then recomputes totals, saves and syncs once.
+    /// Mirrors `unmarkVerseAsRead` per verse. The streak and any badge already
+    /// earned are left as they are, as they are for a single verse; the surah
+    /// completion count is recomputed, so the Progress rings drop the surah.
+    func unmarkPassageRead(_ ref: PassageRef) {
+        guard ref.surah > 0 && ref.surah <= 114 else {
+            errorMessage = "Invalid surah number"
+            return
+        }
+
+        let keys = Set(ref.verses.map { "\(ref.surah):\($0)" })
+        let before = verseProgress.count
+        verseProgress.removeAll { keys.contains($0.verseKey) }
+        let removed = before - verseProgress.count
+        guard removed > 0 else { return }
+
+        stats.totalVersesRead = verseProgress.filter { $0.isRead }.count
+        updateTodayVersesCount()
+        recomputeSurahsCompleted()
+        stats.totalSawab = max(0, stats.totalSawab - 10 * removed)
+
+        saveProgress()
+        scheduleSync()
+
+        print("✅ ProgressManager: Unmarked passage \(ref.id) (\(removed) verses)")
     }
 
     func getVerseProgress(surahNumber: Int, verseNumber: Int) -> VerseProgress? {
@@ -572,6 +654,20 @@ class ProgressManager: ObservableObject {
         return completion.read == completion.total && completion.total > 0
     }
 
+    /// `stats.totalSurahsCompleted` is the number of surahs whose every verse
+    /// is read right now, derived from the verse data on every mark and unmark
+    /// so the Progress rings follow unmarking too. Badges stay as a record of
+    /// what was earned; only the count moves.
+    private func recomputeSurahsCompleted() {
+        let readBySurah = Dictionary(grouping: verseProgress.filter(\.isRead), by: \.surahNumber)
+        stats.totalSurahsCompleted = readBySurah.filter { surahNumber, read in
+            guard let total = DataManager.shared.getSurah(number: surahNumber)?.surah.versesCount, total > 0 else {
+                return false
+            }
+            return read.count >= total
+        }.count
+    }
+
     private func checkSurahCompletion(surahNumber: Int) {
         guard isSurahCompleted(surahNumber: surahNumber) else { return }
 
@@ -589,7 +685,6 @@ class ProgressManager: ObservableObject {
                 badgeType: .surahCompletion
             )
             badges.append(badge)
-            stats.totalSurahsCompleted += 1
 
             // Award sawab for badge
             let badgeSawab = badge.badgeType.sawabValue
@@ -872,21 +967,49 @@ class ProgressManager: ObservableObject {
 
     // MARK: - Last Read
 
-    /// Most recent read verse, with completion progress for its surah.
-    /// Returns nil for new users with no read verses.
+    /// Where Continue Reading points: the recorded reading position, or, for
+    /// progress saved before positions existed, the most recently read verse.
+    /// nil for new users. Progress is passages read in that surah; verses
+    /// read stand in until the passage index has loaded.
     var lastReadInfo: LastReadInfo? {
-        guard let latest = verseProgress
-            .filter(\.isRead)
-            .max(by: { $0.readDate < $1.readDate }) else { return nil }
-        let completion = getSurahCompletion(surahNumber: latest.surahNumber)
-        let progress = completion.total > 0
-            ? Double(completion.read) / Double(completion.total)
-            : 0
+        let surahNumber: Int
+        let verseNumber: Int
+        let updatedAt: Date
+        if let surah = stats.lastReadSurah, let verse = stats.lastReadVerse {
+            surahNumber = surah
+            verseNumber = verse
+            updatedAt = stats.lastReadDate ?? Date()
+        } else if let latest = verseProgress.filter(\.isRead).max(by: { $0.readDate < $1.readDate }) {
+            surahNumber = latest.surahNumber
+            verseNumber = latest.verseNumber
+            updatedAt = latest.readDate
+        } else {
+            return nil
+        }
+
+        let index = DataManager.shared.passageIndex
+        let passages = index?.passages(forSurah: surahNumber) ?? []
+        let ref = index?.passage(surah: surahNumber, containing: verseNumber)
+        let passagesRead = PassageProgress.readCount(passages, readVerseKeys: readVerseKeys)
+        let progress: Double
+        if passages.isEmpty {
+            let completion = getSurahCompletion(surahNumber: surahNumber)
+            progress = completion.total > 0 ? Double(completion.read) / Double(completion.total) : 0
+        } else {
+            progress = Double(passagesRead) / Double(passages.count)
+        }
+        let title = ref.map { r in
+            PassageStore.shared.passage(surah: r.surah, index: r.index)?.title.en ?? "Verses \(r.rangeLabel)"
+        }
         return LastReadInfo(
-            surahNumber: latest.surahNumber,
-            verseNumber: latest.verseNumber,
+            surahNumber: surahNumber,
+            verseNumber: verseNumber,
+            passageIndex: ref?.index,
+            passageTitle: title,
+            passagesRead: passagesRead,
+            passagesTotal: passages.count,
             progress: progress,
-            updatedAt: latest.readDate
+            updatedAt: updatedAt
         )
     }
 
