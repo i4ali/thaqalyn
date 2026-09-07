@@ -722,7 +722,7 @@
       "gathered_at": "2026-09-06T17:51:54Z",
       "audit_attempts": 3,
       "audited_at": "2026-09-06T18:41:22Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "2": {
@@ -1081,7 +1081,7 @@
       "gathered_at": "2026-09-06T17:52:43Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T18:08:08Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "3": {
@@ -1703,7 +1703,7 @@
       "gathered_at": "2026-09-06T17:54:07Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T18:35:42Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "4": {
@@ -2115,7 +2115,7 @@
       "gathered_at": "2026-09-06T17:54:38Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T19:01:02Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "5": {
@@ -2140,7 +2140,8 @@
         },
         "note": {
           "en": "Mujahid, Tawus and Zayd referred the lightening here to the permission of marriage with bondwomen, since man was created weak in the matter of women [12]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 29,
@@ -2653,7 +2654,7 @@
       "gathered_at": "2026-09-06T17:56:02Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T19:03:41Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "6": {
@@ -3339,7 +3340,7 @@
       "gathered_at": "2026-09-06T17:57:38Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T19:35:14Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "7": {
@@ -3938,7 +3939,7 @@
       "gathered_at": "2026-09-06T17:59:04Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T19:20:27Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "8": {
@@ -3996,7 +3997,8 @@
         },
         "note": {
           "en": "Tusi records three glosses of naqir: the speck on the back of the date-stone, the grain inside it, or the mark a man scratches with his fingertip [10]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 54,
@@ -4035,7 +4037,8 @@
         },
         "note": {
           "en": "Tusi weighs two readings of believed in him: some of the People of the Book believed in Muhammad, or some of Abraham's community believed in Abraham while others barred the way [12]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 56,
@@ -4063,7 +4066,8 @@
         },
         "note": {
           "en": "Tusi: a shade can be pierced by heat, so the garden's is called deep; and it is narrated that a rider travels a hundred years in the shade of its tree of eternity [14]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 58,
@@ -4554,7 +4558,7 @@
       "gathered_at": "2026-09-06T18:00:43Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T19:43:19Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "9": {
@@ -5220,7 +5224,7 @@
       "gathered_at": "2026-09-06T18:02:32Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T20:11:04Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "10": {
@@ -5371,7 +5375,8 @@
         },
         "note": {
           "en": "Tusi reports disagreement over 'fake gods', whether Satan or whatever is worshipped besides God, and says 'fight the friends of Satan' strengthens the first [12]. Qummi glosses their fighters as Quraysh's polytheists, fighting for idols [15]."
-        }
+        },
+        "narrations": []
       }
     ],
     "perspectives": {
@@ -5638,7 +5643,7 @@
       "gathered_at": "2026-09-06T18:03:36Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T20:03:14Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "11": {
@@ -6348,7 +6353,7 @@
       "gathered_at": "2026-09-06T18:05:32Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T20:34:39Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "12": {
@@ -6671,7 +6676,7 @@
       "gathered_at": "2026-09-06T18:06:14Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T20:39:18Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "13": {
@@ -7152,7 +7157,7 @@
       "gathered_at": "2026-09-06T18:07:07Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T20:57:11Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "14": {
@@ -7511,7 +7516,7 @@
       "gathered_at": "2026-09-06T18:07:47Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T21:02:43Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "15": {
@@ -7892,7 +7897,7 @@
       "gathered_at": "2026-09-06T18:08:30Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T21:14:05Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "16": {
@@ -8288,7 +8293,7 @@
       "gathered_at": "2026-09-06T18:09:47Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T21:18:25Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "17": {
@@ -8637,7 +8642,7 @@
       "gathered_at": "2026-09-06T18:10:19Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T21:48:13Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "18": {
@@ -8807,7 +8812,8 @@
         },
         "note": {
           "en": "The speck is the dot on the back of the date-stone, of which it is said the palm grows; not the least of the reward owed is withheld [13]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 125,
@@ -9242,7 +9248,7 @@
       "gathered_at": "2026-09-06T18:22:14Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T21:49:12Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "19": {
@@ -9720,7 +9726,7 @@
       "gathered_at": "2026-09-06T18:13:28Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T22:19:02Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "20": {
@@ -9827,7 +9833,8 @@
         },
         "note": {
           "en": "Tabrisi: tidings properly means news whose gladness shows in the face; here the announcement of punishment is put in the place of good news, as the Arabs say, your greeting is a blow [5]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 139,
@@ -10221,7 +10228,7 @@
       "gathered_at": "2026-09-06T18:14:40Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T22:15:11Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "21": {
@@ -10325,7 +10332,8 @@
         },
         "note": {
           "en": "Al-Tusi holds that nothing in the verse rules out others sharing that reach, such as Pharaoh, Haman and Abu Jahl, whose disbelief he calls greater than the hypocrites' [11]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 148,
@@ -10699,7 +10707,7 @@
       "gathered_at": "2026-09-06T18:23:36Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T22:33:19Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "22": {
@@ -10743,7 +10751,8 @@
         },
         "note": {
           "en": "Ibn Abbas said the mountain was raised over them and they were told: take the Torah, or it falls on you. Abu Muslim read it as shade, though Tusi says most commentators held the first [8]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 155,
@@ -10793,7 +10802,8 @@
         },
         "note": {
           "en": "Tusi reports from Wahb ibn Munabbih that Jesus and seventeen disciples were in a house when God gave them all the form of Jesus, and one of them went out, was seized and crucified [10]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 158,
@@ -10892,7 +10902,8 @@
         },
         "note": {
           "en": "Tabrisi identifies those firmly grounded in knowledge as Abdullah ibn Salam and his companions among the Jewish scholars, and the faithful as the Prophet's companions who were not People of the Book [6]."
-        }
+        },
+        "narrations": []
       }
     ],
     "perspectives": {
@@ -11223,7 +11234,7 @@
       "gathered_at": "2026-09-06T18:24:50Z",
       "audit_attempts": 3,
       "audited_at": "2026-09-06T22:58:54Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "23": {
@@ -11751,7 +11762,7 @@
       "gathered_at": "2026-09-06T18:19:41Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T23:01:10Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "24": {
@@ -11844,7 +11855,8 @@
         },
         "note": {
           "en": "For Tusi, holding fast is clinging to the light sent down to the Prophet [9]; al-Qummi names those who hold fast as the ones who cling to the wilayah of Amir al-Muminin and the Imams [13]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 176,
@@ -12249,7 +12261,7 @@
       "gathered_at": "2026-09-06T18:20:35Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T23:13:53Z",
-      "assembled_at": "2026-09-06T23:17:59Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   }
 }

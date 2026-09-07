@@ -393,7 +393,7 @@
       "gathered_at": "2026-09-05T21:46:50Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-05T22:20:32Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "2": {
@@ -968,7 +968,7 @@
       "gathered_at": "2026-09-05T21:49:08Z",
       "audit_attempts": 3,
       "audited_at": "2026-09-05T22:38:55Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "3": {
@@ -1657,7 +1657,7 @@
       "gathered_at": "2026-09-05T21:50:44Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-05T22:47:27Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "4": {
@@ -2256,7 +2256,7 @@
       "gathered_at": "2026-09-05T21:26:26Z",
       "audit_attempts": 3,
       "audited_at": "2026-09-05T22:28:26Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "5": {
@@ -2788,7 +2788,7 @@
       "gathered_at": "2026-09-05T21:51:56Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-05T22:57:09Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "6": {
@@ -2887,7 +2887,8 @@
         },
         "note": {
           "en": "Tabrisi records that a group of Shia scholars argued from this verse that a return to life before the Resurrection is possible [12]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 57,
@@ -3323,7 +3324,7 @@
       "gathered_at": "2026-09-06T02:03:46Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T02:31:42Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "7": {
@@ -3578,7 +3579,7 @@
       "gathered_at": "2026-09-06T02:47:22Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T03:11:00Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "8": {
@@ -4137,7 +4138,7 @@
       "gathered_at": "2026-09-06T02:49:41Z",
       "audit_attempts": 3,
       "audited_at": "2026-09-06T03:27:00Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "9": {
@@ -4271,7 +4272,8 @@
         },
         "note": {
           "en": "Tabrisi reports from al-Baqir that their writing with their hands means they went to the Torah and altered the description of the Prophet, to plant doubt in the weaker Jews [9]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 80,
@@ -4778,7 +4780,7 @@
       "gathered_at": "2026-09-06T02:51:51Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T03:43:45Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "10": {
@@ -5167,7 +5169,7 @@
       "gathered_at": "2026-09-06T02:52:37Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T03:44:03Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "11": {
@@ -5801,7 +5803,7 @@
       "gathered_at": "2026-09-06T02:54:29Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T04:05:20Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "12": {
@@ -5988,7 +5990,8 @@
         },
         "note": {
           "en": "Tusi refers \"had they been faithful\" to those who learn magic, and cites al-Hasan: know that the reward of God is better for them than magic [16]."
-        }
+        },
+        "narrations": []
       }
     ],
     "perspectives": {
@@ -6330,7 +6333,7 @@
       "gathered_at": "2026-09-06T02:55:53Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T04:19:33Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "13": {
@@ -6459,7 +6462,8 @@
         },
         "note": {
           "en": "Tabrisi calls 'Do you not know' an interrogative of confirmation that amounts to affirmation; it is said the address to the Prophet is meant for his community [7]. Tusi glosses the guardian as the one who takes charge of the affair [16]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 108,
@@ -6564,7 +6568,8 @@
         },
         "note": {
           "en": "Ibn Abbas glosses submitting the face as devoting oneself to God by treading the path of His pleasure; the face is named because whoever gives it in prostration withholds no other limb [12]."
-        }
+        },
+        "narrations": []
       }
     ],
     "perspectives": {
@@ -6981,7 +6986,7 @@
       "gathered_at": "2026-09-06T02:57:37Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T04:37:16Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:48Z"
     }
   },
   "14": {
@@ -7154,7 +7159,8 @@
         },
         "note": {
           "en": "Al-Tabrisi records that Nafi reads 'and do not ask' as a prohibition, a reading also narrated from Abu Jafar al-Baqir and from Ibn Abbas; the rest read it as a statement [11]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 121,
@@ -7541,7 +7547,7 @@
       "gathered_at": "2026-09-06T03:49:10Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T04:39:45Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "15": {
@@ -8132,7 +8138,7 @@
       "gathered_at": "2026-09-06T04:39:18Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T04:57:55Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "16": {
@@ -8743,7 +8749,7 @@
       "gathered_at": "2026-09-06T04:40:47Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T04:57:29Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "17": {
@@ -9293,7 +9299,7 @@
       "gathered_at": "2026-09-06T03:49:56Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T05:28:12Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "18": {
@@ -9359,7 +9365,8 @@
         },
         "note": {
           "en": "Tusi reads \"Allah is not oblivious of what you do\" here as a threat, the way a king tells his servants that nothing they are about is hidden from him [9]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 150,
@@ -9368,7 +9375,8 @@
         },
         "note": {
           "en": "Tabrisi lists four accounts of \"neither those of them who are wrongdoers\"; Ali ibn Isa judged two of them far-fetched and chose the first, a disconnected exception [5]. Al-Qummi reads \"except\" as \"and not\" [13]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 151,
@@ -9377,7 +9385,8 @@
         },
         "note": {
           "en": "Tusi allows that the Book is the Quran and wisdom the revealed sunna, and that what you did not know is what no path but hearing reaches [11]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 152,
@@ -9701,7 +9710,7 @@
       "gathered_at": "2026-09-06T03:50:33Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T05:13:04Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "19": {
@@ -10419,7 +10428,7 @@
       "gathered_at": "2026-09-06T03:05:24Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T05:33:13Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "20": {
@@ -10510,7 +10519,8 @@
         },
         "note": {
           "en": "Tusi records three views on the deeds shown as regrets: the sins they did, the obediences they left undone, and the reward forfeited. He holds the first stronger, as the literal sense [8]."
-        }
+        },
+        "narrations": []
       }
     ],
     "perspectives": {
@@ -10737,7 +10747,7 @@
       "gathered_at": "2026-09-06T03:06:13Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T05:42:00Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "21": {
@@ -11312,7 +11322,7 @@
       "gathered_at": "2026-09-06T03:07:58Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T06:03:31Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "22": {
@@ -11872,7 +11882,7 @@
       "gathered_at": "2026-09-06T03:09:06Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T06:02:18Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "23": {
@@ -12554,7 +12564,7 @@
       "gathered_at": "2026-09-06T03:10:15Z",
       "audit_attempts": 3,
       "audited_at": "2026-09-06T06:37:27Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "24": {
@@ -13198,7 +13208,7 @@
       "gathered_at": "2026-09-06T03:51:35Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T06:36:19Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "25": {
@@ -13984,7 +13994,7 @@
       "gathered_at": "2026-09-06T03:14:20Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T06:59:44Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "26": {
@@ -14028,7 +14038,8 @@
         },
         "note": {
           "en": "Al-Tusi says polytheists mocked the Muslims because their means were slender, and reads 'above them' as rank: the Muslims in Illiyyin, the wicked in the Blaze [13]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 213,
@@ -14086,7 +14097,8 @@
         },
         "note": {
           "en": "Al-Suddi held the verse abrogated by the obligation of zakat; al-Hasan held that it stands, and al-Tusi calls that stronger, since nothing proves abrogation [16]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 216,
@@ -14391,7 +14403,7 @@
       "gathered_at": "2026-09-06T03:52:21Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T06:49:51Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "27": {
@@ -14857,7 +14869,7 @@
       "gathered_at": "2026-09-06T03:16:30Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T07:16:08Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "28": {
@@ -15433,7 +15445,7 @@
       "gathered_at": "2026-09-06T03:53:12Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T07:30:43Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "29": {
@@ -15826,7 +15838,7 @@
       "gathered_at": "2026-09-06T03:18:30Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T07:38:14Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "30": {
@@ -16256,7 +16268,7 @@
       "gathered_at": "2026-09-06T03:19:15Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T07:44:53Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "31": {
@@ -16812,7 +16824,7 @@
       "gathered_at": "2026-09-06T03:54:04Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T08:06:41Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "32": {
@@ -17333,7 +17345,7 @@
       "gathered_at": "2026-09-06T03:54:49Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T08:03:26Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "33": {
@@ -17820,7 +17832,7 @@
       "gathered_at": "2026-09-06T03:23:01Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T08:26:50Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "34": {
@@ -17845,7 +17857,8 @@
         },
         "note": {
           "en": "Al-Tusi holds that 'nor intercession' is general in its wording but specific in what is meant, a point he reports without disagreement; the Shia deny intercession to the faithless outright [8]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 255,
@@ -18241,7 +18254,7 @@
       "gathered_at": "2026-09-06T03:23:49Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T08:21:39Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "35": {
@@ -18604,7 +18617,7 @@
       "gathered_at": "2026-09-06T03:24:24Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T08:40:08Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "36": {
@@ -18689,7 +18702,8 @@
         },
         "note": {
           "en": "Tabrisi gives 'forgiving' three senses; on al-Hasan's, it is the one asked pardoning the wrong of an asker who begs at the wrong hour or presses him [4]."
-        }
+        },
+        "narrations": []
       },
       {
         "verse": 264,
@@ -19003,7 +19017,7 @@
       "gathered_at": "2026-09-06T03:25:34Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T08:51:20Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "37": {
@@ -19492,7 +19506,7 @@
       "gathered_at": "2026-09-06T03:55:38Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T09:06:15Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "38": {
@@ -20144,7 +20158,7 @@
       "gathered_at": "2026-09-06T03:56:36Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T09:14:59Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "39": {
@@ -20414,7 +20428,7 @@
       "gathered_at": "2026-09-06T03:28:46Z",
       "audit_attempts": 2,
       "audited_at": "2026-09-06T09:26:14Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   },
   "40": {
@@ -20798,7 +20812,7 @@
       "gathered_at": "2026-09-06T03:29:22Z",
       "audit_attempts": 1,
       "audited_at": "2026-09-06T09:31:36Z",
-      "assembled_at": "2026-09-06T12:24:26Z"
+      "assembled_at": "2026-09-07T00:30:49Z"
     }
   }
 }
