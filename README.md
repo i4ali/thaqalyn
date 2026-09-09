@@ -43,16 +43,19 @@ Choose:
 ## Output Files
 
 - `quran_data.json` - Complete Quran with metadata
-- `tafsir_1.json` to `tafsir_114.json` - Commentary for each surah
+- `passages_N.json` - Passage commentary for surah N (one entry per ruku)
+- `tafsir_N.json` - Legacy per-verse files, now read only for the Gems (`quickOverview`) data
 
-## Tafsir Layers
+## Passage commentary
 
-Each verse gets 4 layers of commentary:
+Commentary is written per passage (a ruku), not per verse, and only from fetched sources. Each passage carries:
 
-1. **Foundation (🏛️)** - Simple explanations, historical context
-2. **Classical Shia (📚)** - Tabatabai, Tabrisi perspectives  
-3. **Contemporary (🌍)** - Modern scholars, scientific insights
-4. **Ahlul Bayt (⭐)** - Hadith, theological concepts, spiritual guidance
+1. **Essay** - the passage told once, in order, with citation markers
+2. **Verse by verse** - headings and notes on the verses that need them
+3. **Narrations** - from the Prophet and the Imams, each with its source
+4. **Perspectives** - where Shia and Sunni readings differ (the only place Sunni works are cited)
+
+Every marker resolves to a source record (work, author, locus, excerpt where the tier allows). Design: `docs/plans/2026-09-05-passage-commentary-design.md`; generation: `/passages`.
 
 ## Cost & Time
 

@@ -16,7 +16,11 @@ enum EmType {
     }
     /// Cormorant Garamond serif (display).
     static func serif(_ size: CGFloat, _ weight: Weight = .semiBold) -> Font { .custom(weight.face, size: size) }
-    static func serifItalic(_ size: CGFloat) -> Font { .custom("CormorantGaramondItalic-MediumItalic", size: size) }
+    /// SemiBold Italic, not the Medium Italic still in the bundle: the lighter face was
+    /// unreadable in cream and secondary grey on the dark grounds it is used on.
+    static func serifItalic(_ size: CGFloat) -> Font { .custom(Self.italicFace, size: size) }
+    /// PostScript name of the italic face, for UIFont lookups (attributed prose).
+    static let italicFace = "CormorantGaramond-SemiBoldItalic"
     /// Amiri Arabic.
     static func arabic(_ size: CGFloat, bold: Bool = false) -> Font { .custom(bold ? "Amiri-Bold" : "Amiri-Regular", size: size) }
 }
@@ -963,7 +967,7 @@ extension View {
                 }
                 EmDivider(label: "114 Surahs")
                 EmDivider()
-                EmGoldCTA(title: "Begin Quiz", sfSymbol: "play.fill") {}
+                EmGoldCTA(title: "Begin", sfSymbol: "play.fill") {}
             }
             .padding(20)
         }

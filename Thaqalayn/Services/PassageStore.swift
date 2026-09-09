@@ -37,4 +37,10 @@ final class PassageStore: ObservableObject {
     func passage(surah: Int, index: Int) -> Passage? { load(surah: surah)[String(index)] }
     func hasCommentary(surah: Int, index: Int) -> Bool { passage(surah: surah, index: index) != nil }
     func passageCount(withCommentary surah: Int) -> Int { load(surah: surah).count }
+
+    /// Display title for a passage: the commentary title when it has shipped,
+    /// else "Verses X to Y". Every list, card and Continue Reading line uses this.
+    func title(for ref: PassageRef) -> String {
+        passage(surah: ref.surah, index: ref.index)?.title.en ?? "Verses \(ref.rangeLabel)"
+    }
 }

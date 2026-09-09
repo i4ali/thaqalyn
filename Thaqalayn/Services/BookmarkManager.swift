@@ -31,6 +31,8 @@ class BookmarkManager: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private var pendingDeletes: Set<UUID> = []
     private var lastAuthenticatedUserId: String?
+    /// Verse and passage bookmarks share one allowance, the same for every user.
+    private let bookmarkLimit = 10
     
     private var currentUserId: String {
         // Use authenticated user ID if available, otherwise device ID for guest mode
@@ -183,21 +185,13 @@ class BookmarkManager: ObservableObject {
         notes: String? = nil,
         tags: [String] = []
     ) -> Bool {
-        // Check if bookmark already exists
-        if bookmarks.contains(where: { $0.surahNumber == surahNumber && $0.verseNumber == verseNumber }) {
+        if bookmarks.contains(where: { $0.matchesVerse(surah: surahNumber, verse: verseNumber) }) {
             errorMessage = "This verse is already bookmarked"
             return false
         }
-        
-        // Check bookmark limit - 10 bookmarks for all users
-        let bookmarkLimit = 10
-        
-        if bookmarks.count >= bookmarkLimit {
-            errorMessage = "You've reached your bookmark limit (\(bookmarkLimit) bookmarks)."
-            return false
-        }
-        
-        let bookmark = Bookmark(
+        guard hasRoomForBookmark() else { return false }
+
+        commit(Bookmark(
             userId: currentUserId,
             surahNumber: surahNumber,
             verseNumber: verseNumber,
@@ -207,18 +201,87 @@ class BookmarkManager: ObservableObject {
             notes: notes,
             tags: tags,
             syncStatus: .pendingSync
-        )
-        
+        ))
+
+        print("✅ Added bookmark for \(surahName) \(verseNumber)")
+        return true
+    }
+
+    // MARK: - Passage bookmarks
+
+    /// The saved record for one passage (ruku) of a surah, if any.
+    func passageBookmark(surah: Int, index: Int) -> Bookmark? {
+        bookmarks.first { $0.matchesPassage(surah: surah, index: index) }
+    }
+
+    func isPassageBookmarked(surah: Int, index: Int) -> Bool {
+        passageBookmark(surah: surah, index: index) != nil
+    }
+
+    /// Indices of the saved passages of one surah. The passage list computes it
+    /// once per render, as it does the read verse keys.
+    func bookmarkedPassageIndices(surah: Int) -> Set<Int> {
+        Set(bookmarks.compactMap { $0.surahNumber == surah ? $0.passageIndex : nil })
+    }
+
+    /// Saves a whole passage. `title` is the passage's display title and
+    /// `firstVerseArabic` the Arabic of its first verse; both are snapshotted on
+    /// the record (see `Bookmark.passageIndex`). Shares the limit with verses.
+    func addPassageBookmark(ref: PassageRef, surahName: String, title: String, firstVerseArabic: String) -> Bool {
+        if isPassageBookmarked(surah: ref.surah, index: ref.index) {
+            errorMessage = "This passage is already bookmarked"
+            return false
+        }
+        guard hasRoomForBookmark() else { return false }
+
+        commit(Bookmark(
+            userId: currentUserId,
+            surahNumber: ref.surah,
+            verseNumber: ref.start,
+            surahName: surahName,
+            verseText: firstVerseArabic,
+            verseTranslation: title,
+            syncStatus: .pendingSync,
+            passageIndex: ref.index
+        ))
+
+        print("✅ Added passage bookmark for \(surahName) passage \(ref.index)")
+        return true
+    }
+
+    enum PassageToggleResult {
+        case saved, removed, refused
+    }
+
+    /// Saves the passage when it is not bookmarked and removes it when it is.
+    /// Both the passage list's swipe and the passage screen's heart call this,
+    /// so the two can never disagree. `.refused` means the limit was reached.
+    @discardableResult
+    func togglePassageBookmark(ref: PassageRef, surahName: String, title: String, firstVerseArabic: String) -> PassageToggleResult {
+        if let existing = passageBookmark(surah: ref.surah, index: ref.index) {
+            removeBookmark(id: existing.id)
+            return .removed
+        }
+        let added = addPassageBookmark(ref: ref, surahName: surahName, title: title, firstVerseArabic: firstVerseArabic)
+        return added ? .saved : .refused
+    }
+
+    private func hasRoomForBookmark() -> Bool {
+        guard bookmarks.count < bookmarkLimit else {
+            errorMessage = "You've reached your bookmark limit (\(bookmarkLimit) bookmarks)."
+            return false
+        }
+        return true
+    }
+
+    /// Offline-first add: the record is in the list and on disk before any
+    /// network work; cloud sync follows when signed in.
+    private func commit(_ bookmark: Bookmark) {
         bookmarks.append(bookmark)
         saveLocalBookmarks()
-        
-        // Schedule sync if authenticated
         if isAuthenticated {
             scheduleSync()
         }
-        
-        print("✅ Added bookmark for \(surahName) \(verseNumber)")
-        return true
     }
     
     func removeBookmark(id: UUID) {
@@ -251,21 +314,7 @@ class BookmarkManager: ObservableObject {
             return
         }
         
-        let existingBookmark = bookmarks[index]
-        bookmarks[index] = Bookmark(
-            id: existingBookmark.id,
-            userId: existingBookmark.userId,
-            surahNumber: existingBookmark.surahNumber,
-            verseNumber: existingBookmark.verseNumber,
-            surahName: existingBookmark.surahName,
-            verseText: existingBookmark.verseText,
-            verseTranslation: existingBookmark.verseTranslation,
-            notes: notes ?? existingBookmark.notes,
-            tags: tags ?? existingBookmark.tags,
-            createdAt: existingBookmark.createdAt,
-            updatedAt: Date(),
-            syncStatus: .pendingSync
-        )
+        bookmarks[index] = bookmarks[index].with(syncStatus: .pendingSync, notes: notes, tags: tags, updatedAt: Date())
         
         saveLocalBookmarks()
         
@@ -276,18 +325,14 @@ class BookmarkManager: ObservableObject {
         print("✏️ Updated bookmark")
     }
     
+    /// Verse bookmarks only: a saved passage does not light the heart of its
+    /// first verse.
     func isBookmarked(surahNumber: Int, verseNumber: Int) -> Bool {
-        return bookmarks.contains { bookmark in
-            bookmark.surahNumber == surahNumber && 
-            bookmark.verseNumber == verseNumber
-        }
+        getBookmark(surahNumber: surahNumber, verseNumber: verseNumber) != nil
     }
     
     func getBookmark(surahNumber: Int, verseNumber: Int) -> Bookmark? {
-        return bookmarks.first { bookmark in
-            bookmark.surahNumber == surahNumber && 
-            bookmark.verseNumber == verseNumber
-        }
+        bookmarks.first { $0.matchesVerse(surah: surahNumber, verse: verseNumber) }
     }
     
     // MARK: - Sorting and Filtering
@@ -303,12 +348,7 @@ class BookmarkManager: ObservableObject {
         case .dateDescending:
             return bookmarks.sorted { $0.createdAt > $1.createdAt }
         case .surahOrder:
-            return bookmarks.sorted { 
-                if $0.surahNumber == $1.surahNumber {
-                    return $0.verseNumber < $1.verseNumber
-                }
-                return $0.surahNumber < $1.surahNumber
-            }
+            return bookmarks.sorted(by: Bookmark.precedesInQuranOrder)
         case .alphabetical:
             return bookmarks.sorted { $0.surahName < $1.surahName }
         }
@@ -422,23 +462,8 @@ class BookmarkManager: ObservableObject {
                 try await supabaseService.syncBookmarks(pendingBookmarks)
                 
                 // Mark as synced
-                for i in 0..<bookmarks.count {
-                    if bookmarks[i].syncStatus == .pendingSync {
-                        bookmarks[i] = Bookmark(
-                            id: bookmarks[i].id,
-                            userId: bookmarks[i].userId,
-                            surahNumber: bookmarks[i].surahNumber,
-                            verseNumber: bookmarks[i].verseNumber,
-                            surahName: bookmarks[i].surahName,
-                            verseText: bookmarks[i].verseText,
-                            verseTranslation: bookmarks[i].verseTranslation,
-                            notes: bookmarks[i].notes,
-                            tags: bookmarks[i].tags,
-                            createdAt: bookmarks[i].createdAt,
-                            updatedAt: bookmarks[i].updatedAt,
-                            syncStatus: .synced
-                        )
-                    }
+                for i in 0..<bookmarks.count where bookmarks[i].syncStatus == .pendingSync {
+                    bookmarks[i] = bookmarks[i].with(syncStatus: .synced)
                 }
                 saveLocalBookmarks()
             } catch {
@@ -476,20 +501,7 @@ class BookmarkManager: ObservableObject {
                     // For now, keep local changes (user preference)
                     // TODO: Implement proper conflict resolution UI
                     print("⚠️ Sync conflict detected for bookmark \(remoteBookmark.id)")
-                    bookmarks[localIndex] = Bookmark(
-                        id: localBookmark.id,
-                        userId: localBookmark.userId,
-                        surahNumber: localBookmark.surahNumber,
-                        verseNumber: localBookmark.verseNumber,
-                        surahName: localBookmark.surahName,
-                        verseText: localBookmark.verseText,
-                        verseTranslation: localBookmark.verseTranslation,
-                        notes: localBookmark.notes,
-                        tags: localBookmark.tags,
-                        createdAt: localBookmark.createdAt,
-                        updatedAt: localBookmark.updatedAt,
-                        syncStatus: .conflict
-                    )
+                    bookmarks[localIndex] = localBookmark.with(syncStatus: .conflict)
                 } else if localBookmark.syncStatus == .synced && 
                          remoteBookmark.updatedAt > localBookmark.updatedAt {
                     // Remote is newer and local is synced, update local

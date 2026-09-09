@@ -248,7 +248,7 @@ class PurchaseManager: ObservableObject {
     }
 
     func getProductDescription() -> String {
-        return product?.description ?? "Unlock all 114 surahs with comprehensive tafsir commentary"
+        return product?.description ?? "Unlock Understanding for every passage, with journeys and deep dives"
     }
 }
 

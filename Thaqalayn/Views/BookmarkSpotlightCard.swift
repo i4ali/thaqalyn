@@ -2,12 +2,14 @@
 //  BookmarkSpotlightCard.swift
 //  Thaqalayn
 //
-//  Today-screen spotlight for the most recently saved bookmark. Tapping the
-//  spotlight jumps straight into the surah at that verse; the footer row opens
-//  the full Bookmarks list. Hidden entirely while the user has no bookmarks.
+//  Today-screen spotlight for the most recently saved bookmark, a verse or a
+//  whole passage. Tapping the spotlight jumps straight into the passage holding
+//  that verse (or the saved passage itself); the footer row opens the full
+//  Bookmarks list. Hidden entirely while the user has no bookmarks.
 //
 //  Verse Arabic + translation scale with the reading text-size control; the
-//  reference, surah name, eyebrow and footer are chrome and stay fixed.
+//  reference, surah name, passage title, eyebrow and footer are chrome and
+//  stay fixed.
 //
 
 import SwiftUI
@@ -117,7 +119,7 @@ struct BookmarkSpotlightCard: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(bookmark.verseReference)
+                    Text(bookmark.referenceLabel)
                         .font(EmType.serif(24, .semiBold))
                         .foregroundColor(themeManager.accentBright)
                     Text(bookmark.surahName)
@@ -127,32 +129,39 @@ struct BookmarkSpotlightCard: View {
 
                 Spacer()
 
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(themeManager.onAccentText)
-                    .frame(width: 34, height: 34)
-                    .background(
-                        RoundedRectangle(cornerRadius: 11, style: .continuous)
-                            .fill(themeManager.accentGradient)
-                    )
+                BookmarkKindBadge(isPassage: bookmark.isPassage)
             }
 
-            Text(arabicText(for: bookmark))
-                .font(EmType.arabic(21 * readingSettings.scale))
-                .lineSpacing(6 * readingSettings.scale)
-                .foregroundColor(themeManager.primaryText)
-                .lineLimit(1)
-                .multilineTextAlignment(.trailing)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .environment(\.layoutDirection, .rightToLeft)
+            if bookmark.isPassage {
+                Text(bookmark.passageTitle)
+                    .font(EmType.serif(18, .semiBold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                if let meta = bookmark.passageMetaLabel {
+                    Text(meta)
+                        .font(.system(size: 12.5, weight: .medium))
+                        .foregroundColor(themeManager.tertiaryText)
+                }
+            } else {
+                Text(arabicText(for: bookmark))
+                    .font(EmType.arabic(21 * readingSettings.scale))
+                    .lineSpacing(6 * readingSettings.scale)
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(1)
+                    .multilineTextAlignment(.trailing)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .environment(\.layoutDirection, .rightToLeft)
 
-            Text(translationDisplay(for: bookmark))
-                .font(EmType.serif(16 * readingSettings.scale, .medium))
-                .lineSpacing(3 * readingSettings.scale)
-                .foregroundColor(themeManager.secondaryText)
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                Text(translationDisplay(for: bookmark))
+                    .font(EmType.serif(16 * readingSettings.scale, .medium))
+                    .lineSpacing(3 * readingSettings.scale)
+                    .foregroundColor(themeManager.secondaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
         .padding(17)
         .contentShape(Rectangle())
@@ -194,34 +203,49 @@ struct BookmarkSpotlightCard: View {
                     Text(bookmark.surahName)
                         .font(.system(size: 16, weight: .bold))
                         .foregroundColor(themeManager.primaryText)
-                    Text(bookmark.verseReference)
+                    Text(bookmark.isPassage ? bookmark.positionLabel : bookmark.verseReference)
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
                 }
 
                 Spacer()
 
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 14))
-                    .foregroundColor(.pink)
+                if bookmark.isPassage {
+                    Text("ع")
+                        .font(EmType.arabic(16))
+                        .foregroundColor(themeManager.accentColor)
+                } else {
+                    Image(systemName: "heart.fill")
+                        .font(.system(size: 14))
+                        .foregroundColor(.pink)
+                }
             }
 
-            Text(arabicText(for: bookmark))
-                .font(.custom("Amiri", size: 19 * readingSettings.scale))
-                .lineSpacing(5 * readingSettings.scale)
-                .foregroundColor(themeManager.primaryText)
-                .lineLimit(1)
-                .multilineTextAlignment(.trailing)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .environment(\.layoutDirection, .rightToLeft)
+            if bookmark.isPassage {
+                Text(bookmark.passageTitle)
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            } else {
+                Text(arabicText(for: bookmark))
+                    .font(.custom("Amiri", size: 19 * readingSettings.scale))
+                    .lineSpacing(5 * readingSettings.scale)
+                    .foregroundColor(themeManager.primaryText)
+                    .lineLimit(1)
+                    .multilineTextAlignment(.trailing)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .environment(\.layoutDirection, .rightToLeft)
 
-            Text(translationDisplay(for: bookmark))
-                .font(.system(size: 14 * readingSettings.scale))
-                .lineSpacing(2 * readingSettings.scale)
-                .foregroundColor(themeManager.secondaryText)
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                Text(translationDisplay(for: bookmark))
+                    .font(.system(size: 14 * readingSettings.scale))
+                    .lineSpacing(2 * readingSettings.scale)
+                    .foregroundColor(themeManager.secondaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
         .padding(16)
         .contentShape(Rectangle())

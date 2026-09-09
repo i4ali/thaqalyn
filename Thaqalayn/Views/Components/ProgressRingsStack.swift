@@ -2,7 +2,7 @@
 //  ProgressRingsStack.swift
 //  Thaqalayn
 //
-//  Combines three/four concentric rings with Apple Watch styling
+//  Combines two/three concentric rings with Apple Watch styling
 //
 
 import SwiftUI
@@ -10,7 +10,6 @@ import SwiftUI
 struct ProgressRingsStack: View {
     let quranProgress: Double      // Verses read / 6236
     let surahProgress: Double      // Surahs completed / 114
-    let quizProgress: Double       // Quizzes completed / 114
     let ramadanProgress: Double    // Ramadan days / 30
     let showRamadanRing: Bool
 
@@ -29,14 +28,6 @@ struct ProgressRingsStack: View {
     private var surahGradient: LinearGradient {
         LinearGradient(
             colors: [themeManager.semanticGreen, themeManager.semanticGreen.opacity(0.85)],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-    }
-
-    private var quizGradient: LinearGradient {
-        LinearGradient(
-            colors: themeManager.isMidnightEmerald ? [themeManager.primaryText, themeManager.primaryText.opacity(0.7)] : [themeManager.semanticBlue, themeManager.semanticBlue.opacity(0.85)],
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -70,22 +61,13 @@ struct ProgressRingsStack: View {
                 shadowColor: themeManager.semanticGreen
             )
 
-            // Inner ring - Quiz Progress (120pt, 16pt width)
-            ProgressRingView(
-                progress: quizProgress,
-                gradient: quizGradient,
-                lineWidth: 16,
-                size: 120,
-                shadowColor: themeManager.isMidnightEmerald ? themeManager.primaryText : themeManager.semanticBlue
-            )
-
-            // Innermost ring - Ramadan (60pt, 14pt width) - Seasonal only
+            // Inner ring - seasonal journey (120pt, 16pt width) - seasonal only
             if showRamadanRing {
                 ProgressRingView(
                     progress: ramadanProgress,
                     gradient: ramadanGradient,
-                    lineWidth: 14,
-                    size: 60,
+                    lineWidth: 16,
+                    size: 120,
                     shadowColor: themeManager.isMidnightEmerald ? themeManager.accentBright : themeManager.semanticYellow
                 )
             }
@@ -116,7 +98,6 @@ struct RingLegend: View {
         HStack(spacing: 16) {
             LegendItem(color: themeManager.isMidnightEmerald ? themeManager.accentColor : themeManager.semanticRed, label: ProgressTabStrings.quran)
             LegendItem(color: themeManager.semanticGreen, label: ProgressTabStrings.surahs)
-            LegendItem(color: themeManager.isMidnightEmerald ? themeManager.primaryText : themeManager.semanticBlue, label: ProgressTabStrings.quizzes)
 
             if showRamadanRing {
                 LegendItem(color: themeManager.isMidnightEmerald ? themeManager.accentBright : themeManager.semanticYellow, label: seasonalLabel)
@@ -151,7 +132,6 @@ struct LegendItem: View {
             ProgressRingsStack(
                 quranProgress: 0.45,
                 surahProgress: 0.25,
-                quizProgress: 0.15,
                 ramadanProgress: 0.6,
                 showRamadanRing: true
             )

@@ -9,10 +9,17 @@ final class PassageStoreTests: XCTestCase {
         let p = store.passage(surah: 2, index: 4)
         XCTAssertEqual(p?.title.en, "Adam and the angels")
         XCTAssertTrue(store.hasCommentary(surah: 2, index: 4))
-        XCTAssertFalse(store.hasCommentary(surah: 2, index: 6))
-        XCTAssertNil(store.passage(surah: 3, index: 1))
-        XCTAssertEqual(store.passageCount(withCommentary: 2), 5)
-        XCTAssertEqual(store.passageCount(withCommentary: 3), 0)
+        // Commentary ships surah by surah; count only what cannot regress.
+        XCTAssertGreaterThanOrEqual(store.passageCount(withCommentary: 2), 5)
+        XCTAssertFalse(store.hasCommentary(surah: 2, index: 41), "al-Baqarah has 40 passages")
+        XCTAssertNil(store.passage(surah: 114, index: 1), "no passages file for an-Nas yet")
+        XCTAssertEqual(store.passageCount(withCommentary: 114), 0)
+    }
+
+    func testTitleFallsBackToVerseRange() {
+        let store = PassageStore()
+        XCTAssertEqual(store.title(for: PassageRef(surah: 2, index: 4, start: 30, end: 39)), "Adam and the angels")
+        XCTAssertEqual(store.title(for: PassageRef(surah: 114, index: 1, start: 1, end: 6)), "Verses 1 to 6")
     }
 
     func testUnderstandingGate() {

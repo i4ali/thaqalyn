@@ -288,7 +288,8 @@ class SupabaseService: ObservableObject {
                     notes: bookmark.notes,
                     tags: bookmark.tags,
                     createdAt: bookmark.createdAt,
-                    updatedAt: bookmark.updatedAt
+                    updatedAt: bookmark.updatedAt,
+                    passageIndex: bookmark.passageIndex
                 )
             }
             
@@ -338,7 +339,8 @@ class SupabaseService: ObservableObject {
                     tags: dbBookmark.tags,
                     createdAt: dbBookmark.createdAt,
                     updatedAt: dbBookmark.updatedAt,
-                    syncStatus: .synced
+                    syncStatus: .synced,
+                    passageIndex: dbBookmark.passageIndex
                 )
             }
             
@@ -589,6 +591,10 @@ struct DatabaseBookmark: Codable {
     let tags: [String]
     let createdAt: Date
     let updatedAt: Date
+    /// Nullable `passage_index` column: set for a whole-passage bookmark, absent
+    /// for a verse. Encoded only when set; the client's upsert lists the union of
+    /// keys in the batch as `columns`, so a missing key lands as NULL.
+    let passageIndex: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -602,6 +608,7 @@ struct DatabaseBookmark: Codable {
         case tags
         case createdAt = "created_at"
         case updatedAt = "updated_at"
+        case passageIndex = "passage_index"
     }
 }
 

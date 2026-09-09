@@ -119,19 +119,6 @@ class PremiumManager: ObservableObject {
         return isPremium
     }
 
-    /// Check if user can access quiz for a specific surah
-    /// - Surah 1 (Al-Fatiha): Always free
-    /// - Surahs 2-114: Requires premium
-    func canAccessQuiz(surahNumber: Int) -> Bool {
-        // Surah 1 always free
-        if surahNumber == 1 {
-            return true
-        }
-
-        // Check premium status (cached locally, works offline)
-        return isPremium
-    }
-
     /// The single gate of the passage reader: the Understand button. Surah 1 is free.
     func canAccessUnderstanding(surahNumber: Int) -> Bool {
         if surahNumber == 1 { return true }

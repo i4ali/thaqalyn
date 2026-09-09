@@ -109,6 +109,7 @@ struct BookmarksView: View {
         }
 
         return sorted.filter { bookmark in
+            (bookmark.isPassage && "passage".localizedCaseInsensitiveContains(searchText)) ||
             bookmark.surahName.localizedCaseInsensitiveContains(searchText) ||
             bookmark.displayTranslation.localizedCaseInsensitiveContains(searchText) ||
             bookmark.verseTranslation.localizedCaseInsensitiveContains(searchText) ||
@@ -166,7 +167,7 @@ struct ModernBookmarksHeader: View {
     private var emeraldBody: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 7) {
-                Text("SAVED VERSES")
+                Text("SAVED VERSES & PASSAGES")
                     .font(.system(size: 11, weight: .bold)).tracking(3)
                     .foregroundColor(themeManager.accentColor)
                 Text("Bookmarks")
@@ -322,16 +323,22 @@ struct BookmarkCardView: View {
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(themeManager.primaryText)
 
-                    Text("Verse \(bookmark.verseNumber)")
+                    Text(bookmark.positionLabel)
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
                 }
 
                 Spacer()
 
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 14))
-                    .foregroundColor(.pink)
+                if bookmark.isPassage {
+                    Text("ع")
+                        .font(EmType.arabic(16))
+                        .foregroundColor(themeManager.accentColor)
+                } else {
+                    Image(systemName: "heart.fill")
+                        .font(.system(size: 14))
+                        .foregroundColor(.pink)
+                }
             }
 
             // Verse translation preview
@@ -385,9 +392,12 @@ struct BookmarkCardView: View {
     }
 }
 
-/// Midnight Emerald visual for a bookmark row. Renders the verse reference
-/// (serif/gold), surah name, a decorative "saved" heart badge, the Arabic verse
-/// (Amiri), the translation (serif), tags and date inside an `EmCard`. Purely
+/// Midnight Emerald visual for a bookmark row. A verse renders its reference
+/// (serif/gold), surah name, a "saved" heart badge, the Arabic (Amiri) and the
+/// translation (serif). A passage renders a PASSAGE eyebrow, its verse range,
+/// the passage glyph badge and its title in place of the verse text, since the
+/// title is what identifies a passage (its first verse's Arabic alone would read
+/// as a bookmark of that verse). Tags and date follow in both. Purely
 /// presentational - tap-to-open and swipe-to-delete are owned by the enclosing
 /// `List` row, so this view carries no gestures or selection state.
 struct EmBookmarkCardBody: View {
@@ -400,7 +410,12 @@ struct EmBookmarkCardBody: View {
                 // Reference + saved badge
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(bookmark.verseReference)
+                        if let passageIndex = bookmark.passageIndex {
+                            Text("PASSAGE \(passageIndex)")
+                                .emEyebrow(size: 11, tracking: 2)
+                                .foregroundColor(themeManager.accentColor)
+                        }
+                        Text(bookmark.referenceLabel)
                             .font(EmType.serif(24, .semiBold))
                             .foregroundColor(themeManager.accentBright)
                         Text(bookmark.surahName)
@@ -410,33 +425,34 @@ struct EmBookmarkCardBody: View {
 
                     Spacer()
 
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(themeManager.onAccentText)
-                        .frame(width: 34, height: 34)
-                        .background(
-                            RoundedRectangle(cornerRadius: 11, style: .continuous)
-                                .fill(themeManager.accentGradient)
-                        )
+                    BookmarkKindBadge(isPassage: bookmark.isPassage)
                 }
 
-                // Arabic verse text
-                Text(bookmark.verseText)
-                    .font(EmType.arabic(23))
-                    .foregroundColor(themeManager.primaryText)
-                    .multilineTextAlignment(.trailing)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .lineSpacing(10)
-                    .lineLimit(2)
-                    .environment(\.layoutDirection, .rightToLeft)
+                if bookmark.isPassage {
+                    Text(bookmark.passageTitle)
+                        .font(EmType.serif(19, .semiBold))
+                        .foregroundColor(themeManager.primaryText)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                } else {
+                    // Arabic verse text
+                    Text(bookmark.verseText)
+                        .font(EmType.arabic(23))
+                        .foregroundColor(themeManager.primaryText)
+                        .multilineTextAlignment(.trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .lineSpacing(10)
+                        .lineLimit(2)
+                        .environment(\.layoutDirection, .rightToLeft)
 
-                // Translation preview
-                Text(bookmark.displayTranslation)
-                    .font(EmType.serif(17, .medium))
-                    .foregroundColor(themeManager.secondaryText)
-                    .lineSpacing(3)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
+                    // Translation preview
+                    Text(bookmark.displayTranslation)
+                        .font(EmType.serif(17, .medium))
+                        .foregroundColor(themeManager.secondaryText)
+                        .lineSpacing(3)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                }
 
                 // Tags if any
                 if !bookmark.tags.isEmpty {
@@ -469,6 +485,31 @@ struct EmBookmarkCardBody: View {
     }
 }
 
+/// The 34pt gradient badge on a Midnight Emerald bookmark card: a heart for a
+/// verse, the passage glyph for a whole passage. Shared with the Today spotlight.
+struct BookmarkKindBadge: View {
+    let isPassage: Bool
+    @ObservedObject private var themeManager = ThemeManager.shared
+
+    var body: some View {
+        Group {
+            if isPassage {
+                Text("ع")
+                    .font(EmType.arabic(18))
+            } else {
+                Image(systemName: "heart.fill")
+                    .font(.system(size: 14, weight: .semibold))
+            }
+        }
+        .foregroundColor(themeManager.onAccentText)
+        .frame(width: 34, height: 34)
+        .background(
+            RoundedRectangle(cornerRadius: 11, style: .continuous)
+                .fill(themeManager.accentGradient)
+        )
+    }
+}
+
 struct EmptyBookmarksView: View {
     @StateObject private var themeManager = ThemeManager.shared
 
@@ -487,7 +528,7 @@ struct EmptyBookmarksView: View {
                     .font(EmType.serif(28, .semiBold))
                     .foregroundColor(themeManager.primaryText)
 
-                Text("Tap the heart icon on any verse to save it for later reading")
+                Text("Tap the heart on a verse or a passage to save it for later reading")
                     .font(EmType.serif(16, .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .multilineTextAlignment(.center)
@@ -516,7 +557,7 @@ struct EmptyBookmarksView: View {
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(themeManager.primaryText)
 
-                Text("Tap the heart icon on any verse to save it for later reading")
+                Text("Tap the heart on a verse or a passage to save it for later reading")
                     .font(.system(size: 14))
                     .foregroundColor(themeManager.secondaryText)
                     .multilineTextAlignment(.center)
@@ -573,7 +614,7 @@ struct BookmarkDetailView: View {
                                 .font(.system(size: 24, weight: .bold))
                                 .foregroundColor(themeManager.primaryText)
                             
-                            Text("Verse \(bookmark.verseNumber)")
+                            Text(bookmark.positionLabel)
                                 .font(.system(size: 16, weight: .medium))
                                 .foregroundColor(themeManager.secondaryText)
                         }
@@ -665,22 +706,6 @@ struct BookmarkDetailView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
-    }
-}
-
-// MARK: - Live verse text
-
-private extension Bookmark {
-    /// The verse's current English translation from the bundled Quran data, falling
-    /// back to the text snapshotted when the bookmark was saved. The snapshot stays
-    /// on the synced record untouched (see docs/BOOKMARK_SYNC_ARCHITECTURE.md); it
-    /// only goes stale for display when the shipped translation edition changes, as
-    /// it did with the 2026-09 move from Sahih International to Ali Quli Qarai.
-    @MainActor
-    var displayTranslation: String {
-        DataManager.shared.quranData?
-            .verses[String(surahNumber)]?[String(verseNumber)]?
-            .translation ?? verseTranslation
     }
 }
 

@@ -305,11 +305,59 @@ struct Bookmark: Codable, Identifiable {
     let createdAt: Date
     let updatedAt: Date
     let syncStatus: BookmarkSyncStatus
-    
+    /// 1-based passage (ruku) index when the bookmark saves a whole passage; nil
+    /// for a single verse. A passage bookmark keeps the passage's first verse in
+    /// `verseNumber`, that verse's Arabic in `verseText` and the passage title in
+    /// `verseTranslation`, so existing deep links land on the passage and older
+    /// app versions read it as a verse bookmark. Records saved before passage
+    /// bookmarks existed have no such key and decode as verse bookmarks.
+    let passageIndex: Int?
+
     var verseReference: String {
         return "\(surahNumber):\(verseNumber)"
     }
-    
+
+    var isPassage: Bool { passageIndex != nil }
+
+    /// Lookup key for the verse heart. A passage bookmark never matches, even at
+    /// its own first verse, so a verse and the passage holding it can both be saved.
+    func matchesVerse(surah: Int, verse: Int) -> Bool {
+        passageIndex == nil && surahNumber == surah && verseNumber == verse
+    }
+
+    func matchesPassage(surah: Int, index: Int) -> Bool {
+        surahNumber == surah && passageIndex == index
+    }
+
+    /// Quran order: surah, then verse, then a passage before the verse it opens
+    /// on, then save time.
+    static func precedesInQuranOrder(_ a: Bookmark, _ b: Bookmark) -> Bool {
+        if a.surahNumber != b.surahNumber { return a.surahNumber < b.surahNumber }
+        if a.verseNumber != b.verseNumber { return a.verseNumber < b.verseNumber }
+        if a.isPassage != b.isPassage { return a.isPassage }
+        return a.createdAt < b.createdAt
+    }
+
+    /// A copy with a new sync state and, optionally, new notes, tags and update
+    /// time. The one place a record is rebuilt, so every field travels.
+    func with(syncStatus: BookmarkSyncStatus, notes: String? = nil, tags: [String]? = nil, updatedAt: Date? = nil) -> Bookmark {
+        Bookmark(
+            id: id,
+            userId: userId,
+            surahNumber: surahNumber,
+            verseNumber: verseNumber,
+            surahName: surahName,
+            verseText: verseText,
+            verseTranslation: verseTranslation,
+            notes: notes ?? self.notes,
+            tags: tags ?? self.tags,
+            createdAt: createdAt,
+            updatedAt: updatedAt ?? self.updatedAt,
+            syncStatus: syncStatus,
+            passageIndex: passageIndex
+        )
+    }
+
     init(
         id: UUID = UUID(),
         userId: String,
@@ -322,7 +370,8 @@ struct Bookmark: Codable, Identifiable {
         tags: [String] = [],
         createdAt: Date = Date(),
         updatedAt: Date = Date(),
-        syncStatus: BookmarkSyncStatus = .synced
+        syncStatus: BookmarkSyncStatus = .synced,
+        passageIndex: Int? = nil
     ) {
         self.id = id
         self.userId = userId
@@ -336,6 +385,7 @@ struct Bookmark: Codable, Identifiable {
         self.createdAt = createdAt
         self.updatedAt = updatedAt
         self.syncStatus = syncStatus
+        self.passageIndex = passageIndex
     }
 }
 

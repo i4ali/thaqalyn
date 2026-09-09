@@ -16,8 +16,8 @@
 //  placeInfo). The spine is sleep and waking: the surah that wakes a sleeping heart,
 //  before the morning it is woken by force. No .dua beat, so no Listen button.
 //
-//  Narrations are Shia-sourced from the app's own tafsir_36.json: the heart-of-the-Qur'an
-//  and Fatima al-Zahra (a) fadl (layer 4, 36:1); the three-refusals barrier and mirror
+//  Narrations are Shia-sourced from the app's earlier commentary on Yasin: the heart-of-the-Qur'an
+//  and Fatima al-Zahra (a) fadl (36:1); the three-refusals barrier and mirror
 //  (al-Baqir / the Prophet, 36:9); Imam Ali's "people are asleep" (36:12); Imam Mubin =
 //  Imam Ali (al-Baqir, Basa'ir al-Darajat, 36:12); Habib al-Najjar and the Hurr echo
 //  (36:20); the dead earth as the dead heart (al-Sadiq, 36:33); the sun's prostration

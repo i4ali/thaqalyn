@@ -102,7 +102,7 @@ struct MissionScreen: View {
                         }
 
                         BeatRow(verb: beat.verb, line: beat.line, gold: gold,
-                                lineColor: Color(hex: "F1E8D6").opacity(0.88))
+                                lineColor: Color(hex: "F1E8D6"))
                             .opacity(isVisible ? 1 : 0)
                             .offset(x: isVisible ? 0 : -24)
                             .animation(.easeOut(duration: 0.55).delay(0.50 + Double(index) * 0.14), value: isVisible)
@@ -152,8 +152,10 @@ private struct BeatRow: View {
                 .minimumScaleFactor(0.8)
                 .frame(width: 132, alignment: .leading)
 
+            // Upright SemiBold, not the Medium Italic: the only italic face bundled
+            // is too thin to read in cream on the near-black ground.
             Text(line)
-                .font(EmType.serifItalic(20))
+                .font(EmType.serif(20, .semiBold))
                 .foregroundColor(lineColor)
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)

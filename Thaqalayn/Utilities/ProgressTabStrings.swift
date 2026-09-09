@@ -20,10 +20,9 @@ enum ProgressTabStrings {
     // Stats
     static let versesRead = "Verses Read"
     static let surahsComplete = "Surahs Complete"
-    static let quizzesDone = "Quizzes Done"
+    static let passagesRead = "Passages Read"
     static let totalSawab = "Total Sawab"
     static func ofTotal(_ n: Int) -> String { "of \(n)" }
-    static let surahsTested = "surahs tested"
     static let blessingsEarned = "blessings earned"
 
     // Streak
@@ -48,7 +47,6 @@ enum ProgressTabStrings {
     // Ring legend / center
     static let quran = "Quran"
     static let surahs = "Surahs"
-    static let quizzes = "Quizzes"
     /// The seasonal ring label ("Ramadan" / "Hajj" / "Muharram"), shown as-is.
     static func seasonal(_ raw: String) -> String { raw }
 }

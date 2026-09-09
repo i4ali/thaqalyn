@@ -44,16 +44,37 @@ enum PassageMarkup {
 
     /// Prose with markers turned into small raised accent-coloured numbers that link
     /// to `thaqalayn-source://n`. `baseFont` is the already scaled body font.
-    static func attributed(_ text: String, baseFont: UIFont, color: UIColor, accent: UIColor) -> AttributedString {
+    ///
+    /// `highlight` is the word being spoken, as a UTF-16 range over the text with its
+    /// markers stripped (the string the voice reads); it is painted with `highlightColor`.
+    static func attributed(_ text: String, baseFont: UIFont, color: UIColor, accent: UIColor,
+                           highlight: NSRange? = nil, highlightColor: UIColor? = nil) -> AttributedString {
         var result = AttributedString()
         let markerFont = baseFont.withSize(baseFont.pointSize * 0.62)
+        var spokenOffset = 0
         for seg in segments(text) {
             switch seg {
             case .text(let s):
-                var a = AttributedString(s)
-                a.font = baseFont
-                a.foregroundColor = color
-                result.append(a)
+                let ns = s as NSString
+                let local = highlight.map { NSIntersectionRange($0, NSRange(location: spokenOffset, length: ns.length)) }
+                if let local, local.length > 0, let highlightColor {
+                    let start = local.location - spokenOffset
+                    for (piece, painted) in [(ns.substring(to: start), false),
+                                             (ns.substring(with: NSRange(location: start, length: local.length)), true),
+                                             (ns.substring(from: start + local.length), false)] where !piece.isEmpty {
+                        var a = AttributedString(piece)
+                        a.font = baseFont
+                        a.foregroundColor = color
+                        if painted { a.backgroundColor = highlightColor }
+                        result.append(a)
+                    }
+                } else {
+                    var a = AttributedString(s)
+                    a.font = baseFont
+                    a.foregroundColor = color
+                    result.append(a)
+                }
+                spokenOffset += ns.length
             case .marker(let n):
                 var a = AttributedString("\(n)")
                 a.font = markerFont

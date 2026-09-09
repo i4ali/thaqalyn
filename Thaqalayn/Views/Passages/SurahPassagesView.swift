@@ -5,8 +5,9 @@
 //  A surah as the list of its passages (one per ruku). SurahDetailView wraps
 //  this screen for every navigation into a surah. Tapping a row pushes
 //  PassageView; swiping a row from the leading edge marks the passage read or
-//  unread; a target verse (deep link or go-to-verse) pushes the passage that
-//  holds it and scrolls to the verse.
+//  unread and, with a second button, saves or unsaves it as a bookmark; a
+//  target verse (deep link or go-to-verse) pushes the passage that holds it
+//  and scrolls to the verse.
 //
 
 import SwiftUI
@@ -21,6 +22,7 @@ struct SurahPassagesView: View {
     @ObservedObject private var audioManager = AudioManager.shared
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var passageStore = PassageStore.shared
+    @ObservedObject private var bookmarkManager = BookmarkManager.shared
     @Environment(\.dismiss) private var dismiss
 
     @State private var showingGoToVerse = false
@@ -58,7 +60,7 @@ struct SurahPassagesView: View {
     }
 
     private func passageTitle(_ ref: PassageRef) -> String {
-        passageStore.passage(surah: surah.number, index: ref.index)?.title.en ?? "Verses \(ref.rangeLabel)"
+        passageStore.title(for: ref)
     }
 
     private var pendingTargetIsActive: Binding<Bool> {
@@ -75,6 +77,7 @@ struct SurahPassagesView: View {
         let readVerseKeys = progressManager.readVerseKeys
         let readCount = PassageProgress.readCount(passages, readVerseKeys: readVerseKeys)
         let readingRef = lastReadRef
+        let savedIndices = bookmarkManager.bookmarkedPassageIndices(surah: surah.number)
 
         ZStack {
             if themeManager.isMidnightEmerald {
@@ -100,6 +103,7 @@ struct SurahPassagesView: View {
                 List {
                     ForEach(passages) { ref in
                         let isRead = PassageProgress.isRead(ref, readVerseKeys: readVerseKeys)
+                        let isSaved = savedIndices.contains(ref.index)
 
                         VStack(spacing: 0) {
                             if ref.index > 1 {
@@ -117,6 +121,7 @@ struct SurahPassagesView: View {
                                     title: passageTitle(ref),
                                     hasCommentary: passageStore.hasCommentary(surah: surah.number, index: ref.index),
                                     isRead: isRead,
+                                    isSaved: isSaved,
                                     isReading: ref == readingRef
                                 )
                             }
@@ -125,12 +130,20 @@ struct SurahPassagesView: View {
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                         .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                            // First button is the full-swipe action, so Read stays first.
                             Button {
                                 toggleRead(ref, isRead: isRead)
                             } label: {
                                 Label(isRead ? "Unread" : "Read", systemImage: isRead ? "arrow.uturn.backward" : "checkmark")
                             }
                             .tint(isRead ? themeManager.tertiaryText : themeManager.accentColor)
+
+                            Button {
+                                toggleSaved(ref)
+                            } label: {
+                                Label(isSaved ? "Unsave" : "Save", systemImage: isSaved ? "heart.slash" : "heart")
+                            }
+                            .tint(isSaved ? themeManager.secondaryText : themeManager.accentColorDeep)
                         }
                     }
 
@@ -175,15 +188,25 @@ struct SurahPassagesView: View {
                 }
             )
         }
+        // Deep link (Continue Reading, bookmarks, search, notifications,
+        // widgets): push the passage holding the target verse automatically,
+        // once this screen's own push has landed. Pushing from onAppear, while
+        // the list is still sliding in, made NavigationView cancel the nested
+        // link a beat later, so the passage popped straight back to the list.
+        .onDidAppear { openTargetVerseIfNeeded() }
         .onAppear {
-            // Deep link (Continue Reading, bookmarks, search, notifications,
-            // widgets): push the passage holding the target verse automatically.
-            guard let targetVerse, !didOpenTargetVerse else { return }
-            didOpenTargetVerse = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                pendingTarget = PassageTarget(verse: targetVerse, conceptId: targetConceptId)
-            }
+            // Fallback should the appearance callback never arrive (previews,
+            // hosts that do not forward appearance to child controllers).
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { openTargetVerseIfNeeded() }
         }
+    }
+
+    /// Pushes the passage holding `targetVerse`, once per screen instance. The
+    /// second caller (transition callback or its timer fallback) is a no-op.
+    private func openTargetVerseIfNeeded() {
+        guard let targetVerse, !didOpenTargetVerse else { return }
+        didOpenTargetVerse = true
+        pendingTarget = PassageTarget(verse: targetVerse, conceptId: targetConceptId)
     }
 
     /// Leading swipe on a row: the same mark and unmark the passage screen's
@@ -194,6 +217,24 @@ struct SurahPassagesView: View {
         } else {
             progressManager.markPassageRead(ref)
             UINotificationFeedbackGenerator().notificationOccurred(.success)
+        }
+    }
+
+    /// Leading swipe, second button: save or unsave the passage as a bookmark.
+    /// The same manager call as the passage screen's header heart, so the row
+    /// heart and the header heart always agree.
+    private func toggleSaved(_ ref: PassageRef) {
+        let arabic = surahWithTafsir.verses.first { $0.number == ref.start }?.arabicText ?? ""
+        let result = bookmarkManager.togglePassageBookmark(
+            ref: ref,
+            surahName: surah.englishName,
+            title: passageTitle(ref),
+            firstVerseArabic: arabic
+        )
+        switch result {
+        case .saved: UINotificationFeedbackGenerator().notificationOccurred(.success)
+        case .refused: UINotificationFeedbackGenerator().notificationOccurred(.error)
+        case .removed: break
         }
     }
 
@@ -273,14 +314,15 @@ struct SurahPassagesView: View {
 
 // MARK: - Row
 
-/// One passage in the list: glyph, title, verse range, and the read state on
-/// the trailing edge (checkmark when read, "reading" when it holds the last
-/// read verse, nothing otherwise).
+/// One passage in the list: glyph, title, verse range, and on the trailing
+/// edge a heart when the passage is bookmarked and the read state (checkmark
+/// when read, "reading" when it holds the last read verse, nothing otherwise).
 private struct PassageRow: View {
     let ref: PassageRef
     let title: String
     let hasCommentary: Bool
     let isRead: Bool
+    let isSaved: Bool
     let isReading: Bool
     @ObservedObject private var themeManager = ThemeManager.shared
 
@@ -312,14 +354,22 @@ private struct PassageRow: View {
 
             Spacer(minLength: 8)
 
-            if isRead {
-                Image(systemName: "checkmark")
-                    .font(.system(size: 13, weight: .semibold))
-                    .foregroundColor(themeManager.accentColor)
-            } else if isReading {
-                Text("reading")
-                    .font(.system(size: 12.5, weight: .semibold))
-                    .foregroundColor(themeManager.accentColor)
+            HStack(spacing: 10) {
+                if isSaved {
+                    Image(systemName: "heart.fill")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(themeManager.accentBright)
+                        .accessibilityLabel("Saved")
+                }
+                if isRead {
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(themeManager.accentColor)
+                } else if isReading {
+                    Text("reading")
+                        .font(.system(size: 12.5, weight: .semibold))
+                        .foregroundColor(themeManager.accentColor)
+                }
             }
         }
         .padding(.vertical, 14)

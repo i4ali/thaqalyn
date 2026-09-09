@@ -53,8 +53,8 @@ struct WelcomeView: View {
 
                     VStack(spacing: 9) {
                         featureRow(icon: "ph-books-fill",
-                                   title: "Five layers of tafsir",
-                                   description: "From foundation to Ahlul Bayt wisdom")
+                                   title: "Understanding, passage by passage",
+                                   description: "Essay, verse notes, narrations, perspectives")
                         featureRow(icon: "ph-moon-stars-fill",
                                    title: "Journeys and Deep Dives",
                                    description: "Sacred seasons, surahs, and themes")

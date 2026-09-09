@@ -5,7 +5,9 @@
 //  One passage (a ruku) read in full: its verses in order, then a Mark as
 //  read toggle, the Understand card for the passage commentary and a link
 //  to the next passage. Only the toggle (or reading every verse elsewhere)
-//  marks the passage read; scrolling to the end does not.
+//  marks the passage read; scrolling to the end does not. The header heart
+//  saves the whole passage as a bookmark; each verse keeps its own heart in
+//  the rail.
 //
 
 import SwiftUI
@@ -22,6 +24,7 @@ struct PassageView: View {
     @ObservedObject private var audioManager = AudioManager.shared
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var passageStore = PassageStore.shared
+    @ObservedObject private var bookmarkManager = BookmarkManager.shared
     @Environment(\.dismiss) private var dismiss
 
     @State private var selectedVerseForSummary: VerseWithTafsir?
@@ -41,6 +44,8 @@ struct PassageView: View {
     /// the reading position when the reader leaves, so Continue Reading
     /// returns here.
     @State private var topVerse: Int?
+    /// Brief pop of the header heart after the passage is saved.
+    @State private var showingSaveFeedback = false
 
     init(surahWithTafsir: SurahWithTafsir, ref: PassageRef, scrollToVerse: Int? = nil, openConceptId: String? = nil) {
         self.surahWithTafsir = surahWithTafsir
@@ -72,7 +77,7 @@ struct PassageView: View {
     }
 
     private var title: String {
-        passage?.title.en ?? "Verses \(ref.rangeLabel)"
+        passageStore.title(for: ref)
     }
 
     private var eyebrow: String {
@@ -100,6 +105,11 @@ struct PassageView: View {
     /// for its checkmark.
     private var isPassageRead: Bool {
         progressManager.isPassageRead(ref)
+    }
+
+    /// The whole passage is bookmarked (not any one of its verses).
+    private var isPassageSaved: Bool {
+        bookmarkManager.isPassageBookmarked(surah: surah.number, index: ref.index)
     }
 
     // MARK: - Body
@@ -193,7 +203,6 @@ struct PassageView: View {
         )
         .textSizePanelOverlay(isOpen: $showTextSizePanel, topPadding: 60, trailingPadding: 20)
         .onAppear { progressManager.enterPassage(ref) }
-        .onDisappear { progressManager.leavePassage(ref, topVerse: topVerse ?? ref.start) }
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
@@ -246,6 +255,19 @@ struct PassageView: View {
 
             TextSizeButton(isPanelOpen: $showTextSizePanel)
 
+            Button(action: toggleSaved) {
+                Image(systemName: isPassageSaved ? "heart.fill" : "heart")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(isPassageSaved ? themeManager.accentBright : themeManager.accentColor)
+                    .frame(width: 40, height: 40)
+                    .background(Circle().fill(themeManager.glassSurface))
+                    .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
+                    .scaleEffect(showingSaveFeedback ? 1.25 : 1.0)
+                    .animation(.spring(response: 0.3, dampingFraction: 0.6), value: showingSaveFeedback)
+            }
+            .buttonStyle(EmPressStyle())
+            .accessibilityLabel(isPassageSaved ? "Remove passage bookmark" : "Save passage")
+
             Button(action: {
                 Task { await audioManager.playVerseSequence(versesInRange, in: surah, startingFrom: 0) }
             }) {
@@ -280,6 +302,30 @@ struct PassageView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, 8)
         .padding(.bottom, 12)
+    }
+
+    // MARK: - Save
+
+    /// Header heart: saves or unsaves this passage as a bookmark. The same
+    /// manager call as the passage list's Save swipe, so the two stay in step.
+    private func toggleSaved() {
+        let arabic = versesInRange.first { $0.number == ref.start }?.arabicText ?? ""
+        let result = bookmarkManager.togglePassageBookmark(
+            ref: ref,
+            surahName: surah.englishName,
+            title: passageStore.title(for: ref),
+            firstVerseArabic: arabic
+        )
+        switch result {
+        case .saved:
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            showingSaveFeedback = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { showingSaveFeedback = false }
+        case .refused:
+            UINotificationFeedbackGenerator().notificationOccurred(.error)
+        case .removed:
+            break
+        }
     }
 
     // MARK: - Mark as read
@@ -631,7 +677,7 @@ struct NextPassageCard: View {
     @ObservedObject private var passageStore = PassageStore.shared
 
     private var nextTitle: String {
-        passageStore.passage(surah: next.surah, index: next.index)?.title.en ?? "Verses \(next.rangeLabel)"
+        passageStore.title(for: next)
     }
 
     var body: some View {

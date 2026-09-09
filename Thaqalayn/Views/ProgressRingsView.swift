@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProgressRingsView: View {
     @StateObject private var progressManager = ProgressManager.shared
-    @StateObject private var quizManager = QuizManager.shared
+    @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var ramadanManager = RamadanJourneyManager.shared
     @StateObject private var hajjManager = HajjJourneyManager.shared
@@ -62,8 +62,17 @@ struct ProgressRingsView: View {
         Double(progressManager.stats.totalSurahsCompleted) / Double(totalSurahs)
     }
 
-    private var quizProgress: Double {
-        Double(quizManager.completedSurahCount) / Double(totalSurahs)
+    /// Passages fully read across the Quran, and the total, from the ruku index.
+    private var passageCounts: (read: Int, total: Int) {
+        guard let index = dataManager.passageIndex else { return (0, 0) }
+        let readKeys = progressManager.readVerseKeys
+        var read = 0, total = 0
+        for surah in 1...totalSurahs {
+            let refs = index.passages(forSurah: surah)
+            total += refs.count
+            read += PassageProgress.readCount(refs, readVerseKeys: readKeys)
+        }
+        return (read, total)
     }
 
     var body: some View {
@@ -133,7 +142,6 @@ struct ProgressRingsView: View {
                 ProgressRingsStack(
                     quranProgress: quranProgress,
                     surahProgress: surahProgress,
-                    quizProgress: quizProgress,
                     ramadanProgress: seasonalProgress,
                     showRamadanRing: showSeasonalRing
                 )
@@ -149,7 +157,7 @@ struct ProgressRingsView: View {
         LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
             emeraldStat(sf: "book.closed.fill", value: "\(progressManager.stats.totalVersesRead)", label: ProgressTabStrings.versesRead, sub: ProgressTabStrings.ofTotal(totalQuranVerses))
             emeraldStat(sf: "checkmark.seal.fill", value: "\(progressManager.stats.totalSurahsCompleted)", label: ProgressTabStrings.surahsComplete, sub: ProgressTabStrings.ofTotal(totalSurahs))
-            emeraldStat(sf: "questionmark.circle.fill", value: "\(quizManager.completedSurahCount)", label: ProgressTabStrings.quizzesDone, sub: ProgressTabStrings.surahsTested)
+            emeraldStat(sf: "text.book.closed.fill", value: "\(passageCounts.read)", label: ProgressTabStrings.passagesRead, sub: ProgressTabStrings.ofTotal(passageCounts.total))
             emeraldStat(sf: "sparkles", value: formatSawab(progressManager.stats.totalSawab), label: ProgressTabStrings.totalSawab, sub: ProgressTabStrings.blessingsEarned)
         }
     }
@@ -246,7 +254,6 @@ struct ProgressRingsView: View {
             ProgressRingsStack(
                 quranProgress: quranProgress,
                 surahProgress: surahProgress,
-                quizProgress: quizProgress,
                 ramadanProgress: seasonalProgress,
                 showRamadanRing: showSeasonalRing
             )
@@ -288,11 +295,11 @@ struct ProgressRingsView: View {
             )
 
             RingsStatCard(
-                icon: "questionmark.circle.fill",
+                icon: "text.book.closed.fill",
                 iconColor: themeManager.semanticBlue,
-                title: ProgressTabStrings.quizzesDone,
-                value: "\(quizManager.completedSurahCount)",
-                subtitle: ProgressTabStrings.surahsTested
+                title: ProgressTabStrings.passagesRead,
+                value: "\(passageCounts.read)",
+                subtitle: ProgressTabStrings.ofTotal(passageCounts.total)
             )
 
             RingsStatCard(

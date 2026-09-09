@@ -27,7 +27,6 @@ struct SettingsView: View {
     @State private var showingReciterSelection = false
     @State private var showingTTSVoiceSelection = false
     @State private var selectedTTSLanguage: CommentaryLanguage = .english
-    @State private var showingTafsirSources = false
     @State private var showingMailCopiedAlert = false
     @State private var showingWidgetExplainer = false
     
@@ -65,9 +64,6 @@ struct SettingsView: View {
         }
         .sheet(isPresented: $showingWidgetExplainer) {
             WidgetExplainerView()
-        }
-        .fullScreenCover(isPresented: $showingTafsirSources) {
-            TafsirSourcesView()
         }
         .alert("Local Data Cleared", isPresented: $showingClearDataAlert) {
             Button("OK") {
@@ -429,15 +425,6 @@ struct SettingsView: View {
                             SettingsSection(title: "About") {
                                 VStack(spacing: 12) {
                                     SettingsRow(
-                                        icon: "books.vertical.fill",
-                                        title: "Tafsir Sources",
-                                        subtitle: "Books and scholars referenced",
-                                        iconColor: .indigo
-                                    ) {
-                                        showingTafsirSources = true
-                                    }
-
-                                    SettingsRow(
                                         icon: "envelope.fill",
                                         title: "Contact Us",
                                         subtitle: "Email the developer",
@@ -493,8 +480,8 @@ struct SettingsView: View {
                             .font(.system(size: 17, weight: .bold))
                             .foregroundColor(themeManager.primaryText)
                         Text(premiumManager.isPremium
-                             ? "Every dive, journey and layer is yours."
-                             : "Everything. Forever. Every dive, journey and layer.")
+                             ? "Every dive, journey and passage is yours."
+                             : "Everything. Forever. Every dive, journey and passage.")
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(themeManager.secondaryText)
                             .fixedSize(horizontal: false, vertical: true)
@@ -611,8 +598,8 @@ struct SettingsView: View {
                         .font(EmType.serif(17, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                     Text(premiumManager.isPremium
-                         ? "Every dive, journey and layer is yours."
-                         : "Everything. Forever. Every dive, journey and layer.")
+                         ? "Every dive, journey and passage is yours."
+                         : "Everything. Forever. Every dive, journey and passage.")
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .fixedSize(horizontal: false, vertical: true)
@@ -926,15 +913,6 @@ struct SettingsView: View {
     private var emeraldAboutSection: some View {
         SettingsSection(title: "About") {
             VStack(spacing: 12) {
-                SettingsRow(
-                    icon: "books.vertical.fill",
-                    title: "Tafsir Sources",
-                    subtitle: "Books and scholars referenced",
-                    iconColor: .indigo
-                ) {
-                    showingTafsirSources = true
-                }
-
                 SettingsRow(
                     icon: "envelope.fill",
                     title: "Contact Us",

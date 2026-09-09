@@ -16,7 +16,7 @@ import SwiftUI
 /// context only swaps the hero art and the eyebrow above the headline: the art honours
 /// the specific thing they wanted, and the headline still sells the whole library.
 ///
-/// Entries with no art of their own (a locked tafsir layer, a quiz, the profile upgrade
+/// Entries with no art of their own (a locked Understanding, the profile upgrade
 /// row) pass `coverAssetName: nil` and fall back to the shrine dome.
 struct PaywallContext: Identifiable {
     /// Stable identity so the paywall can be raised via `.fullScreenCover(item:)` - e.g.
@@ -29,7 +29,7 @@ struct PaywallContext: Identifiable {
     /// Small gold caps line above the headline, e.g. "Inside the Surah · Yusuf".
     let eyebrow: String
 
-    /// Fired from inside a surah: a locked tafsir layer, In-Depth, Gems, the quiz. These
+    /// Fired from inside a surah: a locked Understanding, Gems. These
     /// are the highest-volume gates in the app and have no art of their own - but a surah
     /// that happens to have an "Inside the Surah" experience lends its cover, and the rest
     /// fall back to the shrine dome. Either way the eyebrow names the exact thing the user
@@ -79,10 +79,6 @@ struct PaywallView: View {
     /// lightly tidied - spacing, sentence casing, one trimmed aside. Swap or
     /// extend as stronger reviews land.
     private let reviews: [CuratedReview] = [
-        CuratedReview(
-            title: "What I needed",
-            body: "That’s the App I was searching for. Quran (reading, listening, traduction), quiz, daily reminder, Tafsir.",
-            author: "BiBiGeRm"),
         CuratedReview(
             title: "Very well thought out and put together",
             body: "It’s a great companion app that I use daily for reading and reflection. Some of the features are quite unique like journeys, verse insights and deep dives. Amazing work, mashallah!",
@@ -379,7 +375,7 @@ struct PaywallView: View {
                     Text("Understanding")
                         .font(EmType.serif(21, .semiBold))
                         .foregroundColor(themeManager.primaryText)
-                    Text("All 114 surahs · English, Urdu & Arabic")
+                    Text("Every passage, written from its sources")
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(themeManager.secondaryText)
                 }
@@ -478,12 +474,6 @@ struct PaywallView: View {
                 title: "Seasonal Journeys",
                 pill: journeysPill,
                 description: "Muharram · Arbaeen · Ramadan · Hajj · Fatimiyya"
-            ))
-            staggeredRow(layers.count + 4, featureRow(
-                icon: "brain.head.profile",
-                title: "Surah Quizzes",
-                pill: nil,
-                description: "Test your understanding, earn badges"
             ))
         }
     }
@@ -768,7 +758,7 @@ struct PaywallView: View {
 
                 if purchaseManager.purchaseSuccess {
                     alertTitle = "Success!"
-                    alertMessage = "Premium unlocked! All tafsir commentary is now available."
+                    alertMessage = "Premium unlocked! Understanding is open for every passage."
                     showingAlert = true
 
                     // Dismiss after showing success

@@ -632,7 +632,7 @@ class ProgressManager: ObservableObject {
 
     // MARK: - Sawab Management
 
-    /// Add sawab points from external sources (quizzes, etc.)
+    /// Add sawab points from other features (daily challenge, crosswords)
     func addSawab(_ amount: Int, reason: String) {
         guard amount > 0 else { return }
         stats.totalSawab += amount
@@ -998,9 +998,7 @@ class ProgressManager: ObservableObject {
         } else {
             progress = Double(passagesRead) / Double(passages.count)
         }
-        let title = ref.map { r in
-            PassageStore.shared.passage(surah: r.surah, index: r.index)?.title.en ?? "Verses \(r.rangeLabel)"
-        }
+        let title = ref.map { PassageStore.shared.title(for: $0) }
         return LastReadInfo(
             surahNumber: surahNumber,
             verseNumber: verseNumber,

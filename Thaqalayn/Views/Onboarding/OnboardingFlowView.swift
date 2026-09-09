@@ -32,24 +32,24 @@ struct OnboardingFlowView: View {
                 MissionScreen()
                     .tag(1)
 
-                // Screen 3: Deep Dive (immersive teaser)
-                DeepDiveScreen()
+                // Screen 3: Understanding (passage commentary teaser)
+                UnderstandingScreen()
                     .tag(2)
 
-                // Screen 4: Inside the Surah (immersive teaser)
-                SurahExperienceScreen()
+                // Screen 4: Deep Dive (immersive teaser)
+                DeepDiveScreen()
                     .tag(3)
 
-                // Screen 5: Quick Gems
-                QuickGemsScreen()
+                // Screen 5: Inside the Surah (immersive teaser)
+                SurahExperienceScreen()
                     .tag(4)
 
-                // Screen 6: Progress Tracking
-                ProgressTrackingScreen()
+                // Screen 6: Quick Gems
+                QuickGemsScreen()
                     .tag(5)
 
-                // Screen 7: Quiz Feature
-                QuizFeatureScreen()
+                // Screen 7: Progress Tracking
+                ProgressTrackingScreen(isActive: currentPage == 6)
                     .tag(6)
 
                 // Screen 8: Seasonal Features (Ramadan Journey)

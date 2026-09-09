@@ -3,7 +3,7 @@
 //  Thaqalayn
 //
 //  The app's one celebration moment, shared by the crossword "Solved!",
-//  the Daily Challenge completion and good quiz results: doves rising out
+//  the Daily Challenge completion: doves rising out
 //  of golden light on the emerald night, behind the screen's own content.
 //  The plate is fixed emerald-night art, so callers show it only under
 //  Midnight Emerald; the scrim keeps the title zone and the bottom CTA

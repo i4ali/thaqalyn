@@ -87,22 +87,61 @@ struct UnderstandingView: View {
 
     /// The italic face behind `EmType.serifItalic`.
     private static func serifItalicUIFont(_ size: CGFloat) -> UIFont {
-        UIFont(name: "CormorantGaramondItalic-MediumItalic", size: size) ?? .italicSystemFont(ofSize: size)
+        UIFont(name: EmType.italicFace, size: size) ?? .italicSystemFont(ofSize: size)
     }
 
     // MARK: - Listen
 
-    /// Everything on the screen in reading order, citation markers removed so
-    /// the voice does not read the numbers aloud.
-    private var listenText: String {
-        var parts: [String] = [passage.essay.text(for: lang)]
+    /// One block of prose as the voice reads it: the view id of the block on screen,
+    /// its text with citation markers stripped, and where it sits in `listenText`.
+    private struct ListenPart {
+        let id: String
+        let spoken: String
+        let range: NSRange
+    }
+
+    /// Everything on the screen in reading order, one part per prose block, so a
+    /// spoken range can be traced back to the block that shows it.
+    private var listenParts: [ListenPart] {
+        var texts: [(String, String)] = []
+        for (i, paragraph) in essayParagraphs.enumerated() { texts.append(("essay.\(i)", paragraph)) }
         for entry in passage.verses {
-            if let heading = entry.heading { parts.append(heading.text(for: lang)) }
-            if let note = entry.note { parts.append(note.text(for: lang)) }
-            for narration in entry.narrations { parts.append(narration.text.text(for: lang)) }
+            if let heading = entry.heading { texts.append(("v\(entry.verse).heading", heading.text(for: lang))) }
+            if let note = entry.note { texts.append(("v\(entry.verse).note", note.text(for: lang))) }
+            for narration in entry.narrations { texts.append(("v\(entry.verse).\(narration.id)", narration.text.text(for: lang))) }
         }
-        if let perspectives = passage.perspectives { parts.append(perspectives.text(for: lang)) }
-        return parts.map(Self.stripMarkers).joined(separator: "\n\n")
+        for (i, paragraph) in perspectiveParagraphs.enumerated() { texts.append(("persp.\(i)", paragraph)) }
+
+        var parts: [ListenPart] = []
+        var offset = 0
+        for (id, text) in texts {
+            let spoken = Self.stripMarkers(text)
+            let length = (spoken as NSString).length
+            parts.append(ListenPart(id: id, spoken: spoken, range: NSRange(location: offset, length: length)))
+            offset += length + 2   // the "\n\n" between parts
+        }
+        return parts
+    }
+
+    /// The text handed to the voice; citation markers removed so it does not read numbers aloud.
+    private var listenText: String {
+        listenParts.map(\.spoken).joined(separator: "\n\n")
+    }
+
+    /// The block being spoken and the word within it (in marker-stripped coordinates),
+    /// while this passage is playing or paused.
+    private var spokenWord: (id: String, range: NSRange)? {
+        guard isListeningToThis, tafsirReader.isPlaying || tafsirReader.isPaused,
+              let range = tafsirReader.highlightRange,
+              let part = listenParts.first(where: { NSLocationInRange(range.location, $0.range) })
+        else { return nil }
+        let local = NSIntersectionRange(range, part.range)
+        return (part.id, NSRange(location: local.location - part.range.location, length: local.length))
+    }
+
+    private func spokenRange(in id: String) -> NSRange? {
+        guard let word = spokenWord, word.id == id else { return nil }
+        return word.range
     }
 
     private static func stripMarkers(_ text: String) -> String {
@@ -152,6 +191,7 @@ struct UnderstandingView: View {
             VStack(spacing: 0) {
                 header
 
+                ScrollViewReader { proxy in
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
                         titleBlock
@@ -179,6 +219,12 @@ struct UnderstandingView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 4)
                     .padding(.bottom, 48)
+                }
+                // Follow the voice: bring each block into view as the reading reaches it.
+                .onChange(of: spokenWord?.id) { _, id in
+                    guard let id, tafsirReader.isPlaying else { return }
+                    withAnimation(.easeInOut(duration: 0.5)) { proxy.scrollTo(id, anchor: .center) }
+                }
                 }
             }
         }
@@ -292,7 +338,7 @@ struct UnderstandingView: View {
     // MARK: - Essay and perspectives
 
     private var essaySection: some View {
-        proseBlock(essayParagraphs)
+        proseBlock(essayParagraphs, idPrefix: "essay")
     }
 
     @ViewBuilder
@@ -300,17 +346,18 @@ struct UnderstandingView: View {
         if !perspectiveParagraphs.isEmpty {
             VStack(alignment: .leading, spacing: 18) {
                 EmDivider(label: "Perspectives")
-                proseBlock(perspectiveParagraphs)
+                proseBlock(perspectiveParagraphs, idPrefix: "persp")
             }
         }
     }
 
     /// Paragraphs of reading prose with citation markers, in the reader's direction.
-    private func proseBlock(_ paragraphs: [String]) -> some View {
+    private func proseBlock(_ paragraphs: [String], idPrefix: String) -> some View {
         VStack(alignment: .leading, spacing: 14 * scale) {
             ForEach(paragraphs.indices, id: \.self) { i in
                 markedText(
                     paragraphs[i],
+                    id: "\(idPrefix).\(i)",
                     font: Self.serifUIFont(17 * scale),
                     color: themeManager.primaryText,
                     lineSpacing: 6 * scale
@@ -320,14 +367,19 @@ struct UnderstandingView: View {
         .environment(\.layoutDirection, direction)
     }
 
-    /// One run of prose whose "[n]" markers become tappable superscripts.
-    private func markedText(_ text: String, font: UIFont, color: Color, lineSpacing: CGFloat) -> some View {
-        Text(PassageMarkup.attributed(text, baseFont: font, color: UIColor(color), accent: UIColor(themeManager.accentColor)))
+    /// One run of prose whose "[n]" markers become tappable superscripts, and whose
+    /// spoken word is highlighted while the passage is being read aloud. `id` is the
+    /// block's key in `listenParts`, and its scroll anchor.
+    private func markedText(_ text: String, id: String, font: UIFont, color: Color, lineSpacing: CGFloat) -> some View {
+        Text(PassageMarkup.attributed(
+            text, baseFont: font, color: UIColor(color), accent: UIColor(themeManager.accentColor),
+            highlight: spokenRange(in: id), highlightColor: UIColor(themeManager.accentColor.opacity(0.28))))
             .tint(themeManager.accentColor)
             .lineSpacing(lineSpacing)
             .multilineTextAlignment(.leading)
             .frame(maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
+            .id(id)
     }
 
     // MARK: - Verse by verse
@@ -350,17 +402,20 @@ struct UnderstandingView: View {
             HStack(alignment: .center, spacing: 10) {
                 EmNumeralCircle(n: entry.verse, size: 26)
                 if let heading = entry.heading {
-                    Text(heading.text(for: lang))
-                        .font(EmType.serif(17, .semiBold))
-                        .foregroundColor(themeManager.primaryText)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
+                    markedText(
+                        heading.text(for: lang),
+                        id: "v\(entry.verse).heading",
+                        font: Self.serifUIFont(17, .semiBold),
+                        color: themeManager.primaryText,
+                        lineSpacing: 0
+                    )
                 }
             }
 
             if let note = entry.note {
                 markedText(
                     note.text(for: lang),
+                    id: "v\(entry.verse).note",
                     font: Self.serifItalicUIFont(16 * scale),
                     color: themeManager.secondaryText,
                     lineSpacing: 5 * scale
@@ -368,14 +423,14 @@ struct UnderstandingView: View {
             }
 
             ForEach(entry.narrations) { narration in
-                narrationBlock(narration)
+                narrationBlock(narration, id: "v\(entry.verse).\(narration.id)")
             }
         }
     }
 
     /// A narration: speaker, English text and the source line, behind a thin accent rule.
     /// The verbatim Arabic and the chain live on the source sheet.
-    private func narrationBlock(_ narration: Narration) -> some View {
+    private func narrationBlock(_ narration: Narration, id: String) -> some View {
         let source = passage.source(id: narration.source)
 
         return HStack(alignment: .top, spacing: 14) {
@@ -386,13 +441,13 @@ struct UnderstandingView: View {
             VStack(alignment: .leading, spacing: 8) {
                 speakerLine(narration)
 
-                Text(narration.text.text(for: lang))
-                    .font(EmType.serif(16 * scale, .medium))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(5 * scale)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                markedText(
+                    narration.text.text(for: lang),
+                    id: id,
+                    font: Self.serifUIFont(16 * scale),
+                    color: themeManager.primaryText,
+                    lineSpacing: 5 * scale
+                )
 
                 if let source {
                     Button(action: { openedSource = source }) {
