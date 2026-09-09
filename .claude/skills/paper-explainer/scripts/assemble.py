@@ -26,8 +26,13 @@ def probe_dur(p):
 def fit_hero(src, dur, out):
     d0 = probe_dur(src)
     f = dur / d0
-    vf = f"setpts={f:.5f}*PTS,minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:vsbmc=1,scale={W}:{H}:flags=lanczos,setsar=1"
-    run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", vf, "-t", f"{dur:.3f}", "-r", str(FPS), "-c:v", "libx264", "-crf", "15", "-pix_fmt", "yuv420p", out])
+    # minterpolate stops at the last source frame, so a retimed clip came out ~f/16 s short and the
+    # shortfalls accumulated along the concat (Fatiha: -1.7 s by shot 9, picture ahead of VO/captions).
+    # tpad clones the last frame past the end and -frames:v cuts to the exact frame count.
+    n = round(dur * FPS)
+    vf = (f"setpts={f:.5f}*PTS,minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:vsbmc=1,"
+          f"tpad=stop_mode=clone:stop_duration=3,scale={W}:{H}:flags=lanczos,setsar=1")
+    run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", vf, "-frames:v", str(n), "-r", str(FPS), "-c:v", "libx264", "-crf", "15", "-pix_fmt", "yuv420p", out])
 
 def render_plx(src, dur, move, out, zoom=None, parallax=None):
     cmd = [sys.executable, os.path.join(HERE, "parallax.py"), "--image", src, "--out", out, "--seconds", f"{dur:.3f}", "--fps", str(FPS), "--move", move]
@@ -76,7 +81,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             cur.append(w)
             if len(cur) >= 2 and w["w"][-1] in ",.:;?!": chunks.append(cur); cur = []   # break at punctuation
         if cur: chunks.append(cur)
-        if len(chunks) > 1 and len(chunks[-1]) == 1: chunks[-2] += chunks.pop()   # no orphan single-word phrase
+        if len(chunks) > 1 and len(chunks[-1]) == 1:   # no orphan single-word phrase
+            orphan = chunks.pop()                       # pop FIRST: `chunks[-2] += chunks.pop()` evaluated the pop
+            chunks[-1].extend(orphan)                   # before the store and wrote the merge one slot too far (Fatiha 2026-09-04)
         for ci, ch in enumerate(chunks):
             nxt = chunks[ci + 1][0]["start"] if ci + 1 < len(chunks) else ch[-1]["end"] + 0.35
             for i, w in enumerate(ch):

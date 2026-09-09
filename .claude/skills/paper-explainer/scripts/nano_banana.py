@@ -21,6 +21,7 @@ import argparse
 import base64
 import os
 import sys
+import time
 
 import requests
 
@@ -36,9 +37,21 @@ VALID_ASPECTS = ["1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4", "9:16", "16:9"
 VALID_SIZES = ["1K", "2K", "4K"]
 
 
+REF_MAX_SIDE = 1536      # references are downscaled to this and sent as JPEG: OpenRouter
+REF_MAX_BYTES = 1_500_000  # drops the upload (broken pipe) on multi-MB PNG refs (2026-09-03)
+
+
 def b64_data_url(path):
-    with open(path, "rb") as f:
-        return "data:image/png;base64," + base64.b64encode(f.read()).decode()
+    raw = open(path, "rb").read()
+    if len(raw) <= REF_MAX_BYTES and path.lower().endswith((".jpg", ".jpeg")):
+        return "data:image/jpeg;base64," + base64.b64encode(raw).decode()
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    im.thumbnail((REF_MAX_SIDE, REF_MAX_SIDE))
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=90)
+    return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
 def main():
@@ -69,15 +82,30 @@ def main():
             for r in args.ref
         ]
 
-    resp = requests.post(
-        URL,
-        headers={"Authorization": f"Bearer {key}",
-                 "Content-Type": "application/json"},
-        json=payload,
-        timeout=300,
-    )
-    if resp.status_code != 200:
-        print(f"ERROR {resp.status_code}: {resp.text}", file=sys.stderr)
+    # OpenRouter drops long image requests now and then (broken pipe, SSL EOF, 5xx);
+    # retry a few times before giving up (Fatiha batch, 2026-09-03).
+    resp = None
+    for attempt in range(1, 4):
+        try:
+            resp = requests.post(
+                URL,
+                headers={"Authorization": f"Bearer {key}",
+                         "Content-Type": "application/json"},
+                json=payload,
+                timeout=900,
+            )
+        except requests.exceptions.RequestException as e:
+            print(f"attempt {attempt}: {type(e).__name__}: {str(e)[:200]}", file=sys.stderr)
+            resp = None
+        if resp is not None and resp.status_code == 200:
+            break
+        if resp is not None:
+            print(f"attempt {attempt}: HTTP {resp.status_code}: {resp.text[:300]}", file=sys.stderr)
+            if resp.status_code < 500 and resp.status_code != 429:
+                sys.exit(1)
+        time.sleep(10 * attempt)
+    if resp is None or resp.status_code != 200:
+        print("ERROR: giving up after 3 attempts", file=sys.stderr)
         sys.exit(1)
 
     data = resp.json()
