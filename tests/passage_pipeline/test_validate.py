@@ -126,6 +126,14 @@ def test_note_and_title_budgets(bundle):
     assert any("note" in e and "40 words" in e for e in errs)
 
 
+def test_narration_ids_unique_across_passage(bundle):
+    def mutate(d, s, vv):
+        first = d["verses"][0]
+        d["verses"].append(dict(first, verse=first["verse"] + 1))  # same narrations, same ids
+    errs = errors(bundle, mutate)
+    assert any("narration n1 appears twice" in e for e in errs)
+
+
 def test_max_three_narrations_per_verse(bundle):
     def mutate(d, s, vv):
         n = d["verses"][0]["narrations"][0]

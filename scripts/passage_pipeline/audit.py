@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from . import prose as prose_mod
 from .validate import MARKER_RE
 
 VERDICTS = {"supported", "stretched", "unsupported"}
@@ -48,11 +49,15 @@ def check(audit_doc: dict, draft: dict) -> tuple[list[str], bool]:
         errs.append(f"{t}: no verdict")
     if not isinstance(audit_doc.get("coverage"), str) or not audit_doc.get("coverage"):
         errs.append("coverage judgement is required")
+    if audit_doc.get("prose") is not None:
+        errs.extend(prose_mod.check_flags(audit_doc["prose"], draft))
     if errs:
         return errs, False
     # Pass rule (tightened 2026-09-05 after the 2:4 pilot audit): every verdict
     # must be supported and nothing may be uncited. A stretched claim anywhere,
     # including a wrong speaker in the essay or perspectives, forces a rewrite.
+    # Prose flags (added 2026-09-08 after 2:3 shipped a garbled sentence) do not
+    # fail the audit: status routes them to the polisher, see status.state().
     verdicts = audit_doc.get("verdicts") or []
     not_supported = [v for v in verdicts if v["verdict"] != "supported"]
     uncited = audit_doc.get("uncited") or []

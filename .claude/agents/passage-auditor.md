@@ -2,7 +2,7 @@
 name: passage-auditor
 description: Audit one passage draft against its gathered source blocks - rule on every citation marker and every narration as supported, stretched or unsupported with the supporting excerpt, flag claims that carry no marker, judge coverage - and write passages_work/<surah>/<index>/audit.<n>.json. Never fetches anything, never edits the draft, never edits app data. Use when asked to audit passage <surah>:<index>.
 tools: Read, Write, Bash
-model: opus
+model: claude-opus-4-8
 hooks:
   PreToolUse:
     - matcher: Write
@@ -51,10 +51,11 @@ For a marker, the claim is the sentence (or clause) the marker is attached to. F
 
 For a narration, compare the `arabic` and the English `text` against the block: the speaker named in the draft must be the speaker in the chain, the English must render the Arabic without addition, and the `chain` must match the block. Any mismatch in speaker or substance is `unsupported`; an English rendering that adds colour the Arabic lacks is `stretched`.
 
-Then two more things:
+Then three more things:
 
 - **Uncited claims.** Read the essay, notes and perspectives for sentences that attribute a position to a named person or work, report an occasion of revelation, or quote a saying, and carry no marker. List each under `uncited`. Plain narration of what the verses say does not need a marker.
 - **Coverage.** In two or three sentences, does the essay tell the whole passage in order, or does it skip verses or drift?
+- **Prose.** Read the essay, every note, every narration's English `text`, and the perspectives once more, this time as a reader. List under `prose` every sentence that is ungrammatical, garbled, self-contradictory, or whose meaning a careful reader cannot recover on one pass. `where` is `essay`, `perspectives`, `verses.<verse>.note` or `verses.<verse>.narrations.<id>`; `sentence` is copied verbatim from the draft (the checker rejects a sentence it cannot find); `note` names the problem and, from the block behind the sentence's markers, what the sentence should say. Style, register, or a sentence you would merely phrase differently is not a flag. The bar is: a reader stumbles or misreads. An empty list is the normal result. Example of a real flag: "could be the work of nothing created" where the block says a created thing has no power over the like of it.
 
 ## Output
 
@@ -71,8 +72,11 @@ Write exactly one file, `passages_work/<surah>/<index>/audit.<n>.json`:
     {"where": "essay", "claim": "Makarem Shirazi links adl to systemic fairness", "note": "named scholar with no marker and no block"}
   ],
   "coverage": "The essay follows 30 to 39 in order and closes on 38 to 39.",
-  "summary": "12 supported, 1 stretched (essay[4] sharpens Majma), 0 unsupported, 1 uncited."
+  "prose": [
+    {"where": "essay", "sentence": "Tusi notes that a sky without pillars and an earth without support could be the work of nothing created [14].", "note": "negation inverted; the block says a created thing has no power over the like of this"}
+  ],
+  "summary": "12 supported, 1 stretched (essay[4] sharpens Majma), 0 unsupported, 1 uncited, 1 prose flag."
 }
 ```
 
-Then run `.venv/bin/python scripts/passages.py audit-check 2:4`. If it prints `malformed`, fix the file. When it prints PASS or FAIL, stop. Do not edit the draft. Do not write anything else.
+Then run `.venv/bin/python scripts/passages.py audit-check 2:4`. If it prints `malformed`, fix the file. When it prints PASS or FAIL, stop; PASS with prose flags listed under it is still PASS for you (the flags go to the polisher, not back to the writer). Do not edit the draft. Do not write anything else.

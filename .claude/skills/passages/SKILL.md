@@ -65,9 +65,15 @@ Whenever a slot is free, launch the highest item on this list that exists:
    `Rewrite passage S:I; read the latest audit first.` followed by the specific
    non-supported targets from the audit, what the block actually says, and the
    fix expected, then `Keep everything the audit marked supported as it is.`
-2. **Audit** a passage whose `draft.json` is valid and newer than its latest
+   A rewrite also clears the audit's prose flags, so do not queue a polish for
+   a passage that is being rewritten.
+2. **Polish** a passage whose stage is `polish` (audit PASS, prose flags still
+   in the draft). Agent `passage-polisher`, prompt `Polish passage S:I`. It
+   reads only the draft and the flags, rewrites only the flagged sentences,
+   and keeps every marker. About 20K tokens and a minute or two.
+3. **Audit** a passage whose `draft.json` is valid and newer than its latest
    audit (or has none). Agent `passage-auditor`, prompt `Audit passage S:I`.
-3. **Write** a gathered passage with no draft. Agent `passage-writer`, prompt
+4. **Write** a gathered passage with no draft. Agent `passage-writer`, prompt
    `Write passage S:I`.
 
 After a writer finishes: `.venv/bin/python scripts/passages.py validate S:I` must
@@ -78,10 +84,24 @@ After an auditor finishes: `.venv/bin/python scripts/passages.py audit-check S:I
 PASS means every verdict is supported and nothing is uncited. FAIL goes back to
 item 1. A **third FAIL parks the passage**: stop launching for it, and tell the
 user what the auditor keeps finding; the fix is in the prompts, not in the loop.
+PASS may still list `prose` lines under it: sentences a reader stumbles on.
+Those never cause a rewrite; `status` shows the passage as `polish` and it goes
+to item 2. A passage with an outstanding prose flag is not `passed` and
+`assemble` will not take it.
 
-Costs to expect per run: writer 180K to 260K tokens and 10 to 14 minutes (about
-235K tokens and 4 minutes for a rewrite, since the packet is re-read); auditor
-160K to 250K tokens and 5 to 9 minutes.
+After a polisher finishes: print `passages_work/S/II/polish.json` and read every
+before and after pair. `.venv/bin/python scripts/passages.py status --surah S`
+must now show the passage `passed`. If it shows `audited` instead, the polish
+moved a marker and the old audit no longer covers the draft: queue an audit.
+
+Costs to expect per run (measured on Opus 4.8 over surah 5 passages 1 to 3,
+2026-09-08; the Opus 5 numbers were about 20 percent higher): writer 170K to
+220K tokens and 12 to 16 minutes; auditor 125K to 175K tokens and 5 to 6
+minutes; a rewrite 28K to 36K tokens and 1 to 2 minutes (the writer reads the
+audit and fixes the named target without re-reading the packet; on Opus 5 it
+was about 235K). A follow-up message to an agent that is still resident costs
+only the delta: a six-id renumber by the writer was 2K tokens, and the auditor
+re-ruling the same draft was 8K.
 
 ### 3. Read each draft as a reader
 
@@ -97,6 +117,9 @@ rather than a rule:
 
 Do not fix these yourself. Rule problems the validator missed become a note
 against `validate.py`; taste problems become a note against the writer prompt.
+A sentence a reader would stumble on or misread is the auditor's job now (its
+`prose` list); if you meet one the auditor missed, note it for the auditor
+prompt rather than polishing it by hand.
 
 ### 4. Per surah: titles, assemble, metrics
 
@@ -131,6 +154,11 @@ commit, `passages_S.json` in its own commit, so content can be reverted without
 touching code.
 
 ## Known findings carried from the pilot
+
+- Prose gate added 2026-09-08 after 2:3 shipped "could be the work of nothing
+  created" (source supported, English inverted). The auditor flags sentences a
+  reader stumbles on or misreads, never style; flags route to the polisher, not
+  the writer. Writer and auditor were pinned to `claude-opus-4-8` the same day.
 
 - Auditor strictness varies between runs; a second audit may flag what the first
   passed. Budget for it.

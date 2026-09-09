@@ -10,6 +10,7 @@ from . import audit as audit_mod
 from . import brief as brief_mod
 from . import gather as gather_mod
 from . import metrics as metrics_mod
+from . import prose as prose_mod
 from . import rukus
 from . import status as status_mod
 from . import titles as titles_mod
@@ -88,7 +89,72 @@ def cmd_audit_check(args) -> int:
             print(f"  {v['verdict']:11s} {v['target']}: {v.get('note') or v['claim']}")
     for u in doc.get("uncited") or []:
         print(f"  uncited     {u['where']}: {u['claim']}")
+    # Prose flags do not change PASS or FAIL; they send the passage to the polisher.
+    for f in doc.get("prose") or []:
+        print(f"  prose       {f['where']}: {f['sentence']}")
     return 0 if passed else 1
+
+
+def _latest_audit_doc(work_dir):
+    path = audit_mod.latest(work_dir)
+    return json.loads(path.read_text(encoding="utf-8")) if path and path.exists() else None
+
+
+def _print_flags(flags) -> None:
+    for f in flags:
+        print(f"  {f['where']}: {f['sentence']}")
+        if f.get("note"):
+            print(f"      note: {f['note']}")
+
+
+def cmd_prose(args) -> int:
+    if args.surah:
+        total = 0
+        for ref in rukus.passages_for_surah(args.surah):
+            if not (ref.work_dir / "draft.json").exists():
+                continue
+            draft = json.loads((ref.work_dir / "draft.json").read_text(encoding="utf-8"))
+            flags = prose_mod.outstanding(ref.work_dir, draft, _latest_audit_doc(ref.work_dir))
+            if flags:
+                total += len(flags)
+                print(f"{ref.id} ({ref.start}-{ref.end}): {len(flags)} outstanding")
+                _print_flags(flags)
+        print(f"{total} outstanding flag(s) in surah {args.surah}")
+        return 1 if total else 0
+    if not args.ref:
+        print("give a passage (2:3) or --surah S")
+        return 2
+    ref = rukus.parse_passage_ref(args.ref)
+    try:
+        draft = json.loads((ref.work_dir / "draft.json").read_text(encoding="utf-8"))
+    except FileNotFoundError as e:
+        print(f"missing file: {e.filename}")
+        return 2
+    flags = prose_mod.outstanding(ref.work_dir, draft, _latest_audit_doc(ref.work_dir))
+    if not flags:
+        print(f"{ref.id}: no outstanding flags")
+        return 0
+    print(f"{ref.id}: {len(flags)} outstanding flag(s)")
+    _print_flags(flags)
+    return 1
+
+
+def cmd_prose_check(args) -> int:
+    ref = rukus.parse_passage_ref(args.ref)
+    try:
+        draft = json.loads((ref.work_dir / "draft.json").read_text(encoding="utf-8"))
+        doc = json.loads((ref.work_dir / prose_mod.PROSE_FILE).read_text(encoding="utf-8"))
+    except FileNotFoundError as e:
+        print(f"missing file: {e.filename}")
+        return 2
+    errs = prose_mod.check(doc, draft)
+    if errs:
+        print(f"{prose_mod.PROSE_FILE}: malformed")
+        for e in errs:
+            print(f"  - {e}")
+        return 2
+    print(f"{prose_mod.PROSE_FILE}: ok ({len(doc['flags'])} flags)")
+    return 0
 
 
 def cmd_next_attempt(args) -> int:
@@ -104,8 +170,9 @@ def cmd_status(args) -> int:
         if args.all or s["stage"] != "new":
             valid = "" if s["valid"] is None else (" valid" if s["valid"] else " INVALID")
             audit = f" audit {s['audit']} x{s['attempts']}" if s["audit"] else ""
+            prose = f" prose {s['prose']}" if s["prose"] else ""
             titles = " titles ok" if s["titles"] else ""
-            print(f"{r.id:7s} {r.start:>3}-{r.end:<3} {s['stage']:9s}{valid}{audit}{titles}")
+            print(f"{r.id:7s} {r.start:>3}-{r.end:<3} {s['stage']:9s}{valid}{audit}{prose}{titles}")
     return 0
 
 
@@ -170,6 +237,13 @@ def build_parser() -> argparse.ArgumentParser:
     na = sub.add_parser("next-attempt", help="print the attempt number the next audit file should use")
     na.add_argument("ref")
     na.set_defaults(fn=cmd_next_attempt)
+    pr = sub.add_parser("prose", help="outstanding prose flags for a passage (or with --surah, a whole surah)")
+    pr.add_argument("ref", nargs="?")
+    pr.add_argument("--surah", type=int)
+    pr.set_defaults(fn=cmd_prose)
+    pc = sub.add_parser("prose-check", help="validate prose.json against the draft")
+    pc.add_argument("ref")
+    pc.set_defaults(fn=cmd_prose_check)
     st = sub.add_parser("status", help="stage of every passage that has been touched")
     st.add_argument("--surah", type=int)
     st.add_argument("--all", action="store_true", help="include untouched passages")

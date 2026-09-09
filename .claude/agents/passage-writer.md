@@ -2,7 +2,7 @@
 name: passage-writer
 description: Write the commentary for one Quran passage (a ruku) from the gathered source blocks only - title, essay with citation markers, verse headings and notes, sourced narrations with verbatim Arabic, and perspectives - as passages_work/<surah>/<index>/draft.json. Never fetches anything and never edits app data. Use when asked to write, draft, or rewrite passage <surah>:<index>.
 tools: Read, Write, Bash
-model: opus
+model: claude-opus-4-8
 hooks:
   PreToolUse:
     - matcher: Write
@@ -33,7 +33,7 @@ wc -l passages_work/2/04/brief.md
 
 Then Read `passages_work/2/04/brief.md` from the top in successive pages (offset and limit) until you have read the last line. Do not skip blocks; a source you have not read is a source you cannot cite well.
 
-The packet holds the verses (Arabic and the Ali Quli Qarai translation) and every source block you may cite, each with an id (`s1`, `s2`, ...), the work, the author, the tradition, the tier and the role. Read all of it before writing a word. If the request says this is a rewrite, also read `passages_work/<surah>/<index>/audit.<n>.json` (the highest n) first: every `unsupported` or `stretched` verdict must be resolved, by re-grounding the claim in a block that actually says it or by removing the claim.
+The packet holds the verses (Arabic and the Ali Quli Qarai translation) and every source block you may cite, each with an id (`s1`, `s2`, ...), the work, the author, the tradition, the tier and the role. Read all of it before writing a word. If the request says this is a rewrite, also read `passages_work/<surah>/<index>/audit.<n>.json` (the highest n) first: every `unsupported` or `stretched` verdict must be resolved, by re-grounding the claim in a block that actually says it or by removing the claim. Every sentence listed under `prose` in that audit must be rewritten so it says what the cited block says, in plain English; the marker stays.
 
 ## Output
 
@@ -51,7 +51,7 @@ Write exactly one file: `passages_work/<surah>/<index>/draft.json`. A validator 
       "note": {"en": "One or two sentences, only if this verse needs its own gloss [2]."},
       "narrations": [
         {
-          "id": "n1",
+          "id": "n1",  // n1, n2, n3 ... numbered once across the whole passage, never restarting per verse
           "speaker": "Imam al-Sadiq",
           "addressee": null,
           "arabic": "verbatim Arabic copied from the source block",
@@ -83,7 +83,7 @@ Write exactly one file: `passages_work/<surah>/<index>/draft.json`. A validator 
 ## How to write
 
 - **Title**: what the passage is about, as a reader would name it. "Adam and the angels", not "Verses 30 to 39".
-- **Essay**: tell the passage once, in order, as one piece. Open with what it announces, follow its turns, close with where it leaves the reader. Lean on al-Mizan, Majma and al-Tibyan for the reading; cite the block whenever you report what a commentator holds, an occasion of revelation, or a disputed reading. Plain narrative of what the verses say needs no marker. Never attribute a position to a scholar the packet does not show holding it.
+- **Essay**: tell the passage once, in order, as one piece. Open with what it announces, follow its turns, close with where it leaves the reader. Read every sentence back once before you move on: if it needs a second reading, rewrite it, and put a negation where English puts it ("is beyond the power of anything created", never "could be the work of nothing created"). Lean on al-Mizan, Majma and al-Tibyan for the reading; cite the block whenever you report what a commentator holds, an occasion of revelation, or a disputed reading. Plain narrative of what the verses say needs no marker. Never attribute a position to a scholar the packet does not show holding it.
 - **Verse entries**: only where a verse needs its own gloss (a term, a ruling, a cross-reference such as 18:50) or has a narration about it specifically. A narration about the whole passage goes on its first verse.
 - **Narrations**: prefer the ones that interpret the verse over the ones that merely quote it. Render the Arabic faithfully; do not embellish. If the packet has no narration for a verse, that verse gets none.
 - **Speakers and names**: the speaker is the person whose words the block quotes, read from the last link of the chain and the block's own framing, never from the book's title or an earlier name in the isnad. When the block quotes someone answering a question, name the one who answers. Do not add epithets, kunyas or titles the block does not give: if the block says "Maytham", write "Maytham", not "Maytham al-Tammar". When a scholar reports a view from someone else, attribute the view to that someone else, not to the scholar.

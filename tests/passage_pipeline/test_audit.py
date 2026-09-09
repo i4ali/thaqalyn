@@ -77,3 +77,25 @@ def test_next_attempt_number(tmp_path):
     (tmp_path / "audit.1.json").write_text("{}")
     (tmp_path / "audit.2.json").write_text("{}")
     assert audit.next_attempt(tmp_path) == 3
+
+
+def test_prose_flags_are_accepted_and_do_not_fail_the_support_rule():
+    a = good_audit()
+    a["prose"] = [{"where": "essay", "sentence": "Tabatabai reads it as a request, not an objection [1].",
+                   "note": "fine as an example"}]
+    errs, passed = audit.check(a, draft())
+    assert errs == [] and passed is True
+
+
+def test_prose_flag_whose_sentence_is_not_in_the_draft_is_malformed():
+    a = good_audit()
+    a["prose"] = [{"where": "essay", "sentence": "Not in the draft.", "note": ""}]
+    errs, passed = audit.check(a, draft())
+    assert errs and passed is False
+    assert any("not in the draft verbatim" in e for e in errs)
+
+
+def test_audit_without_prose_key_is_still_valid():
+    a = good_audit()
+    a.pop("prose", None)
+    assert audit.check(a, draft()) == ([], True)

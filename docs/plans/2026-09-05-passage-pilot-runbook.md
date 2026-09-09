@@ -795,3 +795,608 @@ per ten in Al Imran. Strictness variance is smaller this run but not gone.
   to me" that may make the words the father's, passed on the chain test
   (4:20); a Shia block cited inside perspectives (4:12, 4:14), which the
   house rule does not bar.
+
+## 2026-09-08: model pin and prose gate
+
+- Passage 2:3 shipped the sentence "Tusi notes that a sky without pillars and
+  an earth without support could be the work of nothing created [14]". The
+  block (al-Tibyan, s14) says a created thing has no power over the like of
+  that: the claim was supported, the English inverted the negation, and the
+  audit passed it because it rules on support only.
+- `passage-writer` and `passage-auditor` moved from `model: opus` (which
+  resolved to Opus 5) to `model: claude-opus-4-8`. Surahs 1 to 4 were written
+  under the alias; results from surah 5 on are Opus 4.8. Re-measure the cost
+  lines in the skill on the first three passages of surah 5.
+- The auditor now also lists `prose` flags (`where`, verbatim `sentence`,
+  `note`): sentences a reader stumbles on or misreads, never style. Prose does
+  not fail the audit; `status` shows the passage as `polish` and the new
+  `passage-polisher` agent rewrites only the flagged sentences, keeping every
+  marker, so the existing audit still covers the draft. `assemble` will not
+  take a passage with an outstanding flag. A flag resolves itself once its
+  sentence is no longer in the draft (`scripts/passage_pipeline/prose.py`).
+- Sweep procedure for passages that passed before the gate existed (surahs 1
+  to 4), kept here and not in the skill, which covers new generation only:
+  agent `passage-prose-reader`, prompt `Scan passages S:I S:I ...` with up to
+  ten ids per launch, two launches at a time; it reads only `draft.json` and
+  writes `passages_work/S/II/prose.json`. Then `passages.py prose --surah S`
+  lists every outstanding flag with its note; present that table before
+  polishing. Flagged passages show as `polish` in `status`; run
+  `passage-polisher` (`Polish passage S:I`) one per passage, read the before
+  and after pairs in `polish.json`, and `assemble S` merges the new text. The
+  old audit still covers a polished draft because the markers did not move, so
+  no re-audit is needed. `prose-check S:I` validates a reader file.
+- Dry run of the new loop on 5:1 (al-Maaida 1 to 5, 53 blocks, Furat
+  unavailable): writer 220,598 tokens and 16 minutes, auditor 174,085 tokens
+  and 6 minutes, both confirmed as `claude-opus-4-8` in the agent transcripts.
+  Audit PASS first try, 16 targets supported, no uncited claims, no prose
+  flags; `status` shows `passed`. The polish path was exercised by the unit
+  tests only; the first real polish will come from the surah 1 to 4 sweep.
+  Not titled or assembled yet; it joins the rest of surah 5.
+- 5:2 (al-Maaida 6 to 11, 42 blocks; Qummi unavailable for 8 to 10, Furat
+  for 6 to 10): writer 172,585 tokens and 16 minutes, auditor 124,384 tokens
+  and 6 minutes. Audit PASS first try, 15 verdicts supported (8 markers, 7
+  narrations), no uncited claims, no prose flags. Reader notes: verses 8 to
+  10 carry no verse entry (the narrations cluster on 6, 7 and 11, and the
+  auditor judged coverage complete); the verse 11 note lists three candidate
+  attackers against a marker whose shown excerpt names only Banu al-Nadir
+  (the auditor ruled the block supports it). Not titled or assembled yet.
+- Sweep results, surahs 1 to 4 (85 passages), run 2026-09-08. Reader: nine
+  launches of up to ten drafts, 69K to 146K tokens and 4 to 9 minutes each,
+  1.12M tokens in all. Flags: surah 1 none, surah 2 five (2:3, 2:17, 2:21,
+  2:23, 2:38), surah 3 none, surah 4 two (4:13, 4:17). Kinds caught: an
+  inverted negation (2:3), a clause that does not parse (2:17), a garbled
+  compression with no antecedent (2:21), an event order reversed against the
+  block (2:23), a count that promised three views and gave two (2:38), a
+  dangling modifier (4:13), and "others ... others" merging two parties
+  (4:17). Nothing flagged was style; the readers named a few dense sentences
+  they let pass. Polisher: seven runs, 18K to 34K tokens and about a minute
+  each, 208K in all; every passage kept its audit PASS and returned to
+  `passed`. The 2:38 fix needed a second turn: the polisher, seeing only the
+  gloss, had changed "three views" to "two"; the block does name the third
+  (usury by the verse, every debt by analogy), so it was added and the s8
+  excerpt extended to carry it. `assemble 2` and `assemble 4` merged the seven
+  sentences; the data diff is those lines, the s8 excerpt and gloss, and the
+  per-passage timestamps.
+- Follow-up outside the sweep: the readers noticed five markers whose shown
+  excerpt does not match the sentence carrying it (4:21 [26]; 4:24 [8], [10],
+  and perspectives [4]; 4:15 [6]). Checked: the excerpts really are about
+  something else. The full block may still support the claim, which is what
+  the audit ruled on, but the excerpt the reader sees beside the marker is
+  wrong. Needs a sourcing pass, not the polisher.
+
+## Results - al-Maaida 5:1 to 5:3 (2026-09-08)
+
+First passages written and audited on Opus 4.8. Run one passage at a time
+(5:1 as the dry run of the prose gate, 5:2 and 5:3 on request), so one slot
+was in use at any time. Titles approved as generated; `assemble 5` created
+`passages_5.json` with all three.
+
+| passage | verses | blocks | writer | auditor | audit | prose |
+|---|---|---|---|---|---|---|
+| 5:1 | 1-5 | 53 | 220,598 tok, 16 min | 174,085 tok, 6 min | PASS first try, 16 targets | none |
+| 5:2 | 6-11 | 42 | 172,585 tok, 16 min | 124,384 tok, 6 min | PASS first try, 15 targets | none |
+| 5:3 | 12-19 | 60 | 189,997 tok, 12 min | 164,099 tok, 5 min | PASS first try, 18 targets | none |
+
+3 passed, first-try 3/3, mean attempts 1.0. Cost lines in the skill updated
+to these ranges (writer 170K to 220K, auditor 125K to 175K). Unavailable
+works: Furat for every verse of 5:1 to 5:3 except 5:11; Qummi for 5:8 to
+5:10, 5:12 and 5:16 to 5:18; al-Burhan for 5:16 to 5:18 (probed directly
+after the gather: the site returns empty for those verses, not a fetch
+failure).
+
+### Why passages failed
+
+None failed. No rewrite, no polish.
+
+### Deviations from the procedure
+
+- The first gather of 5:3 died on a 45 second altafsir timeout for verse 15
+  (curl exit 28). A direct probe of the same URL answered in under a second;
+  the retry gathered all 60 blocks. `gather` has no cache and no per-work
+  retry, so a transient timeout costs the whole two-minute fetch.
+- 5:3 shipped its narration ids per verse (n1 under every verse, n1 and n2
+  under 14) where every one of the 87 passages before it numbers them once
+  across the passage. The validator did not check this; the app's source
+  sheet keys a flattened list of narrations on the id, and audit targets are
+  `verses.V.narrations.ID`. Added the rule to `validate.py` with a test
+  (`narration n1 appears twice; ids must be unique across the passage`), a
+  line to the writer prompt's schema example, and confirmed all 87 shipped
+  drafts still validate. The fix went through the resident writer agent by
+  follow-up message (ids only, verified by a field diff against a snapshot),
+  and the resident auditor re-ruled the renumbered draft into a fresh
+  `audit.1.json` after the stale one was moved out of the work dir, so
+  `metrics` still counts one attempt. The stale audit had passed on content;
+  the re-audit returned the same 18 verdicts.
+
+### Reader notes (taste and policy, not rule failures)
+
+- Verses without narrations get no verse entry (5:2 skips 8 to 10, 5:3 skips
+  16 to 18); 5:1 had one per verse. The essay gives each skipped verse a
+  sentence and the auditor judged coverage complete both times. Decide
+  whether an entry per verse is wanted; if so it is a writer-prompt note.
+- Speaker names drift again: 5:3 has "Ali ibn Ibrahim al-Qummi" where 5:2 and
+  twenty shipped narrations say "Ali ibn Ibrahim", and "Prophet Muhammad"
+  where "the Prophet" is the commonest of five shipped forms. The house list
+  is still the open fix.
+- 5:2's verse 11 note lists three candidate attackers against one marker whose
+  shown excerpt names only Banu al-Nadir. The auditor ruled the full block
+  supports it. Same excerpt-narrower-than-claim pattern as 4:15 and 4:24,
+  for the sourcing pass.
+- 5:3 verse 14 n3 opens its English with "Ali said:" although the speaker
+  field already carries it; the auditor noted the trailing verse lemma in
+  quotes is the block's own. Cosmetic.
+- 5:3's perspectives entry opens with the unmarked "Both traditions treat the
+  twelve chiefs as a sign ..." framing sentence that the an-Nisa run wanted
+  banned; this auditor accepted it.
+- Polemical narrations present where the sources carry them (5:2 the broken
+  covenant of wilaya; 5:3 Qummi's ta'wil of 5:13 as the covenant of the
+  Commander of the Faithful and the light of 5:15 as the Imams). Perspectives
+  in both passages are genuine Sunni/Shia splits (the covenant of 5:7; the
+  twelve chiefs of 5:12).
+
+## Results - al-Maaida 5:4 to 5:9 (2026-09-08)
+
+Run with two slots after the user asked for the whole surah, then stopped at
+5:9 on the user's instruction; 5:10 to 5:16 are gathered and waiting. Titles
+for 5:4 to 5:9 approved as generated; `assemble 5` merged them, so
+`passages_5.json` holds 5:1 to 5:9.
+
+| passage | verses | blocks | writer | audit 1 | rewrite | audit 2 |
+|---|---|---|---|---|---|---|
+| 5:4 | 20-26 | 38 | 133,612 tok, 10 min | FAIL, 1 stretched (108K, 5 min) | 28,122 tok, 1 min | PASS (104K, 4 min) |
+| 5:5 | 27-34 | 57 | 195,633 tok, 12 min | FAIL, 1 stretched (183K, 8 min) | 36,257 tok, 2 min | PASS (175K, 6 min) |
+| 5:6 | 35-43 | 63 | 189,870 tok, 14 min | PASS, 26 targets (164K, 6 min) | | |
+| 5:7 | 44-50 | 54 | 187,042 tok, 11 min | PASS, 13 targets (158K, 4 min) | | |
+| 5:8 | 51-56 | 62 | 184,905 tok, 18 min | PASS, 21 targets (167K, 6 min) | | |
+| 5:9 | 57-66 | 71 | 218,732 tok, 16 min | PASS, 19 targets (173K, 7 min) | | |
+
+Surah so far: 9 passed, first-try 7/9, mean attempts 1.2, no prose flags in
+any of the eleven audits. Rewrites on Opus 4.8 cost 28K to 36K tokens and one
+to two minutes: the writer reads the audit and fixes the named target without
+re-reading the packet, against about 235K on Opus 5. Skill cost lines updated.
+
+### Why passages failed (2 rewrites, 2 findings)
+
+- 5:4 verses.21 n3: "أبناء الأبناء" (the grandsons) rendered "the grandsons'
+  sons", one generation too many. Rendering over-reach.
+- 5:5 essay[3]: the "same envy" mechanism behind the People of the Book's
+  rejection is al-Mizan's (s1) but was credited to Tabrisi under [3], whose
+  block frames their offence as covenant-breaking and outrages. Attribution
+  imported across blocks, the pilot's usual failure.
+
+### Deviations from the procedure
+
+- The first 5:4 auditor died on the weekly Opus 4.8 limit (HTTP 429, reset
+  4pm Chicago) before writing anything; relaunched fresh after the reset.
+- Gathers for 5:5 to 5:16 ran as one detached shell chain (nohup) with one
+  automatic retry per passage, since a background command is capped at ten
+  minutes and twelve gathers take about twenty-five. All twelve succeeded on
+  the first attempt. Every al-Burhan block the gathers reported empty (24
+  verses) was probed directly afterwards: all genuinely empty on the site.
+- User asked (2026-09-08) not to run `passage-prose-reader` as a second
+  opinion on new passages; the auditor's prose list is the only gate.
+
+### Reader notes (taste and policy, not rule failures)
+
+- Polemical policy still applied inconsistently by adjacent writers: 5:6
+  carries "the enemies of Ali abide in the Fire" and 5:8 the Kufan-figures
+  narration on 5:53, while 5:7's writer explicitly left out the packet's
+  khums report naming Abu Bakr and a Zayd ibn Thabit tail, citing the open
+  policy.
+- 5:8 verse 52's narration (Banu Umayya's destruction "seven days after the
+  burning of Zayd") is supported but a reader cannot see why it sits under
+  "the sickness in the hearts". Relevance, for the writer prompt.
+- 5:9's essay is one unbroken 309-word paragraph (every other surah 5 essay
+  has two to four) and cites verse numbers in parentheses mid-sentence, a
+  style no other passage uses. The paragraph-break rule is still open.
+- 5:8 and 5:9 abbreviate "ibn" as "b." in names (Ubada b. al-Samit, Rifaa b.
+  Zayd); every other passage spells it out. House list.
+- Speaker forms: 5:5 "Imam al-Sajjad" where shipped passages use "Ali ibn
+  al-Husayn" in two forms; "Abu Ja'far" (5:4) against "Abu Jafar" (5:2) in
+  chains.
+- Perspectives: the "Both traditions ..." opener appears in 5:4 unmarked and
+  in 5:6 with a marker; 5:7 and 5:9 close on a "Both agree ..." sentence.
+  Auditors accepted all four.
+- Genuine splits well chosen throughout: the twelve chiefs (5:3), "made you
+  kings" (5:4), graded versus optional hiraba penalties (5:5), al-wasila
+  (5:6), the rabbaniyyun (5:7), the verse of guardianship (5:8), "what was
+  sent down to them" as walaya or Quran (5:9).
+
+
+## Results - al-Maaida 5:10 to 5:16 (2026-09-08)
+
+Run on Fable 5.1 as orchestrator with the writer and auditor still pinned to
+Opus 4.8, two slots, in loop mode (writers first, each audit launched as its
+writer's slot freed). All seven passed on the first audit with no prose flags,
+so no rewrite and no polish ran. Titles approved as generated; `assemble 5`
+merged them, so `passages_5.json` now holds the whole surah, 5:1 to 5:16.
+
+| passage | verses | blocks | writer | audit 1 |
+|---|---|---|---|---|
+| 5:10 | 67-77 | 78 | 204,390 tok, 12 min | PASS, 19 targets (185K, 7 min) |
+| 5:11 | 78-86 | 54 | 143,008 tok, 10 min | PASS, 15 targets (128K, 6 min) |
+| 5:12 | 87-93 | 55 | 173,518 tok, 10 min | PASS, 13 targets (158K, 6 min) |
+| 5:13 | 94-100 | 57 | 179,872 tok, 13 min | PASS, 21 targets (156K, 6 min) |
+| 5:14 | 101-108 | 61 | 187,979 tok, 11 min | PASS, 19 targets (172K, 5 min) |
+| 5:15 | 109-115 | 62 | 163,177 tok, 11 min | PASS, 16 targets (147K, 6 min) |
+| 5:16 | 116-120 | 35 | 108,909 tok, 9 min | PASS, 15 targets (112K, 4 min) |
+
+Surah total: 16 passed, first-try 14/16, mean attempts 1.1. The seven
+writers cost 1.16M tokens and the seven audits 1.06M; wall clock for the
+batch was about 2.5 hours with two slots. Not one audit verdict below
+supported in seven passages, against two stretched in 5:4 to 5:9 and 19
+rewrites in the al-Baqarah pilot.
+
+### Why passages failed
+
+None failed.
+
+### Deviations from the procedure
+
+- `titles 5 --apply` and `assemble 5` only take entries whose `approved`
+  flag is true, so after the user chose "approve all as generated" the flag
+  was flipped for 5:10 to 5:16 by a one-line script before re-running both.
+  An `--approve-all` flag on `titles` would remove that hand step.
+- Loop mode: a fallback wakeup (20 to 25 minutes) was scheduled after every
+  launch in case a completion notification never arrived; none fired, every
+  agent notified on its own.
+- No `passage-prose-reader` pass, per the user's 2026-09-08 instruction.
+
+### Reader notes (taste and policy, not rule failures)
+
+- 5:10 verse 75 carries the same Imam al-Rida report twice (n7 from
+  al-Burhan quoting Uyun akhbar al-Rida, n8 from Uyun directly). Duplicate
+  across two blocks of one source; a dedupe rule for the writer prompt.
+- 5:11 verses 81 and 83 to 86 have no entries at all; the essay covers
+  them. The auditor let two added qualifiers stand: "Meccan" on Razi's
+  polytheists and "unjust" on the ruler in al-Sadiq's report.
+- 5:12 verse 92's narration ("none perished except over abandoning our
+  guardianship") is the al-Safi reading of "turn away", but a reader cannot
+  see the link to "obey and beware" from the entry. Relevance, as in 5:8.
+  "al-Hasan" in the perspectives is bare and could be read as the Imam
+  rather than al-Basri; the house list should fix the form. The auditor
+  passed "Qurtubi lists ten companions" where Qurtubi says "a group" and
+  the count is inferred.
+- 5:13 verse 98's hadith qudsi is labelled speaker "Imam al-Sadiq" though
+  the words are God's, relayed through the Prophet and Jibril; the speaker
+  rule reads the last link of the chain and has no case for qudsi reports.
+- 5:14 verse 101's Safiyya report is the packet's polemical Umar narration,
+  kept; verse 105 pairs the Prophet's "take care of yourself" hadith with
+  al-Sadiq's "revealed concerning taqiyya". n1's English drops the
+  "praised station" intercession clause of the Arabic (auditor noted, not
+  flagged). Essay is 370 words and calls the bequest verses "its hardest
+  law", editorial framing no block asserts.
+- 5:15 verses 110 and 111 (Imam al-Rida to Ibn al-Sikkit; why the disciples
+  are so named) are condensed summaries with reported speech rather than
+  renderings of the Arabic; the 60-word cap is pushing long reports into
+  paraphrase. "The Quran is all reproach, and its inner meaning is a
+  drawing near" (verse 109) is faithful but opaque on one pass. n5 renders
+  "أخوان" as "fish" following the Sunni parallels' "أحوات".
+- 5:16 places citation markers after the full stop ("...father. [1]");
+  every other passage in the surah puts them before. Marker placement is
+  not in the writer prompt. Its verse 118 narration comes from an al-Burhan
+  block relaying al-Durr al-Manthur (chain names al-Durr), which is within
+  the rule since the block is Shia tier A.
+- Speaker forms for the Prophet now come in three: "The Prophet" (5:10),
+  "The Prophet Muhammad" (5:14), "the Prophet Muhammad" (5:16). House list.
+- Genuine splits well chosen throughout: the occasion of 67 (5:10), the
+  alliance of 80 (5:11), the occasion of 87 (5:12), the sea's "food" and the
+  expiation's scope (5:13), abrogation of the testimony verses (5:14), "we
+  have no knowledge" (5:15), "the truthful" (5:16).
+
+## Results - al-An'am 6:1 to 6:20 (2026-09-08 to 09)
+
+Run on Fable 5.1 as orchestrator, writer and auditor on Opus 4.8, two slots,
+loop mode. Gathers for all twenty passages ran as one detached chain (6:1 at
+19:07, done 19:37, every passage on the first attempt; al-Mizan and
+al-Burhan present in every packet). Writers started as soon as their own
+packet landed rather than after the whole chain. Titles approved as
+generated; `assemble 6` wrote `passages_6.json` with all twenty passages.
+
+| passage | verses | blocks | writer | audit 1 | rewrite | audit 2 |
+|---|---|---|---|---|---|---|
+| 6:1 | 1-10 | 64 | 169,025 tok, 13 min | PASS, 20 targets (153K, 6 min) | | |
+| 6:2 | 11-20 | 56 | 161,242 tok, 12 min | FAIL, 1 stretched (150K, 7 min) | 61,275 tok, 3 min | PASS (137K, 5 min) |
+| 6:3 | 21-30 | 67 | 170,264 tok, 12 min | FAIL, 1 stretched (175K, 7 min) | 40,630 tok, 2 min | PASS (167K, 5 min) |
+| 6:4 | 31-41 | 78 | 229,860 tok, 17 min | PASS, 19 targets (190K, 5 min) | | |
+| 6:5 | 42-50 | 57 | 165,504 tok, 11 min | PASS, 20 targets (147K, 6 min) | | |
+| 6:6 | 51-55 | 39 | 138,983 tok, 11 min | PASS, 13 targets (113K, 5 min) | | |
+| 6:7 | 56-60 | 37 | 129,961 tok, 11 min | PASS, 18 targets (106K, 5 min) | | |
+| 6:8 | 61-70 | 57 | 198,609 tok, 16 min | PASS, 17 targets (163K, 9 min) | | |
+| 6:9 | 71-82 | 70 | 199,806 tok, 12 min | PASS, 18 targets (179K, 6 min) | | |
+| 6:10 | 83-90 | 45 | 119,873 tok, 10 min | PASS, 14 targets (161K, 4 min) | | |
+| 6:11 | 91-94 | 45 | 184,341 tok, 16 min | PASS, 14 targets (134K, 4 min) | | |
+| 6:12 | 95-100 | 48 | 169,773 tok, 14 min | PASS, 17 targets (135K, 6 min) | | |
+| 6:13 | 101-110 | 89 | 211,110 tok, 12 min | FAIL, 1 stretched (192K, 8 min) | 51,505 tok, 2 min | PASS (217K, 7 min) |
+| 6:14 | 111-121 | 83 | 243,090 tok, 17 min | PASS, 20 targets (215K, 10 min) | | |
+| 6:15 | 122-129 | 75 | 172,683 tok, 11 min | PASS, 21 targets (171K, 8 min) | | |
+| 6:16 | 130-140 | 84 | 202,772 tok, 12 min | PASS, 14 targets (172K, 5 min) | | |
+| 6:17 | 141-144 | 32 | 105,330 tok, 9 min | FAIL, 1 stretched (103K, 4 min) | 29,751 tok, 1 min | PASS (103K, 5 min) |
+| 6:18 | 145-150 | 44 | 123,358 tok, 8 min | PASS, 16 targets (118K, 5 min) | | |
+| 6:19 | 151-154 | 36 | 140,683 tok, 12 min | FAIL, 1 stretched (147K, 6 min) | 38,204 tok, 1 min | PASS (156K, 8 min) |
+| 6:20 | 155-165 | 99 | 248,456 tok, 18 min | FAIL, 1 stretched (198K, 7 min) | 43,993 tok, 2 min | PASS (198K, 7 min) |
+
+Surah total: 20 passed, first-try 14/20, mean attempts 1.3, no prose flags
+in any of the 26 audits. Writers 3.48M tokens, rewrites 0.27M, audits
+4.10M; wall clock about 3.7 hours from the first gather to the last PASS.
+Rewrites cost 30K to 61K tokens and one to three minutes.
+
+### Why passages failed (6 rewrites, 6 findings, all attribution)
+
+- 6:2 perspectives[8]: the Imams' narration on "whomever it may reach" was
+  presented as agreeing with the object reading and adding the Imam; in
+  s8 the "everyone it reaches" gloss is Tabrisi's own, and the Imams give a
+  distinct nominative reading (the Imam as the one who reaches and warns).
+- 6:3 essay[2]: a view Tabrisi records with qeel from Muqatil (the
+  polytheists professing monotheism to escape) credited to Tabrisi as his
+  own explanation.
+- 6:13 perspectives[4]: Imam al-Rida's "the sights in the hearts" (a
+  narration Tabrisi cites via al-Ayyashi) credited to Tabrisi, whose own
+  gloss reads the sights as the eyes.
+- 6:17 perspectives[16]: a view Tabari reports from al-Hasan and Anas (the
+  harvest due is the obligatory zakat) credited to Tabari himself.
+- 6:19 perspectives[24]: "innovations" attached to Ibn Kathir's block, where
+  the word does not occur; it is in Tabari, Suyuti and Razi. Fixed by
+  splitting the marker and adding the Tabari source.
+- 6:20 perspectives[56]: "in this community", from a hadith Ibn Kathir
+  cites and rejects, attached to his general reading.
+
+Five of six are in perspectives, and every one is the pilot's usual
+failure: a view the block reports from someone else credited to the
+author or the Imams. The "Speakers and names" rule in the writer prompt
+does not yet reach reported views inside a commentator's block (qeel, "some
+said", a cited narration); that is the next prompt edit.
+
+### Deviations from the procedure
+
+- Writers launched as each packet landed instead of after all twenty
+  gathers; the gather chain ran detached in the background as before.
+- 6:14's writer applied its last two edits with a Python write rather than
+  the Write tool, so the PostToolUse validator did not run on them; the
+  writer ran `validate 6:14` by hand and it passed, and the orchestrator
+  validated again before the audit.
+- Two auditors (6:16, 6:20) first wrote verdict targets with a sequential
+  marker index instead of the bracketed source number, got `malformed` from
+  `audit-check`, and corrected themselves. Worth one line in the auditor
+  prompt: targets are keyed by the number inside the brackets.
+- `titles 6 --apply` needed the `approved` flags flipped by script after
+  "approve all as generated", as for surah 5.
+- Loop mode with a fallback wakeup after every launch; none fired.
+- No `passage-prose-reader` pass, per the 2026-09-08 instruction.
+
+### Reader notes (taste and policy, not rule failures)
+
+- Speaker forms drift within one surah. The Prophet: "Prophet Muhammad"
+  (6:2), "the Prophet" (6:4), "the Prophet Muhammad" (6:8, 6:15, 6:19).
+  The seventh Imam: "Imam al-Kazim" (6:4, 6:10, 6:12, 6:18) against "Imam
+  Musa ibn Jafar" (6:14). "Imam al-Sajjad" (6:19). "Abdullah ibn Abbas"
+  (6:1) against "Ibn Abbas" (6:6). The house list is overdue.
+- The tafsir author as speaker: "Ali ibn Ibrahim al-Qummi" is the speaker of
+  four narrations that are his own glosses (6:3 verses 27 and 28, 6:15
+  verses 122 and 128). Those belong in a verse note. 6:1 verse 1 lists
+  "Abdullah ibn Abbas" as speaker of a mi'raj report whose words are the
+  Prophet's and God's; 6:2 has a joint "Imam al-Baqir and Imam al-Sadiq".
+- Reporter framing inside the narration text, although the speaker field
+  already names the Imam: "Al-Sadiq said ..." four times in 6:2, "I asked
+  Abu Abdillah" (6:7, 6:9), "In the report of Abi al-Jarud" (6:7), "Abu
+  Abdillah was asked" (6:9), "Ibn Abbas said that" (6:6), "In a tradition,
+  Imam al-Baqir said that" (6:16). The writer prompt should ask for the
+  Imam's words only.
+- The 60-word cap is cutting narrations mid-sentence with an ellipsis: 6:7
+  verse 58, 6:10 verse 84, 6:13 verse 108. 6:15 verses 110 and 111 and
+  6:2 verse 11 are condensed third-person summaries instead.
+- Duplicates across passages, invisible to the validator because the
+  sources differ: the Angel of Death's helpers (6:7 verse 60 and 6:8 verse
+  61); the surah revealed whole with seventy thousand angels (6:1 verse 1
+  from al-Rida, 6:20 verse 155 from al-Sadiq).
+- Perspectives repeat one topic: the free-will or divine-will split (Razi
+  or Ibn Kathir against Tusi and Tabrisi) carries 6:4, 6:5, 6:15 and 6:18.
+  6:8's contrast is thin (both agree at the core, differ on reach) and 6:16
+  and 6:17 open on "Both traditions agree". 6:18's essay and perspectives
+  repeat the same Tusi sentence nearly verbatim.
+- Essay paragraphing still varies: one paragraph in 6:2 (399 words), 6:6,
+  6:12 and 6:18; two to four elsewhere. 6:3 places markers after the full
+  stop, the rest before. 6:18's essay skips verse 147 (auditor noted,
+  passed).
+- 6:11 verse 93's narration never names its subject in English (the "he"
+  who wrote "All-knowing" and apostatised is Ibn Abi Sarh). 6:13 verse 103
+  opens "It is the encompassing of the imagination" without the question.
+- 6:12 verse 95's "two clays" hadith is graded weak in its al-Kafi block;
+  the grading is not surfaced (known finding).
+- Polemical narrations kept where the sources carry them: the "two
+  satans" Habtar and Zurayq (6:14), Banu Umayya (6:3), Mu'awiya (6:11),
+  Marwan (6:8), al-Zubayr's lent faith (6:12), the descendants of Husayn's
+  killers (6:20), Ali's wilaya readings throughout.
+- Genuine splits well chosen: the two terms and bada (6:1), man balagha
+  (6:2), Abu Talib (6:3), the Prophet's inclination at 6:52 (6:6), unseen
+  knowledge and the manifest Book (6:7), Abraham's "This is my Lord" (6:9),
+  "a people who never disbelieve" (6:10), transcendence (6:11), abode and
+  lodging (6:12), vision of God (6:13), naming at slaughter (6:14), jinn
+  messengers (6:16), the harvest due (6:17), the sects verse (6:20).
+
+## Results - al-A'raf 7:1 to 7:24 (2026-09-09)
+
+Run on Fable 5.1 as orchestrator, writer and auditor on Opus 4.8, two slots,
+loop mode. The first gather chain lost 7:2 and 7:3 to altafsir curl timeouts
+(the fetch has no retry, and one failed request aborts the whole gather), so
+the chain was restarted at 05:57 as a bash loop that retries a passage up to
+four times until its `sources.json` exists; no retry was needed after that
+and all twenty-four packets were in by 06:32, al-Mizan and al-Burhan present
+in every one. Writers started as each packet landed. Titles approved as
+generated; `assemble 7` wrote `passages_7.json` (426 KB) with all
+twenty-four passages.
+
+| passage | verses | blocks | writer | audit 1 | rewrite | audit 2 |
+|---|---|---|---|---|---|---|
+| 7:1 | 1-10 | 60 | 146,504 tok, 10 min | PASS, 17 targets (142K, 7 min) | | |
+| 7:2 | 11-25 | 84 | 211,812 tok, 17 min | PASS, 15 targets (177K, 6 min) | | |
+| 7:3 | 26-31 | 45 | 151,163 tok, 12 min | PASS, 18 targets (120K, 4 min) | | |
+| 7:4 | 32-39 | 64 | 213,873 tok, 17 min | PASS, 21 targets (174K, 7 min) | | |
+| 7:5 | 40-47 | 60 | 164,924 tok, 11 min | PASS, 18 targets (185K, 8 min) | | |
+| 7:6 | 48-53 | 41 | 159,578 tok, 15 min | FAIL, 1 stretched (116K, 6 min) | 30,562 tok, 1 min | PASS (112K, 5 min) |
+| 7:7 | 54-58 | 39 | 137,724 tok, 12 min | PASS, 12 targets (116K, 6 min) | | |
+| 7:8 | 59-64 | 26 | 83,463 tok, 8 min | PASS, 10 targets (73K, 5 min) | | |
+| 7:9 | 65-72 | 29 | 92,245 tok, 7 min | PASS, 15 targets (85K, 4 min) | | |
+| 7:10 | 73-84 | 54 | 153,012 tok, 13 min | PASS, 15 targets (133K, 6 min) | | |
+| 7:11 | 85-93 | 40 | 128,355 tok, 9 min | PASS, 12 targets (115K, 5 min) | | |
+| 7:12 | 94-99 | 28 | 90,483 tok, 8 min | PASS, 11 targets (74K, 4 min) | | |
+| 7:13 | 100-108 | 48 | 140,162 tok, 11 min | PASS, 16 targets (134K, 7 min) | | |
+| 7:14 | 109-126 | 48 | 127,699 tok, 7 min | PASS, 12 targets (118K, 4 min) | | |
+| 7:15 | 127-129 | 23 | 102,343 tok, 10 min | PASS, 12 targets (79K, 4 min) | | |
+| 7:16 | 130-141 | 69 | 169,411 tok, 9 min | PASS, 11 targets (147K, 3 min) | | |
+| 7:17 | 142-147 | 51 | 163,533 tok, 12 min | PASS, 13 targets (135K, 6 min) | | |
+| 7:18 | 148-151 | 29 | 106,983 tok, 8 min | PASS, 13 targets (90K, 4 min) | | |
+| 7:19 | 152-157 | 47 | 170,994 tok, 14 min | PASS, 15 targets (142K, 6 min) | | |
+| 7:20 | 158-162 | 33 | 120,966 tok, 10 min | PASS, 17 targets (106K, 6 min) | | |
+| 7:21 | 163-171 | 60 | 176,579 tok, 12 min | PASS, 18 targets (153K, 6 min) | | |
+| 7:22 | 172-181 | 76 | 205,455 tok, 15 min | PASS, 24 targets (177K, 7 min) | | |
+| 7:23 | 182-188 | 53 | 124,902 tok, 9 min | PASS, 13 targets (114K, 5 min) | | |
+| 7:24 | 189-206 | 108 | 222,239 tok, 12 min | PASS, 20 targets (203K, 6 min) | | |
+
+Surah total: 24 passed, first-try 23/24, mean attempts 1.0, no prose flags
+in any of the 25 audits. Writers 3.56M tokens, the one rewrite 0.03M,
+audits 3.22M, 6.81M in all; wall clock 3.6 hours from the first gather
+(05:52) to the last PASS (09:29). Writers ran 83K to 222K tokens and 7 to
+17 minutes; audits 73K to 203K and 3 to 8 minutes.
+
+```
+passage  stage     attempts  first  hours  sources
+7:1      passed           1   True    0.3       60
+7:2      passed           1   True    0.4       84
+7:3      passed           1   True    0.4       45
+7:4      passed           1   True    0.7       64
+7:5      passed           1   True    0.7       60
+7:6      passed           2  False    1.2       41
+7:7      passed           1   True    1.0       39
+7:8      passed           1   True    1.2       26
+7:9      passed           1   True    1.3       29
+7:10     passed           1   True    1.5       54
+7:11     passed           1   True    1.5       40
+7:12     passed           1   True    1.6       28
+7:13     passed           1   True    1.7       48
+7:14     passed           1   True    1.7       48
+7:15     passed           1   True    1.9       23
+7:16     passed           1   True    1.9       69
+7:17     passed           1   True    2.2       51
+7:18     passed           1   True    2.1       29
+7:19     passed           1   True    2.4       47
+7:20     passed           1   True    2.4       33
+7:21     passed           1   True    2.7       60
+7:22     passed           1   True    2.7       76
+7:23     passed           1   True    2.9       53
+7:24     passed           1   True    2.9      108
+
+24 passed, first-try 23/24, mean attempts 1.0
+```
+
+| id | essay words | verse entries | narrations | sources | perspectives words | paragraphs |
+|---|---|---|---|---|---|---|
+| 7:1 | 336 | 5 | 6 | 14 | 94 | 4 |
+| 7:2 | 361 | 6 | 9 | 12 | 84 | 4 |
+| 7:3 | 240 | 5 | 8 | 13 | 106 | 4 |
+| 7:4 | 342 | 4 | 7 | 18 | 110 | 4 |
+| 7:5 | 343 | 4 | 7 | 15 | 92 | 3 |
+| 7:6 | 244 | 3 | 4 | 11 | 97 | 1 |
+| 7:7 | 217 | 4 | 5 | 11 | 107 | 1 |
+| 7:8 | 233 | 1 | 2 | 8 | 100 | 2 |
+| 7:9 | 310 | 4 | 4 | 12 | 89 | 3 |
+| 7:10 | 362 | 5 | 5 | 13 | 98 | 1 |
+| 7:11 | 322 | 4 | 5 | 10 | 0 | 4 |
+| 7:12 | 248 | 2 | 2 | 10 | 104 | 1 |
+| 7:13 | 336 | 2 | 3 | 15 | 99 | 3 |
+| 7:14 | 329 | 3 | 4 | 10 | 94 | 4 |
+| 7:15 | 232 | 3 | 4 | 11 | 97 | 2 |
+| 7:16 | 345 | 4 | 4 | 10 | 102 | 3 |
+| 7:17 | 253 | 4 | 6 | 12 | 106 | 1 |
+| 7:18 | 246 | 3 | 4 | 11 | 90 | 2 |
+| 7:19 | 247 | 3 | 6 | 13 | 92 | 1 |
+| 7:20 | 244 | 3 | 6 | 12 | 98 | 3 |
+| 7:21 | 326 | 5 | 6 | 15 | 91 | 4 |
+| 7:22 | 380 | 6 | 11 | 23 | 109 | 3 |
+| 7:23 | 250 | 3 | 3 | 11 | 98 | 3 |
+| 7:24 | 361 | 6 | 6 | 16 | 95 | 4 |
+
+127 narrations and 306 cited sources across the surah; 7:11 has no
+perspectives because the traditions read Shu'ayb's story alike.
+
+### Why 7:6 failed (1 rewrite, 1 finding)
+
+- 7:6 essay[1]: "al-Mizan reads the closing two verses as turning back to
+  where the sura began"; the block says a return to the beginning of the
+  discourse (the "O Children of Adam" address), not the sura's opening. The
+  rewrite named the address; the proof-through-the-Book half was already
+  exact. An over-specified location rather than the pilot's attribution
+  failure.
+
+Auditors recorded, without failing, six judgment calls of the same shape
+as surah 6's findings: "Tabrisi's gloss" for a view Tabrisi adopts from
+Mujahid and al-Suddi (7:3), "Tabrisi explains" for a qeel view (7:7),
+"al-Tabari and the Sunni commentators" on one Tabari marker (7:6, 7:9),
+"the strongest reading" credited to Tabrisi for a jumhur view he stamps
+al-aqwa (7:17), and the Abd al-Harith story framed as Adam and Eve where
+the hadith centres on Eve (7:24). All ruled supported.
+
+### Deviations from the procedure
+
+- The gather chain was restarted with a per-passage retry loop after two
+  curl timeouts; `fetch.py` itself was not changed. A retry inside
+  `curl_get` (or a per-work retry in `gather`) would remove the need.
+- Writers launched as each packet landed, as for surah 6.
+- 7:20's auditor first wrote a file `audit-check` reported as `malformed`
+  and corrected it before finishing, as 6:16 and 6:20 did.
+- `titles 7 --apply` again needed the `approved` flags flipped by script
+  after "approve all as generated".
+- Loop mode with a fallback wakeup after every launch; none fired.
+- No `passage-prose-reader` pass, per the 2026-09-08 instruction.
+
+### Reader notes (taste and policy, not rule failures)
+
+- Speaker forms drift more than in surah 6. Ali appears as "Imam Ali"
+  (7:1, 7:5, 7:6, 7:14), "Amir al-Mu'minin" (7:11, 7:18), "Ali ibn Abi
+  Talib" (7:20) and "the Commander of the Faithful" (7:22). The Prophet:
+  "the Prophet" (7:10, 7:12), "The Prophet Muhammad" (7:11), "the Prophet
+  Muhammad" (7:22). The fourth Imam is "Ali ibn al-Husayn" (7:11) with no
+  Imam title; the twelfth is "al-Qaim" (7:19); 7:14 has "the Imam" for a
+  chain that names none. Commentators drift too: "al-Tusi" and "al-Mizan"
+  in 7:1 and 7:2 against "Tusi", "Tabrisi", "Tabatabai" from 7:3 on, and
+  "Al-Tabatabai" in 7:4. The essay of 7:21 leaves "Abu Ja'far" unresolved.
+- The tafsir author as narration speaker: "Ali ibn Ibrahim al-Qummi" is the
+  speaker of five narrations that are his own glosses (7:7 verses 57 and
+  58, 7:15 verses 127 and 129, 7:18 verse 149).
+- Reporter framing inside narration text, worst in 7:16 where all three
+  plague narrations are third-person reports ("Al-Ayyashi relates that
+  al-Sadiq was asked ...", "It is narrated from al-Sadiq that ..."); also
+  "He was asked ... He said" (7:1, 7:19), "I asked him" (7:3, 7:22),
+  "Abu Jafar said" (7:1), "And Abu Abdillah said" (7:18), "Ali said to the
+  Exilarch, who had taunted ..." (7:16).
+- Six essays are a single paragraph (7:6, 7:7, 7:10 at 362 words, 7:12,
+  7:17, 7:19); the rest run two to four. 7:13 puts markers after the full
+  stop in its first paragraph; 7:24 adds verse numbers in parentheses after
+  each sentence, a style no other passage uses; 7:4's last paragraph packs
+  four markers into two sentences.
+- Duplicates across passages: "the tablets of Moses are with us, the staff
+  of Moses is with us, and we are the heirs of the prophets" (7:17 verse
+  145 and 7:20 verse 160, different blocks); the Abu al-Sahba' al-Bakri
+  sects report (7:20 verse 159 with seventy-one, 7:22 verse 181 with
+  seventy-three); Ali and the Exilarch appear in 7:16 and 7:20.
+- Perspectives repeat the free-will or divine-will split four times (7:12,
+  7:14, 7:16, 7:23), and open on "Both traditions ..." in 7:8, 7:9, 7:13,
+  7:19, 7:20 and close on it in 7:15 and 7:16. Genuine splits well chosen:
+  the Mizan (7:1), Adam's infallibility (7:2, 7:18, 7:24), the naked tawaf
+  and the imams of tyranny (7:3, 7:4), the men on the Heights (7:5), the
+  ta'wil and al-Qa'im (7:6), restoration of the earth (7:7), the ten
+  fathers (7:8), bounties as wilaya (7:9), Lot's people and the law
+  (7:10), the vision of God (7:17), the light as the Imams (7:19), the
+  guiding nation (7:20), the Sabbath groups (7:21), the covenant clause
+  (7:22).
+- Polemical narrations kept where the sources carry them: Talha and
+  al-Zubayr's camel (7:5), the imams of tyranny (7:3, 7:4), the Murji'a
+  (7:14), Harun ibn Sad and the Zaydiyya as "the calf-party" (7:19), the
+  Exilarch exchanges (7:16, 7:20), Bal'am applied to the people of the
+  qibla (7:22).
+- Ellipses inside narration text: 7:3 verse 28, 7:11 verse 89 (opens on
+  one), 7:14 verse 120, 7:17 verse 143, 7:20 verse 158 (a mid-sentence
+  cut), 7:23 verse 182.
+- 7:8 is thin (26 blocks, two narrations both on verse 59); 7:11 skips
+  verse 87 in the essay body and 7:21 skips verse 170 (both auditors noted
+  it, passed); 7:22 folds 177 and 178 into the surrounding discussion.

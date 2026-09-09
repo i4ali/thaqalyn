@@ -128,6 +128,7 @@ def validate_draft(draft: dict, gathered: dict, verses: dict) -> list[str]:
 
     # verses
     seen: set[int] = set()
+    seen_nids: set[str] = set()
     for entry in draft.get("verses") or []:
         vn = entry.get("verse")
         if vn in seen:
@@ -151,6 +152,11 @@ def validate_draft(draft: dict, gathered: dict, verses: dict) -> list[str]:
             errs.append(f"verse {vn} has more than {NARRATIONS_PER_VERSE} narrations")
         for nar in nars:
             nid = nar.get("id", "?")
+            # Ids are addressed across the whole passage (audit targets, the
+            # app's source sheet), so they may not restart per verse.
+            if nid in seen_nids:
+                errs.append(f"narration {nid} appears twice; ids must be unique across the passage")
+            seen_nids.add(nid)
             sid = nar.get("source")
             num = _source_num(sid)
             if num is None or sid not in by_id or sid not in draft_ids:
