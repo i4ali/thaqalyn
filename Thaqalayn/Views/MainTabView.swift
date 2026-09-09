@@ -122,26 +122,33 @@ struct MainTabView: View {
         // nor restoring alpha/isHidden re-expands it. A fresh TabView starts expanded.
         .id(themeManager.selectedTheme)
 
-        if !tabBarVisibility.isHidden {
-            EmeraldTabBar(items: emeraldItems, selection: $selectedTab)
-        }
+        // Everything docked to the bottom edge ignores the keyboard's safe-area inset, so
+        // it stays pinned to the physical bottom (hidden behind the keyboard, like the
+        // native tab bar) instead of riding up with the keyboard and covering whatever
+        // text field is being edited - e.g. the Quran tab's search box.
+        ZStack(alignment: .bottom) {
+            if !tabBarVisibility.isHidden {
+                EmeraldTabBar(items: emeraldItems, selection: $selectedTab)
+            }
 
-        // Docked journey narration mini-player, floating just above the tab bar. Persists
-        // across all tabs while a journey is playing and its full player is minimized.
-        if showMiniPlayer {
-            JourneyMiniPlayer()
-                .padding(.bottom, JourneyMiniPlayer.bottomInset)
-                .transition(.move(edge: .bottom).combined(with: .opacity))
-        }
+            // Docked journey narration mini-player, floating just above the tab bar. Persists
+            // across all tabs while a journey is playing and its full player is minimized.
+            if showMiniPlayer {
+                JourneyMiniPlayer()
+                    .padding(.bottom, JourneyMiniPlayer.bottomInset)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
 
-        // Docked dua-recitation mini-player, floating just above the tab bar. Persists
-        // across all tabs while a streamed dua/ziyarat recitation is loaded; tapping it
-        // reopens the dua's reader full-screen.
-        if showDuaMiniPlayer {
-            DuaMiniPlayer { expandedDua = duaStream.currentDua }
-                .padding(.bottom, JourneyMiniPlayer.bottomInset)
-                .transition(.move(edge: .bottom).combined(with: .opacity))
+            // Docked dua-recitation mini-player, floating just above the tab bar. Persists
+            // across all tabs while a streamed dua/ziyarat recitation is loaded; tapping it
+            // reopens the dua's reader full-screen.
+            if showDuaMiniPlayer {
+                DuaMiniPlayer { expandedDua = duaStream.currentDua }
+                    .padding(.bottom, JourneyMiniPlayer.bottomInset)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
         }
+        .ignoresSafeArea(.keyboard, edges: .bottom)
         }
         .animation(.spring(response: 0.38, dampingFraction: 0.86), value: showMiniPlayer)
         .animation(.spring(response: 0.38, dampingFraction: 0.86), value: showDuaMiniPlayer)
