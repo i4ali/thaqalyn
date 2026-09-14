@@ -33,10 +33,19 @@ def _check(text: str) -> str:
     return text.strip()
 
 
-def synthesize(text: str, out_mp3: Path, voice_id: str = DEFAULT_VOICE_ID) -> Path:
+def _settings(speed: float | None) -> dict:
+    """Voice settings, with an optional pace (ElevenLabs `speed`, 0.7-1.2; 1.0 = default)."""
+    if speed is None:
+        return _VOICE_SETTINGS
+    if not 0.7 <= float(speed) <= 1.2:
+        raise ValueError(f"tts speed must be within 0.7-1.2, got {speed}")
+    return {**_VOICE_SETTINGS, "speed": float(speed)}
+
+
+def synthesize(text: str, out_mp3: Path, voice_id: str = DEFAULT_VOICE_ID, speed: float | None = None) -> Path:
     """Synthesize one text segment to an mp3 file. Returns the path."""
     text = _check(text)
-    payload = {"text": text, "model_id": "eleven_multilingual_v2", "voice_settings": _VOICE_SETTINGS}
+    payload = {"text": text, "model_id": "eleven_multilingual_v2", "voice_settings": _settings(speed)}
     headers = {"xi-api-key": os.environ["ELEVENLABS_API_KEY"],
                "Content-Type": "application/json", "Accept": "audio/mpeg"}
     resp = requests.post(URL.format(vid=voice_id), headers=headers, json=payload, timeout=120)
@@ -50,14 +59,14 @@ def synthesize(text: str, out_mp3: Path, voice_id: str = DEFAULT_VOICE_ID) -> Pa
     return out_mp3
 
 
-def synthesize_timed(text: str, out_mp3: Path, voice_id: str = DEFAULT_VOICE_ID) -> list[dict]:
+def synthesize_timed(text: str, out_mp3: Path, voice_id: str = DEFAULT_VOICE_ID, speed: float | None = None) -> list[dict]:
     """Synthesize + return word-level timings: [{"word","start","end"(sec)}, ...].
 
     Uses the with-timestamps endpoint (character-level alignment) collapsed to
     words — same approach as the tafsir-video skill.
     """
     text = _check(text)
-    payload = {"text": text, "model_id": "eleven_multilingual_v2", "voice_settings": _VOICE_SETTINGS}
+    payload = {"text": text, "model_id": "eleven_multilingual_v2", "voice_settings": _settings(speed)}
     headers = {"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json"}
     resp = requests.post(URL_TIMED.format(vid=voice_id), headers=headers, json=payload, timeout=120)
     if resp.status_code != 200:

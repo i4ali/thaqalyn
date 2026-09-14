@@ -25,6 +25,19 @@ enum ProgressTabStrings {
     static func ofTotal(_ n: Int) -> String { "of \(n)" }
     static let blessingsEarned = "blessings earned"
 
+    // Quizzes
+    static func quizzesTaken(_ taken: Int, of total: Int) -> String {
+        taken == 1 ? "1 quiz taken" : "\(taken) quizzes taken"
+    }
+    static func quizzesShipped(_ total: Int) -> String { "of \(total) available" }
+    static let noQuizzesYet = "No quizzes taken yet"
+    static let quizzesHint = "Test yourself at the end of any passage."
+    static let fullMarks = "Full marks"
+    static let averageScore = "Average"
+    static func averageValue(_ average: Double, of total: Int) -> String {
+        String(format: "%.1f", average) + "/\(total)"
+    }
+
     // Streak
     static func dayStreak(_ n: Int) -> String { "\(n) Day Streak" }
     static let keepItGoing = "Keep it going!"

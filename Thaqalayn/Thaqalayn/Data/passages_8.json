@@ -1,0 +1,3467 @@
+{
+  "1": {
+    "id": "8:1",
+    "surah": 8,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "title": {
+      "en": "The spoils and Badr"
+    },
+    "essay": {
+      "en": "The surah opens on a quarrel over spoils. After Badr the men who had fought fell to disputing over what they had seized, and they asked the Prophet whose the anfal were [13]. The reply awards them to no faction: the anfal belong to Allah and the Apostle, and the fighters are told instead to be wary of Allah, to settle their differences, and to obey. Tabatabai reads anfal as an addition over a thing, a word that covers both battle spoils and ownerless property [1]. From al-Baqir and al-Sadiq the commentators report that the anfal are whatever is taken from enemy land without fighting, what the jurists call fay', and that all of it belongs to God, His Messenger, and after him to the one who stands in his place [3]. In the reading of the Ahl al-Bayt the words are a request for the anfal, which is why the answer turns to fear of God and not to who deserves them [7].\n\nThe passage then draws the faithful: hearts that tremble when God is mentioned, faith that grows when His signs are recited, trust in the Lord, steady prayer, and open hands. These, it says, are truly the faithful, with ranks near their Lord, forgiveness, and a noble provision. Commentators divided over whether these are the marks of every believer or of the best of them [8].\n\nThe scene returns to Badr. God brought the Prophet out from his home, meaning Medina, though a party of the faithful were reluctant and disputed the fighting once it had become clear [9]. They had hoped for the unarmed caravan rather than the armed force [2], but God meant to confirm the truth and root out the faithless. When the small band appealed for help, He answered with a thousand angels in a file. Yet the reinforcement was only good news to steady their hearts, for victory comes from God alone; whether the angels themselves fought is disputed [12]."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "The spoils belong to Allah"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الأنفال: ما لم يوجف عليه بخيل و لا ركاب، أو قوم صالحوا أو قوم أعطوا بأيديهم، و كل أرض خربة و بطون الأودية فهو لرسول الله (صلى الله عليه و آله)، و هو للإمام من بعده يضعه حيث يشاء",
+            "chain": "Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Hafs ibn al-Bakhtari, from Abu Abdillah",
+            "text": {
+              "en": "The anfal are whatever no horses or camels were spurred over, or a people who made peace, or who surrendered by their own hand, and every ruined land and the river-beds. This belongs to the Messenger of Allah, and to the Imam after him, to place where he wills."
+            },
+            "source": "s17"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Aban ibn Taghlib",
+            "arabic": "فينا والله نزلت خاصة ما أشركنا … فيها أحد",
+            "chain": "al-Husayn ibn Sa'id, from Zayd ibn al-Hasan al-Anmati, from Aban ibn Taghlib, from Jafar ibn Muhammad",
+            "text": {
+              "en": "Aban ibn Taghlib asked about whom the verse of the anfal was revealed. He said: By Allah, it was revealed about us in particular; no one shares in it with us."
+            },
+            "source": "s24"
+          }
+        ]
+      },
+      {
+        "verse": 2,
+        "heading": {
+          "en": "Marks of the faithful"
+        },
+        "note": {
+          "en": "Qummi reads these verses as revealed about Ali, Abu Dharr, Salman and Miqdad [22]."
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "بتمام الايمان دخل المؤمنون الجنّة وبالزيادة في الإِيمان تفاضل المؤمنون بالدّرجات عند الله وبالنقصان دخل المفرّطون النار",
+            "chain": null,
+            "text": {
+              "en": "By the completeness of faith the believers entered Paradise; by increase in faith the believers were graded in ranks before Allah; and by its diminishing the negligent entered the Fire."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 5,
+        "heading": {
+          "en": "Brought out to Badr"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هو أمرُنا، أمرَ الله أن لا تستعجل به حتى يؤيده الله بثلاثة أجناد: الملائكة، والمؤمنين، والرعب. وخروجه كخروج رسول الله ، وذلك قوله تعالى كَمَا أَخْرَجَكَ رَبُّكَ مِنْ بَيْتِكَ بِالْحَقِّ وَإِنَّ فَرِيقًا مِنَ الْمُؤْمِنِينَ لَكَارِهُونَ",
+            "chain": "Ali ibn Ahmad, from Ubaydullah ibn Musa al-Alawi, from Ali ibn al-Hasan, from Ali ibn Hassan, from Abd al-Rahman ibn Kathir, from Abu Abdillah",
+            "text": {
+              "en": "'Allah's command has come, so do not seek to hasten it' - this is our affair, the rising of the Qaim, which Allah ordered not be hastened until He aids it with three armies: the angels, the believers, and terror. Its advent will be like the Prophet's coming out."
+            },
+            "source": "s55"
+          }
+        ]
+      },
+      {
+        "verse": 7,
+        "heading": {
+          "en": "The two companies"
+        },
+        "note": {
+          "en": "The two companies are the caravan and the armed force; the unarmed one the men hoped for was the caravan [2]."
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Jabir",
+            "arabic": "كلماته في الباطن علي (عليه السلام) هو كلمة الله في الباطن … فهم بنو امية هم الكافرون، يقطع الله دابرهم",
+            "chain": "al-Ayyashi, from Jabir, from Abu Ja'far",
+            "text": {
+              "en": "His words, in the inner sense, are Ali; Ali is the word of Allah inwardly. And 'root out the faithless' means Banu Umayya, the faithless, whose root Allah cuts off."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 9,
+        "heading": {
+          "en": "The plea for help"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "أنّ النبيّ صلىّ الله عليه وآله وسلم لمّا نظر الى كثرة عدد المشركين وقلّة عدد المسلمين استقبل القبلة وقال اللهم انجز لي ما وعدتني اللَّهم إن تهلك هذه العصابة لا تعبد في الأرض فما زال يهتف ربه مادّاً يديه حتّى سقط رداؤه عن منكبه",
+            "chain": null,
+            "text": {
+              "en": "When the Prophet saw the great number of the polytheists and the fewness of the Muslims, he faced the qibla and said: O Allah, fulfill for me what You promised me; O Allah, if this band perishes You will not be worshipped on earth. He kept imploring his Lord, hands outstretched, until his cloak fell."
+            },
+            "source": "s23"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On what the anfal are, the readings divide. From al-Baqir and al-Sadiq the Shia commentators hold the anfal a standing category that belongs to God and His Messenger and, after him, to whoever stands in his place [3]; al-Sadiq told Aban ibn Taghlib the verse was revealed about them in particular, none sharing it with them [24]. Tabari, gathering the reports, identifies the anfal with the spoils of war taken at Badr, reading the question as asking whose they are [26]. Both trace the verse to Badr, but differ on whether it fixes a lasting right of the Imam or settles one day's plunder."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 1 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الأنفال جمع نفل بالفتح وهو الزيادة على الشيء"
+        },
+        "gloss": "The anfal is the plural of nafl, meaning the addition over a thing."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 7 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد بالطائفتين العير والنفير"
+        },
+        "gloss": "By the two companies are meant the caravan and the armed force."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقالا هي لله وللرسول وبعده لمن قام مقامه"
+        },
+        "gloss": "They said: it belongs to Allah and the Messenger, and after him to whoever stands in his place."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولو سألوه عن موضع الاستحقاق لم يقل لهم: اتقوا الله"
+        },
+        "gloss": "Had they asked about who is entitled to the anfal, He would not have told them: be wary of Allah."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 2 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذه اوصاف افاضل المؤمنين، وخيارهم، وليس يمتنع أن يتفاضل المؤمنون في الطاعات وان لم يتفاضلوا في الايمان"
+        },
+        "gloss": "These are the qualities of the best of the believers; believers may excel one another in obedience even if they do not differ in faith itself."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 5 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يراد به المدينة، اخرجه الله إلى بدر"
+        },
+        "gloss": "By 'your home' is meant Medina; Allah brought him out to Badr."
+      },
+      {
+        "id": "s12",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهل قاتلت الملائكة يوم بدر قيل فيه قولان"
+        },
+        "gloss": "Did the angels fight on the day of Badr? Two views are given about it."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت يوم بدر لما أنهزم الناس كان أصحاب رسول الله صلى الله عليه وآله على ثلاث فرق"
+        },
+        "gloss": "It was revealed on the day of Badr; when the people were routed, the Prophet's companions were in three groups."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الأنفال: ما لم يوجف عليه بخيل و لا ركاب، أو قوم صالحوا أو قوم أعطوا بأيديهم، و كل أرض خربة و بطون الأودية فهو لرسول الله (صلى الله عليه و آله)، و هو للإمام من بعده يضعه حيث يشاء"
+        },
+        "gloss": "The anfal are whatever no horses or camels were spurred over, or a people who made peace or surrendered by hand, and every ruined land and the river-beds; it belongs to the Messenger, and to the Imam after him to place where he wills."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 7 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فهم بنو امية هم الكافرون، يقطع الله دابرهم"
+        },
+        "gloss": "They are Banu Umayya, the faithless; Allah cuts off their root."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 2 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بتمام الايمان دخل المؤمنون الجنّة وبالزيادة في الإِيمان تفاضل المؤمنون بالدّرجات عند الله وبالنقصان دخل المفرّطون النار"
+        },
+        "gloss": "By the completeness of faith the believers entered Paradise; by increase in faith they were graded in ranks before Allah; by its diminishing the negligent entered the Fire."
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 9 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "استقبل القبلة وقال اللهم انجز لي ما وعدتني اللَّهم إن تهلك هذه العصابة لا تعبد في الأرض"
+        },
+        "gloss": "He faced the qibla and said: O Allah, fulfill for me what You promised me; O Allah, if this band perishes You will not be worshipped on earth."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=8&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فينا والله نزلت خاصة"
+        },
+        "gloss": "By Allah, it was revealed about us in particular."
+      },
+      {
+        "id": "s26",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=8&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هي الغنائم"
+        },
+        "gloss": "They are the spoils of war (ghana'im)."
+      },
+      {
+        "id": "s55",
+        "kind": "hadith",
+        "work": "Kitab al-Ghayba",
+        "author": "abu abd allah muhammad b. ibrahim al-numani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 42, cited at Al-Anfaal 5",
+        "url": "https://thaqalayn.com/book/8",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو أمرُنا، أمرَ الله أن لا تستعجل به حتى يؤيده الله بثلاثة أجناد: الملائكة، والمؤمنين، والرعب. وخروجه كخروج رسول الله"
+        },
+        "gloss": "It is our affair; Allah ordered it not be hastened until He supports it with three armies - the angels, the believers, and terror - and its coming is like the coming out of the Messenger of Allah."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:29:10Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T19:58:21Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "2": {
+    "id": "8:2",
+    "surah": 8,
+    "index": 2,
+    "range": [
+      11,
+      19
+    ],
+    "title": {
+      "en": "God's aid at Badr"
+    },
+    "essay": {
+      "en": "These verses recall the Battle of Badr, which al-Mizan names the first ghazwa in Islam and whose favors God here recounts to the believers [1]. The passage opens with those favors. God covered the Muslims with a light sleep as a security from Him and sent down rain from the sky. al-Tusi records Ibn Abbas's account: the Muslims had camped the night of Badr with no water and woke in ritual impurity while the polytheists held the wells, so Satan whispered doubt to them; God then sent rain, by which they drank and washed, the whispering left them, and the loose sand beneath their feet was packed firm [6].\n\nThen God turned to the angels. 'I am indeed with you,' al-Tusi reads, means with help and support: the angels were to steady the believers, while God cast terror into the hearts of the disbelievers and ordered them struck down [7]. This, the passage says, is because they defied God and His Apostle; let them taste it, and know the Fire awaits.\n\nThe address turns next to the believers: when you meet the disbelievers advancing, do not turn your backs, and whoever flees - save to wheel back into the fight or to join another troop - earns God's wrath and hell. Whether this bound only Badr's fighters or every believer was disputed: al-Tusi reports that Ibn Abbas held it general, the view of Abu Ja'far and Abu Abdillah [11], and al-Mizan too reads the address as general, not tied to Badr [2].\n\nThe passage then lifts the victory out of the Muslims' hands: 'You did not kill them; rather, it was Allah who killed them.' Of the throw, al-Tusi reports that the Prophet took a handful of pebbles, flung them into the enemy's faces saying 'may the faces be disfigured,' and God carried them to every eye [12]. God undermines the disbelievers' scheming, and the closing verse answers their own plea for a verdict, which al-Tusi notes the polytheists had sought, Abu Jahl among them [14]. If they resume, God will return, and their numbers will never avail them, for God is with the faithful."
+    },
+    "verses": [
+      {
+        "verse": 11,
+        "heading": {
+          "en": "Sleep and rain at Badr"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "قال أمير المؤمنين (عليه السلام): اشربوا ماء السماء فإنه يطهر البدن و يدفع الأسقام، قال الله عز و جل: { وَيُنَزِّلُ عَلَيْكُم مِّن ٱلسَّمَآءِ مَآءً لِّيُطَهِّرَكُم بِهِ وَيُذْهِبَ عَنكُمْ رِجْزَ ٱلشَّيْطَانِ وَلِيَرْبِطَ عَلَىٰ قُلُوبِكُمْ وَيُثَبِّتَ بِهِ ٱلأَقْدَامَ }",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad, from al-Qasim ibn Yahya, from his grandfather al-Hasan ibn Rashid, from Abu Basir, from Abu Abdillah, from Amir al-Mu'minin",
+            "text": {
+              "en": "Drink the water of the sky, for it purifies the body and drives away illnesses. God said: 'and He sent down water from the sky to purify you with it, and to repel from you the defilement of Satan, and to fortify your hearts, and to make your feet steady with it.'"
+            },
+            "source": "s21"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Jabir",
+            "arabic": "السماء في الباطن: رسول الله (صلى الله عليه و آله)، و الماء: علي (عليه السلام) جعله الله من رسول الله (صلى الله عليه و آله) … فذلك علي يطهر الله به قلب من والاه … من والى عليا (عليه السلام) يربط الله على قلبه بعلي (عليه السلام) فيثبت على ولايته",
+            "chain": "al-Ayyashi, from Jabir, from Abu Abdillah Ja'far ibn Muhammad",
+            "text": {
+              "en": "In the inner meaning the sky is the Messenger of God, and the water is Ali, whom God made from the Messenger. 'Water to purify you with it' is Ali, by whom God purifies the heart of whoever takes him as guardian; whoever takes Ali as guardian, God binds his heart, and he stays firm on his guardianship."
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "God signals the angels"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "سألت أبا جعفر (عليه السلام)، فقلت: { ذْ يُوحِي رَبُّكَ إِلَى ٱلْمَلاۤئِكَةِ أَنِّي مَعَكُمْ } ، فقال: إلهام",
+            "chain": "al-Ayyashi, from Muhammad ibn Yusuf, from his father, who asked Abu Ja'far",
+            "text": {
+              "en": "I asked Abu Ja'far about 'Then your Lord signaled to the angels: I am indeed with you.' He said: It was an inspiration."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 15,
+        "heading": {
+          "en": "Do not flee"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "إن الرعب و الخوف من جهاد المستحق للجهاد و المتوازرين على الضلال، ضلال في الدين، و سلب للدنيا، مع الذل و الصغار، و فيه استيجاب النار بالفرار من الزحف عند حضرة القتال، يقول الله عز و جل: { يَٰأَيُّهَا ٱلَّذِينَ آمَنُوۤاْ إِذَا لَقِيتُمُ ٱلَّذِينَ كَفَرُواْ زَحْفاً فَلاَ تُوَلُّوهُمُ ٱلأَدْبَارَ }",
+            "chain": "Muhammad ibn Ya'qub, from Ali ibn Ibrahim, from his father, from one of his companions, from Abu Hamza, from Aqil al-Khuza'i, that Amir al-Mu'minin said",
+            "text": {
+              "en": "Dread and fear of fighting those who deserve to be fought, and who back one another in error, is itself error in religion and loss of this world, with humiliation and disgrace; in it is deserving the Fire by fleeing battle when combat is joined. God says: 'do not turn your backs from them.'"
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 16,
+        "heading": {
+          "en": "Fleeing from battle"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir or al-Sadiq",
+            "addressee": "Zurara",
+            "arabic": "قلت: الزبير شهد بدرا؟ قال: نعم، و لكنه فر يوم الجمل، فإن كان قاتل المؤمنين فقد هلك بقتاله إياهم، و إن كان قاتل كفارا فقد باء بغضب من الله حين ولاهم دبره",
+            "chain": "al-Ayyashi, from Zurara, from one of the two Imams",
+            "text": {
+              "en": "I asked: Did al-Zubayr witness Badr? He said: Yes, but he fled on the Day of the Camel. If he was fighting believers, he perished by fighting them; and if he was fighting disbelievers, he earned God's wrath when he turned his back to them."
+            },
+            "source": "s22"
+          },
+          {
+            "id": "n6",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "إلاّ متحرّفاً لقتال قال متطرّداً يريد الكرة عليهم أو متحيّزاً يعني متأخّراً إلى أصحابه من غير هزيمة فمن انهزم حتى يجوز صف أصحابه فقد باءَ بغضب من الله",
+            "chain": "al-Ayyashi, from al-Kazim",
+            "text": {
+              "en": "'Unless diverting to fight' means one who wheels about intending to charge them again; 'or retiring to a troop' means one who falls back to his companions without being routed. Whoever is routed until he passes the line of his companions has earned God's wrath."
+            },
+            "source": "s24"
+          },
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Amr ibn Ubayd",
+            "arabic": "وَالْفِرَارُ مِنَ الزَّحْفِ لأنَّ الله عَزَّ وَجَلَّ يَقُولُ وَمَنْ يُوَلِّهِمْ يَوْمَئِذٍ دُبُرَهُ إِلا مُتَحَرِّفاً لِقِتالٍ أَوْ مُتَحَيِّزاً إِلى‏ فِئَةٍ فَقَدْ باءَ بِغَضَبٍ مِنَ الله وَمَأْواهُ جَهَنَّمُ وَبِئْسَ الْمَصِيرُ",
+            "chain": "A number of our companions, from Ahmad ibn Muhammad ibn Khalid, from Abd al-Azim ibn Abd Allah al-Hasani, from Abu Ja'far, from his father, from Musa ibn Ja'far, that Amr ibn Ubayd came upon Abu Abdillah",
+            "text": {
+              "en": "Among the major sins is fleeing from battle, for God says: 'Whoever turns his back to them that day - unless diverting to fight or retiring to a troop - has earned God's wrath, and his refuge is hell, an evil destination.'"
+            },
+            "source": "s54"
+          }
+        ]
+      },
+      {
+        "verse": 17,
+        "heading": {
+          "en": "You did not throw"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq and Imam al-Sajjad",
+            "addressee": null,
+            "arabic": "أنّ عليّاً عليه السلام ناول رسول الله صلَّى الله عليه وآله وسلم القبضة التي رمى بها في وجوه المشركين فقال الله وما رميت إذ رميت ولكنّ الله رمى",
+            "chain": "al-Ayyashi, from al-Sadiq and al-Sajjad",
+            "text": {
+              "en": "Ali handed the Messenger of God the handful with which he threw at the faces of the polytheists; so God said: 'and you did not throw when you threw, rather it was Allah who threw.'"
+            },
+            "source": "s24"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On whether the ban on fleeing binds only the men of Badr or every believer, the traditions divide. Many Sunni authorities restricted it to Badr: Ibn Kathir relays that Ibn Umar told his questioner this verse 'was revealed only about the day of Badr, not before it and not after it,' since the Prophet was then the fighters' only troop, and that Umar called himself a troop for every Muslim [34]. The Shia Imams read it as a standing ruling: al-Tusi reports Ibn Abbas held it general, the view of Abu Ja'far and Abu Abdillah [11], and al-Kafi counts fleeing from battle among the major sins [54]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 11 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تشير الآيات إلى قصة بدر، وهي أول غزوة في الإِسلام، وظاهر سياق الآيات أنها نزلت بعد انقضائها"
+        },
+        "gloss": "The verses point to the story of Badr, which is the first ghazwa in Islam, and the apparent context is that they came down after it ended."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 15 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وخطاب الآية عام غير خاص بوقت دون وقت ولا غزوة دون غزوة فلا وجه لتخصيصها بغزوة بدر"
+        },
+        "gloss": "The verse's address is general, not confined to one time or one campaign, so there is no basis for restricting it to the Battle of Badr."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لأن المسلمين باتوا ليلة بدر على غير ماء، فأصبحوا مجنبين، فوسوس اليهم الشيطان … فأرسل الله عليهم السماء، فشربوا واغتسلوا وأذهب به وسوسة الشيطان، وكانوا في رمل تغوص فيه الأقدام، فشدده المطر حتى تثبت عليه الرجال"
+        },
+        "gloss": "The Muslims had spent the night of Badr with no water and woke in ritual impurity, so Satan cast doubt to them ... then God sent down rain upon them, and they drank and washed and it removed Satan's whispering from them; they had been on sand into which their feet sank, and the rain packed it firm so the men stood steady on it."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معنى الآية اذكروا { إذ يوحي ربك إلى الملائكة أني معكم } يعني بالمعونة والنصرة"
+        },
+        "gloss": "The meaning is: remember when your Lord signaled to the angels 'I am with you' - that is, with help and support."
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي تناول الوعيد لكل فار من الزحف خلاف. فقال الحسن وقتادة والضحاك: انما كان ذلك يوم بدر خاصة. وقال ابن عباس: هو عام، وهو قول ابي جعفر وابي عبدالله عليهما السلام"
+        },
+        "gloss": "There is disagreement over whether the threat reaches everyone who flees from battle. Hasan, Qatada and Dahhak said it was for the day of Badr alone. Ibn Abbas said it is general, and this is the view of Abu Ja'far and Abu Abdillah (as)."
+      },
+      {
+        "id": "s12",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أن النبي صلى الله عليه وآله أخذ كفاً من الحصباء فرماها في وجوههم، وقال: شاهت الوجوه، فقسمها الله تعالى على ابصارهم"
+        },
+        "gloss": "The Prophet took a handful of pebbles and threw them into their faces, saying 'may the faces be disfigured,' and God apportioned them over their eyes."
+      },
+      {
+        "id": "s14",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=19&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "انه خطاب للمشركين لانهم استنصروا بان قالوا: اللهم اقطعنا للرحم، واظلمنا لصاحبه فانصرنا عليه روي ان ابا جهل قال ذلك"
+        },
+        "gloss": "It is addressed to the polytheists, for they sought victory, saying: 'O God, whichever of us most severs kinship and most wrongs his fellow, help us against him' - it is reported that Abu Jahl said this."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال أمير المؤمنين (عليه السلام): اشربوا ماء السماء فإنه يطهر البدن و يدفع الأسقام"
+        },
+        "gloss": "Amir al-Mu'minin said: Drink the water of the sky, for it purifies the body and repels illnesses."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 12 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "سألت أبا جعفر (عليه السلام)، فقلت: { ذْ يُوحِي رَبُّكَ إِلَى ٱلْمَلاۤئِكَةِ أَنِّي مَعَكُمْ } ، فقال: إلهام"
+        },
+        "gloss": "I asked Abu Ja'far about 'Then your Lord signaled to the angels: I am indeed with you.' He said: [It was] an inspiration."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 15 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "العياشي عن الكاظم عليه السلام إلاّ متحرّفاً لقتال قال متطرّداً يريد الكرة عليهم أو متحيّزاً يعني متأخّراً إلى أصحابه من غير هزيمة فمن انهزم حتى يجوز صف أصحابه فقد باءَ بغضب من الله"
+        },
+        "gloss": "al-Ayyashi from al-Kazim: 'unless diverting to fight' - one wheeling about, intending to charge them again; 'or retiring to a troop' - one falling back to his companions without being routed; whoever is routed until he passes the line of his companions has earned God's wrath."
+      },
+      {
+        "id": "s34",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 15 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=8&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنما أنزلت هذه الآية في يوم بدر، لا قبلها ولا بعدها"
+        },
+        "gloss": "This verse was revealed only about the day of Badr, not before it and not after it."
+      },
+      {
+        "id": "s54",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 2, hadith 24, cited at Al-Anfaal 16",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "صحيح"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَالْفِرَارُ مِنَ الزَّحْفِ لأنَّ الله عَزَّ وَجَلَّ يَقُولُ وَمَنْ يُوَلِّهِمْ يَوْمَئِذٍ دُبُرَهُ إِلا مُتَحَرِّفاً لِقِتالٍ أَوْ مُتَحَيِّزاً إِلى‏ فِئَةٍ فَقَدْ باءَ بِغَضَبٍ مِنَ الله وَمَأْواهُ جَهَنَّمُ وَبِئْسَ الْمَصِيرُ"
+        },
+        "gloss": "And fleeing from battle [is among the major sins], for God says: 'Whoever turns his back to them that day - unless diverting to fight or retiring to a troop - has earned God's wrath, and his refuge is hell, an evil destination.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:34:40Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T20:05:58Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "3": {
+    "id": "8:3",
+    "surah": 8,
+    "index": 3,
+    "range": [
+      20,
+      28
+    ],
+    "title": {
+      "en": "Obey Allah and His Apostle"
+    },
+    "essay": {
+      "en": "The passage renews the surah's summons to the believers: obey Allah and His Apostle, and do not turn away from him while you hear. Tusi reads 'do not turn away from him' as a ban on turning from his command and prohibition while you hear his very call to you [7]. Tabatabai frames the whole set as commands and prohibitions bound to the fighting, an urging to God-wariness, and a warning against opposing Allah and His Messenger, closing with a reminder of God's favours upon the believers at Badr [1].\n\nThe warning then sharpens. Do not be like those who say 'We hear' though they do not hear: people who, Tusi notes, claim to listen as one who grasps and accepts, when they take nothing from what they heard [8]. Such people, Tabrisi says, are the polytheists who gained no good from the truth, so the Quran names them the worst of beasts, deaf and dumb, who do not reason [3]. Had God known any good in them He would have made them hear; and this, Tabrisi adds, shows that God withholds His grace from no one except the person He knows will not benefit by it [3].\n\nThen the call turns to life. Answer Allah and the Apostle when he summons you to what gives you life: read, Tusi records, as reviving the community through struggle, or as the Quran, or as the knowledge by which one is guided [11]. Know, too, that God comes between a man and his heart. Verse 25 warns of a trial that will not strike only the wrongdoers among you. Ali and al-Baqir read it 'it shall surely strike' [4]; Tusi explains that such turmoil, once loosed, spares no one, for its harm reaches all, and the commentators tie its coming to the Battle of the Camel [12].\n\nThe close turns to gratitude and trust: remember when you were few and abased in Mecca, and He gave you refuge in Medina and fed you from the spoils He made lawful [5]; so do not betray God, His Apostle, and your trusts, revealed, they say, over Abu Lubaba at Banu Qurayza [6]."
+    },
+    "verses": [
+      {
+        "verse": 22,
+        "heading": {
+          "en": "The worst of beasts"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "نزلت الآية في بني عبد الدار، لم يكن أسلم منهم غير مصعب بن عمير، و حليف لهم يقال له: سويبط",
+            "chain": null,
+            "text": {
+              "en": "This verse was revealed about Banu Abd al-Dar. None of them accepted Islam except Mus'ab ibn Umayr and an ally of theirs called Suwaybit."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 24,
+        "heading": {
+          "en": "Summoned to life"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "ولاية علي بن ابي طالب عليه السلام فإن اتباعكم إياه وولايته أجمع لأمركم وأبقى للعدل فيكم",
+            "chain": "Ahmad ibn Muhammad, from Ja'far ibn Abdillah, from Kathir ibn Ayyash, from Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "It means the guardianship of Ali ibn Abi Talib. Your following him and his guardianship is what best gathers your affairs and best preserves justice among you."
+            },
+            "source": "s16"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يحول بينه و بين أن يعلم أن الباطل حق",
+            "chain": "al-Barqi, from Ali ibn al-Hakam, from Hisham ibn Salim, from Abu Abdillah",
+            "text": {
+              "en": "God intervenes between a man and his ever coming to know falsehood as truth."
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 25,
+        "heading": {
+          "en": "A trial for all"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أصابت الناس فتنة بعد ما قبض الله نبيه (صلى الله عليه و آله) حتى تركوا عليا (عليه السلام) و بايعوا غيره، و هي الفتنة التي فتنوا بها، و قد أمرهم رسول الله (صلى الله عليه و آله) باتباع علي (عليه السلام) و الأوصياء من آل محمد (عليهم السلام)",
+            "chain": "al-Ayyashi, from Abd al-Rahman ibn Salim, from al-Sadiq",
+            "text": {
+              "en": "A trial struck the people after Allah took His Prophet, until they abandoned Ali and pledged allegiance to another. That was the trial they fell into, though the Messenger had commanded them to follow Ali and the successors from the family of Muhammad."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 27,
+        "heading": {
+          "en": "Do not betray trusts"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فخيانة الله والرسول معصيتهما وأما خيانة الأمانة فكل إنسان مأمون على ما افترض الله عليه",
+            "chain": "Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "Betraying Allah and the Messenger is disobeying them. As for betraying the trust: every person is entrusted with what Allah has made obligatory upon him."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 28,
+        "heading": {
+          "en": "Wealth and children"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "لَا يَقُولَنَّ أَحَدُكُمْ اللَّهُمَّ إِنِّى أَعُوذُ بِكَ مِنَ الْفِتْنَةِ لِأَنَّهُ لَيْسَ أَحَدٌ إِلَّا وَهُوَ مُشْتَمِلٌ عَلَى فِتْنَةٍ وَلَكِنْ مَنِ اسْتَعَاذَ فَلْيَسْتَعِذْ مِنْ مُضِلَّاتِ الْفِتَنِ فَإِنَّ اللَّهَ سُبْحَانَهُ يَقُولُ وَاعْلَمُوا أَنَّمَا أَمْوَالُكُمْ وَأَوْلَادُكُمْ فِتْنَةٌ",
+            "chain": null,
+            "text": {
+              "en": "None of you should say, 'O Allah, I seek refuge in You from trial,' for no one is free of some trial. Whoever seeks refuge, let him seek it from misleading trials, for Allah says: know that your possessions and children are a test."
+            },
+            "source": "s71"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'answer... when he summons you to what gives you life,' the traditions differ on the summons itself. Tabari holds it means responding to the Apostle when he calls to the truth [32], and Ibn Kathir gathers the early glosses, Mujahid's 'the truth' and Qatada's 'this Quran' [38]. The Shia reading gives it a definite object: Fayd al-Kashani records from al-Kafi that al-Sadiq said the verse was revealed concerning the guardianship of Ali, and from al-Baqir that following him and his guardianship best gathers the community's affairs and best preserves justice among them [26]. The command to answer is shared; its life-giving content is read narrowly or broadly."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 20 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان أوامرٌ ونواه متعلقة بالجهاد الإِسلامي مما يناسب سوق القصة، وحثٌّ على تقوى الله وإنذار وتخويف من مخالفة الله ورسوله والتعرض لسخطه سبحانه، وفيها إِشارة إلى بعض ما جرى في وقعة بدر من منن الله وأياديه على المؤمنين."
+        },
+        "gloss": "An account of commands and prohibitions bound to the Islamic struggle, fitting the flow of the story, an urging to God-wariness and a warning against opposing Allah and His Messenger and courting His wrath, with a reference to some of God's favours upon the believers at Badr."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 22 to 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني هؤلاء المشركين الذين لم ينتفعوا بما يسمعون من الحق … وفي هذا دلالة على أن الله تعالى لا يمنع أحداً من المكلفين اللطف وإنما لا يلطف لمن يعلم أنه لا ينتفع به."
+        },
+        "gloss": "Meaning these polytheists who gained no benefit from the truth they hear. And in this is proof that Allah withholds His grace from no accountable person, and only withholds it from the one He knows will not benefit by it."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 24 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قرأ أمير المؤمنين علي بن أبي طالب ع وزيد بن ثابت وأبو جعفر الباقر ع والربيع بن أنس وأبو العالية لتصبنَّ والقراءة المشهورة لا تصيبن."
+        },
+        "gloss": "Amir al-Muminin Ali, Zayd ibn Thabit, Abu Ja'far al-Baqir, al-Rabi ibn Anas and Abu al-Aliya read 'it shall surely strike'; the well-known reading is 'shall not visit.'"
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي جعل لكم مأوى ترجعون إليه يعني المدينة دار الهجرة … يعني الغنائم أحلَّها لكم ولم يحلّها لأحد قبلكم."
+        },
+        "gloss": "That is, He made you a refuge to return to, meaning Medina, the abode of the Hijra; and 'the good things' means the spoils, which He made lawful to you and to no one before you."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 27 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت في أبي لبابة بن عبد المنذر الأنصاري … فأشار أبو لبابة بيده إلى حلقه أنه الذبح فلا تفعلوا"
+        },
+        "gloss": "It was revealed about Abu Lubaba ibn Abd al-Mundhir the Ansari; he gestured with his hand to his throat, that it meant slaughter, so 'do not do it.'"
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معناه ولا تعرضوا عن امره ونهيه وانتم تسمعون دعاءه لكم، فنهاهم عن التولي في هذه الحال."
+        },
+        "gloss": "It means: do not turn from His command and prohibition while you hear His call to you; so He forbade them to turn away in this state."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 21",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معناه سمعنا سماع عالم قابل، وليسوا كذلك … فجعلوا بمنزلة من لا يسمع في أنهم لم ينتفعوا بالمسموع"
+        },
+        "gloss": "It means: we heard as one who understands and accepts, but they were not so; they were placed like one who does not hear, in that they took no benefit from what was heard."
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "دعاكم إلى احياء امركم بجهاد عدوكم مع نصر الله إياكم … لما يورثكم الحياة الدائمة في نعيم الاخرة من اتباع الحق: القرآن … لما يحييكم بالعلم الذي تهتدون به"
+        },
+        "gloss": "He calls you to the reviving of your cause by struggle against your enemy with Allah's help; or to what bequeaths lasting life in the bliss of the Hereafter, following the truth: the Quran; or to what gives you life by the knowledge with which you are guided."
+      },
+      {
+        "id": "s12",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=25&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معناه انها تعم لان الهرج إذا وقع دخل ضرره على كل أحد … وقال الحسن والسدي ومجاهد وابن عباس: نزلت هذه الآية في أهل الجمل"
+        },
+        "gloss": "It means the trial is general, because turmoil, when it falls, brings its harm upon everyone; and al-Hasan, al-Suddi, Mujahid and Ibn Abbas said this verse was revealed about the people of the Camel."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولاية علي بن ابي طالب عليه السلام فإن اتباعكم إياه وولايته أجمع لأمركم وأبقى للعدل فيكم"
+        },
+        "gloss": "The guardianship of Ali ibn Abi Talib: your following him and his guardianship is what best gathers your affairs and best preserves justice among you."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فخيانة الله والرسول معصيتهما وأما خيانة الأمانة فكل إنسان مأمون على ما افترض الله عليه"
+        },
+        "gloss": "Betraying Allah and the Messenger is disobeying them; as for betraying the trust, every person is entrusted with what Allah has made obligatory upon him."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت الآية في بني عبد الدار، لم يكن أسلم منهم غير مصعب بن عمير، و حليف لهم يقال له: سويبط"
+        },
+        "gloss": "The verse was revealed about Banu Abd al-Dar; none of them accepted Islam except Mus'ab ibn Umayr and an ally of theirs called Suwaybit."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يحول بينه و بين أن يعلم أن الباطل حق"
+        },
+        "gloss": "He intervenes between him and his coming to know falsehood as truth."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=25&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أصابت الناس فتنة بعد ما قبض الله نبيه (صلى الله عليه و آله) حتى تركوا عليا (عليه السلام) و بايعوا غيره، و هي الفتنة التي فتنوا بها"
+        },
+        "gloss": "A trial struck the people after Allah took His Prophet, until they abandoned Ali and pledged allegiance to another; that was the trial by which they were tried."
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 20 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في الكافي عن الصادق عليه السلام نزلت في ولاية عليّ عليه السلام … وعن الباقر عليه السلام في هذه الآية ولاية عليّ بن أبي طالب عليه السلام فانّ اتّباعكم إيّاه وولايته أجمع لأمركم وأبقى للعدل فيكم"
+        },
+        "gloss": "In al-Kafi, from al-Sadiq: it was revealed concerning the guardianship of Ali. And from al-Baqir on this verse: the guardianship of Ali ibn Abi Talib, for following him and his guardianship best gathers your affairs and best preserves justice among you."
+      },
+      {
+        "id": "s32",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=8&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأولـى الأقوال فـي ذلك بـالصواب، قول من قال: معناه: استـجيبوا لله وللرسول بـالطاعة إذا دعاكم الرسول لِـما يحيـيكم من الـحقّ."
+        },
+        "gloss": "The soundest of the views is that it means: respond to Allah and the Messenger in obedience when the Messenger calls you to what gives you life, namely the truth."
+      },
+      {
+        "id": "s38",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=8&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال مجاهد في قوله { لِمَا يُحْيِيكُمْ } قال للحق، وقال قتادة { لِمَا يُحْيِيكُمْ } قال هو هذا القرآن"
+        },
+        "gloss": "Mujahid said of 'to what gives you life': to the truth; and Qatada said it is this Quran."
+      },
+      {
+        "id": "s71",
+        "kind": "hadith",
+        "work": "Nahj al-Balagha",
+        "author": "al-sharif al-radi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 112, cited at Al-Anfaal 28",
+        "url": "https://thaqalayn.com/book/18",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "لَا يَقُولَنَّ أَحَدُكُمْ اللَّهُمَّ إِنِّى أَعُوذُ بِكَ مِنَ الْفِتْنَةِ لِأَنَّهُ لَيْسَ أَحَدٌ إِلَّا وَهُوَ مُشْتَمِلٌ عَلَى فِتْنَةٍ وَلَكِنْ مَنِ اسْتَعَاذَ فَلْيَسْتَعِذْ مِنْ مُضِلَّاتِ الْفِتَنِ"
+        },
+        "gloss": "None of you should say, 'O Allah, I seek refuge in You from trial,' for there is no one who is not wrapped in some trial; but whoever seeks refuge, let him seek it from misleading trials."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:38:50Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-09T20:18:13Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "4": {
+    "id": "8:4",
+    "surah": 8,
+    "index": 4,
+    "range": [
+      29,
+      37
+    ],
+    "title": {
+      "en": "God outdoes the plotters"
+    },
+    "essay": {
+      "en": "The passage turns first to the believers: if they are wary of God, He will give them a furqan, a criterion. The commentators gloss this as a light in the heart by which one separates truth from falsehood, and add readings of deliverance, victory, and a way out of every hardship [3]. Tabatabai reads these verses as commands and warnings woven around the Muslim struggle [1].\n\nThe address then shifts to those who fought that struggle. God recalls the night the faithless plotted 'to take you captive, or to kill or expel you.' The commentators place this at Dar al-Nadwa, where Quraysh, joined by Iblis in the guise of an old man of Najd, weighed prison, killing, and exile, then settled on a killer from every clan so the blood would be scattered [4]. God turned the plot: the Prophet left for the cave, and Ali slept in his bed, which the exegetes report without dispute [9].\n\nQuraysh then belittle the recited signs as 'myths of the ancients' [5] and dare God to 'rain down upon us stones from the sky.' Two things hold the punishment back: that the Prophet is still among them, and that forgiveness is still sought there [12]. Yet they deserve it, for they bar the faithful from the Holy Mosque while claiming to be its custodians; its true custodians, God answers, are only the Godwary [13]. Their 'prayer' at the House is mere whistling and clapping [6].\n\nThe passage closes on wealth: the faithless spend to bar God's way, and it will turn to regret, then defeat [7], then Hell, so that God may separate the bad ones from the good - the disbeliever from the believer [16]."
+    },
+    "verses": [
+      {
+        "verse": 30,
+        "heading": {
+          "en": "The plot at Dar al-Nadwa"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir or al-Sadiq",
+            "addressee": null,
+            "arabic": "أنّ قريشاً اجتمعت فخرج من كلّ بطن أناس ثم انطلقوا إلى دار النّدوة ليتشاوروا فيما يصنعون برسول اللهِ فاذا شيخ قائم على الباب … ثم تشاوروا فأجمعوا أمرهم على أن يقتلوه يخرجون من كلّ بطن منهم بشاهر فيضربونه بأسيافهم جميعاً عند الكعبة ثم قرأ هذه الآية واذ يمكر بك الذين كفرُوا",
+            "chain": "al-Ayyashi, from one of the two Imams",
+            "text": {
+              "en": "Quraysh gathered, a man from each clan setting out to Dar al-Nadwa to consult over the Messenger of Allah, when an old man stood at the door. They resolved to kill him: one from each clan, sword drawn, would strike him together at the Kaaba. Then he recited this verse."
+            },
+            "source": "s28"
+          }
+        ]
+      },
+      {
+        "verse": 32,
+        "heading": {
+          "en": "The challenge for stones"
+        },
+        "note": {
+          "en": "Who spoke this challenge is disputed: al-Safi records Abu Jahl from al-Qummi, al-Harith ibn Amr al-Fihri from al-Kafi, and al-Nu'man ibn al-Harith from Majma al-Bayan [29]."
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "the Imam",
+            "addressee": null,
+            "arabic": "بينا رسول الله (صلى الله عليه و آله) ذات يوم جالس، إذ أقبل أمير المؤمنين (عليه السلام)، فقال رسول الله (صلى الله عليه و آله): إن فيك شبها من عيسى بن مريم … فغضب الحارث بن عمرو الفهري، فقال: اللهم إن كان هذا هو الحق من عندك، بأن بني هاشم يتوارثون هرقلا بعد هرقل، فأمطر علينا حجارة من السماء أو ائتنا بعذاب أليم … فلما صار بظهر المدينة أتته جندلة فرضت هامته",
+            "chain": "Muhammad ibn Yaqub, from a number of our companions, from Sahl ibn Ziyad, from Muhammad ibn Sulayman, from his father, from Abu Basir",
+            "text": {
+              "en": "The Messenger of Allah, seated one day, said as Ali approached, 'In you is a resemblance to Jesus son of Mary.' Al-Harith ibn Amr al-Fihri grew angry: 'O Allah, if it is true that Banu Hashim inherit rule one after another, rain stones on us.' Riding out of Medina, a rock crushed his skull."
+            },
+            "source": "s25"
+          }
+        ]
+      },
+      {
+        "verse": 33,
+        "heading": {
+          "en": "Why his presence shields them"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "قال رسول الله صلى الله عليه وآله مقامي بين أظهركم خير لكم فإن الله يقول: { وما كان الله ليعذبهم وأنت فيهم } ومفارقتي إياكم خير لكم … فإن أعمالكم تعرض علي كل خميس واثنين فما كان من حسنة حمدت الله عليها وما كان من سيئة استغفرت الله لكم",
+            "chain": "Ali ibn Ibrahim, from his father, from Hanan ibn Sadir, from his father, from Abu Ja'far",
+            "text": {
+              "en": "The Messenger of Allah said, 'My standing among you is good for you, for Allah says: He would not punish them while you are among them. And my parting from you is good for you, for your deeds are shown to me every Thursday and Monday - the good I praise Allah for, the bad I seek His forgiveness for.'"
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 34,
+        "heading": {
+          "en": "The Mosque's true custodians"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "في قول الله: { وَهُمْ يَصُدُّونَ عَنِ ٱلْمَسْجِدِ ٱلْحَرَامِ وَمَا كَانُوۤاْ أَوْلِيَآءَهُ }: يعني أولياء البيت، يعني المشركين { إِنْ أَوْلِيَآؤُهُ إِلاَّ ٱلْمُتَّقُونَ } حيث كانوا هم أولى به من المشركين",
+            "chain": "al-Ayyashi, from Ibrahim ibn Umar al-Yamani, from one who mentioned it, from Abu Abdillah",
+            "text": {
+              "en": "Concerning 'they bar from the Holy Mosque and were not its custodians': it means the custodians of the House - the polytheists. 'Its custodians are only the Godwary,' for the believers were more entitled to it than the polytheists."
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 35,
+        "heading": {
+          "en": "Whistling and clapping"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Rida",
+            "addressee": "Muhammad ibn Sinan",
+            "arabic": "سميت مكة مكة، لأن الناس كانوا يمكون فيها، و كان يقال لمن قصد مكة قد مكا، و ذلك قول الله عز و جل: { وَمَا كَانَ صَلاَتُهُمْ عِندَ ٱلْبَيْتِ إِلاَّ مُكَآءً وَتَصْدِيَةً } فالمكاء: التصفير، و التصدية: صفق اليدين",
+            "chain": "through Muhammad ibn Sinan, to whom al-Rida wrote in answer to his questions",
+            "text": {
+              "en": "Mecca was named Mecca because people used to whistle in it; whoever headed for Mecca was said to have 'whistled.' That is Allah's saying, 'Their prayer at the House was nothing but whistling and clapping.' Al-mukaa is whistling, and al-tasdiya is the clapping of hands."
+            },
+            "source": "s26"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On who flung the challenge of verse 32 - 'rain down upon us stones' - the traditions differ. Sunni commentators name al-Nadr ibn al-Harith; Qurtubi adds that Bukhari and Muslim, on the authority of Anas, name Abu Jahl instead [47]. On either reading the words are a denial that the Qur'an is truth from God. A narration in al-Kafi keeps a different memory: the speaker is al-Harith ibn Amr al-Fihri, and his outburst answers the Prophet's word that leadership would remain in the house of Ali [25]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 29",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان أوامرٌ ونواه متعلقة بالجهاد الإِسلامي مما يناسب سوق القصة"
+        },
+        "gloss": "An exposition of commands and prohibitions bearing on the Islamic struggle, fitting the flow of the account."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 29",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي هداية ونوراً في قلوبكم تفرّقون بها بين الحق والباطل"
+        },
+        "gloss": "Meaning guidance and a light in your hearts by which you distinguish truth from falsehood."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال المفسرون إنها نزلت في قصة دار الندوة … فصوَّب إبليس هذا الرأي وكان قد جاءهم في صورة شيخ كبير من أهل نجد"
+        },
+        "gloss": "The commentators say it was revealed about the affair of Dar al-Nadwa... Iblis approved this plan, having come to them in the form of an old man from Najd."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 31 to 34",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وكان قائل هذا النضر بن الحارث بن كلدة وأسر يوم بدر فقتله رسول الله"
+        },
+        "gloss": "The one who said this was al-Nadr ibn al-Harith ibn Kalada; he was captured at Badr and the Messenger of Allah had him killed."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال ابن عباس: كانت قريش يطوفون بالبيت عراة يصفرون ويصفقون"
+        },
+        "gloss": "Ibn Abbas said: Quraysh would circle the House naked, whistling and clapping."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 36 to 37",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في الحرب أي يغلبهم المؤمنون وفي هذا دلالة على صحة نبوة النبي"
+        },
+        "gloss": "'They will be overcome' in war, that is, the believers will overcome them - a proof of the Prophet's prophethood, for he foretold it before it happened."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا خلاف بين المفسرين أنه بات عليّ تلك الليلة … على فراشه"
+        },
+        "gloss": "There is no disagreement among the exegetes that Ali slept that night on his (the Prophet's) bed."
+      },
+      {
+        "id": "s12",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=33&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يعذب احداً من هؤلاء الكفار بهذا العذاب الذي اقترحوه … وانت يا محمد فيهم موجود"
+        },
+        "gloss": "He will not punish any of these disbelievers with the punishment they demanded while you, Muhammad, are present among them."
+      },
+      {
+        "id": "s13",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 34",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال المشركون: نحن اولياء المسجد، فرد الله ذلك عليهم … ليس أولياء المسجد إلا المتقون"
+        },
+        "gloss": "The polytheists said, 'We are the custodians of the Mosque,' and God refuted them: the custodians of the Mosque are none but the Godwary."
+      },
+      {
+        "id": "s16",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 37",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ليميز الخبيث } الذي هو الكافر { من الطيب } الذي هو المؤمن"
+        },
+        "gloss": "'That Allah may separate the bad,' who is the disbeliever, 'from the good,' who is the believer."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 34",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "مقامي بين أظهركم خير لكم فإن الله يقول: { وما كان الله ليعذبهم وأنت فيهم } ومفارقتي إياكم خير لكم"
+        },
+        "gloss": "My standing among you is good for you, for Allah says, 'Allah would not punish them while you are among them'; and my parting from you is good for you."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 32 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=32&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فغضب الحارث بن عمرو الفهري، فقال: اللهم إن كان هذا هو الحق من عندك، بأن بني هاشم يتوارثون هرقلا بعد هرقل، فأمطر علينا حجارة من السماء أو ائتنا بعذاب أليم"
+        },
+        "gloss": "Al-Harith ibn Amr al-Fihri grew angry and said, 'O Allah, if it is true from You that Banu Hashim inherit rule one after another, rain down stones on us from the sky or bring us a painful punishment.'"
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 34 to 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني أولياء البيت، يعني المشركين { إِنْ أَوْلِيَآؤُهُ إِلاَّ ٱلْمُتَّقُونَ } حيث كانوا هم أولى به من المشركين"
+        },
+        "gloss": "Meaning the custodians of the House - the polytheists; 'its custodians are only the Godwary,' since the believers were more entitled to it than the polytheists."
+      },
+      {
+        "id": "s28",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 29 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أنّ قريشاً اجتمعت فخرج من كلّ بطن أناس ثم انطلقوا إلى دار النّدوة ليتشاوروا فيما يصنعون برسول اللهِ"
+        },
+        "gloss": "Quraysh gathered, a group from each clan came out, and they set off to Dar al-Nadwa to consult over what to do about the Messenger of Allah."
+      },
+      {
+        "id": "s29",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 31 to 34",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والقميّ قاله أبو جهل. وفي الكافي قاله الحرث بن عمرو الفهريّ. وفي المجمع قاله النعمان بن الحرث"
+        },
+        "gloss": "Al-Qummi: Abu Jahl said it; in al-Kafi: al-Harith ibn Amr al-Fihri said it; in Majma al-Bayan: al-Nu'man ibn al-Harith said it."
+      },
+      {
+        "id": "s47",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 32",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=8&tAyahNo=32&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقال مجاهد وابن جُبير: قائل هذا هو النضر بن الحارث. أنس بن مالك: قائله أبو جهل رواه البخاريّ ومسلم"
+        },
+        "gloss": "Mujahid and Ibn Jubayr said: the one who said this was al-Nadr ibn al-Harith; Anas ibn Malik: its sayer was Abu Jahl - reported by Bukhari and Muslim."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:41:43Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T20:25:45Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "5": {
+    "id": "8:5",
+    "surah": 8,
+    "index": 5,
+    "range": [
+      38,
+      44
+    ],
+    "title": {
+      "en": "Fighting, the fifth, and Badr"
+    },
+    "essay": {
+      "en": "The passage opens with a word to the faithless: if they cease their war on the Muslims, what is already past is forgiven; if they resume, 'the precedent of the predecessors has already come to pass.' Tusi reads the cessation as repentance from unbelief, and the precedent as the ruin God brought on earlier deniers and at Badr [6]. Then comes the command to 'fight them until persecution is no more' - fitna being unbelief that holds no covenant [7] - 'and religion becomes exclusively for Allah.' In Tabrisi, a report from al-Sadiq holds this verse's fulfilment has not yet come; it will come when the Qaim rises [3]. If they turn away, the believers must know that God is their master, an excellent helper [3].\n\nVerse 41 lays down the fifth: of whatever the Muslims gain, a share belongs to God, the Apostle, and the relatives, orphans, needy and traveller. Tabrisi records the Shia reading of six shares, 'the relatives' being the Prophet's kin [4]. Tabatabai reads 'what We sent down to Our servant' as the Quran, tied to the Prophet alone [2]. That Day of Separation is Badr. The closing verses picture it: the Muslims on the nearer side, Quraysh on the farther, the caravan below [5], a meeting no tryst could have arranged, 'so that he who perishes might perish by a manifest proof' [22]. God showed the enemy few in the Prophet's dream and few in the believers' eyes, and the believers few in the enemy's, to bring about His decree [11]."
+    },
+    "verses": [
+      {
+        "verse": 38,
+        "heading": {
+          "en": "A door to repentance"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إني كنت عاملا لبني امية، فأصبت مالا كثيرا، فظننت أن ذلك لا يحل لي … توبتك في كتاب الله { قُل لِلَّذِينَ كَفَرُوۤاْ إِن يَنتَهُواْ يُغَفَرْ لَهُمْ مَّا قَدْ سَلَفَ }",
+            "chain": "al-Ayyashi, from Ali ibn Darraj al-Asadi, from Abu Jafar",
+            "text": {
+              "en": "A man told al-Baqir he had worked for the Umayyads and gained wealth he feared unlawful, and that others said his family and property were forbidden him. The Imam said: it is not as they told you. Asked if he could repent, he replied: yes, your repentance is in God's Book, 'if they cease, what is past is forgiven.'"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 39,
+        "heading": {
+          "en": "Until religion is God's"
+        },
+        "note": {
+          "en": "al-Qummi glosses the persecution to be fought as unbelief, and reads this command as abrogating the earlier order to 'hold back your hands' (4:77) [12]."
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "لم يجيء تأويل هذه الآية بعد، إن رسول الله (صلى الله عليه و آله) رخص لهم لحاجته، و حاجة أصحابه، فلو قد جاء تأويلها لم يقبل منهم، و لكنهم يقتلون حتى يوحد الله عز و جل، و حتى لا يكون شرك",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Umar ibn Udhayna, from Muhammad ibn Muslim, from Abu Jafar",
+            "text": {
+              "en": "The interpretation of this verse has not yet come. The Messenger of God granted them a dispensation, for his own need and his companions' need; but when its interpretation comes, no dispensation will be accepted from them. Rather they will be fought until God is affirmed as one, and until there is no idolatry."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 41,
+        "heading": {
+          "en": "The fifth of the spoils"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "هُمْ قَرَابَةُ رَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) وَالْخُمُسُ لله وَلِلرَّسُولِ وَلَنَا",
+            "chain": "al-Husayn ibn Muhammad, from Mualla ibn Muhammad, from al-Washsha, from Aban, from Muhammad ibn Muslim, from Abu Jafar",
+            "text": {
+              "en": "'The relatives' are the kin of the Messenger of God; the fifth is for God, for the Messenger, and for us."
+            },
+            "source": "s58"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "فَمَا كَانَ لله فَلِمَنْ هُوَ فَقَالَ لِرَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) وَمَا كَانَ لِرَسُولِ الله فَهُوَ لِلامَامِ … ذَاكَ إِلَى الامَامِ أَ رَأَيْتَ رَسُولَ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) كَيْفَ يَصْنَعُ أَ لَيْسَ إِنَّمَا كَانَ يُعْطِي عَلَى مَا يَرَى كَذَلِكَ الامَامُ",
+            "chain": "Ahmad, from Ahmad ibn Muhammad ibn Abi Nasr, from al-Rida",
+            "text": {
+              "en": "Al-Rida was asked whose is the share that belongs to God. He said: it is the Messenger of God's, and what is the Messenger's belongs to the Imam. Asked how to handle it when one class of recipients is larger and another smaller, he said: that is for the Imam to judge, as the Messenger gave by his own discretion."
+            },
+            "source": "s56"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هِيَ وَالله الافَادَةُ يَوْماً بِيَوْمٍ إِلا أَنَّ أَبِي جَعَلَ شِيعَتَهُ فِي حِلٍّ لِيَزْكُوا",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Muhammad ibn Sinan, from Abd al-Samad ibn Bashir, from Hakim, muezzin of Ibn Isa, from Abu Abdillah",
+            "text": {
+              "en": "By God, it is the daily gain - every profit, day by day - except that my father freed his shia of it, so that they might be purified."
+            },
+            "source": "s55"
+          }
+        ]
+      },
+      {
+        "verse": 44,
+        "heading": {
+          "en": "Iblis at Badr"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "كان إبليس يوم بدر يقلل المسلمين في أعين الكفار، و يكثر الكفار في أعين المسلمين، فشد عليه جبرئيل (عليه السلام) بالسيف فهرب منه، و هو يقول: يا جبرئيل، إني مؤجل، حتى وقع في البحر … يقطع بعض أطرافه",
+            "chain": "Muhammad ibn Yaqub, by his chain from Zurara, from Abu Jafar",
+            "text": {
+              "en": "On the day of Badr, Iblis kept making the Muslims few in the unbelievers' eyes and the unbelievers many in theirs. Then Jibril rushed at him with the sword, and he fled crying, 'Jibril, I am reprieved!' - until he fell into the sea. Asked why he feared when reprieved, the Imam said: some of his limbs would be cut off."
+            },
+            "source": "s20"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The fifth of the spoils divides the traditions. Tusi and Tabrisi give the Shia reading: six shares, where those of God, the Apostle and 'the near relatives' pass to the Imam who stands in the Prophet's place, and the orphans, needy and travellers named are those of the Prophet's house [4][8]. Razi reports the Sunni schools parting after the Prophet's death: Abu Hanifa held that the shares of the Apostle and the relatives lapse, while al-Shafii kept the relatives' share for Banu Hashim and Banu al-Muttalib [45]."
+    },
+    "sources": [
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 41 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقوله تعالى { وما أنزلنا على عبدنا يوم الفرقان } الظاهر أن المراد به القرآن بقرينة تخصيص النبي صلى الله عليه وآله وسلم بالإِنزال"
+        },
+        "gloss": "'And what We sent down to Our servant on the Day of Separation' apparently means the Quran, since the sending-down is specified to the Prophet."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 38 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وروى زرارة وغيره عن أبي عبد الله ع أنه قال لم يجىء تأويل هذه الآية ولو قام قائمنا بعد سَيَرى من يدركه ما يكون من تأويل هذه الآية"
+        },
+        "gloss": "Zurara and others reported from al-Sadiq that he said: the interpretation of this verse has not yet come; when our Qaim rises, whoever lives to see it will see what its interpretation is."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أن الخمس يقسم على ستة أسهم فسهم لله وسهم للرسول وهذان السهمان مع سهم ذي القربى للإِمام القائم مقام الرسول"
+        },
+        "gloss": "The fifth is divided into six shares: a share for God and a share for the Messenger, and these two with the share of the near relatives go to the Imam who stands in the Messenger's place."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 42 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذ أنتم نزول بشفير الوادي الأَقرب إلى المدينة … نزول بالشفير الأَقصى من المدينة { والركب } يعني أبا سفيان وأصحابه وهم العير { أسفل منكم }"
+        },
+        "gloss": "You were camped on the nearer bank of the valley, toward Medina … [they] camped on the farther bank from Medina; and the caravan means Abu Sufyan and his companions, below you."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن انابوا عن الكفر والمعاصي وتابوا منها توبة خالصة … في تعجيل العقاب لهم في الدنيا بعذاب الاستئصال وما جرى مجراه من الاسر والقتل، يوم بدر"
+        },
+        "gloss": "The meaning is: if they turn back from unbelief and sins and repent sincerely … [the precedent is] hastening their punishment in this world by uprooting them, and the like of it in capture and killing, as on the day of Badr."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 39 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ حتى لا تكون فتنة } وهي الكفر من غير اهل العهد"
+        },
+        "gloss": "'until there is no fitna' - and that is the unbelief of those who hold no covenant."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "خمس الغنيمة، فانه يقسم عندنا ستة اقسام: فسهم لله، وسهم لرسوله للنبي، وهذان السهمان مع سهم ذي القربى، للقائم مقام النبي"
+        },
+        "gloss": "The fifth of the spoils, in our view, is divided into six shares: a share for God, a share for His Messenger the Prophet, and these two, with the share of the near relatives, go to the one who stands in the Prophet's place."
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=44&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أرى الله تعالى الكفار قليلين في أعين المؤمنين ليشتد بذلك طمعهم فيهم وجرأتهم عليهم، وقلل المؤمنين في أعين الكفار لئلا يتأهبوا ولا يستعدوا لقتالهم"
+        },
+        "gloss": "God showed the unbelievers as few in the believers' eyes, so their eagerness and boldness against them would grow, and He made the believers few in the unbelievers' eyes, so they would not prepare or ready themselves to fight them."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 39",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وقاتلوهم حتى لا تكون فتنة } أي: كفراً وهي ناسخة لقوله { كفوا أيديكم } ولقوله: { ودع أذاهم }"
+        },
+        "gloss": "'Fight them until there is no fitna' - that is, unbelief; and it abrogates His words 'hold back your hands' and 'leave their harm.'"
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "توبتك في كتاب الله { قُل لِلَّذِينَ كَفَرُوۤاْ إِن يَنتَهُواْ يُغَفَرْ لَهُمْ مَّا قَدْ سَلَفَ }"
+        },
+        "gloss": "Your repentance is in the Book of God: 'Say to those who disbelieve, if they cease, what is already past will be forgiven them.'"
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 39",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لم يجيء تأويل هذه الآية بعد … و لكنهم يقتلون حتى يوحد الله عز و جل، و حتى لا يكون شرك"
+        },
+        "gloss": "The interpretation of this verse has not yet come … rather they will be fought until God is affirmed as one and there is no idolatry."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=44&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان إبليس يوم بدر يقلل المسلمين في أعين الكفار، و يكثر الكفار في أعين المسلمين، فشد عليه جبرئيل (عليه السلام) بالسيف فهرب منه"
+        },
+        "gloss": "On the day of Badr Iblis was making the Muslims few in the unbelievers' eyes and the unbelievers many in the Muslims' eyes, so Jibril rushed at him with the sword and he fled."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 42",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وَلَوْ تَوَاعَدتُّمْ لاَخْتَلَفْتُمْ فِي الْمِيعَادِ } أي لو تواعدتم أنتم وهُم على موعدة للقتال ثم علمتم حالكم وحالهم لخالف بعضكم بعضاً … { لِّيَهْلِكَ مَنْ هَلَكَ عَنْ بَيِّنَةٍ } عاينها { وَيَحْيَى مَنْ حَيَّ عَنْ بَيِّنَةٍ } شاهدها"
+        },
+        "gloss": "'Had you agreed together on an encounter, you would have differed over the tryst' - had you and they made an appointment to fight and then learned your states, some of you would have held back … 'that he who perishes might perish by a proof' he witnessed, 'and he who lives may live by a proof' he beheld."
+      },
+      {
+        "id": "s45",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=8&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال أبو حنيفة رحمه الله: إن بعد وفاة الرسول عليه الصلاة والسلام سهمه ساقط بسبب موته، وكذلك سهم ذوي القربى"
+        },
+        "gloss": "Abu Hanifa held that after the Messenger's death his share lapses on account of his death, and likewise the share of the near relatives."
+      },
+      {
+        "id": "s55",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 10, cited at Al-Anfaal 41",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "ضعيف على المشهور",
+          "لم يخرجه"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "هِيَ وَالله الافَادَةُ يَوْماً بِيَوْمٍ إِلا أَنَّ أَبِي جَعَلَ شِيعَتَهُ فِي حِلٍّ لِيَزْكُوا"
+        },
+        "gloss": "By God, it is the daily gain, except that my father freed his shia of it so that they might be purified."
+      },
+      {
+        "id": "s56",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 7, cited at Al-Anfaal 41",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "صحيح",
+          "صحيح"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "فَمَا كَانَ لله فَلِمَنْ هُوَ فَقَالَ لِرَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) وَمَا كَانَ لِرَسُولِ الله فَهُوَ لِلامَامِ"
+        },
+        "gloss": "As for what belongs to God, to whom does it go? He said: to the Messenger of God; and what belongs to the Messenger belongs to the Imam."
+      },
+      {
+        "id": "s58",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 2, cited at Al-Anfaal 41",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "ضعيف على المشهور",
+          "لم يخرجه"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "هُمْ قَرَابَةُ رَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) وَالْخُمُسُ لله وَلِلرَّسُولِ وَلَنَا"
+        },
+        "gloss": "They are the kin of the Messenger of God; the fifth is for God, for the Messenger, and for us."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:43:06Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T20:40:02Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "6": {
+    "id": "8:6",
+    "surah": 8,
+    "index": 6,
+    "range": [
+      45,
+      48
+    ],
+    "title": {
+      "en": "Battle conduct and Satan's flight"
+    },
+    "essay": {
+      "en": "These four verses set out how the believers are to fight, and the passage looks to Badr [2]. Tabatabai reads it as a command to stand firm joined to a recital of how God brought the enemies of the faith low [1]. When the faithful meet an enemy host they are to hold their ground and remember God much, seeking His help and His victory [2]. The 'host' is left unnamed, for God commands His people to stand firm only against a disbelieving or transgressing foe [4]. Then come obedience to God and His Apostle and a warning against disputing: quarrel, and the fighters lose heart and their 'wind' departs, their might and standing, for the Arabs called a running fortune a favouring wind [2]. Al-Baqir relates that the verse came down when the men disputed over Khabbab ibn al-Mundhir's counsel to move onto the water, and the Prophet followed his advice [5]. They are warned not to be like Quraysh, who marched from Mecca in arrogance and display, with wine and singing-girls, barring others from God's way [2][6]. The passage closes on Satan, who dressed their deeds as fine and promised, 'No one shall overcome you today, and I will stand by you' [3]. He had taken the shape of Suraqa ibn Malik so they would not fear Banu Kinana behind them [3][7]. But when the two hosts met and he saw the angels descend, he turned on his heels, disowned them, and fled: 'I see what you do not see; I fear Allah' [3]."
+    },
+    "verses": [
+      {
+        "verse": 46,
+        "heading": {
+          "en": "The wind of victory"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "al-Nu'man ibn al-Muqarrin",
+            "addressee": null,
+            "arabic": "كان رسول الله (صلى الله عليه و آله) إذا كان عند القتال لم يقاتل أول النهار و آخره إلى أن تزول الشمس و تهب الرياح و ينزل النصر",
+            "chain": null,
+            "text": {
+              "en": "The Messenger of God, when in battle, would not fight at the start of the day or its end, but waited until the sun had passed the zenith, the winds blew, and victory came down."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 48,
+        "heading": {
+          "en": "Satan flees the angels"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sajjad",
+            "addressee": null,
+            "arabic": "لما عطش القوم يوم بدر انطلق عليّ عليه السلام بالقربة يستقي وهو على القليب إذ جاءت ريح شديدة ثم مضت فلبث ما بدا له ثم جاءت ريح أخرى ثم مضت ثم جاءت أخرى كاد أن تشغله وهو على القليب ثم جلس حتى مضى فلما رجع إلى رسول الله صلَّى الله عليه وآله وسلم أخبره بذلك … أمّا الريح الأولى ففيها جبرئيل مع ألف من الملائكة والثانية فيها ميكائيل مع ألف من الملائكة والثالثة فيها اسرافيل مع ألف من الملائكة وقد سلّموا عليك وهم مدد لنا وهم الذين رآهم إبليس فنكص على عقبيه يمشي القهقرى حين يقول إنّي أرى ما لا ترون",
+            "chain": "al-Ayyashi, from al-Sajjad",
+            "text": {
+              "en": "When the men thirsted at Badr, Ali went to the well with the waterskin, and three winds passed over him. He told the Prophet, who said: in the first was Jibril with a thousand angels, in the second Mika'il, in the third Israfil; these are the aid Iblis saw when he took to his heels."
+            },
+            "source": "s13"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir and Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أنهم لما التقوا كان إبليس في صفّ المشركين آخذاً بيد الحارث بن هشام فنكص على عقبيه فقال له الحارث يا سراقة اتخذلنا على هذه الحال فقال إنّي أرى ما لا ترون فقال والله ما ترى إلاّ جواسيس يثرب فدفع في صدر الحرث وانطلق وانهزم الناس",
+            "chain": null,
+            "text": {
+              "en": "When the two sides met, Iblis stood in the ranks of the idolaters holding the hand of Harith ibn Hisham, then he drew back. Harith said, 'Suraqa, will you abandon us now?' He answered, 'I see what you do not see.' He struck Harith's chest, broke away, and the people were routed."
+            },
+            "source": "s13"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": null
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 45 to 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=45&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان تشتمل الآيات على الأمر بتخميس الغنائم وبالثبات عند اللقاء وتذكرهم، وتقصُّ عليهم بعض ما نكب الله به أعداء الدين وأخزاهم بالمكر الإِلهي"
+        },
+        "gloss": "An exposition: these verses join the command to give a fifth of the spoils, to stand firm at the encounter, and to remember God, and they recount some of how God struck down the enemies of the religion by His stratagem."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 45 to 47",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=45&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وتذهب ريحكم معناه تذهب صولتكم وقوتكم"
+        },
+        "gloss": "'And your wind departs' means your might and strength depart."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=48&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فلما رأى إبليس الملائكة نزلوا من السماء وعلم أنه لا طاقة لهم بهم نكص على عقبيه"
+        },
+        "gloss": "When Iblis saw the angels descend from the sky and knew there was no power against them, he turned back on his heels."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 45",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=45&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والفئة المذكورة في الآية وان كانت مطلقة، فالمراد بها المشركة او الباغية، لأن الله لا يأمر المؤمنين بالثبوت لقتال احد الا من هو بهذه الصفة"
+        },
+        "gloss": "Although 'the host' in the verse is unqualified, what is meant is the idolatrous or the transgressing party, for God does not command the believers to stand firm to fight anyone but one of that description."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=46&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال أبو جعفر عليه السلام: هذه الآية نزلت حين أشار خباب بن المنذر على النبي صلى الله عليه وآله ان ينتقل من مكانه حتى ينزلوا على الماء ويجيؤهم من خلفهم، فقال بعضهم لا تنغفر معصاتك يا رسول الله. فتنازعوا، فنزلت الآية وعمل النبي صلى الله عليه وآله على قول خباب"
+        },
+        "gloss": "Abu Ja'far [al-Baqir] said: this verse came down when Khabbab ibn al-Mundhir advised the Prophet to shift his position so they would camp at the water and come at the enemy from behind; some objected, they fell to disputing, the verse came down, and the Prophet acted on Khabbab's counsel."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 47",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=47&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهم قريش، لما خرجت لتحمي العير، فلما نجا ابو سفيان ارسل اليهم ان ارجعوا، فقد سلمت عيركم وهم بالجحفة: فقال أبو جهل والله لا نرجع حتى نرد بدراً وننحر جزراً، ونشرب خمراً وتعزف علينا القيان"
+        },
+        "gloss": "They are Quraysh, who marched out to protect the caravan; when Abu Sufyan escaped he sent them word to turn back, 'your caravan is safe,' while they were at al-Juhfa; but Abu Jahl said, 'By God we will not turn back until we reach Badr, slaughter camels, drink wine, and have the singing-girls perform for us.'"
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=48&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فانه قال لهم اني جار لكم، لأنهم خافوا بني كنانة لما كان بينهم، فأراد إبليس بأن يسكن خوفهم"
+        },
+        "gloss": "For he said to them, 'I am your protector,' because they feared Banu Kinana over what lay between them, and Iblis wished to still their fear."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=46&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان رسول الله (صلى الله عليه و آله) إذا كان عند القتال لم يقاتل أول النهار و آخره إلى أن تزول الشمس و تهب الرياح و ينزل النصر"
+        },
+        "gloss": "The Messenger of God, when in battle, would not fight at the beginning of the day or its end, until the sun declined, the winds blew, and victory came down."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=48&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أمّا الريح الأولى ففيها جبرئيل مع ألف من الملائكة والثانية فيها ميكائيل مع ألف من الملائكة والثالثة فيها اسرافيل مع ألف من الملائكة وقد سلّموا عليك وهم مدد لنا وهم الذين رآهم إبليس فنكص على عقبيه"
+        },
+        "gloss": "The first wind held Jibril with a thousand angels, the second Mika'il with a thousand, the third Israfil with a thousand; they greeted you, they are a reinforcement for us, and they are the ones Iblis saw, so he turned back on his heels."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:43:54Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T20:43:37Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "7": {
+    "id": "8:7",
+    "surah": 8,
+    "index": 7,
+    "range": [
+      49,
+      58
+    ],
+    "title": {
+      "en": "The faithless and treaty-breakers"
+    },
+    "essay": {
+      "en": "The passage looks back on the day of Badr. As the two hosts closed, the hypocrites and 'those in whose hearts is a sickness' saw how few the Muslims were and sneered, 'Their religion has deceived them.' Majma al-Bayan reports that these were young men of Quraysh who had professed Islam but were held back by their fathers, and who marched out with Quraysh and said this when they saw the believers' small numbers [3]. The verse replies that whoever trusts Allah is not overcome, for He gives the few victory over the many [28].\n\nThen the scene turns to the enemy's death: the angels take the faithless, striking their faces and their backs and saying, 'Taste the punishment of the burning.' This, verse 51 says, is 'because of what your hands have sent ahead' - the punishment is earned, and al-Tusi observes that God denies of Himself any grave injustice, since an undeserved penalty would be a great wrong [9].\n\nTwice the deniers are measured against 'the precedent of Pharaoh's clan and those who were before them.' They defied Allah's signs and were seized for their sins; al-Tusi reads their killing and capture as the counterpart of Pharaoh's drowning [10]. Between the two comparisons stands the law of verse 53: Allah does not change a blessing until a people 'change what is in their own souls,' which al-Tusi takes to refute the determinists, since punishment follows only a change of soul [11]. Al-Safi treats the repeated comparison as emphasis, its phrase 'the signs of their Lord' pointing to their ingratitude for blessing [29].\n\nVerse 55 names 'the worst of beasts' as those who will never come to belief [13]. The last three verses turn to law. Those who break their treaty 'every time' al-Mizan places among the Jewish factions in and around Medina [2]. If met in war they are to be made an example that scatters those behind them, and if treachery is feared the treaty is to be broken openly, on equal terms, so a believer never strikes under a pact still thought binding [6]."
+    },
+    "verses": [
+      {
+        "verse": 50,
+        "heading": {
+          "en": "The angels at death"
+        },
+        "note": {
+          "en": "The reply to 'Were you to see' is left unspoken, so the reader imagines a dreadful sight; 'their backs' is a decorous euphemism, and al-Tibyan records the accepted view that the scene is the slain of Badr [8]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 53,
+        "heading": {
+          "en": "A blessing withdrawn"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن الله عز و جل بعث نبيا من أنبيائه إلى قومه و أوحى إليه أن قل لقومك: إنه ليس من أهل قرية و لا أناس كانوا على طاعتي فأصابهم فيها سراء فتحولوا عما أحب إلى ما أكره إلا تحولت لهم عما يحبون إلى ما يكرهون",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad and Ali ibn Ibrahim, from his father, together, from Ibn Mahbub, from al-Haytham ibn Waqid al-Jazari, from Abu Abdillah",
+            "text": {
+              "en": "God sent a prophet to his people and revealed to him: tell your people, there are no townsfolk who were obeying Me and met prosperity, then turned from what I love to what I hate, but I turn for them from what they love to what they hate."
+            },
+            "source": "s24"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ما أنعم الله على عبد نعمة فسلبها إياه، حتى يذنب ذنبا يستحق بذلك السلب",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Muhammad ibn Sinan, from Sama'a, from Abu Abdillah",
+            "text": {
+              "en": "God never bestows a blessing on a servant then strips it from him until he commits a sin by which he deserves that stripping."
+            },
+            "source": "s24"
+          }
+        ]
+      },
+      {
+        "verse": 55,
+        "heading": {
+          "en": "The worst of beasts"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "قال أبو جعفر عليه السلام: نزلت في بني أمية فهم شر خلق الله هم الذين كفروا في باطن القرآن فهم لا يؤمنون",
+            "chain": "Ja'far ibn Ahmad, from Abd al-Karim ibn Abd al-Rahim, from Muhammad ibn Ali, from Muhammad ibn al-Fudayl, from Abu Hamza, from Abu Ja'far",
+            "text": {
+              "en": "It was revealed about Bani Umayya. They are the worst of God's creation; they are the ones who disbelieved in the inner meaning of the Qur'an, so they will not believe."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 56,
+        "heading": {
+          "en": "Broken treaties"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "{ الذين عاهدت منهم ثم ينقضون عهدهم في كل عام مرة } فهم أصحابه الذين فروا يوم أُحد",
+            "chain": null,
+            "text": {
+              "en": "'Those with whom you made a treaty, then they break their treaty' - they are the companions who fled on the day of Uhud."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 58,
+        "heading": {
+          "en": "Breaking off a treaty"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "قوله: { وإما تخافن من قوم خيانة فانبذ إليهم على سواء } نزلت في معاوية لما خان أمير المؤمنين عليه السلام",
+            "chain": null,
+            "text": {
+              "en": "'And if you fear treachery from a people, then break off with them in a like manner' - it was revealed about Mu'awiya when he betrayed the Commander of the Faithful."
+            },
+            "source": "s21"
+          },
+          {
+            "id": "n6",
+            "speaker": "the Prophet",
+            "addressee": null,
+            "arabic": "قال رسول الله (صلى الله عليه و آله): ثلاث من كن فيه كان منافقا و إن صام و صلى و زعم أنه مسلم: من إذا ائتمن خان، و إذا حدث كذب، و إذا وعد أخلف",
+            "chain": "from a number of our companions, from Sahl ibn Ziyad, from one of his companions, from Abd Allah ibn Sinan, from Abu Abdillah",
+            "text": {
+              "en": "Three, whoever has them is a hypocrite even if he fasts, prays, and claims to be a Muslim: when entrusted he betrays, when he speaks he lies, and when he promises he breaks it."
+            },
+            "source": "s27"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Verses 56 to 58 condemn treaty-breakers, and the traditions place them differently. The Sunni commentators read them of the Jewish tribes of Medina: Tabari, following Mujahid, names Bani Qurayza, who backed Quraysh at the Trench [37], and Qurtubi adds al-Nadir, saying they broke the pact and armed the Meccan idolaters [51]. The narrations in al-Qummi keep the ruling but add an inward reading: the treaty-breakers of verse 56 are the Muslims who fled at Uhud [20], and verse 58 was revealed about Mu'awiya when he betrayed Ali [21]."
+    },
+    "sources": [
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 55 to 58",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=55&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وصدر الآيات يقبل الانطباق على طوائف اليهود التي كانت في المدينة وحولها"
+        },
+        "gloss": "The opening of these verses fits the Jewish factions that were in and around Medina."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 49 to 51",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=49&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنهم فتية من قريش أسلموا بمكة واحتبسهم آباؤهم. فخرجوا مع قريش يوم بدر … لما رأوا قلة المسلمين قالوا { غرَّ هؤلاء دينهم }"
+        },
+        "gloss": "They were young men of Quraysh who accepted Islam at Mecca but were held back by their fathers; they went out with Quraysh at Badr, and when they saw the fewness of the Muslims they said, 'Their religion has deceived them.'"
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 57 to 58",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فنكِّل بهم تنكيلاً وأثِّر فيهم تأثيراً يشرّد بهم من بعدهم … فألق إليهم ما بينك وبينهم من العهد وأعلمهم بأنك قد نقضت ما شرطت لهم لتكون أنت وهم في العلم بالنقض على استواء"
+        },
+        "gloss": "Make an example of them that scatters those after them ... cast back to them the treaty between you and inform them that you have annulled what you pledged, so that you and they are equal in knowing of the breach."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=50&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال مجاهد وسعيد بن جبير: معنى أدبارهم استاههم لكنه كنى عنه … خلاف الاجماع المتقدم أنه يوم بدر"
+        },
+        "gloss": "Mujahid and Sa'id ibn Jubayr say 'their backs' means their behinds, but He used a euphemism for it ... against the earlier consensus that it was at Badr."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 51",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=51&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما ينزل بالكفار لولم يكن باستحقاق لكان ظلماً عظيماً، ولكان فاعله ظلاماً"
+        },
+        "gloss": "What befalls the disbelievers, were it not deserved, would be a great injustice, and its doer a great wrongdoer."
+      },
+      {
+        "id": "s10",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=52&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمعنى انه جوزي هؤلاء بالقتل والأسر كما جوزي آل فرعون بالغرق"
+        },
+        "gloss": "The meaning is that these were requited with killing and captivity as Pharaoh's clan were requited with drowning."
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 53",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية دلالة على بطلان مذهب المجبرة، لأنها تدل على انه لا يكون العقاب الا بتغيير النفس إلى ما لا يجوز ان يغير اليه"
+        },
+        "gloss": "In the verse is proof of the falsity of the determinists' doctrine, for it shows that there is no punishment except after a soul changes to what it is not permitted to change to."
+      },
+      {
+        "id": "s13",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 55",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=55&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والآية متناولة لمن علم الله منه انه لا يؤمن، لأن قوله { فهم لا يؤمنون } اخبار عن نفى ايمانهم فيما بعد"
+        },
+        "gloss": "The verse concerns those of whom God knows they will not believe, for His words 'so they will not have faith' announce the negation of their faith thereafter."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 55",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=55&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال أبو جعفر عليه السلام: نزلت في بني أمية فهم شر خلق الله هم الذين كفروا في باطن القرآن فهم لا يؤمنون"
+        },
+        "gloss": "Abu Ja'far said: it was revealed about Bani Umayya; they are the worst of God's creation; they disbelieved in the inner meaning of the Qur'an, so they will not believe."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 56",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=56&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ الذين عاهدت منهم ثم ينقضون عهدهم في كل عام مرة } فهم أصحابه الذين فروا يوم أُحد"
+        },
+        "gloss": "'Those with whom you made a treaty, then they break their treaty every year once' - they are the companions who fled on the day of Uhud."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 58",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قوله: { وإما تخافن من قوم خيانة فانبذ إليهم على سواء } نزلت في معاوية لما خان أمير المؤمنين عليه السلام"
+        },
+        "gloss": "'And if you fear treachery from a people, break off with them in a like manner' - it was revealed about Mu'awiya when he betrayed the Commander of the Faithful."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 53",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما أنعم الله على عبد نعمة فسلبها إياه، حتى يذنب ذنبا يستحق بذلك السلب"
+        },
+        "gloss": "God never bestows a blessing on a servant then strips it from him until he commits a sin by which he deserves that stripping."
+      },
+      {
+        "id": "s27",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 58",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال رسول الله (صلى الله عليه و آله): ثلاث من كن فيه كان منافقا و إن صام و صلى و زعم أنه مسلم: من إذا ائتمن خان، و إذا حدث كذب، و إذا وعد أخلف"
+        },
+        "gloss": "The Messenger of Allah said: Three, whoever has them is a hypocrite even if he fasts, prays, and claims to be a Muslim: when entrusted he betrays, when he speaks he lies, and when he promises he breaks it."
+      },
+      {
+        "id": "s28",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 49 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=49&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وَمَنْ يَتَوَكَّلْ عَلَى اللهِ } جواب لهم { فَإِنَّ اللهَ عَزِيزٌ } غالب ينصر الضعيف على القويّ والقليل على الكثير"
+        },
+        "gloss": "'But whoever puts his trust in Allah' is the reply to them: 'then Allah is all-mighty,' prevailing, giving the weak victory over the strong and the few over the many."
+      },
+      {
+        "id": "s29",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 53 to 58",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تكرير للتّأكيد وفي قوله بآيات ربِّهم زيادة دلالة على كفران النّعم"
+        },
+        "gloss": "A repetition for emphasis; and in His words 'the signs of their Lord' is an added indication of ingratitude for blessings."
+      },
+      {
+        "id": "s37",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 56",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=8&tAyahNo=56&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: قريظة مالئوا على محمد يوم الخندق أعداءه"
+        },
+        "gloss": "He said: Qurayza, who sided with Muhammad's enemies on the day of the Trench."
+      },
+      {
+        "id": "s51",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 55 to 56",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=8&tAyahNo=55&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمعنيُّ بهم قُريظة والنضير في قول مجاهد وغيره. نقضوا العهد فأعانوا مشركي مكة بالسلاح"
+        },
+        "gloss": "Those meant are Qurayza and al-Nadir, in the view of Mujahid and others; they broke the pact and helped the Meccan idolaters with weapons."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:45:55Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T21:01:49Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "8": {
+    "id": "8:8",
+    "surah": 8,
+    "index": 8,
+    "range": [
+      59,
+      64
+    ],
+    "title": {
+      "en": "Strength, peace, and united hearts"
+    },
+    "essay": {
+      "en": "The passage sets out rulings for war, peace, and the treaties that bind and break between the Muslims and their foes [1]. It opens by warning the faithless not to imagine they have slipped beyond God's reach: those who escaped the sword have not escaped Him, and cannot frustrate His power [5]. Then comes the command to prepare - to gather whatever strength you can, and war-horses, to overawe an enemy you know and others you do not, whom God alone knows. Al-Tusi reads this strength as weapons and the means of war [6], and the narrations gloss it as archery [43]; whatever is spent in the way of Allah, the verse promises, is repaid to you in full. The passage then turns from force to peace. If the enemy inclines toward a settlement, the Prophet is told to incline toward it too and to trust God. Al-Tusi holds this does not make accepting every truce obligatory, since circumstances differ, and he judges the verse not abrogated [7]. Should the enemy only feign peace to deceive, God is declared sufficient - the same God who strengthened the Prophet with His help and with the faithful, and united their hearts. Following al-Baqir, the commentators name these faithful the Ansar, the Aws and Khazraj, whose long feud no wealth on earth could have healed; God alone joined them [3]. The passage closes where it began, on sufficiency: Allah suffices the Prophet and the faithful who follow him [4]."
+    },
+    "verses": [
+      {
+        "verse": 60,
+        "heading": {
+          "en": "Prepare strength and horses"
+        },
+        "note": {
+          "en": "Of the others besides them, whom you do not know, al-Tusi records several identifications: Banu Qurayza, the Persians, the hypocrites, and the jinn [6]."
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "The Prophet",
+            "addressee": null,
+            "arabic": "قَالَ رَسُولُ اللهِ (صَلَّى اللهُ عَلَيْهِ وَآلِه) فِي قَوْلِ اللهِ عَزَّ وَجَلَّ وَأَعِدُّوا لَهُمْ مَا اسْتَطَعْتُمْ مِنْ قُوَّةٍ وَمِنْ رِباطِ الْخَيْلِ قَالَ الرَّمْيُ.",
+            "chain": "Muhammad ibn Yahya, from Imran ibn Musa, from al-Hasan ibn Tarif, from Abd Allah ibn al-Mughira, raising it",
+            "text": {
+              "en": "About God's words, 'Prepare against them whatever you can of power and war-horses,' the Messenger of Allah said: it is sharpshooting."
+            },
+            "source": "s43"
+          }
+        ]
+      },
+      {
+        "verse": 61,
+        "heading": {
+          "en": "Inclining toward peace"
+        },
+        "note": {
+          "en": "Al-Qummi reports this verse abrogated by the later command not to sue for peace while you hold the upper hand [11]; al-Tusi judges it still standing, since when to accept a truce varies [7]."
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "فِي قَوْلِهِ تَعَالَى وَإِنْ جَنَحُوا لِلسَّلْمِ فَاجْنَحْ لَها قَالَ قُلْتُ مَا السَّلْمُ قَالَ الدُّخُولُ فِي أَمْرِنَا.",
+            "chain": "al-Husayn ibn Muhammad, from Mualla ibn Muhammad, from Muhammad ibn Jumhur, from Safwan, from Ibn Muskan, from al-Halabi, from Abu Abdillah",
+            "text": {
+              "en": "Al-Halabi asked about God's words 'If they incline toward peace, then incline toward it': what is peace? He answered: it is entering into our cause."
+            },
+            "source": "s44"
+          }
+        ]
+      },
+      {
+        "verse": 62,
+        "heading": {
+          "en": "Aided with the faithful"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "The Prophet",
+            "addressee": null,
+            "arabic": "مكتوب على العرش: أنا الله لا إله إلا أنا، وحدي لا شريك لي، و محمد عبدي و رسولي، أيدته بعلي، فأنزل عز و جل: هُوَ الَّذِي أَيَّدَكَ بِنَصْرِهِ وَبِٱلْمُؤْمِنِينَ فكان النصر عليا، و دخل مع المؤمنين، فدخل في الوجهين جميعا.",
+            "chain": "Ibn Babawayh, by his chain through al-Kalbi, from Abu Salih, from Abu Hurayra, from the Messenger of Allah",
+            "text": {
+              "en": "Written upon the Throne: I am Allah, there is no god but Me, alone, with no partner; Muhammad is My servant and messenger, whom I aided with Ali. Then God revealed, 'He it is who strengthened you with His help and with the faithful': the help was Ali, and he was included among the faithful."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 63,
+        "heading": {
+          "en": "God united their hearts"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فهم الأنصار كان بين الأوس والخزرج حرب شديدة وعداوة في الجاهلية فألف الله بين قلوبهم ونصر بهم نبيه صلى الله عليه وآله فالذين ألف بين قلوبهم هم الأنصار خاصة.",
+            "chain": "In the report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "They are the Ansar. Between the Aws and Khazraj there had been fierce war and enmity in the age of ignorance; then God united their hearts and helped His Prophet through them. Those whose hearts He united are the Ansar in particular."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 64,
+        "heading": {
+          "en": "God suffices the Prophet"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Abu Hurayra",
+            "addressee": null,
+            "arabic": "نزلت هذه الآية في علي بن أبي طالب (عليه السلام)، و هو المعني بقوله: المؤمنين.",
+            "chain": "Sharaf al-Din al-Najafi, from Abu Nuaym in Hilyat al-Awliya, by his route to Abu Hurayra",
+            "text": {
+              "en": "This verse was revealed concerning Ali ibn Abi Talib, and he is the one meant by 'the faithful.'"
+            },
+            "source": "s16"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On verse 61 the traditions divide over what peace means. The Sunni commentators read it plainly as a truce or reconciliation and debate only whether the later command to fight abrogated it; al-Tabari holds the verse still stands [21]. Shia narrations from al-Sadiq instead gloss peace as entering into the Imams' cause [44]. On the faithful through whom God aided the Prophet, Sunni authorities name the Ansar broadly [22], while the Shia traditions single out Ali as the one through whom the help came [15]. Sunni reports also tie verse 64 to Umar's conversion, a link Ibn Kathir doubts, since the verse is Medinan [27]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 59 to 64",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=59&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان أحكام ودساتير في الحرب والسلم والمعاهدات ونقضها وغير ذلك"
+        },
+        "gloss": "An exposition of the rulings and principles of war, peace, treaties, and their breaking."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 62 to 63",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأراد بالمؤمنين الأنصار وهم الأوس والخزرج عن أبي جعفر ع والسدي وأكثر المفسرين"
+        },
+        "gloss": "By 'the believers' is meant the Ansar, the Aws and Khazraj - reported from Abu Jafar (al-Baqir), al-Suddi, and most commentators."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 64",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=64&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي كافيك الله ويكفيك متبعوك من المؤمنين"
+        },
+        "gloss": "That is, Allah suffices you, and your followers among the believers suffice you."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 59",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=59&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال الحسن: معنى لا يعجزون الله لا يفوتونه"
+        },
+        "gloss": "Al-Hasan said: the meaning of 'they cannot frustrate' is that they do not escape Allah."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 60",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=60&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "امر الله تعالى المؤمنين ان يعدوا ما قدروا عليه من السلاح وآلة الحرب والخيل"
+        },
+        "gloss": "God commanded the believers to prepare what they could of weapons, war implements, and horses."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 61",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والصحيح أنها ليست منسوخة"
+        },
+        "gloss": "The sound view is that it is not abrogated."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 61",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال هي منسوخة بقوله: ولا تهنوا وتدعوا إلى السلم وأنتم الأعلون والله معكم"
+        },
+        "gloss": "He said it is abrogated by His words, 'Do not weaken and sue for peace while you have the upper hand, for Allah is with you.'"
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 62 to 63",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالذين ألف بين قلوبهم هم الأنصار خاصة"
+        },
+        "gloss": "Those whose hearts He united are the Ansar in particular."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 62 to 63",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فكان النصر عليا، و دخل مع المؤمنين، فدخل في الوجهين جميعا"
+        },
+        "gloss": "So the help was Ali, and he was included among the believers, entering in both respects."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 64",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=64&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت هذه الآية في علي بن أبي طالب (عليه السلام)"
+        },
+        "gloss": "This verse was revealed concerning Ali ibn Abi Talib."
+      },
+      {
+        "id": "s21",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 61",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=8&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأما ما قاله قتادة ومن قال مثل قوله من أن هذه الآية منسوخة، فقول لا دلالة عليه من كتاب ولا سنة ولا فطرة عقل"
+        },
+        "gloss": "As for Qatada's view that this verse is abrogated, it is a claim with no support from Book, Sunnah, or sound reason."
+      },
+      {
+        "id": "s22",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 62",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=8&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وبالمؤمنين يعني بالأنصار"
+        },
+        "gloss": "'And with the believers' means with the Ansar."
+      },
+      {
+        "id": "s27",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 64",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=8&tAyahNo=64&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أن هذه الآية نزلت حين أسلم عمر بن الخطاب وكمل به الأربعون، وفي هذا نظر لأن هذه الآية مدنية"
+        },
+        "gloss": "That this verse was revealed when Umar embraced Islam - but this is questionable, since the verse is Medinan."
+      },
+      {
+        "id": "s43",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 5, hadith 12, cited at Al-Anfaal 60",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "مرفوع"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَأَعِدُّوا لَهُمْ مَا اسْتَطَعْتُمْ مِنْ قُوَّةٍ وَمِنْ رِباطِ الْخَيْلِ قَالَ الرَّمْيُ"
+        },
+        "gloss": "'Prepare against them whatever you can of power and war-horses' - he said: it is sharpshooting."
+      },
+      {
+        "id": "s44",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 16, cited at Al-Anfaal 61",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "لم يخرجه",
+          "ضعيف"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "قُلْتُ مَا السَّلْمُ قَالَ الدُّخُولُ فِي أَمْرِنَا"
+        },
+        "gloss": "I asked: what is peace? He said: entering into our affair."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:47:06Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T21:00:14Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "9": {
+    "id": "8:9",
+    "surah": 8,
+    "index": 9,
+    "range": [
+      65,
+      69
+    ],
+    "title": {
+      "en": "Fighting and the Badr captives"
+    },
+    "essay": {
+      "en": "The passage opens with a command to the Prophet to rouse the believers to fight. The promise attached, that twenty steadfast men overcome two hundred and a hundred a thousand, is worded as a statement, but Tabrisi reads it as a command, since God then speaks of lightening a burden, which happens only after it is imposed [3]. The disbelievers lose because they are in ignorance, without the insight of one who hopes for the reward of the Hereafter [5]. Verse 66 eases the ratio to one against two, which Tusi holds abrogates the earlier ruling once standing firm against ten had grown too hard [6], and God is with the patient.\n\nThe passage turns at verse 67. A prophet may not take captives until he has thoroughly subdued the enemy by killing, a ruling Tusi ties to the captives of Badr [7], and 'you desire the transitory gains of this world' addresses the believers who wanted ransom, not the Prophet [4]. Tabatabai reads these verses as a rebuke to the people of Badr, who took captives and pressed for ransom, a request God granted as He reproached them [2]. Verse 68 warns that, but for a prior decree, which Tabrisi reports as God's rule not to punish a people until He makes plain what to avoid, a great punishment would have struck [4]. Verse 69 releases the spoils as lawful and good, closing on forgiveness and mercy [9]."
+    },
+    "verses": [
+      {
+        "verse": 66,
+        "heading": {
+          "en": "God lightens the ratio"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "من فر من رجلين في القتال من الزحف فقد فر، و من فر من ثلاثة في القتال من الزحف فلم يفر",
+            "chain": "al-Shaykh in al-Tahdhib, by his chain from Ahmad ibn Muhammad, from al-Hasan ibn Mahbub, from al-Hasan ibn Salih, from Abu Abdillah",
+            "text": {
+              "en": "Whoever flees from two men in battle has fled; whoever flees from three in battle has not fled."
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "لا يكون الناس في حال شدة إلا كان شيعتي أحسن الناس حالاً … فخفف عنهم ما لا يخفف عن غيرهم",
+            "chain": "Furat: al-Hasan ibn al-Abbas, with a connected chain, from al-Asbagh ibn Nubata",
+            "text": {
+              "en": "People are never in a state of hardship but that my Shi'a are in the best condition of people; God lightened for them what He does not lighten for others."
+            },
+            "source": "s15"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Verses 67 and 68 reproach the acceptance of ransom at Badr, and the traditions differ over whom the reproach reaches. Tabatabai reads it as falling on the people of Badr who pressed for ransom, not on the Prophet, whom God kept free of sin [2]. Tusi reports that the Prophet disliked the ransom, so plainly that Sa'd ibn Muadh read the displeasure in his face [8]. Sunni narrations place the Prophet at the center: Ibn Kathir reports that he accepted Abu Bakr's counsel to ransom the captives [21], and Qurtubi transmits that he wept with Abu Bakr when the reproach came, the punishment shown as near as a tree [23]."
+    },
+    "sources": [
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 67 to 69",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=67&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان عتاب من الله سبحانه لأهل بدر حين أخذوا الأسرى من المشركين ثم اقترحوا على رسول الله صلى الله عليه وآله وسلم أن لا يقتلهم ويأخذ منهم الفداء"
+        },
+        "gloss": "An account of God's rebuke to the people of Badr when they took captives from the polytheists and then proposed to the Messenger of God that he not kill them but take ransom from them."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 65 to 66",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واللفظ لفظ الخبر والمراد به الأمر ويدل على ذلك قولـه فيما بعد الآن خفف الله عنكم لأن التخفيف لا يكون إلا بعد التكليف"
+        },
+        "gloss": "The wording is that of a report, but a command is meant; the proof is His later words 'Now Allah has lightened your burden,' for lightening comes only after an obligation."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 67 to 69",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=67&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ تريدون عرض الدنيا } هذا خطاب لمن دون النبي صلى الله عليه وسلم من المؤمنين الذين رغبوا في أخذ الفداء من الأسرى في أول وقته"
+        },
+        "gloss": "'You desire the transitory gains of this world' - this is addressed to those below the Prophet among the believers who wished to take ransom from the captives at its first occurrence."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 65",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومعنى { لا يفقهون } ها هنا انهم على جهالة، خلاف من يقاتل على بصيرة، وهو يرجو به ثواب الاخرة"
+        },
+        "gloss": "The meaning of 'they do not understand' here is that they are in ignorance, unlike one who fights with insight, hoping thereby for the reward of the Hereafter."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 66",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=66&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذه الاية نسخت حكم ما تقدمها، لأن في الاولى كان وجوب ثبات الواحد للعشرة والعشرة للمئة"
+        },
+        "gloss": "This verse abrogated the ruling before it, for in the first was the obligation of one man standing firm against ten, and ten against a hundred."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 67",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=67&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والاثخان في الأرض تغليظ الحال بكثرة القتل"
+        },
+        "gloss": "Thoroughly decimating (ithkhan) in the land is intensifying the situation by much killing."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 68",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=68&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد روي ان النبي صلى الله عليه وآله كره اخذ الفداء حتى راى سعد بن معاذ كراهية ذلك في وجهه"
+        },
+        "gloss": "It has been narrated that the Prophet disliked taking the ransom, until Sa'd ibn Muadh saw that dislike in his face."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 69",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=69&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أباح الله تعالى للمؤمنين بهذه الاية أن يأكلوا مما غنموه من اموال المشركين"
+        },
+        "gloss": "By this verse God permitted the believers to eat of what they took as spoils from the wealth of the polytheists."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 65 to 66",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "من فر من رجلين في القتال من الزحف فقد فر، و من فر من ثلاثة في القتال من الزحف فلم يفر"
+        },
+        "gloss": "Whoever flees from two men in battle has fled; whoever flees from three in battle has not fled."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 66",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=8&tAyahNo=66&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يكون الناس في حال شدة إلا كان شيعتي أحسن الناس حالاً"
+        },
+        "gloss": "People are never in a state of hardship but that my Shi'a are in the best condition of people."
+      },
+      {
+        "id": "s21",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 67 to 69",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=8&tAyahNo=67&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقام أبو بكر الصديق رضي الله عنه، فقال يا رسول الله نرى أن تعفو عنهم، وأن تقبل منهم الفداء"
+        },
+        "gloss": "Abu Bakr al-Siddiq rose and said: O Messenger of God, we think you should pardon them and accept ransom from them."
+      },
+      {
+        "id": "s23",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 67",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=8&tAyahNo=67&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أَبْكي للذي عَرض عليّ أصحابُك من أخذهم الفداء لقد عُرض عليّ عذابُهم أدنى من هذه الشجرةِ"
+        },
+        "gloss": "I weep for what your companions offered me, their taking of the ransom; their punishment was shown to me nearer than this tree."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:48:01Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T22:31:06Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  },
+  "10": {
+    "id": "8:10",
+    "surah": 8,
+    "index": 10,
+    "range": [
+      70,
+      75
+    ],
+    "title": {
+      "en": "Captives and the believers' bonds"
+    },
+    "essay": {
+      "en": "These verses close the surah. The Prophet is first told to address the captives of Badr: if God finds good - taken to mean Islam and sincere intent - in their hearts, He will give them better than the ransom taken from them, and forgive them [6]. Tabatabai calls the promise an enticement held out to the prisoners should they embrace faith [1]. Majma reports al-Abbas saying the verse came down about him: twenty measures of gold were taken from him, and God gave him twenty slaves in their place [3]. The next verse warns that if the freed captives plot betrayal, they have already betrayed God before, at Badr, where He gave the believers power over them [7]. The surah then turns to loyalty. Those who believed, migrated, and struggled, and those who gave them shelter and help - the Muhajirun and the Ansar - are awliya, one another's protectors [4]. Al-Mizan notes this bond is broader than inheritance, reaching to mutual support and protection [2]. Believers who did not migrate hold no such claim until they migrate, though they must be helped if they seek aid in religion, unless against a people bound by treaty [8]. The faithless, in turn, are one another's allies, and failing to keep these lines drawn would breed strife and great corruption [5]. Verse 74 calls these migrants and helpers the ones truly faithful, promised forgiveness and a noble provision. The passage closes by setting blood relatives foremost in inheritance in the Book of God [11]."
+    },
+    "verses": [
+      {
+        "verse": 70,
+        "heading": {
+          "en": "The captives of Badr"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "نزلت في العباس و عقيل و نوفل",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Muawiya ibn Ammar, from Abu Abdillah",
+            "text": {
+              "en": "Concerning this verse he said: it was revealed about al-Abbas, Aqil, and Nawfal."
+            },
+            "source": "s16"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "يا عباس، ابسط رداءك و خذ من هذا المال طرفا … يا عباس، هذا من الذي قال الله تبارك و تعالى: { قُل لِّمَن فِيۤ أَيْدِيكُمْ مِّنَ ٱلأَسْرَىٰ إِن يَعْلَمِ ٱللَّهُ فِي قُلُوبِكُمْ خَيْراً يُؤْتِكُمْ خَيْراً مِّمَّآ أُخِذَ مِنكُمْ وَيَغْفِرْ لَكُمْ وَٱللَّهُ غَفُورٌ رَّحِيمٌ }",
+            "chain": "Abdullah ibn Jafar al-Himyari, by his isnad from Abdullah ibn Maymun, from Jafar, from his father",
+            "text": {
+              "en": "The Prophet was brought money and said: Abbas, spread out your cloak and take a share of this. When he had, the Prophet said: this is part of what God meant by 'Say to the captives... He will give you better than what was taken from you.'"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 72,
+        "heading": {
+          "en": "Loyalty among the believers"
+        },
+        "note": {
+          "en": "The walaya here was read as inheritance: the early Muslims inherited through the pact of brotherhood between Muhajirun and Ansar, until verse 75 made blood relatives the heirs [4]."
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "أنهم كانوا يتوارثون بالمؤاخاة",
+            "chain": "al-Tabrisi, from al-Baqir",
+            "text": {
+              "en": "They used to inherit from one another by the pact of brotherhood."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 75,
+        "heading": {
+          "en": "Blood relatives and rule"
+        },
+        "note": {
+          "en": "Al-Qummi reads this verse as abrogating 'those whom your oaths have bound - give them their share' (4:33), returning inheritance to blood kin [15]."
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "قال: الخال و الخالة يرثان إذا لم يكن معهما أحد، إن الله يقول: { وَأْوْلُواْ ٱلأَرْحَامِ بَعْضُهُمْ أَوْلَىٰ بِبَعْضٍ }",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from Muhammad ibn Isa, from Yunus, from Abi Basir, from Abu Jafar",
+            "text": {
+              "en": "The maternal uncle and maternal aunt inherit when there is no one else with them, for God says, 'the blood relatives are more entitled to one another.'"
+            },
+            "source": "s18"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لا تعود الإِمامة في أخوين بعد الحَسَن والحُسين عليهما السلام أبداً … فلا يكون بعد عليّ بن الحسين عليهمَا السلام إلاّ في الأعقاب وأعقاب الأعقاب",
+            "chain": "al-Kafi, from al-Sadiq",
+            "text": {
+              "en": "The imamate will never return between two brothers after al-Hasan and al-Husayn; it ran on from Ali ibn al-Husayn, as God said, 'the blood relatives are more entitled to one another.' After him it is only among the descendants."
+            },
+            "source": "s20"
+          },
+          {
+            "id": "n6",
+            "speaker": "Zayd ibn Ali",
+            "addressee": null,
+            "arabic": "أرحام رسول الله صلى الله عليه وآله وسلم أولى بالملك والإمرة",
+            "chain": "Furat ibn Ibrahim al-Kufi, from Ismail ibn Ibrahim, from Zayd ibn Ali",
+            "text": {
+              "en": "Concerning 'the blood relatives are more entitled to one another,' he said: the kin of the Messenger of God are more entitled to sovereignty and rule."
+            },
+            "source": "s21"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Both traditions read the closing verses as legislating loyalty among the believers and returning inheritance to blood kin. Al-Tabari takes 'the blood relatives are more entitled' as a rule of succession set down in the Book of God [27], and Ibn Kathir holds it general to all relatives, abrogating the earlier inheritance by pact and by brotherhood [31]. The Shia narrations carry the phrase further. Fayd Kashani cites al-Kafi that after al-Hasan and al-Husayn the imamate passes only through the descendants of Ali ibn al-Husayn, drawn from this verse [20], and Furat records Zayd ibn Ali reading the phrase as the Prophet's kin being foremost in sovereignty and rule [21]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 70 to 71",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي آخر الآيات ما هو بمنزلة التطميع والوعد الجميل للاسرى إن أسلموا والاستغناء عنهم إن أرادوا خيانة النبي صلى الله عليه وآله وسلم."
+        },
+        "gloss": "At the close of these verses is what amounts to an enticement and a fair promise to the captives if they embrace Islam, and a dispensing with them if they intend to betray the Prophet."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Anfaal 72 to 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=8&tAyahNo=72&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد جعل الله بينهم ولاية بقوله { أولئك بعضهم أولياء بعض } والولاية أعمّ من ولاية الميراث وولاية النصرة ولاية الأمن"
+        },
+        "gloss": "God set a walaya among them in His words 'they are awliya of one another'; and this walaya is broader than the walaya of inheritance - it takes in the walaya of support and of protection."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 70 to 71",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "روي عن العباس بن عبد المطلب أنه قال نزلت هذه الآية فيّ وفي أصحابي كان معي عشرون أوقية ذهباً فأخذت مني فأعطاني الله مكانها عشرين عبداً"
+        },
+        "gloss": "It is related that al-Abbas ibn Abd al-Muttalib said: this verse was revealed about me and my companions. I had twenty measures of gold, which were taken from me, and God gave me in their place twenty slaves."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 72",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=72&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قيل نزلت الآية في الميراث وكانوا يتوارثون بالهجرة فجعل الله الميراث للمهاجرين والأنصار دون ذوي الأرحام … حتى أنزل الله تعالى { وأولوا الأرحام بعضهم أولى ببعض } [الأنفال: 75] فنسخت هذه الآية وصار الميراث لذوي الأرحام المؤمنين"
+        },
+        "gloss": "It is said the verse came down about inheritance: they used to inherit by migration, so God made inheritance belong to the Muhajirun and Ansar and not to blood relatives, until God revealed 'the blood relatives are more entitled to one another,' which abrogated this verse, and inheritance passed to the believing blood relatives."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 73 to 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=8&tAyahNo=73&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ والذين كفروا بعضهم أولياء بعض } أي بعضهم أنصار بعض … إلا تفعلوا ما أمرتم به من التناصر والتعاون والتبرء من الكفار: { تكن فتنة في الأرض وفساد كبير }"
+        },
+        "gloss": "'As for the faithless, they are awliya of one another' means they are one another's helpers; unless you do what you were commanded - mutual support, cooperation, and disavowal of the disbelievers - there will be strife in the land and great corruption."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 70",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقوله { إن يعلم الله في قلوبكم خيراً } يعني اسلاماً … وقوله { يؤتكم خيراً } يعني يعطيكم خيراً { مما أخذ منكم } من الفداء"
+        },
+        "gloss": "His words 'if God knows any good in your hearts' means Islam; and 'He will give you better' means He will grant you better than what was taken from you of the ransom."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 71",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقوله { فأمكن منهم } المعنى لما خانوا بأن خرجوا إلى بدر وقاتلوا مع المشركين، فقد امكن الله منهم بان غلبوا واسروا. فان خانوا ثانياً فيمكن الله منهم مثل ذلك"
+        },
+        "gloss": "'He gave power over them' means: when they betrayed by going out to Badr and fighting alongside the polytheists, God gave power over them, so they were overcome and captured; and if they betray a second time, God will give the like power over them."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 72",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=72&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثم قال { وإن استنصروكم } اي طلبوا نصركم { في الدين } يعني الذين آمنوا ولم يهاجروا { فعليكم النصر } اي نصرهم بسبب الايمان … { إلا على قوم بينكم وبينهم ميثاق } ، يعني موادعة ومهادنة"
+        },
+        "gloss": "Then 'if they seek your help in religion' - meaning those who believed but did not migrate - 'then you must help them,' that is, aid them for the sake of faith; 'except against a people with whom you have a treaty,' meaning a truce and pact."
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=8&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية دلالة على ان من كان قرباه أقرب إلى الميت كان أولى بالميراث"
+        },
+        "gloss": "In the verse is proof that whoever is nearer in kinship to the deceased is more entitled to the inheritance."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=8&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: نسخت قول: { والذين عقدت أيمانكم فآتوهم نصيبهم }"
+        },
+        "gloss": "He said: it abrogated the statement, 'and those whom your oaths have bound - give them their share.'"
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 70",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: نزلت في العباس و عقيل و نوفل"
+        },
+        "gloss": "He said: it was revealed concerning al-Abbas, Aqil, and Nawfal."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 72",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=72&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الطبرسي: عن الباقر (عليه السلام): أنهم كانوا يتوارثون بالمؤاخاة"
+        },
+        "gloss": "al-Tabrisi, from al-Baqir: they used to inherit from one another by the pact of brotherhood."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 73 to 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=8&tAyahNo=73&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: الخال و الخالة يرثان إذا لم يكن معهما أحد، إن الله يقول: { وَأْوْلُواْ ٱلأَرْحَامِ بَعْضُهُمْ أَوْلَىٰ بِبَعْضٍ }"
+        },
+        "gloss": "He said: the maternal uncle and maternal aunt inherit when there is no one else with them, for God says, 'the blood relatives are more entitled to one another.'"
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 73 to 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=8&tAyahNo=73&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الكافي عن الصادق عليه السلام لا تعود الإِمامة في أخوين بعد الحَسَن والحُسين عليهما السلام أبداً … فلا يكون بعد عليّ بن الحسين عليهمَا السلام إلاّ في الأعقاب وأعقاب الأعقاب"
+        },
+        "gloss": "In al-Kafi, from al-Sadiq: the imamate will never again pass between two brothers after al-Hasan and al-Husayn; after Ali ibn al-Husayn it is only among the descendants and the descendants of descendants."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Anfaal 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=8&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أرحام رسول الله صلى الله عليه وآله وسلم أولى بالملك والإمرة"
+        },
+        "gloss": "The kin of the Messenger of God are more entitled to sovereignty and rule."
+      },
+      {
+        "id": "s27",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=8&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمتناسبون بالأرحام بعضهم أولى ببعض في الميراث … { فِي كِتاب اللَّهِ } يقول: في حكم الله"
+        },
+        "gloss": "Those related by kinship are more entitled to one another in inheritance; 'in the Book of God' means: in the ruling of God."
+      },
+      {
+        "id": "s31",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Anfaal 74 to 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=8&tAyahNo=74&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بل الحق أن الآية عامة تشمل جميع القرابات … على أنها ناسخة للإرث بالحلف والإخاء اللذين كانوا يتوارثون بهما أولاً"
+        },
+        "gloss": "Rather the truth is that the verse is general, covering all relatives; and it abrogates inheritance by pact and by brotherhood, by which they used to inherit at first."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-09T19:49:09Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-09T22:32:49Z",
+      "assembled_at": "2026-09-09T22:47:49Z"
+    }
+  }
+}

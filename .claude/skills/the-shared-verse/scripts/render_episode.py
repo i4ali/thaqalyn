@@ -158,6 +158,21 @@ def load_episode(path: Path) -> dict:
         if not ep["voiceover"].get(k):
             raise ValueError(f"voiceover.{k} missing or empty.")
 
+    key = ep.get("key")
+    if key:
+        rows = key.get("rows") or []
+        if not rows:
+            raise ValueError('key.rows must be a non-empty list of {element, sunni, shia} rows.')
+        for r in rows:
+            for k in ("element", "sunni", "shia"):
+                if not r.get(k):
+                    raise ValueError(f"key row missing {k!r}: {r}")
+    for kp in ep.get("key_phrases") or []:
+        if not kp.get("arabic") or not kp.get("english"):
+            raise ValueError(f"key_phrases entries need 'arabic' and 'english': {kp}")
+        if kp["arabic"] not in ep["arabic"]:
+            raise ValueError(f"key phrase not found verbatim in the arabic field: {kp['arabic']!r}")
+
     # Fairness nudge (non-fatal): the two readings should be matched in length.
     a = len(ep["readings"][order[0]]["body"].split())
     b = len(ep["readings"][order[1]]["body"].split())
@@ -165,6 +180,54 @@ def load_episode(path: Path) -> dict:
         print(f"  ⚠ readings differ in length ({a} vs {b} words). Symmetry is the "
               f"safety mechanism — consider matching them.")
     return ep
+
+
+def _tok(word: str) -> str:
+    """Lowercase alphanumerics only - 'Qur'an's,' -> 'qurans' - for matching spoken words."""
+    return re.sub(r"[^0-9a-z]+", "", normalize_for_tts(word).lower())
+
+
+def key_row_times(ep: dict, reading_words: dict | None) -> dict:
+    """When each element-key row is named in the spoken reading (ms into the clip).
+
+    Each row matches on `match` (default: the first word of `element`), searched forward
+    through that tradition's timestamped body so rows light up as the narrator reaches
+    them. A row that is never named gets None and the template staggers it evenly.
+    """
+    rows = ((ep.get("key") or {}).get("rows")) or []
+    out: dict = {}
+    for trad in ("sunni", "shia"):
+        words = (reading_words or {}).get(trad) or []
+        toks = [_tok(w["w"]) for w in words]
+        times, cursor = [], 0
+        for r in rows:
+            m = _tok(r.get("match") or r["element"].split()[0])
+            hit = next((i for i in range(cursor, len(toks)) if toks[i] == m), None)
+            if hit is None:
+                times.append(None)
+            else:
+                times.append(words[hit]["s"]); cursor = hit + 1
+        out[trad] = times
+    return out
+
+
+def key_phrase_times(ep: dict, trans_words: list | None) -> list:
+    """Locate each key phrase's English in the timestamped translation -> [{arabic,s,e,beats}]."""
+    phrases = ep.get("key_phrases") or []
+    toks = [_tok(w["w"]) for w in (trans_words or [])]
+    out = []
+    for kp in phrases:
+        want = [t for t in (_tok(x) for x in kp["english"].split()) if t]
+        s = e = None
+        if toks:
+            for i in range(0, len(toks) - len(want) + 1):
+                if toks[i:i + len(want)] == want:
+                    s, e = trans_words[i]["s"], trans_words[i + len(want) - 1]["e"]
+                    break
+            if s is None:
+                raise RuntimeError(f"key phrase English not found in the narrated translation: {kp['english']!r}")
+        out.append({"arabic": kp["arabic"], "s": s, "e": e, "beats": list(kp.get("glow_beats") or [])})
+    return out
 
 
 def build_episode_js(ep: dict, beats: dict, end_ms: int, trans_words: list | None = None, reading_words: dict | None = None) -> dict:
@@ -199,7 +262,17 @@ def build_episode_js(ep: dict, beats: dict, end_ms: int, trans_words: list | Non
             },
             "caption_desc": ep.get("caption_desc", ""),    # demo chrome only (not in export)
             "transWords": strip_words(trans_words),
-            "payoff": plain_spelling(ep["voiceover"].get("payoff", "")),   # on-screen payoff line (shown when show_payoff_text)
+            # Optional element key: one table (element | tradition A | tradition B) replaces the two
+            # prose panels; the bodies are still spoken, and rows light up as they are named.
+            "key": ({"rows": [{"element": plain_spelling(r["element"]),
+                               "sunni": plain_spelling(r["sunni"]),
+                               "shia": plain_spelling(r["shia"])} for r in ep["key"]["rows"]],
+                     "rowTimes": key_row_times(ep, reading_words)} if ep.get("key") else None),
+            # Optional key phrases: Arabic substrings that glow while their English is narrated
+            "keyPhrases": key_phrase_times(ep, trans_words),
+            # on-screen payoff line (shown when show_payoff_text); `payoff_text` may give a shorter
+            # line than the spoken `voiceover.payoff`
+            "payoff": plain_spelling(ep.get("payoff_text") or ep["voiceover"].get("payoff", "")),
             "cta": plain_spelling(ep.get("cta_text") or ep["voiceover"].get("question", "")),
         },
         "beats": beats,
@@ -249,6 +322,8 @@ def synth_segments(ep: dict, tmp: Path):
     verse_text = f"{ref.rstrip(' .')}. {translation}" if ref else translation
     ref_n = len(ref.split()) if ref else 0
     pins = ep.get("pins") or {}
+    speeds = ep.get("tts_speed") or {}          # optional per-beat pace, e.g. {"verse": 1.1}
+    key_mode = bool(ep.get("key"))
 
     plan = [
         ("hook", vo["hook"], None),
@@ -276,7 +351,7 @@ def synth_segments(ep: dict, tmp: Path):
             continue
         print(f"  [tts {i+1}/6] {name}: {text[:54]}{'…' if len(text) > 54 else ''}")
         if name == "verse":
-            words = synthesize_timed(text, mp3)
+            words = synthesize_timed(text, mp3, speed=speeds.get("verse"))
             if len(words) <= ref_n:
                 raise RuntimeError("Verse alignment shorter than the reference — cannot split.")
             trans_words = [{"w": w["word"], "s": int(round(w["start"] * 1000)), "e": int(round(w["end"] * 1000))}
@@ -289,7 +364,14 @@ def synth_segments(ep: dict, tmp: Path):
             intro = ep["readings"][trad].get("intro") or READING_INTRO.format(name=TRAD_NAME[trad])
             intro_n = len(intro.split())
             spoken = f"{intro} {normalize_for_tts(text)}"
-            words = synthesize_timed(spoken, mp3)
+            words = synthesize_timed(spoken, mp3, speed=speeds.get("readings"))
+            if key_mode:
+                # element-key episodes display the table, not the body: keep the body's
+                # word timings (they drive the row reveals) and skip the display check.
+                reading_words[trad] = [{"w": w["word"], "s": int(round(w["start"] * 1000)),
+                                        "e": int(round(w["end"] * 1000))} for w in words[intro_n:]]
+                segs.append((name, mp3, ffprobe_duration(mp3)))
+                continue
             display = text.split()
             if len(words) - intro_n != len(display):
                 raise RuntimeError(
@@ -301,7 +383,7 @@ def synth_segments(ep: dict, tmp: Path):
                                     "e": int(round(words[intro_n + j]["end"] * 1000))}
                                    for j in range(len(display))]
         else:
-            synthesize(text, mp3)
+            synthesize(text, mp3, speed=speeds.get(name))
         segs.append((name, mp3, ffprobe_duration(mp3)))
     return segs, trans_words, reading_words
 
@@ -506,6 +588,10 @@ def main() -> int:
     print(f"   Title:    {title}")
     if hashtags:
         print(f"   Hashtags: {hashtags}")
+    if ep.get("post_caption"):
+        print("   Caption (with citations, ready to paste or pin as the first comment):")
+        for line in str(ep["post_caption"]).splitlines():
+            print(f"     {line}")
     return 0
 
 

@@ -11,6 +11,7 @@ from .fetch import TASHKEEL_RE
 MARKER_RE = re.compile(r"\[(\d+)\]")
 DIACRITIC_RE = re.compile(r"[āīūḥṣḍṭẓʿʾĀĪŪḤṢḌṬẒ]")
 ARABIC_SENTENCE_END_RE = re.compile(r"[.!?؟]")
+CURLY_QUOTE_RE = re.compile("[\u201c\u201d\u2018\u2019]")
 WORD_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9'’-]*")
 
 TITLE_MAX_WORDS = 6
@@ -206,4 +207,6 @@ def validate_draft(draft: dict, gathered: dict, verses: dict) -> list[str]:
         errs.append("transliteration diacritics found in English text; use plain spelling")
     if "—" in blob:
         errs.append("em dash found in English text; use a plain dash")
+    if CURLY_QUOTE_RE.search(blob):
+        errs.append("curly quotation marks found in English text; use straight quotes")
     return errs

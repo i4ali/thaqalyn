@@ -1,0 +1,101 @@
+{
+  "slug": "annur-24-35",
+  "title": "The Oil That Glows Unlit",
+  "verse_ref": "Sūrat al-Nūr · 24:35",
+  "arabic": "ٱللَّهُ نُورُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ مَثَلُ نُورِهِۦ كَمِشْكَوٰةٍ فِيهَا مِصْبَاحٌ ۖ ٱلْمِصْبَاحُ فِى زُجَاجَةٍ ۖ ٱلزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّىٌّ يُوقَدُ مِن شَجَرَةٍ مُّبَـٰرَكَةٍ زَيْتُونَةٍ لَّا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِىٓءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ ۚ نُّورٌ عَلَىٰ نُورٍ ۗ يَهْدِى ٱللَّهُ لِنُورِهِۦ مَن يَشَآءُ ۚ وَيَضْرِبُ ٱللَّهُ ٱلْأَمْثَـٰلَ لِلنَّاسِ ۗ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ",
+  "translation": "“God is the Light of the heavens and the earth. The parable of His light is a niche in which is a lamp; the lamp is in a glass; the glass is like a brilliant star, lit from a blessed olive tree, neither of the east nor of the west, whose oil would almost glow even if no fire touched it. Light upon light. God guides to His light whom He wills. God sets forth parables for people, and God knows all things.”",
+  "order": [
+    "sunni",
+    "shia"
+  ],
+  "readings": {
+    "sunni": {
+      "label": "Sunni emphasis",
+      "body": "Sunni tafsir says this is a believer. The niche is the believer's chest, the lamp is the Qur'an and faith, the glass is the heart, the tree is sincerity to God alone, the oil is guidance felt before it is taught, and light upon light is the Qur'an and faith shining together.",
+      "source": "al-Ṭabarī (Ubayy ibn Kaʿb) · Ibn Kathīr"
+    },
+    "shia": {
+      "label": "Shia emphasis",
+      "body": "Shia tafsir quotes Imam al-Sadiq: this is the Prophet's family. The niche is Fatima, the lamp is Hasan, the glass is Husayn, the tree is Ibrahim's line, the oil is knowledge that speaks before it is asked, and light upon light is Imam after Imam.",
+      "source": "al-Kāfī (Imam al-Ṣādiq) · Tafsīr al-Qummī"
+    }
+  },
+  "voiceover": {
+    "hook": "This verse describes oil that almost glows before any fire touches it. What is that oil? Two great traditions answer that differently.",
+    "hook_caption": "This verse describes oil that almost glows before any fire touches it. What is that oil?",
+    "reference": "Surah an-Nur, verse thirty-five.",
+    "payoff": "Both traditions hear guidance in this light, light that has to reach you from outside yourself. One keeps the lamp in every believer's heart, the other in the Prophet's house. And neither reading is a wall: Sunni books also record the parable as the Prophet himself, and Shia books also record the believer's heart.",
+    "question": "Where is the lamp kept, in every heart, or in one house"
+  },
+  "cta_text": "Every heart, or one house?",
+  "hashtags": [
+    "quran",
+    "tafsir",
+    "shia",
+    "sunni",
+    "ayatalnur",
+    "lightuponlight",
+    "surahnur",
+    "islam",
+    "quranexplained"
+  ],
+  "caption_desc": "Oil that glows before any fire touches it. What is it? Sunni and Shia tafsir map every element of the Verse of Light 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni #ayatalnur #lightuponlight</span>",
+  "show_captions": true,
+  "show_payoff_text": true,
+  "show_closing_text": true,
+  "key": {
+    "rows": [
+      {
+        "element": "Niche",
+        "sunni": "the believer's chest",
+        "shia": "Fatima"
+      },
+      {
+        "element": "Lamp",
+        "sunni": "the Qur'an and faith",
+        "shia": "Hasan"
+      },
+      {
+        "element": "Glass",
+        "sunni": "the believer's heart",
+        "shia": "Husayn"
+      },
+      {
+        "element": "Blessed tree",
+        "match": "tree",
+        "sunni": "sincerity to God alone",
+        "shia": "Ibrahim's line"
+      },
+      {
+        "element": "Oil that glows unlit",
+        "match": "oil",
+        "sunni": "guidance felt before it is taught",
+        "shia": "knowledge that speaks unasked"
+      },
+      {
+        "element": "Light upon light",
+        "match": "upon",
+        "sunni": "the Qur'an and faith together",
+        "shia": "Imam after Imam"
+      }
+    ]
+  },
+  "key_phrases": [
+    {
+      "arabic": "يَكَادُ زَيْتُهَا يُضِىٓءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ",
+      "english": "whose oil would almost glow even if no fire touched it",
+      "glow_beats": [
+        "hook"
+      ]
+    },
+    {
+      "arabic": "نُّورٌ عَلَىٰ نُورٍ",
+      "english": "Light upon light"
+    }
+  ],
+  "payoff_text": "Both hear guidance. One keeps the lamp in every heart, the other in one house.",
+  "tts_speed": {
+    "verse": 1.1
+  },
+  "post_caption": "Oil that glows before any fire touches it. What is it? Sunni and Shia tafsir map every element of the Verse of Light, 24:35.\nSunni reading: al-Tabari on 24:35 (Ubayy ibn Ka'b's parable of the believer; Ka'b's report that the parable is the Prophet), Ibn Kathir on 24:35.\nShia reading: al-Kafi, Book of Divine Authority, chapter 'The Imams are the light of Allah', hadith 5 (Imam al-Sadiq); Tafsir al-Qummi on 24:35, which also records the believer's heart.\n#quran #tafsir #shia #sunni #ayatalnur #lightuponlight #surahnur #islam #quranexplained"
+}

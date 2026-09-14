@@ -16,6 +16,8 @@ struct EmeraldHomeView: View {
     @Binding var searchText: String
     @Binding var selectedSurahForDeepLink: SurahWithTafsir?
     @Binding var targetVerseNumber: Int?
+    /// Set by a passage deep link: the surah opens on that passage's hub.
+    @Binding var targetPassageIndex: Int?
 
     @State private var showNotifications = false
     @State private var targetConceptId: String?
@@ -61,11 +63,13 @@ struct EmeraldHomeView: View {
                             readVerseKeys: readVerseKeys,
                             onOpenVerse: { s, v in
                                 targetConceptId = nil
+                                targetPassageIndex = nil
                                 targetVerseNumber = v
                                 selectedSurahForDeepLink = dataManager.getSurah(number: s)
                             },
                             onOpenTheme: { s, v, cid in
                                 targetConceptId = cid
+                                targetPassageIndex = nil
                                 targetVerseNumber = v
                                 selectedSurahForDeepLink = dataManager.getSurah(number: s)
                             }
@@ -141,6 +145,7 @@ struct EmeraldHomeView: View {
                     .frame(height: 4)
 
                     Button {
+                        targetPassageIndex = nil
                         targetVerseNumber = info.verseNumber
                         selectedSurahForDeepLink = s
                     } label: {
@@ -194,10 +199,10 @@ struct EmeraldHomeView: View {
     @ViewBuilder private var deepLinkLink: some View {
         if let surah = selectedSurahForDeepLink {
             NavigationLink(
-                destination: SurahDetailView(surahWithTafsir: surah, targetVerse: targetVerseNumber, targetConceptId: targetConceptId),
+                destination: SurahDetailView(surahWithTafsir: surah, targetVerse: targetVerseNumber, targetConceptId: targetConceptId, targetPassageIndex: targetPassageIndex),
                 isActive: Binding(
                     get: { selectedSurahForDeepLink != nil },
-                    set: { if !$0 { selectedSurahForDeepLink = nil; targetVerseNumber = nil; targetConceptId = nil } }
+                    set: { if !$0 { selectedSurahForDeepLink = nil; targetVerseNumber = nil; targetConceptId = nil; targetPassageIndex = nil } }
                 )
             ) { EmptyView() }
             .hidden()

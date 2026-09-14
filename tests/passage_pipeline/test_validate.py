@@ -177,3 +177,11 @@ def test_perspectives_optional_but_budgeted(bundle):
 
 def test_passage_id_must_match(bundle):
     assert any("passage" in e for e in errors(bundle, lambda d, s, vv: d.__setitem__("passage", "2:5")))
+
+
+def test_curly_quotes_are_rejected(bundle):
+    def mutate(d, s, vv):
+        d["essay"]["en"] = d["essay"]["en"].replace("angels'", "angels\u2019", 1)
+    errs = errors(bundle, mutate)
+    assert any("curly quotation" in e for e in errs)
+    assert not any("curly quotation" in e for e in errors(bundle))

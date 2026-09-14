@@ -12,6 +12,15 @@ import Foundation
 struct PendingDeepLink: Equatable {
     let surahNumber: Int
     let verseNumber: Int
+    /// Set by a passage link: open that passage's hub rather than the reader
+    /// at `verseNumber`.
+    let passageIndex: Int?
+
+    init(surahNumber: Int, verseNumber: Int, passageIndex: Int? = nil) {
+        self.surahNumber = surahNumber
+        self.verseNumber = verseNumber
+        self.passageIndex = passageIndex
+    }
 }
 
 @MainActor

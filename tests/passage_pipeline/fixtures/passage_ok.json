@@ -1,0 +1,33 @@
+{
+  "id": "2:4",
+  "surah": 2,
+  "index": 4,
+  "range": [30, 39],
+  "title": {"en": "Adam and the angels"},
+  "essay": {"en": "The passage steps back before the human story begins. Tabatabai reads the vicegerency as God's own, not the succession of one species to another [1]. The angels' question, he insists, is not objection but a request to understand what puzzled them [1]. The answer is knowledge. God teaches Adam the names, then puts the question to the angels, who know only what He teaches them [6]. Iblis refuses to prostrate and is cast out. Adam and his wife eat from the tree, are sent down, and Adam receives words from his Lord and is forgiven [2]."},
+  "verses": [
+    {
+      "verse": 31,
+      "heading": {"en": "The names taught to Adam"},
+      "note": {"en": "Fayd Kashani holds that the names are not mere words but the realities of the created things [34]."},
+      "narrations": [
+        {"id": "n1", "speaker": "Imam al-Sadiq", "addressee": null, "arabic": "سئل عما علم الله آدم", "chain": null,
+         "text": {"en": "He was asked what God had taught Adam. He said: the lands, the mountains, the ravines and the valleys. Then he looked at a rug beneath him and said: and this rug is among what He taught him."},
+         "source": "s3"}
+      ]
+    },
+    {
+      "verse": 34,
+      "heading": {"en": "Iblis refuses"},
+      "note": {"en": "Iblis was of the jinn (18:50), raised among the angels by his worship."},
+      "narrations": [
+        {"id": "n2", "speaker": "Imam al-Baqir", "addressee": null, "arabic": "أخرج ما كان في قلب إبليس من الحسد", "chain": null,
+         "text": {"en": "When God commanded the angels to prostrate to Adam, He brought out the envy that was in the heart of Iblis, and at that the angels knew that Iblis had not been one of them."},
+         "source": "s2"}
+      ]
+    }
+  ],
+  "perspectives": {"en": "Both traditions read the refusal as arrogance, but they part over what Iblis was. Shia commentators hold that he was of the jinn, never an angel [5]. Tabari reports from Ibn Abbas that Iblis belonged to a clan of angels called the jinn [9]."},
+  "sources": [],
+  "status": {"gathered_at": "2026-09-06T01:11:22Z", "audit_attempts": 1, "audited_at": "2026-09-06T01:44:38Z", "assembled_at": "2026-09-07T00:30:48Z"}
+}

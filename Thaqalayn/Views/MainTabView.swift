@@ -186,7 +186,8 @@ struct MainTabView: View {
             // Stash the deep-link first so HomeView consumes it on appear
             deepLinkRouter.pendingDeepLink = PendingDeepLink(
                 surahNumber: surah,
-                verseNumber: verse
+                verseNumber: verse,
+                passageIndex: userInfo["passage"] as? Int
             )
             // Then switch to the Quran tab — HomeView's onAppear/onChange triggers the navigation.
             selectedTab = 1

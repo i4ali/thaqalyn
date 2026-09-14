@@ -2,12 +2,12 @@
 //  PassageView.swift
 //  Thaqalayn
 //
-//  One passage (a ruku) read in full: its verses in order, then a Mark as
-//  read toggle, the Understand card for the passage commentary and a link
-//  to the next passage. Only the toggle (or reading every verse elsewhere)
-//  marks the passage read; scrolling to the end does not. The header heart
-//  saves the whole passage as a bookmark; each verse keeps its own heart in
-//  the rail.
+//  One passage (a ruku) read in full: its verses in order, then one control,
+//  Finish reading, which marks the passage read and returns to the passage
+//  hub. Only that (or reading every verse elsewhere) marks the passage read;
+//  scrolling to the end does not. Understanding, the quiz and the next
+//  passage are reached from the hub, not from here. The header heart saves
+//  the whole passage as a bookmark; each verse keeps its own heart in the rail.
 //
 
 import SwiftUI
@@ -33,13 +33,9 @@ struct PassageView: View {
     @State private var showingPaywall = false
     /// What the user reached for when the paywall fired - drives its hero art.
     @State private var paywallContext: PaywallContext? = nil
-    @State private var showingUnderstanding = false
     /// The scroll target is handled once; onAppear fires again when the user
-    /// pops back from Understanding or a gem.
+    /// pops back from a gem.
     @State private var didHandleScrollTarget = false
-    /// True while the end-of-verses Understand card is on screen. The pinned
-    /// Understand bar shows only while it is not, so the two never stack.
-    @State private var endCardVisible = false
     /// The verse at the top of the screen, from the rows' frames. Recorded as
     /// the reading position when the reader leaves, so Continue Reading
     /// returns here.
@@ -70,10 +66,6 @@ struct PassageView: View {
 
     private var passageCount: Int {
         dataManager.passageIndex?.passages(forSurah: surah.number).count ?? 0
-    }
-
-    private var nextRef: PassageRef? {
-        dataManager.passageIndex?.next(after: ref)
     }
 
     private var title: String {
@@ -158,18 +150,8 @@ struct PassageView: View {
                                 )
                             }
 
-                            markReadButton
+                            finishSection
                                 .padding(.top, 28)
-
-                            understandCard
-                                .padding(.top, 14)
-                                .onAppear { endCardVisible = true }
-                                .onDisappear { endCardVisible = false }
-
-                            if let next = nextRef {
-                                NextPassageCard(surahWithTafsir: surahWithTafsir, next: next)
-                                    .padding(.top, 14)
-                            }
                         }
                         .padding(.horizontal, 20)
                         .padding(.top, 4)
@@ -194,13 +176,6 @@ struct PassageView: View {
                 }
             }
         }
-        .background(
-            // Screen-level so the pinned bar can push Understanding before the
-            // lazy list has ever built the end card.
-            NavigationLink(destination: understandingDestination, isActive: $showingUnderstanding) { EmptyView() }
-                .hidden()
-                .accessibilityHidden(true)
-        )
         .textSizePanelOverlay(isOpen: $showTextSizePanel, topPadding: 60, trailingPadding: 20)
         .onAppear { progressManager.enterPassage(ref) }
         .navigationBarHidden(true)
@@ -209,22 +184,11 @@ struct PassageView: View {
         .darkScreenAura(glowOpacity: 0.22, starCount: 10)
         .overlay(alignment: .bottom) {
             let isPlaying = audioManager.currentPlayback != nil
-            VStack(spacing: 10) {
-                // One tap to Understanding from anywhere in the verses; it steps
-                // aside once the reader reaches the end card.
-                if passage != nil && !endCardVisible {
-                    pinnedUnderstandBar
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, isPlaying ? 0 : 12)
-                        .transition(.move(edge: .bottom).combined(with: .opacity))
-                }
-                if isPlaying {
-                    SurahAudioPlayerView()
-                        .transition(.move(edge: .bottom).combined(with: .opacity))
-                }
+            if isPlaying {
+                SurahAudioPlayerView()
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .animation(.spring(response: 0.5, dampingFraction: 0.8), value: isPlaying)
             }
-            .animation(.easeInOut(duration: 0.25), value: endCardVisible)
-            .animation(.spring(response: 0.5, dampingFraction: 0.8), value: isPlaying)
         }
         .sheet(isPresented: $showingPaywall) {
             PaywallView(context: paywallContext)
@@ -328,149 +292,24 @@ struct PassageView: View {
         }
     }
 
-    // MARK: - Mark as read
+    // MARK: - Finish
 
-    /// The one explicit way to finish a passage: the same done/todo toggle the
-    /// journey days use. Tapping it again takes the passage back to unread.
-    private var markReadButton: some View {
+    /// The one control at the end of the verses: Finish reading, the same
+    /// done/todo toggle the journey days use. Tapping it marks the passage
+    /// read and returns to the hub; once read it shows green, and tapping it
+    /// again takes the passage back to unread.
+    private var finishSection: some View {
         EmJourneyToggleButton(
             isDone: isPassageRead,
             doneLabel: "Marked as read",
-            todoLabel: "Mark as read",
+            todoLabel: "Finish reading",
             doneTint: themeManager.semanticGreen,
             horizontalPadding: 0,
             onToggle: toggleRead
         )
-        .accessibilityLabel(isPassageRead ? "Marked as read. Tap to unmark" : "Mark passage as read")
-    }
-
-    // MARK: - Understand
-
-    private var isUnderstandingGated: Bool {
-        !premiumManager.canAccessUnderstanding(surahNumber: surah.number)
-    }
-
-    private var understandSubline: String {
-        if let passage {
-            let narrations = passage.narrationCount == 1 ? "1 narration" : "\(passage.narrationCount) narrations"
-            return "Essay · \(narrations) · \(passage.readingMinutes) min"
-        }
-        return "Understanding for this passage is coming in an update"
-    }
-
-    private var understandCard: some View {
-        let hasCommentary = passage != nil
-
-        return Button(action: openUnderstanding) {
-            EmCard(cornerRadius: 20, borderColor: themeManager.accentColor) {
-                HStack(spacing: 14) {
-                    Text("ع")
-                        .font(EmType.arabic(22))
-                        .foregroundColor(themeManager.accentColor)
-                        .frame(width: 28)
-
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text("Understand this passage")
-                            .font(EmType.serif(18, .semiBold))
-                            .foregroundColor(themeManager.primaryText)
-                        Text(understandSubline)
-                            .font(.system(size: 13, weight: .medium))
-                            .foregroundColor(themeManager.secondaryText)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-
-                    Spacer(minLength: 8)
-
-                    if hasCommentary {
-                        if isUnderstandingGated {
-                            premiumCapsule
-                        } else {
-                            Image(systemName: "chevron.right")
-                                .font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(themeManager.accentColor)
-                        }
-                    }
-                }
-                .padding(18)
-                .background(
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .fill(themeManager.accentColor.opacity(0.10))
-                )
-            }
-        }
-        .buttonStyle(EmPressStyle())
-        .disabled(!hasCommentary)
-        .opacity(hasCommentary ? 1 : 0.55)
-    }
-
-    /// Compact Understand control pinned above the bottom edge while the verses
-    /// scroll: the same action and gating as the end card, on an opaque ground
-    /// so the text beneath does not bleed through.
-    private var pinnedUnderstandBar: some View {
-        Button(action: openUnderstanding) {
-            HStack(spacing: 12) {
-                Text("ع")
-                    .font(EmType.arabic(20))
-                    .foregroundColor(themeManager.accentColor)
-                    .frame(width: 24)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Understand this passage")
-                        .font(EmType.serif(17, .semiBold))
-                        .foregroundColor(themeManager.primaryText)
-                    Text(understandSubline)
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                        .lineLimit(1)
-                }
-
-                Spacer(minLength: 8)
-
-                if isUnderstandingGated {
-                    premiumCapsule
-                } else {
-                    Image(systemName: "chevron.right")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(themeManager.accentColor)
-                }
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 12)
-            .background(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .fill(themeManager.primaryBackground)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 18, style: .continuous)
-                            .fill(themeManager.accentColor.opacity(0.12))
-                    )
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .stroke(themeManager.accentColor, lineWidth: 1)
-            )
-            .shadow(color: Color.black.opacity(0.28), radius: 14, x: 0, y: 6)
-        }
-        .buttonStyle(EmPressStyle())
-        .accessibilityLabel("Understand this passage")
-    }
-
-    private var premiumCapsule: some View {
-        Text("PREMIUM")
-            .emEyebrow(size: 10, tracking: 1.5)
-            .foregroundColor(themeManager.accentColor)
-            .padding(.horizontal, 9)
-            .padding(.vertical, 4)
-            .background(Capsule().fill(themeManager.accentColor.opacity(0.14)))
-    }
-
-    @ViewBuilder
-    private var understandingDestination: some View {
-        if let passage {
-            UnderstandingView(surahWithTafsir: surahWithTafsir, ref: ref, passage: passage)
-        } else {
-            EmptyView()
-        }
+        .accessibilityLabel(isPassageRead
+                            ? "Marked as read. Tap to unmark"
+                            : "Finish reading. Marks the passage read and returns to the passage")
     }
 
     // MARK: - Actions
@@ -488,22 +327,15 @@ struct PassageView: View {
         }
     }
 
+    /// Finish reading marks the passage read and, once the seal has been
+    /// seen, pops back to the hub. Tapping the green state unmarks it and stays.
     private func toggleRead() {
         if isPassageRead {
             progressManager.unmarkPassageRead(ref)
         } else {
             progressManager.markPassageRead(ref)
             UINotificationFeedbackGenerator().notificationOccurred(.success)
-        }
-    }
-
-    private func openUnderstanding() {
-        guard passage != nil else { return }
-        if isUnderstandingGated {
-            paywallContext = .inSurah(surah, "Understanding")
-            showingPaywall = true
-        } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { showingUnderstanding = true }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { dismiss() }
         }
     }
 
@@ -660,50 +492,6 @@ private struct PassageVerseRow: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     showingBookmarkFeedback = false
                 }
-            }
-        }
-    }
-}
-
-// MARK: - Next passage
-
-/// Plain card linking to the passage after this one. Shared with the
-/// Understanding screen, which ends on the same card.
-struct NextPassageCard: View {
-    let surahWithTafsir: SurahWithTafsir
-    let next: PassageRef
-
-    @ObservedObject private var themeManager = ThemeManager.shared
-    @ObservedObject private var passageStore = PassageStore.shared
-
-    private var nextTitle: String {
-        passageStore.title(for: next)
-    }
-
-    var body: some View {
-        PressableNavLink {
-            PassageView(surahWithTafsir: surahWithTafsir, ref: next)
-        } label: {
-            EmCard(cornerRadius: 20) {
-                HStack(spacing: 14) {
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text("Next passage")
-                            .font(EmType.serif(18, .semiBold))
-                            .foregroundColor(themeManager.primaryText)
-                        Text("\(nextTitle) · \(next.rangeLabel)")
-                            .font(.system(size: 13, weight: .medium))
-                            .foregroundColor(themeManager.secondaryText)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-
-                    Spacer(minLength: 8)
-
-                    Image(systemName: "chevron.right")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(themeManager.accentColor)
-                }
-                .padding(18)
             }
         }
     }

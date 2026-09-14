@@ -5,6 +5,7 @@ import json
 from datetime import datetime
 
 from . import audit as audit_mod
+from . import prose as prose_mod
 from . import rukus
 from . import status as status_mod
 
@@ -20,7 +21,8 @@ def rows(surah: int) -> list[dict]:
         first_pass = None
         if first.exists():
             draft = json.loads((d / "draft.json").read_text(encoding="utf-8"))
-            errs, passed = audit_mod.check(json.loads(first.read_text(encoding="utf-8")), draft)
+            errs, passed = audit_mod.check(json.loads(first.read_text(encoding="utf-8")), draft,
+                                           polished=prose_mod.polished(d))
             first_pass = passed and not errs
         gathered = json.loads((d / "sources.json").read_text(encoding="utf-8")).get("gathered_at")
         latest = audit_mod.latest(d)

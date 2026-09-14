@@ -163,6 +163,24 @@
   .panel.shia .dot{background:var(--teal);box-shadow:0 0 10px var(--teal)}
   .panel.shia .label{color:var(--teal)}
 
+  /* element key (optional per episode): ONE table - element | tradition A | tradition B -
+     replaces the two prose panels; the readings are still spoken, rows light up as named */
+  .key{border-radius:14px;padding:11px 12px 12px;background:rgba(8,18,24,.55);border:1px solid rgba(255,255,255,.07);opacity:0}
+  .key .krow{display:grid;grid-template-columns:70px 1fr 1fr;gap:0 8px;align-items:center}
+  .key .khead{padding-bottom:6px}
+  .key .khead .label{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;display:flex;align-items:center;gap:5px;opacity:0;white-space:nowrap}
+  .key .khead .dot{width:7px;height:7px;border-radius:50%;flex:none}
+  .key .khead .sunni{color:var(--gold)} .key .khead .sunni .dot{background:var(--gold);box-shadow:0 0 8px var(--gold)}
+  .key .khead .shia{color:var(--teal)}  .key .khead .shia .dot{background:var(--teal);box-shadow:0 0 8px var(--teal)}
+  .key .krow.r{border-top:1px solid rgba(255,255,255,.07);padding:4px 0}
+  .key .el{font-size:9px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:rgba(244,236,216,.55);line-height:1.2}
+  .key .cell{font-size:10.5px;line-height:1.3;color:rgba(244,236,216,.92);opacity:0}
+  .key .ksrc{margin-top:8px;display:flex;flex-direction:column;gap:3px}
+  .key .ksrc div{display:flex;align-items:center;gap:5px;font-size:9px;font-style:italic;letter-spacing:.03em;color:rgba(244,236,216,.52);opacity:0}
+  .key .ksrc svg{width:12px;height:12px;flex:none;opacity:.9}
+  .key .ksrc .sunni svg{color:var(--gold)} .key .ksrc .shia svg{color:var(--teal)}
+  .verse .arabic .kp{border-radius:4px}
+
   .lower{flex:none;text-align:center;min-height:72px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
   .synth{font-family:var(--arabic);font-style:italic;font-size:16px;color:var(--parchment);opacity:0}
   .cta{display:inline-flex;align-self:center;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.02em;padding:8px 15px;border-radius:999px;background:linear-gradient(90deg, rgba(var(--gold-rgb),.16), rgba(var(--teal-rgb),.16));border:1px solid rgba(244,236,216,.2);color:var(--parchment);opacity:0}
@@ -348,12 +366,20 @@
     const c=E.content; if(!c) return;
     ref.textContent=c.verse_ref;
     arabic.textContent=c.arabic;
+    if(c.keyPhrases&&c.keyPhrases.length){
+      // wrap each key phrase (verbatim substring of the Arabic) so it can glow while narrated
+      const esc=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      let html=esc(c.arabic);
+      c.keyPhrases.forEach((k,i)=>{ const ph=esc(k.arabic); if(html.includes(ph)) html=html.replace(ph,'<span class="kp" data-kp="'+i+'">'+ph+'</span>'); });
+      arabic.innerHTML=html;
+    }
     if(c.transWords && c.transWords.length){
       trans.innerHTML = c.transWords.map(w=>'<span class="tw">'+w.w+'</span>').join(' ');
     } else {
       trans.innerHTML = c.translation;
     }
     const mid=$('mid'); mid.innerHTML='';
+    if(c.key&&c.key.rows&&c.key.rows.length){ buildKey(c,mid); return finishPopulate(c); }
     c.order.forEach((trad,i)=>{
       const r=c.readings[trad];
       const p=document.createElement('div');
@@ -366,11 +392,41 @@
                   '<div class="src">'+SRC_ICON+'<span>'+r.source+'</span></div>';
       mid.appendChild(p);
     });
+    finishPopulate(c);
+  }
+  function finishPopulate(c){
     const cd=$('capdesc'); if(cd&&c.caption_desc) cd.innerHTML=c.caption_desc;
     if(c.payoff){ const se=$('synth'); if(se) se.textContent=c.payoff; }   // on-screen payoff (defaults to the template's line if unset)
     if(c.cta){ const ce=$('cta'); if(ce) ce.textContent=c.cta; }
   }
+  function buildKey(c,mid){
+    const [tA,tB]=c.order; const rA=c.readings[tA], rB=c.readings[tB];
+    const k=document.createElement('div'); k.className='key'; k.id='key';
+    let h='<div class="krow khead"><span></span>'+
+          '<span class="label '+tA+'" data-col="0"><span class="dot"></span>'+(rA.short||rA.label.split(' ')[0])+'</span>'+
+          '<span class="label '+tB+'" data-col="1"><span class="dot"></span>'+(rB.short||rB.label.split(' ')[0])+'</span></div>';
+    c.key.rows.forEach((r,i)=>{
+      h+='<div class="krow r"><span class="el">'+r.element+'</span>'+
+         '<span class="cell" data-col="0" data-row="'+i+'">'+(r[tA]||'')+'</span>'+
+         '<span class="cell" data-col="1" data-row="'+i+'">'+(r[tB]||'')+'</span></div>';
+    });
+    h+='<div class="ksrc"><div class="'+tA+'" data-col="0">'+SRC_ICON+'<span>'+rA.source+'</span></div>'+
+       '<div class="'+tB+'" data-col="1">'+SRC_ICON+'<span>'+rB.source+'</span></div></div>';
+    k.innerHTML=h; mid.appendChild(k);
+  }
   populate();
+  // element key wiring: per column - header label, cells (row order), source line, accent, row times
+  const keyEl=$('key');
+  const keyCols=keyEl?[0,1].map(ci=>{
+    const trad=E.content.order[ci];
+    const times=((E.content.key||{}).rowTimes||{})[trad]||[];
+    return { head:keyEl.querySelector('.khead .label[data-col="'+ci+'"]'),
+             cells:[...keyEl.querySelectorAll('.cell[data-col="'+ci+'"]')],
+             src:keyEl.querySelector('.ksrc div[data-col="'+ci+'"]'),
+             accent:trad==='sunni'?GOLD_RGB:TEAL_RGB, times };
+  }):[];
+  const kpSpans=[...arabic.querySelectorAll('.kp')];
+  const keyPhrases=(E.content&&E.content.keyPhrases)||[];
   const transWords=(E.content&&E.content.transWords)||[];
   const transSpans=[...trans.querySelectorAll('.tw')];
   let panels=[...document.querySelectorAll('.panel')].sort((a,b)=>(+a.dataset.reveal)-(+b.dataset.reveal));
@@ -390,6 +446,58 @@
   const ramp=(t,start,dur)=>t<=start?0:t>=start+dur?1:easeOut((t-start)/dur);
   const lin=(t,start,dur)=>clamp((t-start)/dur,0,1);
 
+  // ---- layout plan: measured from the content once fonts are in (pure function of content) ----
+  // Stage is 360x640; the scene band is 80px top / 104px bottom => 456px of content.
+  const SCENE_H=456;
+  const LOWER_MIN=72;          // .lower reserve (payoff line + closing pill), matches the CSS min-height
+  function verseBudget(){      // the hook caption sits at the bottom during the hook: keep the verse clear of it
+    const C=E.captions||{}; if(!C.hook||E.showCaptions===false) return SCENE_H-8;
+    const keep=vo.innerHTML; vo.innerHTML=C.hook; const h=vo.offsetHeight; vo.innerHTML=keep;
+    return (640-100-h-8)-80;   // stage 640, caption bottom offset 100, 8px breathing room, scene top 80
+  }
+  const HEAD_ARABIC_MIN=16;    // smallest header Arabic before we clip instead of shrinking further
+  let _plan=null;
+  function layoutPlan(){
+    if(_plan) return _plan;
+    const midEl=$('mid');
+    const saved=[arabic.getAttribute('style'),trans.getAttribute('style')];
+    const setVerse=(a,tr)=>{
+      arabic.style.cssText=`font-size:${a}px;line-height:1.95;max-height:none;overflow:visible`;
+      trans.style.cssText=`font-size:${tr}px;max-height:none;margin-top:14px`;
+    };
+    // 1) verse beat: the whole verse + translation must fit the budget (scale both fonts together)
+    let f=1; setVerse(21,17);
+    const VERSE_BUDGET=verseBudget();
+    while(verse.offsetHeight>VERSE_BUDGET && f>0.6){ f=Math.round((f-0.02)*100)/100; setVerse(21*f,17*f); }
+    const arabicPx=21*f, transPx=17*f;
+    const arabicNatural=arabic.offsetHeight, transNatural=trans.offsetHeight;
+    // 2) header through the readings: ref + Arabic + translation + both panels + the lower reserve
+    const lowerEl=document.querySelector('.lower');
+    const budget=SCENE_H-midEl.offsetHeight-Math.max(LOWER_MIN,lowerEl?lowerEl.offsetHeight:0)-4;
+    const refH=ref.offsetHeight+13;                         // + .ref margin-bottom
+    let headArabicPx=21, headTransCap=150, headArabicClip=null, headTransFade=false;
+    const headH=(a,cap)=>{
+      arabic.style.cssText=`font-size:${a}px;line-height:1.95;max-height:none;overflow:visible`;
+      trans.style.cssText=`font-size:12.5px;max-height:${cap}px;margin-top:${cap>0?9:0}px;overflow:hidden`;
+      return refH+arabic.offsetHeight+(cap>0?9:0)+trans.offsetHeight;
+    };
+    let h=headH(headArabicPx,headTransCap);
+    // a) shrink the header Arabic a little before hiding anything
+    while(h>budget && headArabicPx>HEAD_ARABIC_MIN){ headArabicPx-=0.5; h=headH(headArabicPx,headTransCap); }
+    // b) then give up translation room (clipped with a fade, then hidden)
+    while(h>budget && headTransCap>0){ headTransCap=Math.max(0,headTransCap-10); headTransFade=true; h=headH(headArabicPx,headTransCap); }
+    // c) last resort: clip the Arabic to whole lines (never fewer than two) with a soft fade
+    if(h>budget){
+      const lineH=headArabicPx*1.95;
+      const room=budget-refH-(headTransCap>0?9+trans.offsetHeight:0);
+      headArabicClip=Math.max(lineH*2, Math.floor(room/lineH)*lineH);
+    }
+    arabic.setAttribute('style',saved[0]||''); trans.setAttribute('style',saved[1]||'');
+    const plan={arabicPx,transPx,arabicNatural,transNatural,headArabicPx,headTransCap,headArabicClip,headTransFade};
+    if(!document.fonts||document.fonts.status==='loaded') _plan=plan;   // memoize once the real fonts are in
+    return plan;
+  }
+
   // ---- the ONE source of truth: render exact visual state at time t ----
   function seek(t){
     starsA.style.transform=`translateY(${-(t/90000)*60}px)`;
@@ -400,25 +508,44 @@
     const vIn=ramp(t,B.hook+150,900);
     const shrink=ramp(t,B.readingA,800);
     const conv=ramp(t,B.payoff,650);
+    const L=layoutPlan();
 
     ref.style.opacity=vIn;
     arabic.style.opacity=vIn;
     verse.style.transform=`scale(${lerp(1,0.86,shrink)}) translateY(${lerp(0,-6,shrink)}px)`;
     arabic.style.transform=`translateY(${lerp(10,0,vIn)}px)`;
     arabic.style.textShadow=`0 0 ${lerp(26,40,conv)}px rgba(${GLOW_RGB},${lerp(.32,.6,conv).toFixed(3)})`;
+    // Long verses: the verse beat fits the WHOLE verse + translation on screen
+    // (fonts scaled down as needed); through the readings the Arabic becomes a
+    // compact header (smaller, then clipped with a soft fade) so both panels fit.
+    // Short verses measure as "fits" and render exactly as before.
+    arabic.style.fontSize=`${lerp(L.arabicPx,L.headArabicPx,shrink)}px`;
+    if(L.headArabicClip!=null){
+      arabic.style.overflow='hidden';
+      arabic.style.maxHeight=`${lerp(L.arabicNatural,L.headArabicClip,shrink)}px`;
+      const fade=shrink>0.01?`linear-gradient(to bottom, #000 ${lerp(100,55,shrink).toFixed(1)}%, rgba(0,0,0,0) 100%)`:'none';
+      arabic.style.webkitMaskImage=fade; arabic.style.maskImage=fade;
+    } else { arabic.style.overflow=''; arabic.style.maxHeight=''; arabic.style.webkitMaskImage=''; arabic.style.maskImage=''; }
 
     // Keep the verse translation on screen as a quiet reference through the
     // readings (so viewers see what the two readings refer to) — dim it and
     // shrink the font (reclaims layout room for the panels) instead of collapsing.
-    trans.style.opacity=vIn*lerp(1,0.6,shrink);
-    trans.style.fontSize=`${lerp(17,12.5,shrink)}px`;
-    trans.style.maxHeight=`${lerp(210,150,shrink)}px`;
-    trans.style.marginTop=`${lerp(14,9,shrink)}px`;
+    // When the header has no room for it, it fades out (clipped with a soft fade first).
+    trans.style.opacity=vIn*lerp(1,L.headTransCap>0?0.6:0,shrink);
+    trans.style.fontSize=`${lerp(L.transPx,12.5,shrink)}px`;
+    trans.style.maxHeight=`${lerp(Math.max(210,L.transNatural),L.headTransCap,shrink)}px`;
+    trans.style.marginTop=`${lerp(14,L.headTransCap>0?9:0,shrink)}px`;
+    if(L.headTransFade&&L.headTransCap>0){
+      const tf=shrink>0.01?`linear-gradient(to bottom, #000 ${lerp(100,60,shrink).toFixed(1)}%, rgba(0,0,0,0) 100%)`:'none';
+      trans.style.webkitMaskImage=tf; trans.style.maskImage=tf;
+    } else { trans.style.webkitMaskImage=''; trans.style.maskImage=''; }
     highlightTrans(t);
 
     applyPanel(panels[0],ramp(t,B.readingA,700),conv);
     applyPanel(panels[1],ramp(t,B.readingB,700),conv);
     panelHL.forEach(h=>highlightPanel(h,t));
+    applyKey(t,conv);
+    glowKeyPhrases(t);
 
     const sIn=ramp(t,B.payoff,700);
     synth.style.opacity=sIn; synth.style.transform=`translateY(${lerp(8,0,sIn)}px)`;
@@ -428,6 +555,46 @@
     paintCaption(t);
     progress.style.width=`${clamp(t/END,0,1)*100}%`;
     litBeat(t);
+  }
+
+  function applyKey(t,conv){
+    if(!keyEl) return;
+    const kIn=ramp(t,B.readingA,700);
+    keyEl.style.opacity=kIn;
+    keyEl.style.transform=`translateY(${lerp(16,0,kIn)}px)`;
+    keyEl.style.boxShadow=conv>0
+      ?`0 0 0 1px rgba(244,236,216,${(.22*conv).toFixed(3)}), -8px 0 26px -14px rgba(${GOLD_RGB},${(.9*conv).toFixed(3)}), 8px 0 26px -14px rgba(${TEAL_RGB},${(.9*conv).toFixed(3)})`
+      :'none';
+    keyCols.forEach((col,ci)=>{
+      const start=ci===0?B.readingA:B.readingB;
+      const span=(ci===0?B.readingB:B.payoff)-start-350;          // this reading's clip, roughly
+      const n=col.cells.length;
+      const hIn=ramp(t,start,500);
+      col.head.style.opacity=hIn; col.src.style.opacity=hIn;
+      col.cells.forEach((cell,ri)=>{
+        const tm=col.times[ri];
+        const at=start+(tm==null?Math.round(span*(ri+0.5)/n):tm);   // named by the narrator, else evenly staggered
+        const cIn=ramp(t,at,350);
+        const hot=(t>=at&&t<at+1100)?1-lin(t,at+600,500):0;         // brief accent flash as it is named
+        cell.style.opacity=cIn;
+        cell.style.transform=`translateY(${lerp(4,0,cIn)}px)`;
+        cell.style.color=hot>0?`rgba(${col.accent},1)`:'rgba(244,236,216,.92)';
+        cell.style.textShadow=hot>0?`0 0 10px rgba(${col.accent},${(.85*hot).toFixed(3)})`:'none';
+      });
+    });
+  }
+
+  function glowKeyPhrases(t){
+    if(!kpSpans.length) return;
+    kpSpans.forEach(sp=>{
+      const k=keyPhrases[+sp.dataset.kp]; if(!k) return;
+      let g=0;
+      if(k.s!=null&&k.e!=null){ const s=B.verse+k.s, e=B.verse+k.e; g=Math.max(g, t<s?0:t<=e+500?1:1-lin(t,e+500,700)); }
+      (k.beats||[]).forEach(b=>{ const bs=B[b], be=b==='hook'?B.verse:b==='verse'?B.readingA:b==='payoff'?B.question:null;
+        if(bs!=null&&be!=null){ g=Math.max(g, Math.min(ramp(t,bs+200,600), 1-lin(t,be-400,400))); } });
+      sp.style.color=g>0?`rgba(255,248,230,1)`:'';
+      sp.style.textShadow=g>0?`0 0 ${(8+14*g).toFixed(1)}px rgba(244,236,216,${(.95*g).toFixed(3)}), 0 0 ${(20+20*g).toFixed(1)}px rgba(${GLOW_RGB},${(.7*g).toFixed(3)})`:'';
+    });
   }
 
   function applyPanel(p,inF,conv){

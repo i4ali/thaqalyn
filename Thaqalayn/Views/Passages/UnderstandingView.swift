@@ -4,8 +4,9 @@
 //
 //  The passage commentary read in full: the essay with its citation markers,
 //  then verse by verse notes and narrations, perspectives where present, the
-//  bibliography, and the link to the next passage. Tapping a marker, a
-//  narration's source line or a bibliography row opens the source sheet.
+//  bibliography, and one Finish control that seals the Understand stage and
+//  returns to the passage hub. Tapping a marker, a narration's source line or
+//  a bibliography row opens the source sheet.
 //
 
 import SwiftUI
@@ -15,21 +16,25 @@ struct UnderstandingView: View {
     let surahWithTafsir: SurahWithTafsir
     let ref: PassageRef
     let passage: Passage
+    /// Block id to scroll to on appear (from a quiz anchor). See `scrollId(for:in:lang:)`.
+    let scrollTarget: String?
 
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var tafsirReader = TafsirReader.shared
+    @ObservedObject private var stageStore = PassageStageStore.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
 
     @State private var showTextSizePanel = false
     @State private var openedSource: PassageSource?
 
-    init(surahWithTafsir: SurahWithTafsir, ref: PassageRef, passage: Passage) {
+    init(surahWithTafsir: SurahWithTafsir, ref: PassageRef, passage: Passage, scrollTarget: String? = nil) {
         self.surahWithTafsir = surahWithTafsir
         self.ref = ref
         self.passage = passage
+        self.scrollTarget = scrollTarget
     }
 
     // MARK: - Derived
@@ -51,10 +56,6 @@ struct UnderstandingView: View {
     /// `.leading` always means the start of the line: the right edge for Urdu and Arabic.
     private var direction: LayoutDirection { isRTL ? .rightToLeft : .leftToRight }
 
-    private var nextRef: PassageRef? {
-        dataManager.passageIndex?.next(after: ref)
-    }
-
     private var eyebrow: String {
         "Understanding · \(surah.englishName) \(ref.rangeLabel)"
     }
@@ -72,7 +73,7 @@ struct UnderstandingView: View {
         passage.sources.sorted { $0.number < $1.number }
     }
 
-    private static func paragraphs(_ text: String) -> [String] {
+    static func paragraphs(_ text: String) -> [String] {
         text.components(separatedBy: "\n\n")
             .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
             .filter { !$0.isEmpty }
@@ -211,10 +212,8 @@ struct UnderstandingView: View {
                         sourcesSection
                             .padding(.top, 30)
 
-                        if let next = nextRef {
-                            NextPassageCard(surahWithTafsir: surahWithTafsir, next: next)
-                                .padding(.top, 30)
-                        }
+                        finishButton
+                            .padding(.top, 30)
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 4)
@@ -224,6 +223,14 @@ struct UnderstandingView: View {
                 .onChange(of: spokenWord?.id) { _, id in
                     guard let id, tafsirReader.isPlaying else { return }
                     withAnimation(.easeInOut(duration: 0.5)) { proxy.scrollTo(id, anchor: .center) }
+                }
+                // Land on the block a quiz question pointed at. The delay lets
+                // the content lay out first; .top so the block is the first thing read.
+                .onAppear {
+                    guard let target = scrollTarget else { return }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                        withAnimation(.easeInOut(duration: 0.45)) { proxy.scrollTo(target, anchor: .top) }
+                    }
                 }
                 }
             }
@@ -249,6 +256,37 @@ struct UnderstandingView: View {
             TafsirReader.shared.stop()
         }
         .onDisappear { TafsirReader.shared.stop() }
+    }
+
+    // MARK: - Finish
+
+    /// The one control at the end of the commentary, the same done/todo
+    /// toggle the journey days use: Finish seals the Understand stage and
+    /// returns to the hub (or to the quiz question that opened this screen);
+    /// once sealed it shows green, and tapping it again unseals.
+    private var finishButton: some View {
+        let isUnderstood = stageStore.isUnderstood(ref)
+        return EmJourneyToggleButton(
+            isDone: isUnderstood,
+            doneLabel: "Understood",
+            todoLabel: "Finish",
+            doneTint: themeManager.semanticGreen,
+            horizontalPadding: 0,
+            onToggle: toggleUnderstood
+        )
+        .accessibilityLabel(isUnderstood
+                            ? "Understood. Tap to unmark"
+                            : "Finish. Marks the passage understood and returns to the passage")
+    }
+
+    private func toggleUnderstood() {
+        if stageStore.isUnderstood(ref) {
+            stageStore.unmarkUnderstood(ref)
+        } else {
+            stageStore.markUnderstood(ref)
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { dismiss() }
+        }
     }
 
     // MARK: - Header
@@ -534,5 +572,49 @@ struct UnderstandingView: View {
     private func openSource(_ number: Int) {
         guard let source = passage.sources.first(where: { $0.number == number }) else { return }
         openedSource = source
+    }
+}
+
+// MARK: - Quiz anchors
+
+extension UnderstandingView {
+    /// Maps a quiz anchor onto the block ids this screen tags its content with.
+    /// Essay and perspectives anchors land on the paragraph that holds the quote,
+    /// falling back to the first paragraph; verse anchors land on the verse's
+    /// heading, note or first narration, whichever the passage has.
+    static func scrollId(for anchor: QuizAnchor, in passage: Passage, lang: CommentaryLanguage) -> String? {
+        let parts = anchor.location.split(separator: ".").map(String.init)
+        switch parts.first {
+        case "essay":
+            return "essay.\(paragraphIndex(containing: anchor.quote, in: paragraphs(passage.essay.text(for: lang))))"
+        case "perspectives":
+            guard let persp = passage.perspectives else { return nil }
+            return "persp.\(paragraphIndex(containing: anchor.quote, in: paragraphs(persp.text(for: lang))))"
+        case "verses":
+            guard parts.count >= 3, let verse = Int(parts[1]) else { return nil }
+            if parts[2] == "narrations", parts.count >= 4 { return "v\(verse).\(parts[3])" }
+            if parts[2] == "note" { return "v\(verse).note" }
+            // translation or heading: the nearest block this screen shows for that verse
+            guard let entry = passage.entry(forVerse: verse) else { return nil }
+            if entry.heading != nil { return "v\(verse).heading" }
+            if entry.note != nil { return "v\(verse).note" }
+            if let first = entry.narrations.first { return "v\(verse).\(first.id)" }
+            return nil
+        default:
+            return nil
+        }
+    }
+
+    private static func paragraphIndex(containing quote: String, in paragraphs: [String]) -> Int {
+        let needle = normalized(quote)
+        return paragraphs.firstIndex { normalized($0).contains(needle) } ?? 0
+    }
+
+    /// Straight quotes and single spaces, lowercased, so a quote survives the
+    /// curly punctuation and line wrapping of the shipped prose.
+    private static func normalized(_ s: String) -> String {
+        let straight = s.replacingOccurrences(of: "\u{2018}", with: "'").replacingOccurrences(of: "\u{2019}", with: "'")
+            .replacingOccurrences(of: "\u{201C}", with: "\"").replacingOccurrences(of: "\u{201D}", with: "\"")
+        return straight.split(whereSeparator: { $0.isWhitespace }).joined(separator: " ").lowercased()
     }
 }

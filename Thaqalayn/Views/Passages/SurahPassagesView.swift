@@ -3,11 +3,13 @@
 //  Thaqalayn
 //
 //  A surah as the list of its passages (one per ruku). SurahDetailView wraps
-//  this screen for every navigation into a surah. Tapping a row pushes
-//  PassageView; swiping a row from the leading edge marks the passage read or
-//  unread and, with a second button, saves or unsaves it as a bookmark; a
-//  target verse (deep link or go-to-verse) pushes the passage that holds it
-//  and scrolls to the verse.
+//  this screen for every navigation into a surah. Tapping a row pushes the
+//  passage hub (PassageHubView); each row's ring shows how many of the
+//  passage's stages are done. Swiping a row from the leading edge saves or
+//  unsaves it as a bookmark; read state is only ever changed from the reader.
+//  A target verse (deep link or go-to-verse) pushes the reader for
+//  the passage that holds it and scrolls to the verse; a target passage index
+//  (the passage deep link) pushes that passage's hub instead.
 //
 
 import SwiftUI
@@ -16,6 +18,7 @@ struct SurahPassagesView: View {
     let surahWithTafsir: SurahWithTafsir
     let targetVerse: Int?
     let targetConceptId: String?
+    let targetPassageIndex: Int?
 
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var progressManager = ProgressManager.shared
@@ -23,6 +26,9 @@ struct SurahPassagesView: View {
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var passageStore = PassageStore.shared
     @ObservedObject private var bookmarkManager = BookmarkManager.shared
+    @ObservedObject private var quizStore = QuizStore.shared
+    @ObservedObject private var quizResults = QuizResultsStore.shared
+    @ObservedObject private var stageStore = PassageStageStore.shared
     @Environment(\.dismiss) private var dismiss
 
     @State private var showingGoToVerse = false
@@ -30,6 +36,9 @@ struct SurahPassagesView: View {
     /// activates the hidden NavigationLink below. Go-to-verse and the deep-link
     /// onAppear both go through it.
     @State private var pendingTarget: PassageTarget?
+    /// The passage whose hub the passage deep link asked for. Setting it
+    /// activates the hidden NavigationLink below.
+    @State private var pendingHubRef: PassageRef?
     /// The deep link pushes once. onAppear fires again when the user pops back
     /// from the passage, and must not push it a second time.
     @State private var didOpenTargetVerse = false
@@ -39,10 +48,11 @@ struct SurahPassagesView: View {
         let conceptId: String?
     }
 
-    init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil, targetConceptId: String? = nil) {
+    init(surahWithTafsir: SurahWithTafsir, targetVerse: Int? = nil, targetConceptId: String? = nil, targetPassageIndex: Int? = nil) {
         self.surahWithTafsir = surahWithTafsir
         self.targetVerse = targetVerse
         self.targetConceptId = targetConceptId
+        self.targetPassageIndex = targetPassageIndex
     }
 
     // MARK: - Derived
@@ -70,6 +80,13 @@ struct SurahPassagesView: View {
         )
     }
 
+    private var pendingHubIsActive: Binding<Bool> {
+        Binding(
+            get: { pendingHubRef != nil },
+            set: { if !$0 { pendingHubRef = nil } }
+        )
+    }
+
     // MARK: - Body
 
     var body: some View {
@@ -78,6 +95,9 @@ struct SurahPassagesView: View {
         let readCount = PassageProgress.readCount(passages, readVerseKeys: readVerseKeys)
         let readingRef = lastReadRef
         let savedIndices = bookmarkManager.bookmarkedPassageIndices(surah: surah.number)
+        let quizIndices = quizStore.quizIndices(surah: surah.number)
+        let bestScores = quizResults.bestScores(surah: surah.number)
+        let understoodIndices = stageStore.understoodIndices(surah: surah.number)
 
         ZStack {
             if themeManager.isMidnightEmerald {
@@ -104,6 +124,14 @@ struct SurahPassagesView: View {
                     ForEach(passages) { ref in
                         let isRead = PassageProgress.isRead(ref, readVerseKeys: readVerseKeys)
                         let isSaved = savedIndices.contains(ref.index)
+                        let hasCommentary = passageStore.hasCommentary(surah: surah.number, index: ref.index)
+                        let stages = PassageStages(
+                            isRead: isRead,
+                            isUnderstood: understoodIndices.contains(ref.index),
+                            bestScore: bestScores[ref.index],
+                            hasCommentary: hasCommentary,
+                            hasQuiz: quizIndices.contains(ref.index)
+                        )
 
                         VStack(spacing: 0) {
                             if ref.index > 1 {
@@ -114,13 +142,13 @@ struct SurahPassagesView: View {
                             }
 
                             PressableNavLink {
-                                PassageView(surahWithTafsir: surahWithTafsir, ref: ref)
+                                PassageHubView(surahWithTafsir: surahWithTafsir, ref: ref)
                             } label: {
                                 PassageRow(
                                     ref: ref,
                                     title: passageTitle(ref),
-                                    hasCommentary: passageStore.hasCommentary(surah: surah.number, index: ref.index),
-                                    isRead: isRead,
+                                    hasCommentary: hasCommentary,
+                                    stages: stages,
                                     isSaved: isSaved,
                                     isReading: ref == readingRef
                                 )
@@ -129,15 +157,8 @@ struct SurahPassagesView: View {
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
-                            // First button is the full-swipe action, so Read stays first.
-                            Button {
-                                toggleRead(ref, isRead: isRead)
-                            } label: {
-                                Label(isRead ? "Unread" : "Read", systemImage: isRead ? "arrow.uturn.backward" : "checkmark")
-                            }
-                            .tint(isRead ? themeManager.tertiaryText : themeManager.accentColor)
-
+                        // No full swipe: a bookmark should be a deliberate tap, not a flick.
+                        .swipeActions(edge: .leading, allowsFullSwipe: false) {
                             Button {
                                 toggleSaved(ref)
                             } label: {
@@ -159,11 +180,15 @@ struct SurahPassagesView: View {
             }
         }
         .background(
-            // Driven by pendingTarget: go-to-verse and deep links land on the
-            // passage that holds the verse, scrolled to it.
-            NavigationLink(destination: targetDestination, isActive: pendingTargetIsActive) { EmptyView() }
-                .hidden()
-                .accessibilityHidden(true)
+            // Driven by pendingTarget: go-to-verse and verse deep links land on
+            // the reader for the passage that holds the verse, scrolled to it.
+            // The passage deep link drives pendingHubRef and lands on the hub.
+            ZStack {
+                NavigationLink(destination: targetDestination, isActive: pendingTargetIsActive) { EmptyView() }
+                NavigationLink(destination: hubDestination, isActive: pendingHubIsActive) { EmptyView() }
+            }
+            .hidden()
+            .accessibilityHidden(true)
         )
         .navigationBarHidden(true)
         .hideTabBar()
@@ -201,26 +226,22 @@ struct SurahPassagesView: View {
         }
     }
 
-    /// Pushes the passage holding `targetVerse`, once per screen instance. The
-    /// second caller (transition callback or its timer fallback) is a no-op.
+    /// Pushes the hub for `targetPassageIndex`, or the reader for the passage
+    /// holding `targetVerse`, once per screen instance. The second caller
+    /// (transition callback or its timer fallback) is a no-op.
     private func openTargetVerseIfNeeded() {
-        guard let targetVerse, !didOpenTargetVerse else { return }
-        didOpenTargetVerse = true
-        pendingTarget = PassageTarget(verse: targetVerse, conceptId: targetConceptId)
-    }
-
-    /// Leading swipe on a row: the same mark and unmark the passage screen's
-    /// button performs, so the checkmark and the header count follow at once.
-    private func toggleRead(_ ref: PassageRef, isRead: Bool) {
-        if isRead {
-            progressManager.unmarkPassageRead(ref)
-        } else {
-            progressManager.markPassageRead(ref)
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
+        guard !didOpenTargetVerse else { return }
+        if let targetPassageIndex {
+            guard let ref = dataManager.passageIndex?.passage(surah: surah.number, index: targetPassageIndex) else { return }
+            didOpenTargetVerse = true
+            pendingHubRef = ref
+        } else if let targetVerse {
+            didOpenTargetVerse = true
+            pendingTarget = PassageTarget(verse: targetVerse, conceptId: targetConceptId)
         }
     }
 
-    /// Leading swipe, second button: save or unsave the passage as a bookmark.
+    /// Leading swipe: save or unsave the passage as a bookmark.
     /// The same manager call as the passage screen's header heart, so the row
     /// heart and the header heart always agree.
     private func toggleSaved(_ ref: PassageRef) {
@@ -235,6 +256,15 @@ struct SurahPassagesView: View {
         case .saved: UINotificationFeedbackGenerator().notificationOccurred(.success)
         case .refused: UINotificationFeedbackGenerator().notificationOccurred(.error)
         case .removed: break
+        }
+    }
+
+    @ViewBuilder
+    private var hubDestination: some View {
+        if let ref = pendingHubRef {
+            PassageHubView(surahWithTafsir: surahWithTafsir, ref: ref)
+        } else {
+            EmptyView()
         }
     }
 
@@ -315,13 +345,14 @@ struct SurahPassagesView: View {
 // MARK: - Row
 
 /// One passage in the list: glyph, title, verse range, and on the trailing
-/// edge a heart when the passage is bookmarked and the read state (checkmark
-/// when read, "reading" when it holds the last read verse, nothing otherwise).
+/// edge the best quiz score once taken, a heart when the passage is
+/// bookmarked, "reading" when it holds the last read verse, and the ring of
+/// its stages (read, understood, tested), gold for each one done.
 private struct PassageRow: View {
     let ref: PassageRef
     let title: String
     let hasCommentary: Bool
-    let isRead: Bool
+    let stages: PassageStages
     let isSaved: Bool
     let isReading: Bool
     @ObservedObject private var themeManager = ThemeManager.shared
@@ -355,21 +386,25 @@ private struct PassageRow: View {
             Spacer(minLength: 8)
 
             HStack(spacing: 10) {
+                if let bestScore = stages.bestScore {
+                    Text(QuizStrings.scoreShort(bestScore, of: stages.quizTotal))
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(themeManager.tertiaryText)
+                        .accessibilityLabel("Quiz best score \(bestScore) of \(stages.quizTotal)")
+                }
                 if isSaved {
                     Image(systemName: "heart.fill")
                         .font(.system(size: 12, weight: .semibold))
                         .foregroundColor(themeManager.accentBright)
                         .accessibilityLabel("Saved")
                 }
-                if isRead {
-                    Image(systemName: "checkmark")
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(themeManager.accentColor)
-                } else if isReading {
+                if isReading {
                     Text("reading")
                         .font(.system(size: 12.5, weight: .semibold))
                         .foregroundColor(themeManager.accentColor)
                 }
+                PassageProgressRing(done: stages.doneCount, total: stages.total)
+                    .accessibilityLabel("\(stages.doneCount) of \(stages.total) stages done")
             }
         }
         .padding(.vertical, 14)

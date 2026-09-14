@@ -19,6 +19,8 @@ struct HomeView: View {
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
     @State private var targetConceptId: String?
+    /// Set by a passage deep link: the surah opens on that passage's hub.
+    @State private var targetPassageIndex: Int?
 
     var body: some View {
         Group {
@@ -26,7 +28,8 @@ struct HomeView: View {
                 EmeraldHomeView(
                     searchText: $searchText,
                     selectedSurahForDeepLink: $selectedSurahForDeepLink,
-                    targetVerseNumber: $targetVerseNumber
+                    targetVerseNumber: $targetVerseNumber,
+                    targetPassageIndex: $targetPassageIndex
                 )
             } else {
                 legacyBody
@@ -118,11 +121,13 @@ struct HomeView: View {
                         readVerseKeys: readVerseKeys,
                         onOpenVerse: { s, v in
                             targetConceptId = nil
+                            targetPassageIndex = nil
                             targetVerseNumber = v
                             selectedSurahForDeepLink = dataManager.getSurah(number: s)
                         },
                         onOpenTheme: { s, v, cid in
                             targetConceptId = cid
+                            targetPassageIndex = nil
                             targetVerseNumber = v
                             selectedSurahForDeepLink = dataManager.getSurah(number: s)
                         }
@@ -135,13 +140,14 @@ struct HomeView: View {
             // Hidden NavigationLink for deep linking
             if let surahForDeepLink = selectedSurahForDeepLink {
                 NavigationLink(
-                    destination: SurahDetailView(surahWithTafsir: surahForDeepLink, targetVerse: targetVerseNumber, targetConceptId: targetConceptId),
+                    destination: SurahDetailView(surahWithTafsir: surahForDeepLink, targetVerse: targetVerseNumber, targetConceptId: targetConceptId, targetPassageIndex: targetPassageIndex),
                     isActive: Binding(
                         get: { selectedSurahForDeepLink != nil },
                         set: { if !$0 {
                             selectedSurahForDeepLink = nil
                             targetVerseNumber = nil
                             targetConceptId = nil
+                            targetPassageIndex = nil
                         } }
                     )
                 ) {
@@ -168,6 +174,7 @@ struct HomeView: View {
         // Brief delay so any in-flight tab transition / sheet dismissal settles before pushing.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             targetVerseNumber = link.verseNumber
+            targetPassageIndex = link.passageIndex
             selectedSurahForDeepLink = surahData
             deepLinkRouter.pendingDeepLink = nil
         }

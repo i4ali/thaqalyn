@@ -1,0 +1,163 @@
+{
+  "1": {
+    "id": "1:1",
+    "surah": 1,
+    "index": 1,
+    "range": [
+      1,
+      7
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "How does Tabatabai read the surah's opening invocation of God?"
+        },
+        "options": [
+          {
+            "en": "As marking a deed with His Name and binding it to Him"
+          },
+          {
+            "en": "As a preface the worshipper may leave out at will"
+          },
+          {
+            "en": "As the surah's only verse addressed to God directly"
+          },
+          {
+            "en": "As words the angels say rather than the worshipper"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reads the opening Name as the mark that binds a deed to God, so that the deed is not left void and cut off."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the way a deed is marked with God's Name and bound to it, so that it is not left void and cut off"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"Thanking for a blessing is avoiding what is forbidden, and the completeness of thanks is a man's saying: All praise belongs to Allah.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq ties thanking God to avoiding what is forbidden, and says thanks is completed by the words All praise belongs to Allah."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n4",
+          "quote": "Thanking for a blessing is avoiding what is forbidden, and the completeness of thanks is a man's saying: All praise belongs to Allah"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 4,
+        "prompt": {
+          "en": "According to the passage, Master of the Day of Retribution is read in only one way, as owner of the Day."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note gives two readings, owner of the Day and king of the Day, and glosses the second as the kingship being God's alone on that day."
+        },
+        "anchor": {
+          "where": "verses.4.note",
+          "quote": "The verse is read two ways, owner of the Day and king of the Day"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 5,
+        "prompt": {
+          "en": "In the narration on this verse, what does the worshipper want from God?"
+        },
+        "options": [
+          {
+            "en": "A reward in this world"
+          },
+          {
+            "en": "A substitute for what was given up"
+          },
+          {
+            "en": "Nothing but God Himself"
+          },
+          {
+            "en": "Safety from the Day of Retribution"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration says we want nothing from You but You, and that worshipping for a reward or a substitute is how those veiled from God worship Him."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n10",
+          "quote": "we want nothing from You but You. We do not worship You for a reward or a substitute"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 7,
+        "prompt": {
+          "en": "Those who have incurred wrath are those hostile to the ____, and the astray are the doubters and those who do not know the Imam."
+        },
+        "options": [
+          {
+            "en": "Ahl al-Bayt"
+          },
+          {
+            "en": "companions of the Prophet"
+          },
+          {
+            "en": "people of the Book"
+          },
+          {
+            "en": "angels"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration on the last verse reads those under wrath as the ones hostile to the Ahl al-Bayt, and the astray as the doubters who do not know the Imam."
+        },
+        "anchor": {
+          "where": "verses.7.narrations.n16",
+          "quote": "Those who have incurred wrath are those hostile to the Ahl al-Bayt, and the astray are the doubters and those who do not know the Imam"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-12T13:53:38Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-12T13:54:42Z",
+      "assembled_at": "2026-09-12T13:54:58Z"
+    }
+  }
+}

@@ -14,7 +14,8 @@ struct ProgressRingsView: View {
     @StateObject private var ramadanManager = RamadanJourneyManager.shared
     @StateObject private var hajjManager = HajjJourneyManager.shared
     @StateObject private var muharramManager = MuharramJourneyManager.shared
-
+    @ObservedObject private var quizStore = QuizStore.shared
+    @ObservedObject private var quizResults = QuizResultsStore.shared
 
     private let totalQuranVerses = 6236
     private let totalSurahs = 114
@@ -75,6 +76,9 @@ struct ProgressRingsView: View {
         return (read, total)
     }
 
+    /// Quizzes shipped across the Quran; the card is hidden until there is at least one.
+    private var shippedQuizzes: Int { quizStore.shippedQuizCount() }
+
     var body: some View {
         if themeManager.isMidnightEmerald { emeraldContent } else { legacyContent }
     }
@@ -94,6 +98,11 @@ struct ProgressRingsView: View {
 
                 // Stats Grid
                 statsGridSection
+
+                // Passage quizzes
+                if shippedQuizzes > 0 {
+                    quizSection
+                }
 
                 // Current Streak section
                 if progressManager.stats.currentStreak > 0 {
@@ -118,6 +127,7 @@ struct ProgressRingsView: View {
                 emeraldHeader
                 emeraldRingsCard
                 emeraldStatsGrid
+                if shippedQuizzes > 0 { emeraldQuiz }
                 if progressManager.stats.currentStreak > 0 { emeraldStreak }
                 emeraldBadges
             }
@@ -173,6 +183,44 @@ struct ProgressRingsView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(16)
         }
+    }
+
+    private var emeraldQuiz: some View {
+        EmCard {
+            HStack(spacing: 12) {
+                Image(systemName: "questionmark.circle.fill")
+                    .font(.system(size: 26, weight: .semibold))
+                    .foregroundColor(themeManager.accentColor)
+                VStack(alignment: .leading, spacing: 2) {
+                    if quizResults.takenCount > 0 {
+                        Text(ProgressTabStrings.quizzesTaken(quizResults.takenCount, of: shippedQuizzes))
+                            .font(EmType.serif(20, .semiBold)).foregroundColor(themeManager.primaryText)
+                        Text(ProgressTabStrings.quizzesShipped(shippedQuizzes))
+                            .font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
+                    } else {
+                        Text(ProgressTabStrings.noQuizzesYet)
+                            .font(EmType.serif(20, .semiBold)).foregroundColor(themeManager.primaryText)
+                        Text(ProgressTabStrings.quizzesHint)
+                            .font(.system(size: 13)).foregroundColor(themeManager.secondaryText)
+                    }
+                }
+                Spacer()
+                if let average = quizResults.averageBestScore {
+                    HStack(spacing: 16) {
+                        VStack(alignment: .trailing, spacing: 2) {
+                            Text(ProgressTabStrings.fullMarks.uppercased()).emEyebrow(size: 10, tracking: 1).foregroundColor(themeManager.tertiaryText)
+                            Text("\(quizResults.fullMarksCount)").font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.accentBright)
+                        }
+                        VStack(alignment: .trailing, spacing: 2) {
+                            Text(ProgressTabStrings.averageScore.uppercased()).emEyebrow(size: 10, tracking: 1).foregroundColor(themeManager.tertiaryText)
+                            Text(ProgressTabStrings.averageValue(average, of: 5)).font(EmType.serif(22, .semiBold)).foregroundColor(themeManager.accentBright)
+                        }
+                    }
+                }
+            }
+            .padding(16)
+        }
+        .accessibilityElement(children: .combine)
     }
 
     private var emeraldStreak: some View {
@@ -310,6 +358,67 @@ struct ProgressRingsView: View {
                 subtitle: ProgressTabStrings.blessingsEarned
             )
         }
+    }
+
+    // MARK: - Quiz Section
+
+    private var quizSection: some View {
+        HStack(spacing: WarmSpacing.medium) {
+            Image(systemName: "questionmark.circle.fill")
+                .font(.system(size: 30))
+                .foregroundColor(themeManager.semanticGreen)
+
+            VStack(alignment: .leading, spacing: 2) {
+                if quizResults.takenCount > 0 {
+                    Text(ProgressTabStrings.quizzesTaken(quizResults.takenCount, of: shippedQuizzes))
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .foregroundColor(themeManager.primaryText)
+                    Text(ProgressTabStrings.quizzesShipped(shippedQuizzes))
+                        .font(.system(size: 14, weight: .medium, design: .rounded))
+                        .foregroundColor(themeManager.secondaryText)
+                } else {
+                    Text(ProgressTabStrings.noQuizzesYet)
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .foregroundColor(themeManager.primaryText)
+                    Text(ProgressTabStrings.quizzesHint)
+                        .font(.system(size: 14, weight: .medium, design: .rounded))
+                        .foregroundColor(themeManager.secondaryText)
+                }
+            }
+
+            Spacer()
+
+            if let average = quizResults.averageBestScore {
+                HStack(spacing: WarmSpacing.medium) {
+                    VStack(alignment: .trailing, spacing: 2) {
+                        Text(ProgressTabStrings.fullMarks)
+                            .font(.system(size: 12, weight: .medium, design: .rounded))
+                            .foregroundColor(themeManager.tertiaryText)
+                        Text("\(quizResults.fullMarksCount)")
+                            .font(.system(size: 20, weight: .bold, design: .rounded))
+                            .foregroundColor(themeManager.primaryText)
+                    }
+                    VStack(alignment: .trailing, spacing: 2) {
+                        Text(ProgressTabStrings.averageScore)
+                            .font(.system(size: 12, weight: .medium, design: .rounded))
+                            .foregroundColor(themeManager.tertiaryText)
+                        Text(ProgressTabStrings.averageValue(average, of: 5))
+                            .font(.system(size: 20, weight: .bold, design: .rounded))
+                            .foregroundColor(themeManager.primaryText)
+                    }
+                }
+            }
+        }
+        .padding(WarmSpacing.regular)
+        .background(
+            RoundedRectangle(cornerRadius: WarmRadius.medium)
+                .fill(themeManager.glassEffect)
+                .overlay(
+                    RoundedRectangle(cornerRadius: WarmRadius.medium)
+                        .stroke(themeManager.strokeColor, lineWidth: 1)
+                )
+        )
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: - Streak Section

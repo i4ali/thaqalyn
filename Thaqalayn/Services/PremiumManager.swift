@@ -125,6 +125,11 @@ class PremiumManager: ObservableObject {
         return isPremium
     }
 
+    /// The passage quiz follows the Understanding gate: al-Fatihah is free, the rest is premium.
+    func canAccessQuiz(surahNumber: Int) -> Bool {
+        canAccessUnderstanding(surahNumber: surahNumber)
+    }
+
     // MARK: - Feature Access Control (Legacy - for reciters)
 
     func canAccessPremiumReciter(_ reciter: Reciter) -> Bool {

@@ -11,6 +11,7 @@ from . import brief as brief_mod
 from . import gather as gather_mod
 from . import metrics as metrics_mod
 from . import prose as prose_mod
+from . import quiz as quiz_mod
 from . import rukus
 from . import status as status_mod
 from . import titles as titles_mod
@@ -24,6 +25,12 @@ def cmd_gather(args) -> int:
     print(f"{ref.id} ({ref.start}-{ref.end}): {n} source blocks -> {ref.work_dir}")
     for key, vs in result["unavailable"].items():
         print(f"  unavailable {key}: {vs}")
+    fallback = [f"{r['key']} {r['verses']}" for r in result["sources"] if "greattafsirs.com" in (r.get("url") or "")]
+    if fallback:
+        print(f"  from greattafsirs: {', '.join(fallback)}")
+    partial = [f"{r['key']} {r['verses']} ({r.get('pages')} pages)" for r in result["sources"] if r.get("partial")]
+    if partial:
+        print(f"  partial (altafsir dropped pages): {', '.join(partial)}")
     if result.get("corpus_hits_dropped"):
         print(f"  dropped {result['corpus_hits_dropped']} hadith corpus hits that do not quote the verse")
     return 0
@@ -77,13 +84,15 @@ def cmd_audit_check(args) -> int:
         print("no audit file")
         return 2
     doc = json.loads(path.read_text(encoding="utf-8"))
-    errs, passed = audit_mod.check(doc, draft)
+    errs, passed = audit_mod.check(doc, draft, polished=prose_mod.polished(ref.work_dir))
     if errs:
         print(f"{path.name}: malformed")
         for e in errs:
             print(f"  - {e}")
         return 2
     print(f"{path.name}: {'PASS' if passed else 'FAIL'}")
+    if audit_mod.audit_schema(doc) < 2:
+        print("  note        schema 1 audit: source glosses were not targets")
     for v in doc["verdicts"]:
         if v["verdict"] != "supported":
             print(f"  {v['verdict']:11s} {v['target']}: {v.get('note') or v['claim']}")
@@ -217,6 +226,101 @@ def cmd_metrics(args) -> int:
     return 0
 
 
+def _shipped(args):
+    ref = rukus.parse_passage_ref(args.ref)
+    passage = quiz_mod.shipped_passage(ref)
+    if passage is None:
+        print(f"{ref.id}: passage not shipped in Data/passages_{ref.surah}.json; run /passages first")
+    return ref, passage
+
+
+def _load_quiz(ref):
+    return json.loads((ref.work_dir / quiz_mod.QUIZ_FILE).read_text(encoding="utf-8"))
+
+
+def cmd_quiz_brief(args) -> int:
+    ref, passage = _shipped(args)
+    if passage is None:
+        return 2
+    print(quiz_mod.render_brief(passage, ref))
+    return 0
+
+
+def cmd_quiz_validate(args) -> int:
+    ref, passage = _shipped(args)
+    if passage is None:
+        return 2
+    try:
+        quiz = _load_quiz(ref)
+    except FileNotFoundError as e:
+        print(f"missing file: {e.filename}")
+        return 2
+    errs = quiz_mod.validate_quiz(quiz, passage, ref)
+    if errs:
+        print(f"{ref.id}: {len(errs)} problem(s)")
+        for e in errs:
+            print(f"  - {e}")
+        return 1
+    print(f"{ref.id}: quiz is valid")
+    return 0
+
+
+def cmd_quiz_review_check(args) -> int:
+    ref = rukus.parse_passage_ref(args.ref)
+    try:
+        quiz = _load_quiz(ref)
+    except FileNotFoundError as e:
+        print(f"missing file: {e.filename}")
+        return 2
+    path = ref.work_dir / f"quiz_review.{args.attempt}.json" if args.attempt else quiz_mod.latest_review(ref.work_dir)
+    if path is None or not path.exists():
+        print("no review file")
+        return 2
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    errs, passed = quiz_mod.check_review(doc, quiz)
+    if errs:
+        print(f"{path.name}: malformed")
+        for e in errs:
+            print(f"  - {e}")
+        return 2
+    print(f"{path.name}: {'PASS' if passed else 'FAIL'}")
+    for v in doc["verdicts"]:
+        if v["verdict"] == "fail":
+            print(f"  fail  {v['id']}: {v['reason']}")
+    return 0 if passed else 1
+
+
+def cmd_quiz_next_attempt(args) -> int:
+    print(quiz_mod.next_attempt(rukus.parse_passage_ref(args.ref).work_dir))
+    return 0
+
+
+def cmd_quiz_status(args) -> int:
+    refs = rukus.passages_for_surah(args.surah) if args.surah else rukus.all_passages()
+    for r in refs:
+        s = quiz_mod.state(r)
+        if args.all or s["stage"] != "no-passage":
+            valid = "" if s["valid"] is None else (" valid" if s["valid"] else " INVALID")
+            review = f" review {s['review']} x{s['attempts']}" if s["review"] else ""
+            print(f"{r.id:7s} {r.start:>3}-{r.end:<3} {s['stage']:10s}{valid}{review}")
+    return 0
+
+
+def cmd_quiz_next(args) -> int:
+    for r in quiz_mod.next_quizzes(args.surah, args.count):
+        print(r.id)
+    return 0
+
+
+def cmd_quiz_assemble(args) -> int:
+    written, skipped = quiz_mod.assemble(args.surah)
+    for pid in written:
+        print(f"assembled {pid}")
+    for pid, why in skipped:
+        print(f"skipped   {pid}: {why}")
+    return 0 if written or not skipped else 1
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="passages.py", description="Passage commentary pipeline")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -265,6 +369,30 @@ def build_parser() -> argparse.ArgumentParser:
     m = sub.add_parser("metrics", help="pilot numbers per passage")
     m.add_argument("surah", type=int)
     m.set_defaults(fn=cmd_metrics)
+    qb = sub.add_parser("quiz-brief", help="print the passage text the quiz writer and reviewer read")
+    qb.add_argument("ref")
+    qb.set_defaults(fn=cmd_quiz_brief)
+    qv = sub.add_parser("quiz-validate", help="check quiz.json against the rules")
+    qv.add_argument("ref")
+    qv.set_defaults(fn=cmd_quiz_validate)
+    qr = sub.add_parser("quiz-review-check", help="validate the latest quiz review and print PASS or FAIL")
+    qr.add_argument("ref")
+    qr.add_argument("--attempt", type=int)
+    qr.set_defaults(fn=cmd_quiz_review_check)
+    qn = sub.add_parser("quiz-next-attempt", help="print the attempt number the next quiz review should use")
+    qn.add_argument("ref")
+    qn.set_defaults(fn=cmd_quiz_next_attempt)
+    qs = sub.add_parser("quiz-status", help="quiz stage of every shipped passage")
+    qs.add_argument("--surah", type=int)
+    qs.add_argument("--all", action="store_true", help="include passages that are not shipped")
+    qs.set_defaults(fn=cmd_quiz_status)
+    qx = sub.add_parser("quiz-next", help="next shipped passages whose quiz has not passed review")
+    qx.add_argument("--surah", type=int)
+    qx.add_argument("--count", type=int, default=2)
+    qx.set_defaults(fn=cmd_quiz_next)
+    qa = sub.add_parser("quiz-assemble", help="merge passed quizzes into Data/quiz_<surah>.json")
+    qa.add_argument("surah", type=int)
+    qa.set_defaults(fn=cmd_quiz_assemble)
     return p
 
 

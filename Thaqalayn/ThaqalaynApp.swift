@@ -151,12 +151,13 @@ struct ThaqalaynApp: App {
         navigateToVerse(surah: surah, verse: verse)
     }
 
-    /// `thaqalayn://passage?surah=2&index=4`: the passage's first verse takes the
-    /// verse route, so the Quran tab pushes the surah and SurahDetailView pushes
-    /// the passage holding that verse. The passage index is built during data
-    /// load; if the link arrives before then, wait for it (the publisher replays
-    /// the current value, so a loaded index resolves at once). An unknown surah
-    /// or index is dropped, as the verse route drops an unknown surah.
+    /// `thaqalayn://passage?surah=2&index=4`: takes the verse route with the
+    /// passage index alongside, so the Quran tab pushes the surah and
+    /// SurahDetailView pushes that passage's hub (a plain verse link opens the
+    /// reader instead). The passage index is built during data load; if the
+    /// link arrives before then, wait for it (the publisher replays the current
+    /// value, so a loaded index resolves at once). An unknown surah or index is
+    /// dropped, as the verse route drops an unknown surah.
     private func handlePassageDeepLink(_ url: URL) {
         let query = intQueryItems(url)
         guard let surah = query["surah"], let index = query["index"] else {
@@ -167,7 +168,7 @@ struct ThaqalaynApp: App {
             for await passageIndex in DataManager.shared.$passageIndex.values {
                 guard let passageIndex else { continue }
                 if let passage = passageIndex.passage(surah: surah, index: index) {
-                    navigateToVerse(surah: surah, verse: passage.start)
+                    navigateToVerse(surah: surah, verse: passage.start, passageIndex: index)
                 }
                 return
             }
@@ -176,12 +177,14 @@ struct ThaqalaynApp: App {
 
     /// Posts the app-wide NavigateToVerse notification: MainTabView stashes it in
     /// DeepLinkRouter and switches to the Quran tab, and HomeView pushes the surah
-    /// at that verse.
-    private func navigateToVerse(surah: Int, verse: Int) {
+    /// at that verse, or at that passage's hub when `passageIndex` is given.
+    private func navigateToVerse(surah: Int, verse: Int, passageIndex: Int? = nil) {
+        var userInfo: [String: Any] = ["surah": surah, "verse": verse]
+        if let passageIndex { userInfo["passage"] = passageIndex }
         NotificationCenter.default.post(
             name: NSNotification.Name("NavigateToVerse"),
             object: nil,
-            userInfo: ["surah": surah, "verse": verse]
+            userInfo: userInfo
         )
     }
     

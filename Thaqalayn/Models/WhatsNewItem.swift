@@ -43,6 +43,24 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "passage-hub",
+            sfSymbol: "point.3.filled.connected.trianglepath.dotted",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 9, day: 14).date ?? .distantPast, // placeholder - set at ship time (later than passage-quizzes so this card surfaces first)
+            destination: .passage(surah: 2, index: 1),
+            title: "Every passage, one home",
+            blurb: "Open a passage and see its three stages at a glance: read the verses, understand the commentary, test yourself. Each one seals as you finish it, and the bar at the bottom always knows your next step.",
+            cta: "Open al-Baqarah"
+        ),
+        WhatsNewItem(
+            id: "passage-quizzes",
+            sfSymbol: "questionmark.circle",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 9, day: 13).date ?? .distantPast, // placeholder - set at ship time (later than passage-bookmarks so this card surfaces first)
+            destination: .passage(surah: 1, index: 1),
+            title: "Test yourself on a passage",
+            blurb: "Five quick questions after each passage, drawn only from what you just read. Open a passage and tap Test yourself.",
+            cta: "Try it in al-Fatihah"
+        ),
+        WhatsNewItem(
             id: "passage-bookmarks",
             sfSymbol: "heart.text.square",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 9, day: 9).date ?? .distantPast, // placeholder - set at ship time (later than passages-baqarah so this card surfaces first)

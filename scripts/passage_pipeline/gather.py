@@ -66,7 +66,8 @@ def gather(ref: PassageRef, *, fetch=None, hadith=None) -> dict:
             rec = {"id": None, "key": key, "kind": meta["kind"], "work": meta["work"],
                    "author": meta["author"], "tradition": meta["tradition"], "tier": meta["tier"],
                    "role": meta["role"], "verses": [v], "locus": None, "url": block.url,
-                   "sha256": h[1], "fetched_at": _now(), "text": text}
+                   "sha256": h[1], "fetched_at": _now(), "text": text,
+                   "pages": getattr(block, "pages", 1), "partial": bool(getattr(block, "partial", False))}
             by_hash[h] = rec
             records.append(rec)
 

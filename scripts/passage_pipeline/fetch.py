@@ -114,6 +114,7 @@ class FetchedBlock:
     url: str
     text: str
     pages: int
+    partial: bool = False   # the pager promised more pages than the site served
 
 
 def altafsir_url(tafsir_id: int, lang: int, surah: int, verse: int, page: int = 1) -> str:
@@ -133,8 +134,19 @@ def extract_results_block(src: str, page: int) -> tuple[str | None, bool]:
     seg = src[start:]
     end = seg.find("</body>")
     seg = seg[:end] if end > 0 else seg
-    has_more = bool(re.search(rf"Page={page + 1}\b", seg))
+    # altafsir has used two pagers: plain links carrying Page=N, and (since at
+    # least 2026-09) JavaScript links InnerLink_onchange(<tafsir>,<page>,<lang>).
+    # Only the pages not currently shown are linked, so page+1 present means more.
+    has_more = bool(re.search(rf"Page={page + 1}\b", seg)) or bool(
+        re.search(rf"InnerLink_onchange\(\d+,{page + 1},\d+\)", seg))
     return seg, has_more
+
+
+def pager_last_page(seg: str) -> int:
+    """The highest page number the block's pager links to (1 when there is none)."""
+    nums = [int(n) for n in re.findall(r"Page=(\d+)\b", seg)]
+    nums += [int(n) for n in re.findall(r"InnerLink_onchange\(\d+,(\d+),\d+\)", seg)]
+    return max(nums, default=1)
 
 
 def clean_block_text(segment_html: str) -> str:
@@ -147,29 +159,126 @@ def clean_block_text(segment_html: str) -> str:
     return "\n".join(lines).strip()
 
 
-def fetch_altafsir(key: str, surah: int, verse: int, *, get: Getter | None = None) -> FetchedBlock | None:
+def strip_verse_header(text: str) -> str:
+    """Pages 2 and later of an altafsir block repeat the verse group at the top
+    ("{ ... } * { ... }"); drop those leading lines so the joined block carries
+    the verses once."""
+    lines = text.split("\n")
+    i = 0
+    while i < len(lines) and lines[i].lstrip().startswith("{"):
+        i += 1
+    return "\n".join(lines[i:]).strip()
+
+
+def fetch_altafsir(key: str, surah: int, verse: int, *, get: Getter | None = None,
+                   fallback: bool = True) -> FetchedBlock | None:
+    """The block for one work and one verse, walking every page altafsir shows.
+    When altafsir has no block (a server error, or an empty page) and fallback
+    is on, the same work is asked of greattafsirs.com, which serves the same
+    numbered tafsirs from the same publisher."""
     get = get or curl_get
     tafsir_id, lang, _ = ALTAFSIR_TAFSIRS[key]
     parts: list[str] = []
     first_url = altafsir_url(tafsir_id, lang, surah, verse, 1)
     page = 1
+    retried = False
+    promised = 1
     while page <= MAX_PAGES:
         url = altafsir_url(tafsir_id, lang, surah, verse, page)
         code, ctype, body = get(url, timeout=45)
-        if code != 200:
-            break
-        src = decode_body(body, ctype, "cp1256" if lang == 1 else None)
-        seg, has_more = extract_results_block(src, page)
+        seg, has_more = (None, False)
+        if code == 200:
+            src = decode_body(body, ctype, "cp1256" if lang == 1 else None)
+            seg, has_more = extract_results_block(src, page)
         if seg is None:
+            # altafsir drops a page now and then in the middle of a walk; ask
+            # once more before giving up on the rest of the block.
+            if page > 1 and not retried:
+                retried = True
+                continue
             break
-        parts.append(clean_block_text(seg))
+        retried = False
+        promised = max(promised, pager_last_page(seg))
+        text = clean_block_text(seg)
+        parts.append(strip_verse_header(text) if page > 1 else text)
         if not has_more:
             break
         page += 1
     text = "\n".join(p for p in parts if p).strip()
-    if len(text) < 80:
+    partial = len(parts) < promised
+    block = FetchedBlock(key, surah, verse, first_url, text, len(parts), partial) if len(text) >= 80 else None
+    if fallback and lang == 1 and (block is None or partial):
+        # altafsir answers 500 for whole blocks and for the tail pages of others
+        # (Yunus 31 to 36: three of nine pages). greattafsirs serves the same
+        # block whole; take it when it carries more than altafsir gave.
+        other = fetch_greattafsirs(key, surah, verse, get=get)
+        if other is not None and (block is None or len(other.text) > len(block.text)):
+            return other
+    return block
+
+
+# ---- greattafsirs.com (same tafsir numbering as altafsir, one page per block) ---
+
+GREATTAFSIRS_SELECT_RE = re.compile(
+    r'id="ctl00_ContentPlaceHolder1_ddlTafsir"[^>]*>(.*?)</select>', re.S)
+GREATTAFSIRS_SELECTED_RE = re.compile(r'<option\s+selected="selected"\s+value="(\d+)"')
+GREATTAFSIRS_VERSES_RE = re.compile(
+    r'class="AyaContainer"[^>]*>(.*?)<div id="ctl00_ContentPlaceHolder1_UpdatePanel2"', re.S)
+GREATTAFSIRS_TEXT_RE = re.compile(
+    r'id="ctl00_ContentPlaceHolder1_UpdatePanel2"[^>]*>(.*?)'
+    r'<div id="ctl00_ContentPlaceHolder1_(?:UpdatePanel4|dvLabel)"', re.S)
+ARABIC_INDIC_TAIL_RE = re.compile(r"\s*[\u0660-\u0669]+\s*$")
+GREATTAFSIRS_CHROME_TAIL_RE = re.compile(r"^[\sxX0-9]*$")
+
+
+def greattafsirs_url(tafsir_id: int, surah: int, verse: int) -> str:
+    return (
+        "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0"
+        f"&TafsirNo={tafsir_id}&SoraNo={surah}&AyahNo={verse}&LanguageID=1"
+    )
+
+
+def extract_greattafsirs_block(src: str, tafsir_id: int) -> str | None:
+    """The commentary shown on a greattafsirs page, in altafsir's shape: the
+    verse group as "{ ... } * { ... }" on the first line, then the text. None
+    when the page shows another work: the site silently falls back to Majma
+    al-Bayan when the requested tafsir has no entry for the verse."""
+    sel = GREATTAFSIRS_SELECT_RE.search(src)
+    chosen = GREATTAFSIRS_SELECTED_RE.search(sel.group(1)) if sel else None
+    if chosen is None or int(chosen.group(1)) != tafsir_id:
         return None
-    return FetchedBlock(key, surah, verse, first_url, text, len(parts))
+    m = GREATTAFSIRS_TEXT_RE.search(src)
+    if m is None:
+        return None
+    lines = [ln for ln in html_to_text(m.group(1)).split("\n") if ln.strip()]
+    # Leading chrome: the "add to comparison" control and the work's title.
+    while lines and len(lines[0]) < 40 and not lines[0].startswith("("):
+        lines.pop(0)
+    # Trailing chrome: the tab strip renders as single letters and digits.
+    while lines and GREATTAFSIRS_CHROME_TAIL_RE.match(lines[-1]):
+        lines.pop()
+    if not lines:
+        return None
+    vm = GREATTAFSIRS_VERSES_RE.search(src)
+    verses = [ARABIC_INDIC_TAIL_RE.sub("", ln).strip()
+              for ln in html_to_text(vm.group(1)).split("\n") if vm and ln.strip()]
+    header = " * ".join("{ " + v + " }" for v in verses if v)
+    return "\n".join(([header] if header else []) + lines).strip()
+
+
+def fetch_greattafsirs(key: str, surah: int, verse: int, *, get: Getter | None = None) -> FetchedBlock | None:
+    get = get or curl_get
+    tafsir_id, lang, _ = ALTAFSIR_TAFSIRS[key]
+    if lang != 1:
+        return None
+    url = greattafsirs_url(tafsir_id, surah, verse)
+    code, ctype, body = get(url, timeout=60)
+    if code != 200:
+        return None
+    text = extract_greattafsirs_block(decode_body(body, ctype), tafsir_id)
+    if not text or len(text) < 80:
+        return None
+    return FetchedBlock(key, surah, verse, url, text, 1)
 
 
 # ---- thaqalayn.com hadith corpus -------------------------------------------------

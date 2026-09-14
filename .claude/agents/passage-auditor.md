@@ -42,6 +42,7 @@ One verdict for every target:
 - Every marker in a verse note: target `verses.<verse>.note[n]`.
 - Every marker in perspectives: target `perspectives[n]`.
 - Every narration: target `verses.<verse>.narrations.<id>`.
+- Every source gloss: target `sources.<id>.gloss`, for each source whose `excerpt` is not null.
 
 For a marker, the claim is the sentence (or clause) the marker is attached to. Find the place in block `s<n>` that supports it and quote it as `excerpt`. Rule:
 
@@ -50,6 +51,8 @@ For a marker, the claim is the sentence (or clause) the marker is attached to. F
 - `unsupported`: the block does not say this, or says the opposite, or the marker points at a block about something else.
 
 For a narration, compare the `arabic` and the English `text` against the block: the speaker named in the draft must be the speaker in the chain, the English must render the Arabic without addition, and the `chain` must match the block. Any mismatch in speaker or substance is `unsupported`; an English rendering that adds colour the Arabic lacks is `stretched`.
+
+For a gloss, the claim is the gloss and the block is the excerpt itself: the gloss must render what the excerpt says, in its direction. It may also carry the block's own framing of the excerpt, that is, who the block says said it or where the block says it comes from ("In Muslim's Sahih, from Suhayb:"), as long as that framing stands in the block; check it there. A gloss that adds a fact neither the excerpt nor its framing in the block carries, or sharpens the excerpt, is `stretched`; one that reverses a negation or the direction of an act ("guide anyone astray" for ترشد ضالاً, which is to set a lost person right) is `unsupported`. Quote the excerpt's words as `excerpt`.
 
 Then three more things:
 
@@ -64,9 +67,11 @@ Write exactly one file, `passages_work/<surah>/<index>/audit.<n>.json`:
 ```json
 {
   "passage": "2:4",
+  "schema": 2,
   "verdicts": [
     {"target": "essay[1]", "claim": "Tabatabai reads the angels' question as a request to understand, not an objection", "verdict": "supported", "excerpt": "وليس من الاعتراض والخصومة في شيء", "note": ""},
-    {"target": "verses.34.narrations.n1", "claim": "Imam al-Sadiq: the command brought out the envy in Iblis", "verdict": "supported", "excerpt": "أخرج ما كان في قلب إبليس من الحسد", "note": "chain matches"}
+    {"target": "verses.34.narrations.n1", "claim": "Imam al-Sadiq: the command brought out the envy in Iblis", "verdict": "supported", "excerpt": "أخرج ما كان في قلب إبليس من الحسد", "note": "chain matches"},
+    {"target": "sources.s1.gloss", "claim": "gloss: the angels' words were a request to understand, not an objection", "verdict": "supported", "excerpt": "وليس من الاعتراض والخصومة في شيء", "note": ""}
   ],
   "uncited": [
     {"where": "essay", "claim": "Makarem Shirazi links adl to systemic fairness", "note": "named scholar with no marker and no block"}
@@ -78,5 +83,7 @@ Write exactly one file, `passages_work/<surah>/<index>/audit.<n>.json`:
   "summary": "12 supported, 1 stretched (essay[4] sharpens Majma), 0 unsupported, 1 uncited, 1 prose flag."
 }
 ```
+
+`"schema": 2` is required: it tells the checker that every source gloss has a verdict, and the checker reports any gloss you skipped as `no verdict`.
 
 Then run `.venv/bin/python scripts/passages.py audit-check 2:4`. If it prints `malformed`, fix the file. When it prints PASS or FAIL, stop; PASS with prose flags listed under it is still PASS for you (the flags go to the polisher, not back to the writer). Do not edit the draft. Do not write anything else.

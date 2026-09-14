@@ -32,7 +32,7 @@ def state(ref: PassageRef) -> dict:
     if latest:
         out["attempts"] = audit_mod.next_attempt(d) - 1
         audit_doc = _read(latest)
-        aerrs, passed = audit_mod.check(audit_doc, draft)
+        aerrs, passed = audit_mod.check(audit_doc, draft, polished=prose_mod.polished(d))
         out["audit"] = "malformed" if aerrs else ("PASS" if passed else "FAIL")
         out["stage"] = "passed" if out["audit"] == "PASS" else "audited"
     # Prose flags never fail an audit, but a passage is not passed (and so not

@@ -12,12 +12,19 @@ VERDICTS = {"supported", "stretched", "unsupported"}
 AUDIT_FILE_RE = re.compile(r"audit\.(\d+)\.json$")
 
 
-def expected_targets(draft: dict) -> set[str]:
+def expected_targets(draft: dict, *, glosses: bool = False) -> set[str]:
+    """Every marker and narration in the draft; with glosses on (audit schema
+    2, from 2026-09-11) also every source gloss, since a gloss is English the
+    reader sees and an inverted one shipped unaudited in 10:4."""
     targets: set[str] = set()
-    for n in MARKER_RE.findall((draft.get("essay") or {}).get("en", "")):
+    if glosses:
+        for s in draft.get("sources") or []:
+            if s.get("excerpt") and s.get("gloss"):
+                targets.add(f"sources.{s.get('id')}.gloss")
+    for n in MARKER_RE.findall((draft.get("essay") or {}).get("en") or ""):
         targets.add(f"essay[{n}]")
     persp = draft.get("perspectives") or {}
-    for n in MARKER_RE.findall(persp.get("en", "") if isinstance(persp, dict) else ""):
+    for n in MARKER_RE.findall((persp.get("en") if isinstance(persp, dict) else "") or ""):
         targets.add(f"perspectives[{n}]")
     for entry in draft.get("verses") or []:
         vn = entry.get("verse")
@@ -29,11 +36,19 @@ def expected_targets(draft: dict) -> set[str]:
     return targets
 
 
-def check(audit_doc: dict, draft: dict) -> tuple[list[str], bool]:
+def audit_schema(audit_doc: dict) -> int:
+    """1 for audits written before glosses were targets; 2 from 2026-09-11."""
+    try:
+        return int(audit_doc.get("schema") or 1)
+    except (TypeError, ValueError):
+        return 1
+
+
+def check(audit_doc: dict, draft: dict, *, polished: frozenset[str] = frozenset()) -> tuple[list[str], bool]:
     errs: list[str] = []
     if audit_doc.get("passage") != draft.get("passage"):
         errs.append("audit passage id does not match the draft")
-    expected = expected_targets(draft)
+    expected = expected_targets(draft, glosses=audit_schema(audit_doc) >= 2)
     seen: set[str] = set()
     for v in audit_doc.get("verdicts") or []:
         t = v.get("target")
@@ -50,7 +65,7 @@ def check(audit_doc: dict, draft: dict) -> tuple[list[str], bool]:
     if not isinstance(audit_doc.get("coverage"), str) or not audit_doc.get("coverage"):
         errs.append("coverage judgement is required")
     if audit_doc.get("prose") is not None:
-        errs.extend(prose_mod.check_flags(audit_doc["prose"], draft))
+        errs.extend(prose_mod.check_flags(audit_doc["prose"], draft, polished=polished))
     if errs:
         return errs, False
     # Pass rule (tightened 2026-09-05 after the 2:4 pilot audit): every verdict

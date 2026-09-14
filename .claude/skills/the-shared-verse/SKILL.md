@@ -105,6 +105,8 @@ The exported video is the **clean 9:16 only** — the cosmic verse, both reading
 
 Don't hand-edit the HTML per episode. It reads its content from `window.EPISODE`; the pipeline injects that (plus base64-embedded fonts) into a copy and renders.
 
+**Always show the whole verse.** `arabic` and `translation` carry the complete āyah - never an excerpt with an ellipsis. The template auto-fits long verses: during the hook and verse beats it scales the Arabic and translation down until the whole verse fits; through the readings the Arabic becomes a compact header (shrunk a little, then clipped to whole lines with a soft fade) and the translation gives up its room first, so both panels and the cue captions always fit. Short verses measure as "fits" and render unchanged.
+
 **Layout is tuned for the TikTok frame.** Content sits below the top tabs/status bar, the translation is sized to read on a phone, and the cue captions clear the bottom caption/nav strip. The export is the full 1080×1920 (TikTok overlays its own UI on top) — keep any layout edits inside that safe band.
 
 ### Episode JSON schema
@@ -137,12 +139,27 @@ Don't hand-edit the HTML per episode. It reads its content from `window.EPISODE`
   },
   "hashtags": ["quran", "tafsir", "shia", "sunni"],  // OPTIONAL recommended tags echoed at render end; if omitted, lifted from caption_desc's tags
   "caption_desc": "demo-only feed caption 🌙 <span class=\"tags\">#quran #tafsir #shia #sunni</span>",
+  "payoff_text": "Both hear guidance. …",   // OPTIONAL shorter ON-SCREEN payoff line (the spoken voiceover.payoff can carry more)
+  "voiceover.hook_caption": "…",            // OPTIONAL on-screen caption during the hook - set it to the spoken hook so muted viewers read what is said
+  "key": {                                  // OPTIONAL element key: ONE table (element | tradition A | tradition B) REPLACES the two prose panels
+    "rows": [                               //   the bodies are still spoken; each row lights up when the narrator names it (matched on `match`,
+      { "element": "Niche", "sunni": "the believer's chest", "shia": "Fāṭima" },          //   default: the element's first word)
+      { "element": "Oil that glows unlit", "match": "oil", "sunni": "…", "shia": "…" }
+    ]
+  },
+  "key_phrases": [                          // OPTIONAL Arabic substrings (verbatim) that glow while their English is narrated
+    { "arabic": "نُّورٌ عَلَىٰ نُورٍ", "english": "Light upon light", "glow_beats": ["hook"] }   // glow_beats: also glow through these beats
+  ],
+  "tts_speed": { "verse": 1.1 },            // OPTIONAL per-beat pace (ElevenLabs speed 0.7-1.2): hook, verse, readings, payoff, question
+  "post_caption": "…\ncitations…",          // OPTIONAL ready-to-paste caption with exact citations, echoed at render end
   "show_captions": true,                    // burn the short on-screen cue phrases ("First — the Sunni reading", …)
   "show_payoff_text": true,                 // show "Same words. Different weight." on screen (voiceover plays regardless)
   "show_closing_text": true                 // show the closing prompt pill on screen (voiceover plays regardless)
 }
 ```
 
+- **Element key for parable verses.** When a verse maps element by element (a niche, a lamp, a glass…), set `key.rows` and the readings render as ONE table in gold and teal instead of two prose panels: the element column is shared, each tradition's column fills in during its reading, and a row flashes in the accent as the narrator names it. Write each spoken `body` so it names the elements in row order ("The niche is…, the lamp is…"). Columns are equal width and weight, so symmetry is preserved.
+- **Say the "why" and the shared ground.** Each spoken reading should say what the elements mean AND why (about 45-55 words, matched); the payoff names what both traditions share before it names the difference, and where each tradition's own books also carry the other reading, say so. Show a short `payoff_text` on screen for muted viewers.
 - **`order` is how you rotate.** `["sunni","shia"]` = Sunni first/on top; `["shia","sunni"]` flips reveal order, stacking, *and* the gold/teal caption cues — all from this one field.
 - **One reading text.** Each reading's `body` is shown, narrated, AND highlighted word-by-word — the current word glows in the tradition's accent (gold/teal) — so display = speech. Keep the two bodies matched in length (~20–24 words).
 - **Plain spelling on screen (no transliteration diacritics).** You may author with diacritics (`ʿAlī`, `al-Mīzān`, `rukūʿ`); the renderer strips every on-screen English string to the house **plain spelling** — `ʿAlī → Ali`, `al-Mīzān → al-Mizan`, `Ṭabāṭabāʾī → Tabatabai` — via the project's canonical `scripts/strip_diacritics.py` (same rules + exceptions as the app), and TTS is stripped too, so nothing carries macrons or ʿayn/hamza marks. Only the **`arabic`** script is left untouched. Stripping is per-character, so the word-by-word highlight stays perfectly in sync.

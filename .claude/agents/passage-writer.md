@@ -37,7 +37,7 @@ The packet holds the verses (Arabic and the Ali Quli Qarai translation) and ever
 
 ## Output
 
-Write exactly one file: `passages_work/<surah>/<index>/draft.json`. A validator runs on every write and rejects the file with a list of problems if any rule is broken. Fix every item and write again. Do not write anywhere else. Do not create summaries.
+Write exactly one file: `passages_work/<surah>/<index>/draft.json`. A validator runs on every write and rejects the file with a list of problems if any rule is broken. Fix every item and write again. Make every change to the draft with the Write tool, rewriting the whole file: never patch it with Bash, sed, Python or an editor, because the validator runs only on Write and a patched file ships unchecked. Do not write anywhere else. Do not create summaries.
 
 ```json
 {
@@ -83,11 +83,12 @@ Write exactly one file: `passages_work/<surah>/<index>/draft.json`. A validator 
 ## How to write
 
 - **Title**: what the passage is about, as a reader would name it. "Adam and the angels", not "Verses 30 to 39".
-- **Essay**: tell the passage once, in order, as one piece. Open with what it announces, follow its turns, close with where it leaves the reader. Read every sentence back once before you move on: if it needs a second reading, rewrite it, and put a negation where English puts it ("is beyond the power of anything created", never "could be the work of nothing created"). Lean on al-Mizan, Majma and al-Tibyan for the reading; cite the block whenever you report what a commentator holds, an occasion of revelation, or a disputed reading. Plain narrative of what the verses say needs no marker. Never attribute a position to a scholar the packet does not show holding it.
+- **Essay**: tell the passage once, in order, as one piece. Open with what it announces, follow its turns, close with where it leaves the reader. Read every sentence back once before you move on: if it needs a second reading, rewrite it, and put a negation where English puts it ("is beyond the power of anything created", never "could be the work of nothing created"). Lean on al-Mizan, Majma and al-Tibyan for the reading; cite the block whenever you report what a commentator holds, an occasion of revelation, or a disputed reading. Plain narrative of what the verses say needs no marker. Never attribute a position to a scholar the packet does not show holding it. The packet's first line says which passage of how many this is: call a passage the surah's opening or its close only when it is the first or the last.
 - **Verse entries**: only where a verse needs its own gloss (a term, a ruling, a cross-reference such as 18:50) or has a narration about it specifically. A narration about the whole passage goes on its first verse.
 - **Narrations**: prefer the ones that interpret the verse over the ones that merely quote it. Render the Arabic faithfully; do not embellish. If the packet has no narration for a verse, that verse gets none.
 - **Speakers and names**: the speaker is the person whose words the block quotes, read from the last link of the chain and the block's own framing, never from the book's title or an earlier name in the isnad. When the block quotes someone answering a question, name the one who answers. Do not add epithets, kunyas or titles the block does not give: if the block says "Maytham", write "Maytham", not "Maytham al-Tammar". When a scholar reports a view from someone else, attribute the view to that someone else, not to the scholar.
 - **Perspectives**: only where the Shia and Sunni blocks actually read the passage differently. Say what each holds and cite both. When they agree, write `null`.
-- **Excerpts**: the shortest span that carries the claim.
+- **Excerpts**: the shortest span that carries the claim. The gloss says what the excerpt says, in the same direction: a negation stays a negation, and "guide a lost person aright" never becomes "guide anyone astray".
+- **Punctuation**: straight quotation marks and apostrophes only (' and "), never curly ones; a plain dash, never an em dash.
 
 When the validator accepts the file, stop. Do not summarise.

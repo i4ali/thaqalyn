@@ -169,4 +169,14 @@ touching code.
 - Gradings inside al-Burhan and al-Kafi blocks (for example a weak grading) are
   not surfaced in the draft.
 - A targeted rewrite mode (failing targets plus their blocks only) does not exist
-  yet; rewrites re-read the whole packet.
+  yet; rewrites re-read the whole packet. In practice a follow-up message to
+  the still-resident writer or auditor does the same job for 2K to 18K tokens.
+- 2026-09-11: altafsir's pager had switched to JavaScript links, so every
+  multi-page block fetched before that date is page one only (surahs 1 to 10;
+  the al-Mizan block for Yunus 31 to 36 is nine pages). Fixed in `fetch.py`.
+  Same day: altafsir returns HTTP 500 for al-Mizan on Yunus 26 to 30, 37 to
+  70 and 104 to 109; `fetch_altafsir` now falls back to greattafsirs.com (same
+  tafsir numbers, one page per block, silently substitutes Majma al-Bayan when
+  a work has no entry, which the fetcher detects and rejects).
+- 2026-09-11: audits carry `"schema": 2` and rule on every source gloss
+  (`sources.<id>.gloss`); `audit-check` notes when an older audit did not.

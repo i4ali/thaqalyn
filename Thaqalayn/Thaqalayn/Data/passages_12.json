@@ -1,0 +1,3067 @@
+{
+  "1": {
+    "id": "12:1",
+    "surah": 12,
+    "index": 1,
+    "range": [
+      1,
+      6
+    ],
+    "title": {
+      "en": "The best of narratives"
+    },
+    "essay": {
+      "en": "Surah Yusuf opens with the disconnected letters Alif Lam Ra and names its verses the signs of 'the Manifest Book.' God says He sent it down 'as an Arabic Quran so that you may exercise your reason,' then promises to recount 'the best of narratives.' al-Tabatabai notes that of all the surahs this one alone tells a single story in full, from beginning to end, and it is Joseph's [1]. al-Tabrisi records that the surah came down when Jewish scholars set the Meccans to ask why Jacob's family moved from Syria to Egypt [3], and al-Tusi glosses 'prior to it you were among those who are unaware' as the Prophet having had no knowledge of the story until it was revealed [7].\n\nThe account opens with a boy's dream: Joseph tells his father he saw eleven planets, the sun, and the moon prostrating to him. al-Tabatabai reads the dream as glad tidings and the doorway into the whole story, the first stir of God's care for His servant [2]. Jacob warns him not to recount it to his brothers lest they scheme against him, for 'Satan is indeed man's manifest enemy.' al-Tusi observes that Jacob spoke this way because he already knew the dream meant his other sons would one day bow to Joseph [9]. Jacob then reads it out: the Lord will choose Joseph, teach him the interpretation of dreams, and complete His blessing on him and the house of Jacob, as on Abraham and Isaac."
+    },
+    "verses": [
+      {
+        "verse": 4,
+        "heading": {
+          "en": "Joseph's dream"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "تأويل هذه الرؤيا أنه سيملك مصر ويدخل عليه أبواه وإخوته، أما الشمس فأم يوسف راحيل والقمر يعقوب وأما أحد عشر كوكباً فإخوته، فلما دخلوا عليه سجدوا شكراً لله وحده حين نظروا إليه وكان ذلك السجود لله.",
+            "chain": "Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "The meaning of this dream is that he will rule Egypt, and his parents and brothers will come in to him. The sun is Joseph's mother Rahil, the moon is Jacob, and the eleven stars are his brothers. When they entered they prostrated in thanks to God alone, and that prostration was for God."
+            },
+            "source": "s13"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "كان له أحد عشر أخاً فكان له من أمه أخ واحد يسمى بنيامين … فرأى يوسف هذه الرؤيا وله تسع سنين فقصها على أبيه.",
+            "chain": "Ali ibn Ibrahim, from his father, from Amr ibn Shamir, from Jabir, from Abu Ja'far",
+            "text": {
+              "en": "Joseph had eleven brothers, and from his mother he had a single brother named Binyamin. Joseph saw this dream when he was nine years old and recounted it to his father."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 5,
+        "heading": {
+          "en": "Jacob's warning"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sajjad",
+            "addressee": null,
+            "arabic": "فقال يعقوب ليوسف: لا تقصص رؤياك على إخوتك فإني أخاف أن يكيدوا لك كيدا، فلم يكتم يوسف رؤياه و قصها على إخوته … و كانت أول بلوى نزلت بيعقوب و آل يعقوب الحسد ليوسف لما سمعوا منه الرؤيا",
+            "chain": "Ibn Babawayh, from Muhammad ibn Musa ibn al-Mutawakkil, from Abdullah ibn Ja'far al-Himyari, from Ahmad ibn Muhammad ibn Isa, from al-Hasan ibn Mahbub, from Malik ibn Atiyya, from al-Thumali, from Ali ibn al-Husayn",
+            "text": {
+              "en": "Jacob said to Joseph, 'Do not recount your dream to your brothers, for I fear they will scheme against you.' But Joseph did not conceal his dream and recounted it to his brothers. The first trial to befall Jacob and his house was their envy of Joseph when they heard the dream."
+            },
+            "source": "s17"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Reading 'We have sent it down as an Arabic Quran,' al-Tusi takes the verse as proof that God's speech is originated and other than God Himself, since what is described as sent down and as Arabic cannot be eternal [6]. al-Razi reports the Mutazili al-Jubbai drawing the same conclusion from the verse, and answers that only the composed letters, words and expressions are originated, a point no one disputes, while what his school holds to be eternal is something else that the argument does not reach [39]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 1 to 3",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=1&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولم يرد في سور القرآن الكريم تفصيل قصة من القصص باستقصائها من أولها إلى آخرها غير قصته عليه السلام ، وقد خصت السورة بها من غير شركة ما من غيرها."
+        },
+        "gloss": "In the surahs of the noble Quran no story is told in full detail, followed from its beginning to its end, except his story, peace be upon him, and the surah is devoted to it alone."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 4 to 6",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=4&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذه الرؤيا بشرى بشَّر الله سبحانه يوسف بها ليكون مادة روحية لتربيته تعالى عبده في صراط الولاية والقرب من ربه، وهى بمنزلة المدخل في قصته عليه السلام ."
+        },
+        "gloss": "This dream is glad tidings with which God gave Joseph good news, a spiritual provision for God's nurturing of His servant on the path of nearness to his Lord, and it stands as the doorway into his story."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لأن علماء اليهود قالوا لكبراء المشركين سلوا محمداً لِمَ انتقل آل يعقوب من الشام إلى مصر وعن قصة يوسف"
+        },
+        "gloss": "Because the scholars of the Jews told the chiefs of the polytheists: Ask Muhammad why the family of Jacob moved from Syria to Egypt, and about the story of Joseph."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية دليل على ان كلام الله محدث، لانه وصفه بالانزال وبأنه عربي، ولا يوصف بذلك القديم … وفيه دلالة على أن القرآن غير الله، لأنه وصفه بأنه عربي"
+        },
+        "gloss": "In the verse is a proof that God's speech is originated, because He described it as sent down and as Arabic, and the eternal is not so described; and in it is an indication that the Quran is other than God, because He described it as Arabic."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقيل معناه من الغافلين عن قصة يوسف وأخوته، حتى أخبرناك بها."
+        },
+        "gloss": "And it is said the meaning is: among those unaware of the story of Joseph and his brothers, until We informed you of it."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وانما قال ذلك لعلمه بأن تأويل الرؤيا أنهم يخضعون له."
+        },
+        "gloss": "He said that only because he knew that the interpretation of the dream was that they would submit to him."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تأويل هذه الرؤيا أنه سيملك مصر ويدخل عليه أبواه وإخوته، أما الشمس فأم يوسف راحيل والقمر يعقوب وأما أحد عشر كوكباً فإخوته، فلما دخلوا عليه سجدوا شكراً لله وحده حين نظروا إليه وكان ذلك السجود لله."
+        },
+        "gloss": "The interpretation of this dream is that he will rule Egypt, and his parents and brothers will come in to him. The sun is Joseph's mother Rahil, the moon is Jacob, and the eleven stars are his brothers; when they entered they prostrated in thanks to God alone, and that prostration was for God."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 4 to 6",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=4&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقال يعقوب ليوسف: لا تقصص رؤياك على إخوتك فإني أخاف أن يكيدوا لك كيدا، فلم يكتم يوسف رؤياه و قصها على إخوته"
+        },
+        "gloss": "Jacob said to Joseph: Do not recount your dream to your brothers, for I fear they will scheme against you. But Joseph did not conceal his dream and recounted it to his brothers."
+      },
+      {
+        "id": "s39",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 1 to 2",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=4&SoraNo=12&AyahNo=1&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "احتج الجبائي بهذه الآية على كون القرآن مخلوقاً … إنما الذي ندعي قدمه شيء آخر فسقط هذا الاستدلال"
+        },
+        "gloss": "al-Jubbai argued from this verse that the Quran is created ... but what we claim to be eternal is something else, so this argument falls away."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:19:15Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T21:57:09Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "2": {
+    "id": "12:2",
+    "surah": 12,
+    "index": 2,
+    "range": [
+      7,
+      20
+    ],
+    "title": {
+      "en": "Joseph cast into the well"
+    },
+    "essay": {
+      "en": "The story of Joseph proper begins here by announcing that in Joseph and his brothers 'there are certainly signs for the seekers.' Commentators tie this to an occasion of revelation: Tafsir al-Safi reports that the Jews had the Meccan chiefs ask the Prophet why Jacob's family moved from Syria to Egypt and about Joseph, and he told the story though he had heard and read no book [27]. al-Tusi and al-Tabarsi read the verse as a sign of his prophethood for the very people who questioned him [6][2].\n\nThe drama begins with envy. The brothers judge that their father wrongly prefers Joseph and his younger brother, and call him 'in manifest error.' al-Tabatabai, al-Tabarsi and al-Tusi agree this was not a charge of straying in religion - that would have made the brothers disbelievers - but a complaint about his worldly judgement in favoring two children over a capable band [1][2][7]. al-Tabatabai and al-Tusi further hold, in their own voice, that the brothers were not prophets but sons of prophets who later repented [1][7]; al-Tabarsi, noting that most exegetes said they were prophets, reports the same from Imam al-Baqir and from al-Murtada [2].\n\nThey plot to kill Joseph or cast him far away so their father's attention would fall on them alone, then to 'become a righteous lot' - that is, to repent afterward, which shows they knew the deed was a sin [1][2]. One of them, whom the Qur'an leaves unnamed though commentators suggest Rubil, Yahudha or Lawi, urges the well instead [1].\n\nThey coax Jacob into sending Joseph out with them, promising to guard him, while he fears the wolf. When they lower him into the well, God reveals to Joseph that one day he will tell them of this deed while they do not know him - which al-Tabatabai reads as the later reunion in Egypt [1]. They return weeping with false blood on his shirt, and Jacob answers, 'your souls have made a matter seem decorous to you,' choosing patience and God's help. A passing caravan draws Joseph up and sells him for a few dirhams. As al-Tabatabai notes, the very means meant to destroy and abase him became the means by which God gave him life and raised him [1]."
+    },
+    "verses": [
+      {
+        "verse": 7,
+        "heading": {
+          "en": "Signs for those who ask"
+        },
+        "note": {
+          "en": "The 'signs for the seekers' are meant for those who asked the Prophet about this history, which he told though he had read no scripture [6]."
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إنما ابتلي يعقوب بيوسف أنه ذبح كبشا سمينا، و رجل من أصحابه يدعى (بقوم) محتاج لم يجد ما يفطر عليه، فأغفله و لم يطعمه، فابتلي بيوسف",
+            "chain": "Abu Khadija, from a man, from Abu Abdillah",
+            "text": {
+              "en": "Jacob was tried through Joseph only because he slaughtered a fat ram while a needy companion of his, who found nothing to break his fast with, was overlooked and not fed; so he was tried through Joseph."
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "The brothers' envy"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "و الله إني لأصانع بعض ولدي … لئلا يصنعوا به ما فعل بيوسف و إخوته، و ما أنزل الله سورة يوسف إلا أمثالا لكي لا يحسد بعضنا بعضا كما حسد يوسف إخوته و بغوا عليه",
+            "chain": "Mas'ada ibn Sadaqa, from Ja'far ibn Muhammad, from his father",
+            "text": {
+              "en": "By God, I favor one of my children, seat him on my knee and thank him much, though the right belongs to another - only from fear for him, lest they do what was done to Joseph and his brothers. God revealed Surah Yusuf only as parables, that we not envy one another as Joseph's brothers envied him."
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 15,
+        "heading": {
+          "en": "Revelation in the well"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "لا يشعرون أنك أنت يوسف أتاه جبرائيل وأخبره بذلك",
+            "chain": "In the narration of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "'While they are not aware' means they do not perceive that you are Joseph. Gabriel came to him and informed him of that."
+            },
+            "source": "s23"
+          }
+        ]
+      },
+      {
+        "verse": 18,
+        "heading": {
+          "en": "The shirt and false blood"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إنهم ذبحوا جدياً على قميصه",
+            "chain": "In the narration of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "They slaughtered a kid on his shirt."
+            },
+            "source": "s24"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لما أتي بقميص يوسف إلى يعقوب قال: اللهم لقد كان ذئبا رفيقا حين لم يشق القميص … و كان به نضح من دم",
+            "chain": "Abu Jamila, from a man, from Abu Abdillah",
+            "text": {
+              "en": "When Joseph's shirt was brought to Jacob, he said: O God, what a gentle wolf, that did not tear the shirt. And there was a sprinkling of blood on it."
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 20,
+        "heading": {
+          "en": "Sold for a few dirhams"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "كانت عشرين درهماً والبخس النقص وهي قيمة كلب الصيد إذا قتل كان قيمته عشرين درهماً",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad ibn Isa, from Ahmad ibn Muhammad, from Abu Basir, from al-Rida",
+            "text": {
+              "en": "It was twenty dirhams. Al-bakhs means deficiency; it is the price of a hunting dog, which when killed is worth twenty dirhams."
+            },
+            "source": "s25"
+          },
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قد كان يوسف بين أبويه مكرما، ثم صار عبدا حتى بيع بأبخس و أوكس الثمن، ثم لم يمنع الله أن بلغ به حتى صار ملكا",
+            "chain": "Abdullah ibn Sulayman, from Ja'far ibn Muhammad",
+            "text": {
+              "en": "Joseph was honored between his parents, then became a slave, sold for the most deficient and lowest price; then God did not withhold from him until he became a king."
+            },
+            "source": "s26"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Shia and Sunni exegetes divide over whether Joseph's brothers were prophets, a question of prophetic infallibility. al-Tusi states plainly that they were not prophets, since prophets cannot commit such vile acts, and calls this the Shia position; al-Tabarsi reports from Imam al-Baqir that they were not prophets but the sons of prophets who repented [7][2]. Many Sunni exegetes leave the door open: al-Razi answers that infallibility is required only from the time a man receives prophethood, not before, so their deed poses no obstacle even if they were later made prophets [59]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 7 to 20",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=7&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فهذه إخوة يوسف عليه السلام حسدوا أخاهم وكادوه وألقوه في قعر بئر ثم شروه من السيارة عبداً يريدون بذلك أن يسوقوه إلى الهلاك فأحياه الله بعين هذا السبب اللائح منه الهلاك."
+        },
+        "gloss": "These are Joseph's brothers: they envied him, plotted against him, cast him into the bottom of a well, then sold him from the caravan as a slave, intending by this to drive him to destruction; but God gave him life by the very means that seemed to spell his destruction."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 7 to 10",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=7&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أكان أولاد يعقوب أنبياء فقال لا ولكنهم كانوا أسباطاً أولاداً لأنبياء ولم يفارقوا الدنيا إلا سعداء تابوا وتذكروا ما صنعوا"
+        },
+        "gloss": "'Were Jacob's children prophets?' He said: No, but they were asbat, sons of prophets, and they did not leave the world except happy, having repented and remembered what they had done."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 7",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=39&SoraNo=12&AyahNo=7&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معناه بصيرة للذين سألوا النبي صلى الله عليه وسلم فانبأهم بقصة يوسف - وهو صلى الله عليه وسلم لم يقرأ كتاباً، ولم يعلمه إلا من جهة الوحي"
+        },
+        "gloss": "Its meaning is an insight for those who asked the Prophet, so he informed them of the story of Joseph - and he had not read any book, nor learned it except through revelation."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واكثر المفسرين على ان اخوة يوسف كانوا انبياء، وقال قوم: لم يكونوا كذلك، وهو مذهبنا، لأن الأنبياء، لا يجوز ان تقع منهم القبائح"
+        },
+        "gloss": "Most exegetes hold that Joseph's brothers were prophets; but some say they were not, and this is our position, because prophets cannot commit vile acts."
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يشعرون أنك أنت يوسف أتاه جبرائيل وأخبره بذلك"
+        },
+        "gloss": "They do not perceive that you are Joseph; Gabriel came to him and informed him of that."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 17 to 18",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنهم ذبحوا جدياً على قميصه"
+        },
+        "gloss": "They slaughtered a kid on his shirt."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال كانت عشرين درهماً والبخس النقص وهي قيمة كلب الصيد إذا قتل كان قيمته عشرين درهماً"
+        },
+        "gloss": "He said: it was twenty dirhams; al-bakhs means deficiency, and it is the price of a hunting dog, which when killed is worth twenty dirhams."
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 7 to 20",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=7&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قد كان يوسف بين أبويه مكرما، ثم صار عبدا حتى بيع بأبخس و أوكس الثمن، ثم لم يمنع الله أن بلغ به حتى صار ملكا"
+        },
+        "gloss": "Joseph was honored between his parents, then became a slave, sold for the most deficient and lowest price; then God did not withhold from him until he became a king."
+      },
+      {
+        "id": "s27",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 7 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=12&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في الجوامع روى أنّ اليهود قالوا لكبراءِ المشركين سلوا محمّداً لِمَ انتقل آل يعقوب من الشام إلى مصر وقصّة يوسف قال فأخبرهم بالقصّه من غير سماع ولا قراءة كتاب"
+        },
+        "gloss": "In al-Jawami it is reported that the Jews told the Meccan chiefs: Ask Muhammad why Jacob's family moved from Syria to Egypt, and about the story of Joseph; and he told them the story without having heard or read any book."
+      },
+      {
+        "id": "s59",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 7 to 8",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=4&SoraNo=12&AyahNo=7&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المعتبر عندنا عصمة الأنبياء عليهم السلام في وقت حصول النبوة. وأما قبلها فذلك غير واجب"
+        },
+        "gloss": "What counts, in our view, is the infallibility of the prophets at the time of receiving prophethood; as for before that, it is not required."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:23:59Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-11T22:09:12Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "3": {
+    "id": "12:3",
+    "surah": 12,
+    "index": 3,
+    "range": [
+      21,
+      29
+    ],
+    "title": {
+      "en": "Joseph and the Egyptian's wife"
+    },
+    "essay": {
+      "en": "The passage follows Joseph from the slave market into the house of the Egyptian who buys him. The man tells his wife to give the boy an honourable place, hoping to profit from him or to adopt him as a son. Behind this the verse says God was establishing Joseph in the land and teaching him the interpretation of dreams: Majma reads the establishing as God inclining the buyer's heart toward him [3], and Tibyan glosses 'Allah has command of His affairs' as His power over the outcome with nothing to hinder it [7]. When Joseph came of age God gave him judgement and knowledge, which Tibyan calls the decisive word that calls to wisdom [8].\n\nThe house then becomes a trial. The mistress bolts the doors and calls him to herself, and he answers, 'God forbid!' The turn comes in the next verse: she made for him, and he would have made for her had he not beheld the proof of his Lord. Majma reports from al-Sadiq that this proof was the prophethood that holds a man back from indecency [5], and al-Mizan reads the verse as divine protection, the sinlessness God grants those He has made purely His own [2]. They race to the door, she tears his shirt from behind, and they meet her husband there. She demands prison or a painful punishment; Joseph says it was she who solicited him.\n\nThe proof comes from an unexpected witness. Majma records that Ibn Abbas and Sa'id ibn Jubayr held the witness to be an infant in the cradle [6]: a shirt torn from the front would convict Joseph, one torn from behind would clear him. Seeing it torn from behind, the husband calls this women's guile, tells Joseph to let the matter drop, and tells his wife to seek forgiveness. Through the very trap set for him, God prevails over His affair and drives every cause toward Joseph's rise [1]."
+    },
+    "verses": [
+      {
+        "verse": 23,
+        "heading": {
+          "en": "Joseph refuses"
+        },
+        "note": {
+          "en": "In 'Indeed He is my Lord; He has given me a good abode,' most commentators take the lord to be her husband, the master who honoured him; some read it instead as God himself [4]."
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam Zayn al-Abidin",
+            "addressee": null,
+            "arabic": "راودته امرأة الملك عن نفسه فقال لها: معاذ الله، أنا من أهل بيت لا يزنون",
+            "chain": "Abu Hamza al-Thumali, from Ali ibn al-Husayn",
+            "text": {
+              "en": "The king's wife solicited him, and he said to her, 'God forbid! I am from a household that does not commit fornication.'"
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 24,
+        "heading": {
+          "en": "The proof of his Lord"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "يقولون: رأى يعقوب عاضا على إصبعه، فقال: لا، ليس كما يقولون … قامت إلى صنم معها في البيت، فألقت عليه ثوبا، فقال لها يوسف: ما صنعت؟ قالت: طرحت عليه ثوبا، أستحي أن يرانا، فقال يوسف: فأنت تستحين من صنمك و هو لا يسمع و لا يبصر، و لا أستحي أنا من ربي؟!",
+            "chain": "From one of our companions, from Abu Ja'far",
+            "text": {
+              "en": "People say he saw Jacob biting his finger; he said, 'No, it is not as they say.' She threw a cloth over an idol in the room, ashamed it might see them. Joseph said, 'You feel shame before an idol that neither hears nor sees, and shall I not feel shame before my Lord?'"
+            },
+            "source": "s17"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Rida",
+            "addressee": "al-Mamun",
+            "arabic": "لقد همت به، و لو لا أن رأى برهان ربه لهم بها كما همت به، لكنه كان معصوما، و المعصوم لا يهم بذنب و لا يأتيه … همت بأن تفعل، و هم بأن لا يفعل",
+            "chain": "Tamim ibn Abdillah, from his father, from Hamdan ibn Sulayman al-Nishaburi, from Ali ibn Muhammad ibn al-Jahm",
+            "text": {
+              "en": "She indeed resolved upon him, and had he not seen the proof of his Lord he would have resolved upon her as she did; but he was infallible, and one infallible neither resolves upon a sin nor commits it. She resolved to do it, and he resolved not to do it."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 26,
+        "heading": {
+          "en": "The witness in the cradle"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ألهم الله عزّ وجلّ يوسف أن قال للملك سل هذا الصّبيّ في المهد فانه سيشهد انّها راودتني عن نفسي فقال العزيز لِلصبيّ فأنطق الله الصبي في المهد ليوسف",
+            "chain": null,
+            "text": {
+              "en": "God inspired Joseph to say to the king, 'Ask this infant in the cradle, for he will testify that she solicited me.' The Aziz spoke to the child, and God made the infant in the cradle speak on Joseph's behalf."
+            },
+            "source": "s19"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Shia and Sunni commentators divide over verse 24. Tabari transmits reports that Joseph's inclination was real: that he was drawn to her and went to loosen his garment until the image of Jacob appeared in the house, biting his finger, and turned him back [24]. Shia commentators reject this. Tibyan calls all such reports incorrect, since they imply he was compelled and would then deserve no praise for holding back [10], and Majma, citing al-Sadiq, holds that the proof he saw was the prophethood that keeps a man from indecency [5]. Where Tabari lets Joseph waver, the Shia reading keeps the prophet sinless throughout."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 21",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=21&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فهو تعالى الغالب على أمره يسوق الأسباب إلى حيث يشاء"
+        },
+        "gloss": "He is the One who prevails over His affair, driving the causes wherever He wills."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 22 to 29",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=22&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأن الله سبحانه يصرف كل سوء وفحشاء عنهم فلا يقترفون معصية ولا يهمون بها بما يريهم الله من برهانه"
+        },
+        "gloss": "God turns away every evil and indecency from them, so that they commit no sin and do not even resolve upon one, through the proof He shows them."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 21 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "مكَّناه في الأرض بأن عطفنا عليه قلب الملك الذي اشتراه"
+        },
+        "gloss": "We established him in the land by inclining toward him the heart of the king who bought him."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الهاء عائدة إلى زوجها عند أكثر المفسرين … وقيل: إن الهاء عائد إلى الله سبحانه"
+        },
+        "gloss": "The pronoun refers to her husband according to most commentators; and it is said the pronoun refers to God Almighty."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 24",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=24&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وثالثها: أنه النبوة المانعة من ارتكاب الفواحش والحكمة الصارفة عن القبائح روي ذلك عن الصادق (ع)"
+        },
+        "gloss": "A third view: it is the prophethood that prevents committing indecencies and the wisdom that turns one from vile deeds; this is reported from al-Sadiq."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 25 to 29",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=25&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال ابن عباس وسعيد بن جبير أنه صبي في المهد"
+        },
+        "gloss": "Ibn Abbas and Sa'id ibn Jubayr said the witness was an infant in the cradle."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 21",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=39&SoraNo=12&AyahNo=21&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معناه أَنه قادر عليه من غير مانع حتى يقع ما أَراد"
+        },
+        "gloss": "It means He has power over it with nothing to hinder, so that what He wills comes to pass."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والحكم القول الفصل الذي يدعو الى الحكمة"
+        },
+        "gloss": "Judgement is the decisive word that calls to wisdom."
+      },
+      {
+        "id": "s10",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 24",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=39&SoraNo=12&AyahNo=24&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذا الذي ذكروه كلّه غير صحيح، لان ذلك يقتضي الالجاء وزوال التكليف"
+        },
+        "gloss": "All that they mentioned is incorrect, because it implies compulsion and the removal of moral responsibility."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 21 to 29",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=21&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لكنه كان معصوما، و المعصوم لا يهم بذنب و لا يأتيه"
+        },
+        "gloss": "But he was infallible, and one who is infallible neither resolves upon a sin nor commits it."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 25 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=12&tAyahNo=25&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "طالبتني بالمواتاة وانّما قال ذلك دفعاً لما عرضته له من السّجن والعذاب"
+        },
+        "gloss": "She sought compliance from me; he said this only to fend off the prison and punishment she had proposed for him."
+      },
+      {
+        "id": "s24",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 24",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=1&SoraNo=12&AyahNo=24&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فدخلا البـيت، وغلقت الأبواب، وذهب لـيحلّ سراويـله، فإذا هو بصورة يعقوب قائماً فـي البـيت قد عضّ علـى أصبعه"
+        },
+        "gloss": "They entered the house, she bolted the doors, and he went to loosen his garment; then there was the image of Jacob standing in the house, biting his finger."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:27:10Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T22:16:49Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "4": {
+    "id": "12:4",
+    "surah": 12,
+    "index": 4,
+    "range": [
+      30,
+      35
+    ],
+    "title": {
+      "en": "Joseph and the townswomen"
+    },
+    "essay": {
+      "en": "\"The chieftain's wife has solicited her slave boy!\" The scandal reaches the women of the city, who see her \"in manifest error.\" Their talk was itself a scheme, Tabrisi holds, meant to make her display Joseph, whose beauty they had heard of [3]. She answers scheme with scheme: she sends for them, sets out a banquet, hands each a knife, and calls Joseph out. Overwhelmed, they gash their hands and cry, \"This is not a human being! This is but a noble angel!\" - words that, Tusi notes, set him beyond human likeness for his beauty [5]. Now she confesses: he is the one they blamed her for; she solicited him, \"but he was continent\" - which Tusi reads as his seeking God's protection, proof that nothing shameful came from him [6]. She threatens him with prison and disgrace, and Joseph turns to his Lord: \"The prison is dearer to me than to what they invite me.\" This, Tabatabai explains, is no request for prison but a declaration of his state - by God's nurturing he prefers a cell to disobedience [1]. He asks that their scheme be turned from him, and his Lord answers. Then, having seen the very signs of his innocence, they resolve to jail him to shield the household from scandal [2]."
+    },
+    "verses": [
+      {
+        "verse": 30,
+        "heading": {
+          "en": "The townswomen's talk"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "قد حجبها حبه عن الناس، فلا تعقل غيره … و الشغاف: هو حجاب القلب",
+            "chain": "Ali ibn Ibrahim, from the narration of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "His love has veiled her from people, so she is aware of no one but him. The shaghaf is the covering of the heart."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 33,
+        "heading": {
+          "en": "Joseph prefers prison"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sajjad",
+            "addressee": null,
+            "arabic": "وخرجن النسوة من عندها فأرسلت كلّ واحدة منهنّ إلى يوسف سرّاً من صواحبها تسأله الزيارة فأبى عليهن وقال الا تصرف عني كيدهنّ أصبُ إليهنّ واكن من الجاهلين فصرف الله عنه كيدهنّ",
+            "chain": null,
+            "text": {
+              "en": "The women left her, and each of them sent to Joseph secretly, apart from her companions, asking him for a visit. He refused them, saying, 'Unless You turn their scheme away from me, I shall incline to them and be among the ignorant.' So God turned their scheme from him."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 35,
+        "heading": {
+          "en": "The decision to imprison"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فالآيات شهادة الصبي والقميص المخرق من دبر واستباقهما الباب حتى سمع مجاذبتها إياه على الباب فلما عصاها فلم تزل ملحة بزوجها حتى حبسه",
+            "chain": "In the narration of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "The signs were the child's testimony, the shirt torn from behind, and their racing to the door, until he heard her pulling at him there. When he disobeyed her, she kept pressing her husband until he imprisoned him."
+            },
+            "source": "s11"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Ridha",
+            "addressee": null,
+            "arabic": "قال له السجان: إني لأحبك. فقال له يوسف: لا تقل هكذا. فإن عمتي أحبتني فسرقتني، و إن أبي أحبني فحسدني إخوتي فباعوني، و إن امرأة العزيز أحبتني فحبستني",
+            "chain": "al-Abbas ibn Hilal, from Abu al-Hasan al-Ridha",
+            "text": {
+              "en": "The jailer said to him, 'I love you.' Joseph said, 'Do not say so. My paternal aunt loved me and stole me; my father loved me and my brothers envied me and sold me; and the chieftain's wife loved me and imprisoned me.'"
+            },
+            "source": "s13"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Shia and Sunni commentators part ways over why Joseph was jailed. Tabatabai holds that the household confined him only to shield the family from the scandal, not to punish a wrongdoer [2]. Many Sunni exegetes instead read the prison as a chastisement of Joseph himself: Qurtubi calls it a purification of Joseph from his own desire for the woman [26], and Suyuti relays from Ibn Abbas that Joseph \"was punished three times, the first being imprisonment, for his desiring her\" [36]. For the Shia reading, the sinless prophet had nothing to expiate."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 30 to 34",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=30&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإنما هو بيان حال لربه وأنه عن تربية إلهية يرجح عذاب السجن في جنب الله على لذة المعصية والبعد منه"
+        },
+        "gloss": "Rather it is a declaration of his state to his Lord: through divine nurturing he prefers the punishment of prison, for God's sake, over the pleasure of disobedience and distance from Him."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 35",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=35&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويظهر بذلك أنهم إنما عزموا على ذلك لمصلحة بيت العزيز وصوناً لأُسرته عن هوأن التهمة والعار"
+        },
+        "gloss": "It appears they resolved on this only for the interest of the chieftain's household, to shield his family from the humiliation of the accusation and disgrace."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 30 to 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وسمَّاه مكراً لأن قصدهن من هذا القول كان أن تريهن يوسف لما وصف لهن من حسنه"
+        },
+        "gloss": "He called it a scheme because their aim in this talk was that she should show them Joseph, on account of the beauty described to them."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقوله { حاش لله } تنزيه له عن حال البشر، وانه لا يجوز ان تكون هذه صورة للبشر، وانما هو ملك كريم"
+        },
+        "gloss": "His words 'Good heavens' are a declaring of him free from the human state; such a form cannot be a human's - he is but a noble angel."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 32",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=39&SoraNo=12&AyahNo=32&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والاستعصام طلب العصمة من الله بفعل لطف من ألطافه ليمتنع من الفاحشة. وفيه دلالة على ان يوسف لم يقع منه قبيح"
+        },
+        "gloss": "Seeking protection is asking God for preservation, by a grace of His, so that he abstains from the indecency; in this is proof that nothing shameful came from Joseph."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالآيات شهادة الصبي والقميص المخرق من دبر واستباقهما الباب"
+        },
+        "gloss": "The signs were the child's testimony, the shirt torn from behind, and their racing to the door."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 30 to 33",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=30&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قد حجبها حبه عن الناس، فلا تعقل غيره"
+        },
+        "gloss": "His love has veiled her from people, so she is aware of no one but him."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 35",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=35&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و إن امرأة العزيز أحبتني فحبستني"
+        },
+        "gloss": "And the chieftain's wife loved me and imprisoned me."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 30 to 34",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=12&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأرسلت كلّ واحدة منهنّ إلى يوسف سرّاً من صواحبها تسأله الزيارة فأبى عليهن"
+        },
+        "gloss": "Each of them sent to Joseph secretly, apart from her companions, asking him for a visit, and he refused them."
+      },
+      {
+        "id": "s26",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 35",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=5&SoraNo=12&AyahNo=35&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وجعل الله الحبس تطهيراً ليوسف صلى الله عليه وسلم من هَمِّه بالمرأة"
+        },
+        "gloss": "God made the imprisonment a purification for Joseph from his desire for the woman."
+      },
+      {
+        "id": "s36",
+        "kind": "tafsir",
+        "work": "al-Durr al-Manthur",
+        "author": "Jalal al-Din al-Suyuti",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=26&tSoraNo=12&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عوقب يوسف عليه السلام ثلاث مرات، أما أول مرة فبالحبس، لما كان من همه بها"
+        },
+        "gloss": "Joseph was punished three times; the first time was by imprisonment, for his desiring her."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:29:28Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T22:29:55Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "5": {
+    "id": "12:5",
+    "surah": 12,
+    "index": 5,
+    "range": [
+      36,
+      42
+    ],
+    "title": {
+      "en": "Joseph preaches God's oneness in prison"
+    },
+    "essay": {
+      "en": "These verses follow Yusuf into prison, where two of the king's servants are jailed alongside him. Majma al-Bayan reports that they were his cupbearer and the man in charge of his food, imprisoned when word reached the king that one of them meant to poison him. [2] Each has had a dream, one of pressing wine, one of birds eating bread from his head, and, seeing Yusuf as a virtuous man, they ask him to read them.\n\nYusuf does not answer at once. He first turns the request into a call to God: his knowledge, he says, is taught by his Lord, for he has left the creed of a people who deny Allah and the Hereafter and follows the creed of his fathers, Abraham, Isaac and Jacob. Then comes the challenge that gives the passage its weight. Are different masters better, or Allah, the One, the All-paramount? The gods they serve are only names they and their fathers invented; sovereignty belongs to Allah alone, and that is the upright religion.\n\nOnly after preaching does he interpret: the cupbearer will be restored, the baker crucified, and the matter is decided. He speaks here not as a diviner guessing but by revelation from Allah. [9] He asks the one to be freed to mention him to the king, but the man forgets, and Yusuf remains in prison several more years. A cell has become a pulpit."
+    },
+    "verses": [
+      {
+        "verse": 36,
+        "heading": {
+          "en": "The two prisoners' dreams"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "وَ دَخَلَ مَعَهُ السِّجْنَ فَتَيانِ يقول: عبدان للملك، أحدهما خباز، و الآخر صاحب الشراب، و الذي كذب و لم ير المنام هو الخباز",
+            "chain": "Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "'There entered the prison two youths' means two slaves of the king, one a baker and the other his cupbearer; and the one who lied and did not truly see the dream is the baker."
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كان يقوم على المريض، و يلتمس المحتاج، و يوسع على المحبوس",
+            "chain": null,
+            "text": {
+              "en": "On 'we see you to be a virtuous man': he would tend the sick, seek out the needy, and make room for the imprisoned."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 38,
+        "heading": {
+          "en": "The creed of his fathers"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Hasan",
+            "addressee": null,
+            "arabic": "من عرفني فقد عرفني ومن لم يعرفني فأنا الحسن ابن محمد صلى الله عليه وآله وسلم ثم تلا هذه الآية قول يوسف … { اتبعت ملة آبائي إبراهيم وإسحاق ويعقوب } فالجد في كتاب الله أب",
+            "chain": "al-Husayn ibn al-Abbas al-Bajali, from Abu al-Tufayl Amir ibn Wathila",
+            "text": {
+              "en": "Whoever knows me knows me; whoever does not, I am al-Hasan, son of Muhammad. Then he recited Yusuf's words, 'I follow the creed of my fathers, Abraham, Isaac and Jacob,' [saying]: in the Book of Allah the grandfather is a father."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 42,
+        "heading": {
+          "en": "Mention me to your master"
+        },
+        "note": {
+          "en": "Tabrisi holds that, if the reports of a rebuke are sound, Yusuf was faulted only for briefly abandoning his beautiful habit of patient reliance on Allah, as a trial. [3]"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن يوسف أتاه جبرئيل، فقال له: يا يوسف، إن رب العالمين يقرئك السلام، و يقول لك: من جعلك في أحسن خلقه؟ قال: فصاح و وضع خده على الأرض، ثم قال: أنت يا رب … فإن ربك قد جعل لك عقوبة في استغاثتك بغيره فَلَبِثَ فِي ٱلسِّجْنِ بِضْعَ سِنِينَ",
+            "chain": "al-Hasan ibn Ali, from his father, from Isma'il ibn Umar, from Shu'ayb al-Aqarqufi, from Abu Abdillah",
+            "text": {
+              "en": "Jibril came to Yusuf: 'The Lord of the worlds greets you and asks, who made you the fairest of His creation?' He cried out and pressed his cheek to the ground, saying, 'You, my Lord.' ... 'Your Lord has set a punishment on you for seeking help from another, so you stayed in prison several years.'"
+            },
+            "source": "s12"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Yusuf's request to the cupbearer, 'Mention me to your master,' and the words 'Satan caused him to forget,' divide the commentators. Al-Tabari reads the forgetting as Yusuf's own, a heedlessness from Satan for which his Lord lengthened his imprisonment. [22] Al-Mizan rejects this: Allah has declared Yusuf among the sincere, whom Satan cannot reach, so the one made to forget is the cupbearer, who failed to mention him to the king. [1] The difference turns on the prophets' protection from sin, weighed differently by the two traditions."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 36 to 42",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=36&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فإن الله سبحانه نص على كونه عليه السلام من المخلصين ونص على أن المخلصين لا سبيل للشيطان إليهم"
+        },
+        "gloss": "For Allah has declared him to be among the sincere, and has declared that Satan has no way to reach the sincere."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 36 to 38",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=36&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وكان أحدهما صاحب شرابه والآخر صاحب طعامه فنمى إليه أن صاحب طعامه يريد أن يسمه"
+        },
+        "gloss": "One was his cupbearer and the other in charge of his food, and it reached the king that the one over his food wanted to poison him."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 39 to 42",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=39&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فلو صحت هذه الروايات فإنما عوتب يوسف عليه السلام في ترك عادته الجميلة في الصبر والتوكل على الله سبحانه في كل أموره دون غيره وقتاً ما ابتلاء وتشديداً"
+        },
+        "gloss": "If these reports are sound, Yusuf was reproached only for setting aside his beautiful habit of patience and reliance on Allah in all his affairs, for a time, as a trial and a hardship."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذا يدل على انه كان ذلك بوحي من الله"
+        },
+        "gloss": "This shows that it was by revelation from Allah."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 36 to 42",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=36&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عبدان للملك، أحدهما خباز، و الآخر صاحب الشراب، و الذي كذب و لم ير المنام هو الخباز"
+        },
+        "gloss": "Two slaves of the king, one a baker and the other his cupbearer; and the one who lied and did not see the dream is the baker."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=12&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالجد في كتاب الله أب"
+        },
+        "gloss": "In the Book of Allah, the grandfather is a father."
+      },
+      {
+        "id": "s22",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 42",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=1&SoraNo=12&AyahNo=42&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذا خبر من الله جلّ ثناؤه عن غفلة عرضت لـيوسف من قِبَل الشيطان نسي لها ذكر ربه … فأطال من أجلها فـي السجن حَبسه"
+        },
+        "gloss": "This is a report from Allah of a heedlessness that came over Yusuf from Satan, for which he forgot the remembrance of his Lord, and for which his imprisonment was lengthened."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:56:35Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T22:38:24Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "6": {
+    "id": "12:6",
+    "surah": 12,
+    "index": 6,
+    "range": [
+      43,
+      49
+    ],
+    "title": {
+      "en": "Joseph interprets the king's dream"
+    },
+    "essay": {
+      "en": "The king of Egypt dreams of seven fat cows swallowed by seven lean ones, and seven green ears of grain beside dry ones, and asks his courtiers to read the vision. They dismiss it as jumbled nightmares and admit they cannot interpret such dreams. Then the cupbearer, freed from prison long before, at last remembers Joseph and hurries to him, addressing him as the truthful one. Joseph reads the dream as fourteen years: seven of plenty, in which they are to sow and leave the harvest stored in the ear, keeping back only a little to eat; then seven hard years that devour the stores, all but a little saved as seed; and last a year of relief and rain. Al-Tusi notes that grain kept unthreshed in the ear does not spoil even after a long time [7]. Tabatabai stresses that Joseph does not merely forecast the seasons; his reply turns the dream into a plan of action, making his command a prelude to escaping the famine that threatened the land [1]. Tabrisi cites al-Balkhi that this true reading refutes those who hold a dream comes out only as it is first told [2]."
+    },
+    "verses": [
+      {
+        "verse": 44,
+        "heading": {
+          "en": "Jumbled dreams"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الرّؤيا على ثلاثة وجوه بشارة من الله للمؤمن وتحذير من الشيطان واضغاث أحلام",
+            "chain": null,
+            "text": {
+              "en": "Dreams are of three kinds: glad tidings from God to the believer, a warning from Satan, and jumbled dreams."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 47,
+        "heading": {
+          "en": "The seven plentiful years"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "و أقبل يوسف ( عليه السلام ) على جمع الطعام، فجمع في السبع سنين المخصبة، فكبسه في الخزائن، فلما مضت تلك السنون، و أقبلت السنون المجدبة، أقبل يوسف على بيع الطعام",
+            "chain": "Ahmad ibn Muhammad ibn Isa, from al-Husayn ibn Ali ibn Bint Ilyas, who heard al-Rida",
+            "text": {
+              "en": "Joseph set about gathering the grain; he stored it up in the seven fertile years and packed it into the storehouses. When those years passed and the lean years came, he began selling the grain."
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 48,
+        "heading": {
+          "en": "The seven hard years"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كانت سنين يوسف و الغلاء الذي أصاب الناس، و لم يتمن الغلاء لأحد قط",
+            "chain": "Hafs ibn Ghiyath, from al-Sadiq",
+            "text": {
+              "en": "These were the years of Joseph and the dearth that struck the people; he never once wished high prices upon anyone."
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 49,
+        "heading": {
+          "en": "The year of relief"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "قرأ رجل على أمير المؤمنين ( عليه السلام ): { ثُمَّ يَأْتِي مِن بَعْدِ ذٰلِكَ عَامٌ فِيهِ يُغَاثُ ٱلنَّاسُ وَفِيهِ يَعْصِرُونَ } على البناء للفاعل، فقال: و يحك، أي شي‏ء يعصرون، يعصرون الخمر؟! … إنما نزلت { وَفِيهِ يَعْصِرُونَ } أي يمطرون بعد سني المجاعة",
+            "chain": null,
+            "text": {
+              "en": "A man recited to Amir al-Muminin 'and in it they press,' as an active verb. Ali said: Woe to you, what do they press - do they press wine? It was revealed 'and in it they are given rain,' meaning they are rained upon after the years of famine."
+            },
+            "source": "s11"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The passage's last word divides the readings. On the authority of Ali, the Shia commentators read the passive 'yu'saruna,' that in the year of relief the people are given rain after the famine, citing 'and We sent down from the rain-clouds cascading water' [11]. Ibn Kathir reads the active verb: the people press oil and the like, as was their custom in years of plenty [20]. Tabari too takes it as pressing, and expressly refuses the 'they are rained upon' reading as contrary to the recognized reciters of the great cities [19]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 43 to 49",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=43&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بل بنى كلامه على ذكر ما يجب عليهم من العمل وبين أن أمره بذلك توطئة وتقدمة للتخلص عما يهددهم من المجاعة والمخمصة وهو ظاهر"
+        },
+        "gloss": "Rather, Joseph built his words on what they were obliged to do, and made clear that his command was a prelude to escaping the famine and hunger that threatened them."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 43 to 49",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=43&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال البلخي: وهذا التأويل من يوسف يدل على بطلان قول من يقول إن الرؤيا على ما عبرت أولاً لأنهم كانوا قالوا: هي أضغاث أحلام"
+        },
+        "gloss": "al-Balkhi said: this interpretation by Joseph shows the falsity of those who say a dream comes out as it was first interpreted, since they had called it jumbled dreams."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 47",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=47&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لأن السنبل لا يقع فيه السوس، ولا يهلك، وان بقي مدة من الزمان"
+        },
+        "gloss": "because grain in the ear is not infested by weevils and does not spoil, even if it remains for a long time."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 43 to 49",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=43&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنما نزلت { وَفِيهِ يَعْصِرُونَ } أي يمطرون بعد سني المجاعة، و الدليل على ذلك، قوله: { { وَأَنزَلْنَا مِنَ ٱلْمُعْصِرَاتِ مَآءً ثَجَّاجاً }"
+        },
+        "gloss": "What was revealed is 'and in it they are given rain,' meaning they are rained upon after the years of famine; the proof is His words, 'and We sent down from the rain-clouds cascading water.'"
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 43 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=12&tAyahNo=43&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الرّؤيا على ثلاثة وجوه بشارة من الله للمؤمن وتحذير من الشيطان واضغاث أحلام"
+        },
+        "gloss": "Dreams are of three kinds: glad tidings from God to the believer, a warning from Satan, and jumbled dreams."
+      },
+      {
+        "id": "s19",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 49",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=1&SoraNo=12&AyahNo=49&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقرأه بعضهم: «وَفِـيهِ يَعْصَرُونَ» بـمعنى: يُـمطرون، وهذه قراءة لا أستـجيز القراءة بها لـخلافها ما علـيه من قرّاء الأمصار"
+        },
+        "gloss": "Some read 'and in it they are rained upon,' but this is a reading I do not allow, since it contradicts the reciters of the great cities."
+      },
+      {
+        "id": "s20",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 43 to 49",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=12&tAyahNo=43&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويعصر الناس ما كانوا يعصرون على عادتهم من زيت ونحوه، وسكر ونحوه"
+        },
+        "gloss": "and the people press what they used to press, as was their custom, of oil and the like, and sugar and the like."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:58:26Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T22:46:21Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "7": {
+    "id": "12:7",
+    "surah": 12,
+    "index": 7,
+    "range": [
+      50,
+      57
+    ],
+    "title": {
+      "en": "Joseph vindicated and raised to power"
+    },
+    "essay": {
+      "en": "When the king summons Joseph after the cupbearer brings back his reading of the dream, Joseph does not hurry from prison. He sends the messenger back so the king will investigate the affair of the women who cut their hands, refusing to leave until his innocence is clear and it is known he was jailed unjustly [4]. Tabatabai and Tabrisi note his courtesy: he names only the women, not the wife of the aziz, and mentions them only with what would clear him [1][2].\n\nThe king questions the women, who answer, 'Heaven be praised! We know of no evil in him,' and the prince's wife confesses, 'Now the truth has come to light! It was I who solicited him, and he is indeed telling the truth.'\n\nVerses 52 and 53, 'that he may know that I did not betray him in his absence' and 'yet I do not absolve my own soul,' divide the commentators over who is speaking. Most, including al-Mizan, take them as Joseph's words: he wanted the aziz to know he was never betrayed, and he refuses to praise his own soul, ascribing his restraint to his Lord's mercy alone [1]. Tabrisi and Tusi report this majority view alongside al-Jubbai's reading that the wife is still speaking [2][6], while the Qummi narration assigns the verses to her: 'I do not lie about him now as I lied before' [12].\n\nThe king then calls Joseph to make him his favourite, and, finding him honoured and trustworthy, hears his request: 'Put me in charge of the country's granaries. I am indeed fastidious and well-informed.' He asks this to guard the provisions and share them justly through the coming famine, and the commentators read the verse as licence to hold office even under an unjust ruler in order to establish what is right [3][9].\n\nThe passage closes as God establishes Joseph in the land, turning the very imprisonment his mistress meant as disgrace into honour, and promises that the reward of the Hereafter is better still for those who have faith and are Godwary, of whom Joseph was one [1]."
+    },
+    "verses": [
+      {
+        "verse": 55,
+        "heading": {
+          "en": "Joseph asks for the granaries"
+        },
+        "note": {
+          "en": "The 'country's granaries' are the storehouses of Egypt; Joseph sought charge of them to guard the provisions and share them justly through the coming famine [3]."
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Sufyan",
+            "arabic": "قلت لأبي عبد الله ( عليه السلام ): ما يجوز أن يزكي الرجل نفسه؟ … نعم، إذا اضطر إليه، أما سمعت قول يوسف: اجْعَلْنِي عَلى خَزائِنِ الْأَرْضِ إِنِّي حَفِيظٌ عَلِيمٌ",
+            "chain": "Sulayman, from Sufyan, from Abu Abdillah",
+            "text": {
+              "en": "I asked, 'May a man praise himself?' He said, 'Yes, when he is compelled to it. Have you not heard Joseph's words: Put me in charge of the country's granaries; I am indeed fastidious and well-informed?'"
+            },
+            "source": "s13"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Rida",
+            "addressee": "al-Rayyan ibn al-Salt",
+            "arabic": "أما علموا أن يوسف ( عليه السلام ) كان نبيا و رسولا، و لما دفعته الضرورة إلى تولي خزائن العزيز، قال له: اجْعَلْنِي عَلى خَزائِنِ الْأَرْضِ إِنِّي حَفِيظٌ عَلِيمٌ و دفعتني الضرورة إلى قبول ذلك على إكراه و إجبار",
+            "chain": "Ahmad ibn Ziyad al-Hamdani, from Ali ibn Ibrahim ibn Hashim, from his father, from al-Rayyan ibn al-Salt",
+            "text": {
+              "en": "Did they not know that Joseph was a prophet and a messenger, and that when necessity drove him to take charge of the aziz's treasuries he said, 'Put me in charge of the granaries of the land; I am a keeper, well-informed'? And necessity drove me to accept this under coercion and compulsion."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 56,
+        "heading": {
+          "en": "God establishes Joseph in Egypt"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "قال يوسف: إني اشهد الله و أشهدك أيها الملك أني قد أعتقت أهل مصر كلهم … و رددت عليك أيها الملك خاتمك وسريرك و تاجك، على أن لا تسير إلا بسيرتي، و لا تحكم إلا بحكمي",
+            "chain": "Ahmad ibn Muhammad ibn Isa, from al-Husayn ibn Ali ibn bint Ilyas, from al-Rida",
+            "text": {
+              "en": "Joseph said to the king: I call God and you to witness, O king, that I have freed all the people of Egypt, and returned to you your ring, throne and crown, on condition that you follow only my way and judge only by my judgment."
+            },
+            "source": "s13"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On verses 52 and 53 the traditions read the humbling 'yet I do not absolve my own soul' differently. Much Sunni exegesis transmits that when Joseph said he had not betrayed the aziz, Gabriel nudged him, 'And not the day you desired her?', so that he answered, 'I do not absolve my soul' [37]. Shia commentators reject this: al-Mizan calls the report a fabrication against the Quran, and the Qummi narration makes the two verses the wife's confession rather than Joseph's [1][12]. Among Sunnis, al-Razi likewise dismisses the report as a foul invention [33]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 50 to 57",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=50&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فبادر عليه السلام إلى نفي الحول والقوة عن نفسه ونسبة ما ظهر منه من عمل صالح أو صفة جميلة إلى رحمة ربه"
+        },
+        "gloss": "Joseph hastened to deny any power or strength of his own, ascribing whatever good deed or fine trait appeared from him to his Lord's mercy."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 50 to 53",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=50&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أبى يوسف أن يخرج مع الرسول حتى تبين براءته مما قذف به … ولم يفرد امرأة العزيز بالذكر حسن عشرة منه ورعاية أدب"
+        },
+        "gloss": "Joseph refused to leave with the messenger until his innocence of the slander became clear, and he did not single out the wife of the aziz by name, out of good manners and courtesy."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 54 to 57",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=54&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفيها دلالة أيضاً على جواز تولي القضاء من جهة الباغي والظالم إذا يتمكن بذلك من إقامة أحكام الدين"
+        },
+        "gloss": "The verse also shows the permissibility of taking up the judgeship under a tyrannical, unjust ruler when one can thereby establish the rulings of religion."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=50&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وانما رد الرسول ليبين للملك براءته مما قرف به، وانه حبس بظلم من غير بينة، ولا اعتراف بذنب"
+        },
+        "gloss": "He sent the messenger back only to make his innocence of what he was accused of clear to the king, and to show that he had been imprisoned wrongfully, without proof or any confession of guilt."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 52",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=39&SoraNo=12&AyahNo=52&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقال اكثر المفسرين كالحسن ومجاهد وقتادة والضحاك: انه من قول يوسف … وقال الجبائي والبلخي: انه من قول المرأة"
+        },
+        "gloss": "Most commentators - al-Hasan, Mujahid, Qatada, al-Dahhak - said it is Joseph's speech, while al-Jubbai and al-Balkhi said it is the woman's speech."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 55",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=55&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية دلالة على جواز تقلد الامر من قبل السلطان الجائر اذا تمكن معه من ايصال الحق الى مستحقه"
+        },
+        "gloss": "The verse indicates the permissibility of taking on office under an unjust ruler when one can thereby deliver rights to those entitled to them."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 50 to 57",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=50&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي: لا أكذب عليه الآن كما كذبت عليه من قبل ثم قالت … وما أبرئ نفسي إن النفس لأمارة بالسوء"
+        },
+        "gloss": "That is, [the wife means] I do not lie about him now as I lied about him before; then she said, 'Yet I do not absolve my soul, for the soul indeed prompts to evil.'"
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 50 to 56",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=50&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نعم، إذا اضطر إليه، أما سمعت قول يوسف: اجْعَلْنِي عَلى خَزائِنِ الْأَرْضِ إِنِّي حَفِيظٌ عَلِيمٌ"
+        },
+        "gloss": "Yes, when he is compelled to it - have you not heard Joseph's words: 'Put me in charge of the country's granaries; I am indeed fastidious and well-informed'?"
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 50 to 52",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=4&SoraNo=12&AyahNo=50&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والحشوية يذكرون أنه لما قال يوسف هذا الكلام قال جبريل عليه السلام، ولا حين هممت، وهذا من رواياتهم الخبيثة وما صحت هذه الرواية في كتاب معتمد"
+        },
+        "gloss": "The Hashwiyya relate that when Joseph said this, Gabriel said, 'And not when you desired her?' - this is one of their foul reports, and this narration is not sound in any reliable book."
+      },
+      {
+        "id": "s37",
+        "kind": "tafsir",
+        "work": "al-Durr al-Manthur",
+        "author": "Jalal al-Din al-Suyuti",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 50 to 53",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=26&tSoraNo=12&tAyahNo=50&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فغمزه جبريل عليه السلام فقال: ولا حين هممت بها؟"
+        },
+        "gloss": "Gabriel nudged him and said, 'And not the day you desired her?'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:34:45Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T23:00:21Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "8": {
+    "id": "12:8",
+    "surah": 12,
+    "index": 8,
+    "range": [
+      58,
+      68
+    ],
+    "title": {
+      "en": "Joseph's brothers come to Egypt"
+    },
+    "essay": {
+      "en": "The famine years that Joseph had foretold drive his brothers down to Egypt to buy grain, and they enter the presence of the very brother they once cast into the well. He knows them at once; they do not know him. Al-Tabatabai holds that Joseph recognized them by his own acumen, or by the insight of prophethood, while all that had changed kept them from knowing him [1]. Al-Tusi records two readings of why they failed to know him: al-Jubba'i's, that Joseph had grown from a beardless boy into a changed man; and al-Balkhi's, that God suspended the ordinary course for His prophet [6].\n\nFurnishing their loads, Joseph presses them to bring the brother left with their father, promising full measure and generous lodging and warning that without him there will be no grain and no welcome. When they undertake to coax the boy from his father, Joseph quietly orders their payment slipped back into their saddlebags. Al-Tabrisi gathers the reasons offered: kindness, so that they might find the means to return, and a reluctance to take a price from his own father and brothers in a year of hardship [3].\n\nHome again, the brothers ask their father to release Benjamin. Jacob answers with the old wound: shall he trust them as he once trusted them with Joseph? Yet God is the best of protectors, the most merciful of the merciful [4]. Only when they swear a binding pledge by God does he let the boy go [4]. As they set out he tells them to enter by separate gates. Al-Tabrisi and al-Tusi read this as fear of the evil eye [5][15]; al-Tabatabai reads it rather as an inspired sense that their fine, united array would be broken up, and adds that Jacob holds to the means and to God together, for reliance does not mean abandoning the means [2]. The measure availed nothing against God's decree, yet it settled a need in Jacob's heart, for he had knowledge God had taught him [2]."
+    },
+    "verses": [
+      {
+        "verse": 58,
+        "heading": {
+          "en": "Joseph knows his brothers"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فلما دخلوا على يوسف … فعرفهم يوسف و لم يعرفه إخوته لهيبة الملك و عزته",
+            "chain": "Abu Basir, from Abu Ja'far",
+            "text": {
+              "en": "When they entered upon Joseph, after the Aziz had set him over Egypt, Joseph recognized them, but his brothers did not recognize him, because of the majesty and might of the king."
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 65,
+        "heading": {
+          "en": "We provision our family"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "لأنه يميرهم العلم، أما سمعت كلام الله … وَنَمِيرُ أَهْلَنَا",
+            "chain": "Jabir ibn Yazid, from Abu Ja'far",
+            "text": {
+              "en": "Asked why the Commander of the Faithful bears that name, he said: Because he provisions them with knowledge. Have you not heard the word of God: 'and we get provisions for our family'?"
+            },
+            "source": "s18"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": null
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 58 to 62",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=12&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لكنه عرفهم بكياسته أو بفراسة النبوة"
+        },
+        "gloss": "but he recognized them by his acumen or by the insight of prophethood."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 63 to 68",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=63&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إحساس إلهام أن جمعهم وهم على هذه الهيئة الحسنة سيفرّق وينقص من عددهم"
+        },
+        "gloss": "an inspired sense that their gathering, in that fine array, would be broken up and their number reduced."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 58 to 62",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنه رأى لؤماً أخْذَ ثمن الطعام من أبيه وإخوته مع حاجتهم إليه فردَّه عليهم من حيث لا يعلمون تفضلاً وكرماً"
+        },
+        "gloss": "he saw it as base to take the price of the grain from his father and brothers in their need, so he returned it to them without their knowing, as a favor and generosity."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 63 to 66",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=63&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فالله خير حافظاً } أي حفظ الله خير من حفظكم"
+        },
+        "gloss": "'So God is the best protector' means God's protection is better than yours."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 67 to 68",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=67&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "خاف عليهم العين لأنهم كانوا ذوي جمال وهيئة وكمال"
+        },
+        "gloss": "he feared the evil eye for them, since they were possessed of beauty, fine bearing, and perfection."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 58",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال الجبائي: انهم فارقوه وهو صبي امرد، فجاؤوه وقد التحى وكبر وتغيرت حاله، فلم يعرفوه. وقال البلخي: ان ذلك مما خرق الله تعالى فيه العادة لنبيه (ع)."
+        },
+        "gloss": "Al-Jubba'i said they had parted from him when he was a beardless boy, and came to him bearded, grown, and changed, so they did not know him; al-Balkhi said this was among the things in which God broke the ordinary course for His prophet."
+      },
+      {
+        "id": "s15",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 67",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=67&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "انه خاف عليهم العين، لانهم كانوا ذوي صور حسنة وجمال وهيبة"
+        },
+        "gloss": "he feared the evil eye for them, since they were of fair appearance, beauty, and awe-inspiring presence."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 58 to 68",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=58&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فعرفهم يوسف و لم يعرفه إخوته لهيبة الملك و عزته"
+        },
+        "gloss": "Joseph recognized them, but his brothers did not recognize him because of the majesty and might of the king."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:38:13Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T23:01:14Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "9": {
+    "id": "12:9",
+    "surah": 12,
+    "index": 9,
+    "range": [
+      69,
+      79
+    ],
+    "title": {
+      "en": "Joseph keeps his brother"
+    },
+    "essay": {
+      "en": "When the brothers return with their younger brother, Joseph draws him aside, reveals himself, and tells him not to grieve over what the others had done. He then hides the king's drinking-cup in his brother's saddlebag, and as the caravan sets out a herald cries that they are thieves. Commentators read the planted cup as a deliberate device by which Joseph meant to keep his brother close, one he had already disclosed to the boy, so that the seizure did him no wrong [2].\n\nThe brothers, certain of their innocence, ask what is missing and swear they did not come to make trouble. Asked what the requital should be, they name the rule of their own house: the man in whose bag the cup is found is himself held for it. Joseph searches the sacks, beginning with the others' so that suspicion would fall farther from him, until the cup comes out of his brother's [9]. Here the account turns to God: 'Thus did We devise for Joseph's sake.' Under the king's law Joseph could not have held his brother, for that law did not enslave a thief; only the brothers' own ruling opened the way, a path al-Mizan says God laid for him by inspiration [1]. 'We raise in rank whomever We please, and above every man of knowledge is One who knows best' both honours Joseph and points past him, since every knower has one above him more knowing, until knowledge ends in God [2].\n\nStung, the brothers say 'a brother of his had stolen before,' meaning Joseph himself; he keeps the retort within him and answers only that they are in a worse state [3]. They plead for their aged father and offer to leave one of themselves in the boy's place, but Joseph refuses to detain anyone save the one with whom the cup was found, for to seize the innocent for the guilty would itself be wrongdoing [3]. The passage leaves them held to a rule they had spoken with their own mouths."
+    },
+    "verses": [
+      {
+        "verse": 69,
+        "heading": {
+          "en": "Joseph reveals himself"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فضمه إليه و بكى، و قال له: أنا أخوك يوسف فلا تبتئس بما تراني أعمل، و اكتم ما أخبرتك به و لا تحزن و لا تخف.",
+            "chain": "al-Ayyashi, from Abu Basir, from Abu Jafar",
+            "text": {
+              "en": "When his brother was brought in, Joseph embraced him and wept, saying: 'I am your brother Joseph, so do not sorrow at what you see me do. Keep secret what I have told you, and do not grieve or fear.'"
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 70,
+        "heading": {
+          "en": "You are thieves"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "لا خير فيمن لا تقية له، و لقد قال يوسف: أيتها العير إنكم لسارقون و ما سرقوا.",
+            "chain": "al-Ayyashi, from Abu Basir, from Abu Jafar",
+            "text": {
+              "en": "There is no good in one who has no taqiyya. Joseph said, 'O caravan, you are indeed thieves,' and yet they had not stolen."
+            },
+            "source": "s14"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ما سرقوا وما كذب يوسف فإنما عني سرقتم يوسف من أبيه",
+            "chain": null,
+            "text": {
+              "en": "They did not steal, and Joseph did not lie; he only meant, 'You stole Joseph from his father.'"
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 76,
+        "heading": {
+          "en": "Thus We devised for Joseph"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "رضينا بعلي بن أبي طالب … الله يقرؤك السلام ويقول لك: نرفع درجات من نشاء وفوق كل ذي علم عليم",
+            "chain": "Furat, from Abdullah ibn Muhammad ibn Hashim al-Duri, from Muhammad ibn Ali, from his forefathers",
+            "text": {
+              "en": "When the angels sought a human to judge their dispute, they said, 'We are content with Ali ibn Abi Talib.' Then the word came to the Prophet: God greets you and says, 'We raise in rank whom We please, and above every man of knowledge is One who knows best.'"
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 77,
+        "heading": {
+          "en": "A brother stole before"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "كانت لإسحاق النبي ( عليه السلام ) منطقة، يتوارثها الأنبياء و الأكابر، فكانت عند عمة يوسف، و كان يوسف عندها، و كان تحبه … فلما أصبحت، أخذت المنطقة فربطتها في حقوه، و ألبسته قميصا، و بعثت به إليه، و قالت: سرقت المنطقة. فوجدت عليه، و كان إذا سرق أحد في ذلك الزمان، دفع إلى صاحب السرقة، فأخذته، فكان عندها.",
+            "chain": "from Ismail ibn Hammam, from al-Rida",
+            "text": {
+              "en": "Isaac had a belt the great prophets inherited; it was with Joseph's aunt, who loved him. One morning she bound it at his waist under a shirt, sent him off, then cried that it was stolen. It was found on him, and since a thief was then handed to the owner, she kept him."
+            },
+            "source": "s14"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The herald's charge of theft divides the traditions over Joseph's own honesty. The Shia commentators hold that he did not lie: the cry pointed instead to the brothers' old theft of Joseph from his father, and Majma al-Bayan cites the report that they neither stole nor did Joseph lie [2]. Al-Tabari records these exculpatory readings too, yet adds a view he ascribes to some, that the charge was an error of Joseph's for which God requited him with the brothers' retort that 'a brother of his had stolen before' [24]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 69 to 79",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=69&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذا هو الكيد غير أنه كان بإلهام من الله سبحانه أو وحي منه إليه علمه به طريق التوصل إلى أخذ أخيه"
+        },
+        "gloss": "This is the devising, except that it was by inspiration from God, or revelation from Him, teaching Joseph the way to reach the taking of his brother."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 69 to 76",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=69&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما روى هشام بن الحكم عن أبي عبد الله ع أنه قال: ما سرقوا ولا كذب … الغرض فيه التسبب إلى احتباس أخيه عنده ويجوز أن يكون ذلك بأمر الله تعالى وروي أنه أعلم أخاه بذلك ليجعله طريقاً إلى التمسك به"
+        },
+        "gloss": "Hisham ibn al-Hakam reported from Abu Abdillah that he said: they did not steal and he did not lie. The purpose of it was to bring about detaining his brother with him, and it may have been by God's command; and it is reported that he told his brother of it, to make it a means of holding him back."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 77 to 79",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=77&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأخفى يوسف تلك الكلمة التي قالوها … وفي هذا دلالة على أن أخذ البريء بالمجرم ظلم ومن فعله كان ظالماً"
+        },
+        "gloss": "Joseph concealed the word they had said. And in this is a proof that taking the innocent for the guilty is wrongdoing, and whoever does it is a wrongdoer."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 76",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=76&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أمر اصحابه بأن يفتشوا اوعيتهم ورحالاتهم، وان يبدؤوا بأوعية الجماعة قبل وعاء أخيه ليكون ابعد من التهم"
+        },
+        "gloss": "He ordered his men to search their sacks and saddlebags, and to begin with the group's sacks before his brother's sack, so that it would be farther from suspicion."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 69 to 79",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=69&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما سرقوا وما كذب يوسف فإنما عني سرقتم يوسف من أبيه"
+        },
+        "gloss": "They did not steal, and Joseph did not lie; he only meant, 'you stole Joseph from his father.'"
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 69 to 79",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=69&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا خير فيمن لا تقية له، و لقد قال يوسف: أيتها العير إنكم لسارقون و ما سرقوا"
+        },
+        "gloss": "There is no good in one who has no taqiyya; Joseph said, 'O caravan, you are thieves,' yet they had not stolen."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 76",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=45&SoraNo=12&AyahNo=76&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الله يقرؤك السلام ويقول لك: نرفع درجات من نشاء وفوق كل ذي علم عليم"
+        },
+        "gloss": "God greets you and says to you: We raise in rank whomever We please, and above every man of knowledge is One who knows best."
+      },
+      {
+        "id": "s24",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 76",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=1&SoraNo=12&AyahNo=76&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنـما هو خبر من الله عن مؤذّن أذّن به، لا خبر عن يوسف … وقد قال بعض أهل التأويـل: إن ذلك كان خطأ من فعل يوسف، فعاقبه الله بإجابة القوم إياه"
+        },
+        "gloss": "It is only a report from God about a herald who called it out, not a report about Joseph. And some of the exegetes said that it was an error of Joseph's doing, so God requited him with the people's reply to him."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:42:00Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T23:24:13Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "10": {
+    "id": "12:10",
+    "surah": 12,
+    "index": 10,
+    "range": [
+      80,
+      93
+    ],
+    "title": {
+      "en": "Joseph reveals himself to his brothers"
+    },
+    "essay": {
+      "en": "Benjamin is held in Egypt, and the brothers, having despaired of freeing him, draw apart from the crowd to confer alone about what to do [1]. The eldest reminds them of the pledge their father took by Allah, and of how they had once failed Joseph; he refuses to leave Egypt until his father permits him or Allah judges for him. The rest are to carry the news home: your son has committed theft, we testified only to what we knew, and we could not forestall the unseen. Let their father ask the town and the caravan, for they speak the truth.\n\nJacob does not call them liars. He answers that their own souls have enticed them, for by a God-given insight he reads this loss as bound up with a scheme of theirs, as the loss of Joseph had been [2]. He turns away, crying, 'Alas for Joseph!' His eyes whiten and he chokes down his grief in silence. When his sons warn that his mourning will destroy him, he replies that he complains of his anguish only to Allah, and knows from Allah what they do not. He sends them back to search for Joseph and his brother, forbidding despair of Allah's mercy, which only the faithless abandon.\n\nThey return to Egypt as destitute men with meagre goods, begging full measure and charity. Moved, Joseph asks whether they remember what they did to Joseph and his brother in their ignorance, then declares, 'I am Joseph, and this is my brother.' They confess that Allah has preferred him and that they have sinned, and his answer is pure magnanimity: no reproach today, and a prayer that Allah forgive them. He sends his own shirt to be cast on his father's face to restore his sight, and calls the whole family to Egypt. Here the reversal is complete: the very means by which the brothers meant to bring Joseph low became the means of his rise, for God prevails over His affair [3]."
+    },
+    "verses": [
+      {
+        "verse": 80,
+        "heading": {
+          "en": "The eldest refuses to leave"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Zayd ibn Ali",
+            "addressee": null,
+            "arabic": "{ فلن أبرح الأرض حتى يأذن لي أبي أو يحكم الله لي وهو خير الحاكمين } قال: بالسيف.",
+            "chain": "Ali ibn Hamdun, from Zayd ibn Ali",
+            "text": {
+              "en": "On the words, 'So I will never leave this land until my father permits me, or Allah passes a judgement for me, and He is the best of judges,' he said: by the sword."
+            },
+            "source": "s30"
+          }
+        ]
+      },
+      {
+        "verse": 83,
+        "heading": {
+          "en": "Jacob's beautiful patience"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "ذلك صبر ليس فيه شكوى إلى أحد من الناس",
+            "chain": "al-Husayn ibn Sa'id, from Jabir, from Abu Jafar",
+            "text": {
+              "en": "Asked what beautiful patience is, he said: it is a patience in which there is no complaint to any of the people."
+            },
+            "source": "s25"
+          }
+        ]
+      },
+      {
+        "verse": 84,
+        "heading": {
+          "en": "Blind with grief"
+        },
+        "note": {
+          "en": "'His eyes turned white' is read as the loss of his sight: al-Tusi glosses that he went blind and could see nothing [11]."
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "البكاءون خمسة: آدم، و يعقوب، و يوسف، و فاطمة بنت محمد، و علي بن الحسين (عليهم السلام)، و أما يعقوب فبكى على يوسف حتى ذهب بصره",
+            "chain": "Muhammad ibn Sahl al-Bahrani, from one of our companions, from Abu Abdillah",
+            "text": {
+              "en": "The weepers are five: Adam, Jacob, Joseph, Fatimah the daughter of Muhammad, and Ali ibn al-Husayn. As for Jacob, he wept over Joseph until he lost his sight."
+            },
+            "source": "s25"
+          }
+        ]
+      },
+      {
+        "verse": 87,
+        "heading": {
+          "en": "Do not despair"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "أكان علم أنه حي وقد فارقه منذ عشرين سنة وذهبت عيناه من البكاء عليه، قال نعم علم إنه حي حتى أنه دعا ربه في السحر أن يهبط عليه ملك الموت … فأسألك بإله إبراهيم وإسحاق ويعقوب هل عرض عليك في الأرواح روح يوسف فقال لا فعند ذلك علم أنه حي",
+            "chain": "his father, from Hassan ibn Sadir, from his father, from Abu Jafar",
+            "text": {
+              "en": "Did Jacob know Joseph was alive, when twenty years had parted them and weeping had blinded him? He said: Yes. He prayed at dawn for the Angel of Death to descend, and asked, by the God of Abraham, Isaac and Jacob, whether Joseph's soul had passed among the souls. He said no, so Jacob knew."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 89,
+        "heading": {
+          "en": "Joseph confronts his brothers"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كلّ ذنب عمله العبد وان كان عالماً فهو جاهل حين خاطر بنفسه معصية ربّه … فنسبهم إلى الجهل لمخاطرتهم بأنفسهم في معصية الله",
+            "chain": null,
+            "text": {
+              "en": "Every sin a servant commits, even a learned one, he does as an ignorant man when he risks himself in disobeying his Lord. So he called them ignorant for risking themselves in disobedience of Allah."
+            },
+            "source": "s28"
+          }
+        ]
+      },
+      {
+        "verse": 90,
+        "heading": {
+          "en": "I am Joseph"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن في صاحب هذا الأمر شبها من يوسف ( عليه السلام ) … إن إخوة يوسف ( عليه السلام ) كانوا أسباطا أولاد الأنبياء، تاجروا يوسف و بايعوه و خاطبوه و هم إخوته و هو أخوهم، فلم يعرفوه حتى قال: أنا يوسف، و هذا أخي",
+            "chain": "Ali ibn Ibrahim, from his father, from Muhammad ibn al-Husayn, from Ibn Abi Najran, from Fadala ibn Ayyub, from Sadir al-Sayrafi, from Abu Abdillah",
+            "text": {
+              "en": "In the master of this affair there is a resemblance to Joseph. Joseph's brothers were tribal patriarchs, sons of prophets; they traded and bargained and spoke with him as his brothers, and he was their brother, yet they did not know him until he said: I am Joseph, and this is my brother."
+            },
+            "source": "s25"
+          }
+        ]
+      },
+      {
+        "verse": 93,
+        "heading": {
+          "en": "The shirt sent home"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أتاه جبرائيل بثوب من ثياب الجنة فألبسه إياه فلم يصبه معه حر ولا برد … كل نبي ورث علماً أو غيره فقد انتهى إلى محمد عليه وآله السلام وكان يعقوب بفلسطين وفصلت العير من مصر فوجد يعقوب ريحه وهو من ذلك القميص الذي أخرج من الجنة ونحن ورثته",
+            "chain": "his father, from Ali ibn Mahziyar, from Ismail al-Sarraj, from Yunus ibn Yaqub, from al-Mufaddal al-Ju'fi, from Abu Abdillah",
+            "text": {
+              "en": "Gabriel came to Abraham with a garment from the garments of Paradise and clothed him in it, so neither heat nor cold reached him. Every prophet who inherited knowledge or anything else, it ended with Muhammad; Jacob was in Palestine and caught its scent when the caravan left Egypt; it is that shirt from Paradise, and we are its heirs."
+            },
+            "source": "s23"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The Qur'an calls the brother who stayed behind and pledged not to leave 'the eldest of them,' without naming him, and the traditions fill the gap differently. Al-Tabari holds the soundest view to be Roubil, since all agree he was the eldest in years [31]. The Shia narrations name him from the Imams instead: al-Qummi transmits that the speaker was Lawi [21], while al-Bahrani records from Ja'far al-Sadiq that it was Yahudha, the eldest of them [24]. The dispute is over the man, not the verse's sense, which all read as one brother refusing to face his father empty-handed."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 80 to 82",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=80&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يتناجون في أمرهم أيرجعون إلى أبيهم وقد أخذ منهم موثقاً من الله أن يعيدوا أخاهم إليه أم يقيمون هناك"
+        },
+        "gloss": "They confer about their affair: whether to return to their father, who had taken a pledge from them to bring their brother back, or to stay."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 83 to 92",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=83&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أنه وجد بفراسة إلهية أن هذه الواقعة ترتبط وتتفرع على تسويل نفساني منهم إجمالاً"
+        },
+        "gloss": "That he perceived by a God-given insight that this affair traced back, in sum, to a prompting of their own souls."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 93",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=93&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وبالجملة اجتمعت الأسباب على خفضه وأراد الله سبحانه رفعه فكان ما أراد الله دون الذي توجهت إليه الأسباب والله غالب على أمره"
+        },
+        "gloss": "In sum, the causes combined to bring him low, yet God willed to raise him, so what God willed came to pass, not what the causes were driving toward; and God prevails over His affair."
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 84",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=39&SoraNo=12&AyahNo=84&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمعنى انه عمي فلم يبصر شيئاً"
+        },
+        "gloss": "The meaning is that he went blind and could see nothing."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 80 to 82",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=80&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال لهم لاوي بن يعقوب"
+        },
+        "gloss": "Lawi ibn Yaqub said to them."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 83 to 92",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أكان علم أنه حي وقد فارقه منذ عشرين سنة وذهبت عيناه من البكاء عليه، قال نعم علم إنه حي"
+        },
+        "gloss": "Did he know he was alive, though twenty years had parted them and his eyes had gone from weeping over him? He said: Yes, he knew he was alive."
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 93",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=93&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهو ذلك القميص الذي أنزل من الجنة"
+        },
+        "gloss": "It is that shirt which was sent down from Paradise."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 80 to 82",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=80&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال لهم يهودا، و كان أكبرهم"
+        },
+        "gloss": "Yahudha, who was the eldest of them, said to them."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 83 to 93",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=83&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "البكاءون خمسة: آدم، و يعقوب، و يوسف، و فاطمة بنت محمد، و علي بن الحسين"
+        },
+        "gloss": "The weepers are five: Adam, Jacob, Joseph, Fatimah the daughter of Muhammad, and Ali ibn al-Husayn."
+      },
+      {
+        "id": "s28",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 88 to 92",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=12&tAyahNo=88&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كلّ ذنب عمله العبد وان كان عالماً فهو جاهل حين خاطر بنفسه معصية ربّه"
+        },
+        "gloss": "Every sin a servant commits, even if he is learned, he does as an ignorant man when he risks himself in disobeying his Lord."
+      },
+      {
+        "id": "s30",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 80",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=12&tAyahNo=80&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: بالسيف"
+        },
+        "gloss": "He said: by the sword."
+      },
+      {
+        "id": "s31",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 80",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=1&SoraNo=12&AyahNo=80&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "رُوبـيـل لإجماع جميعهم علـى أنه كان أكبرهم سنًّا"
+        },
+        "gloss": "[It is] Roubil, since they all agree he was the eldest of them in age."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:47:57Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T23:25:38Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "11": {
+    "id": "12:11",
+    "surah": 12,
+    "index": 11,
+    "range": [
+      94,
+      104
+    ],
+    "title": {
+      "en": "Joseph and Jacob reunited"
+    },
+    "essay": {
+      "en": "As the caravan carrying Joseph's shirt sets off from Egypt, Jacob tells those with him that he senses Joseph's scent, and they answer that he persists in his old error. al-Tibyan notes that he spoke not to his sons, who were away, but to the kin present with him [6], and Majma al-Bayan explains that the 'error' they name is his long grief and love for Joseph, not any straying in religion [3]. When the bearer of good news casts the shirt on his face, his sight returns, and he reminds them that he knew from Allah what they did not.\n\nThe sons beg their father to seek forgiveness for their sins, and he promises to plead with his Lord. Joseph then goes out to meet the family; al-Tibyan reads his 'Welcome to Egypt' as spoken before they entered the city, since he had come out to receive them [11], and Majma al-Bayan describes how he embraced his father and wept [4].\n\nHe seats his parents on the throne, and they fall prostrate. al-Mizan reads this as worship directed to Allah, with Joseph taken as its point of direction, like the angels commanded to bow before Adam [1]. Joseph names the scene the fulfilment of his childhood dream and thanks God for bringing him from prison and his kin from the desert, passing over the well in kindness to his brothers [4]. He then turns from his father to his Lord, asking to die in submission and to join the righteous, which al-Mizan takes as a plea for steadfast Islam to the end [1].\n\nThe story done, the address turns to the Prophet: these are accounts from the Unseen, revealed to one who was not present when the brothers schemed, a proof of his prophethood [14]. Most people will not believe, however eager he is, for the Quran asks no reward and is only a reminder for all the nations [2]."
+    },
+    "verses": [
+      {
+        "verse": 94,
+        "heading": {
+          "en": "The scent of Joseph"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن إبراهيم لما أوقدت لما له النار أتاه جبرائيل بثوب من ثياب الجنة فألبسه إياه فلم يصبه معه حر ولا برد، فلما حضر إبراهيم الموت جعله تميمة وعلقه على إسحاق وعلقه إسحاق على يعقوب فلما ولد ليعقوب يوسف علقه عليه فكان في عنقه حتى كان من أمره ما كان فلما أخرج يوسف القميص من التميمة وجد يعقوب ريحه … كل نبي ورث علماً أو غيره فقد انتهى إلى محمد عليه وآله السلام",
+            "chain": "Ali ibn Ibrahim, from his father, from Ali ibn Mahziyar, from Isma'il al-Sarraj, from Yunus ibn Yaqub, from al-Mufaddal al-Ju'fi, from Abu Abdillah",
+            "text": {
+              "en": "When the fire was kindled for Abraham, Gabriel brought him a garment of Paradise and clothed him in it, so neither heat nor cold harmed him. It passed to Isaac, then Jacob, who hung it on Joseph. When Joseph drew this shirt from the amulet, Jacob caught its scent. Every prophet's inherited knowledge came down to Muhammad."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 95,
+        "heading": {
+          "en": "You persist in old error"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أ كان ولد يعقوب أنبياء … لا، و لا بررة أتقياء، كيف يكونون كذلك و هم يقولون ليعقوب",
+            "chain": "Nashit, from a man, from Abu Abdillah",
+            "text": {
+              "en": "He was asked whether the sons of Jacob were prophets. He said: No, nor were they righteous and God-fearing. How could they be, when they say to Jacob, 'By God, you persist in your inveterate error'?"
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 98,
+        "heading": {
+          "en": "Jacob delays the forgiveness"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لأنّ قلب الشّابّ أرق من قلب الشيخ وكانت جناية ولد يعقوب على يوسف وجنايتهم على يعقوب إنّما كان بجنايتهم على يوسف فبادر يوسف إلى العفو عن حقّه وأخّر يعقوب العفو لأن عفوه إنّما كان عن حقّ غيره فأخّرهم إلى السّحر ليلة الجمعة",
+            "chain": null,
+            "text": {
+              "en": "Asked why Jacob delayed seeking forgiveness for his sons, while Joseph pardoned them at once, he said: the young man's heart is softer than the old man's. Joseph hastened to pardon a wrong done to himself, but Jacob's pardon concerned a wrong done to another, so he delayed them until the dawn of Friday night."
+            },
+            "source": "s23"
+          }
+        ]
+      },
+      {
+        "verse": 100,
+        "heading": {
+          "en": "They fall prostrate"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Hadi",
+            "addressee": null,
+            "arabic": "أما سجود يعقوب وولده ليوسف فإنه لم يكن ليوسف وإنما كان ذلك من يعقوب وولده طاعة لله وتحية ليوسف كما كان السجود من الملائكة لآدم ولم يكن لآدم إنما كان ذلك منهم طاعة لله وتحية لآدم فسجد يعقوب وولده وسجد يوسف معهم شكر الله لاجتماع شملهم",
+            "chain": "Muhammad ibn Isa, from Yahya ibn Aktham; Musa ibn Muhammad laid the questions before Abu al-Hasan",
+            "text": {
+              "en": "Asked whether Jacob and his sons prostrated to Joseph though they were prophets, he said: it was not to Joseph, but from Jacob and his sons in obedience to Allah and a greeting to Joseph, as the angels' prostration was not to Adam but obedience to Allah and a greeting to him. They prostrated thanking Allah for their reunion."
+            },
+            "source": "s19"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On Joseph's words 'take me in submission and unite me with the righteous,' al-Mizan holds that he asks to be kept firm in submission until death, and rejects as false the reports that he was asking God for death [1]. Sunni exegesis preserves that older reading: Tabari relays from Ibn Abbas that Joseph was the first prophet to ask God for death, once his blessings were complete [33]. Qurtubi records it too, but reports that the majority take the verse as a plea to die a Muslim when one's term comes, not a wish for death [44]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 94 to 102",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=94&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فليس إلا أنهم إنما أخذوا يوسف آية لله فاتخذوه قبلة في سجدتهم وعبدوا الله بها لا غير كالكعبة التي تؤخذ قبلة فيصلى إليها فيعبد بها الله دون الكعبة"
+        },
+        "gloss": "It can only be that they took Joseph as a sign of God and made him a direction for their prostration, worshipping God through it and nothing else, like the Ka'ba, which one takes as a direction and prays toward, so that God is worshipped through it and not the Ka'ba itself."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 103 to 104",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=103&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ليس من شأن أكثر الناس لانكبابهم على الدنيا وانجذاب نفوسهم إلى زينتها وسهوهم عما أُودع في فطرهم من العلم بالله وآياته أن يؤمنوا به، ولو حرصت وأحببت إيمانهم"
+        },
+        "gloss": "It is not in the nature of most people, given their absorption in the world, their souls' pull toward its adornment, and their heedlessness of the knowledge of God and His signs placed in their nature, to believe in Him, however eager you are and however you love their faith."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 94 to 98",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=12&tAyahNo=94&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولم يريدوا بذلك الضلال عن الدين وإنما أرادوا به المبالغة في حب يوسف"
+        },
+        "gloss": "They did not mean by it error in religion; they meant only his excess in the love of Joseph."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 99 to 102",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=99&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإنما بدأ (ع) بالسجن في تعداد نعم الله دون إخراجه من الجب"
+        },
+        "gloss": "He began, in listing God's favours, with the prison rather than his rescue from the well."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 94",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=94&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وانما قال يعقوب هذا القول لمن حضره من أهله وقرابته دون ولده، لانهم كانوا غيّباً عنه لم يصلوا إِليه"
+        },
+        "gloss": "Jacob said this only to those of his household and kin who were present, not to his sons, for they were absent from him and had not yet reached him."
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 99",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=39&SoraNo=12&AyahNo=99&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال السدي وفرقد السحي: ان يوسف خرج يستقبل يعقوب وخرج معه أهل البلد"
+        },
+        "gloss": "al-Suddi and Farqad said: Joseph went out to meet Jacob, and the townsfolk went out with him."
+      },
+      {
+        "id": "s14",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 102",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=39&SoraNo=12&AyahNo=102&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وانما قال ذلك لنبيه، لأنه لم يكن ممن قرأ الكتب ولا خالط أهلها وإنما اعلمه الله تعالى ذلك بوحي من جهته ليدل بذلك على نبوته"
+        },
+        "gloss": "He said this to His Prophet only because he was not one who read scriptures or mixed with their people; God informed him of it by revelation, so that it would point to his prophethood."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 94",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=94&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن إبراهيم لما أوقدت لما له النار أتاه جبرائيل بثوب من ثياب الجنة فألبسه إياه"
+        },
+        "gloss": "When the fire was kindled for Abraham, Gabriel brought him a garment from the garments of Paradise and clothed him in it."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 101 to 103",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=101&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أما سجود يعقوب وولده ليوسف فإنه لم يكن ليوسف وإنما كان ذلك من يعقوب وولده طاعة لله وتحية ليوسف"
+        },
+        "gloss": "As for the prostration of Jacob and his sons toward Joseph, it was not to Joseph; rather it was from Jacob and his sons in obedience to God and as a greeting to Joseph."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 94 to 101",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=94&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا، و لا بررة أتقياء، كيف يكونون كذلك و هم يقولون ليعقوب"
+        },
+        "gloss": "No, nor even righteous and God-fearing; how could they be, when they say to Jacob such a thing?"
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 97 to 99",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=12&tAyahNo=97&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأخّر يعقوب العفو لأن عفوه إنّما كان عن حقّ غيره فأخّرهم إلى السّحر ليلة الجمعة"
+        },
+        "gloss": "Jacob delayed the pardon because his pardon was for the right of another, so he deferred them to the dawn of Friday night."
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 101",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=1&SoraNo=12&AyahNo=101&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان ابن عبـاس: يقول: أوّل نبـيّ سأل الله الـموت يوسف"
+        },
+        "gloss": "Ibn Abbas used to say: the first prophet to ask God for death was Joseph."
+      },
+      {
+        "id": "s44",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 101",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=5&SoraNo=12&AyahNo=101&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقيل: إن يوسف لم يتمنّ الموت، وإنما تمنّى الوفاة على الإسلام"
+        },
+        "gloss": "It is said that Joseph did not wish for death, but only wished to die in submission."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:52:05Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T23:54:37Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  },
+  "12": {
+    "id": "12:12",
+    "surah": 12,
+    "index": 12,
+    "range": [
+      105,
+      111
+    ],
+    "title": {
+      "en": "This is my way"
+    },
+    "essay": {
+      "en": "Surah Yusuf closes by turning from Joseph's story to the Prophet's own trial: however hard he strives, most people will not believe. It points first to the many signs of the heavens and earth that people pass by disregarding, then to a subtler failure - most, the verse says, do not believe in Allah without ascribing partners to Him. Tabatabai reads this not as the idolatry of Mecca nor the pretence of the hypocrites, which he rejects as narrowing the verse, but as the hidden shirk that coexists with faith by degrees [1]. The narrations call it a shirk of obedience, not of worship [12]: to say 'had it not been for so-and-so I would have perished' sets up a partner in Allah's dominion [16]. After warning the heedless, the Prophet declares his way: 'This is my way. I summon to Allah with insight - I and he who follows me.' Only those who share his sincerity truly follow [1], and the narrations name Ali and the successors first among them [17]. Every apostle before was a man from the towns [3], not an angel. Then the hardest verse: when the apostles lost hope and were thought to have lied, help came. The Shia reading, defended by al-Rida, keeps doubt from the prophets - it was their peoples who took them for liars [19]. The surah ends on the story itself: a moral for people of intellect, a confirmation of the scripture before it [11]."
+    },
+    "verses": [
+      {
+        "verse": 105,
+        "heading": {
+          "en": "Signs passed by"
+        },
+        "note": {
+          "en": "Ali ibn Ibrahim glosses these signs of the heavens and the earth as the eclipse, the earthquake, and the thunderbolts [15]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 106,
+        "heading": {
+          "en": "Faith mixed with shirk"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "شرك طاعة وليس شرك عبادة والمعاصي التي يرتكبون شرك طاعة أطاعوا فيها الشيطان فأشركوا بالله في الطاعة لغيره وليس بإشراك عبادة أن يعبدوا غير الله",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from Ali ibn al-Hakam, from Musa ibn Bakr, from al-Fudayl, from Abu Jafar",
+            "text": {
+              "en": "It is a shirk of obedience, not a shirk of worship. The sins they commit are a shirk of obedience: in them they obeyed Satan and so associated another with Allah in obedience to Him. It is not the shirk of worship, that they worship someone other than Allah."
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هو الرجل يقول: لو لا فلان لهلكت، و لو لا فلان لأصبت كذا و كذا، و لو لا فلان لضاع عيالي، ألا ترى أنه قد جعل لله شريكا في ملكه، يرزقه و يدفع عنه",
+            "chain": "Malik ibn Atiyya, from Abu Abdillah",
+            "text": {
+              "en": "It is the man who says, 'Had it not been for so-and-so I would have perished; had it not been for so-and-so I would have lost my family.' Do you not see that he has set up a partner to Allah in His dominion, one who provides for him and wards off harm from him?"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 108,
+        "heading": {
+          "en": "Summoning with insight"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "ذلك رسول الله (صلى الله عليه و آله) و أمير المؤمنين و الأوصياء من بعدهما",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad ibn Isa, from Ibn Mahbub, from al-Ahwal, from Salam ibn al-Mustanir, from Abu Jafar",
+            "text": {
+              "en": "That is the Messenger of Allah, and the Commander of the Faithful, and the successors after the two of them."
+            },
+            "source": "s17"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Jawad",
+            "addressee": null,
+            "arabic": "وما ينكرون علي من ذلك فوالله لقد قال الله لنبيه صلى الله عليه وآله … فما اتبعه غير علي عليه السلام وكان ابن تسع سنين وأنا ابن تسع سنين",
+            "chain": "Ali ibn Ibrahim, from his father, from Ali ibn Asbat",
+            "text": {
+              "en": "What do they hold against me in this? By Allah, in what Allah said to His Prophet, none followed him but Ali - and he was nine years old, and I am nine years old."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 109,
+        "heading": {
+          "en": "Only men, not angels"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أو لست تعلم أن الله تعالى لم يخل الدنيا من نبي قط أو إمام من البشر؟ … فأخبر أنه لم يبعث الملائكة إلى الأرض، فيكونوا أئمة و حكاما، و إنما أرسلوا إلى أنبياء الله",
+            "chain": "al-Hasan ibn Ali, from his forefathers, from al-Sadiq Jafar ibn Muhammad",
+            "text": {
+              "en": "Do you not know that Allah has never left the world without a prophet or an imam from mankind? He did not send angels to the earth to be imams and rulers; the angels were sent only to the prophets of Allah."
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 110,
+        "heading": {
+          "en": "Help after despair"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Rida",
+            "addressee": "al-Ma'mun",
+            "arabic": "يقول الله تعالى حتى إذا استيأس الرسل من قومهم، و ظن قومهم أن الرسل قد كذبوا، جاء الرسل نصرنا",
+            "chain": "Tamim ibn Abdillah, from his father, from Hamdan ibn Sulayman, from Ali ibn Muhammad ibn al-Jahm",
+            "text": {
+              "en": "Allah says: until the messengers despaired of their peoples, and their peoples thought that the messengers had lied to them, Our help came to the messengers."
+            },
+            "source": "s19"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Verse 110 sets the commentators debating who 'thought they had been told lies.' The Shia commentators guard the prophets' certainty: the messengers despaired only of their peoples, and it was those peoples who took the messengers for liars - the reading al-Rida gave al-Ma'mun in defence of prophetic infallibility [19]. The Sunni tafsirs hold several readings at once. Aisha too refused any hint that a prophet could doubt his Lord, yet al-Tabari also records, from Ibn Abbas, that the messengers, being human, grew weak and lost hope, supposing the promise of help had failed them [30]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Yusuf 105 to 111",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=12&AyahNo=105&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالمراد بالشرك في الآية بعض مراتبه الذي يجامع بعض مراتب الإيمان وهو المسمى باصطلاح فن الأخلاق بالشرك الخفي."
+        },
+        "gloss": "So the shirk meant in the verse is one of its degrees that coexists with some degrees of faith, and it is what the science of ethics calls the hidden shirk."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 108 to 109",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=3&SoraNo=12&AyahNo=108&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيَّن سبحانه أنه إنما أرسل الرسل من أهل الأمصار لأنهم أرجح عقلاً وعلماً من أهل البوادي"
+        },
+        "gloss": "He explained that He sent the messengers only from the people of the towns, because they are more sound in reason and knowledge than the people of the deserts."
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 111",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=12&tAyahNo=111&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تصديق الكتب التي قبله من التوارة، والانجيل"
+        },
+        "gloss": "a confirmation of the books before it, the Torah and the Gospel."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 105 to 106",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=105&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "شرك طاعة وليس شرك عبادة"
+        },
+        "gloss": "a shirk of obedience, not a shirk of worship."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 108",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=12&tAyahNo=108&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فما اتبعه غير علي عليه السلام وكان ابن تسع سنين وأنا ابن تسع سنين"
+        },
+        "gloss": "None followed him but Ali, and he was nine years old, and I am nine years old."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 105",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=12&tAyahNo=105&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الكسوف و الزلزلة و الصواعق"
+        },
+        "gloss": "the eclipse, the earthquake, and the thunderbolts."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 106",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=106&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ألا ترى أنه قد جعل لله شريكا في ملكه، يرزقه و يدفع عنه"
+        },
+        "gloss": "Do you not see that he has set up a partner to Allah in His dominion, one who provides for him and wards off harm from him?"
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 108",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=110&SoraNo=12&AyahNo=108&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ذلك رسول الله (صلى الله عليه و آله) و أمير المؤمنين و الأوصياء من بعدهما"
+        },
+        "gloss": "That is the Messenger of Allah, and the Commander of the Faithful, and the successors after the two of them."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 109",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=12&tAyahNo=109&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لم يبعث الملائكة إلى الأرض، فيكونوا أئمة و حكاما، و إنما أرسلوا إلى أنبياء الله"
+        },
+        "gloss": "He did not send the angels to the earth to be imams and rulers; the angels were sent only to the prophets of Allah."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Yusuf 110",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=12&tAyahNo=110&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "حتى إذا استيأس الرسل من قومهم، و ظن قومهم أن الرسل قد كذبوا، جاء الرسل نصرنا"
+        },
+        "gloss": "until the messengers despaired of their peoples, and their peoples thought the messengers had lied, Our help came to the messengers."
+      },
+      {
+        "id": "s30",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Yusuf 110",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=1&SoraNo=12&AyahNo=110&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كانوا بشراً ضعفوا ويئسوا"
+        },
+        "gloss": "They were human beings; they grew weak and lost hope."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-11T21:54:00Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-11T23:46:12Z",
+      "assembled_at": "2026-09-12T00:26:24Z"
+    }
+  }
+}

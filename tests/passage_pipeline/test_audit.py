@@ -95,7 +95,45 @@ def test_prose_flag_whose_sentence_is_not_in_the_draft_is_malformed():
     assert any("not in the draft verbatim" in e for e in errs)
 
 
+def test_prose_flag_polished_away_resolves_instead_of_malforming():
+    # After the polisher rewrites a flagged sentence it is no longer in the
+    # draft; its polish.json "before" record is what keeps the audit valid.
+    a = good_audit()
+    a["prose"] = [{"where": "essay", "sentence": "The old stumble.", "note": ""}]
+    errs, passed = audit.check(a, draft(), polished=frozenset({"The old stumble."}))
+    assert errs == [] and passed is True
+
+
 def test_audit_without_prose_key_is_still_valid():
     a = good_audit()
     a.pop("prose", None)
     assert audit.check(a, draft()) == ([], True)
+
+
+def test_schema_1_audit_does_not_expect_gloss_verdicts():
+    assert not any(t.startswith("sources.") for t in audit.expected_targets(draft()))
+    assert audit.audit_schema(good_audit()) == 1
+
+
+def test_schema_2_audit_requires_a_verdict_on_every_gloss():
+    a = good_audit()
+    a["schema"] = 2
+    errs, passed = audit.check(a, draft())
+    assert passed is False
+    assert sorted(e for e in errs if e.startswith("sources.")) == [
+        "sources.s1.gloss: no verdict", "sources.s2.gloss: no verdict", "sources.s3.gloss: no verdict"]
+    for sid in ("s1", "s2", "s3"):
+        a["verdicts"].append({"target": f"sources.{sid}.gloss", "claim": "gloss renders the excerpt",
+                              "verdict": "supported", "excerpt": "x", "note": ""})
+    errs, passed = audit.check(a, draft())
+    assert errs == [] and passed is True
+
+
+def test_schema_2_inverted_gloss_fails():
+    a = good_audit()
+    a["schema"] = 2
+    for sid, verdict in (("s1", "unsupported"), ("s2", "supported"), ("s3", "supported")):
+        a["verdicts"].append({"target": f"sources.{sid}.gloss", "claim": "gloss", "verdict": verdict,
+                              "excerpt": "x", "note": "inverted"})
+    errs, passed = audit.check(a, draft())
+    assert errs == [] and passed is False

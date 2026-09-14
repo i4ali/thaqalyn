@@ -1,0 +1,65 @@
+{
+  "passage": "2:4",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multipleChoice",
+      "verse": 30,
+      "prompt": {"en": "How does Tabatabai read the angels' question about a viceroy on earth?"},
+      "options": [
+        {"en": "As an objection to God's plan"},
+        {"en": "As a request to understand what puzzled them"},
+        {"en": "As a warning about Iblis"},
+        {"en": "As a claim to the office themselves"}
+      ],
+      "answer": 1,
+      "explanation": {"en": "The commentary says the angels were not objecting but asking to understand what puzzled them, and the answer God gives them is knowledge."},
+      "anchor": {"where": "essay", "quote": "The angels' question, he insists, is not objection but a request to understand what puzzled them"}
+    },
+    {
+      "id": "q2",
+      "type": "whoSaid",
+      "verse": 31,
+      "prompt": {"en": "\"The lands, the mountains, the ravines and the valleys ... and this rug is among what He taught him.\" Who said this?"},
+      "options": [{"en": "Imam al-Sadiq"}, {"en": "Imam al-Baqir"}, {"en": "Imam Ali"}, {"en": "the Prophet"}],
+      "answer": 0,
+      "explanation": {"en": "Asked what God had taught Adam, Imam al-Sadiq named the lands and the mountains and then the rug beneath him."},
+      "anchor": {"where": "verses.31.narrations.n1", "quote": "the lands, the mountains, the ravines and the valleys"}
+    },
+    {
+      "id": "q3",
+      "type": "trueFalse",
+      "verse": 34,
+      "prompt": {"en": "According to the passage, Iblis was one of the angels before he refused to prostrate."},
+      "options": [{"en": "True"}, {"en": "False"}],
+      "answer": 1,
+      "explanation": {"en": "The note says Iblis was of the jinn, raised among the angels by his worship, and the narration adds that only then did the angels know he was not one of them."},
+      "anchor": {"where": "verses.34.note", "quote": "Iblis was of the jinn (18:50), raised among the angels by his worship"}
+    },
+    {
+      "id": "q4",
+      "type": "fillGap",
+      "verse": 31,
+      "prompt": {"en": "Fayd Kashani holds that the names are not mere words but the ____ of the created things."},
+      "options": [{"en": "realities"}, {"en": "sounds"}, {"en": "letters"}, {"en": "colours"}],
+      "answer": 0,
+      "explanation": {"en": "The note reads the names as the realities of the created things, not mere words, which is why the reports attach them to all creation."},
+      "anchor": {"where": "verses.31.note", "quote": "the names are not mere words but the realities of the created things"}
+    },
+    {
+      "id": "q5",
+      "type": "multipleChoice",
+      "verse": 37,
+      "prompt": {"en": "What happens after Adam and his wife are sent down from the garden?"},
+      "options": [
+        {"en": "Adam receives words from his Lord and is forgiven"},
+        {"en": "The angels are commanded to prostrate again"},
+        {"en": "Iblis is forgiven together with him"},
+        {"en": "The names are taught a second time"}
+      ],
+      "answer": 0,
+      "explanation": {"en": "The essay closes with Adam receiving words from his Lord and being forgiven after he and his wife are sent down."},
+      "anchor": {"where": "essay", "quote": "Adam receives words from his Lord and is forgiven"}
+    }
+  ]
+}
