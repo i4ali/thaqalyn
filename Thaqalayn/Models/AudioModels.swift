@@ -101,12 +101,12 @@ struct AudioConfiguration: Codable {
     }
     
     static let defaultReciter = Reciter(
-        id: "mishary_rashid_alafasy",
-        nameArabic: "مشاري بن راشد العفاسي",
-        nameEnglish: "Mishary Rashid Alafasy",
+        id: "yasser_al_dosari",
+        nameArabic: "ياسر الدوسري",
+        nameEnglish: "Yasser Al-Dosari",
         style: .hafs,
-        serverURL: "https://server8.mp3quran.net/afs",
-        description: "One of the most popular reciters worldwide",
+        serverURL: "https://server14.mp3quran.net/yasir",
+        description: "Known for his powerful and emotional recitation",
         isPopular: true,
         isPremium: false
     )
@@ -200,18 +200,17 @@ struct CurrentPlayback: Codable {
 
 extension Reciter {
     static let popularReciters: [Reciter] = [
-        // Free reciter (default)
+        // Default reciter
         Reciter(
-            id: "mishary_rashid_alafasy",
-            nameArabic: "مشاري بن راشد العفاسي",
-            nameEnglish: "Mishary Rashid Alafasy",
+            id: "yasser_al_dosari",
+            nameArabic: "ياسر الدوسري",
+            nameEnglish: "Yasser Al-Dosari",
             style: .hafs,
-            serverURL: "https://server8.mp3quran.net/afs",
-            description: "One of the most popular reciters worldwide with a beautiful voice",
+            serverURL: "https://server14.mp3quran.net/yasir",
+            description: "Known for his powerful and emotional recitation",
             isPopular: true,
             isPremium: false
         ),
-        // All reciters now free
         Reciter(
             id: "abdul_rahman_al_sudais",
             nameArabic: "عبد الرحمن السديس",
@@ -249,16 +248,6 @@ extension Reciter {
             style: .hafs,
             serverURL: "https://server12.mp3quran.net/maher",
             description: "Imam of the Prophet's Mosque in Medina",
-            isPopular: true,
-            isPremium: false
-        ),
-        Reciter(
-            id: "yasser_al_dosari",
-            nameArabic: "ياسر الدوسري",
-            nameEnglish: "Yasser Al-Dosari",
-            style: .hafs,
-            serverURL: "https://server14.mp3quran.net/yasir",
-            description: "Known for his powerful and emotional recitation",
             isPopular: true,
             isPremium: false
         )

@@ -1,0 +1,2578 @@
+{
+  "1": {
+    "id": "9:1",
+    "surah": 9,
+    "index": 1,
+    "range": [
+      1,
+      6
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "The passage's narration holds that only after Bara'a was revealed did Allah command the Prophet to fight the polytheists whether or not they had withdrawn from him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says that before Bara'a the Prophet fought only those who fought him; only when Bara'a was revealed did Allah command him to fight the polytheists whether or not they had withdrawn."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "Then Bara'a was revealed, and Allah commanded him to fight the polytheists, whether they had withdrawn from him or not"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 3,
+        "prompt": {
+          "en": "\"It is a name Allah bestowed on Ali from heaven, because it was he who delivered Bara'a on behalf of the Messenger of Allah.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the name given to Ali, Imam al-Sadiq said Allah bestowed it from heaven because Ali delivered Bara'a on the Messenger's behalf."
+        },
+        "anchor": {
+          "where": "verses.3.narrations.n3",
+          "quote": "It is a name Allah bestowed on Ali from heaven, because it was he who delivered Bara'a on behalf of the Messenger of Allah"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the perspectives, on what basis did Amir al-Mu'minin argue that the day of the greater Hajj is not the day of Arafah?"
+        },
+        "options": [
+          {
+            "en": "From the day Mecca was conquered"
+          },
+          {
+            "en": "From the number of the sacred months"
+          },
+          {
+            "en": "From the day the treaties were signed"
+          },
+          {
+            "en": "From the count of the four months"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations fix the day of the greater Hajj as the day of sacrifice, arguing from the four-month count that it cannot be the day of Arafah."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Sadiq reports that Amir al-Mu'minin argued from the four-month count that it cannot fall on the day of Arafah"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 5,
+        "prompt": {
+          "en": "Tusi notes that this verse grounds the ruling that one who deliberately abandons the ____ may be killed."
+        },
+        "options": [
+          {
+            "en": "fasting"
+          },
+          {
+            "en": "prayer"
+          },
+          {
+            "en": "zakat"
+          },
+          {
+            "en": "pilgrimage"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports that this verse grounds the ruling that someone who deliberately abandons the prayer may be killed, not fasting or zakat."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi notes that this verse grounds the ruling that one who deliberately abandons the prayer may be killed"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the essay, how does the passage end its treatment of the polytheists?"
+        },
+        "options": [
+          {
+            "en": "With a command to pursue them beyond the sacred months"
+          },
+          {
+            "en": "By cancelling every treaty without exception"
+          },
+          {
+            "en": "By granting asylum until the seeker hears God's Word"
+          },
+          {
+            "en": "By barring them from Mecca for four months"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the passage closes in restraint: any polytheist who seeks asylum is granted it until he hears the Word of Allah, then escorted to his place of safety."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "any polytheist who seeks asylum is to be granted it until he hears the Word of Allah, and then escorted to his place of safety"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T07:35:57Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T07:37:29Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "2": {
+    "id": "9:2",
+    "surah": 9,
+    "index": 2,
+    "range": [
+      7,
+      16
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the essay, what answer does the passage's opening question about the idolaters' treaty expect?"
+        },
+        "options": [
+          {
+            "en": "None; they can hold no valid treaty"
+          },
+          {
+            "en": "Yes, for a fixed term of four months"
+          },
+          {
+            "en": "Yes, once they pay a paltry ransom"
+          },
+          {
+            "en": "Yes, so long as they revile no religion"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the opening question's answer is 'none': the idolaters can hold no valid treaty with Allah and His Messenger while they hide treachery, so the question is really a denial."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage opens with a question whose answer is 'none': how can the idolaters hold a valid treaty with Allah and His Messenger while they hide treachery?"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 9,
+        "prompt": {
+          "en": "Tusi records a report that this described Abu Sufyan, who ____ his own allies and left out the Prophet's."
+        },
+        "options": [
+          {
+            "en": "clothed"
+          },
+          {
+            "en": "armed"
+          },
+          {
+            "en": "fed"
+          },
+          {
+            "en": "paid"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay cites a report that verse 9's selling of Allah's signs described Abu Sufyan, who fed his own allies while leaving out the Prophet's, an act of self-serving gain."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi records a report that this described Abu Sufyan, who fed his own allies and left out the Prophet's"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 14,
+        "prompt": {
+          "en": "\"Fight them, and Allah will punish them by your hands; and if you do not, Allah will surely punish them by the hands of others.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Amir al-Muminin"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Amir al-Muminin urged the believers to fight, teaching that Allah would punish the enemy by their hands, and if they held back, Allah would punish them by the hands of others."
+        },
+        "anchor": {
+          "where": "verses.14.narrations.n4",
+          "quote": "Fight them, and Allah will punish them by your hands; and if you do not, Allah will surely punish them by the hands of others."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 16,
+        "prompt": {
+          "en": "According to the note on verse 16, what does the word 'walija' refer to?"
+        },
+        "options": [
+          {
+            "en": "A blood kinsman within the tribe"
+          },
+          {
+            "en": "A sworn ally bound by a treaty"
+          },
+          {
+            "en": "A pledge broken by the idolaters"
+          },
+          {
+            "en": "An outsider let into one's private affairs"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note explains a walija as an outsider brought into a group, a confidant one lets into one's private affairs, anything drawn into something it does not belong to."
+        },
+        "anchor": {
+          "where": "verses.16.note",
+          "quote": "A walija is an outsider brought into a group, a confidant one lets into one's private affairs; anything drawn into something it does not belong to is a walija"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 16,
+        "prompt": {
+          "en": "According to the perspectives, the Imams read 'the faithful' in verse 16 as the Prophet's allies among Khuza'a."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the Imams read 'the faithful' in verse 16 as themselves, the confidants believers keep; Khuza'a are verse 14's faithful folk, not verse 16's faithful."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "On verse 16, the Imams read 'the faithful' as themselves"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T07:43:13Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T07:44:45Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "3": {
+    "id": "9:3",
+    "surah": 9,
+    "index": 3,
+    "range": [
+      17,
+      24
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 18,
+        "prompt": {
+          "en": "According to verse 18, whom does the passage say may maintain Allah's mosques?"
+        },
+        "options": [
+          {
+            "en": "Those who believe, keep the prayer, pay zakat, and fear only Allah"
+          },
+          {
+            "en": "Whoever waters the Hajj pilgrims every year"
+          },
+          {
+            "en": "The custodians of the House by their lineage"
+          },
+          {
+            "en": "The polytheists who bear witness to their unfaith"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Verse 18 restricts the upkeep of God's mosques to those who believe in Allah and the Last Day, keep the prayer, give the zakat, and fear no one but Allah."
+        },
+        "anchor": {
+          "where": "verses.18.translation",
+          "quote": "Only those shall maintain Allah's mosques who believe in Allah and the Last Day, and maintain the prayer, and give the zakat, and fear no one except Allah"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 19,
+        "prompt": {
+          "en": "\"O Ali, Abd al-Muttalib set five practices in the age of ignorance which God upheld for him in Islam.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Prophet Muhammad"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The Prophet told Ali that Abd al-Muttalib named the watering of the pilgrims, and that God then sent down the verse comparing that service with faith."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n2",
+          "quote": "O Ali, Abd al-Muttalib set five practices in the age of ignorance which God upheld for him in Islam. When he dug the Zamzam well, he named it the watering of the pilgrims"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 19,
+        "prompt": {
+          "en": "According to the perspectives, what do the Shia and Sunni commentators agree the boast at the Sanctuary showed?"
+        },
+        "options": [
+          {
+            "en": "That watering the pilgrims outranks faith and jihad"
+          },
+          {
+            "en": "That the boast vindicated Ali over those who served it"
+          },
+          {
+            "en": "That the polytheists could still maintain the Sacred Mosque"
+          },
+          {
+            "en": "That maintaining the Mosque equals faith in God"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives note that on verse 19 both sides converge: even the Sunni Qurtubi holds the boast at the Sanctuary vindicated Ali over those who prided in serving it."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "On verse 19, though, both sides converge: Qurtubi too holds that the boast at the Sanctuary vindicated Ali over those who prided themselves on its service"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 23,
+        "prompt": {
+          "en": "Tabrisi limits this to the matter of ____, since in worldly affairs there is no harm in keeping their company."
+        },
+        "options": [
+          {
+            "en": "trade"
+          },
+          {
+            "en": "marriage"
+          },
+          {
+            "en": "warfare"
+          },
+          {
+            "en": "religion"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Tabrisi restricts the ban on befriending unbelieving kin to matters of religion, since keeping their company in worldly affairs, he says, does no harm."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi limits this to the matter of religion, since in worldly affairs there is no harm in keeping their company"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 23,
+        "prompt": {
+          "en": "According to the essay, verse 23 was revealed about Hatib b. Balta'a, who wrote to Quraysh betraying the Prophet's march on Mecca."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay's close reports that verse 23 was revealed about Hatib b. Balta'a, who betrayed the Prophet's planned march on Mecca by writing to Quraysh."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tibyan records, from al-Baqir and al-Sadiq, that verse 23 was revealed about Hatib b. Balta'a, who wrote to Quraysh betraying the Prophet's march on Mecca"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T07:50:13Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T07:51:37Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "4": {
+    "id": "9:4",
+    "surah": 9,
+    "index": 4,
+    "range": [
+      25,
+      29
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 25,
+        "prompt": {
+          "en": "According to the passage, the believers' large numbers at Hunayn secured their victory."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says their great numbers pleased them but availed them nothing; the earth became narrow until they found no place to flee and turned their backs, so numbers did not secure the victory."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "their great numbers pleased them, availed them nothing, and the earth \"became narrow\" until they found no place to flee and turned their backs"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the narration, what did the believers say the piebald horses and men in white garments were?"
+        },
+        "options": [
+          {
+            "en": "Cavalry sent from Medina"
+          },
+          {
+            "en": "Angels"
+          },
+          {
+            "en": "Fighters from among the Ansar"
+          },
+          {
+            "en": "Jinn allied to the Muslims"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the narration the captive asked about the piebald horses and men in white garments who had struck his people, and the believers answered that those were the angels."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n2",
+          "quote": "Where are the piebald horses and the men in white garments? They were the ones killing us, and among them we saw you only like a small mole. They said: Those were the angels."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 28,
+        "prompt": {
+          "en": "\"You shall surely keep your Jews, your Christians, your children and your insane from your mosques, or Allah will turn you into apes and swine.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The words are Imam Ali's own command that Jews, Christians, children and the insane be kept from the mosques, on pain of being turned into apes and swine."
+        },
+        "anchor": {
+          "where": "verses.28.narrations.n4",
+          "quote": "You shall surely keep your Jews, your Christians, your children and your insane from your mosques, or Allah will turn you into apes and swine, bowing and prostrating"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "According to the perspectives, what do Shia jurists take the word 'unclean' to mean for the polytheists?"
+        },
+        "options": [
+          {
+            "en": "They are barred forever from all of Arabia"
+          },
+          {
+            "en": "Their sins outweigh their good deeds"
+          },
+          {
+            "en": "Their wealth becomes forbidden to Muslims"
+          },
+          {
+            "en": "Their bodies are physically impure"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say Shia jurists take the apparent sense of 'unclean': the polytheists' bodies are impure, so a wet handshake needs washing and they are barred from the Sacred Mosque."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia jurists take the apparent sense: their bodies are impure, so a wet handshake with a disbeliever requires washing the hand, and they are barred from the Sacred Mosque"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 29,
+        "prompt": {
+          "en": "Tabatabai reads \"from among those given the Book\" as explanatory, covering Jews, Christians and ____ alike."
+        },
+        "options": [
+          {
+            "en": "Sabians"
+          },
+          {
+            "en": "Samaritans"
+          },
+          {
+            "en": "Magians"
+          },
+          {
+            "en": "Meccan polytheists"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the essay Tabatabai reads the phrase about those given the Book as explanatory, so the command to fight for the tribute covers Jews, Christians and Magians alike."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads \"from among those given the Book\" as explanatory, covering Jews, Christians and Magians alike"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T07:50:55Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T07:52:24Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "5": {
+    "id": "9:5",
+    "surah": 9,
+    "index": 5,
+    "range": [
+      30,
+      37
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 30,
+        "prompt": {
+          "en": "According to the commentary, the Quran ascribes the saying that Ezra is God's son to the Jews because some among them actually held it."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Tusi answers the objection that the Jews denied ever saying it by noting the Quran still ascribes the claim to them because some among them did hold it, so the statement is accurate."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the Quran ascribes it to them because some among them did hold it"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 31,
+        "prompt": {
+          "en": "How does the passage explain the People of the Book taking their scribes and monks as lords besides Allah?"
+        },
+        "options": [
+          {
+            "en": "Bowing down to them in the temple"
+          },
+          {
+            "en": "Obeying them in what they made lawful and unlawful, not worship"
+          },
+          {
+            "en": "Carving statues of the scribes and monks"
+          },
+          {
+            "en": "Praying to them for forgiveness of sins"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Following al-Baqir and al-Sadiq, al-Tusi reads this lordship as obedience, not worship: the people accepted whatever the scholars made lawful or unlawful against Allah's command."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "explains this lordship as obedience rather than worship, accepting from them what they made lawful and unlawful against Allah's command"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 34,
+        "prompt": {
+          "en": "\"Our Shia are allowed to spend what is in their hands in kindness. But when our Qaim rises, every hoarder's hoard becomes forbidden to him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Abu Dharr"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about hoarding, Imam al-Sadiq allowed the Shia to spend freely now but said that once the Qaim rises every hoarder's hoard becomes forbidden until brought to him."
+        },
+        "anchor": {
+          "where": "verses.34.narrations.n3",
+          "quote": "Our Shia are allowed to spend what is in their hands in kindness. But when our Qaim rises, every hoarder's hoard becomes forbidden to him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 36,
+        "prompt": {
+          "en": "Finally the months are counted: twelve, of which four are sacred, three ____ and Rajab alone."
+        },
+        "options": [
+          {
+            "en": "separate"
+          },
+          {
+            "en": "movable"
+          },
+          {
+            "en": "disputed"
+          },
+          {
+            "en": "consecutive"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay counts four sacred months among the twelve: three that fall in a row and Rajab standing on its own, so the missing word is consecutive."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "twelve, of which four are sacred, three consecutive and Rajab alone"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 33,
+        "prompt": {
+          "en": "In the Shia tradition the passage reports, when does the religion of truth completely prevail over all other religions?"
+        },
+        "options": [
+          {
+            "en": "Only when the Mahdi, the Qaim of Muhammad's family, rises"
+          },
+          {
+            "en": "As soon as the Prophet reached Medina"
+          },
+          {
+            "en": "Only after the last polytheist has died"
+          },
+          {
+            "en": "Gradually, through preaching, with no single figure"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage reports from al-Baqir that this promise is not fully realized yet; the religion of truth completely prevails only when the Mahdi, the Qaim of Muhammad's family, rises."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the complete triumph comes only when the Mahdi, the Qaim from the family of Muhammad, rises"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T07:59:19Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:00:39Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "6": {
+    "id": "9:6",
+    "surah": 9,
+    "index": 6,
+    "range": [
+      38,
+      42
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 38,
+        "prompt": {
+          "en": "\"Do not sink heavily to the earth, or you will accept humiliation, be saddled with disgrace, and get the meanest share. The brother of war is the wakeful one.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam Ali urges the fighters not to sink heavily to the earth, warning that the sleeper's enemy stays awake; the aphorism about the wakeful brother of war marks his voice."
+        },
+        "anchor": {
+          "where": "verses.38.narrations.n1",
+          "quote": "Do not sink heavily to the earth, or you will accept humiliation, be saddled with disgrace, and get the meanest share. The brother of war is the wakeful one; whoever sleeps, the enemy does not sleep against him."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 38,
+        "prompt": {
+          "en": "According to the essay, why did the people find the call to march for Tabuk burdensome?"
+        },
+        "options": [
+          {
+            "en": "It fell at the season of ripening fruit"
+          },
+          {
+            "en": "The Roman army greatly outnumbered them"
+          },
+          {
+            "en": "The Prophet was still away at Ta'if"
+          },
+          {
+            "en": "They doubted the reward that was promised"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Tabrisi records that the Tabuk campaign came at the season of ripening fruit, so the people found leaving their homes and wealth burdensome and dragged their feet."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "because it fell at the season of ripening fruit the people found leaving their homes and wealth burdensome"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 40,
+        "prompt": {
+          "en": "In the narration, Suraqa ibn Malik seized the Prophet and delivered him to Quraysh for the reward."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration says the Prophet prayed for protection and Suraqa's horse sank into the ground and threw him, so Suraqa never seized or delivered the Prophet."
+        },
+        "anchor": {
+          "where": "verses.40.narrations.n3",
+          "quote": "The Messenger of God said: O God, guard me against Suraqa's evil as You will. His horse's legs sank into the ground and it threw him."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 42,
+        "prompt": {
+          "en": "'Had it been a near gain' means a ____; 'they would have followed you.'"
+        },
+        "options": [
+          {
+            "en": "distant land"
+          },
+          {
+            "en": "great honor"
+          },
+          {
+            "en": "ready spoil"
+          },
+          {
+            "en": "heavy burden"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir glosses the verse's 'near gain' as a ready spoil, war booty the hypocrites would readily march for, unlike the long, hard journey to Tabuk."
+        },
+        "anchor": {
+          "where": "verses.42.narrations.n5",
+          "quote": "'Had it been a near gain' means a ready spoil; 'they would have followed you.'"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 40,
+        "prompt": {
+          "en": "According to the Perspectives, what do the Sunni and Shia traditions agree on about verse 40's cave account?"
+        },
+        "options": [
+          {
+            "en": "The unseen hosts were visible to the pursuers"
+          },
+          {
+            "en": "The Prophet fled the cave with no companion"
+          },
+          {
+            "en": "The cave lay on the road to Ta'if"
+          },
+          {
+            "en": "The companion in the cave was Abu Bakr"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The Perspectives says the traditions differ over the cave scene, yet both agree the companion who was with the Prophet in the cave was Abu Bakr."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both agree the companion is Abu Bakr."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:00:27Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:01:42Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "7": {
+    "id": "9:7",
+    "surah": 9,
+    "index": 7,
+    "range": [
+      43,
+      59
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 43,
+        "prompt": {
+          "en": "According to the passage, Shia commentators read 'May Allah excuse you' as a reproach for leaving a better course undone, not a fault, to guard the Prophet's infallibility."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage says Shia commentators press to guard the Prophet's infallibility, with Tusi calling the words only a reproach for doing what was better left undone, never a fault."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia commentators press further to guard the Prophet's infallibility: Tusi calls the words only a reproach for doing what it was better to leave undone, never a fault"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 46,
+        "prompt": {
+          "en": "Those told to 'be seated with those who sit back' are the women, children, and the ____."
+        },
+        "options": [
+          {
+            "en": "elderly"
+          },
+          {
+            "en": "disabled"
+          },
+          {
+            "en": "poor"
+          },
+          {
+            "en": "travellers"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay explains that those told to sit back are not the hypocrites but the women, children, and the disabled, who had a real excuse to stay."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Those told to 'be seated with those who sit back' are the women, children, and the disabled"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 52,
+        "prompt": {
+          "en": "According to the note on verse 52, what are the two excellent outcomes the faithful await?"
+        },
+        "options": [
+          {
+            "en": "Wealth in this world, or safety from their enemies"
+          },
+          {
+            "en": "Forgiveness of sins, or a long and easy life"
+          },
+          {
+            "en": "Victory by God's help, or martyrdom leading to paradise"
+          },
+          {
+            "en": "A share of the spoils, or the return of exiles"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note explains the two excellent things the faithful await are victory through God's help, or the martyrdom that leads to paradise, so either outcome is good."
+        },
+        "anchor": {
+          "where": "verses.52.note",
+          "quote": "The two excellent things the faithful await are victory by Allah's help or the martyrdom that leads to paradise"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 54,
+        "prompt": {
+          "en": "\"With faith, no deed can harm; with disbelief, no deed can benefit.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq glossed the refused charity of the hypocrites, teaching that with faith no deed can harm and with disbelief no deed can benefit, for they died as disbelievers."
+        },
+        "anchor": {
+          "where": "verses.54.narrations.n6",
+          "quote": "With faith, no deed can harm; with disbelief, no deed can benefit."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 56,
+        "prompt": {
+          "en": "According to the essay, why do the hypocrites swear that they belong to the believers?"
+        },
+        "options": [
+          {
+            "en": "Because they hope to share in the spoils"
+          },
+          {
+            "en": "Because they truly love the Prophet"
+          },
+          {
+            "en": "So they will be given a role in battle"
+          },
+          {
+            "en": "Only out of fear of death or capture"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay explains that the hypocrites swear allegiance to the believers not out of faith but only from fear of death or capture."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "they swear they belong to the believers only from fear of death or capture"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:10:31Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:12:02Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "8": {
+    "id": "9:8",
+    "surah": 9,
+    "index": 8,
+    "range": [
+      60,
+      66
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 60,
+        "prompt": {
+          "en": "Here 'the charities' means the obligatory ____, and the verse restricts it to the eight groups it names and no others."
+        },
+        "options": [
+          {
+            "en": "zakat"
+          },
+          {
+            "en": "khums"
+          },
+          {
+            "en": "sadaqa"
+          },
+          {
+            "en": "kharaj"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note glosses 'the charities' as the obligatory zakat, then restricts it to the eight named groups and no others, not to voluntary giving."
+        },
+        "anchor": {
+          "where": "verses.60.note",
+          "quote": "Here 'the charities' means the obligatory zakat, and the verse restricts it to the eight groups it names and no others"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 60,
+        "prompt": {
+          "en": "According to the perspectives, how do Shia reports say the alms should be distributed?"
+        },
+        "options": [
+          {
+            "en": "The alms are shared out equally among all Muslims"
+          },
+          {
+            "en": "A just imam apportions the shares to each group by need"
+          },
+          {
+            "en": "The donor keeps back a portion for himself first"
+          },
+          {
+            "en": "The collectors decide the shares without any oversight"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives says Shia reports leave the shares to a just imam, who gives each group according to its need, without excess or stinting."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia reports place the distribution in the hands of a just imam, who apportions the eight shares to each group according to its need, without excess or stinting"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 61,
+        "prompt": {
+          "en": "'So when believers testify before you, believe them; and do not entrust your wealth to a wine-drinker.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration is Imam al-Sadiq's, glossing 'trusts the faithful' for Isma'il: accept believers who testify, but do not entrust your wealth to a wine-drinker."
+        },
+        "anchor": {
+          "where": "verses.61.narrations.n4",
+          "quote": "So when believers testify before you, believe them; and do not entrust your wealth to a wine-drinker"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 63,
+        "prompt": {
+          "en": "According to the passage, what does it mean to 'oppose' God and His Messenger?"
+        },
+        "options": [
+          {
+            "en": "To doubt in private while outwardly conforming"
+          },
+          {
+            "en": "To swear false oaths so as to please the believers"
+          },
+          {
+            "en": "To exceed the bounds God set, in open defiance"
+          },
+          {
+            "en": "To withhold the alms from those who deserve them"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note reads to oppose God and His Messenger as exceeding the bounds He set in open defiance, whose wage is the Fire and lasting disgrace."
+        },
+        "anchor": {
+          "where": "verses.63.note",
+          "quote": "To 'oppose' God and His Messenger (yuhadid) means to exceed the bounds God set, in open defiance"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 66,
+        "prompt": {
+          "en": "According to the essay, these verses best fit an event on the march out to Tabuk, before the army reached it."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay places these verses at the mountain pass plot on the return from Tabuk, so an event on the outward march, before arriving, is wrong."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "these verses fit best the plot at the mountain pass on the return from Tabuk, the occasion the commentators record"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:11:03Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:12:40Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "9": {
+    "id": "9:9",
+    "surah": 9,
+    "index": 9,
+    "range": [
+      67,
+      72
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 67,
+        "prompt": {
+          "en": "According to the passage, the hypocrites contrived a plot and intended a grave deed that God thwarted so their scheme came to nothing."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the commentary reads these verses against a plot the hypocrites contrived and a grave deed they intended, which God thwarted, so their scheme came to nothing."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a plot the hypocrites contrived among themselves and a grave deed they intended, which God thwarted so that their scheme came to nothing"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 69,
+        "prompt": {
+          "en": "\"You will take up the ways of the nations before you, cubit by cubit, span by span ...\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet Muhammad"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The Prophet warned that the community would follow the nations before them step by step, cubit by cubit, even into a lizard's hole."
+        },
+        "anchor": {
+          "where": "verses.69.narrations.n3",
+          "quote": "You will take up the ways of the nations before you, cubit by cubit, span by span"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 70,
+        "prompt": {
+          "en": "In the narration on this verse, which people are identified as 'the towns that were overturned'?"
+        },
+        "options": [
+          {
+            "en": "The people of Noah"
+          },
+          {
+            "en": "The people of Thamud"
+          },
+          {
+            "en": "The people of Lot"
+          },
+          {
+            "en": "The inhabitants of Midian"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the overturned towns, Imam al-Sadiq said they were the people of Lot, whose land turned over so its top became its bottom."
+        },
+        "anchor": {
+          "where": "verses.70.narrations.n4",
+          "quote": "Those are the people of Lot; their land was overturned upon them - that is, it turned over, and its top became its bottom"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 71,
+        "prompt": {
+          "en": "Convey her, for the believing man is a ____ to the believing woman."
+        },
+        "options": [
+          {
+            "en": "stranger"
+          },
+          {
+            "en": "mahram"
+          },
+          {
+            "en": "guardian"
+          },
+          {
+            "en": "neighbor"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Answering Safwan about conveying a woman, Imam al-Sadiq said the believing man is a mahram to the believing woman, glossing the verse's comradeship."
+        },
+        "anchor": {
+          "where": "verses.71.narrations.n5",
+          "quote": "Convey her, for the believing man is a mahram to the believing woman"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 72,
+        "prompt": {
+          "en": "According to the perspectives, what do both traditions agree about the Gardens of Eden?"
+        },
+        "options": [
+          {
+            "en": "It is reserved only for the earlier prophets"
+          },
+          {
+            "en": "It is the lowest level of the Garden"
+          },
+          {
+            "en": "It is promised to hypocrites who repent"
+          },
+          {
+            "en": "It is the Garden's highest reach and the Prophet's station"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives note both traditions treat Eden as the Garden's highest reach and the Prophet's own station; they differ only over what opens it."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions describe Eden as the Garden's highest reach and the Prophet's own station"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:19:03Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:20:11Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "10": {
+    "id": "9:10",
+    "surah": 9,
+    "index": 10,
+    "range": [
+      73,
+      80
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 73,
+        "prompt": {
+          "en": "\"Wage jihad against the disbelievers and the hypocrites by binding them to the obligatory duties.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In this narration Imam al-Baqir glosses the command to wage jihad against the hypocrites as binding them to the obligatory religious duties."
+        },
+        "anchor": {
+          "where": "verses.73.narrations.n1",
+          "quote": "Wage jihad against the disbelievers and the hypocrites by binding them to the obligatory duties"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 74,
+        "prompt": {
+          "en": "According to verse 74, what does the passage say made the hypocrites vindictive?"
+        },
+        "options": [
+          {
+            "en": "That they had been driven out of Medina"
+          },
+          {
+            "en": "That their charity had been refused"
+          },
+          {
+            "en": "That Allah and His Apostle had enriched them out of grace"
+          },
+          {
+            "en": "That the Prophet had punished them severely"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The verse says their resentment sprang only from the grace by which Allah and His Apostle had enriched them, so they turned bitter against the very source of their good."
+        },
+        "anchor": {
+          "where": "verses.74.translation",
+          "quote": "they were vindictive only because Allah and His Apostle had enriched them out of His grace"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 77,
+        "prompt": {
+          "en": "Al-Tabatabai notes that a broken promise and lying are named here as causes and ____ of hypocrisy."
+        },
+        "options": [
+          {
+            "en": "marks"
+          },
+          {
+            "en": "cures"
+          },
+          {
+            "en": "penalties"
+          },
+          {
+            "en": "excuses"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports Al-Tabatabai reading the broken pledge and the lies of verse 77 as both the causes of hypocrisy and its outward marks, the traits that reveal it."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a broken promise and lying are named here as causes and marks of hypocrisy"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 79,
+        "prompt": {
+          "en": "In the narration on verse 79, how did Ali earn the dates he brought to the Prophet as charity?"
+        },
+        "options": [
+          {
+            "en": "He sold his own sword and shield"
+          },
+          {
+            "en": "He hired himself out to draw water"
+          },
+          {
+            "en": "He received them from the public treasury"
+          },
+          {
+            "en": "He borrowed them from a wealthy neighbor"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration says Ali hired himself out to draw water, a bucket for each date, then carried the dates he had earned to the Prophet as his charity."
+        },
+        "anchor": {
+          "where": "verses.79.narrations.n4",
+          "quote": "Ali, the Commander of the Faithful, hired himself out to draw water, each bucket for a date of his choosing"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 80,
+        "prompt": {
+          "en": "According to the passage, the mention of seventy times in verse 80 sets an exact limit, after which the Prophet's pleading could win them forgiveness."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the seventy stands for abundance, not a fixed number, and that Allah will never forgive them however often the Prophet pleads, so no exact limit opens the door."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "for the seventy stands for abundance, not a fixed number"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:24:21Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:25:41Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "11": {
+    "id": "9:11",
+    "surah": 9,
+    "index": 11,
+    "range": [
+      81,
+      89
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 81,
+        "prompt": {
+          "en": "The passage turns from reproaching the hypocrites of Tabuk to the ____ that awaits them."
+        },
+        "options": [
+          {
+            "en": "reward"
+          },
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "reckoning"
+          },
+          {
+            "en": "triumph"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay opens by saying the passage moves from reproaching the Tabuk hypocrites to the reckoning that awaits them, the judgment and punishment the rest of the verses set out."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage turns from reproaching the hypocrites of Tabuk to the reckoning that awaits them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 84,
+        "prompt": {
+          "en": "In the note on verse 84, whom does the ban on the funeral prayer cover?"
+        },
+        "options": [
+          {
+            "en": "It applies only to known hypocrites, not to the faithful"
+          },
+          {
+            "en": "It abolishes the funeral prayer for the whole community"
+          },
+          {
+            "en": "It covers anyone who died far from Medina"
+          },
+          {
+            "en": "It covers everyone who stayed behind from Tabuk"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note says the ban is specific to known hypocrites; the funeral prayer is otherwise a communal duty, so it is never withheld from the faithful."
+        },
+        "anchor": {
+          "where": "verses.84.note",
+          "quote": "The ban is specific to known hypocrites; Tusi records that the funeral prayer is otherwise a communal duty"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 85,
+        "prompt": {
+          "en": "\"I enjoin on you fear of God, scrupulousness, and striving; and know that striving with no scrupulousness in it brings no benefit.\" Who gave this counsel?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The counsel to fear God, keep scrupulousness, and strive, then to look to those beneath you, is Imam al-Sadiq's advice to Amr ibn Sa'id ibn Hilal."
+        },
+        "anchor": {
+          "where": "verses.85.narrations.n3",
+          "quote": "I enjoin on you fear of God, scrupulousness, and striving; and know that striving with no scrupulousness in it brings no benefit"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 87,
+        "prompt": {
+          "en": "In the passage, Imam al-Baqir explains that being 'with those who stay back' means staying with the women."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about being 'with those who stay back,' Imam al-Baqir answered that it meant the women, so the statement matches the narration and is true."
+        },
+        "anchor": {
+          "where": "verses.87.narrations.n4",
+          "quote": "Asked about God's words, 'They are pleased to be with those who stay back,' Imam al-Baqir said: with the women"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 89,
+        "prompt": {
+          "en": "At the essay's close, how does the passage gloss 'the great success' promised to the faithful?"
+        },
+        "options": [
+          {
+            "en": "A reward limited to this present world"
+          },
+          {
+            "en": "A pardon for their earlier hypocrisy"
+          },
+          {
+            "en": "Victory over the hypocrites at Tabuk"
+          },
+          {
+            "en": "A deliverance that lasts forever"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay ends by glossing 'the great success' promised to the faithful as a deliverance that lasts forever, not a reward confined to this world."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the great success that Tusi glosses as a deliverance that lasts forever"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:29:43Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:31:04Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "12": {
+    "id": "9:12",
+    "surah": 9,
+    "index": 12,
+    "range": [
+      90,
+      99
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 91,
+        "prompt": {
+          "en": "They were commanded to nothing beyond their ____."
+        },
+        "options": [
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "provisions"
+          },
+          {
+            "en": "capacity"
+          },
+          {
+            "en": "homes"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq said the excused were commanded to nothing beyond their capacity, and the burden was lifted from those who cannot find the means."
+        },
+        "anchor": {
+          "where": "verses.91.narrations.n1",
+          "quote": "They were commanded to nothing beyond their capacity"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 93,
+        "prompt": {
+          "en": "According to the essay, on whom does the blame for staying behind fall?"
+        },
+        "options": [
+          {
+            "en": "Those too poor to equip themselves"
+          },
+          {
+            "en": "The well-off who asked leave and stayed content"
+          },
+          {
+            "en": "The men who wept when they found no mount"
+          },
+          {
+            "en": "The weak and the sick"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says blame falls only on the well-off who asked leave and were content to stay behind, while the poor, weak, sick, and weepers are cleared."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Blame falls only on the well-off who asked leave and were content to stay with those left behind, their hearts sealed"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 94,
+        "prompt": {
+          "en": "\"The Unseen is what has not yet come to be, and the witnessed is what has already been.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the Knower of the Unseen and the witnessed, Imam al-Sadiq explained the Unseen as what has not yet come to be and the witnessed as what has already been."
+        },
+        "anchor": {
+          "where": "verses.94.narrations.n3",
+          "quote": "the Unseen is what has not yet come to be, and the witnessed is what has already been"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 95,
+        "prompt": {
+          "en": "In the passage, what does God call the hypocrites who swear oaths so that you leave them alone?"
+        },
+        "options": [
+          {
+            "en": "The virtuous"
+          },
+          {
+            "en": "Filth, whose refuge is hell"
+          },
+          {
+            "en": "The weepers who found no mount"
+          },
+          {
+            "en": "Those sincere to Allah and His Apostle"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Verse 95 says these hypocrites, who swear oaths so the believers leave them alone, are filth whose refuge shall be hell."
+        },
+        "anchor": {
+          "where": "verses.95.translation",
+          "quote": "They are indeed filth, and their refuge shall be hell, a requital for what they used to earn"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 99,
+        "prompt": {
+          "en": "According to the essay, the passage ends by condemning every Bedouin as harsh in unfaith."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay does not end in blanket condemnation; it closes on the believing Bedouin, whose giving God counts as nearness and whom He admits into His mercy."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "It closes on the believing Bedouin, whose giving God counts as nearness to Him and who is admitted into His mercy"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:34:47Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:36:01Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "13": {
+    "id": "9:13",
+    "surah": 9,
+    "index": 13,
+    "range": [
+      100,
+      110
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 100,
+        "prompt": {
+          "en": "According to the perspectives, how do the Shia sources read the vanguard of verse 100?"
+        },
+        "options": [
+          {
+            "en": "They apply it only to the Bedouins of Madinah"
+          },
+          {
+            "en": "They center it on Ali"
+          },
+          {
+            "en": "They read it as the three left behind from Tabuk"
+          },
+          {
+            "en": "They deny anyone is foremost in faith"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives report that the Shia sources center verse 100 on Ali, with Qummi identifying the forerunners as those who stood firm on his wilaya."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia sources center the verse on Ali: Qummi identifies the forerunners as those who stood firm on his wilaya"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 102,
+        "prompt": {
+          "en": "\"Those who mixed righteous conduct with other that was evil are a believing people; within their faith they fall into sins that the believers find blameworthy and detest.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir glossed those who mixed righteous conduct with evil as a believing people who fall into sins their fellow believers detest, of whom Allah says perhaps He accepts their repentance."
+        },
+        "anchor": {
+          "where": "verses.102.narrations.n2",
+          "quote": "Those who mixed righteous conduct with other that was evil are a believing people; within their faith they fall into sins that the believers find blameworthy and detest"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 105,
+        "prompt": {
+          "en": "In the words 'Allah will see your conduct, and His Apostle and the faithful,' the faithful here are the ____."
+        },
+        "options": [
+          {
+            "en": "pure Imams"
+          },
+          {
+            "en": "early Emigrants"
+          },
+          {
+            "en": "loyal Helpers"
+          },
+          {
+            "en": "believing Bedouins"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about 'the faithful' who will see their conduct in verse 105, Imam al-Sadiq said the faithful here are the pure Imams."
+        },
+        "anchor": {
+          "where": "verses.105.narrations.n5",
+          "quote": "the faithful here are the pure Imams"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 108,
+        "prompt": {
+          "en": "According to the note, how were the 'men who love to keep pure' in verse 108 understood?"
+        },
+        "options": [
+          {
+            "en": "As those who fast every day of the year"
+          },
+          {
+            "en": "As the early Emigrants who pledged at Hudaybiyya"
+          },
+          {
+            "en": "As the builders of the mosque of harm"
+          },
+          {
+            "en": "As those who cleanse themselves with water after relieving themselves"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note explains the 'men who love to keep pure' were understood as those who cleanse themselves with water after relieving themselves, a gloss related from al-Baqir and al-Sadiq."
+        },
+        "anchor": {
+          "where": "verses.108.note",
+          "quote": "The 'men who love to keep pure' were understood as those who cleanse themselves with water after relieving themselves"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 109,
+        "prompt": {
+          "en": "According to the essay, the mosque of harm is set against a mosque founded on Godwariness, and it collapses with its builders into the fire."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay sets the mosque of harm against a mosque founded on Godwariness from the first day and says it collapses with its builders into the fire, so this statement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "it is set against the mosque founded on Godwariness from the first day; the mosque of harm, by contrast, collapses with its builders into the fire"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:41:52Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:43:21Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "14": {
+    "id": "9:14",
+    "surah": 9,
+    "index": 14,
+    "range": [
+      111,
+      118
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 111,
+        "prompt": {
+          "en": "\"When we see those who bear this description, jihad alongside them is better than hajj.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali ibn al-Husayn"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Ali ibn al-Husayn told Abbad al-Basri to complete the verse first, then said that jihad alongside believers who bear that description is better than hajj."
+        },
+        "anchor": {
+          "where": "verses.111.narrations.n1",
+          "quote": "when we see those who bear this description, jihad alongside them is better than hajj"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 111,
+        "prompt": {
+          "en": "According to the essay, why do the commentators call God's 'buying' from the faithful a figure of speech?"
+        },
+        "options": [
+          {
+            "en": "Because God already owns everything a buyer would purchase"
+          },
+          {
+            "en": "Because paradise cannot really be bought or sold"
+          },
+          {
+            "en": "Because the believers offered nothing in return"
+          },
+          {
+            "en": "Because the promise appears only in the Quran"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay explains that a buyer purchases what he does not own, but God already owns everything, so the trade language only seals the certainty of the reward."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The commentators read this as a figure of speech, since a buyer purchases what he does not own, whereas God already owns everything"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 114,
+        "prompt": {
+          "en": "According to Imam al-Sadiq, Abraham had promised his father that he would seek forgiveness for him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Al-Sadiq rejected that view. He said the father had promised to embrace Islam, so Abraham sought pardon for him; when the father's enmity to God became plain, Abraham repudiated him."
+        },
+        "anchor": {
+          "where": "verses.114.narrations.n4",
+          "quote": "The father promised he would embrace Islam, so Abraham sought pardon for him; when his enmity to God became plain, Abraham repudiated him."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 115,
+        "prompt": {
+          "en": "Of this verse he said: until He makes them ____ what pleases Him and what angers Him."
+        },
+        "options": [
+          {
+            "en": "forget"
+          },
+          {
+            "en": "conceal"
+          },
+          {
+            "en": "recognize"
+          },
+          {
+            "en": "reject"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about verse 115, al-Sadiq glossed God making clear what to beware of as making people recognize what pleases Him and what angers Him."
+        },
+        "anchor": {
+          "where": "verses.115.narrations.n6",
+          "quote": "until He makes them recognize what pleases Him and what angers Him"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 117,
+        "prompt": {
+          "en": "On verse 117, what reason do Shia authorities give for their reading of how God's mercy reached the Emigrants and Helpers?"
+        },
+        "options": [
+          {
+            "en": "That the Helpers had marched before the Emigrants"
+          },
+          {
+            "en": "That the Emigrants outranked the Helpers in merit"
+          },
+          {
+            "en": "That the Torah had foretold the Tabuk campaign"
+          },
+          {
+            "en": "That the Prophet committed no sin for God to forgive"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives says Shia authorities read the clemency as reaching the Emigrants and Helpers through the Prophet, precisely because the Prophet committed no sin needing forgiveness."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia authorities read 'God turned in mercy through the Prophet (bihi) to the Emigrants and Helpers,' reasoning that the Prophet committed no sin for God to forgive; the clemency reached his community through him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:43:06Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:44:36Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "15": {
+    "id": "9:15",
+    "surah": 9,
+    "index": 15,
+    "range": [
+      119,
+      122
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 119,
+        "prompt": {
+          "en": "The commentary presents the command to be with the Truthful as standing over the retreat that the surah had just condemned."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the passage opens with a command that stands over the retreat the surah had just condemned, so the statement matches the commentary."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage opens with a command that stands over the retreat the surah has just condemned"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 120,
+        "prompt": {
+          "en": "According to verse 120, what happens to every hardship the faithful endure in the way of Allah, such as thirst, fatigue, or hunger?"
+        },
+        "options": [
+          {
+            "en": "A righteous deed is written for them on its account"
+          },
+          {
+            "en": "It is forgiven and forgotten"
+          },
+          {
+            "en": "It is counted against their enemies"
+          },
+          {
+            "en": "It doubles their share of the spoils"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Verse 120 says that for every thirst, fatigue, hunger, or ground trodden in God's way, a righteous deed is written for them on its account, and God does not waste the reward of the virtuous."
+        },
+        "anchor": {
+          "where": "verses.120.translation",
+          "quote": "a righteous deed is written for them on its account"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 122,
+        "prompt": {
+          "en": "The last verse sets a ____ on the summons."
+        },
+        "options": [
+          {
+            "en": "ban"
+          },
+          {
+            "en": "seal"
+          },
+          {
+            "en": "limit"
+          },
+          {
+            "en": "condition"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reads the last verse as setting a limit on the summons to march: not all the faithful must go forth at once, only a group from each section."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The last verse sets a limit on the summons"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 122,
+        "prompt": {
+          "en": "\"Become learned in religion, for whoever among you does not become learned in religion is a bedouin.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq urged people to become learned in religion, warning that whoever among them does not is a bedouin, reading verse 122's call to gain understanding of the faith."
+        },
+        "anchor": {
+          "where": "verses.122.narrations.n5",
+          "quote": "Become learned in religion, for whoever among you does not become learned in religion is a bedouin"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 119,
+        "prompt": {
+          "en": "According to the perspectives, how do the Shia narrations read 'the Truthful' in verse 119?"
+        },
+        "options": [
+          {
+            "en": "As a designation of specific persons, the Imams"
+          },
+          {
+            "en": "As honesty in word and deed alone"
+          },
+          {
+            "en": "As any believer who fights in God's way"
+          },
+          {
+            "en": "As the whole community of Madinah"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations read 'the Truthful' as a designation of persons, with al-Baqir and al-Rida glossing it as the Imams, not as a general quality."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia narrations read 'the Truthful' as a designation of persons: al-Baqir and al-Rida gloss it as the Imams"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:48:54Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:50:35Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  },
+  "16": {
+    "id": "9:16",
+    "surah": 9,
+    "index": 16,
+    "range": [
+      123,
+      129
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 123,
+        "prompt": {
+          "en": "In the passage, the command to fight the nearest is read as a one-time order rather than a standing duty for every frontier."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage presents this command as a standing duty on the people of every frontier to defend themselves, starting with the closest enemy, so reading it as a one-time order is the opposite of what it says."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi reads this as a standing duty on the people of every frontier to defend themselves, starting with the closest enemy"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 124,
+        "prompt": {
+          "en": "\"Had faith been one thing with no increase or decrease, none would excel another; by increase in faith believers rise in degrees.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked where the increase of faith comes from, Imam al-Sadiq reasoned that if faith were one fixed thing none could excel another, so by its increase believers rise in degrees."
+        },
+        "anchor": {
+          "where": "verses.124.narrations.n2",
+          "quote": "Had faith been one thing with no increase or decrease, none would excel another; by increase in faith believers rise in degrees"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 125,
+        "prompt": {
+          "en": "According to verse 125, what does a new surah do to those in whose heart is a sickness?"
+        },
+        "options": [
+          {
+            "en": "It heals the sickness in their hearts"
+          },
+          {
+            "en": "It adds to their defilement, and they die faithless"
+          },
+          {
+            "en": "It leaves their state entirely unchanged"
+          },
+          {
+            "en": "It leads them to repent before they die"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Verse 125 says that for those whose hearts hold a sickness a new surah only adds defilement to their defilement, and they die while they are faithless."
+        },
+        "anchor": {
+          "where": "verses.125.translation",
+          "quote": "it only adds defilement to their defilement, and they die while they are faithless"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 126,
+        "prompt": {
+          "en": "They are tried once or twice a year yet neither repent nor take heed; Al-Qummi glosses the trial as ____."
+        },
+        "options": [
+          {
+            "en": "poverty"
+          },
+          {
+            "en": "warfare"
+          },
+          {
+            "en": "illness"
+          },
+          {
+            "en": "hunger"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the hypocrites are tried once or twice a year yet neither repent nor take heed, and Al-Qummi glosses that recurring trial as illness."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "They are tried once or twice a year yet neither repent nor take heed; Al-Qummi glosses the trial as illness"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 128,
+        "prompt": {
+          "en": "In the perspectives, one reading takes 'a messenger from among yourselves' to mean the Prophet is of the Arabs' own kind. What does it cite in support?"
+        },
+        "options": [
+          {
+            "en": "His descent from the noblest of the Arab tribes"
+          },
+          {
+            "en": "The Arabic language of the revealed surahs"
+          },
+          {
+            "en": "His years of trade among distant nations"
+          },
+          {
+            "en": "His birth from lawful marriage, not fornication"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "In the perspectives this reading holds the Prophet is of the Arabs' own kind in language and descent, and cites his birth from lawful marriage rather than fornication."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Al-Tabari and Ibn Kathir take the phrase to mean the Prophet is of the Arabs' own kind, sharing their language and descent, and cite his birth from lawful marriage rather than fornication"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:51:53Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:53:22Z",
+      "assembled_at": "2026-09-16T08:54:01Z"
+    }
+  }
+}

@@ -182,9 +182,9 @@ class DataManager: ObservableObject {
         // TODO: Load from bundled quran-align data file
         // For now, return empty data to avoid build errors
         print("📋 TODO: Load quran-align timing data from bundle")
-        print("🎯 Implementation needed: Bundle Alafasy_128kbps.json with app")
+        print("🎯 Implementation needed: Bundle quran-align timing data with app")
         
-        let emptyData = QuranAlignTimingData(verses: [], reciterID: "mishary_rashid_alafasy")
+        let emptyData = QuranAlignTimingData(verses: [], reciterID: "yasser_al_dosari")
         quranAlignCache = emptyData
         return emptyData
     }

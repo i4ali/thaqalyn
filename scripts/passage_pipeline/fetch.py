@@ -185,7 +185,12 @@ def fetch_altafsir(key: str, surah: int, verse: int, *, get: Getter | None = Non
     promised = 1
     while page <= MAX_PAGES:
         url = altafsir_url(tafsir_id, lang, surah, verse, page)
-        code, ctype, body = get(url, timeout=45)
+        try:
+            code, ctype, body = get(url, timeout=45)
+        except RuntimeError:
+            # curl gave up (altafsir hanging past its deadline); the same as
+            # a server error, so the fallback below still gets its turn.
+            code, ctype, body = 0, "", b""
         seg, has_more = (None, False)
         if code == 200:
             src = decode_body(body, ctype, "cp1256" if lang == 1 else None)
@@ -272,7 +277,10 @@ def fetch_greattafsirs(key: str, surah: int, verse: int, *, get: Getter | None =
     if lang != 1:
         return None
     url = greattafsirs_url(tafsir_id, surah, verse)
-    code, ctype, body = get(url, timeout=60)
+    try:
+        code, ctype, body = get(url, timeout=60)
+    except RuntimeError:
+        return None
     if code != 200:
         return None
     text = extract_greattafsirs_block(decode_body(body, ctype), tafsir_id)

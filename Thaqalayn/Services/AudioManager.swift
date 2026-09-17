@@ -107,7 +107,19 @@ class AudioManager: NSObject, ObservableObject {
     }
     
     private func validateCurrentReciter() {
-        // All reciters are now free - no validation needed
+        // A reciter removed from the app in an update may still be saved in an existing user's
+        // configuration; fall back to the default so a removed reciter is never used.
+        let available = Set(Reciter.popularReciters.map(\.id))
+        guard !available.contains(configuration.selectedReciter.id) else { return }
+        configuration = AudioConfiguration(
+            selectedReciter: AudioConfiguration.defaultReciter,
+            playbackSpeed: configuration.playbackSpeed,
+            repeatMode: configuration.repeatMode,
+            autoAdvanceDelay: configuration.autoAdvanceDelay,
+            backgroundPlayback: configuration.backgroundPlayback,
+            sleepTimer: configuration.sleepTimer
+        )
+        saveConfiguration()
     }
     
     

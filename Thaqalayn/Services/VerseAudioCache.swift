@@ -36,7 +36,11 @@ final class VerseAudioCache {
         let base = (try? FileManager.default.url(for: .applicationSupportDirectory,
                                                  in: .userDomainMask, appropriateFor: nil, create: true))
             ?? FileManager.default.temporaryDirectory
-        self.init(directory: base.appendingPathComponent("VerseAudioCache", isDirectory: true))
+        // The cache is keyed by verse, not reciter, so a verse saved under a previous default
+        // reciter would keep playing after the reciter changes. Bump the directory so those
+        // copies are abandoned, and delete the legacy dir so no removed reciter's audio lingers.
+        try? FileManager.default.removeItem(at: base.appendingPathComponent("VerseAudioCache", isDirectory: true))
+        self.init(directory: base.appendingPathComponent("VerseAudioCache-v2", isDirectory: true))
     }
 
     /// Stable on-disk name for a verse: zero-padded `sssaaa.mp3`, matching everyayah's layout.

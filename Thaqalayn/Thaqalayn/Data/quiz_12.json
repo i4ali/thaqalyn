@@ -1,0 +1,1934 @@
+{
+  "1": {
+    "id": "12:1",
+    "surah": 12,
+    "index": 1,
+    "range": [
+      1,
+      6
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the essay, what is unique about Surah Yusuf among all the surahs of the Quran?"
+        },
+        "options": [
+          {
+            "en": "It alone opens with the disconnected letters Alif Lam Ra"
+          },
+          {
+            "en": "It alone is called the best of narratives"
+          },
+          {
+            "en": "It alone tells one story in full from beginning to end"
+          },
+          {
+            "en": "It alone came down as an Arabic Quran"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reports that of all the surahs, this one alone tells a single story in full from beginning to end, and that story is Joseph's."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "of all the surahs this one alone tells a single story in full, from beginning to end, and it is Joseph's"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"The sun is Joseph's mother Rahil, the moon is Jacob, and the eleven stars are his brothers.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Sajjad"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Explaining Joseph's dream, Imam al-Baqir decoded its symbols, naming the sun as Joseph's mother Rahil, the moon as Jacob, and the eleven stars as his brothers."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n1",
+          "quote": "The sun is Joseph's mother Rahil, the moon is Jacob, and the eleven stars are his brothers."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 5,
+        "prompt": {
+          "en": "The first trial to befall Jacob and his house was their ____ of Joseph when they heard the dream."
+        },
+        "options": [
+          {
+            "en": "fear"
+          },
+          {
+            "en": "envy"
+          },
+          {
+            "en": "hatred"
+          },
+          {
+            "en": "pity"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration teaches that the very first trial to strike Jacob and his household was the brothers' envy of Joseph, stirred when they heard him tell the dream."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n3",
+          "quote": "The first trial to befall Jacob and his house was their envy of Joseph when they heard the dream."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 5,
+        "prompt": {
+          "en": "According to the commentary, Jacob warned Joseph to hide the dream because he already knew it meant his brothers would one day bow to him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports al-Tusi's point that Jacob spoke this way because he already knew the dream meant his other sons would one day bow to Joseph."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Jacob spoke this way because he already knew the dream meant his other sons would one day bow to Joseph"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 4,
+        "prompt": {
+          "en": "According to the essay, how does al-Tabatabai read Joseph's dream?"
+        },
+        "options": [
+          {
+            "en": "As glad tidings and the doorway into the whole story"
+          },
+          {
+            "en": "As a warning of the trials to come"
+          },
+          {
+            "en": "As a test of Joseph's patience"
+          },
+          {
+            "en": "As a sign that Jacob would lose him"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says al-Tabatabai reads the dream as glad tidings and the doorway into the whole story, the first stir of God's care for His servant."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "glad tidings and the doorway into the whole story, the first stir of God's care for His servant"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T10:58:48Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:00:32Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "2": {
+    "id": "12:2",
+    "surah": 12,
+    "index": 2,
+    "range": [
+      7,
+      20
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 7,
+        "prompt": {
+          "en": "\"Jacob was tried through Joseph only because he slaughtered a fat ram while a needy companion of his ... was overlooked and not fed.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Explaining why Jacob was tested through Joseph, Imam al-Sadiq traced it to Jacob slaughtering a fat ram while a needy fasting companion was left unfed."
+        },
+        "anchor": {
+          "where": "verses.7.narrations.n1",
+          "quote": "Jacob was tried through Joseph only because he slaughtered a fat ram while a needy companion of his, who found nothing to break his fast with, was overlooked and not fed"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 8,
+        "prompt": {
+          "en": "How does the commentary understand the brothers calling their father 'in manifest error'?"
+        },
+        "options": [
+          {
+            "en": "As a charge that Jacob had abandoned the true faith"
+          },
+          {
+            "en": "As proof that the brothers had become disbelievers"
+          },
+          {
+            "en": "As a complaint about his worldly judgment, not his religion"
+          },
+          {
+            "en": "As an honest observation that Jacob was truly mistaken"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The commentators agree the brothers were not accusing Jacob of straying in religion, which would have made them disbelievers, but only faulting his worldly judgment in favoring two sons."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a complaint about his worldly judgement in favoring two children over a capable band"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 15,
+        "prompt": {
+          "en": "The narration explains that 'while they are not aware' means Joseph's brothers were unaware he had been thrown into the well."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration glosses 'while they are not aware' as meaning they would not perceive that he was Joseph, not that they were unaware of the well they threw him into."
+        },
+        "anchor": {
+          "where": "verses.15.narrations.n3",
+          "quote": "'While they are not aware' means they do not perceive that you are Joseph."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 20,
+        "prompt": {
+          "en": "Al-bakhs means deficiency; it is the price of a hunting ____, which when killed is worth twenty dirhams."
+        },
+        "options": [
+          {
+            "en": "falcon"
+          },
+          {
+            "en": "hawk"
+          },
+          {
+            "en": "horse"
+          },
+          {
+            "en": "dog"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Rida glossed the cheap price as twenty dirhams, likening it to the worth of a hunting dog, which fetches twenty dirhams when killed."
+        },
+        "anchor": {
+          "where": "verses.20.narrations.n6",
+          "quote": "Al-bakhs means deficiency; it is the price of a hunting dog, which when killed is worth twenty dirhams."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 20,
+        "prompt": {
+          "en": "According to the essay's close, what became of the very means the brothers used to destroy and abase Joseph?"
+        },
+        "options": [
+          {
+            "en": "God used it to give him life and raise him"
+          },
+          {
+            "en": "It forced Jacob to give up patience and hope"
+          },
+          {
+            "en": "It kept Joseph a lowly slave all his life"
+          },
+          {
+            "en": "It was undone when the brothers wept in remorse"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay closes with al-Tabatabai's point that the very means meant to destroy and abase Joseph became how God gave him life and raised him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the very means meant to destroy and abase him became the means by which God gave him life and raised him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T10:55:24Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T10:57:15Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "3": {
+    "id": "12:3",
+    "surah": 12,
+    "index": 3,
+    "range": [
+      21,
+      29
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the passage, what does God's 'establishing' of Joseph in the land refer to?"
+        },
+        "options": [
+          {
+            "en": "Teaching him to interpret dreams"
+          },
+          {
+            "en": "Adopting him as the Egyptian's son"
+          },
+          {
+            "en": "God inclining the buyer's heart toward him"
+          },
+          {
+            "en": "Giving him an honourable place in the house"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay gives Majma's reading that God's establishing of Joseph in the land means God inclined the buyer's heart toward him, not the separate promise to teach him dreams."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Majma reads the establishing as God inclining the buyer's heart toward him"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the passage, the judgement God gave Joseph is explained as a decisive word that leads to wisdom."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Following Tibyan, the essay glosses the judgement God gave Joseph as the decisive word that calls to wisdom, so this restatement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "When Joseph came of age God gave him judgement and knowledge, which Tibyan calls the decisive word that calls to wisdom"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 23,
+        "prompt": {
+          "en": "According to the note, whom do most commentators understand by 'my Lord' in Joseph's reply?"
+        },
+        "options": [
+          {
+            "en": "God himself"
+          },
+          {
+            "en": "Her husband, the master who honoured him"
+          },
+          {
+            "en": "The prophet Jacob"
+          },
+          {
+            "en": "The one who sold him into slavery"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says most commentators read 'my Lord' as her husband, the master who gave Joseph an honourable place, while only some read it as God himself."
+        },
+        "anchor": {
+          "where": "verses.23.note",
+          "quote": "most commentators take the lord to be her husband, the master who honoured him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 26,
+        "prompt": {
+          "en": "\"God inspired Joseph to say to the king, 'Ask this infant in the cradle, for he will testify that she solicited me.'\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Zayn al-Abidin"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq narrated that God inspired Joseph to call on the infant in the cradle, and God made the child speak to clear Joseph before the king."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n4",
+          "quote": "God inspired Joseph to say to the king, 'Ask this infant in the cradle, for he will testify that she solicited me.'"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 29,
+        "prompt": {
+          "en": "Through the very ____ set for him, God prevails over His affair and drives every cause toward Joseph's rise."
+        },
+        "options": [
+          {
+            "en": "trap"
+          },
+          {
+            "en": "path"
+          },
+          {
+            "en": "gift"
+          },
+          {
+            "en": "reward"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay closes that the very trap laid for Joseph, the seduction and the false charge, became the means by which God drove every cause toward his rise."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Through the very trap set for him, God prevails over His affair and drives every cause toward Joseph's rise"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:09:13Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:10:51Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "4": {
+    "id": "12:4",
+    "surah": 12,
+    "index": 4,
+    "range": [
+      30,
+      35
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 30,
+        "prompt": {
+          "en": "According to the essay, the townswomen were only gossiping and had no scheme of their own to make the wife show them Joseph."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says their talk was itself a scheme, as Tabrisi holds, meant to make the chieftain's wife display Joseph, whose beauty they had heard of."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Their talk was itself a scheme, Tabrisi holds, meant to make her display Joseph, whose beauty they had heard of"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 31,
+        "prompt": {
+          "en": "In the essay, how does Tusi read the women's cry that Joseph is 'a noble angel'?"
+        },
+        "options": [
+          {
+            "en": "As proof that Joseph was truly an angel"
+          },
+          {
+            "en": "As mockery aimed at the chieftain's wife"
+          },
+          {
+            "en": "As setting him beyond human likeness for his beauty"
+          },
+          {
+            "en": "As a sign of their repentance"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the women's words, as Tusi notes, set Joseph beyond human likeness for his beauty; they were struck by his looks, not naming him a real angel."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "words that, Tusi notes, set him beyond human likeness for his beauty"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 33,
+        "prompt": {
+          "en": "'The women left her, and each of them sent to Joseph secretly, apart from her companions, asking him for a visit. He refused them.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sajjad"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Ridha"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sajjad relates that the women sent to Joseph in secret asking for a visit and he refused them, then prayed that God turn their scheme away."
+        },
+        "anchor": {
+          "where": "verses.33.narrations.n2",
+          "quote": "The women left her, and each of them sent to Joseph secretly, apart from her companions, asking him for a visit. He refused them"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 35,
+        "prompt": {
+          "en": "The signs were ____, the shirt torn from behind, and their racing to the door, until he heard her pulling at him there."
+        },
+        "options": [
+          {
+            "en": "the wife's confession"
+          },
+          {
+            "en": "the child's testimony"
+          },
+          {
+            "en": "the townswomen's talk"
+          },
+          {
+            "en": "the servant's account"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir names the signs of Joseph's innocence as the child's testimony, the shirt torn from behind, and their racing to the door."
+        },
+        "anchor": {
+          "where": "verses.35.narrations.n3",
+          "quote": "The signs were the child's testimony, the shirt torn from behind, and their racing to the door, until he heard her pulling at him there."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 35,
+        "prompt": {
+          "en": "According to the passage, why does the Shia reading say the household confined Joseph?"
+        },
+        "options": [
+          {
+            "en": "Because the wife had threatened him with prison"
+          },
+          {
+            "en": "Because they had seen no proof of his innocence"
+          },
+          {
+            "en": "Because Joseph had asked to be imprisoned"
+          },
+          {
+            "en": "To shield the family from the scandal, not to punish him"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say Tabatabai holds the household confined Joseph only to shield the family from the scandal, not to punish a wrongdoer."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tabatabai holds that the household confined him only to shield the family from the scandal, not to punish a wrongdoer"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:13:42Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:15:19Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "5": {
+    "id": "12:5",
+    "surah": 12,
+    "index": 5,
+    "range": [
+      36,
+      42
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 36,
+        "prompt": {
+          "en": "Who said that the 'virtuous man' Yusuf would tend the sick, seek out the needy, and make room for the imprisoned?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Hasan"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the words 'we see you to be a virtuous man,' Imam al-Sadiq said Yusuf would tend the sick, seek out the needy, and make room for the imprisoned."
+        },
+        "anchor": {
+          "where": "verses.36.narrations.n2",
+          "quote": "he would tend the sick, seek out the needy, and make room for the imprisoned"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 36,
+        "prompt": {
+          "en": "According to the passage, why were the two servants jailed in the same prison as Yusuf?"
+        },
+        "options": [
+          {
+            "en": "They stole wine and bread from the king"
+          },
+          {
+            "en": "Word reached the king that one of them meant to poison him"
+          },
+          {
+            "en": "They refused to worship the king's gods"
+          },
+          {
+            "en": "They quarreled over the meaning of a dream"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the cupbearer and the food overseer were jailed when word reached the king that one of them meant to poison him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "imprisoned when word reached the king that one of them meant to poison him"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 38,
+        "prompt": {
+          "en": "According to the passage, when Yusuf names 'the creed of my fathers,' the narration counts the grandfather among the fathers."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration recites Yusuf's words about the creed of his fathers and says that in the Book of Allah the grandfather is counted a father."
+        },
+        "anchor": {
+          "where": "verses.38.narrations.n3",
+          "quote": "in the Book of Allah the grandfather is a father"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 41,
+        "prompt": {
+          "en": "Only after ____ does he interpret: the cupbearer will be restored, the baker crucified, and the matter is decided."
+        },
+        "options": [
+          {
+            "en": "the meal is served"
+          },
+          {
+            "en": "he is freed"
+          },
+          {
+            "en": "preaching"
+          },
+          {
+            "en": "the dreams repeat"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay stresses that Yusuf preaches God's oneness first and only then interprets the dreams, turning the prison cell into a pulpit."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Only after preaching does he interpret: the cupbearer will be restored, the baker crucified, and the matter is decided"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 42,
+        "prompt": {
+          "en": "According to the passage, the commentators disagree over who was made to forget. On what does their disagreement turn?"
+        },
+        "options": [
+          {
+            "en": "The prophets' protection from sin"
+          },
+          {
+            "en": "Whether the cupbearer was ever freed"
+          },
+          {
+            "en": "The meaning of the wine and bread dreams"
+          },
+          {
+            "en": "How long Yusuf's imprisonment lasted"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage says the two readings of 'Satan caused him to forget' turn on the prophets' protection from sin, which the traditions weigh differently."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The difference turns on the prophets' protection from sin, weighed differently by the two traditions"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:20:39Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:22:10Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "6": {
+    "id": "12:6",
+    "surah": 12,
+    "index": 6,
+    "range": [
+      43,
+      49
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 44,
+        "prompt": {
+          "en": "According to the passage, the king's courtiers interpreted his dream before he consulted Joseph."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay says the courtiers dismissed the dream as jumbled nightmares and admitted they could not interpret such dreams; only afterward did the cupbearer turn to Joseph."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "They dismiss it as jumbled nightmares and admit they cannot interpret such dreams"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 44,
+        "prompt": {
+          "en": "\"Dreams are of three kinds: glad tidings from God to the believer, a warning from Satan, and jumbled dreams.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq divides dreams into three kinds: glad tidings from God to the believer, a warning from Satan, and jumbled dreams, the last being what the courtiers named."
+        },
+        "anchor": {
+          "where": "verses.44.narrations.n1",
+          "quote": "Dreams are of three kinds: glad tidings from God to the believer, a warning from Satan, and jumbled dreams"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 47,
+        "prompt": {
+          "en": "How does Tabatabai read Joseph's reply to the king's dream?"
+        },
+        "options": [
+          {
+            "en": "As merely forecasting the coming seasons"
+          },
+          {
+            "en": "As turning the dream into a plan of action"
+          },
+          {
+            "en": "As a warning that no plan could save them"
+          },
+          {
+            "en": "As proof the dream had no real meaning"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Tabatabai stresses that Joseph does not merely forecast the seasons; his reply turns the dream into a plan of action, a prelude to escaping the famine that threatened the land."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Joseph does not merely forecast the seasons; his reply turns the dream into a plan of action, making his command a prelude to escaping the famine that threatened the land"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 47,
+        "prompt": {
+          "en": "When those years passed and the lean years came, he began ____ the grain."
+        },
+        "options": [
+          {
+            "en": "hoarding"
+          },
+          {
+            "en": "rationing"
+          },
+          {
+            "en": "distributing"
+          },
+          {
+            "en": "selling"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Rida relates that Joseph stored the grain through the seven fertile years, then, when the lean years came, he began selling it from the storehouses."
+        },
+        "anchor": {
+          "where": "verses.47.narrations.n2",
+          "quote": "When those years passed and the lean years came, he began selling the grain"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 49,
+        "prompt": {
+          "en": "According to the perspectives, on Ali's authority, what do the Shia commentators read the year of relief to mean?"
+        },
+        "options": [
+          {
+            "en": "The people sow grain for seven consecutive years."
+          },
+          {
+            "en": "The people keep back a little of the harvest as seed."
+          },
+          {
+            "en": "The people are given rain after the years of famine."
+          },
+          {
+            "en": "The people gather grain into the storehouses."
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "On Ali's authority the Shia commentators read the passive yu'saruna: in the year of relief the people are given rain after the famine, citing a verse about rain-clouds sending down water."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the Shia commentators read the passive 'yu'saruna,' that in the year of relief the people are given rain after the famine"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:21:12Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:22:51Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "7": {
+    "id": "12:7",
+    "surah": 12,
+    "index": 7,
+    "range": [
+      50,
+      57
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 50,
+        "prompt": {
+          "en": "When the king summons him, Joseph refuses to leave prison until his innocence is established."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Joseph does not hurry from prison; he sends the messenger back so the king will investigate the affair, refusing to leave until his innocence is clear."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "refusing to leave until his innocence is clear and it is known he was jailed unjustly"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 51,
+        "prompt": {
+          "en": "When the king questions the women, what does the prince's wife admit about Joseph?"
+        },
+        "options": [
+          {
+            "en": "She solicited him and he told the truth"
+          },
+          {
+            "en": "He solicited her and then repented"
+          },
+          {
+            "en": "She knew nothing of the affair"
+          },
+          {
+            "en": "The other women plotted against him"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the essay the prince's wife confesses that it was she who solicited Joseph and that he is telling the truth, which clears him before the king."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the prince's wife confesses, 'Now the truth has come to light! It was I who solicited him, and he is indeed telling the truth.'"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 55,
+        "prompt": {
+          "en": "\"Yes, when he is compelled to it. Have you not heard Joseph's words: Put me in charge of the country's granaries; I am indeed fastidious and well-informed?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq told Sufyan that a man may praise himself when he is compelled to it, and pointed to Joseph's request to be put in charge of the granaries."
+        },
+        "anchor": {
+          "where": "verses.55.narrations.n1",
+          "quote": "Yes, when he is compelled to it. Have you not heard Joseph's words: Put me in charge of the country's granaries; I am indeed fastidious and well-informed?"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 55,
+        "prompt": {
+          "en": "And necessity drove me to ____ this under coercion and compulsion."
+        },
+        "options": [
+          {
+            "en": "reject"
+          },
+          {
+            "en": "delay"
+          },
+          {
+            "en": "accept"
+          },
+          {
+            "en": "conceal"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Rida likened himself to Joseph: necessity drove him to accept the office under coercion and compulsion, just as Joseph took charge of the granaries out of need."
+        },
+        "anchor": {
+          "where": "verses.55.narrations.n2",
+          "quote": "And necessity drove me to accept this under coercion and compulsion."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 52,
+        "prompt": {
+          "en": "According to the perspectives, what do Shia commentators say about the report that Gabriel reminded Joseph of his desire for the wife?"
+        },
+        "options": [
+          {
+            "en": "It is a fabrication against the Quran"
+          },
+          {
+            "en": "It is confirmed by the Qummi narration"
+          },
+          {
+            "en": "It clears Joseph of every fault"
+          },
+          {
+            "en": "It shows why the women cut their hands"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say Shia commentators reject the report that Gabriel reminded Joseph of his desire; al-Mizan calls it a fabrication against the Quran."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia commentators reject this: al-Mizan calls the report a fabrication against the Quran"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:30:53Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:32:42Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "8": {
+    "id": "12:8",
+    "surah": 12,
+    "index": 8,
+    "range": [
+      58,
+      68
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 58,
+        "prompt": {
+          "en": "According to the narration, what was Joseph's standing when his brothers entered his presence?"
+        },
+        "options": [
+          {
+            "en": "He was a prisoner awaiting the king's judgment"
+          },
+          {
+            "en": "He was a servant in the Aziz's household"
+          },
+          {
+            "en": "The Aziz had set him over Egypt"
+          },
+          {
+            "en": "He was a grain merchant in the market"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration says that after the Aziz had set him over Egypt, Joseph recognized his brothers while they did not know him, so he now held authority over the land."
+        },
+        "anchor": {
+          "where": "verses.58.narrations.n1",
+          "quote": "after the Aziz had set him over Egypt, Joseph recognized them, but his brothers did not recognize him"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 62,
+        "prompt": {
+          "en": "According to the essay, Joseph returned his brothers' payment to test whether they would honestly bring it back."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay gives his reasons as kindness, so they might find the means to return, and reluctance to take a price from his own father and brothers in a year of hardship, not a test of their honesty."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "kindness, so that they might find the means to return, and a reluctance to take a price from his own father and brothers in a year of hardship"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 64,
+        "prompt": {
+          "en": "Jacob answers with the old ____: shall he trust them as he once trusted them with Joseph?"
+        },
+        "options": [
+          {
+            "en": "hope"
+          },
+          {
+            "en": "quarrel"
+          },
+          {
+            "en": "promise"
+          },
+          {
+            "en": "wound"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay names Jacob's reply the old wound, recalling how he once trusted them with Joseph before losing him, so only wound completes the sentence as the passage has it."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Jacob answers with the old wound: shall he trust them as he once trusted them with Joseph?"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 65,
+        "prompt": {
+          "en": "\"Because he provisions them with knowledge,\" said in answer to why the Commander of the Faithful bears that name. Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked why the Commander of the Faithful bears that title, Imam al-Baqir answered that he provisions the people with knowledge, citing the verse we get provisions for our family."
+        },
+        "anchor": {
+          "where": "verses.65.narrations.n2",
+          "quote": "Because he provisions them with knowledge. Have you not heard the word of God: 'and we get provisions for our family'?"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 67,
+        "prompt": {
+          "en": "According to the essay, what does Jacob's advice to enter by separate gates show about relying on God?"
+        },
+        "options": [
+          {
+            "en": "That the means always change God's decree"
+          },
+          {
+            "en": "That trusting God does not require abandoning the means"
+          },
+          {
+            "en": "That trusting God forbids taking any precaution"
+          },
+          {
+            "en": "That the evil eye can overturn God's will"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Jacob holds to the means and to God together, so his advice to enter by separate gates shows that relying on God does not mean giving up ordinary means."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Jacob holds to the means and to God together, for reliance does not mean abandoning the means"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:32:36Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:34:28Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "9": {
+    "id": "12:9",
+    "surah": 12,
+    "index": 9,
+    "range": [
+      69,
+      79
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 69,
+        "prompt": {
+          "en": "Before the seizure, Joseph had already disclosed his plan to his brother, so taking him did the boy no wrong."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Joseph had already disclosed the plan to the boy, so that hiding the cup and seizing him did him no wrong; the brother knew what was coming."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "one he had already disclosed to the boy, so that the seizure did him no wrong"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 70,
+        "prompt": {
+          "en": "\"There is no good in one who has no taqiyya\": who taught this while explaining Joseph's charge of theft?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Baqir teaches that there is no good in one without taqiyya, citing how Joseph called the caravan thieves though they had not stolen."
+        },
+        "anchor": {
+          "where": "verses.70.narrations.n2",
+          "quote": "There is no good in one who has no taqiyya. Joseph said, 'O caravan, you are indeed thieves,' and yet they had not stolen."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 76,
+        "prompt": {
+          "en": "According to the essay, how could Joseph hold his brother when the king's law would not have let him?"
+        },
+        "options": [
+          {
+            "en": "The king's law made every thief a slave"
+          },
+          {
+            "en": "The cup slipped into the boy's sack by chance"
+          },
+          {
+            "en": "The brothers' own ruling let the thief be held for it"
+          },
+          {
+            "en": "The king granted Joseph a special exemption"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the king's law did not enslave a thief; only the brothers' own rule, that whoever's bag held the cup answered for it, let Joseph keep him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Under the king's law Joseph could not have held his brother, for that law did not enslave a thief; only the brothers' own ruling opened the way"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 77,
+        "prompt": {
+          "en": "Isaac had a ____ the great prophets inherited; it was with Joseph's aunt, who loved him."
+        },
+        "options": [
+          {
+            "en": "staff"
+          },
+          {
+            "en": "belt"
+          },
+          {
+            "en": "cloak"
+          },
+          {
+            "en": "ring"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Rida's report names the inherited object as a belt of Isaac; hidden on Joseph by his aunt, it made him seem a thief, so she could keep him."
+        },
+        "anchor": {
+          "where": "verses.77.narrations.n5",
+          "quote": "Isaac had a belt the great prophets inherited; it was with Joseph's aunt, who loved him."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 79,
+        "prompt": {
+          "en": "According to the Perspectives, how do the Shia commentators hold that Joseph avoided any lie in the herald's charge of theft?"
+        },
+        "options": [
+          {
+            "en": "The cup had really been stolen from the king's household"
+          },
+          {
+            "en": "The brother had truly hidden the cup in his own saddlebag"
+          },
+          {
+            "en": "The king's steward had made a false accusation"
+          },
+          {
+            "en": "The cry pointed to the brothers' old theft of Joseph"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The Shia commentators read the cry not as a lie but as pointing to the brothers' earlier theft of Joseph from his father, when they cast him away."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia commentators hold that he did not lie: the cry pointed instead to the brothers' old theft of Joseph from his father"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:39:37Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:41:07Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "10": {
+    "id": "12:10",
+    "surah": 12,
+    "index": 10,
+    "range": [
+      80,
+      93
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 80,
+        "prompt": {
+          "en": "According to the essay, why does the eldest brother refuse to leave Egypt?"
+        },
+        "options": [
+          {
+            "en": "He will not leave until his father permits or Allah judges"
+          },
+          {
+            "en": "He hopes to ransom Benjamin from the emir"
+          },
+          {
+            "en": "He wants to search Egypt for Joseph himself"
+          },
+          {
+            "en": "He fears the emir will jail them all"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the eldest reminds them of the pledge and refuses to leave Egypt until his father permits him or Allah judges for him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "he refuses to leave Egypt until his father permits him or Allah judges for him"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 83,
+        "prompt": {
+          "en": "\"It is a patience in which there is no complaint to any of the people.\" Who described beautiful patience this way?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked what beautiful patience is, Imam al-Baqir answered that it is a patience in which there is no complaint to any of the people."
+        },
+        "anchor": {
+          "where": "verses.83.narrations.n2",
+          "quote": "it is a patience in which there is no complaint to any of the people"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 87,
+        "prompt": {
+          "en": "According to the passage, Jacob had concluded that Joseph was dead."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. Imam al-Baqir relates that Jacob asked the Angel of Death whether Joseph's soul had passed; told no, he knew his son was still alive."
+        },
+        "anchor": {
+          "where": "verses.87.narrations.n4",
+          "quote": "He prayed at dawn for the Angel of Death to descend, and asked, by the God of Abraham, Isaac and Jacob, whether Joseph's soul had passed among the souls. He said no, so Jacob knew."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 89,
+        "prompt": {
+          "en": "So he called them ____ for risking themselves in disobedience of Allah."
+        },
+        "options": [
+          {
+            "en": "faithless"
+          },
+          {
+            "en": "ignorant"
+          },
+          {
+            "en": "reckless"
+          },
+          {
+            "en": "foolish"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq teaches that whoever sins acts as an ignorant man, so Joseph called his brothers ignorant for risking themselves in disobeying Allah."
+        },
+        "anchor": {
+          "where": "verses.89.narrations.n5",
+          "quote": "So he called them ignorant for risking themselves in disobedience of Allah."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 93,
+        "prompt": {
+          "en": "According to the essay's close, what does the completed reversal in Joseph's story show?"
+        },
+        "options": [
+          {
+            "en": "The brothers finally repaid Joseph for the harm they caused"
+          },
+          {
+            "en": "Jacob punished the brothers for their betrayal"
+          },
+          {
+            "en": "Joseph refused to forgive his brothers"
+          },
+          {
+            "en": "Their scheme to bring Joseph low became the means of his rise"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes that the reversal is complete: the very means by which the brothers meant to bring Joseph low became the means of his rise."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the very means by which the brothers meant to bring Joseph low became the means of his rise, for God prevails over His affair"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:43:20Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:44:46Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "11": {
+    "id": "12:11",
+    "surah": 12,
+    "index": 11,
+    "range": [
+      94,
+      104
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 94,
+        "prompt": {
+          "en": "When Joseph drew this shirt from the ____, Jacob caught its scent."
+        },
+        "options": [
+          {
+            "en": "well"
+          },
+          {
+            "en": "amulet"
+          },
+          {
+            "en": "chest"
+          },
+          {
+            "en": "saddlebag"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration says that when Joseph drew the shirt from the amulet, Jacob caught its scent, so the amulet is where the inherited shirt had been kept."
+        },
+        "anchor": {
+          "where": "verses.94.narrations.n1",
+          "quote": "When Joseph drew this shirt from the amulet, Jacob caught its scent."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 95,
+        "prompt": {
+          "en": "According to the essay, what is the 'error' that Jacob's kin accuse him of persisting in?"
+        },
+        "options": [
+          {
+            "en": "His long grief and love for Joseph"
+          },
+          {
+            "en": "His straying from the true religion"
+          },
+          {
+            "en": "His refusal to forgive his sons"
+          },
+          {
+            "en": "His false claim to smell a scent"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses the 'error' his kin name as his long grief and love for Joseph, not any straying in religion, so grief is what they mean."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the 'error' they name is his long grief and love for Joseph, not any straying in religion"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 98,
+        "prompt": {
+          "en": "\"Joseph hastened to pardon a wrong done to himself, but Jacob's pardon concerned a wrong done to another.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked why Jacob delayed forgiveness while Joseph pardoned at once, Imam al-Sadiq answered that the young man's heart is softer, and Jacob's pardon concerned a wrong done to another."
+        },
+        "anchor": {
+          "where": "verses.98.narrations.n3",
+          "quote": "Joseph hastened to pardon a wrong done to himself, but Jacob's pardon concerned a wrong done to another"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 100,
+        "prompt": {
+          "en": "According to the essay, what does Jacob and his sons falling prostrate before Joseph amount to?"
+        },
+        "options": [
+          {
+            "en": "An act of worship offered to Joseph himself"
+          },
+          {
+            "en": "A plea for Joseph to forgive their sins"
+          },
+          {
+            "en": "A greeting directed to Jacob rather than to Joseph"
+          },
+          {
+            "en": "Worship directed to Allah, with Joseph as its point of direction"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay reads the prostration as worship directed to Allah, with Joseph only its point of direction, just as the angels were commanded to bow before Adam."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "worship directed to Allah, with Joseph taken as its point of direction, like the angels commanded to bow before Adam"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 101,
+        "prompt": {
+          "en": "According to the passage, the majority read Joseph's closing plea as a wish to die in submission, not a request for death."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage reports that the majority take Joseph's words as a plea to die a Muslim when his term comes, not a wish for death, so the statement is true."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the majority take the verse as a plea to die a Muslim when one's term comes, not a wish for death"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:49:08Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:50:45Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  },
+  "12": {
+    "id": "12:12",
+    "surah": 12,
+    "index": 12,
+    "range": [
+      105,
+      111
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 105,
+        "prompt": {
+          "en": "Ali ibn Ibrahim glosses these signs of the heavens and the earth as the eclipse, the ____, and the thunderbolts."
+        },
+        "options": [
+          {
+            "en": "flood"
+          },
+          {
+            "en": "drought"
+          },
+          {
+            "en": "earthquake"
+          },
+          {
+            "en": "sunrise"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note reports Ali ibn Ibrahim reading the signs of the heavens and the earth concretely, as the eclipse, the earthquake, and the thunderbolts, the events people pass by unheeding."
+        },
+        "anchor": {
+          "where": "verses.105.note",
+          "quote": "Ali ibn Ibrahim glosses these signs of the heavens and the earth as the eclipse, the earthquake, and the thunderbolts"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 106,
+        "prompt": {
+          "en": "\"Had it not been for so-and-so I would have perished; had it not been for so-and-so I would have lost my family.\" Who taught that such a man sets up a partner in Allah's dominion?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Jawad"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked about faith mixed with shirk, Imam al-Sadiq gave the example of the man who credits so-and-so with saving him, and so sets up a partner to Allah in His dominion."
+        },
+        "anchor": {
+          "where": "verses.106.narrations.n2",
+          "quote": "It is the man who says, 'Had it not been for so-and-so I would have perished; had it not been for so-and-so I would have lost my family.'"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 106,
+        "prompt": {
+          "en": "How does Tabatabai read the verse that most do not believe in Allah without ascribing partners to Him?"
+        },
+        "options": [
+          {
+            "en": "The open idolatry of the Meccans"
+          },
+          {
+            "en": "Hidden shirk that coexists with faith by degrees"
+          },
+          {
+            "en": "The pretence of the hypocrites"
+          },
+          {
+            "en": "Proof that most people are outright unbelievers"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai rejects both the Meccan idolatry and the hypocrites' pretence as narrowing the verse, reading it instead as a hidden shirk that coexists with faith by degrees."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads this not as the idolatry of Mecca nor the pretence of the hypocrites, which he rejects as narrowing the verse, but as the hidden shirk that coexists with faith by degrees"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 109,
+        "prompt": {
+          "en": "According to the passage, God sent angels down to the earth to serve as its imams and rulers."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq says God never left the world without a prophet or imam from mankind and did not send angels to the earth as imams and rulers; angels were sent only to the prophets."
+        },
+        "anchor": {
+          "where": "verses.109.narrations.n5",
+          "quote": "He did not send angels to the earth to be imams and rulers; the angels were sent only to the prophets of Allah."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 110,
+        "prompt": {
+          "en": "In the perspectives, why do the Shia commentators read verse 110 so that the peoples, not the messengers, took them for liars?"
+        },
+        "options": [
+          {
+            "en": "To keep any doubt away from the prophets themselves"
+          },
+          {
+            "en": "To show the punishment was well deserved"
+          },
+          {
+            "en": "To warn believers against ever losing hope"
+          },
+          {
+            "en": "To explain why God's help arrived so late"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say the Shia commentators, and al-Rida before al-Ma'mun, read the verse to guard prophetic infallibility: the messengers despaired only of their peoples, and it was those peoples who took the messengers for liars."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia commentators guard the prophets' certainty: the messengers despaired only of their peoples, and it was those peoples who took the messengers for liars"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:49:20Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:50:45Z",
+      "assembled_at": "2026-09-16T11:51:37Z"
+    }
+  }
+}

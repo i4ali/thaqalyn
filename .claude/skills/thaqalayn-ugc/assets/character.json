@@ -1,0 +1,318 @@
+{
+  "prompt_id": "thaqalayn_presenter_locked_v1",
+  "prompt_language": "en",
+  "critical_constraints": [
+    "FACE: a real, ordinary man of 28 with a slightly long oval face, flat midface, mild asymmetry (left eye 1 mm lower than right); not a model, not idealised, not the V-line doll face",
+    "EYES: medium-small, almond, single crease, heavy upper lid covering 25 percent of the iris, dark brown iris #3a2416; NOT large, NOT round, NOT glossy",
+    "HAIR: black hair cropped to 8 mm on top with a skin fade at the temples; short dense black beard 10 mm on the jaw, connected to a trimmed moustache, sharp cheek line; no long hair, no clean shave, no stubble-only",
+    "SKIN: medium tan #b5825c with visible pores on the nose and cheeks, faint oil shine on the forehead and nose tip, a 2 mm mole under the outer corner of the left eye; NOT poreless, NOT glowing",
+    "BODY: slim athletic, shoulders 44 cm wide, ordinary posture leaning 5 degrees toward the camera",
+    "TOP: plain white cotton crew-neck T-shirt, slightly loose, fine horizontal creases at the chest and one crease at each shoulder seam; no logo, no print, no pocket",
+    "PROP: one small matte-black wireless lavalier microphone, 2 cm square, clipped at the centre of the T-shirt collar, 3 cm below the neckline; nothing else attached",
+    "POSE: standing, torso square to camera, head turned 3 degrees to his right and tilted 2 degrees, direct eye contact with the lens, both hands out of frame below the crop",
+    "EXPRESSION: mid-sentence, mouth open 8 mm showing the upper teeth only, relaxed brows, eyes slightly narrowed by a small genuine smile, warmth 6 out of 10; not a grin, not neutral",
+    "SCENE: outdoors in a suburban back garden at golden hour, a large rough-barked tree trunk filling the upper left behind him, sunlit green and yellow foliage behind, a low red wooden fence visible at the far right edge, sky peeking through leaves; no studio, no indoor wall",
+    "LIGHT: low warm sun from the front-left at 30 degrees elevation, soft open-shade fill, warm rim on the right side of the hair; no ring light, no flash",
+    "FRAMING: vertical 9:16 selfie video frame, phone front camera held at arm's length 55 cm away at eye level, head and shoulders, crop at mid-chest, head top 6 percent below the frame edge",
+    "MEDIUM: must read as an unretouched frame grab from a 1080p smartphone front-camera video, slightly soft, mild compression, never as a render, a studio photo or a retouched portrait"
+  ],
+  "negative_prompt": [
+    "ultra-detailed, hyper-detailed, 8K, 4K, masterpiece, best quality, ultra-realistic, photorealistic render, sharp focus, crisp, intricate details",
+    "oversharpened, high clarity, HDR, high micro-contrast, glowing skin, luminous, radiant, dreamy glow, soft glow bloom",
+    "flawless skin, poreless, smooth skin, perfect skin, porcelain, waxy, glossy highlights on skin, airbrushed, retouched, plastic skin",
+    "perfect symmetry, perfect teeth, perfect hair, every strand defined, shiny hair highlights",
+    "pristine clothing, wrinkle-free fabric, perfectly even background, studio perfection",
+    "stock photo, advertising photo, magazine cover, professional retouching, beauty campaign, model, influencer glamour",
+    "large eyes, round eyes, double eyelid, aegyo sal, bright glossy eyes, coloured eyes",
+    "V-line face, doll face, chiselled jaw, sculpted cheekbones, symmetrical face",
+    "long hair, curly hair, hair volume, clean shaven, patchy beard, stubble only, grey hair",
+    "pale skin, very dark skin, tanned orange skin, freckles",
+    "muscular, bulky, broad shoulders, tight T-shirt, V-neck, collar shirt, hoodie, jacket, printed T-shirt, logo, graphic",
+    "glasses, sunglasses, hat, cap, kufi, turban, earrings, necklace, chain, watch, bracelet, ring, headphones, earbuds, second microphone, handheld microphone",
+    "hands in frame, pointing, touching face, holding phone, holding anything",
+    "second person, text, captions, subtitles, watermark, logo, on-screen graphics, emoji",
+    "indoor, studio, plain wall, bookshelf, mosque interior, desk, chair, car, street, city",
+    "ring light, flash, studio lighting, rim light from behind, blue light, night, overcast grey",
+    "wide shot, full body, extreme close-up, profile, three-quarter turn away, looking away, closed eyes, closed mouth, wide grin, laughing, frowning, serious stare",
+    "horizontal frame, square frame, DSLR bokeh, cinematic depth of field, film look, black and white, vignette",
+    "illustration, 3D render, CGI, painting, cartoon, anime, sketch"
+  ],
+  "subject": {
+    "count": 1,
+    "gender": "male",
+    "ethnicity": "South Asian and Middle Eastern mixed appearance, used only as a rendering cue",
+    "apparent_age": "28",
+    "attractiveness_level": "ordinary, pleasant, not model-like",
+    "height_impression": "178 cm",
+    "build": "slim athletic; shoulders 44 cm wide, arms of medium thickness, flat chest, straight waist",
+    "posture": "standing upright, leaning 5 degrees toward the lens",
+    "weight_distribution": "even on both feet, out of frame"
+  },
+  "face": {
+    "shape": "long oval",
+    "length_width_ratio": "1.45 to 1",
+    "forehead": "medium height, 6 cm from brow to hairline, slightly rounded",
+    "cheekbones": "medium height, not prominent, soft",
+    "midface": "flat, little projection",
+    "jaw": "medium width, softly angled at 115 degrees, covered by beard",
+    "chin": "rounded, slightly short, beard-covered",
+    "philtrum": "medium, 15 mm",
+    "eye_spacing": "average, one eye width apart",
+    "asymmetry": "left eye sits 1 mm lower than the right; right brow arches 1 mm higher; smile pulls 2 mm more to his right",
+    "skin": {
+      "tone": "medium tan, hex #b5825c",
+      "undertone": "warm olive",
+      "texture": "visible pores on nose and cheeks, faint fine lines at the outer eye corners",
+      "color_variation": "slightly darker under the eyes #8f6543, slightly redder on the nose tip and cheeks #b97b5e",
+      "shine_zones": "faint oil shine on forehead centre and nose tip",
+      "blemishes": "one small healed mark 3 mm on the right cheek near the beard line",
+      "freckles": "none",
+      "moles": "one 2 mm dark mole 8 mm below the outer corner of the left eye",
+      "sweat": "none"
+    },
+    "eyes": {
+      "type": "single crease, heavy upper lid",
+      "shape": "almond",
+      "tilt": "level, 0 degrees",
+      "size": "medium-small relative to the face",
+      "height_width_ratio": "1 to 2.6",
+      "lid": "upper lid covers 25 percent of the iris",
+      "aperture": "slightly narrowed by the smile",
+      "blink_state": "open",
+      "smile_behavior": "lower lids rise 1 mm, small crow's feet appear",
+      "iris_color": "dark brown, hex #3a2416",
+      "liner": "none",
+      "eyeshadow": "none",
+      "lashes": "short, dark, straight, 7 mm",
+      "under_eye": "faint darker tone, slight 1 mm puffiness, no bags"
+    },
+    "eyebrows": {
+      "shape": "straight with a soft outer taper",
+      "position": "8 mm above the eye crease",
+      "thickness": "thick, 10 mm at the head, 4 mm at the tail",
+      "color": "black, hex #1a120c",
+      "texture": "dense, natural, 6 stray hairs between the brows"
+    },
+    "nose": {
+      "bridge": "medium height, straight with a slight bump at the midpoint",
+      "tip": "rounded, medium size, slightly downturned",
+      "nostrils": "medium width, 34 mm across"
+    },
+    "mouth": {
+      "lip_shape": "medium full, defined cupid's bow, lower lip 1.3 times the upper",
+      "lip_ratio": "upper 6 mm, lower 8 mm",
+      "lip_color": "muted brown-rose, hex #9a5e55, slightly darker at the edges",
+      "lip_finish": "matte, natural, faint vertical lines",
+      "opening": "8 mm, mid-word",
+      "visible_teeth": "upper 6 front teeth, slightly uneven, natural off-white #e9e2d3",
+      "tongue": "not visible"
+    },
+    "makeup": {
+      "foundation": "none",
+      "blush": "none",
+      "highlighter": "none",
+      "contour": "none"
+    },
+    "ears": {
+      "left": "partly visible, lobe attached, no piercing",
+      "right": "partly visible, lobe attached, no piercing"
+    }
+  },
+  "hair": {
+    "color": "black, hex #15100c",
+    "highlight_color": "none, only warm sun rim #5a3a24 on the right edge",
+    "length": "cropped, 8 mm on top",
+    "texture": {
+      "roots": "tight natural curl, dense",
+      "mids": "tight curl, 8 mm",
+      "ends": "tight curl, matte"
+    },
+    "density": "dense",
+    "volume": "flat to the scalp",
+    "cut": "short crop with a skin fade from 0 mm at the temples to 8 mm on top, sharp straight hairline, slightly squared corners",
+    "fringe": "none, hairline exposed",
+    "part": "none",
+    "crown": "rounded, even",
+    "placement": {
+      "left_shoulder": "not reaching",
+      "right_shoulder": "not reaching"
+    },
+    "behind_ears": {
+      "left": "not applicable",
+      "right": "not applicable"
+    },
+    "imperfections": "hairline 1 mm uneven on the left temple, fade slightly blurred",
+    "shine": "matte with a faint warm rim on the sunlit right side",
+    "facial_hair": "full short beard 10 mm on the jaw and chin, connected to a 6 mm moustache, sharp cheek line 1 cm below the cheekbone, neck line trimmed 2 cm above the Adam's apple, black #15100c with 1 percent grey hairs at the chin"
+  },
+  "neck": "medium length, medium thickness, tendons faintly visible when the head turns, Adam's apple visible",
+  "hands": {
+    "front_hand": "none in frame",
+    "nails": {
+      "length_mm": "not visible",
+      "shape": "not visible",
+      "color": "not visible"
+    },
+    "rings": {
+      "left_hand": "none",
+      "right_hand": "none"
+    },
+    "fingers": "not visible, both hands below the crop"
+  },
+  "jewelry": {
+    "necklace": "none",
+    "bracelet": "none",
+    "earrings": "none",
+    "watch": "none",
+    "other": "none"
+  },
+  "accessories": {
+    "glasses": "none",
+    "headwear": "none",
+    "bag": "none",
+    "other": "one matte-black wireless lavalier microphone 2 cm square with a rounded corner, clipped at the centre of the collar 3 cm below the neckline, tiny grey mesh on its front"
+  },
+  "body_marks": {
+    "tattoos": "none",
+    "moles": "one 2 mm mole under the outer corner of the left eye",
+    "scars": "none"
+  },
+  "outfit": {
+    "top": {
+      "item": "plain crew-neck T-shirt",
+      "color": "white, hex #f1efe9, warm shadows #cfc8b8 in the folds",
+      "fabric": "mid-weight cotton jersey, matte",
+      "fit": {
+        "shoulders": "seam sitting 1 cm past the shoulder point",
+        "chest": "slightly loose, 4 cm of ease",
+        "waist": "loose, not visible"
+      },
+      "neckline": "ribbed crew neck 2 cm wide, sitting 2 cm below the collarbones",
+      "sleeves": "short, ending mid-bicep, out of frame",
+      "construction": "single ribbed collar, shoulder seams visible",
+      "hem": "out of frame",
+      "tuck": "not visible",
+      "skin_gap": "no",
+      "logo": "none",
+      "wrinkles": "three fine horizontal creases across the upper chest, one diagonal crease from the collar toward each shoulder, soft pull where the mic clip sits",
+      "wear": "clean, one wash-worn softness, no stains"
+    },
+    "bottom": {
+      "item": "not visible",
+      "color": "not visible",
+      "fabric": "not visible",
+      "fit": "not visible",
+      "rise": "not visible",
+      "details": "not visible",
+      "wrinkles": "not visible"
+    },
+    "belt": "not visible",
+    "shoes": "not visible"
+  },
+  "pose": {
+    "stance": "standing",
+    "legs": "out of frame",
+    "body_orientation": "torso square to the camera, 0 degrees",
+    "shoulder_tilt": "left shoulder 1 cm higher",
+    "head": "turned 3 degrees to his right, tilted 2 degrees to his left, chin level",
+    "gaze": "directly into the lens, 0 degrees off axis",
+    "right_arm": "hanging, out of frame below the crop",
+    "left_arm": "hanging, out of frame below the crop",
+    "gesture_meaning": "none, mid-sentence explaining",
+    "moment": "one frame from continuous speech"
+  },
+  "expression": {
+    "mouth": "open 8 mm, upper teeth showing, corners lifted 3 mm",
+    "eyes": "slightly narrowed, engaged",
+    "brows": "relaxed, neutral height",
+    "cheeks": "lifted 2 mm by the smile",
+    "smile_symmetry": "2 mm stronger on his right",
+    "emotion": "warm, sincere, explaining something he cares about",
+    "intensity": "6 out of 10"
+  },
+  "scene": {
+    "location": "suburban back garden at golden hour",
+    "background": "a large tree trunk with rough grey-brown bark #6b5a4a filling the upper left behind his head, dense foliage in green #4f6b2f and sunlit yellow-green #b3b04a behind him, patches of pale blue-white sky #cfd9df through the leaves at upper right, a low red wooden fence #8a3a2e visible at the far right edge at shoulder height",
+    "background_texture": "rough bark, small leaves, soft sky",
+    "background_variation": "uneven dappled light, brighter on the right half",
+    "background_distance": "tree 150 cm behind him, foliage 400 cm, fence 600 cm",
+    "props": "none",
+    "floor": "not visible",
+    "visible_edges": "none"
+  },
+  "lighting": {
+    "key": "low warm sun from front-left, 30 degrees elevation, 40 degrees to the left of the lens, direct but softened by thin leaf cover",
+    "fill": "open sky from the right, ratio 1 to 2.5",
+    "background_light": "direct low sun through the leaves, brighter than the subject by half a stop",
+    "hair_light": "warm sun rim on the right edge of the hair and right cheek",
+    "shadows": "soft, falling to his right and down, nose shadow 6 mm",
+    "color_temperature": "4200 K, warm",
+    "clipping": "slight clipping on the white T-shirt shoulders and on the brightest leaves",
+    "catchlights": "one small soft catchlight at 10 o'clock in each eye"
+  },
+  "camera": {
+    "capture_pipeline": "smartphone front camera, 1080x1920 video at 60 fps, H.264 at about 12 Mbps, auto exposure, auto white balance, computational HDR off",
+    "camera_height": "eye level, 165 cm",
+    "subject_distance": "0.55 m, arm's length",
+    "shot_type": "head and shoulders selfie video frame",
+    "crop_top": "6 percent of frame height above the top of the head",
+    "crop_bottom": "mid-chest, 8 cm below the mic clip",
+    "subject_position": "centred horizontally, eyes at 38 percent from the top",
+    "headroom": "6 percent",
+    "lead_room": "none, centred",
+    "angle": "1 degree below eye level",
+    "horizon_tilt": "0 degrees",
+    "lens": "26 mm equivalent front camera",
+    "lens_distortion": "mild wide-angle stretch on the shoulders, face slightly widened",
+    "aperture": "f/2.2 fixed",
+    "shutter": "1/120 s",
+    "iso": "100",
+    "focus": "face in focus, background slightly soft from distance only",
+    "depth_of_field": "deep, phone camera, background only mildly soft",
+    "sharpness": "no sharpening, low micro-contrast, slightly soft as a 1080p video frame",
+    "motion": "none, frame taken between words",
+    "noise": "mild luminance noise in the shadows, visible H.264 compression in the foliage"
+  },
+  "color_grading": {
+    "style": "phone default, natural, slightly warm",
+    "saturation": "moderate",
+    "contrast": "medium-low",
+    "black_level": "lifted slightly, no crushed blacks",
+    "white_balance": "warm, slight amber cast on the white T-shirt",
+    "palette": [
+      "#f1efe9",
+      "#b5825c",
+      "#15100c",
+      "#4f6b2f",
+      "#b3b04a",
+      "#6b5a4a",
+      "#8a3a2e",
+      "#cfd9df"
+    ]
+  },
+  "style": {
+    "medium": "real photograph: single frame grabbed from a smartphone front-camera selfie video",
+    "genre": "creator talking-head video frame",
+    "realism": "unretouched, unpolished, true-to-life, no idealization",
+    "overall_vibe": "warm, approachable, knowledgeable friend explaining something outdoors in the evening sun"
+  },
+  "output": {
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "orientation": "portrait",
+    "num_images": 1
+  },
+  "generation_params": {
+    "seed": 20260916,
+    "guidance_scale": 4,
+    "steps": 28,
+    "sampler": "DPM++ 2M Karras",
+    "reference_image": "none, text-only generation; the man is fully specified by this JSON",
+    "note_to_model": "critical_constraints override any default beauty or quality bias. Follow every field literally; do not add, remove, beautify, sharpen or reinterpret any attribute. Anything not described does not exist in the image."
+  },
+  "post_processing": {
+    "step_1": "downscale 50 percent bilinear, then upscale back to 1080x1920",
+    "step_2": "add 2 to 3 percent monochrome grain and mild H.264 block artefacts in the foliage and shadows",
+    "step_3": "re-export as JPEG quality 80"
+  }
+}

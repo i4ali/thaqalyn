@@ -29,7 +29,11 @@ final class JourneyDurationStore {
         let dir = (try? FileManager.default.url(for: .applicationSupportDirectory,
                                                 in: .userDomainMask, appropriateFor: nil, create: true))
             ?? FileManager.default.temporaryDirectory
-        fileURL = dir.appendingPathComponent("journey_clip_durations.json")
+        // v2: durations are keyed by verse, not reciter, so lengths measured under a previous
+        // default reciter would mis-size the scrubber after the reciter changes. Bump the file so
+        // clips re-measure against the current reciter, and remove the legacy file.
+        try? FileManager.default.removeItem(at: dir.appendingPathComponent("journey_clip_durations.json"))
+        fileURL = dir.appendingPathComponent("journey_clip_durations-v2.json")
         if let data = try? Data(contentsOf: fileURL),
            let decoded = try? JSONDecoder().decode([String: TimeInterval].self, from: data) {
             cache = decoded

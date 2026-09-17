@@ -1,0 +1,91 @@
+{
+  "hook": "H4",
+  "status": {
+    "approved": false,
+    "approved_on": null
+  },
+  "hook_script": "One paragraph, 53-63 words, comma-joined so he does not pause at sentence turns, one question mark at most, Thaqalayn named once near the end. No double quotes inside.",
+  "vo_script": [
+    "One sentence per screen, in the order the screens are recorded.",
+    "Each sentence is placed over its own screen, so keep them short and concrete.",
+    "Name what is on screen, not what the viewer should feel.",
+    "The last sentence should land on the quiz screen.",
+    "Thirty to forty-five words in total."
+  ],
+  "shots": [
+    {
+      "screen": "passage list, then the passage title",
+      "file": "shots/01.mov",
+      "hold_s": 4
+    },
+    {
+      "screen": "the narration under the verse, held still",
+      "file": "shots/02.mov",
+      "hold_s": 4
+    },
+    {
+      "screen": "tap the source, source sheet with book and page",
+      "file": "shots/03.mov",
+      "hold_s": 4
+    },
+    {
+      "screen": "Perspectives, Shia and Sunni",
+      "file": "shots/04.mov",
+      "hold_s": 4
+    },
+    {
+      "screen": "Test yourself, question 1 of 5",
+      "file": "shots/05.mov",
+      "hold_s": 4
+    }
+  ],
+  "_shots_note": "One entry per vo_script sentence. Either one screen recording per shot (file only), or one continuous recording with start and end seconds per shot ({\"file\": \"shots/all.mov\", \"start\": 8.0, \"end\": 14.0}). hold_s is the minimum on-screen time; the assembler holds the last frame longer if the sentence needs it.",
+  "header_hook": "two short lines|split on the bar 😬📖",
+  "header_demo": "same as header_hook unless the user asks otherwise|second line 📖",
+  "caption": "lowercase, one line, in his voice, app named once, link in comments",
+  "hashtags": "#shia #ahlulbayt #quran #tafsir #muslimtiktok #islam #quranapp #thaqalayn",
+  "phrases_hook": [
+    "optional",
+    "1-4 words each",
+    "covering the whole hook script in order",
+    "broken on sense",
+    "delete this list to auto-chunk"
+  ],
+  "phrases_vo": [
+    "optional",
+    "same rule",
+    "covering every vo sentence in order"
+  ],
+  "pronunciation": {
+    "Thaqalayn": "tha-ka-LAYN",
+    "Sunni": "SOON-nee, two syllables, rhyming with moony, never sunnah",
+    "Shia": "SHEE-ah",
+    "Ahlul Bayt": "AH-lul BAYT",
+    "Ma'idah": "MAA-ee-dah",
+    "Kumayl": "koo-MAYL",
+    "Karbala": "KAR-ba-la",
+    "Muharram": "mu-HAR-ram",
+    "Ghadir": "gha-DEER",
+    "tafsir": "taf-SEER",
+    "dua": "DOO-ah",
+    "majalis": "ma-JAA-lis"
+  },
+  "_pronunciation_note": "Only the words that actually appear in a script are added to its prompt. Add any new surah name, imam name or Arabic term before approval; a mispronounced word costs a $0.47 rerun.",
+  "resolution_hook": "720p",
+  "resolution_vo": "480p",
+  "vo_engine": "seedance",
+  "voice_id": "",
+  "tts_model": "eleven_multilingual_v2",
+  "tts_speed": 1.15,
+  "tts_spellings": {},
+  "_vo_engine_note": "seedance (current): one 480p Seedance take for the voiceover, about $1.19, same voice as the hook. elevenlabs: optional, not in use; set vo_engine to elevenlabs and voice_id to ho9qcMh74s4YTqrsBtBY (the Mehdi clone created 2026-09-17) to read the voiceover through ElevenLabs for free, one sentence per call. The user chose to stay on Seedance for now.",
+  "computed": {
+    "hook_words": null,
+    "hook_duration_s": null,
+    "vo_words": null,
+    "vo_duration_s": null,
+    "price_hook": null,
+    "price_vo": null,
+    "price_total": null
+  }
+}

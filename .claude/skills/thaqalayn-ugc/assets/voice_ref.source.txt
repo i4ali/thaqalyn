@@ -1,0 +1,4 @@
+source: trend/videos/24.mp4 (tiktok.com/@aliexplainsdeen/video/7684013070313622815)
+slice: 50.00s to 62.45s
+why: fastest, gap-free 12 s window (291 wpm), a reveal cadence: "So this looks like just repetition, but there is actually something hidden in here..."
+use: Seedance @audio1 cadence reference only; hosted copy deleted from ugc-refs after the run

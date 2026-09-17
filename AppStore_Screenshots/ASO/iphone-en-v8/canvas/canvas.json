@@ -18,7 +18,7 @@
     },
     {
       "file": "Shot3.dc.html",
-      "title": "3 Tafsir",
+      "title": "3 Passage",
       "x": 2880,
       "y": 0,
       "w": 1320,
@@ -68,6 +68,14 @@
       "file": "Shot9.dc.html",
       "title": "9 Gems",
       "x": 11520,
+      "y": 0,
+      "w": 1320,
+      "h": 2868
+    },
+    {
+      "file": "Shot10.dc.html",
+      "title": "10 Perspectives",
+      "x": 12960,
       "y": 0,
       "w": 1320,
       "h": 2868

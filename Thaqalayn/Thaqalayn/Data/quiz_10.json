@@ -1,0 +1,1773 @@
+{
+  "1": {
+    "id": "10:1",
+    "surah": 10,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the essay, what does Tabatabai say this early Meccan surah was revealed to affirm?"
+        },
+        "options": [
+          {
+            "en": "God's oneness, through warning and glad tidings"
+          },
+          {
+            "en": "The history of the earlier prophets"
+          },
+          {
+            "en": "The detailed laws of ritual worship"
+          },
+          {
+            "en": "The meaning of the disconnected letters"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads this early Meccan surah as revealed to affirm God's oneness through warning and glad tidings, answering polytheists who called the Quran magic."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads this Meccan surah as revealed early in the mission to affirm God's oneness through warning and glad tidings"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 2,
+        "prompt": {
+          "en": "'Qadam sidq' means a footing of precedence and ____"
+        },
+        "options": [
+          {
+            "en": "fear"
+          },
+          {
+            "en": "power"
+          },
+          {
+            "en": "merit"
+          },
+          {
+            "en": "wealth"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note glosses the Arabic 'qadam sidq,' the true footing with the Lord, as a footing of precedence and merit, not mere priority."
+        },
+        "anchor": {
+          "where": "verses.2.note",
+          "quote": "'Qadam sidq' means a footing of precedence and merit"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 3,
+        "prompt": {
+          "en": "The passage answers the objection by affirming that God alone created the heavens and the earth and directs every affair."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Verses three and four answer the objection: your Lord is God, who created the heavens and the earth in six days and directs every affair, so worship Him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Verses three and four give the answer. Your Lord is God, who created the heavens and the earth in six days, settled on the Throne, and directs every affair"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 6,
+        "prompt": {
+          "en": "\"Whoever gains knowledge of the science of the stars from the bearers of the Quran increases thereby in faith and certainty.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam Ali taught that learning the science of the stars from the bearers of the Quran adds to a believer's faith and certainty."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n6",
+          "quote": "Whoever gains knowledge of the science of the stars from the bearers of the Quran increases thereby in faith and certainty"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the perspectives, what do both traditions agree about the opening letters?"
+        },
+        "options": [
+          {
+            "en": "Both read them as names of the surahs"
+          },
+          {
+            "en": "Both spell out the divine Greatest Name"
+          },
+          {
+            "en": "Both leave them without any meaning"
+          },
+          {
+            "en": "Both treat them as a sealed sign, not ordinary speech"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Although each tradition draws different keys from the opening letters, the perspectives say both sides treat them as a sealed sign rather than ordinary speech."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both sides treat the letters as a sealed sign rather than ordinary speech"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T08:58:06Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T08:59:27Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "2": {
+    "id": "10:2",
+    "surah": 10,
+    "index": 2,
+    "range": [
+      11,
+      20
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the essay, why does God not hasten punishment for those who persist in denial?"
+        },
+        "options": [
+          {
+            "en": "His way rests on wisdom, not on the haste that drives man"
+          },
+          {
+            "en": "Their earthly term has already come to an end"
+          },
+          {
+            "en": "No messenger has yet been sent to warn them"
+          },
+          {
+            "en": "They will repent before the appointed day arrives"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says man is hasty by nature, but God's way rests on wisdom, not on the whim of that haste, so He does not hasten their punishment and leaves them bewildered in their rebellion."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "man is hasty by nature, and God's way rests on wisdom, not on the whim that drives that haste, so He leaves the deniers bewildered in their rebellion"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 12,
+        "prompt": {
+          "en": "\"'He supplicates Us on his side' - the sick man who cannot sit up; 'or sitting' - one who cannot stand.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ali ibn Ibrahim"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Ali ibn Ibrahim glosses the three postures of supplication: 'on his side' is the sick man who cannot sit up, 'sitting' one who cannot stand, and 'standing' the man in full health."
+        },
+        "anchor": {
+          "where": "verses.12.narrations.n1",
+          "quote": "'He supplicates Us on his side' - the sick man who cannot sit up; 'or sitting' - one who cannot stand; 'or standing' - the man in health"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 12,
+        "prompt": {
+          "en": "Their ____ is then drawn from life."
+        },
+        "options": [
+          {
+            "en": "fickleness"
+          },
+          {
+            "en": "gratitude"
+          },
+          {
+            "en": "patience"
+          },
+          {
+            "en": "devotion"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Verse 12 shows man calling on God in distress then forgetting Him once healed; the essay names this inconstancy fickleness, not gratitude, patience, or devotion."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Their fickleness is then drawn from life. When distress strikes, a man calls on God lying, sitting, or standing"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 13,
+        "prompt": {
+          "en": "The passage's narration keeps the destroyed 'generations before you' vague, treating them as unnamed earlier peoples."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The narration is specific: it glosses the destroyed generations as Ad and Thamud, and others whom God destroyed, not as vague or unnamed peoples."
+        },
+        "anchor": {
+          "where": "verses.13.narrations.n2",
+          "quote": "'We destroyed generations before you when they perpetrated wrongs' means Ad and Thamud and those whom God destroyed"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 15,
+        "prompt": {
+          "en": "In the perspectives, how do the Shia narrations read the deniers' demand to 'alter it'?"
+        },
+        "options": [
+          {
+            "en": "As a plea to reveal the Quran in their dialect"
+          },
+          {
+            "en": "As a request for longer, more detailed chapters"
+          },
+          {
+            "en": "As a wish, behind his back, to replace Ali as imam"
+          },
+          {
+            "en": "As a demand to change the direction of prayer"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives report the Shia narrations reading 'alter it' as the deniers' wish, voiced behind the Prophet's back, that he set up an imam other than Ali, so God's reply concerns Ali."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "read the demand to 'alter it' as the deniers' wish, voiced behind the Prophet's back, that he set up an imam other than Ali or put someone in his place"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T09:08:51Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T09:10:36Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "3": {
+    "id": "10:3",
+    "surah": 10,
+    "index": 3,
+    "range": [
+      21,
+      30
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the passage, how does God answer those who scheme against His signs after He shows them mercy?"
+        },
+        "options": [
+          {
+            "en": "He is more swift at devising, and His messengers record their schemes"
+          },
+          {
+            "en": "He withdraws His mercy and sends a drought upon them"
+          },
+          {
+            "en": "He leaves their schemes for the recording angels to judge"
+          },
+          {
+            "en": "He forgives them once they show gratitude again"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says God replies that He is more swift at devising, and that His messengers write down what the people scheme against His signs."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He is more swift at devising and that His messengers record what they plot"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 22,
+        "prompt": {
+          "en": "The same ____ plays out at sea."
+        },
+        "options": [
+          {
+            "en": "gratitude"
+          },
+          {
+            "en": "patience"
+          },
+          {
+            "en": "ingratitude"
+          },
+          {
+            "en": "devotion"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay calls the sea episode the same ingratitude: rescued from the storm, the people at once transgress on the earth."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The same ingratitude plays out at sea."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 23,
+        "prompt": {
+          "en": "\"Three things fall back upon the one who does them: breaking a pact, transgression, and scheming.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked about deeds that recoil on their doer, Imam al-Sadiq named breaking a pact, transgression, and scheming, then cited verse 23."
+        },
+        "anchor": {
+          "where": "verses.23.narrations.n1",
+          "quote": "Three things fall back upon the one who does them: breaking a pact, transgression, and scheming."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 25,
+        "prompt": {
+          "en": "According to the passage, one reading takes 'peace' (al-Salam) as a name of God, so that the abode of peace is His paradise."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports al-Tusi's two readings of the verse: on one, al-Salam is God and His abode is Paradise; on the other, it is simply the abode of safety."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tusi reports two readings, that al-Salam is God and His abode is Paradise"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the perspectives, both traditions read the 'enhancement' given to the virtuous as what?"
+        },
+        "options": [
+          {
+            "en": "The abode of safety"
+          },
+          {
+            "en": "The vision of God"
+          },
+          {
+            "en": "The best reward, namely paradise"
+          },
+          {
+            "en": "Guidance to a straight path"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives says that on this verse both traditions converge, reading the enhancement beyond the best reward as the vision of God."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the two traditions converge again, reading the 'enhancement' as the vision of God"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T09:08:12Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T09:09:56Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "4": {
+    "id": "10:4",
+    "surah": 10,
+    "index": 4,
+    "range": [
+      31,
+      40
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 31,
+        "prompt": {
+          "en": "Tabatabai reads verses 31 to 36 as three proofs of God's sole lordship, arranged from the plainest to the ____"
+        },
+        "options": [
+          {
+            "en": "strongest"
+          },
+          {
+            "en": "harshest"
+          },
+          {
+            "en": "subtlest"
+          },
+          {
+            "en": "longest"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tabatabai treats verses 31 to 36 as three proofs of God's sole lordship, arranged from the plainest to the subtlest, moving from the most obvious argument to the most subtle."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads verses 31 to 36 as three proofs of God's sole lordship, arranged from the plainest to the subtlest"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 35,
+        "prompt": {
+          "en": "According to the passage, how does Imam al-Baqir's narration read the phrase about one who is not guided unless shown the way?"
+        },
+        "options": [
+          {
+            "en": "As God's provision from the sky and the earth"
+          },
+          {
+            "en": "As those who opposed the Prophet's household"
+          },
+          {
+            "en": "As the confirmation of the scriptures before it"
+          },
+          {
+            "en": "As a challenge to produce a surah like the Quran"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives report that Imam al-Baqir's narration reads the words as being about rightful leadership, so those who cannot guide unless guided are those who opposed the Prophet's household."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The narration from Imam al-Baqir reads the same words as a statement about rightful leadership: those who guide to the truth are Muhammad and the family of Muhammad, and those who cannot guide unless guided are those who opposed his household"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 36,
+        "prompt": {
+          "en": "According to the passage, Tusi says the deniers arrived at their conjecture through their own careful reasoning."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tusi observes the deniers follow only conjecture inherited from their fathers and chiefs, not reached by their own reasoning, so the statement is false."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Most of them, Tusi observes, follow only conjecture inherited from their fathers and chiefs, and conjecture can never stand in the place of certain knowledge"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 39,
+        "prompt": {
+          "en": "\"Allah bound His servants by two verses of His Book: that they not speak until they know, and not reject what they do not know.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq said God bound His servants by two verses of His Book: not to speak until they know and not to reject what they do not know."
+        },
+        "anchor": {
+          "where": "verses.39.narrations.n4",
+          "quote": "Allah bound His servants by two verses of His Book: that they not speak until they know, and not reject what they do not know"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 40,
+        "prompt": {
+          "en": "According to the essay's close, how does the passage end?"
+        },
+        "options": [
+          {
+            "en": "With every denier finally coming to believe"
+          },
+          {
+            "en": "With the destruction of all the earlier peoples"
+          },
+          {
+            "en": "With the transgressors barred from ever having faith"
+          },
+          {
+            "en": "With hearts dividing, some believing and some never will"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes by saying the passage ends where hearts divide: some will come to believe and some never will, and your Lord best knows the agents of corruption."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage closes where hearts divide: some will come to believe and some never will, and your Lord best knows the agents of corruption"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T09:20:27Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T09:22:11Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "5": {
+    "id": "10:5",
+    "surah": 10,
+    "index": 5,
+    "range": [
+      41,
+      53
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 41,
+        "prompt": {
+          "en": "According to the essay, how does Tusi read the Prophet's disavowal 'My deeds belong to me and your deeds belong to you'?"
+        },
+        "options": [
+          {
+            "en": "As a harsh threat of coming punishment"
+          },
+          {
+            "en": "As spoken gently, leaving the deniers to their choice"
+          },
+          {
+            "en": "As a command to fight the deniers"
+          },
+          {
+            "en": "As proof that deeds can be shared"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tusi takes the disavowal as spoken gently rather than harshly, leaving the deniers to their own choice while making plain that no one answers for another's deeds."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi reads this as a disavowal spoken gently rather than harshly, leaving the deniers to their choice"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 44,
+        "prompt": {
+          "en": "\"He is angered only at one who will not accept His good pleasure, and He lets go astray only one who will not accept His guidance.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Commenting on verse 44, Imam al-Baqir taught that God is angered, withholds, and misguides only toward those who refuse His good pleasure, His gift, and His guidance, so none is wronged."
+        },
+        "anchor": {
+          "where": "verses.44.narrations.n1",
+          "quote": "is angered only at one who will not accept His good pleasure; He withholds only from one who will not accept His gift"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 44,
+        "prompt": {
+          "en": "Verse 44 clears God of blame: He does not wrong people; they wrong themselves by the ____ things they choose."
+        },
+        "options": [
+          {
+            "en": "foolish"
+          },
+          {
+            "en": "worldly"
+          },
+          {
+            "en": "vile"
+          },
+          {
+            "en": "hidden"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay glosses verse 44 to say God does not wrong people; rather they wrong themselves by the vile things they choose, so the missing word is vile."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Verse 44 clears God of blame: He does not wrong people; they wrong themselves by the vile things they choose"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 50,
+        "prompt": {
+          "en": "The narration on verse 50 reads this punishment as one that strikes the wrongdoers among the people of the qibla at the end of time, though they deny it can reach them."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration on verse 50 applies this punishment to the transgressors among the people of the qibla, coming at the end of time while they deny it will fall on them, so the statement is true."
+        },
+        "anchor": {
+          "where": "verses.50.narrations.n4",
+          "quote": "This is a punishment that will descend at the end of time upon the transgressors among the people of the qibla"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 53,
+        "prompt": {
+          "en": "According to the Perspectives, how do the Shia narrations read verse 53's question 'Is it true?'"
+        },
+        "options": [
+          {
+            "en": "As the rising of the Qa'im before the Return"
+          },
+          {
+            "en": "As a warning against long hopes of staying on"
+          },
+          {
+            "en": "As the promise of a messenger for every nation"
+          },
+          {
+            "en": "As a question about Ali, affirmed by the oath"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The Perspectives report that the Shia narrations read the question 'Is it true?' as asking about Ali, which the oath 'Yes, by my Lord' then affirms."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The narrations take verse 53's question 'Is it true?' as a question about Ali, affirmed by the oath 'Yes, by my Lord'"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T09:22:11Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T09:23:47Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "6": {
+    "id": "10:6",
+    "surah": 10,
+    "index": 6,
+    "range": [
+      54,
+      60
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 54,
+        "prompt": {
+          "en": "\"They disliked the gloating of the enemies.\" Who answered this when asked what the wrongdoers gain by hiding their remorse in the punishment?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet Muhammad"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked what the wrongdoers gain by hiding their remorse while in the punishment, Imam al-Sadiq said they disliked the gloating of their enemies, so they conceal their regret."
+        },
+        "anchor": {
+          "where": "verses.54.narrations.n1",
+          "quote": "they disliked the gloating of the enemies"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 55,
+        "prompt": {
+          "en": "According to the essay, why can God's promise not fail?"
+        },
+        "options": [
+          {
+            "en": "He gives life and death to all creatures"
+          },
+          {
+            "en": "Nothing outside Him can force or block His will"
+          },
+          {
+            "en": "Most people do not know His promise is true"
+          },
+          {
+            "en": "The heavens and the earth testify against wrongdoers"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay roots the promise in God's ownership of all things: since everything in the heavens and earth is His, nothing outside Him can force or block His will, so His promise cannot fail."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Because God alone owns everything, Tabatabai reasons, nothing outside Him can force or block His will, so His promise cannot fail"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 57,
+        "prompt": {
+          "en": "In the passage, the cure for what is in the breasts is read as the healing of bodily illness rather than the soul's diseased traits."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay reads the cure as removing the soul's diseased traits, and Tusi holds the disease of ignorance graver than any bodily illness, so the healing is spiritual, not bodily."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the cure as the removal of the soul's diseased traits"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 58,
+        "prompt": {
+          "en": "According to the perspectives, what do both traditions' readings prize God's grace and mercy above?"
+        },
+        "options": [
+          {
+            "en": "The remorse the wrongdoers hide"
+          },
+          {
+            "en": "The idols the pagans worship"
+          },
+          {
+            "en": "The wealth people gather"
+          },
+          {
+            "en": "The provision God sent down"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Though the Shia read the grace and mercy as the Prophet and Ali and the Sunni as Islam and the Quran, the perspectives says both prize this gift above any wealth people gather."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the gift the believers should prize above any wealth"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 60,
+        "prompt": {
+          "en": "Tabrisi refers this to the ____ who banned certain cattle and crops."
+        },
+        "options": [
+          {
+            "en": "Arab idolaters"
+          },
+          {
+            "en": "faithful believers"
+          },
+          {
+            "en": "People of the Book"
+          },
+          {
+            "en": "hypocrites"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay's close turns to those who forbid and permit God's provision on their own authority; Tabrisi refers this to the Arab idolaters who banned certain cattle and crops."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi refers this to the Arab idolaters who banned certain cattle and crops"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T09:31:49Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T09:33:28Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "7": {
+    "id": "10:7",
+    "surah": 10,
+    "index": 7,
+    "range": [
+      61,
+      70
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 61,
+        "prompt": {
+          "en": "According to the passage, how does the address of verse 61 develop as it continues?"
+        },
+        "options": [
+          {
+            "en": "It speaks only to the Prophet from start to finish"
+          },
+          {
+            "en": "It begins with the Prophet alone, then widens to the whole community"
+          },
+          {
+            "en": "It addresses the whole community from the very beginning"
+          },
+          {
+            "en": "It is directed first at those who deny the signs"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Tabatabai notes the address opens with the Prophet alone and then widens to include the whole community, whose deeds are equally under God's witness."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the address begins with the Prophet alone and then widens to include the whole community"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 61,
+        "prompt": {
+          "en": "Whenever the Messenger of Allah recited this verse, he ____."
+        },
+        "options": [
+          {
+            "en": "fell silent"
+          },
+          {
+            "en": "raised his hands"
+          },
+          {
+            "en": "wept intensely"
+          },
+          {
+            "en": "smiled with joy"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration reports that the verse of God's all-seeing witness moved the Prophet so deeply that he wept intensely whenever he recited it."
+        },
+        "anchor": {
+          "where": "verses.61.narrations.n1",
+          "quote": "Whenever the Messenger of Allah recited this verse, he wept intensely"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 62,
+        "prompt": {
+          "en": "\"They are a people who made their worship purely for Allah, and looked to the inner reality of this world when people looked to its surface.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked who the friends of Allah are, Imam Ali described a people who worshipped God purely and saw the inner reality of the world while others saw its surface."
+        },
+        "anchor": {
+          "where": "verses.62.narrations.n2",
+          "quote": "They are a people who made their worship purely for Allah, and looked to the inner reality of this world when people looked to its surface"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 64,
+        "prompt": {
+          "en": "According to the passage, what is the friends' good news in the life of this world?"
+        },
+        "options": [
+          {
+            "en": "The Garden, reached only in the Hereafter"
+          },
+          {
+            "en": "Great wealth granted in their lifetime"
+          },
+          {
+            "en": "Certain victory over their enemies"
+          },
+          {
+            "en": "The righteous dream the believer sees"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay reports the friends' good news in this world as the righteous dream the believer sees, while the Garden is their good news in the Hereafter."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "reports their good news as the righteous dream the believer sees, with the Garden in the Hereafter"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 62,
+        "prompt": {
+          "en": "The Shia narrations keep faith and piety as marks of the friends of Allah while adding more specific content of their own."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations keep faith and piety as the mark of the friends of Allah but add specific content beyond that, so the statement is true."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia narrations keep faith and piety but add specific content"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T09:34:30Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T09:35:43Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "8": {
+    "id": "10:8",
+    "surah": 10,
+    "index": 8,
+    "range": [
+      71,
+      82
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 71,
+        "prompt": {
+          "en": "According to the essay, why does it relate the accounts from Noah to Moses and Pharaoh?"
+        },
+        "options": [
+          {
+            "en": "To prove Noah lived longer than the other prophets"
+          },
+          {
+            "en": "To rank the prophets by the size of their peoples"
+          },
+          {
+            "en": "As a reminder of how God destroyed deniers and saved His messengers"
+          },
+          {
+            "en": "To show that the magicians of Egypt repented"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reads the whole sweep as a reminder of how God dealt with peoples who denied their prophets, destroying the deniers and saving the messengers, so Muhammad's community might take heed."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "as a reminder of how God dealt with the peoples who denied their prophets, destroying the deniers and saving the messengers, so that the deniers of Muhammad's own community might take heed"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 71,
+        "prompt": {
+          "en": "In the narration glossing Noah's challenge, 'your partners' means the human allies who help his people conspire against him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Ali ibn Ibrahim glosses 'your partners' as the idols his people worship, not human allies, so the challenge tells them to gather even their gods against Noah."
+        },
+        "anchor": {
+          "where": "verses.71.narrations.n1",
+          "quote": "gather your affair and your partners, meaning the idols you worship"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 74,
+        "prompt": {
+          "en": "According to the note, what is the earlier rejection meant by 'what they denied before'?"
+        },
+        "options": [
+          {
+            "en": "Their rejection in the dharr, the primordial covenant of souls"
+          },
+          {
+            "en": "Their rejection of Noah before the flood"
+          },
+          {
+            "en": "The proofs they had denied in an earlier life on earth"
+          },
+          {
+            "en": "The signs Moses would later bring to Pharaoh"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note reads 'what they denied before' as the peoples' rejection in the dharr, the primordial covenant of souls, and notes reports of this meaning in Surah al-Araf."
+        },
+        "anchor": {
+          "where": "verses.74.note",
+          "quote": "as their rejection in the dharr, the primordial covenant of souls"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 79,
+        "prompt": {
+          "en": "Pharaoh then summons every skilled magician, imagining, as Tusi puts it, that magic could stand against the ____."
+        },
+        "options": [
+          {
+            "en": "signs"
+          },
+          {
+            "en": "truth"
+          },
+          {
+            "en": "miracle"
+          },
+          {
+            "en": "prophets"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Pharaoh summoned the magicians imagining, as Tusi puts it, that magic could stand against the truth, so 'truth' completes the sentence."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "imagining, as Tusi puts it, that magic could stand against the truth"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 74,
+        "prompt": {
+          "en": "The passage gives one reading in which the sealing does not stop these people from believing. On that reading, what is the seal?"
+        },
+        "options": [
+          {
+            "en": "A veil that hides God's signs from their eyes"
+          },
+          {
+            "en": "A sign that they were never able to believe"
+          },
+          {
+            "en": "A punishment that leaves them unable to accept the prophets' counsel"
+          },
+          {
+            "en": "A mark of their disbelief by which the angels know them"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "On this reading the seal does not bar them from faith, since God still holds them responsible; it is instead a mark of their disbelief by which the angels know them."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the seal is instead a mark of their disbelief by which the angels know them"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T09:51:15Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T09:52:45Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "9": {
+    "id": "10:9",
+    "surah": 10,
+    "index": 9,
+    "range": [
+      83,
+      92
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 83,
+        "prompt": {
+          "en": "According to the essay, the whole story of Moses runs parallel to the Prophet's own mission against the despots of Quraysh."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai hears the whole account of Moses running parallel to the Prophet's own mission and his call against the despots of Quraysh, so the statement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai hears the whole account running parallel to the Prophet's own mission and his call against the despots of Quraysh"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 87,
+        "prompt": {
+          "en": "According to the perspectives, what does Shia tafsir draw from this verse beyond the plain command to pray in the houses?"
+        },
+        "options": [
+          {
+            "en": "That the houses became the qibla for all later Muslims"
+          },
+          {
+            "en": "That praying at home was only a temporary permission"
+          },
+          {
+            "en": "That it fixes Harun's standing to Moses, and Ali's to the Prophet"
+          },
+          {
+            "en": "That the Israelites should build one central mosque"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives says Shia tafsir keeps the plain sense of praying at home but draws more from the wording, since al-Rida read the verse as fixing Harun's standing to Moses, and so Ali's to the Prophet."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Rida cited the verse as fixing the standing of Harun to Moses, and so of Ali to the Prophet, since the mosque was closed to everyone in janaba but the Prophet's family"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 89,
+        "prompt": {
+          "en": "\"And whoever fights in the way of God, it is answered for him as it was answered for you two.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "The Prophet Muhammad"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In this narration the Prophet Muhammad relates that Moses supplicated, Harun said amin, God answered them, then teaches that whoever fights in God's way has his prayer answered as theirs was."
+        },
+        "anchor": {
+          "where": "verses.89.narrations.n5",
+          "quote": "God said, 'Your supplication has been answered.' And whoever fights in the way of God, it is answered for him as it was answered for you two"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 90,
+        "prompt": {
+          "en": "In the narration on the crossing, what did God command Moses to do so the Children of Israel could cross the sea?"
+        },
+        "options": [
+          {
+            "en": "Strike the sea with his staff"
+          },
+          {
+            "en": "Raise both hands to part the water"
+          },
+          {
+            "en": "Wait for the tide to fall"
+          },
+          {
+            "en": "Build boats to ferry his people"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says the Children of Israel asked for relief, Moses prayed, and God revealed, 'Strike the sea with your staff'; he struck it, the sea split, and his people crossed."
+        },
+        "anchor": {
+          "where": "verses.90.narrations.n6",
+          "quote": "Then Moses prayed, and God revealed, 'Strike the sea with your staff.' He struck it, the sea split, and his people crossed"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 90,
+        "prompt": {
+          "en": "As the water takes him he ____ the faith of the Children of Israel."
+        },
+        "options": [
+          {
+            "en": "denies"
+          },
+          {
+            "en": "mocks"
+          },
+          {
+            "en": "abandons"
+          },
+          {
+            "en": "professes"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says that as the water overtakes Pharaoh he professes the faith of the Children of Israel, declaring belief in the God whom the Israelites worship."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "As the water takes him he professes the faith of the Children of Israel"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T09:46:58Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T09:48:09Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "10": {
+    "id": "10:10",
+    "surah": 10,
+    "index": 10,
+    "range": [
+      93,
+      103
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 93,
+        "prompt": {
+          "en": "Tusi glosses the worthy settlement as a place of ____, named as Egypt, or as Syria and Jerusalem."
+        },
+        "options": [
+          {
+            "en": "trial and hardship"
+          },
+          {
+            "en": "safety and plenty"
+          },
+          {
+            "en": "exile and want"
+          },
+          {
+            "en": "war and famine"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports Tusi reading the worthy settlement as a place of safety and plenty, which he identifies as Egypt, or as Syria and Jerusalem."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi glosses the worthy settlement as a place of safety and plenty, named as Egypt, or as Syria and Jerusalem."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 94,
+        "prompt": {
+          "en": "In Imam al-Hadi's account, what objection had the ignorant raised that 'ask those who read the Book' answers?"
+        },
+        "options": [
+          {
+            "en": "That no prophet from the angels was sent to them"
+          },
+          {
+            "en": "That the Prophet secretly doubted his own message"
+          },
+          {
+            "en": "That the truth had not yet reached them"
+          },
+          {
+            "en": "That earlier messengers never ate food or walked markets"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Hadi explains the ignorant asked why no prophet from the angels was sent, so God had the Prophet point them to earlier messengers who also ate food and walked the markets."
+        },
+        "anchor": {
+          "where": "verses.94.narrations.n3",
+          "quote": "The ignorant asked why no prophet from the angels was sent to them. So God told him to ask those who read the Book: has any messenger before you not eaten food and walked the markets?"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 97,
+        "prompt": {
+          "en": "According to the passage, faith forced out by the sight of the painful punishment still benefits those who then believe."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports Tusi's point that faith wrung out by the sight of punishment brings no benefit; only the people of Jonah, who believed beforehand, were spared."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi adds that faith wrung out by the sight of punishment brings no benefit."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 98,
+        "prompt": {
+          "en": "\"God has winds of mercy and winds of punishment. So He did with the people of Jonah: when they believed, He had mercy on them.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir taught that God has winds of mercy and winds of punishment, and that He turned the decreed punishment on Jonah's people into mercy when they believed and pleaded with Him."
+        },
+        "anchor": {
+          "where": "verses.98.narrations.n5",
+          "quote": "God has winds of mercy and winds of punishment. So He did with the people of Jonah: when they believed, He had mercy on them after the punishment had been decreed and had come down and covered them; He turned the decreed punishment into mercy and averted it, because they believed in Him and pleaded with Him."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 100,
+        "prompt": {
+          "en": "According to the passage, how do the Shia sources read 'no soul may have faith except by Allah's leave'?"
+        },
+        "options": [
+          {
+            "en": "It means God creates faith only in those He wills"
+          },
+          {
+            "en": "It shows faith is compelled once God grants His leave"
+          },
+          {
+            "en": "It means God withheld His leave so most people cannot believe"
+          },
+          {
+            "en": "It does not forbid faith but means His command to believe"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say the Shia sources read the words the opposite way: 'by God's leave' does not forbid faith but means His command to believe, so people believe freely."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia sources read the same words the opposite way: al-Rida, questioned by al-Ma'mun, taught that 'by God's leave' does not withhold or forbid faith but means His command to believe, and that God wants people to believe freely, not under force, so that they may deserve reward."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T10:00:17Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T10:01:51Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  },
+  "11": {
+    "id": "10:11",
+    "surah": 10,
+    "index": 11,
+    "range": [
+      104,
+      109
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 104,
+        "prompt": {
+          "en": "The passage treats the Prophet's naming of Allah as the one who causes death as a warning to the polytheists."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says naming God as the one who causes death carries a warning, because the polytheists' death is the appointed hour of their punishment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "naming death here carries a warning, since the death of the polytheists is the appointed hour of their punishment"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 106,
+        "prompt": {
+          "en": "This verse is an address to the Prophet, but the ____ are the ones it means."
+        },
+        "options": [
+          {
+            "en": "angels"
+          },
+          {
+            "en": "believers"
+          },
+          {
+            "en": "people"
+          },
+          {
+            "en": "polytheists"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Ali ibn Ibrahim al-Qummi glosses the verse as addressed in form to the Prophet, though it is the people whom its warning really means."
+        },
+        "anchor": {
+          "where": "verses.106.narrations.n1",
+          "quote": "This verse is an address to the Prophet, but the people are the ones it means."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 107,
+        "prompt": {
+          "en": "According to the perspectives, what does the Shia reading hold about God forgiving a believer?"
+        },
+        "options": [
+          {
+            "en": "He pardons a believer only after full repentance"
+          },
+          {
+            "en": "He pardons every sin except shirk"
+          },
+          {
+            "en": "He pardons believers only on the Day of Resurrection"
+          },
+          {
+            "en": "He may pardon a believer's sin even without repentance"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives report the Shia reading as allowing that God may forgive a believer's sin without any repentance, unlike readings that make repentance the condition."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "in the Shia view, He may also forgive a believer's sin without any repentance"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 109,
+        "prompt": {
+          "en": "\"Whoever recites Surah Yunus once every two or three months need not fear being counted among the ignorant.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq promised that whoever recites Surah Yunus every two or three months need not fear being counted among the ignorant and will be brought near."
+        },
+        "anchor": {
+          "where": "verses.109.narrations.n3",
+          "quote": "Whoever recites Surah Yunus once every two or three months need not fear being counted among the ignorant"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 109,
+        "prompt": {
+          "en": "According to the essay, how does Surah Yunus close its address to the Prophet?"
+        },
+        "options": [
+          {
+            "en": "A command to follow the revelation and wait patiently for Allah's judgment"
+          },
+          {
+            "en": "A threat of immediate punishment for the polytheists"
+          },
+          {
+            "en": "A command to migrate from Mecca"
+          },
+          {
+            "en": "A promise that the idols will be destroyed"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the surah ends by telling the Prophet to follow what is revealed and be patient until Allah, the best of judges, decides."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah ends by telling him to follow what is revealed and be patient until Allah, the best of judges, decides"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T10:01:40Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T10:03:17Z",
+      "assembled_at": "2026-09-16T10:03:56Z"
+    }
+  }
+}

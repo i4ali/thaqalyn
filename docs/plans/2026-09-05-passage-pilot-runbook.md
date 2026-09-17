@@ -2454,3 +2454,293 @@ with no entry, so genuine. al-Burhan empty at 34 and 57; al-Qummi empty at 7,
   prompt line.
 - Re-gather and re-run of surahs 1 to 9 (and the surah 10 passages) with the
   pager fix, as before.
+
+## Results - ar-Ra'd 13:1 to 13:6 (2026-09-14)
+
+Run on Fable 5.1 as orchestrator, writer and auditor on Opus 4.8, invoked as
+`next /loop until surah complete` with both agent slots in use throughout;
+unattended apart from the titles gate. Gather chain started 18:40; 13:1 to
+13:3 took 2 to 5 minutes each, then 13:4, 13:5 and 13:6 all died on altafsir
+curl timeouts (one curl sat for 11 minutes on an al-Mizan page 9 before
+giving up). The uncaught curl exception was the runbook's open item; fixed
+at 19:05 (below) and the three re-gathered 19:07 to 20:06, the 13:5 packet
+alone taking 28 minutes of timeouts before the fallback answered. First
+writers 18:42 and 18:50, last PASS 21:51. Titles approved unchanged at 22:12;
+`assemble 13` wrote `passages_13.json` (110 KB) with six passages, ranges 1
+to 43 contiguous.
+
+**Five of six passed on the first audit; one rewrite.** 13:4 failed on a
+single stretched verdict (below). No prose flags anywhere in the surah, so
+the polisher never ran.
+
+| passage | verses | writer | audit | attempts |
+|---|---|---|---|---|
+| 13:1 | 1-7 | 218K, 45 min | 215K, 59 min | 1 |
+| 13:2 | 8-18 | 317K, 112 min | 353K, 11 min | 1 |
+| 13:3 | 19-26 | 222K, 17 min | 187K, 8 min | 1 |
+| 13:4 | 27-31 | 252K, 15 min; rewrite 11K, 1.5 min | 228K, 9 min; re-audit 8K, 2 min | 2 |
+| 13:5 | 32-37 | 191K, 14 min | 165K, 6 min | 1 |
+| 13:6 | 38-43 | 247K, 30 min | 261K, 10 min | 1 |
+
+About 2.88M tokens for the surah, 0.48M per passage; 3 h 9 min from first
+writer to last PASS, 31 minutes of wall-clock per passage. The wall-clock is
+inflated by the first two hours: the 13:1 writer took 45 minutes, its auditor
+59, and the 13:2 writer 112, for ordinary token counts, so the model API was
+slow rather than the agents busy; from 20:40 every run was back at the
+runbook's pace. `metrics 13`: 6 passed, first-try 5/6, mean attempts 1.2.
+
+### Why 13:4 failed (1 rewrite, 1 finding, overreach)
+
+The perspectives said "Qurtubi records Mujahid's gloss that the tranquil
+hearts belong to the Prophet and his companions [25]"; the cited Qurtubi
+block gives Mujahid only as "the companions of the Prophet". The "Muhammad
+and his companions" wording sits in the uncited Tabari block. The draft's
+own s25 gloss had it right. Fixed by a follow-up message to the resident
+writer (11K tokens, 87 seconds) and re-ruled by a follow-up to the resident
+auditor (8K, 2 minutes).
+
+### Pipeline fix: a curl timeout no longer kills the gather
+
+`fetch_altafsir` now treats a `RuntimeError` from `curl_get` on any altafsir
+page as no block for that page, so the existing greattafsirs fallback gets
+its turn; `fetch_greattafsirs` returns `None` on the same exception. One
+test added (`test_fetch_altafsir_falls_back_to_greattafsirs_when_curl_fails`),
+94 pass. With the fix the three re-gathers survived every timeout; the cost
+is wall-clock (13:5 waited 28 minutes) and a block silently sourced from
+greattafsirs where altafsir would have paged.
+
+### Source gaps
+
+Furat empty for the whole surah except 13:11, 13:19, 13:28 (via greattafsirs)
+and 13:37. al-Mizan for 13:36 and 13:37 served by neither site (greattafsirs
+answered with al-Durr al-Manthur, which the fetcher accepts as a different
+work, not a substitution). al-Burhan empty at 3, 27, 37, 40; al-Qummi empty at
+9, 24, 26, 27, 30, 37, 40. Not retried.
+
+### Writer hits on the packet text (notes against fetch.py)
+
+- 13:4: the first write was rejected because three verbatim spans (the s16
+  excerpt, n2 and n4) straddled editorial insertions in the blocks, the
+  "(عليه السلام)" honorific and a "[ر: ...]" variant note; the writer split
+  them at the insertion with the " … " join, which the validator accepts and
+  which then shows in the narration English. Same class as the 12:5 note.
+- 13:6: the first write overran the essay budget (the writer took the
+  eight-plus-verse budget for a six-verse passage); the validator caught it
+  and the second write passed.
+
+### Deviations from the procedure
+
+- Writers for 13:1 and 13:2 were launched while the gather chain was still
+  running (each writer reads only its own packet), as in surah 12.
+- `fetch.py` was patched mid-run, between the first chain's failure and the
+  re-gather; the tests were run before the re-gather started.
+- 13:4's rewrite and re-audit went as follow-up messages to the resident
+  agents rather than fresh launches.
+- Titles approved as generated, no edits.
+
+### Reader notes (taste and policy, not rule failures)
+
+- Speaker strings: "Imam Zayn al-Abidin" (13:2) and "Imam al-Sajjad" (13:6);
+  "Prophet Muhammad" (13:1, 13:4) and "The Prophet" (13:3); "Imam Ali" (13:2)
+  where 13:1's narration text says "Amir al-Muminin". Commentators named
+  "Tabatabai", "Tusi", "Tabrisi" bare in 13:4 against "al-Mizan", "Majma
+  al-Bayan", "al-Tibyan" in 13:3 and 13:5. "Qur'an" in 13:5, "Quran" in 13:2
+  and 13:4. "God" in 13:1, 13:2, 13:4 to 13:6, "Allah" and "God" mixed inside
+  the 13:3 essay. The house list, still.
+- 13:4 surfaced a policy question the writer settled on its own: the packet
+  header labels ar-Ra'd Medinan, so the essay follows Tabrisi's Hudaybiyya
+  occasion for verse 30 and does not say that al-Mizan holds the verses
+  Meccan and rejects that occasion. Worth deciding whether the app's
+  Meccan/Medinan label should bind the essay.
+- 13:2 n6 "He means [His] cunning" is a one-line narration with no
+  antecedent in its own English (the verse's "severe in might"); a reader
+  stumbles and the auditor did not flag it. Note against the auditor prompt:
+  a fragment that needs the verse to parse should count as a prose flag.
+- 13:2 n9 (Imam Ali via al-Ihtijaj): the scum of verse 17 is "the speech of
+  the heretics that they inserted into the Quran". Sourced and supported,
+  but it reads as a textual-insertion claim; a policy call for the user.
+- Filler by the reader test: 13:5 n2 (Hellfire is one part of seventy) at
+  verse 35 is severity colour, not an interpretation of the verse.
+- Polemical narrations kept where the sources carry them: "I am the warner,
+  you are the guide" with Ibn Kathir's "severely objectionable" grading
+  (13:1), the Shia variant reading of the mu'aqqibat (13:2), the covenant of
+  wilayah in the dharr and "our Shia more patient than us" (13:3), Muhammad
+  as the dhikr and Tuba rooted in Ali's house (13:4), the rejoicing one is
+  Ali (13:5), bada against al-Razi and the knowledge of the Book as Ali and
+  the Imams (13:6).
+- Softening or colour the auditors passed: 13:1 perspectives drop "or evil"
+  from Tabari's "a caller to good or evil"; 13:2 essay generalises
+  al-Tibyan's "God does not punish children" to "those who have done no
+  wrong"; 13:5 attributes the Abu al-Jarud report to al-Baqir on the strength
+  of the parallel al-Burhan block, the al-Qummi excerpt naming only Abu
+  al-Jarud; 13:6 essay says "Ali and the Imams" where s10 says "the Imams of
+  Al Muhammad".
+- 13:5 carries an intra-Shia difference (Majma and al-Tibyan read verse 32 as
+  consolation, al-Mizan as confirmation of the warning) inside the essay, not
+  in perspectives; the right place.
+- Coverage: 13:2 has no verse notes at all (every entry is a narration);
+  13:4 verse 30, 13:5 verses 32, 34 and 37, 13:6 verses 40 and 42 have no
+  entry and live in the essay only.
+- 13:4's writer dropped four packet blocks (Numani's Ghayba, Saduq's Amali)
+  listed at verses 27 and 29 because their content interprets 13:7 and
+  35:32; a gather-side check that a hadith block quotes a verse of the
+  passage would have dropped them earlier.
+- Two auditors again noted that `audit-check` collapses a marker cited twice
+  in the essay to one verdict (13:4 [1], 13:5 [3]).
+
+### Open after this run
+
+- The speaker and commentator house list (surah 13 adds the bare-surname
+  commentators and Qur'an/Quran).
+- Whether the app's Meccan/Medinan label should bind the essay when al-Mizan
+  disputes it (13:4).
+- Auditor prompt: a narration whose English cannot be parsed without the
+  verse is a prose flag.
+- Strip editorial insertions, "(عليه السلام)" and "[ر: ...]", from
+  `clean_block_text` before the verbatim check, or teach the validator to
+  skip them, so writers stop joining spans with an ellipsis (12:5, 13:4).
+- Still open from surah 12: bidi control characters, the surah-level
+  duplicate-narration scan, marker placement, the re-gather of surahs 1 to 9.
+
+## Results - Ibrahim 14:1 to 14:7 (2026-09-15)
+
+Run on Fable 5.1 as orchestrator, writer and auditor on Opus 4.8, invoked as
+`next one /loop until surah complete` with both agent slots in use
+throughout; unattended apart from the titles gate. Gather chain started
+16:20 and ran sequentially in the background while the writers worked: 2 to
+4 minutes per passage, no timeouts, all seven packets in by 16:50. First
+writer 16:24, last PASS 17:53. Titles approved unchanged at 17:55;
+`assemble 14` wrote `passages_14.json` with seven passages, ranges 1 to 52
+contiguous.
+
+**Five of seven passed on the first audit; two rewrites.** 14:5 and 14:7
+each failed on a single stretched verdict (below). No prose flags anywhere
+in the surah, so the polisher never ran.
+
+| passage | verses | writer | audit | attempts |
+|---|---|---|---|---|
+| 14:1 | 1-6 | 160K, 9 min | 162K, 7 min | 1 |
+| 14:2 | 7-12 | 173K, 13 min | 142K, 5 min | 1 |
+| 14:3 | 13-21 | 211K, 11 min | 195K, 6 min | 1 |
+| 14:4 | 22-27 | 264K, 14 min | 252K, 6 min | 1 |
+| 14:5 | 28-34 | 186K, 13 min; rewrite 13K, 2 min | 176K, 9 min; re-audit 13K, 2 min | 2 |
+| 14:6 | 35-41 | 196K, 16 min | 165K, 8 min | 1 |
+| 14:7 | 42-52 | 222K, 16 min; rewrite 10K, 1.5 min | 222K, 9 min; re-audit 12K, 1.5 min | 2 |
+
+About 2.77M tokens for the surah, 0.40M per passage; 1 h 29 min from first
+writer to last PASS, 13 minutes of wall-clock per passage, the fastest surah
+so far. Every agent ran at the runbook's pace; nothing waited on the model
+API. `metrics 14`: 7 passed, first-try 5/7, mean attempts 1.3.
+
+### Why 14:5 failed (1 rewrite, 1 finding, attribution)
+
+The perspectives said "al-Baqir widens it to 'the whole of Quraysh' who
+fought the Messenger and rejected his successor [10]". In the cited
+al-Burhan block al-Baqir's narration says only "Quraysh as a whole"; the
+descriptor (opposed the Messenger, waged war on him, rejected his
+successor) is al-Sadiq's narration, and "turned from his successor" is Imam
+Ali's, all in the same block. The usual failure: a block with several
+speakers, and the essay-writer's summary grafting one Imam's words onto
+another. Fixed by a follow-up message to the resident writer (13K tokens,
+113 seconds) and re-ruled by a follow-up to the resident auditor (13K, 114
+seconds).
+
+### Why 14:7 failed (1 rewrite, 1 finding, chain truncation)
+
+A new kind. The al-Sajjad narration on verse 48 ("an earth on which no sins
+were earned") matched its block in speaker, Arabic and English, but the
+draft's chain skipped two narrators, Muhammad ibn al-Numan al-Ahwal and
+Sallam ibn al-Mustanir, between al-Hasan ibn Mahbub and Thuwayr ibn Abi
+Fakhita. The validator checks the Arabic span verbatim but not the chain,
+which is English and free text. Fixed by a follow-up to the resident writer
+(10K, 91 seconds), re-ruled by a follow-up to the resident auditor (12K, 97
+seconds). A validator check that every name in a draft chain appears in the
+block's isnad would catch this deterministically.
+
+### Source gaps
+
+Furat empty for the whole surah except 14:24, 14:27, 14:35 and 14:37.
+al-Mizan served by greattafsirs for every verse from 6 to 34 (altafsir
+answered nothing for the middle of the surah), by altafsir for 1 to 5 and 35
+to 52; Ibn Kathir and al-Durr for 14:27 also came from greattafsirs.
+al-Burhan empty at 3, 6, 8, 10, 11, 19, 20, 23, 30, 47; each was probed
+directly once more and stayed empty. al-Qummi empty at 6, 8, 10, 11, 12,
+19, 20, 23, 29, 30, 32, 34, 38, 39, 40, 47, 51. Not retried further.
+
+### Deviations from the procedure
+
+- The titles gate: the user approved all seven as generated, but `titles 14
+  --apply` skipped every passage because `titles.json` still said
+  `approved: false`, and the command has no approve-all flag. The
+  orchestrator flipped the seven flags in the file and re-ran the apply.
+  The file is the documented user-edit path; the only shortcut was who
+  typed it. A `--approve-all` flag would remove the step.
+- The 14:6 auditor's first audit file was rejected by `audit-check` as
+  malformed because it keyed essay and perspectives targets by ordinal
+  position (`essay[2]` meaning the second marker) instead of by the source
+  number inside the bracket; it corrected itself on the second write. The
+  auditor prompt should say which.
+- Both rewrites went to the still-resident writer and auditor as follow-up
+  messages, as in surah 13: about 12K tokens and two minutes each way.
+
+### Reader notes (taste and policy, not rule failures)
+
+- Commentator and speaker names drift between passages, more than in any
+  earlier surah: "Majma al-Bayan" (14:1) against "Tabrisi" (14:2, 14:4, 14:6)
+  and "Al-Tabrisi" (14:3); "Al-Tusi, in al-Tibyan" (14:1), "Tusi" (14:2,
+  14:4), "al-Tusi" (14:3, 14:7), "al-Tibyan" (14:5); "Tabatabai" and
+  "al-Mizan" both used as the speaker; "the Prophet" (14:3) against "Prophet
+  Muhammad" (14:6); "Imam Ali ibn al-Husayn" (14:3) against "Imam al-Sajjad"
+  (14:5, 14:7). The house list is still the fix.
+- Sentence-initial lowercase: "al-Mizan reads", "al-Tibyan takes" (14:5
+  essay), "al-Tabari reads" (14:7 perspectives). A writer-prompt line
+  (capitalise the article when it opens a sentence) or a validator check.
+- Narrations that open mid-dialogue with the addressee null: 14:6 n2 begins
+  "You lie." and 14:7 n1 "Do not say so." A reader cannot tell who is being
+  answered. Candidate rule for the writer (set the addressee or open with
+  the question) or for the auditor (a reply to an unseen question is a
+  prose flag).
+- Polemical narrations kept where the sources carry them: Satan in verse 22
+  read as "the second one" (14:4 n2, cryptic without context), Banu Umayya
+  as the bad tree (14:4 n6), all of Quraysh and the rejection of the
+  successor (14:5), Bani al-Abbas plotting against the Qaim (14:7 n2). One
+  is a textual claim: 14:6 n6 (al-Baqir) says "This is a word the scribe
+  altered" of verse 41 and reads "my parents" as Ishmael and Isaac.
+  Sourced and supported, but like 13:2 n9 it reads as an alteration claim;
+  a policy call for the user.
+- Filler by the reader test: 14:3 n1, the Prophet on a neighbour coveting a
+  dwelling, at verse 13 (al-Qummi places it there); 14:1 n3 "With the
+  bounties of Allah, that is, His blessings" is a one-line gloss.
+- 14:7's essay leans on al-Mizan for eight of its eleven markers; the
+  passage is where the surah's argument is settled, and al-Mizan carries
+  it, but Majma and al-Tibyan are cited once and twice.
+- Intra-Shia difference inside the essay, the right place: 14:7 on whether
+  verse 44's "day" is worldly uprooting (al-Mizan) or the Resurrection
+  (al-Tusi).
+- Attribution the auditors passed as supported with a note: 14:1 "al-Razi
+  takes it as explicit proof" where the block says his school relied on it
+  and he calls the verse explicit; 14:4 credits Tabrisi with a gloss the
+  block tags "from Ibn Abbas and al-Hasan". Both are the "impersonally
+  reported view credited to the author" pattern from the known findings.
+- Coverage: 14:1 gives verse 6 (Moses and Pharaoh) no treatment in essay,
+  note or narration; 14:2 verses 8, 10, 11; 14:3 verses 19 to 21; 14:4
+  verse 23; 14:5 verses 29, 30, 32, 33; 14:6 verses 39, 40; 14:7 verses
+  42 to 44, 47, 49, 51, 52 have no entry and live in the essay only.
+- The 14:1 auditor again noted that `audit-check` collapses a marker cited
+  three times in the essay to one verdict.
+
+### Open after this run
+
+- `titles --approve-all` (or an `--approve` list) so the orchestrator never
+  edits `titles.json`.
+- Validator: check every name in a draft narration's chain against the
+  block's isnad (14:7).
+- Auditor prompt: targets are keyed by the source number in the bracket
+  (14:6); a reply to an unseen question is a prose flag (14:6, 14:7).
+- Writer prompt: capitalise a sentence-initial "al-"; set the addressee
+  when a narration answers someone.
+- The speaker and commentator house list, now the largest drift so far.
+- Still open from surahs 12 and 13: bidi control characters, the
+  surah-level duplicate-narration scan, marker placement, editorial
+  insertions in `clean_block_text`, the re-gather of surahs 1 to 9, the
+  Meccan/Medinan label.

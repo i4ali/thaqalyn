@@ -241,11 +241,6 @@ struct VerseWithTafsir: Identifiable {
         
         // Use EveryAyah.com for individual verse audio with best available quality for each reciter
         switch reciter.id {
-        case "mishary_rashid_alafasy":
-            // Use highest available quality (128kbps)
-            let urlString = "https://www.everyayah.com/data/Alafasy_128kbps/\(surahString)\(verseString).mp3"
-            return URL(string: urlString)
-            
         case "abdul_rahman_al_sudais":
             // Use highest available quality (192kbps)
             let urlString = "https://www.everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps/\(surahString)\(verseString).mp3"

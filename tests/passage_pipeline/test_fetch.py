@@ -157,6 +157,22 @@ def test_fetch_altafsir_falls_back_to_greattafsirs_on_server_error():
     assert fetch.fetch_altafsir("mizan", 10, 41, get=fake_get, fallback=False) is None
 
 
+def test_fetch_altafsir_falls_back_to_greattafsirs_when_curl_fails():
+    def fake_get(url, timeout=45):
+        if "altafsir.com" in url:
+            raise RuntimeError(f"curl failed for {url}: curl: (28) Operation timed out")
+        return 200, "text/html; charset=utf-8", GT_PAGE.encode("utf-8")
+
+    block = fetch.fetch_altafsir("mizan", 13, 27, get=fake_get)
+    assert block is not None and "greattafsirs.com" in block.url
+
+    def both_fail(url, timeout=45):
+        raise RuntimeError(f"curl failed for {url}: curl: (28) Operation timed out")
+
+    assert fetch.fetch_altafsir("mizan", 13, 27, get=both_fail) is None
+    assert fetch.fetch_greattafsirs("mizan", 13, 27, get=both_fail) is None
+
+
 def test_fetch_altafsir_incomplete_walk_prefers_the_whole_greattafsirs_block():
     page1 = _altafsir_page("{ x }<br>" + LONG + "الصفحة الأولى", links=[2, 3, 4])
 

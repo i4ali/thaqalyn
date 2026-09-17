@@ -1,0 +1,968 @@
+{
+  "1": {
+    "id": "13:1",
+    "surah": 13,
+    "index": 1,
+    "range": [
+      1,
+      7
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "According to the essay, what does the ordered cosmos prove about God?"
+        },
+        "options": [
+          {
+            "en": "That one Lord alone governs it, not merely that a maker exists"
+          },
+          {
+            "en": "That a maker of the world must exist"
+          },
+          {
+            "en": "That the heavens stand on pillars you can see"
+          },
+          {
+            "en": "That the sun and moon move without a fixed term"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the ordered cosmos proves not that a maker merely exists but that one Lord alone governs it."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the cosmos as proof - not that a maker exists, but that one Lord alone governs it"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"Glory be to God - does He not say 'that you see'? There are pillars, but you do not see them.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked how the sky is raised without pillars, Imam al-Rida answered that there are pillars, but you do not see them."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n1",
+          "quote": "Glory be to God - does He not say 'that you see'? There are pillars, but you do not see them"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 5,
+        "prompt": {
+          "en": "Tabatabai explains that the iron collars and the Fire follow from ____."
+        },
+        "options": [
+          {
+            "en": "demanding a further sign"
+          },
+          {
+            "en": "rejecting their Lord"
+          },
+          {
+            "en": "pressing for punishment first"
+          },
+          {
+            "en": "sharing one water"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the iron collars and the Fire follow from the deniers rejecting their Lord, not from the other faults in the verses."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai explains that the iron collars and the Fire follow from rejecting their Lord"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the narration on verse 6, the Quran refutes the Mu'tazila by affirming that God forgives people despite their wrongdoing."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says the Quran came against the Mu'tazila's claim that grave sins cannot be forgiven, affirming that God forgives despite wrongdoing."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n3",
+          "quote": "The Quran came down against the Mu'tazila's claim that grave sins cannot be forgiven"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the perspectives, what do both traditions preserve despite disagreeing over who the guide is?"
+        },
+        "options": [
+          {
+            "en": "The reading that the guide is God alone"
+          },
+          {
+            "en": "The reading that the guide is a leader people follow"
+          },
+          {
+            "en": "The report that the Prophet pointed to Ali as the guide"
+          },
+          {
+            "en": "The claim that no report links the verse to Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say the traditions differ on the guide's identity, yet both preserve the report that the Prophet called himself the warner and pointed to Ali as guide."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions still preserve the report that the Prophet placed his hand on his chest saying 'I am the warner' and pointed to Ali, 'you are the guide'"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T12:00:28Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T12:01:59Z",
+      "assembled_at": "2026-09-16T12:39:17Z"
+    }
+  },
+  "2": {
+    "id": "13:2",
+    "surah": 13,
+    "index": 2,
+    "range": [
+      8,
+      18
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 8,
+        "prompt": {
+          "en": "'What is under nine months is a reduction; and whatever a woman sees of blood during her pregnancy is added ...' Who said this?"
+        },
+        "options": [
+          {
+            "en": "The Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked how the wombs reduce and increase, Imam al-Sadiq explained that under nine months is a reduction and the blood-days a pregnant woman sees are added beyond the nine months."
+        },
+        "anchor": {
+          "where": "verses.8.narrations.n1",
+          "quote": "What is under nine months is a reduction; and whatever a woman sees of blood during her pregnancy is added, by that number of days, beyond the nine months."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the perspectives, within what larger point does al-Mizan set verse 11's guardian angels?"
+        },
+        "options": [
+          {
+            "en": "That God punishes only a people who have earned it"
+          },
+          {
+            "en": "That the water is truth and the valleys are hearts"
+          },
+          {
+            "en": "That everything is held to God's measure and He alone deserves lordship"
+          },
+          {
+            "en": "That the thunderbolts recall Arbad and Amir ibn al-Tufayl"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say al-Mizan places the guardian angels inside its wider point that everything is held to God's measure, so God alone deserves lordship."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Mizan reads them within its larger point that everything is held to God's measure and He alone deserves lordship"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 12,
+        "prompt": {
+          "en": "Fear for the ____, and hope for the one who stays at home."
+        },
+        "options": [
+          {
+            "en": "farmer"
+          },
+          {
+            "en": "traveler"
+          },
+          {
+            "en": "shepherd"
+          },
+          {
+            "en": "sailor"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Rida reads the lightning's fear and hope as fear for the traveler, whom rain threatens on the road, and hope for the one who stays at home."
+        },
+        "anchor": {
+          "where": "verses.12.narrations.n4",
+          "quote": "Fear for the traveler, and hope for the one who stays at home."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the essay, those who call on others besides God are likened to what?"
+        },
+        "options": [
+          {
+            "en": "A man reaching for water that never reaches his mouth"
+          },
+          {
+            "en": "Scum that the flood carries off as dross"
+          },
+          {
+            "en": "A shadow cast at sunrise and sunset"
+          },
+          {
+            "en": "Camels driven along by a herdsman"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says those who invoke others besides God are like a man stretching his palms toward water that never reaches his mouth."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "what men invoke besides Him can no more reach them than water reaches the mouth of a man merely stretching his palms toward it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 18,
+        "prompt": {
+          "en": "According to the essay's closing lines, the best reward awaits those who refuse to answer their Lord."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay's close gives two ends: the best reward for those who answer their Lord, and an evil reckoning for those who refuse, so refusers do not receive the best."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage closes on the two ends, the best for those who answer their Lord, and an evil reckoning for those who refuse."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T11:56:50Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T11:59:04Z",
+      "assembled_at": "2026-09-16T12:39:17Z"
+    }
+  },
+  "3": {
+    "id": "13:3",
+    "surah": 13,
+    "index": 3,
+    "range": [
+      19,
+      26
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 19,
+        "prompt": {
+          "en": "The form is a denial of any ____ between the two, as wide as the gap between sight and blindness."
+        },
+        "options": [
+          {
+            "en": "equality"
+          },
+          {
+            "en": "kinship"
+          },
+          {
+            "en": "covenant"
+          },
+          {
+            "en": "reward"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The commentary reads the opening rhetorical question as denying any equality between the one who knows the truth and the blind, a gap as wide as sight against blindness."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The form is a denial of any equality between the two, as wide as the gap between sight and blindness"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 19,
+        "prompt": {
+          "en": "\"Reflecting for an hour is better than worshipping for a year.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage attributes this saying to Imam al-Sadiq, who links reflection to the verse that praises those who possess intellect and take admonition."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n1",
+          "quote": "Reflecting for an hour is better than worshipping for a year"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the narration on verse 21, what did those who fear an adverse reckoning actually dread?"
+        },
+        "options": [
+          {
+            "en": "That God would wrong or oppress them"
+          },
+          {
+            "en": "Exacting scrutiny and a meticulous accounting"
+          },
+          {
+            "en": "The curse and the ills of the abode"
+          },
+          {
+            "en": "That God would tighten their provision"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The Imam denies that the righteous feared God wronging them; what they dreaded was exacting scrutiny and a meticulous accounting of their deeds."
+        },
+        "anchor": {
+          "where": "verses.21.narrations.n4",
+          "quote": "No, but they feared exacting scrutiny and meticulous accounting"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 25,
+        "prompt": {
+          "en": "According to the passage, the Shia narrations tie the covenant and the bond that God commanded to be joined to the wilayah of Ali and the Imams."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives report that the Shia narrations read the covenant and the joining as centering on the wilayah of Ali and the Imams, so the statement holds."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia narrations read the covenant of verse 20 and 'what Allah has commanded to be joined' as centering on the wilayah of Ali and the Imams"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the essay's closing, what have those who exult in the life of this world done?"
+        },
+        "options": [
+          {
+            "en": "Taken a passing thing for a lasting one"
+          },
+          {
+            "en": "Earned the reward of the ultimate abode"
+          },
+          {
+            "en": "Repelled every evil deed with a good one"
+          },
+          {
+            "en": "Kept up the prayer and spent in secret"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay's closing says those who exult in this life have taken a passing thing for a lasting one, since this world beside the Hereafter is only a trifling enjoyment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "those who exult in this life have taken a passing thing for a lasting one"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T12:08:28Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T12:09:55Z",
+      "assembled_at": "2026-09-16T12:39:17Z"
+    }
+  },
+  "4": {
+    "id": "13:4",
+    "surah": 13,
+    "index": 4,
+    "range": [
+      27,
+      31
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 27,
+        "prompt": {
+          "en": "The faithless demand a sign, as though a ____ would settle their unbelief."
+        },
+        "options": [
+          {
+            "en": "prophecy"
+          },
+          {
+            "en": "miracle"
+          },
+          {
+            "en": "ransom"
+          },
+          {
+            "en": "warning"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay opens that the faithless demand a sign as though a miracle would settle their unbelief, but God answers the matter never turned on signs."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The faithless demand a sign, as though a miracle would settle their unbelief."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "The essay says the two traditions on verse 28 nearly meet. On what shared reading do they converge?"
+        },
+        "options": [
+          {
+            "en": "Whoever loves God, His Messenger, and the Ahl al-Bayt"
+          },
+          {
+            "en": "The tranquil hearts belong only to those who fear punishment"
+          },
+          {
+            "en": "God will guide all mankind together in the end"
+          },
+          {
+            "en": "A sign from heaven would settle the faithless"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the traditions nearly meet because a report has the Prophet, as the verse came down, name whoever loves God, His Messenger, and the Ahl al-Bayt."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "that it names whoever loves God, His Messenger, and the Ahl al-Bayt"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 29,
+        "prompt": {
+          "en": "\"Tuba is a tree in Paradise in the house of Amir al-Muminin. There is not one of his Shia but that in his house is a branch of its branches.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Kazim"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about Tuba, Imam al-Sadiq described it as a tree in Paradise in the house of Amir al-Muminin, with a branch of it in every Shia's house."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n3",
+          "quote": "Tuba is a tree in Paradise in the house of Amir al-Muminin"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 31,
+        "prompt": {
+          "en": "In Imam al-Baqir's narration, the catastrophe strikes sinful disbelievers while another people watch. How do those onlookers respond?"
+        },
+        "options": [
+          {
+            "en": "They repent and turn back to their Lord"
+          },
+          {
+            "en": "They warn the sinful to change their ways"
+          },
+          {
+            "en": "They are struck by the same disaster at once"
+          },
+          {
+            "en": "They take no heed from what befell the others"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Baqir calls it retribution: another people see and hear of the catastrophe that strikes sinful disbelievers, yet none of them takes heed from the other."
+        },
+        "anchor": {
+          "where": "verses.31.narrations.n6",
+          "quote": "The catastrophe befalls another people, who see it and hear of it, while those it strikes are sinful disbelievers like them; and none of them takes heed from the other."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 31,
+        "prompt": {
+          "en": "The essay says God's promise may fail if the deniers persist long enough."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay closes that the deniers are struck by disaster until God's promise comes, for Allah does not break His promise."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the deniers are struck by disaster until His promise comes, for 'Allah does not break His promise.'"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T12:12:00Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T12:14:32Z",
+      "assembled_at": "2026-09-16T12:39:17Z"
+    }
+  },
+  "5": {
+    "id": "13:5",
+    "surah": 13,
+    "index": 5,
+    "range": [
+      32,
+      37
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 32,
+        "prompt": {
+          "en": "According to the essay, whom does the passage answer at its opening?"
+        },
+        "options": [
+          {
+            "en": "those who mocked the Prophet and demanded miracles"
+          },
+          {
+            "en": "the idolaters who ascribe partners to Allah"
+          },
+          {
+            "en": "the Godwary promised the everlasting garden"
+          },
+          {
+            "en": "the earlier apostles who were derided"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens by saying the passage answers those who mocked the Prophet and demanded miracles, recalling that earlier apostles were derided before God seized the faithless."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage answers those who mocked the Prophet and demanded miracles"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 33,
+        "prompt": {
+          "en": "'Or concerning mere words' - the outward speech meant here is ____."
+        },
+        "options": [
+          {
+            "en": "provision"
+          },
+          {
+            "en": "worship"
+          },
+          {
+            "en": "idols"
+          },
+          {
+            "en": "partners"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Baqir glosses the verse's 'mere words' as provision, so the outward speech named there points to the sustenance God provides."
+        },
+        "anchor": {
+          "where": "verses.33.narrations.n1",
+          "quote": "the outward speech meant here is provision"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 34,
+        "prompt": {
+          "en": "According to the passage, the punishment of the faithless in this world takes the form of killing and captivity."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses the worldly punishment of the faithless as killing and captivity, with a still harder punishment to follow in the Hereafter, so the claim holds."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "there is punishment in this world - killing and captivity"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 35,
+        "prompt": {
+          "en": "\"This fire of yours is but one part of seventy parts of the fire of Hell.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the Fire, Imam al-Sadiq said this worldly fire is only one part of seventy parts of Hell's fire, quenched and rekindled many times."
+        },
+        "anchor": {
+          "where": "verses.35.narrations.n2",
+          "quote": "This fire of yours is but one part of seventy parts of the fire of Hell"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 36,
+        "prompt": {
+          "en": "According to the passage's Shia narrations, the 'part' that some factions deny is the interpretation concerning whom?"
+        },
+        "options": [
+          {
+            "en": "the Godwary awaiting the garden"
+          },
+          {
+            "en": "the earlier faithless who were seized"
+          },
+          {
+            "en": "Ali and the family of Muhammad"
+          },
+          {
+            "en": "the idols set beside God"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The passage's Shia narrations read what was sent down to include what was revealed about Ali, so the denied part is its interpretation concerning Ali and the family of Muhammad."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the denied part is its interpretation concerning Ali and the family of Muhammad"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T12:17:23Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T12:18:51Z",
+      "assembled_at": "2026-09-16T12:39:17Z"
+    }
+  },
+  "6": {
+    "id": "13:6",
+    "surah": 13,
+    "index": 6,
+    "range": [
+      38,
+      43
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 38,
+        "prompt": {
+          "en": "According to the essay, how does God answer the opponents who mocked the Prophet for marrying and fathering children?"
+        },
+        "options": [
+          {
+            "en": "He sent messengers before him with wives and descendants too"
+          },
+          {
+            "en": "He commanded the Prophet to give up his family"
+          },
+          {
+            "en": "He promised the opponents a sign on demand"
+          },
+          {
+            "en": "He declared marriage forbidden to true prophets"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says opponents mocked him for marrying and fathering children, and God replies that He sent messengers before him and gave them wives and descendants too, so this is no argument against his prophethood."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He sent messengers before him and gave them wives and descendants too, so this is no argument against his prophethood"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 39,
+        "prompt": {
+          "en": "God effaces and confirms whatever He wishes, while the Mother Book, the unchanging ____, stays with Him."
+        },
+        "options": [
+          {
+            "en": "record"
+          },
+          {
+            "en": "decree"
+          },
+          {
+            "en": "source"
+          },
+          {
+            "en": "throne"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay calls the Mother Book the unchanging source that stays with God, the fixed origin behind the effacing and confirming He does as He wishes."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the Mother Book, the unchanging source, stays with Him"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 40,
+        "prompt": {
+          "en": "According to the essay, what is the Prophet told is his only duty, with the reckoning left to God?"
+        },
+        "options": [
+          {
+            "en": "To fight the faithless until they submit"
+          },
+          {
+            "en": "To communicate the message"
+          },
+          {
+            "en": "To record what every soul earns"
+          },
+          {
+            "en": "To judge between the believers and deniers"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the Prophet is told his duty is only to communicate, while the reckoning belongs to God, not to him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The Prophet is then told that his duty is only to communicate; the reckoning belongs to God"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 41,
+        "prompt": {
+          "en": "\"What makes a swift death or being killed among us easy for me is ... the loss of the scholars.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sajjad"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sajjad said that what eases a swift death or being killed among them is this verse, read as the loss of the scholars."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n4",
+          "quote": "the saying of Allah, 'Have they not seen how We visit the land, diminishing it at its edges' - it is the loss of the scholars"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 43,
+        "prompt": {
+          "en": "According to the perspectives, the Shia narrations leave it open who possesses the knowledge of the Book."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives says the Shia narrations answer, without qualification, that the one who possesses the knowledge of the Book is Ali and the Imams after him."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the Shia narrations answer, without qualification, that it is Ali and the Imams after him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T12:37:01Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T12:38:27Z",
+      "assembled_at": "2026-09-16T12:39:17Z"
+    }
+  }
+}

@@ -121,13 +121,13 @@ final class JourneyAudioPlayer: ObservableObject {
         }
     }
 
-    /// Remote reciter URL for a verse (default reciter Alafasy, everyayah). The first play
-    /// streams this; `VerseAudioCache` saves it to disk so later plays (and offline replay)
+    /// Remote reciter URL for a verse (default reciter Yasser Al-Dosari, everyayah). The first
+    /// play streams this; `VerseAudioCache` saves it to disk so later plays (and offline replay)
     /// read the local copy - see `url(for:)`.
     nonisolated static func verseURL(surah: Int, ayah: Int) -> URL? {
         let s = String(format: "%03d", surah)
         let a = String(format: "%03d", ayah)
-        return URL(string: "https://www.everyayah.com/data/Alafasy_128kbps/\(s)\(a).mp3")
+        return URL(string: "https://www.everyayah.com/data/Yasser_Ad-Dussary_128kbps/\(s)\(a).mp3")
     }
 
     /// A short English display name for a beat, mapped from its section family: the

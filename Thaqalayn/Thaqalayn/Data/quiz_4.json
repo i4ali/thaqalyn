@@ -1,0 +1,3866 @@
+{
+  "1": {
+    "id": "4:1",
+    "surah": 4,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the passage, the surah's opening call to be wary of the Lord is addressed to the faithful alone."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay stresses the surah opens by calling all people, not the faithful alone; Tabatabai reads the address as deliberately taking in everyone through the description of being created from a single soul."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah opens by calling all people, not the faithful alone, to be wary of their Lord."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the verse 3 note, why does al-Qummi say part of the verse was set at the head of the surah?"
+        },
+        "options": [
+          {
+            "en": "Because men would not marry the orphan girls they had raised"
+          },
+          {
+            "en": "Because women demanded a share of the inheritance"
+          },
+          {
+            "en": "Because guardians were eating up the orphans' property"
+          },
+          {
+            "en": "Because the Arabs married more than four wives"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The verse 3 note says al-Qummi held that part of the verse came at the head of the surah because men would not marry the orphan girls they had raised and asked the Prophet."
+        },
+        "anchor": {
+          "where": "verses.3.note",
+          "quote": "men would not marry the orphan girls they had raised and asked the Prophet about it"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 5,
+        "prompt": {
+          "en": "\"The feeble-minded are the wife and the child ... he should not set either of them over the property God made his support.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked who the feeble-minded are, Imam al-Baqir named the wife and the child, and warned a man not to set a foolish, wasteful wife or child over the property that is his livelihood."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n7",
+          "quote": "The feeble-minded are the wife and the child. If a man knows that his wife is foolish and wasteful, and his child foolish and wasteful, he should not set either of them over the property God made his support"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 9,
+        "prompt": {
+          "en": "Al-Tusi gathers four readings of the verse; the first, from Ibn Abbas and others, makes it a prohibition against a bequest that damages the ____."
+        },
+        "options": [
+          {
+            "en": "orphans"
+          },
+          {
+            "en": "witnesses"
+          },
+          {
+            "en": "heirs"
+          },
+          {
+            "en": "poor"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The verse 9 note gives al-Tusi's first reading, from Ibn Abbas, that the verse forbids a bequest which damages a person's heirs, echoing the passage's concern for weak offspring left behind."
+        },
+        "anchor": {
+          "where": "verses.9.note",
+          "quote": "makes it a prohibition against a bequest that damages the heirs"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "In the Perspectives, how does al-Tabrisi read verse seven's general wording about who inherits?"
+        },
+        "options": [
+          {
+            "en": "As leaving inheritance to males alone"
+          },
+          {
+            "en": "As entirely superseded by the later fixed shares"
+          },
+          {
+            "en": "As reaching only the parents and the children"
+          },
+          {
+            "en": "As collapsing the agnatic residuaries and including womb relatives"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "In the Perspectives, al-Tabrisi holds that because God ordained a share for men and for women, the agnatic residuaries' doctrine collapses and the verse's wording reaches the relatives by the womb."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "since God ordained a share for men and a share for women, the doctrine of the agnatic residuaries collapses, and that the wording reaches the relatives by the womb"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:12:00Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:15:05Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "2": {
+    "id": "4:2",
+    "surah": 4,
+    "index": 2,
+    "range": [
+      11,
+      14
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 11,
+        "prompt": {
+          "en": "'Allah enjoins you concerning your children' takes the dividing of an estate out of the ____ hands."
+        },
+        "options": [
+          {
+            "en": "family's"
+          },
+          {
+            "en": "tribe's"
+          },
+          {
+            "en": "judge's"
+          },
+          {
+            "en": "ruler's"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the ruling takes the dividing of an estate out of the family's hands, no longer left to the household to settle among itself."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "takes the dividing of an estate out of the family's hands"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 11,
+        "prompt": {
+          "en": "\"No jihad, no maintenance and no blood money lie upon the woman; those are upon the man.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked by Ibn Abi al-Awja why a woman takes one share and a man two, Imam al-Sadiq answered that no jihad, maintenance or blood money falls on the woman."
+        },
+        "anchor": {
+          "where": "verses.11.narrations.n3",
+          "quote": "no jihad, no maintenance and no blood money lie upon the woman; those are upon the man"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "According to the note on verse 12, whom does Tusi identify as the kalala?"
+        },
+        "options": [
+          {
+            "en": "The husband and wife"
+          },
+          {
+            "en": "The children and parents"
+          },
+          {
+            "en": "The brothers and sisters"
+          },
+          {
+            "en": "The orphans and the poor"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note explains that Tusi holds the kalala are the brothers and sisters, those in this verse being from the mother's side."
+        },
+        "anchor": {
+          "where": "verses.12.note",
+          "quote": "the kalala are the brothers and sisters: those named in this verse are from the mother's side"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 13,
+        "prompt": {
+          "en": "According to the note, Fayd Kashani reads 'these are Allah's bounds' as pointing back only to the inheritance shares just given."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The note says Fayd Kashani takes 'these' to point back over all the preceding rulings, on orphans, bequests and inheritance alike, not the shares alone."
+        },
+        "anchor": {
+          "where": "verses.13.note",
+          "quote": "Fayd Kashani takes 'these' to point back over all the preceding rulings, on orphans, bequests and inheritance alike"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "In the perspectives, what does Tusi add about the parents' shares?"
+        },
+        "options": [
+          {
+            "en": "They are never reduced below their two sixths"
+          },
+          {
+            "en": "They are reduced in proportion to the debt"
+          },
+          {
+            "en": "They yield entirely to the husband's half"
+          },
+          {
+            "en": "They are doubled when there are no children"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives add, on Tusi's authority, that the parents are never reduced below their two sixths, since proportional reduction is void."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the parents are never reduced below their two sixths, since proportional reduction is void"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:15:51Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:17:41Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "3": {
+    "id": "4:3",
+    "surah": 4,
+    "index": 3,
+    "range": [
+      15,
+      22
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 15,
+        "prompt": {
+          "en": "Tabatabai reads verse 15 so that a woman is confined once her act is established, even without four witnesses testifying against her."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False: Tabatabai says the ruling rests on the testimony rather than the act being established, so a woman known to have done it but not testified against is left alone."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the confinement is made to rest on the testimony rather than on the act being established"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 17,
+        "prompt": {
+          "en": "According to Tabrisi, by when must a person repent for verse 17's repentance to be accepted?"
+        },
+        "options": [
+          {
+            "en": "Before death"
+          },
+          {
+            "en": "Within one year of the sin"
+          },
+          {
+            "en": "At the final breath"
+          },
+          {
+            "en": "Only once in a lifetime"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabrisi glosses repenting promptly as repenting before death, since what lies between a person and death is near."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "which Tabrisi glosses as before death, since what lies between a person and death is near"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 19,
+        "prompt": {
+          "en": "Tusi prefers reading \"a gross indecency\" here of ____, since the general wording requires it, and reports the same from al-Baqir."
+        },
+        "options": [
+          {
+            "en": "fornication alone"
+          },
+          {
+            "en": "open unbelief"
+          },
+          {
+            "en": "every act of disobedience"
+          },
+          {
+            "en": "theft and calumny"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Tusi takes 'a gross indecency' in verse 19 broadly, as every act of disobedience, since the general wording requires it, and reports the same from al-Baqir."
+        },
+        "anchor": {
+          "where": "verses.19.note",
+          "quote": "Tusi prefers reading \"a gross indecency\" here of every act of disobedience, since the general wording requires it"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 21,
+        "prompt": {
+          "en": "Who said, \"The covenant is the word by which the marriage was contracted. As for His saying 'solemn', that is the man's seed which he conveys to his wife\"?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Explaining the solemn covenant of verse 21, Imam al-Baqir said it is the word by which the marriage was contracted, glossing 'solemn' as the man's seed."
+        },
+        "anchor": {
+          "where": "verses.21.narrations.n12",
+          "quote": "The covenant is the word by which the marriage was contracted. As for His saying \"solemn\", that is the man's seed which he conveys to his wife"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the perspectives, what does Tabatabai hold about God accepting repentance?"
+        },
+        "options": [
+          {
+            "en": "That He is free to accept it or refuse"
+          },
+          {
+            "en": "That He has bound himself by His own promise"
+          },
+          {
+            "en": "That any obligation upon God is void"
+          },
+          {
+            "en": "That acceptance turns on the sinner's remorse"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say Tabatabai holds God bound himself, having promised to accept the repentance of whoever repents, so acceptance is owed though nothing outside Him imposes it."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tabatabai holds that He has bound himself: He promised to accept the repentance of whoever repents and does not break His promise"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:25:35Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:27:32Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "4": {
+    "id": "4:4",
+    "surah": 4,
+    "index": 4,
+    "range": [
+      23,
+      25
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 23,
+        "prompt": {
+          "en": "Tabrisi notes that prohibition never attaches to persons, only to ____, so what is meant is the contract of marriage with them."
+        },
+        "options": [
+          {
+            "en": "relatives"
+          },
+          {
+            "en": "words"
+          },
+          {
+            "en": "dowries"
+          },
+          {
+            "en": "acts"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Tabrisi holds that a prohibition cannot rest on a person, only on an act, so the verse forbids the contract of marriage with these women, not the women themselves."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi notes that prohibition never attaches to persons, only to acts, so what is meant is the contract of marriage with them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 23,
+        "prompt": {
+          "en": "The Khawarij argued that a stepdaughter a man never raised is lawful for him. How does Imam al-Sadiq answer?"
+        },
+        "options": [
+          {
+            "en": "She is not lawful for him"
+          },
+          {
+            "en": "She is lawful if he never raised her"
+          },
+          {
+            "en": "She becomes lawful once the mother dies"
+          },
+          {
+            "en": "She is lawful with a fresh dowry"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Against the Khawarij, who cited the phrase about being under one's care to free the unraised stepdaughter, Imam al-Sadiq ruled that she is not lawful."
+        },
+        "anchor": {
+          "where": "verses.23.narrations.n1",
+          "quote": "Al-Sadiq said: She is not lawful for him."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 24,
+        "prompt": {
+          "en": "\"There is no harm in your adding for her and her adding for you when the term between you has run out.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir explains that when a temporary marriage's term ends, the two may agree to add a further term with her consent, and she then waits two cycles."
+        },
+        "anchor": {
+          "where": "verses.24.narrations.n6",
+          "quote": "There is no harm in your adding for her and her adding for you when the term between you has run out."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 25,
+        "prompt": {
+          "en": "In verse 25, how does Tusi read the phrase \"faithful slave-women\"?"
+        },
+        "options": [
+          {
+            "en": "It requires freeing the slave-woman before marriage"
+          },
+          {
+            "en": "It permits marrying a slave-woman of any religion"
+          },
+          {
+            "en": "It bars marrying a slave-woman of the People of the Book"
+          },
+          {
+            "en": "It bars marriage to every slave-woman"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "By reading the word faithful in this phrase, Tusi bars a man from marrying a slave-woman who belongs to the People of the Book."
+        },
+        "anchor": {
+          "where": "verses.25.note",
+          "quote": "Tusi reads \"faithful slave-women\" as barring marriage to a slave-woman of the People of the Book."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 24,
+        "prompt": {
+          "en": "In the perspectives, those who read the exception as captive women argued the verse came down about the captives of Awtas."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In al-Tabari's report, those who read the exception as captive women argued from reports that the verse came down about the captives of Awtas."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "those who read the clause of captive women argued from the reports that the verse came down about the captives of Awtas"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:29:33Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:30:46Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "5": {
+    "id": "4:5",
+    "surah": 4,
+    "index": 5,
+    "range": [
+      26,
+      33
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the essay, what does Tabrisi say God's stated desires reveal about His purpose in the laws?"
+        },
+        "options": [
+          {
+            "en": "That He intends the people's welfare and benefit"
+          },
+          {
+            "en": "That He tests them with hardship"
+          },
+          {
+            "en": "That He conceals His reasons from them"
+          },
+          {
+            "en": "That He favours the earlier nations"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabrisi reads God's stated desires as His own account of why He permitted and forbade, that He intends by it the people's welfare and benefit."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He intends by it our welfare and our benefit; and he finds in it a refutation of the Mujbira, since God is shown willing nothing but good and rectitude"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 28,
+        "prompt": {
+          "en": "Mujahid, Tawus and Zayd referred the lightening here to the permission of marriage with ____, since man was created weak in the matter of women."
+        },
+        "options": [
+          {
+            "en": "orphans"
+          },
+          {
+            "en": "widows"
+          },
+          {
+            "en": "bondwomen"
+          },
+          {
+            "en": "kinswomen"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note says these authorities referred God's desire to lighten the burden to the permission of marriage with bondwomen, since man was created weak in the matter of women."
+        },
+        "anchor": {
+          "where": "verses.28.note",
+          "quote": "referred the lightening here to the permission of marriage with bondwomen, since man was created weak in the matter of women"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 31,
+        "prompt": {
+          "en": "\"They are in the book of Ali: seven. Disbelief in God, killing a soul, disobedience to parents ...\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "When Zurara asked which sins are major, Imam al-Sadiq answered from the book of Ali that they are seven, beginning with disbelief in God and killing a soul."
+        },
+        "anchor": {
+          "where": "verses.31.narrations.n5",
+          "quote": "They are in the book of Ali: seven. Disbelief in God, killing a soul, disobedience to parents"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 32,
+        "prompt": {
+          "en": "The note reports that women came asking why the verse speaks of men's share but not the women's."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note on verse 32 records Tabrisi's report that a delegation of women asked why God names the men's share and not the women's."
+        },
+        "anchor": {
+          "where": "verses.32.note",
+          "quote": "a delegation of women asked why God mentions the men and not them"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 33,
+        "prompt": {
+          "en": "According to Perspectives, how do the Shia narrations read 'those with whom you have made a compact'?"
+        },
+        "options": [
+          {
+            "en": "As sworn allies owed a share of the estate"
+          },
+          {
+            "en": "As adopted sons in the way of the Jahiliyya"
+          },
+          {
+            "en": "As Helper brothers joined by the Prophet's bond"
+          },
+          {
+            "en": "As the Imams, through whom oaths are bound"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Perspectives says the Shia narrations keep the clause alive: al-Rida reads those with whom you have made a compact as the Imams, through whom God has bound your oaths."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Rida reads those with whom you have made a compact as the Imams"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:34:04Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:35:29Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "6": {
+    "id": "4:6",
+    "surah": 4,
+    "index": 6,
+    "range": [
+      34,
+      42
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 34,
+        "prompt": {
+          "en": "Explaining the verse's graded remedies, one report says: \"He turns his back to her ... It is a striking with the tooth-stick.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked what the verse's remedies mean, Imam al-Baqir glossed keeping away as turning his back to her, and the beating as a striking with the tooth-stick."
+        },
+        "anchor": {
+          "where": "verses.34.narrations.n1",
+          "quote": "It is a striking with the tooth-stick"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 35,
+        "prompt": {
+          "en": "According to the passage, who is the one told to appoint the two arbiters when a couple fears a split?"
+        },
+        "options": [
+          {
+            "en": "The husband, since men manage women"
+          },
+          {
+            "en": "The wife's father as her guardian"
+          },
+          {
+            "en": "The ruler before whom the couple bring their case"
+          },
+          {
+            "en": "Whichever spouse first fears the split"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The passage says the one told to appoint the two arbiters is not the spouses but the ruler before whom the couple bring their case, as most jurists hold."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the one told to appoint the two arbiters is the ruler before whom the couple bring their case"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 36,
+        "prompt": {
+          "en": "The passage limits the neighbour of verse 36 to the single household next door."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Far from limiting it to the house next door, Imam al-Baqir set the neighbourhood at forty houses on each side, before, behind, right and left."
+        },
+        "anchor": {
+          "where": "verses.36.narrations.n8",
+          "quote": "The limit of neighbourhood is forty houses on each side"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 37,
+        "prompt": {
+          "en": "Al-Qummi remarks that by placing the stingy under \"the faithless\" in this verse, Allah has named the miser a ____."
+        },
+        "options": [
+          {
+            "en": "disbeliever"
+          },
+          {
+            "en": "hypocrite"
+          },
+          {
+            "en": "transgressor"
+          },
+          {
+            "en": "wrongdoer"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "By listing the stingy among 'the faithless,' al-Qummi says, the verse itself names the miser a disbeliever, tying the withholding of wealth to unbelief."
+        },
+        "anchor": {
+          "where": "verses.37.note",
+          "quote": "by placing the stingy under \"the faithless\" in this verse, Allah has named the miser a disbeliever"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 41,
+        "prompt": {
+          "en": "In the perspectives, how does al-Qummi read 'a witness from every nation' in verse 41?"
+        },
+        "options": [
+          {
+            "en": "As the recording angels of each people"
+          },
+          {
+            "en": "As the Imams, over whom the Messenger of Allah is witness"
+          },
+          {
+            "en": "As every believer who kept the faith"
+          },
+          {
+            "en": "As the prophets' closest companions"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives give al-Qummi's reading: 'a witness from every nation' means the Imams, with the Messenger of Allah a witness over them and they witnesses over the people."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Al-Qummi takes \"a witness from every nation\" to mean the Imams, with the Messenger of Allah witness over them and they witnesses over the people"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:35:55Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:37:43Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "7": {
+    "id": "4:7",
+    "surah": 4,
+    "index": 7,
+    "range": [
+      43,
+      50
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 43,
+        "prompt": {
+          "en": "On the ground of tayammum, al-Zajjaj, cited by al-Tabrisi, holds that sa'id is not soil as such but the ____ of the earth, whether soil or something else."
+        },
+        "options": [
+          {
+            "en": "face"
+          },
+          {
+            "en": "dust"
+          },
+          {
+            "en": "clay"
+          },
+          {
+            "en": "sand"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note glosses the ground of tayammum: al-Zajjaj takes sa'id to be the face of the earth, whether soil or anything else, not soil in particular."
+        },
+        "anchor": {
+          "where": "verses.43.note",
+          "quote": "sa'id is not soil as such but the face of the earth, whether soil or something else"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 44,
+        "prompt": {
+          "en": "How does al-Qummi read the error purchased by those given a share of the Book?"
+        },
+        "options": [
+          {
+            "en": "Their straying over Amir al-Mu'minin and pulling people from his wilayah"
+          },
+          {
+            "en": "Their concealing the Torah's description of the Prophet"
+          },
+          {
+            "en": "Their drinking wine before rising to prayer"
+          },
+          {
+            "en": "Their twisting greetings to hide an insult"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note has al-Qummi read the error as their straying over Amir al-Mu'minin, and their wish to make others lose the way as pulling them from his wilayah, the straight path."
+        },
+        "anchor": {
+          "where": "verses.44.note",
+          "quote": "their straying over Amir al-Mu'minin, and their wish that you lose the way as pulling people out of his wilayah, which is the straight path"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 46,
+        "prompt": {
+          "en": "\"They would say ra'ina, that is: attend to our condition ... But in the language of the Jews its meaning was: hear, may you not hear.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Musa ibn Jafar"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Musa ibn Jafar explains ra'ina: to the Muslims it meant attend to our condition, but in the Jews' tongue it carried the insult hear, may you not hear."
+        },
+        "anchor": {
+          "where": "verses.46.narrations.n4",
+          "quote": "But in the language of the Jews its meaning was: hear, may you not hear"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 48,
+        "prompt": {
+          "en": "According to Imam al-Sadiq in the passage, even the major sins are included in what God may forgive besides ascribing partners to Him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked whether the major sins enter the exception in 'He forgives anything besides that,' Imam al-Sadiq answered yes, so they fall under what God may forgive."
+        },
+        "anchor": {
+          "where": "verses.48.narrations.n7",
+          "quote": "I said: do the major sins enter into the exception? He said: yes"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 50,
+        "prompt": {
+          "en": "At the essay's close, what does Ibn Jurayj say the lie in the final verse really is?"
+        },
+        "options": [
+          {
+            "en": "Their boast to be sons of God"
+          },
+          {
+            "en": "Their very claim to purify themselves"
+          },
+          {
+            "en": "Their ascribing of partners to God"
+          },
+          {
+            "en": "Their perverting of words from their places"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the essay's closing paragraph, Ibn Jurayj, cited by al-Tusi, reads the lie they fabricate in the last verse as that very self-purification, since purity is God's to give."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Ibn Jurayj, cited by al-Tusi, reads the lie they fabricate as that very self-purification"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:42:57Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:44:16Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "8": {
+    "id": "4:8",
+    "surah": 4,
+    "index": 8,
+    "range": [
+      51,
+      59
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 51,
+        "prompt": {
+          "en": "Fayd Kashani: jibt was in origin the name of an idol and came to be used for whatever is worshipped besides Allah, while taghut covers Satan and every ____."
+        },
+        "options": [
+          {
+            "en": "falsehood"
+          },
+          {
+            "en": "tyrant"
+          },
+          {
+            "en": "sorcerer"
+          },
+          {
+            "en": "deceit"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Fayd Kashani distinguishes jibt, in origin an idol's name, from taghut, which he says covers Satan and every falsehood."
+        },
+        "anchor": {
+          "where": "verses.51.note",
+          "quote": "taghut covers Satan and every falsehood"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 53,
+        "prompt": {
+          "en": "In the essay, how does Tabrisi answer whether these people hold any sovereignty?"
+        },
+        "options": [
+          {
+            "en": "They hold sovereignty but rule the pagans unjustly"
+          },
+          {
+            "en": "The sovereignty is not theirs, and they would give nothing away"
+          },
+          {
+            "en": "They share sovereignty with the chiefs of Quraysh"
+          },
+          {
+            "en": "Their sovereignty ended when they allied with Ka'b"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports Tabrisi holding the judgement was never theirs, since they hold no sovereignty; had they held it, they would not part with even a speck."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the judgement was never theirs to make, since the sovereignty is not, and had they held it they would not have parted with a speck"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 56,
+        "prompt": {
+          "en": "\"Woe to you, it is the same and it is another. Suppose a man took a brick, broke it, then returned it to its mould.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Kazim"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked by Ibn Abi al-Awja about the sin of the replaced skin, Imam al-Sadiq answered with a broken brick returned to its mould: the same and yet another."
+        },
+        "anchor": {
+          "where": "verses.56.narrations.n5",
+          "quote": "Woe to you, it is the same and it is another. Suppose a man took a brick, broke it, then returned it to its mould"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 57,
+        "prompt": {
+          "en": "According to the passage, the garden's shade is called deep because an ordinary shade can be pierced by heat."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note explains that a shade can be pierced by heat, so the garden's is called deep, marking it as no ordinary shade."
+        },
+        "anchor": {
+          "where": "verses.57.note",
+          "quote": "a shade can be pierced by heat, so the garden's is called deep"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 59,
+        "prompt": {
+          "en": "In the perspectives, on what ground do Tabrisi and Tusi hold that those in authority are the Imams of Muhammad's family?"
+        },
+        "options": [
+          {
+            "en": "Because they had already been given the Book and wisdom"
+          },
+          {
+            "en": "Because the garden's shade is promised only to them"
+          },
+          {
+            "en": "Because the People of the Book barred others from faith"
+          },
+          {
+            "en": "Because unrestricted obedience is owed only to one proven infallible"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives report that Allah joins obedience to them without restriction, and such unrestricted obedience can be owed only to one whose infallibility is established."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Allah joins obedience to them with obedience to Himself without restriction, and such obedience is owed only to one whose infallibility is established"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:46:46Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:48:07Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "9": {
+    "id": "4:9",
+    "surah": 4,
+    "index": 9,
+    "range": [
+      60,
+      70
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 60,
+        "prompt": {
+          "en": "Tusi glosses taghut as one possessed of ____: anything worshipped besides God, and anyone who judges contrary to God's ruling."
+        },
+        "options": [
+          {
+            "en": "idolatry"
+          },
+          {
+            "en": "transgression"
+          },
+          {
+            "en": "arrogance"
+          },
+          {
+            "en": "ignorance"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Tusi reads taghut not merely as an idol but as one possessed of transgression: anything worshipped besides God, and anyone who judges by other than God's ruling."
+        },
+        "anchor": {
+          "where": "verses.60.note",
+          "quote": "Tusi glosses taghut as one possessed of transgression: anything worshipped besides God, and anyone who judges contrary to God's ruling"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 62,
+        "prompt": {
+          "en": "According to the essay, how does Tabrisi explain the hypocrites' oath that they desired only to do good and comity?"
+        },
+        "options": [
+          {
+            "en": "As wanting a mediator, not a verdict that breeds rancour"
+          },
+          {
+            "en": "As sincere regret for seeking a false judge"
+          },
+          {
+            "en": "As a plea for the Prophet's forgiveness"
+          },
+          {
+            "en": "As a promise to obey his future rulings"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabrisi unpacks their oath as the claim that they were sparing the Prophet trouble and wanted a mediator rather than a verdict that breeds rancour."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "an excuse Tabrisi unpacks as the claim that they were sparing the Prophet trouble and wanted a mediator rather than a verdict that breeds rancour"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 64,
+        "prompt": {
+          "en": "According to the passage, verse 64's phrase 'by Allah's leave' is read to mean 'by Allah's command,' establishing that messengers must be obeyed."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note says Tabrisi reads 'by Allah's leave' as 'by Allah's command,' which establishes that every messenger must be obeyed, so the statement is true."
+        },
+        "anchor": {
+          "where": "verses.64.note",
+          "quote": "Tabrisi takes 'by Allah's leave' as by Allah's command, which establishes that the messengers must be obeyed"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 65,
+        "prompt": {
+          "en": "\"Submission is contentment and satisfaction with His decree.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the submission the verse demands, Imam al-Baqir defined it as contentment and satisfaction with God's decree."
+        },
+        "anchor": {
+          "where": "verses.65.narrations.n10",
+          "quote": "Submission is contentment and satisfaction with His decree."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 66,
+        "prompt": {
+          "en": "According to the Perspectives, how do the Shia narrations gloss 'slay your folks' in verse 66?"
+        },
+        "options": [
+          {
+            "en": "As emigrating from their homes"
+          },
+          {
+            "en": "As submitting to the Imam"
+          },
+          {
+            "en": "As fighting the enemies of Islam"
+          },
+          {
+            "en": "As surrendering their wealth"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the Perspectives the Shia narrations read the verse figuratively: al-Sadiq glosses 'slay your folks' as submitting to the Imam, not as literal killing or emigration."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Sadiq glosses 'slay your folks' as submitting to the Imam and 'leave your habitations' as contentment with him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:49:29Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:50:37Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "10": {
+    "id": "4:10",
+    "surah": 4,
+    "index": 10,
+    "range": [
+      71,
+      76
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 71,
+        "prompt": {
+          "en": "He called the ____ precaution because by them what is feared is warded off."
+        },
+        "options": [
+          {
+            "en": "banners"
+          },
+          {
+            "en": "provisions"
+          },
+          {
+            "en": "weapons"
+          },
+          {
+            "en": "prayers"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir glosses 'take your precautions' as take your weapons, since the weapons are the instrument by which what is feared is warded off."
+        },
+        "anchor": {
+          "where": "verses.71.narrations.n1",
+          "quote": "He called the weapons precaution because by them what is feared is warded off"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 72,
+        "prompt": {
+          "en": "How does Tusi explain counting the foot-dragger among 'you,' the believers, in verse 72?"
+        },
+        "options": [
+          {
+            "en": "Counted believers by kinship and outward legal rulings"
+          },
+          {
+            "en": "Believers with full inner faith but weak resolve"
+          },
+          {
+            "en": "Openly disbelieving enemies fighting against the Muslims"
+          },
+          {
+            "en": "Angels sent to test the believers' ranks"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tusi says the foot-dragger is counted among believers by kinship and close company, and outwardly by the law's rulings on blood, inheritance and marriage."
+        },
+        "anchor": {
+          "where": "verses.72.note",
+          "quote": "such men are counted among the believers by kinship and close company, and outwardly by the rulings of the law on blood, inheritance and marriage"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 74,
+        "prompt": {
+          "en": "\"Above every act of goodness there is a goodness, until a man is killed in the way of God ... there is no goodness above it.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Messenger of God"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The Messenger of God taught that above every good deed lies a greater good, until a man is slain in the way of God, above which no goodness rises."
+        },
+        "anchor": {
+          "where": "verses.74.narrations.n5",
+          "quote": "Above every act of goodness there is a goodness, until a man is killed in the way of God"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 75,
+        "prompt": {
+          "en": "According to the perspectives, Qurtubi derives from verse 75 that freeing captives is obligatory on all Muslims, by fighting or by wealth."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "True. The perspectives report Qurtubi drawing from this verse a standing ruling: freeing captives is obligatory upon the whole body of Muslims, whether by fighting or by wealth."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "freeing captives is obligatory upon the whole body of Muslims, whether by fighting or by wealth"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 76,
+        "prompt": {
+          "en": "According to the essay, why does Tabrisi say Satan's stratagems are flimsy?"
+        },
+        "options": [
+          {
+            "en": "Because his followers are always fewer in number"
+          },
+          {
+            "en": "Because his friends fight on a doubt, believers on a proof"
+          },
+          {
+            "en": "Because idols cannot protect those who worship them"
+          },
+          {
+            "en": "Because the hypocrites secretly desert his cause"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay closes with Tabrisi's reason: Satan's scheme is flimsy because his friends fight on a mere doubt, while the believers fight on a proof."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "his friends fight on a doubt, the believers on a proof"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T00:52:03Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T00:53:36Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "11": {
+    "id": "4:11",
+    "surah": 4,
+    "index": 11,
+    "range": [
+      77,
+      87
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 77,
+        "prompt": {
+          "en": "According to the passage, Tabatabai reads the early order to hold back as a matter of timing, kept until the religion's frame stood firm."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabatabai does not read the command as a permanent ban but as timing: the believers were to hold back and raise the rites of religion until its frame stood firm, and only then fight."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the early restraint as timing: they were to hold back and raise the rites of the religion until its frame stood firm"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 79,
+        "prompt": {
+          "en": "According to the note, how does al-Tusi reconcile the two verses, one saying all is from Allah and the next putting ill with the servant?"
+        },
+        "options": [
+          {
+            "en": "The two verses were revealed at different times"
+          },
+          {
+            "en": "The later verse abrogates the earlier one"
+          },
+          {
+            "en": "One speaks of blessing and affliction, the other of obedience and disobedience"
+          },
+          {
+            "en": "Both verses assign every deed to the servant alone"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note says al-Tusi treats the verses as speaking of different things: the earlier concerns blessing and affliction, this one concerns obedience and disobedience, so they do not contradict."
+        },
+        "anchor": {
+          "where": "verses.79.note",
+          "quote": "Al-Tusi answers that the two speak of different things: blessing and affliction there, obedience and disobedience here"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 82,
+        "prompt": {
+          "en": "\"The Quran's outward is elegant and its inward deep; its wonders never end, and darkness is dispelled only by it.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet Muhammad"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage attributes these words to Imam Ali, who describes the Quran confirming itself with no discrepancy, its outward elegant and inward deep, its wonders unending, dispelling darkness."
+        },
+        "anchor": {
+          "where": "verses.82.narrations.n6",
+          "quote": "The Quran's outward is elegant and its inward deep; its wonders never end, and darkness is dispelled only by it"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 86,
+        "prompt": {
+          "en": "The greeting of peace is voluntary, and returning it is ____."
+        },
+        "options": [
+          {
+            "en": "recommended"
+          },
+          {
+            "en": "obligatory"
+          },
+          {
+            "en": "forbidden"
+          },
+          {
+            "en": "disliked"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The Prophet's saying distinguishes the two acts: offering the greeting of peace is voluntary, but once you are greeted, returning the salute is obligatory."
+        },
+        "anchor": {
+          "where": "verses.86.narrations.n11",
+          "quote": "The greeting of peace is voluntary, and returning it is obligatory."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 87,
+        "prompt": {
+          "en": "According to the essay's closing line, why is no one more truthful in speech than Allah?"
+        },
+        "options": [
+          {
+            "en": "Because He gathers all people on the Day of Resurrection"
+          },
+          {
+            "en": "Because the Quran contains no discrepancy"
+          },
+          {
+            "en": "Because He sent the Apostle as a witness"
+          },
+          {
+            "en": "Because lying comes only of need"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay ends on the One who cannot lie, since lying comes only of need; God has no need, so none is more truthful in speech than He."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage closes on the gathering, and on the One who cannot lie, since lying comes only of need"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:00:34Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:01:39Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "12": {
+    "id": "4:12",
+    "surah": 4,
+    "index": 12,
+    "range": [
+      88,
+      91
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 88,
+        "prompt": {
+          "en": "According to the essay, what does Tabatabai find the verses came down about?"
+        },
+        "options": [
+          {
+            "en": "Men who professed faith, then went home and shared their people's idolatry"
+          },
+          {
+            "en": "Believers who fled the battle of Uhud in fear"
+          },
+          {
+            "en": "People who refused to enter Islam from the start"
+          },
+          {
+            "en": "Emigrants who abandoned Medina during a famine"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabatabai finds the verses came down about men who professed faith before the believers, then went home and shared their people's idolatry, so the Muslims divided over fighting them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "they came down about men who professed faith before the believers, then went home and shared their people's idolatry"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 89,
+        "prompt": {
+          "en": "\"The satans among mankind have trickery, guile, deceits and whispering to one another, aiming that the enemies of Allah and the people of truth become equal in doubt and denial.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "The Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that the satans among mankind whisper so that the enemies of Allah and the people of truth become alike in doubt and denial."
+        },
+        "anchor": {
+          "where": "verses.89.narrations.n2",
+          "quote": "The satans among mankind have trickery, guile, deceits and whispering to one another, aiming that the enemies of Allah and the people of truth become equal in doubt and denial"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 90,
+        "prompt": {
+          "en": "According to the narration, Banu Mudlij pledged to fight their own people alongside the Muslims."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration says Banu Mudlij told the Prophet they were neither with him nor with their own people against him, refusing to fight either side."
+        },
+        "anchor": {
+          "where": "verses.90.narrations.n4",
+          "quote": "our breasts are constrained to testify that you are the Messenger of Allah, so we are neither with you nor with our people against you"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 91,
+        "prompt": {
+          "en": "According to the note, what does 'a clear sanction' in the final verse mean?"
+        },
+        "options": [
+          {
+            "en": "A written treaty between the two parties"
+          },
+          {
+            "en": "A manifest argument or plain excuse for fighting"
+          },
+          {
+            "en": "A command delivered by an angel"
+          },
+          {
+            "en": "The ruler's personal permission to migrate"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note glosses a clear sanction as a manifest argument or plain excuse for fighting, adding that sultan fits because one prevails by an argument."
+        },
+        "anchor": {
+          "where": "verses.91.note",
+          "quote": "A clear sanction is a manifest argument, or a plain excuse for fighting"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 91,
+        "prompt": {
+          "en": "The line is drawn at ____, not at profession."
+        },
+        "options": [
+          {
+            "en": "conduct"
+          },
+          {
+            "en": "faith"
+          },
+          {
+            "en": "birth"
+          },
+          {
+            "en": "treaty"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay closes by saying the line is drawn at conduct, not at profession: liability follows what people do, not what they merely claim."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The line is drawn at conduct, not at profession."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:00:28Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:01:58Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "13": {
+    "id": "4:13",
+    "surah": 4,
+    "index": 13,
+    "range": [
+      92,
+      96
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 92,
+        "prompt": {
+          "en": "\"Deliberate killing is whenever a man intends something and strikes it with iron, a stone, a stick or a blow: all of that is deliberate.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked how to tell the two apart, Imam al-Sadiq called striking with iron, stone, stick or a blow deliberate, and hitting a thing other than the one intended a mistake."
+        },
+        "anchor": {
+          "where": "verses.92.narrations.n1",
+          "quote": "Deliberate killing is whenever a man intends something and strikes it with iron, a stone, a stick or a blow: all of that is deliberate. Mistake is when he intends one thing and hits another."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 92,
+        "prompt": {
+          "en": "According to the essay, why does the mistaken-killing verse name the blood-money first where the dead man's people hold a treaty?"
+        },
+        "options": [
+          {
+            "en": "Because fasting replaces the blood-money there"
+          },
+          {
+            "en": "Because manumission is not required in that case"
+          },
+          {
+            "en": "Out of regard for the covenant"
+          },
+          {
+            "en": "Because the dead man's people cannot inherit"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay lists three cases and says that where a treaty stands, the blood-money is named first out of regard for the covenant with the dead man's people."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "where a treaty stands, the blood money named first out of regard for the covenant"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 93,
+        "prompt": {
+          "en": "According to the note on verse 93, Shia narrators direct its threat at one who kills a believer on account of his faith."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "True. The note reports Tusi's statement that Shia narrators aim the verse at one who kills a believer for his faith, and such a killer can only be a disbeliever."
+        },
+        "anchor": {
+          "where": "verses.93.note",
+          "quote": "Shia narrators direct this verse at one who kills a believer for his faith, and such a man can only be a disbeliever"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 95,
+        "prompt": {
+          "en": "Al-Qummi glosses 'those who suffer from some disability' as the ____, since no blame rests on the blind."
+        },
+        "options": [
+          {
+            "en": "recently wounded"
+          },
+          {
+            "en": "elderly and poor"
+          },
+          {
+            "en": "captured in war"
+          },
+          {
+            "en": "chronically disabled"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Al-Qummi reads 'those who suffer from some disability' as the chronically disabled, adding that no blame rests on the blind, so the exception covers lasting, not passing, hindrance."
+        },
+        "anchor": {
+          "where": "verses.95.note",
+          "quote": "Al-Qummi glosses 'those who suffer from some disability' as the chronically disabled, since no blame rests on the blind"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 95,
+        "prompt": {
+          "en": "According to the essay's close, what does the passage promise everyone, both the fighter and the one who sits back, even while it graces the fighter above the sitter?"
+        },
+        "options": [
+          {
+            "en": "Ranks, forgiveness and mercy"
+          },
+          {
+            "en": "The best reward"
+          },
+          {
+            "en": "Nothing beyond this world"
+          },
+          {
+            "en": "An equal rank to the fighter"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay's close says the sitter is not left empty-handed: to each Allah has promised the best reward, while the fighters keep the surplus of ranks, forgiveness and mercy."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Yet the sitter is not left empty-handed: to each Allah has promised the best reward. The fighters keep the surplus: ranks, forgiveness, mercy."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:06:04Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:07:19Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "14": {
+    "id": "4:14",
+    "surah": 4,
+    "index": 14,
+    "range": [
+      97,
+      100
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 97,
+        "prompt": {
+          "en": "Al-Mizan reads the verses just before as a ____, rousing believers to strive rather than sit back."
+        },
+        "options": [
+          {
+            "en": "goad"
+          },
+          {
+            "en": "comfort"
+          },
+          {
+            "en": "warning"
+          },
+          {
+            "en": "promise"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens with al-Mizan reading the verses before this passage as a goad, a spur that rouses believers to strive in God's way rather than sit back at home."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Mizan reads the verses just before as a goad, rousing believers to strive rather than sit back"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 97,
+        "prompt": {
+          "en": "According to the note on verse 97, the angels seize souls on their own initiative rather than by Allah's command."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says what the angels or the angel of death do may be ascribed to Allah because they act by His command, so they do not act on their own."
+        },
+        "anchor": {
+          "where": "verses.97.note",
+          "quote": "what the angels or the angel of death do may equally be ascribed to Allah, since they act by His command"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 98,
+        "prompt": {
+          "en": "According to the note on verse 98, whom does al-Tusi limit the exception to?"
+        },
+        "options": [
+          {
+            "en": "Those who stayed in Mecca to guard their wealth"
+          },
+          {
+            "en": "Those killed fighting at Badr"
+          },
+          {
+            "en": "Those too poor to leave, or ignorant of the road out"
+          },
+          {
+            "en": "Those who migrated to Medina with the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note says al-Tusi restricts the exception to those who cannot leave Mecca because of poverty and want of means, or who do not know the road out."
+        },
+        "anchor": {
+          "where": "verses.98.note",
+          "quote": "Al-Tusi limits the exception to those who cannot leave for poverty and want of means, or who do not know the road out of Mecca"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 98,
+        "prompt": {
+          "en": "\"The oppressed are a people who fast and pray, whose bellies and private parts are chaste, who do not hold that the truth lies with any other than us.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Speaking to Sulayman ibn Khalid, Imam al-Sadiq called the truly oppressed a people who fast and pray and hold that the truth lies with none but the Imams."
+        },
+        "anchor": {
+          "where": "verses.98.narrations.n4",
+          "quote": "The oppressed are a people who fast and pray, whose bellies and private parts are chaste, who do not hold that the truth lies with any other than us"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 100,
+        "prompt": {
+          "en": "According to the perspectives, how does Ali ibn Ibrahim read 'migrate in it'?"
+        },
+        "options": [
+          {
+            "en": "Physically leaving Mecca for Medina"
+          },
+          {
+            "en": "Joining the fighters at Badr"
+          },
+          {
+            "en": "Seeking refuge among distant tribes"
+          },
+          {
+            "en": "God's religion and book are wide enough to look into"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "In the perspectives, Ali ibn Ibrahim takes 'migrate in it' beyond leaving Mecca, reading it to mean that God's religion and book are wide enough to look into."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "reads migrate in it as meaning that God's religion and book are wide enough to look into"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:09:37Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:10:48Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "15": {
+    "id": "4:15",
+    "surah": 4,
+    "index": 15,
+    "range": [
+      101,
+      104
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 101,
+        "prompt": {
+          "en": "\"Six do not shorten the prayer: tax collectors who go about collecting ... and the brigand who cuts the road.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Listing who may not shorten - tax collectors, merchants, commanders, shepherds, hunters for amusement and brigands - it is Imam Ali who names the six."
+        },
+        "anchor": {
+          "where": "verses.101.narrations.n3",
+          "quote": "Six do not shorten the prayer: tax collectors who go about collecting, the merchant who goes from market to market"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 102,
+        "prompt": {
+          "en": "According to the note, what were Khalid ibn al-Walid's horsemen waiting for as they lay in ambush near Hudaybiyya?"
+        },
+        "options": [
+          {
+            "en": "For the Muslims to run out of water"
+          },
+          {
+            "en": "For the Muslims to be at prayer"
+          },
+          {
+            "en": "For nightfall to attack the camp"
+          },
+          {
+            "en": "For reinforcements from Quraysh"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says the verse came down on the road to Hudaybiyya, when Khalid ibn al-Walid lay in ambush with two hundred horsemen, waiting for the Muslims to be at prayer."
+        },
+        "anchor": {
+          "where": "verses.102.note",
+          "quote": "the verse came down on the road to Hudaybiyya, when Khalid ibn al-Walid lay in ambush with two hundred horsemen, waiting for the Muslims to be at prayer"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 102,
+        "prompt": {
+          "en": "Tabrisi holds that the ones ordered to carry weapons are the ones ____."
+        },
+        "options": [
+          {
+            "en": "facing the enemy"
+          },
+          {
+            "en": "in the rear"
+          },
+          {
+            "en": "praying"
+          },
+          {
+            "en": "on guard"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The choreography sets one party at prayer and one facing the enemy; Tabrisi holds it is the praying party, not the watching one, that is told to keep its weapons."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi holds that the ones ordered to carry weapons are the ones praying"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 103,
+        "prompt": {
+          "en": "According to the narration, why does Imam al-Baqir bring up Sulayman ibn Dawud praying outside its time?"
+        },
+        "options": [
+          {
+            "en": "To show a prayer prayed when remembered still counts"
+          },
+          {
+            "en": "To show Sulayman was punished for the delay"
+          },
+          {
+            "en": "To show prophets need not pray on time"
+          },
+          {
+            "en": "To show the prayer may be skipped in fear"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Baqir denies that 'timed' names a deadline after which a prayer would not count; if it did, Sulayman ibn Dawud would have perished when he prayed outside its time."
+        },
+        "anchor": {
+          "where": "verses.103.narrations.n6",
+          "quote": "were that so, Sulayman ibn Dawud would have perished when he prayed outside its time"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 101,
+        "prompt": {
+          "en": "According to the passage, in the madhhab of Ahl al-Bayt shortening the prayer in travel is an obligation."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives report Tabrisi recording the obligation as the madhhab of Ahl al-Bayt, and al-Baqir answering that shortening on a journey binds exactly as completing binds at home."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the obligation is the madhhab of Ahl al-Bayt"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:16:31Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:17:51Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "16": {
+    "id": "4:16",
+    "surah": 4,
+    "index": 16,
+    "range": [
+      105,
+      112
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 105,
+        "prompt": {
+          "en": "\"You claim to be a man of opinion. Opinion from the Messenger of Allah was correct, and from anyone below him it is error.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "The Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Rebuking Abu Hanifah's reliance on opinion, Imam al-Sadiq says sound opinion belonged to the Messenger alone, since God told only him to judge by what He had shown him."
+        },
+        "anchor": {
+          "where": "verses.105.narrations.n2",
+          "quote": "You claim to be a man of opinion. Opinion from the Messenger of Allah was correct, and from anyone below him it is error"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 106,
+        "prompt": {
+          "en": "According to the perspectives, how does al-Tusi read the command 'plead to Allah for forgiveness'?"
+        },
+        "options": [
+          {
+            "en": "As discipline for the Prophet, aimed at his community"
+          },
+          {
+            "en": "As proof the Prophet had sinned gravely"
+          },
+          {
+            "en": "As a rebuke of Qatadah for accusing them"
+          },
+          {
+            "en": "As permission to judge by personal opinion"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the perspectives, al-Tusi denies any disobedience: the Prophet defended only what appeared and is above ugly deeds, so the words are discipline whose real audience is his community."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Al-Tusi holds that no disobedience occurred: the Prophet defended only what appeared, he is above ugly deeds, and the words are discipline whose real audience is his community"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 108,
+        "prompt": {
+          "en": "According to the passage, the traitors' night plan was to blame the theft on a Jew and swear an oath they hoped would be believed."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "True. The note glosses their night plan, tabyit: they resolved to say a Jew stole the coat of mail and to swear to it, expecting their oath accepted over his."
+        },
+        "anchor": {
+          "where": "verses.108.note",
+          "quote": "what they settled was to say the Jew stole the coat of mail and to swear to it, expecting their oath accepted over his"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 110,
+        "prompt": {
+          "en": "Commentators differed whether this means the traitors or those who argued for them; al-Tusi prefers the ____, covering everyone who does evil or wrongs himself."
+        },
+        "options": [
+          {
+            "en": "literal reading"
+          },
+          {
+            "en": "general sense"
+          },
+          {
+            "en": "narrow scope"
+          },
+          {
+            "en": "strict verdict"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says commentators differed; al-Tusi prefers the general sense, so the promise of forgiveness covers everyone who does evil or wrongs himself, not only the traitors."
+        },
+        "anchor": {
+          "where": "verses.110.note",
+          "quote": "al-Tusi prefers the general sense, covering everyone who does evil or wrongs himself"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 112,
+        "prompt": {
+          "en": "According to the essay's close, how did things end for Bashir, who blamed an innocent man for his theft?"
+        },
+        "options": [
+          {
+            "en": "He repented and returned the stolen goods"
+          },
+          {
+            "en": "He confessed the theft before the Prophet"
+          },
+          {
+            "en": "He was forgiven and stayed in Medina"
+          },
+          {
+            "en": "He disbelieved and fled to Mecca"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's close says whoever loads his own sin onto an innocent man carries a calumny; Bashir did so, then disbelieved and fled to Mecca."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "whoever loads his own sin onto an innocent man carries a calumny. Bashir carried it, then disbelieved and fled to Mecca"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:19:06Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:20:39Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "17": {
+    "id": "4:17",
+    "surah": 4,
+    "index": 17,
+    "range": [
+      113,
+      115
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 113,
+        "prompt": {
+          "en": "According to the passage, the verse denies the effect of the group's scheming, and not their intent to scheme."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Fayd Kashani observes the verse denies not their intent but its effect: the group was bent on misleading the Prophet, yet God's grace kept their plot from doing any harm."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Fayd Kashani observes that the verse denies not their intent but its effect"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 113,
+        "prompt": {
+          "en": "\"God grants the prophets and the Imams from His stored knowledge and wisdom what He gives no one else.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Speaking to Abd al-Aziz ibn Muslim, Imam al-Rida taught that God gives the prophets and the Imams a share of His stored knowledge above their contemporaries, then cited this verse."
+        },
+        "anchor": {
+          "where": "verses.113.narrations.n2",
+          "quote": "God grants the prophets and the Imams from His stored knowledge and wisdom what He gives no one else"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 114,
+        "prompt": {
+          "en": "According to Imam al-Sadiq's narration on verse 114, what is meant by the phrase what is right?"
+        },
+        "options": [
+          {
+            "en": "Almsgiving"
+          },
+          {
+            "en": "A loan"
+          },
+          {
+            "en": "A fair judgment"
+          },
+          {
+            "en": "A public reconciliation"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Commenting on the verse's phrase what is right, Imam al-Sadiq said it means a loan, singling out lending as the good that the exception in the verse protects."
+        },
+        "anchor": {
+          "where": "verses.114.narrations.n5",
+          "quote": "by what is right is meant a loan"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 114,
+        "prompt": {
+          "en": "Tabrisi cites al-Zajjaj: najwa is what ____ keep to themselves, whether spoken in secret or openly."
+        },
+        "options": [
+          {
+            "en": "a large gathering"
+          },
+          {
+            "en": "two sworn enemies"
+          },
+          {
+            "en": "the ruling class"
+          },
+          {
+            "en": "a group or a pair"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Tabrisi cites al-Zajjaj that najwa, the secret talk of the verse, is speech even a pair keep to themselves, whether whispered or said aloud, not only what a crowd hides."
+        },
+        "anchor": {
+          "where": "verses.114.note",
+          "quote": "Tabrisi cites al-Zajjaj: najwa is what a group or a pair keep to themselves, whether spoken in secret or openly"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 115,
+        "prompt": {
+          "en": "According to the essay, how does Tusi gloss the phrase defies the Apostle in verse 115?"
+        },
+        "options": [
+          {
+            "en": "Merely disagreeing with one of his rulings"
+          },
+          {
+            "en": "Failing to pray behind him"
+          },
+          {
+            "en": "Parting from the Messenger in enmity"
+          },
+          {
+            "en": "Doubting the Book in secret"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tusi glosses defiance as parting from the Messenger in enmity, so the verse condemns the man who breaks with him in hostility, not one who merely differs."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi glosses defiance as parting from the Messenger in enmity"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:22:33Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:23:39Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "18": {
+    "id": "4:18",
+    "surah": 4,
+    "index": 18,
+    "range": [
+      116,
+      126
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 116,
+        "prompt": {
+          "en": "\"Know that injustice is of three kinds: an injustice that is not forgiven, an injustice that is not left unquestioned...\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the passage Imam Ali teaches that injustice is of three kinds, and that the injustice which is never forgiven is ascribing partners to Allah, echoing verse 116."
+        },
+        "anchor": {
+          "where": "verses.116.narrations.n2",
+          "quote": "Know that injustice is of three kinds: an injustice that is not forgiven, an injustice that is not left unquestioned, and an injustice forgiven without being sought out."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 118,
+        "prompt": {
+          "en": "According to the note, what is the 'settled share' that Iblis swears to take of God's servants?"
+        },
+        "options": [
+          {
+            "en": "A known portion gathered by luring people off the right road"
+          },
+          {
+            "en": "The wealth taken from the idol-keepers"
+          },
+          {
+            "en": "The cattle whose ears are slit"
+          },
+          {
+            "en": "A fixed number of the angels"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The verse note names Iblis as the one who swears and reads the settled share as a fixed portion of people that he gathers by luring them off the right road."
+        },
+        "anchor": {
+          "where": "verses.118.note",
+          "quote": "The one who swears is Iblis, and the settled share is a known portion, gathered by luring people off the right road."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 119,
+        "prompt": {
+          "en": "According to the passage, the reading judged strongest is that altering God's creation means changing the religion God set in human nature."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports two readings of altering God's creation, gelding animals or changing the God-given religion in human nature, and judges the religion reading strongest."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "some read it as the gelding of animals, others as changing the religion God set in human nature, which is narrated from Abu Jafar and Abu Abdillah and which he judges strongest"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 123,
+        "prompt": {
+          "en": "In the Perspectives, how does Qurtubi report the majority understand 'whoever commits evil shall be requited for it'?"
+        },
+        "options": [
+          {
+            "en": "As applying only to the People of the Book"
+          },
+          {
+            "en": "As a pardon of all sins without any requital"
+          },
+          {
+            "en": "As a warning meant only for the hypocrites"
+          },
+          {
+            "en": "As general, so even a believer's afflictions expiate his sins"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "In the Perspectives, Qurtubi reports the majority take the requital as general, so that a believer is requited by worldly afflictions, even a thorn, which serve as expiation."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Qurtubi reports that the majority read the wording as general, covering believer and unbeliever alike: the unbeliever is requited with the Fire, the believer with the blows of this world, since every affliction that reaches a Muslim, even a thorn, is an expiation"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 124,
+        "prompt": {
+          "en": "The promise stands open to all the accountable, male and female, and 'of the righteous deeds' is ____, so that one who does some of them is admitted to the Garden."
+        },
+        "options": [
+          {
+            "en": "partitive"
+          },
+          {
+            "en": "conditional"
+          },
+          {
+            "en": "literal"
+          },
+          {
+            "en": "figurative"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reads 'of the righteous deeds' as partitive, a portion rather than the whole, so that someone who performs even some righteous deeds is admitted to the Garden."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "'of the righteous deeds' is partitive, so that one who does some of them is admitted to the Garden"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:27:45Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:28:59Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "19": {
+    "id": "4:19",
+    "surah": 4,
+    "index": 19,
+    "range": [
+      127,
+      134
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 127,
+        "prompt": {
+          "en": "According to the commentary, these verses came after rulings that had revived rights of women which people had let die."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The commentary sets these verses after the surah's opening rulings, which had revived rights of women that people had let die, so the statement holds."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the rulings at the head of the surah, which revived rights of women that people had let die"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 128,
+        "prompt": {
+          "en": "Al-Tusi holds this stands only when it comes from her own ____; otherwise the husband owes her clothing, maintenance and her turn, or else he divorces her."
+        },
+        "options": [
+          {
+            "en": "goodwill"
+          },
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "family"
+          },
+          {
+            "en": "request"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Tusi allows the settlement only when it comes from the wife's own goodwill; otherwise the husband still owes her clothing, maintenance and her turn."
+        },
+        "anchor": {
+          "where": "verses.128.note",
+          "quote": "this stands only when it comes from her own goodwill"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 129,
+        "prompt": {
+          "en": "In the narration to Hisham ibn al-Hakam, what kind of fairness does 'you will not be able to be fair between wives' mean?"
+        },
+        "options": [
+          {
+            "en": "maintenance"
+          },
+          {
+            "en": "affection"
+          },
+          {
+            "en": "inheritance"
+          },
+          {
+            "en": "worship"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the narration to Hisham, this verse is read as fairness in affection, which follows the heart, while the earlier verse meant fairness in maintenance."
+        },
+        "anchor": {
+          "where": "verses.129.narrations.n5",
+          "quote": "you will not be able to be fair between wives even if you are eager: that means in affection"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 131,
+        "prompt": {
+          "en": "\"God has gathered all that those who counsel one another have counselled, from the first of them to the last, into one trait, and it is God-wariness.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the counsel enjoined on every nation, Imam al-Sadiq says God gathered all of it, first to last, into one trait: God-wariness."
+        },
+        "anchor": {
+          "where": "verses.131.narrations.n7",
+          "quote": "God has gathered all that those who counsel one another have counselled, from the first of them to the last, into one trait, and it is God-wariness"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 133,
+        "prompt": {
+          "en": "According to the essay, what does its closing warning say God can do?"
+        },
+        "options": [
+          {
+            "en": "God will forgive the men who betrayed the coat of mail"
+          },
+          {
+            "en": "The Prophet alone owns the heavens and the earth"
+          },
+          {
+            "en": "The heavens and the earth will pass away"
+          },
+          {
+            "en": "God can bring a people who will help His prophet"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's close hears in these verses a warning that God can take the faithless away and bring a people who will help His prophet."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God can take them away and bring a people who will help His prophet"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:32:48Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:33:57Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "20": {
+    "id": "4:20",
+    "surah": 4,
+    "index": 20,
+    "range": [
+      135,
+      141
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 135,
+        "prompt": {
+          "en": "According to the essay, Tabatabai reads 'maintainers of justice' as those who may set justice aside out of fear or greed when needed."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. Tabatabai, in the essay, reads maintainers of justice as those who uphold it in the fullest way and never turn from it through desire, fear or greed."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads maintainers of justice as those who uphold it in the fullest way, never turning from it through desire, fear or greed"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 136,
+        "prompt": {
+          "en": "In the essay, how does Tabatabai read the command 'O you who have faith, have faith'?"
+        },
+        "options": [
+          {
+            "en": "As a rebuke aimed only at open disbelievers"
+          },
+          {
+            "en": "As a command to unfold a summary faith into its details"
+          },
+          {
+            "en": "As permission to accept some articles and reject others"
+          },
+          {
+            "en": "As proof that faith and works are one thing"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Tabatabai reads it as a command to unfold a summary faith into its details, since faith in one reality is not complete without faith in all."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai takes it as a command to unfold a summary faith into its details, since faith in one of these realities is not complete without faith in all"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 140,
+        "prompt": {
+          "en": "\"When you hear a man denying the truth, calling it a lie and attacking the Imams, get up and leave him and do not sit with him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq told Shuayb al-Aqarqufi that when you hear a man denying the truth and attacking the Imams, you must get up and leave him."
+        },
+        "anchor": {
+          "where": "verses.140.narrations.n7",
+          "quote": "when you hear a man denying the truth, calling it a lie and attacking the Imams, get up and leave him and do not sit with him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 140,
+        "prompt": {
+          "en": "In the note, what does the command not to sit where God's signs are mocked show is obligatory?"
+        },
+        "options": [
+          {
+            "en": "Forbidding wrong, for one who is able and has no excuse"
+          },
+          {
+            "en": "Fleeing every land where sin is done"
+          },
+          {
+            "en": "Staying silent whenever the signs are mocked"
+          },
+          {
+            "en": "Praying for those who mock the signs"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note reads the verse as showing that forbidding wrong is obligatory for anyone who is able and has no excuse to refrain from it."
+        },
+        "anchor": {
+          "where": "verses.140.note",
+          "quote": "the verse shows that forbidding wrong is obligatory for one who is able and has no excuse"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 141,
+        "prompt": {
+          "en": "On the last verse, al-Rida reads 'any way' as a ____"
+        },
+        "options": [
+          {
+            "en": "weapon"
+          },
+          {
+            "en": "proof"
+          },
+          {
+            "en": "reward"
+          },
+          {
+            "en": "warning"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the Perspectives, al-Rida reads the closing 'any way' as a proof, meaning the faithless are given no argument to prevail over the faithful."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "On the last verse, al-Rida reads 'any way' as a proof"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:37:51Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:38:55Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "21": {
+    "id": "4:21",
+    "surah": 4,
+    "index": 21,
+    "range": [
+      142,
+      152
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 142,
+        "prompt": {
+          "en": "According to the essay, why is the hypocrites' remembrance of Allah described as 'little'?"
+        },
+        "options": [
+          {
+            "en": "Because they prayed for only a short time"
+          },
+          {
+            "en": "Because it was done for other than Allah"
+          },
+          {
+            "en": "Because they knew few words of praise"
+          },
+          {
+            "en": "Because they remembered Him only at night"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports al-Hasan's reading that their remembrance counts as little not by quantity but because it was offered for other than Allah, in display before people."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Hasan says their remembrance is called little because it was for other than Allah"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 143,
+        "prompt": {
+          "en": "Al-Qummi glosses it: they were neither of the believers nor of the ____."
+        },
+        "options": [
+          {
+            "en": "Jews"
+          },
+          {
+            "en": "Christians"
+          },
+          {
+            "en": "polytheists"
+          },
+          {
+            "en": "idolaters"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Qummi identifies the waverers of verse 143 as standing between the two camps: they belonged neither to the believers nor to the Jews."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Qummi glosses it: they were neither of the believers nor of the Jews"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 145,
+        "prompt": {
+          "en": "According to the note on verse 145, what does al-Tusi hold about who occupies the lowest reach of the Fire?"
+        },
+        "options": [
+          {
+            "en": "The verse reserves that reach for the hypocrites alone"
+          },
+          {
+            "en": "Only Iblis occupies that reach"
+          },
+          {
+            "en": "Nothing in the verse rules out others like Pharaoh sharing it"
+          },
+          {
+            "en": "That reach stays empty until the Day of Resurrection"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Al-Tusi reads verse 145 as not restricting the lowest reach to hypocrites; others whose disbelief is greater, such as Pharaoh, Haman and Abu Jahl, may share it."
+        },
+        "anchor": {
+          "where": "verses.145.note",
+          "quote": "Al-Tusi holds that nothing in the verse rules out others sharing that reach, such as Pharaoh, Haman and Abu Jahl"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 148,
+        "prompt": {
+          "en": "\"Whoever hosts a people and hosts them badly is one of those who have wronged, so there is no blame on them for what they say about him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq applies verse 148 to a bad host: mistreating those he hosts counts as wronging them, so they bear no blame for speaking of it."
+        },
+        "anchor": {
+          "where": "verses.148.narrations.n7",
+          "quote": "Whoever hosts a people and hosts them badly is one of those who have wronged, so there is no blame on them for what they say about him"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 150,
+        "prompt": {
+          "en": "In the perspectives, Ibn Kathir holds that rejecting a single prophet amounts to disbelieving in all the prophets."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives reports Ibn Kathir's view that whoever disbelieves in one prophet has disbelieved in all the rest, so rejecting one is rejecting them all."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "whoever disbelieves in one prophet has disbelieved in all the rest"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:39:25Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:40:54Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "22": {
+    "id": "4:22",
+    "surah": 4,
+    "index": 22,
+    "range": [
+      153,
+      162
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 153,
+        "prompt": {
+          "en": "According to the essay, Tabatabai reads 'People of the Book' in this passage as the Jews alone."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai takes the phrase in its customary Quranic sense, Jews and Christians together, so the askers are both communities and not the Jews alone."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai takes \"People of the Book\" in the sense customary in the Quran, Jews and Christians together, so the askers are both communities and not the Jews alone"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 154,
+        "prompt": {
+          "en": "According to the note on verse 154, how did Ibn Abbas explain the Mount being raised over the people?"
+        },
+        "options": [
+          {
+            "en": "It cast shade to shelter them"
+          },
+          {
+            "en": "It was a reward for keeping the Sabbath"
+          },
+          {
+            "en": "Take the Torah, or it falls on you"
+          },
+          {
+            "en": "They climbed it to receive the Torah"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Ibn Abbas said the mountain was raised and they were told to take the Torah or it would fall on them; Abu Muslim's reading of it as shade was the minority view."
+        },
+        "anchor": {
+          "where": "verses.154.note",
+          "quote": "Ibn Abbas said the mountain was raised over them and they were told: take the Torah, or it falls on you"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 155,
+        "prompt": {
+          "en": "Those addressed did not themselves kill the prophets; their forefathers did, and their ____ bound them to it."
+        },
+        "options": [
+          {
+            "en": "descent from those killers"
+          },
+          {
+            "en": "being pleased with the deed"
+          },
+          {
+            "en": "silence when it happened"
+          },
+          {
+            "en": "share in the spoils"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note explains that those addressed did not kill the prophets themselves; their forefathers did, but their approval of the deed bound the guilt to them."
+        },
+        "anchor": {
+          "where": "verses.155.note",
+          "quote": "Those addressed did not themselves kill the prophets; their forefathers did, and their being pleased with the deed bound them to it"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 158,
+        "prompt": {
+          "en": "\"God has places in His heavens; whoever is raised up to one of them has been raised up to Him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Prophet Muhammad"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sajjad"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sajjad explained being raised toward God as being raised to one of the places in His heavens, citing the verse about Jesus son of Mary."
+        },
+        "anchor": {
+          "where": "verses.158.narrations.n4",
+          "quote": "God has places in His heavens; whoever is raised up to one of them has been raised up to Him"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 160,
+        "prompt": {
+          "en": "According to the essay's close, how does the passage end after the long indictment of the Jews?"
+        },
+        "options": [
+          {
+            "en": "On an exception, and on a great reward"
+          },
+          {
+            "en": "On the killing of the prophets"
+          },
+          {
+            "en": "On the raising of Jesus to God"
+          },
+          {
+            "en": "On the demand for a book from the sky"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the passage does not end on the indictment but on an exception, those grounded in knowledge, and on a great reward."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Yet the passage does not end on the indictment. It ends on an exception, and on a great reward"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:44:18Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:45:33Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "23": {
+    "id": "4:23",
+    "surah": 4,
+    "index": 23,
+    "range": [
+      163,
+      171
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 163,
+        "prompt": {
+          "en": "According to the passage, these verses answer the People of the Book, who had demanded that the Prophet bring a book down from heaven."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens by saying the surah has been answering the People of the Book, who asked the Prophet to bring a book down from heaven."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah has been answering the People of the Book, who asked the Prophet to bring a book down from heaven"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 164,
+        "prompt": {
+          "en": "According to the essay, what distinction does the passage give Moses among the messengers?"
+        },
+        "options": [
+          {
+            "en": "God spoke to him with no intermediary"
+          },
+          {
+            "en": "He was addressed through the medium of revelation"
+          },
+          {
+            "en": "He was given the Psalms"
+          },
+          {
+            "en": "His prophethood came before Noah's"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the list passed Moses over, then singled him out: God spoke to him with no intermediary, while the rest received revelation through a medium."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God spoke to him with no intermediary, while the rest were addressed through the medium of revelation"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 164,
+        "prompt": {
+          "en": "'Between Adam and Noah there were prophets hidden and prophets manifest. That is why their mention is concealed in the Quran.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked why some prophets go unnamed in the Quran, Imam al-Baqir said the hidden prophets between Adam and Noah were concealed, unlike the manifest ones who were named."
+        },
+        "anchor": {
+          "where": "verses.164.narrations.n2",
+          "quote": "Between Adam and Noah there were prophets hidden and prophets manifest. That is why their mention is concealed in the Quran"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 171,
+        "prompt": {
+          "en": "Al-Qummi identifies the three as God, Jesus and ____."
+        },
+        "options": [
+          {
+            "en": "the Holy Spirit"
+          },
+          {
+            "en": "the Father"
+          },
+          {
+            "en": "Mary"
+          },
+          {
+            "en": "the angels"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Verse 171 warns against saying trinity; Al-Qummi names the three as God, Jesus and Mary, not the Holy Spirit that a reader might expect."
+        },
+        "anchor": {
+          "where": "verses.171.note",
+          "quote": "Al-Qummi identifies the three as God, Jesus and Mary"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 171,
+        "prompt": {
+          "en": "According to the essay's close, what does the address to the People of the Book ask the Christians to grant Jesus?"
+        },
+        "options": [
+          {
+            "en": "That he is the eternal Son of God"
+          },
+          {
+            "en": "That he is one person of a trinity"
+          },
+          {
+            "en": "That he is greater than the other prophets"
+          },
+          {
+            "en": "That he is God's servant and messenger to His creation"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes by turning to the Christians, asking them to grant Jesus what they grant every prophet: that he is God's servant and His messenger."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "asks them to grant Jesus what they grant every prophet, that he is God's servant and His messenger to His creation"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:49:28Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:50:40Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  },
+  "24": {
+    "id": "4:24",
+    "surah": 4,
+    "index": 24,
+    "range": [
+      172,
+      176
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 172,
+        "prompt": {
+          "en": "According to the essay, the verse came down after the Najran delegation insisted that being a servant of Allah is a shame."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the Najran delegation asked why the Prophet faulted their companion; when he replied it is no shame to be a servant of Allah, they said it was, and the verse came down."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "when he answered that it is no shame to be a servant of Allah, they said it was, and the verse came down"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 173,
+        "prompt": {
+          "en": "In the narration on verse 173, whom does Imam al-Baqir say the words 'He will enhance them out of His grace' concern?"
+        },
+        "options": [
+          {
+            "en": "The angels brought near"
+          },
+          {
+            "en": "The family of Muhammad"
+          },
+          {
+            "en": "Those who disdain His worship"
+          },
+          {
+            "en": "Everyone who asks for a ruling"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Commenting on 'He will enhance them out of His grace,' Imam al-Baqir says this verse is for the family of Muhammad."
+        },
+        "anchor": {
+          "where": "verses.173.narrations.n2",
+          "quote": "'And He will enhance them out of His grace': this verse is for the family of Muhammad"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 174,
+        "prompt": {
+          "en": "Qurtubi reports from al-Hasan that the light sent down is the Quran, so named because the rulings are made ____ by it."
+        },
+        "options": [
+          {
+            "en": "hidden"
+          },
+          {
+            "en": "heavy"
+          },
+          {
+            "en": "plain"
+          },
+          {
+            "en": "binding"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In this reading the Quran is called a light because it makes the rulings plain, clarity being why the word light fits it."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the light sent down is the Quran, so named because the rulings are made plain by it"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 176,
+        "prompt": {
+          "en": "\"When a man dies leaving a sister, she takes half of what he left by the verse, as a daughter would; the remaining half returns to her by kinship.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Baqir explains the sister's inheritance: she takes half by the verse as a daughter would, and the remaining half returns to her by kinship when there is no nearer heir."
+        },
+        "anchor": {
+          "where": "verses.176.narrations.n5",
+          "quote": "When a man dies leaving a sister, she takes half of what he left by the verse, as a daughter would; the remaining half returns to her by kinship"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 176,
+        "prompt": {
+          "en": "According to the essay, the surah's closing verse returns it to the subject it began with. What is that subject?"
+        },
+        "options": [
+          {
+            "en": "Worship"
+          },
+          {
+            "en": "The manifest light"
+          },
+          {
+            "en": "Holding fast to God"
+          },
+          {
+            "en": "Inheritance"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says the surah closes where it opened, on inheritance, returning at the end to the very subject the surah began with."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah closes where it opened, on inheritance"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-16T01:57:14Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-16T01:58:43Z",
+      "assembled_at": "2026-09-16T01:59:25Z"
+    }
+  }
+}
