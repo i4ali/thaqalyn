@@ -981,3 +981,576 @@ True or false: 4 of 7 True by the parity rule. Translation anchors: 0. Perspecti
 Writer-prompt lines added during the run, in order, each after the surah that motivated it: surah 2 open items and vary-the-opening (before 3); voice in who-said-it, gap on the gloss, True about half, q5 any type (after 3); gap prompt at most twenty words, other clause not a paraphrase (after 4); check the perspectives before gapping a gloss (after 5); True by passage parity, prefer no-side framings (after 6); perspectives must test content not the fact of disagreement (after 7); no translation anchor unless needed, perspectives distractors from the passage (after 9); never the other tradition's reading as a distractor, gap prompt about ten to twenty words (after 10); no who-said-it on a compiler's gloss (after 11); close by passage parity (after 12). The parity rules (True on odd, non-multiple-choice close on even) are the two that held without drift; ratio lines over-corrected.
 
 Open items for quiz.py, none implemented during the run: normalise the gap span match (trailing punctuation, whitespace before punctuation, curly and single quotes; three shipped prompts lack a full stop: 10:1 q2, 10:4 q1, 14:5 q2); enforce ascending verse order (12:1, 12:7, 14:6 out of order); a surah-level repeat scan or an "already asked" list in the brief (cases in surahs 5, 6, 7, 11, 12); check option speaker spellings against the brief (12:4 "al-Ridha"); normalise option capitalisation at assemble time (13:5).
+
+## Results - Al-Hijr 15:1 to 15:6 (2026-09-21)
+
+New `/loop` run ("next one, till last surah"), the first surah after the 3 to 14 run. No prompt change during the surah. All 6 passed first review. `quiz_15.json` assembled with 6 quizzes: 12 multiple choice, 6 true or false, 6 fill the gap, 6 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 15:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q1 regret only after this life closes is the essay's point; q2 caller narration has a voice; q3 and q5 both open "How does Tabatabai read", the same framing twice in one quiz; q4 gap "truth" guessable from "bars one from" |
+| 15:2 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q1 mansions of the sun and moon is the essay's gloss; q2 metals-by-weight narration has a voice; q3 gap "reality" is Tabatabai's own term, a real reason gap, but shipped without a full stop (span match, fourth shipped case); q5 False on a single Sunni meaning tests the many-senses point |
+| 15:3 | MC, whoSaid, TF, fillGap, MC | 1 PASS | q1 raised by religion, knowledge and deeds is the essay's lesson; q2 ruh-from-rih line has a voice; q3 True on jinn not angel is the note's real point; q4 gap "power" fair, "command" a live distractor; q5 tryst of them all is verse wording, three distractors nobody would pick |
+| 15:4 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q2 docile-mounts line has a strong voice; q3 gap "affliction" is Tabrisi's gloss, "hunger" a live distractor; q4 who ordained Lot's wife's fate is the Qadariyya narration's point, but "God" is guessable from the framing; q5 False on occasion of revelation tests Tabatabai's correspondence reading; q5 on v47 after q4 on v60, out of order |
+| 15:5 | MC, whoSaid, TF, fillGap, MC | 1 PASS | q3 True on "By your life" sworn on the Prophet is the passage's best point; q2 four-angels narration has a voice; q4 gap "outward" fair, "hidden" a live distractor, but shipped without a full stop (fifth shipped case); q5 who the Shia narrations mean by the percipient, one-tradition framing; q4 and q5 both on v75 |
+| 15:6 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q2 pardon-without-reproach line has a voice; q3 gap "worry" fair, with a full stop; q4 Quraysh as those who split into bands is the Shia reading with passage-drawn distractors; q5 False on fighting cancelling forbearance is the essay's close; q1 "Whom does Tabatabai identify" is the third Tabatabai-framed opener in the surah |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 6 | 40K | 33K to 52K | 4 min 18 s | 240K tokens, 26 min |
+| reviewer | 6 | 20K | 20K to 21K | 38 s | 121K tokens, 4 min |
+
+About 0.36M agent tokens for the surah, roughly 17 minutes wall clock with two slots. Writers ran faster than in surahs 3 to 14 (4 min against 7); the reviewer cost is unchanged.
+
+### Review outcomes
+
+6 of 6 PASS first time, no rewrites. One validator rejection: 15:5 q4 first came with a trailing full stop inside the gap span and was fixed on the writer's second write. 15:2 q3 and 15:5 q4 shipped without a terminal full stop (the span-match friction, fourth and fifth shipped cases after 10:1, 10:4 and 14:5).
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 5 | | MC | 3 |
+| TF | 1 | | TF | 3 |
+| fillGap | 0 | | fillGap | 0 |
+| whoSaid | 0 | | whoSaid | 0 |
+
+True or false: 3 of 6 True by the parity rule (True on 15:1, 15:3, 15:5; False on 15:2, 15:4, 15:6). Translation anchors: 0. Perspectives anchors: 5 of 6 (15:3 skipped the disputed straight-path gloss). Anchor spread: essay 12, narration 11, perspectives 5, note 2. The close-parity line held (odd indices close on multiple choice, even on true or false). Five of six open on multiple choice, and every quiz has who-said-it in slot 2: the opening varies less than in surah 14. One quiz out of verse order (15:4).
+
+### Reader notes (taste, not rule)
+
+- Best questions: 15:5 "By your life" sworn on the Prophet, 15:4 the docile-mounts voice and the correspondence-not-occasion True/False, 15:3 jinn not angel, 15:6 forbearance not cancelled by the command to fight, 15:2 the many-senses point.
+- Tabatabai as the named subject of a prompt appears in 15:1 (twice), 15:2, 15:6 and 15:4 (q5): five prompts in six quizzes ask what Tabatabai reads or identifies. Accurate to the passages, which lean on him, but the surah reads as a Tabatabai quiz. A writer-prompt line to vary the framing (ask what the passage or the essay says, name the scholar only when the perspectives split) would spread it out.
+- Who-said-it sat in slot 2 in all six quizzes. Not a rule problem, but with the multiple-choice opener it makes every quiz open the same way.
+- Guessable gaps: 15:1 "truth" (implication, as in surah 14). The other five gaps carry real meaning with a live distractor each.
+- 15:3 q5 has three distractors nobody would pick ("emptied for the dedicated servants", "one gate reserved for Iblis"). The verse wording makes the answer obvious.
+
+### Deviations from the procedure
+
+- No prompt change.
+- The free slot after 15:5's review went to the 16:1 writer before 15:6 was reviewed, so surah 16 started while surah 15 was still open. Per-surah assemble and report were still done in order.
+- Commits deferred to the end of the loop, per the run's pattern.
+
+## Results - An-Nahl 16:1 to 16:16 (2026-09-21)
+
+Same `/loop` run. No prompt change during the surah; one clarification added after it (below). All 16 passed first review. `quiz_16.json` assembled with 16 quizzes: 32 multiple choice, 16 true or false, 16 fill the gap, 16 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 16:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q1 True on the edict as the reckoning drawing near is the essay's opening point; q2 three-armies line has a voice; q3 knowledge of Him is the essay's purpose clause; q4 gap "water" is verse wording, guessable against clay, dust, blood; q5 "no path is straight" is a distractor nobody would pick |
+| 16:2 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q2 gap "Imams" on the pillars gloss is the passage's sharpest point, and "mountains" is the distractor a skimmer picks, a real gap; q3 Pole Star line has a voice; q4 forgives the shortfall is the note's point; q5 False on "still hold the power to give" tests the essay's three lacks |
+| 16:3 | TF, MC, fillGap, whoSaid, MC | 1 PASS | q2 "does not will their reward" is the essay's gloss, a real check; q3 gap "pilgrims" guessable from "during the Hajj"; q4 cupping-glass oath has a strong voice; q5 asks what the traditions agree on, three distractors nobody would pick; q4 and q5 both on v25 |
+| 16:4 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q1 undoing of the plot as a figure is al-Mizan's reading, "literal earthquake" a live distractor; q2 taqwa gathers all good has a voice; q3 myths of the ancients is verse wording, guessable; q4 gap "lovers" fair; q5 False on the Qummi reading leaving out the Qa'im tests the content; q2 and q3 both on v30 |
+| 16:5 | MC, whoSaid, TF, fillGap, MC | 1 PASS | q1 the idolaters' conclusion that warnings were pointless is the essay's argument; q3 True on eagerness cannot guide; q4 gap "deliberate" on the will gloss is a real gap, "hesitate" live; q5 raj'a as what the Shia narrations tie the oath to, one-tradition framing; q5 on v38 after q4 on v40, out of order |
+| 16:6 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q3 prophecy fixed in ordinary men is the essay's real point; q2 People of the Reminder line has a voice; q4 gap on the phrase "one group after another" with "only the ringleaders first" live, a good gap; q1 verse wording; q2 and q3 both on v43 |
+| 16:7 | whoSaid, MC, fillGap, TF, MC | 1 PASS | first who-said-it opener of the surah; q1 two-makers argument has a voice; q2 two-imams gloss is the narration's real point; q3 gap "worship and obedience" fair; q4 True on daughters-to-God is verse wording, easy; q5 the two-way split of description is the essay's close; q1 and q2 both on v51 |
+| 16:8 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q1 room to repent is the essay's reason; q2 Night of Decree line has a voice, but the prompt splices a paraphrase after the quote; q3 gap "adorned" fair; q4 the Household as the further clarification, framed as "a reading", "a people who have faith" live; q5 False on rain as a sign God will not raise the dead is a bare negation |
+| 16:9 | fillGap, MC, whoSaid, TF, MC | 1 PASS | q1 gap "chokes" on the milk narration is a real gap; q3 honey-cure line has a voice; q4 True on knowledge not in our hands; q5 bee as the Imams in the Shia allegory with distractors from the same allegory, a good perspectives item; q5 on v69 after q4 on v70, out of order |
+| 16:10 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q1 duty of fair provision is the note's reading; q2 grandchildren line has a voice; q3 "He has no peer" is the essay's reason; q4 gap "permission" fair; q5 False on Tabatabai reading the parables only as praise, "only" makes it a clean negation |
+| 16:11 | MC, TF, whoSaid, fillGap, MC | 1 PASS | q1 ease not distance is Tabatabai's reading, a real check; q2 True on the soul starting empty; q3 Mars and Saturn line has a voice; q4 gap "hot" guessable from "heat alone"; q5 asks what the traditions differ over, the bare fact of disagreement the prompt rules out; the reviewer passed it |
+| 16:12 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q1 verse wording, "plead but not propitiate" live; q2 imam-for-every-nation line has a voice; q3 the chain of witnesses with its reverse as a distractor is a real check; q4 gap on the phrase "the Commander of the Faithful"; q5 False on hearsay tests Tabatabai's direct-sight point; q1 to q3 all on v84 |
+| 16:13 | whoSaid, fillGap, MC, TF, MC | 1 PASS | q1 justice-and-kindness gloss has a voice; q2 gap "society" is Tabatabai's term, "government" live; q3 asks on what the traditions part, the fact of disagreement again; q4 True on body not religion is the narration's real point; q5 verse wording with the believers as the one live distractor |
+| 16:14 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q2 gap "pure" with "holy" as the outside-knowledge distractor is the surah's best gap; q3 non-Arabic speech is the note's real argument; q5 False on taqiyya forbidden tests the Shia reading; q1 abrogation guessable; q5 on v106 after q4 on v108, out of order |
+| 16:15 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q4 passing out of faith is the narration's real point; q2 loaves line has a voice; q3 gap "permission" with "rather than obligation" in the prompt makes "obligation" a dead distractor and the gap guessable; q5 False on mercy for the unrepentant is a bare negation; parity slip: the writer read the surah number as the index, so this odd passage closed on a False true or false |
+| 16:16 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q1 why Abraham is "a nation" is the narration's real point; q2 gap "burden" fair, "covenant" live; q3 disputation line has a voice; q4 the Messenger's patience after the verse is the narration's payoff, "carried out the mutilation" live; q5 False on everyone standing on Abraham's creed tests the Shia reading; q5 on v123 after q4 on v126, out of order |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 16 | 38K | 32K to 49K | 3 min 53 s | 604K tokens, 62 min |
+| reviewer | 16 | 20K | 19K to 21K | 34 s | 316K tokens, 9 min |
+
+About 0.92M agent tokens for the surah, roughly 39 minutes wall clock with two slots.
+
+### Review outcomes
+
+16 of 16 PASS first time, no rewrites. Three validator rejections, all an option over twelve words (16:1 q5, 16:6, 16:12 q1), each fixed on the writer's second write. Every gap prompt shipped with its full stop; the span-match friction did not recur.
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 11 | | TF | 9 |
+| TF | 2 | | MC | 7 |
+| whoSaid | 2 | | fillGap | 0 |
+| fillGap | 1 | | whoSaid | 0 |
+
+True or false: 7 of 16 True. The parity rules held for 15 of 16 (odd closes on multiple choice with a True statement, even on true or false with a False one); 16:15 broke both because the writer took "index" to mean the surah number. Translation anchors: 0. Perspectives anchors: 11 of 16 (none in 16:1, 16:2, 16:6, 16:7, 16:15). Anchor spread: essay 36, narration 27, perspectives 11, note 6. Four quizzes out of verse order (16:5, 16:9, 16:14, 16:16), all the same shape: a perspectives close anchored to an earlier verse than q4. The opening varied more than in surah 15: five quizzes open on something other than multiple choice, and who-said-it sits in slots 1, 2, 3 and 4 across the surah.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 16:2 the Imams-as-pillars gap, 16:14 the "pure" gap with "holy" as the trap, 16:6 prophecy fixed in ordinary men, 16:12 the chain of witnesses with its reverse as a distractor, 16:9 the bee as the Imams, 16:16 the Messenger's patience.
+- Two perspectives questions test the fact of disagreement rather than a reading (16:11 q5 "what do they differ over", 16:13 q3 "on what do they part"), which the prompt already rules out except when the answer is itself substantive; the reviewer accepted both as substantive. No prompt change; noted for the next case.
+- Guessable gaps: 16:1 "water", 16:3 "pilgrims", 16:11 "hot", 16:15 "permission" (its contrast word sits in the prompt). The other twelve gaps are real, and three sit on phrases rather than single words (16:6, 16:12, 16:14 style), which read well.
+- Out-of-order perspectives closes are now the common case (4 of 16 here, 1 of 6 in surah 15). The ascending-order check listed under open items for `quiz.py` would catch them; the writer follows the "q5 from the close" line and the close is the perspectives, which may cite an earlier verse.
+- 16:8 q2 splices a paraphrase after the closing quote mark inside a who-said-it prompt. One case; the prompt says the quote is the narration's words.
+
+### Deviations from the procedure
+
+- Prompt clarification after the surah: both parity lines now say "the passage index (the number after the colon, not the surah number)", motivated by 16:15.
+- Surah 17's first two writers started while 16:16 was still open, as with surah 15.
+- Commits deferred to the end of the loop.
+
+## Results - Al-Israa 17:1 to 17:12 (2026-09-21)
+
+Same `/loop` run, first surah after the parity clarification. No prompt change during the surah. All 12 passed first review. `quiz_17.json` assembled with 12 quizzes: 24 multiple choice, 12 true or false, 12 fill the gap, 12 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 17:1 | MC, TF, fillGap, whoSaid, MC | 1 PASS | q1 awake not in a dream is the exegetes' point, "in spirit while his body stayed" a live distractor; q2 True on Noah's gratitude is the narration's reason; q3 gap "nations" fair but the prompt runs to twenty-six words; q4 forgiving-Lord line has a voice; q5 pattern repeated in this community is the Shia reading with passage-drawn distractors |
+| 17:2 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q1 leapt up before his creation was complete is the narration's surprising point, with the forbidden tree as the trap a skimmer picks; q2 gap "deeds" is Tabatabai's gloss; q3 worldly destruction after a warner is the note's reading; q4 doubled-letter line has a voice; q5 False on "minor aside" is a bare negation |
+| 17:3 | MC, whoSaid, fillGap, TF, MC | 1 PASS | q2 "Fie" line has a strong voice; q4 True on spending outside obedience as squandering is the narration's point; q5 widens and narrows provision is the essay's close with two live distractors; q1 need for care greatest is guessable; q3 gap "worship" guessable from "repents" and "turns back"; q1 and q2 both on v23 |
+| 17:4 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q3 gap on the phrase "rightful vengeance" from the shared perspectives point is a real gap; q4 the heart questioned about what it resolves upon, with hearing and sight as the traps, the quiz's best; q2 evil-way line has a voice; q1 guessable; q5 False with sons and daughters swapped is the one-word-flip pattern, on the essay's charge rather than a verse line |
+| 17:5 | whoSaid, MC, fillGap, TF, MC | 1 PASS | who-said-it opener; q2 seizing a sovereignty none but He can hold is al-Mizan's argument; q3 gap "cracking" on the timber narration is a real gap, "groaning" live; q4 True on the Basmala aloud is the Shia reports' content; q5 originate-then-restore is the essay's reason, "only stones and iron" a distractor nobody would pick |
+| 17:6 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q4 annihilation by death is the narration's surprising reading, with earthquake and famine as the traps, the quiz's best; q2 five-resolute line has a voice; q3 gap on the phrase "repel harm", "forgive sins" live; q1 courteous speech guessable; q5 False on the vision as a reward tests "set as a trial" |
+| 17:7 | fillGap, MC, whoSaid, TF, MC | 1 PASS | fill-gap opener; q1 gap "locusts" is Tabrisi's image, "moths" live; q2 threat not permission is Tusi's reading; q3 unlawful-wealth line has a voice; q4 True on believers' souls; q5 intrinsic dignity plus an added measure is the essay's close, "carriage over land and sea" a live distractor from the verse; q4 and q5 both on v70 |
+| 17:8 | MC, TF, whoSaid, MC, fillGap | 1 PASS | first fill-gap close of the run; q1 what all traditions share on "imam" is a good no-side framing; q2 False by inverting the narration's condition, a real check a skimmer gets wrong; q3 wilaya line has a voice; q4 the community intended though the Prophet is addressed; q5 gap "prophethood" fair, "revelation" live |
+| 17:9 | whoSaid, MC, TF, fillGap, MC | 1 PASS | q1 quote opens with an ellipsis, a fragment; q2 the praiseworthy station as the great intercession; q3 True on the two readings of the entrance prayer restates the note but runs long; q4 gap "Qaim" fair; q5 a man absorbed in secondary causes is al-Mizan's reading, but its three distractors are recycled from earlier questions, so a reader eliminates by memory |
+| 17:10 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q1 the Spirit as God's command with the three rival readings as distractors is a real check; q2 Spirit-not-Jibril line has a voice; q3 "knows how He would take it, yet never will" is the narration's subtle point, the quiz's best; q4 gap "letters" fair, "tongues" live; q5 False on every demand within a prophet's power tests the essay's distinction; q1 and q2 both on v85 |
+| 17:11 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q1 True on the human-apostle objection is the verse's own claim, easy; q2 asks "who reported this" about an angel's words, a reporter rather than a speaker, the first such framing this run; q3 the Sa'ir valley is a narration detail, nearer trivia than understanding; q4 gap "free choice" is the Shia reading's content, a real gap; q5 exposing the greed is the essay's close |
+| 17:12 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q2 nine-signs list has a voice, and the reviewer checked the list is uniquely al-Kazim's; q4 the middle voice as a standing rule for ritual prayer is the perspectives' content, with the wilaya inversion live; q1 bewitched guessable; q3 gap "gradually" guessable from "separate parts, not all at once"; q5 False on many names meaning many gods is a bare negation |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 12 | 36K | 29K to 46K | 3 min 24 s | 429K tokens, 41 min |
+| reviewer | 12 | 20K | 19K to 21K | 36 s | 243K tokens, 7 min |
+
+About 0.67M agent tokens for the surah, roughly 30 minutes wall clock with two slots.
+
+### Review outcomes
+
+12 of 12 PASS first time, no rewrites. One validator rejection (17:10 q3, option over twelve words), fixed on the second write. Every gap prompt shipped with its full stop.
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 8 | | MC | 6 |
+| whoSaid | 2 | | TF | 5 |
+| fillGap | 1 | | fillGap | 1 |
+| TF | 1 | | whoSaid | 0 |
+
+True or false: 6 of 12 True. Both parity rules held for 12 of 12 after the clarification (odd closes on multiple choice with a True statement, even on a non-multiple-choice with a False one), and 17:8 is the run's first fill-gap close. Translation anchors: 0. Perspectives anchors: 6 of 12. Anchor spread: essay 26, narration 26, perspectives 6, note 2. Every quiz in ascending verse order, the first surah of the run with none out of order. Four openers other than multiple choice.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 17:6 annihilation by death, 17:10 "knows how He would take it, yet never will", 17:4 what the heart is questioned about, 17:2 Adam leaping up too soon, 17:8 the inverted-condition True/False, 17:7 locusts.
+- Narration-anchored multiple choice where the narration's reading surprises (17:2 q1, 17:6 q4, 17:10 q3) is the strongest pattern in the surah: the distractors are what a reader assumes and the answer is what the passage says.
+- Guessable gaps: 17:3 "worship", 17:12 "gradually" (the prompt's other clause paraphrases). The other ten gaps are real, and the phrase gaps (17:4, 17:6) read well.
+- 17:9 q5 reuses the answers of q2, q3 and q4 as distractors, so a reader who got those right eliminates by memory. One case; a line against recycling a quiz's own earlier answers as distractors would be easy to state.
+- 17:11 q2 asks who reported an angel's words rather than who spoke them. Accurate to the narration, but the who-said-it prompt shape is "who said this", and a reporter framing invites the compiler's-gloss confusion ruled out after surah 11.
+- Bare negations in the False statements (17:2 q5 "minor aside", 17:12 q5 "worshipping more than one God") are the weakest True/False items; the strong ones invert a condition or swap a subject (17:8 q2, 17:10 q5).
+
+### Deviations from the procedure
+
+- No prompt change.
+- Surah 18's first two writers started while 17:12 was still open.
+- Commits deferred to the end of the loop.
+
+## Results - Al-Kahf 18:1 to 18:12 (2026-09-21)
+
+Same `/loop` run. No prompt change during the surah. All 12 passed first review. `quiz_18.json` assembled with 12 quizzes: 25 multiple choice, 12 true or false, 12 fill the gap, 11 who said it (18:8 had no usable speaker in its brief, so a third multiple choice stands in, as the rules allow).
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 18:1 | whoSaid, MC, TF, fillGap, MC | 1 PASS | who-said-it opener; q1 severe-punishment-is-Ali line has a voice; q2 "God's daughters" is known outside the passage, a well-known fact made into a multiple choice; q3 True on concealment under compulsion is the Shia reading's content; q4 old men named youths for their faith is the narration's surprise, a real gap; q5 no unheard-of wonder is Tabatabai's real point, the quiz's best |
+| 18:2 | fillGap, MC, whoSaid, MC, TF | 1 PASS | q1 gap "faith" on the youths narration repeats 18:1 q4 almost word for word (the same narration ships in both passages), a cross-quiz repeat the per-quiz review cannot see; q2 no creed without clear evidence is Tusi's point; q3 increase-in-faith line has a voice; q4 God's kindness in the resting place is Majma's reading; q5 False on disagreeing over any belief at all is a bare negation; q3 and q5 out of order |
+| 18:3 | whoSaid, MC, fillGap, TF, MC | 1 PASS | q2 most townsfolk were Magians is the essay's reason, with "only a little silver" as the trap from the verse; q1 turn-them-twice line has a voice; q4 True on raising them among resurrection-deniers; q5 believers raising a mosque is the Shia reading with a live distractor from the number dispute; q3 gap "idolatry" guessable from "forced back into" |
+| 18:4 | whoSaid, MC, fillGap, MC, TF | 1 PASS | q2 solar reconciled with lunar is the note's real reason, the quiz's best; q4 "the prayer" as the gloss on the company of supplicants is the narration's surprise; q1 forty-days ruling has a voice; q3 gap "send away" fair, "appoint as guides" live; q5 False on rejecting the wilaya tie is a bare negation; q3 and q4 both on v28 |
+| 18:5 | MC, fillGap, whoSaid, TF, MC | 1 PASS | q2 gap "shirk" on Tabatabai's diagnosis of the boast is a real reason gap, the quiz's best; q3 "I marvel" line has a voice; q4 True on regret over wealth not faith is the note's point; q5 what both traditions share is a good no-side framing; q1 rich man and poor neighbour is guessable; q2 prompt runs to twenty-six words |
+| 18:6 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q3 only his own deed, with "nothing at all, not even his deeds" live, is a real check; q2 tilth line has a voice; q1 the arrogant deceived by riches is Tabrisi's target; q4 gap on the one-word command "Read" is thin, a memory of a narration detail; q5 False on love of the Ahl al-Bayt not counted is a bare negation; q5 on v46 after q4 on v49, out of order |
+| 18:7 | fillGap, MC, whoSaid, TF, MC | 1 PASS | fill-gap opener; q1 gap "obedience" with "worship" as the trap is a real gap; q3 why Shia commentators hold Iblis was no angel, a one-tradition-and-why framing with fire-versus-light live; q2 jinn-among-angels line has a voice; q5 certain knowledge not supposition is the essay's close; q1 to q3 all on v50; the jinn-not-angel point overlaps 15:3 q3 across surahs |
+| 18:8 | MC, fillGap, MC, TF, MC | 1 PASS | no who-said-it, third multiple choice in its place, so an even index closed on multiple choice; q1 souls in God's hand is the narration's story point; q2 gap "punishment" guessable from "extermination that destroyed"; q3 bearers of good news and warners is verse wording; q4 False on never turning to mercy is a bare negation; q5 both traditions on the night visit is a good no-side framing; q5 on v54 after q4 on v58, out of order |
+| 18:9 | fillGap, MC, TF, whoSaid, MC | 1 PASS | fill-gap opener; q1 gap "knowledgeable" is the narration's reason for the journey, "powerful" live; q2 the vanished fish as the sign is the essay's point; q3 True on knowledge not in the Tablets is the narration's real point; q4 is a paraphrased "who related this" rather than a quoted who-said-it, the second reporter framing after 17:11; q5 a likeness for Ali and the Imams, its distractors nobody would pick |
+| 18:10 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q3 intensity of their love as why the parents would follow the boy is the narration's real point, the quiz's best; q4 four-sentences treasure line has a voice; q1 fears drowning is guessable from the verse; q2 gap "graver" against three antonyms is guessable; q5 False on acting by his own judgment is a bare negation; q4 and q5 both on v82 |
+| 18:11 | whoSaid, MC, TF, fillGap, MC | 1 PASS | q1 neither prophet nor king line has a voice; q2 divides by wrongdoer and believer is the essay's reading of the choice; q4 gap "taqiyya" on the barrier narration is a real reason gap, the quiz's best; q3 True on not knowing how to build houses is a narration detail; q5 second blast that raises the dead is the essay's close, "first blast" live |
+| 18:12 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q1 hell as ironic hospitality is Tabatabai's reading, a real check; q3 gap "benefits" on the worst-loss gloss is a real reason gap with "suffers" as the trap; q4 God's words as His act and bestowed existence is the essay's real point; q2 People of the Book line has a voice; q5 False on nothing to do with the Family is a bare negation; q2 and q3 both on v104 |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 12 | 36K | 28K to 42K | 3 min 27 s | 429K tokens, 41 min |
+| reviewer | 12 | 20K | 19K to 21K | 36 s | 240K tokens, 7 min |
+
+About 0.67M agent tokens for the surah, roughly 29 minutes wall clock with two slots.
+
+### Review outcomes
+
+12 of 12 PASS first time, no rewrites. One validator rejection (18:9 q5, option over twelve words), fixed on the second write. Every gap prompt shipped with its full stop.
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 5 | | MC | 7 |
+| whoSaid | 4 | | TF | 5 |
+| fillGap | 3 | | fillGap | 0 |
+| TF | 0 | | whoSaid | 0 |
+
+True or false: 6 of 12 True, parity held on every statement. The close parity held for 11 of 12: 18:8 is even but closed on multiple choice because with no who-said-it its three multiple-choice questions could only sit in slots 1, 3 and 5. Translation anchors: 0. Perspectives anchors: 11 of 12. Anchor spread: essay 24, narration 22, perspectives 11, note 3. Three quizzes out of verse order (18:2, 18:6, 18:8), all the perspectives-close shape. Seven openers other than multiple choice, the most varied surah of the run.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 18:4 solar reconciled with lunar, 18:10 the parents' love, 18:5 the "shirk" gap, 18:11 the "taqiyya" gap, 18:12 hell as ironic hospitality and the "benefits" gap, 18:1 no unheard-of wonder, 18:7 the "obedience" gap.
+- First cross-quiz repeat of the run: 18:1 q4 and 18:2 q1 gap the same narration line ("named them youths for their faith"), because the passage data carries the narration under both v10 and v13. The writer sees one passage at a time, and the reviewer one quiz. This is the surah-level repeat scan listed under the open items for `quiz.py`; a cheaper fix is an "already asked in this surah" list in the brief.
+- 18:8 without a who-said-it: the rule that a third multiple choice replaces it worked, but the alternation rule then forced an even index to close on multiple choice. Not worth a prompt line; it needs the brief to have no speaker, which is rare.
+- Guessable gaps: 18:3 "idolatry", 18:8 "punishment", 18:10 "graver" (antonym distractors). Nine of twelve gaps are real, and the reason gaps (shirk, taqiyya, obedience, benefits) are the surah's strongest items.
+- Bare negations remain the weak True/False pattern: 18:2, 18:4, 18:6, 18:8, 18:10, 18:12 all negate a claim outright, and a reader who never read the passage still answers False. The strong False items elsewhere invert a condition or swap a subject (17:8, 17:10); a line asking for that shape would lift the even-index quizzes.
+- 18:9 q4 is the second "who related this" framing (after 17:11 q2), asking for the reporter of a paraphrased scene rather than the speaker of a quoted line.
+
+### Deviations from the procedure
+
+- No prompt change.
+- Surah 19's first two writers started while 18:12 was still open.
+- Commits deferred to the end of the loop.
+
+## Results - Maryam 19:1 to 19:6 (2026-09-21)
+
+Same `/loop` run. No prompt change during the surah. All 6 passed first review. `quiz_19.json` assembled with 6 quizzes: 12 multiple choice, 6 true or false, 6 fill the gap, 6 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 19:1 | TF, MC, whoSaid, fillGap, MC | 1 PASS | q5 the three days as when a person is most desolate is the narration's reason, the quiz's best; q1 True on concealing a supplication is the essay's point; q2 property versus prophethood asks what the commentators divide over, the fact-of-disagreement shape, though the answer is the substantive point; q3 Yahya and Husayn namesake line has a voice; q4 gap on the phrase "Here I am" fair, "I hear you" live |
+| 19:2 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q1 a well-made man while remaining an angel, with "a fully human being" as the trap the note denies, is a real check; q3 prophet-not-messenger line has a voice; q4 those who dispute over him is the note's gloss; q2 gap "silence" is a well-known verse fact, guessable; q5 False on God needing an heir is a bare negation; no perspectives section in this passage |
+| 19:3 | TF, MC, fillGap, whoSaid, MC | 1 PASS | q1 True on the maternal grandfather is the Shia view's content and its reason; q3 gap "reproach" on Tusi's second reading is a real gap, though "flowers" and "kindness" are distractors nobody would pick; q4 truthful-repute line has a voice; q5 name versus quality is how the traditions divide, again the fact-of-disagreement shape with a substantive answer; q2 level path is verse wording |
+| 19:4 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q3 nearness not physical height, with "fourth heaven" as the trap, is the quiz's best; q4 gap "carelessness" on the neglect gloss is a real gap, "forgetfulness" live, but shipped without a full stop (sixth shipped case); q5 False on which Ishmael Tabatabai leans toward tests the perspectives content; q2 waited-a-year line has a voice; q1 guessable; q5 on v54 after q4 on v59, out of order |
+| 19:5 | fillGap, MC, TF, whoSaid, MC | 1 PASS | fill-gap opener; q1 gap "denial" on the commentators' reading of the boast is a real gap, shipped without a full stop (seventh shipped case); q2 created before from nothing is the essay's answer, with "earlier peoples God destroyed" as a live distractor from the same passage; q4 worship-as-obedience line has a strong voice; q5 what both readings share is a good no-side framing; q5 on v71 after q4 on v82, out of order |
+| 19:6 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q1 leaving them to the devils they chose, with "forcing them to sin" as the trap, is a real check; q2 counting-of-breaths line has a voice; q3 gap "thorns" on the trees narration is a vivid real gap; q4 walayah of Ali as what Shia tafsir identifies the love with, one-tradition framing; q5 False on hearing a murmur is a bare negation |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 6 | 37K | 34K to 40K | 3 min 32 s | 221K tokens, 21 min |
+| reviewer | 6 | 21K | 20K to 21K | 33 s | 124K tokens, 3 min |
+
+About 0.35M agent tokens for the surah, roughly 19 minutes wall clock with two slots.
+
+### Review outcomes
+
+6 of 6 PASS first time, no rewrites. Two validator rejections, both a trailing full stop inside the gap span (19:4 q4, 19:5 q1), each fixed by dropping the full stop, so both shipped without one (sixth and seventh shipped cases). The span-match normalisation listed under the open items for `quiz.py` would remove this friction outright.
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 3 | | MC | 3 |
+| TF | 2 | | TF | 3 |
+| fillGap | 1 | | fillGap | 0 |
+| whoSaid | 0 | | whoSaid | 0 |
+
+True or false: 3 of 6 True; both parity rules held for 6 of 6. Translation anchors: 0. Perspectives anchors: 5 of 6 (19:2 has no perspectives section). Anchor spread: essay 11, narration 9, perspectives 5, note 5. Two quizzes out of verse order (19:4, 19:5), both the perspectives-close shape.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 19:1 the three desolate days, 19:4 nearness not height, 19:2 the angel as a well-made man, 19:6 left to the devils they chose and the "thorns" gap, 19:5 the worship-as-obedience voice.
+- Two more "what do they divide over" perspectives items (19:1 q2, 19:3 q5), making four in the run (with 16:11, 16:13). Each time the answer is a substantive point, which the prompt allows, but the shape is now the writer's default when the perspectives split; the shared-point framing (18:5, 18:8, 19:5, 20:1) reads better and the prompt could prefer it.
+- Guessable gaps: 19:2 "silence" (a famous verse fact, the kind the prompt rules out). The other five are real.
+- Bare-negation False statements: 19:2 q5, 19:6 q5. The strong even-index item this surah (19:4 q5, which Ishmael Tabatabai leans toward) swaps a subject rather than negating.
+
+### Deviations from the procedure
+
+- No prompt change.
+- Surah 20's first two writers started while 19:6 was still open.
+- Commits deferred to the end of the loop.
+
+## Results - Taa-Haa 20:1 to 20:8 (2026-09-21)
+
+Same `/loop` run. No prompt change during the surah. All 8 passed first review. `quiz_20.json` assembled with 8 quizzes: 16 multiple choice, 8 true or false, 8 fill the gap, 8 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 20:1 | whoSaid, MC, TF, fillGap, MC | 1 PASS | who-said-it opener; q1 Ta Ha as a name of the Prophet has a voice; q2 reassurance not exhaustion is the essay's point; q3 True on the two fears is the narration's surprising gloss, the quiz's best; q4 gap "affirming" on Qummi's reading of a rhetorical question, "denying" live; q5 both traditions refuse a bodily sense is a good no-side framing; verse order runs 1, 2, 12, 9, 5 |
+| 20:2 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q3 kunya Abu Musab line has a strong voice; q4 each creature guided to its own kind is the narration's surprise, the quiz's best; q1 equal to the mission's weight is al-Mizan's reading, a real check; q2 gap "manners" guessable against obstacles, rewards, proofs; q5 False on al-Mizan making the shared task prophethood tests the perspectives content; q5 on v32 after q4 on v50, out of order |
+| 20:3 | MC, whoSaid, fillGap, TF, MC | 1 PASS | q4 True on Moses lacking the lights that supported Ibrahim is the narration's surprising point, the quiz's best; q2 two-creating-angels line has a voice; q1 "what does this verse name" is thin, a note summary with three distractors nobody would pick; q3 gap "divides" guessable from "dispute and then confer in secret"; q5 pointing to the hereafter is the essay's close; q1 and q2 both on v55 |
+| 20:4 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q2 yearning-one line has a strong voice; q4 gap "created" on the narration against divine motion is a real reason gap; q3 the seventy men, with "the whole of the Children of Israel" as the trap; q1 staff parts the sea is guessable; q5 False on disagreeing over the first three conditions is a fact-of-disagreement negation; verse order 77, 84, 83, 81, 82 |
+| 20:5 | TF, MC, whoSaid, fillGap, MC | 1 PASS | q4 gap "generous" as why God spared the Samiri is the narration's surprise, the quiz's best, "repentant" the trap; q2 feared factions and bloodshed is the essay's reason, "Musa had ordered him to wait" live; q5 why Tabatabai rejects the calf coming alive, a one-tradition-and-why framing with passage distractors; q3 enmity-between-brothers line has a voice; q1 True on Harun's warning is verse content; q2 and q3 both on v94 |
+| 20:6 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q5 False on al-Mizan reading the Imams narrations as outward rather than inner meaning is a real swap that tests the essay's distinction, the quiz's best; q3 eyes-perceiving argument has a voice; q4 al-Qa'im and the Sufyani is a note detail, nearer trivia; q1 level plain is verse wording; q2 gap "naked" is a well-known hadith phrase, guessable |
+| 20:7 | MC, whoSaid, fillGap, TF, MC | 1 PASS | q2 tree of wheat has a voice and is the narration's surprise; q3 gap on the phrase "narrowed provision" fair, with the other two readings in the prompt as scaffolding; q4 True on blindness of heart is the narration's point; q1 the warning's content is guessable, "whisperer cast out" live; q5 ruined homes as signs is verse wording; q3 and q4 both on v124 |
+| 20:8 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q1 decree at Adam's descent is the essay's real point, the quiz's best; q3 singled-out-for-prayer line has a voice; q4 the deniers' plea is the essay's argument, "former scriptures never reached them" live; q2 gap "regret" fair but shipped without a full stop (eighth shipped case); q5 False on Tabari settling the question in this world swaps the timing, a real check |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 8 | 36K | 30K to 48K | 3 min 23 s | 288K tokens, 27 min |
+| reviewer | 8 | 21K | 20K to 21K | 34 s | 164K tokens, 5 min |
+
+About 0.45M agent tokens for the surah, roughly 38 minutes wall clock with two slots (interleaved with the tail of surah 19).
+
+### Review outcomes
+
+8 of 8 PASS first time, no rewrites. One validator rejection (20:2 q3, option over twelve words), fixed on the second write. One gap prompt shipped without a full stop (20:8 q2, eighth shipped case).
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 6 | | MC | 4 |
+| whoSaid | 1 | | TF | 4 |
+| TF | 1 | | fillGap | 0 |
+| fillGap | 0 | | whoSaid | 0 |
+
+True or false: 4 of 8 True; both parity rules held for 8 of 8. Translation anchors: 0. Perspectives anchors: 5 of 8. Anchor spread: essay 15, narration 16, perspectives 5, note 4; the first surah where narrations out-anchor the essay. Three quizzes out of verse order (20:1, 20:2, 20:4); 20:1 and 20:4 wander in the middle, not only at the close. Who-said-it sat in slot 2 or 3 in every quiz but 20:1.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 20:5 the "generous" gap, 20:2 each creature to its own kind, 20:3 the lights that supported Ibrahim, 20:6 outward versus inner meaning, 20:8 the decree at Adam's descent, 20:1 the two fears.
+- The narration-surprise pattern carried the surah: five of the eight best items are a narration's unexpected gloss with the reader's assumption as the trap.
+- Guessable gaps: 20:2 "manners", 20:3 "divides", 20:6 "naked" (a famous hadith phrase). Five of eight are real.
+- The even-index False statements improved: 20:2, 20:6 and 20:8 all swap a subject or a timing rather than negating outright; only 20:4 q5 is a bare negation, and it is the fact-of-disagreement shape.
+- 20:3 q1 ("what does this verse name") and 20:6 q4 (the Sufyani) are note summaries closer to recall than understanding.
+
+### Deviations from the procedure
+
+- No prompt change.
+- Surah 21's first two writers started while 20:8 was still open.
+- Commits deferred to the end of the loop.
+
+## Results - Al-Anbiyaa 21:1 to 21:7 (2026-09-22)
+
+Same `/loop` run, resumed in a new session. No prompt change during the surah. 21:1 to 21:3 were written (and 21:1 reviewed) at the tail of the previous session; the rest ran here. All 7 passed first review. `quiz_21.json` assembled with 7 quizzes: 14 multiple choice, 7 true or false, 7 fill the gap, 7 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 21:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q2 "wronged the Family of Muhammad" has a partisan voice; q3 bewildered men is Majma's reading, "sincere request for a proof" live; q4 gap "revelation" guessable, wealth, immortality and kingship are distractors nobody would pick; q5 Tabari recording Ali's saying is a one-tradition framing, but the right option is the longest and stands out; verses 1, 3, 5, 7, 7 in order |
+| 21:2 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q5 False on prophet versus imam is a real swap, the quiz's best; q4 gap "wisdom" with "justice" a live trap; q2 falsehood-never-stands line has a voice; q3 the name "argument of mutual hindrance" is term recall, nearer trivia; q1 luxury and homes is verse wording; in order |
+| 21:3 | MC, fillGap, whoSaid, TF, MC | 1 PASS | q1 rain and growth as the narrations' sense of "interwoven" is the surprise, the quiz's best, and each distractor is a real verse of the passage; q2 gap "life" guessable from "every living thing from water"; q3 health-and-wealth line has a voice; q4 True restates the essay's gloss, thin; q5 mockery closing on the mockers, "idolaters hoped his death" live; q1 and q2 both on v30 |
+| 21:4 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q2 gap "learned" for "We diminish it" is the narration's surprise, the quiz's best; q4 no scales for idolaters has a voice; q1 turning the challenge back, with Torah and naming-idols distractors nobody would pick; q3 deficiency in the hearers guessable; q5 False "only justice, not the prophets and Imams" is a bare only-not negation; q4 and q5 both on v47 |
+| 21:5 | MC, fillGap, whoSaid, TF, MC | 1 PASS | q4 True on Abraham calling by the right of Muhammad and his family before the fire cooled is the narration's surprise, the quiz's best; q1 rushd as innate grasp, "victory over the fire" live; q2 gap "quietly" is given away by "only one man overheard" in the prompt; q3 Abraham did not lie has a voice; q5 unasked gift, "in answer to his own prayer" live; in order |
+| 21:6 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q4 al-Rida's reading of Jonah's thought as certainty about provision, with "God had no power" as the assumed trap, is the narration's surprise, the quiz's best; q2 David rebuked for eating from the treasury has a strong voice; q5 False on the two traditions recording different rulings tests the perspectives' real point; q1 long affliction, "loss of his family" live; q3 gap "Jerusalem" guessable next to "and Syria", shipped without a full stop (ninth shipped case); closes on v78 after v87, out of order |
+| 21:7 | MC, whoSaid, TF, fillGap, MC | 1 PASS | q4 gap "Ismail" as the recording angel is a note-level proper noun, nearer trivia, though "al-Sijill" is a live trap from the same narration; q2 shining faces line has a strong voice; q5 raj'a as what Shia narrations take the barred return for, one-tradition framing, but Gog and Magog, the scroll and idols as fuel are other verses' content nobody would pick; q1 recorded and not wasted is guessable; q3 True restates the essay; closes on v95 after v104, out of order |
+
+### Costs (real agents, with hooks; runs measured this session only)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 4 | 37K | 32K to 42K | 3 min 44 s | 150K tokens, 15 min |
+| reviewer | 6 | 21K | 20K to 21K | 44 s | 125K tokens, 4 min |
+
+The three writers for 21:1 to 21:3 and the 21:1 reviewer ran in the previous session and are not in the table. Scaled to the surah, about 0.4M agent tokens; roughly 11 minutes wall clock in this session with two slots (the last slot was handed to surah 22's first writer while 21:6 was still under review).
+
+### Review outcomes
+
+7 of 7 PASS first time, no rewrites. One validator rejection (21:6 q3): the writer's gap prompt ended in a full stop, the essay sentence continues ("Jerusalem and Syria, ..."), so the exact-span check refused it and the writer dropped the stop. That is the mechanism behind the ninth stop-less gap: whenever the gap sentence is a clause inside a longer essay sentence, the exact-span rule and the full-sentence rule pull against each other. Note against `quiz.py`: allow a trailing full stop on the prompt when the span match succeeds without it.
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 6 | | MC | 4 |
+| TF | 1 | | TF | 3 |
+| whoSaid | 0 | | fillGap | 0 |
+| fillGap | 0 | | whoSaid | 0 |
+
+True or false: 4 of 7 True; both parity rules held for 7 of 7. Translation anchors: 0. Perspectives anchors: 5 of 7. Anchor spread: essay 16, narration 13, perspectives 5, note 1. Two quizzes out of verse order (21:6, 21:7), both by closing on an earlier verse after a later one. Who-said-it sat in slot 2 in five quizzes, slot 3 in one, slot 4 in one.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 21:6 Jonah's thought as certainty about provision, 21:5 calling by the right of Muhammad and his family, 21:4 "We diminish it" as the death of the learned, 21:3 rain and growth for "interwoven", 21:2 prophet versus imam.
+- The narration-surprise pattern held: four of the five best are a narration's unexpected gloss with the reader's assumption as the trap.
+- Guessable gaps: 21:1 "revelation", 21:3 "life", 21:5 "quietly" (the prompt itself says only one man overheard), 21:6 "Jerusalem" (next to "and Syria"). Three of seven are real: 21:2 "wisdom", 21:4 "learned", 21:7 "Ismail".
+- Distractors nobody would pick: 21:1 q4, 21:4 q1, 21:7 q5. The one-tradition perspectives questions (21:1 q5, 21:7 q5) fill their distractors from other verses' content, so the right option stands out by topic alone.
+- Two memory items: 21:2 q3 (the name of the argument) and 21:7 q4 (the angel's name).
+- Six of seven quizzes open on multiple choice; the surah reads samey at the top even where the middles vary.
+
+### Deviations from the procedure
+
+- No prompt change.
+- Surah 22's first writer started while 21:6 was still under review.
+- Commits deferred to the end of the loop.
+
+## Results - Al-Hajj 22:1 to 22:10 (2026-09-22)
+
+Same `/loop` run. No prompt change during the surah. 9 of 10 passed first review; 22:8 failed once and passed on the rewrite. `quiz_22.json` assembled with 10 quizzes: 20 multiple choice, 10 true or false, 10 fill the gap, 10 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 22:1 | whoSaid, MC, fillGap, TF, MC | 1 PASS | who-said-it opener, the child-turns-grey line has a strong voice; q3 gap "miscarriage" as al-Baqir's gloss of "unformed" is the narration's surprise, the quiz's best, "embryo" a live trap; q5 the compulsionists' claim as what al-Tabrisi and al-Tusi refute is a one-tradition-and-why framing, but the distractors are other verses' content nobody would pick; q2 Satan drives him to the Blaze is guessable; q4 True restates al-Mizan's conclusion, thin; in order |
+| 22:2 | MC, TF, whoSaid, MC, fillGap | 1 PASS | q2 False on the deniers being "content" that Ali was named helper is a real swap of the note's "enraged", the quiz's best; q3 sun's 360 mansions has a strong voice; q1 fringe as weak footing, "devotion so firm" a live inversion; q4 iron clubs at the top of the Fire is the narration's image, rest and shade distractors nobody would pick; q5 gap "Banu Umayya" with "the Quraysh" a live trap, the first fill-the-gap closer of the run; closes on v19 after v22, out of order |
+| 22:3 | whoSaid, MC, TF, fillGap, MC | 1 PASS | a three-verse passage, so three of five questions sit on v25; q4 gap "striking a servant" as part of deviation is the narration's surprise, the quiz's best; q5 Tusi's occasion at Hudaybiyya with the Muawiya-doors line as a live trap from the passage; q1 thousand-years fragrance has a voice; q2 path of Islam and the Garden, "no god but God" a live trap from Tabrisi's other gloss; q3 True restates the narration, thin; in order |
+| 22:4 | whoSaid, MC, fillGap, MC, TF | 1 PASS | q3 gap "chess" as the abomination of idols is the narration's surprise, the quiz's best, dice and gambling live; q4 severing a sanctity amounts to shirk is the narration's real point, "leaving the faith" live; q1 purify My House as the Family of Muhammad has a partisan voice; q2 days of tashriq is a fact question, first-ten-days and Arafat both live for a hajj-aware reader; q5 False "drop the outward sense" swaps the perspectives' keep-and-add; q3 and q4 both on v30; closes on v29 after v30, out of order |
+| 22:5 | MC, whoSaid, fillGap, TF, MC | 1 PASS | q2 content one and beggar has a voice; q5 what the two traditions agree on, with the point of disagreement as the trap, is a fact-of-agreement shape, but a fair one; q3 gap "body" next to "and need" is a reason gap, "place" and "time" live; q1 every believing nation, distractors (Muslims invented it, God needs it) nobody would pick; q4 True restates the note, thin; closes on v34 after v38, out of order |
+| 22:6 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q4 the neglected well as the silent Imam has a strong voice and is the narration's surprise, the quiz's best; q1 be patient before the fighting verse, "migrate to Medina" live; q3 consolation is the essay's point, "threaten the Meccans" live; q2 gap "law" on al-Mizan's wider reading, "covenant" live, shipped without a full stop (tenth shipped case, same mechanism as 21:6); q5 False "only Meccan companions and no later figures" is an only-and-no-later negation; closes on v41 after v45, out of order |
+| 22:7 | MC, whoSaid, fillGap, TF, MC | 1 PASS | q3 gap "voice" on the muhaddath as one who hears without seeing is the note's real distinction, the quiz's best, "whisper" live; q2 inmates of hell line has a partisan voice; q4 True on both traditions rejecting the gharaniq words is a fact-of-agreement shape; q1 fixes his task as a warner, the distractors are other verses' wording; q5 sovereignty God's alone is guessable; q3 and q4 both on v52; in order |
+| 22:8 | MC, whoSaid, fillGap, MC, TF | FAIL, PASS | q5 False on Badr as the renewed wrong (Karbala is the answer) is a real swap of the perspectives' two events, the quiz's best; q2 "revealed concerning the Commander of the Faithful" is a one-line attribution with little voice, and after the rewrite the distractors (Ali, the Prophet, al-Rida) leave al-Sadiq as the only plausible narrator; q3 gap "left their homes for God" is guessable against Badr, Muharram and refusing to migrate; q1 after death, "only the slain" live; q4 reach misses nothing is the essay's phrase; three questions on v58; closes on v60 after v63, out of order |
+| 22:9 | MC, whoSaid, TF, fillGap, MC | 1 PASS | q2 the mansak as the Imam for every nation has a strong voice and is the narration's surprise, the quiz's best; q1 resurrection not barzakh is al-Mizan's real distinction, "barzakh" a live trap; q3 True on Tabari's Mina reading, phrased "Sunni exegetes reported from Tabari", clunky; q4 gap "evidence" beside "neither argument nor", guessable; q5 the Fire, famine and exile distractors nobody would pick; q2 and q3 both on v67; in order |
+| 22:10 | whoSaid, MC, fillGap, MC, TF | 1 PASS | q1 the green fly with four wings has a strong voice, who-said-it opener; q2 al-Hadi's rebuke of one who likens God to creation is the narration's surprise, the quiz's best, "worships idols openly" the assumed trap; q4 revelation stays protected, "messengers may err" the live inversion; q3 gap "successors" beside "the prophets and their", guessable; q5 False "whole Muslim community" swaps the perspectives' Imams reading; in order |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 10 | 34K | 29K to 41K | 3 min 8 s | 341K tokens, 31 min |
+| rewrite | 1 | 26K | | 1 min 4 s | 26K tokens, 1 min |
+| reviewer | 11 | 21K | 20K to 23K | 50 s | 231K tokens, 9 min |
+
+About 0.6M agent tokens for the surah, roughly 23 minutes wall clock with two slots (the last slot went to surah 23's first writer while 22:10 was still under review).
+
+### Review outcomes
+
+9 of 10 PASS first time. 22:8 FAIL on q2 (who said it): narration n1 gives the line "revealed concerning the Commander of the Faithful in particular" to Imam al-Sadiq, but the passage's perspectives credit the same statement to a report from Imam al-Baqir, and al-Baqir was an option. The writer kept al-Sadiq as the answer and dropped al-Baqir from the options; the second review passed. Note against the writer prompt: when a passage carries the same statement under two narrators, the other narrator must not be a distractor, which the prompt does not say yet, and the rewrite found it on its own.
+
+One validator rejection (22:6 q2): trailing full stop on a gap prompt whose essay sentence continues, the same exact-span mechanism as 21:6. Tenth stop-less gap shipped. The `quiz.py` note from surah 21 stands.
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 6 | | MC | 5 |
+| whoSaid | 4 | | TF | 4 |
+| TF | 0 | | fillGap | 1 |
+| fillGap | 0 | | whoSaid | 0 |
+
+True or false: 5 of 10 True; both parity rules held for 10 of 10. Translation anchors: 0. Perspectives anchors: 9 of 10, the highest so far. Anchor spread: essay 19, narration 17, perspectives 9, note 5. Five quizzes out of verse order (22:2, 22:4, 22:5, 22:6, 22:8), every one by closing on an earlier verse after a later one: the perspectives close is anchored to a mid-passage verse, so the parity rule that puts the perspectives question last pulls the verse order out of line. Who-said-it opened four quizzes, the most varied top of any surah yet.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 22:4 "chess" as the abomination of idols, 22:1 "miscarriage" as the unformed, 22:6 the neglected well as the silent Imam, 22:9 the mansak as the Imam, 22:10 likening God to creation, 22:2 the deniers "content" versus enraged, 22:8 Badr versus Karbala.
+- Six of the seven best are a narration's unexpected gloss; the surah's narrations are rich in glosses that swap a reader's assumption.
+- Guessable gaps: 22:8 "left their homes for God", 22:9 "evidence", 22:10 "successors". Seven of ten are real, the best gap rate of the run.
+- Distractors nobody would pick: 22:1 q5, 22:2 q4, 22:5 q1, 22:9 q5. The one-tradition perspectives questions still fill their distractors from other verses' content.
+- Thin True statements: 22:1 q4, 22:3 q3, 22:5 q4 restate a note or conclusion. The False statements (22:2, 22:4, 22:6, 22:8, 22:10) are all real swaps; the even-index False rule keeps producing the better items.
+- Fact-of-agreement shape twice (22:5 q5, 22:7 q4).
+- 22:9 q3 reads clunkily ("Sunni exegetes reported from Tabari"); the reviewer let it through as parseable.
+
+### Deviations from the procedure
+
+- No prompt change.
+- Surah 23's first writer started while 22:10 was still under review.
+- Commits deferred to the end of the loop.
+
+## Results - Al-Muminoon 23:1 to 23:6 (2026-09-22)
+
+Same `/loop` run. No prompt change during the surah. All 6 passed first review. `quiz_23.json` assembled with 6 quizzes: 13 multiple choice, 6 true or false, 6 fill the gap, 5 who said it (23:5 has one narration only, so it carries a third multiple choice).
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 23:1 | whoSaid, MC, TF, fillGap, MC | 1 PASS | q1 the Garden made to speak has a strong voice, who-said-it opener; q2 Meccan zakat as giving of wealth generally is Tabatabai's real reasoning, "fixed alms at Medina" the live trap, the quiz's best; q3 True on inheriting the forfeited dwellings is the narration's surprise; q4 gap "spirit" for "another creature", "intellect" live; q5 the one Lord who deserves worship is guessable and the longest option; in order |
+| 23:2 | fillGap, MC, whoSaid, MC, TF | 1 PASS | fill-the-gap opener, the first of the run; q1 gap "most pressing" on why Noah begins with tawhid is a reason gap, "final" live; q4 refuge from being wronged but not from being tested is the narration's surprise, the quiz's best; q3 the landing supplication taught by the Prophet, phrased "Who taught this?", a fair variant; q2 lord it over them, "true prophet" a distractor nobody would pick; q5 False on Lot for Ad or Thamud is a real swap; in order |
+| 23:3 | TF, MC, fillGap, whoSaid, MC | 1 PASS | true-or-false opener; q2 al-Tusi's contradiction (following a man a loss, worshipping an idol not) is the essay's sharpest point, the quiz's best, though the right option is the only one in a different grammatical shape; q4 Kufa, the mosque, the Euphrates has a strong voice; q3 gap "plant matter" for ghutha, "sea foam" a live trap; q5 fact-of-agreement shape with Iraq and Syria as the two sides' answers for traps, a fair one; q1 True restates the essay, thin; q4 and q5 both on v50; in order |
+| 23:4 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q4 creation rests on truth not appetite is the essay's real reasoning, the quiz's best, though the right option is the longest; q1 one community as the Family of Muhammad, "the people of Islam" the assumed trap; q3 "none took the lead before him" has a voice, phrased "Who said it?"; q2 gap "rejoicing" is verse wording, guessable; q5 False phrased as "something other than the wilayat", a double negative that makes a reader work for the wrong reason; in order |
+| 23:5 | MC, fillGap, MC, TF, MC | 1 PASS | no who-said-it (one narration), the first of the run; q1 the heart as seat of understanding is Tabatabai's real distinction, "merely stores what the senses gather" the live trap, the quiz's best; q5 the Unseen as what has not yet come to be, "what has already come to pass" a live inversion; q2 gap "lies" for myths of the ancients, guessable; q3 "To Allah" anchored on the verse translation, the first translation anchor of the run, verse wording; q4 True on the two-gods argument restates the essay; in order |
+| 23:6 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q3 wretched by their own deeds is the narration's point, "promptings of the devils" the assumed trap, the quiz's best; q4 the patience of Ali, Fatimah, Hasan and Husayn has a partisan voice, with Ibn Masud as the surprising narrator; q1 the Mina warning as the occasion, one-tradition framing with other passage events as distractors nobody would pick; q2 gap "reward and punishment" in the barzakh, "questioning and trial" a live trap; q5 False "a long list of prayers rather than a single one" is a real swap of the essay's close; in order |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 6 | 37K | 32K to 45K | 3 min 38 s | 219K tokens, 22 min |
+| reviewer | 6 | 20K | 20K to 21K | 45 s | 123K tokens, 5 min |
+
+About 0.34M agent tokens for the surah, roughly 17 minutes wall clock with two slots (the last slot went to surah 24's first writer while 23:6 was being written). 23:4, the longest passage (verses 51 to 77), was the most expensive writer of the run at 45K tokens and 5 min 23 s.
+
+### Review outcomes
+
+6 of 6 PASS first time, no rewrites, no validator rejections. Every gap prompt shipped with a full stop.
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 3 | | MC | 3 |
+| whoSaid | 1 | | TF | 3 |
+| TF | 1 | | fillGap | 0 |
+| fillGap | 1 | | whoSaid | 0 |
+
+True or false: 3 of 6 True; both parity rules held for 6 of 6. Translation anchors: 1 (23:5 q3, the first of the run). Perspectives anchors: 3 of 6. Anchor spread: essay 14, narration 12, perspectives 3, translation 1, note 0. All six quizzes in verse order, the first surah of the run with none out of order; the three perspectives closes happened to sit on late verses. Openers were the most varied yet: four different types across six quizzes.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 23:1 Meccan zakat, 23:2 tested but not wronged, 23:3 al-Tusi's contradiction, 23:4 creation rests on truth, 23:5 the heart above the senses, 23:6 wretched by their own deeds.
+- The balance shifted toward the essay: four of the six best are an essay's reasoning with the reader's assumption as the trap, only two a narration's gloss. This surah's essays argue more than they gloss.
+- Guessable gaps: 23:4 "rejoicing" (verse wording), 23:5 "lies". Four of six are real.
+- Longest-option tells: 23:1 q5, 23:4 q4; 23:3 q2's right option is the only one in a different grammatical shape.
+- 23:4 q5's double negative ("something other than the wilayat" is False) is the one statement a reader could miss for the wrong reason. Note against the writer prompt: an even-index False statement should assert a wrong positive, not negate the right one.
+- Distractors nobody would pick: 23:2 q2, 23:6 q1.
+
+### Deviations from the procedure
+
+- No prompt change.
+- Surah 24's first writer started while 23:6 was being written.
+- Commits deferred to the end of the loop.
+
+## Results - An-Noor 24:1 to 24:9 (2026-09-22)
+
+Same `/loop` run, the last surah with shipped passages. No prompt change during the surah. All 9 passed first review. `quiz_24.json` assembled with 9 quizzes: 18 multiple choice, 9 true or false, 9 fill the gap, 9 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 24:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | true-or-false opener; q5 grace and mercy as the Messenger and the guardianship of the Imams is the narration's surprise, the quiz's best, with the passage's legal content as live traps; q4 gap "returned to him" after the husband's recantation is a ruling gap, "parted from him" the assumed trap; q2 the group is one man has a voice but the quote opens mid-sentence, clunky; q3 the Imams' standing-ban reading, one-tradition framing with other rulings of the passage as distractors, fair; q1 True is a compound statement (order of revelation and the promised way), a reader could hesitate on either half; in order |
+| 24:2 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q2 gap "all" in "do not say all that you do know" is the narration's turn of thought, the quiz's best, "some" the assumed trap; q4 belie your hearing and sight against your brother has a strong voice, with the other narrators as distractors; q1 exposed the liars and cleared the innocent, "earned them a reward" live; q3 never repeat the calumny is guessable; q5 False "leaves guilt unresolved" is a fact-of-agreement negation; q4 and q5 both on v19; in order |
+| 24:3 | MC, whoSaid, TF, fillGap, MC | 1 PASS | q3 True on a believer's limbs not testifying against him is the narration's surprise, the quiz's best; q1 pure only through God's grace, "by their own effort" the live trap, but the right option is the longest; q4 gap "forbade" is given away by the prompt's "the fornicator marries only a fornicatress"; q2 mutual pardon has little voice and the quote is unquoted in the prompt; q5 forgiveness and a noble provision is verse wording; q4 and q5 both on v26; in order |
+| 24:4 | whoSaid, MC, fillGap, MC, TF | 1 PASS | who-said-it opener, the fall of the sandal has a voice; q3 gap "face" on what may be seen of a non-kin woman is the narration's ruling, "hair" the live trap, the quiz's best; q5 False "binding obligation" swaps the perspectives' recommendation, a real swap; q4 poverty no barrier, "must delay until wealthy" the assumed trap; q2 shield private matters is guessable and the longest option; q1 and q2 both on v27; in order |
+| 24:5 | TF, MC, whoSaid, fillGap, MC | 1 PASS | true-or-false opener; q4 gap "Satan" for giving up trade, said three times, is the narration's surprise, the quiz's best, "the miser" the assumed trap; q5 the layered darkness as the rulers who seized power, one-tradition framing with the mirage and the oil from the same verses as live traps; q3 five lights has a voice; q2 the second reading of "His Light" as sun, moon and stars, a two-readings shape that works; q1 True restates al-Mizan's comparison, thin; three questions on v35, the Light Verse; in order |
+| 24:6 | whoSaid, MC, fillGap, MC, TF | 1 PASS | q1 the rooster angel has a strong voice, who-said-it opener; q2 verses 41 to 46 as an argument for the Light verse is Tabatabai's structural point, the quiz's best; q3 gap "people" for those on two feet is guessable next to snakes and beasts, shipped without a full stop (eleventh shipped case, same mechanism); q4 fact-of-agreement shape, distractors (idols, hoarding, prayer) nobody would pick; q5 False "reaches no verdict, leaving their state undecided" is a bare negation of the essay's close; in order |
+| 24:7 | TF, whoSaid, MC, fillGap, MC | 1 PASS | true-or-false opener; q4 gap "prayer" is the narration's paradox (no zakat, no prayer), the quiz's best, but the answer word already sits in the prompt, which the reviewer noted and let through; q2 the sheet reading "honourable obedience" has a strong voice; q3 hearing, obedience, trust and patience is a list-recall item, nearer memory; q1 True restates Tabatabai; q5 never frustrate Allah, "an oath that they will march out" a live trap from v53; in order |
+| 24:8 | fillGap, MC, whoSaid, MC, TF | 1 PASS | fill-the-gap opener; q1 gap "undressed" at the three hours is al-Tusi's reason for the ruling, "asleep" the assumed trap, the quiz's best; q4 only to the extent of need, "with the owner's spoken permission" live; q3 head-covering and cloak, phrased as a question-and-answer who-said-it, a fair variant; q2 slaves and pre-pubescent children is note recall; q5 False "only together, never alone" swaps the essay's "together or separately", a real swap; q1 and q2 on v58, q4 and q5 on v61; in order |
+| 24:9 | fillGap, TF, MC, whoSaid, MC | 1 PASS | a three-verse passage, three of five questions on v63; q4 affliction in his religion or an unrewarded wound has a voice, phrased "Who gave this gloss?", with Ibn Abbas as a live trap from the perspectives; q2 True on the Hanzala occasion at Uhud is narration content, a fact a reader either remembers or not; q1 gap "Friday prayer" in Tusi's list, "pilgrimage season" live; q3 Tabatabai's reading of the summons, "the trumpet blast" a distractor nobody would pick; q5 fact-of-agreement shape with the two sides' narrowings as traps, fair; in order |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 9 | 38K | 32K to 48K | 4 min 0 s | 344K tokens, 36 min |
+| reviewer | 9 | 21K | 20K to 26K | 51 s | 190K tokens, 8 min |
+
+About 0.53M agent tokens for the surah, roughly 26 minutes wall clock with two slots. 24:4 (verses 27 to 34, the hijab and marriage rulings) was the most expensive writer of the whole run at 48K tokens and 6 min 14 s; 24:7's reviewer was the slowest reviewer of the run at 1 min 48 s, having weighed the gap-word-in-prompt case.
+
+### Review outcomes
+
+9 of 9 PASS first time, no rewrites. One validator rejection (24:6 q3): trailing full stop on a gap prompt whose source sentence continues with a semicolon, the same exact-span mechanism as 21:6 and 22:6. Eleventh stop-less gap shipped. The `quiz.py` note stands.
+
+### Type order across the surah
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| TF | 3 | | MC | 5 |
+| MC | 2 | | TF | 4 |
+| whoSaid | 2 | | fillGap | 0 |
+| fillGap | 2 | | whoSaid | 0 |
+
+True or false: 5 of 9 True; both parity rules held for 9 of 9. Translation anchors: 0. Perspectives anchors: 6 of 9. Anchor spread: narration 20, essay 17, perspectives 6, note 2; the second surah where narrations out-anchor the essay. All nine quizzes in verse order. Openers are the most even of any surah: no type opened more than three. Who-said-it sat in every slot from 1 to 4.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 24:1 grace and mercy as the Messenger and the Imams, 24:2 "do not say all that you do know", 24:3 the limbs that do not testify, 24:4 "face", 24:5 "Satan" said three times, 24:6 the argument for the Light verse, 24:7 no zakat no prayer, 24:8 "undressed".
+- Six of the eight best are a narration's gloss or ruling; the legal surah's narrations carry the quizzes.
+- Real gaps: 24:1, 24:2, 24:4, 24:5, 24:8, 24:9. Guessable: 24:3 (given away by the prompt), 24:6 (next to snakes and beasts), 24:7 (answer word already in the prompt). Note against the writer prompt: the gap word must not appear elsewhere in the prompt, which the prompt does not say yet; 24:7 q4 is the first shipped case.
+- Thin True statements: 24:1 q1 (compound), 24:5 q1, 24:7 q1. 24:9 q2 is a fact of the occasion of revelation rather than understanding.
+- Bare negations among the False statements: 24:2 q5, 24:6 q5. The others (24:4, 24:8) are real swaps.
+- Fact-of-agreement shape three times (24:2 q5, 24:6 q4, 24:9 q5), the most of any surah; the perspectives of this surah agree more than they differ.
+- Longest-option tells: 24:3 q1, 24:4 q2.
+- 24:1 q2's quote opens mid-sentence ("this is in carrying out...") and 24:3 q2's quote is unquoted in the prompt; both read clunkily.
+
+### Deviations from the procedure
+
+- No prompt change.
+- Commits deferred to the end of the loop.
+
+## Run summary - surahs 21 to 24 (2026-09-22)
+
+One `/loop` session, 14:02 to 15:12, about 70 minutes wall clock. 32 quizzes written and passed (7 + 10 + 6 + 9); one FAIL (22:8, who-said-it ambiguity), fixed on one rewrite; three validator rejections, all the gap-prompt full-stop case. About 1.75M agent tokens in this session (surah 21 partly written in the previous session).
+
+| surah | quizzes | first-review pass | rewrites | agent tokens | wall clock |
+|---|---|---|---|---|---|
+| 21 | 7 | 7 | 0 | 0.28M (4 writers, 6 reviewers measured) | 11 min |
+| 22 | 10 | 9 | 1 | 0.60M | 23 min |
+| 23 | 6 | 6 | 0 | 0.34M | 17 min |
+| 24 | 9 | 9 | 0 | 0.53M | 26 min |
+
+Every surah with shipped passages (1 to 24) now has a quiz file. The next quiz surah is whichever surah the passage pipeline ships next (25 is in progress there).
+
+Notes carried out of the run, for the next prompt or validator change:
+
+- `quiz.py`: allow a trailing full stop on a gap prompt when the exact-span match succeeds without it (three validator rejections and three stop-less gaps shipped this run; eleven in total).
+- Writer prompt: when a passage carries the same statement under two narrators, the other narrator must not be a distractor (22:8).
+- Writer prompt: the gap word must not appear elsewhere in the prompt (24:7 q4), and the prompt must not paraphrase the answer (21:5 q2, 24:3 q4).
+- Writer prompt: an even-index False statement should assert a wrong positive rather than negate the right one (23:4 q5's double negative, 21:4 q5, 22:6 q5, 24:6 q5).
+- Writer prompt: in a one-tradition perspectives question, at least one distractor should come from the same verse, not another verse's content (21:1 q5, 21:7 q5, 22:1 q5, 24:9 q3).
