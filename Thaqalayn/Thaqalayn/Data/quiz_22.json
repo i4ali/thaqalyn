@@ -1,0 +1,1612 @@
+{
+  "1": {
+    "id": "22:1",
+    "surah": 22,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"O servants of Allah, after the resurrection is what is harsher than the grave, a day on which the child turns grey, the grown man is made drunk by it.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam Ali describes the terror after the resurrection, naming the child gone grey, the grown man made drunk and the nursing mother who forgets her child; the words are his own."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n1",
+          "quote": "a day on which the child turns grey, the grown man is made drunk by it, the unborn is cast from the womb"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 4,
+        "prompt": {
+          "en": "According to the essay, what does al-Mizan say befalls whoever takes Satan for an ally?"
+        },
+        "options": [
+          {
+            "en": "Allah forgives him for his ignorance"
+          },
+          {
+            "en": "Satan is punished in his place"
+          },
+          {
+            "en": "Satan misleads him and drives him toward the Blaze"
+          },
+          {
+            "en": "He escapes the punishment on the Day of Resurrection"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says al-Mizan takes the decree to fall on Satan: whoever makes him an ally, Satan misleads him and drives him toward the Blaze."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "whoever takes him for an ally, he misleads and drives toward the Blaze"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 5,
+        "prompt": {
+          "en": "The 'unformed' are every soul not so created, the seed spilt and the ____ before the spirit is breathed in."
+        },
+        "options": [
+          {
+            "en": "embryo"
+          },
+          {
+            "en": "covenant"
+          },
+          {
+            "en": "infant"
+          },
+          {
+            "en": "miscarriage"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Baqir glosses the 'unformed' lump as the soul not created in Adam's loin, the spilt seed and the miscarriage that ends before the spirit is breathed in."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n2",
+          "quote": "The 'unformed' are every soul not so created, the seed spilt and the miscarriage before the spirit is breathed in"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the essay, al-Mizan concludes that the Hour is certain to come because Allah is the Reality who revives the dead."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says al-Mizan concludes the Hour must come, since Allah is the Reality and the one who revives the dead; certain arrival restates that same claim."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the Hour must come, because Allah is the Reality who revives the dead"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "In the perspectives, what claim about Allah do al-Tabrisi and al-Tusi read verse ten as refuting?"
+        },
+        "options": [
+          {
+            "en": "That dead earth stirs only when rain falls upon it"
+          },
+          {
+            "en": "That Allah forces His servants into their wrongs"
+          },
+          {
+            "en": "That the Hour's quake is a terrible thing"
+          },
+          {
+            "en": "That Satan misleads whoever takes him as an ally"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say al-Tabrisi and al-Tusi read the verse against the compulsionists, who blame Allah for every wrong; He punishes only for what a person's own hands earned."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "a refutation of the compulsionists who ascribe every wrong in creation to Allah: He punishes only for what a person's own hands have earned"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:13:48Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:14:55Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "2": {
+    "id": "22:2",
+    "surah": 22,
+    "index": 2,
+    "range": [
+      11,
+      22
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "How do the commentators read worshipping Allah 'on the fringe' in this passage?"
+        },
+        "options": [
+          {
+            "en": "A weak, unsteady footing in religion"
+          },
+          {
+            "en": "A place of special honour near the Kaaba"
+          },
+          {
+            "en": "Worship offered only at the fringe of the day"
+          },
+          {
+            "en": "Devotion so firm it never wavers"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses worship 'on the fringe' as a weak, unsteady footing in religion, like one standing on the edge of a bank who topples at the first ordeal."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The commentators read 'on the fringe' as a weak, unsteady footing in religion, like the weakness of one standing on the edge of a bank"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 15,
+        "prompt": {
+          "en": "In the reported occasion for verse 15, the deniers were content that Allah had singled out Ali as the Prophet's helper."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note records the opposite: the deniers were enraged, not content, that Allah had named Ali the Prophet's helper in particular, and verse 15 answered them."
+        },
+        "anchor": {
+          "where": "verses.15.note",
+          "quote": "the deniers were enraged that Allah had named Ali the Prophet's helper in particular, and this verse answered them"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 18,
+        "prompt": {
+          "en": "\"The sun has three hundred and sixty mansions. When it sets, it reaches the inmost part of the Throne and stays prostrate until the next day.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Amir al-Muminin"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Amir al-Muminin describes the sun's three hundred and sixty mansions and how it stays prostrate at the inmost part of the Throne until the next day, showing the prostration of all things."
+        },
+        "anchor": {
+          "where": "verses.18.narrations.n4",
+          "quote": "The sun has three hundred and sixty mansions. When it sets, it reaches the inmost part of the Throne and stays prostrate until the next day."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "In the narration to Abu Basir, what happens when the people of Hell reach the top of the Fire?"
+        },
+        "options": [
+          {
+            "en": "They are allowed a moment of rest"
+          },
+          {
+            "en": "They are questioned about their deeds"
+          },
+          {
+            "en": "They are struck back with iron clubs and returned to its depth"
+          },
+          {
+            "en": "They are given cool shade"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq tells Abu Basir that those in Hell plunge for seventy years, and on reaching the top are struck back with iron clubs into its depth."
+        },
+        "anchor": {
+          "where": "verses.22.narrations.n8",
+          "quote": "When the people of Hell enter it, they plunge down for a journey of seventy years; and when they reach its top, they are struck back with the iron clubs and returned to its depth."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 19,
+        "prompt": {
+          "en": "Al-Burhan preserves the Badr report but adds the Household's word that the two parties are the Prophet's family and ____."
+        },
+        "options": [
+          {
+            "en": "Banu Umayya"
+          },
+          {
+            "en": "the Sabaeans"
+          },
+          {
+            "en": "the Magians"
+          },
+          {
+            "en": "the Quraysh"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives note that Al-Burhan keeps the Badr report yet adds the Household's reading that the two contending parties are the Prophet's family and Banu Umayya."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Al-Burhan preserves the Badr report but adds the Household's word that the two parties are the Prophet's family and Banu Umayya"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:14:15Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:15:15Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "3": {
+    "id": "22:3",
+    "surah": 22,
+    "index": 3,
+    "range": [
+      23,
+      25
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 23,
+        "prompt": {
+          "en": "\"Among the least of paradise's breezes is that its fragrance reaches the hearts of its people from a journey of a thousand years' distance.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Speaking to Abu Basir, Imam al-Sadiq described the least of paradise's breezes, whose fragrance reaches its people from a thousand years' journey away."
+        },
+        "anchor": {
+          "where": "verses.23.narrations.n1",
+          "quote": "among the least of paradise's breezes is that its fragrance reaches the hearts of its people from a journey of a thousand years' distance of this world"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 24,
+        "prompt": {
+          "en": "According to the essay, how does Tabrisi read 'the path of the All-laudable' in verse 24?"
+        },
+        "options": [
+          {
+            "en": "The road the pilgrims walk to Mecca"
+          },
+          {
+            "en": "The path of Islam and of the Garden"
+          },
+          {
+            "en": "The bracelets of gold and pearl in paradise"
+          },
+          {
+            "en": "The witness that there is no god but God"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports that Tabrisi reads the path of the All-laudable as the path of Islam and of the Garden, the believers' way and destination."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "reads the path of the All-laudable as the path of Islam and of the Garden"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 25,
+        "prompt": {
+          "en": "According to the passage, whoever worships something other than God inside the Sacred Mosque is a deviator whom God will make taste a painful punishment."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage says whoever worships other than God there is a deviator by wrong, so God will make him taste a painful punishment."
+        },
+        "anchor": {
+          "where": "verses.25.narrations.n6",
+          "quote": "Whoever worships other than God in it, or takes as guardians in it other than the friends of God, is a deviator by wrong, and it is upon God to make him taste a painful punishment."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 25,
+        "prompt": {
+          "en": "Every wrong is deviation, and ____ who has done no wrong is part of that deviation."
+        },
+        "options": [
+          {
+            "en": "cursing a merchant"
+          },
+          {
+            "en": "striking a servant"
+          },
+          {
+            "en": "robbing a pilgrim"
+          },
+          {
+            "en": "turning away a visitor"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq told Muawiya ibn Ammar that every wrong is deviation, and striking a servant who has done no wrong is part of that deviation."
+        },
+        "anchor": {
+          "where": "verses.25.narrations.n5",
+          "quote": "Every wrong is deviation, and striking a servant who has done no wrong is part of that deviation."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 25,
+        "prompt": {
+          "en": "According to the essay, Tusi reports that verse 25 was revealed about whom?"
+        },
+        "options": [
+          {
+            "en": "The idolaters defeated at Badr"
+          },
+          {
+            "en": "The hypocrites who stayed behind at Tabuk"
+          },
+          {
+            "en": "Muawiya, who first fitted doors to Mecca's houses"
+          },
+          {
+            "en": "Abu Sufyan and his companions at Hudaybiyya"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay reports Tusi's account that verse 25 came down about Abu Sufyan and his companions when they barred the Prophet from the pilgrimage at Hudaybiyya."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi reports that the verse was revealed about Abu Sufyan and his companions when they barred the Prophet from the lesser pilgrimage at Hudaybiyya"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:18:37Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:19:36Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "4": {
+    "id": "22:4",
+    "surah": 22,
+    "index": 4,
+    "range": [
+      26,
+      33
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 26,
+        "prompt": {
+          "en": "\"By 'purify My House for those who circle around it, and those who stand, and those who bow and prostrate' are meant the Family of Muhammad.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Kazim reads the command to purify the House for those who circle, stand, bow and prostrate as pointing inwardly to the Family of Muhammad."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n1",
+          "quote": "By 'purify My House for those who circle around it, and those who stand, and those who bow and prostrate' are meant the Family of Muhammad."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "According to the essay, what are the 'known days' during which Allah's Name is mentioned over the livestock?"
+        },
+        "options": [
+          {
+            "en": "The days of Arafat"
+          },
+          {
+            "en": "The first ten days of Dhul-Hijja"
+          },
+          {
+            "en": "The days of tashriq"
+          },
+          {
+            "en": "The days of Ramadan"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay states that al-Tabatabai and the Imams of Ahl al-Bayt take the known days, over which God's Name is mentioned on the livestock, as the days of tashriq."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tabatabai and the Imams of Ahl al-Bayt take the known days as the days of tashriq"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 30,
+        "prompt": {
+          "en": "The abomination of idols is ____, and false speech is singing."
+        },
+        "options": [
+          {
+            "en": "chess"
+          },
+          {
+            "en": "dice"
+          },
+          {
+            "en": "wine"
+          },
+          {
+            "en": "gambling"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq glosses the abomination of idols as chess and false speech as singing, reading the verse's warnings as reaching these forbidden pastimes."
+        },
+        "anchor": {
+          "where": "verses.30.narrations.n6",
+          "quote": "The abomination of idols is chess, and false speech is singing."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 30,
+        "prompt": {
+          "en": "According to Imam al-Sadiq, what does severing one of the three binding sanctities amount to?"
+        },
+        "options": [
+          {
+            "en": "Committing a minor sin"
+          },
+          {
+            "en": "Associating a partner with God"
+          },
+          {
+            "en": "Leaving the faith of Islam"
+          },
+          {
+            "en": "Breaking a solemn vow"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq names three binding sanctities, the Sacred House, the Book, and obedience to Ahl al-Bayt, and says whoever severs one of them has associated a partner with God."
+        },
+        "anchor": {
+          "where": "verses.30.narrations.n7",
+          "quote": "They are three binding sanctities; whoever severs one of them has associated a partner with God"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 29,
+        "prompt": {
+          "en": "The Ahl al-Bayt narrations drop the outward sense of verse 29 and keep only its inner meaning."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The perspectives say the Ahl al-Bayt narrations keep the outward sense of the rites and add an inner meaning to it, rather than replacing the outward with the inner."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Ahl al-Bayt narrations keep this outward sense yet add an inner one"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:18:16Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:19:06Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "5": {
+    "id": "22:5",
+    "surah": 22,
+    "index": 5,
+    "range": [
+      34,
+      38
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 34,
+        "prompt": {
+          "en": "How does the essay place the sacrifice at the heart of the pilgrimage?"
+        },
+        "options": [
+          {
+            "en": "In a long line, as a rite given to every believing nation"
+          },
+          {
+            "en": "As a practice the Muslims invented at Mecca"
+          },
+          {
+            "en": "As an offering that God Himself needs"
+          },
+          {
+            "en": "As a replacement for the daily prayer"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens by placing the sacrifice in a long line: God appointed a rite for every believing nation before this one, so it belongs to a lasting pattern of worship."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "for every believing nation before this one, God appointed a rite in which His name is pronounced over the livestock He gave them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 36,
+        "prompt": {
+          "en": "\"The content one is he who is satisfied with what you give him ... the beggar is the one who passes by you so that you may give to him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the self-contained needy, Imam al-Sadiq said the content one is satisfied with what he is given and does not resent it, while the beggar is the one who passes by."
+        },
+        "anchor": {
+          "where": "verses.36.narrations.n3",
+          "quote": "The content one is he who is satisfied with what you give him and does not resent it, nor scowl, nor twist his mouth in anger"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 37,
+        "prompt": {
+          "en": "Neither flesh nor blood reaches God, who is beyond ____ and need; only your piety reaches Him and is accepted."
+        },
+        "options": [
+          {
+            "en": "sin"
+          },
+          {
+            "en": "place"
+          },
+          {
+            "en": "body"
+          },
+          {
+            "en": "time"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note explains that God is beyond body and need, so the flesh and blood of the sacrifice cannot reach Him; only the offerer's piety does."
+        },
+        "anchor": {
+          "where": "verses.37.note",
+          "quote": "Neither flesh nor blood reaches God, who is beyond body and need; only your piety reaches Him and is accepted"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 38,
+        "prompt": {
+          "en": "The passage says God wards off the enemies of the believers, acting as their Master and Guardian."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note describes God as the believers' Master and Guardian who wards their enemies off from them, since He has no love for the ungrateful traitor."
+        },
+        "anchor": {
+          "where": "verses.38.note",
+          "quote": "God wards the enemies off those who believe, as their Master and Guardian, for He does not love the ungrateful traitor"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 34,
+        "prompt": {
+          "en": "According to the perspectives, on what do Shia and Sunni commentators largely agree about these verses?"
+        },
+        "options": [
+          {
+            "en": "On whom the closing praise names"
+          },
+          {
+            "en": "On why God defends the believers"
+          },
+          {
+            "en": "On whether piety reaches God"
+          },
+          {
+            "en": "On the meaning of the sacrificial rites"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say the two traditions read these rites in much the same way and part only over whom the closing praise names, so their agreement lies in the rites' meaning."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia and Sunni commentators read these rites in much the same way; they part over whom the closing praise names"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:22:29Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:23:16Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "6": {
+    "id": "22:6",
+    "surah": 22,
+    "index": 6,
+    "range": [
+      39,
+      48
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 39,
+        "prompt": {
+          "en": "According to the essay, what did the Prophet tell believers who came to him beaten by Quraysh, before this verse was revealed?"
+        },
+        "options": [
+          {
+            "en": "To be patient, since he had not been commanded to fight"
+          },
+          {
+            "en": "To fight back against Quraysh at once"
+          },
+          {
+            "en": "To leave Mecca and migrate to Medina"
+          },
+          {
+            "en": "To pay blood-money to the wounded"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay gives the setting: believers came to the Prophet beaten by Quraysh, and he told them to be patient because he had not been commanded to fight, until this verse came down."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "believers kept coming to the Prophet beaten and wounded by Quraysh, and he told them to be patient, for he had not been commanded to fight, until this verse came down"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 40,
+        "prompt": {
+          "en": "Al-Mizan reads this repelling as wider than warfare - a standing ____ by which life is defended"
+        },
+        "options": [
+          {
+            "en": "war"
+          },
+          {
+            "en": "ritual"
+          },
+          {
+            "en": "law"
+          },
+          {
+            "en": "covenant"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Al-Mizan reads the repelling of people through one another as wider than warfare, a standing law by which life is defended, so that fighting is legislated to keep the religious community standing."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Mizan reads this repelling as wider than warfare - a standing law by which life is defended"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 44,
+        "prompt": {
+          "en": "According to the essay, why does the passage recall the peoples of Noah, Ad and Thamud who denied their messengers?"
+        },
+        "options": [
+          {
+            "en": "To threaten the Meccans with the same destruction"
+          },
+          {
+            "en": "To console the Prophet, since earlier prophets were denied too"
+          },
+          {
+            "en": "To praise the strength of those ancient nations"
+          },
+          {
+            "en": "To explain why those nations were given power"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the tone turns to consolation: if the Meccans deny Muhammad, earlier peoples denied their messengers too, and God gave the deniers respite before He seized them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The tone turns to consolation. If the Meccans deny Muhammad, so did the peoples of Noah, Ad, Thamud, Abraham, Lot, Midian and Moses"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 45,
+        "prompt": {
+          "en": "\"The neglected well is the silent Imam, and the lofty palace is the speaking Imam.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Reading the ruined towns and wells, Imam al-Kazim glossed the neglected well as the silent Imam and the lofty palace as the speaking Imam."
+        },
+        "anchor": {
+          "where": "verses.45.narrations.n6",
+          "quote": "The neglected well is the silent Imam, and the lofty palace is the speaking Imam"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 41,
+        "prompt": {
+          "en": "According to the perspectives, the Shia narrations gathered here tie the wronged only to the Prophet's Meccan companions and to no later figures."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations carry these verses further than the Meccan companions, to Ali, Hamza, Jafar, Husayn and the awaited Qaim, reading the wronged as the Ahl al-Bayt across the generations."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the Shia narrations gathered here carry the same verses further - to Ali, Hamza, Jafar and Husayn, and to the awaited Qaim - reading the wronged as the Ahl al-Bayt across the generations"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:23:49Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:24:39Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "7": {
+    "id": "22:7",
+    "surah": 22,
+    "index": 7,
+    "range": [
+      49,
+      57
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 49,
+        "prompt": {
+          "en": "According to the essay, what does the opening verse do for the Prophet's role?"
+        },
+        "options": [
+          {
+            "en": "It fixes his whole task in a single line as a warner"
+          },
+          {
+            "en": "It grants him authority to judge his people"
+          },
+          {
+            "en": "It promises him a noble provision"
+          },
+          {
+            "en": "It commands him to contend with God's signs"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the opening line fixes the Prophet's entire task in one sentence, that he is only a manifest warner to mankind, not a judge or ruler."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage opens by fixing the Prophet's whole task in a single line: 'I am only a manifest warner to you.'"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 50,
+        "prompt": {
+          "en": "\"Those are the family of Muhammad; those who strove to sever love of the family of Muhammad, seeking to frustrate it, are the inmates of hell.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sajjad"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq read the believers of verse 50 as the family of Muhammad, and those who sought to sever love of them as the inmates of hell."
+        },
+        "anchor": {
+          "where": "verses.50.narrations.n1",
+          "quote": "Those are the family of Muhammad; those who strove to sever love of the family of Muhammad, seeking to frustrate it, are the inmates of hell"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 52,
+        "prompt": {
+          "en": "Shia narrations read this verse with an added word, 'nor a muhaddath' - one who hears the angel's ____ without seeing its form - and apply it to Imam Ali and the Imams."
+        },
+        "options": [
+          {
+            "en": "name"
+          },
+          {
+            "en": "voice"
+          },
+          {
+            "en": "command"
+          },
+          {
+            "en": "whisper"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note explains that a muhaddath is one who hears the angel's voice without seeing its form, an added word the narrations apply to Imam Ali and the Imams."
+        },
+        "anchor": {
+          "where": "verses.52.note",
+          "quote": "Shia narrations read this verse with an added word, 'nor a muhaddath' - one who hears the angel's voice without seeing its form - and apply it to Imam Ali and the Imams"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 52,
+        "prompt": {
+          "en": "According to the passage, both traditions it treats reject the gharaniq words as a slander on the Prophet."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say both traditions reject the gharaniq words as a slander on the Prophet; they part only on the separate question of prophetic lapse."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions reject those words as a slander on the Prophet, but they part on prophetic lapse"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 56,
+        "prompt": {
+          "en": "According to the essay's close, how does it describe God's sovereignty on the Day of Judgment?"
+        },
+        "options": [
+          {
+            "en": "It is shared between God and the prophets"
+          },
+          {
+            "en": "It passes to the believers as their reward"
+          },
+          {
+            "en": "It belongs to God alone, unlike the borrowed kingship of this world"
+          },
+          {
+            "en": "It ends once the judgment is complete"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay closes at the Judgment, where sovereignty belongs to God alone, unlike the borrowed kingship of this world, as He decides between the two groups."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "On that day sovereignty belongs to God alone, unlike the borrowed kingship of this world"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:25:24Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:26:14Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "8": {
+    "id": "22:8",
+    "surah": 22,
+    "index": 8,
+    "range": [
+      58,
+      64
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 58,
+        "prompt": {
+          "en": "According to the essay, why is the 'good provision' of verse 58 read as a reward of the Hereafter?"
+        },
+        "options": [
+          {
+            "en": "Because it comes after death"
+          },
+          {
+            "en": "Because it is given during migration"
+          },
+          {
+            "en": "Because it replaces lost worldly wealth"
+          },
+          {
+            "en": "Because only the slain receive it"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the good provision is the reward of the Hereafter, since it comes only after the migrant is slain or dies, not in this life."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the reward of the Hereafter, since it comes after death"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 58,
+        "prompt": {
+          "en": "\"This verse was revealed concerning the Commander of the Faithful in particular.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration on verse 58, that the verse was revealed concerning the Commander of the Faithful in particular, is given on the authority of Imam al-Sadiq."
+        },
+        "anchor": {
+          "where": "verses.58.narrations.n1",
+          "quote": "This verse was revealed concerning the Commander of the Faithful in particular."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 58,
+        "prompt": {
+          "en": "The passage turns from the Judgment just described to those who ____."
+        },
+        "options": [
+          {
+            "en": "left their homes for God"
+          },
+          {
+            "en": "were slain at Badr"
+          },
+          {
+            "en": "fought during Muharram"
+          },
+          {
+            "en": "refused to migrate"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens by turning from the Judgment to the migrants, those who left their homes in God's way, whom verse 58 promises a good provision."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage turns from the Judgment just described to those who left their homes for God."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 63,
+        "prompt": {
+          "en": "According to the essay, what does the earth turning green after rain prove about God?"
+        },
+        "options": [
+          {
+            "en": "That He forgives the wronged"
+          },
+          {
+            "en": "That His reach misses nothing"
+          },
+          {
+            "en": "That He created the night and day"
+          },
+          {
+            "en": "That the migrants receive Paradise"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reads God sending down water and the earth turning green as proof of a reach that misses nothing, sealed by the names all-attentive and all-aware."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He sends down water and the earth turns green, proof of a reach that misses nothing"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 60,
+        "prompt": {
+          "en": "In the Shia reading of verse 60, the renewed wrong answered by the Qa'im is the battle of Badr."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the renewed wrong is Karbala, to be answered by the Qa'im, while Badr is where the Messenger was vindicated, not the renewed wrong."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the one who retaliates is the Messenger, vindicated at Badr, while the renewed wrong is Karbala, to be answered by the Qa'im from his progeny"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:30:30Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-09-22T19:31:24Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "9": {
+    "id": "22:9",
+    "surah": 22,
+    "index": 9,
+    "range": [
+      65,
+      72
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 66,
+        "prompt": {
+          "en": "According to al-Mizan in the essay, what does 'then He brings you to life' in the verse refer to?"
+        },
+        "options": [
+          {
+            "en": "The resurrection of the Hereafter"
+          },
+          {
+            "en": "The life of the barzakh"
+          },
+          {
+            "en": "The first creation of humankind"
+          },
+          {
+            "en": "A revival of faith in this world"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says al-Mizan reads that final raising as the resurrection of the Hereafter, not the life of the barzakh, so it points to the Day of Resurrection rather than the intermediate realm."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Mizan reads that final raising as the resurrection of the Hereafter, not the life of the barzakh"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 67,
+        "prompt": {
+          "en": "\"The mansak is the Imam for every nation after its prophet, until another prophet comes.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The Prophet told the Muhajirun and Ansar that the mansak is the Imam for every nation after its prophet, and named Ali as their Imam after him."
+        },
+        "anchor": {
+          "where": "verses.67.narrations.n2",
+          "quote": "The mansak is the Imam for every nation after its prophet, until another prophet comes"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 67,
+        "prompt": {
+          "en": "According to the passage, Sunni exegetes reported from Tabari read the 'rites' of this verse as the ritual slaughter offered at Mina."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say Tabari takes mansak concretely as the ritual slaughter offered on the days of immolation at Mina, tying the verse to sacrificial rite rather than succession."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tabari holds it means the ritual slaughter offered on the days of immolation at Mina"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 71,
+        "prompt": {
+          "en": "Al-Tusi glosses the 'authority' God has not sent down as neither argument nor ____ for what they worship besides Him."
+        },
+        "options": [
+          {
+            "en": "evidence"
+          },
+          {
+            "en": "permission"
+          },
+          {
+            "en": "scripture"
+          },
+          {
+            "en": "miracle"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note says al-Tusi glosses the 'authority' God never sent down as neither argument nor evidence, so the idolaters have no proof for what they worship besides God."
+        },
+        "anchor": {
+          "where": "verses.71.note",
+          "quote": "Al-Tusi glosses the 'authority' God has not sent down as neither argument nor evidence for what they worship besides Him"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 72,
+        "prompt": {
+          "en": "According to the essay, what does the warning name as worse than the faithless faces' rage at the recited signs?"
+        },
+        "options": [
+          {
+            "en": "The loss of their leaders"
+          },
+          {
+            "en": "A famine upon their land"
+          },
+          {
+            "en": "The Fire that God has promised them"
+          },
+          {
+            "en": "Exile from the sacred city"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the reply to their rage is a warning: something worse than their fury is the Fire God has promised the faithless, an evil destination."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "It is the Fire, promised to those who reject faith, an evil destination"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:30:45Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:31:46Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  },
+  "10": {
+    "id": "22:10",
+    "surah": 22,
+    "index": 10,
+    "range": [
+      73,
+      78
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 73,
+        "prompt": {
+          "en": "\"Quraysh used to smear the idols around the Kaaba with musk and ambergris. So Allah sent a green fly with four wings.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Hadi"
+          },
+          {
+            "en": "the Prophet Muhammad"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Explaining the parable, Imam al-Sadiq described how Quraysh smeared the Kaaba idols with musk and ambergris and God sent a green fly that ate all of it."
+        },
+        "anchor": {
+          "where": "verses.73.narrations.n1",
+          "quote": "Quraysh used to smear the idols around the Kaaba with musk and ambergris. So Allah sent a green fly with four wings, and it left nothing of that musk and ambergris uneaten."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 74,
+        "prompt": {
+          "en": "According to Imam al-Hadi's narration, 'They do not regard Allah with the regard due to Him' rebukes whom?"
+        },
+        "options": [
+          {
+            "en": "One who denies the messengers"
+          },
+          {
+            "en": "One who worships idols openly"
+          },
+          {
+            "en": "One who likens God to His creation"
+          },
+          {
+            "en": "One who neglects the prayer"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the narration Imam al-Hadi says the verse is God's rebuke of the one who likens Him to His creation, then declares God far above such likeness."
+        },
+        "anchor": {
+          "where": "verses.74.narrations.n2",
+          "quote": "This is Allah's rebuke of the one who likens Him to His creation."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 75,
+        "prompt": {
+          "en": "Tafsir al-Qummi names the human messengers as the prophets and their ____."
+        },
+        "options": [
+          {
+            "en": "companions"
+          },
+          {
+            "en": "successors"
+          },
+          {
+            "en": "scribes"
+          },
+          {
+            "en": "kings"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports that Tafsir al-Qummi identifies the human messengers God chooses as the prophets and their successors, the human side of those He sends."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tafsir al-Qummi names the human messengers as the prophets and their successors"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 76,
+        "prompt": {
+          "en": "According to the essay, what does God's knowing 'what is before them and behind them' secure?"
+        },
+        "options": [
+          {
+            "en": "That revelation stays protected until it reaches the people"
+          },
+          {
+            "en": "That angels record every human deed"
+          },
+          {
+            "en": "That God forgets nothing of the past"
+          },
+          {
+            "en": "That messengers may err and need correction"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reads this knowledge to mean that revelation stays under God's protection until it reaches the people, so the messengers do not err in carrying it."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "revelation stays under His protection until it reaches the people, so the messengers do not err in carrying it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 78,
+        "prompt": {
+          "en": "According to the passage, Shia narrations apply 'the chosen' and the witnesses to the whole Muslim community."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say Shia narrations apply the special sense of 'the chosen' and the witnesses to the Imams of the Prophet's household, not the whole community."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia narrations apply the special sense of 'the chosen' and the witnesses to the Imams of the Prophet's household"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:34:08Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:34:55Z",
+      "assembled_at": "2026-09-22T19:35:18Z"
+    }
+  }
+}

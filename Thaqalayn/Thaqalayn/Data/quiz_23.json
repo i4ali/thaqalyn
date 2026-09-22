@@ -1,0 +1,968 @@
+{
+  "1": {
+    "id": "23:1",
+    "surah": 23,
+    "index": 1,
+    "range": [
+      1,
+      22
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 1,
+        "prompt": {
+          "en": "\"When God created the Garden, He said to it, 'Speak,' and it said, 'Certainly, the faithful have attained salvation.'\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Reporting how the Garden spoke when God first created it, Imam al-Sadiq said it declared the opening words of the surah, that the faithful have attained salvation."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "When God created the Garden, He said to it, 'Speak,' and it said, 'Certainly, the faithful have attained salvation.'"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 4,
+        "prompt": {
+          "en": "How does Tabatabai read the zakat named in this passage, given that the surah is Meccan?"
+        },
+        "options": [
+          {
+            "en": "The giving of one's wealth generally"
+          },
+          {
+            "en": "The fixed alms later legislated at Medina"
+          },
+          {
+            "en": "Ritual purity before the prayer"
+          },
+          {
+            "en": "A tax levied on trade goods"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Since the surah is Meccan and the fixed Medinan alms had not yet been legislated, Tabatabai reads zakat here as the giving of one's wealth, not the later obligatory tax."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Because the surah is Meccan and the fixed alms of Medina had not yet been legislated, Tabatabai takes zakat here to mean the giving of one's wealth"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 10,
+        "prompt": {
+          "en": "According to the passage, the people of paradise inherit the dwellings that the people of the Fire forfeited."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that every creature has a place appointed in the Garden and in the Fire, so the saved inherit the dwellings the damned have lost."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n8",
+          "quote": "So these inherit the dwellings of those, and those inherit the dwellings of these."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 14,
+        "prompt": {
+          "en": "Concerning 'then We produced him as another creature': it is the breathing of the ____ into him."
+        },
+        "options": [
+          {
+            "en": "intellect"
+          },
+          {
+            "en": "light"
+          },
+          {
+            "en": "spirit"
+          },
+          {
+            "en": "reason"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir glossed the final stage, being produced as another creature, as the moment the spirit is breathed in, when lifeless matter becomes a living, knowing self."
+        },
+        "anchor": {
+          "where": "verses.14.narrations.n9",
+          "quote": "Concerning 'then We produced him as another creature': it is the breathing of the spirit into him."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the essay's close, why does Tabatabai say the account of creation, the rain, the gardens and the cattle is set out?"
+        },
+        "options": [
+          {
+            "en": "To explain the stages of the human embryo"
+          },
+          {
+            "en": "To record the blessings owed as charity"
+          },
+          {
+            "en": "To prove the reward awaiting the believers"
+          },
+          {
+            "en": "So the reader recognises the one Lord who deserves worship"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Tabatabai reads the whole sweep, man's making, the heavens, the measured rain, the gardens, the olive and the cattle, as set out so the reader recognises the one worthy Lord."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this account of man's origin, and of the heavens, the measured rain, the gardens, the olive of Sinai, the cattle and the ships, is set out so that the reader recognises the one Lord who alone deserves worship"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:34:26Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:35:12Z",
+      "assembled_at": "2026-09-22T19:49:42Z"
+    }
+  },
+  "2": {
+    "id": "23:2",
+    "surah": 23,
+    "index": 2,
+    "range": [
+      23,
+      32
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 23,
+        "prompt": {
+          "en": "He begins with tawhid because it is the ____ claim upon them."
+        },
+        "options": [
+          {
+            "en": "most pressing"
+          },
+          {
+            "en": "least understood"
+          },
+          {
+            "en": "final"
+          },
+          {
+            "en": "gentlest"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay explains that Noah opens with the call to worship God alone because monotheism is the most pressing claim his people face, before anything else."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He begins with tawhid because it is the most pressing claim upon them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 24,
+        "prompt": {
+          "en": "According to the essay, how do the disbelieving chiefs describe Noah to the crowd?"
+        },
+        "options": [
+          {
+            "en": "A wandering poet seeking fame"
+          },
+          {
+            "en": "A wealthy landowner hoarding grain"
+          },
+          {
+            "en": "A human who wants to lord it over them"
+          },
+          {
+            "en": "A true prophet who deserves to be followed"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the chiefs tell the crowd Noah is only a human like them who wants to lord it over them, be followed, and stand above them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "he is only a human like you who wants to lord it over you, be followed, and stand above you"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 29,
+        "prompt": {
+          "en": "\"When you alight at a lodging, say: 'O Allah, land me with a blessed landing, for You are the best of those who bring ashore.'\" Who taught this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Prophet Muhammad"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The Prophet taught this supplication for arriving at any lodging, drawing on Noah's prayer for a blessed landing, promising its good and safety from its harm."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n1",
+          "quote": "when you alight at a lodging, say: 'O Allah, land me with a blessed landing, for You are the best of those who bring ashore.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 30,
+        "prompt": {
+          "en": "In the narration on this verse, people are granted refuge from being wronged but not exempted from what?"
+        },
+        "options": [
+          {
+            "en": "Being forgotten"
+          },
+          {
+            "en": "Being tested"
+          },
+          {
+            "en": "Being wronged again"
+          },
+          {
+            "en": "Being questioned"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration reads the verse's testing as a rule that still binds people, even those whom God has shielded from being wronged by others."
+        },
+        "anchor": {
+          "where": "verses.30.narrations.n2",
+          "quote": "God has granted you refuge from being wronged, but He has not exempted you from being tested"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 31,
+        "prompt": {
+          "en": "According to the essay, the generation raised after Noah's people is said to be the people of Lot."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay identifies the later generation as Ad or Thamud, not the people of Lot, and says a messenger from among them brought the same call to worship God alone."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Then another generation is raised, said to be Ad or Thamud"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:38:48Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:39:33Z",
+      "assembled_at": "2026-09-22T19:49:42Z"
+    }
+  },
+  "3": {
+    "id": "23:3",
+    "surah": 23,
+    "index": 3,
+    "range": [
+      33,
+      50
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 33,
+        "prompt": {
+          "en": "According to the passage, the affluence God gave the elite had bound them to the life of this world."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay lists three marks of the elite: they reject God, deny the Hereafter, and the affluence God gave them has bound them to this world, so the statement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the affluence God gave them has bound them to this world"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 34,
+        "prompt": {
+          "en": "How does al-Tusi describe the contradiction in the elite's reasoning?"
+        },
+        "options": [
+          {
+            "en": "They deny the Hereafter yet still fear their own death"
+          },
+          {
+            "en": "They obey the messenger secretly while mocking him in public"
+          },
+          {
+            "en": "Calling following a man a loss, but not worshipping a lifeless idol"
+          },
+          {
+            "en": "They claim their wealth proves that God favors them"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Al-Tusi points to their inconsistency: they treat obeying a man like themselves as ruin, yet find no loss in worshipping an idol that is merely a body."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "they count following a man like themselves a loss, yet see no loss in worshipping an idol that is only a body"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 41,
+        "prompt": {
+          "en": "The scum (ghutha) is the dry, withered ____ of the earth."
+        },
+        "options": [
+          {
+            "en": "flood water"
+          },
+          {
+            "en": "plant matter"
+          },
+          {
+            "en": "desert sand"
+          },
+          {
+            "en": "sea foam"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir glosses the scum, ghutha, as the dry, withered plant matter of the earth, the withered vegetation a flood leaves behind."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n1",
+          "quote": "The scum (ghutha) is the dry, withered plant matter of the earth."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 50,
+        "prompt": {
+          "en": "\"The highland is Kufa, the resting-place is the mosque, and the flowing water is the Euphrates.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam Ali, Amir al-Muminin, identified the level highland as Kufa, its resting-place as the mosque of Kufa, and the flowing water as the Euphrates."
+        },
+        "anchor": {
+          "where": "verses.50.narrations.n4",
+          "quote": "the highland is Kufa, the resting-place is the mosque, and the flowing water is the Euphrates"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 50,
+        "prompt": {
+          "en": "According to the perspectives, what do the Shia and Sunni transmitters agree on about the level highland?"
+        },
+        "options": [
+          {
+            "en": "They read its description alike, differing only on the land"
+          },
+          {
+            "en": "They agree the highland lies in Iraq"
+          },
+          {
+            "en": "They agree it lies in Syria or Palestine"
+          },
+          {
+            "en": "They agree the phrase is only symbolic"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say both sides read the level highland with flowing water the same way and differ only on which land it names, Iraq for the Shia, Syria or Palestine for the Sunni."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both sides read the verse's 'level highland with flowing water' the same way; they differ only on which land it names"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:40:14Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:41:07Z",
+      "assembled_at": "2026-09-22T19:49:42Z"
+    }
+  },
+  "4": {
+    "id": "23:4",
+    "surah": 23,
+    "index": 4,
+    "range": [
+      51,
+      77
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 52,
+        "prompt": {
+          "en": "In the passage's narration on this verse, what does 'Indeed this community of yours is one community' refer to?"
+        },
+        "options": [
+          {
+            "en": "The Family of Muhammad"
+          },
+          {
+            "en": "All the prophets together"
+          },
+          {
+            "en": "The people of Islam"
+          },
+          {
+            "en": "The children of Israel"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration on this verse glosses 'this community of yours is one community' as the Family of Muhammad, reading the one community as the Prophet's household."
+        },
+        "anchor": {
+          "where": "verses.52.narrations.n2",
+          "quote": "Concerning 'Indeed this community of yours is one community,' he said: the Family of Muhammad"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 53,
+        "prompt": {
+          "en": "Their community is one, one religion, yet they fragmented it into parties, each ____ in what it held."
+        },
+        "options": [
+          {
+            "en": "doubting"
+          },
+          {
+            "en": "rejoicing"
+          },
+          {
+            "en": "weeping"
+          },
+          {
+            "en": "competing"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the one religion was split into parties, with each party rejoicing in, or boasting of, what it held rather than staying united."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Their community is one, one religion, yet they fragmented it into parties, each rejoicing in what it held"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 61,
+        "prompt": {
+          "en": "'This is Ali ibn Abi Talib; none took the lead before him,' said of those foremost in good works. Who said it?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir glosses those foremost in good works as Ali ibn Abi Talib, saying none took the lead in such works before him."
+        },
+        "anchor": {
+          "where": "verses.61.narrations.n4",
+          "quote": "this is Ali ibn Abi Talib; none took the lead before him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 71,
+        "prompt": {
+          "en": "According to the essay, why would the heavens and earth fall apart if truth followed the disbelievers' desires?"
+        },
+        "options": [
+          {
+            "en": "Because God would abandon them"
+          },
+          {
+            "en": "Because the messengers would depart"
+          },
+          {
+            "en": "Because the Reminder would be lost"
+          },
+          {
+            "en": "Because creation rests on truth, not on appetite"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says creation rests on truth, not on appetite, so if truth bent to their desires the ordered heavens and earth would collapse."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Were the truth to bend to their desires, the ordered heavens and earth would collapse, for creation rests on truth, not on appetite"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 74,
+        "prompt": {
+          "en": "According to the passage, the Shia narrations in al-Burhan read the straight path of verses 73 and 74 as something other than the wilayat of the Commander of the Faithful."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The passage says the Shia narrations, on the authority of Ali and al-Baqir, read the straight path precisely as the wilayat of the Commander of the Faithful."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia narrations gathered in al-Burhan read the same words, on the authority of Ali and al-Baqir, as the wilayat of the Commander of the Faithful"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:45:02Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:45:52Z",
+      "assembled_at": "2026-09-22T19:49:42Z"
+    }
+  },
+  "5": {
+    "id": "23:5",
+    "surah": 23,
+    "index": 5,
+    "range": [
+      78,
+      92
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 78,
+        "prompt": {
+          "en": "In verse 78, how does Tabatabai distinguish the heart from hearing and eyesight?"
+        },
+        "options": [
+          {
+            "en": "It is another animal faculty just like the senses"
+          },
+          {
+            "en": "It is the seat of understanding, lifting man above the senses"
+          },
+          {
+            "en": "It is weaker and more easily deceived than the senses"
+          },
+          {
+            "en": "It merely stores what hearing and eyesight gather"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Tabatabai says hearing and sight belong to animal life, while the heart, the seat of understanding, lifts the human being above the world of the senses."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "hearing and sight belong to animal life, while the heart, the seat of understanding, lifts the human being above the world of the senses"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 83,
+        "prompt": {
+          "en": "They dismiss the promise as myths of the ancients, which al-Qummi glosses as the ____ of the ancients."
+        },
+        "options": [
+          {
+            "en": "lies"
+          },
+          {
+            "en": "wisdom"
+          },
+          {
+            "en": "songs"
+          },
+          {
+            "en": "laws"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "al-Qummi reads the phrase myths of the ancients as meaning the lies of the ancients, the deniers' charge against the promise of resurrection."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "They dismiss the promise as myths of the ancients, which al-Qummi glosses as the lies of the ancients"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 85,
+        "prompt": {
+          "en": "In verses 84 and 85, what must the deniers answer when asked who owns the earth?"
+        },
+        "options": [
+          {
+            "en": "That it belongs to their idols"
+          },
+          {
+            "en": "That it belongs to no one"
+          },
+          {
+            "en": "That it belongs to Allah"
+          },
+          {
+            "en": "That it belongs to the ancients"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "When asked to whom the earth and all it contains belong, they can only answer, To Allah, an admission the passage turns back on them."
+        },
+        "anchor": {
+          "where": "verses.85.translation",
+          "quote": "They will say, 'To Allah.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 91,
+        "prompt": {
+          "en": "The passage explains that two gods would inevitably differ, one willing what the other refused, so ordered creation shows its Maker is one."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "al-Qummi argues that two gods would inevitably differ, one willing what the other refused, so the settled order of creation proves its Maker is one."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "two gods would inevitably differ, one willing what the other refused, so the settled order of creation shows the Maker is one"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 92,
+        "prompt": {
+          "en": "In the note on verse 92, how does Imam al-Sadiq define the Unseen?"
+        },
+        "options": [
+          {
+            "en": "What has already come to pass"
+          },
+          {
+            "en": "What lies hidden inside the human heart"
+          },
+          {
+            "en": "What only the angels are able to perceive"
+          },
+          {
+            "en": "What has not yet come to be"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq says the Unseen is what has not yet come to be, while the witnessed is what has already been."
+        },
+        "anchor": {
+          "where": "verses.92.narrations.n1",
+          "quote": "The Unseen is what has not yet come to be, and the witnessed is what has already been"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:44:55Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:45:43Z",
+      "assembled_at": "2026-09-22T19:49:42Z"
+    }
+  },
+  "6": {
+    "id": "23:6",
+    "surah": 23,
+    "index": 6,
+    "range": [
+      93,
+      118
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 93,
+        "prompt": {
+          "en": "According to the perspectives, Shia narrations attach the opening prayer to which occasion?"
+        },
+        "options": [
+          {
+            "en": "The blowing of the Trumpet at the resurrection"
+          },
+          {
+            "en": "The barrier that stands before the wrongdoer at death"
+          },
+          {
+            "en": "The Prophet's warning at Mina against his community fighting"
+          },
+          {
+            "en": "The mocking of the believers who prayed for mercy"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say Shia narrations attach the prayer to the Prophet's warning at Mina, when Gabriel drew his attention to Ali, so the wrongdoing lot points to those who would war on him."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia narrations attach the verse to the Prophet's warning at Mina against his community turning after him to fight one another"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 100,
+        "prompt": {
+          "en": "That barrier, the barzakh, is the realm between this world and the hereafter, where ____ already begin."
+        },
+        "options": [
+          {
+            "en": "sleep and rest"
+          },
+          {
+            "en": "reward and punishment"
+          },
+          {
+            "en": "questioning and trial"
+          },
+          {
+            "en": "waiting and silence"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay glosses the barrier as the barzakh, the realm between this world and the hereafter, where reward and punishment already begin before the resurrection."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "That barrier, the barzakh, is the realm between this world and the hereafter, where reward and punishment already begin"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 106,
+        "prompt": {
+          "en": "According to Imam al-Sadiq, how did the damned become wretched?"
+        },
+        "options": [
+          {
+            "en": "By their own deeds"
+          },
+          {
+            "en": "By the promptings of the devils"
+          },
+          {
+            "en": "By their long stay on earth"
+          },
+          {
+            "en": "By forgetting God's remembrance"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Glossing 'our wretchedness overcame us,' Imam al-Sadiq said it was by their own deeds that they became wretched, not by anything forced upon them."
+        },
+        "anchor": {
+          "where": "verses.106.narrations.n6",
+          "quote": "it was by their own deeds that they became wretched"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 111,
+        "prompt": {
+          "en": "\"It means the patience of Ali ibn Abi Talib, Fatimah, Hasan and Husayn upon acts of obedience, hunger and poverty.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "The Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ibn Masud"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Ibn Masud read the reward for patience as the endurance of Ali, Fatimah, Hasan and Husayn upon obedience, hunger and poverty, calling them the triumphant."
+        },
+        "anchor": {
+          "where": "verses.111.narrations.n7",
+          "quote": "the patience of Ali ibn Abi Talib, Fatimah, Hasan and Husayn in this world upon acts of obedience, upon hunger and upon poverty"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 118,
+        "prompt": {
+          "en": "According to the essay, the surah ends by leaving the Prophet with a long list of prayers rather than a single one."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the surah ends by leaving the Prophet with a single prayer for mercy, 'My Lord, forgive and have mercy,' not a long list, so the statement is false."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the Prophet is left with a single prayer, 'My Lord, forgive and have mercy'"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:48:30Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:49:19Z",
+      "assembled_at": "2026-09-22T19:49:42Z"
+    }
+  }
+}

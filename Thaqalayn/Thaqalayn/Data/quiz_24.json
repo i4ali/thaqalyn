@@ -1,0 +1,1451 @@
+{
+  "1": {
+    "id": "24:1",
+    "surah": 24,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the passage, Surah al-Nur was revealed after Surah al-Nisa and supplied the 'way' that al-Nisa had promised for such women."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay's narration sets the timing: al-Nur came down after al-Nisa and gave the 'way' al-Nisa had promised for such women, so the statement matches the passage."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this surah was revealed after Surah al-Nisa, and it supplied the 'way' that al-Nisa had promised for such women"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"this is in carrying out the prescribed penalties. And about 'let their punishment be witnessed by a group of the faithful': he said, the group is one man.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam Ali glosses both phrases of verse 2: pity must not stay the hand carrying out the penalty, and the 'group' witnessing it may be as few as one man."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n2",
+          "quote": "this is in carrying out the prescribed penalties. And about 'let their punishment be witnessed by a group of the faithful': he said, the group is one man"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the passage, how do the Imams al-Baqir and al-Sadiq read the marriage ban in 24:3?"
+        },
+        "options": [
+          {
+            "en": "A penalty of eighty lashes for false accusers"
+          },
+          {
+            "en": "A requirement of four sworn oaths before marriage"
+          },
+          {
+            "en": "A standing ban on marrying notorious offenders until they repent"
+          },
+          {
+            "en": "Permission to marry after one witness testifies"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives report the Imams al-Baqir and al-Sadiq reading 24:3 as a standing prohibition against marrying men or women notorious for fornication until their repentance is known."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Imams al-Baqir and al-Sadiq instead read the verse as a standing prohibition: it names men and women publicly notorious for fornication, and forbids the believer marrying such a person until repentance is known from him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 6,
+        "prompt": {
+          "en": "If he admits he lied against her, he is flogged and she is ____."
+        },
+        "options": [
+          {
+            "en": "returned to him"
+          },
+          {
+            "en": "parted from him"
+          },
+          {
+            "en": "flogged as well"
+          },
+          {
+            "en": "freed to remarry"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says that if the husband recants and admits he lied, he is flogged for the false accusation and his wife is returned to him."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n5",
+          "quote": "If he admits he lied against her, he is flogged and she is returned to him"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "According to the narration from Imams al-Baqir and al-Sadiq, what are Allah's grace and mercy in verse 10?"
+        },
+        "options": [
+          {
+            "en": "Repentance and the acceptance of testimony"
+          },
+          {
+            "en": "The four witnesses and the li'an oaths"
+          },
+          {
+            "en": "The hundred lashes and stoning"
+          },
+          {
+            "en": "The Messenger and the guardianship of the Imams"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The narration reads verse 10's grace and mercy as the Messenger and the guardianship of the Imams, God's favors that spare the community exposure."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n6",
+          "quote": "Allah's grace is His Messenger, and His mercy is the guardianship of the Imams"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:50:15Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:51:05Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  },
+  "2": {
+    "id": "24:2",
+    "surah": 24,
+    "index": 2,
+    "range": [
+      11,
+      20
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the essay, why does God tell the believers that the slander is for their good?"
+        },
+        "options": [
+          {
+            "en": "Because it earned them a reward in the Hereafter"
+          },
+          {
+            "en": "Because the trial exposed the liars and cleared the innocent"
+          },
+          {
+            "en": "Because it fulfilled an earlier prophecy"
+          },
+          {
+            "en": "Because it tested only the ringleader"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the slander was for their good because the trial exposed the liars and cleared the innocent, turning the calumny to the believers' benefit."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the trial exposed the liars and cleared the innocent"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 15,
+        "prompt": {
+          "en": "O my son, do not say what you do not know; rather, do not say ____ that you do know."
+        },
+        "options": [
+          {
+            "en": "all"
+          },
+          {
+            "en": "some"
+          },
+          {
+            "en": "much"
+          },
+          {
+            "en": "half"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam Ali tells his son that beyond not speaking of what one does not know, one should not even say all that one does know, guarding the tongue."
+        },
+        "anchor": {
+          "where": "verses.15.narrations.n2",
+          "quote": "O my son, do not say what you do not know; rather, do not say all that you do know."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the essay, what does God admonish the believers never to do again?"
+        },
+        "options": [
+          {
+            "en": "Bring fewer than four witnesses"
+          },
+          {
+            "en": "Forgive the ringleader of the slander"
+          },
+          {
+            "en": "Repeat the like of the calumny"
+          },
+          {
+            "en": "Speak of the matter only in private"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says God admonishes the believers never to repeat the like of the calumny, should they be faithful, and then clarifies His signs for them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God admonishes them never to repeat 'the like of it,' 'should you be faithful,' and clarifies His signs."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 19,
+        "prompt": {
+          "en": "\"O Muhammad, belie your hearing and your sight against your brother. Even if fifty swear an oath before you and he denies it, believe him and reject them.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Kazim"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Kazim tells Muhammad ibn al-Fudayl to disbelieve even his own eyes and ears against a brother rather than spread what shames him."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n4",
+          "quote": "O Muhammad, belie your hearing and your sight against your brother. Even if fifty swear an oath before you and he denies it, believe him and reject them."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 19,
+        "prompt": {
+          "en": "According to the perspectives, both traditions hold that the passage leaves the accused's guilt unresolved."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say both traditions agree the passage condemns an unproven accusation and clears the one wrongly charged, not that the accused's guilt is left unresolved."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both agree the passage condemns repeating an unproven accusation and clears the one wrongly charged."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:52:13Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:52:57Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  },
+  "3": {
+    "id": "24:3",
+    "surah": 24,
+    "index": 3,
+    "range": [
+      21,
+      26
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the essay's opening, how does a person become pure?"
+        },
+        "options": [
+          {
+            "en": "Only through God's grace, since He alone purifies whom He wills"
+          },
+          {
+            "en": "By their own effort to shun Satan's steps"
+          },
+          {
+            "en": "By pardoning their needy relatives"
+          },
+          {
+            "en": "Through the testimony of their limbs"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay's opening insists that no one becomes pure except through God's grace, since He alone purifies whom He wills, and not through any effort of one's own."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "no one becomes pure except through God's grace, since He alone purifies whom He wills"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 22,
+        "prompt": {
+          "en": "'Let them pardon and overlook' means: let each of you pardon and forbear with the other; and if you do this, it is a mercy from God to you. Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir glosses the command to excuse and forbear as a mutual pardon among the believers, adding that when they do this it brings God's mercy upon them."
+        },
+        "anchor": {
+          "where": "verses.22.narrations.n1",
+          "quote": "let each of you pardon and forbear with the other; and if you do this, it is a mercy from God to you"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 24,
+        "prompt": {
+          "en": "According to a narration in the passage, a believer's limbs do not testify against him; they testify only against one for whom the word of punishment is due."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration explains that the limbs testify only against one whose word of punishment has come due, while the believer is spared this, so the statement is true."
+        },
+        "anchor": {
+          "where": "verses.24.narrations.n2",
+          "quote": "The limbs do not testify against a believer; they testify only against one for whom the word of punishment has come due"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 26,
+        "prompt": {
+          "en": "It is like His words, 'the fornicator marries only a fornicatress'; some people wished to marry such women, and God ____ them that."
+        },
+        "options": [
+          {
+            "en": "permitted"
+          },
+          {
+            "en": "commanded"
+          },
+          {
+            "en": "forbade"
+          },
+          {
+            "en": "urged"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration says God forbade the believers who wished to marry such women, comparing the verse to His word that the fornicator marries only a fornicatress."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n3",
+          "quote": "some people wished to marry such women, and God forbade them that"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "The essay closes by saying the good are absolved of what is said against them. What does it say awaits them?"
+        },
+        "options": [
+          {
+            "en": "A curse in this world and the Hereafter"
+          },
+          {
+            "en": "The testimony of their own limbs"
+          },
+          {
+            "en": "Forgiveness and a noble provision from God"
+          },
+          {
+            "en": "Full recompense for their slander"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay closes by pairing like with like: the good are absolved of the slander against them, and for them God grants forgiveness and a noble provision."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the good are absolved of what is said against them, and for them are forgiveness and a noble provision from God"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:55:02Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:55:49Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  },
+  "4": {
+    "id": "24:4",
+    "surah": 24,
+    "index": 4,
+    "range": [
+      27,
+      34
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 27,
+        "prompt": {
+          "en": "\"Making oneself known is the fall of the sandal and the greeting.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked how one announces arrival before entering a house, Imam al-Sadiq said it is the fall of the sandal and the greeting to the occupants."
+        },
+        "anchor": {
+          "where": "verses.27.narrations.n1",
+          "quote": "Making oneself known is the fall of the sandal and the greeting."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "According to the essay, why does the passage require you to announce yourself before entering a house?"
+        },
+        "options": [
+          {
+            "en": "To give the owner time to prepare a welcome"
+          },
+          {
+            "en": "To prevent theft of the goods inside"
+          },
+          {
+            "en": "To shield people's private matters and the dignity of faith"
+          },
+          {
+            "en": "To fulfill a greeting owed to every neighbor"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the aim of announcing arrival as shielding people's private matters and the dignity of faith, so no one is caught in a state he would not want seen."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the aim as shielding people's private matters and preserving the dignity of faith, so that no one is caught in a state he would not want seen"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 31,
+        "prompt": {
+          "en": "He said: the ____, the two feet, and the two hands."
+        },
+        "options": [
+          {
+            "en": "face"
+          },
+          {
+            "en": "hair"
+          },
+          {
+            "en": "neck"
+          },
+          {
+            "en": "arms"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked what a man may lawfully see of a woman who is not his kin, Imam al-Sadiq named the face, the two feet, and the two hands as what is visible."
+        },
+        "anchor": {
+          "where": "verses.31.narrations.n5",
+          "quote": "He said: the face, the two feet, and the two hands."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 32,
+        "prompt": {
+          "en": "According to the passage, what does it say about the poverty of those it tells you to marry off?"
+        },
+        "options": [
+          {
+            "en": "They must delay marriage until they grow wealthy"
+          },
+          {
+            "en": "Poverty is no barrier, since God has promised to enrich them"
+          },
+          {
+            "en": "Their masters must first pay off their debts"
+          },
+          {
+            "en": "Poverty makes their marriage unlawful"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says poverty is no barrier to marrying off the unmarried, for God has promised to enrich them from His bounty, so marriage need not wait for wealth."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "poverty is no barrier, for God has promised to enrich them from His bounty"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 33,
+        "prompt": {
+          "en": "According to the passage, the Shia jurists read the command to grant an emancipation contract as a binding obligation."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage says the Shia jurists read the command as a recommendation, an encouragement rather than a binding duty, so calling it a binding obligation is the opposite of their view."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia jurists read the command as a recommendation: Tusi states that this is the view of his school, an encouragement rather than a binding duty"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:59:15Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T20:00:19Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  },
+  "5": {
+    "id": "24:5",
+    "surah": 24,
+    "index": 5,
+    "range": [
+      35,
+      40
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 35,
+        "prompt": {
+          "en": "The passage frames a comparison in which the faithful are led by their good deeds to light while the deeds of the faithless lead nowhere."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Mizan reads the whole passage as a comparison: the good deeds of the faithful bring them light from their Lord, while the deeds of the faithless lead nowhere."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the faithful are led by their good deeds to a light from their Lord, while the deeds of the faithless lead nowhere"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 35,
+        "prompt": {
+          "en": "The essay records two readings of what 'His Light' means. One is that God guides the people of heaven and earth. What is the other?"
+        },
+        "options": [
+          {
+            "en": "That He illumines them with sun, moon and stars"
+          },
+          {
+            "en": "That He raised the houses where His Name is celebrated"
+          },
+          {
+            "en": "That He rewards the faithful with the best of their deeds"
+          },
+          {
+            "en": "That He pays the faithless their full account"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports two readings of 'His Light': that God is the guide of the people of the heavens and the earth, or that He illumines them with sun, moon and stars."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tibyan records two readings - that God is the guide of the people of the heavens and the earth, or that He illumines them with sun, moon and stars"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 35,
+        "prompt": {
+          "en": "\"The believer moves amid five lights: his entrance and exit are light, his knowledge light, his speech light.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir taught that the believer moves amid five lights: his entrance and exit, his knowledge, his speech, and his destiny to the Garden on the Day of Resurrection."
+        },
+        "anchor": {
+          "where": "verses.35.narrations.n3",
+          "quote": "The believer moves amid five lights: his entrance and exit are light, his knowledge light, his speech light"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 37,
+        "prompt": {
+          "en": "Giving up trade is the work of ____ - he said it three times."
+        },
+        "options": [
+          {
+            "en": "Satan"
+          },
+          {
+            "en": "the miser"
+          },
+          {
+            "en": "the coward"
+          },
+          {
+            "en": "the ignorant"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq called giving up trade the work of Satan, saying it three times, and cited the Prophet's own trading to refute the claim that these men did not trade."
+        },
+        "anchor": {
+          "where": "verses.37.narrations.n5",
+          "quote": "Giving up trade is the work of Satan - he said it three times."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 40,
+        "prompt": {
+          "en": "According to the perspectives, how do the Shia narrations read the layered darkness of verse 40?"
+        },
+        "options": [
+          {
+            "en": "As a mirage the thirsty man takes for water"
+          },
+          {
+            "en": "As an oil purified by the sun the whole day long"
+          },
+          {
+            "en": "As the rulers who seized power after the Prophet"
+          },
+          {
+            "en": "As the mosques where His Name is celebrated"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations read the layered darkness of verse 40 as the rulers who seized power after the Prophet."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "read the layered darkness of verse 40 as the rulers who seized power after the Prophet"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T20:01:08Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T20:01:58Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  },
+  "6": {
+    "id": "24:6",
+    "surah": 24,
+    "index": 6,
+    "range": [
+      41,
+      50
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 41,
+        "prompt": {
+          "en": "\"God has an angel in the form of a pale, ash-colored rooster; its claws are in the seventh earth and its crest beneath the Throne.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam Ali describes a vast angel shaped like a rooster whose crest reaches beneath the Throne, and every earthly rooster answers its cry when the prayer-time comes."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n1",
+          "quote": "its claws are in the seventh earth and its crest beneath the Throne, one wing in the east and one in the west"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 43,
+        "prompt": {
+          "en": "According to the essay, what does Tabatabai take verses 41 to 46 to be?"
+        },
+        "options": [
+          {
+            "en": "A description of Paradise"
+          },
+          {
+            "en": "A list of the believer's ritual duties"
+          },
+          {
+            "en": "An argument for the Light verse that precedes them"
+          },
+          {
+            "en": "A warning aimed only at the hypocrites"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tabatabai treats these verses on nature as backing the Light verse before them, since each thing's very being points to the One who gave it existence."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads verses 41 to 46 as an argument for the Light verse that precedes them"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 45,
+        "prompt": {
+          "en": "Those on two feet are ____, those on their bellies the snakes, those on four the beasts"
+        },
+        "options": [
+          {
+            "en": "people"
+          },
+          {
+            "en": "angels"
+          },
+          {
+            "en": "jinn"
+          },
+          {
+            "en": "birds"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the narration Imam al-Sadiq glosses verse 45: the creatures walking on two feet are people, those on their bellies snakes, and those on four the beasts."
+        },
+        "anchor": {
+          "where": "verses.45.narrations.n4",
+          "quote": "Those on two feet are people, those on their bellies the snakes, those on four the beasts"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 47,
+        "prompt": {
+          "en": "According to the perspectives, what do both the Shia and Sunni traditions agree the verses condemn?"
+        },
+        "options": [
+          {
+            "en": "The worship of idols"
+          },
+          {
+            "en": "The refusal to accept the Prophet's judgment"
+          },
+          {
+            "en": "The hoarding of wealth"
+          },
+          {
+            "en": "The neglect of daily prayer"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives note that although Shia and Sunni reports name different disputants, both traditions read the refusal itself as the wrongdoing the verses condemn."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions read the refusal itself as the wrongdoing the verses condemn"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 50,
+        "prompt": {
+          "en": "According to the essay, the passage's closing verse reaches no verdict on those who hold back, leaving their state undecided."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the last verse does reach a verdict: after asking about sickness, doubt, or fear of injustice, it declares that they themselves are the wrongdoers."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The last verse asks whether sickness, doubt, or fear of injustice moves them, then answers that it is they who are the wrongdoers"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T20:04:58Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T20:05:43Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  },
+  "7": {
+    "id": "24:7",
+    "surah": 24,
+    "index": 7,
+    "range": [
+      51,
+      57
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 51,
+        "prompt": {
+          "en": "According to the passage, obedience to the Messenger is not separate from obedience to Allah, since the Prophet judges by Allah's own ruling."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports Tabatabai's point that obeying the Messenger does not part from obeying Allah, because the Prophet judges by Allah's own ruling, so the statement holds."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "obedience to the Messenger does not part from obedience to Allah, since the Prophet judges by Allah's own ruling"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 53,
+        "prompt": {
+          "en": "\"One of you will wake to find beneath his head a sheet on which is written: honourable obedience.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked how the rising of the Qa'im would be known, Imam al-Sadiq described waking to find a sheet reading 'honourable obedience' beneath one's head."
+        },
+        "anchor": {
+          "where": "verses.53.narrations.n2",
+          "quote": "One of you will wake to find beneath his head a sheet on which is written: honourable obedience."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 54,
+        "prompt": {
+          "en": "According to the passage's narration on verse 54, 'what he bears' consists of what?"
+        },
+        "options": [
+          {
+            "en": "hearing, obedience, trust and patience"
+          },
+          {
+            "en": "prayer, fasting, zakat and pilgrimage"
+          },
+          {
+            "en": "faith, righteous deeds and succession"
+          },
+          {
+            "en": "fear, security and mercy"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration on verse 54 glosses 'what he bears' as hearing, obedience, trust and patience, the burden carried in answering the Apostle."
+        },
+        "anchor": {
+          "where": "verses.54.narrations.n3",
+          "quote": "'What he bears' is hearing, obedience, trust and patience."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 56,
+        "prompt": {
+          "en": "So whoever maintains the prayer but does not give the zakat has not maintained the ____."
+        },
+        "options": [
+          {
+            "en": "faith"
+          },
+          {
+            "en": "fast"
+          },
+          {
+            "en": "prayer"
+          },
+          {
+            "en": "covenant"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir says Allah joined zakat to prayer, so one who keeps the prayer but withholds the zakat has not truly maintained the prayer."
+        },
+        "anchor": {
+          "where": "verses.56.narrations.n6",
+          "quote": "So whoever maintains the prayer but does not give the zakat has not maintained the prayer."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 57,
+        "prompt": {
+          "en": "How does the passage close its address concerning the faithless?"
+        },
+        "options": [
+          {
+            "en": "With a promise that they will one day be forgiven"
+          },
+          {
+            "en": "With a command to maintain the prayer and zakat"
+          },
+          {
+            "en": "With a warning that they can never frustrate Allah on the earth"
+          },
+          {
+            "en": "With an oath that they will surely march out"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay ends on verse 57, warning that the faithless can never frustrate Allah on the earth and that their refuge shall be the Fire."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a warning that the faithless can never frustrate Allah on the earth"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T20:05:08Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T20:07:00Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  },
+  "8": {
+    "id": "24:8",
+    "surah": 24,
+    "index": 8,
+    "range": [
+      58,
+      61
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 58,
+        "prompt": {
+          "en": "Al-Tusi notes that people are usually ____ in their private moments at these hours."
+        },
+        "options": [
+          {
+            "en": "undressed"
+          },
+          {
+            "en": "asleep"
+          },
+          {
+            "en": "praying"
+          },
+          {
+            "en": "fasting"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay explains why permission is required at the three named times: al-Tusi notes people are usually undressed in their private moments then, so entry without warning would expose them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi notes that people are usually undressed in their private moments at these hours"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 58,
+        "prompt": {
+          "en": "According to the note, whom does the command to seek permission at the three times bind?"
+        },
+        "options": [
+          {
+            "en": "The adults of the whole family"
+          },
+          {
+            "en": "Neighbours and visiting guests"
+          },
+          {
+            "en": "Slaves and pre-pubescent children of the household"
+          },
+          {
+            "en": "Travellers passing by"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note says the command binds slaves and pre-pubescent children of the household, while the adults of the family are addressed separately in the next verse, not here."
+        },
+        "anchor": {
+          "where": "verses.58.note",
+          "quote": "The command binds slaves and pre-pubescent children of the household; the adults of the family are addressed separately in the next verse"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 60,
+        "prompt": {
+          "en": "Asked which garments an elderly woman may lay aside, who answered: 'The head-covering and the cloak'?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq recited the verse on laying aside garments and glossed those garments as the head-covering and the cloak, adding that modesty before others remains better for her."
+        },
+        "anchor": {
+          "where": "verses.60.narrations.n4",
+          "quote": "He recited 'that they lay aside their garments' and said: 'The head-covering and the cloak.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 61,
+        "prompt": {
+          "en": "According to the note, to what extent did the Imams permit eating from the houses named in the verse?"
+        },
+        "options": [
+          {
+            "en": "To one's full satisfaction at any time"
+          },
+          {
+            "en": "Only with the owner's spoken permission"
+          },
+          {
+            "en": "Only during daytime meals"
+          },
+          {
+            "en": "Only to the extent of one's need, without waste"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note limits the permission: the Imams allowed eating from the houses named here only to the extent of one's need, without waste, not without any bound."
+        },
+        "anchor": {
+          "where": "verses.61.note",
+          "quote": "The Imams permitted eating from the houses named here only to the extent of one's need, without waste"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 61,
+        "prompt": {
+          "en": "According to the passage, one may eat in a relative's house only when eating together with others, never alone."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "This is false: the passage lifts blame from eating in the houses of relatives whether one eats together or separately, so eating alone carries no blame either."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "eating in one's own house or the houses of relatives, of those whose keys one holds, and of a friend, whether together or separately"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T20:08:18Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T20:09:07Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  },
+  "9": {
+    "id": "24:9",
+    "surah": 24,
+    "index": 9,
+    "range": [
+      62,
+      64
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 62,
+        "prompt": {
+          "en": "Tusi reads this collective affair as a matter that calls for gathering and cooperation: a battle, a consultation, or the ____."
+        },
+        "options": [
+          {
+            "en": "Friday prayer"
+          },
+          {
+            "en": "pilgrimage season"
+          },
+          {
+            "en": "marketplace"
+          },
+          {
+            "en": "wedding feast"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tusi glosses the collective affair as a matter needing gathering and cooperation, naming a battle, a consultation, and the Friday prayer as his examples."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi reads this collective affair as a matter that calls for gathering and cooperation: a battle, a consultation, or the Friday prayer"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 62,
+        "prompt": {
+          "en": "The verse about seeking leave was revealed about a man who asked the Prophet's permission to stay with his new wife on the eve of Uhud."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Qummi's report ties the verse to Hanzala ibn Abi Ayyash, who married the night before Uhud, sought the Prophet's leave to stay, then went out and was martyred."
+        },
+        "anchor": {
+          "where": "verses.62.narrations.n1",
+          "quote": "This was revealed about Hanzala ibn Abi Ayyash, who married the night before Uhud and asked the Prophet's leave to stay with his wife"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 63,
+        "prompt": {
+          "en": "How does Tabatabai read the Prophet's 'summons' among the people in verse 63?"
+        },
+        "options": [
+          {
+            "en": "His calling people to a matter: to faith, counsel, or prayer"
+          },
+          {
+            "en": "His shouting each person's name across the gathering"
+          },
+          {
+            "en": "The trumpet blast that raises the dead"
+          },
+          {
+            "en": "A demand that they answer for their sins"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabatabai takes the summons as the Prophet calling people to a matter, to faith, counsel, or prayer, which the verse's close about those slipping away confirms."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the Prophet's summons as his calling people to a matter, to faith, to counsel, to prayer"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 63,
+        "prompt": {
+          "en": "\"An affliction in his religion, or a wound for which God gives him no reward.\" Who gave this gloss?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked what the threatened affliction means, Imam al-Sadiq answered that it is an affliction in one's religion, or a wound for which God grants no reward."
+        },
+        "anchor": {
+          "where": "verses.63.narrations.n4",
+          "quote": "an affliction in his religion, or a wound for which God gives him no reward"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 63,
+        "prompt": {
+          "en": "According to the perspectives, what do the Sunni and Shia readings agree on about verse 63's warning?"
+        },
+        "options": [
+          {
+            "en": "It concerns those who leave without seeking the Prophet's permission"
+          },
+          {
+            "en": "It targets those who summon one another carelessly"
+          },
+          {
+            "en": "It applies to all creation in the heavens and earth"
+          },
+          {
+            "en": "It falls on those who defy the Prophet's command"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives note that Sunni and Shia agree the warning falls on those who defy the Prophet's command, differing only over how far its reach extends."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Sunni and Shia agree that the warning falls on those who defy the Prophet's command"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T20:10:53Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T20:11:48Z",
+      "assembled_at": "2026-09-22T20:12:12Z"
+    }
+  }
+}

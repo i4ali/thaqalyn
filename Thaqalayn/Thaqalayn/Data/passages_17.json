@@ -1,0 +1,3600 @@
+{
+  "1": {
+    "id": "17:1",
+    "surah": 17,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "title": {
+      "en": "The Night Journey"
+    },
+    "essay": {
+      "en": "The surah opens with glorification. God declares Himself beyond every partner and, in that spirit of praise, points to the night journey of His servant: He carried the Prophet by night from the Sacred Mosque to the Farthest Mosque, whose environs He has blessed, that He might show him some of His signs [1]. Commentators identify the Farthest Mosque as Bayt al-Maqdis in Jerusalem, called the farthest for its distance from the Sacred Mosque at Mecca [4]. According to al-Tusi and most exegetes, the Prophet was taken up that same night to the seventh heaven and the Lote-tree, shown wonders that deepened his certainty, and this happened while he was awake, not in a dream [7].\n\nFrom the journey the passage turns to Moses, given the Book as a guide for the Children of Israel and told to take no trustee besides God, they being the descendants of those carried in the ark with Noah, a grateful servant. Tabatabai reads the seven verses that follow as a prelude, set between the first verse and the ninth, illustrating God's constant practice with the nations [2]. God decreed to the Children of Israel that they would twice corrupt the land; when the first came, He raised against them servants of great might who ransacked their homes, then their turn returned. Good and evil, the passage insists, fall back upon the souls that do them. When the second warning came, their faces were made wretched and the Temple entered as before. Mercy is still held out, but reversion brings reversion, and hell is made a prison for the faithless [5].\n\nThe passage closes by returning to this community: this Quran guides to what is most upright [3], giving the believers who act righteously the good news of a great reward [6], while those who deny the Hereafter are promised a painful punishment."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "Carried by night"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "جاء جبرائيل وميكائيل وإسرافيل بالبراق إلى رسول الله صلى الله عليه وآله فأخذ واحد باللجام وواحد بالركاب وسوى الآخر عليه ثيابه فتضعضعت البراق فلطمها جبرائيل ثم قال لها اسكني يا براق فما ركبك نبي قبله ولا يركبك بعده مثله … ومعه جبرائيل يريه الآيات من السماء والأرض",
+            "chain": "Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Hisham ibn Salim, from Abu Abdillah",
+            "text": {
+              "en": "Jibril, Mikail and Israfil brought the Buraq to the Messenger of God. One took its bridle, one its stirrup, the third settled his garments upon him. When the Buraq shied, Jibril struck it: Be still; no prophet before him has ridden you. Then Jibril went on showing him the signs of heaven and earth."
+            },
+            "source": "s11"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فنظر إلى السّماءِ مرّة وإلى الكعبة مرّة ثم قال سبحان الذي أسرى بعبده ليلاً من المسجد الحرام إلى المسجد الأقصى … ليس كما يقولون ولكنّه أسرى به من هذه إلى هذه وأشار بيده إلى السّماءِ وقال ما بينهما حرم",
+            "chain": null,
+            "text": {
+              "en": "He looked once at the sky and once at the Kaaba, then recited this verse. The people of Iraq say the Prophet was carried to Bayt al-Maqdis. It is not as they say: he was carried from this to this - and he pointed to the sky - and what lies between them is sanctuary."
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 3,
+        "heading": {
+          "en": "A grateful servant"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "كان نوح إذا أمسى وأصبح يقول أمسيت أشهد أنه ما أمسى بي من نعمة في دين أو دنيا فإنها من الله وحده لا شريك له له الحمد علي بها كثيراً والشكر كثيراً فأنزل الله أنه كان عبداً شكوراً فهذا كان شكره",
+            "chain": "His father, from Ahmad ibn al-Nadr, from Amr ibn Shamir, from Jabir, from Abu Jafar",
+            "text": {
+              "en": "Noah, morning and evening, would say: I bear witness that no blessing of religion or world reaches me but from God alone, who has no partner; to Him abundant praise and thanks for it. So God revealed that he was a grateful servant; this was his thankfulness."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "Two corruptions foretold"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لَتُفْسِدُنَّ فِي الْأَرْضِ مَرَّتَيْنِ قَالَ قَتْلُ عَلِيِّ بْنِ أَبِي طَالِبٍ (عليه السلام) وَ طَعْنُ الْحَسَنِ (عليه السلام) وَ لَتَعْلُنَّ عُلُوًّا كَبِيراً قَالَ قَتْلُ الْحُسَيْنِ (عليه السلام) … بَعَثْنا عَلَيْكُمْ عِباداً لَنا أُولِي بَأْسٍ شَدِيدٍ فَجاسُوا خِلالَ الدِّيارِ قَوْمٌ يَبْعَثُهُمُ اللَّهُ قَبْلَ خُرُوجِ الْقَائِمِ (عليه السلام) فَلَا يَدَعُونَ وَتْراً لآِلِ مُحَمَّدٍ إِلَّا قَتَلُوهُ",
+            "chain": "A number of our companions, from Sahl ibn Ziyad, from Muhammad ibn al-Hasan ibn Shammun, from Abdullah ibn Abd al-Rahman al-Asamm, from Abdullah ibn al-Qasim al-Batal, from Abu Abdillah",
+            "text": {
+              "en": "'You will cause corruption twice' is the killing of Ali ibn Abi Talib and the stabbing of al-Hasan; 'you will perpetrate great tyranny' is the killing of al-Husayn. The servants of great might are a people God raises before the Qaim's rising, who leave no enemy of Muhammad's family unslain."
+            },
+            "source": "s58"
+          }
+        ]
+      },
+      {
+        "verse": 7,
+        "heading": {
+          "en": "Good and evil return"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "قَالَ الرِّضَا عَلَيْهِ السَّلامُ فِي قَوْلِ اللَّهِ عَزَّ وَجَلَّ إِنْ أَحْسَنْتُمْ أَحْسَنْتُمْ لانْفُسِكُمْ وَإِنْ أَسَأْتُمْ فَلَها قَالَ إِنْ أَحْسَنْتُمْ أَحْسَنْتُمْ لانْفُسِكُمْ وَإِنْ أَسَأْتُمْ فَلَهَا رَبٌّ يَغْفِرُ لَهَا",
+            "chain": "Ahmad ibn al-Hasan al-Qattan, Muhammad ibn Bakran al-Naqqash and Muhammad ibn Ibrahim ibn Ishaq al-Talaqani, from Ahmad ibn Muhammad ibn Saeed al-Hamadani, from al-Hasan ibn Ali ibn Faddal, from his father",
+            "text": {
+              "en": "Concerning 'If you do good, you do good to your own souls, and if you do evil, it is for them,' he said: and if you do evil, it has a Lord who forgives it."
+            },
+            "source": "s59"
+          }
+        ]
+      },
+      {
+        "verse": 9,
+        "heading": {
+          "en": "What is most upright"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "في الكافي عن الصادق عليه السلام أي يدعو وعنه عليه السلام يهدي إلى الإمام عليه السلام",
+            "chain": null,
+            "text": {
+              "en": "Asked about 'this Quran guides to what is most upright,' he said it means it invites; and, in another report, that it guides to the Imam."
+            },
+            "source": "s29"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the two corruptions of the Children of Israel (verses 4 to 8) the readings diverge. Sunni exegetes take the words historically: al-Tabari relates that the first corruption was the killing of Zakariyya, after which God sent a foreign king against them to overrun their land [33]. The Shia narrations read the same verses as a pattern for this community: al-Kulayni records from Imam al-Sadiq that the first corruption is the killing of Ali and the stabbing of al-Hasan, and the great tyranny the killing of al-Husayn, with the reckoning coming through a force God raises before the rising of the Qaim [58]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 1",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=1&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد افتتحت السورة فيما ترومه من التسبيح بالإِشارة إلى معراج النبي صلى الله عليه وآله وسلم فذكر اسراؤه صلى الله عليه وآله وسلم من المسجد الحرام إلى المسجد الأقصى وهو بيت المقدس"
+        },
+        "gloss": "The surah opens, in the glorification it intends, by pointing to the Prophet's ascension, mentioning his night journey from the Sacred Mosque to the Farthest Mosque, which is Bayt al-Maqdis."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 2 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=17&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومن ذلك يستنتج أن الآيات السبع كالتوطئة لما سيذكر بعدها من جريان هذه السنة العامة في هذه الأُمة، والآيات السبع كالمعترضة بين الآية الأولى والتاسعة."
+        },
+        "gloss": "From this it follows that the seven verses are a prelude to the running of this general divine practice in this community, and the seven verses stand interposed between the first verse and the ninth."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 9 to 10",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=9&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن هذا القرآن يهدي للتي هي أقوم } أي للملة التي هي أقوم"
+        },
+        "gloss": "'Indeed this Quran guides to what is most upright' means to the creed that is most upright."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إلى المسجد الأقصى } يعني بيت المقدس وإنما قال الأقصى لبعد المسافة بينه وبين المسجد الحرام"
+        },
+        "gloss": "'To the Farthest Mosque' means Bayt al-Maqdis; it is called the farthest because of the distance between it and the Sacred Mosque."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 4 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأراد بالفساد الظلم وأخذ المال وقتل الأنبياء وسفك الدماء"
+        },
+        "gloss": "By 'corruption' is meant injustice, seizing wealth, killing the prophets, and shedding blood."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 9 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويبشر المؤمنين الذين يعملون الصالحات أن لهم } أي بأن لهم { أجراً كبيراً } أي ثواباً عظيماً على طاعاتهم"
+        },
+        "gloss": "It gives the believers who do righteous deeds good news that they have a great reward, meaning a great recompense for their obedience."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعند أصحابنا وأكثر أصحاب التأويل، وذكره الجبائي ايضاً: انه عرج به في تلك الليلة الى السماء وأت حتى بلغ سدرة المنتهى في السماء السابعة، واراه الله من آيات السموات والارض ما ازداد به معرفة ويقيناً، وكان ذلك في يقظته دون منامه"
+        },
+        "gloss": "According to our companions and most exegetes, he was taken up that night to heaven, reaching the Lote-tree in the seventh heaven, and God showed him signs of the heavens and the earth that increased his certainty; this was while he was awake, not in sleep."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "جاء جبرائيل وميكائيل وإسرافيل بالبراق إلى رسول الله صلى الله عليه وآله"
+        },
+        "gloss": "Jibril, Mikail and Israfil brought the Buraq to the Messenger of God."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان نوح إذا أمسى وأصبح يقول أمسيت أشهد أنه ما أمسى بي من نعمة في دين أو دنيا فإنها من الله وحده لا شريك له له الحمد علي بها كثيراً والشكر كثيراً فأنزل الله أنه كان عبداً شكوراً فهذا كان شكره"
+        },
+        "gloss": "Noah, morning and evening, would say: I bear witness that no blessing of religion or world reaches me but from God alone, who has no partner; to Him much praise and thanks for it. So God revealed that he was a grateful servant; this was his thankfulness."
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=17&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ليس كما يقولون ولكنّه أسرى به من هذه إلى هذه وأشار بيده إلى السّماءِ وقال ما بينهما حرم"
+        },
+        "gloss": "It is not as they say; rather he was carried from this to this - and he pointed to the sky - and said: what lies between them is sanctuary."
+      },
+      {
+        "id": "s29",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 9 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=17&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعنه عليه السلام يهدي إلى الإمام عليه السلام"
+        },
+        "gloss": "And from him (al-Sadiq): it guides to the Imam."
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 4 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=17&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فكان أوّل الفسادين: قتل زكريا، فبعث الله علـيهم ملك النبط"
+        },
+        "gloss": "The first of the two corruptions was the killing of Zakariyya, so God sent against them the king of the Nabat."
+      },
+      {
+        "id": "s58",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 8, hadith 1, cited at Al-Israa 6",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "لم يخرجه"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "لَتُفْسِدُنَّ فِي الْأَرْضِ مَرَّتَيْنِ قَالَ قَتْلُ عَلِيِّ بْنِ أَبِي طَالِبٍ (عليه السلام) وَ طَعْنُ الْحَسَنِ (عليه السلام)"
+        },
+        "gloss": "'You will cause corruption in the land twice' - he said: the killing of Ali ibn Abi Talib and the stabbing of al-Hasan."
+      },
+      {
+        "id": "s59",
+        "kind": "hadith",
+        "work": "Uyun akhbar al-Rida",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 47, cited at Al-Israa 7",
+        "url": "https://thaqalayn.com/book/4",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "قَالَ إِنْ أَحْسَنْتُمْ أَحْسَنْتُمْ لانْفُسِكُمْ وَإِنْ أَسَأْتُمْ فَلَهَا رَبٌّ يَغْفِرُ لَهَا"
+        },
+        "gloss": "He said: 'If you do good, you do good for your own souls, and if you do evil, it is for them' - a Lord who forgives it."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T05:44:54Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T13:03:37Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "2": {
+    "id": "17:2",
+    "surah": 17,
+    "index": 2,
+    "range": [
+      11,
+      22
+    ],
+    "title": {
+      "en": "The reckoning of every soul"
+    },
+    "essay": {
+      "en": "This is the second passage of Surah al-Israa, continuing its account of how the Quran guides people and how God rewards or punishes their response [1]. It opens by reproaching man: in his haste he prays for what harms him as readily as for what benefits him, unable to tell the two apart [1]. Tabatabai takes 'man' here as the whole human race and 'prayer' as any seeking, whether voiced or pursued through action [1]. God then points to the night and the day as two signs. Al-Tabrisi notes that each carries its own benefit, earning by day and rest by night, and that the day was made lightsome so that people may seek their livelihood and reckon the years and the count of time [2]. The passage turns to accountability. Every person's deeds are fastened to his neck, never leaving him, and on the Day of Resurrection they are produced as an open book he is told to read against himself. Tabatabai holds that the omen and the book are one thing: a person's own deeds [1]. God then lays down a principle. Whoever is guided is guided for himself, whoever strays strays against himself, no soul bears another's burden, and He does not destroy a community until He has sent it a messenger [1]. Next comes the pattern of ruin: when God wills to destroy a town its affluent transgress, the word falls due, and it is destroyed; the commentators divide over what His command to them means [1]. Many generations have perished since Noah. The passage then weighs two desires: whoever wants the fleeting world is given a measure of it and then hell, while the believer who strives for the Hereafter has his striving appreciated. God extends His unrestricted bounty to both, yet the ranks of the Hereafter are far greater [1]. It closes by forbidding the worship of any god besides Allah, which al-Mizan reads as the conclusion the whole passage has been driving toward [1]."
+    },
+    "verses": [
+      {
+        "verse": 11,
+        "heading": {
+          "en": "Man is overhasty"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لما خلق الله آدم و نفخ فيه من روحه، وثب ليقوم قبل أن يتم خلقه فسقط، فقال الله عز و جل: وكان الإنسان عجولاً",
+            "chain": "From Hisham ibn Salim, from Abu Abdillah",
+            "text": {
+              "en": "When God created Adam and breathed His spirit into him, he leapt up to stand before his creation was complete, and so he fell. God then said: 'And man was ever hasty.'"
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "Night and day as signs"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam Ali",
+            "addressee": "Ibn al-Kawwa",
+            "arabic": "أخبرني عن هذا السواد في القمر؟ … هو قول الله: { فَمَحَوْنَآ آيَةَ ٱلَّيلِ }",
+            "chain": "From Abu al-Tufayl",
+            "text": {
+              "en": "Ibn al-Kawwa asked: 'Tell me about this blackness in the moon.' He said: 'It is God's word: Then We faded out the sign of the night.'"
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "Deeds fastened to the neck"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "خيره و شره معه حيث كان، لا يستطيع فراقه، حتى يعطى كتابه يوم القيامة بما عمل",
+            "chain": "In the report of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "His good and his evil are with him wherever he is; he cannot part from them until he is given his book on the Day of Resurrection with what he did."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 14,
+        "heading": {
+          "en": "Read your own book"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يذكر العبد جميع ما عمل و ما كتب عليه، حتى كأنه فعله تلك الساعة",
+            "chain": "From Khalid ibn Najih, from Abu Abdillah",
+            "text": {
+              "en": "The servant recalls everything he did and everything written against him, as though he had done it that very hour."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 15,
+        "heading": {
+          "en": "No soul bears another's burden"
+        },
+        "note": {
+          "en": "Al-Mizan reads the withheld punishment as worldly destruction, sent only after a warning messenger, and takes 'no soul bears another's burden' to mean each answers for his own deeds alone [1]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 16,
+        "heading": {
+          "en": "When a town is destroyed"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "أمرنا مترفيها مشددة منصوبة، تفسيرها: كثرنا، و قال: لا قرأتها مخففة",
+            "chain": "From Hamran, from Abu Ja'far",
+            "text": {
+              "en": "'We command its affluent ones,' read with the doubled letter: its meaning is 'We multiplied them.' And he said: I do not recite it in the light form."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 22,
+        "heading": {
+          "en": "No god besides Allah"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هو مخاطبة للنبي و المعنى للناس … إن الله بعث نبيه بإياك أعني و اسمعي يا جارة",
+            "chain": null,
+            "text": {
+              "en": "The address is to the Prophet, but the meaning is for the people: God sent His Prophet with the proverb, 'I mean you, but listen, O neighbour.'"
+            },
+            "source": "s22"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Verse 15 says no soul bears another's burden. Al-Tabrisi draws from it a clear proof that the children of unbelievers are not punished with their parents in the Fire [3], and al-Tusi reads it against the Mujbira, since God has made clear that no one is seized for another's crime [6]. Ibn Kathir, on the same verse, does not settle the fate of those who die as children or before a messenger reaches them: he gathers conflicting reports, recording both the view that such children are with their parents in the Fire and the view that they are tested on the Day of Resurrection [42]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 11 to 22",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=11&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لكن جنس الإِنسان عجول لا يفرق لعجلته بين الخير والشر بل يطلب كل ما لاح له"
+        },
+        "gloss": "But the human race is hasty; in its haste it does not distinguish good from evil, and seeks whatever appears to it."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 11 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وجعلنا الليل والنهار آيتين أي دلالتين يدلاّن على وحدانية خالقهما لما في كل واحد منهما من الفوائد من الكسب بالنهار والاستراحة بالليل"
+        },
+        "gloss": "'We made the night and day two signs,' that is, two indications of their Creator's oneness, for in each is a benefit: earning by day and rest by night."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 13 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي هذا دلالة واضحة على بطلان قول من يقول إن أطفال الكفار يعذّبون مع آبائهم في النار"
+        },
+        "gloss": "In this is clear proof of the falsity of the claim that the children of unbelievers are punished with their fathers in the Fire."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 13 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية دلالة على بطلان قول المجبرة: من ان الله يعذب اطفال الكفار بكفر آبائهم، لانه بين أَنه لا يأخذ احداً بجرم غيره"
+        },
+        "gloss": "In the verse is proof of the falsity of the Mujbira's claim that God punishes the children of unbelievers for their fathers' disbelief, for He has made clear that He seizes no one for another's crime."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لما خلق الله آدم و نفخ فيه من روحه، وثب ليقوم قبل أن يتم خلقه فسقط، فقال الله عز و جل: وكان الإنسان عجولاً"
+        },
+        "gloss": "When God created Adam and breathed His spirit into him, he leapt up to stand before his creation was complete and fell; so God said, 'And man was ever hasty.'"
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو قول الله: { فَمَحَوْنَآ آيَةَ ٱلَّيلِ }"
+        },
+        "gloss": "It is God's word: Then We faded out the sign of the night."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 13 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "خيره و شره معه حيث كان، لا يستطيع فراقه، حتى يعطى كتابه يوم القيامة بما عمل"
+        },
+        "gloss": "His good and his evil are with him wherever he is; he cannot part from them until he is given his book on the Day of Resurrection with what he did."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 16 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أمرنا مترفيها مشددة منصوبة، تفسيرها: كثرنا، و قال: لا قرأتها مخففة"
+        },
+        "gloss": "'We command its affluent ones,' with the doubled letter: its meaning is 'We multiplied them'; and he said, 'I do not recite it in the light form.'"
+      },
+      {
+        "id": "s42",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=17&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومنهم من جزم لهم بالنار لقوله عليه السلام هم مع آبائهم، ومنهم من ذهب إلى أنهم يمتحنون يوم القيامة في العرصات"
+        },
+        "gloss": "Some are certain they go to the Fire, citing his saying 'they are with their fathers,' and some hold that they are tested on the Day of Resurrection in the plains of gathering."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T05:50:24Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T12:57:39Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "3": {
+    "id": "17:3",
+    "surah": 17,
+    "index": 3,
+    "range": [
+      23,
+      30
+    ],
+    "title": {
+      "en": "Kindness to parents and giving"
+    },
+    "essay": {
+      "en": "Al-Mizan reads these eight verses as a set of the universals of the religion, placed right after the promise that this Quran guides to that which is most upright [1]. The list opens at its summit: worship God alone. Majma al-Bayan and al-Tibyan note that 'your Lord has decreed' here carries the sense of a binding command, not a decree that compels, which is the reading of Ibn Abbas, al-Hasan and Qatada [4].\n\nJoined to that first duty is kindness to parents. The verse turns to the hardest moment, when one or both of them reach old age at your side: do not say 'Fie' to them, do not chide them, speak to them noble words, and lower to them the wing of humility. Majma al-Bayan explains that old age is singled out because that is when a parent's need for care is greatest [2]. The child is then taught a prayer: 'My Lord! Have mercy on them, just as they reared me when I was small.'\n\nVerse 25 turns inward, since your Lord knows best what is in your hearts, and it promises forgiveness to the penitent. al-Tibyan glosses the penitent, the awwab, as the one who keeps turning back to God [5].\n\nThe passage moves next to wealth. Give the relatives their due, and the needy and the traveller, but do not squander. Here the Shia commentators read the relatives as the Prophet's own kin, and report that the verse gave Fatimah Fadak [3]. Squandering is condemned sharply: the wasteful are brothers of satans, and Satan is ungrateful to his Lord. And if you must hold back, still hoping for the provision you await from your Lord, speak to them gentle words.\n\nThe passage closes on a balance: keep your hand neither chained to your neck nor flung wide open, or you will sit blameworthy and regretful. The reason follows at once, for it is your Lord who widens and narrows provision, and He is well aware of His servants."
+    },
+    "verses": [
+      {
+        "verse": 23,
+        "heading": {
+          "en": "Worship God, honour parents"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الإحسان: أن تحسن صحبتهما، و لا تكلفهما أن يسألاك شيئا مما يحتاجان إليه، و إن كانا مستغنيين",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad ibn Isa and Ali ibn Ibrahim, from his father, all from al-Hasan ibn Mahbub, from Abu Walad al-Hannat, from Abu Abdillah",
+            "text": {
+              "en": "Kindness is that you keep them good company, and that you do not make them ask you for anything they need, even if they are well off."
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أدنى العقوق أف، و لو علم الله عز و جل شيئا أهون منه لنهى عنه",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad ibn Isa, from Muhammad ibn Sinan, from Hadid ibn Hakim, from Abu Abdillah",
+            "text": {
+              "en": "The least of disobedience to parents is 'Fie'; had God known of anything slighter than it, He would have forbidden that."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 25,
+        "heading": {
+          "en": "The penitent forgiven"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الأواب: التواب المتعبد، الراجع عن ذنبه",
+            "chain": null,
+            "text": {
+              "en": "The penitent (awwab) is the one who repents, devotes himself to worship, and turns back from his sin."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 26,
+        "heading": {
+          "en": "The relative's due"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لما أنزل الله تعالى { وَآتِ ذَا ٱلْقُرْبَىٰ حَقَّهُ وَٱلْمِسْكِينَ } قال رسول الله (صلى الله عليه و آله): يا جبرئيل، قد عرفت المسكين، فمن ذو القربى؟ قال: هم أقاربك، فدعا حسنا و حسينا و فاطمة",
+            "chain": "al-Ayyashi, from Abd al-Rahman, from Abu Abdillah",
+            "text": {
+              "en": "When 'Give the relatives their due, and the needy' came down, the Messenger of God said, 'Gabriel, I know the needy; who are the relatives?' He said, 'They are your kin.' So he called Hasan, Husayn and Fatimah."
+            },
+            "source": "s14"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "من أنفق شيئا في غير طاعة الله فهو مبذر، و من أنفق في سبيل الخير فهو مقتصد",
+            "chain": "al-Ayyashi, from Abd al-Rahman ibn al-Hajjaj, from Abu Abdillah",
+            "text": {
+              "en": "Whoever spends anything in other than obedience to God is a squanderer, and whoever spends in the way of good is moderate."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 29,
+        "heading": {
+          "en": "Neither closed nor open hand"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن رسول الله (صلى الله عليه و آله) كان لا يسأله أحد من الدنيا شيئا إلا أعطاه … فأخذ قميصه فرمى به إليه، فأدبه الله تبارك و تعالى على القصد فقال: { وَلاَ تَجْعَلْ يَدَكَ مَغْلُولَةً إِلَىٰ عُنُقِكَ وَلاَ تَبْسُطْهَا كُلَّ ٱلْبَسْطِ فَتَقْعُدَ مَلُوماً مَّحْسُوراً }",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from Ahmad ibn Abi Abdillah, from his father, from al-Nadr ibn Suwayd, from Musa ibn Bakr, from Ijlan",
+            "text": {
+              "en": "No one ever asked the Messenger of God for anything of this world without his giving it. A woman sent her son to ask for his very shirt, and he took it off and threw it to him. So God trained him to moderation, revealing, 'Do not keep your hand chained to your neck...'"
+            },
+            "source": "s15"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The commentators divide over the relatives. The Shia works read them as the Prophet's own kin: Majma al-Bayan reports that when the verse came down the Prophet gave Fatimah Fadak [3]. al-Tabari prefers the general sense, one's own blood relations whom God enjoins you to keep close [23]. Ibn Kathir goes further and rejects the Fatimah and Fadak report outright, holding it unsound because this sura is Meccan while Fadak was taken only in year seven, so he judges the report a fabrication [30]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 23 to 30",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=23&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عدة من كليات الدين يذكرها الله سبحانه وهي تتبع قوله قبل آيات { إن هذا القرآن يهدي للتي هي أقوم } الآية."
+        },
+        "gloss": "A number of the universals of the religion, which God mentions following His earlier words, 'Indeed this Quran guides to that which is most upright.'"
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 23 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وخصَّ حال الكبر وإن كان من الواجب طاعة الوالدين على كل حال لأن الحاجة أكثر في تلك الحال إلى التعهد والخدمة"
+        },
+        "gloss": "He singled out old age, though obeying parents is a duty in every state, because the need for care and service is greater then."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 26 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عن أبي سعيد الخدري قال: لما نزل قولـه وآت ذا القربى حقه أعطى رسول الله صلى الله عليه وسلم فاطمة فدكاً."
+        },
+        "gloss": "From Abu Sa'id al-Khudri: when 'Give the relatives their due' came down, the Messenger of God gave Fatimah Fadak."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 23 to 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معنى قوله { وقضى ربك أَلا تعبدوا إِلاّ إِياه } أمر، في قول ابن عباس والحسن وقتادة وابن زيد."
+        },
+        "gloss": "'And your Lord has decreed that you worship none but Him' means He commanded, according to Ibn Abbas, al-Hasan, Qatada and Ibn Zayd."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 25 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=25&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معنى { الأوّابين } التوابين وهم الذين يتوبون مرة بعد مرة"
+        },
+        "gloss": "The 'penitents' (awwabin) means those who repent, turning back time after time."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 23 to 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الإحسان: أن تحسن صحبتهما، و لا تكلفهما أن يسألاك شيئا مما يحتاجان إليه، و إن كانا مستغنيين"
+        },
+        "gloss": "Kindness is to keep them good company and not to make them ask you for what they need, even if they are well off."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=25&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الأواب: التواب المتعبد، الراجع عن ذنبه"
+        },
+        "gloss": "The penitent (awwab) is the one who repents, devotes himself to worship, and returns from his sin."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 26 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "من أنفق شيئا في غير طاعة الله فهو مبذر، و من أنفق في سبيل الخير فهو مقتصد"
+        },
+        "gloss": "Whoever spends anything in other than obedience to God is a squanderer; whoever spends in the way of good is moderate."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 29",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأدبه الله تبارك و تعالى على القصد فقال: { وَلاَ تَجْعَلْ يَدَكَ مَغْلُولَةً إِلَىٰ عُنُقِكَ وَلاَ تَبْسُطْهَا كُلَّ ٱلْبَسْطِ فَتَقْعُدَ مَلُوماً مَّحْسُوراً }"
+        },
+        "gloss": "So God trained him to moderation, revealing, 'Do not keep your hand chained to your neck, nor open it altogether, or you will sit blameworthy and regretful.'"
+      },
+      {
+        "id": "s23",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 26 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=17&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأولـى التأويـلـين عندي بـالصواب، تأويـل من تأوّل ذلك أنها بـمعنى وصية الله عبـاده بصلة قرابـات أنفسهم وأرحامهم"
+        },
+        "gloss": "The sounder of the two readings to me is that it means God's charge to His servants to keep the ties of their own kin and relatives."
+      },
+      {
+        "id": "s30",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 26 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=17&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذا الحديث مشكل لو صح إسناده لأن الآية مكية، وفدك إنما فتحت مع خيبر سنة سبع من الهجرة … فهو إذاً حديث منكر، والأشبه أنه من وضع الرافضة"
+        },
+        "gloss": "This report is problematic even if its chain were sound, for the verse is Meccan while Fadak was only taken with Khaybar in year seven; so it is a denounced report, most likely a fabrication."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T12:49:49Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T13:09:35Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "4": {
+    "id": "17:4",
+    "surah": 17,
+    "index": 4,
+    "range": [
+      31,
+      40
+    ],
+    "title": {
+      "en": "Precepts of wisdom"
+    },
+    "essay": {
+      "en": "These ten verses gather a run of commands and prohibitions that al-Mizan describes as several universal principles of the religion, following the earlier promise that this Quran guides to the way that is most upright. [1] They open by forbidding parents to kill their children out of fear of poverty, and answer that fear at once: God provides for parents and children alike, and such killing is a great iniquity. The passage then forbids even approaching fornication, calling it an indecency and an evil way, and forbids taking the life God has made inviolable except by right. Where a person is killed wrongfully, God grants the victim's heir an authority; Majma al-Bayan, citing Ibn Abbas, reads that authority as a choice between retaliation, blood-money, and pardon. [3]\n\nFrom bloodshed the verses turn to trust and honesty: guard the orphan's property until he comes of age, keep every covenant, and give full measure with an even balance, for that is better and fairer in outcome. Then comes a command that reaches inward, not to pursue what one has no knowledge of, since hearing, sight, and the heart will each be questioned. The passage warns against walking the earth in arrogance: a person can neither split the earth apart nor rival the mountains in height, so pride is empty.\n\nThe evil of all this, the verses conclude, is detested by the Lord. al-Tibyan draws from this that God does not will acts of disobedience, against those who hold that He does. [7] These precepts are named wisdom that God revealed, sealed once more with the warning not to set up another god beside Him, on pain of being cast into Hell blamed and banished. The closing verse turns on the pagans of Mecca who assigned daughters to God while keeping sons for themselves, and calls their claim a monstrous word."
+    },
+    "verses": [
+      {
+        "verse": 31,
+        "heading": {
+          "en": "Do not kill your children"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الحاج لا يملق أبدا … الإفلاس",
+            "chain": "Ishaq ibn Ammar, from Abu Abdillah",
+            "text": {
+              "en": "The pilgrim never becomes destitute. I asked, 'What is penury (imlaq)?' He said, 'Bankruptcy,' then he recited, 'Do not kill your children for the fear of penury.'"
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 32,
+        "heading": {
+          "en": "Do not approach fornication"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "معصية ومقتاً فإن الله يمقته ويبغضه … وهو أشد النار عذاباً والزنا من أكبر الكبائر",
+            "chain": "Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "It means disobedience and something loathed, for God loathes and hates it. As for 'an evil way,' it is the harshest of the Fire's punishment, and fornication is among the greatest of grave sins."
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 33,
+        "heading": {
+          "en": "The inviolable soul"
+        },
+        "note": {
+          "en": "Majma al-Bayan, citing Ibn Abbas, reads the authority given to the victim's heir as a threefold choice: retaliation against the killer, blood-money, or pardon. [3]"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "نهى أن يقتل غير قاتله، أو يمثل بالقاتل … و أي نصرة أعظم من أن يدفع القاتل إلى أولياء المقتول فيقتله، و لا تبعة تلزمه من قتله في دين و لا دنيا",
+            "chain": "Ishaq ibn Ammar, from Abu al-Hasan",
+            "text": {
+              "en": "He forbade killing anyone other than the murderer, or mutilating the murderer. And what greater help is there than that the murderer be handed over to the victim's heirs to be killed, with no liability upon them for it in religion or in this world?"
+            },
+            "source": "s19"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "هو الحسين بن علي (عليه السلام) قتل مظلوما و نحن أولياؤه، و القائم منا إذا قام طلب بثار الحسين … المقتول: الحسين (عليه السلام) و وليه: القائم",
+            "chain": "Salam ibn al-Mustanir, from Abu Jafar",
+            "text": {
+              "en": "He is al-Husayn ibn Ali, killed wrongfully, and we are his heirs. The Qaim from among us, when he rises, will seek vengeance for al-Husayn. The one killed is al-Husayn, and his heir is the Qaim."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 36,
+        "heading": {
+          "en": "Hearing, sight, and heart"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لا تفعل … أما سمعت الله عز و جل يقول: { إِنَّ ٱلسَّمْعَ وَٱلْبَصَرَ وَٱلْفُؤَادَ كُلُّ أُولـٰئِكَ كَانَ عَنْهُ مَسْؤُولاً }؟!",
+            "chain": "Ali ibn Ibrahim, from Harun ibn Muslim, from Masada ibn Ziyad, from Abu Abdillah",
+            "text": {
+              "en": "A man said he sat long listening to his neighbours' singing-girls, protesting that it was only hearing with his ear. The Imam said, 'Do not do it,' then, 'Have you not heard God say, \"Hearing, eyesight, and the heart, all of these are accountable\"?'"
+            },
+            "source": "s21"
+          },
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يسأل السمع عما يسمع و البصر عما يطرف، و الفؤاد عما يعقد عليه",
+            "chain": "al-Husayn ibn Harun, from Abu Abdillah",
+            "text": {
+              "en": "The hearing is questioned about what it hears, the eyesight about what it looks upon, and the heart about what it resolves upon."
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 37,
+        "heading": {
+          "en": "Do not walk in pride"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "The Prophet Muhammad",
+            "addressee": null,
+            "arabic": "لا يزول قدم عبد يوم القيامة من بين يدي الله حتى يسأله عن أربع خصال عمرك فيما أفنيته وجسدك فيما أبليته ومالك من أين كسبته وأين وضعته وعن حبنا أهل البيت",
+            "chain": "his father, from al-Hasan ibn Mahbub, from Abu Hamza al-Thumali, from Abu Jafar",
+            "text": {
+              "en": "No servant's foot will move on the Day of Resurrection, before God, until he is questioned about four things: his life, how he spent it; his body, how he wore it out; his wealth, whence he earned it and where he put it; and about love of us, the People of the House."
+            },
+            "source": "s15"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'whoever is killed wrongfully,' the traditions diverge in application. Shia narrations in al-Burhan identify the one killed wrongfully as al-Husayn and his heir as the Qaim, who will rise to avenge him and will not be charged with excess. [19] Ibn Kathir instead reports Ibn Abbas reading the verse as foretelling Muawiya's rule: as the heir of the murdered Uthman, he was the assisted avenger who came to hold authority. [38] Both take the verse beyond a single homicide toward a claim about rightful vengeance, but they name opposite figures."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 31 to 39",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=31&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عدة من كليات الدين يذكرها الله سبحانه وهي تتبع قوله قبل آيات { إن هذا القرآن يهدي للتي هي أقوم } الآية."
+        },
+        "gloss": "Several universal principles of the religion that God mentions, following His earlier words, 'Indeed this Quran guides to that which is most upright.'"
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 31 to 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فَقَدْ جَعَلْنَا لِوَلِيِّهِ سُلْطَاناً } أي قد أثبتنا لوليه سلطان القود على القاتل أو الدية أو العفو عن ابن عباس والضحاك"
+        },
+        "gloss": "'We have given his heir an authority' means We have established for the heir authority of retaliation against the killer, or blood-money, or pardon; from Ibn Abbas and al-Dahhak."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 37 to 39",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي ذلك دلالة على بطلان مذهب المجبرة من أنّ الله تعالى يريد المعاصي، لان هذه الآية صريحة بأن السيء من الافعال مكروه عند الله."
+        },
+        "gloss": "In this is proof of the falsehood of the compulsionists' doctrine that God wills acts of disobedience, for this verse states plainly that the evil among deeds is detested by God."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 32",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=32&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يقول معصية ومقتاً فإن الله يمقته ويبغضه … وهو أشد النار عذاباً والزنا من أكبر الكبائر."
+        },
+        "gloss": "It means disobedience and something loathed, for God loathes and hates it; it is the harshest of the Fire's punishment, and fornication is among the greatest grave sins."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 37",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يزول قدم عبد يوم القيامة من بين يدي الله حتى يسأله عن أربع خصال عمرك فيما أفنيته وجسدك فيما أبليته ومالك من أين كسبته وأين وضعته وعن حبنا أهل البيت"
+        },
+        "gloss": "No servant's foot will move on the Day of Resurrection until he is questioned about four things: his life and how he spent it, his body and how he wore it out, his wealth and where he earned and put it, and love of us, the People of the House."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 31 to 32",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "« الحاج لا يملق أبدا » ، قال: قلت: و ما الإملاق؟ قال: « الإفلاس »"
+        },
+        "gloss": "'The pilgrim never becomes destitute.' I asked, 'What is penury (imlaq)?' He said, 'Bankruptcy.'"
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=33&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو الحسين بن علي (عليه السلام) قتل مظلوما و نحن أولياؤه، و القائم منا إذا قام طلب بثار الحسين"
+        },
+        "gloss": "He is al-Husayn ibn Ali, killed wrongfully, and we are his heirs; the Qaim from among us, when he rises, will seek vengeance for al-Husayn."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 36",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يسأل السمع عما يسمع و البصر عما يطرف، و الفؤاد عما يعقد عليه"
+        },
+        "gloss": "The hearing is questioned about what it hears, the eyesight about what it looks upon, and the heart about what it resolves upon."
+      },
+      {
+        "id": "s38",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=17&tAyahNo=33&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد أخذ الإمام الحبر ابن عباس من عموم هذه الآية الكريمة ولاية معاوية السلطنة أنه سيملك لأنه كان ولي عثمان، وقد قتل مظلوماً"
+        },
+        "gloss": "Ibn Abbas derived from the generality of this verse Muawiya's authority to rule, since he was the heir of Uthman, who was killed wrongfully."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T12:53:55Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T13:14:38Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "5": {
+    "id": "17:5",
+    "surah": 17,
+    "index": 5,
+    "range": [
+      41,
+      52
+    ],
+    "title": {
+      "en": "One God and the resurrection"
+    },
+    "essay": {
+      "en": "These verses press the surah's case for God's oneness against the Meccans who reject it. God has turned His proofs this way and that in the Quran so that people might take admonition, yet the same turning only drives the deniers further off. If it increases them only in aversion, why send it down? al-Tabrisi answers that its wisdom is to bind the proof and cut off every excuse, laying out the evidence that makes moral accountability sound [2].\n\nThen comes a direct argument. Were there other gods besides Him, as the idolaters say, those gods would have encroached on the Lord of the Throne. al-Mizan reads this as their seeking a way to seize the sovereignty that none but He can hold, so the very supposition collapses; He is immaculate and greatly exalted above what they say [1]. The seven heavens, the earth, and every thing celebrate His praise, though people do not understand that glorification.\n\nWhen the Prophet recites, God draws a hidden curtain, casts veils on their hearts, and a deafness into their ears. al-Tusi is careful here: this is a description and a rebuke of men who shut themselves against the truth, not God barring them from understanding, for that would be tasking them beyond their power, which He does not do [7]. God knows their real purpose in listening and their whispered slander that the Prophet is a bewitched man; by coining such epithets they only stray and cannot find a way [3].\n\nThe passage turns last to the resurrection they mock. Bones and dust brought back? Say: even stones or iron, or a creature more fantastic to your minds, the One who originated you the first time will remake you, for whoever can originate is the abler to restore [4]. They nod their heads and ask when. Say: maybe it is near, the day He calls and you respond, praising Him, thinking you lingered only a little."
+    },
+    "verses": [
+      {
+        "verse": 41,
+        "heading": {
+          "en": "The Reminder in the Quran"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "يعني و لقد ذكرنا عليا (عليه السلام) في القرآن و هو الذكر فما زادهم إلا نفورا",
+            "chain": "al-Ayyashi, from Ali ibn Abi Hamza, from Abu Jafar",
+            "text": {
+              "en": "'That they may take admonition' means: We mentioned Ali in the Quran, and he is the Reminder; yet it increased them only in aversion."
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 44,
+        "heading": {
+          "en": "All things glorify God"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "تنقض الجدر تسبيحها",
+            "chain": "Muhammad ibn Yaqub, from a number of our companions, from Sahl ibn Ziyad, from Ali ibn Asbat, from Dawud al-Raqqi, from Abu Abdillah",
+            "text": {
+              "en": "Asked about 'there is not a thing but celebrates His praise, but you do not understand their glorification,' he said: 'The crumbling of the walls is their glorification.'"
+            },
+            "source": "s19"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "نعم، أما سمعت خشب البيت كيف ينقصف ، و ذلك تسبيحه، فسبحان الله على كل حال",
+            "chain": "Masadah ibn Sadaqa, from Jafar ibn Muhammad, from his father",
+            "text": {
+              "en": "A man asked: 'Does the dry tree glorify?' He said: 'Yes. Have you not heard the timber of the house cracking? That is its glorification. So glory to God in every state.'"
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 50,
+        "heading": {
+          "en": "The creature in your breasts"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "الخلق الذي يكبر في صدوركم: الموت",
+            "chain": "in the report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "'A creature more fantastic to your minds' - the creation that looms great in your breasts is death."
+            },
+            "source": "s21"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Verse 46 ends with the deniers turning their backs 'when you mention your Lord alone.' Shia reports take this literally of reciting the Basmala aloud: the Prophet had the finest voice, and the Meccans fled when he reached 'Bismillah al-Rahman al-Rahim,' so this verse came down [20]. al-Tabari instead reads 'mention your Lord alone' as saying 'there is no god but God' during recitation, at which they withdrew in aversion; he notes a minority view that the ones who flee are the shaytans, but favors the deniers [31]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 41 to 52",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=41&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقوله: { إذاً لابتغوا إلى ذي العرش سبيلاً } أي طلبوا سبيلاً إليه ليغلبوه على ما له من الملك"
+        },
+        "gloss": "His words 'they would surely have encroached on the Lord of the Throne' mean they sought a way to Him to overcome Him for the sovereignty He holds."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 41 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الحكمة فيه إلزام الحجة وقطع المعذرة في إظهار الدلائل التي تحسن التكليف"
+        },
+        "gloss": "The wisdom in it is to bind the proof and cut off excuse by displaying the evidences that make moral responsibility sound."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 45 to 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=45&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ كيف ضربوا لك الأمثال } أي شبَّهوا لك الأشياء فقالوا مجنون وساحر وشاعر { فضلوا } بهذا القول عن الحق"
+        },
+        "gloss": "'How they coin epithets for you' means they likened you to things, calling you mad, a sorcerer, a poet; by this speech they strayed from the truth."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 49 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=49&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قل يا محمد يحييكم من خلقكم أول مرة فإن من قدر على ابتداء الشيء كان على إعادته أقدر"
+        },
+        "gloss": "Say, Muhammad: the One who created you the first time revives you, for whoever has power to originate a thing is more able to bring it back."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 46 to 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=46&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإِنما لم يجز المنع والحيلولة بينهم وبين ان يفقهوه، لأن ذلك تكليف ما لا يطاق، وذلك قبيح لا يجوز ان يفعله الله تعالى"
+        },
+        "gloss": "Barring them from understanding it is not permissible, for that would be tasking beyond capacity, an ugly thing that God does not do."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 41 to 43",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني و لقد ذكرنا عليا (عليه السلام) في القرآن و هو الذكر فما زادهم إلا نفورا"
+        },
+        "gloss": "It means We mentioned Ali in the Quran, and he is the Reminder; it increased them only in aversion."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=44&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: تنقض الجدر تسبيحها … نعم، أما سمعت خشب البيت كيف ينقصف ، و ذلك تسبيحه"
+        },
+        "gloss": "He said: the crumbling of the walls is their glorification … Yes, have you not heard the timber of the house cracking? That is its glorification."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 45 to 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=45&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهي الآية التي قال الله: { وَإِذَا ذَكَرْتَ رَبَّكَ فِي ٱلْقُرْءَانِ وَحْدَهُ } - بسم الله الرحمن الرحيم - { وَلَّوْاْ عَلَىٰ أَدْبَٰرِهِمْ نُفُوراً }"
+        },
+        "gloss": "This is the verse where God said 'when you mention your Lord alone' - that is, Bismillah al-Rahman al-Rahim - 'they turn their backs in aversion.'"
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 47 to 51",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=47&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و في رواية أبي الجارود، عن أبي جعفر (عليه السلام) قال: الخلق الذي يكبر في صدوركم: الموت"
+        },
+        "gloss": "In the report of Abu al-Jarud, from Abu Jafar: the creation that looms great in your breasts is death."
+      },
+      {
+        "id": "s31",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=17&tAyahNo=46&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وَإذَا ذَكَرْتَ رَبَّكَ فـي القُرْآنِ وَحْدَهُ } يقول: وإذا قلت: لا إله إلا الله فـي القرآن وأنت تتلوه { وَلَّوْا علـى أدْبـارِهِمْ نُفُوراً }"
+        },
+        "gloss": "'When you mention your Lord alone in the Quran' means: when you say 'there is no god but God' as you recite it, 'they turn their backs in aversion.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T13:03:26Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T13:19:35Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "6": {
+    "id": "17:6",
+    "surah": 17,
+    "index": 6,
+    "range": [
+      53,
+      60
+    ],
+    "title": {
+      "en": "The best word and false gods"
+    },
+    "essay": {
+      "en": "These verses come in the middle of a Meccan sura addressed to a Prophet under attack, and they open with an order about speech: God tells him to have His servants 'speak in a manner which is the best.' Al-Mizan reads this best word as courteous speech, carrying fine manners and free of the harshness that lets Satan sow discord [1]. Majma al-Bayan records that the words came when the believers, worn down by their persecutors, asked leave to fight [3]. Judgment, the passage insists, belongs to God: He shows mercy or punishes as He wills, and the Prophet is 'not sent to watch over them' - al-Tusi explains that he was sent to call people to faith, not to force it [5]. God knows all in the heavens and the earth, has favoured some prophets over others, and gave David the Psalms, whose praise is itself the finest speech [1].\n\nThe argument then turns on the false gods. Invoke them, the verse says: they cannot remove distress or shift it. Al-Mizan notes that a true lord must be able to bring benefit and repel harm, which these cannot [2]. Those invoked - the angels, the Messiah, Uzayr [6] - are themselves servants seeking a means to their Lord, hoping for His mercy and fearing His punishment, so they are no gods at all. A warning follows: no town escapes destruction or severe punishment before the Resurrection, a decree inscribed in the Book, which al-Tusi identifies as the Preserved Tablet [7]. God withheld the signs Quraysh demanded, because earlier peoples denied such signs and were destroyed; Thamud's she-camel was a clear sign they wronged, and signs are sent only to warn. The passage closes with the vision God showed His Prophet and 'the tree cursed in the Quran,' set as a trial. Majma al-Bayan, with the narrations, names that tree the house of Umayya [4]."
+    },
+    "verses": [
+      {
+        "verse": 53,
+        "heading": {
+          "en": "The best word"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "إن الشيطان ينزغ بينهم … أي يدخل بينهم يحثهم على المعاصي",
+            "chain": null,
+            "text": {
+              "en": "'Satan incites ill feeling between them' means that he slips in among them and drives them on to acts of disobedience."
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 55,
+        "heading": {
+          "en": "Prophets and the Psalms"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "سادة النّبييّن والمرسلين خمسة وهم أولو العزم من الرسل وعليهم دارت الرحى نوح وإبراهيم وموسى وعيسى ومحمّد",
+            "chain": "al-Kafi, from al-Sadiq",
+            "text": {
+              "en": "The masters of the prophets and messengers are five: they are the resolute messengers, on whom the mill turns - Nuh, Ibrahim, Musa, Isa, and Muhammad."
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 56,
+        "heading": {
+          "en": "Powerless gods"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كان يقول عند العلة … اللهم إنك عيرت أقواما فقلت … فيا من لا يملك كشف ضري و لا تحويله عني أحد غيره، صل على محمد و آل محمد، و اكشف ضري",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad ibn Isa, from Abd al-Rahman ibn Abi Najran and Ibn Faddal, from some of our companions, from Abu Abdillah",
+            "text": {
+              "en": "At times of illness he would say: O Allah, You reproached certain peoples, saying this verse. So, O One besides whom no other can remove my harm or shift it from me, send blessings on Muhammad and his family, and lift my harm."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 58,
+        "heading": {
+          "en": "Every town perishes"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أنه سئل عن قوله تعالى … هو الفناء بالموت",
+            "chain": "Ibn Babawayh, in mursal form, from al-Sadiq",
+            "text": {
+              "en": "He was asked about this verse and said: it is annihilation by death."
+            },
+            "source": "s15"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إنما أمة محمد من الأمم، فمن مات فقد هلك",
+            "chain": "al-Ayyashi, from Muhammad ibn Muslim, from Abu Ja'far",
+            "text": {
+              "en": "The community of Muhammad is one of the nations; whoever among them dies has perished."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 59,
+        "heading": {
+          "en": "Why signs are withheld"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "سأله قومه أن يأتيهم بآية، فنزل جبرئيل … و كنا إذا أرسلنا إلى قرية آية فلم يؤمنوا بها أهلكناهم، فلذلك أخرنا عن قومك الآيات",
+            "chain": "in the report of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "His people asked Muhammad to bring them a sign, so Gabriel came down and said: when We used to send a town a sign and they did not believe in it, We destroyed them; so We have held the signs back from your people."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 60,
+        "heading": {
+          "en": "The cursed tree"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أصبح رسول الله … يوما حاسرا حزينا، فقيل له: مالك، يا رسول الله؟ فقال: إني رأيت الليلة صبيان بني أمية يرقون على منبري هذا، فقلت: يا رب معي؟ فقال: لا، و لكن بعدك",
+            "chain": "from al-Qasim ibn Sulayman, from Abu Abdillah",
+            "text": {
+              "en": "One morning the Messenger woke stricken and grieved. Asked what ailed him, he said: this night I saw the boys of Banu Umayya climbing this pulpit of mine. I said: My Lord, in my lifetime? He said: no, but after you."
+            },
+            "source": "s17"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "أخبرني عن قول الله … الأفجران من قريش، و من بني امية",
+            "chain": "from Abu al-Tufayl",
+            "text": {
+              "en": "Ibn al-Kawwa asked him about God's words 'and the tree cursed in the Quran,' and he said: the two most iniquitous of Quraysh, and of Banu Umayya."
+            },
+            "source": "s17"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the closing verse the traditions divide. The Shia commentators, following the narrations, take the vision as the Prophet's dream of Banu Umayya climbing his pulpit and 'the tree cursed in the Quran' as that clan [4]. The Sunni reading is different: Ibn Kathir holds that the vision is the Night Journey to Jerusalem, which the deniers seized on, and that the cursed tree is the tree of Zaqqum; he mentions the Banu Umayya interpretation only to call it strange and weak [33]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 53 to 55",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=53&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي الكلمه التي هي أحسن، وهو اشتمالها على الأدب الجميل وتعريها عن الخشونة والشتم وسوء الأمر"
+        },
+        "gloss": "'That which is best' means the word that is best: it carries fine manners and is free of harshness, abuse, and ill will."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 56 to 60",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=56&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "احتجاج من وجه آخر على التوحيد ونفي ربوبية الآلهة الذين يدعون من دون الله وأنهم لا يستطيعون كشف الضر ولا تحويله عن عبادهم"
+        },
+        "gloss": "A further argument for God's oneness, denying the lordship of the gods invoked besides Him: they cannot remove harm or shift it from their worshippers."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 53 to 57",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فيقولون يا رسول الله ائذن لنا في قتالهم"
+        },
+        "gloss": "They kept saying: Messenger of God, give us leave to fight them - the occasion Majma reports for this verse, from al-Kalbi."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 58 to 60",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقالوا على هذا التأويل إن الشجرة الملعونة في القرآن هي بنو أمية"
+        },
+        "gloss": "On this reading they said: the cursed tree in the Quran is Banu Umayya."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 53 to 54",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما وكّلناك بمنعهم من الكفر بل أرسلناك داعياً لهم"
+        },
+        "gloss": "We did not entrust you with keeping them from disbelief; rather We sent you to call them."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 55 to 57",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=55&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال ابن عباس والحسن { الذين من دونه } الملائكة والمسيح وعزير"
+        },
+        "gloss": "Ibn Abbas and al-Hasan said: 'those besides Him' are the angels, the Messiah, and Uzayr."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 58 to 60",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "مسطور في الكتاب يعني في اللوح المحفوظ"
+        },
+        "gloss": "It is inscribed in the Book, that is, in the Preserved Tablet."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 53",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي يدخل بينهم يحثهم على المعاصي"
+        },
+        "gloss": "That is, he slips in among them and incites them to acts of disobedience."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 56",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=56&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فيا من لا يملك كشف ضري و لا تحويله عني أحد غيره، صل على محمد و آل محمد، و اكشف ضري"
+        },
+        "gloss": "O One besides whom none can remove my harm or shift it from me, bless Muhammad and his family and lift my harm."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 58",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو الفناء بالموت"
+        },
+        "gloss": "It is annihilation by death."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 59",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=59&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و كنا إذا أرسلنا إلى قرية آية فلم يؤمنوا بها أهلكناهم، فلذلك أخرنا عن قومك الآيات"
+        },
+        "gloss": "When We sent a town a sign and they did not believe in it, We destroyed them; so We held the signs back from your people."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 60",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=60&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إني رأيت الليلة صبيان بني أمية يرقون على منبري هذا"
+        },
+        "gloss": "This night I saw the boys of Banu Umayya climbing this pulpit of mine."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 53 to 55",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=17&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "سادة النّبييّن والمرسلين خمسة وهم أولو العزم من الرسل"
+        },
+        "gloss": "The masters of the prophets and messengers are five: they are the resolute messengers."
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 60",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=17&tAyahNo=60&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقيل المراد بالشجرة الملعونة بنو أمية، وهو غريب ضعيف"
+        },
+        "gloss": "It is said the cursed tree means Banu Umayya, but that is strange and weak."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T13:06:40Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T13:32:24Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "7": {
+    "id": "17:7",
+    "surah": 17,
+    "index": 7,
+    "range": [
+      61,
+      70
+    ],
+    "title": {
+      "en": "Iblis and the Children of Adam"
+    },
+    "essay": {
+      "en": "This passage, the seventh of the surah's twelve, returns to the story of Iblis. God told the angels to prostrate before Adam, and they all did but Iblis, who scorned bowing to one created from clay. Tusi notes that Iblis understood the command as marking Adam's rank above his own; had Adam been only a direction of prayer, the refusal would have made no sense [6]. Iblis then points to 'this one whom You have honoured above me' and vows, if he is respited until the Day of Resurrection, to lay his yoke on Adam's progeny except a few. Tabrisi glosses the verb as taking a thing entirely, the way locusts strip a field bare [3].\n\nGod answers: Begone; hell is the ample requital of all who follow him. The imperatives that come next - to incite with his voice, to rally cavalry and infantry, to share in wealth and children, and to make promises - Tusi reads not as permission granted but as a threat, in the manner of 'do what you will' [7]. And the verse itself adds that Satan promises them nothing but delusion. Over God's own servants, though, Iblis has no authority; the Lord suffices as trustee. Tabatabai takes 'My servants' to mean more than the sincere few, including all of Adam's descendants who are not led astray [1].\n\nThe surah then turns to its signs. Tabrisi notes that, after speaking of Satan and the idolaters, God argues against them through His works [4]: He drives the ships across the sea that people may seek His bounty; when distress strikes them there, everything they call upon vanishes except Him, yet once delivered to land they turn away, for man is ungrateful. A warning follows - that He could make the coastland swallow them, or loose a rain of stones, or return them to the sea and drown them, with no defender to be found.\n\nThe passage closes on honour. God has honoured the Children of Adam, carried them over land and sea, provided them good things, and preferred them above much of what He created. Tabatabai distinguishes the honouring, an intrinsic dignity given to humankind, from the preference, the added measure it enjoys over other creatures [2]."
+    },
+    "verses": [
+      {
+        "verse": 64,
+        "heading": {
+          "en": "Satan's share in wealth"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Muhammad ibn Muslim",
+            "arabic": "ما كان من مال حرام فهو شرك الشيطان - قال - و يكون مع الرجل حتى يجامع، فيكون من نطفته و نطفة الرجل إذا كان حراما",
+            "chain": "al-Ayyashi, from Muhammad ibn Muslim, from Abu Jafar",
+            "text": {
+              "en": "Whatever comes from unlawful wealth is Satan's share. And he is present with a man when he has intercourse, so the child is from his seed and the man's seed together, when it is unlawful."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 65,
+        "heading": {
+          "en": "No power over God's servants"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أنه لما قال النبي (صلى الله عليه و آله) لعلي (عليه السلام) ما قال، و أقامه للناس، صرخ إبليس صرخة، فاجتمعت له العفاريت … فقال النبي (صلى الله عليه و آله): { بِسمِ ٱللهِ ٱلرَّحْمٰنِ ٱلرَّحِيـمِ... إِنَّ عِبَادِي لَيْسَ لَكَ عَلَيْهِمْ سُلْطَانٌ }",
+            "chain": "al-Ayyashi, from Jafar ibn Muhammad al-Khuzai, from his father, from Abu Abdillah",
+            "text": {
+              "en": "When the Prophet said what he said about Ali and set him before the people, Iblis let out a cry and the demons gathered to him ... then the Prophet recited: 'As for My servants, you shall have no authority over them.'"
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 70,
+        "heading": {
+          "en": "Honouring the Children of Adam"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إن الله لا يكرم روح كافر، و لكن يكرم أرواح المؤمنين، و إنما كرامة النفس و الدم بالروح، و الرزق الطيب هو العلم",
+            "chain": "Ali ibn Ibrahim, from Jafar ibn Ahmad, from Abd al-Karim ibn Abd al-Rahim, from Muhammad ibn Ali, from Muhammad ibn al-Fudayl, from Abu Hamza al-Thumali, from Abu Jafar",
+            "text": {
+              "en": "God does not honour the soul of a disbeliever, but He honours the souls of the believers. The dignity of the self and the blood is by the soul, and the good provision is knowledge."
+            },
+            "source": "s17"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'preferred above much of what We created,' the traditions read the comparison differently. Ibn Kathir relates that this verse has been adduced as proof that the human species is superior to the angelic [37]. Tabrisi, by contrast, holds that it does not settle the matter: he does not deny that the prophets may surpass the angels, even if the angelic species as a whole is more excellent than the human species [5]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 61 to 65",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=61&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المراد بعبادي أعم من المخلصين الذين استثناهم إبليس بقوله إلا قليلا بل غير الغاوين من أتباع أبليس"
+        },
+        "gloss": "By 'My servants' is meant more than the sincere whom Iblis excepted with 'except a few'; it includes those of Adam's descendants who are not led astray."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 66 to 70",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=66&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المراد بالتكريم تخصيص الشيء بالعناية وتشريفه بما يختص به ولا يوجد في غيره وبذلك يفترق عن التفضيل فإن التكريم معنى نفسي"
+        },
+        "gloss": "The honouring means singling a thing out with special care and a dignity found in nothing else, and by this it differs from the preference, for the honouring is something intrinsic."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 61 to 65",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الاحتناك الاقتطاع من الأصل يقال احتنك فلان ما عند فلان من مال أو علم إذا استقصاه فأخذه كله واحتنك الجراد الزرع إذا أكله كله"
+        },
+        "gloss": "Ihtinak means cutting off from the root: one says a man 'took entirely' another's wealth or knowledge when he took it all, and the locusts 'devoured' the crop when they ate it all."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 66 to 69",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=66&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لمّا تقدَّم ذكر الشيطان وذكر المشركين وعبدة الأوثان احتجَّ عليهم سبحانه بدلائل التوحيد والإيمان"
+        },
+        "gloss": "Since the mention of Satan, the idolaters and the worshippers of idols had come before, God argued against them with the proofs of His oneness and of faith."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 70",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فغير منكر أن يكون الأنبياء أفضل من الملائكة وإن كان جنس الملائكة أفضل من جنس بني آدم"
+        },
+        "gloss": "It is not to be denied that the prophets may be more excellent than the angels, even if the angelic species as a whole is more excellent than the human species."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 61 to 63",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وذلك يدل على ان إِبليس فهم من ذلك الأمر تفضيله عليه، ولو كان بمنزلة القبلة لما كان لامتناعه عليه وجه"
+        },
+        "gloss": "This shows that Iblis understood from the command that Adam had been favoured over him; had Adam only been a direction of prayer, his refusal would have had no ground."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 64 to 66",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=64&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "صورته صورة الأمر والمراد به التهديد، وجرى مجرى قوله اعملوا ما شئتم"
+        },
+        "gloss": "Its form is that of a command, but a threat is intended, along the lines of His words 'do what you will.'"
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 61 to 64",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما كان من مال حرام فهو شرك الشيطان - قال - و يكون مع الرجل حتى يجامع، فيكون من نطفته و نطفة الرجل إذا كان حراما"
+        },
+        "gloss": "Whatever comes from unlawful wealth is Satan's share; and he is present with a man when he has intercourse, so the child comes from his seed and the man's when it is unlawful."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 65",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقال النبي (صلى الله عليه و آله): { بِسمِ ٱللهِ ٱلرَّحْمٰنِ ٱلرَّحِيـمِ... إِنَّ عِبَادِي لَيْسَ لَكَ عَلَيْهِمْ سُلْطَانٌ }"
+        },
+        "gloss": "Then the Prophet recited: 'In the name of God... As for My servants, you shall have no authority over them.'"
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 70",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الله لا يكرم روح كافر، و لكن يكرم أرواح المؤمنين، و إنما كرامة النفس و الدم بالروح، و الرزق الطيب هو العلم"
+        },
+        "gloss": "God does not honour the soul of a disbeliever but honours the souls of the believers; the dignity of the self and the blood is by the soul, and the good provision is knowledge."
+      },
+      {
+        "id": "s37",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 70",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=17&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد استدل بهذه الآية الكريمة على أفضلية جنس البشر على جنس الملائكة"
+        },
+        "gloss": "This noble verse has been adduced as evidence for the superiority of the human species over the angelic species."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T13:14:01Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-21T13:34:01Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "8": {
+    "id": "17:8",
+    "surah": 17,
+    "index": 8,
+    "range": [
+      71,
+      77
+    ],
+    "title": {
+      "en": "The imam and the Prophet's steadfastness"
+    },
+    "essay": {
+      "en": "The passage sets the Day of Resurrection before us: God will summon every group of people along with their imam [1]. Tabatabai reads this imam as the leader a people followed, whether one of guidance or one of misguidance, so that each follower is brought forward together with the one he took as his guide [1]. Those handed their record in the right hand read it and are not wronged in the least; Tabrisi notes that receiving the record in the right hand is the mark of acceptance and deliverance [3]. Verse 72 states the reverse: whoever was blind to the truth in this world - blind in insight, not in sight [1] - is blinder still, and further astray, in the Hereafter.\n\nThe passage then turns to the Prophet. The idolaters nearly lured him away from what was revealed, hoping he would attribute to God something other than it [2]. Tabatabai explains that the fortifying named next is divine protection, and the wording shows he neither inclined toward them nor came near it [2]; Tabrisi likewise reads it as the steadying of his heart upon the truth through prophethood and the miracles [4]. Had he leaned even a little, a doubled punishment in this life and the next would have followed [2]. Finally the idolaters nearly drove him from Mecca; had they done so, they themselves would not have remained long after him - the abiding way God has followed with the messengers before him [2]."
+    },
+    "verses": [
+      {
+        "verse": 71,
+        "heading": {
+          "en": "Summoned with the imam"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "يجيء رسول الله صلى الله عليه وآله في فرقة وعلى في فرقة والحسن في فرقة والحسين في فرقة وكل من مات بين ظهراني قوم جاؤوا معه",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad ibn Isa, from al-Husayn ibn Sa'id, from Hammad ibn Isa, from Rib'i ibn Abdillah, from al-Fudayl ibn Yasar, from Abu Ja'far",
+            "text": {
+              "en": "The Messenger of God will come amid a group, Ali amid a group, al-Hasan amid a group, al-Husayn amid a group; and everyone who died among a people comes together with him."
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n2",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "يدعى كل قوم بإمام زمانهم، و كتاب ربهم، و سنة نبيهم",
+            "chain": "al-Rida, from his fathers, from Ali ibn Abi Talib, from the Messenger of God",
+            "text": {
+              "en": "Each people will be summoned by the imam of their age, the book of their Lord, and the sunna of their prophet."
+            },
+            "source": "s14"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Fudayl",
+            "arabic": "يا فضيل، اعرف إمامك، فإنك إذا عرفت إمامك لم يضرك تقدم هذا الأمر أو تأخر، و من عرف إمامه ثم مات قبل أن يقوم صاحب هذا الأمر، كان بمنزلة من كان قاعدا في عسكره",
+            "chain": "Muhammad ibn Ya'qub, from al-Husayn ibn Muhammad, from Mu'alla ibn Muhammad, from Muhammad ibn Jumhur, from Safwan ibn Yahya, from Muhammad ibn Marwan, from al-Fudayl ibn Yasar, from Abu Abdillah",
+            "text": {
+              "en": "O Fudayl, know your imam. If you know your imam, it will not harm you whether this affair comes sooner or later. Whoever knows his imam, then dies before the one who rises appears, is like one seated in his army camp."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 72,
+        "heading": {
+          "en": "Blindness in both worlds"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Abu Basir",
+            "arabic": "ذلك الذي يسوف نفسه الحج- يعني حجة الإسلام- حتى يأتيه الموت",
+            "chain": "Muhammad ibn Ya'qub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad, from al-Husayn ibn Sa'id, from al-Qasim ibn Muhammad, from Ali ibn Abi Hamza, from Abu Basir",
+            "text": {
+              "en": "That is the one who keeps putting off his hajj - meaning the obligatory hajj - until death comes to him."
+            },
+            "source": "s15"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "من لم يدله خلق السماوات و الأرض، و اختلاف الليل و النهار، و دوران الفلك … على أن وراء ذلك أمرا أعظم منه",
+            "chain": "Ibn Babawayh, from his father, from Sa'd ibn Abdillah, from Ahmad ibn Muhammad ibn Isa, from al-Hasan ibn Mahbub, from al-Ala ibn Razin, from Muhammad ibn Muslim, from Abu Ja'far",
+            "text": {
+              "en": "Whoever is not led by the creation of the heavens and earth, the alternation of night and day, and the turning of the heavens to the fact that beyond them lies something greater - he is blind in the Hereafter and further astray."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 73,
+        "heading": {
+          "en": "What they tried to change"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "تفسيرها في علي بن أبي طالب عليه السلام: ولقد أرادوا أن يردوك عن الذي أوحينا إليك في علي، ان الله أوحى إليه أن أمرهم بولاية علي بن أبي طالب عليه السلام",
+            "chain": "Ja'far ibn Muhammad al-Fazari, from Abu Ja'far",
+            "text": {
+              "en": "Its interpretation concerns Ali ibn Abi Talib: they wanted to turn you back from what We revealed to you regarding Ali, for God had revealed to him to command them with the wilaya of Ali ibn Abi Talib."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 74,
+        "heading": {
+          "en": "Fortified against inclining"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Rida",
+            "addressee": "al-Ma'mun",
+            "arabic": "هذا مما نزل بإياك أعني و اسمعي يا جارة خاطب الله عز و جل بذلك نبيه (صلى الله عليه و آله) و أراد به أمته",
+            "chain": "Ibn Babawayh, from Tamim ibn Abdillah al-Qurashi, from his father, from Hamdan ibn Sulayman al-Naysaburi, from Ali ibn Muhammad ibn al-Jahm, from al-Rida",
+            "text": {
+              "en": "This was revealed in the manner of 'I mean you, but hear it, O neighbour': God addressed His Prophet by it but intended the community - as with 'If you associate, your work will fail,' and 'Had We not fortified you, you might have inclined toward them a little.'"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 77,
+        "heading": {
+          "en": "God's unchanging way"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هي سنة محمد (صلى الله عليه و آله) و من كان قبله من الرسل، و هو الإسلام",
+            "chain": "al-Ayyashi, from Abu al-Abbas, from Abu Abdillah",
+            "text": {
+              "en": "It is the sunna of Muhammad and of the messengers before him, and it is Islam."
+            },
+            "source": "s17"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On verse 71 the traditions read 'imam' differently. Tabatabai holds it means the leader a people followed, whether of guidance or misguidance [1], and the Shia narrations identify that leader as the Imam of each age, the Prophet and the Imams of his household [14]. Sunni readings vary: Tabari judges best the imam whom people followed in this world [22], while Ibn Kathir holds the strongest sense to be the record of deeds, since God calls the register a clear imam [29]. All agree that whom one follows here decides one's standing then."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 71 to 72",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=71&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالظاهر أن المراد بإمام كل أُناس في الآية من ائتموا به سواء كان إمام حق أو إمام باطل"
+        },
+        "gloss": "So what is apparently meant by the imam of each people in the verse is the one they followed, whether an imam of truth or an imam of falsehood."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 73 to 77",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=17&tAyahNo=73&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "التثبيت - كما يفيده السياق - هو العصمة الإلهية … دليل على أنه صلى الله عليه وآله وسلم لم يركن ولم يكد"
+        },
+        "gloss": "The fortifying, as the context indicates, is divine protection - a proof that he neither inclined toward them nor came near it."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 71 to 72",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "جعل الله إعطاء الكتاب باليمين علامة الرضا والخلاص"
+        },
+        "gloss": "God made the giving of the record in the right hand a sign of acceptance and deliverance."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 73 to 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=73&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولولا أن ثبتناك أي ثبتنا قلبك على الحق والرشد بالنبوة والعصمة والمعجزات"
+        },
+        "gloss": "'Had We not fortified you' means: had We not steadied your heart upon truth and right guidance through prophethood, protection, and the miracles."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 71",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يجيء رسول الله صلى الله عليه وآله في فرقة وعلى في فرقة والحسن في فرقة والحسين في فرقة وكل من مات بين ظهراني قوم جاؤوا معه"
+        },
+        "gloss": "The Messenger of God comes amid a group, Ali amid a group, al-Hasan amid a group, al-Husayn amid a group; and everyone who died among a people comes with him."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 71",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يدعى كل قوم بإمام زمانهم، و كتاب ربهم، و سنة نبيهم"
+        },
+        "gloss": "Each people is summoned by the imam of their age, the book of their Lord, and the sunna of their prophet."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 72",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=72&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ذلك الذي يسوف نفسه الحج- يعني حجة الإسلام- حتى يأتيه الموت"
+        },
+        "gloss": "That is the one who keeps putting off his hajj - meaning the obligatory hajj - until death comes to him."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 73 to 76",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=73&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذا مما نزل بإياك أعني و اسمعي يا جارة خاطب الله عز و جل بذلك نبيه (صلى الله عليه و آله) و أراد به أمته"
+        },
+        "gloss": "This was revealed in the manner of 'I mean you but let the neighbour hear': God addressed His Prophet by it but intended the community."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 77",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=77&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هي سنة محمد (صلى الله عليه و آله) و من كان قبله من الرسل، و هو الإسلام"
+        },
+        "gloss": "It is the sunna of Muhammad and of the messengers before him, and it is Islam."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 73",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=17&tAyahNo=73&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تفسيرها في علي بن أبي طالب عليه السلام: ولقد أرادوا أن يردوك عن الذي أوحينا إليك في علي"
+        },
+        "gloss": "Its interpretation concerns Ali ibn Abi Talib: they wanted to turn you back from what We revealed to you concerning Ali."
+      },
+      {
+        "id": "s22",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 71",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=17&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأولـى هذه الأقوال عندنا بـالصواب، قول من قال: معنى ذلك: يوم ندعو كلّ أناس بإمامهم الذي كانوا يقتدون به، ويأتـمُّون به فـي الدنـيا"
+        },
+        "gloss": "The best of these views to us is that it means: the Day We summon every people by the imam whom they followed and took as their leader in this world."
+      },
+      {
+        "id": "s29",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 71 to 72",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=17&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولكن المراد ههنا بالإمام هو كتاب الأعمال"
+        },
+        "gloss": "But what is meant here by the imam is the record of deeds."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T13:16:47Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T13:46:59Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "9": {
+    "id": "17:9",
+    "surah": 17,
+    "index": 9,
+    "range": [
+      78,
+      84
+    ],
+    "title": {
+      "en": "Prayer, the Quran, and human nature"
+    },
+    "essay": {
+      "en": "The passage opens by commanding the Prophet to establish the prayer from the sun's decline until the darkness of night, and to keep the dawn recital, which is attended by angels. Reading the sun's decline as its passing the meridian and the darkness of night as midnight, the Shia commentators take the verse to gather the times of four daily prayers, while the dawn recital names the fifth [3]. Next comes the night vigil, a devotion laid upon the Prophet alone, tied to the promise that his Lord will raise him to a praiseworthy station, which the reports read as the great intercession on the Day of Resurrection [1]. The Prophet is then taught to ask for a worthy entrance and a worthy departure and a helping authority, and to proclaim that the truth has come and falsehood has vanished. The passage turns to the Quran itself, sent down as a cure and a mercy for the faithful while it only increases the wrongdoers in loss; al-Mizan explains that it heals the diseases of the heart as medicine heals the body [2]. It closes with the human pattern of turning aside when blessed and despairing when harmed, which al-Mizan reads as the state of a man absorbed in secondary causes [2], and with the reminder that everyone acts according to his own character, while God knows best who is better guided."
+    },
+    "verses": [
+      {
+        "verse": 78,
+        "heading": {
+          "en": "The five daily prayers"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "خمس صلوات في الليل و النهار … و دلوكها: زوالها، ففيما بين دلوك الشمس إلى غسق الليل أربع صلوات، سماهن الله و بينهن و وقتهن، و غسق الليل هو انتصافه",
+            "chain": "Ali ibn Ibrahim, from his father, from Hammad ibn Isa, from Hariz, from Zurara, from Abu Jafar",
+            "text": {
+              "en": "Five prayers in the night and day. The sun's decline is its passing the meridian; between the sun's decline and the darkness of night are four prayers, which God named, set out, and timed; and the darkness of night is its midpoint."
+            },
+            "source": "s13"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن ملائكة الليل تصعد و ملائكة النهار تنزل عند طلوع الفجر، فأنا أحب أن تشهد ملائكة الليل و ملائكة النهار صلاتي",
+            "chain": "al-Tusi in his Majalis, by his chain from Ruzayq, from Abu Abdillah",
+            "text": {
+              "en": "The angels of the night ascend and the angels of the day descend at the break of dawn, so I love that the angels of the night and the angels of the day witness my prayer."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 79,
+        "heading": {
+          "en": "The praiseworthy station"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "the Prophet Muhammad",
+            "addressee": null,
+            "arabic": "لو قد قمت المقام المحمود لشفعت في أبي وأمي وعمي وأخ كان لي في الجاهلية",
+            "chain": "Ali ibn Ibrahim, from his father, from Muhammad ibn Abi Umayr, from Muawiya and Hisham, from Abu Abdillah, from the Messenger of Allah",
+            "text": {
+              "en": "Once I stand at the praiseworthy station, I will intercede for my father, my mother, my uncle, and a brother of mine from the age of ignorance."
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n4",
+            "speaker": "the Prophet Muhammad",
+            "addressee": "Ali",
+            "arabic": "يا علي، إن ربي عز و جل ملكني الشفاعة في أهل التوحيد من امتي، و حظر ذلك على من ناصبك أو ناصب ولدك من بعدك",
+            "chain": "al-Tusi in his Amali, by his chain from Anas ibn Malik, from the Messenger of Allah",
+            "text": {
+              "en": "O Ali, my Lord has granted me intercession for the people of monotheism among my community, and has withheld it from whoever bore enmity toward you or toward your children after you."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 80,
+        "heading": {
+          "en": "A worthy entrance and exit"
+        },
+        "note": {
+          "en": "Al-Qummi reports this prayer came down at the conquest of Mecca, as the Prophet was about to enter it [10]; al-Mizan instead reads it broadly, as the plea of the truthful in every entrance and exit [1]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 81,
+        "heading": {
+          "en": "Truth comes, falsehood vanishes"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إذا قام القائم أذهب دولة الباطل",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from Ali ibn al-Abbas, from al-Hasan ibn Abd al-Rahman, from Asim ibn Humayd, from Abu Hamza, from Abu Jafar",
+            "text": {
+              "en": "When the Qaim rises, he will do away with the reign of falsehood."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 82,
+        "heading": {
+          "en": "The Quran as cure"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إنما الشفاء في علم القرآن، لقوله: { مَا هُوَ شِفَآءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ } لأهله، لا شك فيه و لا مرية، فأهله أئمة الهدى",
+            "chain": "from Masada ibn Sadaqa, from Abu Abdillah",
+            "text": {
+              "en": "The healing lies only in the knowledge of the Quran, by His words 'that which is a cure and mercy' for its people, without doubt or dispute; and its people are the Imams of guidance."
+            },
+            "source": "s17"
+          },
+          {
+            "id": "n7",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "نزل جبرئيل على محمد صلى الله عليه و آله بهذه الآية { وَلاَ يَزِيدُ ٱلظَّالِمِينَ } آل محمد حقهم { إِلاَّ خَسَاراً }",
+            "chain": "Muhammad ibn Abi Hamza, raising it to Abu Jafar",
+            "text": {
+              "en": "Gabriel brought down this verse to Muhammad: 'and it increases the wrongdoers' - those who deny the family of Muhammad their right - 'only in loss.'"
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 84,
+        "heading": {
+          "en": "Everyone acts by his nature"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "النية أفضل من العمل، ألا و إن النية هي العمل، ثم قرأ قوله عز و جل { قُلْ كُلٌّ يَعْمَلُ عَلَىٰ شَاكِلَتِهِ } يعني على نيته",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Qasim ibn Muhammad, from al-Minqari, from Sufyan ibn Uyayna, from Abu Abdillah",
+            "text": {
+              "en": "Intention is better than the deed; indeed, intention is the deed. Then he recited 'Everyone acts according to his character' - meaning according to his intention."
+            },
+            "source": "s18"
+          },
+          {
+            "id": "n9",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "صَلِّ فِيهَا قَدْ رَأَيْتُهَا مَا أَنْظَفَهَا … أَ مَا تَقْرَأُ اَلْقُرْآنَ قُلْ كُلٌّ يَعْمَلُ عَلىٰ شٰاكِلَتِهِ فَرَبُّكُمْ أَعْلَمُ بِمَنْ هُوَ أَهْدىٰ سَبِيلاً صَلِّ عَلَى اَلْقِبْلَةِ وَ غَرِّبْهُمْ",
+            "chain": "from Fadala, from Hammad al-Nab, from al-Hakam ibn al-Hakam, from Abu Abdillah",
+            "text": {
+              "en": "Pray in them - I have seen them, how clean they are. Do you not read the Quran, 'Everyone acts according to his character; your Lord knows best who is better guided'? Pray toward the qibla and leave them be."
+            },
+            "source": "s47"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On verse 78 the traditions read the times differently. Following the Imams, the Shia commentators take the sun's decline as its noon passing and the darkness of night as midnight, so the verse fixes all five daily prayers and gives Zuhr and Asr, then Maghrib and Isha, shared time windows [3]. Al-Tabari records that the early authorities disagreed even over the sun's decline: some, like Ibn Masud, read it as sunset, making the verse begin with Maghrib, while others read it as the noon passing, which al-Tabari himself preferred [22]. Both traditions agree the dawn recital is the Fajr prayer, witnessed by the angels of night and day."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 78 to 81",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=17&tAyahNo=78&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولذا فسروا المقام المحمود بأنه المقام الذي يحمده عليه جميع الخلائق وهو مقام الشفاعة الكبرى له صلى الله عليه وآله وسلم يوم القيامة"
+        },
+        "gloss": "This is why they explained the praiseworthy station as the station all creatures praise: the great intercession granted to the Prophet on the Day of Resurrection."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 82 to 84",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=82&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعد القرآن شفاء والشفاء إنما يكون عن مرض دليل على أن للقلوب أحوالاً نسبة القرآن إليها نسبة الدواء الشافي إلى المرض"
+        },
+        "gloss": "Calling the Quran a cure, and a cure is only for a disease, shows that hearts have states to which the Quran stands as healing medicine stands to illness."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 78 to 81",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=78&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فصلاتا دلوك الشمس الظهر والعصر وصلاتا غسق الليل هما المغرب والعشاء الآخر والمراد بقرآن الفجر صلاة الفجر فهذه خمس صلوات"
+        },
+        "gloss": "The two prayers of the sun's decline are Zuhr and Asr, the two of the night's darkness are Maghrib and Isha, and the dawn recital is the Fajr prayer - so these are five prayers."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 79",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=79&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لو قد قمت المقام المحمود لشفعت في أبي وأمي وعمي وأخ كان لي في الجاهلية"
+        },
+        "gloss": "Once I stand at the praiseworthy station, I will intercede for my father, my mother, my uncle, and a brother of mine from the age of ignorance."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 80",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=80&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت يوم فتح مكة لما أراد رسول الله صلى الله عليه وآله دخولها"
+        },
+        "gloss": "It was revealed on the day of the conquest of Mecca, when the Messenger of Allah intended to enter it."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 78",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=78&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و دلوكها: زوالها، ففيما بين دلوك الشمس إلى غسق الليل أربع صلوات، سماهن الله و بينهن و وقتهن، و غسق الليل هو انتصافه"
+        },
+        "gloss": "Its decline is its passing the meridian; between the sun's decline and the darkness of night are four prayers, which God named, set out, and timed; and the darkness of night is its midpoint."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 79",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=79&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن ربي عز و جل ملكني الشفاعة في أهل التوحيد من امتي، و حظر ذلك على من ناصبك أو ناصب ولدك من بعدك"
+        },
+        "gloss": "My Lord has granted me intercession for the people of monotheism among my community, and has withheld it from whoever bore enmity toward you or your children after you."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 81",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=81&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا قام القائم أذهب دولة الباطل"
+        },
+        "gloss": "When the Qaim rises, he will do away with the reign of falsehood."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 82",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=82&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنما الشفاء في علم القرآن"
+        },
+        "gloss": "The healing lies only in the knowledge of the Quran."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 84",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=84&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "النية أفضل من العمل، ألا و إن النية هي العمل"
+        },
+        "gloss": "Intention is better than the deed; indeed, intention is the deed."
+      },
+      {
+        "id": "s22",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 78",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=17&tAyahNo=78&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واختلف أهل التأويـل فـي الوقت الذي عناه الله بدلوك الشمس، فقال بعضهم: هو وقت غروبها"
+        },
+        "gloss": "The exegetes differed over the time meant by the sun's decline; some of them said it is the time of its setting."
+      },
+      {
+        "id": "s47",
+        "kind": "hadith",
+        "work": "Tahdhib al-Ahkam",
+        "author": "shaykh muhammad b. al-hasan al-tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 2, hadith 84, cited at Al-Israa 84",
+        "url": "https://thaqalayn.com/book/23",
+        "grades": [
+          "صحيح"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "صَلِّ فِيهَا قَدْ رَأَيْتُهَا مَا أَنْظَفَهَا"
+        },
+        "gloss": "Pray in them - I have seen them, how clean they are!"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T13:23:42Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T13:47:12Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "10": {
+    "id": "17:10",
+    "surah": 17,
+    "index": 10,
+    "range": [
+      85,
+      93
+    ],
+    "title": {
+      "en": "The Spirit and Meccan demands"
+    },
+    "essay": {
+      "en": "The passage opens with a question put to the Prophet about the Spirit, and the answer that the Spirit belongs to the command of his Lord, and that people have been given only a little knowledge [2]. Commentators read the Spirit in more than one way: the soul that gives the body life, which the questioners were left without an answer about as a test; the Quran itself; or a mighty creation [2][4]. Tabatabai reads it as belonging to God's command, the word 'Be' by which a thing comes to exist without intermediate causes, so the Spirit is of the realm of the command rather than of gradual making [1].\n\nThe next verses turn to the Prophet himself. God could take away what He has revealed, and no one could recover it for him against God, were it not for a mercy from his Lord, whose grace to him has been great [2]. Then comes the challenge: were all humans and jinn to combine, they could not bring the like of this Quran, even helping one another [2]. And though God has set out every kind of parable in it, most people answer only with ingratitude.\n\nThe passage closes with the demands of the Meccan chiefs [3]: make a spring gush from the ground, own a garden with rivers running through it, drop the sky in fragments, bring God and the angels into view, hold a house of gold, or climb into the sky and bring down a book they can read. Tabatabai notes that some demands lie beyond any created power and some are impossible in themselves, such as bringing God and the angels, and that they addressed them to the Prophet as though the unseen power were his own [1]. The reply sets this straight: Immaculate is my Lord; am I anything but a human apostle? As a man he holds none of this power, and as an apostle his task is only to deliver [1]."
+    },
+    "verses": [
+      {
+        "verse": 85,
+        "heading": {
+          "en": "Question about the Spirit"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "خلق أعظم من جبرئيل (عليه السلام) و ميكائيل، كان مع رسول الله (صلى الله عليه و آله)، و هو مع الأئمة، و هو من الملكوت",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from Muhammad ibn Isa, from Yunus, from Ibn Muskan, from Abi Basir",
+            "text": {
+              "en": "A creation greater than Jibril and Mikail. It was with the Messenger of God, and it is with the Imams, and it is of the malakut."
+            },
+            "source": "s10"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "جبرئيل (عليه السلام) من الملائكة، و الروح غير جبرئيل … و الروح غير الملائكة",
+            "chain": "Muhammad ibn Yahya, from Muhammad ibn al-Husayn, from Ali ibn Asbat, from al-Husayn ibn Abi al-Ala, from Sad al-Iskaf",
+            "text": {
+              "en": "Jibril is one of the angels, and the Spirit is other than Jibril. The Spirit is other than the angels."
+            },
+            "source": "s10"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir and Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن الله تبارك و تعالى أحد صمد، و الصمد: الشيء الذي ليس له جوف، فإنما الروح خلق من خلقه، له بصر و قوة و تأييد، يجعله في قلوب الرسل و المؤمنين",
+            "chain": "al-Ayyashi, from Zurara and Humran, from Abi Jafar and Abi Abdillah",
+            "text": {
+              "en": "God is One, Eternal; the Eternal is that which has no cavity. The Spirit is a creation of His creation; it has sight, power and support. He places it in the hearts of the messengers and the believers."
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 86,
+        "heading": {
+          "en": "Taking back the revelation"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Rida",
+            "addressee": "Sulayman al-Marwazi",
+            "arabic": "و قد يعلم ما لا يريده أبدا، و ذلك قوله عز و جل: { وَلَئِن شِئْنَا لَنَذْهَبَنَّ بِٱلَّذِي أَوْحَيْنَا إِلَيْكَ } فهو يعلم كيف يذهب به و هو لا يذهب به أبدا",
+            "chain": "from al-Hasan ibn Muhammad al-Nawfali, on the debate of Sulayman al-Marwazi with al-Rida",
+            "text": {
+              "en": "He may know what He never wills. That is His saying, 'If We wish, We would take away what We have revealed to you.' He knows how He would take it away, yet He will never take it away."
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 87,
+        "heading": {
+          "en": "His grace upon the Prophet"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "يريد حيث جعلك سيد ولد آدم و ختم بك النبيين و أعطاك المقام المحمود",
+            "chain": "al-Tabrisi in Majma al-Bayan, from Ibn Abbas",
+            "text": {
+              "en": "He means: since He made you the master of the children of Adam, sealed the prophets with you, and gave you the Praised Station."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 88,
+        "heading": {
+          "en": "The Quran's standing challenge"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "إِنَّ اللَّهَ تَبَارَكَ وَتَعَالَى أَنْزَلَ هَذَا الْقُرْآنَ بِهَذِهِ الْحُرُوفِ الَّتِي يَتَدَاوَلُهَا جَمِيعُ الْعَرَبِ ثُمَّ قَالَ: «قُلْ لَئِنِ اجْتَمَعَتِ الإِنْسُ وَالْجِنُّ عَلى أَنْ يَأْتُوا بِمِثْلِ هذَا الْقُرْآنِ لا يَأْتُونَ بِمِثْلِهِ وَلَوْ كانَ بَعْضُهُمْ لِبَعْضٍ ظَهِيراً»",
+            "chain": "Ali ibn al-Hasan ibn Ali ibn Fadhdhal, from his father, from Abi al-Hasan Ali ibn Musa al-Rida",
+            "text": {
+              "en": "God revealed this Quran with these very letters that all the Arabs use among themselves. Then He said: 'Say, should all humans and jinn rally to bring the like of this Quran, they will not bring its like, even if they assisted one another.'"
+            },
+            "source": "s44"
+          }
+        ]
+      },
+      {
+        "verse": 89,
+        "heading": {
+          "en": "Most refuse with ingratitude"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "نزل جبرئيل بهذه الآية هكذا: { فَأَبَىٰ أَكْثَرُ ٱلنَّاسِ } بولاية علي { إِلاَّ كُفُوراً }",
+            "chain": "al-Ayyashi, from Abi Hamza, from Abi Jafar",
+            "text": {
+              "en": "Jibril brought this verse down thus: 'but most people, concerning the guardianship of Ali, refused all but ingratitude.'"
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 90,
+        "heading": {
+          "en": "The Meccans' demands"
+        },
+        "note": {
+          "en": "These demands were made in Mecca before the migration by Abdullah ibn Abi Umayya, the brother of Umm Salama [9]."
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "حتى تفجر لنا من الأرض ينبوعاً يعني عيناً أو تكون لك جنة يعني بستاناً من نخيل وعنب … يقول من الله إلى عبد الله بن أبي أمية أن محمداً صادق وإني أنا بعثته ويجيء معه أربعة من الملائكة يشهدون أن الله هو كتبه",
+            "chain": "in the report of Abu al-Jarud, from Abi Jafar",
+            "text": {
+              "en": "'A spring' means a flowing spring, and 'a garden' means an orchard of date palms and vines. The book they demand would be a message from God to Abdullah ibn Abi Umayya that Muhammad is truthful and that He sent him, brought by four angels who witness that God wrote it."
+            },
+            "source": "s9"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Sunni and Shia commentators agree that the question about the Spirit reached the Prophet through the Jews and that its inner reality was left with God. They differ on what it is. al-Tabari records that the questioners were a group of Jews, and al-Qurtubi judges that leaving the Spirit undefined is the sound view, since God calls it a matter of His command [18][30]. The Shia narrations are more specific: reporting from the Imams, they call the Spirit a creation greater than Jibril and Mikail, distinct from the angels, which accompanied the Prophet and remains with the Imams [10]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 85 to 93",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=85&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أما قوله: { بشراً } فليرد به اقتراحهم عليه أن يأتي بهذه الآيات عن قدرته في نفسه، وأما قوله: { رسولاً } فليرد به اقتراح ايتائها عن قدرة مكتسبة من ربه"
+        },
+        "gloss": "The word 'human' answers their demand that he bring these signs by his own power, and the word 'apostle' answers the demand that he bring them by a power gained from his Lord."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 85 to 89",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اختلف في الروح المسؤول عنه على أقوال أحدها: أنهم سألوه عن الروح الذي هو في بدن الإنسان ما هو ولم يجبهم"
+        },
+        "gloss": "They differed about the Spirit asked about, into several views; one is that they asked about the spirit in the human body, and he did not answer them."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 90 to 93",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=90&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اجتمعوا عند الكعبة وقال بعضهم ابعثوا إلى محمد فكلِّموه وخاصموه"
+        },
+        "gloss": "They gathered at the Kaba, and some of them said: send for Muhammad, speak with him and dispute with him."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 85 to 87",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واختلفوا في الروح الذي سألوا عنه. فقال ابن عباس: هو جبرائيل … وقيل: هو روح الحيوان، وهو الاظهر في الكلام"
+        },
+        "gloss": "They differed about the Spirit they asked about: Ibn Abbas said it is Jibril; and it was said it is the animal spirit, which is the more apparent meaning."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 90 to 93",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=90&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت في عبد الله بن أبي أمية أخي أم سلمة رحمة الله عليها وذلك أنه قال هذا لرسول الله بمكة قبل الهجرة"
+        },
+        "gloss": "It was revealed about Abdullah ibn Abi Umayya, brother of Umm Salama, and that is because he said this to the Messenger in Mecca before the migration."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 85",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "خلق أعظم من جبرئيل (عليه السلام) و ميكائيل، كان مع رسول الله (صلى الله عليه و آله)، و هو مع الأئمة، و هو من الملكوت"
+        },
+        "gloss": "A creation greater than Jibril and Mikail; it was with the Messenger of God, and it is with the Imams, and it is of the malakut."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 86",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=86&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و قد يعلم ما لا يريده أبدا … فهو يعلم كيف يذهب به و هو لا يذهب به أبدا"
+        },
+        "gloss": "He may know what He never wills; He knows how He would take it away, yet He will never take it away."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 87",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=87&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يريد حيث جعلك سيد ولد آدم و ختم بك النبيين و أعطاك المقام المحمود"
+        },
+        "gloss": "He means: since He made you the master of the children of Adam, sealed the prophets with you, and gave you the Praised Station."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 89",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=89&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزل جبرئيل بهذه الآية هكذا: { فَأَبَىٰ أَكْثَرُ ٱلنَّاسِ } بولاية علي { إِلاَّ كُفُوراً }"
+        },
+        "gloss": "Jibril brought this verse down thus: 'but most people, concerning the guardianship of Ali, refused all but ingratitude.'"
+      },
+      {
+        "id": "s18",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 85",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=17&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وذُكِر أن الذين سألوا رسول الله صلى الله عليه وسلم عن الروح، فنزلت هذه الآية بـمسألتهم إياه عنها، كانوا قوماً من الـيهود"
+        },
+        "gloss": "It is mentioned that those who asked the Messenger about the Spirit, at whose asking this verse was revealed, were a group of Jews."
+      },
+      {
+        "id": "s30",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 85",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=17&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والصحيح الإبهام لقوله: «قل الروح من أمر ربي»"
+        },
+        "gloss": "The sound view is to leave it undefined, because of His saying, 'the Spirit is of my Lord's command.'"
+      },
+      {
+        "id": "s44",
+        "kind": "hadith",
+        "work": "Uyun akhbar al-Rida",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 26, cited at Al-Israa 88",
+        "url": "https://thaqalayn.com/book/4",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إِنَّ اللَّهَ تَبَارَكَ وَتَعَالَى أَنْزَلَ هَذَا الْقُرْآنَ بِهَذِهِ الْحُرُوفِ الَّتِي يَتَدَاوَلُهَا جَمِيعُ الْعَرَبِ"
+        },
+        "gloss": "God revealed this Quran with these very letters that all the Arabs use among themselves."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T13:28:35Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T14:01:17Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "11": {
+    "id": "17:11",
+    "surah": 17,
+    "index": 11,
+    "range": [
+      94,
+      100
+    ],
+    "title": {
+      "en": "A human messenger, not an angel"
+    },
+    "essay": {
+      "en": "The passage opens by naming the one thing that held people back from faith when guidance reached them: their objection that God would not send a human being as His apostle. The reply comes in a run of three verses that each close on the word 'apostle.' Tabatabai reads the second verse as an argument from the nature of earthly life: because human life is bound to the earth, its guidance can descend only through revelation from heaven, and had angels themselves dwelt on earth and lived there, God would have sent down to them an angel as apostle [1]. The next verse answers Quraysh over who could vouch for his mission; Tusi notes it answers their demand to know who would witness that he is God's messenger, and the reply is that God suffices, for He knows His servants inwardly and outwardly [4]. The tone then hardens. Whoever God guides is guided, and those He leaves astray have no guardian besides Him; Tabrisi explains that they are dragged on their faces to the Fire as a person is dragged in this world when he is utterly humiliated [3]. Their punishment is the requital for denying that bones and dust could be raised anew, though the One who created the heavens and the earth can create their like. The passage closes by exposing the greed behind their demands: even if they held the treasuries of their Lord's mercy they would hoard them for fear of spending, for man is very niggardly [6]."
+    },
+    "verses": [
+      {
+        "verse": 94,
+        "heading": {
+          "en": "A human messenger"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قالوا: إن الجن كانوا في الأرض قبلنا فبعث الله إليهم ملكا، فلو أراد الله أن يبعث إلينا لبعث ملكا من الملائكة",
+            "chain": "al-Ayyashi, from Abd al-Hamid ibn Abi al-Daylam, from Abu Abdillah",
+            "text": {
+              "en": "They said: the jinn were on the earth before us, and God sent them an angel; so had God wished to send to us, He would have sent an angel from among the angels."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 95,
+        "heading": {
+          "en": "If angels dwelt on earth"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "يا محمد إني رسول الله إليك أخبرك أن تكون ملكاً رسولاً أحب إليك أو تكون عبداً رسولاً … فقال جبرائيل: بل كن عبداً رسولاً، فقال رسول الله صلى الله عليه وآله: بل أكون عبداً رسولاً",
+            "chain": "Ali ibn Ibrahim, from his father, from Ahmad ibn al-Nadr, from Amr ibn Shimr, from Jabir, from Abu Ja'far",
+            "text": {
+              "en": "An angel came to the Prophet and said: I am God's messenger to you; do you prefer to be a king and messenger, or a servant and messenger? Gabriel said: Rather be a servant and messenger. So the Messenger of God said: Rather I will be a servant and messenger."
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 97,
+        "heading": {
+          "en": "Guidance and the Fire"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam Ali ibn al-Husayn",
+            "addressee": null,
+            "arabic": "إن في جهنم وادياً يقال له سعير إذا خبت جهنم فتح سعيرها وهو قوله: كلما خبت زدناهم سعيراً أي كلما انطفت",
+            "chain": "Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Sayf ibn Umayra, raising it to Ali ibn al-Husayn",
+            "text": {
+              "en": "In Hell there is a valley called Sa'ir; whenever Hell subsides, its Sa'ir is opened. That is His words, 'Whenever it subsides, We shall intensify the blaze for them,' meaning whenever it dies down."
+            },
+            "source": "s7"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On verse 97 the traditions read the guidance and misguidance differently. Tusi holds that God's leading a person astray means He names him astray and withholds help because of the man's own bad choice, so no ally he takes can lift that name from him [5]. Razi records that his own companions cited this verse for their doctrine that God decrees guidance and misguidance outright, while the Mu'tazila read the leading-astray as withholding grace or barring the path to Paradise [33]. The Shia reading keeps the person's free choice as the ground of his ruin."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 94 to 100",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=94&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالبشر القاطنون في الأرض لا غنى لهم عن وحي سماوي بنزول ملك رسول إليهم ويختص بذلك نبيهم"
+        },
+        "gloss": "The human beings who dwell on the earth cannot do without a heavenly revelation by the descent of an angel-messenger to them, and it is their prophet who is singled out for that."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 96 to 100",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=96&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي يسحبون على وجوههم إلى النار كما يفعل في الدنيا بمن يبالغ في إهانته وتعذيبه"
+        },
+        "gloss": "That is, they are dragged on their faces to the Fire, as is done in this world to one whom people go to great lengths to humiliate and torment."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 94 to 96",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=94&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإِنما قال هذا جوابا لهم حين قالوا: من يشهد لك بأنك رسول الله؟ فقال الله له { قل كفى بالله شهيداً }"
+        },
+        "gloss": "He said this only in answer to them when they asked: who witnesses for you that you are God's messenger? So God told him: Say, God suffices as witness."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 97 to 99",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=97&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "من يحكم الله بضلاله وتسميته ضالاً بسوء اختياره للضلالة فإِنه لا ينفعه ولاية وليّ له"
+        },
+        "gloss": "Whom God rules to be astray and names astray because of his own bad choice of misguidance; no guardianship of any ally benefits him."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 100",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=100&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فاعلمهم الله أَنهم لو ملكوا خزائن الله، لأمسكوا بخلا بها وشحّاً خشية نفادها"
+        },
+        "gloss": "God informed them that had they possessed God's treasuries, they would have withheld them out of miserliness and greed, fearing they would run out."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 94 to 97",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=17&tAyahNo=94&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أخبرك أن تكون ملكاً رسولاً أحب إليك أو تكون عبداً رسولاً"
+        },
+        "gloss": "I tell you: do you prefer to be a king and messenger, or to be a servant and messenger?"
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 94 to 95",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=94&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الجن كانوا في الأرض قبلنا فبعث الله إليهم ملكا، فلو أراد الله أن يبعث إلينا لبعث ملكا من الملائكة"
+        },
+        "gloss": "The jinn were on the earth before us, and God sent them an angel; so had God wished to send to us, He would have sent an angel from among the angels."
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 97 to 98",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=17&tAyahNo=97&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واحتج أصحابنا بهذه الآية على صحة مذهبهم في الهدى والضلال والمعتزلة حملوا هذا الإضلال تارة على الإضلال عن طريق الجنة وتارة على منع الألطاف"
+        },
+        "gloss": "Our companions used this verse as proof for their doctrine on guidance and misguidance; the Mu'tazila interpreted this leading-astray sometimes as misguidance from the path of Paradise, and sometimes as the withholding of graces."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T13:35:53Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-21T14:00:04Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  },
+  "12": {
+    "id": "17:12",
+    "surah": 17,
+    "index": 12,
+    "range": [
+      101,
+      111
+    ],
+    "title": {
+      "en": "Nine signs and God's names"
+    },
+    "essay": {
+      "en": "These verses close Surah al-Israa by turning from the Prophet's opponents to a mirror of them in the past. Certainly We gave Moses nine manifest signs, yet Pharaoh dismissed him as bewitched, much as the Meccans turn from the Quran and demand other signs. Commentators differ over which nine are meant; among the lists reported are the hand, the staff, the tongue, the sea, the flood, the locusts, the lice, the frogs and the blood [2]. Moses answers that Pharaoh already knows these came only from the Lord of the heavens and the earth; a reading traced to Ali gives the verb as 'I certainly know' rather than 'you know', so that it is Moses who affirms his own knowledge [4].\n\nPharaoh wanted to drive them from the land, so God drowned him and all who were with him and settled the Children of Israel in his place. When the occasion of the other promise comes, God will gather them in mixed company.\n\nThe passage then returns to the Quran itself. With the truth it was sent down, and the Prophet is only a bearer of good news and a warner. It was sent in separate parts, not all at once, across some twenty years, so people could receive it gradually [3]. Those given knowledge before it fall on their faces in prostration when it is recited, weeping, and it increases them in humility.\n\nSay: invoke 'Allah' or invoke 'the All-beneficent'; whichever Name is used, all the Best Names are His. Tabatabai calls this among the Quran's most radiant verses: a name is only a path to the One named, so calling by many names remains the worship of one God, against the idolaters who scatter worship among names [1]. The occasion, Tusi records, was that the polytheists heard the Prophet name God as both Allah and al-Rahman and supposed he called on two gods [8]. The surah ends as it began, in glorification: praise Allah who has taken no son and has no partner, and magnify Him."
+    },
+    "verses": [
+      {
+        "verse": 101,
+        "heading": {
+          "en": "Moses and the nine signs"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Kazim",
+            "addressee": "a group of Jews",
+            "arabic": "قالوا: أخبرنا عن الآيات التسع التي أوتيها موسى بن عمران. قلت: العصا، و إخراجه يده من جيبه بيضاء، و الجراد، و القمل، و الضفادع، و الدم، و رفع الطور، و المن و السلوى آية واحدة، و فلق البحر. قالوا: صدقت",
+            "chain": "Abdullah ibn Jafar al-Himyari, from al-Hasan ibn Zarif, from Mamar, from al-Rida, from his father Musa ibn Jafar",
+            "text": {
+              "en": "They said: tell us about the nine signs given to Moses son of Imran. I said: the staff, his bringing his hand white from his bosom, the locusts, the lice, the frogs, the blood, the raising of the Mount, manna and quails as one sign, and the splitting of the sea. They said: you have spoken truly."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 107,
+        "heading": {
+          "en": "Prostration of those who know"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "سئل أبو عبد الله (عليه السلام) عمن بجبهته علة لا يقدر على السجود عليها. قال: يضع ذقنه على الأرض، إن الله عز و جل يقول: { يَخِرُّونَ لِلأَذْقَانِ سُجَّداً }",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, by his chain",
+            "text": {
+              "en": "He was asked about someone with an ailment on his forehead who cannot prostrate on it. He said: he places his chin on the ground, for God, Mighty and Majestic, says, 'they fall down on their faces in prostration.'"
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 110,
+        "heading": {
+          "en": "Calling God by His names"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قلت لأبي عبد الله (عليه السلام): على الإمام أن يسمع من خلفه و إن كثروا؟ فقال: ليقرأ قراءة وسطا، يقول الله تبارك و تعالى: { وَلاَ تَجْهَرْ بِصَلاَتِكَ وَلاَ تُخَافِتْ بِهَا }",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from Muhammad ibn Isa, from Yunus ibn Abd al-Rahman, from Abdullah ibn Sinan",
+            "text": {
+              "en": "I asked him: must the prayer-leader make those behind him hear, even if they are many? He said: let him recite in a middle voice; God, blessed and exalted, says, 'Be neither loud in your prayer, nor murmur it.'"
+            },
+            "source": "s19"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "تفسيرها: و لا تجهر بولاية علي (عليه السلام) و لا بما أكرمته به حتى آمرك بذلك { وَلاَ تُخَافِتْ بِهَا } يعني و لا تكتمها عليا (عليه السلام) و أعلمه بما أكرمته به",
+            "chain": "from Abu Hamza al-Thumali, from Abu Jafar",
+            "text": {
+              "en": "Its interpretation is: do not proclaim aloud the wilaya of Ali and the honor I have given him until I command you; and 'do not murmur it' means do not conceal it from Ali, but inform him of the honor I have given him."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 111,
+        "heading": {
+          "en": "No son, no partner"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قال رجل عنده الله أكبر فقال الله أكبر من أيّ شيء فقال من كلّ شيءٍ فقال عليه السلام حدّدته فقال الرجل كيف أقول قال قل الله أكبر من أن يوصف",
+            "chain": null,
+            "text": {
+              "en": "A man said in his presence, 'God is greater.' He asked: greater than what? The man said: than everything. He said: you have limited Him. The man asked: how should I say it? He said: say, God is greater than to be described."
+            },
+            "source": "s23"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the command 'Be neither loud in your prayer, nor murmur it', the traditions read the verse differently. The Imams take it as a standing measure for reciting the ritual prayer: al-Sadiq directs a middle recitation and says a prayer-leader should recite moderately so those behind him can hear [19]. Ibn Kathir instead frames it as a Meccan occasion: the Prophet would raise his voice, the polytheists would curse the Quran, so he kept a middle course, and after the migration to Medina this lapsed and he could do as he wished [35]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Israa 101 to 111",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=17&AyahNo=101&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والآية من غرر الآيات القرآنية تنير حقيقة ما يراه القرآن الكريم من توحيد الذات وتوحيد العبادة قبال ما يراه الوثنية من توحيد الذات وتشريك العبادة."
+        },
+        "gloss": "This verse is among the Quran's most radiant, illuminating its doctrine of oneness of essence and oneness of worship, against the idolaters who hold oneness of essence yet scatter worship."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 101 to 105",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=101&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واختلف في هذه الآيات التسع فقيل هي يد موسى وعصاه ولسانه والبحر والطوفان والجراد والقمل والضفادع والدم عن ابن عباس والضحاك"
+        },
+        "gloss": "The commentators differed over these nine signs; it is said they are Moses's hand, his staff, his tongue, the sea, the flood, the locusts, the lice, the frogs and the blood, on the authority of Ibn Abbas and al-Dahhak."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 106 to 111",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=17&tAyahNo=106&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأنزلناه متفرقاً لم ننزله جميعاً إذ كان بين أوله وآخره نيف وعشرين سنة"
+        },
+        "gloss": "We sent it down in separate parts, not all at once, for between its beginning and its end were some twenty-odd years."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 101 to 102",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=101&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ورويت هذه القراءة عن أمير المؤمنين (ع)"
+        },
+        "gloss": "This reading, with 'I certainly know', is related from the Commander of the Faithful (peace be upon him)."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 110 to 111",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=17&tAyahNo=110&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لان مشركي قومه لما سمعوا النبي صلى الله عليه وسلم يدعو الله تارة بأنه الله وتارة بأنه الرحمن، فظنوا أنه يدعو إِلهين"
+        },
+        "gloss": "because when the polytheists of his people heard the Prophet call upon God sometimes as 'Allah' and sometimes as 'al-Rahman', they supposed he was calling upon two gods."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 101 to 102",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=101&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قلت: العصا، و إخراجه يده من جيبه بيضاء، و الجراد، و القمل، و الضفادع، و الدم، و رفع الطور، و المن و السلوى آية واحدة، و فلق البحر. قالوا: صدقت"
+        },
+        "gloss": "I said: the staff, his bringing his hand white from his bosom, the locusts, the lice, the frogs, the blood, the raising of the Mount, manna and quails as one sign, and the splitting of the sea. They said: you have spoken truly."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 103 to 109",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=103&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يضع ذقنه على الأرض، إن الله عز و جل يقول: { يَخِرُّونَ لِلأَذْقَانِ سُجَّداً }"
+        },
+        "gloss": "He places his chin on the ground, for God, Mighty and Majestic, says, 'they fall down on their faces in prostration.'"
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 110",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=17&tAyahNo=110&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ليقرأ قراءة وسطا، يقول الله تبارك و تعالى: { وَلاَ تَجْهَرْ بِصَلاَتِكَ وَلاَ تُخَافِتْ بِهَا }"
+        },
+        "gloss": "Let him recite in a middle voice; God, blessed and exalted, says, 'Be neither loud in your prayer, nor murmur it.'"
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Israa 111",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=17&tAyahNo=111&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قل الله أكبر من أن يوصف"
+        },
+        "gloss": "Say: God is greater than to be described."
+      },
+      {
+        "id": "s35",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Israa 110 to 111",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=17&tAyahNo=110&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان إذا صلى بأصحابه، رفع صوته بالقرآن، فلما سمع ذلك المشركون، سبوا القرآن … فلما هاجر إلى المدينة، سقط ذلك، يفعل أي ذلك شاء"
+        },
+        "gloss": "When he prayed with his companions he would raise his voice with the Quran, and when the polytheists heard it they cursed the Quran … and when he migrated to Medina this lapsed, and he could do whichever he wished."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-21T13:41:18Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-21T14:16:01Z",
+      "assembled_at": "2026-09-21T14:30:02Z"
+    }
+  }
+}

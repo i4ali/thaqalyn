@@ -1,0 +1,1129 @@
+{
+  "1": {
+    "id": "21:1",
+    "surah": 21,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the commentary, the reckoning that has drawn near is the Day of Resurrection."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Majma al-Bayan glosses the reckoning that has drawn near as the Day of Resurrection, called near because everything still to come counts as near, so the statement matches the commentary."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this reckoning is the Day of Resurrection, called near because all that is coming is near"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 3,
+        "prompt": {
+          "en": "\"'Those who wronged' are those who wronged the Family of Muhammad of their right.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Reading the wrongdoers who whisper together, Imam al-Sadiq glossed 'those who wronged' as those who wronged the Family of Muhammad of their right."
+        },
+        "anchor": {
+          "where": "verses.3.narrations.n1",
+          "quote": "'Those who wronged' are those who wronged the Family of Muhammad of their right"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 5,
+        "prompt": {
+          "en": "How does the essay describe the deniers' shifting charges of muddled dreams, fabrication, and poetry against the Prophet?"
+        },
+        "options": [
+          {
+            "en": "As bewildered men unable to settle on one accusation"
+          },
+          {
+            "en": "As a single agreed charge of sorcery"
+          },
+          {
+            "en": "As a sincere request for a proof"
+          },
+          {
+            "en": "As careful reasoning from scripture"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Majma reads the move from muddled dreams to fabrication to poetry as the speech of bewildered men who cannot settle on any one accusation against the Prophet."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Majma sees here the speech of bewildered men who cannot settle on any one accusation"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 7,
+        "prompt": {
+          "en": "For al-Mizan the sole thing that sets a prophet apart is that ____ is given to him, a gift not owed to every person."
+        },
+        "options": [
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "immortality"
+          },
+          {
+            "en": "revelation"
+          },
+          {
+            "en": "kingship"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "For al-Mizan nothing marks a prophet off from other men except that revelation is given to him, a gift not owed to every person, so the missing word is revelation."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "For al-Mizan the sole thing that sets a prophet apart is that revelation is given to him, a gift not owed to every person"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the perspectives, what does al-Tabari record even though he reads the command as sending the pagans to the People of the Book?"
+        },
+        "options": [
+          {
+            "en": "That the earlier messengers were angels, not men"
+          },
+          {
+            "en": "That the reckoning of the Hour has already passed"
+          },
+          {
+            "en": "That no destroyed town was ever sent a sign"
+          },
+          {
+            "en": "Ali's saying that they are the People of the Reminder"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Although al-Tabari reads the People of the Reminder as the people of the Torah and Gospel, the perspectives note that he still records Ali's saying that they are the People of the Reminder."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "yet he too records Ali's saying that they are the People of the Reminder"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T01:26:42Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T01:27:29Z",
+      "assembled_at": "2026-09-22T19:11:47Z"
+    }
+  },
+  "2": {
+    "id": "21:2",
+    "surah": 21,
+    "index": 2,
+    "range": [
+      11,
+      29
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 13,
+        "prompt": {
+          "en": "According to the essay, what did the mocking voice call the fleeing people to return to?"
+        },
+        "options": [
+          {
+            "en": "Their gods and idols"
+          },
+          {
+            "en": "Their crops and fields"
+          },
+          {
+            "en": "The luxury and homes they had enjoyed"
+          },
+          {
+            "en": "The battlefield they fled"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says a mocking voice called the fleeing people back to the luxury and the homes they had enjoyed, so that they might be questioned."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a mocking voice called after them to return to the luxury and the homes they had enjoyed"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 18,
+        "prompt": {
+          "en": "\"There is no falsehood that stands up against the truth but that the truth overcomes it.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that no falsehood stands against the truth without the truth overcoming it, glossing the verse that God hurls the truth against falsehood."
+        },
+        "anchor": {
+          "where": "verses.18.narrations.n2",
+          "quote": "There is no falsehood that stands up against the truth but that the truth overcomes it"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "In the essay, what name is given to the argument that the heavens and earth would fall apart if there were other gods?"
+        },
+        "options": [
+          {
+            "en": "The argument of mutual hindrance"
+          },
+          {
+            "en": "The argument from design"
+          },
+          {
+            "en": "The argument of first cause"
+          },
+          {
+            "en": "The argument of contingency"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay calls it the argument of mutual hindrance, on which the theologians rested divine oneness: two gods would make the heavens and earth fall apart."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this is the argument of mutual hindrance on which the theologians rested divine oneness"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 23,
+        "prompt": {
+          "en": "He is not questioned because He does nothing but what is ____ and right."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "wisdom"
+          },
+          {
+            "en": "power"
+          },
+          {
+            "en": "justice"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir explains that God is not questioned because He does nothing but what is wisdom and right, so no act of His deserves objection."
+        },
+        "anchor": {
+          "where": "verses.23.narrations.n4",
+          "quote": "He is not questioned because He does nothing but what is wisdom and right"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 29,
+        "prompt": {
+          "en": "According to the passage, the warning 'I am a god besides Him' is read of one who falsely claims to be a prophet."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note reads the warning of one who claims to be an imam while he is not, not a prophet, so the statement is false."
+        },
+        "anchor": {
+          "where": "verses.29.note",
+          "quote": "the one who claims to be an imam while he is not"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T01:28:29Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:02:06Z",
+      "assembled_at": "2026-09-22T19:11:47Z"
+    }
+  },
+  "3": {
+    "id": "21:3",
+    "surah": 21,
+    "index": 3,
+    "range": [
+      30,
+      41
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 30,
+        "prompt": {
+          "en": "How do the Shia narrations settle the sense of the heavens and earth having been 'interwoven'?"
+        },
+        "options": [
+          {
+            "en": "The sky withheld its rain and the earth its growth"
+          },
+          {
+            "en": "Firm mountains were set so the earth would not shake"
+          },
+          {
+            "en": "The sky is a preserved roof kept from eavesdropping devils"
+          },
+          {
+            "en": "Every living thing was made out of water"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narrations reject that the two were physically stuck together; al-Baqir explains the sky sent down no rain and the earth grew no seed until God opened each with rain and plants."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the sky was closed and sent down no rain and the earth was closed and grew no seed, until God opened each"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 30,
+        "prompt": {
+          "en": "The taste of water is the taste of ____."
+        },
+        "options": [
+          {
+            "en": "faith"
+          },
+          {
+            "en": "life"
+          },
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "growth"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about water, Imam al-Sadiq glossed the verse by saying the taste of water is the taste of life, tying it to God making every living thing from water."
+        },
+        "anchor": {
+          "where": "verses.30.narrations.n2",
+          "quote": "The taste of water is the taste of life"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 35,
+        "prompt": {
+          "en": "\"God says, We will test you with good and ill. The good is health and wealth; the ill is sickness and poverty.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "When his brethren said one like him should not speak of being poorly, Imam Ali answered that God tests with good and ill: health and wealth the good, sickness and poverty the ill."
+        },
+        "anchor": {
+          "where": "verses.35.narrations.n4",
+          "quote": "God says, We will test you with good and ill. The good is health and wealth; the ill is sickness and poverty"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 37,
+        "prompt": {
+          "en": "The essay explains 'Man is a creature of haste' as meaning man demands things so quickly that he seems made of haste itself."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses the phrase through al-Mizan: man is so quick to demand that he seems made of haste itself, so the statement matches the passage."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Mizan reads this as saying man is so quick to demand that he seems made of haste itself"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 41,
+        "prompt": {
+          "en": "According to the essay's close, how does the passage console the Prophet?"
+        },
+        "options": [
+          {
+            "en": "Earlier apostles were mocked, and the mockery closed in on the mockers"
+          },
+          {
+            "en": "The idolaters hoped his death would rid them of his call"
+          },
+          {
+            "en": "The Fire will overtake the faithless suddenly and dumbfound them"
+          },
+          {
+            "en": "Firm mountains keep the earth from shaking beneath them"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay ends by consoling the Prophet that apostles before him were mocked too, and that the mockery closed in on those who ridiculed them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "apostles before him were mocked too, and the mockery closed in on those who mocked"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T01:32:53Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:01:59Z",
+      "assembled_at": "2026-09-22T19:11:47Z"
+    }
+  },
+  "4": {
+    "id": "21:4",
+    "surah": 21,
+    "index": 4,
+    "range": [
+      42,
+      50
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 42,
+        "prompt": {
+          "en": "According to the essay, how does the passage open its answer to the mockers who dared God to hasten His punishment?"
+        },
+        "options": [
+          {
+            "en": "By turning their own challenge back on them"
+          },
+          {
+            "en": "By recounting how Moses received the Torah"
+          },
+          {
+            "en": "By promising the mockers relief if they repent"
+          },
+          {
+            "en": "By naming each idol the people worshipped"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the passage opens by turning the mockers' challenge back on them, asking who could guard them night and day from the All-beneficent's punishment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "It opens by turning their challenge back on them: who could guard them, night and day, from the All-beneficent"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 44,
+        "prompt": {
+          "en": "'We diminish it' means by the death of the ____."
+        },
+        "options": [
+          {
+            "en": "young"
+          },
+          {
+            "en": "wealthy"
+          },
+          {
+            "en": "learned"
+          },
+          {
+            "en": "believers"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq glossed 'We diminish it' as the death of the learned, adding that the land's diminishing is the departure of its scholar."
+        },
+        "anchor": {
+          "where": "verses.44.narrations.n1",
+          "quote": "'We diminish it' means by the death of the learned"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 45,
+        "prompt": {
+          "en": "According to the essay, when the warning by revelation fails to guide the deaf, where does the deficiency lie?"
+        },
+        "options": [
+          {
+            "en": "In the messenger who delivered it"
+          },
+          {
+            "en": "In the hearers, not in the message"
+          },
+          {
+            "en": "In the wording of the revelation"
+          },
+          {
+            "en": "In the timing of the warning"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the revelation is sound, so when it fails to guide the deaf the deficiency lies in the hearers, not in the message itself."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the message is sound divine revelation, and if it fails to guide, the deficiency lies in the hearers, not in it"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 47,
+        "prompt": {
+          "en": "\"The people of idolatry will have no scales set up for them and no records unrolled; they are only herded to Hell in throngs.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali ibn al-Husayn"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam Ali ibn al-Husayn said the idolaters get no scales or records and are herded to Hell, while the scales are set up only for the people of Islam."
+        },
+        "anchor": {
+          "where": "verses.47.narrations.n2",
+          "quote": "The people of idolatry will have no scales set up for them and no records unrolled; they are only herded to Hell in throngs"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 47,
+        "prompt": {
+          "en": "According to the passage, the Shia narrations identify the just scales only with justice itself, not with the prophets and Imams."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations identify the scales with both the prophets and Imams and with justice itself, so limiting them to justice alone is false."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "They identify them with the prophets and Imams, the standard by which deeds are judged, as well as with justice itself"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:06:20Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:07:05Z",
+      "assembled_at": "2026-09-22T19:11:47Z"
+    }
+  },
+  "5": {
+    "id": "21:5",
+    "surah": 21,
+    "index": 5,
+    "range": [
+      51,
+      75
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 51,
+        "prompt": {
+          "en": "According to the essay, what is the probity (rushd) that God gave Abraham before?"
+        },
+        "options": [
+          {
+            "en": "His skill in breaking the idols"
+          },
+          {
+            "en": "His victory over the fire they lit"
+          },
+          {
+            "en": "His innate grasp of God's oneness and the true realities"
+          },
+          {
+            "en": "The blessed land given to all nations"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay opens by saying God gave Abraham his probity, his rushd, before: his innate grasp of God's oneness and the other true realities, not any later feat."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "his innate grasp of God's oneness and the other true realities"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 57,
+        "prompt": {
+          "en": "Commentators say he spoke this ____, and only one man overheard and reported it."
+        },
+        "options": [
+          {
+            "en": "loudly"
+          },
+          {
+            "en": "quietly"
+          },
+          {
+            "en": "boastfully"
+          },
+          {
+            "en": "in public"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Abraham voiced his vow against the idols quietly, so that only one man overheard it and later reported it to the people."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Commentators say he spoke this quietly, and only one man overheard and reported it"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 63,
+        "prompt": {
+          "en": "'The biggest did not do it, and Abraham did not lie. He only said: Ask them, if they can speak.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about Abraham's reply, Imam al-Sadiq explained he did not lie: he bound it to 'if they can speak,' so if they stayed silent the biggest did nothing."
+        },
+        "anchor": {
+          "where": "verses.63.narrations.n2",
+          "quote": "The biggest did not do it, and Abraham did not lie. He only said, 'Ask them, if they can speak'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 69,
+        "prompt": {
+          "en": "In the passage, Abraham called on God by the right of Muhammad and his family before the fire was made cool for him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says that when Abraham was cast into the fire he asked God by the right of Muhammad and his family to save him, and God made it cool and safe."
+        },
+        "anchor": {
+          "where": "verses.69.narrations.n4",
+          "quote": "When Abraham was cast into the fire he said: O God, I ask You by the right of Muhammad and the family of Muhammad to deliver me from it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 72,
+        "prompt": {
+          "en": "According to the essay, how is Jacob, given to Abraham as a grandson, described?"
+        },
+        "options": [
+          {
+            "en": "A reward for breaking the idols"
+          },
+          {
+            "en": "Compensation for the fire he endured"
+          },
+          {
+            "en": "In answer to Abraham's own prayer"
+          },
+          {
+            "en": "An unasked gift"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay calls Jacob, given as a grandson, an unasked gift, granted to Abraham beyond what he sought along with Isaac."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "grants him Isaac and, as a grandson, Jacob, an unasked gift"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:06:58Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:07:36Z",
+      "assembled_at": "2026-09-22T19:11:47Z"
+    }
+  },
+  "6": {
+    "id": "21:6",
+    "surah": 21,
+    "index": 6,
+    "range": [
+      76,
+      93
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 76,
+        "prompt": {
+          "en": "According to the essay, what was the great agony that Noah was delivered from?"
+        },
+        "options": [
+          {
+            "en": "The long affliction he bore from his people"
+          },
+          {
+            "en": "The drowning that later took the deniers"
+          },
+          {
+            "en": "The loss of his family in the flood"
+          },
+          {
+            "en": "The judgement over the strayed sheep"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses the great agony as the long affliction Noah bore from his people; he was delivered with his household while the deniers were drowned."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "delivered with his household from the great agony, the long affliction he bore from his people"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 80,
+        "prompt": {
+          "en": "\"God revealed to David: You are an excellent servant, but that you eat from the public treasury and do nothing with your hands.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Explaining the coats of mail, Imam al-Sadiq told how God rebuked David for eating from the treasury, so David wept and God softened iron for him."
+        },
+        "anchor": {
+          "where": "verses.80.narrations.n3",
+          "quote": "God revealed to David: You are an excellent servant, but that you eat from the public treasury and do nothing with your hands."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 81,
+        "prompt": {
+          "en": "The wind was made to run at Solomon's command toward the blessed land, ____ and Syria"
+        },
+        "options": [
+          {
+            "en": "Egypt"
+          },
+          {
+            "en": "Babylon"
+          },
+          {
+            "en": "Jerusalem"
+          },
+          {
+            "en": "Mecca"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay identifies the blessed land toward which Solomon's wind blew as Jerusalem and Syria, so Jerusalem completes the phrase."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The wind was made to run at Solomon's command toward the blessed land, Jerusalem and Syria"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 87,
+        "prompt": {
+          "en": "How does Imam al-Rida explain the man of the fish's thought that God would not put him to hardship?"
+        },
+        "options": [
+          {
+            "en": "That he believed God had no power over him"
+          },
+          {
+            "en": "That he was certain God would not straiten his provision"
+          },
+          {
+            "en": "That he feared he would drown"
+          },
+          {
+            "en": "That he doubted his prayer would be answered"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Rida says the thought meant Jonah was certain God would not straiten his provision; had he thought God powerless over him, he would have disbelieved."
+        },
+        "anchor": {
+          "where": "verses.87.narrations.n5",
+          "quote": "His thought means he was certain We would not straiten his provision, as in God's words about straitening someone's provision. Had he thought that God had no power over him, he would have disbelieved."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 78,
+        "prompt": {
+          "en": "The Shia sources and Tabari record different rulings for David and Solomon in the strayed sheep case."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Both preserve the same two rulings: David assigned the sheep to the crop's owner and Solomon awarded him their milk, wool and offspring; they differ only on the frame."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the traditions agree on the substance: David assigned the sheep to the owner of the crop, and Solomon awarded him instead their milk, wool and offspring for that year"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:10:38Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:11:28Z",
+      "assembled_at": "2026-09-22T19:11:47Z"
+    }
+  },
+  "7": {
+    "id": "21:7",
+    "surah": 21,
+    "index": 7,
+    "range": [
+      94,
+      112
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 94,
+        "prompt": {
+          "en": "According to the essay, what happens to the effort of one who does righteous deeds as a believer?"
+        },
+        "options": [
+          {
+            "en": "It is recorded and not wasted"
+          },
+          {
+            "en": "It is weighed against his sins"
+          },
+          {
+            "en": "It is erased when the towns are destroyed"
+          },
+          {
+            "en": "It earns him no reward until the Hour"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens with a promise that the believer's righteous effort is recorded and not wasted, because Allah appreciates what he does."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "whoever does righteous deeds as a believer will find his effort recorded and not wasted, for Allah appreciates it"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 101,
+        "prompt": {
+          "en": "\"Allah will raise our Shia on the Day of Resurrection ... their faces shining white, their failings covered, their fears stilled.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Glossing those already promised the best reward, Imam al-Sadiq said Allah raises the Shia with shining faces, their failings covered and their fears stilled."
+        },
+        "anchor": {
+          "where": "verses.101.narrations.n4",
+          "quote": "Allah will raise our Shia on the Day of Resurrection, despite the sins and faults in them, their faces shining white"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 103,
+        "prompt": {
+          "en": "The passage says those already promised the best reward are kept far from the Fire and are not grieved by the Great Terror."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says those given the best reward are kept far from the Fire, secure in what they desire, and the Great Terror does not grieve them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "They are kept far from the Fire, not hearing even its faint hiss, secure amid what their souls desire, and the Great Terror does not grieve them as the angels receive them"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 104,
+        "prompt": {
+          "en": "In the air is an angel named ____, set over three hundred thousand angels who record the deeds of the servants."
+        },
+        "options": [
+          {
+            "en": "al-Sijill"
+          },
+          {
+            "en": "Israfil"
+          },
+          {
+            "en": "Ismail"
+          },
+          {
+            "en": "Gabriel"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration names Ismail as the angel set over three hundred thousand angels who record the deeds of the servants, with al-Sijill copying it yearly."
+        },
+        "anchor": {
+          "where": "verses.104.narrations.n6",
+          "quote": "In the air is an angel named Ismail, set over three hundred thousand angels who record the deeds of the servants"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 95,
+        "prompt": {
+          "en": "According to the perspectives, what do Shia narrations take the barred return of the destroyed towns as evidence for?"
+        },
+        "options": [
+          {
+            "en": "The raj'a, the return of some before the resurrection"
+          },
+          {
+            "en": "That Gog and Magog are let loose"
+          },
+          {
+            "en": "That the heaven will be rolled up like a scroll"
+          },
+          {
+            "en": "That idols are fuel for hell"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives note that Shia narrations read the denied return of the destroyed towns as evidence for the raj'a, the return of some before the resurrection."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia narrations take the denial of return as evidence for the raj'a, the return of some before the resurrection"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T19:10:09Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T19:10:59Z",
+      "assembled_at": "2026-09-22T19:11:47Z"
+    }
+  }
+}

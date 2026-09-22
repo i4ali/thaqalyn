@@ -1,0 +1,968 @@
+{
+  "1": {
+    "id": "15:1",
+    "surah": 15,
+    "index": 1,
+    "range": [
+      1,
+      15
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 2,
+        "prompt": {
+          "en": "The essay reads the faithless's wish to have been Muslims as a bitter regret that comes only after this life has closed."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses this wish as bitter regret that arrives only once this life has ended, so the statement restates the commentary and is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a wish of bitter regret that comes only after this life has closed"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"When the Day of Resurrection comes, a caller from God will proclaim: none enters Paradise but a Muslim.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the faithless's wish, Imam al-Sadiq described a caller on the Day of Resurrection proclaiming that none enters Paradise but a Muslim."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n1",
+          "quote": "When the Day of Resurrection comes, a caller from God will proclaim: none enters Paradise but a Muslim"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "How does Tabatabai read God's command 'Leave them to eat and enjoy'?"
+        },
+        "options": [
+          {
+            "en": "As a command to stop arguing with men who will soon know"
+          },
+          {
+            "en": "As permission for the faithless to sin without limit"
+          },
+          {
+            "en": "As a promise of worldly reward for patience"
+          },
+          {
+            "en": "As a threat of destruction at a fixed term"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the command as telling the Prophet to stop arguing with men who will soon know the truth for themselves."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "which Tabatabai reads as a command to stop arguing with men who will soon know for themselves"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 3,
+        "prompt": {
+          "en": "Following desire bars one from the ____, and long hope makes one forget the Hereafter."
+        },
+        "options": [
+          {
+            "en": "truth"
+          },
+          {
+            "en": "world"
+          },
+          {
+            "en": "prayer"
+          },
+          {
+            "en": "people"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam Ali warns that following desire bars one from the truth, while long hope makes one forget the Hereafter."
+        },
+        "anchor": {
+          "where": "verses.3.narrations.n3",
+          "quote": "Following desire bars one from the truth, and long hope makes one forget the Hereafter"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "How does Tabatabai read verse 12's threading of the Reminder through the hearts of the guilty?"
+        },
+        "options": [
+          {
+            "en": "As a sign the guilty may still come to believe"
+          },
+          {
+            "en": "As an initial compulsion that leaves them without blame"
+          },
+          {
+            "en": "As misguidance that is just recompense for what those men chose"
+          },
+          {
+            "en": "As punishment aimed at every nation before its term"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Tabatabai ties the threading only to men already steeped in crime, making it a just recompense for their choice, not a compulsion that removes their blame."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "misguidance as a just recompense for what they chose, never an initial compulsion that would leave them without blame"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-21T22:55:10Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-21T22:55:59Z",
+      "assembled_at": "2026-09-21T23:09:10Z"
+    }
+  },
+  "2": {
+    "id": "15:2",
+    "surah": 15,
+    "index": 2,
+    "range": [
+      16,
+      25
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 16,
+        "prompt": {
+          "en": "According to the essay, what are the 'houses in the sky' that God adorned for the onlookers?"
+        },
+        "options": [
+          {
+            "en": "The gates of paradise"
+          },
+          {
+            "en": "The clouds that carry rain"
+          },
+          {
+            "en": "The mansions of the sun and moon"
+          },
+          {
+            "en": "The thrones of the angels"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the houses in the sky are the mansions of the sun and moon, which some read as the stars themselves, adorned for the onlookers."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God has set 'houses in the sky' - the mansions of the sun and moon, which some read as the stars themselves"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 19,
+        "prompt": {
+          "en": "\"God grew in the mountains gold, silver, gems, brass, copper, iron, lead, kohl, arsenic and the like - things that are sold only by weight.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Glossing what God grew in the earth, Imam al-Baqir named the metals and gems of the mountains, from gold and silver on, that are sold only by weight."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n2",
+          "quote": "God grew in the mountains gold, silver, gems, brass, copper, iron, lead, kohl, arsenic and the like - things that are sold only by weight"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 21,
+        "prompt": {
+          "en": "Tabatabai reads these sources as a ____ above the bounded, measured world we see"
+        },
+        "options": [
+          {
+            "en": "reality"
+          },
+          {
+            "en": "power"
+          },
+          {
+            "en": "measure"
+          },
+          {
+            "en": "treasury"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabatabai does not read the sources as a thing within the measured world, but as a reality that stands above the bounded order we can see."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads these sources as a reality above the bounded, measured world we see"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the narration, what do some of God's fertilizing winds do to the clouds?"
+        },
+        "options": [
+          {
+            "en": "Scatter the clouds so no rain falls"
+          },
+          {
+            "en": "Carry the souls of the dead to the Throne"
+          },
+          {
+            "en": "Dry the earth once the rain has fallen"
+          },
+          {
+            "en": "Squeeze the clouds so they rain by God's leave"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The narration divides God's winds by task: some rouse the clouds, some hold them between sky and earth, and some squeeze them so they rain by God's leave."
+        },
+        "anchor": {
+          "where": "verses.22.narrations.n4",
+          "quote": "Some rouse the clouds for rain, some hold the clouds between sky and earth, and some squeeze the clouds so they rain by God's leave"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 24,
+        "prompt": {
+          "en": "According to the passage, Sunni tafsir settles on a single meaning for 'the predecessors and the successors': those who pressed to the front in the prayer rows."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage says Sunni tafsir gathers many senses, not one: the dead and living, the first and last of creation, past nations and Muhammad's community, and the prayer rows. So a single meaning is wrong."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Sunni tafsir gathers many senses - the dead and the living, the first and last of creation, past nations and Muhammad's community, even those who pressed to the front or hung back in the prayer rows"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-21T22:58:47Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-21T22:59:29Z",
+      "assembled_at": "2026-09-21T23:09:10Z"
+    }
+  },
+  "3": {
+    "id": "15:3",
+    "surah": 15,
+    "index": 3,
+    "range": [
+      26,
+      44
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the essay, what lesson do the shifting words for clay teach about how a person is raised?"
+        },
+        "options": [
+          {
+            "en": "That he is raised by his origin and lineage"
+          },
+          {
+            "en": "That he is raised by the purity of his clay"
+          },
+          {
+            "en": "That he is raised by his religion, knowledge, and righteous deeds"
+          },
+          {
+            "en": "That he is raised above the jinn by his fire"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reads the changing words for clay as stages of one making, and draws the lesson that a person is raised not by his origin but by his religion, knowledge, and righteous deeds."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a person is raised not by his origin but by his religion, his knowledge, and his righteous deeds"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 29,
+        "prompt": {
+          "en": "\"The spirit moves like the wind. It is only called ruh because its name is drawn from rih, the wind.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Explaining the breathed spirit, Imam al-Sadiq said it moves like the wind, is called ruh from rih, and was joined to God only because He chose it above all other spirits."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n1",
+          "quote": "The spirit moves like the wind. It is only called ruh because its name is drawn from rih, the wind."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 31,
+        "prompt": {
+          "en": "The commentary teaches that Iblis was never one of the angels but belonged instead to the jinn."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage holds that Iblis was one of the jinn, not an angel, since he was of the jinn and so defied his Lord's command."
+        },
+        "anchor": {
+          "where": "verses.31.note",
+          "quote": "Iblis was not an angel but one of the jinn"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 42,
+        "prompt": {
+          "en": "God said: you have no ____ to make them enter either paradise or hell."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "command"
+          },
+          {
+            "en": "knowledge"
+          },
+          {
+            "en": "power"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Glossing that Iblis has no authority over God's servants, Imam al-Baqir said he has no power to make anyone enter either paradise or hell."
+        },
+        "anchor": {
+          "where": "verses.42.narrations.n5",
+          "quote": "you have no power to make them enter either paradise or hell"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 44,
+        "prompt": {
+          "en": "How does the essay's close describe hell in relation to Iblis and those who follow him?"
+        },
+        "options": [
+          {
+            "en": "Hell, with its seven gates, is the tryst of them all"
+          },
+          {
+            "en": "Hell is emptied for the dedicated servants"
+          },
+          {
+            "en": "Hell has one gate reserved for Iblis alone"
+          },
+          {
+            "en": "Hell is the reward of the perverse but not of Iblis"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay closes on God's answer that Iblis and the perverse who follow him share one end, for hell, with its seven gates, is the tryst of them all."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "hell, with its seven gates, is the tryst of them all"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-21T22:59:03Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-21T22:59:40Z",
+      "assembled_at": "2026-09-21T23:09:10Z"
+    }
+  },
+  "4": {
+    "id": "15:4",
+    "surah": 15,
+    "index": 4,
+    "range": [
+      45,
+      60
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 45,
+        "prompt": {
+          "en": "In the essay, to whom does the passage turn after the gates of Hell close on the followers of Iblis?"
+        },
+        "options": [
+          {
+            "en": "The guests of Abraham"
+          },
+          {
+            "en": "The Godwary, amid gardens and springs"
+          },
+          {
+            "en": "The family of Lot"
+          },
+          {
+            "en": "The Qadariyya"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay opens by turning from the closed gates of Hell to the Godwary, who are amid gardens and springs and are welcomed in peace and safety."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the passage turns to the Godwary, who are amid gardens and springs"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 46,
+        "prompt": {
+          "en": "\"Godwariness is a set of docile mounts whose riders were mounted upon them and handed their reins, and they carried them to the Garden.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "The Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam Ali pictures godwariness as docile mounts that carry their riders to the Garden, whose gates open for them and who are told to enter in peace."
+        },
+        "anchor": {
+          "where": "verses.46.narrations.n1",
+          "quote": "Godwariness is a set of docile mounts whose riders were mounted upon them and handed their reins, and they carried them to the Garden."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 46,
+        "prompt": {
+          "en": "Tabrisi reads this greeting as safety from every ____ and security against ever being expelled."
+        },
+        "options": [
+          {
+            "en": "affliction"
+          },
+          {
+            "en": "hunger"
+          },
+          {
+            "en": "judgment"
+          },
+          {
+            "en": "delay"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabrisi glosses the welcome as safety from every affliction and as security against the Godwary ever being expelled from the Garden."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi reads this greeting as safety from every affliction and security against ever being expelled"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 60,
+        "prompt": {
+          "en": "In Imam al-Sadiq's narration about the Qadariyya, who does he insist ordained that Lot's wife would remain behind?"
+        },
+        "options": [
+          {
+            "en": "God, blessed and exalted"
+          },
+          {
+            "en": "Lot's wife herself"
+          },
+          {
+            "en": "The messengers who came"
+          },
+          {
+            "en": "The people of Lot"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration rebukes the Qadariyya, insisting that none but God, blessed and exalted, ordained that Lot's wife would be among those left behind."
+        },
+        "anchor": {
+          "where": "verses.60.narrations.n6",
+          "quote": "who ordained it but God, blessed and exalted?"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 47,
+        "prompt": {
+          "en": "According to the perspectives, Tabatabai concludes that verse 47 was revealed as its occasion of revelation about particular named persons."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "This is false, since Tabatabai treats both the Shia and Sunni reports as application and correspondence, not the verse's occasion of revelation about particular persons."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tabatabai treats both as cases of application and correspondence, not the verse's occasion of revelation, since the flow of the verses does not fit its being sent down about particular persons"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-21T23:05:38Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-21T23:06:11Z",
+      "assembled_at": "2026-09-21T23:09:10Z"
+    }
+  },
+  "5": {
+    "id": "15:5",
+    "surah": 15,
+    "index": 5,
+    "range": [
+      61,
+      79
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 63,
+        "prompt": {
+          "en": "According to the passage, what do the messengers tell Lot they have brought?"
+        },
+        "options": [
+          {
+            "en": "A warning to flee before dawn"
+          },
+          {
+            "en": "The punishment his people used to doubt"
+          },
+          {
+            "en": "Glad tidings of a son"
+          },
+          {
+            "en": "A test of his hospitality"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The messengers answer that they bring what Lot's people used to doubt, the very punishment he had warned them of, and they assure him they speak truly."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "They answer that they bring what his people used to doubt, the punishment he had warned of, and that they speak truly"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 65,
+        "prompt": {
+          "en": "\"God sent four angels for the destruction of Lot's people: Jibril, Mika'il, Israfil and Karubil.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the angels sent to Lot, Imam al-Sadiq names the four, Jibril, Mika'il, Israfil and Karubil, sent for the destruction of Lot's people."
+        },
+        "anchor": {
+          "where": "verses.65.narrations.n1",
+          "quote": "God sent four angels for the destruction of Lot's people: Jibril, Mika'il, Israfil and Karubil"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 72,
+        "prompt": {
+          "en": "The oath \"By your life\" is sworn upon the life of the Prophet Muhammad."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reads \"By your life\" as an oath sworn upon the Prophet Muhammad's life, which al-Qummi counts a distinction the Prophet holds over the other prophets."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The words 'By your life' then break in as an oath sworn upon the Prophet Muhammad's life, which al-Qummi counts a distinction he holds over the other prophets"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 75,
+        "prompt": {
+          "en": "The percipient (al-mutawassimun) are those who read a thing's reality from its ____ marks"
+        },
+        "options": [
+          {
+            "en": "outward"
+          },
+          {
+            "en": "hidden"
+          },
+          {
+            "en": "spoken"
+          },
+          {
+            "en": "written"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note glosses al-mutawassimun, the percipient, as those who read a thing's reality from its outward marks, not from hidden or spoken signs."
+        },
+        "anchor": {
+          "where": "verses.75.note",
+          "quote": "The percipient (al-mutawassimun) are those who read a thing's reality from its outward marks"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 75,
+        "prompt": {
+          "en": "How do the Shia narrations in the passage identify \"the percipient\"?"
+        },
+        "options": [
+          {
+            "en": "The angels sent against Lot's people"
+          },
+          {
+            "en": "Lot and the family he rescued"
+          },
+          {
+            "en": "The Imams, from the Prophet and his line"
+          },
+          {
+            "en": "All who pass by the ruined city"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The Shia narrations fix the percipient in the Imams; the reports name the Prophet, then Amir al-Muminin, then the Imams of his line, making recognition of faith a mark of the Imamate."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia narrations take the percipient to be the Imams themselves: the reports name the Prophet, then Amir al-Muminin, then the Imams of his line"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-21T23:04:07Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-21T23:04:51Z",
+      "assembled_at": "2026-09-21T23:09:10Z"
+    }
+  },
+  "6": {
+    "id": "15:6",
+    "surah": 15,
+    "index": 6,
+    "range": [
+      80,
+      99
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 80,
+        "prompt": {
+          "en": "Whom does Tabatabai identify the inhabitants of Hijr as?"
+        },
+        "options": [
+          {
+            "en": "Thamud, the people of Salih"
+          },
+          {
+            "en": "Ad, the people of Hud"
+          },
+          {
+            "en": "The People of the Book"
+          },
+          {
+            "en": "The five deriders of Quraysh"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay names the last ruined nation, the inhabitants of Hijr, and Tabatabai identifies them as Thamud, the people of Salih, who denied the apostles and were seized at dawn."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "It names the last of them, the inhabitants of Hijr, whom Tabatabai identifies as Thamud, the people of Salih"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 85,
+        "prompt": {
+          "en": "\"It is pardon without reproach.\" Who said this of a graceful forbearance?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Prophet Muhammad"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Concerning the command to forbear with a graceful forbearance, Imam al-Rida glossed it as pardon without reproach, forgiveness offered without any rebuke to the wrongdoer."
+        },
+        "anchor": {
+          "where": "verses.85.narrations.n1",
+          "quote": "concerning 'So forbear with a graceful forbearance,' said: it is pardon without reproach"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 88,
+        "prompt": {
+          "en": "Whoever casts his eye at what is in another's hands has much ____ and no relief for his rage."
+        },
+        "options": [
+          {
+            "en": "worry"
+          },
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "comfort"
+          },
+          {
+            "en": "honor"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The Prophet warns that whoever casts his eye at what others hold gains much worry and no relief for his rage, so the faithful should not covet."
+        },
+        "anchor": {
+          "where": "verses.88.narrations.n4",
+          "quote": "Whoever casts his eye at what is in another's hands has much worry and no relief for his rage."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 90,
+        "prompt": {
+          "en": "According to the Shia reports, who split into bands and made portions of the Quran?"
+        },
+        "options": [
+          {
+            "en": "The deriders God promised to suffice against"
+          },
+          {
+            "en": "Quraysh, who divided it and did not compose it as revealed"
+          },
+          {
+            "en": "Those who set up another deity beside God"
+          },
+          {
+            "en": "Those seized by the Cry at dawn"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The Shia reports from al-Baqir and al-Sadiq identify those who split into bands as Quraysh, who divided the Quran and did not compose it as God revealed it."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia reports, transmitted from al-Baqir and al-Sadiq, identify them as Quraysh, who divided the Quran and did not compose it as God revealed it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 94,
+        "prompt": {
+          "en": "According to Tabatabai, the later command to fight cancels the command to forbear gracefully."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay says Tabatabai holds this graceful forbearance is not cancelled by the later command to fight; it stays in force."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai holds that this graceful forbearance is not cancelled by the later command to fight; it stays in force"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-21T23:08:06Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-21T23:08:47Z",
+      "assembled_at": "2026-09-21T23:09:10Z"
+    }
+  }
+}

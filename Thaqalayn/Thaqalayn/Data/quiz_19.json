@@ -1,0 +1,968 @@
+{
+  "1": {
+    "id": "19:1",
+    "surah": 19,
+    "index": 1,
+    "range": [
+      1,
+      15
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the commentary, keeping a supplication hidden is recommended and stands nearer to being answered."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Retelling Zechariah's secret cry, the passage says a concealed supplication is what is recommended and is nearer to being answered, so hiding a prayer is presented as the better way."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "concealing a supplication is what is recommended and is nearer to being answered"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "The passage says Zechariah's request for an heir divides the commentators. What do they divide over?"
+        },
+        "options": [
+          {
+            "en": "Whether the inheritance meant is property or prophethood"
+          },
+          {
+            "en": "Whether Zechariah truly feared his kinsmen"
+          },
+          {
+            "en": "Whether John was born before or after his father"
+          },
+          {
+            "en": "Whether Zechariah's wife was ever truly barren"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage says the request for an heir divides the commentators: one reading takes the inheritance as property, the other as prophethood, so the split is over what kind of inheritance Zechariah meant."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The request for 'an heir who may inherit from me' divides the commentators"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 7,
+        "prompt": {
+          "en": "\"That is Yahya ibn Zakariyya, who had no namesake before him; and likewise Husayn had no namesake before him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Glossing the son with no namesake, Imam al-Sadiq pairs Yahya ibn Zakariyya with Husayn, saying each had no namesake before him and the sky wept over none but the two."
+        },
+        "anchor": {
+          "where": "verses.7.narrations.n3",
+          "quote": "That is Yahya ibn Zakariyya, who had no namesake before him; and likewise Husayn had no namesake before him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 13,
+        "prompt": {
+          "en": "When John would say, 'O my Lord,' God, mighty and majestic, would answer, '____, O John.'"
+        },
+        "options": [
+          {
+            "en": "I hear you"
+          },
+          {
+            "en": "Be patient now"
+          },
+          {
+            "en": "Here I am"
+          },
+          {
+            "en": "Ask what you wish"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Explaining God's tenderness to John, the narration says that whenever John called 'O my Lord,' God answered 'Here I am, O John,' which is how that tenderness showed itself."
+        },
+        "anchor": {
+          "where": "verses.13.narrations.n5",
+          "quote": "When John would say, 'O my Lord,' God, mighty and majestic, would answer, 'Here I am, O John.'"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 15,
+        "prompt": {
+          "en": "According to the passage, why is John given peace on the day he is born, the day he dies, and the day he is raised alive?"
+        },
+        "options": [
+          {
+            "en": "They mark the days of John's prophethood"
+          },
+          {
+            "en": "They are the times a person is most desolate"
+          },
+          {
+            "en": "They are the holiest days of the year"
+          },
+          {
+            "en": "They are when he held to the Book"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage explains that a person is most desolate at birth, at death, and at resurrection, so peace is placed on John precisely on those three days."
+        },
+        "anchor": {
+          "where": "verses.15.narrations.n6",
+          "quote": "The most desolate this creature ever is comes in three places"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T00:36:43Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T00:37:17Z",
+      "assembled_at": "2026-09-22T01:11:20Z"
+    }
+  },
+  "2": {
+    "id": "19:2",
+    "surah": 19,
+    "index": 2,
+    "range": [
+      16,
+      40
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the note, how did the Spirit that came to Mary appear to her?"
+        },
+        "options": [
+          {
+            "en": "As a well-proportioned man while remaining an angel"
+          },
+          {
+            "en": "As a fully human being he had become"
+          },
+          {
+            "en": "As a shaft of light with no form"
+          },
+          {
+            "en": "As an old and frail traveler"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note corrects the verse's image of an incarnate human: the Spirit is Gabriel, who took the form of a well-made man while remaining an angel in himself and never actually becoming a human being."
+        },
+        "anchor": {
+          "where": "verses.17.note",
+          "quote": "He appeared to her in the form of a sound, well-made man while remaining an angel in himself, not becoming a human being"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 26,
+        "prompt": {
+          "en": "She was told to eat, drink, and vow a fast of ____."
+        },
+        "options": [
+          {
+            "en": "gratitude"
+          },
+          {
+            "en": "seclusion"
+          },
+          {
+            "en": "silence"
+          },
+          {
+            "en": "three full days"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The verse has Mary vow a fast and not speak; the passage explains that her fast was silence, a guarding of the tongue rather than only abstaining from food and drink."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "She was told to eat, drink, and vow a fast of silence."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 30,
+        "prompt": {
+          "en": "\"On that day he was a prophet, a proof of God though not a messenger.\" Who said this of the infant Jesus?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the infant who spoke, Imam al-Baqir said that on that day Jesus was a prophet and a proof of God, though not yet a messenger, since the earth is never without such a proof."
+        },
+        "anchor": {
+          "where": "verses.30.narrations.n5",
+          "quote": "On that day he was a prophet, a proof of God though not a messenger"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 34,
+        "prompt": {
+          "en": "In the note on verse 34, who are the ones said to be in doubt concerning Jesus?"
+        },
+        "options": [
+          {
+            "en": "The angels who witnessed his birth"
+          },
+          {
+            "en": "Those who dispute and quarrel over him"
+          },
+          {
+            "en": "Mary's family alone"
+          },
+          {
+            "en": "The prophets who came before him"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note glosses the closing summary: that is Jesus gathers all that was told of him, and those in doubt are the people who dispute and quarrel over him."
+        },
+        "anchor": {
+          "where": "verses.34.note",
+          "quote": "those in doubt are the ones who dispute and quarrel over him"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 40,
+        "prompt": {
+          "en": "According to the passage, God's inheriting the earth means He needs an heir to whom the world will pass."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says the opposite: God inheriting the earth means all creation returns to Him, and it seals the denial of a son, for one who inherits everything has no need of an heir."
+        },
+        "anchor": {
+          "where": "verses.40.note",
+          "quote": "it also seals the denial of a son, for one who inherits all has no need of an heir"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T00:40:49Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T00:41:25Z",
+      "assembled_at": "2026-09-22T01:11:20Z"
+    }
+  },
+  "3": {
+    "id": "19:3",
+    "surah": 19,
+    "index": 3,
+    "range": [
+      41,
+      50
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 42,
+        "prompt": {
+          "en": "The passage reports the Shia view that the man Abraham addressed was not his real father but his maternal grandfather, since his forefathers were monotheists."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tusi reports the Shia view that Abraham's forefathers were all monotheists back to Adam, so the man he addressed as 'Father' was his maternal grandfather."
+        },
+        "anchor": {
+          "where": "verses.42.note",
+          "quote": "the Prophet's forefathers were all monotheists back to Adam, so this was his maternal grandfather"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 43,
+        "prompt": {
+          "en": "In the essay, what does Abraham offer to do for his father after saying a knowledge has come to him?"
+        },
+        "options": [
+          {
+            "en": "To share the wealth God gave him"
+          },
+          {
+            "en": "To guide him to a level path"
+          },
+          {
+            "en": "To build a better idol for him"
+          },
+          {
+            "en": "To leave his father's household at once"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says a knowledge came to Abraham that had not come to his father, so he offered to lead him: follow me to a level path."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a knowledge has come to me that has not come to you, so follow me to a level path"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 46,
+        "prompt": {
+          "en": "Tusi records that the threatened stoning was read either as pelting him with stones to drive him away or as pelting him with ____ and abuse."
+        },
+        "options": [
+          {
+            "en": "reproach"
+          },
+          {
+            "en": "flowers"
+          },
+          {
+            "en": "silver"
+          },
+          {
+            "en": "kindness"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tusi gives two readings of the father's threat to stone Abraham: pelting him with actual stones to drive him off, or pelting him with reproach and abuse."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi records that the threatened stoning was read either as pelting him with stones to drive him away or as pelting him with reproach and abuse"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 50,
+        "prompt": {
+          "en": "\"A truthful repute that God grants a person among the people is better than wealth he consumes and bequeaths.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam Ali weighed a truthful repute among people against wealth a person consumes and leaves behind, calling the good name the better portion."
+        },
+        "anchor": {
+          "where": "verses.50.narrations.n5",
+          "quote": "A truthful repute that God grants a person among the people is better than wealth he consumes and bequeaths"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 50,
+        "prompt": {
+          "en": "According to the perspectives, how do the two traditions divide in reading the word 'aliyyan' in the final verse?"
+        },
+        "options": [
+          {
+            "en": "One reads it as a name, the other as a quality"
+          },
+          {
+            "en": "One says praise, the other says punishment"
+          },
+          {
+            "en": "One gives it to Isaac, the other to Jacob"
+          },
+          {
+            "en": "One reads it now, the other in the next life"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives close that the word names a person for one tradition and a quality for the other, a proper name against a description of praise."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The word names a person for the one tradition and a quality for the other"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T00:40:57Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T00:41:37Z",
+      "assembled_at": "2026-09-22T01:11:20Z"
+    }
+  },
+  "4": {
+    "id": "19:4",
+    "surah": 19,
+    "index": 4,
+    "range": [
+      51,
+      65
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 53,
+        "prompt": {
+          "en": "According to the essay, why did God give Moses his brother Aaron?"
+        },
+        "options": [
+          {
+            "en": "To answer Moses's plea for a helper from his family"
+          },
+          {
+            "en": "As a reward for his discourse on the Mount"
+          },
+          {
+            "en": "Because Aaron was more eloquent than Moses"
+          },
+          {
+            "en": "To lead the people after Moses died"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says God gave Moses his brother Aaron out of mercy, answering Moses's earlier plea for a helper from his family, not as a reward or for succession."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Out of mercy God gave him his brother Aaron, answering Moses's earlier plea for a helper from his family"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 54,
+        "prompt": {
+          "en": "\"He made a promise to a man, and sat awaiting him for a whole year.\" Who said this of why Ishmael was true to his promise?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked why Ishmael was called true to his promise, Imam al-Rida said he made a promise to a man and sat awaiting him for a whole year."
+        },
+        "anchor": {
+          "where": "verses.54.narrations.n1",
+          "quote": "He made a promise to a man, and sat awaiting him for a whole year"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 57,
+        "prompt": {
+          "en": "How does al-Tabatabai read the exalted station to which Idris was raised?"
+        },
+        "options": [
+          {
+            "en": "A place high in the fourth heaven"
+          },
+          {
+            "en": "A degree of nearness to God, not physical height"
+          },
+          {
+            "en": "The rank of apostle set above prophet"
+          },
+          {
+            "en": "A long life granted before his death"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says al-Tabatabai reads Idris's exalted station as a degree of nearness to God, not mere physical height such as a place in the heavens."
+        },
+        "anchor": {
+          "where": "verses.57.note",
+          "quote": "Al-Tabatabai reads the exalted station to which Idris was raised as a degree of nearness to God, not mere physical height"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 59,
+        "prompt": {
+          "en": "Al-Tabatabai reads 'neglect' as spoiling the prayer through ____, not abandoning it outright"
+        },
+        "options": [
+          {
+            "en": "disbelief"
+          },
+          {
+            "en": "carelessness"
+          },
+          {
+            "en": "forgetfulness"
+          },
+          {
+            "en": "arrogance"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay glosses the evil posterity's neglect of prayer as spoiling it through carelessness, not abandoning it outright, so carelessness fills the gap."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabatabai reads 'neglect' as spoiling the prayer through carelessness, not abandoning it outright"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 54,
+        "prompt": {
+          "en": "In the perspectives, al-Tabatabai records both identifications of Ishmael but leans toward Ishmael son of Abraham."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The perspectives say al-Tabatabai records both identifications but leans toward the second, Ishmael son of Hizqil, not Ishmael son of Abraham."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Al-Tabatabai records both identifications and leans toward the second"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T00:44:52Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T00:45:34Z",
+      "assembled_at": "2026-09-22T01:11:20Z"
+    }
+  },
+  "5": {
+    "id": "19:5",
+    "surah": 19,
+    "index": 5,
+    "range": [
+      66,
+      82
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 66,
+        "prompt": {
+          "en": "Commentators read this not as reasoned argument but as a ____ dressed up as thinking the thing improbable"
+        },
+        "options": [
+          {
+            "en": "denial"
+          },
+          {
+            "en": "doubt"
+          },
+          {
+            "en": "protest"
+          },
+          {
+            "en": "joke"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says man's question about being raised is not real reasoning but a denial disguised as treating the resurrection as improbable, so the gap is denial."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Commentators read this not as reasoned argument but as a denial dressed up as thinking the thing improbable"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 67,
+        "prompt": {
+          "en": "According to the essay, how does the passage answer man's denial that he can be raised alive after death?"
+        },
+        "options": [
+          {
+            "en": "By pointing to earlier peoples God destroyed"
+          },
+          {
+            "en": "By reminding him God created him before when he was nothing"
+          },
+          {
+            "en": "By recording his boast for the Day of Judgment"
+          },
+          {
+            "en": "By threatening to gather him with the devils"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay frames the reply as a reminder that God created man before when he was nothing, so raising him a second time is no harder than the first making."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The answer is put as a reminder: God created man before, when he was nothing, so the second making is no harder than the first"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 74,
+        "prompt": {
+          "en": "According to the passage, the faithless boast of a higher station is answered by noting that God destroyed earlier peoples who were even richer in furnishings and appearance."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "True. The essay says the boast about the better station is met by recalling that God destroyed earlier peoples richer in furnishings and appearance, so worldly comfort settles nothing."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The reply is that God has destroyed earlier peoples richer in furnishings and appearance, so worldly comfort settles nothing"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 82,
+        "prompt": {
+          "en": "\"Worship is not prostration or bowing; it is obedience to men. Whoever obeys a creature in disobedience to the Creator has worshipped him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq redefines worship as obedience rather than bowing or prostration, so that whoever obeys a creature against the Creator has in effect worshipped that creature."
+        },
+        "anchor": {
+          "where": "verses.82.narrations.n7",
+          "quote": "worship is not prostration or bowing; it is obedience to men. Whoever obeys a creature in disobedience to the Creator has worshipped him"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 71,
+        "prompt": {
+          "en": "According to the perspectives, what do both readings of 'coming' to the Fire agree on?"
+        },
+        "options": [
+          {
+            "en": "That the believer never comes near the Fire at all"
+          },
+          {
+            "en": "That the wrongdoers are also delivered from the Fire"
+          },
+          {
+            "en": "That worldly wealth decides who is saved"
+          },
+          {
+            "en": "That the Godwary are delivered from the Fire"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The commentators read 'coming' to the Fire differently, but the perspectives say both agree the Godwary are saved; they divide only over whether the believer enters at all."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both agree the Godwary are saved; they differ on whether the believer enters at all"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T00:45:45Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T00:46:31Z",
+      "assembled_at": "2026-09-22T01:11:20Z"
+    }
+  },
+  "6": {
+    "id": "19:6",
+    "surah": 19,
+    "index": 6,
+    "range": [
+      83,
+      98
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 83,
+        "prompt": {
+          "en": "How does the commentary read God 'unleashing the devils upon the faithless' in verse 83?"
+        },
+        "options": [
+          {
+            "en": "As God forcing the faithless to commit sins"
+          },
+          {
+            "en": "As God leaving them to the devils they had chosen"
+          },
+          {
+            "en": "As the devils rebelling against God's command"
+          },
+          {
+            "en": "As a torment reserved for the Day of Resurrection"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says al-Tibyan and Majma al-Bayan read the sending as God leaving the faithless to the devils they had chosen, not compelling them, so 'sending' is used figuratively."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "read this sending as God leaving the faithless to the devils they had chosen, not compelling them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 84,
+        "prompt": {
+          "en": "\"Fathers and mothers reckon that. No, it is the counting of breaths.\" Who explained the counting God keeps for the faithless this way?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet Muhammad"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the counting God keeps, Imam al-Sadiq rejected the counting of days that parents reckon and said it is instead the counting of breaths."
+        },
+        "anchor": {
+          "where": "verses.84.narrations.n1",
+          "quote": "Fathers and mothers reckon that. No, it is the counting of breaths."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 90,
+        "prompt": {
+          "en": "At that the trees bristled and grew ____, dreading that the punishment would descend on them."
+        },
+        "options": [
+          {
+            "en": "leaves"
+          },
+          {
+            "en": "blossoms"
+          },
+          {
+            "en": "thorns"
+          },
+          {
+            "en": "fruit"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the narration, when people claimed the All-beneficent had a son, creation nearly broke apart and the once-smooth trees bristled and grew thorns, dreading the punishment would fall on them."
+        },
+        "anchor": {
+          "where": "verses.90.narrations.n6",
+          "quote": "At that the trees bristled and grew thorns, dreading that the punishment would descend on them."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 96,
+        "prompt": {
+          "en": "On the promise that the All-beneficent will endear the believers, what does Shia tafsir, following the Imams, identify this love with?"
+        },
+        "options": [
+          {
+            "en": "The covenant taken by the dying"
+          },
+          {
+            "en": "The walayah of Ali"
+          },
+          {
+            "en": "The counting of every breath"
+          },
+          {
+            "en": "Fear of the herd driven to hell"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Shia tafsir reads the endeared love as the walayah of Ali, the very affection God places in every believer's heart, following the reading of the Imams."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia tafsir, following the Imams, identifies this love with the walayah of Ali: it is the very affection God places in every believer's heart"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 98,
+        "prompt": {
+          "en": "According to the essay's close, the Prophet can still hear a murmur from the generations destroyed before the deniers."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay's close leaves the Prophet surveying the ruins of the generations destroyed before these deniers, unable to sense a single one or hear so much as a murmur, so the claim is false."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The final verse leaves him surveying the ruins of the many generations destroyed before these deniers, asking whether he can sense a single one of them or hear so much as a murmur"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-22T00:49:54Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-22T00:50:40Z",
+      "assembled_at": "2026-09-22T01:11:20Z"
+    }
+  }
+}
