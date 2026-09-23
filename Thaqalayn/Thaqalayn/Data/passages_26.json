@@ -1,0 +1,2500 @@
+{
+  "1": {
+    "id": "26:1",
+    "surah": 26,
+    "index": 1,
+    "range": [
+      1,
+      9
+    ],
+    "title": {
+      "en": "Comfort for the grieving Prophet"
+    },
+    "essay": {
+      "en": "Surah al-Shu'ara opens with the disjoined letters Ta, Seen, Meem, then declares that these are the signs of the Manifest Book. Tabatabai reads the whole surah as consolation for the Prophet against a people who had denied him and his book, calling him at times a madman and at times a poet, and he counts it among the earliest of the Meccan surahs [1].\n\nThe third verse turns to the Prophet's grief, saying he is liable to imperil his very life because they will not have faith. The commentators gloss the word as destroying oneself out of sorrow, and take the verse as a gentle reproach and comfort, that he should not grieve himself to death over their refusal [1][2][3]. The fourth verse answers that grief: were God to wish, He would send down a sign from the sky before which their heads would stay bowed. Tusi explains that God could send a sign that compels them to belief, but that such compulsion would defeat the purpose of accountability, since one who is forced earns no reward [4].\n\nThe passage then describes their settled turning away: no fresh reminder comes from the All-beneficent, which Tabrisi identifies as the Quran, without their disregarding it [2]. They have denied, and the news of what they mock will reach them, Tusi says, on the Day of Resurrection [5]. The argument then shifts to the earth and its many splendid pairs of vegetation, which Tusi reads as proof that none but God could bring them forth [5]. There is a sign in that, yet most will not believe; Tabatabai takes this as their entrenched habit of refusal, not, as some claim, a matter of God's prior knowledge [1]. The passage closes by naming the Lord the All-mighty, who as the unconquerable seizes those who turn away, and the All-merciful, who still sends down the reminder to guide them and grants the disbelievers respite [1]."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "The disjoined letters"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Sufyan al-Thawri",
+            "arabic": "أما طس فمعناه أنا الطالب السميع، و أما طسم فمعناه أنا الطالب السميع المبدئ المعيد",
+            "chain": "Ibn Babawayh, from Muhammad ibn Harun al-Zanjani, from Mu'adh ibn al-Muthanna, from Abd Allah ibn Asma, from Juwayriya, from Sufyan al-Thawri, from Ja'far ibn Muhammad",
+            "text": {
+              "en": "Sufyan al-Thawri asked him the meaning of Ta Seen and Ta Seen Meem. He said: Ta Seen means, I am the Seeker, the Hearer; and Ta Seen Meem means, I am the Seeker, the Hearer, the Originator, the Restorer."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 3,
+        "heading": {
+          "en": "An occasion of revelation"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يا علي، إني سألت الله أن يوالي بيني و بينك ففعل، و سألته أن يؤاخي بيني و بينك ففعل، و سألته أن يجعلك وصيي ففعل … فأنزل الله تعالى: { لَعَلَّكَ بَاخِعٌ نَّفْسَكَ أَلاَّ يَكُونُواْ مُؤْمِنِينَ }",
+            "chain": "Ibn Shahrashub, from al-Ayyashi, by his chain to al-Sadiq",
+            "text": {
+              "en": "The Prophet said: O Ali, I asked God to join us in love, to make us brothers, and to make you my successor, and He did. A man scoffed that a measure of dates in a worn skin beat what Muhammad asked - why not an angel to help him, or a treasure. Then God sent down the verse."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "The sign from the sky"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "تخضع رقابهم يعني بني أمية وهي الصيحة من السماء باسم صاحب الأمر",
+            "chain": "his father, from Ibn Abi Umayr, from Hisham, from Abu Abdillah",
+            "text": {
+              "en": "Their necks will bow - meaning the Umayyads - and it is the Cry from the sky in the name of the Master of the Command."
+            },
+            "source": "s8"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Umar ibn Hanzala",
+            "arabic": "خَمْسُ عَلَامَاتٍ قَبْلَ قِيَامِ الْقَائِمِ الصَّيْحَةُ وَ السُّفْيَانِيُّ وَ الْخَسْفُ وَ قَتْلُ النَّفْسِ الزَّكِيَّةِ وَ الْيَمَانِيُّ … أَ هِيَ الصَّيْحَةُ فَقَالَ أَمَا لَوْ كَانَتْ خَضَعَتْ أَعْنَاقُ أَعْدَاءِ اللَّهِ عَزَّ وَ جَلَّ",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad ibn Isa, from Ali ibn al-Hakam, from Abu Ayyub al-Khazzaz, from Umar ibn Hanzala, from Abu Abdillah",
+            "text": {
+              "en": "Five signs come before the rising of al-Qa'im: the Cry, the Sufyani, the sinking of the earth, the killing of the Pure Soul, and the Yamani. Asked whether the verse's sign was the Cry, he said: Were it to come, the necks of God's enemies would bow in humility."
+            },
+            "source": "s32"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "وَ هُوَ الَّذِي يُنَادِي مُنَادٍ مِنَ السَّمَاءِ يَسْمَعُهُ جَمِيعُ أَهْلِ الْأَرْضِ بِالدُّعَاءِ إِلَيْهِ يَقُولُ أَلَا إِنَّ حُجَّةَ اللَّهِ قَدْ ظَهَرَ عِنْدَ بَيْتِ اللَّهِ فَاتَّبِعُوهُ فَإِنَّ الْحَقَّ مَعَهُ … إِنْ نَشَأْ نُنَزِّلْ عَلَيْهِمْ مِنَ السَّماءِ آيَةً فَظَلَّتْ أَعْناقُهُمْ لَها خاضِعِينَ",
+            "chain": "Ahmad ibn Ziyad al-Hamadani, from Ali ibn Ibrahim, from his father, from Ali ibn Ma'bad, from al-Husayn ibn Khalid, from al-Rida",
+            "text": {
+              "en": "Describing the Qa'im: he is the one for whom a caller calls from the sky, heard by all the people of the earth, summoning them to him - the proof of God has appeared at the House of God, so follow him, for the truth is with him. That is God's saying, If We wish."
+            },
+            "source": "s30"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Shia narrations read verse 4's sign from the sky as the Cry that will herald al-Qa'im: no one on earth will remain but that his neck bows, and the people of earth will believe when they hear the call that truth is with Ali and his followers [10]. Sunni commentators do not read it eschatologically. Ibn Kathir takes it as a sign God could send to compel faith by force, which He withholds because He wants only voluntary belief [20]. Al-Qurtubi records the mid-Ramadan heavenly-voice view but rejects it as far-fetched, holding those addressed to be Quraysh [21]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 1 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=26&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان غرض السورة تسلية النبي صلى الله عليه وآله وسلم قبال ما كذَّبه قومه وكذَّبوا بكتابه النازل عليه من ربه"
+        },
+        "gloss": "An account of the surah's aim: the consolation of the Prophet against his people, who denied him and denied the Book sent down to him from his Lord."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 1 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يأتيهم ذكر من الرحمن محدث أي جديد يعني القرآن"
+        },
+        "gloss": "No reminder from the All-beneficent, that is, no new one, comes to them - meaning the Quran."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والبخع القتل"
+        },
+        "gloss": "al-bakh' (the word in the verse) means killing."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 4 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قادر على أن ينزل عليهم آية ودلالة من السماء تظل اعناقهم لها خاضعة بأن تلجئهم إلى الايمان، لكن ذلك نقيض الغرض بالتكليف"
+        },
+        "gloss": "He is able to send down to them a sign from the sky before which their necks would bow, compelling them to faith; but that would run counter to the purpose of accountability."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 6 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فيستدلوا على توحيده، بأن يعلموا أن ذلك لا يقدر عليه غيره"
+        },
+        "gloss": "so that they may infer His oneness, knowing that none other than He has power over that."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تخضع رقابهم يعني بني أمية وهي الصيحة من السماء باسم صاحب الأمر"
+        },
+        "gloss": "Their necks will bow - meaning the Umayyads - and it is the Cry from the sky in the name of the Master of the Command."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أما طس فمعناه أنا الطالب السميع، و أما طسم فمعناه أنا الطالب السميع المبدئ المعيد"
+        },
+        "gloss": "As for Ta Seen, it means, I am the Seeker, the Hearer; and as for Ta Seen Meem, it means, I am the Seeker, the Hearer, the Originator, the Restorer."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فلا يبقى في الأرض يومئذ أحد إلا خضع، و ذلت رقبته لها، فيؤمن أهل الأرض إذا سمعوا الصوت من السماء: ألا إن الحق في علي بن أبي طالب و شيعته"
+        },
+        "gloss": "No one on earth that day will remain but that he bows, his neck humbled to it; and the people of earth will believe when they hear the voice from the sky: truth is with Ali ibn Abi Talib and his followers."
+      },
+      {
+        "id": "s20",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 1 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=26&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لو نشاء لأنزلنا آية تضطرهم إلى الإيمان قهراً، ولكن لا نفعل ذلك لأنا لا نريد من أحد إلا الإيمان الاختياري"
+        },
+        "gloss": "Had We willed, We would have sent down a sign forcing them to faith by compulsion; but We do not, for We want from no one anything but voluntary faith."
+      },
+      {
+        "id": "s21",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 1 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=26&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال أبو حمزة الثُّماليّ في هذه الآية: صوت يسمع من السماء في النصف من شهر رمضان تخرج به العواتق من البيوت وتضج له الأرض. وهذا فيه بعدٌ لأن المراد قريش لا غيرهم"
+        },
+        "gloss": "Abu Hamza al-Thumali said of this verse: a voice heard from the sky in the middle of Ramadan, by which the secluded women come out of the houses and the earth resounds. But this is far-fetched, because the ones meant are Quraysh, not others."
+      },
+      {
+        "id": "s30",
+        "kind": "hadith",
+        "work": "Kamal al-Din wa Tamam al-Ni'ma",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 5, cited at Ash-Shu'araa 4",
+        "url": "https://thaqalayn.com/book/21",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَ هُوَ الَّذِي يُنَادِي مُنَادٍ مِنَ السَّمَاءِ يَسْمَعُهُ جَمِيعُ أَهْلِ الْأَرْضِ بِالدُّعَاءِ إِلَيْهِ يَقُولُ أَلَا إِنَّ حُجَّةَ اللَّهِ قَدْ ظَهَرَ عِنْدَ بَيْتِ اللَّهِ فَاتَّبِعُوهُ فَإِنَّ الْحَقَّ مَعَهُ"
+        },
+        "gloss": "He is the one for whom a caller calls from the sky, heard by all the people of the earth, summoning them to him: the proof of God has appeared at the House of God, so follow him, for truth is with him."
+      },
+      {
+        "id": "s32",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 8, hadith 1, cited at Ash-Shu'araa 4",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "صحيح",
+          "حسن كالصحيح"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "خَمْسُ عَلَامَاتٍ قَبْلَ قِيَامِ الْقَائِمِ الصَّيْحَةُ وَ السُّفْيَانِيُّ وَ الْخَسْفُ وَ قَتْلُ النَّفْسِ الزَّكِيَّةِ وَ الْيَمَانِيُّ"
+        },
+        "gloss": "Five signs before the rising of al-Qa'im: the Cry, the Sufyani, the sinking of the earth, the killing of the Pure Soul, and the Yamani."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T05:04:25Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-23T05:26:09Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "2": {
+    "id": "26:2",
+    "surah": 26,
+    "index": 2,
+    "range": [
+      10,
+      33
+    ],
+    "title": {
+      "en": "Moses before Pharaoh"
+    },
+    "essay": {
+      "en": "God calls Moses and sends him to the wrongdoing people, the people of Pharaoh, asking whether they will not be wary. Tabatabai reads this as the start of the surah's stories of past prophets, each closing that most did not believe, so the Prophet may see that his own people walk the same road [1]. Al-Tabrisi adds that God recounts His messengers' stories to console the Prophet and steady him toward patience, sure of victory [2].\n\nMoses names what he fears: that they will call him a liar, that his breast will tighten and his tongue not run free, so he asks that Aaron be sent to help him [1]. He also fears the charge they hold against him. Al-Tusi identifies it as the killing of the Copt, when a man of the Children of Israel called on him for help [4], while Tabatabai notes it is a sin only in their reckoning, not disobedience of God [1]. God answers 'Certainly not,' sending them both with His signs and promising He is with them, listening [1].\n\nBefore Pharaoh they declare they are envoys of the Lord of the worlds, come to free the Children of Israel. Pharaoh answers with reproach: did we not raise you, and did you not kill a man? Moses replies in turn - I did it when astray, I fled in fear, my Lord then gave me judgement and made me an apostle - and the boasted favour is worth nothing, for enslaving a people is no favour [1].\n\nPharaoh then disputes the very phrase 'Lord of the worlds.' Tabatabai explains that in his idol-worshipping frame the words carried no clear sense, each lord ruling one realm alone [1]; so Moses answers not with an essence but with God's works - Lord of the heavens and earth, of you and your forefathers, of the east and the west - each a proof of one Governor over all [1]. Cut off, Pharaoh turns to threat and the prison, then dares Moses to bring a proof. Moses throws down his staff, a manifest serpent, and draws out his shining hand; in the staff becoming a snake al-Tusi finds two proofs, one of them a proof of God, since none but He can work such a thing [8]."
+    },
+    "verses": [
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Moses at Pharaoh's door"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لما بعث الله موسى إلى فرعون أتى بابه فاستأذن عليه فلم يؤذن له فضرب بعصاه الباب فاصطكت الأبواب ففتحت ثم دخل على فرعون فأخبره أنه رسول رب العالمين وسأله أن يرسل معه بني إسرائيل",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Hasan ibn Ali ibn Fadhdhal, from Aban ibn Uthman, from Abu Abdillah",
+            "text": {
+              "en": "When God sent Moses to Pharaoh, he came to his door and asked leave, but was not admitted. He struck the door with his staff and the doors flew open. He entered upon Pharaoh, told him he was the messenger of the Lord of the worlds, and asked him to send the Children of Israel with him."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 20,
+        "heading": {
+          "en": "I did that when astray"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "وفي العيون عن الرضا عليه السلام أنّه سئل عن ذلك مع انّ الأنبياء معصومون فقال قال وانا من الضّالين عن الطريق بوقوعي الى مدينة من مداينك",
+            "chain": null,
+            "text": {
+              "en": "He was asked how 'I did that when I was astray' fits the prophets being sinless. He said: Moses meant, I was astray from the road, having come into one of your cities."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 21,
+        "heading": {
+          "en": "When the Qa'im rises"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إذا قام القائم تلا هذه الآية فَفَرَرْتُ مِنْكُمْ لَمَّا خِفْتُكُمْ فَوَهَبَ لِي رَبِّي حُكْمًا وَجَعَلَنِي مِنَ الْمُرْسَلِينَ",
+            "chain": "Muhammad ibn Hammam, from Jafar ibn Muhammad ibn Malik, from al-Hasan ibn Muhammad ibn Sumaa, from Ahmad ibn al-Harith al-Anmati, from al-Mufaddal ibn Umar, from Abu Abdillah",
+            "text": {
+              "en": "When the Qa'im rises, he will recite this verse: 'So I fled from you when I feared you; then my Lord gave me judgement and made me one of the apostles.'"
+            },
+            "source": "s44"
+          }
+        ]
+      },
+      {
+        "verse": 24,
+        "heading": {
+          "en": "Described by His acts"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Amir al-Muminin",
+            "addressee": null,
+            "arabic": "في الكافي عن امير المؤمنين عليه السلام في خطبة جوامع التّوحيد قال الذي سألت الأنبياء عنه فلم تصفه بحدّ ولا ببعض بل وصفته بفعاله ودلّت عليه بآياته",
+            "chain": null,
+            "text": {
+              "en": "He about whom the prophets were asked; they did not describe Him by any limit or any part, but described Him by His acts and pointed to Him by His signs."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 32,
+        "heading": {
+          "en": "The staff and the terror"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "فلم يبق أحد من جلساء فرعون إلا هرب، و دخل فرعون من الرعب ما لم يملك به نفسه فقال فرعون: نشدتك بالله، و بالرضاع، إلا ما كففتها عني، فكفها، ثم نزع يده، فإذا هي بيضاء للناظرين، فلما أخذ موسى العصا رجعت إلى فرعون نفسه، و هم بتصديقه، فقام إليه هامان، فقال له: بينما أنت إله تعبد، إذ صرت تابعا لعبد",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Hasan ibn Ali ibn Fadhdhal, from Aban ibn Uthman, from Abu Abdillah",
+            "text": {
+              "en": "When Moses cast his staff and it became a serpent, none of Pharaoh's courtiers remained but fled, and terror seized Pharaoh beyond his control. He begged Moses to restrain it, and he did. Pharaoh nearly believed, but Haman rose and said: you were a worshipped god - will you now follow a slave?"
+            },
+            "source": "s18"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'I did that when I was astray,' the two traditions differ over Moses's state. Ibn Kathir reads 'astray' as ignorant, meaning before revelation and prophethood reached him [29]. Tabatabai limits the ignorance to the outcome: Moses defended the man who called on him without seeing where the right course lay, not knowing the blow would kill; but he denies any ignorance that would make it a sin, since the verses of al-Qasas gave Moses judgement and knowledge before the killing [1]. The Shia reading guards his infallibility from before his mission."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 10 to 33",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=26&AyahNo=10&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وآيات سورة القصص ناصّة على أن الله سبحانه آتاه حكماً وعلماً قبل واقعة القتل وهذا لا يجامع الضلال بهذا المعنى من الجهل"
+        },
+        "gloss": "The verses of Surah al-Qasas state plainly that God gave him judgement and knowledge before the killing, and this does not agree with 'astray' in that sense of ignorance."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 10 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثم ذكر سبحانه أقاصيص رسله تسلية للرسول صلى الله عليه وسلم وتحريضاً له على الصبر ثقة بنزول النصر"
+        },
+        "gloss": "Then God recounted the stories of His messengers to console the Prophet and urge him to patience, trusting in the coming of victory."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 10 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ولهم علي ذنب } يعني قتل القبطي الذي قتله موسى حين استصرخ به واحد من أصحابه من بني اسرائيل"
+        },
+        "gloss": "'They have a charge against me' means the killing of the Copt, whom Moses killed when one of his companions among the Children of Israel called on him for help."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 31 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إحداهما - دلالة على الله تعالى، لانه مما لا يقدر عليه إلا هو"
+        },
+        "gloss": "One of them is a proof of God, for it is something that none but He can do."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لما بعث الله موسى إلى فرعون أتى بابه فاستأذن عليه فلم يؤذن له فضرب بعصاه الباب فاصطكت الأبواب ففتحت"
+        },
+        "gloss": "When God sent Moses to Pharaoh, he came to his door and asked leave but was not admitted; he struck the door with his staff and the doors flew open."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 10 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقام إليه هامان، فقال له: بينما أنت إله تعبد، إذ صرت تابعا لعبد"
+        },
+        "gloss": "Haman rose and said to him: while you were a god who is worshipped, you have become a follower of a slave."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 10 to 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=26&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عن الرضا عليه السلام أنّه سئل عن ذلك مع انّ الأنبياء معصومون فقال قال وانا من الضّالين عن الطريق بوقوعي الى مدينة من مداينك"
+        },
+        "gloss": "From al-Rida, who was asked how this agrees with the prophets being sinless, and said: [Moses meant] astray from the road, by my falling into one of your cities."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 21 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=26&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في الكافي عن امير المؤمنين عليه السلام في خطبة جوامع التّوحيد قال الذي سألت الأنبياء عنه فلم تصفه بحدّ ولا ببعض بل وصفته بفعاله ودلّت عليه بآياته"
+        },
+        "gloss": "In al-Kafi, from Amir al-Muminin, in the sermon of comprehensive tawhid: He about whom the prophets were asked; they did not describe Him by limit or by part, but described Him by His acts and pointed to Him by His signs."
+      },
+      {
+        "id": "s29",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 10 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=26&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وَأَنَاْ مِنَ ٱلضَّآلِّينَ } أي قبل أن يوحى إلي، وينعم الله علي بالرسالة والنبوة"
+        },
+        "gloss": "'And I was among the astray' means before it was revealed to me and God favoured me with the message and prophethood."
+      },
+      {
+        "id": "s44",
+        "kind": "hadith",
+        "work": "Kitab al-Ghayba",
+        "author": "abu abd allah muhammad b. ibrahim al-numani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 50, cited at Ash-Shu'araa 21",
+        "url": "https://thaqalayn.com/book/8",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا قام القائم تلا هذه الآية فَفَرَرْتُ مِنْكُمْ لَمَّا خِفْتُكُمْ فَوَهَبَ لِي رَبِّي حُكْمًا وَجَعَلَنِي مِنَ الْمُرْسَلِينَ"
+        },
+        "gloss": "When the Qa'im rises he will recite this verse: 'So I fled from you when I feared you; then my Lord gave me judgement and made me one of the apostles.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T05:02:20Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-23T05:37:02Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "3": {
+    "id": "26:3",
+    "surah": 26,
+    "index": 3,
+    "range": [
+      34,
+      52
+    ],
+    "title": {
+      "en": "Moses and the magicians"
+    },
+    "essay": {
+      "en": "Pharaoh has just watched the staff become a serpent and the hand turn white, and finding no way to dispute the sign, he brands Moses an expert magician who means to drive the people from their land, and turns to his elite for counsel [1]. That he consults them at all is revealing, since he had told them he was their god [2]. The elite advise delay rather than death: were Moses killed, the people would be drawn to him, so first summon every magician in the land to face him [4]. The magicians are gathered for the festival, the day of adornment [1], and the crowds are urged to assemble to see who prevails. When the magicians name their price, they cast the outcome as an 'if' to press Pharaoh into promising a reward, and he adds a place in his inner circle [1].\n\nMoses tells them to throw first, which carries the form of a command but is meant as a challenge [5]. They cast their ropes and staffs and swear by Pharaoh's might, and Moses throws his staff, which swallows what they had faked, the trickery that turned things from their true shape [1]. The magicians are cast down prostrate, unable to hold themselves back, and confess the Lord of all the worlds, naming Him the Lord of Moses and Aaron, which joins faith in the messengers to faith in God's oneness [1]. Pharaoh answers with a fresh slander, that Moses is their master who taught them magic, and threatens to cut off their hands and feet and crucify them all [1]. They are unmoved: there is no harm, for they return to their Lord, and a person may declare the truth even in fear of death [6]. They hope to be forgiven for being the first to believe [7]. The passage closes as God tells Moses to set out by night with His servants, the children of Israel, for they will be pursued [7]."
+    },
+    "verses": [
+      {
+        "verse": 34,
+        "heading": {
+          "en": "Pharaoh calls Moses a magician"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "و كان فرعون و هامان قد تعلما السحر، و إنما غلبا الناس بالسحر، و ادعى فرعون الربوبية بالسحر، فلما أصبح بعث في المدائن حاشرين، مدائن مصر كلها، و جمعوا ألف ساحر، و اختاروا من الألف مائة، و من المائة ثمانين",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Hasan ibn Ali ibn Faddal, from Aban ibn Uthman, from Abu Abdillah",
+            "text": {
+              "en": "Pharaoh and Haman had learned magic; it was by magic that they overcame the people, and by magic that Pharaoh laid claim to lordship. At daybreak he sent gatherers through all the cities of Egypt; they assembled a thousand magicians, chose a hundred from the thousand, and eighty from the hundred."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 42,
+        "heading": {
+          "en": "Pharaoh promises a reward"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قالوا: فإن غلبنا موسى، و أبطل سحرنا، علمنا أن ما جاء به ليس من قبل السحر، و لا من قبل الحيلة، و آمنا به، و صدقناه",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Hasan ibn Ali ibn Faddal, from Aban ibn Uthman, from Abu Abdillah",
+            "text": {
+              "en": "The magicians said: if Moses overcomes us and voids our magic, we will know that what he brought is not from magic nor from any trick, and we will believe in him and affirm him."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 45,
+        "heading": {
+          "en": "Moses throws his staff"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "فألقى موسى عصاه، فذابت في الأرض مثل الرصاص، ثم طلع رأسها، و فتحت فاها، و وضعت شدقها الأعلى على رأس قبة فرعون، ثم دارت، و أرخت شفتها السفلى، و التقمت عصي السحرة، و حبالها، و غلب كلهم",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Hasan ibn Ali ibn Faddal, from Aban ibn Uthman, from Abu Abdillah",
+            "text": {
+              "en": "Moses cast down his staff, and it melted into the ground like lead; then its head reared up, its mouth opened, it set its upper jaw on the top of Pharaoh's dome, then turned, lowered its lower lip, and swallowed the magicians' staffs and ropes, overcoming them all."
+            },
+            "source": "s16"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The passage leaves open whether Pharaoh carried out his threat. Shia tradition preserves a narration from Imam al-Sadiq that Pharaoh did not execute the believers but imprisoned them, releasing them only when God sent the plagues of flood, locusts, lice, frogs and blood [16]. Ibn Kathir, by contrast, reads the threat as fulfilled and holds that Pharaoh killed them all [28]. What both traditions stress is the same: Pharaoh's threat of mutilation and crucifixion did not shake the magicians, whose faith only hardened [28]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 34 to 52",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=26&AyahNo=34&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فلما أتى بما لا مغمض فيه لم يجد بداً دون أن يبهته بأنه ساحر عليم"
+        },
+        "gloss": "When Moses brought what left no opening, Pharaoh found no recourse but to slander him as a knowing magician."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 34 to 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإنما شاور قومه في ذلك مع أنه كان يقول لهم إنه إله"
+        },
+        "gloss": "He consulted his people about the matter even though he used to tell them that he was a god."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 34 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقيل: انما أشاروا بتأخيره ولم يشيروا بقتله، لانهم رأوا أن الناس يفتتنون به ان قتل"
+        },
+        "gloss": "It is said they advised delaying him and did not advise killing him, because they saw that the people would be enticed by him if he were killed."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 41 to 45",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ألقوا ما أنتم ملقون } وهذا بصورة الأمر والمراد به التحدي"
+        },
+        "gloss": "'Throw down whatever you have to throw' - this has the form of a command, but a challenge is intended by it."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 46 to 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=46&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال الجبائي: في الآية دلالة على ان للانسان أن يظهر الحق وإن خاف القتل"
+        },
+        "gloss": "al-Jubba'i said: in the verse is a proof that a person may declare the truth even if he fears being killed."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 51 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=51&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "امره بأن يسري بعباد الله الذين آمنوا به، ويخرجوا من بلد فرعون، وهم بنوا إسرائيل المقرون بنبوته"
+        },
+        "gloss": "He commanded him to travel by night with God's servants who had believed in him, and to leave Pharaoh's land - and they are the children of Israel who affirmed his prophethood."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 34 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فحبس فرعون من آمن بموسى في السجن، حتى أنزل الله عليهم الطوفان، و الجراد، و القمل، و الضفادع، و الدم، فأطلق فرعون عنهم"
+        },
+        "gloss": "Pharaoh imprisoned those who believed in Moses, until God sent upon them the flood, the locusts, the lice, the frogs and the blood, and then Pharaoh released them."
+      },
+      {
+        "id": "s28",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 49 to 51",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=26&tAyahNo=49&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تهددهم فلم يقطع ذلك فيهم، وتوعدهم فما زادهم إلا إيماناً وتسليماً … فقتلهم كلهم"
+        },
+        "gloss": "He threatened them, but that did not cut them off, and he menaced them, but it only increased them in faith and submission ... So he killed them all."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T05:11:42Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-23T05:44:42Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "4": {
+    "id": "26:4",
+    "surah": 26,
+    "index": 4,
+    "range": [
+      53,
+      69
+    ],
+    "title": {
+      "en": "Moses delivered, Pharaoh drowned"
+    },
+    "essay": {
+      "en": "The passage takes up the exodus after Moses is told to lead the Children of Israel out by night. Learning that they have slipped away, Pharaoh sends heralds through the cities to gather his forces, belittling the fugitives as 'a small band' who have 'aroused our wrath,' while boasting that his own side is 'alert and fully prepared.' Commentators note that the band he called small in fact numbered in the hundreds of thousands, and that what enraged him was their breaking from his religion and leaving his land [3]. The verses answer his contempt with a reversal: 'So We took them out of gardens and springs, and treasures and stately homes.' Al-Tusi reads this as God destroying Pharaoh's people and handing their houses and property to the Children of Israel, who, some say, later returned to Egypt [5]. Pharaoh's host overtakes the Israelites at sunrise. When the two sides sight each other, Moses' companions cry, 'Indeed we have been caught up.' Moses answers with certainty: 'Certainly not! Indeed my Lord is with me. He will guide me.' Tabatabai explains that this being with is the accompaniment of protection and help, and that 'He will guide me' means God will show him a way of escape [1]; al-Tusi adds that prophets do not report what has no proof [6]. Moses is commanded to strike the sea; it parts, each part standing like a great mountain. God brings Pharaoh's people near, delivers Moses and all with him, and drowns the rest. The account closes with the refrain that runs through the surah: 'There is indeed a sign in that, but most of them do not have faith,' and 'Indeed your Lord is the All-mighty, the All-merciful.' Tabatabai reads the refrain as consolation for the Prophet, that the disbelief of his own people is nothing new among the nations [1]. The passage then turns: 'Relate to them the account of Abraham,' shifting to the forefather of the Arab idolaters being addressed [2]."
+    },
+    "verses": [
+      {
+        "verse": 54,
+        "heading": {
+          "en": "A small band"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ لَشِرْذِمَةٌ قَلِيلُونَ } يقول: عصبة قليلة { وَإِنَّا لَجَمِيعٌ حَاذِرُونَ } يقول: مؤذون في الأداة، و هو الشاكي في السلاح",
+            "chain": "Ali ibn Ibrahim, in the narration of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "'A small band' means a small company, and 'we are alert and fully prepared' means fitted out with equipment, that is, armed with weapons."
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 62,
+        "heading": {
+          "en": "He will guide me"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ } يقول: سيكفين",
+            "chain": "Ali ibn Ibrahim, in the narration of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "'Indeed my Lord is with me; He will guide me' means: He will suffice me."
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 63,
+        "heading": {
+          "en": "The sea parts"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "فدنا موسى (عليه السلام) من البحر، فقال له: انفلق، فقال البحر له: استكبرت- يا موسى- أن تقول لي أنفلق لك، و لم أعص الله طرفة عين … فقال البحر: ربي عظيم، مطاع أمره، و لا ينبغي لشيء أن يعصيه",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Hasan ibn Ali ibn Faddal, from Aban ibn Uthman, from Abu Abdillah",
+            "text": {
+              "en": "Moses drew near the sea and said, 'Part!' The sea replied, 'Have you grown arrogant, Moses, that you order me to part for you, when I have never disobeyed God for the blink of an eye?' The sea said, 'My Lord is mighty, His command obeyed; nothing ought to disobey Him.'"
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 66,
+        "heading": {
+          "en": "The rest are drowned"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن قوما ممن آمن بموسى (عليه السلام)، قالوا: لو أتينا عسكر فرعون، و كنا فيه، و نلنا من دنياه، فإذا كان الذي نرجوه من ظهور موسى، صرنا إليه. ففعلوا، فلما توجه موسى و من معه هاربين ركبوا دوابهم، و أسرعوا في السير ليوافوا موسى و من معه، فيكونوا معهم، فبعث الله ملائكة، فضربت وجوه دوابهم، فردتهم إلى عسكر فرعون، فكانوا فيمن غرق مع فرعون",
+            "chain": "al-Husayn ibn Sa'id, from al-Nadr, from Muhammad ibn Hashim, from a man, from Abu Abdillah",
+            "text": {
+              "en": "Some who believed in Moses said, 'Let us go to Pharaoh's camp, stay in it, and share his worldly goods; when Moses triumphs, as we hope, we will join him.' They did so. When Moses fled, they rode to overtake him, but God sent angels who turned their mounts back, and they drowned with Pharaoh."
+            },
+            "source": "s10"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": null
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 53 to 68",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=26&AyahNo=53&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كل ذلك ليتسلى النبي صلى الله عليه وآله وسلم ولا يضيق صدره ويعلم أنه ليس بدعاً من الرسل ولا المتوقع من قومه غير ما عامل به الأمم الماضون رسلهم"
+        },
+        "gloss": "All this is to console the Prophet, that his breast not be straitened, and that he may know he is not unprecedented among the messengers, and that nothing is to be expected from his people but what past nations did to their messengers."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 69",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=26&tAyahNo=69&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فإن المطلوب تلاوته على مشركي العرب وعمدتهم قريش وإبراهيم هذا أبوهم"
+        },
+        "gloss": "For what is intended is that it be recited to the polytheists of the Arabs, chiefly Quraysh, and this Abraham is their father."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 53 to 68",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال المفسرون: وكان الشرذمة الذين قلّلهم فرعون ستمائة ألف ولا يحصى عدد أصحاب فرعون"
+        },
+        "gloss": "The commentators said: the band that Pharaoh belittled numbered six hundred thousand, while the number of Pharaoh's people could not be counted."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 53 to 60",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وأورثناها بني إسرائيل } أي نعم آل فرعون بأن اهلكنا آل فرعون وملكنا ديارهم واملاكهم لبني اسرائيل"
+        },
+        "gloss": "'And We bequeathed them to the Children of Israel' means the good things of Pharaoh's people: We destroyed Pharaoh's people and gave their homes and possessions to the Children of Israel."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 61 to 69",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي سيدلني على طريق النجاة من فرعون وقومه كما وعدني، لأن الانبياء لا يخبرون بما لا دليل عليه من جهة العقل او السمع"
+        },
+        "gloss": "That is, He will show me the way of deliverance from Pharaoh and his people as He promised me, for the prophets do not report anything for which there is no proof from reason or revelation."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 53 to 63",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=53&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقال البحر له: استكبرت- يا موسى- أن تقول لي أنفلق لك، و لم أعص الله طرفة عين"
+        },
+        "gloss": "The sea said to him: Have you grown arrogant, Moses, that you tell me to part for you, when I have never disobeyed God for the blink of an eye?"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T05:19:21Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-23T05:55:11Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "5": {
+    "id": "26:5",
+    "surah": 26,
+    "index": 5,
+    "range": [
+      70,
+      104
+    ],
+    "title": {
+      "en": "Abraham and the idols"
+    },
+    "essay": {
+      "en": "Following the account of Moses, the surah turns to Abraham and tells the Meccans, whose forefather he is, to hear his story [1]. Abraham asks his father and people, 'What is it that you are worshiping?' - a question he puts as one who appears to know nothing, so that his opponents will state their own case and be held to it [1]. They answer that they worship idols and stay constant in devotion to them. He presses them on two counts: do the idols hear when they are called, and can they bring any benefit or cause any harm? [1] Their only reply is that they found their fathers doing the same, a bare appeal to imitation that al-Tusi says the intellect itself condemns [4].\n\nAbraham then disowns every object of their worship and turns to the Lord of all the worlds: the One who created him and guides him, feeds and waters him, cures him when he is sick, will make him die and bring him back, and whom he hopes will forgive him on the Day of Retribution. He says 'hope' rather than speaking with certainty, Tabatabai notes, because forgiveness is a favor and not something owed [1], and Tabrisi adds that the words are pure devotion, not the confession of a prophet who has sinned [2].\n\nHis prayer asks for sound judgement, a place among the righteous, a truthful repute among later peoples, the Garden, forgiveness for his father, and no disgrace on the day when neither wealth nor children avail, except one who comes to God with a sound heart. The passage then opens the scene of Judgement: the Garden brought near, the Fire made visible, and the idols, their worshippers, and the hosts of Iblis flung in together, quarrelling, confessing their manifest error, and longing in vain to return. It names all this a sign, though most did not believe - a reassurance to the Prophet that such denial is nothing new - and closes by declaring that his Lord is the All-mighty, the All-merciful [2]."
+    },
+    "verses": [
+      {
+        "verse": 84,
+        "heading": {
+          "en": "A truthful tongue"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يعني بالصالحين: الذين لا يحكمون إلا بحكم الله عز و جل، و لا يحكمون بالآراء و المقاييس، حتى يشهد له من يكون بعده من الحجج بالصدق، بيان ذلك في قوله: { وَٱجْعَل لِّي لِسَانَ صِدْقٍ فِي ٱلآخِرِينَ } أراد في هذه الأمة الفاضلة، فأجابه الله، و جعل له و لغيره من الأنبياء: { لِسَانَ صِدْقٍ فِي ٱلآخِرِينَ } و هو علي بن أبي طالب (عليه السلام)",
+            "chain": "Ibn Babawayh, from Ali ibn Ahmad al-Daqqaq, from Hamza ibn al-Qasim al-Alawi, from Ja'far ibn Muhammad ibn Malik al-Fazari, from Muhammad ibn al-Husayn ibn Zayd, from Muhammad ibn Ziyad al-Azdi, from al-Mufaddal ibn Umar, from al-Sadiq",
+            "text": {
+              "en": "By 'the righteous' is meant those who judge only by God's judgement, not by opinions or analogies, until a Proof after him testifies to his truthfulness. That is His word, 'Grant me a truthful tongue among the posterity': he meant this excellent community. God answered, giving him and the prophets 'a truthful tongue among the posterity': Ali ibn Abi Talib."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 89,
+        "heading": {
+          "en": "A sound heart"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "السليم الذي يلقى ربه، و ليس فيه أحد سواه … كل قلب فيه شرك، أو شك، فهو ساقط، و إنما أرادوا الزهد في الدنيا، لتفرغ قلوبهم للآخرة",
+            "chain": "al-Kulayni, from Ali ibn Ibrahim, from his father, from al-Qasim ibn Muhammad, from al-Minqari, from Sufyan ibn Uyayna, from Abu Abdillah",
+            "text": {
+              "en": "The sound heart is the one that meets its Lord with none in it but Him. Every heart in which there is idolatry or doubt has fallen; they meant by detachment from the world only that their hearts be freed for the Hereafter."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 94,
+        "heading": {
+          "en": "Those who abandoned justice"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "نزلت في قوم وصفوا عدلاً ثم خالفوه إلى غيره",
+            "chain": null,
+            "text": {
+              "en": "It was revealed about a people who professed justice, then departed from it to something else."
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 98,
+        "heading": {
+          "en": "Equating them with God"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "مَنْ شَبَّهَكَ بِتَبَايُنِ أَعْضَاءِ خَلْقِكَ … لَمْ يَعْقِدْ غَيْبَ ضَمِيرِهِ عَلَى مَعْرِفَتِكَ، وَلَمْ يُبَاشِرْ قَلْبَهُ الْيَقِينُ بِأَنَّهُ لاَنِدَّ لَكَ، وَكَأَنَّهُ لَمْ يَسْمَعْ تَبَرُّؤَ التَّابِعِينَ مِنَ المَتبُوعِينَ إِذْ يَقُولُونَ: ﴿تَاللهِ إِن كُنَّا لَفِي ضَلَالٍ مُّبِينٍ. إِذْ نُسَوِّيكُم بِرَبِّ الْعَالَمِينَ﴾",
+            "chain": null,
+            "text": {
+              "en": "Whoever likens You to the separate limbs of Your creation has not fastened his heart upon knowing You, nor gained the certainty that You have no equal. It is as if he never heard the followers disown the followed: 'By Allah, we had been in manifest error when we equated you with the Lord of all the worlds.'"
+            },
+            "source": "s57"
+          }
+        ]
+      },
+      {
+        "verse": 100,
+        "heading": {
+          "en": "No intercessor, no friend"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir and Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "والله لنشفعن في المذنبين من شيعتنا حتى يقولوا أعداؤنا إذا رأوا ذلك { فما لنا من شافعين ولا صديق حميم فلو أن لنا كرة فنكون من المؤمنين } … قال: من المهتدين قال: لأن الأَيمان قد لزمهم بالإِقرار",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Hasan ibn Mahbub, from Abu Usama, from Abu Abdillah and Abu Ja'far",
+            "text": {
+              "en": "By God, we shall intercede for the sinners among our Shia until our enemies, seeing it, say, 'We have no intercessors, nor any sympathetic friend. Had there been another turn for us, we would be among the faithful' - meaning the rightly guided, for faith had become binding on them by their acknowledgment."
+            },
+            "source": "s13"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The traditions divide over the father Abraham prays for in verse 86. Sunni commentators take him to be Abraham's own father, the idolater Azar: Ibn Kathir cites the report that Abraham will meet Azar disgraced on the Day of Resurrection, after God has forbidden the Garden to the disbelievers [35]. The Shia scholars read it otherwise. Al-Tusi holds that the man was in fact his maternal grandfather, since the Prophet's forefathers back to Adam were all believing monotheists [5]. On this reading the prayer is no plea for an unbelieving parent, but for a kinsman who had gone astray."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 70 to 104",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=26&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولم يقطع بالمغفرة كما قطع في الأمور المذكورة قبلها لأن المغفرة ليست بالاستحقاق بل هي فضل من الله"
+        },
+        "gloss": "He did not affirm the forgiveness with the certainty he used for the matters before it, because forgiveness is not by desert but a favor from God."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 70 to 104",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=70&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإنما قال ذلك على سبيل الانقطاع منه إلى الله تعالى لا على سبيل أنَّ له خطيئة يحتاج إلى أن يغفر له يوم القيامة"
+        },
+        "gloss": "He said this only by way of devotion to God, not because he has a fault that needs forgiving on the Day of Resurrection."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 71 to 80",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولم يحتجوا بشيء سوى التقليد، الذي هو قبيح في العقول"
+        },
+        "gloss": "They argued with nothing but imitation, which is ugly in the sight of the intellect."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 81 to 89",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=81&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعند اصحابنا ان أباه الذي استغفر له، كان جده لأمه، لان آباء النبي (صلى الله عليه وسلم) إلى آدم كلهم مؤمنون موحدون"
+        },
+        "gloss": "According to our companions, the father he sought forgiveness for was his maternal grandfather, for the Prophet's forefathers up to Adam were all believing monotheists."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 94",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=94&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت في قوم وصفوا عدلاً ثم خالفوه إلى غيره"
+        },
+        "gloss": "It was revealed about a people who professed justice, then departed from it to something else."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 100 to 103",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=100&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والله لنشفعن في المذنبين من شيعتنا حتى يقولوا أعداؤنا إذا رأوا ذلك { فما لنا من شافعين ولا صديق حميم }"
+        },
+        "gloss": "By God, we shall intercede for the sinners among our Shia until our enemies, seeing it, say: 'We have no intercessors, nor any sympathetic friend.'"
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 78 to 87",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=78&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأجابه الله، و جعل له و لغيره من الأنبياء: { لِسَانَ صِدْقٍ فِي ٱلآخِرِينَ } و هو علي بن أبي طالب (عليه السلام)"
+        },
+        "gloss": "God answered him and gave him and other prophets 'a truthful tongue among the posterity,' and it is Ali ibn Abi Talib."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 89",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=89&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "السليم الذي يلقى ربه، و ليس فيه أحد سواه"
+        },
+        "gloss": "The sound heart is the one that meets its Lord with no one in it but Him."
+      },
+      {
+        "id": "s35",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 83 to 89",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=26&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يلقى إبراهيم أباه آزر يوم القيامة، وعلى وجه آزر قترة وغبرة … فيقول الله تعالى إني حرمت الجنة على الكافرين"
+        },
+        "gloss": "Abraham meets his father Azar on the Day of Resurrection, dust and blackness on Azar's face ... and God says: I have forbidden the Garden to the disbelievers."
+      },
+      {
+        "id": "s57",
+        "kind": "hadith",
+        "work": "Nahj al-Balagha",
+        "author": "al-sharif al-radi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 8, cited at Ash-Shu'araa 98",
+        "url": "https://thaqalayn.com/book/18",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَكَأَنَّهُ لَمْ يَسْمَعْ تَبَرُّؤَ التَّابِعِينَ مِنَ المَتبُوعِينَ إِذْ يَقُولُونَ: ﴿تَاللهِ إِن كُنَّا لَفِي ضَلَالٍ مُّبِينٍ. إِذْ نُسَوِّيكُم بِرَبِّ الْعَالَمِينَ﴾"
+        },
+        "gloss": "It is as if he had not heard the followers disowning the followed: 'By God, we were in manifest error when we equated you with the Lord of the worlds.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T05:31:09Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-23T06:13:49Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "6": {
+    "id": "26:6",
+    "surah": 26,
+    "index": 6,
+    "range": [
+      105,
+      122
+    ],
+    "title": {
+      "en": "Noah and his people"
+    },
+    "essay": {
+      "en": "The surah has moved through the stories of Moses and Abraham; now it turns to Noah, whom al-Mizan calls the first of the resolute prophets [1]. It opens by charging his people with rejecting 'the apostles,' in the plural, though Noah alone stood before them. He speaks to them as their brother - a kinsman in lineage, not in faith [2] - and asks whether they will not be wary of God. He states his standing plainly: a trusted apostle who asks no reward, whose reward rests only with the Lord of all the worlds. Twice he says 'be wary of Allah and obey me,' and al-Tibyan reads the two calls as resting on separate grounds: his trustworthiness, and his asking for no payment they might fear to lose [3].\n\nThey answer with contempt: shall they believe when only the riffraff follow him? Noah refuses the premise. He does not know what they did before, their reckoning belongs to his Lord alone, and he is only a manifest warner [4]; al-Safi adds that it does not befit him to drive off the poor in order to draw in the rich [12]. When argument fails, they threaten to stone him.\n\nNoah then turns to God: his people have called him a liar, so let God judge conclusively between them. God answers - Noah and those with him are carried in the laden ark, and the rest are drowned. The passage closes with the refrain that runs through the surah: in that there is a sign, though most did not have faith, and your Lord is the All-mighty in the drowning, the All-merciful in the rescue [4]."
+    },
+    "verses": [
+      {
+        "verse": 105,
+        "heading": {
+          "en": "Denying the apostles"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "يعني بالمرسلين: نوحا، و الأنبياء الذين كانوا بينه و بين آدم",
+            "chain": "al-Tabrisi, from Abu Ja'far",
+            "text": {
+              "en": "By 'the apostles' He means Noah and the prophets who lived between him and Adam."
+            },
+            "source": "s8"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فَمَكَثَ نُوحٌ عليه السلام فِي قَوْمِهِ أَلْفَ سَنَةٍ إِلَّا خَمْسِينَ عاماً لَمْ يُشَارِكْهُ فِي نُبُوَّتِهِ أَحَدٌ وَ لَكِنَّهُ قَدِمَ عَلَى قَوْمٍ مُكَذِّبِينَ لِلْأَنْبِيَاءِ الَّذِينَ كَانُوا بَيْنَهُ وَ بَيْنَ آدَمَ وَ ذَلِكَ قَوْلُهُ تَبَارَكَ وَ تَعَالَى كَذَّبَتْ قَوْمُ نُوحٍ الْمُرْسَلِينَ يَعْنِي مَنْ كَانَ بَيْنَهُ وَ بَيْنَ آدَمَ",
+            "chain": "Muhammad ibn Ibrahim ibn Ishaq, from Ahmad ibn Muhammad al-Hamadani, from Ali ibn al-Hasan ibn Ali ibn Faddal, from his father, from Muhammad ibn al-Fudayl, from Abu Hamza al-Thumali, from Abu Ja'far al-Baqir",
+            "text": {
+              "en": "Noah remained among his people a thousand years save fifty, and no one shared his prophethood. He had come to a people who denied the prophets who lived between him and Adam. That is God's word, 'The people of Noah impugned the apostles' - meaning those between him and Adam."
+            },
+            "source": "s25"
+          }
+        ]
+      },
+      {
+        "verse": 111,
+        "heading": {
+          "en": "The riffraff who follow"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "قوله: { قالوا أنؤمن لك - يا نوح - واتبعك الأرذلون } قال الفقراء",
+            "chain": null,
+            "text": {
+              "en": "'Shall we believe in you, when it is the riffraff who follow you?' - the riffraff here are the poor."
+            },
+            "source": "s5"
+          }
+        ]
+      },
+      {
+        "verse": 118,
+        "heading": {
+          "en": "Noah asks for judgment"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "قوله: { فَٱفْتَحْ بَيْنِي وَبَيْنَهُمْ فَتْحاً } يقول: اقض بيني و بينهم قضاء",
+            "chain": "Ali ibn Ibrahim, in the report of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "'So judge conclusively between me and them' means: decide between me and them with a binding verdict."
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 119,
+        "heading": {
+          "en": "The laden ark"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ ٱلْفُلْكِ ٱلْمَشْحُونِ } قال: المجهز، الذي قد فرغ منه، و لم يبق إلا دفعه",
+            "chain": "Ali ibn Ibrahim, in the report of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "'The laden ark' means the ark made ready and finished, with nothing left but to launch it."
+            },
+            "source": "s10"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The verse charges the people with rejecting 'the apostles' in the plural, though Noah alone stood before them. Al-Razi explains the plural by noting that denying Noah in meaning entails denying the other messengers, and holds that these people rejected all of God's messengers [23]. The Shia narrations read it historically: on Imam al-Baqir's authority, 'the apostles' are Noah together with the prophets who lived between him and Adam, whom the people had already denied [8]. Kamal al-Din places ten forefathers, all of them prophets, between Adam and Noah [25]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 105 to 122",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=26&tAyahNo=105&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تشير الآيات بعد الفراغ عن قصتي موسى وإبراهيم عليهما السلام وهما من أُولي العزم إلى قصة نوح عليه السلام وهو أول أُولي العزم سادة الأنبياء"
+        },
+        "gloss": "After finishing the stories of Moses and Abraham, both of the resolute, the verses turn to the story of Noah, who is the first of the resolute, the masters of the prophets."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 105 to 122",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=105&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إذ قال لهم أخوهم نوح } أي في النسب لا في الدين"
+        },
+        "gloss": "'when Noah, their brother, said to them' - meaning brother in lineage, not in religion."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 105 to 110",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=105&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثم كرر عليهم قوله { فاتقوا الله وأطيعون } لاختلاف المعنى فيه، لان التقدير، فاتقوا الله واطيعوني لاني رسول أمين، واتقوا الله وأطيعوني لاني لا أسألكم أجراً عليه فتخافون ثلم أموالكم"
+        },
+        "gloss": "He repeated 'be wary of God and obey me' because the sense differs: obey me because I am a trusted apostle, and obey me because I ask no reward, so you need not fear the loss of your wealth."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 111 to 122",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=111&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لم أطردهم { وما علمي بما كانوا يعملون } فيما مضى، لأني ما كلفت ذلك … وليس أنا بطارد المؤمنين، لاني لست الا نذيراً مخوفاً من معصية الله مبين لطاعته"
+        },
+        "gloss": "I did not drive them away; I have no knowledge of what they did in the past, for I was not charged with that ... and I am not one to drive away the believers, for I am only a warner against disobeying God, making plain how to obey Him."
+      },
+      {
+        "id": "s5",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 111",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=111&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قوله: { قالوا أنؤمن لك - يا نوح - واتبعك الأرذلون } قال الفقراء"
+        },
+        "gloss": "'They said, shall we believe in you, when it is the riffraff who follow you?' He said: the poor."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 105",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=105&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني بالمرسلين: نوحا، و الأنبياء الذين كانوا بينه و بين آدم"
+        },
+        "gloss": "By 'the apostles' is meant Noah and the prophets who were between him and Adam."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 118 to 122",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=118&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ٱلْفُلْكِ ٱلْمَشْحُونِ } قال: المجهز، الذي قد فرغ منه، و لم يبق إلا دفعه"
+        },
+        "gloss": "'The laden ark' - he said: the one made ready and finished, with nothing left but to launch it."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 106 to 122",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=26&tAyahNo=106&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يليق بي طرد الفقراء لاستتباع الأغنياء"
+        },
+        "gloss": "It does not befit me to drive away the poor in order to draw in the rich."
+      },
+      {
+        "id": "s23",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 105 to 122",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=26&tAyahNo=105&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أنهم وإن كذبوا نوحاً لكن تكذيبه في المعنى يتضمن تكذيب غيره"
+        },
+        "gloss": "Although they denied only Noah, his denial in meaning includes the denial of the others."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "Kamal al-Din wa Tamam al-Ni'ma",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 2, cited at Ash-Shu'araa 105",
+        "url": "https://thaqalayn.com/book/21",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَ كَانَ بَيْنَ آدَمَ وَ بَيْنَ نُوحٍ عليه السلام عَشَرَةُ آبَاءٍ كُلُّهُمْ أَنْبِيَاءُ اللَّهِ"
+        },
+        "gloss": "Between Adam and Noah there were ten forefathers, all of them prophets of God."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T05:35:04Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-23T06:15:09Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "7": {
+    "id": "26:7",
+    "surah": 26,
+    "index": 7,
+    "range": [
+      123,
+      140
+    ],
+    "title": {
+      "en": "Hud and the people of Ad"
+    },
+    "essay": {
+      "en": "This passage takes up Ad and their prophet Hud, one of the messenger-stories running through the surah. Al-Mizan places Ad in al-Ahqaf of the Arabian peninsula, a people of refined cities and fertile land who denied their prophet and were destroyed by a barren wind [1]. Verse 123 says they impugned 'the apostles,' though Hud alone was sent to them, because to reject one messenger is to reject them all [1]. Their brother Hud opens as Noah had before him: a trusted apostle who asks no reward, calling them only to be wary of Allah and to obey him [1].\n\nHud then names their offenses. They build a futile sign on every prominence; al-Tibyan reads the prominence as raised ground, and Majma al-Bayan glosses the structures as buildings they did not need, raised for play and diversion [3][2]. They set up strongholds and palaces as though they would live forever [2][3]. And when they seize a man they seize him like tyrants. Al-Mizan draws the three charges together: a people excessive in both appetite and anger, transgressing moderation and stepping outside the station of servanthood [1].\n\nHud renews his call and grounds it in gratitude: be wary of the One who aided you with sons and cattle, gardens and springs, for ingratitude for blessing invites wrath [1]. He fears for them the punishment of a tremendous day, which the commentators take to be the Day of Resurrection [2][4].\n\nTheir answer is flat refusal. It is the same to them whether he exhorts them or not; what he brings, they say, is nothing but the traditions of the ancients, and they will not be punished [2]. So they belied him and were destroyed. Al-Mizan notes that the closing refrain seals each of the surah's stories: a sign is in it, most turn away, and their Lord is Mighty in requiting denial, Merciful in saving those who believe [1]."
+    },
+    "verses": [
+      {
+        "verse": 123,
+        "heading": {
+          "en": "Noah foretold Hud"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "وَ قَالَ نُوحٌ إِنَّ اللَّهَ بَاعِثٌ نَبِيّاً يُقَالُ لَهُ هُودٌ وَ إِنَّهُ يَدْعُو قَوْمَهُ إِلَى اللَّهِ عَزَّ وَ جَلَّ فَيُكَذِّبُونَهُ وَ اللَّهُ عَزَّ وَ جَلَّ مُهْلِكُهُمْ بِالرِّيحِ فَمَنْ أَدْرَكَهُ مِنْكُمْ فَلْيُؤْمِنْ بِهِ وَ لْيَتَّبِعْهُ فَإِنَّ اللَّهَ عَزَّ وَ جَلَّ يُنْجِيهِ مِنْ عَذَابِ الرِّيحِ … فَآمَنُوا بِهِ وَ اتَّبَعُوهُ وَ صَدَّقُوهُ فَنَجَوْا مِنْ عَذَابِ الرِّيحِ",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Hasan ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu Hamza, from Abu Jafar",
+            "text": {
+              "en": "Noah said: Allah will raise a prophet named Hud, who will call his people to Allah; they will belie him, and Allah will destroy them by the wind. Whoever of you reaches him, let him believe and follow him, and Allah will save him from the wind's punishment. They believed, followed, and were saved from the wind."
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 128,
+        "heading": {
+          "en": "Building futile signs"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "و أما قوله: { بِكُلِّ رِيعٍ آيَةً } قال الإمام أبو جعفر (عليه السلام): يعني بكل طريق آية، و الآية علي (عليه السلام)",
+            "chain": "Ali ibn Ibrahim, in a report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "Regarding 'a sign on every prominence': it means a sign on every road; and the sign is Ali."
+            },
+            "source": "s7"
+          },
+          {
+            "id": "n3",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "أن رسول الله صلى الله عليه وسلم خرج فرأى قبة مشرفة فقال: ما هذه … إن لكل بناء يبنى وبال على صاحبه يوم القيامة إلا ما لا بدَّ منه",
+            "chain": "From Anas ibn Malik",
+            "text": {
+              "en": "The Messenger of Allah went out and saw a raised dome and asked, 'What is this?' ... He said: Every building that is built is a burden on its owner on the Day of Resurrection, except what cannot be done without."
+            },
+            "source": "s2"
+          }
+        ]
+      },
+      {
+        "verse": 130,
+        "heading": {
+          "en": "Seizing like tyrants"
+        },
+        "note": {
+          "en": "Tafsir al-Qummi glosses 'you seize like tyrants' as killing in anger without the victim deserving it [6]."
+        },
+        "narrations": []
+      }
+    ],
+    "perspectives": {
+      "en": null
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 123 to 140",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=26&tAyahNo=123&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومحصَّل الآيات الثلاث أنكم مسرفون في جانبي الشهوة والغضب متعدّون حد الاعتدال خارجون عن طور العبودية."
+        },
+        "gloss": "The upshot of the three verses is that you are excessive in both appetite and anger, transgressing the bounds of moderation and stepping outside the station of servanthood."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 123 to 140",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=123&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ آية تعبثون } أي بناء لا تحتاجون إليه لسكناكم وإنما تريدون العبث بذلك واللعب واللهو"
+        },
+        "gloss": "'A sign, futile': a building you do not need for dwelling; you only want amusement, play and diversion by it."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 123 to 131",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=123&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والريع الارتفاع من الارض، وجمعه آرياع وريعة"
+        },
+        "gloss": "The riy' (prominence) is what rises up from the ground, its plural being aryaa and riya."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 132 to 140",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=132&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إني أخاف عليكم عذاب يوم عظيم } يعني يوم القيامة"
+        },
+        "gloss": "'Indeed I fear for you the punishment of a tremendous day' means the Day of Resurrection."
+      },
+      {
+        "id": "s6",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 130",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=130&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وإذا بطشتم بطشتم جبارين } قال: تقتلون بالغضب من غير استحقاق"
+        },
+        "gloss": "'And when you seize, you seize like tyrants': you kill in anger without their deserving it."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 123 to 140",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=123&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال الإمام أبو جعفر (عليه السلام): يعني بكل طريق آية، و الآية علي (عليه السلام)"
+        },
+        "gloss": "Imam Abu Jafar said: it means, on every road a sign; and the sign is Ali."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 8, hadith 1, cited at Ash-Shu'araa 123",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "مجهول",
+          "لم يخرجه"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَ قَالَ نُوحٌ إِنَّ اللَّهَ بَاعِثٌ نَبِيّاً يُقَالُ لَهُ هُودٌ وَ إِنَّهُ يَدْعُو قَوْمَهُ إِلَى اللَّهِ عَزَّ وَ جَلَّ فَيُكَذِّبُونَهُ وَ اللَّهُ عَزَّ وَ جَلَّ مُهْلِكُهُمْ بِالرِّيحِ"
+        },
+        "gloss": "Noah said: Allah will raise a prophet named Hud; he will call his people to Allah, they will belie him, and Allah will destroy them by the wind."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T05:38:57Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-23T06:32:57Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "8": {
+    "id": "26:8",
+    "surah": 26,
+    "index": 8,
+    "range": [
+      141,
+      159
+    ],
+    "title": {
+      "en": "Salih and Thamud"
+    },
+    "essay": {
+      "en": "This passage is the eighth of eleven in a Meccan surah that recounts one prophet after another, and it follows the same shape as the rest: a people denied the messengers, and their own brother came to warn them. Thamud's brother Salih calls them to be wary of Allah, declares himself a trusted messenger, and asks no reward, for his reward rests with the Lord of all the worlds.\n\nThen comes an appeal shaped to their own comfortable life. Will they be left secure amid gardens and springs, farms and date palms, in the houses they skillfully hew from the mountains? Al-Tusi reads the question as a rebuke: the blessings they enjoy will not remain with them [3]. The word for their craft, fariheen, was read with an alif to mean skilled and without it to mean insolent [2].\n\nSalih repeats his call and warns them not to obey the command of the transgressors who corrupt the land and never set it right. Al-Tabrisi identifies these as the people's chiefs, the nine men of Thamud who hamstrung the she-camel [2], and al-Mizan notes that corruption is never safe from Allah's punishment, for He is Mighty and takes retribution [1].\n\nThey answer that Salih is only a bewitched man, a mere human like themselves, and they demand a sign. He brings the she-camel: she has her share of the water and they have theirs on set days, and they must do her no harm, or a terrible day's punishment will seize them. They hamstrung her and were left regretful, and the punishment seized them as promised.\n\nThere is a sign in this, the passage closes, but most of them do not have faith; and, as the refrain that seals each of these stories declares, 'Indeed your Lord is the All-mighty, the All-merciful.'"
+    },
+    "verses": [
+      {
+        "verse": 142,
+        "heading": {
+          "en": "Salih sent to Thamud"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "و أما صالح فإنه أرسل إلى ثمود و هي قرية واحدة لا تكمل أربعين بيتا على ساحل البحر صغيرة",
+            "chain": "Muhammad ibn Ibrahim ibn Ishaq, from Ahmad ibn Muhammad al-Hamadani, from Ali ibn al-Hasan ibn Ali ibn Faddal, from his father, from Muhammad ibn al-Fudayl, from Abu Hamza al-Thumali, from Abu Jafar al-Baqir",
+            "text": {
+              "en": "As for Salih, he was sent to Thamud, a single small village of not quite forty houses on the seacoast."
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 153,
+        "heading": {
+          "en": "They call him bewitched"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ إِنَّمَآ أَنتَ مِنَ ٱلْمُسَحَّرِينَ } يقول: أجوف، مثل خلق الإنسان، و لو كنت رسولا ما كنت مثلنا",
+            "chain": "Ali ibn Ibrahim, in the narration of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "'You are only one of the bewitched' means: hollow, like the make of a human being; and had you been a messenger, you would not have been like us."
+            },
+            "source": "s6"
+          }
+        ]
+      },
+      {
+        "verse": 155,
+        "heading": {
+          "en": "The she-camel"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ثم أوحى الله تبارك و تعالى إليه: أن يا صالح، قل لهم: إن الله قد جعل لهذه الناقة شرب يوم، و لكم شرب يوم، فكانت الناقة إذا كان يوم شربها شربت الماء ذلك اليوم، فيحلبونها، فلا يبقى صغير و لا كبير إلا شرب من لبنها يومهم ذلك",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from Ali ibn al-Abbas, from al-Hasan ibn Abd al-Rahman, from Ali ibn Abi Hamza, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "Allah revealed to Salih: tell them, Allah has appointed for this she-camel a drink of one day and for you a drink of one day. On her day she drank the water and they milked her, and no young or old one remained but drank of her milk that day."
+            },
+            "source": "s7"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "اوّل عين نبعت في الأرض هي التي فجرها الله لصالح فقال { لَهَا شِرْبٌ وَلَكُمْ شِرْبُ يَوْمٍ مَعْلُومٍ }",
+            "chain": null,
+            "text": {
+              "en": "The first spring to gush forth on earth is the one Allah caused to flow for Salih, and He said, 'She has a share of drink, and you have a share of drink on a known day.'"
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 157,
+        "heading": {
+          "en": "All share the guilt"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "أَيُّهَا النَّاسُ، إِنَّمَا يَجْمَعُ النَّاسَ الرِّضِى وَالسُّخْطُ، وَإِنَّمَا عَقَرَ نَاقَةَ ثَمُودَ رَجُلٌ وَاحِدٌ فَعَمَّهُمُ اللهُ تَعَالَى بالْعَذَابِ لَمَّا عَمُّوهُ بالرِّضَى",
+            "chain": null,
+            "text": {
+              "en": "O people, what draws people together is consent and displeasure. Only one man hamstrung the she-camel of Thamud, yet Allah encompassed them all with the punishment, because they all consented to it."
+            },
+            "source": "s23"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": null
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 141 to 159",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=26&tAyahNo=141&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والإِفساد لا يؤمن معه العذاب الإِلهي وهو عزيز ذو انتقام"
+        },
+        "gloss": "Corruption is not safe from divine punishment, for He is Mighty, an Avenger."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 141 to 159",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=141&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قرأ أهل الكوفة والشام فارهين بالألف والباقون فرهين بغير الألف"
+        },
+        "gloss": "The people of Kufa and Sham read 'fariheen' with an alif; the rest read 'farihin' without it."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 141 to 150",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=141&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "منكراً عليهم، فان ما هم فيه من النعم لا تبقى عليهم، وانها تزول عنهم"
+        },
+        "gloss": "rebuking them, for the blessings they are in will not remain for them but will pass away from them."
+      },
+      {
+        "id": "s6",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 141 to 153",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=141&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إِنَّمَآ أَنتَ مِنَ ٱلْمُسَحَّرِينَ } يقول: أجوف، مثل خلق الإنسان، و لو كنت رسولا ما كنت مثلنا"
+        },
+        "gloss": "'You are only one of the bewitched' means: hollow, like the make of a human being; and had you been a messenger, you would not have been like us."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 155",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=155&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الله قد جعل لهذه الناقة شرب يوم، و لكم شرب يوم"
+        },
+        "gloss": "Allah has appointed for this she-camel a drink of one day, and for you a drink of one day."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 141 to 156",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=26&tAyahNo=141&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اوّل عين نبعت في الأرض هي التي فجرها الله لصالح"
+        },
+        "gloss": "The first spring to gush forth on earth is the one Allah caused to flow for Salih."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Kamal al-Din wa Tamam al-Ni'ma",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 2, cited at Ash-Shu'araa 142",
+        "url": "https://thaqalayn.com/book/21",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "و أما صالح فإنه أرسل إلى ثمود و هي قرية واحدة لا تكمل أربعين بيتا على ساحل البحر صغيرة"
+        },
+        "gloss": "As for Salih, he was sent to Thamud, a single small village of not quite forty houses on the seacoast."
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "Nahj al-Balagha",
+        "author": "al-sharif al-radi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 3, cited at Ash-Shu'araa 157",
+        "url": "https://thaqalayn.com/book/18",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَإِنَّمَا عَقَرَ نَاقَةَ ثَمُودَ رَجُلٌ وَاحِدٌ فَعَمَّهُمُ اللهُ تَعَالَى بالْعَذَابِ لَمَّا عَمُّوهُ بالرِّضَى"
+        },
+        "gloss": "Only one man hamstrung the she-camel of Thamud, yet Allah encompassed them all with the punishment, because they all consented to it."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T06:08:43Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-23T06:35:41Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "9": {
+    "id": "26:9",
+    "surah": 26,
+    "index": 9,
+    "range": [
+      160,
+      175
+    ],
+    "title": {
+      "en": "Lot and his people"
+    },
+    "essay": {
+      "en": "This is another of the surah's ruined nations, the story of Lot, which comes after that of Salih [1]. Its shape repeats the pattern that runs through the whole surah: the people impugned the apostles, and their brother Lot asked them, 'Will you not be wary of Allah?' He declares himself a trusted apostle who asks no reward, his wage resting only with the Lord of all the worlds. Al-Tusi notes that every prophet's call is cast in one wording to show that the truth the messengers bring is one, God-wariness, sincere worship, and obedience to His envoys [3]. He adds that a prophet may truthfully call himself trustworthy because his infallibility is established, where another man could not [3].\n\nThen comes the charge that sets this people apart: 'Of all people do you come to males, abandoning the wives your Lord created for you?' Tabatabai reads Lot's words as an argument drawn from creation itself: man is fashioned for woman and woman for man, a natural pairing ordered toward the survival of the species, so that in coming to males they overstep the limit set by their own nature, and this, he says, is what 'a transgressing lot' means [1].\n\nThey answer not with argument but with a threat: desist, Lot, or be banished. Lot does not take up the threat of exile at all; he simply declares that he detests their conduct and turns to his Lord, 'deliver me and my family from what they do' [1]. He names only himself and his household, Tabatabai notes, because no one else in the town had believed [1].\n\nAllah delivers him and all his family, except one old woman who stayed behind, his wife, who used to guide the corrupt to his guests [2]. The rest are destroyed, the land made to sink [2] and stones of baked clay rained down [1]. The story closes on the surah's refrain: 'in that is a sign, yet most had no faith, and your Lord is the All-mighty, the All-merciful.'"
+    },
+    "verses": [],
+    "perspectives": {
+      "en": null
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 160 to 175",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=26&tAyahNo=160&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالرجل من الإِنسان بما هو رجل مخلوق للمرأة منه لا لرجل مثله والمرأة من الإِنسان بما هي امرأة مخلوقة للرجل منه لا لامرأة مثلها"
+        },
+        "gloss": "The man, as a man, is created for the woman, not for a man like himself; and the woman, as a woman, is created for the man, not for a woman like herself."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 160 to 175",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=160&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأراد بالعجوز امرأته لأنها كانت تدل أهل الفساد على أضيافه … أهلكناهم بالخسف"
+        },
+        "gloss": "By the old woman He meant his wife, because she used to point the corrupt to his guests. … We destroyed them by the sinking of the earth."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 160 to 175",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=160&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وانما جاز أن يخبر بذلك لقيام الدلالة على عصمته من القبائح. وغيره لا يجوز أن يخبر بذلك عن نفسه لجواز الخطأ عليه … وانما حكى الله تعالى دعوة الانبياء بصغية واحدة، ولفظ واحد إشعاراً بأن الحق الذي يأتي به الرسل، ويدعون اليه واحد"
+        },
+        "gloss": "It was permissible for him to state this because the proof of his infallibility from vile deeds stands; another may not say it of himself, since error is possible for him. … Allah related the prophets' call in one form and one wording, to signal that the truth the messengers bring and call to is one."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T06:11:17Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-23T06:46:04Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "10": {
+    "id": "26:10",
+    "surah": 26,
+    "index": 10,
+    "range": [
+      176,
+      191
+    ],
+    "title": {
+      "en": "Shu'ayb and the people of Aykah"
+    },
+    "essay": {
+      "en": "This is the last of the seven ruin-stories the surah sets out one after another, and it turns to Shu'ayb and the people of Aykah [1]. Aykah is a dense thicket of tangled trees [2], and those who lived there rejected the messengers. The account opens as the earlier ones did: their prophet calls them to be wary of Allah, states that he is a trusted messenger, and asks no wage, for his reward rests with the Lord of all the worlds.\n\nOne detail sets this story apart. The verse says 'Shu'ayb said to them,' not 'their brother Shu'ayb,' the wording used of Hud, Salih and Lot [1], because Shu'ayb was a stranger to these people and not their kinsman [3].\n\nHis preaching is practical. He commands them to give full measure and to weigh with an even balance, that is, with justice in which there is no wrongdoing [2], not to shortchange people of their goods, and not to spread corruption in the land. He then calls them to be wary of the One who created them and the earlier generations before them [3] - in the end, a call to worship God alone [1].\n\nThey answer with contempt: he is bewitched, only a human like themselves, and a liar. They dare him to drop a fragment of the sky on them, a demand meant to mock him and to show him powerless [1]. Shu'ayb refuses the challenge and hands the matter back to God: 'My Lord knows best what you are doing' [1].\n\nThen the ruin comes. A scorching heat drove them from their homes toward a cloud that promised shade, and when they gathered beneath it, it rained down fire [3]. The passage closes as its companions do: there is a sign in this, though most did not believe, and your Lord is the Almighty, merciful to His creation and mighty in punishing those who deny Him [3]."
+    },
+    "verses": [
+      {
+        "verse": 176,
+        "heading": {
+          "en": "The people of Aykah"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "و في رواية أبي الجارود، عن أبي جعفر (عليه السلام) قوله: { كَذَّبَ أَصْحَابُ لْئَيْكَةِ } قال: الأيكة: الغيضة من الشجر",
+            "chain": "in the report of Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "Aykah is the thicket of trees."
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 183,
+        "heading": {
+          "en": "Ali in the markets"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "كان علي (عليه السلام) كل بكرة يطوف في أسواق الكوفة سوقا سوقا ومعه الدرة على عاتقه … وأوفوا الكيل والميزان، ولا تبخسوا الناس أشياءهم، ولا تعثوا في الارض مفسدين",
+            "chain": "his father, from Sa'd ibn Abdillah, from Ibrahim ibn Hashim, from Abd al-Rahman ibn Abi Najran, from Asim ibn Humayd, from Muhammad ibn Qays, from Abu Ja'far",
+            "text": {
+              "en": "Ali would patrol the markets of Kufa each morning, his whip on his shoulder, and call to the merchants: complete the measure and the weight, do not undervalue people's goods, and do not spread corruption in the land."
+            },
+            "source": "s24"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The commentators split over who the people of Aykah were and why the Quran drops the word 'brother.' The Shia commentators read the shift to 'Shu'ayb said to them,' rather than 'their brother Shu'ayb,' as a sign that he was not their kinsman [3]. Ibn Kathir instead holds that the people of Aykah were the people of Madyan, and that 'brother' is dropped because they were named for the tree they worshipped, even though Shu'ayb was himself one of them [17]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 176 to 191",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=26&tAyahNo=176&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهي آخر القصص السبع الموردة في السورة"
+        },
+        "gloss": "This is the last of the seven stories set out in the surah."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 176 to 191",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=176&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الأيكة الغيضة ذات الشجر الملتف"
+        },
+        "gloss": "Aykah is a dense thicket of tangled trees."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 176 to 191",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=176&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولم يقل أخوهم كما قال في سائر من تقدم من الانبياء لانه لم يكن منهم في النسب"
+        },
+        "gloss": "He did not say 'their brother,' as He did of the earlier prophets, because he was not of their lineage."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 176 to 189",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=176&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الأيكة: الغيضة من الشجر"
+        },
+        "gloss": "Aykah is the thicket of trees."
+      },
+      {
+        "id": "s17",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 176 to 180",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=26&tAyahNo=176&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هؤلاء ــــ يعني أصحاب الأيكة ــــ هم أهل مدين على الصحيح، وكان نبي الله شعيب من أنفسهم، وإنما لم يقل ههنا أخوهم شعيب لأنهم نسبوا إلى عبادة الأيكة، وهي شجرة"
+        },
+        "gloss": "These - meaning the people of Aykah - are the people of Madyan, according to the sound view, and Allah's prophet Shu'ayb was one of them; He did not say here 'their brother Shu'ayb' only because they were ascribed to the worship of the Aykah, which is a tree."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "Al-Amali",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 6, cited at Ash-Shu'araa 183",
+        "url": "https://thaqalayn.com/book/15",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأوفوا الكيل والميزان، ولا تبخسوا الناس أشياءهم، ولا تعثوا في الارض مفسدين"
+        },
+        "gloss": "Give full measure and weight, do not undervalue people's goods, and do not spread corruption in the land."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T06:14:32Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-23T06:54:15Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  },
+  "11": {
+    "id": "26:11",
+    "surah": 26,
+    "index": 11,
+    "range": [
+      192,
+      227
+    ],
+    "title": {
+      "en": "The Quran and the poets"
+    },
+    "essay": {
+      "en": "This closing passage turns from the seven prophet-stories of the surah to the Quran itself and to the Meccans who reject it. Al-Mizan reads it as the conclusion drawn from those stories: a rebuke and warning to the deniers, and a defense of the Prophet's mission and his Book [1].\n\nThe Quran is a sending-down from the Lord of all the worlds, brought by the Trustworthy Spirit onto the Prophet's heart so that he may be a warner, in clear Arabic. Majma al-Bayan identifies the Trustworthy Spirit as Gabriel, faithful to God's word, altering and changing nothing of it [2]. Its notice stands foretold in the scriptures of the ancients, and the learned of the Children of Israel recognizing it is offered as a sign of his truth [2].\n\nHad the Book come down upon a non-Arab who recited it to them, they would still not have believed. This, the passage says, is how God lets the Quran pass through the hearts of the guilty: al-Tibyan explains that He settles it in their minds so the proof stands against them, yet they will not believe until they see the painful punishment fall suddenly, then beg for respite [5]. If they are let to enjoy years, that enjoyment avails them nothing when the promise arrives [1]. No town was ever destroyed without warners sent first, for admonition, and God was never unjust [1].\n\nThe passage then answers the charge that devils or a jinn bring this speech: the devils neither befit it nor are able, and are barred even from hearing [1]. The Prophet is told to worship God alone, to warn his nearest kin, to lower his wing to the believers, to disown the deeds of those who disobey, and to trust the All-mighty, the All-merciful who sees him at prayer [1].\n\nGod then names those on whom devils truly descend, every sinful liar, and the wandering poets whom the perverse follow, closing with the believing poets and a warning of where the wrongdoers will end [1]."
+    },
+    "verses": [
+      {
+        "verse": 193,
+        "heading": {
+          "en": "The revelation and Ghadir"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الولاية نزلت لأمير المؤمنين عليه السلام يوم الغدير",
+            "chain": "Ali ibn Ibrahim, from his father, from Hannan, from Abu Abdillah",
+            "text": {
+              "en": "The guardianship (wilaya) of Amir al-Muminin came down for him on the Day of Ghadir."
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 198,
+        "heading": {
+          "en": "A merit of the non-Arabs"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لو أنزل القرآن على العجم ما آمنت به العرب وقد نزل على العرب فآمنت به العجم فهذه فضيلة العجم",
+            "chain": null,
+            "text": {
+              "en": "Had the Quran been sent down on the non-Arabs, the Arabs would not have believed in it; it was sent on the Arabs, and the non-Arabs believed in it, so this is a merit of the non-Arabs."
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 205,
+        "heading": {
+          "en": "The dream of Bani Umayya"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "رَأَى رَسُولُ الله (صلَّى اللهُ عَلَيْهِ وَآلِه) فِي مَنَامِهِ بَنِي أُمَيَّةَ يَصْعَدُونَ عَلَى مِنْبَرِهِ مِنْ بَعْدِهِ وَيُضِلُّونَ النَّاسَ عَنِ الصِّرَاطِ الْقَهْقَرَى فَأَصْبَحَ كَئِيباً حَزِيناً … فَقَالَ وَالَّذِي بَعَثَكَ بِالْحَقِّ نَبِيّاً إِنَّ هَذَا شَيْ‏ءٌ مَا اطَّلَعْتُ عَلَيْهِ فَعَرَجَ إِلَى السَّمَاءِ فَلَمْ يَلْبَثْ أَنْ نَزَلَ عَلَيْهِ بِآيٍ مِنَ الْقُرْآنِ يُؤْنِسُهُ بِهَا",
+            "chain": "Ahmad ibn Muhammad, from Ali ibn al-Husayn, from Muhammad ibn al-Walid and Muhammad ibn Ahmad, from Yunus ibn Yaqub, from Ali ibn Isa al-Qammat, from his uncle, from Abu Abdillah",
+            "text": {
+              "en": "The Messenger of God saw in a dream the Bani Umayya climbing his pulpit after him and turning people back from the straight path, and he awoke grieved. Gabriel said: By Him who sent you with the truth, this is something I was not shown. Then he ascended and came down with verses to comfort him."
+            },
+            "source": "s78"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قال: خروج القائم (عليه السلام) … قال: هم بنو امية الذين متعوا في دنياهم",
+            "chain": "Muhammad ibn al-Abbas, from al-Husayn ibn Ahmad, from Muhammad ibn Isa, from Yunus, from Safwan ibn Yahya, from Abu Uthman, from Mu'alla ibn Khunays, from Abu Abdillah",
+            "text": {
+              "en": "'Then there comes to them what they were promised' is the rising of the Qa'im; and 'of what avail was the enjoyment they were given' refers to the Bani Umayya, who were let to enjoy their world."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 214,
+        "heading": {
+          "en": "Warn your nearest kin"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "لما نزلت: (و أنذر عشيرتك الأقربين و رهطك المخلصين) دعا رسول الله (صلى الله عليه و آله) بني عبد المطلب … فقال: أيكم يكون أخي، و وارثي، و وزيري، و وصيي، و خليفتي فيكم بعدي؟ … حتى أتي علي، فقلت: أنا، يا رسول الله. فقال: يا بني عبد المطلب، هذا أخي و وارثي، و وزيري، و خليفتي فيكم بعدي",
+            "chain": "al-A'mash, from al-Minhal ibn Amr, from Abdullah ibn al-Harith ibn Nawfal, from Ali ibn Abi Talib",
+            "text": {
+              "en": "When 'Warn your nearest kin, your sincere clan' came down, the Messenger of God gathered Bani Abd al-Muttalib and asked which of them would be his brother, heir, helper, executor, and successor after him. Only I answered. He said, 'This is my brother, heir, helper, and successor among you.'"
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 218,
+        "heading": {
+          "en": "The loins of the prophets"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "الذي يراك حين تقوم في النبوة وتقلبك في الساجدين أصلاب النبيين",
+            "chain": "Muhammad ibn al-Walid, from Muhammad ibn al-Furat, from Abu Ja'far",
+            "text": {
+              "en": "'Who sees you when you stand' means in prophethood, and 'your moving among those who prostrate' means through the loins of the prophets."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 224,
+        "heading": {
+          "en": "The poets and the perverse"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "هل رأيت شاعرا يتبعه أحد؟! إنما هم قوم تفقهوا لغير الدين، فضلوا و أضلوا",
+            "chain": "Sa'd ibn Abdillah, from Muhammad ibn al-Husayn ibn Abi al-Khattab, from al-Hasan ibn Mahbub, from Hammad ibn Uthman, from Abu Ja'far",
+            "text": {
+              "en": "Have you ever seen a poet whom anyone follows? Rather they are a people who acquired religious learning for other than the religion; they went astray and led others astray."
+            },
+            "source": "s25"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'Warn your nearest kin,' Shia commentators read the gathering that followed as the Prophet's public designation of Ali: when he asked which of his kin would be his brother, heir, helper, and successor, only Ali answered, and the Prophet named him so [21]. Sunni tafsir also records the feast for Bani Abd al-Muttalib, but al-Tabari foregrounds the reports in which the Prophet simply warns Quraysh that no kinship will avail them against God, and where he transmits the designation of Ali he abbreviates its wording [38]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Ash-Shu'araa 192 to 227",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=26&AyahNo=192&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تشير الآيات إلى ما هو كالنتيجة المستخرجة من القصص السبع السابقة ويتضمن التوبيخ والتهديد لكفار الأُمة."
+        },
+        "gloss": "The verses point to what is like the conclusion drawn from the seven preceding stories, and they contain rebuke and warning for the disbelievers of the community."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 192 to 212",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=26&tAyahNo=192&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ الروح الأمين } يعني جبرائيل ع وهو أمين الله لا يغيّره ولا يبدّله"
+        },
+        "gloss": "'The Trustworthy Spirit' means Gabriel, and he is God's trustworthy one who does not alter it or change it."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 192 to 207",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=26&tAyahNo=192&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومعناه أقررناه في قلوبهم باخطاره ببالهم لتقوم به الحجة عليهم"
+        },
+        "gloss": "Its meaning is: We settled it in their hearts by bringing it to their minds, so that the proof would be established against them."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 192 to 194",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=192&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الولاية نزلت لأمير المؤمنين عليه السلام يوم الغدير"
+        },
+        "gloss": "The guardianship (wilaya) came down for Amir al-Muminin on the Day of Ghadir."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 198 to 199",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=198&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لو أنزل القرآن على العجم ما آمنت به العرب وقد نزل على العرب فآمنت به العجم فهذه فضيلة العجم"
+        },
+        "gloss": "Had the Quran been sent down on the non-Arabs, the Arabs would not have believed in it; it was sent on the Arabs, and the non-Arabs believed in it, so this is a merit of the non-Arabs."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 218 to 219",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=26&tAyahNo=218&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الذي يراك حين تقوم في النبوة وتقلبك في الساجدين أصلاب النبيين"
+        },
+        "gloss": "'Who sees you when you stand' is in prophethood, and 'your moving among those who prostrate' is the loins of the prophets."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 205 to 207",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=205&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: خروج القائم (عليه السلام) … قال: هم بنو امية الذين متعوا في دنياهم"
+        },
+        "gloss": "He said: it is the rising of the Qa'im; and 'the enjoyment they were given' refers to the Bani Umayya, who were let to enjoy their world."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 214",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=214&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذا أخي و وارثي، و وزيري، و خليفتي فيكم بعدي"
+        },
+        "gloss": "This is my brother, my heir, my helper, and my successor among you after me."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 224 to 227",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=26&tAyahNo=224&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هل رأيت شاعرا يتبعه أحد؟! إنما هم قوم تفقهوا لغير الدين، فضلوا و أضلوا"
+        },
+        "gloss": "Have you ever seen a poet whom anyone follows? Rather they are a people who acquired religious learning for other than the religion; they went astray and led others astray."
+      },
+      {
+        "id": "s38",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Ash-Shu'araa 213 to 215",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=26&tAyahNo=213&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يا مَعْشَرَ قُرَيْشٍ اشْتَرُوا أنْفُسَكُمْ مِنَ اللَّهِ، لا أُغْنِـي عَنْكُمْ مِنَ اللَّهِ شَيْئاً"
+        },
+        "gloss": "O people of Quraysh, buy yourselves from God; I cannot avail you anything against God."
+      },
+      {
+        "id": "s78",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 4, hadith 10, cited at Ash-Shu'araa 206",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "مجهول"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "رَأَى رَسُولُ الله (صلَّى اللهُ عَلَيْهِ وَآلِه) فِي مَنَامِهِ بَنِي أُمَيَّةَ يَصْعَدُونَ عَلَى مِنْبَرِهِ مِنْ بَعْدِهِ وَيُضِلُّونَ النَّاسَ عَنِ الصِّرَاطِ الْقَهْقَرَى"
+        },
+        "gloss": "The Messenger of God saw in a dream the Bani Umayya climbing his pulpit after him and turning people back from the straight path."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-23T06:28:31Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-23T07:09:16Z",
+      "assembled_at": "2026-09-23T12:28:44Z"
+    }
+  }
+}

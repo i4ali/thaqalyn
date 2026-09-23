@@ -3875,3 +3875,177 @@ every gate.
   on a malformed draft, bidi control characters, editorial insertions in
   `clean_block_text`, the re-gather of surahs 1 to 9, the Meccan/Medinan
   label, `titles --approve-all`.
+
+## Results - al-Furqan 25:1 to 25:6 (2026-09-22)
+
+One passage (25:1, verses 1 to 9). The draft had been written on
+2026-09-21 in an earlier session; this run audited, titled and assembled
+it.
+
+| passage | stage  | attempts | first try | sources |
+|---------|--------|----------|-----------|---------|
+| 25:1    | passed | 1        | yes       | 34      |
+
+- Auditor: 145K tokens, 4.5 minutes. 23 verdicts, all supported; no
+  uncited claims, no prose flags. Passed on the first try, no rewrite.
+- Titles approved as generated at the gate.
+- Reader notes: four narrations, all interpretive (Quran vs Furqan,
+  taqdir, the named helpers of verse 4, the wilaya reading of verse 9).
+  The polemical verse-9 narration is set against Tabari in the
+  perspectives, which is the house pattern. No verse notes in this
+  draft. A marker's `excerpt` shows one line of its block, so an essay
+  claim can look unsupported by the excerpt while the block carries it
+  (the [1] claims on the surah's aim and on God's ownership); judge
+  markers against the block, not the excerpt.
+
+### 25:2 (verses 10 to 20)
+
+| passage | stage  | attempts | first try | sources |
+|---------|--------|----------|-----------|---------|
+| 25:2    | passed | 2        | yes       | 44      |
+
+- Gather: al-Burhan empty for verse 15, al-Qummi for 14 to 16, Furat for
+  the whole passage; one retry gave the same result. al-Mizan came from
+  greattafsirs.com.
+- Writer: 216K tokens, 13 minutes; two validator rounds on verbatim
+  Arabic (spaced waw and honorific parentheses in al-Burhan, tatweel in
+  al-Tabari, alif wasla in Quran quotes).
+- Auditor: 191K tokens, 7 minutes. 23 verdicts, all supported, no prose
+  flags. PASS.
+- Attribution slip the audit missed: n3 (verse 20, al-Burhan s16) was
+  credited to the Prophet addressing the household, but the block is Abu
+  Ja'far telling the story. Fixed by a follow-up to the resident writer
+  (speaker Imam al-Baqir, addressee null) and re-ruled by the resident
+  auditor as audit.2.json (PASS). The follow-ups cost almost nothing
+  beyond the agents' resident context.
+- Auditor prompt: a narration where an Imam tells a story about the
+  Prophet is credited to the Imam, with the Prophet's words quoted
+  inside; a draft that credits the Prophet is unsupported, not
+  supported.
+- The auditor called essay[4] borderline: al-Tusi cites the reading to
+  Mujahid and then restates it in his own voice. Ruled supported.
+
+### 25:3 to 25:6 (verses 21 to 77), surah complete
+
+| passage | stage  | attempts | first try | sources |
+|---------|--------|----------|-----------|---------|
+| 25:1    | passed | 1        | yes       | 34      |
+| 25:2    | passed | 2        | yes       | 44      |
+| 25:3    | passed | 2        | yes       | 60      |
+| 25:4    | passed | 1        | yes       | 44      |
+| 25:5    | passed | 2        | no        | 71      |
+| 25:6    | passed | 1        | yes       | 83      |
+
+6 passed, first-try 5/6, mean attempts 1.5. Titles for 25:3 to 25:6
+approved as generated.
+
+- Gather: al-Burhan empty for 25:5 verses 46, 47, 51, 52, 56 to 58 and
+  25:6 verses 71, 76; one retry each changed nothing. Furat mostly empty
+  across the surah. al-Mizan present for every passage.
+- Writers: 205K to 284K tokens, 13 to 17 minutes. 25:6 (83 blocks) was
+  the largest at 284K and 17 minutes.
+- Auditors: 169K to 342K tokens, 4.5 to 9 minutes. 25:6's audit was
+  342K, the largest so far.
+- 25:5 FAIL (one stretch): n3 (verse 53, al-Safi s23) named al-Baqir and
+  al-Sadiq where the block says only "في الكافي عنهما". Rewritten by the
+  resident writer as "the two Imams", re-ruled PASS as audit.2.json.
+  Shipped passages that name both Imams all have the names in the block;
+  this is the first unnamed "from the two of them" report.
+- 25:3 translation slip the audit passed: n8 (verse 31, s22) rendered
+  حميم يؤذيه as "an enemy set upon him"; حميم is someone close, which is
+  the narration's point. Fixed by the resident writer, re-ruled as
+  audit.2.json (stretched before, supported after).
+- Auditor prompt: add the 25:3 case: an English rendering that swaps a
+  block's word for the verse's word (close friend to enemy) is a
+  stretch. Together with the 25:2 speaker case, both slips surfaced only
+  in the orchestrator's read; the auditor passed both.
+- Reader notes: 25:4 and 25:5 open with a meta sentence ("This fourth
+  movement of the Criterion", "This passage of Al-Furqaan"), still open
+  against the writer prompt. Speaker names drift again (25:3 "Imam Ali",
+  25:5 "Amir al-Muminin Ali"). 25:4 verse 38 carries al-Qummi's report
+  reading "the people of Rass" as women who lie with women; sourced and
+  interpretive, flagged here as a content policy question. 25:4 has no
+  perspectives (both traditions read it alike).
+- Titles near-duplicate: 25:2 "Answering the Prophet's mockers" and 25:4
+  "Ruined nations and the mockers"; approved as is.
+
+## Results - ash-Shu'ara 26:1 to 26:11 (2026-09-23)
+
+Whole surah in one run, 11 passages, verses 1 to 227.
+
+| passage | stage  | attempts | first try | sources |
+|---------|--------|----------|-----------|---------|
+| 26:1    | passed | 1        | yes       | 32      |
+| 26:2    | passed | 2        | no        | 47      |
+| 26:3    | passed | 1        | yes       | 38      |
+| 26:4    | passed | 1        | yes       | 26      |
+| 26:5    | passed | 2        | yes       | 60      |
+| 26:6    | passed | 1        | yes       | 26      |
+| 26:7    | passed | 1        | yes       | 23      |
+| 26:8    | passed | 2        | no        | 23      |
+| 26:9    | passed | 1        | yes       | 18      |
+| 26:10   | passed | 1        | yes       | 26      |
+| 26:11   | passed | 1        | yes       | 85      |
+
+11 passed, first-try 9/11, mean attempts 1.3. Titles approved as generated.
+
+- Gather: al-Burhan and al-Qummi empty on the same verses across most
+  passages (the refrains and speeches of the prophet stories); Furat
+  empty almost everywhere; al-Mizan from greattafsirs.com for 26:2, 26:3,
+  26:4 and 26:11. Retries of 26:1 and 26:8 to 26:11 changed nothing
+  (26:11 picked up one al-Tabari block). Deviation: 26:4 to 26:7 were
+  not retried, since al-Qummi was empty on the same verses and no retry
+  in surahs 25 or 26 has changed anything.
+- Writers: 103K to 340K tokens, 7.6 to 18 minutes. 26:11 (85 blocks)
+  was the largest at 340K. Auditors: 110K to 274K, 3.5 to 9 minutes.
+  Follow-ups to resident agents cost 3K to 15K each.
+- 26:2 FAIL (stretch): the perspectives said Tabatabai refuses to read
+  "astray" (26:20) as ignorance at all; al-Mizan reads it as ignorance
+  of the outcome and rejects only the ignorance that would make it a
+  sin. Rewritten by the resident writer, re-ruled PASS.
+- 26:8 FAIL (stretch): "the nine men who hamstrung the she-camel" was
+  credited to al-Tusi, whose block has only a reported "it is said" nine
+  and no hamstringing; the claim is al-Tabrisi's own gloss. Re-credited
+  and re-cited, re-ruled PASS.
+- Orchestrator reads caught more than the auditor, mostly before audit
+  (fixed through the resident writer each time):
+  - 26:1 n2 credited to the Prophet where al-Sadiq tells the story and
+    quotes him: the 25:2 case again. The rule is still only a note; it
+    has not reached the writer prompt.
+  - 26:2 n4 (al-Kafi, Amir al-Muminin) made "You" the subject where the
+    Arabic's subject is the prophets (feminine plural agreement).
+  - 26:5 passed audit with n1's English skipping the middle of its
+    Arabic span and n3 adding "with their tongues" (not in the block,
+    ruled "marginal, supported"). Fixed after PASS, re-ruled as
+    audit.2.json.
+  - 26:9 put the Kamal al-Din report on 26:105 (Noah's people and "the
+    apostles") on verse 160, Lot's people; 26:6 already carries it.
+    Removed. 26:9 ships with no verse entries: al-Burhan and al-Qummi
+    are empty on 160 to 167 and the verse-168 glosses have no speaker.
+    First passage without narrations; the Swift model decodes an empty
+    list, and the quiz falls back to a third multiple choice.
+  - 26:11 n3's English carried a clause hidden behind the Arabic
+    ellipsis; the span was widened to match.
+  - Name drift between neighbouring passages: Nuh (26:7) against Noah
+    (26:6), Lut (26:10) against Lot (26:9), Qaim against Qa'im.
+- Writer prompt, open notes: (1) the 25:2 speaker rule; (2) a narration
+  must interpret a verse of its own passage, not a parallel verse
+  elsewhere in the surah; (3) the English renders exactly the Arabic
+  span shown, no more and no less; (4) house spellings (Noah, Lot,
+  Qa'im, Abu Ja'far, surah); (5) meta openers, again in 26:8 ("This
+  passage is the eighth of eleven").
+- Audit granularity: `audit-check` keys targets by marker number, so
+  every sentence cited [1] shares one verdict. Several auditors noted it;
+  all passed here, but a stretched sentence can sit under a supported
+  marker without its own ruling.
+- Perspectives in 7 of 11: the father of Abraham (26:86), the plural
+  "apostles" (26:105), the Cry of verse 4, "astray" (26:20), Pharaoh's
+  threat to the magicians, the dropped "brother" of Shu'ayb (26:177), and
+  26:214 (the designation of Ali against al-Tabari's abbreviated
+  wording). None where the traditions read alike (26:4, 26:7, 26:8,
+  26:9).
+- Outside the pipeline: the app's English for 26:128 in
+  `quran_data.json` reads "Do you build futile a sign on every
+  prominence?". The 26:1 packet's thaqalayn.net English for al-Tusi's
+  Ghayba (s31) names al-Baqir where the isnad has Abu Abdillah; not
+  cited.
