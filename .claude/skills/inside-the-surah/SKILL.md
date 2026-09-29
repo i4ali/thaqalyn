@@ -156,7 +156,7 @@ device pass themselves.
 ### Stage 5 - AUDIT (flag-only, four agents)  ← REQUIRED for every new sūrah
 
 Once the build is green, run the flow audit per `references/audit.md`: **four** auditors
-in **two waves** - A and B together, then C and D (never more than two at once), all four pinned to Opus 4.6 (`model: "opus"`):
+in **one wave** - A, B, C and D together (never more than four at once), all four pinned to Opus 4.6 (`model: "opus"`):
 - **Auditor A - Flow & learnings**: walks every beat in order and checks coherence, pacing,
   transitions, and the learnings-checklist (no spoilers, overview at threshold, every beat
   earns its place, template not forced, no em dashes, Listen buttons present).
@@ -176,7 +176,7 @@ list of issues/risks (most severe first) and present it. The user decides what t
 
 ## Guardrails
 - **Two gates are mandatory.** Never write Swift before the blueprint AND script are approved.
-- **Max two subagents at a time** (the audit runs four auditors in two waves of two).
+- **Max four subagents at a time** (the audit runs its four auditors together in one wave).
 - **Never auto-commit** - the user commits themselves.
 - **No em dashes**, anywhere, ever. Reading-scale and Listen-button rules from the repo
   `CLAUDE.md` are non-negotiable.

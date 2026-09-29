@@ -15,6 +15,7 @@ from . import quiz as quiz_mod
 from . import rukus
 from . import status as status_mod
 from . import titles as titles_mod
+from . import urdu as urdu_mod
 from . import validate as validate_mod
 
 
@@ -321,6 +322,49 @@ def cmd_quiz_assemble(args) -> int:
     return 0 if written or not skipped else 1
 
 
+def cmd_ur_brief(args) -> int:
+    ref = rukus.parse_passage_ref(args.ref)
+    record = urdu_mod.shipped(ref)
+    if record is None:
+        print(f"{ref.id}: passage not shipped in Data/passages_{ref.surah}.json")
+        return 2
+    print(urdu_mod.render_brief(record, ref))
+    return 0
+
+
+def cmd_ur_apply(args) -> int:
+    ref = rukus.parse_passage_ref(args.ref)
+    raw = open(args.file, encoding="utf-8").read() if args.file else sys.stdin.read()
+    try:
+        doc = json.loads(raw)
+    except json.JSONDecodeError as e:
+        print(f"{ref.id}: REJECTED, the payload is not valid JSON: {e}")
+        return 1
+    errs, n = urdu_mod.apply(ref, doc)
+    if errs:
+        print(f"{ref.id}: REJECTED, nothing written. Fix every item and send the whole object again:")
+        for e in errs:
+            print(f"  - {e}")
+        return 1
+    print(f"{ref.id}: Urdu merged into Data/passages_{ref.surah}.json ({n} fields)")
+    return 0
+
+
+def cmd_ur_status(args) -> int:
+    refs = rukus.passages_for_surah(args.surah) if args.surah else rukus.all_passages()
+    for r in refs:
+        s = urdu_mod.state(r)
+        if args.all or s["stage"] != "no-passage":
+            print(f"{r.id:7s} {r.start:>3}-{r.end:<3} {s['stage']:10s} {s['done']}/{s['fields']}")
+    return 0
+
+
+def cmd_ur_next(args) -> int:
+    for r in urdu_mod.next_passages(args.surah, args.count):
+        print(r.id)
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="passages.py", description="Passage commentary pipeline")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -393,6 +437,21 @@ def build_parser() -> argparse.ArgumentParser:
     qa = sub.add_parser("quiz-assemble", help="merge passed quizzes into Data/quiz_<surah>.json")
     qa.add_argument("surah", type=int)
     qa.set_defaults(fn=cmd_quiz_assemble)
+    ub = sub.add_parser("ur-brief", help="print the English fields of a shipped passage for the Urdu translator")
+    ub.add_argument("ref")
+    ub.set_defaults(fn=cmd_ur_brief)
+    ua = sub.add_parser("ur-apply", help="validate Urdu JSON (stdin or --file) and merge it into Data/passages_<surah>.json")
+    ua.add_argument("ref")
+    ua.add_argument("--file", help="read the JSON from this file instead of stdin")
+    ua.set_defaults(fn=cmd_ur_apply)
+    us = sub.add_parser("ur-status", help="Urdu stage of every shipped passage")
+    us.add_argument("--surah", type=int)
+    us.add_argument("--all", action="store_true", help="include passages not shipped yet")
+    us.set_defaults(fn=cmd_ur_status)
+    un = sub.add_parser("ur-next", help="next shipped passages without complete Urdu")
+    un.add_argument("--surah", type=int)
+    un.add_argument("--count", type=int, default=5)
+    un.set_defaults(fn=cmd_ur_next)
     return p
 
 

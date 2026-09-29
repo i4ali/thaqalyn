@@ -1,8 +1,8 @@
-# Stage 5 - the audit (flag-only, four agents, two waves)
+# Stage 5 - the audit (flag-only, four agents, one wave)
 
 Run **after** the final build is green, for **every** new theme dive. Dispatch **four**
-subagents in **two waves**: Auditors A and B together, then Auditors C and D (never more than
-two at once). **Dispatch all four auditors on Opus 4.6 (`model: "opus"`).** All **report only - they do not edit anything.** When all four return,
+subagents in **one wave**: Auditors A, B, C and D together (never more than
+four at once). **Dispatch all four auditors on Opus 4.6 (`model: "opus"`).** All **report only - they do not edit anything.** When all four return,
 consolidate into one ranked list and present it; **stop there**. The user picks which
 findings to fix. Apply ONLY the approved fixes, re-run the build gate, and record any
 findings the user declined in the design doc as "known, accepted".

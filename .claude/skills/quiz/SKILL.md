@@ -5,7 +5,7 @@ description: Generate the five-question quiz for shipped Quran passages in the T
 
 # Quiz - run the passage quiz pipeline
 
-You are the orchestrator. Scripts do every deterministic step; two agents do the
+You are the orchestrator. Scripts do every deterministic step; up to four agents do the
 writing and the reviewing; you launch them, check results, and stop at the gates.
 Design: `docs/plans/2026-09-11-passage-quiz-design.md`. Results and findings:
 `docs/plans/2026-09-11-passage-quiz-runbook.md`.
@@ -30,7 +30,7 @@ gitignored) and is derived from files; run
 
 ## Hard rules
 
-1. **Never more than two agents at a time.** One free slot, one launch.
+1. **Never more than four agents at a time.** One free slot, one launch.
 2. **Never edit a quiz by hand.** Fixes go through the writer agent. Never edit
    `quiz.py` for taste; adjust the "How to write" section of
    `.claude/agents/passage-quiz-writer.md` instead.
@@ -54,7 +54,7 @@ gitignored) and is derived from files; run
 .venv/bin/python scripts/passages.py quiz-status --surah S
 ```
 
-### 1. Fill the two slots, and refill each one as it frees
+### 1. Fill the four slots, and refill each one as it frees
 
 Whenever a slot is free, launch the highest item on this list that exists:
 

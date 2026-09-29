@@ -45,11 +45,11 @@ source .venv/bin/activate
 
 **Do NOT** deviate from this pattern without explicit approval. This architecture guarantees data integrity and provides excellent UX.
 
-### ⚠️ NEVER RUN MORE THAN TWO SUBAGENTS AT A TIME ⚠️
+### ⚠️ NEVER RUN MORE THAN FOUR SUBAGENTS AT A TIME ⚠️
 
-**IMPORTANT**: Never launch more than two subagents (the Agent/Task tool) concurrently. When work needs many subagents — fan-out content authoring, parallel search, multi-file edits — batch them into **waves of at most two** and wait for each wave to finish before starting the next. Do NOT launch 3+ Agent calls in a single message.
+**IMPORTANT**: Never launch more than four subagents (the Agent/Task tool) concurrently. When work needs many subagents — fan-out content authoring, parallel search, multi-file edits — batch them into **waves of at most four** and wait for each wave to finish before starting the next. Do NOT launch 5+ Agent calls in a single message.
 
-**Rationale**: Running many subagents in parallel burns through tokens fast. Capping concurrency at two keeps token usage under control.
+**Rationale**: Running many subagents in parallel burns through tokens fast. Capping concurrency at four keeps token usage under control (raised from two to three on 2026-09-26, and to four on 2026-09-28).
 
 ### ⚠️ ANNOUNCE EVERY NEW USER-FACING FEATURE IN "WHAT'S NEW" ⚠️
 

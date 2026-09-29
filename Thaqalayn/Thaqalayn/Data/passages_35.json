@@ -1,0 +1,1549 @@
+{
+  "1": {
+    "id": "35:1",
+    "surah": 35,
+    "index": 1,
+    "range": [
+      1,
+      7
+    ],
+    "title": {
+      "en": "The Originator and His angels",
+      "ur": "فاطر اور اس کے فرشتے"
+    },
+    "essay": {
+      "en": "The surah opens by turning all praise to Allah as Originator of the heavens and the earth. Tabatabai reads 'fatir' as a splitting, as though God split open nothingness to bring the heavens and the earth from it without prior model [1]; Tusi and Tabrisi give the same sense, creating what had not been shown before [5][3]. He names the angels His messengers, intermediaries who carry His commands, given wings for descent and ascent [1], and 'He adds to the creation whatever He wishes' hints, Tabatabai notes, that some have more than four [1].\n\nIt then turns to mercy itself: whatever God unfolds none can withhold, and what He withholds none can release [2]. Tabatabai argues from provision to lordship, asking whether any creator besides Him provides from sky and earth; the word 'creator' is chosen to cut off the idolaters' claim that their gods manage the world by His leave [2].\n\nIf the people deny the Prophet, he is consoled that messengers before him were denied and all matters return to God [2]. Mankind is warned that God's promise is true, not to be deceived by the world or by the Deceiver, whom Tabatabai takes to be Satan, confirmed by the next verse [2], while Tabrisi and Tusi report from al-Hasan and Mujahid that he is Iblis [3][5]. Satan is named an enemy who summons his party only to the Blaze [6], and the passage closes on its two promised ends: severe punishment for the faithless, forgiveness and a great reward for the faithful who act well [2].",
+      "ur": "سورت کا آغاز اللہ کی حمد سے ہوتا ہے جو آسمانوں اور زمین کا فاطر ہے۔ علامہ طباطبائی \"فاطر\" کو پھاڑنے کے معنی میں لیتے ہیں، گویا اللہ نے عدم کو چاک کرکے بغیر کسی سابقہ نمونے کے آسمانوں اور زمین کو وجود میں لایا [1]؛ شیخ طوسی اور شیخ طبرسی بھی یہی مفہوم دیتے ہیں کہ اس نے وہ چیز پیدا کی جو پہلے کبھی نہیں دیکھی گئی تھی [5][3]۔ اللہ نے فرشتوں کو اپنے قاصد قرار دیا، جو اس کے احکام پہنچانے والے واسطے ہیں اور انہیں نزول اور عروج کے لیے پر دیے گئے ہیں [1]، اور \"وہ تخلیق میں جو چاہے اضافہ کرتا ہے\" - علامہ طباطبائی کے مطابق - اس بات کا اشارہ ہے کہ بعض فرشتوں کے چار سے زیادہ پر ہیں [1]۔\n\nپھر رحمت ہی پر بات ہوتی ہے: اللہ جو رحمت کھول دے اسے کوئی روک نہیں سکتا، اور جو وہ روک لے اسے کوئی جاری نہیں کر سکتا [2]۔ علامہ طباطبائی رزق سے ربوبیت تک استدلال کرتے ہیں اور یہ سوال اٹھاتے ہیں کہ کیا اللہ کے سوا کوئی اور خالق ہے جو آسمان اور زمین سے رزق دیتا ہو؛ \"خالق\" کا لفظ اس لیے منتخب کیا گیا تاکہ مشرکین کے اس دعوے کی جڑ کاٹی جا سکے کہ ان کے معبود اس کی اجازت سے دنیا کا انتظام کرتے ہیں [2]۔\n\nاگر لوگ نبی کو جھٹلائیں تو انہیں تسلی دی گئی ہے کہ ان سے پہلے کے رسولوں کو بھی جھٹلایا گیا اور تمام معاملات اللہ کی طرف لوٹتے ہیں [2]۔ انسانوں کو خبردار کیا گیا ہے کہ اللہ کا وعدہ سچا ہے، اس لیے نہ دنیاوی زندگی انہیں دھوکے میں ڈالے اور نہ 'الغرور' انہیں فریب دے - علامہ طباطبائی 'الغرور' کو شیطان قرار دیتے ہیں جس کی تصدیق اگلی آیت سے ہوتی ہے [2]، جبکہ شیخ طبرسی اور شیخ طوسی نے حسن اور مجاہد سے روایت کی ہے کہ یہ ابلیس ہے [3][5]۔ شیطان کو ایک دشمن کے طور پر بیان کیا گیا ہے جو اپنے گروہ کو صرف آتش جہنم کی طرف بلاتا ہے [6]، اور یہ مقطع دو وعدوں پر ختم ہوتا ہے: کافروں کے لیے سخت عذاب، اور نیک عمل کرنے والے مومنوں کے لیے مغفرت اور عظیم اجر [2]۔"
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "The angels and their wings",
+          "ur": "فرشتے اور ان کے پر"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "the Prophet",
+            "addressee": null,
+            "arabic": "الملائكة على ثلاثة أجزاء: جزء له جناحان، و جزء له ثلاثة أجنحة، و جزء له أربعة أجنحة",
+            "chain": "al-Kafi: Muhammad ibn Yaqub, from a number of our companions, from Sahl ibn Ziyad and Ali ibn Ibrahim, from his father, from Ibn Mahbub, from Abdullah ibn Talha, raising it, from the Prophet",
+            "text": {
+              "en": "The angels are of three kinds: a kind with two wings, a kind with three wings, and a kind with four wings.",
+              "ur": "فرشتے تین قسم کے ہیں: ایک قسم جس کے دو پر ہیں، ایک قسم جس کے تین پر ہیں، اور ایک قسم جس کے چار پر ہیں۔"
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "خلق الله الملائكة مختلفة وقد رأى رسول الله صلى الله عليه وآله جبرائيل وله ستمائة جناح على ساقه الدر مثل القطر على البقل قد ملا ما بين السماء والأرض",
+            "chain": "Tafsir al-Qummi, from al-Sadiq",
+            "text": {
+              "en": "God created the angels of differing kinds. The Messenger of God saw Jibril with six hundred wings, on his leg pearls like drops on green herbage, filling what is between the sky and the earth.",
+              "ur": "اللہ نے فرشتوں کو مختلف اقسام میں پیدا کیا۔ رسول اللہ صلی اللہ علیہ وآلہ وسلم نے جبرائیل علیہ السلام کو چھ سو پروں کے ساتھ دیکھا، ان کی ٹانگ پر موتی تھے جیسے سبزے پر اوس کے قطرے، اور آپ آسمان اور زمین کے درمیان کی پوری فضا کو بھرے ہوئے تھے۔"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 2,
+        "heading": {
+          "en": "Mercy none can withhold",
+          "ur": "وہ رحمت جسے کوئی نہیں روک سکتا"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "في قول الله: ما يفتح الله للناس من رحمة فلا ممسك لها قال: والمتعة من ذلك",
+            "chain": "Tafsir al-Qummi: Ahmad ibn Idris, from Ahmad ibn Muhammad, from Malik ibn Abdillah ibn Aslam, from his father, from a man of Kufa, from Abu Abdillah",
+            "text": {
+              "en": "Concerning God's words, 'Whatever mercy Allah unfolds for the people, no one can withhold it,' he said: 'And temporary marriage is part of that.'",
+              "ur": "اللہ کے قول 'جو رحمت اللہ لوگوں کے لیے کھول دے اسے کوئی نہیں روک سکتا' کے بارے میں آپ علیہ السلام نے فرمایا: 'اور متعہ بھی اسی میں سے ہے۔'"
+            },
+            "source": "s8"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قول الله عز و جل: ما يفتح الله للناس من رحمة فلا ممسك لها، قال: هي ما أجرى الله على لسان الإمام",
+            "chain": "al-Burhan: Muhammad ibn al-Abbas, from Ahmad ibn Muhammad al-Nawfali, from Yaqub ibn Yazid, from Ibn Abi Umayr, from Marazim, from Abu Abdillah",
+            "text": {
+              "en": "God's words, 'Whatever mercy Allah unfolds for the people, no one can withhold it': he said, 'It is what God causes to flow upon the tongue of the Imam.'",
+              "ur": "اللہ کے قول 'جو رحمت اللہ لوگوں کے لیے کھول دے اسے کوئی نہیں روک سکتا' کے بارے میں آپ علیہ السلام نے فرمایا: 'یہ وہ ہے جسے اللہ امام کی زبان پر جاری فرماتا ہے۔'"
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "Satan the enemy",
+          "ur": "شیطان دشمن ہے"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لا يتمكن الشيطان بالوسوسة من العبد إلا و قد أعرض عن ذكر الله تعالى، و استهان و سكن إلى نهيه، و نسي اطلاعه على سره",
+            "chain": "Misbah al-Shariah, from al-Sadiq",
+            "text": {
+              "en": "Satan cannot gain mastery over the servant through whispering unless he has turned away from the remembrance of God, belittled and grown at ease with His prohibition, and forgotten that He is aware of his secret.",
+              "ur": "شیطان وسوسے کے ذریعے بندے پر غلبہ نہیں پا سکتا جب تک کہ بندہ اللہ کے ذکر سے منہ نہ پھیرے، اس کی ممنوعہ چیزوں کو ہلکا نہ سمجھے اور ان سے مانوس نہ ہو جائے، اور یہ نہ بھول جائے کہ اللہ اس کے باطن سے آگاہ ہے۔"
+            },
+            "source": "s11"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the mercy of the second verse, the Sunni exegetes read it concretely: Ibn Abbas glosses it as an opened door of repentance [40], and Ibn Kathir records Abu Hurayra reciting the verse whenever rain fell [22]. The Shia narrations read it more widely: al-Sadiq is reported saying that temporary marriage is part of this mercy, and that it is what God causes to flow upon the tongue of the Imam [10].",
+      "ur": "دوسری آیت کی رحمت کے بارے میں سنی مفسرین اسے ٹھوس معنوں میں لیتے ہیں: ابن عباس اسے توبہ کے کھلے دروازے کے طور پر بیان کرتے ہیں [40]، اور ابن کثیر نے روایت کی ہے کہ ابو ہریرہ بارش ہونے پر یہ آیت تلاوت کرتے تھے [22]۔ شیعہ روایات اسے وسیع تر معنی میں لیتی ہیں: امام صادق علیہ السلام سے مروی ہے کہ متعہ بھی اس رحمت میں شامل ہے، اور یہ وہ ہے جو اللہ امام کی زبان پر جاری کرتا ہے [10]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Faatir 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=35&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الفطر - على ما ذكره الراغب - هو الشق طولاً فإطلاق الفاطر عليه تعالى بعناية استعارية كأنه شق العدم فأخرج من بطنها السماوات والأرض"
+        },
+        "gloss": "Fatr, as al-Raghib noted, is a splitting lengthwise; calling God 'Fatir' is figurative, as though He split open nonexistence and brought the heavens and the earth out of its belly."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Faatir 2 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=35&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والظاهر - كما قيل - أن المراد به الشيطان ويؤيده التعليل الواقع في الآية التالية"
+        },
+        "gloss": "The apparent meaning, as has been said, is that what is meant by the Deceiver is Satan, supported by the reasoning in the following verse."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=35&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقيل: إن الغرور الشيطان الذي هو إبليس عن الحسن ومجاهد"
+        },
+        "gloss": "And it is said that al-gharur is Satan, who is Iblis, from al-Hasan and Mujahid."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=35&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومعنى فطر السموات والارض أي خلقهما وأظهرهما للحس بعد ان لم تكونا ظاهرتين"
+        },
+        "gloss": "The meaning of His splitting the heavens and the earth is that He created them and brought them into view where they had not been visible before."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 6 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=35&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أن الشيطان ليس يدعو إلا حزبه أي اصحابه وجنده … إنما يدعوهم ليكونوا من اصحاب السعير بارتكاب المعاصي والكفر بالله"
+        },
+        "gloss": "Satan calls none but his party, his companions and soldiers ... he only calls them to become inmates of the Blaze through committing sins and disbelief in God."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=35&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "خلق الله الملائكة مختلفة وقد رأى رسول الله صلى الله عليه وآله جبرائيل وله ستمائة جناح على ساقه الدر مثل القطر على البقل قد ملا ما بين السماء والأرض"
+        },
+        "gloss": "God created the angels of differing kinds; the Messenger of God saw Jibril with six hundred wings, on his leg pearls like drops on green herbage, filling what is between the sky and the earth."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=35&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في قول الله: ما يفتح الله للناس من رحمة فلا ممسك لها قال: والمتعة من ذلك"
+        },
+        "gloss": "Concerning God's words, 'Whatever mercy Allah unfolds for the people, no one can withhold it,' he said: 'And temporary marriage is part of that.'"
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال النبي (صلى الله عليه و آله): الملائكة على ثلاثة أجزاء: جزء له جناحان، و جزء له ثلاثة أجنحة، و جزء له أربعة أجنحة"
+        },
+        "gloss": "The Prophet said: The angels are of three kinds - a kind with two wings, a kind with three wings, and a kind with four wings."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قول الله عز و جل: ما يفتح الله للناس من رحمة فلا ممسك لها، قال: هي ما أجرى الله على لسان الإمام"
+        },
+        "gloss": "God's words, 'Whatever mercy Allah unfolds for the people, no one can withhold it': he said, 'It is what God causes to flow upon the tongue of the Imam.'"
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يتمكن الشيطان بالوسوسة من العبد إلا و قد أعرض عن ذكر الله تعالى، و استهان و سكن إلى نهيه، و نسي اطلاعه على سره"
+        },
+        "gloss": "Satan cannot gain mastery over the servant through whispering unless he has turned away from the remembrance of God, belittled and grown at ease with His prohibition, and forgotten that He is aware of his secret."
+      },
+      {
+        "id": "s22",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=35&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان أبو هريرة رضي الله عنه إذا مطروا يقول مطرنا بنوء الفتح، ثم يقرأ هذه الآية"
+        },
+        "gloss": "Abu Hurayra, whenever they had rain, would say, 'We were given rain by the rain-star of the Opening,' then he would recite this verse."
+      },
+      {
+        "id": "s40",
+        "kind": "tafsir",
+        "work": "al-Durr al-Manthur",
+        "author": "Jalal al-Din al-Suyuti",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 2 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=26&tSoraNo=35&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عن ابن عباس رضي الله عنهما في قوله … قال: ما يفتح الله للناس من باب توبة"
+        },
+        "gloss": "From Ibn Abbas, on His words: what God opens for the people is a door of repentance."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-28T19:05:50Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-09-28T19:32:25Z",
+      "assembled_at": "2026-09-28T20:04:04Z"
+    }
+  },
+  "2": {
+    "id": "35:2",
+    "surah": 35,
+    "index": 2,
+    "range": [
+      8,
+      14
+    ],
+    "title": {
+      "en": "God's signs and powerless idols",
+      "ur": "اللہ کی نشانیاں اور بے بس بت"
+    },
+    "essay": {
+      "en": "God asks a question that answers itself: is the man whose evil deeds have been dressed up as fair, so that he sees them as good, like one rightly guided? Tusi notes the sentence leaves its answer unspoken [5]. The verse closes by telling the Prophet not to grieve himself to death over them, since God knows what they do; that God leads astray whom He wills, al-Mizan explains, is misguidance by way of recompense, not an initial act [1].\n\nThe surah turns to signs. God sends the winds that raise clouds, drives them to a dead land to revive it, and says the resurrection is just so. Honour, it declares, belongs wholly to God; to Him the good word ascends and He raises righteous deeds, while the schemers' plotting comes to nothing. One reading, from Qatada, takes its opening as a call to seek honour by obeying God [3].\n\nGod recalls how He made people from dust, then a drop, then pairs, and that no woman conceives or delivers, and no life is lengthened or cut short, save by His knowledge and in a Book. He contrasts the two seas, sweet and salt, both yielding food, ornaments and shipping, which al-Mizan reads as a likeness of believer and disbeliever [2]. He drives night into day and day into night and holds sun and moon to their terms. The idols people invoke own not a date-stone's husk; they neither hear nor answer, and at the Resurrection they disown the worship offered them.",
+      "ur": "اللہ ایک سوال پوچھتا ہے جو اپنا جواب خود دیتا ہے: کیا وہ شخص جس کے برے اعمال اس کے سامنے خوبصورت بنا کر پیش کیے گئے، یہاں تک کہ وہ انہیں اچھا سمجھنے لگا، ہدایت یافتہ شخص کی مانند ہے؟ شیخ طوسی نے نوٹ کیا ہے کہ اس جملے کا جواب صریح نہیں دیا گیا [5]۔ آیت اس بات پر ختم ہوتی ہے کہ نبی ان لوگوں پر غم میں اپنی جان نہ کھوئیں، کیونکہ اللہ ان کے اعمال جانتا ہے؛ علامہ طباطبائی المیزان میں یہ واضح کرتے ہیں کہ اللہ کا جسے چاہے گمراہ کرنا ابتدائی فعل نہیں بلکہ جزا کے طور پر گمراہی ہے [1]۔\n\nپھر سورت نشانیوں کی طرف متوجہ ہوتی ہے۔ اللہ ہوائیں بھیجتا ہے جو بادلوں کو اٹھاتی ہیں، انہیں مردہ زمین پر چلاتا ہے تاکہ اسے زندہ کرے، اور فرماتا ہے کہ قیامت بھی اسی طرح ہوگی۔ اس کا اعلان ہے کہ عزت پوری طرح اللہ ہی کے لیے ہے؛ اسی کی طرف پاکیزہ کلمہ بلند ہوتا ہے اور وہ نیک عمل کو اوپر اٹھاتا ہے، جبکہ بری چالیں چلنے والوں کی تدبیر ناکام ہو کر رہتی ہے۔ قتادہ سے منقول ایک قرأت اس کے آغاز کو اللہ کی اطاعت کے ذریعے عزت تلاش کرنے کی دعوت قرار دیتی ہے [3]۔\n\nاللہ اس بات کی یاد دہانی کراتا ہے کہ اس نے انسانوں کو مٹی سے، پھر نطفے سے، پھر جوڑوں کی صورت میں بنایا، اور کوئی عورت نہ حمل اٹھاتی ہے اور نہ جنتی ہے، اور نہ کسی کی عمر بڑھائی یا گھٹائی جاتی ہے، مگر اس کے علم میں اور ایک کتاب میں درج ہے۔ وہ دو سمندروں کا موازنہ کرتا ہے - ایک میٹھا اور ایک کھارا - جو دونوں خوراک، زیور اور جہاز رانی فراہم کرتے ہیں؛ المیزان انہیں مومن اور کافر کی مثال قرار دیتا ہے [2]۔ وہ رات کو دن میں اور دن کو رات میں داخل کرتا ہے اور سورج و چاند کو ان کی مقررہ مدت تک باندھے رکھتا ہے۔ جن بتوں کو لوگ پکارتے ہیں وہ کھجور کی گٹھلی کے چھلکے کے بھی مالک نہیں؛ وہ نہ سنتے ہیں اور نہ جواب دیتے ہیں، اور قیامت کے دن وہ ان کی عبادت سے لاتعلقی ظاہر کریں گے۔"
+    },
+    "verses": [
+      {
+        "verse": 8,
+        "heading": {
+          "en": "Evil made to seem fair",
+          "ur": "برائی کا خوبصورت بنا کر دکھانا"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Unnamed (raised report)",
+            "addressee": null,
+            "arabic": "نزلت في زريق وحبتر",
+            "chain": "Tafsir al-Qummi: from Ahmad ibn Muhammad ibn Ali ibn al-Hakam, from Sayf ibn Umayra, from Hassan, from Hashim ibn Ammar, raising it",
+            "text": {
+              "en": "It was revealed concerning Zurayq and Habtar.",
+              "ur": "یہ آیت زریق اور حبتر کے بارے میں نازل ہوئی۔"
+            },
+            "source": "s7"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "سئل عن العجب الذي يفسد العمل فقال للعجب درجات منها ان يزيّن للعبد سوء عمله فيراه حسناً فيعجبه ويحسب انّه يحسن صنعاً",
+            "chain": "al-Kafi, from al-Kazim",
+            "text": {
+              "en": "He was asked about the self-admiration that spoils a deed, so he said: self-admiration has degrees; among them is that a servant's evil deed is made to seem fair to him, so he sees it as good, and it pleases him, and he reckons he is doing well.",
+              "ur": "آپ علیہ السلام سے اس عُجب کے بارے میں پوچھا گیا جو عمل کو برباد کر دیتا ہے، تو آپ علیہ السلام نے فرمایا: عُجب کے درجات ہیں؛ ان میں سے ایک یہ ہے کہ بندے کا برا عمل اس کے سامنے خوبصورت بنا کر پیش کیا جائے، چنانچہ وہ اسے اچھا سمجھے، اسے پسند کرے، اور خیال کرے کہ وہ اچھا کام کر رہا ہے۔"
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 9,
+        "heading": {
+          "en": "Winds, clouds and resurrection",
+          "ur": "ہوائیں، بادل اور قیامت"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "سئل عن السحاب، أين يكون؟ قال: يكون على شجر على كثيب على شاطئ البحر يأوي إليه، فإذا أراد الله عز و جل أن يرسله أرسل ريحا فأثارته، و وكل به ملائكة يضربونه بالمخاريق- و هو البرق- فيرتفع … و الملك اسمه (الرعد)",
+            "chain": "al-Kafi: Muhammad ibn Yahya, from Ahmad ibn Muhammad ibn Isa, from al-Husayn ibn Said, from Ibn al-Arzami, raising it, from Amir al-Muminin",
+            "text": {
+              "en": "He was asked about the cloud, where is it? He said: It is upon trees, upon a dune, upon the seashore, taking refuge there; when God wishes to send it, He sends a wind that stirs it, and appoints over it angels who strike it with rods - the lightning - so it rises … and the angel's name is al-Rad.",
+              "ur": "آپ علیہ السلام سے پوچھا گیا کہ بادل کہاں رہتا ہے؟ آپ نے فرمایا: یہ درختوں پر، ریت کے ٹیلے پر، سمندر کے کنارے پناہ لیتا ہے؛ جب اللہ اسے بھیجنا چاہتا ہے تو ایک ہوا بھیجتا ہے جو اسے اٹھاتی ہے، اور اس پر فرشتے مقرر کرتا ہے جو اسے چھڑیوں سے مارتے ہیں - اور یہی بجلی ہے - تو وہ اوپر اٹھتا ہے ... اور اس فرشتے کا نام رعد ہے۔"
+            },
+            "source": "s15"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "اذا اراد الله ان يبعث الخلق أمطر السّماء على الارض اربعين صباحاً فاجتمعت الأوصال ونبتت اللّحوم",
+            "chain": "al-Majalis and al-Qummi, from al-Sadiq",
+            "text": {
+              "en": "When God wishes to resurrect the creation, He sends rain from the sky upon the earth for forty mornings, so the joints come together and the flesh grows.",
+              "ur": "جب اللہ مخلوق کو دوبارہ زندہ کرنا چاہے گا تو آسمان سے زمین پر چالیس صبح تک بارش برسائے گا، پس جوڑ ایک دوسرے سے جڑ جائیں گے اور گوشت اُگ آئے گا۔"
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "The good word ascends",
+          "ur": "پاکیزہ کلمہ بلند ہوتا ہے"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ولايتنا أهل البيت- و أهوى بيده إلى صدره- فمن لم يتولنا لم يرفع الله له عملا",
+            "chain": "al-Kafi: Ali ibn Muhammad and others, from Sahl ibn Ziyad, from Yaqub ibn Yazid, from Ziyad al-Qandi, from Ammar al-Asadi, from Abu Abdillah",
+            "text": {
+              "en": "It is our guardianship, the Ahl al-Bayt - and he gestured with his hand to his chest - whoever does not take us as guardians, God raises no deed for him.",
+              "ur": "یہ ہماری ولایت ہے، اہلِ بیت کی - اور آپ علیہ السلام نے اپنے سینے کی طرف ہاتھ سے اشارہ کیا - جو ہمیں اپنا ولی نہیں مانتا، اللہ اس کا کوئی عمل بلند نہیں کرتا۔"
+            },
+            "source": "s16"
+          },
+          {
+            "id": "n6",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "الكلم الطيب هو قول المؤمن: لا إله إلا الله، محمد رسول الله، علي ولي الله و خليفته حقا، و خلفاؤه خلفاء الله. و العمل الصالح يرفعه إليه، فهو دليله",
+            "chain": "from al-Rida",
+            "text": {
+              "en": "The good word is the believer's saying: there is no god but Allah, Muhammad is the Messenger of Allah, Ali is the friend of Allah and truly His successor, and his successors are the successors of Allah. And righteous conduct raises it to Him, for it is its proof.",
+              "ur": "پاکیزہ کلمہ مومن کا یہ قول ہے: لا إلٰہ إلا اللہ، محمد رسول اللہ، علی اللہ کے ولی اور حقیقی خلیفہ ہیں، اور ان کے خلفاء اللہ کے خلفاء ہیں۔ اور نیک عمل اسے اللہ کی طرف بلند کرتا ہے، کیونکہ وہ اس کی دلیل ہے۔"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "Lifespan written in a Book",
+          "ur": "کتاب میں لکھی ہوئی عمر"
+        },
+        "note": {
+          "en": "Qummi glosses the recorded term as written in a book, reading the verse as a refutation of those who deny bada [10].",
+          "ur": "قمی مقررہ مدت کی تفسیر 'کتاب میں لکھی ہوئی' کے طور پر کرتے ہیں اور اس آیت کو بداء کے منکرین کا رد قرار دیتے ہیں [10]۔"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ما نعلم شيئا يزيد في العمر إلا صلة الرحم، حتى أن الرجل يكون أجله ثلاث سنين فيكون وصولا للرحم، فيزيد الله في عمره ثلاثين سنة، فيجعلها ثلاثا و ثلاثين سنة، و يكون أجله ثلاثا و ثلاثين سنة فيكون قاطعا للرحم، فينقصه الله ثلاثين سنة، و يجعل أجله إلى ثلاث سنين",
+            "chain": "al-Kafi: Ali ibn Ibrahim, from his father, from Safwan ibn Yahya, from Ishaq ibn Ammar, from Abu Abdillah",
+            "text": {
+              "en": "We know of nothing that increases life except maintaining kinship ties, so that a man whose term is three years, being one who keeps kinship, God increases his life by thirty years, making it thirty-three; and a man whose term is thirty-three years, being one who cuts off kinship, God reduces by thirty years, making his term three years.",
+              "ur": "ہم صلہ رحمی کے سوا کسی ایسی چیز کو نہیں جانتے جو عمر بڑھاتی ہو، یہاں تک کہ جس شخص کی عمر تین سال ہو اور وہ صلہ رحمی کرنے والا ہو تو اللہ اس کی عمر میں تیس سال کا اضافہ کر دیتا ہے اور اسے تینتیس سال کر دیتا ہے؛ اور جس شخص کی عمر تینتیس سال ہو اور وہ قطع رحمی کرنے والا ہو تو اللہ اس میں سے تیس سال کم کر دیتا ہے اور اس کی عمر تین سال کر دیتا ہے۔"
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "The two seas",
+          "ur": "دو سمندر"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فالأجاج: المر … الفلك مقبلة و مدبرة بريح واحدة",
+            "chain": "Tafsir al-Qummi, in the report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "The briny is the bitter … the ships come and go by a single wind.",
+              "ur": "کھارا وہ ہے جو تلخ ہے ... کشتیاں ایک ہی ہوا سے آتی اور جاتی ہیں۔"
+            },
+            "source": "s18"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'Allah leads astray whomever He wishes,' al-Mizan holds this misguidance is recompense for the disbeliever's own choice, not an initial act, so it may be ascribed to God without contradiction [1]. Imam Ali ibn Muhammad's letter, reported in al-Ihtijaj, reads the phrase as a report that God can guide or misguide, since compelling either way would leave no reward or punishment [14]. Qurtubi, by contrast, takes the verse as a refutation of the Qadariyya, guidance resting with God alone [33], and Ibn Kathir says it came about by His decree [29].",
+      "ur": "'اللہ جسے چاہے گمراہ کرتا ہے' کے بارے میں المیزان کا موقف یہ ہے کہ یہ گمراہی کافر کے اپنے انتخاب کا بدلہ ہے، کوئی ابتدائی فعل نہیں، اس لیے اسے تضاد کے بغیر اللہ کی طرف منسوب کیا جا سکتا ہے [1]۔ الاحتجاج میں مروی امام علی ابن محمد علیہ السلام کے خط میں اس عبارت کو ایک بیان کے طور پر لیا گیا ہے کہ اللہ ہدایت یا گمراہی دے سکتا ہے، کیونکہ کسی بھی طرف مجبور کرنا ثواب اور عذاب کو بے معنی کر دے گا [14]۔ قرطبی، اس کے برعکس، اس آیت کو قدریہ کا رد قرار دیتے ہیں کیونکہ ہدایت اللہ ہی کے اختیار میں ہے [33]، اور ابن کثیر کہتے ہیں کہ یہ اس کی تقدیر کے مطابق ہوا [29]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Faatir 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=35&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذا الإِضلال إضلال على سبيل المجازاة وليس إضلالاً ابتدائياً فلا ضير في انتسابه إلى الله سبحانه"
+        },
+        "gloss": "This misguidance is by way of recompense, not an initial act, so there is no harm in ascribing it to God, glory be to Him."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Faatir 9 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=35&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية تمثيل للمؤمن والكافر بالبحر العذب والمالح"
+        },
+        "gloss": "In this verse is a likeness of the believer and the disbeliever to the sweet sea and the salt."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 8 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=35&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقيل: معناه من أراد العزة فليتعزّز بطاعة الله فإن الله تعالى يعزّه عن قتادة"
+        },
+        "gloss": "It is said, from Qatada, that its meaning is: whoever wants honour, let him gain honour through obeying God, for God will make him mighty."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 8 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=35&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وخبر (من) في قوله { أفمن زين له سوء عمله } محذوف وتقديره يتحسر عليه"
+        },
+        "gloss": "The predicate of 'is one whose evil deed is adorned to him' is omitted; its implied sense is 'he grieves over it.'"
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=35&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت في زريق وحبتر"
+        },
+        "gloss": "It was revealed concerning Zurayq and Habtar."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=35&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني: يكتب في كتاب وهو رد على من ينكر البدا"
+        },
+        "gloss": "Meaning: it is written in a book; and it is a refutation of those who deny al-bada."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أنه إخبار عن كونه تعالى قادرا على هداية من يشاء و ضلالة من يشاء، و لو أجبرهم على أحدهما لم يجب لهم ثواب، و لا عليهم عقاب"
+        },
+        "gloss": "It is a report that He is able to guide whom He wills and to misguide whom He wills; had He compelled them to either, no reward would be due to them and no punishment upon them."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فإذا أراد الله عز و جل أن يرسله أرسل ريحا فأثارته"
+        },
+        "gloss": "When God wishes to send it, He sends a wind that stirs it up."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولايتنا أهل البيت … فمن لم يتولنا لم يرفع الله له عملا"
+        },
+        "gloss": "It is our guardianship, the Ahl al-Bayt … whoever does not take us as guardians, God raises no deed for him."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما نعلم شيئا يزيد في العمر إلا صلة الرحم"
+        },
+        "gloss": "We know of nothing that increases the lifespan except maintaining kinship ties."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالأجاج: المر … الفلك مقبلة و مدبرة بريح واحدة"
+        },
+        "gloss": "The briny is the bitter … the ships come and go by a single wind."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 8 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=35&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "منها ان يزيّن للعبد سوء عمله فيراه حسناً فيعجبه ويحسب انّه يحسن صنعاً"
+        },
+        "gloss": "Among them is that a servant's evil deed is made to seem fair to him, so he sees it as good, it pleases him, and he reckons he is doing well."
+      },
+      {
+        "id": "s29",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=35&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فَإِنَّ ٱللَّهَ يُضِلُّ مَن يَشَآءُ وَيَهْدِى } أي بقدره كان ذلك"
+        },
+        "gloss": "'Indeed Allah leads astray whom He wills and guides' - that is, this came about by His decree."
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=35&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذه الآية تردّ على القدرية"
+        },
+        "gloss": "This verse refutes the Qadariyya."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-28T19:08:04Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-28T19:30:12Z",
+      "assembled_at": "2026-09-28T20:04:04Z"
+    }
+  },
+  "3": {
+    "id": "35:3",
+    "surah": 35,
+    "index": 3,
+    "range": [
+      15,
+      26
+    ],
+    "title": {
+      "en": "You stand in need of God",
+      "ur": "تم سب اللہ کے محتاج ہو"
+    },
+    "essay": {
+      "en": "After the signs of God's lordship, the passage turns to confront its hearers directly: all of mankind stands in need of God, while He alone is rich and worthy of all praise. al-Mizan reads this as a rebuttal of the deniers, who imagined they could do without God through their idols and that God had some need of them; the verse confines all poverty to creation and all wealth to God alone [1]. If He wishes, He can take them away and bring a new creation, for a rich Lord loses nothing by their going [1]. And this is no hard thing for Him, which al-Tibyan glosses as not impossible [4].\n\nThen comes a rule of God's justice. No burdened soul carries the load of another, so that no one is held to account for another's sin [3]; and if one weighed down by sin begs even a close relative to bear a share, nothing of it is carried. al-Mizan reads the verse as answering an unspoken fear - if the deniers are seized for their sins, are the believers seized for the sins of others? They are not [1]. Warning reaches only those who fear their Lord unseen and keep up the prayer; whoever purifies himself does so for his own good, and to God is the return.\n\nA run of contrasts presses the point home: the blind and the seer are not alike, nor darkness and light, nor shade and torrid heat, nor the living and the dead. These are parables, al-Tibyan explains, for the believer and the disbeliever, faith set against unbelief [5]. God makes hear whomever He wills, but the Prophet cannot make the dead-hearted deniers hear him, any more than he can make those in the graves hear [5].\n\nSo the Prophet is charged only to warn [5]. He was sent with the truth to carry good news and to warn, and al-Tibyan notes that no nation in the past was left without a warner [6]. If they call him a liar, the peoples before them did the same to messengers who came with clear proofs, scriptures and the illuminating Book [6]. Then God seized the faithless, and the passage closes on His own question: So how was My rebuttal!",
+      "ur": "اللہ کی ربوبیت کی نشانیوں کے بعد یہ مقطع سننے والوں سے براہ راست مخاطب ہوتا ہے: تمام انسانوں کو اللہ کی ضرورت ہے، جبکہ وہ اکیلا ہی غنی اور ستودہ صفات ہے۔ المیزان اسے منکرین کا جواب قرار دیتا ہے جو یہ سمجھتے تھے کہ وہ اپنے بتوں کے ذریعے اللہ سے بے نیاز ہو سکتے ہیں اور یہ کہ اللہ کو ان کی کوئی ضرورت ہے؛ یہ آیت تمام فقر کو مخلوق تک محدود کرتی ہے اور تمام غنا کو اللہ کے لیے خاص قرار دیتی ہے [1]۔ اگر وہ چاہے تو انہیں لے جائے اور نئی مخلوق لے آئے، کیونکہ ایک غنی رب ان کے چلے جانے سے کچھ نہیں کھوتا [1]۔ اور یہ اس پر کوئی مشکل کام نہیں، جسے التبیان 'ناممکن نہیں' کے معنی میں بیان کرتا ہے [4]۔\n\nپھر اللہ کے انصاف کا ایک اصول بیان ہوتا ہے۔ کوئی بوجھ اٹھانے والی جان دوسرے کا بوجھ نہیں اٹھاتی، یعنی کسی کو دوسرے کے گناہ کا جواب دہ نہیں ٹھہرایا جائے گا [3]؛ اور اگر گناہوں کا بوجھ اٹھائے ہوئے شخص نے کسی قریبی رشتہ دار سے بھی کہا کہ وہ کچھ بوجھ بانٹ لے، تو اس میں سے کچھ بھی نہیں اٹھایا جائے گا۔ المیزان اس آیت کو ایک ان کہے خدشے کا جواب قرار دیتا ہے - اگر منکرین اپنے گناہوں پر پکڑے جائیں، تو کیا مومنین دوسروں کے گناہوں پر پکڑے جائیں گے؟ نہیں [1]۔ خبردار کرنا صرف انہی تک پہنچتا ہے جو بغیر دیکھے اپنے رب سے ڈرتے ہیں اور نماز قائم کرتے ہیں؛ جو اپنے آپ کو پاک کرتا ہے وہ اپنے ہی بھلے کے لیے کرتا ہے، اور اللہ ہی کی طرف بازگشت ہے۔\n\nایک کے بعد ایک تضادات اس نکتے کو مزید راسخ کرتے ہیں: اندھا اور دیکھنے والا برابر نہیں، نہ اندھیرا اور روشنی، نہ سایہ اور جھلسانے والی گرمی، اور نہ زندہ اور مردہ۔ التبیان کے مطابق یہ مثالیں مومن اور کافر کے لیے ہیں، ایمان کو کفر کے سامنے رکھتے ہوئے [5]۔ اللہ جسے چاہتا ہے سنواتا ہے، لیکن نبی مردہ دل منکرین کو نہیں سنوا سکتے، جیسے وہ قبروں والوں کو نہیں سنوا سکتے [5]۔\n\nاس لیے نبی کا فریضہ صرف خبردار کرنا ہے [5]۔ آپ صلی اللہ علیہ وآلہ وسلم کو حق کے ساتھ خوشخبری دینے اور ڈرانے کے لیے بھیجا گیا، اور التبیان نوٹ کرتا ہے کہ گزشتہ کوئی بھی امت خبردار کرنے والے کے بغیر نہیں چھوڑی گئی [6]۔ اگر وہ آپ کو جھٹلاتے ہیں تو ان سے پہلے کی اقوام نے بھی ایسا ہی کیا ان رسولوں کے ساتھ جو واضح دلائل، کتابیں اور روشن کتاب لے کر آئے تھے [6]۔ پھر اللہ نے کافروں کو پکڑ لیا، اور یہ مقطع اس کے اپنے سوال پر ختم ہوتا ہے: تو میرا رد کیسا تھا!"
+    },
+    "verses": [
+      {
+        "verse": 18,
+        "heading": {
+          "en": "No bearer bears another's burden",
+          "ur": "کوئی بوجھ اٹھانے والا دوسرے کا بوجھ نہیں اٹھاتا"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن الله لا يكلف نفسا إلا وسعها ولا يكلفها فوق طاقتها … ولا يأخذ الله عز وجل البرئ بالسقيم ولا يعذب الله عز وجل الأطفال بذنوب الآباء، فإنه قال في محكم كتابه: ولا تزر وازرة وزر أخرى",
+            "chain": "al-Tawhid: Tamim ibn Buhlul, from Abu Mu'awiya, from al-A'mash, from Ja'far ibn Muhammad",
+            "text": {
+              "en": "God imposes on no soul but what it can bear, and does not burden it beyond its capacity … God does not seize the innocent for the guilty, nor punish children for the sins of the fathers, for He said in His firm Book: No bearer shall bear another's burden.",
+              "ur": "اللہ کسی جان پر اس کی طاقت سے زیادہ تکلیف نہیں ڈالتا، اور اس کی قدرت سے بڑھ کر اسے مکلف نہیں کرتا ... اللہ بے گناہ کو گناہگار کے بدلے نہیں پکڑتا، اور نہ باپوں کے گناہوں پر بچوں کو عذاب دیتا ہے، کیونکہ اس نے اپنی محکم کتاب میں فرمایا ہے: کوئی بوجھ اٹھانے والی جان دوسری کا بوجھ نہیں اٹھائے گی۔"
+            },
+            "source": "s41"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Rida",
+            "addressee": "al-Harawi",
+            "arabic": "قُلْتُ وَقَوْلُ اللَّهِ عَزَّ وَجَلَّ وَلا تَزِرُ وازِرَةٌ وِزْرَ أُخْرى مَا مَعْنَاهُ قَالَ صَدَقَ اللَّهُ فِي جَمِيعِ أَقْوَالِهِ وَلَكِنْ ذَرَارِيُّ قَتَلَةِ الْحُسَيْنِ يَرْضَوْنَ بِأفعَالِ آبَائِهِمْ وَيَفْتَخِرُونَ بِهَا وَمَنْ رَضِيَ شَيْئاً كَانَ كَمَنْ أَتَاهُ",
+            "chain": "Uyun akhbar al-Rida: Ahmad ibn Ziyad ibn Ja'far al-Hamadani, from Ali ibn Ibrahim ibn Hashim, from his father, from Abd al-Salam ibn Salih al-Harawi, from Abu al-Hasan al-Rida",
+            "text": {
+              "en": "I said: And God's word, 'No bearer shall bear another's burden' - what is its meaning? He said: God is truthful in all His words, but the offspring of Husayn's murderers are pleased with their fathers' deeds and boast of them, and whoever is pleased with a thing is like the one who did it.",
+              "ur": "میں نے کہا: اور اللہ کا قول 'کوئی بوجھ اٹھانے والی جان دوسری کا بوجھ نہیں اٹھائے گی' - اس کا کیا مطلب ہے؟ آپ علیہ السلام نے فرمایا: اللہ اپنے تمام اقوال میں سچا ہے، لیکن حسین علیہ السلام کے قاتلوں کی اولاد اپنے باپ دادا کے کاموں پر خوش ہے اور ان پر فخر کرتی ہے، اور جو شخص کسی چیز پر راضی ہو وہ اس کے کرنے والے کی مانند ہے۔"
+            },
+            "source": "s42"
+          }
+        ]
+      },
+      {
+        "verse": 19,
+        "heading": {
+          "en": "The blind and the seer",
+          "ur": "اندھا اور دیکھنے والا"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "الأعمى أبو جهل، و البصير أمير المؤمنين … فالأحياء: علي، و حمزة، و جعفر، و الحسن، و الحسين، و فاطمة، و خديجة (عليهم السلام)، و الأموات: كفار مكة",
+            "chain": "al-Burhan, from the path of the opponents: Malik ibn Anas, from Ibn Shihab, from Abu Salih, from Ibn Abbas",
+            "text": {
+              "en": "The blind one is Abu Jahl, and the seer is the Commander of the Faithful … the living are Ali, Hamza, Ja'far, al-Hasan, al-Husayn, Fatimah, and Khadijah (peace be upon them), and the dead are the disbelievers of Mecca.",
+              "ur": "اندھے سے مراد ابو جہل ہے، اور دیکھنے والے سے مراد امیر المومنین علیہ السلام ہیں ... زندہ لوگوں سے مراد علی، حمزہ، جعفر، حسن، حسین، فاطمہ اور خدیجہ علیہم السلام ہیں، اور مردہ سے مراد مکہ کے کافر ہیں۔"
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 24,
+        "heading": {
+          "en": "A warner for every age",
+          "ur": "ہر دور کے لیے خبردار کرنے والا"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "لم يمت محمد الاّ وله بعيث نذير … قيل وما يكفيهم القرآن قال بلى ان وجدوا له مفسّراً … قد فسّره لرجل واحد وفسّر للأمّة شأن ذلك الرّجل وهو عليّ بن ابي طالب",
+            "chain": "al-Kafi, from al-Baqir",
+            "text": {
+              "en": "Muhammad did not die but that he had a warner sent … It was said: And does the Quran not suffice them? He said: Yes, if they find an interpreter for it … He interpreted it for one man and interpreted for the community the standing of that man, and he is Ali ibn Abi Talib.",
+              "ur": "محمد صلی اللہ علیہ وآلہ وسلم نے وفات نہیں پائی مگر یہ کہ ان کے بعد ایک خبردار کرنے والا تھا ... کہا گیا: کیا ان کے لیے قرآن کافی نہیں؟ آپ نے فرمایا: ہاں، اگر انہیں اس کا مفسر مل جائے ... آپ صلی اللہ علیہ وآلہ وسلم نے اسے ایک شخص کے لیے بیان کیا اور اس شخص کا مقام امت کے لیے بیان کیا، اور وہ علی ابن ابی طالب ہیں۔"
+            },
+            "source": "s14"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the warner given to every nation, the commentators diverge. Ibn Kathir reads it of the nations gone by: there is no nation of the children of Adam that has passed but that God sent warners to them [20]. The Shia sources carry the warner into every age. al-Burhan, transmitting Ali ibn Ibrahim, glosses the verse as 'for every age there is an Imam' [12], and al-Safi cites al-Kafi that Muhammad did not die but that he left a warner, the one who interprets the Quran, Ali ibn Abi Talib [14].",
+      "ur": "ہر امت کو دیے گئے خبردار کرنے والے کے بارے میں مفسرین میں اختلاف ہے۔ ابن کثیر اسے گزری ہوئی اقوام کے بارے میں سمجھتے ہیں: بنی آدم کی کوئی ایسی امت نہیں گزری جس کے پاس اللہ نے خبردار کرنے والے نہ بھیجے ہوں [20]۔ شیعہ مآخذ خبردار کرنے والے کو ہر دور تک وسیع کرتے ہیں۔ البرہان، علی ابن ابراہیم سے نقل کرتے ہوئے، اس آیت کی تفسیر 'ہر دور کے لیے ایک امام ہے' کرتا ہے [12]، اور الصافی الکافی سے نقل کرتا ہے کہ محمد صلی اللہ علیہ وآلہ وسلم نے وفات نہیں پائی مگر یہ کہ ایک خبردار کرنے والا چھوڑ گئے، یعنی قرآن کا مفسر، علی ابن ابی طالب [14]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Faatir 15 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=35&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقصر الفقر فيهم وقصر الغنى فيه سبحانه فكل الفقر فيهم وكل الغنى فيه سبحانه"
+        },
+        "gloss": "He confined poverty to them and wealth to Him alone, so all poverty is in them and all wealth is in Him."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 18 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=35&tAyahNo=18&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا تحمل نفس حاملة حمل نفس أخرى أي لا يؤاخذ أحد بذنب غيره"
+        },
+        "gloss": "No burdened soul carries the load of another; that is, no one is held to account for another's sin."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 15 to 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=35&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وما ذلك على الله بعزيز أي بممتنع"
+        },
+        "gloss": "'And that is not a hard thing for Allah' means not impossible."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 18 to 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=35&tAyahNo=18&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يستوي المؤمن والكافر والمطيع والعاصي فشبه الايمان بالنور والكفر بالظلمات"
+        },
+        "gloss": "The believer and the disbeliever, the obedient and the disobedient, are not equal; He likened faith to light and unbelief to darkness."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 24 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=35&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإن من أمة أى ليس من أمة في ما مضى إلا مضى فيها مخوف من معاصي الله"
+        },
+        "gloss": "'And there is not a nation' means there was no nation in the past but that a warner against disobeying God passed in it."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 15 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإن من أمة إلا خلا فيها نذير، قال: لكل زمان إمام"
+        },
+        "gloss": "'And there is not a nation but a warner has passed in it' - he said: for every age there is an Imam."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 19 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=35&tAyahNo=19&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الكافي عن الباقر عليه السلام لم يمت محمد الاّ وله بعيث نذير"
+        },
+        "gloss": "In al-Kafi, from al-Baqir: Muhammad did not die but that he had a warner sent."
+      },
+      {
+        "id": "s20",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 19 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=35&tAyahNo=19&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وما من أمة خلت من بني آدم، إلا وقد بعث الله تعالى إليهم النذر"
+        },
+        "gloss": "There is no nation of the children of Adam gone by but that God sent warners to them."
+      },
+      {
+        "id": "s41",
+        "kind": "hadith",
+        "work": "Al-Tawhid",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 5, cited at Faatir 18",
+        "url": "https://thaqalayn.com/book/6",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا يأخذ الله عز وجل البرئ بالسقيم ولا يعذب الله عز وجل الأطفال بذنوب الآباء، فإنه قال في محكم كتابه: ولا تزر وازرة وزر أخرى"
+        },
+        "gloss": "God does not seize the innocent for the guilty, nor punish children for the sins of the fathers, for He said in His firm Book: No bearer shall bear another's burden."
+      },
+      {
+        "id": "s42",
+        "kind": "hadith",
+        "work": "Uyun akhbar al-Rida",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 5, cited at Faatir 18",
+        "url": "https://thaqalayn.com/book/4",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "ذَرَارِيُّ قَتَلَةِ الْحُسَيْنِ يَرْضَوْنَ بِأفعَالِ آبَائِهِمْ وَيَفْتَخِرُونَ بِهَا وَمَنْ رَضِيَ شَيْئاً كَانَ كَمَنْ أَتَاهُ"
+        },
+        "gloss": "The offspring of Husayn's murderers are pleased with their fathers' deeds and boast of them, and whoever is pleased with a thing is like the one who did it."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-28T19:11:21Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-28T19:35:26Z",
+      "assembled_at": "2026-09-28T20:04:04Z"
+    }
+  },
+  "4": {
+    "id": "35:4",
+    "surah": 35,
+    "index": 4,
+    "range": [
+      27,
+      37
+    ],
+    "title": {
+      "en": "Signs, the Book, and its heirs",
+      "ur": "نشانیاں، کتاب اور اس کے وارث"
+    },
+    "essay": {
+      "en": "These verses return to the signs of God's oneness. Rain sent down from the sky brings out fruits of many colors, and the mountains show stripes of white and red and pitch black, as do humans, beasts, and cattle in their varied hues. Were these merely the yield of one cause, water, they would all be one color; their difference points to divine ordering at work [1]. The verse then turns inward: only the learned among His servants fear Him, and by the learned Majma al-Bayan means those who know Him as He truly is, since none dreads Him as He deserves except them [2].\n\nNext come the reciters of the Book, who keep the prayer and spend in secret and in the open, hoping for a commerce that will never go bankrupt, which al-Tibyan glosses as a trade that will not go slack [5]. God will pay them their full reward and add to it from His bounty.\n\nThe Book revealed to the Prophet is then declared the truth, confirming the scriptures before it. God made those whom He chose from His servants its heirs, and they fall into three kinds: one who wrongs himself, one who is average, and one who is foremost in good works. The commentators divide over who the chosen are, and Majma al-Bayan reports that al-Baqir and al-Sadiq said, 'It is for us specifically, and us He meant,' calling this the closest of the readings [3].\n\nThe heirs then enter the Gardens of Eden, adorned with gold and pearl and clothed in silk, and they praise God who has removed their grief and settled them in the everlasting abode, where neither toil nor fatigue can reach them. Against them stand the faithless, who have the fire of hell, neither dying to escape it nor having its punishment eased; they cry to be brought back to act righteously and are answered that they were given a life long enough to heed and that the warner had come. Majma al-Bayan gathers the disputes over that lifespan, sixty years from Ali, forty from Ibn Abbas, and a reproach to the eighteen-year-old, and over the warner, whether it is the Prophet or the greying of hair [4].",
+      "ur": "یہ آیات اللہ کی وحدانیت کی نشانیوں کی طرف لوٹتی ہیں۔ آسمان سے نازل ہونے والی بارش مختلف رنگوں کے پھل پیدا کرتی ہے، پہاڑوں میں سفید، سرخ اور گہرے سیاہ دھاریاں نظر آتی ہیں، اور اسی طرح انسانوں، جانوروں اور چوپایوں کے رنگ بھی مختلف ہیں۔ اگر یہ سب محض ایک سبب یعنی پانی کا نتیجہ ہوتا تو سب کا رنگ ایک ہی ہوتا؛ لیکن یہ تنوع اس بات کی نشاندہی کرتا ہے کہ الٰہی تدبیر کارفرما ہے [1]۔ پھر آیت اندرون کی طرف متوجہ ہوتی ہے: اس کے بندوں میں سے صرف علما ہی اس سے ڈرتے ہیں، اور مجمع البیان کے مطابق علما سے مراد وہ لوگ ہیں جو اسے اس طرح جانتے ہیں جیسا وہ واقعی ہے، کیونکہ اس کا حقیقی خوف انہی کو حاصل ہوتا ہے [2]۔\n\nپھر کتاب کی تلاوت کرنے والوں کا ذکر ہے جو نماز قائم رکھتے ہیں اور پوشیدہ اور ظاہر میں خرچ کرتے ہیں، اس تجارت کی امید میں جو کبھی خسارے میں نہیں جائے گی - التبیان نے اسے ایسی تجارت قرار دیا ہے جو کبھی سست نہیں پڑے گی [5]۔ اللہ انہیں ان کا پورا اجر عطا فرمائے گا اور اپنے فضل سے اس میں اضافہ بھی کرے گا۔\n\nپھر نبی صلی اللہ علیہ وآلہ وسلم پر نازل ہونے والی کتاب کو حق قرار دیا گیا ہے جو پہلی کتابوں کی تصدیق کرتی ہے۔ اللہ نے اپنے بندوں میں سے جنہیں منتخب کیا انہیں اس کتاب کا وارث بنایا، اور وہ تین قسم کے ہیں: ایک جو خود پر ظلم کرتا ہے، ایک جو درمیانہ ہے، اور ایک جو نیک اعمال میں سبقت لے جانے والا ہے۔ مفسرین اس بارے میں اختلاف رکھتے ہیں کہ یہ منتخب لوگ کون ہیں، اور مجمع البیان نقل کرتا ہے کہ امام باقر علیہ السلام اور امام صادق علیہ السلام نے فرمایا: 'یہ خاص ہمارے لیے ہے اور ہمیں ہی مراد رکھا گیا ہے'، اور اسے قراءتوں میں قریب ترین قرار دیا [3]۔\n\nپھر وارث جنتِ عدن میں داخل ہوتے ہیں، سونے اور موتی سے آراستہ اور ریشم سے ملبوس، اور وہ اللہ کی حمد کرتے ہیں جس نے ان کا غم دور کر کے انہیں دائمی ٹھکانے میں بسایا جہاں نہ مشقت پہنچتی ہے اور نہ تھکاوٹ۔ اس کے برخلاف کافر ہیں جن کے لیے جہنم کی آگ ہے، نہ مریں کہ نجات ملے اور نہ عذاب میں تخفیف ہو؛ وہ فریاد کرتے ہیں کہ انہیں واپس بھیجا جائے تاکہ نیک عمل کریں، اور انہیں جواب دیا جاتا ہے کہ انہیں اتنی عمر دی گئی تھی کہ وہ سوچ سمجھ سکتے اور خبردار کرنے والا بھی آ چکا تھا۔ مجمع البیان اس عمر کے بارے میں اختلافات جمع کرتا ہے: علی علیہ السلام سے ساٹھ سال، ابن عباس سے چالیس سال، اور اٹھارہ سال کے شخص کے لیے ملامت؛ اور خبردار کرنے والے کے بارے میں بھی اختلاف ہے کہ آیا وہ نبی صلی اللہ علیہ وآلہ وسلم ہیں یا بالوں کا سفید ہونا [4]۔"
+    },
+    "verses": [
+      {
+        "verse": 28,
+        "heading": {
+          "en": "Only the learned fear Him",
+          "ur": "صرف علما ہی اس سے ڈرتے ہیں"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يعني بالعلماء من صدق فعله قوله، و من لم يصدق فعله قوله فليس بعالم",
+            "chain": "al-Kafi: Ali ibn Ibrahim, from Muhammad ibn Isa, from Yunus, from Hammad ibn Uthman, from al-Harith ibn al-Mughira al-Nasri, from Abu Abdillah",
+            "text": {
+              "en": "By 'the learned' is meant one whose deed confirms his word; and whoever's deed does not confirm his word is not learned.",
+              "ur": "'علما' سے مراد وہ شخص ہے جس کا عمل اس کے قول کی تصدیق کرے؛ اور جس کا عمل اس کے قول کی تصدیق نہ کرے وہ عالم نہیں ہے۔"
+            },
+            "source": "s16"
+          },
+          {
+            "id": "n2",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "يعني به عليا … كان عالما بالله، و يخشى الله عز و جل و يراقبه، و يعمل بفرائضه، و يجاهد في سبيله، و يتبع في جميع أمره مرضاته و مرضاة رسوله",
+            "chain": "Muhammad ibn al-Abbas, from Ali ibn Abdillah ibn Asad, from Ibrahim ibn Muhammad, from Ja'far ibn Umar, from Muqatil ibn Sulayman, from al-Dahhak ibn Muzahim, from Ibn Abbas",
+            "text": {
+              "en": "It means Ali … he knew God, and he feared God and watched Him, and acted by His obligations, and strove in His path, and followed in all his affairs His pleasure and the pleasure of His Messenger.",
+              "ur": "اس سے مراد علی علیہ السلام ہیں … آپ اللہ کو جانتے تھے، اللہ سے ڈرتے تھے اور اس کی نگرانی کرتے تھے، اس کے فرائض بجا لاتے تھے، اس کی راہ میں جہاد کرتے تھے، اور اپنے تمام معاملات میں اس کی اور اس کے رسول صلی اللہ علیہ وآلہ وسلم کی رضا کی پیروی کرتے تھے۔"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 32,
+        "heading": {
+          "en": "Heirs to the Book",
+          "ur": "کتاب کے وارث"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "السابق بالخيرات: الإمام، و المقتصد: العارف بالإمام، و الظالم لنفسه: الذي لا يعرف الإمام",
+            "chain": "al-Kafi: al-Husayn ibn Muhammad, from Mu'alla ibn Muhammad, from Muhammad ibn Jumhur, from Hammad ibn Isa, from Abd al-Mumin, from Salim, from Abu Jafar",
+            "text": {
+              "en": "The one foremost in good works is the Imam; the average one is he who knows the Imam; and the one who wrongs himself is he who does not know the Imam.",
+              "ur": "نیک اعمال میں سبقت لے جانے والا امام ہے؛ درمیانہ وہ ہے جو امام کو جانتا ہے؛ اور اپنے آپ پر ظلم کرنے والا وہ ہے جو امام کو نہیں جانتا۔"
+            },
+            "source": "s17"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ليس حيث تذهب، ليس يدخل في هذا من أشار بسيفه، و دعا الناس إلى الخلاف. فقلت: فأي شيء الظالم لنفسه؟ قال: الجالس في بيته لا يعرف حق الإمام، و المقتصد: العارف بحق الإمام، و السابق بالخيرات: الإمام",
+            "chain": "al-Kafi: al-Husayn ibn Muhammad, from Mu'alla, from al-Washsha, from Abd al-Karim, from Sulayman ibn Khalid, from Abu Abdillah",
+            "text": {
+              "en": "It is not as you suppose; whoever brandished his sword and called people to dissension does not enter into this. I said: Then what is the one who wrongs himself? He said: He who sits at home not knowing the Imam's right; the average knows the Imam's right; and the foremost in good works is the Imam.",
+              "ur": "یہ ویسا نہیں جیسا تم سمجھتے ہو؛ جس نے تلوار اٹھائی اور لوگوں کو انتشار کی طرف بلایا وہ اس میں داخل نہیں ہے۔ میں نے کہا: تو پھر اپنے آپ پر ظلم کرنے والا کون ہے؟ آپ علیہ السلام نے فرمایا: وہ جو گھر میں بیٹھا ہے اور امام کے حق کو نہیں جانتا؛ درمیانہ وہ ہے جو امام کے حق کو جانتا ہے؛ اور نیک اعمال میں سبقت لے جانے والا امام ہے۔"
+            },
+            "source": "s17"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "ولد فاطمة … و السابق بالخيرات: الإمام، و المقتصد: العارف بالإمام، و الظالم لنفسه: الذي لا يعرف الإمام",
+            "chain": "al-Kafi: al-Husayn ibn Muhammad, from Mu'alla, from al-Hasan, from Ahmad ibn Umar, from Abu al-Hasan al-Rida",
+            "text": {
+              "en": "The children of Fatimah … the one foremost in good works is the Imam; the average one is he who knows the Imam; and the one who wrongs himself is he who does not know the Imam.",
+              "ur": "فاطمہ سلام اللہ علیہا کی اولاد … نیک اعمال میں سبقت لے جانے والا امام ہے؛ درمیانہ وہ ہے جو امام کو جانتا ہے؛ اور اپنے آپ پر ظلم کرنے والا وہ ہے جو امام کو نہیں جانتا۔"
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 34,
+        "heading": {
+          "en": "Grief removed in Paradise",
+          "ur": "جنت میں غم کا ازالہ"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "و الحزن ما أصابهم في الدنيا من الخوف و الشدة",
+            "chain": "al-Burhan: Muhammad ibn al-Hasan ibn Humayd, from Ja'far ibn Abdillah al-Muhammadi, from Kathir ibn Ayyash, from Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "The grief is what befell them in the world, of fear and hardship.",
+              "ur": "غم سے مراد وہ چیز ہے جو دنیا میں انہیں پہنچی، یعنی خوف اور مشقت۔"
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 37,
+        "heading": {
+          "en": "A life long enough",
+          "ur": "کافی طویل عمر"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "توبيخ لابن ثماني عشرة سنة",
+            "chain": "Ibn Babawayh, from his father, from Sad ibn Abdillah, from Ahmad ibn Abi Abdillah al-Barqi, by his chain, raising it to Abu Abdillah",
+            "text": {
+              "en": "A reproach to the one of eighteen years.",
+              "ur": "اٹھارہ سال کے شخص کے لیے ملامت ہے۔"
+            },
+            "source": "s18"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن العبد لفي فسحة من أمره ما بينه و بين أربعين سنة، فإذا بلغ أربعين سنة أوحى الله عز و جل إلى ملائكته: أني قد عمرت عبدي عمرا، فغلظا و شددا و تحفظا و اكتبا عليه قليل عمله و كثيره، و صغيره و كبيره",
+            "chain": "Ibn Babawayh, from his father, from Sad ibn Abdillah, from Ahmad ibn Muhammad ibn Isa, from Ali ibn al-Hakam, from Dawud ibn al-Nu'man, from Sayf al-Tammar, from Abu Basir, from al-Sadiq",
+            "text": {
+              "en": "The servant is in latitude regarding his affair up to forty years; when he reaches forty, God reveals to His angels: I have granted My servant a lifespan, so be firm and severe and watchful, and record against him the little of his deeds and the much, the small and the large.",
+              "ur": "بندہ چالیس سال تک اپنے معاملے میں گنجائش میں رہتا ہے؛ جب وہ چالیس سال کو پہنچتا ہے تو اللہ اپنے فرشتوں کو وحی فرماتا ہے: میں نے اپنے بندے کو عمر دی ہے، اب سخت اور محتاط رہو، اور اس کے اعمال میں سے تھوڑا اور زیادہ، چھوٹا اور بڑا سب لکھتے رہو۔"
+            },
+            "source": "s18"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the heirs God chose from His servants, the traditions read one verse in two ways. The Shia reports make the chosen the Prophet's household: the foremost is the Imam, the average is one who knows the Imam, and the wrongdoer is one who does not know him; al-Rida told al-Mamun that God meant the pure progeny and not the whole community, for had the whole community been meant, all of it would enter Paradise [17]. al-Tabari reports from Ibn Abbas that the chosen are the community of Muhammad, whose wrongdoer is forgiven, whose average faces an easy reckoning, and whose foremost enters Paradise without reckoning [26]; Ibn Kathir likewise reads the three ranks as all of this community [33].",
+      "ur": "اللہ کے منتخب بندوں کے بارے میں جنہیں اس نے کتاب کا وارث بنایا، روایات اس آیت کو دو طریقوں سے پڑھتی ہیں۔ شیعہ روایات کے مطابق منتخب لوگ نبی صلی اللہ علیہ وآلہ وسلم کے اہل بیت علیہم السلام ہیں: سبقت لے جانے والا امام ہے، درمیانہ وہ ہے جو امام کو جانتا ہے، اور ظلم کرنے والا وہ ہے جو انہیں نہیں جانتا؛ امام رضا علیہ السلام نے مامون کو بتایا کہ اللہ کی مراد پاکیزہ نسل ہے نہ کہ پوری امت، کیونکہ اگر پوری امت مراد ہوتی تو سب جنت میں داخل ہوتے [17]۔ طبری ابن عباس سے نقل کرتے ہیں کہ منتخب لوگ محمد صلی اللہ علیہ وآلہ وسلم کی امت ہے، جس کا ظلم کرنے والا بخشا جاتا ہے، درمیانہ کا آسان حساب ہوتا ہے، اور سبقت لے جانے والا بے حساب جنت میں داخل ہوتا ہے [26]؛ ابن کثیر بھی تینوں درجات کو اس پوری امت کے افراد کے طور پر پڑھتے ہیں [33]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Faatir 27 to 37",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=35&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فاختلاف الألوان يدل على وقوع التدبير الإلهي"
+        },
+        "gloss": "So the difference of colors indicates that divine ordering is at work."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 27 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=35&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ليس يخاف الله حق خوفه ولا يحذر معاصيه خوفاً من نقمته إلا العلماء الذين يعرفونه حق معرفته"
+        },
+        "gloss": "None fears God as He should be feared, nor guards against disobeying Him out of fear of His punishment, except the learned who know Him as He truly is."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 31 to 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=35&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمروي عن الباقر والصادق ع أنهما قالا هي لنا خاصة وإيانا عنى وهذا أقرب الأقوال"
+        },
+        "gloss": "What is narrated from al-Baqir and al-Sadiq is that they said, 'It is for us specifically, and us He meant,' and this is the closest of the views."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 36 to 37",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=35&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقيل: هو ستون سنة وهو المروي عن أمير المؤمنين ع … وقيل: هو أربعون سنة عن ابن عباس ومسروق. وقيل: هو توبيخ لابن ثماني عشرة سنة"
+        },
+        "gloss": "Some said it is sixty years, which is what is narrated from the Commander of the Faithful (Ali) … and some said forty years, from Ibn Abbas and Masruq; and some said it is a reproach to the one of eighteen years."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 27 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=35&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ تجارة لن تبور } أي لا تكسد. وقيل: لا تفسد"
+        },
+        "gloss": "'a commerce that will never go bankrupt': that is, it will not go slack; and it is said: it will not spoil."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 28 to 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني بالعلماء من صدق فعله قوله، و من لم يصدق فعله قوله فليس بعالم"
+        },
+        "gloss": "By 'the learned' is meant one whose deed confirms his word; and whoever's deed does not confirm his word is not learned."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 32 to 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=32&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا أقول كما قالوا، و لكن أقول: أراد الله عز و جل بذلك العترة الطاهرة … لو أراد الامة لكانت بأجمعها في الجنة"
+        },
+        "gloss": "I do not say as they said; rather I say that God meant by it the pure progeny … had He meant the whole community, all of it would be in Paradise."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 36 to 37",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "توبيخ لابن ثماني عشرة سنة"
+        },
+        "gloss": "A reproach to the one of eighteen years."
+      },
+      {
+        "id": "s26",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 32",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=35&tAyahNo=32&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هم أمة محمد صلى الله عليه وسلم، ورّثهم الله كل كتاب أنزله، فظالمهم يغفر له، ومقتصدهم يحاسب حساباً يسيراً، وسابقهم يدخل الجنة بغير حساب"
+        },
+        "gloss": "They are the community of Muhammad; God made them heirs to every book He sent down; so their wrongdoer is forgiven, their average is called to an easy reckoning, and their foremost enters Paradise without reckoning. (Ibn Abbas, as al-Tabari reports.)"
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 32",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=35&tAyahNo=32&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الذين اصطفينا من عبادنا، وهم هذه الأمة، ثم قسمهم إلى ثلاثة أنواع"
+        },
+        "gloss": "'those whom We chose from Our servants' - they are this community, then He divided them into three kinds."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-28T19:15:39Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-28T19:59:55Z",
+      "assembled_at": "2026-09-28T20:04:04Z"
+    }
+  },
+  "5": {
+    "id": "35:5",
+    "surah": 35,
+    "index": 5,
+    "range": [
+      38,
+      45
+    ],
+    "title": {
+      "en": "God alone holds all creation",
+      "ur": "صرف اللہ ہی پوری کائنات کا تھامنے والا ہے"
+    },
+    "essay": {
+      "en": "The passage turns back to God: Allah is the knower of the Unseen of the heavens and the earth, and He knows well what is in the breasts. Tabatabai reads this as a warning that He will judge people by what their inner belief and deeds hold, and call them to account for it [1]. It is He, too, who made them successors on the earth; Tabatabai takes this succession, each generation replacing the last, as proof that Lordship belongs to Allah alone, so that whoever is faithless only harms himself, his unfaith adding nothing before his Lord except disfavour and loss [2].\n\nThe Prophet is told to challenge the idolaters about the partners they invoke: show what part of the earth these created, or what share they hold in the heavens. Tabatabai frames this as a proof that a lord must be a creator, whose claim would need evidence from the world or a revealed scripture, neither of which exists, so the wrongdoers promise one another nothing but delusion [2]. The argument widens to all creation: Allah sustains the heavens and the earth lest they fall apart, and none but He could hold them, for their preservation is itself an ongoing act of the sole Sustainer [2].\n\nNext the surah recalls an oath: Tabatabai accepts the report - which the verse's context confirms - that Quraysh, hearing that the People of the Book had belied their messengers, swore before the Prophet's coming that a warner would find them better guided than any nation [2]; yet when he came it only drove them off, out of arrogance and evil scheming. Tabrisi glosses 'evil schemes beset only their authors' to mean the scheme's recompense falls on none but the one who devised it [4]. They wait only for the precedent visited on the ancients, which Tabatabai notes admits neither the exchange of relief for punishment nor its transfer to others [2].\n\nThey are then asked whether they have travelled the land and seen the fate of those before them, who were greater in strength yet could not frustrate God in the heavens or the earth [2]. The surah closes on His forbearance: were Allah to take people to task for what they have earned, He would leave no creature moving on the earth, yet He defers them to an appointed term, and when it comes He is watching His servants - for Tabatabai a worldly respite until death or the Resurrection [2].",
+      "ur": "یہ گزارش اللہ کی طرف لوٹتی ہے: اللہ آسمانوں اور زمین کے غیب کا جاننے والا ہے، اور جو کچھ سینوں میں ہے وہ اس سے خوب واقف ہے۔ علامہ طباطبائی اسے اس تنبیہ کے طور پر پڑھتے ہیں کہ وہ لوگوں کو ان کے باطنی عقائد اور اعمال کی بنیاد پر پرکھے گا اور انہیں اس پر جوابدہ ٹھہرائے گا [1]۔ اور وہی ہے جس نے انہیں زمین میں خلیفہ بنایا؛ علامہ طباطبائی اس جانشینی کو، جس میں ہر نسل پچھلی کی جگہ لیتی ہے، اس بات کی دلیل قرار دیتے ہیں کہ ربوبیت صرف اللہ کی ہے، چنانچہ جو کفر اختیار کرے وہ صرف اپنے آپ کو نقصان پہنچاتا ہے، اور اس کا کفر اس کے رب کے ہاں ناپسندیدگی اور خسارے کے سوا کچھ نہیں بڑھاتا [2]۔\n\nنبی صلی اللہ علیہ وآلہ وسلم کو مشرکین کو چیلنج کرنے کا حکم ہے کہ وہ ان شریکوں کو دکھائیں جن کی عبادت کرتے ہیں: یا تو انہوں نے زمین کا کوئی حصہ پیدا کیا ہو یا آسمانوں میں کوئی حصہ ہو۔ علامہ طباطبائی اسے اس دلیل کے طور پر پیش کرتے ہیں کہ رب کا لازمہ خالق ہونا ہے، اور ایسے دعوے کے لیے عالمِ وجود سے یا نازل کردہ کتاب سے شہادت درکار ہوگی، جو موجود نہیں، سو ظالم ایک دوسرے سے دھوکے کے سوا کوئی وعدہ نہیں کرتے [2]۔ دلیل تمام مخلوق تک پھیل جاتی ہے: اللہ آسمانوں اور زمین کو تھامے ہوئے ہے کہ وہ ٹل نہ جائیں، اور اسے سوائے اس کے کوئی نہیں تھام سکتا، کیونکہ ان کی بقا خود تنہا پالنے والے کا مسلسل فعل ہے [2]۔\n\nپھر سورہ ایک قسم کا ذکر کرتی ہے: علامہ طباطبائی اس روایت کو قبول کرتے ہیں - جسے آیت کا سیاق و سباق بھی تصدیق کرتا ہے - کہ قریش نے اہلِ کتاب کے اپنے رسولوں کو جھٹلانے کی خبر سن کر نبی صلی اللہ علیہ وآلہ وسلم کی آمد سے پہلے قسم کھائی تھی کہ ان کے پاس کوئی خبردار کرنے والا آیا تو وہ ہر امت سے زیادہ ہدایت یافتہ ہوں گے [2]؛ مگر جب آپ صلی اللہ علیہ وآلہ وسلم تشریف لائے تو اس سے ان کی دوری اور بھی بڑھ گئی، تکبر اور بری تدبیر کے سبب۔ شیخ طبرسی 'بری تدبیر اپنے کرنے والوں پر ہی پڑتی ہے' کی یہ تفسیر کرتے ہیں کہ تدبیر کا بدلہ اسی کو ملتا ہے جس نے اسے سوچا [4]۔ وہ اب صرف اسی انجام کے منتظر ہیں جو پہلے لوگوں پر آیا، جس کے بارے میں علامہ طباطبائی فرماتے ہیں کہ اس میں نہ سزا کی جگہ راحت ہو سکتی ہے اور نہ اسے کسی دوسرے پر ڈالا جا سکتا ہے [2]۔\n\nپھر ان سے پوچھا جاتا ہے کہ کیا انہوں نے زمین میں سفر نہیں کیا اور ان سے پہلے لوگوں کا انجام نہیں دیکھا، جو ان سے کہیں زیادہ طاقتور تھے مگر آسمانوں اور زمین میں اللہ کو عاجز نہ کر سکے [2]۔ سورہ کا اختتام اس کے حلم پر ہوتا ہے: اگر اللہ لوگوں کو ان کے کیے پر پکڑتا تو زمین پر کوئی چلنے پھرنے والا نہ چھوڑتا، مگر وہ انہیں ایک مقررہ مدت تک مہلت دیتا ہے، اور جب وہ آ جائے تو وہ اپنے بندوں کو دیکھنے والا ہے - علامہ طباطبائی کے نزدیک یہ دنیوی مہلت ہے موت یا قیامت تک [2]۔"
+    },
+    "verses": [
+      {
+        "verse": 41,
+        "heading": {
+          "en": "God holds up the heavens",
+          "ur": "اللہ آسمانوں کو تھامے ہوئے ہے"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam Ali",
+            "addressee": "al-Jathaliq",
+            "arabic": "أَخْبِرْنِي عَنِ الله عَزَّ وَجَلَّ يَحْمِلُ الْعَرْشَ أَمِ الْعَرْشُ يَحْمِلُهُ فَقَالَ أَمِيرُ الْمُؤْمِنِينَ (عَلَيْهِ السَّلام) الله عَزَّ وَجَلَّ حَامِلُ الْعَرْشِ وَالسَّمَاوَاتِ وَالارْضِ وَمَا فِيهِمَا وَمَا بَيْنَهُمَا وَذَلِكَ قَوْلُ الله عَزَّ وَجَلَّ إِنَّ الله يُمْسِكُ السَّماواتِ وَالارْضَ أَنْ تَزُولا",
+            "chain": "Al-Kafi: a number of our companions, from Ahmad ibn Muhammad al-Barqi, raising it",
+            "text": {
+              "en": "Tell me about Allah - does He carry the Throne, or does the Throne carry Him? The Commander of the Faithful said: Allah is the carrier of the Throne, the heavens and the earth and all that is in them and between them, and that is Allah's word: Indeed Allah sustains the heavens and the earth lest they fall apart.",
+              "ur": "مجھے اللہ کے بارے میں بتاؤ - کیا وہ عرش کو اٹھائے ہوئے ہے یا عرش اسے اٹھائے ہوئے ہے؟ امیر المومنین علیہ السلام نے فرمایا: اللہ عرش، آسمانوں اور زمین اور جو کچھ ان میں اور ان کے درمیان ہے سب کا اٹھانے والا ہے، اور یہی اللہ کا قول ہے: بے شک اللہ آسمانوں اور زمین کو تھامے ہوئے ہے کہ وہ ٹل نہ جائیں۔"
+            },
+            "source": "s40"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "بنا يمسك الله السموات والارض ان تزولا",
+            "chain": "al-Ikmal, from al-Rida",
+            "text": {
+              "en": "By us Allah holds the heavens and the earth lest they fall apart.",
+              "ur": "ہمارے ذریعے اللہ آسمانوں اور زمین کو تھامے ہوئے ہے کہ وہ ٹل نہ جائیں۔"
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 43,
+        "heading": {
+          "en": "Schemes recoil on their authors",
+          "ur": "بری تدبیر اپنے کرنے والوں پر پلٹتی ہے"
+        },
+        "note": {
+          "en": "Al-Qummi frames this as part of Imam Ali's letter to his Shia, which recalls Aisha's going out to Basra and the gravity of Talha and al-Zubayr's error [7].",
+          "ur": "قمی اسے امام علی علیہ السلام کے اپنے شیعوں کو لکھے ہوئے خط کا حصہ قرار دیتے ہیں، جس میں عائشہ کے بصرہ کی طرف نکلنے اور طلحہ اور زبیر کی غلطی کی سنگینی کا ذکر ہے [7]۔"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam Ali",
+            "addressee": "his Shia",
+            "arabic": "ثلاث خصال مرجعها على الناس في كتاب الله البغي والمكر والنكث … ولا يحيق المكر السيء إلا بأهله وقد بغيا علينا ونكثا بيعتي ومكرا بي",
+            "chain": "Tafsir al-Qummi: the Commander of the Faithful, in his letter to his Shia",
+            "text": {
+              "en": "Three traits recoil upon people in the Book of Allah: transgression, scheming, and breaking of a pledge ... and evil schemes beset only their authors; and the two of them have transgressed against us, broken my allegiance, and schemed against me.",
+              "ur": "اللہ کی کتاب میں تین خصلتیں ایسی ہیں جو لوگوں پر پلٹتی ہیں: سرکشی، بری تدبیر، اور عہد توڑنا ... اور بری تدبیر اپنے کرنے والوں پر ہی پڑتی ہے؛ اور ان دونوں نے ہم پر سرکشی کی، میری بیعت توڑی، اور میرے خلاف بری تدبیر کی۔"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 44,
+        "heading": {
+          "en": "The fate of the mighty",
+          "ur": "طاقتوروں کا انجام"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "سألت أبا عبد الله (عليه السلام) عن قول الله عز و جل … عنى بذلك: أي انظروا في القرآن، فاعلموا كيف كان عاقبة الذين من قبلكم، و ما أخبركم عنه",
+            "chain": "Al-Kafi: Muhammad ibn Yahya, from Ahmad ibn Muhammad ibn Isa, from Muhammad ibn Khalid and al-Husayn ibn Saeed, from al-Nadr ibn Suwayd, from Yahya al-Halabi, from Abdullah ibn Muskan, from Badr ibn al-Walid al-Khath'ami, from Abu al-Rabi al-Shami, from Abu Abdillah",
+            "text": {
+              "en": "I asked Abu Abdillah about Allah's words ... By that He meant: look into the Quran, and know how was the fate of those before you, and what He told you about it.",
+              "ur": "میں نے ابو عبداللہ علیہ السلام سے اللہ کے اس قول کے بارے میں پوچھا ... آپ علیہ السلام نے فرمایا کہ اس سے مراد یہ ہے: قرآن میں دیکھو اور جانو کہ تم سے پہلے لوگوں کا کیا انجام ہوا، اور اللہ نے تمہیں اس بارے میں کیا بتایا۔"
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 45,
+        "heading": {
+          "en": "God grants a respite",
+          "ur": "اللہ مہلت دیتا ہے"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "The Prophet Muhammad",
+            "addressee": null,
+            "arabic": "الله يقول: يا بن آدم … أنا أولى بحسناتك منك وأنت أولى بذنبك مني … ثم لم آخذك عند غرتك وهو قوله: ولو يؤاخذ الله الناس بما كسبوا",
+            "chain": "Tafsir al-Qummi: from his father, from al-Nawfali, from al-Sakuni, from Jafar, from his father, from the Messenger of Allah",
+            "text": {
+              "en": "Allah says: O son of Adam ... I have a greater right to your good deeds than you, and you have a greater right to your sin than I ... then I did not seize you at the moment of your heedlessness, and that is His word: Were Allah to take humans to task because of what they have earned.",
+              "ur": "اللہ فرماتا ہے: اے ابنِ آدم ... تیرے نیک اعمال پر میرا حق تجھ سے زیادہ ہے، اور تیرے گناہ پر تیرا حق مجھ سے زیادہ ہے ... پھر میں نے تجھے تیری غفلت کے وقت نہیں پکڑا، اور یہی اس کا قول ہے: اگر اللہ لوگوں کو ان کے کیے پر پکڑتا۔"
+            },
+            "source": "s8"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'evil schemes beset only their authors,' both traditions draw the same triad from the Book. Sunni exegetes take it as a general law: Ibn Kathir cites Muhammad ibn Ka'b that three acts never spare their doer - scheming, transgression, and breaking of a pledge - each confirmed elsewhere in the Quran [20], and Qurtubi records a saying of the Prophet, reported by al-Zuhri, 'Do not scheme, nor aid a schemer,' citing this verse [26]. Shia sources apply the same three concretely: in a letter to his Shia, Imam Ali charges that those who broke their allegiance and schemed against him at Basra fell under this verse [7].",
+      "ur": "'بری تدبیر اپنے کرنے والوں پر ہی پڑتی ہے' کے بارے میں دونوں روایات کتاب سے ایک ہی تکون اخذ کرتی ہیں۔ سنی مفسرین اسے ایک عمومی قانون کے طور پر لیتے ہیں: ابن کثیر محمد بن کعب کا یہ قول نقل کرتے ہیں کہ تین اعمال کبھی ان کے کرنے والے کو بخشتے نہیں - بری تدبیر، سرکشی، اور عہد توڑنا - ہر ایک کی تصدیق قرآن میں کسی اور جگہ سے ہوتی ہے [20]، اور قرطبی زہری سے روایت کردہ نبی صلی اللہ علیہ وآلہ وسلم کا یہ قول نقل کرتے ہیں: 'نہ تدبیر کرو اور نہ تدبیر کرنے والے کی مدد کرو'، اس آیت سے استدلال کرتے ہوئے [26]۔ شیعہ مصادر انہی تینوں کو ٹھوس انداز میں لاگو کرتے ہیں: اپنے شیعوں کو ایک خط میں امام علی علیہ السلام نے کہا کہ جنہوں نے بصرہ میں ان کی بیعت توڑی اور ان کے خلاف تدبیر کی وہ اس آیت کے تحت آتے ہیں [7]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Faatir 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=35&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فيعاملكم بما في باطنكم من الاعتقاد وآثار الأعمال ويحاسبكم عليه"
+        },
+        "gloss": "So He deals with you according to the belief and the traces of deeds within you, and holds you to account for it."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Faatir 39 to 45",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=35&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقوله { هو الذي جعلكم خلائف في الأرض } حجة على توحده تعالى في ربوبيته وانتفائها عن شركائهم"
+        },
+        "gloss": "His words 'It is He who made you successors on the earth' are a proof of His oneness in Lordship and of its absence from their partners."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 41 to 45",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=35&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمعنى لا ينزل جزاء المكر السيىء إلا بمن فعله"
+        },
+        "gloss": "The meaning is that the recompense of the evil scheme descends only upon the one who did it."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 42",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=35&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا يحيق المكر السيء إلا بأهله وقد بغيا علينا ونكثا بيعتي ومكرا بي"
+        },
+        "gloss": "'And evil schemes beset only their authors' - and the two of them transgressed against us, broke my allegiance, and schemed against me."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 44 to 45",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=35&tAyahNo=44&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثم لم آخذك عند غرتك وهو قوله: ولو يؤاخذ الله الناس بما كسبوا ما ترك على ظهرها من دابة"
+        },
+        "gloss": "Then I did not seize you at the moment of your heedlessness, and that is His word: 'Were Allah to take humans to task because of what they have earned, He would not leave any living being on its back.'"
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 42 to 45",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=35&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عنى بذلك: أي انظروا في القرآن، فاعلموا كيف كان عاقبة الذين من قبلكم"
+        },
+        "gloss": "By that He meant: look into the Quran, and know how was the fate of those before you."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Faatir 38 to 45",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=35&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الاكمال عن الرضا عليه السلام في حديث بنا يمسك الله السموات والارض ان تزولا"
+        },
+        "gloss": "In al-Ikmal, from al-Rida, in a hadith: By us Allah holds the heavens and the earth lest they fall apart."
+      },
+      {
+        "id": "s40",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 1, cited at Faatir 41",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "مرفوع",
+          "لم يخرجه"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "الله عَزَّ وَجَلَّ حَامِلُ الْعَرْشِ وَالسَّمَاوَاتِ وَالارْضِ وَمَا فِيهِمَا وَمَا بَيْنَهُمَا وَذَلِكَ قَوْلُ الله عَزَّ وَجَلَّ إِنَّ الله يُمْسِكُ السَّماواتِ وَالارْضَ أَنْ تَزُولا"
+        },
+        "gloss": "Allah is the carrier of the Throne, the heavens and the earth and all that is in them and between them, and that is Allah's word: Indeed Allah sustains the heavens and the earth lest they fall apart."
+      },
+      {
+        "id": "s20",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 42 to 43",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=35&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثلاث من فعلهن، لم ينج حتى ينزل به من مكر أو بغى أو نكث"
+        },
+        "gloss": "Three acts - whoever does them does not escape until it befalls him: scheming, transgression, or breaking of a pledge."
+      },
+      {
+        "id": "s26",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Faatir 42 to 43",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=35&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا تَمكر ولا تُعِن ماكراً"
+        },
+        "gloss": "Do not scheme, nor aid a schemer."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-09-28T19:18:04Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-09-28T19:57:47Z",
+      "assembled_at": "2026-09-28T20:04:04Z"
+    }
+  }
+}

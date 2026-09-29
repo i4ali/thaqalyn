@@ -5,7 +5,7 @@ description: Generate sourced passage commentary for the Thaqalayn app - run the
 
 # Passages - run the passage commentary pipeline
 
-You are the orchestrator. Scripts do every deterministic step; two agents do the
+You are the orchestrator. Scripts do every deterministic step; up to four agents do the
 writing and the auditing; you launch them, check results, and stop at the gates.
 Design: `docs/plans/2026-09-05-passage-commentary-design.md`. Runbook with the
 pilot's numbers and findings: `docs/plans/2026-09-05-passage-pilot-runbook.md`.
@@ -26,7 +26,7 @@ Passage ids are `surah:index`, index 1-based within the surah. State lives in
 
 ## Hard rules
 
-1. **Never more than two agents at a time.** One free slot, one launch.
+1. **Never more than four agents at a time.** One free slot, one launch.
 2. **Never edit a draft by hand.** Fixes go through the writer agent. Never edit
    `validate.py` for taste; adjust the "How to write" section of
    `.claude/agents/passage-writer.md` instead.
@@ -56,7 +56,7 @@ background. Read the output: `unavailable` lists works altafsir returned empty f
 (a missing al-Mizan or al-Burhan block is worth one retry); the last line reports
 hadith corpus hits dropped for not quoting the verse (expected: most of them).
 
-### 2. Fill the two slots, and refill each one as it frees
+### 2. Fill the four slots, and refill each one as it frees
 
 Whenever a slot is free, launch the highest item on this list that exists:
 

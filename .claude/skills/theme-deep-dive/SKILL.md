@@ -120,7 +120,7 @@ Do not proceed until these are chosen.
 
 Follow `references/technical-integration.md`. Write an implementation plan
 (`docs/plans/YYYY-MM-DD-<theme>-deep-dive.md`) with complete code, then execute it -
-subagent waves of **max two**, each wave ending in a build gate:
+subagent waves of **max three**, each wave ending in a build gate:
 - Wave 1: engine changes if a new beat was earned (`DeepDive.swift` + `DeepDiveView.swift`
   are one atomic unit - the exhaustive switch will not compile between them).
 - Wave 2: the content file, transcribed **verbatim** from the design doc.
@@ -148,7 +148,7 @@ device pass themselves.
 ### Stage 5 - AUDIT (flag-only, four agents)  ← REQUIRED for every new dive
 
 Once the build is green, run the audit per `references/audit.md`: **four** auditors in
-**two waves** - A and B together, then C and D (never more than two at once), all four pinned to Opus 4.6 (`model: "opus"`):
+**one wave** - A, B, C and D together (never more than four at once), all four pinned to Opus 4.6 (`model: "opus"`):
 - **Auditor A - Flow, shape & the ledger**: walks every beat in order; coherence, pacing,
   transitions, template-not-forced, interactive-close earned, no-reuse ledger honored.
 - **Auditor B - Theology, sourcing & Arabic**: Shia sourcing, honorifics, narration
@@ -178,7 +178,7 @@ user's simulator pass and commit.
 
 - **Two gates are mandatory.** Never write Swift before the spine AND design are approved.
 - **Auditors never fix.** Findings are applied only after explicit user approval, one by one.
-- **Max two subagents at a time** - waves, always.
+- **Max four subagents at a time** - waves, always.
 - **Never auto-commit** - the user commits themselves.
 - **No em dashes**, anywhere, ever (" - " only). No transliteration diacritics in English.
   No `lock.fill` (premium is signaled by the catalog chrome, not locks).

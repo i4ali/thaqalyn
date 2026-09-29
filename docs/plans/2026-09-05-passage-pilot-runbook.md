@@ -13,7 +13,7 @@ The whole loop below is packaged as the `/passages` skill
    missing al-Mizan or al-Burhan block is worth a retry. The gather output also reports
    how many hadith corpus hits were dropped for not quoting the verse; only hits that
    quote the verse opening are kept.
-2. Launch `passage-writer` with `Write passage 2:N`. At most two agents at a time. The
+2. Launch `passage-writer` with `Write passage 2:N`. At most three agents at a time. The
    writer saves the packet to `passages_work/2/0N/brief.md` (the work dir is zero-padded, so 2:4 is `2/04`) and reads it in pages; a
    ten-verse packet is about 400 KB.
 3. `passages.py validate 2:N` must print valid (the hook already enforced it).
@@ -4049,3 +4049,1022 @@ Whole surah in one run, 11 passages, verses 1 to 227.
   prominence?". The 26:1 packet's thaqalayn.net English for al-Tusi's
   Ghayba (s31) names al-Baqir where the isnad has Abu Abdillah; not
   cited.
+
+## Results - an-Naml 27:1 to 27:7 (2026-09-26)
+
+Whole surah in one run, 7 passages, verses 1 to 93. Orchestrator Opus 5.5,
+writer and auditor on Opus 4.8, two slots (three from 28:1 on, see below).
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 27:1 | 1-14 | 161K, 15 min | 152K, 7.5 min | 1 |
+| 27:2 | 15-31 | 200K, 14 min; two follow-ups to 262K | 201K, 8.5 min | 1 |
+| 27:3 | 32-44 | 216K, 13 min; follow-up to 238K | 218K, 6 min | 1 |
+| 27:4 | 45-58 | 142K, 12.5 min; follow-up to 146K | 111K, 4 min | 1 |
+| 27:5 | 59-66 | 193K, 14 min; follow-up to 199K | 170K, 6.5 min | 1 |
+| 27:6 | 67-82 | 202K, 14 min; follow-up to 213K | 198K, 9 min | 1 |
+| 27:7 | 83-93 | 220K, 14.5 min; follow-up to 226K | 193K, 6 min | 1 |
+
+About 2.7M agent tokens, 0.38M per passage. `metrics 27`: 7 passed,
+first-try 7/7, mean attempts 1.0. Titles approved as generated.
+
+**Every audit passed first time, but six of seven drafts were sent back
+before audit** by the orchestrator's read, each fix through the resident
+writer (5K to 45K tokens). What the reads caught, none of which the
+auditor would have been asked about:
+
+- Speaker from an earlier link of the isnad (the 25:2 case, third run in a
+  row): 27:2 n4 credited to al-Rida where the chain runs al-Rida, from his
+  father, from Ja'far ibn Muhammad, whose "qala" it is; 27:5 n3 credited to
+  the Prophet where Imran ibn Husayn tells the story.
+- English that renders less or more than its Arabic span: 27:3 n1 and n2
+  skipped three clauses and softened "imamate" to "authority"; 27:4 n2
+  wrote al-Saduq's gloss ("being taken for an ill omen") into the Imam's
+  word (الطيرة); 27:6 n1 skipped the verse quote that ties it to its verse.
+- An ellipsis that hides the half of an exchange the answer turns on: 27:2
+  n4 (Solomon's question to the ant) and n5 (Abu Hanifa's snare
+  objection); 27:6 n3 and 27:7 n4 ("six" and "three ways" followed by
+  four and none).
+- 27:6 perspectives quoted n2 as "the Beast of the earth" where the block
+  says "Beast of Allah", uncited; 27:7 perspectives turned Imam Ali's words
+  into "the Imams" and "the wilaya of Ali".
+- Meta openers again: 27:3 ("the third of seven"), 27:4 ("The surah's
+  fourth passage"). Fixed on the way.
+- 27:5 n1 rendered أي twice ("That is, which imam ...") so the line did
+  not parse.
+
+### Source gaps
+
+- al-Burhan's entries are grouped: one 16K-character block under 27:17
+  carries the ant and the hoopoe, one under 27:40 carries Asif, so 27:2
+  and 27:3 report al-Burhan "unavailable" on nearly every verse. A retry
+  of 27:2 returned the same 56 blocks. Not a fetch failure.
+- al-Mizan from greattafsirs.com for 27:2 and 27:3. Furat empty almost
+  everywhere; al-Qummi empty on 27:8 to 9, 12 to 14, 50 to 58, 63 to 65.
+
+### Deviations from the procedure
+
+- The run first launched writers for 27:1 and 28:1 side by side; the user
+  asked for one surah at a time, the 28:1 writer was stopped before it
+  wrote anything, and surah 28's gathers were paused until 27 was drafted.
+- Drafts were sent back before audit on reader findings (above), which
+  the skill routes to notes; the fixes were cheap and every one was a
+  faithfulness slip, not taste.
+
+### Reader notes (taste and policy)
+
+- Speaker naming drift continues: "Imam Ali" and "Amir al-Muminin" in the
+  same surah; "Prophet Muhammad" and "the Prophet"; "Quran" and "Qur'an".
+- Polemical and esoteric narrations present as the sources carry them:
+  27:6 verse 82, the Beast of the earth as Ali (two narrations, with
+  Ibn Kathir's end-time reading in the perspectives); 27:5 verse 60
+  ("an imam of guidance alongside an imam of misguidance"); 27:7 raj'a.
+- Perspectives in 6 of 7: whether the prophets can "do wrong" (27:11),
+  what Solomon inherited (Fadak), who had knowledge of the Book (Asif),
+  none in 27:4 (both traditions read Salih and Lot alike), the chosen
+  servants of 27:59, the Beast, raj'a and the good deed as wilaya.
+- Writer prompt, still open and now the main cost of the orchestrator's
+  read: (1) the speaker rule for an Imam or companion telling a story;
+  (2) the English renders exactly the Arabic span shown, and an ellipsis
+  in the Arabic is an ellipsis in the English; (3) an ellipsis must not
+  cut the half of an exchange the kept half answers; (4) no meta openers;
+  (5) a perspectives clause quotes its block, never a neighbouring
+  narration from memory.
+
+## Results - al-Qasas 28:1 to 28:8 (2026-09-26)
+
+Whole surah, 8 passages, verses 1 to 88. Same models. The user raised the
+agent cap from two to three during 28:1 to 28:3 (CLAUDE.md and the
+skills now say three), so from here three slots ran at once.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 28:1 | 1-13 | 241K, 17 min; fix and rewrite to 265K | 208K, 9 min; re-audit to 216K | 2 |
+| 28:2 | 14-21 | 205K, 12 min; rewrite to 215K | 210K, 11 min; re-audit to 223K | 2 |
+| 28:3 | 22-28 | 184K, 12 min; follow-up to 190K | 171K, 7 min | 1 |
+| 28:4 | 29-42 | 195K, 11 min; follow-up to 202K | 179K, 5 min | 1 |
+| 28:5 | 43-50 | 192K, 13.5 min; follow-up to 198K | 175K, 7 min; re-rule to 183K | 2 |
+| 28:6 | 51-60 | 226K, 12.5 min; follow-up to 231K | 212K, 6.5 min | 1 |
+| 28:7 | 61-75 | 153K, 14 min | 244K, 8 min | 1 |
+| 28:8 | 76-88 | 240K, 13 min; follow-up to 248K | 236K, 8.5 min | 1 |
+
+About 3.4M agent tokens, 0.42M per passage. `metrics 28`: 8 passed,
+first-try 6/8, mean attempts 1.4 (28:5's second attempt is an
+orchestrator re-rule after a PASS). The `hours` column for 28:1 to 28:4
+counts from the 18:51 gather, before the surah waited for 27. Titles
+approved as generated except 28:5 "Moses's" changed to "Moses'" at the
+gate.
+
+- 28:1 FAIL (stretch): n7 rendered "او تموت" as "or would have died of
+  grief"; "of grief" is not in the Arabic. Fixed by the resident writer.
+- 28:2 FAIL (stretch): the verse-20 note put al-Qummi's identification of
+  the warner under s9, which names the treasurer and 40:28 but not the
+  warner; the link is in s10. Co-cited, re-audited PASS.
+- 28:5 passed, then went back: the perspectives credited an al-Nu'mani
+  gloss to al-Rida where the Arabic says only "Abu al-Hasan" (the
+  identification came from the site's bundled English, and al-Kafi gives
+  the same gloss from al-Kazim). Now "Imam Abu al-Hasan", re-ruled PASS.
+  The auditor had accepted the site's English as the block's attribution.
+- Orchestrator reads before audit, again the same families as surah 27:
+  28:4 n3 credited to the Prophet where Anas tells the story, with English
+  that added a tax collector and an embrace not in the span and softened
+  "killed the fighting men and took the offspring captive" to "fought
+  them"; 28:1 perspectives said Shia commentary "keeps the literal sense"
+  where al-Qummi (the block cited) rejects it; 28:1 n3 and n5 and 28:8 n3
+  dropped the Arabic's ellipsis, so an Imam's gloss read as the Prophet's
+  words; 28:3 n3 dropped "My daughter" and "if I go astray"; 28:6 used
+  "Musa" against "Moses" everywhere else; 28:8 perspectives called
+  al-Tusi's recorded views "Shia narrations".
+
+### Source gaps
+
+- al-Burhan grouped as in 27 (empty on 28:66 to 74 and similar runs);
+  Furat empty almost throughout. No retries: every gap matched a grouped
+  entry or an al-Qummi silence.
+
+### Reader notes
+
+- Perspectives in 8 of 8: the promise of 28:5 to 6 (the Israelites
+  against the Family of Muhammad and al-Qa'im), the killing of the Copt
+  and prophetic infallibility, the identity of Moses' host (Shu'ayb),
+  "leaders who invite to the Fire" and the two kinds of imam, the missing
+  guidance of 28:50 (an Imam or rational proof), Abu Talib's faith at
+  28:56, "they have no choice" and the appointment of the Imam, and the
+  "place of return" as raj'a.
+- Esoteric readings carried as the sources give them: 28:4 verse 30 (the
+  right bank as the Euphrates, the blessed spot as Karbala, the tree as
+  Muhammad); 28:8 verse 88 ("We are the Face").
+- The auditor's `sui'la an Jabir` note on 28:8 n5 ("When Jabir was
+  mentioned" for "asked about Jabir") was ruled supported; left as is.
+
+## Urdu for passages (2026-09-26)
+
+A new agent, `passage-urdu-translator` (Sonnet 4.6, tools Read and Bash
+only), translates a shipped passage's display fields and merges them
+straight into `Data/passages_<S>.json` through `passages.py ur-apply`,
+which validates every field against the English in the file (all keys,
+Urdu script and no Latin letters, markers and verse references
+unchanged, paragraph counts, a word-ratio band) and writes nothing on any
+error. `ur-brief`, `ur-status` and `ur-next` go with it, and `assemble`
+now carries existing `ur` values over on fields whose English did not
+change. The local-model Urdu in passages 1 and 2 was discarded at the
+user's request before this.
+
+Pilot on 1:1 (30 fields): 40K tokens, 6 minutes, merged first time.
+Fluent and faithful; the reader found one clause added from the Arabic
+(n5), one English loanword in Urdu script ("فارمولا"), and a few literal
+renderings ("کتاب کی ابتدا" for the Opening of the Book, "وہ علیہ
+السلام"). The agent prompt now forbids each. The rest of the Quran is
+left for a later run, at the user's call.
+
+## Results - al-Ankabut 29:1 to 29:7 (2026-09-27)
+
+Whole surah, 7 passages, verses 1 to 69. Orchestrator Opus 5.5, writer and
+auditor on Opus 4.8, three slots.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 29:1 | 1-13 | 239K, 13 min; two follow-ups to 251K | 214K, 9 min; re-rule to 222K | 2 |
+| 29:2 | 14-22 | 162K, 10 min; follow-up to 168K | 158K, 8 min | 1 |
+| 29:3 | 23-30 | 267K, 14.5 min; follow-up to 276K | 255K, 10 min | 1 |
+| 29:4 | 31-44 | 261K, 11 min; three follow-ups to 284K | 257K, 8 min; re-audit to 270K | 2 |
+| 29:5 | 45-51 | 216K, 14 min; follow-up to 231K | 201K, 8.5 min; re-rule to 215K | 2 |
+| 29:6 | 52-63 | 268K, 14 min; follow-up to 276K | 250K, 8 min | 1 |
+| 29:7 | 64-69 | 104K, 7.5 min; follow-up to 108K | 101K, 6 min | 1 |
+
+About 3.1M agent tokens, 0.44M per passage. `metrics 29`: 7 passed,
+first-try 5/7, mean attempts 1.4. Titles approved as generated.
+
+- 29:1 passed, then went back: the essay said the idolaters "turned back"
+  the emigrants, where Majma (al-Sha'bi's report) says they followed,
+  harmed and fought them, some killed and some escaping. The auditor noted
+  it and ruled it supported; fixed by the resident writer, re-ruled PASS.
+- 29:4 passed, then went back at the user's call: the writer had left out
+  al-Burhan 8273 (al-Baqir: the spider's house "is al-Humayra") as
+  polemical against a wife of the Prophet. The user chose to include it;
+  added as a verse 41 entry, re-audited PASS. Polemical narrations aimed
+  at a named companion or wife are now in, as the sources carry them.
+- 29:5 FAIL was the auditor's misreading, not the draft's: it took Ibn
+  Kathir's "وهو الأظهر" as endorsing Ibn Jarir's reading of 29:49. "قلت"
+  is Ibn Kathir correcting Ibn Jarir's "only al-Hasan" and the pronoun
+  follows "الأول"; challenged with that reading, the auditor agreed and
+  re-ruled PASS. (The orchestrator had already corrected the writer's
+  first version, which said the reverse.)
+- Orchestrator reads before audit, the same families as 27 and 28:
+  speaker from the story's teller (29:6 n5 credited to al-Khidr where
+  al-Rida tells it); ellipses dropped from the English (29:2 n2 and n3,
+  29:5 n2, 29:6 n6) or bridged with invented words (29:4 n1); English
+  that skipped the quoted verses (29:1 n1 "recite the opening") or the
+  span's last clause (29:1 n4, 29:3 n5 "three kinds of reward"); "His
+  command" for بأمرنا (29:3 n4); an Imam's recitation read as the
+  Prophet's (29:3 n7); chains stopping before the Imam (29:5 n6, n7);
+  29:5 perspectives inverting which reading Ibn Kathir prefers; 29:7
+  perspectives "teaches" for يهديهم and "was revealed for" for "is for";
+  a meta opener (29:4 "This fourth of the sura's seven passages").
+
+### Source gaps
+
+- al-Burhan grouped on 29:36 to 38 and 44 (a 21K-character block under
+  29:31); a retry returned the same. Furat empty almost throughout,
+  al-Qummi silent on long runs.
+
+## Results - ar-Rum 30:1 to 30:6 (2026-09-27)
+
+Whole surah, 6 passages, verses 1 to 60. Same models and slots. Gathers
+started once every 29 passage was drafted; writers once every 29
+passage had passed.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 30:1 | 1-10 | 204K, 14.5 min; follow-up to 212K | 160K, 5 min | 1 |
+| 30:2 | 11-19 | 147K, 13 min; follow-up to 158K | 112K, 4.5 min | 1 |
+| 30:3 | 20-27 | 190K, 13 min; follow-up to 195K | 168K, 6.5 min | 1 |
+| 30:4 | 28-40 | 247K, 12 min; follow-up to 297K | 222K, 5.5 min | 1 |
+| 30:5 | 41-53 | 163K, 10 min; follow-up to 169K | 154K, 6.5 min | 1 |
+| 30:6 | 54-60 | 142K, 8 min; follow-up to 158K | 120K, 6 min | 1 |
+
+About 2.1M agent tokens, 0.35M per passage. `metrics 30`: 6 passed,
+first-try 6/6, mean attempts 1.0. Titles approved as generated.
+
+- Every audit passed first time; every draft went back once before audit:
+  30:1 n4 credited to the Prophet where Gabriel answers his question;
+  30:2 and 30:5 perspectives set up a split the blocks do not bear
+  (30:2: Tabatabai against al-Tabrisi and Ibn Abbas, an intra-Shia
+  difference; 30:5: Ibn Kathir reads 30:52 as the Shia commentators do,
+  the Aisha and Badr-well debate is a side issue), both now null; 30:2
+  a meta opener ("This second run of Ar-Room") and an uncited closing
+  gloss; 30:3 "Eight times over" for a refrain that opens six verses;
+  30:4 n1 an added gloss ("allegiance to the Imams"), n3 an ellipsis
+  that cut Aban's question with an invented bridge, n5 a verse quoted
+  from inside the elided part; 30:6 n3 Ibn al-Kawwa's verse cut short,
+  "then resumed" bridging an ellipsis, Ali's recitation stopped early.
+- 30:4 n3 (Furat, the Fadak exchange) carries three manuscript apparatus
+  brackets ("[هذه. ب]" and two more) inside the Arabic: no bracket-free
+  span keeps Aban's question with its answer. Eight such brackets already
+  ship in passages_2.
+
+### Source gaps
+
+- al-Burhan and al-Qummi are sparse across ar-Rum (al-Burhan empty on
+  30:42 to 53 but 44); retries of 30:4 and 30:5 returned the same.
+  al-Mizan for 30:27 to 39 came from greattafsirs.com.
+
+### Notes for the prompts and scripts
+
+- Writer prompt, still open and still the main cost of the orchestrator's
+  read (both surahs, 12 of 13 drafts): an ellipsis in the Arabic is an
+  ellipsis in the English, never a bridge of invented words; the English
+  covers the whole Arabic span, including quoted verses and last clauses;
+  the teller of a story, or the one who answers a question, is the
+  speaker; chains run to the Imam; speaker forms "the Prophet Muhammad",
+  "Imam Ali", "Imam Abu al-Hasan"; perspectives only for a split between
+  the traditions, never inside one; no meta openers.
+- Auditor prompt: every first audit-check this run failed on target keys
+  (auditors keyed markers by position, the checker keys by bracket
+  number); say so in the prompt. The auditor let 29:1's "turned back"
+  pass with a note, and misread a "قلت" in 29:5.
+- validate.py or assemble: strip or allow skipping manuscript apparatus
+  brackets ("[... . أ]", "[... . ب]", "[... . ر]") in narration Arabic.
+
+## Results - Luqman 31:1 to 31:3 (2026-09-27)
+
+Whole surah, 3 passages, verses 1 to 34. Orchestrator Opus 5.5, writer and
+auditor on Opus 4.8, three slots.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 31:1 | 1-11 | 149K, 9 min; two follow-ups to 170K | 131K, 4.5 min; re-rule to 138K | 2 |
+| 31:2 | 12-19 | 230K, 12.5 min; follow-up to 254K | 202K, 6 min | 1 |
+| 31:3 | 20-34 | 263K, 12 min; follow-up and rewrite to 295K | 245K, 6 min; re-rule to 254K | 2 |
+
+About 1.3M agent tokens, 0.44M per passage. `metrics 31`: 3 passed,
+first-try 2/3, mean attempts 1.7. Titles approved as generated.
+
+- 31:3 FAIL was one stretched target: perspectives credited al-Qurtubi
+  with a gloss of the firmest handle that his block reports from Ibn
+  Abbas. Fixed by the resident writer, which also added a clause for
+  verse 26 (the auditor's coverage note), re-ruled PASS.
+- 31:1 passed, then went back for one narration: n2's English opened with
+  Abu Basir's question, which its Arabic span did not carry; the span was
+  extended and the auditor re-ruled PASS. The auditor had ruled it
+  supported as framing from the same block.
+- Orchestrator reads before audit, the same families as 29 and 30:
+  English beyond the Arabic span (31:2 n4 and n7, 31:3 n1 and n2) or
+  bridging an ellipsis (31:2 n2 and n10, 31:3 n4, n5 and n8); chains
+  stopping before the Imam or missing when the block names a book and
+  Imam (31:1 n2 and n4, 31:2 n3, n5, n8 and n10, 31:3 n2 and n7); 31:3 n3
+  chain dropping a link (Abu al-Hasan al-Abdi); 31:1 n3 placed on verse 7
+  where the block ties it to verse 6; "a Meccan trader" added to Majma's
+  al-Nadr report; perspectives setting up splits the blocks do not bear
+  (31:1: Tabatabai reads lahw al-hadith generally, as al-Tabari does;
+  31:2: the Sad ibn Abi Waqqas occasion used as the Sunni marker though
+  al-Tusi reports it too); an Imam's words credited to the book's author
+  (31:2 "Qummi glosses") or to "the Imams" for a saying of the Prophet
+  (31:3).
+
+### Source gaps
+
+- Furat empty throughout, al-Qummi and al-Burhan silent on 31:8 to 9 and
+  23 to 26. al-Qurtubi for 31:32 came from greattafsirs.com.
+
+## Results - as-Sajda 32:1 to 32:3 (2026-09-27)
+
+Whole surah, 3 passages, verses 1 to 30. Same models and slots. Gathers
+started once every 31 passage was drafted; writers once every 31 passage
+had passed.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 32:1 | 1-11 | 183K, 11.5 min; two follow-ups to 214K | 168K, 6.5 min; re-rule to 176K | 2 |
+| 32:2 | 12-22 | 242K, 11.5 min; two follow-ups to 262K | 225K, 6 min; re-rule to 233K | 2 |
+| 32:3 | 23-30 | 150K, 14 min; follow-up and rewrite to 188K | 124K, 7 min; re-rule to 134K | 2 |
+
+About 1.2M agent tokens, 0.40M per passage. `metrics 32`: 3 passed,
+first-try 2/3, mean attempts 2.0 (32:1 and 32:2 each took a second audit
+file only for an orchestrator fix after PASS). Titles approved as
+generated.
+
+- 32:3 FAIL was one stretched target: the verse 23 note gave Tabatabai
+  the Resurrection reading of "His encounter", which al-Mizan raises only
+  as a possibility before saying the verse's ending favours another
+  (complete turning to God at the revelation). Fixed, re-ruled PASS.
+- 32:1 passed, then went back: perspectives said al-Tabari "holds both
+  readings sound" beside Ibn Abbas's crafting-not-beauty reading, which
+  reads as both interpretations; al-Tabari's block speaks of the two
+  recitations. The auditor had weighed it and let it stand. Reworded
+  (this one came from the orchestrator's own pre-audit instruction).
+- 32:2 passed, then went back for a clause on verse 21, which the essay
+  skipped (the auditor's coverage note).
+- Orchestrator reads before audit, the same families again: English
+  beyond the Arabic span or bridging an ellipsis (32:1 n4 and n5, 32:2 n1
+  and n3, 32:3 n1, n3 and n5; 32:1 n4 also dropped the span's last
+  clause); chains stopping before the speaker or missing the book the
+  block names (32:1 n3 and n4, 32:2 n1, 32:3 n5); "rising" added to "the
+  Mahdi with the sword"; a meta opener (32:2 "the second of the surah's
+  three passages"); essays written as one unbroken paragraph (32:1,
+  32:3); an essay citing al-Tusi's refutation of the determinists at
+  verse 10 where the block ties it to verse 3; a view reported by
+  al-Tusi from Ibn Abbas written as "many read it"; al-Qummi's own gloss
+  presented as a report from an Imam; Ibn Abbas's words in al-Tabari
+  credited to al-Tabari; an uncited closing sentence in perspectives.
+
+### Source gaps
+
+- Furat empty throughout; al-Qummi and al-Burhan silent on 32:23, 25 and
+  26. al-Mizan for 32:1 to 14 came from greattafsirs.com.
+
+## Results - al-Ahzab 33:1 to 33:9 (2026-09-27)
+
+Whole surah, 9 passages, verses 1 to 73. Same models and slots.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 33:1 | 1-8 | 237K, 13 min; follow-up to 251K | 195K, 6.5 min | 1 |
+| 33:2 | 9-20 | 256K, 11 min; two follow-ups to 269K | 274K, 8 min; re-rule to 283K | 2 |
+| 33:3 | 21-27 | 253K, 15 min; follow-up to 285K | 230K, 8 min | 1 |
+| 33:4 | 28-34 | 297K, 14.5 min; follow-up to 315K | 273K, 7 min | 1 |
+| 33:5 | 35-40 | 260K, 20 min; follow-up to 289K | 266K, 7 min | 1 |
+| 33:6 | 41-52 | 233K, 12 min; follow-up to 243K | 275K, 8 min | 1 |
+| 33:7 | 53-58 | 249K, 17 min; two follow-ups to 300K | 277K, 9.5 min; re-rule to 285K | 2 |
+| 33:8 | 59-68 | 205K, 17 min; follow-up and rewrite to 243K | 160K, 5.5 min; re-rule to 167K | 2 |
+| 33:9 | 69-73 | 182K, 11 min; two follow-ups to 202K | 157K, 5 min; re-rule to 163K | 2 |
+
+About 4.5M agent tokens, 0.50M per passage (Ahzab's blocks are long: al-Burhan
+on 33:33 alone is 68K characters). `metrics 33`: 9 passed, first-try 8/9,
+mean attempts 1.4. Titles approved, with 33:8's "rumour" changed to
+"rumor" to match "Honoring" in 33:7.
+
+- 33:8 FAIL was one stretched target: the essay credited Tabrisi with the
+  reading of God's precedent ("killed wherever found") that Majma gives
+  from al-Zajjaj. Fixed, re-ruled PASS.
+- Passed, then went back for an orchestrator fix, each re-ruled PASS:
+  33:2 perspectives said the man urged handing the Prophet "to Quraysh"
+  where al-Qummi has "to him" (Amr); 33:7 "Tabatabai notes" for a reason
+  al-Mizan gives with "قيل" (the auditor had weighed it and let it
+  stand); 33:9 perspectives "the wilaya of Ali and the Imams" on a block
+  that names only the Commander of the Faithful.
+- 33:4 (the verse of purification): the first draft's n5 elided the
+  gathering under the Khaybar cloak from al-Qummi's report; the cloak
+  now stands in the narration. Polemical narrations are in as the
+  sources carry them (33:4 "fighting the Commander of the Faithful",
+  33:7 and 33:8 al-Qummi on those who usurped the family's right, 33:9
+  "the father of evils").
+- Orchestrator reads before audit, the same families again, in every
+  draft: English beyond the Arabic span, bridging an ellipsis, or
+  dropping part of the span (all nine passages); chains stopping before
+  the Imam or missing the book the block names (all nine); a chain that
+  merged two isnads wrongly (33:3 n2); a speaker taken from the narrator
+  (33:1 n2 is Ali quoted by al-Baqir); 33:6 n8 and its gloss inverted
+  ("no women are lawful beyond those God forbade" for "the women God
+  forbade are not lawful to you"); epithets and words the block lacks
+  ("a leading Emigrant", "cold easterly", "al-Sajjad", "the divine
+  authority" for الولاية); al-Qummi's own account presented as a
+  narration; a duplicate title (33:3 had 33:2's "The Battle of the
+  Trench"); one-paragraph essays (33:4, 33:7); parenthetical verse
+  numbers in 33:9's essay; skipped verses (33:5 verse 39); source
+  excerpts cut mid-word (33:3 s42, 33:7 s6).
+- Orchestrator slip: a fourth agent (33:4 writer) was launched while a
+  resumed follow-up still held the third slot; stopped within seconds,
+  before it wrote anything, and relaunched later. A follow-up to a
+  resident agent counts against the three slots.
+
+### Source gaps
+
+- Furat empty on most verses; al-Qummi page for 33:35 missing ("الصفحة
+  غير موجودة"). al-Mizan for 33:9 to 27 and al-Burhan for 33:33 came
+  from greattafsirs.com; Ibn Kathir for 33:56 likewise.
+
+## Results - Saba 34:1 to 34:6 (2026-09-27)
+
+Whole surah, 6 passages, verses 1 to 54. Same models and slots.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 34:1 | 1-9 | 160K, 16.5 min | 120K, 4.5 min | 1 |
+| 34:2 | 10-21 | 276K, 17 min; follow-up to 319K | 258K, 7 min | 1 |
+| 34:3 | 22-30 | 155K, 10 min; follow-up to 176K | 143K, 6 min | 1 |
+| 34:4 | 31-36 | 135K, 11 min; follow-up to 145K | 116K, 5.5 min | 1 |
+| 34:5 | 37-45 | 151K, 11.5 min; follow-up to 173K | 130K, 5 min | 1 |
+| 34:6 | 46-54 | 180K, 11 min; follow-up and rewrite to 215K | 181K, 9 min; re-rule to 188K | 2 |
+
+About 2.1M agent tokens, 0.36M per passage. `metrics 34`: 6 passed,
+first-try 5/6, mean attempts 1.2. Titles approved, with 34:5 given the
+serial comma ("Wealth, worship, and denial") to match the others.
+
+- 34:6 FAIL was one stretched target: the verse 51 note placed the
+  Sufyani's army's swallowing "at the Bayda near Medina" on al-Mizan,
+  which says only "بالبيداء". Dropped "near Medina", re-ruled PASS.
+- 34:1 went to audit without a follow-up, the first draft this run to
+  need none.
+- Orchestrator reads before audit, the same families: English beyond or
+  short of the Arabic span, bridged ellipses (34:2 n1, n3, n5, n8, n9;
+  34:3 n2, n3; 34:5 n1, n4; 34:6 n1, n4, n6); chains stopping before the
+  Imam (34:2 n3, n7; 34:6 n6); 34:3 n1 a supplication that quotes 17:56,
+  matched by the hadith corpus on 34:22's shared opening, dropped; an
+  explanatory bracket ("[for my kin]") added to a narration; perspectives
+  saying more than the block (34:2 "promised to break their pledge", 34:3
+  "without the Imams", 34:6 an "other duties" clause from a different
+  report); al-Hasan al-Basri's report in Ibn Kathir and Qatada's in
+  al-Tusi credited to the commentators; 34:4 markers after the full stop,
+  parenthetical verse numbers, lowercase "al-Mizan" opening sentences.
+
+### Source gaps
+
+- Furat empty throughout; al-Qummi and al-Burhan silent on 34:4 to 5,
+  27 to 30, 34, 38 and 42 to 44, 48 to 50.
+
+### Notes for the prompts and scripts (surahs 31 to 34)
+
+- Writer prompt, still the main cost of the orchestrator's read (every
+  one of the 21 drafts went back once): the English renders exactly the
+  Arabic span - an ellipsis in the Arabic is an ellipsis in the English,
+  no bridge, no summary, nothing dropped, no framing the span lacks
+  ("I asked him about ..." only when the span carries the question);
+  chains run to the Imam, and name the book the block gives ("al-Kafi,
+  from al-Sadiq"); a view the block gives with قيل or from a named
+  authority is credited to that authority; no meta openers,
+  parenthetical verse numbers or one-paragraph essays; markers before
+  the full stop.
+- Hadith corpus: a hit that quotes a different verse with the same
+  opening words (17:56 for 34:22) passes the "quotes the verse" filter.
+- Auditor prompt: auditors twice let a قيل or a named authority's view
+  credited to the author pass as supported (33:7, 34:4); the rubric says
+  that is stretched.
+
+## Results - Fatir 35:1 to 35:5 (2026-09-28)
+
+Whole surah, 5 passages, verses 1 to 45. Orchestrator Opus 5.5, writer and
+auditor on Opus 4.8, three slots. New this run: the writer launch prompt
+carries the checklist from the surah 31 to 34 notes (English renders
+exactly the Arabic span, chains to the Imam and the book, قيل and named
+authorities credited to them, no epithets, essay shape, perspectives
+cited with no uncited closing line). Every draft still went back once
+before audit, but for fewer and smaller things than in 31 to 34.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 35:1 | 1-7 | 159K, 13.5 min; two follow-ups to 170K | 140K, 8 min; re-rule to 150K | 2 |
+| 35:2 | 8-14 | 205K, 14 min; follow-up to 214K | 171K, 5.5 min | 1 |
+| 35:3 | 15-26 | 167K, 15 min; follow-up to 181K | 151K, 5.5 min | 1 |
+| 35:4 | 27-37 | 251K, 20 min; follow-up to 261K | 280K, 6.5 min | 1 |
+| 35:5 | 38-45 | 190K, 15.5 min; follow-up to 200K | 152K, 6.5 min | 1 |
+
+About 1.9M agent tokens, 0.39M per passage. `metrics 35`: 5 passed,
+first-try 5/5, mean attempts 1.2 (35:1's second audit file is a re-rule
+after an orchestrator fix). No audit FAIL. Titles approved, with 35:3's
+"Allah" changed to "God" to match the others.
+
+- 35:1 passed, then went back: the essay called Satan "an open enemy"
+  where verse 6 says "your enemy", and the s22 gloss dropped the naw'
+  (rain-star) of بنوء الفتح. Re-ruled PASS. The auditor had noted "open"
+  and let it stand.
+- 35:2: the writer left out al-Qummi's "نزلت في زريق وحبتر" on verse 8
+  because the report is raised with no named speaker; it went in with
+  speaker "Unnamed (raised report)".
+- 35:5: Imam Ali's letter on "evil schemes beset only their authors"
+  ("the two of them ... broke my allegiance") needed a verse note giving
+  al-Qummi's own framing (Aisha's going out to Basra, Talha and
+  al-Zubayr) so the reader can resolve "the two of them". n4 (al-Sadiq:
+  "travel the land" means look into the Quran) glosses 30:42, which
+  shares the phrase; al-Burhan files it under 35:42 to 45 and it stayed.
+- Orchestrator reads before audit: perspectives with an uncited closing
+  line or a claim no block makes (35:1, 35:3 "and there he stops"); a
+  Sunni commentator credited with a Companion's or the Prophet's words
+  (35:4 al-Tabari for Ibn Abbas, 35:5 al-Qurtubi for a hadith via
+  al-Zuhri); a narration pronoun the reader cannot resolve (35:3 n4
+  "He interpreted it", span extended); a قيل report paraphrased loosely
+  ("earlier peoples" for the People of the Book); small additions ("a
+  full life", "the terror of that reckoning", "beyond His power" for
+  بممتنع).
+
+### Source gaps
+
+- Furat empty throughout; al-Qummi and al-Burhan silent on 35:3 to 7,
+  15 to 17, 23, 25 to 26, 30, 38 to 41 and 43.
+
+### Notes for the prompts and scripts
+
+- Validator: honorific parentheticals inside a block ("(عليه السلام)",
+  "(عليها السلام)") break the verbatim check, so writers bridge them with
+  an ellipsis that has nothing behind it in the English (35:4 n2, n5).
+  Normalising them out before the comparison would drop those false
+  ellipses.
+
+## Results - Ya Seen 36:1 to 36:5 (2026-09-28)
+
+Whole surah, 5 passages, verses 1 to 83. Same models, slots and writer
+checklist as surah 35, with lines added as this run found new families
+(al-Qummi's bare قال is his own comment, check which book a marker cites
+before naming its author, say which report a Sunni commentator rejects,
+no dropped isnad links, no brackets). Gathers started once every 35
+passage was drafted; writers once every 35 passage had passed.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 36:1 | 1-12 | 163K, 31 min; follow-up to 168K | 189K, 8 min | 1 |
+| 36:2 | 13-32 | 250K, 34 min; two follow-ups to 281K | 221K, 11 min; re-rule to 232K | 2 |
+| 36:3 | 33-50 | 257K, 17 min; follow-up to 282K | 208K, 8 min | 1 |
+| 36:4 | 51-67 | 241K, 17 min; follow-up to 250K | 214K, 8 min | 1 |
+| 36:5 | 68-83 | 238K, 32 min; follow-up to 247K | 211K, 9.5 min | 1 |
+
+About 2.3M agent tokens, 0.46M per passage (Ya Seen's al-Burhan and
+al-Safi blocks run long; three writers took over 30 minutes). `metrics
+36`: 5 passed, first-try 5/5, mean attempts 1.2. No audit FAIL. Titles
+approved, with 36:5's "The signs and the resurrection" renamed "Who will
+revive the bones?" to stand apart from 36:3 and 36:4.
+
+- 36:2 passed, then went back: n5's chain (the three truthful ones) had
+  dropped four links of al-Burhan's isnad; the auditor had noted it and
+  let it stand. Restored in full, re-ruled PASS.
+- Orchestrator reads before audit, new this surah: an essay naming
+  Tabatabai for a reading its marker cites from Majma (36:3); al-Qummi's
+  own bare-قال comment written as a raised narration (36:3 n8, now a verse
+  note) - the "raised report" line in the launch checklist had invited
+  it; perspectives misdescribing which report Ibn Kathir rejects (36:2:
+  he rejects the "forerunners are three" report via Husayn al-Ashqar, not
+  a ranking of the truthful ones); Majma's citation of al-Tha'labi's
+  tafsir credited to "the Shia commentators"; a Majma al-Hujja gloss
+  (Abu Ali's) credited to al-Tabrisi; al-Mizan's reading of verse 52 as
+  wholly the resurrected people's speech mixed with al-Qummi's narration
+  giving its second half to the angels (36:4); "the Imams" for a single
+  report of al-Baqir (36:5); al-Saduq's explanation of الطيرة read into
+  al-Sadiq's words (36:2 n3); a narration under verse 30 whose span
+  stopped before the recitation that tied it there (36:2 n6).
+- Still recurring: chains stopping before the Imam (36:3 n3 and n4, 36:5
+  n2 and n4), a bracket added to a narration (36:5 n1), small additions
+  ("alive of heart", "a sun that never ceases moving" against the
+  block's own gloss).
+
+### Source gaps
+
+- Furat empty on every verse; al-Qummi and al-Burhan silent on 36:15 to
+  17, 31 to 35, 43 to 47, and al-Qummi on 36:54 to 64 in places.
+
+### Notes for the prompts and scripts
+
+- Auditor: on almost every audit in 35 and 36 the first audit file keyed
+  marker targets by sequential position and `audit-check` rejected it as
+  malformed; the auditor prompt should say targets are keyed by the
+  bracketed source number (`essay[22]`, `verses.68.note[8]`).
+
+## Results - as-Saffat 37:1 to 37:5 (2026-09-28)
+
+Whole surah, 5 passages, verses 1 to 182 (three passages of 39 to 53
+verses). Same models; three slots, then four from 37:4's audit on (the
+user raised the cap mid-run and asked for the next surah to start in the
+free slots, so surah 38's gathers and writers overlapped 37:4 and 37:5).
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 37:1 | 1-21 | 206K, 31 min; follow-up to 212K | 183K, 6.5 min | 1 |
+| 37:2 | 22-74 | 239K, 15 min; follow-up to 249K | 261K, 6 min | 1 |
+| 37:3 | 75-113 | 374K, 18 min; follow-up to 393K | 346K, 11 min | 1 |
+| 37:4 | 114-138 | 212K, 48 min; follow-up to 219K | 155K, 5 min | 1 |
+| 37:5 | 139-182 | 407K, 23 min; follow-up to 423K | 197K, 7 min | 1 |
+
+About 2.6M agent tokens, 0.53M per passage (37:3 and 37:5 ran long:
+59 and 88 blocks). `metrics 37`: 5 passed, first-try 5/5, mean attempts
+1.0 - the first surah with no second audit file at all. Titles approved,
+with 37:1's "Reckoning" lower-cased and 37:4 given the serial comma.
+
+- 37:4's first gather came back with al-Burhan silent on 114 to 122,
+  126 to 129 and 131 to 136; a retry returned the same, so the gap is
+  real.
+- Orchestrator reads before audit, still every draft, but fewer and
+  smaller items: chains without the book or stopping short of the
+  speaker; "Abi" for "Abu" in English chains; a narration opening
+  mid-answer ("By the truth ...", "The attendants know it") or with an
+  ellipsis that drops the objection the reply answers (37:3 n1 and n2,
+  37:2 n3); al-Tabari's listed views written as his own (37:2); a
+  hedged al-Mizan view (ويحتمل) written as "leans toward" (37:1); a
+  Majma gloss (al-Suddi's) with its subject reversed - who knows and who
+  is presented (37:5); "swore" for "used to say" (37:5); "al-Tabatabai";
+  sentence-initial lower-case "al-"; markers without a space.
+- Packet: the thaqalayn.com English shipped with 37:3 s57 (Ma'ani
+  al-Akhbar) belongs to a different hadith; the writer and auditor both
+  worked from the Arabic.
+
+### Source gaps
+
+- Furat empty on almost every verse; al-Qummi silent on most of 37:76
+  to 113 and 37:126 to 176; al-Burhan silent on 37:114 to 136 in large
+  part and on 178 to 182.
+
+## Results - Saad 38:1 to 38:5 (2026-09-28)
+
+Whole surah, 5 passages, verses 1 to 88. Four slots throughout; 38's
+gathers and first writers ran alongside 37:4 and 37:5, and 39's first
+writers alongside 38:4 and 38:5 (the user's call, current surah first).
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 38:1 | 1-14 | 233K, 35 min; two follow-ups to 250K | 217K, 7 min | 1 |
+| 38:2 | 15-26 | 275K, 22 min; follow-up to 302K | 237K, 6 min | 1 |
+| 38:3 | 27-40 | output-limit failure, resumed: 318K; follow-up to 341K | 262K, 8 min | 1 |
+| 38:4 | 41-64 | 350K, 103 min wall; two follow-ups to 365K | 265K, 7 min; re-rule to 272K | 2 |
+| 38:5 | 65-88 | output-limit failure, resumed: 216K; two follow-ups and a rewrite to 249K | 178K, 6.5 min; re-rule to 188K | 2 |
+
+About 2.6M agent tokens, 0.52M per passage. `metrics 38`: 5 passed,
+first-try 4/5, mean attempts 1.4. Titles approved, with 38:2's "The
+deniers, and David's trial" renamed "David and the two contenders".
+
+- 38:5 FAIL was one stretched target: perspectives credited al-Kafi
+  (s61) with identifying the great prophesy with Amir al-Mu'minin; s61
+  speaks of the reminder and of al-Qaim, and the great-prophesy reading
+  (the Imamate) is s20's. Split across the two markers, re-ruled PASS.
+- 38:4 passed, then went back for "the Prophet's poor Companions"
+  ("poor" not in the block; the auditor had noted it). Re-ruled PASS.
+- Policy set by the user on 38:2: al-Qummi carries the Uriya tale as a
+  narration from al-Sadiq, while al-Rida, Imam Ali and Tabatabai reject
+  it. The user chose "mention it, don't quote it": no narration card;
+  perspectives say both traditions relay the tale and both have voices
+  rejecting it. The same was applied to Solomon's ring (38:3: al-Qummi
+  and al-Burhan carry it from al-Sadiq; al-Tabrisi, al-Tusi and
+  al-Kashani reject it). Saved to memory as a standing rule. Both
+  writers had first framed the tale as Sunni-only.
+- Two writers (38:3, 38:5) died on the 64,000-token output limit before
+  writing a draft - both on large packets (38:3's brief is 500 KB).
+  Resuming each with "keep your reasoning short, compose in the file"
+  worked; the launch checklist now says so up front and no writer has
+  hit the limit since.
+- Orchestrator slip: a fifth agent (a follow-up to the resident 38:2
+  writer) was sent while four were running; stopped within seconds,
+  before it wrote anything, and re-sent when a slot freed.
+- Orchestrator reads before audit, new this surah: a reporter's
+  explanation (Majma's تنبيهاً على أن الحذر لا ينفع من القدر) read into
+  the Imam's words (38:3 n6); a span that dropped the editorial-bracket
+  verse its answer depends on (38:5 n1); "During the Ascension" framing
+  the span lacks and a Prophet's first-person account credited to the
+  Imam relating it (38:5 n2); "Myself" capitalised in the Prophet's
+  words; "al-Mizan says" for Tabatabai; "Al-" capitalised after a
+  semicolon.
+
+### Source gaps
+
+- Furat empty on almost every verse; al-Qummi silent on 38:14, 16, 25
+  to 27, 39 to 40, 44, 47 to 48, 65 to 66 and 72 to 78; al-Burhan on
+  38:40, 65 to 66 and 78; al-Burhan for 38:41 to 44 and al-Qurtubi for
+  38:21 to 25 came from greattafsirs.com.
+
+## Results - az-Zumar 39:1 to 39:8 (2026-09-28 to 29)
+
+Whole surah, 8 passages, verses 1 to 75. Four slots; 39's writers
+overlapped 38's audits, and 40's first writers overlapped 39:6 to 39:8.
+From 39:2 on the launch checklist opened with "read the packet in pages,
+keep reasoning short, compose in the file"; no writer hit the output
+limit again.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 39:1 | 1-9 | 325K, 48 min; follow-up to 342K | 203K, 6.5 min | 1 |
+| 39:2 | 10-21 | 278K, 30 min; follow-up to 287K | 182K, 9 min | 1 |
+| 39:3 | 22-31 | 217K, 32 min; follow-up to 227K | 194K, 8 min | 1 |
+| 39:4 | 32-41 | 254K, 20 min | 207K, 9 min | 1 |
+| 39:5 | 42-52 | 191K, 30 min; follow-up to 199K | 172K, 9 min | 1 |
+| 39:6 | 53-63 | 198K, 34 min; follow-up to 210K | 227K, 10 min | 1 |
+| 39:7 | 64-70 | 260K, 33 min; follow-up to 266K | 207K, 6 min | 1 |
+| 39:8 | 71-75 | 161K, 43 min; follow-up to 168K | 126K, 5 min | 1 |
+
+About 3.4M agent tokens, 0.43M per passage. `metrics 39`: 8 passed,
+first-try 8/8, mean attempts 1.0 - no FAIL and no second audit file.
+39:4 went to audit with no follow-up at all. Titles approved, with 39:2's
+"God-wary" written "Godwary" and 39:7's "Judgment" lower-cased.
+
+- Orchestrator reads before audit, now mostly small: sentence-initial
+  "al-" not capitalised (nearly every draft); "al-Mizan says" for
+  Tabatabai; a pronoun capitalised as God where it is Ali (39:7 n2,
+  غيره); a verse note stating a reading in the app's own voice (39:7
+  v69); an Ibn Abbas view credited with Mujahid's and al-Hasan's
+  readings (39:6); al-Qummi's bare gloss counted among "Shia narrations"
+  (39:6); "a polytheist against God" for مشرك بالله (39:5); a reply
+  whose "He said" the ellipsis dropped (39:1 n2); chains stopping before
+  the Imam (39:2 n2, n5; 39:6 n7).
+- Writers now say which verse-interpreting narrations they left out and
+  why; the reasons given were length, duplication, or a narration that
+  interprets another verse sharing the phrase (39:4: 42:22 and 31:25
+  hits). One exclusion was overruled in 40:2 (below).
+- 39:5 perspectives carry the "exalted cranes" occasion from al-Tabari
+  and al-Qurtubi; no Shia block carries it, so it stands as a Sunni
+  report without a Shia counterpart.
+
+### Source gaps
+
+- Furat empty on almost every verse; al-Burhan silent on 39:11 to 14,
+  34 to 41 in part, 47 to 52 and 70 to 72.
+
+### Notes for the prompts and scripts
+
+- The writer checklist grew through this run to about a dozen lines and
+  is now what every launch prompt carries; most of it belongs in the
+  "How to write" section of `.claude/agents/passage-writer.md`, which
+  the user may want to fold in (not changed this run).
+- Packets: the validator rejects spans that drop an honorific
+  parenthetical or change the block's spacing ("عز و جل"); several
+  writers lost a write to it every passage.
+
+## Results - Ghafir 40:1 to 40:9 (2026-09-29)
+
+Whole surah, 9 passages, verses 1 to 85. Four slots; 40's writers
+overlapped 39:6 to 39:8. Gathers ran while surah 38 was still in audit, so
+the `metrics` hours column (about 10 h) measures from the gather, not
+from the writer launch.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 40:1 | 1-9 | 200K, 47 min; follow-up to 208K | 199K, 7.5 min | 1 |
+| 40:2 | 10-20 | 211K, 14 min; follow-up to 223K | 212K, 7.5 min | 1 |
+| 40:3 | 21-27 | 146K, 13 min; follow-up to 150K | 106K, 3.5 min | 1 |
+| 40:4 | 28-37 | 237K, 16 min; follow-up to 247K | 211K, 7 min | 1 |
+| 40:5 | 38-50 | 182K, 14 min; follow-up to 193K | 153K, 6 min | 1 |
+| 40:6 | 51-60 | 206K, 24 min; follow-up to 213K | 173K, 9 min | 1 |
+| 40:7 | 61-68 | 169K, 18 min; follow-up to 175K | 109K, 5.5 min | 1 |
+| 40:8 | 69-78 | 149K, 14 min; follow-up to 156K | 147K, 8 min | 1 |
+| 40:9 | 79-85 | 157K, 17 min; follow-up to 163K | 129K, 8 min | 1 |
+
+About 3.2M agent tokens, 0.35M per passage - the cheapest surah of the
+run. `metrics 40`: 9 passed, first-try 9/9, mean attempts 1.0. Titles
+approved, with 40:5's "The believer of Pharaoh's family" (a near-copy of
+40:4's) renamed "The believer's last appeal".
+
+- Two writer exclusions overruled: 40:2 left out the verse 18 "no
+  intercession" report because al-Mizan and al-Safi give different
+  speakers; al-Mizan is not a narration source, so the report went in
+  from al-Safi with its attribution. 40:5 left out al-Burhan's "By God,
+  He meant only his daughter" (on "admit Pharaoh's clan to the severest
+  punishment") as unresolvable; it went in with its question about the
+  Al and the Ahl, rendered exactly and with no gloss naming anyone, per
+  the standing polemical-narrations rule.
+- Orchestrator reads before audit: an English verb that reversed the
+  Arabic's direction (40:3 n2, "none inclines toward us" for لا ينزع إلينا
+  - now "none goes after us"); a raised-report label on a chain that only
+  drops the Imam's name; "Who are Ali's forebears" for من أبو علي; an
+  editor's bracketed word rendered as the Imam's (40:6 n2, [منهم]); a
+  verse note that did not parse (40:9 v84); perspectives with an uncited
+  "both traditions" opener or a one-report "Sunni exegesis" (40:1, 40:5,
+  40:7); a Sunni commentator's cited hadith credited to him (40:4).
+
+### Source gaps
+
+- Furat empty on nearly every verse; al-Burhan silent on 40:14, 20, 22 to
+  25, 27, 29 to 31, 33, 37 to 44, 53 to 59, 61 to 64, 66, 68, 69, 78 to
+  80 and 83.
+
+## Run summary - surahs 35 to 40 (2026-09-28 to 29)
+
+37 passages over six surahs, all assembled. About 15.9M agent tokens,
+0.43M per passage. One audit FAIL in the whole run (38:5, one stretched
+perspectives target, fixed in one rewrite), plus four orchestrator fixes
+after PASS (35:1, 36:2, 38:4 and 38:5's earlier split). 34 of 37 passed on
+their first audit file. What changed the numbers against surahs 31 to 34
+(every draft needing a follow-up, several FAILs): the writer launch
+prompt carrying the accumulated checklist, and the orchestrator's read
+before audit catching attribution and rendering slips the auditor would
+otherwise have ruled on. Policies set by the user during the run: agent
+cap four; the next surah may start in free slots; narrations imputing
+sin to a prophet are mentioned in perspectives, not quoted. Urdu not yet
+run for surahs 29 to 40.
+
+## Results - Fussilat 41:1 to 41:6 (2026-09-29)
+
+Whole surah, 6 passages, verses 1 to 54. Four slots; surah 42's gathers
+and first writers ran alongside 41:4 to 41:6.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 41:1 | 1-8 | 157K, 26.5 min; two follow-ups to 198K | 139K, 6.5 min | 1 |
+| 41:2 | 9-18 | 249K, 35 min; two follow-ups to 288K | 236K, 11.5 min | 1 |
+| 41:3 | 19-25 | 185K, 15 min; two follow-ups to 219K | 143K, 5 min | 1 |
+| 41:4 | 26-32 | 174K, 32 min; follow-up to 199K | 138K, 7.5 min | 1 |
+| 41:5 | 33-44 | 319K, 23 min; two follow-ups to 359K | 293K, 8.5 min | 1 |
+| 41:6 | 45-54 | 198K, 30 min; follow-up to 213K | 147K, 4.5 min | 1 |
+
+About 2.6M agent tokens, 0.43M per passage. `metrics 41`: 6 passed,
+first-try 6/6, mean attempts 1.0. Titles approved, with 41:6's "God's
+signs and the doubters" (a near-copy of 41:5's) renamed "Signs in the
+horizons".
+
+- Orchestrator slip at the start: a background gather chain was still
+  running when three writers (41:2 to 41:4) were launched on the belief
+  that it had finished; the packets did not exist yet. All three were
+  stopped within two minutes, before any draft; no cost beyond their
+  start-up. Writers now launch only after `sources.json` is checked on
+  disk.
+- Orchestrator reads before audit, new this surah: perspectives that set
+  the traditions apart where the Shia commentators carry the same
+  readings (41:2 "We guided them", which al-Tabari and Ibn Abbas also
+  gloss "We made plain to them"; 41:3 the enemies of God; 41:4 "then
+  remain steadfast") - the difference each time was a narration or a
+  theological conclusion; "the reading of the companions" for al-Tabari's
+  two readings with their authorities; "Shia authorities" for Ata and
+  Mujahid recorded by al-Tabrisi; a commentator "placing" or "crediting"
+  a view he reports, and his "our Imams" in the app's voice (41:5); an
+  invented isnad link where al-Qummi gives "قال الصادق" bare (41:3), and
+  "from" for a بلغني link (41:1); ellipses that dropped the speaker, the
+  question answered, or the Imam's own argument (41:1 n3, 41:3 n4, 41:4
+  n5); "usurped Amir al-Mu'minin's right" for غصبوا أمير المؤمنين; chains
+  opening with a compiler's name instead of the book (41:6); al-Safi's
+  aside on stars and the Prophet's household carded under verse 12.
+- The launch checklist grew by these lines (about 7.5K characters now).
+
+### Source gaps
+
+- Furat empty on almost every verse; al-Qummi silent on 41:15, 18, 27 to
+  28, 33, 37 to 38, 42 to 43, 45 to 46, 50 and 52; al-Burhan on 41:52.
+
+## Results - ash-Shura 42:1 to 42:5 (2026-09-29)
+
+Whole surah, 5 passages, verses 1 to 53. Four slots; 42's writers
+overlapped 41:4 to 41:6. The user asked mid-run to stop after surah 42:
+surah 43 (all 7 passages), 44 (all 3) and 45:1 are gathered and waiting
+in `passages_work/`, with no writer launched.
+
+| passage | verses | writer (final, with follow-ups) | audit | attempts |
+|---|---|---|---|---|
+| 42:1 | 1-9 | 224K, 38 min; follow-up to 246K | 185K, 8 min | 1 |
+| 42:2 | 10-19 | 250K, 27 min; follow-up to 265K | 237K, 8.5 min | 1 |
+| 42:3 | 20-29 | output-limit failure, resumed: 320K, 80 min wall; follow-up to 338K | 265K, 7.5 min | 1 |
+| 42:4 | 30-43 | output-limit failure, resumed: 319K, 82 min wall; follow-up to 336K | 255K, 11 min | 1 |
+| 42:5 | 44-53 | 281K, 23.5 min; follow-up to 293K | 237K, 7.5 min | 1 |
+
+About 2.7M agent tokens, 0.53M per passage (large packets: 49 to 61
+blocks on four of the five). `metrics 42`: 5 passed, first-try 5/5, mean
+attempts 1.0. Titles approved, with 42:5's verse 53 heading "All matters
+return to Allah" written "... to God".
+
+- 42:3 and 42:4 (brief.md 496 KB and 447 KB) both died on the
+  64,000-token output limit before writing, even with "compose in the
+  file" in the launch prompt. Resuming each resident writer with "you have
+  read the packet; write, then fill in with Edit if one Write is too
+  large" worked on the first try.
+- Orchestrator reads before audit, new this surah: essays built on verse
+  numbers ("Verse 13 turns ...", "The fifth verse says ...") - now a
+  checklist line; Tabatabai's "He is not compelled to divide them"
+  (ليس بمجبر) written as "God does not compel" (42:1); "al-Tabrisi
+  glosses ... from Mujahid" crediting the reporter (42:2); Ibn Kathir's
+  weak grading moved from the "Fatimah and her children" report to one
+  "naming Ali" (42:3); al-Tabari's record of Sa'id ibn Jubayr's "kin of
+  the family of Muhammad" left out of a Sunni-against-Shia framing
+  (42:3); a recitation with inserted glosses (أنه قرأ) presented without
+  its "he recited" (42:5); "my father" for al-Qummi's حدثني أبي in a
+  chain (42:2).
+- Speaker names for the tenth Imam are inconsistent across shipped files
+  ("Imam al-Hadi", "Abu al-Hasan", "Ali ibn Muhammad al-Askari", "Abu
+  al-Hasan al-Askari"); 42:5 uses "Imam al-Hadi". Worth a normalisation
+  pass.
+
+### Source gaps
+
+- Furat empty on nearly every verse; al-Qummi silent on 42:4, 6, 9, 12,
+  19, 29, 31 to 36, 47 and 48; al-Burhan on 42:4, 6, 29, 31 to 35, 47 and
+  48; al-Mizan for 42:27 to 50 came from greattafsirs.com.
+
+### Notes for the prompts and scripts
+
+- Validator: mushaf-vocalised al-Burhan blocks carry alef-wasla and hamza
+  forms that `normalize_arabic` strips of harakat but not of the base
+  letter, so a writer's verbatim copy can fail; 42:3's writer moved five
+  narrations to the plain-text al-Safi and al-Qummi blocks to get past it.
+- Packet: the Ma'ani al-Akhbar block (42:4 s51) pairs the 42:30 hadith's
+  Arabic with an English crib about fasting days; the crib should be
+  dropped or matched when a corpus hit is paired.
+- Auditor: one 42:4 audit file again keyed targets by sequential position
+  and was rejected before the auditor re-keyed it by bracket number.
+
+## Run summary - surahs 41 and 42 (2026-09-29)
+
+11 passages over two surahs, all assembled; 11 of 11 passed on their
+first audit file, no FAIL, no polish. About 5.3M agent tokens, 0.48M per
+passage. Every draft went back once (four twice) after the orchestrator's
+read and before audit; the launch checklist grew from about 5.3K to 8K
+characters across the run. Stopped after surah 42 at the user's request.
+Urdu not yet run for surahs 29 to 42.
+
+## Results - az-Zukhruf 43:1 to 43:7 (2026-09-29)
+
+Whole surah, 7 passages, verses 1 to 89. The user raised the cap to ten
+agents for this loop (CLAUDE.md unchanged); surah 43, 44 and 45 writers
+ran side by side. Launch prompts were the skill's plain `Write passage
+S:I` / `Audit passage S:I`, with no orchestrator send-back before audit;
+rewrites and re-audits went to the still-resident writer and auditor.
+
+| passage | verses | writer (final, with follow-ups) | audit(s) | attempts |
+|---|---|---|---|---|
+| 43:1 | 1-15 | 256K, 17 min | 218K, 7 min | 1 |
+| 43:2 | 16-25 | 133K, 23 min; rewrite to 143K | 144K, 9.5 min; re-audit to 155K | 2 |
+| 43:3 | 26-35 | first writer stalled (no progress for 600 s, no draft); relaunch 181K, 12 min; rewrite to 194K | 179K, 10 min; re-audit to 192K | 2 |
+| 43:4 | 36-45 | 217K, 18 min; two rewrites to 251K | 184K, 9 min; re-audits to 212K and 222K | 3 |
+| 43:5 | 46-56 | 125K, 9 min | 118K, 6 min | 1 |
+| 43:6 | 57-67 | 227K, 19 min | 225K, 11 min | 1 |
+| 43:7 | 68-89 | 272K, 29 min (three writes past the validator) | 212K, 8.5 min | 1 |
+
+About 3.0M agent tokens, 0.43M per passage. `metrics 43`: 7 passed,
+first-try 4/7, mean attempts 1.6. Titles approved as generated.
+
+- Every FAIL was a marker carrying more than its block: 43:2 "idols they
+  decked in gold" on al-Tibyan, which has only Abu Zayd's "the idols"
+  (and calls it weaker); 43:3 "the Imamah in al-Husayn's line" on Majma,
+  whose Imamah report has no al-Husayn (s13 does); 43:4 "realized at
+  Badr" on al-Tabari (Badr is in Qurtubi and al-Durr) and "the later
+  wars" on al-Qummi (in al-Burhan). 43:4's first rewrite then reversed
+  the hijra ("on his return to Medina" for a block that takes the
+  Prophet from Mecca to Medina and back to Mecca), caught on the second
+  audit; the third passed. Each rewrite was a two-line follow-up.
+
+## Results - ad-Dukhan 44:1 to 44:3 (2026-09-29)
+
+Whole surah, 3 passages, verses 1 to 59, written alongside surah 43.
+
+| passage | verses | writer | audit | attempts |
+|---|---|---|---|---|
+| 44:1 | 1-29 | 286K, 14 min | 263K, 7 min | 1 |
+| 44:2 | 30-42 | 178K, 13 min | 173K, 8.5 min | 1 |
+| 44:3 | 43-59 | 169K, 10 min | 149K, 8 min | 1 |
+
+About 1.2M agent tokens, 0.41M per passage. `metrics 44`: 3 passed,
+first-try 3/3, mean attempts 1.0. Titles approved as generated.
+
+### Reader notes, surahs 43 to 45
+
+- Speaker names still not normalised: "Imam Ali" (43:4, 43:5) against
+  "Amir al-Muminin" (44:1); "Imam al-Kadhim" (43:2) against "Imam
+  al-Kazim" (44:1, 45:1); "Sura" (43:7) against "Surah"; "God" and
+  "Allah" mixed, sometimes in one essay (45:2).
+- Meta openers back in narration English: 43:2 n2 "Imam al-Baqir
+  recalled ...", 43:3 n3 and n5 "Imam al-Sadiq said: ...", 43:6 n3 "I
+  asked Abu Abdillah ..." under an Imam speaker.
+- 43:1 and 43:4 essays are single unbroken paragraphs.
+- 45:4 v29 carries al-Sadiq's line that the verse's wording "is among what
+  was altered from the book of Allah"; asked, the user chose to keep it as
+  the source has it (same policy as polemical narrations).
+
+### Notes for the prompts and scripts
+
+- Packet: narrations are attached by a shared opening phrase, so "Ha Mim,
+  by the Manifest Book" pulled al-Dukhan's blessed-night narrations into
+  43:2, and a Kitab al-Ghayba letter quoting al-Ahqaf 46:1 to 6 into
+  45:2. Writers caught both; the matcher should check the verses that
+  follow the shared opening.
+- Validator: writers report that `normalize_arabic` does not strip ZWNJ,
+  braces, colons, honorific parentheticals such as (صلى الله عليه وآله),
+  or the space in al-Kafi's detached "وَ " conjunction, so exact copies
+  fail and get split into " … " spans (43:4, 43:7, 46:2).
+- Auditor: 45:1's first audit file again keyed targets by position and
+  was rejected before it re-keyed them by bracket number.
+
+## Run summary - surahs 43 and 44, stopped mid-45 (2026-09-29)
+
+10 passages over two surahs, assembled; 7 of 10 passed on their first
+audit, three needed rewrites (one twice), none parked, no polish. About
+4.2M agent tokens, 0.42M per passage. The user asked to stop after the
+title gate for 43 and 44 and all agents were stopped. State left in
+`passages_work/`:
+
+- 45:1 to 45:3 passed; 45:4 failed its first audit ("kneeling from the
+  terror of the Day" on Majma, the fear is al-Mizan's) and its rewrite
+  finished and validated just before the stop: it needs a re-audit, then
+  titles and assemble for surah 45.
+- 46:1, 46:3 and 46:4 drafted and valid, not audited. 46:2 has a
+  half-fixed draft that fails validation: relaunch its writer.
+- 47:1 to 47:4 and 48:1 to 48:4 gathered, no draft. 48:1's al-Mizan came
+  from greattafsirs.com; al-Burhan empty on 48:3 and 48:11 to 17.
+- Urdu not yet run for surahs 43 and 44 (1 to 42 done earlier today).

@@ -11,7 +11,9 @@ to English. Sources, Arabic, chains, status and the file's formatting are
 left untouched, so `git diff` shows only the added "ur" lines.
 
 One model request per field, sequential, saved after every field, so a run can
-be stopped at any time and resumed: a field is skipped when the file already
+be stopped at any time and resumed. Essays, perspectives and notes are sent one
+paragraph at a time (with the previous paragraph for continuity) and joined, so
+a long essay never exhausts the model's output budget while it reasons. Resume: a field is skipped when the file already
 holds a "ur" for the same English text (use --force to redo it). Before every
 save the script checks that nothing but "ur" values changed.
 
@@ -75,7 +77,15 @@ KIND_INSTRUCTIONS = {
     "note": "This is a brief note on one verse from the commentary. Translate it as flowing Urdu prose.",
     "essay": "This is the main commentary essay on a Quran passage. Translate it as flowing Urdu prose, keeping every paragraph and every citation marker in place.",
     "perspectives": "This is a short section comparing how the Shia and Sunni traditions read the passage. Translate it as flowing Urdu prose, keeping every citation marker in place.",
+    "paragraph": "This is paragraph {i} of {n} of {whole}. Translate only this paragraph as flowing Urdu prose, keeping every citation marker in place. Output a single paragraph.",
     "narration": "This is the English rendering of a hadith. Translate it into Urdu in the register of a hadith translation. The English is the authoritative text; the Arabic original is given only to help you choose the right names and terms.",
+}
+
+# fields translated one paragraph at a time, and how the paragraph prompt names the whole
+PARAGRAPH_KINDS = {
+    "essay": "the main commentary essay on a Quran passage",
+    "perspectives": "a short section comparing how the Shia and Sunni traditions read the passage",
+    "note": "a brief note on one verse from the commentary",
 }
 
 
@@ -91,6 +101,7 @@ class Unit:
         self.label = label      # human readable, e.g. "2:3 verse 22 narration n1"
         self.holder = holder    # the {"en": ...} dict that receives "ur"
         self.context = context  # extra prompt context (speaker, arabic)
+        self.fmt: dict = {}     # values for the kind instruction's placeholders
 
     @property
     def en(self) -> str:
@@ -192,7 +203,7 @@ def check_server(host: str, model: str) -> None:
 
 
 def build_messages(u: Unit, retry_note: str = "") -> list[dict]:
-    user = KIND_INSTRUCTIONS[u.kind]
+    user = KIND_INSTRUCTIONS[u.kind].format(**u.fmt)
     if u.context:
         user += f"\n\n{u.context}"
     user += f"\n\nEnglish text:\n{u.en}\n\nUrdu translation:"
@@ -242,7 +253,7 @@ def problems(u: Unit, ur: str) -> list[str]:
     got = MARKER_RE.findall(ur)
     if sorted(want) != sorted(got):
         out.append(f"citation markers differ: English {want} vs Urdu {got}")
-    if u.kind in ("essay", "perspectives", "note"):
+    if u.kind in ("essay", "perspectives", "note", "paragraph"):
         pe, pu = u.en.count("\n\n") + 1, ur.count("\n\n") + 1
         if pe != pu:
             out.append(f"paragraph count differs: English {pe} vs Urdu {pu}")
@@ -253,6 +264,41 @@ def problems(u: Unit, ur: str) -> list[str]:
 
 def translate_unit(u: Unit, host: str, model: str, effort: str, num_ctx: int) -> tuple[str | None, list[str], dict]:
     """Return (urdu or None, warnings, stats). None means every attempt failed hard."""
+    paras = [p.strip() for p in u.en.split("\n\n")]
+    if u.kind in PARAGRAPH_KINDS and len(paras) > 1:
+        return translate_by_paragraph(u, paras, host, model, effort, num_ctx)
+    return translate_once(u, host, model, effort, num_ctx)
+
+
+def translate_by_paragraph(u: Unit, paras: list[str], host: str, model: str, effort: str,
+                           num_ctx: int) -> tuple[str | None, list[str], dict]:
+    """Translate each paragraph on its own and join them; one hard failure fails the field."""
+    out: list[str] = []
+    warnings: list[str] = []
+    stats = {"eval_count": 0, "eval_duration": 0, "attempts": 0}
+    for i, en in enumerate(paras, 1):
+        ctx = ""
+        if out:
+            ctx = ("For continuity only, the previous paragraph and its Urdu translation "
+                   "(do not translate it again):\n" + paras[i - 2] + "\n\n" + out[-1])
+        sub = Unit(u.pid, "paragraph", f"{u.label} paragraph {i}/{len(paras)}", {"en": en}, ctx)
+        sub.fmt = {"i": i, "n": len(paras), "whole": PARAGRAPH_KINDS[u.kind]}
+        t1 = time.time()
+        ur, soft, st = translate_once(sub, host, model, effort, num_ctx)
+        for k in ("eval_count", "eval_duration"):
+            stats[k] += st[k]
+        stats["attempts"] = max(stats["attempts"], st["attempts"])
+        if ur is None:
+            log(f"    paragraph {i}/{len(paras)} FAILED after {st['attempts']} attempt(s): {'; '.join(soft)}")
+            return None, [f"paragraph {i}: {w}" for w in soft], stats
+        log(f"    paragraph {i}/{len(paras)} ok in {time.time() - t1:.0f}s, {st['eval_count']} tokens, attempts {st['attempts']}")
+        warnings += [f"paragraph {i}: {w}" for w in soft]
+        out.append(ur)
+    return "\n\n".join(out), warnings, stats
+
+
+def translate_once(u: Unit, host: str, model: str, effort: str, num_ctx: int) -> tuple[str | None, list[str], dict]:
+    """One field (or paragraph) in one request, retried up to MAX_ATTEMPTS times."""
     retry_note = ""
     last_soft: list[str] = []
     stats = {"eval_count": 0, "eval_duration": 0, "attempts": 0}

@@ -1,7 +1,7 @@
-# Stage 5 - the flow audit (flag-only, four agents, two waves)
+# Stage 5 - the flow audit (flag-only, four agents, one wave)
 
 Run **after** the build is green, for **every** new sūrah. Dispatch **four** subagents
-in **two waves**: Auditors A and B together, then Auditors C and D (never more than two at once).
+in **one wave**: Auditors A, B, C and D together (never more than four at once).
 **Dispatch all four auditors on Opus 4.6 (`model: "opus"`).**  All **report only - they do not edit anything.** When all four return, consolidate into
 one ranked list and present it; the user decides what to change.
 

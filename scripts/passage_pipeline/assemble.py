@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from . import audit as audit_mod
 from . import rukus
 from . import status as status_mod
+from . import urdu as urdu_mod
 
 DATA_DIR = rukus.DATA_DIR
 SOURCE_PUBLIC_FIELDS = ("id", "kind", "work", "author", "tradition", "tier", "locus", "url", "grades")
@@ -64,7 +65,9 @@ def assemble(surah: int) -> tuple[list[str], list[tuple[str, str]]]:
         if not s["titles"]:
             skipped.append((ref.id, "titles not approved"))
             continue
-        existing[str(ref.index)] = build_record(ref)
+        record = build_record(ref)
+        urdu_mod.carry_over(existing.get(str(ref.index)), record)
+        existing[str(ref.index)] = record
         written.append(ref.id)
     if written:
         ordered = {k: existing[k] for k in sorted(existing, key=int)}
