@@ -25,6 +25,14 @@ class TTSVoiceManager: ObservableObject {
     init() {
         selectedVoiceIds = UserDefaults.standard.dictionary(forKey: "ttsVoiceSelections") as? [String: String] ?? [:]
         loadAvailableVoices()
+        // A voice downloaded or removed in iOS Settings while the app runs changes what can be read aloud.
+        NotificationCenter.default.addObserver(
+            forName: AVSpeechSynthesizer.availableVoicesDidChangeNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in self?.loadAvailableVoices() }
+        }
     }
 
     /// Languages that have TTS support (excludes French since no French tafsir exists)

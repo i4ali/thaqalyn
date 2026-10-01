@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "31:1",
+    "surah": 31,
+    "index": 1,
+    "range": [
+      1,
+      11
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "According to the passage, why is the revealed Book called 'wise'?"
+        },
+        "options": [
+          {
+            "en": "Because only the wise can grasp its meaning"
+          },
+          {
+            "en": "Because it was revealed to wise prophets"
+          },
+          {
+            "en": "Because it makes truth and falsehood plain of itself"
+          },
+          {
+            "en": "Because it sets down the laws of the religion"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the Book is called wise because it makes truth and falsehood plain of itself, not because of who reads it or what laws it holds."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "called wise, he explains, because it makes truth and falsehood plain of itself"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 5,
+        "prompt": {
+          "en": "Tabatabai reads the whole surah as a call to ____, to certainty in the Return, and to the essentials of the religion's laws."
+        },
+        "options": [
+          {
+            "en": "divine oneness"
+          },
+          {
+            "en": "patient endurance"
+          },
+          {
+            "en": "ritual purity"
+          },
+          {
+            "en": "holy struggle"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay gives Tabatabai's reading of the whole surah: a call to divine oneness, to certainty in the Return, and to the essentials of the religion's laws."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the whole surah as a call to divine oneness, to certainty in the Return, and to the essentials of the religion's laws"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the passage, a singing-girl invited to weddings is permitted."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration on singing-girls' earnings forbids the one whose gatherings men attend, but says the one invited to weddings is no harm, so this is permitted."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n2",
+          "quote": "the one to whom men are admitted is forbidden, but the one invited to weddings there is no harm in"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 6,
+        "prompt": {
+          "en": "\"Singing is among the things for which Allah has promised the Fire.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Baqir declared that singing is among the things for which Allah has promised the Fire, and then recited this verse about diversionary talk."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n1",
+          "quote": "Singing is among the things for which Allah has promised the Fire"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the essay, what does the closing challenge about creation prove?"
+        },
+        "options": [
+          {
+            "en": "That the idols share in creating the heavens"
+          },
+          {
+            "en": "That the idols create nothing, so cannot claim lordship"
+          },
+          {
+            "en": "That the wrongdoers were ignorant rather than guilty"
+          },
+          {
+            "en": "That creation proves the reward of the virtuous"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says al-Tusi reads the challenge as proof of God's oneness, since the idols create nothing and can claim no lordship, leaving the wrongdoers in manifest error."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi reads this as proof of God's oneness, since the idols create nothing and so can claim no lordship, leaving the wrongdoers in manifest error"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:14:33Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:15:42Z",
+      "assembled_at": "2026-09-30T19:28:28Z"
+    }
+  },
+  "2": {
+    "id": "31:2",
+    "surah": 31,
+    "index": 2,
+    "range": [
+      12,
+      19
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "According to the essay, al-Mizan describes Luqman's wisdom as which of these?"
+        },
+        "options": [
+          {
+            "en": "The gift of prophethood, placing him among the prophets"
+          },
+          {
+            "en": "Great wealth granted together with a long life"
+          },
+          {
+            "en": "Beneficial knowledge, the mean between ignorance and misused cleverness"
+          },
+          {
+            "en": "Mastery of eloquent speech and fine poetry"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says al-Mizan reads Luqman's wisdom as beneficial knowledge, the balanced mean between ignorance and misused cleverness; the majority held that Luqman was a sage, not a prophet."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Mizan reads this wisdom as beneficial knowledge, the balanced mean between ignorance and misused cleverness"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 13,
+        "prompt": {
+          "en": "\"Injustice is of three kinds: one God forgives, one God does not forgive, and one God will not let pass.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Teaching that the injustice God never forgives is ascribing partners to Him, Imam al-Baqir set out injustice in three kinds."
+        },
+        "anchor": {
+          "where": "verses.13.narrations.n3",
+          "quote": "Injustice is of three kinds: one God forgives, one God does not forgive, and one God will not let pass"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 14,
+        "prompt": {
+          "en": "In the essay, whose words does al-Mizan say the two verses on thanking parents actually are?"
+        },
+        "options": [
+          {
+            "en": "Luqman's words to his son"
+          },
+          {
+            "en": "God's own words, set inside Luqman's counsel"
+          },
+          {
+            "en": "The Prophet's words, added to the surah later"
+          },
+          {
+            "en": "The mother's plea to her child"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay notes al-Mizan's point that these two verses break in as God's own words set inside the counsel, not Luqman's, pairing thanks to God with thanks to parents."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Then two verses break in - God's own words set inside the counsel, not Luqman's, as al-Mizan notes"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 16,
+        "prompt": {
+          "en": "Beware of trivial sins, for they have a ____."
+        },
+        "options": [
+          {
+            "en": "record"
+          },
+          {
+            "en": "witness"
+          },
+          {
+            "en": "shadow"
+          },
+          {
+            "en": "pursuer"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "In the note on the mustard-seed verse, Imam al-Baqir warns that even trivial sins have a pursuer, so none should presume on sinning then seeking forgiveness."
+        },
+        "anchor": {
+          "where": "verses.16.narrations.n7",
+          "quote": "Beware of trivial sins, for they have a pursuer"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the perspectives, Shia narrations reject the literal duty of thanking one's father and mother."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The perspectives say Shia narrations keep the literal duty of gratitude to one's parents and add a further reading, so they do not reject it."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia narrations keep that literal duty of gratitude but add a further reading"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:21:05Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:22:09Z",
+      "assembled_at": "2026-09-30T19:28:28Z"
+    }
+  },
+  "3": {
+    "id": "31:3",
+    "surah": 31,
+    "index": 3,
+    "range": [
+      20,
+      34
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 20,
+        "prompt": {
+          "en": "After Luqman's counsel to his son, the discourse turns back to arguing God's ____ with those who deny it."
+        },
+        "options": [
+          {
+            "en": "oneness"
+          },
+          {
+            "en": "power"
+          },
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "justice"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay frames the whole passage as a return, after Luqman's counsel, to arguing God's oneness against those who dispute about Him without any knowledge."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the discourse turns back to arguing God's oneness with those who deny it"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 23,
+        "prompt": {
+          "en": "According to the essay, how is the Prophet consoled about the deniers?"
+        },
+        "options": [
+          {
+            "en": "They will soon accept the faith he preaches"
+          },
+          {
+            "en": "Their wealth will be taken from them at once"
+          },
+          {
+            "en": "Their disbelief should not grieve him; they return to God"
+          },
+          {
+            "en": "He should pray for their forgiveness each day"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the Prophet is consoled that the deniers' disbelief should not grieve him, since they return to God, who lets them enjoy the world briefly before a harsh punishment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The Prophet is consoled: the deniers' disbelief should not grieve him, for they return to God, who lets them enjoy the world a little and then drives them to a harsh punishment"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 28,
+        "prompt": {
+          "en": "The passage reports that some objected they were created in stages yet would be raised in a single hour, and answers that their creation and resurrection are as a single soul."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the narration, those who objected that they were formed in stages yet raised all at once are told that creating and resurrecting everyone is, for God, as a single soul."
+        },
+        "anchor": {
+          "where": "verses.28.narrations.n6",
+          "quote": "you claim we were created in stages, a drop, then a clot, then formed anew, yet will be raised in a single hour. So God said: your creation and resurrection are but as a single soul"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 34,
+        "prompt": {
+          "en": "\"O brother of Kalb, this is not knowledge of the unseen; it is only learning from one who possesses knowledge.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Rebuking the man of Kalb, Imam Ali says learning from a knower is not knowledge of the unseen; only the knowledge of the Hour is truly unseen."
+        },
+        "anchor": {
+          "where": "verses.34.narrations.n9",
+          "quote": "O brother of Kalb, this is not knowledge of the unseen; it is only learning from one who possesses knowledge"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 20,
+        "prompt": {
+          "en": "According to the perspectives, what do the Household's reports and the Sunni exegetes both affirm, though they read the words differently?"
+        },
+        "options": [
+          {
+            "en": "That following one's forefathers is the right guidance"
+          },
+          {
+            "en": "That God's favor and faith are the saving grip"
+          },
+          {
+            "en": "That those who dispute rely on a clear scripture"
+          },
+          {
+            "en": "That God's words could one day be exhausted"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say both traditions affirm God's favor and the saving grip of faith, and differ only over what that grip names; so no specific naming is the point they share."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions affirm God's favor and the saving grip of faith; they differ over what that grip names"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:26:56Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-09-30T19:28:03Z",
+      "assembled_at": "2026-09-30T19:28:28Z"
+    }
+  }
+}

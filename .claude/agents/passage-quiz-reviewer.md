@@ -36,7 +36,7 @@ One verdict per question, `ok` or `fail`, with a reason for every fail. A questi
 2. Another option is also right by the passage, or is not clearly wrong by it.
 3. It cannot be answered from the passage alone: it needs outside knowledge, or asks about something the passage does not say.
 4. It tests trivia rather than understanding: which scholar held a view, a source number, a count, a book title, a chain of transmission.
-5. It takes a side between the traditions in Perspectives.
+5. It takes a side between the traditions in Perspectives. A wrong option that is either tradition's reading of the very point the question asks about, where the Perspectives say the traditions divide, takes a side too, even when the prompt asks only what both traditions share: the quiz would mark that reading wrong.
 6. The prompt gives the answer away, is ambiguous, or a true or false statement can be read both ways; or a prompt or option gives away another question's answer.
 7. The explanation does not say why the answer is right, or says something the passage does not.
 8. A `whoSaid` quote is not recognisably from the narration it is anchored to; a `fillGap` gap sits on a word that carries no meaning, or its prompt is a lowercase mid-sentence fragment.

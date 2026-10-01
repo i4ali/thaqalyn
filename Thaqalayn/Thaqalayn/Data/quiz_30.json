@@ -1,0 +1,968 @@
+{
+  "1": {
+    "id": "30:1",
+    "surah": 30,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 2,
+        "prompt": {
+          "en": "The idolaters of Quraysh rejoiced when Persia defeated the Romans, and that victory grieved the Muslims."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Persia beat the Romans in the nearer land, and because Persia were not People of the Book the idolaters of Quraysh rejoiced, while their victory grieved the Muslims."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the idolaters of Quraysh rejoiced, since Persia were not People of the Book, and their victory grieved the Muslims"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 3,
+        "prompt": {
+          "en": "Both traditions read the reversal as a foretold event fulfilled as a sign of ____, but they differ on whom verse 3 names."
+        },
+        "options": [
+          {
+            "en": "prophecy"
+          },
+          {
+            "en": "defeat"
+          },
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "astrology"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives note that although the two traditions differ over whom verse 3 names, both read the foretold reversal, once fulfilled, as a sign of prophecy."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions read the reversal as a foretold event fulfilled as a sign of prophecy, but they differ on whom verse 3 names"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 4,
+        "prompt": {
+          "en": "According to the essay, what does 'All command belongs to Allah, before this and hereafter' establish?"
+        },
+        "options": [
+          {
+            "en": "That Persia would triumph by its own strength"
+          },
+          {
+            "en": "That the Hereafter cannot be known at all"
+          },
+          {
+            "en": "That the outcome in both states rests with God"
+          },
+          {
+            "en": "That the Romans can never again be defeated"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay glosses 'All command belongs to Allah, before this and hereafter' to mean the outcome in both states, before and after, rests with God alone."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "'All command belongs to Allah, before this and hereafter' - the outcome in both states rests with Him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 5,
+        "prompt": {
+          "en": "\"In their graves, at the rising of the Qaim.\" Who gave this as when the faithful will rejoice at Allah's help?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Hasan al-Askari"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the verse on the faithful rejoicing at Allah's help, Imam al-Sadiq placed that rejoicing in their graves, at the rising of the Qaim."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n3",
+          "quote": "Concerning God's words, 'and on that day the faithful will rejoice at Allah's help,' he said: In their graves, at the rising of the Qaim"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the essay, why does Tabatabai read Rome's near victory as set first in the surah?"
+        },
+        "options": [
+          {
+            "en": "To console the idolaters of Quraysh over their loss"
+          },
+          {
+            "en": "To prove Persia would rule the region forever"
+          },
+          {
+            "en": "So that keeping the small promise argues for keeping the great one"
+          },
+          {
+            "en": "To fix the date of the surah's revelation"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Reading the whole surah, Tabatabai finds its aim in one promise, that God will aid His religion, with Rome's near victory placed first so keeping the small promise argues for keeping the great one."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "with Rome's near victory set first, so that keeping the small promise argues for keeping the great one, the Day when all return to Him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:00:10Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:01:19Z",
+      "assembled_at": "2026-09-30T19:14:51Z"
+    }
+  },
+  "2": {
+    "id": "30:2",
+    "surah": 30,
+    "index": 2,
+    "range": [
+      11,
+      19
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "In the essay's reading, what does God's originating of creation show about the resurrection?"
+        },
+        "options": [
+          {
+            "en": "The One who made from nothing can easily raise the dead"
+          },
+          {
+            "en": "The dead will raise themselves when the Hour comes"
+          },
+          {
+            "en": "Only the faithful will be raised to the garden"
+          },
+          {
+            "en": "The guilty will escape the punishment of the Hour"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says this single line makes the whole case for resurrection, since the One who made creation from nothing can as easily raise the dead."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "with this single line the surah states the whole case for the resurrection, for the One who made from nothing can as easily raise the dead"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 12,
+        "prompt": {
+          "en": "When the Hour arrives the guilty despair, cut off from every ____."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "hope"
+          },
+          {
+            "en": "escape"
+          },
+          {
+            "en": "refuge"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay glosses the guilty's despair at the Hour as being cut off from every hope; the verse itself says only that the guilty despair."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "When the Hour arrives the guilty despair, cut off from every hope"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the narration on glorifying God at these times, what comes to one who recites this glorification three times as evening sets in?"
+        },
+        "options": [
+          {
+            "en": "His past sins are wiped away for that night"
+          },
+          {
+            "en": "He is raised among the martyrs on the Day"
+          },
+          {
+            "en": "He misses no good that night and its evil is turned away"
+          },
+          {
+            "en": "He is kept safe from the despair of the guilty"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam Ali's narration promises that whoever recites this glorification three times as evening comes will miss no good of that night and have its evil turned away."
+        },
+        "anchor": {
+          "where": "verses.17.narrations.n2",
+          "quote": "will miss no good coming in that night, and all its evil is turned away from him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 19,
+        "prompt": {
+          "en": "\"He does not revive it with rain; rather God raises up men who revive justice, so the earth comes alive through the reviving of justice.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about reviving the earth, Imam al-Kazim said God does not revive it with rain but raises up men who revive justice, worth more than rain."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n3",
+          "quote": "He does not revive it with rain; rather God raises up men who revive justice, so the earth comes alive through the reviving of justice"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 19,
+        "prompt": {
+          "en": "According to the passage, the reviving of the dead earth is read as proof that the world has no Maker."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay says al-Qummi takes the reviving of the dead earth as a rebuttal of the materialists who deny a Maker, so it argues for a Maker."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "takes the reviving of the dead earth as a rebuttal of the materialists who deny a Maker"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:06:54Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:07:58Z",
+      "assembled_at": "2026-09-30T19:14:51Z"
+    }
+  },
+  "3": {
+    "id": "30:3",
+    "surah": 30,
+    "index": 3,
+    "range": [
+      20,
+      27
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 20,
+        "prompt": {
+          "en": "The passage argues that creation and its management form a single work, so an idolater cannot credit God with creating while giving worship to lesser powers."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens with this single-Lord argument: because creating and managing the world are one work, the idolater cannot assign creation to God yet hand worship and control to lesser powers."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "creation and its ongoing management are a single work, so the idolater cannot hand creation to God while giving worship and control to lesser powers"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 22,
+        "prompt": {
+          "en": "\"The Imam, when he sees a man, knows him and knows his colour; and if he hears his speech from behind a wall, he knows him and knows what he is.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage attributes this saying to Imam al-Sadiq, who describes the Imam recognizing a man by his colour and by his voice heard from behind a wall."
+        },
+        "anchor": {
+          "where": "verses.22.narrations.n1",
+          "quote": "The Imam, when he sees a man, knows him and knows his colour; and if he hears his speech from behind a wall, he knows him and knows what he is"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 25,
+        "prompt": {
+          "en": "In the passage, how is the verse 'when He calls you forth from the earth, behold, you will come forth' explained?"
+        },
+        "options": [
+          {
+            "en": "As the obedience of everything in the heavens and earth"
+          },
+          {
+            "en": "As the reviving of the dead earth by rain"
+          },
+          {
+            "en": "As a refutation of the classes of the heretics"
+          },
+          {
+            "en": "As the creation of mates from your own selves"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The Qummi narration glosses the call from the earth, 'you will come forth,' as a refutation of the heretics who deny resurrection, not as any other sign in the list."
+        },
+        "anchor": {
+          "where": "verses.25.narrations.n2",
+          "quote": "and this is a refutation of the classes of the heretics"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 27,
+        "prompt": {
+          "en": "As people reckon things, repeating a work is ____ than beginning it"
+        },
+        "options": [
+          {
+            "en": "lighter"
+          },
+          {
+            "en": "harder"
+          },
+          {
+            "en": "slower"
+          },
+          {
+            "en": "costlier"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay explains 'that is more simple for Him' by how people reckon: redoing a task is lighter than doing it the first time, before adding that with God restoration costs nothing."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "As people reckon things, repeating a work is lighter than beginning it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "According to the essay's close, what does al-Tusi say signs like these vindicate?"
+        },
+        "options": [
+          {
+            "en": "Reasoned reflection about God"
+          },
+          {
+            "en": "Automatic, effortless knowledge of God"
+          },
+          {
+            "en": "The lightning that arouses fear and hope"
+          },
+          {
+            "en": "Comfort found in mates and spouses"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay closes with al-Tusi: signs like these vindicate reasoned reflection, standing against those who would treat knowledge of God as automatic instead of reached by thought."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "signs like these vindicate reasoned reflection against those who would treat knowledge of God as automatic"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:54:32Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:55:32Z",
+      "assembled_at": "2026-09-30T19:14:51Z"
+    }
+  },
+  "4": {
+    "id": "30:4",
+    "surah": 30,
+    "index": 4,
+    "range": [
+      28,
+      40
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "According to the passage, what point does the parable God draws from yourselves in verse 28 make?"
+        },
+        "options": [
+          {
+            "en": "You accept no slave as an equal partner, so God has none"
+          },
+          {
+            "en": "Slaves deserve an equal share of their master's provision"
+          },
+          {
+            "en": "Wealth from God must be divided equally among all people"
+          },
+          {
+            "en": "Freeing slaves lets them worship God as equals"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The parable argues from ourselves: no one treats a slave as an equal partner in his own wealth, so God's creatures cannot be His partners in worship; that is how the passage rejects ascribing partners to God."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "you would never accept your own slaves as equal partners in the wealth God has given you, so how could God's own creatures be His partners in worship"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 30,
+        "prompt": {
+          "en": "Verse 30's fitrah, the nature God set in mankind, is read by both traditions as the innate disposition toward God's ____."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "justice"
+          },
+          {
+            "en": "oneness"
+          },
+          {
+            "en": "law"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The passage says both traditions read the fitrah, the nature God set in mankind, as the innate disposition toward God's oneness, not toward mercy, justice or law."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "is read by both traditions as the innate disposition toward God's oneness"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 33,
+        "prompt": {
+          "en": "According to the passage, how do people behave once God relieves the distress that made them cry to Him?"
+        },
+        "options": [
+          {
+            "en": "They give thanks and keep turning to Him"
+          },
+          {
+            "en": "A part of them ascribe partners to God"
+          },
+          {
+            "en": "They share their relief with the needy"
+          },
+          {
+            "en": "They forget the distress and fall silent"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage reads the human heart: people cry to God in distress, but once He lets them taste mercy, a part of them turn back to ascribing partners to Him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "People cry to God in distress but ascribe partners to Him once relief comes"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 39,
+        "prompt": {
+          "en": "\"Usury is of two kinds, one lawful, one forbidden. The lawful: a man lends his brother a loan hoping to be repaid more, with no condition between them.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked about usury, Imam al-Sadiq distinguished a lawful kind, lending while merely hoping for more with no condition, from a forbidden kind, lending on the stipulation that more be returned."
+        },
+        "anchor": {
+          "where": "verses.39.narrations.n4",
+          "quote": "Usury is of two kinds, one lawful, one forbidden. The lawful: a man lends his brother a loan hoping to be repaid more, with no condition between them"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 40,
+        "prompt": {
+          "en": "In the passage's closing verse, the alleged partners are said to share with God in creating and giving life."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage closes where it began: God alone creates, provides, gives death and gives life, and none of the alleged partners does any of this, so they share nothing with Him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God alone creates, provides, gives death and gives life, so none of the alleged partners does any of this"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:03:50Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:04:48Z",
+      "assembled_at": "2026-09-30T19:14:51Z"
+    }
+  },
+  "5": {
+    "id": "30:5",
+    "surah": 30,
+    "index": 5,
+    "range": [
+      41,
+      53
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 41,
+        "prompt": {
+          "en": "According to the passage, why do the people taste only something, not the full measure, of what their hands have done?"
+        },
+        "options": [
+          {
+            "en": "Because in His mercy God pardons much"
+          },
+          {
+            "en": "Because the rest is stored up for the Day"
+          },
+          {
+            "en": "Because only the polytheists are made to taste it"
+          },
+          {
+            "en": "Because the corruption is not of their own doing"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage says God lets them taste only part of what they have done because in His mercy He pardons much, so the taste is a summons to return, not the full penalty."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He lets them taste only part of it because in His mercy He pardons much"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 41,
+        "prompt": {
+          "en": "The life of the sea creatures is by the ____."
+        },
+        "options": [
+          {
+            "en": "sun"
+          },
+          {
+            "en": "tide"
+          },
+          {
+            "en": "moon"
+          },
+          {
+            "en": "rain"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq says the life of the sea creatures depends on the rain, so when rain is withheld because sins have grown many, corruption appears in land and sea."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n2",
+          "quote": "The life of the sea creatures is by the rain. When the rain is withheld, corruption appears in land and sea"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 44,
+        "prompt": {
+          "en": "\"The righteous deed goes ahead to Paradise and prepares a place for the one who did it, as a man sends his servant boy ahead.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq gives the simile of a righteous deed going ahead to Paradise to ready its doer's place, like a man sending his servant boy ahead to spread the bedding."
+        },
+        "anchor": {
+          "where": "verses.44.narrations.n4",
+          "quote": "The righteous deed goes ahead to Paradise and prepares a place for the one who did it, as a man sends his servant boy ahead and he spreads out his bedding"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 50,
+        "prompt": {
+          "en": "According to the passage, the reviving of dead earth is offered as an answer to those who deny the resurrection."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "True. The passage reads the reviving of dead earth as its answer to those who deny the resurrection, since the One who revives dead earth also revives the dead."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He who revives dead earth revives the dead, which al-Qummi reads as an answer to those who deny the resurrection"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 52,
+        "prompt": {
+          "en": "According to the passage's close, why can the Prophet not make the dead, the deaf, or the blind hear?"
+        },
+        "options": [
+          {
+            "en": "The dead will hear only on the Day of Resurrection"
+          },
+          {
+            "en": "The deaf and blind were never shown any of God's signs"
+          },
+          {
+            "en": "The disbelievers are like the dead and deaf, gaining nothing from it"
+          },
+          {
+            "en": "Their hearts had been sealed to punish earlier sins"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The passage's close likens the disbelievers to the dead and the deaf who gain nothing from the call; that is why the Prophet cannot make them hear, and only believers do."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "he cannot make the dead, the deaf, or the blind hear, for the disbelievers are likened to the dead and the deaf who gain nothing from the call"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:09:55Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:10:58Z",
+      "assembled_at": "2026-09-30T19:14:51Z"
+    }
+  },
+  "6": {
+    "id": "30:6",
+    "surah": 30,
+    "index": 6,
+    "range": [
+      54,
+      60
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 54,
+        "prompt": {
+          "en": "\"How could He be hidden from you, when He has shown you His power in your own self?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq tells Ibn Abi al-Awja that God cannot be hidden, since He shows His power in one's own self: coming from nothing, growing, and moving from weakness to strength and back."
+        },
+        "anchor": {
+          "where": "verses.54.narrations.n1",
+          "quote": "How could He be hidden from you, when He has shown you His power in your own self"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 55,
+        "prompt": {
+          "en": "According to the essay, the guilty's false claim about the hour reflects what about their life in the world?"
+        },
+        "options": [
+          {
+            "en": "That they neglected the daily prayers"
+          },
+          {
+            "en": "That they hoarded wealth from the poor"
+          },
+          {
+            "en": "That they turned every truth into falsehood"
+          },
+          {
+            "en": "That they mocked the earlier prophets"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the guilty misjudge the time between death and rising, swearing they stayed only an hour, just as in the world they turned every truth into falsehood."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The guilty swear they lingered only an hour, mistaking the gap between death and rising just as they turned every truth into falsehood in the world"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 56,
+        "prompt": {
+          "en": "Those given knowledge and faith ____ them: you remained, as written in God's Book, until the Day of Resurrection."
+        },
+        "options": [
+          {
+            "en": "correct"
+          },
+          {
+            "en": "silence"
+          },
+          {
+            "en": "envy"
+          },
+          {
+            "en": "join"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says those given knowledge and faith correct the guilty, telling them they remained, as written in God's Book, until the Day of Resurrection."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Those given knowledge and faith correct them: you remained, as written in God's Book, until the Day of Resurrection"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 60,
+        "prompt": {
+          "en": "According to the narration, how did Ali act the first times Ibn al-Kawwa recited a verse behind him in prayer?"
+        },
+        "options": [
+          {
+            "en": "He answered Ibn al-Kawwa point by point"
+          },
+          {
+            "en": "He fell silent"
+          },
+          {
+            "en": "He left off the prayer"
+          },
+          {
+            "en": "He raised his voice in reply"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration says Ibn al-Kawwa recited a verse behind Ali in prayer and Ali fell silent, answering only the third time with the command to be patient."
+        },
+        "anchor": {
+          "where": "verses.60.narrations.n3",
+          "quote": "Ibn al-Kawwa recited behind Ali in prayer, 'It has been revealed to you and to those before you: if you ascribe a partner, your work will fail and you will be among the losers.' Ali fell silent"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 56,
+        "prompt": {
+          "en": "According to the passage, the Sunni reading limits 'those given knowledge and faith' to the prophets alone."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The passage says the Sunni reading is broad: Qurtubi lists angels, prophets, scholars, the believers of this community, or all believers, not the prophets alone."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Sunni exegetes read the phrase broadly: Qurtubi lists the angels, the prophets, the scholars of the nations, the believers of this community, or all believers"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:13:17Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:14:24Z",
+      "assembled_at": "2026-09-30T19:14:51Z"
+    }
+  }
+}

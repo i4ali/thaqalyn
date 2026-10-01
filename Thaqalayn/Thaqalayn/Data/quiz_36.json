@@ -1,0 +1,807 @@
+{
+  "1": {
+    "id": "36:1",
+    "surah": 36,
+    "index": 1,
+    "range": [
+      1,
+      12
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the passage, Tabatabai reads the whole surah as a statement of the three roots of religion, and it begins with prophethood."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens by saying Tabatabai reads the whole surah as a statement of the three roots of religion, and that it begins here with prophethood."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the whole surah as a statement of the three roots of religion, and it begins here with prophethood"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to Imam al-Sadiq, what does the name Ya Seen mean?"
+        },
+        "options": [
+          {
+            "en": "O hearer of the revelation"
+          },
+          {
+            "en": "O seal of the messengers"
+          },
+          {
+            "en": "O warner of the heedless"
+          },
+          {
+            "en": "O bearer of the Wise Quran"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked what Yaseen means, Imam al-Sadiq said it is a name of the Prophet and its meaning is 'O hearer of the revelation.'"
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n2",
+          "quote": "A name from the names of the Prophet, and its meaning is: O hearer of the revelation"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 6,
+        "prompt": {
+          "en": "\"The word has certainly become due against most of them - those who do not affirm the wilaya of Amir al-Mu'minin and the Imams after him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq glossed the verse, saying the word has become due against those who do not affirm the wilaya of Amir al-Mu'minin and the Imams after him."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n3",
+          "quote": "The word has certainly become due against most of them - those who do not affirm the wilaya of Amir al-Mu'minin and the Imams after him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 8,
+        "prompt": {
+          "en": "Tusi cautions that God has not literally chained the disbeliever, that this is a ____, as elsewhere the Quran speaks of deafness in the ears."
+        },
+        "options": [
+          {
+            "en": "punishment"
+          },
+          {
+            "en": "warning"
+          },
+          {
+            "en": "miracle"
+          },
+          {
+            "en": "likeness"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Tusi reads the iron collars not as literal chains but as a likeness, the way the Quran elsewhere speaks of deafness in the ears."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi cautions that God has not literally chained the disbeliever, that this is a likeness, as elsewhere the Quran speaks of deafness in the ears"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "According to the perspectives, what reading of the manifest Imam do both traditions share?"
+        },
+        "options": [
+          {
+            "en": "The straight path the Prophet was sent upon"
+          },
+          {
+            "en": "A preserved record"
+          },
+          {
+            "en": "The good news of forgiveness and a noble reward"
+          },
+          {
+            "en": "The barrier before and behind the faithless"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives note that the Shia commentators give the same gloss as al-Tabari, both reading the manifest Imam as a preserved record, before the Shia reports add Amir al-Mu'minin."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia commentators give the same gloss of a preserved record"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:43:36Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:44:57Z",
+      "assembled_at": "2026-09-30T21:12:12Z"
+    }
+  },
+  "2": {
+    "id": "36:2",
+    "surah": 36,
+    "index": 2,
+    "range": [
+      13,
+      32
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 15,
+        "prompt": {
+          "en": "Tabatabai notes that such people still acknowledged God, yet held that He had entrusted the world's running to His ____."
+        },
+        "options": [
+          {
+            "en": "chosen angels"
+          },
+          {
+            "en": "nearer creatures"
+          },
+          {
+            "en": "lesser gods"
+          },
+          {
+            "en": "carved idols"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay explains that these townspeople still acknowledged God, yet held that He had handed the running of the world to His nearer creatures, so they rejected the human messengers."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai notes that such people still acknowledged God, yet held that He had entrusted the world's running to His nearer creatures"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 18,
+        "prompt": {
+          "en": "In verse 18 the town calls the messengers a bad omen. How does the passage explain this kind of ill omen?"
+        },
+        "options": [
+          {
+            "en": "An omen the people draw from their prophets"
+          },
+          {
+            "en": "An omen the prophets draw from the people"
+          },
+          {
+            "en": "A curse the prophets laid upon the town"
+          },
+          {
+            "en": "A warning the messengers took from bad signs"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note explains that the ill omen in this verse is the one people draw from their prophets, not one the prophets draw, as the town did when it called its messengers a bad omen."
+        },
+        "anchor": {
+          "where": "verses.18.note",
+          "quote": "the ill omen here is the one people draw from their prophets, not one the prophets draw"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 18,
+        "prompt": {
+          "en": "\"There are three things from which no prophet, nor anyone below him, was left immune: ill omen, envy, and pondering the whisperings about creation.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that no prophet, nor anyone below him, is immune from three things: ill omen, envy, and pondering the whisperings about creation."
+        },
+        "anchor": {
+          "where": "verses.18.narrations.n3",
+          "quote": "There are three things from which no prophet, nor anyone below him, was left immune: ill omen, envy, and pondering the whisperings about creation"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the essay, why does Tabatabai say the man worshipped God?"
+        },
+        "options": [
+          {
+            "en": "Hoping to be admitted into paradise"
+          },
+          {
+            "en": "Out of fear of the Fire"
+          },
+          {
+            "en": "Because God is worthy of worship"
+          },
+          {
+            "en": "To become one of the honoured ones"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tabatabai dwells on the man's faith: he worshipped not from hope of paradise or fear of the Fire, but because God is worthy of worship."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "he worshipped not from hope of paradise or fear of the Fire but because God is worthy of worship"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the passage, the paradise the believing man was told to enter is the final Paradise of the resurrection."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai holds the man's people had killed him and that the paradise he entered is that of the barzakh, the intermediate life, not the final resurrection."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "that the paradise he entered is that of the barzakh, and reads the verse as evidence for that intermediate life"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:47:42Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:49:04Z",
+      "assembled_at": "2026-09-30T21:12:12Z"
+    }
+  },
+  "3": {
+    "id": "36:3",
+    "surah": 36,
+    "index": 3,
+    "range": [
+      33,
+      50
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 33,
+        "prompt": {
+          "en": "Tabatabai reads them as signs of creation and governance pointing to His ____ alone."
+        },
+        "options": [
+          {
+            "en": "lordship and godhood"
+          },
+          {
+            "en": "mercy and pardon"
+          },
+          {
+            "en": "power and riches"
+          },
+          {
+            "en": "beauty and majesty"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the signs of creation and governance as pointing to God's lordship and godhood alone, so that is the missing phrase."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads them as signs of creation and governance pointing to His lordship and godhood alone"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 36,
+        "prompt": {
+          "en": "\"The drop falls from the sky to the earth upon the plants, the fruit and the trees; people and cattle eat of it.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "On the verse about all the kinds God created, Imam al-Sadiq described the drop falling from the sky onto the plants, fruit and trees, which people and cattle eat."
+        },
+        "anchor": {
+          "where": "verses.36.narrations.n1",
+          "quote": "The drop falls from the sky to the earth upon the plants, the fruit and the trees"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 40,
+        "prompt": {
+          "en": "According to the narration on verse 40, what are the sun and the moon called?"
+        },
+        "options": [
+          {
+            "en": "Two lights that share one orbit by turns"
+          },
+          {
+            "en": "The sun, which lends its light to the moon"
+          },
+          {
+            "en": "The authority of the day and the authority of the night"
+          },
+          {
+            "en": "Rulers whose turns the night will one day reverse"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration names the sun the authority of the day and the moon the authority of the night, so neither crowds into the other's time."
+        },
+        "anchor": {
+          "where": "verses.40.narrations.n5",
+          "quote": "The sun is the authority of the day and the moon the authority of the night"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 45,
+        "prompt": {
+          "en": "The commentary explains 'that which is before you' as sins and 'that which is behind you' as their punishment."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration glosses the warning as sins that are before you and the punishment that is behind you, so restating it that way is true."
+        },
+        "anchor": {
+          "where": "verses.45.narrations.n6",
+          "quote": "beware of that which is before you, of sins, and of that which is behind you, of punishment"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 49,
+        "prompt": {
+          "en": "In the essay's closing, what does Tabatabai identify the single Cry as?"
+        },
+        "options": [
+          {
+            "en": "A thunderclap that strikes the deniers alone"
+          },
+          {
+            "en": "The cry of those drowning in the laden ship"
+          },
+          {
+            "en": "The believers' call to spend in God's path"
+          },
+          {
+            "en": "The first blast of the trumpet, opening the Return"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes with Tabatabai identifying the single Cry as the first blast of the trumpet, which opens his account of the Return."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai identifies this Cry as the first blast of the trumpet, opening his account of the Return"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:52:39Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:53:48Z",
+      "assembled_at": "2026-09-30T21:12:12Z"
+    }
+  },
+  "4": {
+    "id": "36:4",
+    "surah": 36,
+    "index": 4,
+    "range": [
+      51,
+      67
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 52,
+        "prompt": {
+          "en": "\"So be patient for your Lord's judgment; for were the master of creation to rise, they would say, 'Woe to us! Who raised us from our place of sleep?'\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Rida tells his correspondent to be patient for the Lord's judgment and reads the verse as pointing to the rising of the master of creation."
+        },
+        "anchor": {
+          "where": "verses.52.narrations.n3",
+          "quote": "So be patient for your Lord's judgment; for were the master of creation to rise, they would say"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 54,
+        "prompt": {
+          "en": "How does Tabatabai explain that no soul is wronged in the judgment?"
+        },
+        "options": [
+          {
+            "en": "The recompense is the deeds themselves"
+          },
+          {
+            "en": "Every sin is forgiven at the Trumpet blast"
+          },
+          {
+            "en": "The apostles intercede for every soul"
+          },
+          {
+            "en": "The guilty are offered a second chance"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the recompense being the deeds themselves is the very proof that no wrong is done, since each soul meets only what it used to do."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai notes that the recompense being the deeds themselves is the very proof that no wrong is done"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 56,
+        "prompt": {
+          "en": "The couches are the thrones with the bridal ____ over them."
+        },
+        "options": [
+          {
+            "en": "curtains"
+          },
+          {
+            "en": "cushions"
+          },
+          {
+            "en": "canopies"
+          },
+          {
+            "en": "veils"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the couches of paradise, Imam al-Baqir glosses them as thrones with bridal canopies raised over them, so the missing word is canopies."
+        },
+        "anchor": {
+          "where": "verses.56.narrations.n5",
+          "quote": "The couches are the thrones with the bridal canopies over them."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 59,
+        "prompt": {
+          "en": "According to al-Qummi's note on the summons 'Get apart', what does all creation beg for as it stands sweating?"
+        },
+        "options": [
+          {
+            "en": "To be returned to their graves"
+          },
+          {
+            "en": "To be brought to account, even to the Fire"
+          },
+          {
+            "en": "To be shown mercy and spared"
+          },
+          {
+            "en": "To be sent back to the world to repent"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In al-Qummi's picture the terror is so great that all creation, bridled by its own sweat, begs to be brought to account even if that means the Fire."
+        },
+        "anchor": {
+          "where": "verses.59.note",
+          "quote": "all creation left standing until sweat bridles them, crying, 'Lord, bring us to account, even to the Fire,'"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 67,
+        "prompt": {
+          "en": "In the essay, Tabatabai reads God's power to blot out their eyes or deform the guilty as a sign of how difficult it would be for Him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai reads this as a sign of how easy this is for Him, not how difficult; blotting out eyes or deforming the guilty costs Him nothing."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "which Tabatabai reads as a sign of how easy this is for Him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:57:53Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:59:04Z",
+      "assembled_at": "2026-09-30T21:12:12Z"
+    }
+  },
+  "5": {
+    "id": "36:5",
+    "surah": 36,
+    "index": 5,
+    "range": [
+      68,
+      83
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 68,
+        "prompt": {
+          "en": "The passage treats the weakening that comes with old age as a refutation of those who say nature, food and the heavens alone shape a person."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note reads this verse as refuting those who hold that nature, food and the turning of the heavens form a person; if that were so he would keep growing, not decline into feebleness with age."
+        },
+        "anchor": {
+          "where": "verses.68.note",
+          "quote": "al-Qummi reads this verse as a refutation of the materialists who deny God's oneness, holding that man is formed by nature, food and the turning of the heavens"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 71,
+        "prompt": {
+          "en": "al-Tabrisi takes the ____ as a plain proof of the Lord who provides."
+        },
+        "options": [
+          {
+            "en": "heavens"
+          },
+          {
+            "en": "stars"
+          },
+          {
+            "en": "herds"
+          },
+          {
+            "en": "rivers"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reads the grazing herds, tamed for mounts, meat, milk and other uses, as al-Tabrisi's plain proof of the Lord who provides for people."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tabrisi takes the herds as a plain proof of the Lord who provides"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 74,
+        "prompt": {
+          "en": "According to the passage, who are the army mobilized for defence in the verse about the idols and those who worship them?"
+        },
+        "options": [
+          {
+            "en": "The idols, mobilized to defend their worshippers"
+          },
+          {
+            "en": "The worshippers, mobilized to defend their idols"
+          },
+          {
+            "en": "The idols, who give real help to their worshippers"
+          },
+          {
+            "en": "The angels, mobilized to defend the idols"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Reading the verse against the grain, the passage says it is the worshippers who are the army mustered to defend their idols, not the idols who defend or help them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "it is the worshippers who are a mustered army for their idols, not the reverse"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 77,
+        "prompt": {
+          "en": "\"How utterly astonishing is the one who denies death while he sees people dying every day and night.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali ibn al-Husayn"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam Ali ibn al-Husayn marveled that people deny death though they watch others die daily, and deny the second arising though they have already seen the first."
+        },
+        "anchor": {
+          "where": "verses.77.narrations.n2",
+          "quote": "How utterly astonishing is the one who denies death while he sees people dying every day and night"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 79,
+        "prompt": {
+          "en": "In the essay's closing movement, how does the passage answer the man who asks who can revive bones once they have decayed?"
+        },
+        "options": [
+          {
+            "en": "The One who produced them the first time can raise them"
+          },
+          {
+            "en": "No one can, for decayed bones stay dust"
+          },
+          {
+            "en": "The Prophet is told to grieve over the question"
+          },
+          {
+            "en": "The deniers are left to answer it themselves"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the answer comes at once, that the One who produced the bones the first time and knows every creature will raise them again."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The answer comes at once: the One who produced them first knows every creature"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:10:31Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:11:42Z",
+      "assembled_at": "2026-09-30T21:12:12Z"
+    }
+  }
+}

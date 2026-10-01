@@ -49,5 +49,9 @@ final class DeepLinkRouter: ObservableObject {
     /// still open; cleared when that list is dismissed. Distinct from the auto-open path.
     @Published var revealSurahExperienceId: String? = nil
 
+    /// Set by the What's New search card: the Quran tab focuses its search field
+    /// on arrival, then clears this.
+    @Published var pendingSearchFocus = false
+
     private init() {}
 }

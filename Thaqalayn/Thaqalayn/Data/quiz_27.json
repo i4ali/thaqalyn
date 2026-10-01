@@ -1,0 +1,1129 @@
+{
+  "1": {
+    "id": "27:1",
+    "surah": 27,
+    "index": 1,
+    "range": [
+      1,
+      14
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 1,
+        "prompt": {
+          "en": "As for Ta, Seen: its meaning is 'I am the ____, the Hearing.'"
+        },
+        "options": [
+          {
+            "en": "Guide"
+          },
+          {
+            "en": "Seeker"
+          },
+          {
+            "en": "Knower"
+          },
+          {
+            "en": "Mighty"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration glosses the disjoined letters Ta Seen as God naming Himself the Seeker and the Hearing, not as meaningless letters, so the missing word is 'Seeker.'"
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "As for Ta, Seen: its meaning is 'I am the Seeker, the Hearing.'"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 8,
+        "prompt": {
+          "en": "According to the essay, what does 'immaculate is Allah' declare about God at the fire?"
+        },
+        "options": [
+          {
+            "en": "That the fire itself has become holy ground"
+          },
+          {
+            "en": "That Moses has now become a prophet"
+          },
+          {
+            "en": "That He is beyond being a body confined by place"
+          },
+          {
+            "en": "That the valley is filled with angels"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reads 'immaculate is Allah' as glorification that places God beyond having a body fixed in a location, even as He speaks to Moses from the fire."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "'immaculate is Allah' declares Him beyond being a body confined by place"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the passage, Tabrisi and Tusi treat the prophets as sinless, so the people who fear in the verse must be other wrongdoers, not the messengers."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage reports that Tabrisi and Tusi read the exception as disconnected: since prophets are infallible and do no wrong, the ones who fear must be other wrongdoers who later repent."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tabrisi and Tusi read the exception as disconnected: the prophets are infallible and commit no wrong, so the ones who fear are other wrongdoers"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 12,
+        "prompt": {
+          "en": "'It will emerge white, without any fault' - meaning without leprosy. Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sajjad"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Glossing the white hand sign, Imam al-Sadiq explained that the hand emerging white 'without any fault' means it came out bright without leprosy, not a blemish."
+        },
+        "anchor": {
+          "where": "verses.12.narrations.n2",
+          "quote": "'Insert your hand into your shirt; it will emerge white, without any fault' - he said: meaning without leprosy"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the essay's close, how do Pharaoh's people respond when the signs arrive as eye-openers?"
+        },
+        "options": [
+          {
+            "en": "They call them plain magic and deny what their hearts held certain"
+          },
+          {
+            "en": "They believe at once and repent to Moses"
+          },
+          {
+            "en": "They ask Moses to show them more signs"
+          },
+          {
+            "en": "They flee the fire in terror"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay closes by noting that Pharaoh's people brand the eye-opening signs plain magic, denying with their tongues what their hearts were certain of, and it asks us to observe such corrupters' fate."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Pharaoh's people call them plain magic and deny with their tongues what their hearts held for certain"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:34:31Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:36:04Z",
+      "assembled_at": "2026-09-30T17:57:39Z"
+    }
+  },
+  "2": {
+    "id": "27:2",
+    "surah": 27,
+    "index": 2,
+    "range": [
+      15,
+      31
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 16,
+        "prompt": {
+          "en": "\"Indeed God has taught us the speech of the birds, just as He taught Solomon son of David the speech of every animal.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Speaking to Ibn Abbas, Imam Ali says God taught the Ahl al-Bayt the speech of the birds, just as He taught Solomon the speech of every animal on land or sea."
+        },
+        "anchor": {
+          "where": "verses.16.narrations.n2",
+          "quote": "Indeed God has taught us the speech of the birds, just as He taught Solomon son of David the speech of every animal, on land or in sea."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the essay, what does it mean that Solomon's hosts were held in check as they were marshaled out?"
+        },
+        "options": [
+          {
+            "en": "The front was kept back for the rear"
+          },
+          {
+            "en": "The birds scouted ahead of the jinn and humans"
+          },
+          {
+            "en": "The rear was sent ahead of the front"
+          },
+          {
+            "en": "The jinn were held back from the humans"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses the hosts being held in check as the army kept in order, with the front held back so the slower rear could keep pace."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "His hosts of jinn, humans and birds are marshaled and held in check, the front kept back for the rear"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 19,
+        "prompt": {
+          "en": "I feared they would gaze at your splendor, be enthralled, and be drawn away from the ____ of God."
+        },
+        "options": [
+          {
+            "en": "worship"
+          },
+          {
+            "en": "remembrance"
+          },
+          {
+            "en": "fear"
+          },
+          {
+            "en": "path"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The ant says it warned the ants not from fear of Solomon's wrong, but lest his splendor dazzle them and draw them away from the remembrance of God."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n4",
+          "quote": "I feared they would gaze at your splendor, be enthralled, and be drawn away from the remembrance of God."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 20,
+        "prompt": {
+          "en": "How does Imam al-Sadiq answer Abu Hanifa's objection that the hoopoe, who sees water underground, still fails to see a snare?"
+        },
+        "options": [
+          {
+            "en": "The hoopoe had flown too far from Sheba"
+          },
+          {
+            "en": "Satan had barred the hoopoe from the way"
+          },
+          {
+            "en": "Solomon's jinn had hidden the snare in the dust"
+          },
+          {
+            "en": "When the decree descends, it dims the sight"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq answers that when God's decree descends it dims the sight, so even the hoopoe, who sees water underground, could be caught in a snare."
+        },
+        "anchor": {
+          "where": "verses.20.narrations.n5",
+          "quote": "O Nu'man, do you not know when the decree descends, it dims the sight?"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 31,
+        "prompt": {
+          "en": "According to the passage, Solomon's command to 'come to me in submission' already calls for faith in the technical sense."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says Tabatabai reads 'come to me in submission' as a call to obedience and compliance, not yet faith in the technical sense, so the claim is false."
+        },
+        "anchor": {
+          "where": "verses.31.note",
+          "quote": "Tabatabai reads 'come to me in submission' as a call to obedience and compliance, paired with 'do not defy me,' not yet faith in the technical sense"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:40:06Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:41:35Z",
+      "assembled_at": "2026-09-30T17:57:39Z"
+    }
+  },
+  "3": {
+    "id": "27:3",
+    "surah": 27,
+    "index": 3,
+    "range": [
+      32,
+      44
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 33,
+        "prompt": {
+          "en": "They answer that they are men of strength and hard fighters, yet leave the ____ to her."
+        },
+        "options": [
+          {
+            "en": "fighting"
+          },
+          {
+            "en": "ruling"
+          },
+          {
+            "en": "tribute"
+          },
+          {
+            "en": "throne"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the council calls itself strong and warlike yet hands the decision back to the Queen, leaving the ruling to her."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "They answer that they are men of strength and hard fighters, yet leave the ruling to her."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 35,
+        "prompt": {
+          "en": "The Queen sends her gift as a test, reckoning a king would accept it but a prophet would refuse it."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay explains she sends the gift to test Solomon, reckoning that a king would accept it while a prophet would refuse it, which is what he does."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "She then sends a gift, meaning to test him: if he accepts it he is a king, but if he refuses it he is a prophet"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 40,
+        "prompt": {
+          "en": "According to the perspectives, what do Shia commentators, following the Imams, take Asaf's feat to establish?"
+        },
+        "options": [
+          {
+            "en": "That Asaf was the proof and successor after Solomon"
+          },
+          {
+            "en": "That Solomon's knowledge was inferior to Asaf's"
+          },
+          {
+            "en": "That the afreet, not Asaf, brought the throne"
+          },
+          {
+            "en": "That the Queen submitted only out of fear"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say Shia commentators, following the Imams, read Asaf's feat as a sign that he was the proof and successor after Solomon, a pattern for legitimate succession."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "read the feat as a sign that Asaf was the proof after Solomon, a pattern for legitimate succession"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 40,
+        "prompt": {
+          "en": "\"God's Greatest Name has seventy-three letters; Asaf had but one of them. He spoke it, and the earth caved between him and Bilqis's throne until he took it in his hand.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Hadi"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir taught that God's Greatest Name has seventy-three letters, that Asaf held only one of them, and that speaking it brought Bilqis's throne to him quicker than a blink."
+        },
+        "anchor": {
+          "where": "verses.40.narrations.n1",
+          "quote": "God's Greatest Name has seventy-three letters; Asaf had but one of them. He spoke it, and the earth caved between him and Bilqis's throne until he took it in his hand"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 44,
+        "prompt": {
+          "en": "According to the essay, what happens when the Queen enters the crystal-paved palace?"
+        },
+        "options": [
+          {
+            "en": "She refuses to enter and returns home to Sheba"
+          },
+          {
+            "en": "She is told to renounce the sun before entering"
+          },
+          {
+            "en": "She orders her own throne disguised to test Solomon"
+          },
+          {
+            "en": "She mistakes the glass floor for a pool, then submits to God"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay ends with the Queen taking the crystal floor for a pool of water, then, undeceived, submitting with Solomon to the Lord of all the worlds."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Led into the palace paved with crystal, she takes its glass floor for a pool of water, then, undeceived, submits with Solomon to the Lord of all the worlds"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:41:21Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:42:31Z",
+      "assembled_at": "2026-09-30T17:57:39Z"
+    }
+  },
+  "4": {
+    "id": "27:4",
+    "surah": 27,
+    "index": 4,
+    "range": [
+      45,
+      58
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 45,
+        "prompt": {
+          "en": "According to the narration, what did the deniers demand of Salih after rejecting the believers' faith?"
+        },
+        "options": [
+          {
+            "en": "That he leave the city with his followers"
+          },
+          {
+            "en": "That he name his heir before them"
+          },
+          {
+            "en": "That he bring them a sign if he was truthful"
+          },
+          {
+            "en": "That he swear by Allah not to harm them"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the narration the deniers, after rejecting what the believers accepted, challenged Salih to bring them a sign if he was truthful."
+        },
+        "anchor": {
+          "where": "verses.45.narrations.n1",
+          "quote": "And they said, 'O Salih, bring us a sign if you are truthful.'"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 47,
+        "prompt": {
+          "en": "\"Three things from which no prophet, nor anyone below him, is exempt: augury, envy, and brooding over the whisperings about creation.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the ill omen Thamud cast on Salih, Imam al-Sadiq listed three things no prophet or lesser person escapes: augury, envy, and brooding over whisperings."
+        },
+        "anchor": {
+          "where": "verses.47.narrations.n2",
+          "quote": "Three things from which no prophet, nor anyone below him, is exempt: augury, envy, and brooding over the whisperings about creation."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 50,
+        "prompt": {
+          "en": "They plotted, and God plotted; as they came against him, ____ struck them down, and their people were seized in ruin."
+        },
+        "options": [
+          {
+            "en": "a thunderbolt"
+          },
+          {
+            "en": "lightning"
+          },
+          {
+            "en": "the earthquake"
+          },
+          {
+            "en": "angels"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay adds a detail beyond verse 50: when the nine plotters came for Salih by night, it was angels who struck them down before their people were seized in ruin."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "as they came against him, angels struck them down, and their people were seized in ruin"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 57,
+        "prompt": {
+          "en": "According to the note, what does it mean that Lot's wife was 'among those who remained behind'?"
+        },
+        "options": [
+          {
+            "en": "She was left among those who stayed on in the punishment"
+          },
+          {
+            "en": "She hid behind the town and survived the rain"
+          },
+          {
+            "en": "She followed Lot's family a little later to safety"
+          },
+          {
+            "en": "She was spared because she stayed behind in prayer"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note glosses 'remained behind' not as lagging to safety but as being left among those who stayed on in the punishment, so she perished with the town."
+        },
+        "anchor": {
+          "where": "verses.57.note",
+          "quote": "she was left among those who stayed on in the punishment"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 58,
+        "prompt": {
+          "en": "According to the passage, the stories of Salih and Lot each leave the reader with a different lesson."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says both stories leave the reader with a single lesson: the plotter's scheme recoils on himself and deliverance belongs to those who believe and guard themselves."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Both stories leave the reader with a single lesson: the plot of the wrongdoer recoils upon him, and deliverance belongs to those who believe and guard themselves"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:42:19Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:43:21Z",
+      "assembled_at": "2026-09-30T17:57:39Z"
+    }
+  },
+  "5": {
+    "id": "27:5",
+    "surah": 27,
+    "index": 5,
+    "range": [
+      59,
+      66
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 59,
+        "prompt": {
+          "en": "According to the essay, after the surah's prophet-stories the passage turns to praising God and affirming that He alone deserves worship."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the passage turns from narrative to worship, a move Tabatabai reads as praising God, saluting His chosen servants, and affirming that He alone deserves worship."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the passage turns from narrative to worship"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 60,
+        "prompt": {
+          "en": "\"That is, an imam of guidance alongside an imam of misguidance in one age.\" Who glossed the verse this way?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about 'Is there a god besides Allah?', Imam al-Sadiq read it as an imam of guidance set beside an imam of misguidance in one age."
+        },
+        "anchor": {
+          "where": "verses.60.narrations.n1",
+          "quote": "an imam of guidance alongside an imam of misguidance in one age"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 62,
+        "prompt": {
+          "en": "In the narration on verse 62, whom does the passage identify as 'the distressed one' who calls on God?"
+        },
+        "options": [
+          {
+            "en": "Any believer who calls on God in distress"
+          },
+          {
+            "en": "The Prophet in his years of hardship"
+          },
+          {
+            "en": "The Qa'im of the family of Muhammad"
+          },
+          {
+            "en": "Every successor God places on the earth"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration on this verse says it was revealed about the Qa'im of the family of Muhammad, who is the distressed one that calls on God and is made a successor."
+        },
+        "anchor": {
+          "where": "verses.62.narrations.n2",
+          "quote": "It was revealed about the Qa'im of the family of Muhammad. By Allah, he is the distressed one"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 65,
+        "prompt": {
+          "en": "The knowledge of the Unseen is the knowledge of ____ and what Allah has enumerated."
+        },
+        "options": [
+          {
+            "en": "the Throne"
+          },
+          {
+            "en": "the Hour"
+          },
+          {
+            "en": "the Pen"
+          },
+          {
+            "en": "the angels"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam Ali sets learning from one who has knowledge apart from the Unseen itself, saying true knowledge of the Unseen is knowledge of the Hour and what Allah has enumerated."
+        },
+        "anchor": {
+          "where": "verses.65.narrations.n4",
+          "quote": "The knowledge of the Unseen is the knowledge of the Hour and what Allah has enumerated"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 66,
+        "prompt": {
+          "en": "How does Tabatabai read the verse's sequence about the deniers, who fail to comprehend, then doubt, then are blind?"
+        },
+        "options": [
+          {
+            "en": "As rising degrees of being cut off from the Hereafter"
+          },
+          {
+            "en": "As stages leading them back to belief"
+          },
+          {
+            "en": "As the ranks of their punishment in the Fire"
+          },
+          {
+            "en": "As proof the deniers secretly accept resurrection"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay closes by reading the verse's progression, from not comprehending to doubt to blindness, as rising degrees of the deniers being cut off from the Hereafter."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "rising degrees of their being cut off from the Hereafter"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:51:37Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:52:48Z",
+      "assembled_at": "2026-09-30T17:57:39Z"
+    }
+  },
+  "6": {
+    "id": "27:6",
+    "surah": 27,
+    "index": 6,
+    "range": [
+      67,
+      82
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 67,
+        "prompt": {
+          "en": "Tabatabai reads this as an objection built on finding the resurrection ____."
+        },
+        "options": [
+          {
+            "en": "inevitable"
+          },
+          {
+            "en": "self-evident"
+          },
+          {
+            "en": "far-fetched"
+          },
+          {
+            "en": "comforting"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay presents Tabatabai reading the deniers' words as an objection resting on their sense that being raised after turning to dust is far-fetched, not a genuine question."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads this as an objection built on finding the resurrection far-fetched"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 72,
+        "prompt": {
+          "en": "According to the essay, what does the reply that some of what they seek to hasten is right behind them point to?"
+        },
+        "options": [
+          {
+            "en": "A nearer, worldly punishment, perhaps the day of Badr"
+          },
+          {
+            "en": "Only the final resurrection at the end of time"
+          },
+          {
+            "en": "A reward held back for the patient"
+          },
+          {
+            "en": "The ruin of Aad and Thamud"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reads the reply as pointing to a nearer, worldly punishment that may be right behind them, perhaps the day of Badr, before the resurrection they deny."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "some of what they seek to hasten may be right behind them - a nearer, worldly punishment, perhaps the day of Badr"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 75,
+        "prompt": {
+          "en": "\"We are those He chose and gave to inherit that in which everything is set out.\" Who said this of the manifest Book?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the manifest Book, Imam al-Kazim said it is placed with them and that they are those God chose and gave to inherit that in which everything is set out."
+        },
+        "anchor": {
+          "where": "verses.75.narrations.n1",
+          "quote": "we are those He chose and gave to inherit that in which everything is set out"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 82,
+        "prompt": {
+          "en": "According to the note on verse 82, what does 'when the word falls upon them' mean?"
+        },
+        "options": [
+          {
+            "en": "Their appointed lifespans had all run out"
+          },
+          {
+            "en": "The Quran's warning had finally reached their ears"
+          },
+          {
+            "en": "The Hour had been postponed for them"
+          },
+          {
+            "en": "The punishment and the threat became due against them"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note glosses 'when the word falls upon them' to mean the punishment and the threat became due against them, not that their lives or the Hour had ended."
+        },
+        "anchor": {
+          "where": "verses.82.note",
+          "quote": "means that the punishment and the threat became due against them"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 82,
+        "prompt": {
+          "en": "According to the passage, Sunni exegetes read the Beast of verse 82 as a sign that the Hour is still far off."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say Sunni exegetes read the Beast as a sign of the approaching Hour, a creature brought out at the end of time, so calling it a far-off sign reverses their reading."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Sunni exegetes instead read it as a sign of the approaching Hour"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:50:56Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:52:06Z",
+      "assembled_at": "2026-09-30T17:57:39Z"
+    }
+  },
+  "7": {
+    "id": "27:7",
+    "surah": 27,
+    "index": 7,
+    "range": [
+      83,
+      93
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 83,
+        "prompt": {
+          "en": "Why do Shia commentators read the gathering of only a group from each nation as the raj'a, not the general Resurrection?"
+        },
+        "options": [
+          {
+            "en": "Because only a group is gathered, not everyone who ever lived"
+          },
+          {
+            "en": "Because the deniers are struck silent and cannot speak"
+          },
+          {
+            "en": "Because the trumpet blast has not yet sounded"
+          },
+          {
+            "en": "Because the mountains still appear to be stationary"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The general Resurrection leaves no one behind, so gathering only a group from each nation cannot be it; Shia commentators read this partial gathering as the raj'a, the return of some before the Day of Judgement."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia commentators take the gathering of only a group from each nation as the raj'a, the return of some before the Resurrection, since the general Resurrection leaves no one behind"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 89,
+        "prompt": {
+          "en": "\"I worship Him out of love for Him, the worship of the noble, and that is security.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The saying belongs to Imam al-Sadiq, who lists three ways of worship and names his own as worship out of love, the worship of the noble, which brings security from terror that day."
+        },
+        "anchor": {
+          "where": "verses.89.narrations.n4",
+          "quote": "but I worship Him out of love for Him, the worship of the noble, and that is security"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 89,
+        "prompt": {
+          "en": "When 'Whoever brings virtue shall receive better than it' was sent down to the Prophet, the Messenger said, 'O Allah, ____,' so Allah revealed, 'whoever brings a good deed shall have ten times the like of it.'"
+        },
+        "options": [
+          {
+            "en": "increase me"
+          },
+          {
+            "en": "forgive me"
+          },
+          {
+            "en": "guide me"
+          },
+          {
+            "en": "have mercy on me"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says that when the promise of a better reward for virtue came down, the Prophet asked God to increase him, and God then revealed the tenfold reward for a good deed."
+        },
+        "anchor": {
+          "where": "verses.89.narrations.n5",
+          "quote": "the Messenger said, 'O Allah, increase me,' so Allah revealed, 'whoever brings a good deed shall have ten times the like of it.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 91,
+        "prompt": {
+          "en": "According to the essay, Surah al-Naml ends as it began, with both warning and glad tidings."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay notes the surah closes as it opened: the Prophet is told to worship, submit, and recite, the guided gains for himself and the strayer is left to the warner, ending on praise."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah then ends as it began, with warning and glad tidings"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 93,
+        "prompt": {
+          "en": "In the essay's closing, how does al-Qummi read the signs that God promises to show in the final verse?"
+        },
+        "options": [
+          {
+            "en": "As the night and day given to people of faith"
+          },
+          {
+            "en": "As the mountains that drift like passing clouds"
+          },
+          {
+            "en": "As the Imams, recognized when they return"
+          },
+          {
+            "en": "As the trumpet blast that terrifies all creation"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay closes by saying God will show them His signs, which al-Qummi reads as the Imams, recognized when they return, so the surah ends on the promise of their return."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God will show them His signs, which al-Qummi reads as the Imams, recognized when they return"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:55:11Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:57:12Z",
+      "assembled_at": "2026-09-30T17:57:39Z"
+    }
+  }
+}

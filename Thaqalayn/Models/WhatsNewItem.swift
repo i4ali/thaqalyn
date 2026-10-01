@@ -25,6 +25,10 @@ enum WhatsNewDestination: Equatable {
     /// Open a surah in the passage reader at passage `index` (1-based ruku index),
     /// through the `thaqalayn://passage` deep link (Quran tab, tab 1).
     case passage(surah: Int, index: Int)
+    /// Open Miracle Stories (Explore tab feature), presented over Today.
+    case miracleStories
+    /// Switch to the Quran tab with its search field focused.
+    case quranSearch
     // Reserved for later: case journey(String), case tab(Int)
 }
 
@@ -42,6 +46,24 @@ struct WhatsNewItem: Identifiable, Equatable {
 enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
+        WhatsNewItem(
+            id: "quran-search",
+            sfSymbol: "magnifyingglass",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 9, day: 29).date ?? .distantPast, // placeholder - set at ship time (earlier than miracle-stories so that card surfaces first)
+            destination: .quranSearch,
+            title: "A smarter Quran search",
+            blurb: "Find a surah however you spell it, jump to 2:255 or Ayat al-Kursi, and search in Arabic or with words like sabr and Musa. Inside a surah, the magnifying glass now finds words too.",
+            cta: "Try the search"
+        ),
+        WhatsNewItem(
+            id: "miracle-stories",
+            sfSymbol: "sparkles",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 9, day: 30).date ?? .distantPast, // placeholder - set at ship time (later than passage-hub so this card surfaces first)
+            destination: .miracleStories,
+            title: "Miracle Stories",
+            blurb: "The sixteen miracle stories of 14 Mojzay, long read aloud in homes across the subcontinent, now retold in English and Urdu. Read them at your own pace, or tap Listen and hear each story told aloud.",
+            cta: "Read the stories"
+        ),
         WhatsNewItem(
             id: "passage-hub",
             sfSymbol: "point.3.filled.connected.trianglepath.dotted",

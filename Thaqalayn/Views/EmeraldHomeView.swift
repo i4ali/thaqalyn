@@ -12,6 +12,7 @@ struct EmeraldHomeView: View {
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
     @ObservedObject private var progressManager = ProgressManager.shared
+    @ObservedObject private var deepLinkRouter = DeepLinkRouter.shared
 
     @Binding var searchText: String
     @Binding var selectedSurahForDeepLink: SurahWithTafsir?
@@ -20,9 +21,21 @@ struct EmeraldHomeView: View {
     @Binding var targetPassageIndex: Int?
 
     @State private var showNotifications = false
-    @State private var targetConceptId: String?
     @State private var animateProgress = false
+    /// A search result being read; pushes the passage reader directly so one
+    /// Back returns to the results.
+    @State private var searchTarget: SearchPassageTarget?
+    @FocusState private var searchFocused: Bool
+    /// True once the search bar has stuck to the top of the scroll view; its
+    /// backing band only shows then, so it never tints the unpinned bar.
+    @State private var searchBarPinned = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    /// Focus mode: while the field is focused or holds a query, the heading and
+    /// Continue Reading card step aside and results fill the screen.
+    private var isSearching: Bool {
+        searchFocused || !searchText.trimmingCharacters(in: .whitespaces).isEmpty
+    }
 
 
     private var filteredSurahs: [SurahWithTafsir] {
@@ -41,51 +54,81 @@ struct EmeraldHomeView: View {
                 .padding(.top, 60)
                 .padding(.bottom, 10)
 
-            ScrollView {
-                VStack(alignment: .leading, spacing: 18) {
-                    EmHeading(eyebrow: QuranTabStrings.nobleQuranEyebrow, title: QuranTabStrings.readAndReflect)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+            ScrollViewReader { proxy in
+                ScrollView {
+                    // The search bar is a pinned section header: it keeps one
+                    // identity (so focus survives the layout change), rides up with
+                    // the heading, then sticks to the top while the list scrolls.
+                    LazyVStack(alignment: .leading, spacing: 18, pinnedViews: [.sectionHeaders]) {
+                        Color.clear.frame(height: 0).id(Self.topAnchor)
 
-                    if let info = progressManager.lastReadInfo,
-                       let s = dataManager.availableSurahs.first(where: { $0.surah.number == info.surahNumber }) {
-                        continueReadingCard(info: info, surah: s)
-                    }
+                        if !isSearching {
+                            EmHeading(eyebrow: QuranTabStrings.nobleQuranEyebrow, title: QuranTabStrings.readAndReflect)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 20)
+                                .transition(.opacity)
 
-                    searchField
-                    // One Set over all progress records per render, shared by every surah row.
-                    let readVerseKeys = progressManager.readVerseKeys
-                    if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
-                        EmDivider(label: QuranTabStrings.surahsCount(dataManager.availableSurahs.count))
-                        surahList(readVerseKeys: readVerseKeys)
-                    } else {
-                        SearchResultsView(
-                            query: searchText,
-                            readVerseKeys: readVerseKeys,
-                            onOpenVerse: { s, v in
-                                targetConceptId = nil
-                                targetPassageIndex = nil
-                                targetVerseNumber = v
-                                selectedSurahForDeepLink = dataManager.getSurah(number: s)
-                            },
-                            onOpenTheme: { s, v, cid in
-                                targetConceptId = cid
-                                targetPassageIndex = nil
-                                targetVerseNumber = v
-                                selectedSurahForDeepLink = dataManager.getSurah(number: s)
+                            if let info = progressManager.lastReadInfo,
+                               let s = dataManager.availableSurahs.first(where: { $0.surah.number == info.surahNumber }) {
+                                continueReadingCard(info: info, surah: s)
+                                    .padding(.horizontal, 20)
+                                    .transition(.opacity)
                             }
-                        )
+                        }
+
+                        Section {
+                            // One Set over all progress records per render, shared by every surah row.
+                            let readVerseKeys = progressManager.readVerseKeys
+                            Group {
+                                if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
+                                    EmDivider(label: QuranTabStrings.surahsCount(dataManager.availableSurahs.count))
+                                    surahList(readVerseKeys: readVerseKeys)
+                                } else {
+                                    SearchResultsView(
+                                        query: searchText,
+                                        readVerseKeys: readVerseKeys,
+                                        onOpen: { searchTarget = $0 }
+                                    )
+                                }
+                            }
+                            .padding(.horizontal, 20)
+                        } header: {
+                            QuranSearchBar(text: $searchText, isFocused: $searchFocused, isSearching: isSearching)
+                                .padding(.horizontal, 20)
+                                .padding(.vertical, 8)
+                                .background(pinnedHeaderBackground.opacity(searchBarPinned ? 1 : 0))
+                                .background(GeometryReader { geo in
+                                    Color.clear.preference(key: SearchBarOffsetKey.self,
+                                                           value: geo.frame(in: .named(Self.scrollSpace)).minY)
+                                })
+                        }
                     }
+                    .padding(.top, 12)
+                    .padding(.bottom, 120)
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, 12)
-                .padding(.bottom, 120)
+                .coordinateSpace(name: Self.scrollSpace)
+                .onPreferenceChange(SearchBarOffsetKey.self) { y in
+                    let pinned = y <= 0.5
+                    if pinned != searchBarPinned { searchBarPinned = pinned }
+                }
+                .scrollDismissesKeyboard(.immediately)
+                .onChange(of: isSearching) { _, searching in
+                    if searching { proxy.scrollTo(Self.topAnchor, anchor: .top) }
+                }
+                .onChange(of: searchText) { _, _ in
+                    proxy.scrollTo(Self.topAnchor, anchor: .top)
+                }
             }
         }
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.25), value: isSearching)
         .background(deepLinkLink)
+        .background(searchLink)
         .sheet(isPresented: $showNotifications) { NotificationsView() }
         .onAppear {
             withAnimation(reduceMotion ? nil : .easeOut(duration: 0.6)) { animateProgress = true }
+            consumeSearchFocus()
         }
+        .onChange(of: deepLinkRouter.pendingSearchFocus) { _, _ in consumeSearchFocus() }
     }
 
     private var greetingRow: some View {
@@ -175,17 +218,20 @@ struct EmeraldHomeView: View {
         return "\(QuranTabStrings.verseOf(info.verseNumber, s.surah.versesCount)) · \(QuranTabStrings.percentComplete(Int(info.progress * 100)))"
     }
 
-    private var searchField: some View {
-        HStack(spacing: 10) {
-            PhosphorIcon(name: "ph-magnifying-glass", size: 16).foregroundColor(themeManager.accentColor)
-            TextField("", text: $searchText,
-                      prompt: Text(QuranTabStrings.searchPlaceholder).foregroundColor(themeManager.tertiaryText))
-                .foregroundColor(themeManager.primaryText)
-                .font(.system(size: 15))
-        }
-        .padding(.horizontal, 14).padding(.vertical, 13)
-        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(themeManager.glassSurface))
-        .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(themeManager.strokeColor, lineWidth: 1))
+    private static let topAnchor = "quranTabTop"
+    private static let scrollSpace = "quranTabScroll"
+
+    /// The What's New search card asks for the field to be focused on arrival.
+    private func consumeSearchFocus() {
+        guard deepLinkRouter.pendingSearchFocus else { return }
+        deepLinkRouter.pendingSearchFocus = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { searchFocused = true }
+    }
+
+    /// Opaque band behind the pinned search bar so list rows don't show through
+    /// it once it sticks.
+    private var pinnedHeaderBackground: some View {
+        themeManager.emeraldBgTop
     }
 
     private func surahList(readVerseKeys: Set<String>) -> some View {
@@ -199,13 +245,32 @@ struct EmeraldHomeView: View {
     @ViewBuilder private var deepLinkLink: some View {
         if let surah = selectedSurahForDeepLink {
             NavigationLink(
-                destination: SurahDetailView(surahWithTafsir: surah, targetVerse: targetVerseNumber, targetConceptId: targetConceptId, targetPassageIndex: targetPassageIndex),
+                destination: SurahDetailView(surahWithTafsir: surah, targetVerse: targetVerseNumber, targetPassageIndex: targetPassageIndex),
                 isActive: Binding(
                     get: { selectedSurahForDeepLink != nil },
-                    set: { if !$0 { selectedSurahForDeepLink = nil; targetVerseNumber = nil; targetConceptId = nil; targetPassageIndex = nil } }
+                    set: { if !$0 { selectedSurahForDeepLink = nil; targetVerseNumber = nil; targetPassageIndex = nil } }
                 )
             ) { EmptyView() }
             .hidden()
         }
     }
+
+    @ViewBuilder private var searchLink: some View {
+        if let target = searchTarget, let destination = SearchPassageDestination(target: target) {
+            NavigationLink(
+                destination: destination,
+                isActive: Binding(
+                    get: { searchTarget != nil },
+                    set: { if !$0 { searchTarget = nil } }
+                )
+            ) { EmptyView() }
+            .hidden()
+        }
+    }
+}
+
+/// The search bar's top edge in the Quran tab's scroll viewport (0 when pinned).
+private struct SearchBarOffsetKey: PreferenceKey {
+    static var defaultValue: CGFloat = .infinity
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) { value = min(value, nextValue()) }
 }

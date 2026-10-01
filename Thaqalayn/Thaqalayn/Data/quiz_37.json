@@ -1,0 +1,807 @@
+{
+  "1": {
+    "id": "37:1",
+    "surah": 37,
+    "index": 1,
+    "range": [
+      1,
+      21
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to al-Qummi, whom does 'those ranged in ranks' include?"
+        },
+        "options": [
+          {
+            "en": "The angels, the prophets, and whoever forms a rank for God"
+          },
+          {
+            "en": "Only the angels who stand in ranks at prayer"
+          },
+          {
+            "en": "The devils who snatch fragments of the news"
+          },
+          {
+            "en": "The deniers who mock every sign they see"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "al-Qummi does not limit the phrase to angels; he glosses those ranged in ranks as the angels, the prophets, and whoever forms a rank for God and worships Him."
+        },
+        "anchor": {
+          "where": "verses.1.note",
+          "quote": "al-Qummi glosses those ranged in ranks as the angels, the prophets, and whoever forms a rank for God and worships Him"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 6,
+        "prompt": {
+          "en": "\"These stars in the sky are cities like the cities on the earth, each city tied to a pillar of light.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam Ali, named here as Amir al-Muminin, taught that the stars are cities like the cities on the earth, each tied to a pillar of light a journey of two hundred and fifty years long."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n1",
+          "quote": "These stars in the sky are cities like the cities on the earth, each city tied to a pillar of light"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 8,
+        "prompt": {
+          "en": "According to Tabatabai, the old cosmology behind these verses has been shown false, and they may be similitudes for unseen realities."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports Tabatabai's view that the old astronomy underlying the stars-and-devils imagery has been shown false, so these descriptions may stand as similitudes for unseen realities."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the old cosmology behind them has been shown false, and that they may be similitudes for unseen realities"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 11,
+        "prompt": {
+          "en": "al-Qummi glosses the viscous clay from which they were created as clay that ____."
+        },
+        "options": [
+          {
+            "en": "dries in the sun"
+          },
+          {
+            "en": "clings to the hand"
+          },
+          {
+            "en": "floats upon the water"
+          },
+          {
+            "en": "crumbles into fine dust"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "al-Qummi reads the viscous clay of verse 11 concretely: it is clay that clings to the hand, the stuff from which their creation began."
+        },
+        "anchor": {
+          "where": "verses.11.note",
+          "quote": "al-Qummi glosses the viscous clay from which they were created as clay that clings to the hand"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 21,
+        "prompt": {
+          "en": "In the essay's close, how does al-Tabrisi gloss the Day of Judgement the deniers used to deny?"
+        },
+        "options": [
+          {
+            "en": "As the day the devils are driven from the heaven"
+          },
+          {
+            "en": "As the single shout that wakes the dead"
+          },
+          {
+            "en": "As the day Adam was created from clay"
+          },
+          {
+            "en": "As the parting of truth from falsehood"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes with al-Tabrisi's gloss: the Day of Judgement the deniers denied is the parting of truth from falsehood, the passage's last word on the reckoning."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the Day of Judgement they used to deny, which al-Tabrisi glosses as the parting of truth from falsehood"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:01:00Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:02:10Z",
+      "assembled_at": "2026-09-30T21:22:51Z"
+    }
+  },
+  "2": {
+    "id": "37:2",
+    "surah": 37,
+    "index": 2,
+    "range": [
+      22,
+      74
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 22,
+        "prompt": {
+          "en": "Al-Qummi reads 'the wrongdoers' as those who wronged the ____ of their right, and 'their mates' as their likes."
+        },
+        "options": [
+          {
+            "en": "prophets and the messengers"
+          },
+          {
+            "en": "orphans and the widows"
+          },
+          {
+            "en": "poor and the needy"
+          },
+          {
+            "en": "family of Muhammad"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note gives al-Qummi's reading: the wrongdoers are those who wronged the family of Muhammad of their right, and their mates are their likes, not idolaters or the poor."
+        },
+        "anchor": {
+          "where": "verses.22.note",
+          "quote": "Al-Qummi reads 'the wrongdoers' as those who wronged the family of Muhammad of their right, and 'their mates' as their likes"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 33,
+        "prompt": {
+          "en": "According to the essay, how does the dispute between the followers and their leaders end?"
+        },
+        "options": [
+          {
+            "en": "Both parties share the punishment"
+          },
+          {
+            "en": "The leaders alone are punished for misleading them"
+          },
+          {
+            "en": "The followers are pardoned for being deceived"
+          },
+          {
+            "en": "Each side is spared for blaming the devils"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the leaders held no authority and the followers had no faith, so their Lord's word fell due and both parties share the punishment, since that is how God deals with the guilty."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Their Lord's word has fallen due, and both parties share the punishment, since that is how God deals with the guilty"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 41,
+        "prompt": {
+          "en": "\"The attendants know it, and bring it to God's friends before they ask them for it.\" Who said this of the known provision?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet Muhammad"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the known provision, Imam al-Baqir said the attendants in paradise know it and bring it to God's friends before they even ask, so they desire only to be honoured with it."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n3",
+          "quote": "the attendants know it, and bring it to God's friends before they ask them for it"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 55,
+        "prompt": {
+          "en": "According to the essay, what does the paradise-dweller see when he takes a look down?"
+        },
+        "options": [
+          {
+            "en": "The messengers who had once warned his people"
+          },
+          {
+            "en": "The leaders who had led the followers astray"
+          },
+          {
+            "en": "The companion who mocked the resurrection, down in hell"
+          },
+          {
+            "en": "A draught of scalding water poured on the damned"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says one dweller in paradise recalls a companion who mocked the resurrection, then looks down and sees him in the middle of hell, and says he was almost ruined but for his Lord's blessing."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "one dweller recalls a companion who mocked the resurrection; he looks down, sees him in the middle of hell, and says he was almost ruined"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 62,
+        "prompt": {
+          "en": "According to the passage, when Quraysh heard of the Zaqqum tree, they took it as a warning and gave up mocking the Prophet."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay reports the opposite: when Quraysh heard of the Zaqqum tree they said they knew no such tree, and Abu Jahl mockingly sent for dates and butter."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "when Quraysh heard of it they said they knew no such tree, and Abu Jahl mockingly sent for dates and butter"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:11:34Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:13:04Z",
+      "assembled_at": "2026-09-30T21:22:51Z"
+    }
+  },
+  "3": {
+    "id": "37:3",
+    "surah": 37,
+    "index": 3,
+    "range": [
+      75,
+      113
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 75,
+        "prompt": {
+          "en": "According to the essay, Noah cried out to his Lord only after he had despaired of his people ever coming to faith."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Noah called out only after he had despaired of his people's faith, and God then answered and delivered him and his household from the great distress."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Noah called out to his Lord after he had despaired of his people's faith, and God answered him and delivered him and his household from the great distress"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 83,
+        "prompt": {
+          "en": "According to the essay, to whom does Tabatabai say 'his' refers in the phrase 'Abraham was among his followers'?"
+        },
+        "options": [
+          {
+            "en": "Muhammad, since Abraham foreshadowed his community"
+          },
+          {
+            "en": "Noah, since Abraham shared his pure monotheism"
+          },
+          {
+            "en": "Adam, the forefather of all the prophets"
+          },
+          {
+            "en": "The righteous survivors of the flood"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai takes 'his' to refer to Noah, because Abraham shared Noah's pure monotheism, and finds nothing in the wording to support reading it of Muhammad."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai holds the pronoun refers to Noah, since Abraham shared his religion of pure monotheism, and he finds no support in the wording for reading it of Muhammad"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 84,
+        "prompt": {
+          "en": "Al-Qummi glosses the sound heart as the one free of ____."
+        },
+        "options": [
+          {
+            "en": "doubt"
+          },
+          {
+            "en": "fear"
+          },
+          {
+            "en": "envy"
+          },
+          {
+            "en": "pride"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note gives al-Qummi's gloss: the sound heart is the heart free of doubt, one of the passage's readings of Abraham coming to his Lord with a sound heart."
+        },
+        "anchor": {
+          "where": "verses.84.note",
+          "quote": "Al-Qummi glosses the sound heart as the one free of doubt"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 99,
+        "prompt": {
+          "en": "'His going to his Lord is his turning toward Him in worship, striving, and nearness to God.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about Abraham's going to his Lord, Imam Ali explained it as turning toward God in worship, striving and nearness, and noted its inner meaning differs from the wording."
+        },
+        "anchor": {
+          "where": "verses.99.narrations.n7",
+          "quote": "His going to his Lord is his turning toward Him in worship, striving, and nearness to God, Mighty and Glorious"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 107,
+        "prompt": {
+          "en": "According to the perspectives, what does al-Tabrisi say about the names of the ransomed son in the reports from the Imams?"
+        },
+        "options": [
+          {
+            "en": "Only Ishmael is named in the reports, never another"
+          },
+          {
+            "en": "The reports leave the son unnamed"
+          },
+          {
+            "en": "The Imams related just one disputed name"
+          },
+          {
+            "en": "Both names are related, but Ishmael is more evident"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say al-Tabrisi reports both names from the Imams but judges Ishmael the more evident, backed by the separate glad tidings of Isaac after the sacrifice."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Tabrisi says both names are related from the Imams, but the more evident in the reports is Ishmael, supported by the separate glad tidings of Isaac"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:09:18Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:11:30Z",
+      "assembled_at": "2026-09-30T21:22:51Z"
+    }
+  },
+  "4": {
+    "id": "37:4",
+    "surah": 37,
+    "index": 4,
+    "range": [
+      114,
+      138
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 114,
+        "prompt": {
+          "en": "According to the passage, al-Tabrisi glosses God's favor to Moses and Aaron as the gift of long life and great wealth."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says al-Tabrisi glosses the favor as blessings that cut off every harm from them, not the gift of wealth or long life."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tabrisi glosses the favor as blessings that cut off every harm from them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 123,
+        "prompt": {
+          "en": "How does the passage report Tabatabai treating the Shia reports that Ilyas is alive and immortal?"
+        },
+        "options": [
+          {
+            "en": "He accepts them as the plain sense of the verses"
+          },
+          {
+            "en": "He says they prove Ilyas was raised up alive"
+          },
+          {
+            "en": "He holds them weak and unsupported by the verses"
+          },
+          {
+            "en": "He makes them the basis of his reading"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Tabatabai notes some Shia reports make Ilyas alive and immortal, but the passage says he holds them weak and unsupported by the plain sense of the verses."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai observes that some Shia reports make Ilyas alive and immortal, but holds them weak and unsupported by the plain sense of the verses"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 123,
+        "prompt": {
+          "en": "\"I remembered Ilyas the prophet, who was among the worshipping prophets of the Children of Israel ...\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq tells how he remembered Ilyas, a worshipping prophet of the Children of Israel, and said in his prostration what Ilyas used to say."
+        },
+        "anchor": {
+          "where": "verses.123.narrations.n1",
+          "quote": "I remembered Ilyas the prophet, who was among the worshipping prophets of the Children of Israel, and I said what he used to say in his prostration"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 125,
+        "prompt": {
+          "en": "In al-Qummi's note on verse 125, what does 'ba'l' mean besides a worshipped idol?"
+        },
+        "options": [
+          {
+            "en": "Owner, as a Bedouin called himself his camel's ba'l"
+          },
+          {
+            "en": "A mountain where the people gathered to worship"
+          },
+          {
+            "en": "A prophet the people had rejected before Ilyas"
+          },
+          {
+            "en": "The name of the people's golden temple"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Qummi's note says Baal was an idol they worshipped and that ba'l also meant owner, citing a Bedouin who called himself his she-camel's ba'l."
+        },
+        "anchor": {
+          "where": "verses.125.note",
+          "quote": "Baal was an idol they worshipped, and that ba'l also meant owner: a Bedouin, asked whose she-camel it was, answered, 'I am its ba'l'"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 136,
+        "prompt": {
+          "en": "Al-Tusi recalls that Lot's people were struck with the ____ sent upon them and their towns overturned."
+        },
+        "options": [
+          {
+            "en": "fire"
+          },
+          {
+            "en": "stones"
+          },
+          {
+            "en": "floodwaters"
+          },
+          {
+            "en": "locusts"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Al-Tusi's note says Lot's people were struck with the stones sent upon them and their towns overturned; the verses only say the rest were destroyed."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi recalls that Lot's people were struck with the stones sent upon them and their towns overturned"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:18:40Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:19:50Z",
+      "assembled_at": "2026-09-30T21:22:51Z"
+    }
+  },
+  "5": {
+    "id": "37:5",
+    "surah": 37,
+    "index": 5,
+    "range": [
+      139,
+      182
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 141,
+        "prompt": {
+          "en": "\"What judgement is fairer than the lot, when the affair is entrusted to Allah, Mighty and Majestic?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked how to settle a disputed matter, Imam al-Sadiq answered that it comes out by the lot, and that no judgement is fairer than the lot once the affair is entrusted to Allah."
+        },
+        "anchor": {
+          "where": "verses.141.narrations.n1",
+          "quote": "What judgement is fairer than the lot, when the affair is entrusted to Allah, Mighty and Majestic?"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 142,
+        "prompt": {
+          "en": "Allah offered my ____ to the people of the heavens and the people of the earth."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "wilaya"
+          },
+          {
+            "en": "covenant"
+          },
+          {
+            "en": "command"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In this narration Imam Ali says God offered his wilaya to the people of the heavens and the earth; Jonah denied it, so God confined him in the fish until he affirmed it."
+        },
+        "anchor": {
+          "where": "verses.142.narrations.n2",
+          "quote": "Allah offered my wilaya to the people of the heavens and the people of the earth."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 158,
+        "prompt": {
+          "en": "In the essay, how does al-Suddi read the 'jinn' whom the Meccans made kin to God?"
+        },
+        "options": [
+          {
+            "en": "The Meccan idols"
+          },
+          {
+            "en": "The invisible spirits themselves"
+          },
+          {
+            "en": "The angels"
+          },
+          {
+            "en": "The offspring of Iblis"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reports al-Suddi's reading that the jinn in this verse are the angels, who know that those who claimed such kinship will be presented for punishment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Suddi, in Majma, reads the jinn here as the angels, who know that those who claimed this will be presented for punishment"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 177,
+        "prompt": {
+          "en": "One reading applies the punishment that descends in their courtyard to Banu Umayya and their partisans at the end of time."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Qummi reads the punishment that descends in their courtyard as falling on Banu Umayya and their partisans at the end of time, applying the watching that follows to the people of doubt."
+        },
+        "anchor": {
+          "where": "verses.177.note",
+          "quote": "Al-Qummi reads the punishment descending in their courtyard as falling on Banu Umayya and their partisans at the end of time"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 180,
+        "prompt": {
+          "en": "According to the essay, the closing 'Lord of Might' refers to the might by which God does what?"
+        },
+        "options": [
+          {
+            "en": "Punishes those who are bound for hell"
+          },
+          {
+            "en": "Gives honour to His prophets and messengers"
+          },
+          {
+            "en": "Confines the disobedient in the belly of the fish"
+          },
+          {
+            "en": "Provides for Jonah's people for a while"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay closes by noting al-Tusi's reading that the 'Lord of Might' means the might by which God gives honour to His prophets and messengers."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the might, al-Tusi notes, by which God gives honour to His prophets and messengers"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:21:09Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:22:25Z",
+      "assembled_at": "2026-09-30T21:22:51Z"
+    }
+  }
+}

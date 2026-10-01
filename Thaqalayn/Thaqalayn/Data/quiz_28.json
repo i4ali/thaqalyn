@@ -1,0 +1,1290 @@
+{
+  "1": {
+    "id": "28:1",
+    "surah": 28,
+    "index": 1,
+    "range": [
+      1,
+      13
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"We have become among our people like the Children of Israel among Pharaoh's folk: they slaughter our sons and spare our women.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali ibn al-Husayn"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Speaking to al-Minhal, Imam Ali ibn al-Husayn likened the Household's plight to the Children of Israel under Pharaoh, whose sons were slaughtered and women spared, saying the family is granted no right."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n1",
+          "quote": "We have become among our people like the Children of Israel among Pharaoh's folk: they slaughter our sons and spare our women"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 5,
+        "prompt": {
+          "en": "According to the perspectives, why does Shia exegesis argue that verses 5 and 6 are not about Moses?"
+        },
+        "options": [
+          {
+            "en": "The plural 'from them' would otherwise read 'from him'"
+          },
+          {
+            "en": "Moses was an apostle, not one of the imams"
+          },
+          {
+            "en": "The abased in the verse are Pharaoh's people, not Israel"
+          },
+          {
+            "en": "The promise was revealed in Mecca, long after Moses"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Qummi reasons that the verse says 'from them' in the plural, not 'from him,' so it cannot be about Moses alone but concerns the Family of Muhammad."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the plural 'from them' shows the verse is not about Moses, since that would read 'from him'"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the narration on verse 7, everyone who saw Moses was moved to love him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says no one saw Moses without loving him, citing God's words 'I cast upon you love from Me,' so it is true that all who saw him loved him."
+        },
+        "anchor": {
+          "where": "verses.7.narrations.n5",
+          "quote": "No one saw Moses without loving him; that is God's saying, 'I cast upon you love from Me.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 7,
+        "prompt": {
+          "en": "Al-Tusi explains that this revelation was ____ cast into her heart, not prophecy."
+        },
+        "options": [
+          {
+            "en": "guidance"
+          },
+          {
+            "en": "foresight"
+          },
+          {
+            "en": "inspiration"
+          },
+          {
+            "en": "instinct"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Al-Tusi reads the revelation to Moses' mother as inspiration cast into her heart, not prophecy, so she received it without being made a prophet."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi explains that this revelation was inspiration cast into her heart, not prophecy"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "According to the essay, how does al-Tusi explain why the infant refused every nurse's milk?"
+        },
+        "options": [
+          {
+            "en": "As a legal ban forbidding him to be nursed"
+          },
+          {
+            "en": "As God turning the child away from them, not a ban"
+          },
+          {
+            "en": "As an illness that kept him from feeding"
+          },
+          {
+            "en": "As the infant's grief at being taken from his mother"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says al-Tusi reads the refused milk not as a legal ban but as God turning the child away from the nurses, so his sister could guide them to his own mother."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the milk of every nurse is refused, which al-Tusi explains as God turning the child away from them rather than any legal ban"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:05:02Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:06:17Z",
+      "assembled_at": "2026-09-30T18:23:04Z"
+    }
+  },
+  "2": {
+    "id": "28:2",
+    "surah": 28,
+    "index": 2,
+    "range": [
+      14,
+      21
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 14,
+        "prompt": {
+          "en": "His coming of age was eighteen years, and 'became fully matured' means that he ____."
+        },
+        "options": [
+          {
+            "en": "learned to read"
+          },
+          {
+            "en": "left his home"
+          },
+          {
+            "en": "grew a beard"
+          },
+          {
+            "en": "began to preach"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq glosses 'became fully matured' as Moses growing a beard, the mark of full physical maturity, which the narration sets apart from his coming of age at eighteen years."
+        },
+        "anchor": {
+          "where": "verses.14.narrations.n1",
+          "quote": "His coming of age was eighteen years, and 'became fully matured' means that he grew a beard."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 15,
+        "prompt": {
+          "en": "According to the essay, who were the two men Moses came upon fighting in the city?"
+        },
+        "options": [
+          {
+            "en": "Two Copts quarreling in Pharaoh's household"
+          },
+          {
+            "en": "Two Israelites disputing over their inheritance"
+          },
+          {
+            "en": "An Israelite of his own people and a Copt, his enemy"
+          },
+          {
+            "en": "A Copt and a traveler from Midian"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay identifies the pair as an Israelite of Moses's own people and a Copt who was his enemy, with the Israelite calling on Moses for help against the Copt."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He comes upon two men fighting, one an Israelite of his own people and the other a Copt, his enemy"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 15,
+        "prompt": {
+          "en": "\"May this name bring you joy - the Shia. Have you not heard God say, 'The one who was from his followers sought his help against him who was from his enemies'?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Speaking to Abu Basir, Imam al-Sadiq took the verse's phrase 'his followers' as naming the Shia, telling him that the name should bring him joy."
+        },
+        "anchor": {
+          "where": "verses.15.narrations.n2",
+          "quote": "May this name bring you joy - the Shia. Have you not heard God say, 'The one who was from his followers sought his help against him who was from his enemies'?"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 15,
+        "prompt": {
+          "en": "According to the passage, one reading holds that Moses striking down the Copt was not evil. On what ground?"
+        },
+        "options": [
+          {
+            "en": "The Copt had struck Moses first, so it was self-defense"
+          },
+          {
+            "en": "God had commanded the killing; only its delay would have been better"
+          },
+          {
+            "en": "The Copt stood condemned to death under Egyptian law"
+          },
+          {
+            "en": "Moses acted to protect a fellow prophet from harm"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "One reading holds the act was not evil because God had commanded the killing; only delaying it would have been better, so no sin attached to Moses."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Tusi reports that his companions hold the act was not evil at all: God had commanded the killing, and only its delay would have been better"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the essay, Moses leaves the city reassured and safe, no longer in danger from the chiefs."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Moses departs fearful and vigilant, and that the passage leaves him a fugitive, thrown wholly on his Lord, on the road that will take him to Midian."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage leaves him a fugitive, thrown wholly on his Lord, on the road that will take him to Midian"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:00:58Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:02:12Z",
+      "assembled_at": "2026-09-30T18:23:04Z"
+    }
+  },
+  "3": {
+    "id": "28:3",
+    "surah": 28,
+    "index": 3,
+    "range": [
+      22,
+      28
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the passage, Moses set out for Midian even though he did not know the way there."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Moses turned toward Midian hoping his Lord would show him the right way, even though, as the commentary notes, he did not actually know the road there."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "though al-Mizan notes he did not know the road there"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 24,
+        "prompt": {
+          "en": "\"By God, he asked God for nothing but bread to eat, for he used to eat the herbs of the earth.\" Who said this about Moses?"
+        },
+        "options": [
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam Ali swore that Moses begged God only for bread, saying he lived on the herbs of the earth, so thin that the green showed through his belly."
+        },
+        "anchor": {
+          "where": "verses.24.narrations.n2",
+          "quote": "By God, he asked God for nothing but bread to eat, for he used to eat the herbs of the earth"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "In the narration on verse 26, how did the daughter learn that Moses was trustworthy?"
+        },
+        "options": [
+          {
+            "en": "He drove the other shepherds away from the well"
+          },
+          {
+            "en": "He refused to take any wages for the watering"
+          },
+          {
+            "en": "He told her to walk behind him, not looking at women"
+          },
+          {
+            "en": "He carried water for her aged father himself"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The daughter said she walked ahead until Moses told her to walk behind him and guide him if he strayed, for his people do not look at women's backs."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n3",
+          "quote": "I walked ahead of him, and he said, walk behind me, and if I go astray, guide me to the road; I am of a people who do not look at women's backs"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 28,
+        "prompt": {
+          "en": "Moses accepts, keeping either term ____ to himself, and calls God witness over what they agree."
+        },
+        "options": [
+          {
+            "en": "fixed"
+          },
+          {
+            "en": "open"
+          },
+          {
+            "en": "bound"
+          },
+          {
+            "en": "closed"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reads verse 28 as Moses accepting the pact while keeping the choice of which term to complete open to himself, calling God witness to their agreement."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Moses accepts, keeping either term open to himself, and calls God witness over what they agree"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "According to the passage, what does the Quran's own account say about the identity of the man who hosted Moses?"
+        },
+        "options": [
+          {
+            "en": "It names him directly as the prophet Shu'ayb"
+          },
+          {
+            "en": "It calls him a believer from Pharaoh's people"
+          },
+          {
+            "en": "It lists him among the messengers sent to Midian"
+          },
+          {
+            "en": "It does not name the man at all"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives open by noting the Quran does not name Moses' host; that silence is why Shia narrations and Sunni scholars discuss his identity at all."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Quran does not name the man who hosted Moses."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:07:00Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:08:07Z",
+      "assembled_at": "2026-09-30T18:23:04Z"
+    }
+  },
+  "4": {
+    "id": "28:4",
+    "surah": 28,
+    "index": 4,
+    "range": [
+      29,
+      42
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 29,
+        "prompt": {
+          "en": "According to the passage, what does the context show about the moment Moses saw the fire on the mountain?"
+        },
+        "options": [
+          {
+            "en": "It was night, bitterly cold, and they had lost their way"
+          },
+          {
+            "en": "It was a bright, warm morning on the road"
+          },
+          {
+            "en": "They were resting by a well outside a town"
+          },
+          {
+            "en": "A crowd of travellers was gathered at the fire"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage says the context shows it was night, bitterly cold, and that Moses and his family had lost their way when he saw the fire on the mountain."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the context shows it was night, bitterly cold, and that they had lost their way when he saw a fire on the side of the mountain"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 30,
+        "prompt": {
+          "en": "\"The right bank of the valley is the Euphrates, the blessed spot is Karbala, and the tree is Muhammad.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the right bank, the blessed spot and the tree, Imam al-Sadiq identified them as the Euphrates, Karbala, and Muhammad and his family."
+        },
+        "anchor": {
+          "where": "verses.30.narrations.n2",
+          "quote": "The right bank of the valley that God mentioned in His Book is the Euphrates; the blessed spot is Karbala; and the tree is Muhammad"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 32,
+        "prompt": {
+          "en": "The hand emerging 'white, without any fault' means its whiteness was not the whiteness of ____."
+        },
+        "options": [
+          {
+            "en": "leprosy"
+          },
+          {
+            "en": "snow"
+          },
+          {
+            "en": "chalk"
+          },
+          {
+            "en": "the moon"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note explains that the hand coming out 'white, without any fault' means its whiteness was not the whiteness of leprosy."
+        },
+        "anchor": {
+          "where": "verses.32.note",
+          "quote": "The hand emerging 'white, without any fault' means its whiteness was not the whiteness of leprosy"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 35,
+        "prompt": {
+          "en": "In a narration here, to what does the Prophet liken God strengthening his own arm by Ali?"
+        },
+        "options": [
+          {
+            "en": "To God strengthening Adam by the angels"
+          },
+          {
+            "en": "To God strengthening Moses' arm by Aaron"
+          },
+          {
+            "en": "To God strengthening Abraham by Ishmael"
+          },
+          {
+            "en": "To God strengthening David by Solomon"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The report likens God strengthening the Prophet's arm by Ali to God strengthening Moses' arm by his brother Aaron, matching Moses' request for Aaron as a helper."
+        },
+        "anchor": {
+          "where": "verses.35.narrations.n3",
+          "quote": "one by whom Allah strengthened my arm as He strengthened Moses' arm by Aaron"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 41,
+        "prompt": {
+          "en": "In the Shia reading, 'leaders who invite to the Fire' and 'leaders guiding by Our command' name one and the same class of leader."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False: the Shia reading sets the two verses against each other to mark two opposed classes of leader, those who put God's command before their own and those who put their own before His Book."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "to mark two opposed classes of leader, those who put God's command before their own and those who put their own command and desires before His Book"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:07:31Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:08:42Z",
+      "assembled_at": "2026-09-30T18:23:04Z"
+    }
+  },
+  "5": {
+    "id": "28:5",
+    "surah": 28,
+    "index": 5,
+    "range": [
+      43,
+      50
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 43,
+        "prompt": {
+          "en": "\"God has destroyed no people, no generation, no nation, no townsfolk with a punishment from heaven since the Torah was sent down upon the earth, except the townsfolk who were transformed into apes.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Ibn Abbas"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The Prophet declared that since the Torah came down, no people have been destroyed by a punishment from heaven, except the townsfolk who were turned into apes."
+        },
+        "anchor": {
+          "where": "verses.43.narrations.n1",
+          "quote": "since the Torah was sent down upon the earth, except the townsfolk who were transformed into apes"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 44,
+        "prompt": {
+          "en": "According to the essay, why does Tabatabai say God recounted Moses' story to the Prophet, who witnessed none of it?"
+        },
+        "options": [
+          {
+            "en": "As a mercy, to warn a people with no earlier warner"
+          },
+          {
+            "en": "Because the former generations had all been destroyed"
+          },
+          {
+            "en": "So the People of the Book would confirm the Quran"
+          },
+          {
+            "en": "Because the Meccans demanded a Book like Moses'"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the Prophet witnessed none of these events, yet God recounted them to him as a mercy, so he could warn a people no warner had reached before."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the Prophet witnessed none of this, yet God recounted it to him as a mercy, so that he might warn a people who had received no earlier warner"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 46,
+        "prompt": {
+          "en": "According to a narration, God recorded on a leaf, two thousand years before creation, that He forgave the Shi'a of Muhammad's family before they sought forgiveness."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration reports a Book God wrote on a leaf two thousand years before creation, in which He tells the Shi'a of Muhammad's family that He forgave them before they sought it."
+        },
+        "anchor": {
+          "where": "verses.46.narrations.n4",
+          "quote": "A Book God wrote on a leaf two thousand years before He created creation. In it: O Shi'a of the family of Muhammad, I gave you before you asked Me and forgave you before you sought forgiveness"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 47,
+        "prompt": {
+          "en": "Al-Tusi finds in this the obligation of divine ____, for otherwise the verse would carry no sound meaning."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "grace"
+          },
+          {
+            "en": "justice"
+          },
+          {
+            "en": "wisdom"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Al-Tusi reads verse 47 as establishing the obligation of divine grace, since otherwise God's sending of messengers, and the verse itself, would carry no sound meaning."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi finds in this the obligation of divine grace, for otherwise the verse would carry no sound meaning"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 50,
+        "prompt": {
+          "en": "According to the perspectives, what do the Shia narrations and al-Razi both treat as the root of going astray?"
+        },
+        "options": [
+          {
+            "en": "Ignorance of the Torah"
+          },
+          {
+            "en": "Fear of affliction"
+          },
+          {
+            "en": "Imitating the People of the Book"
+          },
+          {
+            "en": "Unguided personal opinion"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives note that both the Shia narrations and al-Razi treat unguided personal opinion as the root of going astray, differing only on what the missing guidance is."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both treat unguided personal opinion as the root of going astray, yet they differ on the missing guidance: an appointed Imam, or sound rational proof."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:12:03Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:13:03Z",
+      "assembled_at": "2026-09-30T18:23:04Z"
+    }
+  },
+  "6": {
+    "id": "28:6",
+    "surah": 28,
+    "index": 6,
+    "range": [
+      51,
+      60
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 51,
+        "prompt": {
+          "en": "Asked about 'We have carried on this discourse for them,' he said it means one Imam after another. Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "The Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Glossing the verse about the discourse carried on for them, Imam al-Sadiq read it as the line of Imams, one after another."
+        },
+        "anchor": {
+          "where": "verses.51.narrations.n1",
+          "quote": "he said: one Imam after another."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 53,
+        "prompt": {
+          "en": "According to the essay, why does the praised group say they were Muslims even before the Quran came?"
+        },
+        "options": [
+          {
+            "en": "They had found the Prophet described in their books"
+          },
+          {
+            "en": "They had prayed toward Mecca for many years"
+          },
+          {
+            "en": "They were descended from the earlier prophets"
+          },
+          {
+            "en": "An angel had foretold the Quran to them"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says this group already held the earlier scripture and affirmed the Quran because they had found the Prophet described in their books."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "for they had found the Prophet described in their books"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 54,
+        "prompt": {
+          "en": "And 'they repel evil with good' - the good is ____, and the evil is divulging the secret."
+        },
+        "options": [
+          {
+            "en": "patience"
+          },
+          {
+            "en": "charity"
+          },
+          {
+            "en": "repentance"
+          },
+          {
+            "en": "taqiyya"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq read 'they repel evil with good' through taqiyya: the good is taqiyya, while the evil is divulging the secret."
+        },
+        "anchor": {
+          "where": "verses.54.narrations.n2",
+          "quote": "the good is taqiyya, and the evil is divulging the secret"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 56,
+        "prompt": {
+          "en": "According to the passage, what do Shia commentators conclude from verse 56 about Abu Talib?"
+        },
+        "options": [
+          {
+            "en": "The verse proves the Prophet guided him to faith"
+          },
+          {
+            "en": "The verse settles nothing about his fate"
+          },
+          {
+            "en": "The verse decides his fate through his poetry"
+          },
+          {
+            "en": "The verse shows he never concealed his belief"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage ends the Shia reading by saying that, on their view, verse 56 settles nothing about Abu Talib's fate; his faith rests on other grounds."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "On their reading the verse settles nothing about Abu Talib's fate"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 59,
+        "prompt": {
+          "en": "According to the passage, God destroys a town as soon as its people grow prosperous and exult in their lifestyle."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage says God destroys no town until He raises a messenger in its mother-city, and only when its people are wrongdoers, not merely for prospering."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He destroys no town until He raises in its mother-city a messenger, and only when its people are wrongdoers"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:17:29Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:19:02Z",
+      "assembled_at": "2026-09-30T18:23:04Z"
+    }
+  },
+  "7": {
+    "id": "28:7",
+    "surah": 28,
+    "index": 7,
+    "range": [
+      61,
+      75
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 61,
+        "prompt": {
+          "en": "According to the passage, the man given only the wares of this world and the man given God's good promise can never be equal."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabrisi holds the two can never be equal, since the goods of this world are mixed with sorrow and pass away, while the reward with God is pure and lasting."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the two can never be equal, for the goods of this world are mixed with sorrow and pass away, while the reward with God is pure and lasting"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 61,
+        "prompt": {
+          "en": "God promised to ____ him against his enemies in this world, and promised Paradise to him and his friends in the Hereafter."
+        },
+        "options": [
+          {
+            "en": "avenge"
+          },
+          {
+            "en": "defend"
+          },
+          {
+            "en": "protect"
+          },
+          {
+            "en": "rescue"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says God promised to avenge Ali against his enemies in this world, and promised him and his friends Paradise in the Hereafter."
+        },
+        "anchor": {
+          "where": "verses.61.narrations.n1",
+          "quote": "God promised to avenge him against his enemies in this world, and promised Paradise to him and his friends in the Hereafter"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 63,
+        "prompt": {
+          "en": "In the Resurrection scene, how do the misleading leaders say they led their followers astray?"
+        },
+        "options": [
+          {
+            "en": "Because God had decreed and compelled them to do so"
+          },
+          {
+            "en": "Because their false gods commanded them to mislead others"
+          },
+          {
+            "en": "Only as they had strayed themselves, by choice not compulsion"
+          },
+          {
+            "en": "Because the followers had forced them into misguidance"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the leaders disown their followers, admitting they led them astray only as they themselves had strayed, by their own choice and not by compulsion."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "they led them astray only as they themselves had strayed, by their own choice and not by compulsion"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 65,
+        "prompt": {
+          "en": "\"When the servant enters his grave, Munkar comes to him and he is terrified. He is questioned about the Prophet.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq described the questioning of the grave, saying that when the servant enters it Munkar comes and he is terrified, then is asked about the Prophet."
+        },
+        "anchor": {
+          "where": "verses.65.narrations.n2",
+          "quote": "When the servant enters his grave, Munkar comes to him and he is terrified"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 68,
+        "prompt": {
+          "en": "According to the passage, what do the Shia narrations take 'they have no choice' to establish?"
+        },
+        "options": [
+          {
+            "en": "That whoever repents and has faith may be among the felicitous"
+          },
+          {
+            "en": "That God knows what the breasts conceal and disclose"
+          },
+          {
+            "en": "That night and day were made out of His mercy"
+          },
+          {
+            "en": "That the community cannot choose the Imam; God alone chooses him"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations press the denial further: the community cannot choose the Imam, for God alone chooses him, as He chose the Prophet and his Household."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the community cannot choose the Imam, for God alone chooses him, as He chose the Prophet and his Household"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:18:05Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:19:18Z",
+      "assembled_at": "2026-09-30T18:23:04Z"
+    }
+  },
+  "8": {
+    "id": "28:8",
+    "surah": 28,
+    "index": 8,
+    "range": [
+      76,
+      88
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 77,
+        "prompt": {
+          "en": "Al-Mizan notes that a person's true share of this world is what he uses for the ____."
+        },
+        "options": [
+          {
+            "en": "next"
+          },
+          {
+            "en": "world"
+          },
+          {
+            "en": "present"
+          },
+          {
+            "en": "poor"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The commentary says a person's real share of this world is not what he hoards but what he spends toward the Hereafter, the next life."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a person's true share of this world is what he uses for the next"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 78,
+        "prompt": {
+          "en": "How does the commentary read Korah's claim that he was given his wealth because of the knowledge he had?"
+        },
+        "options": [
+          {
+            "en": "As honest gratitude for a God-given talent"
+          },
+          {
+            "en": "As a warning to those who envied his fortune"
+          },
+          {
+            "en": "As the delusion of crediting his own skill, not God's gift"
+          },
+          {
+            "en": "As a lesson drawn from earlier destroyed generations"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The commentary reads the boast as the common delusion by which a man credits his own skill rather than God's gift for what he holds, and so turns from God."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the common delusion by which a man credits his own skill, not God's gift, for what he holds, and so turns from God"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 81,
+        "prompt": {
+          "en": "\"Whoever wears a garment and struts proudly in it, Allah makes the earth swallow him ... and he is the companion of Korah.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The Prophet warned that whoever struts proudly in a garment is swallowed by the earth from the brink of Hell, naming Korah the first to strut."
+        },
+        "anchor": {
+          "where": "verses.81.narrations.n2",
+          "quote": "Whoever wears a garment and struts proudly in it, Allah makes the earth swallow him from the brink of Hell; and he is the companion of Korah"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 83,
+        "prompt": {
+          "en": "In the narration on verse 83, what did Imam al-Sadiq say the world's rank was to him?"
+        },
+        "options": [
+          {
+            "en": "A garden whose fruit he freely enjoyed"
+          },
+          {
+            "en": "A trust he was bound to guard and grow"
+          },
+          {
+            "en": "A field he labored to cultivate for reward"
+          },
+          {
+            "en": "Only that of carrion, eaten when he is compelled"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq said the world's rank to him was only that of carrion, which he eats only when compelled, then wept reciting the verse."
+        },
+        "anchor": {
+          "where": "verses.83.narrations.n3",
+          "quote": "the world's rank to me is only that of carrion: when I am compelled I eat from it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 85,
+        "prompt": {
+          "en": "According to the passage, the added reading transmitted from the Imams takes the 'place of return' in verse 85 to mean the Prophet's death."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage says the reading transmitted from the Imams points to the raj'a, the return of the Prophet and the Imams to the world, not merely the Prophet's death."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Burhan transmits from the Imams an added reading, that the verse points to the raj'a, the return of the Prophet and the Imams to the world"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:21:40Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-09-30T18:22:37Z",
+      "assembled_at": "2026-09-30T18:23:04Z"
+    }
+  }
+}

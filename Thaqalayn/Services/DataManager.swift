@@ -102,8 +102,25 @@ class DataManager: ObservableObject {
         
         self.availableSurahs = surahs.sorted { $0.surah.number < $1.surah.number }
         print("✅ Loaded \(surahs.count) surahs (with/without tafsir)")
-        self.searchIndex = QuranSearchIndex(surahs: self.availableSurahs)
-        print("✅ Built search index: \(self.searchIndex?.verseEntries.count ?? 0) verses, \(self.searchIndex?.themeEntries.count ?? 0) themes")
+        Task { await buildSearchIndex() }
+    }
+
+    /// Builds the search index off the main thread, publishes it, then merges in
+    /// the shipped passage titles (read from passages_<n>.json, titles only).
+    private func buildSearchIndex() async {
+        let surahs = availableSurahs
+        let index = await Task.detached(priority: .userInitiated) {
+            QuranSearchIndex(surahs: surahs)
+        }.value
+        searchIndex = index
+        print("✅ Built search index: \(index.verses.count) verses, \(index.themes.count) theme groups")
+
+        let names = Dictionary(uniqueKeysWithValues: surahs.map { ($0.surah.number, $0.surah.englishName) })
+        let passages = await Task.detached(priority: .utility) {
+            QuranSearchIndex.loadPassageEntries(surahNames: names)
+        }.value
+        searchIndex = index.withPassages(passages)
+        print("✅ Search index: \(passages.count) passage titles")
     }
     
     private func loadSurahWithTafsir(surah: Surah) async -> SurahWithTafsir? {

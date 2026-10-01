@@ -1,0 +1,1129 @@
+{
+  "1": {
+    "id": "29:1",
+    "surah": 29,
+    "index": 1,
+    "range": [
+      1,
+      13
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 2,
+        "prompt": {
+          "en": "Bare profession is not the point; faith has to be ____ under trial."
+        },
+        "options": [
+          {
+            "en": "proven"
+          },
+          {
+            "en": "rewarded"
+          },
+          {
+            "en": "praised"
+          },
+          {
+            "en": "concealed"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay sets mere profession against real faith: saying 'We have faith' is not the point, because faith has to be proven under trial. So the missing word is 'proven.'"
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Bare profession is not the point; faith has to be proven under trial."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 5,
+        "prompt": {
+          "en": "\"So the meeting here is not seeing Him with the eye; the meeting is the resurrection.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Explaining what meeting Allah means, Imam Ali said it is not seeing Him with the eye but the resurrection, when God's promise of reward and punishment arrives."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n3",
+          "quote": "So the meeting here is not seeing Him with the eye; the meeting is the resurrection."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the essay, the striving of verse 6 is glossed as a struggle against which of these?"
+        },
+        "options": [
+          {
+            "en": "The peoples of Noah, Ad and Thamud"
+          },
+          {
+            "en": "Satan, the enemies of religion, and the soul"
+          },
+          {
+            "en": "The idolaters who persecuted the believers at Mecca"
+          },
+          {
+            "en": "Poverty, sickness, and the fear of death"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports the striving glossed as the believer's struggle against Satan, against the enemies of religion, and against the soul, which it calls one's fiercest enemy."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the struggle against Satan, against the enemies of religion, and against the soul, one's fiercest enemy"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 8,
+        "prompt": {
+          "en": "The commentators tie the command about honoring parents, yet not obeying them into idolatry, to Sad ibn Abi Waqqas, whose mother refused all food to break his faith."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "True. The note ties the verse, which bars obeying parents into idolatry, to Sad ibn Abi Waqqas, whose mother refused all food until he would abandon his faith."
+        },
+        "anchor": {
+          "where": "verses.8.note",
+          "quote": "the commentators tie it to Sad ibn Abi Waqqas, whose mother refused all food until he would abandon his faith"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the perspectives, how do Sunni exegetes read the testing spoken of in these verses?"
+        },
+        "options": [
+          {
+            "en": "As God's sifting of each believer by the strength of his faith"
+          },
+          {
+            "en": "As a punishment sent only upon the faithless"
+          },
+          {
+            "en": "As an ordeal that falls on the prophets alone"
+          },
+          {
+            "en": "As proof that the faithful will never face persecution"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives report that Sunni exegetes read the testing as God sifting every believer by the strength of his faith, the most severely tried being the prophets, then the righteous."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Sunni exegetes read the testing as God's sifting of every believer according to the strength of his faith"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:25:57Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:27:05Z",
+      "assembled_at": "2026-09-30T18:47:45Z"
+    }
+  },
+  "2": {
+    "id": "29:2",
+    "surah": 29,
+    "index": 2,
+    "range": [
+      14,
+      22
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the passage, how does the commentary link verses 14 to 22 to the surah's opening?"
+        },
+        "options": [
+          {
+            "en": "Proof that Noah's people repented in time"
+          },
+          {
+            "en": "A promise that the tested are always spared"
+          },
+          {
+            "en": "A sequel showing trial is a divine norm no one escapes"
+          },
+          {
+            "en": "A fresh subject unrelated to the surah's start"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The passage reads the verses as a sequel to the opening, which announced trial as a divine norm; God points to past peoples He tested, saving some and destroying others."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a sequel to the surah's opening, which announced that trial is a divine norm no one escapes"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 14,
+        "prompt": {
+          "en": "\"Noah lived two thousand three hundred years: eight hundred and fifty before he was sent ... and five hundred after he came down from the Ark.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq gave Noah's whole span as two thousand three hundred years: eight hundred fifty before his mission, nine hundred fifty calling his people, and five hundred after the Ark."
+        },
+        "anchor": {
+          "where": "verses.14.narrations.n1",
+          "quote": "Noah lived two thousand three hundred years: eight hundred and fifty before he was sent, a thousand years less fifty among his people calling them"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the passage, what does Abraham give as the real motive for worshipping God?"
+        },
+        "options": [
+          {
+            "en": "The return to God"
+          },
+          {
+            "en": "The hope of provision from the idols"
+          },
+          {
+            "en": "Fear of the flood that took Noah's people"
+          },
+          {
+            "en": "The promise of long life like Noah's"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The commentary observes that Abraham's closing words make the return to God, not the hope of provision, the real motive for worship, since provision has its own worldly causes."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this last clause makes the return, not the hope of provision, the real motive for worship"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 18,
+        "prompt": {
+          "en": "The Prophet said of Ali in his sermon: he is the ____ of every believing man and woman after me."
+        },
+        "options": [
+          {
+            "en": "witness"
+          },
+          {
+            "en": "guardian"
+          },
+          {
+            "en": "heir"
+          },
+          {
+            "en": "teacher"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration on verse 18 ties the verse to Ali, whom the Prophet names in his sermon the guardian of every believing man and woman after him."
+        },
+        "anchor": {
+          "where": "verses.18.narrations.n3",
+          "quote": "The Prophet said of Ali in his sermon: he is the guardian of every believing man and woman after me"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 19,
+        "prompt": {
+          "en": "According to the passage, the deniers rejected the messengers for reasons that had nothing to do with the resurrection."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The passage says these verses answer the deniers' true objection, because their rejection of the messengers rests on rejecting the resurrection itself."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "these verses answer the deniers' true objection, since their rejection of the messengers rests on rejecting the resurrection"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:24:43Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:25:43Z",
+      "assembled_at": "2026-09-30T18:47:45Z"
+    }
+  },
+  "3": {
+    "id": "29:3",
+    "surah": 29,
+    "index": 3,
+    "range": [
+      23,
+      30
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 23,
+        "prompt": {
+          "en": "According to the passage, verse 23 tells the Prophet plainly who will be lost, where an earlier verse had left that open."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Verse 23 breaks off Abraham's story to turn on the deniers; the commentary reads it as plainly naming, for the Prophet, who will be lost, where an earlier verse had left that open."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Mizan reads this as an address that tells the Prophet plainly who will be lost, after an earlier verse had left it open"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 27,
+        "prompt": {
+          "en": "Whoever acts for God, He grants his ____ in this world and the next, and suffices him in both."
+        },
+        "options": [
+          {
+            "en": "reward"
+          },
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "provision"
+          },
+          {
+            "en": "forgiveness"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam Ali teaches that whoever acts for God is granted his reward in both this world and the next, citing Abraham, who was given his reward in this world."
+        },
+        "anchor": {
+          "where": "verses.27.narrations.n5",
+          "quote": "Whoever acts for God, He grants his reward in this world and the next, and suffices him in both"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "In the passage's Shia reading, why does the honor of prophethood and leadership pass only through Abraham's purified progeny?"
+        },
+        "options": [
+          {
+            "en": "His reward in this world had to stay in his line"
+          },
+          {
+            "en": "Prophethood and leadership form a single, undivided rank"
+          },
+          {
+            "en": "The covenant does not reach the wrongdoers"
+          },
+          {
+            "en": "The fire had spared only Abraham among his people"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The Shia reading restricts the honor to Abraham's elect and purified line because the covenant does not reach the wrongdoers, so prophethood and leadership descend only through the chosen."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the covenant of 2:124 does not reach the wrongdoers, so it descends only through the chosen line ending in the Imams"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 29,
+        "prompt": {
+          "en": "'They used to break wind in their gatherings, without shame or modesty.' Who said this of Lot's people?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Glossing the outrages committed in their gatherings, Imam al-Rida says Lot's people used to break wind there without shame or modesty."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n6",
+          "quote": "They used to break wind in their gatherings, without shame or modesty"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 30,
+        "prompt": {
+          "en": "At the passage's close, how does the passage describe the people Lot prays for help against?"
+        },
+        "options": [
+          {
+            "en": "Those who deny the signs of God"
+          },
+          {
+            "en": "Those who spread corruption in the earth"
+          },
+          {
+            "en": "Those who took idols for mutual affection"
+          },
+          {
+            "en": "Those who despaired of God's mercy"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage closes on Lot's plea against the corruptive lot, glossed as those who spread corruption in the earth, its answer held for the verses that follow."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Lot answers with a prayer, 'My Lord! Help me against this corruptive lot,' whom al-Tibyan glosses as those who spread corruption in the earth"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:32:55Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:34:14Z",
+      "assembled_at": "2026-09-30T18:47:45Z"
+    }
+  },
+  "4": {
+    "id": "29:4",
+    "surah": 29,
+    "index": 4,
+    "range": [
+      31,
+      44
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 32,
+        "prompt": {
+          "en": "According to the essay, why does Abraham tell the angels 'Lot is in it'?"
+        },
+        "options": [
+          {
+            "en": "To warn Lot to flee the town before the punishment"
+          },
+          {
+            "en": "To turn the punishment from the town as an honor to Lot"
+          },
+          {
+            "en": "To claim the town's people were not really wrongdoers"
+          },
+          {
+            "en": "To ask that only his own household be spared"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says al-Mizan reads Abraham as seeking to turn the punishment away from the town as an honor to Lot, since he knew God does not destroy a prophet."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "he was seeking to turn the punishment away from the town as an honor to Lot, since he knew God does not destroy a prophet"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 40,
+        "prompt": {
+          "en": "Majma and al-Tibyan read this as plain proof against the ____, for had the wrong been God's doing they would not be the wrongdoers."
+        },
+        "options": [
+          {
+            "en": "polytheists"
+          },
+          {
+            "en": "hypocrites"
+          },
+          {
+            "en": "determinists"
+          },
+          {
+            "en": "philosophers"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Majma and al-Tibyan take verse 40 as proof against the determinists: if the wrong were God's doing, the people could not be the wrongdoers who wronged themselves."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Majma and al-Tibyan read this as plain proof against the determinists, for had the wrong been God's doing they would not be the wrongdoers"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 41,
+        "prompt": {
+          "en": "According to the essay, how does al-Mizan describe the guardianship of those who take guardians besides God?"
+        },
+        "options": [
+          {
+            "en": "Like the spider's house, it keeps nothing but the name"
+          },
+          {
+            "en": "A firm refuge that shelters its people from harm"
+          },
+          {
+            "en": "A bond God rewards for its sincerity"
+          },
+          {
+            "en": "A house stronger and safer than it first appears"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says al-Mizan reads such guardianship like the spider's house: it keeps nothing of a house but the name, sheltering no one and warding off nothing."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "such guardianship, like the spider's house, keeps nothing of a house but the name, sheltering no one and warding off nothing"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 43,
+        "prompt": {
+          "en": "\"The knower is the one who understood from God, so he acted in obedience to Him and shunned what angers Him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet Muhammad"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The passage reports that the Prophet recited the verse and said the knower is one who understood from God, acted in obedience to Him, and shunned what angers Him."
+        },
+        "anchor": {
+          "where": "verses.43.narrations.n4",
+          "quote": "The knower is the one who understood from God, so he acted in obedience to Him and shunned what angers Him"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 43,
+        "prompt": {
+          "en": "According to the passage, the Shia and Sunni commentators agree in reading 'those who have knowledge' as the Family of Muhammad."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage says both traditions agree the verse singles out those of real knowledge but differ on who they are: the Shia reading glosses them as the Family of Muhammad, while the Sunni keep the phrase general."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Sunni commentators keep the phrase general: Ibn Kathir takes it as those firmly grounded in knowledge who understand and ponder the parables"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:38:18Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:39:31Z",
+      "assembled_at": "2026-09-30T18:47:45Z"
+    }
+  },
+  "5": {
+    "id": "29:5",
+    "surah": 29,
+    "index": 5,
+    "range": [
+      45,
+      51
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 45,
+        "prompt": {
+          "en": "'Whoever wishes to know whether his prayer has been accepted, let him look: did his prayer hold him back from indecency and wrongdoing?' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked how to test whether prayer was accepted, Imam al-Sadiq said to see whether it held the worshipper back from indecency and wrongdoing; to that measure it was accepted."
+        },
+        "anchor": {
+          "where": "verses.45.narrations.n1",
+          "quote": "Whoever wishes to know whether his prayer has been accepted, let him look: did his prayer hold him back from indecency and wrongdoing?"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 45,
+        "prompt": {
+          "en": "According to the passage, what does 'the remembrance of Allah is surely greater' mean?"
+        },
+        "options": [
+          {
+            "en": "A worshipper's remembrance outweighs the prayer itself."
+          },
+          {
+            "en": "Remembering God matters more than shunning indecency."
+          },
+          {
+            "en": "God's remembrance of His servants is greater than theirs of Him."
+          },
+          {
+            "en": "Silent remembrance is greater than spoken remembrance."
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration glosses 'the remembrance of Allah is surely greater' as God's remembering the people of prayer being greater than their remembrance of Him, not the reverse."
+        },
+        "anchor": {
+          "where": "verses.45.narrations.n3",
+          "quote": "God's remembrance of the people of prayer is greater than their remembrance of Him."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 46,
+        "prompt": {
+          "en": "Tabrisi holds this is not abrogated by any later verse of ____, for arguing in the best way stays the standing obligation."
+        },
+        "options": [
+          {
+            "en": "fighting"
+          },
+          {
+            "en": "fasting"
+          },
+          {
+            "en": "warning"
+          },
+          {
+            "en": "peace"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports Tabrisi's view that arguing with the People of the Book in the best manner is not abrogated by any later verse of fighting but stays a standing obligation."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi holds this is not abrogated by any later verse of fighting, for arguing in the best way stays the standing obligation"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 48,
+        "prompt": {
+          "en": "The passage argues that because the Prophet had never read or written a book before, deniers had no ground to call the Quran something he copied."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says that because he had neither recited nor written any book before, deniers were left no ground for doubt; a reader or writer could have been accused of copying."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Because he neither recited nor wrote any book beforehand, the deniers are left no ground for doubt; had he been a reader or writer, they could have called the Quran something copied"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 51,
+        "prompt": {
+          "en": "According to the passage, what answers those who demand that another sign be sent down?"
+        },
+        "options": [
+          {
+            "en": "A fresh miracle sent down from his Lord."
+          },
+          {
+            "en": "The recited Book is itself the sufficient sign."
+          },
+          {
+            "en": "The punishment awaiting those who deny the signs."
+          },
+          {
+            "en": "The Prophet's promise of a sign to come."
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay's close says that to those demanding another sign, the reply is that signs rest with God alone and the recited Book is itself the sufficient sign and a lasting mercy."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "When they demand some other sign, the reply is that signs rest with God alone and the Messenger is only a warner. The recited Book is itself the sufficient sign and a lasting mercy"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:36:12Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:37:14Z",
+      "assembled_at": "2026-09-30T18:47:45Z"
+    }
+  },
+  "6": {
+    "id": "29:6",
+    "surah": 29,
+    "index": 6,
+    "range": [
+      52,
+      63
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 52,
+        "prompt": {
+          "en": "Tabrisi adds that this witness is the inimitable ____, established as being from God."
+        },
+        "options": [
+          {
+            "en": "Book"
+          },
+          {
+            "en": "sign"
+          },
+          {
+            "en": "covenant"
+          },
+          {
+            "en": "message"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay explains that the witness of the verse is the inimitable Book, the Quran established as being from God, not a bare spoken claim."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi adds that this witness is the inimitable Book, established as being from God"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 53,
+        "prompt": {
+          "en": "According to the verse note, whom does the passage identify as demanding that the punishment be hastened?"
+        },
+        "options": [
+          {
+            "en": "The hypocrites of Medina"
+          },
+          {
+            "en": "The People of the Book"
+          },
+          {
+            "en": "The Quraysh"
+          },
+          {
+            "en": "The Romans"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note names the ones asking for the punishment to be hastened as the Quraysh, the deniers the earlier verses are answering."
+        },
+        "anchor": {
+          "where": "verses.53.note",
+          "quote": "The ones demanding that the punishment be hastened are the Quraysh"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 56,
+        "prompt": {
+          "en": "\"Do not obey the corrupt among the kings. If you fear they will tempt you away from your religion, then My earth is vast.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Glossing 'My earth is vast,' Imam al-Baqir warned against obeying corrupt kings and said that if they tempt you from your religion, the earth is wide."
+        },
+        "anchor": {
+          "where": "verses.56.narrations.n1",
+          "quote": "Do not obey the corrupt among the kings. If you fear they will tempt you away from your religion, then My earth is vast"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 60,
+        "prompt": {
+          "en": "According to the verse note, what occasion lies behind the promise that God provides for the animals and for you?"
+        },
+        "options": [
+          {
+            "en": "The rich hoarded their grain during a famine"
+          },
+          {
+            "en": "Traders overcharged the poor for their bread"
+          },
+          {
+            "en": "Nomads refused to store food for the winter"
+          },
+          {
+            "en": "The Arabs used to kill their children fearing hunger"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note gives the occasion: the Arabs used to kill their children out of fear of hunger, and God answered that He provides for them and you."
+        },
+        "anchor": {
+          "where": "verses.60.note",
+          "quote": "the Arabs used to kill their children out of fear of hunger, and God answered that He provides for them and for you"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 61,
+        "prompt": {
+          "en": "According to the essay, the idolaters' confession that Allah is the Creator leaves them free to go on worshipping other gods."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the proof is now complete against them: by confessing the Creator they are bound to worship Him alone, not left free to worship others."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the proof is now complete against them, for by confessing the Creator they are bound to worship Him alone"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:42:40Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:43:47Z",
+      "assembled_at": "2026-09-30T18:47:45Z"
+    }
+  },
+  "7": {
+    "id": "29:7",
+    "surah": 29,
+    "index": 7,
+    "range": [
+      64,
+      69
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 64,
+        "prompt": {
+          "en": "According to the commentary, anyone who truly understood the gap between this world and the next would choose the enduring life over the passing one."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports al-Tabrisi's point that whoever grasped how the two lives differ would prefer the lasting Hereafter to the fleeting world, so this restatement is correct."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tabrisi adds that whoever grasped the difference would prefer the lasting to the fleeting"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 66,
+        "prompt": {
+          "en": "According to the essay, how does the commentary read the words 'Let them enjoy'?"
+        },
+        "options": [
+          {
+            "en": "As a genuine permission to enjoy this world"
+          },
+          {
+            "en": "As a threat, not a permission"
+          },
+          {
+            "en": "As a reward for their prayers at sea"
+          },
+          {
+            "en": "As a call to give thanks on land"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says that once saved the pagans return to idolatry in ingratitude, so 'Let them enjoy' is not permission but a threat, sealed by 'Soon they will know'."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the words 'Let them enjoy' carry not permission but a threat: 'Soon they will know'"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 67,
+        "prompt": {
+          "en": "God made Mecca a safe sanctuary while people are ____ all around it, so would they believe in falsehood and deny God's blessing?"
+        },
+        "options": [
+          {
+            "en": "seized"
+          },
+          {
+            "en": "safe"
+          },
+          {
+            "en": "guided"
+          },
+          {
+            "en": "blessed"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay contrasts Mecca's safety with the danger around it, saying people are seized all around the sanctuary, so 'seized' is the word the passage uses."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God made Mecca a safe sanctuary while people are seized all around it"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 69,
+        "prompt": {
+          "en": "\"God says, 'and Allah is indeed with the virtuous' - and I am that virtuous one.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "The Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the closing words 'and Allah is indeed with the virtuous,' Imam Ali identified himself as that virtuous one, so he is the speaker."
+        },
+        "anchor": {
+          "where": "verses.69.narrations.n2",
+          "quote": "God says, 'and Allah is indeed with the virtuous' - and I am that virtuous one."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 69,
+        "prompt": {
+          "en": "In the perspectives, the Shia narrations apply the final verse specifically to whom?"
+        },
+        "options": [
+          {
+            "en": "All who merely say they believe"
+          },
+          {
+            "en": "Every prophet sent before Islam"
+          },
+          {
+            "en": "All the people of the sanctuary at Mecca"
+          },
+          {
+            "en": "The Family of Muhammad and their followers"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations give the verse a specific application: al-Baqir teaches it is for the Family of Muhammad and their followers."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Baqir teaches this verse is for the Family of Muhammad and their followers"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T18:46:13Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T18:47:20Z",
+      "assembled_at": "2026-09-30T18:47:45Z"
+    }
+  }
+}

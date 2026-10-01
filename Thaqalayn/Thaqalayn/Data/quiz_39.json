@@ -1,0 +1,1290 @@
+{
+  "1": {
+    "id": "39:1",
+    "surah": 39,
+    "index": 1,
+    "range": [
+      1,
+      9
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "According to the essay, what does Tabatabai present the surah as responding to?"
+        },
+        "options": [
+          {
+            "en": "Idolaters pressing the Prophet to give up his call to tawhid"
+          },
+          {
+            "en": "Idolaters claiming that Allah had taken a son"
+          },
+          {
+            "en": "Idolaters who forget their Lord once distress lifts"
+          },
+          {
+            "en": "Idolaters pleading to be brought near to Allah"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the surah as an answer to the idolaters who pressed the Prophet to abandon his call to tawhid and threatened him with their gods."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the surah as an answer to the idolaters of the Prophet's people, who pressed him to abandon his call to tawhid and threatened him with their gods"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 6,
+        "prompt": {
+          "en": "Al-Qummi identifies the threefold darkness as the belly, the womb, and the ____."
+        },
+        "options": [
+          {
+            "en": "spine"
+          },
+          {
+            "en": "skull"
+          },
+          {
+            "en": "placenta"
+          },
+          {
+            "en": "liver"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Al-Qummi glosses the verse's threefold darkness as three coverings around the unborn child: the belly, the womb, and the placenta."
+        },
+        "anchor": {
+          "where": "verses.6.note",
+          "quote": "the threefold darkness as the belly, the womb, and the placenta"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 6,
+        "prompt": {
+          "en": "\"Glory be to Allah, far exalted above that! Does the one who says this claim Allah lacked the power to create Adam's wife from other than his rib?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the creation of Hawwa, Imam al-Sadiq rejected the claim that she was made from Adam's rib, denying that Allah lacked the power to create her otherwise."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n3",
+          "quote": "Glory be to Allah, far exalted above that! Does the one who says this claim Allah lacked the power to create Adam's wife from other than his rib?"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the essay, the passage uses 'no bearer bears another's burden' to reject the idea that God punishes children of unbelievers for their fathers' unbelief."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says al-Tusi takes 'no bearer bears another's burden' as refuting those who hold that God punishes the children of unbelievers for their fathers' unbelief, so the statement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "No bearer bears another's burden, which al-Tusi takes as refuting those who hold that God punishes the children of unbelievers for their fathers' unbelief"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "In the perspectives, one reading holds that Allah does not will the unbelief of His servants. What reason does it give?"
+        },
+        "options": [
+          {
+            "en": "Willing it would force Him to be pleased with it"
+          },
+          {
+            "en": "He has no need of His servants at all"
+          },
+          {
+            "en": "Man sets up equals only when distress lifts"
+          },
+          {
+            "en": "Every soul returns to its Lord to be informed"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "This reading argues that had Allah willed the unbelief of His servants, He would have to be pleased with it once it occurred, so He does not will it."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Allah does not will the unbelief that comes from His servants, for had He willed it He would have to be pleased with it once it occurred"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:38:43Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:40:25Z",
+      "assembled_at": "2026-09-30T22:03:58Z"
+    }
+  },
+  "2": {
+    "id": "39:2",
+    "surah": 39,
+    "index": 2,
+    "range": [
+      10,
+      21
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 10,
+        "prompt": {
+          "en": "A company knocks at the gate of Paradise and answers, 'We are the people of patience.' Who narrated this scene?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Kazim"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked who they were, the company answered that they were the people of patience, patient in obeying Allah and away from disobedience; Imam al-Sadiq narrates this scene at the gate of Paradise."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n1",
+          "quote": "A company of people rises and comes to the gate of Paradise and knocks. They are asked, 'Who are you?' They say, 'We are the people of patience.'"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 14,
+        "prompt": {
+          "en": "In the essay, what hope of the polytheists do the Prophet's declarations of exclusive faith cut off?"
+        },
+        "options": [
+          {
+            "en": "Any hope that he might forgive their idolatry"
+          },
+          {
+            "en": "Any hope that he might delay the Day of Resurrection"
+          },
+          {
+            "en": "Any hope that he might yield to their gods"
+          },
+          {
+            "en": "Any hope that he might share his reward with them"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reports that Tabatabai reads the Prophet's declarations of exclusive faith as cutting off any hope the polytheists held that he might yield to their gods."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads these declarations as cutting off any hope the polytheists held that he might yield to their gods"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 15,
+        "prompt": {
+          "en": "Al-Tabrisi records from al-Hasan that they lose the families made ready for them in the ____."
+        },
+        "options": [
+          {
+            "en": "Garden"
+          },
+          {
+            "en": "Fire"
+          },
+          {
+            "en": "world"
+          },
+          {
+            "en": "grave"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports from al-Hasan that these losers lose the very families that had been made ready for them in the Garden, that is, in Paradise."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabrisi records from al-Hasan that they lose the families made ready for them in the Garden"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 19,
+        "prompt": {
+          "en": "In the narration on verse 19, against whom do the limbs testify?"
+        },
+        "options": [
+          {
+            "en": "Every soul, whether believer or disbeliever"
+          },
+          {
+            "en": "Those who ruined themselves and their families"
+          },
+          {
+            "en": "The believer given his book in his right hand"
+          },
+          {
+            "en": "Only him against whom the word of punishment is due"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The narration says the limbs never testify against a believer, who is given his book in his right hand; they testify only against the one upon whom the word of punishment has fallen due."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n6",
+          "quote": "The limbs do not testify against a believer; they testify only against him upon whom the word of punishment has become due."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the passage, the closing sign of water and withering crops is read as a likeness of the lasting reward in Paradise."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says al-Safi reads the closing sign of water and many-hued crops withering to chaff as a likeness of the fleeting world, not of any lasting reward."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "crops of many hues that wither, yellow, and crumble to chaff, which al-Safi reads as a likeness of the fleeting world"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:37:58Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:39:10Z",
+      "assembled_at": "2026-09-30T22:03:58Z"
+    }
+  },
+  "3": {
+    "id": "39:3",
+    "surah": 39,
+    "index": 3,
+    "range": [
+      22,
+      31
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the passage, the light that the guided believer follows is compared to what?"
+        },
+        "options": [
+          {
+            "en": "A lamp lit in the heart at the moment of belief"
+          },
+          {
+            "en": "A mount he rides to tell truth from falsehood"
+          },
+          {
+            "en": "A shield that wards off the fire of punishment"
+          },
+          {
+            "en": "A straight path laid out before his feet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Tabatabai reads the light as a mount the believer rides, seeing the truth and telling it from falsehood, which the hard-hearted cannot do."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the light as a mount the believer rides, seeing the truth and telling it from falsehood, which the hard-hearted cannot do"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 23,
+        "prompt": {
+          "en": "\"Glory be to Allah! That is from Satan. They were not described by this; it is only softening, tenderness, tears, and fear.\" Who said this of those who faint at the Quran?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "When told some people faint at the Quran, Imam al-Baqir said that is from Satan; the true state is only softening, tenderness, tears, and fear."
+        },
+        "anchor": {
+          "where": "verses.23.narrations.n3",
+          "quote": "Glory be to Allah! That is from Satan. They were not described by this; it is only softening, tenderness, tears, and fear"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 24,
+        "prompt": {
+          "en": "Al-Tusi explains that such a person is flung into the fire with his hands ____, so that nothing but his face is left to ward it off."
+        },
+        "options": [
+          {
+            "en": "burned"
+          },
+          {
+            "en": "raised"
+          },
+          {
+            "en": "shackled"
+          },
+          {
+            "en": "hidden"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Al-Tusi explains the wrongdoer is flung into the fire with his hands shackled, so only his face is left to fend off the punishment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi explains that such a person is flung into the fire with his hands shackled, so that nothing but his face is left to ward it off"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 30,
+        "prompt": {
+          "en": "According to the passage, the words that you will die and they too will die announced to the Prophet his own death."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq said that with the words you will die and they will die, Allah announced to His Prophet his own death, so this is true."
+        },
+        "anchor": {
+          "where": "verses.30.narrations.n6",
+          "quote": "Allah, mighty and glorious, announced to His Prophet, may Allah bless him and his family, his own death"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 31,
+        "prompt": {
+          "en": "According to the essay, how does the passage's address end?"
+        },
+        "options": [
+          {
+            "en": "By turning to the Prophet, who will contend before their Lord"
+          },
+          {
+            "en": "By seizing the earlier nations with unexpected punishment"
+          },
+          {
+            "en": "By opening the believer's breast to a light from his Lord"
+          },
+          {
+            "en": "By telling the wrongdoers to taste what they earned"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the address finally turns to the Prophet himself: he and they will contend before their Lord on the Day of Resurrection."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Finally the address turns to the Prophet himself: he and they will all die, and then, on the Day of Resurrection, they will contend before their Lord"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:54:04Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-09-30T21:55:10Z",
+      "assembled_at": "2026-09-30T22:03:58Z"
+    }
+  },
+  "4": {
+    "id": "39:4",
+    "surah": 39,
+    "index": 4,
+    "range": [
+      32,
+      41
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 32,
+        "prompt": {
+          "en": "According to the essay, how does Tabatabai read the falsehood attributed to Allah in the opening verse?"
+        },
+        "options": [
+          {
+            "en": "A denial of the coming resurrection"
+          },
+          {
+            "en": "The claim that God has partners"
+          },
+          {
+            "en": "The worship of the sun and moon"
+          },
+          {
+            "en": "A refusal to pay the poor-rate"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the falsehood as the claim that God has partners, a wrong made greater by the One it touches; the other options are not the lie the verse names."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the falsehood as the claim that God has partners, a wrong made greater by the One it touches"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 34,
+        "prompt": {
+          "en": "They will have whatever they wish with their Lord, their will there being the full ____ of what they attain."
+        },
+        "options": [
+          {
+            "en": "cause"
+          },
+          {
+            "en": "measure"
+          },
+          {
+            "en": "record"
+          },
+          {
+            "en": "witness"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says in paradise their own will is the full cause of what they attain, so whatever the Godwary wish for is exactly what they receive."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "They will have whatever they wish with their Lord, their will there being the full cause of what they attain"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 36,
+        "prompt": {
+          "en": "According to the note, how does al-Qummi read the idolaters trying to 'frighten' the Prophet 'of others than Him'?"
+        },
+        "options": [
+          {
+            "en": "Their demand 'Exempt us from Ali' and threat to join disbelievers"
+          },
+          {
+            "en": "Their mockery of the Prophet's poverty and few followers"
+          },
+          {
+            "en": "Their offer to share rule if he dropped the mission"
+          },
+          {
+            "en": "Their boast that their idols would defend them in battle"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note says al-Qummi reads the frightening as the idolaters' demand to the Prophet, 'Exempt us from Ali,' and their threat that they would join the disbelievers."
+        },
+        "anchor": {
+          "where": "verses.36.note",
+          "quote": "Al-Qummi reads 'they would frighten you of others than Him' as their words to the Prophet, 'Exempt us from Ali,' and their threat that they would join the disbelievers"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 38,
+        "prompt": {
+          "en": "'He created them upon the recognition of Him ... and such is His word, If you ask them who created the heavens and the earth, they will surely say, Allah.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Kazim"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Explaining that God created people upon recognition of Him, Imam al-Baqir cited the Prophet's saying that every newborn is born upon the fitra and quoted the verse."
+        },
+        "anchor": {
+          "where": "verses.38.narrations.n4",
+          "quote": "the Messenger of God said, 'Every newborn is born upon the fitra,' meaning the recognition that God, mighty and glorious, is its creator"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 41,
+        "prompt": {
+          "en": "According to the essay, the Prophet is made a keeper over the idolaters, answerable for whether they are guided or go astray."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says guidance and straying fall back on the person, and the Prophet is no keeper over them, only to convey the message, so the statement is false."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "guidance and straying fall back on the person, and the Prophet is no keeper over them, only to convey"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:49:17Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:50:54Z",
+      "assembled_at": "2026-09-30T22:03:58Z"
+    }
+  },
+  "5": {
+    "id": "39:5",
+    "surah": 39,
+    "index": 5,
+    "range": [
+      42,
+      52
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 42,
+        "prompt": {
+          "en": "According to the passage, how does Tabatabai reconcile God taking souls with the angel of death doing so?"
+        },
+        "options": [
+          {
+            "en": "The angel of death takes souls independently of God."
+          },
+          {
+            "en": "God alone takes souls; the angels act as intermediary means."
+          },
+          {
+            "en": "God takes believers' souls and the angels take others'."
+          },
+          {
+            "en": "The angels take souls and God only receives them afterward."
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says God alone is in truth the taker of souls, while the angel of death and the angels are only intermediary means acting by His command."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai holds that God alone is in truth the taker of souls, and the angel of death and the angels are intermediary means acting by His command"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 42,
+        "prompt": {
+          "en": "\"There is no one who sleeps but his self ascends to the heaven while his spirit remains in his body, and between them is a link like a sunbeam.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Baqir taught that when one sleeps the self ascends to heaven while the spirit stays in the body, the two joined by a link like a sunbeam."
+        },
+        "anchor": {
+          "where": "verses.42.narrations.n2",
+          "quote": "There is no one who sleeps but his self ascends to the heaven while his spirit remains in his body, and between them is a link like a sunbeam"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 45,
+        "prompt": {
+          "en": "According to the passage, the Shia narrations pair 'God mentioned alone' in verse 45 with obedience to the family of Muhammad."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives section reports that the Shia narrations read 'God mentioned alone' as paired with obedience to the family of Muhammad, so the statement is true."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "they pair God 'mentioned alone' with obedience to the family of Muhammad"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 47,
+        "prompt": {
+          "en": "Tabatabai identifies them as the deniers of ____, met by what is worse than they had pictured."
+        },
+        "options": [
+          {
+            "en": "intercession"
+          },
+          {
+            "en": "the signs"
+          },
+          {
+            "en": "resurrection"
+          },
+          {
+            "en": "the Unseen"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tabatabai reads these wrongdoers as the deniers of resurrection, who on the Day are met by what is worse than they had pictured."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai identifies them as the deniers of resurrection, met by what is worse than they had pictured"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 52,
+        "prompt": {
+          "en": "How does the essay's closing line answer the man who claimed his blessing came by his own knowledge?"
+        },
+        "options": [
+          {
+            "en": "Provision is fixed for each person from birth."
+          },
+          {
+            "en": "Wealth is a reward for the knowledge one has gained."
+          },
+          {
+            "en": "Provision comes through the intercession of others besides God."
+          },
+          {
+            "en": "God expands and tightens provision by His will, not any claimant's knowledge."
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's closing line answers verse 49's boaster: God expands and tightens provision by His will, not by any claimant's knowledge, a sign for people of faith."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He expands and tightens provision by His will, not any claimant's knowledge"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:46:34Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:48:26Z",
+      "assembled_at": "2026-09-30T22:03:58Z"
+    }
+  },
+  "6": {
+    "id": "39:6",
+    "surah": 39,
+    "index": 6,
+    "range": [
+      53,
+      63
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 53,
+        "prompt": {
+          "en": "According to the essay, what does the summons 'O My servants' do for the transgressors?"
+        },
+        "options": [
+          {
+            "en": "Warns them that no repentance will now be accepted"
+          },
+          {
+            "en": "Singles out the polytheists of Mecca for punishment"
+          },
+          {
+            "en": "Reminds them of God's claim and draws them toward His mercy"
+          },
+          {
+            "en": "Announces that the punishment has already begun"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says this summons, spoken in God's own voice, both reminds the transgressors of His claim on them and draws them toward His mercy, rather than threatening them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a summons that both reminds them of God's claim on them and draws them toward His mercy"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 53,
+        "prompt": {
+          "en": "Al-Tabrisi relates that Imam Ali called this the most ____ verse in the Quran."
+        },
+        "options": [
+          {
+            "en": "merciful"
+          },
+          {
+            "en": "expansive"
+          },
+          {
+            "en": "frightening"
+          },
+          {
+            "en": "difficult"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports, on al-Tabrisi's authority, that Imam Ali called this the most expansive verse in the Quran, because it promises that God will forgive all sins."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabrisi relates that Imam Ali called this the most expansive verse in the Quran"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 55,
+        "prompt": {
+          "en": "How does al-Qummi read 'the best of what has been sent down to you from your Lord'?"
+        },
+        "options": [
+          {
+            "en": "As the Quran and the wilaya of Amir al-Mu'minin and the Imams"
+          },
+          {
+            "en": "As the five daily prayers and fasting"
+          },
+          {
+            "en": "As patience under the Meccans' persecution"
+          },
+          {
+            "en": "As the scriptures given to earlier prophets"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note says al-Qummi reads the best of what was sent down as the Quran together with the wilaya of Amir al-Mu'minin and the Imams, not as ritual acts."
+        },
+        "anchor": {
+          "where": "verses.55.note",
+          "quote": "Al-Qummi reads 'the best of what has been sent down to you from your Lord' as the Quran and the wilaya of Amir al-Mu'minin and the Imams"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 62,
+        "prompt": {
+          "en": "\"God delegated to His Prophet the affair of His religion, but as for creation and provision, no.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Marking what God entrusted to the Prophet, Imam al-Rida said He delegated the affair of religion but not creation and provision, citing that Allah is creator of all things."
+        },
+        "anchor": {
+          "where": "verses.62.narrations.n7",
+          "quote": "God delegated to His Prophet the affair of His religion"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 56,
+        "prompt": {
+          "en": "According to the perspectives, reading 'the side of Allah' as God's command or obedience is a reading only Shia narrations give."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The perspectives call this reading shared: al-Tabrisi records it as command from Mujahid and al-Suddi and as obedience from al-Hasan, and al-Tabari settles on it too."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The reading of 'the side of Allah' as God's command or obedience is shared: al-Tabrisi records command from Mujahid and al-Suddi, obedience from al-Hasan"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:01:38Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:02:49Z",
+      "assembled_at": "2026-09-30T22:03:58Z"
+    }
+  },
+  "7": {
+    "id": "39:7",
+    "surah": 39,
+    "index": 7,
+    "range": [
+      64,
+      70
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 64,
+        "prompt": {
+          "en": "According to the passage, the opening verse answers pagans who were pressing the Prophet to worship their gods."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says God tells the Prophet to answer the pagans pressing him to worship their gods, asking whether they would have him worship any but Allah, so the statement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God tells the Prophet to answer the pagans who press him to worship their gods, asking whether they would have him worship any but Allah"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 65,
+        "prompt": {
+          "en": "According to the perspectives, how do the Shia narrations read the 'partner' in 'if you ascribe a partner your works shall fail'?"
+        },
+        "options": [
+          {
+            "en": "Associating another in the guardianship of Ali"
+          },
+          {
+            "en": "Reviling the idols that Quraysh worshipped"
+          },
+          {
+            "en": "Ingratitude for the support given by Ali"
+          },
+          {
+            "en": "Doubting the blowing of the Trumpet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations read the partner as associating another in the guardianship of Ali after the Prophet, so works built on that rival allegiance are the ones that fail."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the Shia narrations read the shirk as associating another in the guardianship of Ali"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 67,
+        "prompt": {
+          "en": "He is not described by any ____ but that He is greater than that."
+        },
+        "options": [
+          {
+            "en": "likeness"
+          },
+          {
+            "en": "limit"
+          },
+          {
+            "en": "measure"
+          },
+          {
+            "en": "name"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The Imam says God cannot be measured: no description fits Him except that He is greater than it, so the missing word is measure."
+        },
+        "anchor": {
+          "where": "verses.67.narrations.n3",
+          "quote": "He is not described by any measure but that He is greater than that."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 68,
+        "prompt": {
+          "en": "Asked about the two blasts of the Trumpet, he said: 'God commands Israfil, and he descends to the earth with the Trumpet ... no living soul remains on the earth but it swoons and dies.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sajjad"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The narration on the two blasts is from Imam al-Sajjad, who explains that at the first blast God commands Israfil to sound the Trumpet, and every living soul on earth swoons and dies."
+        },
+        "anchor": {
+          "where": "verses.68.narrations.n5",
+          "quote": "As for the first blast, God commands Israfil, and he descends to the earth with the Trumpet … he blows it a single blast … and no living soul remains on the earth but it swoons and dies."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 69,
+        "prompt": {
+          "en": "According to the essay, what is brought and set up when the earth glows with the light of her Lord?"
+        },
+        "options": [
+          {
+            "en": "The Trumpet and Israfil"
+          },
+          {
+            "en": "The Book, with the prophets and the martyrs"
+          },
+          {
+            "en": "The idols the pagans worshipped"
+          },
+          {
+            "en": "The scrolled heavens"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the essay's close the earth glows with the light of her Lord, then the Book is set up and the prophets and the martyrs are brought for judgment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The earth glows with the light of her Lord, the Book is set up, the prophets and the martyrs are brought, and judgment is made with justice, none wronged."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:57:28Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:59:51Z",
+      "assembled_at": "2026-09-30T22:03:58Z"
+    }
+  },
+  "8": {
+    "id": "39:8",
+    "surah": 39,
+    "index": 8,
+    "range": [
+      71,
+      75
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 71,
+        "prompt": {
+          "en": "Al-Tabrisi explains the penalty fell because God had foretold it and knew who would die in ____."
+        },
+        "options": [
+          {
+            "en": "righteousness"
+          },
+          {
+            "en": "unbelief"
+          },
+          {
+            "en": "poverty"
+          },
+          {
+            "en": "ignorance"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Al-Tabrisi explains the word of punishment fell on the faithless because God had foretold it and already knew who would die in unbelief."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabrisi explains the penalty fell because God had foretold it and knew who would die in unbelief"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 73,
+        "prompt": {
+          "en": "According to a narration on verse 73, what happens to those who were wary of their Lord?"
+        },
+        "options": [
+          {
+            "en": "They are questioned about the apostles who came to them"
+          },
+          {
+            "en": "They wait at the gates until the arrogant are punished"
+          },
+          {
+            "en": "They are made safe from punishment and pleased with their dwelling"
+          },
+          {
+            "en": "They are judged once more before entering the Garden"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Glossing the wary led to the Garden, the narration says they are made safe from the chastisement, the reproach has ceased, and they are pleased with their dwelling."
+        },
+        "anchor": {
+          "where": "verses.73.narrations.n1",
+          "quote": "they are made safe from the chastisement, the reproach has ceased, they are moved away from the Fire, the abode is at rest with them, and they are pleased with the dwelling and the resting place"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 73,
+        "prompt": {
+          "en": "\"Paradise has eight gates: a gate through which the prophets and the truthful enter, a gate through which the martyrs and the righteous enter ...\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Listing the eight gates of paradise, Imam Ali gives one to the prophets and truthful, one to the martyrs and righteous, and five to the Shi'a and those who love them."
+        },
+        "anchor": {
+          "where": "verses.73.narrations.n3",
+          "quote": "Paradise has eight gates: a gate through which the prophets and the truthful enter, a gate through which the martyrs and the righteous enter, and five gates through which our Shi'a and those who love us enter"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 75,
+        "prompt": {
+          "en": "According to the note on verse 75, how does Al-Qummi read 'judgment will be made between them with justice'?"
+        },
+        "options": [
+          {
+            "en": "As the angels passing judgment on one another"
+          },
+          {
+            "en": "As a judgment already finished in the distant past"
+          },
+          {
+            "en": "As punishment reserved for the arrogant alone"
+          },
+          {
+            "en": "As an allusion to the people of paradise and the fire"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note says Al-Qummi reads this clause as an allusion to the people of paradise and the people of the fire, its wording past but its meaning still to come."
+        },
+        "anchor": {
+          "where": "verses.75.note",
+          "quote": "Al-Qummi reads 'and judgment will be made between them with justice' as an allusion to the people of paradise and the people of the fire, its wording past but its meaning yet to come"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 75,
+        "prompt": {
+          "en": "According to the essay, the closing praise 'All praise belongs to Allah' is a seal upon the beginning of creation only, and not upon the return."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai calls this closing word a seal upon the beginning and the return, so it seals both, not the beginning alone."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai calls this closing word a seal upon the beginning and the return"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:02:06Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:03:34Z",
+      "assembled_at": "2026-09-30T22:03:58Z"
+    }
+  }
+}

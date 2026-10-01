@@ -82,6 +82,13 @@ enum ExploreSection: CaseIterable {
                     title: "Ahl al-Bayt in Quran",
                     subtitle: "Verses honoring the family",
                     destination: .ahlulbaytQuran
+                ),
+                ExploreItem(
+                    id: "miracleStories",
+                    icon: "sparkles",
+                    title: "Miracle Stories",
+                    subtitle: "Sixteen beloved stories, in English and Urdu",
+                    destination: .miracleStories
                 )
             ]
         }
@@ -105,6 +112,7 @@ enum ExploreDestination {
     case foods
     case propheticStories
     case ahlulbaytQuran
+    case miracleStories
 }
 
 // MARK: - View
@@ -119,6 +127,7 @@ struct ExploreView: View {
     @State private var showPropheticStories = false
     @State private var showAhlulbaytQuran = false
     @State private var showFoods = false
+    @State private var showMiracleStories = false
 
 
     private let localizedTitle = "Explore"
@@ -155,6 +164,9 @@ struct ExploreView: View {
         }
         .fullScreenCover(isPresented: $showFoods) {
             FoodsView()
+        }
+        .fullScreenCover(isPresented: $showMiracleStories) {
+            MiracleStoriesView()
         }
     }
 
@@ -243,6 +255,8 @@ struct ExploreView: View {
             return "star.fill"
         case .foods:
             return "leaf.fill"
+        case .miracleStories:
+            return "sparkles"
         }
     }
 
@@ -266,6 +280,8 @@ struct ExploreView: View {
                 showAhlulbaytQuran = true
             case .foods:
                 showFoods = true
+            case .miracleStories:
+                showMiracleStories = true
             }
         }
     }

@@ -1,0 +1,968 @@
+{
+  "1": {
+    "id": "25:1",
+    "surah": 25,
+    "index": 1,
+    "range": [
+      1,
+      9
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 1,
+        "prompt": {
+          "en": "The Quran is the whole of the Book, and the Furqan is the ____ part that must be acted upon."
+        },
+        "options": [
+          {
+            "en": "decisive"
+          },
+          {
+            "en": "opening"
+          },
+          {
+            "en": "abrogated"
+          },
+          {
+            "en": "hidden"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked whether the Quran and the Furqan are one or two, Imam al-Sadiq called the Quran the whole Book and the Furqan its decisive part, the portion that must be acted upon."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "The Quran is the whole of the Book, and the Furqan is the decisive part that must be acted upon."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"It is the setting of limits - of lifespans, provisions, survival and perishing.\" Who gave this definition of determination (taqdir)?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Explaining verse 2's precise measure, Imam al-Rida defined determination as the setting of limits for lifespans, provisions, survival and perishing, distinguishing it from the decree that establishes the thing itself."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n2",
+          "quote": "It is the setting of limits - of lifespans, provisions, survival and perishing."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 4,
+        "prompt": {
+          "en": "How does Tabatabai read the 'other people' who supposedly helped the Prophet fabricate the Quran?"
+        },
+        "options": [
+          {
+            "en": "As a group of Meccan poets"
+          },
+          {
+            "en": "As some of the People of the Book"
+          },
+          {
+            "en": "As members of his own clan"
+          },
+          {
+            "en": "As wandering desert storytellers"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The deniers claimed others helped the Prophet fabricate the Quran; Tabatabai reads the verse's wording as hinting these helpers were some of the People of the Book, while the reports name particular men."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai notes the wording hints these helpers were some of the People of the Book"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the passage, the deniers' demands step down in order from an angel to merely a garden."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabatabai reads the deniers' escalating demands as descending step by step, from wanting an angel sent down, to a treasure, to merely a garden, before they call the Prophet bewitched."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads their demands as descending step by step from an angel to a mere garden"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 9,
+        "prompt": {
+          "en": "According to the Shia narrations in the passage, what is 'the way' that the deniers stray from and cannot find?"
+        },
+        "options": [
+          {
+            "en": "The Criterion that parts truth from falsehood"
+          },
+          {
+            "en": "God's precise measure set over all things"
+          },
+          {
+            "en": "The warning brought to all the nations"
+          },
+          {
+            "en": "The guardianship of Ali"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The Shia narrations add that Gabriel brought this verse down concerning the family of Muhammad, so the way the deniers miss and cannot find is the guardianship of Ali."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Gabriel brought the verse down concerning the family of Muhammad, so that 'the way' they miss is the guardianship of Ali"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T16:51:08Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T16:52:21Z",
+      "assembled_at": "2026-09-30T17:05:28Z"
+    }
+  },
+  "2": {
+    "id": "25:2",
+    "surah": 25,
+    "index": 2,
+    "range": [
+      10,
+      20
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "According to al-Tabatabai, where are the gardens and palaces of verse 10 meant to be?"
+        },
+        "options": [
+          {
+            "en": "In this world, since only that settles the dispute"
+          },
+          {
+            "en": "In the Garden promised to the Godwary"
+          },
+          {
+            "en": "In the heavens the angels inhabit"
+          },
+          {
+            "en": "Only in a vision granted to the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Tabatabai holds the gardens and palaces of verse 10 are meant in this world, since only a gift in this world would settle the dispute the pagans raised."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "these gardens and palaces are meant in this world, since only that settles the dispute"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 11,
+        "prompt": {
+          "en": "\"The night and the day are twelve hours, and Ali ibn Abi Talib is the noblest hour of the twelve hours.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq glosses the Hour they deny: the night and day hold twelve hours, and Ali is the noblest of them, tying the verse's Hour to him."
+        },
+        "anchor": {
+          "where": "verses.11.narrations.n1",
+          "quote": "The night and the day are twelve hours, and Ali ibn Abi Talib is the noblest hour of the twelve hours"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 11,
+        "prompt": {
+          "en": "Al-Tabatabai holds that their complaint about food was only a ____; without the Resurrection, prophethood and law carry no weight."
+        },
+        "options": [
+          {
+            "en": "blessing"
+          },
+          {
+            "en": "tradition"
+          },
+          {
+            "en": "warning"
+          },
+          {
+            "en": "pretext"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay calls the food objection a mere pretext; the real root of their denial is rejecting the Hour, since without the Resurrection prophethood and law carry no weight."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabatabai holds that their complaint about food was only a pretext; without the Resurrection, prophethood and law carry no weight"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 16,
+        "prompt": {
+          "en": "According to the note on 'a promise besought,' why is the reward called besought?"
+        },
+        "options": [
+          {
+            "en": "The deniers besought escape from the Blaze"
+          },
+          {
+            "en": "The Prophet besought it for the pagans"
+          },
+          {
+            "en": "The Godwary besought it in their supplications"
+          },
+          {
+            "en": "The idolaters besought their false gods for it"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note says the reward is called a promise besought because the Godwary asked for it in their supplications, a promise God made binding on Himself."
+        },
+        "anchor": {
+          "where": "verses.16.note",
+          "quote": "it is besought because the Godwary asked for it in their supplications, or the angels asked it for them"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 20,
+        "prompt": {
+          "en": "One reading takes the trial broadly and holds that unequal stations exist to test the patience of the rich and the healthy."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the broad reading the unequal stations test the patience of the afflicted: the healthy are a trial for the sick and the rich for the poor, not the reverse."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Qurtubi lists the healthy as a trial for the sick and the rich for the poor"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T16:52:48Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T16:54:05Z",
+      "assembled_at": "2026-09-30T17:05:28Z"
+    }
+  },
+  "3": {
+    "id": "25:3",
+    "surah": 25,
+    "index": 3,
+    "range": [
+      21,
+      34
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the passage, Tabatabai reads the deniers' demand for angels or to see their Lord as an objection to prophethood itself."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the deniers' demand for angels or to see their Lord as an objection to prophethood itself, as if revelation could not reach a human unless it reached them too."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "their demand as an objection to prophethood itself: if revelation were within a human's reach, why not theirs"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the essay, at what moment does Tabatabai say the guilty will see the angels with no good news for them?"
+        },
+        "options": [
+          {
+            "en": "At the moment of death, before the Day of Resurrection"
+          },
+          {
+            "en": "Only on the Day of Resurrection"
+          },
+          {
+            "en": "When they demand to see their Lord"
+          },
+          {
+            "en": "When the Quran is sent down in stages"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the guilty seeing the angels as the moment of death, when the angels meet the wrongdoer with punishment, before the Day of Resurrection, not only at the resurrection."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads this of the moment of death, when the angels meet the wrongdoer with punishment, before the Day of Resurrection"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 24,
+        "prompt": {
+          "en": "\"The two angels widen his grave as far as he can see and open a door to paradise, saying: sleep with delight of the eye ...\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam Ali described the two angels widening the believer's grave and opening a door to paradise, telling him to sleep with the delight of the eye, citing the verse on the best abode and resting place."
+        },
+        "anchor": {
+          "where": "verses.24.narrations.n3",
+          "quote": "The two angels widen his grave as far as he can see and open a door to paradise, saying: sleep with delight of the eye"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 27,
+        "prompt": {
+          "en": "He says: I wish I had taken Ali as a ____ along with the Apostle."
+        },
+        "options": [
+          {
+            "en": "witness"
+          },
+          {
+            "en": "guardian"
+          },
+          {
+            "en": "teacher"
+          },
+          {
+            "en": "neighbour"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Reading the wrongdoer's regret over the Apostle's way, Imam al-Baqir glosses it as wishing he had taken Ali as a guardian along with the Apostle, the guidance he abandoned."
+        },
+        "anchor": {
+          "where": "verses.27.narrations.n5",
+          "quote": "He says: I wish I had taken Ali as a guardian along with the Apostle."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the perspectives, why does one reading take the deniers' request to see their Lord as exposing them as anthropomorphists?"
+        },
+        "options": [
+          {
+            "en": "Because they are too arrogant and defiant to believe"
+          },
+          {
+            "en": "Because they demanded that angels be sent down as well"
+          },
+          {
+            "en": "Because they consigned the Quran to oblivion"
+          },
+          {
+            "en": "Because a bodily vision of God is impossible"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "In the perspectives, one reading holds the very request to see God exposes the deniers as anthropomorphists, since a bodily vision of God is impossible, so no such sight could ever be granted."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tusi cites al-Jubba'i that the request itself exposes the deniers as anthropomorphists, since a bodily vision of God is impossible"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T16:56:43Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T16:57:39Z",
+      "assembled_at": "2026-09-30T17:05:28Z"
+    }
+  },
+  "4": {
+    "id": "25:4",
+    "surah": 25,
+    "index": 4,
+    "range": [
+      35,
+      44
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 35,
+        "prompt": {
+          "en": "According to the essay, how does the passage answer the Meccans who mock the Prophet and reject his Book?"
+        },
+        "options": [
+          {
+            "en": "By recalling earlier messengers and the nations that spurned them"
+          },
+          {
+            "en": "By promising the Meccans reward if they turn back"
+          },
+          {
+            "en": "By listing the miracles worked through the Prophet"
+          },
+          {
+            "en": "By describing the gardens prepared for the faithful"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says that against the Meccans' denial God recalls the messengers before the Prophet and the nations that spurned them, beginning with Moses."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Against their denial, God recalls the messengers before him and the nations that spurned them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 38,
+        "prompt": {
+          "en": "\"Their story, O brother of Tamim, is that they were a people who worshipped a pine tree called Shah Darakht.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam Ali described the people of Rass to Amr, saying they worshipped a pine tree called Shah Darakht and cast their prophet into the earth."
+        },
+        "anchor": {
+          "where": "verses.38.narrations.n2",
+          "quote": "Their story, O brother of Tamim, is that they were a people who worshipped a pine tree called Shah Darakht"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 40,
+        "prompt": {
+          "en": "God rained upon them stones of sijjil - that is, of ____."
+        },
+        "options": [
+          {
+            "en": "fire"
+          },
+          {
+            "en": "clay"
+          },
+          {
+            "en": "brimstone"
+          },
+          {
+            "en": "iron"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir identified the town as Sadum and glossed the stones of sijjil rained on Lot's people as stones of clay."
+        },
+        "anchor": {
+          "where": "verses.40.narrations.n4",
+          "quote": "God rained upon them stones of sijjil - that is, of clay"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 43,
+        "prompt": {
+          "en": "According to the essay, what does it mean to take one's desire to be his god?"
+        },
+        "options": [
+          {
+            "en": "To worship an idol made with one's hands"
+          },
+          {
+            "en": "To deny that God exists at all"
+          },
+          {
+            "en": "To follow the gods of one's forefathers"
+          },
+          {
+            "en": "To obey and follow it in place of God"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay explains that taking desire as a god means to obey and follow it in place of God, so the Prophet is no guardian over such a person."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "To take desire as a god, Tabatabai explains, is to obey and follow it in place of God"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 44,
+        "prompt": {
+          "en": "According to the essay, the deniers and the cattle are equally astray, since neither was given the means to reason."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the opposite: the deniers are further astray than cattle precisely because they were given the means to know and refused, while cattle were never given them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "they neither listen nor reason, and are further astray than cattle, since they were given the means to know and refused, while cattle were never given them"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T16:56:32Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T16:57:31Z",
+      "assembled_at": "2026-09-30T17:05:28Z"
+    }
+  },
+  "5": {
+    "id": "25:5",
+    "surah": 25,
+    "index": 5,
+    "range": [
+      45,
+      60
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 45,
+        "prompt": {
+          "en": "Tabrisi and Tusi report that the twilight here is what lies between the break of dawn and ____."
+        },
+        "options": [
+          {
+            "en": "sunrise"
+          },
+          {
+            "en": "sunset"
+          },
+          {
+            "en": "midnight"
+          },
+          {
+            "en": "nightfall"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The commentary places the twilight in the morning: the span between the break of dawn and sunrise, not the dusk a reader might assume."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the twilight here is what lies between the break of dawn and sunrise"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 48,
+        "prompt": {
+          "en": "'When you set about purification and ablution, approach the water as you would approach the mercy of God.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about purification, Imam al-Sadiq told the believer to approach water as one approaches God's mercy, since God made water the key to nearness and intimate prayer with Him."
+        },
+        "anchor": {
+          "where": "verses.48.narrations.n2",
+          "quote": "approach the water as you would approach the mercy of God, for God has made water the key to nearness to Him"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 52,
+        "prompt": {
+          "en": "According to the essay, the command to 'wage a great jihad against them with it' means to strive against them with what?"
+        },
+        "options": [
+          {
+            "en": "The sword"
+          },
+          {
+            "en": "The purifying water"
+          },
+          {
+            "en": "The Quran"
+          },
+          {
+            "en": "Their own idols"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Following Tusi, the essay reads 'with it' as the Quran: the great jihad commanded here is to strive against the faithless by means of the Quran, not the sword."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "do not obey the faithless, but 'wage a great jihad against them with it' - with the Quran, as Tusi explains"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 53,
+        "prompt": {
+          "en": "In one narration, the waters that accepted God's guardianship turned sweet and wholesome, while those that denied it were made bitter and briny."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration reads the two seas through guardianship: the waters that accepted God's guardianship became sweet and wholesome, and those that denied it were made bitter, salty, and briny."
+        },
+        "anchor": {
+          "where": "verses.53.narrations.n3",
+          "quote": "Whatever accepted Our guardianship became sweet and wholesome, and whatever denied Our guardianship God made bitter, salty, and briny"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 54,
+        "prompt": {
+          "en": "According to the perspectives, what makes the Shia narrations apply this verse to the Prophet and Ali?"
+        },
+        "options": [
+          {
+            "en": "The Prophet was sent as a bearer of news and a warner"
+          },
+          {
+            "en": "Ali was the Prophet's cousin by blood and his son-in-law by marriage"
+          },
+          {
+            "en": "Adam was made from water and his wife from his rib"
+          },
+          {
+            "en": "Ali is named the lord of creation in the sense of obedience"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations apply the verse to the Prophet and Ali because Ali was his cousin by blood and became his son-in-law by marrying Fatimah."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia narrations instead apply the verse to the Prophet and Ali, who was his cousin by blood and became his son-in-law by marrying Fatimah"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:01:07Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:02:14Z",
+      "assembled_at": "2026-09-30T17:05:28Z"
+    }
+  },
+  "6": {
+    "id": "25:6",
+    "surah": 25,
+    "index": 6,
+    "range": [
+      61,
+      77
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 62,
+        "prompt": {
+          "en": "\"A comfort to your eye, by God! It is making up the day prayer by night and the night prayer by day, a guarded secret of Muhammad's family.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked whether he could make up a missed night prayer by day, Imam al-Sadiq rejoiced and called the exchange of day prayer for night and night for day a guarded secret of Muhammad's family."
+        },
+        "anchor": {
+          "where": "verses.62.narrations.n1",
+          "quote": "A comfort to your eye, by God! It is making up the day prayer by night and the night prayer by day, a guarded secret of Muhammad's family"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 63,
+        "prompt": {
+          "en": "According to the essay, how does al-Tusi square the servants' gentle reply of 'Peace!' with the later command to fight?"
+        },
+        "options": [
+          {
+            "en": "The peace verse was later abrogated by it"
+          },
+          {
+            "en": "The reply applies only to fellow believers"
+          },
+          {
+            "en": "Fighting does not rule out good speech"
+          },
+          {
+            "en": "The command to fight came first in time"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay cites al-Tusi that the servants' answer of peace to the ignorant is not cancelled by the later command to fight, since fighting does not rule out good speech."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this gentle reply is not cancelled by the later command to fight, since fighting does not rule out good speech"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 67,
+        "prompt": {
+          "en": "He took a handful of pebbles and gripped it, saying, 'This is ____, which God mentioned in His book.'"
+        },
+        "options": [
+          {
+            "en": "wastefulness"
+          },
+          {
+            "en": "stinginess"
+          },
+          {
+            "en": "balance"
+          },
+          {
+            "en": "generosity"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In Imam al-Sadiq's demonstration, the tightly gripped fistful of pebbles stands for stinginess, the miserliness God condemns; the fully opened hand is wastefulness, and letting some fall while holding some back is the balance."
+        },
+        "anchor": {
+          "where": "verses.67.narrations.n4",
+          "quote": "He took a handful of pebbles and gripped it, saying, 'This is stinginess, which God mentioned in His book.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 70,
+        "prompt": {
+          "en": "In Imam al-Rida's narration on this verse, what does God command once the believer has seen his good deeds?"
+        },
+        "options": [
+          {
+            "en": "Erase his record and admit him at once"
+          },
+          {
+            "en": "Double his reward for his patience"
+          },
+          {
+            "en": "Conceal his misdeeds from the gathered people"
+          },
+          {
+            "en": "Change his misdeeds into good deeds before the people"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "In Imam al-Rida's account of the Judgment, the believer trembles at his misdeeds and then rejoices at his good deeds, and God orders that his misdeeds be changed into good deeds and shown to the people."
+        },
+        "anchor": {
+          "where": "verses.70.narrations.n5",
+          "quote": "God says, 'Change their misdeeds into good deeds and show them to the people.'"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 77,
+        "prompt": {
+          "en": "According to the essay's close, God values the deniers for their own sake, quite apart from His call summoning them to faith."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay's closing warning says that were it not for God's call summoning them to faith, He would set no store by the deniers at all, so He does not prize them for their own sake."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "were it not for God's call summoning them to faith, He would set no store by them at all, and because they cried lies their denial will cling to them"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T17:04:09Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T17:05:03Z",
+      "assembled_at": "2026-09-30T17:05:28Z"
+    }
+  }
+}

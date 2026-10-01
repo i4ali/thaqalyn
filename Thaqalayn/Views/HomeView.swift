@@ -18,7 +18,9 @@ struct HomeView: View {
     @State private var showingAuthentication = false
     @State private var selectedSurahForDeepLink: SurahWithTafsir?
     @State private var targetVerseNumber: Int?
-    @State private var targetConceptId: String?
+    /// A search result being read (legacy layout); pushes the passage reader directly.
+    @State private var searchTarget: SearchPassageTarget?
+    @FocusState private var searchFocused: Bool
     /// Set by a passage deep link: the surah opens on that passage's hub.
     @State private var targetPassageIndex: Int?
 
@@ -48,51 +50,46 @@ struct HomeView: View {
         .onReceive(NotificationCenter.default.publisher(for: .showAuthentication)) { _ in
             showingAuthentication = true
         }
-        .onAppear { consumePendingDeepLink() }
+        .onAppear {
+            consumePendingDeepLink()
+            consumeSearchFocus()
+        }
         .onChange(of: deepLinkRouter.pendingDeepLink) { _, _ in
             consumePendingDeepLink()
         }
+        .onChange(of: deepLinkRouter.pendingSearchFocus) { _, _ in consumeSearchFocus() }
+    }
+
+    /// Focus mode: while the field is focused or holds a query, the title steps
+    /// aside and results fill the screen.
+    private var isSearching: Bool {
+        searchFocused || !searchText.trimmingCharacters(in: .whitespaces).isEmpty
     }
 
     private var legacyBody: some View {
         VStack(spacing: 0) {
             // Modern header with glassmorphism
             VStack(spacing: 16) {
-                // Top navigation row (universal for all themes)
-                HStack(spacing: 12) {
-                    // Bookmark Badge (theme-adaptive)
-                    BookmarkBadge()
+                if !isSearching {
+                    // Top navigation row (universal for all themes)
+                    HStack(spacing: 12) {
+                        // Bookmark Badge (theme-adaptive)
+                        BookmarkBadge()
 
-                    Spacer()
+                        Spacer()
+                    }
+
+                    HStack {
+                        Text(QuranTabStrings.holyQuran)
+                            .font(.system(size: 34, weight: .bold, design: .rounded))
+                            .foregroundColor(themeManager.primaryText)
+
+                        Spacer()
+                    }
+                    .transition(.opacity)
                 }
 
-                HStack {
-                    Text(QuranTabStrings.holyQuran)
-                        .font(.system(size: 34, weight: .bold, design: .rounded))
-                        .foregroundColor(themeManager.primaryText)
-
-                    Spacer()
-                }
-
-                // Search bar with glassmorphism
-                HStack {
-                    Text("\u{1F50D}")
-                        .font(.system(size: 20))
-
-                    TextField(QuranTabStrings.searchPlaceholder, text: $searchText)
-                        .textFieldStyle(PlainTextFieldStyle())
-                        .foregroundColor(themeManager.primaryText)
-                }
-                .padding(16)
-                .background {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                        .overlay(RoundedRectangle(cornerRadius: 16).stroke(themeManager.strokeColor, lineWidth: 1))
-                        .shadow(
-                            color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                            radius: 12, x: 0, y: 4
-                        )
-                }
+                QuranSearchBar(text: $searchText, isFocused: $searchFocused, isSearching: isSearching)
             }
             .padding(.horizontal, 20)
             .padding(.top, 60)
@@ -104,12 +101,7 @@ struct HomeView: View {
                 let readVerseKeys = progressManager.readVerseKeys
                 if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
                     LazyVStack(spacing: 12) {
-                        ForEach(dataManager.availableSurahs.filter { surah in
-                            surah.surah.englishName.localizedCaseInsensitiveContains(searchText) ||
-                            surah.surah.englishNameTranslation.localizedCaseInsensitiveContains(searchText) ||
-                            surah.surah.arabicName.contains(searchText) ||
-                            searchText.isEmpty
-                        }) { surahWithTafsir in
+                        ForEach(dataManager.availableSurahs) { surahWithTafsir in
                             SurahListRow(surahWithTafsir: surahWithTafsir, readVerseKeys: readVerseKeys)
                         }
                     }
@@ -119,34 +111,38 @@ struct HomeView: View {
                     SearchResultsView(
                         query: searchText,
                         readVerseKeys: readVerseKeys,
-                        onOpenVerse: { s, v in
-                            targetConceptId = nil
-                            targetPassageIndex = nil
-                            targetVerseNumber = v
-                            selectedSurahForDeepLink = dataManager.getSurah(number: s)
-                        },
-                        onOpenTheme: { s, v, cid in
-                            targetConceptId = cid
-                            targetPassageIndex = nil
-                            targetVerseNumber = v
-                            selectedSurahForDeepLink = dataManager.getSurah(number: s)
-                        }
+                        onOpen: { searchTarget = $0 }
                     )
                     .padding(.horizontal, 20)
-                    .padding(.top, 20)
+                    .padding(.bottom, 120)
                 }
+            }
+            .scrollDismissesKeyboard(.immediately)
+
+            // Hidden NavigationLink for search results
+            if let target = searchTarget, let destination = SearchPassageDestination(target: target) {
+                NavigationLink(
+                    destination: destination,
+                    isActive: Binding(
+                        get: { searchTarget != nil },
+                        set: { if !$0 { searchTarget = nil } }
+                    )
+                ) {
+                    EmptyView()
+                }
+                .frame(width: 0, height: 0)
+                .hidden()
             }
 
             // Hidden NavigationLink for deep linking
             if let surahForDeepLink = selectedSurahForDeepLink {
                 NavigationLink(
-                    destination: SurahDetailView(surahWithTafsir: surahForDeepLink, targetVerse: targetVerseNumber, targetConceptId: targetConceptId, targetPassageIndex: targetPassageIndex),
+                    destination: SurahDetailView(surahWithTafsir: surahForDeepLink, targetVerse: targetVerseNumber, targetPassageIndex: targetPassageIndex),
                     isActive: Binding(
                         get: { selectedSurahForDeepLink != nil },
                         set: { if !$0 {
                             selectedSurahForDeepLink = nil
                             targetVerseNumber = nil
-                            targetConceptId = nil
                             targetPassageIndex = nil
                         } }
                     )
@@ -158,6 +154,15 @@ struct HomeView: View {
             }
 
         }
+        .animation(.easeInOut(duration: 0.25), value: isSearching)
+    }
+
+    /// The What's New search card asks for the field to be focused on arrival.
+    /// The emerald layout handles its own field; this covers the legacy one.
+    private func consumeSearchFocus() {
+        guard !themeManager.isMidnightEmerald, deepLinkRouter.pendingSearchFocus else { return }
+        deepLinkRouter.pendingSearchFocus = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { searchFocused = true }
     }
 
     private func consumePendingDeepLink() {

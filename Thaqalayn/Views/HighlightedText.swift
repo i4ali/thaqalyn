@@ -2,14 +2,14 @@
 //  HighlightedText.swift
 //  Thaqalayn
 //
-//  SwiftUI view that displays text with a highlighted word range
+//  SwiftUI view that displays text with highlighted ranges
 //
 
 import SwiftUI
 
 struct HighlightedText: View {
     let text: String
-    let highlightRange: NSRange?
+    let highlightRanges: [NSRange]
     let font: Font
     let textColor: Color
     let highlightColor: Color?
@@ -25,8 +25,20 @@ struct HighlightedText: View {
         highlightColor: Color? = nil,
         lineSpacing: CGFloat = 6
     ) {
+        self.init(text: text, highlightRanges: highlightRange.map { [$0] } ?? [], font: font,
+                  textColor: textColor, highlightColor: highlightColor, lineSpacing: lineSpacing)
+    }
+
+    init(
+        text: String,
+        highlightRanges: [NSRange],
+        font: Font = .system(size: 17, weight: .regular, design: .serif),
+        textColor: Color = .primary,
+        highlightColor: Color? = nil,
+        lineSpacing: CGFloat = 6
+    ) {
         self.text = text
-        self.highlightRange = highlightRange
+        self.highlightRanges = highlightRanges
         self.font = font
         self.textColor = textColor
         self.highlightColor = highlightColor
@@ -51,11 +63,11 @@ struct HighlightedText: View {
     private func buildAttributedString() -> AttributedString {
         var attributedString = AttributedString(text)
 
-        // Apply highlight if range is valid
-        if let nsRange = highlightRange,
-           let swiftRange = Range(nsRange, in: text),
-           let attributedRange = Range(nsRange, in: attributedString) {
-            attributedString[attributedRange].backgroundColor = UIColor(resolvedHighlightColor)
+        // Apply each valid highlight range
+        for nsRange in highlightRanges {
+            if let attributedRange = Range(nsRange, in: attributedString) {
+                attributedString[attributedRange].backgroundColor = UIColor(resolvedHighlightColor)
+            }
         }
 
         return attributedString

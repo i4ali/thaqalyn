@@ -37,14 +37,37 @@ enum QuranTabStrings {
     static func percentComplete(_ p: Int) -> String { "\(p)% complete" }
     static func passagesRead(_ read: Int, _ total: Int) -> String { "\(read) of \(total) passages read" }
 
+    // MARK: - Search field
+    static let cancel = "Cancel"
+    static let clearSearch = "Clear search"
+
     // MARK: - Search results
     static let surahsLabel = "Surahs"
     static let versesLabel = "Verses"
+    static let passagesLabel = "Passages"
     static let themesLabel = "Themes"
-    static func showingFirst(_ showing: Int, _ total: Int) -> String {
-        "Showing first \(showing) of \(total)"
-    }
+    /// Top-hit eyebrow for a typed reference ("2:255").
+    static let goToVerse = "Go to verse"
+    static func showAll(_ total: Int) -> String { "Show all \(total)" }
+    /// Theme row covering several verses.
+    static func themeVerses(_ n: Int) -> String { "\(n) verses" }
+    static let preparingSearch = "Preparing search\u{2026}"
     static func noResults(_ query: String) -> String {
         "No results for \u{201C}\(query)\u{201D}"
+    }
+    static let searchHint = "Try a surah name, a reference like 2:255, or a word from the translation."
+
+    // MARK: - Find in this surah
+    static let findInSurah = "Find in this Surah"
+    static func findInSurahSubtitle(_ versesCount: Int) -> String {
+        "A verse number (1 to \(versesCount)) or a word"
+    }
+    static let findPlaceholder = "Verse number or a word"
+    static func goToVerseNumber(_ n: Int) -> String { "Go to verse \(n)" }
+    static func verseOutOfRange(_ versesCount: Int) -> String {
+        "This surah has \(versesCount) verses"
+    }
+    static func noMatchesInSurah(_ query: String) -> String {
+        "No verses in this surah contain \u{201C}\(query)\u{201D}"
     }
 }

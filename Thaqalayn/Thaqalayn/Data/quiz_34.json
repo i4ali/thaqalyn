@@ -1,0 +1,968 @@
+{
+  "1": {
+    "id": "34:1",
+    "surah": 34,
+    "index": 1,
+    "range": [
+      1,
+      9
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the essay, on which three foundations is the whole surah built?"
+        },
+        "options": [
+          {
+            "en": "Prayer, fasting, and pilgrimage"
+          },
+          {
+            "en": "God's mercy, justice, and power"
+          },
+          {
+            "en": "God's oneness, prophethood, and the resurrection"
+          },
+          {
+            "en": "Creation, revelation, and final judgment"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the surah rests on three foundations, God's oneness, prophethood, and the resurrection, and dwells most on the resurrection while opening its case in these verses."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "built on three foundations - God's oneness, prophethood, and the resurrection - dwelling on the resurrection most and opening its case here"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 2,
+        "prompt": {
+          "en": "Tafsir al-Qummi glosses these as the rain that falls, the plants that grow, and the ____ of the servants that ascend."
+        },
+        "options": [
+          {
+            "en": "prayers"
+          },
+          {
+            "en": "deeds"
+          },
+          {
+            "en": "souls"
+          },
+          {
+            "en": "supplications"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports that Tafsir al-Qummi glosses what enters and leaves the earth and sky as the rain, the plants, and the deeds of the servants that ascend."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tafsir al-Qummi glosses these as the rain that falls, the plants that grow, and the deeds of the servants that ascend"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "In the narration from Imam al-Sadiq, what did Allah create first and tell to write?"
+        },
+        "options": [
+          {
+            "en": "The Pen"
+          },
+          {
+            "en": "The Throne"
+          },
+          {
+            "en": "The Tablet"
+          },
+          {
+            "en": "The first intellect"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says the first thing Allah created was the Pen, which He told to write all that has been and will be until the Day of Resurrection."
+        },
+        "anchor": {
+          "where": "verses.3.narrations.n1",
+          "quote": "The first thing Allah created was the Pen. He said to it, 'Write.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 4,
+        "prompt": {
+          "en": "According to the passage, the Hour will come so that God may reward the faithful and repay those who strove against His signs with punishment."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the Hour comes so that God may reward the faithful with forgiveness and a noble provision, and repay those who strove against His signs with punishment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The Hour comes so that God may reward the faithful with forgiveness and a noble provision, and repay those who strove against His signs with a painful punishment"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "The passage says the soundest Sunni reading takes 'those who have been given knowledge' to mean all Muslims. On what grounds?"
+        },
+        "options": [
+          {
+            "en": "Because they had read the earlier scriptures"
+          },
+          {
+            "en": "Because they were the Prophet's Companions"
+          },
+          {
+            "en": "Because they see the revelation is the truth"
+          },
+          {
+            "en": "Because the wording is general"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "In the perspectives, Sunni commentators judge the soundest reading to be all Muslims because the wording of the verse is general, not tied to one group."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "judges the soundest to be all Muslims, since the wording is general"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:04:09Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:06:18Z",
+      "assembled_at": "2026-09-30T20:26:52Z"
+    }
+  },
+  "2": {
+    "id": "34:2",
+    "surah": 34,
+    "index": 2,
+    "range": [
+      10,
+      21
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 10,
+        "prompt": {
+          "en": "The passage moves through three lives that God favored, and reads each as a test of ____."
+        },
+        "options": [
+          {
+            "en": "gratitude"
+          },
+          {
+            "en": "patience"
+          },
+          {
+            "en": "obedience"
+          },
+          {
+            "en": "faith"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay's opening frames all three stories, David, Solomon and Sheba, as tests of gratitude, each favored figure or people judged by whether they thanked the Giver of the grace."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The passage moves through three lives that God favored, and reads each as a test of gratitude"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "According to the narration from Imam Ali, why did God soften iron so David could make coats of mail by hand?"
+        },
+        "options": [
+          {
+            "en": "So he could arm his soldiers for war"
+          },
+          {
+            "en": "So the mountains and birds would praise with him"
+          },
+          {
+            "en": "So he would not need to eat from the public treasury"
+          },
+          {
+            "en": "So the jinn would obey him"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the narration Imam Ali says David was an excellent servant but for eating from the public treasury without working, so God softened iron, letting David earn by his own hand."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n1",
+          "quote": "you are an excellent servant, were it not that you eat from the public treasury and do not work with your hand"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 13,
+        "prompt": {
+          "en": "\"By God, they were not statues of men and women, but figures of trees and the like.\" Who said this about Solomon's figures?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the figures Solomon's workers made, Imam al-Sadiq swore they were not statues of men and women but likenesses of trees and the like, not human idols."
+        },
+        "anchor": {
+          "where": "verses.13.narrations.n4",
+          "quote": "By God, they were not statues of men and women, but figures of trees and the like."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 18,
+        "prompt": {
+          "en": "In the verse note's inner reading, the blessed towns are the Prophet's household; what are the prominent towns?"
+        },
+        "options": [
+          {
+            "en": "Those who carry their teaching to the people"
+          },
+          {
+            "en": "The enemies who opposed the household"
+          },
+          {
+            "en": "The jinn who once served Solomon"
+          },
+          {
+            "en": "The merchants who traded with Syria"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note gives the verse an inner reading: the blessed towns stand for the Prophet's household, and the prominent towns for those who carry that household's teaching to the people."
+        },
+        "anchor": {
+          "where": "verses.18.note",
+          "quote": "A tradition reads the blessed towns as the Prophet's household and the prominent towns as those who carry their teaching to the people"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the passage, Iblis held compelling authority that forced the people to follow him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay's close says Iblis held no compelling authority; the people followed him of their own choosing, except a faithful few, so the claim that he forced them is false."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "for they followed him except a faithful few, though he held no compelling authority over them"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:07:30Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:08:40Z",
+      "assembled_at": "2026-09-30T20:26:52Z"
+    }
+  },
+  "3": {
+    "id": "34:3",
+    "surah": 34,
+    "index": 3,
+    "range": [
+      22,
+      30
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 22,
+        "prompt": {
+          "en": "The commentary argues that the gods besides Allah cannot be true deities, since lordship requires ownership and every kind of ownership is denied them."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay bases the case against the idols' gods on ownership: lordship requires ownership, yet every kind of ownership is denied them, so they cannot be real gods."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "since lordship requires ownership and here every kind of ownership is denied"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 23,
+        "prompt": {
+          "en": "On intercession, what do all the traditions in the passage agree on?"
+        },
+        "options": [
+          {
+            "en": "No intercession happens except by God's leave"
+          },
+          {
+            "en": "The idols can intercede for their worshippers"
+          },
+          {
+            "en": "Intercession needs no permission from God"
+          },
+          {
+            "en": "Only wrongdoers are denied all intercession"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives note that although the traditions differ over who the permitted intercessors are, they all agree that no intercession proceeds except by God's leave."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "All agree that no intercession proceeds except by God's leave"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 23,
+        "prompt": {
+          "en": "When fear is lifted from the ____ hearts they report only the truth, and He is the All-exalted, the All-great."
+        },
+        "options": [
+          {
+            "en": "believers'"
+          },
+          {
+            "en": "prophets'"
+          },
+          {
+            "en": "angels'"
+          },
+          {
+            "en": "sinners'"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Verse 23 says fear is lifted from their hearts; the essay identifies these as the angels' hearts, who then report only the truth about their Lord."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "When fear is lifted from the angels' hearts they report only the truth, and He is the All-exalted, the All-great."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 28,
+        "prompt": {
+          "en": "\"The Messenger of God never left Medina, so how did he reach the people of the east and the west?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked how a Prophet who never left Medina reached all mankind, Imam al-Sadiq said Gabriel tore up the earth with a feather of his wing and set the nations before him."
+        },
+        "anchor": {
+          "where": "verses.28.narrations.n3",
+          "quote": "The Messenger of God never left Medina, so how did he reach the people of the east and the west?"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "According to the essay, what does Tabatabai take a messenger sent to all mankind to prove?"
+        },
+        "options": [
+          {
+            "en": "That the idols share in God's provision"
+          },
+          {
+            "en": "That there is only one God, with no partner"
+          },
+          {
+            "en": "That the promised hour can be delayed by prayer"
+          },
+          {
+            "en": "That every nation was sent its own messenger"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reads a single messenger sent to all mankind as further proof of one God, since a second lord would have sent messengers of his own."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai hears in a universal messenger of God alone a further proof of one Lord"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:11:27Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:12:52Z",
+      "assembled_at": "2026-09-30T20:26:52Z"
+    }
+  },
+  "4": {
+    "id": "34:4",
+    "surah": 34,
+    "index": 4,
+    "range": [
+      31,
+      36
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 31,
+        "prompt": {
+          "en": "According to the commentary, who are the faithless that refuse to believe in the Quran?"
+        },
+        "options": [
+          {
+            "en": "The Jews and Christians who kept their scriptures"
+          },
+          {
+            "en": "The hypocrites who hid their unbelief"
+          },
+          {
+            "en": "The Meccan polytheists"
+          },
+          {
+            "en": "Earlier nations that rejected their prophets"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The commentary reads the faithless who reject the Quran and the books before it as the Meccan polytheists, refusing both the new revelation and the earlier heavenly scriptures."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Mizan reads them as the Meccan polytheists and 'what is before it' as the earlier heavenly books, the Torah and the Gospel"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 33,
+        "prompt": {
+          "en": "According to the commentary, the faithless conceal their remorse in the Fire as a new reaction they never showed during their worldly life."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The note reads their hidden remorse as a fixed habit: they already concealed their regret in the world, and they do the same again when the punishment appears."
+        },
+        "anchor": {
+          "where": "verses.33.note",
+          "quote": "in the world they concealed regret so enemies could not gloat, and they do the same when the punishment appears"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 33,
+        "prompt": {
+          "en": "In the narration, why do the faithless hide their remorse even while they are in the punishment?"
+        },
+        "options": [
+          {
+            "en": "Because they hoped to still be forgiven"
+          },
+          {
+            "en": "Because they disliked the gloating of their enemies"
+          },
+          {
+            "en": "Because they were ashamed before the angels"
+          },
+          {
+            "en": "Because they wanted to blame their leaders"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq, asked what use hiding remorse is to them in the punishment, answered that they disliked the gloating of their enemies, the concealment they also practiced in the world."
+        },
+        "anchor": {
+          "where": "verses.33.narrations.n1",
+          "quote": "Someone said to him: what use is hiding remorse to them while they are in the punishment? He said: They disliked the gloating of their enemies."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 34,
+        "prompt": {
+          "en": "A wider law follows: no warner ever reached a town without its affluent ones rejecting him, for ease breeds ____ against the truth."
+        },
+        "options": [
+          {
+            "en": "doubt"
+          },
+          {
+            "en": "envy"
+          },
+          {
+            "en": "arrogance"
+          },
+          {
+            "en": "fear"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay gives the reason the affluent reject every warner: ease breeds arrogance against the truth, so their comfort makes them scorn the message."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "no warner ever reached a town without its affluent ones rejecting him, for ease breeds arrogance against the truth"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 36,
+        "prompt": {
+          "en": "How does the passage explain God's expanding and tightening of provision in the closing verse?"
+        },
+        "options": [
+          {
+            "en": "As a reward reserved for the most faithful"
+          },
+          {
+            "en": "As a sign of His favor toward the wealthy"
+          },
+          {
+            "en": "As a punishment aimed only at the poor"
+          },
+          {
+            "en": "By His wisdom, not as a mark of honor"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes that the Lord widens and narrows provision as He wills by His wisdom, not as any mark of honor, though most people do not know this."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "my Lord widens and narrows provision as He wills, by His wisdom and not as any mark of honor, but most people do not know"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:14:25Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:15:37Z",
+      "assembled_at": "2026-09-30T20:26:52Z"
+    }
+  },
+  "5": {
+    "id": "34:5",
+    "surah": 34,
+    "index": 5,
+    "range": [
+      37,
+      45
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 37,
+        "prompt": {
+          "en": "According to the passage, the affluent treated their wealth and children as proof that God favoured them and would spare them from punishment."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens by describing this boast: the wealthy took their riches and children as evidence that God favoured them and would not punish them, which is exactly what verse 37 sets out to deny."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The affluent had taken their wealth and children as proof that God favoured them and would not punish them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 37,
+        "prompt": {
+          "en": "\"O Abu Muhammad, when a believer is wealthy, merciful, keeping kinship ties ... God gives him double the reward for what he spends.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage attributes this saying to Imam al-Baqir, addressing Abu Basir: a believer who is wealthy, merciful and keeps kinship ties is given a doubled reward for what he spends in righteousness."
+        },
+        "anchor": {
+          "where": "verses.37.narrations.n2",
+          "quote": "O Abu Muhammad, when a believer is wealthy, merciful, keeping kinship ties, and does good to his companions, God gives him double the reward for what he spends in righteousness"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 39,
+        "prompt": {
+          "en": "In the passage, what does Imam al-Sadiq say about wealth that is earned lawfully and spent lawfully?"
+        },
+        "options": [
+          {
+            "en": "It is recorded as a debt he must repay"
+          },
+          {
+            "en": "It brings him no return in this world"
+          },
+          {
+            "en": "Every dirham of it is replaced for the spender"
+          },
+          {
+            "en": "It is accepted only if spent in secret"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq teaches that when someone earns and spends from what is lawful, not a single dirham is spent without being replaced for him, echoing verse 39's promise that God repays what you spend."
+        },
+        "anchor": {
+          "where": "verses.39.narrations.n3",
+          "quote": "If one of you earns wealth from what is lawful and spends it in what is lawful, he will not spend a dirham but that it is replaced for him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 44,
+        "prompt": {
+          "en": "Yet God gave them no scripture to study and sent them no warner before Muhammad, so their rejection rests on nothing but stubborn ____."
+        },
+        "options": [
+          {
+            "en": "pride"
+          },
+          {
+            "en": "imitation"
+          },
+          {
+            "en": "greed"
+          },
+          {
+            "en": "fear"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay stresses that the deniers received no scripture and no earlier warner, so their rejection of the Prophet has no basis beyond stubborn imitation of what their fathers used to worship."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "their rejection rests on nothing but stubborn imitation"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 45,
+        "prompt": {
+          "en": "How does the essay's closing line describe the earlier nations who denied their messengers?"
+        },
+        "options": [
+          {
+            "en": "They denied but were never met with any rebuttal"
+          },
+          {
+            "en": "They were weaker peoples with little wealth"
+          },
+          {
+            "en": "They had received no messengers at all"
+          },
+          {
+            "en": "They were mightier than the Quraysh, and met God's rebuttal"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's closing recalls that earlier nations who denied were mightier than the Quraysh, yet these deniers have not reached one-tenth of what those peoples were given, and they met God's rebuttal."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "recalling earlier nations who also denied and were mightier than the Quraysh; these deniers have not reached one-tenth of what those peoples were given, and they met God's rebuttal"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:17:58Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:19:19Z",
+      "assembled_at": "2026-09-30T20:26:52Z"
+    }
+  },
+  "6": {
+    "id": "34:6",
+    "surah": 34,
+    "index": 6,
+    "range": [
+      46,
+      54
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 46,
+        "prompt": {
+          "en": "According to the essay, why should each man weigh what he knew of 'his companion,' the Prophet?"
+        },
+        "options": [
+          {
+            "en": "From birth to mission they saw no flaw of madness"
+          },
+          {
+            "en": "Because he had promised them a great reward"
+          },
+          {
+            "en": "Because he had led them in many battles"
+          },
+          {
+            "en": "Because he could foretell the day of their death"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says each man should weigh his lifelong knowledge of the Prophet, in whom, from birth to mission, they had seen no flaw that could suggest madness."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Let each man weigh what he has known of 'his companion,' in whom, from birth to mission, they had seen no flaw that could suggest madness"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 50,
+        "prompt": {
+          "en": "Al-Tusi finds in this a proof against the ____, since the verse ties any straying to the self and not to the Lord's decree."
+        },
+        "options": [
+          {
+            "en": "idolaters"
+          },
+          {
+            "en": "predestinarians"
+          },
+          {
+            "en": "hypocrites"
+          },
+          {
+            "en": "deniers of resurrection"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports al-Tusi finding here a proof against the predestinarians, since the verse ties any straying to the self and not to the Lord's decree."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi finds in this a proof against the predestinarians, since the verse ties any straying to the self and not to the Lord's decree"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 51,
+        "prompt": {
+          "en": "Beyond their plain sense, what do reports through both Shia and Sunni channels apply verses 51 to 54 to?"
+        },
+        "options": [
+          {
+            "en": "Pharaoh's host drowned in the sea"
+          },
+          {
+            "en": "The idolaters destroyed at Badr"
+          },
+          {
+            "en": "The people of the elephant turned back from Mecca"
+          },
+          {
+            "en": "The Sufyani's army, swallowed up before al-Mahdi's appearance"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note says that beyond the plain sense, abundant reports through both Shia and Sunni channels apply these verses to the Sufyani's army, swallowed up at the Bayda before al-Mahdi appears."
+        },
+        "anchor": {
+          "where": "verses.51.note",
+          "quote": "reports transmitted in abundance through both Shia and Sunni channels apply these verses to the Sufyani's army, swallowed up at the Bayda as a sign before the appearance of al-Mahdi"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 52,
+        "prompt": {
+          "en": "\"They sought guidance from where it cannot be reached, though it had been laid open to them from where it could be reached.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about attaining belief from a far-off place, Imam al-Baqir said they sought guidance where it cannot be reached, though it lay open to them where it could."
+        },
+        "anchor": {
+          "where": "verses.52.narrations.n6",
+          "quote": "they sought guidance from where it cannot be reached, though it had been laid open to them from where it could be reached"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 54,
+        "prompt": {
+          "en": "According to the passage, the deniers' cry of belief is accepted at last and the barrier before them is lifted."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says their cry 'We believe' comes when belief can no longer be attained, and they are walled off at the barrier, left in the grave doubt that was always theirs."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "crying 'We believe' when belief can no longer be attained, after a life of denial and conjecture flung at the unseen, walled off at last from all they desired"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:24:54Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:26:20Z",
+      "assembled_at": "2026-09-30T20:26:52Z"
+    }
+  }
+}

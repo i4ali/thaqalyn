@@ -1,0 +1,1451 @@
+{
+  "1": {
+    "id": "40:1",
+    "surah": 40,
+    "index": 1,
+    "range": [
+      1,
+      9
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 1,
+        "prompt": {
+          "en": "As for Ha Meem, its meaning is the ____, the Glorious."
+        },
+        "options": [
+          {
+            "en": "All-mighty"
+          },
+          {
+            "en": "Praiseworthy"
+          },
+          {
+            "en": "Merciful"
+          },
+          {
+            "en": "Forgiving"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the disconnected letters, Imam al-Sadiq glossed Ha Meem as the Praiseworthy, the Glorious, so the missing word is Praiseworthy."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "As for Ha Meem, its meaning is the Praiseworthy, the Glorious."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the essay, why does al-Tabrisi say 'severe in retribution' is placed right after 'forgiver of sins'?"
+        },
+        "options": [
+          {
+            "en": "So the servant stays between hope and fear"
+          },
+          {
+            "en": "So fear of God outweighs hope in Him"
+          },
+          {
+            "en": "So the servant trusts God's forgiveness alone"
+          },
+          {
+            "en": "So retribution is shown to outweigh mercy"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says al-Tabrisi reads 'severe in retribution' placed right after 'forgiver of sins' so the servant does not lean on pardon alone but stays between hope and fear."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "'severe in retribution' is set right after 'forgiver of sins' so the servant does not lean on pardon alone but stays between hope and fear"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"The disputants in God's religion have been cursed on the tongue of seventy prophets, and whoever disputes God's signs has disbelieved.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The Prophet warned that disputants in God's religion have been cursed on the tongue of seventy prophets and that whoever disputes God's signs has disbelieved."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n2",
+          "quote": "The disputants in God's religion have been cursed on the tongue of seventy prophets, and whoever disputes God's signs has disbelieved"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 5,
+        "prompt": {
+          "en": "According to the essay, Tabatabai reads God's seizing of the earlier nations as proof that the deniers had not escaped punishment."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai takes 'Then I seized them' as an answer to anyone who imagines the earlier deniers had escaped God's punishment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai takes this as an answer to anyone who imagines the deniers had escaped"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the perspectives, how do the Shia narrations read the 'faithless' of the sixth verse, the inmates of the Fire?"
+        },
+        "options": [
+          {
+            "en": "The people of Noah who denied their apostle"
+          },
+          {
+            "en": "The heathen factions who came after Noah"
+          },
+          {
+            "en": "Bani Umayya"
+          },
+          {
+            "en": "Those who argue on behalf of the truth"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations read the faithless of the sixth verse, the inmates of the Fire, as bani Umayya."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia narrations restrict that pleading to the Shia of Al Muhammad, and read the 'faithless' of the sixth verse, the inmates of the Fire, as bani Umayya"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:08:52Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:10:23Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  },
+  "2": {
+    "id": "40:2",
+    "surah": 40,
+    "index": 2,
+    "range": [
+      10,
+      20
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 10,
+        "prompt": {
+          "en": "Tabatabai glosses this outrage, maqt, as the most intense ____."
+        },
+        "options": [
+          {
+            "en": "hatred"
+          },
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "longing"
+          },
+          {
+            "en": "sorrow"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports Tabatabai reading the outrage, maqt, that God directs at the faithless as the most intense hatred, not a milder displeasure or sorrow."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai glosses this outrage, maqt, as the most intense hatred"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 13,
+        "prompt": {
+          "en": "According to the note, what does al-Qummi say the words 'He shows you His signs' refer to?"
+        },
+        "options": [
+          {
+            "en": "The provision sent down from the sky"
+          },
+          {
+            "en": "The penitent who return to Allah"
+          },
+          {
+            "en": "The Imams, of whom Allah informed His Messenger"
+          },
+          {
+            "en": "The Spirit cast on the Messenger"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note says al-Qummi glosses God showing His signs as the Imams, of whom God informed His Messenger, not the sky's provision or the penitent who take heed."
+        },
+        "anchor": {
+          "where": "verses.13.note",
+          "quote": "Al-Qummi glosses 'He shows you His signs' as the Imams, of whom God informed His Messenger"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 16,
+        "prompt": {
+          "en": "\"Then the spirits of His prophets, His messengers and His proofs speak, saying, 'To God, the One, the All-paramount.'\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Rida taught that when God asks to whom the sovereignty belongs, the spirits of His prophets, messengers and proofs answer, 'To God, the One, the All-paramount.'"
+        },
+        "anchor": {
+          "where": "verses.16.narrations.n5",
+          "quote": "Then the spirits of His prophets, His messengers and His proofs speak, saying, 'To God, the One, the All-paramount.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 18,
+        "prompt": {
+          "en": "According to the essay, how does al-Tabrisi gloss the Approaching Day?"
+        },
+        "options": [
+          {
+            "en": "The Day of Encounter"
+          },
+          {
+            "en": "The near Resurrection"
+          },
+          {
+            "en": "The day of the two blasts"
+          },
+          {
+            "en": "A distant Day far in the future"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says al-Tabrisi glosses the Approaching Day as the near Resurrection, the coming Day of which the faithless are to be warned, not a distant Day."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He is charged to warn them of the Approaching Day, which al-Tabrisi glosses as the near Resurrection"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 20,
+        "prompt": {
+          "en": "According to the passage, the objects worshipped besides Allah judge alongside Allah at the reckoning."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay closes that God judges with truth while those invoked besides Him decide nothing, being inert, so they can play no part in judgment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "those invoked besides Him decide nothing, being inert"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:10:03Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:11:21Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  },
+  "3": {
+    "id": "40:3",
+    "surah": 40,
+    "index": 3,
+    "range": [
+      21,
+      27
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the essay, why did that ruin come upon the earlier peoples?"
+        },
+        "options": [
+          {
+            "en": "Their messengers brought them manifest proofs and they defied them"
+          },
+          {
+            "en": "They refused to travel through the land"
+          },
+          {
+            "en": "They left no lasting traces in the land"
+          },
+          {
+            "en": "A defender shielded them from God's punishment"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay explains that ruin fell on the earlier peoples because their messengers brought them manifest proofs and they defied them, so God seized them despite their might."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "That ruin came because their messengers brought manifest proofs and they defied them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 26,
+        "prompt": {
+          "en": "Al-Tabrisi reads his 'Let me' as spoken to his ____, a sign some urged him not to kill Moses."
+        },
+        "options": [
+          {
+            "en": "army"
+          },
+          {
+            "en": "court"
+          },
+          {
+            "en": "sons"
+          },
+          {
+            "en": "magicians"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports al-Tabrisi reading Pharaoh's 'Let me slay Moses' as words to his court, taken as a sign that some there urged him not to kill Moses."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabrisi reads his 'Let me' as spoken to his court, a sign some urged him not to kill Moses"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 26,
+        "prompt": {
+          "en": "According to a narration, every one of Pharaoh's companions present when Moses and Aaron came was lawfully born."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says that when Moses and Aaron came before Pharaoh, none of his companions that day was born of fornication; all were lawfully born, so the statement is true."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n2",
+          "quote": "none of his companions that day was born of fornication; all were lawfully born"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 26,
+        "prompt": {
+          "en": "\"His legitimate birth prevented him, and prophets and the children of prophets are killed only by children of fornication.\" Who said this of Pharaoh?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked who kept Pharaoh from slaying Moses, Imam al-Sadiq answered that his legitimate birth prevented it, since prophets are killed only by children of fornication."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n1",
+          "quote": "His legitimate birth prevented him, and prophets and the children of prophets are killed only by children of fornication"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "According to the essay, what is Moses seeking when he replies to Pharaoh?"
+        },
+        "options": [
+          {
+            "en": "A demand that Pharaoh change the people's religion"
+          },
+          {
+            "en": "A plea to spare the sons of the believers"
+          },
+          {
+            "en": "A boast of Moses' own magical power"
+          },
+          {
+            "en": "Refuge with the Creator of both against one too haughty to submit"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says al-Tusi glosses Moses' reply as seeking refuge with the Creator of both him and Pharaoh against one too haughty to submit to God."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tusi glosses it as refuge with the Creator of both against one too haughty to submit to God"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:09:05Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:10:08Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  },
+  "4": {
+    "id": "40:4",
+    "surah": 40,
+    "index": 4,
+    "range": [
+      28,
+      37
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "How does the hidden believer reason that killing Moses would be rash?"
+        },
+        "options": [
+          {
+            "en": "If he lies God punishes them; if truthful they are safe"
+          },
+          {
+            "en": "If he lies the harm is his; if truthful, it strikes them"
+          },
+          {
+            "en": "Moses must be truthful, so they are already doomed"
+          },
+          {
+            "en": "Moses can defend himself from any attack on him"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The believer reasons the killing gains nothing: if Moses lies, his falsehood harms only himself, but if he is truthful, some of the punishment he warns of will strike them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "should Moses be lying, his falsehood falls on him alone; should he be truthful, some of what he warns will strike them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 28,
+        "prompt": {
+          "en": "\"Taqiyya is part of my religion and the religion of my forefathers; whoever has no taqiyya has no religion.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "This saying is Imam al-Sadiq's teaching that taqiyya, concealing one's faith under threat, belongs to his religion and is God's shield, the very practice the hidden believer of Pharaoh's clan followed."
+        },
+        "anchor": {
+          "where": "verses.28.narrations.n2",
+          "quote": "Taqiyya is part of my religion and the religion of my forefathers; whoever has no taqiyya has no religion"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 28,
+        "prompt": {
+          "en": "In Al-Qummi's note, the hidden believer was a leper who gestured to his people with his sound, unblemished hand."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. Al-Qummi's note says the believer was leprous with his fingers fallen away, and that he gestured to his people with his withered hand, not a sound one."
+        },
+        "anchor": {
+          "where": "verses.28.note",
+          "quote": "the man was leprous, his fingers fallen away, so that he would gesture to his people with his withered hand"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 34,
+        "prompt": {
+          "en": "According to the narration on verse 34, what does it confirm about Joseph?"
+        },
+        "options": [
+          {
+            "en": "That Joseph was a prophet and a messenger"
+          },
+          {
+            "en": "That Joseph was the believer of Pharaoh's clan"
+          },
+          {
+            "en": "That Joseph came after Moses, not before"
+          },
+          {
+            "en": "That Joseph himself doubted God's signs"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked whether Joseph was a messenger and prophet, Imam al-Baqir answered yes, citing God's own words that Joseph had brought manifest proofs earlier, so the verse confirms Joseph's prophethood."
+        },
+        "anchor": {
+          "where": "verses.34.narrations.n5",
+          "quote": "He was asked whether Joseph was a messenger, a prophet, and he said, 'Yes. Do you not hear God's saying"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 37,
+        "prompt": {
+          "en": "Al-Tabrisi records that al-Hasan held this a deception of the ____, Pharaoh knowing such a thing impossible."
+        },
+        "options": [
+          {
+            "en": "faithful"
+          },
+          {
+            "en": "courtiers"
+          },
+          {
+            "en": "Israelites"
+          },
+          {
+            "en": "weak-minded"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay reports al-Hasan's reading that the tower was a ruse to deceive the weak-minded, since Pharaoh himself knew reaching the heavens was impossible and never meant it seriously."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabrisi records that al-Hasan held this a deception of the weak-minded, Pharaoh knowing such a thing impossible"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:15:57Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:17:11Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  },
+  "5": {
+    "id": "40:5",
+    "surah": 40,
+    "index": 5,
+    "range": [
+      38,
+      50
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 38,
+        "prompt": {
+          "en": "The way of rectitude, al-Tabrisi explains, is faith in God, His ____, and the acknowledgement of Moses."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "oneness"
+          },
+          {
+            "en": "justice"
+          },
+          {
+            "en": "power"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports al-Tabrisi's gloss: the way of rectitude is faith in God, His oneness, and the acknowledgement of Moses, so the missing word is oneness."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The way of rectitude, al-Tabrisi explains, is faith in God, His oneness, and the acknowledgement of Moses"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 40,
+        "prompt": {
+          "en": "In the narration on this verse, how does Imam al-Sadiq correct the saying that Abu al-Khattab attributed to him?"
+        },
+        "options": [
+          {
+            "en": "He said to do whatever good you wish that is accepted"
+          },
+          {
+            "en": "He said to act as you wish once you know the truth"
+          },
+          {
+            "en": "He said righteous deeds count even without faith"
+          },
+          {
+            "en": "He said only a man's righteous deeds are rewarded"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration has Imam al-Sadiq reject the loose version and give his real words: once you know the truth, do whatever good is accepted, not simply act as you wish."
+        },
+        "anchor": {
+          "where": "verses.40.narrations.n1",
+          "quote": "By God, I did not say it thus; I said, when you know the truth do whatever good you wish that is accepted"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 46,
+        "prompt": {
+          "en": "In the narration, Imam al-Sadiq separates the Fire of morning and evening from the everlasting Fire, which he ties to the day the Hour sets in."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration draws a line: the Fire of morning and evening belongs to this life, while the everlasting Fire is the severest punishment when the Hour sets in, so the statement is true."
+        },
+        "anchor": {
+          "where": "verses.46.narrations.n3",
+          "quote": "This is only in this world; as for the everlasting Fire, it is His words, 'On the day when the Hour sets in, admit Pharaoh's clan to the severest punishment.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 47,
+        "prompt": {
+          "en": "\"It is abandoning obedience to those they were commanded to obey, and setting oneself above those they were urged to follow.\" Who said this of arrogance?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked to define arrogance, Imam Ali describes refusing obedience to those one was commanded to obey and placing oneself above those one was urged to follow."
+        },
+        "anchor": {
+          "where": "verses.47.narrations.n5",
+          "quote": "It is abandoning obedience to those they were commanded to obey, and setting oneself above those they were urged to follow"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 50,
+        "prompt": {
+          "en": "According to the essay's close, how do the keepers of hell answer when those in the Fire beg them to plead for a lighter punishment?"
+        },
+        "options": [
+          {
+            "en": "They agree to plead once, then fall silent"
+          },
+          {
+            "en": "They promise relief after a single day"
+          },
+          {
+            "en": "They say God has already forgiven the followers"
+          },
+          {
+            "en": "They tell them to invoke for themselves, but it goes awry"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's close has the keepers recall that messengers brought clear proofs, then tell the damned to invoke for themselves, and the invocations of the faithless only go awry."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the keepers reply that their messengers had brought them clear proofs, and, when they admit it, tell them to invoke for themselves - yet the invocations of the faithless only go awry"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:17:42Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:18:45Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  },
+  "6": {
+    "id": "40:6",
+    "surah": 40,
+    "index": 6,
+    "range": [
+      51,
+      60
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 51,
+        "prompt": {
+          "en": "Al-Qummi reads 'the day when the witnesses rise up' as the ____."
+        },
+        "options": [
+          {
+            "en": "Imams"
+          },
+          {
+            "en": "prophets"
+          },
+          {
+            "en": "angels"
+          },
+          {
+            "en": "martyrs"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note on this verse records al-Qummi glossing the witnesses who rise up as the Imams, not the prophets, angels, or the martyrs a hasty reader might assume."
+        },
+        "anchor": {
+          "where": "verses.51.note",
+          "quote": "Al-Qummi reads 'the day when the witnesses rise up' as the Imams"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 51,
+        "prompt": {
+          "en": "How does Tabatabai understand God's promise to help His apostles and the believers?"
+        },
+        "options": [
+          {
+            "en": "A guarantee that each believer triumphs in this world"
+          },
+          {
+            "en": "A promise to the whole class of messengers and believers"
+          },
+          {
+            "en": "A pledge limited to the prophets alone"
+          },
+          {
+            "en": "Help granted only after the Hour arrives"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the promise as made to the class of messengers and believers together, not as a guarantee for every individual in every event."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the promise as one made to the class of messengers and believers, not a guarantee for every individual in every event"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 56,
+        "prompt": {
+          "en": "'In the fire there is a fire from which the people of the fire seek refuge; it was created only for every arrogant, obstinate tyrant.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq described a fire within the Fire, made for every arrogant tyrant, every rebellious devil, and everyone who bears enmity to the family of Muhammad."
+        },
+        "anchor": {
+          "where": "verses.56.narrations.n3",
+          "quote": "In the fire there is a fire from which the people of the fire seek refuge; it was created only for every arrogant, obstinate tyrant"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 57,
+        "prompt": {
+          "en": "According to the essay, how does al-Tusi read the verse that the creation of the heavens and the earth is greater than that of mankind?"
+        },
+        "options": [
+          {
+            "en": "That the heavens were created before mankind"
+          },
+          {
+            "en": "A sign that people should dread the coming Hour"
+          },
+          {
+            "en": "An argument against those who deny the second creation"
+          },
+          {
+            "en": "Evidence that mankind is God's noblest creation"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says al-Tusi takes the verse that the heavens and earth are a greater creation than mankind as an argument against those who deny the second creation."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the creation of the heavens and the earth is greater than the creation of mankind - which al-Tusi reads as an argument against those who deny the second creation"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 51,
+        "prompt": {
+          "en": "The Shia narrations hold that the prophets who were killed were already helped in this world."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations hold many prophets, and the Imams after them, were killed unhelped in the world, so the promised help comes in the return, not in this life."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Sadiq said many prophets were killed unhelped, and the Imams after them killed and unhelped, so this help comes in the raja"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:16:59Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:18:45Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  },
+  "7": {
+    "id": "40:7",
+    "surah": 40,
+    "index": 7,
+    "range": [
+      61,
+      68
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 61,
+        "prompt": {
+          "en": "The passage counts the night for rest and the day for seeking God's bounty among the pillars by which human life is ordered."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says God made the night for rest and the day for seeking His bounty, and counts these among the pillars by which human life is ordered, so the statement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God made the night for people to rest from the day's toil of seeking a livelihood, and the day so that they may see and seek His bounty, which Tabatabai counts among the pillars by which human life is ordered"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 63,
+        "prompt": {
+          "en": "According to the essay, why can only obstinate denial turn a person away from God's signs?"
+        },
+        "options": [
+          {
+            "en": "Because the signs are hidden from most people"
+          },
+          {
+            "en": "Because the signs are plain and not hidden"
+          },
+          {
+            "en": "Because grasping the signs needs great learning"
+          },
+          {
+            "en": "Because the signs appear only to the chiefs"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay holds that because God's signs are plain and not hidden, nothing but obstinate denial could turn a person away from them; the other reasons misstate this."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "since the signs are plain and not hidden, only obstinate denial can turn a person from them"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 65,
+        "prompt": {
+          "en": "\"O Aban, when you reach Kufa, narrate this hadith: whoever testifies that there is no god but God sincerely, Paradise becomes obligatory for him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Sajjad"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration has Imam al-Sadiq tell Aban ibn Taghlib, on reaching Kufa, to relate that whoever sincerely testifies there is no god but God has Paradise made obligatory for him."
+        },
+        "anchor": {
+          "where": "verses.65.narrations.n3",
+          "quote": "O Aban, when you reach Kufa, narrate this hadith: whoever testifies that there is no god but God sincerely, Paradise becomes obligatory for him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 65,
+        "prompt": {
+          "en": "Whoever of you meets Me with the testimony that there is no god but God, sincere in it, has entered My fortress, and whoever enters My fortress is safe from My ____."
+        },
+        "options": [
+          {
+            "en": "reckoning"
+          },
+          {
+            "en": "wrath"
+          },
+          {
+            "en": "punishment"
+          },
+          {
+            "en": "questioning"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the narration Imam al-Rida relays that whoever meets God with sincere testimony enters His fortress, and whoever enters the fortress is safe from His punishment, not His reckoning or wrath."
+        },
+        "anchor": {
+          "where": "verses.65.narrations.n2",
+          "quote": "Whoever of you meets Me with the testimony that there is no god but God, sincere in it, has entered My fortress, and whoever enters My fortress is safe from My punishment"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 65,
+        "prompt": {
+          "en": "According to the perspectives, both traditions cite Ibn Abbas that one who says there is no god but God should follow it with what?"
+        },
+        "options": [
+          {
+            "en": "'God is greater'"
+          },
+          {
+            "en": "'All praise belongs to God'"
+          },
+          {
+            "en": "'Glory be to God'"
+          },
+          {
+            "en": "'There is no power except in God'"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say both traditions, citing Ibn Abbas, hold that one who declares there is no god but God should follow it with All praise belongs to God."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions carry Ibn Abbas that whoever says 'there is no god but God' should follow it with 'All praise belongs to God'"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:27:39Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:28:44Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  },
+  "8": {
+    "id": "40:8",
+    "surah": 40,
+    "index": 8,
+    "range": [
+      69,
+      78
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 69,
+        "prompt": {
+          "en": "The passage opens by turning once more to those who dispute God's signs. How does it read this renewed mention?"
+        },
+        "options": [
+          {
+            "en": "As wonder at how such people are turned from truth to falsehood"
+          },
+          {
+            "en": "As marking out a new group distinct from those blamed earlier"
+          },
+          {
+            "en": "As a rebuke aimed only at the People of the Book"
+          },
+          {
+            "en": "As a promise that the disputers will soon repent"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The commentary reads the opening as wonder at how such people are diverted from truth to falsehood, and denies that this renewed mention marks out any group different from those already blamed."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads its opening as wonder at how such people are diverted from truth to falsehood"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 70,
+        "prompt": {
+          "en": "\"Whoever denies the Book, or denies the interpretation the messengers were sent with, is a polytheist and a disbeliever.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration comes from Imam al-Baqir, who explains that whoever denies the Book, or the interpretation the messengers brought with it, is a polytheist and a disbeliever."
+        },
+        "anchor": {
+          "where": "verses.70.narrations.n1",
+          "quote": "whoever denies the Book, or denies the interpretation the messengers were sent with, is a polytheist and a disbeliever"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 72,
+        "prompt": {
+          "en": "How does the passage explain what happens when the deniers are set aflame in the Fire?"
+        },
+        "options": [
+          {
+            "en": "They are scorched only briefly, then released"
+          },
+          {
+            "en": "They are veiled from the Fire's heat"
+          },
+          {
+            "en": "They are clothed in garments that resist the flames"
+          },
+          {
+            "en": "They become the fuel of the Fire itself"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Glossing 'set aflame in the Fire,' the passage reports that the deniers do not merely burn but become the fuel of the Fire itself."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "being set aflame means they become its fuel"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 75,
+        "prompt": {
+          "en": "Their ____ matches how they lived: rejoicing on the earth without right and strutting in it."
+        },
+        "options": [
+          {
+            "en": "reward"
+          },
+          {
+            "en": "portion"
+          },
+          {
+            "en": "torment"
+          },
+          {
+            "en": "ruin"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The passage frames the punishment as fitting the crime: their torment matches how they lived, rejoicing on the earth without right and strutting about in it."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Their torment matches how they lived: rejoicing on the earth without right and strutting in it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 69,
+        "prompt": {
+          "en": "The commentaries read verse 69's disputers as sincere seekers questioning God's proofs in good faith."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The commentaries take the disputers as polytheists who argue to overturn God's proofs, not sincere seekers; honest inquiry into the signs, the passage says, would not have been blamed."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia commentators take them for the polytheists who contend to nullify God's proofs"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:31:23Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:32:57Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  },
+  "9": {
+    "id": "40:9",
+    "surah": 40,
+    "index": 9,
+    "range": [
+      79,
+      85
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 79,
+        "prompt": {
+          "en": "\"Whoever recites Ha Mim al-Mu'min every night, God forgives him his past and later sins, keeps him firm on the word of piety.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Baqir gives the reward for reciting Ha Mim al-Mu'min each night: God forgives the reciter's past and later sins and keeps him firm on the word of piety."
+        },
+        "anchor": {
+          "where": "verses.79.narrations.n1",
+          "quote": "Whoever recites Ha Mim al-Mu'min every night, God forgives him his past and later sins, keeps him firm on the word of piety"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 81,
+        "prompt": {
+          "en": "According to the essay, how does Tabatabai read the reminder that God shows you His signs?"
+        },
+        "options": [
+          {
+            "en": "As a lead-in to the rebuke over which signs they deny"
+          },
+          {
+            "en": "As a promise of reward for those who give thanks"
+          },
+          {
+            "en": "As a warning aimed only at the polytheists of Mecca"
+          },
+          {
+            "en": "As proof that the signs are hidden from most people"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai takes the reminder that God shows His signs as a lead-in to the rebuke that follows, asking which of these open signs they deny."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the reminder that God shows His signs as a lead-in to the rebuke that follows"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 82,
+        "prompt": {
+          "en": "Al-Tabrisi takes those traces as the great buildings and lofty ____ they raised, none of which availed them against God"
+        },
+        "options": [
+          {
+            "en": "gardens"
+          },
+          {
+            "en": "tents"
+          },
+          {
+            "en": "castles"
+          },
+          {
+            "en": "temples"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says al-Tabrisi read the traces earlier peoples left as the great buildings and lofty castles they raised, none of which saved them from God."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabrisi takes those traces as the great buildings and lofty castles they raised, none of which availed them against God"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 84,
+        "prompt": {
+          "en": "In al-Kafi, al-Hadi cited these two verses as proof when he ruled that a man who embraced Islam only as his punishment loomed should be put to death."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note reports that in al-Kafi al-Hadi cited these two verses and ruled that a convert who accepted Islam just as the hadd was due should be beaten to death."
+        },
+        "anchor": {
+          "where": "verses.84.note",
+          "quote": "al-Hadi ruled that he be beaten to death and gave these two verses as his proof"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 85,
+        "prompt": {
+          "en": "In the Perspectives, what do both Ibn Kathir and the Shia corpus hold about Pharaoh's faith declared as he saw the punishment?"
+        },
+        "options": [
+          {
+            "en": "Both hold that his faith saved him at the last moment"
+          },
+          {
+            "en": "Both hold that his late belief was refused"
+          },
+          {
+            "en": "Both hold that his repentance came in time to help"
+          },
+          {
+            "en": "Both hold that he had never denied God at all"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The Perspectives say Ibn Kathir and the Shia corpus agree: Pharaoh's belief declared only when he saw the punishment was refused, so late faith brings no benefit."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the Shia corpus gives the same refusal of Pharaoh's faith through al-Rida"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T22:26:57Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T22:28:21Z",
+      "assembled_at": "2026-09-30T22:33:20Z"
+    }
+  }
+}

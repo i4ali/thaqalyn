@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "44:1",
+    "surah": 44,
+    "index": 1,
+    "range": [
+      1,
+      29
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "According to the essay, Tabatabai reads the whole surah of ad-Dukhan as what?"
+        },
+        "options": [
+          {
+            "en": "A warning to those who doubt this Book"
+          },
+          {
+            "en": "A comfort for those who already believe"
+          },
+          {
+            "en": "A record of the Night of Ordainment"
+          },
+          {
+            "en": "A defense of Moses before Pharaoh"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai treats the entire surah as a warning to those who doubt the Book, holding over them the threat of punishment in this world and the next."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabatabai reads the whole surah as a warning to those who doubt this Book, holding over them the threat of punishment in this world and the next"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 3,
+        "prompt": {
+          "en": "On it everything of the coming year is ____."
+        },
+        "options": [
+          {
+            "en": "postponed"
+          },
+          {
+            "en": "measured out"
+          },
+          {
+            "en": "forgiven"
+          },
+          {
+            "en": "concealed"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration glosses the blessed night as the Night of Ordainment, on which everything of the coming year is measured out, that is, decreed in advance."
+        },
+        "anchor": {
+          "where": "verses.3.narrations.n1",
+          "quote": "On it everything of the coming year is measured out."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 3,
+        "prompt": {
+          "en": "\"As for Ha, Meem, it is Muhammad ... As for the night, it is Fatimah.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Answering a Christian questioner, Imam al-Kazim read Ha Meem as Muhammad, the Manifest Book as Ali, and the blessed night as Fatimah."
+        },
+        "anchor": {
+          "where": "verses.3.narrations.n2",
+          "quote": "As for Ha, Meem, it is Muhammad. As for the Manifest Book, it is the Commander of the Faithful, Ali. As for the night, it is Fatimah."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the essay, God recalls the people of Pharaoh to steady the Prophet."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says that to steady the Prophet, God then recalls the people of Pharaoh, going on to Moses's mission and Pharaoh's drowning."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "To steady the Prophet, God then recalls the people of Pharaoh."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 29,
+        "prompt": {
+          "en": "According to the narration, for whom alone did the sky and earth weep?"
+        },
+        "options": [
+          {
+            "en": "Pharaoh and his host"
+          },
+          {
+            "en": "Moses and his brother Aaron"
+          },
+          {
+            "en": "Adam and Noah"
+          },
+          {
+            "en": "Yahya ibn Zakariyya and Husayn"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The narration says heaven and earth wept for none but Yahya ibn Zakariyya and Husayn ibn Ali, weeping for no one else at all."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n5",
+          "quote": "they have wept for none but Yahya ibn Zakariyya and Husayn"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T23:39:37Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T23:40:53Z",
+      "assembled_at": "2026-09-30T23:46:15Z"
+    }
+  },
+  "2": {
+    "id": "44:2",
+    "surah": 44,
+    "index": 2,
+    "range": [
+      30,
+      42
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 32,
+        "prompt": {
+          "en": "\"...they are the Imams from among the believers, and We favoured them over all others.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Glossing 'chosen above all the nations,' Imam al-Baqir said the chosen ones are the Imams from among the believers, whom God favoured over all others."
+        },
+        "anchor": {
+          "where": "verses.32.narrations.n1",
+          "quote": "they are the Imams from among the believers, and We favoured them over all others"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 32,
+        "prompt": {
+          "en": "According to the essay, how do the commentators limit 'We chose them above all the nations'?"
+        },
+        "options": [
+          {
+            "en": "To the nations of their own time"
+          },
+          {
+            "en": "To every nation of every age"
+          },
+          {
+            "en": "To the Children of Israel alone in all history"
+          },
+          {
+            "en": "To the nations that had rejected the earlier prophets"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the commentators read 'above all the nations' as the nations of Israel's own time, favoured through the Torah and the prophets raised among them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "which the commentators read as the nations of their own time"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 37,
+        "prompt": {
+          "en": "The note counts Tubba himself among the guilty people whom Allah destroyed."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says Tubba himself had accepted faith, so the verse lays the blame on his people and not on him; he is not among the destroyed guilty."
+        },
+        "anchor": {
+          "where": "verses.37.note",
+          "quote": "he himself had accepted faith, so the verse blames his people and not him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 38,
+        "prompt": {
+          "en": "According to the essay, why must a lasting world follow the present one?"
+        },
+        "options": [
+          {
+            "en": "Because the Children of Israel were promised deliverance"
+          },
+          {
+            "en": "Because the Meccans demanded their fathers be brought back"
+          },
+          {
+            "en": "Because a creation that merely perished would be idle"
+          },
+          {
+            "en": "Because the signs given to Israel held a manifest test"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reasons that a creation which merely raised things up and let them perish would be idle; since Allah never acts in vain, a lasting world must follow."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "A creation that merely raised things up and let them perish would be idle, and because Allah does not act in vain, a lasting world must follow"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 42,
+        "prompt": {
+          "en": "Both traditions thus leave the door open to ____ by Allah's leave."
+        },
+        "options": [
+          {
+            "en": "intercession"
+          },
+          {
+            "en": "forgiveness"
+          },
+          {
+            "en": "repentance"
+          },
+          {
+            "en": "resurrection"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Despite reading the exception differently, the perspectives conclude that both traditions leave the door open to intercession granted only by Allah's leave."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions thus leave the door open to intercession by Allah's leave"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T23:38:56Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T23:40:00Z",
+      "assembled_at": "2026-09-30T23:46:15Z"
+    }
+  },
+  "3": {
+    "id": "44:3",
+    "surah": 44,
+    "index": 3,
+    "range": [
+      43,
+      59
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 44,
+        "prompt": {
+          "en": "The passage understands 'the sinful,' whose food is the Zaqqum tree, as one in whom sin has settled through persistence or excess."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses 'the sinful' whose food is the Zaqqum tree as one in whom sin has settled through persistence or excess, not any casual wrongdoer, so the statement matches the passage."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Mizan reads 'the sinful' as one in whom sin has settled through persistence or excess"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 49,
+        "prompt": {
+          "en": "According to the narration, why is the doomed man taunted with 'Taste this! Indeed you are the mighty and noble'?"
+        },
+        "options": [
+          {
+            "en": "Because he truly stood among the honored in paradise"
+          },
+          {
+            "en": "Because the keepers of hell address every prisoner so"
+          },
+          {
+            "en": "Because Abu Jahl used to claim that title for himself"
+          },
+          {
+            "en": "Because the Zaqqum warning had frightened him into faith"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration explains that Abu Jahl used to call himself the mighty and the noble, so in the fire those very words are thrown back at him as a taunt."
+        },
+        "anchor": {
+          "where": "verses.49.narrations.n2",
+          "quote": "Abu Jahl used to say, 'I am the mighty, the noble,' so in the fire he is taunted with it"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 51,
+        "prompt": {
+          "en": "'Whoever holds fast to God, God protects him ... by God-wariness he is in God's party, safe.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The saying is the teaching of Imam al-Sadiq, that whoever holds fast to God is protected and, by God-wariness, stands safe in God's party, which he ties to the verse on a safe place."
+        },
+        "anchor": {
+          "where": "verses.51.narrations.n3",
+          "quote": "whoever holds fast to God, God protects him. Such a one would not care if the sky fell or a calamity struck the earth's people: by God-wariness he is in God's party, safe"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 56,
+        "prompt": {
+          "en": "God said: Today I will grant him five things, and more, for him and for whoever shares his ____."
+        },
+        "options": [
+          {
+            "en": "house"
+          },
+          {
+            "en": "rank"
+          },
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "name"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration extends the five blessings not to one person only but to whoever shares his rank, so 'rank' is the word the passage uses."
+        },
+        "anchor": {
+          "where": "verses.56.narrations.n4",
+          "quote": "God said: Today I will grant him five things, and more, for him and for whoever shares his rank"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 58,
+        "prompt": {
+          "en": "According to the essay, how does the commentary describe the closing verse about the Book being made simple in your language?"
+        },
+        "options": [
+          {
+            "en": "As a warning aimed only at Abu Jahl"
+          },
+          {
+            "en": "As the first verse revealed in the surah"
+          },
+          {
+            "en": "As a picture of the gardens of paradise"
+          },
+          {
+            "en": "As the summing-up of the whole surah"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says the surah ends as it began, with the Book, and that the commentary calls this closing verse the summing-up of the whole surah."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah ends as it began, with the Book: We have made it simple in your language so they may take admonition. Al-Mizan calls this the summing-up of the whole surah"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T23:44:50Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T23:45:54Z",
+      "assembled_at": "2026-09-30T23:46:15Z"
+    }
+  }
+}

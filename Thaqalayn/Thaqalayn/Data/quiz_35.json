@@ -1,0 +1,807 @@
+{
+  "1": {
+    "id": "35:1",
+    "surah": 35,
+    "index": 1,
+    "range": [
+      1,
+      7
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "The passage describes the angels as God's messengers who carry His commands, given wings for descending and ascending."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses the verse's 'messengers' as intermediaries who carry God's commands, and reads their wings as given for descent and ascent, which is what the statement restates."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He names the angels His messengers, intermediaries who carry His commands, given wings for descent and ascent"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "According to the perspectives, how do the Shia narrations read the mercy that no one can withhold in the second verse?"
+        },
+        "options": [
+          {
+            "en": "As the provision God sends down from sky and earth"
+          },
+          {
+            "en": "Widely, counting temporary marriage and what flows on the Imam's tongue"
+          },
+          {
+            "en": "As the true promise the world must not hide"
+          },
+          {
+            "en": "As the blessing mankind is told to remember"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations read this mercy widely: al-Sadiq is reported that temporary marriage is part of it, and that it is what God causes to flow upon the Imam's tongue."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia narrations read it more widely: al-Sadiq is reported saying that temporary marriage is part of this mercy, and that it is what God causes to flow upon the tongue of the Imam"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 4,
+        "prompt": {
+          "en": "If the people deny the Prophet, he is ____ that messengers before him were denied and all matters return to God."
+        },
+        "options": [
+          {
+            "en": "warned"
+          },
+          {
+            "en": "rebuked"
+          },
+          {
+            "en": "commanded"
+          },
+          {
+            "en": "consoled"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay reads the verse as consolation for the Prophet: earlier messengers were also denied, and all matters return to God, so their denial need not weigh on him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "If the people deny the Prophet, he is consoled that messengers before him were denied and all matters return to God"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 6,
+        "prompt": {
+          "en": "\"Satan cannot gain mastery over the servant through whispering unless he has turned away from the remembrance of God.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "This is Imam al-Sadiq's teaching that Satan gains no power by whispering until the servant has turned from remembering God, made light of His prohibition, and forgotten that He knows his secret."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n5",
+          "quote": "Satan cannot gain mastery over the servant through whispering unless he has turned away from the remembrance of God"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the essay, on what note does the passage close after naming Satan an enemy?"
+        },
+        "options": [
+          {
+            "en": "On God's mercy that no one can ever withhold"
+          },
+          {
+            "en": "On Satan summoning his party to the Blaze"
+          },
+          {
+            "en": "On the summons to remember Allah's blessing"
+          },
+          {
+            "en": "Two promised ends: punishment for the faithless, reward for the faithful"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says the passage closes on its two promised ends: severe punishment for the faithless, and forgiveness with a great reward for the faithful who act well."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the passage closes on its two promised ends: severe punishment for the faithless, forgiveness and a great reward for the faithful who act well"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:27:11Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:28:52Z",
+      "assembled_at": "2026-09-30T20:51:47Z"
+    }
+  },
+  "2": {
+    "id": "35:2",
+    "surah": 35,
+    "index": 2,
+    "range": [
+      8,
+      14
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 8,
+        "prompt": {
+          "en": "\"Self-admiration has degrees; among them is that a servant's evil deed is made to seem fair to him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Kazim"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked about the self-admiration that spoils a deed, Imam al-Kazim said it has degrees, one being that a servant's evil deed is made to seem fair to him."
+        },
+        "anchor": {
+          "where": "verses.8.narrations.n2",
+          "quote": "self-admiration has degrees; among them is that a servant's evil deed is made to seem fair to him, so he sees it as good"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 9,
+        "prompt": {
+          "en": "According to Imam al-Sadiq, how does God begin to resurrect creation?"
+        },
+        "options": [
+          {
+            "en": "He raises them at the sound of the trumpet"
+          },
+          {
+            "en": "He breathes life into them from His spirit"
+          },
+          {
+            "en": "He sends rain from the sky for forty mornings"
+          },
+          {
+            "en": "He commands the graves to open at once"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq said that when God wishes to resurrect creation He sends rain from the sky for forty mornings, so the joints come together and the flesh grows."
+        },
+        "anchor": {
+          "where": "verses.9.narrations.n4",
+          "quote": "When God wishes to resurrect the creation, He sends rain from the sky upon the earth for forty mornings, so the joints come together and the flesh grows."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 10,
+        "prompt": {
+          "en": "One reading, from Qatada, takes its opening as a call to seek honour by ____."
+        },
+        "options": [
+          {
+            "en": "hoarding wealth"
+          },
+          {
+            "en": "obeying God"
+          },
+          {
+            "en": "seeking allies"
+          },
+          {
+            "en": "boasting of deeds"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports a reading from Qatada that takes the verse's opening as a call to seek honour by obeying God, since honour belongs wholly to Him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "One reading, from Qatada, takes its opening as a call to seek honour by obeying God"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "The passage names only one thing that lengthens a person's life. What is it?"
+        },
+        "options": [
+          {
+            "en": "Maintaining kinship ties"
+          },
+          {
+            "en": "Giving generously in charity"
+          },
+          {
+            "en": "Praying through the night"
+          },
+          {
+            "en": "Seeking sacred knowledge"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq said nothing increases life except maintaining kinship ties, so that keeping kin can add thirty years while cutting kinship off can take thirty away."
+        },
+        "anchor": {
+          "where": "verses.11.narrations.n7",
+          "quote": "We know of nothing that increases life except maintaining kinship ties, so that a man whose term is three years, being one who keeps kinship, God increases his life by thirty years"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the passage, on the Day of Resurrection the idols will defend those who worshipped them."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says that at the Resurrection the idols disown the worship offered them, and that they cannot even hear or answer, so they will not defend their worshippers."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The idols people invoke own not a date-stone's husk; they neither hear nor answer, and at the Resurrection they disown the worship offered them."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:26:02Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:27:08Z",
+      "assembled_at": "2026-09-30T20:51:47Z"
+    }
+  },
+  "3": {
+    "id": "35:3",
+    "surah": 35,
+    "index": 3,
+    "range": [
+      15,
+      26
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 17,
+        "prompt": {
+          "en": "And this is no hard thing for Him, which al-Tibyan glosses as not ____."
+        },
+        "options": [
+          {
+            "en": "burdensome"
+          },
+          {
+            "en": "impossible"
+          },
+          {
+            "en": "forbidden"
+          },
+          {
+            "en": "costly"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The verse says a new creation is no hard thing for God, and al-Tibyan glosses that phrase as not impossible, since nothing lies beyond His power."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "And this is no hard thing for Him, which al-Tibyan glosses as not impossible"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 18,
+        "prompt": {
+          "en": "\"God does not seize the innocent for the guilty, nor punish children for the sins of the fathers.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked to explain 'No bearer shall bear another's burden,' Imam al-Sadiq said God does not seize the innocent for the guilty nor punish children for their fathers' sins."
+        },
+        "anchor": {
+          "where": "verses.18.narrations.n1",
+          "quote": "God does not seize the innocent for the guilty, nor punish children for the sins of the fathers"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 19,
+        "prompt": {
+          "en": "According to the essay, what do the contrasts like blind and seer, darkness and light stand for?"
+        },
+        "options": [
+          {
+            "en": "The rich Lord set against needy creation"
+          },
+          {
+            "en": "The Quran set against the earlier scriptures"
+          },
+          {
+            "en": "The believer set against the disbeliever"
+          },
+          {
+            "en": "The living set against those in the graves"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the run of contrasts are parables, al-Tibyan explains, for the believer and the disbeliever, so seer, light and life stand for faith against unbelief."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "These are parables, al-Tibyan explains, for the believer and the disbeliever, faith set against unbelief"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 23,
+        "prompt": {
+          "en": "The passage limits the Prophet's charge to warning, not to compelling anyone to believe."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the Prophet cannot make the dead-hearted deniers hear, so he is charged only to warn; making anyone believe is not his task."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "So the Prophet is charged only to warn"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 24,
+        "prompt": {
+          "en": "According to the passage, how do the Shia sources read the warner sent to every nation?"
+        },
+        "options": [
+          {
+            "en": "That the Prophet is the only warner God ever sent"
+          },
+          {
+            "en": "That every age has its own Imam"
+          },
+          {
+            "en": "That the warner for each nation is the Quran itself"
+          },
+          {
+            "en": "That each nation's warner brought a new scripture"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The Shia sources carry the warner into every age, glossing the verse as 'for every age there is an Imam,' the one who interprets the Quran, Ali."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia sources carry the warner into every age. al-Burhan, transmitting Ali ibn Ibrahim, glosses the verse as 'for every age there is an Imam'"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:38:01Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:39:39Z",
+      "assembled_at": "2026-09-30T20:51:47Z"
+    }
+  },
+  "4": {
+    "id": "35:4",
+    "surah": 35,
+    "index": 4,
+    "range": [
+      27,
+      37
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "According to the essay, what does the great variety of colors in fruits, mountains and people show?"
+        },
+        "options": [
+          {
+            "en": "That every plant draws on the same seed"
+          },
+          {
+            "en": "That divine ordering, not water alone, is at work"
+          },
+          {
+            "en": "That water is the single cause of all life"
+          },
+          {
+            "en": "That color has no meaning in creation"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay argues that if water alone produced them, all would be one color; their differing hues instead point to divine ordering at work behind creation."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Were these merely the yield of one cause, water, they would all be one color; their difference points to divine ordering at work"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 28,
+        "prompt": {
+          "en": "\"By 'the learned' is meant one whose deed confirms his word.\" Who is reported to have defined the learned this way?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ibn Abbas"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about God's learned servants who truly fear Him, Imam al-Sadiq said the learned is one whose deed confirms his word, and one whose deed does not is not learned."
+        },
+        "anchor": {
+          "where": "verses.28.narrations.n1",
+          "quote": "By 'the learned' is meant one whose deed confirms his word; and whoever's deed does not confirm his word is not learned."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 34,
+        "prompt": {
+          "en": "The grief is what befell them in the world, of ____."
+        },
+        "options": [
+          {
+            "en": "sin and regret"
+          },
+          {
+            "en": "sickness and poverty"
+          },
+          {
+            "en": "loss and shame"
+          },
+          {
+            "en": "fear and hardship"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Baqir explained that the grief God removes from the people of Paradise is the fear and hardship they had suffered in the world."
+        },
+        "anchor": {
+          "where": "verses.34.narrations.n6",
+          "quote": "The grief is what befell them in the world, of fear and hardship."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 37,
+        "prompt": {
+          "en": "In the essay, what are the faithless told when they beg to be brought back to act righteously?"
+        },
+        "options": [
+          {
+            "en": "Their punishment will be eased in time"
+          },
+          {
+            "en": "They may return once they repent"
+          },
+          {
+            "en": "They had a life long enough to heed, and a warner came"
+          },
+          {
+            "en": "No warner was ever sent to them"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says those who cry to be brought back are told they had a life long enough to take admonition and that the warner had already come to them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "they cry to be brought back to act righteously and are answered that they were given a life long enough to heed and that the warner had come"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 32,
+        "prompt": {
+          "en": "In the Shia reports, the one who takes the lead in all good works is someone who merely knows the Imam."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the Shia reports the one foremost in all good works is the Imam himself; the one who merely knows the Imam is the average, not the foremost."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia reports make the chosen the Prophet's household: the foremost is the Imam, the average is one who knows the Imam, and the wrongdoer is one who does not know him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:34:42Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:35:58Z",
+      "assembled_at": "2026-09-30T20:51:47Z"
+    }
+  },
+  "5": {
+    "id": "35:5",
+    "surah": 35,
+    "index": 5,
+    "range": [
+      38,
+      45
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 38,
+        "prompt": {
+          "en": "The commentary says God's knowledge of what is in the breasts means He will hold people to account for their inner belief and deeds."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says God's knowledge of the Unseen and of what is in the breasts is a warning that He will judge people and call them to account for their inner belief and deeds, so the claim holds."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads this as a warning that He will judge people by what their inner belief and deeds hold, and call them to account for it"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 40,
+        "prompt": {
+          "en": "According to the essay, what does the challenge to the idolaters about their 'partners' prove?"
+        },
+        "options": [
+          {
+            "en": "That the partners hold a share in the heavens"
+          },
+          {
+            "en": "That the idolaters were given a clear scripture"
+          },
+          {
+            "en": "That a lord must be a creator, and the partners created nothing"
+          },
+          {
+            "en": "That the partners deserve some worship"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reads the challenge as proof that a lord must be a creator; the partners created no part of the earth and hold no share in the heavens, so they cannot be lords."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai frames this as a proof that a lord must be a creator, whose claim would need evidence from the world or a revealed scripture, neither of which exists"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 41,
+        "prompt": {
+          "en": "\"Allah is the carrier of the Throne, the heavens and the earth and all that is in them and between them.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Answering al-Jathaliq, Imam Ali, the Commander of the Faithful, said Allah carries the Throne, the heavens and the earth, citing the verse that Allah sustains them lest they fall apart."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n1",
+          "quote": "Allah is the carrier of the Throne, the heavens and the earth and all that is in them and between them"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 43,
+        "prompt": {
+          "en": "On 'evil schemes beset only their authors,' both traditions draw the same ____ from the Book."
+        },
+        "options": [
+          {
+            "en": "triad"
+          },
+          {
+            "en": "warning"
+          },
+          {
+            "en": "promise"
+          },
+          {
+            "en": "parable"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say that on this verse both traditions draw the same triad from the Book: scheming, transgression, and breaking a pledge, three acts that recoil on the one who commits them."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "both traditions draw the same triad from the Book"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 45,
+        "prompt": {
+          "en": "According to the essay, how does Tabatabai understand the respite God grants before the appointed term?"
+        },
+        "options": [
+          {
+            "en": "A sign the schemers have been forgiven"
+          },
+          {
+            "en": "Proof the Hour will never arrive"
+          },
+          {
+            "en": "A reward granted for their solemn oaths"
+          },
+          {
+            "en": "A worldly reprieve until death or the Resurrection"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says that if God punished people at once for what they earned He would leave no creature on the earth; instead He grants a worldly respite until death or the Resurrection."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "for Tabatabai a worldly respite until death or the Resurrection"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T20:50:14Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T20:51:17Z",
+      "assembled_at": "2026-09-30T20:51:47Z"
+    }
+  }
+}

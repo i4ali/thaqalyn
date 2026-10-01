@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "32:1",
+    "surah": 32,
+    "index": 1,
+    "range": [
+      1,
+      11
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the essay, how does the passage answer the charge that the Prophet fabricated the Book?"
+        },
+        "options": [
+          {
+            "en": "The truth from your Lord, warning a people with no prior warner"
+          },
+          {
+            "en": "A message meant to lead people astray"
+          },
+          {
+            "en": "A warning an earlier prophet had already brought"
+          },
+          {
+            "en": "A sign of God's sovereignty over the Throne"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The idolaters said the Prophet fabricated the Book; the essay answers that it is the truth from your Lord, sent to warn a people who had received no warner before him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the answer is that it is the truth from your Lord, sent to warn a people who had received no warner before him"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"On Sunday and Monday He created the earths, on Tuesday their provisions, on Wednesday and Thursday the heavens.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet Muhammad"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Describing the six days of creation, Imam al-Sadiq set out the order: the earths on Sunday and Monday, their provisions on Tuesday, and the heavens on Wednesday and Thursday."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n1",
+          "quote": "On Sunday and Monday He created the earths, on Tuesday their provisions, on Wednesday and Thursday the heavens, and on Friday their provisions."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 6,
+        "prompt": {
+          "en": "The Unseen is what has ____, and the witnessed is what has already been."
+        },
+        "options": [
+          {
+            "en": "not yet come to be"
+          },
+          {
+            "en": "passed and gone"
+          },
+          {
+            "en": "been hidden from sight"
+          },
+          {
+            "en": "always existed"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration defines the Unseen as what has not yet come to be, set against the witnessed, which is what has already been, a contrast of the not-yet and the already."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n2",
+          "quote": "The Unseen is what has not yet come to be, and the witnessed is what has already been."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 7,
+        "prompt": {
+          "en": "In the perspectives, whichever way the word 'perfected' is read, the passage holds that God made His creation firm and sound."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives note that al-Tabari accepts both recitations as sound, since either way God made His creation firm; so although the readings weigh the word differently, they agree the creation is soundly made."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Tabari himself accepts both recitations of the word as sound, since either way God made His creation firm"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "According to the essay, what does the passage identify as the real fault of those who doubt being created anew?"
+        },
+        "options": [
+          {
+            "en": "Failing to thank for hearing, sight, and hearts"
+          },
+          {
+            "en": "Assigning guardians and intercessors to their gods"
+          },
+          {
+            "en": "Disbelief in meeting their Lord"
+          },
+          {
+            "en": "Denying that God settled on the Throne"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The deniers scoff at being raised once lost in the dust, but the essay says their real fault is disbelief in the encounter with their Lord, the meeting the passage closes on."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the passage answers that their real fault is disbelief in meeting their Lord"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:26:16Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:30:50Z",
+      "assembled_at": "2026-09-30T19:31:17Z"
+    }
+  },
+  "2": {
+    "id": "32:2",
+    "surah": 32,
+    "index": 2,
+    "range": [
+      12,
+      22
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 12,
+        "prompt": {
+          "en": "Having set out creation and the return to God, the surah now turns to the two ____ that follow."
+        },
+        "options": [
+          {
+            "en": "signs"
+          },
+          {
+            "en": "destinies"
+          },
+          {
+            "en": "judgments"
+          },
+          {
+            "en": "promises"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay opens by saying that, after creation and the return to God, the surah marks off the two destinies that follow: the believers and the transgressors."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the surah now turns to the two destinies that follow"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "In the essay, who are 'the guilty' that confess and beg to be sent back?"
+        },
+        "options": [
+          {
+            "en": "Those who denied the resurrection"
+          },
+          {
+            "en": "Everyone who has committed any sin"
+          },
+          {
+            "en": "Those who were never reminded of the signs"
+          },
+          {
+            "en": "The believers who fell short in deeds"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says 'the guilty' here are specifically the deniers of the resurrection, who now have certainty but no deeds and so beg in vain to be sent back."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "'the guilty' here means specifically the deniers of the resurrection"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 17,
+        "prompt": {
+          "en": "\"There is no good deed a servant performs but that its reward is set out in the Quran, except the night prayer.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq said every good deed's reward is set out in the Quran except the night prayer, whose reward God left unstated because of its greatness."
+        },
+        "anchor": {
+          "where": "verses.17.narrations.n2",
+          "quote": "There is no good deed a servant performs but that its reward is set out in the Quran, except the night prayer"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 20,
+        "prompt": {
+          "en": "According to the narration on the Fire, what happens to the guilty when they reach the top of hell?"
+        },
+        "options": [
+          {
+            "en": "They are allowed to escape for a time"
+          },
+          {
+            "en": "Hell roars and hurls them back down"
+          },
+          {
+            "en": "They are struck down with iron maces"
+          },
+          {
+            "en": "They plunge downward for seventy years"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration says the guilty plunge to hell's bottom, where it hurls them up, and when they reach the top they are struck down with iron maces."
+        },
+        "anchor": {
+          "where": "verses.20.narrations.n4",
+          "quote": "when they reach its top, they are struck down with iron maces"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the passage, Sunni exegesis reads the nearer punishment as the Day of Resurrection."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage says Sunni exegesis reads the nearer punishment as this world's afflictions and the greater as the Day of Resurrection, so the statement swaps the two."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Sunni exegesis takes the nearer punishment as the afflictions of this world"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:28:17Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:29:17Z",
+      "assembled_at": "2026-09-30T19:31:17Z"
+    }
+  },
+  "3": {
+    "id": "32:3",
+    "surah": 32,
+    "index": 3,
+    "range": [
+      23,
+      30
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 23,
+        "prompt": {
+          "en": "According to the essay, how does recalling that God gave Moses the Book console the Prophet?"
+        },
+        "options": [
+          {
+            "en": "The Torah too was rejected by Moses' own people"
+          },
+          {
+            "en": "God promised him a book greater than the Torah"
+          },
+          {
+            "en": "Moses never faced rejection from the Children of Israel"
+          },
+          {
+            "en": "The Children of Israel would soon follow the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the reminder consoles the Prophet, for just as the Qur'an was sent and rejected, so the Torah was given to Moses and his people turned against him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "as the Qur'an was sent to him and rejected, so the Torah was given to Moses and its people turned against him"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 24,
+        "prompt": {
+          "en": "'The imams in the Book of God are two: an imam of justice and an imam of tyranny.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir taught that the Book names two kinds of imam, one of justice and one of tyranny, and that the guiding imams act by God's command."
+        },
+        "anchor": {
+          "where": "verses.24.narrations.n1",
+          "quote": "The imams in the Book of God are two: an imam of justice and an imam of tyranny."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 24,
+        "prompt": {
+          "en": "Patience is to faith as the ____ is to the body."
+        },
+        "options": [
+          {
+            "en": "root"
+          },
+          {
+            "en": "pillar"
+          },
+          {
+            "en": "head"
+          },
+          {
+            "en": "foundation"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq likened patience to the head of the body, for as the body cannot live without its head, faith cannot stand without patience."
+        },
+        "anchor": {
+          "where": "verses.24.narrations.n3",
+          "quote": "Patience is to faith as the head is to the body."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 29,
+        "prompt": {
+          "en": "The narration teaches that on the day of judgement, faith will benefit only one who was already a believer, certain of it beforehand."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "True. Imam al-Sadiq's narration says newfound faith will not benefit anyone who drew near through it unless he was already a believer, certain of it beforehand."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n5",
+          "quote": "It will not benefit anyone who drew near through faith unless he was a believer before and certain of this opening"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 30,
+        "prompt": {
+          "en": "According to the essay, how does Surah as-Sajda come to a close?"
+        },
+        "options": [
+          {
+            "en": "With the deniers granted respite until they believe"
+          },
+          {
+            "en": "With a promise the faithless will believe before death"
+          },
+          {
+            "en": "With Moses returning to lead the Children of Israel"
+          },
+          {
+            "en": "With the Prophet told to await God's verdict as they wait"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says the surah ends where waiting meets waiting: the Prophet is told to await God's verdict against them while they wait for time to undo him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the Prophet told to await God's verdict against them while they wait for time to undo him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T19:28:40Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T19:29:41Z",
+      "assembled_at": "2026-09-30T19:31:17Z"
+    }
+  }
+}

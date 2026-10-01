@@ -1,0 +1,807 @@
+{
+  "1": {
+    "id": "38:1",
+    "surah": 38,
+    "index": 1,
+    "range": [
+      1,
+      14
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "In the perspectives, the reading that derives the letter Saad from 'musadah' understands the word to mean what?"
+        },
+        "options": [
+          {
+            "en": "Compare the Quran against your deeds"
+          },
+          {
+            "en": "One of God's own names"
+          },
+          {
+            "en": "A name of the Quran"
+          },
+          {
+            "en": "That God has spoken truly"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives record that al-Hasan derived Saad from musadah, reading it as an instruction to compare the Quran against your deeds, unlike the other early readings listed."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Hasan read Saad from musadah, 'compare the Quran against your deeds,' while others held it an oath and one of God's names"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 4,
+        "prompt": {
+          "en": "In the passage's narration, the men of Quraysh put their fingers in their ears and fled after the Messenger told them to say there is no god but God."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says that when the Messenger had them say there is no god but God, they thrust their fingers in their ears and fled, calling it a fabrication."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n2",
+          "quote": "So they put their fingers in their ears and fled, saying: 'We did not hear of this in the latter-day creed; this is nothing but a fabrication.'"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 6,
+        "prompt": {
+          "en": "Tabatabai reads 'this is a thing intended' as a charge that the Prophet only seeks ____ over them."
+        },
+        "options": [
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "followers"
+          },
+          {
+            "en": "power"
+          },
+          {
+            "en": "vengeance"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay reports Tabatabai reading the deniers' words 'this is a thing intended' as an accusation that the Prophet is merely after power over them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads 'this is a thing intended' as a charge that the Prophet only seeks power over them"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 12,
+        "prompt": {
+          "en": "\"When he tortured a man he would spread him face down on the ground and stretch out his hands and feet.\" Who explained Pharaoh's title so?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked why Pharaoh was called the Impaler, Imam al-Sadiq described how he pegged his victims face down to the ground until they died, so God named him so."
+        },
+        "anchor": {
+          "where": "verses.12.narrations.n3",
+          "quote": "Because when he tortured a man he would spread him face down on the ground and stretch out his hands and feet and peg them with four pegs into the ground"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 13,
+        "prompt": {
+          "en": "In the essay's close, how does al-Tusi gloss the phrase 'of the factions'?"
+        },
+        "options": [
+          {
+            "en": "The dwellers of Aykah, the people of Shu'ayb"
+          },
+          {
+            "en": "The rout foretold at Mecca and won at Badr"
+          },
+          {
+            "en": "Mecca's polytheists taken as the whole of them"
+          },
+          {
+            "en": "The party of Iblis and his followers"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's close reports al-Tusi glossing 'of the factions' as the party of Iblis and his followers, the company the deniers belong to."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi glosses 'of the factions' as the party of Iblis and his followers"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:20:51Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:24:25Z",
+      "assembled_at": "2026-09-30T21:38:29Z"
+    }
+  },
+  "2": {
+    "id": "38:2",
+    "surah": 38,
+    "index": 2,
+    "range": [
+      15,
+      26
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 15,
+        "prompt": {
+          "en": "According to the essay, what does the single Cry awaited by the deniers of Mecca refer to?"
+        },
+        "options": [
+          {
+            "en": "The first blast of the trumpet"
+          },
+          {
+            "en": "A sudden death that overtakes them before the Reckoning"
+          },
+          {
+            "en": "The punishment that struck the earlier communities at once"
+          },
+          {
+            "en": "A final warning that still leaves them time to repent"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says al-Tabrisi reads that Cry as the first blast of the trumpet, this community's uprooting punishment held back to the Day of Resurrection while earlier peoples were struck at once."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tabrisi reads that Cry as the first blast of the trumpet, the uprooting punishment of this community held back to the Day of Resurrection while earlier peoples were struck at once"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 17,
+        "prompt": {
+          "en": "Imam al-Baqir explained that this strength, in Arab usage, joins power with ____."
+        },
+        "options": [
+          {
+            "en": "wisdom"
+          },
+          {
+            "en": "blessing"
+          },
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "mercy"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports Imam al-Baqir's gloss that David's strength, in Arab usage, joins power with blessing, not mere physical force."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Imam al-Baqir explained that this strength, in Arab usage, joins power with blessing"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 20,
+        "prompt": {
+          "en": "\"O Abu al-Salt, I am God's proof over His creation, and God would not take a proof over a people whose languages he does not know.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Rida said this to Abu al-Salt, explaining that God's proof must know the people's languages, which is why he read conclusive speech as knowledge of languages."
+        },
+        "anchor": {
+          "where": "verses.20.narrations.n3",
+          "quote": "O Abu al-Salt, I am God's proof over His creation, and God would not take a proof over a people whose languages he does not know"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 24,
+        "prompt": {
+          "en": "According to the perspectives, how do both the Shia and Sunni traditions handle the tale that David married Uriya's wife?"
+        },
+        "options": [
+          {
+            "en": "Both accept it as sound history"
+          },
+          {
+            "en": "Both reject it and refuse to relay it"
+          },
+          {
+            "en": "Both relay it and both carry voices rejecting it"
+          },
+          {
+            "en": "Both leave the tale entirely unmentioned"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives note that both traditions relay the tale of David and Uriya's wife yet both also carry voices rejecting it, not accepting or suppressing it outright."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions relay the Uriya tale and both carry voices against it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the passage, David is made a vicegerent on the earth with no charge about how he must judge."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says David, named vicegerent, is charged to judge between people with justice and not to follow desire, so the appointment carries a clear charge."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "David is then named a vicegerent on the earth and charged to judge between people with justice and not to follow desire, which would lead him astray from the way of God"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:31:25Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:32:33Z",
+      "assembled_at": "2026-09-30T21:38:29Z"
+    }
+  },
+  "3": {
+    "id": "38:3",
+    "surah": 38,
+    "index": 3,
+    "range": [
+      27,
+      40
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 27,
+        "prompt": {
+          "en": "\"God laid duties as a choice and forbade as a warning; He gave much for little; He is not disobeyed as one overcome, nor obeyed under compulsion.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Answering a questioner, Imam Ali described how God assigns duties and warnings and is never disobeyed as one overcome nor obeyed under compulsion, before citing that creation is not in vain."
+        },
+        "anchor": {
+          "where": "verses.27.narrations.n1",
+          "quote": "God laid duties as a choice and forbade as a warning; He gave much for little; He is not disobeyed as one overcome, nor obeyed under compulsion"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "In the essay, what does al-Tabrisi take the verse about believers and corrupters to refute?"
+        },
+        "options": [
+          {
+            "en": "That all falsehood is God's own doing"
+          },
+          {
+            "en": "That the heavens were created without purpose"
+          },
+          {
+            "en": "That the blessed Book holds no signs to ponder"
+          },
+          {
+            "en": "That the faithless will be spared the Fire"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports al-Tabrisi reading the contrast between the faithful and the corrupters as a refutation of those who make all falsehood God's own doing, since He made the world for a wise end."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tabrisi takes the verse to refute those who hold that all falsehood is God's doing, for He made the world for a wise end"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 33,
+        "prompt": {
+          "en": "According to the passage, the sun was brought back for Solomon so that he could pray the prayer whose time had passed."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq relates that Solomon asked the angels to return the sun so he could pray its prayer in time; they returned it and he wiped for ablution."
+        },
+        "anchor": {
+          "where": "verses.33.narrations.n5",
+          "quote": "Return the sun to me that I may pray my prayer in its time."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 34,
+        "prompt": {
+          "en": "Al-Tabrisi relates that the body was Solomon's infant son, a sign that caution does not avail against ____, and that he was reproached only for his fear of the demons."
+        },
+        "options": [
+          {
+            "en": "the enemy"
+          },
+          {
+            "en": "destiny"
+          },
+          {
+            "en": "old age"
+          },
+          {
+            "en": "misfortune"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note relays al-Tabrisi's reading that the lifeless body was Solomon's own infant son, placed as a sign that human caution cannot ward off what destiny has decreed."
+        },
+        "anchor": {
+          "where": "verses.34.note",
+          "quote": "Al-Tabrisi relates that the body was Solomon's infant son, a sign that caution does not avail against destiny, and that he was reproached only for his fear of the demons"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 34,
+        "prompt": {
+          "en": "According to the perspectives, what do both the Shia and Sunni traditions do with the story of Solomon's lost ring?"
+        },
+        "options": [
+          {
+            "en": "Both accept it as sound history"
+          },
+          {
+            "en": "Both reject it outright with no dissent"
+          },
+          {
+            "en": "Both relay it and both contain voices rejecting it"
+          },
+          {
+            "en": "Both ignore it entirely"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say the ring story behind Solomon's trial is relayed within both the Shia and Sunni traditions, yet each tradition also carries voices that reject it."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The trial of Solomon and the body cast on his throne is bound up with the story of his lost ring, which both traditions relay and both contain voices rejecting"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:28:14Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:29:23Z",
+      "assembled_at": "2026-09-30T21:38:29Z"
+    }
+  },
+  "4": {
+    "id": "38:4",
+    "surah": 38,
+    "index": 4,
+    "range": [
+      41,
+      64
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 41,
+        "prompt": {
+          "en": "\"Job was tried without any sin, and the prophets do not sin, for they are infallible and purified.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "This is Imam al-Baqir's teaching that Job was tried though sinless, since the prophets are infallible and purified, and no ugliness came upon his form."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n2",
+          "quote": "Job was tried without any sin, and the prophets do not sin, for they are infallible and purified"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 44,
+        "prompt": {
+          "en": "According to the passage, how did Job keep the oath he had sworn?"
+        },
+        "options": [
+          {
+            "en": "By striking once with a bundle of a hundred stalks"
+          },
+          {
+            "en": "By striking his wife a hundred times in turn"
+          },
+          {
+            "en": "By having the oath annulled by God"
+          },
+          {
+            "en": "By fasting a hundred days instead"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Job had sworn to strike his wife a hundred lashes, and that a single blow with a hundred-stalk bundle fulfilled the oath."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Job had sworn to strike his wife a hundred lashes, and that one blow with a hundred-stalk bundle kept the oath"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 46,
+        "prompt": {
+          "en": "Al-Tusi reports Abu Ali's remark that 'the abode' may be read as the Hereafter or as ____."
+        },
+        "options": [
+          {
+            "en": "the grave"
+          },
+          {
+            "en": "the Garden"
+          },
+          {
+            "en": "the Fire"
+          },
+          {
+            "en": "this world"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay reports Abu Ali's remark, carried by al-Tusi, that the abode with which these prophets were purified may be read as the Hereafter or as this world."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi reports Abu Ali's remark that 'the abode' may be read as the Hereafter or as this world"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 52,
+        "prompt": {
+          "en": "According to the passage, who are the maidens promised to the Godwary in the Garden?"
+        },
+        "options": [
+          {
+            "en": "Believing women brought back young"
+          },
+          {
+            "en": "The dark-eyed houris, so pure that the glance is held back"
+          },
+          {
+            "en": "Angels who serve the Godwary their fruit"
+          },
+          {
+            "en": "The wives the Godwary had on earth"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note glosses the maidens of restrained glances as the dark-eyed houris, so pure that the glance and the sight are held back from them."
+        },
+        "anchor": {
+          "where": "verses.52.note",
+          "quote": "the dark-eyed houris, so pure that the glance and the sight are held back from them"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 62,
+        "prompt": {
+          "en": "Both readings in the passage agree the men the damned miss had been honored by their enemies in the world."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Both readings hold the missing men were counted among the wicked and scorned by their enemies, then sought in the Fire without being found, not honored."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "counted among the wicked by their enemies and sought in the Fire without being found"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:31:15Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:32:35Z",
+      "assembled_at": "2026-09-30T21:38:29Z"
+    }
+  },
+  "5": {
+    "id": "38:5",
+    "surah": 38,
+    "index": 5,
+    "range": [
+      65,
+      88
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 65,
+        "prompt": {
+          "en": "According to the essay, Tabatabai takes 'just a warner' to deny any worldly aim, like wealth or standing, that people might suspect of the mission."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the restriction 'just a warner' as denying every worldly aim, wealth or standing, that people might suspect lies behind the mission."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the restriction 'just a warner' as denying every worldly aim - wealth or standing - that people might suspect of a mission"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 69,
+        "prompt": {
+          "en": "I said: My Lord, in the ranks, the ____ and the good deeds."
+        },
+        "options": [
+          {
+            "en": "expiations"
+          },
+          {
+            "en": "prostrations"
+          },
+          {
+            "en": "ablutions"
+          },
+          {
+            "en": "supplications"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the narration the Prophet is asked in what the Supernal Elite contend, and he answers: the ranks, the expiations and the good deeds."
+        },
+        "anchor": {
+          "where": "verses.69.narrations.n2",
+          "quote": "in what do the Supernal Elite contend? I said: My Lord, in the ranks, the expiations and the good deeds"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 75,
+        "prompt": {
+          "en": "According to the narrations, what do God's words 'that which I created with My two hands' mean?"
+        },
+        "options": [
+          {
+            "en": "That God has hands like His creatures"
+          },
+          {
+            "en": "That the angels moulded Adam by hand"
+          },
+          {
+            "en": "That it was by His power and strength"
+          },
+          {
+            "en": "That Adam was formed with two hands"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration glosses God's creating Adam 'with My two hands' as meaning by His power and His strength, and another denies that God sends things forth with a hand."
+        },
+        "anchor": {
+          "where": "verses.75.narrations.n5",
+          "quote": "it means by My power and My strength"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 81,
+        "prompt": {
+          "en": "\"The day of the known time is the day the Messenger of God slaughters him on the rock that is in Jerusalem.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the reprieve until 'the day of the known time,' Imam al-Sadiq said it is the day the Messenger of God slaughters Iblis on the rock in Jerusalem."
+        },
+        "anchor": {
+          "where": "verses.81.narrations.n10",
+          "quote": "the day of the known time is the day the Messenger of God slaughters him on the rock that is in Jerusalem"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 88,
+        "prompt": {
+          "en": "According to the passage, when does Shia narration place the learning of the tidings 'in due time'?"
+        },
+        "options": [
+          {
+            "en": "On the day of the known time"
+          },
+          {
+            "en": "At the Day of Retribution"
+          },
+          {
+            "en": "When Iblis is cast out"
+          },
+          {
+            "en": "At the rising of al-Qaim"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Shia narration places the learning of the tidings 'in due time' at the rising of al-Qaim, tying the surah's closing promise to his coming."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "places the learning of its tidings at the rising of al-Qaim"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-09-30T21:36:19Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-09-30T21:38:00Z",
+      "assembled_at": "2026-09-30T21:38:29Z"
+    }
+  }
+}

@@ -218,3 +218,7 @@ journey-audio-render/
 
 # passage commentary pipeline scratch state (scripts/passages.py)
 passages_work/
+
+# Miracle Stories retelling pipeline (scripts/mojzay.py): holds the publisher's
+# scanned pages of "14 Mojzay" - never commit
+mojzay_work/

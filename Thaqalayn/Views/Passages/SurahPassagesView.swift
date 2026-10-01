@@ -31,7 +31,7 @@ struct SurahPassagesView: View {
     @ObservedObject private var stageStore = PassageStageStore.shared
     @Environment(\.dismiss) private var dismiss
 
-    @State private var showingGoToVerse = false
+    @State private var showingFindInSurah = false
     /// A verse to land on, with an optional gem to open once there. Setting it
     /// activates the hidden NavigationLink below. Go-to-verse and the deep-link
     /// onAppear both go through it.
@@ -201,11 +201,11 @@ struct SurahPassagesView: View {
                     .animation(.spring(response: 0.5, dampingFraction: 0.8), value: audioManager.currentPlayback != nil)
             }
         }
-        .sheet(isPresented: $showingGoToVerse) {
-            GoToVerseSheet(
-                versesCount: surah.versesCount,
+        .sheet(isPresented: $showingFindInSurah) {
+            FindInSurahSheet(
+                surah: surah,
                 onGoToVerse: { verseNumber in
-                    showingGoToVerse = false
+                    showingFindInSurah = false
                     // Let the sheet finish dismissing before the push starts.
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         pendingTarget = PassageTarget(verse: verseNumber, conceptId: nil)
@@ -299,11 +299,11 @@ struct SurahPassagesView: View {
 
                 Spacer()
 
-                headerChip(system: "magnifyingglass") {
+                headerChip(system: "magnifyingglass", label: QuranTabStrings.findInSurah) {
                     // Let the press squish play before the sheet slides up.
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { showingGoToVerse = true }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { showingFindInSurah = true }
                 }
-                headerChip(system: "play.fill") {
+                headerChip(system: "play.fill", label: "Play surah") {
                     Task { await audioManager.playVerseSequence(surahWithTafsir.verses, in: surah, startingFrom: 0) }
                 }
             }
@@ -329,7 +329,7 @@ struct SurahPassagesView: View {
         return "\(surah.englishNameTranslation) · \(surah.revelationType) · \(passagesLabel) · \(readCount) read"
     }
 
-    private func headerChip(system: String, action: @escaping () -> Void) -> some View {
+    private func headerChip(system: String, label: String, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Image(systemName: system)
                 .font(.system(size: 15, weight: .semibold))
@@ -339,6 +339,7 @@ struct SurahPassagesView: View {
                 .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
         }
         .buttonStyle(EmPressStyle())
+        .accessibilityLabel(label)
     }
 }
 

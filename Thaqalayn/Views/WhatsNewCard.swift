@@ -21,6 +21,7 @@ struct WhatsNewCard: View {
     @ObservedObject private var router = DeepLinkRouter.shared
     @State private var showingWidgetExplainer = false
     @State private var showingDuasZiyarat = false
+    @State private var showingMiracleStories = false
 
 
     var body: some View {
@@ -32,6 +33,9 @@ struct WhatsNewCard: View {
         }
         .fullScreenCover(isPresented: $showingDuasZiyarat) {
             DuasZiyaratView()
+        }
+        .fullScreenCover(isPresented: $showingMiracleStories) {
+            MiracleStoriesView()
         }
     }
 
@@ -62,6 +66,17 @@ struct WhatsNewCard: View {
             // No tab switch; the library presents as a full-screen cover over Today.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
                 showingDuasZiyarat = true
+            }
+        case .miracleStories:
+            // No tab switch; the stories present as a full-screen cover over Today.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                showingMiracleStories = true
+            }
+        case .quranSearch:
+            // Switch to the Quran tab; it focuses its search field on arrival.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                router.pendingSearchFocus = true
+                selectedTab = 1
             }
         case .journeyListen(let diveId):
             // Open the narrated Listen player app-wide (MainTabView hosts it) - no tab switch.

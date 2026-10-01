@@ -1,0 +1,1666 @@
+{
+  "miracle-01-en": [
+    {
+      "id": "body.0",
+      "key": "e2c9307d55fed045af05",
+      "chars": 403
+    },
+    {
+      "id": "body.1",
+      "key": "3b376daf259ed0bdcabe",
+      "chars": 525
+    },
+    {
+      "id": "body.2",
+      "key": "c3c4e589d918422c8695",
+      "chars": 601
+    },
+    {
+      "id": "body.3",
+      "key": "f11ae6dd02c96e780936",
+      "chars": 543
+    },
+    {
+      "id": "body.4",
+      "key": "f6071a32ea2e0f689b48",
+      "chars": 428
+    },
+    {
+      "id": "body.5",
+      "key": "6c76b5823b3f62a45ed4",
+      "chars": 448
+    },
+    {
+      "id": "body.6",
+      "key": "d34702a5e3cb15eddc84",
+      "chars": 509
+    },
+    {
+      "id": "body.7",
+      "key": "99bbafd6ff9d157ce82f",
+      "chars": 554
+    },
+    {
+      "id": "body.8",
+      "key": "bfe41423483392e0a87c",
+      "chars": 605
+    },
+    {
+      "id": "body.9",
+      "key": "50071f310fef1e64c92c",
+      "chars": 475
+    },
+    {
+      "id": "body.10",
+      "key": "4cbf49676b79ef515379",
+      "chars": 568
+    },
+    {
+      "id": "body.11",
+      "key": "53677a86804e084e7b77",
+      "chars": 444
+    },
+    {
+      "id": "body.12",
+      "key": "566db9489368a4377efc",
+      "chars": 390
+    }
+  ],
+  "miracle-01-ur": [
+    {
+      "id": "body.0",
+      "key": "6227cf8c4f7a93b0d0d5",
+      "chars": 336
+    },
+    {
+      "id": "body.1",
+      "key": "589eec38f2a45410f6d2",
+      "chars": 445
+    },
+    {
+      "id": "body.2",
+      "key": "c1f2df5d3c89d5bb0780",
+      "chars": 593
+    },
+    {
+      "id": "body.3",
+      "key": "79803eb03089a17da1a0",
+      "chars": 510
+    },
+    {
+      "id": "body.4",
+      "key": "a116f473ee010b3af0dd",
+      "chars": 363
+    },
+    {
+      "id": "body.5",
+      "key": "ba1de700fd6ea71efd01",
+      "chars": 476
+    },
+    {
+      "id": "body.6",
+      "key": "121f690ed2648120d924",
+      "chars": 527
+    },
+    {
+      "id": "body.7",
+      "key": "e34e69723a1f353a69c8",
+      "chars": 619
+    },
+    {
+      "id": "body.8",
+      "key": "16a3068fcc91d5a9edfa",
+      "chars": 553
+    },
+    {
+      "id": "body.9",
+      "key": "23d8f04cf52e8687051b",
+      "chars": 452
+    },
+    {
+      "id": "body.10",
+      "key": "51322b5c4e3f105fe33d",
+      "chars": 568
+    },
+    {
+      "id": "body.11",
+      "key": "0ff07bd8f48d8b7ac2f1",
+      "chars": 529
+    },
+    {
+      "id": "body.12",
+      "key": "d800d8fc0c844ff199d9",
+      "chars": 373
+    }
+  ],
+  "miracle-02-en": [
+    {
+      "id": "body.0",
+      "key": "77fd39c204df36fb252f",
+      "chars": 601
+    },
+    {
+      "id": "body.1",
+      "key": "7493f2c7ea45db02286a",
+      "chars": 658
+    },
+    {
+      "id": "body.2",
+      "key": "1243f82d549ba9590f1d",
+      "chars": 613
+    },
+    {
+      "id": "body.3",
+      "key": "ec0ce1435ff03f78d833",
+      "chars": 706
+    },
+    {
+      "id": "body.4",
+      "key": "e0bbcb6c05473d21b101",
+      "chars": 572
+    },
+    {
+      "id": "body.5",
+      "key": "217e400898421d0a2ddc",
+      "chars": 506
+    },
+    {
+      "id": "body.6",
+      "key": "a0d31d7c33c7b4fec7a4",
+      "chars": 679
+    },
+    {
+      "id": "body.7",
+      "key": "ca74745220d4630e16cb",
+      "chars": 648
+    },
+    {
+      "id": "body.8",
+      "key": "913d6bce0b60eff1ddc7",
+      "chars": 532
+    },
+    {
+      "id": "body.9",
+      "key": "2d6db142678c535cb6ca",
+      "chars": 655
+    },
+    {
+      "id": "body.10",
+      "key": "363aaac0ef92aa1e3959",
+      "chars": 536
+    },
+    {
+      "id": "body.11",
+      "key": "c75e43eadb8e76b5cd85",
+      "chars": 664
+    },
+    {
+      "id": "body.12",
+      "key": "b57308e2705d7715276b",
+      "chars": 568
+    },
+    {
+      "id": "body.13",
+      "key": "aade40d6f61b31f4d746",
+      "chars": 715
+    },
+    {
+      "id": "body.14",
+      "key": "602f772c60aaa0b361b9",
+      "chars": 716
+    }
+  ],
+  "miracle-02-ur": [
+    {
+      "id": "body.0",
+      "key": "a8c90ab07649d94b2f8d",
+      "chars": 499
+    },
+    {
+      "id": "body.1",
+      "key": "3c47092e2112cf92549a",
+      "chars": 554
+    },
+    {
+      "id": "body.2",
+      "key": "124014a09f2a38cb13bb",
+      "chars": 556
+    },
+    {
+      "id": "body.3",
+      "key": "4b31f8fd37391f42ff15",
+      "chars": 686
+    },
+    {
+      "id": "body.4",
+      "key": "f8187fdbf277deb39475",
+      "chars": 583
+    },
+    {
+      "id": "body.5",
+      "key": "919b5196e98749d25912",
+      "chars": 487
+    },
+    {
+      "id": "body.6",
+      "key": "838026689fe5d33cd958",
+      "chars": 706
+    },
+    {
+      "id": "body.7",
+      "key": "f8b24f28975977dc6ede",
+      "chars": 574
+    },
+    {
+      "id": "body.8",
+      "key": "c02a74ef25c88df0534c",
+      "chars": 503
+    },
+    {
+      "id": "body.9",
+      "key": "a065d52b648395e4bb0f",
+      "chars": 615
+    },
+    {
+      "id": "body.10",
+      "key": "4324c9ceb4df0391a40f",
+      "chars": 491
+    },
+    {
+      "id": "body.11",
+      "key": "09e5bb96db2c4ac23e69",
+      "chars": 605
+    },
+    {
+      "id": "body.12",
+      "key": "90182351d53bcf2f4fd6",
+      "chars": 502
+    },
+    {
+      "id": "body.13",
+      "key": "60f73f9842e854b8ff25",
+      "chars": 686
+    },
+    {
+      "id": "body.14",
+      "key": "689c5178bc5b974298da",
+      "chars": 695
+    }
+  ],
+  "miracle-03-en": [
+    {
+      "id": "body.0",
+      "key": "754e44dec9d881c7ecf8",
+      "chars": 541
+    },
+    {
+      "id": "body.1",
+      "key": "fb58a17f06d828b35d07",
+      "chars": 614
+    },
+    {
+      "id": "body.2",
+      "key": "95178d0386485c4256cb",
+      "chars": 578
+    },
+    {
+      "id": "body.3",
+      "key": "2d12c019b3b05eb2d049",
+      "chars": 752
+    },
+    {
+      "id": "body.4",
+      "key": "8b7aea17e1620cd0d01d",
+      "chars": 569
+    },
+    {
+      "id": "body.5",
+      "key": "04f054d3863bb76ae022",
+      "chars": 592
+    },
+    {
+      "id": "body.6",
+      "key": "1118037060762f2c667f",
+      "chars": 344
+    },
+    {
+      "id": "body.7",
+      "key": "d85e895e2e4a32767868",
+      "chars": 617
+    },
+    {
+      "id": "body.8",
+      "key": "deecf59943b009c9f38f",
+      "chars": 532
+    },
+    {
+      "id": "body.9",
+      "key": "123918adf8095607dcf9",
+      "chars": 552
+    },
+    {
+      "id": "body.10",
+      "key": "243fde15b2b843205663",
+      "chars": 441
+    },
+    {
+      "id": "body.11",
+      "key": "cf8e11b2a9400f99017a",
+      "chars": 504
+    },
+    {
+      "id": "body.12",
+      "key": "4ff39d5438718daa2e8c",
+      "chars": 682
+    },
+    {
+      "id": "closing.0",
+      "key": "665f2374b9226fa4fca4",
+      "chars": 344
+    },
+    {
+      "id": "closing.1",
+      "key": "7c5ef2074ff42f635cbf",
+      "chars": 438
+    }
+  ],
+  "miracle-03-ur": [
+    {
+      "id": "body.0",
+      "key": "2f9b3df5cc1956756eee",
+      "chars": 476
+    },
+    {
+      "id": "body.1",
+      "key": "a6bee53482457f1b2819",
+      "chars": 456
+    },
+    {
+      "id": "body.2",
+      "key": "dc05be7f7d4eacad93d2",
+      "chars": 485
+    },
+    {
+      "id": "body.3",
+      "key": "fb13c3a7d226c399d10b",
+      "chars": 633
+    },
+    {
+      "id": "body.4",
+      "key": "b78871601b701550192c",
+      "chars": 491
+    },
+    {
+      "id": "body.5",
+      "key": "774908212c7391888b3c",
+      "chars": 543
+    },
+    {
+      "id": "body.6",
+      "key": "8dea3a54f5db8e0d5c25",
+      "chars": 319
+    },
+    {
+      "id": "body.7",
+      "key": "a88a478c53c545fb2933",
+      "chars": 525
+    },
+    {
+      "id": "body.8",
+      "key": "3600ed2130d775d9a338",
+      "chars": 465
+    },
+    {
+      "id": "body.9",
+      "key": "6d8b8428c7ad9dcee432",
+      "chars": 518
+    },
+    {
+      "id": "body.10",
+      "key": "e7073c97e9ea3e6568ff",
+      "chars": 399
+    },
+    {
+      "id": "body.11",
+      "key": "4a8219d08bf7dbdd5472",
+      "chars": 450
+    },
+    {
+      "id": "body.12",
+      "key": "bda0501d3923e405aff8",
+      "chars": 602
+    },
+    {
+      "id": "closing.0",
+      "key": "dcb3bcc98999a3385c0a",
+      "chars": 244
+    },
+    {
+      "id": "closing.1",
+      "key": "12844527381ada44a395",
+      "chars": 327
+    }
+  ],
+  "miracle-04-en": [
+    {
+      "id": "body.0",
+      "key": "dff725c85d354f73cb0a",
+      "chars": 535
+    },
+    {
+      "id": "body.1",
+      "key": "d5217730b660f182e526",
+      "chars": 777
+    },
+    {
+      "id": "body.2",
+      "key": "09acb2f7d883f26c3a6b",
+      "chars": 602
+    },
+    {
+      "id": "body.3",
+      "key": "6e915a2629649994f43e",
+      "chars": 633
+    },
+    {
+      "id": "body.4",
+      "key": "8719b1a84dd1cc94708c",
+      "chars": 577
+    },
+    {
+      "id": "body.5",
+      "key": "de42b77e1acc46c17120",
+      "chars": 445
+    },
+    {
+      "id": "body.6",
+      "key": "60bb9deb3d5bbb76b5f4",
+      "chars": 640
+    },
+    {
+      "id": "body.7",
+      "key": "3b1575378dd01e02643b",
+      "chars": 622
+    },
+    {
+      "id": "body.8",
+      "key": "f1d0930d9d9de530d895",
+      "chars": 481
+    }
+  ],
+  "miracle-04-ur": [
+    {
+      "id": "body.0",
+      "key": "f247f63a7d6b7108487b",
+      "chars": 407
+    },
+    {
+      "id": "body.1",
+      "key": "519754bb0ea96eb56314",
+      "chars": 598
+    },
+    {
+      "id": "body.2",
+      "key": "71888e43ad571ee4f2a3",
+      "chars": 552
+    },
+    {
+      "id": "body.3",
+      "key": "00d8296698bc7ca828a9",
+      "chars": 476
+    },
+    {
+      "id": "body.4",
+      "key": "1fd14d43f32256f5c905",
+      "chars": 515
+    },
+    {
+      "id": "body.5",
+      "key": "6fb361d942ef734e090f",
+      "chars": 460
+    },
+    {
+      "id": "body.6",
+      "key": "b0e4564c0b663967b913",
+      "chars": 554
+    },
+    {
+      "id": "body.7",
+      "key": "f37408cad8744a937ac6",
+      "chars": 484
+    },
+    {
+      "id": "body.8",
+      "key": "881631b9204824af3646",
+      "chars": 432
+    }
+  ],
+  "miracle-05-en": [
+    {
+      "id": "body.0",
+      "key": "683ffdea35e4b5ad4cd3",
+      "chars": 479
+    },
+    {
+      "id": "body.1",
+      "key": "5e079b8103e11c176ea8",
+      "chars": 501
+    },
+    {
+      "id": "body.2",
+      "key": "f60710a819cfa0a94826",
+      "chars": 638
+    },
+    {
+      "id": "body.3",
+      "key": "c15caf87f1c57167d78c",
+      "chars": 657
+    },
+    {
+      "id": "body.4",
+      "key": "e128b38c4fbcacd1fc2b",
+      "chars": 679
+    }
+  ],
+  "miracle-05-ur": [
+    {
+      "id": "body.0",
+      "key": "f7ff9591fd9616a2a236",
+      "chars": 470
+    },
+    {
+      "id": "body.1",
+      "key": "a2e9559ace9f4b370fbb",
+      "chars": 501
+    },
+    {
+      "id": "body.2",
+      "key": "ddb93a473fa5cfaccb81",
+      "chars": 611
+    },
+    {
+      "id": "body.3",
+      "key": "bbe65177632a68b2b1ca",
+      "chars": 586
+    },
+    {
+      "id": "body.4",
+      "key": "ba55fd2edf4f1b0a5f31",
+      "chars": 619
+    }
+  ],
+  "miracle-06-en": [
+    {
+      "id": "body.0",
+      "key": "12b6b660a6b119e5ba33",
+      "chars": 655
+    },
+    {
+      "id": "body.1",
+      "key": "e404ba371391654bc5d3",
+      "chars": 677
+    },
+    {
+      "id": "body.2",
+      "key": "1a03e1457104d5b036d0",
+      "chars": 552
+    },
+    {
+      "id": "body.3",
+      "key": "c689c2fef69c91603ab8",
+      "chars": 583
+    },
+    {
+      "id": "body.4",
+      "key": "48768d14b5247d69658c",
+      "chars": 377
+    },
+    {
+      "id": "body.5",
+      "key": "8b6e5b4c5988f83b122b",
+      "chars": 528
+    },
+    {
+      "id": "body.6",
+      "key": "65925a0749c380bf5fbb",
+      "chars": 444
+    },
+    {
+      "id": "body.7",
+      "key": "50cb5e37d8b74862cfb8",
+      "chars": 755
+    },
+    {
+      "id": "body.8",
+      "key": "83cafa7e77840ca5c930",
+      "chars": 320
+    },
+    {
+      "id": "body.9",
+      "key": "8d5b4e5d52ff38725454",
+      "chars": 312
+    }
+  ],
+  "miracle-06-ur": [
+    {
+      "id": "body.0",
+      "key": "663fef454bfd567dca74",
+      "chars": 496
+    },
+    {
+      "id": "body.1",
+      "key": "c17eca328800d070a3d7",
+      "chars": 624
+    },
+    {
+      "id": "body.2",
+      "key": "77aab63159345f7fb654",
+      "chars": 592
+    },
+    {
+      "id": "body.3",
+      "key": "c4be21afd3a7218037db",
+      "chars": 500
+    },
+    {
+      "id": "body.4",
+      "key": "90cd8fe806cbf6a38b7f",
+      "chars": 349
+    },
+    {
+      "id": "body.5",
+      "key": "335d5543da048309e9d3",
+      "chars": 472
+    },
+    {
+      "id": "body.6",
+      "key": "76398d04e90cad33c517",
+      "chars": 386
+    },
+    {
+      "id": "body.7",
+      "key": "57536578a36963f50d44",
+      "chars": 694
+    },
+    {
+      "id": "body.8",
+      "key": "1082e7b24ff5bf931c93",
+      "chars": 272
+    },
+    {
+      "id": "body.9",
+      "key": "435f2c140216d418f571",
+      "chars": 305
+    }
+  ],
+  "miracle-07-en": [
+    {
+      "id": "body.0",
+      "key": "2917fdabebfb7329f6f4",
+      "chars": 684
+    },
+    {
+      "id": "body.1",
+      "key": "4db6f84df9d11555e7df",
+      "chars": 505
+    },
+    {
+      "id": "body.2",
+      "key": "fc407f04964e1b889c71",
+      "chars": 718
+    },
+    {
+      "id": "body.3",
+      "key": "4fd9aeefdbfaa13f83d2",
+      "chars": 597
+    },
+    {
+      "id": "body.4",
+      "key": "c92a2460dd5dcd7b1826",
+      "chars": 448
+    },
+    {
+      "id": "body.5",
+      "key": "def94508522c47b0b60e",
+      "chars": 726
+    },
+    {
+      "id": "body.6",
+      "key": "a198f422558780769a6f",
+      "chars": 587
+    },
+    {
+      "id": "body.7",
+      "key": "6fcb1b9a5bec31abd7c4",
+      "chars": 633
+    },
+    {
+      "id": "body.8",
+      "key": "bdbfd55e020788da625f",
+      "chars": 488
+    },
+    {
+      "id": "body.9",
+      "key": "2449e69b7994769724c7",
+      "chars": 632
+    },
+    {
+      "id": "body.10",
+      "key": "81e4b25f50d1e775b0e8",
+      "chars": 752
+    }
+  ],
+  "miracle-07-ur": [
+    {
+      "id": "body.0",
+      "key": "58191e44cf9bc85ff643",
+      "chars": 638
+    },
+    {
+      "id": "body.1",
+      "key": "82aff32a8a355ff718be",
+      "chars": 479
+    },
+    {
+      "id": "body.2",
+      "key": "05917bd515fb00f065fa",
+      "chars": 492
+    },
+    {
+      "id": "body.3",
+      "key": "cfcf805c32f48afe651c",
+      "chars": 558
+    },
+    {
+      "id": "body.4",
+      "key": "c700f01953d436e1879a",
+      "chars": 442
+    },
+    {
+      "id": "body.5",
+      "key": "1b429a545701debf8c46",
+      "chars": 686
+    },
+    {
+      "id": "body.6",
+      "key": "3ba7002f84accd06e55e",
+      "chars": 516
+    },
+    {
+      "id": "body.7",
+      "key": "9269eeaa2a49181e2d16",
+      "chars": 560
+    },
+    {
+      "id": "body.8",
+      "key": "78d54ea728aa11f3ce44",
+      "chars": 441
+    },
+    {
+      "id": "body.9",
+      "key": "2e461d5dd5fa7edd780f",
+      "chars": 576
+    },
+    {
+      "id": "body.10",
+      "key": "503ee28f21caedd1bf1a",
+      "chars": 697
+    }
+  ],
+  "miracle-08-en": [
+    {
+      "id": "body.0",
+      "key": "40b755b926668ad00968",
+      "chars": 549
+    },
+    {
+      "id": "body.1",
+      "key": "c4c7c686a1e2836a8b21",
+      "chars": 592
+    },
+    {
+      "id": "body.2",
+      "key": "6607929f9afc9a8778c9",
+      "chars": 492
+    },
+    {
+      "id": "body.3",
+      "key": "a96030b0b89b4938632b",
+      "chars": 495
+    },
+    {
+      "id": "body.4",
+      "key": "85ef0d9b2851a0d09fd5",
+      "chars": 465
+    },
+    {
+      "id": "body.5",
+      "key": "4cff71f88eb01dcc5ac0",
+      "chars": 585
+    },
+    {
+      "id": "body.6",
+      "key": "07a650ee157b16999e82",
+      "chars": 531
+    },
+    {
+      "id": "body.7",
+      "key": "522354d2795b411c3f11",
+      "chars": 668
+    },
+    {
+      "id": "body.8",
+      "key": "04eb1921b81033303781",
+      "chars": 449
+    },
+    {
+      "id": "body.9",
+      "key": "05835699242a04a4e660",
+      "chars": 665
+    },
+    {
+      "id": "body.10",
+      "key": "c1cdd629db59b79d3f2a",
+      "chars": 500
+    }
+  ],
+  "miracle-08-ur": [
+    {
+      "id": "body.0",
+      "key": "e2f941b4450e187850c7",
+      "chars": 558
+    },
+    {
+      "id": "body.1",
+      "key": "b8434905d24246cad006",
+      "chars": 542
+    },
+    {
+      "id": "body.2",
+      "key": "cdcf9032864a82d0f4da",
+      "chars": 472
+    },
+    {
+      "id": "body.3",
+      "key": "0db5e9bbc8f8eae75af2",
+      "chars": 556
+    },
+    {
+      "id": "body.4",
+      "key": "829ebe674f3970be7ee8",
+      "chars": 464
+    },
+    {
+      "id": "body.5",
+      "key": "339ec6814f75c0732bc3",
+      "chars": 602
+    },
+    {
+      "id": "body.6",
+      "key": "e170c876ac9b40a97708",
+      "chars": 492
+    },
+    {
+      "id": "body.7",
+      "key": "2bdf9a3d63bd074fb28a",
+      "chars": 715
+    },
+    {
+      "id": "body.8",
+      "key": "bd353e89c23a65e5c9d0",
+      "chars": 506
+    },
+    {
+      "id": "body.9",
+      "key": "8f34b77ab5d06cf19e6c",
+      "chars": 668
+    },
+    {
+      "id": "body.10",
+      "key": "e977f6f5e6809c501b16",
+      "chars": 502
+    }
+  ],
+  "miracle-09-en": [
+    {
+      "id": "body.0",
+      "key": "67ff5d12d09bee512c82",
+      "chars": 408
+    },
+    {
+      "id": "body.1",
+      "key": "ce02a7d766e6e974794d",
+      "chars": 424
+    },
+    {
+      "id": "body.2",
+      "key": "89abcf78d0c60a5dc302",
+      "chars": 623
+    }
+  ],
+  "miracle-09-ur": [
+    {
+      "id": "body.0",
+      "key": "63093251e0621f4ab4ba",
+      "chars": 413
+    },
+    {
+      "id": "body.1",
+      "key": "8839dbc0fd65fdc1791e",
+      "chars": 460
+    },
+    {
+      "id": "body.2",
+      "key": "8de7647566932d77dd6d",
+      "chars": 622
+    }
+  ],
+  "miracle-10-en": [
+    {
+      "id": "body.0",
+      "key": "ec203a1a77ea8a62e28c",
+      "chars": 362
+    },
+    {
+      "id": "body.1",
+      "key": "d954b0cb7b8efca13f98",
+      "chars": 647
+    },
+    {
+      "id": "body.2",
+      "key": "a9ecf563a4f5b65efa64",
+      "chars": 589
+    },
+    {
+      "id": "body.3",
+      "key": "2a14fe6be4dccc05755c",
+      "chars": 752
+    },
+    {
+      "id": "body.4",
+      "key": "6d2c9659771fc79bd2b8",
+      "chars": 709
+    },
+    {
+      "id": "body.5",
+      "key": "e99b8e48bdb19a2863f0",
+      "chars": 523
+    },
+    {
+      "id": "body.6",
+      "key": "2f14f8db0e4dad9c2cce",
+      "chars": 374
+    },
+    {
+      "id": "body.7",
+      "key": "2b40961ea88ab4e9a4a1",
+      "chars": 400
+    },
+    {
+      "id": "body.8",
+      "key": "e95ef014663a9f64f452",
+      "chars": 537
+    }
+  ],
+  "miracle-10-ur": [
+    {
+      "id": "body.0",
+      "key": "02970d4dfc17927ee90a",
+      "chars": 358
+    },
+    {
+      "id": "body.1",
+      "key": "1fe16e70fefcc1a3725f",
+      "chars": 600
+    },
+    {
+      "id": "body.2",
+      "key": "0b369af358c56328ef0c",
+      "chars": 588
+    },
+    {
+      "id": "body.3",
+      "key": "0014af7d5b530186d66d",
+      "chars": 719
+    },
+    {
+      "id": "body.4",
+      "key": "6c698e30a4f4e19890e2",
+      "chars": 718
+    },
+    {
+      "id": "body.5",
+      "key": "ed94db2138966b2197a5",
+      "chars": 465
+    },
+    {
+      "id": "body.6",
+      "key": "f7ad5f3fba83260dd590",
+      "chars": 348
+    },
+    {
+      "id": "body.7",
+      "key": "928cbb9b7eb4549c964d",
+      "chars": 330
+    },
+    {
+      "id": "body.8",
+      "key": "6c414d20215a3fda8787",
+      "chars": 576
+    }
+  ],
+  "miracle-11-en": [
+    {
+      "id": "body.0",
+      "key": "9eb33482d70224a380a6",
+      "chars": 682
+    },
+    {
+      "id": "body.1",
+      "key": "813841c3619daac6d173",
+      "chars": 680
+    },
+    {
+      "id": "body.2",
+      "key": "8a240f034ba473cfaf87",
+      "chars": 753
+    },
+    {
+      "id": "body.3",
+      "key": "ce611499cc63185e7a96",
+      "chars": 752
+    },
+    {
+      "id": "body.4",
+      "key": "0cfa35d952efeabd277d",
+      "chars": 648
+    },
+    {
+      "id": "body.5",
+      "key": "f6976a28af78b90bdb9b",
+      "chars": 544
+    },
+    {
+      "id": "body.6",
+      "key": "0e3a72372ab4ba9b1b8d",
+      "chars": 608
+    },
+    {
+      "id": "body.7",
+      "key": "7f6560116a4018673346",
+      "chars": 862
+    },
+    {
+      "id": "body.8",
+      "key": "798e5716ae696f12113e",
+      "chars": 796
+    },
+    {
+      "id": "body.9",
+      "key": "78a6b9284435d9321702",
+      "chars": 754
+    },
+    {
+      "id": "body.10",
+      "key": "660f1b7d9b919c7c9926",
+      "chars": 571
+    },
+    {
+      "id": "body.11",
+      "key": "deb935f431e208b50b5c",
+      "chars": 570
+    },
+    {
+      "id": "body.12",
+      "key": "a346f43050fe0d0ef2d1",
+      "chars": 762
+    },
+    {
+      "id": "body.13",
+      "key": "f37b2e7648ec7b607a95",
+      "chars": 817
+    },
+    {
+      "id": "body.14",
+      "key": "4a0bbc651835e78ddf1d",
+      "chars": 765
+    },
+    {
+      "id": "body.15",
+      "key": "e475a10e7619e057254a",
+      "chars": 748
+    },
+    {
+      "id": "body.16",
+      "key": "3291877ea3f6ff19b1e8",
+      "chars": 561
+    },
+    {
+      "id": "body.17",
+      "key": "cb1b5d27c706a2fce556",
+      "chars": 693
+    },
+    {
+      "id": "body.18",
+      "key": "4789c13bee2e679283f7",
+      "chars": 690
+    },
+    {
+      "id": "body.19",
+      "key": "10fdd0edfa7714f8ca65",
+      "chars": 725
+    },
+    {
+      "id": "body.20",
+      "key": "49790c5c0f7448d01e01",
+      "chars": 626
+    },
+    {
+      "id": "body.21",
+      "key": "c9ca775497136cbc6bd4",
+      "chars": 754
+    },
+    {
+      "id": "body.22",
+      "key": "6136d84d475dc00381c9",
+      "chars": 497
+    }
+  ],
+  "miracle-11-ur": [
+    {
+      "id": "body.0",
+      "key": "50c2c5e5b573878b4b17",
+      "chars": 577
+    },
+    {
+      "id": "body.1",
+      "key": "67103248f1f9eedaac21",
+      "chars": 652
+    },
+    {
+      "id": "body.2",
+      "key": "31452f99a8c2f36330d8",
+      "chars": 620
+    },
+    {
+      "id": "body.3",
+      "key": "4a0b81b9189112db4c04",
+      "chars": 834
+    },
+    {
+      "id": "body.4",
+      "key": "5939604efb4fafb41557",
+      "chars": 697
+    },
+    {
+      "id": "body.5",
+      "key": "ca31215e81b74b1c56d5",
+      "chars": 559
+    },
+    {
+      "id": "body.6",
+      "key": "94a005035f3c71ca993e",
+      "chars": 612
+    },
+    {
+      "id": "body.7",
+      "key": "bbf90191c3bb6c9391ad",
+      "chars": 956
+    },
+    {
+      "id": "body.8",
+      "key": "9e5bbb3f67d9e9bb7364",
+      "chars": 749
+    },
+    {
+      "id": "body.9",
+      "key": "93117e9aa75a1d0bb3e6",
+      "chars": 711
+    },
+    {
+      "id": "body.10",
+      "key": "c1e6fa2f86427d9032cb",
+      "chars": 531
+    },
+    {
+      "id": "body.11",
+      "key": "c6456d403d985b5cf33f",
+      "chars": 558
+    },
+    {
+      "id": "body.12",
+      "key": "04308db8f88050fdbe2a",
+      "chars": 701
+    },
+    {
+      "id": "body.13",
+      "key": "833870ab5970b3230629",
+      "chars": 695
+    },
+    {
+      "id": "body.14",
+      "key": "aeb6fa00aec0a25f763a",
+      "chars": 614
+    },
+    {
+      "id": "body.15",
+      "key": "d4ab65b9bc2bcf71eec3",
+      "chars": 595
+    },
+    {
+      "id": "body.16",
+      "key": "b88ce1bb1a1486e82846",
+      "chars": 526
+    },
+    {
+      "id": "body.17",
+      "key": "7069b553324dd91db56f",
+      "chars": 616
+    },
+    {
+      "id": "body.18",
+      "key": "93ccca6b2703d2eaedf3",
+      "chars": 598
+    },
+    {
+      "id": "body.19",
+      "key": "8cfed650cb523b143e51",
+      "chars": 669
+    },
+    {
+      "id": "body.20",
+      "key": "1661ac3b4c8ace4e76c7",
+      "chars": 519
+    },
+    {
+      "id": "body.21",
+      "key": "ad41ed7563204162e351",
+      "chars": 602
+    },
+    {
+      "id": "body.22",
+      "key": "3c37d00149192b314986",
+      "chars": 398
+    }
+  ],
+  "miracle-12-en": [
+    {
+      "id": "body.0",
+      "key": "14787dbc4a2ed696fc74",
+      "chars": 531
+    },
+    {
+      "id": "body.1",
+      "key": "c2b4da07e438edd6b89a",
+      "chars": 705
+    }
+  ],
+  "miracle-12-ur": [
+    {
+      "id": "body.0",
+      "key": "2f81623e5c6b98354079",
+      "chars": 567
+    },
+    {
+      "id": "body.1",
+      "key": "ce4c5ff18e8607cad4d2",
+      "chars": 742
+    }
+  ],
+  "miracle-13-en": [
+    {
+      "id": "body.0",
+      "key": "7be257409dcd3e0e4e1e",
+      "chars": 549
+    },
+    {
+      "id": "body.1",
+      "key": "a4cbb480f154dee30448",
+      "chars": 498
+    },
+    {
+      "id": "body.2",
+      "key": "072e6651208bbf1e88f4",
+      "chars": 584
+    }
+  ],
+  "miracle-13-ur": [
+    {
+      "id": "body.0",
+      "key": "a0654ac5ecfbf61cad4f",
+      "chars": 503
+    },
+    {
+      "id": "body.1",
+      "key": "d30ede5d0f7aec4c4a79",
+      "chars": 368
+    },
+    {
+      "id": "body.2",
+      "key": "393c3de9d5d71bf95d79",
+      "chars": 538
+    }
+  ],
+  "miracle-14-en": [
+    {
+      "id": "body.0",
+      "key": "507f6187b9862d11d8e7",
+      "chars": 436
+    },
+    {
+      "id": "body.1",
+      "key": "f2c4fe4fcba011b4c8d2",
+      "chars": 574
+    },
+    {
+      "id": "body.2",
+      "key": "a0147fe5ae14be21c6c9",
+      "chars": 631
+    },
+    {
+      "id": "body.3",
+      "key": "a822848c6f02b33b0197",
+      "chars": 461
+    },
+    {
+      "id": "body.4",
+      "key": "b4ec24f97005ea78842d",
+      "chars": 471
+    }
+  ],
+  "miracle-14-ur": [
+    {
+      "id": "body.0",
+      "key": "faf21398a7926b15dd31",
+      "chars": 376
+    },
+    {
+      "id": "body.1",
+      "key": "ae3676b373b1b93145cd",
+      "chars": 537
+    },
+    {
+      "id": "body.2",
+      "key": "12c9adca17ae1727cb80",
+      "chars": 611
+    },
+    {
+      "id": "body.3",
+      "key": "ea37cc18b8faedf684c5",
+      "chars": 461
+    },
+    {
+      "id": "body.4",
+      "key": "d0377bce9752322a0c4d",
+      "chars": 471
+    }
+  ],
+  "miracle-15-en": [
+    {
+      "id": "body.0",
+      "key": "3c5c9fc1b1e4ad138e9a",
+      "chars": 561
+    },
+    {
+      "id": "body.1",
+      "key": "919821cc2a927ed20ddf",
+      "chars": 499
+    },
+    {
+      "id": "body.2",
+      "key": "7ae3bd7037a9547ca5a2",
+      "chars": 505
+    },
+    {
+      "id": "body.3",
+      "key": "e76d837920660cfcc958",
+      "chars": 621
+    },
+    {
+      "id": "body.4",
+      "key": "29c267de43ca46d89719",
+      "chars": 365
+    },
+    {
+      "id": "body.5",
+      "key": "7d27b4d0cf64850e0d67",
+      "chars": 736
+    },
+    {
+      "id": "body.6",
+      "key": "d0b5bb0bdd87d5328edf",
+      "chars": 562
+    },
+    {
+      "id": "body.7",
+      "key": "2c2a8926df8ca1cc2a18",
+      "chars": 619
+    },
+    {
+      "id": "body.8",
+      "key": "a7f096b1d15a389bd7dd",
+      "chars": 721
+    },
+    {
+      "id": "body.9",
+      "key": "4ce984a6495177dcd83d",
+      "chars": 510
+    },
+    {
+      "id": "body.10",
+      "key": "4719d2852ccafd976491",
+      "chars": 426
+    }
+  ],
+  "miracle-15-ur": [
+    {
+      "id": "body.0",
+      "key": "6b952b766ddc8ffe5736",
+      "chars": 546
+    },
+    {
+      "id": "body.1",
+      "key": "9f56a475912eaf1729d0",
+      "chars": 479
+    },
+    {
+      "id": "body.2",
+      "key": "1527f9e861e771e670ae",
+      "chars": 472
+    },
+    {
+      "id": "body.3",
+      "key": "fa8637144f6191df1088",
+      "chars": 618
+    },
+    {
+      "id": "body.4",
+      "key": "30f3e4d95efc13fddfd4",
+      "chars": 295
+    },
+    {
+      "id": "body.5",
+      "key": "b982ac3d10adefc8447d",
+      "chars": 704
+    },
+    {
+      "id": "body.6",
+      "key": "31267362a4be5a29e4d5",
+      "chars": 571
+    },
+    {
+      "id": "body.7",
+      "key": "77c64500ffc4b4f39927",
+      "chars": 552
+    },
+    {
+      "id": "body.8",
+      "key": "f7f9beedbf94c454428d",
+      "chars": 713
+    },
+    {
+      "id": "body.9",
+      "key": "aa2ef238d73f2b21a994",
+      "chars": 460
+    },
+    {
+      "id": "body.10",
+      "key": "caa65f16513c6a849aa2",
+      "chars": 402
+    }
+  ],
+  "miracle-16-en": [
+    {
+      "id": "body.0",
+      "key": "2346b8f3e758ffe78d4e",
+      "chars": 383
+    },
+    {
+      "id": "body.1",
+      "key": "996aa4d1b75c2e64c445",
+      "chars": 527
+    },
+    {
+      "id": "body.2",
+      "key": "88c46e76f89e4e98dffa",
+      "chars": 511
+    },
+    {
+      "id": "body.3",
+      "key": "f970e3857fada0e155ea",
+      "chars": 539
+    },
+    {
+      "id": "body.4",
+      "key": "5a6d70c71d60850b303e",
+      "chars": 656
+    },
+    {
+      "id": "body.5",
+      "key": "4f725642df2fe0c0274d",
+      "chars": 564
+    },
+    {
+      "id": "body.6",
+      "key": "383536aa1937ad22c746",
+      "chars": 506
+    },
+    {
+      "id": "body.7",
+      "key": "ec7c3d3bec355886410d",
+      "chars": 484
+    },
+    {
+      "id": "body.8",
+      "key": "0edb102cb2ddbf4c511d",
+      "chars": 625
+    },
+    {
+      "id": "body.9",
+      "key": "f5baba9a3a2ed73e2c6f",
+      "chars": 622
+    },
+    {
+      "id": "body.10",
+      "key": "c781cbab2cedf7f7ca64",
+      "chars": 638
+    },
+    {
+      "id": "body.11",
+      "key": "0462a5380b275a004a1f",
+      "chars": 581
+    },
+    {
+      "id": "body.12",
+      "key": "a8e934fab36793758596",
+      "chars": 705
+    },
+    {
+      "id": "body.13",
+      "key": "e397ed2d1f3e557e16d9",
+      "chars": 628
+    },
+    {
+      "id": "body.14",
+      "key": "e7126a305d76ee90f7f3",
+      "chars": 358
+    }
+  ],
+  "miracle-16-ur": [
+    {
+      "id": "body.0",
+      "key": "4622ba943ada9d3107eb",
+      "chars": 376
+    },
+    {
+      "id": "body.1",
+      "key": "543a1dada9ce946d31b6",
+      "chars": 477
+    },
+    {
+      "id": "body.2",
+      "key": "c4106e0176bb15f16791",
+      "chars": 494
+    },
+    {
+      "id": "body.3",
+      "key": "a13e3dcf7895c2d30665",
+      "chars": 534
+    },
+    {
+      "id": "body.4",
+      "key": "5c47a2c5b2863a372d10",
+      "chars": 547
+    },
+    {
+      "id": "body.5",
+      "key": "bf351d037b9059991141",
+      "chars": 546
+    },
+    {
+      "id": "body.6",
+      "key": "4a7d5fa97f86b613da7f",
+      "chars": 465
+    },
+    {
+      "id": "body.7",
+      "key": "47082c30880d2ff419e0",
+      "chars": 480
+    },
+    {
+      "id": "body.8",
+      "key": "0b2905c301ee2d51fed8",
+      "chars": 554
+    },
+    {
+      "id": "body.9",
+      "key": "89d1fc4f117ed3cf6458",
+      "chars": 569
+    },
+    {
+      "id": "body.10",
+      "key": "129edad3a3a00a44a7d0",
+      "chars": 565
+    },
+    {
+      "id": "body.11",
+      "key": "0132b3c3af44c11a9908",
+      "chars": 540
+    },
+    {
+      "id": "body.12",
+      "key": "55bdec596919ee64469b",
+      "chars": 688
+    },
+    {
+      "id": "body.13",
+      "key": "3df72a828c3d8f3c7358",
+      "chars": 650
+    },
+    {
+      "id": "body.14",
+      "key": "ebb7fcd979d7039e3552",
+      "chars": 305
+    }
+  ]
+}

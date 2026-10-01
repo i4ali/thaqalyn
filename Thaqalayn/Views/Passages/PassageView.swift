@@ -27,8 +27,11 @@ struct PassageView: View {
     @ObservedObject private var bookmarkManager = BookmarkManager.shared
     @Environment(\.dismiss) private var dismiss
 
-    @State private var selectedVerseForSummary: VerseWithTafsir?
-    @State private var pendingConceptId: String?
+    /// The verse whose Gems cover is showing, and the gem to open on arrival.
+    /// The gem travels inside the cover's item: a separate @State read only in
+    /// the cover's closure was captured stale, so theme deep links opened
+    /// Gems with nothing selected.
+    @State private var gemsTarget: GemsTarget?
     @State private var showTextSizePanel = false
     @State private var showingPaywall = false
     /// What the user reached for when the paywall fired - drives its hero art.
@@ -193,11 +196,11 @@ struct PassageView: View {
         .sheet(isPresented: $showingPaywall) {
             PaywallView(context: paywallContext)
         }
-        .fullScreenCover(item: $selectedVerseForSummary, onDismiss: { pendingConceptId = nil }) { verse in
+        .fullScreenCover(item: $gemsTarget) { target in
             VerseSummaryView(
-                verse: verse,
+                verse: target.verse,
                 surah: surah,
-                initialConceptId: pendingConceptId
+                initialConceptId: target.conceptId
             )
         }
     }
@@ -318,8 +321,7 @@ struct PassageView: View {
         if premiumManager.canAccessOverview(surahNumber: surah.number) {
             // Let the chip's press squish play before the cover slides up.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                pendingConceptId = nil
-                selectedVerseForSummary = verse
+                gemsTarget = GemsTarget(verse: verse, conceptId: nil)
             }
         } else {
             paywallContext = .inSurah(surah, "Gems")
@@ -354,11 +356,18 @@ struct PassageView: View {
             guard let openConceptId,
                   let verse = versesInRange.first(where: { $0.number == scrollToVerse }) else { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-                pendingConceptId = openConceptId
-                selectedVerseForSummary = verse
+                gemsTarget = GemsTarget(verse: verse, conceptId: openConceptId)
             }
         }
     }
+}
+
+/// A Gems cover request: the verse plus the gem to open on arrival (nil opens
+/// the gem grid).
+private struct GemsTarget: Identifiable {
+    let verse: VerseWithTafsir
+    let conceptId: String?
+    var id: String { "\(verse.id)|\(conceptId ?? "")" }
 }
 
 // MARK: - Verse row

@@ -23,6 +23,7 @@ struct UnderstandingView: View {
     @ObservedObject private var languageManager = CommentaryLanguageManager.shared
     @ObservedObject private var dataManager = DataManager.shared
     @ObservedObject private var tafsirReader = TafsirReader.shared
+    @ObservedObject private var voiceManager = TTSVoiceManager.shared
     @ObservedObject private var stageStore = PassageStageStore.shared
     @StateObject private var readingSettings = ReadingSettingsManager.shared
     @Environment(\.dismiss) private var dismiss
@@ -152,6 +153,11 @@ struct UnderstandingView: View {
         }.joined()
     }
 
+    /// Listen needs a device voice for the language on screen. Without one (Urdu,
+    /// on most devices) the chip is hidden rather than reading in the wrong voice
+    /// or not at all.
+    private var canListen: Bool { voiceManager.hasVoicesAvailable(for: lang) }
+
     private var isListeningToThis: Bool { tafsirReader.currentText == listenText }
     private var isPlayingThis: Bool { isListeningToThis && tafsirReader.isPlaying }
     private var isPausedThis: Bool { isListeningToThis && tafsirReader.isPaused }
@@ -198,7 +204,7 @@ struct UnderstandingView: View {
                         titleBlock
                             .padding(.bottom, 14)
 
-                        languagePills
+                        LanguagePills(languages: availableLanguages, selected: lang)
                             .padding(.bottom, 18)
 
                         essaySection
@@ -306,7 +312,9 @@ struct UnderstandingView: View {
 
             TextSizeButton(isPanelOpen: $showTextSizePanel)
 
-            listenChip
+            if canListen {
+                listenChip
+            }
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
@@ -346,31 +354,6 @@ struct UnderstandingView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, 8)
-    }
-
-    @ViewBuilder
-    private var languagePills: some View {
-        if availableLanguages.count > 1 {
-            HStack(spacing: 8) {
-                ForEach(availableLanguages, id: \.self) { language in
-                    let selected = language == lang
-                    Button(action: { languageManager.setLanguage(language) }) {
-                        Text(language.displayName)
-                            .font(.system(size: 13, weight: .semibold))
-                            .foregroundColor(selected ? themeManager.onAccentText : themeManager.accentColor)
-                            .padding(.horizontal, 14)
-                            .frame(height: 32)
-                            .background(
-                                Capsule().fill(selected ? AnyShapeStyle(themeManager.accentGradient) : AnyShapeStyle(themeManager.accentChip))
-                            )
-                            .overlay(Capsule().stroke(selected ? Color.clear : themeManager.strokeColor, lineWidth: 1))
-                    }
-                    .buttonStyle(EmPressStyle())
-                    .accessibilityAddTraits(selected ? .isSelected : [])
-                }
-                Spacer()
-            }
-        }
     }
 
     // MARK: - Essay and perspectives
