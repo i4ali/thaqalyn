@@ -118,7 +118,6 @@ enum ExploreDestination {
 // MARK: - View
 
 struct ExploreView: View {
-    @StateObject private var themeManager = ThemeManager.shared
     @State private var showLifeMoments = false
     @State private var showDailyDuas = false
     @State private var showDuasZiyarat = false
@@ -129,135 +128,35 @@ struct ExploreView: View {
     @State private var showFoods = false
     @State private var showMiracleStories = false
 
-
-    private let localizedTitle = "Explore"
-    private let localizedSubtitle = "Discover Quranic Wisdom"
-
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald {
-                EmeraldExploreView(onTap: handleTap)
-            } else {
-                legacyBody
+        EmeraldExploreView(onTap: handleTap)
+            .fullScreenCover(isPresented: $showLifeMoments) {
+                LifeMomentsView()
             }
-        }
-        .fullScreenCover(isPresented: $showLifeMoments) {
-            LifeMomentsView()
-        }
-        .fullScreenCover(isPresented: $showDailyDuas) {
-            DuasView()
-        }
-        .fullScreenCover(isPresented: $showDuasZiyarat) {
-            DuasZiyaratView()
-        }
-        .fullScreenCover(isPresented: $showPropheticParallels) {
-            PropheticParallelsView()
-        }
-        .fullScreenCover(isPresented: $showFasting) {
-            FastingVersesView()
-        }
-        .fullScreenCover(isPresented: $showPropheticStories) {
-            PropheticStoriesView()
-        }
-        .fullScreenCover(isPresented: $showAhlulbaytQuran) {
-            AhlulbaytQuranView()
-        }
-        .fullScreenCover(isPresented: $showFoods) {
-            FoodsView()
-        }
-        .fullScreenCover(isPresented: $showMiracleStories) {
-            MiracleStoriesView()
-        }
-    }
-
-    private var legacyBody: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                // Header
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(localizedTitle)
-                        .font(.system(size: 34, weight: .bold, design: .rounded))
-                        .foregroundColor(themeManager.primaryText)
-
-                    Text(localizedSubtitle)
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
-                .padding(.top, 20)
-                .padding(.bottom, 16)
-
-                // Sections
-                ForEach(ExploreSection.allCases, id: \.self) { section in
-                    sectionView(section)
-                }
-
-                Spacer(minLength: 100)
+            .fullScreenCover(isPresented: $showDailyDuas) {
+                DuasView()
             }
-        }
-    }
-
-    @ViewBuilder
-    private func sectionView(_ section: ExploreSection) -> some View {
-        VStack(spacing: 0) {
-            // Section header
-            ExploreSectionHeader(title: section.title)
-
-            // Section card with rows
-            VStack(spacing: 0) {
-                ForEach(Array(section.items.enumerated()), id: \.element.id) { index, item in
-                    ExploreRow(
-                        icon: iconForItem(item),
-                        title: item.title,
-                        subtitle: item.subtitle
-                    ) {
-                        handleTap(item.destination)
-                    }
-
-                    // Divider between rows (not after last row)
-                    if index < section.items.count - 1 {
-                        Divider()
-                            .padding(.leading, 76) // Align with text, not icon
-                    }
-                }
+            .fullScreenCover(isPresented: $showDuasZiyarat) {
+                DuasZiyaratView()
             }
-            .background {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                    .overlay(RoundedRectangle(cornerRadius: 16).stroke(themeManager.strokeColor, lineWidth: 1))
-                    .shadow(
-                        color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                        radius: 12, x: 0, y: 4
-                    )
+            .fullScreenCover(isPresented: $showPropheticParallels) {
+                PropheticParallelsView()
             }
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .padding(.horizontal, 20)
-        }
-    }
-
-    private func iconForItem(_ item: ExploreItem) -> String {
-        // Use emoji for warmInviting theme, SF Symbols text for others
-        switch item.destination {
-        case .lifeMoments:
-            return "heart.fill"
-        case .dailyDuas:
-            return "hands.sparkles.fill"
-        case .duasZiyarat:
-            return "text.book.closed.fill"
-        case .propheticParallels:
-            return "person.2.wave.2.fill"
-        case .fasting:
-            return "moon.fill"
-        case .propheticStories:
-            return "book"
-        case .ahlulbaytQuran:
-            return "star.fill"
-        case .foods:
-            return "leaf.fill"
-        case .miracleStories:
-            return "sparkles"
-        }
+            .fullScreenCover(isPresented: $showFasting) {
+                FastingVersesView()
+            }
+            .fullScreenCover(isPresented: $showPropheticStories) {
+                PropheticStoriesView()
+            }
+            .fullScreenCover(isPresented: $showAhlulbaytQuran) {
+                AhlulbaytQuranView()
+            }
+            .fullScreenCover(isPresented: $showFoods) {
+                FoodsView()
+            }
+            .fullScreenCover(isPresented: $showMiracleStories) {
+                MiracleStoriesView()
+            }
     }
 
     private func handleTap(_ destination: ExploreDestination) {
@@ -287,7 +186,7 @@ struct ExploreView: View {
     }
 }
 
-// MARK: - Midnight Emerald — Explore
+// MARK: - Explore layout
 
 private struct EmeraldExploreView: View {
     @ObservedObject private var themeManager = ThemeManager.shared

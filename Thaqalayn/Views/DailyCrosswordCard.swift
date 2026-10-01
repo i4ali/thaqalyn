@@ -37,16 +37,10 @@ struct DailyCrosswordCard: View {
     }
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald {
-                emeraldCard
-            } else {
-                legacyCard
+        emeraldCard
+            .sheet(isPresented: $showSheet) {
+                DailyCrosswordView(puzzle: provider.today, onCompleted: {})
             }
-        }
-        .sheet(isPresented: $showSheet) {
-            DailyCrosswordView(puzzle: provider.today, onCompleted: {})
-        }
     }
 
     // MARK: - Emerald body (mirrors DailyChallengeCard.emeraldCard)
@@ -133,107 +127,6 @@ struct DailyCrosswordCard: View {
                 .foregroundColor(.green)
         }
     }
-
-    // MARK: - Legacy body (mirrors DailyChallengeCard.legacyCard)
-
-    @ViewBuilder
-    private var legacyCard: some View {
-        let state = cardState
-        let isDone = state == .done
-
-        Group {
-            if isDone {
-                legacyInner(state: state)
-            } else {
-                Button {
-                    Haptics.press()
-                    showSheet = true
-                } label: {
-                    legacyInner(state: state)
-                        .contentShape(Rectangle())
-                }
-                .buttonStyle(EmPressStyle.gentle)
-            }
-        }
-    }
-
-    private func legacyInner(state: DailyCrosswordCardState) -> some View {
-        let isDone = state == .done
-
-        return HStack(alignment: .center, spacing: 16) {
-            // Category icon — circle gold gradient (50), white symbol
-            ZStack {
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 50, height: 50)
-                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                Image(systemName: "square.grid.3x3.fill")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
-            }
-
-            // Text stack
-            VStack(alignment: .leading, spacing: 4) {
-                Text(DailyCrosswordStrings.dailyCrossword)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                // Sub-line
-                Text(legacySubLine(state: state))
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(isDone ? .green : themeManager.secondaryText)
-            }
-
-            Spacer()
-
-            // Right icon
-            legacyRightIcon(state: state)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary
-                      ? themeManager.glassSurface : Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(themeManager.strokeColor, lineWidth: 1))
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary
-                        ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                    radius: 12, x: 0, y: 4
-                )
-        }
-        .contentShape(Rectangle())
-    }
-
-    private func legacySubLine(state: DailyCrosswordCardState) -> String {
-        switch state {
-        case .pending:
-            let teaser = DailyCrosswordStrings.teaser
-            if manager.streak.currentStreak > 0 {
-                return "🔥 \(manager.streak.currentStreak) · \(teaser)"
-            }
-            return teaser
-        case .done:
-            let base = DailyCrosswordStrings.doneForToday
-            return "\(base) · 🔥 \(manager.streak.currentStreak)"
-        }
-    }
-
-    @ViewBuilder
-    private func legacyRightIcon(state: DailyCrosswordCardState) -> some View {
-        switch state {
-        case .pending:
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        case .done:
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.green)
-        }
-    }
 }
 
 // MARK: - DEBUG Previews
@@ -243,21 +136,23 @@ struct DailyCrosswordCard: View {
 // MARK: Pending (not done) previews
 
 #Preview("Crossword Card — Pending, English, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
+    let _ = ThemeManager.shared.selectedTheme = .midnightEmerald
     return VStack(spacing: 16) {
         DailyCrosswordCard()
     }
     .padding(20)
-    .background(Color.black)
+    .background(ThemeManager.shared.primaryBackground)
+    .preferredColorScheme(.dark)
 }
 
 #Preview("Crossword Card — Pending, English, Light") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
+    let _ = ThemeManager.shared.selectedTheme = .sageDawn
     return VStack(spacing: 16) {
         DailyCrosswordCard()
     }
     .padding(20)
-    .background(Color(red: 0.97, green: 0.95, blue: 0.92))
+    .background(ThemeManager.shared.primaryBackground)
+    .preferredColorScheme(.light)
 }
 
 // MARK: Done (premium, completed) previews
@@ -268,21 +163,9 @@ struct DailyCrosswordCard: View {
 // DailyChallengeCard previews for faithful preview coverage.
 
 private struct _DebugCrosswordDoneCard: View {
-    let theme: ThemeVariant
-
     @StateObject private var themeManager = ThemeManager.shared
 
-
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald { emeraldDone } else { legacyDone }
-        }
-        .onAppear {
-            ThemeManager.shared.selectedTheme = theme
-        }
-    }
-
-    private var emeraldDone: some View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: "square.grid.3x3.fill", size: 46)
@@ -306,48 +189,20 @@ private struct _DebugCrosswordDoneCard: View {
             .padding(16)
         }
     }
-
-    private var legacyDone: some View {
-        HStack(alignment: .center, spacing: 16) {
-            ZStack {
-                Circle().fill(themeManager.accentGradient).frame(width: 50, height: 50)
-                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                Image(systemName: "square.grid.3x3.fill")
-                    .font(.system(size: 20, weight: .semibold)).foregroundColor(.white)
-            }
-            VStack(alignment: .leading, spacing: 4) {
-                Text(DailyCrosswordStrings.dailyCrossword)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText).lineLimit(2)
-                Text("\(DailyCrosswordStrings.doneForToday) · 🔥 5")
-                    .font(.system(size: 14, weight: .medium)).foregroundColor(.green)
-            }
-            Spacer()
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 14, weight: .medium)).foregroundColor(.green)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary
-                      ? themeManager.glassSurface : Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(themeManager.strokeColor, lineWidth: 1))
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-        }
-        .contentShape(Rectangle())
-    }
 }
 
 #Preview("Crossword Card — Done, English, Emerald") {
-    _DebugCrosswordDoneCard(theme: .nightSanctuary)
+    _DebugCrosswordDoneCard()
         .padding(20)
-        .background(Color.black)
+        .background(ThemeManager.shared.primaryBackground)
+        .preferredColorScheme(.dark)
 }
 
 #Preview("Crossword Card — Done, English, Light") {
-    _DebugCrosswordDoneCard(theme: .warmInviting)
+    _DebugCrosswordDoneCard()
         .padding(20)
-        .background(Color(red: 0.97, green: 0.95, blue: 0.92))
+        .background(ThemeManager.shared.primaryBackground)
+        .preferredColorScheme(.light)
 }
 
 #endif

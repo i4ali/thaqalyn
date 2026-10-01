@@ -41,77 +41,9 @@ struct AhlulbaytQuranView: View {
                 AdaptiveModernBackground()
 
                 VStack(spacing: 0) {
-                    if themeManager.isMidnightEmerald {
-                        emeraldHeader
-                        emeraldSearchBar
-                        emeraldCategoryFilter
-                    } else {
-                    // Modern header
-                    VStack(spacing: 12) {
-                        HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(headerTitle)
-                                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                                    .foregroundColor(themeManager.primaryText)
-
-                                Text(headerSubtitle)
-                                    .font(.system(size: 16, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
-                            }
-
-                            Spacer()
-                        }
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-                    .padding(.bottom, 12)
-
-                    // Search bar
-                    HStack(spacing: 12) {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(themeManager.secondaryText)
-                            .font(.system(size: 16, weight: .medium))
-
-                        TextField("Search verses or members...", text: $searchText)
-                            .font(.system(size: 16))
-                            .foregroundColor(themeManager.primaryText)
-                    }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 12)
-                    .background {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.95, green: 0.95, blue: 0.95))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 12)
-
-                    // Category filter
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 8) {
-                            AhlulbaytCategoryChip(
-                                title: "All",
-                                icon: "square.grid.2x2.fill",
-                                isSelected: selectedCategory == nil,
-                                action: { selectedCategory = nil }
-                            )
-
-                            ForEach(AhlulbaytCategory.allCases, id: \.self) { category in
-                                AhlulbaytCategoryChip(
-                                    title: category.displayName,
-                                    icon: category.icon,
-                                    isSelected: selectedCategory == category,
-                                    action: { selectedCategory = category }
-                                )
-                            }
-                        }
-                        .padding(.horizontal, 20)
-                    }
-                    .padding(.bottom, 12)
-                    }
+                    emeraldHeader
+                    emeraldSearchBar
+                    emeraldCategoryFilter
 
                     // Entries list
                     if ahlulbaytManager.isLoading {
@@ -135,31 +67,14 @@ struct AhlulbaytQuranView: View {
                                                 }
                                         }
                                     } header: {
-                                        if themeManager.isMidnightEmerald {
-                                            HStack(spacing: 8) {
-                                                Image(systemName: category.icon)
-                                                    .font(.system(size: 13))
-                                                    .foregroundColor(themeManager.accentColor)
-
-                                                Text(category.displayName.uppercased())
-                                                    .font(.system(size: 11, weight: .bold)).tracking(2)
-                                                    .foregroundColor(themeManager.accentColor)
-                                                    .textCase(nil)
-
-                                                Spacer()
-                                            }
-                                            .padding(.horizontal, 20)
-                                            .padding(.vertical, 12)
-                                            .background(themeManager.primaryBackground)
-                                        } else {
-                                        HStack {
+                                        HStack(spacing: 8) {
                                             Image(systemName: category.icon)
-                                                .font(.system(size: 16, weight: .semibold))
+                                                .font(.system(size: 13))
                                                 .foregroundColor(themeManager.accentColor)
 
-                                            Text(category.displayName)
-                                                .font(.system(size: 18, weight: .bold))
-                                                .foregroundColor(themeManager.primaryText)
+                                            Text(category.displayName.uppercased())
+                                                .font(.system(size: 11, weight: .bold)).tracking(2)
+                                                .foregroundColor(themeManager.accentColor)
                                                 .textCase(nil)
 
                                             Spacer()
@@ -167,7 +82,6 @@ struct AhlulbaytQuranView: View {
                                         .padding(.horizontal, 20)
                                         .padding(.vertical, 12)
                                         .background(themeManager.primaryBackground)
-                                        }
                                     }
                                 }
                             }
@@ -189,7 +103,7 @@ struct AhlulbaytQuranView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -204,7 +118,6 @@ struct AhlulbaytQuranView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 
     // MARK: - Emerald
@@ -289,10 +202,6 @@ struct AhlulbaytEntryCardView: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: entry.categoryIcon)
@@ -335,73 +244,6 @@ struct AhlulbaytEntryCardView: View {
         .contentShape(Rectangle())
         .padding(.horizontal, 20)
     }
-
-    private var legacyBody: some View {
-        HStack(alignment: .top, spacing: 16) {
-            // Category icon
-            ZStack {
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 50, height: 50)
-                    .shadow(
-                        color: themeManager.accentColor.opacity(0.3),
-                        radius: 8
-                    )
-
-                Image(systemName: entry.categoryIcon)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
-            }
-
-            // Entry content
-            VStack(alignment: .leading, spacing: 6) {
-                Text(entry.titleEn)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                // Members involved
-                if !entry.ahlulbaytMembersEn.isEmpty {
-                    Text(entry.ahlulbaytMembersEn.prefix(2).joined(separator: ", "))
-                        .font(.system(size: 13, weight: .medium))
-                        .foregroundColor(themeManager.accentColor)
-                        .lineLimit(1)
-                }
-
-                // Verse count
-                Text("\(entry.verseCount) verse\(entry.verseCount == 1 ? "" : "s") • \(entry.category.displayName)")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-
-                // Verse references
-                let verseRefs = entry.verses.prefix(2).map { $0.verseReference }.joined(separator: " • ")
-                Text(verseRefs)
-                    .font(.system(size: 13, weight: .medium))
-                    .foregroundColor(themeManager.tertiaryText)
-                    .lineLimit(1)
-            }
-
-            Spacer()
-
-            // Chevron or lock icon
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-        }
-        .contentShape(Rectangle())
-        .padding(.horizontal, 20)
-    }
 }
 
 struct AhlulbaytCategoryChip: View {
@@ -412,10 +254,6 @@ struct AhlulbaytCategoryChip: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         Button(action: action) {
             HStack(spacing: 6) {
                 Image(systemName: icon)
@@ -438,35 +276,6 @@ struct AhlulbaytCategoryChip: View {
             }
         }
         .buttonStyle(EmPressStyle())
-    }
-
-    private var legacyBody: some View {
-        Button(action: action) {
-            HStack(spacing: 6) {
-                Image(systemName: icon)
-                    .font(.system(size: 14, weight: .semibold))
-
-                Text(title)
-                    .font(.system(size: 14, weight: .semibold))
-            }
-            .foregroundColor(isSelected ? .white : themeManager.primaryText)
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .background {
-                if isSelected {
-                    Capsule()
-                        .fill(themeManager.accentGradient)
-                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                } else {
-                    Capsule()
-                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.95, green: 0.95, blue: 0.95))
-                        .overlay(
-                            Capsule()
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
-            }
-        }
     }
 }
 

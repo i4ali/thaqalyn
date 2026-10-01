@@ -528,7 +528,7 @@ struct LockedJourneyOverlay: View {
 
     var body: some View {
         ZStack {
-            Color.black.opacity(0.55)
+            tm.modalScrim
                 .ignoresSafeArea()
                 .onTapGesture { onDismiss() }
 
@@ -568,7 +568,7 @@ struct LockedJourneyOverlay: View {
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .stroke(tm.strokeColor, lineWidth: 1)
             )
-            .shadow(color: .black.opacity(0.5), radius: 40, x: 0, y: 20)
+            .emShadow(.custom(opacity: 0.5, radius: 40, y: 20))
             .padding(40)
         }
     }

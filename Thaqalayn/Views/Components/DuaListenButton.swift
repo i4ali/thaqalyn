@@ -27,51 +27,23 @@ struct DuaListenButton: View {
     private var hasRecording: Bool { recordingURL != nil }
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald {
-                emeraldButton
-            } else {
-                standardButton
+        listenButton
+            .onAppear {
+                #if DEBUG
+                NSLog("DUAAUDIOBTN hasRec=\(hasRecording) key=\(key) arabic=\(arabic.prefix(30))")
+                #endif
             }
-        }
-        .onAppear {
-            #if DEBUG
-            NSLog("DUAAUDIOBTN hasRec=\(hasRecording) key=\(key) arabic=\(arabic.prefix(30))")
-            #endif
-        }
-        .onDisappear {
-            // Stop playback when the screen goes away, but only if it was this du'a.
-            if hasRecording {
-                if duaPlayer.currentKey == key { duaPlayer.stop() }
-            } else if tafsirReader.currentText == arabic {
-                tafsirReader.stop()
+            .onDisappear {
+                // Stop playback when the screen goes away, but only if it was this du'a.
+                if hasRecording {
+                    if duaPlayer.currentKey == key { duaPlayer.stop() }
+                } else if tafsirReader.currentText == arabic {
+                    tafsirReader.stop()
+                }
             }
-        }
     }
 
-    private var standardButton: some View {
-        Button(action: handleTap) {
-            HStack(spacing: 8) {
-                Image(systemName: iconName)
-                    .font(.system(size: 16, weight: .semibold))
-                Text(label)
-                    .font(.system(size: 15, weight: .semibold))
-            }
-            .foregroundColor(themeManager.primaryText)
-            .padding(.horizontal, 18)
-            .padding(.vertical, 12)
-            .background(
-                Capsule()
-                    .fill(themeManager.secondaryBackground.opacity(0.8))
-                    .overlay(
-                        Capsule().stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-            )
-        }
-        .frame(maxWidth: .infinity)
-    }
-
-    private var emeraldButton: some View {
+    private var listenButton: some View {
         Button(action: handleTap) {
             HStack(spacing: 8) {
                 Image(systemName: iconName).font(.system(size: 15, weight: .semibold))

@@ -55,13 +55,7 @@ private func progressLine(for info: LastReadInfo) -> String {
 }
 
 struct TodayView: View {
-    @StateObject private var themeManager = ThemeManager.shared
-    @StateObject private var dataManager = DataManager.shared
-    @StateObject private var progressManager = ProgressManager.shared
     @StateObject private var dailyVerse = DailyVerseProvider.shared
-    @StateObject private var duasManager = DuasManager.shared
-    @StateObject private var calendarManager = IslamicCalendarManager.shared
-    @StateObject private var profile = UserProfileManager.shared
     @StateObject private var whatsNew = WhatsNewManager.shared
 
     @Binding var selectedTab: Int
@@ -75,18 +69,12 @@ struct TodayView: View {
 
     var body: some View {
         ZStack {
-            Group {
-                if themeManager.isMidnightEmerald {
-                    EmeraldTodayView(
-                        selectedTab: $selectedTab,
-                        selectedSurahForDeepLink: $selectedSurahForDeepLink,
-                        targetVerseNumber: $targetVerseNumber,
-                        showingNotifications: $showingNotifications
-                    )
-                } else {
-                    legacyContent
-                }
-            }
+            EmeraldTodayView(
+                selectedTab: $selectedTab,
+                selectedSurahForDeepLink: $selectedSurahForDeepLink,
+                targetVerseNumber: $targetVerseNumber,
+                showingNotifications: $showingNotifications
+            )
 
             // Hidden deep-link
             if let surahForDeepLink = selectedSurahForDeepLink {
@@ -128,177 +116,6 @@ struct TodayView: View {
             }
         }
     }
-
-    // MARK: - Legacy (Light / Night Sanctuary) content
-
-    private var legacyContent: some View {
-        ScrollView {
-            LazyVStack(spacing: 14) {
-                headerRow
-                    .padding(.horizontal, 22)
-                    .padding(.top, 60)
-
-                greeting
-                    .padding(.horizontal, 18)
-                    .padding(.top, 18)
-
-                if let item = whatsNew.spotlight {
-                    WhatsNewCard(item: item, selectedTab: $selectedTab)
-                        .padding(.horizontal, 18)
-                        .padding(.top, 6)
-                }
-
-                DailyReminderBanner(
-                    selection: dailyVerse.today,
-                    headline: reminderHeadline,
-                    surahName: surahName(for: dailyVerse.today.surah),
-                    themeManager: themeManager,
-                    onTap: { openMessageSource() }
-                )
-                .padding(.horizontal, 18)
-                .padding(.top, 6)
-
-                ContinueReadingHero(
-                    info: progressManager.lastReadInfo,
-                    surah: lastReadSurah,
-                    verse: lastReadVerse,
-                    themeManager: themeManager,
-                    onResume: { openLastRead() },
-                    onBegin: { openSurah1() }
-                )
-                .padding(.horizontal, 18)
-
-                BookmarkSpotlightCard()
-                    .padding(.horizontal, 18)
-
-                DailyChallengeCard()
-                    .padding(.horizontal, 18)
-
-                DailyCrosswordCard()
-                    .padding(.horizontal, 18)
-
-                if let dua = duasManager.duaOfTheDay() {
-                    DuaOfTheDayCard(
-                        dua: dua,
-                        themeManager: themeManager
-                    )
-                    .padding(.horizontal, 18)
-                    .padding(.top, -2)
-                }
-
-                #if DEBUG
-                if ProcessInfo.processInfo.arguments.contains("-tallToday") {
-                    Color.clear.frame(height: 800)
-                }
-                #endif
-            }
-            .padding(.bottom, 40)
-        }
-    }
-
-    /// Daily-reminder headline in the commentary language. Both translations now
-    /// come from quran_data.json (the old pool inlined its own English; the new one
-    /// stores references only), so Urdu readers finally get the Jawadi translation
-    /// rather than silently falling back to English.
-    private var reminderHeadline: String {
-        guard let verse = dataManager.getVerse(surah: dailyVerse.today.surah,
-                                               verse: dailyVerse.today.verse) else {
-            print("⚠️ TodayView: daily verse \(dailyVerse.today.id) did not hydrate")
-            return ""
-        }
-        return verse.translation
-    }
-
-    private func surahName(for surahNumber: Int) -> String {
-        dataManager.availableSurahs
-            .first(where: { $0.surah.number == surahNumber })?
-            .surah.englishName
-            ?? "Surah \(surahNumber)"
-    }
-
-    private func openMessageSource() {
-        guard let surah = dataManager.availableSurahs.first(where: { $0.surah.number == dailyVerse.today.surah }) else {
-            print("⚠️ TodayView: daily-message surah \(dailyVerse.today.surah) not in availableSurahs")
-            return
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-            targetVerseNumber = dailyVerse.today.verse
-            selectedSurahForDeepLink = surah
-        }
-    }
-
-    private var lastReadSurah: SurahWithTafsir? {
-        guard let info = progressManager.lastReadInfo else { return nil }
-        return dataManager.availableSurahs.first(where: { $0.surah.number == info.surahNumber })
-    }
-
-    private var lastReadVerse: VerseWithTafsir? {
-        guard let info = progressManager.lastReadInfo,
-              let surah = lastReadSurah,
-              info.verseNumber >= 1,
-              info.verseNumber <= surah.verses.count else { return nil }
-        return surah.verses[info.verseNumber - 1]
-    }
-
-    private func openLastRead() {
-        guard let info = progressManager.lastReadInfo,
-              let surah = lastReadSurah else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-            targetVerseNumber = info.verseNumber
-            selectedSurahForDeepLink = surah
-        }
-    }
-
-    private func openSurah1() {
-        guard let surah = dataManager.availableSurahs.first(where: { $0.surah.number == 1 }) else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-            targetVerseNumber = 1
-            selectedSurahForDeepLink = surah
-        }
-    }
-
-    // MARK: - Header row
-
-    @ViewBuilder
-    private var headerRow: some View {
-        VStack(spacing: 14) {
-            HStack(spacing: 10) {
-                ProfileAvatar()
-                Spacer()
-                NotificationBell(showingNotifications: $showingNotifications)
-            }
-
-            HStack {
-                HijriDatePill(themeManager: themeManager, calendarManager: calendarManager)
-                Spacer()
-            }
-        }
-    }
-
-    // MARK: - Greeting
-
-    @ViewBuilder
-    private var greeting: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            HStack(spacing: 6) {
-                Text(TodayStrings.greeting(name: profile.greetingName))
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-                PhosphorIcon(name: "ph-moon-stars-fill", size: 14)
-                    .foregroundColor(themeManager.accentColor)
-            }
-
-            Text(TodayStrings.today)
-                .font(.system(size: 32, weight: .heavy))
-                .kerning(-0.6)
-                .foregroundColor(themeManager.primaryText)
-
-            Spacer().frame(height: 0)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
 }
 
 // MARK: - Subviews
@@ -329,7 +146,7 @@ private struct HijriDatePill: View {
             .padding(.vertical, 6)
             .background(
                 Capsule()
-                    .fill(pillBackground)
+                    .fill(themeManager.glassSurface)
                     .overlay(
                         Capsule()
                             .stroke(themeManager.strokeColor, lineWidth: 1)
@@ -337,367 +154,9 @@ private struct HijriDatePill: View {
             )
             .accessibilityLabel(accessibilityText)
     }
-
-    private var pillBackground: Color {
-        themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white
-    }
 }
 
-private struct DailyReminderBanner: View {
-    let selection: DailyVerseSelection
-    let headline: String
-    let surahName: String
-    let themeManager: ThemeManager
-    let onTap: () -> Void
-
-    private var bannerGradient: LinearGradient {
-        themeManager.accentGradient
-    }
-
-    /// Latin curly quotes misbehave around RTL text — Urdu renders unquoted.
-    private var headlineText: String {
-        "\u{201C}\(headline)\u{201D}"
-    }
-
-    private var sourceLabel: String {
-        "\(surahName) · \(selection.surah):\(selection.verse)"
-    }
-
-    private var shareText: String {
-        "\(headlineText) — \(sourceLabel)"
-    }
-
-    var body: some View {
-        Button(action: onTap) {
-            ZStack(alignment: .topTrailing) {
-                // Decorative crescent
-                ZStack {
-                    Circle()
-                        .fill(Color.white.opacity(0.12))
-                        .frame(width: 110, height: 110)
-                        .offset(x: 30, y: -30)
-                    Circle()
-                        .fill(Color.white.opacity(0.12))
-                        .frame(width: 100, height: 100)
-                        .offset(x: 50, y: -10)
-                }
-                .allowsHitTesting(false)
-
-                VStack(alignment: .leading, spacing: 12) {
-                    HStack(spacing: 6) {
-                        Image(systemName: "sparkles")
-                            .font(.system(size: 14))
-                            .foregroundColor(.white.opacity(0.92))
-                        Text(TodayStrings.reminderEyebrow.uppercased())
-                            .emEyebrow(size: 11, tracking: 1.3)
-                            .foregroundColor(.white.opacity(0.92))
-                    }
-
-                    Text(headlineText)
-                        .font(.system(size: 19, weight: .bold))
-                        .kerning(-0.2)
-                        .lineSpacing(3)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: 270, alignment: .leading)
-                        .fixedSize(horizontal: false, vertical: true)
-
-                    Text(sourceLabel)
-                        .font(.system(size: 12.5))
-                        .foregroundColor(.white.opacity(0.85))
-                }
-                .padding(18)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .background(
-                RoundedRectangle(cornerRadius: 22)
-                    .fill(bannerGradient)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 22))
-            .shadow(
-                color: themeManager.accentColor.opacity(0.28),
-                radius: 14, x: 0, y: 12
-            )
-        }
-        .buttonStyle(PlainButtonStyle())
-        .contextMenu {
-            ShareLink(item: shareText) {
-                Label(TodayStrings.share, systemImage: "square.and.arrow.up")
-            }
-        }
-        .accessibilityLabel("\(headline). \(sourceLabel). Double tap to open verse.")
-    }
-}
-
-private struct ContinueReadingHero: View {
-    let info: LastReadInfo?
-    let surah: SurahWithTafsir?
-    let verse: VerseWithTafsir?
-    let themeManager: ThemeManager
-    let onResume: () -> Void
-    let onBegin: () -> Void
-
-    private static let relativeFormatter: RelativeDateTimeFormatter = {
-        let f = RelativeDateTimeFormatter()
-        f.unitsStyle = .abbreviated
-        return f
-    }()
-
-
-    /// Relative timestamp ("2h ago").
-    private func relativeString(_ date: Date) -> String {
-        let f = Self.relativeFormatter
-        f.locale = Locale(identifier: "en")
-        return f.localizedString(for: date, relativeTo: Date())
-    }
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text(TodayStrings.continueReading.uppercased())
-                    .emEyebrow(size: 13, tracking: 0.4)
-                    .foregroundColor(themeManager.secondaryText)
-                Spacer()
-                if let info = info {
-                    Text(relativeString(info.updatedAt))
-                        .font(.system(size: 12))
-                        .foregroundColor(themeManager.tertiaryText)
-                }
-            }
-
-            cardBody
-        }
-    }
-
-    @ViewBuilder
-    private var cardBody: some View {
-        Group {
-            if let info = info, let surah = surah, let verse = verse {
-                populatedCard(info: info, surah: surah, verse: verse)
-            } else {
-                emptyCard
-            }
-        }
-        .padding(16)
-        .background(cardBackground)
-    }
-
-    @ViewBuilder
-    private func populatedCard(info: LastReadInfo, surah: SurahWithTafsir, verse: VerseWithTafsir) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            identityRow(info: info, surah: surah)
-            versePreview(verse: verse)
-            progressAndResume(info: info)
-        }
-    }
-
-    @ViewBuilder
-    private func identityRow(info: LastReadInfo, surah: SurahWithTafsir) -> some View {
-        HStack(spacing: 12) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 14)
-                    .fill(avatarBackground)
-                Text("\(surah.surah.number)")
-                    .font(.system(size: 18, weight: .heavy))
-                    .foregroundColor(themeManager.accentColor)
-            }
-            .frame(width: 48, height: 48)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(surah.surah.englishName)
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(themeManager.primaryText)
-                // The passage the reader is in; the verse line until the passage index loads.
-                Text(passagePositionLine(for: info)
-                     ?? "\(TodayStrings.verseOf(info.verseNumber, surah.surah.versesCount)) · \(surah.surah.englishNameTranslation)")
-                    .font(.system(size: 12))
-                    .foregroundColor(themeManager.tertiaryText)
-                    .lineLimit(2)
-            }
-
-            Spacer()
-
-            Text(surah.surah.arabicName)
-                .font(.custom("Amiri", size: 22))
-                .foregroundColor(themeManager.primaryText)
-        }
-    }
-
-    @ViewBuilder
-    private func versePreview(verse: VerseWithTafsir) -> some View {
-        VStack(alignment: .trailing, spacing: 8) {
-            Text(verse.arabicText)
-                .font(.custom("Amiri", size: 19))
-                .lineSpacing(5)
-                .multilineTextAlignment(.trailing)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .environment(\.layoutDirection, .rightToLeft)
-                .foregroundColor(themeManager.primaryText)
-
-            Text("\u{201C}\(verse.translation)\u{201D}")
-                .font(.system(size: 12.5))
-                .lineSpacing(2)
-                .foregroundColor(themeManager.secondaryText)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .padding(14)
-        .background(
-            RoundedRectangle(cornerRadius: 14)
-                .fill(versePreviewBackground)
-        )
-    }
-
-    @ViewBuilder
-    private func progressAndResume(info: LastReadInfo) -> some View {
-        HStack(alignment: .center, spacing: 10) {
-            VStack(alignment: .leading, spacing: 4) {
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule()
-                            .fill(progressTrackColor)
-                            .frame(height: 6)
-                        Capsule()
-                            .fill(themeManager.accentColor)
-                            .frame(width: max(0, geo.size.width * info.progress), height: 6)
-                    }
-                }
-                .frame(height: 6)
-
-                Text(progressLine(for: info))
-                    .font(.system(size: 11, weight: .semibold))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-
-            Button(action: onResume) {
-                HStack(spacing: 6) {
-                    Image(systemName: "play.fill")
-                        .font(.system(size: 12))
-                    Text(TodayStrings.resume)
-                        .font(.system(size: 13, weight: .bold))
-                }
-                .foregroundColor(.white)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 10)
-                .background(Capsule().fill(resumeBackground))
-            }
-            .buttonStyle(PlainButtonStyle())
-        }
-    }
-
-    @ViewBuilder
-    private var emptyCard: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(TodayStrings.startJourney)
-                .font(.system(size: 16, weight: .bold))
-                .foregroundColor(themeManager.primaryText)
-            Text(TodayStrings.openFatiha)
-                .font(.system(size: 13))
-                .foregroundColor(themeManager.secondaryText)
-
-            Button(action: onBegin) {
-                Text(TodayStrings.begin)
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 12)
-                    .background(Capsule().fill(resumeBackground))
-            }
-            .buttonStyle(PlainButtonStyle())
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    // MARK: - Theme tokens
-
-    private var cardBackground: some View {
-        Group {
-            RoundedRectangle(cornerRadius: 22)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 22).stroke(themeManager.strokeColor, lineWidth: 1))
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
-                    radius: 9, x: 0, y: 6
-                )
-        }
-    }
-
-    private var avatarBackground: Color {
-        themeManager.accentColorSoft
-    }
-
-    private var versePreviewBackground: Color {
-        themeManager.secondaryBackground
-    }
-
-    private var progressTrackColor: Color {
-        themeManager.tertiaryBackground
-    }
-
-    private var resumeBackground: Color {
-        themeManager.selectedTheme == .nightSanctuary ? themeManager.accentColor : themeManager.primaryText
-    }
-}
-
-private struct DuaOfTheDayCard: View {
-    let dua: DailyDua
-    let themeManager: ThemeManager
-
-    var body: some View {
-        PressableNavLink {
-            DuaDetailView(dua: dua)
-        } label: {
-            HStack(spacing: 12) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(iconBackground)
-                    Image(systemName: "quote.bubble.fill")
-                        .font(.system(size: 14))
-                        .foregroundColor(themeManager.accentColor)
-                }
-                .frame(width: 28, height: 28)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(TodayStrings.duaOfTheDay)
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundColor(themeManager.secondaryText)
-                    Text(dua.situationEn)
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                    Text(dua.category.capitalized)
-                        .font(.system(size: 11))
-                        .foregroundColor(themeManager.tertiaryText)
-                }
-
-                Spacer()
-
-                Image(systemName: "arrow.right")
-                    .font(.system(size: 14))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-            .padding(14)
-            .background(cardBackground)
-        }
-    }
-
-    private var iconBackground: Color {
-        themeManager.accentColorSoft
-    }
-
-    private var cardBackground: some View {
-        Group {
-            RoundedRectangle(cornerRadius: 18)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 18).stroke(themeManager.strokeColor, lineWidth: 1))
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.05),
-                    radius: 7, x: 0, y: 4
-                )
-        }
-    }
-}
-
-// MARK: - Midnight Emerald — Today
+// MARK: - Today layout
 
 private struct EmeraldTodayView: View {
     @ObservedObject private var themeManager = ThemeManager.shared
@@ -938,7 +397,10 @@ private struct EmDailyReminderHero: View {
                 RoundedRectangle(cornerRadius: 22, style: .continuous)
                     .strokeBorder(themeManager.accentColor.opacity(0.14), lineWidth: 1)
             )
-            .shadow(color: .black.opacity(0.42), radius: 20, x: 0, y: 10)
+            // The art stays dark in both themes, so the text and edge drawn on it
+            // keep their Midnight colors.
+            .environment(\.colorScheme, .dark)
+            .emShadow(.custom(opacity: 0.42, radius: 20, y: 10))
         }
         .buttonStyle(EmPressStyle())
         .contextMenu {
@@ -1065,7 +527,7 @@ private struct EmDuaOfTheDayCard: View {
     }
 }
 
-#Preview("TodayView — Warm") {
+#Preview("TodayView - Sage Dawn") {
     TodayView(selectedTab: .constant(1))
         .preferredColorScheme(.light)
 }

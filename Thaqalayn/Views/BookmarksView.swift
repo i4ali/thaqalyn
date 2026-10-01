@@ -17,27 +17,20 @@ struct BookmarksView: View {
     @State private var selectedSortOrder: BookmarkSortOrder = .dateDescending
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald {
-                emeraldBody
-            } else {
-                legacyBody
+        content
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
+            .preferredColorScheme(themeManager.colorScheme)
+            .searchable(text: $searchText, prompt: "Search bookmarks...")
+            .sheet(isPresented: $showingBookmarkDetail) {
+                if let bookmark = selectedBookmark {
+                    BookmarkDetailView(bookmark: bookmark)
+                }
             }
-        }
-        .navigationTitle(themeManager.isMidnightEmerald ? "" : "Bookmarks")
-        .navigationBarTitleDisplayMode(themeManager.isMidnightEmerald ? .inline : .large)
-        .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
-        .searchable(text: $searchText, prompt: "Search bookmarks...")
-        .sheet(isPresented: $showingBookmarkDetail) {
-            if let bookmark = selectedBookmark {
-                BookmarkDetailView(bookmark: bookmark)
-            }
-        }
-        .hideTabBarInEmerald()
+            .hideTabBar()
     }
 
-    private var emeraldBody: some View {
+    private var content: some View {
         ZStack {
             EmeraldBackground()
 
@@ -63,43 +56,6 @@ struct BookmarksView: View {
         }
     }
 
-    private var legacyBody: some View {
-        ZStack {
-            // Background gradient
-            LinearGradient(
-                colors: [
-                    themeManager.primaryBackground,
-                    themeManager.secondaryBackground,
-                    themeManager.tertiaryBackground
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                // Header
-                ModernBookmarksHeader(
-                    bookmarkCount: filteredBookmarks.count,
-                    onSortChange: { selectedSortOrder = $0 }
-                )
-
-                // Content
-                if bookmarkManager.isLoading {
-                    BookmarksLoadingView()
-                } else if filteredBookmarks.isEmpty {
-                    EmptyBookmarksView()
-                } else {
-                    BookmarksListView(
-                        bookmarks: filteredBookmarks,
-                        dataManager: dataManager
-                    )
-                }
-
-            }
-        }
-    }
-    
     @MainActor
     private var filteredBookmarks: [Bookmark] {
         let sorted = bookmarkManager.getSortedBookmarks()
@@ -128,43 +84,37 @@ struct ModernBookmarksHeader: View {
     @StateObject private var bookmarkManager = BookmarkManager.shared
     
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald {
-                emeraldBody
-            } else {
-                legacyBody
-            }
-        }
-        .confirmationDialog("Bookmark Options", isPresented: $showingSortOptions) {
-            Section("Sort Options") {
-                ForEach(BookmarkSortOrder.allCases, id: \.self) { sortOrder in
-                    Button(sortOrder.title) {
-                        onSortChange(sortOrder)
+        content
+            .confirmationDialog("Bookmark Options", isPresented: $showingSortOptions) {
+                Section("Sort Options") {
+                    ForEach(BookmarkSortOrder.allCases, id: \.self) { sortOrder in
+                        Button(sortOrder.title) {
+                            onSortChange(sortOrder)
+                        }
                     }
                 }
-            }
             
-            if bookmarkCount > 0 {
-                Section {
-                    Button("Clear All Bookmarks", role: .destructive) {
-                        showingClearAllConfirmation = true
+                if bookmarkCount > 0 {
+                    Section {
+                        Button("Clear All Bookmarks", role: .destructive) {
+                            showingClearAllConfirmation = true
+                        }
                     }
                 }
             }
-        }
-        .alert("Clear All Bookmarks?", isPresented: $showingClearAllConfirmation) {
-            Button("Cancel", role: .cancel) { }
-            Button("Clear All", role: .destructive) {
-                bookmarkManager.bookmarks.forEach { bookmark in
-                    bookmarkManager.removeBookmark(id: bookmark.id)
+            .alert("Clear All Bookmarks?", isPresented: $showingClearAllConfirmation) {
+                Button("Cancel", role: .cancel) { }
+                Button("Clear All", role: .destructive) {
+                    bookmarkManager.bookmarks.forEach { bookmark in
+                        bookmarkManager.removeBookmark(id: bookmark.id)
+                    }
                 }
+            } message: {
+                Text("This will permanently delete all \(bookmarkCount) bookmarks. This action cannot be undone.")
             }
-        } message: {
-            Text("This will permanently delete all \(bookmarkCount) bookmarks. This action cannot be undone.")
-        }
     }
 
-    private var emeraldBody: some View {
+    private var content: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 7) {
                 Text("SAVED VERSES & PASSAGES")
@@ -191,40 +141,6 @@ struct ModernBookmarksHeader: View {
         .padding(.horizontal, 20)
         .padding(.top, 14)
         .padding(.bottom, 4)
-    }
-
-    private var legacyBody: some View {
-        VStack(spacing: 16) {
-            // Title and sort button
-            HStack {
-                VStack(spacing: 4) {
-                    if bookmarkCount > 0 {
-                        Text("\(bookmarkCount) saved")
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(themeManager.secondaryText)
-                    }
-                }
-
-                Spacer()
-
-                Button(action: { showingSortOptions = true }) {
-                    Image(systemName: "arrow.up.arrow.down")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .frame(width: 36, height: 36)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(themeManager.glassEffect)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        )
-                }
-            }
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 20)
     }
 }
 
@@ -306,93 +222,16 @@ struct BookmarksListView: View {
 /// A single bookmark's visual card. Pure presentation - no gestures and no
 /// selection/press state. Tap-to-open is supplied by the enclosing
 /// `PressableNavLink` and delete by the `List`'s `.swipeActions`, so this view
-/// only has to draw. Switches between the Midnight Emerald and legacy looks.
+/// only has to draw.
 struct BookmarkCardView: View {
     let bookmark: Bookmark
-    @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { EmBookmarkCardBody(bookmark: bookmark) } else { legacyBody }
-    }
-
-    private var legacyBody: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(bookmark.surahName)
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-
-                    Text(bookmark.positionLabel)
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                }
-
-                Spacer()
-
-                if bookmark.isPassage {
-                    Text("ع")
-                        .font(EmType.arabic(16))
-                        .foregroundColor(themeManager.accentColor)
-                } else {
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 14))
-                        .foregroundColor(.pink)
-                }
-            }
-
-            // Verse translation preview
-            Text(bookmark.displayTranslation)
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.secondaryText)
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-
-            // Tags if any
-            if !bookmark.tags.isEmpty {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 8) {
-                        ForEach(bookmark.tags, id: \.self) { tag in
-                            Text(tag)
-                                .font(.system(size: 10, weight: .medium))
-                                .foregroundColor(themeManager.primaryText)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 4)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(themeManager.accentGradient)
-                                )
-                        }
-                    }
-                    .padding(.horizontal, 1)
-                }
-            }
-
-            // Date
-            HStack {
-                Spacer()
-                Text(bookmark.createdAt, style: .date)
-                    .font(.system(size: 10, weight: .medium))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-        }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                    radius: 12, x: 0, y: 4
-                )
-        )
+        EmBookmarkCardBody(bookmark: bookmark)
     }
 }
 
-/// Midnight Emerald visual for a bookmark row. A verse renders its reference
+/// The visual for a bookmark row. A verse renders its reference
 /// (serif/gold), surah name, a "saved" heart badge, the Arabic (Amiri) and the
 /// translation (serif). A passage renders a PASSAGE eyebrow, its verse range,
 /// the passage glyph badge and its title in place of the verse text, since the
@@ -485,7 +324,7 @@ struct EmBookmarkCardBody: View {
     }
 }
 
-/// The 34pt gradient badge on a Midnight Emerald bookmark card: a heart for a
+/// The 34pt gradient badge on a bookmark card: a heart for a
 /// verse, the passage glyph for a whole passage. Shared with the Today spotlight.
 struct BookmarkKindBadge: View {
     let isPassage: Bool
@@ -514,10 +353,6 @@ struct EmptyBookmarksView: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         VStack(spacing: 22) {
             Spacer()
 
@@ -539,30 +374,6 @@ struct EmptyBookmarksView: View {
             EmDivider()
                 .padding(.horizontal, 60)
                 .padding(.top, 4)
-
-            Spacer()
-        }
-    }
-
-    private var legacyBody: some View {
-        VStack(spacing: 24) {
-            Spacer()
-
-            Image(systemName: "heart")
-                .font(.system(size: 60, weight: .thin))
-                .foregroundColor(themeManager.secondaryText)
-
-            VStack(spacing: 8) {
-                Text("No Bookmarks Yet")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-
-                Text("Tap the heart on a verse or a passage to save it for later reading")
-                    .font(.system(size: 14))
-                    .foregroundColor(themeManager.secondaryText)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 40)
-            }
 
             Spacer()
         }

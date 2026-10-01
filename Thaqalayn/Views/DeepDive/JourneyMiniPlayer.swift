@@ -35,9 +35,7 @@ struct JourneyMiniPlayer: View {
 
     /// Glass tint layered over `.ultraThinMaterial` - mirrors EmeraldTabBar so the bar
     /// reads as its sibling: deep emerald-black in Midnight Emerald, frosted white in Light.
-    private var cardTint: Color {
-        tm.isMidnightEmerald ? Color(hex: "0A1512").opacity(0.72) : Color.white.opacity(0.6)
-    }
+    private var cardTint: Color { tm.tabBarTint }
 
     /// Fraction of the WHOLE journey elapsed, clamped - drives the accent hairline. Falls
     /// back to the current clip until the journey durations resolve (then cached).
@@ -91,8 +89,7 @@ struct JourneyMiniPlayer: View {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .stroke(tm.strokeColor, lineWidth: 1)
         )
-        .shadow(color: tm.isMidnightEmerald ? Color.black.opacity(0.5) : Color.black.opacity(0.16),
-                radius: tm.isMidnightEmerald ? 30 : 20, x: 0, y: 12)
+        .emShadow(.custom(opacity: 0.5, radius: 30, y: 12))
         .padding(.horizontal, 18)   // match the EmeraldTabBar's horizontal inset
     }
 
@@ -166,7 +163,7 @@ struct JourneyMiniPlayer: View {
 
 #if DEBUG
 #Preview {
-    let _ = (ThemeManager.shared.selectedTheme = .nightSanctuary)
+    let _ = (ThemeManager.shared.selectedTheme = .midnightEmerald)
     let _ = (JourneyListenPresenter.shared.dive = .yaqin)
     return ZStack {
         EmeraldBackground()

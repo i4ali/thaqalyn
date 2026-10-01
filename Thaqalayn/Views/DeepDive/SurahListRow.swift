@@ -8,7 +8,7 @@
 //  reveals this surah's Inside-the-Surah card (scroll + highlight) so the reader
 //  can choose Watch or Listen (PREMIUM chip on the toggle - never a lock). Surahs
 //  without a built experience show the same toggle with the Journey tab greyed
-//  out and marked SOON. Theme-adaptive (emerald + standard).
+//  out and marked SOON. Theme-adaptive (Sage Dawn + Midnight Emerald).
 //
 
 import SwiftUI

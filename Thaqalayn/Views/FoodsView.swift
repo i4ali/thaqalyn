@@ -43,7 +43,7 @@ struct FoodsView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -58,23 +58,20 @@ struct FoodsView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 
     private var header: some View {
         HStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: themeManager.isMidnightEmerald ? 7 : 4) {
-                if themeManager.isMidnightEmerald {
-                    Text("NOURISHMENT")
-                        .font(.system(size: 11, weight: .bold)).tracking(3)
-                        .foregroundColor(themeManager.accentColor)
-                }
+            VStack(alignment: .leading, spacing: 7) {
+                Text("NOURISHMENT")
+                    .font(.system(size: 11, weight: .bold)).tracking(3)
+                    .foregroundColor(themeManager.accentColor)
                 Text("Foods of the Quran")
-                    .font(themeManager.isMidnightEmerald ? EmType.serif(34, .semiBold) : .system(size: 34, weight: .bold, design: .rounded))
+                    .font(EmType.serif(34, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .fixedSize(horizontal: false, vertical: true)
                 Text("Nourishment from Qur'an & Ahlul Bayt")
-                    .font(.system(size: themeManager.isMidnightEmerald ? 13.5 : 16, weight: .medium))
+                    .font(.system(size: 13.5, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
             }
             Spacer()
@@ -82,7 +79,7 @@ struct FoodsView: View {
         .padding(.horizontal, 20)
         .padding(.top, 20)
         .padding(.bottom, 18)
-        .emCoverHeaderBandIfEmerald("FoodsCover", height: 280)
+        .emCoverHeaderBand("FoodsCover", height: 280)
     }
 
     private var loadingSection: some View {
@@ -101,10 +98,6 @@ struct FoodCard: View {
     let food: Food
     @StateObject private var themeManager = ThemeManager.shared
 
-    var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
     // Emoji-in-glass-chip placeholder (Phase 2 swaps to Image(food.illustrationAsset)).
     private var chip: some View {
         ZStack {
@@ -116,7 +109,7 @@ struct FoodCard: View {
         }
     }
 
-    private var emeraldBody: some View {
+    var body: some View {
         EmCard {
             HStack(spacing: 14) {
                 chip
@@ -136,31 +129,6 @@ struct FoodCard: View {
             }
             .padding(14)
         }
-        .contentShape(Rectangle())
-    }
-
-    private var legacyBody: some View {
-        HStack(spacing: 16) {
-            chip
-            VStack(alignment: .leading, spacing: 4) {
-                Text(food.nameEn)
-                    .font(.system(size: 17, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                Text("Quran \(food.surahNumber):\(food.verseNumber)")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-            }
-            Spacer()
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        }
-        .padding(18)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(themeManager.strokeColor, lineWidth: 1))
-        )
         .contentShape(Rectangle())
     }
 }

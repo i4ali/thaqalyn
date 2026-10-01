@@ -28,200 +28,12 @@ struct AhlulbaytEntryDetailView: View {
             // Adaptive background
             AdaptiveModernBackground()
 
-            if themeManager.isMidnightEmerald {
-                EmCoverBand(assetName: "AhlulBaytCover")
-                    .frame(height: 300)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            }
+            EmCoverBand(assetName: "AhlulBaytCover")
+                .frame(height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
             ScrollView {
-                if themeManager.isMidnightEmerald {
-                    emeraldSections
-                } else {
-                VStack(spacing: 24) {
-                    // Entry header
-                    VStack(spacing: 16) {
-                        // Category badge
-                        HStack {
-                            HStack(spacing: 8) {
-                                Image(systemName: entry.categoryIcon)
-                                    .font(.system(size: 14, weight: .semibold))
-
-                                Text(entry.category.displayName)
-                                    .font(.system(size: 14, weight: .semibold))
-                            }
-                            .foregroundColor(themeManager.accentColor)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 8)
-                            .background {
-                                Capsule()
-                                    .fill(themeManager.accentColor.opacity(0.15))
-                            }
-
-                            Spacer()
-                        }
-
-                        // Entry title
-                        VStack(alignment: .leading, spacing: 12) {
-                            HStack(alignment: .top, spacing: 8) {
-                                Image(systemName: "star.fill")
-                                    .font(.system(size: 20))
-                                    .foregroundColor(themeManager.accentColor)
-
-                                Text(screenEyebrow.uppercased())
-                                    .font(.system(size: 14, weight: .bold))
-                                    .foregroundColor(themeManager.secondaryText)
-                                    .tracking(1.2)
-                            }
-
-                            Text(entry.titleEn)
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
-                                .foregroundColor(themeManager.primaryText)
-                                .lineSpacing(4)
-                        }
-                    }
-                    .padding(24)
-                    .background {
-                        RoundedRectangle(cornerRadius: 24)
-                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 24)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                            .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-
-                    // Ahl al-Bayt Members
-                    if !entry.ahlulbaytMembersEn.isEmpty {
-                        VStack(alignment: .leading, spacing: 16) {
-                            HStack(alignment: .top, spacing: 8) {
-                                Image(systemName: "person.3.fill")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(themeManager.accentColor)
-
-                                Text("AHL AL-BAYT MEMBERS")
-                                    .font(.system(size: 14, weight: .bold))
-                                    .foregroundColor(themeManager.secondaryText)
-                                    .tracking(1.2)
-                            }
-
-                            FlowLayout(spacing: 8) {
-                                ForEach(entry.ahlulbaytMembersEn, id: \.self) { member in
-                                    Text(member)
-                                        .font(.system(size: 14, weight: .semibold))
-                                        .foregroundColor(themeManager.accentColor)
-                                        .padding(.horizontal, 14)
-                                        .padding(.vertical, 8)
-                                        .background {
-                                            Capsule()
-                                                .fill(themeManager.accentColor.opacity(0.12))
-                                        }
-                                }
-                            }
-                        }
-                        .padding(20)
-                        .background {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        }
-                        .padding(.horizontal, 20)
-                    }
-
-                    // Verses header
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: "book.pages.fill")
-                                .font(.system(size: 16))
-                                .foregroundColor(themeManager.accentColor)
-
-                            Text("QURANIC REFERENCE")
-                                .font(.system(size: 14, weight: .bold))
-                                .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
-                        }
-
-                        Text("This entry references \(entry.verseCount) verse\(entry.verseCount == 1 ? "" : "s"):")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 20)
-
-                    // Verses with context
-                    ForEach(Array(entry.verses.enumerated()), id: \.element.verseNumber) { index, ahlulbaytVerse in
-                        AhlulbaytVerseCard(
-                            ahlulbaytVerse: ahlulbaytVerse,
-                            index: index + 1,
-                            totalVerses: entry.verseCount,
-                            onNavigate: {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                                    selectedVerseForNav = (ahlulbaytVerse.surahNumber, ahlulbaytVerse.verseNumber)
-                                    navigateToVerse = true
-                                }
-                            }
-                        )
-                    }
-
-                    // Revelation Context
-                    VStack(alignment: .leading, spacing: 16) {
-                        HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: "clock.fill")
-                                .font(.system(size: 16))
-                                .foregroundColor(themeManager.accentColor)
-
-                            Text("REVELATION CONTEXT")
-                                .font(.system(size: 14, weight: .bold))
-                                .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
-                        }
-
-                        Text(entry.revelationContextEn)
-                            .font(.system(size: 16 * readingSettings.scale, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(6 * readingSettings.scale)
-                            .multilineTextAlignment(.leading)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    .padding(20)
-                    .background {
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    }
-                    .padding(.horizontal, 20)
-
-                    // Related entries
-                    if !relatedEntries.isEmpty {
-                        VStack(alignment: .leading, spacing: 16) {
-                            HStack(alignment: .top, spacing: 8) {
-                                Image(systemName: "link.circle.fill")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(themeManager.accentColor)
-
-                                Text("RELATED ENTRIES")
-                                    .font(.system(size: 14, weight: .bold))
-                                    .foregroundColor(themeManager.secondaryText)
-                                    .tracking(1.2)
-                            }
-
-                            ForEach(relatedEntries) { relatedEntry in
-                                RelatedEntryCard(entry: relatedEntry)
-                            }
-                        }
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 20)
-                    }
-                }
-                }
+                emeraldSections
             }
 
             // Hidden NavigationLink for verse navigation
@@ -238,7 +50,7 @@ struct AhlulbaytEntryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {
@@ -251,7 +63,6 @@ struct AhlulbaytEntryDetailView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 
     // MARK: - Emerald
@@ -378,10 +189,6 @@ struct AhlulbaytVerseCard: View {
     }
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmCard {
             VStack(alignment: .leading, spacing: 12) {
                 HStack(spacing: 10) {
@@ -454,141 +261,6 @@ struct AhlulbaytVerseCard: View {
         }
         .padding(.horizontal, 20)
     }
-
-    private var legacyBody: some View {
-        VStack(spacing: 0) {
-            // Verse header
-            HStack(spacing: 12) {
-                // Verse number badge
-                ZStack {
-                    Circle()
-                        .fill(themeManager.accentGradient)
-                        .frame(width: 40, height: 40)
-
-                    Text("\(index)")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(.white)
-                }
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Verse \(index) of \(totalVerses)")
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(themeManager.secondaryText)
-
-                    Text("\(surahName) (\(ahlulbaytVerse.surahNumber):\(ahlulbaytVerse.verseNumber))")
-                        .font(.system(size: 15, weight: .bold))
-                        .foregroundColor(themeManager.primaryText)
-                }
-
-                Spacer()
-
-                VerseRecitationButton(surahNumber: ahlulbaytVerse.surahNumber, verseNumber: ahlulbaytVerse.verseNumber, size: 32)
-
-                if ahlulbaytVerse.isPrimary {
-                    Text("PRIMARY")
-                        .font(.system(size: 11, weight: .bold))
-                        .foregroundColor(themeManager.accentColor)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background {
-                            Capsule()
-                                .fill(themeManager.accentColor.opacity(0.15))
-                        }
-                }
-            }
-            .padding(20)
-
-            Divider()
-                .background(themeManager.strokeColor)
-
-            // Verse text
-            if let verse = verseData {
-                VStack(alignment: .leading, spacing: 16) {
-                    // Arabic text
-                    Text(verse.arabic)
-                        .font(.custom("AmiriQuran-Regular", size: 24 * readingSettings.scale))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8 * readingSettings.scale)
-                        .multilineTextAlignment(.trailing)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-
-                    // Translation
-                    Text(verse.translation)
-                        .font(.system(size: 16 * readingSettings.scale, weight: .medium))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4 * readingSettings.scale)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(20)
-
-                Divider()
-                    .background(themeManager.strokeColor)
-            }
-
-            // Verse context
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 8) {
-                    Image(systemName: "text.bubble.fill")
-                        .font(.system(size: 14))
-                        .foregroundColor(themeManager.accentColor)
-
-                    Text("Verse Context")
-                        .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(themeManager.secondaryText)
-                }
-
-                Text(ahlulbaytVerse.contextEn)
-                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(4 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(20)
-            .background {
-                Rectangle()
-                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
-            }
-
-            Divider()
-                .background(themeManager.strokeColor)
-
-            // Action buttons
-            HStack(spacing: 16) {
-                Button(action: onNavigate) {
-                    HStack(spacing: 6) {
-                        Image(systemName: "book.fill")
-                            .font(.system(size: 14))
-
-                        Text("Read Full Tafsir")
-                            .font(.system(size: 14, weight: .semibold))
-                    }
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 12)
-                    .background {
-                        Capsule()
-                            .fill(themeManager.accentGradient)
-                            .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                    }
-                }
-
-                Spacer()
-            }
-            .padding(20)
-        }
-        .background {
-            RoundedRectangle(cornerRadius: 24)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
-        }
-        .padding(.horizontal, 20)
-    }
 }
 
 struct RelatedEntryCard: View {
@@ -597,10 +269,6 @@ struct RelatedEntryCard: View {
     @State private var navigateToEntry = false
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         NavigationLink(destination: AhlulbaytEntryDetailView(entry: entry), isActive: $navigateToEntry) {
             EmCard {
                 HStack(spacing: 12) {
@@ -626,49 +294,6 @@ struct RelatedEntryCard: View {
                 .padding(14)
             }
             .contentShape(Rectangle())
-        }
-        .buttonStyle(EmPressStyle())
-    }
-
-    private var legacyBody: some View {
-        NavigationLink(destination: AhlulbaytEntryDetailView(entry: entry), isActive: $navigateToEntry) {
-            HStack(spacing: 12) {
-                Image(systemName: entry.categoryIcon)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.accentColor)
-                    .frame(width: 32, height: 32)
-                    .background {
-                        Circle()
-                            .fill(themeManager.accentColor.opacity(0.15))
-                    }
-
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(entry.category.displayName)
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundColor(themeManager.accentColor)
-
-                    Text(entry.titleEn)
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                }
-
-                Spacer()
-
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-            .padding(16)
-            .background {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .shadow(color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04), radius: 8, x: 0, y: 2)
-            }
         }
         .buttonStyle(EmPressStyle())
     }

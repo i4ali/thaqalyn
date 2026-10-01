@@ -41,121 +41,7 @@ struct PropheticParallelsView: View {
                 // Adaptive background with floating elements
                 AdaptiveModernBackground()
 
-                if themeManager.isMidnightEmerald {
-                    emeraldContent
-                } else {
-                VStack(spacing: 0) {
-                    // Modern header
-                    VStack(spacing: 12) {
-                        HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Prophetic Parallels")
-                                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                                    .foregroundColor(themeManager.primaryText)
-
-                                Text("You aren't alone in your struggles")
-                                    .font(.system(size: 16, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
-                            }
-
-                            Spacer()
-                        }
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-                    .padding(.bottom, 12)
-
-                    // Search bar
-                    HStack(spacing: 12) {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(themeManager.secondaryText)
-                            .font(.system(size: 16, weight: .medium))
-
-                        TextField("Search situations or prophets...", text: $searchText)
-                            .font(.system(size: 16))
-                            .foregroundColor(themeManager.primaryText)
-                    }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 12)
-                    .background {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.95, green: 0.95, blue: 0.95))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 12)
-
-                    // Category filter
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 8) {
-                            ParallelCategoryChip(
-                                title: "All",
-                                icon: "square.grid.2x2.fill",
-                                isSelected: selectedCategory == nil,
-                                action: { selectedCategory = nil }
-                            )
-
-                            ForEach(ParallelCategory.allCases, id: \.self) { category in
-                                ParallelCategoryChip(
-                                    title: category.displayName,
-                                    icon: category.icon,
-                                    isSelected: selectedCategory == category,
-                                    action: { selectedCategory = category }
-                                )
-                            }
-                        }
-                        .padding(.horizontal, 20)
-                    }
-                    .padding(.bottom, 12)
-
-                    // Parallels list
-                    if parallelsManager.isLoading {
-                        ParallelLoadingSection(message: "Loading parallels...")
-                    } else if let error = parallelsManager.errorMessage {
-                        ParallelErrorSection(message: error)
-                    } else if filteredParallels.isEmpty {
-                        ParallelEmptyStateSection()
-                    } else {
-                        ScrollView {
-                            LazyVStack(spacing: 16, pinnedViews: [.sectionHeaders]) {
-                                ForEach(groupedParallels, id: \.0) { category, parallels in
-                                    Section {
-                                        ForEach(parallels) { parallel in
-                                            PropheticParallelCard(parallel: parallel)
-                                                .pressable {
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                                                        selectedParallel = parallel
-                                                        navigateToDetail = true
-                                                    }
-                                                }
-                                        }
-                                    } header: {
-                                        HStack {
-                                            Image(systemName: category.icon)
-                                                .font(.system(size: 16, weight: .semibold))
-                                                .foregroundColor(themeManager.accentColor)
-
-                                            Text(category.displayName)
-                                                .font(.system(size: 18, weight: .bold))
-                                                .foregroundColor(themeManager.primaryText)
-                                                .textCase(nil)
-
-                                            Spacer()
-                                        }
-                                        .padding(.horizontal, 20)
-                                        .padding(.vertical, 12)
-                                        .background(themeManager.primaryBackground)
-                                    }
-                                }
-                            }
-                            .padding(.vertical, 12)
-                        }
-                    }
-                }
-                }
+                emeraldContent
 
                 // Hidden NavigationLink for parallel detail navigation
                 if let parallel = selectedParallel {
@@ -170,7 +56,7 @@ struct PropheticParallelsView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -185,7 +71,6 @@ struct PropheticParallelsView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 
     // MARK: - Emerald
@@ -310,10 +195,6 @@ struct PropheticParallelCard: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: parallel.icon)
@@ -352,79 +233,6 @@ struct PropheticParallelCard: View {
         }
         .contentShape(Rectangle())
     }
-
-    private var legacyBody: some View {
-        HStack(alignment: .top, spacing: 16) {
-            // Situation icon
-            ZStack {
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 50, height: 50)
-                    .shadow(
-                        color: themeManager.accentColor.opacity(0.3),
-                        radius: 8
-                    )
-
-                Image(systemName: parallel.icon)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
-            }
-
-            // Parallel content
-            VStack(alignment: .leading, spacing: 6) {
-                // Prophet name badge
-                Text(parallel.prophetEn)
-                    .font(.system(size: 12, weight: .bold))
-                    .foregroundColor(themeManager.accentColor)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 4)
-                    .background(
-                        Capsule()
-                            .fill(themeManager.accentColor.opacity(0.15))
-                    )
-
-                // Situation text
-                Text(parallel.situationEn)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                // Connection preview
-                Text(parallel.connectionEn)
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-                    .lineLimit(2)
-
-                // Verse count and category
-                Text("\(parallel.verses.count) verse\(parallel.verses.count == 1 ? "" : "s") • \(parallel.category.displayName)")
-                    .font(.system(size: 13, weight: .medium))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-
-            Spacer()
-
-            // Chevron or lock icon
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                    radius: 12, x: 0, y: 4
-                )
-        }
-        .contentShape(Rectangle())
-        .padding(.horizontal, 20)
-    }
 }
 
 // MARK: - Category Chip
@@ -437,10 +245,6 @@ struct ParallelCategoryChip: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         Button(action: action) {
             HStack(spacing: 6) {
                 Image(systemName: icon)
@@ -464,36 +268,6 @@ struct ParallelCategoryChip: View {
             }
         }
         .buttonStyle(EmPressStyle())
-    }
-
-    private var legacyBody: some View {
-        Button(action: action) {
-            HStack(spacing: 6) {
-                Image(systemName: icon)
-                    .font(.system(size: 14, weight: .semibold))
-
-                Text(title)
-                    .font(.system(size: 14, weight: .semibold))
-                    .lineLimit(1)
-            }
-            .foregroundColor(isSelected ? .white : themeManager.primaryText)
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .background {
-                if isSelected {
-                    Capsule()
-                        .fill(themeManager.accentGradient)
-                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                } else {
-                    Capsule()
-                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.95, green: 0.95, blue: 0.95))
-                        .overlay(
-                            Capsule()
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
-            }
-        }
     }
 }
 

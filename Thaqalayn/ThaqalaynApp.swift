@@ -19,8 +19,8 @@ struct ThaqalaynApp: App {
         // Set up notification delegate
         UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
 
-        // Apply native chrome (UITabBar / UINavigationBar) for current theme
-        ChromeAppearance.apply(for: ThemeManager.shared.selectedTheme)
+        // Style the native navigation bar (dynamic colors follow the theme)
+        ChromeAppearance.apply()
 
         #if DEBUG
         let mp3s = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: nil)?.count ?? -1

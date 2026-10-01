@@ -49,7 +49,7 @@ struct MiracleStoriesView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -64,23 +64,20 @@ struct MiracleStoriesView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 
     private var header: some View {
         HStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: themeManager.isMidnightEmerald ? 7 : 4) {
-                if themeManager.isMidnightEmerald {
-                    Text("FROM 14 MOJZAY")
-                        .font(.system(size: 11, weight: .bold)).tracking(3)
-                        .foregroundColor(themeManager.accentColor)
-                }
+            VStack(alignment: .leading, spacing: 7) {
+                Text("FROM 14 MOJZAY")
+                    .font(.system(size: 11, weight: .bold)).tracking(3)
+                    .foregroundColor(themeManager.accentColor)
                 Text("Miracle Stories")
-                    .font(themeManager.isMidnightEmerald ? EmType.serif(34, .semiBold) : .system(size: 34, weight: .bold, design: .rounded))
+                    .font(EmType.serif(34, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .fixedSize(horizontal: false, vertical: true)
                 Text("Beloved stories of the Ahl al-Bayt, in English and Urdu")
-                    .font(.system(size: themeManager.isMidnightEmerald ? 13.5 : 16, weight: .medium))
+                    .font(.system(size: 13.5, weight: .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -89,16 +86,14 @@ struct MiracleStoriesView: View {
         .padding(.horizontal, 20)
         .padding(.top, 20)
         .padding(.bottom, 18)
-        .emCoverHeaderBandIfEmerald("MiracleStoriesCover", height: 280)
+        .emCoverHeaderBand("MiracleStoriesCover", height: 280)
     }
 
     /// The framing note: what these stories are and where they come from.
     private var noteCard: some View {
         cardContainer {
             Text(manager.note)
-                .font(themeManager.isMidnightEmerald
-                      ? EmType.serifItalic(16 * readingSettings.scale)
-                      : .system(size: 15 * readingSettings.scale, weight: .regular))
+                .font(EmType.serifItalic(16 * readingSettings.scale))
                 .foregroundColor(themeManager.secondaryText)
                 .lineSpacing(4 * readingSettings.scale)
                 .fixedSize(horizontal: false, vertical: true)
@@ -106,31 +101,15 @@ struct MiracleStoriesView: View {
         }
     }
 
-    // Themed card container - EmCard glass for emerald, rounded glass/white for legacy.
-    @ViewBuilder
+    // Card container - EmCard glass.
     private func cardContainer<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
-        if themeManager.isMidnightEmerald {
-            EmCard { content().padding(16) }
-        } else {
-            content()
-                .padding(16)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(themeManager.strokeColor, lineWidth: 1))
-                )
-        }
+        EmCard { content().padding(16) }
     }
 }
 
 struct MiracleStoryCard: View {
     let story: MiracleStory
     @StateObject private var themeManager = ThemeManager.shared
-
-    var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
 
     /// The book's own number for the miracle, in a glass chip.
     private var numberChip: some View {
@@ -142,7 +121,7 @@ struct MiracleStoryCard: View {
             .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
     }
 
-    private var emeraldBody: some View {
+    var body: some View {
         EmCard {
             HStack(spacing: 14) {
                 numberChip
@@ -165,35 +144,6 @@ struct MiracleStoryCard: View {
             }
             .padding(14)
         }
-        .contentShape(Rectangle())
-    }
-
-    private var legacyBody: some View {
-        HStack(spacing: 16) {
-            numberChip
-            VStack(alignment: .leading, spacing: 4) {
-                Text(story.title.en)
-                    .font(.system(size: 17, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(story.subtitle.en)
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-            }
-            Spacer()
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        }
-        .padding(18)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(themeManager.strokeColor, lineWidth: 1))
-        )
         .contentShape(Rectangle())
     }
 }

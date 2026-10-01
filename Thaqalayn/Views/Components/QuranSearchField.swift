@@ -2,10 +2,10 @@
 //  QuranSearchField.swift
 //  Thaqalayn
 //
-//  The Quran-tab search box, shared by the Midnight Emerald and legacy layouts
-//  (and Find in this Surah). The whole box focuses the field, a clear button
-//  appears once there is text, and autocorrect/auto-capitalization stay off so
-//  transliterated words ("sabr", "yasin") are searched as typed.
+//  The Quran-tab search box (also used by Find in this Surah). The whole box
+//  focuses the field, a clear button appears once there is text, and
+//  autocorrect/auto-capitalization stay off so transliterated words ("sabr",
+//  "yasin") are searched as typed.
 //
 
 import SwiftUI
@@ -21,14 +21,8 @@ struct QuranSearchField: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            if themeManager.isMidnightEmerald {
-                PhosphorIcon(name: "ph-magnifying-glass", size: 16)
-                    .foregroundColor(themeManager.accentColor)
-            } else {
-                Image(systemName: "magnifyingglass")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.secondaryText)
-            }
+            PhosphorIcon(name: "ph-magnifying-glass", size: 16)
+                .foregroundColor(themeManager.accentColor)
 
             TextField("", text: $text,
                       prompt: Text(placeholder).foregroundColor(themeManager.tertiaryText))
@@ -60,7 +54,7 @@ struct QuranSearchField: View {
             }
         }
         .padding(.leading, 14).padding(.trailing, text.isEmpty ? 14 : 8)
-        .padding(.vertical, themeManager.isMidnightEmerald ? 13 : 15)
+        .padding(.vertical, 13)
         // Taps on the icon or the padding focus the field too; the TextField and
         // the clear button handle their own taps on top of this layer.
         .background(
@@ -71,21 +65,12 @@ struct QuranSearchField: View {
         .background(boxBackground)
     }
 
-    @ViewBuilder private var boxBackground: some View {
-        if themeManager.isMidnightEmerald {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .fill(themeManager.glassSurface)
-                .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .stroke(isFocused.wrappedValue ? themeManager.accentColor.opacity(0.55) : themeManager.strokeColor,
-                            lineWidth: 1))
-        } else {
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 16)
-                    .stroke(isFocused.wrappedValue ? themeManager.accentColor.opacity(0.5) : themeManager.strokeColor,
-                            lineWidth: 1))
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-        }
+    private var boxBackground: some View {
+        RoundedRectangle(cornerRadius: 14, style: .continuous)
+            .fill(themeManager.glassSurface)
+            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .stroke(isFocused.wrappedValue ? themeManager.accentColor.opacity(0.55) : themeManager.strokeColor,
+                        lineWidth: 1))
     }
 }
 

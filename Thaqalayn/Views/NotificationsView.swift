@@ -16,22 +16,15 @@ struct NotificationsView: View {
     @State private var navigateToVerse: (surah: Int, verse: Int)?
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald {
-                emeraldBody
-            } else {
-                legacyBody
-            }
-        }
-        .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
-        .onAppear {
-            loadNotifications()
-            Task {
-                await NotificationInboxStore.sweepDelivered(from: UNUserNotificationCenter.current())
+        emeraldBody
+            .preferredColorScheme(themeManager.colorScheme)
+            .onAppear {
                 loadNotifications()
+                Task {
+                    await NotificationInboxStore.sweepDelivered(from: UNUserNotificationCenter.current())
+                    loadNotifications()
+                }
             }
-        }
     }
 
     private func handleTap(_ notification: NotificationItem) {
@@ -64,76 +57,6 @@ struct NotificationsView: View {
                     object: nil,
                     userInfo: ["surah": surah, "verse": verse]
                 )
-            }
-        }
-    }
-
-    private var legacyBody: some View {
-        NavigationView {
-            ZStack {
-                // Background
-                LinearGradient(
-                    colors: [
-                        themeManager.primaryBackground,
-                        themeManager.secondaryBackground
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
-
-                if notifications.isEmpty {
-                    // Empty state
-                    VStack(spacing: 16) {
-                        Image(systemName: "bell.slash.fill")
-                            .font(.system(size: 64))
-                            .foregroundColor(themeManager.tertiaryText)
-
-                        Text("No Notifications")
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(themeManager.primaryText)
-
-                        Text("You're all caught up!\nNotifications will appear here when you receive them.")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.secondaryText)
-                            .multilineTextAlignment(.center)
-                            .lineLimit(nil)
-                    }
-                    .padding(.horizontal, 40)
-                } else {
-                    ScrollView {
-                        LazyVStack(spacing: 12) {
-                            ForEach(notifications) { notification in
-                                NotificationCard(notification: notification) {
-                                    handleTap(notification)
-                                }
-                            }
-                        }
-                        .padding(.horizontal, 20)
-                        .padding(.top, 20)
-                        .padding(.bottom, 40)
-                    }
-                }
-            }
-            .navigationTitle("Notifications")
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    if !notifications.isEmpty {
-                        Button("Clear All") {
-                            clearAllNotifications()
-                            saveNotifications()
-                        }
-                        .foregroundColor(.red)
-                    }
-                }
-
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") {
-                        dismiss()
-                    }
-                    .foregroundColor(themeManager.semanticBlue)
-                }
             }
         }
     }
@@ -189,7 +112,7 @@ struct NotificationsView: View {
                             saveNotifications()
                         }
                         .font(EmType.serif(17, .semiBold))
-                        .foregroundColor(Color(red: 0.86, green: 0.49, blue: 0.45))
+                        .foregroundColor(themeManager.destructive)
                     }
                 }
 
@@ -225,10 +148,6 @@ struct NotificationCard: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         Button(action: onTap) {
             EmCard(cornerRadius: 18) {
                 HStack(alignment: .top, spacing: 14) {
@@ -269,70 +188,6 @@ struct NotificationCard: View {
             }
         }
         .buttonStyle(EmPressStyle())
-    }
-
-    private var legacyBody: some View {
-        Button(action: onTap) {
-            HStack(alignment: .top, spacing: 16) {
-                // Icon
-                ZStack {
-                    Circle()
-                        .fill(notification.type.color(theme: themeManager).opacity(0.15))
-                        .frame(width: 48, height: 48)
-
-                    Image(systemName: notification.type.icon)
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(notification.type.color(theme: themeManager))
-                }
-
-                VStack(alignment: .leading, spacing: 6) {
-                    HStack {
-                        Text(notification.title)
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(themeManager.primaryText)
-
-                        Spacer()
-
-                        if !notification.isRead {
-                            Circle()
-                                .fill(themeManager.semanticBlue)
-                                .frame(width: 8, height: 8)
-                        }
-                    }
-
-                    Text(notification.message)
-                        .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                        .lineLimit(3)
-                        .multilineTextAlignment(.leading)
-
-                    Text(formatTimestamp(notification.timestamp))
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(themeManager.tertiaryText)
-                }
-
-                Spacer()
-            }
-            .padding(16)
-            .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.glassSurface)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(
-                                notification.isRead
-                                    ? themeManager.strokeColor
-                                    : themeManager.semanticBlue.opacity(0.3),
-                                lineWidth: notification.isRead ? 1 : 2
-                            )
-                    )
-                    .shadow(
-                        color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                        radius: 12, x: 0, y: 4
-                    )
-            )
-        }
-        .buttonStyle(PlainButtonStyle())
     }
 
     private func formatTimestamp(_ date: Date) -> String {

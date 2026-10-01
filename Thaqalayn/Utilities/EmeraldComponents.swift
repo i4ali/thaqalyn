@@ -231,8 +231,7 @@ struct EmCard<Content: View>: View {
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
                     .stroke(borderColor ?? tm.strokeColor, lineWidth: 1)
             )
-            .shadow(color: Color.black.opacity(glow ? 0.45 : 0.28),
-                    radius: glow ? 40 : 24, x: 0, y: glow ? 16 : 8)
+            .emShadow(glow ? .raised : .card)
     }
 }
 
@@ -308,7 +307,7 @@ struct EmIconChip: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .stroke(active ? Color.clear : tm.strokeColor, lineWidth: 1)
+                .stroke(active ? Color.clear : tm.accentChipStroke, lineWidth: 1)
         )
     }
 }
@@ -360,7 +359,7 @@ struct EmGoldCTA: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, small ? 12 : 16)
             .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(tm.accentGradient))
-            .shadow(color: tm.accentColor.opacity(0.28), radius: 28, x: 0, y: 10)
+            .emShadow(.goldCTA)
         }
         .buttonStyle(EmPressStyle())
     }
@@ -382,7 +381,7 @@ struct EmDivider: View {
                     .font(.system(size: 11, weight: .bold)).tracking(2.5)
                     .foregroundColor(tm.tertiaryText).fixedSize()
             } else {
-                Rectangle().fill(tm.accentColor).frame(width: 6, height: 6).rotationEffect(.degrees(45))
+                Rectangle().fill(tm.accentOrnament).frame(width: 6, height: 6).rotationEffect(.degrees(45))
             }
             Rectangle()
                 .fill(LinearGradient(colors: [tm.strokeColor, .clear], startPoint: .leading, endPoint: .trailing))
@@ -413,7 +412,7 @@ struct EmeraldBackground: View {
                 .ignoresSafeArea()
             }
             RadialGradient(
-                gradient: Gradient(colors: [tm.accentColor.opacity(0.14), .clear]),
+                gradient: Gradient(colors: [tm.topGlow, .clear]),
                 center: .top, startRadius: 0, endRadius: 230
             )
             .frame(height: 320)
@@ -437,6 +436,7 @@ enum EmDayDoneStyle { case gold, subdued }
 /// gold progress track beneath. `completionNote`, when non-nil, adds a subdued "verified" badge.
 struct EmJourneyHeader: View {
     @ObservedObject private var tm = ThemeManager.shared
+    @Environment(\.colorScheme) private var colorScheme
     var eyebrow: String
     var title: String
     var sfSymbol: String
@@ -449,12 +449,15 @@ struct EmJourneyHeader: View {
     /// initiative): bleeds behind the status bar and edge-fades out before the
     /// day list begins. Composed dark-sky-on-top, so the eyebrow/title stay
     /// legible with the emerald palette. Nil = the plain header, unchanged.
+    /// The art is dark-only: Sage Dawn shows the plain header on the light ground.
     var coverAssetName: String? = nil
+
+    private var cover: String? { colorScheme == .dark ? coverAssetName : nil }
 
     var body: some View {
         // Extra heading-to-card spacing when cover art is present, so the art's
         // focal subject can breathe between the title and the progress card.
-        VStack(alignment: .leading, spacing: coverAssetName == nil ? 18 : 30) {
+        VStack(alignment: .leading, spacing: cover == nil ? 18 : 30) {
             HStack(alignment: .top, spacing: 12) {
                 EmHeading(eyebrow: eyebrow, title: title)
                 EmIconChip(sfSymbol: sfSymbol, size: 56, isCustomAsset: iconIsCustomAsset)
@@ -478,7 +481,7 @@ struct EmJourneyHeader: View {
                     }
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
-                            Capsule().fill(Color.white.opacity(0.08))
+                            Capsule().fill(tm.progressTrack)
                             Capsule().fill(tm.accentGradient)
                                 .frame(width: max(0, geo.size.width * percent))
                         }
@@ -502,7 +505,7 @@ struct EmJourneyHeader: View {
             // keeps the status/count text legible against the bright subject.
             .background(
                 Group {
-                    if coverAssetName != nil {
+                    if cover != nil {
                         RoundedRectangle(cornerRadius: 20, style: .continuous)
                             .fill(Color(hex: "06120E").opacity(0.45))
                     }
@@ -516,9 +519,9 @@ struct EmJourneyHeader: View {
         .padding(.top, 48)
         .padding(.bottom, 16)
         .background(alignment: .top) {
-            if let coverAssetName {
+            if let cover {
                 GeometryReader { geo in
-                    Image(coverAssetName)
+                    Image(cover)
                         .resizable()
                         .scaledToFill()
                         .frame(width: geo.size.width, height: geo.size.height)
@@ -551,7 +554,11 @@ struct EmJourneyHeader: View {
 /// the art. This is the `EmJourneyHeader` cover treatment factored out for the
 /// Explore surfaces, which use a short fixed header rather than the tall journey
 /// header + progress card.
+///
+/// Dark-only: under Sage Dawn the band draws nothing and the header sits on the
+/// light ground (the covers are night scenes composed for the emerald ground).
 struct EmCoverBand: View {
+    @Environment(\.colorScheme) private var colorScheme
     let assetName: String
     /// Extra darkening laid over the art (0 = none, the default) to keep header
     /// text legible on covers whose lit areas would otherwise wash it out. Sits
@@ -559,6 +566,10 @@ struct EmCoverBand: View {
     var dim: Double = 0
 
     var body: some View {
+        if colorScheme == .dark { band }
+    }
+
+    private var band: some View {
         GeometryReader { geo in
             Image(assetName)
                 .resizable()
@@ -588,23 +599,26 @@ extension View {
     /// Pins an `EmCoverBand` behind a fixed screen header: the header content is
     /// top-aligned within a band of `height`, the art bleeds up behind the status/
     /// nav bar and fades into the emerald body beneath the title. Used by the
-    /// Explore overview and its seven detail screens.
+    /// Explore overview and its section screens. Dark-only, like `EmCoverBand`:
+    /// under Sage Dawn the header keeps its natural height on the light ground.
     func emCoverHeaderBand(_ assetName: String, height: CGFloat) -> some View {
-        self
-            .frame(maxWidth: .infinity, minHeight: height, alignment: .topLeading)
-            .background(alignment: .top) { EmCoverBand(assetName: assetName) }
+        modifier(EmCoverHeaderBandModifier(assetName: assetName, height: height))
     }
+}
 
-    /// Applies `emCoverHeaderBand` only under Midnight Emerald; other themes keep
-    /// their original header untouched. Reads `ThemeManager.shared` (callers already
-    /// re-evaluate on theme change because they observe it) - for the two Explore
-    /// detail screens whose header is inline-branched rather than a separate subview.
-    @ViewBuilder
-    func emCoverHeaderBandIfEmerald(_ assetName: String, height: CGFloat) -> some View {
-        if ThemeManager.shared.isMidnightEmerald {
-            emCoverHeaderBand(assetName, height: height)
+private struct EmCoverHeaderBandModifier: ViewModifier {
+    @Environment(\.colorScheme) private var colorScheme
+    let assetName: String
+    let height: CGFloat
+
+    func body(content: Content) -> some View {
+        if colorScheme == .dark {
+            content
+                .frame(maxWidth: .infinity, minHeight: height, alignment: .topLeading)
+                .background(alignment: .top) { EmCoverBand(assetName: assetName) }
         } else {
-            self
+            content
+                .frame(maxWidth: .infinity, alignment: .topLeading)
         }
     }
 }
@@ -690,7 +704,7 @@ struct EmJourneyDayRow: View {
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .stroke(highlighted ? tm.accentColor : tm.strokeColor, lineWidth: 1)
             )
-            .shadow(color: Color.black.opacity(0.28), radius: 24, x: 0, y: 8)
+            .emShadow(.card)
         }
         .buttonStyle(EmPressStyle())
     }
@@ -842,18 +856,10 @@ struct EmJourneyToggleButton: View {
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
                     .stroke(isDone ? doneTint.opacity(0.5) : Color.clear, lineWidth: 1)
             )
-            .shadow(color: isDone ? .clear : tm.accentColor.opacity(0.28), radius: 24, x: 0, y: 10)
+            .shadow(color: isDone ? .clear : tm.accentOrnament.opacity(0.28), radius: 24, x: 0, y: 10)
         }
         .buttonStyle(EmPressStyle())
         .padding(.horizontal, horizontalPadding)
-    }
-}
-
-extension View {
-    /// Applies `hideTabBar()` only in Midnight Emerald (so the floating bar doesn't overlap a
-    /// pushed detail screen), leaving the Light path — which keeps the native tab bar — untouched.
-    @ViewBuilder func hideTabBarInEmerald() -> some View {
-        if ThemeManager.shared.isMidnightEmerald { self.hideTabBar() } else { self }
     }
 }
 
@@ -922,7 +928,7 @@ struct TextSizePanel: View {
             RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(.ultraThinMaterial)
                 .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(tm.strokeColor, lineWidth: 1))
-                .shadow(color: .black.opacity(0.35), radius: 16, x: 0, y: 8)
+                .emShadow(.custom(opacity: 0.35, radius: 16, y: 8))
         )
     }
 }
@@ -953,7 +959,7 @@ extension View {
 #if DEBUG
 #Preview {
     // Components read the shared singleton; force emerald so the canvas renders correctly.
-    let _ = (ThemeManager.shared.selectedTheme = .nightSanctuary)
+    let _ = (ThemeManager.shared.selectedTheme = .midnightEmerald)
     return ZStack {
         EmeraldBackground()
         ScrollView {

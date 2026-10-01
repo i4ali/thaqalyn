@@ -37,16 +37,10 @@ struct DailyChallengeCard: View {
     }
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald {
-                emeraldCard
-            } else {
-                legacyCard
+        emeraldCard
+            .sheet(isPresented: $showSheet) {
+                DailyChallengeView(challenge: provider.today, onCompleted: {})
             }
-        }
-        .sheet(isPresented: $showSheet) {
-            DailyChallengeView(challenge: provider.today, onCompleted: {})
-        }
     }
 
     // MARK: - Emerald body (mirrors MomentCard.emeraldBody)
@@ -132,107 +126,6 @@ struct DailyChallengeCard: View {
                 .foregroundColor(.green)
         }
     }
-
-    // MARK: - Legacy body (mirrors MomentCard.legacyBody)
-
-    @ViewBuilder
-    private var legacyCard: some View {
-        let state = cardState
-        let isDone = state == .done
-
-        Group {
-            if isDone {
-                legacyInner(state: state)
-            } else {
-                Button {
-                    Haptics.press()
-                    showSheet = true
-                } label: {
-                    legacyInner(state: state)
-                        .contentShape(Rectangle())
-                }
-                .buttonStyle(EmPressStyle.gentle)
-            }
-        }
-    }
-
-    private func legacyInner(state: DailyChallengeCardState) -> some View {
-        let isDone = state == .done
-
-        return HStack(alignment: .center, spacing: 16) {
-            // Category icon — circle gold gradient (50), white symbol
-            ZStack {
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 50, height: 50)
-                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                Image(systemName: "brain.head.profile")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
-            }
-
-            // Text stack
-            VStack(alignment: .leading, spacing: 4) {
-                Text(DailyChallengeStrings.dailyChallenge)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                // Sub-line
-                Text(legacySubLine(state: state))
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(isDone ? .green : themeManager.secondaryText)
-            }
-
-            Spacer()
-
-            // Right icon
-            legacyRightIcon(state: state)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary
-                      ? themeManager.glassSurface : Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(themeManager.strokeColor, lineWidth: 1))
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary
-                        ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                    radius: 12, x: 0, y: 4
-                )
-        }
-        .contentShape(Rectangle())
-    }
-
-    private func legacySubLine(state: DailyChallengeCardState) -> String {
-        switch state {
-        case .pending:
-            let teaser = DailyChallengeStrings.teaser(for: provider.today.format)
-            if manager.streak.currentStreak > 0 {
-                return "🔥 \(manager.streak.currentStreak) · \(teaser)"
-            }
-            return teaser
-        case .done:
-            let base = DailyChallengeStrings.doneForToday
-            return "\(base) · 🔥 \(manager.streak.currentStreak)"
-        }
-    }
-
-    @ViewBuilder
-    private func legacyRightIcon(state: DailyChallengeCardState) -> some View {
-        switch state {
-        case .pending:
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        case .done:
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.green)
-        }
-    }
 }
 
 // MARK: - DEBUG Previews
@@ -242,21 +135,23 @@ struct DailyChallengeCard: View {
 // MARK: Pending (not done) previews
 
 #Preview("Card — Pending, English, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
+    let _ = ThemeManager.shared.selectedTheme = .midnightEmerald
     return VStack(spacing: 16) {
         DailyChallengeCard()
     }
     .padding(20)
-    .background(Color.black)
+    .background(ThemeManager.shared.primaryBackground)
+    .preferredColorScheme(.dark)
 }
 
 #Preview("Card — Pending, English, Light") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
+    let _ = ThemeManager.shared.selectedTheme = .sageDawn
     return VStack(spacing: 16) {
         DailyChallengeCard()
     }
     .padding(20)
-    .background(Color(red: 0.97, green: 0.95, blue: 0.92))
+    .background(ThemeManager.shared.primaryBackground)
+    .preferredColorScheme(.light)
 }
 
 // MARK: Done (completed) previews
@@ -267,21 +162,9 @@ struct DailyChallengeCard: View {
 // previous implementation for faithful preview coverage.
 
 private struct _DebugDoneCard: View {
-    let theme: ThemeVariant
-
     @StateObject private var themeManager = ThemeManager.shared
 
-
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald { emeraldDone } else { legacyDone }
-        }
-        .onAppear {
-            ThemeManager.shared.selectedTheme = theme
-        }
-    }
-
-    private var emeraldDone: some View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: "brain.head.profile", size: 46)
@@ -305,48 +188,20 @@ private struct _DebugDoneCard: View {
             .padding(16)
         }
     }
-
-    private var legacyDone: some View {
-        HStack(alignment: .center, spacing: 16) {
-            ZStack {
-                Circle().fill(themeManager.accentGradient).frame(width: 50, height: 50)
-                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                Image(systemName: "brain.head.profile")
-                    .font(.system(size: 20, weight: .semibold)).foregroundColor(.white)
-            }
-            VStack(alignment: .leading, spacing: 4) {
-                Text(DailyChallengeStrings.dailyChallenge)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText).lineLimit(2)
-                Text("\(DailyChallengeStrings.doneForToday) · 🔥 5")
-                    .font(.system(size: 14, weight: .medium)).foregroundColor(.green)
-            }
-            Spacer()
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 14, weight: .medium)).foregroundColor(.green)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary
-                      ? themeManager.glassSurface : Color.white)
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(themeManager.strokeColor, lineWidth: 1))
-                .shadow(color: Color.black.opacity(0.04), radius: 12, x: 0, y: 4)
-        }
-        .contentShape(Rectangle())
-    }
 }
 
 #Preview("Card — Done, English, Emerald") {
-    _DebugDoneCard(theme: .nightSanctuary)
+    _DebugDoneCard()
         .padding(20)
-        .background(Color.black)
+        .background(ThemeManager.shared.primaryBackground)
+        .preferredColorScheme(.dark)
 }
 
 #Preview("Card — Done, English, Light") {
-    _DebugDoneCard(theme: .warmInviting)
+    _DebugDoneCard()
         .padding(20)
-        .background(Color(red: 0.97, green: 0.95, blue: 0.92))
+        .background(ThemeManager.shared.primaryBackground)
+        .preferredColorScheme(.light)
 }
 
 #endif

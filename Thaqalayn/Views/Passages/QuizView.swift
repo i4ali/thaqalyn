@@ -85,20 +85,12 @@ struct QuizView: View {
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura(glowOpacity: 0.22, starCount: 10)
     }
 
     // MARK: - Background (same ground as PassageView)
 
-    @ViewBuilder private var background: some View {
-        if themeManager.isMidnightEmerald {
-            EmeraldBackground()
-        } else {
-            LinearGradient(
-                colors: [themeManager.primaryBackground, themeManager.secondaryBackground, themeManager.tertiaryBackground],
-                startPoint: .topLeading, endPoint: .bottomTrailing
-            ).ignoresSafeArea()
-        }
+    private var background: some View {
+        EmeraldBackground()
     }
 
     // MARK: - Question screen

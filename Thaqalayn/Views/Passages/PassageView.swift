@@ -111,20 +111,7 @@ struct PassageView: View {
 
     var body: some View {
         ZStack {
-            if themeManager.isMidnightEmerald {
-                EmeraldBackground()
-            } else {
-                LinearGradient(
-                    colors: [
-                        themeManager.primaryBackground,
-                        themeManager.secondaryBackground,
-                        themeManager.tertiaryBackground
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
-            }
+            EmeraldBackground()
 
             VStack(spacing: 0) {
                 header
@@ -184,7 +171,6 @@ struct PassageView: View {
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura(glowOpacity: 0.22, starCount: 10)
         .overlay(alignment: .bottom) {
             let isPlaying = audioManager.currentPlayback != nil
             if isPlaying {

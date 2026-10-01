@@ -171,20 +171,7 @@ struct MiracleStoryDetailView: View {
 
     var body: some View {
         ZStack {
-            if themeManager.isMidnightEmerald {
-                EmeraldBackground()
-            } else {
-                LinearGradient(
-                    colors: [
-                        themeManager.primaryBackground,
-                        themeManager.secondaryBackground,
-                        themeManager.tertiaryBackground
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
-            }
+            EmeraldBackground()
 
             VStack(spacing: 0) {
                 header
@@ -224,7 +211,6 @@ struct MiracleStoryDetailView: View {
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura(glowOpacity: 0.22, starCount: 10)
         .onChange(of: lang) { _, _ in
             // The spoken text changed with the language; stop rather than finish the old one.
             stopListening()

@@ -79,9 +79,7 @@ struct DailyChallengeView: View {
                     .emEyebrow(size: 11, tracking: 1.5)
                     .foregroundColor(themeManager.accentColor)
                 Text(challenge.topic.capitalized)
-                    .font(themeManager.isMidnightEmerald
-                          ? EmType.serif(24, .semiBold)
-                          : .system(size: 22, weight: .bold))
+                    .font(EmType.serif(24, .semiBold))
                     .foregroundColor(themeManager.primaryText)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -162,9 +160,7 @@ struct DailyChallengeView: View {
 
                 // Option text (reading content — scaled)
                 Text(text)
-                    .font(themeManager.isMidnightEmerald
-                          ? EmType.serif(16 * readingSettings.scale, .medium)
-                          : .system(size: 16 * readingSettings.scale))
+                    .font(EmType.serif(16 * readingSettings.scale, .medium))
                     .foregroundColor(optionText(state))
                     .lineSpacing(4 * readingSettings.scale)
                     .multilineTextAlignment(.leading)
@@ -213,7 +209,7 @@ struct DailyChallengeView: View {
 
     private func rowFill(_ state: OptionState) -> Color {
         switch state {
-        case .neutral:           return themeManager.isMidnightEmerald ? Color.white.opacity(0.04) : Color.white.opacity(0.7)
+        case .neutral:           return themeManager.glassSurface
         case .correct:           return Color.green.opacity(0.12)
         case .wrong:             return Color.red.opacity(0.10)
         case .correctHighlight:  return Color.green.opacity(0.16)
@@ -306,7 +302,7 @@ struct DailyChallengeView: View {
             : themeManager.primaryText
         let bgFill: Color = showResult
             ? (isCorrectResult ? Color.green.opacity(0.12) : (isWrongResult ? Color.red.opacity(0.10) : Color.clear))
-            : (themeManager.isMidnightEmerald ? Color.white.opacity(0.04) : Color.white.opacity(0.7))
+            : themeManager.glassSurface
         let borderColor: Color = showResult
             ? (isCorrectResult ? Color.green.opacity(0.55) : (isWrongResult ? Color.red.opacity(0.45) : themeManager.strokeColor))
             : themeManager.strokeColor
@@ -401,9 +397,7 @@ struct DailyChallengeView: View {
                             .environment(\.layoutDirection, .rightToLeft)
                     }
                     Text(challenge.prompt.text)
-                        .font(themeManager.isMidnightEmerald
-                              ? EmType.serif(17 * readingSettings.scale, .medium)
-                              : .system(size: 17 * readingSettings.scale))
+                        .font(EmType.serif(17 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -418,9 +412,7 @@ struct DailyChallengeView: View {
                     // Back: answer + explanation
                     if let answer = challenge.answer {
                         Text(answer.text)
-                            .font(themeManager.isMidnightEmerald
-                                  ? EmType.serif(18 * readingSettings.scale, .semiBold)
-                                  : .system(size: 18 * readingSettings.scale, weight: .semibold))
+                            .font(EmType.serif(18 * readingSettings.scale, .semiBold))
                             .foregroundColor(themeManager.accentBright)
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -429,9 +421,7 @@ struct DailyChallengeView: View {
                     if let explanation = challenge.explanation {
                         Divider().background(themeManager.strokeColor)
                         Text(explanation.text)
-                            .font(themeManager.isMidnightEmerald
-                                  ? EmType.serif(15 * readingSettings.scale, .medium)
-                                  : .system(size: 15 * readingSettings.scale))
+                            .font(EmType.serif(15 * readingSettings.scale, .medium))
                             .foregroundColor(themeManager.secondaryText)
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -504,9 +494,7 @@ struct DailyChallengeView: View {
             if let explanation = challenge.explanation {
                 EmCard {
                     Text(explanation.text)
-                        .font(themeManager.isMidnightEmerald
-                              ? EmType.serif(16 * readingSettings.scale, .medium)
-                              : .system(size: 16 * readingSettings.scale))
+                        .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -555,9 +543,7 @@ struct DailyChallengeView: View {
 
     private var completionLayer: some View {
         ZStack {
-            if themeManager.isMidnightEmerald {
-                CelebrationBackdrop()
-            }
+            CelebrationBackdrop()
             CelebrationConfetti()
             completionContent
         }
@@ -579,9 +565,7 @@ struct DailyChallengeView: View {
                 }
 
                 Text(DailyChallengeStrings.completionTitle)
-                    .font(themeManager.isMidnightEmerald
-                          ? EmType.serif(28, .semiBold)
-                          : .system(size: 26, weight: .bold))
+                    .font(EmType.serif(28, .semiBold))
                     .foregroundColor(themeManager.primaryText)
             }
 
@@ -625,9 +609,7 @@ struct DailyChallengeView: View {
     private var promptCard: some View {
         EmCard {
             Text(challenge.prompt.text)
-                .font(themeManager.isMidnightEmerald
-                      ? EmType.serif(18 * readingSettings.scale, .medium)
-                      : .system(size: 18 * readingSettings.scale))
+                .font(EmType.serif(18 * readingSettings.scale, .medium))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -765,23 +747,27 @@ extension DailyChallenge {
 // MARK: - Previews (one per format × two themes)
 
 #Preview("Multiple Choice — English (Emerald)") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
+    let _ = ThemeManager.shared.selectedTheme = .midnightEmerald
     DailyChallengeView(challenge: .sampleMultipleChoice, onCompleted: {})
+        .preferredColorScheme(.dark)
 }
 
 #Preview("True/False — English (Emerald)") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
+    let _ = ThemeManager.shared.selectedTheme = .midnightEmerald
     DailyChallengeView(challenge: .sampleTrueFalse, onCompleted: {})
+        .preferredColorScheme(.dark)
 }
 
 #Preview("Flashcard — English (Emerald)") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
+    let _ = ThemeManager.shared.selectedTheme = .midnightEmerald
     DailyChallengeView(challenge: .sampleFlashcard, onCompleted: {})
+        .preferredColorScheme(.dark)
 }
 
 #Preview("Fill-in-Blank — English (Light)") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
+    let _ = ThemeManager.shared.selectedTheme = .sageDawn
     DailyChallengeView(challenge: .sampleFillInBlank, onCompleted: {})
+        .preferredColorScheme(.light)
 }
 
 #endif

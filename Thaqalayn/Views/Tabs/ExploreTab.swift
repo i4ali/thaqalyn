@@ -13,13 +13,12 @@ struct ExploreTab: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Adaptive background with floating elements
+                // Emerald background (both themes)
                 AdaptiveModernBackground()
 
                 ExploreView()
             }
             .navigationBarHidden(true)
-            .darkScreenAura()
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

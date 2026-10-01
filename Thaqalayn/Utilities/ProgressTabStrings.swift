@@ -14,8 +14,6 @@ enum ProgressTabStrings {
     static let yourJourneyEyebrow = "Your Journey"
     static let progressTitle = "Progress"
     static let progressSubtitle = "A record of your time with the Qur'an"
-    static let yourProgress = "Your Progress"
-    static let trackJourney = "Track your Quran journey"
 
     // Stats
     static let versesRead = "Verses Read"
@@ -44,7 +42,6 @@ enum ProgressTabStrings {
     static let best = "Best"
 
     // Badges
-    static let badges = "Badges"
     static func badgesDivider(_ count: Int, _ total: Int) -> String {
         "Badges · \(count) of \(total)"
     }

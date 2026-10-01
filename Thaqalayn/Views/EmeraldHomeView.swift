@@ -2,8 +2,7 @@
 //  EmeraldHomeView.swift
 //  Thaqalayn
 //
-//  Midnight Emerald layout for the Quran (Home/Read) tab. Shown by HomeView
-//  when the emerald theme is active; the Light layout is unchanged.
+//  The Quran (Home/Read) tab layout, shown by HomeView in both themes.
 //
 
 import SwiftUI
@@ -30,6 +29,11 @@ struct EmeraldHomeView: View {
     /// backing band only shows then, so it never tints the unpinned bar.
     @State private var searchBarPinned = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    /// Fill of the heart and bell circle buttons: a white disc on the light
+    /// ground, the original dark well in Midnight Emerald.
+    private static let circleButtonFill = Color(light: Color.white.opacity(0.75),
+                                                dark: Color(hex: "050E0B").opacity(0.28))
 
     /// Focus mode: while the field is focused or holds a query, the heading and
     /// Continue Reading card step aside and results fill the screen.
@@ -141,7 +145,7 @@ struct EmeraldHomeView: View {
                 PhosphorIcon(name: "ph-heart-fill", size: 15)
                     .foregroundColor(themeManager.accentColor)
                     .frame(width: 36, height: 36)
-                    .background(Circle().fill(Color(hex: "050E0B").opacity(0.28)))
+                    .background(Circle().fill(Self.circleButtonFill))
                     .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
             }
 
@@ -149,7 +153,7 @@ struct EmeraldHomeView: View {
                 PhosphorIcon(name: "ph-bell", size: 16)
                     .foregroundColor(themeManager.accentColor)
                     .frame(width: 36, height: 36)
-                    .background(Circle().fill(Color(hex: "050E0B").opacity(0.28)))
+                    .background(Circle().fill(Self.circleButtonFill))
                     .overlay(Circle().stroke(themeManager.strokeColor, lineWidth: 1))
             }
             .buttonStyle(EmPressStyle())

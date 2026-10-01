@@ -27,11 +27,9 @@ struct FoodDetailView: View {
         ZStack {
             AdaptiveModernBackground()
 
-            if themeManager.isMidnightEmerald {
-                EmCoverBand(assetName: "FoodsCover")
-                    .frame(height: 300)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            }
+            EmCoverBand(assetName: "FoodsCover")
+                .frame(height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
             ScrollView {
                 VStack(spacing: 18) {
@@ -58,7 +56,7 @@ struct FoodDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {
@@ -70,8 +68,7 @@ struct FoodDetailView: View {
                 }
             }
         }
-        .darkScreenAura()
-        .hideTabBarInEmerald()
+        .hideTabBar()
     }
 
     // Hero — emoji-in-glass-chip placeholder (Phase 2 swaps to Image(food.illustrationAsset)).
@@ -87,7 +84,7 @@ struct FoodDetailView: View {
             .shadow(color: themeManager.accentColor.opacity(0.18), radius: 16, x: 0, y: 6)
 
             Text(food.nameEn)
-                .font(themeManager.isMidnightEmerald ? EmType.serif(30, .semiBold) : .system(size: 30, weight: .bold, design: .rounded))
+                .font(EmType.serif(30, .semiBold))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.center)
         }
@@ -116,7 +113,7 @@ struct FoodDetailView: View {
 
                 if let v = verse {
                     Text(v.arabicText)
-                        .font(themeManager.isMidnightEmerald ? EmType.arabic(26 * readingSettings.scale) : .system(size: 24 * readingSettings.scale, weight: .regular))
+                        .font(EmType.arabic(26 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(10 * readingSettings.scale)
                         .frame(maxWidth: .infinity, alignment: .trailing)
@@ -124,7 +121,7 @@ struct FoodDetailView: View {
                         .textSelection(.enabled)
 
                     Text(v.translation)
-                        .font(themeManager.isMidnightEmerald ? EmType.serif(16 * readingSettings.scale, .medium) : .system(size: 16 * readingSettings.scale, weight: .regular))
+                        .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(5 * readingSettings.scale)
                         .multilineTextAlignment(.leading)
@@ -148,7 +145,7 @@ struct FoodDetailView: View {
                 .foregroundColor(themeManager.accentColor)
 
                 Text(text)
-                    .font(themeManager.isMidnightEmerald ? EmType.serif(16 * readingSettings.scale, .medium) : .system(size: 16 * readingSettings.scale, weight: .regular))
+                    .font(EmType.serif(16 * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
                     .lineSpacing(5 * readingSettings.scale)
                     .fixedSize(horizontal: false, vertical: true)
@@ -197,20 +194,8 @@ struct FoodDetailView: View {
         return parts.joined(separator: "\n\n")
     }
 
-    // Themed card container — EmCard glass for emerald, rounded glass/white for legacy.
-    @ViewBuilder
+    // Card container - EmCard glass.
     private func cardContainer<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
-        if themeManager.isMidnightEmerald {
-            EmCard { content().padding(16) }
-        } else {
-            content()
-                .padding(16)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(themeManager.strokeColor, lineWidth: 1))
-                )
-        }
+        EmCard { content().padding(16) }
     }
 }

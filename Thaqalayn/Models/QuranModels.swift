@@ -718,29 +718,6 @@ enum BadgeType: String, Codable {
         }
     }
 
-    var color: String {
-        switch self {
-        case .surahCompletion: return "green"
-        case .milestone10: return "blue"
-        case .milestone25: return "purple"
-        case .milestone50: return "orange"
-        case .allSurahs: return "gold"
-        case .streak7: return "orange"
-        case .streak30: return "green"
-        case .streak100: return "purple"
-        case .ramadanCompletion: return "gold"
-        case .hajjCompletion: return "gold"
-        case .dailyChallengeFirst: return "blue"
-        case .dailyChallengeStreak7: return "orange"
-        case .dailyChallengeStreak30: return "green"
-        case .dailyChallengeStreak100: return "purple"
-        case .crosswordFirst: return "blue"
-        case .crossword7: return "orange"
-        case .crossword30: return "green"
-        case .crossword100: return "purple"
-        }
-    }
-
     var description: String {
         switch self {
         case .surahCompletion:

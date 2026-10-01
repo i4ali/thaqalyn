@@ -23,7 +23,7 @@ private enum BookmarkSpotlightStrings {
 
 // MARK: - Card
 
-/// Drop into TodayView/EmeraldTodayView. Renders nothing when there are no bookmarks.
+/// Drop into EmeraldTodayView. Renders nothing when there are no bookmarks.
 struct BookmarkSpotlightCard: View {
     @ObservedObject private var bookmarkManager = BookmarkManager.shared
     @ObservedObject private var themeManager = ThemeManager.shared
@@ -37,11 +37,7 @@ struct BookmarkSpotlightCard: View {
 
     var body: some View {
         if let bookmark = latest {
-            if themeManager.isMidnightEmerald {
-                emeraldCard(bookmark)
-            } else {
-                legacyCard(bookmark)
-            }
+            card(bookmark)
         }
     }
 
@@ -87,9 +83,9 @@ struct BookmarkSpotlightCard: View {
         "\u{201C}\(translation(for: bookmark))\u{201D}"
     }
 
-    // MARK: - Midnight Emerald
+    // MARK: - Card body
 
-    private func emeraldCard(_ bookmark: Bookmark) -> some View {
+    private func card(_ bookmark: Bookmark) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(BookmarkSpotlightStrings.eyebrow.uppercased())
                 .emEyebrow(size: 11, tracking: 2)
@@ -99,7 +95,7 @@ struct BookmarkSpotlightCard: View {
             EmCard {
                 VStack(spacing: 0) {
                     spotlightLink(bookmark) {
-                        emeraldSpotlight(bookmark)
+                        spotlight(bookmark)
                     }
 
                     EmDivider()
@@ -115,7 +111,7 @@ struct BookmarkSpotlightCard: View {
         }
     }
 
-    private func emeraldSpotlight(_ bookmark: Bookmark) -> some View {
+    private func spotlight(_ bookmark: Bookmark) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 2) {
@@ -167,100 +163,6 @@ struct BookmarkSpotlightCard: View {
         .contentShape(Rectangle())
     }
 
-    // MARK: - Legacy (Warm & Inviting)
-
-    private func legacyCard(_ bookmark: Bookmark) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(BookmarkSpotlightStrings.eyebrow.uppercased())
-                .emEyebrow(size: 13, tracking: 0.4)
-                .foregroundColor(themeManager.secondaryText)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            VStack(spacing: 0) {
-                spotlightLink(bookmark) {
-                    legacySpotlight(bookmark)
-                }
-
-                Rectangle()
-                    .fill(themeManager.strokeColor)
-                    .frame(height: 1)
-                    .padding(.horizontal, 16)
-
-                PressableNavLink {
-                    BookmarksView()
-                } label: {
-                    footerRow(color: themeManager.accentColor)
-                }
-            }
-            .background(legacyBackground)
-        }
-    }
-
-    private func legacySpotlight(_ bookmark: Bookmark) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(bookmark.surahName)
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(themeManager.primaryText)
-                    Text(bookmark.isPassage ? bookmark.positionLabel : bookmark.verseReference)
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                }
-
-                Spacer()
-
-                if bookmark.isPassage {
-                    Text("ع")
-                        .font(EmType.arabic(16))
-                        .foregroundColor(themeManager.accentColor)
-                } else {
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 14))
-                        .foregroundColor(.pink)
-                }
-            }
-
-            if bookmark.isPassage {
-                Text(bookmark.passageTitle)
-                    .font(.system(size: 17, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            } else {
-                Text(arabicText(for: bookmark))
-                    .font(.custom("Amiri", size: 19 * readingSettings.scale))
-                    .lineSpacing(5 * readingSettings.scale)
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(1)
-                    .multilineTextAlignment(.trailing)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .environment(\.layoutDirection, .rightToLeft)
-
-                Text(translationDisplay(for: bookmark))
-                    .font(.system(size: 14 * readingSettings.scale))
-                    .lineSpacing(2 * readingSettings.scale)
-                    .foregroundColor(themeManager.secondaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-        }
-        .padding(16)
-        .contentShape(Rectangle())
-    }
-
-    private var legacyBackground: some View {
-        RoundedRectangle(cornerRadius: 18)
-            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-            .overlay(RoundedRectangle(cornerRadius: 18).stroke(themeManager.strokeColor, lineWidth: 1))
-            .shadow(
-                color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.05),
-                radius: 7, x: 0, y: 4
-            )
-    }
-
     // MARK: - Shared pieces
 
     /// Spotlight body wrapped in navigation to the verse when it resolves;
@@ -301,7 +203,7 @@ struct BookmarkSpotlightCard: View {
             BookmarkSpotlightCard()
                 .padding(.horizontal, 20)
         }
-        .background(Color(hex: "0A1512"))
+        .background(ThemeManager.shared.primaryBackground)
     }
 }
 #endif

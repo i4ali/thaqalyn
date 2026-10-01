@@ -34,7 +34,7 @@ source .venv/bin/activate
 
 **How**:
 - Drop in the reusable `DuaListenButton(arabic:)` component (`Thaqalayn/Views/Components/DuaListenButton.swift`), placed right after the Arabic text.
-- It already handles both theme variants (standard + Midnight Emerald), the Listen → Pause → Resume states, and stopping playback on screen exit. Do NOT hand-roll a per-view TTS button.
+- It already handles both themes (Sage Dawn + Midnight Emerald), the Listen → Pause → Resume states, and stopping playback on screen exit. Do NOT hand-roll a per-view TTS button.
 - Pattern reference: `DuaDetailView`, `MuharramDayDetailView`, `HajjDayDetailView`, `RamadanDayDetailView`, `FatimiyyaDayDetailView`.
 
 **Rationale**: Listening is a core way users engage with supplications; a duʿā shown without a Listen option is an inconsistency users notice and report.

@@ -54,6 +54,7 @@ struct PaywallView: View {
     @State private var alertTitle = ""
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.colorScheme) private var colorScheme
     /// Drives the slow Ken Burns push on the hero art (loops for the life of the screen).
     @State private var heroDrift = false
     /// Flips true on appear to fade + rise the ladder and feature rows in a cascade.
@@ -125,7 +126,9 @@ struct PaywallView: View {
                 .safeAreaInset(edge: .bottom) { ctaBar }
             }
         }
-        .darkScreenAura(glowOpacity: 0.40, starCount: 18)
+        // Follow the theme even when presented from a forced-dark screen (Deep Dive,
+        // VeiledDayPreview), whose scheme would otherwise carry into this cover.
+        .preferredColorScheme(themeManager.colorScheme)
         .alert(alertTitle, isPresented: $showingAlert) {
             Button("OK", role: .cancel) { }
         } message: {
@@ -204,13 +207,8 @@ struct PaywallView: View {
 
     // MARK: - Background
 
-    @ViewBuilder
     private var background: some View {
-        if themeManager.isMidnightEmerald {
-            EmeraldBackground()
-        } else {
-            themeManager.primaryBackground.ignoresSafeArea()
-        }
+        EmeraldBackground()
     }
 
     // MARK: - Close
@@ -243,7 +241,6 @@ struct PaywallView: View {
         static let ivory = Color(hex: "F1E8D6")
         static let gold = Color(hex: "ECD49A")
         static let ivorySoft = Color(hex: "F1E8D6").opacity(0.78)
-        static let ivoryFaint = Color(hex: "F1E8D6").opacity(0.56)
         static let height: CGFloat = 348
     }
 
@@ -293,9 +290,50 @@ struct PaywallView: View {
     /// Behind the hero: by default the shrine of Imam Husayn at night, doves above,
     /// "Ya Husayn" flag on the dome. When the paywall was fired by a specific locked
     /// thing, it is that thing's own cover instead - the well, the olive tree, the
-    /// lantern road. Bleeds past the content padding to full width and edge-fades into
-    /// the background so it reads as part of the emerald night, not a pasted photo.
+    /// lantern road. In dark it bleeds past the content padding to full width and
+    /// edge-fades into the background so it reads as part of the emerald night, not a
+    /// pasted photo. On the light ground a fade would leave the price row's ivory and
+    /// gold text on sage, so Sage Dawn shows the art as a rounded card instead, with a
+    /// night scrim under the price.
+    @ViewBuilder
     private var heroArt: some View {
+        if colorScheme == .dark {
+            heroImage
+                .mask(
+                    LinearGradient(
+                        stops: [
+                            .init(color: .black.opacity(0.72), location: 0),
+                            .init(color: .black, location: 0.12),
+                            .init(color: .black, location: 0.55),
+                            .init(color: .clear, location: 1),
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
+                .padding(.horizontal, -20)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+        } else {
+            heroImage
+                .overlay(
+                    LinearGradient(
+                        stops: [
+                            .init(color: Color(hex: "06110D").opacity(0.18), location: 0),
+                            .init(color: Color(hex: "06110D").opacity(0), location: 0.30),
+                            .init(color: Color(hex: "06110D").opacity(0.35), location: 0.62),
+                            .init(color: Color(hex: "06110D").opacity(0.78), location: 1),
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 26, style: .continuous))
+                .emShadow(.raised)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+        }
+    }
+
+    private var heroImage: some View {
         Image(context?.coverAssetName ?? "PaywallHeroDome")
             .resizable()
             .scaledToFill()
@@ -313,20 +351,6 @@ struct PaywallView: View {
                    alignment: context?.coverAssetName == nil ? .center : .top)
             .frame(maxWidth: .infinity)
             .clipped()
-            .mask(
-                LinearGradient(
-                    stops: [
-                        .init(color: .black.opacity(0.72), location: 0),
-                        .init(color: .black, location: 0.12),
-                        .init(color: .black, location: 0.55),
-                        .init(color: .clear, location: 1),
-                    ],
-                    startPoint: .top, endPoint: .bottom
-                )
-            )
-            .padding(.horizontal, -20)
-            .allowsHitTesting(false)
-            .accessibilityHidden(true)
     }
 
     /// Value anchor: comparable "deep" libraries are yearly subscriptions,
@@ -743,7 +767,7 @@ struct PaywallView: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(themeManager.accentGradient))
-            .shadow(color: themeManager.accentColor.opacity(0.28), radius: 28, x: 0, y: 10)
+            .emShadow(.goldCTA)
         }
         .buttonStyle(EmPressStyle())
         .disabled(purchaseManager.isLoading || !purchaseManager.isProductLoaded)

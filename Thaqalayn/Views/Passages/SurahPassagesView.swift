@@ -100,20 +100,7 @@ struct SurahPassagesView: View {
         let understoodIndices = stageStore.understoodIndices(surah: surah.number)
 
         ZStack {
-            if themeManager.isMidnightEmerald {
-                EmeraldBackground()
-            } else {
-                LinearGradient(
-                    colors: [
-                        themeManager.primaryBackground,
-                        themeManager.secondaryBackground,
-                        themeManager.tertiaryBackground
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
-            }
+            EmeraldBackground()
 
             VStack(spacing: 0) {
                 header(readCount: readCount)
@@ -193,7 +180,6 @@ struct SurahPassagesView: View {
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura(glowOpacity: 0.22, starCount: 10)
         .overlay(alignment: .bottom) {
             if audioManager.currentPlayback != nil {
                 SurahAudioPlayerView()

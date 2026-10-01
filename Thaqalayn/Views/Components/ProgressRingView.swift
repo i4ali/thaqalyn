@@ -15,7 +15,7 @@ struct ProgressRingView: View {
     var shadowColor: Color = .clear
 
     @State private var animatedProgress: Double = 0
-    @ObservedObject private var themeManager = ThemeManager.shared
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
         ZStack {
@@ -35,10 +35,10 @@ struct ProgressRingView: View {
                 )
                 .rotationEffect(.degrees(-90)) // Start from 12 o'clock
                 .shadow(color: shadowColor.opacity(0.4), radius: 4)
-                // Dark-only outer glow for legibility on warm-black backdrop.
+                // Dark-only outer glow for legibility on the dark backdrop.
                 .shadow(
-                    color: themeManager.isDarkMode ? shadowColor.opacity(0.5) : .clear,
-                    radius: themeManager.isDarkMode ? 8 : 0
+                    color: colorScheme == .dark ? shadowColor.opacity(0.5) : .clear,
+                    radius: colorScheme == .dark ? 8 : 0
                 )
         }
         .frame(width: size, height: size)

@@ -6,9 +6,8 @@
 //  keyboard + clue bar, plus the solved/reward overlay.
 //
 //  Visual target: mockups/daily-crossword/board.png (centre phone = play, right phone = solved).
-//  Midnight Emerald is the primary look (Em* components + ThemeManager tokens); a basic
-//  legacy/light path is provided too. Structure mirrors DailyChallengeView (emerald vs legacy,
-//  sheet, dismiss, Haptics).
+//  Built from Em* components + ThemeManager tokens, which resolve for both Sage Dawn and
+//  Midnight Emerald. Structure mirrors DailyChallengeView (sheet, dismiss, Haptics).
 //
 //  Chrome rule (CLAUDE.md): the grid letters, numbers, clue chrome, and keyboard are FIXED-SIZE.
 //  Do NOT wire ReadingSettingsManager here — none of this is "reading content".
@@ -70,7 +69,7 @@ struct DailyCrosswordView: View {
 
     var body: some View {
         ZStack {
-            background
+            EmeraldBackground()
 
             if showSolved {
                 solvedOverlay
@@ -83,15 +82,6 @@ struct DailyCrosswordView: View {
         .onReceive(timer) { _ in
             guard !solved else { return }   // paused once solved
             seconds += 1
-        }
-    }
-
-    @ViewBuilder
-    private var background: some View {
-        if themeManager.isMidnightEmerald {
-            EmeraldBackground()
-        } else {
-            themeManager.primaryBackground.ignoresSafeArea()
         }
     }
 
@@ -137,9 +127,7 @@ struct DailyCrosswordView: View {
 
             VStack(spacing: 3) {
                 Text(DailyCrosswordStrings.dailyCrossword)
-                    .font(themeManager.isMidnightEmerald
-                          ? EmType.serif(20, .semiBold)
-                          : .system(size: 18, weight: .bold))
+                    .font(EmType.serif(20, .semiBold))
                     .foregroundColor(themeManager.primaryText)
                     .lineLimit(1)
 
@@ -276,9 +264,7 @@ struct DailyCrosswordView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
 
                     Text(e.clue.text)
-                        .font(themeManager.isMidnightEmerald
-                              ? EmType.serif(17, .medium)
-                              : .system(size: 15, weight: .medium))
+                        .font(EmType.serif(17, .medium))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
@@ -297,7 +283,7 @@ struct DailyCrosswordView: View {
         .padding(.vertical, 14)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(themeManager.isMidnightEmerald ? themeManager.glassSurface : Color.white.opacity(0.7))
+                .fill(themeManager.glassSurface)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -371,11 +357,11 @@ struct DailyCrosswordView: View {
         } label: {
             Text(String(ch))
                 .font(.system(size: 18, weight: .semibold))
-                .foregroundColor(keyTextColor)
+                .foregroundColor(Self.keyTextColor)
                 .frame(width: width, height: height)
                 .background(
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .fill(keyFill)
+                        .fill(Self.keyFill)
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
@@ -391,7 +377,7 @@ struct DailyCrosswordView: View {
         } label: {
             Image(systemName: "delete.left.fill")
                 .font(.system(size: 17, weight: .semibold))
-                .foregroundColor(keyTextColor)
+                .foregroundColor(Self.keyTextColor)
                 .frame(width: width, height: height)
                 .background(
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
@@ -410,9 +396,7 @@ struct DailyCrosswordView: View {
 
     private var solvedOverlay: some View {
         ZStack {
-            if themeManager.isMidnightEmerald {
-                CelebrationBackdrop()
-            }
+            CelebrationBackdrop()
             CelebrationConfetti()
             solvedContent
         }
@@ -435,9 +419,7 @@ struct DailyCrosswordView: View {
 
             VStack(spacing: 6) {
                 Text(DailyCrosswordStrings.solved)
-                    .font(themeManager.isMidnightEmerald
-                          ? EmType.serif(40, .semiBold)
-                          : .system(size: 34, weight: .bold))
+                    .font(EmType.serif(40, .semiBold))
                     .foregroundColor(themeManager.accentBright)
 
                 Text(puzzleSubtitle)
@@ -630,7 +612,7 @@ struct DailyCrosswordView: View {
     private func cellFill(isActive: Bool, isSelected: Bool) -> Color {
         if isSelected { return themeManager.accentColor.opacity(0.30) }
         if isActive   { return themeManager.accentColor.opacity(0.16) }
-        return themeManager.isMidnightEmerald ? Color.white.opacity(0.05) : Color.white.opacity(0.85)
+        return Self.cellFillIdle
     }
 
     private func cellBorder(isActive: Bool, isSelected: Bool) -> Color {
@@ -643,17 +625,15 @@ struct DailyCrosswordView: View {
         (isSelected || isActive) ? themeManager.accentBright : themeManager.primaryText
     }
 
-    private var keyTextColor: Color {
-        themeManager.isMidnightEmerald ? Color.white.opacity(0.92) : themeManager.primaryText
-    }
+    // One-off cell and key colors. Their Midnight values are the original literals, kept
+    // exact; Sage Dawn takes the light value of the nearest token (glassSurface,
+    // primaryText, glassSurfaceElevated).
+    private static let cellFillIdle = Color(light: Color.white.opacity(0.75), dark: Color.white.opacity(0.05))
+    private static let keyTextColor = Color(light: Color(hex: "14261E"), dark: Color.white.opacity(0.92))
+    private static let keyFill = Color(light: Color.white.opacity(0.92), dark: Color.white.opacity(0.08))
 
-    private var keyFill: Color {
-        themeManager.isMidnightEmerald ? Color.white.opacity(0.08) : Color.white.opacity(0.9)
-    }
-
-    private var keyFillStrong: Color {
-        themeManager.isMidnightEmerald ? Color.white.opacity(0.13) : Color.white.opacity(0.7)
-    }
+    /// Backspace key: the strongest control fill.
+    private var keyFillStrong: Color { themeManager.glassSurfaceStrong }
 
     // MARK: - Misc helpers
 
@@ -691,12 +671,14 @@ struct DailyCrosswordView: View {
 
 #if DEBUG
 #Preview("Crossword — Emerald, English") {
-    let _ = (ThemeManager.shared.selectedTheme = .nightSanctuary)
+    let _ = (ThemeManager.shared.selectedTheme = .midnightEmerald)
     DailyCrosswordView(puzzle: DailyCrosswordProvider.shared.today)
+        .preferredColorScheme(.dark)
 }
 
 #Preview("Crossword — Light, English") {
-    let _ = (ThemeManager.shared.selectedTheme = .warmInviting)
+    let _ = (ThemeManager.shared.selectedTheme = .sageDawn)
     DailyCrosswordView(puzzle: DailyCrosswordProvider.shared.today)
+        .preferredColorScheme(.light)
 }
 #endif

@@ -9,7 +9,6 @@
 //
 
 import Foundation
-import SwiftUI
 import UserNotifications
 
 struct NotificationItem: Identifiable, Codable {
@@ -39,18 +38,6 @@ struct NotificationItem: Identifiable, Codable {
             case .nudge: return "heart.fill"
             case .nearCompletion: return "checkmark.circle.fill"
             case .journey: return "map.fill"
-            }
-        }
-
-        @MainActor
-        func color(theme: ThemeManager) -> Color {
-            switch self {
-            case .dailyVerse: return theme.semanticBlue
-            case .streak: return .orange
-            case .milestone: return .green
-            case .nudge: return theme.semanticRed
-            case .nearCompletion: return .purple
-            case .journey: return theme.accentColor
             }
         }
     }

@@ -9,9 +9,8 @@
 //
 //  The surface is deliberately always-dark - a darkened, blurred cover in BOTH app themes,
 //  matching the immersive Deep Dive experience it belongs to (DeepDivePalette, gold-on-ink).
-//  The app-theme identity still shows through: the accent (gold in Midnight Emerald, blue in
-//  the legacy theme), the serif-vs-system title, and the play-button icon - selected via the
-//  same `isMidnightEmerald { emeraldBody } else { legacyBody }` split the surah player uses.
+//  The forced dark scheme also makes the theme tokens it reads (the gold accent tint, the
+//  ink on the gold play button) resolve to their Midnight Emerald values under Sage Dawn.
 //
 
 import SwiftUI
@@ -45,43 +44,36 @@ struct JourneyListenView: View {
             ?? SurahExperienceDescriptor.all.first { $0.dive?.id == dive.id }?.coverAssetName
     }
 
-    // MARK: - Body (theme split: accent / title font / play-icon differ; the dark surface is shared)
+    /// The transport tint: the gold accent (its Midnight value, on this forced-dark surface).
+    private var tint: Color { themeManager.accentColor }
+
+    // MARK: - Body
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-        }
-        // The surface is a darkened, blurred cover in BOTH themes, so it stays dark like a
-        // now-playing screen - fixed rather than themeManager.colorScheme so the status bar and
-        // neutral text remain legible even under the legacy (light) theme.
-        .preferredColorScheme(.dark)
-        .onAppear {
-            // The presenter owns starting playback (for a premium journey it must wait for the
-            // on-demand pack). Only self-start in the plain case: nothing is preparing and a
-            // different dive is loaded - e.g. re-expanding is a no-op since the guard matches.
-            if presenter.preparing == nil, player.currentDive?.id != dive.id {
-                player.play(dive: dive)
+        playerSurface
+            // The surface is a darkened, blurred cover in BOTH themes, so it stays dark like a
+            // now-playing screen - fixed rather than themeManager.colorScheme so the status bar,
+            // neutral text and theme tokens stay legible even under Sage Dawn (light).
+            .preferredColorScheme(.dark)
+            .onAppear {
+                // The presenter owns starting playback (for a premium journey it must wait for the
+                // on-demand pack). Only self-start in the plain case: nothing is preparing and a
+                // different dive is loaded - e.g. re-expanding is a no-op since the guard matches.
+                if presenter.preparing == nil, player.currentDive?.id != dive.id {
+                    player.play(dive: dive)
+                }
             }
-        }
-    }
-
-    private var emeraldBody: some View {
-        playerSurface(tint: themeManager.accentColor, playIcon: themeManager.onAccentText, serifTitle: true)
-    }
-
-    private var legacyBody: some View {
-        playerSurface(tint: themeManager.semanticBlue, playIcon: .white, serifTitle: false)
     }
 
     // MARK: - Surface
 
-    private func playerSurface(tint: Color, playIcon: Color, serifTitle: Bool) -> some View {
+    private var playerSurface: some View {
         ZStack {
             blurredCover
             VStack(spacing: 0) {
                 topBar
                 Spacer(minLength: 8)
-                panel(tint: tint, playIcon: playIcon, serifTitle: serifTitle)
+                panel
                 Spacer(minLength: 8)
             }
             .padding(.horizontal, 20)
@@ -92,7 +84,7 @@ struct JourneyListenView: View {
             .opacity(presenter.preparing == nil ? 1 : 0.15)
 
             if let prep = presenter.preparing {
-                preparingOverlay(prep, tint: tint)
+                preparingOverlay(prep)
                     .transition(.opacity)
             }
         }
@@ -103,7 +95,7 @@ struct JourneyListenView: View {
     /// (Apple-hosted on-demand), then clears itself when playback starts. On failure it offers
     /// a retry. Bundled journeys never show this.
     @ViewBuilder
-    private func preparingOverlay(_ prep: JourneyListenPresenter.Preparing, tint: Color) -> some View {
+    private func preparingOverlay(_ prep: JourneyListenPresenter.Preparing) -> some View {
         VStack(spacing: 16) {
             switch prep {
             case .downloading(let progress):
@@ -200,13 +192,13 @@ struct JourneyListenView: View {
 
     // MARK: - Glass panel
 
-    private func panel(tint: Color, playIcon: Color, serifTitle: Bool) -> some View {
+    private var panel: some View {
         VStack(spacing: 24) {
             coverThumbnail
-            titleBlock(serifTitle: serifTitle)
-            scrubber(tint: tint)
-            transportRow(tint: tint, playIcon: playIcon)
-            secondaryRow(tint: tint)
+            titleBlock
+            scrubber
+            transportRow
+            secondaryRow
         }
         .padding(.horizontal, 22)
         .padding(.vertical, 26)
@@ -245,10 +237,10 @@ struct JourneyListenView: View {
         .shadow(color: Color.black.opacity(0.5), radius: 26, y: 12)
     }
 
-    private func titleBlock(serifTitle: Bool) -> some View {
+    private var titleBlock: some View {
         VStack(spacing: 6) {
             Text(dive.titleEn)
-                .font(serifTitle ? EmType.serif(30, .semiBold) : .system(size: 26, weight: .bold))
+                .font(EmType.serif(30, .semiBold))
                 .foregroundColor(DeepDivePalette.cream)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
@@ -271,7 +263,7 @@ struct JourneyListenView: View {
     /// length on the right - seeking anywhere across all the stitched clips. Until the clip
     /// durations resolve (first play measures the streamed verses, then they're cached) it
     /// falls back to the current clip's readout. Dragging commits the seek on release.
-    private func scrubber(tint: Color) -> some View {
+    private var scrubber: some View {
         let total = player.journeyDuration > 0 ? player.journeyDuration : max(player.duration, 1)
         return VStack(spacing: 8) {
             Slider(
@@ -307,7 +299,7 @@ struct JourneyListenView: View {
         }
     }
 
-    private func transportRow(tint: Color, playIcon: Color) -> some View {
+    private var transportRow: some View {
         HStack(spacing: 44) {
             Button { player.previousBeat() } label: {
                 Image(systemName: "backward.fill")
@@ -319,7 +311,7 @@ struct JourneyListenView: View {
             Button { player.togglePlayPause() } label: {
                 Image(systemName: player.isPlaying ? "pause.fill" : "play.fill")
                     .font(.system(size: 30, weight: .semibold))
-                    .foregroundColor(playIcon)
+                    .foregroundColor(themeManager.onAccentText)
                     .frame(width: 78, height: 78)
                     .background(
                         Circle()
@@ -339,14 +331,14 @@ struct JourneyListenView: View {
     }
 
     /// Speed + sleep-timer chips.
-    private func secondaryRow(tint: Color) -> some View {
+    private var secondaryRow: some View {
         HStack(spacing: 12) {
-            speedControl(tint: tint)
-            sleepControl(tint: tint)
+            speedControl
+            sleepControl
         }
     }
 
-    private func speedControl(tint: Color) -> some View {
+    private var speedControl: some View {
         Menu {
             ForEach(rates, id: \.self) { rate in
                 Button { player.setRate(rate) } label: {
@@ -358,11 +350,11 @@ struct JourneyListenView: View {
                 }
             }
         } label: {
-            controlChip(icon: "speedometer", text: rateLabel(player.playbackRate), tint: tint)
+            controlChip(icon: "speedometer", text: rateLabel(player.playbackRate))
         }
     }
 
-    private func sleepControl(tint: Color) -> some View {
+    private var sleepControl: some View {
         Menu {
             if player.sleepTimerTimeRemaining != nil {
                 Button(role: .destructive) {
@@ -377,13 +369,12 @@ struct JourneyListenView: View {
         } label: {
             controlChip(
                 icon: "moon.zzz.fill",
-                text: player.sleepTimerTimeRemaining.map { formatTime($0) } ?? "Sleep",
-                tint: tint
+                text: player.sleepTimerTimeRemaining.map { formatTime($0) } ?? "Sleep"
             )
         }
     }
 
-    private func controlChip(icon: String, text: String, tint: Color) -> some View {
+    private func controlChip(icon: String, text: String) -> some View {
         HStack(spacing: 6) {
             Image(systemName: icon).font(.system(size: 13, weight: .semibold))
             Text(text).font(.system(size: 14, weight: .semibold))

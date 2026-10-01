@@ -32,11 +32,9 @@ struct LifeMomentDetailView: View {
         ZStack {
             AdaptiveModernBackground()
 
-            if themeManager.isMidnightEmerald {
-                EmCoverBand(assetName: "LifeMomentsCover")
-                    .frame(height: 300)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            }
+            EmCoverBand(assetName: "LifeMomentsCover")
+                .frame(height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
             ScrollView {
                 VStack(spacing: 18) {
@@ -62,7 +60,7 @@ struct LifeMomentDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {
@@ -74,8 +72,7 @@ struct LifeMomentDetailView: View {
                 }
             }
         }
-        .darkScreenAura()
-        .hideTabBarInEmerald()
+        .hideTabBar()
     }
 
     // Hero — category icon chip + the situation + a category pill.
@@ -93,7 +90,7 @@ struct LifeMomentDetailView: View {
             .shadow(color: themeManager.accentColor.opacity(0.18), radius: 16, x: 0, y: 6)
 
             Text(moment.situationEn)
-                .font(themeManager.isMidnightEmerald ? EmType.serif(30, .semiBold) : .system(size: 30, weight: .bold, design: .rounded))
+                .font(EmType.serif(30, .semiBold))
                 .foregroundColor(themeManager.primaryText)
                 .multilineTextAlignment(.center)
 
@@ -129,7 +126,7 @@ struct LifeMomentDetailView: View {
 
                 if let v = verse {
                     Text(v.arabicText)
-                        .font(themeManager.isMidnightEmerald ? EmType.arabic(26 * readingSettings.scale) : .system(size: 24 * readingSettings.scale, weight: .regular))
+                        .font(EmType.arabic(26 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(10 * readingSettings.scale)
                         .frame(maxWidth: .infinity, alignment: .trailing)
@@ -137,7 +134,7 @@ struct LifeMomentDetailView: View {
                         .textSelection(.enabled)
 
                     Text(v.translation)
-                        .font(themeManager.isMidnightEmerald ? EmType.serif(16 * readingSettings.scale, .medium) : .system(size: 16 * readingSettings.scale, weight: .regular))
+                        .font(EmType.serif(16 * readingSettings.scale, .medium))
                         .foregroundColor(themeManager.secondaryText)
                         .lineSpacing(5 * readingSettings.scale)
                         .multilineTextAlignment(.leading)
@@ -163,13 +160,13 @@ struct LifeMomentDetailView: View {
                     .foregroundColor(themeManager.accentColor)
 
                     Text(dua.situationEn)
-                        .font(themeManager.isMidnightEmerald ? EmType.serif(20, .semiBold) : .system(size: 19, weight: .bold))
+                        .font(EmType.serif(20, .semiBold))
                         .foregroundColor(themeManager.primaryText)
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     Text(dua.arabic)
-                        .font(themeManager.isMidnightEmerald ? EmType.arabic(21 * readingSettings.scale) : .system(size: 20 * readingSettings.scale, weight: .regular))
+                        .font(EmType.arabic(21 * readingSettings.scale))
                         .foregroundColor(themeManager.primaryText)
                         .lineSpacing(8 * readingSettings.scale)
                         .lineLimit(2)
@@ -177,7 +174,7 @@ struct LifeMomentDetailView: View {
                         .environment(\.layoutDirection, .rightToLeft)
 
                     Text(dua.transliteration)
-                        .font(themeManager.isMidnightEmerald ? EmType.serifItalic(15 * readingSettings.scale) : .system(size: 14 * readingSettings.scale, weight: .regular, design: .serif).italic())
+                        .font(EmType.serifItalic(15 * readingSettings.scale))
                         .foregroundColor(themeManager.secondaryText)
                         .lineLimit(1)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -203,35 +200,23 @@ struct LifeMomentDetailView: View {
         .buttonStyle(.plain)
     }
 
-    // Themed card container — EmCard glass for emerald, rounded glass/white for legacy.
+    // Card container - EmCard glass.
     // `highlight` gives the du'a card a gold edge + soft glow so it stands apart.
     @ViewBuilder
     private func cardContainer<Content: View>(highlight: Bool = false, @ViewBuilder _ content: () -> Content) -> some View {
-        if themeManager.isMidnightEmerald {
-            if highlight {
-                content()
-                    .padding(16)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .fill(themeManager.accentColor.opacity(0.07))
-                            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                .stroke(themeManager.accentColor.opacity(0.30), lineWidth: 1))
-                    )
-                    .shadow(color: themeManager.accentColor.opacity(0.12), radius: 18, x: 0, y: 8)
-            } else {
-                EmCard { content().padding(16) }
-            }
-        } else {
+        if highlight {
             content()
                 .padding(16)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                        .overlay(RoundedRectangle(cornerRadius: 20)
-                            .stroke(highlight ? themeManager.accentColor.opacity(0.4) : themeManager.strokeColor, lineWidth: 1))
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .fill(themeManager.accentColor.opacity(0.07))
+                        .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .stroke(themeManager.accentColor.opacity(0.30), lineWidth: 1))
                 )
+                .shadow(color: themeManager.accentColor.opacity(0.12), radius: 18, x: 0, y: 8)
+        } else {
+            EmCard { content().padding(16) }
         }
     }
 }

@@ -9,8 +9,10 @@
 //  hairline + gold icon tile; upcoming/soon items are muted. Tapping "All N ›"
 //  pushes a `SectionFullList` - the existing full-width cards scoped to one section.
 //
-//  All colors come from ThemeManager, so the shelves adapt to both Light and
+//  All colors come from ThemeManager, so the shelves adapt to both Sage Dawn and
 //  Midnight Emerald exactly like the full-width cards they replace on the surface.
+//  A poster's art stays dark in both themes, so what is drawn on it keeps the
+//  Midnight Emerald values.
 //
 
 import SwiftUI
@@ -85,6 +87,7 @@ struct ShelfItem: Identifiable {
 /// their bottoms line up even when some carry a description and some don't.
 struct ShelfCard: View {
     @ObservedObject private var tm = ThemeManager.shared
+    @Environment(\.colorScheme) private var colorScheme
     let item: ShelfItem
     /// Section label, spoken as the third clause of the card's accessibility label.
     let section: String
@@ -110,6 +113,9 @@ struct ShelfCard: View {
             cardButton
             if item.onListen != nil {
                 listenButton
+                    // On a poster the glyph sits on the art's dark top scrim in both
+                    // themes; on the icon face it sits on the card surface.
+                    .environment(\.colorScheme, item.coverAssetName != nil ? .dark : colorScheme)
             }
         }
     }
@@ -182,17 +188,21 @@ struct ShelfCard: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(14)
+            // Drawn on the art's dark sky in both themes.
+            .environment(\.colorScheme, .dark)
         }
         .frame(width: Self.cardWidth, height: Self.posterHeight)
         .clipShape(RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous)
                 .stroke(item.isAvailable ? tm.accentColor.opacity(0.4) : tm.strokeColor, lineWidth: 1)
+                // The hairline frames the dark art, so it keeps its Midnight values.
+                .environment(\.colorScheme, .dark)
         )
         // Deliberately lighter than the 0.72 the text-row cards use: a poster at 0.72
         // reads washed out, and a coming-soon cover still has to be worth wanting.
         .opacity(item.isAvailable ? 1 : 0.82)
-        .shadow(color: Color.black.opacity(0.34), radius: 22, x: 0, y: 10)
+        .emShadow(.custom(opacity: 0.34, radius: 22, y: 10))
         .background(
             // Keep the hub's uniform-height machinery fed even on the poster path.
             GeometryReader { geo in
@@ -244,7 +254,7 @@ struct ShelfCard: View {
             RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous)
                 .stroke(item.isAvailable ? tm.accentColor.opacity(0.4) : tm.strokeColor, lineWidth: 1)
         )
-        .shadow(color: Color.black.opacity(0.28), radius: 20, x: 0, y: 8)
+        .emShadow(.custom(opacity: 0.28, radius: 20, y: 8))
     }
 
     /// Status eyebrow - a small-caps tinted label, or the PREMIUM chip.

@@ -4,7 +4,7 @@
 //
 //  Today-tab "What's New" spotlight. Announces one recently added feature; the whole
 //  card taps to open it, the x dismisses it (both retire it via WhatsNewManager). Drop
-//  into TodayView / EmeraldTodayView, gated on WhatsNewManager.shared.spotlight != nil.
+//  into EmeraldTodayView, gated on WhatsNewManager.shared.spotlight != nil.
 //
 //  Chrome - fixed size (no ReadingSettingsManager scaling), matching DailyChallengeCard /
 //  DailyCrosswordCard.
@@ -25,18 +25,16 @@ struct WhatsNewCard: View {
 
 
     var body: some View {
-        Group {
-            if themeManager.isMidnightEmerald { emeraldCard } else { legacyCard }
-        }
-        .sheet(isPresented: $showingWidgetExplainer) {
-            WidgetExplainerView()
-        }
-        .fullScreenCover(isPresented: $showingDuasZiyarat) {
-            DuasZiyaratView()
-        }
-        .fullScreenCover(isPresented: $showingMiracleStories) {
-            MiracleStoriesView()
-        }
+        card
+            .sheet(isPresented: $showingWidgetExplainer) {
+                WidgetExplainerView()
+            }
+            .fullScreenCover(isPresented: $showingDuasZiyarat) {
+                DuasZiyaratView()
+            }
+            .fullScreenCover(isPresented: $showingMiracleStories) {
+                MiracleStoriesView()
+            }
     }
 
     // MARK: Actions
@@ -87,6 +85,13 @@ struct WhatsNewCard: View {
                     JourneyListenPresenter.shared.open(dive)
                 }
             }
+        case .lightTheme:
+            // Switch to Sage Dawn in place; Settings > Appearance switches back.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    ThemeManager.shared.selectedTheme = .sageDawn
+                }
+            }
         case .passage(let surah, let index):
             // Take the passage deep link: the app resolves the passage's first verse,
             // switches to the Quran tab and pushes the surah at that passage.
@@ -119,15 +124,15 @@ struct WhatsNewCard: View {
                 .font(.system(size: 10, weight: .bold))
                 .foregroundColor(themeManager.tertiaryText)
                 .frame(width: 24, height: 24)
-                .background(Circle().fill(Color.white.opacity(0.06)))
+                .background(Circle().fill(themeManager.glassSurface))
         }
         .buttonStyle(.plain)
         .padding(12)
     }
 
-    // MARK: Emerald
+    // MARK: Card
 
-    private var emeraldCard: some View {
+    private var card: some View {
         ZStack(alignment: .topTrailing) {
             Button(action: open) {
                 EmCard(glow: true) {
@@ -179,90 +184,23 @@ struct WhatsNewCard: View {
             dismissButton()
         }
     }
-
-    // MARK: Legacy (Light / Night Sanctuary)
-
-    private var legacyCard: some View {
-        ZStack(alignment: .topTrailing) {
-            Button(action: open) {
-                VStack(alignment: .leading, spacing: 12) {
-                    Text(WhatsNewStrings.eyebrow.uppercased())
-                        .font(.system(size: 11, weight: .bold)).tracking(2)
-                        .foregroundColor(themeManager.accentColor)
-
-                    HStack(alignment: .top, spacing: 14) {
-                        ZStack {
-                            Circle().fill(themeManager.accentGradient).frame(width: 50, height: 50)
-                                .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                            Image(systemName: item.sfSymbol)
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(.white)
-                        }
-                        VStack(alignment: .leading, spacing: 5) {
-                            // A long title wraps to a second line rather than truncating;
-                            // the pill stays on the first line's baseline.
-                            HStack(alignment: .firstTextBaseline, spacing: 8) {
-                                Text(item.title)
-                                    .font(.system(size: 17, weight: .semibold))
-                                    .foregroundColor(themeManager.primaryText)
-                                    .lineLimit(2)
-                                    .fixedSize(horizontal: false, vertical: true)
-                                newPill
-                            }
-                            Text(item.blurb)
-                                .font(.system(size: 13))
-                                .foregroundColor(themeManager.secondaryText)
-                                .lineSpacing(2)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                        }
-                    }
-
-                    Rectangle().fill(themeManager.strokeColor).frame(height: 1)
-
-                    HStack(spacing: 6) {
-                        Text(item.cta)
-                            .font(.system(size: 13, weight: .semibold))
-                            .foregroundColor(themeManager.accentColor)
-                        Image(systemName: "arrow.right")
-                            .font(.system(size: 12, weight: .semibold))
-                            .foregroundColor(themeManager.accentColor)
-                        Spacer()
-                    }
-                }
-                .padding(20)
-                .background {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(themeManager.selectedTheme == .nightSanctuary
-                              ? themeManager.glassSurface : Color.white)
-                        .overlay(RoundedRectangle(cornerRadius: 20)
-                            .stroke(themeManager.strokeColor, lineWidth: 1))
-                        .shadow(color: themeManager.selectedTheme == .nightSanctuary
-                                ? Color.black.opacity(0.45) : Color.black.opacity(0.05),
-                                radius: 12, x: 0, y: 4)
-                }
-                .contentShape(Rectangle())
-            }
-            .buttonStyle(EmPressStyle.gentle)
-
-            dismissButton()
-        }
-    }
 }
 
 #if DEBUG
 private func _wnPreviewItem() -> WhatsNewItem { WhatsNewCatalog.all[0] }
 
 #Preview("What's New - English, Emerald") {
-    let _ = ThemeManager.shared.selectedTheme = .nightSanctuary
+    let _ = ThemeManager.shared.selectedTheme = .midnightEmerald
     return WhatsNewCard(item: _wnPreviewItem(), selectedTab: .constant(0))
         .padding(20).background(Color.black)
+        .preferredColorScheme(.dark)
 }
 
 #Preview("What's New - English, Light") {
-    let _ = ThemeManager.shared.selectedTheme = .warmInviting
+    let _ = ThemeManager.shared.selectedTheme = .sageDawn
     return WhatsNewCard(item: _wnPreviewItem(), selectedTab: .constant(0))
-        .padding(20).background(Color(red: 0.97, green: 0.95, blue: 0.92))
+        .padding(20).background(ThemeManager.shared.primaryBackground)
+        .preferredColorScheme(.light)
 }
 
 #endif

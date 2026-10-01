@@ -12,6 +12,7 @@ import SwiftUI
 
 struct WidgetExplainerView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) private var colorScheme
     @StateObject private var themeManager = ThemeManager.shared
     @StateObject private var locationService = PrayerLocationService()
 
@@ -169,13 +170,15 @@ struct WidgetExplainerView: View {
                              : Copy.enableButton.text)
                             .font(.system(size: 16, weight: .semibold))
                     }
-                    .foregroundColor(.white)
+                    .foregroundColor(lightSavedButton ? themeManager.accentColor : .white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 14)
                     .background(
                         RoundedRectangle(cornerRadius: 14, style: .continuous)
-                            .fill(themeManager.accentColor.opacity(
-                                locationService.status == .saved ? 0.55 : 1))
+                            .fill(lightSavedButton
+                                  ? themeManager.accentChip
+                                  : themeManager.accentColor.opacity(
+                                      locationService.status == .saved ? 0.55 : 1))
                     )
                 }
                 .disabled(locationService.status == .saved || locationService.status == .locating)
@@ -184,7 +187,7 @@ struct WidgetExplainerView: View {
                     Text(note)
                         .font(.system(size: 13, weight: .medium))
                         .foregroundColor(locationService.status == .denied
-                                         ? Color(red: 0.86, green: 0.49, blue: 0.45)
+                                         ? themeManager.destructive
                                          : themeManager.secondaryText)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
@@ -204,33 +207,27 @@ struct WidgetExplainerView: View {
         }
     }
 
-    // MARK: - Theme helpers
+    // MARK: - Style helpers
 
     private var titleFont: Font {
-        themeManager.isMidnightEmerald ? EmType.serif(24, .semiBold) : .system(size: 20, weight: .bold)
+        EmType.serif(24, .semiBold)
     }
     private var headingFont: Font {
-        themeManager.isMidnightEmerald ? EmType.serif(19, .semiBold) : .system(size: 16, weight: .semibold)
+        EmType.serif(19, .semiBold)
     }
     private var bodyFont: Font {
         .system(size: 15, weight: .regular)
     }
 
-    @ViewBuilder
+    /// The saved (done) state of the Enable button. Midnight dims the gold under
+    /// white text; on the light ground that dimmed gold is too pale for white, so
+    /// Sage Dawn shows it as a gold chip with gold text instead.
+    private var lightSavedButton: Bool {
+        locationService.status == .saved && colorScheme == .light
+    }
+
     private func card<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        if themeManager.isMidnightEmerald {
-            EmCard(cornerRadius: 16) { content() }
-        } else {
-            content()
-                .background(
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(themeManager.secondaryBackground)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                )
-        }
+        EmCard(cornerRadius: 16) { content() }
     }
 }
 

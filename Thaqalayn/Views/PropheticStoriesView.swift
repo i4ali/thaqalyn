@@ -42,28 +42,7 @@ struct PropheticStoriesView: View {
 
                 VStack(spacing: 0) {
                     // Modern header
-                    if themeManager.isMidnightEmerald {
-                        emeraldHeader
-                    } else {
-                    VStack(spacing: 12) {
-                        HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Prophetic Stories")
-                                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                                    .foregroundColor(themeManager.primaryText)
-
-                                Text("Quranic accounts of the messengers")
-                                    .font(.system(size: 16, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
-                            }
-
-                            Spacer()
-                        }
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-                    .padding(.bottom, 12)
-                    }
+                    emeraldHeader
 
                     // Search bar
                     HStack(spacing: 12) {
@@ -79,7 +58,7 @@ struct PropheticStoriesView: View {
                     .padding(.vertical, 12)
                     .background {
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.95, green: 0.95, blue: 0.95))
+                            .fill(themeManager.glassSurface)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 12)
                                     .stroke(themeManager.strokeColor, lineWidth: 1)
@@ -139,9 +118,7 @@ struct PropheticStoriesView: View {
                                                 .foregroundColor(themeManager.accentColor)
 
                                             Text(category.displayName)
-                                                .font(themeManager.isMidnightEmerald
-                                                      ? EmType.serif(20, .semiBold)
-                                                      : .system(size: 18, weight: .bold))
+                                                .font(EmType.serif(20, .semiBold))
                                                 .foregroundColor(themeManager.primaryText)
                                                 .textCase(nil)
 
@@ -171,7 +148,7 @@ struct PropheticStoriesView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -186,7 +163,6 @@ struct PropheticStoriesView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 
     private var emeraldHeader: some View {
@@ -217,10 +193,6 @@ struct PropheticStoryCardView: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: story.categoryIcon)
@@ -248,79 +220,6 @@ struct PropheticStoryCardView: View {
         .contentShape(Rectangle())
         .padding(.horizontal, 20)
     }
-
-    private var legacyBody: some View {
-        HStack(alignment: .top, spacing: 16) {
-            // Category icon
-            ZStack {
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 50, height: 50)
-                    .shadow(
-                        color: themeManager.accentColor.opacity(0.3),
-                        radius: 8
-                    )
-
-                Image(systemName: story.categoryIcon)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
-            }
-
-            // Story content
-            VStack(alignment: .leading, spacing: 6) {
-                // Prophet name badge
-                Text(story.prophetEn)
-                    .font(.system(size: 12, weight: .bold))
-                    .foregroundColor(themeManager.accentColor)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 4)
-                    .background(
-                        Capsule()
-                            .fill(themeManager.accentColor.opacity(0.15))
-                    )
-
-                Text(story.titleEn)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                // Verse count
-                Text("\(story.verseCount) verse\(story.verseCount == 1 ? "" : "s") • \(story.category.displayName)")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-
-                // Verse references
-                let verseRefs = story.verses.prefix(3).map { $0.verseReference }.joined(separator: " • ")
-                Text(verseRefs)
-                    .font(.system(size: 13, weight: .medium))
-                    .foregroundColor(themeManager.tertiaryText)
-                    .lineLimit(1)
-            }
-
-            Spacer()
-
-            // Chevron or lock icon
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                    radius: 12, x: 0, y: 4
-                )
-        }
-        .contentShape(Rectangle())
-        .padding(.horizontal, 20)
-    }
 }
 
 struct StoryCategoryChip: View {
@@ -331,10 +230,6 @@ struct StoryCategoryChip: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         Button(action: action) {
             HStack(spacing: 6) {
                 Image(systemName: icon)
@@ -357,35 +252,6 @@ struct StoryCategoryChip: View {
             }
         }
         .buttonStyle(EmPressStyle())
-    }
-
-    private var legacyBody: some View {
-        Button(action: action) {
-            HStack(spacing: 6) {
-                Image(systemName: icon)
-                    .font(.system(size: 14, weight: .semibold))
-
-                Text(title)
-                    .font(.system(size: 14, weight: .semibold))
-            }
-            .foregroundColor(isSelected ? .white : themeManager.primaryText)
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .background {
-                if isSelected {
-                    Capsule()
-                        .fill(themeManager.accentGradient)
-                        .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                } else {
-                    Capsule()
-                        .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.95, green: 0.95, blue: 0.95))
-                        .overlay(
-                            Capsule()
-                                .stroke(themeManager.strokeColor, lineWidth: 1)
-                        )
-                }
-            }
-        }
     }
 }
 

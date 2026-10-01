@@ -23,23 +23,11 @@ struct LifeMomentsView: View {
                 VStack(spacing: 0) {
                     // Modern header
                     VStack(spacing: 12) {
-                        HStack(alignment: themeManager.isMidnightEmerald ? .top : .center) {
-                            if themeManager.isMidnightEmerald {
-                                VStack(alignment: .leading, spacing: 7) {
-                                    Text("GUIDANCE").font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
-                                    Text("Life Moments").font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
-                                    Text("Find guidance for any situation").font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
-                                }
-                            } else {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text("Life Moments")
-                                        .font(.system(size: 34, weight: .bold, design: .rounded))
-                                        .foregroundColor(themeManager.primaryText)
-
-                                    Text("Find guidance for any situation")
-                                        .font(.system(size: 16, weight: .medium))
-                                        .foregroundColor(themeManager.secondaryText)
-                                }
+                        HStack(alignment: .top) {
+                            VStack(alignment: .leading, spacing: 7) {
+                                Text("GUIDANCE").font(.system(size: 11, weight: .bold)).tracking(3).foregroundColor(themeManager.accentColor)
+                                Text("Life Moments").font(EmType.serif(40, .semiBold)).foregroundColor(themeManager.primaryText)
+                                Text("Find guidance for any situation").font(.system(size: 13.5)).foregroundColor(themeManager.secondaryText)
                             }
 
                             Spacer()
@@ -48,7 +36,7 @@ struct LifeMomentsView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                     .padding(.bottom, 20)
-                    .emCoverHeaderBandIfEmerald("LifeMomentsCover", height: 280)
+                    .emCoverHeaderBand("LifeMomentsCover", height: 280)
 
                     // Moments list
                     if lifeMomentsManager.isLoading {
@@ -87,7 +75,7 @@ struct LifeMomentsView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -102,7 +90,6 @@ struct LifeMomentsView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 }
 
@@ -111,10 +98,6 @@ struct MomentCard: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: moment.categoryIcon, size: 46)
@@ -133,60 +116,6 @@ struct MomentCard: View {
                     .foregroundColor(themeManager.tertiaryText)
             }
             .padding(16)
-        }
-        .contentShape(Rectangle())
-    }
-
-    private var legacyBody: some View {
-        HStack(alignment: .center, spacing: 16) {
-            // Category icon
-            ZStack {
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 50, height: 50)
-                    .shadow(
-                        color: themeManager.accentColor.opacity(0.3),
-                        radius: 8
-                    )
-
-                Image(systemName: moment.categoryIcon)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
-            }
-
-            // Situation text
-            VStack(alignment: .leading, spacing: 4) {
-                Text(moment.situationEn)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                // Verse reference
-                Text(moment.verseReference)
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-            }
-
-            Spacer()
-
-            // Chevron or lock icon
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                    radius: 12, x: 0, y: 4
-                )
         }
         .contentShape(Rectangle())
     }

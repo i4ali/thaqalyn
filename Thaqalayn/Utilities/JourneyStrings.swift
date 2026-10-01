@@ -129,7 +129,6 @@ enum JourneyStrings {
     }
     static func dayN(_ n: Int) -> String { "Day \(n)" }
     static func stationN(_ n: Int) -> String { "Station \(n)" }
-    static let today = "TODAY"
     static let loadingJourney = "Loading journey..."
     static let errorLoadingJourney = "Error Loading Journey"
 

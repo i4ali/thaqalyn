@@ -23,28 +23,7 @@ struct FastingVersesView: View {
 
                 VStack(spacing: 0) {
                     // Header
-                    if themeManager.isMidnightEmerald {
-                        emeraldHeaderView
-                    } else {
-                    VStack(spacing: 12) {
-                        HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(headerTitle)
-                                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                                    .foregroundColor(themeManager.primaryText)
-
-                                Text(headerSubtitle)
-                                    .font(.system(size: 16, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
-                            }
-
-                            Spacer()
-                        }
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-                    .padding(.bottom, 16)
-                    }
+                    emeraldHeaderView
 
                     // Category list
                     if fastingManager.isLoading {
@@ -81,7 +60,7 @@ struct FastingVersesView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -96,7 +75,6 @@ struct FastingVersesView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 
     private var emeraldHeaderView: some View {
@@ -132,10 +110,6 @@ struct FastingCategoryCard: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         Button(action: onTap) {
             EmCard {
                 HStack(spacing: 14) {
@@ -164,66 +138,6 @@ struct FastingCategoryCard: View {
             }
         }
         .buttonStyle(EmPressStyle())
-        .padding(.horizontal, 20)
-    }
-
-    private var legacyBody: some View {
-        Button(action: onTap) {
-            HStack(alignment: .top, spacing: 16) {
-                // Category icon
-                ZStack {
-                    Circle()
-                        .fill(themeManager.accentGradient)
-                        .frame(width: 50, height: 50)
-                        .shadow(
-                            color: themeManager.accentColor.opacity(0.3),
-                            radius: 8
-                        )
-
-                    Image(systemName: category.icon)
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(.white)
-                }
-
-                // Category content
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(category.titleEn)
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-
-                    Text(category.descriptionEn)
-                        .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-
-                    // Verse count
-                    Text("\(category.verseCount) verse\(category.verseCount == 1 ? "" : "s")")
-                        .font(.system(size: 13, weight: .medium))
-                        .foregroundColor(themeManager.tertiaryText)
-                }
-
-                Spacer()
-
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-            .padding(20)
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .shadow(
-                        color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                        radius: 12, x: 0, y: 4
-                    )
-            }
-        }
-        .buttonStyle(PlainButtonStyle())
         .padding(.horizontal, 20)
     }
 }

@@ -23,104 +23,12 @@ struct FastingCategoryDetailView: View {
             // Adaptive background
             AdaptiveModernBackground()
 
-            if themeManager.isMidnightEmerald {
-                EmCoverBand(assetName: "FastingCover")
-                    .frame(height: 300)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            }
+            EmCoverBand(assetName: "FastingCover")
+                .frame(height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
             ScrollView {
-                if themeManager.isMidnightEmerald {
-                    emeraldSections
-                } else {
-                VStack(spacing: 24) {
-                    // Category header
-                    VStack(spacing: 16) {
-                        // Icon and title
-                        HStack(spacing: 16) {
-                            ZStack {
-                                Circle()
-                                    .fill(themeManager.accentGradient)
-                                    .frame(width: 60, height: 60)
-                                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 10)
-
-                                Image(systemName: category.icon)
-                                    .font(.system(size: 24, weight: .semibold))
-                                    .foregroundColor(.white)
-                            }
-
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(category.titleEn)
-                                    .font(.system(size: 24, weight: .bold, design: .rounded))
-                                    .foregroundColor(themeManager.primaryText)
-
-                                Text("\(category.verseCount) verse\(category.verseCount == 1 ? "" : "s")")
-                                    .font(.system(size: 14, weight: .medium))
-                                    .foregroundColor(themeManager.secondaryText)
-                            }
-
-                            Spacer()
-                        }
-
-                        // Description
-                        Text(category.descriptionEn)
-                            .font(.system(size: 16 * readingSettings.scale, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-                            .lineSpacing(4 * readingSettings.scale)
-                    }
-                    .padding(24)
-                    .background {
-                        RoundedRectangle(cornerRadius: 24)
-                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 24)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                            .shadow(
-                                color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
-                                radius: 16, x: 0, y: 4
-                            )
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-
-                    if let narration = category.narration {
-                        AhlulBaytNarrationCard(narration: narration)
-                    }
-
-                    // Verses header
-                    HStack(alignment: .top, spacing: 8) {
-                        Image(systemName: "book.pages.fill")
-                            .font(.system(size: 16))
-                            .foregroundColor(themeManager.accentColor)
-
-                        Text("VERSES")
-                            .font(.system(size: 14, weight: .bold))
-                            .foregroundColor(themeManager.secondaryText)
-                            .tracking(1.2)
-
-                        Spacer()
-                    }
-                    .padding(.horizontal, 20)
-
-                    // Verses list
-                    ForEach(Array(category.verses.enumerated()), id: \.element.id) { index, fastingVerse in
-                        FastingVerseCard(
-                            fastingVerse: fastingVerse,
-                            index: index + 1,
-                            totalVerses: category.verseCount,
-                            onNavigate: {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                                    selectedVerseForNav = (fastingVerse.surahNumber, fastingVerse.verseNumber)
-                                    navigateToVerse = true
-                                }
-                            }
-                        )
-                    }
-
-                    Spacer(minLength: 40)
-                }
-                }
+                emeraldSections
             }
 
             // Hidden NavigationLink for verse navigation
@@ -137,7 +45,7 @@ struct FastingCategoryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {
@@ -150,7 +58,6 @@ struct FastingCategoryDetailView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura(glowOpacity: 0.36)
     }
 
     @ViewBuilder private var emeraldSections: some View {
@@ -239,10 +146,6 @@ struct FastingVerseCard: View {
     }
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmCard {
             VStack(alignment: .leading, spacing: 14) {
                 // Verse header
@@ -321,149 +224,11 @@ struct FastingVerseCard: View {
         }
         .padding(.horizontal, 20)
     }
-
-    private var legacyBody: some View {
-        VStack(spacing: 0) {
-            // Verse header
-            HStack(spacing: 12) {
-                // Verse number badge
-                ZStack {
-                    Circle()
-                        .fill(themeManager.accentGradient)
-                        .frame(width: 40, height: 40)
-
-                    Text("\(index)")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(.white)
-                }
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Verse \(index) of \(totalVerses)")
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(themeManager.secondaryText)
-
-                    Text("\(surahName) (\(fastingVerse.surahNumber):\(fastingVerse.verseNumber))")
-                        .font(.system(size: 15, weight: .bold))
-                        .foregroundColor(themeManager.primaryText)
-                }
-
-                Spacer()
-
-                VerseRecitationButton(surahNumber: fastingVerse.surahNumber, verseNumber: fastingVerse.verseNumber, size: 32)
-
-                if fastingVerse.isKeyVerse {
-                    Text("KEY VERSE")
-                        .font(.system(size: 11, weight: .bold))
-                        .foregroundColor(themeManager.accentColor)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background {
-                            Capsule()
-                                .fill(themeManager.accentColor.opacity(0.15))
-                        }
-                }
-            }
-            .padding(20)
-
-            Divider()
-                .background(themeManager.strokeColor)
-
-            // Verse text
-            if let verse = verseData {
-                VStack(alignment: .leading, spacing: 16) {
-                    // Arabic text
-                    Text(verse.arabic)
-                        .font(.custom("AmiriQuran-Regular", size: 24 * readingSettings.scale))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8 * readingSettings.scale)
-                        .multilineTextAlignment(.trailing)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
-
-                    // Translation
-                    Text(verse.translation)
-                        .font(.system(size: 16 * readingSettings.scale, weight: .medium))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4 * readingSettings.scale)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(20)
-
-                Divider()
-                    .background(themeManager.strokeColor)
-            }
-
-            // Relevance note
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 8) {
-                    Image(systemName: "text.bubble.fill")
-                        .font(.system(size: 14))
-                        .foregroundColor(themeManager.accentColor)
-
-                    Text("Relevance to Fasting")
-                        .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(themeManager.secondaryText)
-                }
-
-                Text(fastingVerse.relevanceNoteEn)
-                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(4 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .padding(20)
-            .background {
-                Rectangle()
-                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
-            }
-
-            Divider()
-                .background(themeManager.strokeColor)
-
-            // Action button
-            HStack(spacing: 16) {
-                Button(action: onNavigate) {
-                    HStack(spacing: 6) {
-                        Image(systemName: "book.fill")
-                            .font(.system(size: 14))
-
-                        Text("Read Full Tafsir")
-                            .font(.system(size: 14, weight: .semibold))
-                    }
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 12)
-                    .background {
-                        Capsule()
-                            .fill(themeManager.accentGradient)
-                            .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                    }
-                }
-
-                Spacer()
-            }
-            .padding(20)
-        }
-        .background {
-            RoundedRectangle(cornerRadius: 24)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
-                    radius: 16, x: 0, y: 4
-                )
-        }
-        .padding(.horizontal, 20)
-    }
 }
 
 /// "From the Ahlul Bayt (a)" card: an attributed narration (Arabic + translation + source).
-/// Shared by the Fasting and Prophetic Parallels detail screens; mirrors the surrounding
-/// cards' theme branching and respects the reading text-size control.
+/// Shared by the Fasting and Prophetic Parallels detail screens; respects the reading
+/// text-size control.
 struct AhlulBaytNarrationCard: View {
     let narration: AhlulBaytNarration
     @StateObject private var themeManager = ThemeManager.shared
@@ -473,10 +238,6 @@ struct AhlulBaytNarrationCard: View {
     private let label = "From the Ahlul Bayt (a)"
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmDetailCard(icon: "quote.bubble", label: label) {
             VStack(alignment: .leading, spacing: 14) {
                 Text(narration.arabic)
@@ -500,51 +261,6 @@ struct AhlulBaytNarrationCard: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
-    }
-
-    private var legacyBody: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 8) {
-                Image(systemName: "quote.bubble.fill")
-                    .font(.system(size: 14))
-                    .foregroundColor(themeManager.accentColor)
-                Text(label)
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundColor(themeManager.secondaryText)
-                Spacer(minLength: 0)
-            }
-
-            Text(narration.arabic)
-                .font(.custom("AmiriQuran-Regular", size: 22 * readingSettings.scale))
-                .foregroundColor(themeManager.primaryText)
-                .lineSpacing(8 * readingSettings.scale)
-                .multilineTextAlignment(.trailing)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .environment(\.layoutDirection, .rightToLeft)
-
-            Text(narration.translationEn)
-                .font(.system(size: 15 * readingSettings.scale, weight: .medium))
-                .foregroundColor(themeManager.primaryText)
-                .lineSpacing(4 * readingSettings.scale)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            Text(narration.sourceEn)
-                .font(.system(size: 13, weight: .semibold))
-                .foregroundColor(themeManager.accentColor)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 24)
-                .fill(Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(color: Color.black.opacity(0.06), radius: 16, x: 0, y: 4)
-        }
-        .padding(.horizontal, 20)
     }
 }
 

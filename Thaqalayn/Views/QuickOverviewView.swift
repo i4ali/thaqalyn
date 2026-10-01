@@ -19,7 +19,7 @@ struct HighlightedArabicText: View {
     @StateObject private var readingSettings = ReadingSettingsManager.shared
 
     private func arabicFont(bold: Bool) -> Font {
-        themeManager.isMidnightEmerald ? EmType.arabic(28 * readingSettings.scale, bold: bold) : .system(size: 28 * readingSettings.scale, weight: bold ? .bold : .medium)
+        EmType.arabic(28 * readingSettings.scale, bold: bold)
     }
 
     var body: some View {
@@ -164,7 +164,7 @@ private struct PinnedVerseView: View {
     private let maxVerseHeight: CGFloat = 230
 
     private var highlightColor: Color {
-        selectedConcept.flatMap { Color(hex: $0.colorHex) } ?? themeManager.accentColor
+        selectedConcept.map { Color.concept(hex: $0.colorHex) } ?? themeManager.accentColor
     }
 
     var body: some View {
@@ -235,48 +235,6 @@ struct QuickOverviewView: View {
     }
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var legacyBody: some View {
-        VStack(spacing: 0) {
-            RoundedRectangle(cornerRadius: 3)
-                .fill(themeManager.tertiaryText.opacity(0.3))
-                .frame(width: 40, height: 5)
-                .padding(.top, 12).padding(.bottom, 16)
-
-            headerView
-                .padding(.horizontal, 24).padding(.bottom, 10)
-
-            PinnedVerseView(surah: surah, verse: verse, selectedConcept: selectedConcept)
-
-            Group {
-                if let concept = selectedConcept {
-                    gemDetailPane(concept)
-                        .transition(.opacity)
-                } else {
-                    legacyBrowseScroll
-                        .transition(.opacity)
-                }
-            }
-        }
-        .background(backgroundView)
-        .darkScreenAura()
-        .presentationDetents([.large])
-        .presentationDragIndicator(.hidden)
-        .frame(maxWidth: isIPad ? 600 : nil)
-    }
-
-    private var legacyBrowseScroll: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            conceptBubblesGrid
-                .padding(.horizontal, 24).padding(.top, 16).padding(.bottom, 40)
-        }
-    }
-
-    // MARK: - Emerald Body
-
-    private var emeraldBody: some View {
         VStack(spacing: 0) {
             RoundedRectangle(cornerRadius: 3)
                 .fill(themeManager.tertiaryText.opacity(0.4))
@@ -331,7 +289,7 @@ struct QuickOverviewView: View {
     // MARK: - Redesigned panes (Option 3)
 
     private func conceptColor(_ c: VerseConcept) -> Color {
-        Color(hex: c.colorHex) ?? themeManager.accentColor
+        Color.concept(hex: c.colorHex)
     }
 
     /// Detail pane that REPLACES the gem grid when a gem is selected.
@@ -382,34 +340,6 @@ struct QuickOverviewView: View {
         }
     }
 
-    // MARK: - Header
-
-    private var headerView: some View {
-        HStack {
-            Image(systemName: "sparkles")
-                .font(.system(size: 28))
-                .foregroundStyle(themeManager.accentGradient)
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Gems")
-                    .font(.system(size: 22, weight: .bold))
-                    .foregroundColor(themeManager.primaryText)
-
-                Text("Precious insights unveiled")
-                    .font(.system(size: 13, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-            }
-
-            Spacer()
-
-            Button(action: { dismiss() }) {
-                Image(systemName: "xmark.circle.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-        }
-    }
-
     // MARK: - Concept Bubbles
 
     private var conceptBubblesGrid: some View {
@@ -434,20 +364,6 @@ struct QuickOverviewView: View {
             }
         }
     }
-
-    // MARK: - Background
-
-    private var backgroundView: some View {
-        LinearGradient(
-            colors: [
-                themeManager.primaryBackground,
-                themeManager.secondaryBackground
-            ],
-            startPoint: .top,
-            endPoint: .bottom
-        )
-        .ignoresSafeArea()
-    }
 }
 
 // MARK: - Concept Bubble View
@@ -460,7 +376,7 @@ struct ConceptBubbleView: View {
     @StateObject private var themeManager = ThemeManager.shared
 
     private var bubbleColor: Color {
-        Color(hex: concept.colorHex) ?? themeManager.accentColor
+        Color.concept(hex: concept.colorHex)
     }
 
     var body: some View {

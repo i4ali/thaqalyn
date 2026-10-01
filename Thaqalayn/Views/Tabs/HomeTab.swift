@@ -13,13 +13,12 @@ struct HomeTab: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Adaptive background with floating elements
+                // Emerald background (both themes)
                 AdaptiveModernBackground()
 
                 HomeView()
             }
             .navigationBarHidden(true)
-            .darkScreenAura()
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

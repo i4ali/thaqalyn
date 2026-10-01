@@ -5,15 +5,21 @@
 //  The app's one celebration moment, shared by the crossword "Solved!",
 //  the Daily Challenge completion: doves rising out
 //  of golden light on the emerald night, behind the screen's own content.
-//  The plate is fixed emerald-night art, so callers show it only under
-//  Midnight Emerald; the scrim keeps the title zone and the bottom CTA
-//  solid over the bright core.
+//  The plate is fixed emerald-night art, so it draws only in the dark scheme;
+//  under Sage Dawn the content sits on the light ground. The scrim keeps the
+//  title zone and the bottom CTA solid over the bright core.
 //
 
 import SwiftUI
 
 struct CelebrationBackdrop: View {
+    @Environment(\.colorScheme) private var colorScheme
+
     var body: some View {
+        if colorScheme == .dark { plate }
+    }
+
+    private var plate: some View {
         ZStack {
             GeometryReader { geo in
                 Image("CelebrationDoves")

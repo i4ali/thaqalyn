@@ -117,20 +117,7 @@ struct PassageHubView: View {
         let isPlaying = audioManager.currentPlayback != nil
 
         ZStack {
-            if themeManager.isMidnightEmerald {
-                EmeraldBackground()
-            } else {
-                LinearGradient(
-                    colors: [
-                        themeManager.primaryBackground,
-                        themeManager.secondaryBackground,
-                        themeManager.tertiaryBackground
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
-            }
+            EmeraldBackground()
 
             VStack(spacing: 0) {
                 header
@@ -174,7 +161,6 @@ struct PassageHubView: View {
         .navigationBarHidden(true)
         .hideTabBar()
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura(glowOpacity: 0.22, starCount: 10)
         .overlay(alignment: .bottom) {
             VStack(spacing: 10) {
                 if let action = action(for: stages) {
@@ -668,8 +654,9 @@ struct HubActionBar: View {
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
                     .stroke(isGold ? Color.clear : tm.accentColor, lineWidth: 1)
             )
-            .shadow(color: isGold ? tm.accentColor.opacity(0.28) : Color.black.opacity(0.28),
-                    radius: isGold ? 24 : 14, x: 0, y: isGold ? 10 : 6)
+            // Gold state: a gold glow. Glass state: the theme's elevation shadow.
+            .shadow(color: isGold ? tm.accentColor.opacity(0.28) : .clear, radius: 24, x: 0, y: 10)
+            .emShadow(.custom(opacity: isGold ? 0 : 0.28, radius: 14, y: 6))
         }
         .buttonStyle(EmPressStyle())
         .accessibilityLabel(action.gated ? "\(action.title), premium feature" : "\(action.title). \(action.subtitle)")

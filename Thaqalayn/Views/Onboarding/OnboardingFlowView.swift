@@ -111,9 +111,10 @@ struct OnboardingFlowView: View {
                 }
             }
         }
-        .darkScreenAura()
         .navigationBarHidden(true)
-        .preferredColorScheme(themeManager.colorScheme)
+        // Onboarding is a fixed dark design (OnboardingBackground is dark in both
+        // themes), so its theme tokens must resolve to their Midnight values.
+        .preferredColorScheme(.dark)
     }
 
     private func completeOnboarding() {

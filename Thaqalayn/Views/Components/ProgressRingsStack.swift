@@ -15,11 +15,11 @@ struct ProgressRingsStack: View {
 
     @StateObject private var themeManager = ThemeManager.shared
 
-    // Theme-aware vibrant ring gradients (Apple Watch style).
-    // Both stops are derived from the same semantic token so they auto-adapt across themes.
+    // Ring gradients (Apple Watch style). Every stop is a theme token, so they
+    // adapt across themes.
     private var quranGradient: LinearGradient {
         LinearGradient(
-            colors: themeManager.isMidnightEmerald ? [themeManager.accentColor, themeManager.accentColorDeep] : [themeManager.semanticRed, themeManager.semanticRed.opacity(0.85)],
+            colors: [themeManager.accentColor, themeManager.accentColorDeep],
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -35,7 +35,7 @@ struct ProgressRingsStack: View {
 
     private var ramadanGradient: LinearGradient {
         LinearGradient(
-            colors: themeManager.isMidnightEmerald ? [themeManager.accentBright, themeManager.accentColor] : [themeManager.semanticYellow, themeManager.semanticYellow.opacity(0.85)],
+            colors: [themeManager.accentBright, themeManager.accentColor],
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -49,7 +49,7 @@ struct ProgressRingsStack: View {
                 gradient: quranGradient,
                 lineWidth: 20,
                 size: 240,
-                shadowColor: themeManager.isMidnightEmerald ? themeManager.accentColor : themeManager.semanticRed
+                shadowColor: themeManager.accentColor
             )
 
             // Middle ring - Surah Completion (180pt, 18pt width)
@@ -68,7 +68,7 @@ struct ProgressRingsStack: View {
                     gradient: ramadanGradient,
                     lineWidth: 16,
                     size: 120,
-                    shadowColor: themeManager.isMidnightEmerald ? themeManager.accentBright : themeManager.semanticYellow
+                    shadowColor: themeManager.accentBright
                 )
             }
 
@@ -96,11 +96,11 @@ struct RingLegend: View {
 
     var body: some View {
         HStack(spacing: 16) {
-            LegendItem(color: themeManager.isMidnightEmerald ? themeManager.accentColor : themeManager.semanticRed, label: ProgressTabStrings.quran)
+            LegendItem(color: themeManager.accentColor, label: ProgressTabStrings.quran)
             LegendItem(color: themeManager.semanticGreen, label: ProgressTabStrings.surahs)
 
             if showRamadanRing {
-                LegendItem(color: themeManager.isMidnightEmerald ? themeManager.accentBright : themeManager.semanticYellow, label: seasonalLabel)
+                LegendItem(color: themeManager.accentBright, label: seasonalLabel)
             }
         }
     }

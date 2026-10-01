@@ -68,7 +68,7 @@ struct FindInSurahSheet: View {
         }
         .padding(.horizontal, 20)
         .padding(.top, 24)
-        .background(sheetBackground.ignoresSafeArea())
+        .background(themeManager.primaryBackground.ignoresSafeArea())
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
         .preferredColorScheme(themeManager.colorScheme)
@@ -138,10 +138,6 @@ struct FindInSurahSheet: View {
             .foregroundColor(themeManager.secondaryText)
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.top, 24)
-    }
-
-    private var sheetBackground: Color {
-        themeManager.isMidnightEmerald ? themeManager.primaryBackground : themeManager.tertiaryBackground
     }
 
     /// Return jumps to a valid verse number, or to the only matching verse.

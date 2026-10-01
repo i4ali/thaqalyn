@@ -22,9 +22,7 @@ struct DuaMiniPlayer: View {
 
     /// Glass tint layered over `.ultraThinMaterial` - mirrors JourneyMiniPlayer /
     /// EmeraldTabBar so the bars read as one floating family.
-    private var cardTint: Color {
-        tm.isMidnightEmerald ? Color(hex: "0A1512").opacity(0.72) : Color.white.opacity(0.6)
-    }
+    private var cardTint: Color { tm.tabBarTint }
 
     /// Fraction of the recitation elapsed, clamped - drives the accent hairline.
     private var progress: CGFloat {
@@ -80,8 +78,7 @@ struct DuaMiniPlayer: View {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .stroke(tm.strokeColor, lineWidth: 1)
         )
-        .shadow(color: tm.isMidnightEmerald ? Color.black.opacity(0.5) : Color.black.opacity(0.16),
-                radius: tm.isMidnightEmerald ? 30 : 20, x: 0, y: 12)
+        .emShadow(.custom(opacity: 0.5, radius: 30, y: 12))
         .padding(.horizontal, 18)   // match the EmeraldTabBar's horizontal inset
     }
 

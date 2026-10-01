@@ -14,12 +14,10 @@ import Foundation
 
 enum QuranTabStrings {
     static let greeting = "Assalamu alaykum"
-    /// Emerald header eyebrow.
+    /// Header eyebrow.
     static let nobleQuranEyebrow = "The Noble Qur'an"
-    /// Emerald header title.
+    /// Header title.
     static let readAndReflect = "Read & Reflect"
-    /// Legacy (Light / Night Sanctuary) header title.
-    static let holyQuran = "The Holy Quran"
     static let continueReading = "Continue Reading"
     static let resume = "Resume"
     static let searchPlaceholder = "Search surahs, verses, themes…"

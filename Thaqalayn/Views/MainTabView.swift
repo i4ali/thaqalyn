@@ -42,8 +42,8 @@ struct MainTabView: View {
         }
     }
 
-    // Items for the Midnight Emerald floating tab bar — mirrors the five
-    // permanent tabs in the TabView below.
+    // Items for the custom floating tab bar - mirrors the five permanent tabs
+    // in the TabView below.
     private var emeraldItems: [EmeraldTabItem] {
         [
             EmeraldTabItem(id: 0, label: tabLabel(0), sfSymbol: "sun.max"),
@@ -176,7 +176,6 @@ struct MainTabView: View {
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .preferredColorScheme(themeManager.colorScheme)
-            .darkScreenAura()
         }
         .onReceive(NotificationCenter.default.publisher(for: .navigateToVerse)) { notification in
             guard let userInfo = notification.userInfo,
@@ -235,8 +234,8 @@ struct MainTabView: View {
 }
 
 private extension View {
-    /// Disables iOS 26's tab-bar minimize-on-scroll so the native bar always shows
-    /// every tab (in Light it otherwise collapses to a single-tab pill on scroll).
+    /// Disables iOS 26's tab-bar minimize-on-scroll on the hidden native bar, so its
+    /// single-tab pill presentation never interferes with the custom bar.
     @ViewBuilder
     func disableTabBarMinimize() -> some View {
         if #available(iOS 26.0, *) {
@@ -247,8 +246,8 @@ private extension View {
     }
 }
 
-/// Hides the native `UITabBar` in BOTH themes — the custom floating `EmeraldTabBar`
-/// replaces it everywhere — by driving the live bar's `alpha` to 0. We don't rely on
+/// Hides the native `UITabBar` - the custom floating `EmeraldTabBar` replaces it in
+/// both themes - by driving the live bar's `alpha` to 0. We don't rely on
 /// `.toolbar(.hidden, for: .tabBar)` alone: it's unreliable with the tabs' legacy
 /// `NavigationView`/`StackNavigationViewStyle`, and on iOS 26 a transparent
 /// `UITabBarAppearance` doesn't hide the Liquid-Glass bar. `alpha` is layout-safe.
@@ -271,8 +270,7 @@ private struct HideNativeTabBar: UIViewControllerRepresentable {
             for tbc in Self.tabBarControllers(in: view.window?.rootViewController) {
                 tbc.tabBar.alpha = targetAlpha
                 // iOS 26's tab bar minimizes into a single-tab pill on scroll. Disable
-                // it so the Light-theme native bar always shows all tabs (and it never
-                // interferes with the emerald custom bar). The bar is hidden in emerald.
+                // it so the hidden native bar never interferes with the custom bar.
                 if #available(iOS 26.0, *) {
                     tbc.tabBarMinimizeBehavior = .never
                 }

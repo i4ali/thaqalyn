@@ -13,9 +13,9 @@
 //  greyed out and marked SOON (comingSoon mode) - a quiet roadmap signal, per
 //  the app's coming-soon convention (never a lock).
 //
-//  Pure chrome: fixed sizes, no reading-scale. Theme-adaptive (Midnight Emerald
-//  + standard); the handoff's gold-on-dark palette is intentionally ignored in
-//  favour of the app's own accent. Ambient motion is disabled under Reduce
+//  Pure chrome: fixed sizes, no reading-scale. Theme-adaptive (Sage Dawn +
+//  Midnight Emerald); the handoff's gold-on-dark palette is intentionally ignored
+//  in favour of the app's own accent. Ambient motion is disabled under Reduce
 //  Motion (the Journey tab keeps a soft static glow).
 //
 //  Recreated from design_handoff_immersive_journey_tab (variant 5a).
@@ -45,7 +45,7 @@ struct JourneyModeToggle<ReadDestination: View>: View {
     var showsOuterBorder = true
 
     /// Matches `ModernSurahCard`'s fill so the card and toggle read as one surface.
-    private var surfaceFill: Color { tm.isMidnightEmerald ? tm.glassSurface : .white }
+    private var surfaceFill: Color { tm.glassSurface }
 
     /// Card-continuation shape: squared top (meets the card above), rounded bottom.
     private var regionShape: UnevenRoundedRectangle {

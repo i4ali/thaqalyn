@@ -72,16 +72,7 @@ struct SourceSheet: View {
 
     var body: some View {
         ZStack {
-            if themeManager.isMidnightEmerald {
-                EmeraldBackground()
-            } else {
-                LinearGradient(
-                    colors: [themeManager.primaryBackground, themeManager.secondaryBackground],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                .ignoresSafeArea()
-            }
+            EmeraldBackground()
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {

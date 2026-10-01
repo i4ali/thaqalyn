@@ -25,7 +25,7 @@ struct DuasZiyaratView: View {
                 AdaptiveModernBackground()
 
                 VStack(spacing: 0) {
-                    if themeManager.isMidnightEmerald { emeraldHeaderView } else { headerView }
+                    headerView
 
                     if manager.isLoading {
                         Spacer()
@@ -77,7 +77,7 @@ struct DuasZiyaratView: View {
                 .accessibilityHidden(true)
             )
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { dismiss() }) {
@@ -92,27 +92,9 @@ struct DuasZiyaratView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
     }
 
     private var headerView: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(headerTitle)
-                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                    .foregroundColor(themeManager.primaryText)
-                Text(headerSubtitle)
-                    .font(.system(size: 16, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-            }
-            Spacer()
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 20)
-        .padding(.bottom, 20)
-    }
-
-    private var emeraldHeaderView: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 7) {
                 Text(headerEyebrow.uppercased())
@@ -161,10 +143,6 @@ struct SpecialDuaCard: View {
     private var icon: String { SpecialDuaIcon.symbol(for: dua.id) }
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmCard {
             HStack(spacing: 14) {
                 EmIconChip(sfSymbol: icon)
@@ -184,51 +162,6 @@ struct SpecialDuaCard: View {
                     .foregroundColor(themeManager.tertiaryText)
             }
             .padding(14)
-        }
-        .contentShape(Rectangle())
-    }
-
-    private var legacyBody: some View {
-        HStack(alignment: .center, spacing: 16) {
-            ZStack {
-                Circle()
-                    .fill(themeManager.accentGradient)
-                    .frame(width: 50, height: 50)
-                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                Image(systemName: icon)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
-            }
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text(dua.titleEn)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineLimit(1)
-                Text(dua.whenEn)
-                    .font(.system(size: 13, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-                    .lineLimit(1)
-            }
-
-            Spacer()
-
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(themeManager.tertiaryText)
-        }
-        .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                    radius: 12, x: 0, y: 4
-                )
         }
         .contentShape(Rectangle())
     }

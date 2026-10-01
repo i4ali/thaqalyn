@@ -19,30 +19,11 @@ struct DuaDetailView: View {
         ZStack {
             AdaptiveModernBackground()
 
-            if themeManager.isMidnightEmerald {
-                EmCoverBand(assetName: "DailyDuasCover")
-                    .frame(height: 300)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            }
+            EmCoverBand(assetName: "DailyDuasCover")
+                .frame(height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
-            if themeManager.isMidnightEmerald {
-                emeraldScroll
-            } else {
-            ScrollView {
-                VStack(spacing: 24) {
-                    headerSection
-                    arabicSection
-                    DuaListenButton(arabic: dua.arabic)
-                    transliterationSection
-                    translationSection
-                    sourceSection
-                    shareSection
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 20)
-                .padding(.bottom, 40)
-            }
-            }
+            content
 
             // Hidden link: tapping a Qur'anic dua's source opens that verse in the reader.
             if let surahData = linkedSurah, let v = dua.verseNumber {
@@ -55,7 +36,7 @@ struct DuaDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {
@@ -70,13 +51,12 @@ struct DuaDetailView: View {
         // Pushed from DuasView's stack: hide the system back button so the custom
         // one above is the only "Back" (otherwise both render side by side).
         .navigationBarBackButtonHidden(true)
-        .darkScreenAura()
-        .hideTabBarInEmerald()
+        .hideTabBar()
     }
 
-    // MARK: - Emerald
+    // MARK: - Content
 
-    private var emeraldScroll: some View {
+    private var content: some View {
         ScrollView {
             VStack(spacing: 20) {
                 HStack(alignment: .top, spacing: 12) {
@@ -147,34 +127,7 @@ struct DuaDetailView: View {
         }
     }
 
-    // MARK: - Sections
-
-    private var headerSection: some View {
-        HStack(alignment: .top, spacing: 12) {
-            VStack(alignment: .leading, spacing: 8) {
-                Text(dua.situationEn)
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(themeManager.primaryText)
-                    .multilineTextAlignment(.leading)
-
-                categoryPill
-            }
-
-            Spacer(minLength: 0)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    private var categoryPill: some View {
-        Text(dua.category.capitalized)
-            .font(.system(size: 12, weight: .semibold))
-            .foregroundColor(themeManager.accentColor)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 4)
-            .background(
-                Capsule().fill(themeManager.accentColor.opacity(0.15))
-            )
-    }
+    // MARK: - Source
 
     /// The SurahWithTafsir this dua links to, if it is drawn from the Qur'an and loaded.
     private var linkedSurah: SurahWithTafsir? {
@@ -201,70 +154,6 @@ struct DuaDetailView: View {
         }
     }
 
-    private var arabicSection: some View {
-        Text(dua.arabic)
-            .font(.system(size: 28 * readingSettings.scale, weight: .regular))
-            .foregroundColor(themeManager.primaryText)
-            .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
-            .multilineTextAlignment(.center)
-            .lineSpacing(12 * readingSettings.scale)
-            .frame(maxWidth: .infinity)
-            .padding(20)
-            .background(themedCardBackground)
-            .environment(\.layoutDirection, .rightToLeft)
-            .textSelection(.enabled)
-    }
-
-    private var transliterationSection: some View {
-        Text(dua.transliteration)
-            .font(.system(size: 16 * readingSettings.scale, weight: .regular, design: .serif))
-            .italic()
-            .foregroundColor(themeManager.secondaryText)
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.horizontal, 8)
-            .textSelection(.enabled)
-    }
-
-    private var translationSection: some View {
-        Text(dua.translationEn)
-            .font(.system(size: 17 * readingSettings.scale, weight: .medium))
-            .foregroundColor(themeManager.primaryText)
-            .multilineTextAlignment(.leading)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(20)
-            .background(themedCardBackground)
-            .textSelection(.enabled)
-    }
-
-    private var sourceSection: some View {
-        HStack {
-            Spacer()
-            sourceCitation(prefix: "Source: ", font: .system(size: 13, weight: .medium))
-            Spacer()
-        }
-        .padding(.top, 4)
-    }
-
-    private var shareSection: some View {
-        ShareLink(item: shareText) {
-            HStack {
-                Image(systemName: "square.and.arrow.up")
-                Text("Share")
-            }
-            .font(.system(size: 16, weight: .semibold))
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 14)
-            .background(
-                Capsule()
-                    .fill(themeManager.accentGradient)
-                    .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-            )
-        }
-        .padding(.top, 8)
-    }
-
     // MARK: - Helpers
 
     private var shareText: String {
@@ -280,20 +169,6 @@ struct DuaDetailView: View {
         — Source: \(dua.source)
         Sent via Thaqalayn
         """
-    }
-
-    @ViewBuilder
-    private var themedCardBackground: some View {
-        RoundedRectangle(cornerRadius: 20)
-            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(themeManager.strokeColor, lineWidth: 1)
-            )
-            .shadow(
-                color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                radius: 12, x: 0, y: 4
-            )
     }
 }
 

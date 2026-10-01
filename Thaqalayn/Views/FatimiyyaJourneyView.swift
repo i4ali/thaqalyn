@@ -78,7 +78,6 @@ struct FatimiyyaJourneyView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura()
         .fullScreenCover(item: $lockedPreviewDay) { day in
             // A locked day opens into the veil - the day's theme and opening line, then
             // what waits beneath - rather than jumping straight to the paywall. The
@@ -100,7 +99,6 @@ struct FatimiyyaJourneyView: View {
 struct FatimiyyaJourneyHeader: View {
     @StateObject private var journeyManager = FatimiyyaJourneyManager.shared
     @StateObject private var calendarManager = IslamicCalendarManager.shared
-    @StateObject private var themeManager = ThemeManager.shared
 
     var statusMessage: String {
         let status = calendarManager.fatimiyyaSeasonStatus()
@@ -111,12 +109,8 @@ struct FatimiyyaJourneyHeader: View {
         journeyManager.observedDaysCount
     }
 
-    var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
     // Somber observance: no completion/celebration note, "observed" wording.
-    private var emeraldBody: some View {
+    var body: some View {
         EmJourneyHeader(
             eyebrow: JourneyStrings.eyebrow("fatimiyya", "Mourning of az-Zahra (AS)"),
             title: JourneyStrings.title("fatimiyya"),
@@ -128,67 +122,6 @@ struct FatimiyyaJourneyHeader: View {
             coverAssetName: "FatimiyyaCover"
         )
     }
-
-    private var legacyBody: some View {
-        VStack(spacing: 16) {
-            // Title and status
-            VStack(alignment: .leading, spacing: 8) {
-                HStack {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(JourneyStrings.screenTitle("fatimiyya"))
-                            .font(.system(size: 34, weight: .bold, design: .rounded))
-                            .foregroundColor(themeManager.primaryText)
-
-                        Text(statusMessage)
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.accentColor)
-                    }
-
-                    Spacer()
-
-                    // Fatimiyya icon
-                    Image("tulip").renderingMode(.template).resizable().scaledToFit().frame(width: 40, height: 40)
-                        .foregroundStyle(themeManager.accentGradient)
-                }
-            }
-
-            // Progress bar
-            VStack(alignment: .leading, spacing: 8) {
-                HStack {
-                    Text(JourneyStrings.daysObserved(observedCount, 5))
-                        .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(themeManager.secondaryText)
-
-                    Spacer()
-
-                    Text("\(Int(journeyManager.completionPercentage * 100))%")
-                        .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(themeManager.accentColor)
-                }
-
-                // Progress bar
-                GeometryReader { geometry in
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(themeManager.strokeColor)
-                            .frame(height: 12)
-
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(themeManager.accentGradient)
-                            .frame(width: geometry.size.width * journeyManager.completionPercentage, height: 12)
-                    }
-                }
-                .frame(height: 12)
-            }
-
-            // NOTE: No completion/celebration block here — Fatimiyya is a somber observance,
-            // not a festive achievement. The Hajj "Journey Complete! Hajj Champion badge earned."
-            // banner is intentionally omitted.
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 20)
-        .padding(.bottom, 16)
-    }
 }
 
 struct FatimiyyaDayCard: View {
@@ -197,34 +130,8 @@ struct FatimiyyaDayCard: View {
     let isCurrentDay: Bool
     let isLocked: Bool
     let onTap: () -> Void
-    @StateObject private var themeManager = ThemeManager.shared
-
-    private var grayGradient: LinearGradient {
-        LinearGradient(
-            colors: [Color.gray.opacity(0.2), Color.gray.opacity(0.15)],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-    }
-
-    private var circleBackground: LinearGradient {
-        if isLocked {
-            return grayGradient
-        } else if isObserved {
-            // Subdued observed state — use accent gradient rather than celebratory green
-            return themeManager.accentGradient
-        } else if isCurrentDay {
-            return themeManager.accentGradient
-        } else {
-            return grayGradient
-        }
-    }
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmJourneyDayRow(
             dayNumber: day.dayNumber,
             theme: day.theme,
@@ -235,101 +142,6 @@ struct FatimiyyaDayCard: View {
             doneStyle: .subdued,
             onTap: onTap
         )
-        .padding(.horizontal, 20)
-    }
-
-    private var legacyBody: some View {
-        Button(action: onTap) {
-            HStack(spacing: 16) {
-                // Day number with observation status
-                ZStack {
-                    Circle()
-                        .fill(circleBackground)
-                        .frame(width: 50, height: 50)
-                        .overlay(
-                            Circle()
-                                .stroke(isCurrentDay && !isObserved && !isLocked ? themeManager.accentColor : Color.clear, lineWidth: 2)
-                        )
-
-                    if isObserved {
-                        // Simple checkmark — subdued, not festive
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 20, weight: .bold))
-                            .foregroundColor(.white)
-                    } else {
-                        Text("\(day.dayNumber)")
-                            .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(isCurrentDay ? .white : themeManager.primaryText)
-                    }
-                }
-
-                // Day content
-                VStack(alignment: .leading, spacing: 4) {
-                    HStack {
-                        Text(JourneyStrings.dayN(day.dayNumber))
-                            .font(.system(size: 12, weight: .bold))
-                            .foregroundColor(themeManager.secondaryText)
-
-                        if isLocked {
-                            Text("Premium")
-                                .font(.system(size: 10, weight: .bold))
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 6)
-                                .padding(.vertical, 2)
-                                .background(
-                                    Capsule()
-                                        .fill(Color.orange.gradient)
-                                )
-                        } else if isCurrentDay {
-                            Text(JourneyStrings.today)
-                                .font(.system(size: 10, weight: .bold))
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 6)
-                                .padding(.vertical, 2)
-                                .background(
-                                    Capsule()
-                                        .fill(themeManager.accentGradient)
-                                )
-                        }
-                    }
-
-                    HStack(spacing: 8) {
-                        Image(systemName: day.icon)
-                            .font(.system(size: 14))
-                            .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.accentColor)
-
-                        Text(day.theme)
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.primaryText)
-                    }
-
-                    Text(day.themeArabic)
-                        .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(themeManager.tertiaryText)
-                }
-
-                Spacer()
-
-                // Chevron or lock icon
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(isLocked ? themeManager.secondaryText : themeManager.tertiaryText)
-            }
-            .padding(16)
-            .background {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .shadow(
-                        color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                        radius: 8, x: 0, y: 2
-                    )
-            }
-        }
-        .buttonStyle(PlainButtonStyle())
         .padding(.horizontal, 20)
     }
 }

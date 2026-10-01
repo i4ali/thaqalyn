@@ -357,8 +357,8 @@ private struct ThemeResultRow: View {
         VStack(spacing: 0) {
             Button(action: onTap) {
                 HStack(spacing: 10) {
-                    Circle().fill(Color(hex: hit.colorHex)).frame(width: 9, height: 9)
-                        .shadow(color: Color(hex: hit.colorHex).opacity(0.6), radius: 4)
+                    Circle().fill(Color.concept(hex: hit.colorHex)).frame(width: 9, height: 9)
+                        .shadow(color: Color.concept(hex: hit.colorHex).opacity(0.6), radius: 4)
                     Text(hit.title)
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(themeManager.primaryText)

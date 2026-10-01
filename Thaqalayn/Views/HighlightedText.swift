@@ -15,7 +15,7 @@ struct HighlightedText: View {
     let highlightColor: Color?
     let lineSpacing: CGFloat
 
-    @StateObject private var themeManager = ThemeManager.shared
+    @Environment(\.colorScheme) private var colorScheme
 
     init(
         text: String,
@@ -45,12 +45,17 @@ struct HighlightedText: View {
         self.lineSpacing = lineSpacing
     }
 
-    /// Theme-aware default highlight color (search-result yellow).
+    /// Default highlight color (search-result yellow). Midnight Emerald keeps its
+    /// #F2C969 at 30%; on the light ground a bright highlighter yellow at 50% sits
+    /// behind the dark ink. Picked per scheme as plain colors, since it is handed
+    /// to the attributed string as a UIColor.
     private var resolvedHighlightColor: Color {
         if let highlightColor = highlightColor {
             return highlightColor
         }
-        return themeManager.semanticYellow.opacity(themeManager.isDarkMode ? 0.30 : 0.50)
+        return colorScheme == .dark
+            ? Color(hex: "F2C969").opacity(0.30)
+            : Color(red: 0.95, green: 0.78, blue: 0.30).opacity(0.50)
     }
 
     var body: some View {

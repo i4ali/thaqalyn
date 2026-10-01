@@ -9,8 +9,8 @@
 //  word being recited glows gold and the reader gently follows along (karaoke
 //  highlight, driven by DuaKaraokeEngine); tapping a line seeks the recitation
 //  there. Reading content scales with the global reading text-size control.
-//  Works in both the standard and Midnight Emerald themes. Text & recitation
-//  are courtesy of Duas.org.
+//  Works in both Sage Dawn and Midnight Emerald. Text & recitation are
+//  courtesy of Duas.org.
 //
 
 import SwiftUI
@@ -31,24 +31,21 @@ struct SpecialDuaDetailView: View {
     @State private var lastUserScroll: Date?
     private static let followCooldown: TimeInterval = 6
 
-    private var em: Bool { themeManager.isMidnightEmerald }
     private var scale: CGFloat { readingSettings.scale }
 
-    /// The karaoke gold: Midnight Emerald's bright gold; a deeper gold that
-    /// stays legible on the standard theme's light background.
-    private var karaokeGold: Color { em ? Color(hex: "ECD49A") : Color(hex: "9A7514") }
+    /// The karaoke gold: the bright emphasis gold (a deeper gold on Sage Dawn's
+    /// light ground).
+    private var karaokeGold: Color { themeManager.accentBright }
 
     var body: some View {
         ZStack {
             AdaptiveModernBackground()
 
-            if em {
-                // Dim the lit shrine a touch so the attribution and intro
-                // (both muted secondary text) stay legible over the bright cover.
-                EmCoverBand(assetName: "DuasZiyaratCover", dim: 0.28)
-                    .frame(height: 300)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            }
+            // Dim the lit shrine a touch so the attribution and intro
+            // (both muted secondary text) stay legible over the bright cover.
+            EmCoverBand(assetName: "DuasZiyaratCover", dim: 0.28)
+                .frame(height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
             ScrollViewReader { proxy in
                 ScrollView {
@@ -61,7 +58,7 @@ struct SpecialDuaDetailView: View {
                         shareButton
                     }
                     .padding(.horizontal, 20)
-                    .padding(.top, em ? 16 : 20)
+                    .padding(.top, 16)
                     .padding(.bottom, 44)
                 }
                 .onScrollPhaseChange { _, newPhase in
@@ -74,7 +71,7 @@ struct SpecialDuaDetailView: View {
         }
         .onAppear { karaoke.configure(duaID: dua.id) }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(em ? .hidden : .automatic, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {
@@ -92,8 +89,7 @@ struct SpecialDuaDetailView: View {
         // No onDisappear stop: like verse audio and journey narration, the recitation
         // keeps playing when the reader navigates away - the docked DuaMiniPlayer
         // (MainTabView / DuasZiyaratView) keeps the controls in reach.
-        .darkScreenAura()
-        .hideTabBarInEmerald()
+        .hideTabBar()
     }
 
     // MARK: - Header
@@ -101,7 +97,7 @@ struct SpecialDuaDetailView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(dua.titleEn)
-                .font(em ? EmType.serif(30, .semiBold) : .system(size: 28, weight: .bold))
+                .font(EmType.serif(30, .semiBold))
                 .foregroundColor(themeManager.primaryText)
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -121,7 +117,7 @@ struct SpecialDuaDetailView: View {
                 .foregroundColor(themeManager.secondaryText)
 
             Text(dua.introEn)
-                .font(em ? EmType.serif(16 * scale, .medium) : .system(size: 16 * scale, weight: .regular))
+                .font(EmType.serif(16 * scale, .medium))
                 .foregroundColor(themeManager.secondaryText)
                 .lineSpacing(5 * scale)
                 .fixedSize(horizontal: false, vertical: true)
@@ -148,7 +144,7 @@ struct SpecialDuaDetailView: View {
         VStack(spacing: 9) {
             if let ar = seg.ar, !ar.isEmpty {
                 Text(arabicLine(ar, segmentIndex: index))
-                    .font(em ? EmType.arabic(27 * scale) : .system(size: 26 * scale, weight: .regular))
+                    .font(EmType.arabic(27 * scale))
                     .foregroundColor(themeManager.primaryText)
                     .multilineTextAlignment(.center)
                     .lineSpacing(10 * scale)
@@ -158,8 +154,7 @@ struct SpecialDuaDetailView: View {
             }
             if let tr = seg.tr, !tr.isEmpty {
                 Text(tr)
-                    .font(em ? EmType.serifItalic(15.5 * scale) : .system(size: 15 * scale, weight: .regular, design: .serif))
-                    .italic(!em)
+                    .font(EmType.serifItalic(15.5 * scale))
                     .foregroundColor(themeManager.tertiaryText)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity)
@@ -167,7 +162,7 @@ struct SpecialDuaDetailView: View {
             }
             if let en = seg.en, !en.isEmpty {
                 Text(en)
-                    .font(em ? EmType.serif(16.5 * scale, .medium) : .system(size: 16.5 * scale, weight: .medium))
+                    .font(EmType.serif(16.5 * scale, .medium))
                     .foregroundColor(themeManager.secondaryText)
                     .multilineTextAlignment(.center)
                     .lineSpacing(4 * scale)
@@ -182,7 +177,7 @@ struct SpecialDuaDetailView: View {
             // companion lines get line-level emphasis instead).
             if karaoke.currentSegment == index {
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(karaokeGold.opacity(em ? 0.08 : 0.09))
+                    .fill(karaokeGold.opacity(0.08))
                     .padding(.horizontal, -10)
             }
         }
@@ -278,7 +273,7 @@ struct SpecialDuaDetailView: View {
                 Image(systemName: "square.and.arrow.up").font(.system(size: 15, weight: .semibold))
                 Text("Share").font(.system(size: 15.5, weight: .bold))
             }
-            .foregroundColor(em ? themeManager.onAccentText : .white)
+            .foregroundColor(themeManager.onAccentText)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 15)
             .background(
@@ -333,18 +328,18 @@ private struct StreamListenBar: View {
                 HStack(spacing: 9) {
                     if isLoadingThis {
                         ProgressView().controlSize(.small)
-                            .tint(themeManager.isMidnightEmerald ? themeManager.accentColor : themeManager.primaryText)
+                            .tint(themeManager.accentColor)
                     } else {
                         Image(systemName: icon).font(.system(size: 15, weight: .bold))
                     }
                     Text(label).font(.system(size: 15, weight: .semibold))
                 }
-                .foregroundColor(themeManager.isMidnightEmerald ? themeManager.accentColor : themeManager.primaryText)
+                .foregroundColor(themeManager.accentColor)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 13)
                 .background(
                     Capsule()
-                        .fill(themeManager.isMidnightEmerald ? themeManager.accentChip : themeManager.secondaryBackground.opacity(0.8))
+                        .fill(themeManager.accentChip)
                         .overlay(Capsule().stroke(themeManager.strokeColor, lineWidth: 1))
                 )
             }

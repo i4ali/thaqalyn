@@ -49,18 +49,11 @@ struct VerseSummaryView: View {
     // MARK: - Text-Based Fallback View
 
     private var textBasedOverviewView: some View {
-        Group {
-            if themeManager.isMidnightEmerald {
-                emeraldFallbackContent
-            } else {
-                legacyFallbackContent
-            }
-        }
-        .background(backgroundView)
-        .darkScreenAura()
-        .presentationDetents(isIPad ? [.large] : [.fraction(0.7), .large])
-        .presentationDragIndicator(.hidden)
-        .frame(maxWidth: isIPad ? 600 : nil) // Constrain width on iPad for better readability
+        emeraldFallbackContent
+            .background(EmeraldBackground())
+            .presentationDetents(isIPad ? [.large] : [.fraction(0.7), .large])
+            .presentationDragIndicator(.hidden)
+            .frame(maxWidth: isIPad ? 600 : nil) // Constrain width on iPad for better readability
     }
 
     private var emeraldFallbackContent: some View {
@@ -108,142 +101,6 @@ struct VerseSummaryView: View {
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
             }
-        }
-    }
-
-    private var legacyFallbackContent: some View {
-        VStack(spacing: 0) {
-            // Handle bar
-            RoundedRectangle(cornerRadius: 3)
-                .fill(themeManager.tertiaryText.opacity(0.3))
-                .frame(width: 40, height: 5)
-                .padding(.top, 12)
-                .padding(.bottom, 20)
-
-            ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    // Header
-                    headerView
-
-                    // Verse reference
-                    verseReferenceView
-
-                    // Summary content
-                    summaryContentView
-                }
-                .padding(.horizontal, 24)
-                .padding(.bottom, 40)
-            }
-        }
-    }
-
-    private var headerView: some View {
-        HStack {
-            PhosphorIcon(name: "ph-sparkle-fill", size: 32)
-                .foregroundColor(themeManager.accentColor)
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Gems")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(themeManager.primaryText)
-
-                Text("Precious insights unveiled")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-            }
-
-            Spacer()
-
-            Button(action: { dismiss() }) {
-                Image(systemName: "xmark.circle.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-        }
-    }
-
-    private var verseReferenceView: some View {
-        HStack(spacing: 12) {
-            // Verse number badge
-            Circle()
-                .fill(themeManager.accentGradient)
-                .frame(width: 40, height: 40)
-                .overlay(
-                    Text("\(verse.number)")
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(.white)
-                )
-                .shadow(color: themeManager.semanticBlue.opacity(0.4), radius: 8)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(surah.englishName)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.primaryText)
-
-                Text("Verse \(verse.number)")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(themeManager.secondaryText)
-            }
-
-            Spacer()
-
-            VerseRecitationButton(surahNumber: surah.number, verseNumber: verse.number, size: 34)
-        }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(themeManager.glassEffect)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-        )
-    }
-
-    private var summaryContentView: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Overview not available for this verse.")
-                .font(.system(size: 16, weight: .regular, design: .serif))
-                .foregroundColor(themeManager.secondaryText)
-                .italic()
-        }
-        .padding(20)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(themeManager.glassEffect)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(
-                            LinearGradient(
-                                colors: [Color.purple.opacity(0.1), Color.pink.opacity(0.1)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                )
-        )
-    }
-
-    @ViewBuilder
-    private var backgroundView: some View {
-        if themeManager.isMidnightEmerald {
-            EmeraldBackground()
-        } else {
-            LinearGradient(
-                colors: [
-                    themeManager.primaryBackground,
-                    themeManager.secondaryBackground
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
         }
     }
 }

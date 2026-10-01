@@ -29,6 +29,8 @@ enum WhatsNewDestination: Equatable {
     case miracleStories
     /// Switch to the Quran tab with its search field focused.
     case quranSearch
+    /// Switch the app to the Sage Dawn light theme (Settings → Appearance switches back).
+    case lightTheme
     // Reserved for later: case journey(String), case tab(Int)
 }
 
@@ -46,6 +48,15 @@ struct WhatsNewItem: Identifiable, Equatable {
 enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
+        WhatsNewItem(
+            id: "sage-dawn-theme",
+            sfSymbol: "sun.max",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 10, day: 1).date ?? .distantPast, // placeholder - set at ship time (later than miracle-stories so this card surfaces first)
+            destination: .lightTheme,
+            title: "A new light theme",
+            blurb: "Sage Dawn brings the Midnight Emerald look to a soft sage ground, with the same gold accents and serif type. Switch back any time in Settings.",
+            cta: "Try it"
+        ),
         WhatsNewItem(
             id: "quran-search",
             sfSymbol: "magnifyingglass",

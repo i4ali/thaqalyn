@@ -29,183 +29,12 @@ struct StoryDetailView: View {
             // Adaptive background
             AdaptiveModernBackground()
 
-            if themeManager.isMidnightEmerald {
-                EmCoverBand(assetName: "PropheticStoriesCover")
-                    .frame(height: 300)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            }
+            EmCoverBand(assetName: "PropheticStoriesCover")
+                .frame(height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
             ScrollView {
-                if themeManager.isMidnightEmerald {
-                    emeraldSections
-                } else {
-                VStack(spacing: 24) {
-                    // Story header
-                    VStack(spacing: 16) {
-                        // Category badge
-                        HStack {
-                            HStack(spacing: 8) {
-                                Image(systemName: story.categoryIcon)
-                                    .font(.system(size: 14, weight: .semibold))
-
-                                Text(story.category.displayName)
-                                    .font(.system(size: 14, weight: .semibold))
-                            }
-                            .foregroundColor(themeManager.accentColor)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 8)
-                            .background {
-                                Capsule()
-                                    .fill(themeManager.accentColor.opacity(0.15))
-                            }
-
-                            Spacer()
-                        }
-
-                        // Prophet name and story title
-                        VStack(alignment: .leading, spacing: 12) {
-                            HStack(alignment: .top, spacing: 8) {
-                                Image(systemName: "person.fill")
-                                    .font(.system(size: 20))
-                                    .foregroundColor(themeManager.accentColor)
-
-                                Text("PROPHET")
-                                    .font(.system(size: 14, weight: .bold))
-                                    .foregroundColor(themeManager.secondaryText)
-                                    .tracking(1.2)
-                            }
-
-                            Text(story.prophetEn)
-                                .font(.system(size: 20, weight: .bold, design: .rounded))
-                                .foregroundColor(themeManager.accentColor)
-
-                            Divider()
-                                .background(themeManager.strokeColor)
-                                .padding(.vertical, 4)
-
-                            HStack(alignment: .top, spacing: 8) {
-                                Image(systemName: "book.closed.fill")
-                                    .font(.system(size: 20))
-                                    .foregroundColor(themeManager.accentColor)
-
-                                Text("THE STORY")
-                                    .font(.system(size: 14, weight: .bold))
-                                    .foregroundColor(themeManager.secondaryText)
-                                    .tracking(1.2)
-                            }
-
-                            Text(story.titleEn)
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
-                                .foregroundColor(themeManager.primaryText)
-                                .lineSpacing(4)
-                        }
-                    }
-                    .padding(24)
-                    .background {
-                        RoundedRectangle(cornerRadius: 24)
-                            .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 24)
-                                    .stroke(themeManager.strokeColor, lineWidth: 1)
-                            )
-                            .shadow(
-                                color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
-                                radius: 16, x: 0, y: 4
-                            )
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-
-                    // Story verses header
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: "book.pages.fill")
-                                .font(.system(size: 16))
-                                .foregroundColor(themeManager.accentColor)
-
-                            Text("QURANIC NARRATIVE")
-                                .font(.system(size: 14, weight: .bold))
-                                .foregroundColor(themeManager.secondaryText)
-                                .tracking(1.2)
-                        }
-
-                        Text("This story is told through \(story.verseCount) verse\(story.verseCount == 1 ? "" : "s"):")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(themeManager.primaryText)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 20)
-
-                    // Verses with story notes
-                    ForEach(Array(story.verses.enumerated()), id: \.element.verseNumber) { index, storyVerse in
-                        StoryVerseCard(
-                            storyVerse: storyVerse,
-                            index: index + 1,
-                            totalVerses: story.verseCount,
-                            onNavigate: {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                                    selectedVerseForNav = (storyVerse.surahNumber, storyVerse.verseNumber)
-                                    navigateToVerse = true
-                                }
-                            }
-                        )
-                    }
-
-                    // Lessons summary
-                    if let lessons = story.lessonsSummaryEn {
-                        VStack(alignment: .leading, spacing: 16) {
-                            HStack(alignment: .top, spacing: 8) {
-                                Image(systemName: "lightbulb.fill")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(themeManager.accentColor)
-
-                                Text("LESSONS TO LEARN")
-                                    .font(.system(size: 14, weight: .bold))
-                                    .foregroundColor(themeManager.secondaryText)
-                                    .tracking(1.2)
-                            }
-
-                            Text(lessons)
-                                .font(.system(size: 16 * readingSettings.scale, weight: .medium))
-                                .foregroundColor(themeManager.primaryText)
-                                .lineSpacing(6 * readingSettings.scale)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                        }
-                        .padding(20)
-                        .background {
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                                )
-                        }
-                        .padding(.horizontal, 20)
-                    }
-
-                    // Related stories
-                    if !relatedStories.isEmpty {
-                        VStack(alignment: .leading, spacing: 16) {
-                            HStack(alignment: .top, spacing: 8) {
-                                Image(systemName: "link.circle.fill")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(themeManager.accentColor)
-
-                                Text("RELATED STORIES")
-                                    .font(.system(size: 14, weight: .bold))
-                                    .foregroundColor(themeManager.secondaryText)
-                                    .tracking(1.2)
-                            }
-
-                            ForEach(relatedStories) { relatedStory in
-                                RelatedStoryCard(story: relatedStory)
-                            }
-                        }
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 20)
-                    }
-                }
-                }
+                emeraldSections
             }
 
             // Hidden NavigationLink for verse navigation
@@ -222,7 +51,7 @@ struct StoryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(themeManager.isMidnightEmerald ? .hidden : .automatic, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { dismiss() }) {
@@ -235,7 +64,6 @@ struct StoryDetailView: View {
             }
         }
         .preferredColorScheme(themeManager.colorScheme)
-        .darkScreenAura(glowOpacity: 0.36)
     }
 
     @ViewBuilder private var emeraldSections: some View {
@@ -281,11 +109,9 @@ struct StoryDetailView: View {
             .padding(.horizontal, 20)
 
             // Verses with story notes
-            ForEach(Array(story.verses.enumerated()), id: \.element.verseNumber) { index, storyVerse in
+            ForEach(story.verses, id: \.verseNumber) { storyVerse in
                 StoryVerseCard(
                     storyVerse: storyVerse,
-                    index: index + 1,
-                    totalVerses: story.verseCount,
                     onNavigate: {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
                             selectedVerseForNav = (storyVerse.surahNumber, storyVerse.verseNumber)
@@ -324,8 +150,6 @@ struct StoryDetailView: View {
 
 struct StoryVerseCard: View {
     let storyVerse: StoryVerse
-    let index: Int
-    let totalVerses: Int
     let onNavigate: () -> Void
     @StateObject private var dataManager = DataManager.shared
     @StateObject private var themeManager = ThemeManager.shared
@@ -344,10 +168,6 @@ struct StoryVerseCard: View {
     }
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         EmCard {
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
@@ -408,145 +228,6 @@ struct StoryVerseCard: View {
         }
         .padding(.horizontal, 20)
     }
-
-    private var legacyBody: some View {
-        VStack(spacing: 0) {
-            // Verse header
-            HStack(spacing: 12) {
-                // Verse number badge
-                ZStack {
-                    Circle()
-                        .fill(themeManager.accentGradient)
-                        .frame(width: 40, height: 40)
-
-                    Text("\(index)")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(.white)
-                }
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Verse \(index) of \(totalVerses)")
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(themeManager.secondaryText)
-
-                    Text("\(surahName) (\(storyVerse.surahNumber):\(storyVerse.verseNumber))")
-                        .font(.system(size: 15, weight: .bold))
-                        .foregroundColor(themeManager.primaryText)
-                }
-
-                Spacer()
-
-                VerseRecitationButton(surahNumber: storyVerse.surahNumber, verseNumber: storyVerse.verseNumber, size: 32)
-
-                if storyVerse.isKeyVerse {
-                    Text("KEY VERSE")
-                        .font(.system(size: 11, weight: .bold))
-                        .foregroundColor(themeManager.accentColor)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background {
-                            Capsule()
-                                .fill(themeManager.accentColor.opacity(0.15))
-                        }
-                }
-            }
-            .padding(20)
-
-            Divider()
-                .background(themeManager.strokeColor)
-
-            // Verse text
-            if let verse = verseData {
-                VStack(alignment: .leading, spacing: 16) {
-                    // Arabic text
-                    Text(verse.arabic)
-                        .font(.custom("AmiriQuran-Regular", size: 24 * readingSettings.scale))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(8 * readingSettings.scale)
-                        .multilineTextAlignment(.trailing)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .shadow(color: themeManager.isDarkMode ? themeManager.accentColor.opacity(0.32) : .clear, radius: 16)
-
-                    // Translation
-                    Text(verse.translation)
-                        .font(.system(size: 16 * readingSettings.scale, weight: .medium))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineSpacing(4 * readingSettings.scale)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(20)
-
-                Divider()
-                    .background(themeManager.strokeColor)
-            }
-
-            // Story note
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 8) {
-                    Image(systemName: "text.bubble.fill")
-                        .font(.system(size: 14))
-                        .foregroundColor(themeManager.accentColor)
-
-                    Text("Story Context")
-                        .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(themeManager.secondaryText)
-                }
-
-                Text(storyVerse.storyNoteEn)
-                    .font(.system(size: 15 * readingSettings.scale, weight: .medium))
-                    .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(4 * readingSettings.scale)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(20)
-            .background {
-                Rectangle()
-                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color(red: 0.98, green: 0.98, blue: 0.95))
-            }
-
-            Divider()
-                .background(themeManager.strokeColor)
-
-            // Action buttons
-            HStack(spacing: 16) {
-                Button(action: onNavigate) {
-                    HStack(spacing: 6) {
-                        Image(systemName: "book.fill")
-                            .font(.system(size: 14))
-
-                        Text("Read Full Tafsir")
-                            .font(.system(size: 14, weight: .semibold))
-                    }
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 12)
-                    .background {
-                        Capsule()
-                            .fill(themeManager.accentGradient)
-                            .shadow(color: themeManager.accentColor.opacity(0.3), radius: 8)
-                    }
-                }
-
-                Spacer()
-            }
-            .padding(20)
-        }
-        .background {
-            RoundedRectangle(cornerRadius: 24)
-                .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(themeManager.strokeColor, lineWidth: 1)
-                )
-                .shadow(
-                    color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.06),
-                    radius: 16, x: 0, y: 4
-                )
-        }
-        .padding(.horizontal, 20)
-    }
 }
 
 struct RelatedStoryCard: View {
@@ -555,10 +236,6 @@ struct RelatedStoryCard: View {
     @State private var navigateToStory = false
 
     var body: some View {
-        if themeManager.isMidnightEmerald { emeraldBody } else { legacyBody }
-    }
-
-    private var emeraldBody: some View {
         NavigationLink(destination: StoryDetailView(story: story), isActive: $navigateToStory) {
             EmCard(cornerRadius: 16) {
                 HStack(spacing: 12) {
@@ -581,52 +258,6 @@ struct RelatedStoryCard: View {
                 .padding(14)
             }
             .contentShape(Rectangle())
-        }
-        .buttonStyle(EmPressStyle())
-    }
-
-    private var legacyBody: some View {
-        NavigationLink(destination: StoryDetailView(story: story), isActive: $navigateToStory) {
-            HStack(spacing: 12) {
-                Image(systemName: story.categoryIcon)
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(themeManager.accentColor)
-                    .frame(width: 32, height: 32)
-                    .background {
-                        Circle()
-                            .fill(themeManager.accentColor.opacity(0.15))
-                    }
-
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(story.prophetEn)
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundColor(themeManager.accentColor)
-
-                    Text(story.titleEn)
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundColor(themeManager.primaryText)
-                        .lineLimit(2)
-                }
-
-                Spacer()
-
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(themeManager.tertiaryText)
-            }
-            .padding(16)
-            .background {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(themeManager.selectedTheme == .nightSanctuary ? themeManager.glassSurface : Color.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(themeManager.strokeColor, lineWidth: 1)
-                    )
-                    .shadow(
-                        color: themeManager.selectedTheme == .nightSanctuary ? Color.black.opacity(0.45) : Color.black.opacity(0.04),
-                        radius: 8, x: 0, y: 2
-                    )
-            }
         }
         .buttonStyle(EmPressStyle())
     }
