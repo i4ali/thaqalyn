@@ -76,13 +76,14 @@ struct WhatsNewCard: View {
                 router.pendingSearchFocus = true
                 selectedTab = 1
             }
-        case .journeyListen(let diveId):
+        case .journeyListen(let diveId), .journeyListenUrdu(let diveId):
             // Open the narrated Listen player app-wide (MainTabView hosts it) - no tab switch.
-            // The showcased journey is free/bundled, so it plays immediately.
+            // The showcased journey is free, so it plays at once (Urdu after a one-time download).
+            let language: CommentaryLanguage? = item.destination == .journeyListenUrdu(diveId) ? .urdu : nil
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
                 if let dive = DeepDiveDescriptor.all.first(where: { $0.dive?.id == diveId })?.dive
                     ?? SurahExperienceDescriptor.all.first(where: { $0.dive?.id == diveId })?.dive {
-                    JourneyListenPresenter.shared.open(dive)
+                    JourneyListenPresenter.shared.open(dive, language: language)
                 }
             }
         case .lightTheme:

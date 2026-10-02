@@ -1,5 +1,6 @@
-"""Extract every English narrator string a journey speaks, in timeline order, from
-the app's real narration logic - never a Python re-implementation of it.
+"""Extract every narrator string a journey speaks, in timeline order, from the app's
+real narration logic - never a Python re-implementation of it. English by default;
+`lang="ur"` gives the Urdu narration (the English timeline with its lines translated).
 
 Source of truth: the DEBUG dump test ThaqalaynTests/JourneyStringDumpTests, which
 prints back exactly what `JourneyNarration.timeline(for:)` yields at runtime. We run
@@ -37,9 +38,24 @@ PREFERRED_UDID = "00CE7494-2523-4F1B-AF96-30D7969096C1"
 # is handed to the test via TEST_RUNNER_JRNY_OUT (prefix stripped -> JRNY_OUT).
 DUMP_FILE = "/tmp/journey_string_dump.tsv"
 
-# Matches the dump line ANYWHERE in a console line (xcodebuild may prefix it):
-#   JRNYDUMP<TAB><journey><TAB><order><TAB><text>
-_LINE_RE = re.compile(r"JRNYDUMP\t([^\t]*)\t([^\t]*)\t(.*)$")
+# Dump line prefix per narration language:
+#   JRNYDUMP<TAB><journey><TAB><order><TAB><text>      (English)
+#   JRNYDUMP_UR<TAB><journey><TAB><order><TAB><text>   (Urdu)
+PREFIX = {"en": "JRNYDUMP", "ur": "JRNYDUMP_UR"}
+# English lines with translator context:
+#   JRNYLINE<TAB><journey><TAB><order><TAB><beat><TAB><beatTitle><TAB><role><TAB><text>
+_CONTEXT_RE = re.compile(r"JRNYLINE\t([^\t]*)\t(\d+)\t(\d+)\t([^\t]*)\t([^\t]*)\t(.*)$")
+
+
+def _line_re(lang):
+    # Matches the dump line ANYWHERE in a console line (xcodebuild may prefix it). The tab
+    # right after the prefix keeps JRNYDUMP from matching JRNYDUMP_UR lines.
+    return re.compile(PREFIX[lang] + r"\t([^\t]*)\t([^\t]*)\t(.*)$")
+
+
+def unescape(text: str) -> str:
+    """Undo the dump's escaping (JourneyStringDumpTests.escape): \\n -> newline, \\\\ -> backslash."""
+    return re.sub(r"\\(.)", lambda m: "\n" if m.group(1) == "n" else m.group(1), text)
 
 
 def resolve_destination() -> str:
@@ -77,13 +93,14 @@ def run_dump(destination: str):
     return dump_text, proc.stdout, proc.returncode
 
 
-def parse(output: str):
-    """Pull `JRNYDUMP` lines into ordered [{journey, order, text}] (+ the __meta__
-    count sentinel, returned separately). De-dupes on (journey, order) so an echoed
-    console line can't corrupt indices. `__meta__` is metadata, never a journey."""
+def parse(output: str, lang: str = "en"):
+    """Pull one language's dump lines into ordered [{journey, order, text}] (+ the
+    __meta__ count sentinel, returned separately). De-dupes on (journey, order) so an
+    echoed console line can't corrupt indices. `__meta__` is metadata, never a journey."""
+    line_re = _line_re(lang)
     items, meta_count, seen = [], None, set()
     for raw in output.splitlines():
-        m = _LINE_RE.search(raw.rstrip("\r\n"))
+        m = line_re.search(raw.rstrip("\r\n"))
         if not m:
             continue
         journey, order_field, text = m.group(1), m.group(2), m.group(3)
@@ -101,7 +118,7 @@ def parse(output: str):
         if (journey, order) in seen:
             continue
         seen.add((journey, order))
-        items.append({"journey": journey, "order": order, "text": text})
+        items.append({"journey": journey, "order": order, "text": unescape(text)})
     return items, meta_count
 
 
@@ -118,14 +135,14 @@ def dedupe(items):
     return out
 
 
-def strings_for(journeys):
+def strings_for(journeys, lang="en"):
     """Deduped-by-key narration strings for the given journey ids (union), first-occurrence
     stable -> [{key, journey, order, text}]. Unlike gather() (global dedup across ALL
     journeys), this keeps EVERY string a selected journey speaks - including shared
     connectors like "The Qur'an says:" - so a journey can be rendered on its own (bundled
     free journeys, or a single on-demand pack) without missing its shared lines."""
     want = set(journeys)
-    items, _ = _extract()
+    items, _ = _extract(lang)
     seen, out = set(), []
     for it in items:
         if it["journey"] not in want:
@@ -139,10 +156,21 @@ def strings_for(journeys):
     return out
 
 
-def _extract():
-    """Run the test and parse its dump file, or fail loudly with the console log."""
-    dump_text, console, rc = run_dump(resolve_destination())
-    items, meta_count = parse(dump_text)
+_DUMP = None   # (dump_text, console, rc) - the simulator run is slow, so once per process
+
+
+def _dump():
+    global _DUMP
+    if _DUMP is None:
+        _DUMP = run_dump(resolve_destination())
+    return _DUMP
+
+
+def _extract(lang="en"):
+    """Run the test (once per process) and parse one language from its dump file, or fail
+    loudly with the console log."""
+    dump_text, console, rc = _dump()
+    items, meta_count = parse(dump_text, lang)
     if not items:
         log = os.path.join(ROOT, "scripts", "extract_journey_strings.log")
         with open(log, "w") as f:
@@ -153,11 +181,25 @@ def _extract():
     return items, meta_count
 
 
-def gather():
+def gather(lang="en"):
     """Ordered, globally key-deduped narration strings for build_journey_audio.py.
-    Re-derives from the app's real narration logic every call (never a stale cache)."""
-    items, _ = _extract()
+    Re-derives from the app's real narration logic (one fresh dump per process)."""
+    items, _ = _extract(lang)
     return dedupe(items)
+
+
+def context_lines():
+    """The English narration with translator context, in timeline order:
+    [{journey, order, beat, beat_title, role, text}] - role is `connector`, `verse s:a`,
+    `dua` or `line` (see JourneyStringDumpTests)."""
+    dump_text, _, _ = _dump()
+    out = []
+    for raw in dump_text.splitlines():
+        m = _CONTEXT_RE.search(raw.rstrip("\r\n"))
+        if m:
+            out.append({"journey": m.group(1), "order": int(m.group(2)), "beat": int(m.group(3)),
+                        "beat_title": m.group(4), "role": m.group(5), "text": unescape(m.group(6))})
+    return out
 
 
 def main():

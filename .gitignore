@@ -222,3 +222,8 @@ passages_work/
 # Miracle Stories retelling pipeline (scripts/mojzay.py): holds the publisher's
 # scanned pages of "14 Mojzay" - never commit
 mojzay_work/
+
+# Journey Urdu narration pipeline scratch state (scripts/journey_urdu.py) and its
+# Urdu render staging (build_journey_audio.py --lang ur)
+journey_urdu_work/
+journey-audio-render-ur/

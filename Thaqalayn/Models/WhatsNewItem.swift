@@ -22,6 +22,8 @@ enum WhatsNewDestination: Equatable {
     /// Open a journey's narrated Listen player directly (the id must be a FREE/bundled journey,
     /// e.g. "yaqin" - the showcase is opened without a paywall pass).
     case journeyListen(String)
+    /// The same, narrating in Urdu (the journey must have its Urdu narration recorded).
+    case journeyListenUrdu(String)
     /// Open a surah in the passage reader at passage `index` (1-based ruku index),
     /// through the `thaqalayn://passage` deep link (Quran tab, tab 1).
     case passage(surah: Int, index: Int)
@@ -48,6 +50,15 @@ struct WhatsNewItem: Identifiable, Equatable {
 enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
+        WhatsNewItem(
+            id: "journey-listen-urdu",
+            sfSymbol: "headphones",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 10, day: 2).date ?? .distantPast, // 9.6 (later than sage-dawn-theme so this card surfaces first)
+            destination: .journeyListenUrdu("surah-fatiha"),
+            title: "Listen to journeys in Urdu",
+            blurb: "Every narrated journey can now be heard in Urdu: all twenty surah journeys and the Deep Dives on Yaqin, Sabr, Shukr, Salah, Ikhlas, Taqwa and al-Kisa, with the same Quran recitation woven in. In the Listen player, tap اردو to switch, and the journey carries on from where you are.",
+            cta: "Listen to al-Fatiha in Urdu"
+        ),
         WhatsNewItem(
             id: "sage-dawn-theme",
             sfSymbol: "sun.max",

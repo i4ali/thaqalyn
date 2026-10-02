@@ -2,8 +2,9 @@
 //  JourneyStringDumpTests.swift
 //  ThaqalaynTests
 //
-//  DEBUG-only string dump: emits, in timeline order, every English `.speech`
-//  string the narrator must speak for each journey (deep dive + surah experience).
+//  DEBUG-only string dump: emits, in timeline order, every `.speech` string the
+//  narrator must speak for each journey (deep dive + surah experience), in English and
+//  in Urdu.
 //  Consumed by scripts/extract_journey_strings.py, which pre-renders these to audio.
 //
 //  This is the correctness anchor: the extractor never re-implements narration logic.
@@ -26,6 +27,11 @@ import XCTest
 
 final class JourneyStringDumpTests: XCTestCase {
 
+    /// One dump line per string: `\` -> `\\`, newline -> `\n` (undone by the extractor).
+    private static func escape(_ text: String) -> String {
+        text.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "\n", with: "\\n")
+    }
+
     /// Every built dive, in a stable order, from both catalogs. `compactMap` drops the
     /// coming-soon (nil) entries; a de-dupe by `id` keeps a dive listed in both catalogs
     /// from being dumped twice. Covers all `DeepDive` statics under Content/ (the two
@@ -37,10 +43,16 @@ final class JourneyStringDumpTests: XCTestCase {
         return candidates.filter { seen.insert($0.id).inserted }
     }
 
-    /// Writes one tab-delimited line per English narrator string, in timeline order:
-    ///   JRNYDUMP<TAB><journeyId><TAB><orderIndex><TAB><speechText>
+    /// Writes one tab-delimited line per narrator string, in timeline order:
+    ///   JRNYDUMP<TAB><journeyId><TAB><orderIndex><TAB><speechText>        (English)
+    ///   JRNYDUMP_UR<TAB><journeyId><TAB><orderIndex><TAB><speechText>     (Urdu)
+    ///   JRNYLINE<TAB><journeyId><TAB><orderIndex><TAB><beatIndex><TAB><beatTitle><TAB><role><TAB><englishText>
     /// prefixed by a `JRNYDUMP<TAB>__meta__<TAB>count<TAB><n>` sentinel (a cross-check
     /// for the extractor - it is metadata, not a journey, and is skipped when parsing).
+    /// JRNYLINE is the English again with context for the Urdu translators: `role` is
+    /// `connector` (a shared line translated once in the app), `verse <s>:<a>` (the meaning
+    /// of a recited verse), `dua` (the meaning of a recited dua) or `line`. The Urdu lines
+    /// stay English wherever a translation is missing, which is how the tooling spots them.
     ///
     /// Gated on JRNY_DUMP so it is a NO-OP during normal test runs. Recitation and pause
     /// segments are skipped: only `.speech` is pre-rendered narrator audio.
@@ -51,13 +63,44 @@ final class JourneyStringDumpTests: XCTestCase {
         let dives = allDives()
         var lines: [String] = ["JRNYDUMP\t__meta__\tcount\t\(dives.count)"]
         for dive in dives {
+            // A narrated body can span paragraphs, so backslashes and line breaks are escaped
+            // (\\ and \n) to keep one string per line; the extractor unescapes them.
             var order = 0
             for segment in JourneyNarration.timeline(for: dive) {
                 guard case .speech(let text) = segment else { continue }
-                // Dive prose carries no embedded tabs/newlines, so a single tab-delimited
-                // line per string is unambiguous for the extractor.
-                lines.append("JRNYDUMP\t\(dive.id)\t\(order)\t\(text)")
+                lines.append("JRNYDUMP\t\(dive.id)\t\(order)\t\(Self.escape(text))")
                 order += 1
+            }
+            order = 0
+            for segment in JourneyNarration.annotatedTimeline(for: dive, language: .urdu) {
+                guard case .speech(let text) = segment.segment else { continue }
+                lines.append("JRNYDUMP_UR\t\(dive.id)\t\(order)\t\(Self.escape(text))")
+                order += 1
+            }
+            order = 0
+            let connectors: Set<String> = [JourneyNarration.verseLeadIn, JourneyNarration.meaning, JourneyNarration.outro]
+            var recited: String?          // what the last recitation was, for the meaning that follows it
+            var meaningOf: String?        // set by "which means:" - the role of the next line
+            for a in JourneyNarration.annotatedTimeline(for: dive) {
+                switch a.segment {
+                case .recitation(.verse(let s, let ay)): recited = "verse \(s):\(ay)"
+                case .recitation(.dua): recited = "dua"
+                case .pause: break
+                case .speech(let text):
+                    let role: String
+                    if connectors.contains(text) {
+                        role = "connector"
+                        if text == JourneyNarration.meaning { meaningOf = recited }
+                    } else {
+                        role = meaningOf ?? "line"
+                        meaningOf = nil
+                        recited = nil
+                    }
+                    let title = dive.sections.indices.contains(a.beatIndex)
+                        ? JourneyAudioPlayer.beatTitle(for: dive.sections[a.beatIndex], in: dive) : ""
+                    lines.append("JRNYLINE\t\(dive.id)\t\(order)\t\(a.beatIndex)\t\(title)\t\(role)\t\(Self.escape(text))")
+                    order += 1
+                }
             }
         }
         let payload = lines.joined(separator: "\n") + "\n"

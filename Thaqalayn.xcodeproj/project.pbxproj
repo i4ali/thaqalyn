@@ -70,6 +70,33 @@
 		F31E18B320C32BE7D1410466 /* miracle-14-ur in Resources */ = {isa = PBXBuildFile; fileRef = DFBEF6A358496E2AEC351F1C /* miracle-14-ur */; settings = {ASSET_TAGS = ("miracle-14-ur", ); }; };
 		F63625230DEA3B1881A3EC6A /* miracle-03-ur in Resources */ = {isa = PBXBuildFile; fileRef = 85371A11998A0E1F9F10C0F0 /* miracle-03-ur */; settings = {ASSET_TAGS = ("miracle-03-ur", ); }; };
 		F96D36F09275B3F75ACC601A /* surah-rad in Resources */ = {isa = PBXBuildFile; fileRef = 704FC71D618288456987B7B3 /* surah-rad */; settings = {ASSET_TAGS = ("surah-rad", ); }; };
+		CFA3AAEAD40426CE07487504 /* surah-ali-imran-ur in Resources */ = {isa = PBXBuildFile; fileRef = 5BD27A43DC9A1CA776315E03 /* surah-ali-imran-ur */; settings = {ASSET_TAGS = (surah-ali-imran-ur, ); }; };
+		8E8B03122CCB5991EC10BEBF /* surah-anam-ur in Resources */ = {isa = PBXBuildFile; fileRef = 8FAC938C9C98EDDF1B959CD3 /* surah-anam-ur */; settings = {ASSET_TAGS = (surah-anam-ur, ); }; };
+		8CC5244CD131AE7DCCD3153E /* surah-araf-ur in Resources */ = {isa = PBXBuildFile; fileRef = 92F910DDB983583AA1BD452A /* surah-araf-ur */; settings = {ASSET_TAGS = (surah-araf-ur, ); }; };
+		5902583A2AEE0F511446BD21 /* surah-fatiha-ur in Resources */ = {isa = PBXBuildFile; fileRef = 4672C4DBB7A87953FB297DC2 /* surah-fatiha-ur */; settings = {ASSET_TAGS = (surah-fatiha-ur, ); }; };
+		4CCBAB4DC8E6ED2ED06131DD /* surah-maida-ur in Resources */ = {isa = PBXBuildFile; fileRef = 63D18B506EA03C9EFE6DDAD9 /* surah-maida-ur */; settings = {ASSET_TAGS = (surah-maida-ur, ); }; };
+		313F47354A2AE34D3BE1E27C /* surah-nisa-ur in Resources */ = {isa = PBXBuildFile; fileRef = 12E416047ABA4FCD8B6B9F60 /* surah-nisa-ur */; settings = {ASSET_TAGS = (surah-nisa-ur, ); }; };
+		49C80842205054FBAC9DC4CB /* ikhlas-ur in Resources */ = {isa = PBXBuildFile; fileRef = 741991AACFB9F9E7D93D4224 /* ikhlas-ur */; settings = {ASSET_TAGS = (ikhlas-ur, ); }; };
+		5BC618A1E8EFA19379993E28 /* kisa-ur in Resources */ = {isa = PBXBuildFile; fileRef = 77EC5F5D4383569F32046022 /* kisa-ur */; settings = {ASSET_TAGS = (kisa-ur, ); }; };
+		E76AA9BC5CD3B10EEB9255BF /* sabr-ur in Resources */ = {isa = PBXBuildFile; fileRef = C5E0BFFF65690E0464F479E9 /* sabr-ur */; settings = {ASSET_TAGS = (sabr-ur, ); }; };
+		76DCA8BF7F724C549286C16D /* salah-ur in Resources */ = {isa = PBXBuildFile; fileRef = 1DD04DB7D412036DCEF8AEE0 /* salah-ur */; settings = {ASSET_TAGS = (salah-ur, ); }; };
+		4B1E9F8CB3A45E2A673A2056 /* shukr-ur in Resources */ = {isa = PBXBuildFile; fileRef = A4A8EC42675653D3B4B0792C /* shukr-ur */; settings = {ASSET_TAGS = (shukr-ur, ); }; };
+		E75DAAB9377EEDD92D8A3A32 /* surah-anfal-ur in Resources */ = {isa = PBXBuildFile; fileRef = DB9328B702387502DB2B15E7 /* surah-anfal-ur */; settings = {ASSET_TAGS = (surah-anfal-ur, ); }; };
+		ECBA9F6758D193D0608FDA75 /* surah-baqara-ur in Resources */ = {isa = PBXBuildFile; fileRef = 331B723FDA55015E8F3FD77E /* surah-baqara-ur */; settings = {ASSET_TAGS = (surah-baqara-ur, ); }; };
+		4A316E425F54E51F19506A2A /* surah-hud-ur in Resources */ = {isa = PBXBuildFile; fileRef = 6B62052FE5B26861CDCEA5AF /* surah-hud-ur */; settings = {ASSET_TAGS = (surah-hud-ur, ); }; };
+		F47004537D7A5D45FD2B6E07 /* surah-rad-ur in Resources */ = {isa = PBXBuildFile; fileRef = A4B5ECE13D442D6707E120BC /* surah-rad-ur */; settings = {ASSET_TAGS = (surah-rad-ur, ); }; };
+		3A10EDC5F60B018FF8A2D915 /* surah-tawba-ur in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF5B1A5AD1FC3DD5D5E790 /* surah-tawba-ur */; settings = {ASSET_TAGS = (surah-tawba-ur, ); }; };
+		5A87A747E6B41F4730148981 /* surah-yunus-ur in Resources */ = {isa = PBXBuildFile; fileRef = E0D528E8962185E943DC1981 /* surah-yunus-ur */; settings = {ASSET_TAGS = (surah-yunus-ur, ); }; };
+		DA5B5148238A1C24144C6DA4 /* surah-yusuf-ur in Resources */ = {isa = PBXBuildFile; fileRef = 92B733307C8EE38EDF26EED7 /* surah-yusuf-ur */; settings = {ASSET_TAGS = (surah-yusuf-ur, ); }; };
+		86408E9A965CD15915440F8A /* taqwa-ur in Resources */ = {isa = PBXBuildFile; fileRef = 23F455B91ABEF6DE4C76FB1A /* taqwa-ur */; settings = {ASSET_TAGS = (taqwa-ur, ); }; };
+		1ABC3614D8BAA2125092849E /* yaqin-ur in Resources */ = {isa = PBXBuildFile; fileRef = 4A3B16A0D4F8B15BBD70F3E7 /* yaqin-ur */; settings = {ASSET_TAGS = (yaqin-ur, ); }; };
+		522A03AFCCE29708F52844BC /* surah-hijr-ur in Resources */ = {isa = PBXBuildFile; fileRef = 944488B58A9F666EF62E67CA /* surah-hijr-ur */; settings = {ASSET_TAGS = (surah-hijr-ur, ); }; };
+		A9CFE980953F87A07CF7F29A /* surah-ibrahim-ur in Resources */ = {isa = PBXBuildFile; fileRef = 477DB196673A6DFAB4159A83 /* surah-ibrahim-ur */; settings = {ASSET_TAGS = (surah-ibrahim-ur, ); }; };
+		3E09FC088AA4F180E00C054D /* surah-kawthar-ur in Resources */ = {isa = PBXBuildFile; fileRef = 41B26384444947FFEAA5C69C /* surah-kawthar-ur */; settings = {ASSET_TAGS = (surah-kawthar-ur, ); }; };
+		2ED9B126A60AA5582DFDBC87 /* surah-mulk-ur in Resources */ = {isa = PBXBuildFile; fileRef = A7CBED0AEF04420B45602FC5 /* surah-mulk-ur */; settings = {ASSET_TAGS = (surah-mulk-ur, ); }; };
+		F8D4AE33747016DC69850D4A /* surah-nahl-ur in Resources */ = {isa = PBXBuildFile; fileRef = A2D20E1DC19C65B189839DDF /* surah-nahl-ur */; settings = {ASSET_TAGS = (surah-nahl-ur, ); }; };
+		EEF47BEEF1B7A7A32CC7A359 /* surah-rahman-ur in Resources */ = {isa = PBXBuildFile; fileRef = 98D21B7168F7A8B8693CDF01 /* surah-rahman-ur */; settings = {ASSET_TAGS = (surah-rahman-ur, ); }; };
+		DAD42AD53445AE72CE2AB6C0 /* surah-yasin-ur in Resources */ = {isa = PBXBuildFile; fileRef = C48615598C3EC47EC210D7F2 /* surah-yasin-ur */; settings = {ASSET_TAGS = (surah-yasin-ur, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +193,33 @@
 		FD5A2041CEDF8FCA28F8E9FA /* miracle-11-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "miracle-11-ur"; sourceTree = "<group>"; };
 		FDA205C2D34989CF97D75433 /* surah-yunus */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "surah-yunus"; sourceTree = "<group>"; };
 		FFD103841E09F283464DCDE3 /* miracle-07-en */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "miracle-07-en"; sourceTree = "<group>"; };
+		5BD27A43DC9A1CA776315E03 /* surah-ali-imran-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-ali-imran-ur; sourceTree = "<group>"; };
+		8FAC938C9C98EDDF1B959CD3 /* surah-anam-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-anam-ur; sourceTree = "<group>"; };
+		92F910DDB983583AA1BD452A /* surah-araf-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-araf-ur; sourceTree = "<group>"; };
+		4672C4DBB7A87953FB297DC2 /* surah-fatiha-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-fatiha-ur; sourceTree = "<group>"; };
+		63D18B506EA03C9EFE6DDAD9 /* surah-maida-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-maida-ur; sourceTree = "<group>"; };
+		12E416047ABA4FCD8B6B9F60 /* surah-nisa-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-nisa-ur; sourceTree = "<group>"; };
+		741991AACFB9F9E7D93D4224 /* ikhlas-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ikhlas-ur; sourceTree = "<group>"; };
+		77EC5F5D4383569F32046022 /* kisa-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kisa-ur; sourceTree = "<group>"; };
+		C5E0BFFF65690E0464F479E9 /* sabr-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sabr-ur; sourceTree = "<group>"; };
+		1DD04DB7D412036DCEF8AEE0 /* salah-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = salah-ur; sourceTree = "<group>"; };
+		A4A8EC42675653D3B4B0792C /* shukr-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shukr-ur; sourceTree = "<group>"; };
+		DB9328B702387502DB2B15E7 /* surah-anfal-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-anfal-ur; sourceTree = "<group>"; };
+		331B723FDA55015E8F3FD77E /* surah-baqara-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-baqara-ur; sourceTree = "<group>"; };
+		6B62052FE5B26861CDCEA5AF /* surah-hud-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-hud-ur; sourceTree = "<group>"; };
+		A4B5ECE13D442D6707E120BC /* surah-rad-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-rad-ur; sourceTree = "<group>"; };
+		2FBF5B1A5AD1FC3DD5D5E790 /* surah-tawba-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-tawba-ur; sourceTree = "<group>"; };
+		E0D528E8962185E943DC1981 /* surah-yunus-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-yunus-ur; sourceTree = "<group>"; };
+		92B733307C8EE38EDF26EED7 /* surah-yusuf-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-yusuf-ur; sourceTree = "<group>"; };
+		23F455B91ABEF6DE4C76FB1A /* taqwa-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = taqwa-ur; sourceTree = "<group>"; };
+		4A3B16A0D4F8B15BBD70F3E7 /* yaqin-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = yaqin-ur; sourceTree = "<group>"; };
+		944488B58A9F666EF62E67CA /* surah-hijr-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-hijr-ur; sourceTree = "<group>"; };
+		477DB196673A6DFAB4159A83 /* surah-ibrahim-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-ibrahim-ur; sourceTree = "<group>"; };
+		41B26384444947FFEAA5C69C /* surah-kawthar-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-kawthar-ur; sourceTree = "<group>"; };
+		A7CBED0AEF04420B45602FC5 /* surah-mulk-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-mulk-ur; sourceTree = "<group>"; };
+		A2D20E1DC19C65B189839DDF /* surah-nahl-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-nahl-ur; sourceTree = "<group>"; };
+		98D21B7168F7A8B8693CDF01 /* surah-rahman-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-rahman-ur; sourceTree = "<group>"; };
+		C48615598C3EC47EC210D7F2 /* surah-yasin-ur */ = {isa = PBXFileReference; lastKnownFileType = folder; path = surah-yasin-ur; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -354,6 +408,33 @@
 				2128C456F3FF6F99356BEF93 /* surah-nahl */,
 				CE900DF8E51839A4F7E02431 /* surah-rahman */,
 				D8C41D4DE1A2BCC696A20D31 /* surah-yasin */,
+				5BD27A43DC9A1CA776315E03 /* surah-ali-imran-ur */,
+				8FAC938C9C98EDDF1B959CD3 /* surah-anam-ur */,
+				92F910DDB983583AA1BD452A /* surah-araf-ur */,
+				4672C4DBB7A87953FB297DC2 /* surah-fatiha-ur */,
+				63D18B506EA03C9EFE6DDAD9 /* surah-maida-ur */,
+				12E416047ABA4FCD8B6B9F60 /* surah-nisa-ur */,
+				741991AACFB9F9E7D93D4224 /* ikhlas-ur */,
+				77EC5F5D4383569F32046022 /* kisa-ur */,
+				C5E0BFFF65690E0464F479E9 /* sabr-ur */,
+				1DD04DB7D412036DCEF8AEE0 /* salah-ur */,
+				A4A8EC42675653D3B4B0792C /* shukr-ur */,
+				DB9328B702387502DB2B15E7 /* surah-anfal-ur */,
+				331B723FDA55015E8F3FD77E /* surah-baqara-ur */,
+				6B62052FE5B26861CDCEA5AF /* surah-hud-ur */,
+				A4B5ECE13D442D6707E120BC /* surah-rad-ur */,
+				2FBF5B1A5AD1FC3DD5D5E790 /* surah-tawba-ur */,
+				E0D528E8962185E943DC1981 /* surah-yunus-ur */,
+				92B733307C8EE38EDF26EED7 /* surah-yusuf-ur */,
+				23F455B91ABEF6DE4C76FB1A /* taqwa-ur */,
+				4A3B16A0D4F8B15BBD70F3E7 /* yaqin-ur */,
+				944488B58A9F666EF62E67CA /* surah-hijr-ur */,
+				477DB196673A6DFAB4159A83 /* surah-ibrahim-ur */,
+				41B26384444947FFEAA5C69C /* surah-kawthar-ur */,
+				A7CBED0AEF04420B45602FC5 /* surah-mulk-ur */,
+				A2D20E1DC19C65B189839DDF /* surah-nahl-ur */,
+				98D21B7168F7A8B8693CDF01 /* surah-rahman-ur */,
+				C48615598C3EC47EC210D7F2 /* surah-yasin-ur */,
 			);
 			path = OnDemandAudio;
 			sourceTree = "<group>";
@@ -486,6 +567,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522A03AFCCE29708F52844BC /* surah-hijr-ur in Resources */,
+				A9CFE980953F87A07CF7F29A /* surah-ibrahim-ur in Resources */,
+				3E09FC088AA4F180E00C054D /* surah-kawthar-ur in Resources */,
+				2ED9B126A60AA5582DFDBC87 /* surah-mulk-ur in Resources */,
+				F8D4AE33747016DC69850D4A /* surah-nahl-ur in Resources */,
+				EEF47BEEF1B7A7A32CC7A359 /* surah-rahman-ur in Resources */,
+				DAD42AD53445AE72CE2AB6C0 /* surah-yasin-ur in Resources */,
+				49C80842205054FBAC9DC4CB /* ikhlas-ur in Resources */,
+				5BC618A1E8EFA19379993E28 /* kisa-ur in Resources */,
+				E76AA9BC5CD3B10EEB9255BF /* sabr-ur in Resources */,
+				76DCA8BF7F724C549286C16D /* salah-ur in Resources */,
+				4B1E9F8CB3A45E2A673A2056 /* shukr-ur in Resources */,
+				E75DAAB9377EEDD92D8A3A32 /* surah-anfal-ur in Resources */,
+				ECBA9F6758D193D0608FDA75 /* surah-baqara-ur in Resources */,
+				4A316E425F54E51F19506A2A /* surah-hud-ur in Resources */,
+				F47004537D7A5D45FD2B6E07 /* surah-rad-ur in Resources */,
+				3A10EDC5F60B018FF8A2D915 /* surah-tawba-ur in Resources */,
+				5A87A747E6B41F4730148981 /* surah-yunus-ur in Resources */,
+				DA5B5148238A1C24144C6DA4 /* surah-yusuf-ur in Resources */,
+				86408E9A965CD15915440F8A /* taqwa-ur in Resources */,
+				1ABC3614D8BAA2125092849E /* yaqin-ur in Resources */,
+				CFA3AAEAD40426CE07487504 /* surah-ali-imran-ur in Resources */,
+				8E8B03122CCB5991EC10BEBF /* surah-anam-ur in Resources */,
+				8CC5244CD131AE7DCCD3153E /* surah-araf-ur in Resources */,
+				5902583A2AEE0F511446BD21 /* surah-fatiha-ur in Resources */,
+				4CCBAB4DC8E6ED2ED06131DD /* surah-maida-ur in Resources */,
+				313F47354A2AE34D3BE1E27C /* surah-nisa-ur in Resources */,
 				43CBC753A639C102B54D285A /* surah-hijr in Resources */,
 				CEAD46294E122EBC3AD61CAA /* surah-ibrahim in Resources */,
 				CE9239D0920C3B24A66E96C0 /* surah-kawthar in Resources */,
@@ -749,7 +857,7 @@
 				CODE_SIGN_ENTITLEMENTS = Thaqalayn/Thaqalayn.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 128;
+				CURRENT_PROJECT_VERSION = 131;
 				DEVELOPMENT_ASSET_PATHS = "\"Thaqalayn/Preview Content\"";
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_PREVIEWS = YES;
@@ -764,7 +872,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 9.5;
+				MARKETING_VERSION = 9.6;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -782,7 +890,7 @@
 				CODE_SIGN_ENTITLEMENTS = Thaqalayn/Thaqalayn.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 128;
+				CURRENT_PROJECT_VERSION = 131;
 				DEVELOPMENT_ASSET_PATHS = "\"Thaqalayn/Preview Content\"";
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_PREVIEWS = YES;
@@ -797,7 +905,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 9.5;
+				MARKETING_VERSION = 9.6;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -815,7 +923,7 @@
 				CODE_SIGN_ENTITLEMENTS = ThaqalaynWidgets/ThaqalaynWidgetsExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 128;
+				CURRENT_PROJECT_VERSION = 131;
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -828,7 +936,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 9.5;
+				MARKETING_VERSION = 9.6;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn.ThaqalaynWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -849,7 +957,7 @@
 				CODE_SIGN_ENTITLEMENTS = ThaqalaynWidgets/ThaqalaynWidgetsExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 128;
+				CURRENT_PROJECT_VERSION = 131;
 				DEVELOPMENT_TEAM = 2J2GCJ25MK;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -862,7 +970,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 9.5;
+				MARKETING_VERSION = 9.6;
 				PRODUCT_BUNDLE_IDENTIFIER = MAHR.Partner.Thaqalayn.ThaqalaynWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

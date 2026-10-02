@@ -2,9 +2,10 @@
 //  JourneyAudioPlayer.swift
 //  Thaqalayn
 //
-//  Plays a whole journey's narration as ONE continuous timeline - English narrator
-//  speech (bundled mp3), real Arabic recitation (verse reciter / captured dua), and
-//  reflective pauses - stitched from `JourneyNarration.annotatedTimeline(for:)`.
+//  Plays a whole journey's narration as ONE continuous timeline - narrator speech in
+//  English or Urdu (bundled / on-demand mp3), real Arabic recitation (verse reciter /
+//  captured dua), and reflective pauses - stitched from
+//  `JourneyNarration.annotatedTimeline(for:language:)`.
 //
 //  The correctness-critical part is the PURE `buildPlaylist(for:)`: it turns the
 //  beat-attributed timeline into an ordered list of PlayableClips with no I/O, so it is
@@ -27,7 +28,7 @@ import UIKit
 /// `dive.sections` beatIndex it belongs to. Pure data - URLs are resolved at play time.
 struct PlayableClip: Equatable {
     enum Source: Equatable {
-        case speech(String)                 // -> JourneyAudioKey.recordingURL(for:)  (bundled narrator mp3)
+        case speech(String)                 // -> JourneyAudioKey.recordingURL(for:)  (narrator mp3, EN or UR)
         case verse(surah: Int, ayah: Int)   // -> reciter URL (streamed for now)
         case dua(String)                    // -> DuaAudioKey.recordingURL(for:)      (captured dua mp3)
         case pause(TimeInterval)            // -> silence
@@ -62,6 +63,8 @@ final class JourneyAudioPlayer: ObservableObject {
     /// once a second and calls `stop()` at zero; surfaced on the Listen screen. Mirrors the
     /// `AudioManager.sleepTimerTimeRemaining` pattern.
     @Published private(set) var sleepTimerTimeRemaining: TimeInterval?
+    /// The language the narrator speaks in the loaded journey (English or Urdu).
+    @Published private(set) var language: CommentaryLanguage = .english
     private(set) var currentDive: DeepDive?
 
     // MARK: - Playback internals (a sequential coordinator; tuned on-device)
@@ -105,11 +108,12 @@ final class JourneyAudioPlayer: ObservableObject {
 
     // MARK: - Pure seam (unit-tested)
 
-    /// Turn a whole dive into its ordered clip list. No I/O, no Bundle access - the
-    /// beat-attributed timeline mapped 1:1 onto PlayableClips. This is the tested seam,
-    /// `nonisolated` so it's callable off the main actor (unit tests, background prep).
-    nonisolated static func buildPlaylist(for dive: DeepDive) -> [PlayableClip] {
-        JourneyNarration.annotatedTimeline(for: dive).map { a in
+    /// Turn a whole dive into its ordered clip list. No audio I/O - the beat-attributed
+    /// timeline mapped 1:1 onto PlayableClips (Urdu reads the bundled line translations).
+    /// This is the tested seam, `nonisolated` so it's callable off the main actor (unit
+    /// tests, background prep).
+    nonisolated static func buildPlaylist(for dive: DeepDive, language: CommentaryLanguage = .english) -> [PlayableClip] {
+        JourneyNarration.annotatedTimeline(for: dive, language: language).map { a in
             let src: PlayableClip.Source
             switch a.segment {
             case .speech(let t): src = .speech(t)
@@ -172,10 +176,11 @@ final class JourneyAudioPlayer: ObservableObject {
 
     // MARK: - Transport
 
-    /// Start a dive's narration. By default it resumes where the listener left off (the
-    /// saved beat, best-effort into the clip); pass `restart: true` to force a fresh start
-    /// from the top. A stale/out-of-range saved beat (content changed) falls back to 0.
-    func play(dive: DeepDive, restart: Bool = false) {
+    /// Start a dive's narration in a language. By default it resumes where the listener left
+    /// off (the saved beat, best-effort into the clip); pass `restart: true` to force a fresh
+    /// start from the top. A stale/out-of-range saved beat (content changed) falls back to 0.
+    /// The saved position is per journey, not per language, so it carries across a switch.
+    func play(dive: DeepDive, language: CommentaryLanguage = .english, restart: Bool = false) {
         // Mutual exclusion: narration and the other audio services never overlap.
         TafsirReader.shared.stop()
         DuaAudioPlayer.shared.stop()
@@ -187,7 +192,8 @@ final class JourneyAudioPlayer: ObservableObject {
         UIApplication.shared.beginReceivingRemoteControlEvents()
 
         currentDive = dive
-        clips = Self.buildPlaylist(for: dive)
+        self.language = language
+        clips = Self.buildPlaylist(for: dive, language: language)
         resolveJourneyDurations()          // async: fills the whole-journey timeline (cached after first play)
         preloaded = nil
         didFinish = false
@@ -259,6 +265,16 @@ final class JourneyAudioPlayer: ObservableObject {
         currentDive = nil
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nil   // clear the lock screen
         if wasActive { deactivateSession() }      // only release the session we were using
+    }
+
+    /// Stop for a narration-language switch, keeping the place: the other language picks up
+    /// at the start of the beat playing now (an offset into a clip doesn't carry across
+    /// languages). A journey that already ran to its end is left to start over.
+    func stopForLanguageSwitch() {
+        guard let dive = currentDive else { return }
+        let beat = currentBeatIndex, finished = didFinish
+        stop()
+        if !finished { JourneyResumeStore.save(JourneyResumePosition(beatIndex: beat, offset: 0), for: dive.id) }
     }
 
     /// Jump to the first clip of the next distinct beatIndex.
@@ -485,9 +501,11 @@ final class JourneyAudioPlayer: ObservableObject {
     private func url(for source: PlayableClip.Source) -> URL? {
         switch source {
         case .speech(let text):
-            // Bundled free journeys resolve flat; a premium journey's narration resolves from
-            // its downloaded ODR pack (subdirectory named for the journey id).
-            return JourneyAudioKey.recordingURL(for: text, packSubdirectory: currentDive?.id)
+            // Bundled free English resolves flat; anything else resolves from its downloaded ODR
+            // pack (subdirectory named for the pack tag: the journey id, or "<id>-ur").
+            return JourneyAudioKey.recordingURL(
+                for: text,
+                packSubdirectory: currentDive.map { JourneyAudioAvailability.packTag($0.id, language: language) })
         case .dua(let arabic):      return DuaAudioKey.recordingURL(for: arabic)
         case .verse(let s, let ay):
             // Prefer the on-disk copy (offline, and after relaunch); otherwise stream the

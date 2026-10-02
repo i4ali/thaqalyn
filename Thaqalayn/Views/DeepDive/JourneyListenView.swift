@@ -5,7 +5,8 @@
 //  A full-screen, audio-only surface for a journey's narration. The listener is already
 //  hearing it - JourneyAudioPlayer.shared drives playback; this view is only the visual
 //  player: the journey's cover blurred behind a frosted-glass panel, the title and the
-//  current beat, and the transport controls.
+//  current beat, the narration language (English / Urdu, where the journey is recorded in
+//  both), and the transport controls.
 //
 //  The surface is deliberately always-dark - a darkened, blurred cover in BOTH app themes,
 //  matching the immersive Deep Dive experience it belongs to (DeepDivePalette, gold-on-ink).
@@ -60,7 +61,7 @@ struct JourneyListenView: View {
                 // on-demand pack). Only self-start in the plain case: nothing is preparing and a
                 // different dive is loaded - e.g. re-expanding is a no-op since the guard matches.
                 if presenter.preparing == nil, player.currentDive?.id != dive.id {
-                    player.play(dive: dive)
+                    player.play(dive: dive, language: presenter.language)
                 }
             }
     }
@@ -255,8 +256,42 @@ struct JourneyListenView: View {
                     .lineLimit(1)
                     .transition(.opacity)
             }
+
+            languagePills
+                .padding(.top, 8)
         }
         .animation(.easeInOut(duration: 0.25), value: player.currentBeatTitle)
+    }
+
+    /// English / Urdu, for a journey recorded in both. Switching carries on from the start of
+    /// the beat playing now (after a one-time download of that language's narration).
+    @ViewBuilder
+    private var languagePills: some View {
+        let languages = JourneyAudioAvailability.readyLanguages(for: dive.id)
+        if languages.count > 1 {
+            HStack(spacing: 8) {
+                ForEach(languages, id: \.self) { language in
+                    let isSelected = language == presenter.language
+                    Button { presenter.setLanguage(language) } label: {
+                        Text(language.displayName)
+                            .font(.system(size: 14, weight: .semibold))
+                            .foregroundColor(isSelected ? themeManager.onAccentText : tint)
+                            .padding(.horizontal, 16)
+                            .frame(height: 30)
+                            .background(
+                                Capsule().fill(isSelected
+                                    ? AnyShapeStyle(themeManager.accentGradient)
+                                    : AnyShapeStyle(.ultraThinMaterial))
+                            )
+                            .overlay(Capsule().stroke(Color.white.opacity(isSelected ? 0 : 0.14), lineWidth: 1))
+                    }
+                    .buttonStyle(EmPressStyle())
+                    .accessibilityLabel("Narration in \(language == .urdu ? "Urdu" : "English")")
+                    .accessibilityAddTraits(isSelected ? .isSelected : [])
+                }
+            }
+            .animation(.easeInOut(duration: 0.2), value: presenter.language)
+        }
     }
 
     /// Scrubber over the WHOLE journey - cumulative elapsed on the left, the journey's total

@@ -5,7 +5,8 @@
 //  The "audio director": shared connector strings + the assembler that turns a whole
 //  deep dive into one ordered narration timeline (intro + per-movement announcements +
 //  each beat's segments + outro). This is THE canonical narration source - both the
-//  extractor (which pre-renders the English speech) and the player consume `timeline(for:)`.
+//  extractor (which pre-renders the speech) and the player consume `timeline(for:)`, and
+//  the Urdu narration is this timeline with its lines translated.
 //
 
 import Foundation
@@ -59,6 +60,26 @@ enum JourneyNarration {
 
     static func timeline(for dive: DeepDive) -> [NarrationSegment] {
         annotatedTimeline(for: dive).map { $0.segment }
+    }
+
+    /// The timeline narrated in `language`. English is the canonical timeline above; Urdu is
+    /// the same timeline with each narrator line swapped for its bundled translation
+    /// (JourneyNarrationTranslation). Any other language, or a journey with no Urdu, narrates
+    /// in English.
+    static func annotatedTimeline(for dive: DeepDive, language: CommentaryLanguage) -> [AnnotatedSegment] {
+        let english = annotatedTimeline(for: dive)
+        guard language == .urdu, let lines = JourneyNarrationTranslation.urduLines(for: dive.id) else { return english }
+        return translate(english, lines: lines)
+    }
+
+    /// Swap every narrator line for its translation, keeping beats, pauses and recitations.
+    /// A line with no translation stays English - the tooling keeps an Urdu pack with one
+    /// from shipping.
+    static func translate(_ timeline: [AnnotatedSegment], lines: [String: String]) -> [AnnotatedSegment] {
+        timeline.map { a in
+            guard case .speech(let text) = a.segment, let translated = lines[text] else { return a }
+            return AnnotatedSegment(segment: .speech(translated), beatIndex: a.beatIndex)
+        }
     }
 
     /// one, two, three, ... (fallback to the numeral). Small map for 1-12.
